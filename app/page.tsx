@@ -51,7 +51,7 @@ export default function Home() {
           marginBottom: '3rem',
           lineHeight: '1.6'
         }}>
-          From the shelf to the root and everything in between. Natural first. Honest always. No agenda.
+          From the shelf to the root and everything in between. Honest always. No agenda.
         </p>
 
         {/* Search Bar */}
@@ -105,8 +105,8 @@ export default function Home() {
             textAlign: 'center'
           }}>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌿</div>
-            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.25rem' }}>Natural Remedies</div>
-            <div style={{ fontSize: '0.875rem', color: '#5a7a6e' }}>Herbs, supplements, and oils</div>
+            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.25rem' }}>Remedies</div>
+            <div style={{ fontSize: '0.875rem', color: '#5a7a6e' }}>Every option, no agenda</div>
           </a>
           <a href="/dosage" style={{
             display: 'block',
