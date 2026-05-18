@@ -142,6 +142,7 @@ export default function Remedies() {
               { name: 'Insomnia', slug: 'insomnia' },
               { name: 'Anxiety and Stress', slug: 'anxiety-and-stress' },
               { name: 'Tension Headaches', slug: 'tension-headaches' },
+              { name: 'Migraines', slug: 'migraines' },
             ].map((item) => (
               <a key={item.slug} href={`/remedies/${item.slug}`} style={{ display: 'block', padding: '1rem 1.25rem', backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', textDecoration: 'none', color: '#2d4a3e', fontSize: '0.95rem', fontWeight: '500' }}>
                 🌿 {item.name}
