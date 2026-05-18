@@ -1,20 +1,43 @@
 export default function OilKey() {
-    return (
+  return (
+    <div style={{
+      backgroundColor: '#ffffff',
+      border: '1px solid #e8e0d0',
+      borderRadius: '12px',
+      padding: '1.25rem 1.5rem',
+      marginBottom: '2rem',
+      boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
+    }}>
       <div style={{
-        backgroundColor: '#fff',
-        border: '1px solid #e8e0d0',
-        borderRadius: '8px',
-        padding: '1rem 1.5rem',
-        marginBottom: '2rem'
+        fontFamily: 'var(--font-playfair), Georgia, serif',
+        fontWeight: '700',
+        color: '#2d4a3e',
+        marginBottom: '0.875rem',
+        fontSize: '1rem'
       }}>
-        <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.75rem', fontSize: '0.95rem' }}>Essential Oil Safety Key</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.85rem' }}>
-        <span style={{ backgroundColor: '#27ae60', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟢 Internal Only</span>
-        <span style={{ backgroundColor: '#f39c12', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟡 Dilute First</span>
-        <span style={{ backgroundColor: '#2980b9', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🔵 External Only</span>
-        <span style={{ backgroundColor: '#7f8c8d', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🏠 Home Remedy</span>
-        <span style={{ backgroundColor: '#2c3e50', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>⚫ Avoid</span>
+        Essential Oil Safety Key
       </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+        {[
+          { badge: '🟢 Internal Only', color: '#27ae60' },
+          { badge: '🟡 Dilute First', color: '#f39c12' },
+          { badge: '🔵 External Only', color: '#2980b9' },
+          { badge: '🏠 Home Remedy', color: '#7f8c8d' },
+          { badge: '⚫ Avoid', color: '#2c3e50' },
+        ].map((item) => (
+          <span key={item.badge} style={{
+            backgroundColor: item.color,
+            color: '#fff',
+            padding: '4px 14px',
+            borderRadius: '50px',
+            fontSize: '0.8rem',
+            fontWeight: '600',
+            fontFamily: 'var(--font-inter), sans-serif'
+          }}>
+            {item.badge}
+          </span>
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
+}

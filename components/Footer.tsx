@@ -1,71 +1,177 @@
 export default function Footer() {
-    return (
-      <footer style={{
-        borderTop: '1px solid #e8e0d0',
-        backgroundColor: '#faf7f2',
-        padding: '3rem 2rem',
-        marginTop: '4rem'
+  return (
+    <footer style={{
+      backgroundColor: '#1e3329',
+      padding: '4rem 2rem 2rem',
+      marginTop: '0'
+    }}>
+      <div style={{
+        maxWidth: '1000px',
+        margin: '0 auto',
       }}>
+
+        {/* Top Row */}
         <div style={{
-          maxWidth: '900px',
-          margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '2rem'
+          gap: '2.5rem',
+          marginBottom: '3rem'
         }}>
+
+          {/* Brand */}
           <div>
-            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '1rem', fontSize: '1.1rem' }}>KnowYourRemedy</div>
-            <p style={{ fontSize: '0.875rem', color: '#5a7a6e', lineHeight: '1.7' }}>
+            <div style={{
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: '1.3rem',
+              fontWeight: '700',
+              color: '#ffffff',
+              marginBottom: '0.75rem'
+            }}>
+              Know<span style={{ color: '#7a9e7e' }}>Your</span>Remedy
+            </div>
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '0.875rem',
+              color: '#7a9e7e',
+              lineHeight: '1.7',
+              margin: 0
+            }}>
               From the shelf to the root and everything in between. Honest always. No agenda.
             </p>
           </div>
+
+          {/* Explore */}
           <div>
-            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '1rem' }}>Explore</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <a href="/remedies" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Remedies</a>
-              <a href="/dosage" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Dosage Calculator</a>
-              <a href="/brands" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Clean Brand Guide</a>
-              <a href="/oils" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Oil Library</a>
+            <div style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '0.75rem',
+              fontWeight: '600',
+              color: '#7a9e7e',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '1rem'
+            }}>
+              Explore
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              {[
+                { label: 'Remedies', href: '/remedies' },
+                { label: 'Dosage Calculator', href: '/dosage' },
+                { label: 'Clean Brand Guide', href: '/brands' },
+                { label: 'Oil Library', href: '/oils' },
+              ].map((link) => (
+                <a key={link.href} href={link.href} style={{
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  fontSize: '0.875rem',
+                  color: '#b8d4c0',
+                  textDecoration: 'none',
+                }}>
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
+
+          {/* Legal */}
           <div>
-            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '1rem' }}>Legal</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <a href="/disclaimer" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Medical Disclaimer</a>
-              <a href="/affiliate-disclosure" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Affiliate Disclosure</a>
-              <a href="/privacy" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>Privacy Policy</a>
-              <a href="/about" style={{ fontSize: '0.875rem', color: '#5a7a6e', textDecoration: 'none' }}>About</a>
+            <div style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '0.75rem',
+              fontWeight: '600',
+              color: '#7a9e7e',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '1rem'
+            }}>
+              Legal
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              {[
+                { label: 'Medical Disclaimer', href: '/disclaimer' },
+                { label: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
+                { label: 'Privacy Policy', href: '/privacy' },
+                { label: 'About', href: '/about' },
+              ].map((link) => (
+                <a key={link.href} href={link.href} style={{
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  fontSize: '0.875rem',
+                  color: '#b8d4c0',
+                  textDecoration: 'none',
+                }}>
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
+
+          {/* App */}
           <div>
-            <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '1rem' }}>Download the App</div>
-            <p style={{ fontSize: '0.875rem', color: '#5a7a6e', lineHeight: '1.7', marginBottom: '0.75rem' }}>
-              Full access including barcode scanner, saved family profiles, and offline use.
+            <div style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '0.75rem',
+              fontWeight: '600',
+              color: '#7a9e7e',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '1rem'
+            }}>
+              The App
+            </div>
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '0.875rem',
+              color: '#b8d4c0',
+              lineHeight: '1.6',
+              marginBottom: '1rem'
+            }}>
+              Barcode scanner, saved family profiles, offline access. $10/year founding member price.
             </p>
-            <div style={{ 
+            <div style={{
               display: 'inline-block',
-              backgroundColor: '#2d4a3e',
+              backgroundColor: 'rgba(255,255,255,0.1)',
               color: '#fff',
               padding: '0.5rem 1.25rem',
-              borderRadius: '20px',
-              fontSize: '0.875rem',
-              fontWeight: '600'
+              borderRadius: '50px',
+              fontSize: '0.8rem',
+              fontWeight: '600',
+              fontFamily: 'var(--font-inter), sans-serif',
+              border: '1px solid rgba(255,255,255,0.2)',
             }}>
               Coming Soon
             </div>
           </div>
+
         </div>
+
+        {/* Bottom Row */}
         <div style={{
-          maxWidth: '900px',
-          margin: '2rem auto 0',
+          borderTop: '1px solid rgba(255,255,255,0.08)',
           paddingTop: '1.5rem',
-          borderTop: '1px solid #e8e0d0',
-          fontSize: '0.75rem',
-          color: '#888',
-          textAlign: 'center'
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1rem'
         }}>
-          © 2025 KnowYourRemedy.com — For informational purposes only. Not a substitute for professional medical advice.
+          <p style={{
+            fontFamily: 'var(--font-inter), sans-serif',
+            fontSize: '0.775rem',
+            color: '#4a6a52',
+            margin: 0
+          }}>
+            © 2025 KnowYourRemedy.com — For informational purposes only. Not a substitute for professional medical advice.
+          </p>
+          <p style={{
+            fontFamily: 'var(--font-inter), sans-serif',
+            fontSize: '0.775rem',
+            color: '#4a6a52',
+            margin: 0
+          }}>
+            Honest always. No agenda.
+          </p>
         </div>
-      </footer>
-    )
-  }
+
+      </div>
+    </footer>
+  )
+}
