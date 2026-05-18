@@ -178,7 +178,7 @@ fontWeight: '600'
               { name: 'Elderberry Syrup', desc: 'Immune support, antiviral properties. Safe for children over 1 year.', flag: '' },
               { name: 'Ginger Tea', desc: 'Anti-inflammatory, promotes sweating to naturally reduce fever.', flag: '' },
               { name: 'Echinacea', desc: 'Immune system support. Not recommended for children under 2.', flag: '⚠️ Age restriction' },
-              { name: 'Peppermint Oil', desc: 'Dilute and apply topically to back of neck and feet. Never ingest in children.', flag: '⚠️ Dilute before use' },
+              { name: 'Peppermint Oil', badge: '🔵 External Only', badgeColor: '#2980b9', desc: 'Dilute with a carrier oil like coconut or jojoba before applying to back of neck and feet. Never apply undiluted to skin.', warning: 'Never ingest topical grade oils. Not safe for children under 6.' },
               { name: 'Lukewarm Bath', desc: 'Helps bring temperature down naturally. Never use cold water or ice.', flag: '' },
               { name: 'Hydration', desc: 'Water, coconut water, or electrolyte drinks. Critical for all ages.', flag: '' },
             ].map((item) => (
@@ -190,7 +190,31 @@ fontWeight: '600'
               }}>
                 <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
                 <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-                {item.flag && <div style={{ fontSize: '0.8rem', color: '#c0392b' }}>{item.flag}</div>}
+                {item.badge && (
+  <div style={{ 
+    display: 'inline-block',
+    fontSize: '0.8rem', 
+    color: '#fff',
+    backgroundColor: item.badgeColor,
+    padding: '2px 10px',
+    borderRadius: '20px',
+    fontWeight: '600',
+    marginBottom: '0.5rem'
+  }}>
+    {item.badge}
+  </div>
+)}
+{item.warning && (
+  <div style={{ 
+    fontSize: '0.8rem', 
+    color: '#e67e22', 
+    marginTop: '0.5rem',
+    borderLeft: '3px solid #e67e22',
+    paddingLeft: '0.5rem'
+  }}>
+    {item.warning}
+  </div>
+)}
               </div>
             ))}
           </div>
