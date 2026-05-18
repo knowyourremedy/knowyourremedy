@@ -43,14 +43,14 @@ export default function Remedies() {
             color: '#2d4a3e',
             marginBottom: '1rem'
           }}>
-            Natural Remedies
+          Remedies
           </h1>
           <p style={{ 
             fontSize: '1.1rem', 
             color: '#5a7a6e',
             lineHeight: '1.6'
           }}>
-            Every symptom covered. Natural first, honest always. Find what works for your body without the guesswork.
+            Every symptom covered. Every option presented. Find what works for your body without the guesswork.
           </p>
         </section>
   
@@ -196,7 +196,40 @@ export default function Remedies() {
               ))}
             </div>
           </div>
-  
+  {/* Allergies */}
+  <div style={{ marginBottom: '3rem' }}>
+          <h2 style={{ 
+            fontSize: '1.25rem', 
+            color: '#2d4a3e',
+            borderBottom: '2px solid #c8b89a',
+            paddingBottom: '0.5rem',
+            marginBottom: '1rem'
+          }}>
+            Allergies and Respiratory
+          </h2>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '0.75rem'
+          }}>
+            {['Allergies', 'Sinus Congestion', 'Itchy Eyes'].map((symptom) => (
+              <a key={symptom} href={`/remedies/${symptom.toLowerCase().replace(/ /g, '-')}`} style={{
+                display: 'block',
+                padding: '1rem 1.25rem',
+                backgroundColor: '#fff',
+                border: '1px solid #e8e0d0',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                color: '#2d4a3e',
+                fontSize: '0.95rem',
+                fontWeight: '500'
+              }}>
+                🌿 {symptom}
+              </a>
+            ))}
+          </div>
+        </div>
+          
           {/* Children */}
           <div style={{ marginBottom: '3rem' }}>
             <h2 style={{ 
