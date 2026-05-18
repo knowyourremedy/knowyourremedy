@@ -22,9 +22,8 @@ export default function OilKey() {
           { badge: '🟢 Internal Only', color: '#27ae60' },
           { badge: '🟡 Dilute First', color: '#f39c12' },
           { badge: '🔵 External Only', color: '#2980b9' },
-          { badge: '🏠 Home Remedy', color: '#7f8c8d' },
-          { badge: '⚫ Avoid', color: '#2c3e50' },
-        ].map((item) => (
+          
+       ].map((item) => (
           <span key={item.badge} style={{
             backgroundColor: item.color,
             color: '#fff',
