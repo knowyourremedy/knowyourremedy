@@ -9,11 +9,12 @@ export default function OilKey() {
       }}>
         <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.75rem', fontSize: '0.95rem' }}>Essential Oil Safety Key</div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.85rem' }}>
-          <span style={{ backgroundColor: '#27ae60', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟢 Internal Only</span>
-          <span style={{ backgroundColor: '#f39c12', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟡 Dilute First</span>
-          <span style={{ backgroundColor: '#2980b9', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🔵 External Only</span>
-          <span style={{ backgroundColor: '#2c3e50', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>⚫ Avoid</span>
-        </div>
+        <span style={{ backgroundColor: '#27ae60', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟢 Internal Only</span>
+        <span style={{ backgroundColor: '#f39c12', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🟡 Dilute First</span>
+        <span style={{ backgroundColor: '#2980b9', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🔵 External Only</span>
+        <span style={{ backgroundColor: '#7f8c8d', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>🏠 Home Remedy</span>
+        <span style={{ backgroundColor: '#2c3e50', color: '#fff', padding: '3px 12px', borderRadius: '20px', fontWeight: '600' }}>⚫ Avoid</span>
+      </div>
       </div>
     )
   }
