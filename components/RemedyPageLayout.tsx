@@ -479,12 +479,12 @@ export default function RemedyPageLayout({
                   padding: '1rem 1.25rem',
                   display: 'flex', alignItems: 'flex-start', gap: '1rem',
                 }}>
-                 <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
-                      <span style={{ fontWeight: '600', color: '#2d4a3e', fontSize: '0.95rem' }}>{item.name}</span>
-                      <span style={{ fontSize: '0.72rem', fontWeight: '700', color: item.ratingColor, whiteSpace: 'nowrap' }}>{item.rating}</span>
+             <div style={{ flex: 1 }}>
+                    <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.35rem', fontSize: '0.95rem' }}>{item.category}</div>
+                    <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55', marginBottom: '0.5rem' }}>{item.desc}</div>
+                    <div style={{ fontSize: '0.8rem', color: '#e67e22', borderLeft: '3px solid #e67e22', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
+                      ⚠️ {item.note}
                     </div>
-                    <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55' }}>{item.desc}</div>
                   </div>
                   {item.pregnancySafe && (
                     <div style={{ flexShrink: 0 }}>

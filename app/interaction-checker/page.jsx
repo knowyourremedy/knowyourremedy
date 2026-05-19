@@ -6,13 +6,13 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { MEDS, CATEGORIES } from '../../lib/medsData';
+import { MEDS, CATEGORIES } from '@/lib/medsData';
 import {
   INTERACTIONS,
   getInteractionsFor,
   getInteractionBetween,
   statusConfig,
-} from '../../lib/interactionData';
+} from '@/lib/interactionData';
 import styles from './InteractionChecker.module.css';
 
 // ─── helpers ────────────────────────────────────────────────
