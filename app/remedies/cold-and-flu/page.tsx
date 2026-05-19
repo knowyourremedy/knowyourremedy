@@ -1,250 +1,140 @@
-import RemedyLayout from '@/components/RemedyLayout'
-import RemedyDisclaimer from '@/components/RemedyDisclaimer'
-import OilKey from '@/components/OilKey'
-import AffiliateDisclosure from '@/components/AffiliateDisclosure'
-import MedicalDisclaimer from '@/components/MedicalDisclaimer'
+import RemedyPageLayout from '@/components/RemedyPageLayout'
 
 export default function ColdAndFlu() {
   return (
-    <RemedyLayout>
-
-      <RemedyDisclaimer message="The information on this page is for educational purposes only and is not a substitute for professional medical advice. Always consult your doctor or qualified health provider before starting any new treatment. If you experience difficulty breathing, chest pain, confusion, or symptoms that are severe or rapidly worsening — seek emergency care immediately." />
-
-      <section style={{
-        textAlign: 'center',
-        padding: '2rem 2rem 1rem',
-        maxWidth: '900px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: '700',
-          color: '#2d4a3e',
-          marginBottom: '0.5rem'
-        }}>
-          Cold and Flu
-        </h1>
-        <p style={{ 
-          fontSize: '1.1rem', 
-          color: '#5a7a6e',
-          lineHeight: '1.6'
-        }}>
-          Every option available. Natural first, conventional when you need it. You decide what is right for your situation.
-        </p>
-      </section>
-
-      <section style={{
-        maxWidth: '900px',
-        margin: '0 auto',
-        padding: '1rem 2rem 2rem'
-      }}>
-
-        <OilKey />
-
-        <h2 style={{ 
-          fontSize: '1.25rem', 
-          color: '#2d4a3e',
-          borderBottom: '2px solid #c8b89a',
-          paddingBottom: '0.5rem',
-          marginBottom: '1.25rem'
-        }}>
-          🌿 Natural Options
-        </h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1rem',
-          marginBottom: '2rem'
-        }}>
-          {[
-            { 
-              name: 'Elderberry Syrup', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'One of the most well studied natural antivirals. Shown to reduce duration and severity of cold and flu symptoms. Safe for children over 1 year.',
-              warning: '',
-              safeUse: 'Take at first sign of symptoms. Look for brands without added high fructose corn syrup or artificial colors.'
-            },
-            { 
-              name: 'Oregano Oil', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'Powerful antimicrobial and antiviral properties. One of the strongest natural options for fighting cold and flu.',
-              warning: 'For internal use only purchase oils with a Supplement Facts panel on the label. The words pure, natural, or therapeutic grade do NOT mean safe to ingest. Not recommended for children under 6, pregnant women, or people on blood thinners without doctor approval.',
-              safeUse: 'Can also be mixed with a carrier oil — a plain gentle oil like coconut or jojoba oil — and applied to the bottoms of feet. Safe to diffuse for adults.'
-            },
-            { 
-              name: 'Eucalyptus Oil', 
-              badge: '🔵 External Only', 
-              badgeColor: '#2980b9',
-              desc: 'Opens airways and helps with congestion and breathing. One of the most effective oils for respiratory support.',
-              warning: 'Mix with a carrier oil — a plain gentle oil like coconut or jojoba oil — before applying to chest or back. Never swallow. Never apply directly to skin without mixing first.',
-              safeUse: 'Safe to diffuse for adults and children over 10. Do not diffuse around children under 10, infants, or cats — it can cause serious breathing problems for them.'
-            },
-            { 
-              name: 'Peppermint Oil', 
-              badge: '🔵 External Only', 
-              badgeColor: '#2980b9',
-              desc: 'Helps open airways and reduce congestion. Apply diluted to chest, back, and bottoms of feet.',
-              warning: 'Mix with a carrier oil — a plain gentle oil like coconut or jojoba oil — before applying to skin. Never swallow topical grade oil. Never apply directly to skin without mixing first.',
-              safeUse: 'Safe to diffuse for adults. Do not diffuse around children under 6, infants, or cats — it can cause breathing problems for them.'
-            },
-            { 
-              name: 'Ginger and Honey Tea', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'Anti-inflammatory and antimicrobial. Soothes sore throat, reduces congestion, and supports immune function. Safe and effective for all ages over 1 year.',
-              warning: 'Never give honey to infants under 1 year — it can cause infant botulism which is life threatening.',
-              safeUse: 'Add fresh ginger slices and raw local honey to hot water. Raw honey has more antimicrobial properties than processed honey.'
-            },
-            { 
-              name: 'Vitamin C', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'Supports immune function and may reduce duration of cold symptoms. Widely available and safe for most ages.',
-              warning: 'High doses over 2000mg per day in adults can cause digestive upset. Follow age appropriate dosing on the label.',
-              safeUse: 'Look for brands without artificial colors or sweeteners. Whole food vitamin C from acerola cherry is the cleanest form.'
-            },
-            { 
-              name: 'Zinc', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'Clinical evidence supports zinc lozenges for reducing cold duration when taken at first sign of symptoms.',
-              warning: 'Do not exceed recommended dose. Long term high dose zinc can interfere with copper absorption. Not recommended for children under 1 without doctor guidance.',
-              safeUse: 'Look for zinc acetate or zinc gluconate lozenges without artificial sweeteners or colors.'
-            },
-            { 
-              name: 'Bone Broth', 
-              badge: '🟢 Internal Only', 
-              badgeColor: '#27ae60',
-              desc: 'Hydrating, anti-inflammatory, and nutrient dense. Genuinely one of the best things you can consume when sick. The old chicken soup remedy has real science behind it.',
-              warning: '',
-              safeUse: 'Make your own or look for brands with minimal ingredients. Avoid brands with MSG, artificial flavors, or high sodium.'
-            },
-          ].map((item) => (
-            <div key={item.name} style={{
-              backgroundColor: '#fff',
-              border: '1px solid #e8e0d0',
-              borderRadius: '8px',
-              padding: '1.25rem'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <div style={{ 
-                  display: 'inline-block',
-                  fontSize: '0.8rem', 
-                  color: '#fff',
-                  backgroundColor: item.badgeColor,
-                  padding: '2px 10px',
-                  borderRadius: '20px',
-                  fontWeight: '600',
-                }}>
-                  {item.badge}
-                </div>
-                {item.badgeColor === '#27ae60' && (
-                  <span style={{ fontSize: '0.75rem', color: '#c0392b', fontStyle: 'italic' }}>
-                    (specific type — see notes below)
-                  </span>
-                )}
-              </div>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              {item.warning && (
-                <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.5rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.warning}
-                </div>
-              )}
-              {item.safeUse && (
-                <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.35rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.safeUse}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Ingestable Oil Label Education */}
-        <div style={{
-          backgroundColor: '#fff8e1',
-          border: '1px solid #f0c040',
-          borderRadius: '8px',
-          padding: '1.25rem 1.5rem',
-          marginBottom: '2rem'
-        }}>
-          <div style={{ fontWeight: '600', color: '#5a4a00', marginBottom: '0.75rem' }}>🏷️ How to identify a food grade essential oil</div>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.875rem', color: '#5a4a00', lineHeight: '2' }}>
-            <li>✅ Look for a <strong>Supplement Facts panel</strong> on the label — this is the only legally recognized indicator that an oil is certified safe for ingestion</li>
-            <li>✅ Trusted ingestable brands include doTERRA, Young Living, and Plant Therapy ingestable lines</li>
-            <li>🔴 The words <strong>pure, natural, therapeutic grade,</strong> or <strong>100% pure</strong> do NOT mean safe to ingest</li>
-            <li>🔴 No Supplement Facts panel means topical use only regardless of any other claims on the bottle</li>
-          </ul>
-        </div>
-
-        <h2 style={{ 
-          fontSize: '1.25rem', 
-          color: '#2d4a3e',
-          borderBottom: '2px solid #c8b89a',
-          paddingBottom: '0.5rem',
-          marginBottom: '1.25rem'
-        }}>
-          🏪 Cleaner Mainstream Options
-        </h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1rem',
-          marginBottom: '2rem'
-        }}>
-          {[
-            { name: 'Mucinex Plain', desc: 'Guaifenesin only. No added decongestants, antihistamines, or dyes. Helps thin and loosen mucus. Look for the plain version not Mucinex D or Mucinex DM.', rating: '🟢 Cleaner choice' },
-            { name: 'Zicam Cold Remedy', desc: 'Zinc based. Fewer artificial ingredients than most cold medicines. Use at first sign of symptoms for best results.', rating: '🟡 Acceptable' },
-            { name: 'Childrens Dimetapp Dye Free', desc: 'If you need a childrens cold medicine look specifically for the dye free version. Avoid versions with Red 40 or other artificial dyes.', rating: '🟡 Acceptable' },
-            { name: 'Vicks VapoRub', desc: 'Camphor, eucalyptus, and menthol. Effective for congestion relief. Apply to chest and back only. Never ingest.', rating: '🟡 Acceptable' },
-          ].map((item) => (
-            <div key={item.name} style={{
-              backgroundColor: '#fff',
-              border: '1px solid #e8e0d0',
-              borderRadius: '8px',
-              padding: '1.25rem'
-            }}>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              <div style={{ fontSize: '0.8rem', color: '#2d4a3e', fontWeight: '600' }}>{item.rating}</div>
-            </div>
-          ))}
-        </div>
-
-        <h2 style={{ 
-          fontSize: '1.25rem', 
-          color: '#2d4a3e',
-          borderBottom: '2px solid #c8b89a',
-          paddingBottom: '0.5rem',
-          marginBottom: '1.25rem'
-        }}>
-          ✅ If You Have No Other Choice
-        </h2>
-        <div style={{
-          backgroundColor: '#fff',
-          border: '1px solid #e8e0d0',
-          borderRadius: '8px',
-          padding: '1.25rem 1.5rem',
-          marginBottom: '3rem'
-        }}>
-          <p style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.7', marginBottom: '1rem' }}>
-            If you are at a gas station or convenience store with limited options here is what to look for and what to avoid.
-          </p>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: '2', fontSize: '0.9rem', color: '#5a7a6e' }}>
-            <li>✅ <strong>Look for:</strong> Single ingredient products — plain acetaminophen for fever and pain, plain guaifenesin for congestion</li>
-            <li>✅ <strong>Look for:</strong> Electrolyte drinks like Pedialyte or plain Gatorade to stay hydrated</li>
-            <li>🔴 <strong>Avoid:</strong> Multi symptom combination products unless you have every symptom listed</li>
-            <li>🔴 <strong>Avoid:</strong> Products containing Red 40, Yellow 5, Yellow 6, High Fructose Corn Syrup, or Saccharin</li>
-            <li>🔴 <strong>Avoid:</strong> NyQuil or DayQuil as a first choice — they contain multiple active ingredients and alcohol in some formulas</li>
-          </ul>
-        </div>
-
-        <AffiliateDisclosure />
-        <MedicalDisclaimer />
-
-      </section>
-    </RemedyLayout>
+    <RemedyPageLayout
+      title="Cold & Flu"
+      subtitle="Every option available. Natural first, conventional when you need it. You decide what is right for your situation."
+      emergency="Seek emergency care if you experience difficulty breathing, persistent chest pain, confusion, severe vomiting, or symptoms that improve then return with fever and worsening cough."
+      dosageLink="/dosage-calculator"
+      naturalItems={[
+        {
+          name: 'Elderberry Syrup',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'One of the most studied natural remedies for cold and flu. Clinical evidence supports reducing duration and severity of symptoms.',
+          warning: 'Avoid with autoimmune conditions or immunosuppressant medications.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Echinacea',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Supports immune function and may reduce duration of upper respiratory infections when taken at first sign of symptoms.',
+          warning: 'Do not use for more than 10 consecutive days. Avoid with autoimmune conditions.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Zinc Lozenges',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Zinc taken within 24 hours of symptom onset has clinical evidence for reducing cold duration. Use lozenges for best absorption.',
+          warning: 'Do not exceed 40mg per day long term. Nasal zinc sprays have been linked to permanent loss of smell — avoid.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Honey',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Raw or manuka honey is clinically proven to be as effective as dextromethorphan for nighttime cough in children over 1 year.',
+          warning: 'Never give to infants under 12 months — risk of infant botulism.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Ginger Tea',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Anti-inflammatory and warming. Helps relieve sore throat, congestion, and nausea associated with cold and flu.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Vitamin C',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'May reduce duration and severity of cold symptoms when taken regularly. Most effective as prevention rather than treatment.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Eucalyptus Oil',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Steam inhalation with eucalyptus oil helps open airways and relieve congestion. Can also be applied diluted to chest.',
+          warning: 'Never use on or near children under 10. Always dilute before skin application.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Saline Nasal Rinse',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Rinsing nasal passages with saline solution clears mucus, reduces congestion, and flushes out viral particles.',
+          safeUse: 'Safe for all ages including infants with appropriate saline drops. Always use distilled or previously boiled water.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Steam Inhalation',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Breathing steam from a bowl of hot water loosens mucus and relieves congestion. Add a few drops of eucalyptus oil for added effect.',
+          warning: 'Supervise children closely — hot steam can cause serious burns.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Hydration and Rest',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'The two most important things you can do. Fluids thin mucus and prevent dehydration. Rest allows the immune system to work.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+      mainstreamItems={[
+        {
+          name: 'Mucinex (Guaifenesin)',
+          desc: 'Expectorant that thins and loosens mucus. Single ingredient — one of the cleaner OTC options for congestion.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+        },
+        {
+          name: 'Tylenol Extra Strength Dye Free',
+          desc: 'Acetaminophen for fever and body aches. Single active ingredient, dye free version is the cleanest option.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+        },
+        {
+          name: 'Advil Liqui-Gels',
+          desc: 'Ibuprofen for fever, body aches, and inflammation. Fewer dyes and binders than tablet versions.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#f39c12',
+        },
+        {
+          name: 'Sudafed (Pseudoephedrine)',
+          desc: 'Most effective OTC decongestant. Available behind the pharmacy counter. Avoid with heart conditions or high blood pressure.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#f39c12',
+        },
+        {
+          name: 'NyQuil / DayQuil',
+          desc: 'Combination products with multiple active ingredients. Only use if you have all the symptoms listed — otherwise you are taking unnecessary ingredients.',
+          rating: '🔴 Last choice',
+          ratingColor: '#c0392b',
+        },
+      ]}
+      inPinchItems={[
+        {
+          category: 'Generic acetaminophen or ibuprofen',
+          desc: 'For fever and body aches. Single ingredient versions are available at any pharmacy or convenience store.',
+          note: 'Avoid multi-symptom combination products unless you have every symptom listed on the box.',
+        },
+        {
+          category: 'Generic guaifenesin',
+          desc: 'Store brand expectorant for congestion. Same active ingredient as Mucinex at a fraction of the cost.',
+          note: 'Drink plenty of water — guaifenesin works by thinning mucus which requires adequate hydration.',
+        },
+        {
+          category: 'Hot water with honey and lemon',
+          desc: 'Honey soothes the throat and has antimicrobial properties. Lemon provides vitamin C. Hot water helps with congestion.',
+          note: 'Not for infants under 12 months due to honey. Use warm not boiling water to preserve honey\'s beneficial properties.',
+        },
+      ]}
+    />
   )
 }

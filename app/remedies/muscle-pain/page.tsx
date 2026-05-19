@@ -1,172 +1,133 @@
-import RemedyLayout from '@/components/RemedyLayout'
-import RemedyDisclaimer from '@/components/RemedyDisclaimer'
-import OilKey from '@/components/OilKey'
-import AffiliateDisclosure from '@/components/AffiliateDisclosure'
-import MedicalDisclaimer from '@/components/MedicalDisclaimer'
+import RemedyPageLayout from '@/components/RemedyPageLayout'
 
 export default function MusclePain() {
   return (
-    <RemedyLayout>
-
-      <RemedyDisclaimer message="The information on this page is for educational purposes only and is not a substitute for professional medical advice. Seek medical care if muscle pain is severe, follows an injury, is accompanied by swelling or bruising, or does not improve within a few days. Always consult your doctor before starting any new supplement especially if you are on blood thinners or other medications." />
-
-      <section style={{
-        textAlign: 'center',
-        padding: '2rem 2rem 1rem',
-        maxWidth: '900px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#2d4a3e', marginBottom: '0.5rem' }}>
-          Muscle Pain
-        </h1>
-        <p style={{ fontSize: '1.1rem', color: '#5a7a6e', lineHeight: '1.6' }}>
-          Every option available. Natural first, conventional when you need it. You decide what is right for your situation.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: '900px', margin: '0 auto', padding: '1rem 2rem 2rem' }}>
-
-        <OilKey />
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🌿 Natural Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            {
-              name: 'Magnesium Glycinate',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Magnesium deficiency is one of the most common causes of muscle cramps and soreness. Glycinate form is the most bioavailable and gentlest on the stomach.',
-              warning: 'High doses can cause loose stools. Consult your doctor if you have kidney disease.',
-              safeUse: 'Take 200 to 400mg daily. Particularly effective for nighttime muscle cramps and post exercise soreness.'
-            },
-            {
-              name: 'Turmeric and Black Pepper',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Curcumin in turmeric is one of the most well studied natural anti-inflammatories. Black pepper increases absorption by up to 2000 percent.',
-              warning: 'May interact with blood thinners. High doses not recommended during pregnancy. Consult your doctor if on medications.',
-              safeUse: 'Always take with black pepper or look for supplements that include piperine. Take with food to reduce stomach upset. Effects build over consistent use.'
-            },
-            {
-              name: 'Peppermint Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Natural analgesic and cooling agent. Applied topically provides significant relief for sore and tired muscles.',
-              warning: 'Mix with a carrier oil before applying to skin. Never swallow topical grade oil. Not safe for children under 6.',
-              safeUse: 'Mix 2 to 3 drops with a teaspoon of coconut or jojoba oil and massage into sore muscles. Safe to diffuse for adults.'
-            },
-            {
-              name: 'Eucalyptus Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Anti-inflammatory and analgesic properties. Effective for muscle soreness and tension when applied topically.',
-              warning: 'Mix with a carrier oil before applying to skin. Never swallow. Do not apply near face of children under 10.',
-              safeUse: 'Combine with peppermint oil in a carrier oil for enhanced muscle relief. Massage into affected area.'
-            },
-            {
-              name: 'Arnica Montana',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'One of the most clinically studied natural topical remedies for muscle pain, bruising, and soreness. Available as gel, cream, or homeopathic tablets.',
-              warning: 'For topical use only — do not apply to broken skin or open wounds. The topical form is very different from homeopathic oral arnica.',
-              safeUse: 'Apply arnica gel directly to sore muscles up to three times daily. Boiron and Traumeel make widely trusted arnica products available at most health food stores.'
-            },
-            {
-              name: 'Epsom Salt Bath',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'Magnesium sulfate absorbed through the skin. Widely used for muscle soreness and tension. Particularly effective after intense exercise.',
-              warning: '',
-              safeUse: 'Add two cups to a warm bath and soak for 20 minutes. Safe for all ages. Add a few drops of lavender oil to the bath for enhanced relaxation.'
-            },
-            {
-              name: 'Ginger',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Clinical studies show ginger reduces exercise induced muscle pain by up to 25 percent. Anti-inflammatory and widely tolerated.',
-              warning: 'High doses may thin the blood. Consult your doctor if on blood thinners.',
-              safeUse: 'Take as fresh ginger tea, capsules, or ginger chews daily during periods of high physical activity.'
-            },
-            {
-              name: 'Heat and Cold Therapy',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'Cold reduces inflammation in the first 48 hours after injury or intense exercise. Heat relaxes muscles and increases blood flow for chronic soreness.',
-              warning: '',
-              safeUse: 'Use cold packs for 20 minutes at a time in the first two days after acute muscle strain. Switch to heat after 48 hours for chronic or recurring soreness.'
-            },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <div style={{ display: 'inline-block', fontSize: '0.8rem', color: '#fff', backgroundColor: item.badgeColor, padding: '2px 10px', borderRadius: '20px', fontWeight: '600' }}>
-                  {item.badge}
-                </div>
-                {item.badgeColor === '#27ae60' && (
-                  <span style={{ fontSize: '0.75rem', color: '#c0392b', fontStyle: 'italic' }}>(specific type — see notes below)</span>
-                )}
-              </div>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              {item.warning && (
-                <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.5rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.warning}
-                </div>
-              )}
-              {item.safeUse && (
-                <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.35rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.safeUse}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div style={{ backgroundColor: '#fff8e1', border: '1px solid #f0c040', borderRadius: '8px', padding: '1.25rem 1.5rem', marginBottom: '2rem' }}>
-          <div style={{ fontWeight: '600', color: '#5a4a00', marginBottom: '0.75rem' }}>🏷️ How to identify a food grade essential oil</div>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.875rem', color: '#5a4a00', lineHeight: '2' }}>
-            <li>✅ Look for a <strong>Supplement Facts panel</strong> on the label — this is the only legally recognized indicator that an oil is certified safe for ingestion</li>
-            <li>✅ Trusted ingestable brands include doTERRA, Young Living, and Plant Therapy ingestable lines</li>
-            <li>🔴 The words <strong>pure, natural, therapeutic grade,</strong> or <strong>100% pure</strong> do NOT mean safe to ingest</li>
-            <li>🔴 No Supplement Facts panel means topical use only regardless of any other claims on the bottle</li>
-          </ul>
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🏪 Cleaner Mainstream Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            { name: 'Biofreeze Gel', desc: 'Menthol based topical pain reliever. Fewer ingredients than most competing products. Effective for muscle soreness and tension.', rating: '🟡 Acceptable' },
-            { name: 'Tiger Balm White', desc: 'Camphor and menthol blend. Fewer synthetic additives than many mainstream muscle rubs. Long trusted formula.', rating: '🟢 Cleaner choice' },
-            { name: 'Advil Liqui-Gels', desc: 'Ibuprofen in liquid gel form. Fewer dyes and binders than tablet versions. Effective anti-inflammatory for muscle pain.', rating: '🟡 Acceptable' },
-            { name: 'Aleve', desc: 'Naproxen sodium. Longer lasting than ibuprofen — one dose lasts up to 12 hours. Better for inflammation driven muscle pain.', rating: '🟡 Acceptable' },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              <div style={{ fontSize: '0.8rem', color: '#2d4a3e', fontWeight: '600' }}>{item.rating}</div>
-            </div>
-          ))}
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          ✅ If You Have No Other Choice
-        </h2>
-        <div style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem 1.5rem', marginBottom: '3rem' }}>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: '2', fontSize: '0.9rem', color: '#5a7a6e' }}>
-            <li>✅ <strong>Look for:</strong> Plain ibuprofen or naproxen with minimal fillers</li>
-            <li>✅ <strong>Look for:</strong> Any menthol based topical rub with the fewest ingredients on the label</li>
-            <li>🔴 <strong>Avoid:</strong> Combination muscle and pain products with multiple active ingredients you do not need</li>
-            <li>🔴 <strong>Avoid:</strong> Products containing artificial dyes or fragrances in topical applications</li>
-          </ul>
-        </div>
-
-        <AffiliateDisclosure />
-        <MedicalDisclaimer />
-
-      </section>
-    </RemedyLayout>
+    <RemedyPageLayout
+      title="Muscle Pain"
+      subtitle="Every option available. Natural first, conventional when you need it. You decide what is right for your situation."
+      emergency="Seek emergency care if muscle pain is severe and sudden, accompanied by weakness or paralysis, follows a significant injury, or if urine becomes dark brown after intense exercise — this can indicate rhabdomyolysis."
+      dosageLink="/dosage-calculator"
+      naturalItems={[
+        {
+          name: 'Magnesium Glycinate',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Magnesium is essential for muscle relaxation and recovery. Deficiency causes muscle cramps, spasms, and delayed recovery after exercise. Glycinate form is the most bioavailable and gentlest on the stomach.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Epsom Salt Bath',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Magnesium sulfate absorbed through the skin relaxes muscles and reduces soreness. Soak for 20 minutes in warm water with 2 cups of Epsom salt after exercise or injury.',
+          warning: 'Do not use on broken skin.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Arnica (Topical)',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Topical arnica gel reduces muscle soreness, bruising, and inflammation. Multiple clinical studies support its effectiveness for exercise induced muscle damage.',
+          warning: 'External use only. Do not apply to broken skin or open wounds.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Turmeric / Curcumin',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Curcumin reduces exercise induced muscle damage and speeds recovery. Multiple studies show significant reduction in delayed onset muscle soreness (DOMS) with curcumin supplementation.',
+          warning: 'Take with black pepper for up to 2000% better absorption. May interact with blood thinners.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Peppermint Oil',
+          badge: 'Dilute First',
+          badgeColor: '#be185d',
+          desc: 'Menthol in peppermint oil produces a cooling analgesic effect on sore muscles. Apply diluted in a carrier oil to affected areas and massage in.',
+          warning: 'Always dilute before skin application. Avoid near eyes and mucous membranes.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Fish Oil (Omega-3)',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'EPA and DHA reduce exercise induced inflammation and muscle damage. Most effective when taken regularly rather than just after exercise.',
+          warning: 'May increase bleeding risk at high doses. Take with meals.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Heat and Cold Therapy',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Cold in the first 48-72 hours reduces inflammation in acute muscle injuries. Heat after 72 hours increases blood flow and speeds recovery in chronic muscle soreness.',
+          warning: 'Never apply ice or heat directly to skin. Use a cloth barrier and limit to 15-20 minutes.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Ginger Tea',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Clinical evidence shows ginger reduces muscle pain and soreness after exercise. Inhibits both COX and LOX inflammatory pathways.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+      mainstreamItems={[
+        {
+          name: 'Advil Liqui-Gels (Ibuprofen)',
+          desc: 'Anti-inflammatory NSAID that addresses the root cause of muscle pain. More effective than acetaminophen for exercise induced muscle soreness.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'avoid',
+        },
+        {
+          name: 'Tylenol Extra Strength Dye Free',
+          desc: 'Acetaminophen for muscle pain relief when NSAIDs cannot be used. Less effective than ibuprofen for inflammatory muscle pain.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Biofreeze (Topical Menthol)',
+          desc: 'Topical pain relief gel using menthol. Provides temporary cooling relief without systemic side effects. Good for localized muscle pain.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Icy Hot (Menthol/Methyl Salicylate)',
+          desc: 'Combination topical analgesic with cooling and warming effects. Effective for temporary muscle pain relief.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
+          pregnancySafe: 'avoid',
+        },
+        {
+          name: 'Flexeril (Cyclobenzaprine)',
+          desc: 'Prescription muscle relaxant for severe muscle spasm and pain. Causes significant drowsiness. Requires physician supervision.',
+          rating: '🔵 Prescription only',
+          ratingColor: '#2563eb',
+          pregnancySafe: 'ask',
+        },
+      ]}
+      inPinchItems={[
+        {
+          category: 'Generic ibuprofen',
+          desc: 'Store brand ibuprofen 200-400mg. Most effective OTC option for muscle pain and inflammation.',
+          note: 'Take with food to protect the stomach. Do not exceed 1,200mg per day without physician direction.',
+          pregnancySafe: 'avoid',
+        },
+        {
+          category: 'Generic acetaminophen',
+          desc: 'Store brand acetaminophen for muscle pain relief when ibuprofen cannot be used.',
+          note: 'Do not exceed 4,000mg per day. Check all other medications for hidden acetaminophen.',
+          pregnancySafe: 'safe',
+        },
+        {
+          category: 'Heat or cold pack',
+          desc: 'Cold for acute injuries in the first 48-72 hours. Heat for chronic soreness after 72 hours. A bag of frozen vegetables wrapped in a cloth works well.',
+          note: 'Never apply directly to skin. Limit to 15-20 minute sessions.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+    />
   )
 }

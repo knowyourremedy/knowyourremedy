@@ -1,172 +1,134 @@
-import RemedyLayout from '@/components/RemedyLayout'
-import RemedyDisclaimer from '@/components/RemedyDisclaimer'
-import OilKey from '@/components/OilKey'
-import AffiliateDisclosure from '@/components/AffiliateDisclosure'
-import MedicalDisclaimer from '@/components/MedicalDisclaimer'
+import RemedyPageLayout from '@/components/RemedyPageLayout'
 
 export default function SinusCongestion() {
   return (
-    <RemedyLayout>
-
-      <RemedyDisclaimer message="The information on this page is for educational purposes only and is not a substitute for professional medical advice. Seek medical care if sinus congestion is accompanied by severe headache, high fever, vision changes, stiff neck, or symptoms lasting more than 10 days. These may indicate a sinus infection requiring antibiotic treatment. Always consult your doctor before starting any new supplement." />
-
-      <section style={{
-        textAlign: 'center',
-        padding: '2rem 2rem 1rem',
-        maxWidth: '900px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#2d4a3e', marginBottom: '0.5rem' }}>
-          Sinus Congestion
-        </h1>
-        <p style={{ fontSize: '1.1rem', color: '#5a7a6e', lineHeight: '1.6' }}>
-          Every option available. Natural first, conventional when you need it. You decide what is right for your situation.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: '900px', margin: '0 auto', padding: '1rem 2rem 2rem' }}>
-
-        <OilKey />
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🌿 Natural Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            {
-              name: 'Steam Inhalation',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'Inhaling steam loosens mucus and opens nasal passages immediately. One of the most effective and accessible sinus relief methods available.',
-              warning: 'Keep a safe distance from hot water to avoid burns. Never leave children unattended near hot water.',
-              safeUse: 'Boil water, pour into a bowl, drape a towel over your head and breathe deeply for 5 to 10 minutes. Add a few drops of eucalyptus oil for enhanced relief.'
-            },
-            {
-              name: 'Eucalyptus Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'One of the most effective oils for opening airways and relieving sinus congestion. The cineole compound in eucalyptus is clinically studied for sinus relief.',
-              warning: 'Mix with a carrier oil before applying to chest or under the nose. Never swallow. Do not apply near face of children under 10.',
-              safeUse: 'Add 3 to 5 drops to a bowl of hot water for steam inhalation. Safe to diffuse for adults and children over 10. Do not diffuse around children under 10, infants, or cats.'
-            },
-            {
-              name: 'Peppermint Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Menthol in peppermint oil opens nasal passages and provides immediate congestion relief when inhaled.',
-              warning: 'Mix with a carrier oil before applying to skin. Never swallow topical grade oil. Not safe for children under 6.',
-              safeUse: 'Apply a tiny amount diluted under the nose or on the chest. Add to steam inhalation for enhanced effect. Safe to diffuse for adults.'
-            },
-            {
-              name: 'Neti Pot',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'Saline nasal irrigation physically flushes mucus and irritants from the nasal passages. One of the most effective non-drug sinus treatments available.',
-              warning: 'Use only distilled or sterile water — never tap water. Tap water can contain organisms that cause serious infection when introduced into the nasal passages.',
-              safeUse: 'Use once or twice daily when congested. Clean the neti pot thoroughly after every use. Safe for children over 4 with proper supervision.'
-            },
-            {
-              name: 'Ginger Tea',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Anti-inflammatory and decongestant properties. Helps thin mucus and reduce sinus inflammation from the inside.',
-              warning: '',
-              safeUse: 'Drink hot for best results — the steam also helps. Add raw honey and lemon for additional antimicrobial benefit.'
-            },
-            {
-              name: 'Quercetin',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Natural antihistamine that reduces sinus inflammation driven by allergies. One of the best supplements for allergy related congestion.',
-              warning: 'May interact with some antibiotics and blood thinners.',
-              safeUse: 'Take with bromelain for better absorption. Most effective taken consistently rather than just when symptoms flare.'
-            },
-            {
-              name: 'Apple Cider Vinegar',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Helps thin mucus and balance the body\'s pH. Popular in the natural health community for sinus congestion relief.',
-              warning: 'Always dilute — never drink straight. Can damage tooth enamel if not diluted properly.',
-              safeUse: 'Mix one tablespoon in 8 ounces of warm water. Drink two to three times daily when congested. Bragg is the most widely trusted brand.'
-            },
-            {
-              name: 'Hydration',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Staying well hydrated thins mucus and helps the body clear congestion naturally. Often overlooked but highly effective.',
-              warning: '',
-              safeUse: 'Drink warm fluids as much as possible — warm water, herbal teas, and broths are most effective. Avoid alcohol and caffeine which cause dehydration.'
-            },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <div style={{ display: 'inline-block', fontSize: '0.8rem', color: '#fff', backgroundColor: item.badgeColor, padding: '2px 10px', borderRadius: '20px', fontWeight: '600' }}>
-                  {item.badge}
-                </div>
-                {item.badgeColor === '#27ae60' && (
-                  <span style={{ fontSize: '0.75rem', color: '#c0392b', fontStyle: 'italic' }}>(specific type — see notes below)</span>
-                )}
-              </div>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              {item.warning && (
-                <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.5rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.warning}
-                </div>
-              )}
-              {item.safeUse && (
-                <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.35rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.safeUse}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div style={{ backgroundColor: '#fff8e1', border: '1px solid #f0c040', borderRadius: '8px', padding: '1.25rem 1.5rem', marginBottom: '2rem' }}>
-          <div style={{ fontWeight: '600', color: '#5a4a00', marginBottom: '0.75rem' }}>🏷️ How to identify a food grade essential oil</div>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.875rem', color: '#5a4a00', lineHeight: '2' }}>
-            <li>✅ Look for a <strong>Supplement Facts panel</strong> on the label — this is the only legally recognized indicator that an oil is certified safe for ingestion</li>
-            <li>✅ Trusted ingestable brands include doTERRA, Young Living, and Plant Therapy ingestable lines</li>
-            <li>🔴 The words <strong>pure, natural, therapeutic grade,</strong> or <strong>100% pure</strong> do NOT mean safe to ingest</li>
-            <li>🔴 No Supplement Facts panel means topical use only regardless of any other claims on the bottle</li>
-          </ul>
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🏪 Cleaner Mainstream Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            { name: 'Mucinex Plain', desc: 'Guaifenesin only. No added decongestants or antihistamines. Thins and loosens mucus. Look for the plain version not Mucinex D or DM.', rating: '🟢 Cleaner choice' },
-            { name: 'Simply Saline Nasal Spray', desc: 'Plain sterile saline solution. Drug free. Safe for all ages including infants. One of the best first line treatments for congestion.', rating: '🟢 Cleaner choice' },
-            { name: 'Afrin Original', desc: 'Oxymetazoline nasal spray. Fast and effective but do not use for more than 3 days — causes rebound congestion with extended use.', rating: '🟡 Acceptable — 3 days max' },
-            { name: 'Sudafed PE', desc: 'Phenylephrine decongestant. Less effective than pseudoephedrine but available without signing the pharmacy register. Minimal additives in tablet form.', rating: '🟡 Acceptable' },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              <div style={{ fontSize: '0.8rem', color: '#2d4a3e', fontWeight: '600' }}>{item.rating}</div>
-            </div>
-          ))}
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          ✅ If You Have No Other Choice
-        </h2>
-        <div style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem 1.5rem', marginBottom: '3rem' }}>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: '2', fontSize: '0.9rem', color: '#5a7a6e' }}>
-            <li>✅ <strong>Look for:</strong> Plain saline nasal spray — available almost everywhere and completely drug free</li>
-            <li>✅ <strong>Look for:</strong> Plain guaifenesin to thin mucus without added decongestants</li>
-            <li>🔴 <strong>Avoid:</strong> Afrin or other oxymetazoline sprays for more than 3 days — causes rebound congestion that is worse than the original</li>
-            <li>🔴 <strong>Avoid:</strong> Combination cold and sinus products with multiple active ingredients you do not need</li>
-          </ul>
-        </div>
-
-        <AffiliateDisclosure />
-        <MedicalDisclaimer />
-
-      </section>
-    </RemedyLayout>
+    <RemedyPageLayout
+      title="Sinus Congestion"
+      subtitle="Every option available. Natural first, conventional when you need it. You decide what is right for your situation."
+      emergency="Seek medical care if congestion is accompanied by severe facial pain or pressure, high fever, vision changes, stiff neck, swelling around the eyes, or symptoms that worsen after 10 days or improve then return."
+      dosageLink="/dosage-calculator"
+      naturalItems={[
+        {
+          name: 'Saline Nasal Rinse',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Rinsing nasal passages with sterile saline solution flushes out allergens, mucus, and pathogens. One of the most evidence based interventions for sinus congestion of any cause.',
+          warning: 'Always use distilled, sterile, or previously boiled and cooled water. Never use tap water directly in a neti pot.',
+          safeUse: 'Safe for all ages. Use age appropriate saline drops or spray for infants.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Steam Inhalation',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Breathing steam from a bowl of hot water loosens thick mucus and relieves sinus pressure. Add eucalyptus or peppermint oil for added decongestant effect.',
+          warning: 'Supervise children closely — hot steam can cause serious burns. Do not use boiling water.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Eucalyptus Oil',
+          badge: 'Dilute First',
+          badgeColor: '#be185d',
+          desc: '1,8-cineole in eucalyptus oil is a proven mucolytic and decongestant. Add a few drops to a steam bowl or diffuser for immediate sinus relief.',
+          warning: 'Never use on or near children under 10. Always dilute before skin application.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Peppermint Oil',
+          badge: 'Dilute First',
+          badgeColor: '#be185d',
+          desc: 'Menthol in peppermint oil opens nasal passages and reduces sinus pressure. Diffuse or apply diluted under the nose and on the chest.',
+          warning: 'Never apply near face or mouth of children under 6. Always dilute before skin application.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Ginger Tea',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Anti-inflammatory properties reduce sinus inflammation and mucus production. Warming effect promotes sinus drainage.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Quercetin',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Natural antihistamine and anti-inflammatory that stabilizes mast cells and reduces histamine driven sinus congestion. Most effective as a preventive for allergy related congestion.',
+          warning: 'May interact with certain antibiotics and blood thinners.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Horseradish',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'Fresh horseradish is a powerful natural decongestant. The volatile compounds stimulate mucus flow and clear sinus passages almost immediately.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Humidifier',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Adding moisture to dry air prevents mucus from thickening and keeps sinus passages from drying out. Cool mist humidifiers are preferred over steam humidifiers for children.',
+          safeUse: 'Safe for all ages. Clean the humidifier regularly to prevent mold growth.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+      mainstreamItems={[
+        {
+          name: 'Sudafed (Pseudoephedrine)',
+          desc: 'The most effective OTC decongestant. Shrinks swollen nasal passages. Available behind the pharmacy counter. Avoid with heart conditions or high blood pressure.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Afrin (Oxymetazoline Nasal Spray)',
+          desc: 'Fast acting nasal decongestant spray. Works within minutes. Do not use for more than 3 consecutive days — causes rebound congestion.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Mucinex (Guaifenesin)',
+          desc: 'Expectorant that thins and loosens mucus making it easier to drain. Single ingredient and well tolerated.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Flonase (Fluticasone)',
+          desc: 'Nasal corticosteroid spray that reduces sinus inflammation. Most effective for allergy related congestion with regular use. Takes a few days to reach full effect.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Amoxicillin (Prescription)',
+          desc: 'Antibiotic for bacterial sinusitis. Most sinus infections are viral and do not respond to antibiotics. Requires physician diagnosis.',
+          rating: '🔵 Prescription only',
+          ratingColor: '#2563eb',
+          pregnancySafe: 'ask',
+        },
+      ]}
+      inPinchItems={[
+        {
+          category: 'Saline nasal spray',
+          desc: 'Available at any pharmacy. Flushes allergens and mucus from nasal passages without any medication.',
+          note: 'Use before any other nasal medication to maximize effectiveness. Safe to use as many times per day as needed.',
+          pregnancySafe: 'safe',
+        },
+        {
+          category: 'Generic pseudoephedrine',
+          desc: 'Store brand decongestant available behind the pharmacy counter. Most effective OTC option for congestion relief.',
+          note: 'Avoid with heart disease, high blood pressure, thyroid disease, or diabetes. Do not use with MAOIs.',
+          pregnancySafe: 'ask',
+        },
+        {
+          category: 'Hot shower or steam',
+          desc: 'A hot shower or bowl of hot water to breathe steam over provides immediate temporary relief from sinus congestion.',
+          note: 'Adding a few drops of eucalyptus or peppermint oil to a steam bowl enhances the decongestant effect.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+    />
   )
 }

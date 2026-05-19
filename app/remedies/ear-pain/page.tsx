@@ -1,167 +1,126 @@
-import RemedyLayout from '@/components/RemedyLayout'
-import RemedyDisclaimer from '@/components/RemedyDisclaimer'
-import OilKey from '@/components/OilKey'
-import AffiliateDisclosure from '@/components/AffiliateDisclosure'
-import MedicalDisclaimer from '@/components/MedicalDisclaimer'
+import RemedyPageLayout from '@/components/RemedyPageLayout'
 
 export default function EarPain() {
   return (
-    <RemedyLayout>
-
-      <RemedyDisclaimer message="The information on this page is for educational purposes only and is not a substitute for professional medical advice. Ear pain in children under 2 should always be evaluated by a doctor. Seek medical care if ear pain is severe, accompanied by high fever, discharge from the ear, sudden hearing loss, or dizziness. Never put anything inside the ear canal without doctor approval." />
-
-      <section style={{
-        textAlign: 'center',
-        padding: '2rem 2rem 1rem',
-        maxWidth: '900px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#2d4a3e', marginBottom: '0.5rem' }}>
-          Ear Pain
-        </h1>
-        <p style={{ fontSize: '1.1rem', color: '#5a7a6e', lineHeight: '1.6' }}>
-          Every option available. Natural first, conventional when you need it. You decide what is right for your situation.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: '900px', margin: '0 auto', padding: '1rem 2rem 2rem' }}>
-
-        <div style={{ backgroundColor: '#c0392b', color: '#fff', padding: '1rem 1.5rem', borderRadius: '8px', marginBottom: '2rem', fontSize: '0.9rem', lineHeight: '1.7' }}>
-          🚨 <strong>Important safety warning:</strong> Never put oils, liquids, or any object inside the ear canal unless directed by a doctor. This includes essential oils. Application is always around the outside of the ear only — never inside. If you suspect a ruptured eardrum do not put anything near the ear and seek medical care immediately.
-        </div>
-
-        <OilKey />
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🌿 Natural Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            {
-              name: 'Warm Compress',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'A warm compress held against the ear reduces pain and promotes drainage of fluid. One of the safest and most effective first responses to ear pain.',
-              warning: 'Make sure the compress is warm not hot. Never apply heat directly to an infant\'s ear without doctor guidance.',
-              safeUse: 'Soak a clean cloth in warm water, wring out, and hold gently against the outer ear for 10 to 15 minutes. Repeat as needed.'
-            },
-            {
-              name: 'Garlic Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Garlic has natural antimicrobial and anti-inflammatory properties. Warm garlic oil applied around the outside of the ear has been used traditionally for ear pain.',
-              warning: 'Apply only around the outside of the ear — never inside the ear canal. Never use if eardrum may be ruptured. Not a substitute for medical treatment of ear infections.',
-              safeUse: 'Warm a small amount of garlic infused olive oil to body temperature — test on your wrist first. Apply a few drops to a cotton ball and hold gently against the outer ear opening. Never drop directly into the ear canal.'
-            },
-            {
-              name: 'Basil Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Natural anti-inflammatory and antimicrobial properties. Used in the natural health community for ear pain relief applied around the outer ear.',
-              warning: 'Mix with a carrier oil before any skin contact. Apply only around the outside of the ear — never inside the ear canal.',
-              safeUse: 'Mix 2 drops with a teaspoon of coconut oil and apply gently around the outer ear. Never inside the canal.'
-            },
-            {
-              name: 'Tea Tree Oil',
-              badge: '🔵 External Only',
-              badgeColor: '#2980b9',
-              desc: 'Antimicrobial properties effective against bacteria and fungi. Applied very diluted around the outer ear for external ear infections.',
-              warning: 'Must be heavily diluted — at least 1 drop per tablespoon of carrier oil. Never use inside the ear canal. Not safe for children under 6. Never ingest.',
-              safeUse: 'Apply only to the outer ear and surrounding skin. Not for use inside the ear canal under any circumstances.'
-            },
-            {
-              name: 'Ginger Tea',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Anti-inflammatory properties help reduce the systemic inflammation that contributes to ear pain, especially when associated with cold or flu.',
-              warning: '',
-              safeUse: 'Drink warm for best results. Safe for all ages over 1 year. Add raw honey for additional antimicrobial benefit.'
-            },
-            {
-              name: 'Elderberry Syrup',
-              badge: '🟢 Internal Only',
-              badgeColor: '#27ae60',
-              desc: 'Immune support to help the body fight the underlying infection causing ear pain. Most effective taken at first sign of illness.',
-              warning: 'Never give honey to infants under 1 year.',
-              safeUse: 'Safe for children over 1 year. Take at first sign of illness for best results.'
-            },
-            {
-              name: 'Xylitol Nasal Spray',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'Xylitol helps prevent bacteria from adhering to the nasal and ear tissues. Particularly useful for ear pain connected to sinus congestion and eustachian tube blockage.',
-              warning: '',
-              safeUse: 'Use as directed on the label. Available at most health food stores. Xlear is a widely trusted brand that combines xylitol with saline.'
-            },
-            {
-              name: 'Chewing and Yawning',
-              badge: '🏠 Home Remedy',
-              badgeColor: '#7f8c8d',
-              desc: 'For ear pain caused by pressure changes — flying, altitude, or eustachian tube blockage — chewing gum or exaggerated yawning opens the eustachian tube and equalizes pressure.',
-              warning: '',
-              safeUse: 'Swallowing, yawning, and the Valsalva maneuver — pinching your nose and gently blowing — are all effective for pressure related ear discomfort.'
-            },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <div style={{ display: 'inline-block', fontSize: '0.8rem', color: '#fff', backgroundColor: item.badgeColor, padding: '2px 10px', borderRadius: '20px', fontWeight: '600' }}>
-                  {item.badge}
-                </div>
-                {item.badgeColor === '#27ae60' && (
-                  <span style={{ fontSize: '0.75rem', color: '#c0392b', fontStyle: 'italic' }}>(specific type — see notes below)</span>
-                )}
-              </div>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              {item.warning && (
-                <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.5rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.warning}
-                </div>
-              )}
-              {item.safeUse && (
-                <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.35rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.5rem', lineHeight: '1.5' }}>
-                  {item.safeUse}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          🏪 Cleaner Mainstream Options
-        </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-          {[
-            { name: 'Childrens Tylenol Dye Free', desc: 'Acetaminophen for pain and fever associated with ear infections. Look specifically for the dye free version.', rating: '🟢 Cleaner choice' },
-            { name: 'Childrens Motrin Dye Free', desc: 'Ibuprofen for pain and inflammation. Often more effective than acetaminophen for ear pain specifically. Look for the dye free version.', rating: '🟢 Cleaner choice' },
-            { name: 'Debrox Earwax Removal', desc: 'Carbamide peroxide drops for earwax buildup related ear discomfort. Not for use if eardrum may be perforated.', rating: '🟡 Acceptable' },
-            { name: 'Similasan Earache Relief', desc: 'Homeopathic ear drops. No antibiotic ingredients. Safe for children. Limited clinical evidence but widely used and generally well tolerated.', rating: '🟡 Acceptable' },
-          ].map((item) => (
-            <div key={item.name} style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem' }}>
-              <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.5rem' }}>{item.name}</div>
-              <div style={{ fontSize: '0.9rem', color: '#5a7a6e', lineHeight: '1.5', marginBottom: '0.5rem' }}>{item.desc}</div>
-              <div style={{ fontSize: '0.8rem', color: '#2d4a3e', fontWeight: '600' }}>{item.rating}</div>
-            </div>
-          ))}
-        </div>
-
-        <h2 style={{ fontSize: '1.25rem', color: '#2d4a3e', borderBottom: '2px solid #c8b89a', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
-          ✅ If You Have No Other Choice
-        </h2>
-        <div style={{ backgroundColor: '#fff', border: '1px solid #e8e0d0', borderRadius: '8px', padding: '1.25rem 1.5rem', marginBottom: '3rem' }}>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: '2', fontSize: '0.9rem', color: '#5a7a6e' }}>
-            <li>✅ <strong>Look for:</strong> Plain acetaminophen or ibuprofen for pain relief while you seek medical care</li>
-            <li>✅ <strong>Try first:</strong> A warm compress against the outer ear — free and immediately available</li>
-            <li>🔴 <strong>Avoid:</strong> Putting any liquid or oil inside the ear canal without doctor approval</li>
-            <li>🔴 <strong>Avoid:</strong> Cotton swabs inside the ear — they push wax deeper and can damage the eardrum</li>
-            <li>🔴 <strong>Children under 2 with ear pain should always see a doctor</strong> — do not attempt to treat at home alone</li>
-          </ul>
-        </div>
-
-        <AffiliateDisclosure />
-        <MedicalDisclaimer />
-
-      </section>
-    </RemedyLayout>
+    <RemedyPageLayout
+      title="Ear Pain"
+      subtitle="Every option available. Natural first, conventional when you need it. You decide what is right for your situation."
+      emergency="Seek emergency care if ear pain is accompanied by high fever, sudden hearing loss, severe dizziness, stiff neck, swelling behind the ear, or if a child is inconsolable."
+      dosageLink="/dosage-calculator"
+      naturalItems={[
+        {
+          name: 'Warm Compress',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'A warm cloth or heating pad on low applied to the affected ear reduces pain and pressure. One of the safest and most immediate relief options.',
+          warning: 'Never use a compress that is too hot. Test on your wrist first. Do not apply directly to the ear canal.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Garlic Oil',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Garlic has powerful antimicrobial properties. Warm garlic infused oil dropped into the ear canal can reduce pain and fight infection in outer ear infections.',
+          warning: 'Never use if eardrum may be perforated. Do not use in children with ear tubes. Warm to body temperature before use — never hot.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Mullein Ear Drops',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Mullein flower oil has anti-inflammatory and analgesic properties. Clinical studies show mullein ear drops are as effective as anesthetic ear drops for ear pain in children.',
+          warning: 'Do not use if eardrum is perforated or if ear tubes are present.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Olive Oil',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'Warm olive oil dropped into the ear canal softens earwax buildup which is a common cause of ear pain and pressure.',
+          warning: 'Never use if eardrum may be perforated. Warm to body temperature before use.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Tea Tree Oil',
+          badge: 'Dilute First',
+          badgeColor: '#be185d',
+          desc: 'Diluted tea tree oil applied around the outer ear has antimicrobial properties helpful for outer ear infections. Never place inside the ear canal.',
+          warning: 'For external use around the outer ear only — never inside the ear canal. Always dilute heavily in carrier oil.',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Hydrogen Peroxide',
+          badge: 'External Only',
+          badgeColor: '#2980b9',
+          desc: 'A few drops of diluted hydrogen peroxide in the ear can help soften and remove earwax buildup causing pressure and pain.',
+          warning: 'Use 3% solution diluted 50/50 with warm water. Never use if eardrum may be perforated. Tilt head and allow to sit for 1 minute then drain.',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Ibuprofen or Acetaminophen',
+          badge: 'Internal Only',
+          badgeColor: '#78350f',
+          desc: 'For pain management while addressing the underlying cause. Ibuprofen is preferred for ear pain as it also reduces inflammation.',
+          pregnancySafe: 'ask',
+        },
+      ]}
+      mainstreamItems={[
+        {
+          name: 'Advil Liqui-Gels (Ibuprofen)',
+          desc: 'Anti-inflammatory that reduces both pain and swelling. More effective than acetaminophen for ear pain due to its anti-inflammatory properties.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'avoid',
+        },
+        {
+          name: 'Tylenol Extra Strength Dye Free',
+          desc: 'Acetaminophen for pain relief. Good option when ibuprofen cannot be used.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'safe',
+        },
+        {
+          name: 'Debrox Ear Drops',
+          desc: 'Carbamide peroxide drops that soften and remove earwax. Good for ear pain caused by wax buildup.',
+          rating: '🟢 Cleaner choice',
+          ratingColor: '#27ae60',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Antipyrine and Benzocaine Ear Drops',
+          desc: 'OTC anesthetic ear drops that numb the ear canal for temporary pain relief. Not a treatment — pain relief only.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
+          pregnancySafe: 'ask',
+        },
+        {
+          name: 'Amoxicillin (Prescription)',
+          desc: 'Most commonly prescribed antibiotic for bacterial ear infections. Requires physician diagnosis and prescription.',
+          rating: '🔵 Prescription only',
+          ratingColor: '#2563eb',
+          pregnancySafe: 'ask',
+        },
+      ]}
+      inPinchItems={[
+        {
+          category: 'Generic ibuprofen',
+          desc: 'Store brand ibuprofen 200-400mg for pain and inflammation. Most effective OTC option for ear pain.',
+          note: 'Take with food. Do not exceed 1,200mg per day without physician direction.',
+          pregnancySafe: 'avoid',
+        },
+        {
+          category: 'Generic acetaminophen',
+          desc: 'Store brand acetaminophen for pain relief when ibuprofen cannot be used.',
+          note: 'Do not exceed 4,000mg per day. Check all other medications for hidden acetaminophen.',
+          pregnancySafe: 'safe',
+        },
+        {
+          category: 'Warm cloth compress',
+          desc: 'A warm damp cloth held against the affected ear provides immediate comfort and reduces pain.',
+          note: 'Free and always available. Safe for all ages including infants.',
+          pregnancySafe: 'safe',
+        },
+      ]}
+    />
   )
 }

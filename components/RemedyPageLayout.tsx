@@ -54,12 +54,14 @@ interface MainstreamItem {
   desc: string
   rating: string
   ratingColor: string
+  pregnancySafe?: PregnancySafe
 }
 
 interface InPinchItem {
   category: string
   desc: string
   note: string
+  pregnancySafe?: PregnancySafe
 }
 
 interface RemedyPageLayoutProps {
@@ -79,20 +81,15 @@ function PregnancyIcon({ status }: { status: PregnancySafe }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
       <svg width="32" height="56" viewBox="0 0 32 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Head */}
         <circle cx="16" cy="10" r="8" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.8"/>
-        {/* Body */}
         <path
           d="M7 26 Q5 38 8 48 Q11 54 16 54 Q22 54 25 48 Q28 38 26 26 Q22 20 16 20 Q10 20 7 26Z"
           fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.8"
         />
-        {/* Baby bump */}
         <path d="M18 34 Q26 37 28 44" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
-        {/* Avoid line */}
         {status === 'avoid' && (
           <line x1="2" y1="4" x2="30" y2="52" stroke={color} strokeWidth="2.2" strokeLinecap="round"/>
         )}
-        {/* Ask doctor dashes */}
         {status === 'ask' && (
           <line x1="2" y1="4" x2="30" y2="52" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeDasharray="4 3"/>
         )}
@@ -168,7 +165,7 @@ export default function RemedyPageLayout({
               Before you use any <span style={{ color: '#78350f', fontWeight: '900', textDecoration: 'underline' }}>Internal Only</span> remedy
             </h2>
             <p style={{ fontSize: '0.88rem', color: '#5a7a6e', lineHeight: '1.7', marginBottom: '1rem' }}>
-            This applies to <strong>all <span style={{ color: '#78350f' }}>Internal Only</span> remedies on this page.</strong> Not all products labeled as natural, pure, or therapeutic grade are safe to ingest.
+              This applies to <strong>all <span style={{ color: '#78350f' }}>Internal Only</span> remedies on this page.</strong> Not all products labeled as natural, pure, or therapeutic grade are safe to ingest.
             </p>
             <div style={{
               backgroundColor: '#f0fdf4',
@@ -394,7 +391,7 @@ export default function RemedyPageLayout({
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1 }}>
-                    <span style={{
+                      <span style={{
                         fontSize: '0.72rem', fontWeight: '700',
                         backgroundColor: 'transparent',
                         color: item.badgeColor,
@@ -446,11 +443,14 @@ export default function RemedyPageLayout({
                     <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.35rem', fontSize: '0.95rem' }}>{item.name}</div>
                     <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55' }}>{item.desc}</div>
                   </div>
-                  <span style={{
-                    fontSize: '0.75rem', fontWeight: '700',
-                    color: item.ratingColor,
-                    whiteSpace: 'nowrap', paddingTop: '2px',
-                  }}>{item.rating}</span>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem', flexShrink: 0 }}>
+                    <span style={{
+                      fontSize: '0.75rem', fontWeight: '700',
+                      color: item.ratingColor,
+                      whiteSpace: 'nowrap',
+                    }}>{item.rating}</span>
+                    {item.pregnancySafe && <PregnancyIcon status={item.pregnancySafe} />}
+                  </div>
                 </div>
               ))}
             </div>
@@ -477,12 +477,21 @@ export default function RemedyPageLayout({
                   border: '1px solid #e8e0d0',
                   borderRadius: '12px',
                   padding: '1rem 1.25rem',
+                  display: 'flex', alignItems: 'flex-start', gap: '1rem',
                 }}>
-                  <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.35rem', fontSize: '0.95rem' }}>{item.category}</div>
-                  <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55', marginBottom: '0.5rem' }}>{item.desc}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#e67e22', borderLeft: '3px solid #e67e22', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
-                    ⚠️ {item.note}
+                 <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
+                      <span style={{ fontWeight: '600', color: '#2d4a3e', fontSize: '0.95rem' }}>{item.name}</span>
+                      <span style={{ fontSize: '0.72rem', fontWeight: '700', color: item.ratingColor, whiteSpace: 'nowrap' }}>{item.rating}</span>
+                    </div>
+                    <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55' }}>{item.desc}</div>
                   </div>
+                  {item.pregnancySafe && (
+                    <div style={{ flexShrink: 0 }}>
+                      <PregnancyIcon status={item.pregnancySafe} />
+                    </div>
+                  )}
+                  
                 </div>
               ))}
             </div>
