@@ -254,8 +254,8 @@ export default function Home() {
           {[
             {
               icon: '🌿',
-              title: 'Natural first',
-              desc: 'We always present the natural option first. Herbs, supplements, and oils with honest guidance on what actually works.'
+              title: 'Every option, no agenda',
+              desc: 'Natural remedies, cleaner conventional choices, and everything in between — presented honestly without bias toward any approach.'
             },
             {
               icon: '✅❌',
