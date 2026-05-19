@@ -131,6 +131,13 @@ export default function RemedyPageLayout({
     { key: 'inpinch', label: 'In a Pinch', emoji: '⚡' },
   ]
 
+  const sortedNaturalItems = [...naturalItems].sort((a, b) => {
+    const order: Record<string, number> = { 'External Only': 0, 'Dilute First': 1, 'Internal Only': 2 }
+    const aKey = a.badge.includes('Internal') ? 'Internal Only' : a.badge.includes('Dilute') ? 'Dilute First' : 'External Only'
+    const bKey = b.badge.includes('Internal') ? 'Internal Only' : b.badge.includes('Dilute') ? 'Dilute First' : 'External Only'
+    return order[aKey] - order[bKey]
+  })
+
   return (
     <RemedyLayout>
 
@@ -370,61 +377,99 @@ export default function RemedyPageLayout({
           {/* Natural tab */}
           {activeTab === 'natural' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {naturalItems.map(item => (
-                <div key={item.name} style={{
-                  backgroundColor: '#fff',
-                  border: '1px solid #e8e0d0',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                }}>
-                  <button onClick={() => {
-                    if (item.badge.includes('Internal') && !hasSeenInternalWarning) {
-                      setPendingExpand(item.name)
-                      setShowInternalModal(true)
-                    } else {
-                      setExpanded(expanded === item.name ? null : item.name)
-                    }
-                  }} style={{
-                    width: '100%', textAlign: 'left',
-                    padding: '1rem 1.25rem',
-                    background: 'none', border: 'none', cursor: 'pointer',
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
+              {sortedNaturalItems.map(item => {
+                const isDilute = item.badge.includes('Dilute')
+                const isInternal = item.badge.includes('Internal')
+                return (
+                  <div key={item.name} style={{
+                    backgroundColor: '#fff',
+                    border: '1px solid #e8e0d0',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
                   }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1 }}>
-                      <span style={{
-                        fontSize: '0.72rem', fontWeight: '700',
-                        backgroundColor: 'transparent',
-                        color: item.badgeColor,
-                        border: `1.5px solid ${item.badgeColor}`,
-                        padding: '2px 10px', borderRadius: '20px',
-                        whiteSpace: 'nowrap',
-                      }}>{item.badge}</span>
-                      <span style={{ fontWeight: '600', color: '#2d4a3e', fontSize: '0.95rem' }}>{item.name}</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
-                      {item.pregnancySafe && <PregnancyIcon status={item.pregnancySafe} />}
-                      <span style={{ color: '#9ca3af', fontSize: '1.1rem' }}>
-                        {expanded === item.name ? '▲' : '▼'}
-                      </span>
-                    </div>
-                  </button>
-                  {expanded === item.name && (
-                    <div style={{ padding: '0 1.25rem 1.25rem', borderTop: '1px solid #f3f4f6' }}>
-                      <p style={{ fontSize: '0.88rem', color: '#5a7a6e', lineHeight: '1.6', margin: '0.75rem 0 0' }}>{item.desc}</p>
-                      {item.warning && (
-                        <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.75rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
-                          ⚠️ {item.warning}
+                    <button onClick={() => {
+                      if (isInternal && !hasSeenInternalWarning) {
+                        setPendingExpand(item.name)
+                        setShowInternalModal(true)
+                      } else {
+                        setExpanded(expanded === item.name ? null : item.name)
+                      }
+                    }} style={{
+                      width: '100%', textAlign: 'left',
+                      padding: '1rem 1.25rem',
+                      background: 'none', border: 'none', cursor: 'pointer',
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1 }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                          {!isInternal && (
+                            <span style={{
+                              fontSize: '0.72rem', fontWeight: '700',
+                              backgroundColor: 'transparent',
+                              color: '#2980b9',
+                              border: '1.5px solid #2980b9',
+                              padding: '2px 10px', borderRadius: '20px',
+                              whiteSpace: 'nowrap',
+                            }}>External Only</span>
+                          )}
+                          {isDilute && (
+                            <span style={{
+                              fontSize: '0.68rem', fontWeight: '700',
+                              backgroundColor: 'transparent',
+                              color: '#be185d',
+                              border: '1.5px solid #be185d',
+                              padding: '2px 10px', borderRadius: '20px',
+                              whiteSpace: 'nowrap',
+                            }}>Dilute First</span>
+                          )}
+                          {isInternal && (
+                            <span style={{
+                              fontSize: '0.72rem', fontWeight: '700',
+                              backgroundColor: 'transparent',
+                              color: '#78350f',
+                              border: '1.5px solid #78350f',
+                              padding: '2px 10px', borderRadius: '20px',
+                              whiteSpace: 'nowrap',
+                            }}>Internal Only</span>
+                          )}
                         </div>
-                      )}
-                      {item.safeUse && (
-                        <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.5rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
-                          ✅ {item.safeUse}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              ))}
+                        <span style={{ fontWeight: '600', color: '#2d4a3e', fontSize: '0.95rem' }}>{item.name}</span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
+                        {item.pregnancySafe && <PregnancyIcon status={item.pregnancySafe} />}
+                        <span style={{ color: '#9ca3af', fontSize: '1.1rem' }}>
+                          {expanded === item.name ? '▲' : '▼'}
+                        </span>
+                      </div>
+                    </button>
+                    {expanded === item.name && (
+                      <div style={{ padding: '0 1.25rem 1.25rem', borderTop: '1px solid #f3f4f6' }}>
+                        <p style={{ fontSize: '0.88rem', color: '#5a7a6e', lineHeight: '1.6', margin: '0.75rem 0 0' }}>{item.desc}</p>
+                        {isDilute && (
+                          <div style={{
+                            fontSize: '0.82rem', color: '#be185d', marginTop: '0.75rem',
+                            borderLeft: '3px solid #be185d', paddingLeft: '0.75rem',
+                            lineHeight: '1.6', backgroundColor: '#fff0f6',
+                            padding: '0.75rem', borderRadius: '0 8px 8px 0',
+                          }}>
+                            <strong>How to dilute:</strong> Mix a few drops into a carrier oil before applying to skin. Good carrier oil options include coconut oil, jojoba oil, almond oil, or olive oil. Never apply essential oils directly to skin without diluting first.
+                          </div>
+                        )}
+                        {item.warning && (
+                          <div style={{ fontSize: '0.8rem', color: '#e67e22', marginTop: '0.75rem', borderLeft: '3px solid #e67e22', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
+                            ⚠️ {item.warning}
+                          </div>
+                        )}
+                        {item.safeUse && (
+                          <div style={{ fontSize: '0.8rem', color: '#27ae60', marginTop: '0.5rem', borderLeft: '3px solid #27ae60', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
+                            ✅ {item.safeUse}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
             </div>
           )}
 
@@ -440,17 +485,17 @@ export default function RemedyPageLayout({
                   display: 'flex', alignItems: 'flex-start', gap: '1rem',
                 }}>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.35rem', fontSize: '0.95rem' }}>{item.name}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
+                      <span style={{ fontWeight: '600', color: '#2d4a3e', fontSize: '0.95rem' }}>{item.name}</span>
+                      <span style={{ fontSize: '0.72rem', fontWeight: '700', color: item.ratingColor, whiteSpace: 'nowrap' }}>{item.rating}</span>
+                    </div>
                     <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55' }}>{item.desc}</div>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem', flexShrink: 0 }}>
-                    <span style={{
-                      fontSize: '0.75rem', fontWeight: '700',
-                      color: item.ratingColor,
-                      whiteSpace: 'nowrap',
-                    }}>{item.rating}</span>
-                    {item.pregnancySafe && <PregnancyIcon status={item.pregnancySafe} />}
-                  </div>
+                  {item.pregnancySafe && (
+                    <div style={{ flexShrink: 0 }}>
+                      <PregnancyIcon status={item.pregnancySafe} />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -479,7 +524,7 @@ export default function RemedyPageLayout({
                   padding: '1rem 1.25rem',
                   display: 'flex', alignItems: 'flex-start', gap: '1rem',
                 }}>
-             <div style={{ flex: 1 }}>
+                  <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: '600', color: '#2d4a3e', marginBottom: '0.35rem', fontSize: '0.95rem' }}>{item.category}</div>
                     <div style={{ fontSize: '0.87rem', color: '#5a7a6e', lineHeight: '1.55', marginBottom: '0.5rem' }}>{item.desc}</div>
                     <div style={{ fontSize: '0.8rem', color: '#e67e22', borderLeft: '3px solid #e67e22', paddingLeft: '0.75rem', lineHeight: '1.5' }}>
@@ -491,7 +536,6 @@ export default function RemedyPageLayout({
                       <PregnancyIcon status={item.pregnancySafe} />
                     </div>
                   )}
-                  
                 </div>
               ))}
             </div>
