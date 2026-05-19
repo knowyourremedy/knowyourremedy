@@ -37,7 +37,8 @@ export default function Nav() {
       }} className="desktop-nav">
         {[
           { label: 'Remedies', href: '/remedies' },
-          { label: 'Dosage', href: '/dosage' },
+          { label: 'Dosage Calculator', href: '/dosage-calculator' },
+          { label: 'Interactions', href: '/interaction-checker' },
           { label: 'Clean Brands', href: '/brands' },
           { label: 'Oil Library', href: '/oils' },
         ].map((link) => (
@@ -106,7 +107,8 @@ export default function Nav() {
         }}>
           {[
             { label: 'Remedies', href: '/remedies' },
-            { label: 'Dosage', href: '/dosage' },
+            { label: 'Dosage Calculator', href: '/dosage-calculator' },
+            { label: 'Interactions', href: '/interaction-checker' },
             { label: 'Clean Brands', href: '/brands' },
             { label: 'Oil Library', href: '/oils' },
           ].map((link) => (

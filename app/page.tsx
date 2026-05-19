@@ -1,5 +1,5 @@
 'use client'
-import Nav from '@/components/Nav'
+
 import Footer from '@/components/Footer'
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
-      <Nav />
+      
 
       {/* Hero Section */}
       <section style={{
@@ -150,8 +150,15 @@ export default function Home() {
               emoji: '💊',
               title: 'Dosage Calculator',
               desc: 'By weight, age, and medication',
-              href: '/dosage',
+              href: '/dosage-calculator',
               accent: '#4a6741'
+            },
+            {
+              emoji: '⚠️',
+              title: 'Interaction Checker',
+              desc: 'Check if your medications are safe to combine',
+              href: '/interaction-checker',
+              accent: '#5a7a55'
             },
             {
               emoji: '🏪',
@@ -161,7 +168,7 @@ export default function Home() {
               accent: '#5a7a55'
             },
             {
-              emoji: '🧴',
+              emoji: '🌱',
               title: 'Oil Library',
               desc: 'Safety, dilution, and sourcing',
               href: '/oils',

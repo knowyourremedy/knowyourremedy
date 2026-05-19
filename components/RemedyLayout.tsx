@@ -1,4 +1,3 @@
-import Nav from './Nav'
 import Footer from './Footer'
 
 export default function RemedyLayout({ children }: { children: React.ReactNode }) {
@@ -7,7 +6,6 @@ export default function RemedyLayout({ children }: { children: React.ReactNode }
       minHeight: '100vh', 
       backgroundColor: '#faf7f2',
     }}>
-      <Nav />
       <div style={{
         maxWidth: '960px',
         margin: '0 auto',
