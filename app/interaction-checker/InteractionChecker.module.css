@@ -664,12 +664,17 @@
 }
 
 .catTabIcon {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: #374151;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+  width: 100%;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.catTabIcon::first-letter {
+  margin-right: 0.2rem;
 }
 
 .catTabHint {
