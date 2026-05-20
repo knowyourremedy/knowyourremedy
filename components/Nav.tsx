@@ -1,20 +1,23 @@
 'use client'
 import { useState, useEffect } from 'react'
-import AuthModal from './AuthModal'
 import { supabase } from '@/lib/supabase'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showAuth, setShowAuth] = useState(false)
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<{ id: string; email: string | undefined } | null>(null)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
-      setUser(data.session?.user ?? null)
+      const u = data.session?.user
+      setUser(u ? { id: u.id, email: u.email } : null)
     })
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
+    const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
+      const u = session?.user
+      setUser(u ? { id: u.id, email: u.email } : null)
     })
+    return () => {
+      authListener.subscription.unsubscribe()
+    }
   }, [])
 
   return (
@@ -81,7 +84,7 @@ export default function Nav() {
             My Account
           </a>
         ) : (
-          <button onClick={() => setShowAuth(true)} style={{
+          <a href="/account" style={{
             background: 'none',
             border: '1px solid #2d4a3e',
             color: '#2d4a3e',
@@ -89,11 +92,12 @@ export default function Nav() {
             borderRadius: '50px',
             fontSize: '0.875rem',
             fontWeight: '600',
-            cursor: 'pointer',
+            textDecoration: 'none',
             fontFamily: 'var(--font-inter), sans-serif',
+            display: 'inline-block',
           }}>
             Sign in / Sign up
-          </button>
+          </a>
         )}
 
         <a href="/app" style={{
@@ -173,7 +177,7 @@ export default function Nav() {
               My Account
             </a>
           ) : (
-            <button onClick={() => { setMenuOpen(false); setShowAuth(true) }} style={{
+            <a href="/account" onClick={() => setMenuOpen(false)} style={{
               background: 'none',
               border: '1px solid #2d4a3e',
               color: '#2d4a3e',
@@ -181,12 +185,13 @@ export default function Nav() {
               borderRadius: '50px',
               fontSize: '0.875rem',
               fontWeight: '600',
-              cursor: 'pointer',
+              textDecoration: 'none',
               fontFamily: 'var(--font-inter), sans-serif',
               textAlign: 'center',
+              display: 'inline-block',
             }}>
               Sign in / Sign up
-            </button>
+            </a>
           )}
 
           <a href="/app" style={{
@@ -203,14 +208,6 @@ export default function Nav() {
             Get the App
           </a>
         </div>
-      )}
-
-      {/* Auth Modal */}
-      {showAuth && (
-        <AuthModal
-          onClose={() => setShowAuth(false)}
-          onSuccess={() => setShowAuth(false)}
-        />
       )}
 
       <style>{`
