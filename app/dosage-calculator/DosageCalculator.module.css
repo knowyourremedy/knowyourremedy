@@ -80,7 +80,90 @@
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 8px;
   }
+  /* ─── Step Chips (collapsed completed steps) ──────────── */
+.stepChip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #c8ddc0;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
   
+  .stepChip:hover {
+    border-color: #2d4a3e;
+    background: #f0fdf4;
+  }
+  
+  .stepChipNum {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #2d4a3e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  
+  .stepChipBody {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .stepChipLabel {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7c74;
+    margin-bottom: 1px;
+  }
+  
+  .stepChipValue {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2e27;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .stepChipEdit {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2d4a3e;
+    flex-shrink: 0;
+  }
+  
+  /* Next-step button inside expanded step cards */
+  .nextStepBtn {
+    margin-top: 1rem;
+    padding: 10px 16px;
+    background: #2d4a3e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  
+  .nextStepBtn:hover {
+    background: #3d6454;
+  }
   .optBtn {
     border: 1px solid #c4d4ce;
     border-radius: 8px;
@@ -441,7 +524,110 @@
     color: #7a5c00;
     line-height: 1.6;
   }
+  /* ─── Result Card — NOT RECOMMENDED variant ─────────────────── */
+.resultCardWarning {
+    background: #fff;
+    border: 2px solid #c0392b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.08);
+  }
   
+  .warningHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fdecea;
+    margin-bottom: 1.2rem;
+  }
+  
+  .warningIcon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .warningTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 0.02em;
+  }
+  
+  .warningBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .warningPrimary {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #1a2e27;
+    margin: 0;
+  }
+  
+  .warningPrimary strong {
+    color: #c0392b;
+  }
+  
+  .warningReason {
+    background: #fdecea;
+    border-left: 4px solid #c0392b;
+    border-radius: 0 8px 8px 0;
+    padding: 0.85rem 1rem;
+  }
+  
+  .warningReasonLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #7a1c1c;
+    margin-bottom: 0.35rem;
+  }
+  
+  .warningReasonText {
+    font-size: 0.92rem;
+    color: #3a1010;
+    line-height: 1.55;
+  }
+  
+  .warningAction {
+    background: #e8f0ed;
+    border: 1px solid #c4d4ce;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+  
+  .warningActionIcon {
+    font-size: 1.6rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  
+  .warningActionText {
+    font-size: 0.92rem;
+    color: #2a3a34;
+    line-height: 1.55;
+  }
+  
+  .warningActionText strong {
+    color: #2d4a3e;
+  }
+  
+  .warningSourceBox {
+    background: #fafaf7;
+    border-left: 3px solid #6b7c74;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin-top: 0.5rem;
+  }
   /* ── Profile / Tracker tabs ───────────────────────────────────── */
   .profileTab {
     border: 1px solid #dde5e2;

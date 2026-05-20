@@ -49,22 +49,56 @@ function calcDoseMg(med, wKg, ageMonths, isChild) {
   return 0;
 }
 
-function physicalAmount(doseMg, conc) {
+function physicalAmount(doseMg, conc, splittable = true) {
+  // Liquid measurements — always allow decimals
   if (conc.unitML) {
     const ml = (doseMg / conc.mgPerUnit) * conc.unitML;
     if (ml >= 5) {
       const tsp = ml / 5;
       const tspStr = tsp % 1 === 0 ? tsp.toFixed(0) : tsp.toFixed(1);
-      return `${tspStr} tsp (${ml.toFixed(1)} mL)`;
+      return { display: `${tspStr} tsp (${ml.toFixed(1)} mL)`, units: ml, rounded: false };
     }
-    return `${ml.toFixed(1)} mL`;
+    return { display: `${ml.toFixed(1)} mL`, units: ml, rounded: false };
   }
-  const count = doseMg / conc.mgPerUnit;
-  const countStr = count % 1 === 0 ? count.toFixed(0) : count.toFixed(1);
-  return `${countStr} ${conc.unitLabel || 'unit(s)'}`;
+
+  // Solid forms — round based on whether splittable
+  const rawCount = doseMg / conc.mgPerUnit;
+
+  if (splittable) {
+    const halfCount = Math.round(rawCount * 2) / 2;
+    if (halfCount === 0) {
+      return { display: '0', units: 0, rounded: true, belowMinimum: true };
+    }
+    const countStr = halfCount % 1 === 0 ? halfCount.toFixed(0) : halfCount.toFixed(1);
+    return { display: `${countStr} ${conc.unitLabel || 'unit(s)'}`, units: halfCount, rounded: halfCount !== rawCount };
+  } else {
+    const wholeCount = Math.round(rawCount);
+    if (wholeCount === 0) {
+      return { display: '0', units: 0, rounded: true, belowMinimum: true };
+    }
+    return { display: `${wholeCount} ${conc.unitLabel || 'unit(s)'}`, units: wholeCount, rounded: wholeCount !== rawCount };
+  }
 }
 
-// ─── Small UI helpers ────────────────────────────────────────
+// ─── Step Chip (compact summary for completed steps) ────────────
+function StepChip({ num, label, value, onEdit, isActive }) {
+  return (
+    <button
+      type="button"
+      className={`${styles.stepChip} ${isActive ? styles.stepChipActive : ''}`}
+      onClick={onEdit}
+    >
+      <div className={styles.stepChipNum}>{num}</div>
+      <div className={styles.stepChipBody}>
+        <div className={styles.stepChipLabel}>{label}</div>
+        <div className={styles.stepChipValue}>{value}</div>
+      </div>
+      {!isActive && <div className={styles.stepChipEdit}>Edit</div>}
+    </button>
+  );
+}
+
+// ─── Step Header (for the active expanded step) ─────────────────
 function StepHeader({ num, label, sub }) {
   return (
     <div className={styles.stepHeader}>
@@ -77,6 +111,7 @@ function StepHeader({ num, label, sub }) {
   );
 }
 
+// ─── Option Button ──────────────────────────────────────────────
 function OptionButton({ selected, onClick, title, sub }) {
   return (
     <button
@@ -90,8 +125,8 @@ function OptionButton({ selected, onClick, title, sub }) {
   );
 }
 
-// ─── New MedPicker for the dosage calculator ─────────────────
-function MedPicker({ value, onChange }) {
+// ─── Medication Picker (search + category tabs) ─────────────────
+function MedPicker({ value, onChange, isChild }) {
   const firstCat = Object.keys(CATEGORIES)[0];
   const [activeCat, setActiveCat] = useState(firstCat);
   const [search, setSearch] = useState('');
@@ -157,7 +192,7 @@ function MedPicker({ value, onChange }) {
   );
 }
 
-// ─── Main page ───────────────────────────────────────────────
+// ─── Main Page ───────────────────────────────────────────────────
 export default function DosageCalculatorPage() {
   const [who, setWho] = useState(null);
   const [weight, setWeight] = useState('');
@@ -175,6 +210,7 @@ export default function DosageCalculatorPage() {
   const [profileDob, setProfileDob] = useState('');
   const [activeTab, setActiveTab] = useState('create');
   const [trackerOpen, setTrackerOpen] = useState(false);
+  const [activeStep, setActiveStep] = useState(1);
 
   useEffect(() => {
     const saved = localStorage.getItem('kyr_active_profile');
@@ -202,18 +238,53 @@ export default function DosageCalculatorPage() {
   const med = medKey ? MEDS[medKey] : null;
   const formats = med ? Object.entries(med.formats) : [];
   const concentrations = (med && formatKey) ? med.formats[formatKey].concentrations : [];
-  const canCalculate = who && weight && age !== '' && medKey && formatKey && concIndex !== null;
 
-  function resetFormat() {
+  const step1Complete = who !== null;
+  const step2Complete = step1Complete && weight !== '' && age !== '';
+  const step3Complete = step2Complete && medKey !== null;
+  const step4Complete = step3Complete && formatKey !== null;
+  const step5Complete = step4Complete && concIndex !== null;
+
+  function handleWhoChange(newWho) {
+    setWho(newWho);
+    setWeight('');
+    setAge('');
+    setMedKey(null);
     setFormatKey(null);
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
+    setActiveStep(2);
+  }
+
+  function handleWeightAgeComplete() {
+    // If user has already picked a medication, KEEP it.
+    // The "Who" choice (child/adult) determines med validity, not weight or age.
+    // Only the result needs recalculating with the new weight/age.
+    setShowResult(false);
+    setResult(null);
+
+    // Skip directly to whichever step is the next un-completed one
+    if (medKey && formatKey && concIndex !== null) {
+      // All downstream steps already complete — auto-recalculate and show result
+      calculate();
+      setActiveStep(null);
+    } else if (medKey && formatKey) {
+      setActiveStep(5);
+    } else if (medKey) {
+      setActiveStep(4);
+    } else {
+      setActiveStep(3);
+    }
   }
 
   function handleMedSelect(key) {
     setMedKey(key);
-    resetFormat();
+    setFormatKey(null);
+    setConcIndex(null);
+    setShowResult(false);
+    setResult(null);
+    setActiveStep(4);
   }
 
   function handleFormatSelect(key) {
@@ -221,14 +292,40 @@ export default function DosageCalculatorPage() {
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
+    setActiveStep(5);
+  }
+
+  function handleConcSelect(i) {
+    setConcIndex(i);
+    setShowResult(false);
+    setResult(null);
+  }
+
+  function editStep(stepNum) {
+    setActiveStep(stepNum);
   }
 
   function calculate() {
-    if (!canCalculate) return;
+    if (!step5Complete) return;
     const doseMg = calcDoseMg(med, wKg, ageMonths, isChild);
     const conc = concentrations[concIndex];
-    const physical = physicalAmount(doseMg, conc);
-    setResult({ doseMg, physical, med, medKey, conc, formatKey, concLabel: conc.label });
+    const formatInfo = med.formats[formatKey];
+    const splittable = formatInfo.splittable !== false;
+    const physicalResult = physicalAmount(doseMg, conc, splittable);
+    setResult({
+      doseMg,
+      physical: physicalResult.display,
+      physicalUnits: physicalResult.units,
+      physicalBelowMinimum: physicalResult.belowMinimum,
+      physicalRounded: physicalResult.rounded,
+      med,
+      medKey,
+      conc,
+      formatKey,
+      formatLabel: formatInfo.label,
+      concLabel: conc.label,
+      splittable,
+    });
     setShowResult(true);
     setActiveTab('create');
   }
@@ -295,6 +392,16 @@ export default function DosageCalculatorPage() {
     if (activeProfile) await handleLogDose(activeProfile.id);
   }
 
+  const whoDisplay = who === 'child' ? 'Child (under 12)' : who === 'adult' ? 'Adult (12+)' : null;
+  const weightAgeDisplay = (weight && age) ? `${weight} ${weightUnit}, ${age} ${ageUnit}` : null;
+  const medDisplay = med ? `${CATEGORIES[med.category]?.icon} ${med.name}` : null;
+  const formatDisplay = formatKey ? med.formats[formatKey].label : null;
+  const concDisplay = concIndex !== null ? concentrations[concIndex].label : null;
+
+  // Determine if we should show the warning card vs normal result
+  const showWarningResult = showResult && result && (result.doseMg === 0 || result.physicalBelowMinimum);
+  const showNormalResult = showResult && result && result.doseMg > 0 && !result.physicalBelowMinimum;
+
   return (
     <>
       <main className={styles.main}>
@@ -306,85 +413,175 @@ export default function DosageCalculatorPage() {
         </div>
 
         {/* Step 1 — Who */}
-        <div className={styles.card}>
-          <StepHeader num="1" label="Who is this for?" />
-          <div className={styles.optGrid}>
-            <OptionButton selected={who === 'child'} onClick={() => { setWho('child'); setMedKey(null); resetFormat(); }} title="Child" sub="Under 12 years old" />
-            <OptionButton selected={who === 'adult'} onClick={() => { setWho('adult'); setMedKey(null); resetFormat(); }} title="Adult" sub="12 years and older" />
-          </div>
-        </div>
-
-        {/* Step 2 — Weight & age */}
-        {who && (
+        {step1Complete && activeStep !== 1 ? (
+          <StepChip num="1" label="Who is this for?" value={whoDisplay} onEdit={() => editStep(1)} isActive={false} />
+        ) : (
           <div className={styles.card}>
-            <StepHeader num="2" label="Enter weight and age" />
-            <div className={styles.inputRow}>
-              <div className={styles.fieldWrap}>
-                <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
-                <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
-              </div>
-              <div className={styles.unitToggle}>
-                <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
-                <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
-              </div>
+            <StepHeader num="1" label="Who is this for?" />
+            <div className={styles.optGrid}>
+              <OptionButton selected={who === 'child'} onClick={() => handleWhoChange('child')} title="Child" sub="Under 12 years old" />
+              <OptionButton selected={who === 'adult'} onClick={() => handleWhoChange('adult')} title="Adult" sub="12 years and older" />
             </div>
-            <div className={styles.fieldWrap} style={{ marginTop: '10px' }}>
-              <label className={styles.fieldLabel} htmlFor="age">Age</label>
-              <input id="age" type="number" min="0" max="120" placeholder={isChild ? 'e.g. 6' : 'e.g. 35'} value={age} onChange={e => setAge(e.target.value)} className={styles.input} />
-            </div>
-            {isChild && (
-              <div className={styles.ageUnitRow}>
-                <label className={styles.radioLabel}><input type="radio" name="ageunit" value="years" checked={ageUnit === 'years'} onChange={() => setAgeUnit('years')} /> Years</label>
-                <label className={styles.radioLabel}><input type="radio" name="ageunit" value="months" checked={ageUnit === 'months'} onChange={() => setAgeUnit('months')} /> Months</label>
-              </div>
-            )}
-            {isChild && ageMonths !== null && ageMonths < 2 && (
-              <p className={styles.ageWarning}>Consult a doctor before giving any medication to infants under 2 months.</p>
-            )}
           </div>
         )}
 
-        {/* Step 3 — Medication (NEW PICKER WITH SEARCH + TABS) */}
-        {who && (
-          <div className={styles.card}>
-            <StepHeader num="3" label="Select medication or remedy" />
-            <MedPicker value={medKey} onChange={handleMedSelect} />
-          </div>
+        {/* Step 2 — Weight and Age */}
+        {step1Complete && (
+          step2Complete && activeStep !== 2 ? (
+            <StepChip num="2" label="Weight and age" value={weightAgeDisplay} onEdit={() => editStep(2)} isActive={false} />
+          ) : activeStep === 2 || (step1Complete && !step2Complete) ? (
+            <div className={styles.card}>
+              <StepHeader num="2" label="Enter weight and age" />
+              <div className={styles.inputRow}>
+                <div className={styles.fieldWrap}>
+                  <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
+                  <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
+                </div>
+                <div className={styles.unitToggle}>
+                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
+                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
+                </div>
+              </div>
+              <div className={styles.fieldWrap} style={{ marginTop: '10px' }}>
+                <label className={styles.fieldLabel} htmlFor="age">Age</label>
+                <input id="age" type="number" min="0" max="120" placeholder={isChild ? 'e.g. 6' : 'e.g. 35'} value={age} onChange={e => setAge(e.target.value)} className={styles.input} />
+              </div>
+              {isChild && (
+                <div className={styles.ageUnitRow}>
+                  <label className={styles.radioLabel}><input type="radio" name="ageunit" value="years" checked={ageUnit === 'years'} onChange={() => setAgeUnit('years')} /> Years</label>
+                  <label className={styles.radioLabel}><input type="radio" name="ageunit" value="months" checked={ageUnit === 'months'} onChange={() => setAgeUnit('months')} /> Months</label>
+                </div>
+              )}
+              {isChild && ageMonths !== null && ageMonths < 2 && (
+                <p className={styles.ageWarning}>Consult a doctor before giving any medication to infants under 2 months.</p>
+              )}
+              {weight && age !== '' && (
+                <button type="button" className={styles.nextStepBtn} onClick={handleWeightAgeComplete}>
+                  Next: Choose medication →
+                </button>
+              )}
+            </div>
+          ) : null
+        )}
+
+       {/* Step 3 — Medication */}
+       {step2Complete && activeStep >= 3 && (
+          step3Complete && activeStep !== 3 ? (
+            <StepChip num="3" label="Medication" value={medDisplay} onEdit={() => editStep(3)} isActive={false} />
+          ) : activeStep === 3 ? (
+            <div className={styles.card}>
+              <StepHeader num="3" label="Select medication or remedy" />
+              <MedPicker value={medKey} onChange={handleMedSelect} isChild={isChild} />
+            </div>
+          ) : null
         )}
 
         {/* Step 4 — Format */}
-        {medKey && (
-          <div className={styles.card}>
-            <StepHeader num="4" label="Select product format" />
-            <div className={styles.optGrid}>
-              {formats.map(([fkey, fmt]) => (
-                <OptionButton key={fkey} selected={formatKey === fkey} onClick={() => handleFormatSelect(fkey)} title={fmt.label} />
-              ))}
+        {step3Complete && activeStep >= 4 && (
+          step4Complete && activeStep !== 4 ? (
+            <StepChip num="4" label="Product format" value={formatDisplay} onEdit={() => editStep(4)} isActive={false} />
+          ) : activeStep === 4 ? (
+            <div className={styles.card}>
+              <StepHeader num="4" label="Select product format" />
+              <div className={styles.optGrid}>
+                {formats.map(([fkey, fmt]) => (
+                  <OptionButton key={fkey} selected={formatKey === fkey} onClick={() => handleFormatSelect(fkey)} title={fmt.label} />
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null
         )}
 
         {/* Step 5 — Concentration */}
-        {formatKey && (
-          <div className={styles.card}>
-            <StepHeader num="5" label="Select concentration" sub="Check your product label for the mg strength" />
-            <div className={styles.optGrid}>
-              {concentrations.map((c, i) => (
-                <OptionButton key={i} selected={concIndex === i} onClick={() => setConcIndex(i)} title={c.label} />
-              ))}
+        {step4Complete && activeStep >= 5 && (
+          step5Complete && activeStep !== 5 && showResult ? (
+            <StepChip num="5" label="Concentration" value={concDisplay} onEdit={() => editStep(5)} isActive={false} />
+          ) : activeStep === 5 ? (
+            <div className={styles.card}>
+              <StepHeader num="5" label="Select concentration" sub="Check your product label for the mg strength" />
+              <div className={styles.optGrid}>
+                {concentrations.map((c, i) => (
+                  <OptionButton key={i} selected={concIndex === i} onClick={() => handleConcSelect(i)} title={c.label} />
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null
         )}
 
         {/* Calculate button */}
-        {who && (
-          <button type="button" className={styles.calcBtn} disabled={!canCalculate} onClick={calculate}>
+        {step5Complete && !showResult && (
+          <button type="button" className={styles.calcBtn} onClick={calculate}>
             Calculate dose
           </button>
         )}
 
-        {/* Result */}
-        {showResult && result && (
+        {/* Warning result card (zero-mg OR below-minimum) */}
+        {showWarningResult && (
+          <div className={styles.resultCardWarning}>
+            <div className={styles.warningHeader}>
+              <span className={styles.warningIcon}>⚠️</span>
+              <div className={styles.warningTitle}>NOT RECOMMENDED</div>
+            </div>
+
+            <div className={styles.warningBody}>
+              <p className={styles.warningPrimary}>
+                {result.physicalBelowMinimum ? (
+                  <>
+                    The calculated dose of <strong>{result.med.name}</strong> is less than 1 full {result.formatLabel?.toLowerCase().includes('gel') ? 'gel cap' : result.formatLabel?.toLowerCase().includes('cap') ? 'capsule' : result.formatLabel?.toLowerCase().includes('suppository') ? 'suppository' : 'unit'} at this concentration.
+                  </>
+                ) : (
+                  <>
+                    <strong>{result.med.name}</strong> is not recommended for this {isChild ? 'child' : 'person'} at this age or weight.
+                  </>
+                )}
+              </p>
+
+              {result.physicalBelowMinimum ? (
+                <div className={styles.warningReason}>
+                  <div className={styles.warningReasonLabel}>Why:</div>
+                  <div className={styles.warningReasonText}>
+                    {result.formatLabel} can&apos;t be split safely. Use a <strong>liquid form</strong> (suspension or drops) for accurate dosing at this weight, or pick a lower concentration if available.
+                  </div>
+                </div>
+              ) : result.med.contraindication ? (
+                <div className={styles.warningReason}>
+                  <div className={styles.warningReasonLabel}>Why:</div>
+                  <div className={styles.warningReasonText}>{result.med.contraindication}</div>
+                </div>
+              ) : isChild && ageMonths < 24 ? (
+                <div className={styles.warningReason}>
+                  <div className={styles.warningReasonLabel}>Why:</div>
+                  <div className={styles.warningReasonText}>
+                    {result.med.name} doesn&apos;t have established safe dosing data for this age. Many medications require special caution or are contraindicated for infants and very young children.
+                  </div>
+                </div>
+              ) : null}
+
+              <div className={styles.warningAction}>
+                <div className={styles.warningActionIcon}>{result.physicalBelowMinimum ? '💧' : '👨‍⚕️'}</div>
+                <div className={styles.warningActionText}>
+                  {result.physicalBelowMinimum ? (
+                    <>
+                      <strong>Try a different format.</strong> Pick a liquid suspension or drops to dose accurately at this weight. You can change your format selection above.
+                    </>
+                  ) : (
+                    <>
+                      <strong>Speak with a pediatrician or pharmacist</strong> before giving this medication. They can recommend a safe alternative or different dose.
+                    </>
+                  )}
+                </div>
+              </div>
+
+              <div className={styles.warningSourceBox}>
+                <div className={styles.sourceLabel}>Sources &amp; references</div>
+                <p className={styles.sourceText}>{result.med.source}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Normal result card */}
+        {showNormalResult && (
           <div className={styles.resultCard}>
             <div className={styles.resultLabel}>Recommended dose</div>
             <div className={styles.resultDose}>{result.physical}</div>
@@ -408,7 +605,6 @@ export default function DosageCalculatorPage() {
               <p className={styles.sourceText}>{result.med.source}</p>
             </div>
 
-            {/* Check Interactions Banner */}
             {result?.medKey && (
               <div style={{
                 background: '#f0fdf4',
@@ -431,7 +627,6 @@ export default function DosageCalculatorPage() {
                   </div>
                 </div>
                 <a
-                
                   href={`/interaction-checker?med=${result.medKey}`}
                   style={{
                     background: '#2d4a3e',
@@ -447,9 +642,7 @@ export default function DosageCalculatorPage() {
                   Check Interactions →
                 </a>
               </div>
-            
             )}
-
 
             <div className={styles.disclaimerBox}>
               <p className={styles.disclaimerText}>
@@ -457,7 +650,6 @@ export default function DosageCalculatorPage() {
               </p>
             </div>
 
-            {/* Profile tabs */}
             <div className={styles.profileTab}>
               <div className={styles.profileTabHeader}>
                 <button type="button" className={`${styles.ptabBtn} ${activeTab === 'create' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('create')}>Save &amp; track this dose</button>
