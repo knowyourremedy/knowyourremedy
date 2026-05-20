@@ -1,20 +1,29 @@
 'use client'
 import { usePathname } from 'next/navigation'
+import { ReactNode } from 'react'
+import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
-const links = [
-  { emoji: '🏠', label: 'Home', href: '/' },
-  { emoji: '🌿', label: 'Remedies', href: '/remedies' },
-  { emoji: '💊', label: 'Dosage', href: '/dosage-calculator' },
-  { emoji: '⚠️', label: 'Interactions', href: '/interaction-checker' },
-  { emoji: '🏪', label: 'Clean Brands', href: '/brands' },
-  { emoji: '🌱', label: 'Oil Library', href: '/oils' },
-]
+type NavLink = {
+  icon: string
+  label: string
+  href: string
+}
+
+const links: NavLink[] = [
+    { icon: '🏠', label: 'Home', href: '/' },
+    { icon: '🌿', label: 'Remedies', href: '/remedies' },
+    { icon: 'DOSAGE_SVG', label: 'Dosage', href: '/dosage-calculator' },
+    { icon: '💊🌿', label: 'Interactions', href: '/interaction-checker' },
+    { icon: '✨', label: 'Clean Brands', href: '/brands' },
+    { icon: '🌱', label: 'Oil Library', href: '/oils' },
+  ]
 
 export default function QuickNav() {
   const pathname = usePathname()
 
   return (
-    <div style={{
+    <div
+      style={{
         position: 'fixed',
         bottom: 0,
         left: 0,
@@ -24,20 +33,25 @@ export default function QuickNav() {
         zIndex: 200,
         overflowX: 'auto',
         scrollbarWidth: 'none' as const,
-      }}>
-      <div style={{
-        display: 'flex',
-        gap: '0.25rem',
-        padding: '0.5rem 1.5rem',
-        maxWidth: '1100px',
-        margin: '0 auto',
-        width: 'max-content',
-      }}>
-        {links.map(link => {
-          const active = pathname === link.href || pathname.startsWith(link.href + '/') && link.href !== '/'
+      }}
+    >
+     <div
+        style={{
+          display: 'flex',
+          gap: '0.25rem',
+          padding: '0.5rem 1.5rem',
+          justifyContent: 'center',
+          flexWrap: 'nowrap',
+          minWidth: 'min-content',
+        }}
+      >
+        {links.map((link) => {
+          const active =
+            pathname === link.href ||
+            (pathname.startsWith(link.href + '/') && link.href !== '/')
           return (
-            <a
-              key={link.href}
+            
+            <a key={link.href}
               href={link.href}
               style={{
                 display: 'flex',
@@ -56,7 +70,17 @@ export default function QuickNav() {
                 transition: 'all 0.15s',
               }}
             >
-              {link.emoji} {link.label}
+              <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                {link.icon === 'DOSAGE_SVG' ? (
+                  <DosageCalculatorIcon
+                    size={16}
+                    color={active ? '#ffffff' : '#2d4a3e'}
+                  />
+                ) : (
+                  link.icon
+                )}
+              </span>
+              {link.label}
             </a>
           )
         })}

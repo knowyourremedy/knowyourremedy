@@ -1,8 +1,5 @@
 'use client';
 // app/interaction-checker/page.jsx
-// Drop this file at: app/interaction-checker/page.jsx
-// CSS module at:     app/interaction-checker/InteractionChecker.module.css
-// Data files:        lib/medsData.js  +  lib/interactionData.js
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
@@ -14,12 +11,12 @@ import {
   statusConfig,
 } from '@/lib/interactionData';
 import styles from './InteractionChecker.module.css';
+import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon';
 
 // ─── helpers ────────────────────────────────────────────────
 function buildMedList() {
-  // Group meds by category, sorted alphabetically within each group
   const grouped = {};
-  Object.entries(CATEGORIES).forEach(([catKey, catMeta]) => {
+  Object.entries(CATEGORIES).forEach(([catKey]) => {
     grouped[catKey] = Object.entries(MEDS)
       .filter(([, m]) => m.category === catKey)
       .sort(([, a], [, b]) => a.name.localeCompare(b.name))
@@ -64,7 +61,6 @@ function MedPicker({ label, value, onChange, exclude }) {
         </div>
       ) : (
         <div className={styles.pickerInner}>
-          {/* Search */}
           <input
             type="text"
             placeholder="Search by name or brand…"
@@ -73,7 +69,6 @@ function MedPicker({ label, value, onChange, exclude }) {
             className={styles.searchInput}
           />
 
-          {/* Category tabs — hide when searching */}
           {search.trim().length < 2 && (
             <div className={styles.catTabs}>
               {Object.entries(CATEGORIES).map(([k, v]) => (
@@ -88,7 +83,6 @@ function MedPicker({ label, value, onChange, exclude }) {
             </div>
           )}
 
-          {/* Med list */}
           <div className={styles.medList}>
             {filtered.length === 0 && (
               <div className={styles.emptyMsg}>No medications found.</div>
@@ -132,15 +126,14 @@ function InteractionResult({ medA, medB }) {
           <div className={styles.noDataIcon}>🔍</div>
           <div className={styles.noDataTitle}>No specific interaction data found</div>
           <div className={styles.noDataText}>
-            We don't have a documented interaction entry for this combination in our database.
-            This does not mean the combination is safe — it may mean it hasn't been well-studied,
+            We don&apos;t have a documented interaction entry for this combination in our database.
+            This does not mean the combination is safe — it may mean it hasn&apos;t been well-studied,
             or these two medications are unlikely to be used together. Always consult a pharmacist
             or physician before combining medications, supplements, or herbal remedies.
           </div>
         </div>
       ) : (
         <div className={styles.interactionCard}>
-          {/* Status badge */}
           <div
             className={styles.statusBadge}
             style={{ backgroundColor: cfg.bg, color: cfg.color, borderColor: cfg.color }}
@@ -149,25 +142,21 @@ function InteractionResult({ medA, medB }) {
             <span className={styles.statusLabel}>{cfg.label}</span>
           </div>
 
-          {/* Summary */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Summary</div>
             <div className={styles.sectionText}>{interaction.summary}</div>
           </div>
 
-          {/* Mechanism */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>How the Interaction Works</div>
             <div className={styles.sectionText}>{interaction.mechanism}</div>
           </div>
 
-          {/* Safe limits */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Safe Quantity & Frequency Guidelines</div>
             <div className={`${styles.sectionText} ${styles.limitsBox}`}>{interaction.safeLimits}</div>
           </div>
 
-          {/* Special populations */}
           {interaction.populations && (
             <div className={styles.section}>
               <div className={styles.sectionTitle}>Special Populations</div>
@@ -184,7 +173,6 @@ function InteractionResult({ medA, medB }) {
             </div>
           )}
 
-          {/* Sources */}
           {interaction.sources && (
             <div className={styles.section}>
               <div className={styles.sectionTitle}>Sources</div>
@@ -194,7 +182,6 @@ function InteractionResult({ medA, medB }) {
             </div>
           )}
 
-          {/* Disclaimer */}
           <div className={styles.disclaimer}>
             ⚕️ This information is for reference only and is not a substitute for professional
             medical advice. Always consult a pharmacist or physician before combining medications,
@@ -250,7 +237,6 @@ export default function InteractionCheckerPage() {
   const [medB, setMedB] = useState(null);
   const [showAllA, setShowAllA] = useState(false);
 
-  // Support URL params for pre-fill from calculator
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const pre = params.get('med');
@@ -263,8 +249,7 @@ export default function InteractionCheckerPage() {
   };
 
   return (
-    <main className={styles.page}>
-      {/* Header */}
+    <main className={styles.page} style={{ maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto', width: '100%', padding: '2rem 1.5rem 4rem' }}>
       <div className={styles.header}>
         <div className={styles.breadcrumb}>
           <Link href="/">Home</Link>
@@ -280,7 +265,6 @@ export default function InteractionCheckerPage() {
         </p>
       </div>
 
-      {/* Pickers */}
       <div className={styles.pickerRow}>
         <MedPicker
           label="First medication / remedy"
@@ -301,7 +285,6 @@ export default function InteractionCheckerPage() {
         />
       </div>
 
-      {/* Result */}
       {medA && medB && (
         <>
           <InteractionResult medA={medA} medB={medB} />
@@ -316,7 +299,6 @@ export default function InteractionCheckerPage() {
         </>
       )}
 
-      {/* All interactions for first med */}
       {medA && !medB && (
         <div className={styles.singleMedSection}>
           <p className={styles.singleMedHint}>
@@ -333,7 +315,6 @@ export default function InteractionCheckerPage() {
         </div>
       )}
 
-      {/* Info panel */}
       <div className={styles.infoPanel}>
         <div className={styles.infoPanelTitle}>About this tool</div>
         <div className={styles.infoPanelGrid}>
@@ -342,7 +323,7 @@ export default function InteractionCheckerPage() {
             <div>
               <strong>Clinical Sources</strong>
               <div>Interactions sourced from FDA databases, Lexi-Interact (Wolters Kluwer),
-              Stockley's Drug Interactions, NIH NCCIH, and Natural Medicines Database (2024).</div>
+              Stockley&apos;s Drug Interactions, NIH NCCIH, and Natural Medicines Database (2024).</div>
             </div>
           </div>
           <div className={styles.infoItem}>
@@ -357,12 +338,12 @@ export default function InteractionCheckerPage() {
             <div className={styles.infoItemIcon}>🔍</div>
             <div>
               <strong>Missing combinations</strong>
-              <div>Not all pairs are in our database. No entry doesn't mean "safe" — it may
+              <div>Not all pairs are in our database. No entry doesn&apos;t mean &quot;safe&quot; — it may
               mean insufficient study data. Always consult a pharmacist.</div>
             </div>
           </div>
           <div className={styles.infoItem}>
-            <div className={styles.infoItemIcon}>💊</div>
+            <div className={styles.infoItemIcon}><DosageCalculatorIcon size={24} /></div>
             <div>
               <strong>Go to Dosage Calculator</strong>
               <div>Need weight-based dosing for a specific medication?{' '}

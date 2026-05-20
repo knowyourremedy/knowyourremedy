@@ -2,6 +2,7 @@
 
 import Footer from '@/components/Footer'
 import { useState } from 'react'
+import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 export default function Home() {
   const [search, setSearch] = useState('')
@@ -147,21 +148,21 @@ export default function Home() {
               accent: '#2d4a3e'
             },
             {
-              emoji: '💊',
+              icon: <DosageCalculatorIcon size={32} />,
               title: 'Dosage Calculator',
               desc: 'By weight, age, and medication',
               href: '/dosage-calculator',
               accent: '#4a6741'
             },
             {
-              emoji: '⚠️',
+              emoji: '💊🌿',
               title: 'Interaction Checker',
               desc: 'Check if your medications are safe to combine',
               href: '/interaction-checker',
               accent: '#5a7a55'
             },
             {
-              emoji: '🏪',
+              emoji: '✨',
               title: 'Clean Brand Guide',
               desc: 'OTC brands ranked by ingredients',
               href: '/brands',
@@ -195,7 +196,9 @@ export default function Home() {
               ;(e.currentTarget as HTMLElement).style.boxShadow = '0 4px 16px rgba(0,0,0,0.06)'
             }}
             >
-              <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>{card.emoji}</div>
+              <div style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '3rem' }}>
+  {card.icon ? card.icon : <span style={{ fontSize: '2.5rem' }}>{card.emoji}</span>}
+</div>
               <div style={{
                 fontFamily: 'var(--font-playfair), Georgia, serif',
                 fontWeight: '700',

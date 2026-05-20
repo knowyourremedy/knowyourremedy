@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import RemedyLayout from './RemedyLayout'
+import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 const REMEDY_LINKS = [
   { label: 'Allergies', href: '/remedies/allergies' },
@@ -317,25 +318,12 @@ export default function RemedyPageLayout({
 
           {/* Subtle quick actions */}
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-            <a href={dosageLink || '/dosage-calculator'} style={{
-              display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
-              color: '#4a6741',
-              border: '1px solid #c8ddc0',
-              backgroundColor: '#f0fdf4',
-              padding: '0.35rem 0.85rem', borderRadius: '50px',
-              textDecoration: 'none', fontSize: '0.78rem', fontWeight: '500',
-            }}>
-              💊 Calculate Dose
+            <a href={dosageLink || '/dosage-calculator'} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#4a6741', border: '1px solid #c8ddc0', backgroundColor: '#f0fdf4', padding: '0.35rem 0.85rem', borderRadius: '50px', textDecoration: 'none', fontSize: '0.78rem', fontWeight: '500' }}>
+              <DosageCalculatorIcon size={14} color="#4a6741" />
+              Calculate Dose
             </a>
-            <a href="/interaction-checker" style={{
-              display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
-              color: '#4a6741',
-              border: '1px solid #c8ddc0',
-              backgroundColor: '#f0fdf4',
-              padding: '0.35rem 0.85rem', borderRadius: '50px',
-              textDecoration: 'none', fontSize: '0.78rem', fontWeight: '500',
-            }}>
-              ⚠️ Check Interactions
+            <a href="/interaction-checker" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#4a6741', border: '1px solid #c8ddc0', backgroundColor: '#f0fdf4', padding: '0.35rem 0.85rem', borderRadius: '50px', textDecoration: 'none', fontSize: '0.78rem', fontWeight: '500' }}>
+              💊🌿 Check Interactions
             </a>
           </div>
 

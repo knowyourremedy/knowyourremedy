@@ -1,609 +1,612 @@
 /* app/interaction-checker/InteractionChecker.module.css */
 
 .page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  /* ─── Header ─────────────────────────────── */
-  .header {
-    margin-bottom: 2rem;
-  }
-  
-  .breadcrumb {
-    font-size: 0.8rem;
-    color: #6b7280;
-    margin-bottom: 0.75rem;
-  }
-  
-  .breadcrumb a {
-    color: #2d4a3e;
-    text-decoration: none;
-  }
-  
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-  
-  .title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2rem;
-    color: #2d4a3e;
-    margin: 0 0 0.5rem;
-  }
-  
-  .subtitle {
-    color: #4b5563;
-    font-size: 1rem;
-    max-width: 680px;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* ─── Picker Row ─────────────────────────── */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem 4rem;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ─── Header ─────────────────────────────── */
+.header {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.breadcrumb a {
+  color: #2d4a3e;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  color: #2d4a3e;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: #4b5563;
+  font-size: 1rem;
+  max-width: 680px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Picker Row ─────────────────────────── */
+.pickerRow {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.vsBlock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2.4rem;
+}
+
+.vsCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2d4a3e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+}
+
+/* ─── MedPicker ──────────────────────────── */
+.pickerWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.pickerLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+.selectedBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #2d4a3e;
+  font-weight: 500;
+}
+
+.selectedBrand {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-left: auto;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+.clearBtn:hover {
+  color: #ef4444;
+}
+
+.pickerInner {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  border-bottom-color: #2d4a3e;
+}
+
+/* Category tabs */
+.catTabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+  scrollbar-width: none;
+}
+
+.catTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.catTab {
+  flex-shrink: 0;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #6b7280;
+  white-space: nowrap;
+  transition: all 0.15s;
+  border-bottom: 2px solid transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.catTabActive {
+  color: #2d4a3e;
+  border-bottom-color: #2d4a3e;
+  background: #f0fdf4;
+}
+
+.catTab:hover:not(.catTabActive) {
+  background: #f9fafb;
+  color: #374151;
+}
+
+/* Med list */
+.medList {
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.25rem 0;
+}
+
+.medOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background 0.1s;
+  font-family: 'Inter', sans-serif;
+}
+
+.medOption:hover {
+  background: #f0fdf4;
+}
+
+.medOptionName {
+  font-size: 0.88rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.medOptionBrand {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.emptyMsg {
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ─── Result ─────────────────────────────── */
+.resultWrap {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.resultPair {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  flex-wrap: wrap;
+}
+
+.plusSign {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+/* No data */
+.noDataCard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.noDataIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.noDataTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.noDataText {
+  font-size: 0.9rem;
+  color: #6b7280;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Interaction card */
+.interactionCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+
+.statusIcon {
+  font-size: 1.1rem;
+}
+
+.statusLabel {
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.section {}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+.sectionText {
+  font-size: 0.92rem;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.limitsBox {
+  background: #f9fafb;
+  border-left: 3px solid #2d4a3e;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+}
+
+/* Populations */
+.populationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.popCard {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.popLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.popText {
+  font-size: 0.83rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Sources */
+.sourceList {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #fffbeb;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: #92400e;
+  line-height: 1.5;
+}
+
+/* ─── Actions ────────────────────────────── */
+.actionRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.checkAnotherBtn {
+  background: #2d4a3e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.15s;
+}
+
+.checkAnotherBtn:hover {
+  background: #1f3328;
+}
+
+.clearAllBtn {
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+
+.clearAllBtn:hover {
+  background: #f9fafb;
+  color: #374151;
+}
+
+/* ─── Single Med section ─────────────────── */
+.singleMedSection {
+  margin-bottom: 2rem;
+}
+
+.singleMedHint {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.showAllBtn {
+  background: none;
+  border: 1px solid #2d4a3e;
+  color: #2d4a3e;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+  margin-bottom: 1rem;
+}
+
+.showAllBtn:hover {
+  background: #2d4a3e;
+  color: #fff;
+}
+
+/* All interactions list */
+.allInteractionsWrap {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.allInteractionsTitle {
+  padding: 1rem 1.25rem;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.allInteractionsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.allInteractionRow {
+  padding: 0.9rem 1.25rem;
+  border-left: 3px solid #e5e7eb;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: background 0.1s;
+}
+
+.allInteractionRow:hover {
+  background: #fafafa;
+}
+
+.allInteractionRow:last-child {
+  border-bottom: none;
+}
+
+.allInteractionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.allInteractionName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.miniStatus {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.allInteractionSummary {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ─── Info Panel ─────────────────────────── */
+.infoPanel {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.infoPanelTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.infoPanelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.infoItemIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+
+.infoItem > div {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+.infoItem strong {
+  display: block;
+  color: #374151;
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+}
+
+.calcLink {
+  color: #2d4a3e;
+  font-weight: 600;
+}
+
+/* ─── Responsive ─────────────────────────── */
+@media (max-width: 680px) {
   .pickerRow {
-    display: grid;
-    grid-template-columns: 1fr 64px 1fr;
-    gap: 1rem;
-    align-items: start;
-    margin-bottom: 2rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
-  
+
   .vsBlock {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 2.4rem;
+    padding-top: 0;
   }
-  
+
   .vsCircle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #2d4a3e;
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 0.05em;
+    width: 36px;
+    height: 36px;
+    font-size: 0.65rem;
   }
-  
-  /* ─── MedPicker ──────────────────────────── */
-  .pickerWrap {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .title {
+    font-size: 1.5rem;
   }
-  
-  .pickerLabel {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #6b7280;
-  }
-  
-  .selectedBadge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #f0fdf4;
-    border: 1px solid #86efac;
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
-    color: #2d4a3e;
-    font-weight: 500;
-  }
-  
-  .selectedBrand {
-    font-size: 0.8rem;
-    color: #6b7280;
-    margin-left: auto;
-  }
-  
-  .clearBtn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #9ca3af;
-    font-size: 0.9rem;
-    padding: 0 0.25rem;
-    line-height: 1;
-  }
-  
-  .clearBtn:hover {
-    color: #ef4444;
-  }
-  
-  .pickerInner {
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-  }
-  
-  .searchInput {
-    width: 100%;
-    padding: 0.65rem 1rem;
-    border: none;
-    border-bottom: 1px solid #e5e7eb;
-    font-size: 0.9rem;
-    outline: none;
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  .searchInput:focus {
-    border-bottom-color: #2d4a3e;
-  }
-  
-  /* Category tabs */
-  .catTabs {
-    display: flex;
-    overflow-x: auto;
-    gap: 0;
-    border-bottom: 1px solid #e5e7eb;
-    scrollbar-width: none;
-  }
-  
-  .catTabs::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .catTab {
-    flex-shrink: 0;
-    padding: 0.45rem 0.75rem;
-    font-size: 0.72rem;
-    font-weight: 600;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #6b7280;
-    white-space: nowrap;
-    transition: all 0.15s;
-    border-bottom: 2px solid transparent;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .catTabActive {
-    color: #2d4a3e;
-    border-bottom-color: #2d4a3e;
-    background: #f0fdf4;
-  }
-  
-  .catTab:hover:not(.catTabActive) {
-    background: #f9fafb;
-    color: #374151;
-  }
-  
-  /* Med list */
-  .medList {
-    max-height: 240px;
-    overflow-y: auto;
-    padding: 0.25rem 0;
-  }
-  
-  .medOption {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    width: 100%;
-    text-align: left;
-    padding: 0.55rem 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: background 0.1s;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .medOption:hover {
-    background: #f0fdf4;
-  }
-  
-  .medOptionName {
-    font-size: 0.88rem;
-    color: #111827;
-    font-weight: 500;
-  }
-  
-  .medOptionBrand {
-    font-size: 0.75rem;
-    color: #9ca3af;
-  }
-  
-  .emptyMsg {
-    padding: 1rem;
-    font-size: 0.85rem;
-    color: #9ca3af;
-    text-align: center;
-  }
-  
-  /* ─── Result ─────────────────────────────── */
-  .resultWrap {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-  }
-  
+
   .resultPair {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    background: #f9fafb;
-    border-bottom: 1px solid #e5e7eb;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1f2937;
-    flex-wrap: wrap;
-  }
-  
-  .plusSign {
-    color: #9ca3af;
-    font-weight: 400;
-    font-size: 1.3rem;
-  }
-  
-  /* No data */
-  .noDataCard {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .noDataIcon {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .noDataTitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 0.75rem;
-  }
-  
-  .noDataText {
     font-size: 0.9rem;
-    color: #6b7280;
-    max-width: 520px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  /* Interaction card */
-  .interactionCard {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  
-  .statusBadge {
-    display: inline-flex;
-    align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    border: 1.5px solid;
-    font-weight: 700;
-    font-size: 0.9rem;
-    width: fit-content;
   }
-  
-  .statusIcon {
-    font-size: 1.1rem;
-  }
-  
-  .statusLabel {
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-  
-  /* Sections */
-  .section {}
-  
-  .sectionTitle {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #9ca3af;
-    margin-bottom: 0.4rem;
-  }
-  
-  .sectionText {
-    font-size: 0.92rem;
-    color: #374151;
-    line-height: 1.65;
-  }
-  
-  .limitsBox {
-    background: #f9fafb;
-    border-left: 3px solid #2d4a3e;
-    padding: 0.75rem 1rem;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.9rem;
-  }
-  
-  /* Populations */
+
   .populationGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: 1fr;
   }
-  
-  .popCard {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 0.75rem;
-  }
-  
-  .popLabel {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 0.35rem;
-  }
-  
-  .popText {
-    font-size: 0.83rem;
-    color: #6b7280;
-    line-height: 1.5;
-  }
-  
-  /* Sources */
-  .sourceList {
-    margin: 0;
-    padding-left: 1.25rem;
-    font-size: 0.82rem;
-    color: #6b7280;
-    line-height: 1.8;
-  }
-  
-  /* Disclaimer */
-  .disclaimer {
-    background: #fffbeb;
-    border: 1px solid #fbbf24;
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    font-size: 0.82rem;
-    color: #92400e;
-    line-height: 1.5;
-  }
-  
-  /* ─── Actions ────────────────────────────── */
-  .actionRow {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .checkAnotherBtn {
-    background: #2d4a3e;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.65rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: background 0.15s;
-  }
-  
-  .checkAnotherBtn:hover {
-    background: #1f3328;
-  }
-  
-  .clearAllBtn {
-    background: none;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 0.65rem 1.25rem;
-    font-size: 0.9rem;
-    color: #6b7280;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.15s;
-  }
-  
-  .clearAllBtn:hover {
-    background: #f9fafb;
-    color: #374151;
-  }
-  
-  /* ─── Single Med section ─────────────────── */
-  .singleMedSection {
-    margin-bottom: 2rem;
-  }
-  
-  .singleMedHint {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-  
-  .showAllBtn {
-    background: none;
-    border: 1px solid #2d4a3e;
-    color: #2d4a3e;
-    border-radius: 8px;
-    padding: 0.55rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.15s;
-    margin-bottom: 1rem;
-  }
-  
-  .showAllBtn:hover {
-    background: #2d4a3e;
-    color: #fff;
-  }
-  
-  /* All interactions list */
-  .allInteractionsWrap {
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  
-  .allInteractionsTitle {
-    padding: 1rem 1.25rem;
-    background: #f9fafb;
-    border-bottom: 1px solid #e5e7eb;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #374151;
-  }
-  
-  .allInteractionsList {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .allInteractionRow {
-    padding: 0.9rem 1.25rem;
-    border-left: 3px solid #e5e7eb;
-    border-bottom: 1px solid #f3f4f6;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    transition: background 0.1s;
-  }
-  
-  .allInteractionRow:hover {
-    background: #fafafa;
-  }
-  
-  .allInteractionRow:last-child {
-    border-bottom: none;
-  }
-  
-  .allInteractionHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  
-  .allInteractionName {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .miniStatus {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-  }
-  
-  .allInteractionSummary {
-    font-size: 0.82rem;
-    color: #6b7280;
-    line-height: 1.5;
-  }
-  
-  /* ─── Info Panel ─────────────────────────── */
-  .infoPanel {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .infoPanelTitle {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #374151;
-    margin-bottom: 1rem;
-  }
-  
+
   .infoPanelGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
   }
-  
-  .infoItem {
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-  }
-  
-  .infoItemIcon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    padding-top: 0.1rem;
-  }
-  
-  .infoItem > div {
-    font-size: 0.82rem;
-    color: #6b7280;
-    line-height: 1.55;
-  }
-  
-  .infoItem strong {
-    display: block;
-    color: #374151;
-    margin-bottom: 0.2rem;
-    font-size: 0.85rem;
-  }
-  
-  .calcLink {
-    color: #2d4a3e;
-    font-weight: 600;
-  }
-  
-  /* ─── Responsive ─────────────────────────── */
-  @media (max-width: 680px) {
-    .pickerRow {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
-  
-    .vsBlock {
-      padding-top: 0;
-    }
-  
-    .vsCircle {
-      width: 36px;
-      height: 36px;
-      font-size: 0.65rem;
-    }
-  
-    .title {
-      font-size: 1.5rem;
-    }
-  
-    .resultPair {
-      font-size: 0.9rem;
-      gap: 0.5rem;
-    }
-  
-    .populationGrid {
-      grid-template-columns: 1fr;
-    }
-  
-    .infoPanelGrid {
-      grid-template-columns: 1fr;
-    }
-  }
+}
