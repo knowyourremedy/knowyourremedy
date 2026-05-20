@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { MEDS, CATEGORIES, REMEDY_TAGS, FORMAT_ICONS } from '@/lib/medsData';
+import { useState, useEffect, useMemo } from 'react';
+import { MEDS, CATEGORIES } from '@/lib/medsData';
 import { createProfile, logDose, getLogs } from '@/lib/supabaseHelpers';
 import DoseTrackerBadge from '@/components/DoseTrackerBadge';
 import styles from './DosageCalculator.module.css';
 
+// ─── Helpers ─────────────────────────────────────────────────
 function toKg(weight, unit) {
   return unit === 'lbs' ? weight / 2.205 : weight;
 }
@@ -18,7 +19,6 @@ function calcDoseMg(med, wKg, ageMonths, isChild) {
   }
   if (med.flatDose) {
     if (!isChild) return med.flatDose.adult;
-    const keys = Object.keys(med.flatDose.child);
     if (ageYears < 1 && med.flatDose.child['0+']) return med.flatDose.child['0+'];
     if (ageYears < 1 && med.flatDose.child['0-12m']) return med.flatDose.child['0-12m'];
     if (ageYears < 2 && med.flatDose.child['0-2']) return med.flatDose.child['0-2'];
@@ -64,6 +64,7 @@ function physicalAmount(doseMg, conc) {
   return `${countStr} ${conc.unitLabel || 'unit(s)'}`;
 }
 
+// ─── Small UI helpers ────────────────────────────────────────
 function StepHeader({ num, label, sub }) {
   return (
     <div className={styles.stepHeader}>
@@ -89,6 +90,74 @@ function OptionButton({ selected, onClick, title, sub }) {
   );
 }
 
+// ─── New MedPicker for the dosage calculator ─────────────────
+function MedPicker({ value, onChange }) {
+  const firstCat = Object.keys(CATEGORIES)[0];
+  const [activeCat, setActiveCat] = useState(firstCat);
+  const [search, setSearch] = useState('');
+
+  const filtered = useMemo(() => {
+    if (search.trim().length > 1) {
+      return Object.entries(MEDS)
+        .filter(([, m]) =>
+          m.name.toLowerCase().includes(search.toLowerCase()) ||
+          m.brand.toLowerCase().includes(search.toLowerCase())
+        )
+        .sort(([, a], [, b]) => a.name.localeCompare(b.name));
+    }
+    return Object.entries(MEDS)
+      .filter(([, m]) => m.category === activeCat)
+      .sort(([, a], [, b]) => a.name.localeCompare(b.name));
+  }, [search, activeCat]);
+
+  return (
+    <div className={styles.dosagePicker}>
+      <input
+        type="text"
+        placeholder="Search by name or brand…"
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        className={styles.dosageSearchInput}
+      />
+
+      {search.trim().length < 2 && (
+        <div className={styles.dosageCatTabs}>
+          {Object.entries(CATEGORIES).map(([k, v]) => (
+            <button
+              key={k}
+              type="button"
+              className={`${styles.dosageCatTab} ${activeCat === k ? styles.dosageCatTabActive : ''}`}
+              onClick={() => setActiveCat(k)}
+            >
+              {v.icon} {v.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className={styles.dosageMedList}>
+        {filtered.length === 0 && (
+          <div className={styles.dosageEmptyMsg}>No medications found.</div>
+        )}
+        {filtered.map(([key, m]) => (
+          <button
+            key={key}
+            type="button"
+            className={`${styles.dosageMedOption} ${value === key ? styles.dosageMedOptionActive : ''}`}
+            onClick={() => onChange(key)}
+          >
+            <div className={styles.dosageMedOptionMain}>
+              <span className={styles.dosageMedOptionName}>{m.name}</span>
+              <span className={styles.dosageMedOptionBrand}>{CATEGORIES[m.category]?.icon} {m.brand}</span>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Main page ───────────────────────────────────────────────
 export default function DosageCalculatorPage() {
   const [who, setWho] = useState(null);
   const [weight, setWeight] = useState('');
@@ -106,11 +175,6 @@ export default function DosageCalculatorPage() {
   const [profileDob, setProfileDob] = useState('');
   const [activeTab, setActiveTab] = useState('create');
   const [trackerOpen, setTrackerOpen] = useState(false);
-
-  // Sidebar filters
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [activeRemedy, setActiveRemedy] = useState(null);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('kyr_active_profile');
@@ -135,13 +199,6 @@ export default function DosageCalculatorPage() {
   const ageMonths = age ? (ageUnit === 'months' ? Number(age) : Number(age) * 12) : null;
   const wKg = weight ? toKg(Number(weight), weightUnit) : null;
 
-  // Filter meds by sidebar selection
-  const filteredMeds = Object.entries(MEDS).filter(([key, med]) => {
-    if (activeCategory && med.category !== activeCategory) return false;
-    if (activeRemedy && !med.tags.includes(activeRemedy)) return false;
-    return true;
-  });
-
   const med = medKey ? MEDS[medKey] : null;
   const formats = med ? Object.entries(med.formats) : [];
   const concentrations = (med && formatKey) ? med.formats[formatKey].concentrations : [];
@@ -164,20 +221,6 @@ export default function DosageCalculatorPage() {
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
-  }
-
-  function handleCategoryFilter(cat) {
-    setActiveCategory(prev => prev === cat ? null : cat);
-    setActiveRemedy(null);
-    setMedKey(null);
-    resetFormat();
-  }
-
-  function handleRemedyFilter(tag) {
-    setActiveRemedy(prev => prev === tag ? null : tag);
-    setActiveCategory(null);
-    setMedKey(null);
-    resetFormat();
   }
 
   function calculate() {
@@ -254,291 +297,223 @@ export default function DosageCalculatorPage() {
 
   return (
     <>
-      <div className={styles.pageWrap}>
+      <main className={styles.main}>
+        <div className={styles.hero}>
+          <h1 className={styles.heroTitle}>Dosage Calculator</h1>
+          <p className={styles.heroSub}>
+            Get the right dose for your specific product — OTC medications, supplements, herbal remedies, essential oils, and home remedies — based on FDA monograph guidelines, AAP recommendations, and NIH research.
+          </p>
+        </div>
 
-        {/* Sidebar */}
-        <aside className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
-          <div className={styles.sidebarInner}>
-            <div className={styles.sidebarSection}>
-              <div className={styles.sidebarTitle}>Browse by category</div>
-              {Object.entries(CATEGORIES).map(([key, cat]) => (
-                <button
-                  key={key}
-                  type="button"
-                  className={`${styles.sidebarBtn} ${activeCategory === key ? styles.sidebarBtnActive : ''}`}
-                  onClick={() => handleCategoryFilter(key)}
-                >
-                  <span className={styles.sidebarIcon}>{cat.icon}</span>
-                  {cat.label}
-                </button>
-              ))}
+        {/* Step 1 — Who */}
+        <div className={styles.card}>
+          <StepHeader num="1" label="Who is this for?" />
+          <div className={styles.optGrid}>
+            <OptionButton selected={who === 'child'} onClick={() => { setWho('child'); setMedKey(null); resetFormat(); }} title="Child" sub="Under 12 years old" />
+            <OptionButton selected={who === 'adult'} onClick={() => { setWho('adult'); setMedKey(null); resetFormat(); }} title="Adult" sub="12 years and older" />
+          </div>
+        </div>
+
+        {/* Step 2 — Weight & age */}
+        {who && (
+          <div className={styles.card}>
+            <StepHeader num="2" label="Enter weight and age" />
+            <div className={styles.inputRow}>
+              <div className={styles.fieldWrap}>
+                <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
+                <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
+              </div>
+              <div className={styles.unitToggle}>
+                <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
+                <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
+              </div>
             </div>
-
-            <div className={styles.sidebarSection}>
-              <div className={styles.sidebarTitle}>Browse by condition</div>
-              {Object.entries(REMEDY_TAGS).map(([key, label]) => (
-                <button
-                  key={key}
-                  type="button"
-                  className={`${styles.sidebarBtn} ${activeRemedy === key ? styles.sidebarBtnActive : ''}`}
-                  onClick={() => handleRemedyFilter(key)}
-                >
-                  {label}
-                </button>
-              ))}
+            <div className={styles.fieldWrap} style={{ marginTop: '10px' }}>
+              <label className={styles.fieldLabel} htmlFor="age">Age</label>
+              <input id="age" type="number" min="0" max="120" placeholder={isChild ? 'e.g. 6' : 'e.g. 35'} value={age} onChange={e => setAge(e.target.value)} className={styles.input} />
             </div>
-
-            {(activeCategory || activeRemedy) && (
-              <button
-                type="button"
-                className={styles.clearBtn}
-                onClick={() => { setActiveCategory(null); setActiveRemedy(null); setMedKey(null); resetFormat(); }}
-              >
-                Clear filter
-              </button>
+            {isChild && (
+              <div className={styles.ageUnitRow}>
+                <label className={styles.radioLabel}><input type="radio" name="ageunit" value="years" checked={ageUnit === 'years'} onChange={() => setAgeUnit('years')} /> Years</label>
+                <label className={styles.radioLabel}><input type="radio" name="ageunit" value="months" checked={ageUnit === 'months'} onChange={() => setAgeUnit('months')} /> Months</label>
+              </div>
+            )}
+            {isChild && ageMonths !== null && ageMonths < 2 && (
+              <p className={styles.ageWarning}>Consult a doctor before giving any medication to infants under 2 months.</p>
             )}
           </div>
-        </aside>
+        )}
 
-        {/* Main content */}
-        <main className={styles.main}>
-          <div className={styles.hero}>
-            <h1 className={styles.heroTitle}>Dosage Calculator</h1>
-            <p className={styles.heroSub}>
-              Get the right dose for your specific product — OTC medications, supplements,
-              herbal remedies, essential oils, and home remedies — based on FDA monograph
-              guidelines, AAP recommendations, and NIH research.
-            </p>
-            <button
-              type="button"
-              className={styles.sidebarToggle}
-              onClick={() => setSidebarOpen(o => !o)}
-            >
-              {sidebarOpen ? 'Hide filters' : 'Filter by category or condition'}
-            </button>
-          </div>
-
-          {/* Active filter badge */}
-          {(activeCategory || activeRemedy) && (
-            <div className={styles.filterBadge}>
-              Showing: {activeCategory ? CATEGORIES[activeCategory].label : REMEDY_TAGS[activeRemedy]}
-              <button type="button" onClick={() => { setActiveCategory(null); setActiveRemedy(null); setMedKey(null); resetFormat(); }} className={styles.filterBadgeClose}>×</button>
-            </div>
-          )}
-
-          {/* Step 1 */}
+        {/* Step 3 — Medication (NEW PICKER WITH SEARCH + TABS) */}
+        {who && (
           <div className={styles.card}>
-            <StepHeader num="1" label="Who is this for?" />
+            <StepHeader num="3" label="Select medication or remedy" />
+            <MedPicker value={medKey} onChange={handleMedSelect} />
+          </div>
+        )}
+
+        {/* Step 4 — Format */}
+        {medKey && (
+          <div className={styles.card}>
+            <StepHeader num="4" label="Select product format" />
             <div className={styles.optGrid}>
-              <OptionButton selected={who === 'child'} onClick={() => { setWho('child'); setMedKey(null); resetFormat(); }} title="Child" sub="Under 12 years old" />
-              <OptionButton selected={who === 'adult'} onClick={() => { setWho('adult'); setMedKey(null); resetFormat(); }} title="Adult" sub="12 years and older" />
+              {formats.map(([fkey, fmt]) => (
+                <OptionButton key={fkey} selected={formatKey === fkey} onClick={() => handleFormatSelect(fkey)} title={fmt.label} />
+              ))}
             </div>
           </div>
+        )}
 
-          {/* Step 2 */}
-          {who && (
-            <div className={styles.card}>
-              <StepHeader num="2" label="Enter weight and age" />
-              <div className={styles.inputRow}>
-                <div className={styles.fieldWrap}>
-                  <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
-                  <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
-                </div>
-                <div className={styles.unitToggle}>
-                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
-                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
-                </div>
-              </div>
-              <div className={styles.fieldWrap} style={{ marginTop: '10px' }}>
-                <label className={styles.fieldLabel} htmlFor="age">Age</label>
-                <input id="age" type="number" min="0" max="120" placeholder={isChild ? 'e.g. 6' : 'e.g. 35'} value={age} onChange={e => setAge(e.target.value)} className={styles.input} />
-              </div>
-              {isChild && (
-                <div className={styles.ageUnitRow}>
-                  <label className={styles.radioLabel}><input type="radio" name="ageunit" value="years" checked={ageUnit === 'years'} onChange={() => setAgeUnit('years')} /> Years</label>
-                  <label className={styles.radioLabel}><input type="radio" name="ageunit" value="months" checked={ageUnit === 'months'} onChange={() => setAgeUnit('months')} /> Months</label>
-                </div>
-              )}
-              {isChild && ageMonths !== null && ageMonths < 2 && (
-                <p className={styles.ageWarning}>Consult a doctor before giving any medication to infants under 2 months.</p>
-              )}
+        {/* Step 5 — Concentration */}
+        {formatKey && (
+          <div className={styles.card}>
+            <StepHeader num="5" label="Select concentration" sub="Check your product label for the mg strength" />
+            <div className={styles.optGrid}>
+              {concentrations.map((c, i) => (
+                <OptionButton key={i} selected={concIndex === i} onClick={() => setConcIndex(i)} title={c.label} />
+              ))}
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Step 3 — Medication */}
-          {who && (
-            <div className={styles.card}>
-              <StepHeader num="3" label="Select medication or remedy" sub={filteredMeds.length !== Object.keys(MEDS).length ? `${filteredMeds.length} results` : `${Object.keys(MEDS).length} options available`} />
-              <div className={styles.medGrid}>
-                {filteredMeds.map(([key, m]) => (
-                  <OptionButton key={key} selected={medKey === key} onClick={() => handleMedSelect(key)} title={m.name} sub={`${CATEGORIES[m.category]?.icon} ${m.brand}`} />
-                ))}
-                {filteredMeds.length === 0 && (
-                  <p className={styles.emptyLog}>No remedies found for this filter. <button type="button" className={styles.linkBtn} onClick={() => { setActiveCategory(null); setActiveRemedy(null); }}>Clear filter</button></p>
-                )}
-              </div>
+        {/* Calculate button */}
+        {who && (
+          <button type="button" className={styles.calcBtn} disabled={!canCalculate} onClick={calculate}>
+            Calculate dose
+          </button>
+        )}
+
+        {/* Result */}
+        {showResult && result && (
+          <div className={styles.resultCard}>
+            <div className={styles.resultLabel}>Recommended dose</div>
+            <div className={styles.resultDose}>{result.physical}</div>
+            <div className={styles.resultMg}>{result.doseMg} mg</div>
+
+            <div className={styles.scheduleRow}>
+              <span className={styles.scheduleIcon}>⏱</span>
+              <div className={styles.scheduleText}><strong>Every {result.med.intervalHours} hours</strong> as needed — wait a full {result.med.intervalHours} hours between doses</div>
             </div>
-          )}
-
-          {/* Step 4 — Format */}
-          {medKey && (
-            <div className={styles.card}>
-              <StepHeader num="4" label="Select product format" />
-              <div className={styles.optGrid}>
-                {formats.map(([fkey, fmt]) => (
-                  <OptionButton key={fkey} selected={formatKey === fkey} onClick={() => handleFormatSelect(fkey)} title={fmt.label} />
-                ))}
-              </div>
+            <div className={styles.scheduleRow}>
+              <span className={styles.scheduleIcon}>📅</span>
+              <div className={styles.scheduleText}><strong>Maximum {result.med.maxDosesPerDay} dose{result.med.maxDosesPerDay > 1 ? 's' : ''} in any 24-hour period</strong></div>
             </div>
-          )}
-
-          {/* Step 5 — Concentration */}
-          {formatKey && (
-            <div className={styles.card}>
-              <StepHeader num="5" label="Select concentration" sub="Check your product label for the mg strength" />
-              <div className={styles.optGrid}>
-                {concentrations.map((c, i) => (
-                  <OptionButton key={i} selected={concIndex === i} onClick={() => setConcIndex(i)} title={c.label} />
-                ))}
-              </div>
+            <div className={styles.scheduleRow}>
+              <span className={styles.scheduleIcon}>⚠️</span>
+              <div className={styles.scheduleText}>{isChild ? result.med.warnings.child : result.med.warnings.adult}</div>
             </div>
-          )}
 
-          {/* Calculate */}
-          {who && (
-            <button type="button" className={styles.calcBtn} disabled={!canCalculate} onClick={calculate}>
-              Calculate dose
-            </button>
-          )}
+            <div className={styles.sourceBox}>
+              <div className={styles.sourceLabel}>Sources &amp; references</div>
+              <p className={styles.sourceText}>{result.med.source}</p>
+            </div>
 
-          {/* Result */}
-          {showResult && result && (
-            <div className={styles.resultCard}>
-              <div className={styles.resultLabel}>Recommended dose</div>
-              <div className={styles.resultDose}>{result.physical}</div>
-              <div className={styles.resultMg}>{result.doseMg} mg</div>
-
-              <div className={styles.scheduleRow}>
-                <span className={styles.scheduleIcon}>⏱</span>
-                <div className={styles.scheduleText}><strong>Every {result.med.intervalHours} hours</strong> as needed — wait a full {result.med.intervalHours} hours between doses</div>
-              </div>
-              <div className={styles.scheduleRow}>
-                <span className={styles.scheduleIcon}>📅</span>
-                <div className={styles.scheduleText}><strong>Maximum {result.med.maxDosesPerDay} dose{result.med.maxDosesPerDay > 1 ? 's' : ''} in any 24-hour period</strong></div>
-              </div>
-              <div className={styles.scheduleRow}>
-                <span className={styles.scheduleIcon}>⚠️</span>
-                <div className={styles.scheduleText}>{isChild ? result.med.warnings.child : result.med.warnings.adult}</div>
-              </div>
-
-              <div className={styles.sourceBox}>
-                <div className={styles.sourceLabel}>Sources & references</div>
-                <p className={styles.sourceText}>{result.med.source}</p>
-              </div>
-
-{/* Check Interactions Banner */}
-{result?.medKey && (
-                <div style={{
-                  background: '#f0fdf4',
-                  border: '1px solid #86efac',
-                  borderRadius: '10px',
-                  padding: '1rem 1.25rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: '1rem',
-                  flexWrap: 'wrap',
-                  marginBottom: '1rem',
-                }}>
-                  <div>
-                    <div style={{ fontWeight: 600, color: '#166534', fontSize: '0.9rem', marginBottom: '0.2rem' }}>
-                      ⚠️ Taking anything else?
-                    </div>
-                    <div style={{ fontSize: '0.82rem', color: '#4b5563', lineHeight: 1.5 }}>
-                      Check if {result.med.name} is safe to combine with your other medications, supplements, or herbal remedies.
-                    </div>
+            {/* Check Interactions Banner */}
+            {result?.medKey && (
+              <div style={{
+                background: '#f0fdf4',
+                border: '1px solid #86efac',
+                borderRadius: '10px',
+                padding: '1rem 1.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '1rem',
+                flexWrap: 'wrap',
+                marginBottom: '1rem',
+              }}>
+                <div>
+                  <div style={{ fontWeight: 600, color: '#166534', fontSize: '0.9rem', marginBottom: '0.2rem' }}>
+                    💊🌿 Taking anything else?
                   </div>
-                  <a
-                    href={`/interaction-checker?med=${result.medKey}`}
-                    style={{
-                      background: '#2d4a3e',
-                      color: '#fff',
-                      padding: '0.55rem 1.1rem',
-                      borderRadius: '8px',
-                      textDecoration: 'none',
-                      fontWeight: 600,
-                      fontSize: '0.85rem',
-                      flexShrink: 0,
-                    }}
-                  >
-                    Check Interactions →
-                  </a>
+                  <div style={{ fontSize: '0.82rem', color: '#4b5563', lineHeight: 1.5 }}>
+                    Check if {result.med.name} is safe to combine with your other medications, supplements, or herbal remedies.
+                  </div>
+                </div>
+                <a
+                
+                  href={`/interaction-checker?med=${result.medKey}`}
+                  style={{
+                    background: '#2d4a3e',
+                    color: '#fff',
+                    padding: '0.55rem 1.1rem',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.85rem',
+                    flexShrink: 0,
+                  }}
+                >
+                  Check Interactions →
+                </a>
+              </div>
+            
+            )}
+
+
+            <div className={styles.disclaimerBox}>
+              <p className={styles.disclaimerText}>
+                <strong>Medical disclaimer:</strong> Dosage information is based on published FDA monographs, AAP guidelines, NIH Office of Dietary Supplements, and peer-reviewed herbal monographs, and is provided for reference only. Always verify the dose against the measuring device and label included with your specific product. This calculator does not replace advice from a licensed healthcare provider, pharmacist, or physician. If you are unsure, consult a medical professional before administering any medication or supplement.
+              </p>
+            </div>
+
+            {/* Profile tabs */}
+            <div className={styles.profileTab}>
+              <div className={styles.profileTabHeader}>
+                <button type="button" className={`${styles.ptabBtn} ${activeTab === 'create' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('create')}>Save &amp; track this dose</button>
+                <button type="button" className={`${styles.ptabBtn} ${activeTab === 'log' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('log')}>Dose history</button>
+              </div>
+              {activeTab === 'create' && (
+                <div className={styles.ptabContent}>
+                  {activeProfile ? (
+                    <div>
+                      <p className={styles.ptabNote}>Logged for <strong>{activeProfile.name}</strong>.</p>
+                      <button type="button" className={styles.saveBtn} onClick={() => handleLogDose(activeProfile.id)}>Log this dose for {activeProfile.name}</button>
+                    </div>
+                  ) : (
+                    <>
+                      <p className={styles.ptabNote}>Create a profile to track doses and see when the next dose is due.</p>
+                      <div className={styles.formGrid}>
+                        <div className={styles.formField}>
+                          <label htmlFor="p-name">Profile name</label>
+                          <input id="p-name" type="text" placeholder="e.g. Emma" value={profileName} onChange={e => setProfileName(e.target.value)} className={styles.input} />
+                        </div>
+                        <div className={styles.formField}>
+                          <label htmlFor="p-dob">Date of birth</label>
+                          <input id="p-dob" type="date" value={profileDob} onChange={e => setProfileDob(e.target.value)} className={styles.input} />
+                        </div>
+                      </div>
+                      <button type="button" className={styles.saveBtn} onClick={handleSaveProfile}>Save profile &amp; log this dose</button>
+                    </>
+                  )}
                 </div>
               )}
-              <div className={styles.disclaimerBox}>
-                <p className={styles.disclaimerText}>
-                  <strong>Medical disclaimer:</strong> Dosage information is based on published FDA monographs, AAP guidelines, NIH Office of Dietary Supplements, and peer-reviewed herbal monographs, and is provided for reference only. Always verify the dose against the measuring device and label included with your specific product. This calculator does not replace advice from a licensed healthcare provider, pharmacist, or physician. If you are unsure, consult a medical professional before administering any medication or supplement.
-                </p>
-              </div>
-
-              {/* Profile tabs */}
-              <div className={styles.profileTab}>
-                <div className={styles.profileTabHeader}>
-                  <button type="button" className={`${styles.ptabBtn} ${activeTab === 'create' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('create')}>Save & track this dose</button>
-                  <button type="button" className={`${styles.ptabBtn} ${activeTab === 'log' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('log')}>Dose history</button>
-                </div>
-                {activeTab === 'create' && (
-                  <div className={styles.ptabContent}>
-                    {activeProfile ? (
-                      <div>
-                        <p className={styles.ptabNote}>Logged for <strong>{activeProfile.name}</strong>.</p>
-                        <button type="button" className={styles.saveBtn} onClick={() => handleLogDose(activeProfile.id)}>Log this dose for {activeProfile.name}</button>
-                      </div>
-                    ) : (
-                      <>
-                        <p className={styles.ptabNote}>Create a profile to track doses and see when the next dose is due.</p>
-                        <div className={styles.formGrid}>
-                          <div className={styles.formField}>
-                            <label htmlFor="p-name">Profile name</label>
-                            <input id="p-name" type="text" placeholder="e.g. Emma" value={profileName} onChange={e => setProfileName(e.target.value)} className={styles.input} />
-                          </div>
-                          <div className={styles.formField}>
-                            <label htmlFor="p-dob">Date of birth</label>
-                            <input id="p-dob" type="date" value={profileDob} onChange={e => setProfileDob(e.target.value)} className={styles.input} />
+              {activeTab === 'log' && (
+                <div className={styles.ptabContent}>
+                  {logs.length === 0 ? (
+                    <p className={styles.emptyLog}>No doses logged yet.</p>
+                  ) : (
+                    logs.slice(0, 10).map(log => {
+                      const lastTime = new Date(log.administered_at);
+                      const nextTime = new Date(lastTime.getTime() + log.interval_hours * 3600000);
+                      const canTake = new Date() >= nextTime;
+                      return (
+                        <div key={log.id} className={styles.logItem}>
+                          <div className={styles.logName}>{log.medication}</div>
+                          <div className={styles.logAmount}>{log.physical_amount} · {lastTime.toLocaleString()}</div>
+                          <div className={styles.logNext} style={{ color: canTake ? '#2d4a3e' : '#c0392b' }}>
+                            {canTake ? 'Next dose eligible now' : `Next eligible: ${nextTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
                           </div>
                         </div>
-                        <button type="button" className={styles.saveBtn} onClick={handleSaveProfile}>Save profile & log this dose</button>
-                      </>
-                    )}
-                  </div>
-                )}
-                {activeTab === 'log' && (
-                  <div className={styles.ptabContent}>
-                    {logs.length === 0 ? (
-                      <p className={styles.emptyLog}>No doses logged yet.</p>
-                    ) : (
-                      logs.slice(0, 10).map(log => {
-                        const lastTime = new Date(log.administered_at);
-                        const nextTime = new Date(lastTime.getTime() + log.interval_hours * 3600000);
-                        const canTake = new Date() >= nextTime;
-                        return (
-                          <div key={log.id} className={styles.logItem}>
-                            <div className={styles.logName}>{log.medication}</div>
-                            <div className={styles.logAmount}>{log.physical_amount} · {lastTime.toLocaleString()}</div>
-                            <div className={styles.logNext} style={{ color: canTake ? '#2d4a3e' : '#c0392b' }}>
-                              {canTake ? 'Next dose eligible now' : `Next eligible: ${nextTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
-                            </div>
-                          </div>
-                        );
-                      })
-                    )}
-                  </div>
-                )}
-              </div>
+                      );
+                    })
+                  )}
+                </div>
+              )}
             </div>
-          )}
-        </main>
-      </div>
+          </div>
+        )}
+      </main>
 
       {activeProfile && (
         <DoseTrackerBadge profile={activeProfile} logs={logs} onLogNext={handleLogNext} open={trackerOpen} onToggle={() => setTrackerOpen(o => !o)} />
