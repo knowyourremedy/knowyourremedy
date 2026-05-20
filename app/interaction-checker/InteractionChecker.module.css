@@ -1121,36 +1121,56 @@
   color: white;
 }
 /* ─── Responsive ─────────────────────────── */
-@media (max-width: 680px) {
-  .pickerRow {
+@media (max-width: 768px) {
+  /* Stack the two columns vertically on mobile */
+  .layoutRow {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
-  .vsBlock {
-    padding-top: 0;
+  /* Category tabs go to 2 columns instead of 3 on mobile */
+  .catTabs {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .vsCircle {
-    width: 36px;
-    height: 36px;
-    font-size: 0.65rem;
+  /* Slimmer chips on mobile */
+  .selectedChip {
+    padding: 0.5rem 0.7rem;
   }
 
+  /* Title sizing for mobile */
   .title {
     font-size: 1.5rem;
   }
 
+  /* Result pairs */
   .resultPair {
     font-size: 0.9rem;
     gap: 0.5rem;
   }
 
+  /* Population grid stacks on mobile */
   .populationGrid {
     grid-template-columns: 1fr;
   }
 
+  /* Info panel grid stacks on mobile */
   .infoPanelGrid {
     grid-template-columns: 1fr;
+  }
+
+  /* Picker hint can be slightly smaller */
+  .pickerHint {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.85rem;
+  }
+
+  /* Cat tab labels can wrap on 2-col mobile */
+  .catTabIcon {
+    font-size: 0.75rem;
+  }
+
+  .catTabHint {
+    font-size: 0.6rem;
   }
 }
