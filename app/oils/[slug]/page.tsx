@@ -32,7 +32,7 @@ function findOilBySlug(slug: string) {
 export default function OilDetailPage() {
   const params = useParams()
   const router = useRouter()
-  const slug = params?.slug || ''
+  const slug = (typeof params?.slug === 'string' ? params.slug : '') || ''
 
   const found = useMemo(() => findOilBySlug(slug), [slug])
 
