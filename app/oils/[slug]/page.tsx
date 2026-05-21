@@ -1,0 +1,413 @@
+'use client'
+
+import { useMemo } from 'react'
+import { useParams, useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { MEDS, CATEGORIES, REMEDY_TAGS } from '@/lib/medsData'
+import { getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
+
+// Slug helper — converts a med key like "chamomileRomanOil" or
+// display name like "Chamomile (Roman) Oil" into a clean URL slug.
+function keyToSlug(key, med) {
+  // Prefer the display name for SEO-friendly slugs, but fall back to key.
+  if (!med?.name) return key.toLowerCase()
+  return med.name
+    .toLowerCase()
+    .replace(/\(/g, '')
+    .replace(/\)/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+// Reverse — given a URL slug, find the matching oil key in MEDS.
+function findOilBySlug(slug) {
+  const target = slug.toLowerCase()
+  for (const [key, med] of Object.entries(MEDS)) {
+    if (med.category !== 'essential_oils') continue
+    if (keyToSlug(key, med) === target) return { key, med }
+  }
+  return null
+}
+
+export default function OilDetailPage() {
+  const params = useParams()
+  const router = useRouter()
+  const slug = params?.slug || ''
+
+  const found = useMemo(() => findOilBySlug(slug), [slug])
+
+  // 404-style fallback
+  if (!found) {
+    return (
+      <main style={{ minHeight: '70vh', backgroundColor: '#faf7f2', padding: '4rem 1.5rem' }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontSize: '1.75rem', color: '#2d4a3e', marginBottom: '0.5rem',
+          }}>Oil not found</h1>
+          <p style={{ color: '#5a7a6e', marginBottom: '1.5rem' }}>
+            We couldn&rsquo;t find that oil in our library.
+          </p>
+          <Link href="/oils" style={{
+            color: '#4a6741', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500,
+          }}>← Back to all oils</Link>
+        </div>
+      </main>
+    )
+  }
+
+  const { key, med } = found
+  const display = getOilDisplay(key, med)
+  const ageBadge = formatAgeBadge(med)
+
+  // Build the "Best for" condition tag list from existing tags
+  const conditionTags = (med.tags || []).map(t => ({
+    tag: t,
+    label: REMEDY_TAGS[t] || t,
+  }))
+
+  // Build the "How to use" rows from existing formats
+  const formatRows = Object.entries(med.formats || {}).map(([fmtKey, fmt]) => ({
+    key: fmtKey,
+    label: fmt.label,
+    concentrations: fmt.concentrations || [],
+  }))
+
+  // Cross-link URLs
+  const interactionUrl = `/interaction-checker?med=${encodeURIComponent(key)}`
+
+  return (
+    <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
+      <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 1.5rem 4rem' }}>
+
+        {/* Back link */}
+        <Link href="/oils" style={{
+          display: 'inline-block',
+          fontSize: '0.85rem',
+          color: '#4a6741',
+          textDecoration: 'none',
+          marginBottom: '1.25rem',
+          fontFamily: 'var(--font-inter), sans-serif',
+        }}>← All oils</Link>
+
+        {/* Header */}
+        <div style={{
+          marginBottom: '1.5rem',
+          paddingBottom: '1rem',
+          borderBottom: '1px solid #e8e0d0',
+        }}>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontSize: '2rem',
+            fontWeight: 700,
+            color: '#2d4a3e',
+            margin: '0 0 0.35rem',
+            letterSpacing: '-0.01em',
+          }}>{med.name}</h1>
+          <p style={{
+            fontSize: '0.9rem',
+            color: '#7a8a78',
+            margin: 0,
+            fontFamily: 'var(--font-inter), sans-serif',
+          }}>{display.scentProfile}{med.brand && med.brand !== 'Various' ? ` · ${med.brand}` : ''}</p>
+        </div>
+
+        {/* Safety badge row */}
+        <div style={{
+          display: 'flex',
+          gap: '0.5rem',
+          flexWrap: 'wrap',
+          marginBottom: '1.5rem',
+        }}>
+          <span style={badgeStyle}>Safe age {ageBadge}</span>
+          <span style={badgeStyle}>Topical &amp; diffusion only</span>
+          {(med.warnings?.adult || '').toLowerCase().includes('phototoxic') && (
+            <span style={badgeStyle}>⚠️ Phototoxic (avoid sun)</span>
+          )}
+        </div>
+
+        {/* Best for */}
+        {conditionTags.length > 0 && (
+          <div style={{ marginBottom: '1.5rem' }}>
+            <div style={sectionLabelStyle}>Best for</div>
+            <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+              {conditionTags.map(({ tag, label }) => (
+                <Link key={tag} href={`/conditions/${tag.replace(/_/g, '-')}`} style={tagPillStyle}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* How to use */}
+        {formatRows.length > 0 && (
+          <div style={{ marginBottom: '1.5rem' }}>
+            <div style={sectionLabelStyle}>Using this oil</div>
+
+            {/* Locked dilution rule callout */}
+            <div style={{
+              background: '#fef2e8',
+              borderLeft: '3px solid #b8651f',
+              borderRadius: '0 8px 8px 0',
+              padding: '0.75rem 1rem',
+              marginBottom: '0.75rem',
+            }}>
+              <div style={{
+                fontFamily: 'var(--font-playfair), Georgia, serif',
+                fontSize: '0.95rem',
+                fontWeight: 700,
+                color: '#7a3a0a',
+                marginBottom: '2px',
+              }}>Always dilute first.</div>
+              <div style={{
+                fontSize: '0.82rem',
+                color: '#7a3a0a',
+                fontFamily: 'var(--font-inter), sans-serif',
+              }}>Never go from bottle to body.</div>
+            </div>
+
+            <div style={{
+              background: '#fff',
+              border: '1px solid #e8e0d0',
+              borderRadius: '10px',
+              overflow: 'hidden',
+            }}>
+              {formatRows.map((row, idx) => {
+                const isTopical = (row.label || '').toLowerCase().includes('topical')
+                return (
+                  <div key={row.key} style={{
+                    padding: '0.85rem 1rem',
+                    borderBottom: idx < formatRows.length - 1 ? '1px solid #f1ede4' : 'none',
+                  }}>
+                    <div style={{
+                      fontSize: '0.9rem',
+                      fontWeight: 600,
+                      color: '#2d4a3e',
+                      marginBottom: '0.25rem',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                    }}>{row.label}</div>
+                    {isTopical && (
+                      <Link
+                        href="/oils/carriers"
+                        style={{
+                          display: 'inline-block',
+                          fontSize: '0.75rem',
+                          color: '#1f3329',
+                          fontWeight: 500,
+                          textDecoration: 'underline',
+                          textDecorationStyle: 'dotted',
+                          marginBottom: '0.45rem',
+                          fontFamily: 'var(--font-inter), sans-serif',
+                          cursor: 'pointer',
+                          transition: 'color 0.15s',
+                        }}
+                        onMouseEnter={e => { e.currentTarget.style.color = '#0d1a16' }}
+                        onMouseLeave={e => { e.currentTarget.style.color = '#1f3329' }}
+                      >→ See carrier oil list</Link>
+                    )}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                      {row.concentrations.map((c, i) => (
+                        <div key={i} style={{
+                          fontSize: '0.82rem',
+                          color: '#5a7a6e',
+                          fontFamily: 'var(--font-inter), sans-serif',
+                          lineHeight: 1.5,
+                        }}>{c.label}</div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Warnings */}
+        {(med.warnings?.child || med.warnings?.adult) && (
+          <div style={{ marginBottom: '1.5rem' }}>
+            <div style={sectionLabelStyle}>Use with care</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              {med.warnings?.child && (
+                <div style={{
+                  background: '#fdecea',
+                  borderLeft: '3px solid #c0392b',
+                  borderRadius: '0 8px 8px 0',
+                  padding: '0.75rem 1rem',
+                }}>
+                  <div style={warningLabelStyle('#7a1c1c')}>Children</div>
+                  <div style={warningTextStyle('#7a1c1c')}>{med.warnings.child}</div>
+                </div>
+              )}
+              {med.warnings?.adult && (
+                <div style={{
+                  background: '#fef7e6',
+                  borderLeft: '3px solid #d97706',
+                  borderRadius: '0 8px 8px 0',
+                  padding: '0.75rem 1rem',
+                }}>
+                  <div style={warningLabelStyle('#5c4a1f')}>Adults</div>
+                  <div style={warningTextStyle('#5c4a1f')}>{med.warnings.adult}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+       {/* Cross-links */}
+       <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0.5rem',
+          marginBottom: '1.5rem',
+        }}>
+          <Link href={interactionUrl} style={crossLinkStyle}>
+            <div style={crossLinkIconRowStyle}>
+              <span style={crossLinkIconStyle}>💊🌿</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={crossLinkSmallStyle}>Compatibility</div>
+                <div style={crossLinkBigStyle}>
+                  <span style={{ fontWeight: 600 }}>Compare</span> this oil with your meds
+                </div>
+              </div>
+              <span style={crossLinkArrowStyle}>→</span>
+            </div>
+          </Link>
+          {conditionTags.length > 0 && (
+            <Link href={`/conditions/${conditionTags[0].tag.replace(/_/g, '-')}`} style={crossLinkStyle}>
+              <div style={crossLinkIconRowStyle}>
+                <span style={crossLinkIconStyle}>🔍</span>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={crossLinkSmallStyle}>Related conditions</div>
+                  <div style={crossLinkBigStyle}>
+                    <span style={{ fontWeight: 600 }}>Browse</span> conditions it helps
+                  </div>
+                </div>
+                <span style={crossLinkArrowStyle}>→</span>
+              </div>
+            </Link>
+          )}
+        </div>
+        {/* Source */}
+        {med.source && (
+          <div style={{
+            paddingTop: '0.75rem',
+            borderTop: '1px solid #e8e0d0',
+            fontFamily: 'var(--font-inter), sans-serif',
+          }}>
+            <span style={{
+              fontSize: '0.7rem',
+              fontWeight: 600,
+              color: '#5a7a6e',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              marginRight: '0.45rem',
+            }}>Sources</span>
+            <span style={{
+              fontSize: '0.72rem',
+              color: '#9aa39a',
+              fontStyle: 'italic',
+              lineHeight: 1.55,
+            }}>{med.source}</span>
+          </div>
+        )}
+
+      </div>
+    </main>
+  )
+}
+
+// ─── Inline style objects (kept here to avoid CSS module sprawl) ───
+const badgeStyle = {
+  display: 'inline-block',
+  fontSize: '0.78rem',
+  fontWeight: 500,
+  background: '#f1efe8',
+  color: '#5f5e5a',
+  border: '1px solid #d3d1c7',
+  padding: '0.3rem 0.75rem',
+  borderRadius: '999px',
+  fontFamily: 'var(--font-inter), sans-serif',
+}
+
+const sectionLabelStyle = {
+  fontSize: '0.72rem',
+  fontWeight: 700,
+  textTransform: 'uppercase',
+  letterSpacing: '0.07em',
+  color: '#9aa39a',
+  marginBottom: '0.55rem',
+  fontFamily: 'var(--font-inter), sans-serif',
+}
+
+const tagPillStyle = {
+  display: 'inline-block',
+  fontSize: '0.82rem',
+  padding: '0.3rem 0.7rem',
+  background: '#fff',
+  border: '1px solid #c8ddc0',
+  borderRadius: '999px',
+  color: '#2d4a3e',
+  textDecoration: 'none',
+  fontFamily: 'var(--font-inter), sans-serif',
+}
+
+const warningLabelStyle = (color) => ({
+  fontSize: '0.7rem',
+  fontWeight: 700,
+  color,
+  textTransform: 'uppercase',
+  letterSpacing: '0.06em',
+  marginBottom: '0.3rem',
+  fontFamily: 'var(--font-inter), sans-serif',
+})
+
+const warningTextStyle = (color) => ({
+  fontSize: '0.85rem',
+  color,
+  lineHeight: 1.55,
+  fontFamily: 'var(--font-inter), sans-serif',
+})
+
+const crossLinkStyle = {
+  background: '#f0fdf4',
+  border: '1px solid #c8ddc0',
+  borderRadius: '10px',
+  padding: '0.7rem 0.85rem',
+  textDecoration: 'none',
+  display: 'block',
+}
+
+const crossLinkSmallStyle = {
+  fontSize: '0.72rem',
+  color: '#4a6741',
+  marginBottom: '0.2rem',
+  fontFamily: 'var(--font-inter), sans-serif',
+}
+
+const crossLinkBigStyle = {
+  fontSize: '0.85rem',
+  color: '#2d4a3e',
+  fontWeight: 600,
+  fontFamily: 'var(--font-inter), sans-serif',
+}
+
+const crossLinkIconRowStyle = {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '0.6rem',
+  }
+  
+  const crossLinkIconStyle = {
+    fontSize: '1.15rem',
+    lineHeight: 1.2,
+    paddingTop: '0.1rem',
+    flexShrink: 0,
+  }
+  
+  const crossLinkArrowStyle = {
+    fontSize: '0.95rem',
+    color: '#4a6741',
+    paddingTop: '0.15rem',
+    flexShrink: 0,
+  }
