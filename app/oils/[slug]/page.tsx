@@ -1,15 +1,18 @@
 'use client'
 
 import { useMemo } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
-import { MEDS, CATEGORIES, REMEDY_TAGS } from '@/lib/medsData'
+import { MEDS, REMEDY_TAGS } from '@/lib/medsData'
 import { getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
+
+type AnyMed = any
+const MEDS_ANY = MEDS as Record<string, AnyMed>
+const REMEDY_TAGS_ANY = REMEDY_TAGS as Record<string, string>
 
 // Slug helper — converts a med key like "chamomileRomanOil" or
 // display name like "Chamomile (Roman) Oil" into a clean URL slug.
-function keyToSlug(key: string, med: any) {
-  // Prefer the display name for SEO-friendly slugs, but fall back to key.
+function keyToSlug(key: string, med: AnyMed) {
   if (!med?.name) return key.toLowerCase()
   return med.name
     .toLowerCase()
@@ -22,7 +25,7 @@ function keyToSlug(key: string, med: any) {
 // Reverse — given a URL slug, find the matching oil key in MEDS.
 function findOilBySlug(slug: string) {
   const target = slug.toLowerCase()
-  for (const [key, med] of Object.entries(MEDS)) {
+  for (const [key, med] of Object.entries(MEDS_ANY)) {
     if (med.category !== 'essential_oils') continue
     if (keyToSlug(key, med) === target) return { key, med }
   }
@@ -31,12 +34,11 @@ function findOilBySlug(slug: string) {
 
 export default function OilDetailPage() {
   const params = useParams()
-  const router = useRouter()
-  const slug = (typeof params?.slug === 'string' ? params.slug : '') || ''
+  const rawSlug = params?.slug
+  const slug = typeof rawSlug === 'string' ? rawSlug : Array.isArray(rawSlug) ? rawSlug[0] || '' : ''
 
   const found = useMemo(() => findOilBySlug(slug), [slug])
 
-  // 404-style fallback
   if (!found) {
     return (
       <main style={{ minHeight: '70vh', backgroundColor: '#faf7f2', padding: '4rem 1.5rem' }}>
@@ -60,27 +62,23 @@ export default function OilDetailPage() {
   const display = getOilDisplay(key, med)
   const ageBadge = formatAgeBadge(med)
 
-  // Build the "Best for" condition tag list from existing tags
-  const conditionTags = (med.tags || []).map(t => ({
+  const conditionTags: { tag: string; label: string }[] = ((med.tags || []) as string[]).map((t: string) => ({
     tag: t,
-    label: REMEDY_TAGS[t] || t,
+    label: REMEDY_TAGS_ANY[t] || t,
   }))
 
-  // Build the "How to use" rows from existing formats
-  const formatRows = Object.entries(med.formats || {}).map(([fmtKey, fmt]) => ({
+  const formatRows = Object.entries(med.formats || {}).map(([fmtKey, fmt]: [string, any]) => ({
     key: fmtKey,
-    label: fmt.label,
-    concentrations: fmt.concentrations || [],
+    label: fmt.label as string,
+    concentrations: (fmt.concentrations || []) as any[],
   }))
 
-  // Cross-link URLs
   const interactionUrl = `/interaction-checker?med=${encodeURIComponent(key)}`
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 1.5rem 4rem' }}>
 
-        {/* Back link */}
         <Link href="/oils" style={{
           display: 'inline-block',
           fontSize: '0.85rem',
@@ -90,7 +88,6 @@ export default function OilDetailPage() {
           fontFamily: 'var(--font-inter), sans-serif',
         }}>← All oils</Link>
 
-        {/* Header */}
         <div style={{
           marginBottom: '1.5rem',
           paddingBottom: '1rem',
@@ -112,7 +109,6 @@ export default function OilDetailPage() {
           }}>{display.scentProfile}{med.brand && med.brand !== 'Various' ? ` · ${med.brand}` : ''}</p>
         </div>
 
-        {/* Safety badge row */}
         <div style={{
           display: 'flex',
           gap: '0.5rem',
@@ -126,7 +122,6 @@ export default function OilDetailPage() {
           )}
         </div>
 
-        {/* Best for */}
         {conditionTags.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Best for</div>
@@ -140,12 +135,10 @@ export default function OilDetailPage() {
           </div>
         )}
 
-        {/* How to use */}
         {formatRows.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Using this oil</div>
 
-            {/* Locked dilution rule callout */}
             <div style={{
               background: '#fef2e8',
               borderLeft: '3px solid #b8651f',
@@ -207,7 +200,7 @@ export default function OilDetailPage() {
                       >→ See carrier oil list</Link>
                     )}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                      {row.concentrations.map((c, i) => (
+                      {row.concentrations.map((c: any, i: number) => (
                         <div key={i} style={{
                           fontSize: '0.82rem',
                           color: '#5a7a6e',
@@ -223,7 +216,6 @@ export default function OilDetailPage() {
           </div>
         )}
 
-        {/* Warnings */}
         {(med.warnings?.child || med.warnings?.adult) && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Use with care</div>
@@ -254,8 +246,7 @@ export default function OilDetailPage() {
           </div>
         )}
 
-       {/* Cross-links */}
-       <div style={{
+        <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '0.5rem',
@@ -288,7 +279,7 @@ export default function OilDetailPage() {
             </Link>
           )}
         </div>
-        {/* Source */}
+
         {med.source && (
           <div style={{
             paddingTop: '0.75rem',
@@ -317,8 +308,7 @@ export default function OilDetailPage() {
   )
 }
 
-// ─── Inline style objects (kept here to avoid CSS module sprawl) ───
-const badgeStyle = {
+const badgeStyle: React.CSSProperties = {
   display: 'inline-block',
   fontSize: '0.78rem',
   fontWeight: 500,
@@ -330,7 +320,7 @@ const badgeStyle = {
   fontFamily: 'var(--font-inter), sans-serif',
 }
 
-const sectionLabelStyle = {
+const sectionLabelStyle: React.CSSProperties = {
   fontSize: '0.72rem',
   fontWeight: 700,
   textTransform: 'uppercase',
@@ -340,7 +330,7 @@ const sectionLabelStyle = {
   fontFamily: 'var(--font-inter), sans-serif',
 }
 
-const tagPillStyle = {
+const tagPillStyle: React.CSSProperties = {
   display: 'inline-block',
   fontSize: '0.82rem',
   padding: '0.3rem 0.7rem',
@@ -352,7 +342,7 @@ const tagPillStyle = {
   fontFamily: 'var(--font-inter), sans-serif',
 }
 
-const warningLabelStyle = (color) => ({
+const warningLabelStyle = (color: string): React.CSSProperties => ({
   fontSize: '0.7rem',
   fontWeight: 700,
   color,
@@ -362,14 +352,14 @@ const warningLabelStyle = (color) => ({
   fontFamily: 'var(--font-inter), sans-serif',
 })
 
-const warningTextStyle = (color) => ({
+const warningTextStyle = (color: string): React.CSSProperties => ({
   fontSize: '0.85rem',
   color,
   lineHeight: 1.55,
   fontFamily: 'var(--font-inter), sans-serif',
 })
 
-const crossLinkStyle = {
+const crossLinkStyle: React.CSSProperties = {
   background: '#f0fdf4',
   border: '1px solid #c8ddc0',
   borderRadius: '10px',
@@ -378,36 +368,36 @@ const crossLinkStyle = {
   display: 'block',
 }
 
-const crossLinkSmallStyle = {
+const crossLinkSmallStyle: React.CSSProperties = {
   fontSize: '0.72rem',
   color: '#4a6741',
   marginBottom: '0.2rem',
   fontFamily: 'var(--font-inter), sans-serif',
 }
 
-const crossLinkBigStyle = {
+const crossLinkBigStyle: React.CSSProperties = {
   fontSize: '0.85rem',
   color: '#2d4a3e',
   fontWeight: 600,
   fontFamily: 'var(--font-inter), sans-serif',
 }
 
-const crossLinkIconRowStyle = {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '0.6rem',
-  }
-  
-  const crossLinkIconStyle = {
-    fontSize: '1.15rem',
-    lineHeight: 1.2,
-    paddingTop: '0.1rem',
-    flexShrink: 0,
-  }
-  
-  const crossLinkArrowStyle = {
-    fontSize: '0.95rem',
-    color: '#4a6741',
-    paddingTop: '0.15rem',
-    flexShrink: 0,
-  }
+const crossLinkIconRowStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: '0.6rem',
+}
+
+const crossLinkIconStyle: React.CSSProperties = {
+  fontSize: '1.15rem',
+  lineHeight: 1.2,
+  paddingTop: '0.1rem',
+  flexShrink: 0,
+}
+
+const crossLinkArrowStyle: React.CSSProperties = {
+  fontSize: '0.95rem',
+  color: '#4a6741',
+  paddingTop: '0.15rem',
+  flexShrink: 0,
+}

@@ -5,8 +5,11 @@ import Link from 'next/link'
 import { MEDS } from '@/lib/medsData'
 import { OIL_FILTERS, getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
 
+type AnyMed = any
+const MEDS_ANY = MEDS as Record<string, AnyMed>
+
 // Slug helper — mirrors the one in [slug]/page.tsx
-function keyToSlug(key: string, med: any) {
+function keyToSlug(key: string, med: AnyMed) {
   if (!med?.name) return key.toLowerCase()
   return med.name
     .toLowerCase()
@@ -16,15 +19,23 @@ function keyToSlug(key: string, med: any) {
     .replace(/^-|-$/g, '')
 }
 
+type OilListItem = {
+  key: string
+  med: AnyMed
+  slug: string
+  display: { scentProfile: string; categories: string[] }
+  ageBadge: string
+}
+
 // Get all oils from MEDS, sorted alphabetically by display name
-function buildOilList() {
-  return Object.entries(MEDS)
+function buildOilList(): OilListItem[] {
+  return Object.entries(MEDS_ANY)
     .filter(([, m]) => m.category === 'essential_oils')
     .map(([key, med]) => ({
       key,
       med,
       slug: keyToSlug(key, med),
-      display: getOilDisplay(key, med),
+      display: getOilDisplay(key, med) as { scentProfile: string; categories: string[] },
       ageBadge: formatAgeBadge(med),
     }))
     .sort((a, b) => a.med.name.localeCompare(b.med.name))
@@ -39,22 +50,18 @@ export default function OilsHubPage() {
   const [search, setSearch] = useState('')
   const [activeFilter, setActiveFilter] = useState('all')
 
-  // Which letters have at least one oil starting with them?
   const lettersInUse = useMemo(() => {
-    const set = new Set()
+    const set = new Set<string>()
     allOils.forEach(o => set.add(o.med.name.charAt(0).toUpperCase()))
     return set
   }, [allOils])
 
-  // Filter pipeline: filter chip → search query
   const filteredOils = useMemo(() => {
     const q = search.trim().toLowerCase()
     return allOils.filter(o => {
-      // Filter chip
       if (activeFilter !== 'all' && !o.display.categories.includes(activeFilter)) {
         return false
       }
-      // Search
       if (q && !o.med.name.toLowerCase().includes(q)) {
         return false
       }
@@ -62,15 +69,13 @@ export default function OilsHubPage() {
     })
   }, [allOils, activeFilter, search])
 
-  // Jump to a letter section
-  const jumpToLetter = (letter) => {
+  const jumpToLetter = (letter: string) => {
     const el = document.getElementById(`letter-${letter}`)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  // Group filtered oils by first letter for the alphabet anchors
   const groupedOils = useMemo(() => {
-    const groups = {}
+    const groups: Record<string, OilListItem[]> = {}
     filteredOils.forEach(o => {
       const letter = o.med.name.charAt(0).toUpperCase()
       if (!groups[letter]) groups[letter] = []
@@ -83,7 +88,6 @@ export default function OilsHubPage() {
     <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
 
-        {/* Header */}
         <div style={{
           textAlign: 'center',
           marginBottom: '1.5rem',
@@ -120,7 +124,6 @@ export default function OilsHubPage() {
           </span>
         </div>
 
-        {/* Search */}
         <div style={{ position: 'relative', maxWidth: '520px', margin: '0 auto 1rem' }}>
           <span style={{
             position: 'absolute', left: '14px', top: '50%',
@@ -162,7 +165,6 @@ export default function OilsHubPage() {
           )}
         </div>
 
-        {/* Filter chips */}
         <div style={{
           display: 'flex',
           gap: '0.4rem',
@@ -170,7 +172,7 @@ export default function OilsHubPage() {
           justifyContent: 'center',
           marginBottom: '0.65rem',
         }}>
-          {OIL_FILTERS.map(f => {
+          {OIL_FILTERS.map((f: { key: string; label: string }) => {
             const active = activeFilter === f.key
             return (
               <button
@@ -196,7 +198,6 @@ export default function OilsHubPage() {
           })}
         </div>
 
-        {/* Age key line */}
         <div style={{
           fontSize: '0.72rem',
           fontStyle: 'italic',
@@ -208,7 +209,6 @@ export default function OilsHubPage() {
           Age badges show minimum recommended age — 2+, 6+, 10+, 12+
         </div>
 
-        {/* Alphabet jump row — only when "all" filter and no search */}
         {activeFilter === 'all' && !search && (
           <div style={{
             background: '#fff',
@@ -252,7 +252,6 @@ export default function OilsHubPage() {
           </div>
         )}
 
-        {/* Result summary when filtering/searching */}
         {(activeFilter !== 'all' || search) && (
           <div style={{
             fontSize: '0.82rem',
@@ -268,10 +267,8 @@ export default function OilsHubPage() {
           </div>
         )}
 
-        {/* Oil grid, grouped by letter (alphabet anchors) */}
         {Object.entries(groupedOils).map(([letter, oils]) => (
           <div key={letter} id={`letter-${letter}`} style={{ marginBottom: '1.25rem' }}>
-            {/* Letter section header — only shows when "all" is active */}
             {activeFilter === 'all' && !search && (
               <div style={{
                 fontSize: '0.7rem',
@@ -290,7 +287,7 @@ export default function OilsHubPage() {
               gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
               gap: '0.65rem',
             }}>
-              {oils.map(o => (
+              {oils.map((o: OilListItem) => (
                 <Link
                   key={o.key}
                   href={`/oils/${o.slug}`}
@@ -346,10 +343,9 @@ export default function OilsHubPage() {
                     }}>{o.display.scentProfile}</div>
                   )}
 
-                  {/* Top 2 condition tags */}
                   {o.med.tags && o.med.tags.length > 0 && (
                     <div style={{ display: 'flex', gap: '0.3rem', flexWrap: 'wrap' }}>
-                      {o.med.tags.slice(0, 2).map(t => (
+                      {(o.med.tags as string[]).slice(0, 2).map((t: string) => (
                         <span key={t} style={{
                           fontSize: '0.7rem',
                           padding: '0.1rem 0.45rem',
@@ -368,7 +364,6 @@ export default function OilsHubPage() {
           </div>
         ))}
 
-        {/* Footer — ingestion explainer tease */}
         <div style={{
           background: '#fff',
           border: '1px solid #e8e0d0',
