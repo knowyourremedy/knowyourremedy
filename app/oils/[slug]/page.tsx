@@ -8,7 +8,7 @@ import { getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
 
 // Slug helper — converts a med key like "chamomileRomanOil" or
 // display name like "Chamomile (Roman) Oil" into a clean URL slug.
-function keyToSlug(key, med) {
+function keyToSlug(key: string, med: any) {
   // Prefer the display name for SEO-friendly slugs, but fall back to key.
   if (!med?.name) return key.toLowerCase()
   return med.name
@@ -20,7 +20,7 @@ function keyToSlug(key, med) {
 }
 
 // Reverse — given a URL slug, find the matching oil key in MEDS.
-function findOilBySlug(slug) {
+function findOilBySlug(slug: string) {
   const target = slug.toLowerCase()
   for (const [key, med] of Object.entries(MEDS)) {
     if (med.category !== 'essential_oils') continue

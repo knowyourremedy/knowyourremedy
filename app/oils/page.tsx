@@ -6,7 +6,7 @@ import { MEDS } from '@/lib/medsData'
 import { OIL_FILTERS, getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
 
 // Slug helper — mirrors the one in [slug]/page.tsx
-function keyToSlug(key, med) {
+function keyToSlug(key: string, med: any) {
   if (!med?.name) return key.toLowerCase()
   return med.name
     .toLowerCase()
