@@ -79,6 +79,34 @@ export default function OilDetailPage() {
     <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 1.5rem 4rem' }}>
 
+        {/* Hero illustration strip */}
+        <div style={{
+          background: '#f5efe0',
+          margin: '-1.5rem -1.5rem 1.5rem',
+          padding: '1.5rem 1.5rem 1rem',
+          textAlign: 'center',
+          borderBottom: '1px solid #e8e0d0',
+        }}>
+          <img
+            src={`/illustrations/oils/${slug}.jpg`}
+            alt={`${med.name} botanical illustration`}
+            style={{
+                maxHeight: '240px',
+                maxWidth: '100%',
+                height: 'auto',
+                width: 'auto',
+                mixBlendMode: 'multiply',
+                display: 'block',
+                margin: '0 auto',
+              }}
+            onError={(e) => {
+              // Hide the hero strip if no illustration exists yet
+              const parent = (e.target as HTMLImageElement).parentElement
+              if (parent) parent.style.display = 'none'
+            }}
+          />
+        </div>
+
         <Link href="/oils" style={{
           display: 'inline-block',
           fontSize: '0.85rem',
