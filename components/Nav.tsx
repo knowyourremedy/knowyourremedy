@@ -52,7 +52,7 @@ export default function Nav() {
         alignItems: 'center'
       }} className="desktop-nav">
         {[
-          { label: 'Remedies', href: '/remedies' },
+          { label: 'Conditions', href: '/conditions' },
           { label: 'Dosage Calculator', href: '/dosage-calculator' },
           { label: 'Interactions', href: '/interaction-checker' },
           { label: 'Clean Brands', href: '/brands' },
@@ -149,7 +149,7 @@ export default function Nav() {
           zIndex: 99,
         }}>
           {[
-            { label: 'Remedies', href: '/remedies' },
+            { label: 'Conditions', href: '/conditions' },
             { label: 'Dosage Calculator', href: '/dosage-calculator' },
             { label: 'Interactions', href: '/interaction-checker' },
             { label: 'Clean Brands', href: '/brands' },

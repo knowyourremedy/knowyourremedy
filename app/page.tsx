@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleSearch = () => {
     if (search.trim()) {
-      window.location.href = `/remedies?search=${encodeURIComponent(search)}`
+      window.location.href = `/conditions?search=${encodeURIComponent(search)}`
     }
   }
 
@@ -142,9 +142,9 @@ export default function Home() {
           {[
             {
               emoji: '🌿',
-              title: 'Remedies',
+              title: 'Conditions',
               desc: 'Every option, no agenda',
-              href: '/remedies',
+              href: '/conditions',
               accent: '#2d4a3e'
             },
             {

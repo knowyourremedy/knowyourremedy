@@ -38,6 +38,18 @@ function MedPicker({ selectedKeys, onAdd, pharmaCount, totalCount }) {
   const pharmaCapReached = pharmaCount >= 2;
   const totalCapReached = totalCount >= TOTAL_SELECTION_CAP;
 
+  // Auto-switch active tab off pharma when pharma cap is reached
+  useEffect(() => {
+    if (!pharmaCapReached) return;
+    const activeIsPharma = CATEGORIES[activeCat]?.sharedCapGroup === 'pharma';
+    if (!activeIsPharma) return;
+    // Find first non-pharma category and switch to it
+    const nextCat = Object.entries(CATEGORIES).find(
+      ([, v]) => v.sharedCapGroup !== 'pharma'
+    );
+    if (nextCat) setActiveCat(nextCat[0]);
+  }, [pharmaCapReached, activeCat]);
+
   const filtered = useMemo(() => {
     let source;
     if (search.trim().length > 1) {

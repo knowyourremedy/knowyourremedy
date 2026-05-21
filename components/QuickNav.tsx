@@ -11,7 +11,7 @@ type NavLink = {
 
 const links: NavLink[] = [
     { icon: '🏠', label: 'Home', href: '/' },
-    { icon: '🌿', label: 'Remedies', href: '/remedies' },
+    { icon: '🌿', label: 'Conditions', href: '/conditions' },
     { icon: 'DOSAGE_SVG', label: 'Dosage', href: '/dosage-calculator' },
     { icon: '💊🌿', label: 'Interactions', href: '/interaction-checker' },
     { icon: '✨', label: 'Clean Brands', href: '/brands' },

@@ -162,7 +162,7 @@
 .catTab {
   padding: 0.55rem 0.65rem;
   border: none;
-  background: #fafaf7;
+  background: #faf7f2;
   cursor: pointer;
   transition: all 0.15s;
   border-bottom: 2px solid transparent;
@@ -651,7 +651,7 @@
   flex-shrink: 0;
   padding: 0.5rem 0.8rem;
   border: none;
-  background: none;
+  background: #fdfbf7;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s;
@@ -695,7 +695,13 @@
 }
 
 .catTabDimmed {
-  opacity: 0.45;
+  background: #d6d3cb;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.catTabDimmed .catTabIcon {
+  color: #8a857a;
 }
 
 .catTabDimmed .catTabHint {
