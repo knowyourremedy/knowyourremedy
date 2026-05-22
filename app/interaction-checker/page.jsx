@@ -544,9 +544,7 @@ export default function InteractionCheckerPage() {
           <span>Interaction Checker</span>
         </div>
         <h1 className={styles.title}>Interaction Checker</h1>
-        <p className={styles.subtitle}>
-          Check up to {TOTAL_SELECTION_CAP} medications, supplements, herbs, or oils for interactions.
-        </p>
+        
       </div>
 
   
