@@ -543,33 +543,13 @@ export default function InteractionCheckerPage() {
           <span> / </span>
           <span>Interaction Checker</span>
         </div>
-        <h1 className={styles.title}>Drug &amp; Remedy Interaction Checker</h1>
+        <h1 className={styles.title}>Interaction Checker</h1>
         <p className={styles.subtitle}>
-          Add up to {TOTAL_SELECTION_CAP} medications, supplements, herbs, or essential oils. We&apos;ll instantly check every pair and give you an honest verdict on combining them.
+          Check up to {TOTAL_SELECTION_CAP} medications, supplements, herbs, or oils for interactions.
         </p>
       </div>
 
-     {/* Database expansion banner */}
-     <div style={{
-        background: '#f5efe7',
-        borderLeft: '4px solid #d6a456',
-        borderRadius: '0 8px 8px 0',
-        padding: '0.7rem 0.95rem',
-        marginBottom: '1.5rem',
-        display: 'flex',
-        gap: '0.65rem',
-        alignItems: 'flex-start',
-      }}>
-        <span style={{ fontSize: '1rem', lineHeight: 1.4, flexShrink: 0 }}>⏳</span>
-        <div>
-          <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#7a5a25', marginBottom: '0.2rem' }}>
-            Database actively expanding
-          </div>
-          <div style={{ fontSize: '0.78rem', color: '#6a5a3a', lineHeight: 1.5 }}>
-            We&apos;re growing our catalog of medications, supplements, herbs, and essential oils — plus the interactions between them. Check back as coverage expands.
-          </div>
-        </div>
-      </div>
+  
 
       <div className={styles.layoutRow}>
         <div className={styles.pickerColumn}>
@@ -615,7 +595,27 @@ export default function InteractionCheckerPage() {
         <MultiPairResults selectedKeys={selectedMeds} />
       )}
 
-      
+      {/* Database expansion banner */}
+     <div style={{
+        background: '#f5efe7',
+        borderLeft: '4px solid #d6a456',
+        borderRadius: '0 8px 8px 0',
+        padding: '0.7rem 0.95rem',
+        marginBottom: '1.5rem',
+        display: 'flex',
+        gap: '0.65rem',
+        alignItems: 'flex-start',
+      }}>
+        <span style={{ fontSize: '1rem', lineHeight: 1.4, flexShrink: 0 }}>⏳</span>
+        <div>
+          <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#7a5a25', marginBottom: '0.2rem' }}>
+            Database actively expanding
+          </div>
+          <div style={{ fontSize: '0.78rem', color: '#6a5a3a', lineHeight: 1.5 }}>
+            We&apos;re growing our catalog of medications, supplements, herbs, and essential oils — plus the interactions between them. Check back as coverage expands.
+          </div>
+        </div>
+      </div>
 
       <div className={styles.infoPanel}>
         <div className={styles.infoPanelTitle}>About this tool</div>
