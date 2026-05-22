@@ -268,7 +268,7 @@ export default function OilsHubPage() {
         )}
 
         {Object.entries(groupedOils).map(([letter, oils]) => (
-          <div key={letter} id={`letter-${letter}`} style={{ marginBottom: '1.25rem' }}>
+          <div key={letter} id={`letter-${letter}`} style={{ marginBottom: '1.25rem', scrollMarginTop: '80px' }}>
             {activeFilter === 'all' && !search && (
               <div style={{
                 fontSize: '0.7rem',

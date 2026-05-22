@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { MEDS, REMEDY_TAGS } from '@/lib/medsData'
 import { getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
+import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 type AnyMed = any
 const MEDS_ANY = MEDS as Record<string, AnyMed>
@@ -153,10 +154,25 @@ export default function OilDetailPage() {
         {conditionTags.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Best for</div>
+            <div style={sectionLabelRuleStyle}></div>
             <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
-              {conditionTags.map(({ tag, label }) => (
-                <Link key={tag} href={`/conditions/${tag.replace(/_/g, '-')}`} style={tagPillStyle}>
-                  {label}
+            {conditionTags.map(({ tag, label }) => (
+                <Link
+                  key={tag}
+                  href={`/conditions/${tag.replace(/_/g, '-')}`}
+                  style={tagPillStyle}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#eaf5e6'
+                    e.currentTarget.style.borderColor = '#7ba169'
+                    e.currentTarget.style.transform = 'translateY(-1px)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#fff'
+                    e.currentTarget.style.borderColor = '#c8ddc0'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}
+                >
+                  {label} <span style={{ color: '#4a6741', fontWeight: 500 }}>→</span>
                 </Link>
               ))}
             </div>
@@ -166,6 +182,7 @@ export default function OilDetailPage() {
         {formatRows.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Using this oil</div>
+            <div style={sectionLabelRuleStyle}></div>
 
             <div style={{
               background: '#fef2e8',
@@ -205,28 +222,31 @@ export default function OilDetailPage() {
                       fontSize: '0.9rem',
                       fontWeight: 600,
                       color: '#2d4a3e',
-                      marginBottom: '0.25rem',
+                      marginBottom: '0.45rem',
                       fontFamily: 'var(--font-inter), sans-serif',
-                    }}>{row.label}</div>
-                    {isTopical && (
-                      <Link
-                        href="/oils/carriers"
-                        style={{
-                          display: 'inline-block',
-                          fontSize: '0.75rem',
-                          color: '#1f3329',
-                          fontWeight: 500,
-                          textDecoration: 'underline',
-                          textDecorationStyle: 'dotted',
-                          marginBottom: '0.45rem',
-                          fontFamily: 'var(--font-inter), sans-serif',
-                          cursor: 'pointer',
-                          transition: 'color 0.15s',
-                        }}
-                        onMouseEnter={e => { e.currentTarget.style.color = '#0d1a16' }}
-                        onMouseLeave={e => { e.currentTarget.style.color = '#1f3329' }}
-                      >→ See carrier oil list</Link>
-                    )}
+                    }}>
+                      {isTopical ? (
+                        <>
+                          Topical (dilute in a{' '}
+                          <Link
+                            href="/oils/carriers"
+                            style={{
+                              color: '#1f3329',
+                              fontWeight: 600,
+                              textDecoration: 'underline',
+                              textDecorationStyle: 'dotted',
+                              cursor: 'pointer',
+                              transition: 'color 0.15s',
+                            }}
+                            onMouseEnter={e => { e.currentTarget.style.color = '#0d1a16' }}
+                            onMouseLeave={e => { e.currentTarget.style.color = '#1f3329' }}
+                          >carrier oil →</Link>
+                          )
+                        </>
+                      ) : (
+                        row.label
+                      )}
+                    </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
                       {row.concentrations.map((c: any, i: number) => (
                         <div key={i} style={{
@@ -247,6 +267,7 @@ export default function OilDetailPage() {
         {(med.warnings?.child || med.warnings?.adult) && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={sectionLabelStyle}>Use with care</div>
+            <div style={sectionLabelRuleStyle}></div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               {med.warnings?.child && (
                 <div style={{
@@ -292,20 +313,18 @@ export default function OilDetailPage() {
               <span style={crossLinkArrowStyle}>→</span>
             </div>
           </Link>
-          {conditionTags.length > 0 && (
-            <Link href={`/conditions/${conditionTags[0].tag.replace(/_/g, '-')}`} style={crossLinkStyle}>
-              <div style={crossLinkIconRowStyle}>
-                <span style={crossLinkIconStyle}>🔍</span>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={crossLinkSmallStyle}>Related conditions</div>
-                  <div style={crossLinkBigStyle}>
-                    <span style={{ fontWeight: 600 }}>Browse</span> conditions it helps
-                  </div>
+          <Link href={`/dosage-calculator?med=${encodeURIComponent(key)}`} style={crossLinkStyle}>
+            <div style={crossLinkIconRowStyle}>
+            <span style={crossLinkIconStyle}><DosageCalculatorIcon size={22} color="#4a6741" /></span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={crossLinkSmallStyle}>Dosage</div>
+                <div style={crossLinkBigStyle}>
+                  <span style={{ fontWeight: 600 }}>Calculate</span> the right amount
                 </div>
-                <span style={crossLinkArrowStyle}>→</span>
               </div>
-            </Link>
-          )}
+              <span style={crossLinkArrowStyle}>→</span>
+            </div>
+          </Link>
         </div>
 
         {med.source && (
@@ -349,26 +368,37 @@ const badgeStyle: React.CSSProperties = {
 }
 
 const sectionLabelStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  letterSpacing: '0.07em',
-  color: '#9aa39a',
-  marginBottom: '0.55rem',
-  fontFamily: 'var(--font-inter), sans-serif',
-}
+    fontSize: '0.78rem',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    letterSpacing: '0.07em',
+    color: '#4a6781',
+    marginBottom: '0.4rem',
+    fontFamily: 'var(--font-inter), sans-serif',
+    position: 'relative',
+  }
+  
+  const sectionLabelRuleStyle: React.CSSProperties = {
+    width: '28px',
+    height: '2px',
+    background: '#4a6781',
+    borderRadius: '2px',
+    marginBottom: '0.7rem',
+  }
 
-const tagPillStyle: React.CSSProperties = {
-  display: 'inline-block',
-  fontSize: '0.82rem',
-  padding: '0.3rem 0.7rem',
-  background: '#fff',
-  border: '1px solid #c8ddc0',
-  borderRadius: '999px',
-  color: '#2d4a3e',
-  textDecoration: 'none',
-  fontFamily: 'var(--font-inter), sans-serif',
-}
+  const tagPillStyle: React.CSSProperties = {
+    display: 'inline-block',
+    fontSize: '0.82rem',
+    padding: '0.3rem 0.7rem',
+    background: '#fff',
+    border: '1px solid #c8ddc0',
+    borderRadius: '999px',
+    color: '#2d4a3e',
+    textDecoration: 'none',
+    fontFamily: 'var(--font-inter), sans-serif',
+    transition: 'background 0.15s, border-color 0.15s, transform 0.15s',
+    cursor: 'pointer',
+  }
 
 const warningLabelStyle = (color: string): React.CSSProperties => ({
   fontSize: '0.7rem',

@@ -289,10 +289,99 @@ export default function DosageCalculatorPage() {
 
   function handleFormatSelect(key) {
     setFormatKey(key);
+    setShowResult(false);
+    setResult(null);
+
+    // ESSENTIAL OILS: skip concentration step — auto-pick by age
+    if (med && med.category === 'essential_oils') {
+      const formatConcentrations = med.formats[key].concentrations;
+      const ageYears = ageMonths / 12;
+
+      // Match by label keyword: "kids 2-6", "kids 6+", or "adults"
+      let autoIndex = 0;
+      if (!isChild) {
+        // Adult: find a label containing "adult"
+        const adultIdx = formatConcentrations.findIndex(c =>
+          c.label.toLowerCase().includes('adult')
+        );
+        autoIndex = adultIdx >= 0 ? adultIdx : formatConcentrations.length - 1;
+      } else if (ageYears < 6) {
+        // Child age 2-6: find "2-6" or fall back to first
+        const youngIdx = formatConcentrations.findIndex(c =>
+          c.label.toLowerCase().includes('2-6') ||
+          c.label.toLowerCase().includes('0.5')
+        );
+        autoIndex = youngIdx >= 0 ? youngIdx : 0;
+      } else {
+        // Child age 6+: find "kids 6+" or "kids 10+" etc, NOT adult
+        const kidIdx = formatConcentrations.findIndex(c =>
+          (c.label.toLowerCase().includes('kids') || c.label.toLowerCase().includes('child')) &&
+          !c.label.toLowerCase().includes('2-6')
+        );
+        autoIndex = kidIdx >= 0 ? kidIdx : 0;
+      }
+
+      setConcIndex(autoIndex);
+      setActiveStep(null);
+      // Auto-calculate after a brief delay to let state settle
+      setTimeout(() => {
+        const conc = formatConcentrations[autoIndex];
+        const doseMg = calcDoseMg(med, wKg, ageMonths, isChild);
+        const formatInfo = med.formats[key];
+        const splittable = formatInfo.splittable !== false;
+        const physicalResult = physicalAmount(doseMg, conc, splittable);
+        setResult({
+          doseMg,
+          physical: physicalResult.display,
+          physicalUnits: physicalResult.units,
+          physicalBelowMinimum: physicalResult.belowMinimum,
+          physicalRounded: physicalResult.rounded,
+          med,
+          medKey,
+          conc,
+          formatKey: key,
+          formatLabel: formatInfo.label,
+          concLabel: conc.label,
+          splittable,
+        });
+        setShowResult(true);
+      }, 50);
+      return;
+    }
+
+    // OTC / supplements / etc: go to step 5 as normal
+    setConcIndex(null);
+    setActiveStep(5);
+  }
+
+  function handleCalculateAnother() {
+    // Keep person (step 1) and weight/age (step 2). Clear medication selection.
+    setMedKey(null);
+    setFormatKey(null);
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
-    setActiveStep(5);
+    setActiveStep(3);
+    // Smooth scroll back to the form
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+  }
+
+  function handleStartOver() {
+    // Clear everything.
+    setWho(null);
+    setWeight('');
+    setAge('');
+    setMedKey(null);
+    setFormatKey(null);
+    setConcIndex(null);
+    setShowResult(false);
+    setResult(null);
+    setActiveStep(1);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
   }
 
   function handleConcSelect(i) {
@@ -393,7 +482,7 @@ export default function DosageCalculatorPage() {
   }
 
   const whoDisplay = who === 'child' ? 'Child (under 12)' : who === 'adult' ? 'Adult (12+)' : null;
-  const weightAgeDisplay = (weight && age) ? `${weight} ${weightUnit}, ${age} ${ageUnit}` : null;
+  const weightAgeDisplay = (weight && age) ? `${age} ${ageUnit}, ${weight} ${weightUnit}` : null;
   const medDisplay = med ? `${CATEGORIES[med.category]?.icon} ${med.name}` : null;
   const formatDisplay = formatKey ? med.formats[formatKey].label : null;
   const concDisplay = concIndex !== null ? concentrations[concIndex].label : null;
@@ -428,21 +517,11 @@ export default function DosageCalculatorPage() {
         {/* Step 2 — Weight and Age */}
         {step1Complete && (
           step2Complete && activeStep !== 2 ? (
-            <StepChip num="2" label="Weight and age" value={weightAgeDisplay} onEdit={() => editStep(2)} isActive={false} />
+            <StepChip num="2" label="Age and weight" value={weightAgeDisplay} onEdit={() => editStep(2)} isActive={false} />
           ) : activeStep === 2 || (step1Complete && !step2Complete) ? (
             <div className={styles.card}>
-              <StepHeader num="2" label="Enter weight and age" />
-              <div className={styles.inputRow}>
-                <div className={styles.fieldWrap}>
-                  <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
-                  <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
-                </div>
-                <div className={styles.unitToggle}>
-                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
-                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
-                </div>
-              </div>
-              <div className={styles.fieldWrap} style={{ marginTop: '10px' }}>
+             <StepHeader num="2" label="Enter age and weight" />
+              <div className={styles.fieldWrap}>
                 <label className={styles.fieldLabel} htmlFor="age">Age</label>
                 <input id="age" type="number" min="0" max="120" placeholder={isChild ? 'e.g. 6' : 'e.g. 35'} value={age} onChange={e => setAge(e.target.value)} className={styles.input} />
               </div>
@@ -455,6 +534,16 @@ export default function DosageCalculatorPage() {
               {isChild && ageMonths !== null && ageMonths < 2 && (
                 <p className={styles.ageWarning}>Consult a doctor before giving any medication to infants under 2 months.</p>
               )}
+              <div className={styles.inputRow} style={{ marginTop: '10px' }}>
+                <div className={styles.fieldWrap}>
+                  <label className={styles.fieldLabel} htmlFor="weight">Weight</label>
+                  <input id="weight" type="number" min="1" max="500" placeholder="e.g. 40" value={weight} onChange={e => setWeight(e.target.value)} className={styles.input} />
+                </div>
+                <div className={styles.unitToggle}>
+                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'lbs' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('lbs')}>lbs</button>
+                  <button type="button" className={`${styles.unitBtn} ${weightUnit === 'kg' ? styles.unitBtnActive : ''}`} onClick={() => setWeightUnit('kg')}>kg</button>
+                </div>
+              </div>
               {weight && age !== '' && (
                 <button type="button" className={styles.nextStepBtn} onClick={handleWeightAgeComplete}>
                   Next: Choose medication →
@@ -643,6 +732,57 @@ export default function DosageCalculatorPage() {
                 </a>
               </div>
             )}
+
+<div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              alignItems: 'center',
+              margin: '1.5rem 0 1rem',
+            }}>
+              <button
+                type="button"
+                onClick={handleCalculateAnother}
+                style={{
+                  background: '#2d4a3e',
+                  color: '#fff',
+                  border: 'none',
+                  padding: '0.7rem 1.5rem',
+                  borderRadius: '8px',
+                  fontWeight: 600,
+                  fontSize: '0.92rem',
+                  cursor: 'pointer',
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  width: '100%',
+                  maxWidth: '320px',
+                  transition: 'background 0.15s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#1f3329' }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#2d4a3e' }}
+              >
+                Calculate another →
+              </button>
+              <button
+                type="button"
+                onClick={handleStartOver}
+                style={{
+                  background: 'transparent',
+                  color: '#5a7a6e',
+                  border: 'none',
+                  padding: '0.4rem 1rem',
+                  fontSize: '0.82rem',
+                  textDecoration: 'underline',
+                  textDecorationStyle: 'dotted',
+                  cursor: 'pointer',
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  transition: 'color 0.15s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.color = '#2d4a3e' }}
+                onMouseLeave={e => { e.currentTarget.style.color = '#5a7a6e' }}
+              >
+                Start completely over
+              </button>
+            </div>
 
             <div className={styles.disclaimerBox}>
               <p className={styles.disclaimerText}>
