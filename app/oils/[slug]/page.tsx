@@ -184,26 +184,7 @@ export default function OilDetailPage() {
             <div style={sectionLabelStyle}>Using this oil</div>
             <div style={sectionLabelRuleStyle}></div>
 
-            <div style={{
-              background: '#fef2e8',
-              borderLeft: '3px solid #b8651f',
-              borderRadius: '0 8px 8px 0',
-              padding: '0.75rem 1rem',
-              marginBottom: '0.75rem',
-            }}>
-              <div style={{
-                fontFamily: 'var(--font-playfair), Georgia, serif',
-                fontSize: '0.95rem',
-                fontWeight: 700,
-                color: '#7a3a0a',
-                marginBottom: '2px',
-              }}>Always dilute first.</div>
-              <div style={{
-                fontSize: '0.82rem',
-                color: '#7a3a0a',
-                fontFamily: 'var(--font-inter), sans-serif',
-              }}>Never go from bottle to body.</div>
-            </div>
+
 
             <div style={{
               background: '#fff',
@@ -227,24 +208,27 @@ export default function OilDetailPage() {
                     }}>
                       {isTopical ? (
                         <>
-                          Topical (dilute in a{' '}
-                          <Link
-                            href="/oils/carriers"
-                            style={{
-                              color: '#1f3329',
-                              fontWeight: 600,
-                              textDecoration: 'underline',
-                              textDecorationStyle: 'dotted',
-                              cursor: 'pointer',
-                              transition: 'color 0.15s',
-                            }}
-                            onMouseEnter={e => { e.currentTarget.style.color = '#0d1a16' }}
-                            onMouseLeave={e => { e.currentTarget.style.color = '#1f3329' }}
-                          >carrier oil →</Link>
-                          )
+                          <span style={{ color: '#2980b9', fontSize: '1rem', fontWeight: 700 }}>Topical</span>
+                          <span style={{ color: '#5a7d96', fontSize: '0.88rem', fontWeight: 700, marginLeft: '0.4rem' }}>
+                            (dilute in a{' '}
+                            <Link
+                              href="/oils/carriers"
+                              style={{
+                                color: '#5a7d96',
+                                fontWeight: 700,
+                                textDecoration: 'underline',
+                                textDecorationStyle: 'dotted',
+                                cursor: 'pointer',
+                                transition: 'color 0.15s',
+                              }}
+                              onMouseEnter={e => { e.currentTarget.style.color = '#3d5b75' }}
+                              onMouseLeave={e => { e.currentTarget.style.color = '#5a7d96' }}
+                            >carrier oil →</Link>
+                            )
+                          </span>
                         </>
                       ) : (
-                        row.label
+                        <span style={{ color: '#7c3aed', fontSize: '1rem', fontWeight: 700 }}>{row.label}</span>
                       )}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
@@ -375,14 +359,12 @@ const badgeStyle: React.CSSProperties = {
     fontFamily: 'var(--font-inter), sans-serif',
   }
 
-const sectionLabelStyle: React.CSSProperties = {
-    fontSize: '0.78rem',
+  const sectionLabelStyle: React.CSSProperties = {
+    fontSize: '1.15rem',
     fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.07em',
-    color: '#4a6781',
-    marginBottom: '0.4rem',
-    fontFamily: 'var(--font-inter), sans-serif',
+    color: '#2d4a3e',
+    marginBottom: '0.35rem',
+    fontFamily: 'var(--font-playfair), Georgia, serif',
     position: 'relative',
   }
   

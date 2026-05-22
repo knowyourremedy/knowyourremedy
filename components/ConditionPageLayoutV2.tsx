@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import ConditionLayout from './ConditionLayout'
 import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
@@ -75,6 +76,78 @@ interface ConditionPageLayoutV2Props {
 
 type FilterType = 'all' | 'natural' | 'otc' | 'backup' | 'pregnancy-safe'
 
+// ─── Sidebar conditions grouped by category ─────────────────
+const SIDEBAR_CATEGORIES = [
+  {
+    name: 'Pain and Inflammation',
+    items: [
+      { label: 'Headache', href: '/conditions/headache' },
+      { label: 'Muscle Pain', href: '/conditions/muscle-pain' },
+      { label: 'Joint Pain', href: '/conditions/joint-pain' },
+      { label: 'Back Pain', href: '/conditions/back-pain' },
+      { label: 'Menstrual Cramps', href: '/conditions/menstrual-cramps' },
+      { label: 'Dental Pain', href: '/conditions/dental-pain' },
+    ],
+  },
+  {
+    name: 'Fever and Immune',
+    items: [
+      { label: 'Fever', href: '/conditions/fever' },
+      { label: 'Cold and Flu', href: '/conditions/cold-and-flu' },
+      { label: 'Sore Throat', href: '/conditions/sore-throat' },
+      { label: 'Sinus Congestion', href: '/conditions/sinus-congestion' },
+      { label: 'Ear Pain', href: '/conditions/ear-pain' },
+    ],
+  },
+  {
+    name: 'Digestive',
+    items: [
+      { label: 'Upset Stomach', href: '/conditions/upset-stomach' },
+      { label: 'Nausea', href: '/conditions/nausea' },
+      { label: 'Heartburn', href: '/conditions/heartburn' },
+      { label: 'Bloating and Gas', href: '/conditions/bloating-and-gas' },
+      { label: 'Diarrhea', href: '/conditions/diarrhea' },
+      { label: 'Constipation', href: '/conditions/constipation' },
+    ],
+  },
+  {
+    name: 'Allergies and Respiratory',
+    items: [
+      { label: 'Seasonal Allergies', href: '/conditions/allergies' },
+      { label: 'Itchy Eyes', href: '/conditions/itchy-eyes' },
+      { label: 'Skin Allergies', href: '/conditions/skin-allergies' },
+    ],
+  },
+  {
+    name: 'Skin and External',
+    items: [
+      { label: 'Minor Cuts', href: '/conditions/minor-cuts' },
+      { label: 'Burns and Sunburn', href: '/conditions/burns-and-sunburn' },
+      { label: 'Insect Bites', href: '/conditions/insect-bites' },
+      { label: 'Rashes', href: '/conditions/rashes' },
+      { label: 'Muscle Soreness Topical', href: '/conditions/muscle-soreness-topical' },
+    ],
+  },
+  {
+    name: 'Sleep and Stress',
+    items: [
+      { label: 'Insomnia', href: '/conditions/insomnia' },
+      { label: 'Anxiety and Stress', href: '/conditions/anxiety-and-stress' },
+      { label: 'Tension Headaches', href: '/conditions/tension-headaches' },
+      { label: 'Migraines', href: '/conditions/migraines' },
+    ],
+  },
+  {
+    name: 'Children and Infants',
+    items: [
+      { label: 'Teething Pain', href: '/conditions/teething-pain' },
+      { label: 'Colic', href: '/conditions/colic' },
+      { label: 'Diaper Rash', href: '/conditions/diaper-rash' },
+      { label: 'Growing Pains', href: '/conditions/growing-pains' },
+    ],
+  },
+]
+
 // ─── Body System → Anatomy Plate Mapping ─────────────────────
 const BODY_SYSTEM_MAP: Record<string, string> = {
   headache: 'head',
@@ -119,7 +192,6 @@ function isPregnancySafe(remedy: UnifiedRemedy): boolean {
   return false
 }
 
-// Does the age range refer to children under 12?
 function isKidAge(ageRange: string | undefined): boolean {
   if (!ageRange) return false
   const lower = ageRange.toLowerCase()
@@ -137,7 +209,6 @@ function isKidAge(ageRange: string | undefined): boolean {
   return false
 }
 
-// Render bold age text, with 👶 emoji only if kid age
 function AgeBadge({ ageRange }: { ageRange?: string }) {
   if (!ageRange) return null
   const showEmoji = isKidAge(ageRange)
@@ -173,6 +244,7 @@ export default function ConditionPageLayoutV2({
   const [showInternalModal, setShowInternalModal] = useState(false)
   const [pendingInternalKey, setPendingInternalKey] = useState<string | null>(null)
   const [hasSeenInternalWarning, setHasSeenInternalWarning] = useState(false)
+  const pathname = usePathname()
 
   const allRemedies: UnifiedRemedy[] = [
     ...naturalItems.map((item, i) => ({
@@ -247,13 +319,11 @@ export default function ConditionPageLayoutV2({
   ]
 
   const sectionLabelStyle: React.CSSProperties = {
-    fontSize: '0.78rem',
+    fontSize: '1.15rem',
     fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.07em',
-    color: '#4a6781',
-    marginBottom: '0.4rem',
-    fontFamily: 'var(--font-inter), sans-serif',
+    color: '#2d4a3e',
+    marginBottom: '0.35rem',
+    fontFamily: 'var(--font-playfair), Georgia, serif',
   }
   const sectionRuleStyle: React.CSSProperties = {
     width: '28px',
@@ -307,12 +377,13 @@ export default function ConditionPageLayoutV2({
               margin: '0 0 0.6rem',
             }}>Before using internally</h3>
             <p style={{
-              fontSize: '0.85rem',
-              color: '#5a7a6e',
-              lineHeight: 1.6,
+              fontSize: '0.95rem',
+              color: '#2d4a3e',
+              fontWeight: 500,
+              lineHeight: 1.55,
               margin: '0 0 1rem',
             }}>
-              Not all &ldquo;100% pure&rdquo; or &ldquo;therapeutic grade&rdquo; oils are safe to ingest.
+              <strong>Not all</strong> &ldquo;100% pure&rdquo; or &ldquo;therapeutic grade&rdquo; oils are safe to ingest.
             </p>
             <div style={{
               background: '#f0fdf4',
@@ -350,434 +421,474 @@ export default function ConditionPageLayoutV2({
         </div>
       )}
 
-      <div style={{ maxWidth: '780px', margin: '0 auto', padding: '0' }}>
+      {/* Two-column wrapper: sidebar + main */}
+      <div className="condition-v2-wrapper" style={{
+        display: 'flex',
+        gap: '2rem',
+        alignItems: 'flex-start',
+        maxWidth: '1100px',
+        margin: '0 auto',
+      }}>
 
-        {/* Hero illustration */}
-        {plateName && (
+        {/* Sidebar — hidden on mobile via CSS class below */}
+        <aside className="condition-v2-sidebar" style={{
+          width: '220px',
+          flexShrink: 0,
+          position: 'sticky',
+          top: '80px',
+          maxHeight: 'calc(100vh - 100px)',
+          overflowY: 'auto',
+          paddingTop: '1.5rem',
+          fontFamily: 'var(--font-inter), sans-serif',
+        }}>
           <div style={{
-            background: '#f5efe0',
-            margin: '0 -1.5rem 1.5rem',
-            padding: '1.5rem 1.5rem 1rem',
-            textAlign: 'center',
-            borderBottom: '1px solid #e8e0d0',
-          }}>
-            <img
-              src={`/illustrations/conditions/${plateName}.jpg`}
-              alt={`${title} body system anatomy illustration`}
-              style={{
-                maxHeight: '220px',
-                maxWidth: '100%',
-                height: 'auto',
-                width: 'auto',
-                mixBlendMode: 'multiply',
-                display: 'block',
-                margin: '0 auto',
-              }}
-              onError={(e) => {
-                const parent = (e.target as HTMLImageElement).parentElement
-                if (parent) parent.style.display = 'none'
-              }}
-            />
-          </div>
-        )}
-
-        {/* Title + subtitle */}
-        <div style={{ marginBottom: '1rem', padding: '0 1.5rem' }}>
-          <h1 style={{
-            fontFamily: 'var(--font-playfair), Georgia, serif',
-            fontSize: '1.85rem',
+            fontSize: '0.72rem',
             fontWeight: 700,
-            color: '#2d4a3e',
-            margin: '0 0 0.3rem',
-          }}>{title}</h1>
-          <p style={{
-            fontFamily: 'var(--font-playfair), Georgia, serif',
-            fontStyle: 'italic',
-            fontSize: '0.92rem',
-            color: '#7a8a78',
-            margin: 0,
-          }}>{subtitle}</p>
-        </div>
-
-        {/* Emergency */}
-        {emergency && (
-          <div style={{
-            margin: '0 1.5rem 1.25rem',
-            background: '#fdecea',
-            borderLeft: '3px solid #c0392b',
-            borderRadius: '0 8px 8px 0',
-            padding: '0.7rem 0.85rem',
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            color: '#9ca3af',
+            marginBottom: '0.85rem',
           }}>
-            <div style={{
-              fontSize: '0.7rem',
-              fontWeight: 700,
-              color: '#7a1c1c',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              marginBottom: '0.25rem',
-            }}>When to see a doctor</div>
-            <div style={{ fontSize: '0.82rem', color: '#7a1c1c', lineHeight: 1.55 }}>
-              {emergency}
-            </div>
+            All Conditions
           </div>
-        )}
-
-        {/* Filter chips */}
-        <div style={{ padding: '0 1.5rem 1rem' }}>
-          <div style={sectionLabelStyle}>Your options</div>
-          <div style={sectionRuleStyle}></div>
-          <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
-            {filterChips.map(chip => {
-              const isActive = activeFilter === chip.key
-              return (
-                <button
-                  key={chip.key}
-                  onClick={() => setActiveFilter(chip.key)}
-                  style={{
-                    fontSize: '0.75rem',
-                    padding: '0.3rem 0.7rem',
-                    background: isActive ? '#2d4a3e' : '#fff',
-                    color: isActive ? '#fff' : '#5a7a6e',
-                    border: isActive ? '1px solid #2d4a3e' : '1px solid #d9d4c5',
-                    borderRadius: '999px',
-                    fontWeight: isActive ? 600 : 500,
-                    cursor: 'pointer',
-                    fontFamily: 'var(--font-inter), sans-serif',
-                    transition: 'all 0.15s',
-                  }}
-                >
-                  {chip.label}{isActive && chip.key !== 'all' ? ' ✕' : ''}
-                </button>
-              )
-            })}
-          </div>
-          {activeFilter !== 'all' && (
-            <div style={{
-              fontSize: '0.78rem',
-              color: '#7a8a78',
-              fontStyle: 'italic',
-              marginTop: '0.5rem',
-            }}>
-              Showing {filteredRemedies.length} of {allRemedies.length}
-            </div>
-          )}
-        </div>
-
-        {/* Remedy list */}
-        <div style={{ padding: '0 1.5rem 1.5rem' }}>
-          <div style={{
-            background: '#fff',
-            border: '1px solid #e8e0d0',
-            borderRadius: '8px',
-            overflow: 'hidden',
-          }}>
-            {filteredRemedies.length === 0 ? (
+          {SIDEBAR_CATEGORIES.map(category => (
+            <div key={category.name} style={{ marginBottom: '1.2rem' }}>
               <div style={{
-                padding: '1.5rem',
-                textAlign: 'center',
-                color: '#7a8a78',
-                fontSize: '0.88rem',
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                color: '#4a6781',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                marginBottom: '0.4rem',
+                paddingBottom: '0.25rem',
+                borderBottom: '1px solid #e8e0d0',
               }}>
-                No remedies match this filter.
+                {category.name}
               </div>
-            ) : (
-              filteredRemedies.map((remedy, i) => {
-                const isExpanded = expanded === remedy.id
-                const isLast = i === filteredRemedies.length - 1
-                const isInternalOpen = internalExpanded[remedy.id]
-
+              {category.items.map(item => {
+                const isActive = pathname === item.href
                 return (
-                  <div
-                    key={remedy.id}
+                  <Link
+                    key={item.href}
+                    href={item.href}
                     style={{
-                      borderBottom: isLast ? 'none' : '0.5px solid #f1ede4',
+                      display: 'block',
+                      padding: '0.32rem 0.55rem',
+                      borderRadius: '5px',
+                      textDecoration: 'none',
+                      fontSize: '0.8rem',
+                      fontWeight: isActive ? 700 : 400,
+                      color: isActive ? '#fff' : '#4a6741',
+                      backgroundColor: isActive ? '#2d4a3e' : 'transparent',
+                      marginBottom: '0.1rem',
+                      transition: 'background-color 0.15s',
                     }}
                   >
-                    <button
-                      onClick={() => setExpanded(isExpanded ? null : remedy.id)}
+                    {item.label}
+                  </Link>
+                )
+              })}
+            </div>
+          ))}
+        </aside>
+
+        {/* Main content column */}
+        <div style={{ flex: 1, minWidth: 0, maxWidth: '780px' }}>
+
+          {/* Hero illustration */}
+          {plateName && (
+            <div style={{
+              background: '#f5efe0',
+              margin: '0 -1.5rem 1.5rem',
+              padding: '1.5rem 1.5rem 1rem',
+              textAlign: 'center',
+              borderBottom: '1px solid #e8e0d0',
+            }}>
+              <img
+                src={`/illustrations/conditions/${plateName}.jpg`}
+                alt={`${title} body system anatomy illustration`}
+                style={{
+                  maxHeight: '220px',
+                  maxWidth: '100%',
+                  height: 'auto',
+                  width: 'auto',
+                  mixBlendMode: 'multiply',
+                  display: 'block',
+                  margin: '0 auto',
+                }}
+                onError={(e) => {
+                  const parent = (e.target as HTMLImageElement).parentElement
+                  if (parent) parent.style.display = 'none'
+                }}
+              />
+            </div>
+          )}
+
+          {/* Title + subtitle */}
+          <div style={{ marginBottom: '1rem', padding: '0 1.5rem' }}>
+            <h1 style={{
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: '1.85rem',
+              fontWeight: 700,
+              color: '#2d4a3e',
+              margin: '0 0 0.3rem',
+            }}>{title}</h1>
+            <p style={{
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontStyle: 'italic',
+              fontSize: '0.92rem',
+              color: '#7a8a78',
+              margin: 0,
+            }}>{subtitle}</p>
+          </div>
+
+          {/* Emergency */}
+          {emergency && (
+            <div style={{
+              margin: '0 1.5rem 1.25rem',
+              background: '#fdecea',
+              borderLeft: '3px solid #c0392b',
+              borderRadius: '0 8px 8px 0',
+              padding: '0.7rem 0.85rem',
+            }}>
+              <div style={{
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                color: '#7a1c1c',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                marginBottom: '0.25rem',
+              }}>When to see a doctor</div>
+              <div style={{ fontSize: '0.82rem', color: '#7a1c1c', lineHeight: 1.55 }}>
+                {emergency}
+              </div>
+            </div>
+          )}
+
+          {/* Filter chips */}
+          <div style={{ padding: '0 1.5rem 1rem' }}>
+            <div style={sectionLabelStyle}>Your options</div>
+            <div style={sectionRuleStyle}></div>
+            <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+              {filterChips.map(chip => {
+                const isActive = activeFilter === chip.key
+                return (
+                  <button
+                    key={chip.key}
+                    onClick={() => setActiveFilter(chip.key)}
+                    style={{
+                      fontSize: '0.75rem',
+                      padding: '0.3rem 0.7rem',
+                      background: isActive ? '#2d4a3e' : '#fff',
+                      color: isActive ? '#fff' : '#5a7a6e',
+                      border: isActive ? '1px solid #2d4a3e' : '1px solid #d9d4c5',
+                      borderRadius: '999px',
+                      fontWeight: isActive ? 600 : 500,
+                      cursor: 'pointer',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                      transition: 'all 0.15s',
+                    }}
+                  >
+                    {chip.label}{isActive && chip.key !== 'all' ? ' ✕' : ''}
+                  </button>
+                )
+              })}
+            </div>
+            {activeFilter !== 'all' && (
+              <div style={{
+                fontSize: '0.78rem',
+                color: '#7a8a78',
+                fontStyle: 'italic',
+                marginTop: '0.5rem',
+              }}>
+                Showing {filteredRemedies.length} of {allRemedies.length}
+              </div>
+            )}
+          </div>
+
+          {/* Remedy list */}
+          <div style={{ padding: '0 1.5rem 1.5rem' }}>
+            <div style={{
+              background: '#fff',
+              border: '1px solid #e8e0d0',
+              borderRadius: '8px',
+              overflow: 'hidden',
+            }}>
+              {filteredRemedies.length === 0 ? (
+                <div style={{
+                  padding: '1.5rem',
+                  textAlign: 'center',
+                  color: '#7a8a78',
+                  fontSize: '0.88rem',
+                }}>
+                  No remedies match this filter.
+                </div>
+              ) : (
+                filteredRemedies.map((remedy, i) => {
+                  const isExpanded = expanded === remedy.id
+                  const isLast = i === filteredRemedies.length - 1
+                  const isInternalOpen = internalExpanded[remedy.id]
+
+                  return (
+                    <div
+                      key={remedy.id}
                       style={{
-                        width: '100%',
-                        textAlign: 'left',
-                        padding: '0.7rem 0.85rem',
-                        background: isExpanded ? '#f0fdf4' : 'transparent',
-                        border: 'none',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.6rem',
-                        fontFamily: 'var(--font-inter), sans-serif',
+                        borderBottom: isLast ? 'none' : '0.5px solid #f1ede4',
                       }}
                     >
-                      <span style={{
-                        fontSize: '0.72rem',
-                        padding: '2px 6px',
-                        borderRadius: '4px',
-                        fontWeight: 600,
-                        flexShrink: 0,
-                        ...getBadgeStyle(remedy.type),
-                      }}>
-                        {getBadgeIcon(remedy.type)}
-                      </span>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{
-                          fontSize: '0.92rem',
+                      <button
+                        onClick={() => setExpanded(isExpanded ? null : remedy.id)}
+                        style={{
+                          width: '100%',
+                          textAlign: 'left',
+                          padding: '0.7rem 0.85rem',
+                          background: isExpanded ? '#f0fdf4' : 'transparent',
+                          border: 'none',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '0.6rem',
+                          fontFamily: 'var(--font-inter), sans-serif',
+                        }}
+                      >
+                        <span style={{
+                          fontSize: '0.72rem',
+                          padding: '2px 6px',
+                          borderRadius: '4px',
                           fontWeight: 600,
-                          color: '#2d4a3e',
+                          flexShrink: 0,
+                          ...getBadgeStyle(remedy.type),
                         }}>
-                          {remedy.name}
-                          {remedy.oilSlug && (
-                            <span style={{ color: '#4a6741', fontSize: '0.78rem', marginLeft: '0.25rem' }}>→</span>
-                          )}
-                        </div>
-                      </div>
-                      <span style={{ color: '#9ca3af', fontSize: '0.82rem' }}>
-                        {isExpanded ? '▲' : '▼'}
-                      </span>
-                    </button>
-
-                    {isExpanded && (
-                      <div style={{ padding: '0.85rem 1rem 1rem' }}>
-
-                        {/* TOPICAL BLOCK (natural only) */}
-                        {remedy.type === 'natural' && remedy.topical && (
-                          <div style={{ marginBottom: '0.9rem' }}>
-                            <div style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-                              <span style={{
-                                fontSize: '0.72rem',
-                                fontWeight: 700,
-                                color: '#2980b9',
-                                border: '1px solid #2980b9',
-                                padding: '2px 9px',
-                                borderRadius: '999px',
-                                background: '#fff',
-                              }}>
-                                Topical{remedy.topical.dilute && (
-                                  <> (dilute in a <Link href="/oils/carriers" style={{ color: '#2980b9', textDecoration: 'underline', textDecorationStyle: 'dotted', fontWeight: 700 }}>carrier oil →</Link>)</>
-                                )}
-                              </span>
-                              <AgeBadge ageRange={remedy.topical.ageRange} />
-                            </div>
-                            <div style={{
-                              fontSize: '0.85rem',
-                              color: '#5a7a6e',
-                              lineHeight: 1.6,
-                              marginBottom: '0.5rem',
-                            }}>
-                              {remedy.topical.desc || remedy.desc}
-                            </div>
-                            {remedy.topical.warning && (
-                              <div style={{
-                                background: '#fef3e0',
-                                borderLeft: '3px solid #d97706',
-                                padding: '0.55rem 0.7rem',
-                                fontSize: '0.8rem',
-                                color: '#92400e',
-                                lineHeight: 1.5,
-                                marginBottom: '0.5rem',
-                              }}>
-                                ⚠️ {remedy.topical.warning}
-                              </div>
-                            )}
-                            {remedy.topical.safeUse && (
-                              <div style={{
-                                background: '#f0fdf4',
-                                borderLeft: '3px solid #27ae60',
-                                padding: '0.55rem 0.7rem',
-                                fontSize: '0.8rem',
-                                color: '#166534',
-                                lineHeight: 1.5,
-                              }}>
-                                ✅ {remedy.topical.safeUse}
-                              </div>
-                            )}
-                          </div>
-                        )}
-
-                        {/* DIFFUSE BLOCK (natural only) */}
-                        {remedy.type === 'natural' && remedy.diffuse && (
-                          <div style={{ marginBottom: '0.9rem' }}>
-                            <div style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-                              <span style={{
-                                fontSize: '0.72rem',
-                                fontWeight: 700,
-                                color: '#7c3aed',
-                                border: '1px solid #7c3aed',
-                                padding: '2px 9px',
-                                borderRadius: '999px',
-                                background: '#fff',
-                              }}>Diffuse</span>
-                              <AgeBadge ageRange={remedy.diffuse.ageRange} />
-                            </div>
-                            <div style={{
-                              fontSize: '0.85rem',
-                              color: '#5a7a6e',
-                              lineHeight: 1.6,
-                              marginBottom: '0.5rem',
-                            }}>
-                              {remedy.diffuse.desc}
-                            </div>
-                            {remedy.diffuse.warning && (
-                              <div style={{
-                                background: '#fef3e0',
-                                borderLeft: '3px solid #d97706',
-                                padding: '0.55rem 0.7rem',
-                                fontSize: '0.8rem',
-                                color: '#92400e',
-                                lineHeight: 1.5,
-                                marginBottom: '0.5rem',
-                              }}>
-                                ⚠️ {remedy.diffuse.warning}
-                              </div>
-                            )}
-                            {remedy.diffuse.safeUse && (
-                              <div style={{
-                                background: '#f0fdf4',
-                                borderLeft: '3px solid #27ae60',
-                                padding: '0.55rem 0.7rem',
-                                fontSize: '0.8rem',
-                                color: '#166534',
-                                lineHeight: 1.5,
-                              }}>
-                                ✅ {remedy.diffuse.safeUse}
-                              </div>
-                            )}
-                          </div>
-                        )}
-
-                        {/* For natural items with NO topical/diffuse/internal — render default desc */}
-                        {remedy.type === 'natural' && !remedy.topical && !remedy.diffuse && (
-                          <>
-                            {remedy.ageRange && (
-                              <div style={{ marginBottom: '0.4rem' }}>
-                                <AgeBadge ageRange={remedy.ageRange} />
-                              </div>
-                            )}
-                            <div style={{
-                              fontSize: '0.85rem',
-                              color: '#5a7a6e',
-                              lineHeight: 1.6,
-                              marginBottom: '0.75rem',
-                            }}>
-                              {remedy.desc}
-                            </div>
-                          </>
-                        )}
-
-                        {/* OTC block */}
-                        {remedy.type === 'otc' && (
-                          <>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
-                              {remedy.rating && (
-                                <span style={{
-                                  fontSize: '0.72rem',
-                                  fontWeight: 700,
-                                  color: remedy.ratingColor || '#5c4a1f',
-                                }}>
-                                  {remedy.rating}
-                                </span>
-                              )}
-                              <AgeBadge ageRange={remedy.ageRange} />
-                            </div>
-                            <div style={{
-                              fontSize: '0.85rem',
-                              color: '#5a7a6e',
-                              lineHeight: 1.6,
-                              marginBottom: '0.75rem',
-                            }}>
-                              {remedy.desc}
-                            </div>
-                          </>
-                        )}
-
-                        {/* Backup block */}
-                        {remedy.type === 'backup' && (
-                          <>
-                            {remedy.ageRange && (
-                              <div style={{ marginBottom: '0.4rem' }}>
-                                <AgeBadge ageRange={remedy.ageRange} />
-                              </div>
-                            )}
-                            <div style={{
-                              fontSize: '0.85rem',
-                              color: '#5a7a6e',
-                              lineHeight: 1.6,
-                              marginBottom: '0.6rem',
-                            }}>
-                              {remedy.desc}
-                            </div>
-                            {remedy.note && (
-                              <div style={{
-                                background: '#fef3e0',
-                                borderLeft: '3px solid #d97706',
-                                padding: '0.55rem 0.7rem',
-                                fontSize: '0.8rem',
-                                color: '#92400e',
-                                lineHeight: 1.5,
-                                marginBottom: '0.75rem',
-                              }}>
-                                ⚠️ {remedy.note}
-                              </div>
-                            )}
-                          </>
-                        )}
-
-                        {/* INTERNAL collapsed reveal */}
-                        {remedy.type === 'natural' && remedy.internal && (
+                          {getBadgeIcon(remedy.type)}
+                        </span>
+                        <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{
-                            background: '#fafaf7',
-                            border: '0.5px dashed #c8c4b8',
-                            borderRadius: '6px',
-                            padding: '0.65rem 0.8rem',
-                            marginBottom: '0.85rem',
+                            fontSize: '0.92rem',
+                            fontWeight: 600,
+                            color: '#2d4a3e',
                           }}>
-                            <button
-                              onClick={() => handleInternalTap(remedy.id)}
-                              style={{
-                                width: '100%',
-                                background: 'none',
-                                border: 'none',
-                                cursor: 'pointer',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                padding: 0,
-                                fontFamily: 'var(--font-inter), sans-serif',
-                              }}
-                            >
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                            {remedy.name}
+                            {remedy.oilSlug && (
+                              <span style={{ color: '#4a6741', fontSize: '0.78rem', marginLeft: '0.25rem' }}>→</span>
+                            )}
+                          </div>
+                        </div>
+                        <span style={{ color: '#9ca3af', fontSize: '0.82rem' }}>
+                          {isExpanded ? '▲' : '▼'}
+                        </span>
+                      </button>
+
+                      {isExpanded && (
+                        <div style={{ padding: '0.85rem 1rem 1rem' }}>
+
+                          {/* TOPICAL BLOCK */}
+                          {remedy.type === 'natural' && remedy.topical && (
+                            <div style={{ marginBottom: '0.9rem' }}>
+                              <div style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
                                 <span style={{
                                   fontSize: '0.72rem',
                                   fontWeight: 700,
-                                  color: '#78350f',
-                                  border: '1px solid #78350f',
+                                  color: '#2980b9',
+                                  border: '1px solid #2980b9',
                                   padding: '2px 9px',
                                   borderRadius: '999px',
                                   background: '#fff',
-                                }}>Internal</span>
-                                {!isInternalOpen && (
-                                  <span style={{ fontSize: '0.78rem', color: '#5a7a6e' }}>
-                                    Also available — tap to view
+                                }}>Topical</span>
+                                {remedy.topical.dilute && (
+                                  <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#5a7d96' }}>
+                                    (dilute in a <Link href="/oils/carriers" style={{ color: '#5a7d96', textDecoration: 'underline', textDecorationStyle: 'dotted', fontWeight: 700 }}>carrier oil →</Link>)
                                   </span>
                                 )}
+                                <AgeBadge ageRange={remedy.topical.ageRange} />
                               </div>
-                              <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>
-                                {isInternalOpen ? '▲' : '▼'}
-                              </span>
-                            </button>
-                            {isInternalOpen && (
-                              <div style={{ marginTop: '0.7rem' }}>
-                                <div style={{ marginBottom: '0.4rem' }}>
-                                  <AgeBadge ageRange={remedy.internal.ageRange} />
-                                </div>
+                              <div style={{
+                                fontSize: '0.85rem',
+                                color: '#5a7a6e',
+                                lineHeight: 1.6,
+                                marginBottom: '0.5rem',
+                              }}>
+                                {remedy.topical.desc || remedy.desc}
+                              </div>
+                              {remedy.topical.warning && (
                                 <div style={{
-                                  fontSize: '0.82rem',
-                                  color: '#5a7a6e',
-                                  lineHeight: 1.55,
-                                  marginBottom: '0.6rem',
+                                  background: '#fef3e0',
+                                  borderLeft: '3px solid #d97706',
+                                  padding: '0.55rem 0.7rem',
+                                  fontSize: '0.8rem',
+                                  color: '#92400e',
+                                  lineHeight: 1.5,
+                                  marginBottom: '0.5rem',
                                 }}>
-                                  {remedy.internal.desc}
+                                  ⚠️ {remedy.topical.warning}
                                 </div>
+                              )}
+                              {remedy.topical.safeUse && (
+                                <div style={{
+                                  background: '#f0fdf4',
+                                  borderLeft: '3px solid #27ae60',
+                                  padding: '0.55rem 0.7rem',
+                                  fontSize: '0.8rem',
+                                  color: '#166534',
+                                  lineHeight: 1.5,
+                                }}>
+                                  ✅ {remedy.topical.safeUse}
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          {/* DIFFUSE BLOCK */}
+                          {remedy.type === 'natural' && remedy.diffuse && (
+                            <div style={{ marginBottom: '0.9rem' }}>
+                              <div style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
+                                <span style={{
+                                  fontSize: '0.72rem',
+                                  fontWeight: 700,
+                                  color: '#7c3aed',
+                                  border: '1px solid #7c3aed',
+                                  padding: '2px 9px',
+                                  borderRadius: '999px',
+                                  background: '#fff',
+                                }}>Diffuse</span>
+                                <AgeBadge ageRange={remedy.diffuse.ageRange} />
+                              </div>
+                              <div style={{
+                                fontSize: '0.85rem',
+                                color: '#5a7a6e',
+                                lineHeight: 1.6,
+                                marginBottom: '0.5rem',
+                              }}>
+                                {remedy.diffuse.desc}
+                              </div>
+                              {remedy.diffuse.warning && (
+                                <div style={{
+                                  background: '#fef3e0',
+                                  borderLeft: '3px solid #d97706',
+                                  padding: '0.55rem 0.7rem',
+                                  fontSize: '0.8rem',
+                                  color: '#92400e',
+                                  lineHeight: 1.5,
+                                  marginBottom: '0.5rem',
+                                }}>
+                                  ⚠️ {remedy.diffuse.warning}
+                                </div>
+                              )}
+                              {remedy.diffuse.safeUse && (
+                                <div style={{
+                                  background: '#f0fdf4',
+                                  borderLeft: '3px solid #27ae60',
+                                  padding: '0.55rem 0.7rem',
+                                  fontSize: '0.8rem',
+                                  color: '#166534',
+                                  lineHeight: 1.5,
+                                }}>
+                                  ✅ {remedy.diffuse.safeUse}
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Default natural fallback */}
+                          {remedy.type === 'natural' && !remedy.topical && !remedy.diffuse && (
+                            <>
+                              {remedy.ageRange && (
                                 <div style={{ marginBottom: '0.4rem' }}>
+                                  <AgeBadge ageRange={remedy.ageRange} />
+                                </div>
+                              )}
+                              <div style={{
+                                fontSize: '0.85rem',
+                                color: '#5a7a6e',
+                                lineHeight: 1.6,
+                                marginBottom: '0.75rem',
+                              }}>
+                                {remedy.desc}
+                              </div>
+                            </>
+                          )}
+
+                          {/* OTC */}
+                          {remedy.type === 'otc' && (
+                            <>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
+                                {remedy.rating && (
+                                  <span style={{
+                                    fontSize: '0.72rem',
+                                    fontWeight: 700,
+                                    color: remedy.ratingColor || '#5c4a1f',
+                                  }}>
+                                    {remedy.rating}
+                                  </span>
+                                )}
+                                <AgeBadge ageRange={remedy.ageRange} />
+                              </div>
+                              <div style={{
+                                fontSize: '0.85rem',
+                                color: '#5a7a6e',
+                                lineHeight: 1.6,
+                                marginBottom: '0.75rem',
+                              }}>
+                                {remedy.desc}
+                              </div>
+                            </>
+                          )}
+
+                          {/* Backup */}
+                          {remedy.type === 'backup' && (
+                            <>
+                              {remedy.ageRange && (
+                                <div style={{ marginBottom: '0.4rem' }}>
+                                  <AgeBadge ageRange={remedy.ageRange} />
+                                </div>
+                              )}
+                              <div style={{
+                                fontSize: '0.85rem',
+                                color: '#5a7a6e',
+                                lineHeight: 1.6,
+                                marginBottom: '0.6rem',
+                              }}>
+                                {remedy.desc}
+                              </div>
+                              {remedy.note && (
+                                <div style={{
+                                  background: '#fef3e0',
+                                  borderLeft: '3px solid #d97706',
+                                  padding: '0.55rem 0.7rem',
+                                  fontSize: '0.8rem',
+                                  color: '#92400e',
+                                  lineHeight: 1.5,
+                                  marginBottom: '0.75rem',
+                                }}>
+                                  ⚠️ {remedy.note}
+                                </div>
+                              )}
+                            </>
+                          )}
+
+                          {/* INTERNAL collapsed reveal */}
+                          {remedy.type === 'natural' && remedy.internal && (
+                            <div style={{
+                              background: '#fafaf7',
+                              border: '0.5px dashed #c8c4b8',
+                              borderRadius: '6px',
+                              padding: '0.65rem 0.8rem',
+                              marginBottom: '0.85rem',
+                            }}>
+                              <button
+                                onClick={() => handleInternalTap(remedy.id)}
+                                style={{
+                                  width: '100%',
+                                  background: 'none',
+                                  border: 'none',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'space-between',
+                                  padding: 0,
+                                  fontFamily: 'var(--font-inter), sans-serif',
+                                }}
+                              >
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                   <span style={{
                                     fontSize: '0.72rem',
                                     fontWeight: 700,
@@ -786,165 +897,208 @@ export default function ConditionPageLayoutV2({
                                     padding: '2px 9px',
                                     borderRadius: '999px',
                                     background: '#fff',
-                                    display: 'inline-block',
-                                  }}>Supplement Facts only</span>
+                                  }}>Internal</span>
+                                  {!isInternalOpen && (
+                                    <span style={{ fontSize: '0.78rem', color: '#5a7a6e' }}>
+                                      Also available — tap to view
+                                    </span>
+                                  )}
                                 </div>
-                                <div style={{
-                                  background: '#fff',
-                                  borderLeft: '3px solid #7ba169',
-                                  padding: '0.55rem 0.7rem',
-                                  fontSize: '0.8rem',
-                                  color: '#2d4a3e',
-                                  lineHeight: 1.55,
-                                  borderRadius: '0 6px 6px 0',
-                                }}>
-                                  Look for a <strong>Supplement Facts panel</strong> — the only reliable indicator an oil is safe to ingest.
-                                </div>
-                                {remedy.internal.warning && (
-                                  <div style={{
-                                    background: '#fef3e0',
-                                    borderLeft: '3px solid #d97706',
-                                    padding: '0.5rem 0.7rem',
-                                    fontSize: '0.78rem',
-                                    color: '#92400e',
-                                    lineHeight: 1.5,
-                                    marginTop: '0.5rem',
-                                  }}>
-                                    ⚠️ {remedy.internal.warning}
+                                <span style={{ color: '#9ca3af', fontSize: '0.8rem' }}>
+                                  {isInternalOpen ? '▲' : '▼'}
+                                </span>
+                              </button>
+                              {isInternalOpen && (
+                                <div style={{ marginTop: '0.7rem' }}>
+                                  <div style={{ marginBottom: '0.4rem' }}>
+                                    <AgeBadge ageRange={remedy.internal.ageRange} />
                                   </div>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        )}
-
-                        {/* General remedy-level warning */}
-                        {remedy.warning && (
-                          <div style={{
-                            background: '#fef3e0',
-                            borderLeft: '3px solid #d97706',
-                            padding: '0.55rem 0.7rem',
-                            fontSize: '0.8rem',
-                            color: '#92400e',
-                            lineHeight: 1.5,
-                            marginBottom: '0.7rem',
-                          }}>
-                            ⚠️ {remedy.warning}
-                          </div>
-                        )}
-
-                        {/* Cross-link */}
-                        {remedy.oilSlug && (
-                          <Link
-                          href={`/oils/${remedy.oilSlug}`}
-                          style={{
-                            textDecoration: 'none',
-                            display: 'block',
-                            background: '#2d4a3e',
-                            border: 'none',
-                            borderRadius: '8px',
-                            padding: '0.7rem 0.9rem',
-                            marginTop: '0.5rem',
-                          }}
-                        >
-                          <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                          }}>
-                            <div>
-                              <div style={{
-                                fontSize: '0.65rem',
-                                color: '#c8ddc0',
-                                fontWeight: 500,
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.05em',
-                              }}>
-                                Full profile
-                              </div>
-                              <div style={{ fontSize: '0.88rem', color: '#fff', fontWeight: 700 }}>
-                                See {remedy.name} page
-                              </div>
+                                  <div style={{
+                                    fontSize: '0.82rem',
+                                    color: '#5a7a6e',
+                                    lineHeight: 1.55,
+                                    marginBottom: '0.6rem',
+                                  }}>
+                                    {remedy.internal.desc}
+                                  </div>
+                                  <div style={{ marginBottom: '0.4rem' }}>
+                                    <span style={{
+                                      fontSize: '0.72rem',
+                                      fontWeight: 700,
+                                      color: '#78350f',
+                                      border: '1px solid #78350f',
+                                      padding: '2px 9px',
+                                      borderRadius: '999px',
+                                      background: '#fff',
+                                      display: 'inline-block',
+                                    }}>Supplement Facts only</span>
+                                  </div>
+                                  <div style={{
+                                    background: '#fff',
+                                    borderLeft: '3px solid #7ba169',
+                                    padding: '0.55rem 0.7rem',
+                                    fontSize: '0.8rem',
+                                    color: '#2d4a3e',
+                                    lineHeight: 1.55,
+                                    borderRadius: '0 6px 6px 0',
+                                  }}>
+                                    Look for a <strong>Supplement Facts panel</strong> — the only reliable indicator an oil is safe to ingest.
+                                  </div>
+                                  {remedy.internal.warning && (
+                                    <div style={{
+                                      background: '#fef3e0',
+                                      borderLeft: '3px solid #d97706',
+                                      padding: '0.5rem 0.7rem',
+                                      fontSize: '0.78rem',
+                                      color: '#92400e',
+                                      lineHeight: 1.5,
+                                      marginTop: '0.5rem',
+                                    }}>
+                                      ⚠️ {remedy.internal.warning}
+                                    </div>
+                                  )}
+                                </div>
+                              )}
                             </div>
-                            <span style={{ color: '#fff', fontSize: '1.15rem', fontWeight: 700 }}>→</span>
-                          </div>
-                        </Link>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                )
-              })
-            )}
-          </div>
-        </div>
+                          )}
 
-        {/* Tools */}
-        <div style={{ padding: '0 1.5rem 1.5rem' }}>
-          <div style={sectionLabelStyle}>Tools</div>
-          <div style={sectionRuleStyle}></div>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '0.5rem',
-          }}>
-            <Link
-              href={dosageLink || '/dosage-calculator'}
-              style={{
-                textDecoration: 'none',
-                background: '#f0fdf4',
-                border: '0.5px solid #c8ddc0',
-                borderRadius: '8px',
-                padding: '0.7rem 0.85rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
-            >
-              <DosageCalculatorIcon size={20} color="#4a6741" />
-              <div>
-                <div style={{ fontSize: '0.7rem', color: '#4a6741' }}>Dose helper</div>
-                <div style={{ fontSize: '0.82rem', color: '#2d4a3e', fontWeight: 700 }}>Calculate dose</div>
-              </div>
-            </Link>
-            <Link
-              href="/interaction-checker"
-              style={{
-                textDecoration: 'none',
-                background: '#f0fdf4',
-                border: '0.5px solid #c8ddc0',
-                borderRadius: '8px',
-                padding: '0.7rem 0.85rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
-            >
-              <span style={{ fontSize: '1.1rem' }}>💊🌿</span>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: '#4a6741' }}>Compatibility</div>
-                <div style={{ fontSize: '0.82rem', color: '#2d4a3e', fontWeight: 700 }}>Check interactions</div>
-              </div>
-            </Link>
-          </div>
-        </div>
+                          {/* General remedy-level warning */}
+                          {remedy.warning && (
+                            <div style={{
+                              background: '#fef3e0',
+                              borderLeft: '3px solid #d97706',
+                              padding: '0.55rem 0.7rem',
+                              fontSize: '0.8rem',
+                              color: '#92400e',
+                              lineHeight: 1.5,
+                              marginBottom: '0.7rem',
+                            }}>
+                              ⚠️ {remedy.warning}
+                            </div>
+                          )}
 
-        {/* Sources */}
-        {sources && (
-          <div style={{ padding: '0 1.5rem 2rem' }}>
-            <div style={sectionLabelStyle}>Sources</div>
-            <div style={sectionRuleStyle}></div>
-            <div style={{
-              fontSize: '0.78rem',
-              color: '#7a8a78',
-              lineHeight: 1.6,
-            }}>
-              {sources}
+                          {/* Cross-link CTA */}
+                          {remedy.oilSlug && (
+                            <Link
+                              href={`/oils/${remedy.oilSlug}`}
+                              style={{
+                                textDecoration: 'none',
+                                display: 'block',
+                                background: '#2d4a3e',
+                                border: 'none',
+                                borderRadius: '8px',
+                                padding: '0.7rem 0.9rem',
+                                marginTop: '0.5rem',
+                              }}
+                            >
+                              <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                              }}>
+                                <div>
+                                  <div style={{
+                                    fontSize: '0.65rem',
+                                    color: '#c8ddc0',
+                                    fontWeight: 500,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em',
+                                  }}>
+                                    Full profile
+                                  </div>
+                                  <div style={{ fontSize: '0.88rem', color: '#fff', fontWeight: 700 }}>
+                                    See {remedy.name} page
+                                  </div>
+                                </div>
+                                <span style={{ color: '#fff', fontSize: '1.15rem', fontWeight: 700 }}>→</span>
+                              </div>
+                            </Link>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })
+              )}
             </div>
           </div>
-        )}
 
+          {/* Tools */}
+          <div style={{ padding: '0 1.5rem 1.5rem' }}>
+            <div style={sectionLabelStyle}>Tools</div>
+            <div style={sectionRuleStyle}></div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '0.5rem',
+            }}>
+              <Link
+                href={dosageLink || '/dosage-calculator'}
+                style={{
+                  textDecoration: 'none',
+                  background: '#f0fdf4',
+                  border: '0.5px solid #c8ddc0',
+                  borderRadius: '8px',
+                  padding: '0.7rem 0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                <DosageCalculatorIcon size={20} color="#4a6741" />
+                <div>
+                  <div style={{ fontSize: '0.7rem', color: '#4a6741' }}>Dose helper</div>
+                  <div style={{ fontSize: '0.82rem', color: '#2d4a3e', fontWeight: 700 }}>Calculate dose</div>
+                </div>
+              </Link>
+              <Link
+                href="/interaction-checker"
+                style={{
+                  textDecoration: 'none',
+                  background: '#f0fdf4',
+                  border: '0.5px solid #c8ddc0',
+                  borderRadius: '8px',
+                  padding: '0.7rem 0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}
+              >
+                <span style={{ fontSize: '1.1rem' }}>💊🌿</span>
+                <div>
+                  <div style={{ fontSize: '0.7rem', color: '#4a6741' }}>Compatibility</div>
+                  <div style={{ fontSize: '0.82rem', color: '#2d4a3e', fontWeight: 700 }}>Check interactions</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Sources */}
+          {sources && (
+            <div style={{ padding: '0 1.5rem 2rem' }}>
+              <div style={sectionLabelStyle}>Sources</div>
+              <div style={sectionRuleStyle}></div>
+              <div style={{
+                fontSize: '0.78rem',
+                color: '#7a8a78',
+                lineHeight: 1.6,
+              }}>
+                {sources}
+              </div>
+            </div>
+          )}
+
+        </div>
       </div>
+
+      {/* Hide sidebar on mobile */}
+      <style>{`
+        .condition-v2-sidebar { display: none; }
+        @media (min-width: 1024px) {
+          .condition-v2-sidebar { display: block; }
+        }
+      `}</style>
+
     </ConditionLayout>
   )
 }
