@@ -248,14 +248,22 @@ export default function OilDetailPage() {
                       )}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                      {row.concentrations.map((c: any, i: number) => (
-                        <div key={i} style={{
-                          fontSize: '0.82rem',
-                          color: '#5a7a6e',
-                          fontFamily: 'var(--font-inter), sans-serif',
-                          lineHeight: 1.5,
-                        }}>{c.label}</div>
-                      ))}
+                      {row.concentrations.map((c: any, i: number) => {
+                        const parts = (c.label as string).split(' — ')
+                        return (
+                          <div key={i} style={{
+                            fontSize: '0.82rem',
+                            color: '#5a7a6e',
+                            fontFamily: 'var(--font-inter), sans-serif',
+                            lineHeight: 1.5,
+                          }}>
+                            {parts[0]}
+                            {parts.length > 1 && (
+                              <> — <strong style={{ color: '#2d4a3e', fontWeight: 700 }}>{parts.slice(1).join(' — ')}</strong></>
+                            )}
+                          </div>
+                        )
+                      })}
                     </div>
                   </div>
                 )
@@ -356,16 +364,16 @@ export default function OilDetailPage() {
 }
 
 const badgeStyle: React.CSSProperties = {
-  display: 'inline-block',
-  fontSize: '0.78rem',
-  fontWeight: 500,
-  background: '#f1efe8',
-  color: '#5f5e5a',
-  border: '1px solid #d3d1c7',
-  padding: '0.3rem 0.75rem',
-  borderRadius: '999px',
-  fontFamily: 'var(--font-inter), sans-serif',
-}
+    display: 'inline-block',
+    fontSize: '0.78rem',
+    fontWeight: 700,
+    background: '#fff',
+    color: '#c0392b',
+    border: '1.5px solid #c0392b',
+    padding: '0.3rem 0.75rem',
+    borderRadius: '999px',
+    fontFamily: 'var(--font-inter), sans-serif',
+  }
 
 const sectionLabelStyle: React.CSSProperties = {
     fontSize: '0.78rem',
