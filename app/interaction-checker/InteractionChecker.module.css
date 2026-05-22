@@ -588,11 +588,17 @@
   margin-bottom: 1.5rem;
 }
 
-.pickerColumn,
-.stackColumn {
-  min-width: 0;
+@media (max-width: 768px) {
+  .layoutRow {
+    grid-template-columns: 1fr;
+  }
+  .pickerColumn {
+    order: 2;
+  }
+  .stackColumn {
+    order: 1;
+  }
 }
-
 /* ─── MedPicker Updates ─────────────────────── */
 .pickerLabelRow {
   display: flex;
@@ -602,34 +608,36 @@
 }
 
 .pickerCount {
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #2d4a3e;
-  background: #f0fdf4;
-  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.01em;
+  background: #fff;
+  border: 1.5px solid #2d4a3e;
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid #c8ddc0;
+  font-family: var(--font-inter), sans-serif;
 }
 
 .pickerHint {
-  font-size: 0.85rem;
-  color: #1f3329;
-  background: #e8f3ec;
-  padding: 0.7rem 1rem;
-  border-radius: 8px 8px 0 0;
-  border: 1px solid #2d4a3e;
-  border-bottom: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #4a6781;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-inter), sans-serif;
   line-height: 1.5;
 }
 
-.pickerHint::before {
-  content: "💡";
-  font-size: 1rem;
-  flex-shrink: 0;
+.pickerHint::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #4a6781;
+  border-radius: 2px;
+  margin-top: 0.4rem;
 }
 
 .pickerInner {
