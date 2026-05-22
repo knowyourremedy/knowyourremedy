@@ -1,0 +1,263 @@
+'use client'
+
+import Link from 'next/link'
+
+export default function CarrierOilsPage() {
+  return (
+    <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
+      <div style={{ maxWidth: '780px', margin: '0 auto', padding: '1.5rem 1.5rem 4rem' }}>
+
+        {/* Back link */}
+        <Link href="/oils" style={{
+          display: 'inline-block',
+          fontSize: '0.85rem',
+          color: '#4a6741',
+          textDecoration: 'none',
+          marginBottom: '1.25rem',
+          fontFamily: 'var(--font-inter), sans-serif',
+        }}>← All oils</Link>
+
+        {/* Title */}
+        <div style={{
+          marginBottom: '1.5rem',
+          paddingBottom: '1rem',
+          borderBottom: '1px solid #e8e0d0',
+        }}>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontSize: '2rem',
+            fontWeight: 700,
+            color: '#2d4a3e',
+            margin: '0 0 0.35rem',
+            letterSpacing: '-0.01em',
+          }}>Carrier oils</h1>
+          <p style={{
+            fontSize: '0.92rem',
+            fontStyle: 'italic',
+            color: '#7a8a78',
+            margin: 0,
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+          }}>What to dilute essential oils into &mdash; and which to pick.</p>
+        </div>
+
+        {/* What is a carrier oil */}
+        <section style={{ marginBottom: '2rem' }}>
+          <div style={sectionLabelStyle}>What is a carrier oil?</div>
+          <div style={sectionRuleStyle}></div>
+          <p style={proseStyle}>
+            A carrier oil is a neutral plant oil that &ldquo;carries&rdquo; an essential oil onto your skin. Essential oils are concentrated and can irritate or burn skin if applied directly. Diluting them in a carrier oil reduces concentration to safe levels while allowing the oil&rsquo;s benefits to absorb properly.
+          </p>
+          <p style={proseStyle}>
+            Most carrier oils have their own mild benefits (moisturizing, nourishing, soothing) but they&rsquo;re primarily delivery vehicles. Unlike essential oils, you don&rsquo;t need a Supplement Facts panel for topical use &mdash; food-grade or cosmetic-grade carriers from a reputable source work fine for skin.
+          </p>
+        </section>
+
+        {/* The list */}
+        <section style={{ marginBottom: '2rem' }}>
+          <div style={sectionLabelStyle}>Common carrier oils</div>
+          <div style={sectionRuleStyle}></div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {CARRIERS.map((carrier) => (
+              <div key={carrier.name} style={{
+                background: '#fff',
+                border: '1px solid #e8e0d0',
+                borderLeft: '3px solid #7ba169',
+                borderRadius: '0 10px 10px 0',
+                padding: '1rem 1.25rem',
+              }}>
+                <div style={{
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  fontSize: '1rem',
+                  fontWeight: 700,
+                  color: '#2d4a3e',
+                  marginBottom: '0.35rem',
+                }}>
+                  {carrier.name}
+                  {carrier.scientificName && (
+                    <span style={{
+                      fontSize: '0.78rem',
+                      fontStyle: 'italic',
+                      color: '#7a8a78',
+                      fontWeight: 400,
+                      marginLeft: '0.4rem',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                    }}>
+                      ({carrier.scientificName})
+                    </span>
+                  )}
+                </div>
+                <div style={{
+                  fontSize: '0.88rem',
+                  color: '#5a7a6e',
+                  lineHeight: 1.6,
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  marginBottom: '0.4rem',
+                }}>
+                  {carrier.description}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '0.5rem',
+                  flexWrap: 'wrap',
+                  marginTop: '0.5rem',
+                }}>
+                  {carrier.tags.map((tag) => (
+                    <span key={tag} style={{
+                      fontSize: '0.72rem',
+                      fontWeight: 600,
+                      color: '#4a6741',
+                      background: '#f0fdf4',
+                      border: '1px solid #c8ddc0',
+                      padding: '2px 8px',
+                      borderRadius: '999px',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                {carrier.note && (
+                  <div style={{
+                    fontSize: '0.8rem',
+                    color: '#92400e',
+                    background: '#fef3e0',
+                    borderLeft: '3px solid #d97706',
+                    padding: '0.55rem 0.7rem',
+                    marginTop: '0.6rem',
+                    borderRadius: '0 6px 6px 0',
+                    lineHeight: 1.5,
+                    fontFamily: 'var(--font-inter), sans-serif',
+                  }}>
+                    ⚠️ {carrier.note}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* How to dilute */}
+        <section style={{ marginBottom: '2rem' }}>
+          <div style={sectionLabelStyle}>How to dilute</div>
+          <div style={sectionRuleStyle}></div>
+          <p style={proseStyle}>
+            A general rule of thumb is 1 drop of essential oil per teaspoon (5 ml) of carrier oil &mdash; that&rsquo;s roughly a 1% dilution, safe for most adults and kids 6+ for most oils. Stronger or more sensitizing oils (oregano, clove, cinnamon) need heavier dilution; gentler oils (lavender, sweet orange) tolerate slightly higher concentrations.
+          </p>
+          <p style={proseStyle}>
+            Each oil&rsquo;s detail page lists the specific dilution for its safety profile and age range. When in doubt, dilute more, not less.
+          </p>
+        </section>
+
+        {/* Sources */}
+        <section style={{
+          paddingTop: '1rem',
+          borderTop: '1px solid #e8e0d0',
+          fontFamily: 'var(--font-inter), sans-serif',
+        }}>
+          <span style={{
+            fontSize: '0.7rem',
+            fontWeight: 600,
+            color: '#5a7a6e',
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            marginRight: '0.45rem',
+          }}>Sources</span>
+          <span style={{
+            fontSize: '0.72rem',
+            color: '#9aa39a',
+            fontStyle: 'italic',
+            lineHeight: 1.55,
+          }}>
+            Worwood VA: Complete Book of Essential Oils and Aromatherapy 2nd ed. 2016 &middot; Tisserand R, Young R: Essential Oil Safety 2nd ed. 2014 &middot; American Academy of Dermatology &mdash; Skin care basics.
+          </span>
+        </section>
+
+      </div>
+    </main>
+  )
+}
+
+// ─── Carrier data ────────────────────────────────────────────
+
+const CARRIERS = [
+  {
+    name: 'Fractionated Coconut Oil',
+    scientificName: 'Cocos nucifera (MCT)',
+    description: 'The most popular carrier oil for essential oils. Liquid at room temperature (unlike whole coconut oil), absorbs cleanly, leaves no greasy residue, and has a long shelf life. Nearly odorless. The default choice for most diluted topical applications.',
+    tags: ['Most popular', 'Long shelf life', 'Light texture'],
+  },
+  {
+    name: 'Jojoba Oil',
+    scientificName: 'Simmondsia chinensis',
+    description: 'Technically a liquid wax, not an oil. Closest match to the skin&rsquo;s own natural oil (sebum), so it absorbs deeply and is well-tolerated by sensitive skin and acne-prone skin. Excellent shelf life (does not oxidize easily). More expensive than coconut.',
+    tags: ['Best for sensitive skin', 'Acne-friendly', 'Long shelf life'],
+  },
+  {
+    name: 'Sweet Almond Oil',
+    scientificName: 'Prunus dulcis',
+    description: 'Mild, slightly sweet scent. Light to medium texture. Rich in vitamin E. Good general-purpose carrier for body massage and facial applications. Spreads easily, absorbs moderately fast.',
+    tags: ['General purpose', 'Vitamin E', 'Light scent'],
+    note: 'Avoid if you have a tree nut allergy.',
+  },
+  {
+    name: 'Olive Oil',
+    scientificName: 'Olea europaea',
+    description: 'Common kitchen oil that doubles as a carrier. Heavier texture and stronger scent than coconut or jojoba, which can compete with delicate essential oil aromas. Use extra-virgin for best skin benefits. Works in a pinch when nothing else is available.',
+    tags: ['Easily available', 'Heavier texture', 'Strong scent'],
+    note: 'Strong scent can overpower lighter essential oils. Better for stronger oils like rosemary or oregano.',
+  },
+  {
+    name: 'Grapeseed Oil',
+    scientificName: 'Vitis vinifera',
+    description: 'Light, almost odorless, and inexpensive. Absorbs quickly without leaving residue. Higher in linoleic acid, which is good for acne-prone or oily skin. Shorter shelf life than jojoba or fractionated coconut &mdash; refrigerate after opening.',
+    tags: ['Light texture', 'Inexpensive', 'Acne-friendly'],
+    note: 'Shorter shelf life. Refrigerate after opening to extend.',
+  },
+  {
+    name: 'Castor Oil',
+    scientificName: 'Ricinus communis',
+    description: 'Very thick, viscous oil with a long traditional history of topical use for joint pain, scalp/hair care, and skin healing. Best used in small amounts mixed with a lighter carrier (e.g., 25% castor + 75% jojoba) rather than alone, since it&rsquo;s sticky and slow to absorb.',
+    tags: ['Thick texture', 'Traditional use', 'Best blended'],
+    note: 'Sticky and slow to absorb alone. Best mixed with a lighter carrier oil.',
+  },
+  {
+    name: 'Argan Oil',
+    scientificName: 'Argania spinosa',
+    description: 'Premium carrier known as &ldquo;liquid gold.&rdquo; Rich in vitamin E and fatty acids. Excellent for facial skincare, hair care, and dry skin. Expensive. Often diluted with cheaper carriers when used for body applications.',
+    tags: ['Premium', 'Face & hair', 'Expensive'],
+  },
+  {
+    name: 'Coconut Oil (whole, virgin)',
+    scientificName: 'Cocos nucifera',
+    description: 'Solid at room temperature (melts on skin contact). Has a distinct coconut scent and heavier feel than fractionated coconut. Antimicrobial properties from lauric acid. Good for body applications but can clog pores on facial skin (comedogenic).',
+    tags: ['Solid at room temp', 'Antimicrobial', 'Body use'],
+    note: 'Can clog pores on facial skin. Use fractionated coconut for face.',
+  },
+]
+
+// ─── Styles ────────────────────────────────────────────────────
+
+const sectionLabelStyle: React.CSSProperties = {
+  fontSize: '1.15rem',
+  fontWeight: 700,
+  color: '#2d4a3e',
+  marginBottom: '0.35rem',
+  fontFamily: 'var(--font-playfair), Georgia, serif',
+}
+
+const sectionRuleStyle: React.CSSProperties = {
+  width: '28px',
+  height: '2px',
+  background: '#4a6781',
+  borderRadius: '2px',
+  marginBottom: '0.85rem',
+}
+
+const proseStyle: React.CSSProperties = {
+  fontSize: '0.92rem',
+  color: '#5a7a6e',
+  lineHeight: 1.7,
+  fontFamily: 'var(--font-inter), sans-serif',
+  marginBottom: '0.85rem',
+}
