@@ -512,16 +512,17 @@
   }
   
   .disclaimerBox {
-    background: #fffbea;
-    border: 1px solid #f5d87a;
+    background: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid #6b7280;
     border-radius: 8px;
-    padding: 10px 14px;
+    padding: 12px 16px;
     margin-top: 0.75rem;
   }
   
   .disclaimerText {
     font-size: 12px;
-    color: #7a5c00;
+    color: #4b5563;
     line-height: 1.6;
   }
   /* ─── Result Card — NOT RECOMMENDED variant ─────────────────── */

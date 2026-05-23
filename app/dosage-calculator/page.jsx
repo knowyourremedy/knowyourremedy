@@ -50,7 +50,6 @@ function calcDoseMg(med, wKg, ageMonths, isChild) {
 }
 
 function physicalAmount(doseMg, conc, splittable = true) {
-  // Liquid measurements — always allow decimals
   if (conc.unitML) {
     const ml = (doseMg / conc.mgPerUnit) * conc.unitML;
     if (ml >= 5) {
@@ -61,7 +60,6 @@ function physicalAmount(doseMg, conc, splittable = true) {
     return { display: `${ml.toFixed(1)} mL`, units: ml, rounded: false };
   }
 
-  // Solid forms — round based on whether splittable
   const rawCount = doseMg / conc.mgPerUnit;
 
   if (splittable) {
@@ -80,7 +78,7 @@ function physicalAmount(doseMg, conc, splittable = true) {
   }
 }
 
-// ─── Step Chip (compact summary for completed steps) ────────────
+// ─── Step Chip ─────────────────────────────────────────────────
 function StepChip({ num, label, value, onEdit, isActive }) {
   return (
     <button
@@ -98,7 +96,7 @@ function StepChip({ num, label, value, onEdit, isActive }) {
   );
 }
 
-// ─── Step Header (for the active expanded step) ─────────────────
+// ─── Step Header ───────────────────────────────────────────────
 function StepHeader({ num, label, sub }) {
   return (
     <div className={styles.stepHeader}>
@@ -111,7 +109,7 @@ function StepHeader({ num, label, sub }) {
   );
 }
 
-// ─── Option Button ──────────────────────────────────────────────
+// ─── Option Button ─────────────────────────────────────────────
 function OptionButton({ selected, onClick, title, sub }) {
   return (
     <button
@@ -125,7 +123,7 @@ function OptionButton({ selected, onClick, title, sub }) {
   );
 }
 
-// ─── Medication Picker (search + category tabs) ─────────────────
+// ─── Medication Picker ─────────────────────────────────────────
 function MedPicker({ value, onChange, isChild }) {
   const firstCat = Object.keys(CATEGORIES)[0];
   const [activeCat, setActiveCat] = useState(firstCat);
@@ -192,7 +190,7 @@ function MedPicker({ value, onChange, isChild }) {
   );
 }
 
-// ─── Main Page ───────────────────────────────────────────────────
+// ─── Main Page ─────────────────────────────────────────────────
 export default function DosageCalculatorPage() {
   const [who, setWho] = useState(null);
   const [weight, setWeight] = useState('');
@@ -211,6 +209,7 @@ export default function DosageCalculatorPage() {
   const [activeTab, setActiveTab] = useState('create');
   const [trackerOpen, setTrackerOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
+  const [trackingExpanded, setTrackingExpanded] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('kyr_active_profile');
@@ -258,15 +257,10 @@ export default function DosageCalculatorPage() {
   }
 
   function handleWeightAgeComplete() {
-    // If user has already picked a medication, KEEP it.
-    // The "Who" choice (child/adult) determines med validity, not weight or age.
-    // Only the result needs recalculating with the new weight/age.
     setShowResult(false);
     setResult(null);
 
-    // Skip directly to whichever step is the next un-completed one
     if (medKey && formatKey && concIndex !== null) {
-      // All downstream steps already complete — auto-recalculate and show result
       calculate();
       setActiveStep(null);
     } else if (medKey && formatKey) {
@@ -292,28 +286,23 @@ export default function DosageCalculatorPage() {
     setShowResult(false);
     setResult(null);
 
-    // ESSENTIAL OILS: skip concentration step — auto-pick by age
     if (med && med.category === 'essential_oils') {
       const formatConcentrations = med.formats[key].concentrations;
       const ageYears = ageMonths / 12;
 
-      // Match by label keyword: "kids 2-6", "kids 6+", or "adults"
       let autoIndex = 0;
       if (!isChild) {
-        // Adult: find a label containing "adult"
         const adultIdx = formatConcentrations.findIndex(c =>
           c.label.toLowerCase().includes('adult')
         );
         autoIndex = adultIdx >= 0 ? adultIdx : formatConcentrations.length - 1;
       } else if (ageYears < 6) {
-        // Child age 2-6: find "2-6" or fall back to first
         const youngIdx = formatConcentrations.findIndex(c =>
           c.label.toLowerCase().includes('2-6') ||
           c.label.toLowerCase().includes('0.5')
         );
         autoIndex = youngIdx >= 0 ? youngIdx : 0;
       } else {
-        // Child age 6+: find "kids 6+" or "kids 10+" etc, NOT adult
         const kidIdx = formatConcentrations.findIndex(c =>
           (c.label.toLowerCase().includes('kids') || c.label.toLowerCase().includes('child')) &&
           !c.label.toLowerCase().includes('2-6')
@@ -323,7 +312,6 @@ export default function DosageCalculatorPage() {
 
       setConcIndex(autoIndex);
       setActiveStep(null);
-      // Auto-calculate after a brief delay to let state settle
       setTimeout(() => {
         const conc = formatConcentrations[autoIndex];
         const doseMg = calcDoseMg(med, wKg, ageMonths, isChild);
@@ -349,27 +337,23 @@ export default function DosageCalculatorPage() {
       return;
     }
 
-    // OTC / supplements / etc: go to step 5 as normal
     setConcIndex(null);
     setActiveStep(5);
   }
 
   function handleCalculateAnother() {
-    // Keep person (step 1) and weight/age (step 2). Clear medication selection.
     setMedKey(null);
     setFormatKey(null);
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
     setActiveStep(3);
-    // Smooth scroll back to the form
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 50);
   }
 
   function handleStartOver() {
-    // Clear everything.
     setWho(null);
     setWeight('');
     setAge('');
@@ -487,7 +471,6 @@ export default function DosageCalculatorPage() {
   const formatDisplay = formatKey ? med.formats[formatKey].label : null;
   const concDisplay = concIndex !== null ? concentrations[concIndex].label : null;
 
-  // Determine if we should show the warning card vs normal result
   const showWarningResult = showResult && result && (result.doseMg === 0 || result.physicalBelowMinimum);
   const showNormalResult = showResult && result && result.doseMg > 0 && !result.physicalBelowMinimum;
 
@@ -604,7 +587,7 @@ export default function DosageCalculatorPage() {
           </button>
         )}
 
-        {/* Warning result card (zero-mg OR below-minimum) */}
+        {/* Warning result card */}
         {showWarningResult && (
           <div className={styles.resultCardWarning}>
             <div className={styles.warningHeader}>
@@ -733,7 +716,7 @@ export default function DosageCalculatorPage() {
               </div>
             )}
 
-<div style={{
+            <div style={{
               display: 'flex',
               flexDirection: 'column',
               gap: '0.5rem',
@@ -784,64 +767,193 @@ export default function DosageCalculatorPage() {
               </button>
             </div>
 
+{/* ⭐ Premium Track-This-Dose Callout — collapsed by default, expands on tap */}
+{!trackingExpanded ? (
+              <button
+                type="button"
+                onClick={() => setTrackingExpanded(true)}
+                style={{
+                  background: 'linear-gradient(135deg, #fef9e7 0%, #fdf6e3 100%)',
+                  border: '2px solid #d4a017',
+                  borderRadius: '12px',
+                  padding: '1rem 1.25rem',
+                  margin: '1.5rem 0 1rem',
+                  boxShadow: '0 2px 8px rgba(212, 160, 23, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: '1rem',
+                  flexWrap: 'wrap',
+                  width: '100%',
+                  cursor: 'pointer',
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  transition: 'transform 0.15s, box-shadow 0.15s',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-1px)'
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(212, 160, 23, 0.2)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(212, 160, 23, 0.12)'
+                }}
+              >
+                <div style={{ textAlign: 'left', flex: 1, minWidth: 0 }}>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    marginBottom: '0.2rem',
+                  }}>
+                    <span style={{ fontSize: '1.15rem' }}>⭐</span>
+                    <span style={{
+                      fontFamily: 'var(--font-playfair), Georgia, serif',
+                      fontSize: '1.05rem',
+                      fontWeight: 700,
+                      color: '#2d4a3e',
+                    }}>
+                      Save &amp; track this dose
+                    </span>
+                  </div>
+                  <div style={{
+                    fontSize: '0.8rem',
+                    color: '#6b5d2f',
+                    lineHeight: 1.4,
+                  }}>
+                    Get smart reminders when the next dose is due
+                  </div>
+                </div>
+                <div style={{
+                  background: '#d4a017',
+                  color: '#fff',
+                  padding: '0.55rem 1.1rem',
+                  borderRadius: '8px',
+                  fontWeight: 600,
+                  fontSize: '0.85rem',
+                  flexShrink: 0,
+                  whiteSpace: 'nowrap',
+                }}>
+                  Open tracker →
+                </div>
+              </button>
+            ) : (
+              <div style={{
+                background: 'linear-gradient(135deg, #fef9e7 0%, #fdf6e3 100%)',
+                border: '2px solid #d4a017',
+                borderRadius: '12px',
+                padding: '1.25rem',
+                margin: '1.5rem 0 1rem',
+                boxShadow: '0 2px 8px rgba(212, 160, 23, 0.12)',
+              }}>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '0.85rem',
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                  }}>
+                    <span style={{ fontSize: '1.3rem' }}>⭐</span>
+                    <div style={{
+                      fontFamily: 'var(--font-playfair), Georgia, serif',
+                      fontSize: '1.15rem',
+                      fontWeight: 700,
+                      color: '#2d4a3e',
+                    }}>
+                      Track this dose for your family
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setTrackingExpanded(false)}
+                    style={{
+                      background: 'transparent',
+                      border: 'none',
+                      color: '#6b5d2f',
+                      fontSize: '0.85rem',
+                      cursor: 'pointer',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                      padding: '0.3rem 0.6rem',
+                      borderRadius: '6px',
+                      textDecoration: 'underline',
+                      textDecorationStyle: 'dotted',
+                    }}
+                    aria-label="Close tracker"
+                  >
+                    ✕ Close
+                  </button>
+                </div>
+                <div style={{
+                  fontSize: '0.85rem',
+                  color: '#6b5d2f',
+                  lineHeight: 1.5,
+                  marginBottom: '1rem',
+                }}>
+                  Never wonder when the next dose is due. Save this calculation to a family profile and get smart reminders when it&apos;s time for the next dose.
+                </div>
+                <div className={styles.profileTab} style={{ margin: 0 }}>
+                  <div className={styles.profileTabHeader}>
+                    <button type="button" className={`${styles.ptabBtn} ${activeTab === 'create' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('create')}>💾 Save &amp; track this dose</button>
+                    <button type="button" className={`${styles.ptabBtn} ${activeTab === 'log' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('log')}>📋 Dose history</button>
+                  </div>
+                  {activeTab === 'create' && (
+                    <div className={styles.ptabContent}>
+                      {activeProfile ? (
+                        <div>
+                          <p className={styles.ptabNote}>Logged for <strong>{activeProfile.name}</strong>.</p>
+                          <button type="button" className={styles.saveBtn} onClick={() => handleLogDose(activeProfile.id)}>Log this dose for {activeProfile.name}</button>
+                        </div>
+                      ) : (
+                        <>
+                          <p className={styles.ptabNote}>Create a profile to track doses and see when the next dose is due.</p>
+                          <div className={styles.formGrid}>
+                            <div className={styles.formField}>
+                              <label htmlFor="p-name">Profile name</label>
+                              <input id="p-name" type="text" placeholder="e.g. Emma" value={profileName} onChange={e => setProfileName(e.target.value)} className={styles.input} />
+                            </div>
+                            <div className={styles.formField}>
+                              <label htmlFor="p-dob">Date of birth</label>
+                              <input id="p-dob" type="date" value={profileDob} onChange={e => setProfileDob(e.target.value)} className={styles.input} />
+                            </div>
+                          </div>
+                          <button type="button" className={styles.saveBtn} onClick={handleSaveProfile}>Save profile &amp; log this dose</button>
+                        </>
+                      )}
+                    </div>
+                  )}
+                  {activeTab === 'log' && (
+                    <div className={styles.ptabContent}>
+                      {logs.length === 0 ? (
+                        <p className={styles.emptyLog}>No doses logged yet.</p>
+                      ) : (
+                        logs.slice(0, 10).map(log => {
+                          const lastTime = new Date(log.administered_at);
+                          const nextTime = new Date(lastTime.getTime() + log.interval_hours * 3600000);
+                          const canTake = new Date() >= nextTime;
+                          return (
+                            <div key={log.id} className={styles.logItem}>
+                              <div className={styles.logName}>{log.medication}</div>
+                              <div className={styles.logAmount}>{log.physical_amount} · {lastTime.toLocaleString()}</div>
+                              <div className={styles.logNext} style={{ color: canTake ? '#2d4a3e' : '#c0392b' }}>
+                                {canTake ? 'Next dose eligible now' : `Next eligible: ${nextTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
+                              </div>
+                            </div>
+                          );
+                        })
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
             <div className={styles.disclaimerBox}>
               <p className={styles.disclaimerText}>
                 <strong>Medical disclaimer:</strong> Dosage information is based on published FDA monographs, AAP guidelines, NIH Office of Dietary Supplements, and peer-reviewed herbal monographs, and is provided for reference only. Always verify the dose against the measuring device and label included with your specific product. This calculator does not replace advice from a licensed healthcare provider, pharmacist, or physician. If you are unsure, consult a medical professional before administering any medication or supplement.
               </p>
-            </div>
-
-            <div className={styles.profileTab}>
-              <div className={styles.profileTabHeader}>
-                <button type="button" className={`${styles.ptabBtn} ${activeTab === 'create' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('create')}>Save &amp; track this dose</button>
-                <button type="button" className={`${styles.ptabBtn} ${activeTab === 'log' ? styles.ptabBtnActive : ''}`} onClick={() => setActiveTab('log')}>Dose history</button>
-              </div>
-              {activeTab === 'create' && (
-                <div className={styles.ptabContent}>
-                  {activeProfile ? (
-                    <div>
-                      <p className={styles.ptabNote}>Logged for <strong>{activeProfile.name}</strong>.</p>
-                      <button type="button" className={styles.saveBtn} onClick={() => handleLogDose(activeProfile.id)}>Log this dose for {activeProfile.name}</button>
-                    </div>
-                  ) : (
-                    <>
-                      <p className={styles.ptabNote}>Create a profile to track doses and see when the next dose is due.</p>
-                      <div className={styles.formGrid}>
-                        <div className={styles.formField}>
-                          <label htmlFor="p-name">Profile name</label>
-                          <input id="p-name" type="text" placeholder="e.g. Emma" value={profileName} onChange={e => setProfileName(e.target.value)} className={styles.input} />
-                        </div>
-                        <div className={styles.formField}>
-                          <label htmlFor="p-dob">Date of birth</label>
-                          <input id="p-dob" type="date" value={profileDob} onChange={e => setProfileDob(e.target.value)} className={styles.input} />
-                        </div>
-                      </div>
-                      <button type="button" className={styles.saveBtn} onClick={handleSaveProfile}>Save profile &amp; log this dose</button>
-                    </>
-                  )}
-                </div>
-              )}
-              {activeTab === 'log' && (
-                <div className={styles.ptabContent}>
-                  {logs.length === 0 ? (
-                    <p className={styles.emptyLog}>No doses logged yet.</p>
-                  ) : (
-                    logs.slice(0, 10).map(log => {
-                      const lastTime = new Date(log.administered_at);
-                      const nextTime = new Date(lastTime.getTime() + log.interval_hours * 3600000);
-                      const canTake = new Date() >= nextTime;
-                      return (
-                        <div key={log.id} className={styles.logItem}>
-                          <div className={styles.logName}>{log.medication}</div>
-                          <div className={styles.logAmount}>{log.physical_amount} · {lastTime.toLocaleString()}</div>
-                          <div className={styles.logNext} style={{ color: canTake ? '#2d4a3e' : '#c0392b' }}>
-                            {canTake ? 'Next dose eligible now' : `Next eligible: ${nextTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
-                          </div>
-                        </div>
-                      );
-                    })
-                  )}
-                </div>
-              )}
             </div>
           </div>
         )}
