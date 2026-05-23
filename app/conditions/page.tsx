@@ -1,8 +1,19 @@
 'use client'
 import { useState, useMemo } from 'react'
+import Link from 'next/link'
 import ConditionLayout from '@/components/ConditionLayout'
 
-// ─── Data: all categories and conditions in one structure ─────
+// ─── Featured: most common conditions at top ──────────────────
+const FEATURED = [
+  { name: 'Headache', slug: 'headache', icon: '🧠', desc: 'Tension, sinus, dehydration' },
+  { name: 'Cold and Flu', slug: 'cold-and-flu', icon: '🫁', desc: 'Cough, fever, congestion' },
+  { name: 'Insomnia', slug: 'insomnia', icon: '🌙', desc: 'Trouble falling or staying asleep' },
+  { name: 'Allergies', slug: 'allergies', icon: '🌿', desc: 'Hay fever, sneezing, itchy eyes' },
+  { name: 'Anxiety and Stress', slug: 'anxiety-and-stress', icon: '💭', desc: 'Worry, tension, overwhelm' },
+  { name: 'Upset Stomach', slug: 'upset-stomach', icon: '🍵', desc: 'Indigestion, cramping' },
+]
+
+// ─── All categories grouped by topic ──────────────────────────
 const CATEGORIES = [
   {
     name: 'Pain and Inflammation',
@@ -51,7 +62,6 @@ const CATEGORIES = [
       { name: 'Burns and Sunburn', slug: 'burns-and-sunburn' },
       { name: 'Insect Bites', slug: 'insect-bites' },
       { name: 'Rashes', slug: 'rashes' },
-      { name: 'Muscle Soreness Topical', slug: 'muscle-soreness-topical' },
     ],
   },
   {
@@ -74,89 +84,76 @@ const CATEGORIES = [
   },
 ]
 
-// ─── Shared card styling ─────────────────────────────────────
-const cardStyle: React.CSSProperties = {
-  display: 'block',
-  padding: '1rem 1.25rem',
-  backgroundColor: '#fff',
-  border: '1px solid #e8e0d0',
-  borderRadius: '8px',
-  textDecoration: 'none',
+// ─── Shared styles ────────────────────────────────────────────
+const sectionLabelStyle: React.CSSProperties = {
+  fontSize: '1.15rem',
+  fontWeight: 700,
   color: '#2d4a3e',
-  fontSize: '0.95rem',
-  fontWeight: 500,
-  transition: 'all 0.15s',
+  marginBottom: '0.35rem',
+  fontFamily: 'var(--font-playfair), Georgia, serif',
+}
+
+const sectionRuleStyle: React.CSSProperties = {
+  width: '28px',
+  height: '2px',
+  background: '#4a6781',
+  borderRadius: '2px',
+  marginBottom: '1rem',
 }
 
 export default function Conditions() {
   const [search, setSearch] = useState('')
 
-  // Filter conditions by search term — case-insensitive, matches name OR category
+  // Filter conditions by search term
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase()
     if (!q) return CATEGORIES
 
     return CATEGORIES
       .map(cat => {
-        // If the category name itself matches, include all its conditions
         const categoryMatches = cat.name.toLowerCase().includes(q)
         const matchingRemedies = cat.remedies.filter(r =>
           r.name.toLowerCase().includes(q)
         )
-        if (categoryMatches) {
-          return cat // keep the whole category
-        }
-        if (matchingRemedies.length > 0) {
-          return { ...cat, remedies: matchingRemedies }
-        }
+        if (categoryMatches) return cat
+        if (matchingRemedies.length > 0) return { ...cat, remedies: matchingRemedies }
         return null
       })
       .filter(Boolean) as typeof CATEGORIES
   }, [search])
 
   const totalResults = filtered.reduce((sum, cat) => sum + cat.remedies.length, 0)
+  const isSearching = search.trim().length > 0
 
   return (
     <ConditionLayout>
-      <section style={{
-        textAlign: 'center',
-        padding: '3rem 2rem 1.5rem',
-        maxWidth: '900px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{
-          fontFamily: 'var(--font-playfair), Georgia, serif',
-          fontSize: '2.5rem',
-          fontWeight: 700,
-          color: '#2d4a3e',
-          marginBottom: '0.5rem'
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
+
+        {/* Hero */}
+        <div style={{
+          marginBottom: '1.5rem',
+          paddingBottom: '1.25rem',
+          borderBottom: '1px solid #e8e0d0',
         }}>
-          Conditions
-        </h1>
-        <p style={{
-          fontFamily: 'var(--font-playfair), Georgia, serif',
-          fontSize: '1.05rem',
-          fontStyle: 'italic',
-          color: '#5a7a6e',
-          marginBottom: '1.25rem',
-          letterSpacing: '0.01em',
-        }}>
-          Remedies — Options from the Shelf, Root, and in Between
-        </p>
-        <p style={{
-          fontSize: '1.05rem',
-          color: '#5a7a6e',
-          lineHeight: '1.6',
-          marginBottom: '2rem',
-          maxWidth: '620px',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-        }}>
-          Find your condition and see options side by side — conventional, natural, and everything in between.
-        </p>
+          <h1 style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontSize: '2rem',
+            fontWeight: 700,
+            color: '#2d4a3e',
+            margin: '0 0 0.35rem',
+            letterSpacing: '-0.01em',
+          }}>Conditions</h1>
+          <p style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontStyle: 'italic',
+            fontSize: '0.95rem',
+            color: '#7a8a78',
+            margin: 0,
+          }}>Find your condition. See the options side by side.</p>
+        </div>
 
         {/* Search bar */}
-        <div style={{ position: 'relative', maxWidth: '480px', margin: '0 auto' }}>
+        <div style={{ position: 'relative', marginBottom: '2rem' }}>
           <span style={{
             position: 'absolute',
             left: '14px',
@@ -204,79 +201,183 @@ export default function Conditions() {
                 padding: '0.25rem',
                 lineHeight: 1,
               }}
-            >
-              ✕
-            </button>
+            >✕</button>
+          )}
+          {search && (
+            <p style={{
+              marginTop: '0.6rem',
+              fontSize: '0.82rem',
+              color: '#7a8a78',
+              fontStyle: 'italic',
+              fontFamily: 'var(--font-inter), sans-serif',
+            }}>
+              {totalResults === 0
+                ? `No conditions match "${search}"`
+                : `${totalResults} condition${totalResults === 1 ? '' : 's'} matching "${search}"`}
+            </p>
           )}
         </div>
 
-        {search && (
-          <p style={{
-            marginTop: '0.85rem',
-            fontSize: '0.85rem',
-            color: '#6b6b6b',
-            fontStyle: 'italic',
-          }}>
-            {totalResults === 0
-              ? `No conditions match "${search}"`
-              : `${totalResults} condition${totalResults === 1 ? '' : 's'} matching "${search}"`}
-          </p>
-        )}
-      </section>
-
-      <section style={{
-        maxWidth: '900px',
-        margin: '0 auto',
-        padding: '0 2rem 4rem'
-      }}>
-        {filtered.length === 0 ? (
-          <div style={{
-            textAlign: 'center',
-            padding: '3rem 1.5rem',
-            backgroundColor: '#fff',
-            border: '1px dashed #d9d4c5',
-            borderRadius: '12px',
-            color: '#6b6b6b',
-          }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🔍</div>
-            <p style={{ fontSize: '1rem', fontWeight: 600, color: '#2d4a3e', marginBottom: '0.5rem' }}>
-              No conditions found
-            </p>
-            <p style={{ fontSize: '0.88rem', lineHeight: 1.5, maxWidth: '380px', margin: '0 auto' }}>
-              Try a different search term, or clear the search to see all conditions.
-            </p>
-          </div>
-        ) : (
-          filtered.map((category) => (
-            <div key={category.name} style={{ marginBottom: '3rem' }}>
-              <h2 style={{
-                fontSize: '1.25rem',
-                color: '#2d4a3e',
-                borderBottom: '2px solid #c8b89a',
-                paddingBottom: '0.5rem',
-                marginBottom: '1rem'
-              }}>
-                {category.name}
-              </h2>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                gap: '0.75rem'
-              }}>
-                {category.remedies.map((item) => (
-                  
-                  <a key={item.slug}
-                    href={`/conditions/${item.slug}`}
-                    style={cardStyle}
-                  >
-                    🌿 {item.name}
-                  </a>
-                ))}
-              </div>
+        {/* Most Common — only show when not searching */}
+        {!isSearching && (
+          <div style={{ marginBottom: '2.5rem' }}>
+            <div style={sectionLabelStyle}>Most common</div>
+            <div style={sectionRuleStyle}></div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '0.75rem',
+            }}>
+              {FEATURED.map(item => (
+                <Link
+                  key={item.slug}
+                  href={`/conditions/${item.slug}`}
+                  style={{
+                    background: '#fff',
+                    border: '1px solid #e8e0d0',
+                    borderRadius: '10px',
+                    padding: '0.85rem 1rem',
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    transition: 'border-color 0.15s, transform 0.15s',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#f0fdf4'
+                    e.currentTarget.style.borderColor = '#7ba169'
+                    e.currentTarget.style.transform = 'translateY(-1px)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = '#fff'
+                    e.currentTarget.style.borderColor = '#e8e0d0'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}
+                >
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    background: '#f5efe0',
+                    borderRadius: '6px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.35rem',
+                    flexShrink: 0,
+                  }}>{item.icon}</div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontSize: '0.95rem',
+                      fontWeight: 700,
+                      color: '#2d4a3e',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                      marginBottom: '0.15rem',
+                    }}>{item.name}</div>
+                    <div style={{
+                      fontSize: '0.8rem',
+                      color: '#7a8a78',
+                      fontFamily: 'var(--font-inter), sans-serif',
+                      lineHeight: 1.4,
+                    }}>{item.desc}</div>
+                  </div>
+                  <span style={{
+                    color: '#4a6741',
+                    fontSize: '0.95rem',
+                    flexShrink: 0,
+                  }}>→</span>
+                </Link>
+              ))}
             </div>
-          ))
+          </div>
         )}
-      </section>
+
+        {/* All conditions grouped */}
+        <div>
+          <div style={sectionLabelStyle}>
+            {isSearching ? 'Search results' : 'All conditions'}
+          </div>
+          <div style={sectionRuleStyle}></div>
+
+          {filtered.length === 0 ? (
+            <div style={{
+              textAlign: 'center',
+              padding: '3rem 1.5rem',
+              backgroundColor: '#fff',
+              border: '1px dashed #d9d4c5',
+              borderRadius: '12px',
+              color: '#6b6b6b',
+            }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🔍</div>
+              <p style={{
+                fontSize: '1rem',
+                fontWeight: 600,
+                color: '#2d4a3e',
+                marginBottom: '0.5rem',
+                fontFamily: 'var(--font-inter), sans-serif',
+              }}>No conditions found</p>
+              <p style={{
+                fontSize: '0.88rem',
+                lineHeight: 1.5,
+                maxWidth: '380px',
+                margin: '0 auto',
+                fontFamily: 'var(--font-inter), sans-serif',
+              }}>Try a different search term, or clear the search to see all conditions.</p>
+            </div>
+          ) : (
+            filtered.map(category => (
+              <div key={category.name} style={{ marginBottom: '2rem' }}>
+                <div style={{
+                  fontSize: '0.72rem',
+                  fontWeight: 700,
+                  color: '#4a6781',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.07em',
+                  marginBottom: '0.6rem',
+                  fontFamily: 'var(--font-inter), sans-serif',
+                }}>{category.name}</div>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                  gap: '0.5rem',
+                }}>
+                  {category.remedies.map(item => (
+                    <Link
+                      key={item.slug}
+                      href={`/conditions/${item.slug}`}
+                      style={{
+                        background: '#fff',
+                        border: '1px solid #e8e0d0',
+                        borderRadius: '8px',
+                        padding: '0.7rem 0.9rem',
+                        textDecoration: 'none',
+                        color: '#2d4a3e',
+                        fontSize: '0.9rem',
+                        fontWeight: 500,
+                        fontFamily: 'var(--font-inter), sans-serif',
+                        transition: 'border-color 0.15s, transform 0.15s',
+                        display: 'block',
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.background = '#f0fdf4'
+                        e.currentTarget.style.borderColor = '#7ba169'
+                        e.currentTarget.style.transform = 'translateY(-1px)'
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.background = '#fff'
+                        e.currentTarget.style.borderColor = '#e8e0d0'
+                        e.currentTarget.style.transform = 'translateY(0)'
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+
+      </div>
     </ConditionLayout>
   )
 }
