@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { MEDS, CATEGORIES } from '@/lib/medsData';
 import { createProfile, logDose, getLogs } from '@/lib/supabaseHelpers';
 import DoseTrackerBadge from '@/components/DoseTrackerBadge';
+import PrescriptionAcknowledgmentModal, { hasAcknowledgedRx } from '@/components/PrescriptionAcknowledgmentModal';
 import styles from './DosageCalculator.module.css';
 
 // ─── Helpers ─────────────────────────────────────────────────
@@ -124,10 +125,18 @@ function OptionButton({ selected, onClick, title, sub }) {
 }
 
 // ─── Medication Picker ─────────────────────────────────────────
-function MedPicker({ value, onChange, isChild }) {
+function MedPicker({ value, onChange, isChild, onRxTabRequested }) {
   const firstCat = Object.keys(CATEGORIES)[0];
   const [activeCat, setActiveCat] = useState(firstCat);
   const [search, setSearch] = useState('');
+
+  function handleCatClick(catKey) {
+    if (catKey === 'prescription' && !hasAcknowledgedRx()) {
+      onRxTabRequested(() => setActiveCat('prescription'));
+      return;
+    }
+    setActiveCat(catKey);
+  }
 
   const filtered = useMemo(() => {
     if (search.trim().length > 1) {
@@ -160,7 +169,7 @@ function MedPicker({ value, onChange, isChild }) {
               key={k}
               type="button"
               className={`${styles.dosageCatTab} ${activeCat === k ? styles.dosageCatTabActive : ''}`}
-              onClick={() => setActiveCat(k)}
+              onClick={() => handleCatClick(k)}
             >
               {v.icon} {v.label}
             </button>
@@ -190,6 +199,87 @@ function MedPicker({ value, onChange, isChild }) {
   );
 }
 
+// ─── Individualized Result Card ────────────────────────────────
+function IndividualizedResultCard({ med, medKey, onCalculateAnother, onStartOver }) {
+  const isControlled = !!med.controlled;
+
+  return (
+    <div className={styles.resultCardIndividualized}>
+      <div className={styles.individualizedHeader}>
+        <span className={styles.individualizedIcon}>⚕️</span>
+        <div>
+          <div className={styles.individualizedTitle}>Prescription-individualized</div>
+          <div className={styles.individualizedSubtitle}>Dose set by your prescriber</div>
+        </div>
+      </div>
+
+      <p className={styles.individualizedPrimary}>
+        <strong>{med.name}</strong> doses are set individually by a prescriber based on age, condition, response, and other medications. There is no universal calculation.
+      </p>
+
+      {med.standardRange && (
+        <div className={styles.individualizedRange}>
+          <div className={styles.individualizedRangeLabel}>Standard adult range</div>
+          <div className={styles.individualizedRangeText}>{med.standardRange}</div>
+        </div>
+      )}
+
+      {isControlled && (
+        <div className={styles.individualizedControlled}>
+          <div className={styles.individualizedControlledLabel}>
+            {med.controlled} controlled substance
+          </div>
+          <div className={styles.individualizedControlledText}>
+            {med.warnings.adult}
+          </div>
+        </div>
+      )}
+
+      {!isControlled && (
+        <div className={styles.individualizedWhy}>
+          <div className={styles.individualizedWhyLabel}>Why individualized</div>
+          <div className={styles.individualizedWhyText}>
+            {med.warnings.adult}
+          </div>
+        </div>
+      )}
+
+      <div className={styles.sourceBox}>
+        <div className={styles.sourceLabel}>Sources &amp; references</div>
+        <p className={styles.sourceText}>{med.source}</p>
+      </div>
+
+      <a
+        href={`/interaction-checker?med=${medKey}`}
+        className={styles.individualizedInteractionCta}
+      >
+        Check interactions with {med.name} →
+      </a>
+
+      <button
+        type="button"
+        onClick={onCalculateAnother}
+        className={styles.individualizedCalcAnother}
+      >
+        Calculate another
+      </button>
+      <button
+        type="button"
+        onClick={onStartOver}
+        className={styles.individualizedStartOver}
+      >
+        Start completely over
+      </button>
+
+      <div className={styles.disclaimerBox} style={{ marginTop: '1rem' }}>
+        <p className={styles.disclaimerText}>
+          <strong>Medical disclaimer:</strong> This information is for reference and education only. It does not replace your prescribing physician, pharmacist, or the label on your bottle. Never start, stop, or change a prescription dose without your prescriber.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 // ─── Main Page ─────────────────────────────────────────────────
 export default function DosageCalculatorPage() {
   const [who, setWho] = useState(null);
@@ -210,6 +300,10 @@ export default function DosageCalculatorPage() {
   const [trackerOpen, setTrackerOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
   const [trackingExpanded, setTrackingExpanded] = useState(false);
+
+  // Rx modal state
+  const [showRxModal, setShowRxModal] = useState(false);
+  const [pendingRxAction, setPendingRxAction] = useState(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('kyr_active_profile');
@@ -238,11 +332,26 @@ export default function DosageCalculatorPage() {
   const formats = med ? Object.entries(med.formats) : [];
   const concentrations = (med && formatKey) ? med.formats[formatKey].concentrations : [];
 
+  const isIndividualized = !!(med && med.requiresIndividualization);
+
   const step1Complete = who !== null;
   const step2Complete = step1Complete && weight !== '' && age !== '';
   const step3Complete = step2Complete && medKey !== null;
-  const step4Complete = step3Complete && formatKey !== null;
-  const step5Complete = step4Complete && concIndex !== null;
+  const step4Complete = step3Complete && (isIndividualized || formatKey !== null);
+  const step5Complete = step4Complete && (isIndividualized || concIndex !== null);
+
+  function handleRxTabRequested(action) {
+    setPendingRxAction(() => action);
+    setShowRxModal(true);
+  }
+
+  function handleRxAcknowledge() {
+    setShowRxModal(false);
+    if (pendingRxAction) {
+      pendingRxAction();
+      setPendingRxAction(null);
+    }
+  }
 
   function handleWhoChange(newWho) {
     setWho(newWho);
@@ -260,6 +369,11 @@ export default function DosageCalculatorPage() {
     setShowResult(false);
     setResult(null);
 
+    if (medKey && med?.requiresIndividualization) {
+      showIndividualizedResult();
+      return;
+    }
+
     if (medKey && formatKey && concIndex !== null) {
       calculate();
       setActiveStep(null);
@@ -273,12 +387,30 @@ export default function DosageCalculatorPage() {
   }
 
   function handleMedSelect(key) {
+    const selectedMed = MEDS[key];
     setMedKey(key);
     setFormatKey(null);
     setConcIndex(null);
     setShowResult(false);
     setResult(null);
+
+    if (selectedMed?.requiresIndividualization) {
+      setResult({ med: selectedMed, medKey: key });
+      setShowResult(true);
+      setActiveStep(null);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50);
+      return;
+    }
+
     setActiveStep(4);
+  }
+
+  function showIndividualizedResult() {
+    setResult({ med, medKey });
+    setShowResult(true);
+    setActiveStep(null);
   }
 
   function handleFormatSelect(key) {
@@ -471,11 +603,14 @@ export default function DosageCalculatorPage() {
   const formatDisplay = formatKey ? med.formats[formatKey].label : null;
   const concDisplay = concIndex !== null ? concentrations[concIndex].label : null;
 
-  const showWarningResult = showResult && result && (result.doseMg === 0 || result.physicalBelowMinimum);
-  const showNormalResult = showResult && result && result.doseMg > 0 && !result.physicalBelowMinimum;
+  const showIndividualizedCard = showResult && result && result.med?.requiresIndividualization;
+  const showWarningResult = showResult && result && !showIndividualizedCard && (result.doseMg === 0 || result.physicalBelowMinimum);
+  const showNormalResult = showResult && result && !showIndividualizedCard && result.doseMg > 0 && !result.physicalBelowMinimum;
 
   return (
     <>
+      <PrescriptionAcknowledgmentModal open={showRxModal} onAcknowledge={handleRxAcknowledge} />
+
       <main className={styles.main}>
         <div className={styles.hero}>
           <h1 className={styles.heroTitle}>Dosage Calculator</h1>
@@ -543,13 +678,13 @@ export default function DosageCalculatorPage() {
           ) : activeStep === 3 ? (
             <div className={styles.card}>
               <StepHeader num="3" label="Select medication or remedy" />
-              <MedPicker value={medKey} onChange={handleMedSelect} isChild={isChild} />
+              <MedPicker value={medKey} onChange={handleMedSelect} isChild={isChild} onRxTabRequested={handleRxTabRequested} />
             </div>
           ) : null
         )}
 
-        {/* Step 4 — Format */}
-        {step3Complete && activeStep >= 4 && (
+        {/* Step 4 — Format — skipped for individualized meds */}
+        {step3Complete && !isIndividualized && activeStep >= 4 && (
           step4Complete && activeStep !== 4 ? (
             <StepChip num="4" label="Product format" value={formatDisplay} onEdit={() => editStep(4)} isActive={false} />
           ) : activeStep === 4 ? (
@@ -564,8 +699,8 @@ export default function DosageCalculatorPage() {
           ) : null
         )}
 
-        {/* Step 5 — Concentration */}
-        {step4Complete && activeStep >= 5 && (
+        {/* Step 5 — Concentration — skipped for individualized meds */}
+        {step4Complete && !isIndividualized && activeStep >= 5 && (
           step5Complete && activeStep !== 5 && showResult ? (
             <StepChip num="5" label="Concentration" value={concDisplay} onEdit={() => editStep(5)} isActive={false} />
           ) : activeStep === 5 ? (
@@ -581,10 +716,20 @@ export default function DosageCalculatorPage() {
         )}
 
         {/* Calculate button */}
-        {step5Complete && !showResult && (
+        {step5Complete && !showResult && !isIndividualized && (
           <button type="button" className={styles.calcBtn} onClick={calculate}>
             Calculate dose
           </button>
+        )}
+
+        {/* Individualized result card */}
+        {showIndividualizedCard && (
+          <IndividualizedResultCard
+            med={result.med}
+            medKey={result.medKey}
+            onCalculateAnother={handleCalculateAnother}
+            onStartOver={handleStartOver}
+          />
         )}
 
         {/* Warning result card */}
