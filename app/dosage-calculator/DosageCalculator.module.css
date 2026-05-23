@@ -240,13 +240,13 @@
   }
   
   .dosageCatTab {
-    background: #fafaf7;
+    background: #f0fdf4;
     border: none;
     padding: 0.6rem 0.7rem;
     cursor: pointer;
     font-size: 0.78rem;
     font-weight: 600;
-    color: #374151;
+    color: #166534;
     text-align: left;
     display: flex;
     align-items: center;
@@ -260,12 +260,12 @@
   }
   
   .dosageCatTab:hover {
-    background: #f0fdf4;
+    background: #dcfce7;
   }
   
   .dosageCatTabActive {
-    background: #f0fdf4;
-    color: #2d4a3e;
+    background: #2d4a3e;
+    color: #fff;
     border-bottom-color: #2d4a3e;
   }
   
@@ -295,7 +295,7 @@
   }
   
   .dosageMedOptionActive {
-    background: #e8f3ec;
+    background: #d4e7d8;
     border-left-color: #2d4a3e;
   }
   
@@ -757,5 +757,213 @@
   
     .dosageCatTabs {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ─── Prescription-Individualized Result Card ──────────────── */
+.resultCardIndividualized {
+    background: #fff;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.06);
+  }
+  
+  .individualizedHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #dbeafe;
+    margin-bottom: 1.2rem;
+  }
+  
+  .individualizedIcon {
+    font-size: 1.9rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  
+  .individualizedTitle {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2563eb;
+    line-height: 1.15;
+  }
+  
+  .individualizedSubtitle {
+    font-size: 0.72rem;
+    color: #1e40af;
+    letter-spacing: 0.12em;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .individualizedPrimary {
+    font-size: 0.95rem;
+    color: #1a2e27;
+    line-height: 1.65;
+    margin: 0 0 1.2rem;
+    font-weight: 500;
+  }
+  
+  .individualizedPrimary strong {
+    color: #2563eb;
+    font-weight: 700;
+  }
+  
+  /* Standard dose range — blue box */
+  .individualizedRange {
+    background: #eff6ff;
+    border: 1px solid #93c5fd;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 0.85rem;
+  }
+  
+  .individualizedRangeLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e40af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .individualizedRangeText {
+    font-size: 0.92rem;
+    color: #1a2e27;
+    line-height: 1.7;
+  }
+  
+  .individualizedRangeText strong {
+    font-weight: 700;
+  }
+  
+  /* Controlled substance — amber box */
+  .individualizedControlled {
+    background: #fef9e7;
+    border: 1px solid #d4a017;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .individualizedControlledLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6b5d2f;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .individualizedControlledText {
+    font-size: 0.88rem;
+    color: #1a2e27;
+    line-height: 1.65;
+  }
+  
+  /* Non-controlled "Why individualized" — neutral box */
+  .individualizedWhy {
+    background: #fafaf7;
+    border: 1px solid #e5e7eb;
+    border-left: 3px solid #6b7280;
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .individualizedWhyLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .individualizedWhyText {
+    font-size: 0.88rem;
+    color: #1a2e27;
+    line-height: 1.65;
+  }
+  
+  /* Primary CTA — leads to Interaction Checker */
+  .individualizedInteractionCta {
+    display: block;
+    background: #2d4a3e;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    transition: background 0.15s;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .individualizedInteractionCta:hover {
+    background: #1f3329;
+  }
+  
+  /* Secondary action — Calculate another */
+  .individualizedCalcAnother {
+    width: 100%;
+    background: transparent;
+    color: #2d4a3e;
+    border: 1px solid #c4d4ce;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    margin-top: 0.5rem;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  
+  .individualizedCalcAnother:hover {
+    background: #f2f7f5;
+    border-color: #2d4a3e;
+  }
+  
+  /* Tertiary action — Start completely over */
+  .individualizedStartOver {
+    background: transparent;
+    color: #5a7a6e;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    margin: 0.5rem auto 0;
+    transition: color 0.15s;
+  }
+  
+  .individualizedStartOver:hover {
+    color: #2d4a3e;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 680px) {
+    .resultCardIndividualized {
+      padding: 1.25rem;
+    }
+  
+    .individualizedTitle {
+      font-size: 1.2rem;
+    }
+  
+    .individualizedIcon {
+      font-size: 1.6rem;
     }
   }

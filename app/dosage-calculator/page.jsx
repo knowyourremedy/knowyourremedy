@@ -619,24 +619,24 @@ export default function DosageCalculatorPage() {
           </p>
         </div>
 
-        {/* Step 1 — Who */}
-        {step1Complete && activeStep !== 1 ? (
+       {/* Step 1 — Who */}
+       {step1Complete && activeStep !== 1 ? (
           <StepChip num="1" label="Who is this for?" value={whoDisplay} onEdit={() => editStep(1)} isActive={false} />
-        ) : (
+        ) : activeStep === 1 || !step1Complete ? (
           <div className={styles.card}>
             <StepHeader num="1" label="Who is this for?" />
             <div className={styles.optGrid}>
               <OptionButton selected={who === 'child'} onClick={() => handleWhoChange('child')} title="Child" sub="Under 12 years old" />
               <OptionButton selected={who === 'adult'} onClick={() => handleWhoChange('adult')} title="Adult" sub="12 years and older" />
-            </div>
+              </div>
           </div>
-        )}
+        ) : null}
 
-        {/* Step 2 — Weight and Age */}
-        {step1Complete && (
-          step2Complete && activeStep !== 2 ? (
-            <StepChip num="2" label="Age and weight" value={weightAgeDisplay} onEdit={() => editStep(2)} isActive={false} />
-          ) : activeStep === 2 || (step1Complete && !step2Complete) ? (
+     {/* Step 2 — Weight and Age — always show chip when complete */}
+     {step1Complete && step2Complete && activeStep !== 2 && (
+          <StepChip num="2" label="Age and weight" value={weightAgeDisplay} onEdit={() => editStep(2)} isActive={false} />
+        )}
+        {step1Complete && (activeStep === 2 || !step2Complete) && (
             <div className={styles.card}>
              <StepHeader num="2" label="Enter age and weight" />
               <div className={styles.fieldWrap}>
@@ -668,19 +668,17 @@ export default function DosageCalculatorPage() {
                 </button>
               )}
             </div>
-          ) : null
         )}
 
-       {/* Step 3 — Medication */}
-       {step2Complete && activeStep >= 3 && (
-          step3Complete && activeStep !== 3 ? (
-            <StepChip num="3" label="Medication" value={medDisplay} onEdit={() => editStep(3)} isActive={false} />
-          ) : activeStep === 3 ? (
+      {/* Step 3 — Medication — always show chip when complete */}
+      {step2Complete && step3Complete && activeStep !== 3 && (
+          <StepChip num="3" label="Medication" value={medDisplay} onEdit={() => editStep(3)} isActive={false} />
+        )}
+        {step2Complete && activeStep === 3 && (
             <div className={styles.card}>
               <StepHeader num="3" label="Select medication or remedy" />
               <MedPicker value={medKey} onChange={handleMedSelect} isChild={isChild} onRxTabRequested={handleRxTabRequested} />
             </div>
-          ) : null
         )}
 
         {/* Step 4 — Format — skipped for individualized meds */}
