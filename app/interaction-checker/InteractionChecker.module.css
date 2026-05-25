@@ -186,6 +186,21 @@
   background: #2d4a3e;
 }
 
+.catTab:hover:not(.catTabActive) {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.catTab:hover {
+  background: #dcfce7;
+}
+
+.catTabActive {
+  color: #fff;
+  border-bottom-color: #2d4a3e;
+  background: #2d4a3e;
+}
+
 .catTabActive .catTabIcon,
 .catTabActive .catTabHint {
   color: #fff;
@@ -665,7 +680,7 @@
   flex-shrink: 0;
   padding: 0.5rem 0.8rem;
   border: none;
-  background: #fdfbf7;
+  background: #f0fdf4;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.15s;
@@ -675,6 +690,7 @@
   flex-direction: column;
   gap: 0.15rem;
   align-items: flex-start;
+  color: #166534;
 }
 
 .catTabIcon {
@@ -705,6 +721,10 @@
 }
 
 .catTabActive .catTabIcon {
+  color: #fff;
+}
+
+.catTabActive .catTabHint {
   color: #fff;
 }
 
@@ -1192,5 +1212,273 @@
 
   .catTabHint {
     font-size: 0.6rem;
+  }
+}
+
+/* ─── Class Rule Warnings ─────────────────────────── */
+.classRuleStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.classRuleCardAvoid {
+  background: #fdecea;
+  border: 1px solid #c0392b;
+  border-left: 4px solid #c0392b;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.06);
+}
+
+.classRuleCardCaution {
+  background: #fef7e6;
+  border: 1px solid #d97706;
+  border-left: 4px solid #d97706;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.06);
+}
+
+.classRuleHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.classRuleIcon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.classRuleTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7a1c1c;
+  line-height: 1.2;
+}
+
+.classRuleCardCaution .classRuleTitle {
+  color: #5c4a1f;
+}
+
+.classRuleSummary {
+  font-size: 0.88rem;
+  color: #3a1010;
+  line-height: 1.6;
+  margin: 0 0 0.85rem;
+}
+
+.classRuleCardCaution .classRuleSummary {
+  color: #4a3810;
+}
+
+.classRuleSummary strong {
+  font-weight: 700;
+}
+
+/* ─── Safer Alternatives CTA Pill ──────────────────── */
+.classRuleAlternativesCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #2d4a3e;
+  border-radius: 8px;
+  padding: 0.7rem 0.95rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: background 0.15s, transform 0.1s;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.classRuleAlternativesCta:hover {
+  background: #f0fdf4;
+  transform: translateY(-1px);
+}
+
+.classRuleAlternativesCta:active {
+  transform: translateY(0);
+}
+
+.classRuleAlternativesCtaLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #2d4a3e;
+  font-weight: 600;
+}
+
+.classRuleAlternativesCtaIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.classRuleAlternativesCtaJump {
+  color: #2d4a3e;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ─── Items In Stack Box ───────────────────────────── */
+.classRuleItemsBox {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.7rem 0.95rem;
+  margin-bottom: 0.85rem;
+}
+
+.classRuleItemsLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.classRuleItemsList {
+  font-size: 0.85rem;
+  color: #1a2e27;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* ─── Contextual Risk Block ────────────────────────── */
+.classRuleContext {
+  font-size: 0.82rem;
+  color: #3a1010;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding: 0 0.1rem;
+}
+
+.classRuleCardCaution .classRuleContext {
+  color: #4a3810;
+}
+
+.classRuleContext strong {
+  font-weight: 700;
+}
+
+/* ─── Safer Alternatives Destination Box ─────────── */
+.classRuleGoal {
+  background: #e8f3ec;
+  border: 1px solid #86efac;
+  border-left: 3px solid #2d4a3e;
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.85rem;
+  scroll-margin-top: 1rem;
+}
+
+.classRuleGoalLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #166534;
+  margin-bottom: 0.4rem;
+}
+
+.classRuleGoalText {
+  font-size: 0.86rem;
+  color: #1a2e27;
+  line-height: 1.6;
+}
+
+/* ─── Sources Disclosure ───────────────────────────── */
+.classRuleSourcesWrap {
+  margin-top: 0.25rem;
+}
+
+.classRuleSourcesSummary {
+  font-size: 0.75rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  font-weight: 600;
+  list-style: none;
+  user-select: none;
+}
+
+.classRuleSourcesSummary::-webkit-details-marker {
+  display: none;
+}
+
+.classRuleSourcesSummary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.classRuleSourcesWrap[open] .classRuleSourcesSummary::before {
+  transform: rotate(90deg);
+}
+
+.classRuleSourcesList {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* ─── "+N More Warnings" Collapse ──────────────────── */
+.classRuleMoreWrap {
+  background: #fafaf7;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+}
+
+.classRuleMoreSummary {
+  font-size: 0.82rem;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  user-select: none;
+}
+
+.classRuleMoreSummary::-webkit-details-marker {
+  display: none;
+}
+
+.classRuleMoreWrap[open] {
+  padding-bottom: 0.85rem;
+}
+
+.classRuleMoreWrap[open] .classRuleMoreSummary {
+  margin-bottom: 0.7rem;
+}
+
+/* ─── Mobile responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .classRuleCardAvoid,
+  .classRuleCardCaution {
+    padding: 1rem;
+  }
+
+  .classRuleTitle {
+    font-size: 1rem;
+  }
+
+  .classRuleAlternativesCta {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .classRuleAlternativesCtaJump {
+    width: 100%;
+    text-align: right;
   }
 }

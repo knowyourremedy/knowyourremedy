@@ -9,6 +9,7 @@ import {
   getInteractionBetween,
   statusConfig,
 } from '@/lib/interactionData';
+import { evaluateClassRules } from '@/lib/interactionClassRules';
 import styles from './InteractionChecker.module.css';
 import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon';
 import PrescriptionAcknowledgmentModal, { hasAcknowledgedRx } from '@/components/PrescriptionAcknowledgmentModal';
@@ -239,6 +240,114 @@ function SelectedStack({ selectedKeys, onRemove, onClear, verdictLevel = 'neutra
   );
 }
 
+// ─── ClassRuleWarning ─────────────────────────────────────────
+function ClassRuleWarnings({ selectedKeys }) {
+  if (selectedKeys.length < 2) return null;
+
+  const warnings = evaluateClassRules(selectedKeys);
+  if (warnings.length === 0) return null;
+
+  // Show first 3, collapse the rest
+  const visible = warnings.slice(0, 3);
+  const hidden = warnings.slice(3);
+
+  return (
+    <div className={styles.classRuleStack}>
+      {visible.map(w => (
+        <ClassRuleCard key={w.id} warning={w} />
+      ))}
+      {hidden.length > 0 && (
+        <details className={styles.classRuleMoreWrap}>
+          <summary className={styles.classRuleMoreSummary}>
+            +{hidden.length} more {hidden.length === 1 ? 'warning' : 'warnings'}
+          </summary>
+          <div className={styles.classRuleStack}>
+            {hidden.map(w => (
+              <ClassRuleCard key={w.id} warning={w} />
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  );
+}
+
+function ClassRuleCard({ warning }) {
+  const isAvoid = warning.severity === 'avoid';
+  const cardClass = isAvoid ? styles.classRuleCardAvoid : styles.classRuleCardCaution;
+  const alternativesId = `alternatives-${warning.id}`;
+
+  function handleJumpToAlternatives(e) {
+    e.preventDefault();
+    // Set hash so MultiPairResults knows to auto-expand the safe section
+    window.location.hash = 'safe-combinations';
+    // Smooth-scroll down to the safe combinations toggle
+    setTimeout(() => {
+      const el = document.getElementById('safe-combinations');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
+  }
+
+  return (
+    <div className={cardClass}>
+      <div className={styles.classRuleHeader}>
+        <span className={styles.classRuleIcon}>{warning.icon}</span>
+        <div className={styles.classRuleTitle}>{warning.title}</div>
+      </div>
+
+      <p className={styles.classRuleSummary}>{warning.summary}</p>
+
+      {warning.goalFraming && (
+              <a  
+        href={`#${alternativesId}`}
+        onClick={handleJumpToAlternatives}
+        className={styles.classRuleAlternativesCta}
+      >
+          <span className={styles.classRuleAlternativesCtaLabel}>
+            <span className={styles.classRuleAlternativesCtaIcon}>✅</span>
+            <span>Safer alternatives available</span>
+          </span>
+          <span className={styles.classRuleAlternativesCtaJump}>Jump down ↓</span>
+        </a>
+      )}
+
+      <div className={styles.classRuleItemsBox}>
+        <div className={styles.classRuleItemsLabel}>Items in this stack:</div>
+        <div className={styles.classRuleItemsList}>
+          {warning.matchedItems.map(item => item.name).join(' · ')}
+        </div>
+      </div>
+
+      {warning.contextualRisk && (
+        <div className={styles.classRuleContext}>
+          <strong>When to be most cautious:</strong> {warning.contextualRisk}
+        </div>
+      )}
+
+      {warning.goalFraming && (
+
+        <div id={alternativesId} className={styles.classRuleGoal}>
+          <div className={styles.classRuleGoalLabel}>Safer alternatives</div>
+          <div className={styles.classRuleGoalText}>{warning.goalFraming}</div>
+        </div>
+      )}
+
+      {warning.sources && warning.sources.length > 0 && (
+        <details className={styles.classRuleSourcesWrap}>
+          <summary className={styles.classRuleSourcesSummary}>Sources</summary>
+          <ul className={styles.classRuleSourcesList}>
+            {warning.sources.map((s, i) => (
+              <li key={i}>{s}</li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </div>
+  );
+}
+
 // ─── VerdictBanner ────────────────────────────────────────────
 function VerdictBanner({ selectedKeys }) {
   if (selectedKeys.length < 2) return null;
@@ -306,6 +415,18 @@ function VerdictBanner({ selectedKeys }) {
 function MultiPairResults({ selectedKeys }) {
   const [showSafe, setShowSafe] = useState(false);
   const [showNoData, setShowNoData] = useState(false);
+
+  // Listen for #safe-combinations hash and auto-expand
+  useEffect(() => {
+    function checkHash() {
+      if (typeof window !== 'undefined' && window.location.hash === '#safe-combinations') {
+        setShowSafe(true);
+      }
+    }
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
+    return () => window.removeEventListener('hashchange', checkHash);
+  }, []);
 
   if (selectedKeys.length < 2) return null;
 
@@ -409,8 +530,8 @@ function MultiPairResults({ selectedKeys }) {
         </div>
       )}
 
-      {grouped.safe.length > 0 && (
-        <div className={styles.severityGroup}>
+{grouped.safe.length > 0 && (
+       <div id="safe-combinations" className={styles.severityGroup} style={{ scrollMarginTop: '90px' }}>
           <button className={styles.severityToggle} onClick={() => setShowSafe(v => !v)}>
             <span>✅ Safe Combinations ({grouped.safe.length})</span>
             <span>{showSafe ? '↑ Hide' : '↓ Show'}</span>
@@ -590,6 +711,7 @@ export default function InteractionCheckerPage() {
           {selectedMeds.length >= 2 && (
             <VerdictBanner selectedKeys={selectedMeds} />
           )}
+          <ClassRuleWarnings selectedKeys={selectedMeds} />
           <SelectedStack
             selectedKeys={selectedMeds}
             onRemove={removeMed}
