@@ -850,3 +850,66 @@ The class rules ARE the credibility differentiator. WebMD and Drugs.com can show
 - Architecture-first conversation before coding = saved significant rework
 - Visualizer mockups before code = avoided 2-3 wrong directions on the CTA design
 - PROJECT_NOTES must be in repo (NOT chat) — verified and committed this session
+
+## SESSION UPDATE — May 25, 2026
+
+### NSAID class — pair-wise content COMPLETE
+Added 14 new entries to `lib/interactionData.js`:
+- 6 naproxen + naturals (mirroring ibuprofen): fishOil, ginger, turmeric, garlic, ginkgoBiloba, feverfew
+- 1 ibuprofen + naproxen (dual-NSAID avoid)
+- 2 NSAID + warfarin (FDA Drug Safety Communication backed)
+- 2 NSAID + apixaban (Eliquis interaction)
+- 2 NSAID + vitaminE
+- 1 ibuprofen + fishOil (rewritten — replaced previous shorter version)
+
+Result: the 🩸 bleeding_stack class warning now has FULL pair-detail coverage. No more "No data" gaps in the bleeding scenario.
+
+### Sedation class — pair-wise content COMPLETE
+Added 10 new entries:
+- **Tier 1 (FDA black box level — benzo + opioid):**
+  - alprazolam + hydrocodoneAcetaminophen
+  - lorazepam + tramadol
+  - clonazepam + hydrocodoneAcetaminophen
+- **Tier 2 (other dangerous combinations):**
+  - zolpidem + alprazolam (Z-drug + benzo)
+  - alprazolam + diphenhydramine (benzo + 1st-gen antihistamine)
+  - zolpidem + diphenhydramine
+- **Tier 3 (common-stack cautions):**
+  - tramadol + diphenhydramine (Tylenol PM combo)
+  - gabapentin + diphenhydramine
+  - trazodone + diphenhydramine
+  - alprazolam + melatonin
+
+Result: the 🧠 sedation_stack class warning now has FULL pair-detail coverage. FDA black box benzo+opioid combo is concrete (not "consult prescriber"). Beers Criteria cited throughout for elderly population guidance.
+
+### Total interactionData.js status
+Pre-session: ~30 entries
+Post-session: ~54 entries
+Target: 60-80 entries before launch
+Remaining gap: ~6-26 entries
+
+### Content batch order (REVISED — based on what's done)
+1. ✅ NSAIDs — COMPLETE
+2. ✅ Sedatives — COMPLETE
+3. **Anticoagulants** — partially complete (NSAID + warfarin/apixaban done). Remaining: warfarin + ginkgo, warfarin + ginger, warfarin + fish oil, warfarin + vitamin K foods, apixaban + similar
+4. **SSRIs / serotonergic** — fully needed (sertraline + tramadol, fluoxetine + St. John's Wort, etc.)
+5. **CYP3A4 substrates** — statin + grapefruit, statin + antibiotic
+6. **Diabetes meds** — metformin + alcohol, semaglutide + insulin
+7. **Thyroid** — levothyroxine + calcium/iron/coffee (absorption)
+8. **Cold meds** — decongestants + stimulants
+
+### Working session rhythm — REINFORCED ONCE MORE
+- 2-chunk pattern (paste, save, verify dev, push, paste again) worked perfectly
+- Searching for duplicates BEFORE pasting avoided major rework (Brandon caught the ibuprofen+fishOil duplicate cleanly)
+- Single paste location per batch = no file-hopping = no scattered edits
+
+### Next session priorities (updated)
+1. **Serotonergic pairs (~6 entries)** — covers the 🌀 serotonin_syndrome class warning. THIS IS THE NEXT MOST IMPORTANT BATCH because the threshold is 2 (fires fastest of all rules). Including: sertraline + tramadol (textbook), SSRIs + St. John's Wort, fluoxetine + 5-HTP (if added), tramadol + St. John's Wort.
+2. **Remaining anticoagulant pairs (~8 entries)** — warfarin + naturals + other Rx
+3. **Liver stress pairs (~5 entries)** — acetaminophen + alcohol, acetaminophen + statins, acetaminophen + kava
+4. **Clean Brands rename + content** — likely "Clean OTC Options"
+
+### Note on legal posture
+Brandon's quote this session captured the mindset: "I want all pairings done no matter what because I feel like we've set our system up with all the proper precautions/warning signs to relieve us of all if not most liability."
+
+This is correct. The legal protective layer (Rx acknowledgment modal, 2-pharma cap, class rule warnings BEFORE pair details, source citations on every entry, disclaimer in 3 locations) IS the protective shell. Pair entries are the educational content that justifies showing the warnings — refusing to write them would actually weaken the product's credibility argument.
