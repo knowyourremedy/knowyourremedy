@@ -11,6 +11,7 @@ import {
 } from '@/lib/interactionData';
 import styles from './InteractionChecker.module.css';
 import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon';
+import PrescriptionAcknowledgmentModal, { hasAcknowledgedRx } from '@/components/PrescriptionAcknowledgmentModal';
 
 // ─── helpers ────────────────────────────────────────────────
 function buildMedList() {
@@ -29,7 +30,7 @@ const ALL_MEDS_FLAT = Object.entries(MEDS)
   .map(([key, m]) => ({ key, name: m.name, brand: m.brand, category: m.category }));
 
 // ─── MedPicker ────────────────────────────────────────────────
-function MedPicker({ selectedKeys, onAdd, pharmaCount, totalCount }) {
+function MedPicker({ selectedKeys, onAdd, pharmaCount, totalCount, onRxTabRequested }) {
   const grouped = useMemo(() => buildMedList(), []);
   const firstCat = Object.keys(CATEGORIES)[0];
   const [activeCat, setActiveCat] = useState(firstCat);
@@ -127,7 +128,13 @@ function MedPicker({ selectedKeys, onAdd, pharmaCount, totalCount }) {
                 <button
                   key={k}
                   className={`${styles.catTab} ${isActive ? styles.catTabActive : ''} ${isDimmed ? styles.catTabDimmed : ''}`}
-                  onClick={() => setActiveCat(k)}
+                  onClick={() => {
+                    if (k === 'prescription' && !hasAcknowledgedRx()) {
+                      onRxTabRequested(() => setActiveCat('prescription'));
+                      return;
+                    }
+                    setActiveCat(k);
+                  }}
                 >
                   <div className={styles.catTabIcon}>{v.icon} {v.label}</div>
                   <div className={styles.catTabHint}>
@@ -469,6 +476,23 @@ export default function InteractionCheckerPage() {
   const [selectedMeds, setSelectedMeds] = useState([]);
   const [showAllInteractions, setShowAllInteractions] = useState(false);
 
+  // Rx modal state
+  const [showRxModal, setShowRxModal] = useState(false);
+  const [pendingRxAction, setPendingRxAction] = useState(null);
+
+  function handleRxTabRequested(action) {
+    setPendingRxAction(() => action);
+    setShowRxModal(true);
+  }
+
+  function handleRxAcknowledge() {
+    setShowRxModal(false);
+    if (pendingRxAction) {
+      pendingRxAction();
+      setPendingRxAction(null);
+    }
+  }
+
   const pharmaCount = selectedMeds.filter(key => {
     const med = MEDS[key];
     if (!med) return false;
@@ -534,8 +558,11 @@ export default function InteractionCheckerPage() {
   }, []);
 
   return (
-    <main className={styles.page}>
-      <div className={styles.header}>
+    <>
+      <PrescriptionAcknowledgmentModal open={showRxModal} onAcknowledge={handleRxAcknowledge} />
+
+      <main className={styles.page}>
+        <div className={styles.header}>
         <div className={styles.breadcrumb}>
           <Link href="/">Home</Link>
           <span> / </span>
@@ -551,11 +578,12 @@ export default function InteractionCheckerPage() {
 
       <div className={styles.layoutRow}>
         <div className={styles.pickerColumn}>
-          <MedPicker
+        <MedPicker
             selectedKeys={selectedMeds}
             onAdd={addMed}
             pharmaCount={pharmaCount}
             totalCount={selectedMeds.length}
+            onRxTabRequested={handleRxTabRequested}
           />
         </div>
         <div className={styles.stackColumn}>
@@ -648,8 +676,9 @@ export default function InteractionCheckerPage() {
               </div>
             </div>
           </div>
-        </div>
+          </div>
       </div>
     </main>
+    </>
   );
 }
