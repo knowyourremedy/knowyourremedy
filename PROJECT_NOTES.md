@@ -1010,4 +1010,119 @@ This is correct. The legal protective layer (Rx acknowledgment modal, 2-pharma c
 - 1 real bug fix (empty Safe Combinations CTA)
 - 1 outdated entry rewritten (acetaminophen+alcohol)
 - All 7 class warnings now have substantial pair-detail coverage
-- Database moved from launch-blocking to launch-ready
+- Database moved from launch-blocking to launch-
+
+## SESSION UPDATE — May 25, 2026 (Part 2: Clean Picks + Rename Cleanup)
+
+### Everyday Clean Picks — page renamed, placeholder shipped
+
+**Decision: "Clean Brands" renamed to "Everyday Clean Picks"**
+
+Why: The original "Clean Brands" name promoted brands; we promote products. The new name communicates:
+- "Everyday" → accessibility constraint (available at CVS / Walgreens / Target / grocery / Costco — no specialty wellness sites)
+- "Clean" → ingredient quality angle
+- "Picks" → editorial curation (we've done the work)
+
+Subtitle: **"When you need something today, here are the cleaner options."**
+
+### Scope of Clean Picks (locked)
+
+**WHAT'S IN:** Conventional/mainstream products available at brick-and-mortar drugstores, grocery stores, big-box retailers, and Costco. Examples: dye-free children's acetaminophen, Kirkland-brand alternatives, additive-free first aid, sleep aids without artificial colors.
+
+**WHAT'S NOT:** Natural alternatives (those live in Conditions). Essential oils (Oil Library). Specialty wellness brands not available at typical retailers. Supplements covered elsewhere.
+
+**Brand promise:** "If you have to grab something from the drugstore tonight, here's the cleaner version of that thing."
+
+### Page architecture (locked via Visualizer mockup)
+
+- **Hero block:** centered title + brand-voice subtitle, cream background card
+- **Coming-soon banner** (placeholder phase only): explains hand-curation approach, no affiliate-driven recommendations
+- **Search bar:** by symptom or product name (disabled until content is live)
+- **Category filter chips:** All / Pain & Fever / Cold & Flu / Allergies / Sleep / First Aid (active chip uses brand green; inactive chips use mint background)
+- **Category section labels:** Blue B uppercase pattern per Section 18 (`#4a6781`, 0.07em letter-spacing, with 28px × 2px horizontal rule beneath)
+- **Pick cards (no skip cards):**
+  - Product name + brand
+  - Subline: "For: [conditions] · Available at [retailers]"
+  - "Why this pick" callout with brand-green left border (3px solid `#2d4a3e`, cream `#faf7f2` bg)
+  - Footer chips: retailer availability (🏪 list) + price tier (💲 indicator)
+- **No "SKIP" cards** — Brandon decision: this is Clean Picks, not Clean Picks and Ones to Avoid. Picks only. If a product isn't a pick, it's not on this page. Maintains the positive-curation editorial tone.
+- **Email signup CTA at bottom** — points to existing `/account` signup until a dedicated newsletter system exists
+
+### Cross-section content reinforcement (NEW architectural decision)
+
+**No cross-links from Conditions pages to Clean Picks** — contextual recommendations stay where the user already is.
+
+**Going the OTHER direction:** every product labeled "Cleaner choice" on a Conditions subpage's OTC/Mainstream tab is a candidate for Clean Picks curation. This creates a two-way validated content system:
+
+- A product appears on Clean Picks BECAUSE it's a "Cleaner choice" on a condition page
+- A "Cleaner choice" on a condition page is validated by being a Clean Picks selection
+- Net effect: mutual content reinforcement, not brittle cross-linking
+
+**Cutoff criteria:** Only products labeled "Cleaner" go on Clean Picks by default. "Decent" tier is reserved as a flexible fallback for thin categories where Cleaner-tier coverage is sparse — but we don't pad Clean Picks with mediocre options just to fill space. Editorial discipline first.
+
+### Content build workflow for next session
+
+1. **Audit** all Conditions subpages — pull every product labeled "Cleaner choice" (or close variant) from Mainstream/OTC tabs
+2. **Group** by Clean Picks category (Pain & Fever / Cold & Flu / Allergies / Sleep / First Aid)
+3. **Write Clean Picks card content** for each:
+   - Product name + brand
+   - Subline (conditions + retailer)
+   - "Why this pick" — expand on the Cleaner-choice rationale from the condition page; verify ingredient claims independently
+   - Retailer availability
+   - Price tier
+4. **Fill thin categories with Decent-tier picks** ONLY if Cleaner coverage is sparse
+5. **Remove the coming-soon banner + example labels** when real content lands
+
+### File changes (this session)
+
+- `components/Nav.tsx` — desktop + mobile labels: "Clean Brands" → "Everyday Clean Picks", href: `/brands` → `/clean-picks`
+- `components/QuickNav.tsx` — label: "Clean Brands" → "Clean Picks" (shortened for mobile bottom nav, full name lives in primary nav and page header), href: `/brands` → `/clean-picks`
+- `app/page.tsx` — feature card title: "Clean Brand Guide" → "Everyday Clean Picks"; desc: "OTC brands ranked by ingredients" → "Cleaner products you can grab at the drugstore"; href: `/brands` → `/clean-picks`
+- **NEW:** `app/clean-picks/page.tsx` — placeholder page (renders with locked design, 2 example cards labeled "(example)", coming-soon banner, working category chips, signup CTA)
+- `app/layout.tsx` — **BUG FIX:** added missing imports for `Nav`, `QuickNav`, `DoseTrackerBadge` (was using them without importing — a latent bug that only surfaced when we removed those imports from clean-picks page)
+- `next.config.ts` — added redirects: `/brands` → `/clean-picks` (permanent: true / HTTP 308), plus `/brands/:slug` → `/clean-picks/:slug` defensively
+
+### Old `/brands` folder
+
+The `/brands` route was never built — it was a planned section that only existed in nav link references. No folder rename needed; we created `/clean-picks` fresh and added the redirect for any external links to the (404ing) `/brands` URL.
+
+---
+
+## CLARIFICATION — Conditions rename (Section 16 update)
+
+The Remedies → Conditions rename **IS LIVE in production** as of this session, not just decided. PROJECT_NOTES Section 16 previously framed this as "in progress" — that's stale. Current state:
+
+- ✅ Nav.tsx says "Conditions" / links to `/conditions`
+- ✅ QuickNav.tsx says "Conditions" / links to `/conditions`
+- ✅ Home page card uses "Conditions"
+- ✅ Folder structure: `app/conditions/` (NOT `app/remedies/`)
+- ✅ Redirects from `/remedies` → `/conditions` (and `/remedies/:slug` → `/conditions/:slug`) live in `next.config.ts`
+- ✅ Condition layout components: `ConditionPageLayout.tsx` (v1) and `ConditionPageLayoutV2.tsx` (v2)
+- ✅ Shared wrapper: `ConditionLayout.tsx`
+
+**Still active note from Section 16 that remains true:** future dedicated Pediatrics and/or Pregnancy top-level sections are still planned. Migration of pediatric-only pages out of `/conditions/` is still post-launch unless explicitly prioritized.
+
+### Layout component status
+
+- **V1 (`ConditionPageLayout.tsx`):** older three-tab system (Natural / Mainstream / In a Pinch). Likely deprecated but file still exists in repo.
+- **V2 (`ConditionPageLayoutV2.tsx`):** ACTIVE in production. Unified list with filter chips (All / 🌿 Natural / 🏪 OTC / 🆗 Backup / 🤰 Pregnancy-safe). Includes Internal Modal, AgeBadge system, sidebar with grouped categories, body-system anatomy plate support, Blue B section labels per Section 18.
+
+[NEXT SESSION TASK] Consider deleting `ConditionPageLayout.tsx` (v1) if no pages still import it. Quick grep verifies before deletion.
+
+### Working session rhythm refinements (continued)
+
+- **Verify before asserting state from notes** — PROJECT_NOTES can lag behind code. The "Conditions rename" was documented as "decided but not done" but was actually DONE. Same risk on every future session. Default to "search the codebase to verify" before pasting edits that assume state.
+- **Asking "all good options, what do you prefer?" is fine** — Brandon's feedback this session. Decisive recommendations beat infinite optionality, but the user calls the shot.
+- **Visualizer mockups before code worked perfectly here** — the SKIP card removal happened in mockup, saving real implementation rework. Repeat this pattern for any visual/editorial section.
+
+### Next session priorities (updated)
+
+1. **Clean Picks content build** — audit Conditions pages for Cleaner-tier products, group by category, write Clean Picks cards
+2. **PROJECT_NOTES housekeeping** — file is getting long; consider section-split or table of contents
+3. **Continue interaction database pair entries** as bandwidth allows
+4. **Pediatric icon component** with three-bucket system across 31 condition pages
+5. **Add real prescription diuretics** to medsData (furosemide, spironolactone) for more rigorous diuretic class warning
+6. **Add kava as proper med entry** (referenced but missing from medsData)
+7. **Build proper "Lifestyle Factors" category** (vs current Home placement for alcohol/caffeine/grapefruit) — requires picker grid redesign
+
+[NOTE] ConditionPageLayout.tsx (v1) is still on disk alongside ConditionPageLayoutV2.tsx. Holding for now — possibly still imported somewhere or kept as fallback. Future session can grep imports and decide.
