@@ -776,3 +776,77 @@ Class warnings render BETWEEN `<VerdictBanner />` and `<SelectedStack />`. Max 3
 1. **Class rule implementation** — tag medsData.js + build `interactionClassRules.js` + UI component
 2. **Pair-wise content batches** — start with NSAIDs class group
 3. **Clean Brands rename + content** — likely "Clean OTC Options"
+
+## SESSION UPDATE — May 24, 2026 (Part 3)
+
+### Class Rule System — SHIPPED
+
+The full Layer 1 (Class Rules) is now live in production. All 7 rules implemented and tested.
+
+**New files:**
+- `lib/interactionClassRules.js` — engine + 7 rule definitions
+
+**Files modified:**
+- `lib/medsData.js` — 52 entries tagged with `pharmClasses: []` arrays
+- `app/interaction-checker/page.jsx` — added `ClassRuleWarnings` + `ClassRuleCard` components, wired between VerdictBanner and SelectedStack
+- `app/interaction-checker/InteractionChecker.module.css` — added ~220 lines for class rule warning cards, CTA pill, alternatives box, mobile responsive
+
+### How the system works (FOR FUTURE REFERENCE)
+
+1. User selects meds in interaction checker
+2. `evaluateClassRules(selectedMedKeys)` runs on every selection change
+3. For each rule, engine filters meds where `rule.matches(med)` is true
+4. If matched count >= threshold, rule fires
+5. Rule 6 (absorption_block) has special `requiresMultipleClassTypes` check — fires only when BOTH `absorption_sensitive` AND `absorption_blocker_mineral` are present
+6. Warnings sort by severity (avoid before caution)
+7. UI renders first 3 visible, "+N more" collapsible for additional
+
+### Adding a new med to an existing class
+Just add the tag to `pharmClasses` array in medsData.js. No code changes needed. Example:
+```javascript
+newDrugX: {
+  name: 'New Drug X',
+  // ...other fields...
+  pharmClasses: ['nsaid', 'antiplatelet'],  // ← auto-participates in bleeding_stack rule
+}
+```
+
+### Adding a new class rule
+Add a new rule object to the `CLASS_RULES` array in `lib/interactionClassRules.js`. The engine handles the rest. Each rule needs:
+- id, icon, title, severity, threshold
+- matches function (uses hasClass / hasAnyClass helpers)
+- summary (function or string)
+- contextualRisk, goalFraming
+- sources
+
+### Tab visual sync — completed
+- Interaction checker picker tabs now match dosage calculator visual system:
+  - Inactive: `#f0fdf4` mint background, `#166534` dark green text
+  - Hover: `#dcfce7` deeper mint
+  - Active: `#2d4a3e` brand green with white text
+  - Gray dividers between tabs preserved (per Section 5 rule)
+  - Cap-reached dim system unchanged (`.catTabDimmed` opacity 0.45)
+
+### CTA scroll target — completed
+The "✅ Safer alternatives available [Jump down ↓]" button in class rule warnings:
+- Sets URL hash to `#safe-combinations`
+- `MultiPairResults` listens via hashchange event and auto-expands `showSafe` state
+- Smooth-scrolls to `#safe-combinations` anchor with 90px `scrollMarginTop` to clear the fixed nav
+- Land at the expanded Safe Combinations section at the bottom of the page — actual content, not a closed toggle
+
+### Next session priorities (updated)
+1. **Pair-wise content batches — START WITH NSAIDs CLASS** — write ~10 pair entries for NSAID interactions to fill in the "No data" gaps that show up alongside bleeding_stack warnings. Same schema as existing entries (status, summary, mechanism, safeLimits, populations, sources). Goal: 60-80 total pair entries before launch.
+2. **Clean Brands page rename + content** — likely "Clean OTC Options"
+3. **Pediatric icon component** with three-bucket system across 31 condition pages
+4. **Polish pass before launch:** condition page redesign (Section 17), section label rollout (Section 18)
+
+### Why class rules matter (for future-Claude context)
+The class rule system was Brandon's biggest UX insight of the session. Quote: "wanted to always show all meds chosen together whether safe or not and this is a way better option at showing the 'not' rather than just calculating words like 'combination not recommended' this way is way more insightful and educational and provides credibility to the site."
+
+The class rules ARE the credibility differentiator. WebMD and Drugs.com can show pair-wise data. Only a tool with genuine clinical understanding can detect "you stacked 5 antiplatelets across categories." This is the feature that sets knowyourremedy.com apart.
+
+### Working session rhythm (REINFORCED)
+- 5-phase implementation with push-able save points between each = correct approach
+- Architecture-first conversation before coding = saved significant rework
+- Visualizer mockups before code = avoided 2-3 wrong directions on the CTA design
+- PROJECT_NOTES must be in repo (NOT chat) — verified and committed this session
