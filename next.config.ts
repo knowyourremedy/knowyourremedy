@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         destination: '/conditions/:slug',
         permanent: true,
       },
+      {
+        source: '/brands',
+        destination: '/clean-picks',
+        permanent: true,
+      },
+      {
+        source: '/brands/:slug',
+        destination: '/clean-picks/:slug',
+        permanent: true,
+      },
     ];
   },
 };

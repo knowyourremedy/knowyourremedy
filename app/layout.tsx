@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
-import Nav from '@/components/Nav'
-import QuickNav from '@/components/QuickNav'
 import DoseTrackerBadge from '@/components/DoseTrackerBadge'
 
 const playfair = Playfair_Display({
@@ -38,9 +36,7 @@ export default function RootLayout({
         color: '#2d2d2d',
         lineHeight: '1.6'
       }}>
-        <Nav />
         {children}
-        <QuickNav />
         <DoseTrackerBadge />
       </body>
     </html>

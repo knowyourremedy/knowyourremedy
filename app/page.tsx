@@ -163,10 +163,10 @@ export default function Home() {
             },
             {
               emoji: '✨',
-              title: 'Clean Brand Guide',
-              desc: 'OTC brands ranked by ingredients',
-              href: '/brands',
-              accent: '#5a7a55'
+              title: 'Everyday Clean Picks',
+              desc: 'Cleaner products you can grab at the drugstore',
+              href: '/clean-picks',
+              accent: '#???',
             },
             {
               emoji: '🌱',

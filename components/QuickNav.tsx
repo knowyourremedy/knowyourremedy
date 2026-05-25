@@ -14,7 +14,7 @@ const links: NavLink[] = [
     { icon: '🌿', label: 'Conditions', href: '/conditions' },
     { icon: 'DOSAGE_SVG', label: 'Dosage', href: '/dosage-calculator' },
     { icon: '💊🌿', label: 'Interactions', href: '/interaction-checker' },
-    { icon: '✨', label: 'Clean Brands', href: '/brands' },
+    { icon: '✨', label: 'Clean Picks', href: '/clean-picks' },
     { icon: '🌱', label: 'Oil Library', href: '/oils' },
   ]
 

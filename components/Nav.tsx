@@ -55,7 +55,7 @@ export default function Nav() {
           { label: 'Conditions', href: '/conditions' },
           { label: 'Dosage Calculator', href: '/dosage-calculator' },
           { label: 'Interactions', href: '/interaction-checker' },
-          { label: 'Clean Brands', href: '/brands' },
+          { label: 'Everyday Clean Picks', href: '/clean-picks' },
           { label: 'Oil Library', href: '/oils' },
         ].map((link) => (
           <a key={link.href} href={link.href} style={{
@@ -152,7 +152,7 @@ export default function Nav() {
             { label: 'Conditions', href: '/conditions' },
             { label: 'Dosage Calculator', href: '/dosage-calculator' },
             { label: 'Interactions', href: '/interaction-checker' },
-            { label: 'Clean Brands', href: '/brands' },
+            { label: 'Everyday Clean Picks', href: '/clean-picks' },
             { label: 'Oil Library', href: '/oils' },
           ].map((link) => (
             <a key={link.href} href={link.href} style={{
