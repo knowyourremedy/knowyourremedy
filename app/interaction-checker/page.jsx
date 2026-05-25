@@ -241,7 +241,7 @@ function SelectedStack({ selectedKeys, onRemove, onClear, verdictLevel = 'neutra
 }
 
 // ─── ClassRuleWarning ─────────────────────────────────────────
-function ClassRuleWarnings({ selectedKeys }) {
+function ClassRuleWarnings({ selectedKeys, hasSafePairs }) {
   if (selectedKeys.length < 2) return null;
 
   const warnings = evaluateClassRules(selectedKeys);
@@ -253,8 +253,8 @@ function ClassRuleWarnings({ selectedKeys }) {
 
   return (
     <div className={styles.classRuleStack}>
-      {visible.map(w => (
-        <ClassRuleCard key={w.id} warning={w} />
+    {visible.map(w => (
+        <ClassRuleCard key={w.id} warning={w} hasSafePairs={hasSafePairs} />
       ))}
       {hidden.length > 0 && (
         <details className={styles.classRuleMoreWrap}>
@@ -263,7 +263,7 @@ function ClassRuleWarnings({ selectedKeys }) {
           </summary>
           <div className={styles.classRuleStack}>
             {hidden.map(w => (
-              <ClassRuleCard key={w.id} warning={w} />
+              <ClassRuleCard key={w.id} warning={w} hasSafePairs={hasSafePairs} />
             ))}
           </div>
         </details>
@@ -272,7 +272,7 @@ function ClassRuleWarnings({ selectedKeys }) {
   );
 }
 
-function ClassRuleCard({ warning }) {
+function ClassRuleCard({ warning, hasSafePairs }) {
   const isAvoid = warning.severity === 'avoid';
   const cardClass = isAvoid ? styles.classRuleCardAvoid : styles.classRuleCardCaution;
   const alternativesId = `alternatives-${warning.id}`;
@@ -299,19 +299,19 @@ function ClassRuleCard({ warning }) {
 
       <p className={styles.classRuleSummary}>{warning.summary}</p>
 
-      {warning.goalFraming && (
-              <a  
+      {warning.goalFraming && hasSafePairs && (
+              <a
         href={`#${alternativesId}`}
         onClick={handleJumpToAlternatives}
         className={styles.classRuleAlternativesCta}
       >
-          <span className={styles.classRuleAlternativesCtaLabel}>
-            <span className={styles.classRuleAlternativesCtaIcon}>✅</span>
-            <span>Safer alternatives available</span>
-          </span>
-          <span className={styles.classRuleAlternativesCtaJump}>Jump down ↓</span>
-        </a>
-      )}
+        <span className={styles.classRuleAlternativesCtaLabel}>
+          <span className={styles.classRuleAlternativesCtaIcon}>✅</span>
+          <span>Safer alternatives available</span>
+        </span>
+        <span className={styles.classRuleAlternativesCtaJump}>Jump down ↓</span>
+      </a>
+    )}
 
       <div className={styles.classRuleItemsBox}>
         <div className={styles.classRuleItemsLabel}>Items in this stack:</div>
@@ -645,6 +645,17 @@ export default function InteractionCheckerPage() {
   };
 
   // Calculate the overall verdict level so the chips can color themselves
+  // Check if any safe pairs exist in the stack — used to gate the class rule CTA
+  const hasSafePairs = useMemo(() => {
+    if (selectedMeds.length < 2) return false;
+    for (let i = 0; i < selectedMeds.length; i++) {
+      for (let j = i + 1; j < selectedMeds.length; j++) {
+        const ix = getInteractionBetween(selectedMeds[i], selectedMeds[j]);
+        if (ix?.status === 'safe') return true;
+      }
+    }
+    return false;
+  }, [selectedMeds]);
   const verdictLevel = useMemo(() => {
     if (selectedMeds.length < 2) return 'neutral';
     let hasAvoid = false, hasCaution = false, hasSafe = false, hasUnknown = false;
@@ -711,7 +722,7 @@ export default function InteractionCheckerPage() {
           {selectedMeds.length >= 2 && (
             <VerdictBanner selectedKeys={selectedMeds} />
           )}
-          <ClassRuleWarnings selectedKeys={selectedMeds} />
+          <ClassRuleWarnings selectedKeys={selectedMeds} hasSafePairs={hasSafePairs} />
           <SelectedStack
             selectedKeys={selectedMeds}
             onRemove={removeMed}
