@@ -913,3 +913,101 @@ Remaining gap: ~6-26 entries
 Brandon's quote this session captured the mindset: "I want all pairings done no matter what because I feel like we've set our system up with all the proper precautions/warning signs to relieve us of all if not most liability."
 
 This is correct. The legal protective layer (Rx acknowledgment modal, 2-pharma cap, class rule warnings BEFORE pair details, source citations on every entry, disclaimer in 3 locations) IS the protective shell. Pair entries are the educational content that justifies showing the warnings — refusing to write them would actually weaken the product's credibility argument.
+
+## SESSION UPDATE — May 25, 2026 (Content Sprint)
+
+### Massive interaction database expansion — SHIPPED
+
+**Database size:** ~30 entries → ~137 entries (107 new pair-wise entries this session)
+
+### What got covered
+
+**Class-rule pair coverage — ALL 7 CLASSES NOW HAVE RICH PAIR DETAIL**
+
+| Class | Pair Coverage |
+|---|---|
+| 🩸 Bleeding | ✅ Comprehensive (NSAID+naturals, NSAID+anticoagulants, anticoagulant+naturals) |
+| 🧠 Sedation | ✅ Comprehensive (benzo+opioid FDA black-box, Z-drug+benzo, sedation+antihistamine) |
+| 🌀 Serotonin | ✅ Comprehensive (SSRI+tramadol, SSRI+SJW, dextromethorphan+SSRIs) |
+| 🫁 Liver | ✅ Comprehensive (acetaminophen+alcohol AVOID, acetaminophen+statin, hydrocodone combos) |
+| 🥛 Absorption | ✅ Comprehensive (levothyroxine + minerals/PPIs, antibiotic + minerals) |
+| 🫀 Cardiovascular | ✅ Operational (decongestant+SSRI, decongestant+caffeine, statin+macrolide) |
+| 💧 Diuretic | ✅ Operational (HCTZ + caffeine/alcohol/senna, triple-stack avoid) |
+
+### New meds added to medsData.js
+
+- **alcohol** (Home category, interaction-reference) — pharmClasses: `['cns_depressant','hepatotoxic','diuretic']`
+- **caffeine** (Home category, interaction-reference) — pharmClasses: `['sympathomimetic','bp_raiser','cns_stimulant','diuretic']`
+- **grapefruit** (Home category, interaction-reference) — pharmClasses: `['cyp3a4_inhibitor']`
+- **birthControlCombined** (Prescription category, requiresIndividualization: true) — pharmClasses: `['hormonal_contraceptive','estrogen_containing']`
+
+[DECISION] Lifestyle factors (alcohol, caffeine, grapefruit) placed under `home` category with `interaction_reference` tag + dummy dosing fields. Future refactor to proper "Lifestyle Factors" category planned. Reason: speed over architectural correctness — adding a 7th category would have meant redesigning the picker grid mid-session.
+
+### New pharmClasses tags added
+
+- **dextromethorphan:** `['serotonergic','cns_depressant']` — now participates in serotonin class warning
+- **magnesium:** `['absorption_blocker_mineral']` — now participates in absorption class warning
+- **bupropion:** added `['seizure_threshold_lowering','cyp2d6_inhibitor']` to existing tags
+- **ciprofloxacin:** added `'absorption_sensitive'` to existing tags
+
+### Bug fixes shipped
+
+- **Empty Safe Combinations CTA fix:** The "✅ Safer alternatives available [Jump down ↓]" button in class rule warnings was rendering even when no safe pairs existed in the stack. Fixed by passing `hasSafePairs` prop from page-level down through ClassRuleWarnings → ClassRuleCard. CTA now gated by `warning.goalFraming && hasSafePairs`. (`app/interaction-checker/page.jsx`)
+
+- **Outdated `acetaminophen + alcohol` entry replaced:** Old caution-level entry deleted; new avoid-level entry written with FDA Drug Safety Communication + LiverTox sourcing, matching the leading-cause-of-acute-liver-failure clinical reality.
+
+### Content batches written tonight (in order)
+
+1. **NSAID expansion (14 entries)** — naproxen mirrors of ibuprofen+naturals, NSAID+warfarin, NSAID+apixaban, NSAID+vitaminE
+2. **Sedation pairs (10 entries)** — benzo+opioid FDA black-box trio, Z-drug+benzo, benzo+antihistamine, opioid+antihistamine, gabapentin+antihistamine, trazodone+antihistamine, benzo+melatonin
+3. **Serotonergic pairs (6 entries)** — SSRI+tramadol trio, SSRI+SJW pair, tramadol+SJW
+4. **Liver pairs (4 entries)** — acetaminophen+alcohol AVOID (replaced old caution), acetaminophen+atorvastatin, hydrocodoneAcetaminophen+acetaminophen, hydrocodoneAcetaminophen+alcohol
+5. **Absorption + Cardiovascular (10 entries)** — levothyroxine + minerals/PPIs/H2-blockers, decongestant+SSRI trio, phenylephrine pairs
+6. **Caffeine pairs (8 entries)** — caffeine+SSRIs, caffeine+benzo, caffeine+Z-drug, caffeine+melatonin, caffeine+warfarin, caffeine+lTheanine SAFE, caffeine+alcohol "alert drunk"
+7. **Diuretic pairs (5 entries)** — HCTZ+caffeine, HCTZ+alcohol, triple-stack caffeine+alcohol+HCTZ AVOID, HCTZ+senna, caffeine+senna
+8. **Anticoagulant naturals (8 entries)** — warfarin + ginkgo/fishOil/garlic/ginger/SJW, apixaban + ginkgo/fishOil/SJW
+9. **Cold/Flu OTC (7 entries)** — dextromethorphan+SSRIs trio, dextromethorphan+tramadol, dextromethorphan+alcohol, dextromethorphan+alprazolam, meclizine+alcohol, meclizine+diphenhydramine
+10. **Antibiotic absorption (6 entries)** — ciprofloxacin + calcium/iron/magnesium, doxycycline + calcium/iron/magnesium
+11. **Bupropion pairs (4 entries)** — bupropion + alcohol/tramadol/pseudoephedrine/caffeine
+12. **Safe natural pairs (6 entries)** — chamomile+lemonBalm, ashwagandha+magnesium, ginger+peppermintOil, passionflower+magnesium, vitaminC+zinc, chamomile+magnesium
+13. **Diabetes + alcohol (5 entries)** — metformin, semaglutide, empagliflozin, both insulins paired with alcohol
+14. **Statin pairs (6 entries)** — atorvastatin + grapefruit/azithromycin/alcohol/SJW/ciprofloxacin, apixaban+grapefruit
+15. **Natural+OTC pairs (5 entries)** — turmeric+omeprazole, ginger+omeprazole, echinacea+acetaminophen, slipperyElm+ibuprofen, milkThistle+acetaminophen
+16. **Birth control pairs (4 entries)** — birthControl + SJW AVOID, + amoxicillin/doxycycline (myth-busting cautions), + alcohol caution
+17. **Common safe + chronic PPI flag (5 entries)** — acetaminophen+magnesium, ibuprofen+magnesium, loratadine+acetaminophen, cetirizine+acetaminophen, omeprazole+magnesium caution
+
+### Key clinical content decisions
+
+- **FDA black-box benzo+opioid combos written concretely** (not "consult prescriber") — Brandon's locked stance: "I want all pairings done no matter what because I feel like we've set our system up with all the proper precautions/warning signs to relieve us of all if not most liability"
+- **acetaminophen + alcohol upgraded to AVOID** — matches FDA + LiverTox classification, replaces older softer entry
+- **Antibiotic + birth control written as CAUTION (myth-busting)** — modern evidence shows penicillins/tetracyclines do NOT meaningfully reduce contraceptive effectiveness; only rifampin-class drugs do. Real risk is GI-related missed-dose. Entries teach this distinction.
+- **Triple-drug entries supported** — caffeine+alcohol+HCTZ AVOID was the first 3-key `drugs` array; pattern confirmed working in lookup engine
+- **Anticoagulant + St. John's Wort framed as "REDUCES anticoagulation = clot risk"** — important educational nuance that most sites miss
+
+### Working session rhythm (refined this session)
+
+- **Reduce push frequency:** Brandon's explicit feedback "theres to much pushing and its ruining the momentum" — moved to milestone-based pushes (end of feature/class), not between every batch
+- Single-paste-location per batch maintained
+- Always search for duplicates BEFORE writing (the ibuprofen+fishOil lesson — already there, deleted old version vs writing parallel)
+- Don't tag based on what "should exist" — verify against actual db (the kava entries we had to skip mid-batch)
+- Decision/architecture conversations before code = saved rework (verified before alcohol/caffeine/grapefruit additions)
+
+### Next session priorities (updated)
+
+1. **PROJECT_NOTES housekeeping** — possibly split into sections (it's getting long)
+2. **Clean Brands page rename + content** — likely "Clean OTC Options" (we keep deferring this; should commit)
+3. **Pediatric icon component** with three-bucket system across 31 condition pages
+4. **Condition page redesign** per Section 17 (vintage anatomy plates, body-system mapping)
+5. **Add real prescription diuretics** (furosemide, spironolactone) to make diuretic class warning more rigorous beyond the current caffeine/alcohol/HCTZ stacking
+6. **Add kava as proper med entry** (was referenced in liver batch but doesn't exist yet)
+7. **Build proper "Lifestyle Factors" category** (vs current Home placement for alcohol/caffeine/grapefruit) — requires picker grid redesign
+8. **More remaining content batches as bandwidth allows** — grapefruit+other CYP3A4 drugs, more Rx+Rx pairs, MAOIs (none in db yet), specific anti-anxiety combos
+
+### Final session stat line
+- 107 new pair-wise interaction entries
+- 4 new med entries (alcohol, caffeine, grapefruit, birthControlCombined)
+- 4 pharmClasses tagging refinements
+- 1 real bug fix (empty Safe Combinations CTA)
+- 1 outdated entry rewritten (acetaminophen+alcohol)
+- All 7 class warnings now have substantial pair-detail coverage
+- Database moved from launch-blocking to launch-ready
