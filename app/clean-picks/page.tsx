@@ -67,7 +67,7 @@ export default function CleanPicksPage() {
       {/* Hero */}
       <div style={{
         background: '#fff',
-        border: '1px solid #e8e0d0',
+        border: '2px solid #2d4a3e',
         borderRadius: '16px',
         padding: '2.5rem 2rem 2rem',
         marginBottom: '1.75rem',
