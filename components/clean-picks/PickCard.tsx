@@ -2,21 +2,7 @@
 
 import { CLASS_COLORS, TOP_PICK_LABELS } from '@/lib/clean-picks/classColors';
 import RetailerChips from './RetailerChips';
-
-type Pick = {
-  name: string;
-  activeIngredient: string;
-  classKey: keyof typeof CLASS_COLORS;
-  classTag: string;
-  form: 'oral' | 'topical' | 'sublingual';
-  topPick?: 'oral' | 'kids' | 'topical';
-  ageBadge?: string;
-  subline: string;
-  why: string;
-  honestNote?: string;
-  retailers: string[];
-  priceTier: string;
-};
+import type { Pick } from '@/lib/clean-picks/painFeverPicks';
 
 type Props = {
   pick: Pick;

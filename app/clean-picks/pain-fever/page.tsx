@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import PickCard from '@/components/clean-picks/PickCard';
-import { PAIN_FEVER_PICKS } from '@/lib/clean-picks/painFeverPicks';
+import { PAIN_FEVER_PICKS, type Pick } from '@/lib/clean-picks/painFeverPicks';
 
 type FilterKey = 'top' | 'oral' | 'topical' | 'sublingual';
 
@@ -22,7 +22,7 @@ export default function PainFeverPage() {
     { key: 'sublingual', label: 'Sublingual', count: sublingualPicks.length },
   ];
 
-  let visiblePicks: typeof PAIN_FEVER_PICKS = [];
+  let visiblePicks: Pick[] = [];
   if (activeFilter === 'top') visiblePicks = topPicks;
   else if (activeFilter === 'oral') visiblePicks = oralPicks;
   else if (activeFilter === 'topical') visiblePicks = topicalPicks;
