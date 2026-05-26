@@ -1155,3 +1155,43 @@ This is the single live to-do list. Per-session priority lists in older session 
 
 ### Pre-launch milestone
 **Friends/family review target** — when Clean Picks content (item 1) is built out across all 5 categories with 8-15 picks each, you're ready to show the site to friends and family for critique. Likely 2-3 focused sessions away.
+
+---
+
+## ⭐ NEXT SESSION PRIORITY (May 26, 2026)
+
+### Active sprint: Clean Picks content build-out
+Pain & Fever shipped this session with 10 verified picks (4 mandatory from condition pages + 6 editorial expansion). Architecture refactored to per-category folders. Next sessions: fill remaining 4 categories before returning to interaction data work.
+
+### Adding a new category — locked architecture pattern
+1. Create `lib/clean-picks/[category]Picks.ts` (data file with `Pick[]` type)
+2. Create `app/clean-picks/[category]/page.tsx` (copy `pain-fever/page.tsx`, swap import + counts)
+3. In `app/clean-picks/page.tsx`: flip the category from `live: false` to `live: true` and update `PICK_COUNTS`
+
+Shared infrastructure already exists — no need to touch:
+- `components/clean-picks/PickCard.tsx`
+- `components/clean-picks/RetailerChips.tsx`
+- `components/clean-picks/CategoryTile.tsx`
+- `lib/clean-picks/classColors.ts`
+
+### Suggested category order by pre-research depth
+1. **Cold & Flu** — Umcka, Beekeeper's Naturals, Source Naturals Wellness Formula already verified (in transcripts)
+2. **Allergies** — Beekeeper's nasal sprays already verified; needs antihistamine + nasal spray audit
+3. **Sleep** — no pre-research yet; need melatonin + magnesium + drug-free options audit
+4. **First Aid** — no pre-research yet; needs wound care + burn relief audit
+
+### Locked editorial positions for Clean Picks
+- **Homeopathic products eligible** if clean-formulated + widely available. Cite Carlston M (ed), *Classical Homeopathy*, Churchill Livingstone 2003 (ISBN 0-443-06565-9) for evidentiary framework.
+- **Top Picks framing locked:** "Our 3 picks across oral, pediatric, and topical. Chosen for ingredient quality and availability at stores you can actually get to."
+- **Top Pick badges:** ⭐ ORAL PICK, ⭐ KIDS PICK, ⭐ TOPICAL PICK
+- **Retailer cap:** 4 visible chips + "+ More" rollup (no number — gas stations and others may also carry)
+- **Card design:** Option A (white card + colored top bar by drug class)
+- **Available-at scope:** CVS / Walgreens / Target / grocery / Costco / Whole Foods / Sprouts. NOT specialty wellness-only sites.
+- **Locked policy:** No new meds added to medsData until interaction pair coverage catches up. Too many "no data" results currently.
+
+### After Clean Picks ships (4 more categories)
+- Return to interaction database — continue pair-wise entries (~3-4 more batches to feel complete)
+- MAOI scope decision still pending
+- Friends/family review milestone
+
+---
