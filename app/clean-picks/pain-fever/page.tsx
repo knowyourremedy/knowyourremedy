@@ -22,7 +22,7 @@ export default function PainFeverPage() {
     { key: 'sublingual', label: 'Sublingual', count: sublingualPicks.length },
   ];
 
-  let visiblePicks = [];
+  let visiblePicks: typeof PAIN_FEVER_PICKS = [];
   if (activeFilter === 'top') visiblePicks = topPicks;
   else if (activeFilter === 'oral') visiblePicks = oralPicks;
   else if (activeFilter === 'topical') visiblePicks = topicalPicks;
