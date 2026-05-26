@@ -1126,3 +1126,32 @@ The Remedies → Conditions rename **IS LIVE in production** as of this session,
 7. **Build proper "Lifestyle Factors" category** (vs current Home placement for alcohol/caffeine/grapefruit) — requires picker grid redesign
 
 [NOTE] ConditionPageLayout.tsx (v1) is still on disk alongside ConditionPageLayoutV2.tsx. Holding for now — possibly still imported somewhere or kept as fallback. Future session can grep imports and decide.
+
+---
+
+## CURRENT PENDING WORK
+**Last cleanup:** May 25, 2026
+
+This is the single live to-do list. Per-session priority lists in older session updates are stale — ignore them. When items here are completed, mark them ✅ and leave them as a record, or remove if no longer relevant.
+
+### Launch-blocking
+1. **Clean Picks content build** — audit Conditions pages for products labeled "Cleaner choice" (or close variant), group by category (Pain & Fever / Cold & Flu / Allergies / Sleep / First Aid), write Clean Picks cards. Fill thin categories with "Decent" tier as fallback only. Workflow documented in May 25 Part 2 session update.
+2. **Stripe integration** for $10/year billing + founding member flow (per Section 7)
+3. **Email service** for welcome / verification / password reset / future dose reminders
+4. **Attorney review** of Terms + Privacy + Medical Disclaimer
+5. **Final QA pass** across all pages, devices, flows
+
+### Content depth (not launch-blocking but valuable)
+6. **More interaction database pair entries** — ~3-4 focused batches would feel content-complete. Tier 1 gaps: more Rx + Rx pairs, antihistamine + alcohol/sedation expansions, common pediatric specifics (acetaminophen + ibuprofen alternating). Database currently ~137 entries.
+7. **MAOI scope decision** — currently no MAOIs in db. Decide: in scope (write phenelzine/tranylcypromine pairs) or out of scope (acknowledge the gap)?
+8. **Add real prescription diuretics** (furosemide, spironolactone) — strengthens diuretic class warning beyond caffeine/alcohol/HCTZ stacking
+9. **Add kava as proper med entry** — was referenced in liver batch but doesn't exist in medsData
+10. **Build proper "Lifestyle Factors" category** (vs current Home placement for alcohol/caffeine/grapefruit) — requires picker grid redesign
+
+### Future / nice-to-have
+11. **PROJECT_NOTES architecture refactor** — split into PROJECT_NOTES.md (stable references) and SESSION_LOG.md (chronological journal). Do in a fresh dedicated session, not at tail-end.
+12. **ConditionPageLayout.tsx (v1) cleanup** — still on disk alongside v2. Grep for imports; delete if no longer used.
+13. **Post-launch:** items in Section 12 "Post-launch nice-to-haves"
+
+### Pre-launch milestone
+**Friends/family review target** — when Clean Picks content (item 1) is built out across all 5 categories with 8-15 picks each, you're ready to show the site to friends and family for critique. Likely 2-3 focused sessions away.
