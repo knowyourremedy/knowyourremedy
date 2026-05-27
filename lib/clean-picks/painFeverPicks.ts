@@ -15,12 +15,21 @@
 //   priceTier         - 'Standard' | '$$ premium' | etc.
 
 export type ClassKey =
+  // Pain & Fever
   | 'nsaidOral'
   | 'acetaminophen'
   | 'pediatricNsaid'
   | 'topicalNsaid'
   | 'topicalDrugFree'
-  | 'homeopathic';
+  | 'homeopathic'
+  // Cold & Flu
+  | 'expectorant'
+  | 'homeopathicLow'
+  | 'immuneHerbal'
+  | 'propolis'
+  | 'pediatricCombo'
+  | 'elderberry'
+  | 'topicalChestRub';
 
 export type PickForm = 'oral' | 'topical' | 'sublingual';
 export type TopPickCategory = 'oral' | 'kids' | 'topical';
@@ -41,30 +50,18 @@ export type Pick = {
 };
 
 export const PAIN_FEVER_PICKS: Pick[] = [
-  {
-    name: 'Advil Liqui-Gels',
-    activeIngredient: 'Ibuprofen 200mg',
-    classKey: 'nsaidOral',
-    classTag: 'NSAID',
-    form: 'oral',
-    topPick: 'oral',
-    subline: 'Headache, muscle, joint, back, menstrual, dental',
-    why: 'Most clinically supported OTC NSAID for inflammatory pain. Liqui-Gel format absorbs faster and skips the dyes used in coated tablet versions.',
-    honestNote: 'NSAID — take with food. Not for pregnancy after 20 weeks.',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery', 'Costco'],
-    priceTier: 'Standard',
-  },
+  
   {
     name: 'Tylenol Extra Strength Dye-Free',
     activeIngredient: 'Acetaminophen 500mg',
     classKey: 'acetaminophen',
     classTag: 'ACETAMINOPHEN',
     form: 'oral',
-    subline: 'Headache, fever, body aches when NSAIDs are off the table',
-    why: 'Single active ingredient, no artificial dyes. The cleanest mainstream adult acetaminophen on the shelf.',
-    honestNote: 'Stay under 4g/day total from all sources (many cold and flu products contain acetaminophen).',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
-    priceTier: 'Standard',
+    topPick: 'oral',
+    subline: 'Headache, fever, body aches, menstrual cramps, sore throat pain',
+    why: 'Single active ingredient, no artificial dyes. The cleanest mainstream adult oral pain reliever widely available — found at every drugstore, grocery, and big box.',
+    retailers: [],
+    priceTier: ""
   },
   {
     name: 'Voltaren Gel',

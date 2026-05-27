@@ -81,9 +81,9 @@ export default function SoreThroat() {
         },
         {
           name: 'Advil Liqui-Gels',
-          desc: 'Ibuprofen in liquid gel form. Anti-inflammatory that reduces throat swelling and pain. More effective than acetaminophen for severe throat inflammation.',
-          rating: '🟢 Cleaner choice',
-          ratingColor: '#27ae60',
+          desc: 'Ibuprofen in liquid gel form. Anti-inflammatory that reduces throat swelling and pain. More effective than acetaminophen for severe throat inflammation. Honest: contains FD&C Green No. 3 dye — no widely-available adult oral ibuprofen is currently dye-free.',
+          rating: '🟡 Decent choice',
+          ratingColor: '#d97706',
           ageRange: 'Age 6mo+',
           pregnancySafe: 'avoid',
         },

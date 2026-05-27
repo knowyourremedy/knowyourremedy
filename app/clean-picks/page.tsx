@@ -2,6 +2,7 @@
 
 import CategoryTile from '@/components/clean-picks/CategoryTile';
 import { PAIN_FEVER_PICKS } from '@/lib/clean-picks/painFeverPicks';
+import { COLD_FLU_PICKS } from '@/lib/clean-picks/coldFluPicks';
 
 // ─── Category metadata ─────────────────────────────────────
 const CATEGORIES = [
@@ -16,8 +17,8 @@ const CATEGORIES = [
     key: 'cold-flu',
     label: 'Cold & flu',
     blurb: 'Decongestants, cough relief, immune support',
-    accentColor: '#d4cbb8',
-    live: false,
+    accentColor: '#0E7490',
+    live: true,
   },
   {
     key: 'allergies',
@@ -46,12 +47,12 @@ const CATEGORIES = [
 // As each new category goes live, add its count here AND flip
 // the category's `live: false` to `live: true` in CATEGORIES above.
 const PICK_COUNTS: Record<string, number> = {
-  'pain-fever': PAIN_FEVER_PICKS.length,
-  'cold-flu': 0,
-  'allergies': 0,
-  'sleep': 0,
-  'first-aid': 0,
-};
+    'pain-fever': PAIN_FEVER_PICKS.length,
+    'cold-flu': COLD_FLU_PICKS.length,
+    'allergies': 0,
+    'sleep': 0,
+    'first-aid': 0,
+  };
 
 export default function CleanPicksPage() {
   return (
@@ -143,7 +144,7 @@ export default function CleanPicksPage() {
         lineHeight: 1.6,
         marginBottom: '2rem',
       }}>
-        <strong style={{ color: '#2d4a3e' }}>1 of 5 categories live.</strong> Pain & Fever ships with {PAIN_FEVER_PICKS.length} verified picks. Other categories are in active build — sign up below to be notified as they go live.
+        <strong style={{ color: '#2d4a3e' }}>2 of 5 categories live.</strong> Pain & Fever ({PAIN_FEVER_PICKS.length} picks) and Cold & Flu ({COLD_FLU_PICKS.length} picks) are live. Allergies, Sleep, and First Aid coming next — sign up below to be notified.
       </div>
 
       {/* Email signup */}
