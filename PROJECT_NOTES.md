@@ -3,7 +3,7 @@ KnowYourRemedy.com — Project Notes
 This is the single source of truth for project context, decisions, and current state.
 If you're a new Claude starting a session: read this entire file before responding to anything. The user paste-references this file at the start of every chat.
 
-Last Updated: May 26, 2026
+Last Updated: May 28, 2026
 
 ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -228,11 +228,16 @@ Cold & Flu — 13 picks (shipped May 26)
 
 Top Picks: Umcka (ORAL), Genexa Kids' Multi-Symptom (KIDS), Badger Aromatic Chest Rub (TOPICAL)
 
+Allergies — 8 picks (shipped May 28)
+
+Top Picks: Genexa Allergy Care (ORAL), Genexa Kids' Allergy (KIDS), Xlear Nasal Spray (NASAL)
+Lineup: 3 oral (Genexa Allergy Care, Genexa Kids' Allergy, Boiron AllergyCalm), 3 nasal (Xlear, NeilMed Sinus Rinse, Beekeeper's Nasal Spray), 2 eye (Similasan Allergy Eye Relief, Alaway Preservative Free)
+Allergies: antihistamine, salineNasal (reuses homeopathic + propolis). NEW PickForm values added: 'nasal', 'eye'. NEW TopPickCategory: 'nasal'.
+
 
 
 Pending categories (in priority order)
 
-Allergies — Beekeeper's nasal sprays pre-verified; needs antihistamine + nasal spray audit
 Sleep — no pre-research yet (melatonin, magnesium, drug-free options)
 First Aid — no pre-research yet (wound care, burn relief)
 
@@ -513,7 +518,7 @@ Add a rule object to CLASS_RULES in lib/interactionClassRules.js. Engine handles
 16. PENDING WORK
 Launch-blocking
 
-Clean Picks content build — finish 3 remaining categories (Allergies → Sleep → First Aid)
+Clean Picks content build — finish 2 remaining categories (Sleep → First Aid). Allergies shipped May 28.
 🚨 Condition page rating audit — dedicated session needed. Search project-wide for '🟢 Cleaner choice'. Verify every product labeled Cleaner against locked editorial standard (Section 4). Known candidates for downgrade:
 
 Sudafed (Sinus Congestion page) — has dyes + titanium dioxide
@@ -550,6 +555,14 @@ Pre-launch milestone
 Friends/family review — when Clean Picks ships across all 5 categories with 8-15 picks each, ready for critique. Likely 2-3 focused sessions away.
 
 17. CHANGE LOG (recent shipped work)
+
+May 28 — Allergies Clean Picks shipped
+
+8 verified picks at /clean-picks/allergies (3 oral, 3 nasal, 2 eye)
+Editorial: Zyrtec/Claritin/Allegra tablets REJECTED (titanium dioxide, verified via DailyMed/FDA). "Dye-free" kids' cetirizine syrups REJECTED (parabens + propylene glycol). Clean oral options are homeopathic or sedating; the only clean conventional drug is Alaway Preservative Free (ketotifen) eye drops.
+Architecture: 2 new classKeys (antihistamine = coral, salineNasal = Blue B slate #4a6781); 2 new PickForm values (nasal, eye); new 'nasal' top-pick bucket. Reused homeopathic + propolis classes.
+Also fixed: Tylenol Extra Strength Dye-Free on Pain & Fever had empty retailers/priceTier — populated.
+
 May 26 — Cold & Flu Clean Picks + Editorial Standard Locked
 
 13 verified Cold & Flu picks shipped at /clean-picks/cold-flu

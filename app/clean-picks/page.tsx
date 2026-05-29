@@ -3,6 +3,7 @@
 import CategoryTile from '@/components/clean-picks/CategoryTile';
 import { PAIN_FEVER_PICKS } from '@/lib/clean-picks/painFeverPicks';
 import { COLD_FLU_PICKS } from '@/lib/clean-picks/coldFluPicks';
+import { ALLERGY_PICKS } from '@/lib/clean-picks/allergyPicks';
 
 // ─── Category metadata ─────────────────────────────────────
 const CATEGORIES = [
@@ -24,8 +25,8 @@ const CATEGORIES = [
     key: 'allergies',
     label: 'Allergies',
     blurb: 'Antihistamines, nasal sprays, eye drops',
-    accentColor: '#d4cbb8',
-    live: false,
+    accentColor: '#D85A30',
+    live: true,
   },
   {
     key: 'sleep',
@@ -49,7 +50,7 @@ const CATEGORIES = [
 const PICK_COUNTS: Record<string, number> = {
     'pain-fever': PAIN_FEVER_PICKS.length,
     'cold-flu': COLD_FLU_PICKS.length,
-    'allergies': 0,
+    'allergies': ALLERGY_PICKS.length,
     'sleep': 0,
     'first-aid': 0,
   };
@@ -144,7 +145,7 @@ export default function CleanPicksPage() {
         lineHeight: 1.6,
         marginBottom: '2rem',
       }}>
-        <strong style={{ color: '#2d4a3e' }}>2 of 5 categories live.</strong> Pain & Fever ({PAIN_FEVER_PICKS.length} picks) and Cold & Flu ({COLD_FLU_PICKS.length} picks) are live. Allergies, Sleep, and First Aid coming next — sign up below to be notified.
+        <strong style={{ color: '#2d4a3e' }}>3 of 5 categories live.</strong> Pain & Fever ({PAIN_FEVER_PICKS.length} picks), Cold & Flu ({COLD_FLU_PICKS.length} picks), and Allergies ({ALLERGY_PICKS.length} picks) are live. Sleep and First Aid coming next — sign up below to be notified.
       </div>
 
       {/* Email signup */}

@@ -88,6 +88,20 @@ export const CLASS_COLORS = {
     tagBg: '#CCFBF1',
     tagText: '#134E4A',
   },
+
+  // ─── Allergies classes ───
+  antihistamine: {
+    bar: '#D85A30',
+    label: '#993C1D',
+    tagBg: '#FAECE7',
+    tagText: '#4A1B0C',
+  },
+  salineNasal: {
+    bar: '#4A6781',
+    label: '#3A4F63',
+    tagBg: '#E8EEF2',
+    tagText: '#2A3D4D',
+  },
 };
 
 // ─── Top Pick badge labels ────────────────────────────────
@@ -95,4 +109,5 @@ export const TOP_PICK_LABELS = {
   oral: '⭐ ORAL PICK',
   kids: '⭐ KIDS PICK',
   topical: '⭐ TOPICAL PICK',
+  nasal: '⭐ NASAL PICK',
 };

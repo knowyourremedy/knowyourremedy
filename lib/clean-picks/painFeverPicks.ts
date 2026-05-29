@@ -1,12 +1,12 @@
 // ─── Pain & Fever Clean Picks ─────────────────────────────
-// Each entry conforms to the Pick type defined in components/clean-picks/PickCard.tsx
+// Each entry conforms to the Pick type defined below.
 // Field reference:
 //   name              - product display name
 //   activeIngredient  - active ingredient + strength (shown as small caps)
-//   classKey          - key into CLASS_COLORS from classColors.js
+//   classKey          - key into CLASS_COLORS from classColors.ts
 //   classTag          - short uppercase tag shown in pill (NSAID, etc.)
-//   form              - 'oral' | 'topical' | 'sublingual' (filter category)
-//   topPick           - optional: 'oral' | 'kids' | 'topical' (Top Picks tab badge)
+//   form              - 'oral' | 'topical' | 'sublingual' | 'nasal' | 'eye' (filter category)
+//   topPick           - optional: 'oral' | 'kids' | 'topical' | 'nasal' (Top Picks tab badge)
 //   ageBadge          - optional: pediatric age indicator (e.g., '👶 Ages 2+')
 //   subline           - one-line "what it's for"
 //   why               - longer "why this pick" callout
@@ -29,10 +29,13 @@ export type ClassKey =
   | 'propolis'
   | 'pediatricCombo'
   | 'elderberry'
-  | 'topicalChestRub';
+  | 'topicalChestRub'
+  // Allergies
+  | 'antihistamine'
+  | 'salineNasal';
 
-export type PickForm = 'oral' | 'topical' | 'sublingual';
-export type TopPickCategory = 'oral' | 'kids' | 'topical';
+export type PickForm = 'oral' | 'topical' | 'sublingual' | 'nasal' | 'eye';
+export type TopPickCategory = 'oral' | 'kids' | 'topical' | 'nasal';
 
 export type Pick = {
   name: string;
@@ -60,8 +63,8 @@ export const PAIN_FEVER_PICKS: Pick[] = [
     topPick: 'oral',
     subline: 'Headache, fever, body aches, menstrual cramps, sore throat pain',
     why: 'Single active ingredient, no artificial dyes. The cleanest mainstream adult oral pain reliever widely available — found at every drugstore, grocery, and big box.',
-    retailers: [],
-    priceTier: ""
+    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
+    priceTier: 'Standard',
   },
   {
     name: 'Voltaren Gel',
