@@ -5,12 +5,22 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/remedies',
-        destination: '/conditions',
+        destination: '/clean-picks',
         permanent: true,
       },
       {
         source: '/remedies/:slug',
-        destination: '/conditions/:slug',
+        destination: '/clean-picks',
+        permanent: true,
+      },
+      {
+        source: '/conditions',
+        destination: '/clean-picks',
+        permanent: true,
+      },
+      {
+        source: '/conditions/:slug',
+        destination: '/clean-picks',
         permanent: true,
       },
       {

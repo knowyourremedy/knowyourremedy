@@ -55,9 +55,7 @@ export default function Footer() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
               {[
-                { label: 'Remedies', href: '/remedies' },
-                { label: 'Dosage Calculator', href: '/dosage' },
-                { label: 'Clean Brand Guide', href: '/brands' },
+                { label: 'Clean Picks', href: '/clean-picks' },
                 { label: 'Oil Library', href: '/oils' },
               ].map((link) => (
                 <a key={link.href} href={link.href} style={{

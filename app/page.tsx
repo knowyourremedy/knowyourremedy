@@ -1,21 +1,10 @@
 'use client'
 
 import Footer from '@/components/Footer'
-import { useState } from 'react'
-import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 export default function Home() {
-  const [search, setSearch] = useState('')
-
-  const handleSearch = () => {
-    if (search.trim()) {
-      window.location.href = `/conditions?search=${encodeURIComponent(search)}`
-    }
-  }
-
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#faf7f2' }}>
-      
 
       {/* Hero Section */}
       <section style={{
@@ -25,7 +14,6 @@ export default function Home() {
         position: 'relative',
         overflow: 'hidden'
       }}>
-        {/* Decorative circles */}
         <div style={{
           position: 'absolute', top: '-60px', right: '-60px',
           width: '300px', height: '300px', borderRadius: '50%',
@@ -78,55 +66,42 @@ export default function Home() {
             From the shelf to the root and everything in between. Natural options, cleaner mainstream choices, and honest guidance — all in one place.
           </p>
 
-          {/* Search Bar */}
           <div style={{
             display: 'flex',
-            gap: '0',
-            maxWidth: '520px',
-            margin: '0 auto',
-            backgroundColor: '#fff',
-            borderRadius: '50px',
-            overflow: 'hidden',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.15)'
+            gap: '0.75rem',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
           }}>
-            <input
-              type="text"
-              placeholder="Search a symptom or ingredient..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleSearch()}
-              style={{
-                flex: 1,
-                padding: '1rem 1.5rem',
-                border: 'none',
-                outline: 'none',
-                fontSize: '0.95rem',
-                fontFamily: 'var(--font-inter), sans-serif',
-                backgroundColor: 'transparent',
-                color: '#2d2d2d'
-              }}
-            />
-            <button
-              onClick={handleSearch}
-              style={{
-                padding: '1rem 1.75rem',
-                backgroundColor: '#2d4a3e',
-                color: '#fff',
-                border: 'none',
-                fontSize: '0.9rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                fontFamily: 'var(--font-inter), sans-serif',
-                borderRadius: '0 50px 50px 0'
-              }}
-            >
-              Search
-            </button>
+            <a href="/clean-picks" style={{
+              backgroundColor: '#fff',
+              color: '#2d4a3e',
+              padding: '0.85rem 1.75rem',
+              borderRadius: '50px',
+              textDecoration: 'none',
+              fontSize: '0.95rem',
+              fontWeight: '600',
+              fontFamily: 'var(--font-inter), sans-serif',
+            }}>
+              Browse Clean Picks
+            </a>
+            <a href="/oils" style={{
+              backgroundColor: 'transparent',
+              color: '#fff',
+              border: '1px solid rgba(255,255,255,0.5)',
+              padding: '0.85rem 1.75rem',
+              borderRadius: '50px',
+              textDecoration: 'none',
+              fontSize: '0.95rem',
+              fontWeight: '600',
+              fontFamily: 'var(--font-inter), sans-serif',
+            }}>
+              Explore the Oil Library
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Four Path Cards */}
+      {/* Feature Cards */}
       <section style={{
         maxWidth: '1000px',
         margin: '-3rem auto 0',
@@ -136,42 +111,21 @@ export default function Home() {
       }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '1rem'
         }}>
           {[
             {
-              emoji: '🌿',
-              title: 'Conditions',
-              desc: 'Every option, no agenda',
-              href: '/conditions',
-              accent: '#2d4a3e'
-            },
-            {
-              icon: <DosageCalculatorIcon size={32} />,
-              title: 'Dosage Calculator',
-              desc: 'By weight, age, and medication',
-              href: '/dosage-calculator',
-              accent: '#4a6741'
-            },
-            {
-              emoji: '💊🌿',
-              title: 'Interaction Checker',
-              desc: 'Check if your medications are safe to combine',
-              href: '/interaction-checker',
-              accent: '#5a7a55'
-            },
-            {
               emoji: '✨',
-              title: 'Everyday Clean Picks',
-              desc: 'Cleaner products you can grab at the drugstore',
+              title: 'Clean Picks',
+              desc: 'Everyday medicines and remedies rated by ingredient cleanliness',
               href: '/clean-picks',
-              accent: '#???',
+              accent: '#2d4a3e'
             },
             {
               emoji: '🌱',
               title: 'Oil Library',
-              desc: 'Safety, dilution, and sourcing',
+              desc: 'Safety, dilution, and sourcing — what to use, dilute, or never ingest',
               href: '/oils',
               accent: '#6b8f65'
             },
@@ -197,8 +151,8 @@ export default function Home() {
             }}
             >
               <div style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '3rem' }}>
-  {card.icon ? card.icon : <span style={{ fontSize: '2.5rem' }}>{card.emoji}</span>}
-</div>
+                <span style={{ fontSize: '2.5rem' }}>{card.emoji}</span>
+              </div>
               <div style={{
                 fontFamily: 'var(--font-playfair), Georgia, serif',
                 fontWeight: '700',
@@ -263,7 +217,7 @@ export default function Home() {
             {
               icon: '✅❌',
               title: 'Clean or avoid',
-              desc: 'Every mainstream brand rated by ingredient cleanliness. Know exactly what you\'re buying before you buy it.'
+              desc: 'Every mainstream product rated by ingredient cleanliness. Know exactly what you\'re buying before you buy it.'
             },
             {
               icon: '🌱',
@@ -273,7 +227,7 @@ export default function Home() {
             {
               icon: '👨‍👩‍👧',
               title: 'Built for families',
-              desc: 'Dosing by weight and age for infants through seniors. The answer you need at 2am when you need it most.'
+              desc: 'Clean picks for kids and adults alike, vetted the same honest way — so you know what you\'re giving your family.'
             },
           ].map((item) => (
             <div key={item.title} style={{
@@ -306,7 +260,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App CTA Section */}
+      {/* Founding Member CTA Section */}
       <section style={{
         backgroundColor: '#2d4a3e',
         padding: '4rem 2rem',
@@ -315,9 +269,20 @@ export default function Home() {
       }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <div style={{
-            fontSize: '2.5rem',
-            marginBottom: '1rem'
-          }}>📱</div>
+            display: 'inline-block',
+            backgroundColor: 'rgba(255,255,255,0.12)',
+            color: '#c8e6c0',
+            padding: '0.35rem 0.9rem',
+            borderRadius: '50px',
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            marginBottom: '1.25rem',
+            fontFamily: 'var(--font-inter), sans-serif'
+          }}>
+            Founding Members
+          </div>
           <h2 style={{
             fontFamily: 'var(--font-playfair), Georgia, serif',
             fontSize: 'clamp(1.5rem, 3vw, 2rem)',
@@ -325,7 +290,7 @@ export default function Home() {
             color: '#ffffff',
             marginBottom: '1rem'
           }}>
-            The app is coming
+            Lock in $10/year — for life
           </h2>
           <p style={{
             fontFamily: 'var(--font-inter), sans-serif',
@@ -334,22 +299,21 @@ export default function Home() {
             lineHeight: '1.7',
             marginBottom: '2rem'
           }}>
-            Scan any product barcode in any store and instantly know if it\'s clean, caution, or avoid. Save family profiles. Access everything offline. $10 per year — founding member price.
+            The barcode scanner is on the way — point it at any product and instantly know if it&apos;s clean, caution, or avoid. Join now as a founding member and keep today&apos;s price for life, even as it rises for everyone after. Free to browse everything today; no charge until the scanner launches.
           </p>
-          <div style={{
+          <a href="/account" style={{
             display: 'inline-block',
-            backgroundColor: 'rgba(255,255,255,0.15)',
-            color: '#fff',
+            backgroundColor: '#fff',
+            color: '#2d4a3e',
             padding: '0.875rem 2rem',
             borderRadius: '50px',
             fontSize: '0.95rem',
             fontWeight: '600',
             fontFamily: 'var(--font-inter), sans-serif',
-            border: '1px solid rgba(255,255,255,0.3)',
-            cursor: 'pointer'
+            textDecoration: 'none',
           }}>
-            Join the waitlist — coming soon
-          </div>
+            Claim your founding spot
+          </a>
         </div>
       </section>
 

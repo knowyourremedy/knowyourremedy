@@ -30,24 +30,6 @@ type FamilyProfile = {
   created_at: string
 }
 
-type DoseLog = {
-  id: string
-  user_id: string
-  family_profile_id: string | null
-  medication_name: string
-  dose_amount: string | null
-  taken_at: string
-  notes: string | null
-}
-
-type SavedRemedy = {
-  id: string
-  user_id: string
-  remedy_slug: string
-  remedy_title: string | null
-  saved_at: string
-}
-
 interface AccountDashboardProps {
   userId: string
   userEmail: string
@@ -57,28 +39,21 @@ interface AccountDashboardProps {
 export default function AccountDashboard({ userId, userEmail, emailVerified }: AccountDashboardProps) {
   const [profile, setProfile] = useState<Profile | null>(null)
   const [familyProfiles, setFamilyProfiles] = useState<FamilyProfile[]>([])
-  const [doseLogs, setDoseLogs] = useState<DoseLog[]>([])
-  const [savedRemedies, setSavedRemedies] = useState<SavedRemedy[]>([])
   const [loading, setLoading] = useState(true)
   const [showAddProfile, setShowAddProfile] = useState(false)
   const [showVerifyBanner, setShowVerifyBanner] = useState(!emailVerified)
 
-  // Load all data on mount
   useEffect(() => {
     const loadData = async () => {
       setLoading(true)
 
-      const [profileRes, familyRes, dosesRes, remediesRes] = await Promise.all([
+      const [profileRes, familyRes] = await Promise.all([
         supabase.from('profiles').select('*').eq('id', userId).single(),
         supabase.from('family_profiles').select('*').eq('user_id', userId).order('created_at', { ascending: true }),
-        supabase.from('dose_logs').select('*').eq('user_id', userId).order('taken_at', { ascending: false }).limit(5),
-        supabase.from('saved_remedies').select('*').eq('user_id', userId).order('saved_at', { ascending: false }).limit(6),
       ])
 
       if (profileRes.data) setProfile(profileRes.data)
       if (familyRes.data) setFamilyProfiles(familyRes.data)
-      if (dosesRes.data) setDoseLogs(dosesRes.data)
-      if (remediesRes.data) setSavedRemedies(remediesRes.data)
 
       setLoading(false)
     }
@@ -110,7 +85,6 @@ export default function AccountDashboard({ userId, userEmail, emailVerified }: A
     ? new Date(profile.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
     : ''
 
-  // FREE TIER LIMITS
   const FREE_TIER_PROFILE_LIMIT = 1
   const hasReachedProfileLimit = !isPremium && familyProfiles.length >= FREE_TIER_PROFILE_LIMIT
 
@@ -223,7 +197,7 @@ export default function AccountDashboard({ userId, userEmail, emailVerified }: A
               </p>
             </div>
             <p className="text-sm text-[#3a3a3a] leading-relaxed mb-3">
-              Unlock unlimited family profiles, dose reminders, your medicine cabinet tracker, and more for <strong className="text-[#2d4a3e]">$10/year</strong>.
+              Unlock the barcode scanner, unlimited family profiles, and more for <strong className="text-[#2d4a3e]">$10/year</strong> — locked for life as a founding member.
             </p>
             <button
               disabled
@@ -260,7 +234,7 @@ export default function AccountDashboard({ userId, userEmail, emailVerified }: A
             <div className="p-6 bg-white border border-dashed border-[#d9d4c5] rounded-lg text-center">
               <p className="text-sm text-[#6b6b6b] mb-1">No profiles yet</p>
               <p className="text-xs text-[#8b8b8b]">
-                Add yourself or a family member to start tracking doses and getting personalized dosage calculations.
+                Add yourself or a family member to keep their clean picks and preferences in one place.
               </p>
             </div>
           ) : (
@@ -270,7 +244,6 @@ export default function AccountDashboard({ userId, userEmail, emailVerified }: A
                   key={fp.id}
                   profile={fp}
                   onUpdate={() => {
-                    // Reload family profiles
                     supabase
                       .from('family_profiles')
                       .select('*')
@@ -289,97 +262,6 @@ export default function AccountDashboard({ userId, userEmail, emailVerified }: A
             <p className="text-xs text-[#8b8b8b] text-center mt-3">
               You&apos;ve reached the free tier limit. <button className="text-[#2d4a3e] underline">Upgrade to Premium</button> for unlimited profiles.
             </p>
-          )}
-        </section>
-
-        {/* Recent dose logs section */}
-        <section className="mb-10">
-          <div className="flex items-baseline justify-between mb-4">
-            <h2 className="text-xl font-serif text-[#1a1a1a]">
-              Recent Doses
-            </h2>
-            {doseLogs.length > 0 && (
-              <Link href="/dose-history" className="text-xs text-[#2d4a3e] hover:text-[#1f3329] underline">
-                View all
-              </Link>
-            )}
-          </div>
-
-          {doseLogs.length === 0 ? (
-            <div className="p-6 bg-white border border-dashed border-[#d9d4c5] rounded-lg text-center">
-              <p className="text-sm text-[#6b6b6b] mb-1">No doses logged yet</p>
-              <p className="text-xs text-[#8b8b8b]">
-                Use the dosage calculator or any remedy page to log when you take something.
-              </p>
-            </div>
-          ) : (
-            <div className="bg-white border border-[#e5e3dc] rounded-lg divide-y divide-[#e5e3dc]">
-              {doseLogs.map((log) => (
-                <div key={log.id} className="px-4 py-3 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-[#1a1a1a]">{log.medication_name}</p>
-                    <p className="text-xs text-[#6b6b6b]">
-                      {log.dose_amount && `${log.dose_amount} · `}
-                      {new Date(log.taken_at).toLocaleString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        hour: 'numeric',
-                        minute: '2-digit',
-                      })}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
-
-        {/* Saved remedies / Medicine cabinet section */}
-        <section className="mb-10">
-          <div className="flex items-baseline justify-between mb-4">
-            <div>
-              <h2 className="text-xl font-serif text-[#1a1a1a]">
-                Medicine Cabinet
-              </h2>
-              <p className="text-xs text-[#6b6b6b] mt-0.5">
-                Favorites, used, and owned items
-              </p>
-            </div>
-            {!isPremium && (
-              <span className="text-[10px] px-2 py-0.5 bg-[#f4f1ea] border border-[#d9d4c5] text-[#2d4a3e] rounded-md uppercase tracking-wide font-medium">
-                Premium
-              </span>
-            )}
-          </div>
-
-          {!isPremium ? (
-            <div className="p-6 bg-[#f4f1ea] border border-[#d9d4c5] rounded-lg text-center">
-              <p className="text-sm text-[#3a3a3a] mb-1 font-medium">
-                🔒 Unlock your Medicine Cabinet
-              </p>
-              <p className="text-xs text-[#6b6b6b] leading-relaxed max-w-md mx-auto">
-                Track favorites, items you&apos;ve tried, what&apos;s in your cabinet, what&apos;s running low, and get cleaner-alternative recommendations.
-              </p>
-            </div>
-          ) : savedRemedies.length === 0 ? (
-            <div className="p-6 bg-white border border-dashed border-[#d9d4c5] rounded-lg text-center">
-              <p className="text-sm text-[#6b6b6b] mb-1">Your cabinet is empty</p>
-              <p className="text-xs text-[#8b8b8b]">
-                Save remedies you use, own, or want to try by tapping the heart icon on any remedy page.
-              </p>
-            </div>
-          ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {savedRemedies.map((remedy) => (
-                <Link
-                  key={remedy.id}
-                  href={`/remedies/${remedy.remedy_slug}`}
-                  className="block p-3 bg-white border border-[#e5e3dc] rounded-lg hover:border-[#2d4a3e] hover:shadow-sm transition-all"
-                >
-                  <p className="text-sm font-medium text-[#1a1a1a]">{remedy.remedy_title || remedy.remedy_slug}</p>
-                </Link>
-              ))}
-            </div>
           )}
         </section>
 
@@ -483,7 +365,6 @@ function FamilyProfileCard({ profile, onUpdate }: { profile: FamilyProfile; onUp
 
       <div className="text-xs text-[#6b6b6b] space-y-0.5">
         {age !== null && <p>Age: {age}</p>}
-        {profile.weight_lbs && <p>Weight: {profile.weight_lbs} lbs</p>}
         {profile.is_pregnant && (
           <p className="text-[#2d4a3e] font-medium">🤰 Currently pregnant</p>
         )}
@@ -609,7 +490,7 @@ function AddProfileModal({
               max={new Date().toISOString().split('T')[0]}
               className="w-full px-3 py-2.5 border border-[#d4d1c5] rounded-md text-sm focus:outline-none focus:border-[#2d4a3e]"
             />
-            <p className="text-xs text-[#8b8b8b] mt-1">Used for age-based dosing.</p>
+            <p className="text-xs text-[#8b8b8b] mt-1">Helps tailor age-appropriate picks.</p>
           </div>
 
           <div>
@@ -624,7 +505,7 @@ function AddProfileModal({
               className="w-full px-3 py-2.5 border border-[#d4d1c5] rounded-md text-sm focus:outline-none focus:border-[#2d4a3e]"
               placeholder="e.g. 35"
             />
-            <p className="text-xs text-[#8b8b8b] mt-1">Used for weight-based pediatric dosing.</p>
+            <p className="text-xs text-[#8b8b8b] mt-1">Optional.</p>
           </div>
 
           <div className="p-3 bg-[#fafaf7] border border-[#e5e3dc] rounded-md">
@@ -636,7 +517,7 @@ function AddProfileModal({
                 className="mt-0.5 w-4 h-4 accent-[#2d4a3e]"
               />
               <span className="text-xs text-[#3a3a3a] leading-relaxed">
-                Currently pregnant — flag pregnancy-unsafe remedies for this profile.
+                Currently pregnant — flag pregnancy-unsafe products for this profile.
               </span>
             </label>
           </div>

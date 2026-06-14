@@ -52,10 +52,7 @@ export default function Nav() {
         alignItems: 'center'
       }} className="desktop-nav">
         {[
-          { label: 'Conditions', href: '/conditions' },
-          { label: 'Dosage Calculator', href: '/dosage-calculator' },
-          { label: 'Interactions', href: '/interaction-checker' },
-          { label: 'Everyday Clean Picks', href: '/clean-picks' },
+          { label: 'Clean Picks', href: '/clean-picks' },
           { label: 'Oil Library', href: '/oils' },
         ].map((link) => (
           <a key={link.href} href={link.href} style={{
@@ -149,10 +146,7 @@ export default function Nav() {
           zIndex: 99,
         }}>
           {[
-            { label: 'Conditions', href: '/conditions' },
-            { label: 'Dosage Calculator', href: '/dosage-calculator' },
-            { label: 'Interactions', href: '/interaction-checker' },
-            { label: 'Everyday Clean Picks', href: '/clean-picks' },
+            { label: 'Clean Picks', href: '/clean-picks' },
             { label: 'Oil Library', href: '/oils' },
           ].map((link) => (
             <a key={link.href} href={link.href} style={{

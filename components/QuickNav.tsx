@@ -1,7 +1,5 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import { ReactNode } from 'react'
-import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 type NavLink = {
   icon: string
@@ -11,9 +9,6 @@ type NavLink = {
 
 const links: NavLink[] = [
     { icon: '🏠', label: 'Home', href: '/' },
-    { icon: '🌿', label: 'Conditions', href: '/conditions' },
-    { icon: 'DOSAGE_SVG', label: 'Dosage', href: '/dosage-calculator' },
-    { icon: '💊🌿', label: 'Interactions', href: '/interaction-checker' },
     { icon: '✨', label: 'Clean Picks', href: '/clean-picks' },
     { icon: '🌱', label: 'Oil Library', href: '/oils' },
   ]
@@ -50,7 +45,6 @@ export default function QuickNav() {
             pathname === link.href ||
             (pathname.startsWith(link.href + '/') && link.href !== '/')
           return (
-            
             <a key={link.href}
               href={link.href}
               style={{
@@ -71,14 +65,7 @@ export default function QuickNav() {
               }}
             >
               <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                {link.icon === 'DOSAGE_SVG' ? (
-                  <DosageCalculatorIcon
-                    size={16}
-                    color={active ? '#ffffff' : '#2d4a3e'}
-                  />
-                ) : (
-                  link.icon
-                )}
+                {link.icon}
               </span>
               {link.label}
             </a>
