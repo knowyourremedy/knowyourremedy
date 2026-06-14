@@ -3,7 +3,7 @@ KnowYourRemedy.com — Project Notes
 This is the single source of truth for project context, decisions, and current state.
 If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: May 28, 2026 (post-pivot restructure)
+Last Updated: May 28, 2026 (post-removal)
 
 ================================================================
 ⚡ READ FIRST — How Brandon Works
@@ -17,18 +17,21 @@ Communication rules
 - Mark recommendations "(my pick)" when offering options. Decisive beats infinite optionality; he'll override when he disagrees.
 - Sketch visual mockups in the Visualizer BEFORE writing code for any UI/editorial decision. Mockups have saved 2-3 wrong directions per session.
 - Verify state from current files BEFORE asserting. PROJECT_NOTES can lag reality — check the actual file before pasting edits.
+- When updating these notes, paste the WHOLE file, not section-by-section edits — it's easier for him to drop in one file.
 
 Code & file rules
 - New files: send the New-Item terminal command (backslash paths) so he creates it that way. New-Item path\file.ext and mkdir path\folder are the patterns; New-Item ... -ItemType File -Force creates the folder too.
 - PowerShell uses ; not && for chaining.
 - PowerShell Rename-Item takes a filename, not a path, as the second argument.
-- Multi-edit to one file = full file rewrite, not patches. Find-and-replace edits compound paste errors.
+- Multi-edit to one file = full file rewrite, not patches. Find-and-replace edits compound paste errors. This applies to notes/docs too — give him the whole file.
 - < characters in JSX tags occasionally strip on paste — check that <a, <div, <Component opening brackets survived.
 - Long pastes can truncate — verify the bottom matches intent.
 
 File-system gotchas
 - TypeScript Cursor cache is sticky. After renaming .js → .ts or deleting/renaming, run Ctrl+Shift+P → "TypeScript: Restart TS Server". If errors persist, Developer: Reload Window.
+- After deleting routes, the .next cache holds stale per-route type validators — clear it: Remove-Item -Recurse -Force .next; npm run build.
 - Check for duplicate files when fighting phantom errors: Get-ChildItem lib\clean-picks\.
+- Run `npm run build` to catch dangling imports after big deletions — the Problems tab can lie, the build won't.
 - Reduce push frequency. Push at feature/category milestones, not between every batch.
 - Hold PROJECT_NOTES updates until the end of the session (done for the day), not mid-session.
 
@@ -62,11 +65,12 @@ The moat (why we win)
 KEEP & EXPAND (the heart)
 - Everyday Clean Picks — the core, and the manual version of the scanner. Rate mainstream products by ingredient cleanliness, explain why, build each as a standalone searchable page.
 - Oil Library — differentiated, trustworthy oil-safety info. Grounded in Valerie Ann Worwood's teachings. Frame toward caution/safety ("what never to ingest," "what to dilute"), not encouraging ingestion. IP: reference and attribute Worwood; write original content; do NOT reproduce her charts/text/recipes verbatim.
+- Accounts (free) + founding-member signups — top of funnel + the conversion engine for the eventual paid scanner.
 
-CUT ENTIRELY (built code that now needs removal)
-- Dosage Calculator — liability (individualized dosing), heavy build, low conversion.
-- Interaction Checker — liability ("safe to combine" verdicts), no payoff.
-- Conditions / Remedies pages — commodity content we can't outrank vs Healthline/WebMD, off-mission, treatment-advice liability.
+CUT — REMOVED May 28 (see change log)
+- Dosage Calculator — liability (individualized dosing), heavy build, low conversion. GONE.
+- Interaction Checker — liability ("safe to combine" verdicts), no payoff. GONE.
+- Conditions / Remedies pages — commodity content we can't outrank vs Healthline/WebMD, off-mission, treatment-advice liability. GONE.
 We are OUT of the "how to treat/medicate" business and INTO the "what should I buy, and is it clean" business.
 
 ================================================================
@@ -84,7 +88,7 @@ Typography
 
 Section label pattern (Blue B uppercase): fontSize 0.78rem, fontWeight 700, uppercase, letterSpacing 0.07em, color #4a6781, followed by a 28px × 2px rule in #4a6781. Used on reference pages (Clean Picks, Oils, About/Legal).
 
-Icons (LOCKED): Clean Picks ✨ · Essential Oils 🌱 · Home 🏠. (Dosage Calculator / Interaction Checker icons retired with those features.)
+Icons (LOCKED): Clean Picks ✨ · Essential Oils 🌱 · Home 🏠. (Dosage Calculator / Interaction Checker icons retired with those features. Note: the old DosageCalculatorIcon.tsx still exists — the Oil Library uses it as a placeholder; swap it during the Oil Library work.)
 
 Editorial voice (LOCKED)
 - "Why this pick" callouts: ingredient quality + availability in 1-3 sentences. Brand-green left border.
@@ -144,7 +148,7 @@ Adding a new category — workflow
 2. Create app/clean-picks/[category]/page.tsx (copy pain-fever, swap imports + filter tabs + counts).
 3. Update app/clean-picks/page.tsx: import the array, set CATEGORIES entry live:true + accentColor, update PICK_COUNTS, bump the progress banner.
 
-Card design (LOCKED — Option A): white card + colored top bar by drug class. Top Picks tab shows ⭐ ORAL/KIDS/TOPICAL/NASAL PICK badges. Top Picks framing: "Our 3 picks across [oral, pediatric, and topical / per category]." Retailer cap: 4 visible chips + "+ More" rollup (no number).
+Card design (LOCKED — Option A): white card + colored top bar by drug class. Top Picks tab shows ⭐ ORAL/KIDS/TOPICAL/NASAL PICK badges. Retailer cap: 4 visible chips + "+ More" rollup (no number).
 
 Minimum bar: 8 verified picks before a category page ships.
 
@@ -154,7 +158,7 @@ Minimum bar: 8 verified picks before a category page ships.
 Live categories (3 of 5 in the original roadmap)
 - Pain & Fever — 9 picks. Top: Tylenol Dye-Free (ORAL), Genexa Kids' Pain & Fever (KIDS), Voltaren Gel (TOPICAL).
 - Cold & Flu — 13 picks. Top: Umcka (ORAL), Genexa Kids' Multi-Symptom (KIDS), Badger Aromatic Chest Rub (TOPICAL).
-- Allergies — 8 picks (shipped May 28). Top: Genexa Allergy Care (ORAL), Genexa Kids' Allergy (KIDS), Xlear Nasal Spray (NASAL). 3 oral / 3 nasal / 2 eye.
+- Allergies — 8 picks. Top: Genexa Allergy Care (ORAL), Genexa Kids' Allergy (KIDS), Xlear Nasal Spray (NASAL). 3 oral / 3 nasal / 2 eye.
 
 Remaining roadmap categories: Sleep, First Aid (no pre-research yet).
 
@@ -162,10 +166,14 @@ ClassKey union (current): Pain & Fever — nsaidOral, acetaminophen, pediatricNs
 
 Available-at scope: IN — CVS, Walgreens, Target, Walmart, Costco, Whole Foods, Sprouts, major grocery. OUT — specialty wellness-only sites, Amazon-only without retail presence.
 
+Live routes (after the May 28 removal): /, /account, /clean-picks (+ allergies/cold-flu/pain-fever), /oils (+ [slug]/carriers/safe-to-ingest), /privacy, /terms.
+
 ================================================================
 7. OIL LIBRARY (KEEP & EXPAND)
 ================================================================
-Worwood-grounded essential-oil safety reference. Frame toward caution/safety, not ingestion. Status colors: External Only / Dilute First / Internal Only. IP rule: attribute Worwood, write original content, never reproduce her charts/text/recipes verbatim. (Build-out pending.)
+Worwood-grounded essential-oil safety reference. Frame toward caution/safety, not ingestion. Status colors: External Only / Dilute First / Internal Only. IP rule: attribute Worwood, write original content, never reproduce her charts/text/recipes verbatim.
+
+IMPORTANT current wiring: the Oil Library reads its oil data from lib/medsData.js (oils live in the essential_oils category there) and app/oils/[slug]/page.tsx uses DosageCalculatorIcon as a placeholder icon. That's why those two files survived the feature cull. Clean-up task: give oils their own data file (lib/oilsData.js) and a fitting icon, THEN medsData.js + DosageCalculatorIcon.tsx can be removed.
 
 ================================================================
 8. MONETIZATION & PRICING (NEW MODEL)
@@ -181,9 +189,9 @@ Payment: web-based Stripe signup ("Netflix model"), NOT in-app purchase — avoi
 - Lapsing forfeits the locked rate (re-subscribe at current rate). Honest perpetual urgency — today's rate is the lowest it'll ever be for you.
 - Execution: never raise an existing member's rate; keep the $10 floor sustainable forever; genuinely raise the going rate over time tied to real added value; define "for life" = continuous active subscription with a grace period for failed payments; run multiple Stripe price objects (one per cohort); California auto-renewal compliance (clear disclosure, easy cancel, renewal notices) — include in attorney review.
 
-Cost budget: Apple Developer ~$99/yr + Google Play $25 one-time + Stripe ~2.9% + $0.30/txn. Real cost is builder time maintaining ratings.
+Conversion (DON'T force a sign-up wall): a login wall kills the Phase-1 SEO/content engine (Google can't index gated content), bounces cold traffic before delivering value, and blocks affiliate. Convert via OPEN content + soft hooks: the founding-member waitlist (locked-rate pitch), a "request/upvote a product to rate" form, and save/notify prompts that gate a feature, not the site.
 
-Current state: Stripe NOT integrated. Premium flag exists in Supabase, unenforced.
+Live now: the home page App CTA is a working founding-member signup that routes to /account (which already has founding-member logic). Stripe NOT integrated yet — premium flag exists in Supabase, unenforced.
 
 ================================================================
 9. DATA FOUNDATION FOR THE SCANNER (PHASE 2)
@@ -196,13 +204,13 @@ Current state: Stripe NOT integrated. Premium flag exists in Supabase, unenforce
 ================================================================
 10. PHASING
 ================================================================
-- Phase 1 (now): content-first. Build out Clean Picks + Oil Library targeting high-intent low-competition searches ("is [brand] clean," "cleanest [category]," "[product] ingredients to avoid"). Add a "request a product rating" form (captures app signups + surfaces which products to prioritize). Promote founding-member pricing.
+- Phase 1 (now): content-first. Build out Clean Picks + Oil Library targeting high-intent low-competition searches ("is [brand] clean," "cleanest [category]," "[product] ingredients to avoid"). Add a "request a product rating" form (captures signups + surfaces priorities). Promote founding-member pricing.
 - Phase 2 (after demand validated): build the scanner — barcode scan → openFDA/DailyMed/DSLD lookup → methodology scoring → rating + explanation; backend + data pipeline; accounts/auth + Stripe per-cohort billing; iOS/Android shell (free browse for all, scanner for premium). Ongoing: maintaining/expanding ratings (the real overhead).
 
 ================================================================
 11. LEGAL POSTURE (NON-NEGOTIABLE)
 ================================================================
-- No individualized medical advice anywhere — no dosing outputs, no "safe to combine" verdicts. Information + product-cleanliness ratings only.
+- No individualized medical advice anywhere — no dosing outputs, no "safe to combine" verdicts. Information + product-cleanliness ratings only. (This is WHY the Dosage Calculator, Interaction Checker, and Conditions pages were cut — and why a member forum stays deferred: UGC would reintroduce that exact liability.)
 - Every "Avoid" rests on citable evidence; flags state facts, never "unsafe."
 - Strong Medical Disclaimer, Affiliate Disclosure, Privacy Policy, solid About page.
 - Owner to-do: form an LLC; one-time attorney review before launch (include auto-renewal/subscription compliance) — via Richard Aaron @ Dowling Aaron.
@@ -212,42 +220,53 @@ Current state: Stripe NOT integrated. Premium flag exists in Supabase, unenforce
 ================================================================
 - Site: knowyourremedy.com · Local: C:\Users\bdez1\OneDrive\Desktop\knowyourremedy
 - Stack: Next.js 16.2.6 (Turbopack) · Supabase · Vercel · GitHub
-- Supabase: profiles (accounts, auto-created via auth trigger), family_profiles, plus legacy dose_logs/saved_remedies (tied to cut features — candidates for removal). Email confirmation OFF. AuthForm uses .upsert() to handle the auto-create race.
+- Supabase: profiles (accounts, auto-created via auth trigger), family_profiles (kept). Orphaned tables to prune in the Supabase console: dose_profiles, dose_logs, saved_remedies (nothing references them after the removal). Email confirmation OFF. AuthForm uses .upsert() to handle the auto-create race.
 
 ================================================================
 13. PENDING WORK
 ================================================================
-Pivot cleanup (removal)
-- Remove Dosage Calculator (components/icons/DosageCalculatorIcon.tsx, DoseTrackerBadge, DosageCalculator_module.css, related pages).
-- Remove Interaction Checker (interactionData.js, medsData.js, InteractionChecker_module.css, lib/interactionClassRules.js, related pages).
-- Remove Conditions / Remedies pages and their layouts/redirects.
-- Prune Supabase dose_logs/saved_remedies if nothing else uses them.
-
 Clean Picks
-- Run the 30 live picks (Pain & Fever, Cold & Flu, Allergies) through docs/METHODOLOGY.md — confirm each clears the standard; flag any that should read Caution rather than a clean pick.
+- Run the 30 live picks (Pain & Fever, Cold & Flu, Allergies) through docs/METHODOLOGY.md — confirm each clears the standard; flag any that should read Caution.
 - Build remaining categories: Sleep, then First Aid (8+ verified picks each).
 
-Build-out
-- Oil Library (Worwood-grounded).
-- "Request a product rating" form + app-signup waitlist + founding-member pricing copy.
+Oil Library (keep & expand)
+- Separate oil data out of medsData.js into its own file (e.g. lib/oilsData.js) and swap the placeholder dosage-calculator icon on the oils pages for a fitting one — THEN medsData.js + DosageCalculatorIcon.tsx can finally be removed (they survived the cull only because the Oil Library still depends on them).
+- Deepen the Worwood-grounded oil content.
 
-Launch
-- Stripe web billing + per-cohort locked pricing + founding-member flow.
+Conversion & monetization
+- Optional: inline email capture on the home founding-member CTA (it routes to /account now; capturing email on the home page + pre-filling needs a small AuthForm tweak).
+- "Request / upvote a product to rate" form (captures signups + product priorities).
+- Stripe web billing + per-cohort locked-rate pricing + founding-member flow.
+
+Data cleanup
+- Prune the orphaned Supabase tables (dose_profiles, dose_logs, saved_remedies) in the Supabase console — nothing references them now.
+
+Launch prep
 - Attorney review (Terms, Privacy, Medical Disclaimer, auto-renewal compliance) via Richard Aaron.
-- LLC formation. Final QA pass.
+- LLC formation. Reconcile footer Legal links (/disclaimer, /affiliate-disclosure, /about point to routes that don't exist; /terms + /privacy are live). Update Footer copyright year. Final QA.
 
-Phase 2 (after demand validated): the scanner app (Section 9–10).
+Phase 2 (after demand validated): the scanner app (Sections 9–10).
+
+Post-launch backlog
+- Member forum — revisit once there's critical mass + moderation bandwidth. Deferred now: reintroduces UGC medical-advice liability (the exact risk the pivot cut) plus a brutal cold-start problem.
 
 ================================================================
 14. CHANGE LOG (recent first)
 ================================================================
+May 28 — Cut features removed; home reshaped with founding-member CTA
+- Removed Dosage Calculator, Interaction Checker, and Conditions/Remedies entirely — routes, components, lib files, redirects. Build green. Remaining routes: /, /account, /clean-picks (+ allergies/cold-flu/pain-fever), /oils (+ [slug]/carriers/safe-to-ingest), /privacy, /terms.
+- Home reshaped: hero search (pointed at the cut /remedies) → "Browse Clean Picks" CTA; cards cut 5 → 2 (Clean Picks + Oil Library); dosing copy removed; App CTA converted into a working founding-member signup routing to /account.
+- Account dashboard stripped of dose-log + saved-remedy sections; family profiles + settings kept (dosing copy neutralized).
+- next.config: old /remedies + /conditions URLs now redirect to /clean-picks instead of dead routes.
+- medsData.js + DosageCalculatorIcon.tsx SURVIVED — the build caught that the Oil Library reads oil data from medsData and uses the icon; both restored from git.
+
 May 28 — Strategic pivot to Yuka-for-medicine + methodology + Allergies
-- PIVOT: repositioned as Yuka for medicine/supplements/remedies with a barcode-scanner endgame, content-first. Master directive locked (Sections 1–11). Dosage Calculator, Interaction Checker, Conditions/Remedies CUT.
+- PIVOT: repositioned as Yuka for medicine/supplements/remedies with a barcode-scanner endgame, content-first. Dosage Calculator, Interaction Checker, Conditions/Remedies marked for cut.
 - Clean Rating Methodology v1 built and committed to docs/METHODOLOGY.md — 4-tier harm-first scoring engine (Clean/Caution/Avoid). High tier = evidence of harm, not regulatory status.
-- Allergies Clean Picks shipped (8 verified picks) at /clean-picks/allergies. New PickForm values nasal + eye; new classKeys antihistamine + salineNasal; new 'nasal' top-pick bucket. Fixed empty Tylenol retailers on Pain & Fever.
+- Allergies Clean Picks shipped (8 verified picks) at /clean-picks/allergies. New PickForm values nasal + eye; new classKeys antihistamine + salineNasal; new 'nasal' top-pick bucket.
 
 (Pre-pivot history preserved below — note much of it concerns features now cut.)
-May 26 — Cold & Flu Clean Picks (13) + editorial standard locked (seed oils, TiO2, FD&C dyes disqualifying). Discoveries: Sudafed/Mucinex/Maty's rejected, Equate Mucus ER + Badger as clean equivalents. Advil removed from Pain & Fever (→ 9 picks).
+May 26 — Cold & Flu Clean Picks (13) + editorial standard locked (seed oils, TiO2, FD&C dyes disqualifying). Discoveries: Sudafed/Mucinex/Maty's rejected; Equate Mucus ER + Badger as clean equivalents. Advil removed from Pain & Fever (→ 9 picks).
 May 26 — Pain & Fever Clean Picks shipped; per-category folder architecture locked; Card design Option A.
 May 25 — Clean Brands → Everyday Clean Picks rename (/brands → /clean-picks). Scope locked to mainstream retailers.
 May 25 — Interaction database expansion (~137 entries). [feature now cut]
