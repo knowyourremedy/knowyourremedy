@@ -1,8 +1,10 @@
 # KnowYourRemedy — Clean Rating Methodology
 
-**Status:** v1.3 working draft
+**Status:** v1.4 working draft
 **Scope:** OTC medicines, supplements, and natural remedies
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
+
+**Changed in v1.4:** added the Nanoparticle Precautionary Rule — an ingredient with an open, ingredient-specific regulatory nanoparticle review is capped at Caution even without a confirmed harm mechanism. Reclassified silicon dioxide from Cleared to this new precautionary tier.
 
 **Changed in v1.3:** added active-ingredient safety (a documented safety harm in the active can cap the verdict, separate from efficacy, which stays out of scope); added the verdict-cap mechanic; added dose/frequency sensitivity (cumulative vs concurrent harms); added the primary-source standard and the regulator asymmetry; added colloidal silver as the worked example.
 
@@ -52,6 +54,8 @@ Every inactive ingredient sorts into one of four risk levels. The rating is deci
 - A **manageable or dose-dependent** active harm caps the product at **Caution** (with a mandatory honest note explaining it).
 - A **severe, irreversible, or no-safe-threshold** active harm with no offsetting benefit caps it at **Avoid**.
 
+**Nanoparticle Precautionary Rule — a second, narrower cap (v1.4).** Distinct from both the additive-demerit system and the active-safety cap above. Any ingredient with an **open, unresolved regulatory safety review that specifically cites nanoparticle-form concerns** (e.g., a formal re-evaluation flagging nanoparticle particle-size or absorption data gaps) is capped at **Caution**, even without a confirmed harm mechanism and even if the ingredient would otherwise score 0 demerit points. This is deliberately stricter than the general "no citable harm source → no demerit" posture (Section 6): the trigger here is a live, ingredient-specific regulatory data-gap review, not mere unfamiliarity or an ingredient merely "sounding synthetic." Rationale: an ingredient under active nanoparticle safety review carries real downside if that review later finds harm, and "Clean" should mean settled, not merely not-yet-disproven. As with the active-safety cap, the honest note must explain the specific review driving the cap. If the underlying regulatory review closes with a clean finding, the ingredient is re-evaluated and the cap may be lifted; if it closes with a harm finding, the ingredient moves to the applicable demerit tier instead.
+
 **Dose / frequency sensitivity.** Some harms scale with dose or frequency. Where they do, the verdict reflects realistic use of the product *as sold and marketed* — not the most careful user — and the honest note carries the gradient. Two kinds, handled differently:
 - **Cumulative** harms build with total/repeated exposure (e.g., silver → argyria). Genuinely lower with infrequent use; this can justify Caution rather than Avoid, and the note says so.
 - **Concurrent / acute** harms fire on a single co-administration (e.g., a drug interaction). **Not** reduced by infrequency — they apply to any single use and hold regardless.
@@ -61,9 +65,9 @@ Every inactive ingredient sorts into one of four risk levels. The rating is deci
 - Seed / industrial oils — flagged in **gummies**.
 - Xylitol / erythritol — flagged in **oral/ingested** products; cleared in topical and nasal (where xylitol is beneficial, not a concern).
 
-**Source standard.** Every flag — additive or active-safety — must carry at least one citable source, shown in the breakdown. Prefer **primary, independent** sources: regulatory classifications, IARC / NTP, EFSA, peer-reviewed studies, NCCIH. The **regulator asymmetry**: a regulator *acting against* a product (ban, warning, refusal to recognize as safe) is a usable harm signal; a regulator *permitting or approving* it is never evidence of safety. No single source — least of all "it's approved" — carries a verdict alone.
+**Source standard.** Every flag — additive, active-safety, or nanoparticle-precautionary — must carry at least one citable source, shown in the breakdown. Prefer **primary, independent** sources: regulatory classifications, IARC / NTP, EFSA, peer-reviewed studies, NCCIH. The **regulator asymmetry**: a regulator *acting against* a product (ban, warning, refusal to recognize as safe) is a usable harm signal; a regulator *permitting or approving* it is never evidence of safety. No single source — least of all "it's approved" — carries a verdict alone.
 
-## 5. Additive classification table (v1.3)
+## 5. Additive classification table (v1.4)
 
 Anchored to published regulatory and scientific findings. Living document — grows as we rate more products.
 
@@ -72,12 +76,18 @@ Anchored to published regulatory and scientific findings. Living document — gr
 | Additive | Also appears as | Why high-risk |
 |---|---|---|
 | Titanium dioxide | E171, "color added" | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. |
-| Synthetic dyes | FD&C / D&C colors, aluminum lakes | FDA revoked Red No. 3 for food + ingested drugs (Jan 2025; rat carcinogenicity, Delaney Clause; drug deadline Jan 2028). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warning labels (Southampton study) and face state-level bans. |
+| Synthetic dyes | FD&C / D&C colors, aluminum lakes | FDA revoked Red No. 3 for food + ingested drugs (Jan 2025; rat carcinogenicity, Delaney Clause; drug deadline Jan 2028). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warning labels (Southampton study) and face state-level bans. Applies equally to lake (insoluble tablet) forms of the same dyes. |
 | Parabens | methyl-, propyl-, butyl-, isobutylparaben | EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
 | BHA | butylated hydroxyanisole, E320 | Listed by the US National Toxicology Program as "reasonably anticipated to be a human carcinogen"; California Prop 65 listed. |
 | BHT | butylated hydroxytoluene, E321 | EU-restricted (2022) specifically for endocrine disruption — a documented harm mechanism, even without a US ban or carcinogen listing. |
 | Aspartame | E951, NutraSweet | IARC "possibly carcinogenic to humans" (Group 2B, 2023) — the only sweetener with a current formal carcinogen classification. |
 | Seed / industrial oils (gummies) | soybean, canola, "vegetable oil" | Clean-standard exclusion for gummy formulations. |
+
+### Precautionary — capped at Caution (nanoparticle review pending, v1.4)
+
+| Additive | Also appears as | Why precautionary |
+|---|---|---|
+| Silicon dioxide | Silica, E551, colloidal silicon dioxide | EFSA's 2018 re-evaluation found no confirmed harm but flagged that much current-use silicon dioxide falls in or near the nanoparticle range and called for additional absorption/behavior data — an open, ingredient-specific review. Distinct from crystalline silica (inhaled, IARC Group 1) — this is the ingested, amorphous, anti-caking form. Capped at Caution under the Nanoparticle Precautionary Rule (Section 4), not scored as a demerit. |
 
 ### Moderate-risk — 2 points each
 
@@ -107,8 +117,11 @@ Anchored to published regulatory and scientific findings. Living document — gr
 | Additive | Notes |
 |---|---|
 | Cane sugar, glucose syrup, tapioca syrup / dextrose | Acceptable sweeteners under our standard. |
-| Microcrystalline cellulose, croscarmellose sodium | Standard inert disintegrants. |
-| Magnesium stearate, stearic acid, silicon dioxide | Standard flow / anticaking agents. |
+| Microcrystalline cellulose, croscarmellose sodium | Standard inert disintegrants. EFSA 2017 cellulose re-evaluation: no carcinogenicity, no ADI needed. |
+| Magnesium stearate, stearic acid | Standard flow / anticaking agents. EFSA 2018 re-evaluation: no safety concern at reported use levels. |
+| Hypromellose | Standard binder / capsule shell. EFSA/JECFA: ADI "not specified"; no genotoxicity, carcinogenicity, or reproductive toxicity findings. |
+| Sodium starch glycolate | Standard tablet disintegrant. EPA: reasonable certainty of no harm; not hazardous per CLP. |
+| Carbomer homopolymer (Type A/B/C monograph) | FDA GRAS thickener/binder. Note: older carbomer grades (934, 940, 934P, 1342, 941) had a flagged benzene-manufacturing concern — the Type A/B/C monograph line is the reformulated, benzene-free successor and is not affected. |
 | Organic agave, organic flavors / colors | Whole-food-derived. |
 | Sodium chloride, sodium bicarbonate | Saline bases. |
 | Xylitol, erythritol (topical / nasal) | Beneficial in nasal sprays; not a concern by this route. |
@@ -132,6 +145,10 @@ Anchored to published regulatory and scientific findings. Living document — gr
 - **Active-ingredient safety** added as a verdict cap (separate from additive points; final verdict is the worse of the two).
 - **Dose/frequency** added: cumulative harms can justify Caution over Avoid; concurrent harms (interactions) hold regardless of frequency.
 - **Source asymmetry**: regulator action against a product = usable harm signal; regulator approval ≠ evidence of safety. Primary/independent sources preferred.
+- **v1.4 — Nanoparticle Precautionary Rule added.** Trigger: Equate Mucus-ER audit (Aug 2026) surfaced silicon dioxide, previously listed as Cleared without a pulled DailyMed label to verify against. Proper source check found silicon dioxide's amorphous/ingested form has no confirmed harm mechanism (EFSA 2018: no safety concern at reported use levels) — but the same EFSA review flagged an open nanoparticle data-gap that hasn't been resolved. Under the general "no citable harm → no demerit" posture this would clear; the new rule intentionally overrides that for ingredients under live nanoparticle review, moving silicon dioxide from Cleared to a new Precautionary/Caution tier. Applies to any future ingredient meeting the same trigger, not just silicon dioxide.
+- **Equate Mucus-ER finding (Aug 2026):** the verified DailyMed label (setid a2cc6dec) shows FD&C Blue #1 aluminum lake among the inactive ingredients — contradicting the prior "confirmed Clean, 5 inert excipients, no dye" note. Per Section 5, synthetic dyes (including lake forms) are already High-tier. Corrected verdict: **Avoid**, not Clean. Flags this as unverified-claim risk carried over from an earlier session; live Clean Picks data (`coldFluPicks.ts`) needs this correction applied, and the category needs a replacement dye-free guaifenesin pick.
 
 **Worked example — colloidal silver.** Additives are typically just silver + water → 0 demerit points → Clean on additives alone. But the active carries documented harm: argyria (permanent bluish-gray discoloration; cumulative; no established safe level), plus concurrent interactions impairing absorption of certain antibiotics and thyroid medication. Sources: NCCIH, Mayo Clinic, peer-reviewed argyria case reports (FDA enforcement as corroboration only — not the basis).
 **Verdict: Caution** (active-safety cap), with a mandatory honest note covering the cumulative argyria risk, the absence of a safe threshold, and the antibiotic/thyroid interactions. Rationale for Caution over Avoid: argyria is dose-cumulative (infrequent use is materially lower-risk) and primarily cosmetic. *To set it at Avoid instead, raise the cap on the "Verdict:" line above to Avoid — the pull toward Avoid is the no-safe-threshold, irreversible staining, and the concurrent interactions that frequency doesn't soften.* This is the canonical case the active-safety rule exists for.
+
+**Worked example — silicon dioxide (Nanoparticle Precautionary Rule).** In a product like Equate Mucus-ER, silicon dioxide (or "colloidal silicon dioxide") would score 0 demerit points on the standard additive scale — no confirmed carcinogenicity, genotoxicity, or organ-toxicity finding at ingested-form use levels (EFSA 2018). But EFSA's same re-evaluation left an open call for nanoparticle absorption/behavior data that has not been resolved. That live, ingredient-specific review is what triggers the cap. **Verdict contribution: Caution** (capped, not scored), with an honest note distinguishing this from crystalline silica (unrelated inhalation hazard) and explaining that the cap will lift if EFSA's review closes clean, or convert to a demerit tier if it finds harm.
