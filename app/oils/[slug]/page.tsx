@@ -3,12 +3,11 @@
 import { useMemo, useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
-import { MEDS, REMEDY_TAGS } from '@/lib/medsData'
+import { OILS, REMEDY_TAGS } from '@/lib/oilsData'
 import { getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
-import DosageCalculatorIcon from '@/components/icons/DosageCalculatorIcon'
 
 type AnyMed = any
-const MEDS_ANY = MEDS as Record<string, AnyMed>
+const OILS_ANY = OILS as Record<string, AnyMed>
 const REMEDY_TAGS_ANY = REMEDY_TAGS as Record<string, string>
 
 function keyToSlug(key: string, med: AnyMed) {
@@ -23,8 +22,7 @@ function keyToSlug(key: string, med: AnyMed) {
 
 function findOilBySlug(slug: string) {
   const target = slug.toLowerCase()
-  for (const [key, med] of Object.entries(MEDS_ANY)) {
-    if (med.category !== 'essential_oils') continue
+  for (const [key, med] of Object.entries(OILS_ANY)) {
     if (keyToSlug(key, med) === target) return { key, med }
   }
   return null
@@ -111,8 +109,6 @@ export default function OilDetailPage() {
   if (diffuseEntries.length > 0) availableMethods.push('Diffuse')
   if (internalEntry) availableMethods.push('Internal')
   const methodsPillText = availableMethods.join(', ')
-
-  const interactionUrl = `/interaction-checker?med=${encodeURIComponent(key)}`
 
   function handleInternalReveal() {
     if (hasSeenInternalWarning) {
@@ -539,39 +535,6 @@ export default function OilDetailPage() {
           </div>
         )}
 
-        {/* Tools row */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '0.5rem',
-          marginBottom: '1.5rem',
-        }}>
-          <Link href={interactionUrl} style={crossLinkStyle}>
-            <div style={crossLinkIconRowStyle}>
-              <span style={crossLinkIconStyle}>💊🌿</span>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={crossLinkSmallStyle}>Compatibility</div>
-                <div style={crossLinkBigStyle}>
-                  <span style={{ fontWeight: 600 }}>Compare</span> this oil with your meds
-                </div>
-              </div>
-              <span style={crossLinkArrowStyle}>→</span>
-            </div>
-          </Link>
-          <Link href={`/dosage-calculator?med=${encodeURIComponent(key)}`} style={crossLinkStyle}>
-            <div style={crossLinkIconRowStyle}>
-              <span style={crossLinkIconStyle}><DosageCalculatorIcon size={22} color="#4a6741" /></span>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={crossLinkSmallStyle}>Dosage</div>
-                <div style={crossLinkBigStyle}>
-                  <span style={{ fontWeight: 600 }}>Calculate</span> the right amount
-                </div>
-              </div>
-              <span style={crossLinkArrowStyle}>→</span>
-            </div>
-          </Link>
-        </div>
-
         {med.source && (
           <div style={{
             paddingTop: '0.75rem',
@@ -659,46 +622,3 @@ const warningTextStyle = (color: string): React.CSSProperties => ({
   lineHeight: 1.55,
   fontFamily: 'var(--font-inter), sans-serif',
 })
-
-const crossLinkStyle: React.CSSProperties = {
-  background: '#f0fdf4',
-  border: '1px solid #c8ddc0',
-  borderRadius: '10px',
-  padding: '0.7rem 0.85rem',
-  textDecoration: 'none',
-  display: 'block',
-}
-
-const crossLinkSmallStyle: React.CSSProperties = {
-  fontSize: '0.72rem',
-  color: '#4a6741',
-  marginBottom: '0.2rem',
-  fontFamily: 'var(--font-inter), sans-serif',
-}
-
-const crossLinkBigStyle: React.CSSProperties = {
-  fontSize: '0.85rem',
-  color: '#2d4a3e',
-  fontWeight: 600,
-  fontFamily: 'var(--font-inter), sans-serif',
-}
-
-const crossLinkIconRowStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'flex-start',
-  gap: '0.6rem',
-}
-
-const crossLinkIconStyle: React.CSSProperties = {
-  fontSize: '1.15rem',
-  lineHeight: 1.2,
-  paddingTop: '0.1rem',
-  flexShrink: 0,
-}
-
-const crossLinkArrowStyle: React.CSSProperties = {
-  fontSize: '0.95rem',
-  color: '#4a6741',
-  paddingTop: '0.15rem',
-  flexShrink: 0,
-}

@@ -2,11 +2,11 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { MEDS } from '@/lib/medsData'
+import { OILS } from '@/lib/oilsData'
 import { OIL_FILTERS, getOilDisplay, formatAgeBadge } from '@/lib/oilCategories'
 
 type AnyMed = any
-const MEDS_ANY = MEDS as Record<string, AnyMed>
+const OILS_ANY = OILS as Record<string, AnyMed>
 
 // Slug helper — mirrors the one in [slug]/page.tsx
 function keyToSlug(key: string, med: AnyMed) {
@@ -27,10 +27,9 @@ type OilListItem = {
   ageBadge: string
 }
 
-// Get all oils from MEDS, sorted alphabetically by display name
+// Get all oils from OILS, sorted alphabetically by display name
 function buildOilList(): OilListItem[] {
-  return Object.entries(MEDS_ANY)
-    .filter(([, m]) => m.category === 'essential_oils')
+  return Object.entries(OILS_ANY)
     .map(([key, med]) => ({
       key,
       med,
