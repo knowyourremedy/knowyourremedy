@@ -85,10 +85,8 @@ export default function Footer() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
               {[
-                { label: 'Medical Disclaimer', href: '/disclaimer' },
-                { label: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
                 { label: 'Privacy Policy', href: '/privacy' },
-                { label: 'About', href: '/about' },
+                { label: 'Terms of Service', href: '/terms' },
               ].map((link) => (
                 <a key={link.href} href={link.href} style={{
                   fontFamily: 'var(--font-inter), sans-serif',
@@ -157,7 +155,7 @@ export default function Footer() {
             color: '#4a6a52',
             margin: 0
           }}>
-            © 2025 KnowYourRemedy.com — For informational purposes only. Not a substitute for professional medical advice.
+            © 2026 KnowYourRemedy.com — For informational purposes only. Not a substitute for professional medical advice.
           </p>
           <p style={{
             fontFamily: 'var(--font-inter), sans-serif',
