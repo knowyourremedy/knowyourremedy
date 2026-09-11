@@ -63,7 +63,9 @@ export type RatingRecord = {
   minAge?: number;        // minimum labeled age in years
   form?: string;          // e.g. tablet / caplet / gelcap / liquid gel / ER caplet / film-coated tablet
   recordStatus?: RecordStatus;
-  homeopathicSubtype?: string; // omit unless the product is homeopathic
+  productType?: 'OTC' | 'Vitamin' | 'Supplement' | 'Protein Powder'; // INTERNAL METADATA ONLY
+  productSubtype?: string; // e.g. 'homeopathic' | 'herbal' — INTERNAL METADATA ONLY
+  homeopathicSubtype?: string; // omit unless the product is homeopathic; prefer productSubtype
 
   activeIngredients: ActiveIngredient[];
   inactiveIngredients: IngredientFlag[];
