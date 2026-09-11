@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 11, 2026 (closed §6 open questions — cleaner-alternatives trigger + display; Caution/Avoid tinted verdict banner; Flagged names visible / Cleared collapsed)
+Last Updated: September 11, 2026 (synced §4/§8 to main after PRs 1–3 — P&F/C&F removals, Caution drafts, lib/rating-drafts/)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -144,8 +144,9 @@ Editorial discoveries (carry forward — DO NOT REVERT)
 Advil Liqui-Gels: FD&C Green No. 3 → not clean.
 Sudafed: FD&C dyes + titanium dioxide + talc → rejected.
 Mucinex (brand): FD&C Blue #1 → rejected.
-Equate Mucus-ER (Walmart): CORRECTED Aug 8 — previously listed as "confirmed Clean, 5 inert excipients, no dye." The actual verified DailyMed label (setid a2cc6dec) shows FD&C Blue #1 aluminum lake among the inactive ingredients. Per Methodology §5, synthetic dyes (including lake forms) are High-tier. CORRECTED VERDICT: AVOID, not Clean. The prior "confirmed Clean" claim was never actually source-verified against DailyMed — treat as a caution against trusting unverified prior-session claims generally. Cold & Flu category needs a replacement dye-free guaifenesin pick (not yet found/verified) to restore its Mucinex-alternative slot. coldFluPicks.ts still needs this correction applied.
-Sambucol Gummies: vegetable oil → rejected. Sambucol Original Syrup stays (glucose syrup acceptable).
+Equate Mucus-ER (Walmart): CORRECTED Aug 8 — previously listed as "confirmed Clean, 5 inert excipients, no dye." The actual verified DailyMed label (setid a2cc6dec) shows FD&C Blue #1 aluminum lake among the inactive ingredients. Per Methodology §5, synthetic dyes (including lake forms) are High-tier. CORRECTED VERDICT: AVOID, not Clean. APPLIED on main (PRs 1–3): removed from coldFluPicks.ts. Do not restore. Cold & Flu still needs a verified dye-free guaifenesin pick to restore the Mucinex-alternative slot.
+REMOVED FROM LIVE CLEAN PICKS (PRs 1–3 — do not restore): "Tylenol Extra Strength Dye-Free" (phantom — no adult dye-free Tylenol caplet), Children's Tylenol Dye-Free, Children's Motrin Dye-Free, Biofreeze. Adult clean acetaminophen on the page is Genexa Acetaminophen Extra Strength. Those removed SKUs may appear as unverified drafts in lib/rating-drafts/ — that is not a Clean Picks restore.
+Sambucol Gummies: vegetable oil → rejected. Sambucol Black Elderberry Original Syrup is a Caution draft (potassium sorbate) — not verified Clean. See §8.
 Maty's Vapor Rub: sunflower oil → rejected. Badger Aromatic Chest Rub is the clean alternative.
 Second-gen antihistamine TABLETS (Zyrtec/Claritin/Allegra, brand + generic): titanium dioxide → rejected. "Dye-free" kids' cetirizine syrups: parabens + propylene glycol → rejected.
 COLLOIDAL SILVER → Caution (v1.3 worked example for the active-safety cap). Additives are silver + water (Clean on additives alone), but the active carries documented harm — argyria (permanent, cumulative, no established safe level) + concurrent interactions with certain antibiotics and thyroid meds. Sources: NCCIH, Mayo, peer-reviewed argyria case reports (FDA enforcement as corroboration only). Set at Caution (argyria dose-cumulative + mostly cosmetic); the pull toward Avoid is no-safe-threshold + irreversible + frequency-proof interactions. "Natural/old" never auto-means clean.
@@ -235,17 +236,14 @@ Type system: Pick type + ClassKey union live in painFeverPicks.ts (imported by a
 Card design (LOCKED — Option A): white card + colored top bar by drug class. Top Picks tab shows ⭐ ORAL/KIDS/TOPICAL/NASAL badges. Retailer cap: 4 visible chips + "+ More".
 
 ================================================================ 8. CURRENT STATE
-Live Clean Picks categories (the seed ratings)
+Live Clean Picks categories (seed ratings) — matches main after PRs 1–3. Methodology ingredient grades UNCHANGED.
 
-Pain & Fever — 9 picks. Top: Tylenol Dye-Free (ORAL), Genexa Kids' Pain & Fever (KIDS), Voltaren Gel (TOPICAL).
-Cold & Flu — 13 picks. Top: Umcka (ORAL), Genexa Kids' Multi-Symptom (KIDS), Badger Aromatic Chest Rub (TOPICAL). NOTE: Equate Mucus-ER (previously listed here as a confirmed-clean pick) is corrected to AVOID as of Aug 8 — see Section 4 discoveries. Not yet applied to coldFluPicks.ts. Category needs a new verified dye-free guaifenesin pick.
-Allergies — 8 picks. Top: Genexa Allergy Care (ORAL), Genexa Kids' Allergy (KIDS), Xlear Nasal Spray (NASAL).
-Methodology pass vs v1.3/v1.4 — IN PROGRESS (web-verified findings so far; NOT yet applied to the data files):
-
-AVOID (Pain & Fever): "Tylenol Extra Strength Dye-Free" appears to be a phantom — there is no adult dye-free Tylenol caplet; real Tylenol ES = titanium dioxide + FD&C Red 40. REPLACE with Genexa Acetaminophen Extra Strength (the real clean adult acetaminophen, already pick #5, verified clean). Children's Tylenol Dye-Free → Avoid (sucralose + sorbitol + potassium sorbate + flavors). Children's Motrin Dye-Free → Avoid (acesulfame K + others). Biofreeze → Avoid (FD&C Blue 1 + Yellow 5 + methylparaben; "colorless" version unverified for parabens).
-CONSEQUENCE: pulling those 4 drops Pain & Fever to ~5 clean picks — below the 8-pick bar. Needs more clean P&F picks or a category rethink.
-CAUTION-flagged under strict v1.2 but LIKELY CLEAR under the harm-anchored "citable harm source" rule (FINALIZE next session): Sambucol Syrup (potassium sorbate — thin harm basis), Boiron Chestal Children's (sodium benzoate — benzene pathway needs vitamin C, which it lacks), Zarbee's (natural flavor — "opacity, not a hazard," no harm source to cite). Principle: no citable HARM source → not a harm demerit (transparency note at most).
-Allergies: all 8 clean, no avoids/cautions found (confirmed June 14).
+Pain & Fever — 5 picks remaining after hard removals. Not marked verified. Top: Genexa Acetaminophen Extra Strength (ORAL), Genexa Kids' Pain & Fever (KIDS), Voltaren Gel (TOPICAL). Also: Boiron Arnicare Cream/Gel, Boiron Arnica 30C Pellets.
+REMOVED — do not restore onto Clean Picks: "Tylenol Extra Strength Dye-Free" (phantom), Children's Tylenol Dye-Free, Children's Motrin Dye-Free, Biofreeze. Category is below the old 8-pick bar; needs more clean P&F picks or a category rethink — do not fill the gap by putting the removed SKUs back.
+Cold & Flu — 11 picks. Top: Umcka (ORAL), Genexa Kids' Multi-Symptom (KIDS), Badger Aromatic Chest Rub (TOPICAL). Equate Mucus-ER removed (Avoid / FD&C Blue #1 lake) — do not restore. Still needs a verified dye-free guaifenesin pick.
+CAUTION DRAFTS (on the Cold & Flu page, verdict: caution, not verified — do not treat as Clean; supersedes the old "likely clear" note): Sambucol Black Elderberry Original Syrup (potassium sorbate), Boiron Chestal Honey Cough Syrup (Children's) (sodium benzoate), Zarbee's Children's Cough Syrup + Immune (natural flavor), Source Naturals Wellness Formula (silicon dioxide nanoparticle cap).
+Allergies — 8 picks, still treated as clean. Top: Genexa Allergy Care (ORAL), Genexa Kids' Allergy (KIDS), Xlear Nasal Spray (NASAL).
+Draft rating batches (not wired into Clean Picks UI): lib/rating-drafts/ is the home for batches 1–3. Batch 1 on disk: batch1-adult-apap-ibu.ts (adult APAP + IBU; recordStatus unverified). Do not convert painFeverPicks.ts / coldFluPicks.ts from those drafts. Do not treat a draft row as a live Clean Pick.
 Colloidal silver → Caution (logged in methodology as the active-safety worked example).
 Silicon dioxide → Caution (logged in methodology as the Nanoparticle Precautionary Rule worked example, v1.4).
 Live routes: /, /account, /clean-picks (+ allergies/cold-flu/pain-fever), /oils (+ [slug]/carriers/safe-to-ingest), /privacy, /terms.
@@ -338,7 +336,7 @@ The brain (priority)
 Update lib/ratingRecord.ts with the new fields from this session: formulaId, product_type (internal), product_subtype (internal), audience, recordStatus, and the three monetization backdoor fields (§10).
 DONE (Sept 11, 2026): Cleaner Alternatives trigger + display — locked in §6. Trigger = Caution AND Avoid. Display = inline horizontal carousel on Overview, peeking next card, "See all →". Slide-up sheet is NOT the primary alternatives UI.
 Begin converting live Clean Picks data (painFeverPicks.ts, coldFluPicks.ts, allergyPicks.ts) into the RatingRecord shape once the schema update above is done.
-Finish the v1.3/v1.4 verdict pass on the live picks: apply the 4 Pain & Fever Avoids, replace phantom "Tylenol ES Dye-Free" with Genexa Acetaminophen ES, finalize the 3 Cautions under the harm-anchored rule, resolve Pain & Fever falling below 8 clean picks, AND apply the new Equate Mucus-ER → Avoid correction + find its dye-free guaifenesin replacement for Cold & Flu.
+DONE on main (PRs 1–3): removed phantom Tylenol ES Dye-Free / Children's Tylenol Dye-Free / Children's Motrin Dye-Free / Biofreeze / Equate Mucus-ER from live Clean Picks. Do not restore. STILL OPEN: Pain & Fever is at 5 picks (below the old 8-pick bar); Cold & Flu still needs a verified dye-free guaifenesin replacement; four Cold & Flu Caution drafts (Sambucol, Chestal kids, Zarbee's, Source Naturals) are not verified. Draft batches live in lib/rating-drafts/.
 DONE (Aug 2026, updated for Methodology v1.6): "Preferred multi-source references" / "trusted sources reference list" — resolved by the v1.5 merge. docs/METHODOLOGY.md §4a holds the full Tier 1/2/2-3 source hierarchy plus the 7-step workflow. No separate docs/SOURCES.md needed.
 DONE (Aug 2026, v1.6): the remaining ~20% inactive-ingredient categorization gap is CLOSED — roughly 20 ingredients were run through the full §4a workflow and locked with founder calls in one extended session (see docs/METHODOLOGY.md §7 calibration log for the full list: caramel color's 3-way class split, talc, sulfites, SLS, fragrance/parfum, stevia/monk fruit, the povidone/crospovidone/methylcellulose/starches housekeeping batch, xanthan/guar/gum arabic/pectin, annatto, turmeric/curcumin-as-color, beta-carotene-as-color, BVO, disodium EDTA trace use, aluminum hydroxide as an active-safety-cap case, castor oil/polyoxyl castor oil, propyl gallate, benzyl alcohol's population split, benzalkonium chloride, lecithin, mixed tocopherols/ascorbyl palmitate, cochineal/carmine).
 GATE NOW OPEN: the inactive-ingredient methodology is locked enough to begin bot-assisted database batches (§12). The earlier hard gate blocking §12 work is LIFTED as of v1.6.
@@ -385,6 +383,9 @@ Protein powder category population (schema exists, dormant per Brandon's call �
 Sponsored/paid placement activation (only after ~10k users, only among independently-Clean products — see §10).
 Member forum — revisit once there's critical mass + moderation bandwidth (UGC medical-advice liability + cold-start problem).
 ================================================================ 18. CHANGE LOG (recent first)
+September 11, 2026 (later) — Synced §4/§8 to main after PRs 1–3
+
+Live Clean Picks counts now 5 Pain & Fever / 11 Cold & Flu / 8 Allergies. Removed Tylenol Dye-Free (phantom + kids), Children's Motrin Dye-Free, Biofreeze, Equate Mucus-ER — do not restore. Sambucol Original Syrup, Chestal kids, Zarbee's, Source Naturals marked Caution drafts (not the old "likely clear"). Pointed current-state to lib/rating-drafts/ for batches 1–3. Methodology ingredient grades unchanged.
 September 11, 2026 — Closed §6 open questions + locked Overview behavior
 
 CLEANER ALTERNATIVES TRIGGER: locked to Caution AND Avoid. Clean does not show alternatives. Closes the Aug 8 "Avoid only vs Avoid + Caution" open question.
