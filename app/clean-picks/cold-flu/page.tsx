@@ -69,7 +69,7 @@ export default function ColdFluPage() {
           color: '#5a7a6e',
           margin: 0,
         }}>
-          {COLD_FLU_PICKS.length} verified clean picks for cold and flu symptoms, immune support, and seasonal wellness.
+          {COLD_FLU_PICKS.length} picks for cold and flu symptoms, immune support, and seasonal wellness. Some remaining entries are Caution drafts, not verified.
         </p>
       </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { CLASS_COLORS, TOP_PICK_LABELS } from '@/lib/clean-picks/classColors';
+import { VERDICT_COLORS, VERDICT_LABELS } from '@/lib/clean-picks/verdictLabels';
 import RetailerChips from './RetailerChips';
 import type { Pick } from '@/lib/clean-picks/painFeverPicks';
 
@@ -51,6 +52,19 @@ export default function PickCard({ pick, showTopBadge = false }: Props) {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-end', flexShrink: 0 }}>
+            {pick.verdict === 'caution' && (
+              <span style={{
+                fontSize: '0.7rem',
+                fontWeight: 600,
+                padding: '4px 10px',
+                borderRadius: '6px',
+                background: VERDICT_COLORS.caution,
+                color: '#fff',
+                whiteSpace: 'nowrap',
+              }}>
+                {VERDICT_LABELS.caution}
+              </span>
+            )}
             {topPickLabel && (
               <span style={{
                 fontSize: '0.7rem',

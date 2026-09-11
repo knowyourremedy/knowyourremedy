@@ -70,7 +70,7 @@ export default function PainFeverPage() {
           color: '#5a7a6e',
           margin: 0,
         }}>
-          {PAIN_FEVER_PICKS.length} verified clean picks for headaches, body aches, fevers, menstrual cramps, and more.
+          {PAIN_FEVER_PICKS.length} picks for headaches, body aches, fevers, menstrual cramps, and more.
         </p>
       </div>
 
