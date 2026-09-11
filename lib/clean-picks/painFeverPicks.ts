@@ -1,4 +1,5 @@
 // ─── Pain & Fever Clean Picks ─────────────────────────────
+// 5 remaining picks after hard removals. Not marked verified.
 // Each entry conforms to the Pick type defined below.
 // Field reference:
 //   name              - product display name
@@ -11,8 +12,11 @@
 //   subline           - one-line "what it's for"
 //   why               - longer "why this pick" callout
 //   honestNote        - optional: amber-banner honest disclosure
+//   verdict           - optional: 'clean' | 'caution' | 'avoid' (omit = current Clean-picks appearance)
 //   retailers         - array of retailer names (4 visible + "More" rollup)
 //   priceTier         - 'Standard' | '$$ premium' | etc.
+
+import type { Verdict } from './verdictLabels';
 
 export type ClassKey =
   // Pain & Fever
@@ -48,24 +52,12 @@ export type Pick = {
   subline: string;
   why: string;
   honestNote?: string;
+  verdict?: Verdict;
   retailers: string[];
   priceTier: string;
 };
 
 export const PAIN_FEVER_PICKS: Pick[] = [
-  
-  {
-    name: 'Tylenol Extra Strength Dye-Free',
-    activeIngredient: 'Acetaminophen 500mg',
-    classKey: 'acetaminophen',
-    classTag: 'ACETAMINOPHEN',
-    form: 'oral',
-    topPick: 'oral',
-    subline: 'Headache, fever, body aches, menstrual cramps, sore throat pain',
-    why: 'Single active ingredient, no artificial dyes. The cleanest mainstream adult oral pain reliever widely available — found at every drugstore, grocery, and big box.',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
-    priceTier: 'Standard',
-  },
   {
     name: 'Voltaren Gel',
     activeIngredient: 'Diclofenac sodium 1%',
@@ -78,18 +70,6 @@ export const PAIN_FEVER_PICKS: Pick[] = [
     honestNote: 'Wash hands after applying. Not for use during pregnancy.',
     retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
     priceTier: '$$ premium',
-  },
-  {
-    name: 'Biofreeze',
-    activeIngredient: 'Menthol 3.5% or 10.5%',
-    classKey: 'topicalDrugFree',
-    classTag: 'TOPICAL · DRUG-FREE',
-    form: 'topical',
-    subline: 'Muscle pain, back pain, tension, post-workout soreness',
-    why: 'Drug-free topical relief. Menthol activates cooling receptors for fast localized pain reduction. Dye-free and fragrance-free formulations available.',
-    honestNote: 'External use only. Stop if skin irritation develops.',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
-    priceTier: 'Standard',
   },
   {
     name: "Genexa Kids' Pain & Fever",
@@ -111,37 +91,12 @@ export const PAIN_FEVER_PICKS: Pick[] = [
     classKey: 'acetaminophen',
     classTag: 'CLEANEST',
     form: 'oral',
+    topPick: 'oral',
     subline: 'Adult headache, fever, body aches',
     why: 'Same 500mg acetaminophen as Tylenol Extra Strength but without titanium dioxide and other unnecessary additives. Certified vegan. The cleanest adult acetaminophen tablet widely available.',
     honestNote: 'Stay under 4g/day total. Same liver-protective guidance as any acetaminophen.',
     retailers: ['Whole Foods', 'Sprouts', 'Walmart', 'Online'],
     priceTier: '$$ premium',
-  },
-  {
-    name: "Children's Tylenol Dye-Free",
-    activeIngredient: 'Acetaminophen 160mg / 5mL',
-    classKey: 'acetaminophen',
-    classTag: 'ACETAMINOPHEN',
-    form: 'oral',
-    ageBadge: '👶 Ages 2+',
-    subline: 'Kids · fever · pain (alt to Genexa)',
-    why: "Removes the artificial dyes (Red 40, etc.) found in conventional Children's Tylenol. Easier to find than Genexa at most drugstores.",
-    honestNote: 'Honest: still contains sucralose, sorbitol, and other inactive ingredients. Cleaner than the colored version, not perfect. Genexa is the cleaner choice when available.',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
-    priceTier: 'Standard',
-  },
-  {
-    name: "Children's Motrin Dye-Free",
-    activeIngredient: 'Ibuprofen 100mg / 5mL',
-    classKey: 'pediatricNsaid',
-    classTag: 'PEDIATRIC NSAID',
-    form: 'oral',
-    ageBadge: '👶 Ages 2+',
-    subline: 'Kids · inflammation · fever · dental · muscle',
-    why: "Dye-free version of Children's Motrin — skips Red 40 and artificial colors found in the standard version.",
-    honestNote: 'Honest: still contains acesulfame potassium (artificial sweetener) and other inactive ingredients. Cleaner than the colored version, not perfect.',
-    retailers: ['CVS', 'Walgreens', 'Target', 'Grocery'],
-    priceTier: 'Standard',
   },
   {
     name: 'Boiron Arnicare Cream / Gel',
