@@ -42,6 +42,14 @@ export type CleanAlternative = {
   rankReason: string;    // e.g. "Same active ingredient, same-store availability"
 };
 
+// ─── Record lifecycle (PROJECT_NOTES §5 / §11) ───────────────
+export type RecordStatus =
+  | 'unverified'
+  | 'provisional-pending-review'
+  | 'verified';
+
+export type Audience = 'adult' | 'kids';
+
 // ─── THE RECORD ──────────────────────────────────────────────
 export type RatingRecord = {
   id: string;             // stable unique id (slug-style, e.g. "genexa-acetaminophen-es")
@@ -49,6 +57,13 @@ export type RatingRecord = {
   brand: string;
   category: string;       // e.g. "Pain & Fever", "Cold & Flu"
   barcode?: string;       // UPC — added later, Phase 2 scanner target
+
+  formulaId?: string;     // shared across pack sizes / store-brand siblings with the same inactives
+  audience?: Audience;
+  minAge?: number;        // minimum labeled age in years
+  form?: string;          // e.g. tablet / caplet / gelcap / liquid gel / ER caplet / film-coated tablet
+  recordStatus?: RecordStatus;
+  homeopathicSubtype?: string; // omit unless the product is homeopathic
 
   activeIngredients: ActiveIngredient[];
   inactiveIngredients: IngredientFlag[];
@@ -65,3 +80,5 @@ export type RatingRecord = {
 
   sourcesGeneral?: string[]; // any additional citations not tied to a specific ingredient
 };
+
+// Draft rating batches (not wired into Clean Picks UI): lib/rating-drafts/
