@@ -1,14 +1,32 @@
 # KnowYourRemedy — Clean Rating Methodology
 
-**Status:** v1.4 working draft
-**Scope:** OTC medicines, supplements, and natural remedies
+**Status:** v1.6 working draft
+**Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
+
+**Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
+
+**Changed in v1.5:** merged a full multi-source international regulatory hierarchy (Tier 1 primary / Tier 2 consumer-advocacy / Tier 2-3 integrative) to replace the shorter source list from v1.3/v1.4. Added an explicit, permanent rule that U.S. FDA allowance, GRAS status, and IID listing are inventory/context only — never evidence of Clean. Added a default-trigger reference table for grading NEW/unfinished ingredients. Added a hard override clause: locked founder grades (Avoid/Caution/Clean already decided) are permanent and are NEVER reopened by applying the default-trigger table retroactively — the table is a starting point for ingredients not yet graded, not a re-grading mechanism. Confirmed under this override: aspartame stays Avoid, BHT stays Avoid.
 
 **Changed in v1.4:** added the Nanoparticle Precautionary Rule — an ingredient with an open, ingredient-specific regulatory nanoparticle review is capped at Caution even without a confirmed harm mechanism. Reclassified silicon dioxide from Cleared to this new precautionary tier.
 
 **Changed in v1.3:** added active-ingredient safety (a documented safety harm in the active can cap the verdict, separate from efficacy, which stays out of scope); added the verdict-cap mechanic; added dose/frequency sensitivity (cumulative vs concurrent harms); added the primary-source standard and the regulator asymmetry; added colloidal silver as the worked example.
 
 ---
+
+## 0. THE OVERRIDE RULE (read this first)
+
+**Locked founder calls win, permanently.** Any ingredient that has already received a founder-approved Avoid, Caution, or Clean grade under this methodology — including every entry in the classification table (§5) and every "editorial discovery" logged in PROJECT_NOTES §4 — is **locked** and stays locked. Applying a newer version of this document, a broader source hierarchy, or the default-trigger table below can **add sourcing detail or citations** to a locked grade, but can **never change the grade itself** without an explicit new founder decision.
+
+Confirmed locked, harm-mechanism-first calls that a naive reading of the default-trigger table might otherwise soften — do not revert without new founder sign-off:
+- **Aspartame → Avoid.** IARC 2B (2023) plus the founder's strict-sweetener stance. Cite both IARC and JECFA — grade stays Avoid despite "agencies split."
+- **BHT → Avoid.** EU 2022 restriction for documented endocrine disruption. No U.S. ban required.
+- **Propyl gallate → Avoid (v1.6).** Same harm-mechanism logic as BHT — a 2018 peer-reviewed study (Pop et al.) directly confirmed endocrine-disrupting activity, alone and in mixtures with BHA/BHT/butylparaben, plus clastogenic signal in 3 of 4 in vitro cytogenetic studies. No ban required for this grade to stand, same as BHT.
+- **Talc → Avoid (v1.6).** IARC Group 2A (2024, upgraded from the older 2B), plus a separate asbestos-contamination pathway. No pharmaceutical-grade/asbestos-tested exception — labels rarely prove that in a way users can trust.
+- **Caramel color (undisclosed class, or confirmed Class III/IV) → Avoid (v1.6).** IARC 2B via 4-MEI byproduct, Prop 65 listed. An undisclosed class is treated as if it were Class III/IV — the burden is on the label to prove otherwise. Confirmed Class I/II → Caution, not Clean (still a color additive, revisit case-by-case).
+- **BVO (brominated vegetable oil) → Avoid (v1.6).** Federal ban (effective Aug 2024) plus documented tissue-bromine-accumulation and neurological-harm mechanism.
+- **Benzyl alcohol → split by population (v1.6).** Avoid on any product labeled for neonates, infants, or under 3 (documented "gasping syndrome," FDA recommends exclusion for this population). Caution on general oral OTC use in older children/adults, where realistic label doses are far below the danger threshold. Never recommend a benzyl-alcohol product as a cleaner alternative for a 2+ or infant product, regardless of which side of the split the swap itself falls on.
+- Every other entry already in §5's classification table and every discovery in PROJECT_NOTES §4, unless a founder session explicitly revisits it.
 
 ## 1. What this is
 
@@ -18,15 +36,15 @@ The documented, consistent rule set that turns any product's ingredient label in
 
 We rate the **inactive ingredients** (excipients, fillers, dyes, preservatives, sweeteners), the **form**, and **sourcing**.
 
-We do **not** judge the active drug's medical merit, and we do **not** judge efficacy — whether a remedy *works* is out of scope. "Dye-free acetaminophen is the cleaner acetaminophen" — never "don't take acetaminophen," and never "this homeopathic remedy works." The active ingredient is listed neutrally.
+We do **not** judge the active drug's medical merit, and we do **not** judge efficacy — whether a remedy *works* is out of scope. The active ingredient is listed neutrally.
 
-**Active-ingredient safety (in scope).** A documented *safety harm* in the active ingredient is a different thing from efficacy, and it **is** in scope. A product can have spotless inactives and still warrant a flag if its active carries a citable harm from normal, as-directed use. The boundary that keeps this from swallowing every drug: we flag harm from using the product *as intended*, not the ordinary dose-ceiling cautions of standard drugs used as directed (acetaminophen's liver limit at label dose is standard-of-care, not a flag). The test is "documented harm from as-directed use," never "any risk if misused."
+**Active-ingredient safety (in scope, but a SEPARATE track from the inactive table — v1.6 clarification).** A documented *safety harm* in the active ingredient is a different thing from efficacy, and it **is** in scope — but it is evaluated as a **verdict cap**, not as a row in the §5 inactive-additive table. Ingredients like colloidal silver (active) and aluminum hydroxide (active, antacid/buffer) are graded this way. Do NOT add an active ingredient as a table row in §5 — actives get the active-safety-cap treatment described in §4, evaluated case-by-case, separately from the inactive-ingredient database-batch gate (see §4a's closing note). Known actives still pending this review as of v1.6: menthol, camphor, eucalyptol (topical rub actives already in live Clean Picks) — these can wait; they do not block inactive-ingredient database work.
 
-**Wording rule (legal):** flags state facts, never danger. "Contains propylene glycol; clean brands exclude it; here's the cleaner pick" — never "unsafe." (When Genexa implied PG-containing products were unsafe, the National Advertising Division ruled against them: you may underscore your own product's benefits, but not state or imply a competitor's product is dangerous.)
+**Wording rule (legal):** flags state facts, never danger. "Contains propylene glycol; clean brands exclude it; here's the cleaner pick" — never "unsafe."
 
 ## 3. The output
 
-Three tiers, each shown with its plain-language reasons. No 0–100 score — a number implies a precision we can't defend ingredient by ingredient, and invites "why 72 not 75" arguments. The badge is the glance; the per-ingredient breakdown on click is the proof.
+Three tiers, each shown with its plain-language reasons. No 0–100 score. The badge is the glance; the per-ingredient breakdown on click is the proof.
 
 - **Clean** — no flagged additives.
 - **Caution** — minor compromises; cleaner options usually exist. Always links to the Clean alternative in the same category.
@@ -34,7 +52,7 @@ Three tiers, each shown with its plain-language reasons. No 0–100 score — a 
 
 ## 4. The scoring rule
 
-Every inactive ingredient sorts into one of four risk levels. The rating is decided two ways at once — the worst additive present, and how many accumulate. Internally it's a simple demerit count (never shown to the user):
+Every inactive ingredient sorts into one of four risk levels. Internally it's a simple demerit count (never shown to the user):
 
 | Risk level | Demerit |
 |---|---|
@@ -48,107 +66,202 @@ Every inactive ingredient sorts into one of four risk levels. The rating is deci
 - **1–2 points → Caution.**
 - **0 points → Clean.**
 
-**What qualifies as high-risk.** An additive lands in high when there is **strong evidence of a real harm mechanism** — carcinogenicity, genotoxicity, endocrine disruption, or organ / developmental / neurotoxicity. A regulatory ban or formal carcinogen classification (IARC / NTP) is *sufficient* evidence, but it is **not required**: robust independent science qualifies an additive for high even if the FDA still permits it. We do not treat "legal" or "GRAS" as a baseline for leniency — US regulators permit plenty that shouldn't be. What keeps an ingredient *out* of high is **weak or contested evidence**, never the mere fact that it's allowed.
+**What qualifies as high-risk.** Strong evidence of a real harm mechanism — carcinogenicity, genotoxicity, endocrine disruption, or organ/developmental/neurotoxicity. A ban or formal classification is *sufficient* but **not required**. Regulatory status is evidence, not the only switch: a strong harm mechanism can keep — or place — an ingredient at High/Avoid even when agencies are split or a regulator only restricted rather than banned the substance.
 
-**Active-ingredient safety — the verdict cap.** Active-safety does not score additive points. It acts as a cap on the verdict, applied alongside the additive count, and the final verdict is the **worse** of the two. So a product with spotless additives (0 points → Clean) but a harmful active is capped down:
-- A **manageable or dose-dependent** active harm caps the product at **Caution** (with a mandatory honest note explaining it).
+**Active-ingredient safety — the verdict cap.** Does not score additive points. Acts as a cap on the verdict, applied alongside the additive count; final verdict is the **worse** of the two.
+- A **manageable or dose-dependent** active harm caps the product at **Caution**.
 - A **severe, irreversible, or no-safe-threshold** active harm with no offsetting benefit caps it at **Avoid**.
+- **Worked examples on file (v1.6):** colloidal silver (Caution — argyria, dose-cumulative) and aluminum hydroxide (Caution — long-term phosphate depletion/osteomalacia, CKD/infant risk; mandatory note on long-term use, CKD, and infants; NOT Avoid for typical short-term antacid use).
 
-**Nanoparticle Precautionary Rule — a second, narrower cap (v1.4).** Distinct from both the additive-demerit system and the active-safety cap above. Any ingredient with an **open, unresolved regulatory safety review that specifically cites nanoparticle-form concerns** (e.g., a formal re-evaluation flagging nanoparticle particle-size or absorption data gaps) is capped at **Caution**, even without a confirmed harm mechanism and even if the ingredient would otherwise score 0 demerit points. This is deliberately stricter than the general "no citable harm source → no demerit" posture (Section 6): the trigger here is a live, ingredient-specific regulatory data-gap review, not mere unfamiliarity or an ingredient merely "sounding synthetic." Rationale: an ingredient under active nanoparticle safety review carries real downside if that review later finds harm, and "Clean" should mean settled, not merely not-yet-disproven. As with the active-safety cap, the honest note must explain the specific review driving the cap. If the underlying regulatory review closes with a clean finding, the ingredient is re-evaluated and the cap may be lifted; if it closes with a harm finding, the ingredient moves to the applicable demerit tier instead.
+**Population/context splits (v1.6 addition — a THIRD kind of cap, alongside dose/frequency).** Some ingredients split cleanly by WHO is using the product, not just by how much or how often. Benzyl alcohol is the model case: Avoid for neonate/infant/under-3-labeled products, Caution for general oral OTC use. When a population split applies, the honest note must say so explicitly, and cleaner-alternative recommendations must respect the split — never recommend the higher-risk-population version of an ingredient as a swap for a lower-age-range product, even if it would otherwise be an acceptable Caution-tier swap for an adult product.
 
-**Dose / frequency sensitivity.** Some harms scale with dose or frequency. Where they do, the verdict reflects realistic use of the product *as sold and marketed* — not the most careful user — and the honest note carries the gradient. Two kinds, handled differently:
-- **Cumulative** harms build with total/repeated exposure (e.g., silver → argyria). Genuinely lower with infrequent use; this can justify Caution rather than Avoid, and the note says so.
-- **Concurrent / acute** harms fire on a single co-administration (e.g., a drug interaction). **Not** reduced by infrequency — they apply to any single use and hold regardless.
+**Nanoparticle Precautionary Rule (v1.4).** Any ingredient with an **open, unresolved regulatory safety review that specifically cites nanoparticle-form concerns** is capped at **Caution**, even with 0 demerit points and no confirmed harm mechanism. Worked example: silicon dioxide (EFSA 2018 open data-gap review).
 
-**Context scoping.** A few flags depend on the product form, because the concern only applies to one route:
-- Propylene glycol — flagged in **oral/ingested** products.
-- Seed / industrial oils — flagged in **gummies**.
-- Xylitol / erythritol — flagged in **oral/ingested** products; cleared in topical and nasal (where xylitol is beneficial, not a concern).
+**Dose / frequency sensitivity.** Cumulative harms (build with total exposure) can justify Caution over Avoid with infrequent use. Concurrent/acute harms (e.g., drug interactions) are **not** softened by infrequency.
 
-**Source standard.** Every flag — additive, active-safety, or nanoparticle-precautionary — must carry at least one citable source, shown in the breakdown. Prefer **primary, independent** sources: regulatory classifications, IARC / NTP, EFSA, peer-reviewed studies, NCCIH. The **regulator asymmetry**: a regulator *acting against* a product (ban, warning, refusal to recognize as safe) is a usable harm signal; a regulator *permitting or approving* it is never evidence of safety. No single source — least of all "it's approved" — carries a verdict alone.
+**Context scoping.** Propylene glycol — flagged oral/ingested only. Seed/industrial oils — flagged in gummies. Xylitol/erythritol — flagged oral/ingested; cleared topical/nasal.
 
-## 5. Additive classification table (v1.4)
+**Source standard.** Every flag must carry at least one citable source. See §4a for the full hierarchy.
 
-Anchored to published regulatory and scientific findings. Living document — grows as we rate more products.
+## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
+
+**Core rule.** U.S. FDA allowance, GRAS status, and IID presence are **inventory/context only** — never evidence of Clean by themselves.
+
+### Tier 1 — primary decision sources
+EFSA opinions and EU additive law · EMA excipient labeling · Health Canada/NNHPD · UK FSA · FSANZ · Japan MHLW · WHO/JECFA · IARC Monographs · US NTP/Report on Carcinogens · NIEHS · EPA IRIS · ATSDR · California OEHHA/Prop 65 · PubMed/PMC primary studies · Cochrane reviews · National Academies reports · UCSF/FDA CERSI Excipients Browser · Handbook of Pharmaceutical Excipients · ECHA REACH/PubChem · map synonyms via CAS/UNII/E-number/FD&C name.
+
+### Tier 2 — supporting/stricter consumer bar
+EWG · CSPI (Chemical Cuisine) · Environmental Defense Fund · Center for Food Safety · Center for Environmental Health · Cornucopia Institute. Label as advocacy, not government science.
+
+### Tier 2/3 — integrative/natural-medicine perspective
+More citable: Natural Medicines Database, NIH NCCIH, MSK About Herbs, Examine.com, ConsumerLab/NSF/USP, EMA herbal monographs, German Commission E, ESCOP, American College of Lifestyle Medicine, established integrative-center peer-reviewed work. Citation-only, never the study itself: Institute for Functional Medicine, AANP position papers, functional-medicine authors, brand/wellness articles.
+
+### Default grade triggers (for NEW / unfinished ingredients only — §0 override always wins)
+
+**Avoid:** banned/withdrawn by a major precautionary regulator · IARC 1 or 2A · NTP known/reasonably-anticipated carcinogen · clear pediatric neurobehavioral concern · unnecessary synthetic color with no functional need · strong hypersensitivity + no functional need · **a strong independent harm mechanism even if only restricted (not banned) or agencies are split.**
+
+**Caution:** IARC 2B with agencies split (for a brand-new ungraded ingredient — never overrides a locked Avoid) · restricted but not banned (same caveat) · limited/conflicting data · vague mixtures ("natural flavors") · emerging gut/metabolic signals · Prop 65 listed at relevant exposure · documented but population/dose-specific hypersensitivity or irritation (sulfites, SLS, fragrance, annatto, BKC pattern) · contested/mixed in-vitro-vs-in-vivo evidence (BKC pattern).
+
+**Clean:** simple, well-characterized, broad international acceptance, no serious red flags — still checked individually, never assumed from "looks basic."
+
+### THE ONGOING INTAKE RULE (v1.6 — permanent process, not a one-time step)
+
+As of v1.6, the inactive-ingredient methodology is considered **locked enough to begin bot-assisted database batches** (PROJECT_NOTES §12). This does NOT mean every possible inactive ingredient has been pre-graded. Going forward:
+
+- Any inactive ingredient a bot or session encounters that is **not yet in the §5 table** is NOT graded on the spot and does not go live in any product record.
+- It gets the full **7-step workflow** (below) and is brought to the founder for a call, exactly like every ingredient locked in this session.
+- **Do not invent new proactive worklists** to hunt for more ingredients to grade ahead of need — the days of front-loading batches are over as of v1.6. Ingredients get graded reactively, as real products surface them during database work, unless the founder specifically asks for another sweep.
+
+### Workflow for grading a newly-encountered ingredient
+1. EFSA/EU status
+2. FDA/IID/GRAS status (context only)
+3. IARC + NTP + Prop 65
+4. Health Canada or EMA if relevant
+5. One or two key primary papers
+6. EWG/CSPI note if flagged
+7. Founder call: Clean/Caution/Avoid — final, not delegable to a bot
+
+## 5. Additive classification table (v1.6)
+
+Anchored to published regulatory and scientific findings. **All entries below are LOCKED per §0** unless noted as pending.
 
 ### High-risk — any one = Avoid
 
 | Additive | Also appears as | Why high-risk |
 |---|---|---|
 | Titanium dioxide | E171, "color added" | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. |
-| Synthetic dyes | FD&C / D&C colors, aluminum lakes | FDA revoked Red No. 3 for food + ingested drugs (Jan 2025; rat carcinogenicity, Delaney Clause; drug deadline Jan 2028). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warning labels (Southampton study) and face state-level bans. Applies equally to lake (insoluble tablet) forms of the same dyes. |
+| Synthetic dyes | FD&C/D&C colors, aluminum lakes | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. |
 | Parabens | methyl-, propyl-, butyl-, isobutylparaben | EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
-| BHA | butylated hydroxyanisole, E320 | Listed by the US National Toxicology Program as "reasonably anticipated to be a human carcinogen"; California Prop 65 listed. |
-| BHT | butylated hydroxytoluene, E321 | EU-restricted (2022) specifically for endocrine disruption — a documented harm mechanism, even without a US ban or carcinogen listing. |
-| Aspartame | E951, NutraSweet | IARC "possibly carcinogenic to humans" (Group 2B, 2023) — the only sweetener with a current formal carcinogen classification. |
-| Seed / industrial oils (gummies) | soybean, canola, "vegetable oil" | Clean-standard exclusion for gummy formulations. |
+| BHA | butylated hydroxyanisole, E320 | NTP "reasonably anticipated" human carcinogen; Prop 65 listed. |
+| BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
+| Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
+| Aspartame — **LOCKED** | E951, NutraSweet | IARC 2B (2023) + founder's strict-sweetener stance. Cite IARC and JECFA both; "agencies split" does not downgrade this. |
+| Seed/industrial oils (gummies) | soybean, canola, "vegetable oil" | Clean-standard exclusion for gummy formulations. |
+| Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. |
+| Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
+| Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral OTC/vitamin/supplement/protein products. |
+| BVO (brominated vegetable oil) — **LOCKED (v1.6)** | Brominated soybean oil | Federal ban, effective Aug 2024. Documented tissue-bromine accumulation + neurological harm mechanism. |
 
 ### Precautionary — capped at Caution (nanoparticle review pending, v1.4)
 
 | Additive | Also appears as | Why precautionary |
 |---|---|---|
-| Silicon dioxide | Silica, E551, colloidal silicon dioxide | EFSA's 2018 re-evaluation found no confirmed harm but flagged that much current-use silicon dioxide falls in or near the nanoparticle range and called for additional absorption/behavior data — an open, ingredient-specific review. Distinct from crystalline silica (inhaled, IARC Group 1) — this is the ingested, amorphous, anti-caking form. Capped at Caution under the Nanoparticle Precautionary Rule (Section 4), not scored as a demerit. |
+| Silicon dioxide | Silica, E551 | EFSA 2018: no confirmed harm, but open nanoparticle data-gap review still unresolved. Distinct from crystalline silica (unrelated inhalation hazard). |
 
 ### Moderate-risk — 2 points each
 
 | Additive | Also appears as | Why moderate-risk |
 |---|---|---|
-| Propylene glycol (oral) | PG, E1520 | Excluded by clean brands (Genexa lists it on its "never" list) and a marker of conventional products — but the direct evidence of harm is thin, so it weights hard without auto-sinking to Avoid on its own. |
-| Sucralose | E955, Splenda | Metabolite/heat form sucralose-6-acetate found genotoxic (DNA-damaging) in a 2023 study; gut-microbiome concerns. Single emerging study — moves up if the evidence hardens. |
-| Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity and microbiome signals; thin evidence. |
-| Saccharin | E954 | Historical rat bladder-cancer findings, but NTP delisted it (2000) and IARC reclassified it Group 3 / "not classifiable" (1999) — the mechanism was shown not to operate in humans. |
-| PEGs | polyethylene glycol 400 / 3350 | Risk of ethylene-oxide / 1,4-dioxane contamination; penetration enhancer. |
-| Polysorbate 80 | E433 | Emulsifier with emerging gut-barrier / inflammation signals. |
+| Propylene glycol (oral) | PG, E1520 | Thin direct harm evidence; excluded by clean brands. |
+| Sucralose | E955, Splenda | Metabolite genotoxicity signal (2023 study); microbiome concerns. |
+| Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity/microbiome signals; thin evidence. |
+| Saccharin | E954 | Historical rat finding, but NTP delisted (2000), IARC reclassified Group 3 (1999). |
+| PEGs | polyethylene glycol 400/3350 | Ethylene-oxide/1,4-dioxane contamination risk. |
+| Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
+| Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 
 ### Limited-risk — 1 point each
 
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
-| Xylitol, erythritol (oral) | — | Sugar alcohols; GI effects at volume, and many clean shoppers avoid them. *Oral/ingested only — cleared in topical and nasal.* |
-| Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume; otherwise low concern. |
-| Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate can form trace benzene with vitamin C. |
-| "Natural flavors" | natural flavoring | Undisclosed proprietary mixtures — opacity, not a known hazard. |
+| Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
+| Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
+| Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
+| "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
-| Artificial flavors | artificial flavoring | Synthetic; little documented hazard but not "clean." |
+| Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
 | Non-organic maltodextrin | — | Glycemic; minor. |
+| Caramel color, CONFIRMED Class I or II — **LOCKED (v1.6)** | plain caramel (E150a), caustic sulfite caramel (E150b) | No ammonia process, no 4-MEI. Still a color additive serving appearance only — doesn't clear to Clean by default; revisit case-by-case. Only applies when the label explicitly confirms Class I/II. |
 
 ### Cleared — no demerit
 
 | Additive | Notes |
 |---|---|
-| Cane sugar, glucose syrup, tapioca syrup / dextrose | Acceptable sweeteners under our standard. |
-| Microcrystalline cellulose, croscarmellose sodium | Standard inert disintegrants. EFSA 2017 cellulose re-evaluation: no carcinogenicity, no ADI needed. |
-| Magnesium stearate, stearic acid | Standard flow / anticaking agents. EFSA 2018 re-evaluation: no safety concern at reported use levels. |
-| Hypromellose | Standard binder / capsule shell. EFSA/JECFA: ADI "not specified"; no genotoxicity, carcinogenicity, or reproductive toxicity findings. |
-| Sodium starch glycolate | Standard tablet disintegrant. EPA: reasonable certainty of no harm; not hazardous per CLP. |
-| Carbomer homopolymer (Type A/B/C monograph) | FDA GRAS thickener/binder. Note: older carbomer grades (934, 940, 934P, 1342, 941) had a flagged benzene-manufacturing concern — the Type A/B/C monograph line is the reformulated, benzene-free successor and is not affected. |
-| Organic agave, organic flavors / colors | Whole-food-derived. |
+| Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
+| Microcrystalline cellulose, croscarmellose sodium | Standard disintegrants. EFSA 2017: no carcinogenicity, no ADI needed. |
+| Magnesium stearate, stearic acid | Standard lubricants. EFSA 2018: no safety concern. |
+| Hypromellose | ADI "not specified"; no genotox/carcinogenicity/repro findings. |
+| Sodium starch glycolate | EPA: reasonable certainty of no harm. |
+| Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
+| Organic agave, organic flavors/colors | Whole-food-derived. |
 | Sodium chloride, sodium bicarbonate | Saline bases. |
-| Xylitol, erythritol (topical / nasal) | Beneficial in nasal sprays; not a concern by this route. |
-| Citric acid, ascorbic acid (vitamin C) | — |
+| Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
+| Citric acid, ascorbic acid | — |
 | Lactose, gelatin, carnauba wax, beeswax, purified water | — |
+| Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
+| Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
+| Methylcellulose | Same family as Hypromellose; EFSA: no carcinogenicity, no ADI needed. |
+| Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
+| Xanthan gum, guar gum, gum arabic, pectin — **LOCKED (v1.6)** | EFSA-approved; largely undigested/unabsorbed; human tolerance studies far above realistic exposure. Feed-additive-track genotoxicity data gaps (different species/route) don't carry over to human food-additive approvals. |
+| Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Whole-leaf/crude stevia is a DIFFERENT, ungraded case — flag for review if it ever appears, do not auto-Clean it. |
+| Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
+| Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. |
+| Disodium EDTA, TRACE preservative/stabilizer use — **LOCKED (v1.6)** | Confirmed safe at the actual trace concentrations used (0.001%–0.25% w/v) in eye drops/topical formulations. The neurotoxicity/chelation-risk literature is specific to gram-level IV THERAPEUTIC chelation doses — a different dose and context, noted as a disclaimer only. |
+| Lecithin (soy or sunflower) — **LOCKED (v1.6)** | EFSA 2017: no safety concern, no ADI needed. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). |
+| Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. |
+| Castor oil, polyoxyl castor oil derivatives (oral/topical use) — **LOCKED (v1.6)** | "Essentially non-toxic and non-irritant" across acute/chronic toxicity studies for oral/topical/general pharmaceutical use. The Cremophor hypersensitivity/anaphylaxis history is specific to IV/injectable use — out of scope for KYR, which does not grade injectable drugs. |
+
+### Caution — real but population/context-specific, not additive-scored
+
+These don't fit the demerit-count system cleanly — each is a real, documented reaction in a subset of users (hypersensitivity, allergy, irritation) rather than a broad-population toxicity mechanism. Treated as a standalone Caution grade with a mandatory honest note, same logic as the active-safety cap but for inactive ingredients with population-specific reactions.
+
+| Ingredient | Why Caution | Alternatives rule |
+|---|---|---|
+| Sulfites (sodium metabisulfite, sodium bisulfite, potassium metabisulfite, E221–228) | FDA-mandated warning-label precedent on approved drugs (anaphylaxis/asthma risk); FDA banned use on raw produce (1986); EFSA exposure-margin concern (2022). No IARC/NTP cancer classification — harm is hypersensitivity, not carcinogenicity. | Note: can trigger serious reactions in sulfite-sensitive people and some asthmatics — check the label. If a sulfite-free Good option exists in the same category, prefer it — does not change the ingredient's own grade. |
+| Sodium lauryl sulfate (SLS) | Standard positive-control irritant in dermatology studies; documented mucosal desquamation, oral ulcer aggravation, skin irritation. No cancer/genotoxic/endocrine mechanism — American Cancer Society does not list it as a carcinogen. | Note: can irritate skin or the mouth and can aggravate canker sores in sensitive people. If SLS is only present for foam/texture and an SLS-free Good option exists in the same category and age range, prefer it. Do not raise to Avoid. |
+| Fragrance / parfum (topical OTC only — rubs, gels, creams) | Undisclosed mixture (legally can hide dozens to hundreds of compounds) plus documented contact-allergy/sensitization risk (1–9% of population); EU mandatory fragrance-allergen disclosure list expanded from 26 to 82 substances (2026). | Note: can irritate skin or trigger allergy in sensitive people — check for named fragrance allergens if you have known sensitivities. Prefer a fragrance-free Good option in the same category and age range if one exists. Do not raise to Avoid. |
+| Annatto (bixin/norbixin, E160b) | Documented allergenic potential — a foundational study found 26% of chronic urticaria patients reacted, a higher rate than several synthetic dyes tested in the same study. EFSA flagged the norbixin ADI can be exceeded in high-consumer/child exposure scenarios. | Standard alternatives rule (category/age/audience match). |
+| Beta-carotene (as a color additive, not the vitamin) | A large French cohort study linked higher intake of natural color additives including beta-carotene to increased cancer/Type 2 diabetes rates — correlational, not proven causal, no formal IARC/NTP classification. Weak-but-real signal; do not equate with sucralose/ace-K's evidence type — this is a distinct epidemiological-correlation basis, not a genotoxicity signal. | Standard alternatives rule. |
+| Benzalkonium chloride (BKC) | Clear ciliotoxicity in vitro (multiple studies); conflicting in vivo/clinical results — some studies find no measurable harm to nasal mucociliary clearance. Contested evidence is enough for Caution, not Avoid. | Standard alternatives rule. |
+| Benzyl alcohol — GENERAL ORAL OTC USE (older children/adults) | See §0 for the full population-split rule. At normal label doses in general oral OTC use, doses are far below the documented "gasping syndrome" threshold. | Note the gasping-syndrome history and that risk is dose- and age-specific. NEVER recommend a benzyl-alcohol product as a cleaner alternative for a 2+ or infant-labeled product, regardless of the swap's own age range. |
+| Cochineal / carmine / carminic acid — **LOCKED (v1.6)** | Insect-derived red color. Can cause allergic reactions in sensitive people. | If a dye-free/carmine-free Good option exists in the same use category and age range, prefer it in alternatives. Not Avoid. |
+
+### Active-ingredient safety cap — worked examples (§4)
+
+| Active | Verdict cap | Basis |
+|---|---|---|
+| Colloidal silver | Caution | Argyria (permanent, cumulative, no established safe level) + concurrent antibiotic/thyroid interactions. Additives alone would be Clean. |
+| Aluminum hydroxide (antacid/buffer) — **LOCKED (v1.6)** | Caution | Long-term use → phosphate depletion/osteomalacia, documented even in normal kidney function; more severe accumulation/encephalopathy risk concentrated in CKD/dialysis patients; Alzheimer's link unproven (weak/contested). Mandatory note: long-term use, CKD, and infants. NOT Avoid for typical short-term antacid use. |
+
+### Out of scope / parked (v1.6) — not graded, not in the table
+
+| Item | Reason parked |
+|---|---|
+| Formaldehyde-releasers (DMDM hydantoin, diazolidinyl urea, imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Used almost exclusively in cosmetics/topicals (shampoos, lotions), not oral OTC/vitamin/supplement/protein products. Out of scope, not evaluated. |
+| High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
+| Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
+| Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
 
 ## 6. Posture
 
-- **Harm-first, not regulator-first.** Severity tracks evidence of harm to the body, not whether the FDA got around to banning something. Legality is not a clean bill of health.
-- **Evidence-anchored, not maximally strict.** A defensible standard applied identically to everything is what makes us credible — and defensible if challenged. Stricter shoppers are served by full flag transparency now, and a personal strictness setting in the scanner later (e.g., "treat sucralose as an automatic Avoid for me").
-- **Brand vs. rating system.** A clean brand can set a zero-tolerance formulation rule for its own products; we're a rating system passing public judgment on everyone's, so each verdict has to be defensible on its own evidence. We honor the clean-brand signal by weighting an additive, not by auto-failing on it without backing.
-- **Give every option a fair, honest hearing.** Conventional, natural, and homeopathic products are rated the same way. Cleanliness is judged on ingredients; we never make or imply an efficacy claim. Where the basis is traditional use, say so and cite it (Carlston for homeopathy, Worwood for oils); where clinical evidence exists, cite it and label its strength honestly. The honest broker — not the dismissive regulator, not the hype site.
+- **Harm-first, not regulator-first.** Severity tracks evidence of harm to the body, not whether the FDA got around to banning something.
+- **Evidence-anchored, not maximally strict.** A defensible standard applied identically to everything is what makes us credible.
+- **Brand vs. rating system.** We honor a clean-brand's zero-tolerance signal by weighting an additive, not by auto-failing on it without backing.
+- **Give every option a fair, honest hearing.** Conventional, natural, and homeopathic products are rated the same way.
+- **Explain undisclosed-ingredient Avoids in the honest note.** When a product is flagged Avoid because a label is vague/undisclosed (e.g., unspecified caramel color class), say so plainly — this is honest with the customer and creates a real incentive for manufacturers to disclose the cleaner class if that's what they actually use.
 
 ## 7. Calibration log
 
-- High-tier bar is **harm-evidence**, not regulatory status — a ban/classification is sufficient, not required.
-- Propylene glycol → **moderate** (oral-scoped) — direct harm evidence is thin.
-- Aspartame → **high** (IARC 2B). Other sweeteners (sucralose, ace-K, saccharin) → moderate.
-- BHA and BHT → **high** (BHA: NTP carcinogen listing; BHT: documented endocrine disruption).
-- Xylitol / erythritol → **limited** in oral/ingested; cleared in topical/nasal (keeps Xlear and Beekeeper's at Clean).
-- **Active-ingredient safety** added as a verdict cap (separate from additive points; final verdict is the worse of the two).
-- **Dose/frequency** added: cumulative harms can justify Caution over Avoid; concurrent harms (interactions) hold regardless of frequency.
-- **Source asymmetry**: regulator action against a product = usable harm signal; regulator approval ≠ evidence of safety. Primary/independent sources preferred.
-- **v1.4 — Nanoparticle Precautionary Rule added.** Trigger: Equate Mucus-ER audit (Aug 2026) surfaced silicon dioxide, previously listed as Cleared without a pulled DailyMed label to verify against. Proper source check found silicon dioxide's amorphous/ingested form has no confirmed harm mechanism (EFSA 2018: no safety concern at reported use levels) — but the same EFSA review flagged an open nanoparticle data-gap that hasn't been resolved. Under the general "no citable harm → no demerit" posture this would clear; the new rule intentionally overrides that for ingredients under live nanoparticle review, moving silicon dioxide from Cleared to a new Precautionary/Caution tier. Applies to any future ingredient meeting the same trigger, not just silicon dioxide.
-- **Equate Mucus-ER finding (Aug 2026):** the verified DailyMed label (setid a2cc6dec) shows FD&C Blue #1 aluminum lake among the inactive ingredients — contradicting the prior "confirmed Clean, 5 inert excipients, no dye" note. Per Section 5, synthetic dyes (including lake forms) are already High-tier. Corrected verdict: **Avoid**, not Clean. Flags this as unverified-claim risk carried over from an earlier session; live Clean Picks data (`coldFluPicks.ts`) needs this correction applied, and the category needs a replacement dye-free guaifenesin pick.
+**v1.6 ingredient-lock session (Aug 2026) — summary.** Closed the remaining ~20% categorization gap flagged at the start of the session. Roughly 20 ingredients researched via the full §4a workflow and locked with founder calls in one extended session: caramel color (3-way class split), talc, sulfites, SLS, fragrance/parfum, stevia/monk fruit, povidone/crospovidone/methylcellulose/starches (housekeeping batch), xanthan/guar/gum arabic/pectin, annatto, turmeric/curcumin-as-color, beta-carotene-as-color, BVO, disodium EDTA (trace use), aluminum hydroxide (active-safety cap), zinc (parked, active), castor oil/polyoxyl castor oil, propyl gallate, benzyl alcohol (population split), benzalkonium chloride, lecithin, mixed tocopherols/ascorbyl palmitate, cochineal/carmine. Formaldehyde-releasers and HFCS parked as out-of-scope. **Gate declared open: inactive-ingredient methodology is locked enough to begin bot-assisted database batches.** Going forward, new inactive ingredients are graded reactively via the 7-step workflow as they're actually encountered in real products, not via proactive worklist-hunting.
 
-**Worked example — colloidal silver.** Additives are typically just silver + water → 0 demerit points → Clean on additives alone. But the active carries documented harm: argyria (permanent bluish-gray discoloration; cumulative; no established safe level), plus concurrent interactions impairing absorption of certain antibiotics and thyroid medication. Sources: NCCIH, Mayo Clinic, peer-reviewed argyria case reports (FDA enforcement as corroboration only — not the basis).
-**Verdict: Caution** (active-safety cap), with a mandatory honest note covering the cumulative argyria risk, the absence of a safe threshold, and the antibiotic/thyroid interactions. Rationale for Caution over Avoid: argyria is dose-cumulative (infrequent use is materially lower-risk) and primarily cosmetic. *To set it at Avoid instead, raise the cap on the "Verdict:" line above to Avoid — the pull toward Avoid is the no-safe-threshold, irreversible staining, and the concurrent interactions that frequency doesn't soften.* This is the canonical case the active-safety rule exists for.
+- High-tier bar is **harm-evidence**, not regulatory status.
+- Propylene glycol → moderate (oral-scoped) — direct harm evidence thin.
+- Aspartame → high/Avoid, LOCKED (IARC 2B, founder stance).
+- BHA and BHT → high/Avoid, BHT LOCKED.
+- Xylitol/erythritol → limited oral/ingested; cleared topical/nasal.
+- Active-ingredient safety added as a verdict cap (v1.3); population/context splits added as a related but distinct third mechanism (v1.6 — benzyl alcohol is the model case).
+- Dose/frequency: cumulative harms can justify Caution over Avoid; concurrent harms hold regardless of frequency.
+- Source asymmetry: regulator action against a product = harm signal; approval ≠ safety evidence.
+- v1.4 — Nanoparticle Precautionary Rule added; silicon dioxide is the worked example.
+- v1.5 — Source hierarchy + override rule added; confirmed aspartame and BHT stay Avoid under the new hierarchy.
+- **v1.6 — see summary above.** This is the session that closed the categorization gap and opened the database-batch gate.
 
-**Worked example — silicon dioxide (Nanoparticle Precautionary Rule).** In a product like Equate Mucus-ER, silicon dioxide (or "colloidal silicon dioxide") would score 0 demerit points on the standard additive scale — no confirmed carcinogenicity, genotoxicity, or organ-toxicity finding at ingested-form use levels (EFSA 2018). But EFSA's same re-evaluation left an open call for nanoparticle absorption/behavior data that has not been resolved. That live, ingredient-specific review is what triggers the cap. **Verdict contribution: Caution** (capped, not scored), with an honest note distinguishing this from crystalline silica (unrelated inhalation hazard) and explaining that the cap will lift if EFSA's review closes clean, or convert to a demerit tier if it finds harm.
+**Worked example — colloidal silver.** 0 demerit points on additives (silver + water). Active carries argyria (cumulative, no safe threshold) + concurrent antibiotic/thyroid interactions. **Verdict: Caution** (active-safety cap). Sources: NCCIH, Mayo, peer-reviewed argyria case reports.
+
+**Worked example — silicon dioxide (Nanoparticle Precautionary Rule).** 0 demerit points on the standard scale (EFSA 2018: no confirmed harm at ingested/amorphous-form levels), but an open nanoparticle data-gap review triggers the cap. **Verdict: Caution** (capped, not scored).
+
+**Worked example — the override rule (aspartame).** A bot applying only the v1.5/v1.6 default-trigger table cold might see "IARC 2B, agencies split" and land on Caution. WRONG for aspartame specifically — it's a locked grade (§0) reached under the harm-mechanism-first standard. The default-trigger table is for grading brand-new ingredients, not re-deriving locked ones. Aspartame stays Avoid. Same logic protects BHT and propyl gallate.
+
+**Worked example — caramel color (class-based split, v1.6).** Demonstrates that one common ingredient name can require THREE different grades depending on what's actually disclosed: undisclosed class → Avoid (treated as worst case), confirmed Class III/IV → Avoid (same basis, directly confirmed), confirmed Class I/II → Caution (still a color additive, but the 4-MEI mechanism doesn't apply). The honest note explains this distinction to the customer, which is itself an incentive for manufacturers to disclose.
+
+**Worked example — benzyl alcohol (population split, v1.6).** Demonstrates the third kind of cap (alongside dose/frequency and nanoparticle-review): some ingredients split by WHO is using the product rather than how much or how often. Avoid for neonate/infant/under-3 products (documented "gasping syndrome," real infant deaths in the literature, FDA recommends exclusion for this population). Caution for general oral OTC use, where realistic label doses sit far below the danger threshold. The alternatives-matching engine must respect this split directly — a benzyl-alcohol Caution product for adults is never an acceptable "cleaner alternative" suggestion for a 2+ or infant product, even though it's not Avoid in its own right.
