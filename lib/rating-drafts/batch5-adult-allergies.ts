@@ -127,7 +127,7 @@ const XLEAR_CLEAN = 'xlear-nasal-spray-no-bkc';
 const NEILMED = 'neilmed-sinus-rinse';
 const BEEKEEPERS = 'beekeepers-nasal-spray';
 const SIMILASAN_PF = 'similasan-allergy-eye-pf';
-const ALAWAT_PF = 'alaway-preservative-free';
+const ALWAY_PF = 'alaway-preservative-free';
 
 const L612_FORMULA = 'loratadine-l612-plain';
 
@@ -242,7 +242,7 @@ const NASAL_ALTS: CleanAlternative[] = [
 
 const EYE_ALTS: CleanAlternative[] = [
   {
-    productId: ALAWAT_PF,
+    productId: ALWAY_PF,
     rankReason:
       'Closest independently Clean adult allergy eye analog (ketotifen, preservative-free, minAge 3). Form: single-use eye drop.',
   },
@@ -355,9 +355,9 @@ function mintOdtRecord(opts: {
     cleanAlternatives: (() => {
       const sameStore = extraLoratadine(opts.preferredAlt);
       const rest = DISSOLVE_ALTS.filter(
-        (row) => row.productId !== opts.preferredAlt,
+        (row) => row.productId !== sameStore?.productId,
       );
-      return sameStore ? [sameStore, ...rest] : rest;
+      return sameStore ? [sameStore, ...rest] : DISSOLVE_ALTS;
     })(),
     sourcesGeneral: [
       `DailyMed setid ${opts.setid} (mint ODT sucralose family; draft, not verified)`,
@@ -550,11 +550,11 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     ],
   },
   {
-    id: ALAWAT_PF,
+    id: ALWAY_PF,
     productName: 'Alaway Preservative Free',
     brand: 'Alaway',
     category: ALLERGIES,
-    formulaId: ALAWAT_PF,
+    formulaId: ALWAY_PF,
     audience: ADULT,
     minAge: 3,
     form: 'single-use eye drop',
