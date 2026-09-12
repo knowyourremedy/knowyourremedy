@@ -91,7 +91,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
           overflow: 'hidden',
           boxShadow: '0 8px 24px rgba(45, 74, 62, 0.06)',
         }}>
-          <PostScanProductScreen record={record} onOpenProduct={selectProduct} />
+          <PostScanProductScreen key={record.id} record={record} onOpenProduct={selectProduct} />
         </div>
       </div>
     </main>

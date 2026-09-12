@@ -6,7 +6,7 @@ import {
   VERDICT_LABELS,
   VERDICT_SUBLINES,
 } from '@/lib/clean-picks/verdictLabels';
-import type { IngredientFlag, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
@@ -91,22 +91,13 @@ function SectionLabel({ children }: { children: string }) {
   );
 }
 
-function LineIcon({ kind }: { kind: 'flag' | 'check' | 'photo' }) {
+function LineIcon({ kind }: { kind: 'flag' | 'check' }) {
   const stroke = '#6b7280';
   if (kind === 'check') {
     return (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="8.5" stroke={stroke} strokeWidth="1.6" />
         <path d="M8 12.2l2.4 2.4L16.2 9" stroke={stroke} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-  if (kind === 'photo') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="3.5" y="6.5" width="17" height="13" rx="2" stroke={stroke} strokeWidth="1.6" />
-        <circle cx="9" cy="12" r="1.8" stroke={stroke} strokeWidth="1.6" />
-        <path d="M12.5 16.5l3.2-3.4 4.8 3.4" stroke={stroke} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
@@ -134,29 +125,84 @@ function Chevron({ open }: { open: boolean }) {
   );
 }
 
-function ImageComing({ compact = false }: { compact?: boolean }) {
-  return (
-    <div style={{
-      background: '#f4f2ee',
-      border: '1px solid #ece7de',
-      borderRadius: compact ? 10 : 12,
-      width: compact ? 72 : '100%',
-      height: compact ? 72 : 168,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: '#8a938e',
-      flexShrink: 0,
-    }}>
-      <LineIcon kind="photo" />
+function hasVerifiedSkuImage(image?: ProductImage): image is ProductImage {
+  return Boolean(image?.verifiedSku && image.url);
+}
+
+function ProductTile({
+  productName,
+  image,
+  compact = false,
+}: {
+  productName: string;
+  image?: ProductImage;
+  compact?: boolean;
+}) {
+  if (hasVerifiedSkuImage(image)) {
+    return (
       <div style={{
-        marginTop: 6,
-        fontSize: compact ? '0.62rem' : '0.82rem',
-        fontWeight: 600,
-        letterSpacing: compact ? 0 : '-0.01em',
+        background: '#fff',
+        border: '1px solid #ece7de',
+        borderRadius: compact ? 10 : 16,
+        width: '100%',
+        height: compact ? 132 : 240,
+        overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexShrink: 0,
+      }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={image.url}
+          alt={productName}
+          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#fff' }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      role="img"
+      aria-label={`${productName} — image coming`}
+      style={{
+        background: '#fff',
+        border: '1px solid #e5dfd4',
+        borderRadius: compact ? 10 : 16,
+        width: '100%',
+        minHeight: compact ? 132 : 240,
+        height: compact ? 132 : 240,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        padding: compact ? '0.7rem 0.65rem' : '1.15rem 1.25rem',
+        boxSizing: 'border-box',
+        boxShadow: compact ? 'none' : '0 8px 22px rgba(26, 46, 39, 0.05)',
+        flexShrink: 0,
+      }}
+    >
+      <div style={{
+        fontSize: compact ? '0.62rem' : '0.72rem',
+        fontWeight: 700,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        color: '#9aa39d',
+        marginBottom: compact ? 8 : 12,
       }}>
         Image coming
+      </div>
+      <div style={{
+        fontFamily: 'var(--font-playfair), Georgia, serif',
+        fontSize: compact ? '0.92rem' : '1.35rem',
+        fontWeight: 700,
+        color: '#1a2e27',
+        lineHeight: 1.25,
+        letterSpacing: '-0.02em',
+      }}>
+        {productName}
       </div>
     </div>
   );
@@ -221,7 +267,6 @@ function IngredientRow({
 }) {
   const [open, setOpen] = useState(false);
   const reason = riskReasonLine(ingredient.riskLevel);
-  const snippet = sourceSnippet(ingredient.source);
 
   return (
     <button
@@ -235,7 +280,7 @@ function IngredientRow({
         background: 'none',
         border: 'none',
         borderBottom: '1px solid #eeeae3',
-        padding: '0.9rem 0',
+        padding: '0.68rem 0',
         cursor: 'pointer',
         fontFamily: 'inherit',
       }}
@@ -263,11 +308,6 @@ function IngredientRow({
             }} />
             <Chevron open={open} />
           </div>
-          {kind === 'flagged' && (
-            <div style={{ fontSize: '0.8rem', color: '#8a938e', marginTop: 3, lineHeight: 1.4 }}>
-              {snippet ?? reason}
-            </div>
-          )}
           {open && (
             <IngredientExpand
               name={ingredient.name}
@@ -309,18 +349,8 @@ function AlternativeCard({
         fontFamily: 'inherit',
       }}
     >
-      <ImageComing compact />
-      <div style={{
-        fontFamily: 'var(--font-playfair), Georgia, serif',
-        fontSize: '0.98rem',
-        fontWeight: 700,
-        color: '#1a2e27',
-        marginTop: 10,
-        lineHeight: 1.25,
-      }}>
-        {alt.productName}
-      </div>
-      <div style={{ fontSize: '0.78rem', color: '#6b756f', marginTop: 2 }}>
+      <ProductTile productName={alt.productName} image={alt.productImage} compact />
+      <div style={{ fontSize: '0.78rem', color: '#6b756f', marginTop: 10 }}>
         {alt.brand}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8 }}>
@@ -363,7 +393,7 @@ function AlternativeCard({
 function HonestNote({ note }: { note: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <section style={{ marginTop: '1.5rem' }}>
+    <section style={{ marginTop: '1rem' }}>
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -380,15 +410,23 @@ function HonestNote({ note }: { note: string }) {
           fontFamily: 'inherit',
         }}
       >
-        <SectionLabel>Honest note</SectionLabel>
+        <div style={{
+          fontSize: '0.68rem',
+          fontWeight: 700,
+          textTransform: 'uppercase',
+          letterSpacing: '0.07em',
+          color: '#8a938e',
+        }}>
+          Honest note
+        </div>
         <Chevron open={open} />
       </button>
       {open && (
         <p style={{
-          fontSize: '0.86rem',
-          color: '#4a534e',
-          lineHeight: 1.55,
-          margin: 0,
+          fontSize: '0.75rem',
+          color: '#6b756f',
+          lineHeight: 1.45,
+          margin: '0.4rem 0 0',
         }}>
           {note}
         </p>
@@ -478,7 +516,7 @@ function AlternativesBlock({
 export default function PostScanProductScreen({ record, onOpenProduct }: Props) {
   const [tab, setTab] = useState<TabKey>('overview');
   const [clearedOpen, setClearedOpen] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(() => loadCabinet().includes(record.id));
   const [toast, setToast] = useState<string | null>(null);
   const [starBounce, setStarBounce] = useState(false);
 
@@ -488,14 +526,6 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
   const color = VERDICT_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
   const ageLabel = formatAge(record.minAge);
-  const avoidTint = record.verdict === 'avoid';
-
-  useEffect(() => {
-    setTab('overview');
-    setClearedOpen(false);
-    setSaved(loadCabinet().includes(record.id));
-    setToast(null);
-  }, [record.id]);
 
   useEffect(() => {
     if (!toast) return;
@@ -527,35 +557,25 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: 12,
-        padding: '0.85rem 1.15rem',
-        borderBottom: '1px solid #eeeae3',
-        background: avoidTint ? `color-mix(in srgb, ${VERDICT_COLORS.avoid} 14%, #fff)` : '#fff',
+        padding: subline ? '0.85rem 1.15rem 0.9rem' : '0.95rem 1.15rem',
+        background: color,
       }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{
-              width: 10,
-              height: 10,
-              borderRadius: '50%',
-              background: color,
-              display: 'inline-block',
-            }} />
-            <span style={{
-              fontSize: '1.15rem',
-              fontWeight: 800,
-              color,
-              letterSpacing: '-0.02em',
-            }}>
-              {label}
-            </span>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{
+            fontSize: '2rem',
+            fontWeight: 800,
+            color: '#fff',
+            letterSpacing: '-0.03em',
+            lineHeight: 1,
+          }}>
+            {label}
           </div>
           {subline && (
             <div style={{
-              fontSize: '0.75rem',
+              fontSize: '0.78rem',
               fontWeight: 500,
-              color,
-              marginTop: 2,
-              marginLeft: 18,
+              color: 'rgba(255,255,255,0.92)',
+              marginTop: 6,
             }}>
               {subline}
             </div>
@@ -570,16 +590,17 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
             border: 'none',
             cursor: 'pointer',
             padding: 4,
-            color: saved ? BRAND_GREEN : '#8a938e',
+            color: '#fff',
             transform: starBounce ? 'scale(1.22)' : 'scale(1)',
-            transition: 'transform 0.18s ease, color 0.15s',
+            transition: 'transform 0.18s ease',
+            flexShrink: 0,
           }}
         >
           <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 3.6l2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 15.58 7.3 18.05l.9-5.23-3.8-3.7 5.25-.76L12 3.6z"
-              fill={saved ? BRAND_GREEN : 'none'}
-              stroke={saved ? BRAND_GREEN : '#8a938e'}
+              fill={saved ? '#fff' : 'none'}
+              stroke="#fff"
               strokeWidth="1.6"
               strokeLinejoin="round"
             />
@@ -587,20 +608,23 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
         </button>
       </div>
 
-      <div style={{ padding: '1.1rem 1.15rem 2.5rem' }}>
-        <ImageComing />
+      <div style={{ padding: '1.1rem 1.15rem 2.5rem', background: '#fff' }}>
+        <ProductTile productName={record.productName} image={record.productImage} />
 
         <h1 style={{
-          fontFamily: 'var(--font-playfair), Georgia, serif',
-          fontSize: '1.45rem',
-          fontWeight: 700,
-          color: '#1a2e27',
-          margin: '0.95rem 0 0.2rem',
-          lineHeight: 1.2,
+          position: 'absolute',
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          whiteSpace: 'nowrap',
+          border: 0,
         }}>
           {record.productName}
         </h1>
-        <div style={{ fontSize: '0.92rem', color: '#5a635e' }}>
+        <div style={{ fontSize: '0.88rem', color: '#5a635e', marginTop: '0.7rem' }}>
           {record.brand}
         </div>
         <div style={{
@@ -702,7 +726,7 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
             <section>
               <SectionLabel>Flagged</SectionLabel>
               {flagged.length === 0 ? (
-                <div style={{ fontSize: '0.9rem', color: '#6b756f' }}>
+                <div style={{ fontSize: '0.88rem', color: '#6b756f' }}>
                   No flagged inactives
                 </div>
               ) : (
@@ -716,7 +740,7 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
               )}
             </section>
 
-            <section style={{ marginTop: '1.5rem' }}>
+            <section style={{ marginTop: '1.15rem' }}>
               <button
                 type="button"
                 onClick={() => setClearedOpen((value) => !value)}
@@ -792,7 +816,7 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
 
         {tab === 'photos' && (
           <div style={{ marginTop: '1.25rem' }}>
-            <ImageComing />
+            <ProductTile productName={record.productName} image={record.productImage} />
             <button
               type="button"
               onClick={() => setToast('Photo intake is not wired in this preview')}
