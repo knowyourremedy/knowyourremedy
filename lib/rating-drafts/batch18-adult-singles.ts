@@ -278,7 +278,6 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(NM_B12_SG_CITE, 'Glycerin'),
       flag('Yellow beeswax', 'cleared', labelCite(NM_B12_SG_CITE, METH.beeswax)),
       flag('Lecithin', 'cleared', labelCite(NM_B12_SG_CITE, METH.lecithin)),
-      labelCleared(NM_B12_SG_CITE, 'Water (when listed)'),
     ],
     verdict: 'clean',
     honestNote:
@@ -304,7 +303,6 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       { name: 'Omega-3 fatty acids (EPA + DHA)', strength: '300mg per softgel (typical Costco 400-ct)' },
     ],
     inactiveIngredients: [
-      labelCleared(KIRKLAND_FO_CITE, 'Fish oil (active / fill)'),
       labelCleared(KIRKLAND_FO_CITE, 'Gelatin (porcine)'),
       labelCleared(KIRKLAND_FO_CITE, 'Glycerin'),
       labelCleared(KIRKLAND_FO_CITE, 'Water'),
