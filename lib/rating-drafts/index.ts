@@ -8,3 +8,4 @@ export { BATCH6_KIDS_ALLERGIES } from './batch6-kids-allergies';
 export { BATCH7_ADULT_SLEEP } from './batch7-adult-sleep';
 export { BATCH8_KIDS_SLEEP } from './batch8-kids-sleep';
 export { BATCH9_IMMUNE_SUPPORT } from './batch9-immune-support';
+export { BATCH10_ADULT_DIGESTIVE } from './batch10-adult-digestive';
