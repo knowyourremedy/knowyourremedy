@@ -22,3 +22,4 @@ export { BATCH20_CLUB_LEFTOVERS } from './batch20-club-leftovers';
 export { BATCH21_TOPCARE_SAVE_MART } from './batch21-topcare-save-mart';
 export { BATCH22_EYE_EAR } from './batch22-eye-ear';
 export { BATCH24_IHERB_FULLSCRIPT } from './batch24-iherb-fullscript';
+export { BATCH25_IHERB_FULLSCRIPT_LEFTOVERS } from './batch25-iherb-fullscript-leftovers';
