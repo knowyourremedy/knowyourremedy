@@ -101,7 +101,6 @@ const METH = {
   starches:
     'Methodology §5 Cleared (pregelatinized / corn / potato / rice flour / similar simple starches — locked v1.6 housekeeping)',
   hpmc: 'Methodology §5 Cleared (hypromellose / HPMC / hydroxypropylmethylcellulose)',
-  cleared: 'Methodology §5 Cleared',
 } as const;
 
 function flag(
@@ -114,10 +113,6 @@ function flag(
 
 function labelCite(label: string, meth: string): string {
   return `${label}; ${meth}`;
-}
-
-function labelCleared(label: string, name: string): IngredientFlag {
-  return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
 function riceFlour(label: string, name: string): IngredientFlag {
