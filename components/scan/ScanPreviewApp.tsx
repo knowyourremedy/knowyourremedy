@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
@@ -187,8 +186,13 @@ function ScanDummy({ onScan }: { onScan: () => void }) {
   );
 }
 
+function replacePreviewId(id: string) {
+  if (typeof window === 'undefined') return;
+  const url = `/scan-preview?id=${encodeURIComponent(id)}`;
+  window.history.replaceState(window.history.state, '', url);
+}
+
 export default function ScanPreviewApp({ initialId }: Props) {
-  const router = useRouter();
   const [selectedId, setSelectedId] = useState(initialId ?? PREVIEW_SWITCHER[0].id);
   const [tab, setTab] = useState<ChromeTab>('scan');
   const [productOpen, setProductOpen] = useState(true);
@@ -207,12 +211,13 @@ export default function ScanPreviewApp({ initialId }: Props) {
     setSelectedId(id);
     setTab('scan');
     setProductOpen(true);
-    router.replace(`/scan-preview?id=${encodeURIComponent(id)}`, { scroll: false });
+    replacePreviewId(id);
   }
 
   function goTab(next: ChromeTab) {
     setTab(next);
     setProductOpen(false);
+    setToast(null);
   }
 
   function handleToggleSaved(id: string) {
@@ -287,8 +292,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
           borderRadius: 16,
           overflow: 'hidden',
           boxShadow: '0 8px 24px rgba(45, 74, 62, 0.06)',
-          height: 680,
-          maxHeight: 'calc(100dvh - 12.5rem)',
+          height: 620,
+          maxHeight: 'calc(100dvh - 16.5rem)',
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',
