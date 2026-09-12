@@ -25,3 +25,4 @@ export { BATCH24_IHERB_FULLSCRIPT } from './batch24-iherb-fullscript';
 export { BATCH25_IHERB_FULLSCRIPT_LEFTOVERS } from './batch25-iherb-fullscript-leftovers';
 export { BATCH26_WE_HEART_NUTRITION } from './batch26-we-heart-nutrition';
 export { BATCH27_THRIVE_WELLMADE } from './batch27-thrive-wellmade';
+export { BATCH28_THORNE_COM } from './batch28-thorne-com';
