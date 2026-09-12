@@ -11,3 +11,4 @@ export { BATCH9_IMMUNE_SUPPORT } from './batch9-immune-support';
 export { BATCH10_ADULT_DIGESTIVE } from './batch10-adult-digestive';
 export { BATCH11_KIDS_DIGESTIVE } from './batch11-kids-digestive';
 export { BATCH12_ADULT_FIRST_AID } from './batch12-adult-first-aid';
+export { BATCH13_KIDS_FIRST_AID } from './batch13-kids-first-aid';
