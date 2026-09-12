@@ -16,3 +16,4 @@ export { BATCH14_ADULT_VITAMINS } from './batch14-adult-vitamins';
 export { BATCH15_PRENATALS } from './batch15-prenatals';
 export { BATCH16_365_SPROUTS } from './batch16-365-sprouts';
 export { BATCH17_KIDS_VITAMINS } from './batch17-kids-vitamins';
+export { BATCH18_ADULT_SINGLES } from './batch18-adult-singles';
