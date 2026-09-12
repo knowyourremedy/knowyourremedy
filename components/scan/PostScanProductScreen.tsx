@@ -6,15 +6,13 @@ import {
   VERDICT_LABELS,
   VERDICT_SUBLINES,
 } from '@/lib/clean-picks/verdictLabels';
-import type { ActiveSafetyFlag, IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import type { ActiveIngredient, ActiveSafetyFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   ingredientTypeKind,
-  ingredientTypeLabel,
   ingredientWhy,
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
-  restingRiskLabel,
   restingTypeLine,
   togglePreviewCabinetId,
   type FlagIconKind,
@@ -37,15 +35,6 @@ type Props = {
   onToast?: (message: string) => void;
 };
 
-type FlaggedListItem = {
-  key: string;
-  name: string;
-  iconKind: FlagIconKind;
-  riskLevel: RiskLevel;
-  typeLine: string;
-  why: IngredientWhy;
-};
-
 function riskDotColor(level: RiskLevel): string {
   if (level === 'high') return VERDICT_COLORS.avoid;
   if (level === 'moderate' || level === 'limited') return VERDICT_COLORS.caution;
@@ -56,61 +45,31 @@ function activeSafetyRisk(flag: ActiveSafetyFlag): RiskLevel {
   return flag.cappedAt === 'avoid' ? 'high' : 'moderate';
 }
 
-function buildFlaggedItems(record: RatingRecord): FlaggedListItem[] {
-  const rows: FlaggedListItem[] = [];
-
-  if (record.activeSafetyFlag) {
-    const riskLevel = activeSafetyRisk(record.activeSafetyFlag);
-    const why = ingredientWhy({
-      name: 'Active-safety cap',
-      riskLevel,
-      source: record.activeSafetyFlag.source,
-    });
-    rows.push({
-      key: 'active-safety',
-      name: record.activeIngredients[0]?.name ?? 'Active-safety cap',
-      iconKind: 'active-safety',
-      riskLevel,
-      typeLine: `${ingredientTypeLabel('active-safety')} · ${restingRiskLabel(riskLevel)}`,
-      why: {
-        body: record.activeSafetyFlag.description,
-        sourceName: why.sourceName,
-        sourceHref: why.sourceHref,
-      },
-    });
-  }
-
-  for (const ingredient of record.inactiveIngredients) {
-    if (ingredient.riskLevel === 'cleared') continue;
-    rows.push({
-      key: ingredient.name,
-      name: ingredient.name,
-      iconKind: ingredientTypeKind(ingredient),
-      riskLevel: ingredient.riskLevel,
-      typeLine: restingTypeLine(ingredient),
-      why: ingredientWhy(ingredient),
-    });
-  }
-
-  return rows;
+function inactiveSortRank(level: RiskLevel): number {
+  if (level === 'high') return 0;
+  if (level === 'moderate' || level === 'limited') return 1;
+  return 2;
 }
 
-function SectionLabel({ children }: { children: string }) {
-  return (
-    <div style={{ marginBottom: '0.45rem' }}>
-      <div style={{
-        fontSize: '0.72rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.07em',
-        color: BLUE_B,
-        marginBottom: '0.28rem',
-      }}>
-        {children}
-      </div>
-      <div style={{ width: 22, height: 2, background: BLUE_B }} />
-    </div>
+function sortedInactives(record: RatingRecord) {
+  return record.inactiveIngredients
+    .map((ingredient, index) => ({ ingredient, index }))
+    .sort((a, b) => {
+      const rank = inactiveSortRank(a.ingredient.riskLevel) - inactiveSortRank(b.ingredient.riskLevel);
+      return rank !== 0 ? rank : a.index - b.index;
+    })
+    .map(({ ingredient }) => ingredient);
+}
+
+// Record-level cap only. Match an existing active by name when the flag
+// cites one; otherwise the first active. Never invent a flag.
+function flaggedActiveIndex(record: RatingRecord): number {
+  if (!record.activeSafetyFlag || record.activeIngredients.length === 0) return -1;
+  const haystack = `${record.activeSafetyFlag.description} ${record.activeSafetyFlag.source}`.toLowerCase();
+  const match = record.activeIngredients.findIndex((active) =>
+    haystack.includes(active.name.toLowerCase()),
   );
+  return match >= 0 ? match : 0;
 }
 
 function TypeIcon({ kind }: { kind: FlagIconKind | 'check' }) {
@@ -186,12 +145,12 @@ function NoteIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M7 4.5h7.2L18.5 9v10.5H7V4.5z"
-        stroke="#d97706"
+        stroke={BRAND_GREEN}
         strokeWidth="1.6"
         strokeLinejoin="round"
       />
-      <path d="M14.2 4.5V9H18.5" stroke="#d97706" strokeWidth="1.6" strokeLinejoin="round" />
-      <path d="M9.4 13h5.2M9.4 16.2h3.6" stroke="#d97706" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M14.2 4.5V9H18.5" stroke={BRAND_GREEN} strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M9.4 13h5.2M9.4 16.2h3.6" stroke={BRAND_GREEN} strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );
 }
@@ -490,24 +449,6 @@ function IngredientRow({
   );
 }
 
-function DraftIngredientRow({
-  ingredient,
-  kind,
-}: {
-  ingredient: IngredientFlag;
-  kind: 'flagged' | 'cleared';
-}) {
-  return (
-    <IngredientRow
-      name={ingredient.name}
-      iconKind={kind === 'cleared' ? 'check' : ingredientTypeKind(ingredient)}
-      riskLevel={ingredient.riskLevel}
-      typeLine={restingTypeLine(ingredient)}
-      why={ingredientWhy(ingredient)}
-    />
-  );
-}
-
 function AlternativeCard({
   item,
   onOpen,
@@ -592,7 +533,7 @@ function HonestNote({ note }: { note: string }) {
           width: '100%',
           background: '#fff8ec',
           border: 'none',
-          borderLeft: '4px solid #d97706',
+          borderLeft: `4px solid ${BRAND_GREEN}`,
           borderRadius: 8,
           padding: '0.55rem 0.7rem',
           cursor: 'pointer',
@@ -616,7 +557,7 @@ function HonestNote({ note }: { note: string }) {
           margin: '0.45rem 0 0',
           padding: '0.65rem 0.75rem',
           background: '#fff8ec',
-          borderLeft: '4px solid #d97706',
+          borderLeft: `4px solid ${BRAND_GREEN}`,
           borderRadius: 8,
           fontSize: '0.8rem',
           color: '#3a433e',
@@ -624,6 +565,148 @@ function HonestNote({ note }: { note: string }) {
         }}>
           {note}
         </p>
+      )}
+    </section>
+  );
+}
+
+function activeSafetyWhy(active: ActiveIngredient, flag: ActiveSafetyFlag): IngredientWhy {
+  const why = ingredientWhy({
+    name: active.name,
+    riskLevel: activeSafetyRisk(flag),
+    source: flag.source,
+  });
+  return {
+    body: flag.description,
+    sourceName: why.sourceName,
+    sourceHref: why.sourceHref,
+  };
+}
+
+function ActiveRow({
+  active,
+  safetyFlag,
+}: {
+  active: ActiveIngredient;
+  safetyFlag?: ActiveSafetyFlag;
+}) {
+  const [open, setOpen] = useState(false);
+  const riskLevel = safetyFlag ? activeSafetyRisk(safetyFlag) : null;
+
+  const body = (
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{
+            fontWeight: 700,
+            fontSize: '0.9rem',
+            color: '#1a2e27',
+            flex: 1,
+            lineHeight: 1.25,
+          }}>
+            {active.name}
+          </div>
+          {riskLevel && (
+            <span style={{
+              width: 8,
+              height: 8,
+              borderRadius: '50%',
+              background: riskDotColor(riskLevel),
+              flexShrink: 0,
+            }} />
+          )}
+          {safetyFlag && <Chevron open={open} />}
+        </div>
+        <div style={{
+          fontSize: '0.74rem',
+          color: '#8a938e',
+          marginTop: 2,
+          lineHeight: 1.3,
+        }}>
+          {active.strength}
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div style={{
+      borderBottom: '1px solid #eeeae3',
+      padding: '0.48rem 0',
+    }}>
+      {safetyFlag ? (
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          style={{
+            display: 'block',
+            width: '100%',
+            textAlign: 'left',
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+          }}
+        >
+          {body}
+        </button>
+      ) : body}
+      {open && safetyFlag && <WhyPanel why={activeSafetyWhy(active, safetyFlag)} />}
+    </div>
+  );
+}
+
+function ActivesBlock({ record }: { record: RatingRecord }) {
+  const [open, setOpen] = useState(false);
+  const actives = record.activeIngredients;
+  const count = actives.length;
+  if (count === 0) return null;
+  const flaggedIndex = flaggedActiveIndex(record);
+
+  return (
+    <section style={{ margin: '0.7rem 0 0' }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        aria-label={`Actives, ${count}`}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          width: '100%',
+          background: 'none',
+          border: 'none',
+          borderBottom: '1px solid #eeeae3',
+          borderRadius: 0,
+          padding: '0.55rem 0',
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+          textAlign: 'left',
+        }}
+      >
+        <span style={{
+          flex: 1,
+          fontSize: '0.9rem',
+          fontWeight: 700,
+          color: '#1a2e27',
+        }}>
+          Actives · {count}
+        </span>
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <div>
+          {actives.map((active, index) => (
+            <ActiveRow
+              key={`${active.name}-${active.strength}-${index}`}
+              active={active}
+              safetyFlag={index === flaggedIndex ? record.activeSafetyFlag : undefined}
+            />
+          ))}
+        </div>
       )}
     </section>
   );
@@ -677,7 +760,7 @@ function AlternativesBlock({
 
       {count === 0 ? (
         <div style={{ fontSize: '0.92rem', color: '#3a433e', lineHeight: 1.5 }}>
-          {NO_CLEANER_MATCH_COPY}
+          {NO_CLEANER_MATCH_COPY.endsWith('.') ? NO_CLEANER_MATCH_COPY : `${NO_CLEANER_MATCH_COPY}.`}
         </div>
       ) : showAll ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -715,14 +798,12 @@ export default function PostScanProductScreen({
   onToggleSaved,
   onToast,
 }: Props) {
-  const [clearedOpen, setClearedOpen] = useState(false);
   const [savedLocal, setSavedLocal] = useState(() => loadPreviewCabinetIds().includes(record.id));
   const [toast, setToast] = useState<string | null>(null);
   const [starBounce, setStarBounce] = useState(false);
   const saved = savedProp ?? savedLocal;
 
-  const flagged = useMemo(() => buildFlaggedItems(record), [record]);
-  const cleared = record.inactiveIngredients.filter((item) => item.riskLevel === 'cleared');
+  const inactives = useMemo(() => sortedInactives(record), [record]);
   const label = VERDICT_LABELS[record.verdict];
   const color = VERDICT_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
@@ -871,63 +952,19 @@ export default function PostScanProductScreen({
           <HonestNote key={record.id} note={record.honestNote} />
         )}
 
-        <div style={{ marginTop: '0.7rem' }}>
-          <section>
-            <SectionLabel>Flagged</SectionLabel>
-            {flagged.length === 0 ? (
-              <div style={{ fontSize: '0.84rem', color: '#6b756f', padding: '0.2rem 0 0.15rem' }}>
-                No flagged inactives
-              </div>
-            ) : (
-              flagged.map((item) => (
-                <IngredientRow
-                  key={item.key}
-                  name={item.name}
-                  iconKind={item.iconKind}
-                  riskLevel={item.riskLevel}
-                  typeLine={item.typeLine}
-                  why={item.why}
-                />
-              ))
-            )}
-          </section>
+        <ActivesBlock key={`actives-${record.id}`} record={record} />
 
-          <section style={{ marginTop: '0.85rem' }}>
-            <button
-              type="button"
-              onClick={() => setClearedOpen((value) => !value)}
-              aria-expanded={clearedOpen}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                width: '100%',
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-              }}
-            >
-              <SectionLabel>{`Cleared · ${cleared.length}`}</SectionLabel>
-              <Chevron open={clearedOpen} />
-            </button>
-            {clearedOpen && (
-              cleared.length === 0 ? (
-                <div style={{ fontSize: '0.84rem', color: '#6b756f' }}>
-                  No cleared inactives listed
-                </div>
-              ) : (
-                cleared.map((ingredient) => (
-                  <DraftIngredientRow
-                    key={ingredient.name}
-                    ingredient={ingredient}
-                    kind="cleared"
-                  />
-                ))
-              )
-            )}
-          </section>
+        <div style={{ marginTop: '0.15rem' }}>
+          {inactives.map((ingredient, index) => (
+            <IngredientRow
+              key={`${ingredient.name}-${index}`}
+              name={ingredient.name}
+              iconKind={ingredient.riskLevel === 'cleared' ? 'check' : ingredientTypeKind(ingredient)}
+              riskLevel={ingredient.riskLevel}
+              typeLine={restingTypeLine(ingredient)}
+              why={ingredientWhy(ingredient)}
+            />
+          ))}
 
           {record.verdict !== 'clean' && (
             <AlternativesBlock record={record} onOpenProduct={onOpenProduct} />
