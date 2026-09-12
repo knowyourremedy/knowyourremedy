@@ -360,6 +360,43 @@ function AlternativeCard({
   );
 }
 
+function HonestNote({ note }: { note: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <section style={{ marginTop: '1.5rem' }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+        }}
+      >
+        <SectionLabel>Honest note</SectionLabel>
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <p style={{
+          fontSize: '0.86rem',
+          color: '#4a534e',
+          lineHeight: 1.55,
+          margin: 0,
+        }}>
+          {note}
+        </p>
+      )}
+    </section>
+  );
+}
+
 function AlternativesBlock({
   record,
   onOpenProduct,
@@ -374,8 +411,18 @@ function AlternativesBlock({
 
   return (
     <section style={{ marginTop: '1.75rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-        <SectionLabel>{header}</SectionLabel>
+      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+        <div>
+          <div style={{
+            fontSize: '0.95rem',
+            fontWeight: 700,
+            color: '#1a2e27',
+            marginBottom: '0.4rem',
+          }}>
+            {header}
+          </div>
+          <div style={{ width: 28, height: 2, background: BLUE_B, marginBottom: '0.75rem' }} />
+        </div>
         {count > 0 && (
           <button
             type="button"
@@ -388,8 +435,7 @@ function AlternativesBlock({
               fontSize: '0.82rem',
               cursor: 'pointer',
               fontFamily: 'inherit',
-              padding: 0,
-              marginBottom: '0.75rem',
+              padding: '0.15rem 0 0',
             }}
           >
             {showAll ? 'Hide' : 'See all →'}
@@ -558,11 +604,9 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
           {record.brand}
         </div>
         <div style={{
-          fontSize: '0.78rem',
+          fontSize: '0.82rem',
           fontWeight: 600,
           color: BLUE_B,
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em',
           marginTop: 8,
           lineHeight: 1.45,
         }}>
@@ -646,17 +690,6 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
 
         {tab === 'overview' && (
           <div style={{ marginTop: '1.25rem' }}>
-            {record.honestNote && (
-              <p style={{
-                fontSize: '0.86rem',
-                color: '#4a534e',
-                lineHeight: 1.55,
-                margin: '0 0 1.35rem',
-              }}>
-                {record.honestNote}
-              </p>
-            )}
-
             {record.activeSafetyFlag && (
               <div style={{ marginBottom: '1.25rem' }}>
                 <SectionLabel>Active-safety note</SectionLabel>
@@ -719,6 +752,10 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
                 )
               )}
             </section>
+
+            {record.honestNote && (
+              <HonestNote key={record.id} note={record.honestNote} />
+            )}
 
             {record.verdict !== 'clean' && (
               <AlternativesBlock record={record} onOpenProduct={onOpenProduct} />
