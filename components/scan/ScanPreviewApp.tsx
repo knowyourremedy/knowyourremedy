@@ -233,8 +233,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
   return (
     <main style={{
       background: CANVAS,
-      minHeight: '100vh',
-      padding: '0.55rem 0.5rem 1.1rem',
+      minHeight: '100dvh',
+      padding: '0.65rem 0.5rem 0.75rem',
       fontFamily: 'var(--font-inter), sans-serif',
     }}>
       <div style={{ maxWidth: 390, margin: '0 auto' }}>
@@ -292,8 +292,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
           borderRadius: 16,
           overflow: 'hidden',
           boxShadow: '0 8px 24px rgba(45, 74, 62, 0.06)',
-          height: 640,
-          maxHeight: 'calc(100dvh - 13.25rem)',
+          height: 760,
+          maxHeight: 'calc(100dvh - 5.75rem)',
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',

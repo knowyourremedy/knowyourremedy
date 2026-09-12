@@ -1,8 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 
 export default function Nav() {
+  const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [user, setUser] = useState<{ id: string; email: string | undefined } | null>(null)
 
@@ -19,6 +21,10 @@ export default function Nav() {
       authListener.subscription.unsubscribe()
     }
   }, [])
+
+  if (pathname === '/scan-preview' || pathname.startsWith('/scan-preview/')) {
+    return <style>{'body { padding-bottom: 0 !important; }'}</style>
+  }
 
   return (
     <nav style={{

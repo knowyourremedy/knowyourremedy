@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
 type NavLink = {
@@ -15,6 +16,19 @@ const links: NavLink[] = [
 
 export default function QuickNav() {
   const pathname = usePathname()
+  const hideOnScanPreview =
+    pathname === '/scan-preview' || pathname.startsWith('/scan-preview/')
+
+  useEffect(() => {
+    if (!hideOnScanPreview) return
+    const previous = document.body.style.paddingBottom
+    document.body.style.paddingBottom = '0'
+    return () => {
+      document.body.style.paddingBottom = previous
+    }
+  }, [hideOnScanPreview])
+
+  if (hideOnScanPreview) return null
 
   return (
     <div

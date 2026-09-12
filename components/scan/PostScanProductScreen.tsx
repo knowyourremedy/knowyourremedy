@@ -25,9 +25,8 @@ import {
 const BRAND_GREEN = '#2d4a3e';
 const BLUE_B = '#4a6781';
 const CANVAS = '#faf7f2';
-const THUMB = 92;
-
-type TabKey = 'overview' | 'ingredients' | 'photos';
+const THUMB = 88;
+const PHOTO_REVIEW_TOAST = 'Photo review coming soon.';
 
 type Props = {
   record: RatingRecord;
@@ -219,9 +218,11 @@ function hasVerifiedSkuImage(image?: ProductImage): image is ProductImage {
 function ProductThumb({
   productName,
   image,
+  onAddPhoto,
 }: {
   productName: string;
   image?: ProductImage;
+  onAddPhoto?: () => void;
 }) {
   const box = {
     background: '#fff',
@@ -229,40 +230,69 @@ function ProductThumb({
     borderRadius: 10,
     width: THUMB,
     height: THUMB,
-    flexShrink: 0,
     overflow: 'hidden' as const,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   };
 
-  if (hasVerifiedSkuImage(image)) {
-    return (
-      <div style={box}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={image.url}
-          alt={productName}
-          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#fff' }}
-        />
-      </div>
-    );
-  }
-
   return (
-    <div role="img" aria-label={`${productName} — image coming`} style={box}>
-      <div style={{
-        fontSize: '0.58rem',
-        fontWeight: 700,
-        letterSpacing: '0.06em',
-        textTransform: 'uppercase',
-        color: '#9aa39d',
-        textAlign: 'center',
-        lineHeight: 1.3,
-        padding: '0 6px',
-      }}>
-        Image coming
-      </div>
+    <div style={{ position: 'relative', width: THUMB, height: THUMB, flexShrink: 0 }}>
+      {hasVerifiedSkuImage(image) ? (
+        <div style={box}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={image.url}
+            alt={productName}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#fff' }}
+          />
+        </div>
+      ) : (
+        <div role="img" aria-label={`${productName} — image coming`} style={box}>
+          <div style={{
+            fontSize: '0.58rem',
+            fontWeight: 700,
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+            color: '#9aa39d',
+            textAlign: 'center',
+            lineHeight: 1.3,
+            padding: '0 6px',
+          }}>
+            Image coming
+          </div>
+        </div>
+      )}
+      {!hasVerifiedSkuImage(image) && onAddPhoto && (
+        <button
+          type="button"
+          onClick={onAddPhoto}
+          aria-label="Add a photo"
+          style={{
+            position: 'absolute',
+            right: -5,
+            bottom: -5,
+            width: 26,
+            height: 26,
+            borderRadius: '50%',
+            background: '#fff',
+            border: '1px solid #ece7de',
+            boxShadow: '0 2px 6px rgba(26, 46, 39, 0.08)',
+            color: BRAND_GREEN,
+            fontSize: '1rem',
+            fontWeight: 600,
+            lineHeight: 1,
+            padding: 0,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontFamily: 'inherit',
+          }}
+        >
+          ＋
+        </button>
+      )}
     </div>
   );
 }
@@ -685,7 +715,6 @@ export default function PostScanProductScreen({
   onToggleSaved,
   onToast,
 }: Props) {
-  const [tab, setTab] = useState<TabKey>('overview');
   const [clearedOpen, setClearedOpen] = useState(false);
   const [savedLocal, setSavedLocal] = useState(() => loadPreviewCabinetIds().includes(record.id));
   const [toast, setToast] = useState<string | null>(null);
@@ -704,6 +733,11 @@ export default function PostScanProductScreen({
     return () => window.clearTimeout(timer);
   }, [toast]);
 
+  function showToast(message: string) {
+    if (onToast) onToast(message);
+    else setToast(message);
+  }
+
   function toggleSaved() {
     const next = onToggleSaved
       ? onToggleSaved(record.id)
@@ -711,9 +745,7 @@ export default function PostScanProductScreen({
     setSavedLocal(next);
     setStarBounce(true);
     window.setTimeout(() => setStarBounce(false), 280);
-    const message = next ? 'Saved to your cabinet.' : 'Removed.';
-    if (onToast) onToast(message);
-    else setToast(message);
+    showToast(next ? 'Saved to your cabinet.' : 'Removed.');
   }
 
   return (
@@ -811,8 +843,12 @@ export default function PostScanProductScreen({
       </div>
 
       <div style={{ padding: '0.7rem 0.9rem 2rem', background: CANVAS }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-          <ProductThumb productName={record.productName} image={record.productImage} />
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 6 }}>
+          <ProductThumb
+            productName={record.productName}
+            image={record.productImage}
+            onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
+          />
           <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
             <h1 style={{
               fontFamily: 'var(--font-playfair), Georgia, serif',
@@ -831,166 +867,72 @@ export default function PostScanProductScreen({
           </div>
         </div>
 
-        <div style={{
-          display: 'flex',
-          gap: 16,
-          marginTop: '0.55rem',
-          borderBottom: '1px solid #eeeae3',
-        }}>
-          {([
-            ['overview', 'Overview'],
-            ['ingredients', 'Ingredients'],
-            ['photos', 'Photos'],
-          ] as const).map(([key, text]) => {
-            const active = tab === key;
-            return (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setTab(key)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  borderBottom: active ? `2px solid ${BRAND_GREEN}` : '2px solid transparent',
-                  color: active ? BRAND_GREEN : '#8a938e',
-                  fontWeight: active ? 700 : 500,
-                  fontSize: '0.82rem',
-                  padding: '0.32rem 0',
-                  cursor: 'pointer',
-                  fontFamily: 'inherit',
-                }}
-              >
-                {text}
-              </button>
-            );
-          })}
-        </div>
-
         {record.honestNote && (
           <HonestNote key={record.id} note={record.honestNote} />
         )}
 
-        {tab === 'overview' && (
-          <div style={{ marginTop: '0.7rem' }}>
-            <section>
-              <SectionLabel>Flagged</SectionLabel>
-              {flagged.length === 0 ? (
-                <div style={{ fontSize: '0.84rem', color: '#6b756f', padding: '0.2rem 0 0.15rem' }}>
-                  No flagged inactives
-                </div>
-              ) : (
-                flagged.map((item) => (
-                  <IngredientRow
-                    key={item.key}
-                    name={item.name}
-                    iconKind={item.iconKind}
-                    riskLevel={item.riskLevel}
-                    typeLine={item.typeLine}
-                    why={item.why}
-                  />
-                ))
-              )}
-            </section>
-
-            <section style={{ marginTop: '0.85rem' }}>
-              <button
-                type="button"
-                onClick={() => setClearedOpen((value) => !value)}
-                aria-expanded={clearedOpen}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  background: 'none',
-                  border: 'none',
-                  padding: 0,
-                  cursor: 'pointer',
-                  fontFamily: 'inherit',
-                }}
-              >
-                <SectionLabel>{`Cleared · ${cleared.length}`}</SectionLabel>
-                <Chevron open={clearedOpen} />
-              </button>
-              {clearedOpen && (
-                cleared.length === 0 ? (
-                  <div style={{ fontSize: '0.84rem', color: '#6b756f' }}>
-                    No cleared inactives listed
-                  </div>
-                ) : (
-                  cleared.map((ingredient) => (
-                    <DraftIngredientRow
-                      key={ingredient.name}
-                      ingredient={ingredient}
-                      kind="cleared"
-                    />
-                  ))
-                )
-              )}
-            </section>
-
-            {record.verdict !== 'clean' && (
-              <AlternativesBlock record={record} onOpenProduct={onOpenProduct} />
-            )}
-          </div>
-        )}
-
-        {tab === 'ingredients' && (
-          <div style={{ marginTop: '0.7rem' }}>
-            <SectionLabel>Active</SectionLabel>
-            {record.activeIngredients.map((active) => (
-              <div key={`${active.name}-${active.strength}`} style={{
-                padding: '0.55rem 0',
-                borderBottom: '1px solid #eeeae3',
-                fontSize: '0.88rem',
-                color: '#1a2e27',
-              }}>
-                <strong>{active.name}</strong>
-                <span style={{ color: '#6b756f' }}> · {active.strength}</span>
+        <div style={{ marginTop: '0.7rem' }}>
+          <section>
+            <SectionLabel>Flagged</SectionLabel>
+            {flagged.length === 0 ? (
+              <div style={{ fontSize: '0.84rem', color: '#6b756f', padding: '0.2rem 0 0.15rem' }}>
+                No flagged inactives
               </div>
-            ))}
-            <div style={{ marginTop: '1.05rem' }}>
-              <SectionLabel>Inactive</SectionLabel>
-              {record.inactiveIngredients.map((ingredient) => (
-                <DraftIngredientRow
-                  key={`${ingredient.name}-${ingredient.riskLevel}`}
-                  ingredient={ingredient}
-                  kind={ingredient.riskLevel === 'cleared' ? 'cleared' : 'flagged'}
+            ) : (
+              flagged.map((item) => (
+                <IngredientRow
+                  key={item.key}
+                  name={item.name}
+                  iconKind={item.iconKind}
+                  riskLevel={item.riskLevel}
+                  typeLine={item.typeLine}
+                  why={item.why}
                 />
-              ))}
-            </div>
-          </div>
-        )}
+              ))
+            )}
+          </section>
 
-        {tab === 'photos' && (
-          <div style={{ marginTop: '0.7rem' }}>
-            <ProductTile productName={record.productName} image={record.productImage} />
+          <section style={{ marginTop: '0.85rem' }}>
             <button
               type="button"
-              onClick={() => {
-                const message = 'Photo intake is not wired in this preview';
-                if (onToast) onToast(message);
-                else setToast(message);
-              }}
+              onClick={() => setClearedOpen((value) => !value)}
+              aria-expanded={clearedOpen}
               style={{
-                display: 'block',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
                 width: '100%',
-                marginTop: 14,
-                background: '#fff',
-                border: '1px solid #ece7de',
-                color: BRAND_GREEN,
-                borderRadius: 12,
-                padding: '0.75rem 1rem',
-                fontWeight: 700,
-                fontSize: '0.85rem',
+                background: 'none',
+                border: 'none',
+                padding: 0,
                 cursor: 'pointer',
                 fontFamily: 'inherit',
               }}
             >
-              ＋ Add a photo
+              <SectionLabel>{`Cleared · ${cleared.length}`}</SectionLabel>
+              <Chevron open={clearedOpen} />
             </button>
-          </div>
-        )}
+            {clearedOpen && (
+              cleared.length === 0 ? (
+                <div style={{ fontSize: '0.84rem', color: '#6b756f' }}>
+                  No cleared inactives listed
+                </div>
+              ) : (
+                cleared.map((ingredient) => (
+                  <DraftIngredientRow
+                    key={ingredient.name}
+                    ingredient={ingredient}
+                    kind="cleared"
+                  />
+                ))
+              )
+            )}
+          </section>
+
+          {record.verdict !== 'clean' && (
+            <AlternativesBlock record={record} onOpenProduct={onOpenProduct} />
+          )}
+        </div>
       </div>
 
       {toast && (
