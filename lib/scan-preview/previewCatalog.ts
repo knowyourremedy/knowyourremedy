@@ -177,6 +177,62 @@ export function restingRiskLabel(level: RiskLevel): string {
   return 'Cleared';
 }
 
+// Five flagged-row types only. Short gray labels, not paragraphs.
+export type FlagIconKind =
+  | 'dye'
+  | 'preservative'
+  | 'sweetener'
+  | 'additive'
+  | 'active-safety';
+
+export function ingredientTypeKind(ingredient: IngredientFlag): FlagIconKind {
+  const name = normalizeName(ingredient.name);
+  const source = (ingredient.source ?? '').toLowerCase();
+
+  if (
+    source.includes('synthetic dyes')
+    || /fd c|d c|aluminum lake|blue no|red no|yellow no|green no/.test(name)
+    || name.includes('dye')
+  ) {
+    return 'dye';
+  }
+
+  if (
+    /sorbate|benzoate|paraben/.test(name)
+    || source.includes('paraben')
+    || source.includes('benzoate')
+    || source.includes('sorbate')
+  ) {
+    return 'preservative';
+  }
+
+  if (
+    /aspartame|sucralose|saccharin|acesulfame|ace k|mannitol|sorbitol|xylitol|erythritol|maltitol|isomalt/.test(name)
+    || source.includes('sugar alcohol')
+    || source.includes('mannitol')
+    || source.includes('sorbitol')
+    || source.includes('sucralose')
+    || source.includes('aspartame')
+    || source.includes('saccharin')
+  ) {
+    return 'sweetener';
+  }
+
+  return 'additive';
+}
+
+export function ingredientTypeLabel(kind: FlagIconKind): string {
+  if (kind === 'dye') return 'Synthetic dye';
+  if (kind === 'preservative') return 'Preservative';
+  if (kind === 'sweetener') return 'Sweetener';
+  if (kind === 'active-safety') return 'Active-safety cap';
+  return 'Additive';
+}
+
+export function restingTypeLine(ingredient: IngredientFlag): string {
+  return `${ingredientTypeLabel(ingredientTypeKind(ingredient))} · ${restingRiskLabel(ingredient.riskLevel)}`;
+}
+
 export function dailyMedHref(source?: string): string | null {
   if (!source) return null;
   const match = source.match(/DailyMed setid\s+([0-9a-f-]+)/i);
