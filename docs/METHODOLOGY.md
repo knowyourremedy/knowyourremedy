@@ -179,7 +179,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 |---|---|
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
 | Microcrystalline cellulose, croscarmellose sodium | Standard disintegrants. EFSA 2017: no carcinogenicity, no ADI needed. |
-| Magnesium stearate, stearic acid, calcium stearate | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. |
+| Magnesium stearate, stearic acid, calcium stearate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
 | Hypromellose | ADI "not specified"; no genotox/carcinogenicity/repro findings. |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
