@@ -280,8 +280,6 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(NM_PRENATAL_GUMMY_CITE, 'Lactic acid'),
       labelCleared(NM_PRENATAL_GUMMY_CITE, 'Calcium lactate'),
       labelCleared(NM_PRENATAL_GUMMY_CITE, 'Citric acid'),
-      labelCleared(NM_PRENATAL_GUMMY_CITE, 'Color added'),
-      labelCleared(NM_PRENATAL_GUMMY_CITE, 'Sucrose fatty acid esters'),
     ],
     verdict: 'caution',
     honestNote:
