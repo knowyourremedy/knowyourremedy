@@ -1,7 +1,7 @@
 'use client';
 
 import { CLASS_COLORS, TOP_PICK_LABELS } from '@/lib/clean-picks/classColors';
-import { VERDICT_COLORS, VERDICT_LABELS } from '@/lib/clean-picks/verdictLabels';
+import { VERDICT_COLORS, VERDICT_LABELS, VERDICT_SUBLINES } from '@/lib/clean-picks/verdictLabels';
 import RetailerChips from './RetailerChips';
 import type { Pick } from '@/lib/clean-picks/painFeverPicks';
 
@@ -53,17 +53,29 @@ export default function PickCard({ pick, showTopBadge = false }: Props) {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-end', flexShrink: 0 }}>
             {pick.verdict === 'caution' && (
-              <span style={{
-                fontSize: '0.7rem',
-                fontWeight: 600,
-                padding: '4px 10px',
-                borderRadius: '6px',
-                background: VERDICT_COLORS.caution,
-                color: '#fff',
-                whiteSpace: 'nowrap',
-              }}>
-                {VERDICT_LABELS.caution}
-              </span>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '3px' }}>
+                <span style={{
+                  fontSize: '0.7rem',
+                  fontWeight: 600,
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  background: VERDICT_COLORS.caution,
+                  color: '#fff',
+                  whiteSpace: 'nowrap',
+                }}>
+                  {VERDICT_LABELS.caution}
+                </span>
+                {VERDICT_SUBLINES.caution && (
+                  <span style={{
+                    fontSize: '0.65rem',
+                    fontWeight: 500,
+                    color: VERDICT_COLORS.caution,
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {VERDICT_SUBLINES.caution}
+                  </span>
+                )}
+              </div>
             )}
             {topPickLabel && (
               <span style={{
