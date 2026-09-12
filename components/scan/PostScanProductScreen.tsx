@@ -6,20 +6,26 @@ import {
   VERDICT_LABELS,
   VERDICT_SUBLINES,
 } from '@/lib/clean-picks/verdictLabels';
-import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import type { ActiveSafetyFlag, IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
+  ingredientTypeKind,
+  ingredientTypeLabel,
   ingredientWhy,
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
   restingRiskLabel,
+  restingTypeLine,
   togglePreviewCabinetId,
+  type FlagIconKind,
+  type IngredientWhy,
   type MatchedCleanAlternative,
 } from '@/lib/scan-preview/previewCatalog';
 
 const BRAND_GREEN = '#2d4a3e';
 const BLUE_B = '#4a6781';
 const CANVAS = '#faf7f2';
+const THUMB = 92;
 
 type TabKey = 'overview' | 'ingredients' | 'photos';
 
@@ -32,56 +38,161 @@ type Props = {
   onToast?: (message: string) => void;
 };
 
+type FlaggedListItem = {
+  key: string;
+  name: string;
+  iconKind: FlagIconKind;
+  riskLevel: RiskLevel;
+  typeLine: string;
+  why: IngredientWhy;
+};
+
 function riskDotColor(level: RiskLevel): string {
   if (level === 'high') return VERDICT_COLORS.avoid;
   if (level === 'moderate' || level === 'limited') return VERDICT_COLORS.caution;
   return VERDICT_COLORS.clean;
 }
 
-function formatAge(minAge?: number): string | null {
-  if (minAge == null) return null;
-  return `Ages ${minAge}+`;
+function activeSafetyRisk(flag: ActiveSafetyFlag): RiskLevel {
+  return flag.cappedAt === 'avoid' ? 'high' : 'moderate';
 }
 
-function formatActives(record: RatingRecord): string {
-  return record.activeIngredients
-    .map((active) => `${active.name} ${active.strength}`.trim())
-    .join(' · ');
+function buildFlaggedItems(record: RatingRecord): FlaggedListItem[] {
+  const rows: FlaggedListItem[] = [];
+
+  if (record.activeSafetyFlag) {
+    const riskLevel = activeSafetyRisk(record.activeSafetyFlag);
+    const why = ingredientWhy({
+      name: 'Active-safety cap',
+      riskLevel,
+      source: record.activeSafetyFlag.source,
+    });
+    rows.push({
+      key: 'active-safety',
+      name: record.activeIngredients[0]?.name ?? 'Active-safety cap',
+      iconKind: 'active-safety',
+      riskLevel,
+      typeLine: `${ingredientTypeLabel('active-safety')} · ${restingRiskLabel(riskLevel)}`,
+      why: {
+        body: record.activeSafetyFlag.description,
+        sourceName: why.sourceName,
+        sourceHref: why.sourceHref,
+      },
+    });
+  }
+
+  for (const ingredient of record.inactiveIngredients) {
+    if (ingredient.riskLevel === 'cleared') continue;
+    rows.push({
+      key: ingredient.name,
+      name: ingredient.name,
+      iconKind: ingredientTypeKind(ingredient),
+      riskLevel: ingredient.riskLevel,
+      typeLine: restingTypeLine(ingredient),
+      why: ingredientWhy(ingredient),
+    });
+  }
+
+  return rows;
 }
 
 function SectionLabel({ children }: { children: string }) {
   return (
-    <div style={{ marginBottom: '0.75rem' }}>
+    <div style={{ marginBottom: '0.45rem' }}>
       <div style={{
-        fontSize: '0.78rem',
+        fontSize: '0.72rem',
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.07em',
         color: BLUE_B,
-        marginBottom: '0.4rem',
+        marginBottom: '0.28rem',
       }}>
         {children}
       </div>
-      <div style={{ width: 28, height: 2, background: BLUE_B }} />
+      <div style={{ width: 22, height: 2, background: BLUE_B }} />
     </div>
   );
 }
 
-function LineIcon({ kind }: { kind: 'flag' | 'check' }) {
+function TypeIcon({ kind }: { kind: FlagIconKind | 'check' }) {
   const stroke = '#6b7280';
+  const sw = 1.6;
   if (kind === 'check') {
     return (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="8.5" stroke={stroke} strokeWidth="1.6" />
-        <path d="M8 12.2l2.4 2.4L16.2 9" stroke={stroke} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="12" r="8.5" stroke={stroke} strokeWidth={sw} />
+        <path d="M8 12.2l2.4 2.4L16.2 9" stroke={stroke} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  if (kind === 'dye') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M12 3.8c0 0-5.4 6.4-5.4 10.2a5.4 5.4 0 0010.8 0C17.4 10.2 12 3.8 12 3.8z"
+          stroke={stroke}
+          strokeWidth={sw}
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (kind === 'preservative') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M9 3.5h6M10.2 3.5v5.1L6.9 16.2A3.1 3.1 0 009.7 20.5h4.6a3.1 3.1 0 002.8-4.3L13.8 8.6V3.5"
+          stroke={stroke}
+          strokeWidth={sw}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (kind === 'sweetener') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M12 3.6l7 4v8.8l-7 4-7-4V7.6l7-4z"
+          stroke={stroke}
+          strokeWidth={sw}
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (kind === 'active-safety') {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M12 3.5l7.4 2.9v6.2c0 4.3-3.1 7.2-7.4 8.1-4.3-.9-7.4-3.8-7.4-8.1V6.4L12 3.5z"
+          stroke={stroke}
+          strokeWidth={sw}
+          strokeLinejoin="round"
+        />
       </svg>
     );
   }
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="12" cy="12" r="8.5" stroke={stroke} strokeWidth="1.6" />
-      <path d="M12 8v5" stroke={stroke} strokeWidth="1.6" strokeLinecap="round" />
-      <circle cx="12" cy="16.2" r="0.9" fill={stroke} />
+      <rect x="5" y="5" width="14" height="14" rx="3" stroke={stroke} strokeWidth={sw} />
+      <path d="M12 8.6v6.8M8.6 12h6.8" stroke={stroke} strokeWidth={sw} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function NoteIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M7 4.5h7.2L18.5 9v10.5H7V4.5z"
+        stroke="#d97706"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path d="M14.2 4.5V9H18.5" stroke="#d97706" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M9.4 13h5.2M9.4 16.2h3.6" stroke="#d97706" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );
 }
@@ -103,6 +214,57 @@ function Chevron({ open }: { open: boolean }) {
 
 function hasVerifiedSkuImage(image?: ProductImage): image is ProductImage {
   return Boolean(image?.verifiedSku && image.url);
+}
+
+function ProductThumb({
+  productName,
+  image,
+}: {
+  productName: string;
+  image?: ProductImage;
+}) {
+  const box = {
+    background: '#fff',
+    border: '1px solid #ece7de',
+    borderRadius: 10,
+    width: THUMB,
+    height: THUMB,
+    flexShrink: 0,
+    overflow: 'hidden' as const,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
+  if (hasVerifiedSkuImage(image)) {
+    return (
+      <div style={box}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={image.url}
+          alt={productName}
+          style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#fff' }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div role="img" aria-label={`${productName} — image coming`} style={box}>
+      <div style={{
+        fontSize: '0.58rem',
+        fontWeight: 700,
+        letterSpacing: '0.06em',
+        textTransform: 'uppercase',
+        color: '#9aa39d',
+        textAlign: 'center',
+        lineHeight: 1.3,
+        padding: '0 6px',
+      }}>
+        Image coming
+      </div>
+    </div>
+  );
 }
 
 function ProductTile({
@@ -184,46 +346,36 @@ function ProductTile({
   );
 }
 
-function IngredientExpand({
-  ingredient,
-  whyLabel,
-}: {
-  ingredient: IngredientFlag;
-  whyLabel: string;
-}) {
-  const why = ingredientWhy(ingredient);
+function WhyPanel({ why }: { why: IngredientWhy }) {
   return (
     <div style={{
-      marginTop: 10,
+      marginTop: 8,
       background: '#fff',
       border: '1px solid #ece7de',
-      borderRadius: 12,
-      padding: '0.8rem 0.9rem',
+      borderRadius: 10,
+      padding: '0.7rem 0.8rem',
     }}>
-      <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5a635e', marginBottom: 6 }}>
-        {whyLabel}
-      </div>
-      <div style={{ fontSize: '0.84rem', color: '#3a433e', lineHeight: 1.5 }}>
+      <div style={{ fontSize: '0.82rem', color: '#3a433e', lineHeight: 1.45 }}>
         {why.body}
       </div>
-      {why.body === 'Why pending review' && ingredient.source && (
-        <div style={{ fontSize: '0.78rem', color: '#6b756f', lineHeight: 1.45, marginTop: 6 }}>
-          {ingredient.source}
+      {why.body === 'Why pending review' && !why.sourceName && why.sourceHref == null && (
+        <div style={{ fontSize: '0.76rem', color: '#6b756f', lineHeight: 1.4, marginTop: 6 }}>
+          Source pending review
         </div>
       )}
       {why.sourceName && (
-        <div style={{ marginTop: 10 }}>
+        <div style={{ marginTop: 8 }}>
           {why.sourceHref ? (
             <a
               href={why.sourceHref}
               target="_blank"
               rel="noreferrer"
-              style={{ color: BRAND_GREEN, fontSize: '0.8rem', fontWeight: 600 }}
+              style={{ color: BRAND_GREEN, fontSize: '0.78rem', fontWeight: 600 }}
             >
               {why.sourceName}
             </a>
           ) : (
-            <div style={{ color: '#3a433e', fontSize: '0.8rem', lineHeight: 1.45 }}>
+            <div style={{ color: '#3a433e', fontSize: '0.78rem', lineHeight: 1.4 }}>
               {why.sourceName}
             </div>
           )}
@@ -234,19 +386,24 @@ function IngredientExpand({
 }
 
 function IngredientRow({
-  ingredient,
-  kind,
+  name,
+  iconKind,
+  riskLevel,
+  typeLine,
+  why,
 }: {
-  ingredient: IngredientFlag;
-  kind: 'flagged' | 'cleared';
+  name: string;
+  iconKind: FlagIconKind | 'check';
+  riskLevel: RiskLevel;
+  typeLine: string;
+  why: IngredientWhy;
 }) {
   const [open, setOpen] = useState(false);
-  const resting = restingRiskLabel(ingredient.riskLevel);
 
   return (
     <div style={{
       borderBottom: '1px solid #eeeae3',
-      padding: '0.68rem 0',
+      padding: '0.52rem 0',
     }}>
       <button
         type="button"
@@ -263,49 +420,61 @@ function IngredientRow({
           fontFamily: 'inherit',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
           <div style={{ paddingTop: 2 }}>
-            <LineIcon kind={kind === 'flagged' ? 'flag' : 'check'} />
+            <TypeIcon kind={iconKind} />
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <div style={{
                 fontWeight: 700,
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
                 color: '#1a2e27',
                 flex: 1,
+                lineHeight: 1.25,
               }}>
-                {ingredient.name}
+                {name}
               </div>
               <span style={{
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: riskDotColor(ingredient.riskLevel),
+                background: riskDotColor(riskLevel),
                 flexShrink: 0,
               }} />
               <Chevron open={open} />
             </div>
             <div style={{
-              fontSize: '0.78rem',
+              fontSize: '0.74rem',
               color: '#8a938e',
-              marginTop: 3,
-              lineHeight: 1.35,
+              marginTop: 2,
+              lineHeight: 1.3,
             }}>
-              {resting}
+              {typeLine}
             </div>
           </div>
         </div>
       </button>
-      {open && (
-        <div style={{ paddingLeft: 28 }}>
-          <IngredientExpand
-            ingredient={ingredient}
-            whyLabel={kind === 'flagged' ? 'Why this is flagged' : 'Why this is cleared'}
-          />
-        </div>
-      )}
+      {open && <WhyPanel why={why} />}
     </div>
+  );
+}
+
+function DraftIngredientRow({
+  ingredient,
+  kind,
+}: {
+  ingredient: IngredientFlag;
+  kind: 'flagged' | 'cleared';
+}) {
+  return (
+    <IngredientRow
+      name={ingredient.name}
+      iconKind={kind === 'cleared' ? 'check' : ingredientTypeKind(ingredient)}
+      riskLevel={ingredient.riskLevel}
+      typeLine={restingTypeLine(ingredient)}
+      why={ingredientWhy(ingredient)}
+    />
   );
 }
 
@@ -378,34 +547,54 @@ function AlternativeCard({
 }
 
 function HonestNote({ note }: { note: string }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <section
-      style={{
-        marginTop: '1.15rem',
-        background: '#fff8ec',
-        borderLeft: '4px solid #d97706',
-        borderRadius: 10,
-        padding: '0.85rem 0.95rem',
-      }}
-    >
-      <div style={{
-        fontSize: '0.68rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.07em',
-        color: '#d97706',
-        marginBottom: 6,
-      }}>
-        Honest note
-      </div>
-      <p style={{
-        fontSize: '0.8rem',
-        color: '#3a433e',
-        lineHeight: 1.5,
-        margin: 0,
-      }}>
-        {note}
-      </p>
+    <section style={{ margin: '0.65rem 0 0' }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          width: '100%',
+          background: '#fff8ec',
+          border: 'none',
+          borderLeft: '4px solid #d97706',
+          borderRadius: 8,
+          padding: '0.55rem 0.7rem',
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+          textAlign: 'left',
+        }}
+      >
+        <NoteIcon />
+        <span style={{
+          flex: 1,
+          fontSize: '0.82rem',
+          fontWeight: 700,
+          color: '#1a2e27',
+        }}>
+          Honest note
+        </span>
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <p style={{
+          margin: '0.45rem 0 0',
+          padding: '0.65rem 0.75rem',
+          background: '#fff8ec',
+          borderLeft: '4px solid #d97706',
+          borderRadius: 8,
+          fontSize: '0.8rem',
+          color: '#3a433e',
+          lineHeight: 1.45,
+        }}>
+          {note}
+        </p>
+      )}
     </section>
   );
 }
@@ -423,18 +612,18 @@ function AlternativesBlock({
   const header = count === 1 ? '1 clean alternative' : `${count} clean alternatives`;
 
   return (
-    <section style={{ marginTop: '1.75rem' }}>
+    <section style={{ marginTop: '1.25rem' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
         <div>
           <div style={{
-            fontSize: '0.95rem',
+            fontSize: '0.92rem',
             fontWeight: 700,
             color: '#1a2e27',
-            marginBottom: '0.4rem',
+            marginBottom: '0.3rem',
           }}>
             {header}
           </div>
-          <div style={{ width: 28, height: 2, background: BLUE_B, marginBottom: '0.75rem' }} />
+          <div style={{ width: 28, height: 2, background: BLUE_B, marginBottom: '0.65rem' }} />
         </div>
         {count > 0 && (
           <button
@@ -474,8 +663,8 @@ function AlternativesBlock({
             overflowX: 'auto',
             scrollSnapType: 'x mandatory',
             paddingBottom: 8,
-            marginRight: -20,
-            paddingRight: 20,
+            marginRight: -16,
+            paddingRight: 16,
             WebkitOverflowScrolling: 'touch',
           }}
         >
@@ -503,12 +692,11 @@ export default function PostScanProductScreen({
   const [starBounce, setStarBounce] = useState(false);
   const saved = savedProp ?? savedLocal;
 
-  const flagged = record.inactiveIngredients.filter((item) => item.riskLevel !== 'cleared');
+  const flagged = useMemo(() => buildFlaggedItems(record), [record]);
   const cleared = record.inactiveIngredients.filter((item) => item.riskLevel === 'cleared');
   const label = VERDICT_LABELS[record.verdict];
   const color = VERDICT_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
-  const ageLabel = formatAge(record.minAge);
 
   useEffect(() => {
     if (!toast) return;
@@ -539,11 +727,11 @@ export default function PostScanProductScreen({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: 12,
-        padding: subline ? '0.85rem 1.15rem 0.9rem' : '0.95rem 1.15rem',
+        gap: 10,
+        padding: subline ? '0.62rem 0.9rem 0.68rem' : '0.7rem 0.9rem',
         background: color,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1, minWidth: 0 }}>
           {onBack && (
             <button
               type="button"
@@ -570,7 +758,7 @@ export default function PostScanProductScreen({
           )}
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{
-              fontSize: '2rem',
+              fontSize: '1.7rem',
               fontWeight: 800,
               color: '#fff',
               letterSpacing: '-0.03em',
@@ -580,10 +768,10 @@ export default function PostScanProductScreen({
             </div>
             {subline && (
               <div style={{
-                fontSize: '0.78rem',
+                fontSize: '0.74rem',
                 fontWeight: 500,
                 color: 'rgba(255,255,255,0.92)',
-                marginTop: 6,
+                marginTop: 4,
               }}>
                 {subline}
               </div>
@@ -595,8 +783,8 @@ export default function PostScanProductScreen({
           onClick={toggleSaved}
           aria-label={saved ? 'Remove from cabinet' : 'Save to cabinet'}
           style={{
-            width: 40,
-            height: 40,
+            width: 36,
+            height: 36,
             borderRadius: '50%',
             background: '#fff',
             border: 'none',
@@ -610,7 +798,7 @@ export default function PostScanProductScreen({
             flexShrink: 0,
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 3.6l2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 15.58 7.3 18.05l.9-5.23-3.8-3.7 5.25-.76L12 3.6z"
               fill={saved ? BRAND_GREEN : 'none'}
@@ -622,79 +810,31 @@ export default function PostScanProductScreen({
         </button>
       </div>
 
-      <div style={{ padding: '1.1rem 1.15rem 2.5rem', background: CANVAS }}>
-        <ProductTile productName={record.productName} image={record.productImage} />
-
-        <h1 style={{
-          position: 'absolute',
-          width: 1,
-          height: 1,
-          padding: 0,
-          margin: -1,
-          overflow: 'hidden',
-          clip: 'rect(0, 0, 0, 0)',
-          whiteSpace: 'nowrap',
-          border: 0,
-        }}>
-          {record.productName}
-        </h1>
-        <div style={{ fontSize: '0.88rem', color: '#5a635e', marginTop: '0.7rem' }}>
-          {record.brand}
-        </div>
-        <div style={{
-          fontSize: '0.82rem',
-          fontWeight: 600,
-          color: BLUE_B,
-          marginTop: 8,
-          lineHeight: 1.45,
-        }}>
-          {formatActives(record)}
-        </div>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: 6,
-          marginTop: 10,
-        }}>
-          {record.form && (
-            <span style={{
-              fontSize: '0.72rem',
-              color: '#5a635e',
-              border: '1px solid #ece7de',
-              borderRadius: 999,
-              padding: '3px 8px',
+      <div style={{ padding: '0.7rem 0.9rem 2rem', background: CANVAS }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+          <ProductThumb productName={record.productName} image={record.productImage} />
+          <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
+            <h1 style={{
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: '1.05rem',
+              fontWeight: 700,
+              color: '#1a2e27',
+              lineHeight: 1.25,
+              letterSpacing: '-0.02em',
+              margin: 0,
             }}>
-              Form: {record.form}
-            </span>
-          )}
-          {ageLabel && (
-            <span style={{
-              fontSize: '0.72rem',
-              color: '#5a635e',
-              border: '1px solid #ece7de',
-              borderRadius: 999,
-              padding: '3px 8px',
-            }}>
-              {ageLabel}
-            </span>
-          )}
-          {record.category && (
-            <span style={{
-              fontSize: '0.72rem',
-              color: '#5a635e',
-              border: '1px solid #ece7de',
-              borderRadius: 999,
-              padding: '3px 8px',
-            }}>
-              {record.category}
-            </span>
-          )}
+              {record.productName}
+            </h1>
+            <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
+              {record.brand}
+            </div>
+          </div>
         </div>
 
         <div style={{
           display: 'flex',
-          gap: 18,
-          marginTop: '1.25rem',
+          gap: 16,
+          marginTop: '0.55rem',
           borderBottom: '1px solid #eeeae3',
         }}>
           {([
@@ -714,8 +854,8 @@ export default function PostScanProductScreen({
                   borderBottom: active ? `2px solid ${BRAND_GREEN}` : '2px solid transparent',
                   color: active ? BRAND_GREEN : '#8a938e',
                   fontWeight: active ? 700 : 500,
-                  fontSize: '0.88rem',
-                  padding: '0.45rem 0',
+                  fontSize: '0.82rem',
+                  padding: '0.32rem 0',
                   cursor: 'pointer',
                   fontFamily: 'inherit',
                 }}
@@ -726,35 +866,33 @@ export default function PostScanProductScreen({
           })}
         </div>
 
-        {tab === 'overview' && (
-          <div style={{ marginTop: '1.25rem' }}>
-            {record.activeSafetyFlag && (
-              <div style={{ marginBottom: '1.25rem' }}>
-                <SectionLabel>Active-safety note</SectionLabel>
-                <div style={{ fontSize: '0.88rem', color: '#3a433e', lineHeight: 1.5 }}>
-                  {record.activeSafetyFlag.description}
-                </div>
-              </div>
-            )}
+        {record.honestNote && (
+          <HonestNote key={record.id} note={record.honestNote} />
+        )}
 
+        {tab === 'overview' && (
+          <div style={{ marginTop: '0.7rem' }}>
             <section>
               <SectionLabel>Flagged</SectionLabel>
               {flagged.length === 0 ? (
-                <div style={{ fontSize: '0.88rem', color: '#6b756f' }}>
+                <div style={{ fontSize: '0.84rem', color: '#6b756f', padding: '0.2rem 0 0.15rem' }}>
                   No flagged inactives
                 </div>
               ) : (
-                flagged.map((ingredient) => (
+                flagged.map((item) => (
                   <IngredientRow
-                    key={ingredient.name}
-                    ingredient={ingredient}
-                    kind="flagged"
+                    key={item.key}
+                    name={item.name}
+                    iconKind={item.iconKind}
+                    riskLevel={item.riskLevel}
+                    typeLine={item.typeLine}
+                    why={item.why}
                   />
                 ))
               )}
             </section>
 
-            <section style={{ marginTop: '1.15rem' }}>
+            <section style={{ marginTop: '0.85rem' }}>
               <button
                 type="button"
                 onClick={() => setClearedOpen((value) => !value)}
@@ -776,12 +914,12 @@ export default function PostScanProductScreen({
               </button>
               {clearedOpen && (
                 cleared.length === 0 ? (
-                  <div style={{ fontSize: '0.9rem', color: '#6b756f' }}>
+                  <div style={{ fontSize: '0.84rem', color: '#6b756f' }}>
                     No cleared inactives listed
                   </div>
                 ) : (
                   cleared.map((ingredient) => (
-                    <IngredientRow
+                    <DraftIngredientRow
                       key={ingredient.name}
                       ingredient={ingredient}
                       kind="cleared"
@@ -791,10 +929,6 @@ export default function PostScanProductScreen({
               )}
             </section>
 
-            {record.honestNote && (
-              <HonestNote key={record.id} note={record.honestNote} />
-            )}
-
             {record.verdict !== 'clean' && (
               <AlternativesBlock record={record} onOpenProduct={onOpenProduct} />
             )}
@@ -802,23 +936,23 @@ export default function PostScanProductScreen({
         )}
 
         {tab === 'ingredients' && (
-          <div style={{ marginTop: '1.25rem' }}>
+          <div style={{ marginTop: '0.7rem' }}>
             <SectionLabel>Active</SectionLabel>
             {record.activeIngredients.map((active) => (
               <div key={`${active.name}-${active.strength}`} style={{
-                padding: '0.7rem 0',
+                padding: '0.55rem 0',
                 borderBottom: '1px solid #eeeae3',
-                fontSize: '0.92rem',
+                fontSize: '0.88rem',
                 color: '#1a2e27',
               }}>
                 <strong>{active.name}</strong>
                 <span style={{ color: '#6b756f' }}> · {active.strength}</span>
               </div>
             ))}
-            <div style={{ marginTop: '1.4rem' }}>
+            <div style={{ marginTop: '1.05rem' }}>
               <SectionLabel>Inactive</SectionLabel>
               {record.inactiveIngredients.map((ingredient) => (
-                <IngredientRow
+                <DraftIngredientRow
                   key={`${ingredient.name}-${ingredient.riskLevel}`}
                   ingredient={ingredient}
                   kind={ingredient.riskLevel === 'cleared' ? 'cleared' : 'flagged'}
@@ -829,7 +963,7 @@ export default function PostScanProductScreen({
         )}
 
         {tab === 'photos' && (
-          <div style={{ marginTop: '1.25rem' }}>
+          <div style={{ marginTop: '0.7rem' }}>
             <ProductTile productName={record.productName} image={record.productImage} />
             <button
               type="button"
@@ -863,7 +997,7 @@ export default function PostScanProductScreen({
         <div style={{
           position: 'sticky',
           bottom: 12,
-          margin: '0 1.15rem',
+          margin: '0 0.9rem',
           background: BRAND_GREEN,
           color: '#fff',
           textAlign: 'center',

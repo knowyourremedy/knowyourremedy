@@ -234,24 +234,24 @@ export default function ScanPreviewApp({ initialId }: Props) {
     <main style={{
       background: CANVAS,
       minHeight: '100vh',
-      padding: '1rem 0.75rem 7.5rem',
+      padding: '0.55rem 0.5rem 1.1rem',
       fontFamily: 'var(--font-inter), sans-serif',
     }}>
       <div style={{ maxWidth: 390, margin: '0 auto' }}>
-        <div style={{ marginBottom: '0.85rem' }}>
+        <div style={{ marginBottom: '0.5rem' }}>
           <div style={{
-            fontSize: '0.72rem',
+            fontSize: '0.66rem',
             fontWeight: 700,
             letterSpacing: '0.06em',
             textTransform: 'uppercase',
             color: '#7a8a78',
-            marginBottom: 8,
+            marginBottom: 6,
           }}>
             Draft preview · {record.recordStatus ?? 'unverified'}
           </div>
           <div style={{
             display: 'flex',
-            gap: 8,
+            gap: 6,
           }}>
             {PREVIEW_SWITCHER.map((item) => {
               const active = record.id === item.id;
@@ -267,8 +267,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
                     color: active ? '#fff' : color,
                     border: `1px solid ${color}`,
                     borderRadius: 999,
-                    padding: '0.55rem 0.35rem',
-                    fontSize: '0.8rem',
+                    padding: '0.4rem 0.3rem',
+                    fontSize: '0.76rem',
                     fontWeight: 700,
                     cursor: 'pointer',
                     fontFamily: 'inherit',
@@ -292,8 +292,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
           borderRadius: 16,
           overflow: 'hidden',
           boxShadow: '0 8px 24px rgba(45, 74, 62, 0.06)',
-          height: 620,
-          maxHeight: 'calc(100dvh - 16.5rem)',
+          height: 640,
+          maxHeight: 'calc(100dvh - 13.25rem)',
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',
