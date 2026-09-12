@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   VERDICT_COLORS,
@@ -192,6 +192,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
   const [selectedId, setSelectedId] = useState(initialId ?? PREVIEW_SWITCHER[0].id);
   const [tab, setTab] = useState<ChromeTab>('scan');
   const [productOpen, setProductOpen] = useState(true);
+  const [toast, setToast] = useState<string | null>(null);
   const cabinetJson = useSyncExternalStore(
     subscribePreviewCabinet,
     getPreviewCabinetSnapshot,
@@ -218,11 +219,17 @@ export default function ScanPreviewApp({ initialId }: Props) {
     return togglePreviewCabinetId(id).saved;
   }
 
+  useEffect(() => {
+    if (!toast) return;
+    const timer = window.setTimeout(() => setToast(null), 1800);
+    return () => window.clearTimeout(timer);
+  }, [toast]);
+
   return (
     <main style={{
       background: CANVAS,
       minHeight: '100vh',
-      padding: '1rem 0.75rem 5.5rem',
+      padding: '1rem 0.75rem 7.5rem',
       fontFamily: 'var(--font-inter), sans-serif',
     }}>
       <div style={{ maxWidth: 390, margin: '0 auto' }}>
@@ -280,9 +287,11 @@ export default function ScanPreviewApp({ initialId }: Props) {
           borderRadius: 16,
           overflow: 'hidden',
           boxShadow: '0 8px 24px rgba(45, 74, 62, 0.06)',
-          minHeight: 640,
+          height: 680,
+          maxHeight: 'calc(100dvh - 12.5rem)',
           display: 'flex',
           flexDirection: 'column',
+          position: 'relative',
         }}>
           <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
             {productOpen ? (
@@ -293,6 +302,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
                 onBack={() => setProductOpen(false)}
                 saved={cabinetIds.includes(record.id)}
                 onToggleSaved={handleToggleSaved}
+                onToast={setToast}
               />
             ) : tab === 'home' ? (
               <PlaceholderScreen
@@ -369,6 +379,29 @@ export default function ScanPreviewApp({ initialId }: Props) {
             )}
           </div>
 
+          {toast && (
+            <div
+              role="status"
+              style={{
+                position: 'absolute',
+                left: 16,
+                right: 16,
+                bottom: 72,
+                background: BRAND_GREEN,
+                color: '#fff',
+                textAlign: 'center',
+                padding: '0.65rem 0.9rem',
+                borderRadius: 10,
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                zIndex: 3,
+                boxShadow: '0 8px 20px rgba(26, 46, 39, 0.18)',
+              }}
+            >
+              {toast}
+            </div>
+          )}
+
           <nav
             aria-label="Preview app"
             style={{
@@ -376,6 +409,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
               borderTop: '1px solid #e8e0d0',
               background: '#fff',
               flexShrink: 0,
+              position: 'relative',
+              zIndex: 2,
             }}
           >
             {([
@@ -395,7 +430,8 @@ export default function ScanPreviewApp({ initialId }: Props) {
                     flex: 1,
                     background: 'none',
                     border: 'none',
-                    padding: '0.55rem 0.2rem 0.65rem',
+                    padding: '0.65rem 0.2rem 0.75rem',
+                    minHeight: 56,
                     cursor: 'pointer',
                     color: active ? BRAND_GREEN : '#8a938e',
                     fontFamily: 'inherit',

@@ -27,6 +27,7 @@ type Props = {
   onBack?: () => void;
   saved?: boolean;
   onToggleSaved?: (id: string) => boolean;
+  onToast?: (message: string) => void;
 };
 
 function riskDotColor(level: RiskLevel): string {
@@ -512,6 +513,7 @@ export default function PostScanProductScreen({
   onBack,
   saved: savedProp,
   onToggleSaved,
+  onToast,
 }: Props) {
   const [tab, setTab] = useState<TabKey>('overview');
   const [clearedOpen, setClearedOpen] = useState(false);
@@ -540,7 +542,9 @@ export default function PostScanProductScreen({
     setSavedLocal(next);
     setStarBounce(true);
     window.setTimeout(() => setStarBounce(false), 280);
-    setToast(next ? 'Saved to your cabinet.' : 'Removed.');
+    const message = next ? 'Saved to your cabinet.' : 'Removed.';
+    if (onToast) onToast(message);
+    else setToast(message);
   }
 
   return (
@@ -568,11 +572,14 @@ export default function PostScanProductScreen({
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
-                padding: 0,
+                padding: 8,
+                margin: -8,
                 color: '#fff',
                 flexShrink: 0,
                 display: 'flex',
                 alignItems: 'center',
+                minWidth: 44,
+                minHeight: 44,
               }}
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -607,8 +614,8 @@ export default function PostScanProductScreen({
           onClick={toggleSaved}
           aria-label={saved ? 'Remove from cabinet' : 'Save to cabinet'}
           style={{
-            width: 36,
-            height: 36,
+            width: 40,
+            height: 40,
             borderRadius: '50%',
             background: '#fff',
             border: 'none',
@@ -845,7 +852,11 @@ export default function PostScanProductScreen({
             <ProductTile productName={record.productName} image={record.productImage} />
             <button
               type="button"
-              onClick={() => setToast('Photo intake is not wired in this preview')}
+              onClick={() => {
+                const message = 'Photo intake is not wired in this preview';
+                if (onToast) onToast(message);
+                else setToast(message);
+              }}
               style={{
                 marginTop: 14,
                 background: 'none',
