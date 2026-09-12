@@ -8,9 +8,11 @@ import {
 } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
+  ingredientWhy,
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
+  restingRiskLabel,
   togglePreviewCabinetId,
   type MatchedCleanAlternative,
 } from '@/lib/scan-preview/previewCatalog';
@@ -34,26 +36,6 @@ function riskDotColor(level: RiskLevel): string {
   if (level === 'high') return VERDICT_COLORS.avoid;
   if (level === 'moderate' || level === 'limited') return VERDICT_COLORS.caution;
   return VERDICT_COLORS.clean;
-}
-
-function riskReasonLine(level: RiskLevel): string {
-  if (level === 'high') return 'High-risk additive';
-  if (level === 'moderate') return 'Moderate-risk additive';
-  if (level === 'limited') return 'Limited-risk additive';
-  return 'Cleared';
-}
-
-function sourceSnippet(source?: string): string | null {
-  if (!source) return null;
-  const parts = source.split(';').map((part) => part.trim()).filter(Boolean);
-  return parts.length > 1 ? parts.slice(1).join('; ') : parts[0] ?? null;
-}
-
-function dailyMedHref(source?: string): string | null {
-  if (!source) return null;
-  const match = source.match(/DailyMed setid\s+([0-9a-f-]+)/i);
-  if (!match) return null;
-  return `https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=${match[1]}`;
 }
 
 function formatAge(minAge?: number): string | null {
@@ -203,47 +185,46 @@ function ProductTile({
 }
 
 function IngredientExpand({
-  name,
-  reason,
-  source,
+  ingredient,
   whyLabel,
 }: {
-  name: string;
-  reason: string;
-  source?: string;
+  ingredient: IngredientFlag;
   whyLabel: string;
 }) {
-  const href = dailyMedHref(source);
-  const snippet = sourceSnippet(source);
+  const why = ingredientWhy(ingredient);
   return (
     <div style={{
       marginTop: 10,
-      paddingTop: 10,
-      borderTop: '1px solid #f0ece4',
+      background: '#fff',
+      border: '1px solid #ece7de',
+      borderRadius: 12,
+      padding: '0.8rem 0.9rem',
     }}>
-      <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5a635e', marginBottom: 4 }}>
+      <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5a635e', marginBottom: 6 }}>
         {whyLabel}
       </div>
       <div style={{ fontSize: '0.84rem', color: '#3a433e', lineHeight: 1.5 }}>
-        {name} — {snippet ?? reason}.
+        {why.body}
       </div>
-      {source && (
-        <div style={{ marginTop: 8 }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#5a635e', marginBottom: 4 }}>
-            Sources
-          </div>
-          {href ? (
+      {why.body === 'Why pending review' && ingredient.source && (
+        <div style={{ fontSize: '0.78rem', color: '#6b756f', lineHeight: 1.45, marginTop: 6 }}>
+          {ingredient.source}
+        </div>
+      )}
+      {why.sourceName && (
+        <div style={{ marginTop: 10 }}>
+          {why.sourceHref ? (
             <a
-              href={href}
+              href={why.sourceHref}
               target="_blank"
               rel="noreferrer"
-              style={{ color: BRAND_GREEN, fontSize: '0.8rem', fontWeight: 600, wordBreak: 'break-word' }}
+              style={{ color: BRAND_GREEN, fontSize: '0.8rem', fontWeight: 600 }}
             >
-              {source}
+              {why.sourceName}
             </a>
           ) : (
             <div style={{ color: '#3a433e', fontSize: '0.8rem', lineHeight: 1.45 }}>
-              {source}
+              {why.sourceName}
             </div>
           )}
         </div>
@@ -260,59 +241,71 @@ function IngredientRow({
   kind: 'flagged' | 'cleared';
 }) {
   const [open, setOpen] = useState(false);
-  const reason = riskReasonLine(ingredient.riskLevel);
+  const resting = restingRiskLabel(ingredient.riskLevel);
 
   return (
-    <button
-      type="button"
-      onClick={() => setOpen((value) => !value)}
-      aria-expanded={open}
-      style={{
-        display: 'block',
-        width: '100%',
-        textAlign: 'left',
-        background: 'none',
-        border: 'none',
-        borderBottom: '1px solid #eeeae3',
-        padding: '0.68rem 0',
-        cursor: 'pointer',
-        fontFamily: 'inherit',
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-        <div style={{ paddingTop: 2 }}>
-          <LineIcon kind={kind === 'flagged' ? 'flag' : 'check'} />
-        </div>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{
-              fontWeight: 700,
-              fontSize: '0.95rem',
-              color: '#1a2e27',
-              flex: 1,
-            }}>
-              {ingredient.name}
-            </div>
-            <span style={{
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
-              background: riskDotColor(ingredient.riskLevel),
-              flexShrink: 0,
-            }} />
-            <Chevron open={open} />
+    <div style={{
+      borderBottom: '1px solid #eeeae3',
+      padding: '0.68rem 0',
+    }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        style={{
+          display: 'block',
+          width: '100%',
+          textAlign: 'left',
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+          <div style={{ paddingTop: 2 }}>
+            <LineIcon kind={kind === 'flagged' ? 'flag' : 'check'} />
           </div>
-          {open && (
-            <IngredientExpand
-              name={ingredient.name}
-              reason={reason}
-              source={ingredient.source}
-              whyLabel={kind === 'flagged' ? 'Why this is flagged' : 'Why this is cleared'}
-            />
-          )}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                color: '#1a2e27',
+                flex: 1,
+              }}>
+                {ingredient.name}
+              </div>
+              <span style={{
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: riskDotColor(ingredient.riskLevel),
+                flexShrink: 0,
+              }} />
+              <Chevron open={open} />
+            </div>
+            <div style={{
+              fontSize: '0.78rem',
+              color: '#8a938e',
+              marginTop: 3,
+              lineHeight: 1.35,
+            }}>
+              {resting}
+            </div>
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
+      {open && (
+        <div style={{ paddingLeft: 28 }}>
+          <IngredientExpand
+            ingredient={ingredient}
+            whyLabel={kind === 'flagged' ? 'Why this is flagged' : 'Why this is cleared'}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -385,46 +378,34 @@ function AlternativeCard({
 }
 
 function HonestNote({ note }: { note: string }) {
-  const [open, setOpen] = useState(false);
   return (
-    <section style={{ marginTop: '1rem' }}>
-      <button
-        type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
-          background: 'none',
-          border: 'none',
-          padding: 0,
-          cursor: 'pointer',
-          fontFamily: 'inherit',
-        }}
-      >
-        <div style={{
-          fontSize: '0.68rem',
-          fontWeight: 700,
-          textTransform: 'uppercase',
-          letterSpacing: '0.07em',
-          color: '#8a938e',
-        }}>
-          Honest note
-        </div>
-        <Chevron open={open} />
-      </button>
-      {open && (
-        <p style={{
-          fontSize: '0.75rem',
-          color: '#6b756f',
-          lineHeight: 1.45,
-          margin: '0.4rem 0 0',
-        }}>
-          {note}
-        </p>
-      )}
+    <section
+      style={{
+        marginTop: '1.15rem',
+        background: '#fff8ec',
+        borderLeft: '4px solid #d97706',
+        borderRadius: 10,
+        padding: '0.85rem 0.95rem',
+      }}
+    >
+      <div style={{
+        fontSize: '0.68rem',
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        letterSpacing: '0.07em',
+        color: '#d97706',
+        marginBottom: 6,
+      }}>
+        Honest note
+      </div>
+      <p style={{
+        fontSize: '0.8rem',
+        color: '#3a433e',
+        lineHeight: 1.5,
+        margin: 0,
+      }}>
+        {note}
+      </p>
     </section>
   );
 }
@@ -858,12 +839,14 @@ export default function PostScanProductScreen({
                 else setToast(message);
               }}
               style={{
+                display: 'block',
+                width: '100%',
                 marginTop: 14,
-                background: 'none',
-                border: `1px solid ${BRAND_GREEN}`,
+                background: '#fff',
+                border: '1px solid #ece7de',
                 color: BRAND_GREEN,
-                borderRadius: 999,
-                padding: '0.55rem 1rem',
+                borderRadius: 12,
+                padding: '0.75rem 1rem',
                 fontWeight: 700,
                 fontSize: '0.85rem',
                 cursor: 'pointer',
