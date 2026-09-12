@@ -27,3 +27,4 @@ export { BATCH26_WE_HEART_NUTRITION } from './batch26-we-heart-nutrition';
 export { BATCH27_THRIVE_WELLMADE } from './batch27-thrive-wellmade';
 export { BATCH28_THORNE_COM } from './batch28-thorne-com';
 export { BATCH29_DOLLAR_STORE } from './batch29-dollar-store';
+export { BATCH30_AMAZON_BASIC_CARE } from './batch30-amazon-basic-care';
