@@ -3,7 +3,7 @@
 
 import { BATCH10_ADULT_DIGESTIVE } from '@/lib/rating-drafts/batch10-adult-digestive';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
-import type { RatingRecord } from '@/lib/ratingRecord';
+import type { IngredientFlag, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 
 const CATALOG: RatingRecord[] = BATCH10_ADULT_DIGESTIVE;
 
@@ -168,3 +168,103 @@ export function matchCleanAlternatives(
 }
 
 export const NO_CLEANER_MATCH_COPY = 'No cleaner match on this shelf yet';
+
+// Resting gray line — never the word "High" alone.
+export function restingRiskLabel(level: RiskLevel): string {
+  if (level === 'high') return 'High risk';
+  if (level === 'moderate') return 'Moderate risk';
+  if (level === 'limited') return 'Limited risk';
+  return 'Cleared';
+}
+
+export function dailyMedHref(source?: string): string | null {
+  if (!source) return null;
+  const match = source.match(/DailyMed setid\s+([0-9a-f-]+)/i);
+  if (!match) return null;
+  return `https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=${match[1]}`;
+}
+
+export type IngredientWhy = {
+  body: string;
+  sourceName: string | null;
+  sourceHref: string | null;
+};
+
+function normalizeName(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function sourceDisplay(source?: string): Pick<IngredientWhy, 'sourceName' | 'sourceHref'> {
+  if (!source) return { sourceName: null, sourceHref: null };
+  const sourceHref = dailyMedHref(source);
+  if (sourceHref) return { sourceName: 'DailyMed', sourceHref };
+  const first = source.split(';').map((part) => part.trim()).find(Boolean);
+  return { sourceName: first ?? source, sourceHref: null };
+}
+
+// Locked §5 wording + the draft source field. Do not invent studies, %, or grades.
+function lockedWhyBody(ingredient: IngredientFlag): string | null {
+  const name = normalizeName(ingredient.name);
+  const source = (ingredient.source ?? '').toLowerCase();
+
+  if (
+    source.includes('synthetic dyes')
+    || /fd c|d c|aluminum lake|blue no|red no|yellow no|green no/.test(name)
+  ) {
+    return 'Synthetic color. Independent reviews link this dye family to hyperactivity warnings in the EU; we score the family High risk, and cleaner formulas exclude it.';
+  }
+
+  if (name.includes('talc') || source.includes('talc')) {
+    return 'Contains talc (magnesium silicate). IARC classifies talc Group 2A, with a separate asbestos-contamination pathway; we score it High risk, and cleaner formulas exclude it.';
+  }
+
+  if (
+    name.includes('mannitol')
+    || name.includes('sorbitol')
+    || source.includes('mannitol')
+    || source.includes('sorbitol')
+    || source.includes('sugar alcohols')
+  ) {
+    return 'Sugar alcohol. Limited risk from GI effects at volume; cleaner formulas exclude it.';
+  }
+
+  if (name.includes('flavor') || source.includes('flavors — opacity') || source.includes('natural / artificial flavors')) {
+    return 'Undisclosed flavor mixture. Limited risk for opacity, not a known hazard; cleaner formulas exclude it.';
+  }
+
+  if (ingredient.riskLevel === 'cleared') {
+    if (source.includes('not in methodology') || source.includes('ungraded')) {
+      return 'Why pending review';
+    }
+    if (name.includes('magnesium stearate') || name.includes('stearic acid') || name.includes('calcium stearate')) {
+      return 'Standard lubricant (stearate-family class). EFSA 2018 found no safety concern.';
+    }
+    if (name.includes('purified water')) {
+      return 'Purified water. Methodology §5 lists it among cleared bases.';
+    }
+    if (name.includes('corn starch') || name.includes('pregelatinized starch')) {
+      return 'Simple starch. Methodology §5 treats corn starch and similar starches as well-established, with no concern found.';
+    }
+    if (name === 'sucrose' || name.includes('cane sugar')) {
+      return 'Acceptable sweetener. Methodology §5 lists cane sugar among cleared sweeteners.';
+    }
+    if (name.includes('croscarmellose')) {
+      return 'Standard disintegrant. EFSA 2017: no carcinogenicity, no ADI needed.';
+    }
+    if (name.includes('lactose')) {
+      return 'Lactose. Methodology §5 lists it among cleared inactives.';
+    }
+  }
+
+  return null;
+}
+
+export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
+  const display = sourceDisplay(ingredient.source);
+  const body = lockedWhyBody(ingredient);
+  if (body) return { body, ...display };
+  return {
+    body: 'Why pending review',
+    ...display,
+  };
+}
