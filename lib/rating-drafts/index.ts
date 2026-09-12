@@ -13,3 +13,4 @@ export { BATCH11_KIDS_DIGESTIVE } from './batch11-kids-digestive';
 export { BATCH12_ADULT_FIRST_AID } from './batch12-adult-first-aid';
 export { BATCH13_KIDS_FIRST_AID } from './batch13-kids-first-aid';
 export { BATCH14_ADULT_VITAMINS } from './batch14-adult-vitamins';
+export { BATCH15_PRENATALS } from './batch15-prenatals';
