@@ -8,20 +8,25 @@ import {
 } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
+  loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
+  togglePreviewCabinetId,
   type MatchedCleanAlternative,
 } from '@/lib/scan-preview/previewCatalog';
 
 const BRAND_GREEN = '#2d4a3e';
 const BLUE_B = '#4a6781';
-const CABINET_KEY = 'kyr-scan-preview-cabinet';
+const CANVAS = '#faf7f2';
 
 type TabKey = 'overview' | 'ingredients' | 'photos';
 
 type Props = {
   record: RatingRecord;
   onOpenProduct?: (id: string) => void;
+  onBack?: () => void;
+  saved?: boolean;
+  onToggleSaved?: (id: string) => boolean;
 };
 
 function riskDotColor(level: RiskLevel): string {
@@ -59,18 +64,6 @@ function formatActives(record: RatingRecord): string {
   return record.activeIngredients
     .map((active) => `${active.name} ${active.strength}`.trim())
     .join(' · ');
-}
-
-function loadCabinet(): string[] {
-  if (typeof window === 'undefined') return [];
-  try {
-    const raw = window.localStorage.getItem(CABINET_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw) as unknown;
-    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : [];
-  } catch {
-    return [];
-  }
 }
 
 function SectionLabel({ children }: { children: string }) {
@@ -513,12 +506,19 @@ function AlternativesBlock({
   );
 }
 
-export default function PostScanProductScreen({ record, onOpenProduct }: Props) {
+export default function PostScanProductScreen({
+  record,
+  onOpenProduct,
+  onBack,
+  saved: savedProp,
+  onToggleSaved,
+}: Props) {
   const [tab, setTab] = useState<TabKey>('overview');
   const [clearedOpen, setClearedOpen] = useState(false);
-  const [saved, setSaved] = useState(() => loadCabinet().includes(record.id));
+  const [savedLocal, setSavedLocal] = useState(() => loadPreviewCabinetIds().includes(record.id));
   const [toast, setToast] = useState<string | null>(null);
   const [starBounce, setStarBounce] = useState(false);
+  const saved = savedProp ?? savedLocal;
 
   const flagged = record.inactiveIngredients.filter((item) => item.riskLevel !== 'cleared');
   const cleared = record.inactiveIngredients.filter((item) => item.riskLevel === 'cleared');
@@ -534,20 +534,18 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
   }, [toast]);
 
   function toggleSaved() {
-    const next = !saved;
-    setSaved(next);
+    const next = onToggleSaved
+      ? onToggleSaved(record.id)
+      : togglePreviewCabinetId(record.id).saved;
+    setSavedLocal(next);
     setStarBounce(true);
     window.setTimeout(() => setStarBounce(false), 280);
-    const current = new Set(loadCabinet());
-    if (next) current.add(record.id);
-    else current.delete(record.id);
-    window.localStorage.setItem(CABINET_KEY, JSON.stringify([...current]));
-    setToast(next ? 'Saved to your cabinet' : 'Removed');
+    setToast(next ? 'Saved to your cabinet.' : 'Removed.');
   }
 
   return (
     <div style={{
-      background: '#fff',
+      background: CANVAS,
       minHeight: '100%',
       position: 'relative',
       fontFamily: 'var(--font-inter), sans-serif',
@@ -560,47 +558,75 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
         padding: subline ? '0.85rem 1.15rem 0.9rem' : '0.95rem 1.15rem',
         background: color,
       }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{
-            fontSize: '2rem',
-            fontWeight: 800,
-            color: '#fff',
-            letterSpacing: '-0.03em',
-            lineHeight: 1,
-          }}>
-            {label}
-          </div>
-          {subline && (
-            <div style={{
-              fontSize: '0.78rem',
-              fontWeight: 500,
-              color: 'rgba(255,255,255,0.92)',
-              marginTop: 6,
-            }}>
-              {subline}
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}>
+          {onBack && (
+            <button
+              type="button"
+              onClick={onBack}
+              aria-label="Back"
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
+                color: '#fff',
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 6l-6 6 6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           )}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{
+              fontSize: '2rem',
+              fontWeight: 800,
+              color: '#fff',
+              letterSpacing: '-0.03em',
+              lineHeight: 1,
+            }}>
+              {label}
+            </div>
+            {subline && (
+              <div style={{
+                fontSize: '0.78rem',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.92)',
+                marginTop: 6,
+              }}>
+                {subline}
+              </div>
+            )}
+          </div>
         </div>
         <button
           type="button"
           onClick={toggleSaved}
-          aria-label={saved ? 'Remove from Medicine Cabinet' : 'Save to Medicine Cabinet'}
+          aria-label={saved ? 'Remove from cabinet' : 'Save to cabinet'}
           style={{
-            background: 'none',
+            width: 36,
+            height: 36,
+            borderRadius: '50%',
+            background: '#fff',
             border: 'none',
             cursor: 'pointer',
-            padding: 4,
-            color: '#fff',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             transform: starBounce ? 'scale(1.22)' : 'scale(1)',
             transition: 'transform 0.18s ease',
             flexShrink: 0,
           }}
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 3.6l2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 15.58 7.3 18.05l.9-5.23-3.8-3.7 5.25-.76L12 3.6z"
-              fill={saved ? '#fff' : 'none'}
-              stroke="#fff"
+              fill={saved ? BRAND_GREEN : 'none'}
+              stroke={BRAND_GREEN}
               strokeWidth="1.6"
               strokeLinejoin="round"
             />
@@ -608,7 +634,7 @@ export default function PostScanProductScreen({ record, onOpenProduct }: Props) 
         </button>
       </div>
 
-      <div style={{ padding: '1.1rem 1.15rem 2.5rem', background: '#fff' }}>
+      <div style={{ padding: '1.1rem 1.15rem 2.5rem', background: CANVAS }}>
         <ProductTile productName={record.productName} image={record.productImage} />
 
         <h1 style={{

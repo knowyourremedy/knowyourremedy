@@ -59,6 +59,73 @@ export function getPreviewRecord(id: string | undefined): RatingRecord {
   return PREVIEW_CLEAN;
 }
 
+export const PREVIEW_CABINET_KEY = 'kyr-scan-preview-cabinet';
+
+type CabinetListener = () => void;
+const cabinetListeners = new Set<CabinetListener>();
+
+function emitCabinetChange() {
+  cabinetListeners.forEach((listener) => listener());
+}
+
+export function loadPreviewCabinetIds(): string[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem(PREVIEW_CABINET_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function getPreviewCabinetSnapshot(): string {
+  return JSON.stringify(loadPreviewCabinetIds());
+}
+
+export function getPreviewCabinetServerSnapshot(): string {
+  return '[]';
+}
+
+export function subscribePreviewCabinet(listener: CabinetListener): () => void {
+  cabinetListeners.add(listener);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('storage', listener);
+  }
+  return () => {
+    cabinetListeners.delete(listener);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('storage', listener);
+    }
+  };
+}
+
+export function togglePreviewCabinetId(id: string): { ids: string[]; saved: boolean } {
+  const current = new Set(loadPreviewCabinetIds());
+  const saved = !current.has(id);
+  if (saved) current.add(id);
+  else current.delete(id);
+  const ids = [...current];
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(PREVIEW_CABINET_KEY, JSON.stringify(ids));
+  }
+  emitCabinetChange();
+  return { ids, saved };
+}
+
+export function recordsForCabinet(ids: string[]): RatingRecord[] {
+  const seen = new Set<string>();
+  const records: RatingRecord[] = [];
+  for (const id of ids) {
+    const record = findDraftRecord(id);
+    if (!record || seen.has(record.id)) continue;
+    seen.add(record.id);
+    records.push(record);
+  }
+  return records;
+}
+
 function ageMatches(scanned: RatingRecord, alt: RatingRecord): boolean {
   if (scanned.minAge == null || alt.minAge == null) return true;
   // Required: never recommend a higher minimum-age swap.
