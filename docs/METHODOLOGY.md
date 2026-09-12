@@ -179,7 +179,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 |---|---|
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
 | Microcrystalline cellulose, croscarmellose sodium | Standard disintegrants. EFSA 2017: no carcinogenicity, no ADI needed. |
-| Magnesium stearate, stearic acid | Standard lubricants. EFSA 2018: no safety concern. |
+| Magnesium stearate, stearic acid, calcium stearate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
 | Hypromellose | ADI "not specified"; no genotox/carcinogenicity/repro findings. |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
@@ -192,6 +192,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Methylcellulose | Same family as Hypromellose; EFSA: no carcinogenicity, no ADI needed. |
 | Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
+| Organic rice hull extract / rice concentrate / ground rice hulls — **LOCKED** | Plant-fiber flow agent. Distinct from rice flour. Distinct from silicon dioxide. The SiO₂ nanoparticle Caution cap does NOT apply. |
 | Xanthan gum, guar gum, gum arabic, pectin — **LOCKED (v1.6)** | EFSA-approved; largely undigested/unabsorbed; human tolerance studies far above realistic exposure. Feed-additive-track genotoxicity data gaps (different species/route) don't carry over to human food-additive approvals. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Whole-leaf/crude stevia is a DIFFERENT, ungraded case — flag for review if it ever appears, do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
