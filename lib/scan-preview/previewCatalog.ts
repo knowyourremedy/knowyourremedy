@@ -32,6 +32,22 @@ export const PREVIEW_CLEAN = mustFind(PREVIEW_CLEAN_ID);
 export const PREVIEW_USABLE = mustFind(PREVIEW_USABLE_ID);
 export const PREVIEW_AVOID = mustFind(PREVIEW_AVOID_ID);
 
+// Preview-only shopper copy. Does not edit draft rows or verdict keys.
+const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
+  [PREVIEW_CLEAN_ID]:
+    'This Original liquid is Clean. The bottle is magnesium hydroxide in purified water, plus a residual sanitizer that does not change the rating. Labeled for ages 12 and up. Fine for occasional digestive use; mint and cherry Phillips bottles are different formulas.',
+  [PREVIEW_USABLE_ID]:
+    'This Gold tablet is Usable, not Clean, because it uses mannitol — a sugar alcohol that can bother the gut at volume. Magnesium stearate is cleared, and the formula is aspirin-free. Labeled for ages 12 and up. Fine in moderation for occasional heartburn; pause if sugar alcohols upset your stomach.',
+  [PREVIEW_AVOID_ID]:
+    'This Assorted Fruit chew is Avoid because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
+};
+
+function withPreviewHonestNote(record: RatingRecord): RatingRecord {
+  const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  if (!honestNote) return record;
+  return { ...record, honestNote };
+}
+
 if (PREVIEW_CLEAN.verdict !== 'clean') {
   throw new Error('phillips-mom-original must stay verdict clean');
 }
@@ -54,9 +70,9 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
 export function getPreviewRecord(id: string | undefined): RatingRecord {
   if (id) {
     const found = findDraftRecord(id);
-    if (found) return found;
+    if (found) return withPreviewHonestNote(found);
   }
-  return PREVIEW_CLEAN;
+  return withPreviewHonestNote(PREVIEW_CLEAN);
 }
 
 export const PREVIEW_CABINET_KEY = 'kyr-scan-preview-cabinet';
