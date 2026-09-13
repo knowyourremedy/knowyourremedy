@@ -16,7 +16,7 @@ import {
   togglePreviewCabinetId,
 } from '@/lib/scan-preview/previewCatalog';
 import PostScanProductScreen from './PostScanProductScreen';
-import SearchScreen from './SearchScreen';
+import SearchScreen, { EMPTY_SEARCH_STATE, type SearchViewState } from './SearchScreen';
 
 const BRAND_GREEN = '#2d4a3e';
 const CANVAS = '#faf7f2';
@@ -198,6 +198,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
   const [tab, setTab] = useState<ChromeTab>('scan');
   const [productOpen, setProductOpen] = useState(true);
   const [toast, setToast] = useState<string | null>(null);
+  const [searchState, setSearchState] = useState<SearchViewState>(EMPTY_SEARCH_STATE);
   const cabinetJson = useSyncExternalStore(
     subscribePreviewCabinet,
     getPreviewCabinetSnapshot,
@@ -208,9 +209,13 @@ export default function ScanPreviewApp({ initialId }: Props) {
   const inSwitcher = PREVIEW_SWITCHER_IDS.includes(record.id);
   const cabinetRecords = useMemo(() => recordsForCabinet(cabinetIds), [cabinetIds]);
 
-  function selectProduct(id: string) {
+  function patchSearch(patch: Partial<SearchViewState>) {
+    setSearchState((current) => ({ ...current, ...patch }));
+  }
+
+  function selectProduct(id: string, stayOnTab = false) {
     setSelectedId(id);
-    setTab('scan');
+    if (!stayOnTab) setTab('scan');
     setProductOpen(true);
     replacePreviewId(id);
   }
@@ -305,25 +310,40 @@ export default function ScanPreviewApp({ initialId }: Props) {
             minHeight: 0,
             display: !productOpen && tab === 'search' ? 'flex' : undefined,
             flexDirection: !productOpen && tab === 'search' ? 'column' : undefined,
+            position: 'relative',
           }}>
-            {productOpen ? (
+            {productOpen && (
               <PostScanProductScreen
                 key={record.id}
                 record={record}
-                onOpenProduct={selectProduct}
+                onOpenProduct={(id) => selectProduct(id, tab === 'search')}
                 onBack={() => setProductOpen(false)}
                 saved={cabinetIds.includes(record.id)}
                 onToggleSaved={handleToggleSaved}
                 onToast={setToast}
               />
-            ) : tab === 'home' ? (
+            )}
+            <div
+              style={{
+                display: productOpen ? 'none' : tab === 'search' ? 'flex' : undefined,
+                flex: tab === 'search' ? 1 : undefined,
+                minHeight: tab === 'search' ? 0 : undefined,
+                height: tab === 'search' ? '100%' : undefined,
+                flexDirection: tab === 'search' ? 'column' : undefined,
+              }}
+            >
+            {tab === 'home' ? (
               <PlaceholderScreen
                 title="Home"
                 body="Your scan history will live here later. This tab is a placeholder in the preview."
               />
             ) : tab === 'search' ? (
               <div style={{ flex: 1, minHeight: 0, height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <SearchScreen onOpenProduct={selectProduct} />
+                <SearchScreen
+                  state={searchState}
+                  onStateChange={patchSearch}
+                  onOpenProduct={(id) => selectProduct(id, true)}
+                />
               </div>
             ) : tab === 'cabinet' ? (
               <PlaceholderScreen
@@ -368,6 +388,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
             ) : (
               <ScanDummy onScan={() => setProductOpen(true)} />
             )}
+            </div>
           </div>
 
           {toast && (
