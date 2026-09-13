@@ -13,6 +13,7 @@ import {
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
+  previewOverlayImage,
   restingTypeLine,
   togglePreviewCabinetId,
   type FlagIconKind,
@@ -476,7 +477,11 @@ function AlternativeCard({
         fontFamily: 'inherit',
       }}
     >
-      <ProductTile productName={alt.productName} image={alt.productImage} compact />
+      <ProductTile
+        productName={alt.productName}
+        image={previewOverlayImage(alt) ?? alt.productImage}
+        compact
+      />
       <div style={{ fontSize: '0.78rem', color: '#6b756f', marginTop: 10 }}>
         {alt.brand}
       </div>
