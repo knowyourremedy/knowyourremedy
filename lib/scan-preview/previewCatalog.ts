@@ -116,26 +116,33 @@ const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
 
 // Preview-only catalog pack shots. Does not edit draft rows.
 // verifiedSku is true only when the DailyMed file is the exact SKU.
+function catalogShot(file: string): ProductImage {
+  return { url: `/scan-preview/${file}`, source: 'catalog', verifiedSku: true };
+}
+
 const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
-  [PREVIEW_CLEAN_ID]: {
-    url: '/scan-preview/phillips-mom-original.jpg',
-    source: 'catalog',
-    verifiedSku: true,
-  },
-  [PREVIEW_USABLE_ID]: {
-    url: '/scan-preview/alka-seltzer-gold.jpg',
-    source: 'catalog',
-    verifiedSku: true,
-  },
-  [PREVIEW_AVOID_ID]: {
-    url: '/scan-preview/tums-ultra-fruit-dyed.jpg',
-    source: 'catalog',
-    verifiedSku: true,
-  },
+  [PREVIEW_CLEAN_ID]: catalogShot('phillips-mom-original.jpg'),
+  [PREVIEW_USABLE_ID]: catalogShot('alka-seltzer-gold.jpg'),
+  [PREVIEW_AVOID_ID]: catalogShot('tums-ultra-fruit-dyed.jpg'),
+  'boiron-acidcalm': catalogShot('boiron-acidcalm.jpg'),
+  'boiron-nauseacalm': catalogShot('boiron-nauseacalm.jpg'),
+  'boiron-motioncalm': catalogShot('boiron-motioncalm.jpg'),
+  'rolaids-ultra-mint': catalogShot('rolaids-ultra-mint.jpg'),
+  'phillips-mom-mint': catalogShot('phillips-mom-mint.jpg'),
+  'phillips-mom-cherry': catalogShot('phillips-mom-cherry.jpg'),
+  'gaviscon-es-cool-mint': catalogShot('gaviscon-es-cool-mint.jpg'),
+  'gaviscon-es-tablets': catalogShot('gaviscon-es-tablets.jpg'),
+  'gaviscon-rs-liquid-dyed': catalogShot('gaviscon-rs-liquid-dyed.jpg'),
+  'gaviscon-es-tablets-cherry': catalogShot('gaviscon-es-tablets-cherry.jpg'),
+  'rolaids-assorted-dyed': catalogShot('rolaids-assorted-dyed.jpg'),
+  'tums-smoothies': catalogShot('tums-smoothies.jpg'),
+  'imodium-ad-caplets': catalogShot('imodium-ad-caplets.jpg'),
+  'pepcid-ac': catalogShot('pepcid-ac.jpg'),
+  'pepcid-max': catalogShot('pepcid-max.jpg'),
 };
 
-// Reuse the three existing pack shots only. Match id or formulaId;
-// do not invent a photo or fetch a new file.
+// Reuse overlay pack shots. Match id or formulaId;
+// do not invent a photo or fetch a new file at render time.
 export function previewOverlayImage(
   record: Pick<RatingRecord, 'id' | 'formulaId'>,
 ): ProductImage | undefined {
