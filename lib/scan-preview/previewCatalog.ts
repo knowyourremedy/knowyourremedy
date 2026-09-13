@@ -199,6 +199,44 @@ export function isPrenatalDraft(
   return prenatalHaystack(record).includes('prenatal');
 }
 
+export function displayCategoryForRecord(
+  record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
+): string | null {
+  if (isPrenatalDraft(record)) return SEARCH_PRENATAL_LABEL;
+  const raw = record.category?.trim();
+  if (!raw) return null;
+  const lowered = raw.toLowerCase();
+  if (lowered === 'homeopathic') return null;
+  if (lowered === 'allergy' || lowered === 'allergies') return SEARCH_ALLERGIES_LABEL;
+  if (lowered === 'prenatal') return SEARCH_PRENATAL_LABEL;
+  return raw;
+}
+
+export type DisplayCategoryGroup = {
+  category: string | null;
+  records: RatingRecord[];
+};
+
+export function groupRecordsByDisplayCategory(records: RatingRecord[]): DisplayCategoryGroup[] {
+  const map = new Map<string, RatingRecord[]>();
+  const ungrouped: RatingRecord[] = [];
+  for (const record of records) {
+    const category = displayCategoryForRecord(record);
+    if (!category) {
+      ungrouped.push(record);
+      continue;
+    }
+    const list = map.get(category) ?? [];
+    list.push(record);
+    map.set(category, list);
+  }
+  const groups: DisplayCategoryGroup[] = [...map.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([category, grouped]) => ({ category, records: grouped }));
+  if (ungrouped.length > 0) groups.push({ category: null, records: ungrouped });
+  return groups;
+}
+
 export function matchesSearchCategory(
   record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
   category: string,
@@ -308,6 +346,59 @@ export function recordsForCabinet(ids: string[]): RatingRecord[] {
     records.push(record);
   }
   return records;
+}
+
+export const PREVIEW_VIEWED_KEY = 'kyr-scan-preview-viewed';
+export const PREVIEW_VIEWED_CAP = 40;
+
+type ViewedListener = () => void;
+const viewedListeners = new Set<ViewedListener>();
+
+function emitViewedChange() {
+  viewedListeners.forEach((listener) => listener());
+}
+
+export function loadPreviewViewedIds(): string[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem(PREVIEW_VIEWED_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function getPreviewViewedSnapshot(): string {
+  return JSON.stringify(loadPreviewViewedIds());
+}
+
+export function getPreviewViewedServerSnapshot(): string {
+  return '[]';
+}
+
+export function subscribePreviewViewed(listener: ViewedListener): () => void {
+  viewedListeners.add(listener);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('storage', listener);
+  }
+  return () => {
+    viewedListeners.delete(listener);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('storage', listener);
+    }
+  };
+}
+
+export function rememberPreviewViewedId(id: string): string[] {
+  const next = [id, ...loadPreviewViewedIds().filter((existing) => existing !== id)]
+    .slice(0, PREVIEW_VIEWED_CAP);
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(PREVIEW_VIEWED_KEY, JSON.stringify(next));
+  }
+  emitViewedChange();
+  return next;
 }
 
 function ageMatches(scanned: RatingRecord, alt: RatingRecord): boolean {

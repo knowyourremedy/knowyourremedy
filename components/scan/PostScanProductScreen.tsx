@@ -5,18 +5,18 @@ import {
   VERDICT_COLORS,
   VERDICT_LABELS,
   VERDICT_SUBLINES,
+  type Verdict,
 } from '@/lib/clean-picks/verdictLabels';
 import type { ActiveIngredient, ActiveSafetyFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
-  ingredientTypeKind,
   ingredientWhy,
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
   previewOverlayImage,
+  rememberPreviewViewedId,
   restingTypeLine,
   togglePreviewCabinetId,
-  type FlagIconKind,
   type IngredientWhy,
   type MatchedCleanAlternative,
 } from '@/lib/scan-preview/previewCatalog';
@@ -24,8 +24,16 @@ import {
 const BRAND_GREEN = '#2d4a3e';
 const BLUE_B = '#4a6781';
 const CANVAS = '#faf7f2';
+const HAIRLINE = '#ece7de';
 const THUMB = 88;
 const PHOTO_REVIEW_TOAST = 'Photo review coming soon.';
+
+// Post-scan bar only. Locked hue families; do not edit verdictLabels.ts.
+const POST_SCAN_BAR: Record<Verdict, string> = {
+  clean: '#1c8f4e',
+  caution: '#c4a04a',
+  avoid: '#a32924',
+};
 
 type Props = {
   record: RatingRecord;
@@ -73,74 +81,6 @@ function flaggedActiveIndex(record: RatingRecord): number {
   return match >= 0 ? match : 0;
 }
 
-function TypeIcon({ kind }: { kind: FlagIconKind | 'check' }) {
-  const stroke = '#6b7280';
-  const sw = 1.6;
-  if (kind === 'check') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="8.5" stroke={stroke} strokeWidth={sw} />
-        <path d="M8 12.2l2.4 2.4L16.2 9" stroke={stroke} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-  if (kind === 'dye') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 3.8c0 0-5.4 6.4-5.4 10.2a5.4 5.4 0 0010.8 0C17.4 10.2 12 3.8 12 3.8z"
-          stroke={stroke}
-          strokeWidth={sw}
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (kind === 'preservative') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M9 3.5h6M10.2 3.5v5.1L6.9 16.2A3.1 3.1 0 009.7 20.5h4.6a3.1 3.1 0 002.8-4.3L13.8 8.6V3.5"
-          stroke={stroke}
-          strokeWidth={sw}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (kind === 'sweetener') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 3.6l7 4v8.8l-7 4-7-4V7.6l7-4z"
-          stroke={stroke}
-          strokeWidth={sw}
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  if (kind === 'active-safety') {
-    return (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 3.5l7.4 2.9v6.2c0 4.3-3.1 7.2-7.4 8.1-4.3-.9-7.4-3.8-7.4-8.1V6.4L12 3.5z"
-          stroke={stroke}
-          strokeWidth={sw}
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="5" y="5" width="14" height="14" rx="3" stroke={stroke} strokeWidth={sw} />
-      <path d="M12 8.6v6.8M8.6 12h6.8" stroke={stroke} strokeWidth={sw} strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function NoteIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -186,7 +126,7 @@ function ProductThumb({
 }) {
   const box = {
     background: '#fff',
-    border: '1px solid #ece7de',
+    border: `1px solid ${HAIRLINE}`,
     borderRadius: 10,
     width: THUMB,
     height: THUMB,
@@ -236,7 +176,7 @@ function ProductThumb({
             height: 26,
             borderRadius: '50%',
             background: '#fff',
-            border: '1px solid #ece7de',
+            border: `1px solid ${HAIRLINE}`,
             boxShadow: '0 2px 6px rgba(26, 46, 39, 0.08)',
             color: BRAND_GREEN,
             fontSize: '1rem',
@@ -270,7 +210,7 @@ function ProductTile({
     return (
       <div style={{
         background: '#fff',
-        border: '1px solid #ece7de',
+        border: `1px solid ${HAIRLINE}`,
         borderRadius: compact ? 10 : 16,
         width: '100%',
         height: compact ? 132 : 240,
@@ -296,8 +236,8 @@ function ProductTile({
       aria-label={`${productName} — image coming`}
       style={{
         background: '#fff',
-        border: '1px solid #e5dfd4',
-        borderRadius: compact ? 10 : 16,
+        border: `1px solid ${HAIRLINE}`,
+        borderRadius: compact ? 12 : 16,
         width: '100%',
         minHeight: compact ? 132 : 240,
         height: compact ? 132 : 240,
@@ -341,9 +281,9 @@ function WhyPanel({ why }: { why: IngredientWhy }) {
     <div style={{
       marginTop: 8,
       background: '#fff',
-      border: '1px solid #ece7de',
-      borderRadius: 10,
-      padding: '0.7rem 0.8rem',
+      border: `1px solid ${HAIRLINE}`,
+      borderRadius: 12,
+      padding: '0.75rem 0.85rem',
     }}>
       <div style={{ fontSize: '0.82rem', color: '#3a433e', lineHeight: 1.45 }}>
         {why.body}
@@ -377,13 +317,11 @@ function WhyPanel({ why }: { why: IngredientWhy }) {
 
 function IngredientRow({
   name,
-  iconKind,
   riskLevel,
   typeLine,
   why,
 }: {
   name: string;
-  iconKind: FlagIconKind | 'check';
   riskLevel: RiskLevel;
   typeLine: string;
   why: IngredientWhy;
@@ -392,8 +330,8 @@ function IngredientRow({
 
   return (
     <div style={{
-      borderBottom: '1px solid #eeeae3',
-      padding: '0.52rem 0',
+      borderBottom: `1px solid ${HAIRLINE}`,
+      padding: '0.72rem 0',
     }}>
       <button
         type="button"
@@ -410,23 +348,15 @@ function IngredientRow({
           fontFamily: 'inherit',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 6,
-            paddingTop: 2,
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+          <span style={{
+            width: 8,
+            height: 8,
+            borderRadius: '50%',
+            background: riskDotColor(riskLevel),
             flexShrink: 0,
-          }}>
-            <span style={{
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
-              background: riskDotColor(riskLevel),
-              flexShrink: 0,
-            }} />
-            <TypeIcon kind={iconKind} />
-          </div>
+            marginTop: 6,
+          }} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <div style={{
@@ -443,7 +373,7 @@ function IngredientRow({
             <div style={{
               fontSize: '0.74rem',
               color: '#8a938e',
-              marginTop: 2,
+              marginTop: 3,
               lineHeight: 1.3,
             }}>
               {typeLine}
@@ -475,9 +405,9 @@ function AlternativeCard({
         width: peeking ? undefined : '100%',
         scrollSnapAlign: peeking ? 'start' : undefined,
         background: '#fff',
-        border: '1px solid #ece7de',
-        borderRadius: 12,
-        padding: '0.85rem',
+        border: `1px solid ${HAIRLINE}`,
+        borderRadius: 14,
+        padding: '0.9rem',
         textAlign: 'left',
         cursor: onOpen ? 'pointer' : 'default',
         fontFamily: 'inherit',
@@ -491,17 +421,16 @@ function AlternativeCard({
       <div style={{ fontSize: '0.78rem', color: '#6b756f', marginTop: 10 }}>
         {alt.brand}
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8 }}>
+      <div style={{ marginTop: 10 }}>
         <span style={{
-          width: 8,
-          height: 8,
-          borderRadius: '50%',
-          background: VERDICT_COLORS[alt.verdict],
-        }} />
-        <span style={{
-          fontSize: '0.78rem',
-          fontWeight: 700,
-          color: VERDICT_COLORS[alt.verdict],
+          display: 'inline-block',
+          fontSize: '0.72rem',
+          fontWeight: 600,
+          color: BRAND_GREEN,
+          background: '#e7f3ec',
+          borderRadius: 999,
+          padding: '0.2rem 0.58rem',
+          letterSpacing: '0.01em',
         }}>
           {VERDICT_LABELS[alt.verdict]}
         </span>
@@ -516,7 +445,7 @@ function AlternativeCard({
           <span key={retailer} style={{
             fontSize: '0.68rem',
             padding: '3px 7px',
-            border: '1px solid #ece7de',
+            border: `1px solid ${HAIRLINE}`,
             borderRadius: 6,
             color: '#3a433e',
           }}>
@@ -544,9 +473,10 @@ function HonestNote({ note }: { note: string }) {
           width: '100%',
           background: '#fff8ec',
           border: 'none',
-          borderLeft: `4px solid ${BRAND_GREEN}`,
-          borderRadius: 8,
-          padding: '0.9rem 1rem',
+          borderLeft: `6px solid ${BRAND_GREEN}`,
+          borderRadius: 12,
+          padding: '1.1rem 1.15rem',
+          minHeight: 58,
           cursor: 'pointer',
           fontFamily: 'inherit',
           textAlign: 'left',
@@ -555,9 +485,9 @@ function HonestNote({ note }: { note: string }) {
         <NoteIcon />
         <span style={{
           flex: 1,
-          fontSize: '0.82rem',
-          fontWeight: 700,
-          color: '#1a2e27',
+          fontSize: '0.8rem',
+          fontWeight: 600,
+          color: '#4a534e',
         }}>
           Honest note
         </span>
@@ -566,13 +496,14 @@ function HonestNote({ note }: { note: string }) {
       {open && (
         <p style={{
           margin: '0.45rem 0 0',
-          padding: '0.9rem 1rem',
+          padding: '1.05rem 1.15rem',
           background: '#fff8ec',
-          borderLeft: `4px solid ${BRAND_GREEN}`,
-          borderRadius: 8,
+          borderLeft: `6px solid ${BRAND_GREEN}`,
+          borderRadius: 12,
           fontSize: '0.8rem',
-          color: '#3a433e',
-          lineHeight: 1.45,
+          fontWeight: 500,
+          color: '#4a534e',
+          lineHeight: 1.5,
         }}>
           {note}
         </p>
@@ -798,7 +729,7 @@ function AlternativesBlock({
 
       {count === 0 ? (
         <div style={{ fontSize: '0.92rem', color: '#3a433e', lineHeight: 1.5 }}>
-          {NO_CLEANER_MATCH_COPY.endsWith('.') ? NO_CLEANER_MATCH_COPY : `${NO_CLEANER_MATCH_COPY}.`}
+          {NO_CLEANER_MATCH_COPY}
         </div>
       ) : showAll ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -843,8 +774,12 @@ export default function PostScanProductScreen({
 
   const inactives = useMemo(() => sortedInactives(record), [record]);
   const label = VERDICT_LABELS[record.verdict];
-  const color = VERDICT_COLORS[record.verdict];
+  const color = POST_SCAN_BAR[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
+
+  useEffect(() => {
+    rememberPreviewViewedId(record.id);
+  }, [record.id]);
 
   useEffect(() => {
     if (!toast) return;
@@ -999,7 +934,6 @@ export default function PostScanProductScreen({
             <IngredientRow
               key={`${ingredient.name}-${index}`}
               name={ingredient.name}
-              iconKind={ingredient.riskLevel === 'cleared' ? 'check' : ingredientTypeKind(ingredient)}
               riskLevel={ingredient.riskLevel}
               typeLine={restingTypeLine(ingredient)}
               why={ingredientWhy(ingredient)}
