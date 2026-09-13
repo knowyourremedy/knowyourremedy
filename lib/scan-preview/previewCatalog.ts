@@ -62,6 +62,19 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   },
 };
 
+// Reuse the three existing pack shots only. Match id or formulaId;
+// do not invent a photo or fetch a new file.
+export function previewOverlayImage(
+  record: Pick<RatingRecord, 'id' | 'formulaId'>,
+): ProductImage | undefined {
+  const fromId = PREVIEW_IMAGE_OVERLAY[record.id];
+  if (fromId) return fromId;
+  if (record.formulaId && record.formulaId !== record.id) {
+    return PREVIEW_IMAGE_OVERLAY[record.formulaId];
+  }
+  return undefined;
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
   const productImage = PREVIEW_IMAGE_OVERLAY[record.id];
