@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
@@ -91,6 +91,7 @@ function SearchThumb({
 export default function SearchScreen({ onOpenProduct }: Props) {
   const [query, setQuery] = useState('');
   const [chip, setChip] = useState<string | null>(null);
+  const chipRowRef = useRef<HTMLDivElement>(null);
   const drafts = useMemo(() => loadedPreviewDrafts(), []);
   const categories = useMemo(() => loadedPreviewCategories(), []);
   const normalized = query.trim().toLowerCase();
@@ -120,6 +121,14 @@ export default function SearchScreen({ onOpenProduct }: Props) {
     : null;
 
   const showTiles = results == null;
+
+  useEffect(() => {
+    if (showTiles || !chip) return;
+    const active = chipRowRef.current?.querySelector('[aria-pressed="true"]');
+    if (active instanceof HTMLElement) {
+      active.scrollIntoView({ inline: 'center', block: 'nearest' });
+    }
+  }, [chip, showTiles]);
 
   return (
     <div style={{
@@ -207,6 +216,7 @@ export default function SearchScreen({ onOpenProduct }: Props) {
         </div>
       ) : (
         <div
+          ref={chipRowRef}
           aria-label="Use category"
           style={{
             display: 'flex',
