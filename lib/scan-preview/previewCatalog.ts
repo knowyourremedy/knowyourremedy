@@ -1,11 +1,83 @@
 // Preview wiring only. Imports existing draft rows — does not copy
 // product data or change verdicts / recordStatus.
 
-import { BATCH10_ADULT_DIGESTIVE } from '@/lib/rating-drafts/batch10-adult-digestive';
+import {
+  BATCH1_ADULT_APAP_IBU,
+  BATCH2_KIDS_APAP_IBU,
+  BATCH3_ADULT_COUGH_COLD,
+  BATCH4_KIDS_COUGH_COLD,
+  BATCH5_ADULT_ALLERGIES,
+  BATCH6_KIDS_ALLERGIES,
+  BATCH7_ADULT_SLEEP,
+  BATCH8_KIDS_SLEEP,
+  BATCH9_IMMUNE_SUPPORT,
+  BATCH10_ADULT_DIGESTIVE,
+  BATCH11_KIDS_DIGESTIVE,
+  BATCH12_ADULT_FIRST_AID,
+  BATCH13_KIDS_FIRST_AID,
+  BATCH14_ADULT_VITAMINS,
+  BATCH15_PRENATALS,
+  BATCH16_365_SPROUTS,
+  BATCH17_KIDS_VITAMINS,
+  BATCH18_ADULT_SINGLES,
+  BATCH19_KIDS_SINGLES,
+  BATCH20_CLUB_LEFTOVERS,
+  BATCH21_TOPCARE_SAVE_MART,
+  BATCH22_EYE_EAR,
+  BATCH24_IHERB_FULLSCRIPT,
+  BATCH25_IHERB_FULLSCRIPT_LEFTOVERS,
+  BATCH26_WE_HEART_NUTRITION,
+  BATCH27_THRIVE_WELLMADE,
+  BATCH28_THORNE_COM,
+  BATCH29_DOLLAR_STORE,
+  BATCH30_AMAZON_BASIC_CARE,
+} from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 
-const CATALOG: RatingRecord[] = BATCH10_ADULT_DIGESTIVE;
+function uniqueById(records: RatingRecord[]): RatingRecord[] {
+  const seen = new Set<string>();
+  const out: RatingRecord[] = [];
+  for (const record of records) {
+    if (seen.has(record.id)) continue;
+    seen.add(record.id);
+    out.push(record);
+  }
+  return out;
+}
+
+// Batch 10 first so the three fixture rows win any id collision.
+const CATALOG: RatingRecord[] = uniqueById([
+  ...BATCH10_ADULT_DIGESTIVE,
+  ...BATCH1_ADULT_APAP_IBU,
+  ...BATCH2_KIDS_APAP_IBU,
+  ...BATCH3_ADULT_COUGH_COLD,
+  ...BATCH4_KIDS_COUGH_COLD,
+  ...BATCH5_ADULT_ALLERGIES,
+  ...BATCH6_KIDS_ALLERGIES,
+  ...BATCH7_ADULT_SLEEP,
+  ...BATCH8_KIDS_SLEEP,
+  ...BATCH9_IMMUNE_SUPPORT,
+  ...BATCH11_KIDS_DIGESTIVE,
+  ...BATCH12_ADULT_FIRST_AID,
+  ...BATCH13_KIDS_FIRST_AID,
+  ...BATCH14_ADULT_VITAMINS,
+  ...BATCH15_PRENATALS,
+  ...BATCH16_365_SPROUTS,
+  ...BATCH17_KIDS_VITAMINS,
+  ...BATCH18_ADULT_SINGLES,
+  ...BATCH19_KIDS_SINGLES,
+  ...BATCH20_CLUB_LEFTOVERS,
+  ...BATCH21_TOPCARE_SAVE_MART,
+  ...BATCH22_EYE_EAR,
+  ...BATCH24_IHERB_FULLSCRIPT,
+  ...BATCH25_IHERB_FULLSCRIPT_LEFTOVERS,
+  ...BATCH26_WE_HEART_NUTRITION,
+  ...BATCH27_THRIVE_WELLMADE,
+  ...BATCH28_THORNE_COM,
+  ...BATCH29_DOLLAR_STORE,
+  ...BATCH30_AMAZON_BASIC_CARE,
+]);
 
 function mustFind(id: string): RatingRecord {
   const row = CATALOG.find((record) => record.id === id);
@@ -102,7 +174,20 @@ export type MatchedCleanAlternative = {
 };
 
 export function findDraftRecord(id: string): RatingRecord | undefined {
-  return CATALOG.find((record) => record.id === id || record.formulaId === id);
+  return CATALOG.find((record) => record.id === id)
+    ?? CATALOG.find((record) => record.formulaId === id);
+}
+
+export function loadedPreviewDrafts(): RatingRecord[] {
+  return CATALOG.map(withPreviewHonestNote);
+}
+
+export function loadedPreviewCategories(): string[] {
+  const names = new Set<string>();
+  for (const record of CATALOG) {
+    if (record.category) names.add(record.category);
+  }
+  return [...names].sort((a, b) => a.localeCompare(b));
 }
 
 export function getPreviewRecord(id: string | undefined): RatingRecord {

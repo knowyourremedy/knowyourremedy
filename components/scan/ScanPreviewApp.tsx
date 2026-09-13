@@ -16,6 +16,7 @@ import {
   togglePreviewCabinetId,
 } from '@/lib/scan-preview/previewCatalog';
 import PostScanProductScreen from './PostScanProductScreen';
+import SearchScreen from './SearchScreen';
 
 const BRAND_GREEN = '#2d4a3e';
 const CANVAS = '#faf7f2';
@@ -315,30 +316,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
                 body="Your scan history will live here later. This tab is a placeholder in the preview."
               />
             ) : tab === 'search' ? (
-              <PlaceholderScreen
-                title="Search"
-                body="Find a product by name. Search is a placeholder in this preview."
-              >
-                <input
-                  type="search"
-                  placeholder="Search products"
-                  disabled
-                  aria-label="Search products"
-                  style={{
-                    display: 'block',
-                    width: '100%',
-                    marginTop: '1.1rem',
-                    boxSizing: 'border-box',
-                    background: '#fff',
-                    border: '1px solid #e5dfd4',
-                    borderRadius: 12,
-                    padding: '0.75rem 0.9rem',
-                    fontSize: '0.92rem',
-                    color: '#8a938e',
-                    fontFamily: 'inherit',
-                  }}
-                />
-              </PlaceholderScreen>
+              <SearchScreen onOpenProduct={selectProduct} />
             ) : tab === 'cabinet' ? (
               <PlaceholderScreen
                 title="Cabinet"
