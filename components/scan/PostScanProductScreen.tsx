@@ -155,15 +155,15 @@ function NoteIcon() {
   );
 }
 
-function Chevron({ open }: { open: boolean }) {
+function Chevron({ open, size = 14 }: { open: boolean; size?: number }) {
   return (
     <svg
-      width="14"
-      height="14"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
-      style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
+      style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s', flexShrink: 0 }}
     >
       <path d="M6 9l6 6 6-6" stroke="#8a938e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -596,34 +596,37 @@ function ActiveRow({
   const riskLevel = safetyFlag ? activeSafetyRisk(safetyFlag) : null;
 
   const body = (
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 6 }}>
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 6 }}>
           <div style={{
-            fontWeight: 700,
-            fontSize: '0.9rem',
+            fontWeight: 600,
+            fontSize: '0.74rem',
             color: '#1a2e27',
             flex: 1,
-            lineHeight: 1.25,
+            lineHeight: 1.3,
+            overflowWrap: 'anywhere',
           }}>
             {active.name}
           </div>
           {riskLevel && (
             <span style={{
-              width: 8,
-              height: 8,
+              width: 7,
+              height: 7,
               borderRadius: '50%',
               background: riskDotColor(riskLevel),
               flexShrink: 0,
+              marginTop: 4,
             }} />
           )}
-          {safetyFlag && <Chevron open={open} />}
+          {safetyFlag && <Chevron open={open} size={12} />}
         </div>
         <div style={{
-          fontSize: '0.74rem',
+          fontSize: '0.68rem',
           color: '#8a938e',
-          marginTop: 2,
+          marginTop: 1,
           lineHeight: 1.3,
+          overflowWrap: 'anywhere',
         }}>
           {active.strength}
         </div>
@@ -633,8 +636,7 @@ function ActiveRow({
 
   return (
     <div style={{
-      borderBottom: last ? 'none' : '1px solid #eeeae3',
-      padding: '0.48rem 0',
+      padding: last ? '0.22rem 0 0' : '0.22rem 0 0.28rem',
     }}>
       {safetyFlag ? (
         <button
@@ -668,57 +670,49 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
   const flaggedIndex = flaggedActiveIndex(record);
 
   return (
-    <section style={{ margin: '0.35rem 0 0' }}>
-      <div style={{
-        background: '#fff',
-        border: '1px solid #ece7de',
-        borderRadius: 8,
-        overflow: 'hidden',
-      }}>
-        <button
-          type="button"
-          onClick={() => setOpen((value) => !value)}
-          aria-expanded={open}
-          aria-label={`Active ingredients, ${count}`}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            width: '100%',
-            background: '#fff',
-            border: 'none',
-            padding: '0.5rem 0.65rem',
-            cursor: 'pointer',
-            fontFamily: 'inherit',
-            textAlign: 'left',
-          }}
-        >
-          <span style={{
-            flex: 1,
-            fontSize: '0.82rem',
-            fontWeight: 700,
-            color: '#1a2e27',
-          }}>
-            Active ingredients · {count}
-          </span>
-          <Chevron open={open} />
-        </button>
-        {open && (
-          <div style={{
-            padding: '0 0.65rem 0.3rem',
-            borderTop: '1px solid #ece7de',
-          }}>
-            {actives.map((active, index) => (
-              <ActiveRow
-                key={`${active.name}-${active.strength}-${index}`}
-                active={active}
-                last={index === actives.length - 1}
-                safetyFlag={index === flaggedIndex ? record.activeSafetyFlag : undefined}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+    <section style={{ margin: '0.28rem 0 0' }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        aria-label={`Active ingredients, ${count}`}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 3,
+          width: 'auto',
+          maxWidth: '100%',
+          background: 'none',
+          border: 'none',
+          padding: '0.1rem 0',
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+          textAlign: 'left',
+        }}
+      >
+        <span style={{
+          fontSize: '0.7rem',
+          fontWeight: 600,
+          color: '#3a433e',
+          lineHeight: 1.2,
+          whiteSpace: 'nowrap',
+        }}>
+          Active ingredients · {count}
+        </span>
+        <Chevron open={open} size={12} />
+      </button>
+      {open && (
+        <div>
+          {actives.map((active, index) => (
+            <ActiveRow
+              key={`${active.name}-${active.strength}-${index}`}
+              active={active}
+              last={index === actives.length - 1}
+              safetyFlag={index === flaggedIndex ? record.activeSafetyFlag : undefined}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
@@ -957,31 +951,29 @@ export default function PostScanProductScreen({
       </div>
 
       <div style={{ padding: '0.7rem 0.9rem 2rem', background: CANVAS }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 8 }}>
-            <ProductThumb
-              productName={record.productName}
-              image={record.productImage}
-              onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
-            />
-            <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
-              <h1 style={{
-                fontFamily: 'var(--font-playfair), Georgia, serif',
-                fontSize: '1.05rem',
-                fontWeight: 700,
-                color: '#1a2e27',
-                lineHeight: 1.25,
-                letterSpacing: '-0.02em',
-                margin: 0,
-              }}>
-                {record.productName}
-              </h1>
-              <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
-                {record.brand}
-              </div>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 8 }}>
+          <ProductThumb
+            productName={record.productName}
+            image={record.productImage}
+            onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
+          />
+          <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
+            <h1 style={{
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: '1.05rem',
+              fontWeight: 700,
+              color: '#1a2e27',
+              lineHeight: 1.25,
+              letterSpacing: '-0.02em',
+              margin: 0,
+            }}>
+              {record.productName}
+            </h1>
+            <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
+              {record.brand}
             </div>
+            <ActivesBlock key={`actives-${record.id}`} record={record} />
           </div>
-          <ActivesBlock key={`actives-${record.id}`} record={record} />
         </div>
 
         {record.honestNote && (
