@@ -222,7 +222,7 @@ function ProductThumb({
           </div>
         </div>
       )}
-      {!hasVerifiedSkuImage(image) && onAddPhoto && (
+      {onAddPhoto && (
         <button
           type="button"
           onClick={onAddPhoto}

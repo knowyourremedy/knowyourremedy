@@ -3,7 +3,7 @@
 
 import { BATCH10_ADULT_DIGESTIVE } from '@/lib/rating-drafts/batch10-adult-digestive';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
-import type { IngredientFlag, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 
 const CATALOG: RatingRecord[] = BATCH10_ADULT_DIGESTIVE;
 
@@ -42,10 +42,35 @@ const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
     'This Assorted Fruit chew is Avoid because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
 };
 
+// Preview-only catalog pack shots. Does not edit draft rows.
+// verifiedSku is true only when the DailyMed file is the exact SKU.
+const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
+  [PREVIEW_CLEAN_ID]: {
+    url: '/scan-preview/phillips-mom-original.jpg',
+    source: 'catalog',
+    verifiedSku: true,
+  },
+  [PREVIEW_USABLE_ID]: {
+    url: '/scan-preview/alka-seltzer-gold.jpg',
+    source: 'catalog',
+    verifiedSku: true,
+  },
+  [PREVIEW_AVOID_ID]: {
+    url: '/scan-preview/tums-ultra-fruit-dyed.jpg',
+    source: 'catalog',
+    verifiedSku: true,
+  },
+};
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
-  if (!honestNote) return record;
-  return { ...record, honestNote };
+  const productImage = PREVIEW_IMAGE_OVERLAY[record.id];
+  if (!honestNote && !productImage) return record;
+  return {
+    ...record,
+    ...(honestNote ? { honestNote } : {}),
+    ...(productImage ? { productImage } : {}),
+  };
 }
 
 if (PREVIEW_CLEAN.verdict !== 'clean') {
