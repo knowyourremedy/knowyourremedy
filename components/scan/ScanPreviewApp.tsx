@@ -299,7 +299,13 @@ export default function ScanPreviewApp({ initialId }: Props) {
           flexDirection: 'column',
           position: 'relative',
         }}>
-          <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
+          <div style={{
+            flex: 1,
+            overflow: !productOpen && tab === 'search' ? 'hidden' : 'auto',
+            minHeight: 0,
+            display: !productOpen && tab === 'search' ? 'flex' : undefined,
+            flexDirection: !productOpen && tab === 'search' ? 'column' : undefined,
+          }}>
             {productOpen ? (
               <PostScanProductScreen
                 key={record.id}
@@ -316,7 +322,9 @@ export default function ScanPreviewApp({ initialId }: Props) {
                 body="Your scan history will live here later. This tab is a placeholder in the preview."
               />
             ) : tab === 'search' ? (
-              <SearchScreen onOpenProduct={selectProduct} />
+              <div style={{ flex: 1, minHeight: 0, height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <SearchScreen onOpenProduct={selectProduct} />
+              </div>
             ) : tab === 'cabinet' ? (
               <PlaceholderScreen
                 title="Cabinet"
