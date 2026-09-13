@@ -81,21 +81,6 @@ function flaggedActiveIndex(record: RatingRecord): number {
   return match >= 0 ? match : 0;
 }
 
-function NoteIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M7 4.5h7.2L18.5 9v10.5H7V4.5z"
-        stroke={BRAND_GREEN}
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <path d="M14.2 4.5V9H18.5" stroke={BRAND_GREEN} strokeWidth="1.6" strokeLinejoin="round" />
-      <path d="M9.4 13h5.2M9.4 16.2h3.6" stroke={BRAND_GREEN} strokeWidth="1.6" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function Chevron({ open, size = 14 }: { open: boolean; size?: number }) {
   return (
     <svg
@@ -471,18 +456,17 @@ function HonestNote({ note }: { note: string }) {
           alignItems: 'center',
           gap: 8,
           width: '100%',
-          background: '#fff8ec',
-          border: 'none',
+          background: '#ffffff',
+          border: `1px solid ${HAIRLINE}`,
           borderLeft: `6px solid ${BRAND_GREEN}`,
           borderRadius: 12,
-          padding: '1.1rem 1.15rem',
-          minHeight: 58,
+          padding: '1.3rem 1.35rem',
+          minHeight: 64,
           cursor: 'pointer',
           fontFamily: 'inherit',
           textAlign: 'left',
         }}
       >
-        <NoteIcon />
         <span style={{
           flex: 1,
           fontSize: '0.8rem',
@@ -496,8 +480,9 @@ function HonestNote({ note }: { note: string }) {
       {open && (
         <p style={{
           margin: '0.45rem 0 0',
-          padding: '1.05rem 1.15rem',
-          background: '#fff8ec',
+          padding: '1.25rem 1.35rem',
+          background: '#ffffff',
+          border: `1px solid ${HAIRLINE}`,
           borderLeft: `6px solid ${BRAND_GREEN}`,
           borderRadius: 12,
           fontSize: '0.8rem',
