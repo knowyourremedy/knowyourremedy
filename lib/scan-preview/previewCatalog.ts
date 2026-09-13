@@ -139,6 +139,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'imodium-ad-caplets': catalogShot('imodium-ad-caplets.jpg'),
   'pepcid-ac': catalogShot('pepcid-ac.jpg'),
   'pepcid-max': catalogShot('pepcid-max.jpg'),
+  'imodium-ad-softgels': catalogShot('imodium-ad-softgels.jpg'),
+  'imodium-ad-liquid': catalogShot('imodium-ad-liquid.jpg'),
+  'imodium-multi-symptom': catalogShot('imodium-multi-symptom.jpg'),
+  'pepcid-icy-cool-mint': catalogShot('pepcid-icy-cool-mint.jpg'),
+  'equate-famotidine': catalogShot('equate-famotidine.jpg'),
+  'prilosec-otc': catalogShot('prilosec-otc.jpg'),
+  'gasx-max-softgels': catalogShot('gasx-max-softgels.jpg'),
+  'gasx-ultimate-softgels': catalogShot('gasx-ultimate-softgels.jpg'),
+  'phazyme-fast-gels': catalogShot('phazyme-fast-gels.jpg'),
+  'dramamine-less-drowsy': catalogShot('dramamine-less-drowsy.jpg'),
+  'dramamine-chewable-orange': catalogShot('dramamine-chewable-orange.jpg'),
+  'bonine': catalogShot('bonine.jpg'),
+  'emetrol-liquid-cherry': catalogShot('emetrol-liquid-cherry.jpg'),
+  'pepto-bismol-caplets': catalogShot('pepto-bismol-caplets.jpg'),
+  'mylanta-gas-minis': catalogShot('mylanta-gas-minis.jpg'),
 };
 
 // Reuse overlay pack shots. Match id or formulaId;
