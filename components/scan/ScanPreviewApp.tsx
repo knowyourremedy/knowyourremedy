@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
@@ -9,17 +9,24 @@ import {
   getPreviewCabinetServerSnapshot,
   getPreviewCabinetSnapshot,
   getPreviewRecord,
+  getPreviewViewedServerSnapshot,
+  getPreviewViewedSnapshot,
   PREVIEW_SWITCHER,
   PREVIEW_SWITCHER_IDS,
   recordsForCabinet,
   subscribePreviewCabinet,
+  subscribePreviewViewed,
   togglePreviewCabinetId,
 } from '@/lib/scan-preview/previewCatalog';
+import CabinetScreen from './CabinetScreen';
+import HomeScreen from './HomeScreen';
 import PostScanProductScreen from './PostScanProductScreen';
+import ScanDummyControl from './ScanDummyControl';
 import SearchScreen, { EMPTY_SEARCH_STATE, type SearchViewState } from './SearchScreen';
 
 const BRAND_GREEN = '#2d4a3e';
 const CANVAS = '#faf7f2';
+const SCANNER_TOAST = 'Scanner coming soon.';
 
 type ChromeTab = 'home' | 'scan' | 'search' | 'cabinet';
 
@@ -58,25 +65,16 @@ function TabIcon({ tab }: { tab: ChromeTab }) {
   }
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M12 3.6l2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 15.58 7.3 18.05l.9-5.23-3.8-3.7 5.25-.76L12 3.6z"
-        stroke={stroke}
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
+      <rect x="4.2" y="4.8" width="15.6" height="15.2" rx="1.4" stroke={stroke} strokeWidth="1.6" />
+      <path d="M12 4.8v15.2" stroke={stroke} strokeWidth="1.6" />
+      <path d="M4.2 8.6h15.6" stroke={stroke} strokeWidth="1.6" />
+      <circle cx="9.8" cy="14.2" r="0.75" fill={stroke} />
+      <circle cx="14.2" cy="14.2" r="0.75" fill={stroke} />
     </svg>
   );
 }
 
-function PlaceholderScreen({
-  title,
-  body,
-  children,
-}: {
-  title: string;
-  body: string;
-  children?: ReactNode;
-}) {
+function ScanTab({ onScan }: { onScan: () => void }) {
   return (
     <div style={{
       background: CANVAS,
@@ -84,105 +82,17 @@ function PlaceholderScreen({
       padding: '1.35rem 1.15rem 1.5rem',
       fontFamily: 'var(--font-inter), sans-serif',
     }}>
-      <h1 style={{
-        fontFamily: 'var(--font-playfair), Georgia, serif',
-        fontSize: '1.7rem',
-        fontWeight: 700,
-        color: '#1a2e27',
-        margin: '0 0 0.45rem',
-        letterSpacing: '-0.02em',
-      }}>
-        {title}
-      </h1>
-      <p style={{
-        fontSize: '0.92rem',
-        color: '#5a635e',
-        lineHeight: 1.5,
-        margin: 0,
-      }}>
-        {body}
-      </p>
-      {children}
-    </div>
-  );
-}
-
-function ScanDummy({ onScan }: { onScan: () => void }) {
-  return (
-    <div style={{
-      background: CANVAS,
-      minHeight: '100%',
-      padding: '1.5rem 1.15rem',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      fontFamily: 'var(--font-inter), sans-serif',
-    }}>
       <div style={{
         fontFamily: 'var(--font-playfair), Georgia, serif',
         fontSize: '1.45rem',
         fontWeight: 700,
         color: '#1a2e27',
-        marginBottom: '1.25rem',
+        marginBottom: '1.1rem',
+        letterSpacing: '-0.02em',
       }}>
         Scan
       </div>
-      <div style={{
-        width: '100%',
-        maxWidth: 260,
-        aspectRatio: '1 / 1',
-        borderRadius: 18,
-        background: '#fff',
-        border: '1px solid #e5dfd4',
-        position: 'relative',
-        boxShadow: '0 8px 22px rgba(26, 46, 39, 0.05)',
-      }}>
-        {(['tl', 'tr', 'bl', 'br'] as const).map((corner) => {
-          const top = corner.startsWith('t');
-          const left = corner.endsWith('l');
-          return (
-            <span
-              key={corner}
-              style={{
-                position: 'absolute',
-                width: 28,
-                height: 28,
-                top: top ? 14 : undefined,
-                bottom: top ? undefined : 14,
-                left: left ? 14 : undefined,
-                right: left ? undefined : 14,
-                borderTop: top ? `3px solid ${BRAND_GREEN}` : undefined,
-                borderBottom: top ? undefined : `3px solid ${BRAND_GREEN}`,
-                borderLeft: left ? `3px solid ${BRAND_GREEN}` : undefined,
-                borderRight: left ? undefined : `3px solid ${BRAND_GREEN}`,
-              }}
-            />
-          );
-        })}
-      </div>
-      <p style={{
-        fontSize: '0.88rem',
-        color: '#5a635e',
-        textAlign: 'center',
-        margin: '1.15rem 0 0',
-        lineHeight: 1.45,
-      }}>
-        Camera is a dummy in this preview.
-      </p>
-      <button
-        type="button"
-        onClick={onScan}
-        aria-label="Scan barcode"
-        style={{
-          marginTop: '1.35rem',
-          width: 72,
-          height: 72,
-          borderRadius: '50%',
-          background: BRAND_GREEN,
-          border: '6px solid #d7e0db',
-          cursor: 'pointer',
-        }}
-      />
+      <ScanDummyControl onScan={onScan} />
     </div>
   );
 }
@@ -195,35 +105,47 @@ function replacePreviewId(id: string) {
 
 export default function ScanPreviewApp({ initialId }: Props) {
   const [selectedId, setSelectedId] = useState(initialId ?? PREVIEW_SWITCHER[0].id);
-  const [tab, setTab] = useState<ChromeTab>('scan');
-  const [productOpen, setProductOpen] = useState(true);
+  const [tab, setTab] = useState<ChromeTab>('home');
+  const [productOpen, setProductOpen] = useState(Boolean(initialId));
   const [toast, setToast] = useState<string | null>(null);
   const [searchState, setSearchState] = useState<SearchViewState>(EMPTY_SEARCH_STATE);
+  const [cabinetLandKey, setCabinetLandKey] = useState(0);
   const cabinetJson = useSyncExternalStore(
     subscribePreviewCabinet,
     getPreviewCabinetSnapshot,
     getPreviewCabinetServerSnapshot,
   );
+  const viewedJson = useSyncExternalStore(
+    subscribePreviewViewed,
+    getPreviewViewedSnapshot,
+    getPreviewViewedServerSnapshot,
+  );
   const cabinetIds = useMemo(() => JSON.parse(cabinetJson) as string[], [cabinetJson]);
+  const viewedIds = useMemo(() => JSON.parse(viewedJson) as string[], [viewedJson]);
   const record = useMemo(() => getPreviewRecord(selectedId), [selectedId]);
   const inSwitcher = PREVIEW_SWITCHER_IDS.includes(record.id);
   const cabinetRecords = useMemo(() => recordsForCabinet(cabinetIds), [cabinetIds]);
+  const viewedRecords = useMemo(() => recordsForCabinet(viewedIds), [viewedIds]);
 
   function patchSearch(patch: Partial<SearchViewState>) {
     setSearchState((current) => ({ ...current, ...patch }));
   }
 
-  function selectProduct(id: string, stayOnTab = false) {
+  function selectProduct(id: string) {
     setSelectedId(id);
-    if (!stayOnTab) setTab('scan');
     setProductOpen(true);
     replacePreviewId(id);
+  }
+
+  function showScannerToast() {
+    setToast(SCANNER_TOAST);
   }
 
   function goTab(next: ChromeTab) {
     setTab(next);
     setProductOpen(false);
     setToast(null);
+    if (next === 'cabinet') setCabinetLandKey((value) => value + 1);
   }
 
   function handleToggleSaved(id: string) {
@@ -316,7 +238,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
               <PostScanProductScreen
                 key={record.id}
                 record={record}
-                onOpenProduct={(id) => selectProduct(id, tab === 'search')}
+                onOpenProduct={selectProduct}
                 onBack={() => setProductOpen(false)}
                 saved={cabinetIds.includes(record.id)}
                 onToggleSaved={handleToggleSaved}
@@ -333,60 +255,31 @@ export default function ScanPreviewApp({ initialId }: Props) {
               }}
             >
             {tab === 'home' ? (
-              <PlaceholderScreen
-                title="Home"
-                body="Your scan history will live here later. This tab is a placeholder in the preview."
+              <HomeScreen
+                viewed={viewedRecords}
+                onScan={showScannerToast}
+                onOpenProduct={selectProduct}
               />
             ) : tab === 'search' ? (
               <div style={{ flex: 1, minHeight: 0, height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <SearchScreen
                   state={searchState}
                   onStateChange={patchSearch}
-                  onOpenProduct={(id) => selectProduct(id, true)}
+                  onOpenProduct={selectProduct}
                 />
               </div>
             ) : tab === 'cabinet' ? (
-              <PlaceholderScreen
-                title="Cabinet"
-                body={cabinetRecords.length === 0
-                  ? 'Nothing saved yet. Star a product to keep it here.'
-                  : 'Products you starred in this preview.'}
-              >
-                {cabinetRecords.length > 0 && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: '1.1rem' }}>
-                    {cabinetRecords.map((item) => (
-                      <button
-                        key={item.id}
-                        type="button"
-                        onClick={() => selectProduct(item.id)}
-                        style={{
-                          background: '#fff',
-                          border: '1px solid #ece7de',
-                          borderRadius: 12,
-                          padding: '0.85rem 0.95rem',
-                          textAlign: 'left',
-                          cursor: 'pointer',
-                          fontFamily: 'inherit',
-                        }}
-                      >
-                        <div style={{
-                          fontFamily: 'var(--font-playfair), Georgia, serif',
-                          fontSize: '1rem',
-                          fontWeight: 700,
-                          color: '#1a2e27',
-                        }}>
-                          {item.productName}
-                        </div>
-                        <div style={{ fontSize: '0.78rem', color: '#6b756f', marginTop: 3 }}>
-                          {item.brand}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </PlaceholderScreen>
+              <CabinetScreen
+                key={cabinetLandKey}
+                saved={cabinetRecords}
+                onOpenProduct={selectProduct}
+                onUnsave={(id) => {
+                  handleToggleSaved(id);
+                  setToast('Removed.');
+                }}
+              />
             ) : (
-              <ScanDummy onScan={() => setProductOpen(true)} />
+              <ScanTab onScan={showScannerToast} />
             )}
             </div>
           </div>
