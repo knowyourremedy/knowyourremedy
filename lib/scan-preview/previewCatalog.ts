@@ -182,11 +182,56 @@ export function loadedPreviewDrafts(): RatingRecord[] {
   return CATALOG.map(withPreviewHonestNote);
 }
 
+// Display-side Search tiles/chips only. Do not rewrite draft category strings.
+const SEARCH_ALLERGIES_LABEL = 'Allergies';
+const SEARCH_PRENATAL_LABEL = 'Prenatal';
+const PRENATAL_BATCH_IDS = new Set(BATCH15_PRENATALS.map((record) => record.id));
+
+function prenatalHaystack(record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>): string {
+  return `${record.category} ${record.productName} ${record.id} ${record.formulaId ?? ''}`.toLowerCase();
+}
+
+export function isPrenatalDraft(
+  record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
+): boolean {
+  if (PRENATAL_BATCH_IDS.has(record.id)) return true;
+  if ((record.category ?? '').trim().toLowerCase() === 'prenatal') return true;
+  return prenatalHaystack(record).includes('prenatal');
+}
+
+export function matchesSearchCategory(
+  record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
+  category: string,
+): boolean {
+  if (category === SEARCH_ALLERGIES_LABEL) {
+    return record.category === 'Allergy' || record.category === 'Allergies';
+  }
+  if (category === SEARCH_PRENATAL_LABEL) {
+    return isPrenatalDraft(record);
+  }
+  return record.category === category;
+}
+
 export function loadedPreviewCategories(): string[] {
   const names = new Set<string>();
+  let hasPrenatal = false;
   for (const record of CATALOG) {
-    if (record.category) names.add(record.category);
+    if (isPrenatalDraft(record)) hasPrenatal = true;
+    const raw = record.category?.trim();
+    if (!raw) continue;
+    const lowered = raw.toLowerCase();
+    if (lowered === 'homeopathic') continue;
+    if (lowered === 'allergy' || lowered === 'allergies') {
+      names.add(SEARCH_ALLERGIES_LABEL);
+      continue;
+    }
+    if (lowered === 'prenatal') {
+      names.add(SEARCH_PRENATAL_LABEL);
+      continue;
+    }
+    names.add(raw);
   }
+  if (hasPrenatal) names.add(SEARCH_PRENATAL_LABEL);
   return [...names].sort((a, b) => a.localeCompare(b));
 }
 

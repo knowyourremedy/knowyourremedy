@@ -411,7 +411,20 @@ function IngredientRow({
         }}
       >
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-          <div style={{ paddingTop: 2 }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            paddingTop: 2,
+            flexShrink: 0,
+          }}>
+            <span style={{
+              width: 8,
+              height: 8,
+              borderRadius: '50%',
+              background: riskDotColor(riskLevel),
+              flexShrink: 0,
+            }} />
             <TypeIcon kind={iconKind} />
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
@@ -425,13 +438,6 @@ function IngredientRow({
               }}>
                 {name}
               </div>
-              <span style={{
-                width: 8,
-                height: 8,
-                borderRadius: '50%',
-                background: riskDotColor(riskLevel),
-                flexShrink: 0,
-              }} />
               <Chevron open={open} />
             </div>
             <div style={{
@@ -540,7 +546,7 @@ function HonestNote({ note }: { note: string }) {
           border: 'none',
           borderLeft: `4px solid ${BRAND_GREEN}`,
           borderRadius: 8,
-          padding: '0.55rem 0.7rem',
+          padding: '0.9rem 1rem',
           cursor: 'pointer',
           fontFamily: 'inherit',
           textAlign: 'left',
@@ -560,7 +566,7 @@ function HonestNote({ note }: { note: string }) {
       {open && (
         <p style={{
           margin: '0.45rem 0 0',
-          padding: '0.65rem 0.75rem',
+          padding: '0.9rem 1rem',
           background: '#fff8ec',
           borderLeft: `4px solid ${BRAND_GREEN}`,
           borderRadius: 8,
@@ -763,12 +769,12 @@ function AlternativesBlock({
           <div style={{
             fontSize: '0.92rem',
             fontWeight: 700,
-            color: '#1a2e27',
+            color: '#27ae60',
             marginBottom: '0.3rem',
           }}>
             {header}
           </div>
-          <div style={{ width: 28, height: 2, background: BLUE_B, marginBottom: '0.65rem' }} />
+          <div style={{ width: 28, height: 2, background: '#27ae60', marginBottom: '0.65rem' }} />
         </div>
         {count > 0 && (
           <button
@@ -869,59 +875,60 @@ export default function PostScanProductScreen({
       fontFamily: 'var(--font-inter), sans-serif',
     }}>
       <div style={{
-        display: 'flex',
+        display: 'grid',
+        gridTemplateColumns: '44px 1fr 44px',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: 10,
-        padding: subline ? '0.62rem 0.9rem 0.68rem' : '0.7rem 0.9rem',
+        columnGap: 10,
+        padding: subline ? '0.62rem 0.7rem 0.68rem' : '0.7rem 0.7rem',
         background: color,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1, minWidth: 0 }}>
-          {onBack && (
-            <button
-              type="button"
-              onClick={onBack}
-              aria-label="Back"
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 8,
-                margin: -8,
-                color: '#fff',
-                flexShrink: 0,
-                display: 'flex',
-                alignItems: 'center',
-                minWidth: 44,
-                minHeight: 44,
-              }}
-            >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M15 6l-6 6 6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          )}
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{
-              fontSize: '1.7rem',
-              fontWeight: 800,
+        {onBack ? (
+          <button
+            type="button"
+            onClick={onBack}
+            aria-label="Back"
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 8,
+              margin: -8,
               color: '#fff',
-              letterSpacing: '-0.03em',
-              lineHeight: 1,
-            }}>
-              {label}
-            </div>
-            {subline && (
-              <div style={{
-                fontSize: '0.74rem',
-                fontWeight: 500,
-                color: 'rgba(255,255,255,0.92)',
-                marginTop: 4,
-              }}>
-                {subline}
-              </div>
-            )}
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: 44,
+              minHeight: 44,
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 6l-6 6 6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        ) : (
+          <div />
+        )}
+        <div style={{ textAlign: 'center', minWidth: 0 }}>
+          <div style={{
+            fontSize: '1.7rem',
+            fontWeight: 800,
+            color: '#fff',
+            letterSpacing: '-0.03em',
+            lineHeight: 1,
+          }}>
+            {label}
           </div>
+          {subline && (
+            <div style={{
+              fontSize: '0.74rem',
+              fontWeight: 500,
+              color: 'rgba(255,255,255,0.92)',
+              marginTop: 4,
+            }}>
+              {subline}
+            </div>
+          )}
         </div>
         <button
           type="button"
@@ -938,6 +945,7 @@ export default function PostScanProductScreen({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            justifySelf: 'end',
             transform: starBounce ? 'scale(1.22)' : 'scale(1)',
             transition: 'transform 0.18s ease',
             flexShrink: 0,
