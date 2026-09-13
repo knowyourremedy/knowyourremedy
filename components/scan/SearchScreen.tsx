@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
@@ -91,6 +91,7 @@ function SearchThumb({
 export default function SearchScreen({ onOpenProduct }: Props) {
   const [query, setQuery] = useState('');
   const [chip, setChip] = useState<string | null>(null);
+  const chipRowRef = useRef<HTMLDivElement>(null);
   const drafts = useMemo(() => loadedPreviewDrafts(), []);
   const categories = useMemo(() => loadedPreviewCategories(), []);
   const normalized = query.trim().toLowerCase();
@@ -119,12 +120,28 @@ export default function SearchScreen({ onOpenProduct }: Props) {
       : 'No matches.'
     : null;
 
+  const showTiles = results == null;
+
+  useEffect(() => {
+    if (showTiles || !chip) return;
+    const active = chipRowRef.current?.querySelector('[aria-pressed="true"]');
+    if (active instanceof HTMLElement) {
+      active.scrollIntoView({ inline: 'center', block: 'nearest' });
+    }
+  }, [chip, showTiles]);
+
   return (
     <div style={{
       background: CANVAS,
       minHeight: '100%',
+      height: '100%',
+      flex: 1,
+      boxSizing: 'border-box',
       padding: '1.1rem 1.05rem 1.25rem',
       fontFamily: 'var(--font-inter), sans-serif',
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: showTiles ? 'hidden' : 'auto',
     }}>
       <div style={{
         fontSize: '0.64rem',
@@ -133,6 +150,7 @@ export default function SearchScreen({ onOpenProduct }: Props) {
         textTransform: 'uppercase',
         color: '#7a8a78',
         marginBottom: '0.7rem',
+        flexShrink: 0,
       }}>
         Draft · unverified
       </div>
@@ -155,50 +173,92 @@ export default function SearchScreen({ onOpenProduct }: Props) {
           color: '#1a2e27',
           fontFamily: 'inherit',
           outline: 'none',
+          flexShrink: 0,
         }}
       />
 
-      <div
-        aria-label="Use category"
-        style={{
-          display: 'flex',
-          gap: 8,
-          overflowX: 'auto',
-          margin: '0.75rem -1.05rem 0',
-          padding: '0 1.05rem',
-          WebkitOverflowScrolling: 'touch',
-        }}
-      >
-        {[{ key: ALL_CHIP, label: 'All' }, ...categories.map((name) => ({ key: name, label: name }))].map((item) => {
-          const active = chip === item.key;
-          return (
+      {showTiles ? (
+        <div
+          aria-label="Use category"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gridAutoRows: '1fr',
+            gap: 10,
+            marginTop: '0.75rem',
+          }}
+        >
+          {categories.map((name) => (
             <button
-              key={item.key}
+              key={name}
               type="button"
-              aria-pressed={active}
-              onClick={() => toggleChip(item.key)}
+              onClick={() => setChip(name)}
               style={{
-                flexShrink: 0,
-                background: active ? BRAND_GREEN : '#fff',
-                color: active ? '#fff' : '#3a433e',
-                border: `1px solid ${active ? BRAND_GREEN : '#e5dfd4'}`,
-                borderRadius: 999,
-                padding: '0.38rem 0.78rem',
-                fontSize: '0.76rem',
-                fontWeight: 600,
+                background: '#fff',
+                color: '#1a2e27',
+                border: '1px solid #ece7de',
+                borderRadius: 14,
+                padding: '0.85rem 0.7rem',
+                fontSize: '0.95rem',
+                fontWeight: 700,
+                letterSpacing: '-0.01em',
                 cursor: 'pointer',
                 fontFamily: 'inherit',
-                whiteSpace: 'nowrap',
+                lineHeight: 1.25,
+                minHeight: 88,
               }}
             >
-              {item.label}
+              {name}
             </button>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div
+          ref={chipRowRef}
+          aria-label="Use category"
+          style={{
+            display: 'flex',
+            gap: 8,
+            overflowX: 'auto',
+            margin: '0.75rem -1.05rem 0',
+            padding: '0 1.05rem',
+            WebkitOverflowScrolling: 'touch',
+            flexShrink: 0,
+          }}
+        >
+          {[{ key: ALL_CHIP, label: 'All' }, ...categories.map((name) => ({ key: name, label: name }))].map((item) => {
+            const active = chip === item.key;
+            return (
+              <button
+                key={item.key}
+                type="button"
+                aria-pressed={active}
+                onClick={() => toggleChip(item.key)}
+                style={{
+                  flexShrink: 0,
+                  background: active ? BRAND_GREEN : '#fff',
+                  color: active ? '#fff' : '#3a433e',
+                  border: `1px solid ${active ? BRAND_GREEN : '#e5dfd4'}`,
+                  borderRadius: 999,
+                  padding: '0.38rem 0.78rem',
+                  fontSize: '0.76rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  fontFamily: 'inherit',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {results && results.length > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: '0.9rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: '0.9rem', flex: 1, minHeight: 0, overflow: 'auto' }}>
           {results.map((record) => {
             const color = VERDICT_COLORS[record.verdict];
             return (
