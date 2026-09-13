@@ -166,7 +166,7 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
   useEffect(() => {
     if (!listRef.current || showTiles) return;
     listRef.current.scrollTop = listScrollTop;
-  }, [showTiles, selectedCategory]);
+  }, [listScrollTop, showTiles, selectedCategory]);
 
   return (
     <div style={{
