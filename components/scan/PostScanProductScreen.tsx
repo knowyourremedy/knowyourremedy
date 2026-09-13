@@ -668,7 +668,7 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
   const flaggedIndex = flaggedActiveIndex(record);
 
   return (
-    <section style={{ margin: '0.7rem 0 0.85rem' }}>
+    <section style={{ margin: '0.35rem 0 0' }}>
       <div style={{
         background: '#fff',
         border: '1px solid #ece7de',
@@ -679,7 +679,7 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
           type="button"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
-          aria-label={`Actives, ${count}`}
+          aria-label={`Active ingredients, ${count}`}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -687,7 +687,7 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
             width: '100%',
             background: '#fff',
             border: 'none',
-            padding: '0.55rem 0.7rem',
+            padding: '0.5rem 0.65rem',
             cursor: 'pointer',
             fontFamily: 'inherit',
             textAlign: 'left',
@@ -699,13 +699,13 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
             fontWeight: 700,
             color: '#1a2e27',
           }}>
-            Actives · {count}
+            Active ingredients · {count}
           </span>
           <Chevron open={open} />
         </button>
         {open && (
           <div style={{
-            padding: '0 0.7rem 0.35rem',
+            padding: '0 0.65rem 0.3rem',
             borderTop: '1px solid #ece7de',
           }}>
             {actives.map((active, index) => (
@@ -720,6 +720,28 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
         )}
       </div>
     </section>
+  );
+}
+
+function InactiveIngredientsLabel() {
+  return (
+    <div style={{ margin: '0.85rem 0 0.15rem' }}>
+      <div style={{
+        fontSize: '0.78rem',
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        letterSpacing: '0.07em',
+        color: BLUE_B,
+        marginBottom: '0.35rem',
+      }}>
+        Inactive ingredients
+      </div>
+      <div style={{
+        width: 28,
+        height: 2,
+        background: BLUE_B,
+      }} />
+    </div>
   );
 }
 
@@ -935,37 +957,39 @@ export default function PostScanProductScreen({
       </div>
 
       <div style={{ padding: '0.7rem 0.9rem 2rem', background: CANVAS }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 6 }}>
-          <ProductThumb
-            productName={record.productName}
-            image={record.productImage}
-            onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
-          />
-          <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
-            <h1 style={{
-              fontFamily: 'var(--font-playfair), Georgia, serif',
-              fontSize: '1.05rem',
-              fontWeight: 700,
-              color: '#1a2e27',
-              lineHeight: 1.25,
-              letterSpacing: '-0.02em',
-              margin: 0,
-            }}>
-              {record.productName}
-            </h1>
-            <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
-              {record.brand}
+        <div>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 8 }}>
+            <ProductThumb
+              productName={record.productName}
+              image={record.productImage}
+              onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
+            />
+            <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
+              <h1 style={{
+                fontFamily: 'var(--font-playfair), Georgia, serif',
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                color: '#1a2e27',
+                lineHeight: 1.25,
+                letterSpacing: '-0.02em',
+                margin: 0,
+              }}>
+                {record.productName}
+              </h1>
+              <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
+                {record.brand}
+              </div>
             </div>
           </div>
+          <ActivesBlock key={`actives-${record.id}`} record={record} />
         </div>
 
         {record.honestNote && (
           <HonestNote key={record.id} note={record.honestNote} />
         )}
 
-        <ActivesBlock key={`actives-${record.id}`} record={record} />
-
         <div>
+          <InactiveIngredientsLabel />
           {inactives.map((ingredient, index) => (
             <IngredientRow
               key={`${ingredient.name}-${index}`}
