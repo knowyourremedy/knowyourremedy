@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 12, 2026 (display lock — Clean / Usable / Avoid badges; internal verdict keys unchanged)
+Last Updated: September 13, 2026 (app preview: post-scan + Search + Home + Cabinet; Usable display lock stands)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -46,6 +46,78 @@ Personal / contact
 Full name: Brandon Valdez (NOT Dezman). Email: bdez1525@outlook.com. Location: Clovis, CA.
 Legal contact: personally knows Richard Aaron of Dowling Aaron (Fresno) — leverage for legal-review introductions.
 ================================================================
+
+================================================================
+⚡ SESSION LOCK — September 12–13, 2026 (read with How Brandon Works)
+================================================================
+
+Bots
+- Catalog-era coding bot = KYR (previous handoff).
+- Current UI/app-preview coding bot = KYR2.
+- Brandon renames (KYR3, etc.) when a chat gets too big. Update this line at the next notes pass. Rules stay; the number changes.
+- KYR2 writes code via GitHub. Local editor (today: Cursor) = notes, git pull, npm run dev.
+- After a bot PR: Merge on GitHub (or ask KYR2 to merge if the UI errors), then refresh https://knowyourremedy.vercel.app/scan-preview
+- “git pull” in the terminal is NOT the same as merging a pull request on GitHub.
+
+How Brandon wants work done
+- Sidebar first. No bot paste until he says “go.”
+- Visual changes: sketch first, then paste. Do not ask him to imagine layout.
+- One combined paste per job. Never split instructions.
+- Do not start a second bot job while one is running.
+- Walk Git like a novice. Only send paste text when it is time to send it.
+- Founder owns grades. Batch verdicts from the KYR catalog era were methodology-applied then Brandon-skimmed — treat those as approved unless he says that batch never got a look.
+- New ungraded inactive still = 7-step packet + Brandon. Do not invent a live grade.
+- Display map stays in lib/clean-picks/verdictLabels.ts. Internal keys clean/caution/avoid. User sees Clean / Usable / Avoid. Usable subline: “Fine in moderation.” Do not rewrite draft verdict keys.
+
+Catalog status (do not invent “unsigned grades”)
+- lib/rating-drafts/ is large (aisle batches through Amazon Basic Care / PR 32 and prior). Unverified as PRODUCT FILES (barcode/photo/exact-SKU check), not “grades never decided.”
+- No new catalog batch unless Brandon asks.
+- B-Alive store scrape was scrapped. Store may be a later hunt list for missing Clean swaps. Not a batch now.
+- Preview pack shots ONLY (exact SKU): public/scan-preview/alka-seltzer-gold.jpg, phillips-mom-original.jpg, tums-ultra-fruit-dyed.jpg.
+
+App preview route: /scan-preview (Vercel + localhost)
+Four tabs: Home · Scan · Search · Cabinet. Marketing site header/old QuickNav hidden on this route.
+Draft Clean/Usable/Avoid pills at the top are PREVIEW ONLY (flip sample SKUs). Not in the real app.
+
+POST-SCAN (locked template)
+- Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Avoid #c0392b. No 0–100. No page wash.
+- Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
+- Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
+- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary on the three preview SKUs. Not methodology jargon.
+- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared.
+- Cleaner carousel on Usable + Avoid only. Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
+- No Overview tab. No Photos tab.
+
+SEARCH (locked)
+- Empty: search field + 2-column use-category TILES.
+- Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
+- Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Avoid filter chips (multi). Type further filters that list.
+- Type 3+ letters with NO category: all loaded drafts by name/brand; hide category chips AND hide verdict chips.
+- Back from a product restores the same Search state.
+- Rows: thumb, name, brand, display badge. Draft · unverified cue once. Tap → post-scan.
+
+HOME
+- Tab Home. Page title “Know Your Remedy.”
+- Dummy Scan (toast “Scanner coming soon”).
+- “Previously viewed” (not scanned), newest first. Any post-scan open adds to this list.
+- localStorage for this preview only.
+
+CABINET
+- Cupboard tab icon.
+- 1-second doors-open (CSS/illustration, not a video file), then list.
+- Group by use category, headers A–Z, header only if that category has a saved item.
+- Star persists until unstar. Viewing ≠ starring.
+- localStorage for this preview only.
+
+Parked
+- Real barcode camera / UPC fill
+- Catalog photo pipeline beyond the 3 preview SKUs
+- User photo upload + review queue
+- Accounts / cloud sync of Cabinet
+
+Next session
+- Do not reopen Search / post-scan / Home / Cabinet unless something is broken.
+- Optional: more exact-SKU photos, or real scan when barcodes exist.
 
 POSITIONING — WHAT KNOWYOURREMEDY IS (APP-FIRST) ================================================================ KnowYourRemedy is a Yuka-style platform — but for medicine, supplements, and natural remedies instead of food and cosmetics. The one question it answers: "Is this product clean — and what's actually in it?"
 THE COMMITTED DESTINATION: a barcode-scanner app (scan a medicine/supplement/vitamin → instant Clean / Caution / Avoid verdict + ingredient breakdown + sources; scan an essential oil → informational usage lookup, no verdict — see §9). This is the product and the priority. We build everything going forward as if building the app.
