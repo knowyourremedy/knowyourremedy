@@ -586,9 +586,11 @@ function activeSafetyWhy(active: ActiveIngredient, flag: ActiveSafetyFlag): Ingr
 function ActiveRow({
   active,
   safetyFlag,
+  last = false,
 }: {
   active: ActiveIngredient;
   safetyFlag?: ActiveSafetyFlag;
+  last?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const riskLevel = safetyFlag ? activeSafetyRisk(safetyFlag) : null;
@@ -631,7 +633,7 @@ function ActiveRow({
 
   return (
     <div style={{
-      borderBottom: '1px solid #eeeae3',
+      borderBottom: last ? 'none' : '1px solid #eeeae3',
       padding: '0.48rem 0',
     }}>
       {safetyFlag ? (
@@ -666,48 +668,57 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
   const flaggedIndex = flaggedActiveIndex(record);
 
   return (
-    <section style={{ margin: '0.7rem 0 0' }}>
-      <button
-        type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        aria-label={`Actives, ${count}`}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-          width: '100%',
-          background: 'none',
-          border: 'none',
-          borderBottom: '1px solid #eeeae3',
-          borderRadius: 0,
-          padding: '0.55rem 0',
-          cursor: 'pointer',
-          fontFamily: 'inherit',
-          textAlign: 'left',
-        }}
-      >
-        <span style={{
-          flex: 1,
-          fontSize: '0.9rem',
-          fontWeight: 700,
-          color: '#1a2e27',
-        }}>
-          Actives · {count}
-        </span>
-        <Chevron open={open} />
-      </button>
-      {open && (
-        <div>
-          {actives.map((active, index) => (
-            <ActiveRow
-              key={`${active.name}-${active.strength}-${index}`}
-              active={active}
-              safetyFlag={index === flaggedIndex ? record.activeSafetyFlag : undefined}
-            />
-          ))}
-        </div>
-      )}
+    <section style={{ margin: '0.7rem 0 0.85rem' }}>
+      <div style={{
+        background: '#fff',
+        border: '1px solid #ece7de',
+        borderRadius: 8,
+        overflow: 'hidden',
+      }}>
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          aria-label={`Actives, ${count}`}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            width: '100%',
+            background: '#fff',
+            border: 'none',
+            padding: '0.55rem 0.7rem',
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+            textAlign: 'left',
+          }}
+        >
+          <span style={{
+            flex: 1,
+            fontSize: '0.82rem',
+            fontWeight: 700,
+            color: '#1a2e27',
+          }}>
+            Actives · {count}
+          </span>
+          <Chevron open={open} />
+        </button>
+        {open && (
+          <div style={{
+            padding: '0 0.7rem 0.35rem',
+            borderTop: '1px solid #ece7de',
+          }}>
+            {actives.map((active, index) => (
+              <ActiveRow
+                key={`${active.name}-${active.strength}-${index}`}
+                active={active}
+                last={index === actives.length - 1}
+                safetyFlag={index === flaggedIndex ? record.activeSafetyFlag : undefined}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   );
 }
@@ -954,7 +965,7 @@ export default function PostScanProductScreen({
 
         <ActivesBlock key={`actives-${record.id}`} record={record} />
 
-        <div style={{ marginTop: '0.15rem' }}>
+        <div>
           {inactives.map((ingredient, index) => (
             <IngredientRow
               key={`${ingredient.name}-${index}`}
