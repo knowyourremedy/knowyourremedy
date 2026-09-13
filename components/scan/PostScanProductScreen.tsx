@@ -668,7 +668,7 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
   const flaggedIndex = flaggedActiveIndex(record);
 
   return (
-    <section style={{ margin: '0.45rem 0 0' }}>
+    <section style={{ margin: '0.35rem 0 0' }}>
       <div style={{
         background: '#fff',
         border: '1px solid #ece7de',
@@ -957,29 +957,31 @@ export default function PostScanProductScreen({
       </div>
 
       <div style={{ padding: '0.7rem 0.9rem 2rem', background: CANVAS }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-          <ProductThumb
-            productName={record.productName}
-            image={record.productImage}
-            onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
-          />
-          <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
-            <h1 style={{
-              fontFamily: 'var(--font-playfair), Georgia, serif',
-              fontSize: '1.05rem',
-              fontWeight: 700,
-              color: '#1a2e27',
-              lineHeight: 1.25,
-              letterSpacing: '-0.02em',
-              margin: 0,
-            }}>
-              {record.productName}
-            </h1>
-            <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
-              {record.brand}
+        <div>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 8 }}>
+            <ProductThumb
+              productName={record.productName}
+              image={record.productImage}
+              onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
+            />
+            <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>
+              <h1 style={{
+                fontFamily: 'var(--font-playfair), Georgia, serif',
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                color: '#1a2e27',
+                lineHeight: 1.25,
+                letterSpacing: '-0.02em',
+                margin: 0,
+              }}>
+                {record.productName}
+              </h1>
+              <div style={{ fontSize: '0.8rem', color: '#5a635e', marginTop: 4 }}>
+                {record.brand}
+              </div>
             </div>
-            <ActivesBlock key={`actives-${record.id}`} record={record} />
           </div>
+          <ActivesBlock key={`actives-${record.id}`} record={record} />
         </div>
 
         {record.honestNote && (
