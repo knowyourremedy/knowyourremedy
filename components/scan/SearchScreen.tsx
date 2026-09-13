@@ -17,6 +17,7 @@ import {
 const BRAND_GREEN = '#2d4a3e';
 const CANVAS = '#faf7f2';
 const THUMB = 48;
+const TYPE_ONLY_VISIBLE_CAP = 35;
 const VERDICT_FILTERS: Verdict[] = ['clean', 'caution', 'avoid'];
 
 export type SearchViewState = {
@@ -114,8 +115,8 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
   const categories = useMemo(() => loadedPreviewCategories(), []);
   const normalized = query.trim().toLowerCase();
   const categoryOn = selectedCategory != null;
-  const typeOnly = !categoryOn && normalized.length >= 3;
-  const showTiles = !categoryOn && normalized.length < 3;
+  const typeOnly = !categoryOn && normalized.length > 0;
+  const showTiles = !categoryOn && normalized.length === 0;
 
   const results = useMemo(() => {
     if (showTiles) return null;
@@ -148,6 +149,13 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
       : [...selectedVerdicts, verdict];
     onStateChange({ selectedVerdicts: next, listScrollTop: 0 });
   }
+
+  const visibleResults = results && typeOnly
+    ? results.slice(0, TYPE_ONLY_VISIBLE_CAP)
+    : results;
+  const showNarrowCue = Boolean(
+    typeOnly && results && results.length > TYPE_ONLY_VISIBLE_CAP,
+  );
 
   const emptyMessage = results && results.length === 0
     ? categoryOn && !normalized && selectedVerdicts.length === 0
@@ -336,13 +344,13 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
             </div>
           )}
 
-          {results && results.length > 0 && (
+          {visibleResults && visibleResults.length > 0 && (
             <div
               ref={listRef}
               onScroll={(event) => onStateChange({ listScrollTop: event.currentTarget.scrollTop })}
               style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: '0.9rem', flex: 1, minHeight: 0, overflow: 'auto' }}
             >
-              {results.map((record) => {
+              {visibleResults.map((record) => {
                 const color = VERDICT_COLORS[record.verdict];
                 return (
                   <button
@@ -403,6 +411,18 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
                 );
               })}
             </div>
+          )}
+
+          {showNarrowCue && (
+            <p style={{
+              fontSize: '0.86rem',
+              color: '#6b756f',
+              margin: '0.75rem 0 0',
+              lineHeight: 1.4,
+              flexShrink: 0,
+            }}>
+              Keep typing to narrow.
+            </p>
           )}
 
           {emptyMessage && (
