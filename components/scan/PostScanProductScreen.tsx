@@ -5,7 +5,6 @@ import {
   VERDICT_COLORS,
   VERDICT_LABELS,
   VERDICT_SUBLINES,
-  type Verdict,
 } from '@/lib/clean-picks/verdictLabels';
 import type { ActiveIngredient, ActiveSafetyFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
@@ -27,13 +26,6 @@ const CANVAS = '#faf7f2';
 const HAIRLINE = '#ece7de';
 const THUMB = 88;
 const PHOTO_REVIEW_TOAST = 'Photo review coming soon.';
-
-// Post-scan bar only. Locked hue families; do not edit verdictLabels.ts.
-const POST_SCAN_BAR: Record<Verdict, string> = {
-  clean: '#1c8f4e',
-  caution: '#c4a04a',
-  avoid: '#a32924',
-};
 
 type Props = {
   record: RatingRecord;
@@ -759,7 +751,7 @@ export default function PostScanProductScreen({
 
   const inactives = useMemo(() => sortedInactives(record), [record]);
   const label = VERDICT_LABELS[record.verdict];
-  const color = POST_SCAN_BAR[record.verdict];
+  const color = VERDICT_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
 
   useEffect(() => {
