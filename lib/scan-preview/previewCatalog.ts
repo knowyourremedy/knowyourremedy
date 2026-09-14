@@ -154,6 +154,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'emetrol-liquid-cherry': catalogShot('emetrol-liquid-cherry.jpg'),
   'pepto-bismol-caplets': catalogShot('pepto-bismol-caplets.jpg'),
   'mylanta-gas-minis': catalogShot('mylanta-gas-minis.jpg'),
+  'upup-digestive-relief': catalogShot('upup-digestive-relief.jpg'),
+  'boiron-gasalia-meltaways': catalogShot('boiron-gasalia-meltaways.jpg'),
+  'boiron-gasalia-pellets': catalogShot('boiron-gasalia-pellets.jpg'),
+  'genexa-kids-tummy-relief': catalogShot('genexa-kids-tummy-relief.jpg'),
+  'little-remedies-gas-drops': catalogShot('little-remedies-gas-drops.jpg'),
+  'pepto-kids': catalogShot('pepto-kids.jpg'),
+  'mylicon-tummy-relief-chew': catalogShot('mylicon-tummy-relief-chew.jpg'),
+  'mylicon-all-in-one-liquid': catalogShot('mylicon-all-in-one-liquid.jpg'),
+  'mylicon-infants-original': catalogShot('mylicon-infants-original.jpg'),
+  'mylicon-infants-dyefree': catalogShot('mylicon-infants-dyefree.jpg'),
+  'cvs-infants-gas-dyefree': catalogShot('cvs-infants-gas-dyefree.jpg'),
+  'walgreens-infants-gas-dyefree': catalogShot('walgreens-infants-gas-dyefree.jpg'),
+  'dramamine-for-kids': catalogShot('dramamine-for-kids.jpg'),
+  '365-antacid-peppermint-ultra': catalogShot('365-antacid-peppermint-ultra.jpg'),
+  'amazon-basics-clearlax-unflavored': catalogShot('amazon-basics-clearlax-unflavored.jpg'),
 };
 
 // Reuse overlay pack shots. Match id or formulaId;
