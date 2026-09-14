@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 13, 2026 (handoff standards)
+Last Updated: September 13, 2026 (image fallback carton → brand mark → letter last)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -74,6 +74,16 @@ Catalog status (do not invent “unsigned grades”)
 - No new catalog batch unless Brandon asks.
 - B-Alive store scrape was scrapped. Store may be a later hunt list for missing Clean swaps. Not a batch now.
 - Preview pack shots ONLY (exact SKU): public/scan-preview/alka-seltzer-gold.jpg, phillips-mom-original.jpg, tums-ultra-fruit-dyed.jpg.
+
+IMAGE FALLBACK (locked Sept 13)
+1) Exact SKU carton if found or founder sent a DailyMed/brand link.
+2) If we TRIED that SKU and have no matching carton → official brand mark from the brand’s own site. Not verifiedSku. Not a letter.
+3) Letter avatar ONLY if we have not attempted that SKU yet.
+Blank tile ≠ skipped. Attempted-but-no-box must not stay a letter.
+- Don’t half-dress launch to hit a date.
+- Cap-15 in KYR2 is a chat leash. Launch photos = later factory after barcodes.
+- US only for now. Don’t add discontinued US SKUs to Search; hide when Brandon confirms dead.
+- Brandon will send DailyMed/brand links for unsure cartons.
 
 App preview route: /scan-preview (Vercel + localhost)
 Four tabs: Home · Scan · Search · Cabinet. Marketing site header/old QuickNav hidden on this route.
