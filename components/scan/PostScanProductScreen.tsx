@@ -88,8 +88,8 @@ function Chevron({ open, size = 14 }: { open: boolean; size?: number }) {
   );
 }
 
-function hasVerifiedSkuImage(image?: ProductImage): image is ProductImage {
-  return Boolean(image?.verifiedSku && image.url);
+function hasTileImage(image?: ProductImage): image is ProductImage {
+  return Boolean(image?.url);
 }
 
 function ProductThumb({
@@ -115,7 +115,7 @@ function ProductThumb({
 
   return (
     <div style={{ position: 'relative', width: THUMB, height: THUMB, flexShrink: 0 }}>
-      {hasVerifiedSkuImage(image) ? (
+      {hasTileImage(image) ? (
         <div style={box}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -183,7 +183,7 @@ function ProductTile({
   image?: ProductImage;
   compact?: boolean;
 }) {
-  if (hasVerifiedSkuImage(image)) {
+  if (hasTileImage(image)) {
     return (
       <div style={{
         background: '#fff',
@@ -879,7 +879,7 @@ export default function PostScanProductScreen({
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, paddingBottom: 8 }}>
           <ProductThumb
             productName={record.productName}
-            image={record.productImage}
+            image={previewOverlayImage(record) ?? record.productImage}
             onAddPhoto={() => showToast(PHOTO_REVIEW_TOAST)}
           />
           <div style={{ flex: 1, minWidth: 0, paddingTop: 2 }}>

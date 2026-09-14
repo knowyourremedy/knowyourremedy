@@ -120,6 +120,45 @@ function catalogShot(file: string): ProductImage {
   return { url: `/scan-preview/${file}`, source: 'catalog', verifiedSku: true };
 }
 
+// Official brand marks — not pack shots, never verifiedSku.
+// Tonight: Tums / Emetrol / Nauzene only. Later categories reuse this map.
+function brandMark(file: string): ProductImage {
+  return { url: `/scan-preview/${file}`, source: 'catalog', verifiedSku: false };
+}
+
+function brandKey(brand: string): string {
+  return brand.trim().toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+const PREVIEW_BRAND_MARK: Record<string, ProductImage> = {
+  tums: brandMark('tums-mark.png'),
+  emetrol: brandMark('emetrol-mark.png'),
+  nauzene: brandMark('nauzene-mark.png'),
+};
+
+function brandMarkImage(brand: string | undefined): ProductImage | undefined {
+  if (!brand) return undefined;
+  return PREVIEW_BRAND_MARK[brandKey(brand)];
+}
+
+// Letter tile when there is no exact SKU overlay and no brand-mark file.
+// Not "Image coming". Not a carton. Not verifiedSku.
+function brandInitialTile(brand: string | undefined): ProductImage | undefined {
+  const letter = (brand ?? '').trim().match(/[A-Za-z0-9]/)?.[0]?.toUpperCase();
+  if (!letter) return undefined;
+  const svg =
+    `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">` +
+    `<rect width="128" height="128" rx="18" fill="#f4f1ea"/>` +
+    `<text x="64" y="72" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ` +
+    `font-size="56" font-weight="700" fill="#2d4a3e">${letter}</text>` +
+    `</svg>`;
+  return {
+    url: `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`,
+    source: 'catalog',
+    verifiedSku: false,
+  };
+}
+
 const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   [PREVIEW_CLEAN_ID]: catalogShot('phillips-mom-original.jpg'),
   [PREVIEW_USABLE_ID]: catalogShot('alka-seltzer-gold.jpg'),
@@ -185,22 +224,23 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'align-daily-probiotic': catalogShot('align-daily-probiotic.jpg'),
 };
 
-// Reuse overlay pack shots. Match id or formulaId;
-// do not invent a photo or fetch a new file at render time.
+// Tile lookup: exact SKU overlay → brand mark file → brand-initial tile.
+// Exact pack shot always wins. Brand marks are not cartons and are never verifiedSku.
 export function previewOverlayImage(
-  record: Pick<RatingRecord, 'id' | 'formulaId'>,
+  record: Pick<RatingRecord, 'id' | 'formulaId' | 'brand'>,
 ): ProductImage | undefined {
   const fromId = PREVIEW_IMAGE_OVERLAY[record.id];
   if (fromId) return fromId;
   if (record.formulaId && record.formulaId !== record.id) {
-    return PREVIEW_IMAGE_OVERLAY[record.formulaId];
+    const fromFormula = PREVIEW_IMAGE_OVERLAY[record.formulaId];
+    if (fromFormula) return fromFormula;
   }
-  return undefined;
+  return brandMarkImage(record.brand) ?? brandInitialTile(record.brand);
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
-  const productImage = PREVIEW_IMAGE_OVERLAY[record.id];
+  const productImage = previewOverlayImage(record);
   if (!honestNote && !productImage) return record;
   return {
     ...record,
@@ -217,6 +257,29 @@ if (PREVIEW_USABLE.verdict !== 'caution') {
 }
 if (PREVIEW_AVOID.verdict !== 'avoid') {
   throw new Error('tums-ultra-fruit-dyed must stay verdict avoid');
+}
+
+function assertBrandMark(id: string, brand: string, file: string) {
+  const image = previewOverlayImage({ id, formulaId: id, brand });
+  if (!image?.url.endsWith(`/${file}`)) {
+    throw new Error(`${id} must fall back to brand mark ${file}`);
+  }
+  if (image.verifiedSku) {
+    throw new Error(`${id} brand mark must not set verifiedSku`);
+  }
+}
+
+assertBrandMark('tums-chewy-bites', 'Tums', 'tums-mark.png');
+assertBrandMark('emetrol-chewables', 'Emetrol', 'emetrol-mark.png');
+assertBrandMark('nauzene-chewables', 'Nauzene', 'nauzene-mark.png');
+
+const exactWins = previewOverlayImage({
+  id: PREVIEW_AVOID_ID,
+  formulaId: PREVIEW_AVOID_ID,
+  brand: 'Tums',
+});
+if (!exactWins?.verifiedSku || !exactWins.url.endsWith('/tums-ultra-fruit-dyed.jpg')) {
+  throw new Error('exact SKU overlay must win over a brand mark');
 }
 
 export type MatchedCleanAlternative = {
