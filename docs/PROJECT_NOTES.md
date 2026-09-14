@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 13, 2026 (app preview: post-scan + Search + Home + Cabinet; Usable display lock stands)
+Last Updated: September 13, 2026 (Not clean display lock)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -67,7 +67,7 @@ How Brandon wants work done
 - Walk Git like a novice. Only send paste text when it is time to send it.
 - Founder owns grades. Batch verdicts from the KYR catalog era were methodology-applied then Brandon-skimmed — treat those as approved unless he says that batch never got a look.
 - New ungraded inactive still = 7-step packet + Brandon. Do not invent a live grade.
-- Display map stays in lib/clean-picks/verdictLabels.ts. Internal keys clean/caution/avoid. User sees Clean / Usable / Avoid. Usable subline: “Fine in moderation.” Do not rewrite draft verdict keys.
+- Display map stays in lib/clean-picks/verdictLabels.ts. Internal keys clean/caution/avoid. User sees Clean / Usable / Not clean. Usable still maps from caution + “Fine in moderation.” Not clean maps from avoid; color stays #c0392b. Do not rewrite draft verdict keys. Not a methodology grade change.
 
 Catalog status (do not invent “unsigned grades”)
 - lib/rating-drafts/ is large (aisle batches through Amazon Basic Care / PR 32 and prior). Unverified as PRODUCT FILES (barcode/photo/exact-SKU check), not “grades never decided.”
@@ -77,21 +77,21 @@ Catalog status (do not invent “unsigned grades”)
 
 App preview route: /scan-preview (Vercel + localhost)
 Four tabs: Home · Scan · Search · Cabinet. Marketing site header/old QuickNav hidden on this route.
-Draft Clean/Usable/Avoid pills at the top are PREVIEW ONLY (flip sample SKUs). Not in the real app.
+Draft Clean/Usable/Not clean pills at the top are PREVIEW ONLY (flip sample SKUs). Not in the real app.
 
 POST-SCAN (locked template)
-- Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Avoid #c0392b. No 0–100. No page wash.
+- Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
 - Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
 - Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary on the three preview SKUs. Not methodology jargon.
 - Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared.
-- Cleaner carousel on Usable + Avoid only. Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
+- Cleaner carousel on Usable + Not clean only (internal caution + avoid). Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
 - No Overview tab. No Photos tab.
 
 SEARCH (locked)
 - Empty: search field + 2-column use-category TILES.
 - Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
-- Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Avoid filter chips (multi). Type further filters that list.
+- Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Not clean filter chips (multi). Type further filters that list.
 - Type 3+ letters with NO category: all loaded drafts by name/brand; hide category chips AND hide verdict chips.
 - Back from a product restores the same Search state.
 - Rows: thumb, name, brand, display badge. Draft · unverified cue once. Tap → post-scan.
@@ -168,10 +168,10 @@ Colors
 Primary brand green: #2d4a3e — headers, CTAs, active states
 Rx blue: #2563eb · Blue B (section labels): #4a6781
 Rating status — INTERNAL keys UNCHANGED: 'clean' | 'caution' | 'avoid'. Do not rename the Verdict type. Do not rewrite draft files to a new key. Files keep verdict: 'caution'.
-DISPLAY LOCK (Sept 12, 2026 — supersedes the old "badge still says Caution" confirm-every-session line; this is NOT a Good/Caution/Avoid rename and NOT a grade change):
+DISPLAY LOCK (Sept 12–13, 2026 — supersedes the old "badge still says Caution" confirm-every-session line; this is NOT a Good/Caution/Avoid rename and NOT a grade change):
 - verdict 'clean' → badge Clean (green #27ae60)
 - verdict 'caution' → badge Usable (amber #d97706) + subline "Fine in moderation"
-- verdict 'avoid' → badge Avoid (red / deep tint #c0392b)
+- verdict 'avoid' → badge Not clean (red / deep tint #c0392b). Internal key stays avoid.
 Amber lives on the badge, not a full-card siren. Flagged ingredient names stay visible. See §6.
 Oils: usage classification colors TBD (old External Only / Dilute First / Internal Only superseded — see §9; new three-way classification is Topical only / Internal confirmed / Unknown-unconfirmed)
 Typography
@@ -195,7 +195,7 @@ The documented scoring engine lives at docs/METHODOLOGY.md — now v1.4. Read it
 
 Two layers (this is also the product/app UI model):
 
-PRODUCT VERDICT (internal key / methodology): Clean / Caution / Avoid. DISPLAY badge (Sept 12 lock): Clean / Usable / Avoid — see §3 and §6. Do not change the stored verdict key to match the badge.
+PRODUCT VERDICT (internal key / methodology): Clean / Caution / Avoid. DISPLAY badge (Sept 13 lock): Clean / Usable / Not clean — see §3 and §6. Do not change the stored verdict key to match the badge. Not a methodology grade change.
 INGREDIENT RISK LEVELS (the drill-down, the proof): each ingredient tagged Cleared (0pt) / Limited (1pt) / Moderate (2pt) / High (auto-Avoid), each with its source.
 Scoring: 0 pts = Clean · 1–2 pts = Caution · 3+ pts OR any single high-risk = Avoid.
 
@@ -255,22 +255,22 @@ cleanAlternatives — ordered list of swap product ids, ranked closest-analog-fi
 recordStatus — verified / provisional-pending-review / unverified. New fields from the submission workflow (§11): a provisional record can go live with an auto-generated grade if the label photos are readable and match the methodology, but is flagged pending review; a verified record can never be overwritten by a later unverified submission.
 MONETIZATION BACKDOOR FIELDS (coded now, inactive/null at launch — see §10 for full spec): is_sponsored (boolean), sponsor_id (string, nullable), click_tracker_count (integer, silent).
 
-STATUS: schema now exists in code, needs updating for this session's changes. lib/clean-picks/verdictLabels.ts holds the Verdict type + VERDICT_LABELS/VERDICT_COLORS/VERDICT_SUBLINES as the single source of truth for badge display. Keys stay 'clean' | 'caution' | 'avoid'. Display: Clean / Usable / Avoid. lib/ratingRecord.ts holds the RatingRecord type — NEEDS UPDATING to add: formulaId, product_type, product_subtype (as internal-only fields), audience, recordStatus, and the three monetization backdoor fields (§10). Not yet done as of this note. lib/oilInfoRecord.ts holds the separate OilInfoRecord type for scanned oils (UsageClassification, dosing fields, no verdict) — see §9. NEXT SESSION: update lib/ratingRecord.ts with the new fields above, then begin converting live Clean Picks data (painFeverPicks.ts, coldFluPicks.ts, allergyPicks.ts) into this shape. Do not rewrite lib/rating-drafts/ to change verdict keys.
+STATUS: schema now exists in code, needs updating for this session's changes. lib/clean-picks/verdictLabels.ts holds the Verdict type + VERDICT_LABELS/VERDICT_COLORS/VERDICT_SUBLINES as the single source of truth for badge display. Keys stay 'clean' | 'caution' | 'avoid'. Display: Clean / Usable / Not clean. lib/ratingRecord.ts holds the RatingRecord type — NEEDS UPDATING to add: formulaId, product_type, product_subtype (as internal-only fields), audience, recordStatus, and the three monetization backdoor fields (§10). Not yet done as of this note. lib/oilInfoRecord.ts holds the separate OilInfoRecord type for scanned oils (UsageClassification, dosing fields, no verdict) — see §9. NEXT SESSION: update lib/ratingRecord.ts with the new fields above, then begin converting live Clean Picks data (painFeverPicks.ts, coldFluPicks.ts, allergyPicks.ts) into this shape. Do not rewrite lib/rating-drafts/ to change verdict keys.
 
 Current storage: ratings live as hardcoded TypeScript arrays in the Next.js app (lib/clean-picks/painFeverPicks.ts etc.). DIRECTION (not today): migrate to a Supabase table once the schema is locked and the ratings are correct. Content first, container later — don't refactor storage before the ratings themselves are right.
 
-================================================================ 6. APP UI & DESIGN SYSTEM (v2 — locked August 8, 2026; open questions closed September 11, 2026; display labels locked September 12, 2026)
-The post-scan product-detail screen is the app's centerpiece; it presents the two-layer methodology (verdict + per-ingredient proof) for graded products (OTC/vitamins/supplements). Essential oils get a DIFFERENT scan-result screen — informational only, no verdict (see §9). Built in a deliberately plain, Yuka-clean idiom. Full screen mocked and approved in the Aug 8 session (mockups: verdict-placement A/B test, cleaner-alternatives carousel, flagged-row drill-down, full assembled screen). Sept 11 lock closed the two remaining open questions (trigger + display) and locked Flagged/Cleared. Sept 12 lock: user-facing badge map + empty cleaner-match copy (internal verdict keys unchanged).
+================================================================ 6. APP UI & DESIGN SYSTEM (v2 — locked August 8, 2026; open questions closed September 11, 2026; display labels locked September 12–13, 2026)
+The post-scan product-detail screen is the app's centerpiece; it presents the two-layer methodology (verdict + per-ingredient proof) for graded products (OTC/vitamins/supplements). Essential oils get a DIFFERENT scan-result screen — informational only, no verdict (see §9). Built in a deliberately plain, Yuka-clean idiom. Full screen mocked and approved in the Aug 8 session (mockups: verdict-placement A/B test, cleaner-alternatives carousel, flagged-row drill-down, full assembled screen). Sept 11 lock closed the two remaining open questions (trigger + display) and locked Flagged/Cleared. Sept 12–13 lock: user-facing badge map (Clean / Usable / Not clean) + empty cleaner-match copy (internal verdict keys unchanged).
 
 Layout — post-scan / product-detail screen (graded products)
 
 White background, generous whitespace, hairline dividers. ONE monochrome line-icon per row. No cards and no source chips at the top level. Do not paint a full-card siren wash for Usable.
 VERDICT PLACEMENT (locked Aug 8 — supersedes July 12 version): the verdict badge sits on its OWN row at the very TOP of the screen, above the product image/name/brand block, with the saved star (Medicine Cabinet toggle — see §2) on the same row (right-aligned). No score. This was an explicit A/B decision: putting the verdict below the title (the more Yuka-literal placement) tested as "clean but slightly hidden" — it competed with the product name for attention and softened the instant gut-read the scan-then-verify trust loop depends on. Verdict-first wins.
-DISPLAY LOCK (locked Sept 12, 2026 — internal verdict unchanged). Badge map only; do not rename stored keys; do not rewrite drafts:
+DISPLAY LOCK (locked Sept 12–13, 2026 — internal verdict unchanged). Badge map only; do not rename stored keys; do not rewrite drafts:
 - verdict 'clean' → badge Clean (green #27ae60). Untinted card.
 - verdict 'caution' → badge Usable (amber #d97706) + subline "Fine in moderation". Amber on the badge, not a full-card siren.
-- verdict 'avoid' → badge Avoid (red / deep tint #c0392b).
-Sept 11 "light tinted Caution/Avoid banner" is SUPERSEDED for Usable: no amber page-wash. Avoid may keep a deep red tint on the badge/verdict row. Clean stays a green badge, no wash.
+- verdict 'avoid' → badge Not clean (red / deep tint #c0392b). Internal key stays avoid.
+Sept 11 "light tinted Caution/Avoid banner" is SUPERSEDED for Usable: no amber page-wash. Not clean may keep a deep red tint on the badge/verdict row. Clean stays a green badge, no wash. Not a methodology grade change.
 Below the verdict row: catalog product image + product name (Playfair serif — the one KYR signature flourish, everything else is clean sans) + brand + active ingredient/strength.
 Two sections: FLAGGED (the concerns) and CLEARED (the fine stuff) — our analog to Yuka's Negatives/Positives.
 FLAGGED (locked Sept 11, 2026): ingredient names are visible without a tap. Each flagged row at rest: line-icon · bold ingredient name · one gray reason line · status dot · chevron. Tapping a flagged row expands it in place (chevron flips down→up) to reveal "Why this is flagged" in plain language + tappable source links. Sources stay behind the tap — names do not.
@@ -278,7 +278,7 @@ CLEARED (locked Sept 11, 2026): stays collapsed by default. Do not expand the cl
 Tabs up top (below the header block, above Flagged/Cleared): Overview · Ingredients · Photos.
 Color discipline (LOCKED) — color has exactly TWO jobs; everything else is monochrome:
 
-RATING color (Clean #27ae60 / Usable amber #d97706 / Avoid #c0392b) = the badge WORD + the per-row status dots + Avoid's deep tint. Always means "how clean it is." Usable amber stays on the badge.
+RATING color (Clean #27ae60 / Usable amber #d97706 / Not clean #c0392b) = the badge WORD + the per-row status dots + Not clean's deep tint. Always means "how clean it is." Usable amber stays on the badge.
 BRAND green (#2d4a3e) = tappable/actionable things ONLY (scan button, "See all", active nav, links, the saved star). Always means "you can act here." Product photos carry the visual warmth — no full-card siren chrome. Rare exception allowed: a colored row-icon for an active-safety cap (e.g., colloidal silver), if it genuinely needs to stand out — start conservative.
 Saved star / Medicine Cabinet
 
@@ -288,7 +288,7 @@ Tap feedback: outline→solid + quick bounce + a momentary toast ("Saved to your
 Cleaner alternatives (REDESIGNED Aug 8, matching rules expanded Aug 2026; trigger + display LOCKED Sept 11, 2026)
 
 TRIGGER (locked Sept 11, confirmed Sept 12): fires on USABLE (internal 'caution') AND AVOID. Clean results do not show alternatives.
-DISPLAY (locked Sept 11, 2026 — closes the prior open question): inline horizontal carousel on the Overview tab. Peeking/partially-visible next card at the row's edge so it's obvious there's more to scroll. A "See all →" link opens the full ranked list. Do NOT use a slide-up sheet as the primary alternatives UI. Section header reads "N clean alternatives" (dynamic count) so plurality is obvious before any tap. Each card shows: product image, name, brand, display badge (Clean / Usable / Avoid — NOT a numeric score; conflicts with the locked no-0-100-score rule, Methodology §3), and retailer availability chips directly on the card (e.g. "Whole Foods, Sprouts" or a flagged "Not at Walmart").
+DISPLAY (locked Sept 11, 2026 — closes the prior open question): inline horizontal carousel on the Overview tab. Peeking/partially-visible next card at the row's edge so it's obvious there's more to scroll. A "See all →" link opens the full ranked list. Do NOT use a slide-up sheet as the primary alternatives UI. Section header reads "N clean alternatives" (dynamic count) so plurality is obvious before any tap. Each card shows: product image, name, brand, display badge (Clean / Usable / Not clean — NOT a numeric score; conflicts with the locked no-0-100-score rule, Methodology §3), and retailer availability chips directly on the card (e.g. "Whole Foods, Sprouts" or a flagged "Not at Walmart").
 EMPTY STATE (locked Sept 12, 2026): if there is no independently-Clean match after the matching rules, show "No cleaner match on this shelf yet". Do not fake a Clean. Do not pad the carousel with Caution/Usable or unverified rows to hide the empty state.
 MATCHING RULES (expanded Aug 2026 — CORE recommendation-engine logic, not optional filters, applied BEFORE ranking):
 Only independently-Clean-scoring products are eligible as alternatives.
@@ -426,9 +426,9 @@ DO NOT change any locked grade from this session or earlier without a fresh, exp
 PARKED, STAYS PARKED unless the founder revisits: formaldehyde-releasers (DMDM hydantoin, diazolidinyl urea, etc. — cosmetics/topical only, out of scope), HFCS (food/beverage sweetener, not confirmed on any real in-scope label), zinc as a nutrient/active (belongs to the active-safety-cap process, not the inactive table, and does not block database work), and the pending topical actives (menthol, camphor, eucalyptol — camphor specifically needs a young-children look whenever this gets picked up; also does not block database work).
 ONGOING PROCESS RULE (permanent, not a one-time step, Methodology §4a): any inactive ingredient a bot or session encounters that ISN'T already in the Methodology §5 table does NOT get graded on the spot and does NOT go live in any product record. It gets the full 7-step workflow and a founder call first. Do not proactively hunt for more ingredients to pre-grade — new ones get handled reactively as real products actually surface them during database work, unless the founder specifically asks for another sweep.
 Migrate ratings from TS arrays → Supabase table once schema is locked and ratings are correct.
-App UI (design system v2 locked — §6; Sept 12 display lock — ready to build)
+App UI (design system v2 locked — §6; Sept 13 display lock — ready to build)
 
-Build the post-scan product-detail screen as a real React component using placeholder data in the RatingRecord shape. Verdict-first header: Clean green badge / Usable amber badge + "Fine in moderation" / Avoid red deep-tint badge. Amber on the badge, not a full-card siren. Flagged names visible at rest / tap expands sources. Cleared collapsed by default. Inline Overview carousel on Usable and Avoid, peeking next card + "See all →" + retailer chips + age/audience/category matching. If no Clean match: "No cleaner match on this shelf yet" — do not fake a Clean. No slide-up sheet as the primary alternatives UI. Stored verdict keys stay 'clean' | 'caution' | 'avoid'.
+Build the post-scan product-detail screen as a real React component using placeholder data in the RatingRecord shape. Verdict-first header: Clean green badge / Usable amber badge + "Fine in moderation" / Not clean red deep-tint badge (internal avoid). Amber on the badge, not a full-card siren. Flagged names visible at rest / tap expands sources. Cleared collapsed by default. Inline Overview carousel on Usable and Not clean, peeking next card + "See all →" + retailer chips + age/audience/category matching. If no Clean match: "No cleaner match on this shelf yet" — do not fake a Clean. No slide-up sheet as the primary alternatives UI. Stored verdict keys stay 'clean' | 'caution' | 'avoid'.
 Ingredients tab and Photos tab content/behavior not yet designed — only Overview tab was mocked.
 Catalog-first image pipeline, saved-star (Medicine Cabinet) tap animation/toast — designed on paper, not yet built.
 Build the oil scan-result screen (§9) — usage classification, dosing display, safety disclaimer logic.
@@ -465,6 +465,9 @@ Protein powder category population (schema exists, dormant per Brandon's call �
 Sponsored/paid placement activation (only after ~10k users, only among independently-Clean products — see §10).
 Member forum — revisit once there's critical mass + moderation bandwidth (UGC medical-advice liability + cold-start problem).
 ================================================================ 18. CHANGE LOG (recent first)
+September 13, 2026 — Display lock: Avoid badge → Not clean (internal key unchanged)
+
+User-facing avoid badge is now “Not clean.” Internal key stays avoid. Color stays #c0392b. Clean and Usable unchanged. Usable still maps from caution + “Fine in moderation.” Not a methodology grade change.
 September 12, 2026 — Display lock (internal verdict unchanged)
 
 Badge map: 'clean' → Clean (green); 'caution' → Usable (amber) + "Fine in moderation"; 'avoid' → Avoid (red / deep tint). Amber on the badge, not a full-card siren. Flagged names stay visible. Cleaner carousel on Usable and Avoid. Empty cleaner state: "No cleaner match on this shelf yet" — do not fake a Clean. Files keep verdict: 'caution'. Drafts not rewritten. Methodology grades unchanged.
