@@ -1984,7 +1984,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-baby-me-2-nausea-soft-chews',
-    productName: 'Baby & Me 2 Morning Sickness Nausea Relief Soft Chews',
+    productName: 'Baby & Me 2 Prenatal Morning Sickness Nausea Relief Soft Chews',
     category: VITAMINS,
     form: 'soft chew',
     productType: SUPPLEMENT,
