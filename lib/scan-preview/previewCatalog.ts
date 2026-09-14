@@ -177,6 +177,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'amazon-basic-care-famotidine': catalogShot('amazon-basic-care-famotidine.jpg'),
   'amazon-basic-care-esomeprazole': catalogShot('amazon-basic-care-esomeprazole.jpg'),
   'amazon-basics-clearlax-orange': catalogShot('amazon-basics-clearlax-orange.jpg'),
+  'gasx-es-chewables': catalogShot('gasx-es-chewables.jpg'),
+  'pepto-bismol-liquid': catalogShot('pepto-bismol-liquid.jpg'),
+  'pepto-bismol-chewables': catalogShot('pepto-bismol-chewables.jpg'),
+  'pedialyte-freezer-pops': catalogShot('pedialyte-freezer-pops.jpg'),
+  'culturelle-digestive-daily': catalogShot('culturelle-digestive-daily.jpg'),
+  'align-daily-probiotic': catalogShot('align-daily-probiotic.jpg'),
 };
 
 // Reuse overlay pack shots. Match id or formulaId;
