@@ -72,7 +72,6 @@ const US_WIDE = [
   'Amazon',
 ] as const;
 const BRAND_AMZ = ['MegaFood.com', 'Amazon'] as const;
-const BRAND_ONLY = ['MegaFood.com'] as const;
 
 const METH = {
   sio2:
