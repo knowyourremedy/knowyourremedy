@@ -19,8 +19,8 @@
 //   / Thrive / Sprouts / Whole Foods / Amazon US is that row — no
 //   second Search id.
 //
-// TALLY (unverified drafts in THIS file): 102 rows — Clean 1 /
-// Caution 87 / Avoid 14.
+// TALLY (unverified drafts in THIS file): 106 rows — Clean 1 /
+// Caution 91 / Avoid 14.
 // Independently Clean in THIS batch: Magnesium 300 mg Capsules
 // only. See header notes in honestNotes for demerit math.
 //
@@ -39,7 +39,7 @@
 // powder (protein-aisle tub); Stack & Save bundle. Supplement-aisle
 // powders are IN (Daily Turmeric Nutrient Booster Powder).
 //
-// STILL BLOCKED — zero other-ingredients (do not guess):
+// MegaFood leftovers: none. Founder-confirmed closeout rows now in:
 // Creatine Monohydrate Gummies; Turmeric Curcumin Whole Body Minis;
 // Turmeric Curcumin Extra Strength Joint; Turmeric Curcumin Extra
 // Strength Liver.
@@ -546,6 +546,14 @@ const CITE = {
     'Target / HelloPharmacist / Whole Foods MegaFood Liposomal Vitamin C other-ingredients (sunflower lecithin / MCT oil / hypromellose / beeswax / paprika extract); megafood.com FAQ: MCT derived from coconut',
   turmericPowder:
     'NHC Daily Turmeric Nutrient Booster Powder by MegaFood other-ingredients (silicon dioxide / rice protein)',
+  creatineGummy:
+    'Founder photo of megafood.com Creatine Monohydrate Gummies Supplement Facts (glucose syrup / sugar / water / less than 2% natural flavor / pectin / black carrot concentrate / citric acid / trisodium citrate / carnauba wax)',
+  turmericMinis:
+    'Founder photo of megafood.com Turmeric Curcumin Whole Body Minis Supplement Facts (MCC / SiO2 / stearic acid / rice protein / hypromellose)',
+  turmericJoint:
+    'Founder photo of megafood.com Turmeric Curcumin Extra Strength Joint Supplement Facts (MCC / SiO2 / stearic acid / hypromellose)',
+  turmericLiver:
+    'Founder photo of megafood.com Turmeric Curcumin Extra Strength Liver Supplement Facts (MCC / stearic acid / SiO2 / hypromellose)',
 } as const;
 
 function gummyBaseFlags(cite: string, withFlavor: boolean): IngredientFlag[] {
@@ -2297,5 +2305,85 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     math: 'Driver is silicon dioxide (0-pt Caution cap) on the current NHC panel (SiO2 / rice protein). Rice protein is food-state media, not vague rice extract and not the rice-hull Clean lock.',
     extraNote:
       'Supplement-aisle powder — in scope (founder lock). Protein-aisle tubs stay out. Older HelloPharmacist snapshots also list maltodextrin (still Caution). Confirm the carton. Separate formulaId from Turmeric Curcumin Whole Body tablets and Fast Acting Turmeric capsules.',
+  }),
+  cautionCustom({
+    id: 'megafood-creatine-monohydrate-gummies',
+    productName: 'Creatine Monohydrate Gummies',
+    category: VITAMINS,
+    form: 'gummy',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Creatine monohydrate', strength: 'label serving' }],
+    cite: CITE.creatineGummy,
+    inactives: [
+      flag('Natural flavor', 'limited', labelCite(CITE.creatineGummy, METH.flavors)),
+      labelCleared(CITE.creatineGummy, 'Glucose syrup'),
+      labelCleared(CITE.creatineGummy, 'Sugar'),
+      labelCleared(CITE.creatineGummy, 'Water'),
+      flag('Pectin', 'cleared', labelCite(CITE.creatineGummy, METH.gums)),
+      labelCleared(CITE.creatineGummy, 'Citric acid'),
+      labelCleared(CITE.creatineGummy, 'Carnauba wax'),
+    ],
+    math: 'Demerit math: natural flavor Limited 1 pt. Rest of the scored panel is Cleared-class (glucose syrup / sugar / water / pectin / citric acid / carnauba wax) → Caution. CONFIRMED no sunflower / canola / palm / vegetable oil on the founder photo. Black carrot concentrate (color) and trisodium citrate are not in Methodology §5 (ungraded; v1.6 intake) and are not required to reach Caution. Do not invent a seed-oil Avoid on this formulaId.',
+    extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
+  }),
+  cautionCustom({
+    id: 'megafood-turmeric-whole-body-minis',
+    productName: 'Turmeric Curcumin Whole Body Minis',
+    category: IMMUNE,
+    form: 'mini tablet',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Curcuminoids', strength: 'label serving' }],
+    cite: CITE.turmericMinis,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericMinis, METH.sio2)),
+      labelCleared(CITE.turmericMinis, 'Microcrystalline cellulose'),
+      labelCleared(CITE.turmericMinis, 'Stearic acid'),
+      labelCleared(CITE.turmericMinis, 'Rice protein'),
+      labelCleared(CITE.turmericMinis, 'Hypromellose'),
+    ],
+    math: 'Driver is silicon dioxide (0-pt Caution cap only). MCC / stearic acid / hypromellose / rice protein are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap.',
+    extraNote:
+      FERMENT_NOTE +
+      ' Separate formulaId from Turmeric Curcumin Whole Body tablets (maltodextrin + SiO2), Fast Acting Turmeric capsules, Extra Strength Joint, Extra Strength Liver, and Daily Turmeric Nutrient Booster Powder.',
+  }),
+  cautionCustom({
+    id: 'megafood-turmeric-extra-strength-joint',
+    productName: 'Turmeric Curcumin Extra Strength Joint',
+    category: IMMUNE,
+    form: 'tablet',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Turmeric / curcuminoids joint-support blend', strength: 'label serving' }],
+    cite: CITE.turmericJoint,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericJoint, METH.sio2)),
+      labelCleared(CITE.turmericJoint, 'Microcrystalline cellulose'),
+      labelCleared(CITE.turmericJoint, 'Stearic acid'),
+      labelCleared(CITE.turmericJoint, 'Hypromellose'),
+    ],
+    math: 'Driver is silicon dioxide (0-pt Caution cap only). MCC / stearic acid / hypromellose are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap.',
+    extraNote:
+      'Separate formulaId from Turmeric Curcumin Whole Body tablets, Whole Body Minis, Fast Acting Turmeric, Extra Strength Liver, and Daily Turmeric Nutrient Booster Powder.',
+  }),
+  cautionCustom({
+    id: 'megafood-turmeric-extra-strength-liver',
+    productName: 'Turmeric Curcumin Extra Strength Liver',
+    category: IMMUNE,
+    form: 'tablet',
+    productType: SUPPLEMENT,
+    actives: [
+      { name: 'Turmeric / curcuminoids', strength: 'label serving' },
+      { name: 'Milk thistle', strength: 'label serving' },
+      { name: 'Schisandra', strength: 'label serving' },
+    ],
+    cite: CITE.turmericLiver,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericLiver, METH.sio2)),
+      labelCleared(CITE.turmericLiver, 'Microcrystalline cellulose'),
+      labelCleared(CITE.turmericLiver, 'Stearic acid'),
+      labelCleared(CITE.turmericLiver, 'Hypromellose'),
+    ],
+    math: 'Driver is silicon dioxide (0-pt Caution cap only). MCC / stearic acid / hypromellose are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap.',
+    extraNote:
+      'Milk thistle and schisandra are labeled actives — not a second inactive grade. Separate formulaId from Turmeric Curcumin Whole Body tablets, Whole Body Minis, Fast Acting Turmeric, Extra Strength Joint, and Daily Turmeric Nutrient Booster Powder.',
   }),
 ];
