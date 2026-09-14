@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Hyland’s batch 33; licorice tap line; wood rosin Caution)
+Last Updated: September 14, 2026 (Hyland leftovers locks)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -246,8 +246,14 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
 - Limited-only stack stays Caution (Usable). Any number of Limited flags does not become Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. Harm-first, not a Yuka point ladder.
 - Glycyrrhiza extract / licorice extract (oral inactive) = Cleared. Named botanical. Do not Caution the product on licorice alone. High-intake glycyrrhizin BP/potassium literature is a tap + honest-note line, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA is one source, not a veto. Tap + honest-note line (exact): “Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.”
-- Wood rosin / colophony (topical) = Caution (contact-allergy pattern). Not Avoid. Ethyl alcohol / petrolatum / stearyl alcohol are still missing from §5 — PRID stays blocked until those topical locks exist.
+- Wood rosin / colophony (topical) = Caution (contact-allergy pattern). Not Avoid. Confirmed in §5.
 - FDA is one source, not a veto.
+- Petrolatum (topical) = Cleared (first-aid ointment base).
+- Stearyl alcohol / cetearyl alcohol (topical) = Cleared (fatty alcohols).
+- Sodium stearoyl glutamate = Cleared (stearate-family emulsifier).
+- Lactic acid / malic acid = Cleared (organic acids with citric).
+- FOS / fructooligosaccharides / soluble tapioca fiber syrup = Cleared (fiber family with inulin / tapioca syrup).
+- Ethyl alcohol / alcohol as topical or drawing-salve vehicle = Limited (vehicle). Not oral-PG. Not Avoid.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.

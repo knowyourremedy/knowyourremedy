@@ -176,6 +176,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
+| Ethyl alcohol / alcohol as topical or drawing-salve vehicle — LOCKED | alcohol, ethyl alcohol (topical vehicle) | Vehicle. Not oral-PG. Not Avoid. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
@@ -197,6 +198,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
 | Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. |
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
+| Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
 | Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
@@ -204,10 +206,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Organic agave, organic flavors/colors | Whole-food-derived. |
 | Sodium chloride, sodium bicarbonate | Saline bases. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
+| Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
+| Stearyl alcohol / cetearyl alcohol (topical) — LOCKED | Fatty alcohols. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
+| Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. |
 | Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. |
+| FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. |
 | Lactose, gelatin, carnauba wax, beeswax, purified water | — |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
