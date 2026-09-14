@@ -139,7 +139,7 @@ const PREVIEW_BRAND_MARK: Record<string, ProductImage> = {
 };
 
 // Attempted leftovers with no matching carton. Not verifiedSku.
-// Per-id only — do not brand-level Culturelle / Pedialyte / 365 / Tylenol
+// Per-id only — do not brand-level Culturelle / Pedialyte / 365 / Tylenol / Genexa
 // (other aisles or unattempted SKUs must stay on the letter tile).
 const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'culturelle-kids-packets': brandMark('culturelle-mark.png'),
@@ -153,6 +153,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'thrive-wellmade-mens-daily-probiotic': brandMark('wellmade-mark.png'),
   'thrive-wellmade-kids-chewable-probiotic': brandMark('wellmade-mark.png'),
   'tylenol-rs-caplets': brandMark('tylenol-mark.png'),
+  // Kids Tylenol drafts are flavor-generic. Cherry/apple cartons exist — do not glue.
+  'tylenol-children-liquid-dyed': brandMark('tylenol-mark.png'),
+  'tylenol-children-liquid-dyefree': brandMark('tylenol-mark.png'),
+  'tylenol-infants-liquid-dyed': brandMark('tylenol-mark.png'),
+  'tylenol-infants-liquid-dyefree': brandMark('tylenol-mark.png'),
+  'tylenol-children-chew-dyefree': brandMark('tylenol-mark.png'),
+  // Genexa kids/infants drafts name no flavor. Blueberry/cherry/grape cartons exist.
+  'genexa-kids-apap-liquid': brandMark('genexa-mark.png'),
+  'genexa-infants-apap-liquid': brandMark('genexa-mark.png'),
+  'genexa-kids-apap-chewable': brandMark('genexa-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -277,6 +287,19 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'equate-ibuprofen-dye-free': catalogShot('equate-ibuprofen-dye-free.jpg'),
   'cvs-health-ibuprofen-dye-free': catalogShot('cvs-health-ibuprofen-dye-free.jpg'),
   'walgreens-ibuprofen-dye-free': catalogShot('walgreens-ibuprofen-dye-free.jpg'),
+  'equate-es-pain-reliever': catalogShot('equate-es-pain-reliever.jpg'),
+  'members-mark-acetaminophen-es': catalogShot('members-mark-acetaminophen-es.jpg'),
+  'signature-care-pain-relief-apap': catalogShot('signature-care-pain-relief-apap.jpg'),
+  'equate-ibuprofen-standard': catalogShot('equate-ibuprofen-standard.jpg'),
+  'kirkland-ibuprofen-tablets': catalogShot('kirkland-ibuprofen-tablets.jpg'),
+  'kirkland-ibuprofen-ib-caplets': catalogShot('kirkland-ibuprofen-ib-caplets.jpg'),
+  'upup-ibuprofen': catalogShot('upup-ibuprofen.jpg'),
+  'signature-care-ibuprofen': catalogShot('signature-care-ibuprofen.jpg'),
+  'members-mark-ibuprofen': catalogShot('members-mark-ibuprofen.jpg'),
+  'junior-strength-advil': catalogShot('junior-strength-advil.jpg'),
+  'childrens-advil-suspension': catalogShot('childrens-advil-suspension.jpg'),
+  'childrens-advil-suspension-dyefree': catalogShot('childrens-advil-suspension-dyefree.jpg'),
+  'cvs-children-apap-dyed': catalogShot('cvs-children-apap-dyed.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -345,6 +368,14 @@ assertBrandMark('thrive-wellmade-womens-daily-probiotic', 'wellmade by Thrive Ma
 assertBrandMark('thrive-wellmade-mens-daily-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
 assertBrandMark('thrive-wellmade-kids-chewable-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
 assertBrandMark('tylenol-rs-caplets', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('tylenol-children-liquid-dyed', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('tylenol-children-liquid-dyefree', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('tylenol-infants-liquid-dyed', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('tylenol-infants-liquid-dyefree', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('tylenol-children-chew-dyefree', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('genexa-kids-apap-liquid', 'Genexa', 'genexa-mark.png');
+assertBrandMark('genexa-infants-apap-liquid', 'Genexa', 'genexa-mark.png');
+assertBrandMark('genexa-kids-apap-chewable', 'Genexa', 'genexa-mark.png');
 
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -386,9 +417,12 @@ assertBrandTextTile(
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
-// Per-id Tylenol mark only. Kids / other-aisle Tylenol SKUs stay letters.
-assertLetterOnly('tylenol-children-liquid-dyed', 'Tylenol');
-assertLetterOnly('tylenol-infants-liquid-dyefree', 'Tylenol');
+// Unattempted other-aisle Tylenol stays a letter. Pain & Fever kids
+// that were attempted this batch use per-id marks above.
+assertLetterOnly('tylenol-pm-es', 'Tylenol');
+assertLetterOnly('advil-liqui-gels', 'Advil');
+assertLetterOnly('walgreens-es-dyes-talc', 'Walgreens');
+assertLetterOnly('motrin-children-liquid-dyed', 'Motrin');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -422,6 +456,19 @@ assertExactCarton('motrin-ib-caplets', 'Motrin', 'motrin-ib-caplets.jpg');
 assertExactCarton('equate-ibuprofen-dye-free', 'Equate', 'equate-ibuprofen-dye-free.jpg');
 assertExactCarton('cvs-health-ibuprofen-dye-free', 'CVS Health', 'cvs-health-ibuprofen-dye-free.jpg');
 assertExactCarton('walgreens-ibuprofen-dye-free', 'Walgreens', 'walgreens-ibuprofen-dye-free.jpg');
+assertExactCarton('equate-es-pain-reliever', 'Equate', 'equate-es-pain-reliever.jpg');
+assertExactCarton('members-mark-acetaminophen-es', "Member's Mark", 'members-mark-acetaminophen-es.jpg');
+assertExactCarton('signature-care-pain-relief-apap', 'Signature Care', 'signature-care-pain-relief-apap.jpg');
+assertExactCarton('equate-ibuprofen-standard', 'Equate', 'equate-ibuprofen-standard.jpg');
+assertExactCarton('kirkland-ibuprofen-tablets', 'Kirkland Signature', 'kirkland-ibuprofen-tablets.jpg');
+assertExactCarton('kirkland-ibuprofen-ib-caplets', 'Kirkland Signature', 'kirkland-ibuprofen-ib-caplets.jpg');
+assertExactCarton('upup-ibuprofen', 'up&up', 'upup-ibuprofen.jpg');
+assertExactCarton('signature-care-ibuprofen', 'Signature Care', 'signature-care-ibuprofen.jpg');
+assertExactCarton('members-mark-ibuprofen', "Member's Mark", 'members-mark-ibuprofen.jpg');
+assertExactCarton('junior-strength-advil', 'Advil', 'junior-strength-advil.jpg');
+assertExactCarton('childrens-advil-suspension', 'Advil', 'childrens-advil-suspension.jpg');
+assertExactCarton('childrens-advil-suspension-dyefree', 'Advil', 'childrens-advil-suspension-dyefree.jpg');
+assertExactCarton('cvs-children-apap-dyed', 'CVS Health', 'cvs-children-apap-dyed.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
