@@ -178,6 +178,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Natural citrus extract (fruit/part not named) — LOCKED (Sept 14, 2026) | unnamed citrus fruit extract | Same opacity bucket as natural flavor. DailyMed CITRUS FRUIT UNII is not lemon vs peel. Named “organic lemon oil” can be revisited (Limited flavor row below — not a Clean auto-pass). |
 | Named lemon oil as flavor — **LOCKED (Sept 14, 2026 housekeeping)** | organic lemon oil, lemon oil (named) | Flavor row. Limited, same class as “natural flavors.” Named is not a Clean auto-pass. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
+| Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
 | Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
 | Maltodextrin (organic or non-organic) | organic maltodextrin | Glycemic; minor. Organic maltodextrin is the same Limited as non-organic. |
@@ -192,6 +193,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
 | Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. |
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
+| Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
@@ -211,12 +213,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). |
 | Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). |
 | Alginic acid — **LOCKED (Sept 14, 2026 housekeeping)** | Gum/fiber family. Cleared-by-class with the xanthan/guar/pectin gums. |
+| Agar / agar-agar — LOCKED (Sept 14, 2026) | Seaweed gel; gum/fiber family with pectin. |
 | Coconut oil alone in gummies/chews — **LOCKED (Sept 14, 2026 housekeeping)** | NOT the seed/industrial-oil High rule. Already practice on coconut-only gummy/chew rows; this table says it. Unlabeled “vegetable oil” / palm / soybean / canola / sunflower in gummies stays High. |
 | Organic rice hull extract / rice concentrate / ground rice hulls — **LOCKED** | Plant-fiber flow agent. Distinct from rice flour. Distinct from silicon dioxide. The SiO₂ nanoparticle Caution cap does NOT apply. |
 | Organic rice bran extract — LOCKED (Sept 14, 2026) | Named rice-plant fiber used as tablet/capsule filler or flow agent. Same family as rice hull extract / rice concentrate / ground rice hulls. Distinct from silicon dioxide. Distinct from unspecified “rice extract” (Limited opacity row). |
 | Pea protein isolate — LOCKED (Sept 14, 2026) | Food protein excipient. Not a flag. |
 | Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
 | Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
+| Grape seed extract as inactive — LOCKED (Sept 14, 2026) | Named plant-part food botanical. Not grape seed oil unless the label says oil. Not a High row. |
 | Honey (oral sweetener) — LOCKED (Sept 14, 2026) | Cleared-class sweetener. Tap + honest: not for under 1. Not a grade change to Avoid. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |

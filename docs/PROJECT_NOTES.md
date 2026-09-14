@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (store-as-brand-hunt; national coverage)
+Last Updated: September 14, 2026 (agar, dibehenin, grape seed extract, unspecified rice)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -240,6 +240,10 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Unspecified “rice extract” = Limited opacity row (now in §5). Tap still uses the vague-form sentence.
 - “Natural flavor” stays Limited as already written.
 - Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does. Vague twin must explain the named twin. Honest always. Honest note stays product-level.
+- Agar / agar-agar = Cleared (seaweed gel; gum/fiber family with pectin).
+- Dibehenin (vegetable) = Cleared (vegetable wax/lubricant; stearate / wax family).
+- Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
+- Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
