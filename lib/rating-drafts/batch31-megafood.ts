@@ -19,33 +19,30 @@
 //   / Thrive / Sprouts / Whole Foods / Amazon US is that row — no
 //   second Search id.
 //
-// TALLY (unverified drafts in THIS file): 90 rows — Clean 1 /
-// Caution 75 / Avoid 14.
+// TALLY (unverified drafts in THIS file): 102 rows — Clean 1 /
+// Caution 87 / Avoid 14.
 // Independently Clean in THIS batch: Magnesium 300 mg Capsules
 // only. See header notes in honestNotes for demerit math.
 //
 // ZINC IS PARKED (Methodology v1.6). Silicon dioxide / silica =
 // Caution cap, 0 points, not Avoid alone. Seed/industrial oils in
 // gummies / soft chews = High Avoid. Softgel / capsule oil fill ≠
-// gummy High. Coconut oil alone is not seed-oil High. FDA/GRAS ≠
-// Clean. No medical advice / dosing. Pregnancy label on-carton only.
+// gummy High. Coconut oil alone is not seed-oil High. Unlabeled
+// MCT = Caution opacity, not Avoid. Paprika extract as color =
+// Caution. Sodium copper chlorophyllin = Caution. Pea protein
+// isolate = Cleared-class. Rice / rice extract ≠ rice-hull Clean
+// lock (vague rice extract = Caution; rice flour/starch = Cleared).
+// FDA/GRAS ≠ Clean. No medical advice / dosing. Pregnancy label
+// on-carton only.
 //
 // OUT OF SCOPE (no rows): collagen peptides; micronized creatine
-// powder; Daily Turmeric Nutrient Booster Powder (beverage); Stack
-// & Save bundle.
+// powder (protein-aisle tub); Stack & Save bundle. Supplement-aisle
+// powders are IN (Daily Turmeric Nutrient Booster Powder).
 //
-// BLOCKED — no live row (ungraded inactive or unmatched OI). Packets
-// belong in the PR comment, not a guessed verdict:
-// High-Absorption Selenium Capsules; Baby & Me 2 Prenatal Multi &
-// DHA; Women's Whole Body Tablets; Creatine Monohydrate Gummies;
-// Probiotic/Prebiotic/Postbiotic Gummies (unlabeled MCT);
-// Ashwagandha Gummies (sodium copper chlorophyllin); Berberine
-// Phytosome (pea protein isolate); Women's shelf-stable ASTARTE
-// probiotic (rice / rice extract); newer Baby & Me 2 prenatal
-// probiotic LGG (rice / rice extract + sunflower oil); Liposomal
-// Vitamin C (paprika extract); classic Methyl B12 tablet (full OI
-// unmatched); Turmeric Whole Body Minis; Extra Strength Joint;
-// Extra Strength Liver; D3 5000 IU + K + K2 capsules (no US OI).
+// STILL BLOCKED — zero other-ingredients (do not guess):
+// Creatine Monohydrate Gummies; Turmeric Curcumin Whole Body Minis;
+// Turmeric Curcumin Extra Strength Joint; Turmeric Curcumin Extra
+// Strength Liver.
 
 import type {
   CleanAlternative,
@@ -94,8 +91,24 @@ const METH = {
     'Methodology §5 Cleared-class (calcium laurate — stearate-family lubricant with magnesium stearate / stearic acid / calcium stearate)',
   capsuleOil:
     'Methodology §5 — oil in a capsule / softgel fill is NOT the gummy seed/industrial-oil High rule',
+  paprika:
+    'Methodology §5 Caution (paprika extract as color — standalone Caution, not Avoid; founder lock)',
+  chlorophyllin:
+    'Methodology §5 Caution (sodium copper chlorophyllin as color — standalone Caution, not Avoid; founder lock)',
+  riceExtract:
+    'Methodology §5 Caution (vague rice / rice extract — not the rice-hull Clean lock; not rice flour/starch; founder lock)',
+  mctUnlabeled:
+    'Methodology §5 Limited-risk / Caution opacity (unlabeled MCT — coconut vs palm unknown; not Avoid; founder lock)',
+  mctCoconut:
+    'Methodology §5 — MCT from coconut is not gummy seed/industrial-oil High (founder lock)',
+  peaProtein:
+    'Methodology §5 Cleared-class (pea protein isolate — founder lock)',
+  beeswax: 'Methodology §5 Cleared (beeswax)',
   cleared: 'Methodology §5 Cleared',
 } as const;
+
+const CAPSULE_OIL_TAP =
+  'Seed/industrial oils are flagged in gummies. In this capsule/softgel fill they are not that High rule.';
 
 function flag(
   name: string,
@@ -509,6 +522,30 @@ const CITE = {
     'The Healthy Place / MegaFood.com Women\'s One Daily Multivitamin Soft Chews Mixed Berry other-ingredients (organic raw cane sugar / organic rice syrup / natural flavors / palm oil / rice bran / sunflower lecithin / malic acid / fruit and vegetable juice / glycerin / citric acid)',
   nauseaChew:
     'Target / Vitacost MegaFood Baby & Me 2 Morning Sickness Nausea Relief Soft Chews other-ingredients (organic rice syrup / organic cane sugar / rice bran / organic wildflower honey / sunflower lecithin / palm oil / organic tapioca starch / natural flavors / glycerin / rosemary leaf extract)',
+  womensWBTab:
+    'Founder photo of megafood.com Women\'s Whole Body Tablets Supplement Facts (MCC / citric acid / maltodextrin / croscarmellose sodium / SiO2 / stearic acid / dicalcium phosphate / hypromellose)',
+  bm2multiDha:
+    'Founder photo of megafood.com Baby & Me 2 Prenatal Multi & DHA Supplement Facts (hypromellose / SiO2 / MCC / stearic acid)',
+  seleniumCap:
+    'MegaFood.com High-Absorption Selenium Capsules brand-site other-ingredients — founder lock (MCC / ferment media / stearic acid / SiO2 / hypromellose)',
+  methylB12Tab:
+    'MegaFood.com classic Methyl B12 tablet other-ingredients — founder lock (MCC / stearic acid / SiO2 / rice protein / hypromellose / yeast extract)',
+  d3_5000:
+    'NHC Vitamin D3 5000 IU K & K2 by MegaFood other-ingredients (maltodextrin / hypromellose / dicalcium phosphate / SiO2) — founder lock (maltodextrin + SiO2 + HPMC ± dicalcium phosphate)',
+  pppGummy:
+    'Target MegaFood Probiotic Prebiotic Postbiotic Gummies Raspberry other-ingredients (tapioca syrup / cane sugar / water / pectin / less than 2% medium chain triglycerides / citric acid / natural flavor / black carrot juice concentrate / sunflower lecithin)',
+  ashwGummy:
+    'Target / NHC / Better Health Market MegaFood Ashwagandha Gummies Mixed Berry other-ingredients (FOS from chicory inulin / water / pectin / agar-agar / tapioca starch / natural flavor / black carrot concentrate / citric acid / trisodium citrate / sodium copper chlorophyllin / carnauba wax)',
+  berberine:
+    'NHC / Vitacost / HelloPharmacist MegaFood Berberine Phytosome other-ingredients (hypromellose / pea protein isolate / grape seed extract / MCC / stearic acid)',
+  astarte:
+    'HelloPharmacist Women\'s Probiotic + Prebiotic by MegaFood shelf-stable ASTARTE (UPC 051494105337) other-ingredients (MCC / hypromellose / rice / rice extract / gum arabic / sunflower oil)',
+  bm2proLgg:
+    'HelloPharmacist Baby & Me 2 Prenatal Probiotic + Prebiotic by MegaFood shelf-stable LGG other-ingredients (MCC / hypromellose / maltodextrin / rice extract / rice / gum arabic / sunflower oil / SiO2)',
+  lipoC:
+    'Target / HelloPharmacist / Whole Foods MegaFood Liposomal Vitamin C other-ingredients (sunflower lecithin / MCT oil / hypromellose / beeswax / paprika extract); megafood.com FAQ: MCT derived from coconut',
+  turmericPowder:
+    'NHC Daily Turmeric Nutrient Booster Powder by MegaFood other-ingredients (silicon dioxide / rice protein)',
 } as const;
 
 function gummyBaseFlags(cite: string, withFlavor: boolean): IngredientFlag[] {
@@ -892,7 +929,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Selenium (fermented selenium glycinate)', strength: '50mcg' }],
     cite: CITE.seleniumTab,
     extraNote:
-      'Classic FoodState selenium tablet — not the unpublished High-Absorption Selenium Capsules SKU (blocked; no other-ingredients).',
+      'Classic FoodState selenium tablet — separate formulaId from High-Absorption Selenium Capsules (L-selenomethionine).',
   }),
   cautionSio2({
     id: 'megafood-magnesium-tablet',
@@ -1400,7 +1437,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     math: 'Driver is silicon dioxide (0-pt Caution cap). Calcium laurate is Cleared-by-class with the stearate family (same founder stack as Thorne).',
     extraNote:
-      'AllStarHealth marks this SKU discontinued at that retailer; MegaFood.com still lists it. Not the shelf-stable ASTARTE probiotic (that rice/rice-extract carton is blocked).',
+      'AllStarHealth marks this SKU discontinued at that retailer; MegaFood.com still lists it. Not the shelf-stable ASTARTE probiotic (separate formulaId; rice / rice extract Caution).',
   }),
   cautionCustom({
     id: 'megafood-megaflora-turmeric',
@@ -1609,7 +1646,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.bm2proOld, 'Hypromellose'),
       labelCleared(CITE.bm2proOld, 'Microcrystalline cellulose'),
     ],
-    math: 'Driver is silicon dioxide (0-pt Caution cap) on The Healthy Place refrigerated MegaFlora-style panel. Calcium laurate Cleared-by-class. Not the newer shelf-stable LGG carton that lists rice / rice extract / sunflower oil (that SKU is blocked — rice/rice extract ≠ hull lock).',
+    math: 'Driver is silicon dioxide (0-pt Caution cap) on The Healthy Place refrigerated MegaFlora-style panel. Calcium laurate Cleared-by-class. Not the newer shelf-stable LGG carton (separate formulaId; rice / rice extract + maltodextrin + SiO2).',
     extraNote: PRENATAL_LABEL,
     prenatal: true,
   }),
@@ -2004,5 +2041,261 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     prenatal: true,
     extraNote: 'Carton is labeled for morning-sickness / pregnancy use. No dosing or medical advice in this draft. ' + NO_CLEAN_GUMMY,
+  }),
+
+  // ── Closeout leftovers (founder cartons + locks) ────────
+  cautionCustom({
+    id: 'megafood-womens-whole-body-tablets',
+    productName: "Women's Whole Body Tablets",
+    category: VITAMINS,
+    form: 'tablet',
+    productType: VITAMIN,
+    actives: [
+      { name: "Women's multivitamin / multimineral", strength: '1 tablet (label serving)' },
+      { name: 'Zinc', strength: 'label serving' },
+    ],
+    cite: CITE.womensWBTab,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.womensWBTab, METH.sio2)),
+      flag('Maltodextrin', 'limited', labelCite(CITE.womensWBTab, METH.maltodextrin)),
+      labelCleared(CITE.womensWBTab, 'Microcrystalline cellulose'),
+      labelCleared(CITE.womensWBTab, 'Citric acid'),
+      labelCleared(CITE.womensWBTab, 'Croscarmellose sodium'),
+      labelCleared(CITE.womensWBTab, 'Stearic acid'),
+      labelCleared(CITE.womensWBTab, 'Dicalcium phosphate'),
+      labelCleared(CITE.womensWBTab, 'Hypromellose'),
+    ],
+    math: 'Demerit math: maltodextrin Limited 1 pt + SiO2 0-pt Caution cap → Caution (not Clean; not Avoid).',
+    extraNote:
+      'Vitamin E “from sunflower seed oil” is the active carrier — NOT the gummy seed-oil High / Avoid rule. Separate formulaId from Women\'s Whole Body Multi Capsules and from Women\'s Whole Body Multi Gummies. Do not reuse those formulaIds.',
+    zinc: true,
+  }),
+  cautionCustom({
+    id: 'megafood-baby-me-2-prenatal-multi-dha',
+    productName: 'Baby & Me 2 Prenatal Multi & DHA',
+    category: VITAMINS,
+    form: 'capsule',
+    productType: VITAMIN,
+    actives: [
+      { name: 'Prenatal multivitamin / multimineral', strength: 'label serving' },
+      { name: 'DHA (from fish oil powder)', strength: 'label serving' },
+      { name: 'Iron', strength: 'label serving' },
+      { name: 'Zinc', strength: 'label serving' },
+    ],
+    cite: CITE.bm2multiDha,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2multiDha, METH.sio2)),
+      labelCleared(CITE.bm2multiDha, 'Hypromellose'),
+      labelCleared(CITE.bm2multiDha, 'Microcrystalline cellulose'),
+      labelCleared(CITE.bm2multiDha, 'Stearic acid'),
+    ],
+    math: 'Driver is silicon dioxide (0-pt Caution cap only). MCC / hypromellose / stearic acid are Cleared. Do not invent Clean on the SiO2 cap.',
+    extraNote:
+      'Contains fish (anchovies & sardines) — honest note only; not an inactive-grade driver. DHA from fish oil powder is the active — NOT the gummy seed-oil High / Avoid rule. ' +
+      CAPSULE_OIL_TAP +
+      ' Separate formulaId from Baby & Me 2 Prenatal Multi tablets, Minis, Gummies, and DHA & Choline.',
+    zinc: true,
+    prenatal: true,
+    ironCarton: true,
+    alts: PRENATAL_ALTS,
+  }),
+  cautionSio2({
+    id: 'megafood-high-absorption-selenium-capsules',
+    productName: 'High-Absorption Selenium Capsules',
+    category: IMMUNE,
+    form: 'capsule',
+    productType: VITAMIN,
+    actives: [{ name: 'Selenium (L-selenomethionine)', strength: '200mcg' }],
+    cite: CITE.seleniumCap,
+    extraNote:
+      'Founder lock: brand-site other-ingredients are MCC / ferment media / stearic acid / SiO2 / hypromellose → Caution. Separate formulaId from the classic FoodState Selenium tablet.',
+  }),
+  cautionSio2({
+    id: 'megafood-methyl-b12',
+    productName: 'Methyl B12',
+    category: VITAMINS,
+    form: 'tablet',
+    productType: VITAMIN,
+    actives: [{ name: 'Vitamin B12 (methylcobalamin) with B vitamins as labeled', strength: 'label serving' }],
+    cite: CITE.methylB12Tab,
+    extraNote:
+      'Founder lock: classic tablet other-ingredients are MCC / stearic acid / SiO2 / rice protein / hypromellose / yeast extract → Caution. Separate formulaId from Extra Strength Methyl B12 capsules (rice flour / HPMC / SiO2). Do not copy that capsule row.',
+  }),
+  cautionCustom({
+    id: 'megafood-vitamin-d3-5000-k-k2',
+    productName: 'Vitamin D3 5000 IU (125 mcg) plus K & K2',
+    category: IMMUNE,
+    form: 'capsule',
+    productType: VITAMIN,
+    actives: [
+      { name: 'Vitamin D3 (cholecalciferol)', strength: '125mcg (5000 IU)' },
+      { name: 'Vitamin K (phytonadione)', strength: '120mcg' },
+      { name: 'Vitamin K2 (menaquinone-7)', strength: '80mcg' },
+    ],
+    cite: CITE.d3_5000,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.d3_5000, METH.sio2)),
+      flag('Maltodextrin', 'limited', labelCite(CITE.d3_5000, METH.maltodextrin)),
+      labelCleared(CITE.d3_5000, 'Hypromellose'),
+      labelCleared(CITE.d3_5000, 'Dicalcium phosphate'),
+    ],
+    math: 'Demerit math: maltodextrin Limited 1 pt + SiO2 0-pt Caution cap → Caution. HPMC / dicalcium phosphate are Cleared. Founder lock: maltodextrin + SiO2 + HPMC ± dicalcium phosphate.',
+    extraNote:
+      'US NHC panel lists dicalcium phosphate. EU Greatlife copy omits it and still has maltodextrin + HPMC + SiO2 — same Caution family. Separate formulaId from D3 1000/2000 tablets and from D3+K2 5000 IU gummies.',
+    retailers: BRAND_AMZ,
+  }),
+  cautionCustom({
+    id: 'megafood-probiotic-prebiotic-postbiotic-gummies',
+    productName: 'Probiotic, Prebiotic & Postbiotic Gummies',
+    category: DIGESTIVE,
+    form: 'gummy',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Probiotic / prebiotic / postbiotic blend', strength: 'label serving' }],
+    cite: CITE.pppGummy,
+    inactives: [
+      flag('Natural flavor', 'limited', labelCite(CITE.pppGummy, METH.flavors)),
+      flag('Medium chain triglycerides (source unlabeled)', 'limited', labelCite(CITE.pppGummy, METH.mctUnlabeled)),
+      flag('Sunflower lecithin', 'cleared', labelCite(CITE.pppGummy, METH.lecithin)),
+      flag('Pectin', 'cleared', labelCite(CITE.pppGummy, METH.gums)),
+      labelCleared(CITE.pppGummy, 'Tapioca syrup'),
+      labelCleared(CITE.pppGummy, 'Cane sugar'),
+      labelCleared(CITE.pppGummy, 'Water'),
+      labelCleared(CITE.pppGummy, 'Citric acid'),
+    ],
+    math: 'Drivers are natural flavor Limited (1 pt) + unlabeled MCT Caution opacity → Caution, not Avoid. Coconut-only MCT is not gummy seed-oil High; this carton does not name coconut or palm. Sunflower lecithin is Cleared and is not bulk sunflower oil.',
+    extraNote:
+      UNGRADED_NOT_REQUIRED +
+      ' Black carrot juice concentrate (color) is not in Methodology §5 (ungraded; v1.6 intake) and is not required to reach Caution. ' +
+      NO_CLEAN_GUMMY,
+  }),
+  cautionCustom({
+    id: 'megafood-ashwagandha-gummies',
+    productName: 'Ashwagandha Gummies',
+    category: VITAMINS,
+    form: 'gummy',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Ashwagandha (KSM-66)', strength: 'label serving' }],
+    cite: CITE.ashwGummy,
+    inactives: [
+      flag('Natural flavor', 'limited', labelCite(CITE.ashwGummy, METH.flavors)),
+      flag('Sodium copper chlorophyllin (color)', 'cleared', labelCite(CITE.ashwGummy, METH.chlorophyllin)),
+      flag('Pectin', 'cleared', labelCite(CITE.ashwGummy, METH.gums)),
+      flag('Tapioca starch', 'cleared', labelCite(CITE.ashwGummy, METH.starches)),
+      labelCleared(CITE.ashwGummy, 'Citric acid'),
+      labelCleared(CITE.ashwGummy, 'Carnauba wax'),
+      labelCleared(CITE.ashwGummy, 'Water'),
+    ],
+    math: 'Drivers are natural flavor Limited (1 pt) + sodium copper chlorophyllin standalone Caution (not Avoid; founder lock) → Caution. CONFIRMED no sunflower / palm / vegetable oil on Target / NHC / Better Health.',
+    extraNote:
+      UNGRADED_NOT_REQUIRED +
+      ' Agar-agar / black carrot concentrate / trisodium citrate are not in Methodology §5 (ungraded; v1.6 intake) and are not required to reach Caution. Separate formulaId from Ashwagandha Complex mini tablets. ' +
+      NO_CLEAN_GUMMY,
+  }),
+  cautionCustom({
+    id: 'megafood-berberine-phytosome',
+    productName: 'Berberine Phytosome',
+    category: VITAMINS,
+    form: 'capsule',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Berberine phytosome (Berbevis)', strength: 'label serving' }],
+    cite: CITE.berberine,
+    inactives: [
+      flag('Pea protein isolate', 'cleared', labelCite(CITE.berberine, METH.peaProtein)),
+      flag(
+        'Grape seed extract',
+        'cleared',
+        labelCite(
+          CITE.berberine,
+          'Listed on retailer other-ingredients (Berbevis phytosome carrier vs inactive unmatched) — this draft does not invent Clean',
+        ),
+      ),
+      labelCleared(CITE.berberine, 'Hypromellose'),
+      labelCleared(CITE.berberine, 'Microcrystalline cellulose'),
+      labelCleared(CITE.berberine, 'Stearic acid'),
+    ],
+    math: 'Pea protein isolate is Cleared-class (founder lock). HPMC / MCC / stearic acid are Cleared. Grape seed extract is listed on the retailer other-ingredients line (Berbevis phytosome carrier vs inactive unmatched). This draft does not invent Clean.',
+    extraNote:
+      'Caution, not Clean, while grape seed extract remains on the NHC / Vitacost / HelloPharmacist other-ingredients line. Target label PDF (pea protein / sunflower lecithin / grape seed / vegetable cellulose / organic rice flour / magnesium stearate) is a different unmatched formula — not this row.',
+  }),
+  cautionCustom({
+    id: 'megafood-womens-probiotic-astarte-shelf-stable',
+    productName: "Women's Probiotic + Prebiotic - Shelf Stable",
+    category: DIGESTIVE,
+    form: 'capsule',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'ASTARTE probiotic blend with prebiotic', strength: 'label serving' }],
+    cite: CITE.astarte,
+    inactives: [
+      flag('Rice extract', 'cleared', labelCite(CITE.astarte, METH.riceExtract)),
+      flag('Rice (unspecified)', 'cleared', labelCite(CITE.astarte, METH.riceExtract)),
+      flag('Sunflower oil', 'cleared', `${CITE.astarte}; ${METH.capsuleOil}. ${CAPSULE_OIL_TAP}`),
+      flag('Gum arabic', 'cleared', labelCite(CITE.astarte, METH.gums)),
+      labelCleared(CITE.astarte, 'Microcrystalline cellulose'),
+      labelCleared(CITE.astarte, 'Hypromellose'),
+    ],
+    math: 'Driver is vague rice / rice extract (Caution; founder lock — not the rice-hull Clean lock; not rice flour/starch). Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
+    extraNote: CAPSULE_OIL_TAP + ' Separate formulaId from MegaFlora Women\'s (SiO2 / calcium laurate).',
+  }),
+  cautionCustom({
+    id: 'megafood-baby-me-2-prenatal-probiotic-lgg',
+    productName: 'Baby & Me 2 Prenatal Probiotic + Prebiotic - Shelf Stable LGG',
+    category: DIGESTIVE,
+    form: 'capsule',
+    productType: SUPPLEMENT,
+    actives: [
+      { name: 'Prenatal probiotic (LGG) / prebiotic blend', strength: 'label serving' },
+      { name: 'Vitamin B6', strength: '30mg' },
+    ],
+    cite: CITE.bm2proLgg,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2proLgg, METH.sio2)),
+      flag('Maltodextrin', 'limited', labelCite(CITE.bm2proLgg, METH.maltodextrin)),
+      flag('Rice extract', 'cleared', labelCite(CITE.bm2proLgg, METH.riceExtract)),
+      flag('Rice (unspecified)', 'cleared', labelCite(CITE.bm2proLgg, METH.riceExtract)),
+      flag('Sunflower oil', 'cleared', `${CITE.bm2proLgg}; ${METH.capsuleOil}. ${CAPSULE_OIL_TAP}`),
+      flag('Gum arabic', 'cleared', labelCite(CITE.bm2proLgg, METH.gums)),
+      labelCleared(CITE.bm2proLgg, 'Microcrystalline cellulose'),
+      labelCleared(CITE.bm2proLgg, 'Hypromellose'),
+    ],
+    math: 'Demerit math: maltodextrin Limited 1 pt + vague rice / rice extract Caution (founder lock) + SiO2 0-pt cap → Caution. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
+    extraNote:
+      CAPSULE_OIL_TAP +
+      ' Separate formulaId from the refrigerated MegaFlora-style Baby & Me 2 Prenatal Probiotic + Prebiotic row.',
+    prenatal: true,
+    alts: PRENATAL_ALTS,
+  }),
+  cautionCustom({
+    id: 'megafood-liposomal-vitamin-c',
+    productName: 'Liposomal Vitamin C',
+    category: IMMUNE,
+    form: 'capsule',
+    productType: VITAMIN,
+    actives: [{ name: 'Vitamin C (liposomal ascorbic acid)', strength: '1000mg' }],
+    cite: CITE.lipoC,
+    inactives: [
+      flag('Paprika extract (color)', 'cleared', labelCite(CITE.lipoC, METH.paprika)),
+      flag('Medium chain triglycerides (from coconut)', 'cleared', `${CITE.lipoC}; ${METH.mctCoconut}. ${CAPSULE_OIL_TAP}`),
+      flag('Sunflower lecithin', 'cleared', labelCite(CITE.lipoC, METH.lecithin)),
+      flag('Beeswax', 'cleared', labelCite(CITE.lipoC, METH.beeswax)),
+      labelCleared(CITE.lipoC, 'Hypromellose'),
+    ],
+    math: 'Driver is paprika extract as color (standalone Caution, not Avoid; founder lock). MCT is coconut-only on the brand FAQ — not gummy seed-oil High. Capsule fill is not that High rule. Beeswax / sunflower lecithin / HPMC are Cleared. Do not invent Clean.',
+    extraNote: CAPSULE_OIL_TAP,
+  }),
+  cautionCustom({
+    id: 'megafood-daily-turmeric-nutrient-booster-powder',
+    productName: 'Daily Turmeric Nutrient Booster Powder',
+    category: VITAMINS,
+    form: 'powder',
+    productType: SUPPLEMENT,
+    actives: [{ name: 'Turmeric / curcuminoid nutrient booster blend', strength: 'label serving' }],
+    cite: CITE.turmericPowder,
+    inactives: [
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericPowder, METH.sio2)),
+      labelCleared(CITE.turmericPowder, 'Rice protein'),
+    ],
+    math: 'Driver is silicon dioxide (0-pt Caution cap) on the current NHC panel (SiO2 / rice protein). Rice protein is food-state media, not vague rice extract and not the rice-hull Clean lock.',
+    extraNote:
+      'Supplement-aisle powder — in scope (founder lock). Protein-aisle tubs stay out. Older HelloPharmacist snapshots also list maltodextrin (still Caution). Confirm the carton. Separate formulaId from Turmeric Curcumin Whole Body tablets and Fast Acting Turmeric capsules.',
   }),
 ];
