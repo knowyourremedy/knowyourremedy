@@ -138,15 +138,13 @@ const PREVIEW_BRAND_MARK: Record<string, ProductImage> = {
   nauzene: brandMark('nauzene-mark.png'),
 };
 
-// Letter only: SKU not attempted yet, or founder said leave unimaged.
-const LETTER_ONLY_IDS = new Set([
-  'culturelle-kids-gummies-coconut',
-  'pedialyte-classic-flavored',
-]);
-
 // Attempted Digestive leftovers with no matching carton. Not verifiedSku.
+// Per-id only — do not brand-level Culturelle / Pedialyte / 365 (other aisles
+// still have unattempted SKUs that must stay on the letter tile).
 const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'culturelle-kids-packets': brandMark('culturelle-mark.png'),
+  'culturelle-kids-gummies-coconut': brandMark('culturelle-mark.png'),
+  'pedialyte-classic-flavored': brandMark('pedialyte-mark.png'),
   'pure-encapsulations-probiotic-gi': brandMark('pure-encapsulations-mark.png'),
   'pure-encapsulations-probiotic-5': brandMark('pure-encapsulations-mark.png'),
   'thorne-floramend-prime-probiotic': brandMark('thorne-mark.png'),
@@ -154,6 +152,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'thrive-wellmade-womens-daily-probiotic': brandMark('wellmade-mark.png'),
   'thrive-wellmade-mens-daily-probiotic': brandMark('wellmade-mark.png'),
   'thrive-wellmade-kids-chewable-probiotic': brandMark('wellmade-mark.png'),
+};
+
+// No standalone official 365 mark file on wholefoodsmarket.com (brand page
+// is product photos only). Do not invent a logo. Do not use the first
+// character "3". Same beige tile as the letter helper, brand name "365".
+const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
+  '365-probiotic-fiber-gummies-sunflower': '365',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -166,11 +171,21 @@ function brandMarkImage(brand: string | undefined): ProductImage | undefined {
 function brandInitialTile(brand: string | undefined): ProductImage | undefined {
   const letter = (brand ?? '').trim().match(/[A-Za-z0-9]/)?.[0]?.toUpperCase();
   if (!letter) return undefined;
+  return brandTextTile(letter);
+}
+
+// Same tile language as the letter helper, but the visible string is the
+// brand name (or a founder-chosen short form), not the first character.
+function brandTextTile(text: string): ProductImage {
+  const label = text.trim();
+  const fontSize = label.length <= 1 ? 56 : label.length <= 3 ? 42 : 28;
+  // Single-letter baseline stays 72 so unattempted letter tiles do not shift.
+  const baseline = label.length <= 1 ? 72 : 76;
   const svg =
     `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">` +
     `<rect width="128" height="128" rx="18" fill="#f4f1ea"/>` +
-    `<text x="64" y="72" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ` +
-    `font-size="56" font-weight="700" fill="#2d4a3e">${letter}</text>` +
+    `<text x="64" y="${baseline}" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ` +
+    `font-size="${fontSize}" font-weight="700" fill="#2d4a3e">${label}</text>` +
     `</svg>`;
   return {
     url: `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`,
@@ -244,8 +259,9 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'align-daily-probiotic': catalogShot('align-daily-probiotic.jpg'),
 };
 
-// Tile lookup: exact SKU overlay → brand mark file → brand-initial tile.
-// Exact pack shot always wins. Brand marks are not cartons and are never verifiedSku.
+// Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
+// brand-level mark → brand-initial tile. Exact pack shot always wins.
+// Marks and text tiles are not cartons and are never verifiedSku.
 export function previewOverlayImage(
   record: Pick<RatingRecord, 'id' | 'formulaId' | 'brand'>,
 ): ProductImage | undefined {
@@ -255,9 +271,8 @@ export function previewOverlayImage(
     const fromFormula = PREVIEW_IMAGE_OVERLAY[record.formulaId];
     if (fromFormula) return fromFormula;
   }
-  if (LETTER_ONLY_IDS.has(record.id)) {
-    return brandInitialTile(record.brand);
-  }
+  const idText = PREVIEW_ID_BRAND_TEXT[record.id];
+  if (idText) return brandTextTile(idText);
   return (
     PREVIEW_ID_BRAND_MARK[record.id]
     ?? brandMarkImage(record.brand)
@@ -300,6 +315,8 @@ assertBrandMark('tums-chewy-bites', 'Tums', 'tums-mark.png');
 assertBrandMark('emetrol-chewables', 'Emetrol', 'emetrol-mark.png');
 assertBrandMark('nauzene-chewables', 'Nauzene', 'nauzene-mark.png');
 assertBrandMark('culturelle-kids-packets', 'Culturelle', 'culturelle-mark.png');
+assertBrandMark('culturelle-kids-gummies-coconut', 'Culturelle', 'culturelle-mark.png');
+assertBrandMark('pedialyte-classic-flavored', 'Pedialyte', 'pedialyte-mark.png');
 assertBrandMark('pure-encapsulations-probiotic-gi', 'Pure Encapsulations', 'pure-encapsulations-mark.png');
 assertBrandMark('pure-encapsulations-probiotic-5', 'Pure Encapsulations', 'pure-encapsulations-mark.png');
 assertBrandMark('thorne-floramend-prime-probiotic', 'Thorne', 'thorne-mark.png');
@@ -313,16 +330,55 @@ function assertLetterOnly(id: string, brand: string) {
   if (!image?.url.startsWith('data:image/svg+xml')) {
     throw new Error(`${id} must stay on the letter tile`);
   }
+  const letter = brand.trim().match(/[A-Za-z0-9]/)?.[0]?.toUpperCase();
+  const decoded = decodeURIComponent(
+    image.url.replace('data:image/svg+xml;charset=utf-8,', ''),
+  );
+  if (letter && !decoded.includes(`>${letter}</text>`)) {
+    throw new Error(`${id} must stay on the single-letter "${letter}" tile`);
+  }
   if (image.verifiedSku) {
     throw new Error(`${id} letter tile must not set verifiedSku`);
   }
 }
 
-assertLetterOnly('culturelle-kids-gummies-coconut', 'Culturelle');
-assertLetterOnly('pedialyte-classic-flavored', 'Pedialyte');
-assertLetterOnly('365-probiotic-fiber-gummies-sunflower', '365 Whole Foods Market');
+function assertBrandTextTile(id: string, brand: string, text: string) {
+  const image = previewOverlayImage({ id, formulaId: id, brand });
+  if (!image?.url.startsWith('data:image/svg+xml')) {
+    throw new Error(`${id} must use a brand-name text tile`);
+  }
+  const encoded = image.url.replace('data:image/svg+xml;charset=utf-8,', '');
+  const decoded = decodeURIComponent(encoded);
+  if (!decoded.includes(`>${text}</text>`)) {
+    throw new Error(`${id} text tile must show "${text}", not a single letter`);
+  }
+  if (image.verifiedSku) {
+    throw new Error(`${id} text tile must not set verifiedSku`);
+  }
+}
+
+assertBrandTextTile(
+  '365-probiotic-fiber-gummies-sunflower',
+  '365 Whole Foods Market',
+  '365',
+);
+assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
+
+function assertExactCarton(id: string, brand: string, file: string) {
+  const image = previewOverlayImage({ id, formulaId: id, brand });
+  if (!image?.url.endsWith(`/${file}`) || !image.verifiedSku) {
+    throw new Error(`${id} founder-link carton ${file} must stay the exact overlay`);
+  }
+}
+
+assertExactCarton('gasx-es-chewables', 'Gas-X', 'gasx-es-chewables.jpg');
+assertExactCarton('pepto-bismol-liquid', 'Pepto-Bismol', 'pepto-bismol-liquid.jpg');
+assertExactCarton('pepto-bismol-chewables', 'Pepto-Bismol', 'pepto-bismol-chewables.jpg');
+assertExactCarton('pedialyte-freezer-pops', 'Pedialyte', 'pedialyte-freezer-pops.jpg');
+assertExactCarton('culturelle-digestive-daily', 'Culturelle', 'culturelle-digestive-daily.jpg');
+assertExactCarton('align-daily-probiotic', 'Align', 'align-daily-probiotic.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
