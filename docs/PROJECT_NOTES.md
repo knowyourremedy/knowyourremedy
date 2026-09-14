@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Sept 14 inactive locks + tap transparency)
+Last Updated: September 14, 2026 (Sept 14 inactive locks + housekeeping siblings + tap-copy / drop-oil rule)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -202,17 +202,19 @@ Scope:
 Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock):
 - Avoid in gummies / soft chews only (soybean, canola, palm, sunflower, “vegetable oil”).
 - Capsule / softgel oil fill is NOT that High rule.
-- Sunflower lecithin stays Cleared (separate lock).
-- On every capsule/softgel row that lists those oils as a fill, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this capsule/softgel fill they are not that High rule.”
+- Liquid-drop oil carriers use the same non-gummy rule as capsule/softgel fill. Tap text required (same both-sides sentence).
+- Coconut oil alone in gummies/chews is NOT seed-oil High (already practice; now in Methodology §5 Cleared).
+- Canola / soy / sunflower lecithin stays Cleared (same lecithin lock; canola named explicitly).
+- On every capsule/softgel/liquid-drop row that lists those oils as a fill, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this capsule/softgel/liquid-drop fill they are not that High rule.”
 
 Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §5 locks):
 - Pea protein isolate = Cleared-class food protein.
 - Paprika extract as color = Caution (color/opacity).
 - Sodium copper chlorophyllin = Caution (color additive).
 - MCT: coconut-only = not gummy High. Unlabeled MCT source = Caution opacity, not Avoid.
-- “Rice” / “rice extract” is NOT the rice-hull Clean lock. Rice flour/starch = Cleared starch. Vague rice extract = Caution until the carton says hull / concentrate / hulls.
-- Organic rice bran extract = Cleared (Methodology §5, locked with hull/concentrate family). Unspecified “rice extract” stays Caution.
-- New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty.
+- “Rice” / “rice extract” is NOT the rice-hull Clean lock. Rice flour/starch = Cleared starch. Unspecified “rice extract” = Limited opacity row until the carton says hull / concentrate / hulls / bran.
+- Organic rice bran extract = Cleared (Methodology §5, locked with hull/concentrate family). Unspecified “rice extract” = Limited opacity (now its own §5 row).
+- New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty. Audit list 2 still pending founder lock; no default Caution for missing-row.
 
 INGREDIENT TAP COPY (locked Sept 14, 2026)
 Honest always. Every flagged or context-scoped inactive needs a plain-language why in the collapsed ingredient panel — not jargon, not “unsafe.”
@@ -220,21 +222,48 @@ Honest always. Every flagged or context-scoped inactive needs a plain-language w
 - Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
 Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
 
-Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Caution + the vague-form tap sentence.
+Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Limited opacity + the vague-form tap sentence.
 
 Sept 14 inactive locks (now in Methodology §5 — do not reopen):
-- Organic rice bran extract = Cleared (rice-hull family). Unspecified “rice extract” = Caution (opacity).
+- Organic rice bran extract = Cleared (rice-hull family). Unspecified “rice extract” = Limited (opacity).
 - Pea protein isolate = Cleared (food protein excipient).
 - Organic beet root (food / excipient / color-food) = Cleared (whole-food, not a synthetic dye).
 - Organic acerola = Cleared (food fruit).
 - Honey (oral sweetener) = Cleared-class sweetener. Tap + honest: not for under 1. Not Avoid.
 - Paprika extract / capsanthin as COLOR = Cleared (named spice color E160c; same as turmeric-as-color). Unnamed “color added” stays Caution. Named lock supersedes the leftover paprika Caution line above.
-- Black carrot / juice concentrate as COLOR = Cleared (named plant color; same posture as paprika / turmeric-as-color).
+- Black carrot / fruit-or-veg juice concentrate as COLOR when named = Cleared (named plant color; same posture as paprika / turmeric-as-color).
 - Sodium copper chlorophyllin (E141) = Caution (copper-complex color, not raw chlorophyll / parsley). Not High/Avoid.
 - Organic cultured dextrose = Caution (ferment preservative, not dextrose/cane sugar sweetener). Not Avoid.
-- Natural citrus extract (unnamed fruit/part) = Limited / Caution opacity. DailyMed CITRUS FRUIT UNII still not lemon vs peel. Named “organic lemon oil” etc. can be revisited.
+- Natural citrus extract (unnamed fruit/part) = Limited / Caution opacity. DailyMed CITRUS FRUIT UNII still not lemon vs peel.
+- Named lemon oil as flavor = Limited (flavor row). Named is not a Clean auto-pass.
+- Unspecified “rice extract” = Limited opacity row (now in §5). Tap still uses the vague-form sentence.
 - “Natural flavor” stays Limited as already written.
 - Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does.
+
+Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
+- Glycerin / vegetable glycerin / organic glycerin = Cleared.
+- Calcium laurate = Cleared (stearate family).
+- Cellulose gum, powdered cellulose, capsule cellulose = Cleared (cellulose family with MCC).
+- Copovidone = Cleared (povidone family).
+- Hydroxypropyl cellulose (HPC) = Cleared (HPMC / hypromellose family).
+- Rice protein, ferment media, organic/brown rice, rice syrup = Cleared (food-state / starch family; not SiO2).
+- Dicalcium phosphate, tricalcium phosphate, citrate salts as fillers/buffers = Cleared.
+- Inulin as fiber = Cleared.
+- Alginic acid = Cleared (gum/fiber family).
+- Canola / soy / sunflower lecithin = already the lecithin lock; canola named explicitly. Not a new grade.
+- Coconut oil alone in gummies/chews = NOT seed-oil High (Cleared; already practice).
+- Gellan gum = Cleared with the xanthan/guar/gum arabic/pectin family (one family row).
+- Organic maltodextrin = same Limited as non-organic maltodextrin.
+- Polydextrose = Limited (maltodextrin-like).
+- Fructose as sweetener = treat with sugars; not High (Limited row so it is not a missing-row).
+- Whole-leaf / crude stevia = Caution; do not auto-Clean (already stated; now its own row).
+- Methacrylic acid copolymer / unnamed delayed-release composites = Caution until specified.
+- Phenoxyethanol (topical preservative) = Caution.
+- Lanolin (topical) = Caution hypersensitivity pattern, not Avoid.
+- Fragrance / parfum stays Caution — do not reopen.
+- Sodium copper chlorophyllin, organic cultured dextrose, unnamed natural citrus, and the morning food/color locks stay as already written — not duplicated as new grades.
+- Inactive not in §5 still goes to the founder before a live grade. After a lock it goes in the §5 table the same day.
+- Audit list 2 still pending founder lock; no default Caution for missing-row.
 
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
