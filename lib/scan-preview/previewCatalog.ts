@@ -33,6 +33,7 @@ import {
   BATCH30_AMAZON_BASIC_CARE,
   BATCH31_MEGAFOOD,
   BATCH32_GENEXA,
+  BATCH33_HYLANDS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -86,6 +87,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH30_AMAZON_BASIC_CARE,
   ...BATCH31_MEGAFOOD,
   ...BATCH32_GENEXA,
+  ...BATCH33_HYLANDS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -894,6 +896,24 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
 
   if (name.includes('talc') || source.includes('talc')) {
     return 'Contains talc (magnesium silicate). IARC classifies talc Group 2A, with a separate asbestos-contamination pathway; we score it High risk, and cleaner formulas exclude it.';
+  }
+
+  if (
+    name.includes('glycyrrhiza')
+    || name.includes('licorice extract')
+    || source.includes('that is not this syrup dose')
+  ) {
+    return 'Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.';
+  }
+
+  if (
+    ingredient.riskLevel === 'high'
+    && (
+      name.includes('sunflower oil')
+      || source.includes('seed/industrial oils in gummies')
+    )
+  ) {
+    return 'Seed/industrial oils are flagged in gummies. Organic sunflower oil in this gummy is that High rule.';
   }
 
   if (

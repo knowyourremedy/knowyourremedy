@@ -542,6 +542,14 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('798e2a4d-da2d-4bbd-a9b8-574490ef7357', METH.benzoate),
       ),
       flag(
+        'Glycyrrhiza extract',
+        'cleared',
+        dailymed(
+          '798e2a4d-da2d-4bbd-a9b8-574490ef7357',
+          'Methodology §5 Cleared (glycyrrhiza / licorice extract — named botanical; locked Sept 14, 2026). Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.',
+        ),
+      ),
+      flag(
         'Citric acid',
         'cleared',
         dailymed('798e2a4d-da2d-4bbd-a9b8-574490ef7357', METH.cleared),
@@ -559,7 +567,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'Natural grape flavor + sodium benzoate (1+1 → Caution). Glycyrrhiza extract is on the SPL and is not in Methodology §5 (ungraded). Ages 2+. Same-batch Cleans start at minAge 4. ' +
+      'Natural grape flavor + sodium benzoate (1+1 → Caution). Glycyrrhiza extract is Cleared — do not Caution on licorice alone. Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose. Grape daytime liquid only; grape packets share this formulaId. Do not reuse for Original or Nighttime. Ages 2+. Same-batch Cleans start at minAge 4. ' +
       CARLSTON,
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: AGE2_HOMEOPATHIC_ALTS,

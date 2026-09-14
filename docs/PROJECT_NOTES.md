@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (licorice extract Cleared; wood rosin topical Caution)
+Last Updated: September 14, 2026 (Hyland’s batch 33; licorice tap line; wood rosin Caution)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -245,8 +245,8 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
 - Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
 - Limited-only stack stays Caution (Usable). Any number of Limited flags does not become Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. Harm-first, not a Yuka point ladder.
-- Glycyrrhiza extract / licorice extract (oral inactive) = Cleared. Named botanical. High-intake glycyrrhizin BP/potassium literature is a tap note, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA candy warning is one source, not a veto.
-- Wood rosin / colophony (topical) = Caution (contact-allergy pattern). Not Avoid.
+- Glycyrrhiza extract / licorice extract (oral inactive) = Cleared. Named botanical. Do not Caution the product on licorice alone. High-intake glycyrrhizin BP/potassium literature is a tap + honest-note line, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA is one source, not a veto. Tap + honest-note line (exact): “Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.”
+- Wood rosin / colophony (topical) = Caution (contact-allergy pattern). Not Avoid. Ethyl alcohol / petrolatum / stearyl alcohol are still missing from §5 — PRID stays blocked until those topical locks exist.
 - FDA is one source, not a veto.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
@@ -283,8 +283,9 @@ West Coast walk lists still catch national brands sold nationwide. Later wave: r
 Launch: don’t half-dress a date. Day job returns mid/late November.
 
 BRAND ROSTER LOG
-- MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
-- Next brand after MegaFood closeout is on main: Genexa (Pain & Fever-heavy), questions-first loop.
+- MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
+- Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
+- Hyland’s — batch33 Mon Sept 14, 2026. Reuse 6 existing ids. New writable formulas + glycyrrhiza-unlocked liquids. PRID still blocked (ethyl alcohol / petrolatum / stearyl alcohol not in §5). Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
 
 Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
