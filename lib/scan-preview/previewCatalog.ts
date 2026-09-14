@@ -31,6 +31,7 @@ import {
   BATCH28_THORNE_COM,
   BATCH29_DOLLAR_STORE,
   BATCH30_AMAZON_BASIC_CARE,
+  BATCH31_MEGAFOOD,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -82,6 +83,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH28_THORNE_COM,
   ...BATCH29_DOLLAR_STORE,
   ...BATCH30_AMAZON_BASIC_CARE,
+  ...BATCH31_MEGAFOOD,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
