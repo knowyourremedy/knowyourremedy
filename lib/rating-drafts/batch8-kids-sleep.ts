@@ -21,9 +21,9 @@
 // - KS5 Boiron SleepCalm kids pellets = Clean. setid de0b458d. Lactose + sucrose.
 //   minAge 3. Separate from SleepCalm Kids liquid.
 // - KS6 Genexa Kids Sleepology = Caution. setid ba0cd3c2. Driver = vanilla
-//   lavender / natural flavor (Limited). Organic maltodextrin / organic
-//   dextrose / organic carnauba / organic rice bran = Cleared-class — do NOT
-//   score organic maltodextrin as the Limited non-organic maltodextrin row.
+//   lavender / natural flavor (Limited). Organic maltodextrin is Limited
+//   (same as non-organic; Sept 14 housekeeping). Organic dextrose /
+//   organic carnauba / organic rice bran = Cleared-class.
 // - KS7 Boiron SleepCalm Kids liquid = Caution. setid aef7b774. Alcohol vehicle
 //   (alcohol + water) — same locked pattern as batch 4 `boiron-coldcalm-kids-liquid`.
 //   Ethyl alcohol is ungraded in §5; founder Caution, not a scored Avoid.
@@ -95,7 +95,9 @@ const METH = {
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
-  maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
+  maltodextrin: 'Methodology §5 Limited-risk (maltodextrin — organic and non-organic)',
+  riceBran:
+    'Methodology §5 Cleared (organic rice bran extract — hull/concentrate family; locked Sept 14, 2026)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin — locked v1.6)',
@@ -454,11 +456,8 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Maltodextrin (organic)',
-        'cleared',
-        dailymed(
-          SET_SLEEPOLOGY,
-          `${METH.cleared} — organic maltodextrin is NOT the Limited non-organic maltodextrin row`,
-        ),
+        'limited',
+        dailymed(SET_SLEEPOLOGY, METH.maltodextrin),
       ),
       flag(
         'Dextrose (organic)',
@@ -473,15 +472,12 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag(
         'Rice bran extract (organic)',
         'cleared',
-        dailymed(
-          SET_SLEEPOLOGY,
-          `${METH.cleared} — organic rice bran is Cleared-class on this locked row (not a Limited driver)`,
-        ),
+        dailymed(SET_SLEEPOLOGY, METH.riceBran),
       ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Kids Sleepology = Caution. Driver is vanilla lavender / natural flavor (Limited opacity). Organic maltodextrin, organic dextrose, organic carnauba wax, and organic rice bran are Cleared-class — do NOT score organic maltodextrin as the Limited non-organic maltodextrin row. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER CALL: Genexa Kids Sleepology = Caution. Vanilla lavender / natural flavor Limited 1 pt + organic maltodextrin Limited 1 pt (same as non-organic) = 2 pts Caution. Organic rice bran extract is §5 Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Ages 3–11 (under 3: ask a doctor).',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],

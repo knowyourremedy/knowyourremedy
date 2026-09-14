@@ -19,19 +19,19 @@
 //   / Thrive / Sprouts / Whole Foods / Amazon US is that row — no
 //   second Search id.
 //
-// TALLY (unverified drafts in THIS file): 106 rows — Clean 1 /
-// Caution 91 / Avoid 14.
+// TALLY (unverified drafts in THIS file): 106 rows — Clean 2 /
+// Caution 90 / Avoid 14.
 // Independently Clean in THIS batch: Magnesium 300 mg Capsules
-// only. See header notes in honestNotes for demerit math.
+// and Liposomal Vitamin C (paprika-as-color now §5 Cleared).
 //
 // ZINC IS PARKED (Methodology v1.6). Silicon dioxide / silica =
 // Caution cap, 0 points, not Avoid alone. Seed/industrial oils in
 // gummies / soft chews = High Avoid. Softgel / capsule oil fill ≠
 // gummy High. Coconut oil alone is not seed-oil High. Unlabeled
 // MCT = Caution opacity, not Avoid. Paprika extract as color =
-// Caution. Sodium copper chlorophyllin = Caution. Pea protein
-// isolate = Cleared-class. Rice / rice extract ≠ rice-hull Clean
-// lock (vague rice extract = Caution; rice flour/starch = Cleared).
+// Cleared (named spice color). Sodium copper chlorophyllin = Caution.
+// Pea protein isolate = Cleared-class. Unspecified rice extract =
+// Limited opacity (not the rice-hull / rice-bran Clean lock).
 // FDA/GRAS ≠ Clean. No medical advice / dosing. Pregnancy label
 // on-carton only.
 //
@@ -92,11 +92,13 @@ const METH = {
   capsuleOil:
     'Methodology §5 — oil in a capsule / softgel fill is NOT the gummy seed/industrial-oil High rule',
   paprika:
-    'Methodology §5 Caution (paprika extract as color — standalone Caution, not Avoid; founder lock)',
+    'Methodology §5 Cleared (paprika extract / capsanthin as color — named spice color E160c; same posture as turmeric-as-color; locked Sept 14, 2026)',
+  blackCarrot:
+    'Methodology §5 Cleared (black carrot / juice concentrate as color — named plant color; same posture as paprika / turmeric-as-color; locked Sept 14, 2026)',
   chlorophyllin:
     'Methodology §5 Caution (sodium copper chlorophyllin as color — standalone Caution, not Avoid; founder lock)',
   riceExtract:
-    'Methodology §5 Caution (vague rice / rice extract — not the rice-hull Clean lock; not rice flour/starch; founder lock)',
+    'Methodology §5 Limited-risk (unspecified rice extract — Caution/Limited opacity; label did not name hull, bran, or concentrate)',
   mctUnlabeled:
     'Methodology §5 Limited-risk / Caution opacity (unlabeled MCT — coconut vs palm unknown; not Avoid; founder lock)',
   mctCoconut:
@@ -108,7 +110,10 @@ const METH = {
 } as const;
 
 const CAPSULE_OIL_TAP =
-  'Seed/industrial oils are flagged in gummies. In this capsule/softgel fill they are not that High rule.';
+  'Seed/industrial oils are flagged in gummies. In this capsule/softgel/drop fill they are not that High rule.';
+
+const RICE_EXTRACT_TAP =
+  'Label only says rice extract — it doesn’t name hull, bran, or concentrate. We mark that Caution because the form isn’t clear. Named organic rice hull extract, rice concentrate, ground rice hulls, or organic rice bran extract are Cleared.';
 
 function flag(
   name: string,
@@ -1669,8 +1674,12 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     cite: CITE.wbGummyW,
-    inactives: [...gummyBaseFlags(CITE.wbGummyW, true), labelCleared(CITE.wbGummyW, 'Water')],
-    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no sunflower / canola / palm / vegetable oil on Vitacost / NHC / Healthy Place. Black carrot concentrate and trisodium citrate are not in Methodology §5 (ungraded; v1.6 intake) and are not required to reach Caution. Do not invent a seed-oil Avoid on this formulaId.',
+    inactives: [
+      ...gummyBaseFlags(CITE.wbGummyW, true),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.wbGummyW, METH.blackCarrot)),
+      labelCleared(CITE.wbGummyW, 'Water'),
+    ],
+    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no sunflower / canola / palm / vegetable oil on Vitacost / NHC / Healthy Place. Named black carrot concentrate as color is now §5 Cleared. Trisodium citrate is a citrate-salt filler (Cleared-by-class) and is not required to reach Caution. Do not invent a seed-oil Avoid on this formulaId.',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
     zinc: true,
   }),
@@ -1685,8 +1694,12 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     cite: CITE.wbGummyM,
-    inactives: [...gummyBaseFlags(CITE.wbGummyM, true), labelCleared(CITE.wbGummyM, 'Water')],
-    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil on NHC / Healthy Place. Black carrot / trisodium citrate ungraded; not required to reach Caution.',
+    inactives: [
+      ...gummyBaseFlags(CITE.wbGummyM, true),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.wbGummyM, METH.blackCarrot)),
+      labelCleared(CITE.wbGummyM, 'Water'),
+    ],
+    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil on NHC / Healthy Place. Named black carrot as color is now §5 Cleared. Trisodium citrate is a citrate-salt filler (Cleared-by-class) and is not required to reach Caution.',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
     zinc: true,
   }),
@@ -1732,13 +1745,14 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     cite: CITE.womensProGummy,
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.womensProGummy, METH.flavors)),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.womensProGummy, METH.blackCarrot)),
       flag('Pectin', 'cleared', labelCite(CITE.womensProGummy, METH.gums)),
       flag('Tapioca starch', 'cleared', labelCite(CITE.womensProGummy, METH.starches)),
       labelCleared(CITE.womensProGummy, 'Citric acid'),
       labelCleared(CITE.womensProGummy, 'Carnauba wax'),
       labelCleared(CITE.womensProGummy, 'Water'),
     ],
-    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil. Agar agar is not in Methodology §5 (ungraded; v1.6 intake) and is not required to reach Caution.',
+    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil. Named black carrot as color is now §5 Cleared. Agar agar is not in Methodology §5 (ungraded) and is not required to reach Caution.',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
   }),
   cautionCustom({
@@ -1752,13 +1766,14 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     cite: CITE.prebioticGummy,
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.prebioticGummy, METH.flavors)),
+      flag('Paprika extract (color)', 'cleared', labelCite(CITE.prebioticGummy, METH.paprika)),
       flag('Pectin', 'cleared', labelCite(CITE.prebioticGummy, METH.gums)),
       flag('Tapioca starch', 'cleared', labelCite(CITE.prebioticGummy, METH.starches)),
       labelCleared(CITE.prebioticGummy, 'Citric acid'),
       labelCleared(CITE.prebioticGummy, 'Carnauba wax'),
       labelCleared(CITE.prebioticGummy, 'Water'),
     ],
-    math: 'Driver is natural flavor Limited (1 pt) → Caution. No seed/industrial oil on Target. Agar / paprika extract / trisodium citrate ungraded; not required to reach Caution. Labeled for adults, teens, and kids 4+ — adult Digestive aisle row (minAge 4).',
+    math: 'Driver is natural flavor Limited (1 pt) → Caution. No seed/industrial oil on Target. Named paprika extract as color is now §5 Cleared. Agar remains ungraded (not in §5) and is not required to reach Caution. Labeled for adults, teens, and kids 4+ — adult Digestive aisle row (minAge 4).',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
     retailers: BRAND_AMZ,
   }),
@@ -1797,13 +1812,14 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     cite: CITE.magCitGummy,
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.magCitGummy, METH.flavors)),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.magCitGummy, METH.blackCarrot)),
       flag('Pectin', 'cleared', labelCite(CITE.magCitGummy, METH.gums)),
       flag('Tapioca starch', 'cleared', labelCite(CITE.magCitGummy, METH.starches)),
       labelCleared(CITE.magCitGummy, 'Citric acid'),
       labelCleared(CITE.magCitGummy, 'Carnauba wax'),
       labelCleared(CITE.magCitGummy, 'Water'),
     ],
-    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil on US Target / NHC. Agar / black carrot / trisodium citrate ungraded; not required to reach Caution. UAE sugared listing is a different formula — not this row.',
+    math: 'Driver is natural flavor Limited (1 pt) → Caution. CONFIRMED no seed/industrial oil on US Target / NHC. Named black carrot as color is now §5 Cleared. Agar remains ungraded (not in §5) and is not required to reach Caution. UAE sugared listing is a different formula — not this row.',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
     alts: MAG300_ALTS,
   }),
@@ -2099,9 +2115,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     math: 'Driver is silicon dioxide (0-pt Caution cap only). MCC / hypromellose / stearic acid are Cleared. Do not invent Clean on the SiO2 cap.',
     extraNote:
-      'Contains fish (anchovies & sardines) — honest note only; not an inactive-grade driver. DHA from fish oil powder is the active — NOT the gummy seed-oil High / Avoid rule. ' +
-      CAPSULE_OIL_TAP +
-      ' Separate formulaId from Baby & Me 2 Prenatal Multi tablets, Minis, Gummies, and DHA & Choline.',
+      'Contains fish (anchovies & sardines) — honest note only; not an inactive-grade driver. DHA from fish oil powder is the active — capsule fill is not the gummy seed-oil High rule. Separate formulaId from Baby & Me 2 Prenatal Multi tablets, Minis, Gummies, and DHA & Choline.',
     zinc: true,
     prenatal: true,
     ironCarton: true,
@@ -2163,6 +2177,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.pppGummy, METH.flavors)),
       flag('Medium chain triglycerides (source unlabeled)', 'limited', labelCite(CITE.pppGummy, METH.mctUnlabeled)),
+      flag('Black carrot juice concentrate (color)', 'cleared', labelCite(CITE.pppGummy, METH.blackCarrot)),
       flag('Sunflower lecithin', 'cleared', labelCite(CITE.pppGummy, METH.lecithin)),
       flag('Pectin', 'cleared', labelCite(CITE.pppGummy, METH.gums)),
       labelCleared(CITE.pppGummy, 'Tapioca syrup'),
@@ -2170,11 +2185,8 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.pppGummy, 'Water'),
       labelCleared(CITE.pppGummy, 'Citric acid'),
     ],
-    math: 'Drivers are natural flavor Limited (1 pt) + unlabeled MCT Caution opacity → Caution, not Avoid. Coconut-only MCT is not gummy seed-oil High; this carton does not name coconut or palm. Sunflower lecithin is Cleared and is not bulk sunflower oil.',
-    extraNote:
-      UNGRADED_NOT_REQUIRED +
-      ' Black carrot juice concentrate (color) is not in Methodology §5 (ungraded; v1.6 intake) and is not required to reach Caution. ' +
-      NO_CLEAN_GUMMY,
+    math: 'Drivers are natural flavor Limited (1 pt) + unlabeled MCT Caution opacity → Caution, not Avoid. Coconut-only MCT is not gummy seed-oil High; this carton does not name coconut or palm. Named black carrot juice concentrate as color is now §5 Cleared. Sunflower lecithin is Cleared and is not bulk sunflower oil.',
+    extraNote: NO_CLEAN_GUMMY,
   }),
   cautionCustom({
     id: 'megafood-ashwagandha-gummies',
@@ -2187,16 +2199,17 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.ashwGummy, METH.flavors)),
       flag('Sodium copper chlorophyllin (color)', 'cleared', labelCite(CITE.ashwGummy, METH.chlorophyllin)),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.ashwGummy, METH.blackCarrot)),
       flag('Pectin', 'cleared', labelCite(CITE.ashwGummy, METH.gums)),
       flag('Tapioca starch', 'cleared', labelCite(CITE.ashwGummy, METH.starches)),
       labelCleared(CITE.ashwGummy, 'Citric acid'),
       labelCleared(CITE.ashwGummy, 'Carnauba wax'),
       labelCleared(CITE.ashwGummy, 'Water'),
     ],
-    math: 'Drivers are natural flavor Limited (1 pt) + sodium copper chlorophyllin standalone Caution (not Avoid; founder lock) → Caution. CONFIRMED no sunflower / palm / vegetable oil on Target / NHC / Better Health.',
+    math: 'Drivers are natural flavor Limited (1 pt) + sodium copper chlorophyllin standalone Caution (not Avoid; founder lock) → Caution. Named black carrot as color is now §5 Cleared. CONFIRMED no sunflower / palm / vegetable oil on Target / NHC / Better Health.',
     extraNote:
       UNGRADED_NOT_REQUIRED +
-      ' Agar-agar / black carrot concentrate / trisodium citrate are not in Methodology §5 (ungraded; v1.6 intake) and are not required to reach Caution. Separate formulaId from Ashwagandha Complex mini tablets. ' +
+      ' Agar-agar remains ungraded (not in §5) and is not required to reach Caution. Separate formulaId from Ashwagandha Complex mini tablets. ' +
       NO_CLEAN_GUMMY,
   }),
   cautionCustom({
@@ -2234,15 +2247,14 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'ASTARTE probiotic blend with prebiotic', strength: 'label serving' }],
     cite: CITE.astarte,
     inactives: [
-      flag('Rice extract', 'cleared', labelCite(CITE.astarte, METH.riceExtract)),
-      flag('Rice (unspecified)', 'cleared', labelCite(CITE.astarte, METH.riceExtract)),
+      flag('Rice extract', 'limited', `${CITE.astarte}; ${METH.riceExtract}. ${RICE_EXTRACT_TAP}`),
       flag('Sunflower oil', 'cleared', `${CITE.astarte}; ${METH.capsuleOil}. ${CAPSULE_OIL_TAP}`),
       flag('Gum arabic', 'cleared', labelCite(CITE.astarte, METH.gums)),
       labelCleared(CITE.astarte, 'Microcrystalline cellulose'),
       labelCleared(CITE.astarte, 'Hypromellose'),
     ],
-    math: 'Driver is vague rice / rice extract (Caution; founder lock — not the rice-hull Clean lock; not rice flour/starch). Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
-    extraNote: CAPSULE_OIL_TAP + ' Separate formulaId from MegaFlora Women\'s (SiO2 / calcium laurate).',
+    math: 'Driver is unspecified rice extract Limited/Caution opacity (1 pt) — label does not name hull, bran, or concentrate. Sunflower oil is a capsule fill — not the gummy seed-oil High rule. Bare “rice” on the same panel is not a named flour / protein / syrup / extract row; not graded (no invented §5 lock).',
+    extraNote: 'Separate formulaId from MegaFlora Women\'s (SiO2 / calcium laurate).',
   }),
   cautionCustom({
     id: 'megafood-baby-me-2-prenatal-probiotic-lgg',
@@ -2258,38 +2270,43 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     inactives: [
       flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2proLgg, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.bm2proLgg, METH.maltodextrin)),
-      flag('Rice extract', 'cleared', labelCite(CITE.bm2proLgg, METH.riceExtract)),
-      flag('Rice (unspecified)', 'cleared', labelCite(CITE.bm2proLgg, METH.riceExtract)),
+      flag('Rice extract', 'limited', `${CITE.bm2proLgg}; ${METH.riceExtract}. ${RICE_EXTRACT_TAP}`),
       flag('Sunflower oil', 'cleared', `${CITE.bm2proLgg}; ${METH.capsuleOil}. ${CAPSULE_OIL_TAP}`),
       flag('Gum arabic', 'cleared', labelCite(CITE.bm2proLgg, METH.gums)),
       labelCleared(CITE.bm2proLgg, 'Microcrystalline cellulose'),
       labelCleared(CITE.bm2proLgg, 'Hypromellose'),
     ],
-    math: 'Demerit math: maltodextrin Limited 1 pt + vague rice / rice extract Caution (founder lock) + SiO2 0-pt cap → Caution. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
+    math: 'Demerit math: maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt + SiO2 0-pt cap → Caution (2 pts, not Avoid). Sunflower oil is a capsule fill — not the gummy seed-oil High rule. Bare “rice” on the same panel is not graded (no invented §5 lock).',
     extraNote:
-      CAPSULE_OIL_TAP +
-      ' Separate formulaId from the refrigerated MegaFlora-style Baby & Me 2 Prenatal Probiotic + Prebiotic row.',
+      'Separate formulaId from the refrigerated MegaFlora-style Baby & Me 2 Prenatal Probiotic + Prebiotic row.',
     prenatal: true,
     alts: PRENATAL_ALTS,
   }),
-  cautionCustom({
+  {
     id: 'megafood-liposomal-vitamin-c',
     productName: 'Liposomal Vitamin C',
+    brand: BRAND,
     category: IMMUNE,
+    formulaId: 'megafood-liposomal-vitamin-c',
+    audience: ADULT,
+    minAge: 18,
     form: 'capsule',
+    recordStatus: UNVERIFIED,
     productType: VITAMIN,
-    actives: [{ name: 'Vitamin C (liposomal ascorbic acid)', strength: '1000mg' }],
-    cite: CITE.lipoC,
-    inactives: [
+    activeIngredients: [{ name: 'Vitamin C (liposomal ascorbic acid)', strength: '1000mg' }],
+    inactiveIngredients: [
       flag('Paprika extract (color)', 'cleared', labelCite(CITE.lipoC, METH.paprika)),
       flag('Medium chain triglycerides (from coconut)', 'cleared', `${CITE.lipoC}; ${METH.mctCoconut}. ${CAPSULE_OIL_TAP}`),
       flag('Sunflower lecithin', 'cleared', labelCite(CITE.lipoC, METH.lecithin)),
       flag('Beeswax', 'cleared', labelCite(CITE.lipoC, METH.beeswax)),
       labelCleared(CITE.lipoC, 'Hypromellose'),
     ],
-    math: 'Driver is paprika extract as color (standalone Caution, not Avoid; founder lock). MCT is coconut-only on the brand FAQ — not gummy seed-oil High. Capsule fill is not that High rule. Beeswax / sunflower lecithin / HPMC are Cleared. Do not invent Clean.',
-    extraNote: CAPSULE_OIL_TAP,
-  }),
+    verdict: 'clean',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Liposomal Vitamin C = Clean. Named paprika extract as color is now §5 Cleared (same posture as turmeric-as-color) — that was the leftover Caution driver. Coconut-only MCT and sunflower lecithin are capsule fill / Cleared, not the gummy seed-oil High rule. Beeswax and hypromellose are Cleared. Demerit math: 0 pts. No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.',
+    retailers: [...US_WIDE],
+    sourcesGeneral: [`${CITE.lipoC} — draft, not verified; no DailyMed drug SPL`],
+  },
   cautionCustom({
     id: 'megafood-daily-turmeric-nutrient-booster-powder',
     productName: 'Daily Turmeric Nutrient Booster Powder',
@@ -2320,10 +2337,11 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.creatineGummy, 'Sugar'),
       labelCleared(CITE.creatineGummy, 'Water'),
       flag('Pectin', 'cleared', labelCite(CITE.creatineGummy, METH.gums)),
+      flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.creatineGummy, METH.blackCarrot)),
       labelCleared(CITE.creatineGummy, 'Citric acid'),
       labelCleared(CITE.creatineGummy, 'Carnauba wax'),
     ],
-    math: 'Demerit math: natural flavor Limited 1 pt. Rest of the scored panel is Cleared-class (glucose syrup / sugar / water / pectin / citric acid / carnauba wax) → Caution. CONFIRMED no sunflower / canola / palm / vegetable oil on the founder photo. Black carrot concentrate (color) and trisodium citrate are not in Methodology §5 (ungraded; v1.6 intake) and are not required to reach Caution. Do not invent a seed-oil Avoid on this formulaId.',
+    math: 'Demerit math: natural flavor Limited 1 pt. Named black carrot concentrate as color is now §5 Cleared. Rest of the scored panel is Cleared-class (glucose syrup / sugar / water / pectin / citric acid / carnauba wax) → Caution. CONFIRMED no sunflower / canola / palm / vegetable oil on the founder photo. Do not invent a seed-oil Avoid on this formulaId.',
     extraNote: UNGRADED_NOT_REQUIRED + ' ' + NO_CLEAN_GUMMY,
   }),
   cautionCustom({

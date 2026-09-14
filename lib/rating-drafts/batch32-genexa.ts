@@ -43,11 +43,9 @@
 // - Infants’ Vitamin D sunflower oil as DROP carrier = NOT gummy Avoid
 //
 // Organic flavors / organic blueberry / organic açaí = Cleared (§5).
-// Organic maltodextrin on NEW chewables is scored Limited to match locked
-// genexa-kids-cold-crush / genexa-allergy-care / genexa-kids-allergy-care
-// (do not invent Clean on that chew pattern). Vanilla-lavender Sleep /
-// Calm / Stress chews follow locked kids-sleepology: flavor is the Limited
-// driver; organic maltodextrin stays Cleared-class on that family.
+// Organic maltodextrin is Limited on every chew (same as non-organic; §5
+// housekeeping lock). Vanilla-lavender Sleep / Calm / Stress chews keep
+// flavor Limited + organic MDX Limited = 2 pts Caution.
 //
 // KITS / BUNDLES OUT (no rows): Baby’s First Sick Day / Wellness /
 // Medicine Cabinet kits; Family Pain Bundle; Kids' Cough, Pain & Fever
@@ -87,9 +85,7 @@ const METH = {
     'Methodology §5 Limited-risk (Grape Flavor — Limited flavor; Sept 14 lock)',
   xylitol: 'Methodology §5 Limited-risk (xylitol, oral)',
   maltodextrin:
-    'Methodology §5 Limited-risk (maltodextrin — same Limited driver as locked Genexa chew siblings genexa-kids-cold-crush / genexa-allergy-care / genexa-kids-allergy-care; do not invent Clean)',
-  organicMaltodextrinCleared:
-    'Methodology §5 Cleared — organic maltodextrin is NOT the Limited non-organic maltodextrin row on this vanilla-lavender family (same treatment as locked genexa-kids-sleepology)',
+    'Methodology §5 Limited-risk (maltodextrin — organic and non-organic; same Limited row)',
   chamomile:
     'Methodology §5 Caution (organic chamomile extract — standalone Caution, not Avoid; Sept 14 lock)',
   culturedDextrose:
@@ -101,13 +97,13 @@ const METH = {
   honey:
     'Methodology §5 Cleared-class (honey — sweetener; Sept 14 lock). Honest note only: not for under 1. No dosing.',
   organicFlavor: 'Methodology §5 Cleared (organic agave / organic flavors / organic colors)',
-  dropOil:
-    'Seed/industrial oils are flagged in gummies. In this liquid drop they are not that High rule.',
+  citrusTap:
+    'Label and DailyMed only say citrus fruit extract. They don’t name lemon, orange, or lime, or juice vs peel. We mark that Caution because the form isn’t clear.',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
 const DROP_OIL_TEXT =
-  'Seed/industrial oils are flagged in gummies. In this liquid drop they are not that High rule.';
+  'Seed/industrial oils are flagged in gummies. In this capsule/softgel/drop fill they are not that High rule.';
 
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
@@ -251,7 +247,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     ],
     verdict: 'clean',
     honestNote:
-      `FOUNDER-STYLE DRAFT: Genexa Infants' Vitamin D = Clean. ${DROP_OIL_TEXT} Organic vanilla flavor is Cleared-class organic flavor (§5), not Limited natural-flavor opacity. Demerit math: 0 pts. Infant-labeled drops (6 months–12 months as directed on carton). No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.`,
+      `FOUNDER-STYLE DRAFT: Genexa Infants' Vitamin D = Clean. Sunflower oil is a liquid-drop carrier — not the gummy seed-oil High rule. Organic vanilla flavor is Cleared-class organic flavor (§5), not Limited natural-flavor opacity. Demerit math: 0 pts. Infant-labeled drops (6 months–12 months as directed on carton). No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.`,
     retailers: [...GENEXA_RETAILERS],
     sourcesGeneral: [
       `https://www.genexa.com/products/vitamin-d-3-drops-for-babies — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`,
@@ -705,10 +701,10 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Maltodextrin (organic)',
-        'cleared',
+        'limited',
         labelCite(
           'https://www.genexa.com/products/sleepology-sleep-aid',
-          METH.organicMaltodextrinCleared,
+          METH.maltodextrin,
         ),
       ),
       flag(
@@ -727,7 +723,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER-STYLE DRAFT: Sleepology (adult) = Caution. Separate id from genexa-kids-sleepology — do not clone. Driver is natural vanilla lavender flavor Limited 1 pt (same family as locked kids-sleepology). Organic rice bran extract is Cleared. Organic maltodextrin / dextrose / carnauba are Cleared-class on this vanilla-lavender family. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER-STYLE DRAFT: Sleepology (adult) = Caution. Separate id from genexa-kids-sleepology — do not clone. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Organic rice bran extract is Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Ages 12+ (a 3–11 chart exists — this row is the adult SKU). No dosing in this draft.',
     retailers: [...GENEXA_RETAILERS],
@@ -778,10 +774,10 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Maltodextrin (organic)',
-        'cleared',
+        'limited',
         labelCite(
           'https://www.genexa.com/products/calm-keeper-medicine-to-calm-down-children',
-          METH.organicMaltodextrinCleared,
+          METH.maltodextrin,
         ),
       ),
       flag(
@@ -803,7 +799,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Calm Keeper = Caution. Organic rice bran extract is Cleared. Driver is natural vanilla lavender flavor Limited 1 pt (same family as locked kids-sleepology). Organic maltodextrin is Cleared-class on this vanilla-lavender family. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER-STYLE DRAFT: Kids\' Calm Keeper = Caution. Organic rice bran extract is Cleared. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Ages 3–11 (under 3: ask a doctor). No dosing in this draft.',
     retailers: [...GENEXA_RETAILERS],
@@ -847,10 +843,10 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Maltodextrin (organic)',
-        'cleared',
+        'limited',
         labelCite(
           'https://www.genexa.com/products/stress-relief-pills',
-          METH.organicMaltodextrinCleared,
+          METH.maltodextrin,
         ),
       ),
       flag(
@@ -869,7 +865,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER-STYLE DRAFT: Stress = Caution. Organic rice bran extract is Cleared. Driver is natural vanilla lavender flavor Limited 1 pt (same family as locked kids-sleepology). Organic maltodextrin is Cleared-class on this vanilla-lavender family. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER-STYLE DRAFT: Stress = Caution. Organic rice bran extract is Cleared. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Ages 12+ (a 3–11 chart exists — this row is the adult SKU). No dosing in this draft.',
     retailers: [...GENEXA_RETAILERS],
@@ -1132,7 +1128,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
         'limited',
         labelCite(
           'https://www.genexa.com/products/cough-chest-congestion',
-          METH.citrus,
+          `${METH.citrus}. ${METH.citrusTap}`,
         ),
       ),
       flag(

@@ -97,8 +97,18 @@ const METH = {
   lecithin: 'Methodology §5 Cleared (lecithin, soy or sunflower — locked v1.6)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar — locked v1.6)',
   organicFlavor: 'Methodology §5 Cleared (organic agave / organic flavors)',
+  riceBran:
+    'Methodology §5 Cleared (organic rice bran extract — hull/concentrate family; locked Sept 14, 2026)',
+  riceHull:
+    'Methodology §5 Cleared (organic rice hull extract / rice concentrate / ground rice hulls — plant-fiber flow agent)',
+  riceExtract:
+    'Methodology §5 Limited-risk (unspecified rice extract — Caution/Limited opacity; label did not name hull, bran, or concentrate)',
+  inulin: 'Methodology §5 Cleared (inulin — food fiber; locked Sept 14, 2026 housekeeping)',
   cleared: 'Methodology §5 Cleared',
 } as const;
+
+const RICE_EXTRACT_TAP =
+  'Label only says rice extract — it doesn’t name hull, bran, or concentrate. We mark that Caution because the form isn’t clear. Named organic rice hull extract, rice concentrate, ground rice hulls, or organic rice bran extract are Cleared.';
 
 function flag(
   name: string,
@@ -242,10 +252,30 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Dextrose'),
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Glycerin'),
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Sodium bicarbonate'),
+      flag(
+        'Organic rice bran extract',
+        'cleared',
+        dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.riceBran),
+      ),
+      flag(
+        'Rice hulls',
+        'cleared',
+        dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.riceHull),
+      ),
+      flag(
+        'Rice extract',
+        'limited',
+        `${dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.riceExtract)} ${RICE_EXTRACT_TAP}`,
+      ),
+      flag(
+        'Inulin',
+        'cleared',
+        dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.inulin),
+      ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Acetaminophen PM Extra Strength = Caution (maltodextrin Limited → 1 pt Caution). Do NOT apply the adult Genexa ES Clean maltodextrin exception — that exception is APAP-only and is not extended here. Organic sunflower oil / organic sunflower lecithin / organic palm olein are Cleared (v1.6 lecithin lock); this is a coated tablet, not a gummy, so the seed/industrial-oil High rule does not apply. Rice extract / rice hulls / rice bran, inulin, and dibehenin (vegetable source) are on the SPL and are not in Methodology §5 (ungraded; v1.6 intake) — not the Caution driver. Stay under 4 g/day acetaminophen, same as any APAP. ' +
+      'FOUNDER CALL: Genexa Acetaminophen PM Extra Strength = Caution (maltodextrin Limited 1 pt). Do NOT apply the adult Genexa ES Clean maltodextrin exception. Organic sunflower oil / lecithin / palm olein are Cleared on this coated tablet (not a gummy). Rice hulls / organic rice bran extract / inulin are now §5 Cleared. Unspecified rice extract is Limited opacity (not the driver). Dibehenin (vegetable source) is still not in §5 — notes only, not graded. Stay under 4 g/day acetaminophen, same as any APAP. ' +
       SEDATING +
       ' Ages 12+ (under 12: ask a doctor).',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],

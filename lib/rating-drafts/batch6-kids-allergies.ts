@@ -84,7 +84,9 @@ const METH = {
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
-  maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
+  maltodextrin: 'Methodology §5 Limited-risk (maltodextrin — organic and non-organic)',
+  riceBran:
+    'Methodology §5 Cleared (organic rice bran extract — hull/concentrate family; locked Sept 14, 2026)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
   maltitol: 'Methodology §5 Limited-risk (sugar alcohols — maltitol)',
@@ -376,10 +378,15 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       cleared('ba0da07a-107b-2c66-e053-2995a90ab96a', 'Carnauba wax (organic)'),
       cleared('ba0da07a-107b-2c66-e053-2995a90ab96a', 'Dextrose (organic)'),
+      flag(
+        'Organic rice bran extract',
+        'cleared',
+        dailymed('ba0da07a-107b-2c66-e053-2995a90ab96a', METH.riceBran),
+      ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Kids Allergy Care = Caution (maltodextrin). Do not extend the adult Genexa ES Clean exception. DailyMed lists organic maltodextrin; organic flavors / dextrose / carnauba wax are Cleared. Rice bran extract is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER CALL: Genexa Kids Allergy Care = Caution (organic maltodextrin Limited 1 pt). Do not extend the adult Genexa ES Clean exception. Organic flavors / dextrose / carnauba wax and organic rice bran extract are Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Ages 3–11 (under 3: ask a doctor). Separate formulaId from adult Genexa Allergy Care (different actives, including Rosa damascena 6X).',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
