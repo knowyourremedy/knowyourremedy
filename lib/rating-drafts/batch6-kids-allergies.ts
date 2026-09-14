@@ -10,15 +10,16 @@
 //
 // CLEAN PICKS STALE NOTE (do not edit live Clean Picks from this draft):
 // allergyPicks.ts still lists Genexa Kids' Allergy as a live Clean pick with
-// "natural citrus extract." Confirmed DailyMed SPL a7bc5f7c lists only
-// organic agave syrup, flavor (natural), and purified water — do not invent
-// citrus. Live file is unchanged on purpose.
+// "natural citrus extract." DailyMed SPL a7bc5f7c listed flavor (natural)
+// only. Live Genexa.com (batch 32 OI update) now lists Natural Citrus
+// Extract. Founder don't-demerit-natural-flavors exception on this REUSE
+// id is KEPT — row stays Clean. Live Clean Picks file is unchanged.
 //
 // FOUNDER CALLS (LOCKED):
 // - KA1 Genexa Kids' Allergy DPH liquid = Clean. SPL confirmed
-//   (setid a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4). Organic agave + natural
-//   flavor + purified water. minAge 6 (2–under 6: do not use unless directed
-//   by a doctor). Do not invent citrus extract.
+//   (setid a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4). Live Genexa.com now
+//   lists Natural Citrus Extract. Founder don't-demerit-natural-flavors
+//   exception KEPT (same as Kids APAP / Kids Multi). minAge 6.
 // - KA2 Genexa Kids Allergy Care homeopathic = Caution (maltodextrin).
 //   setid ba0da07a-107b-2c66-e053-2995a90ab96a. Do NOT extend the adult
 //   Genexa ES Clean exception.
@@ -284,12 +285,9 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
         dailymed('a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4', METH.organicFlavor),
       ),
       flag(
-        'Natural flavor',
+        'Natural Citrus Extract',
         'cleared',
-        dailymed(
-          'a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4',
-          'Founder call: this liquid stays Clean. Organic agave is Cleared; do not demerit the accompanying "flavor (natural)" line on this SKU. Do not invent citrus extract — SPL wording is flavor (natural) only.',
-        ),
+        'https://www.genexa.com/products/kids-diphenhydramine-allergy-liquid; Founder exception KEPT: this Kids Allergy DPH liquid stays Clean. Live Genexa.com now lists Natural Citrus Extract (Limited-class flavor under Sept 14 locks). Same don\'t-demerit-natural-flavors exception as Kids APAP / Kids Multi conventional liquids. DailyMed setid a7bc5f7c previously said flavor (natural) only — carton/live site is now citrus extract. Do not apply Limited → Caution on this REUSE id.',
       ),
       flag(
         'Purified water',
@@ -299,10 +297,11 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     ],
     verdict: 'clean',
     honestNote:
-      'FOUNDER CALL: draft Clean. DailyMed SPL now confirmed (setid a7bc5f7c) — this row was held pending SPL and is written after that confirmation. Inactives are organic agave syrup, flavor (natural), and purified water. Live Clean Picks still says "natural citrus extract"; the SPL is flavor (natural) only — do not invent citrus. Carton Ages 6+; children 2 to under 6 years: do not use unless directed by a doctor; under 2: do not use. Diphenhydramine is a first-generation (sedating) antihistamine — listed as a cleanliness / use note only, not an efficacy claim. Always dose with the enclosed cup. Live Clean Pick may stay; this draft does not edit allergyPicks.ts.',
+      'FOUNDER CALL: draft Clean — exception KEPT after live OI update. Live Genexa.com now lists Natural Citrus Extract (Limited-class flavor under Sept 14 locks). This row has an explicit don\'t-demerit-natural-flavors founder exception, same as Kids APAP / Kids Multi conventional liquids — do not apply Limited → Caution on this REUSE id. Organic agave is Cleared. DailyMed setid a7bc5f7c previously said flavor (natural) only. Carton Ages 6+; children 2 to under 6 years: do not use unless directed by a doctor; under 2: do not use. Diphenhydramine is a first-generation (sedating) antihistamine — listed as a cleanliness / use note only, not an efficacy claim. Always dose with the enclosed cup. Live Clean Pick may stay; this draft does not edit allergyPicks.ts.',
     retailers: ['Walmart', 'CVS', 'Target', 'Whole Foods'],
     sourcesGeneral: [
-      'DailyMed setid a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4 (draft, not verified)',
+      'https://www.genexa.com/products/kids-diphenhydramine-allergy-liquid (live OI; draft, not verified)',
+      'DailyMed setid a7bc5f7c-eaeb-25d0-e053-2a95a90a9ec4 (prior SPL flavor (natural); draft, not verified)',
     ],
   },
   {
