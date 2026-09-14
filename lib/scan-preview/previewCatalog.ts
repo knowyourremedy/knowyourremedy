@@ -138,9 +138,9 @@ const PREVIEW_BRAND_MARK: Record<string, ProductImage> = {
   nauzene: brandMark('nauzene-mark.png'),
 };
 
-// Attempted Digestive leftovers with no matching carton. Not verifiedSku.
-// Per-id only — do not brand-level Culturelle / Pedialyte / 365 (other aisles
-// still have unattempted SKUs that must stay on the letter tile).
+// Attempted leftovers with no matching carton. Not verifiedSku.
+// Per-id only — do not brand-level Culturelle / Pedialyte / 365 / Tylenol
+// (other aisles or unattempted SKUs must stay on the letter tile).
 const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'culturelle-kids-packets': brandMark('culturelle-mark.png'),
   'culturelle-kids-gummies-coconut': brandMark('culturelle-mark.png'),
@@ -152,6 +152,7 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'thrive-wellmade-womens-daily-probiotic': brandMark('wellmade-mark.png'),
   'thrive-wellmade-mens-daily-probiotic': brandMark('wellmade-mark.png'),
   'thrive-wellmade-kids-chewable-probiotic': brandMark('wellmade-mark.png'),
+  'tylenol-rs-caplets': brandMark('tylenol-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -257,6 +258,25 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'pedialyte-freezer-pops': catalogShot('pedialyte-freezer-pops.jpg'),
   'culturelle-digestive-daily': catalogShot('culturelle-digestive-daily.jpg'),
   'align-daily-probiotic': catalogShot('align-daily-probiotic.jpg'),
+  'tylenol-es-caplets': catalogShot('tylenol-es-caplets.jpg'),
+  'tylenol-es-rapid-release-gels': catalogShot('tylenol-es-rapid-release-gels.jpg'),
+  'tylenol-es-liquid-gels': catalogShot('tylenol-es-liquid-gels.jpg'),
+  'tylenol-rs-tablets-plain': catalogShot('tylenol-rs-tablets-plain.jpg'),
+  'tylenol-8hr-peg': catalogShot('tylenol-8hr-peg.jpg'),
+  'tylenol-8hr-tio2': catalogShot('tylenol-8hr-tio2.jpg'),
+  'genexa-acetaminophen-es': catalogShot('genexa-acetaminophen-es.jpg'),
+  'kirkland-acetaminophen-es': catalogShot('kirkland-acetaminophen-es.jpg'),
+  'wf-365-acetaminophen-es': catalogShot('wf-365-acetaminophen-es.jpg'),
+  'cvs-health-es-castor': catalogShot('cvs-health-es-castor.jpg'),
+  'cvs-health-es-red40-tio2': catalogShot('cvs-health-es-red40-tio2.jpg'),
+  'walgreens-es-mineral-oil': catalogShot('walgreens-es-mineral-oil.jpg'),
+  'advil-tablets': catalogShot('advil-tablets.jpg'),
+  'advil-gel-caplets': catalogShot('advil-gel-caplets.jpg'),
+  'advil-dual-action': catalogShot('advil-dual-action.jpg'),
+  'motrin-ib-caplets': catalogShot('motrin-ib-caplets.jpg'),
+  'equate-ibuprofen-dye-free': catalogShot('equate-ibuprofen-dye-free.jpg'),
+  'cvs-health-ibuprofen-dye-free': catalogShot('cvs-health-ibuprofen-dye-free.jpg'),
+  'walgreens-ibuprofen-dye-free': catalogShot('walgreens-ibuprofen-dye-free.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -324,6 +344,7 @@ assertBrandMark('we-heart-wholesome-probiotic', 'We Heart Nutrition', 'we-heart-
 assertBrandMark('thrive-wellmade-womens-daily-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
 assertBrandMark('thrive-wellmade-mens-daily-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
 assertBrandMark('thrive-wellmade-kids-chewable-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
+assertBrandMark('tylenol-rs-caplets', 'Tylenol', 'tylenol-mark.png');
 
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -365,6 +386,9 @@ assertBrandTextTile(
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
+// Per-id Tylenol mark only. Kids / other-aisle Tylenol SKUs stay letters.
+assertLetterOnly('tylenol-children-liquid-dyed', 'Tylenol');
+assertLetterOnly('tylenol-infants-liquid-dyefree', 'Tylenol');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -379,6 +403,25 @@ assertExactCarton('pepto-bismol-chewables', 'Pepto-Bismol', 'pepto-bismol-chewab
 assertExactCarton('pedialyte-freezer-pops', 'Pedialyte', 'pedialyte-freezer-pops.jpg');
 assertExactCarton('culturelle-digestive-daily', 'Culturelle', 'culturelle-digestive-daily.jpg');
 assertExactCarton('align-daily-probiotic', 'Align', 'align-daily-probiotic.jpg');
+assertExactCarton('tylenol-es-caplets', 'Tylenol', 'tylenol-es-caplets.jpg');
+assertExactCarton('tylenol-es-rapid-release-gels', 'Tylenol', 'tylenol-es-rapid-release-gels.jpg');
+assertExactCarton('tylenol-es-liquid-gels', 'Tylenol', 'tylenol-es-liquid-gels.jpg');
+assertExactCarton('tylenol-rs-tablets-plain', 'Tylenol', 'tylenol-rs-tablets-plain.jpg');
+assertExactCarton('tylenol-8hr-peg', 'Tylenol', 'tylenol-8hr-peg.jpg');
+assertExactCarton('tylenol-8hr-tio2', 'Tylenol', 'tylenol-8hr-tio2.jpg');
+assertExactCarton('genexa-acetaminophen-es', 'Genexa', 'genexa-acetaminophen-es.jpg');
+assertExactCarton('kirkland-acetaminophen-es', 'Kirkland Signature', 'kirkland-acetaminophen-es.jpg');
+assertExactCarton('wf-365-acetaminophen-es', '365 Whole Foods Market', 'wf-365-acetaminophen-es.jpg');
+assertExactCarton('cvs-health-es-castor', 'CVS Health', 'cvs-health-es-castor.jpg');
+assertExactCarton('cvs-health-es-red40-tio2', 'CVS Health', 'cvs-health-es-red40-tio2.jpg');
+assertExactCarton('walgreens-es-mineral-oil', 'Walgreens', 'walgreens-es-mineral-oil.jpg');
+assertExactCarton('advil-tablets', 'Advil', 'advil-tablets.jpg');
+assertExactCarton('advil-gel-caplets', 'Advil', 'advil-gel-caplets.jpg');
+assertExactCarton('advil-dual-action', 'Advil', 'advil-dual-action.jpg');
+assertExactCarton('motrin-ib-caplets', 'Motrin', 'motrin-ib-caplets.jpg');
+assertExactCarton('equate-ibuprofen-dye-free', 'Equate', 'equate-ibuprofen-dye-free.jpg');
+assertExactCarton('cvs-health-ibuprofen-dye-free', 'CVS Health', 'cvs-health-ibuprofen-dye-free.jpg');
+assertExactCarton('walgreens-ibuprofen-dye-free', 'Walgreens', 'walgreens-ibuprofen-dye-free.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
