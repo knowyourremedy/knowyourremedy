@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (agar, dibehenin, grape seed extract, unspecified rice)
+Last Updated: September 14, 2026 (Limited stack stays Caution)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -244,6 +244,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Dibehenin (vegetable) = Cleared (vegetable wax/lubricant; stearate / wax family).
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
 - Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
+- Limited-only stack stays Caution (Usable). Any number of Limited flags does not become Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. Harm-first, not a Yuka point ladder.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
@@ -367,7 +368,7 @@ Two layers (this is also the product/app UI model):
 
 PRODUCT VERDICT (internal key / methodology): Clean / Caution / Avoid. DISPLAY badge (Sept 13 lock): Clean / Usable / Not clean — see §3 and §6. Do not change the stored verdict key to match the badge. Not a methodology grade change.
 INGREDIENT RISK LEVELS (the drill-down, the proof): each ingredient tagged Cleared (0pt) / Limited (1pt) / Moderate (2pt) / High (auto-Avoid), each with its source.
-Scoring: 0 pts = Clean · 1–2 pts = Caution · 3+ pts OR any single high-risk = Avoid.
+Scoring: 0 pts = Clean · Limited-only (any count) = Caution (Usable). Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide is a 0-pt Caution cap and does not push Avoid. 3× Limited no longer auto-Avoid.
 
 STATUS (Aug 2026): methodology is ~80% categorized across the ingredient universe. Remaining work: add preferred multi-source references for the last uncategorized ingredients, and lock final calls on the borderline ones. Founder (Brandon) has final say on every automatic-Avoid-vs-Caution-vs-Clean call — this is explicitly NOT delegable to bots (see §12), even once bulk database generation starts.
 

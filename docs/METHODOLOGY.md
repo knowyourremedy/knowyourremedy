@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 14, 2026:** 3× Limited no longer auto-Avoid.
+
 **Changed Sept 14, 2026:** named plant colors Cleared; chlorophyllin + cultured dextrose Caution; citrus extract stays flavor-opacity; tap-copy rule for vague vs named twins. Also locked Cleared — organic rice bran extract (rice-hull family), pea protein isolate, organic beet root, organic acerola, honey (oral; under-1 note), paprika extract/capsanthin as color, black carrot / named fruit-or-vegetable juice as color. Unspecified “rice extract” is the Limited opacity row (do not duplicate).
 
 **Changed Sept 14, 2026 (housekeeping locks — excipient siblings + tap-copy rule):** locked remaining housekeeping inactives into §5 the same day as the founder call. Cleared siblings: glycerin / vegetable / organic glycerin; calcium laurate (stearate family); cellulose gum / powdered cellulose / capsule cellulose (MCC family); copovidone (povidone family); hydroxypropyl cellulose / HPC (HPMC family); rice protein / ferment media / organic-brown rice / rice syrup (food-state / starch family, not SiO2); dicalcium phosphate / tricalcium phosphate / citrate salts as fillers/buffers; inulin as fiber; alginic acid (gum/fiber family); canola / soy / sunflower lecithin (already the lecithin lock — named explicitly); coconut oil alone in gummies/chews is NOT seed-oil High; gellan gum with the xanthan/guar family. Limited: organic maltodextrin (same as non-organic); named lemon oil as flavor; unspecified “rice extract” opacity row; polydextrose (maltodextrin-like); fructose as sweetener (treat with sugars; not High). Caution / cap: whole-leaf / crude stevia (do not auto-Clean); methacrylic acid copolymer / unnamed delayed-release composites; phenoxyethanol (topical); lanolin (topical hypersensitivity, not Avoid). Fragrance / parfum stays Caution — not reopened. Morning food/color locks and chlorophyllin / cultured dextrose stay as already written. **Inactive not in §5 still goes to the founder before a live grade. After a lock it goes in this table the same day.** Liquid-drop oil carriers use the same non-gummy rule as capsule fill; tap text required.
@@ -52,7 +54,7 @@ Three tiers, each shown with its plain-language reasons. No 0–100 score. The b
 
 - **Clean** — no flagged additives.
 - **Caution** — minor compromises; cleaner options usually exist. Always links to the Clean alternative in the same category.
-- **Avoid** — contains a disqualifying additive, or enough minor ones to stack up.
+- **Avoid** — contains a High-tier inactive (or an explicit founder/active-safety cap). Limited-only flags do not stack into Avoid.
 
 ## 4. The scoring rule
 
@@ -66,7 +68,7 @@ Every inactive ingredient sorts into one of four risk levels. Internally it's a 
 | High-risk | automatic Avoid |
 
 - **Any single high-risk additive → Avoid**, regardless of anything else.
-- **3+ demerit points → Avoid** (e.g., three limited-risk, or one moderate + one limited).
+- **Limited-tier inactives do not stack into Avoid.** Any number of Limited-only flags stays Caution (Usable). Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. This is harm-first, not a Yuka point ladder.
 - **1–2 points → Caution.**
 - **0 points → Clean.**
 
