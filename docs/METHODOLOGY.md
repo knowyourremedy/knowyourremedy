@@ -6,7 +6,7 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
-**Changed Sept 14 2026:** organic rice bran extract locked Cleared with rice-hull family; unspecified rice extract remains Caution.
+**Changed Sept 14, 2026:** locked Cleared — organic rice bran extract (rice-hull family), pea protein isolate, organic beet root, organic acerola, honey (oral; under-1 note), paprika extract/capsanthin as color, black carrot as color; locked Caution — sodium copper chlorophyllin, organic cultured dextrose; locked Limited/Caution opacity — unnamed natural citrus extract; unspecified rice extract remains Caution.
 
 **Changed in v1.5:** merged a full multi-source international regulatory hierarchy (Tier 1 primary / Tier 2 consumer-advocacy / Tier 2-3 integrative) to replace the shorter source list from v1.3/v1.4. Added an explicit, permanent rule that U.S. FDA allowance, GRAS status, and IID listing are inventory/context only — never evidence of Clean. Added a default-trigger reference table for grading NEW/unfinished ingredients. Added a hard override clause: locked founder grades (Avoid/Caution/Clean already decided) are permanent and are NEVER reopened by applying the default-trigger table retroactively — the table is a starting point for ingredients not yet graded, not a re-grading mechanism. Confirmed under this override: aspartame stays Avoid, BHT stays Avoid.
 
@@ -170,6 +170,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
+| Natural citrus extract (unnamed fruit/part) — LOCKED (Sept 14, 2026) | unnamed citrus fruit extract | Limited / Caution opacity. DailyMed may map to CITRUS FRUIT UNII — still not lemon vs peel. Named “organic lemon oil” etc. can be revisited. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
 | Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
 | Non-organic maltodextrin | — | Glycemic; minor. |
@@ -196,10 +197,15 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
 | Organic rice hull extract / rice concentrate / ground rice hulls — **LOCKED** | Plant-fiber flow agent. Distinct from rice flour. Distinct from silicon dioxide. The SiO₂ nanoparticle Caution cap does NOT apply. |
 | Organic rice bran extract — LOCKED (Sept 14, 2026) | Named rice-plant fiber used as tablet/capsule filler or flow agent. Same family as rice hull extract / rice concentrate / ground rice hulls. Distinct from silicon dioxide. Distinct from unspecified “rice extract.” Unspecified “rice extract” stays Caution (opacity) until the label says hull, concentrate, hulls, or bran. |
-| Xanthan gum, guar gum, gum arabic, pectin — **LOCKED (v1.6)** | EFSA-approved; largely undigested/unabsorbed; human tolerance studies far above realistic exposure. Feed-additive-track genotoxicity data gaps (different species/route) don't carry over to human food-additive approvals. |
+| Pea protein isolate — LOCKED (Sept 14, 2026) | Food protein excipient. Not a flag. |
+| Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
+| Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
+| Honey (oral sweetener) — LOCKED (Sept 14, 2026) | Cleared-class sweetener. Tap + honest: not for under 1. Not a grade change to Avoid. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Whole-leaf/crude stevia is a DIFFERENT, ungraded case — flag for review if it ever appears, do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
 | Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. |
+| Paprika extract / capsanthin as COLOR — LOCKED (Sept 14, 2026) | Named spice color (E160c). Same posture as turmeric-as-color. Unnamed “color added” stays Caution. |
+| Black carrot / juice concentrate as COLOR — LOCKED (Sept 14, 2026) | Named plant color. Same posture as paprika / turmeric-as-color. |
 | Disodium EDTA, TRACE preservative/stabilizer use — **LOCKED (v1.6)** | Confirmed safe at the actual trace concentrations used (0.001%–0.25% w/v) in eye drops/topical formulations. The neurotoxicity/chelation-risk literature is specific to gram-level IV THERAPEUTIC chelation doses — a different dose and context, noted as a disclaimer only. |
 | Lecithin (soy or sunflower) — **LOCKED (v1.6)** | EFSA 2017: no safety concern, no ADI needed. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). |
 | Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. |
@@ -219,6 +225,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Benzalkonium chloride (BKC) | Clear ciliotoxicity in vitro (multiple studies); conflicting in vivo/clinical results — some studies find no measurable harm to nasal mucociliary clearance. Contested evidence is enough for Caution, not Avoid. | Standard alternatives rule. |
 | Benzyl alcohol — GENERAL ORAL OTC USE (older children/adults) | See §0 for the full population-split rule. At normal label doses in general oral OTC use, doses are far below the documented "gasping syndrome" threshold. | Note the gasping-syndrome history and that risk is dose- and age-specific. NEVER recommend a benzyl-alcohol product as a cleaner alternative for a 2+ or infant-labeled product, regardless of the swap's own age range. |
 | Cochineal / carmine / carminic acid — **LOCKED (v1.6)** | Insect-derived red color. Can cause allergic reactions in sensitive people. | If a dye-free/carmine-free Good option exists in the same use category and age range, prefer it in alternatives. Not Avoid. |
+| Sodium copper chlorophyllin (E141) — LOCKED (Sept 14, 2026) | Caution. Copper-complex color, not raw chlorophyll / parsley. Not a High/Avoid dye row. | Standard alternatives rule. Not Avoid. |
+| Organic cultured dextrose — LOCKED (Sept 14, 2026) | Caution. Ferment preservative system, not the same as dextrose/cane sugar sweetener. Not Avoid. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 

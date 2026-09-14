@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (ingredient tap transparency; rice bran extract lock)
+Last Updated: September 14, 2026 (Sept 14 inactive locks + tap transparency)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -221,6 +221,20 @@ Honest always. Every flagged or context-scoped inactive needs a plain-language w
 Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
 
 Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Caution + the vague-form tap sentence.
+
+Sept 14 inactive locks (now in Methodology §5 — do not reopen):
+- Organic rice bran extract = Cleared (rice-hull family). Unspecified “rice extract” = Caution (opacity).
+- Pea protein isolate = Cleared (food protein excipient).
+- Organic beet root (food / excipient / color-food) = Cleared (whole-food, not a synthetic dye).
+- Organic acerola = Cleared (food fruit).
+- Honey (oral sweetener) = Cleared-class sweetener. Tap + honest: not for under 1. Not Avoid.
+- Paprika extract / capsanthin as COLOR = Cleared (named spice color E160c; same as turmeric-as-color). Unnamed “color added” stays Caution. Named lock supersedes the leftover paprika Caution line above.
+- Black carrot / juice concentrate as COLOR = Cleared (named plant color; same posture as paprika / turmeric-as-color).
+- Sodium copper chlorophyllin (E141) = Caution (copper-complex color, not raw chlorophyll / parsley). Not High/Avoid.
+- Organic cultured dextrose = Caution (ferment preservative, not dextrose/cane sugar sweetener). Not Avoid.
+- Natural citrus extract (unnamed fruit/part) = Limited / Caution opacity. DailyMed CITRUS FRUIT UNII still not lemon vs peel. Named “organic lemon oil” etc. can be revisited.
+- “Natural flavor” stays Limited as already written.
+- Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does.
 
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
