@@ -223,6 +223,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
 | Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
 | Grape seed extract as inactive — LOCKED (Sept 14, 2026) | Named plant-part food botanical. Not grape seed oil unless the label says oil. Not a High row. |
+| Glycyrrhiza extract / licorice extract (oral inactive) — LOCKED (Sept 14, 2026) | Named botanical. High-intake glycyrrhizin BP/potassium literature is a tap note, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA candy warning is one source, not a veto. |
 | Honey (oral sweetener) — LOCKED (Sept 14, 2026) | Cleared-class sweetener. Tap + honest: not for under 1. Not a grade change to Avoid. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
@@ -254,6 +255,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
 | Phenoxyethanol (topical preservative) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution. Topical preservative. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lanolin (topical) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution hypersensitivity pattern (wool-alcohol sensitivity), not Avoid. | Standard alternatives rule. Prefer a lanolin-free Good option in the same category if one exists. Do not raise to Avoid. |
+| Wood rosin / colophony (topical) — LOCKED | Contact-allergy pattern. Not Avoid. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 

@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Limited stack stays Caution)
+Last Updated: September 14, 2026 (licorice extract Cleared; wood rosin topical Caution)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -245,6 +245,9 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
 - Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
 - Limited-only stack stays Caution (Usable). Any number of Limited flags does not become Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. Harm-first, not a Yuka point ladder.
+- Glycyrrhiza extract / licorice extract (oral inactive) = Cleared. Named botanical. High-intake glycyrrhizin BP/potassium literature is a tap note, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA candy warning is one source, not a veto.
+- Wood rosin / colophony (topical) = Caution (contact-allergy pattern). Not Avoid.
+- FDA is one source, not a veto.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
