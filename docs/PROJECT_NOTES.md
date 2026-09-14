@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (parks, night aisle order + three wakes, Digestive last)
+Last Updated: September 14, 2026 (Search type-ahead 1 letter; Digestive photos done; night aisle order; scope parks)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -121,13 +121,14 @@ CABINET
 
 Parked
 - Real barcode camera / UPC fill
-- Catalog photo pipeline beyond the 3 preview SKUs
+- Catalog photo factory (night routine + barcodes). Digestive demo aisle is filled; other aisles follow the night order.
 - User photo upload + review queue
 - Accounts / cloud sync of Cabinet
 
 Next session
-- Do not reopen Search / post-scan / Home / Cabinet unless something is broken.
-- Optional: more exact-SKU photos, or real scan when barcodes exist.
+- Do not reopen Search / post-scan / Home / Cabinet unless broken.
+- Morning check: last night’s photo aisle. Daytime this week: a few barcodes to earn merge later.
+- Next catalog day: Sprouts/natural brands. No Canada/EU.
 
 Brandon standards (handoff)
 - Don’t half-dress the catalog or UI to hit a launch date.
@@ -204,6 +205,7 @@ The gap nobody owns — Yuka does food/cosmetics; nobody owns medicine/supplemen
 ================================================================ 2. SCOPE & CATEGORIZATION (MAJOR UPDATE — August 2026)
 
 Graded product scope: OTC medicines, vitamins, supplements. Protein powders/shakes are IN SCOPE as a database category (they are dietary supplements, not conventional food, and get NO separate grading system — same methodology applies) but are DEPRIORITIZED — Brandon's explicit call: most customers mentally file protein powder as food, not medicine, so it isn't needed for launch. Code the category now so it exists in the schema, but do not populate/launch it until after launch or whenever it's revisited. This is a deliberate scope choice, not an oversight — do not "helpfully" add protein powder data before Brandon asks.
+Sept 14 lock — do not populate protein powder/bars/meal shakes or Pedialyte-class drinks. Schema may exist. Night bot must not photo that aisle.
 
 Essential oils are scanned but NEVER graded (info-only — see §9). Firm, permanent distinction, not a launch-time limitation.
 
