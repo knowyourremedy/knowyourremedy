@@ -238,7 +238,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       flag(
         'Organic sunflower seed oil',
         'cleared',
-        `${DROP_OIL_TEXT}; https://www.genexa.com/products/vitamin-d-3-drops-for-babies`,
+        `https://www.genexa.com/products/vitamin-d-3-drops-for-babies; ${DROP_OIL_TEXT}`,
       ),
       flag(
         'Organic vanilla flavor',
