@@ -32,6 +32,7 @@ import {
   BATCH29_DOLLAR_STORE,
   BATCH30_AMAZON_BASIC_CARE,
   BATCH31_MEGAFOOD,
+  BATCH32_GENEXA,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -84,6 +85,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH29_DOLLAR_STORE,
   ...BATCH30_AMAZON_BASIC_CARE,
   ...BATCH31_MEGAFOOD,
+  ...BATCH32_GENEXA,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -909,6 +911,9 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
   }
 
   if (ingredient.riskLevel === 'cleared') {
+    if (source.includes('in this liquid drop they are not that high rule')) {
+      return 'Seed/industrial oils are flagged in gummies. In this liquid drop they are not that High rule.';
+    }
     if (source.includes('not in methodology') || source.includes('ungraded')) {
       return 'Why pending review';
     }

@@ -24,9 +24,10 @@
 //   water / dextrose / citrate / salts only — no sucralose, Ace-K, or dye.
 //   Zinc gluconate is parked (inactives only). Infant-usable unflavored.
 // CAUTION
-// - KD6 Genexa Kids Tummy Relief = Caution. setid 4f9db9dc. Driver =
-//   non-organic maltodextrin (Limited). Organic flavors are Cleared — do
-//   NOT score them as the Limited flavor row. minAge 2.
+// - KD6 Genexa Kids Tummy Relief = Caution. Live Genexa.com OI (batch 32):
+//   organic beet root + organic rice bran extract Cleared (Sept 14 locks);
+//   organic flavors Cleared; organic maltodextrin Limited 1 pt matching
+//   locked Genexa chew siblings. Recalculated: still Caution. minAge 2.
 // - KD7 Little Remedies Gas Relief Drops = Caution. setid 874d3f1d.
 //   Flavor + one preservative (benzoic acid) only. Infant / 0+ as labeled.
 //   Sorbitol is also Limited on the SPL — draft follows the locked Caution
@@ -132,6 +133,9 @@ const METH = {
     'Methodology §5 Caution (benzyl alcohol — general oral OTC; standalone Caution, not additive-scored, not Avoid on this population)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
   organicFlavor: 'Methodology §5 Cleared (organic flavors / organic colors)',
+  beet: 'Methodology §5 Cleared-class (organic beet root — whole-food; Sept 14 lock)',
+  riceBran:
+    'Methodology §5 Cleared (organic rice bran extract — hull/concentrate family; locked Sept 14, 2026)',
   coconutOil:
     'Methodology §5 — coconut oil / fractionated coconut oil alone is NOT the gummy seed/industrial-oil High rule',
   cleared: 'Methodology §5 Cleared',
@@ -503,30 +507,59 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     activeIngredients: [{ name: 'Calcium carbonate', strength: '400mg' }],
     inactiveIngredients: [
       flag(
-        'Maltodextrin',
+        'Maltodextrin (organic)',
         'limited',
-        dailymed(SET_GENEXA_TUMMY, METH.maltodextrin),
+        labelCite(
+          'https://www.genexa.com/products/kids-tummy-relief',
+          `${METH.maltodextrin} — live carton is organic maltodextrin; still the Limited chew-sibling driver (do not invent Clean)`,
+        ),
+      ),
+      flag(
+        'Organic beet root',
+        'cleared',
+        labelCite('https://www.genexa.com/products/kids-tummy-relief', METH.beet),
+      ),
+      flag(
+        'Organic rice bran extract',
+        'cleared',
+        labelCite(
+          'https://www.genexa.com/products/kids-tummy-relief',
+          METH.riceBran,
+        ),
       ),
       flag(
         'Flavors (organic)',
         'cleared',
-        dailymed(SET_GENEXA_TUMMY, METH.organicFlavor),
+        labelCite(
+          'https://www.genexa.com/products/kids-tummy-relief',
+          METH.organicFlavor,
+        ),
       ),
       flag(
-        'Carnauba wax (non-GMO)',
+        'Organic carnauba wax',
         'cleared',
-        dailymed(SET_GENEXA_TUMMY, METH.cleared),
+        labelCite(
+          'https://www.genexa.com/products/kids-tummy-relief',
+          METH.cleared,
+        ),
       ),
-      cleared(SET_GENEXA_TUMMY, 'Dextrose (natural)'),
-      cleared(SET_GENEXA_TUMMY, 'Starch (natural)'),
+      flag(
+        'Non-GMO dextrose',
+        'cleared',
+        labelCite(
+          'https://www.genexa.com/products/kids-tummy-relief',
+          METH.cleared,
+        ),
+      ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Kids Tummy Relief = Caution. Driver is non-organic maltodextrin (Limited). Organic flavors are Cleared-class — do NOT score them as the Limited natural-flavor row. DailyMed setid 4f9db9dc: carnauba wax (non-GMO), dextrose (natural), flavors (organic), maltodextrin, starch (natural). Ages 2+ (24–47 lbs / 2–5 years; under 2: ask a doctor). Calcium-carbonate antacid — cleanliness only.',
+      'FOUNDER CALL: Genexa Kids Tummy Relief = Caution after live OI update. Live Genexa.com now lists organic beet root + organic rice bran extract (both Cleared under Sept 14 locks) plus organic flavors, organic carnauba wax, non-GMO dextrose, and organic maltodextrin. Organic flavors stay Cleared-class — do NOT score them as Limited natural flavors. Recalculated §5 math: organic maltodextrin Limited 1 pt matching locked Genexa chew siblings (allergy-care / kids-cold-crush) → still Caution. Do not invent Clean. Older DailyMed setid 4f9db9dc listed non-organic maltodextrin + starch — live carton replaced that list. Ages 2+ (24–47 lbs / 2–5 years; under 2: ask a doctor). Calcium-carbonate antacid — cleanliness only.',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Walgreens'],
     cleanAlternatives: TUMMY_ALTS,
     sourcesGeneral: [
-      `DailyMed setid ${SET_GENEXA_TUMMY} (draft, not verified)`,
+      'https://www.genexa.com/products/kids-tummy-relief (live OI; draft, not verified)',
+      `DailyMed setid ${SET_GENEXA_TUMMY} (prior SPL; draft, not verified)`,
     ],
   },
   {
