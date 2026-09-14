@@ -906,14 +906,38 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     return 'Sugar alcohol. Limited risk from GI effects at volume; cleaner formulas exclude it.';
   }
 
+  if (
+    (name.includes('rice extract') && !name.includes('bran') && !name.includes('hull') && !name.includes('concentrate'))
+    || source.includes('unspecified rice extract')
+  ) {
+    return 'Label only says rice extract — it doesn’t name hull, bran, or concentrate. We mark that Caution because the form isn’t clear. Named organic rice hull extract, rice concentrate, ground rice hulls, or organic rice bran extract are Cleared.';
+  }
+
+  if (
+    ingredient.riskLevel === 'limited'
+    && (
+      (name.includes('citrus') && name.includes('extract'))
+      || source.includes('citrus fruit extract')
+      || source.includes('natural citrus extract')
+    )
+  ) {
+    return 'Label and DailyMed only say citrus fruit extract. They don’t name lemon, orange, or lime, or juice vs peel. We mark that Caution because the form isn’t clear.';
+  }
+
   if (name.includes('flavor') || source.includes('flavors — opacity') || source.includes('natural / artificial flavors')) {
     return 'Undisclosed flavor mixture. Limited risk for opacity, not a known hazard; cleaner formulas exclude it.';
   }
 
+  if (
+    source.includes('flagged in gummies')
+    || source.includes('capsule/softgel')
+    || source.includes('capsule / softgel')
+    || source.includes('in this liquid drop they are not that high rule')
+  ) {
+    return 'Seed/industrial oils are flagged in gummies. In this capsule/softgel/drop fill they are not that High rule.';
+  }
+
   if (ingredient.riskLevel === 'cleared') {
-    if (source.includes('in this liquid drop they are not that high rule')) {
-      return 'Seed/industrial oils are flagged in gummies. In this liquid drop they are not that High rule.';
-    }
     if (source.includes('not in methodology') || source.includes('ungraded')) {
       return 'Why pending review';
     }

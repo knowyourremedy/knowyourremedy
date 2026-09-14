@@ -82,7 +82,9 @@ const METH = {
   peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
-  maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
+  maltodextrin: 'Methodology §5 Limited-risk (maltodextrin — organic and non-organic)',
+  riceBran:
+    'Methodology §5 Cleared (organic rice bran extract — hull/concentrate family; locked Sept 14, 2026)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
   maltitol: 'Methodology §5 Limited-risk (sugar alcohols — maltitol)',
@@ -699,10 +701,15 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('b5fddd8f-a380-6e88-e053-2a95a90a6b89', 'Carnauba wax (organic)'),
       cleared('b5fddd8f-a380-6e88-e053-2a95a90a6b89', 'Dextrose (organic)'),
+      flag(
+        'Organic rice bran extract',
+        'cleared',
+        dailymed('b5fddd8f-a380-6e88-e053-2a95a90a6b89', METH.riceBran),
+      ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Allergy Care = Caution (maltodextrin). Do NOT keep the live Clean Picks Clean grade. Do not extend the adult Genexa ES Clean exception. DailyMed lists organic maltodextrin; organic flavors / dextrose / carnauba wax are Cleared. Rice bran extract is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Homeopathic chewable — cleanliness only, no efficacy claim. ' +
+      'FOUNDER CALL: Genexa Allergy Care = Caution (organic maltodextrin Limited 1 pt). Do NOT keep the live Clean Picks Clean grade. Do not extend the adult Genexa ES Clean exception. Organic flavors / dextrose / carnauba wax and organic rice bran extract are Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
       CARLSTON +
       ' Adult directions 12+ (a 3–11 chart exists — this row is the adult SKU).',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
