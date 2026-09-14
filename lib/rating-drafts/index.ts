@@ -30,3 +30,4 @@ export { BATCH29_DOLLAR_STORE } from './batch29-dollar-store';
 export { BATCH30_AMAZON_BASIC_CARE } from './batch30-amazon-basic-care';
 export { BATCH31_MEGAFOOD } from './batch31-megafood';
 export { BATCH32_GENEXA } from './batch32-genexa';
+export { BATCH33_HYLANDS } from './batch33-hylands';
