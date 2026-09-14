@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (brand-catalog loop, MegaFood sweep, seed-oil form note)
+Last Updated: September 14, 2026 (rice bran extract locked Cleared; brand-catalog loop)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -211,6 +211,8 @@ Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §
 - Sodium copper chlorophyllin = Caution (color additive).
 - MCT: coconut-only = not gummy High. Unlabeled MCT source = Caution opacity, not Avoid.
 - “Rice” / “rice extract” is NOT the rice-hull Clean lock. Rice flour/starch = Cleared starch. Vague rice extract = Caution until the carton says hull / concentrate / hulls.
+- Organic rice bran extract = Cleared (Methodology §5, locked with hull/concentrate family). Unspecified “rice extract” stays Caution.
+- New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty.
 
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
