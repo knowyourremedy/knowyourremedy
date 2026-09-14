@@ -29,14 +29,19 @@
 //   organic flavors Cleared; organic maltodextrin Limited 1 pt matching
 //   locked Genexa chew siblings. Recalculated: still Caution. minAge 2.
 // - KD7 Little Remedies Gas Relief Drops = Caution. setid 874d3f1d.
-//   Flavor + one preservative (benzoic acid) only. Infant / 0+ as labeled.
-//   Sorbitol is also Limited on the SPL — draft follows the locked Caution
-//   call (flavor + one preservative), not a 3-pt Avoid stack.
+//   Flavor + benzoic acid + sorbitol is Limited-only. Infant / 0+ as
+//   labeled. Limited-only never Avoid.
 // - KD8 Culturelle Kids probiotic gummies coconut-only = Caution. Natural
 //   flavors + fractionated coconut oil. Coconut oil alone is NOT the gummy
 //   seed-oil High rule. Separate from a palm / veg-oil Avoid twin (none
 //   written — no concrete SKU). Ages 2–3 as labeled (some Veggie Fiber
 //   cartons are 3+).
+// - KD13 Mylicon Infants Dye-Free = Caution. setid 3324139a. Limited-only
+//   stack (natural flavor + potassium sorbate + sodium benzoate +
+//   sorbitol). Limited-only never Avoid. Dye-free is not Clean.
+// - KD14 CVS Health Infants Dye-Free Gas / Walgreens twin = Caution.
+//   Same Limited-only stack (CVS setid 088993c1; Walgreens 05d2a37f).
+//   Shared store-family formulaId.
 // AVOID
 // - KD9 Pepto Kids (calcium carbonate) = Avoid. setid 673c45dc. Red #27
 //   lake + talc + flavor. minAge 2. Adult Pepto bismuth is not this row.
@@ -46,13 +51,6 @@
 //   Red 28 + sucralose. minAge 2.
 // - KD12 Mylicon Infants Original = Avoid. setid 395be942. Red 22 + Red 28.
 //   Infant / 0+.
-// - KD13 Mylicon Infants Dye-Free = Avoid. setid 3324139a. FOUNDER LOCK:
-//   natural flavor + potassium sorbate + sodium benzoate = 3 Limited points
-//   = Avoid, not Caution. Dye-free is not Clean.
-// - KD14 CVS Health Infants Dye-Free Gas / Walgreens twin = Avoid. Exact
-//   same flavor + sorbate + benzoate stack (CVS setid 088993c1; Walgreens
-//   05d2a37f). Shared store-family formulaId. A twin that is only flavor +
-//   one preservative would be Caution — these SPLs are the 3-Limited stack.
 // - KD15 Dramamine for Kids = Avoid. setid 12bc3f17. Aspartame High.
 //   minAge 2.
 // - KD16 Pedialyte Classic flavored = Avoid. Sucralose + Ace-K ± dyes
@@ -65,7 +63,7 @@
 //   inulin carton is a different formula — not this row; Clean is not
 //   invented.
 //
-// TALLY (unverified drafts): 19 rows — Clean 5 / Caution 3 / Avoid 11.
+// TALLY (unverified drafts): 19 rows — Clean 5 / Caution 6 / Avoid 8.
 // Independently Clean in THIS batch only: Gasalia meltaways, Gasalia
 // pellets, NauseaCalm (shared adult formulaId), MotionCalm (shared adult
 // formulaId), Pedialyte Classic Unflavored. Caution / Avoid rows offer
@@ -75,12 +73,13 @@
 // probiotic exists here — those rows still point at the closest Clean
 // Digestive peer (form + age labeled).
 //
-// LIMITED MATH (LOCKED): 3 Limited points = Avoid. Worked example:
-// natural flavor + potassium sorbate + sodium benzoate = Avoid, not
-// Caution. That lock is why dye-free infant gas (Mylicon / CVS /
-// Walgreens) is Avoid. Organic flavors = Cleared. Non-organic
-// maltodextrin = Limited. Aspartame / dyes / talc / TiO2 = High Avoid.
-// Sucralose / Ace-K = Moderate. Seed / veg oils in gummies = High Avoid.
+// LIMITED MATH: Limited-only (any count) stays Caution. Avoid requires
+// a High-tier inactive (or an explicit founder/active-safety cap).
+// SiO2 is a 0-pt cap and does not push Avoid. Worked example: natural
+// flavor + potassium sorbate + sodium benzoate + sorbitol = Caution,
+// not Avoid. Organic flavors = Cleared. Non-organic maltodextrin =
+// Limited. Aspartame / dyes / talc / TiO2 = High Avoid. Sucralose /
+// Ace-K = Moderate. Seed / veg oils in gummies = High Avoid.
 // Coconut oil alone ≠ that High rule.
 //
 // SHARED ADULT FORMULA IDs: NauseaCalm + MotionCalm reuse batch 10
@@ -179,8 +178,8 @@ const CARLSTON =
 const ZINC_PARKED =
   'Zinc (gluconate) on Pedialyte is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
 
-const LIMITED_3_AVOID =
-  'FOUNDER LOCK: 3 Limited points = Avoid. Natural flavor + potassium sorbate + sodium benzoate is the worked example — Avoid, not Caution.';
+const LIMITED_STACK_CAUTION =
+  'Limited-only stack stays Caution. Natural flavor + potassium sorbate + sodium benzoate + sorbitol is Limited-only — not Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap).';
 
 const GASALIA_MELTAWAYS = 'boiron-gasalia-meltaways';
 const GASALIA_PELLETS = 'boiron-gasalia-pellets';
@@ -305,11 +304,11 @@ function dyeFreeInfantGasRow(opts: {
       cleared(opts.setid, 'Microcrystalline cellulose'),
       cleared(opts.setid, 'Purified water'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      `FOUNDER CALL: ${opts.noteBrand} Infants Dye-Free Gas Relief = Avoid. ` +
-      LIMITED_3_AVOID +
-      ' DailyMed inactive list matches Mylicon Infants Dye-Free (natural flavors, potassium sorbate, sodium benzoate, sorbitol, CMC, citric acid, MCC, polysorbate 60, sorbitan monostearate, xanthan gum, water). Shared store-family formulaId `store-infants-gas-dyefree`. A store twin that is only flavor + one preservative would be Caution — this SPL is the 3-Limited stack. Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake; not the Avoid drivers). Dye-free is not Clean. Infant-labeled (newborns / infants under 2; children over 2 on the same chart).',
+      `FOUNDER CALL: ${opts.noteBrand} Infants Dye-Free Gas Relief = Caution. ` +
+      LIMITED_STACK_CAUTION +
+      ' DailyMed inactive list matches Mylicon Infants Dye-Free (natural flavors, potassium sorbate, sodium benzoate, sorbitol, CMC, citric acid, MCC, polysorbate 60, sorbitan monostearate, xanthan gum, water). Shared store-family formulaId `store-infants-gas-dyefree`. Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake; not scored as High). Dye-free is not Clean. Infant-labeled (newborns / infants under 2; children over 2 on the same chart).',
     retailers: opts.retailers,
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -593,7 +592,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Little Remedies Gas Relief Drops = Caution. Driver lock is flavor + one preservative (benzoic acid) only. DailyMed setid 874d3f1d: benzoic acid, magnesium aluminum silicate, natural strawberry flavor, purified water, sorbitol, xanthan gum. Sorbitol is also Limited on the SPL — raw flavor + benzoate + sorbitol is 3 Limited points / Avoid; draft follows the locked Caution call (flavor + one preservative), not a 3-pt Avoid stack. Magnesium aluminum silicate is not in Methodology §5 (ungraded; v1.6 intake). Infant-labeled: newborns and infants under 2 years (0.3 mL); children 2 years and over (0.6 mL).',
+      'FOUNDER CALL: Little Remedies Gas Relief Drops = Caution. DailyMed setid 874d3f1d: benzoic acid, magnesium aluminum silicate, natural strawberry flavor, purified water, sorbitol, xanthan gum. Flavor + benzoic acid + sorbitol is Limited-only (3 pts) — stays Caution; Avoid requires High. Magnesium aluminum silicate is not in Methodology §5 (ungraded; v1.6 intake). Infant-labeled: newborns and infants under 2 years (0.3 mL); children 2 years and over (0.6 mL).',
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -810,7 +809,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      'FOUNDER CALL: Mylicon Infants Original = Avoid. D&C Red #22 + D&C Red #28 are High-tier. DailyMed setid 395be942 also has the dye-free 3-Limited stack (flavor + sorbate + benzoate) plus sorbitol — not needed to reach Avoid once dyes are present. Dye-Free is a separate formulaId (Avoid on the 3-Limited lock, not dyes). Infant-labeled (newest newborns / infants under 2; children over 2 on the same chart).',
+      'FOUNDER CALL: Mylicon Infants Original = Avoid. D&C Red #22 + D&C Red #28 are High-tier. DailyMed setid 395be942 also has the Limited-only dye-free stack (flavor + sorbate + benzoate + sorbitol) — not needed to reach Avoid once dyes are present. Dye-Free is a separate formulaId (Caution on Limited-only, not dyes). Infant-labeled (newest newborns / infants under 2; children over 2 on the same chart).',
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -852,11 +851,11 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_DYEFREE, 'Microcrystalline cellulose'),
       cleared(SET_MYLICON_DYEFREE, 'Purified water'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Mylicon Infants Dye-Free = Avoid. ' +
-      LIMITED_3_AVOID +
-      ' DailyMed setid 3324139a: carboxymethylcellulose sodium, citric acid, microcrystalline cellulose, natural flavors, polysorbate 60, potassium sorbate, purified water, sodium benzoate, sorbitan monostearate, sorbitol, xanthan gum. Dye-free is not Clean. Sorbitol is a fourth Limited (not needed once 3 Limited is met). Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake). Original dyed drops are a separate formulaId. CVS / Walgreens dye-free twins with this exact stack are Avoid under `store-infants-gas-dyefree`. Infant-labeled (newest newborns / infants under 2).',
+      'FOUNDER CALL: Mylicon Infants Dye-Free = Caution. ' +
+      LIMITED_STACK_CAUTION +
+      ' DailyMed setid 3324139a: carboxymethylcellulose sodium, citric acid, microcrystalline cellulose, natural flavors, polysorbate 60, potassium sorbate, purified water, sodium benzoate, sorbitan monostearate, sorbitol, xanthan gum. Dye-free is not Clean. Sorbitol is a fourth Limited and does not change Caution. Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake). Original dyed drops are a separate formulaId. CVS / Walgreens dye-free twins with this exact stack are Caution under `store-infants-gas-dyefree`. Infant-labeled (newest newborns / infants under 2).',
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -1013,7 +1012,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      'FOUNDER CALL: Pedialyte Freezer Pops = Avoid (sucralose + Ace-K ± dyes). Abbott US list also has flavor + potassium sorbate + sodium benzoate (3 Limited = Avoid on that stack alone). Variety-pack retailer sleeves add Red 40 / Blue 1 / Yellow 6; current abbottnutrition.com text omits colorants on some flavor panels — Avoid already stands on sucralose + Ace-K. No zinc on the Freezer Pop ingredient list (unlike Classic liquid). Not for children under 1 year of age. No DailyMed drug SPL. Separate formulaId from Classic Unflavored / flavored liquid.',
+      'FOUNDER CALL: Pedialyte Freezer Pops = Avoid (sucralose + Ace-K ± dyes). Abbott US list also has flavor + potassium sorbate + sodium benzoate (Limited-only; not a standalone Avoid). Variety-pack retailer sleeves add Red 40 / Blue 1 / Yellow 6; current abbottnutrition.com text omits colorants on some flavor panels — Avoid already stands on sucralose + Ace-K ± dyes. No zinc on the Freezer Pop ingredient list (unlike Classic liquid). Not for children under 1 year of age. No DailyMed drug SPL. Separate formulaId from Classic Unflavored / flavored liquid.',
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ELECTROLYTE_ALTS,
     sourcesGeneral: [
