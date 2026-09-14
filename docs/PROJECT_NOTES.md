@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 13, 2026 (image fallback carton → brand mark → letter last)
+Last Updated: September 14, 2026 (night routine, brand-roster catalog, no duplicate SKUs)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -141,8 +141,25 @@ Brandon standards (handoff)
 - Pedialyte “flavored” is too broad to attach a carton — split flavors before imaging.
 - Display badges: Clean / Usable / Not clean. Keys stay clean / caution / avoid.
 - Prenatal is its own Search shelf. Allergy+Allergies = Allergies. Homeopathic is not a shelf.
-- New Grok/Project chat: read PROJECT_NOTES + METHODOLOGY first. Do not assume old chat memory.
+- New Grok/Project chat: read PROJECT_NOTES + METHODOLOGY first. Do not assume old chat memory. New Grok reads GitHub MAIN, not a Project pin.
 - Brandon is full-time on KYR until mid/late November, then back to his day job. Use this window for founder locks (grades, display words, dead SKUs, carton confirms). Don’t spend it on markets we won’t ship or on 15-photo loops he could skip.
+
+NIGHT / GROK BOT ROUTINE
+- Photos night routine may MERGE. Cap per run. Carton → official brand mark → letter only if unattempted. Parent brand mark OK for too-broad or bad draft names (Pedialyte flavored, Culturelle kids). 365 tile may read “365” not “3”.
+- Barcodes/set-ids: start a FEW in daytime this week to iron wrinkles. Night barcode routine stays PR-only until Brandon says merge is OK.
+- Night may also: pull cartons for rows that already have barcode/set-id; list “looks discontinued” (list only, don’t hide).
+- Night may NOT: invent grades, new inactives, UI, hide/delete products, Canada/EU.
+
+CATALOG STRATEGY
+- Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
+- Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
+- Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
+- Next catalog day: Sprouts/natural-grocer brands missing from the app. No new batch tonight.
+- Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
+
+BOT PASTES
+- Include “Merge if GitHub UI flakes” on photo jobs.
+- Advisor must not send handoff or bot text until Brandon says ready or go. Sidebar after a paste is new info; don’t dump an old paste.
 
 POSITIONING — WHAT KNOWYOURREMEDY IS (APP-FIRST) ================================================================ KnowYourRemedy is a Yuka-style platform — but for medicine, supplements, and natural remedies instead of food and cosmetics. The one question it answers: "Is this product clean — and what's actually in it?"
 THE COMMITTED DESTINATION: a barcode-scanner app (scan a medicine/supplement/vitamin → instant Clean / Caution / Avoid verdict + ingredient breakdown + sources; scan an essential oil → informational usage lookup, no verdict — see §9). This is the product and the priority. We build everything going forward as if building the app.
