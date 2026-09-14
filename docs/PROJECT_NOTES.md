@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (rice bran extract locked Cleared; brand-catalog loop)
+Last Updated: September 14, 2026 (ingredient tap transparency; rice bran extract lock)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -213,6 +213,14 @@ Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §
 - “Rice” / “rice extract” is NOT the rice-hull Clean lock. Rice flour/starch = Cleared starch. Vague rice extract = Caution until the carton says hull / concentrate / hulls.
 - Organic rice bran extract = Cleared (Methodology §5, locked with hull/concentrate family). Unspecified “rice extract” stays Caution.
 - New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty.
+
+INGREDIENT TAP COPY (locked Sept 14, 2026)
+Honest always. Every flagged or context-scoped inactive needs a plain-language why in the collapsed ingredient panel — not jargon, not “unsafe.”
+- Vague label (unspecified rice extract, unnamed flavor class, undisclosed caramel class, etc.): say the label did not name the form/class, so we mark Caution until it does. Named locked forms stay whatever §5 says.
+- Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
+Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
+
+Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Caution + the vague-form tap sentence.
 
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
