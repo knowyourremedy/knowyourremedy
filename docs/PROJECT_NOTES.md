@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Sept 14 inactive locks + housekeeping siblings + tap-copy / drop-oil rule)
+Last Updated: September 14, 2026 (Sept 14 inactive locks + tap twins)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -219,6 +219,7 @@ Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §
 INGREDIENT TAP COPY (locked Sept 14, 2026)
 Honest always. Every flagged or context-scoped inactive needs a plain-language why in the collapsed ingredient panel — not jargon, not “unsafe.”
 - Vague label (unspecified rice extract, unnamed flavor class, undisclosed caramel class, etc.): say the label did not name the form/class, so we mark Caution until it does. Named locked forms stay whatever §5 says.
+- Vague vs named twins: when two label strings look related but grade differently (named hull vs “rice extract”; paprika extract vs “color added”; citrus extract vs lemon oil; seed oil in gummy vs capsule/drop), the vague twin’s tap must explain the named twin. Honest always.
 - Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
 Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
 
@@ -230,15 +231,15 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Organic beet root (food / excipient / color-food) = Cleared (whole-food, not a synthetic dye).
 - Organic acerola = Cleared (food fruit).
 - Honey (oral sweetener) = Cleared-class sweetener. Tap + honest: not for under 1. Not Avoid.
-- Paprika extract / capsanthin as COLOR = Cleared (named spice color E160c; same as turmeric-as-color). Unnamed “color added” stays Caution. Named lock supersedes the leftover paprika Caution line above.
-- Black carrot / fruit-or-veg juice concentrate as COLOR when named = Cleared (named plant color; same posture as paprika / turmeric-as-color).
+- Paprika extract / capsanthin as COLOR only = Cleared (named spice color; same as turmeric-as-color). Unnamed “color added” stays Caution. Named lock supersedes the leftover paprika Caution line above.
+- Black carrot / named fruit-or-vegetable juice concentrate as COLOR = Cleared (named plant color; same posture as paprika / turmeric-as-color).
 - Sodium copper chlorophyllin (E141) = Caution (copper-complex color, not raw chlorophyll / parsley). Not High/Avoid.
 - Organic cultured dextrose = Caution (ferment preservative, not dextrose/cane sugar sweetener). Not Avoid.
 - Natural citrus extract (unnamed fruit/part) = Limited / Caution opacity. DailyMed CITRUS FRUIT UNII still not lemon vs peel.
 - Named lemon oil as flavor = Limited (flavor row). Named is not a Clean auto-pass.
 - Unspecified “rice extract” = Limited opacity row (now in §5). Tap still uses the vague-form sentence.
 - “Natural flavor” stays Limited as already written.
-- Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does.
+- Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does. Vague twin must explain the named twin. Honest always. Honest note stays product-level.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
