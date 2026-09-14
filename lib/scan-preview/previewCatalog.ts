@@ -169,6 +169,14 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'dramamine-for-kids': catalogShot('dramamine-for-kids.jpg'),
   '365-antacid-peppermint-ultra': catalogShot('365-antacid-peppermint-ultra.jpg'),
   'amazon-basics-clearlax-unflavored': catalogShot('amazon-basics-clearlax-unflavored.jpg'),
+  'pedialyte-classic-unflavored': catalogShot('pedialyte-classic-unflavored.jpg'),
+  'topcare-esomeprazole-20': catalogShot('topcare-esomeprazole-20.jpg'),
+  'assured-gas-relief-es': catalogShot('assured-gas-relief-es.jpg'),
+  'dg-health-omeprazole-dr': catalogShot('dg-health-omeprazole-dr.jpg'),
+  'amazon-basic-care-omeprazole': catalogShot('amazon-basic-care-omeprazole.jpg'),
+  'amazon-basic-care-famotidine': catalogShot('amazon-basic-care-famotidine.jpg'),
+  'amazon-basic-care-esomeprazole': catalogShot('amazon-basic-care-esomeprazole.jpg'),
+  'amazon-basics-clearlax-orange': catalogShot('amazon-basics-clearlax-orange.jpg'),
 };
 
 // Reuse overlay pack shots. Match id or formulaId;
