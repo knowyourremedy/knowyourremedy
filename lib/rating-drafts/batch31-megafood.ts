@@ -20,7 +20,7 @@
 //   second Search id.
 //
 // TALLY (unverified drafts in THIS file): 106 rows — Clean 3 /
-// Caution 88 / Avoid 15.
+// Caution 89 / Avoid 14.
 // Independently Clean in THIS batch: Magnesium 300 mg Capsules,
 // Liposomal Vitamin C, Berberine Phytosome.
 //
@@ -2299,7 +2299,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     math: 'Demerit math: unspecified rice extract Limited/Caution opacity 1 pt + unspecified rice Limited/Caution opacity 1 pt → Caution (2 pts, not Avoid). Do not invent Clean — neither string names hull, bran, flour, protein, concentrate, or syrup. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
     extraNote: 'Separate formulaId from MegaFlora Women\'s (SiO2 / calcium laurate).',
   }),
-  avoidCustom({
+  cautionCustom({
     id: 'megafood-baby-me-2-prenatal-probiotic-lgg',
     productName: 'Baby & Me 2 Prenatal Probiotic + Prebiotic - Shelf Stable LGG',
     category: DIGESTIVE,
@@ -2320,7 +2320,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.bm2proLgg, 'Microcrystalline cellulose'),
       labelCleared(CITE.bm2proLgg, 'Hypromellose'),
     ],
-    math: 'Demerit math: maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt + unspecified rice Limited opacity 1 pt + SiO2 0-pt cap → Avoid (3 pts). Old Caution math omitted the leftover bare-rice Limited row; that row is now in §5. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
+    math: 'Demerit math: maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt + unspecified rice Limited opacity 1 pt + SiO2 0-pt cap → Caution (Limited-only; SiO2 does not push Avoid). Avoid requires High. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
     extraNote:
       'Separate formulaId from the refrigerated MegaFlora-style Baby & Me 2 Prenatal Probiotic + Prebiotic row.',
     prenatal: true,
