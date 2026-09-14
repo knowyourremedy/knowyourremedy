@@ -121,7 +121,9 @@ function catalogShot(file: string): ProductImage {
 }
 
 // Official brand marks — not pack shots, never verifiedSku.
-// Tonight: Tums / Emetrol / Nauzene only. Later categories reuse this map.
+// Brand-level map is for brands whose leftover drafts were all attempted.
+// Per-id map is for attempted Digestive leftovers on brands that still have
+// unattempted SKUs in other aisles (do not treat those as attempted).
 function brandMark(file: string): ProductImage {
   return { url: `/scan-preview/${file}`, source: 'catalog', verifiedSku: false };
 }
@@ -134,6 +136,24 @@ const PREVIEW_BRAND_MARK: Record<string, ProductImage> = {
   tums: brandMark('tums-mark.png'),
   emetrol: brandMark('emetrol-mark.png'),
   nauzene: brandMark('nauzene-mark.png'),
+};
+
+// Letter only: SKU not attempted yet, or founder said leave unimaged.
+const LETTER_ONLY_IDS = new Set([
+  'culturelle-kids-gummies-coconut',
+  'pedialyte-classic-flavored',
+]);
+
+// Attempted Digestive leftovers with no matching carton. Not verifiedSku.
+const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
+  'culturelle-kids-packets': brandMark('culturelle-mark.png'),
+  'pure-encapsulations-probiotic-gi': brandMark('pure-encapsulations-mark.png'),
+  'pure-encapsulations-probiotic-5': brandMark('pure-encapsulations-mark.png'),
+  'thorne-floramend-prime-probiotic': brandMark('thorne-mark.png'),
+  'we-heart-wholesome-probiotic': brandMark('we-heart-mark.png'),
+  'thrive-wellmade-womens-daily-probiotic': brandMark('wellmade-mark.png'),
+  'thrive-wellmade-mens-daily-probiotic': brandMark('wellmade-mark.png'),
+  'thrive-wellmade-kids-chewable-probiotic': brandMark('wellmade-mark.png'),
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -235,7 +255,14 @@ export function previewOverlayImage(
     const fromFormula = PREVIEW_IMAGE_OVERLAY[record.formulaId];
     if (fromFormula) return fromFormula;
   }
-  return brandMarkImage(record.brand) ?? brandInitialTile(record.brand);
+  if (LETTER_ONLY_IDS.has(record.id)) {
+    return brandInitialTile(record.brand);
+  }
+  return (
+    PREVIEW_ID_BRAND_MARK[record.id]
+    ?? brandMarkImage(record.brand)
+    ?? brandInitialTile(record.brand)
+  );
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
@@ -272,6 +299,30 @@ function assertBrandMark(id: string, brand: string, file: string) {
 assertBrandMark('tums-chewy-bites', 'Tums', 'tums-mark.png');
 assertBrandMark('emetrol-chewables', 'Emetrol', 'emetrol-mark.png');
 assertBrandMark('nauzene-chewables', 'Nauzene', 'nauzene-mark.png');
+assertBrandMark('culturelle-kids-packets', 'Culturelle', 'culturelle-mark.png');
+assertBrandMark('pure-encapsulations-probiotic-gi', 'Pure Encapsulations', 'pure-encapsulations-mark.png');
+assertBrandMark('pure-encapsulations-probiotic-5', 'Pure Encapsulations', 'pure-encapsulations-mark.png');
+assertBrandMark('thorne-floramend-prime-probiotic', 'Thorne', 'thorne-mark.png');
+assertBrandMark('we-heart-wholesome-probiotic', 'We Heart Nutrition', 'we-heart-mark.png');
+assertBrandMark('thrive-wellmade-womens-daily-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
+assertBrandMark('thrive-wellmade-mens-daily-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
+assertBrandMark('thrive-wellmade-kids-chewable-probiotic', 'wellmade by Thrive Market', 'wellmade-mark.png');
+
+function assertLetterOnly(id: string, brand: string) {
+  const image = previewOverlayImage({ id, formulaId: id, brand });
+  if (!image?.url.startsWith('data:image/svg+xml')) {
+    throw new Error(`${id} must stay on the letter tile`);
+  }
+  if (image.verifiedSku) {
+    throw new Error(`${id} letter tile must not set verifiedSku`);
+  }
+}
+
+assertLetterOnly('culturelle-kids-gummies-coconut', 'Culturelle');
+assertLetterOnly('pedialyte-classic-flavored', 'Pedialyte');
+assertLetterOnly('365-probiotic-fiber-gummies-sunflower', '365 Whole Foods Market');
+assertLetterOnly('thorne-basic-prenatal', 'Thorne');
+assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
