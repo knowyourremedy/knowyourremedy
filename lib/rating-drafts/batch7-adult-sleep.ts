@@ -104,6 +104,8 @@ const METH = {
   riceExtract:
     'Methodology §5 Limited-risk (unspecified rice extract — Caution/Limited opacity; label did not name hull, bran, or concentrate)',
   inulin: 'Methodology §5 Cleared (inulin — food fiber; locked Sept 14, 2026 housekeeping)',
+  dibehenin:
+    'Methodology §5 Cleared (dibehenin, vegetable — vegetable wax/lubricant; stearate / wax family; locked Sept 14, 2026)',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
@@ -272,10 +274,15 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
         'cleared',
         dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.inulin),
       ),
+      flag(
+        'Dibehenin (vegetable source)',
+        'cleared',
+        dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.dibehenin),
+      ),
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Genexa Acetaminophen PM Extra Strength = Caution (maltodextrin Limited 1 pt). Do NOT apply the adult Genexa ES Clean maltodextrin exception. Organic sunflower oil / lecithin / palm olein are Cleared on this coated tablet (not a gummy). Rice hulls / organic rice bran extract / inulin are now §5 Cleared. Unspecified rice extract is Limited opacity (not the driver). Dibehenin (vegetable source) is still not in §5 — notes only, not graded. Stay under 4 g/day acetaminophen, same as any APAP. ' +
+      'FOUNDER CALL: Genexa Acetaminophen PM Extra Strength = Caution (maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt → 2 pts). Do NOT apply the adult Genexa ES Clean maltodextrin exception. Organic sunflower oil / lecithin / palm olein are Cleared on this coated tablet (not a gummy). Rice hulls / organic rice bran extract / inulin / dibehenin (vegetable) are now §5 Cleared. Unspecified rice extract stays Limited opacity (not enough alone to Avoid). Stay under 4 g/day acetaminophen, same as any APAP. ' +
       SEDATING +
       ' Ages 12+ (under 12: ask a doctor).',
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
