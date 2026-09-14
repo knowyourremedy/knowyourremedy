@@ -102,7 +102,7 @@ SEARCH (locked)
 - Empty: search field + 2-column use-category TILES.
 - Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
 - Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Not clean filter chips (multi). Type further filters that list.
-- Type 3+ letters with NO category: all loaded drafts by name/brand; hide category chips AND hide verdict chips.
+- Type from the FIRST letter with NO category: matches by name/brand, cap ~35, “Keep typing to narrow” if more exist; hide category chips AND hide verdict chips.
 - Back from a product restores the same Search state.
 - Rows: thumb, name, brand, display badge. Draft · unverified cue once. Tap → post-scan.
 
