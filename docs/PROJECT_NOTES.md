@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (night routine, brand-roster catalog, no duplicate SKUs)
+Last Updated: September 14, 2026 (night photo aisle order; Digestive complete)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -149,6 +149,10 @@ NIGHT / GROK BOT ROUTINE
 - Barcodes/set-ids: start a FEW in daytime this week to iron wrinkles. Night barcode routine stays PR-only until Brandon says merge is OK.
 - Night may also: pull cartons for rows that already have barcode/set-id; list “looks discontinued” (list only, don’t hide).
 - Night may NOT: invent grades, new inactives, UI, hide/delete products, Canada/EU.
+
+NIGHT PHOTO AISLE ORDER (Digestive complete)
+1 Pain & Fever 2 Cold & Flu 3 Allergies 4 Sleep 5 Immune Support 6 First Aid 7 Vitamins 8 Prenatal
+Each night: finish the first unfinished aisle in this list. Batches of 20. Max 4 batches (80). Then stop. Do not skip ahead. Do not start a second aisle the same night.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
