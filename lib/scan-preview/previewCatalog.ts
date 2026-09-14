@@ -911,6 +911,9 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
   }
 
   if (ingredient.riskLevel === 'cleared') {
+    if (source.includes('in this liquid drop they are not that high rule')) {
+      return 'Seed/industrial oils are flagged in gummies. In this liquid drop they are not that High rule.';
+    }
     if (source.includes('not in methodology') || source.includes('ungraded')) {
       return 'Why pending review';
     }
