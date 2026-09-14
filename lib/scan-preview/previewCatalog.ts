@@ -34,6 +34,11 @@ import {
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import {
+  PARKED_PEDIALYTE_BROWSE_IDS,
+  isParkedBrowseId,
+  isParkedBrowseRecord,
+} from '@/lib/scan-preview/parkedBrowseIds';
 
 function uniqueById(records: RatingRecord[]): RatingRecord[] {
   const seen = new Set<string>();
@@ -78,6 +83,22 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH29_DOLLAR_STORE,
   ...BATCH30_AMAZON_BASIC_CARE,
 ]);
+
+// Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
+// night-photo queues use the filtered list so parked Pedialyte rows
+// are not shoppable and are not night-photo candidates.
+const BROWSE_CATALOG: RatingRecord[] = CATALOG.filter(
+  (record) => !isParkedBrowseRecord(record),
+);
+
+for (const parkedId of PARKED_PEDIALYTE_BROWSE_IDS) {
+  if (!CATALOG.some((record) => record.id === parkedId)) {
+    throw new Error(`Parked Pedialyte draft "${parkedId}" is missing — do not delete draft files`);
+  }
+  if (BROWSE_CATALOG.some((record) => record.id === parkedId)) {
+    throw new Error(`Parked Pedialyte "${parkedId}" leaked into browse catalog`);
+  }
+}
 
 function mustFind(id: string): RatingRecord {
   const row = CATALOG.find((record) => record.id === id);
@@ -489,8 +510,17 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
     ?? CATALOG.find((record) => record.formulaId === id);
 }
 
+export function isParkedFromBrowse(id: string | undefined): boolean {
+  return isParkedBrowseId(id);
+}
+
+// Night-photo jobs: skip parked ids. Do not image this aisle.
+export function nightPhotoEligibleDrafts(): RatingRecord[] {
+  return BROWSE_CATALOG.map(withPreviewHonestNote);
+}
+
 export function loadedPreviewDrafts(): RatingRecord[] {
-  return CATALOG.map(withPreviewHonestNote);
+  return BROWSE_CATALOG.map(withPreviewHonestNote);
 }
 
 // Display-side Search tiles/chips only. Do not rewrite draft category strings.
@@ -564,7 +594,7 @@ export function matchesSearchCategory(
 export function loadedPreviewCategories(): string[] {
   const names = new Set<string>();
   let hasPrenatal = false;
-  for (const record of CATALOG) {
+  for (const record of BROWSE_CATALOG) {
     if (isPrenatalDraft(record)) hasPrenatal = true;
     const raw = record.category?.trim();
     if (!raw) continue;
@@ -653,6 +683,7 @@ export function recordsForCabinet(ids: string[]): RatingRecord[] {
   for (const id of ids) {
     const record = findDraftRecord(id);
     if (!record || seen.has(record.id)) continue;
+    if (isParkedBrowseRecord(record)) continue;
     seen.add(record.id);
     records.push(record);
   }
@@ -727,6 +758,7 @@ export function matchCleanAlternatives(
   for (const ref of refs) {
     const alt = findDraftRecord(ref.productId);
     if (!alt) continue;
+    if (isParkedBrowseRecord(alt)) continue;
     // Independently Clean only. Do not invent a Clean. Do not pad with Usable.
     if (alt.verdict !== 'clean') continue;
     if (!ageMatches(scanned, alt)) continue;
