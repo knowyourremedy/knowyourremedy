@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Sept 14 inactive locks + tap twins)
+Last Updated: September 14, 2026 (store-as-brand-hunt; national coverage)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -265,6 +265,14 @@ Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Method
 - Sodium copper chlorophyllin, organic cultured dextrose, unnamed natural citrus, and the morning food/color locks stay as already written — not duplicated as new grades.
 - Inactive not in §5 still goes to the founder before a live grade. After a lock it goes in the §5 table the same day.
 - Audit list 2 still pending founder lock; no default Caution for missing-row.
+
+STORE → BRAND HUNT (locked Sept 14, 2026)
+Stores are how we find brands, not how we file rows. Same formula at two stores = one row.
+Banner set we hunt from: Sprouts, Whole Foods, Thrive, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Amazon US, plus drugstore drafts already on main.
+Natural-grocer banners (Sprouts / WFM / Thrive) have a longer unique-brand tail — knock those down so walk-in scan rate jumps. Drugstores share fewer manufacturers and go faster later. Order is tactic, not a rule that mass-market waits forever. Every in-scope brand those stores carry gets pulled before we call the US catalog “ready.”
+US only until the US app is real. No Canada/EU SKUs to fake coverage.
+West Coast walk lists still catch national brands sold nationwide. Later wave: regional store brands / banners not walked yet (HEB, Publix, Meijer, etc.). That is the last slice, not launch-critical.
+Launch: don’t half-dress a date. Day job returns mid/late November.
 
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
