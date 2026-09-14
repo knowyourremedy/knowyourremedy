@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Search type-ahead 1 letter; Digestive photos done; night aisle order; scope parks)
+Last Updated: September 14, 2026 (brand-catalog loop, MegaFood sweep, seed-oil form note)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -180,6 +180,43 @@ CATALOG STRATEGY
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
 - Next catalog day: Sprouts/natural-grocer brands missing from the app. No new batch tonight.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
+
+================================================================
+BRAND CATALOG LOOP (locked Sept 14, 2026)
+================================================================
+Team: Advisor answers from methodology + notes. Founder owns grades and pulls cartons when the web has no Other Ingredients line. Coding bot writes files. Cursor = notes / git pull / npm run dev / end-of-day notes.
+
+How a brand job runs:
+1) Bot scans the WHOLE in-scope US line for that one brand.
+2) Before writing rows, bot brings EVERY question here: missing Other Ingredients (OI), inactive not in Methodology §5, scope gray area.
+3) Advisor answers from v1.6 + locked table. New inactive = packet + founder. Do not invent a live grade.
+4) If OI cannot be found on MegaFood.com / Thrive / Sprouts / Whole Foods / Amazon US, advisor asks founder for a Supplement Facts photo.
+5) Only after calls are answered does the bot write the batch, wire Search like other drafts, merge to main, and say “On main.”
+Do not ship 90 and block 13 as the default. Questions first, one write.
+
+Scope:
+- In: US OTC / vitamins / supplements, including supplement-aisle powders (example: MegaFood Daily Turmeric Nutrient Booster Powder).
+- Out: food, pet, cosmetics, protein-aisle protein powder / bars / meal shakes, Pedialyte-class drinks, mineral drops, Canada/EU-only, discontinued US SKUs (list “looks discontinued,” don’t hide other brands).
+- Same product at two stores = one row. Match brand + name + form + strength. Pack sizes share formulaId and one grade.
+
+Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock):
+- Avoid in gummies / soft chews only (soybean, canola, palm, sunflower, “vegetable oil”).
+- Capsule / softgel oil fill is NOT that High rule.
+- Sunflower lecithin stays Cleared (separate lock).
+- On every capsule/softgel row that lists those oils as a fill, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this capsule/softgel fill they are not that High rule.”
+
+Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §5 locks):
+- Pea protein isolate = Cleared-class food protein.
+- Paprika extract as color = Caution (color/opacity).
+- Sodium copper chlorophyllin = Caution (color additive).
+- MCT: coconut-only = not gummy High. Unlabeled MCT source = Caution opacity, not Avoid.
+- “Rice” / “rice extract” is NOT the rice-hull Clean lock. Rice flour/starch = Cleared starch. Vague rice extract = Caution until the carton says hull / concentrate / hulls.
+
+BRAND ROSTER LOG
+- MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout in flight (Women’s Whole Body Tablets Caution; BM2 Prenatal Multi & DHA Caution; leftover OI hunts). Not “complete forever.” Refresh when the line adds SKUs.
+- Next brand after MegaFood closeout is on main: Genexa (Pain & Fever-heavy), questions-first loop.
+
+Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
