@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 13, 2026 (Not clean display lock)
+Last Updated: September 13, 2026 (handoff standards)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -118,6 +118,21 @@ Parked
 Next session
 - Do not reopen Search / post-scan / Home / Cabinet unless something is broken.
 - Optional: more exact-SKU photos, or real scan when barcodes exist.
+
+Brandon standards (handoff)
+- Don’t half-dress the catalog or UI to hit a launch date.
+- US only until the US scanner ships. No Canada/EU work now.
+- Exact carton when confirmed. Else official brand-mark fallback (not verifiedSku). Never glue the wrong flavor/size.
+- Cap 15 is a chat-bot leash. Launch photo factory is a later batch (barcode/set-id → DailyMed → keep/skip).
+- Blank tile ≠ skipped. Skips need a reason (uncertain carton / no US pack shot / discontinued).
+- Founder may Google unsure SKUs and send DailyMed or brand-page links; then one wire paste.
+- Discontinued US SKUs: do not add to live Search. Hide when founder confirms dead. Don’t mass-delete tonight.
+- Culturelle kids “coconut gummy” is a bad draft name (product doesn’t exist) — leave unimaged until the name is fixed.
+- Pedialyte “flavored” is too broad to attach a carton — split flavors before imaging.
+- Display badges: Clean / Usable / Not clean. Keys stay clean / caution / avoid.
+- Prenatal is its own Search shelf. Allergy+Allergies = Allergies. Homeopathic is not a shelf.
+- New Grok/Project chat: read PROJECT_NOTES + METHODOLOGY first. Do not assume old chat memory.
+- Brandon is full-time on KYR until mid/late November, then back to his day job. Use this window for founder locks (grades, display words, dead SKUs, carton confirms). Don’t spend it on markets we won’t ship or on 15-photo loops he could skip.
 
 POSITIONING — WHAT KNOWYOURREMEDY IS (APP-FIRST) ================================================================ KnowYourRemedy is a Yuka-style platform — but for medicine, supplements, and natural remedies instead of food and cosmetics. The one question it answers: "Is this product clean — and what's actually in it?"
 THE COMMITTED DESTINATION: a barcode-scanner app (scan a medicine/supplement/vitamin → instant Clean / Caution / Avoid verdict + ingredient breakdown + sources; scan an essential oil → informational usage lookup, no verdict — see §9). This is the product and the priority. We build everything going forward as if building the app.
