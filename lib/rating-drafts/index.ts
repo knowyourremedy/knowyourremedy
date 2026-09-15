@@ -35,3 +35,4 @@ export { BATCH34_BOIRON } from './batch34-boiron';
 export { BATCH35_SPROUTS } from './batch35-sprouts';
 export { BATCH36_SPROUTS_LEFTOVERS } from './batch36-sprouts-leftovers';
 export { BATCH37_MEDINATURA_BT } from './batch37-medinatura-bt';
+export { BATCH38_NATURES_WAY } from './batch38-natures-way';
