@@ -244,6 +244,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. |
+| Triacetin — LOCKED (Sept 15, 2026) | Tablet/caplet coating plasticizer. Not a grade driver. |
 | Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. |
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. |
 | Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
