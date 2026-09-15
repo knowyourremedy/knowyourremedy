@@ -173,7 +173,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sucralose | E955, Splenda | Metabolite genotoxicity signal (2023 study); microbiome concerns. |
 | Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity/microbiome signals; thin evidence. |
 | Saccharin | E954 | Historical rat finding, but NTP delisted (2000), IARC reclassified Group 3 (1999). |
-| PEGs | polyethylene glycol 400/3350 | Ethylene-oxide/1,4-dioxane contamination risk. |
+| PEGs | polyethylene glycol 400/3350, PEG-stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. |
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 
@@ -208,6 +208,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
 | Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
 | Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
+| Cetyl palmitate — LOCKED (Sept 14, 2026) | Wax ester; fatty-alcohol / wax family. Cleared. |
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
