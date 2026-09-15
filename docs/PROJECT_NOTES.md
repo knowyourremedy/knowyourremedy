@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (EOD brand roster + queue)
+Last Updated: September 14, 2026 (Sprouts leftover inactives; parked oils hunt)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -276,6 +276,17 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Wintergreen extract (topical inactive) = Caution. Not Avoid. Sept 15, 2026 founder carton.
 - Rebaudioside M / Reb M = Cleared (high-purity steviol glycoside sibling of the stevia lock). Sept 15, 2026.
 - Vegetable oil in a cream / topical = NOT the gummy seed-oil High rule. Same form-scope as capsule / softgel / liquid-drop fill. Tap both sides.
+- Rice bran oil as softgel/capsule fill = Cleared (carrier oil). NOT gummy High. NOT the same row as organic rice bran extract. Tap form sentence required.
+- Organic pullulan = Cleared (starch capsule polymer; HPMC-family vegan cap).
+- Caramel sugar syrup (named syrup, lozenge sweetener) = Cleared (food sugar). NOT caramel color / E150d.
+- MCT oil labeled coconut (oral capsule/softgel/liquid supplement, not a cooking-oil bottle) = Cleared (notes lock).
+- Unlabeled MCT = Limited (opacity). Not Avoid.
+- Peppermint oil / orange essential oil as flavor = Limited (flavor/EO line). Not gummy High.
+- Unspecified resin = Caution (label didn’t name the resin).
+- Magnesium trisilicate = Caution (silicate-adjacent filler). Not the SiO2 0-pt cap. Not Avoid.
+- Bottle / cooking oils stay info-only. Never a Search grade.
+- PARKED OILS HUNT: when a brand sweep hits an oil bottle (e.g. Sprouts Organic MCT Oil), record name+URL only. Do not grade. Do not add to Search. oilInfoRecord page later.
+- Store-brand PDPs are not OI. Bot reads gallery/Ingredients photos + DailyMed first. Founder photos only on misses.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.

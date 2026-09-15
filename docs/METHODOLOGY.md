@@ -190,6 +190,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
 | Natural citrus extract (fruit/part not named) — LOCKED (Sept 14, 2026) | unnamed citrus fruit extract | Same opacity bucket as natural flavor. DailyMed CITRUS FRUIT UNII is not lemon vs peel. Named “organic lemon oil” can be revisited (Limited flavor row below — not a Clean auto-pass). |
 | Named lemon oil as flavor — **LOCKED (Sept 14, 2026 housekeeping)** | organic lemon oil, lemon oil (named) | Flavor row. Limited, same class as “natural flavors.” Named is not a Clean auto-pass. |
+| Peppermint oil / orange essential oil as flavor — LOCKED | peppermint oil, orange essential oil (flavor) | Flavor/EO line. Not gummy High. |
+| Unlabeled MCT — LOCKED | MCT with no coconut (or other) source named | Opacity. Not Avoid. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
@@ -206,12 +208,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Notes |
 |---|---|
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
+| Caramel sugar syrup (named syrup, lozenge sweetener) — LOCKED | Food sugar. NOT caramel color / E150d. |
 | Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. |
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
 | Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
 | Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
 | Cetyl palmitate — LOCKED (Sept 14, 2026) | Wax ester; fatty-alcohol / wax family. Cleared. |
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
+| Organic pullulan — LOCKED | Starch capsule polymer; HPMC-family vegan cap. |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
 | Organic agave, organic flavors/colors | Whole-food-derived. |
@@ -243,6 +247,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Coconut oil alone in gummies/chews — **LOCKED (Sept 14, 2026 housekeeping)** | NOT the seed/industrial-oil High rule. Already practice on coconut-only gummy/chew rows; this table says it. Unlabeled “vegetable oil” / palm / soybean / canola / sunflower in gummies stays High. |
 | Organic rice hull extract / rice concentrate / ground rice hulls — **LOCKED** | Plant-fiber flow agent. Distinct from rice flour. Distinct from silicon dioxide. The SiO₂ nanoparticle Caution cap does NOT apply. |
 | Organic rice bran extract — LOCKED (Sept 14, 2026) | Named rice-plant fiber used as tablet/capsule filler or flow agent. Same family as rice hull extract / rice concentrate / ground rice hulls. Distinct from silicon dioxide. Distinct from unspecified “rice extract” (Limited opacity row). |
+| Rice bran oil as softgel/capsule fill — LOCKED (Sept 14, 2026) | Carrier oil. NOT gummy High. NOT the same row as organic rice bran extract. Tap form sentence required. |
+| MCT oil labeled coconut (oral capsule/softgel/liquid supplement, not a cooking-oil bottle) — LOCKED | Notes lock. |
 | Pea protein isolate — LOCKED (Sept 14, 2026) | Food protein excipient. Not a flag. |
 | Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
 | Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
@@ -288,6 +294,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Unspecified resin — LOCKED | Label didn’t name the resin. | Standard alternatives rule. Not Avoid. |
+| Magnesium trisilicate — LOCKED | Silicate-adjacent filler. Not the SiO2 0-pt cap. Not Avoid. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -304,6 +312,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
+| Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. |
 
 ## 6. Posture
 
