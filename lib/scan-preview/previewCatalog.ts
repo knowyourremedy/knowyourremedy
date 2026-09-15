@@ -42,6 +42,7 @@ import {
   BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   BATCH40_BAYER_EXCEDRIN_MOTRIN,
   BATCH41_PAIN_RUBS,
+  BATCH42_PAIN_GELS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -104,6 +105,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   ...BATCH40_BAYER_EXCEDRIN_MOTRIN,
   ...BATCH41_PAIN_RUBS,
+  ...BATCH42_PAIN_GELS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -780,6 +782,9 @@ assertLetterOnly('tylenol-precise-lidocaine-4-patch', 'Tylenol');
 assertLetterOnly('alevex-pain-relieving-lotion-roll-on', 'AleveX');
 assertLetterOnly('alevex-pain-relieving-lotion-tube', 'AleveX');
 assertLetterOnly('alevex-pain-relieving-spray', 'AleveX');
+assertLetterOnly('advil-targeted-relief-cream', 'Advil');
+assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
+assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
