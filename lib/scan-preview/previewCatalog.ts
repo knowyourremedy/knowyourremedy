@@ -36,6 +36,7 @@ import {
   BATCH33_HYLANDS,
   BATCH34_BOIRON,
   BATCH35_SPROUTS,
+  BATCH36_SPROUTS_LEFTOVERS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -92,6 +93,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH33_HYLANDS,
   ...BATCH34_BOIRON,
   ...BATCH35_SPROUTS,
+  ...BATCH36_SPROUTS_LEFTOVERS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
