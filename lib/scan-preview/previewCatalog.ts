@@ -45,6 +45,7 @@ import {
   BATCH42_PAIN_GELS,
   BATCH43_GOODYS_BC_ECOTRIN,
   BATCH44_PAIN_RUBS_LIST2,
+  BATCH45_PAIN_RUBS_REMAINING,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -110,6 +111,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH42_PAIN_GELS,
   ...BATCH43_GOODYS_BC_ECOTRIN,
   ...BATCH44_PAIN_RUBS_LIST2,
+  ...BATCH45_PAIN_RUBS_REMAINING,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -665,6 +667,24 @@ assertLetterOnly('aspercreme-lidocaine-dry-spray', 'Aspercreme');
 assertLetterOnly('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot');
 assertLetterOnly('salonpas-deep-relieving-gel', 'Salonpas');
 assertLetterOnly('tiger-balm-liniment', 'Tiger Balm');
+assertLetterOnly('icy-hot-original-balm', 'Icy Hot');
+assertLetterOnly('icy-hot-original-cream', 'Icy Hot');
+assertLetterOnly('icy-hot-performance-cream', 'Icy Hot');
+assertLetterOnly('icy-hot-performance-no-mess-cream', 'Icy Hot');
+assertLetterOnly('icy-hot-advanced-pain-relief-cream', 'Icy Hot');
+assertLetterOnly('icy-hot-pro-no-mess', 'Icy Hot');
+assertLetterOnly('icy-hot-nighttime-recovery-roll-on', 'Icy Hot');
+assertLetterOnly('icy-hot-revive-recovery-roll-on', 'Icy Hot');
+assertLetterOnly('icy-hot-vanishing-scent-gel', 'Icy Hot');
+assertLetterOnly('salonpas-lidocaine-plus-liquid', 'Salonpas');
+assertLetterOnly('tiger-balm-muscle-rub', 'Tiger Balm');
+assertLetterOnly('tiger-balm-active-muscle-rub', 'Tiger Balm');
+assertLetterOnly('tiger-balm-neck-shoulder-rub', 'Tiger Balm');
+assertLetterOnly('tiger-balm-active-muscle-gel', 'Tiger Balm');
+assertLetterOnly('tiger-balm-pain-relieving-muscle-spray', 'Tiger Balm');
+assertLetterOnly('tiger-balm-red-extra-strength', 'Tiger Balm');
+assertLetterOnly('tiger-balm-ultra-strength', 'Tiger Balm');
+assertLetterOnly('tiger-balm-white-regular-strength', 'Tiger Balm');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });

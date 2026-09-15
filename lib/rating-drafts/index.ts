@@ -42,3 +42,4 @@ export { BATCH41_PAIN_RUBS } from './batch41-pain-rubs';
 export { BATCH42_PAIN_GELS } from './batch42-pain-gels';
 export { BATCH43_GOODYS_BC_ECOTRIN } from './batch43-goodys-bc-ecotrin';
 export { BATCH44_PAIN_RUBS_LIST2 } from './batch44-pain-rubs-list2';
+export { BATCH45_PAIN_RUBS_REMAINING } from './batch45-pain-rubs-remaining';
