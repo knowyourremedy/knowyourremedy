@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Sprouts leftover inactives; parked oils hunt)
+Last Updated: September 15, 2026 (Sprouts store-brand write)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -327,17 +327,16 @@ Completed (main, unverified drafts unless noted):
 - Genexa — Sept 14 — Search 28 (12 reuse + 16 new).
 - Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
 - Pedialyte hidden earlier Sept 14.
+- Sprouts store-brand — Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). Organic MCT Oil bottle is PR-comment only (not a Search row). Still-blocked: 187 named in-scope unread house SKUs.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 Next queue:
-1) Boiron
-2) Sprouts store-brand pain
-3) Boericke & Tafel / Medinatura
-4) Nature’s Way in-scope
-5) Then Tylenol / Advil / Aleve holes
-6) Thrive brand-list hole punch
-7) Amazon US P&F brands not yet on main
+1) Boericke & Tafel / Medinatura
+2) Nature’s Way in-scope
+3) Then Tylenol / Advil / Aleve holes
+4) Thrive brand-list hole punch
+5) Amazon US P&F brands not yet on main
 Then SKU/barcode factory. Night photos stay KYR2. Catalog → new KYR3 after this KYR2 thread is photos-only.
 
 BOT PASTES

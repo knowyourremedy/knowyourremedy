@@ -32,3 +32,4 @@ export { BATCH31_MEGAFOOD } from './batch31-megafood';
 export { BATCH32_GENEXA } from './batch32-genexa';
 export { BATCH33_HYLANDS } from './batch33-hylands';
 export { BATCH34_BOIRON } from './batch34-boiron';
+export { BATCH35_SPROUTS } from './batch35-sprouts';
