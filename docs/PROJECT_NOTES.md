@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (MediNatura/B&T topical and syrup inactives)
+Last Updated: September 15, 2026 (Nature’s Way leftover inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -297,6 +297,18 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Barley malt (syrup/sweetener) = Limited. Not Avoid.
 - Sodium polyacrylate / polyacrylic acid (topical gel polymer) = Caution. Not Avoid.
 - Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives = Caution (fragrance/EO line).
+- Isomaltooligosaccharides (IMO) = Cleared (prebiotic fiber / inulin neighborhood).
+- Soluble corn fiber = Cleared (fiber; ≠ maltodextrin).
+- Ethylcellulose = Cleared (cellulose coating family).
+- Oleic acid = Cleared (fatty-acid / stearate cousin).
+- Riboflavin used as color = Cleared (named B2).
+- Candelilla wax = Cleared (wax family).
+- Gum ghatti = Cleared (gum family with acacia/xanthan).
+- Allulose = Limited (novel sweetener; not Avoid).
+- Maltose = Limited (with the sugars).
+- Modified starch = Limited (unspecified starch).
+- Sucrose fatty acid esters = Caution (synthetic emulsifier; not Avoid).
+- Calcium silicate = Caution (silicate anti-caking; Mg trisilicate neighborhood). Not the SiO2 0-pt cap.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.

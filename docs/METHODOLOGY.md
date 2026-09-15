@@ -193,6 +193,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Peppermint oil / orange essential oil as flavor — LOCKED | peppermint oil, orange essential oil (flavor) | Flavor/EO line. Not gummy High. |
 | Unlabeled MCT — LOCKED | MCT with no coconut (or other) source named | Opacity. Not Avoid. |
 | Barley malt (syrup/sweetener) — LOCKED (Sept 15, 2026) | barley malt, barley malt syrup | Not Avoid. |
+| Allulose — LOCKED (Sept 15, 2026) | D-allulose, psicose | Novel sweetener; not Avoid. |
+| Maltose — LOCKED (Sept 15, 2026) | malt sugar | With the sugars. |
+| Modified starch — LOCKED (Sept 15, 2026) | modified food starch | Unspecified starch. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
@@ -211,8 +214,10 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
 | Caramel sugar syrup (named syrup, lozenge sweetener) — LOCKED | Food sugar. NOT caramel color / E150d. |
 | Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. |
+| Ethylcellulose — LOCKED (Sept 15, 2026) | Cellulose coating family. |
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
 | Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
+| Oleic acid — LOCKED (Sept 15, 2026) | Fatty-acid / stearate cousin. |
 | Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
 | Cetyl palmitate — LOCKED (Sept 14, 2026) | Wax ester; fatty-alcohol / wax family. Cleared. |
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
@@ -240,8 +245,11 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. |
 | Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. |
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. |
+| Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
+| Soluble corn fiber — LOCKED (Sept 15, 2026) | Fiber; ≠ maltodextrin. |
 | Lactose, gelatin, carnauba wax, beeswax, purified water | — |
 | Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
+| Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Copovidone — **LOCKED (Sept 14, 2026 housekeeping)** | Povidone-family copolymer. Same Cleared class as povidone / crospovidone. |
@@ -249,6 +257,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
 | Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). |
 | Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). |
+| Gum ghatti — LOCKED (Sept 15, 2026) | Gum family with acacia/xanthan. |
 | Alginic acid — **LOCKED (Sept 14, 2026 housekeeping)** | Gum/fiber family. Cleared-by-class with the xanthan/guar/pectin gums. |
 | Agar / agar-agar — LOCKED (Sept 14, 2026) | Seaweed gel; gum/fiber family with pectin. |
 | Coconut oil alone in gummies/chews — **LOCKED (Sept 14, 2026 housekeeping)** | NOT the seed/industrial-oil High rule. Already practice on coconut-only gummy/chew rows; this table says it. Unlabeled “vegetable oil” / palm / soybean / canola / sunflower in gummies stays High. |
@@ -267,6 +276,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Rebaudioside M / Reb M is a named high-purity steviol glycoside sibling (Sept 15, 2026). Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
 | Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. |
+| Riboflavin used as color — LOCKED (Sept 15, 2026) | Named B2. |
 | Paprika extract / capsanthin as COLOR only — LOCKED (Sept 14, 2026) | Named spice color. Same posture as turmeric-as-color. Unnamed “color added” stays Caution. |
 | Black carrot / named fruit-or-vegetable juice concentrate as COLOR — LOCKED (Sept 14, 2026) | Named plant color. Same posture as paprika / turmeric-as-color. Unnamed “color added” stays Caution. |
 | Disodium EDTA, TRACE preservative/stabilizer use — **LOCKED (v1.6)** | Confirmed safe at the actual trace concentrations used (0.001%–0.25% w/v) in eye drops/topical formulations. The neurotoxicity/chelation-risk literature is specific to gram-level IV THERAPEUTIC chelation doses — a different dose and context, noted as a disclaimer only. |
@@ -306,6 +316,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
 | Unspecified resin — LOCKED | Label didn’t name the resin. | Standard alternatives rule. Not Avoid. |
 | Magnesium trisilicate — LOCKED | Silicate-adjacent filler. Not the SiO2 0-pt cap. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Calcium silicate — LOCKED (Sept 15, 2026) | Silicate anti-caking (Mg trisilicate neighborhood); not the SiO2 0-pt cap. | Standard alternatives rule. Not Avoid. |
+| Sucrose fatty acid esters — LOCKED (Sept 15, 2026) | Synthetic emulsifier; not Avoid. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
