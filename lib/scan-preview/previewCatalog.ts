@@ -40,6 +40,7 @@ import {
   BATCH37_MEDINATURA_BT,
   BATCH38_NATURES_WAY,
   BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
+  BATCH40_BAYER_EXCEDRIN_MOTRIN,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -100,6 +101,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH37_MEDINATURA_BT,
   ...BATCH38_NATURES_WAY,
   ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
+  ...BATCH40_BAYER_EXCEDRIN_MOTRIN,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -1201,6 +1203,17 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     || source.includes('potassium hydroxide — pH adjuster')
   ) {
     return 'Potassium hydroxide is a locked Cleared pH adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
+  }
+
+  if (name.includes('triacetin') || source.includes('triacetin')) {
+    return 'Triacetin is a locked Cleared tablet/caplet coating plasticizer. Not a grade driver.';
+  }
+
+  if (
+    ingredient.riskLevel === 'high'
+    && (name.includes('caramel') || source.includes('caramel color'))
+  ) {
+    return 'Label says caramel color and does not name Class I/II vs III/IV. Undisclosed class is treated as Class III/IV — High / Avoid.';
   }
 
   if (
