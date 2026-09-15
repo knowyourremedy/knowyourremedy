@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (triacetin Cleared)
+Last Updated: September 15, 2026 (Search: pain rubs under Pain & Fever; no Topical aisle)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -101,6 +101,7 @@ POST-SCAN (locked template)
 SEARCH (locked)
 - Empty: search field + 2-column use-category TILES.
 - Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
+- Pain rubs live under Pain & Fever with the swallow SKUs. Wound care / antibiotic ointment stays First Aid. Do not invent a third “Topical” aisle.
 - Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Not clean filter chips (multi). Type further filters that list.
 - Type from the FIRST letter with NO category: matches by name/brand, cap ~35, “Keep typing to narrow” if more exist; hide category chips AND hide verdict chips.
 - Back from a product restores the same Search state.
@@ -142,6 +143,7 @@ Brandon standards (handoff)
 - Pedialyte “flavored” is too broad to attach a carton — split flavors before imaging.
 - Display badges: Clean / Usable / Not clean. Keys stay clean / caution / avoid.
 - Prenatal is its own Search shelf. Allergy+Allergies = Allergies. Homeopathic is not a shelf.
+- Pain rubs file under Pain & Fever with swallow SKUs. Wound care / antibiotic ointment stays First Aid. Do not invent a third “Topical” aisle.
 - New Grok/Project chat: read PROJECT_NOTES + METHODOLOGY first. Do not assume old chat memory. New Grok reads GitHub MAIN, not a Project pin.
 - Brandon is full-time on KYR until mid/late November, then back to his day job. Use this window for founder locks (grades, display words, dead SKUs, carton confirms). Don’t spend it on markets we won’t ship or on 15-photo loops he could skip.
 
