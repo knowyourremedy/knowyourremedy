@@ -21,7 +21,7 @@
 //   grape packets share this formula). Do NOT reuse for Original or Nighttime.
 // - hylands-naturals-earache-drops — clean
 //
-// TALLY (unverified drafts in THIS file): 47 rows — Clean 28 / Caution 18 /
+// TALLY (unverified drafts in THIS file): 49 rows — Clean 28 / Caution 20 /
 // Avoid 1.
 // Independently Clean in THIS batch: all acacia+lactose / lactose+stearate+MCC
 // tablets, the four Organic Cough & Immune syrups (water + citric acid), and
@@ -43,7 +43,11 @@
 // - Limited-only stack stays Caution (no 3-pt Avoid).
 // - Kids melatonin = on-carton only, no dosing. Zinc parked.
 // - Organic natural flavors on these liquids = Limited flavor-opacity
-//   (founder Caution). Cherry flavor Limited 1 on Soothing Gels.
+//   (founder Caution). Cherry flavor Limited 1 on Soothing Gels + Drops.
+// - Named food/botanical extracts as oral inactive (fennel / chamomile /
+//   calendula / lemon balm and like named plant-part food botanicals) =
+//   Cleared. Same class as grape seed extract. Do not Caution on those
+//   extracts alone.
 // - Lecithin ≠ seed oil. FOS is active on Digestive Support gummies.
 // - Organic sunflower oil in a gummy = High Avoid.
 // - SiO2 / Silicea is a homeopathic ACTIVE on Cell Salt #12 and among
@@ -55,8 +59,7 @@
 // Gel/Drops combos; Leg Cramps Trio; 8 Cell Salts Bundle. Night / combo
 // formulas are written as the single-formula row only.
 //
-// STILL BLOCKED (do not invent): Organic Baby Soothing Drops Day + Night
-// (different SKU from the gels; no founder OI — do not guess).
+// STILL BLOCKED (do not invent): none. Hyland leftovers: none.
 
 import type {
   CleanAlternative,
@@ -119,6 +122,8 @@ const METH = {
     'Methodology §5 Cleared (named fruit-or-vegetable juice as color)',
   rebM:
     'Methodology §5 Cleared (Rebaudioside M — high-purity steviol glycoside sibling; locked with stevia extract)',
+  namedBotanical:
+    'Methodology §5 Cleared (named food/botanical extract as oral inactive — fennel / chamomile / calendula / lemon balm and like named plant-part food botanicals; same class as grape seed extract). Do not Caution the product on these extracts alone.',
 } as const;
 
 const CARLSTON =
@@ -289,6 +294,13 @@ const SOOTHING_GEL_ALTS: CleanAlternative[] = [
   alt(
     BABY_ORAL_PAIN_DAY,
     "Independently Clean baby oral-pain analog in this batch (Hyland's Baby Oral Pain Relief Daytime, minAge 0). Form: meltaway tablet vs gel — labeled, not a hard filter (§6).",
+  ),
+];
+
+const SOOTHING_DROPS_ALTS: CleanAlternative[] = [
+  alt(
+    BABY_ORAL_PAIN_DAY,
+    "Independently Clean baby oral-pain analog in this batch (Hyland's Baby Oral Pain Relief Daytime, minAge 0). Form: meltaway tablet vs drops — labeled, not a hard filter (§6).",
   ),
 ];
 
@@ -2204,7 +2216,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     honestNote:
       'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Daytime = Caution. Organic cherry flavor Limited 1. ' +
       LIMITED_STACK +
-      ' Herb list differs from Nighttime (night adds lemon balm + passionflower) — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Not Organic Baby Soothing Drops (still blocked — no founder OI). No DailyMed drug SPL.',
+      ' Herb list differs from Nighttime (night adds lemon balm + passionflower) — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Distinct from Organic Baby Soothing Drops (different SKU; drops list botanicals on the OI). No DailyMed drug SPL.',
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_GEL_ALTS,
     sourcesGeneral: [
@@ -2280,11 +2292,219 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     honestNote:
       'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Nighttime = Caution. Organic cherry flavor Limited 1. ' +
       LIMITED_STACK +
-      ' Adds lemon balm + passionflower vs daytime — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Not Organic Baby Soothing Drops (still blocked — no founder OI). No DailyMed drug SPL.',
+      ' Adds lemon balm + passionflower vs daytime — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Distinct from Organic Baby Soothing Drops (different SKU; drops list botanicals on the OI). No DailyMed drug SPL.',
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_GEL_ALTS,
     sourcesGeneral: [
       'https://hylands.com/products/organic-baby-soothing-gel-nighttime — founder carton; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+    ],
+  },
+  {
+    id: 'hylands-organic-baby-soothing-drops-day',
+    productName: "Hyland's Organic Baby Soothing Drops Daytime",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-organic-baby-soothing-drops-day',
+    audience: KIDS,
+    minAge: 0,
+    form: 'drops',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic fennel seed extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic calendula extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic fennel seed extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Organic chamomile flower extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Organic calendula extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Sodium citrate dihydrate',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic cherry flavor',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-daytime',
+          METH.gums,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Drops Daytime = Caution. Organic cherry flavor Limited 1. ' +
+      LIMITED_STACK +
+      ' Named botanicals on the OI (fennel / chamomile / calendula) are Cleared-class food/botanical — do not Caution on those extracts alone. Distinct from Nighttime (night swaps calendula for lemon balm) — do not merge. Distinct from Organic Baby Soothing Gel (different SKU; gels keep botanicals formula-side). Carton: do not use on babies less than 2 months (minAge 0). No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SOOTHING_DROPS_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-soothing-drops-daytime — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+    ],
+  },
+  {
+    id: 'hylands-organic-baby-soothing-drops-night',
+    productName: "Hyland's Organic Baby Soothing Drops Nighttime",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-organic-baby-soothing-drops-night',
+    audience: KIDS,
+    minAge: 0,
+    form: 'drops',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic fennel seed extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic lemon balm leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic fennel seed extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Organic lemon balm leaf extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Organic chamomile flower extract',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.namedBotanical,
+        ),
+      ),
+      flag(
+        'Sodium citrate dihydrate',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic cherry flavor',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
+          METH.gums,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Drops Nighttime = Caution. Organic cherry flavor Limited 1. ' +
+      LIMITED_STACK +
+      ' Named botanicals on the OI (fennel / lemon balm / chamomile) are Cleared-class food/botanical — do not Caution on those extracts alone. Adds lemon balm vs daytime calendula — do not merge. Distinct from Organic Baby Soothing Gel (different SKU; gels keep botanicals formula-side). Carton: do not use on babies less than 2 months (minAge 0). No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SOOTHING_DROPS_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-soothing-drops-nighttime — founder carton OI; ' +
         UNVERIFIED_NOTE +
         '; no DailyMed drug SPL',
     ],

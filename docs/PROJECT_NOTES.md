@@ -245,6 +245,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Agar / agar-agar = Cleared (seaweed gel; gum/fiber family with pectin).
 - Dibehenin (vegetable) = Cleared (vegetable wax/lubricant; stearate / wax family).
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
+- Named food/botanical extracts as oral inactive (fennel seed, chamomile flower, calendula, lemon balm leaf, and like named plant-part food botanicals) = Cleared. Same class as grape seed extract. Not flavor-opacity. Do not Caution the product on these extracts alone. Sept 15, 2026 Soothing Drops leftovers.
 - Rice (unspecified) = Limited/Caution opacity, same bucket as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup.
 - Limited-only stack stays Caution (Usable). Any number of Limited flags does not become Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. Harm-first, not a Yuka point ladder.
 - Glycyrrhiza extract / licorice extract (oral inactive) = Cleared. Named botanical. Do not Caution the product on licorice alone. High-intake glycyrrhizin BP/potassium literature is a tap + honest-note line, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA is one source, not a veto. Tap + honest-note line (exact): “Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.”
@@ -297,7 +298,7 @@ Launch: don’t half-dress a date. Day job returns mid/late November.
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
 - Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
-- Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, two kids multis). Organic Baby Soothing Drops still blocked (no founder OI). Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
+- Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, Soothing Drops Day + Night, two kids multis). Hyland leftovers: none. Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
 
 Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
