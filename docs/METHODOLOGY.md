@@ -192,6 +192,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Named lemon oil as flavor — **LOCKED (Sept 14, 2026 housekeeping)** | organic lemon oil, lemon oil (named) | Flavor row. Limited, same class as “natural flavors.” Named is not a Clean auto-pass. |
 | Peppermint oil / orange essential oil as flavor — LOCKED | peppermint oil, orange essential oil (flavor) | Flavor/EO line. Not gummy High. |
 | Unlabeled MCT — LOCKED | MCT with no coconut (or other) source named | Opacity. Not Avoid. |
+| Barley malt (syrup/sweetener) — LOCKED (Sept 15, 2026) | barley malt, barley malt syrup | Not Avoid. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
@@ -222,12 +223,17 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sodium chloride, sodium bicarbonate | Saline bases. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
 | Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
+| Paraffin + mineral oil as topical ointment occlusive — LOCKED (Sept 15, 2026) | Petrolatum neighborhood. Tap: not an oral oil. |
+| Aloe as topical base — LOCKED (Sept 15, 2026) | Topical base. |
+| Witch hazel topical astringent — LOCKED (Sept 15, 2026) | Topical astringent. |
 | Stearyl alcohol / cetearyl alcohol (topical) — LOCKED | Fatty alcohols. |
 | Arachidyl alcohol / arachidyl glucoside / behenyl alcohol — LOCKED (Sept 14, 2026) | Cleared fatty-alcohol family. |
 | Hard fat (suppository base) — LOCKED (Sept 14, 2026) | Cleared. |
 | Sodium hydroxide (NaOH) as pH adjuster — LOCKED (Sept 14, 2026) | Cleared. |
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
+| Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Glycol stearate, isopropyl myristate, stearyl heptanoate — LOCKED (Sept 15, 2026) | Topical emollients. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
@@ -235,6 +241,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. |
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. |
 | Lactose, gelatin, carnauba wax, beeswax, purified water | — |
+| Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Copovidone — **LOCKED (Sept 14, 2026 housekeeping)** | Povidone-family copolymer. Same Cleared class as povidone / crospovidone. |
@@ -256,6 +263,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Named food/botanical extracts as oral inactive (fennel seed, chamomile flower, calendula, lemon balm leaf, and like named plant-part food botanicals) — LOCKED (Sept 15, 2026) | Cleared-class food/botanical. Same class as grape seed extract. Not flavor-opacity. Not a High row. Do not Caution the product on these extracts alone. |
 | Glycyrrhiza extract / licorice extract (oral inactive) — LOCKED (Sept 14, 2026) | Named botanical. Do not Caution the product on licorice alone. High-intake glycyrrhizin BP/potassium literature is a tap + honest-note line, not an auto-Caution at cough-syrup dose. Majority Tier-1 file; FDA is one source, not a veto. Tap + honest-note line (exact): “Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.” |
 | Honey (oral sweetener) — LOCKED (Sept 14, 2026) | Cleared-class sweetener. Tap + honest: not for under 1. Not a grade change to Avoid. |
+| Oat in oral syrup (named food soother) — LOCKED (Sept 15, 2026) | Named food soother. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Rebaudioside M / Reb M is a named high-purity steviol glycoside sibling (Sept 15, 2026). Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
 | Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. |
@@ -294,6 +302,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Sodium polyacrylate / polyacrylic acid (topical gel polymer) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
 | Unspecified resin — LOCKED | Label didn’t name the resin. | Standard alternatives rule. Not Avoid. |
 | Magnesium trisilicate — LOCKED | Silicate-adjacent filler. Not the SiO2 0-pt cap. Not Avoid. | Standard alternatives rule. Not Avoid. |
 

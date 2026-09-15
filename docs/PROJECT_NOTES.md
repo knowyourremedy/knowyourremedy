@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Sprouts store-brand write)
+Last Updated: September 15, 2026 (MediNatura/B&T topical and syrup inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -287,6 +287,16 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Bottle / cooking oils stay info-only. Never a Search grade.
 - PARKED OILS HUNT: when a brand sweep hits an oil bottle (e.g. Sprouts Organic MCT Oil), record name+URL only. Do not grade. Do not add to Search. oilInfoRecord page later.
 - Store-brand PDPs are not OI. Bot reads gallery/Ingredients photos + DailyMed first. Founder photos only on misses.
+- Safflower oil / soybean oil as CREAM or OINTMENT base = Cleared. Not gummy High. Tap form.
+- Sunflower seed wax = Cleared (wax ≠ oil; carnauba family).
+- Aloe as topical base = Cleared.
+- Paraffin + mineral oil as topical ointment occlusive = Cleared (petrolatum neighborhood). Tap: not an oral oil.
+- Witch hazel topical astringent = Cleared.
+- Glycol stearate, isopropyl myristate, stearyl heptanoate = Cleared (topical emollients).
+- Oat in oral syrup (named food soother) = Cleared.
+- Barley malt (syrup/sweetener) = Limited. Not Avoid.
+- Sodium polyacrylate / polyacrylic acid (topical gel polymer) = Caution. Not Avoid.
+- Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives = Caution (fragrance/EO line).
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
