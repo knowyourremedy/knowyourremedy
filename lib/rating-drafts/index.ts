@@ -40,3 +40,4 @@ export { BATCH39_TYLENOL_ADVIL_ALEVE_HOLES } from './batch39-tylenol-advil-aleve
 export { BATCH40_BAYER_EXCEDRIN_MOTRIN } from './batch40-bayer-excedrin-motrin';
 export { BATCH41_PAIN_RUBS } from './batch41-pain-rubs';
 export { BATCH42_PAIN_GELS } from './batch42-pain-gels';
+export { BATCH43_GOODYS_BC_ECOTRIN } from './batch43-goodys-bc-ecotrin';
