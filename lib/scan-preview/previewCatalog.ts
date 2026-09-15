@@ -331,6 +331,11 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'childrens-advil-suspension': catalogShot('childrens-advil-suspension.jpg'),
   'childrens-advil-suspension-dyefree': catalogShot('childrens-advil-suspension-dyefree.jpg'),
   'cvs-children-apap-dyed': catalogShot('cvs-children-apap-dyed.jpg'),
+  '365-ibuprofen-200-tio2': catalogShot('365-ibuprofen-200-tio2.jpg'),
+  'topcare-es-pain-relief-softgels': catalogShot('topcare-es-pain-relief-softgels.jpg'),
+  'topcare-es-pain-relief-tablets': catalogShot('topcare-es-pain-relief-tablets.jpg'),
+  'topcare-ibuprofen-caplets': catalogShot('topcare-ibuprofen-caplets.jpg'),
+  'topcare-dual-action': catalogShot('topcare-dual-action.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -500,6 +505,11 @@ assertExactCarton('junior-strength-advil', 'Advil', 'junior-strength-advil.jpg')
 assertExactCarton('childrens-advil-suspension', 'Advil', 'childrens-advil-suspension.jpg');
 assertExactCarton('childrens-advil-suspension-dyefree', 'Advil', 'childrens-advil-suspension-dyefree.jpg');
 assertExactCarton('cvs-children-apap-dyed', 'CVS Health', 'cvs-children-apap-dyed.jpg');
+assertExactCarton('365-ibuprofen-200-tio2', '365 Whole Foods Market', '365-ibuprofen-200-tio2.jpg');
+assertExactCarton('topcare-es-pain-relief-softgels', 'TopCare', 'topcare-es-pain-relief-softgels.jpg');
+assertExactCarton('topcare-es-pain-relief-tablets', 'TopCare', 'topcare-es-pain-relief-tablets.jpg');
+assertExactCarton('topcare-ibuprofen-caplets', 'TopCare', 'topcare-ibuprofen-caplets.jpg');
+assertExactCarton('topcare-dual-action', 'TopCare', 'topcare-dual-action.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
