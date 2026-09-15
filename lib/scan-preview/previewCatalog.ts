@@ -43,6 +43,7 @@ import {
   BATCH40_BAYER_EXCEDRIN_MOTRIN,
   BATCH41_PAIN_RUBS,
   BATCH42_PAIN_GELS,
+  BATCH43_GOODYS_BC_ECOTRIN,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -106,6 +107,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH40_BAYER_EXCEDRIN_MOTRIN,
   ...BATCH41_PAIN_RUBS,
   ...BATCH42_PAIN_GELS,
+  ...BATCH43_GOODYS_BC_ECOTRIN,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -1218,6 +1220,13 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     || source.includes('potassium hydroxide — pH adjuster')
   ) {
     return 'Potassium hydroxide is a locked Cleared pH adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
+  }
+
+  if (
+    name.includes('potassium chloride')
+    || source.includes('potassium chloride — salt')
+  ) {
+    return 'Potassium chloride is a locked Cleared salt / electrolyte. Not a grade driver.';
   }
 
   if (name.includes('triacetin') || source.includes('triacetin')) {
