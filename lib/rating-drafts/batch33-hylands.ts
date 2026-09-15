@@ -1,5 +1,5 @@
 // DRAFT / not verified / batch 33 Hyland’s US catalog / methodology
-// v1.6 + Sept 14 locks (glycyrrhiza Cleared; wood rosin Caution).
+// v1.6 + Sept 14 locks + Sept 15 founder-carton closeout.
 // Founder owns final Avoid vs Caution vs Clean.
 //
 // Hyland’s in-scope OTC / homeopathic / supplement drafts. Whole in-scope
@@ -21,19 +21,30 @@
 //   grape packets share this formula). Do NOT reuse for Original or Nighttime.
 // - hylands-naturals-earache-drops — clean
 //
-// TALLY (unverified drafts in THIS file): 34 rows — Clean 26 / Caution 7 /
+// TALLY (unverified drafts in THIS file): 47 rows — Clean 28 / Caution 18 /
 // Avoid 1.
 // Independently Clean in THIS batch: all acacia+lactose / lactose+stearate+MCC
-// tablets plus the four Organic Cough & Immune syrups (water + citric acid).
+// tablets, the four Organic Cough & Immune syrups (water + citric acid), and
+// the two Organic Baby All-in-One Cough syrups (agave + glycerin + water).
 //
 // SEPT 14 LOCKS APPLIED
 // - Glycyrrhiza / licorice extract = Cleared named botanical. Do NOT Caution
 //   the product on licorice alone. Tap + honest-note line (exact):
 //   “Licorice extract. Very high intakes of glycyrrhizin can affect blood
 //   pressure and potassium — that is not this syrup dose.”
-// - Wood rosin / colophony (topical) = Caution — PRID still blocked because
-//   ethyl alcohol / petrolatum / stearyl alcohol are not in §5.
+// - Wood rosin / colophony (topical) = Caution, not Avoid.
 // - FDA is one source, not a veto.
+// SEPT 15 FOUNDER-CARTON CLOSEOUT
+// - Lavender oil (topical) = fragrance-style Caution. Wintergreen extract
+//   (topical inactive) = Caution. Vegetable oil in cream is NOT gummy High
+//   (form-scope tap). Rebaudioside M = Cleared steviol-glycoside sibling.
+// - Ethyl alcohol Limited / petrolatum / stearyl / SSG / tapioca fiber /
+//   lactic / malic already in §5 — creams + PRID now writable.
+// - Limited-only stack stays Caution (no 3-pt Avoid).
+// - Kids melatonin = on-carton only, no dosing. Zinc parked.
+// - Organic natural flavors on these liquids = Limited flavor-opacity
+//   (founder Caution). Cherry flavor Limited 1 on Soothing Gels.
+// - Lecithin ≠ seed oil. FOS is active on Digestive Support gummies.
 // - Organic sunflower oil in a gummy = High Avoid.
 // - SiO2 / Silicea is a homeopathic ACTIVE on Cell Salt #12 and among
 //   Bioplasma / Baby Mucus actives — not the inactive nanoparticle cap.
@@ -44,13 +55,8 @@
 // Gel/Drops combos; Leg Cramps Trio; 8 Cell Salts Bundle. Night / combo
 // formulas are written as the single-formula row only.
 //
-// STILL BLOCKED (do not invent): PRID Drawing Salve (ethyl alcohol /
-// petrolatum / stearyl alcohol missing from §5 after wood-rosin Caution);
-// Leg Cramps + Arnica Cream; Leg Cramps + Arnica PM Cream; Kids Sleep Calm
-// + Immunity; Organic Kids Sleep Calm + Immunity; Organic Kids/Baby All-in-One
-// Day + Night (4); Kids Multi Brain & Eye gummies; Kids Multi Digestive
-// Support gummies; Organic Baby Soothing Gel Day + Night; Organic Baby
-// Soothing Drops Day + Night.
+// STILL BLOCKED (do not invent): Organic Baby Soothing Drops Day + Night
+// (different SKU from the gels; no founder OI — do not guess).
 
 import type {
   CleanAlternative,
@@ -66,6 +72,7 @@ const SLEEP = 'Sleep';
 const IMMUNE = 'Immune Support';
 const DIGESTIVE = 'Digestive';
 const FIRST_AID = 'First Aid';
+const VITAMINS = 'Vitamins';
 const ADULT = 'adult' as const;
 const KIDS = 'kids' as const;
 const HOMEOPATHIC = 'homeopathic' as const;
@@ -85,6 +92,33 @@ const METH = {
     `Methodology §5 Cleared (glycyrrhiza / licorice extract — named botanical; locked Sept 14, 2026). ${LICORICE_LINE}`,
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, "vegetable oil", sunflower, palm)',
+  creamVegOil:
+    'Seed/industrial oils are flagged in gummies. In this cream they are not that High rule. Methodology §5 form-scope (cream / topical vegetable oil — not the gummy High).',
+  sorbate: 'Methodology §5 Limited-risk (synthetic preservatives — potassium sorbate)',
+  ethylAlcohol:
+    'Methodology §5 Limited-risk (ethyl alcohol as topical / drawing-salve vehicle). Not oral-PG. Not Avoid.',
+  sugarAlcohols:
+    'Methodology §5 Limited-risk (sugar alcohols — maltitol / xylitol / erythritol; GI effects at volume)',
+  lavender:
+    'Methodology §5 Caution (lavender oil — fragrance-style topical; standalone Caution, not additive-scored, not Avoid). Can irritate skin or trigger allergy in sensitive people.',
+  wintergreen:
+    'Methodology §5 Caution (wintergreen extract, topical inactive — standalone Caution, not additive-scored, not Avoid).',
+  woodRosin:
+    'Methodology §5 Caution (wood rosin / colophony, topical — contact-allergy pattern; standalone Caution, not Avoid).',
+  petrolatum: 'Methodology §5 Cleared (petrolatum, topical — first-aid ointment base)',
+  fattyAlcohol:
+    'Methodology §5 Cleared (stearyl alcohol / cetearyl alcohol, topical — fatty alcohols)',
+  ssg: 'Methodology §5 Cleared (sodium stearoyl glutamate — stearate-family emulsifier)',
+  organicAcid: 'Methodology §5 Cleared (lactic acid / malic acid — organic acids with citric)',
+  tapiocaFiber:
+    'Methodology §5 Cleared (FOS / fructooligosaccharides / soluble tapioca fiber syrup — fiber family with inulin / tapioca syrup)',
+  inulin: 'Methodology §5 Cleared (inulin as fiber)',
+  lecithin:
+    'Methodology §5 Cleared (sunflower lecithin). Lecithin is not the gummy seed-oil High rule.',
+  plantJuice:
+    'Methodology §5 Cleared (named fruit-or-vegetable juice as color)',
+  rebM:
+    'Methodology §5 Cleared (Rebaudioside M — high-purity steviol glycoside sibling; locked with stevia extract)',
 } as const;
 
 const CARLSTON =
@@ -92,6 +126,15 @@ const CARLSTON =
 
 const ZINC_PARKED =
   'Zinc is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
+
+const MELATONIN_CARTON =
+  'Kids melatonin is on-carton only — no dosing in this draft. Cleanliness grade only; no efficacy claim.';
+
+const LIMITED_STACK =
+  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid.';
+
+const CREAM_OIL_LINE =
+  'Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.';
 
 const HYLANDS_RETAILERS = [
   'Hylands.com',
@@ -110,6 +153,14 @@ const OSCILLO = 'oscillococcinum';
 const STUFFY = 'hylands-4kids-stuffy-nose-sinus';
 const ORG_KIDS_DAY = 'hylands-organic-kids-cough-immune-day';
 const TINY_COLD_DAY = 'hylands-baby-tiny-cold-day';
+const ORG_BABY_ALLINONE_DAY = 'hylands-organic-baby-all-in-one-cough-day';
+const BABY_ORAL_PAIN_DAY = 'hylands-baby-oral-pain-day';
+const LEG_CRAMPS_TABS = 'hylands-leg-cramps';
+const ARNICA_30X = 'hylands-arnica-30x';
+const HYLANDS_SLEEP = 'hylands-sleep';
+const HYLANDS_4KIDS_CALM = 'hylands-4kids-calm-restful';
+const CALENDULA_OINT = 'boiron-calendula-ointment';
+const ARNICARE_GEL = 'boiron-arnicare-gel';
 
 function flag(
   name: string,
@@ -194,6 +245,61 @@ const ELDERBERRY_ALTS: CleanAlternative[] = [
   alt(
     OSCILLO,
     'Independently Clean Immune analog already on main (Boiron Oscillococcinum, minAge 2). Form: meltaway pellets vs gummy — labeled, not a hard filter (§6). Cleanliness only. Do not invent a Clean Hyland’s elderberry.',
+  ),
+];
+
+const CREAM_ALTS: CleanAlternative[] = [
+  alt(
+    LEG_CRAMPS_TABS,
+    "Independently Clean adult Leg Cramps analog in this batch (Hyland's Leg Cramps tablets). Form: meltaway tablet vs cream — labeled, not a hard filter (§6).",
+  ),
+  alt(
+    ARNICA_30X,
+    "Independently Clean adult Arnica analog in this batch (Hyland's Arnica 30X). Form: meltaway tablet vs cream — labeled, not a hard filter (§6).",
+  ),
+  alt(
+    ARNICARE_GEL,
+    'Independently Clean adult first-aid / topical Arnica analog already on main (Boiron Arnicare Gel). Form: gel vs cream — labeled, not a hard filter (§6). Cleanliness only.',
+  ),
+];
+
+const SLEEP_CALM_ALTS: CleanAlternative[] = [
+  alt(
+    HYLANDS_4KIDS_CALM,
+    "Independently Clean kids homeopathic Sleep analog already on main (Hyland's 4 Kids Calm & Restful, minAge 2). Form: meltaway tablet vs liquid — labeled, not a hard filter (§6). Do not invent a Clean kids melatonin.",
+  ),
+  alt(
+    HYLANDS_SLEEP,
+    "Independently Clean kids-usable homeopathic Sleep analog already on main (Hyland's Sleep, minAge 6). Form: meltaway tablet vs liquid — labeled, not a hard filter (§6).",
+  ),
+];
+
+const KIDS_ALLINONE_ALTS: CleanAlternative[] = [
+  alt(
+    ORG_KIDS_DAY,
+    'Independently Clean kids Cold & Flu analog in this batch (Organic Kids Cough & Immune Daytime, minAge 1). Form: liquid — labeled, not a hard filter (§6).',
+  ),
+  alt(
+    ORG_BABY_ALLINONE_DAY,
+    'Independently Clean baby All-in-One analog in this batch (Organic Baby All-in-One Cough Daytime; carton 6+ months). Form: liquid — labeled, not a hard filter (§6).',
+  ),
+];
+
+const SOOTHING_GEL_ALTS: CleanAlternative[] = [
+  alt(
+    BABY_ORAL_PAIN_DAY,
+    "Independently Clean baby oral-pain analog in this batch (Hyland's Baby Oral Pain Relief Daytime, minAge 0). Form: meltaway tablet vs gel — labeled, not a hard filter (§6).",
+  ),
+];
+
+const PRID_ALTS: CleanAlternative[] = [
+  alt(
+    CALENDULA_OINT,
+    'Independently Clean adult First Aid analog already on main (Boiron Calendula Ointment). Form: ointment vs salve — labeled, not a hard filter (§6). Cleanliness only.',
+  ),
+  alt(
+    ARNICARE_GEL,
+    'Independently Clean adult first-aid topical analog already on main (Boiron Arnicare Gel). Form: gel vs salve — labeled, not a hard filter (§6). Cleanliness only.',
   ),
 ];
 
@@ -453,7 +559,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     verdict: 'clean',
     honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Leg Cramps + Arnica caplets = Clean. Lactose + magnesium stearate + MCC = 0 pt. Not the meltaway tablet and not the cream (cream still blocked).",
+      "FOUNDER-STYLE DRAFT: Leg Cramps + Arnica caplets = Clean. Lactose + magnesium stearate + MCC = 0 pt. Not the meltaway tablet and not the cream rows.",
     ),
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
@@ -1444,6 +1550,1052 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=736b2487-e81d-d172-e053-2a91aa0ab0cf — ' +
         UNVERIFIED_NOTE,
       CARLSTON,
+    ],
+  },
+
+  // ── Sept 15 founder-carton closeout ──────────────────────
+  {
+    id: 'hylands-leg-cramps-arnica-pm-cream',
+    productName: "Hyland's Leg Cramps + Arnica PM Cream",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-leg-cramps-arnica-pm-cream',
+    audience: ADULT,
+    minAge: 6,
+    form: 'cream',
+    recordStatus: UNVERIFIED,
+    ...homeopathicFields(),
+    activeIngredients: [
+      { name: 'Aconitum napellus', strength: '3X HPUS' },
+      { name: 'Arnica montana', strength: '3X HPUS' },
+      { name: 'Ledum palustre', strength: '3X HPUS' },
+      { name: 'Magnesia phosphorica', strength: '10X HPUS' },
+      { name: 'Rhus toxicodendron', strength: '6X HPUS' },
+      { name: 'Viscum album', strength: '3X HPUS' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Beeswax',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.cleared),
+      ),
+      flag(
+        'Cetearyl alcohol',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.fattyAlcohol),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.cleared),
+      ),
+      flag(
+        'Ethyl alcohol',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.ethylAlcohol),
+      ),
+      flag(
+        'Glycerin',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.cleared),
+      ),
+      flag(
+        'Lavender oil',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.lavender),
+      ),
+      flag(
+        'Potassium sorbate',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.sorbate),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.cleared),
+      ),
+      flag(
+        'Sodium benzoate',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.benzoate),
+      ),
+      flag(
+        'Sodium stearoyl glutamate',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.ssg),
+      ),
+      flag(
+        'Vegetable oil',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.creamVegOil),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.gums),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Leg Cramps + Arnica PM Cream = Caution. Lavender oil is fragrance-style Caution (standalone, not Avoid). Ethyl alcohol Limited + potassium sorbate + sodium benzoate are Limited-only. ' +
+      LIMITED_STACK +
+      ' ' +
+      CREAM_OIL_LINE +
+      ' Separate row from the daytime cream (no wintergreen on this carton). Not the tablets / caplets. Ages 6+. ' +
+      CARLSTON,
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: CREAM_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/hylands-leg-cramps-pm-cream — founder carton OI; ' +
+        UNVERIFIED_NOTE,
+      CARLSTON,
+    ],
+  },
+  {
+    id: 'hylands-leg-cramps-arnica-cream',
+    productName: "Hyland's Leg Cramps + Arnica Cream",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-leg-cramps-arnica-cream',
+    audience: ADULT,
+    minAge: 6,
+    form: 'cream',
+    recordStatus: UNVERIFIED,
+    ...homeopathicFields(),
+    activeIngredients: [
+      { name: 'Aconitum napellus', strength: '3X HPUS' },
+      { name: 'Arnica montana', strength: '3X HPUS' },
+      { name: 'Ledum palustre', strength: '3X HPUS' },
+      { name: 'Magnesia phosphorica', strength: '10X HPUS' },
+      { name: 'Rhus toxicodendron', strength: '6X HPUS' },
+      { name: 'Viscum album', strength: '3X HPUS' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Beeswax',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.cleared),
+      ),
+      flag(
+        'Cetearyl alcohol',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.fattyAlcohol),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.cleared),
+      ),
+      flag(
+        'Ethyl alcohol',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.ethylAlcohol),
+      ),
+      flag(
+        'Glycerin',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.cleared),
+      ),
+      flag(
+        'Potassium sorbate',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.sorbate),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.cleared),
+      ),
+      flag(
+        'Sodium benzoate',
+        'limited',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.benzoate),
+      ),
+      flag(
+        'Sodium stearoyl glutamate',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.ssg),
+      ),
+      flag(
+        'Vegetable oil',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.creamVegOil),
+      ),
+      flag(
+        'Wintergreen extract',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.wintergreen),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.gums),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Leg Cramps + Arnica Cream (day) = Caution. Wintergreen extract inactive is standalone Caution (not Avoid). Ethyl alcohol Limited + potassium sorbate + sodium benzoate are Limited-only. ' +
+      LIMITED_STACK +
+      ' ' +
+      CREAM_OIL_LINE +
+      ' Separate row from PM (no lavender on this carton). Not the tablets / caplets. Ages 6+. ' +
+      CARLSTON,
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: CREAM_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/hylands-leg-cramps-cream — founder carton OI; ' +
+        UNVERIFIED_NOTE,
+      CARLSTON,
+    ],
+  },
+  {
+    id: 'hylands-kids-sleep-calm-immunity',
+    productName: "Hyland's Kids Sleep Calm + Immunity",
+    brand: BRAND,
+    category: SLEEP,
+    formulaId: 'hylands-kids-sleep-calm-immunity',
+    audience: KIDS,
+    minAge: 2,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Melatonin', strength: 'on-carton only' },
+      { name: 'Zinc', strength: 'label' },
+      { name: 'Vitamin D', strength: 'label' },
+      { name: 'Magnesium', strength: 'label' },
+      { name: 'Organic elderberry fruit extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic lemon balm leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic passionflower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ginger root extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite('https://hylands.com/products/kids-sleep-calm-immunity', METH.cleared),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite('https://hylands.com/products/kids-sleep-calm-immunity', METH.cleared),
+      ),
+      flag(
+        'Organic natural flavors',
+        'limited',
+        labelCite('https://hylands.com/products/kids-sleep-calm-immunity', METH.flavors),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite('https://hylands.com/products/kids-sleep-calm-immunity', METH.cleared),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Kids Sleep Calm + Immunity (purple, with melatonin) = Caution. Organic natural flavors Limited (opacity). ' +
+      LIMITED_STACK +
+      ' ' +
+      MELATONIN_CARTON +
+      ' ' +
+      ZINC_PARKED +
+      ' Separate row from the blue melatonin-free Organic twin. Carton ages 2+. No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SLEEP_CALM_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/kids-sleep-calm-immunity — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      MELATONIN_CARTON,
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-kids-sleep-calm-immunity-organic',
+    productName: "Hyland's Organic Kids Sleep Calm + Immunity",
+    brand: BRAND,
+    category: SLEEP,
+    formulaId: 'hylands-kids-sleep-calm-immunity-organic',
+    audience: KIDS,
+    minAge: 2,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Zinc', strength: 'label' },
+      { name: 'Vitamin D', strength: 'label' },
+      { name: 'Magnesium', strength: 'label' },
+      { name: 'Organic elderberry fruit extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic lemon balm leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic passionflower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ginger root extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-organic-sleep-calm-immunity',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-organic-sleep-calm-immunity',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic natural flavors',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-organic-sleep-calm-immunity',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-organic-sleep-calm-immunity',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Kids Sleep Calm + Immunity (blue, no melatonin) = Caution. Same OI as the purple melatonin twin — organic natural flavors Limited (opacity). ' +
+      LIMITED_STACK +
+      ' No melatonin on this carton. ' +
+      ZINC_PARKED +
+      ' Separate row from the purple melatonin SKU. Carton ages 2+. No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SLEEP_CALM_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/kids-organic-sleep-calm-immunity — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-organic-kids-all-in-one-cough-day',
+    productName: "Hyland's Organic Kids All-in-One Cough Daytime",
+    brand: BRAND,
+    category: COLD_FLU,
+    formulaId: 'hylands-organic-kids-all-in-one-cough-day',
+    audience: KIDS,
+    minAge: 1,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic black elderberry', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ivy leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Wild cherry bark extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Vitamin D', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic natural flavors',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Kids All-in-One Cough Daytime = Caution. Organic natural flavors Limited (opacity). ' +
+      LIMITED_STACK +
+      ' Honey / agave / botanicals sit on the formula side, not OI. ' +
+      ZINC_PARKED +
+      ' Distinct from Nighttime and from Baby All-in-One (no flavor line; Clean). Carton ages 1–12. No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: KIDS_ALLINONE_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-organic-kids-all-in-one-cough-night',
+    productName: "Hyland's Organic Kids All-in-One Cough Nighttime",
+    brand: BRAND,
+    category: COLD_FLU,
+    formulaId: 'hylands-organic-kids-all-in-one-cough-night',
+    audience: KIDS,
+    minAge: 1,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic black elderberry', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ivy leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Wild cherry bark extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Vitamin D', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Organic natural flavors',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Kids All-in-One Cough Nighttime = Caution. Same OI as daytime — organic natural flavors Limited (opacity). ' +
+      LIMITED_STACK +
+      ' Chamomile sits on the formula side. Do not merge with daytime. ' +
+      ZINC_PARKED +
+      ' Carton ages 1–12. No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: KIDS_ALLINONE_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: ORG_BABY_ALLINONE_DAY,
+    productName: "Hyland's Organic Baby All-in-One Cough Daytime",
+    brand: BRAND,
+    category: COLD_FLU,
+    formulaId: ORG_BABY_ALLINONE_DAY,
+    audience: KIDS,
+    minAge: 0,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic black elderberry', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ivy leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Wild cherry bark extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic agave syrup',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-daytime',
+          METH.organicFlavor,
+        ),
+      ),
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-daytime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'clean',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby All-in-One Cough Daytime = Clean. Other Ingredients are organic agave syrup + organic glycerin + water = 0 pt. No flavor line. Botanicals / zinc sit on the formula side, not OI. ' +
+      ZINC_PARKED +
+      ' Distinct from Nighttime and from Kids All-in-One (flavored = Caution). Carton ages 6 months+ (minAge 0). No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-allinone-coughsyrup-daytime — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-organic-baby-all-in-one-cough-night',
+    productName: "Hyland's Organic Baby All-in-One Cough Nighttime",
+    brand: BRAND,
+    category: COLD_FLU,
+    formulaId: 'hylands-organic-baby-all-in-one-cough-night',
+    audience: KIDS,
+    minAge: 0,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic black elderberry', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic ivy leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Wild cherry bark extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic agave syrup',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-nighttime',
+          METH.organicFlavor,
+        ),
+      ),
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-allinone-coughsyrup-nighttime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'clean',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby All-in-One Cough Nighttime = Clean. Same OI as daytime — organic agave syrup + organic glycerin + water = 0 pt. No flavor line. Chamomile sits on the formula side. Do not merge with Baby Daytime. ' +
+      ZINC_PARKED +
+      ' Carton ages 6 months+ (minAge 0). No DailyMed drug SPL (dietary supplement).',
+    retailers: [...HYLANDS_RETAILERS],
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-allinone-coughsyrup-nighttime — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-organic-baby-soothing-gel-day',
+    productName: "Hyland's Organic Baby Soothing Gel Daytime",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-organic-baby-soothing-gel-day',
+    audience: KIDS,
+    minAge: 0,
+    form: 'gel',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic ginger root extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic fennel seed extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic calendula extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic thyme leaf extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-daytime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite('https://hylands.com/products/organic-baby-soothing-gel-daytime', METH.gums),
+      ),
+      flag(
+        'Organic cherry flavor',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-daytime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-daytime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Daytime = Caution. Organic cherry flavor Limited 1. ' +
+      LIMITED_STACK +
+      ' Herb list differs from Nighttime (night adds lemon balm + passionflower) — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Not Organic Baby Soothing Drops (still blocked — no founder OI). No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SOOTHING_GEL_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-soothing-gel-daytime — founder carton; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+    ],
+  },
+  {
+    id: 'hylands-organic-baby-soothing-gel-night',
+    productName: "Hyland's Organic Baby Soothing Gel Nighttime",
+    brand: BRAND,
+    category: PAIN_FEVER,
+    formulaId: 'hylands-organic-baby-soothing-gel-night',
+    audience: KIDS,
+    minAge: 0,
+    form: 'gel',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: 'Organic ginger root extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic chamomile flower extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic lemon balm leaf extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic passionflower herb extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic fennel seed extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic calendula extract', strength: 'formula-side (not a drug SPL)' },
+      { name: 'Organic thyme leaf extract', strength: 'formula-side (not a drug SPL)' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Organic glycerin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Xanthan gum',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
+          METH.gums,
+        ),
+      ),
+      flag(
+        'Organic cherry flavor',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Nighttime = Caution. Organic cherry flavor Limited 1. ' +
+      LIMITED_STACK +
+      ' Adds lemon balm + passionflower vs daytime — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Not Organic Baby Soothing Drops (still blocked — no founder OI). No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: SOOTHING_GEL_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/organic-baby-soothing-gel-nighttime — founder carton; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+    ],
+  },
+  {
+    id: 'hylands-prid-drawing-salve',
+    productName: "Hyland's PRID Drawing Salve",
+    brand: BRAND,
+    category: FIRST_AID,
+    formulaId: 'hylands-prid-drawing-salve',
+    audience: ADULT,
+    minAge: 6,
+    form: 'salve',
+    recordStatus: UNVERIFIED,
+    ...homeopathicFields(),
+    activeIngredients: [
+      { name: 'Arnica montana', strength: '3X HPUS' },
+      { name: 'Calendula officinalis', strength: '3X HPUS' },
+      { name: 'Echinacea angustifolia', strength: '3X HPUS' },
+      { name: 'Hepar sulph calc', strength: '12X HPUS' },
+      { name: 'Ichthammol', strength: '2X HPUS' },
+      { name: 'Silicea', strength: '12X HPUS' },
+      { name: 'Sulphur', strength: '12X HPUS' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Beeswax',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.cleared),
+      ),
+      flag(
+        'Ethyl alcohol',
+        'limited',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.ethylAlcohol),
+      ),
+      flag(
+        'Glycerin',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.cleared),
+      ),
+      flag(
+        'Petrolatum',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.petrolatum),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.cleared),
+      ),
+      flag(
+        'Stearyl alcohol',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.fattyAlcohol),
+      ),
+      flag(
+        'Wood rosin',
+        'cleared',
+        dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.woodRosin),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: PRID Drawing Salve = Caution. Wood rosin is standalone Caution (contact-allergy pattern, not Avoid). Ethyl alcohol Limited (topical vehicle — not oral-PG, not Avoid). Petrolatum + stearyl alcohol + beeswax + glycerin + water are Cleared. Not Avoid. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. Ages 6+. ' +
+      CARLSTON,
+    retailers: [...HYLANDS_RETAILERS],
+    cleanAlternatives: PRID_ALTS,
+    sourcesGeneral: [
+      'https://hylands.com/products/prid-drawing-salve — founder carton OI; ' +
+        UNVERIFIED_NOTE,
+      'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d22eca2f-d7e6-3412-e053-2995a90a6384 — ' +
+        UNVERIFIED_NOTE,
+      CARLSTON,
+    ],
+  },
+  {
+    id: 'hylands-kids-multi-brain-eye-gummies',
+    productName: "Hyland's Kids Multi + Brain & Eye Gummies",
+    brand: BRAND,
+    category: VITAMINS,
+    formulaId: 'hylands-kids-multi-brain-eye-gummies',
+    audience: KIDS,
+    minAge: 2,
+    form: 'gummy',
+    recordStatus: UNVERIFIED,
+    productType: 'Vitamin',
+    productSubtype: 'gummy',
+    activeIngredients: [
+      { name: 'Vitamin A', strength: 'label' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Vitamin D3', strength: 'label' },
+      { name: 'Vitamin E', strength: 'label' },
+      { name: 'Vitamin K2', strength: 'label' },
+      { name: 'Vitamin B6', strength: 'label' },
+      { name: 'Folate', strength: 'label' },
+      { name: 'Vitamin B12', strength: 'label' },
+      { name: 'Biotin', strength: 'label' },
+      { name: 'Pantothenic acid', strength: 'label' },
+      { name: 'Choline', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+      { name: 'Lutein', strength: 'label' },
+      { name: 'Zeaxanthin', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Inulin syrup',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.inulin,
+        ),
+      ),
+      flag(
+        'Maltitol syrup',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.sugarAlcohols,
+        ),
+      ),
+      flag(
+        'Xylitol',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.sugarAlcohols,
+        ),
+      ),
+      flag(
+        'Erythritol',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.sugarAlcohols,
+        ),
+      ),
+      flag(
+        'Pectin',
+        'cleared',
+        labelCite('https://hylands.com/products/kids-multivitamin-brain-and-eye', METH.gums),
+      ),
+      flag(
+        'Natural flavors',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Lactic acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.organicAcid,
+        ),
+      ),
+      flag(
+        'Malic acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.organicAcid,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Sunflower lecithin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.lecithin,
+        ),
+      ),
+      flag(
+        'Vegetable juice for color',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-brain-and-eye',
+          METH.plantJuice,
+        ),
+      ),
+      flag(
+        'Rebaudioside M',
+        'cleared',
+        labelCite('https://hylands.com/products/kids-multivitamin-brain-and-eye', METH.rebM),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Kids Multi + Brain & Eye Gummies = Caution. Maltitol + xylitol + erythritol + natural flavors are Limited-only. ' +
+      LIMITED_STACK +
+      ' Sunflower lecithin is Cleared — lecithin is not the gummy seed-oil High rule. Rebaudioside M is Cleared (high-purity steviol glycoside). Named vegetable juice color is Cleared. ' +
+      ZINC_PARKED +
+      ' No independently Clean kids multi on main — cleanAlternatives omitted (do not invent). Carton ages 2+. No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    sourcesGeneral: [
+      'https://hylands.com/products/kids-multivitamin-brain-and-eye — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
+    ],
+  },
+  {
+    id: 'hylands-kids-multi-digestive-gummies',
+    productName: "Hyland's Kids Multi + Digestive Support Gummies",
+    brand: BRAND,
+    category: DIGESTIVE,
+    formulaId: 'hylands-kids-multi-digestive-gummies',
+    audience: KIDS,
+    minAge: 2,
+    form: 'gummy',
+    recordStatus: UNVERIFIED,
+    productType: 'Vitamin',
+    productSubtype: 'gummy',
+    activeIngredients: [
+      { name: 'Fructooligosaccharides (FOS)', strength: 'label — active fiber' },
+      { name: 'Vitamin A', strength: 'label' },
+      { name: 'Vitamin C', strength: 'label' },
+      { name: 'Vitamin D3', strength: 'label' },
+      { name: 'Vitamin E', strength: 'label' },
+      { name: 'Vitamin K2', strength: 'label' },
+      { name: 'Thiamine', strength: 'label' },
+      { name: 'Riboflavin', strength: 'label' },
+      { name: 'Vitamin B6', strength: 'label' },
+      { name: 'Folate', strength: 'label' },
+      { name: 'Vitamin B12', strength: 'label' },
+      { name: 'Biotin', strength: 'label' },
+      { name: 'Pantothenic acid', strength: 'label' },
+      { name: 'Choline', strength: 'label' },
+      { name: 'Zinc', strength: 'label' },
+      { name: 'Bacillus coagulans', strength: 'label' },
+    ],
+    inactiveIngredients: [
+      flag(
+        'Soluble tapioca fiber',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.tapiocaFiber,
+        ),
+      ),
+      flag(
+        'Maltitol',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.sugarAlcohols,
+        ),
+      ),
+      flag(
+        'Pectin',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.gums,
+        ),
+      ),
+      flag(
+        'Citric acid',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.cleared,
+        ),
+      ),
+      flag(
+        'Natural flavors',
+        'limited',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.flavors,
+        ),
+      ),
+      flag(
+        'Fruit and vegetable juice (color)',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.plantJuice,
+        ),
+      ),
+      flag(
+        'Water',
+        'cleared',
+        labelCite(
+          'https://hylands.com/products/kids-multivitamin-digestive-support',
+          METH.cleared,
+        ),
+      ),
+    ],
+    verdict: 'caution',
+    honestNote:
+      'FOUNDER-STYLE DRAFT: Kids Multi + Digestive Support Gummies = Caution. Maltitol + natural flavors are Limited-only. ' +
+      LIMITED_STACK +
+      ' FOS / fructooligosaccharides is an active on this carton, not an OI score. Soluble tapioca fiber is Cleared (fiber family). Named fruit and vegetable juice color is Cleared. ' +
+      ZINC_PARKED +
+      ' No independently Clean kids multi on main — cleanAlternatives omitted (do not invent). Carton ages 2+. No DailyMed drug SPL.',
+    retailers: [...HYLANDS_RETAILERS],
+    sourcesGeneral: [
+      'https://hylands.com/products/kids-multivitamin-digestive-support — founder carton OI; ' +
+        UNVERIFIED_NOTE +
+        '; no DailyMed drug SPL',
+      ZINC_PARKED,
     ],
   },
 ];

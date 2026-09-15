@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (Hyland leftovers locks)
+Last Updated: September 15, 2026 (Hyland’s founder-carton closeout)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -203,9 +203,11 @@ Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock
 - Avoid in gummies / soft chews only (soybean, canola, palm, sunflower, “vegetable oil”).
 - Capsule / softgel oil fill is NOT that High rule.
 - Liquid-drop oil carriers use the same non-gummy rule as capsule/softgel fill. Tap text required (same both-sides sentence).
+- Cream / topical vegetable oil uses the same non-gummy rule as capsule/softgel/liquid-drop fill. Tap: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
 - Coconut oil alone in gummies/chews is NOT seed-oil High (already practice; now in Methodology §5 Cleared).
 - Canola / soy / sunflower lecithin stays Cleared (same lecithin lock; canola named explicitly).
 - On every capsule/softgel/liquid-drop row that lists those oils as a fill, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this capsule/softgel/liquid-drop fill they are not that High rule.”
+- On every cream / topical row that lists vegetable oil / seed oil as a base, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
 
 Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §5 locks):
 - Pea protein isolate = Cleared-class food protein.
@@ -254,6 +256,10 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Lactic acid / malic acid = Cleared (organic acids with citric).
 - FOS / fructooligosaccharides / soluble tapioca fiber syrup = Cleared (fiber family with inulin / tapioca syrup).
 - Ethyl alcohol / alcohol as topical or drawing-salve vehicle = Limited (vehicle). Not oral-PG. Not Avoid.
+- Lavender oil (topical) = Caution, fragrance-style (same posture as fragrance / parfum). Not Avoid. Sept 15, 2026 founder carton.
+- Wintergreen extract (topical inactive) = Caution. Not Avoid. Sept 15, 2026 founder carton.
+- Rebaudioside M / Reb M = Cleared (high-purity steviol glycoside sibling of the stevia lock). Sept 15, 2026.
+- Vegetable oil in a cream / topical = NOT the gummy seed-oil High rule. Same form-scope as capsule / softgel / liquid-drop fill. Tap both sides.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
@@ -291,7 +297,7 @@ Launch: don’t half-dress a date. Day job returns mid/late November.
 BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
 - Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
-- Hyland’s — batch33 Mon Sept 14, 2026. Reuse 6 existing ids. New writable formulas + glycyrrhiza-unlocked liquids. PRID still blocked (ethyl alcohol / petrolatum / stearyl alcohol not in §5). Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
+- Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, two kids multis). Organic Baby Soothing Drops still blocked (no founder OI). Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
 
 Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
