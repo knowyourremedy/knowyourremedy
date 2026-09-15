@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Hyland’s founder-carton closeout)
+Last Updated: September 14, 2026 (alcohol vehicle oral+topical Limited; Boiron scan locks)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -256,7 +256,15 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Sodium stearoyl glutamate = Cleared (stearate-family emulsifier).
 - Lactic acid / malic acid = Cleared (organic acids with citric).
 - FOS / fructooligosaccharides / soluble tapioca fiber syrup = Cleared (fiber family with inulin / tapioca syrup).
-- Ethyl alcohol / alcohol as topical or drawing-salve vehicle = Limited (vehicle). Not oral-PG. Not Avoid.
+- Alcohol / ethyl alcohol as a VEHICLE = Limited (oral homeopathic liquid or topical first-aid). Not Avoid. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active.
+- Arachidyl alcohol / arachidyl glucoside / behenyl alcohol = Cleared (fatty-alcohol family).
+- Hard fat (suppository base) = Cleared.
+- NaOH as pH adjuster = Cleared.
+- Dimethicone copolyol = Cleared with dimethicone.
+- Lactobacillus ferment (topical) = Caution (ferment system).
+- L-carvone = Limited (flavor isolate).
+- Caprylyl glycol / hexanediol / sorbic acid = Limited (preservative family).
+- Gemmotherapy out until founder asks.
 - Lavender oil (topical) = Caution, fragrance-style (same posture as fragrance / parfum). Not Avoid. Sept 15, 2026 founder carton.
 - Wintergreen extract (topical inactive) = Caution. Not Avoid. Sept 15, 2026 founder carton.
 - Rebaudioside M / Reb M = Cleared (high-purity steviol glycoside sibling of the stevia lock). Sept 15, 2026.

@@ -180,7 +180,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
-| Ethyl alcohol / alcohol as topical or drawing-salve vehicle — LOCKED | alcohol, ethyl alcohol (topical vehicle) | Vehicle. Not oral-PG. Not Avoid. |
+| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol (oral homeopathic liquid or topical first-aid) | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
@@ -190,6 +190,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
 | Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
+| L-carvone — LOCKED (Sept 14, 2026) | carvone | Limited flavor isolate. |
+| Caprylyl glycol / hexanediol / sorbic acid — LOCKED (Sept 14, 2026) | caprylyl glycol, 1,2-hexanediol, sorbic acid | Limited preservative family. |
 | Maltodextrin (organic or non-organic) | organic maltodextrin | Glycemic; minor. Organic maltodextrin is the same Limited as non-organic. |
 | Polydextrose — **LOCKED (Sept 14, 2026 housekeeping)** | — | Limited (maltodextrin-like). Glycemic bulking fiber. |
 | Fructose as sweetener — **LOCKED (Sept 14, 2026 housekeeping)** | — | Treat with sugars. Not High. Not the parked HFCS case and not an Avoid sweetener. |
@@ -212,6 +214,10 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
 | Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
 | Stearyl alcohol / cetearyl alcohol (topical) — LOCKED | Fatty alcohols. |
+| Arachidyl alcohol / arachidyl glucoside / behenyl alcohol — LOCKED (Sept 14, 2026) | Cleared fatty-alcohol family. |
+| Hard fat (suppository base) — LOCKED (Sept 14, 2026) | Cleared. |
+| Sodium hydroxide (NaOH) as pH adjuster — LOCKED (Sept 14, 2026) | Cleared. |
+| Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
@@ -264,6 +270,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Cochineal / carmine / carminic acid — **LOCKED (v1.6)** | Insect-derived red color. Can cause allergic reactions in sensitive people. | If a dye-free/carmine-free Good option exists in the same use category and age range, prefer it in alternatives. Not Avoid. |
 | Sodium copper chlorophyllin (E141) — LOCKED (Sept 14, 2026) | Caution. Copper-complex color, not raw chlorophyll / parsley. Not a High/Avoid dye row. | Standard alternatives rule. Not Avoid. |
 | Organic cultured dextrose — LOCKED (Sept 14, 2026) | Caution. Ferment preservative system, not the same as dextrose/cane sugar sweetener. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Lactobacillus ferment (topical) — LOCKED (Sept 14, 2026) | Caution ferment system. | Standard alternatives rule. Not Avoid. |
 | Whole-leaf / crude stevia — **LOCKED (Sept 14, 2026 housekeeping)** | Do not auto-Clean. Different case from high-purity steviol glycosides (Cleared). Already stated on the Cleared row; this is the Caution row so it is not a missing-row. | Standard alternatives rule. Not Avoid. |
 | Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
 | Phenoxyethanol (topical preservative) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution. Topical preservative. Not Avoid. | Standard alternatives rule. Not Avoid. |
