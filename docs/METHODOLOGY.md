@@ -185,6 +185,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
 | Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol (oral homeopathic liquid or topical first-aid) | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
+| Isopropyl alcohol — LOCKED (Sept 15, 2026) | IPA, isopropanol | Alcohol vehicle family. Not Avoid. Tap if useful vs ethyl alcohol. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
@@ -242,6 +243,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Glycol stearate, isopropyl myristate, stearyl heptanoate — LOCKED (Sept 15, 2026) | Topical emollients. |
 | Isopropyl palmitate, isopropyl laurate — LOCKED (Sept 15, 2026) | IPM family. |
+| Isocetyl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
 | Cetearyl olivate, sorbitan olivate — LOCKED (Sept 15, 2026) | Topical emulsifier pair. |
 | Cetyl esters wax, emulsifying wax — LOCKED (Sept 15, 2026) | Wax family. |
 | Cocoyl caprylocaprate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
