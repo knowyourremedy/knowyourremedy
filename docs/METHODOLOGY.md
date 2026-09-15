@@ -227,6 +227,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Carbomer / carbomer copolymer / carbomer interpolymer — LOCKED (Sept 15, 2026) | Homopolymer Type A/B/C included. Older 934/940/941 benzene concern does NOT apply to current monograph. |
 | Organic agave, organic flavors/colors | Whole-food-derived. |
 | Sodium chloride, sodium bicarbonate | Saline bases. |
+| Potassium chloride — LOCKED (Sept 15, 2026) | Salt / electrolyte. Not a grade driver. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
 | Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
 | Paraffin + mineral oil as topical ointment occlusive — LOCKED (Sept 15, 2026) | Petrolatum neighborhood. Tap: not an oral oil. |

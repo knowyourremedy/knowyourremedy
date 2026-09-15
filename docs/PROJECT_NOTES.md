@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (batch42 Advil Targeted Relief + Motrin / Aleve arthritis gels)
+Last Updated: September 15, 2026 (potassium chloride Cleared)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -336,6 +336,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Isobutane, isopentane, propane (pain-spray propellants) = Caution.
 - Isocetyl stearate = Cleared (topical emollient / stearate cousin).
 - Isopropyl alcohol = Limited (alcohol vehicle family). Not Avoid. Tap if useful vs ethyl alcohol.
+- Potassium chloride = Cleared (salt / electrolyte). Not a grade driver.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
