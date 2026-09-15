@@ -50,7 +50,7 @@
 // - SleepCalm Kids pellets / liquid → `boiron-sleepcalm-kids-pellets` /
 //   `boiron-sleepcalm-kids-liquid`
 //
-// DO NOT WRITE: kits, gemmo, ColicComfort, dead lemon SPL 6b658f98,
+// DO NOT WRITE: kits, ColicComfort, dead lemon SPL 6b658f98,
 // Quietude as its own id, children's ColdCalm as a new id, GasCalm as a
 // new id. Arnica 30C Tablets share `boiron-arnicare-tablets` (same SPL /
 // actives / OI). Named Clean Picks tube is `boiron-arnica-30c-pellets`
@@ -62,25 +62,28 @@
 //
 // TUBE COUNT: 365 shop slugs in this factory + 1 named Arnica 30C Pellets
 // row = 366 class pellet tubes from the 15 Sep 2026 BoironUSA product
-// sitemap (552 slugs − kits − gemmo − branded).
+// sitemap (552 slugs − kits − gemmo − branded). Gemmo is written below
+// (17 herbal-liquid rows), not in the pellet factory.
 //
-// TALLY (unverified drafts in THIS file): 418 rows — Clean 402 / Caution 16 /
-// Avoid 0. Single-remedy tube factory: 365. Reuse formulaIds (not in this
-// file): 17.
+// TALLY (unverified drafts in THIS file): 436 rows — Clean 402 / Caution 34 /
+// Avoid 0. Single-remedy tube factory: 365. Gemmo herbal liquids: 17.
+// Arnicare Cream is TWO rows (shea shop OI vs DailyMed PEG panel).
+// Reuse formulaIds (not in this file): 17.
 // Independently Clean in THIS batch: croscarmellose+lactose+stearate
 // tablets, lactose+sucrose pellets, gelatin/glycerin/water YeastCalm
 // suppositories, and hard-fat HemCalm suppositories. Caution is Limited-
 // only (alcohol vehicle / benzoate / caprylyl-sorbic-hexanediol),
 // standalone Caution-table inactives (ferment / acrylamide copolymer /
-// chlorhexidine / isohexadecane / sorbitan oleate), and PS80 Moderate.
-// Limited-only never Avoid.
+// chlorhexidine / isohexadecane / sorbitan oleate), PS80 Moderate, and
+// PEG-family Moderate (cream PEG panel). Limited-only never Avoid.
 //
-// STILL BLOCKED (do not invent): Arnicare Cream PEG / cetyl palmitate /
-// pegoxol-7 stearate / lauroyl macrogolglycerides panel on setid 542b41dd
-// — those named strings are not in §5 after these locks. Shea shop cream
-// is the written row. ColicComfort is not on the US shop (Camilia Tummy
-// replaced it) — list 4 / PR comment only, not a missing-row. Dead lemon
-// Leg Cramps SPL 6b658f98 = discontinued comment only. Gemmotherapy OUT.
+// STILL BLOCKED (do not invent): none on this follow-up. Gemmo OI is
+// alcohol + glycerin + water (all in §5 after the alcohol-vehicle Limited
+// lock). Cream PEG panel (setid 542b41dd) is now writable — PEG / pegoxol-7
+// stearate / lauroyl macrogolglycerides = existing PEG Moderate; cetyl
+// palmitate = Cleared wax. ColicComfort is not on the US shop (Camilia
+// Tummy replaced it) — list 4 / PR comment only, not a missing-row. Dead
+// lemon Leg Cramps SPL 6b658f98 = discontinued comment only.
 //
 // SEPT 15 BOIRON WRITE LOCKS APPLIED
 // - Alcohol / ethyl alcohol as a VEHICLE = Limited. Tap: it is the
@@ -101,7 +104,15 @@
 // - L-carvone = Limited.
 // - Hard fat / NaOH / dimethicone copolyol / petrolatum / EDTA / carbomer
 //   / glycerin / water / honey / sucrose / citric = Cleared as locked.
-// - Gemmotherapy OUT. Dead lemon Leg Cramps SPL = comment only.
+// - Gemmotherapy IN (full current US BoironUSA shop, 17 bud/shoot SKUs).
+//   Alcohol as extract vehicle = Limited, not Avoid. Same tap as the
+//   oral-homeopathic / topical vehicle lock: alcohol is the vehicle, not
+//   the gummy High. Glycerin + water Cleared. Limited-only = Caution.
+// - Cetyl palmitate = Cleared wax (fatty-alcohol / wax family).
+// - PEG / pegoxol-7 stearate / lauroyl macrogolglycerides = existing
+//   PEG Moderate/Caution family. Arnicare Cream setid 542b41dd writes a
+//   second row for that PEG panel because OI differs from the shea shop
+//   cream. Dead lemon Leg Cramps SPL = comment only.
 
 import type {
   CleanAlternative,
@@ -117,6 +128,7 @@ const SLEEP = 'Sleep';
 const IMMUNE = 'Immune Support';
 const DIGESTIVE = 'Digestive';
 const FIRST_AID = 'First Aid';
+const VITAMINS = 'Vitamins';
 const ADULT = 'adult' as const;
 const KIDS = 'kids' as const;
 const HOMEOPATHIC = 'homeopathic' as const;
@@ -169,6 +181,9 @@ const METH = {
     'Methodology §5 Caution (isohexadecane, topical — standalone Caution, not additive-scored, not Avoid).',
   sorbitanOleate:
     'Methodology §5 Caution (sorbitan oleate, topical — standalone Caution, not additive-scored, not Avoid).',
+  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol / PEG-stearate / pegoxol-7 stearate / lauroyl macrogolglycerides). Ethylene-oxide/1,4-dioxane contamination risk. Same Moderate/Caution family row. Not Avoid.',
+  cetylPalmitate:
+    'Methodology §5 Cleared (cetyl palmitate — wax ester; fatty-alcohol / wax family).',
 } as const;
 
 const CARLSTON =
@@ -374,6 +389,33 @@ function bruiseGelOi(setid: string): IngredientFlag[] {
     flag('Carbomer', 'cleared', dailymed(setid, METH.carbomer)),
     flag('Purified water', 'cleared', dailymed(setid, METH.cleared)),
     flag('Sodium hydroxide', 'cleared', dailymed(setid, METH.naoh)),
+  ];
+}
+
+const CREAM_PEG_SETID = '542b41dd-f285-4e48-a67b-8e69523b143a';
+
+function creamPegPanel(setid: string): IngredientFlag[] {
+  return [
+    flag('Alcohol', 'limited', dailymed(setid, METH.alcoholVehicle)),
+    flag('Caprylyl glycol', 'limited', dailymed(setid, METH.caprylyl)),
+    flag('Carbomer', 'cleared', dailymed(setid, METH.carbomer)),
+    flag('Cetyl palmitate', 'cleared', dailymed(setid, METH.cetylPalmitate)),
+    flag('Glycerin', 'cleared', dailymed(setid, METH.cleared)),
+    flag('Lauroyl macrogolglycerides', 'moderate', dailymed(setid, METH.peg)),
+    flag('Pegoxol-7 stearate', 'moderate', dailymed(setid, METH.peg)),
+    flag('Purified water', 'cleared', dailymed(setid, METH.cleared)),
+    flag('Sodium hydroxide', 'cleared', dailymed(setid, METH.naoh)),
+    flag('Sorbic acid', 'limited', dailymed(setid, METH.sorbic)),
+    flag('1,2-Hexanediol', 'limited', dailymed(setid, METH.hexanediol)),
+  ];
+}
+
+function gemmoOi(slug: string): IngredientFlag[] {
+  const cite = shop(slug);
+  return [
+    flag('Alcohol', 'limited', labelCite(cite, METH.alcoholVehicle)),
+    flag('Glycerin', 'cleared', labelCite(cite, METH.cleared)),
+    flag('Purified water', 'cleared', labelCite(cite, METH.cleared)),
   ];
 }
 
@@ -860,6 +902,132 @@ const SINGLE_TUBES: RatingRecord[] = [
   singleTube('xanthoxylumfraxineum', 'Xanthoxylum Fraxineum', PAIN_FEVER),
   singleTube('zincum-metallicum', 'Zincum Metallicum', PAIN_FEVER),
   singleTube('zincumsulphuricum', 'Zincum Sulphuricum', PAIN_FEVER),
+];
+
+const GEMMO_NOTE =
+  'FOUNDER-STYLE DRAFT: Boiron Gemmotherapy herbal liquid = Caution. Driver is alcohol as the extract vehicle (Limited). Glycerin + purified water Cleared. Other Ingredients from the current BoironUSA shop page. ' +
+  ALCOHOL_VEHICLE_LINE +
+  ' ' +
+  LIMITED_STACK +
+  ' Herbal supplement (not a homeopathic drug SPL). Ages 12+. Shop does not name a use aisle — filed under Vitamins, not as a homeopathic shelf. formulaId == id. No independently Clean same-shelf gemmo swap listed (do not invent one).';
+
+function gemmoRow(
+  slug: string,
+  productName: string,
+  botanical: string,
+): RatingRecord {
+  const id = `boiron-gemmo-${slug}`;
+  return {
+    id,
+    productName: `Boiron ${productName}`,
+    brand: BRAND,
+    category: VITAMINS,
+    formulaId: id,
+    audience: ADULT,
+    minAge: 12,
+    form: 'liquid',
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    productSubtype: 'herbal',
+    activeIngredients: [
+      { name: botanical, strength: 'herbal extract (shop; not a drug SPL)' },
+    ],
+    inactiveIngredients: gemmoOi(slug),
+    verdict: 'caution',
+    honestNote: GEMMO_NOTE,
+    retailers: ['BoironUSA.com'],
+    sourcesGeneral: [`${shop(slug)} — ${UNVERIFIED_NOTE}`],
+  };
+}
+
+// Current US BoironUSA gemmotherapy SKUs (17 bud/shoot). Shop pages all
+// list the same Other Ingredients: glycerin, alcohol, purified water.
+const GEMMO_ROWS: RatingRecord[] = [
+  gemmoRow(
+    'black-currant-buds',
+    'Black Currant, Buds',
+    'Ribes nigrum (black currant) buds',
+  ),
+  gemmoRow(
+    'briar-rose-young-shoots',
+    'Briar Rose, Young Shoots',
+    'Rosa canina (briar rose) young shoots',
+  ),
+  gemmoRow(
+    'common-birch-buds',
+    'Common Birch, Buds',
+    'Betula pubescens (common birch) buds',
+  ),
+  gemmoRow(
+    'common-juniper-young-shoots',
+    'Common Juniper, Young Shoots',
+    'Juniperus communis (common juniper) young shoots',
+  ),
+  gemmoRow(
+    'cowberry-young-shoots',
+    'Cowberry, Young Shoots',
+    'Vaccinium vitis idaea (cowberry) young shoots',
+  ),
+  gemmoRow(
+    'english-hawthorn-young-shoots',
+    'English Hawthorn, Young Shoots',
+    'Crataegus oxyacantha (English hawthorn) young shoots',
+  ),
+  gemmoRow(
+    'european-grapevine-buds',
+    'European Grapevine, Buds',
+    'Vitis vinifera (European grapevine) buds',
+  ),
+  gemmoRow(
+    'european-hornbeam-buds',
+    'European Hornbeam, Buds',
+    'Carpinus betulus (European hornbeam) buds',
+  ),
+  gemmoRow(
+    'european-olive-young-shoots',
+    'European Olive, Young Shoots',
+    'Olea europaea (European olive) young shoots',
+  ),
+  gemmoRow(
+    'european-walnut-buds',
+    'European Walnut, Buds',
+    'Juglans regia (European walnut) buds',
+  ),
+  gemmoRow(
+    'fig-tree-buds',
+    'Fig Tree, Buds',
+    'Ficus carica (fig tree) buds',
+  ),
+  gemmoRow(
+    'giant-redwood-young-shoots',
+    'Giant Redwood, Young Shoots',
+    'Sequoia gigantea (giant redwood) young shoots',
+  ),
+  gemmoRow(
+    'horse-chestnut-buds',
+    'Horse Chestnut, Buds',
+    'Aesculus hippocastanum (horse chestnut) buds',
+  ),
+  gemmoRow(
+    'lime-tree-buds',
+    'Lime Tree, Buds',
+    'Tilia tomentosa (lime tree) buds',
+  ),
+  gemmoRow(
+    'lithy-tree-buds',
+    'Lithy Tree, Buds',
+    'Viburnum lantana (lithy tree) buds',
+  ),
+  gemmoRow(
+    'mountain-pine-buds',
+    'Mountain Pine, Buds',
+    'Pinus montana (mountain pine) buds',
+  ),
+  gemmoRow(
+    'rosemary-young-shoots',
+    'Rosemary, Young Shoots',
+    'Rosmarinus officinalis (rosemary) young shoots',
+  ),
 ];
 
 export const BATCH34_BOIRON: RatingRecord[] = [
@@ -2409,7 +2577,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     inactiveIngredients: sheaPanel('542b41dd-f285-4e48-a67b-8e69523b143a'),
     verdict: 'caution',
     honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Cream = Caution. Driver is lactobacillus ferment (standalone Caution-table, not additive-scored, not Avoid). This row writes the SHEA PANEL ONLY (arachidyl alcohol / glucoside, behenyl, shea, coconut, glycerin, ferment, water, xanthan). DailyMed concatenates a second PEG / cetyl palmitate panel — that is not this row; current shop cream is the shea panel. ' +
+      'FOUNDER-STYLE DRAFT: Arnicare Cream = Caution. Driver is lactobacillus ferment (standalone Caution-table, not additive-scored, not Avoid). This row is the SHEA SHOP PANEL (arachidyl alcohol / glucoside, behenyl, shea, coconut, glycerin, ferment, water, xanthan) — current BoironUSA arnicare-cream. DailyMed setid 542b41dd also concatenates a PEG / cetyl palmitate panel; that OI differs, so it is a second row (`boiron-arnicare-cream-peg-panel`), not a clone of this shea formula. ' +
         CREAM_OIL_LINE +
         ' Ages 1+ (under 1: not recommended). Separate from reuse Arnicare Gel (Clean).',
     ),
@@ -2418,6 +2586,40 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     sourcesGeneral: [
       shop('arnicare-cream') + ' — ' + UNVERIFIED_NOTE,
       'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=542b41dd-f285-4e48-a67b-8e69523b143a — ' +
+        UNVERIFIED_NOTE,
+      CARLSTON,
+    ],
+  },
+
+  {
+    id: 'boiron-arnicare-cream-peg-panel',
+    productName: 'Boiron Arnicare Cream (DailyMed PEG panel)',
+    brand: BRAND,
+    category: FIRST_AID,
+    formulaId: 'boiron-arnicare-cream-peg-panel',
+    audience: ADULT,
+    minAge: 1,
+    form: 'cream',
+    recordStatus: UNVERIFIED,
+    ...homeopathicFields(),
+    activeIngredients: [
+      { name: 'Arnica montana', strength: '1X HPUS 7%' },
+    ],
+    inactiveIngredients: creamPegPanel(CREAM_PEG_SETID),
+    verdict: 'caution',
+    honestNote: homeoNoteNoLac(
+      'FOUNDER-STYLE DRAFT: Arnicare Cream DailyMed PEG panel = Caution. Same setid 542b41dd as the shea shop cream, but OI differs — second row, not a clone. Driver is PEG-family Moderate (pegoxol-7 stearate + lauroyl macrogolglycerides; existing §5 PEG row). Alcohol Limited (topical vehicle). Caprylyl glycol + sorbic acid + 1,2-hexanediol Limited. Cetyl palmitate Cleared wax. Carbomer / glycerin / water / NaOH Cleared. ' +
+        LIMITED_STACK +
+        ' ' +
+        ALCOHOL_VEHICLE_LINE +
+        ' Not the current shea shop cream (`boiron-arnicare-cream`). Ages 1+ (under 1: not recommended). Separate from reuse Arnicare Gel (Clean).',
+    ),
+    retailers: [...BOIRON_RETAILERS],
+    cleanAlternatives: ARNICARE_GEL_ALTS,
+    sourcesGeneral: [
+      'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=542b41dd-f285-4e48-a67b-8e69523b143a — PEG / cetyl palmitate panel concatenated on this SPL — ' +
+        UNVERIFIED_NOTE,
+      shop('arnicare-cream') + ' — current shop cream is the shea panel, not this OI — ' +
         UNVERIFIED_NOTE,
       CARLSTON,
     ],
@@ -2584,5 +2786,6 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
   },
 
+  ...GEMMO_ROWS,
   ...SINGLE_TUBES,
 ];

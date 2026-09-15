@@ -14,7 +14,9 @@
 
 **Changed Sept 15, 2026 (Hyland’s Soothing Drops leftovers):** Named food/botanical extracts as oral inactive (fennel seed, chamomile flower, calendula, lemon balm leaf, and like named plant-part food botanicals) = Cleared. Same class as grape seed extract. Do not Caution the product on these extracts alone. Cherry flavor stays Limited.
 
-**Changed Sept 15, 2026 (Boiron write locks):** Shea butter / coconut oil / sweet almond oil in cream or topical = not the gummy seed-oil High rule (form tap). Acrylamide / sodium acryloyldimethyltaurate copolymer, chlorhexidine digluconate, isohexadecane, and sorbitan oleate = Caution, not Avoid. Alcohol as oral-homeopathic or topical vehicle, L-carvone, arachidyl / behenyl / arachidyl glucoside, lactobacillus ferment, caprylyl glycol / hexanediol / sorbic acid, dimethicone copolyol, NaOH, hard fat, and PS80 stay as already locked. Gemmotherapy line = OUT (not graded). Dead lemon Arnicare Leg Cramps SPL = discontinued comment only.
+**Changed Sept 15, 2026 (Boiron write locks):** Shea butter / coconut oil / sweet almond oil in cream or topical = not the gummy seed-oil High rule (form tap). Acrylamide / sodium acryloyldimethyltaurate copolymer, chlorhexidine digluconate, isohexadecane, and sorbitan oleate = Caution, not Avoid. Alcohol as oral-homeopathic or topical vehicle, L-carvone, arachidyl / behenyl / arachidyl glucoside, lactobacillus ferment, caprylyl glycol / hexanediol / sorbic acid, dimethicone copolyol, NaOH, hard fat, and PS80 stay as already locked. Dead lemon Arnicare Leg Cramps SPL = discontinued comment only.
+
+**Changed Sept 15, 2026 (Boiron gemmo / cream follow-up):** Gemmotherapy line = IN (current US BoironUSA bud/shoot SKUs). Alcohol as the extract vehicle = Limited, not Avoid (same vehicle lock; tap: alcohol is the vehicle, not the gummy High). Cetyl palmitate already Cleared wax. PEG / pegoxol-7 stearate / lauroyl macrogolglycerides stay on the existing PEG Moderate row.
 
 **Changed Sept 14, 2026:** named plant colors Cleared; chlorophyllin + cultured dextrose Caution; citrus extract stays flavor-opacity; tap-copy rule for vague vs named twins. Also locked Cleared — organic rice bran extract (rice-hull family), pea protein isolate, organic beet root, organic acerola, honey (oral; under-1 note), paprika extract/capsanthin as color, black carrot / named fruit-or-vegetable juice as color. Unspecified “rice extract” is the Limited opacity row (do not duplicate).
 
@@ -173,7 +175,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sucralose | E955, Splenda | Metabolite genotoxicity signal (2023 study); microbiome concerns. |
 | Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity/microbiome signals; thin evidence. |
 | Saccharin | E954 | Historical rat finding, but NTP delisted (2000), IARC reclassified Group 3 (1999). |
-| PEGs | polyethylene glycol 400/3350, PEG-stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. |
+| PEGs | polyethylene glycol 400/3350, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. |
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 
