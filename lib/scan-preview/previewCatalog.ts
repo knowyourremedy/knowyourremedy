@@ -41,6 +41,7 @@ import {
   BATCH38_NATURES_WAY,
   BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   BATCH40_BAYER_EXCEDRIN_MOTRIN,
+  BATCH41_PAIN_RUBS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -102,6 +103,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH38_NATURES_WAY,
   ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   ...BATCH40_BAYER_EXCEDRIN_MOTRIN,
+  ...BATCH41_PAIN_RUBS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -770,6 +772,14 @@ assertExactCarton('boiron-calcarea-phosphorica-pellets', 'Boiron', 'boiron-calca
 assertExactCarton('boiron-rhus-tox-pellets', 'Boiron', 'boiron-rhus-tox-pellets.jpg');
 // Unattempted leftover P&F pellet factory stays letters.
 assertLetterOnly('boiron-abelmoschus-pellets', 'Boiron');
+assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
+assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
+assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
+assertLetterOnly('tylenol-precise-nighttime-cream', 'Tylenol');
+assertLetterOnly('tylenol-precise-lidocaine-4-patch', 'Tylenol');
+assertLetterOnly('alevex-pain-relieving-lotion-roll-on', 'AleveX');
+assertLetterOnly('alevex-pain-relieving-lotion-tube', 'AleveX');
+assertLetterOnly('alevex-pain-relieving-spray', 'AleveX');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,

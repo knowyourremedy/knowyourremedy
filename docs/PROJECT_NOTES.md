@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Precise / Advil / AleveX / Motrin gel inactives)
+Last Updated: September 15, 2026 (pain-rub list-3 write — batch 41)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -375,6 +375,7 @@ Completed (main, unverified drafts unless noted):
 - Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
 - Pedialyte hidden earlier Sept 14.
 - Sprouts store-brand — Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). Organic MCT Oil bottle is PR-comment only (not a Search row). Still-blocked: 187 named in-scope unread house SKUs.
+- Pain rubs / same-aisle topicals — Sept 15, 2026 — batch41 Search 8 (Caution 7 / Avoid 1 / Clean 0). Precise creams Caution; Precise lidocaine patch Avoid (methyl/ethyl paraben). AleveX roll-on + tube share formulaId (OI matches); spray is separate. REFUSED: Advil Targeted Relief (isocetyl stearate not in §5); Motrin + Aleve arthritis gels (isopropyl alcohol not the ethyl-alcohol vehicle row). Genexa Pain Crush = discontinued comment only (inactivated NDC 69676-0004-6). Reuse T-Relief / Triflora / Hyland creams / Sports Gel untouched. Arniflora stays First Aid.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
