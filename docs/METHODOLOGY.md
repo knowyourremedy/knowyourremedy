@@ -158,7 +158,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Seed/industrial oils (gummies) | soybean, canola, "vegetable oil" | Clean-standard exclusion for gummy formulations. Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
 | Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. |
 | Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
-| Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral OTC/vitamin/supplement/protein products. |
+| Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral / swallow OTC/vitamin/supplement/protein products. Topical talc in a cream/patch is Caution (form tap) — not this High swallow rule. |
 | BVO (brominated vegetable oil) — **LOCKED (v1.6)** | Brominated soybean oil | Federal ban, effective Aug 2024. Documented tissue-bromine accumulation + neurological harm mechanism. |
 
 ### Precautionary — capped at Caution (nanoparticle review pending, v1.4)
@@ -178,13 +178,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | PEGs | polyethylene glycol 400/3350, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. |
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
+| Polysorbate 60 | P60, Tween 60 | Same Moderate family as P80 / P20. Do not duplicate as a new class. |
 
 ### Limited-risk — 1 point each
 
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
-| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol (oral homeopathic liquid or topical first-aid) | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
+| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit sits on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
 | Isopropyl alcohol — LOCKED (Sept 15, 2026) | IPA, isopropanol | Alcohol vehicle family. Not Avoid. Tap if useful vs ethyl alcohol. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
@@ -242,15 +243,25 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
 | Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Avocado oil as cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Urea (topical) — LOCKED (Sept 15, 2026) | Topical humectant. |
+| Allantoin — LOCKED (Sept 15, 2026) | Topical soother. |
+| Kaolin — LOCKED (Sept 15, 2026) | Clay / absorbent. |
+| PVA (topical film) — LOCKED (Sept 15, 2026) | Topical film former. |
+| Jojoba esters — LOCKED (Sept 15, 2026) | Wax / emollient. Cleared. Distinct from jojoba OIL (Caution scent / gel inactive). |
 | Glycol stearate, isopropyl myristate, stearyl heptanoate — LOCKED (Sept 15, 2026) | Topical emollients. |
 | Isopropyl palmitate, isopropyl laurate — LOCKED (Sept 15, 2026) | IPM family. |
 | Isocetyl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
+| Glyceryl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
+| Diisopropyl adipate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
+| Methyl glucose dioleate — LOCKED (Sept 15, 2026) | Topical emollient. |
 | Cetearyl olivate, sorbitan olivate — LOCKED (Sept 15, 2026) | Topical emulsifier pair. |
 | Cetyl esters wax, emulsifying wax — LOCKED (Sept 15, 2026) | Wax family. |
 | Cocoyl caprylocaprate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
 | Pentylene glycol, propanediol — LOCKED (Sept 15, 2026) | Humectant / solvent. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
+| Tartaric acid — LOCKED (Sept 15, 2026) | Organic acid with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. |
 | Triacetin — LOCKED (Sept 15, 2026) | Tablet/caplet coating plasticizer. Not a grade driver. |
@@ -319,7 +330,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Wood rosin / colophony (topical) — LOCKED | Contact-allergy pattern. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lavender oil (topical) — LOCKED (Sept 15, 2026) | Fragrance-style topical scent. Same posture as fragrance / parfum. Not Avoid. | Standard alternatives rule. Prefer a fragrance-free Good option in the same category if one exists. Do not raise to Avoid. |
 | Wintergreen extract (topical inactive) — LOCKED (Sept 15, 2026) | Caution. Topical inactive. Not Avoid. | Standard alternatives rule. Not Avoid. |
-| Acrylamide / sodium acryloyldimethyltaurate copolymer (AMPS); DMAEMA copolymer; vinyl caprolactam / vinylpyrrolidone copolymer (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Acrylamide / sodium acryloyldimethyltaurate copolymer (AMPS); DMAEMA copolymer; vinyl caprolactam / vinylpyrrolidone copolymer; acrylate / acrylamide copolymers not already locked (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | DEGEE / ethoxydiglycol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Not Cleared. | Standard alternatives rule. Not Avoid. |
 | Dimethyl isosorbide — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Vanillyl butyl ether — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
@@ -340,6 +351,28 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Magnesium trisilicate — LOCKED | Silicate-adjacent filler. Not the SiO2 0-pt cap. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Calcium silicate — LOCKED (Sept 15, 2026) | Silicate anti-caking (Mg trisilicate neighborhood); not the SiO2 0-pt cap. | Standard alternatives rule. Not Avoid. |
 | Sucrose fatty acid esters — LOCKED (Sept 15, 2026) | Synthetic emulsifier; not Avoid. | Standard alternatives rule. Not Avoid. |
+| Steareth-2, steareth-21 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Ceteth-20 phosphate — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| PPG-5-ceteth-20 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| PEG-15 cocamine — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Nonoxynol-30 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Ethylhexylglycerin — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Hydroxyacetophenone — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| TEA / trolamine as inactive — LOCKED (Sept 15, 2026) | Not the salicylate active. | Standard alternatives rule. Not Avoid. |
+| Farnesol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| 4-t-butylcyclohexanol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Grapefruit oil, spearmint oil, cajuput oil, cassia oil, dementholized mint — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
+| C30-45 alkyl dimethicone / C30-45 crosspolymer — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Caprylyl methicone — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Aluminum glycinate — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Hydrotalcite — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Latex — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Rosin esters / terpene resin / SIS / polyisobutylene (patch adhesives) — LOCKED (Sept 15, 2026) | Patch adhesives. | Standard alternatives rule. Not Avoid. |
+| Menthyl lactate — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| LPG / liquefied petroleum gas — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Synthetic beeswax — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Distinct from Cleared beeswax. | Standard alternatives rule. Not Avoid. |
+| Topical talc in a cream/patch — LOCKED (Sept 15, 2026) | Caution. Not the oral-talc High swallow rule. Tap form. | Standard alternatives rule. Not Avoid. |
+| DMDM hydantoin / diazolidinyl urea — LOCKED (Sept 15, 2026) | Formaldehyde-donor. Caution. Not Avoid unless founder later bumps. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -352,7 +385,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 
 | Item | Reason parked |
 |---|---|
-| Formaldehyde-releasers (DMDM hydantoin, diazolidinyl urea, imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Used almost exclusively in cosmetics/topicals (shampoos, lotions), not oral OTC/vitamin/supplement/protein products. Out of scope, not evaluated. |
+| Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Still parked. DMDM hydantoin / diazolidinyl urea moved to Caution (formaldehyde-donor) for in-scope topical OTC — not Avoid unless founder later bumps. |
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |

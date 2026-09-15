@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (potassium chloride Cleared)
+Last Updated: September 15, 2026 (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -337,6 +337,43 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Isocetyl stearate = Cleared (topical emollient / stearate cousin).
 - Isopropyl alcohol = Limited (alcohol vehicle family). Not Avoid. Tap if useful vs ethyl alcohol.
 - Potassium chloride = Cleared (salt / electrolyte). Not a grade driver.
+- Pain rubs stay Pain & Fever (with swallow SKUs). No third Topical aisle.
+- Glyceryl stearate = Cleared.
+- Diisopropyl adipate = Cleared.
+- Urea (topical) = Cleared.
+- Tartaric acid = Cleared.
+- Allantoin = Cleared.
+- Kaolin = Cleared.
+- PVA (topical film) = Cleared.
+- Methyl glucose dioleate = Cleared.
+- Avocado oil as cream fill = Cleared. Not gummy High. Tap form.
+- Sunflower seed wax already locked Cleared — do not duplicate.
+- Jojoba esters = Cleared (wax / emollient). Jojoba OIL stays Caution as scent / gel inactive.
+- Steareth-2, steareth-21 = Caution.
+- Ceteth-20 phosphate = Caution.
+- PPG-5-ceteth-20 = Caution.
+- PEG-15 cocamine = Caution.
+- Nonoxynol-30 = Caution.
+- Ethylhexylglycerin = Caution.
+- Hydroxyacetophenone = Caution.
+- TEA / trolamine as inactive = Caution (not the salicylate active).
+- Farnesol = Caution.
+- 4-t-butylcyclohexanol = Caution.
+- Grapefruit oil, spearmint oil, cajuput oil, cassia oil, dementholized mint = Caution (fragrance/EO line).
+- C30-45 alkyl dimethicone / C30-45 crosspolymer = Caution.
+- Caprylyl methicone = Caution.
+- Acrylate / acrylamide copolymers not already locked = Caution (widens the AMPS row).
+- Aluminum glycinate = Caution.
+- Hydrotalcite = Caution.
+- Latex = Caution.
+- Rosin esters / terpene resin / SIS / polyisobutylene (patch adhesives) = Caution.
+- Menthyl lactate = Caution.
+- LPG / liquefied petroleum gas = Caution.
+- Synthetic beeswax = Caution (distinct from Cleared beeswax).
+- Methylated spirit = Limited (same alcohol-vehicle row as ethyl alcohol). Do not invent a second alcohol class.
+- Topical talc in a cream/patch = Caution. Not the oral-talc High swallow rule. Tap form.
+- DMDM hydantoin / diazolidinyl urea = Caution (formaldehyde-donor). Not Avoid unless founder later bumps. Other formaldehyde-releasers stay parked.
+- Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
