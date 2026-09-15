@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Nature’s Way leftover inactives)
+Last Updated: September 15, 2026 (KOH Cleared; sorbitan Caution)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -309,6 +309,8 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Modified starch = Limited (unspecified starch).
 - Sucrose fatty acid esters = Caution (synthetic emulsifier; not Avoid).
 - Calcium silicate = Caution (silicate anti-caking; Mg trisilicate neighborhood). Not the SiO2 0-pt cap.
+- Potassium hydroxide = Cleared (pH adjuster, trace). Not a grade driver.
+- Sorbitan (plain / sorbitan esters as emulsifier) = Caution (polysorbate neighborhood). Not Avoid. Not the same row as sorbitol. Do not flip tylenol-8hr-peg. Hydroxyethyl cellulose stays parked on that reuse row.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.

@@ -235,6 +235,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Arachidyl alcohol / arachidyl glucoside / behenyl alcohol — LOCKED (Sept 14, 2026) | Cleared fatty-alcohol family. |
 | Hard fat (suppository base) — LOCKED (Sept 14, 2026) | Cleared. |
 | Sodium hydroxide (NaOH) as pH adjuster — LOCKED (Sept 14, 2026) | Cleared. |
+| Potassium hydroxide — LOCKED (Sept 15, 2026) | pH adjuster (trace). Not a grade driver. |
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
 | Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
@@ -312,6 +313,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Sorbitan (plain / sorbitan esters as emulsifier) — LOCKED (Sept 15, 2026) | Polysorbate neighborhood. Not Avoid. Not the same row as sorbitol. | Standard alternatives rule. Not Avoid. |
 | Sodium polyacrylate / polyacrylic acid (topical gel polymer) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
 | Unspecified resin — LOCKED | Label didn’t name the resin. | Standard alternatives rule. Not Avoid. |
