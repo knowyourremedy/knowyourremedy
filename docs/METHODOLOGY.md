@@ -150,7 +150,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 |---|---|---|
 | Titanium dioxide | E171, "color added" | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. |
 | Synthetic dyes | FD&C/D&C colors, aluminum lakes | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. |
-| Parabens | methyl-, propyl-, butyl-, isobutylparaben | EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
+| Parabens — LOCKED (Sept 15, 2026 form lock) | methyl-, ethyl-, propyl-, butyl-, isobutylparaben | High in every form, including rubs and patches. Not a topical exception. EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
 | BHA | butylated hydroxyanisole, E320 | NTP "reasonably anticipated" human carcinogen; Prop 65 listed. |
 | BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
 | Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
