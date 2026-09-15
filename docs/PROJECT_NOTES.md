@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Boiron gemmo US shop written; Arnicare Cream PEG panel row)
+Last Updated: September 14, 2026 (EOD brand roster + queue)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -310,13 +310,24 @@ US only until the US app is real. No Canada/EU SKUs to fake coverage.
 West Coast walk lists still catch national brands sold nationwide. Later wave: regional store brands / banners not walked yet (HEB, Publix, Meijer, etc.). That is the last slice, not launch-critical.
 Launch: don’t half-dress a date. Day job returns mid/late November.
 
-BRAND ROSTER LOG
-- MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
-- Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
-- Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, Soothing Drops Day + Night, two kids multis). Hyland leftovers: none. Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
-- Boiron — first sweep Mon Sept 14, 2026 ~7:59 PM PT. batch34 + reuse. Gemmotherapy IN (17 current US BoironUSA bud/shoot SKUs written; alcohol vehicle Limited → Caution). Arnicare Cream is two rows: shea shop cream + DailyMed setid 542b41dd PEG panel (OI differs). Reuse existing formulaIds (no clones). Kits out. Dead lemon Leg Cramps SPL = comment only. ColicComfort not on US shop (Camilia Tummy replaced it). Not “complete forever.” Refresh when the line adds SKUs.
+BRAND ROSTER
+Completed (main, unverified drafts unless noted):
+- MegaFood — Sept 14, 2026 ~11:51 AM PT — Search 107 after closeouts / later flips (Liposomal C Clean; Berberine Clean; BM2 prenatal probiotic LGG Caution after Limited-stack rule). Leftovers: none from that pass.
+- Genexa — Sept 14 — Search 28 (12 reuse + 16 new).
+- Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
+- Pedialyte hidden earlier Sept 14.
 
-Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
+Scale lock: Limited-only never auto-Avoid. Avoid needs High.
+
+Next queue:
+1) Boiron
+2) Sprouts store-brand pain
+3) Boericke & Tafel / Medinatura
+4) Nature’s Way in-scope
+5) Then Tylenol / Advil / Aleve holes
+6) Thrive brand-list hole punch
+7) Amazon US P&F brands not yet on main
+Then SKU/barcode factory. Night photos stay KYR2. Catalog → new KYR3 after this KYR2 thread is photos-only.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
