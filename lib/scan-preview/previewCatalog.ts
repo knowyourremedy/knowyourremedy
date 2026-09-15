@@ -424,6 +424,26 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'hylands-baby-oral-pain-day': catalogShot('hylands-baby-oral-pain-day.jpg'),
   'hylands-baby-oral-pain-night': catalogShot('hylands-baby-oral-pain-night.jpg'),
   'sprouts-inflacalm-powder-cap': catalogShot('sprouts-inflacalm-powder-cap.jpg'),
+  'hylands-leg-cramps-arnica-cream': catalogShot('hylands-leg-cramps-arnica-cream.jpg'),
+  'hylands-leg-cramps-arnica-pm-cream': catalogShot('hylands-leg-cramps-arnica-pm-cream.jpg'),
+  'hylands-organic-baby-soothing-gel-day': catalogShot('hylands-organic-baby-soothing-gel-day.jpg'),
+  'hylands-organic-baby-soothing-gel-night': catalogShot('hylands-organic-baby-soothing-gel-night.jpg'),
+  'hylands-organic-baby-soothing-drops-day': catalogShot('hylands-organic-baby-soothing-drops-day.jpg'),
+  'hylands-organic-baby-soothing-drops-night': catalogShot('hylands-organic-baby-soothing-drops-night.jpg'),
+  'boiron-belladonna-pellets': catalogShot('boiron-belladonna-pellets.jpg'),
+  'boiron-chamomilla-pellets': catalogShot('boiron-chamomilla-pellets.jpg'),
+  'boiron-calcarea-carbonica-pellets': catalogShot('boiron-calcarea-carbonica-pellets.jpg'),
+  'boiron-cuprum-metallicum-pellets': catalogShot('boiron-cuprum-metallicum-pellets.jpg'),
+  'boiron-natrum-muriaticum-pellets': catalogShot('boiron-natrum-muriaticum-pellets.jpg'),
+  'boiron-arnicamontanaradix-pellets': catalogShot('boiron-arnicamontanaradix-pellets.jpg'),
+  'boiron-antimonium-crudum-pellets': catalogShot('boiron-antimonium-crudum-pellets.jpg'),
+  'boiron-argentum-nitricum-pellets': catalogShot('boiron-argentum-nitricum-pellets.jpg'),
+  'boiron-colchicumautumnale-pellets': catalogShot('boiron-colchicumautumnale-pellets.jpg'),
+  'boiron-calcarea-fluorica-pellets': catalogShot('boiron-calcarea-fluorica-pellets.jpg'),
+  'boiron-kali-carbonicum-pellets': catalogShot('boiron-kali-carbonicum-pellets.jpg'),
+  'boiron-borax-pellets': catalogShot('boiron-borax-pellets.jpg'),
+  'boiron-cina-pellets': catalogShot('boiron-cina-pellets.jpg'),
+  'boiron-ferrummetallicum-pellets': catalogShot('boiron-ferrummetallicum-pellets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -678,6 +698,28 @@ assertExactCarton('hylands-restful-legs-pm', "Hyland's", 'hylands-restful-legs-p
 assertExactCarton('hylands-baby-oral-pain-day', "Hyland's", 'hylands-baby-oral-pain-day.jpg');
 assertExactCarton('hylands-baby-oral-pain-night', "Hyland's", 'hylands-baby-oral-pain-night.jpg');
 assertExactCarton('sprouts-inflacalm-powder-cap', 'Sprouts', 'sprouts-inflacalm-powder-cap.jpg');
+assertExactCarton('hylands-leg-cramps-arnica-cream', "Hyland's", 'hylands-leg-cramps-arnica-cream.jpg');
+assertExactCarton('hylands-leg-cramps-arnica-pm-cream', "Hyland's", 'hylands-leg-cramps-arnica-pm-cream.jpg');
+assertExactCarton('hylands-organic-baby-soothing-gel-day', "Hyland's", 'hylands-organic-baby-soothing-gel-day.jpg');
+assertExactCarton('hylands-organic-baby-soothing-gel-night', "Hyland's", 'hylands-organic-baby-soothing-gel-night.jpg');
+assertExactCarton('hylands-organic-baby-soothing-drops-day', "Hyland's", 'hylands-organic-baby-soothing-drops-day.jpg');
+assertExactCarton('hylands-organic-baby-soothing-drops-night', "Hyland's", 'hylands-organic-baby-soothing-drops-night.jpg');
+assertExactCarton('boiron-belladonna-pellets', 'Boiron', 'boiron-belladonna-pellets.jpg');
+assertExactCarton('boiron-chamomilla-pellets', 'Boiron', 'boiron-chamomilla-pellets.jpg');
+assertExactCarton('boiron-calcarea-carbonica-pellets', 'Boiron', 'boiron-calcarea-carbonica-pellets.jpg');
+assertExactCarton('boiron-cuprum-metallicum-pellets', 'Boiron', 'boiron-cuprum-metallicum-pellets.jpg');
+assertExactCarton('boiron-natrum-muriaticum-pellets', 'Boiron', 'boiron-natrum-muriaticum-pellets.jpg');
+assertExactCarton('boiron-arnicamontanaradix-pellets', 'Boiron', 'boiron-arnicamontanaradix-pellets.jpg');
+assertExactCarton('boiron-antimonium-crudum-pellets', 'Boiron', 'boiron-antimonium-crudum-pellets.jpg');
+assertExactCarton('boiron-argentum-nitricum-pellets', 'Boiron', 'boiron-argentum-nitricum-pellets.jpg');
+assertExactCarton('boiron-colchicumautumnale-pellets', 'Boiron', 'boiron-colchicumautumnale-pellets.jpg');
+assertExactCarton('boiron-calcarea-fluorica-pellets', 'Boiron', 'boiron-calcarea-fluorica-pellets.jpg');
+assertExactCarton('boiron-kali-carbonicum-pellets', 'Boiron', 'boiron-kali-carbonicum-pellets.jpg');
+assertExactCarton('boiron-borax-pellets', 'Boiron', 'boiron-borax-pellets.jpg');
+assertExactCarton('boiron-cina-pellets', 'Boiron', 'boiron-cina-pellets.jpg');
+assertExactCarton('boiron-ferrummetallicum-pellets', 'Boiron', 'boiron-ferrummetallicum-pellets.jpg');
+// Unattempted leftover P&F pellet factory stays letters.
+assertLetterOnly('boiron-abelmoschus-pellets', 'Boiron');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
