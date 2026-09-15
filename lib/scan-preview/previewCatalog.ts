@@ -204,6 +204,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'motrin-children-chew-dyefree': brandMark('motrin-mark.png'),
   'motrin-children-chew-dyed': brandMark('motrin-mark.png'),
   'motrin-infants-liquid-dyed': brandMark('motrin-mark.png'),
+  // Too-broad P&F leftover — DailyMed faces are minis, draft says gels/minis.
+  'topcare-ibuprofen-liquid-gels': brandMark('topcare-mark.png'),
+  // Official boironusa pack is lemon chewable tubes; draft is the
+  // unflavored meltaway. DailyMed faces for this setid are PM / foil.
+  'boiron-arnicare-leg-cramps': brandMark('boiron-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -222,6 +227,29 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'upup-children-ibu-chew-dyed': 'up&up',
   'upup-infants-ibu-dyefree': 'up&up',
   'upup-children-ibu-dyefree-liquid': 'up&up',
+  // Flavor-generic kids / too-broad leftover. No standalone official
+  // Walmart Equate mark (equate.com is Kuwait petrochemical — refuse).
+  'equate-children-apap-dyed': 'Equate',
+  'equate-infants-apap-dyefree': 'Equate',
+  'equate-children-ibu-dyed': 'Equate',
+  'equate-children-ibu-chew-dyed': 'Equate',
+  // Flavor-generic kids. No standalone official Albertsons/Safeway mark.
+  'signature-care-children-apap-dyed': 'Signature Care',
+  'signature-care-infants-apap-dyefree': 'Signature Care',
+  'signature-care-children-ibu-dyed': 'Signature Care',
+  'signature-care-children-ibu-chew-dyed': 'Signature Care',
+  // Flavor-generic cherry carton. No standalone Family Dollar mark file.
+  'family-wellness-childrens-apap': 'Family Wellness',
+  // Infants carton is berry (flavor-generic). Liquid gels DailyMed face is minis.
+  'dg-health-infants-ibuprofen': 'DG Health',
+  'dg-health-ibuprofen-liquid-gels': 'DG Health',
+  // Brand-mismatch carton (Amazon Basics) / flavor-generic kids / liqui-gel minis.
+  'amazon-basic-care-apap-rs-aurohealth': 'Basic Care',
+  'amazon-basic-care-ibuprofen-liqui-gels': 'Basic Care',
+  'amazon-basic-care-infants-ibuprofen': 'Basic Care',
+  'amazon-basic-care-kids-apap-dyefree': 'Basic Care',
+  // Shop PDP photo is Joint Support + Turmeric — not Inflacalm Ache Relief.
+  'sprouts-inflacalm-ache-relief': 'Sprouts',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -378,6 +406,24 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'hylands-leg-cramps': catalogShot('hylands-leg-cramps.jpg'),
   'boiron-cyclease-cramps': catalogShot('boiron-cyclease-cramps.jpg'),
   'genexa-arnica-pain': catalogShot('genexa-arnica-pain.jpg'),
+  'amazon-basic-care-naproxen-blue2-tio2': catalogShot('amazon-basic-care-naproxen-blue2-tio2.jpg'),
+  'boiron-cyclease-pms': catalogShot('boiron-cyclease-pms.jpg'),
+  'boiron-cyclease-menopause': catalogShot('boiron-cyclease-menopause.jpg'),
+  'boiron-arnicare-tablets': catalogShot('boiron-arnicare-tablets.jpg'),
+  'boiron-arnicare-arthritis-tablets': catalogShot('boiron-arnicare-arthritis-tablets.jpg'),
+  'boiron-camilia': catalogShot('boiron-camilia.jpg'),
+  'boiron-arnicare-arthritis-cream': catalogShot('boiron-arnicare-arthritis-cream.jpg'),
+  'boiron-arnica-30x-tablets': catalogShot('boiron-arnica-30x-tablets.jpg'),
+  'boiron-arnica-30c-pellets': catalogShot('boiron-arnica-30c-pellets.jpg'),
+  'hylands-mag-phos-6x': catalogShot('hylands-mag-phos-6x.jpg'),
+  'hylands-calc-phos-6x': catalogShot('hylands-calc-phos-6x.jpg'),
+  'hylands-leg-cramps-pm': catalogShot('hylands-leg-cramps-pm.jpg'),
+  'hylands-leg-cramps-arnica-caplets': catalogShot('hylands-leg-cramps-arnica-caplets.jpg'),
+  'hylands-restful-legs': catalogShot('hylands-restful-legs.jpg'),
+  'hylands-restful-legs-pm': catalogShot('hylands-restful-legs-pm.jpg'),
+  'hylands-baby-oral-pain-day': catalogShot('hylands-baby-oral-pain-day.jpg'),
+  'hylands-baby-oral-pain-night': catalogShot('hylands-baby-oral-pain-night.jpg'),
+  'sprouts-inflacalm-powder-cap': catalogShot('sprouts-inflacalm-powder-cap.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -462,6 +508,8 @@ assertBrandMark('motrin-children-liquid-dyefree', 'Motrin', 'motrin-mark.png');
 assertBrandMark('motrin-children-chew-dyefree', 'Motrin', 'motrin-mark.png');
 assertBrandMark('motrin-children-chew-dyed', 'Motrin', 'motrin-mark.png');
 assertBrandMark('motrin-infants-liquid-dyed', 'Motrin', 'motrin-mark.png');
+assertBrandMark('topcare-ibuprofen-liquid-gels', 'TopCare', 'topcare-mark.png');
+assertBrandMark('boiron-arnicare-leg-cramps', 'Boiron', 'boiron-mark.png');
 
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -512,6 +560,22 @@ assertBrandTextTile('upup-children-ibu-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-ibu-chew-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-infants-ibu-dyefree', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-ibu-dyefree-liquid', 'up&up', 'up&up');
+assertBrandTextTile('equate-children-apap-dyed', 'Equate', 'Equate');
+assertBrandTextTile('equate-infants-apap-dyefree', 'Equate', 'Equate');
+assertBrandTextTile('equate-children-ibu-dyed', 'Equate', 'Equate');
+assertBrandTextTile('equate-children-ibu-chew-dyed', 'Equate', 'Equate');
+assertBrandTextTile('signature-care-children-apap-dyed', 'Signature Care', 'Signature Care');
+assertBrandTextTile('signature-care-infants-apap-dyefree', 'Signature Care', 'Signature Care');
+assertBrandTextTile('signature-care-children-ibu-dyed', 'Signature Care', 'Signature Care');
+assertBrandTextTile('signature-care-children-ibu-chew-dyed', 'Signature Care', 'Signature Care');
+assertBrandTextTile('family-wellness-childrens-apap', 'Family Wellness', 'Family Wellness');
+assertBrandTextTile('dg-health-infants-ibuprofen', 'DG Health', 'DG Health');
+assertBrandTextTile('dg-health-ibuprofen-liquid-gels', 'DG Health', 'DG Health');
+assertBrandTextTile('amazon-basic-care-apap-rs-aurohealth', 'Amazon Basic Care', 'Basic Care');
+assertBrandTextTile('amazon-basic-care-ibuprofen-liqui-gels', 'Amazon Basic Care', 'Basic Care');
+assertBrandTextTile('amazon-basic-care-infants-ibuprofen', 'Amazon Basic Care', 'Basic Care');
+assertBrandTextTile('amazon-basic-care-kids-apap-dyefree', 'Amazon Basic Care', 'Basic Care');
+assertBrandTextTile('sprouts-inflacalm-ache-relief', 'Sprouts', 'Sprouts');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -520,6 +584,14 @@ assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertLetterOnly('upup-mucus-relief-600-blue', 'up&up');
+assertLetterOnly('equate-mucus-er-600', 'Equate');
+assertLetterOnly('signature-care-daytime-severe', 'Signature Care');
+assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
+assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
+assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
+assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
+assertLetterOnly('coldcalm-meltaways', 'Boiron');
+assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -588,6 +660,24 @@ assertExactCarton('hylands-ferrum-phos-6x', "Hyland's", 'hylands-ferrum-phos-6x.
 assertExactCarton('hylands-leg-cramps', "Hyland's", 'hylands-leg-cramps.jpg');
 assertExactCarton('boiron-cyclease-cramps', 'Boiron', 'boiron-cyclease-cramps.jpg');
 assertExactCarton('genexa-arnica-pain', 'Genexa', 'genexa-arnica-pain.jpg');
+assertExactCarton('amazon-basic-care-naproxen-blue2-tio2', 'Amazon Basic Care', 'amazon-basic-care-naproxen-blue2-tio2.jpg');
+assertExactCarton('boiron-cyclease-pms', 'Boiron', 'boiron-cyclease-pms.jpg');
+assertExactCarton('boiron-cyclease-menopause', 'Boiron', 'boiron-cyclease-menopause.jpg');
+assertExactCarton('boiron-arnicare-tablets', 'Boiron', 'boiron-arnicare-tablets.jpg');
+assertExactCarton('boiron-arnicare-arthritis-tablets', 'Boiron', 'boiron-arnicare-arthritis-tablets.jpg');
+assertExactCarton('boiron-camilia', 'Boiron', 'boiron-camilia.jpg');
+assertExactCarton('boiron-arnicare-arthritis-cream', 'Boiron', 'boiron-arnicare-arthritis-cream.jpg');
+assertExactCarton('boiron-arnica-30x-tablets', 'Boiron', 'boiron-arnica-30x-tablets.jpg');
+assertExactCarton('boiron-arnica-30c-pellets', 'Boiron', 'boiron-arnica-30c-pellets.jpg');
+assertExactCarton('hylands-mag-phos-6x', "Hyland's", 'hylands-mag-phos-6x.jpg');
+assertExactCarton('hylands-calc-phos-6x', "Hyland's", 'hylands-calc-phos-6x.jpg');
+assertExactCarton('hylands-leg-cramps-pm', "Hyland's", 'hylands-leg-cramps-pm.jpg');
+assertExactCarton('hylands-leg-cramps-arnica-caplets', "Hyland's", 'hylands-leg-cramps-arnica-caplets.jpg');
+assertExactCarton('hylands-restful-legs', "Hyland's", 'hylands-restful-legs.jpg');
+assertExactCarton('hylands-restful-legs-pm', "Hyland's", 'hylands-restful-legs-pm.jpg');
+assertExactCarton('hylands-baby-oral-pain-day', "Hyland's", 'hylands-baby-oral-pain-day.jpg');
+assertExactCarton('hylands-baby-oral-pain-night', "Hyland's", 'hylands-baby-oral-pain-night.jpg');
+assertExactCarton('sprouts-inflacalm-powder-cap', 'Sprouts', 'sprouts-inflacalm-powder-cap.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
