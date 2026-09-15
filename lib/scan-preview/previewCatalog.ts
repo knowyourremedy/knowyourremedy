@@ -44,6 +44,7 @@ import {
   BATCH41_PAIN_RUBS,
   BATCH42_PAIN_GELS,
   BATCH43_GOODYS_BC_ECOTRIN,
+  BATCH44_PAIN_RUBS_LIST2,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -108,6 +109,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH41_PAIN_RUBS,
   ...BATCH42_PAIN_GELS,
   ...BATCH43_GOODYS_BC_ECOTRIN,
+  ...BATCH44_PAIN_RUBS_LIST2,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -567,6 +569,8 @@ assertBrandMark('motrin-infants-liquid-dyed', 'Motrin', 'motrin-mark.png');
 assertBrandMark('topcare-ibuprofen-liquid-gels', 'TopCare', 'topcare-mark.png');
 assertBrandMark('boiron-arnicare-leg-cramps', 'Boiron', 'boiron-mark.png');
 
+// Batch 44 list-2 pain rubs — letter tiles only. No photos. No brand marks.
+
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
   if (!image?.url.startsWith('data:image/svg+xml')) {
@@ -648,6 +652,19 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
+assertLetterOnly('voltaren-arthritis-pain-gel', 'Voltaren');
+assertLetterOnly('aspercreme-arthritis-pain-gel', 'Aspercreme');
+assertLetterOnly('aspercreme-arthritis-pain-gel-fragrance', 'Aspercreme');
+assertLetterOnly('salonpas-diclofenac-arthritis-pain-gel', 'Salonpas');
+assertLetterOnly('salonpas-pain-relieving-jet-spray', 'Salonpas');
+assertLetterOnly('icy-hot-performance-dry-spray', 'Icy Hot');
+assertLetterOnly('icy-hot-dry-spray-original', 'Icy Hot');
+assertLetterOnly('icy-hot-pro-dry-spray', 'Icy Hot');
+assertLetterOnly('icy-hot-lidocaine-dry-spray', 'Icy Hot');
+assertLetterOnly('aspercreme-lidocaine-dry-spray', 'Aspercreme');
+assertLetterOnly('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot');
+assertLetterOnly('salonpas-deep-relieving-gel', 'Salonpas');
+assertLetterOnly('tiger-balm-liniment', 'Tiger Balm');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });

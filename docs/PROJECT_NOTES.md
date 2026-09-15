@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover inactives)
+Last Updated: September 15, 2026 (batch 44 list-2 pain rubs / sprays / liniment)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -418,6 +418,7 @@ Completed (main, unverified drafts unless noted):
 - Pain rubs / same-aisle topicals — Sept 15, 2026 — batch41 Search 8 (Caution 7 / Avoid 1 / Clean 0). Precise creams Caution; Precise lidocaine patch Avoid (methyl/ethyl paraben). AleveX roll-on + tube share formulaId (OI matches); spray is separate. Genexa Pain Crush = discontinued comment only (inactivated NDC 69676-0004-6). Reuse T-Relief / Triflora / Hyland creams / Sports Gel untouched. Arniflora stays First Aid.
 - Advil Targeted Relief + Motrin / Aleve arthritis gels — Sept 15, 2026 — batch42 Search 3 (Caution 3 / Avoid 0 / Clean 0). Isocetyl stearate Cleared; isopropyl alcohol Limited (distinct from ethyl alcohol). Motrin fragrance-free; Aleve own formulaId (fragrance Caution). Pack sizes share formulaId. REFUSED: none. Reuse batch 41 Precise / AleveX untouched. Arniflora stays First Aid.
 - Goody’s / BC / Anacin / Bufferin / Ecotrin / St. Joseph — Sept 15, 2026 — batch43 Search 14 (Caution 6 / Avoid 6 / Clean 2). Shared OI shares formulaId (Max+Cool Orange+Mixed Fruit; PLUS+Hangover; BC Original+Arthritis). ES vs Back & Body = separate formulaIds (actives differ; both Clean — lactose + KCl). KCl Cleared applied. Reuse 0. REFUSED: none. List-4 OUT (no Search rows): Bufferin sanitizer / lidocaine / off-site Arthritis; Ecotrin 81 paraben SPL; Goody’s Migraine/PM caplets; BC cold/flu; Canada/EU; kits; false matches.
+- Pain rubs list 2 — Sept 15, 2026 — batch44 Search 13 (Caution 13 / Avoid 0 / Clean 0). Voltaren own formulaId (Aleve math twin, not cloned). Aspercreme arthritis fragrance vs no-fragrance split. Icy Hot Performance + Pro share formulaId; Original separate (menthol-only). Icy Hot vs Aspercreme lidocaine dry sprays separate (actives differ). REFUSED still-missing §5: none from list 2. List 3/4 OUT (38 question-mark SKUs; kits; wound-only; cosmetics; Canada/EU; discontinued; private-label; Lead duplicates). Do not rewrite Precise / AleveX / Advil Targeted / Motrin or Aleve arthritis gels.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
