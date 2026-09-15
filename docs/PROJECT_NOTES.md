@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (parabens High in every form, including rubs and patches)
+Last Updated: September 15, 2026 (pain-rub list-3 refused — topical locks not in §5 on main)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -356,6 +356,7 @@ Completed (main, unverified drafts unless noted):
 - Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
 - Pedialyte hidden earlier Sept 14.
 - Sprouts store-brand — Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). Organic MCT Oil bottle is PR-comment only (not a Search row). Still-blocked: 187 named in-scope unread house SKUs.
+- Pain rubs / same-aisle topicals — Sept 15, 2026 — batch41 Search 0. All 11 list-3 SKUs REFUSED: after applying current §5 (including parabens High in every form), each SPL still has an inactive that is not in the table. Named scan strings (olivate / palmitate / copolymer, oleth-3-phosphate, cetyl esters wax, cocoyl caprylocaprate, polyoxyl 20 cetostearyl ether, ammonia, AleveX EO / aerosol stack, patch DEGEE / isopropyl laurate, vanillyl butyl ether) are not §5 rows on main. Do not invent. AleveX roll-on vs tube OI matches exactly (would share formulaId if written). Precise lidocaine patch would be Avoid on methyl/ethyl paraben IF written. Genexa Pain Crush = discontinued comment only (inactivated NDC 69676-0004-6 / setid 6e8dd8bb). Reuse MediNatura / B&T / Hyland creams / Sports Gel untouched. Arniflora stays First Aid.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 

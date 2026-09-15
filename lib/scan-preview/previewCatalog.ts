@@ -41,6 +41,7 @@ import {
   BATCH38_NATURES_WAY,
   BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   BATCH40_BAYER_EXCEDRIN_MOTRIN,
+  BATCH41_PAIN_RUBS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -102,6 +103,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH38_NATURES_WAY,
   ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
   ...BATCH40_BAYER_EXCEDRIN_MOTRIN,
+  ...BATCH41_PAIN_RUBS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
