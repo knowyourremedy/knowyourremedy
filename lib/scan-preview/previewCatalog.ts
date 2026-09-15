@@ -194,6 +194,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'genexa-kids-apap-liquid': brandMark('genexa-mark.png'),
   'genexa-infants-apap-liquid': brandMark('genexa-mark.png'),
   'genexa-kids-apap-chewable': brandMark('genexa-mark.png'),
+  // Attempted P&F leftovers — no matching pack face. Per-id only.
+  'walgreens-es-red40-tio2': brandMark('walgreens-mark.png'),
+  'walgreens-es-dyes-talc': brandMark('walgreens-mark.png'),
+  'advil-liqui-gels': brandMark('advil-mark.png'),
+  // Flavor-generic kids Motrin — DailyMed cartons are bubblegum / berry / grape.
+  'motrin-children-liquid-dyed': brandMark('motrin-mark.png'),
+  'motrin-children-liquid-dyefree': brandMark('motrin-mark.png'),
+  'motrin-children-chew-dyefree': brandMark('motrin-mark.png'),
+  'motrin-children-chew-dyed': brandMark('motrin-mark.png'),
+  'motrin-infants-liquid-dyed': brandMark('motrin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -201,6 +211,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
 // character "3". Same beige tile as the letter helper, brand name "365".
 const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   '365-probiotic-fiber-gummies-sunflower': '365',
+  // Attempted P&F leftovers / flavor-generic kids. Target media kit is
+  // product photos only — no standalone official up&up mark file.
+  // Do not invent a logo. Do not stay on the letter "U".
+  'upup-es-red40-tio2': 'up&up',
+  'upup-children-apap-dyed': 'up&up',
+  'upup-infants-apap-dyefree': 'up&up',
+  'upup-children-apap-dyefree': 'up&up',
+  'upup-children-ibu-dyed': 'up&up',
+  'upup-children-ibu-chew-dyed': 'up&up',
+  'upup-infants-ibu-dyefree': 'up&up',
+  'upup-children-ibu-dyefree-liquid': 'up&up',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -220,6 +241,10 @@ function brandInitialTile(brand: string | undefined): ProductImage | undefined {
 // brand name (or a founder-chosen short form), not the first character.
 function brandTextTile(text: string): ProductImage {
   const label = text.trim();
+  const svgLabel = label
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
   const fontSize = label.length <= 1 ? 56 : label.length <= 3 ? 42 : 28;
   // Single-letter baseline stays 72 so unattempted letter tiles do not shift.
   const baseline = label.length <= 1 ? 72 : 76;
@@ -227,7 +252,7 @@ function brandTextTile(text: string): ProductImage {
     `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">` +
     `<rect width="128" height="128" rx="18" fill="#f4f1ea"/>` +
     `<text x="64" y="${baseline}" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ` +
-    `font-size="${fontSize}" font-weight="700" fill="#2d4a3e">${label}</text>` +
+    `font-size="${fontSize}" font-weight="700" fill="#2d4a3e">${svgLabel}</text>` +
     `</svg>`;
   return {
     url: `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`,
@@ -336,6 +361,23 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'topcare-es-pain-relief-tablets': catalogShot('topcare-es-pain-relief-tablets.jpg'),
   'topcare-ibuprofen-caplets': catalogShot('topcare-ibuprofen-caplets.jpg'),
   'topcare-dual-action': catalogShot('topcare-dual-action.jpg'),
+  'family-wellness-es-apap-caplets': catalogShot('family-wellness-es-apap-caplets.jpg'),
+  'rexall-pain-relief-apap': catalogShot('rexall-pain-relief-apap.jpg'),
+  'assured-ibuprofen-200': catalogShot('assured-ibuprofen-200.jpg'),
+  'dg-health-ibuprofen-tablets': catalogShot('dg-health-ibuprofen-tablets.jpg'),
+  'dg-health-apap-dyed': catalogShot('dg-health-apap-dyed.jpg'),
+  'basic-care-apap-rs-l403': catalogShot('basic-care-apap-rs-l403.jpg'),
+  'amazon-basic-care-apap-es-aurohealth': catalogShot('amazon-basic-care-apap-es-aurohealth.jpg'),
+  'amazon-basic-care-ibuprofen-tio2': catalogShot('amazon-basic-care-ibuprofen-tio2.jpg'),
+  'amazon-basic-care-ibuprofen-dyed-talc': catalogShot('amazon-basic-care-ibuprofen-dyed-talc.jpg'),
+  'amazon-basic-care-dual-action': catalogShot('amazon-basic-care-dual-action.jpg'),
+  'amazon-basics-apap-rapid-release': catalogShot('amazon-basics-apap-rapid-release.jpg'),
+  'amazon-basic-care-es-apap-l484': catalogShot('amazon-basic-care-es-apap-l484.jpg'),
+  'hylands-arnica-30x': catalogShot('hylands-arnica-30x.jpg'),
+  'hylands-ferrum-phos-6x': catalogShot('hylands-ferrum-phos-6x.jpg'),
+  'hylands-leg-cramps': catalogShot('hylands-leg-cramps.jpg'),
+  'boiron-cyclease-cramps': catalogShot('boiron-cyclease-cramps.jpg'),
+  'genexa-arnica-pain': catalogShot('genexa-arnica-pain.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -412,6 +454,14 @@ assertBrandMark('tylenol-children-chew-dyefree', 'Tylenol', 'tylenol-mark.png');
 assertBrandMark('genexa-kids-apap-liquid', 'Genexa', 'genexa-mark.png');
 assertBrandMark('genexa-infants-apap-liquid', 'Genexa', 'genexa-mark.png');
 assertBrandMark('genexa-kids-apap-chewable', 'Genexa', 'genexa-mark.png');
+assertBrandMark('walgreens-es-red40-tio2', 'Walgreens', 'walgreens-mark.png');
+assertBrandMark('walgreens-es-dyes-talc', 'Walgreens', 'walgreens-mark.png');
+assertBrandMark('advil-liqui-gels', 'Advil', 'advil-mark.png');
+assertBrandMark('motrin-children-liquid-dyed', 'Motrin', 'motrin-mark.png');
+assertBrandMark('motrin-children-liquid-dyefree', 'Motrin', 'motrin-mark.png');
+assertBrandMark('motrin-children-chew-dyefree', 'Motrin', 'motrin-mark.png');
+assertBrandMark('motrin-children-chew-dyed', 'Motrin', 'motrin-mark.png');
+assertBrandMark('motrin-infants-liquid-dyed', 'Motrin', 'motrin-mark.png');
 
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -437,7 +487,11 @@ function assertBrandTextTile(id: string, brand: string, text: string) {
   }
   const encoded = image.url.replace('data:image/svg+xml;charset=utf-8,', '');
   const decoded = decodeURIComponent(encoded);
-  if (!decoded.includes(`>${text}</text>`)) {
+  const svgText = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  if (!decoded.includes(`>${svgText}</text>`)) {
     throw new Error(`${id} text tile must show "${text}", not a single letter`);
   }
   if (image.verifiedSku) {
@@ -450,15 +504,22 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
+assertBrandTextTile('upup-es-red40-tio2', 'up&up', 'up&up');
+assertBrandTextTile('upup-children-apap-dyed', 'up&up', 'up&up');
+assertBrandTextTile('upup-infants-apap-dyefree', 'up&up', 'up&up');
+assertBrandTextTile('upup-children-apap-dyefree', 'up&up', 'up&up');
+assertBrandTextTile('upup-children-ibu-dyed', 'up&up', 'up&up');
+assertBrandTextTile('upup-children-ibu-chew-dyed', 'up&up', 'up&up');
+assertBrandTextTile('upup-infants-ibu-dyefree', 'up&up', 'up&up');
+assertBrandTextTile('upup-children-ibu-dyefree-liquid', 'up&up', 'up&up');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
-// Unattempted other-aisle Tylenol stays a letter. Pain & Fever kids
-// that were attempted this batch use per-id marks above.
+// Unattempted other-aisle rows stay letters. Marks are per-id only.
 assertLetterOnly('tylenol-pm-es', 'Tylenol');
-assertLetterOnly('advil-liqui-gels', 'Advil');
-assertLetterOnly('walgreens-es-dyes-talc', 'Walgreens');
-assertLetterOnly('motrin-children-liquid-dyed', 'Motrin');
+assertLetterOnly('advil-pm-liquigels', 'Advil');
+assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
+assertLetterOnly('upup-mucus-relief-600-blue', 'up&up');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -510,6 +571,23 @@ assertExactCarton('topcare-es-pain-relief-softgels', 'TopCare', 'topcare-es-pain
 assertExactCarton('topcare-es-pain-relief-tablets', 'TopCare', 'topcare-es-pain-relief-tablets.jpg');
 assertExactCarton('topcare-ibuprofen-caplets', 'TopCare', 'topcare-ibuprofen-caplets.jpg');
 assertExactCarton('topcare-dual-action', 'TopCare', 'topcare-dual-action.jpg');
+assertExactCarton('family-wellness-es-apap-caplets', 'Family Wellness', 'family-wellness-es-apap-caplets.jpg');
+assertExactCarton('rexall-pain-relief-apap', 'Rexall', 'rexall-pain-relief-apap.jpg');
+assertExactCarton('assured-ibuprofen-200', 'Assured', 'assured-ibuprofen-200.jpg');
+assertExactCarton('dg-health-ibuprofen-tablets', 'DG Health', 'dg-health-ibuprofen-tablets.jpg');
+assertExactCarton('dg-health-apap-dyed', 'DG Health', 'dg-health-apap-dyed.jpg');
+assertExactCarton('basic-care-apap-rs-l403', 'Amazon Basic Care', 'basic-care-apap-rs-l403.jpg');
+assertExactCarton('amazon-basic-care-apap-es-aurohealth', 'Amazon Basic Care', 'amazon-basic-care-apap-es-aurohealth.jpg');
+assertExactCarton('amazon-basic-care-ibuprofen-tio2', 'Amazon Basic Care', 'amazon-basic-care-ibuprofen-tio2.jpg');
+assertExactCarton('amazon-basic-care-ibuprofen-dyed-talc', 'Amazon Basic Care', 'amazon-basic-care-ibuprofen-dyed-talc.jpg');
+assertExactCarton('amazon-basic-care-dual-action', 'Amazon Basic Care', 'amazon-basic-care-dual-action.jpg');
+assertExactCarton('amazon-basics-apap-rapid-release', 'Amazon Basics', 'amazon-basics-apap-rapid-release.jpg');
+assertExactCarton('amazon-basic-care-es-apap-l484', 'Amazon Basic Care', 'amazon-basic-care-es-apap-l484.jpg');
+assertExactCarton('hylands-arnica-30x', "Hyland's", 'hylands-arnica-30x.jpg');
+assertExactCarton('hylands-ferrum-phos-6x', "Hyland's", 'hylands-ferrum-phos-6x.jpg');
+assertExactCarton('hylands-leg-cramps', "Hyland's", 'hylands-leg-cramps.jpg');
+assertExactCarton('boiron-cyclease-cramps', 'Boiron', 'boiron-cyclease-cramps.jpg');
+assertExactCarton('genexa-arnica-pain', 'Genexa', 'genexa-arnica-pain.jpg');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
