@@ -39,6 +39,7 @@ import {
   BATCH36_SPROUTS_LEFTOVERS,
   BATCH37_MEDINATURA_BT,
   BATCH38_NATURES_WAY,
+  BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -98,6 +99,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH36_SPROUTS_LEFTOVERS,
   ...BATCH37_MEDINATURA_BT,
   ...BATCH38_NATURES_WAY,
+  ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -1184,6 +1186,21 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     )
   ) {
     return 'Seed/industrial oils are flagged in gummies. Organic sunflower oil in this gummy is that High rule.';
+  }
+
+  if (
+    name.includes('sorbitan')
+    || source.includes('sorbitan, plain')
+    || source.includes('sorbitan esters')
+  ) {
+    return 'Sorbitan (plain / sorbitan esters) is a locked Caution emulsifier — same neighborhood as polysorbate, not Avoid. It is not the sugar-alcohol Limited row.';
+  }
+
+  if (
+    name.includes('potassium hydroxide')
+    || source.includes('potassium hydroxide — pH adjuster')
+  ) {
+    return 'Potassium hydroxide is a locked Cleared pH adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
   }
 
   if (

@@ -36,3 +36,4 @@ export { BATCH35_SPROUTS } from './batch35-sprouts';
 export { BATCH36_SPROUTS_LEFTOVERS } from './batch36-sprouts-leftovers';
 export { BATCH37_MEDINATURA_BT } from './batch37-medinatura-bt';
 export { BATCH38_NATURES_WAY } from './batch38-natures-way';
+export { BATCH39_TYLENOL_ADVIL_ALEVE_HOLES } from './batch39-tylenol-advil-aleve-holes';
