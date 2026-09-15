@@ -1189,6 +1189,21 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
   }
 
   if (
+    name.includes('sorbitan')
+    || source.includes('sorbitan, plain')
+    || source.includes('sorbitan esters')
+  ) {
+    return 'Sorbitan (plain / sorbitan esters) is a locked Caution emulsifier — same neighborhood as polysorbate, not Avoid. It is not the sugar-alcohol Limited row.';
+  }
+
+  if (
+    name.includes('potassium hydroxide')
+    || source.includes('potassium hydroxide — pH adjuster')
+  ) {
+    return 'Potassium hydroxide is a locked Cleared pH adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
+  }
+
+  if (
     name.includes('mannitol')
     || name.includes('sorbitol')
     || source.includes('mannitol')

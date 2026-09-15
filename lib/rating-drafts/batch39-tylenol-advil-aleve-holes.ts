@@ -84,7 +84,7 @@ const KOH_TAP =
   'Potassium hydroxide is the locked Cleared pH-adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
 
 const SORBITAN_TAP =
-  'Sorbitan (plain / sorbitan esters) is the locked Caution row — polysorbate neighborhood, not additive-scored, not Avoid. It is not the sorbitol Limited row.';
+  'Sorbitan (plain / sorbitan esters) is the locked Caution row — polysorbate neighborhood, not additive-scored, not Avoid. It is not the sugar-alcohol Limited row.';
 
 const SEDATING =
   'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
@@ -115,7 +115,7 @@ const METH = {
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   sls:
     'Methodology §5 Caution (sodium lauryl sulfate — population/irritant; standalone Caution, not additive-scored, not Avoid)',
-  sorbitan: `Methodology §5 Caution (sorbitan, plain / sorbitan esters as emulsifier — polysorbate neighborhood; standalone Caution, not additive-scored, not Avoid; not the sorbitol Limited row). ${SORBITAN_TAP}`,
+  sorbitan: `Methodology §5 Caution (sorbitan, plain / sorbitan esters as emulsifier — polysorbate neighborhood; standalone Caution, not additive-scored, not Avoid; not the sugar-alcohol Limited row). ${SORBITAN_TAP}`,
   koh: `Methodology §5 Cleared (potassium hydroxide — pH adjuster, trace; locked Sept 15, 2026). ${KOH_TAP}`,
   dibehenin:
     'Methodology §5 Cleared (dibehenin / glyceryl dibehenate / glyceryl behenate — vegetable wax/lubricant; stearate / wax family)',
@@ -461,7 +461,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
   // ── List 2 Caution — Tylenol ──────────────────────────────
   row({
     id: ID.tylenolEsDissolve,
-    productName: 'Tylenol Extra Strength Dissolve Packs',
+    productName: 'Tylenol Dissolve Packs Extra Strength',
     brand: 'Tylenol',
     category: PAIN_FEVER,
     formulaId: ID.tylenolEsDissolve,
