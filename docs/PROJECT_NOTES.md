@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (cetyl palmitate Cleared; Boiron gemmo follow-up)
+Last Updated: September 15, 2026 (Boiron gemmo US shop written; Arnicare Cream PEG panel row)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -314,7 +314,7 @@ BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
 - Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
 - Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, Soothing Drops Day + Night, two kids multis). Hyland leftovers: none. Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
-- Boiron — first sweep Mon Sept 14, 2026 ~7:59 PM PT. batch34 + reuse. Gemmotherapy IN as follow-up (full US shop). Reuse existing formulaIds (no clones). Kits out. Dead lemon Leg Cramps SPL = comment only. ColicComfort not on US shop (Camilia Tummy replaced it). Not “complete forever.” Refresh when the line adds SKUs.
+- Boiron — first sweep Mon Sept 14, 2026 ~7:59 PM PT. batch34 + reuse. Gemmotherapy IN (17 current US BoironUSA bud/shoot SKUs written; alcohol vehicle Limited → Caution). Arnicare Cream is two rows: shea shop cream + DailyMed setid 542b41dd PEG panel (OI differs). Reuse existing formulaIds (no clones). Kits out. Dead lemon Leg Cramps SPL = comment only. ColicComfort not on US shop (Camilia Tummy replaced it). Not “complete forever.” Refresh when the line adds SKUs.
 
 Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
