@@ -39,6 +39,7 @@ import {
   BATCH36_SPROUTS_LEFTOVERS,
   BATCH37_MEDINATURA_BT,
   BATCH38_NATURES_WAY,
+  BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -98,6 +99,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH36_SPROUTS_LEFTOVERS,
   ...BATCH37_MEDINATURA_BT,
   ...BATCH38_NATURES_WAY,
+  ...BATCH39_TYLENOL_ADVIL_ALEVE_HOLES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
