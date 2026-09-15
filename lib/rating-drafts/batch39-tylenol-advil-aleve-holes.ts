@@ -177,13 +177,6 @@ const IBU_ADULT_ALTS: CleanAlternative[] = [
   ),
 ];
 
-const IBU_KIDS_ALTS: CleanAlternative[] = [
-  alt(
-    GENEXA_KIDS,
-    'No independently Clean kids ibuprofen. Closest Clean Pain & Fever analog is Genexa Kids acetaminophen liquid (ibuprofen → acetaminophen), ages 2+. Form: liquid — labeled, not a hard filter (§6).',
-  ),
-];
-
 const JUNIOR_IBU_ALTS: CleanAlternative[] = [
   alt(
     GENEXA_KIDS,
