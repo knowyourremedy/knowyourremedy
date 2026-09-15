@@ -34,6 +34,7 @@ import {
   BATCH31_MEGAFOOD,
   BATCH32_GENEXA,
   BATCH33_HYLANDS,
+  BATCH34_BOIRON,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -88,6 +89,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH31_MEGAFOOD,
   ...BATCH32_GENEXA,
   ...BATCH33_HYLANDS,
+  ...BATCH34_BOIRON,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /

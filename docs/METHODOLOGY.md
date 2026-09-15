@@ -14,6 +14,8 @@
 
 **Changed Sept 15, 2026 (Hyland’s Soothing Drops leftovers):** Named food/botanical extracts as oral inactive (fennel seed, chamomile flower, calendula, lemon balm leaf, and like named plant-part food botanicals) = Cleared. Same class as grape seed extract. Do not Caution the product on these extracts alone. Cherry flavor stays Limited.
 
+**Changed Sept 15, 2026 (Boiron write locks):** Shea butter / coconut oil / sweet almond oil in cream or topical = not the gummy seed-oil High rule (form tap). Acrylamide / sodium acryloyldimethyltaurate copolymer, chlorhexidine digluconate, isohexadecane, and sorbitan oleate = Caution, not Avoid. Alcohol as oral-homeopathic or topical vehicle, L-carvone, arachidyl / behenyl / arachidyl glucoside, lactobacillus ferment, caprylyl glycol / hexanediol / sorbic acid, dimethicone copolyol, NaOH, hard fat, and PS80 stay as already locked. Gemmotherapy line = OUT (not graded). Dead lemon Arnicare Leg Cramps SPL = discontinued comment only.
+
 **Changed Sept 14, 2026:** named plant colors Cleared; chlorophyllin + cultured dextrose Caution; citrus extract stays flavor-opacity; tap-copy rule for vague vs named twins. Also locked Cleared — organic rice bran extract (rice-hull family), pea protein isolate, organic beet root, organic acerola, honey (oral; under-1 note), paprika extract/capsanthin as color, black carrot / named fruit-or-vegetable juice as color. Unspecified “rice extract” is the Limited opacity row (do not duplicate).
 
 **Changed Sept 14, 2026 (housekeeping locks — excipient siblings + tap-copy rule):** locked remaining housekeeping inactives into §5 the same day as the founder call. Cleared siblings: glycerin / vegetable / organic glycerin; calcium laurate (stearate family); cellulose gum / powdered cellulose / capsule cellulose (MCC family); copovidone (povidone family); hydroxypropyl cellulose / HPC (HPMC family); rice protein / ferment media / organic-brown rice / rice syrup (food-state / starch family, not SiO2); dicalcium phosphate / tricalcium phosphate / citrate salts as fillers/buffers; inulin as fiber; alginic acid (gum/fiber family); canola / soy / sunflower lecithin (already the lecithin lock — named explicitly); coconut oil alone in gummies/chews is NOT seed-oil High; gellan gum with the xanthan/guar family. Limited: organic maltodextrin (same as non-organic); named lemon oil as flavor; unspecified “rice extract” opacity row; polydextrose (maltodextrin-like); fructose as sweetener (treat with sugars; not High). Caution / cap: whole-leaf / crude stevia (do not auto-Clean); methacrylic acid copolymer / unnamed delayed-release composites; phenoxyethanol (topical); lanolin (topical hypersensitivity, not Avoid). Fragrance / parfum stays Caution — not reopened. Morning food/color locks and chlorophyllin / cultured dextrose stay as already written. **Inactive not in §5 still goes to the founder before a live grade. After a lock it goes in this table the same day.** Liquid-drop oil carriers use the same non-gummy rule as capsule fill; tap text required.
@@ -218,6 +220,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Hard fat (suppository base) — LOCKED (Sept 14, 2026) | Cleared. |
 | Sodium hydroxide (NaOH) as pH adjuster — LOCKED (Sept 14, 2026) | Cleared. |
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
+| Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
@@ -278,6 +281,10 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Wood rosin / colophony (topical) — LOCKED | Contact-allergy pattern. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lavender oil (topical) — LOCKED (Sept 15, 2026) | Fragrance-style topical scent. Same posture as fragrance / parfum. Not Avoid. | Standard alternatives rule. Prefer a fragrance-free Good option in the same category if one exists. Do not raise to Avoid. |
 | Wintergreen extract (topical inactive) — LOCKED (Sept 15, 2026) | Caution. Topical inactive. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Acrylamide / sodium acryloyldimethyltaurate copolymer (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 

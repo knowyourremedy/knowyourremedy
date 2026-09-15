@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 14, 2026 (alcohol vehicle oral+topical Limited; Boiron scan locks)
+Last Updated: September 15, 2026 (Boiron batch34 write locks)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -264,7 +264,11 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Lactobacillus ferment (topical) = Caution (ferment system).
 - L-carvone = Limited (flavor isolate).
 - Caprylyl glycol / hexanediol / sorbic acid = Limited (preservative family).
-- Gemmotherapy out until founder asks.
+- Shea butter / coconut oil / sweet almond oil in cream or topical = not the gummy seed-oil High rule. Form tap required.
+- Acrylamide / sodium acryloyldimethyltaurate copolymer, chlorhexidine digluconate, isohexadecane, sorbitan oleate = Caution. Not Avoid.
+- PS80 stays the existing Moderate row.
+- Gemmotherapy line = OUT (list 4 only — not graded).
+- Dead lemon Arnicare Leg Cramps SPL (setid 6b658f98) = discontinued comment only. Do not write that carton. Current unflavored meltaway is setid 051a4e17.
 - Lavender oil (topical) = Caution, fragrance-style (same posture as fragrance / parfum). Not Avoid. Sept 15, 2026 founder carton.
 - Wintergreen extract (topical inactive) = Caution. Not Avoid. Sept 15, 2026 founder carton.
 - Rebaudioside M / Reb M = Cleared (high-purity steviol glycoside sibling of the stevia lock). Sept 15, 2026.
@@ -307,6 +311,7 @@ BRAND ROSTER LOG
 - MegaFood — first sweep Mon Sept 14, 2026 ~10:42 AM PT. batch31-megafood.ts + reused megafood-one-daily. Closeout on main. Not “complete forever.” Refresh when the line adds SKUs.
 - Genexa — batch32 on main (Pain & Fever-heavy). Not “complete forever.”
 - Hyland’s — batch33 closeout Tues Sept 15, 2026. Reuse 6 existing ids. Founder-carton leftovers written (creams, PRID, Sleep Calm, All-in-One, Soothing Gels, Soothing Drops Day + Night, two kids multis). Hyland leftovers: none. Kits out. Discontinued = PR comment only. Not “complete forever.” Refresh when the line adds SKUs.
+- Boiron — batch34 Tue Sept 15, 2026. Reuse 17 existing formulaIds (no clones). New writable formulas + alcohol-vehicle / cream-family unlocks. Kits out. Gemmotherapy OUT. Dead lemon Leg Cramps SPL = comment only. ColicComfort not on US shop (Camilia Tummy replaced it). Not “complete forever.” Refresh when the line adds SKUs.
 
 Bots: KYR2 still current for preview/photos and this MegaFood closeout. Open KYR3 catalog-only if KYR2 lags or mixes UI into catalog. Night photo routine stays separate. Pedialyte hide already done.
 
