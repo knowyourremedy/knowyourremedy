@@ -223,7 +223,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Hypromellose, hydroxypropyl cellulose (HPC) | ADI "not specified"; no genotox/carcinogenicity/repro findings. HPC is Cleared-by-class with HPMC / hypromellose (Sept 14, 2026 housekeeping). |
 | Organic pullulan — LOCKED | Starch capsule polymer; HPMC-family vegan cap. |
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
-| Carbomer homopolymer (Type A/B/C) | Older 934/940/941 benzene concern does NOT apply to current monograph. |
+| Carbomer / carbomer copolymer / carbomer interpolymer — LOCKED (Sept 15, 2026) | Homopolymer Type A/B/C included. Older 934/940/941 benzene concern does NOT apply to current monograph. |
 | Organic agave, organic flavors/colors | Whole-food-derived. |
 | Sodium chloride, sodium bicarbonate | Saline bases. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
@@ -239,7 +239,13 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
 | Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Glycol stearate, isopropyl myristate, stearyl heptanoate — LOCKED (Sept 15, 2026) | Topical emollients. |
+| Isopropyl palmitate, isopropyl laurate — LOCKED (Sept 15, 2026) | IPM family. |
+| Cetearyl olivate, sorbitan olivate — LOCKED (Sept 15, 2026) | Topical emulsifier pair. |
+| Cetyl esters wax, emulsifying wax — LOCKED (Sept 15, 2026) | Wax family. |
+| Cocoyl caprylocaprate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
+| Pentylene glycol, propanediol — LOCKED (Sept 15, 2026) | Humectant / solvent. |
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
@@ -310,7 +316,17 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Wood rosin / colophony (topical) — LOCKED | Contact-allergy pattern. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lavender oil (topical) — LOCKED (Sept 15, 2026) | Fragrance-style topical scent. Same posture as fragrance / parfum. Not Avoid. | Standard alternatives rule. Prefer a fragrance-free Good option in the same category if one exists. Do not raise to Avoid. |
 | Wintergreen extract (topical inactive) — LOCKED (Sept 15, 2026) | Caution. Topical inactive. Not Avoid. | Standard alternatives rule. Not Avoid. |
-| Acrylamide / sodium acryloyldimethyltaurate copolymer (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Acrylamide / sodium acryloyldimethyltaurate copolymer (AMPS); DMAEMA copolymer; vinyl caprolactam / vinylpyrrolidone copolymer (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| DEGEE / ethoxydiglycol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Not Cleared. | Standard alternatives rule. Not Avoid. |
+| Dimethyl isosorbide — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Vanillyl butyl ether — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Clove oil, boswellia oil, thymus / flower oils as lotion scent — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
+| Oleth-3-phosphate — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Polyoxyl 20 cetostearyl ether — LOCKED (Sept 15, 2026) | PEG-ether family. | Standard alternatives rule. Not Avoid. |
+| Strong ammonia solution — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Aminomethyl propanol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Isopulegol, menthoxypropanediol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Isobutane, isopentane, propane (pain-spray propellants) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |

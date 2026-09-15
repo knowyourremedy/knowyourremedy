@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (parabens High in every form, including rubs and patches)
+Last Updated: September 15, 2026 (Precise / Advil / AleveX / Motrin gel inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -315,6 +315,25 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Sorbitan (plain / sorbitan esters as emulsifier) = Caution (polysorbate neighborhood). Not Avoid. Not the same row as sorbitol. Do not flip tylenol-8hr-peg. Hydroxyethyl cellulose stays parked on that reuse row.
 - Triacetin = Cleared (tablet/caplet coating plasticizer). Not a grade driver.
 - Parabens (methyl, ethyl, propyl, butyl) = High in every form, including rubs and patches. Not a topical exception.
+- Carbomer / carbomer copolymer / carbomer interpolymer = Cleared (widens the homopolymer row).
+- Cetearyl olivate, sorbitan olivate = Cleared.
+- Isopropyl palmitate, isopropyl laurate = Cleared (IPM family).
+- Cetyl esters wax, emulsifying wax = Cleared.
+- Cocoyl caprylocaprate = Cleared.
+- Pentylene glycol, propanediol = Cleared.
+- Linseed oil in lotion/cream fill = Cleared. Not gummy High. Tap form.
+- DEGEE / ethoxydiglycol = Caution. Not Cleared.
+- Dimethyl isosorbide = Caution.
+- Vanillyl butyl ether = Caution.
+- Fragrance / parfum already in §5 Caution — do not duplicate.
+- Clove oil, boswellia oil, thymus / flower oils as lotion scent = Caution (fragrance/EO line).
+- Acrylamide–AMPS copolymer; DMAEMA copolymer; vinyl caprolactam / vinylpyrrolidone copolymer = Caution (widens the existing AMPS row).
+- Oleth-3-phosphate = Caution.
+- Polyoxyl 20 cetostearyl ether = Caution (PEG-ether family).
+- Strong ammonia solution = Caution.
+- Aminomethyl propanol = Caution.
+- Isopulegol, menthoxypropanediol = Caution.
+- Isobutane, isopentane, propane (pain-spray propellants) = Caution.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
