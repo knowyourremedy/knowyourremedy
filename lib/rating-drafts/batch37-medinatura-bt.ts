@@ -355,7 +355,7 @@ const ALTS = {
       'Independently Clean topical Arnica analog already on main (Boiron Arnicare Gel). Form: gel vs cream — labeled, not a hard filter (§6).',
     ),
   ],
-} as const;
+};
 
 function tabletMaltodextrin(setid: string, hasLactose: boolean): IngredientFlag[] {
   const rows: IngredientFlag[] = [
@@ -396,9 +396,8 @@ function mnRow(
   return {
     brand: BRAND_MN,
     recordStatus: UNVERIFIED,
-    productType: OTC,
     retailers: [...MN_RETAILERS],
-    ...(homeopathic === false ? {} : homeopathicFields()),
+    ...(homeopathic === false ? { productType: OTC } : homeopathicFields()),
     ...rest,
   };
 }
@@ -409,7 +408,6 @@ function btRow(
   return {
     brand: BRAND_BT,
     recordStatus: UNVERIFIED,
-    productType: OTC,
     retailers: [...BT_RETAILERS],
     ...homeopathicFields(),
     ...partial,
