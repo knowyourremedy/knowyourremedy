@@ -37,6 +37,7 @@ import {
   BATCH34_BOIRON,
   BATCH35_SPROUTS,
   BATCH36_SPROUTS_LEFTOVERS,
+  BATCH37_MEDINATURA_BT,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -94,6 +95,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH34_BOIRON,
   ...BATCH35_SPROUTS,
   ...BATCH36_SPROUTS_LEFTOVERS,
+  ...BATCH37_MEDINATURA_BT,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
