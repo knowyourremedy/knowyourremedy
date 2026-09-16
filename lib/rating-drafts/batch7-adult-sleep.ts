@@ -161,6 +161,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: "Hyland's Calms Forte Tablets",
     brand: "Hyland's",
     category: SLEEP,
+    barcode: '354973325722',
     formulaId: CALMS_FORTE,
     audience: ADULT,
     minAge: 12,
