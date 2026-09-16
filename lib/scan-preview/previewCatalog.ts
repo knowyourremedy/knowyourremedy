@@ -58,6 +58,7 @@ import {
   BATCH55_PF_REFUSED_UNLOCK,
   BATCH56_AMAZON_LEFTOVER_GRADES,
   BATCH57_PF_REFUSED_UNLOCK,
+  BATCH58_PENETREX_CREAM,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -136,6 +137,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH55_PF_REFUSED_UNLOCK,
   ...BATCH56_AMAZON_LEFTOVER_GRADES,
   ...BATCH57_PF_REFUSED_UNLOCK,
+  ...BATCH58_PENETREX_CREAM,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -858,6 +860,7 @@ assertLetterOnly('topricin-pain-relief-cream', 'Topricin');
 assertLetterOnly('blue-emu-original', 'Blue-Emu');
 assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
 assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
+assertLetterOnly('penetrex-pain-relief-cream', 'Penetrex');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });

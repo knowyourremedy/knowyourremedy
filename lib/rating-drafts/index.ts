@@ -55,3 +55,4 @@ export { BATCH54_AMAZON_PF_HOLES } from './batch54-amazon-pf-holes';
 export { BATCH55_PF_REFUSED_UNLOCK } from './batch55-pf-refused-unlock';
 export { BATCH56_AMAZON_LEFTOVER_GRADES } from './batch56-amazon-leftover-grades';
 export { BATCH57_PF_REFUSED_UNLOCK } from './batch57-pf-refused-unlock';
+export { BATCH58_PENETREX_CREAM } from './batch58-penetrex-cream';
