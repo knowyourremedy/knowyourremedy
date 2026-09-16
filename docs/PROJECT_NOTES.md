@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Thrive hole punch DONE — batch59-thrive-holes 241; refused list kept)
+Last Updated: September 16, 2026 (Thrive refused-unlock strings stamped; leftover write next)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -541,6 +541,7 @@ Completed (main, unverified drafts unless noted):
   - New Chapter oral hydrated silica tablets; All-Flora Multi-Fiber — seaweed extract; Bone Strength / Daily Skin — unlabeled MCT + psyllium / oat fiber
   - Scan 21 no_OI pile + leftover thin-brand holes that still need a carton
   Oil-bottle hunt (never graded): Thrive MCT / C8 MCT, BUBS MCT creamer, Carlson CLO, Barlean’s flax, Manitoba hemp, Heritage castor, Herb Pharm Kids Mullein Garlic Oil.
+  Thrive refused-unlock strings stamped Sept 16; KYR3 leftover write next. no_OI pile and Wart Extra Strength DailyMed conflict stay refused.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
