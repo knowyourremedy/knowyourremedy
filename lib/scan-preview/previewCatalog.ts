@@ -47,6 +47,7 @@ import {
   BATCH44_PAIN_RUBS_LIST2,
   BATCH45_PAIN_RUBS_REMAINING,
   BATCH46_PAIN_RUB_REFUSED_UNLOCK,
+  BATCH47_PAIN_RUB_EXACT_UNLOCK,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -114,6 +115,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH44_PAIN_RUBS_LIST2,
   ...BATCH45_PAIN_RUBS_REMAINING,
   ...BATCH46_PAIN_RUB_REFUSED_UNLOCK,
+  ...BATCH47_PAIN_RUB_EXACT_UNLOCK,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -690,6 +692,31 @@ assertLetterOnly('tiger-balm-white-regular-strength', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-hydrogel-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-neck-shoulder-vanishing-scent', 'Tiger Balm');
+assertLetterOnly('icy-hot-pro-massaging-balm', 'Icy Hot');
+assertLetterOnly('icy-hot-lidocaine-large-patch', 'Icy Hot');
+assertLetterOnly('icy-hot-pro-pain-relief-patch', 'Icy Hot');
+assertLetterOnly('icy-hot-lidocaine-no-mess-roll-on', 'Icy Hot');
+assertLetterOnly('icy-hot-original-no-mess-roll-on', 'Icy Hot');
+assertLetterOnly('icy-hot-max-lidocaine-cream', 'Icy Hot');
+assertLetterOnly('icy-hot-original-menthol-patch', 'Icy Hot');
+assertLetterOnly('icy-hot-pro-microbeads-cream', 'Icy Hot');
+assertLetterOnly('aspercreme-lidocaine-eucalyptus-cream', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-foot-2in1', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-patch', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-no-mess-applicator', 'Aspercreme');
+assertLetterOnly('aspercreme-original-cream', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-rosemary-mint', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-rosemary-mint-cream', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-xl-patch', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-odor-free', 'Aspercreme');
+assertLetterOnly('aspercreme-lidocaine-foot-pain-cream', 'Aspercreme');
+assertLetterOnly('aspercreme-professional-cream', 'Aspercreme');
+assertLetterOnly('salonpas-lidocaine-gel-patch', 'Salonpas');
+assertLetterOnly('salonpas-pain-relieving-patch-large', 'Salonpas');
+assertLetterOnly('salonpas-lidocaine-gel-patch-hisamitsu', 'Salonpas');
+assertLetterOnly('salonpas-lidocaine-flex-patch', 'Salonpas');
+assertLetterOnly('salonpas-pain-relieving-patch', 'Salonpas');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });

@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (exact INCI locks for remaining pain-rub refuses)
+Last Updated: September 16, 2026 (pain-rub exact-unlock batch 47)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -426,6 +426,7 @@ Completed (main, unverified drafts unless noted):
 - Pain rubs list 2 — Sept 15, 2026 — batch44 Search 13 (Caution 13 / Avoid 0 / Clean 0). Voltaren own formulaId (Aleve math twin, not cloned). Aspercreme arthritis fragrance vs no-fragrance split. Icy Hot Performance + Pro share formulaId; Original separate (menthol-only). Icy Hot vs Aspercreme lidocaine dry sprays separate (actives differ). REFUSED still-missing §5: none from list 2. List 3/4 OUT (38 question-mark SKUs; kits; wound-only; cosmetics; Canada/EU; discontinued; private-label; Lead duplicates). Do not rewrite Precise / AleveX / Advil Targeted / Motrin or Aleve arthritis gels.
 - Pain rubs remaining (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table) — Sept 15, 2026 — leftover strings confirmed on §5. Batch45 wrote the gradeable remainder. REFUSED still-missing §5 stay questions. Pain rubs stay Pain & Fever.
 - Pain rubs PR #93 refused-unlock — Sept 16, 2026 — batch46 Search 3 (Caution 2 / Avoid 1 / Clean 0). Wrote only SKUs whose current DailyMed OI now maps: Tiger Balm Pain Relieving Patch + Hydrogel Patch (shared formulaId; mentha oil gone from SPL) and Neck & Shoulder vanishing scent (PVM/MA gone; PEG-120 on PEG Moderate row; Avoid Blue 1 + parabens). Do not clone batch45 neck-shoulder formulaId. REFUSED 37 still-missing. Reuse 41/42/44/45 untouched. Pain rubs stay Pain & Fever.
+- Pain rubs PR #93/#94 exact-unlock — Sept 16, 2026 — batch47 Search 25 (Caution 6 / Avoid 19 / Clean 0). Wrote only SKUs whose every current DailyMed OI token has an exact §5 row. Cousin-matching refused. REFUSED 12 still-missing exact tokens (ceteth phosphate / unspecified steareth / unspecified polysorbate; mentha oil; PEG-120 methyl glucose dioleate; magnesium aluminometasilicate / unspecified nonoxynol; polybutene; alicyclic saturated hydrocarbon resin / baking cloth / film). Reuse 41/42/44/45/46 untouched. Pain rubs stay Pain & Fever.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
