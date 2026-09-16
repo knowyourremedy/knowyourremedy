@@ -63,6 +63,7 @@ import {
   BATCH60_THRIVE_REFUSED_UNLOCK,
   BATCH61_AMAZON_HOUSE_PINNED,
   BATCH62_MAMA_BEAR_CAROUSEL,
+  BATCH63_KYR6_ELEMENTS_BASICS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -146,6 +147,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH60_THRIVE_REFUSED_UNLOCK,
   ...BATCH61_AMAZON_HOUSE_PINNED,
   ...BATCH62_MAMA_BEAR_CAROUSEL,
+  ...BATCH63_KYR6_ELEMENTS_BASICS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
