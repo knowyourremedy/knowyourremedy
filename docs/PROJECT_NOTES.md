@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover strings confirmed on §5)
+Last Updated: September 16, 2026 (batch 46 PR #93 refused-unlock — 3 newly writable Tiger Balm rows)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -374,7 +374,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Topical talc in a cream/patch = Caution. Not the oral-talc High swallow rule. Tap form.
 - DMDM hydantoin / diazolidinyl urea = Caution (formaldehyde-donor). Not Avoid unless founder later bumps. Other formaldehyde-releasers stay parked.
 - Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
-- Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings. Batch45 REFUSED still-missing names (cocoa butter, dicetyl phosphate, C15-19 alkane, aluminum silicate, PVM/MA Decadiene Crosspolymer, mentha oil, etc.) stay questions — do not invent grades.
+- Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings. Batch46 wrote the 3 PR #93 refused SKUs whose current DailyMed OI now maps (Tiger Balm Pain Relieving Patch + Hydrogel Patch share formulaId; Neck & Shoulder vanishing scent). Still-missing names (cocoa butter, dicetyl phosphate, C15-19 alkane, aluminum silicate, mentha arvensis leaf oil, dihydroxyaluminum aminoacetate, etc.) stay questions — do not invent grades.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
@@ -421,6 +421,7 @@ Completed (main, unverified drafts unless noted):
 - Goody’s / BC / Anacin / Bufferin / Ecotrin / St. Joseph — Sept 15, 2026 — batch43 Search 14 (Caution 6 / Avoid 6 / Clean 2). Shared OI shares formulaId (Max+Cool Orange+Mixed Fruit; PLUS+Hangover; BC Original+Arthritis). ES vs Back & Body = separate formulaIds (actives differ; both Clean — lactose + KCl). KCl Cleared applied. Reuse 0. REFUSED: none. List-4 OUT (no Search rows): Bufferin sanitizer / lidocaine / off-site Arthritis; Ecotrin 81 paraben SPL; Goody’s Migraine/PM caplets; BC cold/flu; Canada/EU; kits; false matches.
 - Pain rubs list 2 — Sept 15, 2026 — batch44 Search 13 (Caution 13 / Avoid 0 / Clean 0). Voltaren own formulaId (Aleve math twin, not cloned). Aspercreme arthritis fragrance vs no-fragrance split. Icy Hot Performance + Pro share formulaId; Original separate (menthol-only). Icy Hot vs Aspercreme lidocaine dry sprays separate (actives differ). REFUSED still-missing §5: none from list 2. List 3/4 OUT (38 question-mark SKUs; kits; wound-only; cosmetics; Canada/EU; discontinued; private-label; Lead duplicates). Do not rewrite Precise / AleveX / Advil Targeted / Motrin or Aleve arthritis gels.
 - Pain rubs remaining (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table) — Sept 15, 2026 — leftover strings confirmed on §5. Batch45 wrote the gradeable remainder. REFUSED still-missing §5 stay questions. Pain rubs stay Pain & Fever.
+- Pain rubs PR #93 refused-unlock — Sept 16, 2026 — batch46 Search 3 (Caution 2 / Avoid 1 / Clean 0). Wrote only SKUs whose current DailyMed OI now maps: Tiger Balm Pain Relieving Patch + Hydrogel Patch (shared formulaId; mentha oil gone from SPL) and Neck & Shoulder vanishing scent (PVM/MA gone; PEG-120 on PEG Moderate row; Avoid Blue 1 + parabens). Do not clone batch45 neck-shoulder formulaId. REFUSED 37 still-missing. Reuse 41/42/44/45 untouched. Pain rubs stay Pain & Fever.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 

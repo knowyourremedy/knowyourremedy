@@ -46,6 +46,7 @@ import {
   BATCH43_GOODYS_BC_ECOTRIN,
   BATCH44_PAIN_RUBS_LIST2,
   BATCH45_PAIN_RUBS_REMAINING,
+  BATCH46_PAIN_RUB_REFUSED_UNLOCK,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -112,6 +113,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH43_GOODYS_BC_ECOTRIN,
   ...BATCH44_PAIN_RUBS_LIST2,
   ...BATCH45_PAIN_RUBS_REMAINING,
+  ...BATCH46_PAIN_RUB_REFUSED_UNLOCK,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -685,6 +687,9 @@ assertLetterOnly('tiger-balm-pain-relieving-muscle-spray', 'Tiger Balm');
 assertLetterOnly('tiger-balm-red-extra-strength', 'Tiger Balm');
 assertLetterOnly('tiger-balm-ultra-strength', 'Tiger Balm');
 assertLetterOnly('tiger-balm-white-regular-strength', 'Tiger Balm');
+assertLetterOnly('tiger-balm-pain-relieving-patch', 'Tiger Balm');
+assertLetterOnly('tiger-balm-hydrogel-patch', 'Tiger Balm');
+assertLetterOnly('tiger-balm-neck-shoulder-vanishing-scent', 'Tiger Balm');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
