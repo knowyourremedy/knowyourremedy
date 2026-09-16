@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (bot map + barcode weight + roster + icon/™ park)
+Last Updated: September 16, 2026 (roster 37–40 on main; stale queue killed)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -499,7 +499,11 @@ Completed (main, unverified drafts unless noted):
 - Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
 - Pedialyte hidden earlier Sept 14.
 - Boiron — Sept 15, 2026 — US in-scope catalog write on main (pellets / liquids / topicals / gemmo that mapped to §5). batch34-boiron.ts TALLY: Search 436 (Clean 402 / Caution 34 / Avoid 0). Dead lemon Arnicare Leg Cramps SPL = discontinued comment only. Pain & Fever photo test PR #107 — 20 official BoironUSA pellet cartons; those letters cleared. Leftovers = only what that write still listed as refused / no OI (batch file: STILL BLOCKED none on the follow-up).
-- Sprouts store-brand — still OPEN. Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). ~187 named in-scope unread house SKUs still blocked. Organic MCT Oil = oil hunt list, not Search. Do not mark complete.
+- Sprouts store-brand — still OPEN. Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). batch36 leftovers still named unread. ~187 house panels still blocked. Organic MCT Oil = oil hunt list, not Search. Do not mark complete.
+- MediNatura + Boericke & Tafel — Sept 15, 2026 — batch37-medinatura-bt.ts — 39 rows (Clean 1 / Caution 38 / Avoid 0). Traumeel Tablets independently Clean. Traumeel ≠ T-Relief. List 4 PR-comment only. REFUSED OI: none. DONE for that write. Do not re-catalog.
+- Nature’s Way — Sept 15, 2026 — batch38-natures-way.ts — 262 rows (Clean 126 / Caution 130 / Avoid 6). Reuse Umcka + Sambucus kids gummies + all B&T twins from batch37. naturesway.com OI pass. DONE for that write. Do not re-catalog.
+- Tylenol / Advil / Aleve holes — Sept 15, 2026 — batch39-tylenol-advil-aleve-holes.ts — 20 NEW (Clean 0 / Caution 6 / Avoid 14) + reuse 28 ids from batches 1/2/7. Pain & Fever / Sleep holes only. List 4 (cold/flu, kits, CA/EU, topicals already in 41+) = not Search rows. DONE for that holes pass. Do not start a fresh full-line Tylenol catalog.
+- Bayer / Excedrin / Infants’ Motrin leftover — Sept 15, 2026 — batch40-bayer-excedrin-motrin.ts — 12 rows (Clean 1 / Caution 0 / Avoid 11). Genuine Bayer Aspirin 325 independently Clean. DONE for that write.
 - Pain rubs / same-aisle topicals — Sept 15, 2026 — batch41 Search 8 (Caution 7 / Avoid 1 / Clean 0). Precise creams Caution; Precise lidocaine patch Avoid (methyl/ethyl paraben). AleveX roll-on + tube share formulaId (OI matches); spray is separate. Genexa Pain Crush = discontinued comment only (inactivated NDC 69676-0004-6). Reuse T-Relief / Triflora / Hyland creams / Sports Gel untouched. Arniflora stays First Aid.
 - Advil Targeted Relief + Motrin / Aleve arthritis gels — Sept 15, 2026 — batch42 Search 3 (Caution 3 / Avoid 0 / Clean 0). Isocetyl stearate Cleared; isopropyl alcohol Limited (distinct from ethyl alcohol). Motrin fragrance-free; Aleve own formulaId (fragrance Caution). Pack sizes share formulaId. REFUSED: none. Reuse batch 41 Precise / AleveX untouched. Arniflora stays First Aid.
 - Goody’s / BC / Anacin / Bufferin / Ecotrin / St. Joseph — Sept 15, 2026 — batch43 Search 14 (Caution 6 / Avoid 6 / Clean 2). Shared OI shares formulaId (Max+Cool Orange+Mixed Fruit; PLUS+Hangover; BC Original+Arthritis). ES vs Back & Body = separate formulaIds (actives differ; both Clean — lactose + KCl). KCl Cleared applied. Reuse 0. REFUSED: none. List-4 OUT (no Search rows): Bufferin sanitizer / lidocaine / off-site Arthritis; Ecotrin 81 paraben SPL; Goody’s Migraine/PM caplets; BC cold/flu; Canada/EU; kits; false matches.
@@ -512,15 +516,12 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 NEXT QUEUE
-1) Finish or stash Sprouts house leftovers (founder call — ~25+ panel rule)
-2) Boericke & Tafel / Medinatura
-3) Nature’s Way in-scope
-4) Tylenol / Advil / Aleve swallow holes
-5) Thrive brand-list hole punch
-6) Amazon US brands not on main
-7) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
-Then KYR5 barcode factory (PR-only until founder OK).
-Do NOT mark complete: Nature’s Way, Boericke & Tafel / Medinatura, Thrive full list, Amazon US full list, Tylenol / Advil / Aleve swallow holes, store generics.
+1) Sprouts house leftovers — finish or stash (founder call)
+2) Thrive brand-list hole punch
+3) Amazon US brands not on main
+4) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
+5) KYR5 barcode backfill (PR-only until founder OK)
+Do NOT mark complete: Sprouts house, Thrive full list, Amazon US full list, store generics. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
