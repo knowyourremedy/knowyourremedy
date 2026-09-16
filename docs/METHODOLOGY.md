@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 16, 2026 (Thrive leftover exact tokens + form-tap oils):** Cleared (NOT gummy seed-oil High) — Organic Palm Oil as tablet/capsule coating or fill; Medium Chain Glycerides (Modified Coconut, Palm Oil) as capsule/softgel/drop fill; High Oleic Safflower Oil as fill/coating (gummy print of safflower/sunflower/palm stays High — tap both sides); Organic Tapioca Fiber Powder (same row as soluble tapioca fiber; both strings); Locust Bean Gum (xanthan/guar/pectin family); Sodium Alginate (alginic family); Organic Cassava Syrup (food-syrup sibling of rice syrup); Chicory Root Fiber (inulin family); Fumaric Acid; Adipic Acid; Butyric Acid; Sodium Acetate Anhydrous; Sodium Stearyl Fumarate (stearate-family lubricant); Glycerol Monostearate = alias of glyceryl monostearate / GMS (both strings); Candelilla Wax / Candellila Wax (typo alias); D-Alpha-Tocopherol as inactive (mixed-tocopherols row; NOT tocopheryl acetate); Lycopene (color) with named plant-color row; Microcrystalline Cellulosse = MCC typo alias (honest note “label typo”). Limited — Organic Rice Starch; Non-GMO Maize Starch; Tapioca Dextrin; Tapioca Powder; Beet Sugar (sugar row, not High); Almond Butter / Rowanberry as gummy pieces (fruit-puree gummy-base); Natural Colors unspecified (natural-flavors opacity). Caution — Rice Powder (distinct from rice flour; not rice hull / rice bran Cleared); Mono- and Diglycerides (unspecified blend; not named GMS); Rosemary Extract (A Natural Preservative) oral; Pomegranate Powder / Instant Coffee Powder as inactive; Trace Minerals (From Seawater) as an inactive line; unnamed coating blend / bare Enteric Coating (already delayed-release Caution). Restamped named plant-color / annatto / beta-carotene / caramel-undisclosed strings only — no grade change. Unlabeled Vegetable Capsule stays ungraded.
+
 **Changed Sept 15, 2026 (coconut alkanes / pyridoxine / tea tree oil):** Cleared — Coconut Alkanes (same job as C15-19 alkane; exact token, do not alias). Cleared — Pyridoxine HCl (vitamin B6 as inactive). Caution — Tea Tree Leaf Oil / Melaleuca Alternifolia Leaf Oil (scent/EO rule; both strings written).
 
 **Changed Sept 15, 2026 (Steareth-20 / glycosaminoglycans / cholecalciferol / silicon):** Caution — Steareth-20 (exact; distinct from steareth-2 / steareth-21 / unspecified steareth). Caution — Glycosaminoglycans. Cleared — Cholecalciferol (vitamin D3 as inactive). Caution — silicon (exact word when the label prints “silicon,” not silica; do not alias silica / silicon dioxide).
@@ -183,8 +185,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
 | Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
 | Aspartame — **LOCKED** | E951, NutraSweet | IARC 2B (2023) + founder's strict-sweetener stance. Cite IARC and JECFA both; "agencies split" does not downgrade this. |
-| Seed/industrial oils (gummies) | soybean, canola, "vegetable oil" | Clean-standard exclusion for gummy formulations. Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
-| Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. |
+| Seed/industrial oils (gummies) | soybean, canola, palm, safflower, sunflower, "vegetable oil" | Clean-standard exclusion for gummy formulations. Gummy print of safflower / sunflower / palm stays High. Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Tablet / capsule / softgel / drop fill of Organic Palm Oil, High Oleic Safflower Oil, or Medium Chain Glycerides is NOT this High rule (see Cleared; tap both sides). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
+| Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. Exact restamp Sept 16, 2026 — no grade change: caramel color undisclosed class stays Avoid (existing 3-way split). |
 | Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
 | Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral / swallow OTC/vitamin/supplement/protein products. Topical talc in a cream/patch is Caution (form tap) — not this High swallow rule. |
 | BVO (brominated vegetable oil) — **LOCKED (v1.6)** | Brominated soybean oil | Federal ban, effective Aug 2024. Documented tissue-bromine accumulation + neurological harm mechanism. |
@@ -221,6 +223,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | isomalt — LOCKED (Sept 15, 2026) | isomalt | Limited. Exact token. Sugar-alcohol neighborhood. Was missing from the table. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
+| Natural Colors (unspecified) — LOCKED (Sept 16, 2026) | Natural Colors, natural colors | Same opacity bucket as natural flavors. Unspecified. Named plant-color strings stay on the Cleared named-plant-color row. |
 | Natural citrus extract (fruit/part not named) — LOCKED (Sept 14, 2026) | unnamed citrus fruit extract | Same opacity bucket as natural flavor. DailyMed CITRUS FRUIT UNII is not lemon vs peel. Named “organic lemon oil” can be revisited (Limited flavor row below — not a Clean auto-pass). |
 | Named lemon oil as flavor — **LOCKED (Sept 14, 2026 housekeeping)** | organic lemon oil, lemon oil (named) | Flavor row. Limited, same class as “natural flavors.” Named is not a Clean auto-pass. |
 | Peppermint oil / orange essential oil as flavor — LOCKED | peppermint oil, orange essential oil (flavor) | Flavor/EO line. Not gummy High. |
@@ -228,16 +231,20 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Barley malt (syrup/sweetener) — LOCKED (Sept 15, 2026) | barley malt, barley malt syrup | Not Avoid. |
 | Allulose — LOCKED (Sept 15, 2026) | D-allulose, psicose | Novel sweetener; not Avoid. |
 | Maltose — LOCKED (Sept 15, 2026) | malt sugar | With the sugars. |
-| Modified starch — LOCKED (Sept 15, 2026) | modified food starch | Unspecified starch. |
+| Modified starch — LOCKED (Sept 15, 2026) | modified food starch, Organic Rice Starch, Non-GMO Maize Starch | Unspecified starch. Organic Rice Starch and Non-GMO Maize Starch sit on this same Limited unspecified/modified-starch row (Sept 16, 2026). Distinct from Cleared named corn starch / potato starch / pregelatinized starch. |
+| Organic Rice Starch; Non-GMO Maize Starch — LOCKED (Sept 16, 2026) | organic rice starch, non-GMO maize starch | Exact tokens. Same Limited unspecified/modified-starch row. Distinct from Cleared named corn starch / potato starch / pregelatinized starch. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
-| fruit puree / juice concentrate as gummy base — LOCKED (Sept 15, 2026) | fruit puree, juice concentrate (gummy base) | Limited. Gummy base, not the Cleared named juice-as-color row. |
+| fruit puree / juice concentrate as gummy base — LOCKED (Sept 15, 2026) | fruit puree, juice concentrate (gummy base), Almond Butter (gummy pieces), Rowanberry (gummy pieces) | Limited. Gummy base / gummy pieces, not the Cleared named juice-as-color row. Almond Butter / Rowanberry as gummy pieces sit here (Sept 16, 2026). |
+| Almond Butter / Rowanberry as gummy pieces — LOCKED (Sept 16, 2026) | Almond Butter, Rowanberry | Exact tokens as gummy pieces. Same Limited fruit-puree gummy-base row. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
 | Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
 | L-carvone — LOCKED (Sept 14, 2026) | carvone | Limited flavor isolate. |
 | Caprylyl glycol / hexanediol / sorbic acid — LOCKED (Sept 14, 2026) | caprylyl glycol, 1,2-hexanediol, sorbic acid | Limited preservative family. |
 | Maltodextrin (organic or non-organic) | organic maltodextrin | Glycemic; minor. Organic maltodextrin is the same Limited as non-organic. |
 | Polydextrose — **LOCKED (Sept 14, 2026 housekeeping)** | — | Limited (maltodextrin-like). Glycemic bulking fiber. |
+| Tapioca Dextrin; Tapioca Powder — LOCKED (Sept 16, 2026) | tapioca dextrin, tapioca powder | Limited (maltodextrin-like). Distinct from Cleared tapioca syrup / Organic Tapioca Fiber Powder / soluble tapioca fiber. |
+| Beet Sugar — LOCKED (Sept 16, 2026) | beet sugar | Sugar row. Limited. Not High. Distinct from Cleared cane sugar. |
 | Fructose as sweetener — **LOCKED (Sept 14, 2026 housekeeping)** | — | Treat with sugars. Not High. Not the parked HFCS case and not an Avoid sweetener. |
 | Caramel color, CONFIRMED Class I or II — **LOCKED (v1.6)** | plain caramel (E150a), caustic sulfite caramel (E150b) | No ammonia process, no 4-MEI. Still a color additive serving appearance only — doesn't clear to Clean by default; revisit case-by-case. Only applies when the label explicitly confirms Class I/II. |
 
@@ -245,11 +252,11 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 
 | Additive | Notes |
 |---|---|
-| Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. |
+| Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). |
 | Caramel sugar syrup (named syrup, lozenge sweetener) — LOCKED | Food sugar. NOT caramel color / E150d. |
-| Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. |
+| Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. Microcrystalline Cellulosse is a MCC typo alias (Sept 16, 2026) — both strings written; honest note “label typo.” |
 | Ethylcellulose — LOCKED (Sept 15, 2026) | Cellulose coating family. |
-| Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. |
+| Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. Sodium Stearyl Fumarate is Cleared-by-class with the stearate-family lubricants (Sept 16, 2026). |
 | Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
 | Oleic acid — LOCKED (Sept 15, 2026) | Fatty-acid / stearate cousin. |
 | Dibehenin (vegetable) — LOCKED (Sept 14, 2026) | Vegetable wax/lubricant; stearate / wax family. |
@@ -273,7 +280,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Potassium hydroxide — LOCKED (Sept 15, 2026) | pH adjuster (trace). Not a grade driver. |
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
-| Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. High Oleic Safflower Oil as fill/coating is its own Cleared fill row (Sept 16, 2026) — gummy print of safflower stays High. |
 | Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Avocado oil as cream fill — LOCKED (Sept 15, 2026) | Named single oil as cream vehicle. Cleared. Not gummy High. Tap form. Do not Caution when it is the cream vehicle. |
 | Urea (topical) — LOCKED (Sept 15, 2026) | Topical humectant. |
@@ -309,31 +316,35 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Citric acid, ascorbic acid, citrate salts (as fillers/buffers) | Citrate salts used as fillers/buffers are Cleared-by-class with citric acid (Sept 14, 2026 housekeeping). |
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Tartaric acid — LOCKED (Sept 15, 2026) | Organic acid with citric. |
+| Fumaric Acid; Adipic Acid; Butyric Acid; Sodium Acetate Anhydrous — LOCKED (Sept 16, 2026) | Exact tokens. Organic acids / salts with lactic / malic / citric. Cleared. |
 | Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. |
 | Triacetin — LOCKED (Sept 15, 2026) | Tablet/caplet coating plasticizer. Not a grade driver. |
-| Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. |
-| FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. |
+| Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. Chicory Root Fiber sits on this same inulin-family row (Sept 16, 2026). Both strings written. |
+| FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. Organic Tapioca Fiber Powder and soluble tapioca fiber are the same row (Sept 16, 2026). Both strings written. |
 | Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
 | Soluble corn fiber — LOCKED (Sept 15, 2026) | Fiber; ≠ maltodextrin. |
 | Lactose, gelatin, carnauba wax, beeswax, purified water | — |
 | Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
-| Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. |
+| Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. Also written Candellila Wax (typo alias; Sept 16, 2026). Both strings written. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Copovidone — **LOCKED (Sept 14, 2026 housekeeping)** | Povidone-family copolymer. Same Cleared class as povidone / crospovidone. |
 | Methylcellulose | Same family as Hypromellose; EFSA: no carcinogenicity, no ADI needed. |
 | Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
-| Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). |
-| Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). |
+| Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). |
+| Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). Locust Bean Gum sits on this same family (Sept 16, 2026). |
 | Gum ghatti — LOCKED (Sept 15, 2026) | Gum family with acacia/xanthan. |
-| Alginic acid — **LOCKED (Sept 14, 2026 housekeeping)** | Gum/fiber family. Cleared-by-class with the xanthan/guar/pectin gums. |
+| Alginic acid — **LOCKED (Sept 14, 2026 housekeeping)** | Gum/fiber family. Cleared-by-class with the xanthan/guar/pectin gums. Sodium Alginate sits on this same alginic family (Sept 16, 2026). Both strings written. |
 | Agar / agar-agar — LOCKED (Sept 14, 2026) | Seaweed gel; gum/fiber family with pectin. |
 | Coconut oil alone in gummies/chews — **LOCKED (Sept 14, 2026 housekeeping)** | NOT the seed/industrial-oil High rule. Already practice on coconut-only gummy/chew rows; this table says it. Unlabeled “vegetable oil” / palm / soybean / canola / sunflower in gummies stays High. |
 | Organic rice hull extract / rice concentrate / ground rice hulls — **LOCKED** | Plant-fiber flow agent. Distinct from rice flour. Distinct from silicon dioxide. The SiO₂ nanoparticle Caution cap does NOT apply. |
 | Organic rice bran extract — LOCKED (Sept 14, 2026) | Named rice-plant fiber used as tablet/capsule filler or flow agent. Same family as rice hull extract / rice concentrate / ground rice hulls. Distinct from silicon dioxide. Distinct from unspecified “rice extract” (Limited opacity row). |
 | Rice bran oil as softgel/capsule fill — LOCKED (Sept 14, 2026) | Carrier oil. NOT gummy High. NOT the same row as organic rice bran extract. Tap form sentence required. |
 | MCT oil labeled coconut (oral capsule/softgel/liquid supplement, not a cooking-oil bottle) — LOCKED | Notes lock. |
+| Organic Palm Oil as tablet / capsule coating or fill — LOCKED (Sept 16, 2026) | Exact token as tablet / capsule coating or fill. Cleared. NOT gummy High. Tap both sides: seed/industrial oils are flagged in gummies; in this coating/fill they are not that High rule. Gummy print of palm stays High. |
+| Medium Chain Glycerides (Modified Coconut, Palm Oil) as capsule/softgel/drop fill — LOCKED (Sept 16, 2026) | Exact token as capsule / softgel / drop fill. Cleared. NOT gummy High. Tap both sides. Distinct from Limited unlabeled MCT and from Cleared MCT oil labeled coconut. |
+| High Oleic Safflower Oil as fill/coating — LOCKED (Sept 16, 2026) | Exact token as fill / coating. Cleared. NOT gummy High. Tap both sides. Gummy print of safflower / sunflower / palm stays High. Distinct from safflower oil as cream/ointment base (already Cleared). |
 | Pea protein isolate — LOCKED (Sept 14, 2026) | Food protein excipient. Not a flag. |
 | Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
 | Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
@@ -344,13 +355,13 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Oat in oral syrup (named food soother) — LOCKED (Sept 15, 2026) | Named food soother. |
 | Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Rebaudioside M / Reb M is a named high-purity steviol glycoside sibling (Sept 15, 2026). Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). |
-| Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. |
+| Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. Exact string restamped Sept 16, 2026 (no grade change): Natural Color (Turmeric). Distinct from Caution oleoresin turmeric. |
 | Riboflavin used as color — LOCKED (Sept 15, 2026) | Named B2. |
 | Paprika extract / capsanthin as COLOR only — LOCKED (Sept 14, 2026) | Named spice color. Same posture as turmeric-as-color. Unnamed “color added” stays Caution. |
-| Black carrot / named fruit-or-vegetable juice concentrate as COLOR — LOCKED (Sept 14, 2026) | Named plant color. Same posture as paprika / turmeric-as-color. Unnamed “color added” stays Caution. |
+| Black carrot / named fruit-or-vegetable juice concentrate as COLOR — LOCKED (Sept 14, 2026) | Named plant color. Same posture as paprika / turmeric-as-color. Exact strings restamped Sept 16, 2026 (no grade change): Natural Color (Black Carrot); Black Carrot (For Color); Purple Carrot (Color); Red Radish (For Color); Beetroot Juice Powder (Color); Color (Organic Maqui Berry); Vegetable Juice (Color); Natural Color (Turmeric); Lycopene (color). Unnamed “color added” stays Caution. Unspecified Natural Colors is the Limited opacity row. |
 | Disodium EDTA, TRACE preservative/stabilizer use — **LOCKED (v1.6)** | Confirmed safe at the actual trace concentrations used (0.001%–0.25% w/v) in eye drops/topical formulations. The neurotoxicity/chelation-risk literature is specific to gram-level IV THERAPEUTIC chelation doses — a different dose and context, noted as a disclaimer only. |
 | Lecithin (canola, soy, or sunflower) — **LOCKED (v1.6; canola named Sept 14, 2026)** | EFSA 2017: no safety concern, no ADI needed. Canola / soy / sunflower lecithin are the same lock — canola is already covered; this line names it. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). Canola lecithin is Cleared-class lecithin, not the gummy seed-oil High rule. |
-| Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. |
+| Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. D-Alpha-Tocopherol as inactive sits on this same mixed-tocopherols row (Sept 16, 2026). Distinct from Caution tocopheryl acetate. |
 | Castor oil, polyoxyl castor oil derivatives (oral/topical use) — **LOCKED (v1.6)** | "Essentially non-toxic and non-irritant" across acute/chronic toxicity studies for oral/topical/general pharmaceutical use. The Cremophor hypersensitivity/anaphylaxis history is specific to IV/injectable use — out of scope for KYR, which does not grade injectable drugs. |
 | calcium gluconate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | gluconolactone — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -387,6 +398,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | glyceryl dibehenate — LOCKED (Sept 15, 2026) | Exact words. Cleared. Stearate / dibehenin neighborhood. Dibehenin already Cleared ≠ this string. |
 | glyceryl caprylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | glyceryl monostearate SE — LOCKED (Sept 15, 2026) | Exact words. Cleared. Alias of glyceryl stearate SE. Both strings written. |
+| Glycerol Monostearate / glyceryl monostearate / GMS — LOCKED (Sept 16, 2026) | Exact tokens. Both strings written. Cleared. Alias of each other. Distinct from glyceryl monostearate SE / glyceryl stearate SE. Distinct from Caution unspecified Mono- and Diglycerides. |
 | hydrogenated vegetable oil as cream fill — LOCKED (Sept 15, 2026) | Exact token as cream fill. Cleared. Tap fill ≠ gummy High. |
 | C12-15 alkyl benzoate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | ethylhexyl stearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -406,6 +418,16 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Cholecalciferol (vitamin D3 as inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Cleared. |
 | Coconut Alkanes — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
 | Pyridoxine HCl (vitamin B6 as inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Cleared. |
+| Organic Tapioca Fiber Powder / soluble tapioca fiber — LOCKED (Sept 16, 2026) | Exact tokens. Same row as soluble tapioca fiber. Both strings written. Fiber family with inulin / FOS. |
+| Locust Bean Gum — LOCKED (Sept 16, 2026) | Exact token. Xanthan / guar / pectin family. |
+| Sodium Alginate — LOCKED (Sept 16, 2026) | Exact token. Alginic family. Both strings written with alginic acid. |
+| Organic Cassava Syrup — LOCKED (Sept 16, 2026) | Exact token. Food-syrup sibling of rice syrup / tapioca syrup. |
+| Chicory Root Fiber — LOCKED (Sept 16, 2026) | Exact token. Inulin family. Both strings written. |
+| Sodium Stearyl Fumarate — LOCKED (Sept 16, 2026) | Exact token. Stearate-family lubricant. |
+| Microcrystalline Cellulosse — LOCKED (Sept 16, 2026) | MCC typo alias. Exact string. Honest note “label typo.” |
+| D-Alpha-Tocopherol as inactive — LOCKED (Sept 16, 2026) | Exact token as inactive. Mixed-tocopherols row. Distinct from Caution tocopheryl acetate. |
+| Lycopene (color) — LOCKED (Sept 16, 2026) | Exact token as color. Named plant-color row. |
+| Natural Color (Black Carrot); Black Carrot (For Color); Purple Carrot (Color); Red Radish (For Color); Beetroot Juice Powder (Color); Color (Organic Maqui Berry); Vegetable Juice (Color); Natural Color (Turmeric) — LOCKED (Sept 16, 2026 restamp) | Exact named plant-color strings. Same Cleared named-plant-color row. No grade change. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -416,8 +438,10 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Sulfites (sodium metabisulfite, sodium bisulfite, potassium metabisulfite, E221–228) | FDA-mandated warning-label precedent on approved drugs (anaphylaxis/asthma risk); FDA banned use on raw produce (1986); EFSA exposure-margin concern (2022). No IARC/NTP cancer classification — harm is hypersensitivity, not carcinogenicity. | Note: can trigger serious reactions in sulfite-sensitive people and some asthmatics — check the label. If a sulfite-free Good option exists in the same category, prefer it — does not change the ingredient's own grade. |
 | Sodium lauryl sulfate (SLS) | Standard positive-control irritant in dermatology studies; documented mucosal desquamation, oral ulcer aggravation, skin irritation. No cancer/genotoxic/endocrine mechanism — American Cancer Society does not list it as a carcinogen. | Note: can irritate skin or the mouth and can aggravate canker sores in sensitive people. If SLS is only present for foam/texture and an SLS-free Good option exists in the same category and age range, prefer it. Do not raise to Avoid. |
 | Fragrance / parfum (topical OTC only — rubs, gels, creams) | Undisclosed mixture (legally can hide dozens to hundreds of compounds) plus documented contact-allergy/sensitization risk (1–9% of population); EU mandatory fragrance-allergen disclosure list expanded from 26 to 82 substances (2026). | Note: can irritate skin or trigger allergy in sensitive people — check for named fragrance allergens if you have known sensitivities. Prefer a fragrance-free Good option in the same category and age range if one exists. Do not raise to Avoid. |
-| Annatto (bixin/norbixin, E160b) | Documented allergenic potential — a foundational study found 26% of chronic urticaria patients reacted, a higher rate than several synthetic dyes tested in the same study. EFSA flagged the norbixin ADI can be exceeded in high-consumer/child exposure scenarios. | Standard alternatives rule (category/age/audience match). |
-| Beta-carotene (as a color additive, not the vitamin) | A large French cohort study linked higher intake of natural color additives including beta-carotene to increased cancer/Type 2 diabetes rates — correlational, not proven causal, no formal IARC/NTP classification. Weak-but-real signal; do not equate with sucralose/ace-K's evidence type — this is a distinct epidemiological-correlation basis, not a genotoxicity signal. | Standard alternatives rule. |
+| Annatto (bixin/norbixin, E160b) | Documented allergenic potential — a foundational study found 26% of chronic urticaria patients reacted, a higher rate than several synthetic dyes tested in the same study. EFSA flagged the norbixin ADI can be exceeded in high-consumer/child exposure scenarios. Exact string restamped Sept 16, 2026 (no grade change): Organic Annatto Extract (Color). | Standard alternatives rule (category/age/audience match). |
+| Beta-carotene (as a color additive, not the vitamin) | A large French cohort study linked higher intake of natural color additives including beta-carotene to increased cancer/Type 2 diabetes rates — correlational, not proven causal, no formal IARC/NTP classification. Weak-but-real signal; do not equate with sucralose/ace-K's evidence type — this is a distinct epidemiological-correlation basis, not a genotoxicity signal. Exact string restamped Sept 16, 2026 (no grade change): Beta Carotene (For Color). | Standard alternatives rule. |
+| Organic Annatto Extract (Color) — LOCKED (Sept 16, 2026 restamp) | Exact string. Same Caution as annatto. No grade change. | Standard alternatives rule. Not Avoid. |
+| Beta Carotene (For Color) — LOCKED (Sept 16, 2026 restamp) | Exact string. Same Caution as beta-carotene-as-color. No grade change. | Standard alternatives rule. Not Avoid. |
 | Benzalkonium chloride (BKC) | Clear ciliotoxicity in vitro (multiple studies); conflicting in vivo/clinical results — some studies find no measurable harm to nasal mucociliary clearance. Contested evidence is enough for Caution, not Avoid. | Standard alternatives rule. |
 | Benzyl alcohol — GENERAL ORAL OTC USE (older children/adults) | See §0 for the full population-split rule. At normal label doses in general oral OTC use, doses are far below the documented "gasping syndrome" threshold. | Note the gasping-syndrome history and that risk is dose- and age-specific. NEVER recommend a benzyl-alcohol product as a cleaner alternative for a 2+ or infant-labeled product, regardless of the swap's own age range. |
 | Cochineal / carmine / carminic acid — **LOCKED (v1.6)** | Insect-derived red color. Can cause allergic reactions in sensitive people. | If a dye-free/carmine-free Good option exists in the same use category and age range, prefer it in alternatives. Not Avoid. |
@@ -425,7 +449,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Organic cultured dextrose — LOCKED (Sept 14, 2026) | Caution. Ferment preservative system, not the same as dextrose/cane sugar sweetener. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lactobacillus ferment (topical) — LOCKED (Sept 14, 2026) | Caution ferment system. | Standard alternatives rule. Not Avoid. |
 | Whole-leaf / crude stevia — **LOCKED (Sept 14, 2026 housekeeping)** | Do not auto-Clean. Different case from high-purity steviol glycosides (Cleared). Already stated on the Cleared row; this is the Caution row so it is not a missing-row. | Standard alternatives rule. Not Avoid. |
-| Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
+| Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Unnamed coating blend / bare Enteric Coating sit on this same Caution row (Sept 16, 2026). Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
+| Unnamed coating blend / Enteric Coating (bare) — LOCKED (Sept 16, 2026) | Exact tokens. Same Caution as unnamed delayed-release / enteric coat family. Already locked; restamped. | Standard alternatives rule. Not Avoid. |
 | Phenoxyethanol (topical preservative) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution. Topical preservative. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lanolin (topical) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution hypersensitivity pattern (wool-alcohol sensitivity), not Avoid. | Standard alternatives rule. Prefer a lanolin-free Good option in the same category if one exists. Do not raise to Avoid. |
 | acetylated lanolin / hydroxylated lanolin — LOCKED (Sept 15, 2026) | Exact tokens. Same Caution as lanolin. Do not Clear. | Standard alternatives rule. Prefer a lanolin-free Good option in the same category if one exists. Do not raise to Avoid. |
@@ -552,6 +577,11 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Glycosaminoglycans — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared glucosamine / chondroitin as labeled inactive. | Standard alternatives rule. Not Avoid. |
 | silicon — LOCKED (Sept 15, 2026) | Exact word when the label prints “silicon,” not silica. Do not alias silicon dioxide / silica / hydrated silica. | Standard alternatives rule. Not Avoid. |
 | Tea Tree Leaf Oil / Melaleuca Alternifolia Leaf Oil — LOCKED (Sept 15, 2026) | Scent/EO rule. Exact tokens. Both strings written. | Standard alternatives rule. Not Avoid. |
+| Rice Powder — LOCKED (Sept 16, 2026) | Exact token. Distinct from Caution rice flour and from Caution organic rice meal. Not Cleared rice hull / rice bran. | Standard alternatives rule. Not Avoid. |
+| Mono- and Diglycerides (unspecified blend) — LOCKED (Sept 16, 2026) | Unspecified blend. Not named GMS / glyceryl monostearate / Glycerol Monostearate (Cleared). | Standard alternatives rule. Not Avoid. |
+| Rosemary Extract (A Natural Preservative) oral — LOCKED (Sept 16, 2026) | Exact token as oral inactive preservative. | Standard alternatives rule. Not Avoid. |
+| Pomegranate Powder / Instant Coffee Powder as inactive — LOCKED (Sept 16, 2026) | Exact tokens as inactive. Opacity. | Standard alternatives rule. Not Avoid. |
+| Trace Minerals (From Seawater) as an inactive line — LOCKED (Sept 16, 2026) | Vague blend as an inactive line. Distinct from minerals under the Supplement Facts bar (actives). | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -566,7 +596,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 |---|---|
 | Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Still parked. DMDM hydantoin / diazolidinyl urea moved to Caution (formaldehyde-donor) for in-scope topical OTC — not Avoid unless founder later bumps. |
 | Backing / adhesive plaster / film / baking cloth | Patch/device materials. Not gradeable inactives. Do not block a row on those words. |
-| Unlabeled “Vegetable Capsule” | Capsule shell not named. Do not invent a grade. Not a §5 inactive token. |
+| Unlabeled “Vegetable Capsule” | Capsule shell not named. Do not invent a grade. Not a §5 inactive token. Stays ungraded (Sept 16, 2026 restamp). |
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |

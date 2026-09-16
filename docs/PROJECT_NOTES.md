@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Sprouts stash ~55; 187 killed; Thrive is next)
+Last Updated: September 16, 2026 (Thrive leftover §5 stamps; mineral drops IN; Thrive still live next)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -85,11 +85,12 @@ FOUNDER CALLS — MAJORITY RULE
 
 BRAND-CLOSE WORKFLOW
 - Finish the brand you started. Do not hop brands.
+- No SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls a Sprouts-style pile.
 - Bot scans the WHOLE in-scope US line first. Questions come here BEFORE the write. One merge should close the brand.
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
 - Missing panel: advisor names the next SKU; Brandon hunts one-by-one (store site → DailyMed → NIH DSLD → founder photo). Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
-- After a brand closes, log date/time on the roster.
+- After a brand closes, log date/time on the roster. After Thrive write lands, add roster line + date/time. Not before.
 
 Catalog status (do not invent “unsigned grades”)
 - lib/rating-drafts/ is large (aisle batches through Amazon Basic Care / PR 32 and prior). Unverified as PRODUCT FILES (barcode/photo/exact-SKU check), not “grades never decided.”
@@ -153,7 +154,9 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- Live catalog job = Thrive hole punch. Sprouts house is stashed (~55 + 3 refused). Do not reopen 187.
+- Live catalog job = Thrive hole punch. Sprouts house is stashed (~55 + 3 refused). Do not catalog Sprouts. Do not reopen 187.
+- After Thrive write lands, add roster line + date/time. Not before.
+- Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 PR-only until founder OK.
 - Before proposing a brand, read lib/rating-drafts/ filenames. batch37–49 already exist.
@@ -209,8 +212,9 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
 SCOPE PARKS
-- Park for good (food/drink-shaped): protein powder, protein bars, meal-replacement shakes, Pedialyte-class drinks (Pedialyte, Liquid I.V., Gatorade-style, freezer pops).
-- Exception drinks/powders that STAY in scope later: concentrated mineral/ionic drops (Supplement Facts, dropper — not a chug bottle). Lifter supplement powders (creatine, pre-workout, aminos) — in scope, low priority. Not whey/meal shakes.
+- Park for good (food/drink-shaped): protein powder, protein bars, meal-replacement shakes, Pedialyte-class drinks (Pedialyte, Liquid I.V., Gatorade-style, freezer pops). Pedialyte-class chug drinks stay OUT.
+- Mineral / ionic drops with Supplement Facts + dropper = IN (medicine-aisle supplement). Not a Pedialyte-class chug drink.
+- Exception drinks/powders that STAY in scope: lifter supplement powders (creatine, pre-workout, aminos) — in scope, low priority. Not whey/meal shakes.
 - Protein powder remains schema-only / deprioritized as already noted. Do not night-photo a protein aisle.
 
 NIGHT PHOTO AISLE ORDER
@@ -234,7 +238,7 @@ CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: Sprouts/natural-grocer brands missing from the app. No new batch tonight.
+- Next catalog day: Thrive hole punch is the live KYR3 job. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -254,17 +258,18 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - Finish the brand you started. Do not hop brands.
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
 - New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
-- SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file.
+- SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
 - Missing panel hunt: store site → DailyMed → NIH DSLD → founder photo. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
-- After a brand closes, log date/time on the roster.
+- No SKU skip. Missing OI = hunt then write or refuse.
+- After a brand closes, log date/time on the roster. After Thrive write lands, add roster line + date/time. Not before.
 
 Scope:
-- In: US OTC / vitamins / supplements, including supplement-aisle powders (example: MegaFood Daily Turmeric Nutrient Booster Powder).
-- Out: food, pet, cosmetics, protein-aisle protein powder / bars / meal shakes, Pedialyte-class drinks, mineral drops, Canada/EU-only, discontinued US SKUs (list “looks discontinued,” don’t hide other brands).
+- In: US OTC / vitamins / supplements, including supplement-aisle powders (example: MegaFood Daily Turmeric Nutrient Booster Powder) and mineral / ionic drops with Supplement Facts + dropper (medicine-aisle supplement).
+- Out: food, pet, cosmetics, protein-aisle protein powder / bars / meal shakes, Pedialyte-class drinks (chug bottles stay OUT), Canada/EU-only, discontinued US SKUs (list “looks discontinued,” don’t hide other brands).
 - Same product at two stores = one row. Match brand + name + form + strength. Pack sizes share formulaId and one grade.
 
 Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock):
-- Avoid in gummies / soft chews only (soybean, canola, palm, sunflower, “vegetable oil”).
+- Avoid in gummies / soft chews only (soybean, canola, palm, safflower, sunflower, “vegetable oil”). Tablet / capsule / softgel / drop fill of Organic Palm Oil, High Oleic Safflower Oil, or Medium Chain Glycerides is NOT that High rule (tap both sides).
 - Capsule / softgel oil fill is NOT that High rule.
 - Liquid-drop oil carriers use the same non-gummy rule as capsule/softgel fill. Tap text required (same both-sides sentence).
 - Cream / topical vegetable oil uses the same non-gummy rule as capsule/softgel/liquid-drop fill. Tap: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
@@ -530,7 +535,7 @@ THEN
 3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
 5) KYR5 barcode backfill (PR-only until founder OK)
-Do NOT mark complete: Thrive full list, Amazon US full list, store generics. Sprouts house is STASHED (not the live job). MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: Thrive full list, Amazon US full list, store generics. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. After Thrive write lands, add roster line + date/time. Not before. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
