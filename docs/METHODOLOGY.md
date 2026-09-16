@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Amazon P&F leftover exact tokens):** Cleared — gamma-cyclodextrin; succinic acid; polyvinyl alcohol (oral coating); shellac; emu oil as topical fill (tap ≠ gummy High). Caution — rice flour; ferric oxide red; ferric oxide yellow; iron oxides; iron oxide red; polyvinyl acetate phthalate; ammonium glycyrrhizin. Exact alias: 3-(2-ethylhexyloxy)propane-1,2-diol = same Caution as ethylhexylglycerin (both strings written).
+
 **Changed Sept 15, 2026 (Asutra Melt Pain Away exact tokens):** Cleared — sodium lactate; glyceryl stearate citrate; cetyl palmitate (already those exact words on §5); polyglyceryl-3 diisostearate; calcium chloride; sodium hydroxide (pH adjuster) (already those exact words on §5); arachidyl alcohol; behenyl alcohol; arachidyl glucoside (exact words, not a cousin alias of the fatty-alcohol family row); undecane; tridecane (same job as C15-19 alkane — cream emollient alkanes). Caution — tocopheryl acetate (distinct from Cleared mixed tocopherols); pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate; Cymbopogon flexuosus oil / Cymbopogon citratus oil (lemongrass scent; extract/scent rule). Do not alias cousins.
 
 **Changed Sept 15, 2026 (Thrive P&F leftover tokens):** Cleared — chlorophyll (named pigment ≠ chlorophyllin); leucine; cetearyl glucoside. Limited — fruit puree / juice concentrate as gummy base. Caution — organic rice meal.
@@ -365,6 +367,11 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | arachidyl glucoside — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. Distinct from cetearyl glucoside. |
 | undecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
 | tridecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
+| gamma-cyclodextrin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| succinic acid — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| polyvinyl alcohol (oral coating) — LOCKED (Sept 15, 2026) | Exact token as oral coating. Cleared. Distinct from PVA (topical film). |
+| shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| emu oil as topical fill — LOCKED (Sept 15, 2026) | Named single oil as topical fill. Cleared. Tap fill ≠ gummy High. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -416,7 +423,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | PPG-5-ceteth-20 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | PEG-15 cocamine — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Nonoxynol-30 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
-| Ethylhexylglycerin — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Ethylhexylglycerin — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Also written as 3-(2-ethylhexyloxy)propane-1,2-diol. | Standard alternatives rule. Not Avoid. |
+| 3-(2-ethylhexyloxy)propane-1,2-diol / ethylhexylglycerin — LOCKED (Sept 15, 2026) | Exact alias. Same Caution as ethylhexylglycerin. Both strings written. | Standard alternatives rule. Not Avoid. |
 | Hydroxyacetophenone — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | TEA / trolamine as inactive — LOCKED (Sept 15, 2026) | Not the salicylate active. | Standard alternatives rule. Not Avoid. |
 | Farnesol — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
@@ -486,6 +494,13 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | tocopheryl acetate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared mixed tocopherols. | Standard alternatives rule. Not Avoid. |
 | pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | Cymbopogon flexuosus oil / Cymbopogon citratus oil — LOCKED (Sept 15, 2026) | Lemongrass scent. Exact tokens. Botanical oil used as scent — extract/scent rule. | Standard alternatives rule. Not Avoid. |
+| rice flour — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared rice-hull / rice-bran / rice protein and from Caution organic rice meal. | Standard alternatives rule. Not Avoid. |
+| ferric oxide red — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
+| ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
+| iron oxides — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
+| iron oxide red — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric oxide red and from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
+| polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| ammonium glycyrrhizin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared licorice / Glycyrrhiza extract. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
