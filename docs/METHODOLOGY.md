@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Thrive P&F leftover tokens):** Cleared — chlorophyll (named pigment ≠ chlorophyllin); leucine; cetearyl glucoside. Limited — fruit puree / juice concentrate as gummy base. Caution — organic rice meal.
+
 **Changed Sept 15, 2026 (EDTA / calcined kaolin / ammonium hydroxide):** Caution exact tokens — Tetrasodium EDTA; calcined kaolin; ammonium hydroxide. Kaolin already Cleared ≠ calcined kaolin. Strong ammonia ≠ ammonium hydroxide — do not alias; these are exact words.
 
 **Changed Sept 15, 2026 (topical oil base vs scent-extract form rule):** Named single oil/butter as the BASE or FILL = Cleared. Tap fill ≠ gummy High. Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
@@ -213,6 +215,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Modified starch — LOCKED (Sept 15, 2026) | modified food starch | Unspecified starch. |
 | Unspecified “rice extract” — LOCKED (Sept 14, 2026) | “rice extract” with no hull / bran / concentrate named | Caution/Limited opacity. Tap: label didn’t name hull, bran, or concentrate. Distinct from the Cleared rice-hull / rice-bran family and from rice protein / rice syrup / brown rice (food-state Cleared). |
 | Rice (unspecified) — LOCKED (Sept 14, 2026) | “rice” with no form named | Same opacity as unspecified rice extract. Tap: label didn’t name hull, bran, flour, protein, concentrate, or syrup. |
+| fruit puree / juice concentrate as gummy base — LOCKED (Sept 15, 2026) | fruit puree, juice concentrate (gummy base) | Limited. Gummy base, not the Cleared named juice-as-color row. |
 | Carrageenan | E407 | Contested GI-inflammation debate. |
 | Artificial flavors | artificial flavoring | Synthetic; little documented hazard. |
 | L-carvone — LOCKED (Sept 14, 2026) | carvone | Limited flavor isolate. |
@@ -348,6 +351,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | lauryl laurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | bisabolol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | hydroxyethylcellulose / hydroxyethyl cellulose — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. Cleared. Not parked. |
+| chlorophyll (named pigment) — LOCKED (Sept 15, 2026) | Named pigment. Cleared. Distinct from Caution sodium copper chlorophyllin. |
+| leucine — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| cetearyl glucoside — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from cetearyl alcohol and from arachidyl glucoside. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -465,6 +471,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Tetrasodium EDTA — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared disodium EDTA (trace). | Standard alternatives rule. Not Avoid. |
 | calcined kaolin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared kaolin. | Standard alternatives rule. Not Avoid. |
 | ammonium hydroxide — LOCKED (Sept 15, 2026) | Exact words. Distinct from strong ammonia solution. Do not alias. | Standard alternatives rule. Not Avoid. |
+| organic rice meal — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared rice-hull / rice-bran / rice protein and from Limited unspecified rice extract. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
