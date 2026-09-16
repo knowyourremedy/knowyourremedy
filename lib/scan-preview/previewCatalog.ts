@@ -55,6 +55,7 @@ import {
   BATCH52_THRIVE_PF_HOLES,
   BATCH53_ASUTRA_MELT_PAIN_AWAY,
   BATCH54_AMAZON_PF_HOLES,
+  BATCH55_PF_REFUSED_UNLOCK,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -130,6 +131,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH52_THRIVE_PF_HOLES,
   ...BATCH53_ASUTRA_MELT_PAIN_AWAY,
   ...BATCH54_AMAZON_PF_HOLES,
+  ...BATCH55_PF_REFUSED_UNLOCK,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -833,6 +835,12 @@ assertLetterOnly('goodsense-ibuprofen-liquid-gels', 'GoodSense');
 assertLetterOnly('midol-complete', 'Midol');
 assertLetterOnly('amazon-basics-lidocaine-4-patch', 'Amazon Basics');
 assertLetterOnly('welmate-lidocaine-4-patch-ethylhexyl', 'WELMATE');
+assertLetterOnly('amazon-basic-care-ibuprofen-iron-oxide-yellow', 'Amazon Basic Care');
+assertLetterOnly('amazon-basics-ibuprofen-iron-oxide-yellow', 'Amazon Basics');
+assertLetterOnly('qunol-extra-strength-turmeric-1500-oleoresin', 'Qunol');
+assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
+assertLetterOnly('aplus-health-dual-action', 'A+Health');
+assertLetterOnly('qunol-zero-sugar-turmeric-gummies', 'Qunol');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
