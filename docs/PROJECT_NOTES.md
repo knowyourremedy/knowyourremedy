@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (KYR6 Elements / Basics carousel written — batch63)
+Last Updated: September 16, 2026 (Amazon house punch DONE — batch63 35; store generics next)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -154,10 +154,9 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: Amazon house punch = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only. Thrive no_OI carton hunt optional. Then store generics. Then KYR5 PR-only.
-- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Do not re-catalog those.
-- Amazon house pinned-OI batch61 (18) written. Mama Bear founder-carousel four already on main (batch62 / PR #119). KYR6 Elements / Basics carousel written (batch63). Other missing-OI house SKUs still open. Do not mark Amazon US full list complete.
-- Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
+- LIVE NOW: (1) Store generics (2) Amazon 3P brands not on main. Then KYR5 barcodes PR-only.
+- Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
+- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI STASHED.
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
@@ -246,7 +245,7 @@ CATALOG STRATEGY
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: Thrive no_OI carton hunt (optional), then Amazon US brands not on main, then store generics. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: store generics, then Amazon 3P brands not on main. Amazon house punch DONE this pass. Thrive no_OI STASHED. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -546,22 +545,22 @@ Completed (main, unverified drafts unless noted):
   Oil-bottle hunt unchanged (never graded): Thrive MCT / C8 MCT, BUBS MCT creamer, Carlson CLO, Barlean’s flax, Manitoba hemp, Heritage castor, Herb Pharm Kids Mullein Garlic Oil.
 - Amazon house pinned-OI wave — Sept 16, 2026 — batch61-amazon-house-pinned.ts. Search 18 new (Clean 1 / Caution 2 / Avoid 15). NEW 18 / REUSE 0. DailyMed/DSLD/harvest only. Missing-OI SKUs not written. Do not reopen batch30 / 54–58 / 59–60. Amazon US full list still not complete.
 - Mama Bear founder-carousel four — Sept 16, 2026 — batch62-mama-bear-carousel.ts / PR #119. Search 4 new (Clean 0 / Caution 1 / Avoid 3). Already on main. Do not duplicate.
-- KYR6 Elements / Basics founder-carousel + DailyMed OTC — Sept 16, 2026 — batch63-kyr6-elements-basics.ts. Search 35 new (Clean 4 / Caution 21 / Avoid 10). NEW 35 / REUSE 0 / SKIPPED-DEAD 8 (PROJECT_NOTES off-house list). Do not reopen batch61 / batch62.
+- Amazon house founder-carousel closeout — Sept 16, 2026 — PR #120 / 17ae9f0 — batch63-kyr6-elements-basics.ts (only filename on disk after 118; do not reopen 61/62). Search 35 new (Clean 4 / Caution 21 / Avoid 10). 0 reuse. 8 skipped-dead. Mama Bear four + PR #118’s 18 stay closed.
+  Rebrands: Revly → Elements. Solimo → Basics. Many Elements vitamins → Basics (previously Elements). One row unless form/OI differs.
+  Skipped-dead (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron; Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder; Elements Glucosamine; Basics Saline Nasal. Mg lemon + Glucosamine live as Micro Ingredients = 3P later.
+  bisabolol stays Cleared on MAIN. Advanced Healing Caution is lanolin alcohol.
+  Amazon house punch DONE this pass. 3P Amazon brands later. Sprouts house STASHED. Thrive no_OI STASHED.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
-Amazon house punch live = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only.
-Rebrands (one row unless OI/form changed): Revly → Elements; Solimo → Basics; many Elements vitamins → Basics (previously Elements). Former Elements now Micro Ingredients = 3P, out of house punch.
-Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
-Founder carousel hunt Sept 16 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
-1) Thrive no_OI carton hunt (founder / stash) — optional
-2) Amazon US brands not on main
-3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
+1) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
+2) Amazon 3P brands not on main
 THEN
-4) KYR5 barcode backfill (PR-only until founder OK)
-5) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks) — not live
-Do NOT mark complete: Thrive no_OI leftovers, Amazon US full list, store generics. Thrive punch 241 + refused unlock 36 are DONE — do not re-catalog those. Amazon house pinned-OI batch61 (18) is written. Mama Bear carousel four (batch62) is written. KYR6 Elements / Basics carousel (batch63 — 35) is written. Other missing-OI house SKUs remain. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+3) KYR5 barcode backfill (PR-only until founder OK)
+4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks) — not live
+5) Thrive no_OI carton hunt — STASHED (not live)
+Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 are DONE. Thrive no_OI STASHED. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
