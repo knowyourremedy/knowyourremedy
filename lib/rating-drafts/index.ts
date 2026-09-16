@@ -58,3 +58,4 @@ export { BATCH57_PF_REFUSED_UNLOCK } from './batch57-pf-refused-unlock';
 export { BATCH58_PENETREX_CREAM } from './batch58-penetrex-cream';
 export { BATCH59_THRIVE_HOLES } from './batch59-thrive-holes';
 export { BATCH60_THRIVE_REFUSED_UNLOCK } from './batch60-thrive-refused-unlock';
+export { BATCH61_AMAZON_HOUSE_PINNED } from './batch61-amazon-house-pinned';
