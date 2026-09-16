@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (roster 37–40 on main; stale queue killed)
+Last Updated: September 16, 2026 (Sprouts stash ~55; 187 killed; Thrive is next)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -148,13 +148,14 @@ Parked
 - User photo upload + review queue
 - Accounts / cloud sync of Cabinet
 - App icon + trademark: see APP ICON + TRADEMARK (parked Sept 15 night). Do not file from a bot chat.
-- Advisor-chat handoff letter lives with Brandon + this file; new advisor reads GitHub MAIN notes + methodology, not a Project pin. Sprouts leftover panel list may still live in the long advisor thread until the ~187 names are copied here.
+- Advisor-chat handoff letter lives with Brandon + this file; new advisor reads GitHub MAIN notes + methodology, not a Project pin. Sprouts stash is founder walk list ≈55 plus 3 refused names in batch36 header. Full name list may still sit in the old advisor thread until copied.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- See NEXT QUEUE on the brand roster. Finish or stash Sprouts house leftovers first (founder call — ~25+ panel rule). Do not guess OI.
-- KYR4: photos only on paste. Do not restart 12:30.
-- KYR5: PR-only until founder OK.
+- Live catalog job = Thrive hole punch. Sprouts house is stashed (~55 + 3 refused). Do not reopen 187.
+- KYR4 photos on paste only. Cron OFF.
+- KYR5 PR-only until founder OK.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–49 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -180,7 +181,7 @@ TRADEMARK / NAME (direction only — not legal advice, not a filing)
 - Do not file from a bot. Do not publish a specimen strategy as if it were filed. Park until Brandon books the intro or files.
 - Canada/EU marks: not now. US app first.
 
-Advisor handoff: new advisor reads GitHub MAIN notes + methodology, not a Project pin. Sprouts leftover panel list may still live in the long advisor thread until the ~187 names are copied here.
+Advisor handoff: new advisor reads GitHub MAIN notes + methodology, not a Project pin. Sprouts stash is founder walk list ≈55 plus 3 refused names in batch36 header. Full name list may still sit in the old advisor thread until copied.
 
 Brandon standards (handoff)
 - Don’t half-dress the catalog or UI to hit a launch date.
@@ -499,7 +500,13 @@ Completed (main, unverified drafts unless noted):
 - Hyland’s — Sept 14 evening — Search 53 after PR #73; Soothing Drops Day+Night were the last blocked pair (write sent). Confirm leftovers none when that PR lands.
 - Pedialyte hidden earlier Sept 14.
 - Boiron — Sept 15, 2026 — US in-scope catalog write on main (pellets / liquids / topicals / gemmo that mapped to §5). batch34-boiron.ts TALLY: Search 436 (Clean 402 / Caution 34 / Avoid 0). Dead lemon Arnicare Leg Cramps SPL = discontinued comment only. Pain & Fever photo test PR #107 — 20 official BoironUSA pellet cartons; those letters cleared. Leftovers = only what that write still listed as refused / no OI (batch file: STILL BLOCKED none on the follow-up).
-- Sprouts store-brand — still OPEN. Sept 15, 2026 — batch35 Search 44 new (Clean 24 / Caution 18 / Avoid 2). Reuse two prenatals in batch16 (Caution, still no OI). batch36 leftovers still named unread. ~187 house panels still blocked. Organic MCT Oil = oil hunt list, not Search. Do not mark complete.
+- Sprouts store-brand — STASHED Sept 16, 2026 (founder call — walk not done). NOT the live catalog job.
+  Written on main: batch35 = 44 (Clean 24 / Caution 18 / Avoid 2) + batch36 = 70 (Clean 34 / Caution 35 / Avoid 1). Reuse two prenatals in batch16 (still no OI): sprouts-organic-prenatal-once-daily, sprouts-organic-prenatal-whole-food.
+  First unread harvest was rounded to a stale leftover count and never subtracted later writes — do not reuse that old harvest number.
+  batch36 REFUSED (no OI, do not invent): (1) Sprouts Organic Once Daily Men's Multivitamin, (2) Sprouts Chlorophyll Glycerite, (3) Sprouts UT Support liquid.
+  Still blocked / stashed: founder walk list ≈ 55 unread house panels + the 3 batch36 refused names above. Do not guess OI. Do not send KYR3 at this pile until Brandon un-stashes it.
+  Organic MCT Oil bottle = oil hunt list, not Search.
+  Do NOT write the old unread-harvest leftover count again.
 - MediNatura + Boericke & Tafel — Sept 15, 2026 — batch37-medinatura-bt.ts — 39 rows (Clean 1 / Caution 38 / Avoid 0). Traumeel Tablets independently Clean. Traumeel ≠ T-Relief. List 4 PR-comment only. REFUSED OI: none. DONE for that write. Do not re-catalog.
 - Nature’s Way — Sept 15, 2026 — batch38-natures-way.ts — 262 rows (Clean 126 / Caution 130 / Avoid 6). Reuse Umcka + Sambucus kids gummies + all B&T twins from batch37. naturesway.com OI pass. DONE for that write. Do not re-catalog.
 - Tylenol / Advil / Aleve holes — Sept 15, 2026 — batch39-tylenol-advil-aleve-holes.ts — 20 NEW (Clean 0 / Caution 6 / Avoid 14) + reuse 28 ids from batches 1/2/7. Pain & Fever / Sleep holes only. List 4 (cold/flu, kits, CA/EU, topicals already in 41+) = not Search rows. DONE for that holes pass. Do not start a fresh full-line Tylenol catalog.
@@ -515,13 +522,14 @@ Completed (main, unverified drafts unless noted):
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
-NEXT QUEUE
-1) Sprouts house leftovers — finish or stash (founder call)
-2) Thrive brand-list hole punch
-3) Amazon US brands not on main
-4) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
+LIVE NOW
+1) Thrive Market brand-list hole punch (in-scope US OTC / vit / supp only). Reuse anything already on main (MegaFood, Genexa, Hyland’s, Boiron, Nature’s Way, MediNatura/B&T, etc.). Same product = one row.
+THEN
+2) Amazon US brands not on main
+3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
+4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
 5) KYR5 barcode backfill (PR-only until founder OK)
-Do NOT mark complete: Sprouts house, Thrive full list, Amazon US full list, store generics. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: Thrive full list, Amazon US full list, store generics. Sprouts house is STASHED (not the live job). MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
