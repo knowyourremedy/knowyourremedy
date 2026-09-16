@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (topical oil base vs scent-extract form rule):** Named single oil/butter as the BASE or FILL = Cleared. Tap fill ≠ gummy High. Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
+
 **Changed Sept 15, 2026 (Biofreeze / Bengay / Capzasin / Mineral Ice / Absorbine exact tokens):** Pain rubs stay Pain & Fever. Backing / adhesive plaster / film / baking cloth = not gradeable inactives (do not block a row). Cleared: calcium gluconate; gluconolactone; sodium stearoyl lactylate; grape seed oil as cream fill (not gummy High; tap); arachidic acid; lauric acid; linoleic acid; linolenic acid; myristic acid; palmitic acid; hydrogenated castor oil; glyceryl stearate SE; glyceryl distearate; magnesium sulfate; lysine; copper sulfate / cupric sulfate; manganese chloride; aluminum chloride; magnesium chloride; zinc chloride; lauryl laurate; bisabolol; hydroxyethylcellulose / hydroxyethyl cellulose. Caution: topical botanical extracts/oils used as inactives (arnica; burdock; boswellia resin extract; calendula extract or flower oil; camellia leaf oil/extract; ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint bare); camphor / dl-camphor as inactive; herbal extract (unspecified); IPBC / iodopropynyl butylcarbamate; PEG-4 laurate; PEG-12 dimethicone; bis-PEG-10 dimethicone; PPG-24-glycereth-24; hydroxyethyl cetyldimonium phosphate; menthyl ethylamido oxalate; tetrasodium glutamate diacetate; lauralkonium chloride; nonoxynol-10; isoceteth-20; ceteth-10 phosphate; sodium polyacrylate starch; benzyl alcohol as topical inactive; thymol; polyacrylate crosspolymer-6; phenethyl alcohol; acetone; chloroxylenol; iodine; potassium iodide; butane (spray propellant); hydrated silica (topical).
 
 **Changed Sept 15, 2026 (last Salonpas / Tiger Balm exact tokens):** Caution exact INCI — ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis leaf oil); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin. Unspecified polysorbate aliases the existing P80/P20/P60 Moderate row — do not invent a new class.
@@ -101,7 +103,7 @@ Every inactive ingredient sorts into one of four risk levels. Internally it's a 
 
 **Dose / frequency sensitivity.** Cumulative harms (build with total exposure) can justify Caution over Avoid with infrequent use. Concurrent/acute harms (e.g., drug interactions) are **not** softened by infrequency.
 
-**Context scoping.** Propylene glycol — flagged oral/ingested only. Seed/industrial oils — flagged in gummies. Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill (not the gummy High). Tap text required on every form-scoped oil row: say both sides so the same oil is not read as graded two ways for no reason. Xylitol/erythritol — flagged oral/ingested; cleared topical/nasal.
+**Context scoping.** Propylene glycol — flagged oral/ingested only. Seed/industrial oils — flagged in gummies. Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill (not the gummy High). Tap text required on every form-scoped oil row: say both sides so the same oil is not read as graded two ways for no reason. Xylitol/erythritol — flagged oral/ingested; cleared topical/nasal. **Topical oils (Sept 15, 2026 form rule):** named single oil/butter as the BASE or FILL = Cleared (tap: fill ≠ gummy High). Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
 
 **Vague vs named twins.** When two label strings look related but grade differently (named hull vs “rice extract”; paprika extract vs “color added”; citrus extract vs lemon oil; seed oil in gummy vs capsule/drop), the ingredient tap must say why. Honest note stays product-level.
 
@@ -149,6 +151,8 @@ As of v1.6, the inactive-ingredient methodology is considered **locked enough to
 ## 5. Additive classification table (v1.6)
 
 Anchored to published regulatory and scientific findings. **All entries below are LOCKED per §0** unless noted as pending.
+
+**Topical oil form rule — LOCKED (Sept 15, 2026).** Named single oil/butter as the BASE or FILL = Cleared. Tap fill ≠ gummy High. Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
 
 ### High-risk — any one = Avoid
 
@@ -250,7 +254,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
 | Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
-| Avocado oil as cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
+| Avocado oil as cream fill — LOCKED (Sept 15, 2026) | Named single oil as cream vehicle. Cleared. Not gummy High. Tap form. Do not Caution when it is the cream vehicle. |
 | Urea (topical) — LOCKED (Sept 15, 2026) | Topical humectant. |
 | Allantoin — LOCKED (Sept 15, 2026) | Topical soother. |
 | Kaolin — LOCKED (Sept 15, 2026) | Clay / absorbent. |
@@ -262,7 +266,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Glyceryl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
 | Diisopropyl adipate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
 | Methyl glucose dioleate — LOCKED (Sept 15, 2026) | Topical emollient. |
-| cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Not a cousin shortcut. |
+| cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Named butter as cream vehicle / fill. Cleared. Not a cousin shortcut. Do not Caution when it is the cream vehicle. |
 | glyceryl dilaurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | soybean sterols — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -330,7 +334,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | calcium gluconate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | gluconolactone — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | sodium stearoyl lactylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Stearate-family emulsifier. Distinct from sodium stearoyl glutamate. |
-| grape seed oil as cream fill — LOCKED (Sept 15, 2026) | Exact token when labeled as oil in a cream. NOT gummy High. Tap form. Distinct from Cleared grape seed extract. |
+| grape seed oil as cream fill — LOCKED (Sept 15, 2026) | Exact token when labeled as oil in a cream. Named single oil as cream vehicle. NOT gummy High. Tap form. Distinct from Cleared grape seed extract. Do not Caution when it is the cream vehicle. |
 | arachidic acid, lauric acid, linoleic acid, linolenic acid, myristic acid, palmitic acid — LOCKED (Sept 15, 2026) | Exact fatty-acid tokens. Cleared. Stearate / oleic cousins. |
 | hydrogenated castor oil — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from the castor / polyoxyl castor row. |
 | glyceryl stearate SE — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. |
@@ -434,9 +438,9 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Mentha Oil / mentha oil — LOCKED (Sept 15, 2026) | Generic mint EO. Exact tokens. Distinct from Mentha arvensis leaf oil. | Standard alternatives rule. Not Avoid. |
 | PEG-120 Methyl Glucose Dioleate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared methyl glucose dioleate. | Standard alternatives rule. Not Avoid. |
 | alicyclic saturated hydrocarbon resin — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
-| Topical botanical extracts/oils used as inactives — arnica; burdock; boswellia resin extract; calendula (extract or flower oil); camellia (leaf oil/extract); ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint (bare) — LOCKED (Sept 15, 2026) | Exact topical-inactive tokens. Fragrance/botanical line. Distinct from oral Cleared chamomile / calendula / lemon balm food botanicals. Distinct from spearmint oil (already locked). | Standard alternatives rule. Not Avoid. |
+| Topical botanical extracts/oils used as inactives — arnica; burdock; boswellia resin extract; calendula (extract or flower oil); camellia (leaf oil/extract); ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint (bare) — LOCKED (Sept 15, 2026) | Botanical EXTRACT or oil used as scent in a blend. Fragrance/EO line. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Distinct from oral Cleared chamomile / calendula / lemon balm food botanicals. Distinct from named single-oil cream vehicles (grape seed / avocado / cocoa butter). Distinct from spearmint oil (already locked). | Standard alternatives rule. Not Avoid. |
 | camphor / dl-camphor as inactive — LOCKED (Sept 15, 2026) | Exact token when listed as inactive. Distinct from parked camphor-as-active. | Standard alternatives rule. Not Avoid. |
-| herbal extract (unspecified) — LOCKED (Sept 15, 2026) | Unspecified herbal extract. Exact token. | Standard alternatives rule. Not Avoid. |
+| herbal extract (unspecified) — LOCKED (Sept 15, 2026) | Unspecified “herbal extract” = Caution. Exact token. Not a named single-oil cream vehicle. | Standard alternatives rule. Not Avoid. |
 | IPBC / iodopropynyl butylcarbamate — LOCKED (Sept 15, 2026) | Exact INCI. Both names. | Standard alternatives rule. Not Avoid. |
 | PEG-4 laurate; PEG-12 dimethicone; bis-PEG-10 dimethicone; PPG-24-glycereth-24 — LOCKED (Sept 15, 2026) | Exact INCI tokens. | Standard alternatives rule. Not Avoid. |
 | hydroxyethyl cetyldimonium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
