@@ -54,6 +54,7 @@ import {
   BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
   BATCH52_THRIVE_PF_HOLES,
   BATCH53_ASUTRA_MELT_PAIN_AWAY,
+  BATCH54_AMAZON_PF_HOLES,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -128,6 +129,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
   ...BATCH52_THRIVE_PF_HOLES,
   ...BATCH53_ASUTRA_MELT_PAIN_AWAY,
+  ...BATCH54_AMAZON_PF_HOLES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -811,6 +813,26 @@ assertLetterOnly('life-flo-magnesium-lotion-vanilla', 'Life-flo');
 assertLetterOnly('life-flo-magnesium-lotion-unscented', 'Life-flo');
 assertLetterOnly('asutra-melt-pain-away', 'Asutra');
 assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
+assertLetterOnly('goodsense-naproxen-220', 'GoodSense');
+assertLetterOnly('timecap-naproxen-220', 'TIME-Cap Labs');
+assertLetterOnly('healtha2z-ibuprofen-200-382', 'HealthA2Z');
+assertLetterOnly('mommys-bliss-infants-pain-fever', "Mommy's Bliss");
+assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
+assertLetterOnly('nutricost-turmeric-curcumin-2300', 'Nutricost');
+assertLetterOnly('now-turmeric-curcumin-bioperine', 'NOW');
+assertLetterOnly('doctors-best-high-absorption-curcumin-1000', "Doctor's Best");
+assertLetterOnly('qunol-extra-strength-turmeric-1500', 'Qunol');
+assertLetterOnly('qunol-extra-strength-turmeric-1000', 'Qunol');
+assertLetterOnly('healthwise-lidocaine-4-patch', 'HealthWise');
+assertLetterOnly('welmate-lidocaine-4-patch-parabens', 'WELMATE');
+assertLetterOnly('naturewise-curcumin-turmeric-2250', 'NatureWise');
+assertLetterOnly('goodsense-dual-action', 'GoodSense');
+assertLetterOnly('healtha2z-ibuprofen-200-335', 'HealthA2Z');
+assertLetterOnly('goodsense-childrens-ibuprofen-chew', 'GoodSense');
+assertLetterOnly('goodsense-ibuprofen-liquid-gels', 'GoodSense');
+assertLetterOnly('midol-complete', 'Midol');
+assertLetterOnly('amazon-basics-lidocaine-4-patch', 'Amazon Basics');
+assertLetterOnly('welmate-lidocaine-4-patch-ethylhexyl', 'WELMATE');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
