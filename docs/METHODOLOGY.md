@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Steareth-20 / glycosaminoglycans / cholecalciferol / silicon):** Caution — Steareth-20 (exact; distinct from steareth-2 / steareth-21 / unspecified steareth). Caution — Glycosaminoglycans. Cleared — Cholecalciferol (vitamin D3 as inactive). Caution — silicon (exact word when the label prints “silicon,” not silica; do not alias silica / silicon dioxide).
+
 **Changed Sept 15, 2026 (Amazon leftover cream exact tokens; MIT High):** High/Avoid — Methylisothiazolinone / MIT (leave-on cream). D&C red #27 / #30 aluminum lake added as exact High-family strings. Cleared — emu oil as topical fill (already those words); glyceryl caprylate; glyceryl monostearate SE (exact; aliases glyceryl stearate SE); hydrogenated vegetable oil as cream fill (tap ≠ gummy High); C12-15 alkyl benzoate; ethylhexyl stearate; methyl gluceth-20; methyl glucose sesquistearate; cetyl myristoleate; choline bitartrate; dipotassium glycyrrhizinate; coco-caprylate/caprate; dimethiconol stearate; potassium carbomer; laureth-7; trideceth-6; C13-14 isoparaffin; polyethylene (chew binder); dextrates hydrated. Caution — acetylated lanolin / hydroxylated lanolin (lanolin family, not Cleared); caprylhydroxamic acid; polysorbate 85; PEG-8 dimethicone; PEG-100 stearate; ceteareth-20; retinyl palmitate; horse chestnut / comfrey / zanthoxylum extracts as scent-extract; polyacrylamide; acrylate/C10-30 alkyl acrylate crosspolymer; diazolidinyl urea (already on the DMDM row; exact string restamped). Limited alias — SD alcohol 39C on the alcohol-vehicle row.
 
 **Changed Sept 15, 2026 (Amazon P&F leftover spellings):** Caution — iron oxide yellow (alias with ferric oxide yellow; both strings written); oleoresin turmeric (distinct from Cleared turmeric-as-color). Cleared — glyceryl dibehenate (exact words; dibehenin already Cleared ≠ this string). Limited — isomalt (was missing). Do not invent a grade for unlabeled “Vegetable Capsule.”
@@ -399,6 +401,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | C13-14 isoparaffin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Caution isohexadecane. |
 | polyethylene (chew binder) — LOCKED (Sept 15, 2026) | Exact token as chew binder. Cleared. Distinct from PEG / polyethylene glycol (Moderate). |
 | dextrates hydrated — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| Cholecalciferol (vitamin D3 as inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Cleared. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -541,6 +544,9 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | horse chestnut / comfrey / zanthoxylum extracts as scent-extract — LOCKED (Sept 15, 2026) | Exact topical scent-extract tokens. Extract/scent rule. | Standard alternatives rule. Not Avoid. |
 | polyacrylamide — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from the AMPS / acrylate-acrylamide family row — exact words added. | Standard alternatives rule. Not Avoid. |
 | acrylate/C10-30 alkyl acrylate crosspolymer — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| Steareth-20 — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from steareth-2 / steareth-21 and from unspecified steareth. | Standard alternatives rule. Not Avoid. |
+| Glycosaminoglycans — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared glucosamine / chondroitin as labeled inactive. | Standard alternatives rule. Not Avoid. |
+| silicon — LOCKED (Sept 15, 2026) | Exact word when the label prints “silicon,” not silica. Do not alias silicon dioxide / silica / hydrated silica. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
