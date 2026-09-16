@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Thrive leftover §5 stamps; mineral drops IN; Thrive still live next)
+Last Updated: September 16, 2026 (Thrive hole punch DONE — batch59-thrive-holes 241; refused list kept)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -90,7 +90,7 @@ BRAND-CLOSE WORKFLOW
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
 - Missing panel: advisor names the next SKU; Brandon hunts one-by-one (store site → DailyMed → NIH DSLD → founder photo). Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
-- After a brand closes, log date/time on the roster. After Thrive write lands, add roster line + date/time. Not before.
+- After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
 Catalog status (do not invent “unsigned grades”)
 - lib/rating-drafts/ is large (aisle batches through Amazon Basic Care / PR 32 and prior). Unverified as PRODUCT FILES (barcode/photo/exact-SKU check), not “grades never decided.”
@@ -154,12 +154,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- Live catalog job = Thrive hole punch. Sprouts house is stashed (~55 + 3 refused). Do not catalog Sprouts. Do not reopen 187.
-- After Thrive write lands, add roster line + date/time. Not before.
+- LIVE NOW: (1) Thrive refused / carton leftovers (optional unlock — founder call) (2) Amazon US brands not on main (3) Store generics. Then KYR5 barcodes PR-only.
+- Thrive hole punch is DONE (batch59-thrive-holes.ts — 241). Do not re-catalog the 241.
+- Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 PR-only until founder OK.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–49 already exist.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–59 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -238,7 +239,7 @@ CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: Thrive hole punch is the live KYR3 job. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: Thrive refused / carton leftovers (optional unlock — founder call), then Amazon US brands not on main, then store generics. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -261,7 +262,7 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
 - Missing panel hunt: store site → DailyMed → NIH DSLD → founder photo. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
-- After a brand closes, log date/time on the roster. After Thrive write lands, add roster line + date/time. Not before.
+- After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
 Scope:
 - In: US OTC / vitamins / supplements, including supplement-aisle powders (example: MegaFood Daily Turmeric Nutrient Booster Powder) and mineral / ionic drops with Supplement Facts + dropper (medicine-aisle supplement).
@@ -525,18 +526,32 @@ Completed (main, unverified drafts unless noted):
 - Pain rubs PR #93 refused-unlock — Sept 16, 2026 — batch46 Search 3 (Caution 2 / Avoid 1 / Clean 0). Wrote only SKUs whose current DailyMed OI now maps: Tiger Balm Pain Relieving Patch + Hydrogel Patch (shared formulaId; mentha oil gone from SPL) and Neck & Shoulder vanishing scent (PVM/MA gone; PEG-120 on PEG Moderate row; Avoid Blue 1 + parabens). Do not clone batch45 neck-shoulder formulaId. REFUSED 37 still-missing. Reuse 41/42/44/45 untouched. Pain rubs stay Pain & Fever.
 - Pain rubs PR #93/#94 exact-unlock — Sept 16, 2026 — batch47 Search 25 (Caution 6 / Avoid 19 / Clean 0). Wrote only SKUs whose every current DailyMed OI token has an exact §5 row. Cousin-matching refused. REFUSED 12 still-missing exact tokens (ceteth phosphate / unspecified steareth / unspecified polysorbate; mentha oil; PEG-120 methyl glucose dioleate; magnesium aluminometasilicate / unspecified nonoxynol; polybutene; alicyclic saturated hydrocarbon resin / baking cloth / film). Reuse 41/42/44/45/46 untouched. Pain rubs stay Pain & Fever.
 - Pain rubs PR #95 refused-unlock — Sept 16, 2026 — batch48 Search 12 (Caution 9 / Avoid 3 / Clean 0). Wrote the remaining Salonpas / Tiger Balm refused set after the last exact-token locks. baking cloth + film ignored (backing / device, not inactives). Four menthol 3% / methyl salicylate 10% patches share formulaId; regular + wider TB hydrogel share formulaId. REFUSED: none. Reuse 41/42/44/45/46/47 untouched. Pain rubs stay Pain & Fever.
-- Thrive Market brand-list hole punch — Sept 16, 2026 — batch59-thrive-holes.ts — 241 NEW (Clean 108 / Caution 113 / Avoid 20). Search wired. Nighttime turmeric written. Mineral/ionic drops IN. Reuse batch27/52 not cloned.
+- Thrive Market hole punch — Sept 16, 2026 — PR #116 / 7cb8f86 — batch59-thrive-holes.ts (exact filename on disk; not hole-punch). Search 241 new (Clean 108 / Caution 113 / Avoid 20). Nighttime Turmeric Force written. Mineral/ionic drops IN when Supplement Facts + dropper. batch27/52 reuse not cloned. DONE for this punch. Do not re-catalog the 241.
+  Refused this punch (keep the list; not complete):
+  - Ritual 18+/50+ Multi — Non-GMO corn zein (beadlets)
+  - Ritual Stress Relief — Psyllium Husk / unnamed coating / Oat Fiber
+  - Motherlove lactation capsules — Medium Chain Triglycerides (derived from palm kernel oil)
+  - OM powders — no_OI or Organic Myceliated Oats
+  - Plant People Wonder gummies — extract-color spellings
+  - BodyBio butyrates — Calcium Hydroxide / Magnesium Hydroxide
+  - Trace Blue Hawaiian / Mixed Berry / Shilajit — no_OI
+  - PlusCBD Daily Balance — Irish Moss
+  - MaryRuth Nighttime / Prenatal liquids — Evaporated Sea Water
+  - Forces of Nature Cold & Flu Max / Sinus Max — Ginger Oil; Wart Extra Strength — DailyMed conflict
+  - New Chapter oral hydrated silica tablets; All-Flora Multi-Fiber — seaweed extract; Bone Strength / Daily Skin — unlabeled MCT + psyllium / oat fiber
+  - Scan 21 no_OI pile + leftover thin-brand holes that still need a carton
+  Oil-bottle hunt (never graded): Thrive MCT / C8 MCT, BUBS MCT creamer, Carlson CLO, Barlean’s flax, Manitoba hemp, Heritage castor, Herb Pharm Kids Mullein Garlic Oil.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
-1) Thrive Market brand-list hole punch (in-scope US OTC / vit / supp only). Reuse anything already on main (MegaFood, Genexa, Hyland’s, Boiron, Nature’s Way, MediNatura/B&T, etc.). Same product = one row.
-THEN
+1) Thrive refused / carton leftovers (optional unlock — founder call)
 2) Amazon US brands not on main
 3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
-4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
-5) KYR5 barcode backfill (PR-only until founder OK)
-Do NOT mark complete: Thrive full list, Amazon US full list, store generics. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. After Thrive write lands, add roster line + date/time. Not before. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+THEN
+4) KYR5 barcode backfill (PR-only until founder OK)
+5) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks) — not live
+Do NOT mark complete: Thrive refused leftovers, Amazon US full list, store generics. Thrive punch 241 is DONE — do not re-catalog those. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
