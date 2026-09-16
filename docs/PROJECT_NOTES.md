@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Mama Bear carousel four written — batch62)
+Last Updated: September 16, 2026 (Amazon house rebrands + dead/off-house list; §5 leftover stamps)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -156,7 +156,8 @@ Parked
 Next session
 - LIVE NOW: Amazon house punch = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only. Thrive no_OI carton hunt optional. Then store generics. Then KYR5 PR-only.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Do not re-catalog those.
-- Amazon house pinned-OI batch61 (18) written. Mama Bear founder-carousel four written (batch62 — D3 / Vegan C / Black Elderberry / Vegan Probiotic). Other missing-OI house SKUs still open. Do not mark Amazon US full list complete.
+- Amazon house pinned-OI batch61 (18) written. Mama Bear founder-carousel four already on main (batch62 / PR #118 follow-up). Do not duplicate. Other missing-OI house SKUs still open. Do not mark Amazon US full list complete.
+- Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
@@ -238,8 +239,11 @@ NIGHT SCHEDULE
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
-- OI hunt order is PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
-- Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution.
+- OI hunt order stays: every PDP carousel tile → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
+- Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
+- Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
+- Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
+- Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
 - Next catalog day: Thrive no_OI carton hunt (optional), then Amazon US brands not on main, then store generics. Sprouts house stays STASHED. Do not catalog Sprouts.
@@ -263,9 +267,9 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
 - New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
-- OI hunt order is PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
-- Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution.
-- Missing panel hunt: PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
+- OI hunt order stays: every PDP carousel tile → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
+- Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
+- Missing panel hunt: every PDP carousel tile → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -541,12 +545,15 @@ Completed (main, unverified drafts unless noted):
   - Scan 21 no_OI pile (Anima Mundi tonics, Codeage Multi Collagen/Platinum/Teens Fermented Multi, GOL Kids+/fiber, Thrive Multi-Collagen, Himalaya Psyllium, All Terrain bandages, Ollois Histaminum, one Thorne Creatine tub, Active Skin Repair hydrogels, shopping-list bundles)
   Oil-bottle hunt unchanged (never graded): Thrive MCT / C8 MCT, BUBS MCT creamer, Carlson CLO, Barlean’s flax, Manitoba hemp, Heritage castor, Herb Pharm Kids Mullein Garlic Oil.
 - Amazon house pinned-OI wave — Sept 16, 2026 — batch61-amazon-house-pinned.ts. Search 18 new (Clean 1 / Caution 2 / Avoid 15). NEW 18 / REUSE 0. DailyMed/DSLD/harvest only. Missing-OI SKUs not written. Do not reopen batch30 / 54–58 / 59–60. Amazon US full list still not complete.
-- Mama Bear founder-carousel four — Sept 16, 2026 — batch62-mama-bear-carousel.ts. Search 4 new (Clean 0 / Caution 1 / Avoid 3). NEW 4 / REUSE 0. D3 / Vegan C / Vegan Probiotic = gummy sunflower oil Avoid. Black Elderberry = natural flavors Caution. Do not reopen batch61.
+- Mama Bear founder-carousel four — Sept 16, 2026 — batch62-mama-bear-carousel.ts / PR #118 follow-up. Search 4 new (Clean 0 / Caution 1 / Avoid 3). Already on main. Do not duplicate.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
 Amazon house punch live = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only.
+Rebrands (one row unless OI/form changed): Revly → Elements; Solimo → Basics; many Elements vitamins → Basics (previously Elements). Former Elements now Micro Ingredients = 3P, out of house punch.
+Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
+Founder carousel hunt Sept 16 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 1) Thrive no_OI carton hunt (founder / stash) — optional
 2) Amazon US brands not on main
 3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
