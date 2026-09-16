@@ -59,3 +59,4 @@ export { BATCH58_PENETREX_CREAM } from './batch58-penetrex-cream';
 export { BATCH59_THRIVE_HOLES } from './batch59-thrive-holes';
 export { BATCH60_THRIVE_REFUSED_UNLOCK } from './batch60-thrive-refused-unlock';
 export { BATCH61_AMAZON_HOUSE_PINNED } from './batch61-amazon-house-pinned';
+export { BATCH62_MAMA_BEAR_CAROUSEL } from './batch62-mama-bear-carousel';
