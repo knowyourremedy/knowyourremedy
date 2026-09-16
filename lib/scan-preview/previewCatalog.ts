@@ -51,6 +51,7 @@ import {
   BATCH48_SALONPAS_TIGER_BALM_WRITE,
   BATCH49_PAIN_FEVER_LIST2,
   BATCH50_PAIN_FEVER_LIST3,
+  BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -122,6 +123,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH48_SALONPAS_TIGER_BALM_WRITE,
   ...BATCH49_PAIN_FEVER_LIST2,
   ...BATCH50_PAIN_FEVER_LIST3,
+  ...BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -783,6 +785,9 @@ assertLetterOnly('absorbine-jr-knee-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
+assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
+assertLetterOnly('bengay-ultra-strength-patch-5', 'Bengay');
+assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
