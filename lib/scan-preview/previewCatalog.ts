@@ -50,6 +50,7 @@ import {
   BATCH47_PAIN_RUB_EXACT_UNLOCK,
   BATCH48_SALONPAS_TIGER_BALM_WRITE,
   BATCH49_PAIN_FEVER_LIST2,
+  BATCH50_PAIN_FEVER_LIST3,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -120,6 +121,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH47_PAIN_RUB_EXACT_UNLOCK,
   ...BATCH48_SALONPAS_TIGER_BALM_WRITE,
   ...BATCH49_PAIN_FEVER_LIST2,
+  ...BATCH50_PAIN_FEVER_LIST3,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -737,6 +739,50 @@ assertLetterOnly('biofreeze-ultraflex-lidocaine-4-patch', 'Biofreeze');
 assertLetterOnly('biofreeze-ultraflex-plus-lidocaine-menthol-patch', 'Biofreeze');
 assertLetterOnly('capzasin-quick-relief-gel', 'Capzasin');
 assertLetterOnly('mineral-ice-extreme-menthol-spray', 'Mineral Ice');
+assertLetterOnly('biofreeze-pain-relief-gel-4', 'Biofreeze');
+assertLetterOnly('biofreeze-pain-relief-roll-on-4', 'Biofreeze');
+assertLetterOnly('biofreeze-colorless-gel-4', 'Biofreeze');
+assertLetterOnly('biofreeze-colorless-roll-on-4', 'Biofreeze');
+assertLetterOnly('biofreeze-gel-3-5-paraben', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-gel-5', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-roll-on-5', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-colorless-gel-5', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-colorless-roll-on-5', 'Biofreeze');
+assertLetterOnly('biofreeze-overnight-gel-4', 'Biofreeze');
+assertLetterOnly('biofreeze-overnight-roll-on-4', 'Biofreeze');
+assertLetterOnly('biofreeze-pain-relief-spray-10-5-denatonium', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-aerosol-10-5-denatonium', 'Biofreeze');
+assertLetterOnly('biofreeze-pain-relief-spray-10-5', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-spray-10-5', 'Biofreeze');
+assertLetterOnly('biofreeze-precision-relief-pen', 'Biofreeze');
+assertLetterOnly('biofreeze-pain-relief-spray-10', 'Biofreeze');
+assertLetterOnly('biofreeze-professional-spray-13', 'Biofreeze');
+assertLetterOnly('biofreeze-pain-relief-cream', 'Biofreeze');
+assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
+assertLetterOnly('biofreeze-foam', 'Biofreeze');
+assertLetterOnly('biofreeze-dry-stick', 'Biofreeze');
+assertLetterOnly('biofreeze-triple-target-roll-on', 'Biofreeze');
+assertLetterOnly('biofreeze-triple-target-gel', 'Biofreeze');
+assertLetterOnly('biofreeze-menthol-patches', 'Biofreeze');
+assertLetterOnly('biofreeze-overnight-relief-patches', 'Biofreeze');
+assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
+assertLetterOnly('bengay-ultra-strength-nongreasy', 'Bengay');
+assertLetterOnly('bengay-vanishing-scent-gel', 'Bengay');
+assertLetterOnly('bengay-lidocaine-tropical-jasmine', 'Bengay');
+assertLetterOnly('capzasin-hp-arthritis-cream', 'Capzasin');
+assertLetterOnly('mineral-ice-extreme-gel', 'Mineral Ice');
+assertLetterOnly('mineral-ice-extreme-dry-stick', 'Mineral Ice');
+assertLetterOnly('absorbine-jr-plus-es-liquid', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-pro-roll-on-liquid', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-pro-cream', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-pro-no-mess', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-pro-spray', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-neck-patch', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-back-patch', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-knee-patch', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
+assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
