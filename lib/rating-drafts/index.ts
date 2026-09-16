@@ -52,3 +52,4 @@ export { BATCH51_PAIN_FEVER_REFUSED_UNLOCK } from './batch51-pain-fever-refused-
 export { BATCH52_THRIVE_PF_HOLES } from './batch52-thrive-pf-holes';
 export { BATCH53_ASUTRA_MELT_PAIN_AWAY } from './batch53-asutra-melt-pain-away';
 export { BATCH54_AMAZON_PF_HOLES } from './batch54-amazon-pf-holes';
+export { BATCH55_PF_REFUSED_UNLOCK } from './batch55-pf-refused-unlock';
