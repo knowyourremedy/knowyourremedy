@@ -570,6 +570,26 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-calcareaiodata-pellets': catalogShot('boiron-calcareaiodata-pellets.jpg'),
   'boiron-calcareasilicata-pellets': catalogShot('boiron-calcareasilicata-pellets.jpg'),
   'boiron-camphora-pellets': catalogShot('boiron-camphora-pellets.jpg'),
+  'boiron-candidaalbicans-pellets': catalogShot('boiron-candidaalbicans-pellets.jpg'),
+  'boiron-capsicumannuum-pellets': catalogShot('boiron-capsicumannuum-pellets.jpg'),
+  'boiron-carboanimalis-pellets': catalogShot('boiron-carboanimalis-pellets.jpg'),
+  'boiron-carbolicumacidum-pellets': catalogShot('boiron-carbolicumacidum-pellets.jpg'),
+  'boiron-carboneumsulphuratum-pellets': catalogShot('boiron-carboneumsulphuratum-pellets.jpg'),
+  'boiron-carduusmarianus-pellets': catalogShot('boiron-carduusmarianus-pellets.jpg'),
+  'boiron-caulophyllum-thalictroides-pellets': catalogShot('boiron-caulophyllum-thalictroides-pellets.jpg'),
+  'boiron-cedron-pellets': catalogShot('boiron-cedron-pellets.jpg'),
+  'boiron-cenchriscontortrix-pellets': catalogShot('boiron-cenchriscontortrix-pellets.jpg'),
+  'boiron-cheiranthuscheiri-pellets': catalogShot('boiron-cheiranthuscheiri-pellets.jpg'),
+  'boiron-chelidonium-majus-pellets': catalogShot('boiron-chelidonium-majus-pellets.jpg'),
+  'boiron-chenopodium-anthelminticum-pellets': catalogShot('boiron-chenopodium-anthelminticum-pellets.jpg'),
+  'boiron-chininumarsenicosum-pellets': catalogShot('boiron-chininumarsenicosum-pellets.jpg'),
+  'boiron-chininumsalicylicum-pellets': catalogShot('boiron-chininumsalicylicum-pellets.jpg'),
+  'boiron-chininumsulphuricum-pellets': catalogShot('boiron-chininumsulphuricum-pellets.jpg'),
+  'boiron-chionanthus-virginica-pellets': catalogShot('boiron-chionanthus-virginica-pellets.jpg'),
+  'boiron-chlorinum-pellets': catalogShot('boiron-chlorinum-pellets.jpg'),
+  'boiron-cicutavirosa-pellets': catalogShot('boiron-cicutavirosa-pellets.jpg'),
+  'boiron-cimicifuga-racemosa-pellets': catalogShot('boiron-cimicifuga-racemosa-pellets.jpg'),
+  'boiron-cinerariamaritima-pellets': catalogShot('boiron-cinerariamaritima-pellets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1107,8 +1127,28 @@ assertExactCarton('boiron-caladiumseguinum-pellets', 'Boiron', 'boiron-caladiums
 assertExactCarton('boiron-calcareaiodata-pellets', 'Boiron', 'boiron-calcareaiodata-pellets.jpg');
 assertExactCarton('boiron-calcareasilicata-pellets', 'Boiron', 'boiron-calcareasilicata-pellets.jpg');
 assertExactCarton('boiron-camphora-pellets', 'Boiron', 'boiron-camphora-pellets.jpg');
+assertExactCarton('boiron-candidaalbicans-pellets', 'Boiron', 'boiron-candidaalbicans-pellets.jpg');
+assertExactCarton('boiron-capsicumannuum-pellets', 'Boiron', 'boiron-capsicumannuum-pellets.jpg');
+assertExactCarton('boiron-carboanimalis-pellets', 'Boiron', 'boiron-carboanimalis-pellets.jpg');
+assertExactCarton('boiron-carbolicumacidum-pellets', 'Boiron', 'boiron-carbolicumacidum-pellets.jpg');
+assertExactCarton('boiron-carboneumsulphuratum-pellets', 'Boiron', 'boiron-carboneumsulphuratum-pellets.jpg');
+assertExactCarton('boiron-carduusmarianus-pellets', 'Boiron', 'boiron-carduusmarianus-pellets.jpg');
+assertExactCarton('boiron-caulophyllum-thalictroides-pellets', 'Boiron', 'boiron-caulophyllum-thalictroides-pellets.jpg');
+assertExactCarton('boiron-cedron-pellets', 'Boiron', 'boiron-cedron-pellets.jpg');
+assertExactCarton('boiron-cenchriscontortrix-pellets', 'Boiron', 'boiron-cenchriscontortrix-pellets.jpg');
+assertExactCarton('boiron-cheiranthuscheiri-pellets', 'Boiron', 'boiron-cheiranthuscheiri-pellets.jpg');
+assertExactCarton('boiron-chelidonium-majus-pellets', 'Boiron', 'boiron-chelidonium-majus-pellets.jpg');
+assertExactCarton('boiron-chenopodium-anthelminticum-pellets', 'Boiron', 'boiron-chenopodium-anthelminticum-pellets.jpg');
+assertExactCarton('boiron-chininumarsenicosum-pellets', 'Boiron', 'boiron-chininumarsenicosum-pellets.jpg');
+assertExactCarton('boiron-chininumsalicylicum-pellets', 'Boiron', 'boiron-chininumsalicylicum-pellets.jpg');
+assertExactCarton('boiron-chininumsulphuricum-pellets', 'Boiron', 'boiron-chininumsulphuricum-pellets.jpg');
+assertExactCarton('boiron-chionanthus-virginica-pellets', 'Boiron', 'boiron-chionanthus-virginica-pellets.jpg');
+assertExactCarton('boiron-chlorinum-pellets', 'Boiron', 'boiron-chlorinum-pellets.jpg');
+assertExactCarton('boiron-cicutavirosa-pellets', 'Boiron', 'boiron-cicutavirosa-pellets.jpg');
+assertExactCarton('boiron-cimicifuga-racemosa-pellets', 'Boiron', 'boiron-cimicifuga-racemosa-pellets.jpg');
+assertExactCarton('boiron-cinerariamaritima-pellets', 'Boiron', 'boiron-cinerariamaritima-pellets.jpg');
 // Unattempted leftover P&F pellet factory stays letters.
-assertLetterOnly('boiron-candidaalbicans-pellets', 'Boiron');
+assertLetterOnly('boiron-cinnamomum-pellets', 'Boiron');
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
