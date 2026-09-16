@@ -53,6 +53,7 @@ import {
   BATCH50_PAIN_FEVER_LIST3,
   BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
   BATCH52_THRIVE_PF_HOLES,
+  BATCH53_ASUTRA_MELT_PAIN_AWAY,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -126,6 +127,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH50_PAIN_FEVER_LIST3,
   ...BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
   ...BATCH52_THRIVE_PF_HOLES,
+  ...BATCH53_ASUTRA_MELT_PAIN_AWAY,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -807,6 +809,8 @@ assertLetterOnly(
 );
 assertLetterOnly('life-flo-magnesium-lotion-vanilla', 'Life-flo');
 assertLetterOnly('life-flo-magnesium-lotion-unscented', 'Life-flo');
+assertLetterOnly('asutra-melt-pain-away', 'Asutra');
+assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
