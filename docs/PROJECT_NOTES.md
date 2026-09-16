@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (batch 44 list-2 pain rubs / sprays / liniment)
+Last Updated: September 15, 2026 (remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover strings confirmed on §5)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -374,6 +374,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Topical talc in a cream/patch = Caution. Not the oral-talc High swallow rule. Tap form.
 - DMDM hydantoin / diazolidinyl urea = Caution (formaldehyde-donor). Not Avoid unless founder later bumps. Other formaldehyde-releasers stay parked.
 - Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
+- Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings. Batch45 REFUSED still-missing names (cocoa butter, dicetyl phosphate, C15-19 alkane, aluminum silicate, PVM/MA Decadiene Crosspolymer, mentha oil, etc.) stay questions — do not invent grades.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
 - Glycerin / vegetable glycerin / organic glycerin = Cleared.
@@ -419,6 +420,7 @@ Completed (main, unverified drafts unless noted):
 - Advil Targeted Relief + Motrin / Aleve arthritis gels — Sept 15, 2026 — batch42 Search 3 (Caution 3 / Avoid 0 / Clean 0). Isocetyl stearate Cleared; isopropyl alcohol Limited (distinct from ethyl alcohol). Motrin fragrance-free; Aleve own formulaId (fragrance Caution). Pack sizes share formulaId. REFUSED: none. Reuse batch 41 Precise / AleveX untouched. Arniflora stays First Aid.
 - Goody’s / BC / Anacin / Bufferin / Ecotrin / St. Joseph — Sept 15, 2026 — batch43 Search 14 (Caution 6 / Avoid 6 / Clean 2). Shared OI shares formulaId (Max+Cool Orange+Mixed Fruit; PLUS+Hangover; BC Original+Arthritis). ES vs Back & Body = separate formulaIds (actives differ; both Clean — lactose + KCl). KCl Cleared applied. Reuse 0. REFUSED: none. List-4 OUT (no Search rows): Bufferin sanitizer / lidocaine / off-site Arthritis; Ecotrin 81 paraben SPL; Goody’s Migraine/PM caplets; BC cold/flu; Canada/EU; kits; false matches.
 - Pain rubs list 2 — Sept 15, 2026 — batch44 Search 13 (Caution 13 / Avoid 0 / Clean 0). Voltaren own formulaId (Aleve math twin, not cloned). Aspercreme arthritis fragrance vs no-fragrance split. Icy Hot Performance + Pro share formulaId; Original separate (menthol-only). Icy Hot vs Aspercreme lidocaine dry sprays separate (actives differ). REFUSED still-missing §5: none from list 2. List 3/4 OUT (38 question-mark SKUs; kits; wound-only; cosmetics; Canada/EU; discontinued; private-label; Lead duplicates). Do not rewrite Precise / AleveX / Advil Targeted / Motrin or Aleve arthritis gels.
+- Pain rubs remaining (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table) — Sept 15, 2026 — leftover strings confirmed on §5. Batch45 wrote the gradeable remainder. REFUSED still-missing §5 stay questions. Pain rubs stay Pain & Fever.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
@@ -739,7 +741,7 @@ DONE (Aug 2026, updated for Methodology v1.6): "Preferred multi-source reference
 DONE (Aug 2026, v1.6): the remaining ~20% inactive-ingredient categorization gap is CLOSED — roughly 20 ingredients were run through the full §4a workflow and locked with founder calls in one extended session (see docs/METHODOLOGY.md §7 calibration log for the full list: caramel color's 3-way class split, talc, sulfites, SLS, fragrance/parfum, stevia/monk fruit, the povidone/crospovidone/methylcellulose/starches housekeeping batch, xanthan/guar/gum arabic/pectin, annatto, turmeric/curcumin-as-color, beta-carotene-as-color, BVO, disodium EDTA trace use, aluminum hydroxide as an active-safety-cap case, castor oil/polyoxyl castor oil, propyl gallate, benzyl alcohol's population split, benzalkonium chloride, lecithin, mixed tocopherols/ascorbyl palmitate, cochineal/carmine).
 GATE NOW OPEN: the inactive-ingredient methodology is locked enough to begin bot-assisted database batches (§12). The earlier hard gate blocking §12 work is LIFTED as of v1.6.
 DO NOT change any locked grade from this session or earlier without a fresh, explicit founder decision — this includes not "helpfully" re-deriving a grade using the default-trigger table, which is for brand-new ingredients only (Methodology §0).
-PARKED, STAYS PARKED unless the founder revisits: formaldehyde-releasers (DMDM hydantoin, diazolidinyl urea, etc. — cosmetics/topical only, out of scope), HFCS (food/beverage sweetener, not confirmed on any real in-scope label), zinc as a nutrient/active (belongs to the active-safety-cap process, not the inactive table, and does not block database work), and the pending topical actives (menthol, camphor, eucalyptol — camphor specifically needs a young-children look whenever this gets picked up; also does not block database work).
+PARKED, STAYS PARKED unless the founder revisits: remaining formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol). DMDM hydantoin / diazolidinyl urea are Caution (formaldehyde-donor, Sept 15) — not Avoid. HFCS (food/beverage sweetener, not confirmed on any real in-scope label), zinc as a nutrient/active (belongs to the active-safety-cap process, not the inactive table, and does not block database work), and the pending topical actives (menthol, camphor, eucalyptol — camphor specifically needs a young-children look whenever this gets picked up; also does not block database work).
 ONGOING PROCESS RULE (permanent, not a one-time step, Methodology §4a): any inactive ingredient a bot or session encounters that ISN'T already in the Methodology §5 table does NOT get graded on the spot and does NOT go live in any product record. It gets the full 7-step workflow and a founder call first. Do not proactively hunt for more ingredients to pre-grade — new ones get handled reactively as real products actually surface them during database work, unless the founder specifically asks for another sweep.
 Migrate ratings from TS arrays → Supabase table once schema is locked and ratings are correct.
 App UI (design system v2 locked — §6; Sept 13 display lock — ready to build)
