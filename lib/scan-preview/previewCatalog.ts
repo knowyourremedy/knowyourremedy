@@ -52,6 +52,7 @@ import {
   BATCH49_PAIN_FEVER_LIST2,
   BATCH50_PAIN_FEVER_LIST3,
   BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
+  BATCH52_THRIVE_PF_HOLES,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -124,6 +125,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH49_PAIN_FEVER_LIST2,
   ...BATCH50_PAIN_FEVER_LIST3,
   ...BATCH51_PAIN_FEVER_REFUSED_UNLOCK,
+  ...BATCH52_THRIVE_PF_HOLES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -788,6 +790,23 @@ assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
 assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
 assertLetterOnly('bengay-ultra-strength-patch-5', 'Bengay');
 assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
+assertLetterOnly('ollois-arnica-montana-12c', 'Ollois');
+assertLetterOnly('oregons-wild-harvest-turmeric', "Oregon's Wild Harvest");
+assertLetterOnly('organic-india-turmeric-formula', 'Organic India');
+assertLetterOnly('sports-research-turmeric-curcumin', 'Sports Research');
+assertLetterOnly('thrive-wellmade-turmeric', 'wellmade by Thrive Market');
+assertLetterOnly('new-chapter-turmeric-force', 'New Chapter');
+assertLetterOnly('codeage-liposomal-turmeric', 'Codeage');
+assertLetterOnly('life-flo-pure-magnesium-oil', 'Life-flo');
+assertLetterOnly('gaia-turmeric-supreme-extra-strength', 'Gaia Herbs');
+assertLetterOnly('thorne-curcumin-phytosome-500', 'Thorne');
+assertLetterOnly('thorne-curcumin-phytosome-1000', 'Thorne');
+assertLetterOnly(
+  'gol-mykind-turmeric-inflammatory-gummies',
+  'Garden of Life',
+);
+assertLetterOnly('life-flo-magnesium-lotion-vanilla', 'Life-flo');
+assertLetterOnly('life-flo-magnesium-lotion-unscented', 'Life-flo');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
