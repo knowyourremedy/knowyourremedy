@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (last Salonpas / Tiger Balm exact tokens):** Caution exact INCI — ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis leaf oil); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin. Unspecified polysorbate aliases the existing P80/P20/P60 Moderate row — do not invent a new class.
+
 **Changed Sept 15, 2026 (remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover strings):** confirmed on §5 — do not re-add. Cleared: glyceryl stearate; diisopropyl adipate; urea (topical); tartaric acid; allantoin; kaolin; PVA (topical film); methyl glucose dioleate; avocado oil as cream fill; jojoba esters (wax/emollient; jojoba OIL stays Caution). Caution: steareth-2 / steareth-21; ceteth-20 phosphate; PPG-5-ceteth-20; PEG-15 cocamine; nonoxynol-30; ethylhexylglycerin; hydroxyacetophenone; TEA / trolamine as inactive; farnesol; 4-t-butylcyclohexanol; grapefruit / spearmint / cajuput / cassia / dementholized mint; C30-45 alkyl dimethicone / C30-45 crosspolymer; caprylyl methicone; acrylate / acrylamide copolymers not already locked; aluminum glycinate; hydrotalcite; latex; rosin esters / terpene resin / SIS / polyisobutylene; menthyl lactate; LPG / liquefied petroleum gas; synthetic beeswax; topical talc in a cream/patch; DMDM hydantoin / diazolidinyl urea (formaldehyde-donor, not Avoid). Sunflower seed wax not duplicated. Methylated spirit stays on the alcohol-vehicle Limited row. Polysorbate 60 stays on the P80/P20 Moderate row.
 
 **Changed Sept 14, 2026:** 3× Limited no longer auto-Avoid.
@@ -181,6 +183,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 | Polysorbate 60 | P60, Tween 60 | Same Moderate family as P80 / P20. Do not duplicate as a new class. |
+| Polysorbate (unspecified) — LOCKED (Sept 15, 2026) | polysorbate | Alias so “polysorbate” matches this same Moderate family as P80 / P20 / P60. Do not invent a new class. |
 
 ### Limited-risk — 1 point each
 
@@ -406,6 +409,14 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Mentha arvensis leaf oil — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | cinnamon oil — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | polygalic acid / polygallic acid — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. | Standard alternatives rule. Not Avoid. |
+| ceteth phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ceteth-20 phosphate. | Standard alternatives rule. Not Avoid. |
+| steareth (unspecified) — LOCKED (Sept 15, 2026) | Exact token when the label does not number the steareth. Distinct from steareth-2 / steareth-21. | Standard alternatives rule. Not Avoid. |
+| magnesium aluminometasilicate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| nonoxynol — LOCKED (Sept 15, 2026) | Bare / unspecified nonoxynol. Distinct from nonoxynol-30 (already locked). | Standard alternatives rule. Not Avoid. |
+| polybutene — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| Mentha Oil / mentha oil — LOCKED (Sept 15, 2026) | Generic mint EO. Exact tokens. Distinct from Mentha arvensis leaf oil. | Standard alternatives rule. Not Avoid. |
+| PEG-120 Methyl Glucose Dioleate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared methyl glucose dioleate. | Standard alternatives rule. Not Avoid. |
+| alicyclic saturated hydrocarbon resin — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 

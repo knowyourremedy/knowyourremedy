@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (pain-rub exact-unlock batch 47)
+Last Updated: September 15, 2026 (last Salonpas Tiger Balm exact tokens; cloth/film not inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -374,10 +374,12 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Topical talc in a cream/patch = Caution. Not the oral-talc High swallow rule. Tap form.
 - DMDM hydantoin / diazolidinyl urea = Caution (formaldehyde-donor). Not Avoid unless founder later bumps. Other formaldehyde-releasers stay parked.
 - Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
+- Polysorbate (unspecified) aliases the existing P80/P20/P60 Moderate row so “polysorbate” matches. Do not invent a new class.
 - Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings.
+- Patch “baking cloth” and “film” are backing/device, not gradeable inactives. Do not block a row on those words.
 - Exact INCI locks (do not rely on cousin rows):
   - Cleared: cocoa seed butter; glyceryl dilaurate; soybean sterols; C15-19 alkane; potassium phosphate; panthenol; magnesium ascorbyl phosphate; triethyl citrate; butylene glycol; squalane; oleyl alcohol; zinc oxide (inactive / topical); glucosamine / glucosamine sulfate (as labeled inactive); MSM / methylsulfonylmethane (as labeled inactive); chondroitin sulfate (as labeled inactive).
-  - Caution: aluminum hydroxide (topical / patch); aluminum silicate / synthetic aluminum silicate; dihydroxyaluminum aminoacetate; silodrate; dicetyl phosphate; capsaicin (when listed as inactive); ferric ferrocyanide; methyl acrylate; ethylhexyl acetate; acrylic acid; PVM/MA Decadiene Crosspolymer; tert-butyl alcohol; denatonium / denatonium benzoate; Mentha arvensis leaf oil; cinnamon oil; polygalic acid / polygallic acid.
+  - Caution: aluminum hydroxide (topical / patch); aluminum silicate / synthetic aluminum silicate; dihydroxyaluminum aminoacetate; silodrate; dicetyl phosphate; capsaicin (when listed as inactive); ferric ferrocyanide; methyl acrylate; ethylhexyl acetate; acrylic acid; PVM/MA Decadiene Crosspolymer; tert-butyl alcohol; denatonium / denatonium benzoate; Mentha arvensis leaf oil; cinnamon oil; polygalic acid / polygallic acid; ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin.
   - Limited: alcohol / SD alcohol / methylated spirit stay on the existing alcohol-vehicle row. Do not invent a second alcohol class.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
