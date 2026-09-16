@@ -14,7 +14,7 @@ Label truth (not a grade source)
 
 Tier 1 — primary decision (harm, not permission)
 - EFSA opinions + EU additive law
-- EMA excipient labeling + EMA herbal monographs
+- EMA excipient labeling
 - Health Canada / NNHPD
 - UK FSA
 - FSANZ
@@ -50,6 +50,7 @@ Tier 2/3 — integrative / natural-medicine (required on packets, not optional)
 - ConsumerLab / NSF / USP
 - German Commission E
 - ESCOP
+- EMA herbal monographs
 - American College of Lifestyle Medicine
 - Established integrative-center peer-reviewed papers
 Citation-only, never treat as the study: Institute for Functional Medicine, AANP positions, functional-medicine authors, brand/wellness blogs
@@ -62,10 +63,10 @@ Oils — INFO ONLY, never a Search Clean/Caution/Avoid
 - Bottle oils on a brand sweep = name + URL hunt list only
 
 How a packet uses this file
-1. Label first (DailyMed / DSLD / carton).
-2. Hit at least one Tier 1 regulator or primary paper AND at least one integrative source when the question is “is this form a problem.”
-3. Note FDA status as context.
-4. Bring the split to Brandon. Do not invent a live grade.
-5. After a lock, add the exact citation used to this file if it isn’t already here.
+- Methodology §4a 7-step is the official workflow: (1) EFSA/EU (2) FDA/IID/GRAS context only (3) IARC + NTP + Prop 65 (4) Health Canada or EMA if relevant (5) one or two key primary papers (6) EWG/CSPI if they flag it — advocacy, not the vote (7) founder call.
+- Also: label first (DailyMed / DSLD / brand OI / carton). Store HTML is not Other Ingredients.
+- Also: when the question is harm-in-this-form, include at least one Tier 2/3 integrative source (Natural Medicines, NCCIH, MSK About Herbs, Examine, Commission E, etc.).
+- Majority of independent sources wins. Split → Brandon. Do not invent a live grade.
+- After a lock, add the citation to this file if it is new.
 
 Do not turn this into a 400-row dump of every PubMed URL on day one. Add as we cite.
