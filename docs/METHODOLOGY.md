@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Amazon P&F leftover spellings):** Caution — iron oxide yellow (alias with ferric oxide yellow; both strings written); oleoresin turmeric (distinct from Cleared turmeric-as-color). Cleared — glyceryl dibehenate (exact words; dibehenin already Cleared ≠ this string). Limited — isomalt (was missing). Do not invent a grade for unlabeled “Vegetable Capsule.”
+
 **Changed Sept 15, 2026 (Amazon P&F leftover exact tokens):** Cleared — gamma-cyclodextrin; succinic acid; polyvinyl alcohol (oral coating); shellac; emu oil as topical fill (tap ≠ gummy High). Caution — rice flour; ferric oxide red; ferric oxide yellow; iron oxides; iron oxide red; polyvinyl acetate phthalate; ammonium glycyrrhizin. Exact alias: 3-(2-ethylhexyloxy)propane-1,2-diol = same Caution as ethylhexylglycerin (both strings written).
 
 **Changed Sept 15, 2026 (Asutra Melt Pain Away exact tokens):** Cleared — sodium lactate; glyceryl stearate citrate; cetyl palmitate (already those exact words on §5); polyglyceryl-3 diisostearate; calcium chloride; sodium hydroxide (pH adjuster) (already those exact words on §5); arachidyl alcohol; behenyl alcohol; arachidyl glucoside (exact words, not a cousin alias of the fatty-alcohol family row); undecane; tridecane (same job as C15-19 alkane — cream emollient alkanes). Caution — tocopheryl acetate (distinct from Cleared mixed tocopherols); pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate; Cymbopogon flexuosus oil / Cymbopogon citratus oil (lemongrass scent; extract/scent rule). Do not alias cousins.
@@ -207,6 +209,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit, SD alcohol, alcohol denat. | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit / SD alcohol sit on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
 | Isopropyl alcohol — LOCKED (Sept 15, 2026) | IPA, isopropanol | Alcohol vehicle family. Not Avoid. Tap if useful vs ethyl alcohol. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
+| isomalt — LOCKED (Sept 15, 2026) | isomalt | Limited. Exact token. Sugar-alcohol neighborhood. Was missing from the table. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
 | "Natural flavors" | natural flavoring | Undisclosed mixtures — opacity, not a known hazard. |
 | Natural citrus extract (fruit/part not named) — LOCKED (Sept 14, 2026) | unnamed citrus fruit extract | Same opacity bucket as natural flavor. DailyMed CITRUS FRUIT UNII is not lemon vs peel. Named “organic lemon oil” can be revisited (Limited flavor row below — not a Clean auto-pass). |
@@ -372,6 +375,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | polyvinyl alcohol (oral coating) — LOCKED (Sept 15, 2026) | Exact token as oral coating. Cleared. Distinct from PVA (topical film). |
 | shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | emu oil as topical fill — LOCKED (Sept 15, 2026) | Named single oil as topical fill. Cleared. Tap fill ≠ gummy High. |
+| glyceryl dibehenate — LOCKED (Sept 15, 2026) | Exact words. Cleared. Stearate / dibehenin neighborhood. Dibehenin already Cleared ≠ this string. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -496,11 +500,13 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Cymbopogon flexuosus oil / Cymbopogon citratus oil — LOCKED (Sept 15, 2026) | Lemongrass scent. Exact tokens. Botanical oil used as scent — extract/scent rule. | Standard alternatives rule. Not Avoid. |
 | rice flour — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared rice-hull / rice-bran / rice protein and from Caution organic rice meal. | Standard alternatives rule. Not Avoid. |
 | ferric oxide red — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
-| ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
+| ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. Also written as iron oxide yellow. | Standard alternatives rule. Not Avoid. |
+| iron oxide yellow / ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact alias. Same Caution. Both strings written. Distinct from iron oxide red / ferric oxide red. | Standard alternatives rule. Not Avoid. |
 | iron oxides — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
 | iron oxide red — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric oxide red and from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
 | polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | ammonium glycyrrhizin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared licorice / Glycyrrhiza extract. | Standard alternatives rule. Not Avoid. |
+| oleoresin turmeric — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared turmeric/curcumin as a color only. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -515,6 +521,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 |---|---|
 | Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Still parked. DMDM hydantoin / diazolidinyl urea moved to Caution (formaldehyde-donor) for in-scope topical OTC — not Avoid unless founder later bumps. |
 | Backing / adhesive plaster / film / baking cloth | Patch/device materials. Not gradeable inactives. Do not block a row on those words. |
+| Unlabeled “Vegetable Capsule” | Capsule shell not named. Do not invent a grade. Not a §5 inactive token. |
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
