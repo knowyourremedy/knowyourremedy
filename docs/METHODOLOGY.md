@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Biofreeze / Bengay / Capzasin / Mineral Ice / Absorbine exact tokens):** Pain rubs stay Pain & Fever. Backing / adhesive plaster / film / baking cloth = not gradeable inactives (do not block a row). Cleared: calcium gluconate; gluconolactone; sodium stearoyl lactylate; grape seed oil as cream fill (not gummy High; tap); arachidic acid; lauric acid; linoleic acid; linolenic acid; myristic acid; palmitic acid; hydrogenated castor oil; glyceryl stearate SE; glyceryl distearate; magnesium sulfate; lysine; copper sulfate / cupric sulfate; manganese chloride; aluminum chloride; magnesium chloride; zinc chloride; lauryl laurate; bisabolol; hydroxyethylcellulose / hydroxyethyl cellulose. Caution: topical botanical extracts/oils used as inactives (arnica; burdock; boswellia resin extract; calendula extract or flower oil; camellia leaf oil/extract; ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint bare); camphor / dl-camphor as inactive; herbal extract (unspecified); IPBC / iodopropynyl butylcarbamate; PEG-4 laurate; PEG-12 dimethicone; bis-PEG-10 dimethicone; PPG-24-glycereth-24; hydroxyethyl cetyldimonium phosphate; menthyl ethylamido oxalate; tetrasodium glutamate diacetate; lauralkonium chloride; nonoxynol-10; isoceteth-20; ceteth-10 phosphate; sodium polyacrylate starch; benzyl alcohol as topical inactive; thymol; polyacrylate crosspolymer-6; phenethyl alcohol; acetone; chloroxylenol; iodine; potassium iodide; butane (spray propellant); hydrated silica (topical).
+
 **Changed Sept 15, 2026 (last Salonpas / Tiger Balm exact tokens):** Caution exact INCI — ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis leaf oil); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin. Unspecified polysorbate aliases the existing P80/P20/P60 Moderate row — do not invent a new class.
 
 **Changed Sept 15, 2026 (remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover strings):** confirmed on §5 — do not re-add. Cleared: glyceryl stearate; diisopropyl adipate; urea (topical); tartaric acid; allantoin; kaolin; PVA (topical film); methyl glucose dioleate; avocado oil as cream fill; jojoba esters (wax/emollient; jojoba OIL stays Caution). Caution: steareth-2 / steareth-21; ceteth-20 phosphate; PPG-5-ceteth-20; PEG-15 cocamine; nonoxynol-30; ethylhexylglycerin; hydroxyacetophenone; TEA / trolamine as inactive; farnesol; 4-t-butylcyclohexanol; grapefruit / spearmint / cajuput / cassia / dementholized mint; C30-45 alkyl dimethicone / C30-45 crosspolymer; caprylyl methicone; acrylate / acrylamide copolymers not already locked; aluminum glycinate; hydrotalcite; latex; rosin esters / terpene resin / SIS / polyisobutylene; menthyl lactate; LPG / liquefied petroleum gas; synthetic beeswax; topical talc in a cream/patch; DMDM hydantoin / diazolidinyl urea (formaldehyde-donor, not Avoid). Sunflower seed wax not duplicated. Methylated spirit stays on the alcohol-vehicle Limited row. Polysorbate 60 stays on the P80/P20 Moderate row.
@@ -325,6 +327,21 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Lecithin (canola, soy, or sunflower) — **LOCKED (v1.6; canola named Sept 14, 2026)** | EFSA 2017: no safety concern, no ADI needed. Canola / soy / sunflower lecithin are the same lock — canola is already covered; this line names it. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). Canola lecithin is Cleared-class lecithin, not the gummy seed-oil High rule. |
 | Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. |
 | Castor oil, polyoxyl castor oil derivatives (oral/topical use) — **LOCKED (v1.6)** | "Essentially non-toxic and non-irritant" across acute/chronic toxicity studies for oral/topical/general pharmaceutical use. The Cremophor hypersensitivity/anaphylaxis history is specific to IV/injectable use — out of scope for KYR, which does not grade injectable drugs. |
+| calcium gluconate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| gluconolactone — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| sodium stearoyl lactylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Stearate-family emulsifier. Distinct from sodium stearoyl glutamate. |
+| grape seed oil as cream fill — LOCKED (Sept 15, 2026) | Exact token when labeled as oil in a cream. NOT gummy High. Tap form. Distinct from Cleared grape seed extract. |
+| arachidic acid, lauric acid, linoleic acid, linolenic acid, myristic acid, palmitic acid — LOCKED (Sept 15, 2026) | Exact fatty-acid tokens. Cleared. Stearate / oleic cousins. |
+| hydrogenated castor oil — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from the castor / polyoxyl castor row. |
+| glyceryl stearate SE — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. |
+| glyceryl distearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. |
+| magnesium sulfate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| lysine — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| copper sulfate / cupric sulfate — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. Cleared. |
+| manganese chloride, aluminum chloride, magnesium chloride, zinc chloride — LOCKED (Sept 15, 2026) | Exact salt tokens. Cleared. |
+| lauryl laurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| bisabolol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| hydroxyethylcellulose / hydroxyethyl cellulose — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. Cleared. Not parked. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -417,6 +434,28 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Mentha Oil / mentha oil — LOCKED (Sept 15, 2026) | Generic mint EO. Exact tokens. Distinct from Mentha arvensis leaf oil. | Standard alternatives rule. Not Avoid. |
 | PEG-120 Methyl Glucose Dioleate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared methyl glucose dioleate. | Standard alternatives rule. Not Avoid. |
 | alicyclic saturated hydrocarbon resin — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| Topical botanical extracts/oils used as inactives — arnica; burdock; boswellia resin extract; calendula (extract or flower oil); camellia (leaf oil/extract); ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint (bare) — LOCKED (Sept 15, 2026) | Exact topical-inactive tokens. Fragrance/botanical line. Distinct from oral Cleared chamomile / calendula / lemon balm food botanicals. Distinct from spearmint oil (already locked). | Standard alternatives rule. Not Avoid. |
+| camphor / dl-camphor as inactive — LOCKED (Sept 15, 2026) | Exact token when listed as inactive. Distinct from parked camphor-as-active. | Standard alternatives rule. Not Avoid. |
+| herbal extract (unspecified) — LOCKED (Sept 15, 2026) | Unspecified herbal extract. Exact token. | Standard alternatives rule. Not Avoid. |
+| IPBC / iodopropynyl butylcarbamate — LOCKED (Sept 15, 2026) | Exact INCI. Both names. | Standard alternatives rule. Not Avoid. |
+| PEG-4 laurate; PEG-12 dimethicone; bis-PEG-10 dimethicone; PPG-24-glycereth-24 — LOCKED (Sept 15, 2026) | Exact INCI tokens. | Standard alternatives rule. Not Avoid. |
+| hydroxyethyl cetyldimonium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| menthyl ethylamido oxalate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| tetrasodium glutamate diacetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| lauralkonium chloride — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| nonoxynol-10 — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from nonoxynol-30 and bare nonoxynol. | Standard alternatives rule. Not Avoid. |
+| isoceteth-20 — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| ceteth-10 phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ceteth-20 phosphate and ceteth phosphate. | Standard alternatives rule. Not Avoid. |
+| sodium polyacrylate starch — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from sodium polyacrylate / polyacrylic acid. | Standard alternatives rule. Not Avoid. |
+| benzyl alcohol as topical inactive — LOCKED (Sept 15, 2026) | Exact token on topical OTC. Caution. Does not change the oral benzyl-alcohol population-split rule. | Standard alternatives rule. Not Avoid. |
+| thymol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| polyacrylate crosspolymer-6 — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| phenethyl alcohol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| acetone — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| chloroxylenol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| iodine; potassium iodide — LOCKED (Sept 15, 2026) | Exact tokens. | Standard alternatives rule. Not Avoid. |
+| butane (spray propellant) — LOCKED (Sept 15, 2026) | Exact token. Pain-spray propellant family with isobutane / isopentane / propane. | Standard alternatives rule. Not Avoid. |
+| hydrated silica (topical) — LOCKED (Sept 15, 2026) | Exact token. Topical. Distinct from the oral silicon-dioxide nanoparticle cap row. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -430,6 +469,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Item | Reason parked |
 |---|---|
 | Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Still parked. DMDM hydantoin / diazolidinyl urea moved to Caution (formaldehyde-donor) for in-scope topical OTC — not Avoid unless founder later bumps. |
+| Backing / adhesive plaster / film / baking cloth | Patch/device materials. Not gradeable inactives. Do not block a row on those words. |
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |

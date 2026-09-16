@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (batch 48 Salonpas / Tiger Balm PR #95 refused WRITE)
+Last Updated: September 15, 2026 (lock Biofreeze Bengay Capzasin Mineral Ice Absorbine inactives)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -312,7 +312,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Sucrose fatty acid esters = Caution (synthetic emulsifier; not Avoid).
 - Calcium silicate = Caution (silicate anti-caking; Mg trisilicate neighborhood). Not the SiO2 0-pt cap.
 - Potassium hydroxide = Cleared (pH adjuster, trace). Not a grade driver.
-- Sorbitan (plain / sorbitan esters as emulsifier) = Caution (polysorbate neighborhood). Not Avoid. Not the same row as sorbitol. Do not flip tylenol-8hr-peg. Hydroxyethyl cellulose stays parked on that reuse row.
+- Sorbitan (plain / sorbitan esters as emulsifier) = Caution (polysorbate neighborhood). Not Avoid. Not the same row as sorbitol. Do not flip tylenol-8hr-peg. Hydroxyethylcellulose / hydroxyethyl cellulose is now Cleared (exact tokens) — no longer parked.
 - Triacetin = Cleared (tablet/caplet coating plasticizer). Not a grade driver.
 - Parabens (methyl, ethyl, propyl, butyl) = High in every form, including rubs and patches. Not a topical exception.
 - Carbomer / carbomer copolymer / carbomer interpolymer = Cleared (widens the homopolymer row).
@@ -376,10 +376,11 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
 - Polysorbate (unspecified) aliases the existing P80/P20/P60 Moderate row so “polysorbate” matches. Do not invent a new class.
 - Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings.
-- Patch “baking cloth” and “film” are backing/device, not gradeable inactives. Do not block a row on those words.
+- Patch backing / adhesive plaster / film / baking cloth are backing/device, not gradeable inactives. Do not block a row on those words.
+- Pain rubs stay Pain & Fever (with swallow SKUs). No third Topical aisle.
 - Exact INCI locks (do not rely on cousin rows):
-  - Cleared: cocoa seed butter; glyceryl dilaurate; soybean sterols; C15-19 alkane; potassium phosphate; panthenol; magnesium ascorbyl phosphate; triethyl citrate; butylene glycol; squalane; oleyl alcohol; zinc oxide (inactive / topical); glucosamine / glucosamine sulfate (as labeled inactive); MSM / methylsulfonylmethane (as labeled inactive); chondroitin sulfate (as labeled inactive).
-  - Caution: aluminum hydroxide (topical / patch); aluminum silicate / synthetic aluminum silicate; dihydroxyaluminum aminoacetate; silodrate; dicetyl phosphate; capsaicin (when listed as inactive); ferric ferrocyanide; methyl acrylate; ethylhexyl acetate; acrylic acid; PVM/MA Decadiene Crosspolymer; tert-butyl alcohol; denatonium / denatonium benzoate; Mentha arvensis leaf oil; cinnamon oil; polygalic acid / polygallic acid; ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin.
+  - Cleared: cocoa seed butter; glyceryl dilaurate; soybean sterols; C15-19 alkane; potassium phosphate; panthenol; magnesium ascorbyl phosphate; triethyl citrate; butylene glycol; squalane; oleyl alcohol; zinc oxide (inactive / topical); glucosamine / glucosamine sulfate (as labeled inactive); MSM / methylsulfonylmethane (as labeled inactive); chondroitin sulfate (as labeled inactive); calcium gluconate; gluconolactone; sodium stearoyl lactylate; grape seed oil as cream fill (not gummy High; tap); arachidic acid; lauric acid; linoleic acid; linolenic acid; myristic acid; palmitic acid; hydrogenated castor oil; glyceryl stearate SE; glyceryl distearate; magnesium sulfate; lysine; copper sulfate / cupric sulfate; manganese chloride; aluminum chloride; magnesium chloride; zinc chloride; lauryl laurate; bisabolol; hydroxyethylcellulose / hydroxyethyl cellulose.
+  - Caution: aluminum hydroxide (topical / patch); aluminum silicate / synthetic aluminum silicate; dihydroxyaluminum aminoacetate; silodrate; dicetyl phosphate; capsaicin (when listed as inactive); ferric ferrocyanide; methyl acrylate; ethylhexyl acetate; acrylic acid; PVM/MA Decadiene Crosspolymer; tert-butyl alcohol; denatonium / denatonium benzoate; Mentha arvensis leaf oil; cinnamon oil; polygalic acid / polygallic acid; ceteth phosphate; steareth (unspecified); magnesium aluminometasilicate; nonoxynol (bare; nonoxynol-30 already present); polybutene; Mentha Oil / mentha oil (generic mint EO; distinct from Mentha arvensis); PEG-120 Methyl Glucose Dioleate; alicyclic saturated hydrocarbon resin; topical botanical extracts/oils used as inactives (arnica; burdock; boswellia resin extract; calendula extract or flower oil; camellia leaf oil/extract; ilex; lemon balm; chamomile; echinacea; juniper; white tea; wormwood extract; wormwood oil; ginger extract; camphor leaf oil; gaultheria fragrantissima oil; spearmint bare); camphor / dl-camphor as inactive; herbal extract (unspecified); IPBC / iodopropynyl butylcarbamate; PEG-4 laurate; PEG-12 dimethicone; bis-PEG-10 dimethicone; PPG-24-glycereth-24; hydroxyethyl cetyldimonium phosphate; menthyl ethylamido oxalate; tetrasodium glutamate diacetate; lauralkonium chloride; nonoxynol-10; isoceteth-20; ceteth-10 phosphate; sodium polyacrylate starch; benzyl alcohol as topical inactive; thymol; polyacrylate crosspolymer-6; phenethyl alcohol; acetone; chloroxylenol; iodine; potassium iodide; butane (spray propellant); hydrated silica (topical).
   - Limited: alcohol / SD alcohol / methylated spirit stay on the existing alcohol-vehicle row. Do not invent a second alcohol class.
 
 Sept 14 housekeeping locks (excipient siblings + tap-copy rule — now in Methodology §5 — do not reopen):
