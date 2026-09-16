@@ -57,6 +57,7 @@ import {
   BATCH54_AMAZON_PF_HOLES,
   BATCH55_PF_REFUSED_UNLOCK,
   BATCH56_AMAZON_LEFTOVER_GRADES,
+  BATCH57_PF_REFUSED_UNLOCK,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -134,6 +135,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH54_AMAZON_PF_HOLES,
   ...BATCH55_PF_REFUSED_UNLOCK,
   ...BATCH56_AMAZON_LEFTOVER_GRADES,
+  ...BATCH57_PF_REFUSED_UNLOCK,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -850,6 +852,12 @@ assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
 assertLetterOnly('mentholatum-original', 'Mentholatum');
 assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
 assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
+assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
+assertLetterOnly('jointflex-pain-relief-cream', 'JointFlex');
+assertLetterOnly('topricin-pain-relief-cream', 'Topricin');
+assertLetterOnly('blue-emu-original', 'Blue-Emu');
+assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
+assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
