@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Asutra Melt Pain Away exact tokens):** Cleared — sodium lactate; glyceryl stearate citrate; cetyl palmitate (already those exact words on §5); polyglyceryl-3 diisostearate; calcium chloride; sodium hydroxide (pH adjuster) (already those exact words on §5); arachidyl alcohol; behenyl alcohol; arachidyl glucoside (exact words, not a cousin alias of the fatty-alcohol family row); undecane; tridecane (same job as C15-19 alkane — cream emollient alkanes). Caution — tocopheryl acetate (distinct from Cleared mixed tocopherols); pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate; Cymbopogon flexuosus oil / Cymbopogon citratus oil (lemongrass scent; extract/scent rule). Do not alias cousins.
+
 **Changed Sept 15, 2026 (Thrive P&F leftover tokens):** Cleared — chlorophyll (named pigment ≠ chlorophyllin); leucine; cetearyl glucoside. Limited — fruit puree / juice concentrate as gummy base. Caution — organic rice meal.
 
 **Changed Sept 15, 2026 (EDTA / calcined kaolin / ammonium hydroxide):** Caution exact tokens — Tetrasodium EDTA; calcined kaolin; ammonium hydroxide. Kaolin already Cleared ≠ calcined kaolin. Strong ammonia ≠ ammonium hydroxide — do not alias; these are exact words.
@@ -274,7 +276,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Named butter as cream vehicle / fill. Cleared. Not a cousin shortcut. Do not Caution when it is the cream vehicle. |
 | glyceryl dilaurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | soybean sterols — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
-| C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as undecane / tridecane. Do not alias those tokens to this row. |
 | potassium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | panthenol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | magnesium ascorbyl phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -354,6 +356,15 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | chlorophyll (named pigment) — LOCKED (Sept 15, 2026) | Named pigment. Cleared. Distinct from Caution sodium copper chlorophyllin. |
 | leucine — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | cetearyl glucoside — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from cetearyl alcohol and from arachidyl glucoside. |
+| sodium lactate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| glyceryl stearate citrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate / glyceryl stearate SE / glyceryl distearate. |
+| polyglyceryl-3 diisostearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| calcium chloride — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| arachidyl alcohol — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. |
+| behenyl alcohol — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. |
+| arachidyl glucoside — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. Distinct from cetearyl glucoside. |
+| undecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
+| tridecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -472,6 +483,9 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | calcined kaolin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared kaolin. | Standard alternatives rule. Not Avoid. |
 | ammonium hydroxide — LOCKED (Sept 15, 2026) | Exact words. Distinct from strong ammonia solution. Do not alias. | Standard alternatives rule. Not Avoid. |
 | organic rice meal — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared rice-hull / rice-bran / rice protein and from Limited unspecified rice extract. | Standard alternatives rule. Not Avoid. |
+| tocopheryl acetate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared mixed tocopherols. | Standard alternatives rule. Not Avoid. |
+| pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| Cymbopogon flexuosus oil / Cymbopogon citratus oil — LOCKED (Sept 15, 2026) | Lemongrass scent. Exact tokens. Botanical oil used as scent — extract/scent rule. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
