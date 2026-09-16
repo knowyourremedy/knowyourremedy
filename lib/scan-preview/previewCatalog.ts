@@ -56,6 +56,7 @@ import {
   BATCH53_ASUTRA_MELT_PAIN_AWAY,
   BATCH54_AMAZON_PF_HOLES,
   BATCH55_PF_REFUSED_UNLOCK,
+  BATCH56_AMAZON_LEFTOVER_GRADES,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -132,6 +133,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH53_ASUTRA_MELT_PAIN_AWAY,
   ...BATCH54_AMAZON_PF_HOLES,
   ...BATCH55_PF_REFUSED_UNLOCK,
+  ...BATCH56_AMAZON_LEFTOVER_GRADES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -841,6 +843,13 @@ assertLetterOnly('qunol-extra-strength-turmeric-1500-oleoresin', 'Qunol');
 assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
 assertLetterOnly('aplus-health-dual-action', 'A+Health');
 assertLetterOnly('qunol-zero-sugar-turmeric-gummies', 'Qunol');
+assertLetterOnly('stopain-extra-strength-roll-on', 'Stopain');
+assertLetterOnly('flexall-max-strength-gel', 'Flexall');
+assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
+assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
+assertLetterOnly('mentholatum-original', 'Mentholatum');
+assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
+assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
