@@ -409,6 +409,9 @@ if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.barcode)) {
 if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 51 recordStatus must stay unverified');
 }
+function mustDiffer(a: string | undefined, b: string | undefined, msg: string) {
+  if (a && b && a === b) throw new Error(msg);
+}
 if (FOOT?.formulaId !== ID.foot) {
   throw new Error('Foot Cream pack sizes must share the Foot Cream formulaId');
 }
@@ -418,15 +421,9 @@ if (BENGAY?.formulaId !== ID.bengayPatch) {
 if (MI?.formulaId !== ID.miOrig) {
   throw new Error('Mineral Ice 8 oz + 16 oz must share the original-gel formulaId');
 }
-if (FOOT?.formulaId === 'biofreeze-pain-relief-cream') {
-  throw new Error('Foot Cream must not clone the jar-cream formulaId');
-}
-if (BENGAY?.formulaId === 'bengay-ultra-strength-nongreasy') {
-  throw new Error('Bengay patch must not clone the Non-Greasy cream formulaId');
-}
-if (MI?.formulaId === 'mineral-ice-extreme-gel') {
-  throw new Error('Original 2% gel must not clone Mineral Ice Extreme gel');
-}
+mustDiffer(FOOT?.formulaId, 'biofreeze-pain-relief-cream', 'Foot Cream must not clone the jar-cream formulaId');
+mustDiffer(BENGAY?.formulaId, 'bengay-ultra-strength-nongreasy', 'Bengay patch must not clone the Non-Greasy cream formulaId');
+mustDiffer(MI?.formulaId, 'mineral-ice-extreme-gel', 'Original 2% gel must not clone Mineral Ice Extreme gel');
 if (FOOT?.verdict !== 'caution') {
   throw new Error('Foot Cream must stay Caution (no High)');
 }
