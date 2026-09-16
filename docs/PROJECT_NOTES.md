@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Amazon house punch DONE — batch63 35; store generics next)
+Last Updated: September 16, 2026 (KYR5 live — night / PR-only barcode backfill)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,7 +56,7 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 = NIGHT BARCODE backfill on rows already on main (~600+ and growing). Pain & Fever first, then the rest. Sources only: carton, brand site, store PDP, DailyMed. Pack-size variants share formulaId; extra UPCs attach — do not duplicate rows. Test runs = PR ONLY. Do not merge until Brandon says the factory is clean. Do not grade, photo, hide, or edit methodology.
+- KYR5 is live — night / PR-only barcode backfill. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. GitHub Merge ≠ git pull. One PR at a time. Tell Brandon when on main.
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -154,13 +154,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Store generics (2) Amazon 3P brands not on main. Then KYR5 barcodes PR-only.
+- LIVE NOW: (1) Store generics (2) Amazon 3P brands not on main. KYR5 is live — night / PR-only barcode backfill. Does not grade. Does not invent UPCs. Does not open new rows unless Brandon says so.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI STASHED.
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 PR-only until founder OK.
+- KYR5 is live — night / PR-only. Attach real codes onto existing Search rows. One PR at a time.
 - Before proposing a brand, read lib/rating-drafts/ filenames. batch37–63 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -209,7 +209,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5, PR-only until founder OK. Launch needs a ROW and a CODE. Photos are polish.
+- Night barcodes = KYR5 is live, PR-only. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -234,7 +234,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 barcodes: PR-only until founder says the factory is clean. Pain & Fever first.
+- KYR5 is live — night / PR-only barcode backfill. One PR at a time. GitHub Merge ≠ git pull.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -554,12 +554,12 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
+KYR5 is live — night / PR-only barcode backfill. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. One PR at a time. GitHub Merge ≠ git pull.
 1) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 2) Amazon 3P brands not on main
-THEN
-3) KYR5 barcode backfill (PR-only until founder OK)
-4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks) — not live
-5) Thrive no_OI carton hunt — STASHED (not live)
+THEN (not live)
+3) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
+4) Thrive no_OI carton hunt — STASHED
 Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 are DONE. Thrive no_OI STASHED. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
