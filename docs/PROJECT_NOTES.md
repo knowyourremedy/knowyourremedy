@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (coconut alkanes pyridoxine tea tree oil)
+Last Updated: September 16, 2026 (bot map + barcode launch weight + night remap + founder-call majority + brand-close workflow)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -51,13 +51,14 @@ Legal contact: personally knows Richard Aaron of Dowling Aaron (Fresno) — leve
 ⚡ SESSION LOCK — September 12–13, 2026 (read with How Brandon Works)
 ================================================================
 
-Bots
-- Catalog-era coding bot = KYR (previous handoff).
-- Current UI/app-preview coding bot = KYR2.
-- Brandon renames (KYR3, etc.) when a chat gets too big. Update this line at the next notes pass. Rules stay; the number changes.
-- KYR2 writes code via GitHub. Local editor (today: Cursor) = notes, git pull, npm run dev.
-- After a bot PR: Merge on GitHub (or ask KYR2 to merge if the UI errors), then refresh https://knowyourremedy.vercel.app/scan-preview
-- “git pull” in the terminal is NOT the same as merging a pull request on GitHub.
+Bots (Sept 16, 2026)
+- KYR = old catalog bot. Dead for new work.
+- KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
+- KYR3 = daytime CATALOG bot. One brand at a time. New rows: grade + UPC/set-id in the same write when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
+- KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 schedule is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Default catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
+- KYR5 = NIGHT BARCODE backfill on rows already on main (~600+ and growing). Pain & Fever first, then remaining aisles. Sources only: carton, brand site, store PDP, DailyMed. Pack-size variants share formulaId; extra UPCs attach — do not duplicate rows. Test runs = PR ONLY. Do not merge until Brandon says the factory is clean. Do not grade, photo, hide, or edit methodology.
+- Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat (slow writes, re-asking locked §5 calls).
+- Cursor = notes, git pull, npm run dev, end-of-day notes. After a bot PR: Merge on GitHub ≠ git pull.
 
 How Brandon wants work done
 - Sidebar first. No bot paste until he says “go.”
@@ -68,6 +69,28 @@ How Brandon wants work done
 - Founder owns grades. Batch verdicts from the KYR catalog era were methodology-applied then Brandon-skimmed — treat those as approved unless he says that batch never got a look.
 - New ungraded inactive still = 7-step packet + Brandon. Do not invent a live grade.
 - Display map stays in lib/clean-picks/verdictLabels.ts. Internal keys clean/caution/avoid. User sees Clean / Usable / Not clean. Usable still maps from caution + “Fine in moderation.” Not clean maps from avoid; color stays #c0392b. Do not rewrite draft verdict keys. Not a methodology grade change.
+
+LAUNCH WEIGHT
+- Row exists = coverage.
+- Barcode / set-id on that row = the scanner works.
+- Carton photo = polish.
+- Do not treat barcodes as optional snacks. ~600+ rows already on main still need a backfill (KYR5). Forward catalog (KYR3) attaches UPC when the source has it.
+
+FOUNDER CALLS — MAJORITY RULE
+- New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
+- Packet uses METHODOLOGY.md on MAIN + a handful of sources. FDA is one source, not a veto. Include integrative sources when the question is harm-in-this-form.
+- Majority wins. 1 scare paper out of 10 ≠ Avoid. 1 “it’s fine” out of 10 ≠ Clean. Split sources → bring the split to Brandon. Do not invent a grade.
+- Vague vs named twins (rice extract vs rice bran extract; natural citrus extract vs lemon oil) need tap text + honest-note language so users are not confused. Honest always.
+
+BRAND-CLOSE WORKFLOW
+- Finish the brand you started. Do not hop brands.
+- Bot scans the WHOLE in-scope US line first. Questions (missing OI, new inactive, scope) come to advisor + Brandon BEFORE the write. One merge should close the brand.
+- Advisor answers from methodology + notes. Brandon owns Avoid / Usable / Clean.
+- Sidebar first. No bot or Cursor paste until Brandon says go or ready.
+- Visual / missing panel: advisor names the next SKU; Brandon hunts one-by-one (store site, DailyMed, DSLD); then the write.
+- SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is a pile (~25+ still-blocked panels), Brandon MAY stash leftovers so the gradeable chunk merges and the day keeps moving. Stash is founder call, not the bot’s. Stashed names stay in this file.
+- Store-brand OI ladder: gallery / Ingredients photos on the PDP → DailyMed → NIH DSLD (Dietary Supplement Label Database) → founder carton photo. Do not use Google-LLM “other ingredients” lists. Minerals under the Supplement Facts bar are actives, not Other Ingredients.
+- After a brand closes, log it here with date/time so we know when that catalog is stale.
 
 Catalog status (do not invent “unsigned grades”)
 - lib/rating-drafts/ is large (aisle batches through Amazon Basic Care / PR 32 and prior). Unverified as PRODUCT FILES (barcode/photo/exact-SKU check), not “grades never decided.”
@@ -125,11 +148,18 @@ Parked
 - Catalog photo factory (night routine + barcodes). Digestive demo aisle is filled; other aisles follow the night order.
 - User photo upload + review queue
 - Accounts / cloud sync of Cabinet
+- App icon / word mark: cream field, green scan box, KYR over barcode-pill. Use ™ on the name. Word-mark filing Class 009 later (~$1k–$2k). Domain ≠ trademark. App Store listing = use in commerce, not a registration.
+- Advisor-chat handoff letter lives with Brandon + this file; new advisor reads MAIN notes + methodology, not a Project pin. Sprouts leftover panel hunts may still sit in the long advisor thread until this list is complete.
+- Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
+- KYR3: next brand after current Sprouts house leftovers / queue already on main. New writes include UPC/set-id when found.
+- Sprouts store-brand still-blocked: keep the named unread house list in this file (notes already cite ~187). Do not guess OI.
+- After natural-grocer house brands: mass-market holes (Tylenol / Advil / Aleve etc.), then Thrive hole punch, then Amazon US brands not on main, then store generics (CVS, Walgreens, Walmart, Safeway/Vons Signature, Dollar General / Dollar Tree, etc.).
+- KYR5: open when Brandon says; test barcode PRs on Pain & Fever rows with no UPC; no merge until he says so.
+- KYR4: photos only on paste. Do not restart 12:30.
+- Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
-- Morning check: last night’s photo aisle. Daytime this week: a few barcodes to earn merge later.
-- Next catalog day: Sprouts/natural brands. No Canada/EU.
 
 Brandon standards (handoff)
 - Don’t half-dress the catalog or UI to hit a launch date.
@@ -147,11 +177,13 @@ Brandon standards (handoff)
 - New Grok/Project chat: read PROJECT_NOTES + METHODOLOGY first. Do not assume old chat memory. New Grok reads GitHub MAIN, not a Project pin.
 - Brandon is full-time on KYR until mid/late November, then back to his day job. Use this window for founder locks (grades, display words, dead SKUs, carton confirms). Don’t spend it on markets we won’t ship or on 15-photo loops he could skip.
 
-NIGHT / GROK BOT ROUTINE
-- Photos night routine may MERGE. Cap per run. Carton → official brand mark → letter only if unattempted. Parent brand mark OK for too-broad or bad draft names (Pedialyte flavored, Culturelle kids). 365 tile may read “365” not “3”.
-- Barcodes/set-ids: start a FEW in daytime this week to iron wrinkles. Night barcode routine stays PR-only until Brandon says merge is OK.
-- Night may also: pull cartons for rows that already have barcode/set-id; list “looks discontinued” (list only, don’t hide).
-- Night may NOT: invent grades, new inactives, UI, hide/delete products, Canada/EU.
+NIGHT / GROK BOT ROUTINE (Sept 16)
+- Photos are ON-DEMAND on KYR4. Three-wake photo cron (12:45 / 3:15 / 5:45) is OFF until Brandon turns it back on.
+- When photos run: 20 per batch × 2 batches per wake was the old cron math (120/night). On-demand uses whatever Brandon types (usually 2×20).
+- Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever for new catalog rows.
+- Night barcodes = KYR5, PR-only until founder OK. Not a snack. Launch needs a row AND a code. Photos are polish.
+- Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
+- Night / photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
 SCOPE PARKS
 - Park for good (food/drink-shaped): protein powder, protein bars, meal-replacement shakes, Pedialyte-class drinks (Pedialyte, Liquid I.V., Gatorade-style, freezer pops).
@@ -171,10 +203,9 @@ NIGHT PHOTO AISLE ORDER
 Digestive is not “closed forever.” New drafts will refill it. Night bot always takes the first aisle in this list that still has blanks, letters, or missing marks.
 
 NIGHT SCHEDULE
-- Three wakes (Pacific): 12:45, 3:15, 5:45. Same instruction each time.
-- Each wake: exactly 2 batches of 20 on the first unfinished aisle. Then stop. Do not start the next aisle in that run.
-- Stagger so runs do not overlap (~2 hours per wake).
-- Photos MAY merge. Barcodes: daytime wrinkle pass first; night barcode merge only after Brandon says so.
+- Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
+- KYR4 photos: on-demand only. Cap 20/batch. Default catch-up 2 batches (40) unless Brandon types another N.
+- KYR5 barcodes: PR-only until founder says the factory is clean. Pain & Fever first.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -195,6 +226,13 @@ How a brand job runs:
 4) If OI cannot be found on MegaFood.com / Thrive / Sprouts / Whole Foods / Amazon US, advisor asks founder for a Supplement Facts photo.
 5) Only after calls are answered does the bot write the batch, wire Search like other drafts, merge to main, and say “On main.”
 Do not ship 90 and block 13 as the default. Questions first, one write.
+
+See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE WORKFLOW (Sept 16).
+- Finish the brand you started. Do not hop brands.
+- New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
+- SPROUTS-STYLE EXCEPTION: stash leftovers only when Brandon says so (~25+ still-blocked panels). Stash is founder call, not the bot’s. Stashed names stay in this file.
+- Store-brand OI ladder: gallery / Ingredients photos on the PDP → DailyMed → NIH DSLD → founder carton photo. Do not use Google-LLM “other ingredients” lists. Minerals under the Supplement Facts bar are actives, not Other Ingredients.
+- After a brand closes, log it here with date/time so we know when that catalog is stale.
 
 Scope:
 - In: US OTC / vitamins / supplements, including supplement-aisle powders (example: MegaFood Daily Turmeric Nutrient Booster Powder).
@@ -450,13 +488,13 @@ Completed (main, unverified drafts unless noted):
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
-Next queue:
-1) Boericke & Tafel / Medinatura
-2) Nature’s Way in-scope
-3) Then Tylenol / Advil / Aleve holes
-4) Thrive brand-list hole punch
-5) Amazon US P&F brands not yet on main
-Then SKU/barcode factory. Night photos stay KYR2. Catalog → new KYR3 after this KYR2 thread is photos-only.
+NEXT
+- KYR3: next brand after current Sprouts house leftovers / queue already on main. New writes include UPC/set-id when found.
+- Sprouts store-brand still-blocked: keep the named unread house list in this file (notes already cite ~187). Do not guess OI.
+- After natural-grocer house brands: mass-market holes (Tylenol / Advil / Aleve etc.), then Thrive hole punch, then Amazon US brands not on main, then store generics (CVS, Walgreens, Walmart, Safeway/Vons Signature, Dollar General / Dollar Tree, etc.).
+- KYR5: open when Brandon says; test barcode PRs on Pain & Fever rows with no UPC; no merge until he says so.
+- KYR4: photos only on paste. Do not restart 12:30.
+- Oils bottles: hunt-list only (name + URL). Never Search-graded.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
