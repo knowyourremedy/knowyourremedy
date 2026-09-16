@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 15, 2026 (Amazon leftover cream exact tokens; MIT High):** High/Avoid — Methylisothiazolinone / MIT (leave-on cream). D&C red #27 / #30 aluminum lake added as exact High-family strings. Cleared — emu oil as topical fill (already those words); glyceryl caprylate; glyceryl monostearate SE (exact; aliases glyceryl stearate SE); hydrogenated vegetable oil as cream fill (tap ≠ gummy High); C12-15 alkyl benzoate; ethylhexyl stearate; methyl gluceth-20; methyl glucose sesquistearate; cetyl myristoleate; choline bitartrate; dipotassium glycyrrhizinate; coco-caprylate/caprate; dimethiconol stearate; potassium carbomer; laureth-7; trideceth-6; C13-14 isoparaffin; polyethylene (chew binder); dextrates hydrated. Caution — acetylated lanolin / hydroxylated lanolin (lanolin family, not Cleared); caprylhydroxamic acid; polysorbate 85; PEG-8 dimethicone; PEG-100 stearate; ceteareth-20; retinyl palmitate; horse chestnut / comfrey / zanthoxylum extracts as scent-extract; polyacrylamide; acrylate/C10-30 alkyl acrylate crosspolymer; diazolidinyl urea (already on the DMDM row; exact string restamped). Limited alias — SD alcohol 39C on the alcohol-vehicle row.
+
 **Changed Sept 15, 2026 (Amazon P&F leftover spellings):** Caution — iron oxide yellow (alias with ferric oxide yellow; both strings written); oleoresin turmeric (distinct from Cleared turmeric-as-color). Cleared — glyceryl dibehenate (exact words; dibehenin already Cleared ≠ this string). Limited — isomalt (was missing). Do not invent a grade for unlabeled “Vegetable Capsule.”
 
 **Changed Sept 15, 2026 (Amazon P&F leftover exact tokens):** Cleared — gamma-cyclodextrin; succinic acid; polyvinyl alcohol (oral coating); shellac; emu oil as topical fill (tap ≠ gummy High). Caution — rice flour; ferric oxide red; ferric oxide yellow; iron oxides; iron oxide red; polyvinyl acetate phthalate; ammonium glycyrrhizin. Exact alias: 3-(2-ethylhexyloxy)propane-1,2-diol = same Caution as ethylhexylglycerin (both strings written).
@@ -169,7 +171,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Also appears as | Why high-risk |
 |---|---|---|
 | Titanium dioxide | E171, "color added" | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. |
-| Synthetic dyes | FD&C/D&C colors, aluminum lakes | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. |
+| Synthetic dyes | FD&C/D&C colors, aluminum lakes, D&C red #27 aluminum lake, D&C red #30 aluminum lake | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. D&C red #27 / #30 aluminum lake sit on this same High family — exact strings added. |
+| D&C red #27 aluminum lake / D&C red #30 aluminum lake — LOCKED (Sept 15, 2026) | D&C Red No. 27, D&C Red No. 30, red 27 lake, red 30 lake | Exact High-family strings. Same synthetic-dye Avoid row. |
+| Methylisothiazolinone / MIT (leave-on cream) — LOCKED (Sept 15, 2026) | MIT, methylisothiazolinone | High/Avoid in leave-on cream. Exact tokens. |
 | Parabens — LOCKED (Sept 15, 2026 form lock) | methyl-, ethyl-, propyl-, butyl-, isobutylparaben | High in every form, including rubs and patches. Not a topical exception. EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
 | BHA | butylated hydroxyanisole, E320 | NTP "reasonably anticipated" human carcinogen; Prop 65 listed. |
 | BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
@@ -206,7 +210,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
-| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit, SD alcohol, alcohol denat. | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit / SD alcohol sit on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
+| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit, SD alcohol, SD alcohol 39C, alcohol denat. | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit / SD alcohol / SD alcohol 39C sit on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
+| SD alcohol 39C — LOCKED (Sept 15, 2026) | SD alcohol 39-C | Exact alias. Same Limited alcohol-vehicle row. Do not invent a second alcohol class. |
 | Isopropyl alcohol — LOCKED (Sept 15, 2026) | IPA, isopropanol | Alcohol vehicle family. Not Avoid. Tap if useful vs ethyl alcohol. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | isomalt — LOCKED (Sept 15, 2026) | isomalt | Limited. Exact token. Sugar-alcohol neighborhood. Was missing from the table. |
@@ -349,7 +354,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | grape seed oil as cream fill — LOCKED (Sept 15, 2026) | Exact token when labeled as oil in a cream. Named single oil as cream vehicle. NOT gummy High. Tap form. Distinct from Cleared grape seed extract. Do not Caution when it is the cream vehicle. |
 | arachidic acid, lauric acid, linoleic acid, linolenic acid, myristic acid, palmitic acid — LOCKED (Sept 15, 2026) | Exact fatty-acid tokens. Cleared. Stearate / oleic cousins. |
 | hydrogenated castor oil — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from the castor / polyoxyl castor row. |
-| glyceryl stearate SE — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. |
+| glyceryl stearate SE — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. Also written as glyceryl monostearate SE. |
 | glyceryl distearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate. |
 | magnesium sulfate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | lysine — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -376,6 +381,24 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | emu oil as topical fill — LOCKED (Sept 15, 2026) | Named single oil as topical fill. Cleared. Tap fill ≠ gummy High. |
 | glyceryl dibehenate — LOCKED (Sept 15, 2026) | Exact words. Cleared. Stearate / dibehenin neighborhood. Dibehenin already Cleared ≠ this string. |
+| glyceryl caprylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| glyceryl monostearate SE — LOCKED (Sept 15, 2026) | Exact words. Cleared. Alias of glyceryl stearate SE. Both strings written. |
+| hydrogenated vegetable oil as cream fill — LOCKED (Sept 15, 2026) | Exact token as cream fill. Cleared. Tap fill ≠ gummy High. |
+| C12-15 alkyl benzoate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| ethylhexyl stearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| methyl gluceth-20 — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| methyl glucose sesquistearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Cleared methyl glucose dioleate. |
+| cetyl myristoleate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| choline bitartrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| dipotassium glycyrrhizinate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Caution ammonium glycyrrhizin and from Cleared licorice extract. |
+| coco-caprylate/caprate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from cocoyl caprylocaprate. |
+| dimethiconol stearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| potassium carbomer — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from the carbomer family row — exact words added. |
+| laureth-7 — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| trideceth-6 — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| C13-14 isoparaffin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Caution isohexadecane. |
+| polyethylene (chew binder) — LOCKED (Sept 15, 2026) | Exact token as chew binder. Cleared. Distinct from PEG / polyethylene glycol (Moderate). |
+| dextrates hydrated — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -398,6 +421,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
 | Phenoxyethanol (topical preservative) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution. Topical preservative. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lanolin (topical) — **LOCKED (Sept 14, 2026 housekeeping)** | Caution hypersensitivity pattern (wool-alcohol sensitivity), not Avoid. | Standard alternatives rule. Prefer a lanolin-free Good option in the same category if one exists. Do not raise to Avoid. |
+| acetylated lanolin / hydroxylated lanolin — LOCKED (Sept 15, 2026) | Exact tokens. Same Caution as lanolin. Do not Clear. | Standard alternatives rule. Prefer a lanolin-free Good option in the same category if one exists. Do not raise to Avoid. |
 | Wood rosin / colophony (topical) — LOCKED | Contact-allergy pattern. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lavender oil (topical) — LOCKED (Sept 15, 2026) | Fragrance-style topical scent. Same posture as fragrance / parfum. Not Avoid. | Standard alternatives rule. Prefer a fragrance-free Good option in the same category if one exists. Do not raise to Avoid. |
 | Wintergreen extract (topical inactive) — LOCKED (Sept 15, 2026) | Caution. Topical inactive. Not Avoid. | Standard alternatives rule. Not Avoid. |
@@ -445,6 +469,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Synthetic beeswax — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Distinct from Cleared beeswax. | Standard alternatives rule. Not Avoid. |
 | Topical talc in a cream/patch — LOCKED (Sept 15, 2026) | Caution. Not the oral-talc High swallow rule. Tap form. | Standard alternatives rule. Not Avoid. |
 | DMDM hydantoin / diazolidinyl urea — LOCKED (Sept 15, 2026) | Formaldehyde-donor. Caution. Not Avoid unless founder later bumps. | Standard alternatives rule. Not Avoid. |
+| diazolidinyl urea — LOCKED (Sept 15, 2026) | Exact string. Same Caution as the DMDM / diazolidinyl urea row. Already locked; restamped so the bare token matches. | Standard alternatives rule. Not Avoid. |
 | aluminum hydroxide (topical / patch) — LOCKED (Sept 15, 2026) | Exact inactive token. Not the oral antacid active-safety cap row. | Standard alternatives rule. Not Avoid. |
 | aluminum silicate / synthetic aluminum silicate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | dihydroxyaluminum aminoacetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
@@ -507,6 +532,15 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | ammonium glycyrrhizin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared licorice / Glycyrrhiza extract. | Standard alternatives rule. Not Avoid. |
 | oleoresin turmeric — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared turmeric/curcumin as a color only. | Standard alternatives rule. Not Avoid. |
+| caprylhydroxamic acid — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| polysorbate 85 — LOCKED (Sept 15, 2026) | Exact token. Caution. Distinct numbered ester — do not alias to P80/P20/P60 alone. | Standard alternatives rule. Not Avoid. |
+| PEG-8 dimethicone — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| PEG-100 stearate — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from the PEG Moderate family row — exact words added. | Standard alternatives rule. Not Avoid. |
+| ceteareth-20 — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| retinyl palmitate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| horse chestnut / comfrey / zanthoxylum extracts as scent-extract — LOCKED (Sept 15, 2026) | Exact topical scent-extract tokens. Extract/scent rule. | Standard alternatives rule. Not Avoid. |
+| polyacrylamide — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from the AMPS / acrylate-acrylamide family row — exact words added. | Standard alternatives rule. Not Avoid. |
+| acrylate/C10-30 alkyl acrylate crosspolymer — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
