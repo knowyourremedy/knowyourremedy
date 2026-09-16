@@ -187,7 +187,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Additive | Also appears as | Why limited-risk |
 |---|---|---|
 | Xylitol, erythritol (oral) | — | GI effects at volume. Oral/ingested only — cleared topical/nasal. |
-| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit sits on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
+| Alcohol / ethyl alcohol as a VEHICLE — LOCKED (Sept 14, 2026) | alcohol, ethyl alcohol, methylated spirit, SD alcohol, alcohol denat. | Oral homeopathic liquid or topical first-aid. Limited, not Avoid. Methylated spirit / SD alcohol sit on this same alcohol-vehicle row — do not invent a second alcohol class. Tap: alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. |
 | Isopropyl alcohol — LOCKED (Sept 15, 2026) | IPA, isopropanol | Alcohol vehicle family. Not Avoid. Tap if useful vs ethyl alcohol. |
 | Other sugar alcohols | sorbitol, maltitol, mannitol | GI effects at volume. |
 | Synthetic preservatives | sodium benzoate, potassium sorbate | Generally low risk; benzoate + vitamin C can form trace benzene. |
@@ -257,6 +257,21 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Glyceryl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
 | Diisopropyl adipate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
 | Methyl glucose dioleate — LOCKED (Sept 15, 2026) | Topical emollient. |
+| cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Not a cousin shortcut. |
+| glyceryl dilaurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| soybean sterols — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| potassium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| panthenol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| magnesium ascorbyl phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| triethyl citrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| butylene glycol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| squalane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| oleyl alcohol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| zinc oxide (inactive / topical) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Distinct from parked zinc-as-active. |
+| glucosamine / glucosamine sulfate (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
+| MSM / methylsulfonylmethane (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
+| chondroitin sulfate (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
 | Cetearyl olivate, sorbitan olivate — LOCKED (Sept 15, 2026) | Topical emulsifier pair. |
 | Cetyl esters wax, emulsifying wax — LOCKED (Sept 15, 2026) | Wax family. |
 | Cocoyl caprylocaprate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
@@ -375,6 +390,22 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Synthetic beeswax — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Distinct from Cleared beeswax. | Standard alternatives rule. Not Avoid. |
 | Topical talc in a cream/patch — LOCKED (Sept 15, 2026) | Caution. Not the oral-talc High swallow rule. Tap form. | Standard alternatives rule. Not Avoid. |
 | DMDM hydantoin / diazolidinyl urea — LOCKED (Sept 15, 2026) | Formaldehyde-donor. Caution. Not Avoid unless founder later bumps. | Standard alternatives rule. Not Avoid. |
+| aluminum hydroxide (topical / patch) — LOCKED (Sept 15, 2026) | Exact inactive token. Not the oral antacid active-safety cap row. | Standard alternatives rule. Not Avoid. |
+| aluminum silicate / synthetic aluminum silicate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| dihydroxyaluminum aminoacetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| silodrate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| dicetyl phosphate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| capsaicin (when listed as inactive) — LOCKED (Sept 15, 2026) | Exact token when listed as inactive. | Standard alternatives rule. Not Avoid. |
+| ferric ferrocyanide — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| methyl acrylate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| ethylhexyl acetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| acrylic acid — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| PVM/MA Decadiene Crosspolymer — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| tert-butyl alcohol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| denatonium / denatonium benzoate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| Mentha arvensis leaf oil — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| cinnamon oil — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| polygalic acid / polygallic acid — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
