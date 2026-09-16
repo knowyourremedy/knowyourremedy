@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Amazon house punch live — Basic Care / Basics / Elements / Mama Bear / Solimo / Revly)
+Last Updated: September 16, 2026 (Amazon house punch live — batch61 pinned-OI 18 written; full list not complete)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -156,11 +156,12 @@ Parked
 Next session
 - LIVE NOW: Amazon house punch = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only. Thrive no_OI carton hunt optional. Then store generics. Then KYR5 PR-only.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Do not re-catalog those.
+- Amazon house pinned-OI batch61 (18) written. Missing-OI house SKUs still open. Do not mark Amazon US full list complete.
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 PR-only until founder OK.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–60 already exist.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–61 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -535,6 +536,7 @@ Completed (main, unverified drafts unless noted):
   - Forces of Nature Wart Extra Strength — DailyMed vs brand conflict
   - Scan 21 no_OI pile (Anima Mundi tonics, Codeage Multi Collagen/Platinum/Teens Fermented Multi, GOL Kids+/fiber, Thrive Multi-Collagen, Himalaya Psyllium, All Terrain bandages, Ollois Histaminum, one Thorne Creatine tub, Active Skin Repair hydrogels, shopping-list bundles)
   Oil-bottle hunt unchanged (never graded): Thrive MCT / C8 MCT, BUBS MCT creamer, Carlson CLO, Barlean’s flax, Manitoba hemp, Heritage castor, Herb Pharm Kids Mullein Garlic Oil.
+- Amazon house pinned-OI wave — Sept 16, 2026 — batch61-amazon-house-pinned.ts. Search 18 new (Clean 1 / Caution 2 / Avoid 15). NEW 18 / REUSE 0. DailyMed/DSLD/harvest only. Missing-OI SKUs not written. Do not reopen batch30 / 54–58 / 59–60. Amazon US full list still not complete.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
@@ -546,7 +548,7 @@ Amazon house punch live = Basic Care / Basics / Elements / Mama Bear / Solimo / 
 THEN
 4) KYR5 barcode backfill (PR-only until founder OK)
 5) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks) — not live
-Do NOT mark complete: Thrive no_OI leftovers, Amazon US full list, store generics. Thrive punch 241 + refused unlock 36 are DONE — do not re-catalog those. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: Thrive no_OI leftovers, Amazon US full list, store generics. Thrive punch 241 + refused unlock 36 are DONE — do not re-catalog those. Amazon house pinned-OI batch61 (18) is written — missing-OI house SKUs remain. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
