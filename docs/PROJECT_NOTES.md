@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Thrive punch 241 + refused unlock 36 on main; no_OI stays refused)
+Last Updated: September 16, 2026 (Amazon house punch live — Basic Care / Basics / Elements / Mama Bear / Solimo / Revly)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -154,7 +154,7 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI carton hunt (founder / stash) — optional (2) Amazon US brands not on main (3) Store generics. Then KYR5 barcodes PR-only.
+- LIVE NOW: Amazon house punch = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only. Thrive no_OI carton hunt optional. Then store generics. Then KYR5 PR-only.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Do not re-catalog those.
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
@@ -539,6 +539,7 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
+Amazon house punch live = Basic Care / Basics / Elements / Mama Bear / Solimo / Revly. 3P later. WELMATE / A+Health / HealthA2Z stay P&F-only.
 1) Thrive no_OI carton hunt (founder / stash) — optional
 2) Amazon US brands not on main
 3) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
