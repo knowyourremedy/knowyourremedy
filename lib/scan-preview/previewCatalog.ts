@@ -48,6 +48,7 @@ import {
   BATCH45_PAIN_RUBS_REMAINING,
   BATCH46_PAIN_RUB_REFUSED_UNLOCK,
   BATCH47_PAIN_RUB_EXACT_UNLOCK,
+  BATCH48_SALONPAS_TIGER_BALM_WRITE,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -116,6 +117,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH45_PAIN_RUBS_REMAINING,
   ...BATCH46_PAIN_RUB_REFUSED_UNLOCK,
   ...BATCH47_PAIN_RUB_EXACT_UNLOCK,
+  ...BATCH48_SALONPAS_TIGER_BALM_WRITE,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -717,6 +719,18 @@ assertLetterOnly('salonpas-pain-relieving-patch-large', 'Salonpas');
 assertLetterOnly('salonpas-lidocaine-gel-patch-hisamitsu', 'Salonpas');
 assertLetterOnly('salonpas-lidocaine-flex-patch', 'Salonpas');
 assertLetterOnly('salonpas-pain-relieving-patch', 'Salonpas');
+assertLetterOnly('salonpas-lidocaine-plus-cream', 'Salonpas');
+assertLetterOnly('salonpas-arthritis-pain-patch', 'Salonpas');
+assertLetterOnly('salonpas-pain-relief-patch', 'Salonpas');
+assertLetterOnly('salonpas-arthritis-pain-patch-large', 'Salonpas');
+assertLetterOnly('salonpas-pain-relief-patch-large', 'Salonpas');
+assertLetterOnly('salonpas-gel-patch-hot', 'Salonpas');
+assertLetterOnly('salonpas-hot-capsicum-patch', 'Salonpas');
+assertLetterOnly('tiger-balm-hydrogel-patch-large', 'Tiger Balm');
+assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
+assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
+assertLetterOnly('tiger-balm-arthritis-rub', 'Tiger Balm');
+assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });

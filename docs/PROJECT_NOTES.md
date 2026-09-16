@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 15, 2026 (last Salonpas Tiger Balm exact tokens; cloth/film not inactives)
+Last Updated: September 16, 2026 (batch 48 Salonpas / Tiger Balm PR #95 refused WRITE)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -429,6 +429,7 @@ Completed (main, unverified drafts unless noted):
 - Pain rubs remaining (Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table) — Sept 15, 2026 — leftover strings confirmed on §5. Batch45 wrote the gradeable remainder. REFUSED still-missing §5 stay questions. Pain rubs stay Pain & Fever.
 - Pain rubs PR #93 refused-unlock — Sept 16, 2026 — batch46 Search 3 (Caution 2 / Avoid 1 / Clean 0). Wrote only SKUs whose current DailyMed OI now maps: Tiger Balm Pain Relieving Patch + Hydrogel Patch (shared formulaId; mentha oil gone from SPL) and Neck & Shoulder vanishing scent (PVM/MA gone; PEG-120 on PEG Moderate row; Avoid Blue 1 + parabens). Do not clone batch45 neck-shoulder formulaId. REFUSED 37 still-missing. Reuse 41/42/44/45 untouched. Pain rubs stay Pain & Fever.
 - Pain rubs PR #93/#94 exact-unlock — Sept 16, 2026 — batch47 Search 25 (Caution 6 / Avoid 19 / Clean 0). Wrote only SKUs whose every current DailyMed OI token has an exact §5 row. Cousin-matching refused. REFUSED 12 still-missing exact tokens (ceteth phosphate / unspecified steareth / unspecified polysorbate; mentha oil; PEG-120 methyl glucose dioleate; magnesium aluminometasilicate / unspecified nonoxynol; polybutene; alicyclic saturated hydrocarbon resin / baking cloth / film). Reuse 41/42/44/45/46 untouched. Pain rubs stay Pain & Fever.
+- Pain rubs PR #95 refused-unlock — Sept 16, 2026 — batch48 Search 12 (Caution 9 / Avoid 3 / Clean 0). Wrote the remaining Salonpas / Tiger Balm refused set after the last exact-token locks. baking cloth + film ignored (backing / device, not inactives). Four menthol 3% / methyl salicylate 10% patches share formulaId; regular + wider TB hydrogel share formulaId. REFUSED: none. Reuse 41/42/44/45/46/47 untouched. Pain rubs stay Pain & Fever.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
