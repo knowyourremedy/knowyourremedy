@@ -284,13 +284,6 @@ const GENEXA_KIDS = 'genexa-kids-apap-liquid';
 const EQUATE_IBU = 'equate-ibuprofen-dye-free';
 const ARNICARE_GEL = 'boiron-arnicare-gel';
 
-const APAP_ALTS: CleanAlternative[] = [
-  alt(
-    GENEXA_ES,
-    'Independently Clean adult acetaminophen Extra Strength already on main (founder-exception Clean). Same Pain & Fever shelf. Form labeled, not a hard filter (§6).',
-  ),
-];
-
 const KIDS_APAP_ALTS: CleanAlternative[] = [
   alt(
     GENEXA_KIDS,
