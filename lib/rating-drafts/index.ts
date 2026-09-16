@@ -46,3 +46,4 @@ export { BATCH45_PAIN_RUBS_REMAINING } from './batch45-pain-rubs-remaining';
 export { BATCH46_PAIN_RUB_REFUSED_UNLOCK } from './batch46-pain-rub-refused-unlock';
 export { BATCH47_PAIN_RUB_EXACT_UNLOCK } from './batch47-pain-rub-exact-unlock';
 export { BATCH48_SALONPAS_TIGER_BALM_WRITE } from './batch48-salonpas-tiger-balm-write';
+export { BATCH49_PAIN_FEVER_LIST2 } from './batch49-pain-fever-list2';

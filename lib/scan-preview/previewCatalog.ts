@@ -49,6 +49,7 @@ import {
   BATCH46_PAIN_RUB_REFUSED_UNLOCK,
   BATCH47_PAIN_RUB_EXACT_UNLOCK,
   BATCH48_SALONPAS_TIGER_BALM_WRITE,
+  BATCH49_PAIN_FEVER_LIST2,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -118,6 +119,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH46_PAIN_RUB_REFUSED_UNLOCK,
   ...BATCH47_PAIN_RUB_EXACT_UNLOCK,
   ...BATCH48_SALONPAS_TIGER_BALM_WRITE,
+  ...BATCH49_PAIN_FEVER_LIST2,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -731,6 +733,10 @@ assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
 assertLetterOnly('tiger-balm-arthritis-rub', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
+assertLetterOnly('biofreeze-ultraflex-lidocaine-4-patch', 'Biofreeze');
+assertLetterOnly('biofreeze-ultraflex-plus-lidocaine-menthol-patch', 'Biofreeze');
+assertLetterOnly('capzasin-quick-relief-gel', 'Capzasin');
+assertLetterOnly('mineral-ice-extreme-menthol-spray', 'Mineral Ice');
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
