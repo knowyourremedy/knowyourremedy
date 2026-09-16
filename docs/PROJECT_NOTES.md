@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 16, 2026 (Amazon house punch live — batch61 pinned-OI 18 written; full list not complete)
+Last Updated: September 16, 2026 (OI hunt = PDP carousel every tile; Mama Bear carton OI locked)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -88,7 +88,7 @@ BRAND-CLOSE WORKFLOW
 - No SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls a Sprouts-style pile.
 - Bot scans the WHOLE in-scope US line first. Questions come here BEFORE the write. One merge should close the brand.
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
-- Missing panel: advisor names the next SKU; Brandon hunts one-by-one (store site → DailyMed → NIH DSLD → founder photo). Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
+- Missing panel: advisor names the next SKU; Brandon hunts one-by-one. OI hunt order is PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -238,6 +238,8 @@ NIGHT SCHEDULE
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
+- OI hunt order is PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
+- Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
 - Next catalog day: Thrive no_OI carton hunt (optional), then Amazon US brands not on main, then store generics. Sprouts house stays STASHED. Do not catalog Sprouts.
@@ -261,7 +263,9 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
 - New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
-- Missing panel hunt: store site → DailyMed → NIH DSLD → founder photo. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
+- OI hunt order is PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Amazon house and all later store punches use this.
+- Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution.
+- Missing panel hunt: PDP image carousel (every tile) → DailyMed → NIH DSLD. HTML bullets alone do not justify no_OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
