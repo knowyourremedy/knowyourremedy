@@ -1165,6 +1165,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   // ── Caution — newer capsules ────────────────────────────
   cautionCustom({
     id: 'megafood-extra-strength-magnesium-glycinate',
+    barcode: '051494106204',
     productName: 'Extra Strength Magnesium Glycinate Capsules',
     category: VITAMINS,
     form: 'capsule',
@@ -1201,6 +1202,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-vitamin-k1-k2',
+    barcode: '051494106136',
     productName: 'Vitamin K1 & K2 Capsules',
     category: VITAMINS,
     form: 'capsule',
@@ -1471,6 +1473,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-l-theanine-b-complex',
+    barcode: '051494105450',
     productName: 'L-Theanine & B-Complex',
     category: VITAMINS,
     form: 'tablet',
@@ -1898,6 +1901,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-vitamin-d3-k2-5000-gummies',
+    barcode: '051494106037',
     productName: 'Vitamin D3+ K2 5000 IU Gummies',
     category: IMMUNE,
     form: 'gummy',
@@ -2453,6 +2457,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   },
   cautionCustom({
     id: 'megafood-daily-turmeric-nutrient-booster-powder',
+    barcode: '051494601389',
     productName: 'Daily Turmeric Nutrient Booster Powder',
     category: VITAMINS,
     form: 'powder',
