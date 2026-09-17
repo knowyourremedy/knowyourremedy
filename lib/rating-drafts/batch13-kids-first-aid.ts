@@ -770,6 +770,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     productName: 'Aquaphor Healing Fast Relief Diaper Rash Paste',
     brand: 'Aquaphor',
     category: FIRST_AID,
+    barcode: '072140026615',
     formulaId: AQUAPHOR_ZNO,
     audience: KIDS,
     minAge: 0,
