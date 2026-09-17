@@ -840,6 +840,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Elements Vegan Biotin 5000 mcg',
     brand: ELEMENTS,
     category: VITAMINS,
+    barcode: '842379103087',
     formulaId: 'amazon-elements-biotin-5000',
     audience: ADULT,
     minAge: 18,

@@ -502,6 +502,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     productName: 'Nature Made Burp-Less Fish Oil 1200 mg Softgels',
     brand: 'Nature Made',
     category: VITAMINS,
+    barcode: '031604026578',
     formulaId: 'nature-made-fish-oil-1200-burpless',
     audience: ADULT,
     minAge: 18,
