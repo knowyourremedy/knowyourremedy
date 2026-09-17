@@ -1199,6 +1199,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'Midol Complete',
     brand: 'Midol',
     category: PAIN_FEVER,
+    barcode: '312843158597 312843555198',
     formulaId: ID.midol,
     audience: ADULT,
     minAge: 12,

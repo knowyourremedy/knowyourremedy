@@ -813,6 +813,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     productName: "Zarbee's Children's Elderberry Immune Support Gummies",
     brand: "Zarbee's",
     category: IMMUNE,
+    barcode: '898115002749',
     formulaId: 'zarbees-kids-immune-gummies',
     audience: KIDS,
     minAge: 2,
