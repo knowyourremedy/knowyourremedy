@@ -441,6 +441,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-mag-phos-6x',
+    barcode: '354973409415',
     productName: "Hyland's Cell Salt #8 Mag Phos 6X",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -466,6 +467,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-leg-cramps',
+    barcode: '354973295612 354973295667',
     productName: "Hyland's Leg Cramps Tablets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -499,6 +501,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-leg-cramps-pm',
+    barcode: '354973309319',
     productName: "Hyland's Leg Cramps PM Tablets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -584,6 +587,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-restful-legs',
+    barcode: '354973316218',
     productName: "Hyland's Restful Legs Tablets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -807,6 +811,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-bioplasma',
+    barcode: '354973408616',
     productName: "Hyland's Cell Salt Bioplasma Tablets",
     brand: BRAND,
     category: IMMUNE,
@@ -845,6 +850,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-calc-fluor-6x',
+    barcode: '354973408715',
     productName: "Hyland's Cell Salt #1 Calc Fluor 6X",
     brand: BRAND,
     category: COLD_FLU,
@@ -895,6 +901,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kali-phos-6x',
+    barcode: '354973409217',
     productName: "Hyland's Cell Salt #6 Kali Phos 6X",
     brand: BRAND,
     category: SLEEP,
@@ -920,6 +927,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-nat-mur-6x',
+    barcode: '354973409514',
     productName: "Hyland's Cell Salt #9 Nat Mur 6X",
     brand: BRAND,
     category: COLD_FLU,
@@ -945,6 +953,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-nat-phos-6x',
+    barcode: '354973409613',
     productName: "Hyland's Cell Salt #10 Nat Phos 6X",
     brand: BRAND,
     category: DIGESTIVE,
@@ -970,6 +979,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-silicea-6x',
+    barcode: '354973409811',
     productName: "Hyland's Cell Salt #12 Silicea 6X",
     brand: BRAND,
     category: FIRST_AID,

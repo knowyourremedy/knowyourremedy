@@ -1183,6 +1183,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-magnesium-glycinate',
+    barcode: '051494105597',
     productName: 'Magnesium Glycinate',
     category: VITAMINS,
     form: 'capsule',
