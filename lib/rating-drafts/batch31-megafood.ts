@@ -1223,6 +1223,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-womens-whole-body-capsules',
+    barcode: '051494106068',
     productName: 'Women\'s Whole Body Multi Capsules',
     category: VITAMINS,
     form: 'capsule',
@@ -1246,6 +1247,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-mens-whole-body-capsules',
+    barcode: '051494106051',
     productName: 'Men\'s Whole Body Multi Capsules',
     category: VITAMINS,
     form: 'capsule',
@@ -1333,6 +1335,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-high-absorption-coq10',
+    barcode: '051494105696',
     productName: 'High Absorption CoQ10',
     category: VITAMINS,
     form: 'capsule',
@@ -1425,6 +1428,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-nac',
+    barcode: '051494105993',
     productName: 'NAC (N-Acetyl Cysteine)',
     category: IMMUNE,
     form: 'capsule',
@@ -1443,6 +1447,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-sea-moss-complex',
+    barcode: '051494105832',
     productName: 'Sea Moss Complex',
     category: IMMUNE,
     form: 'capsule',
