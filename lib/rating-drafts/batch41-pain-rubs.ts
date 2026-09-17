@@ -430,6 +430,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     productName: 'Tylenol Precise Lidocaine 4% Patch',
     brand: 'Tylenol',
     category: PAIN_FEVER,
+    barcode: '074300353357',
     formulaId: ID.precisePatch,
     audience: ADULT,
     minAge: 12,

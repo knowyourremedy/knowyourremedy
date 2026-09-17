@@ -981,7 +981,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Original Pain Relief Cream (trolamine salicylate)',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
-    barcode: '041167057032',
+    barcode: '041167057032 041167057247 041167057230',
     formulaId: ID.asperOrig,
     audience: ADULT,
     minAge: 12,
@@ -1448,7 +1448,7 @@ if (BATCH47_PAIN_RUB_EXACT_UNLOCK.some((record) => record.category !== PAIN_FEVE
   throw new Error('batch 47 stays on Pain & Fever');
 }
 const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
-  [ID.asperOrig]: '041167057032',
+  [ID.asperOrig]: '041167057032 041167057247 041167057230',
   [ID.salonPrpLarge]: '346581210064',
   [ID.icyLidoLarge]: '041167172018',
   [ID.asperLav]: '041167056851',
