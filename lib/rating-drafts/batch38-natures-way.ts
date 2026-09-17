@@ -3247,6 +3247,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-asian-ginseng",
+    barcode: "033674134009 033674133002",
     handle: "asian-ginseng",
     productName: "Asian Ginseng",
     category: "Immune Support",
@@ -3255,6 +3256,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-asian-ginseng-premium-extract",
+    barcode: "033674617007",
     handle: "asian-ginseng-premium-extract",
     productName: "Asian Ginseng Standardized Extract",
     category: "Immune Support",
@@ -3263,6 +3265,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-astragalus",
+    barcode: "033674153833",
     handle: "astragalus",
     productName: "Astragalus",
     category: "Immune Support",
@@ -3271,6 +3274,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-astragalus-root",
+    barcode: "033674101803 033674153376",
     handle: "astragalus-root",
     productName: "Astragalus Root",
     category: "Immune Support",
@@ -3279,6 +3283,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-b-50-complex",
+    barcode: "033674405116",
     handle: "b-50-complex",
     productName: "B-50 Complex",
     category: "Vitamins",
@@ -3287,6 +3292,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-b-stress-formula",
+    barcode: "033674406311",
     handle: "b-stress-formula",
     productName: "B-Stress Formula",
     category: "Immune Support",
@@ -3295,6 +3301,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-black-cohosh-premium-extract",
+    barcode: "033674153536",
     handle: "black-cohosh-premium-extract",
     productName: "Black Cohosh",
     category: "Prenatal",
@@ -3303,6 +3310,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-black-cohosh-root",
+    barcode: "033674105009 033674146903",
     handle: "black-cohosh-root",
     productName: "Black Cohosh Root",
     category: "Prenatal",
@@ -3311,6 +3319,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-black-walnut-hulls",
+    barcode: "033674106006",
     handle: "black-walnut-hulls",
     productName: "Black Walnut Hulls",
     category: "Immune Support",
@@ -3319,6 +3328,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-bladderwrack",
+    barcode: "033674153802",
     handle: "bladderwrack",
     productName: "Bladderwrack",
     category: "Immune Support",
@@ -3327,6 +3337,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-blood-sugar-manager",
+    barcode: "033674792001",
     handle: "blood-sugar-manager",
     productName: "Blood Sugar Manager",
     category: "Vitamins",
@@ -3335,6 +3346,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-boron-complex",
+    barcode: "033674411018",
     handle: "boron-complex",
     productName: "Boron Complex",
     category: "Vitamins",
@@ -3343,6 +3355,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-burdock-root",
+    barcode: "033674112007",
     handle: "burdock-root",
     productName: "Burdock Root",
     category: "Immune Support",
@@ -3351,6 +3364,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-butchers-broom-root",
+    barcode: "033674112502",
     handle: "butchers-broom-root",
     productName: "Butcher’s Broom Root",
     category: "Immune Support",
@@ -3359,6 +3373,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-calcium-magnesium",
+    barcode: "033674413104 033674413111",
     handle: "calcium-magnesium",
     productName: "Calcium & Magnesium Mineral Complex",
     category: "Vitamins",
@@ -3367,6 +3382,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-calcium-magnesium-vitamin-d",
+    barcode: "033674414200 033674414217",
     handle: "calcium-magnesium-vitamin-d",
     productName: "Calcium-Magnesium-Vitamin D",
     category: "Vitamins",
@@ -3375,6 +3391,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-calcium-magnesium-zinc",
+    barcode: "033674414101 033674414118",
     handle: "calcium-magnesium-zinc",
     productName: "Calcium-Magnesium-Zinc",
     category: "Vitamins",
@@ -3383,6 +3400,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-cats-claw-bark",
+    barcode: "033674114506",
     handle: "cats-claw-bark",
     productName: "Cat's Claw Bark",
     category: "Immune Support",
@@ -3391,6 +3409,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-cats-claw-premium-extract",
+    barcode: "033674607008",
     handle: "cats-claw-premium-extract",
     productName: "Cat’s Claw Standardized Extract",
     category: "Immune Support",
@@ -3399,6 +3418,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-cell-fort-ip-6-inositol",
+    barcode: "763948058020 763948058006",
     handle: "cell-fort-ip-6-inositol",
     productName: "Cell Forté® IP-6 & Inositol",
     category: "Vitamins",
@@ -3407,6 +3427,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-chamomile-flowers",
+    barcode: "033674116005",
     handle: "chamomile-flowers",
     productName: "Chamomile Flowers",
     category: "Sleep",
@@ -3415,6 +3436,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-cherry-fruit",
+    barcode: "763948085408",
     handle: "cherry-fruit",
     productName: "Cherry Fruit Sweet Cherry Extract",
     category: "Immune Support",
@@ -3423,6 +3445,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-chlorella",
+    barcode: "033674118504",
     handle: "chlorella",
     productName: "Chlorella",
     category: "Vitamins",
@@ -3431,6 +3454,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-choline-inositol",
+    barcode: "033674404621",
     handle: "choline-inositol",
     productName: "Choline & Inositol",
     category: "Vitamins",
@@ -3439,6 +3463,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-cinnamon",
+    barcode: "033674154922 033674150825",
     handle: "cinnamon",
     productName: "Cinnamon",
     category: "Vitamins",
@@ -3447,6 +3472,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-completegest",
+    barcode: "750856600182",
     handle: "completegest",
     productName: "CompleteGest®",
     category: "Digestive",
@@ -3455,6 +3481,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-corn-silk",
+    barcode: "033674141526",
     handle: "corn-silk",
     productName: "Corn Silk",
     category: "Immune Support",
@@ -3463,6 +3490,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-dandelion-root",
+    barcode: "033674123003 033674153369",
     handle: "dandelion-root",
     productName: "Dandelion Root",
     category: "Digestive",
@@ -3471,6 +3499,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-devils-claw-secondary-root",
+    barcode: "033674123508",
     handle: "devils-claw-secondary-root",
     productName: "Devil’s Claw Root",
     category: "Pain & Fever",
@@ -3479,6 +3508,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-dong-quai-root",
+    barcode: "033674123805",
     handle: "dong-quai-root",
     productName: "Dong Quai Root",
     category: "Prenatal",
@@ -3487,6 +3517,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-echinacea-astragalus-reishi",
+    barcode: "033674004135",
     handle: "echinacea-astragalus-reishi",
     productName: "Echinacea Astragalus & Reishi Premium Blend",
     category: "Immune Support",
@@ -3495,6 +3526,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-echinacea-goldenseal",
+    barcode: "033674004159 033674121085",
     handle: "echinacea-goldenseal",
     productName: "Echinacea Goldenseal Premium Blend",
     category: "Immune Support",
@@ -3503,6 +3535,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-estrosoy",
+    barcode: "033674145364",
     handle: "estrosoy",
     productName: "EstroSoy™ Premium Blend",
     category: "Immune Support",
@@ -3511,6 +3544,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-eyebright",
+    barcode: "033674125007",
     handle: "eyebright",
     productName: "Eyebright Herb",
     category: "Allergies",
@@ -3519,6 +3553,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-herbal-eyebright",
+    barcode: "033674003800",
     handle: "herbal-eyebright",
     productName: "Eyebright Premium Blend",
     category: "Allergies",
@@ -3527,6 +3562,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-fenu-thyme",
+    barcode: "033674003503",
     handle: "fenu-thyme",
     productName: "Fenu-Thyme Premium Blend",
     category: "Immune Support",
@@ -3535,6 +3571,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-feverfew",
+    barcode: "033674128503 033674128084",
     handle: "feverfew",
     productName: "Feverfew Herb",
     category: "Pain & Fever",
@@ -3543,6 +3580,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-fo-ti-root",
+    barcode: "033674129005",
     handle: "fo-ti-root",
     productName: "Fo-Ti Root",
     category: "Immune Support",
@@ -3551,6 +3589,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-folate",
+    barcode: "033674404515",
     handle: "folate",
     productName: "Folate",
     category: "Vitamins",
