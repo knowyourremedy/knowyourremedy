@@ -445,6 +445,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Icy Hot Lidocaine Dry Spray',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167174029',
     formulaId: ID.icyLidoSpray,
     audience: ADULT,
     minAge: 12,
@@ -468,6 +469,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine Dry Spray',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167058350',
     formulaId: ID.asperLidoSpray,
     audience: ADULT,
     minAge: 12,
@@ -488,6 +490,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Icy Hot with Lidocaine No-Mess (liquid)',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167171516',
     formulaId: ID.icyNoMess,
     audience: ADULT,
     minAge: 12,
@@ -618,6 +621,9 @@ if (BATCH44_PAIN_RUBS_LIST2.some((record) => record.category !== PAIN_FEVER)) {
 const BATCH44_CATCHUP_BARCODES: Record<string, string> = {
   [ID.voltaren]: '300671201776 300671201769 300671202827',
   [ID.tigerLiniment]: '039278313222',
+  [ID.icyLidoSpray]: '041167174029',
+  [ID.asperLidoSpray]: '041167058350',
+  [ID.icyNoMess]: '041167171516',
 };
 for (const record of BATCH44_PAIN_RUBS_LIST2) {
   const expected = BATCH44_CATCHUP_BARCODES[record.id];

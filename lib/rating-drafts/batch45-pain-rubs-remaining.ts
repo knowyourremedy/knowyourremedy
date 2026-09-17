@@ -482,6 +482,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Icy Hot Pro No-Mess',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167007969',
     formulaId: ID.icyAdvanced,
     audience: ADULT,
     minAge: 12,
@@ -545,6 +546,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Icy Hot Original Vanishing Scent Gel',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167009239',
     formulaId: ID.icyVanish,
     audience: ADULT,
     minAge: 12,
@@ -1125,6 +1127,8 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbWhite]: '039278110104',
   [ID.icyAdvanced]: '041167080160',
   [ID.tbUltra]: '039278315417',
+  [ID.icyProNoMess]: '041167007969',
+  [ID.icyVanish]: '041167009239',
 };
 for (const record of BATCH45_PAIN_RUBS_REMAINING) {
   const expected = BATCH45_CATCHUP_BARCODES[record.id];
