@@ -619,6 +619,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     productName: 'Source Naturals Wellness Formula Tablets',
     brand: 'Source Naturals',
     category: IMMUNE,
+    barcode: '021078000228 021078000211 021078019596',
     formulaId: 'source-naturals-wellness-formula-tabs',
     audience: ADULT,
     minAge: 12,

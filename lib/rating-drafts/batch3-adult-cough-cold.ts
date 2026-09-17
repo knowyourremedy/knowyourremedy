@@ -312,6 +312,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Wedderspoon Organic Manuka Honey Drops',
     brand: 'Wedderspoon',
     category: COLD_FLU,
+    barcode: '814422022874 814422024809 814422020375 814422020368 814422020382',
     formulaId: 'wedderspoon-manuka-honey-drops',
     audience: ADULT,
     minAge: 12,
