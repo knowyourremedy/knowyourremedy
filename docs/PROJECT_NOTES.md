@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (KYR5-b chunk 59 opened; do not reopen #121–#180; OI hunt also finds UPC on label photo; Thrive no_OI closeout written — batch64)
+Last Updated: September 17, 2026 (missing-barcode report: 217 Search rows with no UPC/EAN/set-id; KYR5-b barcode-only gap still ~835; chunk 59 opened; do not reopen #121–#180; Thrive no_OI closeout written — batch64)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -964,3 +964,48 @@ May 28 — Strategic pivot to Yuka-for-medicine + methodology + Allergies
 
 Repositioned as Yuka for medicine/supplements/remedies. Clean Rating Methodology v1 committed. Allergies Clean Picks shipped (8 picks).
 May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus ER + Badger as clean equivalents [Equate correction — see Aug 8]. Advil removed from Pain & Fever. Pain & Fever Clean Picks shipped; per-category folder architecture locked; Card design Option A. May 25 — Clean Brands → Everyday Clean Picks rename. May 22 — Visual direction locks. Earlier — Conditions rename, interaction checker, dosage calculator, Supabase schema. [most now cut]
+
+================================================================
+Missing barcodes — in-store first (Sept 17, 2026)
+================================================================
+Search catalog (parked Pedialyte out). A row has a code if it has UPC/EAN on `barcode` or a DailyMed set-id in sources. Do not invent codes. Do not grade. Unwritten Sprouts house stash ≈55 + 3 refused is excluded (not Search rows). Hyland’s / MegaFood / Genexa = 0 missing codes.
+
+Totals
+- Search rows: 2203
+- Rows with a code: 1986
+- Rows missing UPC/EAN/set-id: 217
+- Rows missing UPC/EAN only (may still have set-id): 835 — this is the KYR5-b barcode-only gap
+- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 217 rows / 217 formulaIds — no pack-size clones in the no-code pile.
+
+1) IN-STORE — 182 missing (group by brand). Hunt these first.
+- Sprouts — 116 (already written batch35/36/16; not the unwritten stash): 100% Vegetarian Immune Rescue; Ashwagandha Powder Cap; Astragalus Liquid; B Complex Raspberry Liquid; B-12 1000 mcg Prolonged Release; B-12 500 mcg Tablets; B-12 Raspberry 1000 mcg; B-12 with Folic Acid & Vitamin B6 Liquid; B-6 100 mg; B12 Liquid Sublingual Alcohol Free; Black Walnut Liquid; Bronchial Syrup; Burdock Liquid; Calcium 600 mg with Vitamin D Softgel; Calcium Citrate with Vitamin D; Colon Clean Powder Cap; Cranberry; Cranberry + D-Mannose; D-Mannose + Cranberry Powder; D3 5000 IU Citrus MCT Oil; D3/K2 Gummies; Detox Drops; Dragonfruit Relax-All Ease Powder; Elderberry Umckaloabo & Zinc Syrup; Fenugreek Powder Cap; Folic Acid 800 mcg; Fresh Dandelion Alcohol Free; Garlic Capsules; Garlic Softgels; Ginger & Elderberry Immune Syrup; Ginger & Wild Cherry Bronchial Syrup; Ginkgo Biloba Veggie Capsules; Glutathione 500 mg; Hawthorn Cap; Hawthorn Liquid; High Potency Omega-3 + Turmeric; Holy Basil Cap; Holy Basil Liquid; Inflacalm Ache Relief; Inflacalm Powder Cap; Iodine With Kelp; Kava Liquid; Kava Powder Cap; Kids Ear Clear Oil; Krill Oil; L-Lysine 1000 mg; L-Lysine 500 mg; Lemonbalm Liquid; Licorice Liquid; Lion’s Mane Liquid; Lion’s Mane Veggie Capsules; Liver Detox with Milk Thistle; Lymph Tonic; Maca Powder Cap; Male Virility; Mega Magnesium; Melatonin 3 mg Liquid; Melatonin 3 mg Tablets; Moringa 100% Powder; Moringa Liquid; Moringa Powder Cap; Mullein Cap; Mullein Liquid; Nettle Cap; Nettle Liquid; Optimal Sleep; Oregano Oil Liquid Cap; Oregano Supreme; Organic Beet Root; Organic Blue Spirulina Powder; Organic Irish Moss 100% Powder; Organic Mushroom Blend 100% Powder; Organic Once Daily Women’s Multivitamin; Organic Prenatal Once Daily Whole Food Multi; Organic Prenatal Whole Food Vitamin; Original Herb Herbal Lozenges; Osha Liquid; Parasite Cleanse Liquid; Peppermint Spirits; Prenatal Gummies; Propolis Liquid; Red Chinese Ginseng Liquid; Red Yeast Rice; Reishi Cap; Reishi Liquid; Relax-All Calm & Sleep; Rhodiola Liquid; Rhodiola Powder Cap; Saw Palmetto 160 mg Softgels; Saw Palmetto Liquid; Saw Palmetto Powder Cap; Sleep Liquid; Sleep Powder Cap; Slippery Elm Liquid Extract; Super Fiber Tabs; Tart Cherry With Turmeric; Thyroid Powder Cap; Triphala Powder Cap; Turkey Tail; Turmeric Capsules; Unflavored Relax-All Ease Powder; Valerian Alcohol Free; Valerian Liquid; Vitamin A 10,000 IU Softgel; Vitamin B-12 2500 mcg; Vitamin C + Rose Hips 1000 mg; Vitamin C 1000 mg Capsules; Vitamin D3 1000 IU Softgel; Vitamin D3 2000 IU Softgel; Vitamin E 1000 IU; Vitamin E 400 IU Mixed Tocopherol; Vitamin E With Selenium; Women’s Health Hair, Skin & Nails; Zinc 50 mg Tablets; Zinc Lozenges Cool Lemon; Zinc Picolinate 30 mg
+- Boiron — 17: Black Currant Buds; Briar Rose Young Shoots; Common Birch Buds; Common Juniper Young Shoots; Cowberry Young Shoots; English Hawthorn Young Shoots; European Grapevine Buds; European Hornbeam Buds; European Olive Young Shoots; European Walnut Buds; Fig Tree Buds; Giant Redwood Young Shoots; Horse Chestnut Buds; Lime Tree Buds; Lithy Tree Buds; Mountain Pine Buds; Rosemary Young Shoots
+- 365 Whole Foods Market — 7: Adult Once Daily Multi; Cal-Mag-Zinc with Vitamin D3; Calcium with Vitamin D3; Elderberry Gummies; Men’s One Daily Multi; Prenatal Multi Once Daily; Probiotic + Fiber Gummies
+- Culturelle — 3: Digestive Daily Probiotic Capsules; Kids Probiotic Gummies (coconut-only); Kids Purely Probiotics Packets
+- Equate — 3: Children’s Melatonin Liquid; Complete Multivitamin Adults; Kids Multivitamin Gummies
+- Kirkland Signature — 3: Children’s Complete Multivitamin Gummies; Daily Multi (no TiO2 carton); Daily Multi (TiO2 carton)
+- L’il Critters — 3: Gummy Vites; Immune C Plus Zinc & Vitamin D Gummies; Omega-3 DHA Gummies
+- OLLY — 3: Kids Sleep (coconut-only oil listing); Men’s Multi (coconut + canola); Women’s Multi (coconut + canola)
+- MaryRuth’s — 2: Kids Morning Multivitamin Liquid; Organic Kids Multivitamin Gummies
+- Nature Made — 2: Multi Gummies; Vitamin B12 Softgels (clear, no color added)
+- Nature’s Way — 2: Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm); Umcka Cold&Flu Relief FastActives
+- One A Day — 2: Men’s Health Formula; Prenatal softgels (no FD&C / TiO2 carton)
+- Qunol — 2: Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton); Zero Sugar Turmeric Gummies
+- vitafusion — 2: MultiVites (coconut and/or palm); Power C Extra Strength Gummies (no seed oil)
+- Walgreens — 2: Extra Strength Pain Reliever (coated); Prenatal Multivitamin (coated)
+- Alaway — 1: Alaway Preservative Free
+- Blue-Emu — 1: Original Super Strength
+- Centrum — 1: Centrum Adults
+- CVS Health — 1: Prenatal Multivitamin (coated)
+- MediNatura — 1: T-Relief Arthritis Extra Strength Cream
+- Member’s Mark — 1: Ibuprofen
+- Nordic Naturals — 1: Children’s DHA Gummy Chews
+- Penetrex — 1: Pain Relief Cream
+- Signature Care — 1: Ibuprofen
+- up&up — 1: Extra Strength Acetaminophen
+- Zarbee’s — 1: Children’s Cough Syrup + Immune
+- Garden of Life — 1: Organic Kids+ Strawberry Banana Chewable
+- Carlson — 1: Kid’s Super Daily D3 Drops
+
+2) ONLINE-ONLY — 35 missing. Count only; can wait.
+Amazon Elements 14; Amazon Basics 8; Thorne 5; Mama Bear 2; Thrive Market 1; Anima Mundi 1; Codeage 1; Designs for Health 1; Pure Encapsulations 1; Seeking Health 1. Solimo / Revly = 0 missing in this no-code pile.
