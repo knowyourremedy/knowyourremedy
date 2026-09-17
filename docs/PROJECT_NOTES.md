@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (store PDPs first-class for OI + UPC/EAN — sprouts.com / Walmart / Target / CVS / Amazon / grocery house; exact pack only; store generics hunt on write; missing-barcode report 59 no-code / ~667 barcode-only after 1s and 2s in-store; do not reopen #121–#188; Thrive no_OI closeout written — batch64)
+Last Updated: September 17, 2026 (KYR5-b online-only barcodes chunk 1 — 22 no-code rows filled; online-only remaining 13; in-store 24 untouched; Job 2 not started; do not reopen #121–#189)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -975,10 +975,10 @@ Search catalog (parked Pedialyte out). A row has a code if it has UPC/EAN on `ba
 
 Totals
 - Search rows: 2203
-- Rows with a code: 2144
-- Rows missing UPC/EAN/set-id: 59
-- Rows missing UPC/EAN only (may still have set-id): 667 — this is the KYR5-b barcode-only gap after in-store 1s and 2s
-- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 59 rows / 59 formulaIds — no pack-size clones in the no-code pile.
+- Rows with a code: 2166
+- Rows missing UPC/EAN/set-id: 37
+- Rows missing UPC/EAN only (may still have set-id): 645 — this is the KYR5-b barcode-only gap after in-store 1s/2s + online-only chunk 1 (Job 2 not started)
+- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 37 rows / 37 formulaIds — no pack-size clones in the no-code pile.
 
 1) IN-STORE — 24 missing (group by brand). Hunt these first.
 - Sprouts — 3 (already written batch35/36/16; not the unwritten stash; 50 filled in chunk 1 + 62 in chunk 2 + 1 leftover): Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap
@@ -1000,5 +1000,5 @@ Totals
 - Zarbee’s — 1: Children’s Cough Syrup + Immune (ivy+chamomile draft ≠ current honey/D3/zinc/elderberry)
 - Carlson — 1: Kid’s Super Daily D3 Drops (coconut-only vs coconut+palm conflict on same UPC)
 
-2) ONLINE-ONLY — 35 missing. Count only; can wait.
-Amazon Elements 14; Amazon Basics 8; Thorne 5; Mama Bear 2; Thrive Market 1; Anima Mundi 1; Codeage 1; Designs for Health 1; Pure Encapsulations 1; Seeking Health 1. Solimo / Revly = 0 missing in this no-code pile.
+2) ONLINE-ONLY — 13 missing after KYR5-b chunk 1 (22 filled). Job 1 leftovers need another chunk; Job 2 not started.
+Amazon Elements 6 remaining (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies — dry this chunk: no exact-pack UPC or OI/form conflict). Amazon Basics 4 remaining (women’s / men’s / prenatal tablets — DSLD cultured One Daily ≠ 65-ct draft; kids melatonin 1 gummies — no exact-pack UPC). Thrive Market Multi-Collagen 1 (do not steal grass-fed flavored UPC). Anima Mundi Happiness Tonic 1 (no UPC). Pure Encapsulations Probiotic-5 1 (current HP OI plant fiber/cellulose/water ≠ draft rice starch + SiO2). Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health = 0 remaining. Solimo / Revly = 0 missing in this no-code pile.

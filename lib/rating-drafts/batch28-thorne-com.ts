@@ -6,8 +6,7 @@
 // on every row. Founder calls (locked): see notes below. Methodology
 // v1.6 grades only — do not change locked ingredient grades. Do NOT
 // invent Clean. Do NOT write FLAG / skipped products. Do NOT invent
-// UPCs / barcodes. Barcodes omitted — Thorne SKUs appear in cites /
-// notes only. Pack sizes share formulaId. formulaId == id on every
+// UPCs / barcodes except KYR5-b catch-up allowlist. Pack sizes share formulaId. formulaId == id on every
 // row EXCEPT the Super EPA NSF / 90 / 180 twins, which share ONE
 // formulaId (`thorne-super-epa`) across separate product rows
 // (founder: one formulaId if inactives match; separate barcode /
@@ -265,6 +264,16 @@ const ADVANCED_NUTRIENTS_CITE =
 const MAG_CITRATE_CITE =
   'Thorne.com alias API 2026-09-12 https://www.thorne.com/products/dp/magnesium-citrate-m286 SKU M286 InStock other-ingredients (Natural Flavor; Citric Acid; Monk Fruit extract; Sodium Bicarbonate)';
 
+// KYR5-b online-only chunk 1 — Thorne.com exact SKU / 180-ct or
+// labeled bottle UPC-A (clinic / iHerb tiles match brand SKU).
+const BATCH28_CATCHUP_BARCODES: Record<string, string> = {
+  [WOMENS_MULTI_ID]: '693749011316',
+  [MENS_MULTI_ID]: '693749011323',
+  [BERBERINE_ID]: '693749048008',
+  [GLYCINE_ID]: '693749512028',
+  [NIACEL_ID]: '693749012085',
+};
+
 const MELATON_ALTS: CleanAlternative[] = [
   {
     productId: PE_MELATONIN_ID,
@@ -301,6 +310,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     productName: 'Women\'s Multi 50+',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH28_CATCHUP_BARCODES[WOMENS_MULTI_ID],
     formulaId: WOMENS_MULTI_ID,
     audience: ADULT,
     minAge: 18,
@@ -337,6 +347,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     productName: 'Men\'s Multi 50+',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH28_CATCHUP_BARCODES[MENS_MULTI_ID],
     formulaId: MENS_MULTI_ID,
     audience: ADULT,
     minAge: 18,
@@ -643,6 +654,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     productName: 'Berberine',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH28_CATCHUP_BARCODES[BERBERINE_ID],
     formulaId: BERBERINE_ID,
     audience: ADULT,
     minAge: 18,
@@ -680,6 +692,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     productName: 'Glycine',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH28_CATCHUP_BARCODES[GLYCINE_ID],
     formulaId: GLYCINE_ID,
     audience: ADULT,
     minAge: 18,
@@ -920,6 +933,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     productName: 'NiaCel® 400',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH28_CATCHUP_BARCODES[NIACEL_ID],
     formulaId: NIACEL_ID,
     audience: ADULT,
     minAge: 18,
@@ -1118,3 +1132,10 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH28_THORNE_COM) {
+  const expected = BATCH28_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 28 catch-up UPC drift on ${record.id}`);
+  }
+}

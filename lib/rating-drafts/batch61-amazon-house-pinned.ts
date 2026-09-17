@@ -123,8 +123,12 @@ const CITE = {
   mamaMulti:
     'HelloPharmacist / Spoonful harvest Mama Bear Organic Kids Multivitamin Gummies other-ingredients: Tapioca Syrup, Cane Sugar, Pectin, Lemon juice concentrate, Organic flavors, Sodium Citrate, Maqui berry juice concentrate, Black Carrot juice concentrate, Annatto, Sunflower Oil, Carnauba wax. No carton UPC harvested.',
   mamaFiber:
-    'Harvest Mama Bear Kids Fiber Gummies other-ingredients: Chicory Root Fiber (Inulin), Cane Sugar, Pectin, Citric Acid, Sodium Citrate, Natural Flavors, Colors Added (Organic Turmeric, Organic Black Carrot Juice Concentrate, Organic Annatto), Organic Sunflower Oil, Lo Han Fruit Concentrate, Organic Carnauba Wax. No carton UPC harvested.',
+    'Harvest Mama Bear Kids Fiber Gummies other-ingredients: Chicory Root Fiber (Inulin), Cane Sugar, Pectin, Citric Acid, Sodium Citrate, Natural Flavors, Colors Added (Organic Turmeric, Organic Black Carrot Juice Concentrate, Organic Annatto), Organic Sunflower Oil, Lo Han Fruit Concentrate, Organic Carnauba Wax. Amazon / carton UPC 842379192166 (60 ct orange).',
 } as const;
+
+const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
+  'mama-bear-kids-fiber-gummies': '842379192166',
+};
 
 const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
@@ -870,6 +874,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Mama Bear Kids Fiber Gummies',
     brand: MAMA_BEAR,
     category: DIGESTIVE,
+    barcode: BATCH61_CATCHUP_BARCODES['mama-bear-kids-fiber-gummies'],
     formulaId: 'mama-bear-kids-fiber-gummies',
     audience: KIDS,
     minAge: 2,
@@ -999,4 +1004,11 @@ if (
   _ROWS.find((r) => r.id === 'amazon-basic-care-loperamide-aurohealth-225')?.formulaId
 ) {
   throw new Error('do not merge loperamide 224 with 225');
+}
+
+for (const record of BATCH61_AMAZON_HOUSE_PINNED) {
+  const expected = BATCH61_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 61 catch-up UPC drift on ${record.id}`);
+  }
 }

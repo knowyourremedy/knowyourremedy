@@ -11,8 +11,7 @@
 // only — do not change locked ingredient grades except the required
 // palmitostearic Cleared-by-class one-liner in docs/METHODOLOGY.md.
 // Do NOT invent Clean. Do NOT write FLAG / skipped products. Do NOT
-// invent UPCs / barcodes. Barcodes omitted — NDCs / setIds appear in
-// cites / notes only. Pack sizes share formulaId. Form is labeled
+// invent UPCs / barcodes except KYR5-b catch-up allowlist. Pack sizes share formulaId. Form is labeled
 // on cleanAlternatives, not a hard filter (§6). Not wired into
 // Clean Picks UI. No live Clean Picks file is edited from this
 // draft. PROJECT_NOTES.md is untouched. Do not merge formulaIds
@@ -246,6 +245,10 @@ const BIOTIN_CITE =
   'Amazon Elements Vegan Biotin 5000 mcg Amazon PDP / retailer other-ingredients / DSLD 337372 (HelloPharmacist mirror): Microcrystalline Cellulose, Hydroxypropylmethylcellulose / vegetable capsule (HPMC), Silicon Dioxide. Confirm carton before treating pack sizes as the same formula.';
 const MELATONIN_CITE =
   'Amazon Elements Melatonin 5 mg vegan capsules Amazon PDP / retailer other-ingredients / DSLD 203825 (HelloPharmacist mirror): Microcrystalline Cellulose, Vegetable Capsule (Hydroxypropyl Methylcellulose), Magnesium Stearate, Silicon Dioxide. Confirm carton. Not the 3 mg tablet FLAG SKU (dicalcium phosphate).';
+
+const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
+  'amazon-elements-melatonin-5': '842379103650',
+};
 
 const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
@@ -868,6 +871,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Elements Melatonin 5 mg Vegan Capsules',
     brand: ELEMENTS,
     category: SLEEP,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-elements-melatonin-5'],
     formulaId: 'amazon-elements-melatonin-5',
     audience: ADULT,
     minAge: 18,
@@ -1892,3 +1896,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
 // amazon-basics-clearlax-orange, amazon-basic-care-hydrocortisone-bht,
 // amazon-basic-care-hydrocortisone-parabens, amazon-basics-apap-rapid-release,
 // amazon-basic-care-mucus-er-max-blue1)
+
+for (const record of BATCH30_AMAZON_BASIC_CARE) {
+  const expected = BATCH30_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 30 catch-up UPC drift on ${record.id}`);
+  }
+}

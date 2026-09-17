@@ -78,8 +78,12 @@ const CITE = {
   elder:
     'Founder carousel OI (pinned label truth) Mama Bear Kids Black Elderberry Gummies other-ingredients: Sugar, Organic Tapioca Syrup, Pectin; Contains <2% of: Citric Acid, Natural Flavors, Sodium Citrate. No seed oil. HelloPharmacist / NIH DSLD 300217 barcode 842379152665 (60 ct).',
   probiotic:
-    'Founder carousel OI (pinned label truth) Mama Bear Vegan Kids Probiotic Gummies other-ingredients: Organic Tapioca Syrup, Organic Evaporated Cane Sugar, Pectin, Natural Colors (Organic Maqui Berry Juice Concentrate, Black Carrot Juice Concentrate), Natural Flavors, Citric Acid, Sodium Citrate, Corn Starch, Organic Sunflower Oil (Containing Carnauba Wax). No carton / DSLD UPC harvested.',
+    'Founder carousel OI (pinned label truth) Mama Bear Vegan Kids Probiotic Gummies other-ingredients: Organic Tapioca Syrup, Organic Evaporated Cane Sugar, Pectin, Natural Colors (Organic Maqui Berry Juice Concentrate, Black Carrot Juice Concentrate), Natural Flavors, Citric Acid, Sodium Citrate, Corn Starch, Organic Sunflower Oil (Containing Carnauba Wax). Amazon / carton UPC 842379148828 (60 ct berry).',
 } as const;
+
+const BATCH62_CATCHUP_BARCODES: Record<string, string> = {
+  'mama-bear-vegan-kids-probiotic-gummies': '842379148828',
+};
 
 const METH = {
   seedOilGummies: `Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, safflower, sunflower, vegetable oil). ${GUMMY_OIL_TAP}`,
@@ -284,6 +288,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
     productName: 'Mama Bear Vegan Kids Probiotic Gummies',
     brand: MAMA_BEAR,
     category: DIGESTIVE,
+    barcode: BATCH62_CATCHUP_BARCODES['mama-bear-vegan-kids-probiotic-gummies'],
     formulaId: 'mama-bear-vegan-kids-probiotic-gummies',
     audience: KIDS,
     minAge: 2,
@@ -399,6 +404,9 @@ if (elder?.inactiveIngredients.some((i) => /sunflower|palm|safflower|vegetable o
 if (elder?.inactiveIngredients.find((i) => /natural flavors/i.test(i.name))?.riskLevel !== 'limited') {
   throw new Error('elderberry natural flavors must be Limited');
 }
-if (probiotic?.barcode) {
-  throw new Error('do not invent a probiotic UPC — no DSLD / carton code harvested');
+for (const record of BATCH62_MAMA_BEAR_CAROUSEL) {
+  const expected = BATCH62_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 62 catch-up UPC drift on ${record.id}`);
+  }
 }

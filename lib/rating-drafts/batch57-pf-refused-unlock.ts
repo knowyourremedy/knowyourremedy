@@ -5,7 +5,8 @@
 //
 // ONE write. Pain & Fever only. Do NOT invent a Topical aisle.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack
 // sizes of the same name+form+inactives share formulaId. Same
 // OI+actives share formulaId. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Search wiring only.
@@ -284,6 +285,10 @@ const ID = {
   ha2zNap: 'healtha2z-naproxen-220-300',
 } as const;
 
+const BATCH57_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.turmeric]: '842379103902',
+};
+
 const CITE = {
   turmeric:
     'Founder carton / photo OI for Amazon Elements Turmeric Complex: HPMC named + microcrystalline cellulose + magnesium stearate + silicon dioxide. Labeled actives: turmeric root extract (400 mg / 316 mg curcumin) + organic ginger root powder (140 mg) + black pepper fruit extract. Do not reuse the old harvest that refused “Vegetable Capsule” — founder says HPMC is named.',
@@ -350,6 +355,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Amazon Elements Turmeric Complex',
     brand: 'Amazon Elements',
     category: PAIN_FEVER,
+    barcode: BATCH57_CATCHUP_BARCODES[ID.turmeric],
     formulaId: ID.turmeric,
     audience: ADULT,
     minAge: 18,
@@ -877,8 +883,15 @@ if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 3)
 if (BATCH57_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 57 stays on Pain & Fever');
 }
-if (BATCH57_PF_REFUSED_UNLOCK.some((record) => record.barcode)) {
-  throw new Error('batch 57 must not invent barcodes');
+for (const record of BATCH57_PF_REFUSED_UNLOCK) {
+  const expected = BATCH57_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 57 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 57 must not invent barcodes (${record.id})`);
+  }
 }
 if (
   BATCH57_PF_REFUSED_UNLOCK.some(
