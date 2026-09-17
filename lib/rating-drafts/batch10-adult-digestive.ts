@@ -1195,6 +1195,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'Imodium Multi-Symptom Relief',
     brand: 'Imodium',
     category: DIGESTIVE,
+    barcode: '300450212122',
     formulaId: 'imodium-multi-symptom',
     audience: ADULT,
     minAge: 12,

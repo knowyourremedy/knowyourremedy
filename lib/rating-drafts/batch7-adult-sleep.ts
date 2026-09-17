@@ -859,6 +859,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Tylenol PM Extra Strength',
     brand: 'Tylenol',
     category: SLEEP,
+    barcode: '300450482112',
     formulaId: 'tylenol-pm-es',
     audience: ADULT,
     minAge: 12,
