@@ -264,12 +264,14 @@ function storeChildrenIbuDyedChew(opts: {
   brand: string;
   retailers: string[];
   setid: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'store-children-ibu-dyed-chew',
     audience: KIDS,
     minAge: 2,
@@ -733,6 +735,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'Equate',
     retailers: ['Walmart'],
     setid: '34b2512e-743b-45db-92cb-ea05e2f47b3d',
+    barcode: '194346112302',
   }),
   storeInfantsApapDyefree({
     id: 'upup-infants-apap-dyefree',
@@ -1130,6 +1133,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'Equate',
     retailers: ['Walmart'],
     setid: 'abef43bc-ee9b-4a9c-9cf9-36c323213909',
+    barcode: '681131016599',
   }),
   storeChildrenIbuDyedChew({
     id: 'upup-children-ibu-chew-dyed',
