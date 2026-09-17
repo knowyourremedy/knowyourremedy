@@ -2,7 +2,7 @@
 // Vitamins · audience 'adult' · recordStatus is 'unverified' on every row.
 // Founder calls (locked): see notes below. Do NOT invent Clean. Methodology v1.6
 // grades only — do not change locked ingredient grades.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // Form is labeled on cleanAlternatives, not a hard filter (§6). This draft set
 // has NO independently Clean prenatal — cleanAlternatives are omitted (honest
 // empty; do not point at products outside this batch; do not fake Clean).
@@ -157,6 +157,14 @@ const NM_PRENATAL_GUMMY_CITE =
 const OLLY_PRENATAL_CITE =
   'OLLY Essential Prenatal Multivitamin gummies Target other-ingredients (vegetable oil (coconut, canola) + natural flavors)';
 
+// KYR5-b in-store 1s/2s — Target 60-ct Prenatal 1 annatto / no FD&C / no
+// TiO2 (016500560104). OFF 0050428311776 CVS Health Prenatal coated
+// (TiO2 / talc / Red 40 / Yellow 6 / BHT).
+const BATCH15_CATCHUP_BARCODES: Record<string, string> = {
+  'one-a-day-prenatal-softgels-no-dye': '016500560104',
+  'cvs-health-prenatal-coated': '050428311776',
+};
+
 export const BATCH15_PRENATALS: RatingRecord[] = [
   // ── Caution ──────────────────────────────────────────────
   {
@@ -211,6 +219,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     productName: 'One A Day Prenatal softgels (no FD&C / TiO2 carton)',
     brand: 'One A Day',
     category: VITAMINS,
+    barcode: BATCH15_CATCHUP_BARCODES['one-a-day-prenatal-softgels-no-dye'],
     formulaId: 'one-a-day-prenatal-softgels-no-dye',
     audience: ADULT,
     minAge: 18,
@@ -447,6 +456,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     productName: 'CVS Health Prenatal Multivitamin (coated)',
     brand: 'CVS Health',
     category: VITAMINS,
+    barcode: BATCH15_CATCHUP_BARCODES['cvs-health-prenatal-coated'],
     formulaId: 'cvs-health-prenatal-coated',
     audience: ADULT,
     minAge: 18,
@@ -651,3 +661,10 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH15_PRENATALS) {
+  const expected = BATCH15_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 15 catch-up UPC drift on ${record.id}`);
+  }
+}

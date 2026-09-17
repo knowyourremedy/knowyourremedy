@@ -174,6 +174,11 @@ const BATCH14_CATCHUP_BARCODES: Record<string, string> = {
   'equate-complete-multi': '681131119771',
   'kirkland-daily-multi-no-tio2': '096619416073',
   'olly-womens-multi-canola': '852933008031',
+  // KYR5-b in-store 1s/2s — HelloPharmacist / Target / OFF / Bayer 100-ct.
+  'centrum-adults-coated': '305734451747',
+  'one-a-day-mens-coated': '016500586944',
+  'nature-made-multi-gummies': '031604028411',
+  'vitafusion-multivites-palm': '027917023335',
 };
 
 export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
@@ -305,6 +310,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: 'Centrum Adults',
     brand: 'Centrum',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['centrum-adults-coated'],
     formulaId: 'centrum-adults-coated',
     audience: ADULT,
     minAge: 18,
@@ -480,6 +486,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: "One A Day Men's Health Formula",
     brand: 'One A Day',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['one-a-day-mens-coated'],
     formulaId: 'one-a-day-mens-coated',
     audience: ADULT,
     minAge: 18,
@@ -658,6 +665,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: 'Nature Made Multi Gummies',
     brand: 'Nature Made',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['nature-made-multi-gummies'],
     formulaId: 'nature-made-multi-gummies',
     audience: ADULT,
     minAge: 18,
@@ -696,6 +704,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: 'vitafusion MultiVites (coconut and/or palm)',
     brand: 'vitafusion',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['vitafusion-multivites-palm'],
     formulaId: 'vitafusion-multivites-palm',
     audience: ADULT,
     minAge: 18,

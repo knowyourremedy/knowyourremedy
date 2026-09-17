@@ -7,7 +7,7 @@
 // Vitamins · audience 'adult' · minAge 18 · recordStatus is 'unverified' on
 // every row. Founder calls (locked): see notes below. Methodology v1.6
 // grades only — do not change locked ingredient grades.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // Form is labeled on cleanAlternatives, not a hard filter (§6).
 // Not wired into Clean Picks UI. No live Clean Picks file is edited from
 // this draft. Methodology.md / PROJECT_NOTES.md are untouched.
@@ -169,6 +169,12 @@ const POWER_C_CITE =
   'vitafusion Power C Extra Strength Tropical Citrus Giant / CVS / iHerb other-ingredients (Glucose Syrup, Sugar, Water, Gelatin; less than 2% citric acid, color (annatto extract), flavor, fumaric acid — no palm)';
 const NM_B12_TAB_CITE =
   'Nature Made Vitamin B12 1000 mcg tablets HelloPharmacist other-ingredients (Cellulose Gel, Hypromellose, Stearic Acid, Silicon Dioxide, Magnesium Stearate, Croscarmellose Sodium; no TiO2 / no PEG on that list)';
+
+// KYR5-b in-store 1s/2s — Cub / iHerb Extra Strength Tropical Citrus
+// Power C (no palm / canola / sunflower / vegetable oil).
+const BATCH18_CATCHUP_BARCODES: Record<string, string> = {
+  'vitafusion-power-c-gummies-no-seed-oil': '027917260099',
+};
 
 const NM_D3_ID = 'nature-made-d3-softgels-clear';
 const KIRKLAND_D3_ID = 'kirkland-d3-softgels-clear';
@@ -434,6 +440,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     productName: 'vitafusion Power C Extra Strength Gummies (no seed oil)',
     brand: 'vitafusion',
     category: VITAMINS,
+    barcode: BATCH18_CATCHUP_BARCODES['vitafusion-power-c-gummies-no-seed-oil'],
     formulaId: 'vitafusion-power-c-gummies-no-seed-oil',
     audience: ADULT,
     minAge: 18,
@@ -530,3 +537,10 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH18_ADULT_SINGLES) {
+  const expected = BATCH18_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 18 catch-up UPC drift on ${record.id}`);
+  }
+}

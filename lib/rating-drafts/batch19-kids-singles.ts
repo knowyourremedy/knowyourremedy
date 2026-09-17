@@ -141,6 +141,9 @@ const LIL_OMEGA_CITE =
 // (iHerb LIL-01945 / Giant / Cub UPC). Do not steal soy-lecithin Omega-3.
 const BATCH19_CATCHUP_BARCODES: Record<string, string> = {
   'lil-critters-immune-c-zinc-d-gummies-palm': '027917019451',
+  // KYR5-b in-store 1s/2s — PureFormulas Tropical Punch gummy chews
+  // with canola last (do not steal a later no-canola carton).
+  'nordic-naturals-childrens-dha-gummies-canola': '768990017094',
 };
 
 export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
@@ -347,6 +350,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
     productName: "Nordic Naturals Children's DHA Gummy Chews",
     brand: 'Nordic Naturals',
     category: VITAMINS,
+    barcode: BATCH19_CATCHUP_BARCODES['nordic-naturals-childrens-dha-gummies-canola'],
     formulaId: 'nordic-naturals-childrens-dha-gummies-canola',
     audience: KIDS,
     minAge: 2,

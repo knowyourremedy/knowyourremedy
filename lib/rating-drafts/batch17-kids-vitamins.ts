@@ -173,6 +173,9 @@ const BATCH17_CATCHUP_BARCODES: Record<string, string> = {
   'lil-critters-gummy-vites-palm': '027917006239 027917016290',
   'kirkland-childrens-multi-gummies-palm': '096619637997',
   'equate-kids-multi-gummies-palm': '681131057172',
+  // KYR5-b in-store 1s/2s — iHerb MRO-62029 + Target 60-ct organic
+  // sunflower-oil Mixed Berry & Cherry (not sugar-free kids gummies).
+  'maryruth-organic-kids-multi-gummies-sunflower': '810104620291',
 };
 
 export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
@@ -491,6 +494,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
     productName: "MaryRuth's Organic Kids Multivitamin Gummies",
     brand: "MaryRuth's",
     category: VITAMINS,
+    barcode: BATCH17_CATCHUP_BARCODES['maryruth-organic-kids-multi-gummies-sunflower'],
     formulaId: 'maryruth-organic-kids-multi-gummies-sunflower',
     audience: KIDS,
     minAge: 4,

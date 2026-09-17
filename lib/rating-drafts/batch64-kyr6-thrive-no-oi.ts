@@ -648,6 +648,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     productName: 'Organic Kids+ Strawberry Banana Chewable',
     brand: 'Garden of Life',
     category: DIGESTIVE,
+    barcode: '658010122214',
     formulaId: 'gol-kids-plus-strawberry-banana',
     audience: KIDS,
     minAge: 4,

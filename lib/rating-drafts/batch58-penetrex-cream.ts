@@ -5,7 +5,8 @@
 //
 // ONE write. Pain & Fever only. Do NOT invent a Topical aisle.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack
 // sizes of the same name+form+inactives share formulaId. Same
 // OI+actives share formulaId. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Search wiring only.
@@ -195,6 +196,7 @@ export const BATCH58_PENETREX_CREAM: RatingRecord[] = [
     productName: 'Penetrex Pain Relief Cream',
     brand: 'Penetrex',
     category: PAIN_FEVER,
+    barcode: '867299000001',
     formulaId: ID.penetrex,
     audience: ADULT,
     minAge: 12,
@@ -391,8 +393,20 @@ if (BATCH58_PENETREX_CREAM.filter((r) => r.verdict === 'avoid').length !== 0) {
 if (BATCH58_PENETREX_CREAM.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 58 stays on Pain & Fever');
 }
-if (BATCH58_PENETREX_CREAM.some((record) => record.barcode)) {
-  throw new Error('batch 58 must not invent barcodes');
+const BATCH58_CATCHUP_BARCODES: Record<string, string> = {
+  // KYR5-b in-store 1s/2s — Target 2 oz cream; penetrex.com Ingredients
+  // match Coconut Alkanes / Steareth-20 (not the old IPBC harvest).
+  [ID.penetrex]: '867299000001',
+};
+for (const record of BATCH58_PENETREX_CREAM) {
+  const expected = BATCH58_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 58 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 58 must not invent barcodes on ${record.id}`);
+  }
 }
 if (
   BATCH58_PENETREX_CREAM.some((record) => record.recordStatus !== UNVERIFIED)
