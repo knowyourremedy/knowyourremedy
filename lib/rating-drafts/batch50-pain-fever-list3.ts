@@ -1199,6 +1199,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Foam 7%',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124002822',
     formulaId: FID.foam,
     audience: ADULT,
     minAge: 12,
@@ -1283,6 +1284,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Triple Target Roll-On',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124444905',
     formulaId: FID.triple,
     audience: ADULT,
     minAge: 12,
@@ -1307,6 +1309,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Triple Target Gel',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124444912',
     formulaId: FID.triple,
     audience: ADULT,
     minAge: 12,
@@ -1747,6 +1750,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
   }),
   row({
     id: ID.absProCream,
+    barcode: '889476414036',
     productName: 'Absorbine Jr. PRO Cream',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
@@ -2129,6 +2133,10 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.flexStrip]: '731124003782',
   [ID.bengayLido]: '074300081793',
   [ID.absNoMess]: '889476414029',
+  [ID.foam]: '731124002822',
+  [ID.tripleRoll]: '731124444905',
+  [ID.tripleGel]: '731124444912',
+  [ID.absProCream]: '889476414036',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];
