@@ -164,6 +164,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     productName: 'Nature Made Prenatal Multi tablets',
     brand: 'Nature Made',
     category: VITAMINS,
+    barcode: '031604014353',
     formulaId: 'nature-made-prenatal-multi-tablets',
     audience: ADULT,
     minAge: 18,
