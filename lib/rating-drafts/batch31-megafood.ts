@@ -229,6 +229,7 @@ type DraftBase = {
   prenatal?: boolean;
   ironCarton?: boolean;
   alts?: CleanAlternative[];
+  barcode?: string;
 };
 
 function sio2Flags(cite: string, extras: string[] = []): IngredientFlag[] {
@@ -266,6 +267,7 @@ function cautionSio2(base: DraftBase & { extras?: string[]; maltodextrin?: boole
     productName: base.productName,
     brand: BRAND,
     category: base.category,
+    ...(base.barcode ? { barcode: base.barcode } : {}),
     formulaId: base.id,
     audience: base.audience ?? ADULT,
     minAge: base.minAge ?? (base.audience === KIDS ? 4 : 18),
@@ -296,6 +298,7 @@ function cautionCustom(base: DraftBase & { inactives: IngredientFlag[]; math: st
     productName: base.productName,
     brand: BRAND,
     category: base.category,
+    ...(base.barcode ? { barcode: base.barcode } : {}),
     formulaId: base.id,
     audience: base.audience ?? ADULT,
     minAge: base.minAge ?? (base.audience === KIDS ? 4 : 18),
@@ -326,6 +329,7 @@ function avoidCustom(base: DraftBase & { inactives: IngredientFlag[]; math: stri
     productName: base.productName,
     brand: BRAND,
     category: base.category,
+    ...(base.barcode ? { barcode: base.barcode } : {}),
     formulaId: base.id,
     audience: base.audience ?? ADULT,
     minAge: base.minAge ?? (base.audience === KIDS ? 4 : 18),
@@ -363,6 +367,7 @@ function avoidOil(
     productName: base.productName,
     brand: BRAND,
     category: base.category,
+    ...(base.barcode ? { barcode: base.barcode } : {}),
     formulaId: base.id,
     audience: base.audience ?? ADULT,
     minAge: base.minAge ?? (base.audience === KIDS ? 4 : 18),
@@ -620,6 +625,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   // ── Clean ───────────────────────────────────────────────
   {
     id: MAG300_ID,
+    barcode: '051494103968',
     productName: 'Magnesium 300 mg Capsules',
     brand: BRAND,
     category: VITAMINS,
@@ -647,6 +653,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   // ── Caution — classic FoodState tablets ─────────────────
   cautionSio2({
     id: 'megafood-one-daily-iron-free',
+    barcode: '051494101735 051494101742 051494101940',
     productName: 'One Daily Iron Free Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -663,6 +670,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-one-daily',
+    barcode: '051494101032 051494101049 051494101056 051494103012 051494104255',
     productName: 'Women\'s One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -678,6 +686,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-40-one-daily',
+    barcode: '051494102657 051494102664 051494102671',
     productName: 'Women\'s 40+ One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -694,6 +703,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-55-one-daily',
+    barcode: '051494103524 051494103531 051494103548',
     productName: 'Women\'s 55+ One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -707,6 +717,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-one-daily',
+    barcode: '051494101063 051494101070 051494101087',
     productName: 'Men\'s One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -722,6 +733,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-40-one-daily',
+    barcode: '051494102701',
     productName: 'Men\'s 40+ One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -736,6 +748,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-55-one-daily',
+    barcode: '051494103555 051494103562 051494103579',
     productName: 'Men\'s 55+ One Daily Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -749,6 +762,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-advanced',
+    barcode: '051494103234 051494103241',
     productName: 'Women\'s Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -765,6 +779,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-40-advanced',
+    barcode: '051494103227',
     productName: 'Women\'s 40+ Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -781,6 +796,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-womens-55-advanced',
+    barcode: '051494102718',
     productName: 'Women\'s 55+ Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -795,6 +811,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-advanced',
+    barcode: '051494103203',
     productName: 'Men\'s Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -809,6 +826,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-40-advanced',
+    barcode: '051494103180',
     productName: 'Men\'s 40+ Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -825,6 +843,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-mens-55-advanced',
+    barcode: '051494102732',
     productName: 'Men\'s 55+ Advanced Multivitamin',
     category: VITAMINS,
     form: 'tablet',
@@ -838,6 +857,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-kids-one-daily-mini',
+    barcode: '051494101797 051494101803',
     productName: 'Kids One Daily Mini Multivitamin',
     category: VITAMINS,
     form: 'mini tablet',
@@ -854,6 +874,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-kids-b-complex-minis',
+    barcode: '051494102756',
     productName: 'Kids B Complex Minis',
     category: VITAMINS,
     form: 'mini tablet',
@@ -865,6 +886,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-blood-builder',
+    barcode: '051494101186 051494101704 051494101711 051494101957',
     productName: 'Blood Builder Iron Supplement',
     category: VITAMINS,
     form: 'tablet',
@@ -882,6 +904,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-blood-builder-minis',
+    barcode: '051494103371',
     productName: 'Blood Builder Minis Iron Supplement',
     category: VITAMINS,
     form: 'mini tablet',
@@ -893,6 +916,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-balanced-b-complex',
+    barcode: '051494101667 051494101674 051494101681',
     productName: 'Balanced B Complex',
     category: VITAMINS,
     form: 'tablet',
@@ -902,6 +926,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-complex-c',
+    barcode: '051494101322 051494101339 051494101353',
     productName: 'Complex C',
     category: IMMUNE,
     form: 'tablet',
@@ -911,6 +936,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-ultra-c-400',
+    barcode: '051494101841 051494104392',
     productName: 'Ultra C 400 mg',
     category: IMMUNE,
     form: 'tablet',
@@ -935,6 +961,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-vegan-b12',
+    barcode: '051494120019',
     productName: 'Vegan B12',
     category: VITAMINS,
     form: 'tablet',
@@ -948,6 +975,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-vitamin-d3-1000',
+    barcode: '051494101148 051494101155',
     productName: 'Vitamin D3 1000 IU (25 mcg)',
     category: IMMUNE,
     form: 'tablet',
@@ -957,6 +985,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-vitamin-d3-2000',
+    barcode: '051494102206 051494102213 051494102220',
     productName: 'Vitamin D3 2000 IU (50 mcg)',
     category: IMMUNE,
     form: 'tablet',
@@ -966,6 +995,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-zinc-bisglycinate',
+    barcode: '051494104408',
     productName: 'Zinc Bisglycinate',
     category: IMMUNE,
     form: 'tablet',
@@ -976,6 +1006,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-selenium-tablet',
+    barcode: '051494101865',
     productName: 'Selenium',
     category: IMMUNE,
     form: 'tablet',
@@ -987,6 +1018,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-magnesium-tablet',
+    barcode: '051494101209 051494101872',
     productName: 'Magnesium',
     category: VITAMINS,
     form: 'tablet',
@@ -997,6 +1029,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-calcium-magnesium',
+    barcode: '051494102312',
     productName: 'Calcium & Magnesium',
     category: VITAMINS,
     form: 'tablet',
@@ -1013,6 +1046,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-turmeric-whole-body',
+    barcode: '051494100066 051494100103',
     productName: 'Turmeric Curcumin Whole Body',
     category: VITAMINS,
     form: 'tablet',
@@ -1033,6 +1067,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-thyroid-strength',
+    barcode: '051494200278 051494200292',
     productName: 'Thyroid Strength',
     category: VITAMINS,
     form: 'tablet',
@@ -1043,6 +1078,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-adrenal-strength',
+    barcode: '051494200216 051494200223 051494200230',
     productName: 'Adrenal Strength',
     category: VITAMINS,
     form: 'tablet',
@@ -1054,6 +1090,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-skin-nails-hair-2',
+    barcode: '051494102800 051494102817',
     productName: 'Skin, Nails & Hair 2',
     category: VITAMINS,
     form: 'tablet',
@@ -1068,6 +1105,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-baby-me-2-prenatal-multi',
+    barcode: '051494103142 051494103159',
     productName: 'Baby & Me 2 Prenatal Multi',
     category: VITAMINS,
     form: 'tablet',
@@ -1089,6 +1127,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-baby-me-2-prenatal-minis',
+    barcode: '051494104477',
     productName: 'Baby & Me 2 Prenatal Multi Minis',
     category: VITAMINS,
     form: 'mini tablet',
@@ -1106,6 +1145,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-baby-me-2-postnatal-multi',
+    barcode: '051494104286 051494104309',
     productName: 'Baby & Me 2 Postnatal Multi',
     category: VITAMINS,
     form: 'tablet',
@@ -1629,6 +1669,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-relax-calm-powder-raspberry',
+    barcode: '051494601716',
     productName: 'Relax + Calm Magnesium Powder - Raspberry Lemonade',
     category: SLEEP,
     form: 'powder',
@@ -1647,6 +1688,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-relax-calm-powder-blackberry',
+    barcode: '051494601709',
     productName: 'Relax + Calm Magnesium Powder - Blackberry Hibiscus Oasis',
     category: SLEEP,
     form: 'powder',
@@ -1665,6 +1707,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-baby-me-2-prenatal-dha-choline',
+    barcode: '051494104293',
     productName: 'Baby & Me 2 Prenatal DHA & Choline',
     category: VITAMINS,
     form: 'capsule',
@@ -1889,6 +1932,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-b12-energy-gummies-cranberry',
+    barcode: '051494104095 051494104323',
     productName: 'B12 Energy Gummies (Cranberry)',
     category: VITAMINS,
     form: 'gummy',
@@ -1900,6 +1944,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-b12-energy-gummies-ginger',
+    barcode: '051494103463 051494104101',
     productName: 'B12 Energy Gummies (Ginger)',
     category: VITAMINS,
     form: 'gummy',
@@ -1912,6 +1957,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-c-defense-gummies',
+    barcode: '051494103494 051494104118',
     productName: 'C Defense Daily Immune Support Gummies',
     category: IMMUNE,
     form: 'gummy',
@@ -2002,6 +2048,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-relax-calm-soft-chews-grape',
+    barcode: '051494103999',
     productName: 'Relax + Calm Magnesium Soft Chews - Grape',
     category: SLEEP,
     form: 'soft chew',
@@ -2040,6 +2087,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-kids-one-daily-soft-chews',
+    barcode: '051494103746',
     productName: 'Kids One Daily Multivitamin Soft Chews',
     category: VITAMINS,
     form: 'soft chew',
@@ -2089,6 +2137,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-baby-me-2-nausea-soft-chews',
+    barcode: '051494103975',
     productName: 'Baby & Me 2 Prenatal Morning Sickness Nausea Relief Soft Chews',
     category: VITAMINS,
     form: 'soft chew',
@@ -2178,6 +2227,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-methyl-b12',
+    barcode: '051494103333',
     productName: 'Methyl B12',
     category: VITAMINS,
     form: 'tablet',
@@ -2257,6 +2307,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   {
     id: 'megafood-berberine-phytosome',
+    barcode: '051494105634',
     productName: 'Berberine Phytosome',
     brand: BRAND,
     category: VITAMINS,
@@ -2282,6 +2333,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   },
   cautionCustom({
     id: 'megafood-womens-probiotic-astarte-shelf-stable',
+    barcode: '051494105337',
     productName: "Women's Probiotic + Prebiotic - Shelf Stable",
     category: DIGESTIVE,
     form: 'capsule',
@@ -2328,6 +2380,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   {
     id: 'megafood-liposomal-vitamin-c',
+    barcode: '051494105863',
     productName: 'Liposomal Vitamin C',
     brand: BRAND,
     category: IMMUNE,
@@ -2410,6 +2463,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-turmeric-extra-strength-joint',
+    barcode: '051494103104',
     productName: 'Turmeric Curcumin Extra Strength Joint',
     category: IMMUNE,
     form: 'tablet',
@@ -2428,6 +2482,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-turmeric-extra-strength-liver',
+    barcode: '051494103074',
     productName: 'Turmeric Curcumin Extra Strength Liver',
     category: IMMUNE,
     form: 'tablet',
