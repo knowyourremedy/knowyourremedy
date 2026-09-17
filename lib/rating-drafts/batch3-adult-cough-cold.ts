@@ -198,6 +198,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Boiron Oscillococcinum',
     brand: 'Boiron',
     category: COLD_FLU,
+    barcode: '306969998342',
     formulaId: 'boiron-oscillococcinum-200ck',
     audience: ADULT,
     minAge: 12,

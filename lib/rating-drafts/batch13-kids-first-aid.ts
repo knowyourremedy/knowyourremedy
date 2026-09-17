@@ -358,6 +358,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     productName: 'Aquaphor Healing Ointment',
     brand: 'Aquaphor',
     category: FIRST_AID,
+    barcode: '072140019457',
     formulaId: AQUAPHOR_HEAL,
     audience: KIDS,
     minAge: 0,

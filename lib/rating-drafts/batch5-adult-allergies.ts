@@ -287,12 +287,14 @@ function l612Record(opts: {
   brand: string;
   retailers: string[];
   setid: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: ALLERGIES,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,
@@ -634,6 +636,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     brand: 'up&up',
     retailers: ['Target'],
     setid: 'c4ef0110-89c3-4ded-9a9a-75c0f794f869',
+    barcode: '370030623792',
   }),
   {
     id: CVS_LORATADINE,
@@ -668,6 +671,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     brand: 'Kirkland Signature',
     retailers: ['Costco'],
     setid: '2074d52e-8c0a-4e69-bfb1-864ffc07e25f',
+    barcode: '096619529681',
   }),
 
   // ── Caution ──────────────────────────────────────────────
@@ -1031,6 +1035,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'NasalCrom',
     brand: 'NasalCrom',
     category: ALLERGIES,
+    barcode: '814832011017',
     formulaId: 'nasalcrom-bkc',
     audience: ADULT,
     minAge: 2,
@@ -1733,6 +1738,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Equate Allergy Relief D (Cetirizine / Pseudoephedrine)',
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '681131099103',
     formulaId: 'equate-cetirizine-d-tio2-talc',
     audience: ADULT,
     minAge: 12,
