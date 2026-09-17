@@ -1554,6 +1554,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-megaflora-turmeric',
+    barcode: '051494100233 051494100257',
     productName: 'MegaFlora Probiotic + Prebiotic with Turmeric',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1654,6 +1655,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-omega-3-6-9',
+    barcode: '051494105399',
     productName: 'Omega 3-6-9',
     category: VITAMINS,
     form: 'capsule',
@@ -1674,6 +1676,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-blood-builder-liquid',
+    barcode: '051494103678',
     productName: 'Blood Builder Liquid Iron Once Daily',
     category: VITAMINS,
     form: 'liquid',
@@ -1871,6 +1874,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-prebiotic-fiber-gummies',
+    barcode: '051494105870',
     productName: 'Prebiotic Fiber Gummies',
     category: DIGESTIVE,
     form: 'gummy',
@@ -2149,6 +2153,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-womens-one-daily-soft-chews',
+    barcode: '051494103722',
     productName: "Women's One Daily Multivitamin Soft Chews - Mixed Berry",
     category: VITAMINS,
     form: 'soft chew',
@@ -2226,6 +2231,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-baby-me-2-prenatal-multi-dha',
+    barcode: '051494106143',
     productName: 'Baby & Me 2 Prenatal Multi & DHA',
     category: VITAMINS,
     form: 'capsule',
@@ -2300,6 +2306,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-probiotic-prebiotic-postbiotic-gummies',
+    barcode: '051494106273',
     productName: 'Probiotic, Prebiotic & Postbiotic Gummies',
     category: DIGESTIVE,
     form: 'gummy',
