@@ -1732,6 +1732,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'Align Daily Probiotic',
     brand: 'Align',
     category: DIGESTIVE,
+    barcode: '037000294177 037000491095',
     formulaId: 'align-daily-probiotic',
     audience: ADULT,
     minAge: 18,
