@@ -6,7 +6,8 @@
 // drafts from live naturesway.com Other Ingredients (div#IngredientsOther).
 // Mixed categories · recordStatus is 'unverified' on every row.
 // Internal keys only: clean | caution | avoid. Do NOT invent Clean.
-// Do NOT invent UPCs / barcodes. Pack sizes of the same
+// Do NOT invent UPCs / barcodes. KYR5 may attach verified
+// brand-PDP / Shopify printed UPC-As. Pack sizes of the same
 // name+form+inactives share formulaId. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Not wired into Clean
 // Picks UI. No live Clean Picks file is edited. No photos. Letter
@@ -258,6 +259,7 @@ type RowIn = {
   form: string;
   productType: typeof VITAMIN | typeof SUPPLEMENT | typeof OTC;
   productSubtype?: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   inactives: IngredientFlag[];
   verdict: RatingRecord['verdict'];
@@ -277,6 +279,7 @@ function row(d: RowIn): RatingRecord {
     productName: d.productName,
     brand: BRAND,
     category: d.category,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     formulaId: d.formulaId,
     audience: d.audience,
     minAge: d.minAge,
@@ -304,6 +307,7 @@ function row(d: RowIn): RatingRecord {
 const NAMED: RatingRecord[] = [
   row({
     id: "natures-way-sambucus-cold-flu-relief-chewables",
+    barcode: "033674151754",
     productName: "Sambucus Cold+Flu Relief Elderberry Chewables",
     category: "Cold & Flu",
     formulaId: "natures-way-sambucus-cold-flu-relief-chewables",
@@ -339,6 +343,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-energizing-iron",
+    barcode: "763948052196",
     productName: "Energizing Iron™",
     category: "Vitamins",
     formulaId: "natures-way-energizing-iron",
@@ -366,6 +371,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-hair-skin-nails-softgel",
+    barcode: "033674110942",
     productName: "Alive!® Hair, Skin & Nails Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-hair-skin-nails-softgel",
@@ -393,6 +399,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-organic-acv-gummies",
+    barcode: "033674137529",
     productName: "Organic Apple Cider Vinegar Gummies",
     category: "Digestive",
     formulaId: "natures-way-organic-acv-gummies",
@@ -422,6 +429,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sports-gel",
+    barcode: "308078254920",
     productName: "Sports Gel",
     category: "Pain & Fever",
     formulaId: "natures-way-sports-gel",
@@ -448,6 +456,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-oral-ivy-drops",
+    barcode: "308079009901",
     productName: "Oral Ivy Drops",
     category: "First Aid",
     formulaId: "natures-way-oral-ivy-drops",
@@ -471,6 +480,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alleraide",
+    barcode: "308078125909",
     productName: "Allergiemittel AllerAide®",
     category: "Allergies",
     formulaId: "natures-way-alleraide",
@@ -494,6 +504,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-relief-syrup",
+    barcode: "033674152737 033674157930",
     productName: "Umcka® Cold Relief Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-cold-relief-syrup",
@@ -524,6 +535,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-relief-drops",
+    barcode: "033674152706 033674157909",
     productName: "Umcka® Cold Relief Drops",
     category: "Cold & Flu",
     formulaId: "umcka-cold-relief-drops",
@@ -549,6 +561,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-flu-relief-syrup",
+    barcode: "033674151488",
     productName: "Umcka® Cold & Flu Relief Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-cold-flu-relief-syrup",
@@ -580,6 +593,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-flu-elderberry-syrup",
+    barcode: "033674158456",
     productName: "Umcka® Cold & Flu Relief Elderberry Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-cold-flu-elderberry-syrup",
@@ -611,6 +625,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cough-relief-syrup",
+    barcode: "033674158647",
     productName: "Umcka® Cough Relief Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-cough-relief-syrup",
@@ -641,6 +656,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-zero-sugar-cold-relief-syrup",
+    barcode: "033674157947",
     productName: "Umcka® Zero Sugar Cold Relief Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-zero-sugar-cold-relief-syrup",
@@ -671,6 +687,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-relief-chewables",
+    barcode: "033674151440",
     productName: "Umcka® Cold Relief Chewables",
     category: "Cold & Flu",
     formulaId: "umcka-cold-relief-chewables",
@@ -702,6 +719,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-kids-cold-relief-chewables",
+    barcode: "033674123515",
     productName: "Umcka® Kids Cold Relief Chewables",
     category: "Cold & Flu",
     formulaId: "umcka-kids-cold-relief-chewables",
@@ -733,6 +751,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-cold-flu-chewables",
+    barcode: "033674151617 033674151594",
     productName: "Umcka® Cold&Flu Relief Chewables",
     category: "Cold & Flu",
     formulaId: "umcka-cold-flu-chewables",
@@ -764,6 +783,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-allergy-sinus-chewables",
+    barcode: "033674121948",
     productName: "Umcka® Allergy & Sinus Relief Chewables",
     category: "Allergies",
     formulaId: "umcka-allergy-sinus-chewables",
@@ -825,6 +845,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "umcka-kids-cold-relief-syrup",
+    barcode: "033674601655",
     productName: "Umcka® Kids Cold Relief Syrup",
     category: "Cold & Flu",
     formulaId: "umcka-kids-cold-relief-syrup",
@@ -855,6 +876,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-adult-immune-gummy",
+    barcode: "033674123454 033674104866",
     productName: "Sambucus Elderberry Immune Gummy",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-adult-immune-gummy",
@@ -883,6 +905,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-immune-syrup",
+    barcode: "033674069745 033674153338",
     productName: "Sambucus Immune Elderberry Syrup",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-immune-syrup",
@@ -909,6 +932,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-kids-immune-syrup",
+    barcode: "033674069738 033674153598",
     productName: "Sambucus Immune Elderberry Syrup for Kids",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-kids-immune-syrup",
@@ -935,6 +959,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-traditional-immune-syrup",
+    barcode: "033674069707 033674153321",
     productName: "Sambucus Traditional Elderberry Immune Syrup",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-traditional-immune-syrup",
@@ -961,6 +986,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-cold-flu-relief-syrup",
+    barcode: "033674151365",
     productName: "Sambucus Cold+Flu Relief Elderberry Syrup",
     category: "Cold & Flu",
     formulaId: "natures-way-sambucus-cold-flu-relief-syrup",
@@ -992,6 +1018,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-flu-relief-syrup",
+    barcode: "033674158036",
     productName: "Sambucus Flu Relief** Elderberry Syrup",
     category: "Cold & Flu",
     formulaId: "natures-way-sambucus-flu-relief-syrup",
@@ -1021,6 +1048,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-cough-immune-gummies",
+    barcode: "033674136102",
     productName: "Sambucus Cough Relief +♢ Immune* Elderberry Gummies",
     category: "Cold & Flu",
     formulaId: "natures-way-sambucus-cough-immune-gummies",
@@ -1049,6 +1077,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-kids-cough-immune-gummies",
+    barcode: "033674136768",
     productName: "Sambucus Kids Cough Relief +♢ Immune* Elderberry Gummies",
     category: "Cold & Flu",
     formulaId: "natures-way-sambucus-kids-cough-immune-gummies",
@@ -1078,6 +1107,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-elderberry-immune-lozenge",
+    barcode: "033674140017",
     productName: "Sambucus Elderberry Immune Lozenge",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-elderberry-immune-lozenge",
@@ -1102,6 +1132,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-immune-lozenges",
+    barcode: "033674127094 033674129630",
     productName: "Sambucus Immune Lozenges",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-immune-lozenges",
@@ -1126,6 +1157,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-bronchial-soothe",
+    barcode: "763948087716",
     productName: "Bronchial Soothe® Ivy Leaf Extract Syrup",
     category: "Cold & Flu",
     formulaId: "natures-way-bronchial-soothe",
@@ -1152,6 +1184,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-immune-lozenges-eucalyptus",
+    barcode: "033674120880 033674120897 033674102206",
     productName: "Sambucus Immune Lozenges",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-immune-lozenges-eucalyptus",
@@ -1180,6 +1213,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max6",
+    barcode: "033674150900 033674157084",
     productName: "Alive!® Max6 Potency Adult Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-max6",
@@ -1202,6 +1236,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max6-no-iron",
+    barcode: "033674150924 033674157091",
     productName: "Alive!® Max6 Potency Adult Complete Multivitamin-No Added Iron",
     category: "Vitamins",
     formulaId: "natures-way-alive-max6",
@@ -1860,6 +1895,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-calmaid",
+    barcode: "033674158197 033674147139",
     productName: "CalmAid®",
     category: "Sleep",
     formulaId: "natures-way-calmaid",
@@ -2346,6 +2382,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-ultra-immune-juicy-burst",
+    barcode: "033674154816",
     productName: "Sambucus Ultra Immune Juicy Burst",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-ultra-immune-juicy-burst",
@@ -2460,6 +2497,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-zero-sugar-immune-gummy",
+    barcode: "033674146163 033674146170",
     productName: "Sambucus Elderberry Zero Sugar Immune Gummy",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-zero-sugar-immune-gummy",
@@ -2488,6 +2526,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sambucus-zero-sugar-kids-immune-gummy",
+    barcode: "033674150276",
     productName: "Sambucus Elderberry Zero Sugar Immune Gummies for Kids",
     category: "Immune Support",
     formulaId: "natures-way-sambucus-zero-sugar-kids-immune-gummy",
@@ -4384,9 +4423,6 @@ for (const rec of BATCH38_NATURES_WAY) {
   _ids.add(rec.id);
   if (rec.recordStatus !== 'unverified') {
     throw new Error(`${rec.id} must stay unverified`);
-  }
-  if (rec.barcode) {
-    throw new Error(`${rec.id} must not invent a barcode`);
   }
 }
 
