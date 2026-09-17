@@ -236,6 +236,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'badger-aromatic-chest-rub',
+    barcode: '634084135794 634084242010',
     productName: 'Badger Aromatic Chest Rub',
     brand: 'Badger',
     category: COLD_FLU,
@@ -269,6 +270,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'beekeepers-propolis-throat-spray',
+    barcode: '628055142010',
     productName: "Beekeeper's Naturals Propolis Throat Spray",
     brand: "Beekeeper's Naturals",
     category: COLD_FLU,

@@ -500,6 +500,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
   // ── Caution ──────────────────────────────────────────────
   {
     id: 'genexa-kids-tummy-relief',
+    barcode: '857630006694',
     productName: 'Genexa Kids Tummy Relief',
     brand: 'Genexa',
     category: DIGESTIVE,
@@ -893,6 +894,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
   }),
   {
     id: 'dramamine-for-kids',
+    barcode: '831248003016',
     productName: 'Dramamine for Kids',
     brand: 'Dramamine',
     category: DIGESTIVE,
