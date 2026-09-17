@@ -317,6 +317,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     productName: "Nature's Way Sambucus Kids Elderberry Immune Gummies (coconut-only)",
     brand: "Nature's Way",
     category: IMMUNE,
+    barcode: '033674123461 033674122853',
     formulaId: 'natures-way-sambucus-kids-gummies-coconut',
     audience: KIDS,
     minAge: 2,
