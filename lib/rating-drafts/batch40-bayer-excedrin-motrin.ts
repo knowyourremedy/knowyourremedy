@@ -645,6 +645,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     productName: "Infants' Motrin Concentrated Drops Dye-Free",
     brand: 'Motrin',
     category: PAIN_FEVER,
+    barcode: '300450198044',
     formulaId: ID.infantsDf,
     audience: KIDS,
     minAge: 0,
