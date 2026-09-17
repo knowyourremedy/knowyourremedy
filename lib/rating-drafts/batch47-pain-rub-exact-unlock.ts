@@ -424,6 +424,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Icy Hot Pro Pain Massaging Balm',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167079003',
     formulaId: ID.icyBalm,
     audience: ADULT,
     minAge: 12,
@@ -813,6 +814,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine with Eucalyptus Essential Oil cream',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167056608',
     formulaId: ID.asperEuc,
     audience: ADULT,
     minAge: 12,
@@ -1014,6 +1016,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine Rosemary Mint liquid',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167059876',
     formulaId: ID.asperRosLiq,
     audience: ADULT,
     minAge: 12,
@@ -1467,6 +1470,9 @@ const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
   [ID.salonFlex]: '346581840070',
   [ID.icyMicro]: '041167007808',
   [ID.icyMax]: '041167171011',
+  [ID.icyBalm]: '041167079003',
+  [ID.asperEuc]: '041167056608',
+  [ID.asperRosLiq]: '041167059876',
 };
 for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
   const expected = BATCH47_CATCHUP_BARCODES[record.id];

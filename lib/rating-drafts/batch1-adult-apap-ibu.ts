@@ -343,7 +343,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Tylenol Extra Strength Liquid Gels',
     brand: 'Tylenol',
     category: PAIN_FEVER,
-    barcode: '300450439185',
+    barcode: '300450439185 300450439406',
     formulaId: 'apap-tylenol-es-liquid-gels',
     audience: ADULT,
     minAge: 12,
