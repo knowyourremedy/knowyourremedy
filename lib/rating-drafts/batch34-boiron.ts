@@ -2563,6 +2563,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
 
   {
     id: 'boiron-throatcalm-spray',
+    barcode: '306969329771',
     productName: 'Boiron ThroatCalm Spray',
     brand: BRAND,
     category: COLD_FLU,

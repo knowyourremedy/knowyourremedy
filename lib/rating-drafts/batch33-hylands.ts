@@ -540,6 +540,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-leg-cramps-arnica-caplets',
+    barcode: '354973412620',
     productName: "Hyland's Leg Cramps + Arnica Caplets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -2536,6 +2537,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-prid-drawing-salve',
+    barcode: '354973413016 354973406919',
     productName: "Hyland's PRID Drawing Salve",
     brand: BRAND,
     category: FIRST_AID,
