@@ -336,6 +336,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     productName: 'Salonpas Lidocaine Plus Pain Relieving Cream',
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    barcode: '355328902032',
     formulaId: ID.salonLidoCream,
     audience: ADULT,
     minAge: 12,
@@ -927,6 +928,7 @@ const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.salonReliefLarge]: '346581675092',
   [ID.salonGelHot]: '346581870060',
   [ID.salonCapsicum]: '346581700039',
+  [ID.salonLidoCream]: '355328902032',
 };
 for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
   const expected = BATCH48_CATCHUP_BARCODES[record.id];

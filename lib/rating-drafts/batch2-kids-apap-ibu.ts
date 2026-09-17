@@ -569,7 +569,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     productName: "Infants' Tylenol Oral Suspension (dyed)",
     brand: 'Tylenol',
     category: PAIN_FEVER,
-    barcode: '300450186607 300450122308',
+    barcode: '300450186607 300450122308 300450122605',
     formulaId: 'tylenol-infants-liquid-dyed',
     audience: KIDS,
     minAge: 0,
