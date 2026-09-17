@@ -775,6 +775,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     productName: 'Tiger Balm Arthritis Rub',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278422047',
     formulaId: ID.tbArthritis,
     audience: ADULT,
     minAge: 12,
@@ -917,6 +918,7 @@ if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.category !== PAIN_
 }
 const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbHydroLarge]: '039278323009',
+  [ID.tbArthritis]: '039278422047',
 };
 for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
   const expected = BATCH48_CATCHUP_BARCODES[record.id];

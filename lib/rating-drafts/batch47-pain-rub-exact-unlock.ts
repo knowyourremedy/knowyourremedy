@@ -532,6 +532,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Icy Hot Pro Pain Relief Patch',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167007303',
     formulaId: ID.icyProPatch,
     audience: ADULT,
     minAge: 12,
@@ -683,6 +684,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Icy Hot Original Menthol Patch (Arm/Neck/Leg + Back/XL/Value)',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167008416 041167008430 041167008478',
     formulaId: ID.icyOrigPatch,
     audience: ADULT,
     minAge: 12,
@@ -1055,6 +1057,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme with Lidocaine XL Patch',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167058428',
     formulaId: ID.asperLidoPatch,
     audience: ADULT,
     minAge: 12,
@@ -1447,6 +1450,9 @@ const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
   [ID.asperOdor]: '041167058848',
   [ID.salonGel]: '346581830064',
   [ID.salonPrp]: '346581110609',
+  [ID.icyProPatch]: '041167007303',
+  [ID.icyOrigPatch]: '041167008416 041167008430 041167008478',
+  [ID.asperXl]: '041167058428',
 };
 for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
   const expected = BATCH47_CATCHUP_BARCODES[record.id];
