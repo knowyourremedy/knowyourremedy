@@ -521,6 +521,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Sambucol Black Elderberry Original Syrup',
     brand: 'Sambucol',
     category: COLD_FLU,
+    barcode: '896116001112',
     formulaId: 'sambucol-original-syrup',
     audience: ADULT,
     minAge: 12,

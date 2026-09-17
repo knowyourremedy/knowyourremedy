@@ -578,6 +578,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     productName: 'Debrox Earwax Removal Aid',
     brand: 'Debrox',
     category: FIRST_AID,
+    barcode: '042037104788',
     formulaId: 'debrox-earwax-removal',
     audience: ADULT,
     minAge: 12,
