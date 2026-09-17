@@ -6,6 +6,8 @@
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
 
+**Changed Sept 17, 2026 (Active Skin Repair / electrolyzed-wash exact tokens):** Cleared — Electrolyzed Water (HOCl/electrolyzed saline vehicle; not purified-water row; not a bleach bottle); Sodium Sulfate (salt/saline neighborhood); Phosphates (unnamed, this gel) sit on the existing phosphate-salt Cleared-by-class (dicalcium / tricalcium / potassium phosphate) — tap: not phosphoric acid; do not invent a phosphoric-acid grade. Caution — Lithium Magnesium Sodium Silicate (Laponite-class clay thickener; silicate neighborhood with calcium silicate / magnesium trisilicate; not SiO2 cap; not kaolin); Sodium Hypochlorite (Trace) (residual oxidizer; FDA wound-wash allow ≠ Clean).
+
 **Changed Sept 16, 2026 (KYR6 founder-carousel / DailyMed OTC exact tokens):** High — soybean oil in lozenges / cough drops (same seed-oil High as gummies; founder lock). Cleared (NOT gummy High) — special petrolatum (petrolatum neighborhood); safflower oil as softgel fill (tap both sides; gummy print of safflower stays High). Caution — lanolin alcohol (lanolin / wool-alcohol family; distinct from Cleared ceresin); cedarleaf oil; nutmeg oil; spirits of turpentine (EO / solvent line). bisabolol stays Cleared (already locked Sept 15 — not flipped).
 
 **Changed Sept 16, 2026 (Amazon house leftover exact tokens 2):** Cleared — Culture Media (Saccharomyces cerevisiae) / Cultured Yeast (Saccharomyces cerevisiae) / Culture Media (Molasses, Saccharomyces cerevisiae) (ferment-media family); organic Rice hull concentrate (rice-hull family); Agave Inulin, Powder / Organic Agave Inulin Powder (inulin family); gum arabic (same as acacia / organic acacia gum); glycerine (alias of glycerin; both strings); Yellow Beeswax (wax); D-Alpha Tocopherol as inactive (mixed-tocopherols row; not tocopheryl acetate); Fractionated Coconut Oil / Coconut Oil, Fractionated in a GUMMY (coconut-in-gummy exception, NOT seed-oil High; tap both sides); Organic Palm Oil / Palm Oil as tablet coating (already locked; restamped; NOT gummy High); Organic Medium Chain Triglycerides / Medium Chain Triglyceride (MCT) named as tablet/softgel coating or fill (Cleared + tap); Vegetable Coating NAMED as (HPMC, glycerin) (named-coat row, not the blank Vegetable Coating Caution). Limited — Tapioca Dextrose / Organic Tapioca Dextrose (sugar / dextrin neighborhood; distinct from Cleared tapioca syrup); allulose (already locked Limited; restamped); Pea Starch (unspecified/modified starch neighborhood). Caution — Silica (oral) (same SiO2 nanoparticle cap); calcium silicate (already locked; restamped); Carob Extract (extract). natural and artificial flavors sits on the Limited natural-flavors row (already locked Limited — not flipped to Caution). bisabolol stays Cleared (already locked Sept 15 — not flipped to Caution).
@@ -279,7 +281,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sodium starch glycolate | EPA: reasonable certainty of no harm. |
 | Carbomer / carbomer copolymer / carbomer interpolymer — LOCKED (Sept 15, 2026) | Homopolymer Type A/B/C included. Older 934/940/941 benzene concern does NOT apply to current monograph. |
 | Organic agave, organic flavors/colors | Whole-food-derived. Agave Inulin, Powder / Organic Agave Inulin Powder are the inulin-family tokens (Sept 16, 2026), not this whole-food-agave color/flavor row alone. |
-| Sodium chloride, sodium bicarbonate | Saline bases. |
+| Sodium chloride, sodium bicarbonate | Saline bases. Sodium Sulfate sits in this salt / saline neighborhood (Sept 17, 2026). |
 | Potassium chloride — LOCKED (Sept 15, 2026) | Salt / electrolyte. Not a grade driver. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
 | Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
@@ -314,7 +316,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | glyceryl dilaurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | soybean sterols — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as undecane / tridecane / Coconut Alkanes. Do not alias those tokens to this row. |
-| potassium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| potassium phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Phosphate-salt Cleared-by-class with dicalcium / tricalcium phosphate. Unnamed “Phosphates” in a gel sit here — tap: not phosphoric acid. |
 | panthenol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | magnesium ascorbyl phosphate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | triethyl citrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -333,14 +335,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Lactic acid / malic acid — LOCKED | Organic acids with citric. |
 | Tartaric acid — LOCKED (Sept 15, 2026) | Organic acid with citric. |
 | Fumaric Acid; Adipic Acid; Butyric Acid; Sodium Acetate Anhydrous — LOCKED (Sept 16, 2026) | Exact tokens. Organic acids / salts with lactic / malic / citric. Cleared. |
-| Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. |
+| Dicalcium phosphate, tricalcium phosphate — **LOCKED (Sept 14, 2026 housekeeping)** | Standard mineral fillers / buffers. Not a flag. Phosphates (unnamed, this gel) sit on this same phosphate-salt Cleared-by-class (Sept 17, 2026). Tap: not phosphoric acid. Do not invent a phosphoric-acid grade. |
 | Glycerin / vegetable glycerin / organic glycerin — **LOCKED (Sept 14, 2026 housekeeping)** | Standard humectant / capsule-softgel plasticizer. Not a flag. Also written glycerine (Sept 16, 2026). Both strings written. |
 | Triacetin — LOCKED (Sept 15, 2026) | Tablet/caplet coating plasticizer. Not a grade driver. |
 | Inulin — **LOCKED (Sept 14, 2026 housekeeping)** | Food fiber. Not a flag. Chicory Root Fiber sits on this same inulin-family row (Sept 16, 2026). Both strings written. Psyllium Husk and Oat Fiber sit in this fiber / inulin neighborhood (Sept 16, 2026 refused-unlock). Agave Inulin, Powder / Organic Agave Inulin Powder sit on this same inulin family (Sept 16, 2026). |
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. Organic Tapioca Fiber Powder and soluble tapioca fiber are the same row (Sept 16, 2026). Both strings written. |
 | Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
 | Soluble corn fiber — LOCKED (Sept 15, 2026) | Fiber; ≠ maltodextrin. |
-| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. |
+| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. Electrolyzed Water is NOT this purified-water row (Sept 17, 2026). |
 | Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
 | Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. Also written Candellila Wax (typo alias; Sept 16, 2026). Both strings written. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
@@ -463,6 +465,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Fractionated Coconut Oil / Coconut Oil, Fractionated in a GUMMY — LOCKED (Sept 16, 2026) | Exact tokens. Coconut-in-gummy exception. NOT seed-oil High. Tap both sides. |
 | Palm Oil as tablet coating — LOCKED (Sept 16, 2026 restamp) | Exact token as tablet coating. Same Cleared row as Organic Palm Oil coating/fill. NOT gummy High. Tap both sides. |
 | Vegetable Coating NAMED as (HPMC, glycerin) — LOCKED (Sept 16, 2026) | Exact named-coat row. Cleared. HPMC + glycerin already Cleared. Not the blank Vegetable Coating / Vegetable-Based Tablet Coating Caution row. |
+| Electrolyzed Water — LOCKED (Sept 17, 2026) | Exact token. Cleared. Tap: HOCl / electrolyzed saline vehicle. Not the purified-water row. Not a bleach bottle. Distinct from Caution Sodium Hypochlorite (Trace). |
+| Sodium Sulfate — LOCKED (Sept 17, 2026) | Exact token. Cleared. Salt / saline neighborhood with sodium chloride. Distinct from Caution SLS. |
+| Phosphates (unnamed, this gel) — LOCKED (Sept 17, 2026) | Exact token. Existing phosphate-salt Cleared-by-class (dicalcium / tricalcium / potassium phosphate). Tap: not phosphoric acid. Do not invent a phosphoric-acid grade. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -517,7 +522,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | spirits of turpentine — LOCKED (Sept 16, 2026) | Exact token. EO / solvent line. Do not silently alias to a different §5 token. | Standard alternatives rule. Not Avoid. |
 | Unspecified resin — LOCKED | Label didn’t name the resin. | Standard alternatives rule. Not Avoid. |
 | Magnesium trisilicate — LOCKED | Silicate-adjacent filler. Not the SiO2 0-pt cap. Not Avoid. | Standard alternatives rule. Not Avoid. |
-| Calcium silicate — LOCKED (Sept 15, 2026) | Silicate anti-caking (Mg trisilicate neighborhood); not the SiO2 0-pt cap. Exact restamp Sept 16, 2026 — silica-family flow agent. No grade change. | Standard alternatives rule. Not Avoid. |
+| Calcium silicate — LOCKED (Sept 15, 2026) | Silicate anti-caking (Mg trisilicate neighborhood); not the SiO2 0-pt cap. Exact restamp Sept 16, 2026 — silica-family flow agent. No grade change. Lithium Magnesium Sodium Silicate is a sibling silicate neighborhood (Sept 17, 2026) — not this exact string. | Standard alternatives rule. Not Avoid. |
 | Sucrose fatty acid esters — LOCKED (Sept 15, 2026) | Synthetic emulsifier; not Avoid. | Standard alternatives rule. Not Avoid. |
 | Steareth-2, steareth-21 — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Ceteth-20 phosphate — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
@@ -633,6 +638,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Carob Extract — LOCKED (Sept 16, 2026) | Exact token. Extract. Caution. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
 | edible ink (unspecified) — LOCKED (Sept 16, 2026) | Exact token. Unspecified ink. Caution. Named plant-color / named dye rows are not this string. | Standard alternatives rule. Not Avoid. |
 | sodium pyruvate — LOCKED (Sept 16, 2026) | Exact token. Caution. | Standard alternatives rule. Not Avoid. |
+| Lithium Magnesium Sodium Silicate — LOCKED (Sept 17, 2026) | Exact token. Laponite-class clay thickener. Silicate neighborhood with calcium silicate / magnesium trisilicate. Not the SiO2 nanoparticle cap. Not kaolin (Cleared) and not calcined kaolin. | Standard alternatives rule. Not Avoid. |
+| Sodium Hypochlorite (Trace) — LOCKED (Sept 17, 2026) | Exact token. Residual oxidizer. Caution. FDA wound-wash allow ≠ Clean. Distinct from Cleared Electrolyzed Water (HOCl vehicle). | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
