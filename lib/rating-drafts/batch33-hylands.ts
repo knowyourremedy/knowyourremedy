@@ -349,6 +349,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-baby-oral-pain-day',
+    barcode: '354973331518',
     productName: "Hyland's Baby Oral Pain Relief Daytime",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -381,6 +382,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-baby-oral-pain-night',
+    barcode: '354973332416',
     productName: "Hyland's Baby Oral Pain Relief Nighttime",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -620,6 +622,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-restful-legs-pm',
+    barcode: '354973335219',
     productName: "Hyland's Restful Legs PM Tablets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -654,6 +657,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-seasonal-allergy-relief',
+    barcode: '354973301214',
     productName: "Hyland's Seasonal Allergy Relief Tablets",
     brand: BRAND,
     category: ALLERGIES,
@@ -687,6 +691,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-nerve-tonic',
+    barcode: '354973301443',
     productName: "Hyland's Nerve Tonic Tablets",
     brand: BRAND,
     category: SLEEP,
@@ -718,6 +723,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: STUFFY,
+    barcode: '354973340619',
     productName: "Hyland's Kids Stuffy Nose & Sinus",
     brand: BRAND,
     category: COLD_FLU,
@@ -749,6 +755,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: TINY_COLD_DAY,
+    barcode: '354973315815',
     productName: "Hyland's Baby Tiny Cold Tablets Daytime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1007,6 +1014,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   // ── Clean supplements (water + citric acid) ──────────────
   {
     id: ORG_KIDS_DAY,
+    barcode: '810087820183',
     productName: "Hyland's Organic Kids Cough & Immune Daytime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1093,6 +1101,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-baby-cough-immune-day',
+    barcode: '810087820268',
     productName: "Hyland's Organic Baby Cough & Immune Daytime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1136,6 +1145,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-baby-cough-immune-night',
+    barcode: '810087820275',
     productName: "Hyland's Organic Baby Cough & Immune Nighttime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1289,6 +1299,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   // ── Caution — glycyrrhiza now Cleared; rest of OI from §5 ─
   {
     id: 'hylands-4kids-cold-n-cough-original',
+    barcode: '354973307513',
     productName: "Hyland's Kids Cold & Cough Daytime Original",
     brand: BRAND,
     category: COLD_FLU,
@@ -1325,6 +1336,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-4kids-cold-n-cough-night-original',
+    barcode: '354973337510',
     productName: "Hyland's Kids Cold & Cough Nighttime Original",
     brand: BRAND,
     category: COLD_FLU,
@@ -1364,6 +1376,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-4kids-cold-n-cough-night-grape',
+    barcode: '354973337718',
     productName: "Hyland's Kids Cold & Cough Nighttime Grape",
     brand: BRAND,
     category: COLD_FLU,
