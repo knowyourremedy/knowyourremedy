@@ -276,12 +276,14 @@ function mentholMsPatchRow(opts: {
   ndc: string;
   sisName: string;
   twinNote: string;
+  barcode?: string;
 }): RatingRecord {
   return row({
     id: opts.id,
     productName: opts.productName,
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: opts.formulaId,
     audience: ADULT,
     minAge: 18,
@@ -455,12 +457,14 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     ndc: '46581-675',
     sisName: 'Styrene-isoprene-styrene block copolymer',
     twinNote: `LARGE pack of the same menthol 3% / methyl salicylate 10% formula — shared formulaId ${ID.salonArth} with the regular Arthritis / Pain Relief patches. OI matches.`,
+    barcode: '346581675092',
   }),
   row({
     id: ID.salonGelHot,
     productName: 'Salonpas Pain Relieving Gel-Patch HOT',
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    barcode: '346581870060',
     formulaId: ID.salonGelHot,
     audience: ADULT,
     minAge: 12,
@@ -550,6 +554,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     productName: 'Salonpas-HOT Capsicum Patch',
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    barcode: '346581700039',
     formulaId: ID.salonCapsicum,
     audience: ADULT,
     minAge: 12,
@@ -919,6 +924,9 @@ if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.category !== PAIN_
 const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbHydroLarge]: '039278323009',
   [ID.tbArthritis]: '039278422047',
+  [ID.salonReliefLarge]: '346581675092',
+  [ID.salonGelHot]: '346581870060',
+  [ID.salonCapsicum]: '346581700039',
 };
 for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
   const expected = BATCH48_CATCHUP_BARCODES[record.id];

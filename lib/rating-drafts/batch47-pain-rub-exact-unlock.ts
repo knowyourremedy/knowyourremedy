@@ -858,6 +858,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine Foot (2-in-1) cream',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167059708',
     formulaId: ID.asperFoot2,
     audience: ADULT,
     minAge: 12,
@@ -1299,6 +1300,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Salonpas Pain Relieving FLEX Patch Lidocaine 4%',
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    barcode: '346581840070',
     formulaId: ID.salonFlex,
     audience: ADULT,
     minAge: 12,
@@ -1459,6 +1461,8 @@ const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyOrigRoll]: '041167009109',
   [ID.asperAppl]: '041167058107',
   [ID.asperFoot]: '041167058626',
+  [ID.asperFoot2]: '041167059708',
+  [ID.salonFlex]: '346581840070',
 };
 for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
   const expected = BATCH47_CATCHUP_BARCODES[record.id];

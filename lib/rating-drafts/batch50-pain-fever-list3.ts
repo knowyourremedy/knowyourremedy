@@ -1496,6 +1496,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Bengay Vanishing Scent Gel',
     brand: 'Bengay',
     category: PAIN_FEVER,
+    barcode: '074300081977',
     formulaId: FID.bengayGel,
     audience: ADULT,
     minAge: 12,
@@ -1690,6 +1691,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Absorbine Jr. Plus Extra Strength Liquid 4%',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
+    barcode: '889476412049',
     formulaId: FID.absPlus,
     audience: ADULT,
     minAge: 2,
@@ -2099,6 +2101,8 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.greenRoll]: '731124000064',
   [ID.bengayCream]: '074300081946',
   [ID.capzasinHp]: '041167751466',
+  [ID.bengayGel]: '074300081977',
+  [ID.absPlus]: '889476412049',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];
