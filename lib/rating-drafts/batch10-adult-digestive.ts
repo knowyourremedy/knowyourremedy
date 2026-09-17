@@ -1491,6 +1491,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'Dramamine Less Drowsy',
     brand: 'Dramamine',
     category: DIGESTIVE,
+    barcode: '831248000657',
     formulaId: 'dramamine-less-drowsy',
     audience: ADULT,
     minAge: 12,

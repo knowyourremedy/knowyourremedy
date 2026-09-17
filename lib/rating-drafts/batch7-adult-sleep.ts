@@ -1106,6 +1106,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Equate Nighttime Sleep Aid Tablets',
     brand: 'Equate',
     category: SLEEP,
+    barcode: '194346263615',
     formulaId: 'equate-sleep-aid-tablets-dyed',
     audience: ADULT,
     minAge: 12,

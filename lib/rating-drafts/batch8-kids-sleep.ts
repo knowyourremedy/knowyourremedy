@@ -633,6 +633,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
     productName: "Zarbee's Children's Sleep Liquid with Melatonin",
     brand: "Zarbee's",
     category: SLEEP,
+    barcode: '858438005711',
     formulaId: 'zarbees-kids-sleep-liquid',
     audience: KIDS,
     minAge: 3,
