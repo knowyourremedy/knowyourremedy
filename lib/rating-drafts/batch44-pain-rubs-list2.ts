@@ -335,6 +335,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Salonpas Arthritis Pain Relief Gel (diclofenac)',
     brand: 'Salonpas',
     category: PAIN_FEVER,
+    barcode: '355328801106',
     formulaId: ID.salonpasDiclo,
     audience: ADULT,
     minAge: 18,
@@ -634,6 +635,7 @@ const BATCH44_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyOrig]: '041167081501',
   [ID.icyPro]: '041167008041',
   [ID.salonpasDeep]: '346581900026',
+  [ID.salonpasDiclo]: '355328801106',
 };
 for (const record of BATCH44_PAIN_RUBS_LIST2) {
   const expected = BATCH44_CATCHUP_BARCODES[record.id];

@@ -517,7 +517,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     productName: 'Excedrin Tension Headache',
     brand: 'Excedrin',
     category: PAIN_FEVER,
-    barcode: '300672045911',
+    barcode: '300672045911 300672045249',
     formulaId: ID.tension,
     audience: ADULT,
     minAge: 12,
