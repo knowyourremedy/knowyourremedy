@@ -1589,6 +1589,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-mushroom-stress-relief',
+    barcode: '051494105474',
     productName: 'Superfood Mushroom Stress Relief',
     category: VITAMINS,
     form: 'capsule',
@@ -1609,6 +1610,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-mushroom-focus-support',
+    barcode: '051494105467',
     productName: 'Superfood Mushroom Focus Support',
     category: VITAMINS,
     form: 'capsule',
@@ -1629,6 +1631,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-omega-3-fish-oil',
+    barcode: '051494105948',
     productName: 'Omega-3 Fish Oil',
     category: VITAMINS,
     form: 'softgel',
@@ -1770,6 +1773,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-womens-whole-body-gummies',
+    barcode: '051494105719',
     productName: "Women's Whole Body Multi Gummies",
     category: VITAMINS,
     form: 'gummy',
@@ -1790,6 +1794,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-mens-whole-body-gummies',
+    barcode: '051494105726',
     productName: "Men's Whole Body Multi Gummies",
     category: VITAMINS,
     form: 'gummy',
@@ -1810,6 +1815,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-womens-55-whole-body-gummies',
+    barcode: '051494105733',
     productName: "Women's 55+ Whole Body Multi Gummies",
     category: VITAMINS,
     form: 'gummy',
@@ -1826,6 +1832,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-mens-55-whole-body-gummies',
+    barcode: '051494105740',
     productName: "Men's 55+ Whole Body Multi Gummies",
     category: VITAMINS,
     form: 'gummy',
@@ -1842,6 +1849,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-womens-prebiotic-probiotic-gummies',
+    barcode: '051494105931',
     productName: "Women's Prebiotic + Probiotic Gummies",
     category: DIGESTIVE,
     form: 'gummy',
@@ -1910,6 +1918,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-magnesium-citrate-gummies',
+    barcode: '051494105917',
     productName: 'High Absorption Magnesium Citrate Gummies',
     category: VITAMINS,
     form: 'gummy',
@@ -2040,6 +2049,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-elderberry-immune-gummies',
+    barcode: '051494104149',
     productName: 'Elderberry Immune Support Gummies',
     category: IMMUNE,
     form: 'gummy',
@@ -2060,6 +2070,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-d3-2000-gummies',
+    barcode: '051494104125',
     productName: 'D3 2000 IU Gummies (50 mcg)',
     category: IMMUNE,
     form: 'gummy',
@@ -2093,6 +2104,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-relax-calm-soft-chews-strawberry',
+    barcode: '051494105436',
     productName: 'Relax + Calm Magnesium Soft Chews - Strawberry',
     category: SLEEP,
     form: 'soft chew',
@@ -2310,6 +2322,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-ashwagandha-gummies',
+    barcode: '051494106099',
     productName: 'Ashwagandha Gummies',
     category: VITAMINS,
     form: 'gummy',
