@@ -651,7 +651,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "Children's Mucinex Multi-Symptom Cold",
     brand: 'Mucinex',
     category: COLD_FLU,
-    barcode: '363824010670',
+    barcode: '363824010670 363824010649',
     formulaId: 'mucinex-childrens-multi-cold-liquid',
     audience: KIDS,
     minAge: 4,

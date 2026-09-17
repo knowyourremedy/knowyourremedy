@@ -649,6 +649,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Tiger Balm Active Muscle Rub',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278440201',
     formulaId: ID.tbMuscle,
     audience: ADULT,
     minAge: 12,
@@ -1135,6 +1136,7 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyProNoMess]: '041167007969',
   [ID.icyVanish]: '041167009239',
   [ID.icyNight]: '041167170908',
+  [ID.tbActiveRub]: '039278440201',
 };
 for (const record of BATCH45_PAIN_RUBS_REMAINING) {
   const expected = BATCH45_CATCHUP_BARCODES[record.id];

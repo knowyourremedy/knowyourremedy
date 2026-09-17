@@ -690,7 +690,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     productName: 'Genuine Bayer Aspirin 325 Coated',
     brand: 'Bayer',
     category: PAIN_FEVER,
-    barcode: '312843536357 312843536364',
+    barcode: '312843536357 312843536364 312843555365 312843555372',
     formulaId: ID.genuine,
     audience: ADULT,
     minAge: 12,
