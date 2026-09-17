@@ -629,6 +629,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     brand: 'Equate',
     retailers: ['Walmart'],
     setid: 'dd36dc43-a9b7-4cda-86e0-9283d996a60a',
+    barcode: '681131731713',
   }),
   l612Record({
     id: UPUP_LORATADINE,

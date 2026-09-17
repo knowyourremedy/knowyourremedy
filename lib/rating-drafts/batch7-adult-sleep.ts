@@ -1056,6 +1056,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Equate Nighttime Sleep-Aid Softgels',
     brand: 'Equate',
     category: SLEEP,
+    barcode: '194346597161',
     formulaId: 'equate-sleep-aid-softgels',
     audience: ADULT,
     minAge: 12,
