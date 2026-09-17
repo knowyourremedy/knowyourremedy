@@ -1224,7 +1224,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Advil Dual Action with Acetaminophen',
     brand: 'Advil',
     category: PAIN_FEVER,
-    barcode: '305730147361 305730147729',
+    barcode: '305730147361 305730147729 305730147187 305730147941',
     formulaId: 'apap-ibu-advil-dual-action',
     audience: ADULT,
     minAge: 12,
