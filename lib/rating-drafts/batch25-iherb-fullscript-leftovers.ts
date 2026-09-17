@@ -7,8 +7,8 @@
 // Founder calls (locked): see notes below. Methodology v1.6 grades only —
 // do not change locked ingredient grades. Do NOT invent Clean. Do NOT
 // grade gellan. Do NOT write skipped products. Do NOT grade essential
-// oils. Do NOT invent UPCs. Barcodes omitted — match prior rating-draft
-// batches. Pack sizes share formulaId. formulaId == id on every row
+// oils. Do NOT invent UPCs except KYR5-b catch-up allowlist.
+// Pack sizes share formulaId. formulaId == id on every row
 // (same pattern as prior batches). Form is labeled on cleanAlternatives,
 // not a hard filter (§6). Not wired into Clean Picks UI. No live Clean
 // Picks file is edited from this draft. Methodology.md / PROJECT_NOTES.md
@@ -176,6 +176,10 @@ const ZINC_PARKED =
 
 const PE_PROBIOTIC_GI_ID = 'pure-encapsulations-probiotic-gi';
 const SEEKING_HEALTH_MULTI_ID = 'seeking-health-optimal-multivitamin';
+
+const BATCH25_CATCHUP_BARCODES: Record<string, string> = {
+  [SEEKING_HEALTH_MULTI_ID]: '810007520940',
+};
 const PE_ONE_MULTI_ID = 'pure-encapsulations-one-multivitamin';
 const PE_MAG_GLYCINATE_ID = 'pure-encapsulations-magnesium-glycinate';
 const DFH_MAG_ID = 'dfh-magnesium-glycinate-complex';
@@ -278,6 +282,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
     productName: 'Seeking Health Optimal Multivitamin (240 capsules)',
     brand: 'Seeking Health',
     category: VITAMINS,
+    barcode: BATCH25_CATCHUP_BARCODES[SEEKING_HEALTH_MULTI_ID],
     formulaId: SEEKING_HEALTH_MULTI_ID,
     audience: ADULT,
     minAge: 18,
@@ -675,3 +680,10 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH25_IHERB_FULLSCRIPT_LEFTOVERS) {
+  const expected = BATCH25_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 25 catch-up UPC drift on ${record.id}`);
+  }
+}

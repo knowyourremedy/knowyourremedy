@@ -118,6 +118,22 @@ const ZINC_PARKED =
 const PARKED_RUB =
   'Menthol / camphor / eucalyptus oil as labeled actives stay parked (Methodology §2 / §5). This draft grades inactives only.';
 
+// KYR5-b online-only chunk 1 — Amazon PDP / HelloPharmacist label
+// UPC-A. Exact pack + exact OI only. Do not steal softgel / tablet /
+// soybean-D3 twins.
+const BATCH63_CATCHUP_BARCODES: Record<string, string> = {
+  'amazon-elements-omega-3-6-9': '842379150586 195515040402',
+  'amazon-elements-womens-probiotic': '195515041393',
+  'amazon-elements-collagen-complex': '842379150630 195515041409',
+  'amazon-elements-melatonin-3-tablets': '842379106576',
+  'amazon-elements-calcium-magnesium': '842379199394',
+  'amazon-elements-womens-multi-gummies': '842379149566',
+  'amazon-basics-fish-oil-gummies': '195515033374',
+  'amazon-basics-probiotic-5b': '195515008112',
+  'amazon-basics-fiber-gummies': '195515034500',
+  'amazon-basics-melatonin-5-gummies': '195515033381',
+};
+
 const SET = {
   heal: 'cdf1bd12-ac59-4f06-be0f-ef6eb3caeeff',
   chest: '673996ab-6e57-4feb-8af3-d8b474741a8d',
@@ -494,6 +510,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Elements Omega 3-6-9 Softgels (Previously Revly)',
     brand: ELEMENTS,
     category: VITAMINS,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-omega-3-6-9'],
     formulaId: 'amazon-elements-omega-3-6-9',
     audience: ADULT,
     minAge: 18,
@@ -622,6 +639,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: "Amazon Elements Women's Probiotic Capsules (Previously Revly)",
     brand: ELEMENTS,
     category: DIGESTIVE,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-womens-probiotic'],
     formulaId: 'amazon-elements-womens-probiotic',
     audience: ADULT,
     minAge: 18,
@@ -652,6 +670,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Elements Collagen Complex (Previously Revly)',
     brand: ELEMENTS,
     category: VITAMINS,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-collagen-complex'],
     formulaId: 'amazon-elements-collagen-complex',
     audience: ADULT,
     minAge: 18,
@@ -676,6 +695,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Basics Fish Oil Gummies (Previously Solimo)',
     brand: BASICS,
     category: VITAMINS,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-basics-fish-oil-gummies'],
     formulaId: 'amazon-basics-fish-oil-gummies',
     audience: ADULT,
     minAge: 18,
@@ -799,6 +819,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Basics Probiotic 5 Billion Capsules (Previously Solimo)',
     brand: BASICS,
     category: DIGESTIVE,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-basics-probiotic-5b'],
     formulaId: 'amazon-basics-probiotic-5b',
     audience: ADULT,
     minAge: 18,
@@ -923,6 +944,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Elements Melatonin 3 mg Tablets',
     brand: ELEMENTS,
     category: SLEEP,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-melatonin-3-tablets'],
     formulaId: 'amazon-elements-melatonin-3-tablets',
     audience: ADULT,
     minAge: 18,
@@ -1060,6 +1082,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Elements Calcium + Magnesium',
     brand: ELEMENTS,
     category: VITAMINS,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-calcium-magnesium'],
     formulaId: 'amazon-elements-calcium-magnesium',
     audience: ADULT,
     minAge: 18,
@@ -1166,6 +1189,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: "Amazon Elements Women's Multi Gummies (Previously Revly)",
     brand: ELEMENTS,
     category: VITAMINS,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-elements-womens-multi-gummies'],
     formulaId: 'amazon-elements-womens-multi-gummies',
     audience: ADULT,
     minAge: 18,
@@ -1247,6 +1271,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Basics Fiber Gummies (Previously Solimo)',
     brand: BASICS,
     category: DIGESTIVE,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-basics-fiber-gummies'],
     formulaId: 'amazon-basics-fiber-gummies',
     audience: ADULT,
     minAge: 18,
@@ -1282,6 +1307,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productName: 'Amazon Basics Melatonin 5 mg Gummies (Previously Solimo)',
     brand: BASICS,
     category: SLEEP,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-basics-melatonin-5-gummies'],
     formulaId: 'amazon-basics-melatonin-5-gummies',
     audience: ADULT,
     minAge: 18,
@@ -1547,4 +1573,11 @@ if (heal?.inactiveIngredients.find((i) => /bisabolol/i.test(i.name))?.riskLevel 
 
 if (_ROWS.some((r) => /solimo fish oil 1000|saline nasal|glucosamine|lemon powder/i.test(r.id))) {
   throw new Error('do not write PROJECT_NOTES dead / off-house SKUs');
+}
+
+for (const record of BATCH63_KYR6_ELEMENTS_BASICS) {
+  const expected = BATCH63_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 63 catch-up UPC drift on ${record.id}`);
+  }
 }

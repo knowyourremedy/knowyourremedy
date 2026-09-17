@@ -214,7 +214,7 @@ const CITE = {
   codeage_platinum:
     'Founder carton OI (Sept 17) Codeage Platinum other-ingredients: Methylcellulose Capsule, Helix Liposomal Delivery (sunflower lecithin / phosphatidylcholine). Matches Codeage Women\'s Multivitamin Platinum brand / Target / Vitacost UPC 850068815975. Distinct from batch59 codeage-teen-multi-platinum (adds ascorbyl palmitate + SiO2 + MCC) and from Hair / NMN / Vitamin C Platinum rows.',
   codeage_teens_fermented:
-    'Founder carton OI (Sept 17) Codeage Teens Fermented Multi other-ingredients: Methylcellulose Capsule, Potassium Chloride. Brand / Target / HelloPharmacist Teen Fermented Multivitamin+. Distinct from batch59 codeage-teen-multi and codeage-teen-multi-platinum. No carton UPC harvested.',
+    'Founder carton OI (Sept 17) Codeage Teens Fermented Multi other-ingredients: Methylcellulose Capsule, Potassium Chloride. Brand / Target / HelloPharmacist Teen Fermented Multivitamin+ UPC 853919008526. Distinct from batch59 codeage-teen-multi (850068815470) and codeage-teen-multi-platinum / men’s fermented 853919008519. No invented code.',
   gol_kids_sb:
     'Founder carton OI (Sept 17) Garden of Life Kids+ Strawberry Banana chewable other-ingredients: Clean Tablet Technology Blend (Organic Dextrose, Organic Tapioca Maltodextrin, Organic Sunflower Lecithin, Organic Palm Oil, Organic Guar Gum), Organic Strawberry Banana Flavor. Not a gummy. Distinct from batch59 gol-organic-kids-probiotics-berry-cherry (own formulaId). No carton UPC harvested.',
   gol_organic_fiber:
@@ -230,6 +230,10 @@ const CITE = {
   asr_hydrogel:
     'Founder carton OI (Sept 17) Active Skin Repair hydrogel other-ingredients: Electrolyzed Water, Sodium Chloride, Lithium Magnesium Sodium Silicate, Sodium Bicarbonate, Phosphates, Sodium Sulfate, Sodium Hypochlorite (Trace). Thrive Medical-Grade Skin & Wound Repair Antimicrobial Hydrogel SKU / UPC 818582012102. Sept 17 electrolyzed-wash §5 tokens used as locked.',
 } as const;
+
+const BATCH64_CATCHUP_BARCODES: Record<string, string> = {
+  'codeage-teens-fermented-multi': '853919008526',
+};
 
 const MINERAL_ALTS: CleanAlternative[] = [
   alt(
@@ -392,6 +396,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     productName: 'Teens Fermented Multi',
     brand: 'Codeage',
     category: VITAMINS,
+    barcode: BATCH64_CATCHUP_BARCODES['codeage-teens-fermented-multi'],
     formulaId: 'codeage-teens-fermented-multi',
     audience: ADULT,
     minAge: 12,
@@ -876,4 +881,11 @@ if (asr?.verdict !== 'caution') {
 }
 if (!asr?.inactiveIngredients.some((i) => /hypochlorite/i.test(i.name))) {
   throw new Error('Active Skin Repair must score Sodium Hypochlorite (Trace)');
+}
+
+for (const record of BATCH64_KYR6_THRIVE_NO_OI) {
+  const expected = BATCH64_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 64 catch-up UPC drift on ${record.id}`);
+  }
 }

@@ -5,8 +5,8 @@
 // Mixed categories (Sleep + Vitamins) · audience 'adult' · recordStatus
 // is 'unverified' on every row. Founder calls (locked): see notes below.
 // Methodology v1.6 grades only — do not change locked ingredient grades.
-// Do NOT invent Clean. Do NOT grade essential oils. Do NOT invent UPCs.
-// Barcodes omitted — match prior rating-draft batches. Pack sizes share
+// Do NOT invent Clean. Do NOT grade essential oils. Do NOT invent UPCs
+// except KYR5-b catch-up allowlist. Pack sizes share
 // formulaId. formulaId == id on every row (same pattern as prior batches).
 // Form is labeled on cleanAlternatives, not a hard filter (§6).
 // Not wired into Clean Picks UI. No live Clean Picks file is edited from
@@ -157,6 +157,10 @@ const PE_PRENATAL_ID = 'pure-encapsulations-prenatal-nutrients';
 const THORNE_PRENATAL_ID = 'thorne-basic-prenatal';
 const NORDIC_OMEGA_ID = 'nordic-naturals-ultimate-omega-lemon';
 const DFH_PRENATAL_ID = 'dfh-prenatal-pro';
+
+const BATCH24_CATCHUP_BARCODES: Record<string, string> = {
+  [DFH_PRENATAL_ID]: '879452002623',
+};
 
 const PE_MELATONIN_CITE =
   'Pure Encapsulations Melatonin-SR 3 mg iHerb product page / DSLD 185040 / pureencapsulationspro PDF PURE_PIS_MelatoninSR.pdf (microcrystalline cellulose; vegetarian capsule cellulose/water; hypoallergenic plant fiber cellulose; hydroxypropyl methylcellulose / HPMC; sodium alginate; carnauba wax)';
@@ -371,6 +375,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
     productName: 'Designs for Health Prenatal Pro',
     brand: 'Designs for Health',
     category: VITAMINS,
+    barcode: BATCH24_CATCHUP_BARCODES[DFH_PRENATAL_ID],
     formulaId: DFH_PRENATAL_ID,
     audience: ADULT,
     minAge: 18,
@@ -412,3 +417,10 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH24_IHERB_FULLSCRIPT) {
+  const expected = BATCH24_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 24 catch-up UPC drift on ${record.id}`);
+  }
+}
