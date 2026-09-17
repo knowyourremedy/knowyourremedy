@@ -2134,6 +2134,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-adult-50",
+    barcode: "763948105106",
     productName: "Pearls® Adult 50+ Probiotic",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2157,6 +2158,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-primadophilus-reuteri-pearls",
+    barcode: "033674157527 033674157701",
     productName: "Primadophilus® Reuteri Pearls Probiotics",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2180,6 +2182,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-primadophilus-bifidus",
+    barcode: "033674068601 033674156513",
     productName: "Primadophilus® Bifidus Probiotic",
     category: "Digestive",
     formulaId: "natures-way-primadophilus-bifidus",
@@ -2202,6 +2205,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-primadophilus-probiotic",
+    barcode: "033674068007 033674068502",
     productName: "Primadophilus® Probiotic",
     category: "Digestive",
     formulaId: "natures-way-primadophilus-bifidus",
@@ -2224,6 +2228,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-primadophilus-reuteri",
+    barcode: "033674142400 033674150245",
     productName: "Primadophilus® Reuteri Probiotics",
     category: "Digestive",
     formulaId: "natures-way-primadophilus-reuteri",
@@ -2247,6 +2252,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-joint-movement-glucosamine",
+    barcode: "371401394167",
     productName: "Joint Movement Glucosamine®",
     category: "Pain & Fever",
     formulaId: "natures-way-joint-movement-glucosamine",
@@ -2274,6 +2280,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-calcium-vitamin-d3-liquid",
+    barcode: "371401388166",
     productName: "Calcium & Vitamin D3",
     category: "Vitamins",
     formulaId: "natures-way-calcium-vitamin-d3-liquid",
@@ -2306,6 +2313,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-air-power",
+    barcode: "359800023215",
     productName: "Air-Power®",
     category: "Cold & Flu",
     formulaId: "natures-way-air-power",
@@ -2338,6 +2346,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-garden-goodness-mens",
+    barcode: "033674121122",
     productName: "Alive!® Men's Garden Goodness™ Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-garden-goodness-mens",
@@ -2364,6 +2373,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-garden-goodness-womens",
+    barcode: "033674121115",
     productName: "Alive!® Women's Garden Goodness™ Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-garden-goodness-mens",
@@ -2390,6 +2400,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-vitamin-e-d-alpha",
+    barcode: "033674402115",
     productName: "Vitamin E D-Alpha Tocopherol",
     category: "Vitamins",
     formulaId: "natures-way-vitamin-e-d-alpha",
@@ -2444,6 +2455,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-zero-sugar-womens-gummy",
+    barcode: "033674146187",
     productName: "Alive!® Zero Sugar Women's Gummy Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-zero-sugar-womens-gummy",
@@ -2472,6 +2484,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-zero-sugar-mens-gummy",
+    barcode: "033674146200",
     productName: "Alive!® Zero Sugar Men's Gummy Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-zero-sugar-mens-gummy",
@@ -2500,6 +2513,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-zero-sugar-kids-gummy",
+    barcode: "033674150009",
     productName: "Alive!® Zero Sugar Gummy Multivitamin for Kids",
     category: "Vitamins",
     formulaId: "natures-way-alive-zero-sugar-kids-gummy",
@@ -2586,6 +2600,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-actifruit",
+    barcode: "763948078424",
     productName: "ActiFruit™",
     category: "Digestive",
     formulaId: "natures-way-actifruit",
@@ -2615,6 +2630,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-pepogest",
+    barcode: "033674145371",
     productName: "Pepogest (Peppermint Oil)",
     category: "Digestive",
     formulaId: "natures-way-pepogest",
@@ -2642,6 +2658,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-garlinase-5000",
+    barcode: "763948085033 763948085019",
     productName: "Garlinase® 5000",
     category: "Immune Support",
     formulaId: "natures-way-garlinase-5000",
@@ -2670,6 +2687,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-garlicin-cardio",
+    barcode: "033674067932 033674150672",
     productName: "Garlicin® Cardio",
     category: "Vitamins",
     formulaId: "natures-way-garlicin-cardio",
@@ -2697,6 +2715,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-fisol",
+    barcode: "033674153345",
     productName: "Fisol® Fish Oil",
     category: "Vitamins",
     formulaId: "natures-way-fisol",
@@ -2728,6 +2747,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-super-fisol",
+    barcode: "033674156889 033674155189",
     productName: "Super Fisol™ Fish Oil",
     category: "Vitamins",
     formulaId: "natures-way-super-fisol",
@@ -2759,6 +2779,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-5-htp",
+    barcode: "033674452400 033674452509",
     productName: "5-HTP",
     category: "Sleep",
     formulaId: "natures-way-5-htp",
@@ -2787,6 +2808,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-petadolex-pro-active",
+    barcode: "763948048069",
     productName: "Petadolex® Pro-Active",
     category: "Pain & Fever",
     formulaId: "natures-way-petadolex-pro-active",
@@ -2812,6 +2834,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-premium-prenatal",
+    barcode: "033674112090",
     productName: "Alive!® Premium Prenatal Multivitamin",
     category: "Prenatal",
     formulaId: "natures-way-alive-premium-prenatal",
@@ -2842,6 +2865,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-cortisol-manager",
+    barcode: "871791003811 871791004337",
     productName: "Cortisol Manager®",
     category: "Sleep",
     formulaId: "natures-way-cortisol-manager",
@@ -2870,6 +2894,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-moringa",
+    barcode: "033674159637",
     productName: "Moringa",
     category: "Immune Support",
     formulaId: "natures-way-moringa",
@@ -2894,6 +2919,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-sleep-tonight",
+    barcode: "763948004584",
     productName: "Sleep Tonight™",
     category: "Sleep",
     formulaId: "natures-way-sleep-tonight",
@@ -2922,6 +2948,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-smart-q10",
+    barcode: "763948061136",
     productName: "SMART Q10™ CoQ10",
     category: "Vitamins",
     formulaId: "natures-way-smart-q10",
@@ -2951,6 +2978,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-schisandra",
+    barcode: "033674168004",
     productName: "Schisandra Fruit",
     category: "Immune Support",
     formulaId: "natures-way-schisandra",
@@ -2973,6 +3001,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-gymnema",
+    barcode: "033674637005",
     productName: "Gymnema",
     category: "Vitamins",
     formulaId: "natures-way-gymnema",
@@ -2997,6 +3026,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-ginkgold-max",
+    barcode: "033674152515",
     productName: "Ginkgold® Max",
     category: "Vitamins",
     formulaId: "natures-way-ginkgold-max",
@@ -3024,6 +3054,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-ginkgo",
+    barcode: "033674616000 033674153512",
     productName: "Ginkgo",
     category: "Vitamins",
     formulaId: "natures-way-ginkgo",
@@ -3047,6 +3078,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-black-elderberry",
+    barcode: "033674124406",
     productName: "Black Elderberry",
     category: "Immune Support",
     formulaId: "natures-way-black-elderberry",
@@ -3069,6 +3101,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-ashwagandha-silicate",
+    barcode: "033674153871",
     productName: "Ashwagandha",
     category: "Sleep",
     formulaId: "natures-way-ashwagandha-silicate",
@@ -3101,6 +3134,7 @@ type HerbSpec = {
   category: string;
   form: string;
   oi: string;
+  barcode?: string;
 };
 
 function herbFlags(oi: string, cite: string): IngredientFlag[] {
@@ -3127,6 +3161,7 @@ function herbRow(spec: HerbSpec, sio2: boolean): RatingRecord {
     : ALTS.immune;
   return row({
     id: spec.id,
+    ...(spec.barcode ? { barcode: spec.barcode } : {}),
     productName: spec.productName,
     category: spec.category,
     formulaId: spec.id,
@@ -3149,6 +3184,7 @@ function herbRow(spec: HerbSpec, sio2: boolean): RatingRecord {
 const HERB_CLEAN: HerbSpec[] = [
   {
     id: "natures-way-7-keto-dhea",
+    barcode: "763948051861",
     handle: "7-keto-dhea",
     productName: "7-KETO® DHEA Metabolite",
     category: "Vitamins",
@@ -3157,6 +3193,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-acid-a-cal",
+    barcode: "763948011513",
     handle: "acid-a-cal",
     productName: "Acid-A-Cal™ Formula",
     category: "Vitamins",
@@ -3165,6 +3202,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-activated-charcoal-teal",
+    barcode: "033674451717",
     handle: "activated-charcoal-teal",
     productName: "Activated Charcoal",
     category: "Digestive",
@@ -3173,6 +3211,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-activated-charcoal",
+    barcode: "033674020708 033674119501",
     handle: "activated-charcoal",
     productName: "Activated Charcoal",
     category: "Digestive",
@@ -3181,6 +3220,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-adrenergize",
+    barcode: "763948040858",
     handle: "adrenergize",
     productName: "ADRENergize® Adrenal Support",
     category: "Vitamins",
@@ -3189,6 +3229,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-alfa-max",
+    barcode: "033674020111",
     handle: "alfa-max",
     productName: "Alfa-Max",
     category: "Immune Support",
@@ -3197,6 +3238,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-aloe-maxlax",
+    barcode: "033674001424",
     handle: "aloe-maxlax",
     productName: "Aloe MAXLAX™ Premium Blend",
     category: "Digestive",
