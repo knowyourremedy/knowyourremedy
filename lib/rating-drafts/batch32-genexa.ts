@@ -481,6 +481,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-infants-daytime-cough-immune',
+    barcode: '850015736933',
     productName: "Genexa Infants' Daytime Cough & Immune Support",
     brand: BRAND,
     category: IMMUNE,

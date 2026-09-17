@@ -249,6 +249,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
   },
   {
     id: 'megafood-one-daily',
+    barcode: '051494101513 051494101520 051494101537',
     productName: 'MegaFood One Daily',
     brand: 'MegaFood',
     category: VITAMINS,
