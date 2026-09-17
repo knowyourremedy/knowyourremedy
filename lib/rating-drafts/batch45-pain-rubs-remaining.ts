@@ -506,6 +506,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Icy Hot Original Nighttime Recovery No-Mess Roll On',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167170908',
     formulaId: ID.icyNight,
     audience: ADULT,
     minAge: 12,
@@ -1129,6 +1130,7 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbUltra]: '039278315417',
   [ID.icyProNoMess]: '041167007969',
   [ID.icyVanish]: '041167009239',
+  [ID.icyNight]: '041167170908',
 };
 for (const record of BATCH45_PAIN_RUBS_REMAINING) {
   const expected = BATCH45_CATCHUP_BARCODES[record.id];
