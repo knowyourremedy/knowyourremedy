@@ -1059,6 +1059,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-kids-cough-immune-night',
+    barcode: '810087820190',
     productName: "Hyland's Organic Kids Cough & Immune Nighttime",
     brand: BRAND,
     category: COLD_FLU,
@@ -2337,6 +2338,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-baby-soothing-drops-day',
+    barcode: '810087820596',
     productName: "Hyland's Organic Baby Soothing Drops Daytime",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -2441,6 +2443,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-baby-soothing-drops-night',
+    barcode: '810087820602',
     productName: "Hyland's Organic Baby Soothing Drops Nighttime",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -2617,6 +2620,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-multi-brain-eye-gummies',
+    barcode: '810087820732',
     productName: "Hyland's Kids Multi + Brain & Eye Gummies",
     brand: BRAND,
     category: VITAMINS,
@@ -2752,6 +2756,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-multi-digestive-gummies',
+    barcode: '810087820756',
     productName: "Hyland's Kids Multi + Digestive Support Gummies",
     brand: BRAND,
     category: DIGESTIVE,
