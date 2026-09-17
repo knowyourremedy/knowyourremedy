@@ -1085,6 +1085,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     productName: 'Cortizone-10 Cooling',
     brand: 'Cortizone-10',
     category: FIRST_AID,
+    barcode: '041167003626',
     formulaId: 'cortizone10-cooling',
     audience: ADULT,
     minAge: 2,

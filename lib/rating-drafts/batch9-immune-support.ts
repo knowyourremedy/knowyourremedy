@@ -1020,6 +1020,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     productName: 'Cold-EEZE Cold Remedy UltraMELT Chews',
     brand: 'Cold-EEZE',
     category: IMMUNE,
+    barcode: '091108350241',
     formulaId: 'cold-eeze-ultramelt-dyed',
     audience: ADULT,
     minAge: 12,

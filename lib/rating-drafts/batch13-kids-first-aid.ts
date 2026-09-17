@@ -1250,6 +1250,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     productName: 'Cortizone-10 Cooling',
     brand: 'Cortizone-10',
     category: FIRST_AID,
+    barcode: '041167003626',
     formulaId: CORTIZONE_COOL,
     audience: KIDS,
     minAge: 2,
