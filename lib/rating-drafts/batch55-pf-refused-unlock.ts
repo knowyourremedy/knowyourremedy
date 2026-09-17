@@ -5,7 +5,8 @@
 //
 // ONE write. Pain & Fever only. Do NOT invent a Topical aisle.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack
 // sizes of the same name+form+inactives share formulaId. Same
 // OI+actives share formulaId. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Search wiring only.
@@ -490,6 +491,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Qunol Zero Sugar Turmeric Gummies',
     brand: 'Qunol',
     category: PAIN_FEVER,
+    barcode: '850052593193 850052593209',
     formulaId: ID.qunolGummies,
     audience: ADULT,
     minAge: 18,
@@ -570,8 +572,20 @@ if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 4)
 if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 55 stays on Pain & Fever');
 }
-if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.barcode)) {
-  throw new Error('batch 55 must not invent barcodes');
+const BATCH55_CATCHUP_BARCODES: Record<string, string> = {
+  // KYR5-b in-store 1s/2s — Target / Vitacost 90-ct + 120-ct Zero Sugar
+  // Turmeric Gummies (isomalt + coconut; do not steal oleoresin 1500).
+  [ID.qunolGummies]: '850052593193 850052593209',
+};
+for (const record of BATCH55_PF_REFUSED_UNLOCK) {
+  const expected = BATCH55_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 55 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 55 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 55 recordStatus must stay unverified');

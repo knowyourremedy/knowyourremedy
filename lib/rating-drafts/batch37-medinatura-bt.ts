@@ -6,7 +6,7 @@
 // ReBoost, WellMind, BodyAnew) and Boericke & Tafel (Schwabe / Nature’s
 // Way). Mixed categories · recordStatus is 'unverified' on every row.
 // Internal keys only: clean | caution | avoid. Do NOT invent Clean. Do
-// NOT invent UPCs / barcodes. Pack sizes of same name+form+strength
+// NOT invent UPCs / barcodes except KYR5-b catch-up allowlist. Pack sizes of same name+form+strength
 // share formulaId. formulaId == id on every NEW row. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Not wired into Clean Picks
 // UI. No live Clean Picks file is edited. No photos. Letter tiles only
@@ -244,6 +244,12 @@ const ID = {
   coughDay: 'bt-cough-bronchial-daytime',
   coughNight: 'bt-cough-bronchial-nighttime',
 } as const;
+
+// KYR5-b in-store 1s/2s — MediNatura 3 oz Arthritis Extra Strength Cream
+// (retailer UPC; no current DailyMed SPL).
+const BATCH37_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.tReliefArthXsCream]: '787647101801',
+};
 
 const SET = {
   traumeelTabs: '39630b57-28b1-486b-a4ff-4af65324454f',
@@ -1252,6 +1258,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     id: ID.tReliefArthXsCream,
     productName: 'T-Relief Arthritis Extra Strength Cream',
     category: PAIN_FEVER,
+    barcode: BATCH37_CATCHUP_BARCODES[ID.tReliefArthXsCream],
     formulaId: ID.tReliefArthXsCream,
     audience: ADULT,
     minAge: 4,
@@ -1583,3 +1590,10 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     sourcesGeneral: [dmUrl(SET.coughNight) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
 ];
+
+for (const record of BATCH37_MEDINATURA_BT) {
+  const expected = BATCH37_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 37 catch-up UPC drift on ${record.id}`);
+  }
+}
