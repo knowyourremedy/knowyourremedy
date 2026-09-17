@@ -610,6 +610,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     productName: 'Tiger Balm Pain Relieving Hydrogel Patch Large',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278323009',
     formulaId: ID.tbHydroLarge,
     audience: ADULT,
     minAge: 12,
@@ -914,8 +915,18 @@ if (BATCH48_SALONPAS_TIGER_BALM_WRITE.filter((r) => r.verdict === 'avoid').lengt
 if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 48 stays on Pain & Fever');
 }
-if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.barcode)) {
-  throw new Error('batch 48 must not invent barcodes');
+const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.tbHydroLarge]: '039278323009',
+};
+for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
+  const expected = BATCH48_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 48 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 48 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 48 recordStatus must stay unverified');

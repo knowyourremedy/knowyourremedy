@@ -263,6 +263,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     productName: 'Aleve Caplets / Tablets',
     brand: 'Aleve',
     category: PAIN_FEVER,
+    barcode: '025866592261 025866591998',
     formulaId: ID.aleveCaplets,
     audience: ADULT,
     minAge: 12,

@@ -224,6 +224,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     productName: "Goody's Max Triple Action / Cool Orange / Mixed Fruit Blast",
     brand: "Goody's",
     category: PAIN_FEVER,
+    barcode: '042037108458',
     formulaId: ID.maxFlavored,
     audience: ADULT,
     minAge: 12,
