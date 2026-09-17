@@ -911,17 +911,41 @@ const GEMMO_NOTE =
   LIMITED_STACK +
   ' Herbal supplement (not a homeopathic drug SPL). Ages 12+. Shop does not name a use aisle — filed under Vitamins, not as a homeopathic shelf. formulaId == id. No independently Clean same-shelf gemmo swap listed (do not invent one).';
 
+// KYR5-b in-store Boiron gemmo — official BoironUSA shop SKU (UPC-A).
+// Exact 2 fl oz bud / young-shoot pack. Brand-site sku / item_id only.
+const BATCH34_GEMMO_CATCHUP_BARCODES: Record<string, string> = {
+  'boiron-gemmo-black-currant-buds': '306969144893',
+  'boiron-gemmo-briar-rose-young-shoots': '306969149898',
+  'boiron-gemmo-common-birch-buds': '306969152898',
+  'boiron-gemmo-common-juniper-young-shoots': '306969211892',
+  'boiron-gemmo-cowberry-young-shoots': '306969199893',
+  'boiron-gemmo-english-hawthorn-young-shoots': '306969159897',
+  'boiron-gemmo-european-grapevine-buds': '306969165898',
+  'boiron-gemmo-european-hornbeam-buds': '306969166895',
+  'boiron-gemmo-european-olive-young-shoots': '306969171899',
+  'boiron-gemmo-european-walnut-buds': '306969212899',
+  'boiron-gemmo-fig-tree-buds': '306969213896',
+  'boiron-gemmo-giant-redwood-young-shoots': '306969142899',
+  'boiron-gemmo-horse-chestnut-buds': '306969176894',
+  'boiron-gemmo-lime-tree-buds': '306969178898',
+  'boiron-gemmo-lithy-tree-buds': '306969179895',
+  'boiron-gemmo-mountain-pine-buds': '306969182895',
+  'boiron-gemmo-rosemary-young-shoots': '306969189894',
+};
+
 function gemmoRow(
   slug: string,
   productName: string,
   botanical: string,
 ): RatingRecord {
   const id = `boiron-gemmo-${slug}`;
+  const barcode = BATCH34_GEMMO_CATCHUP_BARCODES[id];
   return {
     id,
     productName: `Boiron ${productName}`,
     brand: BRAND,
     category: VITAMINS,
+    ...(barcode ? { barcode } : {}),
     formulaId: id,
     audience: ADULT,
     minAge: 12,
@@ -2840,3 +2864,14 @@ export const BATCH34_BOIRON: RatingRecord[] = [
   ...GEMMO_ROWS,
   ...SINGLE_TUBES,
 ];
+
+for (const record of GEMMO_ROWS) {
+  const expected = BATCH34_GEMMO_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 34 gemmo catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 34 must not invent barcodes on ${record.id}`);
+  }
+}
