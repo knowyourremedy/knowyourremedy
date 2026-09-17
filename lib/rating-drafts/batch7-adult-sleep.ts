@@ -915,6 +915,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Advil PM Liqui-Gels',
     brand: 'Advil',
     category: SLEEP,
+    barcode: '305730167550',
     formulaId: 'advil-pm-liquigels',
     audience: ADULT,
     minAge: 12,
