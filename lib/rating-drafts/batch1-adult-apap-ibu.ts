@@ -979,7 +979,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Motrin IB',
     brand: 'Motrin',
     category: PAIN_FEVER,
-    barcode: '300450481269',
+    barcode: '300450481269 300450481023',
     formulaId: 'ibu-motrin-ib',
     audience: ADULT,
     minAge: 12,

@@ -637,7 +637,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "Children's Zyrtec Allergy Syrup",
     brand: 'Zyrtec',
     category: ALLERGIES,
-    barcode: '300450209269',
+    barcode: '300450209269 300450209047',
     formulaId: 'childrens-zyrtec-liquid',
     audience: KIDS,
     minAge: 2,

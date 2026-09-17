@@ -637,7 +637,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Mucinex 12-Hour Chest Congestion Expectorant (600 mg)',
     brand: 'Mucinex',
     category: COLD_FLU,
-    barcode: '363824008202 363824008400 363824008868',
+    barcode: '363824008202 363824008400 363824008868 363824008158 363824008509',
     formulaId: 'mucinex-er-600-blue1',
     audience: ADULT,
     minAge: 12,
