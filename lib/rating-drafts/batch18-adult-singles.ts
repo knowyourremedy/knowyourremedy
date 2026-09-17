@@ -204,6 +204,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     productName: 'Nature Made Vitamin D3 2000 IU Softgels (clear)',
     brand: 'Nature Made',
     category: VITAMINS,
+    barcode: '031604026783',
     formulaId: NM_D3_ID,
     audience: ADULT,
     minAge: 18,

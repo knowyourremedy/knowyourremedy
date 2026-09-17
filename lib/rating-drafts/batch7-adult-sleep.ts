@@ -1163,6 +1163,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'up&up Nighttime Sleep Aid Liquid',
     brand: 'up&up',
     category: SLEEP,
+    barcode: '370030275809',
     formulaId: 'upup-sleep-aid-liquid-dyed',
     audience: ADULT,
     minAge: 12,

@@ -663,6 +663,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
     productName: "Zarbee's Children's Sleep Melatonin Gummies",
     brand: "Zarbee's",
     category: SLEEP,
+    barcode: '858438005438',
     formulaId: 'zarbees-kids-sleep-gummies',
     audience: KIDS,
     minAge: 3,
