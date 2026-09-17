@@ -44,8 +44,8 @@
 // NaHCO3 / Phosphates / Sodium Sulfate Cleared. Display keys
 // stay clean / caution / avoid.
 //
-// TALLY (unverified drafts in THIS file): 19 rows — Clean 8 /
-// Caution 11 / Avoid 0. NEW 19 / REUSE 0 / SKIPPED-OUT 6.
+// TALLY (unverified drafts in THIS file): 18 rows — Clean 8 /
+// Caution 10 / Avoid 0. NEW 18 / REUSE 0 / SKIPPED-OUT 6.
 //
 // Independently Clean analogs already on main (not cloned):
 // om-lions-mane-powder · om-master-blend-capsules ·
@@ -789,11 +789,11 @@ export const BATCH64_SKIPPED_OUT: { sku: string; reason: string }[] = [
 ];
 
 const _ROWS = BATCH64_KYR6_THRIVE_NO_OI;
-if (_ROWS.length !== 19) throw new Error('batch64 tally drift: expected 19 rows');
+if (_ROWS.length !== 18) throw new Error('batch64 tally drift: expected 18 rows');
 if (_ROWS.filter((r) => r.verdict === 'clean').length !== 8) {
   throw new Error('batch64 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 11) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 10) {
   throw new Error('batch64 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {

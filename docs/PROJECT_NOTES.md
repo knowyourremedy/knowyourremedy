@@ -156,7 +156,7 @@ Parked
 Next session
 - LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 PAUSED after PR #174 — do not launch chunk 54 until Brandon reopens.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
-- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 19). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
+- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
@@ -550,18 +550,18 @@ Completed (main, unverified drafts unless noted):
   Skipped-dead (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron; Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder; Elements Glucosamine; Basics Saline Nasal. Mg lemon + Glucosamine live as Micro Ingredients = 3P later.
   bisabolol stays Cleared on MAIN. Advanced Healing Caution is lanolin alcohol.
   Amazon house punch DONE this pass. 3P Amazon brands later. Sprouts house STASHED.
-- Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 19 new (Clean 8 / Caution 11 / Avoid 0). NEW 19 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
+- Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 18 new (Clean 8 / Caution 10 / Avoid 0). NEW 18 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
 KYR5 barcode factory PAUSED Sept 17 after PR #174. Still missing ~856 (many dry). Do not launch chunk 54 until Brandon reopens.
-1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 19). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
+1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 3) Amazon 3P brands not on main
 THEN (not live)
 4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
-Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 19 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
