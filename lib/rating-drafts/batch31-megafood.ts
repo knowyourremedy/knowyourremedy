@@ -1271,6 +1271,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-hair-growth-capsules',
+    barcode: '051494106082',
     productName: 'Hair Growth Capsules',
     category: VITAMINS,
     form: 'capsule',
@@ -1354,6 +1355,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-fast-acting-turmeric',
+    barcode: '051494105689',
     productName: 'Fast Acting Turmeric',
     category: VITAMINS,
     form: 'capsule',
@@ -1371,6 +1373,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-quercetin-bromelain',
+    barcode: '051494105627',
     productName: 'Quercetin with Bromelain',
     category: IMMUNE,
     form: 'capsule',
@@ -1391,6 +1394,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-shilajit',
+    barcode: '051494105986',
     productName: 'Shilajit',
     category: VITAMINS,
     form: 'capsule',
@@ -1410,6 +1414,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-dual-action-digestive-enzymes',
+    barcode: '051494105887',
     productName: 'Dual-Action Digestive Enzymes',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1478,6 +1483,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-magtein-magnesium-l-threonate',
+    barcode: '051494105801',
     productName: 'Magtein Magnesium L-Threonate',
     category: SLEEP,
     form: 'capsule',
