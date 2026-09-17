@@ -1033,6 +1033,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     productName: 'Cortizone-10 Soothing Aloe Itch Relief',
     brand: 'Cortizone-10',
     category: FIRST_AID,
+    barcode: '041167003916',
     formulaId: 'cortizone10-soothing-aloe',
     audience: ADULT,
     minAge: 2,
