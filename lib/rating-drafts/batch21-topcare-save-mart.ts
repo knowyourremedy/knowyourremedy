@@ -268,6 +268,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
     productName: 'TopCare Allergy Relief (Loratadine 10 mg)',
     brand: 'TopCare',
     category: ALLERGY,
+    barcode: '036800339811',
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,

@@ -1337,6 +1337,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'up&up 5-Symptom Digestive Relief Chewable Tablets',
     brand: 'up&up',
     category: DIGESTIVE,
+    barcode: '368163124286',
     formulaId: 'upup-digestive-relief',
     audience: ADULT,
     minAge: 12,
