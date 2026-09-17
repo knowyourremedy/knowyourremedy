@@ -1423,6 +1423,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-cough-mucus-day',
+    barcode: '354973405615',
     productName: "Hyland's Kids Cough & Mucus Daytime Grape",
     brand: BRAND,
     category: COLD_FLU,
@@ -1466,6 +1467,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-cough-mucus-night',
+    barcode: '354973405714',
     productName: "Hyland's Kids Cough & Mucus Nighttime Grape",
     brand: BRAND,
     category: COLD_FLU,
@@ -1511,6 +1513,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-baby-mucus-cold-day',
+    barcode: '354973328419',
     productName: "Hyland's Baby Mucus + Cold Relief Daytime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1549,6 +1552,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-baby-mucus-cold-night',
+    barcode: '354973337121',
     productName: "Hyland's Baby Mucus + Cold Relief Nighttime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1788,6 +1792,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-sleep-calm-immunity',
+    barcode: '810087820664',
     productName: "Hyland's Kids Sleep Calm + Immunity",
     brand: BRAND,
     category: SLEEP,
@@ -1852,6 +1857,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-kids-sleep-calm-immunity-organic',
+    barcode: '810087820657',
     productName: "Hyland's Organic Kids Sleep Calm + Immunity",
     brand: BRAND,
     category: SLEEP,
@@ -1924,6 +1930,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-kids-all-in-one-cough-day',
+    barcode: '810087820626',
     productName: "Hyland's Organic Kids All-in-One Cough Daytime",
     brand: BRAND,
     category: COLD_FLU,
@@ -1994,6 +2001,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-organic-kids-all-in-one-cough-night',
+    barcode: '810087820633',
     productName: "Hyland's Organic Kids All-in-One Cough Nighttime",
     brand: BRAND,
     category: COLD_FLU,
