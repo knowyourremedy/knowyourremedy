@@ -2209,6 +2209,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   // ── Closeout leftovers (founder cartons + locks) ────────
   cautionCustom({
     id: 'megafood-womens-whole-body-tablets',
+    barcode: '051494105900',
     productName: "Women's Whole Body Tablets",
     category: VITAMINS,
     form: 'tablet',
@@ -2263,6 +2264,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-high-absorption-selenium-capsules',
+    barcode: '051494106365',
     productName: 'High-Absorption Selenium Capsules',
     category: IMMUNE,
     form: 'capsule',
