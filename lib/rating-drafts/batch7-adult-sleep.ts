@@ -811,6 +811,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Sominex',
     brand: 'Sominex',
     category: SLEEP,
+    barcode: '042037103576',
     formulaId: 'sominex',
     audience: ADULT,
     minAge: 12,
