@@ -643,6 +643,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'Nutricost Turmeric Curcumin 2300 mg',
     brand: 'Nutricost',
     category: PAIN_FEVER,
+    barcode: '702669931403',
     formulaId: ID.nutricost,
     audience: ADULT,
     minAge: 18,
@@ -770,6 +771,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'Qunol Extra Strength Turmeric Curcumin Complex 1500 mg',
     brand: 'Qunol',
     category: PAIN_FEVER,
+    barcode: '850184008459 850184008466',
     formulaId: ID.qunol1500,
     audience: ADULT,
     minAge: 18,
@@ -806,6 +808,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'Qunol Extra Strength Turmeric Curcumin Complex 1000 mg',
     brand: 'Qunol',
     category: PAIN_FEVER,
+    barcode: '850184008435 850184008756',
     formulaId: ID.qunol1000,
     audience: ADULT,
     minAge: 18,
@@ -1376,8 +1379,20 @@ if (BATCH54_AMAZON_PF_HOLES.filter((r) => r.verdict === 'avoid').length !== 12) 
 if (BATCH54_AMAZON_PF_HOLES.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 54 stays on Pain & Fever');
 }
-if (BATCH54_AMAZON_PF_HOLES.some((record) => record.barcode)) {
-  throw new Error('batch 54 must not invent barcodes');
+const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.nutricost]: '702669931403',
+  [ID.qunol1500]: '850184008459 850184008466',
+  [ID.qunol1000]: '850184008435 850184008756',
+};
+for (const record of BATCH54_AMAZON_PF_HOLES) {
+  const expected = BATCH54_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 54 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 54 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH54_AMAZON_PF_HOLES.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 54 recordStatus must stay unverified');

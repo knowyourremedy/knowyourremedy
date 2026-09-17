@@ -323,6 +323,7 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
     productName: 'Melt Pain Away Magnesium Body Butter (Thrive carton)',
     brand: 'Asutra',
     category: PAIN_FEVER,
+    barcode: '856458008873 850016538369',
     formulaId: ID.thrive,
     audience: ADULT,
     minAge: 18,
@@ -423,8 +424,11 @@ if (BATCH53_ASUTRA_MELT_PAIN_AWAY.filter((r) => r.verdict === 'avoid').length !=
 if (BATCH53_ASUTRA_MELT_PAIN_AWAY.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 53 stays on Pain & Fever');
 }
-if (BATCH53_ASUTRA_MELT_PAIN_AWAY.some((record) => record.barcode)) {
-  throw new Error('batch 53 must not invent barcodes');
+if (THRIVE && THRIVE.barcode !== '856458008873 850016538369') {
+  throw new Error('batch 53 Thrive carton catch-up UPC must stay the lemongrass pack sizes');
+}
+if (DAILYMED?.barcode) {
+  throw new Error('batch 53 DailyMed carton stays barcode-empty (different OI; no UPC this pass)');
 }
 if (BATCH53_ASUTRA_MELT_PAIN_AWAY.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 53 recordStatus must stay unverified');

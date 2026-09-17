@@ -2082,6 +2082,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     productName: "Hyland's Organic Baby All-in-One Cough Daytime",
     brand: BRAND,
     category: COLD_FLU,
+    barcode: '810087820763',
     formulaId: ORG_BABY_ALLINONE_DAY,
     audience: KIDS,
     minAge: 0,
