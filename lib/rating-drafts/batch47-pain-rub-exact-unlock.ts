@@ -596,6 +596,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Icy Hot Original No-Mess Roll On (16% menthol applicator)',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167009109',
     formulaId: ID.icyOrigRoll,
     audience: ADULT,
     minAge: 12,
@@ -957,6 +958,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine No-Mess Applicator / fragrance-free roll-on',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167058107',
     formulaId: ID.icyLidoRoll,
     audience: ADULT,
     minAge: 12,
@@ -1124,6 +1126,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine Foot Pain Cream',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167058626',
     formulaId: ID.asperFoot,
     audience: ADULT,
     minAge: 12,
@@ -1453,6 +1456,9 @@ const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyProPatch]: '041167007303',
   [ID.icyOrigPatch]: '041167008416 041167008430 041167008478',
   [ID.asperXl]: '041167058428',
+  [ID.icyOrigRoll]: '041167009109',
+  [ID.asperAppl]: '041167058107',
+  [ID.asperFoot]: '041167058626',
 };
 for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
   const expected = BATCH47_CATCHUP_BARCODES[record.id];
