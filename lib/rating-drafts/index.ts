@@ -61,3 +61,4 @@ export { BATCH60_THRIVE_REFUSED_UNLOCK } from './batch60-thrive-refused-unlock';
 export { BATCH61_AMAZON_HOUSE_PINNED } from './batch61-amazon-house-pinned';
 export { BATCH62_MAMA_BEAR_CAROUSEL } from './batch62-mama-bear-carousel';
 export { BATCH63_KYR6_ELEMENTS_BASICS } from './batch63-kyr6-elements-basics';
+export { BATCH64_KYR6_THRIVE_NO_OI } from './batch64-kyr6-thrive-no-oi';

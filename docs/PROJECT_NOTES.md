@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (KYR5 paused after PR #174; Thrive no_OI closeout ready)
+Last Updated: September 17, 2026 (KYR5 paused after PR #174; Thrive no_OI closeout written — batch64)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -154,14 +154,14 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT ready (founder carton Sept 17) (2) Store generics (3) Amazon 3P brands not on main. KYR5 PAUSED after PR #174 — do not launch chunk 54 until Brandon reopens.
+- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 PAUSED after PR #174 — do not launch chunk 54 until Brandon reopens.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
-- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT ready (founder carton Sept 17). Bandages OUT. Butterfly Pea food/OUT unless Supp Facts. Liver Vitality in only if Supp Facts. Active Skin Repair hydrogel IN. Usable off silicate + trace hypochlorite.
+- Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 19). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 PAUSED Sept 17 after PR #174. Still missing ~856 (many dry). Do not launch chunk 54 until Brandon reopens.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–63 already exist.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–64 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -245,7 +245,7 @@ CATALOG STRATEGY
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: Thrive no_OI stash CLOSEOUT ready (founder carton Sept 17), then store generics, then Amazon 3P. KYR5 PAUSED. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 PAUSED. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -549,18 +549,19 @@ Completed (main, unverified drafts unless noted):
   Rebrands: Revly → Elements. Solimo → Basics. Many Elements vitamins → Basics (previously Elements). One row unless form/OI differs.
   Skipped-dead (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron; Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder; Elements Glucosamine; Basics Saline Nasal. Mg lemon + Glucosamine live as Micro Ingredients = 3P later.
   bisabolol stays Cleared on MAIN. Advanced Healing Caution is lanolin alcohol.
-  Amazon house punch DONE this pass. 3P Amazon brands later. Sprouts house STASHED. Thrive no_OI stash CLOSEOUT ready (founder carton Sept 17).
+  Amazon house punch DONE this pass. 3P Amazon brands later. Sprouts house STASHED.
+- Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 19 new (Clean 8 / Caution 11 / Avoid 0). NEW 19 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
 KYR5 barcode factory PAUSED Sept 17 after PR #174. Still missing ~856 (many dry). Do not launch chunk 54 until Brandon reopens.
-1) Thrive no_OI stash CLOSEOUT ready (founder carton Sept 17). Bandages OUT. Butterfly Pea food/OUT unless Supp Facts. Liver Vitality in only if Supp Facts. Active Skin Repair hydrogel IN. Usable off silicate + trace hypochlorite.
+1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 19). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 3) Amazon 3P brands not on main
 THEN (not live)
 4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
-Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 are DONE. Thrive no_OI CLOSEOUT ready — not a fresh crawl. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 19 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
