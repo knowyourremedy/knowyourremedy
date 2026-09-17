@@ -2476,6 +2476,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-creatine-monohydrate-gummies',
+    barcode: '051494106150',
     productName: 'Creatine Monohydrate Gummies',
     category: VITAMINS,
     form: 'gummy',
@@ -2497,6 +2498,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-turmeric-whole-body-minis',
+    barcode: '051494104484 051494106259',
     productName: 'Turmeric Curcumin Whole Body Minis',
     category: IMMUNE,
     form: 'mini tablet',

@@ -789,6 +789,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-baby-tiny-cold-night',
     productName: "Hyland's Baby Tiny Cold Tablets Nighttime",
+    barcode: '354973325210',
     brand: BRAND,
     category: COLD_FLU,
     formulaId: 'hylands-baby-tiny-cold-night',
