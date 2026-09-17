@@ -212,6 +212,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Biofreeze Foot Cream',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124002907',
     formulaId: ID.foot,
     audience: ADULT,
     minAge: 12,
@@ -346,6 +347,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Mineral Ice Original Therapeutic Menthol Gel 2%',
     brand: 'Mineral Ice',
     category: PAIN_FEVER,
+    barcode: '303160226083 303160226168',
     formulaId: ID.miOrig,
     audience: ADULT,
     minAge: 2,
@@ -406,6 +408,8 @@ if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.category !== PAIN_
 }
 const BATCH51_CATCHUP_BARCODES: Record<string, string> = {
   [ID.bengayPatch]: '074300081496',
+  [ID.foot]: '731124002907',
+  [ID.miOrig]: '303160226083 303160226168',
 };
 for (const record of BATCH51_PAIN_FEVER_REFUSED_UNLOCK) {
   const expected = BATCH51_CATCHUP_BARCODES[record.id];

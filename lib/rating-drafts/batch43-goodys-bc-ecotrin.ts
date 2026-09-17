@@ -256,6 +256,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     productName: "Goody's PLUS Mental Alertness / Hangover",
     brand: "Goody's",
     category: PAIN_FEVER,
+    barcode: '042037000813 042037001766 042037001773',
     formulaId: ID.plus,
     audience: ADULT,
     minAge: 12,
