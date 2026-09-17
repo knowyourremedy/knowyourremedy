@@ -1384,6 +1384,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "Children's Dimetapp Cold & Cough",
     brand: 'Dimetapp',
     category: COLD_FLU,
+    barcode: '850026660364',
     formulaId: 'dimetapp-cold-cough-liquid',
     audience: KIDS,
     minAge: 6,
