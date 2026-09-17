@@ -438,6 +438,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     productName: 'Unisom PM Pain',
     brand: 'Unisom',
     category: SLEEP,
+    barcode: '041167004043',
     formulaId: 'unisom-pm-pain',
     audience: ADULT,
     minAge: 12,
