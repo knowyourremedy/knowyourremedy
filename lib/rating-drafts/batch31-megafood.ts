@@ -946,6 +946,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-extra-strength-methyl-b12',
+    barcode: '051494105672',
     productName: 'Extra Strength Methyl B12',
     category: VITAMINS,
     form: 'capsule',
@@ -1057,6 +1058,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionSio2({
     id: 'megafood-ashwagandha-complex',
+    barcode: '051494104330',
     productName: 'Ashwagandha Complex',
     category: VITAMINS,
     form: 'mini tablet',
@@ -1288,6 +1290,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-nad-boost',
+    barcode: '051494105979',
     productName: 'NAD+ Boost',
     category: VITAMINS,
     form: 'capsule',
@@ -1308,6 +1311,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-liposomal-glutathione',
+    barcode: '051494106044',
     productName: 'High Absorption Liposomal Glutathione',
     category: IMMUNE,
     form: 'capsule',
@@ -1485,6 +1489,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-megaflora-original',
+    barcode: '051494102046 051494102053 051494102282',
     productName: 'MegaFlora Probiotic Original',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1501,6 +1506,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-megaflora-plus',
+    barcode: '051494102176',
     productName: 'MegaFlora Probiotic Plus',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1517,6 +1523,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-megaflora-womens',
+    barcode: '051494100226',
     productName: 'MegaFlora Women\'s Probiotic + Prebiotic',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1551,6 +1558,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-megaflora-kids',
+    barcode: '051494102152',
     productName: 'MegaFlora Kids Probiotic',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1730,6 +1738,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-baby-me-2-prenatal-probiotic-refrigerated',
+    barcode: '051494100271',
     productName: 'Baby & Me 2 Prenatal Probiotic + Prebiotic',
     category: DIGESTIVE,
     form: 'capsule',
@@ -1912,6 +1921,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-iron-energy-gummies',
+    barcode: '051494104583',
     productName: 'Iron Energy Gummies',
     category: VITAMINS,
     form: 'gummy',
@@ -1971,6 +1981,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-melatonin-sleep-gummies',
+    barcode: '051494104156',
     productName: 'Melatonin Sleep Gummies, 3mg',
     category: SLEEP,
     form: 'gummy',
@@ -1983,6 +1994,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-baby-me-2-prenatal-gummies',
+    barcode: '051494104378',
     productName: 'Baby & Me 2 Prenatal Multi Gummies',
     category: VITAMINS,
     form: 'gummy',
@@ -1996,6 +2008,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   avoidOil({
     id: 'megafood-kids-multi-gummies',
+    barcode: '051494104361',
     productName: 'Kids Multi Gummies',
     category: VITAMINS,
     form: 'gummy',
@@ -2239,6 +2252,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-vitamin-d3-5000-k-k2',
+    barcode: '051494104385 051494104415',
     productName: 'Vitamin D3 5000 IU (125 mcg) plus K & K2',
     category: IMMUNE,
     form: 'capsule',
@@ -2353,6 +2367,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
   }),
   cautionCustom({
     id: 'megafood-baby-me-2-prenatal-probiotic-lgg',
+    barcode: '051494105351',
     productName: 'Baby & Me 2 Prenatal Probiotic + Prebiotic - Shelf Stable LGG',
     category: DIGESTIVE,
     form: 'capsule',
