@@ -7,7 +7,7 @@
 // Mixed categories · audience 'adult' · recordStatus is 'unverified' on every
 // row. Founder calls (locked): see notes below. Do NOT invent Clean except
 // H3 as locked. Methodology v1.6 grades only — do not change locked
-// ingredient grades. Barcodes omitted — do not invent UPCs. Pack sizes
+// ingredient grades. Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes
 // share formulaId. HFCS is parked (Methodology §5) — mentioned in
 // honestNotes only, never graded. Form is labeled on cleanAlternatives,
 // not a hard filter (§6).
@@ -186,6 +186,13 @@ const SPROUTS_ONCE_CITE =
   'Sprouts Organic Prenatal Once Daily Whole Food Multi shop.sprouts listing (SKU exists; full other-ingredients not matched)';
 const SPROUTS_WHOLE_CITE =
   'Sprouts Organic Prenatal Whole Food Vitamin shop.sprouts listing (SKU exists; full other-ingredients not matched)';
+
+// KYR5-b in-store Sprouts chunk 2 — official shop.sprouts PDP "UPC:" field
+// (GTIN-14 00+UPC-A → 12-digit UPC-A). 30 ct + 60 ct Once Daily share formulaId.
+const BATCH16_CATCHUP_BARCODES: Record<string, string> = {
+  'sprouts-organic-prenatal-once-daily': '646670548536 646670548529',
+  'sprouts-organic-prenatal-whole-food': '646670549984',
+};
 
 const H3_ALTS: CleanAlternative[] = [
   {
@@ -518,6 +525,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean prenatal in this batch — cleanAlternatives omitted.',
     retailers: ['Sprouts'],
+    barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-once-daily'],
     sourcesGeneral: [
       `${SPROUTS_ONCE_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
     ],
@@ -548,6 +556,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean prenatal in this batch — cleanAlternatives omitted.',
     retailers: ['Sprouts'],
+    barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-whole-food'],
     sourcesGeneral: [
       `${SPROUTS_WHOLE_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
     ],
@@ -704,3 +713,14 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH16_365_SPROUTS) {
+  const expected = BATCH16_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 16 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode && record.brand === 'Sprouts') {
+    throw new Error(`batch 16 must not invent barcodes on ${record.id}`);
+  }
+}
