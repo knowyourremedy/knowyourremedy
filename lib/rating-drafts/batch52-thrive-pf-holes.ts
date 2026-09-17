@@ -308,6 +308,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Ollois Arnica Montana 12C Pellets',
     brand: 'Ollois',
     category: PAIN_FEVER,
+    barcode: '855717003024',
     formulaId: ID.ollois,
     audience: ADULT,
     minAge: 2,
@@ -330,6 +331,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: "Oregon's Wild Harvest Turmeric",
     brand: "Oregon's Wild Harvest",
     category: PAIN_FEVER,
+    barcode: '706195004105',
     formulaId: ID.owh,
     audience: ADULT,
     minAge: 18,
@@ -363,6 +365,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Organic India Turmeric Formula',
     brand: 'Organic India',
     category: PAIN_FEVER,
+    barcode: '801541512485',
     formulaId: ID.organicIndia,
     audience: ADULT,
     minAge: 18,
@@ -393,6 +396,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Sports Research Turmeric Curcumin Softgels',
     brand: 'Sports Research',
     category: PAIN_FEVER,
+    barcode: '023249000839',
     formulaId: ID.sportsResearch,
     audience: ADULT,
     minAge: 18,
@@ -433,6 +437,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'wellmade by Thrive Market Turmeric Herbal Supplement',
     brand: 'wellmade by Thrive Market',
     category: PAIN_FEVER,
+    barcode: '671635734631',
     formulaId: ID.wellmade,
     audience: ADULT,
     minAge: 18,
@@ -470,6 +475,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'New Chapter Turmeric Force',
     brand: 'New Chapter',
     category: PAIN_FEVER,
+    barcode: '727783900449 727783900463 727783900456',
     formulaId: ID.newChapter,
     audience: ADULT,
     minAge: 18,
@@ -510,6 +516,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Codeage Liposomal Turmeric+',
     brand: 'Codeage',
     category: PAIN_FEVER,
+    barcode: '853919008472',
     formulaId: ID.codeage,
     audience: ADULT,
     minAge: 18,
@@ -549,6 +556,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Life-flo Pure Magnesium Oil Spray',
     brand: 'Life-flo',
     category: PAIN_FEVER,
+    barcode: '645951405308',
     formulaId: ID.lifeFloOil,
     audience: ADULT,
     minAge: 18,
@@ -575,6 +583,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Gaia Herbs Turmeric Supreme Extra Strength',
     brand: 'Gaia Herbs',
     category: PAIN_FEVER,
+    barcode: '751063403108 751063145961 751063152594',
     formulaId: ID.gaia,
     audience: ADULT,
     minAge: 18,
@@ -624,6 +633,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Thorne Curcumin Phytosome 500 mg',
     brand: 'Thorne',
     category: PAIN_FEVER,
+    barcode: '693749004790',
     formulaId: ID.thorne500,
     audience: ADULT,
     minAge: 18,
@@ -675,6 +685,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Thorne Curcumin Phytosome 1000 mg',
     brand: 'Thorne',
     category: PAIN_FEVER,
+    barcode: '693749004851',
     formulaId: ID.thorne1000,
     audience: ADULT,
     minAge: 18,
@@ -727,6 +738,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       'Garden of Life myKind Organics Inflammatory Response Turmeric Gummies',
     brand: 'Garden of Life',
     category: PAIN_FEVER,
+    barcode: '658010121781',
     formulaId: ID.golGummy,
     audience: ADULT,
     minAge: 4,
@@ -785,6 +797,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Life-flo Magnesium Lotion Vanilla',
     brand: 'Life-flo',
     category: PAIN_FEVER,
+    barcode: '645951827285',
     formulaId: ID.lotionVanilla,
     audience: ADULT,
     minAge: 18,
@@ -870,6 +883,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     productName: 'Life-flo Magnesium Lotion Unscented',
     brand: 'Life-flo',
     category: PAIN_FEVER,
+    barcode: '645951164120',
     formulaId: ID.lotionUnscented,
     audience: ADULT,
     minAge: 18,
@@ -996,8 +1010,8 @@ if (BATCH52_THRIVE_PF_HOLES.filter((r) => r.verdict === 'avoid').length !== 1) {
 if (BATCH52_THRIVE_PF_HOLES.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 52 stays on Pain & Fever');
 }
-if (BATCH52_THRIVE_PF_HOLES.some((record) => record.barcode)) {
-  throw new Error('batch 52 must not invent barcodes');
+if (BATCH52_THRIVE_PF_HOLES.some((record) => !record.barcode)) {
+  throw new Error('batch 52 catch-up: every row needs a verified UPC-A');
 }
 if (BATCH52_THRIVE_PF_HOLES.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 52 recordStatus must stay unverified');
