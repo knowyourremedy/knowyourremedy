@@ -2,7 +2,7 @@
 // Vitamins · audience 'adult' · recordStatus is 'unverified' on every row.
 // Founder calls (locked): see notes below. Do NOT invent Clean. Methodology v1.6
 // grades only — do not change locked ingredient grades.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // HFCS is parked (Methodology §5) — mentioned in honestNotes only, never graded.
 // Form is labeled on cleanAlternatives, not a hard filter (§6). This draft set
 // has NO independently Clean multi — cleanAlternatives are omitted (honest
@@ -166,6 +166,16 @@ const MEGAFOOD_CITE =
 const VITAFUSION_PALM_CITE =
   'vitafusion MultiVites retailer other-ingredients (HEB / Vitacost / Target: blend of oils (coconut and/or palm))';
 
+// KYR5-b in-store 3s brands — HelloPharmacist / OFF UPC-A. Equate 130-ct
+// Complete Multi (TiO2 + lake dyes). Kirkland Daily Multi 500-ct no-TiO2
+// (PEG + silica; OFF 0096619416073). OLLY Women's 130-ct coconut+canola
+// (Target / WFM; do not steal current 90-ct coconut-only 858158005015).
+const BATCH14_CATCHUP_BARCODES: Record<string, string> = {
+  'equate-complete-multi': '681131119771',
+  'kirkland-daily-multi-no-tio2': '096619416073',
+  'olly-womens-multi-canola': '852933008031',
+};
+
 export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
   // ── Caution ──────────────────────────────────────────────
   {
@@ -173,6 +183,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: 'Kirkland Signature Daily Multi (no TiO2 carton)',
     brand: 'Kirkland Signature',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['kirkland-daily-multi-no-tio2'],
     formulaId: 'kirkland-daily-multi-no-tio2',
     audience: ADULT,
     minAge: 18,
@@ -393,6 +404,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: 'Equate Complete Multivitamin Adults',
     brand: 'Equate',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['equate-complete-multi'],
     formulaId: 'equate-complete-multi',
     audience: ADULT,
     minAge: 18,
@@ -599,6 +611,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: "OLLY Women's Multi (coconut + canola)",
     brand: 'OLLY',
     category: VITAMINS,
+    barcode: BATCH14_CATCHUP_BARCODES['olly-womens-multi-canola'],
     formulaId: 'olly-womens-multi-canola',
     audience: ADULT,
     minAge: 18,
@@ -729,3 +742,10 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH14_ADULT_VITAMINS) {
+  const expected = BATCH14_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 14 catch-up UPC drift on ${record.id}`);
+  }
+}
