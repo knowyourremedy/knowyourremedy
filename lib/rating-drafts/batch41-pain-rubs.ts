@@ -469,6 +469,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     productName: 'AleveX Pain Relieving Lotion (roll-on)',
     brand: 'AleveX',
     category: PAIN_FEVER,
+    barcode: '025866591578',
     formulaId: ID.alevexLotion,
     audience: ADULT,
     minAge: 12,

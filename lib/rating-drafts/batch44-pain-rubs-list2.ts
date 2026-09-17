@@ -273,6 +273,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Voltaren Arthritis Pain Gel',
     brand: 'Voltaren',
     category: PAIN_FEVER,
+    barcode: '300671201776 300671201769 300671202827',
     formulaId: ID.voltaren,
     audience: ADULT,
     minAge: 18,
@@ -563,6 +564,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     productName: 'Tiger Balm Liniment',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278313222',
     formulaId: ID.tigerLiniment,
     audience: ADULT,
     minAge: 12,
@@ -613,8 +615,19 @@ if (BATCH44_PAIN_RUBS_LIST2.some((record) => record.verdict !== 'caution')) {
 if (BATCH44_PAIN_RUBS_LIST2.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 44 list-2 stays on Pain & Fever');
 }
-if (BATCH44_PAIN_RUBS_LIST2.some((record) => record.barcode)) {
-  throw new Error('batch 44 must not invent barcodes');
+const BATCH44_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.voltaren]: '300671201776 300671201769 300671202827',
+  [ID.tigerLiniment]: '039278313222',
+};
+for (const record of BATCH44_PAIN_RUBS_LIST2) {
+  const expected = BATCH44_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 44 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 44 must not invent barcodes on ${record.id}`);
+  }
 }
 if (VOLTAREN?.formulaId === 'aleve-arthritis-pain-gel') {
   throw new Error('Voltaren must keep its own formulaId');

@@ -322,6 +322,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
     productName: "Hyland's 4 Kids Calm & Restful",
     brand: "Hyland's",
     category: SLEEP,
+    barcode: '354973316119',
     formulaId: HYLANDS_4KIDS,
     audience: KIDS,
     minAge: 2,

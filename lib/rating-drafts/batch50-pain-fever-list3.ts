@@ -647,6 +647,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Pain Relief Gel 4%',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124000033 731124002037',
     formulaId: FID.green4,
     audience: ADULT,
     minAge: 2,
@@ -669,6 +670,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Pain Relief Roll-On 4%',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124000064',
     formulaId: FID.green4,
     audience: ADULT,
     minAge: 2,
@@ -1459,6 +1461,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Bengay Ultra Strength Non-Greasy Cream',
     brand: 'Bengay',
     category: PAIN_FEVER,
+    barcode: '074300081946',
     formulaId: FID.bengayCream,
     audience: ADULT,
     minAge: 12,
@@ -1574,6 +1577,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Capzasin HP Arthritis Pain Relief Cream 0.1%',
     brand: 'Capzasin',
     category: PAIN_FEVER,
+    barcode: '041167751466',
     formulaId: FID.capzasinHp,
     audience: ADULT,
     minAge: 18,
@@ -2090,8 +2094,21 @@ if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 13)
 if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 50 stays on Pain & Fever');
 }
-if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.barcode)) {
-  throw new Error('batch 50 must not invent barcodes');
+const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.greenGel]: '731124000033 731124002037',
+  [ID.greenRoll]: '731124000064',
+  [ID.bengayCream]: '074300081946',
+  [ID.capzasinHp]: '041167751466',
+};
+for (const record of BATCH50_PAIN_FEVER_LIST3) {
+  const expected = BATCH50_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 50 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 50 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 50 recordStatus must stay unverified');
