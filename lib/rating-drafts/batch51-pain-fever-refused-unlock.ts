@@ -280,6 +280,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Bengay Ultra Strength Pain Relieving Patch 5%',
     brand: 'Bengay',
     category: PAIN_FEVER,
+    barcode: '074300081496',
     formulaId: ID.bengayPatch,
     audience: ADULT,
     minAge: 12,
@@ -403,8 +404,18 @@ if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').lengt
 if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 51 stays on Pain & Fever');
 }
-if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.barcode)) {
-  throw new Error('batch 51 must not invent barcodes');
+const BATCH51_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.bengayPatch]: '074300081496',
+};
+for (const record of BATCH51_PAIN_FEVER_REFUSED_UNLOCK) {
+  const expected = BATCH51_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 51 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 51 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 51 recordStatus must stay unverified');

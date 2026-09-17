@@ -192,6 +192,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     productName: 'Biofreeze UltraFlex Lidocaine 4% Patch',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124444967',
     formulaId: ID.ultraflex,
     audience: ADULT,
     minAge: 12,
@@ -212,6 +213,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     productName: 'Biofreeze UltraFlex Plus Lidocaine 4% + Menthol 1% Patch',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124445261',
     formulaId: ID.ultraflexPlus,
     audience: ADULT,
     minAge: 12,
@@ -348,6 +350,8 @@ if (BATCH49_PAIN_FEVER_LIST2.some((record) => record.category !== PAIN_FEVER)) {
 }
 const BATCH49_CATCHUP_BARCODES: Record<string, string> = {
   [ID.capzasin]: '041167751602',
+  [ID.ultraflex]: '731124444967',
+  [ID.ultraflexPlus]: '731124445261',
 };
 for (const record of BATCH49_PAIN_FEVER_LIST2) {
   const expected = BATCH49_CATCHUP_BARCODES[record.id];
