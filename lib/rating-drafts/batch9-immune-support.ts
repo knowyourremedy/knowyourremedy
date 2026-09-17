@@ -763,6 +763,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     productName: "Zarbee's Children's Daily Immune Support Syrup",
     brand: "Zarbee's",
     category: IMMUNE,
+    barcode: '850007424893',
     formulaId: 'zarbees-kids-immune-syrup',
     audience: KIDS,
     minAge: 2,

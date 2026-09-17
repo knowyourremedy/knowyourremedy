@@ -1103,6 +1103,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     productName: 'Walgreens Medicated Calamine Lotion',
     brand: 'Walgreens',
     category: FIRST_AID,
+    barcode: '311917049861',
     formulaId: CALAMINE_BENZYL,
     audience: KIDS,
     minAge: 2,

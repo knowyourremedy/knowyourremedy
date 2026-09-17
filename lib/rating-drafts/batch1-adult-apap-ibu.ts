@@ -136,12 +136,14 @@ function l484Record(opts: {
   brand: string;
   retailers: string[];
   setid: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'apap-store-es-l484-peg',
     audience: ADULT,
     minAge: 12,
@@ -597,6 +599,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     brand: '365 Whole Foods Market',
     retailers: ['Whole Foods'],
     setid: '57f89574-98e5-40e5-8dd4-e868a668adaa',
+    barcode: '099482470760',
   }),
   l484Record({
     id: 'signature-care-pain-relief-apap',
@@ -1091,6 +1094,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Kirkland Signature Ibuprofen IB Caplets',
     brand: 'Kirkland Signature',
     category: PAIN_FEVER,
+    barcode: '096619621590',
     formulaId: 'ibu-kirkland-ib-caplets',
     audience: ADULT,
     minAge: 12,
@@ -1133,6 +1137,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'up&up Ibuprofen',
     brand: 'up&up',
     category: PAIN_FEVER,
+    barcode: '370030620593',
     formulaId: 'ibu-upup',
     audience: ADULT,
     minAge: 12,

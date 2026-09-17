@@ -117,12 +117,14 @@ function storeChildrenApapDyed(opts: {
   retailers: string[];
   setid: string;
   dyeNames: string[];
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'store-children-apap-dyed-liquid',
     audience: KIDS,
     minAge: 2,
@@ -163,12 +165,14 @@ function storeInfantsApapDyefree(opts: {
   brand: string;
   retailers: string[];
   setid: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'store-infants-apap-dyefree-liquid',
     audience: KIDS,
     minAge: 0,
@@ -208,12 +212,14 @@ function storeChildrenIbuDyedLiquid(opts: {
   retailers: string[];
   setid: string;
   dyeNames: string[];
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: PAIN_FEVER,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'store-children-ibu-dyed-liquid',
     audience: KIDS,
     minAge: 2,
@@ -703,6 +709,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     retailers: ['Walmart'],
     setid: '40eedfe9-54e1-40a2-b4a2-55ff708b89cd',
     dyeNames: ['D&C Red No. 33', 'FD&C Red No. 40'],
+    barcode: '681131699723',
   }),
   storeChildrenApapDyed({
     id: 'upup-children-apap-dyed',
@@ -733,6 +740,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'up&up',
     retailers: ['Target'],
     setid: 'c1dd8330-fb6b-4d1f-9484-c199dc69214d',
+    barcode: '370030623631',
   }),
   storeInfantsApapDyefree({
     id: 'signature-care-infants-apap-dyefree',
@@ -740,6 +748,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'Signature Care',
     retailers: ['Safeway'],
     setid: '236df05a-cf11-42f3-a347-b54f5113680c',
+    barcode: '321130076834',
   }),
   {
     id: 'upup-children-apap-dyefree',
@@ -1097,6 +1106,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     retailers: ['Walmart'],
     setid: '7817923f-4c21-4943-a7e2-dad4e2915fc4',
     dyeNames: ['FD&C Red No. 40'],
+    barcode: '681131699686',
   }),
   storeChildrenIbuDyedLiquid({
     id: 'upup-children-ibu-dyed',

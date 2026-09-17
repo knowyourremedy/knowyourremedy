@@ -1419,6 +1419,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Equate Mucus-ER (600 mg)',
     brand: 'Equate',
     category: COLD_FLU,
+    barcode: '194346536276',
     formulaId: 'equate-mucus-er-600-blue1',
     audience: ADULT,
     minAge: 12,
