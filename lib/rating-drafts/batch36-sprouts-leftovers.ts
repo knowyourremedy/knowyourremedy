@@ -267,6 +267,7 @@ type Draft = {
 };
 
 function row(d: Draft): RatingRecord {
+  const barcode = BATCH36_CATCHUP_BARCODES[d.id];
   return {
     id: d.id,
     productName: d.productName,
@@ -288,6 +289,7 @@ function row(d: Draft): RatingRecord {
     retailers: [...RETAILERS],
     cleanAlternatives: d.alts,
     sourcesGeneral: [`${d.cite} — draft, not verified; no DailyMed drug SPL`],
+    ...(barcode ? { barcode } : {}),
   };
 }
 
@@ -473,6 +475,17 @@ const CITE = {
     'soy oil fill + beeswax (not gummy High).',
   ),
 } as const;
+
+// KYR5-b in-store Sprouts chunk 1 — official shop.sprouts PDP "UPC:" field
+// (GTIN-14 00+UPC-A → 12-digit UPC-A). Pack extras share formulaId.
+const BATCH36_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.d3k2]: '646670549069',
+  [ID.prenatalGummies]: '646670548147',
+  [ID.b12raspberry]: '646670150418',
+  [ID.b6]: '646670670138 646670670152',
+  [ID.glutathione]: '646670699054',
+  [ID.superFiber]: '646670681042',
+};
 
 type AlcoholDraft = {
   id: string;
@@ -1213,3 +1226,14 @@ export const BATCH36_SPROUTS_LEFTOVERS: RatingRecord[] = [
     cite: CITE.vitESelenium,
   }),
 ];
+
+for (const record of BATCH36_SPROUTS_LEFTOVERS) {
+  const expected = BATCH36_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 36 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 36 must not invent barcodes on ${record.id}`);
+  }
+}

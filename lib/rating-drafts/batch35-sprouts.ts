@@ -271,6 +271,7 @@ type Draft = {
 };
 
 function row(d: Draft): RatingRecord {
+  const barcode = BATCH35_CATCHUP_BARCODES[d.id];
   return {
     id: d.id,
     productName: d.productName,
@@ -292,6 +293,7 @@ function row(d: Draft): RatingRecord {
     retailers: [...RETAILERS],
     cleanAlternatives: d.alts,
     sourcesGeneral: [`${d.cite} — draft, not verified; no DailyMed drug SPL`],
+    ...(barcode ? { barcode } : {}),
   };
 }
 
@@ -341,6 +343,55 @@ const CITE = {
   beet: `${pdp('84678026-sprouts-organic-beet-root-90-ct')} HTML Other Ingredients (Organic Pullulan Capsule, Organic Brown Rice Flour.)`,
   herbLozenge: `${pdp('23000009-sprouts-original-herb-herbal-lozenges-23-l')} HTML Other Ingredients (Sugar, Glucose Syrup, Honey, Extract Of 20 Herbs (Licorice Root, Plantain Leaves, Blackberry Leaves, Peppermint Leaves, Chamomile Flower, Mallow Flower, Primrose Flower, Elderflower, Thyme, Icelandic Moss, Linden Flower, Sage Leaves, Anise, Marshmallow Leaves, Pimpernel Root, Fennel, Marigold Flower, Mullein Flower, Eucalyptus Leaves, Yarrow Flower), Caramel Sugar Syrup (Color), Peppermint Oil, Menthol.)`,
 } as const;
+
+// KYR5-b in-store Sprouts chunk 1 — official shop.sprouts PDP "UPC:" field
+// (GTIN-14 00+UPC-A → 12-digit UPC-A). Pack extras share formulaId.
+const BATCH35_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.inflacalmAche]: '646670682001',
+  [ID.inflacalmPowder]: '646670620522',
+  [ID.bronchial]: '646670621352',
+  [ID.gingerCherry]: '646670682506',
+  [ID.gingerElderberry]: '646670682490',
+  [ID.umcka]: '646670621697',
+  [ID.sleepCap]: '646670621123',
+  [ID.relaxCalm]: '646670681806',
+  [ID.ashwagandha]: '646670621161',
+  [ID.immuneRescue]: '646670621734',
+  [ID.zincPicolinate]: '646670672804',
+  [ID.ginkgo]: '646670682520',
+  [ID.hsn]: '646670549168',
+  [ID.krill]: '646670682124',
+  [ID.vitA]: '646670672309 646670672316',
+  [ID.vitE]: '646670672699',
+  [ID.oreganoCap]: '646670631511',
+  [ID.earClear]: '646670620591',
+  [ID.easeUnflavored]: '646670681783',
+  [ID.easeDragon]: '646670681790',
+  [ID.spirulina]: '646670681257',
+  [ID.d3_1000]: '646670672996',
+  [ID.d3_2000]: '646670681356',
+  [ID.beet]: '646670545801',
+  'sprouts-zinc-lozenges-cool-lemon': '646670670831',
+  'sprouts-vitamin-c-1000-capsules': '646670672347 646670672354',
+  'sprouts-zinc-50-tablets': '646670672798',
+  'sprouts-b12-1000-pr': '646670670107',
+  'sprouts-l-lysine-1000': '646670690167',
+  'sprouts-l-lysine-500': '646670690174',
+  'sprouts-melatonin-3mg-liquid': '646670130021',
+  'sprouts-sleep-liquid': '646670631429',
+  'sprouts-valerian-liquid': '646670631337',
+  'sprouts-b12-alcohol-free-sublingual': '646670620157',
+  'sprouts-b-complex-raspberry-liquid': '646670130212 646670130229',
+  'sprouts-b12-folic-b6-liquid': '646670631597',
+  'sprouts-d-mannose-cranberry-powder': '646670681837',
+  'sprouts-optimal-sleep-mct': '646670125805',
+  'sprouts-d3-5000-citrus-mct': '646670631658',
+  'sprouts-b12-500-resin': '646670670114 646670670121',
+  'sprouts-calcium-citrate-d-trisilicate': '646670670527',
+  'sprouts-original-herb-lozenges': '646670695018',
+  'sprouts-omega3-turmeric-tio2': '646670548055',
+  'sprouts-calcium-600-d-softgel-tio2': '646670670534',
+};
 
 export const BATCH35_SPROUTS: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -1170,3 +1221,14 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     alts: [...ALTS.calcium],
   }),
 ];
+
+for (const record of BATCH35_SPROUTS) {
+  const expected = BATCH35_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 35 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 35 must not invent barcodes on ${record.id}`);
+  }
+}
