@@ -413,6 +413,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: "Phillips' Original Milk of Magnesia",
     brand: "Phillips'",
     category: DIGESTIVE,
+    barcode: '312843353022',
     formulaId: PHILLIPS_MOM,
     audience: ADULT,
     minAge: 12,

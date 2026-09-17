@@ -1143,6 +1143,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'up&up',
     retailers: ['Target'],
     setid: '17b3ca97-1bd6-4e76-a47f-2e35ef36b707',
+    barcode: '370030622429',
   }),
   storeChildrenIbuDyedChew({
     id: 'signature-care-children-ibu-chew-dyed',
@@ -1156,6 +1157,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     productName: 'up&up Dye-Free Infants\' Concentrated Ibuprofen',
     brand: 'up&up',
     category: PAIN_FEVER,
+    barcode: '370030118427',
     formulaId: 'upup-infants-ibu-dyefree',
     audience: KIDS,
     minAge: 0,

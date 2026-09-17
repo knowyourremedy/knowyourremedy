@@ -571,6 +571,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Boiron Chestal Honey Cough Syrup (Adult)',
     brand: 'Boiron',
     category: COLD_FLU,
+    barcode: '306969032282',
     formulaId: 'boiron-chestal-adult-honey',
     audience: ADULT,
     minAge: 12,
