@@ -510,6 +510,7 @@ const BATCH36_CATCHUP_BARCODES: Record<string, string> = {
   [ID.nettleCap]: '646670155802',
   [ID.rhodiolaCap]: '646670621314',
   [ID.liverDetox]: '646670620669',
+  [ID.garlicSoftgel]: '646670680519',
   [ID.sawPalmettoSoftgel]: '646670680892 646670680908',
   [ID.dandelionAf]: '646670621642',
   [ID.iodineKelp]: '646670620546',

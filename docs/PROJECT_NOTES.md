@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (store PDPs first-class for OI + UPC/EAN — sprouts.com / Walmart / Target / CVS / Amazon / grocery house; exact pack only; store generics hunt on write; missing-barcode report 105 no-code / ~713 barcode-only after Sprouts chunk 2; do not reopen #121–#183; Thrive no_OI closeout written — batch64)
+Last Updated: September 17, 2026 (store PDPs first-class for OI + UPC/EAN — sprouts.com / Walmart / Target / CVS / Amazon / grocery house; exact pack only; store generics hunt on write; missing-barcode report 104 no-code / ~712 barcode-only after Sprouts chunk 2 leftovers; do not reopen #121–#184; Thrive no_OI closeout written — batch64)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,8 +56,8 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 after this chunk (many dry). Do not reopen #121–#183. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
-- KYR5-b is the barcode catch-up bot. Same rules as KYR5. Do not reopen #121–#183. In-store Sprouts chunk 2 opened. Still missing ~713 after this chunk (many dry).
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 after this chunk (many dry). Do not reopen #121–#184. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
+- KYR5-b is the barcode catch-up bot. Same rules as KYR5. Do not reopen #121–#184. In-store Sprouts chunk 2 leftovers opened. Still missing ~712 after this chunk (many dry).
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -75,7 +75,7 @@ LAUNCH WEIGHT
 - Row exists = coverage.
 - Barcode / set-id = the scanner works.
 - Carton photo = polish.
-- ~713 rows on main still need barcode backfill after KYR5-b in-store Sprouts chunk 2, many dry (KYR5 / KYR5-b). Forward catalog (KYR3) attaches UPC when the source has it.
+- ~712 rows on main still need barcode backfill after KYR5-b in-store Sprouts chunk 2 leftovers, many dry (KYR5 / KYR5-b). Forward catalog (KYR3) attaches UPC when the source has it.
 
 FOUNDER CALLS — MAJORITY RULE
 - New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
@@ -156,13 +156,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 (many dry).
+- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 (many dry).
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Before proposing a brand, read lib/rating-drafts/ filenames. batch37–64 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -211,7 +211,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -236,7 +236,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -248,7 +248,7 @@ CATALOG STRATEGY
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -559,7 +559,7 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
-KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#183. KYR5-b in-store Sprouts chunk 2 opened. Still missing ~713 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#184. KYR5-b in-store Sprouts chunk 2 leftovers opened. Still missing ~712 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 3) Amazon 3P brands not on main
@@ -975,13 +975,13 @@ Search catalog (parked Pedialyte out). A row has a code if it has UPC/EAN on `ba
 
 Totals
 - Search rows: 2203
-- Rows with a code: 2098
-- Rows missing UPC/EAN/set-id: 105
-- Rows missing UPC/EAN only (may still have set-id): 713 — this is the KYR5-b barcode-only gap after in-store Sprouts chunk 2
-- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 105 rows / 105 formulaIds — no pack-size clones in the no-code pile.
+- Rows with a code: 2099
+- Rows missing UPC/EAN/set-id: 104
+- Rows missing UPC/EAN only (may still have set-id): 712 — this is the KYR5-b barcode-only gap after in-store Sprouts chunk 2 leftovers
+- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 104 rows / 104 formulaIds — no pack-size clones in the no-code pile.
 
-1) IN-STORE — 70 missing (group by brand). Hunt these first.
-- Sprouts — 4 (already written batch35/36/16; not the unwritten stash; 50 filled in chunk 1 + 62 in chunk 2): Garlic Softgels; Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap
+1) IN-STORE — 69 missing (group by brand). Hunt these first.
+- Sprouts — 3 (already written batch35/36/16; not the unwritten stash; 50 filled in chunk 1 + 62 in chunk 2 + 1 leftover): Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap
 - Boiron — 17: Black Currant Buds; Briar Rose Young Shoots; Common Birch Buds; Common Juniper Young Shoots; Cowberry Young Shoots; English Hawthorn Young Shoots; European Grapevine Buds; European Hornbeam Buds; European Olive Young Shoots; European Walnut Buds; Fig Tree Buds; Giant Redwood Young Shoots; Horse Chestnut Buds; Lime Tree Buds; Lithy Tree Buds; Mountain Pine Buds; Rosemary Young Shoots
 - 365 Whole Foods Market — 7: Adult Once Daily Multi; Cal-Mag-Zinc with Vitamin D3; Calcium with Vitamin D3; Elderberry Gummies; Men’s One Daily Multi; Prenatal Multi Once Daily; Probiotic + Fiber Gummies
 - Culturelle — 3: Digestive Daily Probiotic Capsules; Kids Probiotic Gummies (coconut-only); Kids Purely Probiotics Packets
