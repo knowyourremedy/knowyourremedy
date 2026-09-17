@@ -505,6 +505,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     productName: "One A Day Women's Complete Multivitamin",
     brand: 'One A Day',
     category: VITAMINS,
+    barcode: '016500595809',
     formulaId: 'one-a-day-womens-coated',
     audience: ADULT,
     minAge: 18,
