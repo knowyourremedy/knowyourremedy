@@ -380,6 +380,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Icy Hot Original Cream',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167008812 041167008836',
     formulaId: ID.icyCream,
     audience: ADULT,
     minAge: 12,
@@ -1124,6 +1125,7 @@ if (BATCH45_PAIN_RUBS_REMAINING.some((record) => record.category !== PAIN_FEVER)
 }
 const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyBalm]: '041167008799',
+  [ID.icyCream]: '041167008812 041167008836',
   [ID.tbRed]: '039278220100',
   [ID.tbWhite]: '039278110104',
   [ID.icyAdvanced]: '041167080160',

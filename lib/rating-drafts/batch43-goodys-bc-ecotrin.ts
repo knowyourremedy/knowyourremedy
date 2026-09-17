@@ -735,7 +735,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     productName: "Goody's Extra Strength powder",
     brand: "Goody's",
     category: PAIN_FEVER,
-    barcode: '042037103668',
+    barcode: '042037103668 042037103651',
     formulaId: ID.extraStrength,
     audience: ADULT,
     minAge: 12,
