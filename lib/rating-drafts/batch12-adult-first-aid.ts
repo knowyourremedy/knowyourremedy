@@ -408,7 +408,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     productName: 'Neosporin Original Ointment',
     brand: 'Neosporin',
     category: FIRST_AID,
-    barcode: '312547944892',
+    barcode: '312547944892 300810730884 300810730877',
     formulaId: NEOSPORIN_ORIG,
     audience: ADULT,
     minAge: 2,
