@@ -716,6 +716,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Tiger Balm Active Muscle Gel',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278440300',
     formulaId: ID.tbActiveGel,
     audience: ADULT,
     minAge: 12,
@@ -753,6 +754,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Tiger Balm Pain Relieving Muscle Spray',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278440409',
     formulaId: ID.tbSpray,
     audience: ADULT,
     minAge: 12,
@@ -1139,6 +1141,8 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyNight]: '041167170908',
   [ID.tbActiveRub]: '039278440201',
   [ID.icyRevive]: '041167080269',
+  [ID.tbActiveGel]: '039278440300',
+  [ID.tbSpray]: '039278440409',
 };
 for (const record of BATCH45_PAIN_RUBS_REMAINING) {
   const expected = BATCH45_CATCHUP_BARCODES[record.id];
