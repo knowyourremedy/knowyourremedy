@@ -189,9 +189,18 @@ const SPROUTS_WHOLE_CITE =
 
 // KYR5-b in-store Sprouts chunk 2 — official shop.sprouts PDP "UPC:" field
 // (GTIN-14 00+UPC-A → 12-digit UPC-A). 30 ct + 60 ct Once Daily share formulaId.
+// KYR5-b in-store 365 — Amazon UPC/model + HelloPharmacist/DSLD + WFM
+// image GTIN (GTIN-13 0+UPC-A → 12-digit UPC-A). Pack extras share formulaId.
 const BATCH16_CATCHUP_BARCODES: Record<string, string> = {
   'sprouts-organic-prenatal-once-daily': '646670548536 646670548529',
   'sprouts-organic-prenatal-whole-food': '646670549984',
+  '365-adult-once-daily-multi': '099482402075 099482406455',
+  '365-mens-one-daily-multi': '099482418502 099482418519',
+  '365-prenatal-multi': '099482420819',
+  '365-elderberry-gummies': '099482487591',
+  '365-probiotic-fiber-gummies-sunflower': '099482476601',
+  '365-calcium-d3-tio2': '099482285395',
+  '365-cal-mag-zinc-d3-tio2': '099482286972',
 };
 
 const H3_ALTS: CleanAlternative[] = [
@@ -356,6 +365,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     honestNote:
       'FOUNDER CALL: 365 Elderberry gummies = Caution. Driver is natural flavors (Limited). Matched Fig other-ingredients are evaporated cane sugar, organic tapioca syrup, pectin, citric acid, sodium citrate, natural flavors — no palm / canola / vegetable / sunflower oil. Do not invent a seed-oil Avoid on this formulaId. A later carton that lists seed / industrial oil is a different formula. No DailyMed drug SPL (dietary supplement). Adults. No independently Clean Immune swap in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-elderberry-gummies'],
     sourcesGeneral: [
       `${FIG_ELDERBERRY_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -425,6 +435,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean multi in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-adult-once-daily-multi'],
     sourcesGeneral: [
       `${WFM_ADULT_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -461,6 +472,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean multi in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-mens-one-daily-multi'],
     sourcesGeneral: [
       `${WFM_MENS_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -495,6 +507,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean prenatal in this batch — cleanAlternatives omitted. No DailyMed drug SPL.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-prenatal-multi'],
     sourcesGeneral: [
       `${WFM_PRENATAL_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -636,6 +649,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     honestNote:
       'FOUNDER CALL: 365 Probiotic + Fiber gummies = Avoid. Organic sunflower seed oil in a gummy is High-tier (seed/industrial oils in gummies). Natural flavor is Limited (not needed to reach Avoid). WFM ingredients: inulin (from chicory root), organic evaporated cane sugar, pectin, citric acid, natural flavor, sodium citrate, organic sunflower seed oil, organic carnauba wax, colors from juices, cornstarch. No DailyMed drug SPL. Adults. No independently Clean Digestive swap in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-probiotic-fiber-gummies-sunflower'],
     sourcesGeneral: [
       `${WFM_PROBIOTIC_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -670,6 +684,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     honestNote:
       'FOUNDER CALL: 365 Calcium with Vitamin D3 = Avoid (TiO2 in vegetable coating). WFM other-ingredients: stearic acid (vegetable source), croscarmellose sodium, vegetable coating (HPMC, titanium dioxide [for color], sodium CMC), MCC, magnesium stearate (vegetable source), silicon dioxide, hydroxypropylcellulose. Separate formulaId from Cal-Mag-Zinc (`365-cal-mag-zinc-d3-tio2`) — same coat family, different actives; do not merge. Confirm the carton still lists titanium dioxide. No DailyMed drug SPL. Adults. No independently Clean calcium in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-calcium-d3-tio2'],
     sourcesGeneral: [
       `${WFM_CALCIUM_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -708,6 +723,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ZINC_PARKED +
       ' No independently Clean mineral tablet in this batch — cleanAlternatives omitted.',
     retailers: ['Whole Foods'],
+    barcode: BATCH16_CATCHUP_BARCODES['365-cal-mag-zinc-d3-tio2'],
     sourcesGeneral: [
       `${WFM_CALMAG_CITE} — draft, not verified; no DailyMed drug SPL`,
     ],
@@ -720,7 +736,10 @@ for (const record of BATCH16_365_SPROUTS) {
     if (record.barcode !== expected) {
       throw new Error(`batch 16 catch-up UPC drift on ${record.id}`);
     }
-  } else if (record.barcode && record.brand === 'Sprouts') {
+  } else if (
+    record.barcode &&
+    (record.brand === 'Sprouts' || record.brand === '365 Whole Foods Market')
+  ) {
     throw new Error(`batch 16 must not invent barcodes on ${record.id}`);
   }
 }
