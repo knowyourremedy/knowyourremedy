@@ -1526,6 +1526,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'Dramamine Chewable Orange',
     brand: 'Dramamine',
     category: DIGESTIVE,
+    barcode: '831248000671',
     formulaId: 'dramamine-chewable-orange',
     audience: ADULT,
     minAge: 12,

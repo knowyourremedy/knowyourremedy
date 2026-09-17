@@ -547,6 +547,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: 'Equate Allergy Relief (Fluticasone Propionate) — kids-facing',
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '194346371907',
     formulaId: 'equate-fluticasone-bkc-ps80',
     audience: KIDS,
     minAge: 4,

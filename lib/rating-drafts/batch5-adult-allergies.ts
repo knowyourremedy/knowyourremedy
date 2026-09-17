@@ -854,6 +854,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     retailers: ['Safeway', 'Albertsons'],
     setid: '0a4b8eef-762e-42cc-84ee-0018a9a3be58',
     preferredAlt: CLARITIN_PLAIN,
+    barcode: '321130168911',
   }),
   {
     id: 'flonase-allergy-relief',
@@ -948,6 +949,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Equate Allergy Relief (Fluticasone Propionate)',
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '194346371907',
     formulaId: 'equate-fluticasone-bkc-ps80',
     audience: ADULT,
     minAge: 12,
