@@ -4303,6 +4303,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-cranberry",
+    barcode: "033674151341 033674151358",
     handle: "cranberry",
     productName: "Cranberry Premium Blend",
     category: "Digestive",
@@ -4311,6 +4312,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-cranrx-bioactive-cranberry",
+    barcode: "033674152898",
     handle: "cranrx-bioactive-cranberry",
     productName: "CranRx® BioActive Cranberry",
     category: "Digestive",
@@ -4319,6 +4321,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-damiana-leaves",
+    barcode: "033674122006",
     handle: "damiana-leaves",
     productName: "Damiana Leaves",
     category: "Immune Support",
@@ -4327,6 +4330,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-dgl-ultra-capsules",
+    barcode: "033674129159",
     handle: "dgl-ultra-capsules",
     productName: "DGL Ultra Premium Extract",
     category: "Immune Support",
@@ -4335,6 +4339,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-echinacea",
+    barcode: "033674124000 033674124086",
     handle: "echinacea",
     productName: "Echinacea",
     category: "Immune Support",
@@ -4343,6 +4348,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-fennel-seed",
+    barcode: "033674127001",
     handle: "fennel-seed",
     productName: "Fennel Seed",
     category: "Digestive",
@@ -4351,6 +4357,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-fenugreek-seed",
+    barcode: "033674128008 033674146101 033674119242",
     handle: "fenugreek-seed",
     productName: "Fenugreek Seed",
     category: "Vitamins",
@@ -4359,6 +4366,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-fiber-fusion-daily",
+    barcode: "763948084524",
     handle: "fiber-fusion-daily",
     productName: "Fiber Fusion™ Daily",
     category: "Immune Support",
@@ -4367,6 +4375,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-forskohlii",
+    barcode: "033674100066",
     handle: "forskohlii",
     productName: "Forskohlii Standardized Extract",
     category: "Immune Support",
@@ -4375,6 +4384,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-gaba",
+    barcode: "763948055265",
     handle: "gaba",
     productName: "GABA",
     category: "Digestive",
@@ -4383,6 +4393,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-garden-veggies",
+    barcode: "033674147931",
     handle: "garden-veggies",
     productName: "Garden Veggies™",
     category: "Immune Support",
@@ -4391,6 +4402,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-ginger-root",
+    barcode: "033674131008 033674131084 033674119266",
     handle: "ginger-root",
     productName: "Ginger Root",
     category: "Digestive",
@@ -4399,6 +4411,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-gs-500-glucosamine-sulfate",
+    barcode: "763948017874",
     handle: "gs-500-glucosamine-sulfate",
     productName: "GS-500™ Glucosamine Sulfate",
     category: "Vitamins",
@@ -4407,6 +4420,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-hawthorn-berries",
+    barcode: "033674141007 033674153383",
     handle: "hawthorn-berries",
     productName: "Hawthorn Berries",
     category: "Immune Support",
@@ -4415,6 +4429,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-hawthorn",
+    barcode: "033674619001",
     handle: "hawthorn",
     productName: "Hawthorn Standardized Extract",
     category: "Immune Support",
@@ -4423,6 +4438,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-hem-care",
+    barcode: "763948032099",
     handle: "hem-care",
     productName: "Hem-Care™ Premium Blend",
     category: "Vitamins",
@@ -4431,6 +4447,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-iron",
+    barcode: "033674410417",
     handle: "iron",
     productName: "Iron",
     category: "Vitamins",
@@ -4439,6 +4456,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-maca-root",
+    barcode: "033674153109",
     handle: "maca-root",
     productName: "Maca Root",
     category: "Vitamins",
@@ -4447,6 +4465,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-magnesium-complex",
+    barcode: "033674410516",
     handle: "magnesium-complex",
     productName: "Magnesium Complex",
     category: "Vitamins",
@@ -4455,6 +4474,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-olive-leaf-premium-extract-20-oleuropein",
+    barcode: "033674154809",
     handle: "olive-leaf-premium-extract-20-oleuropein",
     productName: "Olive Leaf Standardized Extract",
     category: "Immune Support",
@@ -4463,6 +4483,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-orchard-fruits",
+    barcode: "033674147948",
     handle: "orchard-fruits",
     productName: "Orchard Fruits™",
     category: "Immune Support",
@@ -4471,6 +4492,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-potassium",
+    barcode: "033674410714",
     handle: "potassium",
     productName: "Potassium",
     category: "Vitamins",
@@ -4479,6 +4501,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-raspberry-leaf",
+    barcode: "033674161005",
     handle: "raspberry-leaf",
     productName: "Raspberry Leaf",
     category: "Immune Support",
@@ -4487,6 +4510,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-red-yeast-rice",
+    barcode: "033674155400",
     handle: "red-yeast-rice",
     productName: "Red Yeast Rice",
     category: "Immune Support",
@@ -4495,6 +4519,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-rest-and-restore",
+    barcode: "033674157633",
     handle: "rest-and-restore",
     productName: "Rest and Restore",
     category: "Immune Support",
@@ -4503,6 +4528,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-fatigued-to-fantastic-revitalizing-sleep-formula",
+    barcode: "763948032396",
     handle: "fatigued-to-fantastic-revitalizing-sleep-formula",
     productName: "Revitalizing Sleep Formula",
     category: "Immune Support",
@@ -4511,6 +4537,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-rhodiola",
+    barcode: "033674153215",
     handle: "rhodiola",
     productName: "Rhodiola",
     category: "Vitamins",
@@ -4519,6 +4546,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-saw-palmetto-berries",
+    barcode: "033674167502 033674167588",
     handle: "saw-palmetto-berries",
     productName: "Saw Palmetto Berries",
     category: "Vitamins",
@@ -4527,6 +4555,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-skullcap-herb",
+    barcode: "033674169001",
     handle: "skullcap-herb",
     productName: "Skullcap Herb",
     category: "Sleep",
@@ -4535,6 +4564,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-super-milk-thistle",
+    barcode: "763948081028",
     handle: "super-milk-thistle",
     productName: "Super Milk Thistle®",
     category: "Digestive",
@@ -4543,6 +4573,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-super-thisilyn",
+    barcode: "033674154052",
     handle: "super-thisilyn",
     productName: "Super Thisilyn®",
     category: "Digestive",
@@ -4551,6 +4582,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-tart-cherry-ultra-capsules",
+    barcode: "763948564453",
     handle: "tart-cherry-ultra-capsules",
     productName: "Tart Cherry Ultra Capsules",
     category: "Immune Support",
@@ -4559,6 +4591,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-turmeric-max-potency",
+    barcode: "033674102602",
     handle: "turmeric-max-potency",
     productName: "Turmeric Max Potency‡",
     category: "Pain & Fever",
@@ -4567,6 +4600,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-urinary",
+    barcode: "033674793206",
     handle: "urinary",
     productName: "Urinary with Cranberry Premium Blend",
     category: "Digestive",
@@ -4575,6 +4609,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-valerian",
+    barcode: "033674634004",
     handle: "valerian",
     productName: "Valerian",
     category: "Sleep",
@@ -4583,6 +4618,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-c-with-rose-hips",
+    barcode: "033674403105 033674403112",
     handle: "vitamin-c-with-rose-hips",
     productName: "Vitamin C with Rose Hips",
     category: "Vitamins",
@@ -4591,6 +4627,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-vitex-fruit",
+    barcode: "033674117507 033674119235",
     handle: "vitex-fruit",
     productName: "Vitex Fruit",
     category: "Prenatal",
