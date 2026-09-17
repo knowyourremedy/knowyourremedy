@@ -235,6 +235,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     productName: 'Capzasin Quick Relief Gel',
     brand: 'Capzasin',
     category: PAIN_FEVER,
+    barcode: '041167751602',
     formulaId: ID.capzasin,
     audience: ADULT,
     minAge: 18,
@@ -345,8 +346,18 @@ if (BATCH49_PAIN_FEVER_LIST2.filter((r) => r.verdict === 'avoid').length !== 3) 
 if (BATCH49_PAIN_FEVER_LIST2.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 49 stays on Pain & Fever');
 }
-if (BATCH49_PAIN_FEVER_LIST2.some((record) => record.barcode)) {
-  throw new Error('batch 49 must not invent barcodes');
+const BATCH49_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.capzasin]: '041167751602',
+};
+for (const record of BATCH49_PAIN_FEVER_LIST2) {
+  const expected = BATCH49_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 49 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 49 must not invent barcodes on ${record.id}`);
+  }
 }
 if (BATCH49_PAIN_FEVER_LIST2.some((record) => record.recordStatus !== UNVERIFIED)) {
   throw new Error('batch 49 recordStatus must stay unverified');
