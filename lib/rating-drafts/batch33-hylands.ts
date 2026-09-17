@@ -1602,6 +1602,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-leg-cramps-arnica-pm-cream',
     productName: "Hyland's Leg Cramps + Arnica PM Cream",
+    barcode: '354973415515',
     brand: BRAND,
     category: PAIN_FEVER,
     formulaId: 'hylands-leg-cramps-arnica-pm-cream',
@@ -1699,6 +1700,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-leg-cramps-arnica-cream',
     productName: "Hyland's Leg Cramps + Arnica Cream",
+    barcode: '354973320215',
     brand: BRAND,
     category: PAIN_FEVER,
     formulaId: 'hylands-leg-cramps-arnica-cream',
@@ -2135,6 +2137,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-organic-baby-all-in-one-cough-night',
     productName: "Hyland's Organic Baby All-in-One Cough Nighttime",
+    barcode: '810087820770',
     brand: BRAND,
     category: COLD_FLU,
     formulaId: 'hylands-organic-baby-all-in-one-cough-night',
@@ -2194,6 +2197,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-organic-baby-soothing-gel-day',
     productName: "Hyland's Organic Baby Soothing Gel Daytime",
+    barcode: '810087820053',
     brand: BRAND,
     category: PAIN_FEVER,
     formulaId: 'hylands-organic-baby-soothing-gel-day',
@@ -2265,6 +2269,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   {
     id: 'hylands-organic-baby-soothing-gel-night',
     productName: "Hyland's Organic Baby Soothing Gel Nighttime",
+    barcode: '810087820060',
     brand: BRAND,
     category: PAIN_FEVER,
     formulaId: 'hylands-organic-baby-soothing-gel-night',
