@@ -627,6 +627,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productName: 'Imodium A-D Caplets',
     brand: 'Imodium',
     category: DIGESTIVE,
+    barcode: '300450295767',
     formulaId: 'imodium-ad-caplets',
     audience: ADULT,
     minAge: 12,

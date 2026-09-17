@@ -1360,6 +1360,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "up&up Children's Allergy Melts (Diphenhydramine)",
     brand: 'up&up',
     category: ALLERGIES,
+    barcode: '368163012484',
     formulaId: 'upup-kids-dph-melts',
     audience: KIDS,
     minAge: 6,
