@@ -227,12 +227,14 @@ function storeLoratadineLiquid(opts: {
   brand: string;
   retailers: string[];
   setid: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: ALLERGIES,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: STORE_LORATADINE_LIQUID,
     audience: KIDS,
     minAge: 2,
@@ -800,6 +802,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "Children's Allegra Allergy Orally Disintegrating Tablets",
     brand: 'Allegra',
     category: ALLERGIES,
+    barcode: '041167423332',
     formulaId: 'childrens-allegra-odt',
     audience: KIDS,
     minAge: 6,
@@ -844,6 +847,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "Children's Allegra Allergy Oral Suspension",
     brand: 'Allegra',
     category: ALLERGIES,
+    barcode: '041167424445',
     formulaId: 'childrens-allegra-liquid',
     audience: KIDS,
     minAge: 2,
@@ -904,6 +908,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "Equate Children's Allergy Relief (Cetirizine)",
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '681131447782',
     formulaId: 'equate-kids-cetirizine-liquid',
     audience: KIDS,
     minAge: 2,
@@ -961,6 +966,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "up&up Children's Allergy (Cetirizine, Grape)",
     brand: 'up&up',
     category: ALLERGIES,
+    barcode: '370030629961',
     formulaId: UPUP_CETIRIZINE,
     audience: KIDS,
     minAge: 2,
@@ -1011,6 +1017,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "up&up Children's Allergy (Cetirizine, Bubblegum)",
     brand: 'up&up',
     category: ALLERGIES,
+    barcode: '370030629909',
     formulaId: UPUP_CETIRIZINE,
     audience: KIDS,
     minAge: 2,
@@ -1062,6 +1069,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     brand: 'Equate',
     retailers: ['Walmart'],
     setid: '5603d5e1-8d95-44b9-aceb-4bc37b162ab1',
+    barcode: '681131276788',
   }),
   storeLoratadineLiquid({
     id: 'upup-kids-loratadine-liquid',
@@ -1069,6 +1077,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     brand: 'up&up',
     retailers: ['Target'],
     setid: 'a9f6ae02-cf29-4111-99e7-7e6b1ecb88f0',
+    barcode: '370030629985',
   }),
   storeLoratadineLiquid({
     id: 'cvs-kids-loratadine-liquid',
@@ -1076,12 +1085,14 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     brand: 'CVS Health',
     retailers: ['CVS'],
     setid: '0e84571d-87b6-4742-ac62-9ed68a115c72',
+    barcode: '050428057131',
   }),
   {
     id: 'cvs-kids-cetirizine-liquid',
     productName: "CVS Children's Allergy Relief (Cetirizine)",
     brand: 'CVS Health',
     category: ALLERGIES,
+    barcode: '050428057162',
     formulaId: 'cvs-kids-cetirizine-liquid',
     audience: KIDS,
     minAge: 2,
@@ -1241,6 +1252,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "CVS Dye-Free Children's Allergy (Diphenhydramine)",
     brand: 'CVS Health',
     category: ALLERGIES,
+    barcode: '050428359396',
     formulaId: 'cvs-kids-dph-liquid',
     audience: KIDS,
     minAge: 6,
@@ -1461,6 +1473,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: "Children's Benadryl Dye-Free Allergy",
     brand: 'Benadryl',
     category: ALLERGIES,
+    barcode: '350580535042',
     formulaId: 'childrens-benadryl-dyefree-liquid',
     audience: KIDS,
     minAge: 6,

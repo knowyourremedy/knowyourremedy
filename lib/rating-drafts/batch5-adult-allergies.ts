@@ -323,12 +323,14 @@ function mintOdtRecord(opts: {
   retailers: string[];
   setid: string;
   preferredAlt: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: ALLERGIES,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: 'loratadine-mint-odt-sucralose',
     audience: ADULT,
     minAge: 6,
@@ -765,6 +767,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Similasan Allergy Eye Relief (Multi-Dose Bottle)',
     brand: 'Similasan',
     category: ALLERGIES,
+    barcode: '094841300252',
     formulaId: 'similasan-allergy-eye-multidose',
     audience: ADULT,
     minAge: 2,
@@ -835,6 +838,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     retailers: ['Walmart'],
     setid: '882dc99b-22d2-4f3e-8613-9ac8d9c5d910',
     preferredAlt: EQUATE_LORATADINE,
+    barcode: '194346498161',
   }),
   mintOdtRecord({
     id: 'signature-care-loratadine-mint-odt',
@@ -1364,6 +1368,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Allegra Allergy 24 Hour Tablets',
     brand: 'Allegra',
     category: ALLERGIES,
+    barcode: '041167412510',
     formulaId: 'allegra-allergy-24hr-tio2',
     audience: ADULT,
     minAge: 12,
@@ -1503,6 +1508,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Equate Allergy Relief (Cetirizine 10 mg)',
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '681131288248',
     formulaId: 'store-cetirizine-coated-blue1-tio2',
     audience: ADULT,
     minAge: 6,
@@ -1590,6 +1596,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: "Member's Mark Allergy Relief (Cetirizine 10 mg)",
     brand: "Member's Mark",
     category: ALLERGIES,
+    barcode: '193968140366',
     formulaId: 'store-cetirizine-coated-blue1-tio2',
     audience: ADULT,
     minAge: 6,
@@ -1628,6 +1635,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'CVS Allergy Relief (Cetirizine 10 mg)',
     brand: 'CVS Health',
     category: ALLERGIES,
+    barcode: '050428415368',
     formulaId: 'store-cetirizine-coated-blue1-tio2',
     audience: ADULT,
     minAge: 6,
@@ -1666,6 +1674,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Equate Allergy Relief D (Fexofenadine / Pseudoephedrine)',
     brand: 'Equate',
     category: ALLERGIES,
+    barcode: '194346065837',
     formulaId: 'equate-fexofenadine-d-dyes',
     audience: ADULT,
     minAge: 12,

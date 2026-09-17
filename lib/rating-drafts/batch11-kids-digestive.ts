@@ -272,12 +272,14 @@ function dyeFreeInfantGasRow(opts: {
   retailers: string[];
   setid: string;
   noteBrand: string;
+  barcode?: string;
 }): RatingRecord {
   return {
     id: opts.id,
     productName: opts.productName,
     brand: opts.brand,
     category: DIGESTIVE,
+    ...(opts.barcode ? { barcode: opts.barcode } : {}),
     formulaId: STORE_INFANTS_GAS_DYEFREE,
     audience: KIDS,
     minAge: 0,
@@ -779,6 +781,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     productName: 'Mylicon Infants Gas Relief Original',
     brand: 'Mylicon',
     category: DIGESTIVE,
+    barcode: '819903010210',
     formulaId: 'mylicon-infants-original',
     audience: KIDS,
     minAge: 0,
@@ -821,6 +824,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     productName: 'Mylicon Infants Gas Relief Dye-Free',
     brand: 'Mylicon',
     category: DIGESTIVE,
+    barcode: '819903010234',
     formulaId: 'mylicon-infants-dyefree',
     audience: KIDS,
     minAge: 0,
@@ -869,6 +873,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     retailers: ['CVS'],
     setid: SET_CVS_GAS_DYEFREE,
     noteBrand: 'CVS Health',
+    barcode: '050428620663',
   }),
   dyeFreeInfantGasRow({
     id: 'walgreens-infants-gas-dyefree',
