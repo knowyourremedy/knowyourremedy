@@ -1432,8 +1432,19 @@ if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'avoid').length !=
 if (BATCH47_PAIN_RUB_EXACT_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 47 stays on Pain & Fever');
 }
-if (BATCH47_PAIN_RUB_EXACT_UNLOCK.some((record) => record.barcode)) {
-  throw new Error('batch 47 must not invent barcodes');
+const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.asperOrig]: '041167057032',
+  [ID.salonPrpLarge]: '346581210064',
+};
+for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
+  const expected = BATCH47_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 47 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 47 must not invent barcodes on ${record.id}`);
+  }
 }
 if (ICY_ROLL?.formulaId !== ASPER_APPL?.formulaId) {
   throw new Error('Icy Hot lidocaine no-mess roll-on and Aspercreme applicator must share formulaId');

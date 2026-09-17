@@ -1394,6 +1394,7 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   [ID.nowTurmeric]: '733739047922',
   [ID.doctorsBest]: '753950001954',
   [ID.naturewise]: '858081006196 858081006110 810157850065',
+  [ID.midol]: '312843158597 312843555198',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];

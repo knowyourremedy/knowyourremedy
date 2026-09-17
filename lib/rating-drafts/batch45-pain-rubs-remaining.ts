@@ -1117,8 +1117,20 @@ if (BATCH45_PAIN_RUBS_REMAINING.filter((r) => r.verdict === 'avoid').length !== 
 if (BATCH45_PAIN_RUBS_REMAINING.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 45 stays on Pain & Fever');
 }
-if (BATCH45_PAIN_RUBS_REMAINING.some((record) => record.barcode)) {
-  throw new Error('batch 45 must not invent barcodes');
+const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.icyBalm]: '041167008799',
+  [ID.tbRed]: '039278220100',
+  [ID.tbWhite]: '039278110104',
+};
+for (const record of BATCH45_PAIN_RUBS_REMAINING) {
+  const expected = BATCH45_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 45 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 45 must not invent barcodes on ${record.id}`);
+  }
 }
 if (ICY_PERF_NM?.formulaId !== ICY_PERF?.formulaId) {
   throw new Error('Performance Cream and Performance No-Mess must share formulaId');
