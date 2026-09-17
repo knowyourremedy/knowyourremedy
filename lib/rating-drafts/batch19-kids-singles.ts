@@ -8,7 +8,7 @@
 // recordStatus is 'unverified' on every row. Founder calls (locked): see
 // notes below. Methodology v1.6 grades only — do not change locked
 // ingredient grades.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // Form is labeled on cleanAlternatives, not a hard filter (§6).
 // Not wired into Clean Picks UI. No live Clean Picks file is edited from
 // this draft. Methodology.md / PROJECT_NOTES.md are untouched.
@@ -136,6 +136,12 @@ const NORDIC_DHA_LIQUID_CITE =
   "Nordic Naturals Children's DHA liquid (strawberry) iHerb / brand other-ingredients (purified arctic cod liver oil, natural flavor, RRR-alpha tocopherol (antioxidant), rosemary extract (a natural preservative))";
 const LIL_OMEGA_CITE =
   "L'il Critters Omega-3 DHA gummies Giant / HelloPharmacist other-ingredients (glucose syrup, sugar, water, gelatin; less than 2% canola lecithin, citric acid, colors (blueberry and carrot concentrates, purple carrot juice concentrate, turmeric), fumaric acid, lactic acid, natural flavors)";
+
+// KYR5-b in-store 3s brands — Immune C 190-ct coconut-and/or-palm
+// (iHerb LIL-01945 / Giant / Cub UPC). Do not steal soy-lecithin Omega-3.
+const BATCH19_CATCHUP_BARCODES: Record<string, string> = {
+  'lil-critters-immune-c-zinc-d-gummies-palm': '027917019451',
+};
 
 export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -291,6 +297,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
     productName: "L'il Critters Immune C Plus Zinc & Vitamin D Gummies",
     brand: "L'il Critters",
     category: VITAMINS,
+    barcode: BATCH19_CATCHUP_BARCODES['lil-critters-immune-c-zinc-d-gummies-palm'],
     formulaId: 'lil-critters-immune-c-zinc-d-gummies-palm',
     audience: KIDS,
     minAge: 2,
@@ -374,3 +381,10 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH19_KIDS_SINGLES) {
+  const expected = BATCH19_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 19 catch-up UPC drift on ${record.id}`);
+  }
+}

@@ -3,7 +3,7 @@
 // Founder calls (locked): see notes below. Do NOT invent Clean. Methodology v1.6
 // grades only — do not change locked ingredient grades.
 // Homeopathic rows set productSubtype + homeopathicSubtype = 'homeopathic'.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // HFCS is parked (Methodology §5) — mentioned in honestNotes only, never graded.
 // Form is labeled on cleanAlternatives, not a hard filter (§6).
 // Not wired into Clean Picks UI. No live Digestive / Clean Picks file is edited
@@ -213,6 +213,13 @@ const CULTURELLE_GUMMY_CITE =
   'Culturelle Kids Probiotic + Veggie Fiber / Daily Probiotic + Prebiotic gummies (culturelle.com + CVS other-ingredients) — natural flavors + fractionated coconut oil (containing carnauba wax)';
 const CULTURELLE_PKT_CITE =
   'Culturelle Kids + Baby HCP sheet (CKEP11565) — Kids Purely Probiotics packets other ingredients include sucralose + natural flavor (xylitol, mannitol, HPC, stearic acid, magnesium stearate, citric acid, vegetable juice color, malic acid)';
+
+// KYR5-b in-store 3s brands — coconut-only Kids Veggie Fiber / Daily
+// Probiotic + Prebiotic 30-ct (iHerb CTL-40091 + Target/CVS successive
+// UPC). Fractionated coconut oil + carnauba wax; no palm / canola.
+const BATCH11_CATCHUP_BARCODES: Record<string, string> = {
+  'culturelle-kids-gummies-coconut': '049100400914 049100401010',
+};
 
 const GAS_UNDER6_ALTS: CleanAlternative[] = [
   alt(
@@ -612,6 +619,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     productName: 'Culturelle Kids Probiotic Gummies (coconut-only)',
     brand: 'Culturelle',
     category: DIGESTIVE,
+    barcode: BATCH11_CATCHUP_BARCODES['culturelle-kids-gummies-coconut'],
     formulaId: 'culturelle-kids-gummies-coconut',
     audience: KIDS,
     minAge: 2,
@@ -1083,3 +1091,10 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH11_KIDS_DIGESTIVE) {
+  const expected = BATCH11_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 11 catch-up UPC drift on ${record.id}`);
+  }
+}

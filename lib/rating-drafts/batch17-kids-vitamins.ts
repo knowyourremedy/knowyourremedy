@@ -6,7 +6,7 @@
 // Vitamins · audience 'kids' · recordStatus is 'unverified' on every row.
 // Founder calls (locked): see notes below. Do NOT invent Clean. Methodology
 // v1.6 grades only — do not change locked ingredient grades.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Barcodes omitted except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // Form is labeled on cleanAlternatives, not a hard filter (§6). This draft
 // set has NO independently Clean kids multi — cleanAlternatives are omitted
 // (honest empty; do not point at products outside this batch; do not fake
@@ -165,6 +165,16 @@ const FLINTSTONES_CHEW_CITE =
 const MARYRUTH_LIQUID_CITE =
   "MaryRuth's Kids Morning Multivitamin Liquid Target / IngredientList other-ingredients (purified water, vegetable glycerin, natural flavors, citric acid, xanthan gum, grape skin extract (color))";
 
+// KYR5-b in-store 3s brands — iHerb / HelloPharmacist / OFF UPC-A.
+// Gummy Vites 70-ct + 190-ct coconut-and/or-palm (not NSA 027917300214).
+// Kirkland kids 160-ct / 2x160 pack vegetable oil. Equate kids 190-ct
+// palm blend (not coconut-only 681131110655/662; not no-oil 681131284950).
+const BATCH17_CATCHUP_BARCODES: Record<string, string> = {
+  'lil-critters-gummy-vites-palm': '027917006239 027917016290',
+  'kirkland-childrens-multi-gummies-palm': '096619637997',
+  'equate-kids-multi-gummies-palm': '681131057172',
+};
+
 export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
   // ── Caution ──────────────────────────────────────────────
   {
@@ -296,6 +306,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
     productName: "L'il Critters Gummy Vites",
     brand: "L'il Critters",
     category: VITAMINS,
+    barcode: BATCH17_CATCHUP_BARCODES['lil-critters-gummy-vites-palm'],
     formulaId: 'lil-critters-gummy-vites-palm',
     audience: KIDS,
     minAge: 2,
@@ -390,6 +401,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
     productName: "Kirkland Signature Children's Complete Multivitamin Gummies",
     brand: 'Kirkland Signature',
     category: VITAMINS,
+    barcode: BATCH17_CATCHUP_BARCODES['kirkland-childrens-multi-gummies-palm'],
     formulaId: 'kirkland-childrens-multi-gummies-palm',
     audience: KIDS,
     minAge: 2,
@@ -433,6 +445,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
     productName: 'Equate Kids Multivitamin Gummies',
     brand: 'Equate',
     category: VITAMINS,
+    barcode: BATCH17_CATCHUP_BARCODES['equate-kids-multi-gummies-palm'],
     formulaId: 'equate-kids-multi-gummies-palm',
     audience: KIDS,
     minAge: 2,
@@ -590,3 +603,10 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH17_KIDS_VITAMINS) {
+  const expected = BATCH17_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 17 catch-up UPC drift on ${record.id}`);
+  }
+}
