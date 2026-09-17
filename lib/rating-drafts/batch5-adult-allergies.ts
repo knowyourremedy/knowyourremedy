@@ -1075,6 +1075,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     productName: 'Alaway (Multi-Dose Bottle)',
     brand: 'Alaway',
     category: ALLERGIES,
+    barcode: '310119022412',
     formulaId: 'alaway-multidose-bak',
     audience: ADULT,
     minAge: 3,
