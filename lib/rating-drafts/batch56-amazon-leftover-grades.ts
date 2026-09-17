@@ -346,6 +346,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: 'Stopain Extra Strength Pain Relief Roll-On',
     brand: 'Stopain',
     category: PAIN_FEVER,
+    barcode: '724909633038',
     formulaId: ID.stopain,
     audience: ADULT,
     minAge: 12,
@@ -386,6 +387,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: 'Flexall Maximum Strength Pain Relieving Gel',
     brand: 'Flexall',
     category: PAIN_FEVER,
+    barcode: '041167160220',
     formulaId: ID.flexall,
     audience: ADULT,
     minAge: 12,
@@ -553,6 +555,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: 'Mentholatum Original Ointment',
     brand: 'Mentholatum',
     category: PAIN_FEVER,
+    barcode: '310742000115 310742000122',
     formulaId: ID.mentholatum,
     audience: ADULT,
     minAge: 2,
@@ -734,8 +737,20 @@ if (BATCH56_AMAZON_LEFTOVER_GRADES.filter((r) => r.verdict === 'avoid').length !
 if (BATCH56_AMAZON_LEFTOVER_GRADES.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 56 stays on Pain & Fever');
 }
-if (BATCH56_AMAZON_LEFTOVER_GRADES.some((record) => record.barcode)) {
-  throw new Error('batch 56 must not invent barcodes');
+const BATCH56_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.stopain]: '724909633038',
+  [ID.flexall]: '041167160220',
+  [ID.mentholatum]: '310742000115 310742000122',
+};
+for (const record of BATCH56_AMAZON_LEFTOVER_GRADES) {
+  const expected = BATCH56_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 56 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 56 must not invent barcodes on ${record.id}`);
+  }
 }
 if (
   BATCH56_AMAZON_LEFTOVER_GRADES.some(
