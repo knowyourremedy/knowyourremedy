@@ -578,6 +578,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     productName: 'Cortizone-10 Water Resistant',
     brand: 'Cortizone-10',
     category: FIRST_AID,
+    barcode: '041167033968',
     formulaId: CORTIZONE_WR,
     audience: ADULT,
     minAge: 2,
