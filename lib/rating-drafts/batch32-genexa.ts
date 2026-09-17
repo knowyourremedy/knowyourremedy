@@ -220,6 +220,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
     id: VIT_D_ID,
+    barcode: '857630006601',
     productName: "Genexa Infants' Vitamin D",
     brand: BRAND,
     category: VITAMINS,
@@ -257,6 +258,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   // ── Caution — scan list 2 ────────────────────────────────
   {
     id: 'genexa-kids-cough-chest-congestion-liquid',
+    barcode: '850015736018',
     productName: "Genexa Kids' Cough & Chest Congestion",
     brand: BRAND,
     category: COLD_FLU,
@@ -538,6 +540,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   // ── Caution — question SKUs unlocked this pass ───────────
   {
     id: 'genexa-antacid-maximum-strength',
+    barcode: '857630006571',
     productName: 'Genexa Antacid Maximum Strength',
     brand: BRAND,
     category: DIGESTIVE,
@@ -668,6 +671,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-sleepology',
+    barcode: '857630006090',
     productName: 'Genexa Sleepology',
     brand: BRAND,
     category: SLEEP,
@@ -736,6 +740,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-kids-calm-keeper',
+    barcode: '857630006106',
     productName: "Genexa Kids' Calm Keeper",
     brand: BRAND,
     category: SLEEP,
@@ -812,6 +817,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-stress',
+    barcode: '857630006007',
     productName: 'Genexa Stress',
     brand: BRAND,
     category: SLEEP,
@@ -878,6 +884,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-flu-fix',
+    barcode: '857630006038',
     productName: 'Genexa Flu Fix',
     brand: BRAND,
     category: COLD_FLU,
@@ -949,6 +956,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-cold-crush',
+    barcode: '857630006069',
     productName: 'Genexa Cold Crush',
     brand: BRAND,
     category: COLD_FLU,
@@ -1026,6 +1034,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-kids-honey-cough-syrup',
+    barcode: '857630006953',
     productName: "Genexa Kids' Honey Cough Syrup",
     brand: BRAND,
     category: COLD_FLU,
