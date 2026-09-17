@@ -1420,6 +1420,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "Children's Dimetapp Cold & Allergy",
     brand: 'Dimetapp',
     category: COLD_FLU,
+    barcode: '850026660371',
     formulaId: 'dimetapp-cold-allergy-liquid',
     audience: KIDS,
     minAge: 6,

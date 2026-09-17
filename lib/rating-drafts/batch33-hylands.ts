@@ -323,6 +323,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   // ── Clean tablets (acacia + lactose = 0) ─────────────────
   {
     id: 'hylands-arnica-30x',
+    barcode: '354973326613',
     productName: "Hyland's Arnica 30X Tablets",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -1170,6 +1171,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   // ── Avoid — elderberry gummies (sunflower oil in gummy) ──
   {
     id: 'hylands-organic-elderberry-plus-gummies',
+    barcode: '810087820022 810087820008',
     productName: "Hyland's Organic Elderberry Plus Gummies",
     brand: BRAND,
     category: IMMUNE,
