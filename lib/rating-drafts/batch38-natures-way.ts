@@ -1259,6 +1259,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-adult-ultra",
+    barcode: "033674156797",
     productName: "Alive!® Adult Ultra Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-adult-ultra",
@@ -1287,6 +1288,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-ultra",
+    barcode: "033674156858 033674137178",
     productName: "Alive!® Men’s Ultra Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-adult-ultra",
@@ -1315,6 +1317,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-ultra",
+    barcode: "033674156865 033674137185",
     productName: "Alive!® Women's Ultra Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-adult-ultra",
@@ -1343,6 +1346,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-50-ultra",
+    barcode: "033674156919 033674139400",
     productName: "Alive!® Men's 50+ Ultra Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-adult-ultra",
@@ -1371,6 +1375,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-50-ultra",
+    barcode: "033674156926 033674139417",
     productName: "Alive!® Women's 50+ Ultra Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-adult-ultra",
@@ -1399,6 +1404,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max3",
+    barcode: "033674149270 033674149287",
     productName: "Alive!® Max3 Potency Adult Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-max3",
@@ -1427,6 +1433,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max3-no-iron",
+    barcode: "033674149317 033674149324",
     productName: "Alive!® Max3 Potency Adult Complete Multivitamin-No Added Iron",
     category: "Vitamins",
     formulaId: "natures-way-alive-max3",
@@ -1455,6 +1462,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max3-mens",
+    barcode: "033674155424",
     productName: "Alive!® Max3 Potency Men's Complete Multivitamin Tablets",
     category: "Vitamins",
     formulaId: "natures-way-alive-max3",
@@ -1483,6 +1491,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max3-womens",
+    barcode: "033674155431",
     productName: "Alive!® Max3 Potency Women's Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-max3-womens",
@@ -1512,6 +1521,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-complete",
+    barcode: "033674136607 033674137161",
     productName: "Alive!® Men’s Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-mens-complete",
@@ -1540,6 +1550,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-50-complete",
+    barcode: "033674136614 033674142837",
     productName: "Alive!® Men's 50+ Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-mens-complete",
@@ -1568,6 +1579,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-complete",
+    barcode: "033674136638 033674137109",
     productName: "Alive!® Women's Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-womens-complete",
@@ -1596,6 +1608,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-50-complete",
+    barcode: "033674136621 033674139011 033674142103",
     productName: "Alive!® Women’s 50+ Complete Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-womens-complete",
@@ -1624,6 +1637,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-50-ultra-minis",
+    barcode: "033674159736",
     productName: "Alive! Men's 50+ Ultra Minis Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-mens-50-ultra-minis",
@@ -1651,6 +1665,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-50-ultra-minis",
+    barcode: "033674159743",
     productName: "Alive! Women's 50+ Ultra Minis Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-mens-50-ultra-minis",
@@ -1678,6 +1693,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-kids-chewable",
+    barcode: "033674157862",
     productName: "Alive!® Kids Chewable Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-kids-chewable",
@@ -1707,6 +1723,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-max-potency-liquid",
+    barcode: "033674153956",
     productName: "Alive!® Max Potency Complete Liquid Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-max-potency-liquid",
@@ -1735,6 +1752,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-womens-gummy",
+    barcode: "033674159033 033674115367 033674140697",
     productName: "Alive!® Women’s Gummy Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-womens-gummy",
@@ -1762,6 +1780,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-mens-gummy",
+    barcode: "033674159002 033674140314 033674140666",
     productName: "Alive!® Men’s Gummy Multivitamin",
     category: "Vitamins",
     formulaId: "natures-way-alive-mens-gummy",
@@ -1789,6 +1808,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-kids-gummy",
+    barcode: "033674157886",
     productName: "Alive!® Kids Multivitamin Gummy",
     category: "Vitamins",
     formulaId: "natures-way-alive-kids-gummy",
@@ -1816,6 +1836,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-alive-prenatal-gummy",
+    barcode: "033674104880",
     productName: "Alive!® Daily Support Prenatal Gummy Multivitamin",
     category: "Prenatal",
     formulaId: "natures-way-alive-prenatal-gummy",
@@ -1844,6 +1865,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-tart-cherry-ultra-gummies",
+    barcode: "763948108091",
     productName: "Tart Cherry Ultra Gummies",
     category: "Pain & Fever",
     formulaId: "natures-way-tart-cherry-ultra-gummies",
@@ -1869,6 +1891,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-vitamin-c-gummies",
+    barcode: "033674136072",
     productName: "Vitamin C Gummies",
     category: "Vitamins",
     formulaId: "natures-way-vitamin-c-gummies",
@@ -1920,6 +1943,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-coq10",
+    barcode: "763948062027",
     productName: "CoQ10",
     category: "Vitamins",
     formulaId: "natures-way-coq10",
@@ -1944,6 +1968,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-vitamin-d3-softgel",
+    barcode: "033674155905 033674156049",
     productName: "Vitamin D3",
     category: "Vitamins",
     formulaId: "natures-way-vitamin-d3-softgel",
@@ -1966,6 +1991,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-vitamin-d3-max",
+    barcode: "033674158364",
     productName: "Vitamin D3 Max‡",
     category: "Vitamins",
     formulaId: "natures-way-vitamin-d3-softgel",
@@ -1988,6 +2014,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-womens",
+    barcode: "763948042135 033674139509",
     productName: "Probiotic Pearls® Women’s",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2011,6 +2038,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-acidophilus",
+    barcode: "763948042937 763948042999",
     productName: "Probiotic Pearls® Acidophilus",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2034,6 +2062,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-complete",
+    barcode: "763948043637 763948043699",
     productName: "Pearls® Complete Probiotic",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2057,6 +2086,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-elite",
+    barcode: "763948564354",
     productName: "Pearls® Elite™ Probiotics",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
@@ -2080,6 +2110,7 @@ const NAMED: RatingRecord[] = [
   }),
   row({
     id: "natures-way-probiotic-pearls-max",
+    barcode: "763948050734",
     productName: "Probiotic Pearls® MAX Potency",
     category: "Digestive",
     formulaId: "natures-way-probiotic-pearls-womens",
