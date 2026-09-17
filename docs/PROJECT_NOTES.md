@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (missing-barcode report: 105 Search rows with no UPC/EAN/set-id; KYR5-b barcode-only gap still ~713 after in-store Sprouts chunk 2; do not reopen #121–#183; OI hunt also finds UPC on label photo; Thrive no_OI closeout written — batch64)
+Last Updated: September 17, 2026 (store PDPs first-class for OI + UPC/EAN — sprouts.com / Walmart / Target / CVS / Amazon / grocery house; exact pack only; store generics hunt on write; missing-barcode report 105 no-code / ~713 barcode-only after Sprouts chunk 2; do not reopen #121–#183; Thrive no_OI closeout written — batch64)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -90,6 +90,7 @@ BRAND-CLOSE WORKFLOW
 - Bot scans the WHOLE in-scope US line first. Questions come here BEFORE the write. One merge should close the brand.
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
 - Missing panel: advisor names the next SKU; Brandon hunts one-by-one. OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
+- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -240,6 +241,7 @@ NIGHT SCHEDULE
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
+- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
@@ -268,6 +270,7 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
+- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
