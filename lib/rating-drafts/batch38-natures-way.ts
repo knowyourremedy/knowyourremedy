@@ -3976,6 +3976,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-riboflavin-vitamin-b2",
+    barcode: "033674404218",
     handle: "riboflavin-vitamin-b2",
     productName: "Riboflavin Vitamin B2",
     category: "Vitamins",
@@ -3984,6 +3985,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-rosemary-leaves",
+    barcode: "033674141625",
     handle: "rosemary-leaves",
     productName: "Rosemary Leaf",
     category: "Immune Support",
@@ -3992,6 +3994,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-saffron",
+    barcode: "033674160817",
     handle: "saffron",
     productName: "Saffron",
     category: "Immune Support",
@@ -4000,6 +4003,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-selenium",
+    barcode: "033674410813",
     handle: "selenium",
     productName: "Selenium",
     category: "Vitamins",
@@ -4008,6 +4012,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-senna-leaves",
+    barcode: "033674170007",
     handle: "senna-leaves",
     productName: "Senna Leaves",
     category: "Digestive",
@@ -4016,6 +4021,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-siberian-eleuthero",
+    barcode: "033674135006 033674135082",
     handle: "siberian-eleuthero",
     productName: "Siberian Eleuthero Root",
     category: "Immune Support",
@@ -4024,6 +4030,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-slippery-elm-bark",
+    barcode: "033674171004",
     handle: "slippery-elm-bark",
     productName: "Slippery Elm Bark",
     category: "Digestive",
@@ -4032,6 +4039,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-spirulina",
+    barcode: "033674172001",
     handle: "spirulina",
     productName: "Spirulina Micro-Algae",
     category: "Vitamins",
@@ -4040,6 +4048,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-st-johns-wort-premium-extract",
+    barcode: "033674630006",
     handle: "st-johns-wort-premium-extract",
     productName: "St. John's Wort",
     category: "Sleep",
@@ -4048,6 +4057,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-st-johns-wort",
+    barcode: "033674173008 033674140413",
     handle: "st-johns-wort",
     productName: "St. John’s Wort Herb",
     category: "Sleep",
@@ -4056,6 +4066,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-uva-ursi-leaves",
+    barcode: "033674176009",
     handle: "uva-ursi-leaves",
     productName: "Uva Ursi Leaves",
     category: "Digestive",
@@ -4064,6 +4075,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-valerian-root",
+    barcode: "033674177006 033674177082",
     handle: "valerian-root",
     productName: "Valerian Root",
     category: "Sleep",
@@ -4072,6 +4084,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-b-100-complex",
+    barcode: "033674405208 033674405215",
     handle: "vitamin-b-100-complex",
     productName: "Vitamin B-100 Complex",
     category: "Vitamins",
@@ -4080,6 +4093,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-b1",
+    barcode: "033674404119",
     handle: "vitamin-b1",
     productName: "Vitamin B1 High Potency Thiamin HCl",
     category: "Vitamins",
@@ -4088,6 +4102,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-b6",
+    barcode: "033674404317",
     handle: "vitamin-b6",
     productName: "Vitamin B6 High Potency",
     category: "Vitamins",
@@ -4096,6 +4111,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-c-with-bioflavonoids",
+    barcode: "033674403303 033674403310",
     handle: "vitamin-c-with-bioflavonoids",
     productName: "Vitamin C with Bioflavonoids",
     category: "Vitamins",
@@ -4104,6 +4120,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-c-with-bioflavonoids-extra-strength",
+    barcode: "033674154649 033674154656",
     handle: "vitamin-c-with-bioflavonoids-extra-strength",
     productName: "Vitamin C with Bioflavonoids Extra Strength‡",
     category: "Vitamins",
@@ -4112,6 +4129,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-vitamin-c-with-rose-hips-extra-strength",
+    barcode: "033674403129 033674403136",
     handle: "vitamin-c-with-rose-hips-extra-strength",
     productName: "Vitamin C with Rose Hips Extra Strength‡",
     category: "Vitamins",
@@ -4120,6 +4138,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-wild-yam",
+    barcode: "033674178706 033674153505",
     handle: "wild-yam",
     productName: "Wild Yam Root",
     category: "Immune Support",
@@ -4128,6 +4147,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-willow-bark",
+    barcode: "033674178508",
     handle: "willow-bark",
     productName: "Willow Bark",
     category: "Pain & Fever",
@@ -4136,6 +4156,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-youthful-you-dhea-5mg",
+    barcode: "763948050062",
     handle: "youthful-you-dhea-5mg",
     productName: "Youthful You™ DHEA 5mg",
     category: "Digestive",
@@ -4144,6 +4165,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-zinc",
+    barcode: "033674410912",
     handle: "zinc",
     productName: "Zinc Chelate",
     category: "Vitamins",
@@ -4155,6 +4177,7 @@ const HERB_CLEAN: HerbSpec[] = [
 const HERB_SIO2: HerbSpec[] = [
   {
     id: "natures-way-fatigued-to-fantastic-adrenal-stress-end",
+    barcode: "763948040353",
     handle: "fatigued-to-fantastic-adrenal-stress-end",
     productName: "Adrenal Stress-End™",
     category: "Vitamins",
@@ -4163,6 +4186,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-aloe",
+    barcode: "033674101506",
     handle: "aloe",
     productName: "Aloe Latex With Fennel",
     category: "Digestive",
@@ -4171,6 +4195,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-aloelax",
+    barcode: "033674009000",
     handle: "aloelax",
     productName: "Aloelax® Premium Blend",
     category: "Digestive",
@@ -4179,6 +4204,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-alpha-lipoic-acid",
+    barcode: "033674451816",
     handle: "alpha-lipoic-acid",
     productName: "Alpha Lipoic Acid",
     category: "Digestive",
@@ -4187,6 +4213,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-artichoke",
+    barcode: "033674646007",
     handle: "artichoke",
     productName: "Artichoke",
     category: "Digestive",
@@ -4195,6 +4222,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-beet-root",
+    barcode: "033674104002 033674119259",
     handle: "beet-root",
     productName: "Beet Root",
     category: "Vitamins",
@@ -4203,6 +4231,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-berberine-with-cinnamon",
+    barcode: "033674150443",
     handle: "berberine-with-cinnamon",
     productName: "Berberine with Cinnamon",
     category: "Vitamins",
@@ -4211,6 +4240,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-bilberry",
+    barcode: "033674605004 033674605103",
     handle: "bilberry",
     productName: "Bilberry",
     category: "Vitamins",
@@ -4219,6 +4249,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-calcium-citrate",
+    barcode: "033674410103 033674410110",
     handle: "calcium-citrate",
     productName: "Calcium Citrate, Carbonate & Malate",
     category: "Vitamins",
@@ -4227,6 +4258,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-cascara-sagrada",
+    barcode: "033674113004 033674113080",
     handle: "cascara-sagrada",
     productName: "Cascara Sagrada",
     category: "Digestive",
@@ -4235,6 +4267,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-cayenne-fruit",
+    barcode: "033674115008 033674115084",
     handle: "cayenne-fruit",
     productName: "Cayenne Fruit",
     category: "Immune Support",
@@ -4243,6 +4276,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-clear-thinking",
+    barcode: "033674136904",
     handle: "clear-thinking",
     productName: "Clear Thinking",
     category: "Immune Support",
@@ -4251,6 +4285,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-complete-liver-cleanse",
+    barcode: "763948013159",
     handle: "complete-liver-cleanse",
     productName: "Complete Liver Cleanse",
     category: "Digestive",
@@ -4259,6 +4294,7 @@ const HERB_SIO2: HerbSpec[] = [
   },
   {
     id: "natures-way-cranberry-fruit",
+    barcode: "033674121504 033674153611",
     handle: "cranberry-fruit",
     productName: "Cranberry Fruit",
     category: "Digestive",
