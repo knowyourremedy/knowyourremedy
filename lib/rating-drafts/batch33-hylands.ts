@@ -418,6 +418,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-ferrum-phos-6x',
+    barcode: '354973343115',
     productName: "Hyland's Cell Salt #4 Ferrum Phos 6X",
     brand: BRAND,
     category: PAIN_FEVER,
@@ -884,6 +885,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
   },
   {
     id: 'hylands-calc-phos-6x',
+    barcode: '354973204317',
     productName: "Hyland's Cell Salt #2 Calc Phos 6X",
     brand: BRAND,
     category: PAIN_FEVER,

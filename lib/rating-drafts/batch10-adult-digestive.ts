@@ -661,6 +661,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
   {
     id: 'mylanta-gas-minis',
     productName: 'Mylanta Gas Minis Mint',
+    barcode: '819903010357',
     brand: 'Mylanta',
     category: DIGESTIVE,
     formulaId: 'mylanta-gas-minis',
