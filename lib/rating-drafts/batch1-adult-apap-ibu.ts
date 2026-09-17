@@ -585,6 +585,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     brand: 'Kirkland Signature',
     retailers: ['Costco'],
     setid: 'a9979167-1a82-47d7-9602-2865f9bdd628',
+    barcode: '096619383245',
   }),
   l484Record({
     id: 'members-mark-acetaminophen-es',
@@ -934,6 +935,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Advil Gel Caplets',
     brand: 'Advil',
     category: PAIN_FEVER,
+    barcode: '305730165402',
     formulaId: 'ibu-advil-gel-caplets',
     audience: ADULT,
     minAge: 12,
