@@ -458,6 +458,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Icy Hot Advanced Pain Relief Cream',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167080160',
     formulaId: ID.icyAdvanced,
     audience: ADULT,
     minAge: 12,
@@ -802,6 +803,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     productName: 'Tiger Balm Ultra Strength',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278315417',
     formulaId: ID.tbUltra,
     audience: ADULT,
     minAge: 12,
@@ -1121,6 +1123,8 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyBalm]: '041167008799',
   [ID.tbRed]: '039278220100',
   [ID.tbWhite]: '039278110104',
+  [ID.icyAdvanced]: '041167080160',
+  [ID.tbUltra]: '039278315417',
 };
 for (const record of BATCH45_PAIN_RUBS_REMAINING) {
   const expected = BATCH45_CATCHUP_BARCODES[record.id];
