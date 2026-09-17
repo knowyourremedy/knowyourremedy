@@ -3598,6 +3598,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-garlic",
+    barcode: "033674130001",
     handle: "garlic",
     productName: "Garlic Bulb",
     category: "Immune Support",
@@ -3606,6 +3607,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-glucomannan",
+    barcode: "033674136751",
     handle: "glucomannan",
     productName: "Glucomannan",
     category: "Digestive",
@@ -3614,6 +3616,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-goldenseal",
+    barcode: "033674137000",
     handle: "goldenseal",
     productName: "Goldenseal Herb",
     category: "Immune Support",
@@ -3622,6 +3625,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-goldenseal-root",
+    barcode: "033674139004 033674138007",
     handle: "goldenseal-root",
     productName: "Goldenseal Root",
     category: "Immune Support",
@@ -3630,6 +3634,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-gotu-kola",
+    barcode: "033674140000 033674140086",
     handle: "gotu-kola",
     productName: "Gotu Kola Herb",
     category: "Vitamins",
@@ -3638,6 +3643,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-grape-seed",
+    barcode: "033674143209 033674153529",
     handle: "grape-seed",
     productName: "Grape Seed Standardized Extract",
     category: "Vitamins",
@@ -3646,6 +3652,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-gtf-chromium",
+    barcode: "033674410219",
     handle: "gtf-chromium",
     productName: "GTF Chromium Glucose Tolerance Factor",
     category: "Vitamins",
@@ -3654,6 +3661,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-holy-basil",
+    barcode: "033674154939",
     handle: "holy-basil",
     productName: "Holy Basil Standardized Extract",
     category: "Sleep",
@@ -3662,6 +3670,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-hops-flowers",
+    barcode: "033674141557",
     handle: "hops-flowers",
     productName: "Hops Flowers",
     category: "Sleep",
@@ -3670,6 +3679,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-horny-goat-weed",
+    barcode: "033674153116",
     handle: "horny-goat-weed",
     productName: "Horny Goat Weed Standardized Extract",
     category: "Vitamins",
@@ -3678,6 +3688,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-horse-chestnut",
+    barcode: "033674620007",
     handle: "horse-chestnut",
     productName: "Horse Chestnut",
     category: "Immune Support",
@@ -3686,6 +3697,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-horsetail-grass",
+    barcode: "033674143001",
     handle: "horsetail-grass",
     productName: "Horsetail Grass",
     category: "Vitamins",
@@ -3694,6 +3706,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-hydraplenish",
+    barcode: "033674156018",
     handle: "hydraplenish",
     productName: "Hydraplenish®",
     category: "Vitamins",
@@ -3702,6 +3715,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-hydraplenish-with-msm",
+    barcode: "033674156032",
     handle: "hydraplenish-with-msm",
     productName: "Hydraplenish® with MSM",
     category: "Vitamins",
@@ -3710,6 +3724,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-inositol",
+    barcode: "033674404614",
     handle: "inositol",
     productName: "Inositol",
     category: "Vitamins",
@@ -3718,6 +3733,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-kelp",
+    barcode: "033674145005 033674145081",
     handle: "kelp",
     productName: "Kelp",
     category: "Vitamins",
@@ -3726,6 +3742,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-kidney-bladder",
+    barcode: "033674001103",
     handle: "kidney-bladder",
     productName: "Kidney Bladder Premium Blend",
     category: "Immune Support",
@@ -3734,6 +3751,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-kudzu",
+    barcode: "033674145500",
     handle: "kudzu",
     productName: "Kudzu Root",
     category: "Immune Support",
@@ -3742,6 +3760,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-l-theanine",
+    barcode: "763948095568 763948095506",
     handle: "l-theanine",
     productName: "L-Theanine",
     category: "Vitamins",
@@ -3750,6 +3769,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-lactase-enzyme",
+    barcode: "033674471104",
     handle: "lactase-enzyme",
     productName: "Lactose Defense",
     category: "Digestive",
@@ -3758,6 +3778,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-leg-veins",
+    barcode: "033674792704 033674153352",
     handle: "leg-veins",
     productName: "Leg Veins Premium Blend",
     category: "Immune Support",
@@ -3766,6 +3787,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-licorice-root",
+    barcode: "033674146002",
     handle: "licorice-root",
     productName: "Licorice Root",
     category: "Digestive",
@@ -3774,6 +3796,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-maca",
+    barcode: "033674642009",
     handle: "maca",
     productName: "Maca Standardized Extract",
     category: "Vitamins",
@@ -3782,6 +3805,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-marshmallow-root",
+    barcode: "033674148006",
     handle: "marshmallow-root",
     productName: "Marshmallow Root",
     category: "Digestive",
@@ -3790,6 +3814,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-melissa-lemon-balm",
+    barcode: "033674146507",
     handle: "melissa-lemon-balm",
     productName: "Melissa-Lemon Balm Leaf",
     category: "Sleep",
@@ -3798,6 +3823,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-milk-thistle",
+    barcode: "033674624005 033674153550",
     handle: "milk-thistle",
     productName: "Milk Thistle",
     category: "Digestive",
@@ -3806,6 +3832,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-myrrh-gum",
+    barcode: "033674151006",
     handle: "myrrh-gum",
     productName: "Myrrh Gum Tree Resin",
     category: "Immune Support",
@@ -3814,6 +3841,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-neem-leaf",
+    barcode: "033674151204",
     handle: "neem-leaf",
     productName: "Neem Leaf",
     category: "Immune Support",
@@ -3822,6 +3850,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-nettle-leaf",
+    barcode: "033674151501",
     handle: "nettle-leaf",
     productName: "Nettle Leaf",
     category: "Allergies",
@@ -3830,6 +3859,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-niacin",
+    barcode: "033674404706",
     handle: "niacin",
     productName: "Niacin Vitamin B3",
     category: "Vitamins",
@@ -3838,6 +3868,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-niacinamide",
+    barcode: "033674404805",
     handle: "niacinamide",
     productName: "Niacinamide",
     category: "Vitamins",
@@ -3846,6 +3877,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-olive-leaf",
+    barcode: "033674145210",
     handle: "olive-leaf",
     productName: "Olive Leaf",
     category: "Immune Support",
@@ -3854,6 +3886,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-olive-leaf-premium-extract",
+    barcode: "033674640005",
     handle: "olive-leaf-premium-extract",
     productName: "Olive Leaf Standardized Extract",
     category: "Immune Support",
@@ -3862,6 +3895,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-oregon-grape",
+    barcode: "033674141595",
     handle: "oregon-grape",
     productName: "Oregon Grape",
     category: "Immune Support",
@@ -3870,6 +3904,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-pantothenic-acid",
+    barcode: "033674404911",
     handle: "pantothenic-acid",
     productName: "Pantothenic Acid Vitamin B5",
     category: "Vitamins",
@@ -3878,6 +3913,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-parsley-leaf",
+    barcode: "033674153000",
     handle: "parsley-leaf",
     productName: "Parsley Leaf",
     category: "Immune Support",
@@ -3886,6 +3922,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-pau-darco-inner-bark",
+    barcode: "033674154502 033674154083",
     handle: "pau-darco-inner-bark",
     productName: "Pau d’Arco Inner Bark",
     category: "Immune Support",
@@ -3894,6 +3931,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-peppermint-leaf",
+    barcode: "033674141601",
     handle: "peppermint-leaf",
     productName: "Peppermint Leaf",
     category: "Digestive",
@@ -3902,6 +3940,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-pomegranate",
+    barcode: "033674153857",
     handle: "pomegranate",
     productName: "Pomegranate Standardized Extract",
     category: "Vitamins",
@@ -3910,6 +3949,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-red-clover-blossom-herb",
+    barcode: "033674160008",
     handle: "red-clover-blossom-herb",
     productName: "Red Clover Blossom / Herb",
     category: "Prenatal",
@@ -3918,6 +3958,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-reishi-mushroom",
+    barcode: "033674627006",
     handle: "reishi-mushroom",
     productName: "Reishi Mushroom Standardized Extract",
     category: "Immune Support",
@@ -3926,6 +3967,7 @@ const HERB_CLEAN: HerbSpec[] = [
   },
   {
     id: "natures-way-resveratrol",
+    barcode: "033674156117",
     handle: "resveratrol",
     productName: "Resveratrol",
     category: "Vitamins",
