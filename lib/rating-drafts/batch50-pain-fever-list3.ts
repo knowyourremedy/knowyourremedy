@@ -823,6 +823,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Professional Colorless Gel 5%',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124445353',
     formulaId: FID.proColor5,
     audience: ADULT,
     minAge: 2,
@@ -1626,6 +1627,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Mineral Ice Extreme Gel',
     brand: 'Mineral Ice',
     category: PAIN_FEVER,
+    barcode: '850078192035',
     formulaId: FID.miExtremeGel,
     audience: ADULT,
     minAge: 12,
@@ -2141,6 +2143,8 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.absProCream]: '889476414036',
   [ID.stick]: '731124444950',
   [ID.absProSpray]: '889476441148',
+  [ID.proColorGel]: '731124445353',
+  [ID.miExtremeGel]: '850078192035',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];

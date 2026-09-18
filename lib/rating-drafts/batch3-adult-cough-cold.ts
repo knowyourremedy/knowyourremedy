@@ -143,6 +143,7 @@ function homeopathicFields() {
 
 const BATCH3_CATCHUP_BARCODES: Record<string, string> = {
   'equate-daytime-cold-flu': '681131036870',
+  'theraflu-severe-cold-day-powder': '300670007119',
 };
 
 export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
@@ -1317,6 +1318,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Theraflu Severe Cold Relief Daytime Powder',
     brand: 'Theraflu',
     category: COLD_FLU,
+    barcode: BATCH3_CATCHUP_BARCODES['theraflu-severe-cold-day-powder'],
     formulaId: 'theraflu-severe-cold-day-powder',
     audience: ADULT,
     minAge: 12,
