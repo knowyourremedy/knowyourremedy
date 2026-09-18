@@ -446,6 +446,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     productName: "Hyland's Naturals Earache Drops",
     brand: "Hyland's",
     category: FIRST_AID,
+    barcode: '354973412415',
     formulaId: HYLANDS_EARACHE,
     audience: ADULT,
     minAge: 4,

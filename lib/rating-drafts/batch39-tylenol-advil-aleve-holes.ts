@@ -550,6 +550,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     productName: 'Tylenol Extra Strength Adult Liquid / Suspension',
     brand: 'Tylenol',
     category: PAIN_FEVER,
+    barcode: '300450420084',
     formulaId: ID.tylenolEsLiquid,
     audience: ADULT,
     minAge: 12,
