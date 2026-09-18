@@ -6,7 +6,8 @@
 // ONE write. Pain & Fever only (pain rubs live with swallow SKUs).
 // Do NOT invent a Topical aisle. Do NOT move Arniflora off First Aid.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack sizes
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack sizes
 // of the same name+form+inactives share formulaId. Same OI+actives
 // share formulaId. Form is labeled on cleanAlternatives, not a hard
 // filter (§6). Not wired into Clean Picks UI. No live Clean Picks
@@ -2001,6 +2002,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Absorbine Jr. XL Back Patch 5%',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
+    barcode: '889476412186',
     formulaId: FID.absXl,
     audience: ADULT,
     minAge: 12,
@@ -2030,6 +2032,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Absorbine Jr. Plus Knee Patch',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
+    barcode: '889476412513',
     formulaId: FID.absPlusKnee,
     audience: ADULT,
     minAge: 12,
@@ -2153,6 +2156,8 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.ovnCream]: '731124444547',
   [ID.mentholPatch]: '731124001719 731124001696 731124002778',
   [ID.absNeck]: '889476187534',
+  [ID.absXl]: '889476412186',
+  [ID.absPlusKnee]: '889476412513',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];
