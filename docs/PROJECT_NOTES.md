@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (ADVISOR HANDOFF late — batch69 IN FLIGHT; do not start a second write; do not reopen 65 / 66 / 68 / #229 / #230; after #69 merges → Amazon 3P; missing UPC 101 = in-store 72 + online 29; do not reopen #121–#221)
+Last Updated: September 18, 2026 (batch69 LANDED PR #231 — Amazon 3P is LIVE; do not reopen 65 / 66 / 68 / #229 / #230; refused §5 strings stay below; missing UPC 101 = in-store 72 + online 29; do not reopen #121–#221)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -103,7 +103,7 @@ BRAND-CLOSE WORKFLOW
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
-- Founder hunt still unwritten (batch69). Exact print — do not alias:
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
 - Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
 - Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
 - Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
@@ -119,7 +119,7 @@ BRAND-CLOSE WORKFLOW
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
 - Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
-- Highest rating-draft on MAIN at handoff start is batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT — do not start a second write. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -185,14 +185,14 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: batch69 IN FLIGHT — see ADVISOR HANDOFF — Sept 18, 2026 late. Do not start a second catalog write. After #69 merges → Amazon 3P. Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft on MAIN at handoff start is batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT — do not start a second write. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -283,7 +283,7 @@ CATALOG STRATEGY
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
-- Founder hunt still unwritten (batch69). Exact print — do not alias:
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
 - Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
 - Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
 - Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
@@ -299,14 +299,14 @@ CATALOG STRATEGY
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
 - Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
-- Highest rating-draft on MAIN at handoff start is batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT — do not start a second write. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: batch69 IN FLIGHT (store generics leftover closeout). After it merges → Amazon 3P. Do not start a second write. Store generics uses the OI + UPC hunt on write. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
+- Next catalog day: Amazon 3P brands not on main. batch69 LANDED (PR #231). Store generics leftover closeout DONE. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -341,7 +341,7 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
-- Founder hunt still unwritten (batch69). Exact print — do not alias:
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
 - Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
 - Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
 - Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
@@ -357,7 +357,7 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
 - Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
-- Highest rating-draft on MAIN at handoff start is batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT — do not start a second write. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
@@ -645,23 +645,26 @@ Completed (main, unverified drafts unless noted):
 - Store generics hole punch — Sept 18, 2026 — batch65-kyr6-store-generics.ts. Search 20 new (Clean 3 / Caution 9 / Avoid 8). NEW 20 / REUSE-formula 10 / SKIPPED 16. §5 Caution exacts already on main (white edible ink / phenylethyl alcohol / mica-based pearlescent pigment) — not restamped. Do not reopen equate-es-pain-reliever 100-ct white / prenatal coated Walgreens / Amazon 30/54/56/61–63 / Thrive 27/52/59/60/64.
 - Store generics held-row write — Sept 18, 2026 — batch66-kyr6-held-rows.ts. Search 6 new (Clean 3 / Caution 2 / Avoid 1). NEW 6 / REUSE-formula 3 / SKIPPED 0. Cetyl alcohol used as already-Cleared Sept 15 (no new §5 stamp). Reuse: Kirkland doxylamine → `unisom-sleeptabs-doxylamine`; TopCare Swimmer’s Ear → `swim-ear`; Walgreens PM ointment → `store-pm-ointment-lanolin-alcohol`. Do not reopen batch65 20/10 or the Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts / Nice! / MM conflicted / Kirkland guaifenesin-only skip pile.
 - KYR6 founder-panel write — Sept 18, 2026 — batch68-kyr6-founder-panels.ts / PR #230. Search 5 new (Clean 1 / Caution 4 / Avoid 0). NEW 5 / REUSE-formula 1 / SKIPPED Assured Headache PM (already on main, live DF complete). up&up PM reuses `store-pm-ointment-lanolin-alcohol`. Kirkland Wild Alaskan FO UPC 096619653539 — not the porcine clear twin, not enteric. Do not reopen 65/66/67/68 or PR #230.
-- Already on main from #230 (do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29. Highest draft on MAIN at handoff start = batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT — do not start a second write.
+- Already on main from #230 (do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
+- KYR6 store-panel write — Sept 18, 2026 — batch69-kyr6-store-panels.ts / PR #231. Search 5 new (Clean 1 / Caution 2 / Avoid 2). NEW 5 / REUSE-formula 1 / SKIPPED already-on-main Equate Complete Multi + Kirkland D3 + Kirkland porcine FO + Kirkland Mucus DM Max ER; Equate D3 no_OI. REFUSED §5: Kirkland Krill (Ethyl Vanillin); TopCare adult + Women’s gummies (Spirulina); TopCare Men’s gummies (Hibiscus Concentrate). MM D3 50 mcg shares `members-mark-d3-softgels-safflower` (do not edit batch67 / PR #229). TopCare Vitamin C uses founder fruit-juice / paprika panel (no palm; do not attach UPC 036800464049 palm twin). up&up ES APAP PM 100-ct uses founder PVA + talc + SiO2 stack (own formulaId; do not reuse `dg-health-pain-relief-pm`). Do not reopen 65/66/68 or PR #230.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 ================================================================
 ADVISOR HANDOFF — Sept 18, 2026 late
 ================================================================
-Highest rating-draft on MAIN at handoff start: batch68-kyr6-founder-panels.ts (PR #230).
+Highest rating-draft: batch69-kyr6-store-panels.ts (PR #231).
 batch67 = open PR #229 — do not edit that file.
-batch69 is IN FLIGHT on KYR6 right now. Do not start a second catalog write. Do not reopen 65 / 66 / 68 / #230.
+batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230.
 
-KYR6 job already sent (founder house leftover write). Scope locked to:
-WRITE: Equate adult multi; Equate D3 50 mcg; Member’s Mark D3 50 mcg; Member’s Mark melatonin; Kirkland D3; Kirkland second FO softgel (porcine / tocopherols) — not UPC 096619653539 Wild Alaskan, not enteric; Kirkland Krill (Ethyl Vanillin); Kirkland Mucus DM tablets (combo); TopCare adult / Men’s / Women’s multi gummies + Vitamin C gummies; Walgreens adult multi tablets UPC 311917199139; up&up Extra Strength APAP PM caplets 100-ct UPC 359726863117.
-SKIP: Kirkland enteric FO; Nice! adult multi; Assured; Kirkland guaifenesin-only; MM Advanced multis on 68; Kirkland Wild Alaskan 1400 on 68; up&up PM ointment on 68.
-Rules in that job: reuse first; refuse if printed string not in §5 (no invented grade); do not alias gummy Palm Oil / Palm oil to Organic Palm Oil tablet coating; carousel / Amazon / Google / store PDP before no_OI; last line ON MAIN / WAITING / STOPPED.
+KYR6 leftover write DONE. Do not resend.
+SKIP (unchanged): Kirkland enteric FO; Nice! adult multi; Assured; Kirkland guaifenesin-only; MM Advanced multis on 68; Kirkland Wild Alaskan 1400 on 68; up&up PM ointment on 68.
 
-When batch69 lands, mark this list DONE. If a SKU was refused, leave the exact missing string in notes. Do not resend the write.
+REFUSED §5 — exact missing strings (do not invent a grade):
+- Kirkland Krill — Ethyl Vanillin
+- TopCare adult multi gummies — Spirulina
+- TopCare Men’s multi gummies — Hibiscus Concentrate
+- TopCare Women’s multi gummies — Spirulina
 
 Already on MAIN from PR #230 / batch68 — do not rewrite:
 - MM Advanced Women’s / Men’s / Women’s 50+
@@ -669,16 +672,16 @@ Already on MAIN from PR #230 / batch68 — do not rewrite:
 - up&up PM OINTMENT reuse store-pm-ointment-lanolin-alcohol
 - Assured Headache PM already batch29
 
-Exact founder print still needed if KYR6 refuses a row:
-- Kirkland second FO: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols
-- Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
-- Kirkland Mucus DM: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide
-- TopCare adult multi gummies: Glucose Syrup, Sugar, Water, Gelatin; less than 2% of: Palm Oil and Carnauba Wax, Citric Acid, Colors (Cranberry Concentrate, Carrot, Spirulina, and Pumpkin Concentrate, Paprika Extract, Lycopene), Lactic Acid, Natural Flavors, Pectin
-- TopCare Men’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Citric Acid, Colors (Radish Concentrate, Carrot and Hibiscus Concentrate), Lactic Acid, Natural Flavors, Pectin
-- TopCare Women’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Palm oil and Carnauba Wax, Citric Acid, Colors (Carrot and Cranberry Concentrate, Carrot, Spirulina and Pumpkin Concentrate, Lycopene), Lactic Acid, Natural Flavors, Pectin
-- TopCare Vitamin C gummies: Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
-- Walgreens adult multi UPC 311917199139 — founder INGREDIENTS tile
-- up&up APAP PM caplets UPC 359726863117 — founder inactive list (not the ointment)
+Exact founder print (batch69 outcome; refused strings stay):
+- Kirkland second FO: already on main (`kirkland-fish-oil-softgels-clear`) — Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols
+- Kirkland Krill REFUSED — Ethyl Vanillin (with Krill Oil, Gelatin (Bovine), Water, Glycerin)
+- Kirkland Mucus DM: already on main (`kirkland-mucus-dm-max-er`) — carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide
+- TopCare adult multi gummies REFUSED — Spirulina (Palm Oil + Carnauba Wax also on that print; do not alias Palm Oil to Organic Palm Oil coating)
+- TopCare Men’s multi gummies REFUSED — Hibiscus Concentrate
+- TopCare Women’s multi gummies REFUSED — Spirulina (Palm oil + Carnauba Wax also on that print)
+- TopCare Vitamin C gummies WRITTEN Caution — Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
+- Walgreens adult multi UPC 311917199139 WRITTEN Avoid
+- up&up APAP PM caplets UPC 359726863117 WRITTEN Avoid on founder PVA + talc + SiO2 stack (not the ointment; not DailyMed `dg-health-pain-relief-pm`)
 
 TOKEN / SCOPE LOCKS
 - Organic Palm Oil as TABLET coating = Cleared. Gummy “Palm Oil” / “Palm oil” is a different string.
@@ -688,7 +691,7 @@ TOKEN / SCOPE LOCKS
 - Basics = formerly Solimo. Some Elements = formerly Revly. One Elements SKU now Micro Ingredients.
 - Limited-in-one / cleared-in-another must say WHY in ingredient notes + honest note.
 
-LIVE NOW after batch69 merges
+LIVE NOW
 1) Amazon 3P brands not on main.
 THEN (not live): un-stash Sprouts house (~55 walk + 3 refused). Do not catalog Sprouts. 187 is dead.
 KYR5 / KYR5-b / KYR5-c DONE. Do not reopen #121–#221.
@@ -704,13 +707,13 @@ PROCESS
 
 LIVE NOW
 KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-batch69 is IN FLIGHT — see ADVISOR HANDOFF — Sept 18, 2026 late. Do not start a second catalog write.
+batch69 LANDED (PR #231). Do not resend. Do not reopen 65 / 66 / 68 / #230.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
-2) Store generics leftover closeout — batch69 IN FLIGHT on KYR6. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
-3) Amazon 3P brands not on main — LIVE after batch69 merges
+2) Store generics leftover closeout — batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
+3) Amazon 3P brands not on main — LIVE
 THEN (not live)
 4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks). Do not catalog Sprouts. 187 is dead.
-Do NOT mark complete: Amazon 3P. Highest rating-draft on MAIN at handoff start is batch68. batch67 = PR #229 — do not edit. batch69 IN FLIGHT. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: Amazon 3P. Highest rating-draft is batch69. batch67 = PR #229 — do not edit. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
