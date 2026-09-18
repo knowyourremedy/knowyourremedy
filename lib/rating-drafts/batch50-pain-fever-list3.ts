@@ -1107,6 +1107,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Pain Relief Cream',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124001009',
     formulaId: FID.creamJar,
     audience: ADULT,
     minAge: 12,
@@ -1153,6 +1154,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Overnight Relief Cream',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124444547',
     formulaId: FID.ovnCream,
     audience: ADULT,
     minAge: 12,
@@ -1337,6 +1339,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Biofreeze Menthol Pain Relief Patches (Large / XL)',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '731124001719 731124001696 731124002778',
     formulaId: FID.mentholPatch,
     audience: ADULT,
     minAge: 12,
@@ -1881,6 +1884,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Absorbine Jr. Neck & Shoulder Patch 7.5%',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
+    barcode: '889476187534',
     formulaId: FID.absPatch75,
     audience: ADULT,
     minAge: 12,
@@ -2145,6 +2149,10 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.absProSpray]: '889476441148',
   [ID.proColorGel]: '731124445353',
   [ID.miExtremeGel]: '850078192035',
+  [ID.creamJar]: '731124001009',
+  [ID.ovnCream]: '731124444547',
+  [ID.mentholPatch]: '731124001719 731124001696 731124002778',
+  [ID.absNeck]: '889476187534',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];

@@ -321,6 +321,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     productName: "Genexa Kids' Nighttime Cough / Long-Acting Nighttime Cough",
     brand: BRAND,
     category: COLD_FLU,
+    barcode: '850015736605',
     formulaId: 'genexa-kids-nighttime-cough',
     audience: KIDS,
     minAge: 6,

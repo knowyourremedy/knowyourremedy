@@ -2530,6 +2530,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     productName: 'Boiron Influenzinum Pellets',
     brand: BRAND,
     category: IMMUNE,
+    barcode: '306960909118',
     formulaId: 'boiron-influenzinum',
     audience: ADULT,
     minAge: 2,
