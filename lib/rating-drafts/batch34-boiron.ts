@@ -855,7 +855,54 @@ const BATCH34_TUBE_CATCHUP_BARCODES: Record<string, string> = {
   'boiron-xanthoxylumfraxineum-pellets': '306960798132',
   'boiron-zincum-metallicum-pellets': '306960819134',
   'boiron-zincumsulphuricum-pellets': '306960823131',
+  // KYR5-c barcode-tile chunk 4 — leftover non-30C single-tube shop SKUs
+  // (BoironUSA sku / item_id = UPC-A). Exact ~80-pellet tube. Not 3-pack /
+  // not sambucus multi-pack 306969453643 / not Chestal honey 306969032282 /
+  // not Chestal original 306969067284 / not cyclamen-europaeum 306960259138.
+  'boiron-abiescanadensis-pellets': '306960002109',
+  'boiron-ailanthusglandulosus-pellets': '306960027102',
+  'boiron-alfalfa-pellets': '306960031086 306960031031',
+  'boiron-cheiranthuscheiri-pellets': '306960194101',
+  'boiron-chenopodium-anthelminticum-pellets': '306960196105',
+  'boiron-coralliumrubrum-pellets': '306960237075',
+  'boiron-cyclameneur-pellets': '306960259077 306960259107 306960259121',
+  'boiron-fumariaofficinalis-pellets': '306960325109 306960325031',
+  'boiron-gallicumacidum-pellets': '306960327080',
+  'boiron-harpagophytum-pellets': '306962376413 306962374419 306962375416',
+  'boiron-luffaoperculata-pellets': '306961037087',
+  'boiron-melilotusofficinalis-pellets': '306960471080',
+  'boiron-menyanthestrifoliata-pellets': '306960474081',
+  'boiron-polygonumpunctatum-pellets': '306960028031',
+  'boiron-saponariaofficinalis-pellets': '306960656104 306960656036',
+  'boiron-sempervivumtectorum-pellets': '306960663089',
+  'boiron-trilliumpendulum-pellets': '306960750109',
+  'boiron-venusmercenaria-pellets': '306960029113',
+  'boiron-violatricolor-pellets': '306960789086',
 };
+
+// KYR5-c barcode-tile chunk 4 — shop listing states approx. 80 pellets
+// (16 doses) on these leftover single-tube rows only.
+const BATCH34_CHUNK4_TUBE_PACK = new Set([
+  'boiron-abiescanadensis-pellets',
+  'boiron-ailanthusglandulosus-pellets',
+  'boiron-alfalfa-pellets',
+  'boiron-cheiranthuscheiri-pellets',
+  'boiron-chenopodium-anthelminticum-pellets',
+  'boiron-coralliumrubrum-pellets',
+  'boiron-cyclameneur-pellets',
+  'boiron-fumariaofficinalis-pellets',
+  'boiron-gallicumacidum-pellets',
+  'boiron-harpagophytum-pellets',
+  'boiron-luffaoperculata-pellets',
+  'boiron-melilotusofficinalis-pellets',
+  'boiron-menyanthestrifoliata-pellets',
+  'boiron-polygonumpunctatum-pellets',
+  'boiron-saponariaofficinalis-pellets',
+  'boiron-sempervivumtectorum-pellets',
+  'boiron-trilliumpendulum-pellets',
+  'boiron-venusmercenaria-pellets',
+  'boiron-violatricolor-pellets',
+]);
 
 function singleTube(
   slug: string,
@@ -864,9 +911,10 @@ function singleTube(
 ): RatingRecord {
   const id = `boiron-${slug}-pellets`;
   const barcode = BATCH34_TUBE_CATCHUP_BARCODES[id];
+  const pack = BATCH34_CHUNK4_TUBE_PACK.has(id) ? ' (~80-pellet tube)' : '';
   return {
     id,
-    productName: `Boiron ${remedyName} Pellets`,
+    productName: `Boiron ${remedyName} Pellets${pack}`,
     brand: BRAND,
     category,
     ...(barcode ? { barcode } : {}),
