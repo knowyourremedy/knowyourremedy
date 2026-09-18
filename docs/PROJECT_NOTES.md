@@ -181,7 +181,7 @@ Next session
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–65 already exist.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–67 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -611,6 +611,7 @@ Completed (main, unverified drafts unless noted):
 - Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 18 new (Clean 8 / Caution 10 / Avoid 0). NEW 18 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
 - Store generics hole punch — Sept 18, 2026 — batch65-kyr6-store-generics.ts. Search 20 new (Clean 3 / Caution 9 / Avoid 8). NEW 20 / REUSE-formula 10 / SKIPPED 16. §5 Caution exacts already on main (white edible ink / phenylethyl alcohol / mica-based pearlescent pigment) — not restamped. Do not reopen equate-es-pain-reliever 100-ct white / prenatal coated Walgreens / Amazon 30/54/56/61–63 / Thrive 27/52/59/60/64.
 - Store generics held-row write — Sept 18, 2026 — batch66-kyr6-held-rows.ts. Search 6 new (Clean 3 / Caution 2 / Avoid 1). NEW 6 / REUSE-formula 3 / SKIPPED 0. Cetyl alcohol used as already-Cleared Sept 15 (no new §5 stamp). Reuse: Kirkland doxylamine → `unisom-sleeptabs-doxylamine`; TopCare Swimmer’s Ear → `swim-ear`; Walgreens PM ointment → `store-pm-ointment-lanolin-alcohol`. Do not reopen batch65 20/10 or the Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts / Nice! / MM conflicted / Kirkland guaifenesin-only skip pile.
+- Member’s Mark founder-panel write — Sept 18, 2026 — batch67-kyr6-members-mark.ts. Search 3 new (Clean 2 / Caution 0 / Avoid 1). NEW 3 / REUSE-formula 0 / SKIPPED 6. D3 50 mcg + 125 mcg share safflower-fill formulaId (Clean; ≠ gummy High). Adult Multi gummies Avoid on Vegetable Oil (Coconut, Canola). Tablet multis skipped (no single carton OI). Do not reopen 65/66 or Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
