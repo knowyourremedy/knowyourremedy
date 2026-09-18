@@ -195,6 +195,16 @@ const ID = {
   qunolGummies: 'qunol-zero-sugar-turmeric-gummies',
 } as const;
 
+const BATCH55_CATCHUP_BARCODES: Record<string, string> = {
+  // KYR5-b in-store 1s/2s — Target / Vitacost 90-ct + 120-ct Zero Sugar
+  // Turmeric Gummies (isomalt + coconut; do not steal oleoresin 1500).
+  [ID.qunolGummies]: '850052593193 850052593209',
+  // KYR5-b set-id-only chunk 18 — Amazon PDP 216-ct UPC-A for NDC 69452-394-64
+  // (setid 04ccc4b2 ferric-oxide Dual Action). Do not steal 369452447222
+  // (NDC 69452-447-22 / setid 1f2f8fcf) onto this row or the 469 plain twin.
+  [ID.aplusOxides]: '369452394649',
+};
+
 const IBU_FORMULA = ID.bcIbu;
 
 const CITE = {
@@ -379,6 +389,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'A+Health Dual Action (ferric oxides)',
     brand: 'A+Health',
     category: PAIN_FEVER,
+    barcode: BATCH55_CATCHUP_BARCODES[ID.aplusOxides],
     formulaId: ID.aplusOxides,
     audience: ADULT,
     minAge: 12,
@@ -572,11 +583,6 @@ if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 4)
 if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 55 stays on Pain & Fever');
 }
-const BATCH55_CATCHUP_BARCODES: Record<string, string> = {
-  // KYR5-b in-store 1s/2s — Target / Vitacost 90-ct + 120-ct Zero Sugar
-  // Turmeric Gummies (isomalt + coconut; do not steal oleoresin 1500).
-  [ID.qunolGummies]: '850052593193 850052593209',
-};
 for (const record of BATCH55_PF_REFUSED_UNLOCK) {
   const expected = BATCH55_CATCHUP_BARCODES[record.id];
   if (expected) {
