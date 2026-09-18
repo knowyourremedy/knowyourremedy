@@ -5,8 +5,8 @@
 // Boiron in-scope OTC / homeopathic drafts. Whole in-scope line — not one
 // aisle. Mixed categories · recordStatus is 'unverified' on every row.
 // Internal keys only: clean | caution | avoid. Do NOT invent Clean. Do NOT
-// invent UPCs / barcodes. Pack sizes share formulaId. formulaId == id on
-// every NEW branded row. Single-remedy tubes share formulaId
+// invent UPCs / barcodes except KYR5-b catch-up allowlist. Pack sizes share
+// formulaId. formulaId == id on every NEW branded row. Single-remedy tubes share formulaId
 // `boiron-single-remedy-pellets`. Form is labeled on cleanAlternatives, not
 // a hard filter (§6). Not wired into Clean Picks UI. No live Clean Picks
 // file is edited. No photos. Letter tiles only on new ids. No fake Clean
@@ -507,16 +507,74 @@ const TUBE_NOTE =
   CARLSTON +
   ' Contains lactose.';
 
+// KYR5-b set-id-only chunk 5 — official BoironUSA shop 30C single-tube
+// SKU (UPC-A). Exact ~80 pellet tube. Not 3-pack / 240-pellet.
+const BATCH34_TUBE_CATCHUP_BARCODES: Record<string, string> = {
+  'boiron-abelmoschus-pellets': '306960001133',
+  'boiron-abiesnigra-pellets': '306960002130',
+  'boiron-abrotanum-pellets': '306960004134',
+  'boiron-aconitum-napellus-pellets': '306960011132',
+  'boiron-aesculus-hippocastanum-pellets': '306960018131',
+  'boiron-aethusacynapium-pellets': '306960020134',
+  'boiron-agaricusmuscarius-pellets': '306960021131',
+  'boiron-agraphisnutans-pellets': '306960024132',
+  'boiron-allium-cepa-pellets': '306960032137',
+  'boiron-alliumsativum-pellets': '306960033134',
+  'boiron-aloe-pellets': '306960037132',
+  'boiron-alumen-pellets': '306960038139',
+  'boiron-alumina-pellets': '306960039136',
+  'boiron-aluminasilicata-pellets': '306960041139',
+  'boiron-aluminiummetallicum-pellets': '306960045137',
+  'boiron-ambrosiaartemisiaefolia-pellets': '306961008131',
+  'boiron-ammoniumcarbonicum-pellets': '306960042136',
+  'boiron-ammoniummuriaticum-pellets': '306960043133',
+  'boiron-ammoniumphosphoricum-pellets': '306960048138',
+  'boiron-amylnitrosum-pellets': '306960049135',
+  'boiron-anacardiumoccidentale-pellets': '306960054139',
+  'boiron-anacardiumorientale-pellets': '306960050131',
+  'boiron-anagallisarvensis-pellets': '306960051138',
+  'boiron-anatherummuricatum-pellets': '306960055136',
+  'boiron-antimonium-crudum-pellets': '306960057130',
+  'boiron-antimonium-tartaricum-pellets': '306960060130',
+  'boiron-antimoniumiodatum-pellets': '306961059133',
+  'boiron-apis-mellifica-pellets': '306960062134',
+  'boiron-apisvenenumpurum-pellets': '306960063131',
+  'boiron-aquamarina-pellets': '306960065135',
+  'boiron-araliaracemosa-pellets': '306960066132',
+  'boiron-argentum-nitricum-pellets': '306960072133',
+  'boiron-argentummetallicum-pellets': '306960071136',
+  'boiron-aristolochiaclematitis-pellets': '306960073130',
+  'boiron-arnicamontanaradix-pellets': '306960074137',
+  'boiron-arsenicum-album-pellets': '306960076131',
+  'boiron-arsenicumbromatum-pellets': '306961060139',
+  'boiron-arsenicumiodatum-pellets': '306960077138',
+  'boiron-arsenicummetallicum-pellets': '306960078135',
+  'boiron-arssulphflav-pellets': '306960036135',
+  'boiron-arssulphrubrum-pellets': '306960097136',
+  'boiron-artemisiavulgaris-pellets': '306960079132',
+  'boiron-arum-triphyllum-pellets': '306960083139',
+  'boiron-arummaculatum-pellets': '306960013136',
+  'boiron-arundomauritanica-pellets': '306961020133',
+  'boiron-asafoetida-pellets': '306960084136',
+  'boiron-asteriasrubens-pellets': '306960088134',
+  'boiron-aurumiodatum-pellets': '306960091134',
+  'boiron-aurummetallicum-pellets': '306960092131',
+  'boiron-aurummuriaticum-pellets': '306960093138',
+};
+
 function singleTube(
   slug: string,
   remedyName: string,
   category: string,
 ): RatingRecord {
+  const id = `boiron-${slug}-pellets`;
+  const barcode = BATCH34_TUBE_CATCHUP_BARCODES[id];
   return {
-    id: `boiron-${slug}-pellets`,
+    id,
     productName: `Boiron ${remedyName} Pellets`,
     brand: BRAND,
     category,
+    ...(barcode ? { barcode } : {}),
     formulaId: SINGLE_REMEDY_FORMULA,
     audience: ADULT,
     minAge: 2,
@@ -2870,6 +2928,16 @@ for (const record of GEMMO_ROWS) {
   if (expected) {
     if (record.barcode !== expected) {
       throw new Error(`batch 34 gemmo catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 34 must not invent barcodes on ${record.id}`);
+  }
+}
+for (const record of SINGLE_TUBES) {
+  const expected = BATCH34_TUBE_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 34 tube catch-up UPC drift on ${record.id}`);
     }
   } else if (record.barcode) {
     throw new Error(`batch 34 must not invent barcodes on ${record.id}`);
