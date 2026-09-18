@@ -233,6 +233,16 @@ function dyesPgSweet(
 const BATCH4_CATCHUP_BARCODES: Record<string, string> = {
   'robitussin-childrens-12hr': '300318725108',
   'cvs-childrens-multi-cold': '050428348178',
+  // KYR5-c barcode-tile chunk 1 — brand carton PDF prints
+  // 3 0031 8762 12 7 on the 4 fl oz Honey Nighttime Cough DM
+  // (not variety-pack 300312095542).
+  'robitussin-childrens-honey-night-dm': '300318762127',
+  // Children's Robitussin Cough Long-Acting 4 fl oz fruit punch
+  // (DXM only — not Cough & Cold 300318693124).
+  'robitussin-childrens-long-acting': '300318694121',
+  // Children's Sudafed PE Cold + Cough 4 fl oz grape (not PE-only
+  // 300450537041 already on the nasal-decongestant row).
+  'sudafed-pe-childrens-cold-cough': '300450538048',
 };
 
 export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
@@ -1063,9 +1073,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'robitussin-childrens-honey-night-dm',
-    productName: "Children's Robitussin Honey Nighttime Cough DM",
+    productName: "Children's Robitussin Honey Nighttime Cough DM (4 fl oz)",
     brand: 'Robitussin',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['robitussin-childrens-honey-night-dm'],
     formulaId: 'robitussin-childrens-honey-night-dm',
     audience: KIDS,
     minAge: 6,
@@ -1168,9 +1179,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'robitussin-childrens-long-acting',
-    productName: "Children's Robitussin Cough Long-Acting",
+    productName: "Children's Robitussin Cough Long-Acting (4 fl oz)",
     brand: 'Robitussin',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['robitussin-childrens-long-acting'],
     formulaId: 'robitussin-childrens-long-acting',
     audience: KIDS,
     minAge: 4,
@@ -1625,9 +1637,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'sudafed-pe-childrens-cold-cough',
-    productName: "Children's Sudafed PE Cold + Cough",
+    productName: "Children's Sudafed PE Cold + Cough (4 fl oz)",
     brand: 'Sudafed',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['sudafed-pe-childrens-cold-cough'],
     formulaId: 'sudafed-pe-childrens-cold-cough',
     audience: KIDS,
     minAge: 4,
