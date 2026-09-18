@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5-b set-id-only UPC backfill chunk 5 — 50 set-id-only rows filled; barcode-only gap 473; set-id-only remaining 436; online-only remaining 13; in-store 24 untouched; do not reopen #121–#194)
+Last Updated: September 18, 2026 (KYR5-b set-id-only UPC backfill chunk 6 — 50 set-id-only rows filled; barcode-only gap 423; set-id-only remaining 386; online-only remaining 13; in-store 24 untouched; do not reopen #121–#195)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -977,7 +977,7 @@ Totals
 - Search rows: 2203
 - Rows with a code: 2166
 - Rows missing UPC/EAN/set-id: 37
-- Rows missing UPC/EAN only (may still have set-id): 473 — KYR5-b barcode-only gap after Job 2 chunk 5 (50 set-id-only UPCs; chunk 4 filled 34; chunk 3 filled 21; chunk 2 filled 25; chunk 1 filled 42). Set-id-only remaining 436.
+- Rows missing UPC/EAN only (may still have set-id): 423 — KYR5-b barcode-only gap after Job 2 chunk 6 (50 set-id-only UPCs; chunk 5 filled 50; chunk 4 filled 34; chunk 3 filled 21; chunk 2 filled 25; chunk 1 filled 42). Set-id-only remaining 386.
 - Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 37 rows / 37 formulaIds — no pack-size clones in the no-code pile.
 
 1) IN-STORE — 24 missing (group by brand). Hunt these first.
@@ -1002,5 +1002,5 @@ Totals
 
 2) ONLINE-ONLY — 13 missing after KYR5-b chunk 1 (22 filled). Job 1 leftovers need another chunk. Do not reopen unless an exact-pack allowed-source UPC appears.
 
-3) JOB 2 SET-ID-ONLY — chunk 5 filled 50 exact-pack BoironUSA 30C single-tube UPC-As (batch 34 leftover pellet rows; not 3-pack / 240-pellet). Remaining 436. Chunk 1–4 skip list still dry (Tylenol RS hospital blister NDC GTIN; Member’s Mark ES APAP; Walgreens ES dyes+talc; Dimetapp FPO; Assured Headache PM ValuHealth; Amazon day/night combo + Equate kids day+night sleeve; Sudafed PE kids check fail; CVS/Equate kids DPH FPO/zeros; Amazon dual-action / L484 pouch check fail; Coldcalm; DG mucus-DM ER / dyed APAP check fail; Tylenol For Children Plus Adults must not steal ES-liquid UPC; B&T nighttime 308079* older Mexico / barley-malt family; B&T Psoriaflora NDC-as-GTIN only; Chestal Honey / Arnicare PEG must not steal existing shea/honey twin UPCs; Equate ES / CVS ES red40 / Signature Care kids IBU dyed / up&up honey daytime / Robitussin kids leftovers — DailyMed NDC-only or no printed retail UPC). NDC-as-GTIN rejected.
+3) JOB 2 SET-ID-ONLY — chunk 6 filled 50 more exact-pack BoironUSA 30C single-tube UPC-As (batch 34 leftover pellet rows after chunk 5; not 3-pack / 240-pellet; chunk 5 rows untouched). Remaining 386. Shop-only other potencies stayed empty (Abies Canadensis / Ailanthus / Cheiranthus 9C; Alfalfa 6C/6X; Chenopodium 9C page). Chunk 1–5 skip list still dry (Tylenol RS hospital blister NDC GTIN; Member’s Mark ES APAP; Walgreens ES dyes+talc; Dimetapp FPO; Assured Headache PM ValuHealth; Amazon day/night combo + Equate kids day+night sleeve; Sudafed PE kids check fail; CVS/Equate kids DPH FPO/zeros; Amazon dual-action / L484 pouch check fail; Coldcalm; DG mucus-DM ER / dyed APAP check fail; Tylenol For Children Plus Adults must not steal ES-liquid UPC; B&T nighttime 308079* older Mexico / barley-malt family; B&T Psoriaflora NDC-as-GTIN only; Chestal Honey / Arnicare PEG must not steal existing shea/honey twin UPCs; Equate ES / CVS ES red40 / Signature Care kids IBU dyed / up&up honey daytime / Robitussin kids leftovers — DailyMed NDC-only or no printed retail UPC). NDC-as-GTIN rejected.
 Amazon Elements 6 remaining (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies — dry this chunk: no exact-pack UPC or OI/form conflict). Amazon Basics 4 remaining (women’s / men’s / prenatal tablets — DSLD cultured One Daily ≠ 65-ct draft; kids melatonin 1 gummies — no exact-pack UPC). Thrive Market Multi-Collagen 1 (do not steal grass-fed flavored UPC). Anima Mundi Happiness Tonic 1 (no UPC). Pure Encapsulations Probiotic-5 1 (current HP OI plant fiber/cellulose/water ≠ draft rice starch + SiO2). Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health = 0 remaining. Solimo / Revly = 0 missing in this no-code pile.
