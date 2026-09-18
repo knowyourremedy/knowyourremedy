@@ -5,7 +5,7 @@
 // Genexa ES Clean exception. Dye-free traps and dyed nationals/store brands = Avoid.
 // No Clean kids ibuprofen in this batch — that is expected.
 // HFCS is parked (Methodology §5) — mentioned in honestNotes only, never graded.
-// Homeopathic subtype omitted. Barcodes omitted — do not invent UPCs.
+// Homeopathic subtype omitted. Do NOT invent UPCs except KYR5-b catch-up allowlist.
 // Pack sizes share formulaId / same verdict. Not wired into Clean Picks UI.
 
 import type {
@@ -318,6 +318,11 @@ function storeChildrenIbuDyedChew(opts: {
     ],
   };
 }
+
+const BATCH2_CATCHUP_BARCODES: Record<string, string> = {
+  'cvs-children-apap-dyed': '050428294338',
+  'upup-children-ibu-dyed': '370030625673',
+};
 
 export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -806,6 +811,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     productName: 'CVS Children\'s Pain + Fever (dyed liquid)',
     brand: 'CVS Health',
     category: PAIN_FEVER,
+    barcode: BATCH2_CATCHUP_BARCODES['cvs-children-apap-dyed'],
     formulaId: 'cvs-children-apap-dyed',
     audience: KIDS,
     minAge: 2,
@@ -1120,6 +1126,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     retailers: ['Target'],
     setid: '28911692-882b-4e30-ba1d-5c10f847be80',
     dyeNames: ['FD&C Red No. 40'],
+    barcode: BATCH2_CATCHUP_BARCODES['upup-children-ibu-dyed'],
   }),
   storeChildrenIbuDyedLiquid({
     id: 'signature-care-children-ibu-dyed',
@@ -1389,6 +1396,13 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH2_KIDS_APAP_IBU) {
+  const expected = BATCH2_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 2 catch-up UPC drift on ${record.id}`);
+  }
+}
 
 // Verdict tally (32 records): Clean 2 · Caution 1 · Avoid 29
 // APAP 16 (Clean 2 / Caution 1 / Avoid 13) · IBU 16 (Clean 0 / Caution 0 / Avoid 16)

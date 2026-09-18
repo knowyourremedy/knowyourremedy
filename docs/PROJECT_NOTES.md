@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 17, 2026 (KYR5-b online-only barcodes chunk 1 — 22 no-code rows filled; online-only remaining 13; in-store 24 untouched; Job 2 not started; do not reopen #121–#189)
+Last Updated: September 17, 2026 (KYR5-b set-id-only UPC backfill chunk 1 — 42 set-id-only rows filled; barcode-only gap 603; set-id-only remaining 566; online-only remaining 13; in-store 24 untouched; do not reopen #121–#190)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -977,7 +977,7 @@ Totals
 - Search rows: 2203
 - Rows with a code: 2166
 - Rows missing UPC/EAN/set-id: 37
-- Rows missing UPC/EAN only (may still have set-id): 645 — this is the KYR5-b barcode-only gap after in-store 1s/2s + online-only chunk 1 (Job 2 not started)
+- Rows missing UPC/EAN only (may still have set-id): 603 — KYR5-b barcode-only gap after Job 2 chunk 1 (42 set-id-only UPCs). Set-id-only remaining 566.
 - Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 37 rows / 37 formulaIds — no pack-size clones in the no-code pile.
 
 1) IN-STORE — 24 missing (group by brand). Hunt these first.
@@ -1000,5 +1000,7 @@ Totals
 - Zarbee’s — 1: Children’s Cough Syrup + Immune (ivy+chamomile draft ≠ current honey/D3/zinc/elderberry)
 - Carlson — 1: Kid’s Super Daily D3 Drops (coconut-only vs coconut+palm conflict on same UPC)
 
-2) ONLINE-ONLY — 13 missing after KYR5-b chunk 1 (22 filled). Job 1 leftovers need another chunk; Job 2 not started.
+2) ONLINE-ONLY — 13 missing after KYR5-b chunk 1 (22 filled). Job 1 leftovers need another chunk. Do not reopen unless an exact-pack allowed-source UPC appears.
+
+3) JOB 2 SET-ID-ONLY — chunk 1 filled 42 DailyMed carton UPC/EANs (oldest batches + Amazon house). Remaining 566. Dry / skipped this chunk: Tylenol RS hospital blister (NDC GTIN only); Member’s Mark ES APAP no printed UPC; Walgreens ES dyes+talc label no UPC; Dimetapp FPO 850026660029 (wrong house prefix); Assured Headache PM DailyMed carton is ValuHealth-branded; combo packs (Amazon day/night kit; Equate kids day+night sleeve); Sudafed PE kids digits failed check; CVS/Equate kids DPH chews FPO/zeros; Amazon dual-action / ES APAP L484 pouch check-digit fail; Coldcalm no printed UPC on DailyMed panels. NDC-as-GTIN rejected.
 Amazon Elements 6 remaining (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies — dry this chunk: no exact-pack UPC or OI/form conflict). Amazon Basics 4 remaining (women’s / men’s / prenatal tablets — DSLD cultured One Daily ≠ 65-ct draft; kids melatonin 1 gummies — no exact-pack UPC). Thrive Market Multi-Collagen 1 (do not steal grass-fed flavored UPC). Anima Mundi Happiness Tonic 1 (no UPC). Pure Encapsulations Probiotic-5 1 (current HP OI plant fiber/cellulose/water ≠ draft rice starch + SiO2). Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health = 0 remaining. Solimo / Revly = 0 missing in this no-code pile.

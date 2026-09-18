@@ -3,7 +3,7 @@
 // Founder calls (locked): see notes below. Do NOT invent Clean. Methodology v1.6
 // grades only — do not change locked ingredient grades.
 // Homeopathic rows set productSubtype + homeopathicSubtype = 'homeopathic'.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Do NOT invent UPCs except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // HFCS is parked (Methodology §5) — mentioned in honestNotes only, never a sole
 // Avoid driver and never graded.
 // Form is labeled on cleanAlternatives, not a hard filter (§6).
@@ -229,6 +229,11 @@ function dyesPgSweet(
     ...extras,
   ];
 }
+
+const BATCH4_CATCHUP_BARCODES: Record<string, string> = {
+  'robitussin-childrens-12hr': '300318725108',
+  'cvs-childrens-multi-cold': '050428348178',
+};
 
 export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -1112,6 +1117,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "Children's Robitussin 12 Hour Cough Relief",
     brand: 'Robitussin',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['robitussin-childrens-12hr'],
     formulaId: 'robitussin-childrens-12hr',
     audience: KIDS,
     minAge: 4,
@@ -2197,6 +2203,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "CVS Children's Multi-Symptom Cold Very Berry",
     brand: 'CVS Health',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['cvs-childrens-multi-cold'],
     formulaId: 'cvs-childrens-multi-cold',
     audience: KIDS,
     minAge: 4,
@@ -2650,3 +2657,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH4_KIDS_COUGH_COLD) {
+  const expected = BATCH4_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 4 catch-up UPC drift on ${record.id}`);
+  }
+}
