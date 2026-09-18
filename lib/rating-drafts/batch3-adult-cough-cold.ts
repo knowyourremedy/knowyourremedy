@@ -2,7 +2,7 @@
 // Cold & Flu · audience 'adult' · recordStatus is 'unverified' on every row.
 // Founder calls (locked): see header notes below. Do NOT invent Clean.
 // Homeopathic rows set productSubtype + homeopathicSubtype = 'homeopathic'.
-// Barcodes omitted — do not invent UPCs. Pack sizes share formulaId.
+// Do NOT invent UPCs except KYR5-b catch-up allowlist. Pack sizes share formulaId.
 // HFCS is parked (Methodology §5) — mentioned in honestNotes only, never graded.
 // Not wired into Clean Picks UI. Do not convert coldFluPicks.ts from this file.
 //
@@ -140,6 +140,10 @@ function homeopathicFields() {
     homeopathicSubtype: HOMEOPATHIC,
   };
 }
+
+const BATCH3_CATCHUP_BARCODES: Record<string, string> = {
+  'equate-daytime-cold-flu': '681131036870',
+};
 
 export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -1686,6 +1690,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Equate Daytime Cold & Flu',
     brand: 'Equate',
     category: COLD_FLU,
+    barcode: BATCH3_CATCHUP_BARCODES['equate-daytime-cold-flu'],
     formulaId: 'equate-daytime-cold-flu-liquid',
     audience: ADULT,
     minAge: 12,
@@ -1797,6 +1802,13 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH3_ADULT_COUGH_COLD) {
+  const expected = BATCH3_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 3 catch-up UPC drift on ${record.id}`);
+  }
+}
 
 // Verdict tally (33 records): Clean 5 · Caution 5 · Avoid 23
 // Skipped-unclear: Umcka Clean ColdCare 5-inactive syrup; Equate IR mucus Clean;

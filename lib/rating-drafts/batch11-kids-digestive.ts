@@ -219,6 +219,7 @@ const CULTURELLE_PKT_CITE =
 // UPC). Fractionated coconut oil + carnauba wax; no palm / canola.
 const BATCH11_CATCHUP_BARCODES: Record<string, string> = {
   'culturelle-kids-gummies-coconut': '049100400914 049100401010',
+  'walgreens-infants-gas-dyefree': '311917179162',
 };
 
 const GAS_UNDER6_ALTS: CleanAlternative[] = [
@@ -899,6 +900,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     retailers: ['Walgreens'],
     setid: SET_WAG_GAS_DYEFREE,
     noteBrand: 'Walgreens',
+    barcode: BATCH11_CATCHUP_BARCODES['walgreens-infants-gas-dyefree'],
   }),
   {
     id: 'dramamine-for-kids',

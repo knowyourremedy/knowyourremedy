@@ -128,6 +128,9 @@ const CITE = {
 
 const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
   'mama-bear-kids-fiber-gummies': '842379192166',
+  'amazon-basics-loperamide-softgel-313': '195515045254',
+  'amazon-basic-care-apap-650-er-l544': '370030114573',
+  'amazon-basic-care-aspirin-81-chew-l467': '195515050906',
 };
 
 const METH = {
@@ -557,6 +560,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basics Anti-Diarrheal Loperamide 2 mg Softgel (72288-313)',
     brand: BASICS,
     category: DIGESTIVE,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basics-loperamide-softgel-313'],
     formulaId: 'amazon-basics-loperamide-softgel-313',
     audience: ADULT,
     minAge: 12,
@@ -586,6 +590,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basic Care Acetaminophen 650 mg Extended-Release (L544)',
     brand: BASIC_CARE,
     category: PAIN_FEVER,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-apap-650-er-l544'],
     formulaId: 'amazon-basic-care-apap-650-er-l544',
     audience: ADULT,
     minAge: 12,
@@ -800,6 +805,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basic Care Aspirin 81 mg Orange Chewable (L467)',
     brand: BASIC_CARE,
     category: PAIN_FEVER,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-aspirin-81-chew-l467'],
     formulaId: 'amazon-basic-care-aspirin-81-chew-l467',
     audience: ADULT,
     minAge: 12,
