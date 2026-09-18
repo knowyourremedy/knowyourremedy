@@ -461,6 +461,12 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   'dg-health-ibuprofen-liquid-gels': '370030169887',
   'dg-health-sleep-aid-dph': '370030166985',
   'dg-health-cold-flu-day-softgels': '370030641635',
+  // KYR5-b set-id-only chunk 21 — Dollar General grocery PDP 42-ct
+  // (three 14-day bottles) UPC-A 370030658336. Carton Drug Facts
+  // match DailyMed setid 326bf21c / NDC 55910-915 (not wildberry
+  // mint 370030169818). Do not steal dyed+talc IBU 370030015290
+  // (Red 40 / Yellow 6 / talc carton ≠ iron-oxide 55910-604).
+  'dg-health-omeprazole-dr': '370030658336',
 };
 
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
@@ -1531,6 +1537,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Omeprazole 20 mg Delayed-Release Tablets',
     brand: 'DG Health',
     category: DIGESTIVE,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-omeprazole-dr'],
     formulaId: 'dg-health-omeprazole-tio2-talc',
     audience: ADULT,
     minAge: 18,
