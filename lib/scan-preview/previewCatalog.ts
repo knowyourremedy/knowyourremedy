@@ -286,6 +286,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'tiger-balm-active-muscle-rub': brandMark('tiger-balm-mark.png'),
   'tiger-balm-active-muscle-gel': brandMark('tiger-balm-mark.png'),
   'tiger-balm-neck-shoulder-rub': brandMark('tiger-balm-mark.png'),
+  // Batch 2 attempted leftovers — no matching carton. Per-id only.
+  'tiger-balm-hydrogel-patch': brandMark('tiger-balm-mark.png'),
+  'icy-hot-original-menthol-patch': brandMark('icy-hot-mark.png'),
+  'icy-hot-pro-microbeads-cream': brandMark('icy-hot-mark.png'),
+  'aspercreme-lidocaine-foot-2in1': brandMark('aspercreme-mark.png'),
+  'aspercreme-lidocaine-no-mess-lavender': brandMark('aspercreme-mark.png'),
+  'aspercreme-lidocaine-rosemary-mint': brandMark('aspercreme-mark.png'),
+  'aspercreme-lidocaine-xl-patch': brandMark('aspercreme-mark.png'),
+  'salonpas-arthritis-pain-patch-large': brandMark('salonpas-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -817,6 +826,27 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'icy-hot-original-no-mess-roll-on': catalogShot('icy-hot-original-no-mess-roll-on.jpg'),
   'icy-hot-max-lidocaine-cream': catalogShot('icy-hot-max-lidocaine-cream.jpg'),
   'aspercreme-lidocaine-eucalyptus-cream': catalogShot('aspercreme-lidocaine-eucalyptus-cream.jpg'),
+  'tiger-balm-pain-relieving-patch': catalogShot('tiger-balm-pain-relieving-patch.jpg'),
+  'icy-hot-lidocaine-large-patch': catalogShot('icy-hot-lidocaine-large-patch.jpg'),
+  'icy-hot-pro-pain-relief-patch': catalogShot('icy-hot-pro-pain-relief-patch.jpg'),
+  'aspercreme-lidocaine-patch': catalogShot('aspercreme-lidocaine-patch.jpg'),
+  'aspercreme-lidocaine-no-mess-applicator': catalogShot('aspercreme-lidocaine-no-mess-applicator.jpg'),
+  'aspercreme-lidocaine-rosemary-mint-cream': catalogShot('aspercreme-lidocaine-rosemary-mint-cream.jpg'),
+  'aspercreme-lidocaine-odor-free': catalogShot('aspercreme-lidocaine-odor-free.jpg'),
+  'aspercreme-lidocaine-foot-pain-cream': catalogShot('aspercreme-lidocaine-foot-pain-cream.jpg'),
+  'salonpas-lidocaine-gel-patch': catalogShot('salonpas-lidocaine-gel-patch.jpg'),
+  'salonpas-lidocaine-gel-patch-hisamitsu': catalogShot('salonpas-lidocaine-gel-patch.jpg'),
+  'salonpas-pain-relieving-patch-large': catalogShot('salonpas-pain-relieving-patch-large.jpg'),
+  'salonpas-lidocaine-flex-patch': catalogShot('salonpas-lidocaine-flex-patch.jpg'),
+  'salonpas-pain-relieving-patch': catalogShot('salonpas-pain-relieving-patch.jpg'),
+  'salonpas-lidocaine-plus-cream': catalogShot('salonpas-lidocaine-plus-cream.jpg'),
+  'salonpas-arthritis-pain-patch': catalogShot('salonpas-arthritis-pain-patch.jpg'),
+  'salonpas-pain-relief-patch': catalogShot('salonpas-pain-relief-patch.jpg'),
+  'salonpas-pain-relief-patch-large': catalogShot('salonpas-pain-relief-patch-large.jpg'),
+  'salonpas-gel-patch-hot': catalogShot('salonpas-gel-patch-hot.jpg'),
+  'salonpas-hot-capsicum-patch': catalogShot('salonpas-hot-capsicum-patch.jpg'),
+  'tiger-balm-hydrogel-patch-large': catalogShot('tiger-balm-hydrogel-patch-large.jpg'),
+  'tiger-balm-arthritis-rub': catalogShot('tiger-balm-arthritis-rub.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -913,6 +943,14 @@ assertBrandMark('icy-hot-vanishing-scent-gel', 'Icy Hot', 'icy-hot-mark.png');
 assertBrandMark('tiger-balm-active-muscle-rub', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark('tiger-balm-active-muscle-gel', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark('tiger-balm-neck-shoulder-rub', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark('tiger-balm-hydrogel-patch', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark('icy-hot-original-menthol-patch', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('icy-hot-pro-microbeads-cream', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('aspercreme-lidocaine-foot-2in1', 'Aspercreme', 'aspercreme-mark.png');
+assertBrandMark('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme', 'aspercreme-mark.png');
+assertBrandMark('aspercreme-lidocaine-rosemary-mint', 'Aspercreme', 'aspercreme-mark.png');
+assertBrandMark('aspercreme-lidocaine-xl-patch', 'Aspercreme', 'aspercreme-mark.png');
+assertBrandMark('salonpas-arthritis-pain-patch-large', 'Salonpas', 'salonpas-mark.png');
 
 // Remaining later-catalog P&F leftovers stay letters until attempted.
 
@@ -997,37 +1035,8 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
-assertLetterOnly('tiger-balm-pain-relieving-patch', 'Tiger Balm');
-assertLetterOnly('tiger-balm-hydrogel-patch', 'Tiger Balm');
-assertLetterOnly('icy-hot-lidocaine-large-patch', 'Icy Hot');
-assertLetterOnly('icy-hot-pro-pain-relief-patch', 'Icy Hot');
-assertLetterOnly('icy-hot-original-menthol-patch', 'Icy Hot');
-assertLetterOnly('icy-hot-pro-microbeads-cream', 'Icy Hot');
-assertLetterOnly('aspercreme-lidocaine-foot-2in1', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-patch', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-no-mess-applicator', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-rosemary-mint', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-rosemary-mint-cream', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-xl-patch', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-odor-free', 'Aspercreme');
-assertLetterOnly('aspercreme-lidocaine-foot-pain-cream', 'Aspercreme');
-assertLetterOnly('salonpas-lidocaine-gel-patch', 'Salonpas');
-assertLetterOnly('salonpas-pain-relieving-patch-large', 'Salonpas');
-assertLetterOnly('salonpas-lidocaine-gel-patch-hisamitsu', 'Salonpas');
-assertLetterOnly('salonpas-lidocaine-flex-patch', 'Salonpas');
-assertLetterOnly('salonpas-pain-relieving-patch', 'Salonpas');
-assertLetterOnly('salonpas-lidocaine-plus-cream', 'Salonpas');
-assertLetterOnly('salonpas-arthritis-pain-patch', 'Salonpas');
-assertLetterOnly('salonpas-pain-relief-patch', 'Salonpas');
-assertLetterOnly('salonpas-arthritis-pain-patch-large', 'Salonpas');
-assertLetterOnly('salonpas-pain-relief-patch-large', 'Salonpas');
-assertLetterOnly('salonpas-gel-patch-hot', 'Salonpas');
-assertLetterOnly('salonpas-hot-capsicum-patch', 'Salonpas');
-assertLetterOnly('tiger-balm-hydrogel-patch-large', 'Tiger Balm');
 assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
-assertLetterOnly('tiger-balm-arthritis-rub', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
 assertLetterOnly('biofreeze-ultraflex-lidocaine-4-patch', 'Biofreeze');
 assertLetterOnly('biofreeze-ultraflex-plus-lidocaine-menthol-patch', 'Biofreeze');
@@ -1557,6 +1566,55 @@ assertExactCarton(
   'Aspercreme',
   'aspercreme-lidocaine-eucalyptus-cream.jpg',
 );
+assertExactCarton('tiger-balm-pain-relieving-patch', 'Tiger Balm', 'tiger-balm-pain-relieving-patch.jpg');
+assertExactCarton('icy-hot-lidocaine-large-patch', 'Icy Hot', 'icy-hot-lidocaine-large-patch.jpg');
+assertExactCarton('icy-hot-pro-pain-relief-patch', 'Icy Hot', 'icy-hot-pro-pain-relief-patch.jpg');
+assertExactCarton('aspercreme-lidocaine-patch', 'Aspercreme', 'aspercreme-lidocaine-patch.jpg');
+assertExactCarton(
+  'aspercreme-lidocaine-no-mess-applicator',
+  'Aspercreme',
+  'aspercreme-lidocaine-no-mess-applicator.jpg',
+);
+assertExactCarton(
+  'aspercreme-lidocaine-rosemary-mint-cream',
+  'Aspercreme',
+  'aspercreme-lidocaine-rosemary-mint-cream.jpg',
+);
+assertExactCarton('aspercreme-lidocaine-odor-free', 'Aspercreme', 'aspercreme-lidocaine-odor-free.jpg');
+assertExactCarton(
+  'aspercreme-lidocaine-foot-pain-cream',
+  'Aspercreme',
+  'aspercreme-lidocaine-foot-pain-cream.jpg',
+);
+assertExactCarton('salonpas-lidocaine-gel-patch', 'Salonpas', 'salonpas-lidocaine-gel-patch.jpg');
+assertExactCarton(
+  'salonpas-lidocaine-gel-patch-hisamitsu',
+  'Salonpas',
+  'salonpas-lidocaine-gel-patch.jpg',
+);
+assertExactCarton(
+  'salonpas-pain-relieving-patch-large',
+  'Salonpas',
+  'salonpas-pain-relieving-patch-large.jpg',
+);
+assertExactCarton('salonpas-lidocaine-flex-patch', 'Salonpas', 'salonpas-lidocaine-flex-patch.jpg');
+assertExactCarton('salonpas-pain-relieving-patch', 'Salonpas', 'salonpas-pain-relieving-patch.jpg');
+assertExactCarton('salonpas-lidocaine-plus-cream', 'Salonpas', 'salonpas-lidocaine-plus-cream.jpg');
+assertExactCarton('salonpas-arthritis-pain-patch', 'Salonpas', 'salonpas-arthritis-pain-patch.jpg');
+assertExactCarton('salonpas-pain-relief-patch', 'Salonpas', 'salonpas-pain-relief-patch.jpg');
+assertExactCarton(
+  'salonpas-pain-relief-patch-large',
+  'Salonpas',
+  'salonpas-pain-relief-patch-large.jpg',
+);
+assertExactCarton('salonpas-gel-patch-hot', 'Salonpas', 'salonpas-gel-patch-hot.jpg');
+assertExactCarton('salonpas-hot-capsicum-patch', 'Salonpas', 'salonpas-hot-capsicum-patch.jpg');
+assertExactCarton(
+  'tiger-balm-hydrogel-patch-large',
+  'Tiger Balm',
+  'tiger-balm-hydrogel-patch-large.jpg',
+);
+assertExactCarton('tiger-balm-arthritis-rub', 'Tiger Balm', 'tiger-balm-arthritis-rub.jpg');
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
