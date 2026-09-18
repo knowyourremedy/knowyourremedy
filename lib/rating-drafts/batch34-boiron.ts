@@ -507,7 +507,7 @@ const TUBE_NOTE =
   CARLSTON +
   ' Contains lactose.';
 
-// KYR5-b set-id-only chunks 5–10 — official BoironUSA shop 30C single-tube
+// KYR5-b set-id-only chunks 5–11 — official BoironUSA shop 30C single-tube
 // SKU (UPC-A). Exact ~80 pellet tube. Not 3-pack / 240-pellet.
 const BATCH34_TUBE_CATCHUP_BARCODES: Record<string, string> = {
   'boiron-abelmoschus-pellets': '306960001133',
@@ -810,6 +810,51 @@ const BATCH34_TUBE_CATCHUP_BARCODES: Record<string, string> = {
   'boiron-sepia-pellets': '306960677130',
   'boiron-silicamarina-pellets': '306960665137',
   'boiron-silicea-pellets': '306960684138',
+  'boiron-sinapisnigra-pellets': '306961050130',
+  'boiron-solidagovirgaurea-pellets': '306960690139',
+  'boiron-spigeliaanthelmia-pellets': '306960693130',
+  'boiron-spongia-tosta-pellets': '306960698135',
+  'boiron-stannummetallicum-pellets': '306960699132',
+  'boiron-staphysagria-pellets': '306960701132',
+  'boiron-stictapulmonaria-pellets': '306960703136',
+  'boiron-stramonium-2-pellets': '306960705130',
+  'boiron-strontiumcarbonicum-pellets': '306960707134',
+  'boiron-sulphur-pellets': '306960712138',
+  'boiron-sulphur-iodatum-pellets': '306960713135',
+  'boiron-sulphuricumacidum-pellets': '306960714132',
+  'boiron-symphoricarpusracemosus-pellets': '306960706137',
+  'boiron-symphytum-officinale-pellets': '306960717133',
+  'boiron-tabacum-pellets': '306960720133',
+  'boiron-taraxacumofficinale-pellets': '306961044139',
+  'boiron-tarentulacubensis-pellets': '306961003136',
+  'boiron-tarentulahispana-pellets': '306960724131',
+  'boiron-telluriummetallicum-pellets': '306960726135',
+  'boiron-terebinthina-pellets': '306960727132',
+  'boiron-teucriummarum-pellets': '306960728139',
+  'boiron-theasinensis-pellets': '306960730132',
+  'boiron-theridion-pellets': '306960731139',
+  'boiron-thiosinaminum-pellets': '306960732136',
+  'boiron-thlaspibursapastoris-pellets': '306960733133',
+  'boiron-thuja-occidentalis-pellets': '306960735137',
+  'boiron-thyroidinum-pellets': '306960740131',
+  'boiron-titaniummetallicum-pellets': '306961088133',
+  'boiron-tuberculinum-residuum-pellets': '306965066410',
+  'boiron-urtica-urens-pellets': '306960766131',
+  'boiron-ustilagomaidis-pellets': '306960765134',
+  'boiron-uvaursi-pellets': '306960769132',
+  'boiron-valerianaofficinalis-pellets': '306960772132',
+  'boiron-veratrumalbum-pellets': '306960775133',
+  'boiron-veratrumviride-pellets': '306960776130',
+  'boiron-verbascumthapsus-pellets': '306960777137',
+  'boiron-vespacrabro-pellets': '306960780137',
+  'boiron-viburnumopulus-pellets': '306960784135',
+  'boiron-violaodorata-pellets': '306960788133',
+  'boiron-viperaberus-pellets': '306961019137',
+  'boiron-viscumalbum-pellets': '306960792130',
+  'boiron-wyethiahelenioides-pellets': '306961004133',
+  'boiron-xanthoxylumfraxineum-pellets': '306960798132',
+  'boiron-zincum-metallicum-pellets': '306960819134',
+  'boiron-zincumsulphuricum-pellets': '306960823131',
 };
 
 function singleTube(
