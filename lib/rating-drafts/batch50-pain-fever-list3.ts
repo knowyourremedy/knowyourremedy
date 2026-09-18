@@ -1681,6 +1681,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Mineral Ice Extreme Dry Stick 16%',
     brand: 'Mineral Ice',
     category: PAIN_FEVER,
+    barcode: '850078192080',
     formulaId: FID.miStick,
     audience: ADULT,
     minAge: 12,
@@ -2158,6 +2159,7 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.absNeck]: '889476187534',
   [ID.absXl]: '889476412186',
   [ID.absPlusKnee]: '889476412513',
+  [ID.miStick]: '850078192080',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];
