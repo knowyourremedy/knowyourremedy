@@ -5,7 +5,8 @@
 // ONE write. Pain & Fever only (pain rubs live with swallow SKUs).
 // Do NOT invent a Topical aisle. Do NOT move Arniflora off First Aid.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack sizes
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack sizes
 // of the same name+form+inactives share formulaId. Form is labeled
 // on cleanAlternatives, not a hard filter (§6). Not wired into Clean
 // Picks UI. No live Clean Picks file is edited. No photos. Letter
@@ -228,6 +229,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Tiger Balm Neck & Shoulder Rub (vanishing scent)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278421019',
     formulaId: ID.tbVanish,
     audience: ADULT,
     minAge: 12,
@@ -525,8 +527,18 @@ if (BATCH46_PAIN_RUB_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length 
 if (BATCH46_PAIN_RUB_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 46 stays on Pain & Fever');
 }
-if (BATCH46_PAIN_RUB_REFUSED_UNLOCK.some((record) => record.barcode)) {
-  throw new Error('batch 46 must not invent barcodes');
+const BATCH46_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.tbVanish]: '039278421019',
+};
+for (const record of BATCH46_PAIN_RUB_REFUSED_UNLOCK) {
+  const expected = BATCH46_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 46 catch-up UPC drift on ${record.id}`);
+    }
+  } else if (record.barcode) {
+    throw new Error(`batch 46 must not invent barcodes on ${record.id}`);
+  }
 }
 if (TB_PATCH?.formulaId !== TB_HYDRO?.formulaId) {
   throw new Error('Pain Relieving Patch and Hydrogel Patch must share formulaId');
