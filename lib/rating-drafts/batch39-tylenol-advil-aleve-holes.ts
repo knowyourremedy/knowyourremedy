@@ -993,6 +993,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     productName: 'Motrin IB Migraine Liquid Gels',
     brand: 'Motrin',
     category: PAIN_FEVER,
+    barcode: '300450916808',
     formulaId: ID.motrinIbMigraineGels,
     audience: ADULT,
     minAge: 18,

@@ -322,6 +322,11 @@ function storeChildrenIbuDyedChew(opts: {
 const BATCH2_CATCHUP_BARCODES: Record<string, string> = {
   'cvs-children-apap-dyed': '050428294338',
   'upup-children-ibu-dyed': '370030625673',
+  'upup-children-apap-dyed': '370030617760',
+  'signature-care-children-apap-dyed': '321130777021',
+  'upup-children-apap-dyefree': '370030119271',
+  'signature-care-children-ibu-chew-dyed': '321130787792',
+  'upup-children-ibu-dyefree-liquid': '370030623068',
 };
 
 export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
@@ -726,6 +731,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     retailers: ['Target'],
     setid: '9c3ba4dd-f51b-46ce-91b8-8b617c7b78da',
     dyeNames: ['D&C Red No. 33', 'FD&C Red No. 40'],
+    barcode: BATCH2_CATCHUP_BARCODES['upup-children-apap-dyed'],
   }),
   storeChildrenApapDyed({
     id: 'signature-care-children-apap-dyed',
@@ -734,6 +740,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     retailers: ['Safeway'],
     setid: 'fccb5aca-5707-491f-beb4-08f568919169',
     dyeNames: ['FD&C Red No. 40'],
+    barcode: BATCH2_CATCHUP_BARCODES['signature-care-children-apap-dyed'],
   }),
   storeInfantsApapDyefree({
     id: 'equate-infants-apap-dyefree',
@@ -764,6 +771,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     productName: 'up&up Children\'s Acetaminophen Dye-Free Liquid',
     brand: 'up&up',
     category: PAIN_FEVER,
+    barcode: BATCH2_CATCHUP_BARCODES['upup-children-apap-dyefree'],
     formulaId: 'upup-children-apap-dyefree-liquid',
     audience: KIDS,
     minAge: 2,
@@ -1158,6 +1166,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     brand: 'Signature Care',
     retailers: ['Safeway'],
     setid: 'c30fbb8f-a293-4f6e-9495-11402548fe2d',
+    barcode: BATCH2_CATCHUP_BARCODES['signature-care-children-ibu-chew-dyed'],
   }),
   {
     id: 'upup-infants-ibu-dyefree',
@@ -1207,6 +1216,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     productName: 'up&up Children\'s Dye-Free Ibuprofen Liquid',
     brand: 'up&up',
     category: PAIN_FEVER,
+    barcode: BATCH2_CATCHUP_BARCODES['upup-children-ibu-dyefree-liquid'],
     formulaId: 'upup-children-ibu-dyefree-liquid',
     audience: KIDS,
     minAge: 2,
