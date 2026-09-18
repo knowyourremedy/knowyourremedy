@@ -447,6 +447,16 @@ const SEDATING =
 const PARKED_FORMALDEHYDE =
   'Diazolidinyl urea is a formaldehyde-releaser — parked / out-of-scope (Methodology §5). Notes only, not a demerit.';
 
+const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
+  'dg-health-loratadine-odt': '370030169856',
+  'dg-health-cetirizine-tablets': '370030116669',
+  'rexall-cetirizine-tablets': '370030659432',
+  'dg-health-sleep-aid-doxylamine': '370030115488',
+  'dg-health-pain-relief-pm': '370030168491',
+  'dg-health-hydrocortisone-bht': '370030657698',
+  'dg-health-infants-ibuprofen': '370030167609',
+};
+
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
@@ -680,6 +690,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Allergy Relief Orally Disintegrating (Loratadine 10 mg)',
     brand: 'DG Health',
     category: ALLERGY,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-loratadine-odt'],
     formulaId: MINT_ODT,
     audience: ADULT,
     minAge: 6,
@@ -753,6 +764,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health All Day Allergy (Cetirizine 10 mg)',
     brand: 'DG Health',
     category: ALLERGY,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-cetirizine-tablets'],
     formulaId: COATED_CETIRIZINE,
     audience: ADULT,
     minAge: 6,
@@ -783,6 +795,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'Rexall All Day Allergy Relief (Cetirizine 10 mg)',
     brand: 'Rexall',
     category: ALLERGY,
+    barcode: BATCH29_CATCHUP_BARCODES['rexall-cetirizine-tablets'],
     formulaId: COATED_CETIRIZINE,
     audience: ADULT,
     minAge: 6,
@@ -912,6 +925,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Sleep Aid (Doxylamine 25 mg)',
     brand: 'DG Health',
     category: SLEEP,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-sleep-aid-doxylamine'],
     formulaId: UPUP_DOXYLAMINE,
     audience: ADULT,
     minAge: 12,
@@ -1325,6 +1339,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Pain Relief PM Extra Strength (APAP 500 + DPH 25 mg)',
     brand: 'DG Health',
     category: SLEEP,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-pain-relief-pm'],
     formulaId: 'dg-health-pain-relief-pm',
     audience: ADULT,
     minAge: 12,
@@ -1471,6 +1486,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Hydrocortisone 1% Cream',
     brand: 'DG Health',
     category: FIRST_AID,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-hydrocortisone-bht'],
     formulaId: 'dg-health-hydrocortisone-bht',
     audience: ADULT,
     minAge: 2,
@@ -1534,6 +1550,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: "DG Health Infants' Ibuprofen Oral Suspension (50 mg / 1.25 mL)",
     brand: 'DG Health',
     category: PAIN_FEVER,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-infants-ibuprofen'],
     formulaId: 'dg-health-infants-ibuprofen-red40',
     audience: KIDS,
     minAge: 0,
@@ -1562,6 +1579,13 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     ],
   },
 ];
+
+for (const record of BATCH29_DOLLAR_STORE) {
+  const expected = BATCH29_CATCHUP_BARCODES[record.id];
+  if (expected && record.barcode !== expected) {
+    throw new Error(`batch 29 catch-up UPC drift on ${record.id}`);
+  }
+}
 
 // Verdict tally (34 records): Clean 5 · Caution 5 · Avoid 24
 // Reused formulaIds: 11 (loratadine-l612-plain, store-cetirizine-coated-blue1-tio2,

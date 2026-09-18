@@ -131,6 +131,10 @@ const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basics-loperamide-softgel-313': '195515045254',
   'amazon-basic-care-apap-650-er-l544': '370030114573',
   'amazon-basic-care-aspirin-81-chew-l467': '195515050906',
+  'amazon-basic-care-mucus-er-max-dyefree': '195515012881',
+  'amazon-basic-care-triple-abx-oil-blend': '370030114535',
+  'amazon-basic-care-gas-relief-ultra-l657': '195515032964',
+  'amazon-basic-care-loperamide-224': '370030146086',
 };
 
 const METH = {
@@ -324,6 +328,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       'Amazon Basic Care Mucus-ER Max Dye-Free (Guaifenesin 1200 mg)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-mucus-er-max-dyefree'],
     formulaId: 'amazon-basic-care-mucus-er-max-dyefree',
     audience: ADULT,
     minAge: 12,
@@ -351,6 +356,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basic Care Triple Antibiotic Ointment (Oil-Blend)',
     brand: BASIC_CARE,
     category: FIRST_AID,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-triple-abx-oil-blend'],
     formulaId: 'amazon-basic-care-triple-abx-oil-blend',
     audience: ADULT,
     minAge: 2,
@@ -476,6 +482,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basic Care Gas Relief Ultra (Simethicone 180 mg, L657)',
     brand: BASIC_CARE,
     category: DIGESTIVE,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-gas-relief-ultra-l657'],
     formulaId: 'amazon-basic-care-gas-relief-ultra-l657',
     audience: ADULT,
     minAge: 12,
@@ -501,6 +508,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basic Care Loperamide 2 mg (Film-Coated, 72288-224)',
     brand: BASIC_CARE,
     category: DIGESTIVE,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-loperamide-224'],
     formulaId: 'amazon-basic-care-loperamide-224',
     audience: ADULT,
     minAge: 12,
