@@ -1106,9 +1106,14 @@ export const BATCH32_GENEXA: RatingRecord[] = [
   },
   {
     id: 'genexa-cough-chest-congestion',
-    productName: 'Genexa Cough & Chest Congestion',
+    // KYR5-c barcode-tile chunk 6 — HelloPharmacist GTIN-13
+    // 0850015736858 / Palletfly wholesale unit UPC-A 850015736858
+    // on the 6 fl oz (177 mL) adult bottle (NDC 69676-0077-9).
+    // Not combo 850015736834 / not kids 850015736018.
+    productName: 'Genexa Cough & Chest Congestion (6 fl oz)',
     brand: BRAND,
     category: COLD_FLU,
+    barcode: '850015736858',
     formulaId: 'genexa-cough-chest-congestion',
     audience: ADULT,
     minAge: 12,
