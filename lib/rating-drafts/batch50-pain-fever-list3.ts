@@ -844,9 +844,10 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
   }),
   row({
     id: ID.proColorRoll,
-    productName: 'Biofreeze Professional Colorless Roll-On 5%',
+    productName: 'Biofreeze Professional Colorless Roll-On 5% (3 oz)',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    barcode: '359316118108',
     formulaId: FID.proColor5,
     audience: ADULT,
     minAge: 2,
@@ -2165,6 +2166,10 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   // Ultra Strength 5½×4 in (NDC 69693-413 / setid cf329707). Do not steal
   // 889476412186 (5% XL Back) or 889476412513 (Plus Knee).
   [ID.absUltra]: '889476413183',
+  // KYR5-c barcode-tile chunk 2 — Reckitt rbnainfo Professional
+  // Colorless Roll-On lists UPC 3-59316-11810-8 on the 3 oz USA bottle.
+  // Do not steal 731124 retail colorless / professional green roll-ons.
+  [ID.proColorRoll]: '359316118108',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];

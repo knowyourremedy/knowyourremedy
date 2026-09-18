@@ -284,6 +284,8 @@ const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-loratadine-l612': '370030114221',
   'amazon-basic-care-cetirizine-coated': '370030114108',
   'amazon-basic-care-ibuprofen-liqui-gels': '195515012874',
+  // KYR5-c barcode-tile chunk 2 — mint ODT 30-ct (not L612 swallow).
+  'amazon-basic-care-loratadine-odt': '842379190742',
 };
 
 const METH = {
@@ -781,9 +783,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   },
   {
     id: 'amazon-basic-care-loratadine-odt',
-    productName: 'Amazon Basic Care Allergy Relief Orally Disintegrating (Loratadine 10 mg)',
+    productName: 'Amazon Basic Care Allergy Relief Orally Disintegrating (Loratadine 10 mg, 30-ct)',
     brand: BASIC_CARE,
     category: ALLERGY,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-loratadine-odt'],
     formulaId: MINT_ODT,
     audience: ADULT,
     minAge: 6,

@@ -140,6 +140,10 @@ const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-daytime-cold-flu-liquid': '370030145188',
   // Nighttime-only 12 fl oz cherry bottle.
   'amazon-basic-care-nighttime-cold-flu-liquid': '370030114368',
+  // KYR5-c barcode-tile chunk 2 — standalone softgel bottles
+  // (not the day/night kit UPC).
+  'amazon-basic-care-daytime-cold-flu-softgel': '370030145171',
+  'amazon-basic-care-nighttime-cold-flu-softgel': '195515012669',
 };
 
 const METH = {
@@ -707,9 +711,10 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
   }),
   row({
     id: 'amazon-basic-care-daytime-cold-flu-softgel',
-    productName: 'Amazon Basic Care Daytime Cold & Flu Softgel',
+    productName: 'Amazon Basic Care Daytime Cold & Flu Softgel (48-ct)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-daytime-cold-flu-softgel'],
     formulaId: 'amazon-basic-care-daytime-cold-flu-softgel',
     audience: ADULT,
     minAge: 12,
@@ -742,9 +747,10 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
   }),
   row({
     id: 'amazon-basic-care-nighttime-cold-flu-softgel',
-    productName: 'Amazon Basic Care Nighttime Cold & Flu Softgel',
+    productName: 'Amazon Basic Care Nighttime Cold & Flu Softgel (24-ct)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-nighttime-cold-flu-softgel'],
     formulaId: 'amazon-basic-care-nighttime-cold-flu-softgel',
     audience: ADULT,
     minAge: 12,
