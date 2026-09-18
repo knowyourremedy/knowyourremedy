@@ -163,7 +163,7 @@ Next session
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–64 already exist.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–65 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -555,6 +555,7 @@ Completed (main, unverified drafts unless noted):
   bisabolol stays Cleared on MAIN. Advanced Healing Caution is lanolin alcohol.
   Amazon house punch DONE this pass. 3P Amazon brands later. Sprouts house STASHED.
 - Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 18 new (Clean 8 / Caution 10 / Avoid 0). NEW 18 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
+- Store generics hole punch — Sept 18, 2026 — batch65-kyr6-store-generics.ts. Search 20 new (Clean 3 / Caution 9 / Avoid 8). NEW 20 / REUSE-formula 10 / SKIPPED 16. §5 Caution exacts already on main (white edible ink / phenylethyl alcohol / mica-based pearlescent pigment) — not restamped. Do not reopen equate-es-pain-reliever 100-ct white / prenatal coated Walgreens / Amazon 30/54/56/61–63 / Thrive 27/52/59/60/64.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
