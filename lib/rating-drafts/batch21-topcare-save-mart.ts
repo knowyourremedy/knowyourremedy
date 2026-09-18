@@ -497,6 +497,11 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       'TopCare Dual Action (Acetaminophen 250 mg / Ibuprofen 125 mg)',
     brand: 'TopCare',
     category: PAIN_FEVER,
+    // KYR5-b set-id-only chunk 20 — Acme grocery PDP + TopCare SmartLabel
+    // 36-ct 036800472648 (NDC 76162-501-68) and 72-ct 036800472655
+    // (NDC 76162-501-23 / setid dddc04c4). Do not steal GoodSense Dual
+    // Action 301135300684 (setid b117358c) or Advil Dual Action.
+    barcode: '036800472648 036800472655',
     formulaId: 'apap-ibu-topcare-dual-action-tio2-talc',
     audience: ADULT,
     minAge: 12,
