@@ -5,7 +5,7 @@
 // ONE write. New in-scope US Pain & Fever / Sleep rows only.
 // recordStatus is 'unverified' on every row. Internal keys only:
 // clean | caution | avoid. Do NOT invent Clean. Do NOT invent UPCs /
-// barcodes. Pack sizes of the same name+form+inactives share formulaId.
+// barcodes except KYR5-b catch-up allowlist. Pack sizes of the same name+form+inactives share formulaId.
 // Form is labeled on cleanAlternatives, not a hard filter (§6). Not
 // wired into Clean Picks UI. No live Clean Picks file is edited. No
 // photos. Letter tiles only on new ids. No fake Clean alts. No
@@ -217,6 +217,10 @@ const ID = {
   infantsDf: 'motrin-infants-liquid-dyefree',
   genuine: GENUINE,
 } as const;
+
+const BATCH40_CATCHUP_BARCODES: Record<string, string> = {
+  [ID.rapid]: '300674350761 300674350730',
+};
 
 function row(opts: RatingRecord): RatingRecord {
   return {
@@ -616,6 +620,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     productName: 'Excedrin Rapid Relief Acetaminophen 500',
     brand: 'Excedrin',
     category: PAIN_FEVER,
+    barcode: BATCH40_CATCHUP_BARCODES[ID.rapid],
     formulaId: ID.rapid,
     audience: ADULT,
     minAge: 12,
@@ -710,6 +715,15 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     sourcesGeneral: [`DailyMed setid ${SET.genuine} — ${UNVERIFIED_NOTE}`],
   }),
 ];
+
+for (const record of BATCH40_BAYER_EXCEDRIN_MOTRIN) {
+  const expected = BATCH40_CATCHUP_BARCODES[record.id];
+  if (expected) {
+    if (record.barcode !== expected) {
+      throw new Error(`batch 40 catch-up UPC drift on ${record.id}`);
+    }
+  }
+}
 
 // Verdict tally (12 records): Clean 1 · Caution 0 · Avoid 11
 // List 2: Avoid 11 · List 3: Clean 1
