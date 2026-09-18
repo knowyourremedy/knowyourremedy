@@ -52,10 +52,14 @@
 // minerals / featured actives are not High/Caution inactive
 // flags.
 //
-// TALLY (unverified drafts in THIS file): 4 rows — Clean 1 /
-// Caution 1 / Avoid 2. NEW 4 / REUSE-formula 2 / SKIPPED +
+// TALLY (unverified drafts in THIS file): 5 rows — Clean 1 /
+// Caution 2 / Avoid 2. NEW 5 / REUSE-formula 1 / SKIPPED +
 // REFUSED listed at the bottom (Ethyl Vanillin / Spirulina /
 // Hibiscus Concentrate are the refused §5 strings).
+// TopCare Vitamin C uses the founder fruit-juice / paprika
+// panel (no palm). up&up ES APAP PM uses the founder PVA +
+// talc + SiO2 stack — own formulaId, do not reuse
+// dg-health-pain-relief-pm.
 //
 // Independently Clean analogs already on main (not cloned):
 // nature-made-d3-softgels-clear ·
@@ -88,8 +92,10 @@ const SLEEP = 'Sleep';
 const D3_FORMULA = 'members-mark-d3-softgels-safflower';
 const MM_D3_50 = 'members-mark-d3-50mcg-softgels';
 const MM_MELATONIN = 'members-mark-melatonin-10mg-tr';
+const TC_VIT_C = 'topcare-hp-vitamin-c-gummies';
 const WG_MULTI = 'walgreens-adults-multi-tablets';
 const UPUP_APAP_PM = 'upup-es-acetaminophen-pm-100';
+const UPUP_APAP_PM_FORMULA = 'upup-es-acetaminophen-pm';
 
 const DG_APAP_PM = 'dg-health-pain-relief-pm';
 const NM_D3 = 'nature-made-d3-softgels-clear';
@@ -101,8 +107,9 @@ const THORNE_WOMENS = 'thorne-womens-multi-50-plus';
 const WH_WOMENS = 'we-heart-wholesome-womens-multi';
 const GOL_WOMENS = 'gol-vitamin-code-womens';
 const PE_ONE_MULTI = 'pure-encapsulations-one-multivitamin';
-
-const SET_UPUP_PM = 'f1a10eba-0baa-4e34-bfbe-69faed6b51f1';
+const GOL_RAW_C = 'gol-vitamin-code-raw-c';
+const PE_ASCORBIC = 'pure-encapsulations-ascorbic-acid-1000';
+const THRIVE_C = 'thrive-wellmade-real-food-vitamin-c';
 
 const OIL_FILL_TAP =
   'Seed/industrial oils are flagged in gummies. Safflower / sunflower / palm / vegetable oil / canola used as a gummy coating or fill is that High rule. In this softgel fill they are not.';
@@ -126,8 +133,10 @@ const CITE = {
     "Member's Mark Timed-Release Melatonin 10 mg tablets — live samsclub.com 300-ct (item 7874209463) + Maxima Mart ingredients tile + HelloPharmacist / DSLD 46282 other-ingredients: Dicalcium Phosphate, Microcrystalline Cellulose, Hydroxypropyl Methylcellulose, Croscarmellose Sodium, Stearic Acid, Silicon Dioxide / Silica, Magnesium Stearate, Polyethylene Glycol, Carnauba Wax. Pyridoxine Hydrochloride and Melatonin are the labeled actives. UPC-A 078742094632 (12-digit of the Sam’s / 250-ct DSLD barcode; 300-ct shares the same formula).",
   wgMulti:
     'Walgreens Adults Multivitamin Tablets founder UPC 311917199139 (Open Food Facts 0311917199139 / HelloPharmacist DSLD 274220 200-ct Adults). Other Ingredients (true inactives graded): Microcrystalline Cellulose, Maltodextrin, Carboxymethylcellulose Sodium, DL-Tartaric Acid, FD&C Blue No. 2 Lake, FD&C Red No. 40 Lake, FD&C Yellow No. 6 Lake, Hydroxypropyl Methylcellulose, Magnesium Stearate, Polydextrose, Polyethylene Glycol, Polyvinyl Alcohol, Silica, Starch, Talc, Titanium Dioxide color. SF vitamins/minerals on the mixed Ingredients line (calcium carbonate, potassium chloride, dicalcium phosphate, magnesium oxide, ascorbic acid, ferrous fumarate, beta-carotene, biotin, cholecalciferol, chromium picolinate, cupric sulfate, cyanocobalamin, D-calcium pantothenate, DL-alpha tocopheryl acetate, manganese sulfate, nicotinamide, phytonadione, potassium iodide, pyridoxine HCl, retinyl acetate, sodium metavanadate, sodium molybdate, sodium selenite, stannous chloride, thiamine mononitrate, tricalcium phosphate, zinc oxide) are not inactive flags. OFF OCR on this UPC is noisy and also reads BHT / MCT — not scored as a second conflicting panel; Avoid already stands on dyes + TiO2 + talc.',
+  tcC:
+    'Founder-logged TopCare high potency Vitamin C gummies Other Ingredients (PROJECT_NOTES exact print): Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract). Distinct from Instacart / topcarebrand 240 mg orange UPC 036800464049 (palm oil + carnauba, no fruit-juice line) and from Fig / Instacart 750 mg assorted (sucralose + radish / turmeric ± palm). Do not attach those barcodes. Palm is not on this founder panel — do not invent it and do not alias gummy Palm Oil to Organic Palm Oil coating.',
   upupPm:
-    'up&up Extra Strength Acetaminophen PM caplets 100-ct founder UPC 359726863117 / Target A-11004792 / DailyMed setid f1a10eba-0baa-4e34-bfbe-69faed6b51f1 (NDC 11673-437-78). Drug Facts inactive ingredients: carnauba wax, crospovidone, FD&C blue #1 aluminum lake, FD&C blue #2 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, povidone, pregelatinized starch, sodium starch glycolate, stearic acid, titanium dioxide. Same stack as `dg-health-pain-relief-pm`. Do not reuse `tylenol-pm-es` (different inactive stack). Target HTML bullets on some snapshots add PVA / talc / SiO2 — DailyMed Drug Facts for this 100-ct NDC is the label used here.',
+    'Founder-logged up&up Extra Strength Acetaminophen PM caplets 100-ct UPC 359726863117 inactive list (PROJECT_NOTES; Target A-11004792): croscarmellose sodium, FD&C blue #1 aluminum lake, FD&C blue #2 aluminum lake, hypromelloses, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, povidone k30, pregelatinized starch, purified water, silicon dioxide, sodium starch glycolate, talc, titanium dioxide. Not the batch68 eye ointment. DailyMed setid f1a10eba-0baa-4e34-bfbe-69faed6b51f1 is a different stack (carnauba / crospovidone / PS80 / stearic, no PVA / talc / SiO2) — do not reuse `dg-health-pain-relief-pm`.',
 } as const;
 
 const METH = {
@@ -161,6 +170,16 @@ const METH = {
   starchNamed:
     'Methodology §5 Cleared (pregelatinized starch / corn starch / potato starch)',
   ssg: 'Methodology §5 Cleared (sodium starch glycolate)',
+  flavors:
+    'Methodology §5 Limited-risk (natural flavors — undisclosed mixtures; opacity, not a known hazard)',
+  fruitJuiceBase:
+    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row; locked Sept 15, 2026)',
+  paprika:
+    'Methodology §5 Cleared (paprika extract / capsanthin as color — named spice color; locked Sept 14, 2026)',
+  sugar: 'Methodology §5 Cleared (cane sugar / glucose syrup / tapioca syrup)',
+  citric:
+    'Methodology §5 Cleared (citric acid / ascorbic acid / citrate salts as fillers/buffers)',
+  lactic: 'Methodology §5 Cleared (lactic acid / malic acid — organic acids with citric)',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
@@ -174,10 +193,6 @@ function flag(
 
 function labelCite(label: string, meth: string): string {
   return `${label}; ${meth}`;
-}
-
-function dailymed(setid: string, meth: string): string {
-  return `DailyMed setid ${setid}; ${meth}`;
 }
 
 function alt(productId: string, rankReason: string): CleanAlternative {
@@ -199,6 +214,21 @@ const MELATONIN_ALTS: CleanAlternative[] = [
   alt(
     PE_MELATONIN,
     'Independently Clean Pure Encapsulations Melatonin-SR 3 mg already on main (HPMC capsule; no SiO2 / no PEG). Form: capsule vs this tablet — labeled, not a hard filter (§6). Same adult Sleep shelf.',
+  ),
+];
+
+const VIT_C_ALTS: CleanAlternative[] = [
+  alt(
+    GOL_RAW_C,
+    'Independently Clean Garden of Life Vitamin Code Raw Vitamin C already on main (vegetable cellulose + organic rice hull). Form: capsule vs this gummy — labeled, not a hard filter (§6).',
+  ),
+  alt(
+    PE_ASCORBIC,
+    'Independently Clean Pure Encapsulations ascorbic acid 1000 already on main. Form: capsule vs this gummy — labeled, not a hard filter (§6).',
+  ),
+  alt(
+    THRIVE_C,
+    'Independently Clean Thrive Wellmade Real Food Vitamin C already on main (named HPMC capsule + rice hull). Form: capsule vs this gummy — labeled, not a hard filter (§6).',
   ),
 ];
 
@@ -310,6 +340,40 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
     cleanAlternatives: MELATONIN_ALTS,
     sourcesGeneral: [`${CITE.mmMelatonin} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
+  row({
+    id: TC_VIT_C,
+    productName: 'TopCare High Potency Vitamin C Gummies',
+    brand: 'TopCare',
+    category: VITAMINS,
+    formulaId: TC_VIT_C,
+    audience: ADULT,
+    minAge: 18,
+    form: 'gummy',
+    productType: VITAMIN,
+    retailers: ['TopCare', 'Grocery'],
+    activeIngredients: [
+      { name: 'Vitamin C', strength: 'label serving (high potency)' },
+    ],
+    inactiveIngredients: [
+      flag('Glucose syrup', 'cleared', labelCite(CITE.tcC, METH.sugar)),
+      flag('Sugar', 'cleared', labelCite(CITE.tcC, METH.sugar)),
+      flag('Water', 'cleared', labelCite(CITE.tcC, METH.water)),
+      flag('Gelatin', 'cleared', labelCite(CITE.tcC, METH.gelatin)),
+      flag(
+        'Fruit juice from concentrate (apple, pear, pineapple, peach, orange, lemon, raspberry, blackcurrant, strawberry, blackberry, blueberry, cherry)',
+        'limited',
+        labelCite(CITE.tcC, METH.fruitJuiceBase),
+      ),
+      flag('Citric acid', 'cleared', labelCite(CITE.tcC, METH.citric)),
+      flag('Lactic acid', 'cleared', labelCite(CITE.tcC, METH.lactic)),
+      flag('Natural flavors', 'limited', labelCite(CITE.tcC, METH.flavors)),
+      flag('Color (paprika extract)', 'cleared', labelCite(CITE.tcC, METH.paprika)),
+    ],
+    verdict: 'caution',
+    honestNote: `FOUNDER-LOCK DRAFT: TopCare high potency Vitamin C gummies = Caution (Limited fruit-juice concentrate as gummy base + Limited natural flavors). Founder-logged OI has no palm. ${LIMITED_STACK} Named paprika extract as color is Cleared (not unspecified Natural Colors). Glucose syrup / sugar / water / gelatin / citric / lactic are Cleared. Distinct from Instacart / topcarebrand 240 mg orange UPC 036800464049 (palm oil + carnauba) and from Fig / Instacart 750 mg assorted (sucralose + radish / turmeric ± palm) — do not attach those barcodes and do not invent palm on this panel. Do not alias gummy Palm Oil to Organic Palm Oil coating. Own formulaId. No 12-digit matching this fruit-juice panel — omitted. No DailyMed drug SPL. Adults. Draft, not verified.`,
+    cleanAlternatives: VIT_C_ALTS,
+    sourcesGeneral: [`${CITE.tcC} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
+  }),
 
   // ── Avoid ────────────────────────────────────────────────
   row({
@@ -368,7 +432,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
     brand: 'up&up',
     category: SLEEP,
     barcode: BATCH69_CATCHUP_BARCODES[UPUP_APAP_PM],
-    formulaId: DG_APAP_PM,
+    formulaId: UPUP_APAP_PM_FORMULA,
     audience: ADULT,
     minAge: 12,
     form: 'caplet',
@@ -379,43 +443,26 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       { name: 'Diphenhydramine HCl', strength: '25mg' },
     ],
     inactiveIngredients: [
-      flag(
-        'FD&C Blue No. 1 aluminum lake',
-        'high',
-        dailymed(SET_UPUP_PM, METH.dyes),
-      ),
-      flag(
-        'FD&C Blue No. 2 aluminum lake',
-        'high',
-        dailymed(SET_UPUP_PM, METH.dyes),
-      ),
-      flag('Titanium dioxide', 'high', dailymed(SET_UPUP_PM, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_UPUP_PM, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_UPUP_PM, METH.ps80)),
-      flag('Carnauba wax', 'cleared', dailymed(SET_UPUP_PM, METH.carnauba)),
-      flag('Crospovidone', 'cleared', dailymed(SET_UPUP_PM, METH.povidone)),
-      flag('Hypromellose', 'cleared', dailymed(SET_UPUP_PM, METH.hpmc)),
-      flag('Magnesium stearate', 'cleared', dailymed(SET_UPUP_PM, METH.stearic)),
-      flag(
-        'Microcrystalline cellulose',
-        'cleared',
-        dailymed(SET_UPUP_PM, METH.cellulose),
-      ),
-      flag('Povidone', 'cleared', dailymed(SET_UPUP_PM, METH.povidone)),
-      flag(
-        'Pregelatinized starch',
-        'cleared',
-        dailymed(SET_UPUP_PM, METH.starchNamed),
-      ),
-      flag('Sodium starch glycolate', 'cleared', dailymed(SET_UPUP_PM, METH.ssg)),
-      flag('Stearic acid', 'cleared', dailymed(SET_UPUP_PM, METH.stearic)),
+      flag('FD&C Blue No. 1 aluminum lake', 'high', labelCite(CITE.upupPm, METH.dyes)),
+      flag('FD&C Blue No. 2 aluminum lake', 'high', labelCite(CITE.upupPm, METH.dyes)),
+      flag('Titanium dioxide', 'high', labelCite(CITE.upupPm, METH.tio2)),
+      flag('Talc', 'high', labelCite(CITE.upupPm, METH.talc)),
+      flag('Polyethylene glycol', 'moderate', labelCite(CITE.upupPm, METH.peg)),
+      flag('Silicon dioxide', 'cleared', labelCite(CITE.upupPm, METH.sio2)),
+      flag('Croscarmellose sodium', 'cleared', labelCite(CITE.upupPm, METH.cellulose)),
+      flag('Hypromelloses', 'cleared', labelCite(CITE.upupPm, METH.hpmc)),
+      flag('Magnesium stearate', 'cleared', labelCite(CITE.upupPm, METH.stearic)),
+      flag('Microcrystalline cellulose', 'cleared', labelCite(CITE.upupPm, METH.cellulose)),
+      flag('Polyvinyl alcohol', 'cleared', labelCite(CITE.upupPm, METH.pva)),
+      flag('Povidone K30', 'cleared', labelCite(CITE.upupPm, METH.povidone)),
+      flag('Pregelatinized starch', 'cleared', labelCite(CITE.upupPm, METH.starchNamed)),
+      flag('Purified water', 'cleared', labelCite(CITE.upupPm, METH.water)),
+      flag('Sodium starch glycolate', 'cleared', labelCite(CITE.upupPm, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: up&up Extra Strength Acetaminophen PM 100-ct caplets = Avoid (Blue #1 / Blue #2 lakes + TiO2). Founder UPC 359726863117. DailyMed setid ${SET_UPUP_PM} (NDC 11673-437-78) Drug Facts match \`dg-health-pain-relief-pm\` — reuse that formulaId; new product id only. Do not reuse \`tylenol-pm-es\` (different inactive stack) and do not reopen batch68 \`upup-pm-lubricant-ointment\` (eye ointment, not this swallow PM). PEG + PS80 are Moderate (not needed to reach Avoid). Stay under 4 g/day acetaminophen. ${SEDATING} Draft, not verified.`,
+    honestNote: `FOUNDER-LOCK DRAFT: up&up Extra Strength Acetaminophen PM 100-ct caplets = Avoid (Blue #1 / Blue #2 lakes + TiO2 + talc). Founder UPC 359726863117. Founder-logged inactives (PROJECT_NOTES) include PVA + SiO2 + talc — own formulaId \`${UPUP_APAP_PM_FORMULA}\`. Do not reuse \`${DG_APAP_PM}\` (DailyMed setid f1a10eba is a different stack: carnauba / crospovidone / PS80 / stearic, no PVA / talc / SiO2). Do not reuse \`tylenol-pm-es\` and do not reopen batch68 \`upup-pm-lubricant-ointment\` (eye ointment, not this swallow PM). PEG is Moderate (not needed to reach Avoid). ${SIO2_TAP} Stay under 4 g/day acetaminophen. ${SEDATING} Draft, not verified.`,
     cleanAlternatives: APAP_PM_ALTS,
-    sourcesGeneral: [
-      `DailyMed setid ${SET_UPUP_PM} (up&up ES APAP PM NDC 11673-437-78 / UPC 359726863117; ${UNVERIFIED_NOTE}) — reuse ${DG_APAP_PM}`,
-    ],
+    sourcesGeneral: [`${CITE.upupPm} — ${UNVERIFIED_NOTE}`],
   }),
 ];
 
@@ -466,11 +513,6 @@ export const BATCH69_SKIPPED: { sku: string; reason: string }[] = [
       'REFUSED §5 — Instacart / Acme PDP prints Palm Oil and Carnauba Wax plus Colors (… Spirulina and Pumpkin Concentrate, Lycopene). Spirulina is not an exact §5 token. Do not invent a grade. Do not alias gummy Palm Oil to Organic Palm Oil coating. UPC 036800488212 seen at Acme — not attached (row refused).',
   },
   {
-    sku: 'TopCare Vitamin C gummies (Orange / Lemon / Berry 750 mg)',
-    reason:
-      'SKIPPED conflicted OI — Fig lists glucose syrup / sucrose / water / gelatin / natural flavors / paprika + radish + turmeric extracts (for coloring) / sucralose (no palm). Instacart adds PALM OIL + CARNAUBA WAX on the same SKU family. No official SmartLabel this hunt. Do not pick a side. Do not invent.',
-  },
-  {
     sku: 'Kirkland enteric FO / Nice! adult multi / Assured / Kirkland guaifenesin-only / MM Advanced multis / Kirkland Wild Alaskan 1400 / up&up PM ointment',
     reason:
       'DO NOT WRITE this pass (user skip pile). Already on 68 or previously skipped. Do not reopen 65 / 66 / 68 or PR #230.',
@@ -478,11 +520,11 @@ export const BATCH69_SKIPPED: { sku: string; reason: string }[] = [
 ];
 
 const _ROWS = BATCH69_KYR6_STORE_PANELS;
-if (_ROWS.length !== 4) throw new Error('batch69 tally drift: expected 4 rows');
+if (_ROWS.length !== 5) throw new Error('batch69 tally drift: expected 5 rows');
 if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) {
   throw new Error('batch69 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 2) {
   throw new Error('batch69 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 2) {
@@ -578,8 +620,8 @@ if (
 }
 
 const upup = _ROWS.find((r) => r.id === UPUP_APAP_PM);
-if (upup?.verdict !== 'avoid' || upup.formulaId !== DG_APAP_PM) {
-  throw new Error('up&up ES APAP PM must reuse dg-health-pain-relief-pm');
+if (upup?.verdict !== 'avoid' || upup.formulaId !== UPUP_APAP_PM_FORMULA) {
+  throw new Error('up&up ES APAP PM must use own founder-stack formulaId');
 }
 if (upup.barcode !== '359726863117') {
   throw new Error('up&up ES APAP PM must use founder UPC 359726863117');
@@ -587,15 +629,39 @@ if (upup.barcode !== '359726863117') {
 if (upup.inactiveIngredients.some((i) => /lanolin/i.test(i.name))) {
   throw new Error('up&up ES APAP PM must not pick up the eye-ointment PM row');
 }
-
-const REUSE_FORMULA_COUNT = _ROWS.filter(
-  (r) => r.formulaId === D3_FORMULA || r.formulaId === DG_APAP_PM,
-).length;
-if (REUSE_FORMULA_COUNT !== 2) {
-  throw new Error('batch69 expected 2 formulaId reuses (MM D3 safflower + DG APAP PM)');
+if (!upup.inactiveIngredients.some((i) => /talc/i.test(i.name) && i.riskLevel === 'high')) {
+  throw new Error('up&up ES APAP PM founder stack must list talc High');
+}
+if (!upup.inactiveIngredients.some((i) => /polyvinyl alcohol/i.test(i.name))) {
+  throw new Error('up&up ES APAP PM founder stack must list PVA');
+}
+if (upup.inactiveIngredients.some((i) => /polysorbate|carnauba|stearic acid|crospovidone/i.test(i.name))) {
+  throw new Error('up&up ES APAP PM must not import the DailyMed / DG Health stack');
 }
 
-if (BATCH69_SKIPPED.length !== 11) {
+const tcC = _ROWS.find((r) => r.id === TC_VIT_C);
+if (tcC?.verdict !== 'caution' || tcC.formulaId !== TC_VIT_C) {
+  throw new Error('TopCare Vitamin C must be Caution on its own formulaId');
+}
+if (tcC.barcode) {
+  throw new Error('TopCare Vitamin C must not attach the palm-twin UPC');
+}
+if (tcC.inactiveIngredients.some((i) => /palm/i.test(i.name))) {
+  throw new Error('TopCare Vitamin C founder panel has no palm — do not invent it');
+}
+if (!tcC.inactiveIngredients.some((i) => /fruit juice/i.test(i.name) && i.riskLevel === 'limited')) {
+  throw new Error('TopCare Vitamin C must Limited-flag fruit juice concentrate as gummy base');
+}
+if (!tcC.inactiveIngredients.some((i) => /paprika/i.test(i.name) && i.riskLevel === 'cleared')) {
+  throw new Error('TopCare Vitamin C paprika extract as color must be Cleared');
+}
+
+const REUSE_FORMULA_COUNT = _ROWS.filter((r) => r.formulaId === D3_FORMULA).length;
+if (REUSE_FORMULA_COUNT !== 1) {
+  throw new Error('batch69 expected 1 formulaId reuse (MM D3 safflower)');
+}
+
+if (BATCH69_SKIPPED.length !== 10) {
   throw new Error('batch69 skipped-list drift');
 }
 
