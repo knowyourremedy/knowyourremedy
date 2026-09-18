@@ -589,6 +589,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | thymol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | polyacrylate crosspolymer-6 — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | phenethyl alcohol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| phenylethyl alcohol — LOCKED (Sept 18, 2026) | Exact token. Twin of locked phenethyl alcohol. Same substance, both spellings. | Standard alternatives rule. Not Avoid. |
 | acetone — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | chloroxylenol — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | iodine; potassium iodide — LOCKED (Sept 15, 2026) | Exact tokens. | Standard alternatives rule. Not Avoid. |
@@ -637,6 +638,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Silica (oral) — LOCKED (Sept 16, 2026) | Exact token. Same nanoparticle Caution cap as silicon dioxide / Silica. Tap vs topical hydrated silica. | Standard alternatives rule. Not Avoid. |
 | Carob Extract — LOCKED (Sept 16, 2026) | Exact token. Extract. Caution. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
 | edible ink (unspecified) — LOCKED (Sept 16, 2026) | Exact token. Unspecified ink. Caution. Named plant-color / named dye rows are not this string. | Standard alternatives rule. Not Avoid. |
+| white edible ink — LOCKED (Sept 18, 2026) | Exact token. Same class as locked edible ink (unspecified). Caution. Named plant-color inks stay separate. | Standard alternatives rule. Not Avoid. |
+| mica-based pearlescent pigment — LOCKED (Sept 18, 2026) | Exact token. Colorant. Caution. FDA 21 CFR 73.350 ≠ Clean. | Standard alternatives rule. Not Avoid. |
 | sodium pyruvate — LOCKED (Sept 16, 2026) | Exact token. Caution. | Standard alternatives rule. Not Avoid. |
 | Lithium Magnesium Sodium Silicate — LOCKED (Sept 17, 2026) | Exact token. Laponite-class clay thickener. Silicate neighborhood with calcium silicate / magnesium trisilicate. Not the SiO2 nanoparticle cap. Not kaolin (Cleared) and not calcined kaolin. | Standard alternatives rule. Not Avoid. |
 | Sodium Hypochlorite (Trace) — LOCKED (Sept 17, 2026) | Exact token. Residual oxidizer. Caution. FDA wound-wash allow ≠ Clean. Distinct from Cleared Electrolyzed Water (HOCl vehicle). | Standard alternatives rule. Not Avoid. |
