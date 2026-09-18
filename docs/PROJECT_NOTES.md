@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5-c walk lists pasted under #213 recount; KYR5-b STOPPED after PR #213; Job 2 dry; named dry leftovers set-id 97 / in-store 24 / online 13; do not reopen #121–#213)
+Last Updated: September 18, 2026 (KYR5 / KYR5-b / KYR5-c barcode factory DONE after #214; live missing UPC 154 = in-store 112 + online 42; named dry 97 / 24 / 13; Sprouts stash ~55 not in the 154; do not reopen #121–#214)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,8 +56,8 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
-- KYR5-b is the barcode catch-up bot. STOPPED after PR #213. Job 2 dry. Same rules as KYR5. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE after PR #214. Do not reopen #121–#214. Live missing UPC: 154 (in-store 112 walk list on this file + online-only 42; Amazon house is the bulk). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the 154 (no row yet). Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
+- KYR5-b was the barcode catch-up bot. DONE after PR #213. KYR5-c walk lists on this file after #214. Do not reopen #121–#214. Named dry, do not reopen: set-id 97 / in-store 24 / online 13.
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -75,7 +75,7 @@ LAUNCH WEIGHT
 - Row exists = coverage.
 - Barcode / set-id = the scanner works.
 - Carton photo = polish.
-- Live Search: 2203 rows; 2049 with UPC/EAN; 117 set-id only; 37 with neither. KYR5-b named dry leftovers: set-id 97 / in-store 24 / online 13. Forward catalog (KYR3) attaches UPC when the source has it.
+- Search rows missing a UPC: 154. In-store 112 (walk list on this file). Online-only 42 (Amazon house is the bulk). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the 154 (no row yet). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Forward catalog (KYR3) attaches UPC when the source has it.
 
 FOUNDER CALLS — MAJORITY RULE
 - New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
@@ -90,7 +90,7 @@ BRAND-CLOSE WORKFLOW
 - Bot scans the WHOLE in-scope US line first. Questions come here BEFORE the write. One merge should close the brand.
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
 - Missing panel: advisor names the next SKU; Brandon hunts one-by-one. OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
-- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -156,13 +156,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13.
+- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Live missing UPC 154 (in-store 112 / online 42). Named dry, do not reopen: set-id 97 / in-store 24 / online 13.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Live missing UPC 154 (in-store 112 / online 42). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Before proposing a brand, read lib/rating-drafts/ filenames. batch37–64 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -211,7 +211,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Live missing UPC 154 (in-store 112 / online 42). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -236,19 +236,19 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Live missing UPC 154 (in-store 112 / online 42). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
-- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: store generics, then Amazon 3P. Store generics uses the OI + UPC hunt on write. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the 154.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -270,7 +270,7 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - New writes include UPC/set-id when the carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
-- Store PDPs are first-class sources — sprouts.com, Walmart, Target, CVS, Amazon, grocery house sites. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
@@ -559,7 +559,7 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
-KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214. Live missing UPC 154 (in-store 112 / online 42). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 3) Amazon 3P brands not on main
@@ -971,17 +971,16 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — in-store first (Sept 17, 2026)
 ================================================================
-Live recount after PR #213. Search catalog (parked Pedialyte out). A row has UPC/EAN if barcode has 8+ digits. Set-id = DailyMed set-id in sources. Do not invent codes. Do not grade. Unwritten Sprouts house stash ≈55 + 3 refused is excluded (not Search rows).
+Live after #213 / #214. Search catalog (parked Pedialyte out). A row has a UPC if barcode has 8+ digits. Do not invent codes. Do not grade. Walk lists A/B stay on this file — do not paste them again.
 
-KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213.
-Named dry leftovers from KYR5-b: set-id 97 / in-store 24 / online 13.
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#214.
 
-Live Search totals
-- Search rows: 2203
-- Rows with UPC/EAN: 2049
-- Rows with set-id only (no UPC): 117
-- Rows with neither: 37
-- Unique formulaId 1725 vs raw 2203 (478 pack-size clones)
+Live totals
+- Search rows missing a UPC: 154
+- In-store missing UPC: 112 (walk list on this file)
+- Online-only missing UPC: 42 (Amazon house is the bulk)
+- Named dry, do not reopen: set-id 97 / in-store 24 / online 13
+- Unwritten Sprouts house stash ~55 is NOT in the 154 (no row yet)
 
 IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
 Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 3; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
