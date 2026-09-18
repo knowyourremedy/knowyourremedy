@@ -999,6 +999,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'GoodSense Dual Action',
     brand: 'GoodSense',
     category: PAIN_FEVER,
+    barcode: '301135300684',
     formulaId: BC_DUAL_FORMULA,
     audience: ADULT,
     minAge: 12,
@@ -1395,6 +1396,11 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   [ID.doctorsBest]: '753950001954',
   [ID.naturewise]: '858081006196 858081006110 810157850065',
   [ID.midol]: '312843158597 312843555198',
+  // KYR5-b set-id-only chunk 19 — Kroger grocery PDP 36-ct UPC-A for
+  // NDC 0113-5300-68 (setid b117358c). Do not steal GoodSense naproxen
+  // 0113-0901 / 301139490787 (different setid 6bc74cda) or liquid-gel
+  // 0113-0298 / 301130298603 (different setid 3b78c004).
+  [ID.gsDual]: '301135300684',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];
