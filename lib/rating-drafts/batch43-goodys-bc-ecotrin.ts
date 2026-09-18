@@ -466,9 +466,10 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
   }),
   row({
     id: ID.bufferin,
-    productName: 'Bufferin Regular Strength 325 coated',
+    productName: 'Bufferin Regular Strength 325 coated (130-ct)',
     brand: 'Bufferin',
     category: PAIN_FEVER,
+    barcode: '650066002021',
     formulaId: ID.bufferin,
     audience: ADULT,
     minAge: 12,

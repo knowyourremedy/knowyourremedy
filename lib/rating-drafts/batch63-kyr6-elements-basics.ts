@@ -132,6 +132,9 @@ const BATCH63_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basics-probiotic-5b': '195515008112',
   'amazon-basics-fiber-gummies': '195515034500',
   'amazon-basics-melatonin-5-gummies': '195515033381',
+  // KYR5-c barcode-tile chunk 2 — 14 oz jar (72288-247-41), not the
+  // 1.76 oz tube and not petroleum jelly 195515026147.
+  'amazon-basics-advanced-healing-ointment': '195515026093',
 };
 
 const SET = {
@@ -1108,9 +1111,10 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
   }),
   row({
     id: 'amazon-basics-advanced-healing-ointment',
-    productName: 'Amazon Basics Advanced Healing Ointment (72288-247)',
+    productName: 'Amazon Basics Advanced Healing Ointment (72288-247, 14 oz)',
     brand: BASICS,
     category: FIRST_AID,
+    barcode: BATCH63_CATCHUP_BARCODES['amazon-basics-advanced-healing-ointment'],
     formulaId: 'amazon-basics-advanced-healing-ointment',
     audience: ADULT,
     minAge: 0,

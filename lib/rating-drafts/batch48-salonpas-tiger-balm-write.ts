@@ -445,10 +445,11 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
   }),
   mentholMsPatchRow({
     id: ID.salonArthLarge,
-    productName: 'Salonpas Arthritis Pain Patch LARGE',
+    productName: 'Salonpas Arthritis Pain Patch LARGE (9-ct)',
     formulaId: ID.salonArth,
     setid: SET.salonArthLarge,
     ndc: '46581-685',
+    barcode: '346581685091',
     sisName: 'Styrene-isoprene-sryrene block copolymer',
     twinNote: `LARGE pack of the same menthol 3% / methyl salicylate 10% formula — shared formulaId ${ID.salonArth} with the regular Arthritis / Pain Relief patches. OI matches.`,
   }),
@@ -938,6 +939,9 @@ const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.salonArth]: '346581680058',
   // Pain Relief regular 5-ct (not LARGE 346581675092).
   [ID.salonRelief]: '346581670059',
+  // KYR5-c barcode-tile chunk 2 — Arthritis LARGE 9-ct (46581-685).
+  // Do not steal Pain Relief LARGE 346581675092.
+  [ID.salonArthLarge]: '346581685091',
 };
 for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
   const expected = BATCH48_CATCHUP_BARCODES[record.id];
