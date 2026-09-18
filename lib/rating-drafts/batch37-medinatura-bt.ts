@@ -257,6 +257,9 @@ const BATCH37_CATCHUP_BARCODES: Record<string, string> = {
   [ID.triflora]: '308078252971',
   [ID.ssssting]: '308078253909',
   [ID.florasone]: '308078503905',
+  // KYR5-c barcode-tile chunk 1 — Nature's Way brand PDP Other Details
+  // UPC 308078509907 for 1 oz (28 g) cream.
+  [ID.psoriaflora]: '308078509907',
   [ID.coughDay]: '359800162518 359800162525',
   [ID.coughNight]: '359800162785',
   [ID.tReliefXsDrops]: '787647101429',
@@ -1554,8 +1557,9 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
 
   btRow({
     id: ID.psoriaflora,
-    productName: 'B&T Psoriaflora Cream',
+    productName: 'B&T Psoriaflora Cream (1 oz)',
     category: FIRST_AID,
+    barcode: BATCH37_CATCHUP_BARCODES[ID.psoriaflora],
     formulaId: ID.psoriaflora,
     audience: ADULT,
     minAge: 6,

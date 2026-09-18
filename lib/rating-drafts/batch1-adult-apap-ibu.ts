@@ -575,10 +575,13 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
   },
   l484Record({
     id: 'equate-es-pain-reliever',
-    productName: 'Equate Extra Strength Pain Reliever',
+    productName: 'Equate Extra Strength Pain Reliever (100-ct white bottle)',
     brand: 'Equate',
     retailers: ['Walmart'],
     setid: '2ea98f5b-6594-dafb-e063-6394a90a0e3f',
+    // KYR5-c barcode-tile chunk 1 — founder lock white 100-ct bottle.
+    // go-upc: Equate 500 mg Extra Strength Acetaminophen Caplets.
+    barcode: '194346377084',
   }),
   l484Record({
     id: 'kirkland-acetaminophen-es',

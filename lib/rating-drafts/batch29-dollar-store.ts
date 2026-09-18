@@ -478,15 +478,19 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   // setid a95401cc / NDC 55910-746-01. Not mucus-ER sibling
   // 370030100903 (55910-904 / no DXM) and not 1200/60 max.
   'dg-health-mucus-dm-er': '370030100897',
+  // KYR5-c barcode-tile chunk 1 — Dollar General grocery PDP 60-ct
+  // tablets (not ODT 370030169856). Loratadine 10 mg.
+  'dg-health-loratadine-tablets': '370030658145',
 };
 
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
     id: DG_LORATADINE_ID,
-    productName: 'DG Health Allergy Relief (Loratadine 10 mg)',
+    productName: 'DG Health Allergy Relief (Loratadine 10 mg, 60-ct)',
     brand: 'DG Health',
     category: ALLERGY,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-loratadine-tablets'],
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,

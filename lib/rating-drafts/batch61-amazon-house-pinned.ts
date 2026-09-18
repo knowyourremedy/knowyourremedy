@@ -135,6 +135,11 @@ const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-triple-abx-oil-blend': '370030114535',
   'amazon-basic-care-gas-relief-ultra-l657': '195515032964',
   'amazon-basic-care-loperamide-224': '370030146086',
+  // KYR5-c barcode-tile chunk 1 — daytime-only 12 fl oz bottle
+  // (not a day/night combo kit UPC).
+  'amazon-basic-care-daytime-cold-flu-liquid': '370030145188',
+  // Nighttime-only 12 fl oz cherry bottle.
+  'amazon-basic-care-nighttime-cold-flu-liquid': '370030114368',
 };
 
 const METH = {
@@ -630,9 +635,10 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
   }),
   row({
     id: 'amazon-basic-care-daytime-cold-flu-liquid',
-    productName: 'Amazon Basic Care Daytime Cold & Flu Liquid',
+    productName: 'Amazon Basic Care Daytime Cold & Flu Liquid (12 fl oz)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-daytime-cold-flu-liquid'],
     formulaId: 'amazon-basic-care-daytime-cold-flu-liquid',
     audience: ADULT,
     minAge: 12,
@@ -666,9 +672,10 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
   }),
   row({
     id: 'amazon-basic-care-nighttime-cold-flu-liquid',
-    productName: 'Amazon Basic Care Nighttime Cold & Flu Liquid',
+    productName: 'Amazon Basic Care Nighttime Cold & Flu Liquid (12 fl oz)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basic-care-nighttime-cold-flu-liquid'],
     formulaId: 'amazon-basic-care-nighttime-cold-flu-liquid',
     audience: ADULT,
     minAge: 12,

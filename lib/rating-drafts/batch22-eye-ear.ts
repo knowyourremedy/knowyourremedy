@@ -336,7 +336,8 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
   },
   {
     id: EQUATE_EYE_PF,
-    productName: 'Equate Lubricant Eye Drops Preservative-Free',
+    barcode: '681131349888',
+    productName: 'Equate Lubricant Eye Drops Preservative-Free (25-ct single-use vials)',
     brand: 'Equate',
     category: ALLERGY,
     formulaId: EQUATE_EYE_PF,

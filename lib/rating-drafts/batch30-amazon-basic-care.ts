@@ -280,6 +280,10 @@ const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-esomeprazole': '195515047890',
   'amazon-basic-care-triple-pain-ointment': '370030145300',
   'amazon-basic-care-hydrocortisone-bht': '370030145683',
+  // KYR5-c barcode-tile chunk 1
+  'amazon-basic-care-loratadine-l612': '370030114221',
+  'amazon-basic-care-cetirizine-coated': '370030114108',
+  'amazon-basic-care-ibuprofen-liqui-gels': '195515012874',
 };
 
 const METH = {
@@ -483,9 +487,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
     id: L612_ID,
-    productName: 'Amazon Basic Care Allergy Relief (Loratadine 10 mg, L612)',
+    productName: 'Amazon Basic Care Allergy Relief (Loratadine 10 mg, L612, 300-ct)',
     brand: BASIC_CARE,
     category: ALLERGY,
+    barcode: BATCH30_CATCHUP_BARCODES[L612_ID],
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,
@@ -1004,9 +1009,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   // ── Avoid (reuse) ────────────────────────────────────────
   {
     id: 'amazon-basic-care-cetirizine-coated',
-    productName: 'Amazon Basic Care All Day Allergy (Cetirizine 10 mg, coated)',
+    productName: 'Amazon Basic Care All Day Allergy (Cetirizine 10 mg, coated, 300-ct)',
     brand: BASIC_CARE,
     category: ALLERGY,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-cetirizine-coated'],
     formulaId: COATED_CETIRIZINE,
     audience: ADULT,
     minAge: 6,
@@ -1335,9 +1341,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   },
   {
     id: 'amazon-basic-care-ibuprofen-liqui-gels',
-    productName: 'Amazon Basic Care Ibuprofen Liquid Gels 200 mg',
+    productName: 'Amazon Basic Care Ibuprofen Liquid Gels 200 mg (300-ct)',
     brand: BASIC_CARE,
     category: PAIN_FEVER,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-ibuprofen-liqui-gels'],
     formulaId: 'amazon-basic-care-ibuprofen-liqui-gels',
     audience: ADULT,
     minAge: 12,

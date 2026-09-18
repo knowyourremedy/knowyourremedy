@@ -159,9 +159,10 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
     id: MM_LORATADINE_ID,
-    productName: "Member's Mark Allergy Relief (Loratadine 10 mg)",
+    productName: "Member's Mark Allergy Relief (Loratadine 10 mg, 200-ct)",
     brand: "Member's Mark",
     category: ALLERGY,
+    barcode: '078742091426',
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,

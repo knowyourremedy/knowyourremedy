@@ -535,9 +535,10 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
   }),
   row({
     id: ID.ha2z382,
-    productName: 'HealthA2Z Ibuprofen 200 mg',
+    productName: 'HealthA2Z Ibuprofen 200 mg (500-ct orange coated caplets)',
     brand: 'HealthA2Z',
     category: PAIN_FEVER,
+    barcode: '369168466050',
     formulaId: ID.ha2z382,
     audience: ADULT,
     minAge: 12,
@@ -1089,9 +1090,10 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
   }),
   row({
     id: ID.gsKidsChew,
-    productName: 'GoodSense Children’s Ibuprofen 100 mg Chewable',
+    productName: 'GoodSense Children’s Ibuprofen 100 mg Chewable (24-ct)',
     brand: 'GoodSense',
     category: PAIN_FEVER,
+    barcode: '370030146918',
     formulaId: ID.gsKidsChew,
     audience: KIDS,
     minAge: 2,
@@ -1401,6 +1403,12 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   // 0113-0901 / 301139490787 (different setid 6bc74cda) or liquid-gel
   // 0113-0298 / 301130298603 (different setid 3b78c004).
   [ID.gsDual]: '301135300684',
+  // KYR5-c barcode-tile chunk 1 — HealthA2Z brand PDP prints UPC
+  // 369168466050 on orange 500-ct coated caplets (Yellow #6).
+  [ID.ha2z382]: '369168466050',
+  // GoodSense Children's IBU 100 mg orange chewable 24-ct
+  // (370030 GS1, not an 0113 NDC pad).
+  [ID.gsKidsChew]: '370030146918',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];

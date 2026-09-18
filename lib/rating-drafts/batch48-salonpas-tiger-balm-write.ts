@@ -425,19 +425,21 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
   }),
   mentholMsPatchRow({
     id: ID.salonArth,
-    productName: 'Salonpas Arthritis Pain Patch',
+    productName: 'Salonpas Arthritis Pain Patch (5-ct)',
     formulaId: ID.salonArth,
     setid: SET.salonArth,
     ndc: '46581-680',
+    barcode: '346581680058',
     sisName: 'Styrene-isoprene-sryrene block copolymer',
     twinNote: `DailyMed OI + actives (menthol 3% + methyl salicylate 10%) match Salonpas Pain Relief Patch (setid ${SET.salonRelief}) and both LARGE packs — shared formulaId ${ID.salonArth}, four Search rows. Distinct from Salonpas Pain Relieving Patch already on main (that SPL adds camphor 3.1% / menthol 6.0% / perfume / terpene resin / titanium dioxide).`,
   }),
   mentholMsPatchRow({
     id: ID.salonRelief,
-    productName: 'Salonpas Pain Relief Patch',
+    productName: 'Salonpas Pain Relief Patch (5-ct)',
     formulaId: ID.salonArth,
     setid: SET.salonRelief,
     ndc: '46581-670',
+    barcode: '346581670059',
     sisName: 'Styrene-isoprene-styrene block copolymer',
     twinNote: `OI + actives match Salonpas Arthritis Pain Patch (setid ${SET.salonArth}) — one formulaId, four Search rows. SPL spells SIS correctly (Arthritis SPL has “sryrene”). Distinct from batch-47 Pain Relieving Patch (camphor + TiO2).`,
   }),
@@ -931,6 +933,11 @@ const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.salonGelHot]: '346581870060',
   [ID.salonCapsicum]: '346581700039',
   [ID.salonLidoCream]: '355328902032',
+  // KYR5-c barcode-tile chunk 1 — Hisamitsu 46581 family.
+  // Arthritis regular 5-ct (not LARGE 46581-685).
+  [ID.salonArth]: '346581680058',
+  // Pain Relief regular 5-ct (not LARGE 346581675092).
+  [ID.salonRelief]: '346581670059',
 };
 for (const record of BATCH48_SALONPAS_TIGER_BALM_WRITE) {
   const expected = BATCH48_CATCHUP_BARCODES[record.id];

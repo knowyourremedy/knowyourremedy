@@ -674,9 +674,10 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
   }),
   row({
     id: ID.advilJrCoated,
-    productName: 'Junior Strength Advil Coated Tablets',
+    productName: 'Junior Strength Advil Coated Tablets (24-ct)',
     brand: 'Advil',
     category: PAIN_FEVER,
+    barcode: '305730175111',
     formulaId: ID.advilJrCoated,
     audience: KIDS,
     minAge: 6,
@@ -819,9 +820,10 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
   }),
   row({
     id: ID.advilFilmMenstrual,
-    productName: 'Advil Film-Coated / Menstrual Pain (ibuprofen sodium)',
+    productName: 'Advil Film-Coated / Menstrual Pain (ibuprofen sodium, 20-ct)',
     brand: 'Advil',
     category: PAIN_FEVER,
+    barcode: '305730230209',
     formulaId: ID.advilFilmMenstrual,
     audience: ADULT,
     minAge: 12,
