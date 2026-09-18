@@ -757,6 +757,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     productName: 'Tiger Balm Pain Relieving Patch (regular hydrogel)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    barcode: '039278322002',
     formulaId: ID.tbRegHydro,
     audience: ADULT,
     minAge: 12,
@@ -925,6 +926,7 @@ if (BATCH48_SALONPAS_TIGER_BALM_WRITE.some((record) => record.category !== PAIN_
 const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbHydroLarge]: '039278323009',
   [ID.tbArthritis]: '039278422047',
+  [ID.tbRegHydro]: '039278322002',
   [ID.salonReliefLarge]: '346581675092',
   [ID.salonGelHot]: '346581870060',
   [ID.salonCapsicum]: '346581700039',
