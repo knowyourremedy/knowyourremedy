@@ -467,6 +467,11 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   // mint 370030169818). Do not steal dyed+talc IBU 370030015290
   // (Red 40 / Yellow 6 / talc carton ≠ iron-oxide 55910-604).
   'dg-health-omeprazole-dr': '370030658336',
+  // KYR5-b set-id-only chunk 22 — Dollar General grocery PDP 100-ct
+  // UPC-A 370030659081. Carton Drug Facts / imprint L484 match
+  // DailyMed setid 9783cf37 / NDC 55910-701-78 (not dyed DG APAP
+  // 55910-506). 24-ct 55910-701-62 had no live grocery PDP.
+  'rexall-pain-relief-apap': '370030659081',
 };
 
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
@@ -643,6 +648,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'Rexall Pain Relief (Acetaminophen 500 mg)',
     brand: 'Rexall',
     category: PAIN_FEVER,
+    barcode: BATCH29_CATCHUP_BARCODES['rexall-pain-relief-apap'],
     formulaId: L484_FORMULA,
     audience: ADULT,
     minAge: 12,
