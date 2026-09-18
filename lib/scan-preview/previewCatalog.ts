@@ -267,6 +267,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Official boironusa pack is lemon chewable tubes; draft is the
   // unflavored meltaway. DailyMed faces for this setid are PM / foil.
   'boiron-arnicare-leg-cramps': brandMark('boiron-mark.png'),
+  // Attempted P&F leftovers — no matching pack face. Per-id only.
+  // Aspercreme NF: brand-site 05742 carton already wired to the fragrance SKU;
+  // 100 g PDP carton does not name NF vs fragrance.
+  'aspercreme-arthritis-pain-gel': brandMark('aspercreme-mark.png'),
+  // Salonpas diclofenac gel: not on salonpas.us; DailyMed is instructional art.
+  'salonpas-diclofenac-arthritis-pain-gel': brandMark('salonpas-mark.png'),
+  // Icy Hot liquid / Performance / Revive / vanishing: brand site has no
+  // matching carton (roll-on ≠ liquid; Performance / vanishing / Revive
+  // packs not on icyhot.com). Per-id so other Icy Hot SKUs stay letters.
+  'icy-hot-lidocaine-no-mess-liquid': brandMark('icy-hot-mark.png'),
+  'icy-hot-performance-cream': brandMark('icy-hot-mark.png'),
+  'icy-hot-performance-no-mess-cream': brandMark('icy-hot-mark.png'),
+  'icy-hot-revive-recovery-roll-on': brandMark('icy-hot-mark.png'),
+  'icy-hot-vanishing-scent-gel': brandMark('icy-hot-mark.png'),
+  // Tiger Balm siblings: Active rub/gel have no distinct official carton;
+  // Neck & Shoulder non-vanishing row is not the current vanishing-scent pack.
+  'tiger-balm-active-muscle-rub': brandMark('tiger-balm-mark.png'),
+  'tiger-balm-active-muscle-gel': brandMark('tiger-balm-mark.png'),
+  'tiger-balm-neck-shoulder-rub': brandMark('tiger-balm-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -782,6 +801,22 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'salonpas-lidocaine-plus-liquid': catalogShot('salonpas-lidocaine-plus-liquid.jpg'),
   'aspercreme-original-cream': catalogShot('aspercreme-original-cream.jpg'),
   'aspercreme-professional-cream': catalogShot('aspercreme-professional-cream.jpg'),
+  'tiger-balm-liniment': catalogShot('tiger-balm-liniment.jpg'),
+  'icy-hot-original-cream': catalogShot('icy-hot-original-cream.jpg'),
+  'icy-hot-advanced-pain-relief-cream': catalogShot('icy-hot-advanced-pain-relief-cream.jpg'),
+  'icy-hot-pro-no-mess': catalogShot('icy-hot-pro-no-mess.jpg'),
+  'icy-hot-nighttime-recovery-roll-on': catalogShot('icy-hot-nighttime-recovery-roll-on.jpg'),
+  'tiger-balm-muscle-rub': catalogShot('tiger-balm-muscle-rub.jpg'),
+  'tiger-balm-pain-relieving-muscle-spray': catalogShot('tiger-balm-pain-relieving-muscle-spray.jpg'),
+  'tiger-balm-red-extra-strength': catalogShot('tiger-balm-red-extra-strength.jpg'),
+  'tiger-balm-ultra-strength': catalogShot('tiger-balm-ultra-strength.jpg'),
+  'tiger-balm-white-regular-strength': catalogShot('tiger-balm-white-regular-strength.jpg'),
+  'tiger-balm-neck-shoulder-vanishing-scent': catalogShot('tiger-balm-neck-shoulder-vanishing-scent.jpg'),
+  'icy-hot-pro-massaging-balm': catalogShot('icy-hot-pro-massaging-balm.jpg'),
+  'icy-hot-lidocaine-no-mess-roll-on': catalogShot('icy-hot-lidocaine-no-mess-roll-on.jpg'),
+  'icy-hot-original-no-mess-roll-on': catalogShot('icy-hot-original-no-mess-roll-on.jpg'),
+  'icy-hot-max-lidocaine-cream': catalogShot('icy-hot-max-lidocaine-cream.jpg'),
+  'aspercreme-lidocaine-eucalyptus-cream': catalogShot('aspercreme-lidocaine-eucalyptus-cream.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -868,8 +903,18 @@ assertBrandMark('motrin-children-chew-dyed', 'Motrin', 'motrin-mark.png');
 assertBrandMark('motrin-infants-liquid-dyed', 'Motrin', 'motrin-mark.png');
 assertBrandMark('topcare-ibuprofen-liquid-gels', 'TopCare', 'topcare-mark.png');
 assertBrandMark('boiron-arnicare-leg-cramps', 'Boiron', 'boiron-mark.png');
+assertBrandMark('aspercreme-arthritis-pain-gel', 'Aspercreme', 'aspercreme-mark.png');
+assertBrandMark('salonpas-diclofenac-arthritis-pain-gel', 'Salonpas', 'salonpas-mark.png');
+assertBrandMark('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('icy-hot-performance-cream', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('icy-hot-performance-no-mess-cream', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('icy-hot-revive-recovery-roll-on', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('icy-hot-vanishing-scent-gel', 'Icy Hot', 'icy-hot-mark.png');
+assertBrandMark('tiger-balm-active-muscle-rub', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark('tiger-balm-active-muscle-gel', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark('tiger-balm-neck-shoulder-rub', 'Tiger Balm', 'tiger-balm-mark.png');
 
-// Batch 44 list-2 pain rubs — letter tiles only. No photos. No brand marks.
+// Remaining later-catalog P&F leftovers stay letters until attempted.
 
 function assertLetterOnly(id: string, brand: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -952,38 +997,12 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
-assertLetterOnly('aspercreme-arthritis-pain-gel', 'Aspercreme');
-assertLetterOnly('salonpas-diclofenac-arthritis-pain-gel', 'Salonpas');
-assertLetterOnly('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot');
-assertLetterOnly('tiger-balm-liniment', 'Tiger Balm');
-assertLetterOnly('icy-hot-original-cream', 'Icy Hot');
-assertLetterOnly('icy-hot-performance-cream', 'Icy Hot');
-assertLetterOnly('icy-hot-performance-no-mess-cream', 'Icy Hot');
-assertLetterOnly('icy-hot-advanced-pain-relief-cream', 'Icy Hot');
-assertLetterOnly('icy-hot-pro-no-mess', 'Icy Hot');
-assertLetterOnly('icy-hot-nighttime-recovery-roll-on', 'Icy Hot');
-assertLetterOnly('icy-hot-revive-recovery-roll-on', 'Icy Hot');
-assertLetterOnly('icy-hot-vanishing-scent-gel', 'Icy Hot');
-assertLetterOnly('tiger-balm-muscle-rub', 'Tiger Balm');
-assertLetterOnly('tiger-balm-active-muscle-rub', 'Tiger Balm');
-assertLetterOnly('tiger-balm-neck-shoulder-rub', 'Tiger Balm');
-assertLetterOnly('tiger-balm-active-muscle-gel', 'Tiger Balm');
-assertLetterOnly('tiger-balm-pain-relieving-muscle-spray', 'Tiger Balm');
-assertLetterOnly('tiger-balm-red-extra-strength', 'Tiger Balm');
-assertLetterOnly('tiger-balm-ultra-strength', 'Tiger Balm');
-assertLetterOnly('tiger-balm-white-regular-strength', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-hydrogel-patch', 'Tiger Balm');
-assertLetterOnly('tiger-balm-neck-shoulder-vanishing-scent', 'Tiger Balm');
-assertLetterOnly('icy-hot-pro-massaging-balm', 'Icy Hot');
 assertLetterOnly('icy-hot-lidocaine-large-patch', 'Icy Hot');
 assertLetterOnly('icy-hot-pro-pain-relief-patch', 'Icy Hot');
-assertLetterOnly('icy-hot-lidocaine-no-mess-roll-on', 'Icy Hot');
-assertLetterOnly('icy-hot-original-no-mess-roll-on', 'Icy Hot');
-assertLetterOnly('icy-hot-max-lidocaine-cream', 'Icy Hot');
 assertLetterOnly('icy-hot-original-menthol-patch', 'Icy Hot');
 assertLetterOnly('icy-hot-pro-microbeads-cream', 'Icy Hot');
-assertLetterOnly('aspercreme-lidocaine-eucalyptus-cream', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-foot-2in1', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-patch', 'Aspercreme');
@@ -1506,6 +1525,38 @@ assertExactCarton('icy-hot-original-balm', 'Icy Hot', 'icy-hot-original-balm.jpg
 assertExactCarton('salonpas-lidocaine-plus-liquid', 'Salonpas', 'salonpas-lidocaine-plus-liquid.jpg');
 assertExactCarton('aspercreme-original-cream', 'Aspercreme', 'aspercreme-original-cream.jpg');
 assertExactCarton('aspercreme-professional-cream', 'Aspercreme', 'aspercreme-professional-cream.jpg');
+assertExactCarton('tiger-balm-liniment', 'Tiger Balm', 'tiger-balm-liniment.jpg');
+assertExactCarton('icy-hot-original-cream', 'Icy Hot', 'icy-hot-original-cream.jpg');
+assertExactCarton('icy-hot-advanced-pain-relief-cream', 'Icy Hot', 'icy-hot-advanced-pain-relief-cream.jpg');
+assertExactCarton('icy-hot-pro-no-mess', 'Icy Hot', 'icy-hot-pro-no-mess.jpg');
+assertExactCarton('icy-hot-nighttime-recovery-roll-on', 'Icy Hot', 'icy-hot-nighttime-recovery-roll-on.jpg');
+assertExactCarton('tiger-balm-muscle-rub', 'Tiger Balm', 'tiger-balm-muscle-rub.jpg');
+assertExactCarton(
+  'tiger-balm-pain-relieving-muscle-spray',
+  'Tiger Balm',
+  'tiger-balm-pain-relieving-muscle-spray.jpg',
+);
+assertExactCarton('tiger-balm-red-extra-strength', 'Tiger Balm', 'tiger-balm-red-extra-strength.jpg');
+assertExactCarton('tiger-balm-ultra-strength', 'Tiger Balm', 'tiger-balm-ultra-strength.jpg');
+assertExactCarton(
+  'tiger-balm-white-regular-strength',
+  'Tiger Balm',
+  'tiger-balm-white-regular-strength.jpg',
+);
+assertExactCarton(
+  'tiger-balm-neck-shoulder-vanishing-scent',
+  'Tiger Balm',
+  'tiger-balm-neck-shoulder-vanishing-scent.jpg',
+);
+assertExactCarton('icy-hot-pro-massaging-balm', 'Icy Hot', 'icy-hot-pro-massaging-balm.jpg');
+assertExactCarton('icy-hot-lidocaine-no-mess-roll-on', 'Icy Hot', 'icy-hot-lidocaine-no-mess-roll-on.jpg');
+assertExactCarton('icy-hot-original-no-mess-roll-on', 'Icy Hot', 'icy-hot-original-no-mess-roll-on.jpg');
+assertExactCarton('icy-hot-max-lidocaine-cream', 'Icy Hot', 'icy-hot-max-lidocaine-cream.jpg');
+assertExactCarton(
+  'aspercreme-lidocaine-eucalyptus-cream',
+  'Aspercreme',
+  'aspercreme-lidocaine-eucalyptus-cream.jpg',
+);
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
