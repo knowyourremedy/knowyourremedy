@@ -472,6 +472,12 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   // DailyMed setid 9783cf37 / NDC 55910-701-78 (not dyed DG APAP
   // 55910-506). 24-ct 55910-701-62 had no live grocery PDP.
   'rexall-pain-relief-apap': '370030659081',
+  // KYR5-b set-id-only chunk 23 — Dollar General grocery PDP 20-ct
+  // UPC-A 370030100897. Carton Drug Facts print D&C yellow #10
+  // aluminum lake + yellow ER tablet; actives 600/30 match DailyMed
+  // setid a95401cc / NDC 55910-746-01. Not mucus-ER sibling
+  // 370030100903 (55910-904 / no DXM) and not 1200/60 max.
+  'dg-health-mucus-dm-er': '370030100897',
 };
 
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
@@ -877,6 +883,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Mucus-DM ER (Guaifenesin 600 mg / DXM 30 mg)',
     brand: 'DG Health',
     category: COLD_FLU,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-mucus-dm-er'],
     formulaId: MUCUS_DM_YELLOW10,
     audience: ADULT,
     minAge: 12,
