@@ -181,7 +181,7 @@ Next session
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–66 already exist on main; batch67 is open PR #229 (do not edit); batch68 is this founder-panel write.
+- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–66 already exist on main; batch67 is open PR #229 (do not edit); batch68 is on main; batch69 is this store-panel write.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -612,6 +612,7 @@ Completed (main, unverified drafts unless noted):
 - Store generics hole punch — Sept 18, 2026 — batch65-kyr6-store-generics.ts. Search 20 new (Clean 3 / Caution 9 / Avoid 8). NEW 20 / REUSE-formula 10 / SKIPPED 16. §5 Caution exacts already on main (white edible ink / phenylethyl alcohol / mica-based pearlescent pigment) — not restamped. Do not reopen equate-es-pain-reliever 100-ct white / prenatal coated Walgreens / Amazon 30/54/56/61–63 / Thrive 27/52/59/60/64.
 - Store generics held-row write — Sept 18, 2026 — batch66-kyr6-held-rows.ts. Search 6 new (Clean 3 / Caution 2 / Avoid 1). NEW 6 / REUSE-formula 3 / SKIPPED 0. Cetyl alcohol used as already-Cleared Sept 15 (no new §5 stamp). Reuse: Kirkland doxylamine → `unisom-sleeptabs-doxylamine`; TopCare Swimmer’s Ear → `swim-ear`; Walgreens PM ointment → `store-pm-ointment-lanolin-alcohol`. Do not reopen batch65 20/10 or the Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts / Nice! / MM conflicted / Kirkland guaifenesin-only skip pile.
 - KYR6 founder-panel write — Sept 18, 2026 — batch68-kyr6-founder-panels.ts. Search 5 new (Clean 1 / Caution 4 / Avoid 0). NEW 5 / REUSE-formula 1 / SKIPPED Assured Headache PM (already on main, live DF complete). up&up PM reuses `store-pm-ointment-lanolin-alcohol`. Kirkland Wild Alaskan FO UPC 096619653539 — not the porcine clear twin, not enteric. Do not reopen 65/66/67.
+- KYR6 store-panel write — Sept 18, 2026 — batch69-kyr6-store-panels.ts. Search 4 new (Clean 1 / Caution 1 / Avoid 2). NEW 4 / REUSE-formula 2 / SKIPPED already-on-main Equate Complete Multi + Kirkland D3 + Kirkland porcine FO + Kirkland Mucus DM Max ER; Equate D3 no_OI; TopCare Vitamin C conflicted palm. REFUSED §5: Kirkland Krill (Ethyl Vanillin); TopCare adult + Women’s gummies (Spirulina); TopCare Men’s gummies (Hibiscus Concentrate). MM D3 50 mcg shares `members-mark-d3-softgels-safflower` (do not edit batch67 / PR #229). up&up ES APAP PM 100-ct reuses `dg-health-pain-relief-pm`. Do not reopen 65/66/68 or PR #230.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
