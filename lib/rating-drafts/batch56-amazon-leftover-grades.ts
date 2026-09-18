@@ -453,6 +453,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: "HealthA2Z Children's Acetaminophen 160 mg Chewable",
     brand: 'HealthA2Z',
     category: PAIN_FEVER,
+    barcode: '369168440609 369168440029',
     formulaId: ID.ha2zKids,
     audience: KIDS,
     minAge: 2,
@@ -746,6 +747,7 @@ const BATCH56_CATCHUP_BARCODES: Record<string, string> = {
   [ID.mentholatum]: '310742000115 310742000122',
   [ID.sumifun]: '6942488003446',
   [ID.ausDream]: '694603000019 694603000088',
+  [ID.ha2zKids]: '369168440609 369168440029',
 };
 for (const record of BATCH56_AMAZON_LEFTOVER_GRADES) {
   const expected = BATCH56_CATCHUP_BARCODES[record.id];

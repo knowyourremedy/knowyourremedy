@@ -289,6 +289,7 @@ const BATCH57_CATCHUP_BARCODES: Record<string, string> = {
   [ID.turmeric]: '842379103902',
   [ID.topricin]: '609863047049',
   [ID.jointflex]: '372917000030',
+  [ID.ha2zNap]: '369168394179',
 };
 
 const CITE = {
@@ -820,6 +821,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'HealthA2Z Naproxen Sodium 220 mg (300-ct)',
     brand: 'HealthA2Z',
     category: PAIN_FEVER,
+    barcode: BATCH57_CATCHUP_BARCODES[ID.ha2zNap],
     formulaId: ID.ha2zNap,
     audience: ADULT,
     minAge: 12,
