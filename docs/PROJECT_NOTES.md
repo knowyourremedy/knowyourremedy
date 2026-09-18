@@ -94,6 +94,21 @@ BRAND-CLOSE WORKFLOW
 - Brand official site is required before DRY.
 - Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
 - Do not call a row dry if the brand site has a carton photo with bars.
+- Club / house site + every carousel tile required before DRY.
+- Member’s Mark → samsclub.com
+- Kirkland → costco.com
+- Equate → walmart.com
+- Walgreens / Nice! → walgreens.com
+- up&up → target.com
+- TopCare → retailer or topcare PDP
+- HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
+- Founder-logged (ready to write, do not re-ask):
+- MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
+- MM Women’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
+- MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
+- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -248,6 +263,21 @@ CATALOG STRATEGY
 - Brand official site is required before DRY.
 - Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
 - Do not call a row dry if the brand site has a carton photo with bars.
+- Club / house site + every carousel tile required before DRY.
+- Member’s Mark → samsclub.com
+- Kirkland → costco.com
+- Equate → walmart.com
+- Walgreens / Nice! → walgreens.com
+- up&up → target.com
+- TopCare → retailer or topcare PDP
+- HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
+- Founder-logged (ready to write, do not re-ask):
+- MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
+- MM Women’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
+- MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
+- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
@@ -280,6 +310,21 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - Brand official site is required before DRY.
 - Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
 - Do not call a row dry if the brand site has a carton photo with bars.
+- Club / house site + every carousel tile required before DRY.
+- Member’s Mark → samsclub.com
+- Kirkland → costco.com
+- Equate → walmart.com
+- Walgreens / Nice! → walgreens.com
+- up&up → target.com
+- TopCare → retailer or topcare PDP
+- HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
+- Founder-logged (ready to write, do not re-ask):
+- MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
+- MM Women’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
+- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
+- MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
+- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
