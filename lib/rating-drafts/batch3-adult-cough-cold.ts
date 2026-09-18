@@ -144,6 +144,9 @@ function homeopathicFields() {
 const BATCH3_CATCHUP_BARCODES: Record<string, string> = {
   'equate-daytime-cold-flu': '681131036870',
   'theraflu-severe-cold-day-powder': '300670007119',
+  // KYR5-c barcode-tile chunk 3 — adult ColdCalm tablets (Walmart /
+  // upcitemdb 306969048290). Do not steal kids 60-ct 306962607609.
+  'coldcalm-meltaways': '306969048290',
 };
 
 export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
@@ -153,6 +156,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'Boiron Coldcalm Meltaway Tablets',
     brand: 'Boiron',
     category: COLD_FLU,
+    barcode: BATCH3_CATCHUP_BARCODES['coldcalm-meltaways'],
     formulaId: 'boiron-coldcalm-meltaways',
     audience: ADULT,
     minAge: 4,
