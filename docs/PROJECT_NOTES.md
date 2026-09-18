@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5 / KYR5-b / KYR5-c barcode factory DONE after #214; live missing UPC 154 = in-store 112 + online 42; named dry 97 / 24 / 13; Sprouts stash ~55 not in the 154; do not reopen #121–#214)
+Last Updated: September 18, 2026 (in-store 112 walk list enriched from live Search row: brand / name / form / strength / count or count unknown / coat-color if on row; DRY tags kept; no barcodes; KYR5 factory DONE; do not reopen #121–#214)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -985,160 +985,160 @@ Live totals
 IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
 Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 3; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
 
-Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen)
+Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen). Fields from the live Search row only: brand — product name — form — strength — pack count (count unknown if the row has no count) — coat/color if the row has it. Do not invent a count. No barcodes.
 Boiron (23)
-- Boiron Abies Canadensis Pellets
-- Boiron Ailanthus Glandulosus Pellets
-- Boiron Alfalfa Pellets
-- Boiron Arnicare Cream (DailyMed PEG panel)
-- Boiron Cheiranthus Cheiri Pellets
-- Boiron Chenopodium Anthelminticum Pellets
-- Boiron Chestal Cold & Cough Honey
-- Boiron Coldcalm Meltaway Tablets
-- Boiron Corallium Rubrum Pellets
-- Boiron Cyclameneur Pellets
-- Boiron Fumaria Officinalis Pellets
-- Boiron Gallicum Acidum Pellets
-- Boiron Harpagophytum Pellets
-- Boiron Luffa Operculata Pellets
-- Boiron Melilotus Officinalis Pellets
-- Boiron Menyanthes Trifoliata Pellets
-- Boiron Polygonum Punctatum Pellets
-- Boiron Sambucus nigra 6C Pellets
-- Boiron Saponaria Officinalis Pellets
-- Boiron Sempervivum Tectorum Pellets
-- Boiron Trillium Pendulum Pellets
-- Boiron Venus Mercenaria Pellets
-- Boiron Viola Tricolor Pellets
+- Boiron — Boiron Abies Canadensis Pellets — pellets — Abies Canadensis potency on tube — count unknown
+- Boiron — Boiron Ailanthus Glandulosus Pellets — pellets — Ailanthus Glandulosus potency on tube — count unknown
+- Boiron — Boiron Alfalfa Pellets — pellets — Alfalfa potency on tube — count unknown
+- Boiron — Boiron Arnicare Cream (DailyMed PEG panel) — cream — Arnica montana 1X HPUS 7% — count unknown
+- Boiron — Boiron Cheiranthus Cheiri Pellets — pellets — Cheiranthus Cheiri potency on tube — count unknown
+- Boiron — Boiron Chenopodium Anthelminticum Pellets — pellets — Chenopodium Anthelminticum potency on tube — count unknown
+- Boiron — Boiron Chestal Cold & Cough Honey — syrup — Dulcamara 5C HPUS; Ferrum phosphoricum 9C HPUS; Hydrastis canadensis 9C HPUS; Kali bichromicum 9C HPUS; Nux vomica 9C HPUS — count unknown
+- Boiron — Boiron Coldcalm Meltaway Tablets — meltaway tablet — Allium cepa 3C HPUS; Apis mellifica 6C HPUS; Belladonna 6C HPUS; Eupatorium perfoliatum 3C HPUS; Gelsemium sempervirens 6C HPUS; Kali bichromicum 6C HPUS; Nux vomica 3C HPUS; Phytolacca decandra 6C HPUS; Pulsatilla 6C HPUS — count unknown
+- Boiron — Boiron Corallium Rubrum Pellets — pellets — Corallium Rubrum potency on tube — count unknown
+- Boiron — Boiron Cyclameneur Pellets — pellets — Cyclameneur potency on tube — count unknown
+- Boiron — Boiron Fumaria Officinalis Pellets — pellets — Fumaria Officinalis potency on tube — count unknown
+- Boiron — Boiron Gallicum Acidum Pellets — pellets — Gallicum Acidum potency on tube — count unknown
+- Boiron — Boiron Harpagophytum Pellets — pellets — Harpagophytum potency on tube — count unknown
+- Boiron — Boiron Luffa Operculata Pellets — pellets — Luffa Operculata potency on tube — count unknown
+- Boiron — Boiron Melilotus Officinalis Pellets — pellets — Melilotus Officinalis potency on tube — count unknown
+- Boiron — Boiron Menyanthes Trifoliata Pellets — pellets — Menyanthes Trifoliata potency on tube — count unknown
+- Boiron — Boiron Polygonum Punctatum Pellets — pellets — Polygonum Punctatum potency on tube — count unknown
+- Boiron — Boiron Sambucus nigra 6C Pellets — pellets — Sambucus nigra 6C potency on tube — count unknown
+- Boiron — Boiron Saponaria Officinalis Pellets — pellets — Saponaria Officinalis potency on tube — count unknown
+- Boiron — Boiron Sempervivum Tectorum Pellets — pellets — Sempervivum Tectorum potency on tube — count unknown
+- Boiron — Boiron Trillium Pendulum Pellets — pellets — Trillium Pendulum potency on tube — count unknown
+- Boiron — Boiron Venus Mercenaria Pellets — pellets — Venus Mercenaria potency on tube — count unknown
+- Boiron — Boiron Viola Tricolor Pellets — pellets — Viola Tricolor potency on tube — count unknown
 Biofreeze (6)
-- Biofreeze Pain Relief Spray 10.5% (denatonium)
-- Biofreeze Pain Relieving Gel 3.5% (paraben SPL)
-- Biofreeze Pain Relieving Spray 10%
-- Biofreeze Professional Colorless Roll-On 5%
-- Biofreeze Professional Spray 10.5% (denatonium aerosol)
-- Biofreeze Professional Spray 13%
+- Biofreeze — Biofreeze Pain Relief Spray 10.5% (denatonium) — spray — Menthol 10.5% — count unknown
+- Biofreeze — Biofreeze Pain Relieving Gel 3.5% (paraben SPL) — gel — Menthol 3.5% — count unknown
+- Biofreeze — Biofreeze Pain Relieving Spray 10% — spray — Menthol 10% — count unknown
+- Biofreeze — Biofreeze Professional Colorless Roll-On 5% — roll-on — Menthol 5% — count unknown — colorless
+- Biofreeze — Biofreeze Professional Spray 10.5% (denatonium aerosol) — spray — Menthol 10.5% — count unknown
+- Biofreeze — Biofreeze Professional Spray 13% — spray — Menthol 13% — count unknown
 Equate (6)
-- Equate Children's Melatonin Liquid DRY
-- Equate Children's Multi-Symptom Cold Daytime & Nighttime
-- Equate Children's Multi-Symptom Cold Nighttime
-- Equate Dye-Free Children's Allergy Chews (Diphenhydramine)
-- Equate Extra Strength Pain Reliever
-- Equate Lubricant Eye Drops Preservative-Free
+- Equate — Equate Children's Melatonin Liquid — liquid — Melatonin 1mg — count unknown DRY
+- Equate — Equate Children's Multi-Symptom Cold Daytime & Nighttime — liquid kit — Dextromethorphan HBr (day) 5mg / 5mL; Guaifenesin (day) 100mg / 5mL; Phenylephrine HCl (day) 2.5mg / 5mL — count unknown
+- Equate — Equate Children's Multi-Symptom Cold Nighttime — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL; Phenylephrine HCl 5mg / 10mL — count unknown
+- Equate — Equate Dye-Free Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown — dye-free
+- Equate — Equate Extra Strength Pain Reliever — caplet — Acetaminophen 500mg — count unknown
+- Equate — Equate Lubricant Eye Drops Preservative-Free — single-use eye drop — Carboxymethylcellulose sodium 0.5% — count unknown
 Tiger Balm (6)
-- Tiger Balm Muscle Rub
-- Tiger Balm Neck & Shoulder Rub
-- Tiger Balm Pain Relieving Cool Patch
-- Tiger Balm Pain Relieving Hydrogel Patch
-- Tiger Balm Pain Relieving Patch
-- Tiger Balm Pain Relieving Patch (wider hydrogel)
+- Tiger Balm — Tiger Balm Muscle Rub — cream — Methyl salicylate 15%; Menthol 5%; Camphor (synthetic) 3% — count unknown
+- Tiger Balm — Tiger Balm Neck & Shoulder Rub — cream — Camphor (synthetic) 11%; Menthol 10% — count unknown
+- Tiger Balm — Tiger Balm Pain Relieving Cool Patch — patch — Camphor (synthetic) 80 mg/patch; Menthol 24 mg/patch — count unknown
+- Tiger Balm — Tiger Balm Pain Relieving Hydrogel Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
+- Tiger Balm — Tiger Balm Pain Relieving Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
+- Tiger Balm — Tiger Balm Pain Relieving Patch (wider hydrogel) — patch — Camphor (synthetic) 160 mg/patch; Levomenthol (L-menthol) 48 mg/patch; Capsicum extract 32 mg/patch — count unknown
 DG Health (4)
-- DG Health Allergy Relief (Loratadine 10 mg)
-- DG Health Cold & Flu Relief Nighttime Liquid
-- DG Health Ibuprofen 200 mg Film-Coated Tablets
-- DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes)
+- DG Health — DG Health Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
+- DG Health — DG Health Cold & Flu Relief Nighttime Liquid — liquid — Acetaminophen 650mg / 30mL; Dextromethorphan HBr 30mg / 30mL; Doxylamine succinate 12.5mg / 30mL — count unknown
+- DG Health — DG Health Ibuprofen 200 mg Film-Coated Tablets — film-coated tablet — Ibuprofen 200mg — count unknown — film-coated
+- DG Health — DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes) — film-coated tablet — Acetaminophen 500mg — count unknown — dyed lakes
 Icy Hot (4)
-- Icy Hot Lidocaine No-Mess Roll On
-- Icy Hot Performance Cream
-- Icy Hot Performance Dry Spray
-- Icy Hot Performance No-Mess Pain Relief Cream
+- Icy Hot — Icy Hot Lidocaine No-Mess Roll On — roll-on — Lidocaine HCl 4% — count unknown
+- Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
+- Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11% — count unknown
+- Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
 Walgreens (4)
-- Walgreens Children's Nighttime Cough
-- Walgreens Extra Strength Pain Reliever (coated) DRY
-- Walgreens Pain Reliever (multi-dye + talc SPL)
-- Walgreens Prenatal Multivitamin (coated) DRY
+- Walgreens — Walgreens Children's Nighttime Cough — liquid — Chlorpheniramine maleate 2mg / 10mL; Dextromethorphan HBr 15mg / 10mL — count unknown
+- Walgreens — Walgreens Extra Strength Pain Reliever (coated) — caplet — Acetaminophen 500mg — count unknown — coated DRY
+- Walgreens — Walgreens Pain Reliever (multi-dye + talc SPL) — caplet — Acetaminophen 500mg — count unknown — multi-dye
+- Walgreens — Walgreens Prenatal Multivitamin (coated) — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid label serving; Iron label serving; Zinc (as zinc oxide) label serving — count unknown — film-coated DRY
 Absorbine Jr. (3)
-- Absorbine Jr. Back Patch 7.5%
-- Absorbine Jr. Pain Relieving Knee Patch 7.5%
-- Absorbine Jr. PRO Roll-On Liquid 4%
+- Absorbine Jr. — Absorbine Jr. Back Patch 7.5% — patch — Menthol 7.5% — count unknown
+- Absorbine Jr. — Absorbine Jr. Pain Relieving Knee Patch 7.5% — patch — Menthol 7.5% — count unknown
+- Absorbine Jr. — Absorbine Jr. PRO Roll-On Liquid 4% — roll-on — Menthol 4% — count unknown
 Aspercreme (3)
-- Aspercreme Arthritis Pain Gel (no fragrance)
-- Aspercreme Lidocaine with Rosemary and Mint
-- Aspercreme Professional Cream
+- Aspercreme — Aspercreme Arthritis Pain Gel (no fragrance) — gel — Diclofenac sodium 1% — count unknown
+- Aspercreme — Aspercreme Lidocaine with Rosemary and Mint — cream — Lidocaine HCl 4% — count unknown
+- Aspercreme — Aspercreme Professional Cream — cream — Lidocaine HCl 4% — count unknown
 Assured (3)
-- Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg)
-- Assured Hydrocortisone 1% Cream
-- Assured Lidocaine Pain Relief Gel
+- Assured — Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg) — coated tablet — Acetaminophen 500mg; Diphenhydramine citrate 38mg — count unknown — coated
+- Assured — Assured Hydrocortisone 1% Cream — cream — Hydrocortisone 1% — count unknown
+- Assured — Assured Lidocaine Pain Relief Gel — gel — Lidocaine 4% — count unknown
 Genexa (3)
-- Genexa Cough & Chest Congestion
-- Genexa Kids' Nighttime Multi-Symptom Cold & Flu
-- Genexa Nighttime Severe Cold & Flu
+- Genexa — Genexa Cough & Chest Congestion — liquid — Dextromethorphan HBr 20mg / 20mL; Guaifenesin 400mg / 20mL — count unknown
+- Genexa — Genexa Kids' Nighttime Multi-Symptom Cold & Flu — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL — count unknown
+- Genexa — Genexa Nighttime Severe Cold & Flu — liquid — Acetaminophen 650mg / 20mL; Dextromethorphan HBr 30mg / 20mL; Doxylamine succinate 12.5mg / 20mL — count unknown
 GoodSense (3)
-- GoodSense Children’s Ibuprofen 100 mg Chewable
-- GoodSense Ibuprofen Liquid Gels 200 mg
-- GoodSense Naproxen Sodium 220 mg
+- GoodSense — GoodSense Children’s Ibuprofen 100 mg Chewable — chewable tablet — Ibuprofen 100mg — count unknown
+- GoodSense — GoodSense Ibuprofen Liquid Gels 200 mg — liquid gel — Solubilized ibuprofen 200mg — count unknown
+- GoodSense — GoodSense Naproxen Sodium 220 mg — film-coated tablet — Naproxen sodium 220mg — count unknown — film-coated
 Member's Mark (3)
-- Member's Mark Allergy Relief (Loratadine 10 mg)
-- Member's Mark Extra Strength Acetaminophen
-- Member's Mark Ibuprofen DRY
+- Member's Mark — Member's Mark Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
+- Member's Mark — Member's Mark Extra Strength Acetaminophen — caplet — Acetaminophen 500mg — count unknown
+- Member's Mark — Member's Mark Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
 Salonpas (3)
-- Salonpas Arthritis Pain Patch
-- Salonpas Arthritis Pain Patch LARGE
-- Salonpas Pain Relief Patch
+- Salonpas — Salonpas Arthritis Pain Patch — patch — Menthol 3%; Methyl salicylate 10% — count unknown
+- Salonpas — Salonpas Arthritis Pain Patch LARGE — patch — Menthol 3%; Methyl salicylate 10% — count unknown
+- Salonpas — Salonpas Pain Relief Patch — patch — Menthol 3%; Methyl salicylate 10% — count unknown
 Sprouts (3)
-- Sprouts Lion's Mane Liquid DRY
-- Sprouts Moringa 100% Powder DRY
-- Sprouts Saw Palmetto Powder Cap DRY
+- Sprouts — Sprouts Lion's Mane Liquid — liquid — Lion's mane extract label serving — count unknown DRY
+- Sprouts — Sprouts Moringa 100% Powder — powder — Moringa powder label serving — count unknown DRY
+- Sprouts — Sprouts Saw Palmetto Powder Cap — powder capsule — Saw palmetto powder 1 capsule (label serving) — count unknown DRY
 Advil (2)
-- Advil Film-Coated / Menstrual Pain (ibuprofen sodium)
-- Junior Strength Advil Coated Tablets
+- Advil — Advil Film-Coated / Menstrual Pain (ibuprofen sodium) — coated tablet — Ibuprofen (as ibuprofen sodium) 200mg — count unknown — film-coated
+- Advil — Junior Strength Advil Coated Tablets — coated tablet — Ibuprofen 100mg — count unknown — coated
 Culturelle (2)
-- Culturelle Digestive Daily Probiotic Capsules DRY
-- Culturelle Kids Purely Probiotics Packets DRY
+- Culturelle — Culturelle Digestive Daily Probiotic Capsules — capsule — Lactobacillus rhamnosus GG 10 billion CFU — count unknown DRY
+- Culturelle — Culturelle Kids Purely Probiotics Packets — powder packet — Lactobacillus rhamnosus GG 5 billion CFU — count unknown DRY
 CVS Health (2)
-- CVS Children's Allergy Chews (Diphenhydramine)
-- CVS Health Extra Strength Acetaminophen (coated red)
+- CVS Health — CVS Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown
+- CVS Health — CVS Health Extra Strength Acetaminophen (coated red) — film-coated tablet — Acetaminophen 500mg — count unknown — coated red
 Nature's Way (2)
-- Nature's Way Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm) DRY
-- Umcka® Cold&Flu Relief FastActives® DRY
+- Nature's Way — Nature's Way Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm) — gummy — Vitamin C (ascorbic acid) 60mg per 2 gummies; Zinc (as zinc citrate) 2.2mg per 2 gummies; Black elder (Sambucus nigra L.) extract (berry) 50mg per 2 gummies — count unknown DRY
+- Nature's Way — Umcka® Cold&Flu Relief FastActives® — powder — Pelargonium sidoides 1X label serving — count unknown DRY
 OLLY (2)
-- OLLY Kids Sleep (coconut-only oil listing) DRY
-- OLLY Men's Multi (coconut + canola) DRY
+- OLLY — OLLY Kids Sleep (coconut-only oil listing) — gummy — Melatonin 0.5mg; L-Theanine 15mg; Chamomile extract (flower) 2.5mg; Passionflower extract (aerial parts) 2.5mg; Lemon balm extract (aerial parts) 2.5mg — count unknown DRY
+- OLLY — OLLY Men's Multi (coconut + canola) — gummy — Men's multivitamin (A, C, D, E, B vitamins) 2 gummies (label serving); Zinc (as zinc citrate) label serving; Coenzyme Q-10 label serving — count unknown DRY
 Robitussin (2)
-- Children's Robitussin Cough Long-Acting
-- Children's Robitussin Honey Nighttime Cough DM
+- Robitussin — Children's Robitussin Cough Long-Acting — liquid — Dextromethorphan HBr 15mg / 10mL — count unknown
+- Robitussin — Children's Robitussin Honey Nighttime Cough DM — liquid — Dextromethorphan HBr 15mg / 10mL; Doxylamine succinate 6.25mg / 10mL — count unknown
 Signature Care (2)
-- Signature Care Children's Ibuprofen (dyed liquid)
-- Signature Care Ibuprofen DRY
+- Signature Care — Signature Care Children's Ibuprofen (dyed liquid) — liquid — Ibuprofen 100mg / 5mL — count unknown
+- Signature Care — Signature Care Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
 Tylenol (2)
-- Tylenol For Children Plus Adults Liquid
-- Tylenol Regular Strength Caplets (coated)
+- Tylenol — Tylenol For Children Plus Adults Liquid — liquid — Acetaminophen 160mg / 5mL — count unknown
+- Tylenol — Tylenol Regular Strength Caplets (coated) — caplet — Acetaminophen 325mg — count unknown — coated
 up&up (2)
-- up&up Daytime Honey Cold & Flu
-- up&up Extra Strength Acetaminophen DRY
+- up&up — up&up Daytime Honey Cold & Flu — liquid — Acetaminophen 325mg / 15mL; Dextromethorphan HBr 10mg / 15mL; Guaifenesin 200mg / 15mL; Phenylephrine HCl 5mg / 15mL — count unknown
+- up&up — up&up Extra Strength Acetaminophen — film-coated tablet — Acetaminophen 500mg — count unknown — film-coated DRY
 Alaway (1)
-- Alaway Preservative Free DRY
+- Alaway — Alaway Preservative Free — single-use eye drop — Ketotifen 0.025% — count unknown DRY
 Blue-Emu (1)
-- Blue-Emu Original Super Strength DRY
+- Blue-Emu — Blue-Emu Original Super Strength — cream — Emu oil / MSM / glucosamine (labeled formula; no Drug Facts monograph active on the founder jar) topical cream — count unknown DRY
 Boericke & Tafel (1)
-- B&T Psoriaflora Cream
+- Boericke & Tafel — B&T Psoriaflora Cream — cream — Mahonia aquifolium root bark 2X HPUS — count unknown
 Bufferin (1)
-- Bufferin Regular Strength 325 coated
+- Bufferin — Bufferin Regular Strength 325 coated — coated tablet — Aspirin (buffered) 325mg — count unknown — coated
 Carlson (1)
-- Carlson Kid's Super Daily D3 Drops DRY
+- Carlson — Carlson Kid's Super Daily D3 Drops — liquid drops — Vitamin D3 (cholecalciferol) 15mcg (600 IU) per drop (400 IU twin shares formulaId when MCT-from-coconut inactives match) — count unknown DRY
 Centrum (1)
-- Centrum Prenatal / Centrum Specialist Prenatal
+- Centrum — Centrum Prenatal / Centrum Specialist Prenatal — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid 800mcg; Iron 27mg; Zinc (as zinc oxide) 11mg — count unknown — film-coated
 Dimetapp (1)
-- Children's Dimetapp Nighttime Cold & Cough
+- Dimetapp — Children's Dimetapp Nighttime Cold & Cough — liquid — Diphenhydramine HCl 12.5mg / 10mL — count unknown
 Excedrin (1)
-- Excedrin Extra Strength (TiO2-only coat)
+- Excedrin — Excedrin Extra Strength (TiO2-only coat) — film-coated tablet — Acetaminophen 250mg; Aspirin 250mg; Caffeine 65mg — count unknown — TiO2-only coat
 Family Wellness (1)
-- Family Wellness Triple Antibiotic Ointment
+- Family Wellness — Family Wellness Triple Antibiotic Ointment — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 Kirkland Signature (1)
-- Kirkland Signature Daily Multi (TiO2 carton) DRY
+- Kirkland Signature — Kirkland Signature Daily Multi (TiO2 carton) — film-coated tablet — Multivitamin / multimineral 1 tablet (label serving); Iron 18mg; Zinc 11mg — count unknown — TiO2 carton DRY
 L'il Critters (1)
-- L'il Critters Omega-3 DHA Gummies DRY
+- L'il Critters — L'il Critters Omega-3 DHA Gummies — gummy — Omega-3 fatty acids (EPA / DHA + ALA) 50mg per gummy (100mg per 2-gummy ages-4+ serving when labeled); Vitamin C / E (antioxidant amounts when labeled) label serving — count unknown DRY
 MaryRuth's (1)
-- MaryRuth's Kids Morning Multivitamin Liquid DRY
+- MaryRuth's — MaryRuth's Kids Morning Multivitamin Liquid — liquid — Kids liquid multivitamin / multimineral label serving; Zinc label serving — count unknown DRY
 Nature Made (1)
-- Nature Made Vitamin B12 Softgels (clear, no color added) DRY
+- Nature Made — Nature Made Vitamin B12 Softgels (clear, no color added) — softgel — Vitamin B12 (cyanocobalamin) 1000mcg (Max 5000 mcg when the no-color-added shell matches) — count unknown — clear, no color added DRY
 Qunol (1)
-- Qunol Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton) DRY
+- Qunol — Qunol Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton) — capsule — Bioenhanced turmeric complex (20% curcuminoids) 1500mg — count unknown DRY
 Sudafed (1)
-- Children's Sudafed PE Cold + Cough
+- Sudafed — Children's Sudafed PE Cold + Cough — liquid — Dextromethorphan HBr 5mg / 5mL; Phenylephrine HCl 2.5mg / 5mL — count unknown
 TopCare (1)
-- TopCare Ibuprofen Liquid Gels / Minis (200 mg)
+- TopCare — TopCare Ibuprofen Liquid Gels / Minis (200 mg) — liquid gel — Ibuprofen 200mg — count unknown
 Zarbee's (1)
-- Zarbee's Children's Cough Syrup + Immune DRY
+- Zarbee's — Zarbee's Children's Cough Syrup + Immune — syrup — Dark honey label serving; Ivy leaf extract label serving; Elderberry label serving; Zinc label serving; Chamomile label serving — count unknown DRY
 
 ONLINE-ONLY missing UPC by brand — live 42
 Amazon Basic Care 15; Amazon Basics 8; Amazon Elements 6; HealthA2Z 2; TIME-Cap Labs 2; WELMATE 2; A+Health 1; Anima Mundi 1; Asutra 1; HealthWise 1; Pure Encapsulations 1; Teemofe 1; Thrive Market 1.
