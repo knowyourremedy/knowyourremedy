@@ -91,6 +91,9 @@ BRAND-CLOSE WORKFLOW
 - Sidebar first. No bot or Cursor paste until Brandon says go or ready.
 - Missing panel: advisor names the next SKU; Brandon hunts one-by-one. OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Brand official site is required before DRY.
+- Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
+- Do not call a row dry if the brand site has a carton photo with bars.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -242,6 +245,9 @@ CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
 - Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Brand official site is required before DRY.
+- Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
+- Do not call a row dry if the brand site has a carton photo with bars.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
@@ -271,6 +277,9 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers. Stash is founder call. Stashed names stay in this file. Stash only if founder calls a Sprouts-style pile.
 - OI hunt order is brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Amazon house and all later store punches use this.
 - Store PDPs are first-class sources — sprouts.com + Instacart / DoorDash / Uber Eats for Sprouts house; Walmart / Target / CVS / Amazon / grocery for other brands. Use them for Other Ingredients AND UPC/EAN. Exact pack only (brand + name + form + strength + count). Specs / details / carousel / barcode tile. HTML bullets alone ≠ missing. NDC ≠ UPC. No UPC on the page ≠ invent one. Next catalog pile (store generics) uses this hunt on write, not a later factory.
+- Brand official site is required before DRY.
+- Example: Boiron pellets → boironusa.com product page. Read every carousel tile AND the 12 digits under the bars (3 06960 …). NDC on the carton is not a UPC.
+- Do not call a row dry if the brand site has a carton photo with bars.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
