@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5-b STOPPED after PR #213; Job 2 dry; live missing-barcode recount; named dry leftovers set-id 97 / in-store 24 / online 13; do not reopen #121–#213)
+Last Updated: September 18, 2026 (KYR5-c walk lists pasted under #213 recount; KYR5-b STOPPED after PR #213; Job 2 dry; named dry leftovers set-id 97 / in-store 24 / online 13; do not reopen #121–#213)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -986,8 +986,220 @@ Live Search totals
 IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
 Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 3; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
 
+Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen)
+Boiron (23)
+- Boiron Abies Canadensis Pellets
+- Boiron Ailanthus Glandulosus Pellets
+- Boiron Alfalfa Pellets
+- Boiron Arnicare Cream (DailyMed PEG panel)
+- Boiron Cheiranthus Cheiri Pellets
+- Boiron Chenopodium Anthelminticum Pellets
+- Boiron Chestal Cold & Cough Honey
+- Boiron Coldcalm Meltaway Tablets
+- Boiron Corallium Rubrum Pellets
+- Boiron Cyclameneur Pellets
+- Boiron Fumaria Officinalis Pellets
+- Boiron Gallicum Acidum Pellets
+- Boiron Harpagophytum Pellets
+- Boiron Luffa Operculata Pellets
+- Boiron Melilotus Officinalis Pellets
+- Boiron Menyanthes Trifoliata Pellets
+- Boiron Polygonum Punctatum Pellets
+- Boiron Sambucus nigra 6C Pellets
+- Boiron Saponaria Officinalis Pellets
+- Boiron Sempervivum Tectorum Pellets
+- Boiron Trillium Pendulum Pellets
+- Boiron Venus Mercenaria Pellets
+- Boiron Viola Tricolor Pellets
+Biofreeze (6)
+- Biofreeze Pain Relief Spray 10.5% (denatonium)
+- Biofreeze Pain Relieving Gel 3.5% (paraben SPL)
+- Biofreeze Pain Relieving Spray 10%
+- Biofreeze Professional Colorless Roll-On 5%
+- Biofreeze Professional Spray 10.5% (denatonium aerosol)
+- Biofreeze Professional Spray 13%
+Equate (6)
+- Equate Children's Melatonin Liquid DRY
+- Equate Children's Multi-Symptom Cold Daytime & Nighttime
+- Equate Children's Multi-Symptom Cold Nighttime
+- Equate Dye-Free Children's Allergy Chews (Diphenhydramine)
+- Equate Extra Strength Pain Reliever
+- Equate Lubricant Eye Drops Preservative-Free
+Tiger Balm (6)
+- Tiger Balm Muscle Rub
+- Tiger Balm Neck & Shoulder Rub
+- Tiger Balm Pain Relieving Cool Patch
+- Tiger Balm Pain Relieving Hydrogel Patch
+- Tiger Balm Pain Relieving Patch
+- Tiger Balm Pain Relieving Patch (wider hydrogel)
+DG Health (4)
+- DG Health Allergy Relief (Loratadine 10 mg)
+- DG Health Cold & Flu Relief Nighttime Liquid
+- DG Health Ibuprofen 200 mg Film-Coated Tablets
+- DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes)
+Icy Hot (4)
+- Icy Hot Lidocaine No-Mess Roll On
+- Icy Hot Performance Cream
+- Icy Hot Performance Dry Spray
+- Icy Hot Performance No-Mess Pain Relief Cream
+Walgreens (4)
+- Walgreens Children's Nighttime Cough
+- Walgreens Extra Strength Pain Reliever (coated) DRY
+- Walgreens Pain Reliever (multi-dye + talc SPL)
+- Walgreens Prenatal Multivitamin (coated) DRY
+Absorbine Jr. (3)
+- Absorbine Jr. Back Patch 7.5%
+- Absorbine Jr. Pain Relieving Knee Patch 7.5%
+- Absorbine Jr. PRO Roll-On Liquid 4%
+Aspercreme (3)
+- Aspercreme Arthritis Pain Gel (no fragrance)
+- Aspercreme Lidocaine with Rosemary and Mint
+- Aspercreme Professional Cream
+Assured (3)
+- Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg)
+- Assured Hydrocortisone 1% Cream
+- Assured Lidocaine Pain Relief Gel
+Genexa (3)
+- Genexa Cough & Chest Congestion
+- Genexa Kids' Nighttime Multi-Symptom Cold & Flu
+- Genexa Nighttime Severe Cold & Flu
+GoodSense (3)
+- GoodSense Children’s Ibuprofen 100 mg Chewable
+- GoodSense Ibuprofen Liquid Gels 200 mg
+- GoodSense Naproxen Sodium 220 mg
+Member's Mark (3)
+- Member's Mark Allergy Relief (Loratadine 10 mg)
+- Member's Mark Extra Strength Acetaminophen
+- Member's Mark Ibuprofen DRY
+Salonpas (3)
+- Salonpas Arthritis Pain Patch
+- Salonpas Arthritis Pain Patch LARGE
+- Salonpas Pain Relief Patch
+Sprouts (3)
+- Sprouts Lion's Mane Liquid DRY
+- Sprouts Moringa 100% Powder DRY
+- Sprouts Saw Palmetto Powder Cap DRY
+Advil (2)
+- Advil Film-Coated / Menstrual Pain (ibuprofen sodium)
+- Junior Strength Advil Coated Tablets
+Culturelle (2)
+- Culturelle Digestive Daily Probiotic Capsules DRY
+- Culturelle Kids Purely Probiotics Packets DRY
+CVS Health (2)
+- CVS Children's Allergy Chews (Diphenhydramine)
+- CVS Health Extra Strength Acetaminophen (coated red)
+Nature's Way (2)
+- Nature's Way Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm) DRY
+- Umcka® Cold&Flu Relief FastActives® DRY
+OLLY (2)
+- OLLY Kids Sleep (coconut-only oil listing) DRY
+- OLLY Men's Multi (coconut + canola) DRY
+Robitussin (2)
+- Children's Robitussin Cough Long-Acting
+- Children's Robitussin Honey Nighttime Cough DM
+Signature Care (2)
+- Signature Care Children's Ibuprofen (dyed liquid)
+- Signature Care Ibuprofen DRY
+Tylenol (2)
+- Tylenol For Children Plus Adults Liquid
+- Tylenol Regular Strength Caplets (coated)
+up&up (2)
+- up&up Daytime Honey Cold & Flu
+- up&up Extra Strength Acetaminophen DRY
+Alaway (1)
+- Alaway Preservative Free DRY
+Blue-Emu (1)
+- Blue-Emu Original Super Strength DRY
+Boericke & Tafel (1)
+- B&T Psoriaflora Cream
+Bufferin (1)
+- Bufferin Regular Strength 325 coated
+Carlson (1)
+- Carlson Kid's Super Daily D3 Drops DRY
+Centrum (1)
+- Centrum Prenatal / Centrum Specialist Prenatal
+Dimetapp (1)
+- Children's Dimetapp Nighttime Cold & Cough
+Excedrin (1)
+- Excedrin Extra Strength (TiO2-only coat)
+Family Wellness (1)
+- Family Wellness Triple Antibiotic Ointment
+Kirkland Signature (1)
+- Kirkland Signature Daily Multi (TiO2 carton) DRY
+L'il Critters (1)
+- L'il Critters Omega-3 DHA Gummies DRY
+MaryRuth's (1)
+- MaryRuth's Kids Morning Multivitamin Liquid DRY
+Nature Made (1)
+- Nature Made Vitamin B12 Softgels (clear, no color added) DRY
+Qunol (1)
+- Qunol Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton) DRY
+Sudafed (1)
+- Children's Sudafed PE Cold + Cough
+TopCare (1)
+- TopCare Ibuprofen Liquid Gels / Minis (200 mg)
+Zarbee's (1)
+- Zarbee's Children's Cough Syrup + Immune DRY
+
 ONLINE-ONLY missing UPC by brand — live 42
 Amazon Basic Care 15; Amazon Basics 8; Amazon Elements 6; HealthA2Z 2; TIME-Cap Labs 2; WELMATE 2; A+Health 1; Anima Mundi 1; Asutra 1; HealthWise 1; Pure Encapsulations 1; Teemofe 1; Thrive Market 1.
+
+Walk list B — ONLINE-ONLY missing UPC names (DRY = already on named-dry leftover list; do not reopen)
+Amazon Basic Care (15)
+- Amazon Basic Care All Day Allergy (Cetirizine 10 mg, coated)
+- Amazon Basic Care Allergy Relief (Loratadine 10 mg, L612)
+- Amazon Basic Care Allergy Relief Orally Disintegrating (Loratadine 10 mg)
+- Amazon Basic Care Daytime Cold & Flu Liquid
+- Amazon Basic Care Daytime Cold & Flu Softgel
+- Amazon Basic Care Dual Action (Acetaminophen 250 mg / Ibuprofen 125 mg)
+- Amazon Basic Care Extra Strength Acetaminophen 500 mg (L484)
+- Amazon Basic Care Ibuprofen 200 mg (iron oxide yellow)
+- Amazon Basic Care Ibuprofen Liquid Gels 200 mg
+- Amazon Basic Care Mucus-DM ER (Guaifenesin 1200 mg / DXM 60 mg)
+- Amazon Basic Care Mucus-DM ER Dye-Free (Guaifenesin 600 mg / DXM 30 mg)
+- Amazon Basic Care Nasal (Oxymetazoline 0.05%)
+- Amazon Basic Care Nighttime Cold & Flu Liquid
+- Amazon Basic Care Nighttime Cold & Flu Softgel
+- Amazon Basic Care Regular Strength Acetaminophen 325 mg (L403)
+Amazon Basics (8)
+- Amazon Basics Advanced Healing Ointment (72288-247)
+- Amazon Basics Ibuprofen 200 mg (iron oxide yellow)
+- Amazon Basics Kids Melatonin 1 mg Gummies DRY
+- Amazon Basics Men's One Daily Tablets (Previously Elements) DRY
+- Amazon Basics Nighttime Severe Cold & Flu Liquid
+- Amazon Basics Pain Relief Patch with 4% Lidocaine
+- Amazon Basics Prenatal Tablets (Previously Elements) DRY
+- Amazon Basics Women's One Daily Tablets (Previously Elements) DRY
+Amazon Elements (6)
+- Amazon Elements Acacia Fiber 100% Powder (Previously Revly) DRY
+- Amazon Elements Men's Multi Gummies (Previously Revly) DRY
+- Amazon Elements Prenatal DHA+D3 Gummies (Previously Revly) DRY
+- Amazon Elements Turmeric Root DRY
+- Amazon Elements Vitamin D3 5000 IU Softgels DRY
+- Amazon Elements Whole Food Vitamin C 500 mg Vegan Capsules DRY
+HealthA2Z (2)
+- HealthA2Z Ibuprofen 200 mg
+- HealthA2Z Ibuprofen 200 mg Fast Relief
+TIME-Cap Labs (2)
+- TIME-Cap Labs Ibuprofen 200 mg
+- TIME-Cap Labs Naproxen Sodium 220 mg
+WELMATE (2)
+- WELMATE Lidocaine 4% Pain Relieving Patch
+- WELMATE Lidocaine 4% Patch
+A+Health (1)
+- A+Health Dual Action
+Anima Mundi (1)
+- Happiness Tonic DRY
+Asutra (1)
+- Melt Pain Away Magnesium Body Butter
+HealthWise (1)
+- HealthWise Lidocaine 4% Patch
+Pure Encapsulations (1)
+- Pure Encapsulations Probiotic-5 (dairy-free) DRY
+Teemofe (1)
+- Teemofe Lidocaine 4% Pain Relief Patch
+Thrive Market (1)
+- Multi-Collagen Peptides Unflavored DRY
 
 Named dry leftovers (KYR5-b already hunted — do not reopen)
 - set-id 97 — Job 2 leftover. DailyMed SPL had no carton GTIN on the remaining set-id-only queue.
