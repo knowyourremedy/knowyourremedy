@@ -104,8 +104,6 @@ const KIRK_WILD_FO = 'kirkland-wild-alaskan-fish-oil';
 const UPUP_PM = 'upup-pm-lubricant-ointment';
 
 const STORE_PM_LANOLIN = 'store-pm-ointment-lanolin-alcohol';
-const KIRK_FO_CLEAR = 'kirkland-fish-oil-softgels-clear';
-const NM_FO_CLEAR = 'nature-made-fish-oil-1200-clear';
 const THORNE_WOMENS = 'thorne-womens-multi-50-plus';
 const THORNE_MENS = 'thorne-mens-multi-50-plus';
 const WH_WOMENS = 'we-heart-wholesome-womens-multi';
@@ -541,9 +539,6 @@ const wild = _ROWS.find((r) => r.id === KIRK_WILD_FO);
 if (wild?.verdict !== 'clean' || wild.formulaId !== KIRK_WILD_FO) {
   throw new Error('Kirkland Wild Alaskan FO must be Clean on its own formulaId');
 }
-if (wild.formulaId === KIRK_FO_CLEAR || wild.formulaId === NM_FO_CLEAR) {
-  throw new Error('Wild Alaskan FO must not alias the porcine clear or enteric FO SKU');
-}
 if (!wild.inactiveIngredients.some((i) => /bovine/i.test(i.name) && i.riskLevel === 'cleared')) {
   throw new Error('Wild Alaskan FO must list Gelatin (bovine) as Cleared gelatin');
 }
@@ -587,7 +582,7 @@ const mens = _ROWS.find((r) => r.id === MM_MENS);
 if (mens?.verdict !== 'caution' || mens.formulaId !== MM_MENS) {
   throw new Error("MM Men's Multi must be Caution on its own formulaId");
 }
-if (mens.inactiveIngredients.some((i) => /silica|silicon dioxide/i.test(i.name))) {
+if (mens.inactiveIngredients.some((i) => /^(silica|silicon dioxide|colloidal silicon dioxide)$/i.test(i.name))) {
   throw new Error("MM Men's Multi panel does not print silica — do not invent it");
 }
 if (!mens.inactiveIngredients.some((i) => /calcium silicate/i.test(i.name))) {
@@ -634,9 +629,6 @@ if (upup?.verdict !== 'caution' || upup.formulaId !== STORE_PM_LANOLIN) {
 }
 if (upup.barcode) {
   throw new Error('up&up PM ointment has no confirmed Target UPC — omit barcode');
-}
-if (upup.id === 'equate-nighttime-lubricant-ointment' || upup.id === 'cvs-health-nighttime-dry-eye') {
-  throw new Error('up&up PM ointment must be a new product id');
 }
 
 const REUSE_FORMULA_COUNT = _ROWS.filter((r) => r.formulaId === STORE_PM_LANOLIN).length;
