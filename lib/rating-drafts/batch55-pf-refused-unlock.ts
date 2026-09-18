@@ -203,6 +203,9 @@ const BATCH55_CATCHUP_BARCODES: Record<string, string> = {
   // (setid 04ccc4b2 ferric-oxide Dual Action). Do not steal 369452447222
   // (NDC 69452-447-22 / setid 1f2f8fcf) onto this row or the 469 plain twin.
   [ID.aplusOxides]: '369452394649',
+  // KYR5-c barcode-tile chunk 3 — brown 200-ct iron-oxide coat (not dyed-talc
+  // 370030146048 and not TiO2-only 195515004138).
+  [ID.bcIbu]: '370030114177',
 };
 
 const IBU_FORMULA = ID.bcIbu;
@@ -293,9 +296,10 @@ const IBU_INACTIVES = (setid: string): IngredientFlag[] => [
 export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
   row({
     id: ID.bcIbu,
-    productName: 'Amazon Basic Care Ibuprofen 200 mg (iron oxide yellow)',
+    productName: 'Amazon Basic Care Ibuprofen 200 mg (iron oxide yellow, 200-ct)',
     brand: 'Amazon Basic Care',
     category: PAIN_FEVER,
+    barcode: BATCH55_CATCHUP_BARCODES[ID.bcIbu],
     formulaId: IBU_FORMULA,
     audience: ADULT,
     minAge: 12,

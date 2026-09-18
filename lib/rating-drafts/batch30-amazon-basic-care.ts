@@ -286,6 +286,11 @@ const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-ibuprofen-liqui-gels': '195515012874',
   // KYR5-c barcode-tile chunk 2 — mint ODT 30-ct (not L612 swallow).
   'amazon-basic-care-loratadine-odt': '842379190742',
+  // KYR5-c barcode-tile chunk 3 — Perrigo/LNK 370030 ES 200-ct (not N79
+  // Aurohealth 195515048897). L484 caplets.
+  'amazon-basic-care-es-apap-l484': '370030114078',
+  // Original / max-strength 1 fl oz oxymetazoline (not no-drip 370030145546).
+  'amazon-basic-care-oxymetazoline-nasal': '195515004251',
 };
 
 const METH = {
@@ -723,9 +728,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   // ── Caution ──────────────────────────────────────────────
   {
     id: 'amazon-basic-care-es-apap-l484',
-    productName: 'Amazon Basic Care Extra Strength Acetaminophen 500 mg (L484)',
+    productName: 'Amazon Basic Care Extra Strength Acetaminophen 500 mg (L484, 200-ct)',
     brand: BASIC_CARE,
     category: PAIN_FEVER,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-es-apap-l484'],
     formulaId: L484_FORMULA,
     audience: ADULT,
     minAge: 12,
@@ -981,9 +987,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
   },
   {
     id: 'amazon-basic-care-oxymetazoline-nasal',
-    productName: 'Amazon Basic Care Nasal (Oxymetazoline 0.05%)',
+    productName: 'Amazon Basic Care Nasal (Oxymetazoline 0.05%, 1 fl oz)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-oxymetazoline-nasal'],
     formulaId: 'amazon-basic-care-oxymetazoline-nasal',
     audience: ADULT,
     minAge: 6,
