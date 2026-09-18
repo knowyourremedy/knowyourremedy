@@ -1955,6 +1955,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     productName: 'Absorbine Jr. Plus Ultra Strength Patch 6.5%',
     brand: 'Absorbine Jr.',
     category: PAIN_FEVER,
+    barcode: '889476413183',
     formulaId: FID.absUltra,
     audience: ADULT,
     minAge: 12,
@@ -2160,6 +2161,10 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   [ID.absXl]: '889476412186',
   [ID.absPlusKnee]: '889476412513',
   [ID.miStick]: '850078192080',
+  // KYR5-b set-id-only chunk 19 — Dollar General grocery PDP 1-ct
+  // Ultra Strength 5½×4 in (NDC 69693-413 / setid cf329707). Do not steal
+  // 889476412186 (5% XL Back) or 889476412513 (Plus Knee).
+  [ID.absUltra]: '889476413183',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];
