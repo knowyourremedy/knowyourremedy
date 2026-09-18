@@ -878,6 +878,10 @@ const BATCH34_TUBE_CATCHUP_BARCODES: Record<string, string> = {
   'boiron-trilliumpendulum-pellets': '306960750109',
   'boiron-venusmercenaria-pellets': '306960029113',
   'boiron-violatricolor-pellets': '306960789086',
+  // KYR5-c barcode-tile chunk 5 — leftover 6C single-tube shop SKU
+  // (BoironUSA variation 145219 sku / item_id = UPC-A). Exact ~80-pellet
+  // tube. Not 30C 306960651130 / not multi-pack 306969453643.
+  'boiron-sambucus-nigra-6c-cough-cold-relief-pellets': '306960651086',
 };
 
 // KYR5-c barcode-tile chunk 4 — shop listing states approx. 80 pellets
@@ -904,6 +908,12 @@ const BATCH34_CHUNK4_TUBE_PACK = new Set([
   'boiron-violatricolor-pellets',
 ]);
 
+// KYR5-c barcode-tile chunk 5 — shop listing states approx. 80 pellets
+// (16 doses) on this leftover 6C single-tube row only.
+const BATCH34_CHUNK5_TUBE_PACK = new Set([
+  'boiron-sambucus-nigra-6c-cough-cold-relief-pellets',
+]);
+
 function singleTube(
   slug: string,
   remedyName: string,
@@ -911,7 +921,10 @@ function singleTube(
 ): RatingRecord {
   const id = `boiron-${slug}-pellets`;
   const barcode = BATCH34_TUBE_CATCHUP_BARCODES[id];
-  const pack = BATCH34_CHUNK4_TUBE_PACK.has(id) ? ' (~80-pellet tube)' : '';
+  const pack =
+    BATCH34_CHUNK4_TUBE_PACK.has(id) || BATCH34_CHUNK5_TUBE_PACK.has(id)
+      ? ' (~80-pellet tube)'
+      : '';
   return {
     id,
     productName: `Boiron ${remedyName} Pellets${pack}`,

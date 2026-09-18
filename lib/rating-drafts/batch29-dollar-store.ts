@@ -461,6 +461,11 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   'dg-health-ibuprofen-liquid-gels': '370030169887',
   'dg-health-sleep-aid-dph': '370030166985',
   'dg-health-cold-flu-day-softgels': '370030641635',
+  // KYR5-c barcode-tile chunk 5 — Dollar General grocery PDP /
+  // upcitemdb cherry 12 fl oz UPC-A 370030640027. Same formula as
+  // DailyMed setid 3d8ce88e / NDC 55910-459-40 (355 mL). Not night
+  // softgels 370030641550 / not 8 fl oz 55910-459-34.
+  'dg-health-cold-flu-night-liquid': '370030640027',
   // KYR5-b set-id-only chunk 21 — Dollar General grocery PDP 42-ct
   // (three 14-day bottles) UPC-A 370030658336. Carton Drug Facts
   // match DailyMed setid 326bf21c / NDC 55910-915 (not wildberry
@@ -1484,9 +1489,10 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
   },
   {
     id: 'dg-health-cold-flu-night-liquid',
-    productName: 'DG Health Cold & Flu Relief Nighttime Liquid',
+    productName: 'DG Health Cold & Flu Relief Nighttime Liquid (12 fl oz)',
     brand: 'DG Health',
     category: COLD_FLU,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-cold-flu-night-liquid'],
     formulaId: 'dg-health-cold-flu-night-liquid',
     audience: ADULT,
     minAge: 12,
