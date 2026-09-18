@@ -584,6 +584,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: 'Sumifun Lidocaine 4% Pain Relief Gel-Patch',
     brand: 'Sumifun',
     category: PAIN_FEVER,
+    barcode: '6942488003446',
     formulaId: ID.sumifun,
     audience: ADULT,
     minAge: 12,
@@ -741,6 +742,7 @@ const BATCH56_CATCHUP_BARCODES: Record<string, string> = {
   [ID.stopain]: '724909633038',
   [ID.flexall]: '041167160220',
   [ID.mentholatum]: '310742000115 310742000122',
+  [ID.sumifun]: '6942488003446',
 };
 for (const record of BATCH56_AMAZON_LEFTOVER_GRADES) {
   const expected = BATCH56_CATCHUP_BARCODES[record.id];

@@ -287,6 +287,7 @@ const ID = {
 
 const BATCH57_CATCHUP_BARCODES: Record<string, string> = {
   [ID.turmeric]: '842379103902',
+  [ID.topricin]: '609863047049',
 };
 
 const CITE = {
@@ -537,6 +538,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Topricin Pain Relief Cream',
     brand: 'Topricin',
     category: PAIN_FEVER,
+    barcode: BATCH57_CATCHUP_BARCODES[ID.topricin],
     formulaId: ID.topricin,
     audience: ADULT,
     minAge: 2,
