@@ -762,6 +762,26 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-venusmercenaria-pellets': catalogShot('boiron-venusmercenaria-pellets.jpg'),
   'boiron-veratrumviride-pellets': catalogShot('boiron-veratrumviride-pellets.jpg'),
   'boiron-vespacrabro-pellets': catalogShot('boiron-vespacrabro-pellets.jpg'),
+  'boiron-viburnumopulus-pellets': catalogShot('boiron-viburnumopulus-pellets.jpg'),
+  'boiron-violaodorata-pellets': catalogShot('boiron-violaodorata-pellets.jpg'),
+  'boiron-violatricolor-pellets': catalogShot('boiron-violatricolor-pellets.jpg'),
+  'boiron-viperaberus-pellets': catalogShot('boiron-viperaberus-pellets.jpg'),
+  'boiron-viscumalbum-pellets': catalogShot('boiron-viscumalbum-pellets.jpg'),
+  'boiron-xanthoxylumfraxineum-pellets': catalogShot('boiron-xanthoxylumfraxineum-pellets.jpg'),
+  'boiron-zincumsulphuricum-pellets': catalogShot('boiron-zincumsulphuricum-pellets.jpg'),
+  'voltaren-arthritis-pain-gel': catalogShot('voltaren-arthritis-pain-gel.jpg'),
+  'aspercreme-arthritis-pain-gel-fragrance': catalogShot('aspercreme-arthritis-pain-gel-fragrance.jpg'),
+  'salonpas-pain-relieving-jet-spray': catalogShot('salonpas-pain-relieving-jet-spray.jpg'),
+  'icy-hot-performance-dry-spray': catalogShot('icy-hot-performance-dry-spray.jpg'),
+  'icy-hot-dry-spray-original': catalogShot('icy-hot-dry-spray-original.jpg'),
+  'icy-hot-pro-dry-spray': catalogShot('icy-hot-pro-dry-spray.jpg'),
+  'icy-hot-lidocaine-dry-spray': catalogShot('icy-hot-lidocaine-dry-spray.jpg'),
+  'aspercreme-lidocaine-dry-spray': catalogShot('aspercreme-lidocaine-dry-spray.jpg'),
+  'salonpas-deep-relieving-gel': catalogShot('salonpas-deep-relieving-gel.jpg'),
+  'icy-hot-original-balm': catalogShot('icy-hot-original-balm.jpg'),
+  'salonpas-lidocaine-plus-liquid': catalogShot('salonpas-lidocaine-plus-liquid.jpg'),
+  'aspercreme-original-cream': catalogShot('aspercreme-original-cream.jpg'),
+  'aspercreme-professional-cream': catalogShot('aspercreme-professional-cream.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -932,20 +952,10 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
-assertLetterOnly('voltaren-arthritis-pain-gel', 'Voltaren');
 assertLetterOnly('aspercreme-arthritis-pain-gel', 'Aspercreme');
-assertLetterOnly('aspercreme-arthritis-pain-gel-fragrance', 'Aspercreme');
 assertLetterOnly('salonpas-diclofenac-arthritis-pain-gel', 'Salonpas');
-assertLetterOnly('salonpas-pain-relieving-jet-spray', 'Salonpas');
-assertLetterOnly('icy-hot-performance-dry-spray', 'Icy Hot');
-assertLetterOnly('icy-hot-dry-spray-original', 'Icy Hot');
-assertLetterOnly('icy-hot-pro-dry-spray', 'Icy Hot');
-assertLetterOnly('icy-hot-lidocaine-dry-spray', 'Icy Hot');
-assertLetterOnly('aspercreme-lidocaine-dry-spray', 'Aspercreme');
 assertLetterOnly('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot');
-assertLetterOnly('salonpas-deep-relieving-gel', 'Salonpas');
 assertLetterOnly('tiger-balm-liniment', 'Tiger Balm');
-assertLetterOnly('icy-hot-original-balm', 'Icy Hot');
 assertLetterOnly('icy-hot-original-cream', 'Icy Hot');
 assertLetterOnly('icy-hot-performance-cream', 'Icy Hot');
 assertLetterOnly('icy-hot-performance-no-mess-cream', 'Icy Hot');
@@ -954,7 +964,6 @@ assertLetterOnly('icy-hot-pro-no-mess', 'Icy Hot');
 assertLetterOnly('icy-hot-nighttime-recovery-roll-on', 'Icy Hot');
 assertLetterOnly('icy-hot-revive-recovery-roll-on', 'Icy Hot');
 assertLetterOnly('icy-hot-vanishing-scent-gel', 'Icy Hot');
-assertLetterOnly('salonpas-lidocaine-plus-liquid', 'Salonpas');
 assertLetterOnly('tiger-balm-muscle-rub', 'Tiger Balm');
 assertLetterOnly('tiger-balm-active-muscle-rub', 'Tiger Balm');
 assertLetterOnly('tiger-balm-neck-shoulder-rub', 'Tiger Balm');
@@ -979,13 +988,11 @@ assertLetterOnly('aspercreme-lidocaine-foot-2in1', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-patch', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-no-mess-applicator', 'Aspercreme');
-assertLetterOnly('aspercreme-original-cream', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-rosemary-mint', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-rosemary-mint-cream', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-xl-patch', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-odor-free', 'Aspercreme');
 assertLetterOnly('aspercreme-lidocaine-foot-pain-cream', 'Aspercreme');
-assertLetterOnly('aspercreme-professional-cream', 'Aspercreme');
 assertLetterOnly('salonpas-lidocaine-gel-patch', 'Salonpas');
 assertLetterOnly('salonpas-pain-relieving-patch-large', 'Salonpas');
 assertLetterOnly('salonpas-lidocaine-gel-patch-hisamitsu', 'Salonpas');
@@ -1479,8 +1486,27 @@ assertExactCarton('boiron-uvaursi-pellets', 'Boiron', 'boiron-uvaursi-pellets.jp
 assertExactCarton('boiron-venusmercenaria-pellets', 'Boiron', 'boiron-venusmercenaria-pellets.jpg');
 assertExactCarton('boiron-veratrumviride-pellets', 'Boiron', 'boiron-veratrumviride-pellets.jpg');
 assertExactCarton('boiron-vespacrabro-pellets', 'Boiron', 'boiron-vespacrabro-pellets.jpg');
-// Unattempted leftover P&F pellet factory stays letters.
-assertLetterOnly('boiron-viburnumopulus-pellets', 'Boiron');
+assertExactCarton('boiron-viburnumopulus-pellets', 'Boiron', 'boiron-viburnumopulus-pellets.jpg');
+assertExactCarton('boiron-violaodorata-pellets', 'Boiron', 'boiron-violaodorata-pellets.jpg');
+assertExactCarton('boiron-violatricolor-pellets', 'Boiron', 'boiron-violatricolor-pellets.jpg');
+assertExactCarton('boiron-viperaberus-pellets', 'Boiron', 'boiron-viperaberus-pellets.jpg');
+assertExactCarton('boiron-viscumalbum-pellets', 'Boiron', 'boiron-viscumalbum-pellets.jpg');
+assertExactCarton('boiron-xanthoxylumfraxineum-pellets', 'Boiron', 'boiron-xanthoxylumfraxineum-pellets.jpg');
+assertExactCarton('boiron-zincumsulphuricum-pellets', 'Boiron', 'boiron-zincumsulphuricum-pellets.jpg');
+assertExactCarton('voltaren-arthritis-pain-gel', 'Voltaren', 'voltaren-arthritis-pain-gel.jpg');
+assertExactCarton('aspercreme-arthritis-pain-gel-fragrance', 'Aspercreme', 'aspercreme-arthritis-pain-gel-fragrance.jpg');
+assertExactCarton('salonpas-pain-relieving-jet-spray', 'Salonpas', 'salonpas-pain-relieving-jet-spray.jpg');
+assertExactCarton('icy-hot-performance-dry-spray', 'Icy Hot', 'icy-hot-performance-dry-spray.jpg');
+assertExactCarton('icy-hot-dry-spray-original', 'Icy Hot', 'icy-hot-dry-spray-original.jpg');
+assertExactCarton('icy-hot-pro-dry-spray', 'Icy Hot', 'icy-hot-pro-dry-spray.jpg');
+assertExactCarton('icy-hot-lidocaine-dry-spray', 'Icy Hot', 'icy-hot-lidocaine-dry-spray.jpg');
+assertExactCarton('aspercreme-lidocaine-dry-spray', 'Aspercreme', 'aspercreme-lidocaine-dry-spray.jpg');
+assertExactCarton('salonpas-deep-relieving-gel', 'Salonpas', 'salonpas-deep-relieving-gel.jpg');
+assertExactCarton('icy-hot-original-balm', 'Icy Hot', 'icy-hot-original-balm.jpg');
+assertExactCarton('salonpas-lidocaine-plus-liquid', 'Salonpas', 'salonpas-lidocaine-plus-liquid.jpg');
+assertExactCarton('aspercreme-original-cream', 'Aspercreme', 'aspercreme-original-cream.jpg');
+assertExactCarton('aspercreme-professional-cream', 'Aspercreme', 'aspercreme-professional-cream.jpg');
+// Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
