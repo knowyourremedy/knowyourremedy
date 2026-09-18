@@ -288,6 +288,7 @@ const ID = {
 const BATCH57_CATCHUP_BARCODES: Record<string, string> = {
   [ID.turmeric]: '842379103902',
   [ID.topricin]: '609863047049',
+  [ID.jointflex]: '372917000030',
 };
 
 const CITE = {
@@ -404,6 +405,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'JointFlex Pain Relief Cream',
     brand: 'JointFlex',
     category: PAIN_FEVER,
+    barcode: BATCH57_CATCHUP_BARCODES[ID.jointflex],
     formulaId: ID.jointflex,
     audience: ADULT,
     minAge: 12,
