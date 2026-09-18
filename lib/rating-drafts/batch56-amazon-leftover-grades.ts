@@ -5,7 +5,8 @@
 //
 // ONE write. Pain & Fever only. Do NOT invent a Topical aisle.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack
+// clean | caution | avoid. Do NOT invent UPCs / barcodes except
+// KYR5-b catch-up allowlist. Pack
 // sizes of the same name+form+inactives share formulaId. Same
 // OI+actives share formulaId. Form is labeled on
 // cleanAlternatives, not a hard filter (§6). Search wiring only.
@@ -637,6 +638,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productName: 'Australian Dream Arthritis Pain Relief Cream',
     brand: 'Australian Dream',
     category: PAIN_FEVER,
+    barcode: '694603000019 694603000088',
     formulaId: ID.ausDream,
     audience: ADULT,
     minAge: 12,
@@ -743,6 +745,7 @@ const BATCH56_CATCHUP_BARCODES: Record<string, string> = {
   [ID.flexall]: '041167160220',
   [ID.mentholatum]: '310742000115 310742000122',
   [ID.sumifun]: '6942488003446',
+  [ID.ausDream]: '694603000019 694603000088',
 };
 for (const record of BATCH56_AMAZON_LEFTOVER_GRADES) {
   const expected = BATCH56_CATCHUP_BARCODES[record.id];
