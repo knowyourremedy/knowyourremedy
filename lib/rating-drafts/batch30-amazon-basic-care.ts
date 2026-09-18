@@ -278,6 +278,8 @@ const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-fexofenadine-lakes': '195515041089',
   'amazon-basic-care-acetaminophen-pm': '370030114054',
   'amazon-basic-care-esomeprazole': '195515047890',
+  'amazon-basic-care-triple-pain-ointment': '370030145300',
+  'amazon-basic-care-hydrocortisone-bht': '370030145683',
 };
 
 const METH = {
@@ -639,6 +641,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Basic Care Triple Antibiotic + Pain Relief Ointment',
     brand: BASIC_CARE,
     category: FIRST_AID,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-triple-pain-ointment'],
     formulaId: NEOSPORIN_PAIN_OINT,
     audience: ADULT,
     minAge: 2,
@@ -1797,6 +1800,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Basic Care Hydrocortisone 1% Cream (BHT)',
     brand: BASIC_CARE,
     category: FIRST_AID,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-hydrocortisone-bht'],
     formulaId: 'amazon-basic-care-hydrocortisone-bht',
     audience: ADULT,
     minAge: 2,

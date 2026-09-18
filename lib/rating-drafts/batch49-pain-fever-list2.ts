@@ -293,6 +293,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     productName: 'Mineral Ice Extreme Menthol Pain Relief Spray 10.5%',
     brand: 'Mineral Ice',
     category: PAIN_FEVER,
+    barcode: '850078192059',
     formulaId: ID.mineralIce,
     audience: ADULT,
     minAge: 12,
@@ -352,6 +353,7 @@ const BATCH49_CATCHUP_BARCODES: Record<string, string> = {
   [ID.capzasin]: '041167751602',
   [ID.ultraflex]: '731124444967',
   [ID.ultraflexPlus]: '731124445261',
+  [ID.mineralIce]: '850078192059',
 };
 for (const record of BATCH49_PAIN_FEVER_LIST2) {
   const expected = BATCH49_CATCHUP_BARCODES[record.id];
