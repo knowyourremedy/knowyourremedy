@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5-b set-id-only UPC backfill chunk 23 — 1 set-id-only row filled; barcode-only gap 154; set-id-only remaining 97; online-only remaining 13; in-store 24 untouched; do not reopen #121–#212)
+Last Updated: September 18, 2026 (KYR5-b STOPPED after PR #213; Job 2 dry; live missing-barcode recount; named dry leftovers set-id 97 / in-store 24 / online 13; do not reopen #121–#213)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,8 +56,8 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b in-store 1s and 2s opened. Still missing ~667 after this chunk (many dry). Do not reopen #121–#188. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
-- KYR5-b is the barcode catch-up bot. Same rules as KYR5. Do not reopen #121–#188. In-store 1s and 2s opened. Still missing ~667 after this chunk (many dry).
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
+- KYR5-b is the barcode catch-up bot. STOPPED after PR #213. Job 2 dry. Same rules as KYR5. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13.
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -75,7 +75,7 @@ LAUNCH WEIGHT
 - Row exists = coverage.
 - Barcode / set-id = the scanner works.
 - Carton photo = polish.
-- ~667 rows on main still need barcode backfill after KYR5-b in-store 1s and 2s, many dry (KYR5 / KYR5-b). Forward catalog (KYR3) attaches UPC when the source has it.
+- Live Search: 2203 rows; 2049 with UPC/EAN; 117 set-id only; 37 with neither. KYR5-b named dry leftovers: set-id 97 / in-store 24 / online 13. Forward catalog (KYR3) attaches UPC when the source has it.
 
 FOUNDER CALLS — MAJORITY RULE
 - New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
@@ -156,13 +156,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. KYR5-b in-store 1s and 2s opened. Still missing ~667 (many dry).
+- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. KYR5-b in-store 1s and 2s opened. Still missing ~667 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Before proposing a brand, read lib/rating-drafts/ filenames. batch37–64 already exist.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -211,7 +211,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. KYR5-b in-store 1s and 2s opened. Still missing ~667 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -236,7 +236,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. KYR5-b in-store 1s and 2s opened. Still missing ~667 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -248,7 +248,7 @@ CATALOG STRATEGY
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. Sprouts house stays STASHED. Do not catalog Sprouts.
+- Next catalog day: store generics, then Amazon 3P. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Sprouts house stays STASHED. Do not catalog Sprouts.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -559,7 +559,7 @@ Completed (main, unverified drafts unless noted):
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 LIVE NOW
-KYR5 paused after PR #174 (resource-exhausted). KYR5-b is the barcode catch-up bot. Same rules. Do not reopen #121–#188. KYR5-b in-store 1s and 2s opened. Still missing ~667 (many dry). OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+KYR5 paused after PR #174 (resource-exhausted). KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213. Named dry leftovers: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
 3) Amazon 3P brands not on main
@@ -971,36 +971,25 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — in-store first (Sept 17, 2026)
 ================================================================
-Search catalog (parked Pedialyte out). A row has a code if it has UPC/EAN on `barcode` or a DailyMed set-id in sources. Do not invent codes. Do not grade. Unwritten Sprouts house stash ≈55 + 3 refused is excluded (not Search rows). Hyland’s / MegaFood / Genexa = 0 missing codes.
+Live recount after PR #213. Search catalog (parked Pedialyte out). A row has UPC/EAN if barcode has 8+ digits. Set-id = DailyMed set-id in sources. Do not invent codes. Do not grade. Unwritten Sprouts house stash ≈55 + 3 refused is excluded (not Search rows).
 
-Totals
+KYR5-b STOPPED after PR #213. Job 2 dry. Do not reopen #121–#213.
+Named dry leftovers from KYR5-b: set-id 97 / in-store 24 / online 13.
+
+Live Search totals
 - Search rows: 2203
-- Rows with a code: 2166
-- Rows missing UPC/EAN/set-id: 37
-- Rows missing UPC/EAN only (may still have set-id): 154 — KYR5-b barcode-only gap after Job 2 chunk 23 (1 set-id-only row / 1 unique UPC-A; chunk 22 filled 1; chunk 21 filled 1; chunk 20 filled 1; chunk 19 filled 2; chunk 18 filled 1; chunk 17 filled 2; chunk 16 filled 2; chunk 15 filled 2; chunk 14 filled 2; chunk 13 filled 3; chunk 12 filled 6; chunk 11 filled 45; chunk 10 filled 50; chunk 9 filled 50; chunk 8 filled 50; chunk 7 filled 50; chunk 6 filled 50; chunk 5 filled 50; chunk 4 filled 34; chunk 3 filled 21; chunk 2 filled 25; chunk 1 filled 42). Live re-scan after #212: 98 set-id-only. Set-id-only remaining 97.
-- Unique formulaId 1725 vs raw 2203 (478 pack-size clones). Missing-code set is 37 rows / 37 formulaIds — no pack-size clones in the no-code pile.
+- Rows with UPC/EAN: 2049
+- Rows with set-id only (no UPC): 117
+- Rows with neither: 37
+- Unique formulaId 1725 vs raw 2203 (478 pack-size clones)
 
-1) IN-STORE — 24 missing (group by brand). Hunt these first.
-- Sprouts — 3 (already written batch35/36/16; not the unwritten stash; 50 filled in chunk 1 + 62 in chunk 2 + 1 leftover): Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap
-- Culturelle — 2: Digestive Daily Probiotic Capsules (current US inulin / purple-carrot ≠ draft TiO2 carton); Kids Purely Probiotics Packets (current no-flavor ≠ sucralose carton)
-- Equate — 1: Children’s Melatonin Liquid
-- Kirkland Signature — 1: Daily Multi (TiO2 carton)
-- L’il Critters — 1: Omega-3 DHA Gummies
-- OLLY — 2: Kids Sleep (coconut-only oil listing); Men’s Multi (coconut + canola)
-- MaryRuth’s — 1: Kids Morning Multivitamin Liquid (current lutein Apple Berry OI ≠ grape-skin draft)
-- Nature Made — 1: Vitamin B12 Softgels (clear, no color added) (Target “no color added” vs Swanson carmine on same 90-ct)
-- Nature’s Way — 2: Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm — both UPCs already on coconut twin); Umcka Cold&Flu Relief FastActives (033674153499 already on umcka-fastactives-berry)
-- Qunol — 1: Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton — 850184008466 already on non-oleoresin 1500)
-- Walgreens — 2: Extra Strength Pain Reliever (coated; 311917047140 already mineral-oil twin); Prenatal Multivitamin (coated; conflicting OI)
-- Alaway — 1: Alaway Preservative Free (310119022276 is BAK bottle, not PF)
-- Blue-Emu — 1: Original Super Strength (current brand.com phenoxyethanol ≠ founder jar imidazolidinyl urea / parabens)
-- Member’s Mark — 1: Ibuprofen (2-pack UPC weak; NDC ≠ GTIN)
-- Signature Care — 1: Ibuprofen (DailyMed / NDC only)
-- up&up — 1: Extra Strength Acetaminophen (349483342017 not confirmed Red40 + TiO2)
-- Zarbee’s — 1: Children’s Cough Syrup + Immune (ivy+chamomile draft ≠ current honey/D3/zinc/elderberry)
-- Carlson — 1: Kid’s Super Daily D3 Drops (coconut-only vs coconut+palm conflict on same UPC)
+IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
+Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 3; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
 
-2) ONLINE-ONLY — 13 missing after KYR5-b chunk 1 (22 filled). Job 1 leftovers need another chunk. Do not reopen unless an exact-pack allowed-source UPC appears.
+ONLINE-ONLY missing UPC by brand — live 42
+Amazon Basic Care 15; Amazon Basics 8; Amazon Elements 6; HealthA2Z 2; TIME-Cap Labs 2; WELMATE 2; A+Health 1; Anima Mundi 1; Asutra 1; HealthWise 1; Pure Encapsulations 1; Teemofe 1; Thrive Market 1.
 
-3) JOB 2 SET-ID-ONLY — chunk 23 filled 1 leftover set-id-only row after #212 (1 unique UPC-A). Live re-scan after #212: 98 set-id-only. Attached this chunk: DG Health Mucus-DM ER 600/30 (Dollar General grocery PDP 370030100897 20-ct — carton Drug Facts D&C yellow #10 aluminum lake + yellow ER tablet; setid a95401cc / NDC 55910-746-01). Not mucus-ER sibling 370030100903 (55910-904 / no DXM) and not 1200/60 max. Chunk 22 Rexall APAP 370030659081 / chunk 21 DG Omeprazole 370030658336 were not re-touched. Remaining 97. DailyMed SPL XML for remaining set-id-only rows had no carton GTIN. DG night-liquid Original 8 oz 370030641857 had no Drug Facts panel (DailyMed 55910-459 is cherry/red; live Original bottle reads green). Dyed DG APAP 55910-506 still had no exact-pack grocery PDP (24-ct 370030169283 is white caplets). DG Health swallow loratadine PDPs were 355910* NDC-as-GTIN or ODT twins already attached. GoodSense IBU liquid-gel 301130298603 is NDC 0113-0298 / setid 3b78c004 — not 0113-4501 / 0cb4b0ef. Chunk 21 DG Health Omeprazole DR (Dollar General grocery PDP + carton Drug Facts 370030658336 42-ct / three 14-day bottles — setid 326bf21c / NDC 55910-915; not wildberry mint 370030169818). DG Health IBU 50-ct 370030015290 stayed off the iron-oxide 55910-604 row (carton Drug Facts print Red 40 lake + Yellow 6 lake + talc = dyed twin b514b589 / 55910-758). DailyMed SPL XML for remaining set-id-only rows had no carton GTIN. Chunk 20 TopCare Dual Action / chunk 19 Absorbine Jr. Plus Ultra / GoodSense Dual Action were not re-touched. Chunk 1–21 skip list still dry. Boiron leftover 30C tubes were already exhausted in chunks 5–11; shop-only other potencies stayed empty (Abies Canadensis / Ailanthus / Cheiranthus 9C; Alfalfa 6C/6X; Chenopodium 9C; Corallium Rubrum 5C; Cyclameneur non-UPC SKU; Fumaria 6X/9C; Gallicum Acidum 6C; Harpagophytum 4X/6C/7C; Luffa / Melilotus / Menyanthes 6C; Polygonum Punctatum 6X; Saponaria 6X/9C; Sempervivum 6C; Trillium Pendulum 9C; Venus Mercenaria 12C; Viola Tricolor 6C). Sambucus Nigra 6C multi-pack page stayed empty (not the single-tube Search row). Chunk 20 TopCare Dual Action (Acme grocery PDP + TopCare SmartLabel 036800472648 36-ct NDC 76162-501-68 + 036800472655 72-ct NDC 76162-501-23 — setid dddc04c4; not GoodSense Dual Action 301135300684 / setid b117358c). 144-ct 036800472631 stayed off the row (brand page 404; no live grocery PDP). Chunk 1–19 skip list still dry (Tylenol RS hospital blister NDC GTIN; Member’s Mark ES APAP; Walgreens ES dyes+talc; Dimetapp FPO; Assured Headache PM ValuHealth; Amazon day/night combo + Equate kids day+night sleeve; Sudafed PE kids check fail; CVS/Equate kids DPH FPO/zeros; Amazon dual-action / L484 pouch check fail; Coldcalm; DG dyed APAP check fail; Tylenol For Children Plus Adults must not steal ES-liquid UPC; B&T nighttime 308079* older Mexico / barley-malt family; B&T Psoriaflora NDC-as-GTIN only; Chestal Honey / Arnicare PEG must not steal existing shea/honey twin UPCs; Equate ES / CVS ES red40 / Signature Care kids IBU dyed / up&up honey daytime / Robitussin kids leftovers — DailyMed NDC-only or no printed retail UPC). Reckitt Biofreeze leftovers stayed empty when the only rbnainfo code was NDC-as-GTIN 359316* or a 2-pack/3-pack already on another Search row. Absorbine 7.5% Back / Knee twins stayed empty (Cub 889476412186 is the 5% XL already attached; 889476412513 is Plus Knee). Tiger Balm Muscle Rub / Neck & Shoulder lavender must not steal Active / vanishing-scent twin UPCs. Genexa adult cough / night leftovers stayed empty (brand Shopify barcode null; combo-pack UPC is not the single-formula Search row). Asutra DailyMed carton stayed empty (Thrive / current Asutra.com UPCs already on the mismatched-OI twin). HealthA2Z IBU 382/335 brand-site 369168381* pages did not print NDC so stayed empty. TIME-Cap 48cb1363 must not steal 49483-608 Amazon 349483608311. TopCare IBU liquid-gel SmartLabel 20-ct 036800133075 is Blue 1 / no TiO2 — not the Green #3 + TiO2 Search row (setid 0a24c758 / 160-ct NDC 36800-705-06). NDC-as-GTIN rejected.
-Amazon Elements 6 remaining (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies — dry this chunk: no exact-pack UPC or OI/form conflict). Amazon Basics 4 remaining (women’s / men’s / prenatal tablets — DSLD cultured One Daily ≠ 65-ct draft; kids melatonin 1 gummies — no exact-pack UPC). Thrive Market Multi-Collagen 1 (do not steal grass-fed flavored UPC). Anima Mundi Happiness Tonic 1 (no UPC). Pure Encapsulations Probiotic-5 1 (current HP OI plant fiber/cellulose/water ≠ draft rice starch + SiO2). Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health = 0 remaining. Solimo / Revly = 0 missing in this no-code pile.
+Named dry leftovers (KYR5-b already hunted — do not reopen)
+- set-id 97 — Job 2 leftover. DailyMed SPL had no carton GTIN on the remaining set-id-only queue.
+- in-store 24 — Sprouts 3 (Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap); Culturelle 2; Equate Children’s Melatonin Liquid; Kirkland Daily Multi (TiO2 carton); L’il Critters Omega-3 DHA Gummies; OLLY 2; MaryRuth’s Kids Morning Multivitamin Liquid; Nature Made B12 clear; Nature’s Way 2; Qunol oleoresin 1500; Walgreens 2; Alaway PF; Blue-Emu Original; Member’s Mark Ibuprofen; Signature Care Ibuprofen; up&up ES APAP; Zarbee’s Cough + Immune; Carlson Kid’s Super Daily D3 Drops.
+- online 13 — Amazon Elements 6 (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies); Amazon Basics 4 (women’s / men’s / prenatal tablets; kids melatonin 1 gummies); Thrive Market Multi-Collagen 1; Anima Mundi Happiness Tonic 1; Pure Encapsulations Probiotic-5 1. Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health / Solimo / Revly = 0 remaining.
