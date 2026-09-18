@@ -243,6 +243,10 @@ const BATCH4_CATCHUP_BARCODES: Record<string, string> = {
   // Children's Sudafed PE Cold + Cough 4 fl oz grape (not PE-only
   // 300450537041 already on the nasal-decongestant row).
   'sudafed-pe-childrens-cold-cough': '300450538048',
+  // KYR5-c barcode-tile chunk 5 — Walmart / upcitemdb 2 × 4 fl oz
+  // day+night kit UPC-A 681131136389 (Very Berry day + Mixed Berry
+  // night). Not a single night bottle.
+  'equate-childrens-cough-congestion-dn': '681131136389',
 };
 
 export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
@@ -1955,9 +1959,11 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
   },
   {
     id: 'equate-childrens-cough-congestion-dn',
-    productName: "Equate Children's Multi-Symptom Cold Daytime & Nighttime",
+    productName:
+      "Equate Children's Multi-Symptom Cold Daytime & Nighttime (2 × 4 fl oz)",
     brand: 'Equate',
     category: COLD_FLU,
+    barcode: BATCH4_CATCHUP_BARCODES['equate-childrens-cough-congestion-dn'],
     formulaId: 'equate-childrens-cough-congestion-dn',
     audience: KIDS,
     minAge: 4,
