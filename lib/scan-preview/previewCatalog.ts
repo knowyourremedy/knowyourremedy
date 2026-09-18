@@ -66,6 +66,7 @@ import {
   BATCH63_KYR6_ELEMENTS_BASICS,
   BATCH64_KYR6_THRIVE_NO_OI,
   BATCH65_KYR6_STORE_GENERICS,
+  BATCH66_KYR6_HELD_ROWS,
 } from '@/lib/rating-drafts';
 import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -152,6 +153,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH63_KYR6_ELEMENTS_BASICS,
   ...BATCH64_KYR6_THRIVE_NO_OI,
   ...BATCH65_KYR6_STORE_GENERICS,
+  ...BATCH66_KYR6_HELD_ROWS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
