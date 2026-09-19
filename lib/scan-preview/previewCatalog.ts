@@ -877,6 +877,32 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'absorbine-jr-neck-patch': catalogShot('absorbine-jr-neck-patch.jpg'),
   'absorbine-jr-back-patch': catalogShot('absorbine-jr-back-patch.jpg'),
   'absorbine-jr-knee-patch': catalogShot('absorbine-jr-knee-patch.jpg'),
+  'capzasin-hp-arthritis-cream': catalogShot('capzasin-hp-arthritis-cream.jpg'),
+  'bengay-ultra-strength-patch-5': catalogShot('bengay-ultra-strength-patch-5.jpg'),
+  'medinatura-t-relief-xs-oral-drops': catalogShot('medinatura-t-relief-xs-oral-drops.jpg'),
+  'medinatura-t-relief-xs-gel': catalogShot('medinatura-t-relief-xs-gel.jpg'),
+  'medinatura-t-relief-pain-gel': catalogShot('medinatura-t-relief-pain-gel.jpg'),
+  'medinatura-t-relief-xs-tablets': catalogShot('medinatura-t-relief-xs-tablets.jpg'),
+  'medinatura-t-relief-pain-tablets': catalogShot('medinatura-t-relief-pain-tablets.jpg'),
+  'medinatura-t-relief-arthritis-xs-tablets': catalogShot(
+    'medinatura-t-relief-arthritis-xs-tablets.jpg',
+  ),
+  'medinatura-bhi-arthritis': catalogShot('medinatura-bhi-arthritis.jpg'),
+  'medinatura-bhi-back': catalogShot('medinatura-bhi-back.jpg'),
+  'medinatura-bhi-migraine': catalogShot('medinatura-bhi-migraine.jpg'),
+  'medinatura-bhi-spasm-cramp': catalogShot('medinatura-bhi-spasm-cramp.jpg'),
+  'medinatura-t-relief-pain-cream': catalogShot('medinatura-t-relief-pain-cream.jpg'),
+  'medinatura-t-relief-xs-cream': catalogShot('medinatura-t-relief-xs-cream.jpg'),
+  'medinatura-t-relief-arthritis-xs-cream': catalogShot(
+    'medinatura-t-relief-arthritis-xs-cream.jpg',
+  ),
+  'medinatura-t-relief-lidocaine-4-cream': catalogShot(
+    'medinatura-t-relief-lidocaine-4-cream.jpg',
+  ),
+  'medinatura-traumeel-ointment': catalogShot('medinatura-traumeel-ointment.jpg'),
+  'bt-triflora-arthritis-gel': catalogShot('bt-triflora-arthritis-gel.jpg'),
+  'natures-way-sports-gel': catalogShot('natures-way-sports-gel.jpg'),
+  'tylenol-precise-cooling-cream': catalogShot('tylenol-precise-cooling-cream.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1087,7 +1113,11 @@ assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
 assertLetterOnly('biofreeze-foam', 'Biofreeze');
 assertLetterOnly('biofreeze-menthol-patches', 'Biofreeze');
 assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
-assertLetterOnly('capzasin-hp-arthritis-cream', 'Capzasin');
+assertExactCarton(
+  'capzasin-hp-arthritis-cream',
+  'Capzasin',
+  'capzasin-hp-arthritis-cream.jpg',
+);
 assertLetterOnly('mineral-ice-extreme-gel', 'Mineral Ice');
 assertLetterOnly('mineral-ice-extreme-dry-stick', 'Mineral Ice');
 assertLetterOnly('absorbine-jr-plus-es-liquid', 'Absorbine Jr.');
@@ -1097,7 +1127,11 @@ assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
 assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
-assertLetterOnly('bengay-ultra-strength-patch-5', 'Bengay');
+assertExactCarton(
+  'bengay-ultra-strength-patch-5',
+  'Bengay',
+  'bengay-ultra-strength-patch-5.jpg',
+);
 assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
 assertLetterOnly('ollois-arnica-montana-12c', 'Ollois');
 assertLetterOnly('oregons-wild-harvest-turmeric', "Oregon's Wild Harvest");
@@ -1677,9 +1711,62 @@ assertExactCarton('absorbine-jr-pro-no-mess', 'Absorbine Jr.', 'absorbine-jr-pro
 assertExactCarton('absorbine-jr-neck-patch', 'Absorbine Jr.', 'absorbine-jr-neck-patch.jpg');
 assertExactCarton('absorbine-jr-back-patch', 'Absorbine Jr.', 'absorbine-jr-back-patch.jpg');
 assertExactCarton('absorbine-jr-knee-patch', 'Absorbine Jr.', 'absorbine-jr-knee-patch.jpg');
+assertExactCarton(
+  'medinatura-t-relief-xs-oral-drops',
+  'MediNatura',
+  'medinatura-t-relief-xs-oral-drops.jpg',
+);
+assertExactCarton('medinatura-t-relief-xs-gel', 'MediNatura', 'medinatura-t-relief-xs-gel.jpg');
+assertExactCarton('medinatura-t-relief-pain-gel', 'MediNatura', 'medinatura-t-relief-pain-gel.jpg');
+assertExactCarton(
+  'medinatura-t-relief-xs-tablets',
+  'MediNatura',
+  'medinatura-t-relief-xs-tablets.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-pain-tablets',
+  'MediNatura',
+  'medinatura-t-relief-pain-tablets.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-arthritis-xs-tablets',
+  'MediNatura',
+  'medinatura-t-relief-arthritis-xs-tablets.jpg',
+);
+assertExactCarton('medinatura-bhi-arthritis', 'MediNatura', 'medinatura-bhi-arthritis.jpg');
+assertExactCarton('medinatura-bhi-back', 'MediNatura', 'medinatura-bhi-back.jpg');
+assertExactCarton('medinatura-bhi-migraine', 'MediNatura', 'medinatura-bhi-migraine.jpg');
+assertExactCarton('medinatura-bhi-spasm-cramp', 'MediNatura', 'medinatura-bhi-spasm-cramp.jpg');
+assertExactCarton(
+  'medinatura-t-relief-pain-cream',
+  'MediNatura',
+  'medinatura-t-relief-pain-cream.jpg',
+);
+assertExactCarton('medinatura-t-relief-xs-cream', 'MediNatura', 'medinatura-t-relief-xs-cream.jpg');
+assertExactCarton(
+  'medinatura-t-relief-arthritis-xs-cream',
+  'MediNatura',
+  'medinatura-t-relief-arthritis-xs-cream.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-lidocaine-4-cream',
+  'MediNatura',
+  'medinatura-t-relief-lidocaine-4-cream.jpg',
+);
+assertExactCarton('medinatura-traumeel-ointment', 'MediNatura', 'medinatura-traumeel-ointment.jpg');
+assertExactCarton(
+  'bt-triflora-arthritis-gel',
+  'Boericke & Tafel',
+  'bt-triflora-arthritis-gel.jpg',
+);
+assertExactCarton('natures-way-sports-gel', "Nature's Way", 'natures-way-sports-gel.jpg');
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
+assertExactCarton(
+  'tylenol-precise-cooling-cream',
+  'Tylenol',
+  'tylenol-precise-cooling-cream.jpg',
+);
 assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-nighttime-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-lidocaine-4-patch', 'Tylenol');
