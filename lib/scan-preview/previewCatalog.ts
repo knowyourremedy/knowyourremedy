@@ -310,6 +310,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'absorbine-jr-plus-knee-patch': brandMark('absorbine-jr-mark.png'),
   'qunol-extra-strength-turmeric-1500-oleoresin': brandMark('qunol-mark.png'),
   'motrin-arthritis-pain-gel': brandMark('motrin-mark.png'),
+  // Batch 3 attempted leftovers — no matching official 3D pack face.
+  // Flavor-generic dyed chew (grape / bubblegum cartons exist — do not glue).
+  'tylenol-children-chew-dyed': brandMark('tylenol-mark.png'),
+  // tylenol.com "family oral suspension" URL is Extra Strength Adult Liquid
+  // (already overlaid). Multi-SKU lineup art is not an exact carton.
+  'tylenol-for-children-plus-adults': brandMark('tylenol-mark.png'),
+  // advil.com current Junior Strength face is chewables, not this coated 24-ct.
+  'junior-strength-advil-coated': brandMark('advil-mark.png'),
+  // Too-broad leftover (film-coated / menstrual named as one row).
+  'advil-film-coated-menstrual': brandMark('advil-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -357,6 +367,25 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'now-turmeric-curcumin-bioperine': 'NOW',
   'gol-mykind-turmeric-inflammatory-gummies': 'Garden of Life',
   'organic-india-turmeric-formula': 'Organic India',
+  // Attempted P&F leftovers — aleve.com / bayeraspirin.com 403 from this
+  // environment; DailyMed hits are 2D dielines / label flats, not 3D
+  // packshots. No standalone official mark file. Do not stay letters.
+  // Caplets/Tablets, ES 500/Aspirina, Back & Body/Aspirina Cafeína, and
+  // enteric 81+325 are too-broad combined names — parent text tile.
+  'aleve-caplets-tablets': 'Aleve',
+  'aleve-gelcaps': 'Aleve',
+  'aleve-liquid-gels': 'Aleve',
+  'aleve-back-muscle-pain': 'Aleve',
+  'aleve-headache-pain': 'Aleve',
+  'bayer-es-500-aspirina': 'Bayer',
+  'bayer-back-body-aspirina-cafeina': 'Bayer',
+  'bayer-aspirin-regimen-enteric': 'Bayer',
+  'bayer-chewable-81-orange': 'Bayer',
+  'bayer-chewable-81-cherry': 'Bayer',
+  'genuine-bayer-aspirin-325': 'Bayer',
+  'alevex-pain-relieving-lotion-roll-on': 'AleveX',
+  'alevex-pain-relieving-lotion-tube': 'AleveX',
+  'alevex-pain-relieving-spray': 'AleveX',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1044,6 +1073,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-turmeric-curcumin-2300': catalogShot(
     'nutricost-turmeric-curcumin-2300.jpg',
   ),
+  // Official shop.sprouts.com house PDP bottles (same source style as
+  // sprouts-inflacalm-powder-cap). Exact leftover SKUs.
+  'sprouts-tart-cherry-turmeric': catalogShot(
+    'sprouts-tart-cherry-turmeric.jpg',
+  ),
+  'sprouts-turmeric-capsules': catalogShot('sprouts-turmeric-capsules.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1164,6 +1199,26 @@ assertBrandMark(
   'Absorbine Jr.',
   'absorbine-jr-mark.png',
 );
+assertBrandMark(
+  'tylenol-children-chew-dyed',
+  'Tylenol',
+  'tylenol-mark.png',
+);
+assertBrandMark(
+  'tylenol-for-children-plus-adults',
+  'Tylenol',
+  'tylenol-mark.png',
+);
+assertBrandMark(
+  'junior-strength-advil-coated',
+  'Advil',
+  'advil-mark.png',
+);
+assertBrandMark(
+  'advil-film-coated-menstrual',
+  'Advil',
+  'advil-mark.png',
+);
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -1270,6 +1325,32 @@ assertBrandTextTile(
   'Organic India',
   'Organic India',
 );
+assertBrandTextTile('aleve-caplets-tablets', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-gelcaps', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-liquid-gels', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-back-muscle-pain', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-headache-pain', 'Aleve', 'Aleve');
+assertBrandTextTile('bayer-es-500-aspirina', 'Bayer', 'Bayer');
+assertBrandTextTile(
+  'bayer-back-body-aspirina-cafeina',
+  'Bayer',
+  'Bayer',
+);
+assertBrandTextTile('bayer-aspirin-regimen-enteric', 'Bayer', 'Bayer');
+assertBrandTextTile('bayer-chewable-81-orange', 'Bayer', 'Bayer');
+assertBrandTextTile('bayer-chewable-81-cherry', 'Bayer', 'Bayer');
+assertBrandTextTile('genuine-bayer-aspirin-325', 'Bayer', 'Bayer');
+assertBrandTextTile(
+  'alevex-pain-relieving-lotion-roll-on',
+  'AleveX',
+  'AleveX',
+);
+assertBrandTextTile(
+  'alevex-pain-relieving-lotion-tube',
+  'AleveX',
+  'AleveX',
+);
+assertBrandTextTile('alevex-pain-relieving-spray', 'AleveX', 'AleveX');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1410,6 +1491,16 @@ assertExactCarton(
   'penetrex-pain-relief-cream',
   'Penetrex',
   'penetrex-pain-relief-cream.jpg',
+);
+assertExactCarton(
+  'sprouts-tart-cherry-turmeric',
+  'Sprouts',
+  'sprouts-tart-cherry-turmeric.jpg',
+);
+assertExactCarton(
+  'sprouts-turmeric-capsules',
+  'Sprouts',
+  'sprouts-turmeric-capsules.jpg',
 );
 
 function assertExactCarton(id: string, brand: string, file: string) {
@@ -2005,9 +2096,6 @@ assertExactCarton(
   'Tylenol',
   'tylenol-precise-lidocaine-4-patch.jpg',
 );
-assertLetterOnly('alevex-pain-relieving-lotion-roll-on', 'AleveX');
-assertLetterOnly('alevex-pain-relieving-lotion-tube', 'AleveX');
-assertLetterOnly('alevex-pain-relieving-spray', 'AleveX');
 assertExactCarton(
   'advil-targeted-relief-cream',
   'Advil',
