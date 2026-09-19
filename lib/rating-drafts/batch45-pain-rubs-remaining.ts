@@ -623,9 +623,14 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
   }),
   row({
     id: ID.tbMuscle,
-    productName: 'Tiger Balm Muscle Rub',
+    productName: 'Tiger Balm Muscle Rub (2 oz)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — Muscle Rub 2 oz cream 15/5/3.
+    // Same GTIN as Active Muscle Rub twin (already-had 039278440201).
+    // Brand site tigerbalm.com/us/product/tiger-balm-muscle-rub/ 2 oz.
+    // Not 039278440300 Active Gel / not 039278440409 spray.
+    barcode: '039278440201',
     formulaId: ID.tbMuscle,
     audience: ADULT,
     minAge: 12,
@@ -672,9 +677,13 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
   }),
   row({
     id: ID.tbNeck,
-    productName: 'Tiger Balm Neck & Shoulder Rub',
+    productName: 'Tiger Balm Neck & Shoulder Rub (1.76 oz)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — Neck & Shoulder 1.76 oz single tube
+    // (camphor 11% / menthol 10%). Same GTIN as vanishing-scent twin
+    // (already-had 039278421019). Not 885450347581 multi-pack.
+    barcode: '039278421019',
     formulaId: ID.tbNeck,
     audience: ADULT,
     minAge: 12,
@@ -1140,6 +1149,8 @@ const BATCH45_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyVanish]: '041167009239',
   [ID.icyNight]: '041167170908',
   [ID.tbActiveRub]: '039278440201',
+  [ID.tbMuscle]: '039278440201',
+  [ID.tbNeck]: '039278421019',
   [ID.icyRevive]: '041167080269',
   [ID.tbActiveGel]: '039278440300',
   [ID.tbSpray]: '039278440409',

@@ -178,9 +178,13 @@ function hydrogelPatchInactives(setid: string): IngredientFlag[] {
 export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
   row({
     id: ID.tbPatch,
-    productName: 'Tiger Balm Pain Relieving Patch',
+    productName: 'Tiger Balm Pain Relieving Patch (5-ct)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — 5-ct 4x2.75 patch family GTIN.
+    // Same GTIN as 110/33/22 hydrogel + older 80/24/16 regular
+    // hydrogel (already-had). Not 039278322064 warehouse twin.
+    barcode: '039278322002',
     formulaId: ID.tbPatch,
     audience: ADULT,
     minAge: 12,
@@ -202,9 +206,13 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
   }),
   row({
     id: ID.tbHydro,
-    productName: 'Tiger Balm Pain Relieving Hydrogel Patch',
+    productName: 'Tiger Balm Pain Relieving Hydrogel Patch (5-ct)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — 5-ct Drug Facts 110/33/22 hydrogel.
+    // Same GTIN as standard 5-ct patch + older 80/24/16 listings.
+    // Taiwan carton photo on this GTIN. Not Large 039278323009.
+    barcode: '039278322002',
     formulaId: ID.tbPatch,
     audience: ADULT,
     minAge: 12,
@@ -529,6 +537,8 @@ if (BATCH46_PAIN_RUB_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FE
 }
 const BATCH46_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbVanish]: '039278421019',
+  [ID.tbPatch]: '039278322002',
+  [ID.tbHydro]: '039278322002',
 };
 for (const record of BATCH46_PAIN_RUB_REFUSED_UNLOCK) {
   const expected = BATCH46_CATCHUP_BARCODES[record.id];
