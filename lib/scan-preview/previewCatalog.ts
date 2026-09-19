@@ -855,6 +855,28 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'salonpas-hot-capsicum-patch': catalogShot('salonpas-hot-capsicum-patch.jpg'),
   'tiger-balm-hydrogel-patch-large': catalogShot('tiger-balm-hydrogel-patch-large.jpg'),
   'tiger-balm-arthritis-rub': catalogShot('tiger-balm-arthritis-rub.jpg'),
+  'biofreeze-ultraflex-lidocaine-4-patch': catalogShot('biofreeze-ultraflex-lidocaine-4-patch.jpg'),
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch': catalogShot(
+    'biofreeze-ultraflex-plus-lidocaine-menthol-patch.jpg',
+  ),
+  'capzasin-quick-relief-gel': catalogShot('capzasin-quick-relief-gel.jpg'),
+  'biofreeze-pain-relief-gel-4': catalogShot('biofreeze-pain-relief-gel-4.jpg'),
+  'biofreeze-pain-relief-roll-on-4': catalogShot('biofreeze-pain-relief-roll-on-4.jpg'),
+  'biofreeze-overnight-gel-4': catalogShot('biofreeze-overnight-gel-4.jpg'),
+  'biofreeze-overnight-roll-on-4': catalogShot('biofreeze-overnight-roll-on-4.jpg'),
+  'biofreeze-pain-relief-cream': catalogShot('biofreeze-pain-relief-cream.jpg'),
+  'biofreeze-dry-stick': catalogShot('biofreeze-dry-stick.jpg'),
+  'biofreeze-triple-target-roll-on': catalogShot('biofreeze-triple-target-roll-on.jpg'),
+  'biofreeze-triple-target-gel': catalogShot('biofreeze-triple-target-gel.jpg'),
+  'biofreeze-overnight-relief-patches': catalogShot('biofreeze-overnight-relief-patches.jpg'),
+  'bengay-ultra-strength-nongreasy': catalogShot('bengay-ultra-strength-nongreasy.jpg'),
+  'bengay-vanishing-scent-gel': catalogShot('bengay-vanishing-scent-gel.jpg'),
+  'bengay-lidocaine-tropical-jasmine': catalogShot('bengay-lidocaine-tropical-jasmine.jpg'),
+  'absorbine-jr-pro-cream': catalogShot('absorbine-jr-pro-cream.jpg'),
+  'absorbine-jr-pro-no-mess': catalogShot('absorbine-jr-pro-no-mess.jpg'),
+  'absorbine-jr-neck-patch': catalogShot('absorbine-jr-neck-patch.jpg'),
+  'absorbine-jr-back-patch': catalogShot('absorbine-jr-back-patch.jpg'),
+  'absorbine-jr-knee-patch': catalogShot('absorbine-jr-knee-patch.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1046,12 +1068,7 @@ assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
 assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
-assertLetterOnly('biofreeze-ultraflex-lidocaine-4-patch', 'Biofreeze');
-assertLetterOnly('biofreeze-ultraflex-plus-lidocaine-menthol-patch', 'Biofreeze');
-assertLetterOnly('capzasin-quick-relief-gel', 'Capzasin');
 assertLetterOnly('mineral-ice-extreme-menthol-spray', 'Mineral Ice');
-assertLetterOnly('biofreeze-pain-relief-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-roll-on-4', 'Biofreeze');
 assertLetterOnly('biofreeze-colorless-gel-4', 'Biofreeze');
 assertLetterOnly('biofreeze-colorless-roll-on-4', 'Biofreeze');
 assertLetterOnly('biofreeze-gel-3-5-paraben', 'Biofreeze');
@@ -1059,8 +1076,6 @@ assertLetterOnly('biofreeze-professional-gel-5', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-roll-on-5', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-colorless-gel-5', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-colorless-roll-on-5', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-roll-on-4', 'Biofreeze');
 assertLetterOnly('biofreeze-pain-relief-spray-10-5-denatonium', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-aerosol-10-5-denatonium', 'Biofreeze');
 assertLetterOnly('biofreeze-pain-relief-spray-10-5', 'Biofreeze');
@@ -1068,29 +1083,16 @@ assertLetterOnly('biofreeze-professional-spray-10-5', 'Biofreeze');
 assertLetterOnly('biofreeze-precision-relief-pen', 'Biofreeze');
 assertLetterOnly('biofreeze-pain-relief-spray-10', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-spray-13', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-cream', 'Biofreeze');
 assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
 assertLetterOnly('biofreeze-foam', 'Biofreeze');
-assertLetterOnly('biofreeze-dry-stick', 'Biofreeze');
-assertLetterOnly('biofreeze-triple-target-roll-on', 'Biofreeze');
-assertLetterOnly('biofreeze-triple-target-gel', 'Biofreeze');
 assertLetterOnly('biofreeze-menthol-patches', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-relief-patches', 'Biofreeze');
 assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
-assertLetterOnly('bengay-ultra-strength-nongreasy', 'Bengay');
-assertLetterOnly('bengay-vanishing-scent-gel', 'Bengay');
-assertLetterOnly('bengay-lidocaine-tropical-jasmine', 'Bengay');
 assertLetterOnly('capzasin-hp-arthritis-cream', 'Capzasin');
 assertLetterOnly('mineral-ice-extreme-gel', 'Mineral Ice');
 assertLetterOnly('mineral-ice-extreme-dry-stick', 'Mineral Ice');
 assertLetterOnly('absorbine-jr-plus-es-liquid', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-pro-roll-on-liquid', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-cream', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-no-mess', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-pro-spray', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-neck-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-back-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-knee-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
 assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
@@ -1623,6 +1625,58 @@ assertExactCarton(
   'tiger-balm-hydrogel-patch-large.jpg',
 );
 assertExactCarton('tiger-balm-arthritis-rub', 'Tiger Balm', 'tiger-balm-arthritis-rub.jpg');
+assertExactCarton(
+  'biofreeze-ultraflex-lidocaine-4-patch',
+  'Biofreeze',
+  'biofreeze-ultraflex-lidocaine-4-patch.jpg',
+);
+assertExactCarton(
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch',
+  'Biofreeze',
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch.jpg',
+);
+assertExactCarton('capzasin-quick-relief-gel', 'Capzasin', 'capzasin-quick-relief-gel.jpg');
+assertExactCarton('biofreeze-pain-relief-gel-4', 'Biofreeze', 'biofreeze-pain-relief-gel-4.jpg');
+assertExactCarton(
+  'biofreeze-pain-relief-roll-on-4',
+  'Biofreeze',
+  'biofreeze-pain-relief-roll-on-4.jpg',
+);
+assertExactCarton('biofreeze-overnight-gel-4', 'Biofreeze', 'biofreeze-overnight-gel-4.jpg');
+assertExactCarton(
+  'biofreeze-overnight-roll-on-4',
+  'Biofreeze',
+  'biofreeze-overnight-roll-on-4.jpg',
+);
+assertExactCarton('biofreeze-pain-relief-cream', 'Biofreeze', 'biofreeze-pain-relief-cream.jpg');
+assertExactCarton('biofreeze-dry-stick', 'Biofreeze', 'biofreeze-dry-stick.jpg');
+assertExactCarton(
+  'biofreeze-triple-target-roll-on',
+  'Biofreeze',
+  'biofreeze-triple-target-roll-on.jpg',
+);
+assertExactCarton('biofreeze-triple-target-gel', 'Biofreeze', 'biofreeze-triple-target-gel.jpg');
+assertExactCarton(
+  'biofreeze-overnight-relief-patches',
+  'Biofreeze',
+  'biofreeze-overnight-relief-patches.jpg',
+);
+assertExactCarton(
+  'bengay-ultra-strength-nongreasy',
+  'Bengay',
+  'bengay-ultra-strength-nongreasy.jpg',
+);
+assertExactCarton('bengay-vanishing-scent-gel', 'Bengay', 'bengay-vanishing-scent-gel.jpg');
+assertExactCarton(
+  'bengay-lidocaine-tropical-jasmine',
+  'Bengay',
+  'bengay-lidocaine-tropical-jasmine.jpg',
+);
+assertExactCarton('absorbine-jr-pro-cream', 'Absorbine Jr.', 'absorbine-jr-pro-cream.jpg');
+assertExactCarton('absorbine-jr-pro-no-mess', 'Absorbine Jr.', 'absorbine-jr-pro-no-mess.jpg');
+assertExactCarton('absorbine-jr-neck-patch', 'Absorbine Jr.', 'absorbine-jr-neck-patch.jpg');
+assertExactCarton('absorbine-jr-back-patch', 'Absorbine Jr.', 'absorbine-jr-back-patch.jpg');
+assertExactCarton('absorbine-jr-knee-patch', 'Absorbine Jr.', 'absorbine-jr-knee-patch.jpg');
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
 assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
 assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
