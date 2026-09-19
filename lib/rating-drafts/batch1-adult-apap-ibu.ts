@@ -705,9 +705,14 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
   },
   {
     id: 'walgreens-es-red40-tio2',
-    productName: 'Walgreens Extra Strength Pain Reliever (coated)',
+    productName: 'Walgreens Extra Strength Pain Reliever (coated, 50-ct)',
     brand: 'Walgreens',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — coated caplets 50-ct. Founder 11-digit
+    // 31191701535; go-upc UPC-A is 311917015354 (EAN 0311917015354).
+    // 031191701535 is not a valid UPC-A. Not mineral-oil 311917047140 /
+    // not gelcaps 31191715425 / not dyes+talc twin.
+    barcode: '311917015354',
     formulaId: 'apap-walgreens-es-red40-tio2',
     audience: ADULT,
     minAge: 12,

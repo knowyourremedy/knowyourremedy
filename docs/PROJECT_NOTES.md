@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (batch69 LANDED PR #231 — Amazon 3P is LIVE; do not reopen 65 / 66 / 68 / #229 / #230; refused §5 strings stay below; missing UPC 101 = in-store 72 + online 29; do not reopen #121–#221)
+Last Updated: September 19, 2026 (KYR5-d founder-lock attach — 1 unique UPC-A + 50-ct pack; Walk list A founder names closed; live missing UPC 130 = in-store 101 + online 29 after #227+ / #231; do not reopen #121–#221)
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,8 +56,8 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 / KYR5-b barcode factory DONE after PR #214. KYR5-c barcode-tile chunk 6 attached 1 unique UPC-A (1 pack count filled; chunk 1 attached 19; chunk 2 attached 7; chunk 3 attached 4; chunk 4 attached 26; chunk 5 attached 3). Live missing UPC: 101 (in-store 72 + online-only 29). Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
-- KYR5-b was the barcode catch-up bot. DONE after PR #213. KYR5-c walk lists on this file after #214. Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 24 / online 13.
+- KYR5 / KYR5-b barcode factory DONE after PR #214. KYR5-c barcode-tile chunk 6 attached 1 unique UPC-A. KYR5-d founder-lock attach filled 1 unique UPC-A (Walgreens coated ES 50-ct 311917015354; 1 pack count filled). Live Search dump after #227+ / #231: missing UPC 130 (in-store 101 + online-only 29). Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 23 / online 13 (founder unlocked the Walgreens coated DRY leftover). Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
+- KYR5-b was the barcode catch-up bot. DONE after PR #213. KYR5-c walk lists on this file after #214. KYR5-d is founder-lock attach + Walk list A strike only. Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 23 / online 13.
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -75,7 +75,7 @@ LAUNCH WEIGHT
 - Row exists = coverage.
 - Barcode / set-id = the scanner works.
 - Carton photo = polish.
-- Search rows missing a UPC: 101. In-store 72. Online-only 29. Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). KYR5-c barcode-tile chunk 6 attached 1. Do not reopen #121–#221. Forward catalog (KYR3) attaches UPC when the source has it.
+- Search rows missing a UPC: 130. In-store 101. Online-only 29. Named dry, do not reopen: set-id 97 / in-store 23 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). KYR5-d founder-lock attached 1 (Walk list A founder names closed). Do not reopen #121–#221. Forward catalog (KYR3) attaches UPC when the source has it.
 
 FOUNDER CALLS — MAJORITY RULE
 - New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
@@ -185,13 +185,13 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 130 (in-store 101 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 130 (in-store 101 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -240,7 +240,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 130 (in-store 101 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -265,7 +265,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 130 (in-store 101 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -306,7 +306,7 @@ CATALOG STRATEGY
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: Amazon 3P brands not on main. batch69 LANDED (PR #231). Store generics leftover closeout DONE. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
+- Next catalog day: Amazon 3P brands not on main. batch69 LANDED (PR #231). Store generics leftover closeout DONE. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -694,8 +694,8 @@ TOKEN / SCOPE LOCKS
 LIVE NOW
 1) Amazon 3P brands not on main.
 THEN (not live): un-stash Sprouts house (~55 walk + 3 refused). Do not catalog Sprouts. 187 is dead.
-KYR5 / KYR5-b / KYR5-c DONE. Do not reopen #121–#221.
-Live missing UPC on notes: 101 (in-store 72 / online-only 29). Named dry: set-id 97 / in-store 24 / online 13.
+KYR5 / KYR5-b / KYR5-c DONE. KYR5-d founder-lock attach. Do not reopen #121–#221.
+Live missing UPC on notes: 130 (in-store 101 / online-only 29). Named dry: set-id 97 / in-store 23 / online 13.
 KYR4 photos on paste only. Cron OFF.
 
 PROCESS
@@ -706,7 +706,7 @@ PROCESS
 - Main wins over pins.
 
 LIVE NOW
-KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 130 (in-store 101 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 batch69 LANDED (PR #231). Do not resend. Do not reopen 65 / 66 / 68 / #230.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics leftover closeout — batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
@@ -1119,45 +1119,26 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — in-store first (Sept 17, 2026)
 ================================================================
-Live after #213 / #214. Search catalog (parked Pedialyte out). A row has a UPC if barcode has 8+ digits. Do not invent codes. Do not grade. Walk lists A/B stay on this file — do not paste them again.
+Live after #213 / #214 / KYR5-d founder-lock. Search catalog (parked Pedialyte out). A row has a UPC if barcode has 8+ digits. Do not invent codes. Do not grade. Walk lists A/B stay on this file — do not paste them again.
 
-KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221.
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221.
 
-Live totals
-- Search rows missing a UPC: 101 (KYR5-c barcode-tile chunk 6 filled 1)
-- In-store missing UPC: 72
+Live totals (real Search dump after #227+ / #231 + this attach)
+- Search rows: 2239
+- Rows with UPC: 2109
+- Search rows missing a UPC: 130 (KYR5-d filled 1 unique UPC-A; #227+ / batch65–69 added in-store rows after the old 101)
+- In-store missing UPC: 101
 - Online-only missing UPC: 29
-- Named dry, do not reopen: set-id 97 / in-store 24 / online 13
+- Named dry, do not reopen: set-id 97 / in-store 23 / online 13
 - Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet)
 
-IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
-Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 2; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
+IN-STORE missing UPC by brand — live 101
+Walgreens 10; Member’s Mark 9; Tiger Balm 6; TopCare 6; Biofreeze 5; Equate 5; Family Wellness 5; DG Health 4; Icy Hot 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; CVS Health 3; GoodSense 3; Sprouts 3; up&up 3; Boiron 2; Culturelle 2; Genexa 2; Nature’s Way 2; OLLY 2; Signature Care 2; Tylenol 2; Alaway 1; Blue-Emu 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Zarbee’s 1.
 
-Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen). Fields from the live Search row only: brand — product name — form — strength — pack count (count unknown if the row has no count) — coat/color if the row has it. Do not invent a count. No barcodes.
-Boiron (23)
-- Boiron — Boiron Abies Canadensis Pellets — pellets — Abies Canadensis potency on tube — count unknown
-- Boiron — Boiron Ailanthus Glandulosus Pellets — pellets — Ailanthus Glandulosus potency on tube — count unknown
-- Boiron — Boiron Alfalfa Pellets — pellets — Alfalfa potency on tube — count unknown
+Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen). Fields from the live Search row only: brand — product name — form — strength — pack count (count unknown if the row has no count) — coat/color if the row has it. Do not invent a count. No barcodes. KYR5-d closed founder-matched names (already-had or newly attached); leftover founder twins below stayed empty on exact-pack.
+Boiron (2)
 - Boiron — Boiron Arnicare Cream (DailyMed PEG panel) — cream — Arnica montana 1X HPUS 7% — count unknown
-- Boiron — Boiron Cheiranthus Cheiri Pellets — pellets — Cheiranthus Cheiri potency on tube — count unknown
-- Boiron — Boiron Chenopodium Anthelminticum Pellets — pellets — Chenopodium Anthelminticum potency on tube — count unknown
 - Boiron — Boiron Chestal Cold & Cough Honey — syrup — Dulcamara 5C HPUS; Ferrum phosphoricum 9C HPUS; Hydrastis canadensis 9C HPUS; Kali bichromicum 9C HPUS; Nux vomica 9C HPUS — count unknown
-- Boiron — Boiron Coldcalm Meltaway Tablets — meltaway tablet — Allium cepa 3C HPUS; Apis mellifica 6C HPUS; Belladonna 6C HPUS; Eupatorium perfoliatum 3C HPUS; Gelsemium sempervirens 6C HPUS; Kali bichromicum 6C HPUS; Nux vomica 3C HPUS; Phytolacca decandra 6C HPUS; Pulsatilla 6C HPUS — count unknown
-- Boiron — Boiron Corallium Rubrum Pellets — pellets — Corallium Rubrum potency on tube — count unknown
-- Boiron — Boiron Cyclameneur Pellets — pellets — Cyclameneur potency on tube — count unknown
-- Boiron — Boiron Fumaria Officinalis Pellets — pellets — Fumaria Officinalis potency on tube — count unknown
-- Boiron — Boiron Gallicum Acidum Pellets — pellets — Gallicum Acidum potency on tube — count unknown
-- Boiron — Boiron Harpagophytum Pellets — pellets — Harpagophytum potency on tube — count unknown
-- Boiron — Boiron Luffa Operculata Pellets — pellets — Luffa Operculata potency on tube — count unknown
-- Boiron — Boiron Melilotus Officinalis Pellets — pellets — Melilotus Officinalis potency on tube — count unknown
-- Boiron — Boiron Menyanthes Trifoliata Pellets — pellets — Menyanthes Trifoliata potency on tube — count unknown
-- Boiron — Boiron Polygonum Punctatum Pellets — pellets — Polygonum Punctatum potency on tube — count unknown
-- Boiron — Boiron Sambucus nigra 6C Pellets — pellets — Sambucus nigra 6C potency on tube — count unknown
-- Boiron — Boiron Saponaria Officinalis Pellets — pellets — Saponaria Officinalis potency on tube — count unknown
-- Boiron — Boiron Sempervivum Tectorum Pellets — pellets — Sempervivum Tectorum potency on tube — count unknown
-- Boiron — Boiron Trillium Pendulum Pellets — pellets — Trillium Pendulum potency on tube — count unknown
-- Boiron — Boiron Venus Mercenaria Pellets — pellets — Venus Mercenaria potency on tube — count unknown
-- Boiron — Boiron Viola Tricolor Pellets — pellets — Viola Tricolor potency on tube — count unknown
 Biofreeze (6)
 - Biofreeze — Biofreeze Pain Relief Spray 10.5% (denatonium) — spray — Menthol 10.5% — count unknown
 - Biofreeze — Biofreeze Pain Relieving Gel 3.5% (paraben SPL) — gel — Menthol 3.5% — count unknown
@@ -1165,12 +1146,10 @@ Biofreeze (6)
 - Biofreeze — Biofreeze Professional Colorless Roll-On 5% — roll-on — Menthol 5% — count unknown — colorless
 - Biofreeze — Biofreeze Professional Spray 10.5% (denatonium aerosol) — spray — Menthol 10.5% — count unknown
 - Biofreeze — Biofreeze Professional Spray 13% — spray — Menthol 13% — count unknown
-Equate (6)
+Equate (4)
 - Equate — Equate Children's Melatonin Liquid — liquid — Melatonin 1mg — count unknown DRY
-- Equate — Equate Children's Multi-Symptom Cold Daytime & Nighttime — liquid kit — Dextromethorphan HBr (day) 5mg / 5mL; Guaifenesin (day) 100mg / 5mL; Phenylephrine HCl (day) 2.5mg / 5mL — count unknown
 - Equate — Equate Children's Multi-Symptom Cold Nighttime — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL; Phenylephrine HCl 5mg / 10mL — count unknown
 - Equate — Equate Dye-Free Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown — dye-free
-- Equate — Equate Extra Strength Pain Reliever — caplet — Acetaminophen 500mg — count unknown
 - Equate — Equate Lubricant Eye Drops Preservative-Free — single-use eye drop — Carboxymethylcellulose sodium 0.5% — count unknown
 Tiger Balm (6)
 - Tiger Balm — Tiger Balm Muscle Rub — cream — Methyl salicylate 15%; Menthol 5%; Camphor (synthetic) 3% — count unknown
@@ -1179,9 +1158,8 @@ Tiger Balm (6)
 - Tiger Balm — Tiger Balm Pain Relieving Hydrogel Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
 - Tiger Balm — Tiger Balm Pain Relieving Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
 - Tiger Balm — Tiger Balm Pain Relieving Patch (wider hydrogel) — patch — Camphor (synthetic) 160 mg/patch; Levomenthol (L-menthol) 48 mg/patch; Capsicum extract 32 mg/patch — count unknown
-DG Health (4)
+DG Health (3)
 - DG Health — DG Health Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
-- DG Health — DG Health Cold & Flu Relief Nighttime Liquid — liquid — Acetaminophen 650mg / 30mL; Dextromethorphan HBr 30mg / 30mL; Doxylamine succinate 12.5mg / 30mL — count unknown
 - DG Health — DG Health Ibuprofen 200 mg Film-Coated Tablets — film-coated tablet — Ibuprofen 200mg — count unknown — film-coated
 - DG Health — DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes) — film-coated tablet — Acetaminophen 500mg — count unknown — dyed lakes
 Icy Hot (4)
@@ -1189,9 +1167,8 @@ Icy Hot (4)
 - Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
 - Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11% — count unknown
 - Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
-Walgreens (4)
+Walgreens (3)
 - Walgreens — Walgreens Children's Nighttime Cough — liquid — Chlorpheniramine maleate 2mg / 10mL; Dextromethorphan HBr 15mg / 10mL — count unknown
-- Walgreens — Walgreens Extra Strength Pain Reliever (coated) — caplet — Acetaminophen 500mg — count unknown — coated DRY
 - Walgreens — Walgreens Pain Reliever (multi-dye + talc SPL) — caplet — Acetaminophen 500mg — count unknown — multi-dye
 - Walgreens — Walgreens Prenatal Multivitamin (coated) — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid label serving; Iron label serving; Zinc (as zinc oxide) label serving — count unknown — film-coated DRY
 Absorbine Jr. (3)
@@ -1350,5 +1327,5 @@ Thrive Market (1)
 
 Named dry leftovers (KYR5-b already hunted — do not reopen)
 - set-id 97 — Job 2 leftover. DailyMed SPL had no carton GTIN on the remaining set-id-only queue.
-- in-store 24 — Sprouts 3 (Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap); Culturelle 2; Equate Children’s Melatonin Liquid; Kirkland Daily Multi (TiO2 carton); L’il Critters Omega-3 DHA Gummies; OLLY 2; MaryRuth’s Kids Morning Multivitamin Liquid; Nature Made B12 clear; Nature’s Way 2; Qunol oleoresin 1500; Walgreens 2; Alaway PF; Blue-Emu Original; Member’s Mark Ibuprofen; Signature Care Ibuprofen; up&up ES APAP; Zarbee’s Cough + Immune; Carlson Kid’s Super Daily D3 Drops.
+- in-store 23 — Sprouts 3 (Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap); Culturelle 2; Equate Children’s Melatonin Liquid; Kirkland Daily Multi (TiO2 carton); L’il Critters Omega-3 DHA Gummies; OLLY 2; MaryRuth’s Kids Morning Multivitamin Liquid; Nature Made B12 clear; Nature’s Way 2; Qunol oleoresin 1500; Walgreens 1 (Prenatal coated; founder unlocked Extra Strength coated 50-ct 311917015354); Alaway PF; Blue-Emu Original; Member’s Mark Ibuprofen; Signature Care Ibuprofen; up&up ES APAP; Zarbee’s Cough + Immune; Carlson Kid’s Super Daily D3 Drops.
 - online 13 — Amazon Elements 6 (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies); Amazon Basics 4 (women’s / men’s / prenatal tablets; kids melatonin 1 gummies); Thrive Market Multi-Collagen 1; Anima Mundi Happiness Tonic 1; Pure Encapsulations Probiotic-5 1. Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health / Solimo / Revly = 0 remaining.
