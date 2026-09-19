@@ -357,6 +357,8 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-dual-action': brandMark('goodsense-mark.png'),
   'goodsense-childrens-ibuprofen-chew': brandMark('goodsense-mark.png'),
   'goodsense-ibuprofen-liquid-gels': brandMark('goodsense-mark.png'),
+  // Batch 2 leftover — DailyMed is a 2D dieline, not a 3D packshot.
+  'goodsense-es-pain-relief-l484': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -439,6 +441,17 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basics-ibuprofen-iron-oxide-yellow': 'Amazon Basics',
   'aplus-health-dual-action-oxides': 'A+Health',
   'aplus-health-dual-action': 'A+Health',
+  // Batch 2 leftovers — DailyMed / brand-site hits are 2D dielines,
+  // wrong-brand faces, or a different NDC. No standalone official mark.
+  'healtha2z-childrens-apap-chew': 'HealthA2Z',
+  'timecap-ibuprofen-200': 'TIME-Cap',
+  'sumifun-lidocaine-4-patch': 'Sumifun',
+  'amazon-elements-turmeric-complex': 'Amazon Elements',
+  'teemofe-lidocaine-4-patch': 'Teemofe',
+  'healtha2z-naproxen-220-300': 'HealthA2Z',
+  'amazon-basic-care-apap-650-er-l544': 'Basic Care',
+  'amazon-basic-care-aspirin-81-chew-l467': 'Basic Care',
+  'amazon-elements-turmeric-root': 'Amazon Elements',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1390,6 +1403,11 @@ assertBrandMark(
   'GoodSense',
   'goodsense-mark.png',
 );
+assertBrandMark(
+  'goodsense-es-pain-relief-l484',
+  'GoodSense',
+  'goodsense-mark.png',
+);
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -1583,6 +1601,47 @@ assertBrandTextTile(
   'A+Health',
 );
 assertBrandTextTile('aplus-health-dual-action', 'A+Health', 'A+Health');
+assertBrandTextTile(
+  'healtha2z-childrens-apap-chew',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile('timecap-ibuprofen-200', 'TIME-Cap Labs', 'TIME-Cap');
+assertBrandTextTile(
+  'sumifun-lidocaine-4-patch',
+  'Sumifun',
+  'Sumifun',
+);
+assertBrandTextTile(
+  'amazon-elements-turmeric-complex',
+  'Amazon Elements',
+  'Amazon Elements',
+);
+assertBrandTextTile(
+  'teemofe-lidocaine-4-patch',
+  'Teemofe',
+  'Teemofe',
+);
+assertBrandTextTile(
+  'healtha2z-naproxen-220-300',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'amazon-basic-care-apap-650-er-l544',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-aspirin-81-chew-l467',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-elements-turmeric-root',
+  'Amazon Elements',
+  'Amazon Elements',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1684,15 +1743,11 @@ assertExactCarton(
   'Stopain',
   'stopain-extra-strength-roll-on.jpg',
 );
-assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
-assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
 assertExactCarton(
   'mentholatum-original',
   'Mentholatum',
   'mentholatum-original.jpg',
 );
-assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
-assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
 assertExactCarton(
   'jointflex-pain-relief-cream',
   'JointFlex',
@@ -1708,8 +1763,6 @@ assertExactCarton(
   'Blue-Emu',
   'blue-emu-original.jpg',
 );
-assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
-assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
 assertExactCarton(
   'penetrex-pain-relief-cream',
   'Penetrex',
