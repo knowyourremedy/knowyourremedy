@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 19, 2026 — Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched. OI accordion lock = missing-OI MAIN Search rows only (do not re-hunt full inactive lists; no new products). Count-tab lock: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC. Display fill only. No barcode factory. No grades. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29).
+Last Updated: September 19, 2026 — KYR5 / KYR5-b / KYR5-c factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Highest rating-draft is batch69 (PR #231). batch67 = PR #229 — do not edit. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Oils bottles: hunt-list only (name + URL). Never Search-graded. Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -214,7 +214,7 @@ Next session
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -263,7 +263,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -288,7 +288,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -740,7 +740,7 @@ LIVE NOW
 1) Amazon 3P brands not on main.
 THEN (not live): un-stash Sprouts house (~55 walk + 3 refused). Do not catalog Sprouts. 187 is dead.
 KYR5 / KYR5-b / KYR5-c DONE. KYR5-d founder-lock attach. Do not reopen #121–#221.
-Live missing UPC on notes: 122 (in-store 93 / online-only 29). Named dry: set-id 97 / in-store 23 / online 13.
+Live missing UPC on notes: 122 (in-store 93 / online-only 29). Named dry: set-id 97 / in-store 26 / online 13.
 KYR4 photos on paste only. Cron OFF.
 
 PROCESS
@@ -751,7 +751,7 @@ PROCESS
 - Main wins over pins.
 
 LIVE NOW
-KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 23 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 batch69 LANDED (PR #231). Do not resend. Do not reopen 65 / 66 / 68 / #230.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics leftover closeout — batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
@@ -1428,3 +1428,4 @@ ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
 Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
 OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
+KYR5 factory DONE / named-dry 97/26/13 / highest draft batch69 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken.
