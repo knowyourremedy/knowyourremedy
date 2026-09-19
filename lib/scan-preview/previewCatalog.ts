@@ -947,6 +947,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'biofreeze-menthol-patches': catalogShot('biofreeze-menthol-patches.jpg'),
   'fon-headache': catalogShot('fon-headache.jpg'),
   'fon-nerve': catalogShot('fon-nerve.jpg'),
+  'fon-muscle': catalogShot('fon-muscle.jpg'),
+  'fon-arniblend': catalogShot('fon-arniblend.jpg'),
+  'fon-migraine': catalogShot('fon-migraine.jpg'),
+  'blue-emu-original': catalogShot('blue-emu-original.jpg'),
+  'stopain-extra-strength-roll-on': catalogShot(
+    'stopain-extra-strength-roll-on.jpg',
+  ),
+  'penetrex-pain-relief-cream': catalogShot('penetrex-pain-relief-cream.jpg'),
+  'medinatura-bhi-traumex': catalogShot('medinatura-bhi-traumex.jpg'),
+  'qunol-extra-strength-turmeric-1000': catalogShot(
+    'qunol-extra-strength-turmeric-1000.jpg',
+  ),
+  'qunol-extra-strength-turmeric-1500': catalogShot(
+    'qunol-extra-strength-turmeric-1500.jpg',
+  ),
+  'qunol-zero-sugar-turmeric-gummies': catalogShot(
+    'qunol-zero-sugar-turmeric-gummies.jpg',
+  ),
+  'ollois-arnica-montana-12c': catalogShot('ollois-arnica-montana-12c.jpg'),
+  'new-chapter-turmeric-force': catalogShot('new-chapter-turmeric-force.jpg'),
+  'gaia-turmeric-supreme-extra-strength': catalogShot(
+    'gaia-turmeric-supreme-extra-strength.jpg',
+  ),
+  'natures-way-feverfew': catalogShot('natures-way-feverfew.jpg'),
+  'natures-way-willow-bark': catalogShot('natures-way-willow-bark.jpg'),
+  'natures-way-joint-movement-glucosamine': catalogShot(
+    'natures-way-joint-movement-glucosamine.jpg',
+  ),
+  'natures-way-turmeric-max-potency': catalogShot(
+    'natures-way-turmeric-max-potency.jpg',
+  ),
+  'natures-way-tart-cherry-ultra-gummies': catalogShot(
+    'natures-way-tart-cherry-ultra-gummies.jpg',
+  ),
+  'natures-way-petadolex-pro-active': catalogShot(
+    'natures-way-petadolex-pro-active.jpg',
+  ),
+  'natures-way-devils-claw-secondary-root': catalogShot(
+    'natures-way-devils-claw-secondary-root.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1181,15 +1221,27 @@ assertExactCarton(
   'bengay-ultra-strength-patch-5.jpg',
 );
 assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
-assertLetterOnly('ollois-arnica-montana-12c', 'Ollois');
+assertExactCarton(
+  'ollois-arnica-montana-12c',
+  'Ollois',
+  'ollois-arnica-montana-12c.jpg',
+);
 assertLetterOnly('oregons-wild-harvest-turmeric', "Oregon's Wild Harvest");
 assertLetterOnly('organic-india-turmeric-formula', 'Organic India');
 assertLetterOnly('sports-research-turmeric-curcumin', 'Sports Research');
 assertLetterOnly('thrive-wellmade-turmeric', 'wellmade by Thrive Market');
-assertLetterOnly('new-chapter-turmeric-force', 'New Chapter');
+assertExactCarton(
+  'new-chapter-turmeric-force',
+  'New Chapter',
+  'new-chapter-turmeric-force.jpg',
+);
 assertLetterOnly('codeage-liposomal-turmeric', 'Codeage');
 assertLetterOnly('life-flo-pure-magnesium-oil', 'Life-flo');
-assertLetterOnly('gaia-turmeric-supreme-extra-strength', 'Gaia Herbs');
+assertExactCarton(
+  'gaia-turmeric-supreme-extra-strength',
+  'Gaia Herbs',
+  'gaia-turmeric-supreme-extra-strength.jpg',
+);
 assertLetterOnly('thorne-curcumin-phytosome-500', 'Thorne');
 assertLetterOnly('thorne-curcumin-phytosome-1000', 'Thorne');
 assertLetterOnly(
@@ -1212,8 +1264,16 @@ assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
 assertLetterOnly('nutricost-turmeric-curcumin-2300', 'Nutricost');
 assertLetterOnly('now-turmeric-curcumin-bioperine', 'NOW');
 assertLetterOnly('doctors-best-high-absorption-curcumin-1000', "Doctor's Best");
-assertLetterOnly('qunol-extra-strength-turmeric-1500', 'Qunol');
-assertLetterOnly('qunol-extra-strength-turmeric-1000', 'Qunol');
+assertExactCarton(
+  'qunol-extra-strength-turmeric-1500',
+  'Qunol',
+  'qunol-extra-strength-turmeric-1500.jpg',
+);
+assertExactCarton(
+  'qunol-extra-strength-turmeric-1000',
+  'Qunol',
+  'qunol-extra-strength-turmeric-1000.jpg',
+);
 assertLetterOnly('healthwise-lidocaine-4-patch', 'HealthWise');
 assertLetterOnly('welmate-lidocaine-4-patch-parabens', 'WELMATE');
 assertLetterOnly('naturewise-curcumin-turmeric-2250', 'NatureWise');
@@ -1229,8 +1289,16 @@ assertLetterOnly('amazon-basics-ibuprofen-iron-oxide-yellow', 'Amazon Basics');
 assertLetterOnly('qunol-extra-strength-turmeric-1500-oleoresin', 'Qunol');
 assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
 assertLetterOnly('aplus-health-dual-action', 'A+Health');
-assertLetterOnly('qunol-zero-sugar-turmeric-gummies', 'Qunol');
-assertLetterOnly('stopain-extra-strength-roll-on', 'Stopain');
+assertExactCarton(
+  'qunol-zero-sugar-turmeric-gummies',
+  'Qunol',
+  'qunol-zero-sugar-turmeric-gummies.jpg',
+);
+assertExactCarton(
+  'stopain-extra-strength-roll-on',
+  'Stopain',
+  'stopain-extra-strength-roll-on.jpg',
+);
 assertLetterOnly('flexall-max-strength-gel', 'Flexall');
 assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
 assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
@@ -1252,10 +1320,18 @@ assertExactCarton(
   'Topricin',
   'topricin-pain-relief-cream.jpg',
 );
-assertLetterOnly('blue-emu-original', 'Blue-Emu');
+assertExactCarton(
+  'blue-emu-original',
+  'Blue-Emu',
+  'blue-emu-original.jpg',
+);
 assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
 assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
-assertLetterOnly('penetrex-pain-relief-cream', 'Penetrex');
+assertExactCarton(
+  'penetrex-pain-relief-cream',
+  'Penetrex',
+  'penetrex-pain-relief-cream.jpg',
+);
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -1936,6 +2012,45 @@ assertExactCarton('bc-cherry', 'BC', 'bc-cherry.jpg');
 assertExactCarton('bc-max', 'BC', 'bc-max.jpg');
 assertExactCarton('fon-headache', 'Forces of Nature', 'fon-headache.jpg');
 assertExactCarton('fon-nerve', 'Forces of Nature', 'fon-nerve.jpg');
+assertExactCarton('fon-muscle', 'Forces of Nature', 'fon-muscle.jpg');
+assertExactCarton('fon-arniblend', 'Forces of Nature', 'fon-arniblend.jpg');
+assertExactCarton('fon-migraine', 'Forces of Nature', 'fon-migraine.jpg');
+assertExactCarton(
+  'medinatura-bhi-traumex',
+  'MediNatura',
+  'medinatura-bhi-traumex.jpg',
+);
+assertExactCarton('natures-way-feverfew', "Nature's Way", 'natures-way-feverfew.jpg');
+assertExactCarton(
+  'natures-way-willow-bark',
+  "Nature's Way",
+  'natures-way-willow-bark.jpg',
+);
+assertExactCarton(
+  'natures-way-joint-movement-glucosamine',
+  "Nature's Way",
+  'natures-way-joint-movement-glucosamine.jpg',
+);
+assertExactCarton(
+  'natures-way-turmeric-max-potency',
+  "Nature's Way",
+  'natures-way-turmeric-max-potency.jpg',
+);
+assertExactCarton(
+  'natures-way-tart-cherry-ultra-gummies',
+  "Nature's Way",
+  'natures-way-tart-cherry-ultra-gummies.jpg',
+);
+assertExactCarton(
+  'natures-way-petadolex-pro-active',
+  "Nature's Way",
+  'natures-way-petadolex-pro-active.jpg',
+);
+assertExactCarton(
+  'natures-way-devils-claw-secondary-root',
+  "Nature's Way",
+  'natures-way-devils-claw-secondary-root.jpg',
+);
 assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
 assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
