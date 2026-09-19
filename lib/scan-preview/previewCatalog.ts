@@ -927,6 +927,26 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'excedrin-migraine-es-blue': catalogShot('excedrin-migraine-es-blue.jpg'),
   'excedrin-rapid-relief-apap': catalogShot('excedrin-rapid-relief-apap.jpg'),
   'tylenol-es-liquid': catalogShot('tylenol-es-liquid.jpg'),
+  'infants-advil-drops': catalogShot('infants-advil-drops.jpg'),
+  'excedrin-es-tio2': catalogShot('excedrin-es-tio2.jpg'),
+  'goodys-max-triple-flavored': catalogShot('goodys-max-triple-flavored.jpg'),
+  'goodys-extra-strength': catalogShot('goodys-extra-strength.jpg'),
+  'goodys-back-body': catalogShot('goodys-back-body.jpg'),
+  'goodys-plus-alert-hangover': catalogShot('goodys-plus-alert-hangover.jpg'),
+  'ecotrin-rs-325-enteric': catalogShot('ecotrin-rs-325-enteric.jpg'),
+  'ecotrin-81-enteric-dye': catalogShot('ecotrin-81-enteric-dye.jpg'),
+  'anacin-aspirin-caffeine': catalogShot('anacin-aspirin-caffeine.jpg'),
+  'st-joseph-81-enteric': catalogShot('st-joseph-81-enteric.jpg'),
+  'st-joseph-81-chewable': catalogShot('st-joseph-81-chewable.jpg'),
+  'bufferin-rs-325': catalogShot('bufferin-rs-325.jpg'),
+  'bc-original-arthritis': catalogShot('bc-original-arthritis.jpg'),
+  'bc-cherry': catalogShot('bc-cherry.jpg'),
+  'bc-max': catalogShot('bc-max.jpg'),
+  'jointflex-pain-relief-cream': catalogShot('jointflex-pain-relief-cream.jpg'),
+  'mentholatum-original': catalogShot('mentholatum-original.jpg'),
+  'biofreeze-menthol-patches': catalogShot('biofreeze-menthol-patches.jpg'),
+  'fon-headache': catalogShot('fon-headache.jpg'),
+  'fon-nerve': catalogShot('fon-nerve.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1135,7 +1155,11 @@ assertLetterOnly('biofreeze-pain-relief-spray-10', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-spray-13', 'Biofreeze');
 assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
 assertLetterOnly('biofreeze-foam', 'Biofreeze');
-assertLetterOnly('biofreeze-menthol-patches', 'Biofreeze');
+assertExactCarton(
+  'biofreeze-menthol-patches',
+  'Biofreeze',
+  'biofreeze-menthol-patches.jpg',
+);
 assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
 assertExactCarton(
   'capzasin-hp-arthritis-cream',
@@ -1210,11 +1234,19 @@ assertLetterOnly('stopain-extra-strength-roll-on', 'Stopain');
 assertLetterOnly('flexall-max-strength-gel', 'Flexall');
 assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
 assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
-assertLetterOnly('mentholatum-original', 'Mentholatum');
+assertExactCarton(
+  'mentholatum-original',
+  'Mentholatum',
+  'mentholatum-original.jpg',
+);
 assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
 assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
 assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
-assertLetterOnly('jointflex-pain-relief-cream', 'JointFlex');
+assertExactCarton(
+  'jointflex-pain-relief-cream',
+  'JointFlex',
+  'jointflex-pain-relief-cream.jpg',
+);
 assertExactCarton(
   'topricin-pain-relief-cream',
   'Topricin',
@@ -1875,6 +1907,35 @@ assertExactCarton(
   'excedrin-rapid-relief-apap.jpg',
 );
 assertExactCarton('tylenol-es-liquid', 'Tylenol', 'tylenol-es-liquid.jpg');
+assertExactCarton('infants-advil-drops', 'Advil', 'infants-advil-drops.jpg');
+assertExactCarton('excedrin-es-tio2', 'Excedrin', 'excedrin-es-tio2.jpg');
+assertExactCarton(
+  'goodys-max-triple-flavored',
+  "Goody's",
+  'goodys-max-triple-flavored.jpg',
+);
+assertExactCarton('goodys-extra-strength', "Goody's", 'goodys-extra-strength.jpg');
+assertExactCarton('goodys-back-body', "Goody's", 'goodys-back-body.jpg');
+assertExactCarton(
+  'goodys-plus-alert-hangover',
+  "Goody's",
+  'goodys-plus-alert-hangover.jpg',
+);
+assertExactCarton(
+  'ecotrin-rs-325-enteric',
+  'Ecotrin',
+  'ecotrin-rs-325-enteric.jpg',
+);
+assertExactCarton('ecotrin-81-enteric-dye', 'Ecotrin', 'ecotrin-81-enteric-dye.jpg');
+assertExactCarton('anacin-aspirin-caffeine', 'Anacin', 'anacin-aspirin-caffeine.jpg');
+assertExactCarton('st-joseph-81-enteric', 'St. Joseph', 'st-joseph-81-enteric.jpg');
+assertExactCarton('st-joseph-81-chewable', 'St. Joseph', 'st-joseph-81-chewable.jpg');
+assertExactCarton('bufferin-rs-325', 'Bufferin', 'bufferin-rs-325.jpg');
+assertExactCarton('bc-original-arthritis', 'BC', 'bc-original-arthritis.jpg');
+assertExactCarton('bc-cherry', 'BC', 'bc-cherry.jpg');
+assertExactCarton('bc-max', 'BC', 'bc-max.jpg');
+assertExactCarton('fon-headache', 'Forces of Nature', 'fon-headache.jpg');
+assertExactCarton('fon-nerve', 'Forces of Nature', 'fon-nerve.jpg');
 assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
 assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
