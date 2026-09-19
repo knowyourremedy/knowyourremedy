@@ -1202,7 +1202,7 @@ function formWord(record: Pick<RatingRecord, 'form'>): string {
 function flaggedNames(record: RatingRecord, level: RiskLevel): string[] {
   return (record.inactiveIngredients ?? [])
     .filter((ingredient) => ingredient.riskLevel === level)
-    .map((ingredient) => ingredient.name);
+    .map((ingredient) => ingredient.name.replace(/\.+$/, ''));
 }
 
 function joinDrivers(names: string[]): string {
