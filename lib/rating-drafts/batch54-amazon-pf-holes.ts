@@ -851,6 +851,8 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'HealthWise Lidocaine 4% Patch',
     brand: 'HealthWise',
     category: PAIN_FEVER,
+    // KYR5-d — 25-ct 845717011037 (Honest Medical / upcitemdb).
+    barcode: '845717011037',
     formulaId: ID.healthwise,
     audience: ADULT,
     minAge: 12,
@@ -1308,6 +1310,8 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'WELMATE Lidocaine 4% Pain Relieving Patch',
     brand: 'WELMATE',
     category: PAIN_FEVER,
+    // KYR5-d — 30-ct 373581104307 (Harris Teeter / upcitemdb).
+    barcode: '373581104307',
     formulaId: ID.amzLido,
     audience: ADULT,
     minAge: 12,
@@ -1420,6 +1424,13 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   // 80-ct=301134501273 (0113-4501-27) 160-ct=301134501068
   // (0113-4501-06). Not regular 19 mm 0113-0298 / 301130298603.
   [ID.gsLiqGel]: '301134501273 301134501068',
+  // Honest Medical / upcitemdb 25-ct HealthWise 4% lidocaine
+  // (NDC 71101-064-25). Not WELMATE / Amazon Basics twins.
+  [ID.healthwise]: '845717011037',
+  // Harris Teeter path 0037358110430 + upcitemdb 30-ct WELMATE
+  // Pain Relief Patch (ethylhexyl / 73581-911 family). Not paraben
+  // 73581-912. Not Amazon Basics 72288-967.
+  [ID.welmateEh]: '373581104307',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];

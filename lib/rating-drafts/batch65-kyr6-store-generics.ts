@@ -347,6 +347,13 @@ export const BATCH65_CATCHUP_BARCODES: Record<string, string> = {
   // Valid UPC-A 301130484907. Not Rapid Release 301130025780 /
   // 301130025711 (different form). Not the dyed / talc / TiO2 twin.
   'goodsense-es-pain-relief-l484': '301130484907',
+  // topcarebrand.com + SmartLabel exact pack (not Albertsons first-paint).
+  // Original Eye Drops tetrahydrozoline 0.05% 0.5 fl oz — NDC 36800-858.
+  'topcare-original-eye-drops': '036800036390',
+  // Sleep Aid Nighttime DPH 25 mg film-coated 100-ct — SmartLabel
+  // fb5d4cba / NDC 36800-431. Not 48-ct BHA/talc 036800092341 and
+  // not doxylamine 32-ct 036800192348.
+  'topcare-sleep-aid-dph': '036800327405',
 };
 
 export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
@@ -677,6 +684,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'TopCare Health Original Eye Drops (Tetrahydrozoline 0.05%)',
     brand: 'TopCare',
     category: ALLERGY,
+    // KYR5-d — brand site + SmartLabel 0.5 fl oz 036800036390.
+    barcode: BATCH65_CATCHUP_BARCODES['topcare-original-eye-drops'],
     formulaId: 'topcare-original-eye-drops',
     audience: ADULT,
     minAge: 6,
@@ -741,6 +750,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'TopCare Sleep Aid Nighttime (Diphenhydramine 25 mg)',
     brand: 'TopCare',
     category: SLEEP,
+    // KYR5-d — SmartLabel 100-ct DPH 25 mg 036800327405.
+    barcode: BATCH65_CATCHUP_BARCODES['topcare-sleep-aid-dph'],
     formulaId: DPH_SLEEP_COAT,
     audience: ADULT,
     minAge: 12,
