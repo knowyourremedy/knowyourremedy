@@ -209,6 +209,8 @@ const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
     'This Gold tablet is Usable, not Clean, because it uses mannitol — a sugar alcohol that can bother the gut at volume. Magnesium stearate is cleared, and the formula is aspirin-free. Labeled for ages 12 and up. Fine in moderation for occasional heartburn; pause if sugar alcohols upset your stomach.',
   [PREVIEW_AVOID_ID]:
     'This Assorted Fruit chew is Not clean because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
+  'absorbine-jr-pro-cream':
+    'This cream is Not clean because of methylparaben. That one extra is why the whole product is Not clean. Other listings on this formula are not the grade driver. Distinct from PRO No-Mess, which has no paraben on that label.',
 };
 
 // Preview-only catalog pack shots. Does not edit draft rows.
@@ -1200,7 +1202,7 @@ function formWord(record: Pick<RatingRecord, 'form'>): string {
 function flaggedNames(record: RatingRecord, level: RiskLevel): string[] {
   return (record.inactiveIngredients ?? [])
     .filter((ingredient) => ingredient.riskLevel === level)
-    .map((ingredient) => ingredient.name);
+    .map((ingredient) => ingredient.name.replace(/\.+$/, ''));
 }
 
 function joinDrivers(names: string[]): string {
@@ -1209,17 +1211,44 @@ function joinDrivers(names: string[]): string {
   return `${names[0]}, ${names[1]}, and ${names[2]}`;
 }
 
-// Display fill only. Does not rewrite draft honestNotes or restage verdicts.
-export function displayHonestNote(record: RatingRecord): string {
-  const overlay = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
-  if (overlay) return overlay;
+export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 
+const DUMP_HONEST_NOTE =
+  /FOUNDER-LOCK|FOUNDER CALL|FOUNDER-STYLE|Drug Facts:|DailyMed setid|formulaId|Draft, not verified|standalone Caution|Methodology §|pack sizes share|Inactive list left empty|do NOT invent Clean|carton-confirm|carton confirm/i;
+
+const INCOMPLETE_LABEL_NOTE =
+  /until the full label|carton-confirm|carton confirm|inactive list left empty on purpose|do NOT invent Clean|do not invent flags/i;
+
+function isDumpHonestNote(note: string | undefined): boolean {
+  if (!note) return true;
+  if (DUMP_HONEST_NOTE.test(note)) return true;
+  if ((note.match(/ \//g) ?? []).length >= 4) return true;
+  return note.length > 420;
+}
+
+function hasFounderWhy(record: RatingRecord): boolean {
+  return Boolean(record.honestNote?.trim());
+}
+
+function isIncompleteLabelRow(record: RatingRecord): boolean {
+  if (!hasFounderWhy(record)) return true;
+  const inactives = record.inactiveIngredients ?? [];
+  // Missing-OI + founder said the carton is not matched. Confirmed
+  // empty 100% powders / “inactives: none” keep their founder why.
+  return inactives.length === 0 && INCOMPLETE_LABEL_NOTE.test(record.honestNote ?? '');
+}
+
+function generatedHonestNote(record: RatingRecord): string {
   const form = formWord(record);
   const high = flaggedNames(record, 'high');
   const moderate = flaggedNames(record, 'moderate');
   const limited = flaggedNames(record, 'limited');
+  const inactives = record.inactiveIngredients ?? [];
 
   if (record.verdict === 'clean') {
+    if (inactives.length === 0) {
+      return `This ${form} is Clean. The carton has no Other Ingredients line.`;
+    }
     return `This ${form} is Clean. The extras we reviewed on this formula stayed Clean.`;
   }
 
@@ -1249,6 +1278,24 @@ export function displayHonestNote(record: RatingRecord): string {
     return `This ${form} is Usable, not Clean, because of Limited extras. None of them is a High-list item.`;
   }
   return `This ${form} is ${VERDICT_LABELS[record.verdict]}, not Clean.`;
+}
+
+// Display fill only. Does not rewrite draft honestNotes or restage verdicts.
+// Keep already-correct shopper copy. Replace label dumps / founder-lock essays.
+export function displayHonestNote(record: RatingRecord): string {
+  const overlay = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  if (overlay) return overlay;
+
+  if (isIncompleteLabelRow(record)) {
+    return LABEL_NOT_FULLY_REVIEWED;
+  }
+
+  const draft = record.honestNote;
+  if (draft && !isDumpHonestNote(draft)) {
+    return draft;
+  }
+
+  return generatedHonestNote(record);
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
@@ -2663,6 +2710,16 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
   if (!absorbineProCream || absorbineProCream.verdict !== 'avoid') {
     throw new Error('absorbine-jr-pro-cream must stay verdict avoid');
   }
+  if (!isDumpHonestNote(absorbineProCream.honestNote)) {
+    throw new Error('absorbine-jr-pro-cream draft Honest stays the founder-lock dump');
+  }
+  const absorbineDisplay = displayHonestNote(absorbineProCream);
+  if (/FOUNDER-LOCK|standalone Caution|cetearyl|glyceryl stearate/i.test(absorbineDisplay)) {
+    throw new Error('absorbine-jr-pro-cream Honest display must not be the inactive dump');
+  }
+  if (!/methylparaben/i.test(absorbineDisplay)) {
+    throw new Error('absorbine-jr-pro-cream Honest display must name methylparaben');
+  }
 }
 
 export function isParkedFromBrowse(id: string | undefined): boolean {
@@ -3260,4 +3317,21 @@ export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
     body: PENDING_DAILYMED_REVIEW,
     ...display,
   };
+}
+
+{
+  const absorbineProCream = findDraftRecord('absorbine-jr-pro-cream');
+  const methyl = absorbineProCream?.inactiveIngredients.find((ingredient) =>
+    /methylparaben/i.test(ingredient.name),
+  );
+  if (!methyl) {
+    throw new Error('absorbine-jr-pro-cream must keep methylparaben on the ingredient list');
+  }
+  const why = ingredientWhy(methyl);
+  if (why.body === PENDING_DAILYMED_REVIEW) {
+    throw new Error('absorbine-jr-pro-cream methylparaben why must not be pending');
+  }
+  if (!/paraben/i.test(why.body)) {
+    throw new Error('absorbine-jr-pro-cream methylparaben why must be the paraben line');
+  }
 }
