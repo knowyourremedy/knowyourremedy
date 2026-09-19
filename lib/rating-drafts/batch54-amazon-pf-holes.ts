@@ -473,6 +473,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'GoodSense Naproxen Sodium 220 mg',
     brand: 'GoodSense',
     category: PAIN_FEVER,
+    barcode: '301131412718',
     formulaId: ID.gsNap,
     audience: ADULT,
     minAge: 12,
@@ -1150,6 +1151,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'GoodSense Ibuprofen Liquid Gels 200 mg',
     brand: 'GoodSense',
     category: PAIN_FEVER,
+    barcode: '301134501273 301134501068',
     formulaId: ID.gsLiqGel,
     audience: ADULT,
     minAge: 12,
@@ -1409,6 +1411,15 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   // GoodSense Children's IBU 100 mg orange chewable 24-ct
   // (370030 GS1, not an 0113 NDC pad).
   [ID.gsKidsChew]: '370030146918',
+  // upcitemdb exact pack — GoodSense Naproxen Sodium 220 mg blue
+  // 50-ct (NDC 0113-1412-71 / L490 / setid a980b939). Valid UPC-A
+  // 301131412718. Not 0113-0901 / 301139490787 (setid 6bc74cda).
+  [ID.gsNap]: '301131412718',
+  // upcitemdb exact packs — GoodSense Ibuprofen Mini Liquid-Gels
+  // 200 mg (NDC 0113-4501 / 13 mm 5Z0 / setid 0cb4b0ef).
+  // 80-ct=301134501273 (0113-4501-27) 160-ct=301134501068
+  // (0113-4501-06). Not regular 19 mm 0113-0298 / 301130298603.
+  [ID.gsLiqGel]: '301134501273 301134501068',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];
