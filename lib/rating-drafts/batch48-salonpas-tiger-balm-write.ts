@@ -696,9 +696,13 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
   }),
   row({
     id: ID.tbCool,
-    productName: 'Tiger Balm Pain Relieving Cool Patch',
+    productName: 'Tiger Balm Pain Relieving Cool Patch (5-ct 4x2.75)',
     brand: 'Tiger Balm',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — Cool Patch / Pain Relieving Patch
+    // 5-ct 4x2.75 retail GTIN. Same family as 110/33/22 hydrogel.
+    // Not 039278322064 Cool Patch warehouse twin.
+    barcode: '039278322002',
     formulaId: ID.tbCool,
     audience: ADULT,
     minAge: 12,
@@ -930,6 +934,7 @@ const BATCH48_CATCHUP_BARCODES: Record<string, string> = {
   [ID.tbHydroLarge]: '039278323009',
   [ID.tbArthritis]: '039278422047',
   [ID.tbRegHydro]: '039278322002',
+  [ID.tbCool]: '039278322002',
   [ID.salonReliefLarge]: '346581675092',
   [ID.salonGelHot]: '346581870060',
   [ID.salonCapsicum]: '346581700039',

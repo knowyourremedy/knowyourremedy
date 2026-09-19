@@ -65,3 +65,5 @@ export { BATCH64_KYR6_THRIVE_NO_OI } from './batch64-kyr6-thrive-no-oi';
 export { BATCH65_KYR6_STORE_GENERICS } from './batch65-kyr6-store-generics';
 export { BATCH66_KYR6_HELD_ROWS } from './batch66-kyr6-held-rows';
 export { BATCH67_KYR6_MEMBERS_MARK } from './batch67-kyr6-members-mark';
+export { BATCH68_KYR6_FOUNDER_PANELS } from './batch68-kyr6-founder-panels';
+export { BATCH69_KYR6_STORE_PANELS } from './batch69-kyr6-store-panels';

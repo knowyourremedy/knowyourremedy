@@ -9,6 +9,7 @@ import {
 import type { ActiveIngredient, ActiveSafetyFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   ingredientWhy,
+  PENDING_DAILYMED_REVIEW,
   loadPreviewCabinetIds,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
@@ -265,7 +266,7 @@ function WhyPanel({ why }: { why: IngredientWhy }) {
       <div style={{ fontSize: '0.82rem', color: '#3a433e', lineHeight: 1.45 }}>
         {why.body}
       </div>
-      {why.body === 'Why pending review' && !why.sourceName && why.sourceHref == null && (
+      {why.body === PENDING_DAILYMED_REVIEW && !why.sourceName && why.sourceHref == null && (
         <div style={{ fontSize: '0.76rem', color: '#6b756f', lineHeight: 1.4, marginTop: 6 }}>
           Source pending review
         </div>
@@ -744,7 +745,7 @@ export default function PostScanProductScreen({
   onToggleSaved,
   onToast,
 }: Props) {
-  const [savedLocal, setSavedLocal] = useState(() => loadPreviewCabinetIds().includes(record.id));
+  const [savedLocal, setSavedLocal] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [starBounce, setStarBounce] = useState(false);
   const saved = savedProp ?? savedLocal;
@@ -757,6 +758,11 @@ export default function PostScanProductScreen({
   useEffect(() => {
     rememberPreviewViewedId(record.id);
   }, [record.id]);
+
+  useEffect(() => {
+    if (savedProp != null) return;
+    setSavedLocal(loadPreviewCabinetIds().includes(record.id));
+  }, [record.id, savedProp]);
 
   useEffect(() => {
     if (!toast) return;

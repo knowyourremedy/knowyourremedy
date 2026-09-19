@@ -914,9 +914,14 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
   }),
   row({
     id: ID.sprayDenat,
-    productName: 'Biofreeze Pain Relief Spray 10.5% (denatonium)',
+    productName: 'Biofreeze Pain Relief Spray 10.5% (denatonium, 3 fl oz)',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — retail 360 10.5% 3 fl oz.
+    // Brand site biofreeze.com 3 oz aerosol OI = denatonium.
+    // Not 731124000071 (already-had on alcohol-denat. 10.5%).
+    // Not 731124000185 10% 2-pack / not 10% 4 oz single.
+    barcode: '731124000109',
     formulaId: FID.sprayDenat,
     audience: ADULT,
     minAge: 12,
@@ -936,9 +941,13 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
   }),
   row({
     id: ID.proAerosol,
-    productName: 'Biofreeze Professional Spray 10.5% (denatonium aerosol)',
+    productName: 'Biofreeze Professional Spray 10.5% (denatonium aerosol, 4 fl oz)',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — Professional 360 10.5% 4 fl oz.
+    // Target PDP Drug Facts on this GTIN = denatonium + tert-butyl
+    // alcohol (not 13%). Do not hang 359316120200 on the 13% row.
+    barcode: '359316120200',
     formulaId: FID.sprayDenat,
     audience: ADULT,
     minAge: 12,
@@ -1066,9 +1075,12 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
   }),
   row({
     id: ID.proSpray13,
-    productName: 'Biofreeze Professional Spray 13%',
+    productName: 'Biofreeze Professional Spray 13% (4 oz 2-pack)',
     brand: 'Biofreeze',
     category: PAIN_FEVER,
+    // KYR5-d founder-lock — Professional 13% 4 oz 2-pack.
+    // Not 359316120200 (that can stays 10.5% denatonium 4 oz).
+    barcode: '731124445216',
     formulaId: FID.proSpray13,
     audience: ADULT,
     minAge: 12,
@@ -2170,6 +2182,9 @@ const BATCH50_CATCHUP_BARCODES: Record<string, string> = {
   // Colorless Roll-On lists UPC 3-59316-11810-8 on the 3 oz USA bottle.
   // Do not steal 731124 retail colorless / professional green roll-ons.
   [ID.proColorRoll]: '359316118108',
+  [ID.sprayDenat]: '731124000109',
+  [ID.proAerosol]: '359316120200',
+  [ID.proSpray13]: '731124445216',
 };
 for (const record of BATCH50_PAIN_FEVER_LIST3) {
   const expected = BATCH50_CATCHUP_BARCODES[record.id];

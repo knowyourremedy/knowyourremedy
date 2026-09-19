@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 18, 2026 (KYR5-c barcode-tile chunk 6 — 1 unique UPC-A; 1 pack count filled; missing UPC 101 = in-store 72 + online 29; do not reopen #121–#221)
+Last Updated: September 19, 2026 — KYR5 / KYR5-b / KYR5-c factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Highest rating-draft is batch69 (PR #231). batch67 = PR #229 — do not edit. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Oils bottles: hunt-list only (name + URL). Never Search-graded. Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -56,8 +56,8 @@ Bots (Sept 16, 2026)
 - KYR2 = old UI / early photo thread. Dead for new work unless Brandon reopens it.
 - KYR3 = daytime CATALOG. One brand at a time. New rows: grade + UPC/set-id in the same write when carton / brand site / store PDP / DailyMed has a code. No invented codes. No code ≠ no row — list missing UPCs.
 - KYR4 = PHOTO bot only. No catalog. No barcodes. No methodology. Night 12:30 / 12:45 / 3:15 / 5:45 photo cron is OFF as of Sept 16. Photos run when Brandon pastes “run N batches now.” Cap = 20 per batch. Usual catch-up = 2 batches (40). Carton → official brand mark → letter only if unattempted. Photos MAY merge. “Merge if GitHub UI flakes.” After all 9 aisles, restart at Pain & Fever for rows added after the first pass.
-- KYR5 / KYR5-b barcode factory DONE after PR #214. KYR5-c barcode-tile chunk 6 attached 1 unique UPC-A (1 pack count filled; chunk 1 attached 19; chunk 2 attached 7; chunk 3 attached 4; chunk 4 attached 26; chunk 5 attached 3). Live missing UPC: 101 (in-store 72 + online-only 29). Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
-- KYR5-b was the barcode catch-up bot. DONE after PR #213. KYR5-c walk lists on this file after #214. Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 24 / online 13.
+- KYR5 / KYR5-b barcode factory DONE after PR #214. KYR5-c barcode-tile chunk 6 attached 1 unique UPC-A. KYR5-d / #232 attached 1 unique UPC-A (Walgreens coated ES 50-ct 311917015354). KYR5-d Tiger Balm + Biofreeze founder-lock attach: 8 unique empty Search rows. Live missing UPC = 122 (in-store 93 + online 29) from the live catalog query. Walk list A is a hunt queue only — do not treat old “72 / 101 / 130” as the count. Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). Does not grade. Does not invent UPCs. Does not open new product rows unless Brandon says so. Attach real codes from carton photo / PDP carousel / DailyMed / brand site onto existing Search rows. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo. GitHub Merge ≠ git pull. One PR at a time.
+- KYR5-b was the barcode catch-up bot. DONE after PR #213. KYR5-c walk lists on this file after #214. KYR5-d founder-lock attach-only. Do not reopen #121–#221. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Walk list A is queue only.
 - Do not stack two coding-bot jobs in one chat. Do not open a new bot every calendar day. New bot only when a thread is fat.
 - Cursor = notes, git pull, npm run dev, end-of-day notes. GitHub Merge ≠ git pull.
 
@@ -75,7 +75,7 @@ LAUNCH WEIGHT
 - Row exists = coverage.
 - Barcode / set-id = the scanner works.
 - Carton photo = polish.
-- Search rows missing a UPC: 101. In-store 72. Online-only 29. Named dry, do not reopen: set-id 97 / in-store 24 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). KYR5-c barcode-tile chunk 6 attached 1. Do not reopen #121–#221. Forward catalog (KYR3) attaches UPC when the source has it.
+- Search rows missing a UPC: 122. In-store 93. Online-only 29. Live catalog query after Tiger Balm + Biofreeze founder-lock attach is the scoreboard. Walk list A is a hunt queue only — do not treat old “72 / 101 / 130” as the count. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet). KYR5 factory #121–#221 stay closed. KYR5-d attach-only after founder locks. Forward catalog (KYR3) attaches UPC when the source has it.
 
 FOUNDER CALLS — MAJORITY RULE
 - New inactive / not in §5: 7-step packet + Brandon. Do not default Caution because the table is blank.
@@ -83,6 +83,16 @@ FOUNDER CALLS — MAJORITY RULE
 - Majority wins. 1 scare paper out of 10 ≠ Avoid. 1 “it’s fine” out of 10 ≠ Clean. Split → bring the split to Brandon. Do not invent a grade.
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
 - Vague vs named twins need tap + honest-note text. Honest always.
+
+OI / INACTIVE HUNT ACCORDION LOCK (2026-09-19 founder — one lock; do not wipe LIVE NOW)
+- Same accordion expand as the UPC hunt, but ONLY for existing MAIN Search rows that already have no inactive / OI list.
+- Do NOT reopen or re-hunt rows that already have a full inactive list.
+- Do NOT add products.
+- For those missing-OI rows only: expand Product Specifications, Details, More specs, Supplement facts extra tabs, Inactive ingredients, Drug Facts “show more,” and any collapsed block BEFORE declaring DRY / “no inactives found.”
+- Missing first-paint inactives ≠ empty if a tab is closed.
+- 11-digit retailer UPC is still valid when seen (same check-digit rule as the UPC hunt lock).
+- Confirmed-empty cartons (100% powder / DailyMed “inactive ingredients: none”) are not missing-OI. Leave them alone.
+- This pass: no OI fill. The only empty-pending MAIN Search rows are two Sprouts prenatals (house STASHED — do not catalog Sprouts).
 
 BRAND-CLOSE WORKFLOW
 - Finish the brand you started. Do not hop brands.
@@ -102,13 +112,35 @@ BRAND-CLOSE WORKFLOW
 - up&up → target.com
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
-- Founder-logged (ready to write, do not re-ask):
+- UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
+- Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
+- Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
+- 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
+- KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
+- Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
+- Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
+- Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
+- Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
+- Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
+- TopCare adult multi gummies: Glucose Syrup, Sugar, Water, Gelatin; less than 2% of: Palm Oil and Carnauba Wax, Citric Acid, Colors (Cranberry Concentrate, Carrot, Spirulina, and Pumpkin Concentrate, Paprika Extract, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare Men’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Citric Acid, Colors (Radish Concentrate, Carrot and Hibiscus Concentrate), Lactic Acid, Natural Flavors, Pectin
+- TopCare Women’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Palm oil and Carnauba Wax, Citric Acid, Colors (Carrot and Cranberry Concentrate, Carrot, Spirulina and Pumpkin Concentrate, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare high potency Vitamin C gummies: Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
+- Walgreens adult multi tablets UPC 311917199139 — full INGREDIENTS tile as founder-photographed
+- up&up Extra Strength Acetaminophen PM caplets 100-ct UPC 359726863117: croscarmellose sodium, fd&c blue #1 aluminum lake, fd&c blue #2 aluminum lake, hypromelloses, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, povidone k30, pregelatinized starch, purified water, silicon dioxide, sodium starch glycolate, talc, titanium dioxide — not the PM ointment row
+- Also write if OI was logged this same hunt and is not already a row: Equate adult multi; Equate D3 50 mcg; Member’s Mark D3 50 mcg; Member’s Mark melatonin; Kirkland D3. Do not invent missing strings.
+- Prior founder-logged still unwritten (do not re-ask; write in batch69 if not already a row):
 - MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
-- MM Women’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
-- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - SPROUTS-STYLE EXCEPTION: if walk-up / gallery OI is ~25+ still-blocked panels, Brandon MAY stash leftovers so the gradeable chunk merges. Stash is founder call. Stashed names stay in this file.
 - After a brand closes, log date/time on the roster. Thrive hole punch roster is on this file (PR #116 / 7cb8f86).
 
@@ -136,14 +168,14 @@ POST-SCAN (locked template)
 - Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
 - Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
-- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary on the three preview SKUs. Not methodology jargon.
-- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared.
+- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary only — how THIS product got Clean / Usable / Not clean. One driver only if that driver is the whole grade. Never paste the full inactive list into Honest. Founder-lock dumps stay in draft files; display fill does not restage. Absorbine Jr. PRO Cream stays Avoid (Not clean) — methylparaben. Not methodology jargon.
+- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared. Ingredient panel ≠ label dump. Label / DailyMed not reviewed on that ingredient → “Pending DailyMed review”. Reviewed + Clean → one-line why it stayed Clean. Reviewed + Usable / Not clean → one-line why (fact, not “unsafe”).
 - Cleaner carousel on Usable + Not clean only (internal caution + avoid). Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
 - No Overview tab. No Photos tab.
 
 SEARCH (locked)
 - Empty: search field + 2-column use-category TILES.
-- Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
+- Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Immune + Immune Support = one Immune Support tile (Immune aliases to the same bucket / same query). Do not add categories. Prenatal is its own tile (not stuffed only under Vitamins).
 - Pain rubs live under Pain & Fever with the swallow SKUs. Wound care / antibiotic ointment stays First Aid. Do not invent a third “Topical” aisle.
 - Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Not clean filter chips (multi). Type further filters that list.
 - Type from the FIRST letter with NO category: matches by name/brand, cap ~35, “Keep typing to narrow” if more exist; hide category chips AND hide verdict chips.
@@ -174,14 +206,16 @@ Parked
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
 Next session
-- LIVE NOW: (1) Thrive no_OI stash CLOSEOUT DONE (batch64) (2) Store generics (3) Amazon 3P brands not on main. KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13.
+- LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d attach-only after founder locks. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29) — live query after Tiger Balm + Biofreeze founder-lock attach; Walk list A is queue only. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- OI / inactive accordion lock: missing-OI MAIN Search rows only. Do not reopen full inactive lists. Do not add products. Confirmed-empty 100% powders stay empty. No Sprouts hunt.
+- Count-tab lock stays: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. batch37–67 already exist.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -229,7 +263,7 @@ NIGHT / GROK BOT ROUTINE (Sept 16)
 - Photos are ON-DEMAND on KYR4. Three-wake photo cron is OFF until Brandon turns it back on.
 - Old cron math (if turned back on): 20 × 2 batches × 3 wakes = 120/night. On-demand uses whatever Brandon types.
 - Aisle order unchanged: Pain & Fever → Cold & Flu → Allergies → Sleep → Immune → First Aid → Vitamins → Prenatal → Digestive. Then restart at Pain & Fever.
-- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- Night barcodes = KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 - Daytime extra photo batches only when Brandon orders them. Never add a one-off to the cron.
 - Photo / barcode bots may NOT: invent grades, new inactives, UI, hide/delete, Canada/EU.
 
@@ -254,7 +288,7 @@ Digestive is not “closed forever.” New drafts will refill it. Night bot alwa
 NIGHT SCHEDULE
 - Photo cron OFF as of Sept 16. Do not restart 12:30 / 12:45 / 3:15 / 5:45 until Brandon turns it back on.
 - KYR4 photos: on-demand only. Cap 20/batch. Usual catch-up 2 batches (40) unless Brandon types another N.
-- KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+- KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
 
 CATALOG STRATEGY
 - Build by BRAND, in-scope US OTC/vitamins/supplements only — not every SKU the company makes (no food/pet/cosmetics).
@@ -271,20 +305,42 @@ CATALOG STRATEGY
 - up&up → target.com
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
-- Founder-logged (ready to write, do not re-ask):
+- UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
+- Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
+- Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
+- 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
+- KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
+- Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
+- Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
+- Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
+- Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
+- Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
+- TopCare adult multi gummies: Glucose Syrup, Sugar, Water, Gelatin; less than 2% of: Palm Oil and Carnauba Wax, Citric Acid, Colors (Cranberry Concentrate, Carrot, Spirulina, and Pumpkin Concentrate, Paprika Extract, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare Men’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Citric Acid, Colors (Radish Concentrate, Carrot and Hibiscus Concentrate), Lactic Acid, Natural Flavors, Pectin
+- TopCare Women’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Palm oil and Carnauba Wax, Citric Acid, Colors (Carrot and Cranberry Concentrate, Carrot, Spirulina and Pumpkin Concentrate, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare high potency Vitamin C gummies: Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
+- Walgreens adult multi tablets UPC 311917199139 — full INGREDIENTS tile as founder-photographed
+- up&up Extra Strength Acetaminophen PM caplets 100-ct UPC 359726863117: croscarmellose sodium, fd&c blue #1 aluminum lake, fd&c blue #2 aluminum lake, hypromelloses, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, povidone k30, pregelatinized starch, purified water, silicon dioxide, sodium starch glycolate, talc, titanium dioxide — not the PM ointment row
+- Also write if OI was logged this same hunt and is not already a row: Equate adult multi; Equate D3 50 mcg; Member’s Mark D3 50 mcg; Member’s Mark melatonin; Kirkland D3. Do not invent missing strings.
+- Prior founder-logged still unwritten (do not re-ask; write in batch69 if not already a row):
 - MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
-- MM Women’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
-- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Amazon house rebrands (one row unless OI/form changed): Revly → Amazon Elements; Solimo → Amazon Basics; many Elements vitamins → Amazon Basics (previously Elements). Some former Elements SKUs are now Micro Ingredients = 3P, out of house punch.
 - Dead / off-house (do not write as Amazon house): Solimo Fish Oil 1000; Solimo Iron (same as Elements Iron); Solimo prebiotic gummies; Solimo D3 5000 page; Elements Organic Whole Food D3 tablets; Elements Mg lemon powder → Micro Ingredients; Elements Glucosamine → Micro Ingredients; Basics Saline Nasal.
 - Mama Bear carton OI locked Sept 16, 2026 (founder carousel): Kids D3 / Vegan Kids C / Vegan Probiotic = gummy sunflower oil Avoid. Kids Black Elderberry = no seed oil, natural flavors Caution. Mama Bear four already on main after PR #118 follow-up. Do not duplicate.
 - Keep a brand roster with seen-at stores: Sprouts, CVS, Walgreens, Target, Walmart, Costco, Sam’s, Thrive, etc. Stores = coverage tags, not a second catalog.
 - Same product at two stores = ONE row. CVS and Sprouts both selling the same MegaFood bottle must not create two drafts. Before adding: match brand + name + form + strength against existing drafts. Pack-size / barcode variants share formulaId and the same grade. Do not invent a second grade.
-- Next catalog day: store generics, then Amazon 3P. Store generics uses the OI + UPC hunt on write. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
+- Next catalog day: Amazon 3P brands not on main. batch69 LANDED (PR #231). Store generics leftover closeout DONE. Thrive no_OI CLOSEOUT DONE (batch64). KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Sprouts house stays STASHED. Do not catalog Sprouts. Unwritten Sprouts stash ~55 is NOT in the missing-UPC set.
 - Culturelle kids coconut gummy = bad draft name. Pedialyte flavored = too broad until split.
 
 ================================================================
@@ -318,13 +374,35 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - up&up → target.com
 - TopCare → retailer or topcare PDP
 - HTML bullets alone ≠ missing. Read digits under bars when the tile shows them.
-- Founder-logged (ready to write, do not re-ask):
+- UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
+- Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
+- Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
+- 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
+- KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
+- Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
+- Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
+- Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
+- Kirkland second FO softgel: Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols (not Wild Alaskan 1400; not enteric)
+- Kirkland Krill: Krill Oil, Gelatin (Bovine), Water, Glycerin, Ethyl Vanillin
+- Kirkland Mucus DM tablets: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide (combo — not guaifenesin-only)
+- TopCare adult multi gummies: Glucose Syrup, Sugar, Water, Gelatin; less than 2% of: Palm Oil and Carnauba Wax, Citric Acid, Colors (Cranberry Concentrate, Carrot, Spirulina, and Pumpkin Concentrate, Paprika Extract, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare Men’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Citric Acid, Colors (Radish Concentrate, Carrot and Hibiscus Concentrate), Lactic Acid, Natural Flavors, Pectin
+- TopCare Women’s multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Less Than 2% of: Palm oil and Carnauba Wax, Citric Acid, Colors (Carrot and Cranberry Concentrate, Carrot, Spirulina and Pumpkin Concentrate, Lycopene), Lactic Acid, Natural Flavors, Pectin
+- TopCare high potency Vitamin C gummies: Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
+- Walgreens adult multi tablets UPC 311917199139 — full INGREDIENTS tile as founder-photographed
+- up&up Extra Strength Acetaminophen PM caplets 100-ct UPC 359726863117: croscarmellose sodium, fd&c blue #1 aluminum lake, fd&c blue #2 aluminum lake, hypromelloses, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, povidone k30, pregelatinized starch, purified water, silicon dioxide, sodium starch glycolate, talc, titanium dioxide — not the PM ointment row
+- Also write if OI was logged this same hunt and is not already a row: Equate adult multi; Equate D3 50 mcg; Member’s Mark D3 50 mcg; Member’s Mark melatonin; Kirkland D3. Do not invent missing strings.
+- Prior founder-logged still unwritten (do not re-ask; write in batch69 if not already a row):
 - MM D3 softgels, all 3 potencies, same OI: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol.
-- MM Women’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Men’s Multi tablets — Sam’s ingredients tile
-- MM Advanced Women’s 50+ tablets — Sam’s ingredients tile
 - MM Adult Multi gummies: Glucose Syrup, Sugar, Water, Gelatin, Maltodextrin, Natural Flavor, Citric Acid, Pectin (from fruits), Orange Juice Concentrate, Colors (from fruits and vegetables), Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (to prevent sticking).
-- Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Still dead: Kirkland enteric FO; Nice! adult multi; Assured skip this pass; Kirkland guaifenesin-only. Dead this hunt: Equate D3 softgels; MM Fish Oil + D3.
+- Token rules: “Palm Oil” / “Palm oil” on gummies ≠ locked “Organic Palm Oil” tablet coating. “Ethyl Vanillin” — use §5 if present; if missing, refuse that SKU.
+- Highest rating-draft after this write is batch69. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - Founder carousel hunt Sept 16, 2026 — live OI in advisor thread. Gallery HTML-zero is not “no label.” Carousel tiles are OI and UPC.
 - Missing panel hunt: brand site → store PDP carousel (every tile: Thrive / Amazon / iHerb) → Amazon carousel as a second look even if the row came from another store → Google “Brand + product + Other Ingredients” + label photo → DailyMed → DSLD. HTML bullets alone do not justify no_OI. Thrive leftover closeout (batch64) used Amazon carousel tiles for founder OI. Minerals under the Supplement Facts bar are actives, not Other Ingredients. No Google-LLM ingredient lists.
 - No SKU skip. Missing OI = hunt then write or refuse.
@@ -359,7 +437,7 @@ Honest always. Every flagged or context-scoped inactive needs a plain-language w
 - Vague label (unspecified rice extract, unnamed flavor class, undisclosed caramel class, etc.): say the label did not name the form/class, so we mark Caution until it does. Named locked forms stay whatever §5 says.
 - Vague vs named twins: when two label strings look related but grade differently (named hull vs “rice extract”; paprika extract vs “color added”; citrus extract vs lemon oil; seed oil in gummy vs capsule/drop), the vague twin’s tap must explain the named twin. Honest always.
 - Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
-Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
+Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story. Ingredient taps: not reviewed → “Pending DailyMed review”; reviewed + Clean → one-line why Clean; reviewed + Usable / Not clean → one-line why (fact, not “unsafe”). Never invert those two fields (Absorbine Jr. PRO Cream was the example — display fill only; verdict stays Avoid).
 
 Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Limited opacity + the vague-form tap sentence.
 
@@ -611,18 +689,76 @@ Completed (main, unverified drafts unless noted):
 - Thrive no_OI stash closeout — Sept 17, 2026 — batch64-kyr6-thrive-no-oi.ts. Search 18 new (Clean 8 / Caution 10 / Avoid 0). NEW 18 / REUSE 0 / SKIPPED-OUT 6 (Butterfly Pea; Liver Vitality NF-only; All Terrain bandages; bundles; Lion’s Mane powder already on main; Platinum/capsule duplicates already on main). Ascorbyl Palmitate used (Codeage Multi Collagen Caution on SiO2). Do not reopen 59/60/61/62/63.
 - Store generics hole punch — Sept 18, 2026 — batch65-kyr6-store-generics.ts. Search 20 new (Clean 3 / Caution 9 / Avoid 8). NEW 20 / REUSE-formula 10 / SKIPPED 16. §5 Caution exacts already on main (white edible ink / phenylethyl alcohol / mica-based pearlescent pigment) — not restamped. Do not reopen equate-es-pain-reliever 100-ct white / prenatal coated Walgreens / Amazon 30/54/56/61–63 / Thrive 27/52/59/60/64.
 - Store generics held-row write — Sept 18, 2026 — batch66-kyr6-held-rows.ts. Search 6 new (Clean 3 / Caution 2 / Avoid 1). NEW 6 / REUSE-formula 3 / SKIPPED 0. Cetyl alcohol used as already-Cleared Sept 15 (no new §5 stamp). Reuse: Kirkland doxylamine → `unisom-sleeptabs-doxylamine`; TopCare Swimmer’s Ear → `swim-ear`; Walgreens PM ointment → `store-pm-ointment-lanolin-alcohol`. Do not reopen batch65 20/10 or the Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts / Nice! / MM conflicted / Kirkland guaifenesin-only skip pile.
-- Member’s Mark founder-panel write — Sept 18, 2026 — batch67-kyr6-members-mark.ts. Search 3 new (Clean 2 / Caution 0 / Avoid 1). NEW 3 / REUSE-formula 0 / SKIPPED 6. D3 50 mcg + 125 mcg share safflower-fill formulaId (Clean; ≠ gummy High). Adult Multi gummies Avoid on Vegetable Oil (Coconut, Canola). Tablet multis skipped (no single carton OI). Do not reopen 65/66 or Assured / Rexall / Open Nature / Amazon house / Thrive / Sprouts.
+- KYR6 founder-panel write — Sept 18, 2026 — batch68-kyr6-founder-panels.ts / PR #230. Search 5 new (Clean 1 / Caution 4 / Avoid 0). NEW 5 / REUSE-formula 1 / SKIPPED Assured Headache PM (already on main, live DF complete). up&up PM reuses `store-pm-ointment-lanolin-alcohol`. Kirkland Wild Alaskan FO UPC 096619653539 — not the porcine clear twin, not enteric. Do not reopen 65/66/67/68 or PR #230.
+- Already on main from #230 (do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
+- KYR6 store-panel write — Sept 18, 2026 — batch69-kyr6-store-panels.ts / PR #231. Search 5 new (Clean 1 / Caution 2 / Avoid 2). NEW 5 / REUSE-formula 1 / SKIPPED already-on-main Equate Complete Multi + Kirkland D3 + Kirkland porcine FO + Kirkland Mucus DM Max ER; Equate D3 no_OI. REFUSED §5: Kirkland Krill (Ethyl Vanillin); TopCare adult + Women’s gummies (Spirulina); TopCare Men’s gummies (Hibiscus Concentrate). MM D3 50 mcg shares `members-mark-d3-softgels-safflower` (do not edit batch67 / PR #229). TopCare Vitamin C uses founder fruit-juice / paprika panel (no palm; do not attach UPC 036800464049 palm twin). up&up ES APAP PM 100-ct uses founder PVA + talc + SiO2 stack (own formulaId; do not reuse `dg-health-pain-relief-pm`). Do not reopen 65/66/68 or PR #230.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
+================================================================
+ADVISOR HANDOFF — Sept 18, 2026 late
+================================================================
+Highest rating-draft: batch69-kyr6-store-panels.ts (PR #231).
+batch67 = open PR #229 — do not edit that file.
+batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230.
+
+KYR6 leftover write DONE. Do not resend.
+SKIP (unchanged): Kirkland enteric FO; Nice! adult multi; Assured; Kirkland guaifenesin-only; MM Advanced multis on 68; Kirkland Wild Alaskan 1400 on 68; up&up PM ointment on 68.
+
+REFUSED §5 — exact missing strings (do not invent a grade):
+- Kirkland Krill — Ethyl Vanillin
+- TopCare adult multi gummies — Spirulina
+- TopCare Men’s multi gummies — Hibiscus Concentrate
+- TopCare Women’s multi gummies — Spirulina
+
+Already on MAIN from PR #230 / batch68 — do not rewrite:
+- MM Advanced Women’s / Men’s / Women’s 50+
+- Kirkland Wild Alaskan FO 1400 Clean UPC 096619653539
+- up&up PM OINTMENT reuse store-pm-ointment-lanolin-alcohol
+- Assured Headache PM already batch29
+
+Exact founder print (batch69 outcome; refused strings stay):
+- Kirkland second FO: already on main (`kirkland-fish-oil-softgels-clear`) — Fish Oil; Gelatin (Porcine); Glycerin; Water; Tocopherols
+- Kirkland Krill REFUSED — Ethyl Vanillin (with Krill Oil, Gelatin (Bovine), Water, Glycerin)
+- Kirkland Mucus DM: already on main (`kirkland-mucus-dm-max-er`) — carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide
+- TopCare adult multi gummies REFUSED — Spirulina (Palm Oil + Carnauba Wax also on that print; do not alias Palm Oil to Organic Palm Oil coating)
+- TopCare Men’s multi gummies REFUSED — Hibiscus Concentrate
+- TopCare Women’s multi gummies REFUSED — Spirulina (Palm oil + Carnauba Wax also on that print)
+- TopCare Vitamin C gummies WRITTEN Caution — Glucose Syrup, Sugar, Water, Gelatin, 5% Fruit Juice From Concentrate (Apple, Pear, Pineapple, Peach, Orange, Lemon, Raspberry, Blackcurrant, Strawberry, Blackberry, Blueberry, Cherry), Less Than 2% of: Citric Acid, Lactic Acid, Natural Flavors, Color (Paprika Extract)
+- Walgreens adult multi UPC 311917199139 WRITTEN Avoid
+- up&up APAP PM caplets UPC 359726863117 WRITTEN Avoid on founder PVA + talc + SiO2 stack (not the ointment; not DailyMed `dg-health-pain-relief-pm`)
+
+TOKEN / SCOPE LOCKS
+- Organic Palm Oil as TABLET coating = Cleared. Gummy “Palm Oil” / “Palm oil” is a different string.
+- Ethyl Vanillin: §5 or refuse.
+- Mineral / ionic drops IN.
+- Bandages OUT. Oil bottles hunt-list only.
+- Basics = formerly Solimo. Some Elements = formerly Revly. One Elements SKU now Micro Ingredients.
+- Limited-in-one / cleared-in-another must say WHY in ingredient notes + honest note.
+
 LIVE NOW
-KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221. Live missing UPC 101 (in-store 72 / online 29). Named dry, do not reopen: set-id 97 / in-store 24 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+1) Amazon 3P brands not on main.
+THEN (not live): un-stash Sprouts house (~55 walk + 3 refused). Do not catalog Sprouts. 187 is dead.
+KYR5 / KYR5-b / KYR5-c DONE. KYR5-d founder-lock attach. Do not reopen #121–#221.
+Live missing UPC on notes: 122 (in-store 93 / online-only 29). Named dry: set-id 97 / in-store 26 / online 13.
+KYR4 photos on paste only. Cron OFF.
+
+PROCESS
+- Sidebar first. No bot paste until Brandon says go.
+- Cursor notes BEFORE catalog-bot paste.
+- One job. Last line STILL WORKING / ON MAIN / WAITING / STOPPED.
+- Advisor does not push GitHub.
+- Main wins over pins.
+
+LIVE NOW
+KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
+batch69 LANDED (PR #231). Do not resend. Do not reopen 65 / 66 / 68 / #230.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
-2) Store generics (CVS / Walgreens / Walmart / Safeway-Vons Signature / dollar banners)
-3) Amazon 3P brands not on main
+2) Store generics leftover closeout — batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
+3) Amazon 3P brands not on main — LIVE
 THEN (not live)
-4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks)
-Do NOT mark complete: store generics, Amazon 3P. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks). Do not catalog Sprouts. 187 is dead.
+Do NOT mark complete: Amazon 3P. Highest rating-draft is batch69. batch67 = PR #229 — do not edit. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
@@ -1026,83 +1162,141 @@ Repositioned as Yuka for medicine/supplements/remedies. Clean Rating Methodology
 May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus ER + Badger as clean equivalents [Equate correction — see Aug 8]. Advil removed from Pain & Fever. Pain & Fever Clean Picks shipped; per-category folder architecture locked; Card design Option A. May 25 — Clean Brands → Everyday Clean Picks rename. May 22 — Visual direction locks. Earlier — Conditions rename, interaction checker, dosage calculator, Supabase schema. [most now cut]
 
 ================================================================
-Missing barcodes — in-store first (Sept 17, 2026)
+Missing barcodes — live scoreboard after Tiger Balm + Biofreeze founder-lock (Sept 19, 2026)
 ================================================================
-Live after #213 / #214. Search catalog (parked Pedialyte out). A row has a UPC if barcode has 8+ digits. Do not invent codes. Do not grade. Walk lists A/B stay on this file — do not paste them again.
+Last Updated: September 19, 2026 — Count-tab lock + ALL-SITE accordion + 11-digit UPC lock. Click every pack-count tab/pill then expand THAT tab’s spec accordion. One page ≠ one UPC. Expand every collapsed spec/details tab before DRY. Do not DRY off first-paint hero + Drug Facts alone. No Walgreens pack attach until Brandon sends the KYR5-d job. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29). Walk list A is a hunt queue only.
 
-KYR5 / KYR5-b / KYR5-c barcode factory DONE. Do not reopen #121–#221.
+Live query (Search catalog, parked Pedialyte out). A Search row HAS a UPC if barcode/upc has 8+ digits. Do not invent codes. Do not grade.
+- Search rows: 2239
+- Rows with UPC: 2117
+- Live missing UPC = 122 (in-store 93 + online 29)
+- Rule: named walk list ≠ live missing. Always recount from barcode length.
+- Attack order = in-store brand buckets from this LIVE query, largest first. Skip DRY / named-dry / no-row-skipped.
+- Online 29 stays second.
+- Sprouts house still STASHED. Unwritten stash ~55 is NOT in this set (no row yet). The 3 Sprouts Search rows below are already-written DRY leftovers, not the unwritten stash.
+- KYR5 factory #121–#221 stay closed. KYR5-d attach-only after founder locks. Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
+- ALL-SITE accordion lock (2026-09-19): expand every collapsed accordion (Product Specifications / Details / More specs / Product details / Shipping & specs / Nutrition / Supplement facts extra tabs / “show more”) before DRY. Do not DRY off first-paint hero + Drug Facts alone. 11-digit retailer UPC is valid input (GTIN-12 minus check digit). Store UPC-A = 11 digits + GS1 check digit (31191705853 → 311917058535; same as #232 31191701535 → 311917015354). If 12 digits already show, store those 12 after a check-digit sanity pass. Click/expand all collapsibles on walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, and brand sites. Read 12 digits under bars when a barcode image exists. NDC ≠ UPC. Official brand site + every tile + every accordion, then DRY.
+- Count-tab lock (2026-09-19, all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC. Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit. Do not assume one page = one UPC. Accordion lock stays. No grades. Factory #121–#221 stay closed.
+- OI / inactive accordion lock (same expand, narrower queue): ONLY existing MAIN Search rows that already lack an inactive list. Do not re-hunt full lists. Do not add products. Confirmed-empty (100% powder / “inactives: none”) are not missing-OI.
+- Do not reopen Boiron 23 hunt.
+- Do not reopen Biofreeze 10% hunt. Founder lock 2026-09-18 night: 4 oz 10% single does not exist on US retail shelf. Merge to 10.5% 359316120200 / 731124000109.
 
-Live totals
-- Search rows missing a UPC: 101 (KYR5-c barcode-tile chunk 6 filled 1)
-- In-store missing UPC: 72
-- Online-only missing UPC: 29
-- Named dry, do not reopen: set-id 97 / in-store 24 / online 13
-- Unwritten Sprouts house stash ~55 is NOT in the missing-UPC set (no row yet)
+Tiger Balm + Biofreeze founder-lock result
+- Newly attached 8 empty Search rows:
+  - tiger-balm-muscle-rub 039278440201
+  - tiger-balm-neck-shoulder-rub 039278421019
+  - tiger-balm-pain-relieving-patch 039278322002
+  - tiger-balm-hydrogel-patch 039278322002
+  - tiger-balm-cool-patch 039278322002
+  - biofreeze-pain-relief-spray-10-5-denatonium 731124000109
+  - biofreeze-professional-aerosol-10-5-denatonium 359316120200
+  - biofreeze-professional-spray-13 731124445216
+- Already-had (not overwritten):
+  - tiger-balm-active-muscle-rub 039278440201
+  - tiger-balm-neck-shoulder-vanishing-scent 039278421019
+  - tiger-balm-pain-relieving-patch-regular-hydrogel 039278322002
+  - tiger-balm-hydrogel-patch-large 039278323009
+  - biofreeze-pain-relief-gel-4 includes 731124000033 (3 oz gel tube; not moved — already on gel, not 10% spray)
+  - biofreeze-pain-relief-spray-10-5 731124000071 731124001146
+  - biofreeze-professional-spray-10-5 731124000255 731124000286
+- Moved: none (731124000033 already on 4% gel; not hung on 10% spray)
+- No-row-skipped: none this pass
+- Left missing on purpose / now NAMED-DRY: Biofreeze Pain Relieving Spray 10% 4 oz single does not exist on the US retail shelf. Current 4 oz / 3 oz sprays print Menthol 10.5%. Do not hunt a 10% UPC. Do not invent one. Merge-note to Biofreeze Professional 360 Spray 10.5% 4 fl oz 359316120200 and Biofreeze Pain Relief Spray 10.5% 3 fl oz 731124000109. Same pattern as Boiron size-less Chestal / Arnicare twins. Do not reopen Biofreeze 10% hunt.
+- Struck closed this session (already attached in #233): Tiger Balm Muscle Rub 039278440201; Tiger Balm Neck & Shoulder 039278421019; Tiger Balm 5-ct patch family 039278322002; Tiger Balm Large hydrogel 4-ct 039278323009 (already-had); Biofreeze Pro 10.5% 4 oz 359316120200; Biofreeze retail 10.5% 3 oz 731124000109; Biofreeze Pro 13% 2-pack 731124445216; Biofreeze gel 3 oz 731124000033 (already-had).
+- Tiger Balm wider hydrogel 160/48/32 still missing (Large 039278323009 stays on 230/70/46). Biofreeze 3.5% paraben gel still missing (731124000033 stays on current 4% 3 oz gel).
+- Do-not-attach held: 885450347581 N&S multi-pack; 039278322064 Cool Patch warehouse twin; 731124000185 10% spray 2-pack; 731124000071 as 10% 4 oz single; 731124000253 colorless 2-pack; 731124117661 3 mL foil; 359316120200 on the 13% row.
 
-IN-STORE missing UPC by brand — live 112 (includes set-id-only still lacking a retail UPC)
-Boiron 23; Biofreeze 6; Equate 6; Tiger Balm 6; DG Health 4; Icy Hot 4; Walgreens 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; Genexa 2; GoodSense 3; Member’s Mark 3; Salonpas 3; Sprouts 3; Advil 2; Culturelle 2; CVS Health 2; Nature’s Way 2; OLLY 2; Robitussin 2; Signature Care 2; Tylenol 2; up&up 2; Alaway 1; Blue-Emu 1; Boericke & Tafel 1; Bufferin 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Family Wellness 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Sudafed 1; TopCare 1; Zarbee’s 1.
+#232 result (prior)
+- Newly attached 1 = Walgreens Extra Strength Pain Reliever (coated, 50-ct) 311917015354
+- Already-had 35 = not overwritten
+- No-row-skipped (founder has UPC, no exact Search row — do NOT list as missing-UPC hunt items). Park under “found UPC / no row.” Opening a row is a founder call, not a UPC hunt:
+  - Cyclameneur/Cyclamen Eur 6C 306960259084
+  - Sambucus nigra 6C 3-tube 306969453643
+  - Equate sugar-free nighttime liquid 681131378703
+  - DG Nighttime Original 8 oz 370030641857
+  - DG Nighttime Cherry 8 oz 370030659555
+  - DG Nighttime Elderberry 12 oz 370030118175
 
-Walk list A — IN-STORE missing UPC names (DRY = already on named-dry leftover list; do not reopen). Fields from the live Search row only: brand — product name — form — strength — pack count (count unknown if the row has no count) — coat/color if the row has it. Do not invent a count. No barcodes.
-Boiron (23)
-- Boiron — Boiron Abies Canadensis Pellets — pellets — Abies Canadensis potency on tube — count unknown
-- Boiron — Boiron Ailanthus Glandulosus Pellets — pellets — Ailanthus Glandulosus potency on tube — count unknown
-- Boiron — Boiron Alfalfa Pellets — pellets — Alfalfa potency on tube — count unknown
-- Boiron — Boiron Arnicare Cream (DailyMed PEG panel) — cream — Arnica montana 1X HPUS 7% — count unknown
-- Boiron — Boiron Cheiranthus Cheiri Pellets — pellets — Cheiranthus Cheiri potency on tube — count unknown
-- Boiron — Boiron Chenopodium Anthelminticum Pellets — pellets — Chenopodium Anthelminticum potency on tube — count unknown
-- Boiron — Boiron Chestal Cold & Cough Honey — syrup — Dulcamara 5C HPUS; Ferrum phosphoricum 9C HPUS; Hydrastis canadensis 9C HPUS; Kali bichromicum 9C HPUS; Nux vomica 9C HPUS — count unknown
-- Boiron — Boiron Coldcalm Meltaway Tablets — meltaway tablet — Allium cepa 3C HPUS; Apis mellifica 6C HPUS; Belladonna 6C HPUS; Eupatorium perfoliatum 3C HPUS; Gelsemium sempervirens 6C HPUS; Kali bichromicum 6C HPUS; Nux vomica 3C HPUS; Phytolacca decandra 6C HPUS; Pulsatilla 6C HPUS — count unknown
-- Boiron — Boiron Corallium Rubrum Pellets — pellets — Corallium Rubrum potency on tube — count unknown
-- Boiron — Boiron Cyclameneur Pellets — pellets — Cyclameneur potency on tube — count unknown
-- Boiron — Boiron Fumaria Officinalis Pellets — pellets — Fumaria Officinalis potency on tube — count unknown
-- Boiron — Boiron Gallicum Acidum Pellets — pellets — Gallicum Acidum potency on tube — count unknown
-- Boiron — Boiron Harpagophytum Pellets — pellets — Harpagophytum potency on tube — count unknown
-- Boiron — Boiron Luffa Operculata Pellets — pellets — Luffa Operculata potency on tube — count unknown
-- Boiron — Boiron Melilotus Officinalis Pellets — pellets — Melilotus Officinalis potency on tube — count unknown
-- Boiron — Boiron Menyanthes Trifoliata Pellets — pellets — Menyanthes Trifoliata potency on tube — count unknown
-- Boiron — Boiron Polygonum Punctatum Pellets — pellets — Polygonum Punctatum potency on tube — count unknown
-- Boiron — Boiron Sambucus nigra 6C Pellets — pellets — Sambucus nigra 6C potency on tube — count unknown
-- Boiron — Boiron Saponaria Officinalis Pellets — pellets — Saponaria Officinalis potency on tube — count unknown
-- Boiron — Boiron Sempervivum Tectorum Pellets — pellets — Sempervivum Tectorum potency on tube — count unknown
-- Boiron — Boiron Trillium Pendulum Pellets — pellets — Trillium Pendulum potency on tube — count unknown
-- Boiron — Boiron Venus Mercenaria Pellets — pellets — Venus Mercenaria potency on tube — count unknown
-- Boiron — Boiron Viola Tricolor Pellets — pellets — Viola Tricolor potency on tube — count unknown
-Biofreeze (6)
-- Biofreeze — Biofreeze Pain Relief Spray 10.5% (denatonium) — spray — Menthol 10.5% — count unknown
-- Biofreeze — Biofreeze Pain Relieving Gel 3.5% (paraben SPL) — gel — Menthol 3.5% — count unknown
-- Biofreeze — Biofreeze Pain Relieving Spray 10% — spray — Menthol 10% — count unknown
-- Biofreeze — Biofreeze Professional Colorless Roll-On 5% — roll-on — Menthol 5% — count unknown — colorless
-- Biofreeze — Biofreeze Professional Spray 10.5% (denatonium aerosol) — spray — Menthol 10.5% — count unknown
-- Biofreeze — Biofreeze Professional Spray 13% — spray — Menthol 13% — count unknown
-Equate (6)
-- Equate — Equate Children's Melatonin Liquid — liquid — Melatonin 1mg — count unknown DRY
-- Equate — Equate Children's Multi-Symptom Cold Daytime & Nighttime — liquid kit — Dextromethorphan HBr (day) 5mg / 5mL; Guaifenesin (day) 100mg / 5mL; Phenylephrine HCl (day) 2.5mg / 5mL — count unknown
-- Equate — Equate Children's Multi-Symptom Cold Nighttime — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL; Phenylephrine HCl 5mg / 10mL — count unknown
-- Equate — Equate Dye-Free Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown — dye-free
-- Equate — Equate Extra Strength Pain Reliever — caplet — Acetaminophen 500mg — count unknown
-- Equate — Equate Lubricant Eye Drops Preservative-Free — single-use eye drop — Carboxymethylcellulose sodium 0.5% — count unknown
-Tiger Balm (6)
-- Tiger Balm — Tiger Balm Muscle Rub — cream — Methyl salicylate 15%; Menthol 5%; Camphor (synthetic) 3% — count unknown
-- Tiger Balm — Tiger Balm Neck & Shoulder Rub — cream — Camphor (synthetic) 11%; Menthol 10% — count unknown
-- Tiger Balm — Tiger Balm Pain Relieving Cool Patch — patch — Camphor (synthetic) 80 mg/patch; Menthol 24 mg/patch — count unknown
-- Tiger Balm — Tiger Balm Pain Relieving Hydrogel Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
-- Tiger Balm — Tiger Balm Pain Relieving Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown
+Found UPC / no row (parked — not a missing-UPC hunt)
+- Cyclameneur/Cyclamen Eur 6C 306960259084
+- Sambucus nigra 6C 3-tube 306969453643
+- Equate sugar-free nighttime liquid 681131378703
+- DG Nighttime Original 8 oz 370030641857
+- DG Nighttime Cherry 8 oz 370030659555
+- DG Nighttime Elderberry 12 oz 370030118175
+
+False-missing / merge-note (still count in the 93 because the leftover row has no barcode; do not send founder to re-barcode)
+- Boiron Arnicare Cream (DailyMed PEG panel) — size-less twin of sized `boiron-arnicare-cream` (UPCs already on row). NAMED-DRY / merge-note.
+- Boiron Chestal Cold & Cough Honey — size-less twin of Chestal Adult/Kids honey rows that already have UPC (`chestal-adult-honey` 306969032282; `boiron-chestal-kids-honey` 306969033289). NAMED-DRY / merge-note.
+- Biofreeze Pain Relieving Spray 10% — founder lock 2026-09-18 night. 4 oz single does not exist on US retail shelf. Current 4 oz / 3 oz sprays print Menthol 10.5%. NAMED-DRY / merge-note to Biofreeze Professional 360 Spray 10.5% 4 fl oz 359316120200 and Biofreeze Pain Relief Spray 10.5% 3 fl oz 731124000109. Do not hunt a 10% UPC. Do not invent one. Do not reopen Biofreeze 10% hunt.
+
+IN-STORE missing UPC by brand — live 93
+Walgreens 10; Member’s Mark 9; TopCare 6; Equate 5; Family Wellness 5; DG Health 4; Icy Hot 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; CVS Health 3; GoodSense 3; Sprouts 3; up&up 3; Biofreeze 2; Boiron 2; Culturelle 2; Genexa 2; Nature’s Way 2; OLLY 2; Signature Care 2; Tylenol 2; Alaway 1; Blue-Emu 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Tiger Balm 1; Zarbee’s 1.
+
+Walk list A — IN-STORE missing UPC names (LIVE query). Hunt queue only — not the count. DRY / named-dry / no-row-skipped = skip. Fields from the live Search row only: brand — name — form — strength — pack count if on row (count unknown if the row has no count). Do not invent a count. No barcodes.
+Walgreens (10)
+- Walgreens — Walgreens Allergy Relief (Cetirizine 10 mg) — film-coated tablet — Cetirizine HCl 10mg — count unknown
+- Walgreens — Walgreens Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
+- Walgreens — Walgreens Children's Nighttime Cough — liquid — Chlorpheniramine maleate 2mg / 10mL; Dextromethorphan HBr 15mg / 10mL — count unknown
+- Walgreens — Walgreens Dye-Free Wal-Sleep Z (Diphenhydramine 50 mg / 30 mL) — liquid — Diphenhydramine HCl 50mg / 30mL — count unknown
+- Walgreens — Walgreens Famotidine 20 mg — film-coated tablet — Famotidine 20mg — count unknown
+- Walgreens — Walgreens Nighttime Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
+- Walgreens — Walgreens Nighttime Sleep Aid Liquid (Diphenhydramine 50 mg / 30 mL) — liquid — Diphenhydramine HCl 50mg / 30mL — count unknown
+- Walgreens — Walgreens Omeprazole 20 mg Delayed-Release — delayed-release tablet — Omeprazole 20mg — count unknown
+- Walgreens — Walgreens Pain Reliever (multi-dye + talc SPL) — caplet — Acetaminophen 500mg — count unknown
+- Walgreens — Walgreens Prenatal Multivitamin (coated) — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid label serving; Iron label serving; Zinc (as zinc oxide) label serving — count unknown DRY
+Member’s Mark (9)
+- Member’s Mark — Member’s Mark Advanced Men’s Multivitamin Tablets — tablet — Men’s multivitamin / multimineral (27 vitamins, minerals, and herbs as labeled) 1 tablet (label serving) — count unknown
+- Member’s Mark — Member’s Mark Advanced Women’s 50+ Multivitamin Tablets — tablet — Women’s 50+ multivitamin / multimineral (as labeled) 1 tablet (label serving) — count unknown
+- Member’s Mark — Member’s Mark Advanced Women’s Multivitamin Tablets — tablet — Women’s multivitamin / multimineral (29 vitamins, minerals, and herbs as labeled) 1 tablet (label serving) — count unknown
+- Member’s Mark — Member’s Mark Extra Strength Acetaminophen — caplet — Acetaminophen 500mg — count unknown
+- Member’s Mark — Member’s Mark Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
+- Member’s Mark — Member’s Mark Maximum Strength Mucus Relief (Guaifenesin 1200 mg) — ER tablet — Guaifenesin 1200mg — count unknown
+- Member’s Mark — Member’s Mark Mucus Relief DM (Guaifenesin 1200 mg + DXM 60 mg, Blue #1) — ER tablet — Guaifenesin 1200mg; Dextromethorphan HBr 60mg — count unknown
+- Member’s Mark — Member’s Mark Mucus Relief DM Max (Guaifenesin 1200 mg + DXM 60 mg) — ER tablet — Guaifenesin 1200mg; Dextromethorphan HBr 60mg — count unknown
+- Member’s Mark — Member’s Mark Vitamin D3 Softgels, 50 mcg (2000 IU) — softgel — Vitamin D3 (cholecalciferol) 50mcg (2000 IU) — count unknown
+Tiger Balm (1)
+- ~~Tiger Balm — Tiger Balm Muscle Rub — cream — Methyl salicylate 15%; Menthol 5%; Camphor (synthetic) 3% — count unknown~~ CLOSED — 039278440201 (2 oz)
+- ~~Tiger Balm — Tiger Balm Neck & Shoulder Rub — cream — Camphor (synthetic) 11%; Menthol 10% — count unknown~~ CLOSED — 039278421019 (1.76 oz single tube)
+- ~~Tiger Balm — Tiger Balm Pain Relieving Cool Patch — patch — Camphor (synthetic) 80 mg/patch; Menthol 24 mg/patch — count unknown~~ CLOSED — 039278322002 (5-ct 4x2.75)
+- ~~Tiger Balm — Tiger Balm Pain Relieving Hydrogel Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown~~ CLOSED — 039278322002 (5-ct 110/33/22)
+- ~~Tiger Balm — Tiger Balm Pain Relieving Patch — patch — Camphor (synthetic) 110 mg/patch; Levomenthol (L-menthol) 33 mg/patch; Capsicum extract 22 mg/patch — count unknown~~ CLOSED — 039278322002 (5-ct)
 - Tiger Balm — Tiger Balm Pain Relieving Patch (wider hydrogel) — patch — Camphor (synthetic) 160 mg/patch; Levomenthol (L-menthol) 48 mg/patch; Capsicum extract 32 mg/patch — count unknown
+TopCare (6)
+- TopCare — TopCare Ear Relief Ear Drops — otic — Chamomilla 10X HPUS; Mercurius solubilis 15X HPUS; Sulphur 12X HPUS — count unknown
+- TopCare — TopCare Health Original Eye Drops (Tetrahydrozoline 0.05%) — drops — Tetrahydrozoline HCl 0.05% — count unknown
+- TopCare — TopCare High Potency Vitamin C Gummies — gummy — Vitamin C label serving (high potency) — count unknown
+- TopCare — TopCare Ibuprofen Liquid Gels / Minis (200 mg) — liquid gel — Ibuprofen 200mg — count unknown
+- TopCare — TopCare Sleep Aid Nighttime (Diphenhydramine 25 mg) — film-coated tablet — Diphenhydramine HCl 25mg — count unknown
+- TopCare — TopCare Swimmer's Ear Drops (Isopropyl Alcohol 95%) — otic — Isopropyl alcohol 95% — count unknown
+Biofreeze (2)
+- ~~Biofreeze — Biofreeze Pain Relief Spray 10.5% (denatonium) — spray — Menthol 10.5% — count unknown~~ CLOSED — 731124000109 (3 fl oz retail 360)
+- Biofreeze — Biofreeze Pain Relieving Gel 3.5% (paraben SPL) — gel — Menthol 3.5% — count unknown
+- Biofreeze — Biofreeze Pain Relieving Spray 10% — spray — Menthol 10% — count unknown DRY / merge-note — 4 oz single does not exist on US retail shelf. Merge to Pro 360 Spray 10.5% 4 fl oz 359316120200 and retail Pain Relief Spray 10.5% 3 fl oz 731124000109. Do not hunt a 10% UPC. Do not reopen Biofreeze 10% hunt.
+- ~~Biofreeze — Biofreeze Professional Spray 10.5% (denatonium aerosol) — spray — Menthol 10.5% — count unknown~~ CLOSED — 359316120200 (4 fl oz Professional 360)
+- ~~Biofreeze — Biofreeze Professional Spray 13% — spray — Menthol 13% — count unknown~~ CLOSED — 731124445216 (4 oz 2-pack)
+Equate (5)
+- Equate — Equate Children's Melatonin Liquid — liquid — Melatonin 1mg — count unknown DRY
+- Equate — Equate Children's Multi-Symptom Cold Nighttime — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL; Phenylephrine HCl 5mg / 10mL — count unknown
+- Equate — Equate Children's Vaporizing Rub — ointment — Camphor 4.8%; Eucalyptus oil 1.2%; Menthol 2.6% — count unknown
+- Equate — Equate Dye-Free Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown
+- Equate — Equate Nighttime Relief Lubricant Eye Ointment — ointment — Light mineral oil 42.5%; White petrolatum 57.3% — count unknown
+Family Wellness (5)
+- Family Wellness — Family Wellness Chest Congestion Relief (Guaifenesin 400 mg) — tablet — Guaifenesin 400mg — count unknown
+- Family Wellness — Family Wellness Chest Congestion Relief DM (Guaifenesin 400 mg + DXM 20 mg) — tablet — Guaifenesin 400mg; Dextromethorphan HBr 20mg — count unknown
+- Family Wellness — Family Wellness Pain Scar Itch Triple Antibiotic (69396-054) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g; Pramoxine HCl 10mg / g — count unknown
+- Family Wellness — Family Wellness Triple Antibiotic Ointment — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
+- Family Wellness — Family Wellness Triple Antibiotic Original — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 DG Health (4)
-- DG Health — DG Health Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
-- DG Health — DG Health Cold & Flu Relief Nighttime Liquid — liquid — Acetaminophen 650mg / 30mL; Dextromethorphan HBr 30mg / 30mL; Doxylamine succinate 12.5mg / 30mL — count unknown
-- DG Health — DG Health Ibuprofen 200 mg Film-Coated Tablets — film-coated tablet — Ibuprofen 200mg — count unknown — film-coated
-- DG Health — DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes) — film-coated tablet — Acetaminophen 500mg — count unknown — dyed lakes
+- DG Health — DG Health Ibuprofen 200 mg Film-Coated Tablets — film-coated tablet — Ibuprofen 200mg — count unknown
+- DG Health — DG Health Immediate Release Mucus Relief (Guaifenesin 400 mg) — tablet — Guaifenesin 400mg — count unknown
+- DG Health — DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes) — film-coated tablet — Acetaminophen 500mg — count unknown
+- DG Health — DG Health Triple Antibiotic Ointment (Oil-Blend) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 Icy Hot (4)
 - Icy Hot — Icy Hot Lidocaine No-Mess Roll On — roll-on — Lidocaine HCl 4% — count unknown
 - Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
 - Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11% — count unknown
 - Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
-Walgreens (4)
-- Walgreens — Walgreens Children's Nighttime Cough — liquid — Chlorpheniramine maleate 2mg / 10mL; Dextromethorphan HBr 15mg / 10mL — count unknown
-- Walgreens — Walgreens Extra Strength Pain Reliever (coated) — caplet — Acetaminophen 500mg — count unknown — coated DRY
-- Walgreens — Walgreens Pain Reliever (multi-dye + talc SPL) — caplet — Acetaminophen 500mg — count unknown — multi-dye
-- Walgreens — Walgreens Prenatal Multivitamin (coated) — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid label serving; Iron label serving; Zinc (as zinc oxide) label serving — count unknown — film-coated DRY
 Absorbine Jr. (3)
 - Absorbine Jr. — Absorbine Jr. Back Patch 7.5% — patch — Menthol 7.5% — count unknown
 - Absorbine Jr. — Absorbine Jr. Pain Relieving Knee Patch 7.5% — patch — Menthol 7.5% — count unknown
@@ -1112,113 +1306,81 @@ Aspercreme (3)
 - Aspercreme — Aspercreme Lidocaine with Rosemary and Mint — cream — Lidocaine HCl 4% — count unknown
 - Aspercreme — Aspercreme Professional Cream — cream — Lidocaine HCl 4% — count unknown
 Assured (3)
-- Assured — Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg) — coated tablet — Acetaminophen 500mg; Diphenhydramine citrate 38mg — count unknown — coated
+- Assured — Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg) — coated tablet — Acetaminophen 500mg; Diphenhydramine citrate 38mg — count unknown
 - Assured — Assured Hydrocortisone 1% Cream — cream — Hydrocortisone 1% — count unknown
 - Assured — Assured Lidocaine Pain Relief Gel — gel — Lidocaine 4% — count unknown
-Genexa (3)
-- Genexa — Genexa Cough & Chest Congestion — liquid — Dextromethorphan HBr 20mg / 20mL; Guaifenesin 400mg / 20mL — count unknown
-- Genexa — Genexa Kids' Nighttime Multi-Symptom Cold & Flu — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL — count unknown
-- Genexa — Genexa Nighttime Severe Cold & Flu — liquid — Acetaminophen 650mg / 20mL; Dextromethorphan HBr 30mg / 20mL; Doxylamine succinate 12.5mg / 20mL — count unknown
+CVS Health (3)
+- CVS Health — CVS Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown
+- CVS Health — CVS Health Extra Strength Acetaminophen (coated red) — film-coated tablet — Acetaminophen 500mg — count unknown
+- CVS Health — CVS Nighttime Dry-Eye Relief Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
 GoodSense (3)
-- GoodSense — GoodSense Children’s Ibuprofen 100 mg Chewable — chewable tablet — Ibuprofen 100mg — count unknown
+- GoodSense — GoodSense Extra Strength Pain Relief (Acetaminophen 500 mg, L484) — caplet — Acetaminophen 500mg — count unknown
 - GoodSense — GoodSense Ibuprofen Liquid Gels 200 mg — liquid gel — Solubilized ibuprofen 200mg — count unknown
-- GoodSense — GoodSense Naproxen Sodium 220 mg — film-coated tablet — Naproxen sodium 220mg — count unknown — film-coated
-Member's Mark (3)
-- Member's Mark — Member's Mark Allergy Relief (Loratadine 10 mg) — tablet — Loratadine 10mg — count unknown
-- Member's Mark — Member's Mark Extra Strength Acetaminophen — caplet — Acetaminophen 500mg — count unknown
-- Member's Mark — Member's Mark Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
-Salonpas (3)
-- Salonpas — Salonpas Arthritis Pain Patch — patch — Menthol 3%; Methyl salicylate 10% — count unknown
-- Salonpas — Salonpas Arthritis Pain Patch LARGE — patch — Menthol 3%; Methyl salicylate 10% — count unknown
-- Salonpas — Salonpas Pain Relief Patch — patch — Menthol 3%; Methyl salicylate 10% — count unknown
+- GoodSense — GoodSense Naproxen Sodium 220 mg — film-coated tablet — Naproxen sodium 220mg — count unknown
 Sprouts (3)
 - Sprouts — Sprouts Lion's Mane Liquid — liquid — Lion's mane extract label serving — count unknown DRY
 - Sprouts — Sprouts Moringa 100% Powder — powder — Moringa powder label serving — count unknown DRY
 - Sprouts — Sprouts Saw Palmetto Powder Cap — powder capsule — Saw palmetto powder 1 capsule (label serving) — count unknown DRY
-Advil (2)
-- Advil — Advil Film-Coated / Menstrual Pain (ibuprofen sodium) — coated tablet — Ibuprofen (as ibuprofen sodium) 200mg — count unknown — film-coated
-- Advil — Junior Strength Advil Coated Tablets — coated tablet — Ibuprofen 100mg — count unknown — coated
+up&up (3)
+- up&up — up&up Daytime Honey Cold & Flu — liquid — Acetaminophen 325mg / 15mL; Dextromethorphan HBr 10mg / 15mL; Guaifenesin 200mg / 15mL; Phenylephrine HCl 5mg / 15mL — count unknown
+- up&up — up&up Extra Strength Acetaminophen — film-coated tablet — Acetaminophen 500mg — count unknown DRY
+- up&up — up&up Nighttime Relief Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
+Boiron (2)
+- Boiron — Boiron Arnicare Cream (DailyMed PEG panel) — cream — Arnica montana 1X HPUS 7% — count unknown DRY / merge-note — size-less twin of sized Arnicare Cream (already has UPC). Do not re-barcode. Do not reopen Boiron 23.
+- Boiron — Boiron Chestal Cold & Cough Honey — syrup — Dulcamara 5C HPUS; Ferrum phosphoricum 9C HPUS; Hydrastis canadensis 9C HPUS; Kali bichromicum 9C HPUS; Nux vomica 9C HPUS — count unknown DRY / merge-note — size-less twin of Chestal Adult/Kids honey (already have UPC). Do not re-barcode. Do not reopen Boiron 23.
 Culturelle (2)
 - Culturelle — Culturelle Digestive Daily Probiotic Capsules — capsule — Lactobacillus rhamnosus GG 10 billion CFU — count unknown DRY
 - Culturelle — Culturelle Kids Purely Probiotics Packets — powder packet — Lactobacillus rhamnosus GG 5 billion CFU — count unknown DRY
-CVS Health (2)
-- CVS Health — CVS Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown
-- CVS Health — CVS Health Extra Strength Acetaminophen (coated red) — film-coated tablet — Acetaminophen 500mg — count unknown — coated red
-Nature's Way (2)
-- Nature's Way — Nature's Way Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm) — gummy — Vitamin C (ascorbic acid) 60mg per 2 gummies; Zinc (as zinc citrate) 2.2mg per 2 gummies; Black elder (Sambucus nigra L.) extract (berry) 50mg per 2 gummies — count unknown DRY
-- Nature's Way — Umcka® Cold&Flu Relief FastActives® — powder — Pelargonium sidoides 1X label serving — count unknown DRY
+Genexa (2)
+- Genexa — Genexa Kids' Nighttime Multi-Symptom Cold & Flu — liquid — Acetaminophen 325mg / 10mL; Diphenhydramine HCl 12.5mg / 10mL — count unknown
+- Genexa — Genexa Nighttime Severe Cold & Flu — liquid — Acetaminophen 650mg / 20mL; Dextromethorphan HBr 30mg / 20mL; Doxylamine succinate 12.5mg / 20mL — count unknown
+Nature’s Way (2)
+- Nature’s Way — Nature’s Way Sambucus Kids Elderberry Immune Gummies (vegetable oil / palm) — gummy — Vitamin C (ascorbic acid) 60mg per 2 gummies; Zinc (as zinc citrate) 2.2mg per 2 gummies; Black elder (Sambucus nigra L.) extract (berry) 50mg per 2 gummies — count unknown DRY
+- Nature’s Way — Umcka® Cold&Flu Relief FastActives® — powder — Pelargonium sidoides 1X label serving — count unknown DRY
 OLLY (2)
 - OLLY — OLLY Kids Sleep (coconut-only oil listing) — gummy — Melatonin 0.5mg; L-Theanine 15mg; Chamomile extract (flower) 2.5mg; Passionflower extract (aerial parts) 2.5mg; Lemon balm extract (aerial parts) 2.5mg — count unknown DRY
 - OLLY — OLLY Men's Multi (coconut + canola) — gummy — Men's multivitamin (A, C, D, E, B vitamins) 2 gummies (label serving); Zinc (as zinc citrate) label serving; Coenzyme Q-10 label serving — count unknown DRY
-Robitussin (2)
-- Robitussin — Children's Robitussin Cough Long-Acting — liquid — Dextromethorphan HBr 15mg / 10mL — count unknown
-- Robitussin — Children's Robitussin Honey Nighttime Cough DM — liquid — Dextromethorphan HBr 15mg / 10mL; Doxylamine succinate 6.25mg / 10mL — count unknown
 Signature Care (2)
 - Signature Care — Signature Care Children's Ibuprofen (dyed liquid) — liquid — Ibuprofen 100mg / 5mL — count unknown
 - Signature Care — Signature Care Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
 Tylenol (2)
 - Tylenol — Tylenol For Children Plus Adults Liquid — liquid — Acetaminophen 160mg / 5mL — count unknown
-- Tylenol — Tylenol Regular Strength Caplets (coated) — caplet — Acetaminophen 325mg — count unknown — coated
-up&up (2)
-- up&up — up&up Daytime Honey Cold & Flu — liquid — Acetaminophen 325mg / 15mL; Dextromethorphan HBr 10mg / 15mL; Guaifenesin 200mg / 15mL; Phenylephrine HCl 5mg / 15mL — count unknown
-- up&up — up&up Extra Strength Acetaminophen — film-coated tablet — Acetaminophen 500mg — count unknown — film-coated DRY
+- Tylenol — Tylenol Regular Strength Caplets (coated) — caplet — Acetaminophen 325mg — count unknown
 Alaway (1)
 - Alaway — Alaway Preservative Free — single-use eye drop — Ketotifen 0.025% — count unknown DRY
 Blue-Emu (1)
 - Blue-Emu — Blue-Emu Original Super Strength — cream — Emu oil / MSM / glucosamine (labeled formula; no Drug Facts monograph active on the founder jar) topical cream — count unknown DRY
-Boericke & Tafel (1)
-- Boericke & Tafel — B&T Psoriaflora Cream — cream — Mahonia aquifolium root bark 2X HPUS — count unknown
-Bufferin (1)
-- Bufferin — Bufferin Regular Strength 325 coated — coated tablet — Aspirin (buffered) 325mg — count unknown — coated
 Carlson (1)
-- Carlson — Carlson Kid's Super Daily D3 Drops — liquid drops — Vitamin D3 (cholecalciferol) 15mcg (600 IU) per drop (400 IU twin shares formulaId when MCT-from-coconut inactives match) — count unknown DRY
+- Carlson — Carlson Kid's Super Daily D3 Drops — liquid drops — Vitamin D3 (cholecalciferol) 15mcg (600 IU) per drop — count unknown DRY
 Centrum (1)
-- Centrum — Centrum Prenatal / Centrum Specialist Prenatal — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid 800mcg; Iron 27mg; Zinc (as zinc oxide) 11mg — count unknown — film-coated
+- Centrum — Centrum Prenatal / Centrum Specialist Prenatal — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid 800mcg; Iron 27mg; Zinc (as zinc oxide) 11mg — count unknown
 Dimetapp (1)
 - Dimetapp — Children's Dimetapp Nighttime Cold & Cough — liquid — Diphenhydramine HCl 12.5mg / 10mL — count unknown
 Excedrin (1)
-- Excedrin — Excedrin Extra Strength (TiO2-only coat) — film-coated tablet — Acetaminophen 250mg; Aspirin 250mg; Caffeine 65mg — count unknown — TiO2-only coat
-Family Wellness (1)
-- Family Wellness — Family Wellness Triple Antibiotic Ointment — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
+- Excedrin — Excedrin Extra Strength (TiO2-only coat) — film-coated tablet — Acetaminophen 250mg; Aspirin 250mg; Caffeine 65mg — count unknown
 Kirkland Signature (1)
-- Kirkland Signature — Kirkland Signature Daily Multi (TiO2 carton) — film-coated tablet — Multivitamin / multimineral 1 tablet (label serving); Iron 18mg; Zinc 11mg — count unknown — TiO2 carton DRY
-L'il Critters (1)
-- L'il Critters — L'il Critters Omega-3 DHA Gummies — gummy — Omega-3 fatty acids (EPA / DHA + ALA) 50mg per gummy (100mg per 2-gummy ages-4+ serving when labeled); Vitamin C / E (antioxidant amounts when labeled) label serving — count unknown DRY
-MaryRuth's (1)
-- MaryRuth's — MaryRuth's Kids Morning Multivitamin Liquid — liquid — Kids liquid multivitamin / multimineral label serving; Zinc label serving — count unknown DRY
+- Kirkland Signature — Kirkland Signature Daily Multi (TiO2 carton) — film-coated tablet — Multivitamin / multimineral 1 tablet (label serving); Iron 18mg; Zinc 11mg — count unknown DRY
+L’il Critters (1)
+- L’il Critters — L’il Critters Omega-3 DHA Gummies — gummy — Omega-3 fatty acids (EPA / DHA + ALA) 50mg per gummy — count unknown DRY
+MaryRuth’s (1)
+- MaryRuth’s — MaryRuth’s Kids Morning Multivitamin Liquid — liquid — Kids liquid multivitamin / multimineral label serving; Zinc label serving — count unknown DRY
 Nature Made (1)
-- Nature Made — Nature Made Vitamin B12 Softgels (clear, no color added) — softgel — Vitamin B12 (cyanocobalamin) 1000mcg (Max 5000 mcg when the no-color-added shell matches) — count unknown — clear, no color added DRY
+- Nature Made — Nature Made Vitamin B12 Softgels (clear, no color added) — softgel — Vitamin B12 (cyanocobalamin) 1000mcg — count unknown DRY
 Qunol (1)
 - Qunol — Qunol Extra Strength Turmeric Curcumin Complex 1500 mg (oleoresin carton) — capsule — Bioenhanced turmeric complex (20% curcuminoids) 1500mg — count unknown DRY
-Sudafed (1)
-- Sudafed — Children's Sudafed PE Cold + Cough — liquid — Dextromethorphan HBr 5mg / 5mL; Phenylephrine HCl 2.5mg / 5mL — count unknown
-TopCare (1)
-- TopCare — TopCare Ibuprofen Liquid Gels / Minis (200 mg) — liquid gel — Ibuprofen 200mg — count unknown
-Zarbee's (1)
-- Zarbee's — Zarbee's Children's Cough Syrup + Immune — syrup — Dark honey label serving; Ivy leaf extract label serving; Elderberry label serving; Zinc label serving; Chamomile label serving — count unknown DRY
+Zarbee’s (1)
+- Zarbee’s — Zarbee’s Children's Cough Syrup + Immune — syrup — Dark honey label serving; Ivy leaf extract label serving; Elderberry label serving; Zinc label serving; Chamomile label serving — count unknown DRY
 
-ONLINE-ONLY missing UPC by brand — live 42
-Amazon Basic Care 15; Amazon Basics 8; Amazon Elements 6; HealthA2Z 2; TIME-Cap Labs 2; WELMATE 2; A+Health 1; Anima Mundi 1; Asutra 1; HealthWise 1; Pure Encapsulations 1; Teemofe 1; Thrive Market 1.
+ONLINE-ONLY missing UPC by brand — live 29 (second)
+Amazon Basics 7; Amazon Elements 6; Amazon Basic Care 4; TIME-Cap Labs 2; WELMATE 2; A+Health 1; Anima Mundi 1; Asutra 1; HealthA2Z 1; HealthWise 1; Pure Encapsulations 1; Teemofe 1; Thrive Market 1.
 
-Walk list B — ONLINE-ONLY missing UPC names (DRY = already on named-dry leftover list; do not reopen)
-Amazon Basic Care (15)
-- Amazon Basic Care All Day Allergy (Cetirizine 10 mg, coated)
-- Amazon Basic Care Allergy Relief (Loratadine 10 mg, L612)
-- Amazon Basic Care Allergy Relief Orally Disintegrating (Loratadine 10 mg)
-- Amazon Basic Care Daytime Cold & Flu Liquid
-- Amazon Basic Care Daytime Cold & Flu Softgel
+Walk list B — ONLINE-ONLY missing UPC names (LIVE query; DRY = named-dry leftover, do not reopen)
+Amazon Basic Care (4)
 - Amazon Basic Care Dual Action (Acetaminophen 250 mg / Ibuprofen 125 mg)
-- Amazon Basic Care Extra Strength Acetaminophen 500 mg (L484)
-- Amazon Basic Care Ibuprofen 200 mg (iron oxide yellow)
-- Amazon Basic Care Ibuprofen Liquid Gels 200 mg
 - Amazon Basic Care Mucus-DM ER (Guaifenesin 1200 mg / DXM 60 mg)
 - Amazon Basic Care Mucus-DM ER Dye-Free (Guaifenesin 600 mg / DXM 30 mg)
-- Amazon Basic Care Nasal (Oxymetazoline 0.05%)
-- Amazon Basic Care Nighttime Cold & Flu Liquid
-- Amazon Basic Care Nighttime Cold & Flu Softgel
 - Amazon Basic Care Regular Strength Acetaminophen 325 mg (L403)
-Amazon Basics (8)
-- Amazon Basics Advanced Healing Ointment (72288-247)
+Amazon Basics (7)
 - Amazon Basics Ibuprofen 200 mg (iron oxide yellow)
 - Amazon Basics Kids Melatonin 1 mg Gummies DRY
 - Amazon Basics Men's One Daily Tablets (Previously Elements) DRY
@@ -1233,8 +1395,7 @@ Amazon Elements (6)
 - Amazon Elements Turmeric Root DRY
 - Amazon Elements Vitamin D3 5000 IU Softgels DRY
 - Amazon Elements Whole Food Vitamin C 500 mg Vegan Capsules DRY
-HealthA2Z (2)
-- HealthA2Z Ibuprofen 200 mg
+HealthA2Z (1)
 - HealthA2Z Ibuprofen 200 mg Fast Relief
 TIME-Cap Labs (2)
 - TIME-Cap Labs Ibuprofen 200 mg
@@ -1257,7 +1418,14 @@ Teemofe (1)
 Thrive Market (1)
 - Multi-Collagen Peptides Unflavored DRY
 
-Named dry leftovers (KYR5-b already hunted — do not reopen)
+Named dry leftovers (do not reopen)
 - set-id 97 — Job 2 leftover. DailyMed SPL had no carton GTIN on the remaining set-id-only queue.
-- in-store 24 — Sprouts 3 (Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap); Culturelle 2; Equate Children’s Melatonin Liquid; Kirkland Daily Multi (TiO2 carton); L’il Critters Omega-3 DHA Gummies; OLLY 2; MaryRuth’s Kids Morning Multivitamin Liquid; Nature Made B12 clear; Nature’s Way 2; Qunol oleoresin 1500; Walgreens 2; Alaway PF; Blue-Emu Original; Member’s Mark Ibuprofen; Signature Care Ibuprofen; up&up ES APAP; Zarbee’s Cough + Immune; Carlson Kid’s Super Daily D3 Drops.
+- in-store 26 — prior 25 plus Biofreeze Pain Relieving Spray 10% merge-note (does not exist on US shelf; merge to 10.5% 359316120200 / 731124000109). Prior 25 = 23 plus Boiron 2 merge-notes (Arnicare PEG panel; Chestal Cold & Cough Honey size-less twins). Prior 23: Sprouts 3 (Lion’s Mane Liquid; Moringa 100% Powder; Saw Palmetto Powder Cap); Culturelle 2; Equate Children’s Melatonin Liquid; Kirkland Daily Multi (TiO2 carton); L’il Critters Omega-3 DHA Gummies; OLLY 2; MaryRuth’s Kids Morning Multivitamin Liquid; Nature Made B12 clear; Nature’s Way 2; Qunol oleoresin 1500; Walgreens Prenatal coated; Alaway PF; Blue-Emu Original; Member’s Mark Ibuprofen; Signature Care Ibuprofen; up&up ES APAP; Zarbee’s Cough + Immune; Carlson Kid’s Super Daily D3 Drops.
 - online 13 — Amazon Elements 6 (acacia fiber; whole-food vitamin C 500; vitamin D3 5000 safflower softgels; prenatal DHA+D3 gummies; turmeric root; men’s multi gummies); Amazon Basics 4 (women’s / men’s / prenatal tablets; kids melatonin 1 gummies); Thrive Market Multi-Collagen 1; Anima Mundi Happiness Tonic 1; Pure Encapsulations Probiotic-5 1. Thorne / Mama Bear / Codeage / Designs for Health / Seeking Health / Solimo / Revly = 0 remaining.
+
+LIVE QUERY / in-store 93 / online 29 / total 122 / Biofreeze 10% spray named-dry merge to 10.5%.
+ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
+Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
+OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
+Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
+KYR5 factory DONE / named-dry 97/26/13 / highest draft batch69 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken.

@@ -68,8 +68,10 @@ import {
   BATCH65_KYR6_STORE_GENERICS,
   BATCH66_KYR6_HELD_ROWS,
   BATCH67_KYR6_MEMBERS_MARK,
+  BATCH68_KYR6_FOUNDER_PANELS,
+  BATCH69_KYR6_STORE_PANELS,
 } from '@/lib/rating-drafts';
-import type { Verdict } from '@/lib/clean-picks/verdictLabels';
+import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
@@ -156,6 +158,8 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH65_KYR6_STORE_GENERICS,
   ...BATCH66_KYR6_HELD_ROWS,
   ...BATCH67_KYR6_MEMBERS_MARK,
+  ...BATCH68_KYR6_FOUNDER_PANELS,
+  ...BATCH69_KYR6_STORE_PANELS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -206,7 +210,9 @@ const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
   [PREVIEW_USABLE_ID]:
     'This Gold tablet is Usable, not Clean, because it uses mannitol — a sugar alcohol that can bother the gut at volume. Magnesium stearate is cleared, and the formula is aspirin-free. Labeled for ages 12 and up. Fine in moderation for occasional heartburn; pause if sugar alcohols upset your stomach.',
   [PREVIEW_AVOID_ID]:
-    'This Assorted Fruit chew is Avoid because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
+    'This Assorted Fruit chew is Not clean because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
+  'absorbine-jr-pro-cream':
+    'This cream is Not clean because of methylparaben. That one extra is why the whole product is Not clean. Other listings on this formula are not the grade driver. Distinct from PRO No-Mess, which has no paraben on that label.',
 };
 
 // Preview-only catalog pack shots. Does not edit draft rows.
@@ -301,6 +307,62 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aspercreme-lidocaine-rosemary-mint': brandMark('aspercreme-mark.png'),
   'aspercreme-lidocaine-xl-patch': brandMark('aspercreme-mark.png'),
   'salonpas-arthritis-pain-patch-large': brandMark('salonpas-mark.png'),
+  // Batch 2 attempted leftovers — no matching carton. Per-id only.
+  'absorbine-jr-pro-spray': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-plus-ultra-patch': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-xl-back-patch': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-plus-knee-patch': brandMark('absorbine-jr-mark.png'),
+  'qunol-extra-strength-turmeric-1500-oleoresin': brandMark('qunol-mark.png'),
+  'motrin-arthritis-pain-gel': brandMark('motrin-mark.png'),
+  // Batch 3 attempted leftovers — no matching official 3D pack face.
+  // Flavor-generic dyed chew (grape / bubblegum cartons exist — do not glue).
+  'tylenol-children-chew-dyed': brandMark('tylenol-mark.png'),
+  // tylenol.com "family oral suspension" URL is Extra Strength Adult Liquid
+  // (already overlaid). Multi-SKU lineup art is not an exact carton.
+  'tylenol-for-children-plus-adults': brandMark('tylenol-mark.png'),
+  // advil.com current Junior Strength face is chewables, not this coated 24-ct.
+  'junior-strength-advil-coated': brandMark('advil-mark.png'),
+  // Too-broad leftover (film-coated / menstrual named as one row).
+  'advil-film-coated-menstrual': brandMark('advil-mark.png'),
+  // Batch 2 leftovers — Cool Patch / regular+wider hydrogel have no distinct
+  // official 3D carton (tigerbalm.com/us Cool Patch absent; hydrogel twins
+  // are not the already-overlaid cloth patch or Large hydrogel). Per-id only.
+  'tiger-balm-cool-patch': brandMark('tiger-balm-mark.png'),
+  'tiger-balm-pain-relieving-patch-regular-hydrogel': brandMark(
+    'tiger-balm-mark.png',
+  ),
+  'tiger-balm-pain-relieving-patch-wider-hydrogel': brandMark(
+    'tiger-balm-mark.png',
+  ),
+  // Batch 2 leftovers — biofreeze.com current catalog has no matching
+  // 3.5% gel / Professional 5% / 10.5% alcohol spray / 10% spray /
+  // Professional 13% / overnight cream / foam / pen / strip / foot cream.
+  // Per-id only so already-overlaid Biofreeze cartons stay exact.
+  'biofreeze-gel-3-5-paraben': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-gel-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-roll-on-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-colorless-gel-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-colorless-roll-on-5': brandMark(
+    'biofreeze-mark.png',
+  ),
+  'biofreeze-pain-relief-spray-10-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-spray-10-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-precision-relief-pen': brandMark('biofreeze-mark.png'),
+  'biofreeze-pain-relief-spray-10': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-spray-13': brandMark('biofreeze-mark.png'),
+  'biofreeze-overnight-relief-cream': brandMark('biofreeze-mark.png'),
+  'biofreeze-foam': brandMark('biofreeze-mark.png'),
+  'biofreeze-flexible-relief-strip': brandMark('biofreeze-mark.png'),
+  'biofreeze-foot-cream': brandMark('biofreeze-mark.png'),
+  // Batch leftovers — DailyMed faces are 2D dielines / minis, not 3D
+  // packshots. Official GoodSense wordmark from goodsense.com (Perrigo).
+  // Per-id only so other-aisle GoodSense rows stay letters.
+  'goodsense-naproxen-220': brandMark('goodsense-mark.png'),
+  'goodsense-dual-action': brandMark('goodsense-mark.png'),
+  'goodsense-childrens-ibuprofen-chew': brandMark('goodsense-mark.png'),
+  'goodsense-ibuprofen-liquid-gels': brandMark('goodsense-mark.png'),
+  // Batch 2 leftover — DailyMed is a 2D dieline, not a 3D packshot.
+  'goodsense-es-pain-relief-l484': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -342,6 +404,58 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basic-care-kids-apap-dyefree': 'Basic Care',
   // Shop PDP photo is Joint Support + Turmeric — not Inflacalm Ache Relief.
   'sprouts-inflacalm-ache-relief': 'Sprouts',
+  // Attempted P&F leftovers — no official US carton / no standalone mark file.
+  'flexall-max-strength-gel': 'Flexall',
+  'midol-complete': 'Midol',
+  'now-turmeric-curcumin-bioperine': 'NOW',
+  'gol-mykind-turmeric-inflammatory-gummies': 'Garden of Life',
+  'organic-india-turmeric-formula': 'Organic India',
+  // Attempted P&F leftovers — aleve.com / bayeraspirin.com 403 from this
+  // environment; DailyMed hits are 2D dielines / label flats, not 3D
+  // packshots. No standalone official mark file. Do not stay letters.
+  // Caplets/Tablets, ES 500/Aspirina, Back & Body/Aspirina Cafeína, and
+  // enteric 81+325 are too-broad combined names — parent text tile.
+  'aleve-caplets-tablets': 'Aleve',
+  'aleve-gelcaps': 'Aleve',
+  'aleve-liquid-gels': 'Aleve',
+  'aleve-back-muscle-pain': 'Aleve',
+  'aleve-headache-pain': 'Aleve',
+  'bayer-es-500-aspirina': 'Bayer',
+  'bayer-back-body-aspirina-cafeina': 'Bayer',
+  'bayer-aspirin-regimen-enteric': 'Bayer',
+  'bayer-chewable-81-orange': 'Bayer',
+  'bayer-chewable-81-cherry': 'Bayer',
+  'genuine-bayer-aspirin-325': 'Bayer',
+  'alevex-pain-relieving-lotion-roll-on': 'AleveX',
+  'alevex-pain-relieving-lotion-tube': 'AleveX',
+  'alevex-pain-relieving-spray': 'AleveX',
+  // Attempted leftover — aleve.com 403; DailyMed arthritis gel faces are
+  // 2D dielines, not a 3D packshot. No standalone official mark file.
+  'aleve-arthritis-pain-gel': 'Aleve',
+  // Attempted P&F leftovers — DailyMed hits are 2D dielines / label flats,
+  // not 3D packshots. No standalone official mark file on a brand site.
+  'timecap-naproxen-220': 'TIME-Cap',
+  'healtha2z-ibuprofen-200-382': 'HealthA2Z',
+  'healthwise-lidocaine-4-patch': 'HealthWise',
+  'welmate-lidocaine-4-patch-parabens': 'WELMATE',
+  'healtha2z-ibuprofen-200-335': 'HealthA2Z',
+  'amazon-basics-lidocaine-4-patch': 'Amazon Basics',
+  'welmate-lidocaine-4-patch-ethylhexyl': 'WELMATE',
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow': 'Basic Care',
+  'amazon-basics-ibuprofen-iron-oxide-yellow': 'Amazon Basics',
+  'aplus-health-dual-action-oxides': 'A+Health',
+  'aplus-health-dual-action': 'A+Health',
+  // Batch 2 leftovers — DailyMed / brand-site hits are 2D dielines,
+  // wrong-brand faces, or a different NDC. No standalone official mark.
+  'healtha2z-childrens-apap-chew': 'HealthA2Z',
+  'timecap-ibuprofen-200': 'TIME-Cap',
+  'sumifun-lidocaine-4-patch': 'Sumifun',
+  'amazon-elements-turmeric-complex': 'Amazon Elements',
+  'teemofe-lidocaine-4-patch': 'Teemofe',
+  'healtha2z-naproxen-220-300': 'HealthA2Z',
+  'amazon-basic-care-apap-650-er-l544': 'Basic Care',
+  'amazon-basic-care-aspirin-81-chew-l467': 'Basic Care',
+  'amazon-elements-turmeric-root': 'Amazon Elements',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -853,6 +967,212 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'salonpas-hot-capsicum-patch': catalogShot('salonpas-hot-capsicum-patch.jpg'),
   'tiger-balm-hydrogel-patch-large': catalogShot('tiger-balm-hydrogel-patch-large.jpg'),
   'tiger-balm-arthritis-rub': catalogShot('tiger-balm-arthritis-rub.jpg'),
+  'biofreeze-ultraflex-lidocaine-4-patch': catalogShot('biofreeze-ultraflex-lidocaine-4-patch.jpg'),
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch': catalogShot(
+    'biofreeze-ultraflex-plus-lidocaine-menthol-patch.jpg',
+  ),
+  'capzasin-quick-relief-gel': catalogShot('capzasin-quick-relief-gel.jpg'),
+  'biofreeze-pain-relief-gel-4': catalogShot('biofreeze-pain-relief-gel-4.jpg'),
+  'biofreeze-pain-relief-roll-on-4': catalogShot('biofreeze-pain-relief-roll-on-4.jpg'),
+  'biofreeze-overnight-gel-4': catalogShot('biofreeze-overnight-gel-4.jpg'),
+  'biofreeze-overnight-roll-on-4': catalogShot('biofreeze-overnight-roll-on-4.jpg'),
+  'biofreeze-pain-relief-cream': catalogShot('biofreeze-pain-relief-cream.jpg'),
+  'biofreeze-dry-stick': catalogShot('biofreeze-dry-stick.jpg'),
+  'biofreeze-triple-target-roll-on': catalogShot('biofreeze-triple-target-roll-on.jpg'),
+  'biofreeze-triple-target-gel': catalogShot('biofreeze-triple-target-gel.jpg'),
+  'biofreeze-overnight-relief-patches': catalogShot('biofreeze-overnight-relief-patches.jpg'),
+  'bengay-ultra-strength-nongreasy': catalogShot('bengay-ultra-strength-nongreasy.jpg'),
+  'bengay-vanishing-scent-gel': catalogShot('bengay-vanishing-scent-gel.jpg'),
+  'bengay-lidocaine-tropical-jasmine': catalogShot('bengay-lidocaine-tropical-jasmine.jpg'),
+  'absorbine-jr-pro-cream': catalogShot('absorbine-jr-pro-cream.jpg'),
+  'absorbine-jr-pro-no-mess': catalogShot('absorbine-jr-pro-no-mess.jpg'),
+  'absorbine-jr-neck-patch': catalogShot('absorbine-jr-neck-patch.jpg'),
+  'absorbine-jr-back-patch': catalogShot('absorbine-jr-back-patch.jpg'),
+  'absorbine-jr-knee-patch': catalogShot('absorbine-jr-knee-patch.jpg'),
+  'capzasin-hp-arthritis-cream': catalogShot('capzasin-hp-arthritis-cream.jpg'),
+  'bengay-ultra-strength-patch-5': catalogShot('bengay-ultra-strength-patch-5.jpg'),
+  'medinatura-t-relief-xs-oral-drops': catalogShot('medinatura-t-relief-xs-oral-drops.jpg'),
+  'medinatura-t-relief-xs-gel': catalogShot('medinatura-t-relief-xs-gel.jpg'),
+  'medinatura-t-relief-pain-gel': catalogShot('medinatura-t-relief-pain-gel.jpg'),
+  'medinatura-t-relief-xs-tablets': catalogShot('medinatura-t-relief-xs-tablets.jpg'),
+  'medinatura-t-relief-pain-tablets': catalogShot('medinatura-t-relief-pain-tablets.jpg'),
+  'medinatura-t-relief-arthritis-xs-tablets': catalogShot(
+    'medinatura-t-relief-arthritis-xs-tablets.jpg',
+  ),
+  'medinatura-bhi-arthritis': catalogShot('medinatura-bhi-arthritis.jpg'),
+  'medinatura-bhi-back': catalogShot('medinatura-bhi-back.jpg'),
+  'medinatura-bhi-migraine': catalogShot('medinatura-bhi-migraine.jpg'),
+  'medinatura-bhi-spasm-cramp': catalogShot('medinatura-bhi-spasm-cramp.jpg'),
+  'medinatura-t-relief-pain-cream': catalogShot('medinatura-t-relief-pain-cream.jpg'),
+  'medinatura-t-relief-xs-cream': catalogShot('medinatura-t-relief-xs-cream.jpg'),
+  'medinatura-t-relief-arthritis-xs-cream': catalogShot(
+    'medinatura-t-relief-arthritis-xs-cream.jpg',
+  ),
+  'medinatura-t-relief-lidocaine-4-cream': catalogShot(
+    'medinatura-t-relief-lidocaine-4-cream.jpg',
+  ),
+  'medinatura-traumeel-ointment': catalogShot('medinatura-traumeel-ointment.jpg'),
+  'bt-triflora-arthritis-gel': catalogShot('bt-triflora-arthritis-gel.jpg'),
+  'natures-way-sports-gel': catalogShot('natures-way-sports-gel.jpg'),
+  'tylenol-precise-cooling-cream': catalogShot('tylenol-precise-cooling-cream.jpg'),
+  'tylenol-precise-pain-relieving-cream': catalogShot(
+    'tylenol-precise-pain-relieving-cream.jpg',
+  ),
+  'tylenol-precise-warming-cream': catalogShot('tylenol-precise-warming-cream.jpg'),
+  'tylenol-precise-nighttime-cream': catalogShot('tylenol-precise-nighttime-cream.jpg'),
+  'tylenol-precise-lidocaine-4-patch': catalogShot(
+    'tylenol-precise-lidocaine-4-patch.jpg',
+  ),
+  'advil-targeted-relief-cream': catalogShot('advil-targeted-relief-cream.jpg'),
+  'mommys-bliss-infants-pain-fever': catalogShot('mommys-bliss-infants-pain-fever.jpg'),
+  'advil-migraine-liqui-gels': catalogShot('advil-migraine-liqui-gels.jpg'),
+  'advil-dual-action-back-pain': catalogShot('advil-dual-action-back-pain.jpg'),
+  'motrin-ib-liquid-gels': catalogShot('motrin-ib-liquid-gels.jpg'),
+  'motrin-ib-migraine-liquid-gels': catalogShot('motrin-ib-migraine-liquid-gels.jpg'),
+  'motrin-dual-action': catalogShot('motrin-dual-action.jpg'),
+  'topricin-pain-relief-cream': catalogShot('topricin-pain-relief-cream.jpg'),
+  'tylenol-es-dissolve-packs': catalogShot('tylenol-es-dissolve-packs.jpg'),
+  'tylenol-children-dissolve-packs': catalogShot('tylenol-children-dissolve-packs.jpg'),
+  'motrin-infants-liquid-dyefree': catalogShot('motrin-infants-liquid-dyefree.jpg'),
+  'medinatura-traumeel-tablets': catalogShot('medinatura-traumeel-tablets.jpg'),
+  'excedrin-tension-headache': catalogShot('excedrin-tension-headache.jpg'),
+  'excedrin-migraine-es-blue': catalogShot('excedrin-migraine-es-blue.jpg'),
+  'excedrin-rapid-relief-apap': catalogShot('excedrin-rapid-relief-apap.jpg'),
+  'tylenol-es-liquid': catalogShot('tylenol-es-liquid.jpg'),
+  'infants-advil-drops': catalogShot('infants-advil-drops.jpg'),
+  'excedrin-es-tio2': catalogShot('excedrin-es-tio2.jpg'),
+  'goodys-max-triple-flavored': catalogShot('goodys-max-triple-flavored.jpg'),
+  'goodys-extra-strength': catalogShot('goodys-extra-strength.jpg'),
+  'goodys-back-body': catalogShot('goodys-back-body.jpg'),
+  'goodys-plus-alert-hangover': catalogShot('goodys-plus-alert-hangover.jpg'),
+  'ecotrin-rs-325-enteric': catalogShot('ecotrin-rs-325-enteric.jpg'),
+  'ecotrin-81-enteric-dye': catalogShot('ecotrin-81-enteric-dye.jpg'),
+  'anacin-aspirin-caffeine': catalogShot('anacin-aspirin-caffeine.jpg'),
+  'st-joseph-81-enteric': catalogShot('st-joseph-81-enteric.jpg'),
+  'st-joseph-81-chewable': catalogShot('st-joseph-81-chewable.jpg'),
+  'bufferin-rs-325': catalogShot('bufferin-rs-325.jpg'),
+  'bc-original-arthritis': catalogShot('bc-original-arthritis.jpg'),
+  'bc-cherry': catalogShot('bc-cherry.jpg'),
+  'bc-max': catalogShot('bc-max.jpg'),
+  'jointflex-pain-relief-cream': catalogShot('jointflex-pain-relief-cream.jpg'),
+  'mentholatum-original': catalogShot('mentholatum-original.jpg'),
+  'biofreeze-menthol-patches': catalogShot('biofreeze-menthol-patches.jpg'),
+  'fon-headache': catalogShot('fon-headache.jpg'),
+  'fon-nerve': catalogShot('fon-nerve.jpg'),
+  'fon-muscle': catalogShot('fon-muscle.jpg'),
+  'fon-arniblend': catalogShot('fon-arniblend.jpg'),
+  'fon-migraine': catalogShot('fon-migraine.jpg'),
+  'blue-emu-original': catalogShot('blue-emu-original.jpg'),
+  'stopain-extra-strength-roll-on': catalogShot(
+    'stopain-extra-strength-roll-on.jpg',
+  ),
+  'penetrex-pain-relief-cream': catalogShot('penetrex-pain-relief-cream.jpg'),
+  'medinatura-bhi-traumex': catalogShot('medinatura-bhi-traumex.jpg'),
+  'qunol-extra-strength-turmeric-1000': catalogShot(
+    'qunol-extra-strength-turmeric-1000.jpg',
+  ),
+  'qunol-extra-strength-turmeric-1500': catalogShot(
+    'qunol-extra-strength-turmeric-1500.jpg',
+  ),
+  'qunol-zero-sugar-turmeric-gummies': catalogShot(
+    'qunol-zero-sugar-turmeric-gummies.jpg',
+  ),
+  'ollois-arnica-montana-12c': catalogShot('ollois-arnica-montana-12c.jpg'),
+  'new-chapter-turmeric-force': catalogShot('new-chapter-turmeric-force.jpg'),
+  'gaia-turmeric-supreme-extra-strength': catalogShot(
+    'gaia-turmeric-supreme-extra-strength.jpg',
+  ),
+  'natures-way-feverfew': catalogShot('natures-way-feverfew.jpg'),
+  'natures-way-willow-bark': catalogShot('natures-way-willow-bark.jpg'),
+  'natures-way-joint-movement-glucosamine': catalogShot(
+    'natures-way-joint-movement-glucosamine.jpg',
+  ),
+  'natures-way-turmeric-max-potency': catalogShot(
+    'natures-way-turmeric-max-potency.jpg',
+  ),
+  'natures-way-tart-cherry-ultra-gummies': catalogShot(
+    'natures-way-tart-cherry-ultra-gummies.jpg',
+  ),
+  'natures-way-petadolex-pro-active': catalogShot(
+    'natures-way-petadolex-pro-active.jpg',
+  ),
+  'natures-way-devils-claw-secondary-root': catalogShot(
+    'natures-way-devils-claw-secondary-root.jpg',
+  ),
+  'biofreeze-colorless-gel-4': catalogShot('biofreeze-colorless-gel-4.jpg'),
+  // Shares formulaId with the colorless gel — do not inherit the tube face.
+  'biofreeze-colorless-roll-on-4': brandMark('biofreeze-mark.png'),
+  'naturewise-curcumin-turmeric-2250': catalogShot(
+    'naturewise-curcumin-turmeric-2250.jpg',
+  ),
+  'oregons-wild-harvest-turmeric': catalogShot(
+    'oregons-wild-harvest-turmeric.jpg',
+  ),
+  'life-flo-pure-magnesium-oil': catalogShot('life-flo-pure-magnesium-oil.jpg'),
+  'absorbine-jr-plus-es-liquid': catalogShot(
+    'absorbine-jr-plus-es-liquid.jpg',
+  ),
+  // Shares formulaId with Plus ES liquid (menthol 4%). Current absorbinejr.com
+  // PRO roll-on is lidocaine + phenol — do not glue.
+  'absorbine-jr-pro-roll-on-liquid': brandMark('absorbine-jr-mark.png'),
+  'mineral-ice-extreme-gel': catalogShot('mineral-ice-extreme-gel.jpg'),
+  'mineral-ice-extreme-menthol-spray': catalogShot(
+    'mineral-ice-extreme-menthol-spray.jpg',
+  ),
+  'mineral-ice-extreme-dry-stick': catalogShot(
+    'mineral-ice-extreme-dry-stick.jpg',
+  ),
+  'codeage-liposomal-turmeric': catalogShot('codeage-liposomal-turmeric.jpg'),
+  'asutra-melt-pain-away': catalogShot('asutra-melt-pain-away.jpg'),
+  'life-flo-magnesium-lotion-vanilla': catalogShot(
+    'life-flo-magnesium-lotion-vanilla.jpg',
+  ),
+  'life-flo-magnesium-lotion-unscented': catalogShot(
+    'life-flo-magnesium-lotion-unscented.jpg',
+  ),
+  'doctors-best-high-absorption-curcumin-1000': catalogShot(
+    'doctors-best-high-absorption-curcumin-1000.jpg',
+  ),
+  'sports-research-turmeric-curcumin': catalogShot(
+    'sports-research-turmeric-curcumin.jpg',
+  ),
+  'australian-dream-arthritis-cream': catalogShot(
+    'australian-dream-arthritis-cream.jpg',
+  ),
+  'mineral-ice-original-gel-2': catalogShot('mineral-ice-original-gel-2.jpg'),
+  'nutricost-turmeric-curcumin-2300': catalogShot(
+    'nutricost-turmeric-curcumin-2300.jpg',
+  ),
+  // Official shop.sprouts.com house PDP bottles (same source style as
+  // sprouts-inflacalm-powder-cap). Exact leftover SKUs.
+  'sprouts-tart-cherry-turmeric': catalogShot(
+    'sprouts-tart-cherry-turmeric.jpg',
+  ),
+  'sprouts-turmeric-capsules': catalogShot('sprouts-turmeric-capsules.jpg'),
+  // Official biofreeze.com retail aerosol packshot (3 fl oz, 10.5% menthol
+  // + denatonium). Consumer spray id = formulaId.
+  'biofreeze-pain-relief-spray-10-5-denatonium': catalogShot(
+    'biofreeze-pain-relief-spray-10-5-denatonium.jpg',
+  ),
+  // Shares formulaId with the consumer denatonium spray — do not inherit
+  // the retail aerosol can (Professional NDC 59316-834).
+  'biofreeze-professional-aerosol-10-5-denatonium': brandMark(
+    'biofreeze-mark.png',
+  ),
+  // Official brand / store PDP 3D packshots for attempted leftovers.
+  'thrive-wellmade-turmeric': catalogShot('thrive-wellmade-turmeric.jpg'),
+  'thorne-curcumin-phytosome-500': catalogShot(
+    'thorne-curcumin-phytosome-500.jpg',
+  ),
+  'thorne-curcumin-phytosome-1000': catalogShot(
+    'thorne-curcumin-phytosome-1000.jpg',
+  ),
+  'asutra-melt-pain-away-thrive': catalogShot(
+    'asutra-melt-pain-away-thrive.jpg',
+  ),
+  'bioschwartz-turmeric-curcumin-1500': catalogShot(
+    'bioschwartz-turmeric-curcumin-1500.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -876,13 +1196,117 @@ export function previewOverlayImage(
   );
 }
 
+function formWord(record: Pick<RatingRecord, 'form'>): string {
+  const form = (record.form ?? '').trim().toLowerCase();
+  return form || 'product';
+}
+
+function flaggedNames(record: RatingRecord, level: RiskLevel): string[] {
+  return (record.inactiveIngredients ?? [])
+    .filter((ingredient) => ingredient.riskLevel === level)
+    .map((ingredient) => ingredient.name.replace(/\.+$/, ''));
+}
+
+function joinDrivers(names: string[]): string {
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  return `${names[0]}, ${names[1]}, and ${names[2]}`;
+}
+
+export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
+
+const DUMP_HONEST_NOTE =
+  /FOUNDER-LOCK|FOUNDER CALL|FOUNDER-STYLE|Drug Facts:|DailyMed setid|formulaId|Draft, not verified|standalone Caution|Methodology §|pack sizes share|Inactive list left empty|do NOT invent Clean|carton-confirm|carton confirm/i;
+
+const INCOMPLETE_LABEL_NOTE =
+  /until the full label|carton-confirm|carton confirm|inactive list left empty on purpose|do NOT invent Clean|do not invent flags/i;
+
+function isDumpHonestNote(note: string | undefined): boolean {
+  if (!note) return true;
+  if (DUMP_HONEST_NOTE.test(note)) return true;
+  if ((note.match(/ \//g) ?? []).length >= 4) return true;
+  return note.length > 420;
+}
+
+function hasFounderWhy(record: RatingRecord): boolean {
+  return Boolean(record.honestNote?.trim());
+}
+
+function isIncompleteLabelRow(record: RatingRecord): boolean {
+  if (!hasFounderWhy(record)) return true;
+  const inactives = record.inactiveIngredients ?? [];
+  // Missing-OI + founder said the carton is not matched. Confirmed
+  // empty 100% powders / “inactives: none” keep their founder why.
+  return inactives.length === 0 && INCOMPLETE_LABEL_NOTE.test(record.honestNote ?? '');
+}
+
+function generatedHonestNote(record: RatingRecord): string {
+  const form = formWord(record);
+  const high = flaggedNames(record, 'high');
+  const moderate = flaggedNames(record, 'moderate');
+  const limited = flaggedNames(record, 'limited');
+  const inactives = record.inactiveIngredients ?? [];
+
+  if (record.verdict === 'clean') {
+    if (inactives.length === 0) {
+      return `This ${form} is Clean. The carton has no Other Ingredients line.`;
+    }
+    return `This ${form} is Clean. The extras we reviewed on this formula stayed Clean.`;
+  }
+
+  if (record.verdict === 'avoid') {
+    if (high.length === 1) {
+      return `This ${form} is Not clean because of ${high[0]}. That one extra is why.`;
+    }
+    if (high.length > 1) {
+      return `This ${form} is Not clean because of ${joinDrivers(high.slice(0, 3))}.`;
+    }
+    return `This ${form} is Not clean.`;
+  }
+
+  if (moderate.length === 1 && limited.length === 0) {
+    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
+  }
+  if (moderate.length > 1) {
+    return `This ${form} is Usable, not Clean, because of Moderate extras.`;
+  }
+  if (moderate.length === 1) {
+    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
+  }
+  if (limited.length === 1) {
+    return `This ${form} is Usable, not Clean, because of ${limited[0]}.`;
+  }
+  if (limited.length > 1) {
+    return `This ${form} is Usable, not Clean, because of Limited extras. None of them is a High-list item.`;
+  }
+  return `This ${form} is ${VERDICT_LABELS[record.verdict]}, not Clean.`;
+}
+
+// Display fill only. Does not rewrite draft honestNotes or restage verdicts.
+// Keep already-correct shopper copy. Replace label dumps / founder-lock essays.
+export function displayHonestNote(record: RatingRecord): string {
+  const overlay = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  if (overlay) return overlay;
+
+  if (isIncompleteLabelRow(record)) {
+    return LABEL_NOT_FULLY_REVIEWED;
+  }
+
+  const draft = record.honestNote;
+  if (draft && !isDumpHonestNote(draft)) {
+    return draft;
+  }
+
+  return generatedHonestNote(record);
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  const honestNote = displayHonestNote(record);
   const productImage = previewOverlayImage(record);
-  if (!honestNote && !productImage) return record;
+  if (honestNote === record.honestNote && !productImage) return record;
   return {
     ...record,
-    ...(honestNote ? { honestNote } : {}),
+    honestNote,
     ...(productImage ? { productImage } : {}),
   };
 }
@@ -957,6 +1381,179 @@ assertBrandMark('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme', 'aspercre
 assertBrandMark('aspercreme-lidocaine-rosemary-mint', 'Aspercreme', 'aspercreme-mark.png');
 assertBrandMark('aspercreme-lidocaine-xl-patch', 'Aspercreme', 'aspercreme-mark.png');
 assertBrandMark('salonpas-arthritis-pain-patch-large', 'Salonpas', 'salonpas-mark.png');
+assertBrandMark('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-xl-back-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-plus-knee-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark(
+  'qunol-extra-strength-turmeric-1500-oleoresin',
+  'Qunol',
+  'qunol-mark.png',
+);
+assertBrandMark('motrin-arthritis-pain-gel', 'Motrin', 'motrin-mark.png');
+assertBrandMark('biofreeze-colorless-roll-on-4', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'absorbine-jr-pro-roll-on-liquid',
+  'Absorbine Jr.',
+  'absorbine-jr-mark.png',
+);
+assertBrandMark(
+  'tylenol-children-chew-dyed',
+  'Tylenol',
+  'tylenol-mark.png',
+);
+assertBrandMark(
+  'tylenol-for-children-plus-adults',
+  'Tylenol',
+  'tylenol-mark.png',
+);
+assertBrandMark(
+  'junior-strength-advil-coated',
+  'Advil',
+  'advil-mark.png',
+);
+assertBrandMark(
+  'advil-film-coated-menstrual',
+  'Advil',
+  'advil-mark.png',
+);
+assertBrandMark('tiger-balm-cool-patch', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark(
+  'tiger-balm-pain-relieving-patch-regular-hydrogel',
+  'Tiger Balm',
+  'tiger-balm-mark.png',
+);
+assertBrandMark(
+  'tiger-balm-pain-relieving-patch-wider-hydrogel',
+  'Tiger Balm',
+  'tiger-balm-mark.png',
+);
+assertBrandMark(
+  'biofreeze-gel-3-5-paraben',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-gel-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-roll-on-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-colorless-gel-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-colorless-roll-on-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-aerosol-10-5-denatonium',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-pain-relief-spray-10-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-spray-10-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-precision-relief-pen',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-pain-relief-spray-10',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-spray-13',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-overnight-relief-cream',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark('biofreeze-foam', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'biofreeze-flexible-relief-strip',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark('biofreeze-foot-cream', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'goodsense-naproxen-220',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertBrandMark('goodsense-dual-action', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark(
+  'goodsense-childrens-ibuprofen-chew',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertBrandMark(
+  'goodsense-ibuprofen-liquid-gels',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertBrandMark(
+  'goodsense-es-pain-relief-l484',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+
+{
+  const colorlessRoll = previewOverlayImage({
+    id: 'biofreeze-colorless-roll-on-4',
+    formulaId: 'biofreeze-colorless-gel-4',
+    brand: 'Biofreeze',
+  });
+  if (
+    !colorlessRoll?.url.endsWith('/biofreeze-mark.png') ||
+    colorlessRoll.verifiedSku
+  ) {
+    throw new Error('colorless roll-on must not inherit the gel carton');
+  }
+  const proRoll = previewOverlayImage({
+    id: 'absorbine-jr-pro-roll-on-liquid',
+    formulaId: 'absorbine-jr-plus-es-liquid',
+    brand: 'Absorbine Jr.',
+  });
+  if (
+    !proRoll?.url.endsWith('/absorbine-jr-mark.png') ||
+    proRoll.verifiedSku
+  ) {
+    throw new Error('PRO roll-on must not inherit the Plus ES liquid carton');
+  }
+  const proAerosol = previewOverlayImage({
+    id: 'biofreeze-professional-aerosol-10-5-denatonium',
+    formulaId: 'biofreeze-pain-relief-spray-10-5-denatonium',
+    brand: 'Biofreeze',
+  });
+  if (
+    !proAerosol?.url.endsWith('/biofreeze-mark.png') ||
+    proAerosol.verifiedSku
+  ) {
+    throw new Error(
+      'Professional aerosol must not inherit the consumer denatonium spray carton',
+    );
+  }
+}
 
 // Remaining later-catalog P&F leftovers stay letters until attempted.
 
@@ -1025,6 +1622,134 @@ assertBrandTextTile('amazon-basic-care-ibuprofen-liqui-gels', 'Amazon Basic Care
 assertBrandTextTile('amazon-basic-care-infants-ibuprofen', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('amazon-basic-care-kids-apap-dyefree', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('sprouts-inflacalm-ache-relief', 'Sprouts', 'Sprouts');
+assertBrandTextTile('flexall-max-strength-gel', 'Flexall', 'Flexall');
+assertBrandTextTile('midol-complete', 'Midol', 'Midol');
+assertBrandTextTile('now-turmeric-curcumin-bioperine', 'NOW', 'NOW');
+assertBrandTextTile(
+  'gol-mykind-turmeric-inflammatory-gummies',
+  'Garden of Life',
+  'Garden of Life',
+);
+assertBrandTextTile(
+  'organic-india-turmeric-formula',
+  'Organic India',
+  'Organic India',
+);
+assertBrandTextTile('aleve-caplets-tablets', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-gelcaps', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-liquid-gels', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-back-muscle-pain', 'Aleve', 'Aleve');
+assertBrandTextTile('aleve-headache-pain', 'Aleve', 'Aleve');
+assertBrandTextTile('bayer-es-500-aspirina', 'Bayer', 'Bayer');
+assertBrandTextTile(
+  'bayer-back-body-aspirina-cafeina',
+  'Bayer',
+  'Bayer',
+);
+assertBrandTextTile('bayer-aspirin-regimen-enteric', 'Bayer', 'Bayer');
+assertBrandTextTile('bayer-chewable-81-orange', 'Bayer', 'Bayer');
+assertBrandTextTile('bayer-chewable-81-cherry', 'Bayer', 'Bayer');
+assertBrandTextTile('genuine-bayer-aspirin-325', 'Bayer', 'Bayer');
+assertBrandTextTile(
+  'alevex-pain-relieving-lotion-roll-on',
+  'AleveX',
+  'AleveX',
+);
+assertBrandTextTile(
+  'alevex-pain-relieving-lotion-tube',
+  'AleveX',
+  'AleveX',
+);
+assertBrandTextTile('alevex-pain-relieving-spray', 'AleveX', 'AleveX');
+assertBrandTextTile('aleve-arthritis-pain-gel', 'Aleve', 'Aleve');
+assertBrandTextTile('timecap-naproxen-220', 'TIME-Cap Labs', 'TIME-Cap');
+assertBrandTextTile(
+  'healtha2z-ibuprofen-200-382',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'healthwise-lidocaine-4-patch',
+  'HealthWise',
+  'HealthWise',
+);
+assertBrandTextTile(
+  'welmate-lidocaine-4-patch-parabens',
+  'WELMATE',
+  'WELMATE',
+);
+assertBrandTextTile(
+  'healtha2z-ibuprofen-200-335',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'amazon-basics-lidocaine-4-patch',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'welmate-lidocaine-4-patch-ethylhexyl',
+  'WELMATE',
+  'WELMATE',
+);
+assertBrandTextTile(
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basics-ibuprofen-iron-oxide-yellow',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'aplus-health-dual-action-oxides',
+  'A+Health',
+  'A+Health',
+);
+assertBrandTextTile('aplus-health-dual-action', 'A+Health', 'A+Health');
+assertBrandTextTile(
+  'healtha2z-childrens-apap-chew',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile('timecap-ibuprofen-200', 'TIME-Cap Labs', 'TIME-Cap');
+assertBrandTextTile(
+  'sumifun-lidocaine-4-patch',
+  'Sumifun',
+  'Sumifun',
+);
+assertBrandTextTile(
+  'amazon-elements-turmeric-complex',
+  'Amazon Elements',
+  'Amazon Elements',
+);
+assertBrandTextTile(
+  'teemofe-lidocaine-4-patch',
+  'Teemofe',
+  'Teemofe',
+);
+assertBrandTextTile(
+  'healtha2z-naproxen-220-300',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'amazon-basic-care-apap-650-er-l544',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-aspirin-81-chew-l467',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-elements-turmeric-root',
+  'Amazon Elements',
+  'Amazon Elements',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1041,119 +1766,126 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
-assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
-assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
-assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
-assertLetterOnly('biofreeze-ultraflex-lidocaine-4-patch', 'Biofreeze');
-assertLetterOnly('biofreeze-ultraflex-plus-lidocaine-menthol-patch', 'Biofreeze');
-assertLetterOnly('capzasin-quick-relief-gel', 'Capzasin');
-assertLetterOnly('mineral-ice-extreme-menthol-spray', 'Mineral Ice');
-assertLetterOnly('biofreeze-pain-relief-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-roll-on-4', 'Biofreeze');
-assertLetterOnly('biofreeze-colorless-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-colorless-roll-on-4', 'Biofreeze');
-assertLetterOnly('biofreeze-gel-3-5-paraben', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-gel-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-roll-on-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-colorless-gel-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-colorless-roll-on-5', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-roll-on-4', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10-5-denatonium', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-aerosol-10-5-denatonium', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-spray-10-5', 'Biofreeze');
-assertLetterOnly('biofreeze-precision-relief-pen', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-spray-13', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-cream', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
-assertLetterOnly('biofreeze-foam', 'Biofreeze');
-assertLetterOnly('biofreeze-dry-stick', 'Biofreeze');
-assertLetterOnly('biofreeze-triple-target-roll-on', 'Biofreeze');
-assertLetterOnly('biofreeze-triple-target-gel', 'Biofreeze');
-assertLetterOnly('biofreeze-menthol-patches', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-relief-patches', 'Biofreeze');
-assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
-assertLetterOnly('bengay-ultra-strength-nongreasy', 'Bengay');
-assertLetterOnly('bengay-vanishing-scent-gel', 'Bengay');
-assertLetterOnly('bengay-lidocaine-tropical-jasmine', 'Bengay');
-assertLetterOnly('capzasin-hp-arthritis-cream', 'Capzasin');
-assertLetterOnly('mineral-ice-extreme-gel', 'Mineral Ice');
-assertLetterOnly('mineral-ice-extreme-dry-stick', 'Mineral Ice');
-assertLetterOnly('absorbine-jr-plus-es-liquid', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-roll-on-liquid', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-cream', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-no-mess', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-spray', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-neck-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-back-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-knee-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
-assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
-assertLetterOnly('bengay-ultra-strength-patch-5', 'Bengay');
-assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
-assertLetterOnly('ollois-arnica-montana-12c', 'Ollois');
-assertLetterOnly('oregons-wild-harvest-turmeric', "Oregon's Wild Harvest");
-assertLetterOnly('organic-india-turmeric-formula', 'Organic India');
-assertLetterOnly('sports-research-turmeric-curcumin', 'Sports Research');
-assertLetterOnly('thrive-wellmade-turmeric', 'wellmade by Thrive Market');
-assertLetterOnly('new-chapter-turmeric-force', 'New Chapter');
-assertLetterOnly('codeage-liposomal-turmeric', 'Codeage');
-assertLetterOnly('life-flo-pure-magnesium-oil', 'Life-flo');
-assertLetterOnly('gaia-turmeric-supreme-extra-strength', 'Gaia Herbs');
-assertLetterOnly('thorne-curcumin-phytosome-500', 'Thorne');
-assertLetterOnly('thorne-curcumin-phytosome-1000', 'Thorne');
-assertLetterOnly(
-  'gol-mykind-turmeric-inflammatory-gummies',
-  'Garden of Life',
+assertExactCarton(
+  'biofreeze-menthol-patches',
+  'Biofreeze',
+  'biofreeze-menthol-patches.jpg',
 );
-assertLetterOnly('life-flo-magnesium-lotion-vanilla', 'Life-flo');
-assertLetterOnly('life-flo-magnesium-lotion-unscented', 'Life-flo');
-assertLetterOnly('asutra-melt-pain-away', 'Asutra');
-assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
-assertLetterOnly('goodsense-naproxen-220', 'GoodSense');
-assertLetterOnly('timecap-naproxen-220', 'TIME-Cap Labs');
-assertLetterOnly('healtha2z-ibuprofen-200-382', 'HealthA2Z');
-assertLetterOnly('mommys-bliss-infants-pain-fever', "Mommy's Bliss");
-assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
-assertLetterOnly('nutricost-turmeric-curcumin-2300', 'Nutricost');
-assertLetterOnly('now-turmeric-curcumin-bioperine', 'NOW');
-assertLetterOnly('doctors-best-high-absorption-curcumin-1000', "Doctor's Best");
-assertLetterOnly('qunol-extra-strength-turmeric-1500', 'Qunol');
-assertLetterOnly('qunol-extra-strength-turmeric-1000', 'Qunol');
-assertLetterOnly('healthwise-lidocaine-4-patch', 'HealthWise');
-assertLetterOnly('welmate-lidocaine-4-patch-parabens', 'WELMATE');
-assertLetterOnly('naturewise-curcumin-turmeric-2250', 'NatureWise');
-assertLetterOnly('goodsense-dual-action', 'GoodSense');
-assertLetterOnly('healtha2z-ibuprofen-200-335', 'HealthA2Z');
-assertLetterOnly('goodsense-childrens-ibuprofen-chew', 'GoodSense');
-assertLetterOnly('goodsense-ibuprofen-liquid-gels', 'GoodSense');
-assertLetterOnly('midol-complete', 'Midol');
-assertLetterOnly('amazon-basics-lidocaine-4-patch', 'Amazon Basics');
-assertLetterOnly('welmate-lidocaine-4-patch-ethylhexyl', 'WELMATE');
-assertLetterOnly('amazon-basic-care-ibuprofen-iron-oxide-yellow', 'Amazon Basic Care');
-assertLetterOnly('amazon-basics-ibuprofen-iron-oxide-yellow', 'Amazon Basics');
-assertLetterOnly('qunol-extra-strength-turmeric-1500-oleoresin', 'Qunol');
-assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
-assertLetterOnly('aplus-health-dual-action', 'A+Health');
-assertLetterOnly('qunol-zero-sugar-turmeric-gummies', 'Qunol');
-assertLetterOnly('stopain-extra-strength-roll-on', 'Stopain');
-assertLetterOnly('flexall-max-strength-gel', 'Flexall');
-assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
-assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
-assertLetterOnly('mentholatum-original', 'Mentholatum');
-assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
-assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
-assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
-assertLetterOnly('jointflex-pain-relief-cream', 'JointFlex');
-assertLetterOnly('topricin-pain-relief-cream', 'Topricin');
-assertLetterOnly('blue-emu-original', 'Blue-Emu');
-assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
-assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
-assertLetterOnly('penetrex-pain-relief-cream', 'Penetrex');
+assertExactCarton(
+  'biofreeze-pain-relief-spray-10-5-denatonium',
+  'Biofreeze',
+  'biofreeze-pain-relief-spray-10-5-denatonium.jpg',
+);
+assertExactCarton(
+  'capzasin-hp-arthritis-cream',
+  'Capzasin',
+  'capzasin-hp-arthritis-cream.jpg',
+);
+assertExactCarton(
+  'bengay-ultra-strength-patch-5',
+  'Bengay',
+  'bengay-ultra-strength-patch-5.jpg',
+);
+assertExactCarton(
+  'ollois-arnica-montana-12c',
+  'Ollois',
+  'ollois-arnica-montana-12c.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-turmeric',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-turmeric.jpg',
+);
+assertExactCarton(
+  'new-chapter-turmeric-force',
+  'New Chapter',
+  'new-chapter-turmeric-force.jpg',
+);
+assertExactCarton(
+  'gaia-turmeric-supreme-extra-strength',
+  'Gaia Herbs',
+  'gaia-turmeric-supreme-extra-strength.jpg',
+);
+assertExactCarton(
+  'thorne-curcumin-phytosome-500',
+  'Thorne',
+  'thorne-curcumin-phytosome-500.jpg',
+);
+assertExactCarton(
+  'thorne-curcumin-phytosome-1000',
+  'Thorne',
+  'thorne-curcumin-phytosome-1000.jpg',
+);
+assertExactCarton(
+  'asutra-melt-pain-away-thrive',
+  'Asutra',
+  'asutra-melt-pain-away-thrive.jpg',
+);
+assertExactCarton(
+  'mommys-bliss-infants-pain-fever',
+  "Mommy's Bliss",
+  'mommys-bliss-infants-pain-fever.jpg',
+);
+assertExactCarton(
+  'bioschwartz-turmeric-curcumin-1500',
+  'BioSchwartz',
+  'bioschwartz-turmeric-curcumin-1500.jpg',
+);
+assertExactCarton(
+  'qunol-extra-strength-turmeric-1500',
+  'Qunol',
+  'qunol-extra-strength-turmeric-1500.jpg',
+);
+assertExactCarton(
+  'qunol-extra-strength-turmeric-1000',
+  'Qunol',
+  'qunol-extra-strength-turmeric-1000.jpg',
+);
+assertExactCarton(
+  'qunol-zero-sugar-turmeric-gummies',
+  'Qunol',
+  'qunol-zero-sugar-turmeric-gummies.jpg',
+);
+assertExactCarton(
+  'stopain-extra-strength-roll-on',
+  'Stopain',
+  'stopain-extra-strength-roll-on.jpg',
+);
+assertExactCarton(
+  'mentholatum-original',
+  'Mentholatum',
+  'mentholatum-original.jpg',
+);
+assertExactCarton(
+  'jointflex-pain-relief-cream',
+  'JointFlex',
+  'jointflex-pain-relief-cream.jpg',
+);
+assertExactCarton(
+  'topricin-pain-relief-cream',
+  'Topricin',
+  'topricin-pain-relief-cream.jpg',
+);
+assertExactCarton(
+  'blue-emu-original',
+  'Blue-Emu',
+  'blue-emu-original.jpg',
+);
+assertExactCarton(
+  'penetrex-pain-relief-cream',
+  'Penetrex',
+  'penetrex-pain-relief-cream.jpg',
+);
+assertExactCarton(
+  'sprouts-tart-cherry-turmeric',
+  'Sprouts',
+  'sprouts-tart-cherry-turmeric.jpg',
+);
+assertExactCarton(
+  'sprouts-turmeric-capsules',
+  'Sprouts',
+  'sprouts-turmeric-capsules.jpg',
+);
 
 function assertExactCarton(id: string, brand: string, file: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -1621,18 +2353,340 @@ assertExactCarton(
   'tiger-balm-hydrogel-patch-large.jpg',
 );
 assertExactCarton('tiger-balm-arthritis-rub', 'Tiger Balm', 'tiger-balm-arthritis-rub.jpg');
+assertExactCarton(
+  'biofreeze-ultraflex-lidocaine-4-patch',
+  'Biofreeze',
+  'biofreeze-ultraflex-lidocaine-4-patch.jpg',
+);
+assertExactCarton(
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch',
+  'Biofreeze',
+  'biofreeze-ultraflex-plus-lidocaine-menthol-patch.jpg',
+);
+assertExactCarton('capzasin-quick-relief-gel', 'Capzasin', 'capzasin-quick-relief-gel.jpg');
+assertExactCarton('biofreeze-pain-relief-gel-4', 'Biofreeze', 'biofreeze-pain-relief-gel-4.jpg');
+assertExactCarton(
+  'biofreeze-pain-relief-roll-on-4',
+  'Biofreeze',
+  'biofreeze-pain-relief-roll-on-4.jpg',
+);
+assertExactCarton('biofreeze-overnight-gel-4', 'Biofreeze', 'biofreeze-overnight-gel-4.jpg');
+assertExactCarton(
+  'biofreeze-overnight-roll-on-4',
+  'Biofreeze',
+  'biofreeze-overnight-roll-on-4.jpg',
+);
+assertExactCarton('biofreeze-pain-relief-cream', 'Biofreeze', 'biofreeze-pain-relief-cream.jpg');
+assertExactCarton('biofreeze-dry-stick', 'Biofreeze', 'biofreeze-dry-stick.jpg');
+assertExactCarton(
+  'biofreeze-triple-target-roll-on',
+  'Biofreeze',
+  'biofreeze-triple-target-roll-on.jpg',
+);
+assertExactCarton('biofreeze-triple-target-gel', 'Biofreeze', 'biofreeze-triple-target-gel.jpg');
+assertExactCarton(
+  'biofreeze-overnight-relief-patches',
+  'Biofreeze',
+  'biofreeze-overnight-relief-patches.jpg',
+);
+assertExactCarton(
+  'bengay-ultra-strength-nongreasy',
+  'Bengay',
+  'bengay-ultra-strength-nongreasy.jpg',
+);
+assertExactCarton('bengay-vanishing-scent-gel', 'Bengay', 'bengay-vanishing-scent-gel.jpg');
+assertExactCarton(
+  'bengay-lidocaine-tropical-jasmine',
+  'Bengay',
+  'bengay-lidocaine-tropical-jasmine.jpg',
+);
+assertExactCarton('absorbine-jr-pro-cream', 'Absorbine Jr.', 'absorbine-jr-pro-cream.jpg');
+assertExactCarton('absorbine-jr-pro-no-mess', 'Absorbine Jr.', 'absorbine-jr-pro-no-mess.jpg');
+assertExactCarton('absorbine-jr-neck-patch', 'Absorbine Jr.', 'absorbine-jr-neck-patch.jpg');
+assertExactCarton('absorbine-jr-back-patch', 'Absorbine Jr.', 'absorbine-jr-back-patch.jpg');
+assertExactCarton('absorbine-jr-knee-patch', 'Absorbine Jr.', 'absorbine-jr-knee-patch.jpg');
+assertExactCarton(
+  'medinatura-t-relief-xs-oral-drops',
+  'MediNatura',
+  'medinatura-t-relief-xs-oral-drops.jpg',
+);
+assertExactCarton('medinatura-t-relief-xs-gel', 'MediNatura', 'medinatura-t-relief-xs-gel.jpg');
+assertExactCarton('medinatura-t-relief-pain-gel', 'MediNatura', 'medinatura-t-relief-pain-gel.jpg');
+assertExactCarton(
+  'medinatura-t-relief-xs-tablets',
+  'MediNatura',
+  'medinatura-t-relief-xs-tablets.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-pain-tablets',
+  'MediNatura',
+  'medinatura-t-relief-pain-tablets.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-arthritis-xs-tablets',
+  'MediNatura',
+  'medinatura-t-relief-arthritis-xs-tablets.jpg',
+);
+assertExactCarton('medinatura-bhi-arthritis', 'MediNatura', 'medinatura-bhi-arthritis.jpg');
+assertExactCarton('medinatura-bhi-back', 'MediNatura', 'medinatura-bhi-back.jpg');
+assertExactCarton('medinatura-bhi-migraine', 'MediNatura', 'medinatura-bhi-migraine.jpg');
+assertExactCarton('medinatura-bhi-spasm-cramp', 'MediNatura', 'medinatura-bhi-spasm-cramp.jpg');
+assertExactCarton(
+  'medinatura-t-relief-pain-cream',
+  'MediNatura',
+  'medinatura-t-relief-pain-cream.jpg',
+);
+assertExactCarton('medinatura-t-relief-xs-cream', 'MediNatura', 'medinatura-t-relief-xs-cream.jpg');
+assertExactCarton(
+  'medinatura-t-relief-arthritis-xs-cream',
+  'MediNatura',
+  'medinatura-t-relief-arthritis-xs-cream.jpg',
+);
+assertExactCarton(
+  'medinatura-t-relief-lidocaine-4-cream',
+  'MediNatura',
+  'medinatura-t-relief-lidocaine-4-cream.jpg',
+);
+assertExactCarton('medinatura-traumeel-ointment', 'MediNatura', 'medinatura-traumeel-ointment.jpg');
+assertExactCarton(
+  'bt-triflora-arthritis-gel',
+  'Boericke & Tafel',
+  'bt-triflora-arthritis-gel.jpg',
+);
+assertExactCarton('natures-way-sports-gel', "Nature's Way", 'natures-way-sports-gel.jpg');
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
-assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-cooling-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-nighttime-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-lidocaine-4-patch', 'Tylenol');
-assertLetterOnly('alevex-pain-relieving-lotion-roll-on', 'AleveX');
-assertLetterOnly('alevex-pain-relieving-lotion-tube', 'AleveX');
-assertLetterOnly('alevex-pain-relieving-spray', 'AleveX');
-assertLetterOnly('advil-targeted-relief-cream', 'Advil');
-assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
-assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
+assertExactCarton(
+  'tylenol-precise-pain-relieving-cream',
+  'Tylenol',
+  'tylenol-precise-pain-relieving-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-cooling-cream',
+  'Tylenol',
+  'tylenol-precise-cooling-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-warming-cream',
+  'Tylenol',
+  'tylenol-precise-warming-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-nighttime-cream',
+  'Tylenol',
+  'tylenol-precise-nighttime-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-lidocaine-4-patch',
+  'Tylenol',
+  'tylenol-precise-lidocaine-4-patch.jpg',
+);
+assertExactCarton(
+  'advil-targeted-relief-cream',
+  'Advil',
+  'advil-targeted-relief-cream.jpg',
+);
+assertExactCarton('advil-migraine-liqui-gels', 'Advil', 'advil-migraine-liqui-gels.jpg');
+assertExactCarton(
+  'advil-dual-action-back-pain',
+  'Advil',
+  'advil-dual-action-back-pain.jpg',
+);
+assertExactCarton('motrin-ib-liquid-gels', 'Motrin', 'motrin-ib-liquid-gels.jpg');
+assertExactCarton(
+  'motrin-ib-migraine-liquid-gels',
+  'Motrin',
+  'motrin-ib-migraine-liquid-gels.jpg',
+);
+assertExactCarton('motrin-dual-action', 'Motrin', 'motrin-dual-action.jpg');
+assertExactCarton(
+  'tylenol-es-dissolve-packs',
+  'Tylenol',
+  'tylenol-es-dissolve-packs.jpg',
+);
+assertExactCarton(
+  'tylenol-children-dissolve-packs',
+  'Tylenol',
+  'tylenol-children-dissolve-packs.jpg',
+);
+assertExactCarton(
+  'motrin-infants-liquid-dyefree',
+  'Motrin',
+  'motrin-infants-liquid-dyefree.jpg',
+);
+assertExactCarton(
+  'medinatura-traumeel-tablets',
+  'MediNatura',
+  'medinatura-traumeel-tablets.jpg',
+);
+assertExactCarton(
+  'excedrin-tension-headache',
+  'Excedrin',
+  'excedrin-tension-headache.jpg',
+);
+assertExactCarton(
+  'excedrin-migraine-es-blue',
+  'Excedrin',
+  'excedrin-migraine-es-blue.jpg',
+);
+assertExactCarton(
+  'excedrin-rapid-relief-apap',
+  'Excedrin',
+  'excedrin-rapid-relief-apap.jpg',
+);
+assertExactCarton('tylenol-es-liquid', 'Tylenol', 'tylenol-es-liquid.jpg');
+assertExactCarton('infants-advil-drops', 'Advil', 'infants-advil-drops.jpg');
+assertExactCarton('excedrin-es-tio2', 'Excedrin', 'excedrin-es-tio2.jpg');
+assertExactCarton(
+  'goodys-max-triple-flavored',
+  "Goody's",
+  'goodys-max-triple-flavored.jpg',
+);
+assertExactCarton('goodys-extra-strength', "Goody's", 'goodys-extra-strength.jpg');
+assertExactCarton('goodys-back-body', "Goody's", 'goodys-back-body.jpg');
+assertExactCarton(
+  'goodys-plus-alert-hangover',
+  "Goody's",
+  'goodys-plus-alert-hangover.jpg',
+);
+assertExactCarton(
+  'ecotrin-rs-325-enteric',
+  'Ecotrin',
+  'ecotrin-rs-325-enteric.jpg',
+);
+assertExactCarton('ecotrin-81-enteric-dye', 'Ecotrin', 'ecotrin-81-enteric-dye.jpg');
+assertExactCarton('anacin-aspirin-caffeine', 'Anacin', 'anacin-aspirin-caffeine.jpg');
+assertExactCarton('st-joseph-81-enteric', 'St. Joseph', 'st-joseph-81-enteric.jpg');
+assertExactCarton('st-joseph-81-chewable', 'St. Joseph', 'st-joseph-81-chewable.jpg');
+assertExactCarton('bufferin-rs-325', 'Bufferin', 'bufferin-rs-325.jpg');
+assertExactCarton('bc-original-arthritis', 'BC', 'bc-original-arthritis.jpg');
+assertExactCarton('bc-cherry', 'BC', 'bc-cherry.jpg');
+assertExactCarton('bc-max', 'BC', 'bc-max.jpg');
+assertExactCarton('fon-headache', 'Forces of Nature', 'fon-headache.jpg');
+assertExactCarton('fon-nerve', 'Forces of Nature', 'fon-nerve.jpg');
+assertExactCarton('fon-muscle', 'Forces of Nature', 'fon-muscle.jpg');
+assertExactCarton('fon-arniblend', 'Forces of Nature', 'fon-arniblend.jpg');
+assertExactCarton('fon-migraine', 'Forces of Nature', 'fon-migraine.jpg');
+assertExactCarton(
+  'medinatura-bhi-traumex',
+  'MediNatura',
+  'medinatura-bhi-traumex.jpg',
+);
+assertExactCarton('natures-way-feverfew', "Nature's Way", 'natures-way-feverfew.jpg');
+assertExactCarton(
+  'natures-way-willow-bark',
+  "Nature's Way",
+  'natures-way-willow-bark.jpg',
+);
+assertExactCarton(
+  'natures-way-joint-movement-glucosamine',
+  "Nature's Way",
+  'natures-way-joint-movement-glucosamine.jpg',
+);
+assertExactCarton(
+  'natures-way-turmeric-max-potency',
+  "Nature's Way",
+  'natures-way-turmeric-max-potency.jpg',
+);
+assertExactCarton(
+  'natures-way-tart-cherry-ultra-gummies',
+  "Nature's Way",
+  'natures-way-tart-cherry-ultra-gummies.jpg',
+);
+assertExactCarton(
+  'natures-way-petadolex-pro-active',
+  "Nature's Way",
+  'natures-way-petadolex-pro-active.jpg',
+);
+assertExactCarton(
+  'natures-way-devils-claw-secondary-root',
+  "Nature's Way",
+  'natures-way-devils-claw-secondary-root.jpg',
+);
+assertExactCarton(
+  'biofreeze-colorless-gel-4',
+  'Biofreeze',
+  'biofreeze-colorless-gel-4.jpg',
+);
+assertExactCarton(
+  'naturewise-curcumin-turmeric-2250',
+  'NatureWise',
+  'naturewise-curcumin-turmeric-2250.jpg',
+);
+assertExactCarton(
+  'oregons-wild-harvest-turmeric',
+  "Oregon's Wild Harvest",
+  'oregons-wild-harvest-turmeric.jpg',
+);
+assertExactCarton(
+  'life-flo-pure-magnesium-oil',
+  'Life-flo',
+  'life-flo-pure-magnesium-oil.jpg',
+);
+assertExactCarton(
+  'absorbine-jr-plus-es-liquid',
+  'Absorbine Jr.',
+  'absorbine-jr-plus-es-liquid.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-gel',
+  'Mineral Ice',
+  'mineral-ice-extreme-gel.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-menthol-spray',
+  'Mineral Ice',
+  'mineral-ice-extreme-menthol-spray.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-dry-stick',
+  'Mineral Ice',
+  'mineral-ice-extreme-dry-stick.jpg',
+);
+assertExactCarton(
+  'codeage-liposomal-turmeric',
+  'Codeage',
+  'codeage-liposomal-turmeric.jpg',
+);
+assertExactCarton(
+  'asutra-melt-pain-away',
+  'Asutra',
+  'asutra-melt-pain-away.jpg',
+);
+assertExactCarton(
+  'life-flo-magnesium-lotion-vanilla',
+  'Life-flo',
+  'life-flo-magnesium-lotion-vanilla.jpg',
+);
+assertExactCarton(
+  'life-flo-magnesium-lotion-unscented',
+  'Life-flo',
+  'life-flo-magnesium-lotion-unscented.jpg',
+);
+assertExactCarton(
+  'doctors-best-high-absorption-curcumin-1000',
+  "Doctor's Best",
+  'doctors-best-high-absorption-curcumin-1000.jpg',
+);
+assertExactCarton(
+  'sports-research-turmeric-curcumin',
+  'Sports Research',
+  'sports-research-turmeric-curcumin.jpg',
+);
+assertExactCarton(
+  'australian-dream-arthritis-cream',
+  'Australian Dream',
+  'australian-dream-arthritis-cream.jpg',
+);
+assertExactCarton(
+  'mineral-ice-original-gel-2',
+  'Mineral Ice',
+  'mineral-ice-original-gel-2.jpg',
+);
+assertExactCarton(
+  'nutricost-turmeric-curcumin-2300',
+  'Nutricost',
+  'nutricost-turmeric-curcumin-2300.jpg',
+);
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
@@ -1653,6 +2707,23 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
     ?? CATALOG.find((record) => record.formulaId === id);
 }
 
+{
+  const absorbineProCream = findDraftRecord('absorbine-jr-pro-cream');
+  if (!absorbineProCream || absorbineProCream.verdict !== 'avoid') {
+    throw new Error('absorbine-jr-pro-cream must stay verdict avoid');
+  }
+  if (!isDumpHonestNote(absorbineProCream.honestNote)) {
+    throw new Error('absorbine-jr-pro-cream draft Honest stays the founder-lock dump');
+  }
+  const absorbineDisplay = displayHonestNote(absorbineProCream);
+  if (/FOUNDER-LOCK|standalone Caution|cetearyl|glyceryl stearate/i.test(absorbineDisplay)) {
+    throw new Error('absorbine-jr-pro-cream Honest display must not be the inactive dump');
+  }
+  if (!/methylparaben/i.test(absorbineDisplay)) {
+    throw new Error('absorbine-jr-pro-cream Honest display must name methylparaben');
+  }
+}
+
 export function isParkedFromBrowse(id: string | undefined): boolean {
   return isParkedBrowseId(id);
 }
@@ -1669,6 +2740,7 @@ export function loadedPreviewDrafts(): RatingRecord[] {
 // Display-side Search tiles/chips only. Do not rewrite draft category strings.
 const SEARCH_ALLERGIES_LABEL = 'Allergies';
 const SEARCH_PRENATAL_LABEL = 'Prenatal';
+const SEARCH_IMMUNE_LABEL = 'Immune Support';
 const PRENATAL_BATCH_IDS = new Set(BATCH15_PRENATALS.map((record) => record.id));
 
 function prenatalHaystack(record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>): string {
@@ -1692,6 +2764,7 @@ export function displayCategoryForRecord(
   const lowered = raw.toLowerCase();
   if (lowered === 'homeopathic') return null;
   if (lowered === 'allergy' || lowered === 'allergies') return SEARCH_ALLERGIES_LABEL;
+  if (lowered === 'immune' || lowered === 'immune support') return SEARCH_IMMUNE_LABEL;
   if (lowered === 'prenatal') return SEARCH_PRENATAL_LABEL;
   return raw;
 }
@@ -1725,8 +2798,13 @@ export function matchesSearchCategory(
   record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
   category: string,
 ): boolean {
+  const lowered = category.trim().toLowerCase();
   if (category === SEARCH_ALLERGIES_LABEL) {
     return record.category === 'Allergy' || record.category === 'Allergies';
+  }
+  if (lowered === 'immune' || lowered === 'immune support') {
+    const raw = (record.category ?? '').trim().toLowerCase();
+    return raw === 'immune' || raw === 'immune support';
   }
   if (category === SEARCH_PRENATAL_LABEL) {
     return isPrenatalDraft(record);
@@ -1745,6 +2823,10 @@ export function loadedPreviewCategories(): string[] {
     if (lowered === 'homeopathic') continue;
     if (lowered === 'allergy' || lowered === 'allergies') {
       names.add(SEARCH_ALLERGIES_LABEL);
+      continue;
+    }
+    if (lowered === 'immune' || lowered === 'immune support') {
+      names.add(SEARCH_IMMUNE_LABEL);
       continue;
     }
     if (lowered === 'prenatal') {
@@ -2007,6 +3089,29 @@ export type IngredientWhy = {
   sourceHref: string | null;
 };
 
+export const PENDING_DAILYMED_REVIEW = 'Pending DailyMed review';
+
+function isIngredientReviewed(ingredient: IngredientFlag): boolean {
+  const source = (ingredient.source ?? '').trim();
+  if (!source) return false;
+  const lower = source.toLowerCase();
+  if (lower.includes('not in methodology') || lower.includes('ungraded')) return false;
+  return true;
+}
+
+function reviewedWhyFallback(ingredient: IngredientFlag): string {
+  if (ingredient.riskLevel === 'cleared') {
+    return 'Reviewed on this label. It stayed Clean — no High or Caution flag on this token.';
+  }
+  if (ingredient.riskLevel === 'limited') {
+    return 'Limited extra. Fact: it is an opacity or volume listing. It does not make a product Not clean by itself.';
+  }
+  if (ingredient.riskLevel === 'moderate') {
+    return 'Moderate extra. Cleaner formulas leave it out. That is a fact about the listing, not a claim it is unsafe.';
+  }
+  return 'High-list extra. Cleaner formulas exclude it.';
+}
+
 function normalizeName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
@@ -2029,6 +3134,18 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     || /fd c|d c|aluminum lake|blue no|red no|yellow no|green no/.test(name)
   ) {
     return 'Synthetic color. Independent reviews link this dye family to hyperactivity warnings in the EU; we score the family High risk, and cleaner formulas exclude it.';
+  }
+
+  if (name.includes('paraben') || source.includes('paraben')) {
+    return 'Paraben preservative. We score this family High in every form, including creams and patches. Cleaner formulas exclude it.';
+  }
+
+  if (
+    name.includes('titanium dioxide')
+    || source.includes('titanium dioxide')
+    || source.includes('e171')
+  ) {
+    return 'Titanium dioxide (E171). The EU dropped it as a food additive after a genotoxicity data gap. We score it High.';
   }
 
   if (name.includes('talc') || source.includes('talc')) {
@@ -2118,6 +3235,43 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     return 'Undisclosed flavor mixture. Limited risk for opacity, not a known hazard; cleaner formulas exclude it.';
   }
 
+  if (name.includes('fragrance') || name.includes('parfum') || source.includes('fragrance / parfum')) {
+    if (ingredient.riskLevel === 'cleared') {
+      return 'Fragrance is listed on this label. On this formula it stayed Clean.';
+    }
+    return 'Fragrance / parfum. Population sensitization listing. That is a fact about the extra, not a claim it is unsafe.';
+  }
+
+  if (
+    name.includes('sd alcohol')
+    || name.includes('alcohol denat')
+    || source.includes('alcohol / ethyl alcohol')
+    || source.includes('isopropyl alcohol')
+  ) {
+    return 'Alcohol is the vehicle here, not a drinking-alcohol active and not the gummy seed-oil High rule.';
+  }
+
+  if (
+    name.includes('polyethylene glycol')
+    || /\bpeg(?:-|\s|\d)/.test(name)
+    || source.includes('pegs —')
+  ) {
+    return 'PEG (polyethylene glycol). Moderate listing from processing leftovers. Cleaner formulas leave it out.';
+  }
+
+  if (name.includes('polysorbate') || source.includes('polysorbate')) {
+    return 'Polysorbate emulsifier. Moderate listing. Cleaner formulas leave it out.';
+  }
+
+  if (
+    name.includes('silicon dioxide')
+    || name === 'silica'
+    || name.startsWith('silica ')
+    || source.includes('silicon dioxide')
+  ) {
+    return 'Silicon dioxide / silica is a Caution cap. It does not make a product Not clean by itself.';
+  }
+
   if (
     source.includes('flagged in gummies')
     || source.includes('capsule/softgel')
@@ -2129,12 +3283,12 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
 
   if (ingredient.riskLevel === 'cleared') {
     if (source.includes('not in methodology') || source.includes('ungraded')) {
-      return 'Why pending review';
+      return PENDING_DAILYMED_REVIEW;
     }
     if (name.includes('magnesium stearate') || name.includes('stearic acid') || name.includes('calcium stearate')) {
       return 'Standard lubricant (stearate-family class). EFSA 2018 found no safety concern.';
     }
-    if (name.includes('purified water')) {
+    if (name === 'water' || name.includes('purified water')) {
       return 'Purified water. Methodology §5 lists it among cleared bases.';
     }
     if (name.includes('corn starch') || name.includes('pregelatinized starch')) {
@@ -2157,9 +3311,29 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
 export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
   const display = sourceDisplay(ingredient.source);
   const body = lockedWhyBody(ingredient);
-  if (body) return { body, ...display };
+  if (body && body !== PENDING_DAILYMED_REVIEW) return { body, ...display };
+  if (isIngredientReviewed(ingredient)) {
+    return { body: reviewedWhyFallback(ingredient), ...display };
+  }
   return {
-    body: 'Why pending review',
+    body: PENDING_DAILYMED_REVIEW,
     ...display,
   };
+}
+
+{
+  const absorbineProCream = findDraftRecord('absorbine-jr-pro-cream');
+  const methyl = absorbineProCream?.inactiveIngredients.find((ingredient) =>
+    /methylparaben/i.test(ingredient.name),
+  );
+  if (!methyl) {
+    throw new Error('absorbine-jr-pro-cream must keep methylparaben on the ingredient list');
+  }
+  const why = ingredientWhy(methyl);
+  if (why.body === PENDING_DAILYMED_REVIEW) {
+    throw new Error('absorbine-jr-pro-cream methylparaben why must not be pending');
+  }
+  if (!/paraben/i.test(why.body)) {
+    throw new Error('absorbine-jr-pro-cream methylparaben why must be the paraben line');
+  }
 }
