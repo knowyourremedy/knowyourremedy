@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 19, 2026 — Count-tab lock: click every pack-count tab/pill (30 / 50 / 90 / 365) then expand THAT tab’s spec accordion and read the 11- or 12-digit UPC. One page ≠ one UPC. Accordion lock stays. No grades. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29).
+Last Updated: September 19, 2026 — Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched. OI accordion lock = missing-OI MAIN Search rows only (do not re-hunt full inactive lists; no new products). Count-tab lock: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC. Display fill only. No barcode factory. No grades. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29).
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -83,6 +83,16 @@ FOUNDER CALLS — MAJORITY RULE
 - Majority wins. 1 scare paper out of 10 ≠ Avoid. 1 “it’s fine” out of 10 ≠ Clean. Split → bring the split to Brandon. Do not invent a grade.
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
 - Vague vs named twins need tap + honest-note text. Honest always.
+
+OI / INACTIVE HUNT ACCORDION LOCK (2026-09-19 founder — one lock; do not wipe LIVE NOW)
+- Same accordion expand as the UPC hunt, but ONLY for existing MAIN Search rows that already have no inactive / OI list.
+- Do NOT reopen or re-hunt rows that already have a full inactive list.
+- Do NOT add products.
+- For those missing-OI rows only: expand Product Specifications, Details, More specs, Supplement facts extra tabs, Inactive ingredients, Drug Facts “show more,” and any collapsed block BEFORE declaring DRY / “no inactives found.”
+- Missing first-paint inactives ≠ empty if a tab is closed.
+- 11-digit retailer UPC is still valid when seen (same check-digit rule as the UPC hunt lock).
+- Confirmed-empty cartons (100% powder / DailyMed “inactive ingredients: none”) are not missing-OI. Leave them alone.
+- This pass: no OI fill. The only empty-pending MAIN Search rows are two Sprouts prenatals (house STASHED — do not catalog Sprouts).
 
 BRAND-CLOSE WORKFLOW
 - Finish the brand you started. Do not hop brands.
@@ -197,6 +207,8 @@ Parked
 
 Next session
 - LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d attach-only after founder locks. Do not reopen #121–#221. Live missing UPC 122 (in-store 93 / online 29) — live query after Tiger Balm + Biofreeze founder-lock attach; Walk list A is queue only. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- OI / inactive accordion lock: missing-OI MAIN Search rows only. Do not reopen full inactive lists. Do not add products. Confirmed-empty 100% powders stay empty. No Sprouts hunt.
+- Count-tab lock stays: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 - Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
@@ -1165,6 +1177,7 @@ Live query (Search catalog, parked Pedialyte out). A Search row HAS a UPC if bar
 - KYR5 factory #121–#221 stay closed. KYR5-d attach-only after founder locks. Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
 - ALL-SITE accordion lock (2026-09-19): expand every collapsed accordion (Product Specifications / Details / More specs / Product details / Shipping & specs / Nutrition / Supplement facts extra tabs / “show more”) before DRY. Do not DRY off first-paint hero + Drug Facts alone. 11-digit retailer UPC is valid input (GTIN-12 minus check digit). Store UPC-A = 11 digits + GS1 check digit (31191705853 → 311917058535; same as #232 31191701535 → 311917015354). If 12 digits already show, store those 12 after a check-digit sanity pass. Click/expand all collapsibles on walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, and brand sites. Read 12 digits under bars when a barcode image exists. NDC ≠ UPC. Official brand site + every tile + every accordion, then DRY.
 - Count-tab lock (2026-09-19, all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC. Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit. Do not assume one page = one UPC. Accordion lock stays. No grades. Factory #121–#221 stay closed.
+- OI / inactive accordion lock (same expand, narrower queue): ONLY existing MAIN Search rows that already lack an inactive list. Do not re-hunt full lists. Do not add products. Confirmed-empty (100% powder / “inactives: none”) are not missing-OI.
 - Do not reopen Boiron 23 hunt.
 - Do not reopen Biofreeze 10% hunt. Founder lock 2026-09-18 night: 4 oz 10% single does not exist on US retail shelf. Merge to 10.5% 359316120200 / 731124000109.
 
@@ -1412,5 +1425,6 @@ Named dry leftovers (do not reopen)
 
 LIVE QUERY / in-store 93 / online 29 / total 122 / Biofreeze 10% spray named-dry merge to 10.5%.
 ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
-Honest=product summary / ingredients=why-or-pending / one Immune tile / Absorbine grade untouched.
+Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
+OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
