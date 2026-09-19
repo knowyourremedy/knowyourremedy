@@ -903,6 +903,30 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'bt-triflora-arthritis-gel': catalogShot('bt-triflora-arthritis-gel.jpg'),
   'natures-way-sports-gel': catalogShot('natures-way-sports-gel.jpg'),
   'tylenol-precise-cooling-cream': catalogShot('tylenol-precise-cooling-cream.jpg'),
+  'tylenol-precise-pain-relieving-cream': catalogShot(
+    'tylenol-precise-pain-relieving-cream.jpg',
+  ),
+  'tylenol-precise-warming-cream': catalogShot('tylenol-precise-warming-cream.jpg'),
+  'tylenol-precise-nighttime-cream': catalogShot('tylenol-precise-nighttime-cream.jpg'),
+  'tylenol-precise-lidocaine-4-patch': catalogShot(
+    'tylenol-precise-lidocaine-4-patch.jpg',
+  ),
+  'advil-targeted-relief-cream': catalogShot('advil-targeted-relief-cream.jpg'),
+  'mommys-bliss-infants-pain-fever': catalogShot('mommys-bliss-infants-pain-fever.jpg'),
+  'advil-migraine-liqui-gels': catalogShot('advil-migraine-liqui-gels.jpg'),
+  'advil-dual-action-back-pain': catalogShot('advil-dual-action-back-pain.jpg'),
+  'motrin-ib-liquid-gels': catalogShot('motrin-ib-liquid-gels.jpg'),
+  'motrin-ib-migraine-liquid-gels': catalogShot('motrin-ib-migraine-liquid-gels.jpg'),
+  'motrin-dual-action': catalogShot('motrin-dual-action.jpg'),
+  'topricin-pain-relief-cream': catalogShot('topricin-pain-relief-cream.jpg'),
+  'tylenol-es-dissolve-packs': catalogShot('tylenol-es-dissolve-packs.jpg'),
+  'tylenol-children-dissolve-packs': catalogShot('tylenol-children-dissolve-packs.jpg'),
+  'motrin-infants-liquid-dyefree': catalogShot('motrin-infants-liquid-dyefree.jpg'),
+  'medinatura-traumeel-tablets': catalogShot('medinatura-traumeel-tablets.jpg'),
+  'excedrin-tension-headache': catalogShot('excedrin-tension-headache.jpg'),
+  'excedrin-migraine-es-blue': catalogShot('excedrin-migraine-es-blue.jpg'),
+  'excedrin-rapid-relief-apap': catalogShot('excedrin-rapid-relief-apap.jpg'),
+  'tylenol-es-liquid': catalogShot('tylenol-es-liquid.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1155,7 +1179,11 @@ assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
 assertLetterOnly('goodsense-naproxen-220', 'GoodSense');
 assertLetterOnly('timecap-naproxen-220', 'TIME-Cap Labs');
 assertLetterOnly('healtha2z-ibuprofen-200-382', 'HealthA2Z');
-assertLetterOnly('mommys-bliss-infants-pain-fever', "Mommy's Bliss");
+assertExactCarton(
+  'mommys-bliss-infants-pain-fever',
+  "Mommy's Bliss",
+  'mommys-bliss-infants-pain-fever.jpg',
+);
 assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
 assertLetterOnly('nutricost-turmeric-curcumin-2300', 'Nutricost');
 assertLetterOnly('now-turmeric-curcumin-bioperine', 'NOW');
@@ -1187,7 +1215,11 @@ assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
 assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
 assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
 assertLetterOnly('jointflex-pain-relief-cream', 'JointFlex');
-assertLetterOnly('topricin-pain-relief-cream', 'Topricin');
+assertExactCarton(
+  'topricin-pain-relief-cream',
+  'Topricin',
+  'topricin-pain-relief-cream.jpg',
+);
 assertLetterOnly('blue-emu-original', 'Blue-Emu');
 assertLetterOnly('teemofe-lidocaine-4-patch', 'Teemofe');
 assertLetterOnly('healtha2z-naproxen-220-300', 'HealthA2Z');
@@ -1761,19 +1793,88 @@ assertExactCarton(
 );
 assertExactCarton('natures-way-sports-gel', "Nature's Way", 'natures-way-sports-gel.jpg');
 // Leftover Boiron single-remedy P&F pellet factory is cleared on this aisle.
-assertLetterOnly('tylenol-precise-pain-relieving-cream', 'Tylenol');
+assertExactCarton(
+  'tylenol-precise-pain-relieving-cream',
+  'Tylenol',
+  'tylenol-precise-pain-relieving-cream.jpg',
+);
 assertExactCarton(
   'tylenol-precise-cooling-cream',
   'Tylenol',
   'tylenol-precise-cooling-cream.jpg',
 );
-assertLetterOnly('tylenol-precise-warming-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-nighttime-cream', 'Tylenol');
-assertLetterOnly('tylenol-precise-lidocaine-4-patch', 'Tylenol');
+assertExactCarton(
+  'tylenol-precise-warming-cream',
+  'Tylenol',
+  'tylenol-precise-warming-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-nighttime-cream',
+  'Tylenol',
+  'tylenol-precise-nighttime-cream.jpg',
+);
+assertExactCarton(
+  'tylenol-precise-lidocaine-4-patch',
+  'Tylenol',
+  'tylenol-precise-lidocaine-4-patch.jpg',
+);
 assertLetterOnly('alevex-pain-relieving-lotion-roll-on', 'AleveX');
 assertLetterOnly('alevex-pain-relieving-lotion-tube', 'AleveX');
 assertLetterOnly('alevex-pain-relieving-spray', 'AleveX');
-assertLetterOnly('advil-targeted-relief-cream', 'Advil');
+assertExactCarton(
+  'advil-targeted-relief-cream',
+  'Advil',
+  'advil-targeted-relief-cream.jpg',
+);
+assertExactCarton('advil-migraine-liqui-gels', 'Advil', 'advil-migraine-liqui-gels.jpg');
+assertExactCarton(
+  'advil-dual-action-back-pain',
+  'Advil',
+  'advil-dual-action-back-pain.jpg',
+);
+assertExactCarton('motrin-ib-liquid-gels', 'Motrin', 'motrin-ib-liquid-gels.jpg');
+assertExactCarton(
+  'motrin-ib-migraine-liquid-gels',
+  'Motrin',
+  'motrin-ib-migraine-liquid-gels.jpg',
+);
+assertExactCarton('motrin-dual-action', 'Motrin', 'motrin-dual-action.jpg');
+assertExactCarton(
+  'tylenol-es-dissolve-packs',
+  'Tylenol',
+  'tylenol-es-dissolve-packs.jpg',
+);
+assertExactCarton(
+  'tylenol-children-dissolve-packs',
+  'Tylenol',
+  'tylenol-children-dissolve-packs.jpg',
+);
+assertExactCarton(
+  'motrin-infants-liquid-dyefree',
+  'Motrin',
+  'motrin-infants-liquid-dyefree.jpg',
+);
+assertExactCarton(
+  'medinatura-traumeel-tablets',
+  'MediNatura',
+  'medinatura-traumeel-tablets.jpg',
+);
+assertExactCarton(
+  'excedrin-tension-headache',
+  'Excedrin',
+  'excedrin-tension-headache.jpg',
+);
+assertExactCarton(
+  'excedrin-migraine-es-blue',
+  'Excedrin',
+  'excedrin-migraine-es-blue.jpg',
+);
+assertExactCarton(
+  'excedrin-rapid-relief-apap',
+  'Excedrin',
+  'excedrin-rapid-relief-apap.jpg',
+);
+assertExactCarton('tylenol-es-liquid', 'Tylenol', 'tylenol-es-liquid.jpg');
 assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
 assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
