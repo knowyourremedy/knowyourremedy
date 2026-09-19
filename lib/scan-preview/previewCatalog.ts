@@ -320,6 +320,36 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'junior-strength-advil-coated': brandMark('advil-mark.png'),
   // Too-broad leftover (film-coated / menstrual named as one row).
   'advil-film-coated-menstrual': brandMark('advil-mark.png'),
+  // Batch 2 leftovers — Cool Patch / regular+wider hydrogel have no distinct
+  // official 3D carton (tigerbalm.com/us Cool Patch absent; hydrogel twins
+  // are not the already-overlaid cloth patch or Large hydrogel). Per-id only.
+  'tiger-balm-cool-patch': brandMark('tiger-balm-mark.png'),
+  'tiger-balm-pain-relieving-patch-regular-hydrogel': brandMark(
+    'tiger-balm-mark.png',
+  ),
+  'tiger-balm-pain-relieving-patch-wider-hydrogel': brandMark(
+    'tiger-balm-mark.png',
+  ),
+  // Batch 2 leftovers — biofreeze.com current catalog has no matching
+  // 3.5% gel / Professional 5% / 10.5% alcohol spray / 10% spray /
+  // Professional 13% / overnight cream / foam / pen / strip / foot cream.
+  // Per-id only so already-overlaid Biofreeze cartons stay exact.
+  'biofreeze-gel-3-5-paraben': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-gel-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-roll-on-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-colorless-gel-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-colorless-roll-on-5': brandMark(
+    'biofreeze-mark.png',
+  ),
+  'biofreeze-pain-relief-spray-10-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-spray-10-5': brandMark('biofreeze-mark.png'),
+  'biofreeze-precision-relief-pen': brandMark('biofreeze-mark.png'),
+  'biofreeze-pain-relief-spray-10': brandMark('biofreeze-mark.png'),
+  'biofreeze-professional-spray-13': brandMark('biofreeze-mark.png'),
+  'biofreeze-overnight-relief-cream': brandMark('biofreeze-mark.png'),
+  'biofreeze-foam': brandMark('biofreeze-mark.png'),
+  'biofreeze-flexible-relief-strip': brandMark('biofreeze-mark.png'),
+  'biofreeze-foot-cream': brandMark('biofreeze-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -386,6 +416,9 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'alevex-pain-relieving-lotion-roll-on': 'AleveX',
   'alevex-pain-relieving-lotion-tube': 'AleveX',
   'alevex-pain-relieving-spray': 'AleveX',
+  // Attempted leftover — aleve.com 403; DailyMed arthritis gel faces are
+  // 2D dielines, not a 3D packshot. No standalone official mark file.
+  'aleve-arthritis-pain-gel': 'Aleve',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1079,6 +1112,16 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'sprouts-tart-cherry-turmeric.jpg',
   ),
   'sprouts-turmeric-capsules': catalogShot('sprouts-turmeric-capsules.jpg'),
+  // Official biofreeze.com retail aerosol packshot (3 fl oz, 10.5% menthol
+  // + denatonium). Consumer spray id = formulaId.
+  'biofreeze-pain-relief-spray-10-5-denatonium': catalogShot(
+    'biofreeze-pain-relief-spray-10-5-denatonium.jpg',
+  ),
+  // Shares formulaId with the consumer denatonium spray — do not inherit
+  // the retail aerosol can (Professional NDC 59316-834).
+  'biofreeze-professional-aerosol-10-5-denatonium': brandMark(
+    'biofreeze-mark.png',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1219,6 +1262,84 @@ assertBrandMark(
   'Advil',
   'advil-mark.png',
 );
+assertBrandMark('tiger-balm-cool-patch', 'Tiger Balm', 'tiger-balm-mark.png');
+assertBrandMark(
+  'tiger-balm-pain-relieving-patch-regular-hydrogel',
+  'Tiger Balm',
+  'tiger-balm-mark.png',
+);
+assertBrandMark(
+  'tiger-balm-pain-relieving-patch-wider-hydrogel',
+  'Tiger Balm',
+  'tiger-balm-mark.png',
+);
+assertBrandMark(
+  'biofreeze-gel-3-5-paraben',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-gel-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-roll-on-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-colorless-gel-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-colorless-roll-on-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-aerosol-10-5-denatonium',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-pain-relief-spray-10-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-spray-10-5',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-precision-relief-pen',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-pain-relief-spray-10',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-professional-spray-13',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark(
+  'biofreeze-overnight-relief-cream',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark('biofreeze-foam', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'biofreeze-flexible-relief-strip',
+  'Biofreeze',
+  'biofreeze-mark.png',
+);
+assertBrandMark('biofreeze-foot-cream', 'Biofreeze', 'biofreeze-mark.png');
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -1242,6 +1363,19 @@ assertBrandMark(
     proRoll.verifiedSku
   ) {
     throw new Error('PRO roll-on must not inherit the Plus ES liquid carton');
+  }
+  const proAerosol = previewOverlayImage({
+    id: 'biofreeze-professional-aerosol-10-5-denatonium',
+    formulaId: 'biofreeze-pain-relief-spray-10-5-denatonium',
+    brand: 'Biofreeze',
+  });
+  if (
+    !proAerosol?.url.endsWith('/biofreeze-mark.png') ||
+    proAerosol.verifiedSku
+  ) {
+    throw new Error(
+      'Professional aerosol must not inherit the consumer denatonium spray carton',
+    );
   }
 }
 
@@ -1351,6 +1485,7 @@ assertBrandTextTile(
   'AleveX',
 );
 assertBrandTextTile('alevex-pain-relieving-spray', 'AleveX', 'AleveX');
+assertBrandTextTile('aleve-arthritis-pain-gel', 'Aleve', 'Aleve');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1367,35 +1502,21 @@ assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
-assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
-assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
-assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
-assertLetterOnly('biofreeze-gel-3-5-paraben', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-gel-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-roll-on-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-colorless-gel-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-colorless-roll-on-5', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10-5-denatonium', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-aerosol-10-5-denatonium', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10-5', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-spray-10-5', 'Biofreeze');
-assertLetterOnly('biofreeze-precision-relief-pen', 'Biofreeze');
-assertLetterOnly('biofreeze-pain-relief-spray-10', 'Biofreeze');
-assertLetterOnly('biofreeze-professional-spray-13', 'Biofreeze');
-assertLetterOnly('biofreeze-overnight-relief-cream', 'Biofreeze');
-assertLetterOnly('biofreeze-foam', 'Biofreeze');
 assertExactCarton(
   'biofreeze-menthol-patches',
   'Biofreeze',
   'biofreeze-menthol-patches.jpg',
 );
-assertLetterOnly('biofreeze-flexible-relief-strip', 'Biofreeze');
+assertExactCarton(
+  'biofreeze-pain-relief-spray-10-5-denatonium',
+  'Biofreeze',
+  'biofreeze-pain-relief-spray-10-5-denatonium.jpg',
+);
 assertExactCarton(
   'capzasin-hp-arthritis-cream',
   'Capzasin',
   'capzasin-hp-arthritis-cream.jpg',
 );
-assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
 assertExactCarton(
   'bengay-ultra-strength-patch-5',
   'Bengay',
@@ -2303,7 +2424,6 @@ assertExactCarton(
   'Nutricost',
   'nutricost-turmeric-curcumin-2300.jpg',
 );
-assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
