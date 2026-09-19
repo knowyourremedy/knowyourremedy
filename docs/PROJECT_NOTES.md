@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 19, 2026 — Honest=product summary / ingredients=why-or-pending / one Immune tile / Absorbine grade untouched. Display fill only. No barcode factory. No grades. Live missing UPC = 122 (in-store 93 + online 29). ALL-SITE accordion + 11-digit UPC lock still stands.
+Last Updated: September 19, 2026 — Count-tab lock: click every pack-count tab/pill (30 / 50 / 90 / 365) then expand THAT tab’s spec accordion and read the 11- or 12-digit UPC. One page ≠ one UPC. Accordion lock stays. No grades. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29).
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -105,9 +105,13 @@ BRAND-CLOSE WORKFLOW
 - UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
 - Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
 - Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
 - 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
 - KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
-- Official brand site + every tile + every accordion, then DRY.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
 - Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
 - Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
@@ -292,9 +296,13 @@ CATALOG STRATEGY
 - UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
 - Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
 - Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
 - 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
 - KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
-- Official brand site + every tile + every accordion, then DRY.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
 - Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
 - Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
@@ -357,9 +365,13 @@ See SESSION LOCK: LAUNCH WEIGHT / FOUNDER CALLS — MAJORITY RULE / BRAND-CLOSE 
 - UPC hunt lock for ALL current missing rows and ALL future brand/product scans (2026-09-19 founder):
 - Every retailer / brand PDP: expand every collapsed accordion before DRY. Product Specifications, Details, More specs, Product details, Shipping & specs, Nutrition / Supplement facts extra tabs, and any “show more” that can hide identifiers.
 - Do not DRY off first-paint hero + Drug Facts alone.
+- Count-tab lock (all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC.
+- Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit.
+- Do not assume one page = one UPC.
+- Accordion lock stays: every collapsed spec/details/OI tab on every domain.
 - 11-digit retailer UPC is valid input. Walgreens (and some other chains) print GTIN-12 minus check digit in the spec table. Store UPC-A = 11 digits + GS1 check digit. Example: 31191705853 → 311917058535. Same as #232 31191701535 → 311917015354. If the page already shows 12 digits, store those 12 after a check-digit sanity pass.
 - KYR5-d / any barcode attach bot: click or expand all collapsibles on every domain in the hunt (walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, brand sites). Read 12 digits under bars when a barcode image exists. NDC ≠ UPC.
-- Official brand site + every tile + every accordion, then DRY.
+- Official brand site + every tile + every accordion + every count tab, then DRY.
 - Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
 - Founder-logged already on main from #230 (do not re-ask / do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
 - Founder hunt batch69 LANDED (PR #231). Exact print — do not alias. Refused strings stay:
@@ -1140,7 +1152,7 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — live scoreboard after Tiger Balm + Biofreeze founder-lock (Sept 19, 2026)
 ================================================================
-Last Updated: September 19, 2026 — ALL-SITE accordion + 11-digit UPC lock. Expand every collapsed spec/details tab before DRY. Do not DRY off first-paint hero + Drug Facts alone. No Walgreens pack attach until Brandon sends the KYR5-d job. Live missing UPC = 122 (in-store 93 + online 29). Walk list A is a hunt queue only.
+Last Updated: September 19, 2026 — Count-tab lock + ALL-SITE accordion + 11-digit UPC lock. Click every pack-count tab/pill then expand THAT tab’s spec accordion. One page ≠ one UPC. Expand every collapsed spec/details tab before DRY. Do not DRY off first-paint hero + Drug Facts alone. No Walgreens pack attach until Brandon sends the KYR5-d job. Factory #121–#221 stay closed. Live missing UPC = 122 (in-store 93 + online 29). Walk list A is a hunt queue only.
 
 Live query (Search catalog, parked Pedialyte out). A Search row HAS a UPC if barcode/upc has 8+ digits. Do not invent codes. Do not grade.
 - Search rows: 2239
@@ -1152,6 +1164,7 @@ Live query (Search catalog, parked Pedialyte out). A Search row HAS a UPC if bar
 - Sprouts house still STASHED. Unwritten stash ~55 is NOT in this set (no row yet). The 3 Sprouts Search rows below are already-written DRY leftovers, not the unwritten stash.
 - KYR5 factory #121–#221 stay closed. KYR5-d attach-only after founder locks. Hunt-rule only this pass — do not attach the in-progress Walgreens pack list until Brandon sends the KYR5-d job.
 - ALL-SITE accordion lock (2026-09-19): expand every collapsed accordion (Product Specifications / Details / More specs / Product details / Shipping & specs / Nutrition / Supplement facts extra tabs / “show more”) before DRY. Do not DRY off first-paint hero + Drug Facts alone. 11-digit retailer UPC is valid input (GTIN-12 minus check digit). Store UPC-A = 11 digits + GS1 check digit (31191705853 → 311917058535; same as #232 31191701535 → 311917015354). If 12 digits already show, store those 12 after a check-digit sanity pass. Click/expand all collapsibles on walgreens.com, walmart.com, target.com, cvs.com, samsclub.com, dollargeneral.com, amazon.com, and brand sites. Read 12 digits under bars when a barcode image exists. NDC ≠ UPC. Official brand site + every tile + every accordion, then DRY.
+- Count-tab lock (2026-09-19, all sites, current missing + future scans): some PDPs put several pack counts on ONE page as tabs/pills (30 / 50 / 90 / 365). Each count tab swaps the Product Specifications accordion and the UPC. Before DRY: click every count tab, then expand the spec accordion for THAT tab, read the 11- or 12-digit UPC, store UPC-A with check digit. Do not assume one page = one UPC. Accordion lock stays. No grades. Factory #121–#221 stay closed.
 - Do not reopen Boiron 23 hunt.
 - Do not reopen Biofreeze 10% hunt. Founder lock 2026-09-18 night: 4 oz 10% single does not exist on US retail shelf. Merge to 10.5% 359316120200 / 731124000109.
 
@@ -1400,3 +1413,4 @@ Named dry leftovers (do not reopen)
 LIVE QUERY / in-store 93 / online 29 / total 122 / Biofreeze 10% spray named-dry merge to 10.5%.
 ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
 Honest=product summary / ingredients=why-or-pending / one Immune tile / Absorbine grade untouched.
+Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
