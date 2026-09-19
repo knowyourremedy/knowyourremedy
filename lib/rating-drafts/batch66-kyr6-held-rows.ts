@@ -201,6 +201,10 @@ export const BATCH66_CATCHUP_BARCODES: Record<string, string> = {
   // upcitemdb + Kirkland 096619 prefix already used on main (Daily Multi).
   // Costco item 719940 / NDC 63981-986-96 192-ct (2 x 96).
   'kirkland-sleep-aid-doxylamine': '096619857692',
+  // topcarebrand.com + SmartLabel 1 oz IPA 95% / glycerin.
+  'topcare-swimmers-ear': '036800001053',
+  // topcarebrand.com + SmartLabel 0.4 fl oz homeopathic glycerin-only.
+  'topcare-ear-relief': '036800171695',
 };
 
 export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
@@ -241,6 +245,8 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     productName: "TopCare Swimmer's Ear Drops (Isopropyl Alcohol 95%)",
     brand: 'TopCare',
     category: FIRST_AID,
+    // KYR5-d — brand site + SmartLabel 1 oz 036800001053.
+    barcode: BATCH66_CATCHUP_BARCODES['topcare-swimmers-ear'],
     formulaId: SWIM_EAR,
     audience: ADULT,
     form: 'otic',
@@ -262,6 +268,8 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     productName: 'TopCare Ear Relief Ear Drops',
     brand: 'TopCare',
     category: FIRST_AID,
+    // KYR5-d — brand site + SmartLabel 0.4 fl oz 036800171695.
+    barcode: BATCH66_CATCHUP_BARCODES[TC_EAR_RELIEF],
     formulaId: TC_EAR_RELIEF,
     audience: ADULT,
     minAge: 12,

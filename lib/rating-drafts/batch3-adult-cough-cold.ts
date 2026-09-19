@@ -147,6 +147,12 @@ const BATCH3_CATCHUP_BARCODES: Record<string, string> = {
   // KYR5-c barcode-tile chunk 3 — adult ColdCalm tablets (Walmart /
   // upcitemdb 306969048290). Do not steal kids 60-ct 306962607609.
   'coldcalm-meltaways': '306969048290',
+  // Target PDP A-90515920 primary_barcode + upcitemdb exact pack.
+  // 12 fl oz honey daytime (APAP 325 / DXM 10 / guaif 200 / PE 5 per
+  // 15 mL). Drug Facts inactives match DailyMed setid 29da4b94
+  // (Yellow #10 / Green #3 / Red #40 / Yellow #6). Not day/night
+  // combo 311673328026 / not original daytime 11046966.
+  'upup-daytime-honey-cold-flu': '370030117369',
 };
 
 export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
@@ -1754,6 +1760,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     productName: 'up&up Daytime Honey Cold & Flu',
     brand: 'up&up',
     category: COLD_FLU,
+    barcode: BATCH3_CATCHUP_BARCODES['upup-daytime-honey-cold-flu'],
     formulaId: 'upup-daytime-honey-cold-flu',
     audience: ADULT,
     minAge: 12,

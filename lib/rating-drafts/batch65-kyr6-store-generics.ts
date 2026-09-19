@@ -318,6 +318,42 @@ const L484_NOTE =
 export const BATCH65_CATCHUP_BARCODES: Record<string, string> = {
   // Dollar General PDP path /p/.../370030118014 — store barcode tile, not the NDC.
   'dg-health-mucus-er-max-dyefree': '370030118014',
+  // KYR5-d founder-lock + Walgreens count-tab / upcitemdb exact pack.
+  // Cetirizine film-coated 10 mg (one Search row; do not invent count rows).
+  // 30=311917058535 45=311917058542 60=311917058566 90=311917058559
+  // 150=311917058573 365=311917058597. Founder 5-ct 311917040366 fails
+  // UPC-A check; 11-digit 31191704036 → 311917040363 is the 14-ct twin
+  // (not 5). Do not attach 5 / 14.
+  'walgreens-allergy-relief-cetirizine':
+    '311917058535 311917058542 311917058566 311917058559 311917058573 311917058597',
+  // Loratadine 10 mg Free & Pure tablets. Founder 365=311917058528.
+  // Founder 30=311917045145 / 45=311917045176 are 11-digit retailer
+  // codes + bad check; store UPC-A 311917045146 (30) / 311917045177 (45).
+  // Founder 5=311917041276 / 10 dye-free=311917041252 fail check and
+  // do not map to those counts (04127→45 already attached; 04125→20-ct
+  // dye-free, not 10). Do not invent 5 / 10 rows.
+  'walgreens-allergy-relief-loratadine':
+    '311917045146 311917045177 311917058528',
+  // Nighttime Sleep Aid Liquid Berry (dyed). 6 fl oz=311917188188 /
+  // 12 fl oz=311917047614. Not dye-free 311917169149.
+  'walgreens-sleep-aid-liquid-dyed': '311917188188 311917047614',
+  // Dye-Free Sleep Aid Liquid Berry 12 fl oz (ex-Wal-Sleep Z name).
+  'walgreens-sleep-z-dyefree': '311917169149',
+  // Famotidine 20 mg Max Strength 50-ct. Founder 11-digit 31191701015
+  // → UPC-A 311917010151.
+  'walgreens-famotidine-20': '311917010151',
+  // Palletfly gtin12 + upcitemdb exact pack — GoodSense Extra Strength
+  // Pain Relief APAP 500-ct caplets (NDC 0113-0484-90 / imprint L484).
+  // Valid UPC-A 301130484907. Not Rapid Release 301130025780 /
+  // 301130025711 (different form). Not the dyed / talc / TiO2 twin.
+  'goodsense-es-pain-relief-l484': '301130484907',
+  // topcarebrand.com + SmartLabel exact pack (not Albertsons first-paint).
+  // Original Eye Drops tetrahydrozoline 0.05% 0.5 fl oz — NDC 36800-858.
+  'topcare-original-eye-drops': '036800036390',
+  // Sleep Aid Nighttime DPH 25 mg film-coated 100-ct — SmartLabel
+  // fb5d4cba / NDC 36800-431. Not 48-ct BHA/talc 036800092341 and
+  // not doxylamine 32-ct 036800192348.
+  'topcare-sleep-aid-dph': '036800327405',
 };
 
 export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
@@ -381,6 +417,10 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'Walgreens Allergy Relief (Loratadine 10 mg)',
     brand: 'Walgreens',
     category: ALLERGY,
+    // KYR5-d founder-lock — Free & Pure 10 mg tablets. 30 / 45 / 365
+    // count tabs only (valid UPC-A). Not ODT 31191720011. Not 5-ct /
+    // not 10-ct dye-free (founder strings fail check / wrong count).
+    barcode: BATCH65_CATCHUP_BARCODES[WALGREENS_LORATADINE],
     formulaId: L612_FORMULA,
     audience: ADULT,
     minAge: 6,
@@ -408,6 +448,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'GoodSense Extra Strength Pain Relief (Acetaminophen 500 mg, L484)',
     brand: 'GoodSense',
     category: PAIN_FEVER,
+    barcode: BATCH65_CATCHUP_BARCODES['goodsense-es-pain-relief-l484'],
     formulaId: L484_FORMULA,
     audience: ADULT,
     minAge: 12,
@@ -643,6 +684,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'TopCare Health Original Eye Drops (Tetrahydrozoline 0.05%)',
     brand: 'TopCare',
     category: ALLERGY,
+    // KYR5-d — brand site + SmartLabel 0.5 fl oz 036800036390.
+    barcode: BATCH65_CATCHUP_BARCODES['topcare-original-eye-drops'],
     formulaId: 'topcare-original-eye-drops',
     audience: ADULT,
     minAge: 6,
@@ -673,6 +716,10 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'Walgreens Allergy Relief (Cetirizine 10 mg)',
     brand: 'Walgreens',
     category: ALLERGY,
+    // KYR5-d founder-lock — film-coated 10 mg count tabs 30/45/60/90/
+    // 150/365. Not 5-ct (founder 311917040366 fails check; 11-digit
+    // maps to 14-ct). Not dissolving 31191704498.
+    barcode: BATCH65_CATCHUP_BARCODES['walgreens-allergy-relief-cetirizine'],
     formulaId: COATED_CETIRIZINE,
     audience: ADULT,
     minAge: 6,
@@ -703,6 +750,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'TopCare Sleep Aid Nighttime (Diphenhydramine 25 mg)',
     brand: 'TopCare',
     category: SLEEP,
+    // KYR5-d — SmartLabel 100-ct DPH 25 mg 036800327405.
+    barcode: BATCH65_CATCHUP_BARCODES['topcare-sleep-aid-dph'],
     formulaId: DPH_SLEEP_COAT,
     audience: ADULT,
     minAge: 12,
@@ -813,6 +862,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'Walgreens Nighttime Sleep Aid Liquid (Diphenhydramine 50 mg / 30 mL)',
     brand: 'Walgreens',
     category: SLEEP,
+    // KYR5-d founder-lock — dyed Berry liquid. 6 fl oz / 12 fl oz.
+    barcode: BATCH65_CATCHUP_BARCODES['walgreens-sleep-aid-liquid-dyed'],
     formulaId: 'walgreens-sleep-aid-liquid-dyed',
     audience: ADULT,
     minAge: 12,
@@ -844,6 +895,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'Walgreens Dye-Free Wal-Sleep Z (Diphenhydramine 50 mg / 30 mL)',
     brand: 'Walgreens',
     category: SLEEP,
+    // KYR5-d founder-lock — dye-free Berry 12 fl oz (ex-Wal-Sleep Z).
+    barcode: BATCH65_CATCHUP_BARCODES['walgreens-sleep-z-dyefree'],
     formulaId: SLEEP_LIQUID_DF,
     audience: ADULT,
     minAge: 12,
@@ -906,6 +959,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'Walgreens Famotidine 20 mg',
     brand: 'Walgreens',
     category: DIGESTIVE,
+    // KYR5-d founder-lock — Max Strength 50-ct. 11-digit 31191701015.
+    barcode: BATCH65_CATCHUP_BARCODES['walgreens-famotidine-20'],
     formulaId: 'walgreens-famotidine-20',
     audience: ADULT,
     minAge: 12,
