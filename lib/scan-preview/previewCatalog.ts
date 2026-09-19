@@ -303,6 +303,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aspercreme-lidocaine-rosemary-mint': brandMark('aspercreme-mark.png'),
   'aspercreme-lidocaine-xl-patch': brandMark('aspercreme-mark.png'),
   'salonpas-arthritis-pain-patch-large': brandMark('salonpas-mark.png'),
+  // Batch 2 attempted leftovers — no matching carton. Per-id only.
+  'absorbine-jr-pro-spray': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-plus-ultra-patch': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-xl-back-patch': brandMark('absorbine-jr-mark.png'),
+  'absorbine-jr-plus-knee-patch': brandMark('absorbine-jr-mark.png'),
+  'qunol-extra-strength-turmeric-1500-oleoresin': brandMark('qunol-mark.png'),
+  'motrin-arthritis-pain-gel': brandMark('motrin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -344,6 +351,12 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basic-care-kids-apap-dyefree': 'Basic Care',
   // Shop PDP photo is Joint Support + Turmeric — not Inflacalm Ache Relief.
   'sprouts-inflacalm-ache-relief': 'Sprouts',
+  // Attempted P&F leftovers — no official US carton / no standalone mark file.
+  'flexall-max-strength-gel': 'Flexall',
+  'midol-complete': 'Midol',
+  'now-turmeric-curcumin-bioperine': 'NOW',
+  'gol-mykind-turmeric-inflammatory-gummies': 'Garden of Life',
+  'organic-india-turmeric-formula': 'Organic India',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -987,6 +1000,50 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-devils-claw-secondary-root': catalogShot(
     'natures-way-devils-claw-secondary-root.jpg',
   ),
+  'biofreeze-colorless-gel-4': catalogShot('biofreeze-colorless-gel-4.jpg'),
+  // Shares formulaId with the colorless gel — do not inherit the tube face.
+  'biofreeze-colorless-roll-on-4': brandMark('biofreeze-mark.png'),
+  'naturewise-curcumin-turmeric-2250': catalogShot(
+    'naturewise-curcumin-turmeric-2250.jpg',
+  ),
+  'oregons-wild-harvest-turmeric': catalogShot(
+    'oregons-wild-harvest-turmeric.jpg',
+  ),
+  'life-flo-pure-magnesium-oil': catalogShot('life-flo-pure-magnesium-oil.jpg'),
+  'absorbine-jr-plus-es-liquid': catalogShot(
+    'absorbine-jr-plus-es-liquid.jpg',
+  ),
+  // Shares formulaId with Plus ES liquid (menthol 4%). Current absorbinejr.com
+  // PRO roll-on is lidocaine + phenol — do not glue.
+  'absorbine-jr-pro-roll-on-liquid': brandMark('absorbine-jr-mark.png'),
+  'mineral-ice-extreme-gel': catalogShot('mineral-ice-extreme-gel.jpg'),
+  'mineral-ice-extreme-menthol-spray': catalogShot(
+    'mineral-ice-extreme-menthol-spray.jpg',
+  ),
+  'mineral-ice-extreme-dry-stick': catalogShot(
+    'mineral-ice-extreme-dry-stick.jpg',
+  ),
+  'codeage-liposomal-turmeric': catalogShot('codeage-liposomal-turmeric.jpg'),
+  'asutra-melt-pain-away': catalogShot('asutra-melt-pain-away.jpg'),
+  'life-flo-magnesium-lotion-vanilla': catalogShot(
+    'life-flo-magnesium-lotion-vanilla.jpg',
+  ),
+  'life-flo-magnesium-lotion-unscented': catalogShot(
+    'life-flo-magnesium-lotion-unscented.jpg',
+  ),
+  'doctors-best-high-absorption-curcumin-1000': catalogShot(
+    'doctors-best-high-absorption-curcumin-1000.jpg',
+  ),
+  'sports-research-turmeric-curcumin': catalogShot(
+    'sports-research-turmeric-curcumin.jpg',
+  ),
+  'australian-dream-arthritis-cream': catalogShot(
+    'australian-dream-arthritis-cream.jpg',
+  ),
+  'mineral-ice-original-gel-2': catalogShot('mineral-ice-original-gel-2.jpg'),
+  'nutricost-turmeric-curcumin-2300': catalogShot(
+    'nutricost-turmeric-curcumin-2300.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1091,6 +1148,47 @@ assertBrandMark('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme', 'aspercre
 assertBrandMark('aspercreme-lidocaine-rosemary-mint', 'Aspercreme', 'aspercreme-mark.png');
 assertBrandMark('aspercreme-lidocaine-xl-patch', 'Aspercreme', 'aspercreme-mark.png');
 assertBrandMark('salonpas-arthritis-pain-patch-large', 'Salonpas', 'salonpas-mark.png');
+assertBrandMark('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-xl-back-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark('absorbine-jr-plus-knee-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark(
+  'qunol-extra-strength-turmeric-1500-oleoresin',
+  'Qunol',
+  'qunol-mark.png',
+);
+assertBrandMark('motrin-arthritis-pain-gel', 'Motrin', 'motrin-mark.png');
+assertBrandMark('biofreeze-colorless-roll-on-4', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'absorbine-jr-pro-roll-on-liquid',
+  'Absorbine Jr.',
+  'absorbine-jr-mark.png',
+);
+
+{
+  const colorlessRoll = previewOverlayImage({
+    id: 'biofreeze-colorless-roll-on-4',
+    formulaId: 'biofreeze-colorless-gel-4',
+    brand: 'Biofreeze',
+  });
+  if (
+    !colorlessRoll?.url.endsWith('/biofreeze-mark.png') ||
+    colorlessRoll.verifiedSku
+  ) {
+    throw new Error('colorless roll-on must not inherit the gel carton');
+  }
+  const proRoll = previewOverlayImage({
+    id: 'absorbine-jr-pro-roll-on-liquid',
+    formulaId: 'absorbine-jr-plus-es-liquid',
+    brand: 'Absorbine Jr.',
+  });
+  if (
+    !proRoll?.url.endsWith('/absorbine-jr-mark.png') ||
+    proRoll.verifiedSku
+  ) {
+    throw new Error('PRO roll-on must not inherit the Plus ES liquid carton');
+  }
+}
 
 // Remaining later-catalog P&F leftovers stay letters until attempted.
 
@@ -1159,6 +1257,19 @@ assertBrandTextTile('amazon-basic-care-ibuprofen-liqui-gels', 'Amazon Basic Care
 assertBrandTextTile('amazon-basic-care-infants-ibuprofen', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('amazon-basic-care-kids-apap-dyefree', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('sprouts-inflacalm-ache-relief', 'Sprouts', 'Sprouts');
+assertBrandTextTile('flexall-max-strength-gel', 'Flexall', 'Flexall');
+assertBrandTextTile('midol-complete', 'Midol', 'Midol');
+assertBrandTextTile('now-turmeric-curcumin-bioperine', 'NOW', 'NOW');
+assertBrandTextTile(
+  'gol-mykind-turmeric-inflammatory-gummies',
+  'Garden of Life',
+  'Garden of Life',
+);
+assertBrandTextTile(
+  'organic-india-turmeric-formula',
+  'Organic India',
+  'Organic India',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1178,9 +1289,6 @@ assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
 assertLetterOnly('tiger-balm-cool-patch', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-regular-hydrogel', 'Tiger Balm');
 assertLetterOnly('tiger-balm-pain-relieving-patch-wider-hydrogel', 'Tiger Balm');
-assertLetterOnly('mineral-ice-extreme-menthol-spray', 'Mineral Ice');
-assertLetterOnly('biofreeze-colorless-gel-4', 'Biofreeze');
-assertLetterOnly('biofreeze-colorless-roll-on-4', 'Biofreeze');
 assertLetterOnly('biofreeze-gel-3-5-paraben', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-gel-5', 'Biofreeze');
 assertLetterOnly('biofreeze-professional-roll-on-5', 'Biofreeze');
@@ -1206,37 +1314,23 @@ assertExactCarton(
   'Capzasin',
   'capzasin-hp-arthritis-cream.jpg',
 );
-assertLetterOnly('mineral-ice-extreme-gel', 'Mineral Ice');
-assertLetterOnly('mineral-ice-extreme-dry-stick', 'Mineral Ice');
-assertLetterOnly('absorbine-jr-plus-es-liquid', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-roll-on-liquid', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-pro-spray', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-xl-back-patch', 'Absorbine Jr.');
-assertLetterOnly('absorbine-jr-plus-knee-patch', 'Absorbine Jr.');
 assertLetterOnly('biofreeze-foot-cream', 'Biofreeze');
 assertExactCarton(
   'bengay-ultra-strength-patch-5',
   'Bengay',
   'bengay-ultra-strength-patch-5.jpg',
 );
-assertLetterOnly('mineral-ice-original-gel-2', 'Mineral Ice');
 assertExactCarton(
   'ollois-arnica-montana-12c',
   'Ollois',
   'ollois-arnica-montana-12c.jpg',
 );
-assertLetterOnly('oregons-wild-harvest-turmeric', "Oregon's Wild Harvest");
-assertLetterOnly('organic-india-turmeric-formula', 'Organic India');
-assertLetterOnly('sports-research-turmeric-curcumin', 'Sports Research');
 assertLetterOnly('thrive-wellmade-turmeric', 'wellmade by Thrive Market');
 assertExactCarton(
   'new-chapter-turmeric-force',
   'New Chapter',
   'new-chapter-turmeric-force.jpg',
 );
-assertLetterOnly('codeage-liposomal-turmeric', 'Codeage');
-assertLetterOnly('life-flo-pure-magnesium-oil', 'Life-flo');
 assertExactCarton(
   'gaia-turmeric-supreme-extra-strength',
   'Gaia Herbs',
@@ -1244,13 +1338,6 @@ assertExactCarton(
 );
 assertLetterOnly('thorne-curcumin-phytosome-500', 'Thorne');
 assertLetterOnly('thorne-curcumin-phytosome-1000', 'Thorne');
-assertLetterOnly(
-  'gol-mykind-turmeric-inflammatory-gummies',
-  'Garden of Life',
-);
-assertLetterOnly('life-flo-magnesium-lotion-vanilla', 'Life-flo');
-assertLetterOnly('life-flo-magnesium-lotion-unscented', 'Life-flo');
-assertLetterOnly('asutra-melt-pain-away', 'Asutra');
 assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
 assertLetterOnly('goodsense-naproxen-220', 'GoodSense');
 assertLetterOnly('timecap-naproxen-220', 'TIME-Cap Labs');
@@ -1261,9 +1348,6 @@ assertExactCarton(
   'mommys-bliss-infants-pain-fever.jpg',
 );
 assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
-assertLetterOnly('nutricost-turmeric-curcumin-2300', 'Nutricost');
-assertLetterOnly('now-turmeric-curcumin-bioperine', 'NOW');
-assertLetterOnly('doctors-best-high-absorption-curcumin-1000', "Doctor's Best");
 assertExactCarton(
   'qunol-extra-strength-turmeric-1500',
   'Qunol',
@@ -1276,17 +1360,14 @@ assertExactCarton(
 );
 assertLetterOnly('healthwise-lidocaine-4-patch', 'HealthWise');
 assertLetterOnly('welmate-lidocaine-4-patch-parabens', 'WELMATE');
-assertLetterOnly('naturewise-curcumin-turmeric-2250', 'NatureWise');
 assertLetterOnly('goodsense-dual-action', 'GoodSense');
 assertLetterOnly('healtha2z-ibuprofen-200-335', 'HealthA2Z');
 assertLetterOnly('goodsense-childrens-ibuprofen-chew', 'GoodSense');
 assertLetterOnly('goodsense-ibuprofen-liquid-gels', 'GoodSense');
-assertLetterOnly('midol-complete', 'Midol');
 assertLetterOnly('amazon-basics-lidocaine-4-patch', 'Amazon Basics');
 assertLetterOnly('welmate-lidocaine-4-patch-ethylhexyl', 'WELMATE');
 assertLetterOnly('amazon-basic-care-ibuprofen-iron-oxide-yellow', 'Amazon Basic Care');
 assertLetterOnly('amazon-basics-ibuprofen-iron-oxide-yellow', 'Amazon Basics');
-assertLetterOnly('qunol-extra-strength-turmeric-1500-oleoresin', 'Qunol');
 assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
 assertLetterOnly('aplus-health-dual-action', 'A+Health');
 assertExactCarton(
@@ -1299,7 +1380,6 @@ assertExactCarton(
   'Stopain',
   'stopain-extra-strength-roll-on.jpg',
 );
-assertLetterOnly('flexall-max-strength-gel', 'Flexall');
 assertLetterOnly('healtha2z-childrens-apap-chew', 'HealthA2Z');
 assertLetterOnly('timecap-ibuprofen-200', 'TIME-Cap Labs');
 assertExactCarton(
@@ -1308,7 +1388,6 @@ assertExactCarton(
   'mentholatum-original.jpg',
 );
 assertLetterOnly('sumifun-lidocaine-4-patch', 'Sumifun');
-assertLetterOnly('australian-dream-arthritis-cream', 'Australian Dream');
 assertLetterOnly('amazon-elements-turmeric-complex', 'Amazon Elements');
 assertExactCarton(
   'jointflex-pain-relief-cream',
@@ -2051,7 +2130,91 @@ assertExactCarton(
   "Nature's Way",
   'natures-way-devils-claw-secondary-root.jpg',
 );
-assertLetterOnly('motrin-arthritis-pain-gel', 'Motrin');
+assertExactCarton(
+  'biofreeze-colorless-gel-4',
+  'Biofreeze',
+  'biofreeze-colorless-gel-4.jpg',
+);
+assertExactCarton(
+  'naturewise-curcumin-turmeric-2250',
+  'NatureWise',
+  'naturewise-curcumin-turmeric-2250.jpg',
+);
+assertExactCarton(
+  'oregons-wild-harvest-turmeric',
+  "Oregon's Wild Harvest",
+  'oregons-wild-harvest-turmeric.jpg',
+);
+assertExactCarton(
+  'life-flo-pure-magnesium-oil',
+  'Life-flo',
+  'life-flo-pure-magnesium-oil.jpg',
+);
+assertExactCarton(
+  'absorbine-jr-plus-es-liquid',
+  'Absorbine Jr.',
+  'absorbine-jr-plus-es-liquid.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-gel',
+  'Mineral Ice',
+  'mineral-ice-extreme-gel.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-menthol-spray',
+  'Mineral Ice',
+  'mineral-ice-extreme-menthol-spray.jpg',
+);
+assertExactCarton(
+  'mineral-ice-extreme-dry-stick',
+  'Mineral Ice',
+  'mineral-ice-extreme-dry-stick.jpg',
+);
+assertExactCarton(
+  'codeage-liposomal-turmeric',
+  'Codeage',
+  'codeage-liposomal-turmeric.jpg',
+);
+assertExactCarton(
+  'asutra-melt-pain-away',
+  'Asutra',
+  'asutra-melt-pain-away.jpg',
+);
+assertExactCarton(
+  'life-flo-magnesium-lotion-vanilla',
+  'Life-flo',
+  'life-flo-magnesium-lotion-vanilla.jpg',
+);
+assertExactCarton(
+  'life-flo-magnesium-lotion-unscented',
+  'Life-flo',
+  'life-flo-magnesium-lotion-unscented.jpg',
+);
+assertExactCarton(
+  'doctors-best-high-absorption-curcumin-1000',
+  "Doctor's Best",
+  'doctors-best-high-absorption-curcumin-1000.jpg',
+);
+assertExactCarton(
+  'sports-research-turmeric-curcumin',
+  'Sports Research',
+  'sports-research-turmeric-curcumin.jpg',
+);
+assertExactCarton(
+  'australian-dream-arthritis-cream',
+  'Australian Dream',
+  'australian-dream-arthritis-cream.jpg',
+);
+assertExactCarton(
+  'mineral-ice-original-gel-2',
+  'Mineral Ice',
+  'mineral-ice-original-gel-2.jpg',
+);
+assertExactCarton(
+  'nutricost-turmeric-curcumin-2300',
+  'Nutricost',
+  'nutricost-turmeric-curcumin-2300.jpg',
+);
 assertLetterOnly('aleve-arthritis-pain-gel', 'Aleve');
 
 const exactWins = previewOverlayImage({
