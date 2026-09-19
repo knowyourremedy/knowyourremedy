@@ -350,6 +350,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'biofreeze-foam': brandMark('biofreeze-mark.png'),
   'biofreeze-flexible-relief-strip': brandMark('biofreeze-mark.png'),
   'biofreeze-foot-cream': brandMark('biofreeze-mark.png'),
+  // Batch leftovers — DailyMed faces are 2D dielines / minis, not 3D
+  // packshots. Official GoodSense wordmark from goodsense.com (Perrigo).
+  // Per-id only so other-aisle GoodSense rows stay letters.
+  'goodsense-naproxen-220': brandMark('goodsense-mark.png'),
+  'goodsense-dual-action': brandMark('goodsense-mark.png'),
+  'goodsense-childrens-ibuprofen-chew': brandMark('goodsense-mark.png'),
+  'goodsense-ibuprofen-liquid-gels': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -419,6 +426,19 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted leftover — aleve.com 403; DailyMed arthritis gel faces are
   // 2D dielines, not a 3D packshot. No standalone official mark file.
   'aleve-arthritis-pain-gel': 'Aleve',
+  // Attempted P&F leftovers — DailyMed hits are 2D dielines / label flats,
+  // not 3D packshots. No standalone official mark file on a brand site.
+  'timecap-naproxen-220': 'TIME-Cap',
+  'healtha2z-ibuprofen-200-382': 'HealthA2Z',
+  'healthwise-lidocaine-4-patch': 'HealthWise',
+  'welmate-lidocaine-4-patch-parabens': 'WELMATE',
+  'healtha2z-ibuprofen-200-335': 'HealthA2Z',
+  'amazon-basics-lidocaine-4-patch': 'Amazon Basics',
+  'welmate-lidocaine-4-patch-ethylhexyl': 'WELMATE',
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow': 'Basic Care',
+  'amazon-basics-ibuprofen-iron-oxide-yellow': 'Amazon Basics',
+  'aplus-health-dual-action-oxides': 'A+Health',
+  'aplus-health-dual-action': 'A+Health',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1122,6 +1142,20 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'biofreeze-professional-aerosol-10-5-denatonium': brandMark(
     'biofreeze-mark.png',
   ),
+  // Official brand / store PDP 3D packshots for attempted leftovers.
+  'thrive-wellmade-turmeric': catalogShot('thrive-wellmade-turmeric.jpg'),
+  'thorne-curcumin-phytosome-500': catalogShot(
+    'thorne-curcumin-phytosome-500.jpg',
+  ),
+  'thorne-curcumin-phytosome-1000': catalogShot(
+    'thorne-curcumin-phytosome-1000.jpg',
+  ),
+  'asutra-melt-pain-away-thrive': catalogShot(
+    'asutra-melt-pain-away-thrive.jpg',
+  ),
+  'bioschwartz-turmeric-curcumin-1500': catalogShot(
+    'bioschwartz-turmeric-curcumin-1500.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1340,6 +1374,22 @@ assertBrandMark(
   'biofreeze-mark.png',
 );
 assertBrandMark('biofreeze-foot-cream', 'Biofreeze', 'biofreeze-mark.png');
+assertBrandMark(
+  'goodsense-naproxen-220',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertBrandMark('goodsense-dual-action', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark(
+  'goodsense-childrens-ibuprofen-chew',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertBrandMark(
+  'goodsense-ibuprofen-liquid-gels',
+  'GoodSense',
+  'goodsense-mark.png',
+);
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -1486,6 +1536,53 @@ assertBrandTextTile(
 );
 assertBrandTextTile('alevex-pain-relieving-spray', 'AleveX', 'AleveX');
 assertBrandTextTile('aleve-arthritis-pain-gel', 'Aleve', 'Aleve');
+assertBrandTextTile('timecap-naproxen-220', 'TIME-Cap Labs', 'TIME-Cap');
+assertBrandTextTile(
+  'healtha2z-ibuprofen-200-382',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'healthwise-lidocaine-4-patch',
+  'HealthWise',
+  'HealthWise',
+);
+assertBrandTextTile(
+  'welmate-lidocaine-4-patch-parabens',
+  'WELMATE',
+  'WELMATE',
+);
+assertBrandTextTile(
+  'healtha2z-ibuprofen-200-335',
+  'HealthA2Z',
+  'HealthA2Z',
+);
+assertBrandTextTile(
+  'amazon-basics-lidocaine-4-patch',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'welmate-lidocaine-4-patch-ethylhexyl',
+  'WELMATE',
+  'WELMATE',
+);
+assertBrandTextTile(
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basics-ibuprofen-iron-oxide-yellow',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'aplus-health-dual-action-oxides',
+  'A+Health',
+  'A+Health',
+);
+assertBrandTextTile('aplus-health-dual-action', 'A+Health', 'A+Health');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -1527,7 +1624,11 @@ assertExactCarton(
   'Ollois',
   'ollois-arnica-montana-12c.jpg',
 );
-assertLetterOnly('thrive-wellmade-turmeric', 'wellmade by Thrive Market');
+assertExactCarton(
+  'thrive-wellmade-turmeric',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-turmeric.jpg',
+);
 assertExactCarton(
   'new-chapter-turmeric-force',
   'New Chapter',
@@ -1538,18 +1639,31 @@ assertExactCarton(
   'Gaia Herbs',
   'gaia-turmeric-supreme-extra-strength.jpg',
 );
-assertLetterOnly('thorne-curcumin-phytosome-500', 'Thorne');
-assertLetterOnly('thorne-curcumin-phytosome-1000', 'Thorne');
-assertLetterOnly('asutra-melt-pain-away-thrive', 'Asutra');
-assertLetterOnly('goodsense-naproxen-220', 'GoodSense');
-assertLetterOnly('timecap-naproxen-220', 'TIME-Cap Labs');
-assertLetterOnly('healtha2z-ibuprofen-200-382', 'HealthA2Z');
+assertExactCarton(
+  'thorne-curcumin-phytosome-500',
+  'Thorne',
+  'thorne-curcumin-phytosome-500.jpg',
+);
+assertExactCarton(
+  'thorne-curcumin-phytosome-1000',
+  'Thorne',
+  'thorne-curcumin-phytosome-1000.jpg',
+);
+assertExactCarton(
+  'asutra-melt-pain-away-thrive',
+  'Asutra',
+  'asutra-melt-pain-away-thrive.jpg',
+);
 assertExactCarton(
   'mommys-bliss-infants-pain-fever',
   "Mommy's Bliss",
   'mommys-bliss-infants-pain-fever.jpg',
 );
-assertLetterOnly('bioschwartz-turmeric-curcumin-1500', 'BioSchwartz');
+assertExactCarton(
+  'bioschwartz-turmeric-curcumin-1500',
+  'BioSchwartz',
+  'bioschwartz-turmeric-curcumin-1500.jpg',
+);
 assertExactCarton(
   'qunol-extra-strength-turmeric-1500',
   'Qunol',
@@ -1560,18 +1674,6 @@ assertExactCarton(
   'Qunol',
   'qunol-extra-strength-turmeric-1000.jpg',
 );
-assertLetterOnly('healthwise-lidocaine-4-patch', 'HealthWise');
-assertLetterOnly('welmate-lidocaine-4-patch-parabens', 'WELMATE');
-assertLetterOnly('goodsense-dual-action', 'GoodSense');
-assertLetterOnly('healtha2z-ibuprofen-200-335', 'HealthA2Z');
-assertLetterOnly('goodsense-childrens-ibuprofen-chew', 'GoodSense');
-assertLetterOnly('goodsense-ibuprofen-liquid-gels', 'GoodSense');
-assertLetterOnly('amazon-basics-lidocaine-4-patch', 'Amazon Basics');
-assertLetterOnly('welmate-lidocaine-4-patch-ethylhexyl', 'WELMATE');
-assertLetterOnly('amazon-basic-care-ibuprofen-iron-oxide-yellow', 'Amazon Basic Care');
-assertLetterOnly('amazon-basics-ibuprofen-iron-oxide-yellow', 'Amazon Basics');
-assertLetterOnly('aplus-health-dual-action-oxides', 'A+Health');
-assertLetterOnly('aplus-health-dual-action', 'A+Health');
 assertExactCarton(
   'qunol-zero-sugar-turmeric-gummies',
   'Qunol',
