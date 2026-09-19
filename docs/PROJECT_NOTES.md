@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 19, 2026 — ALL-SITE accordion + 11-digit UPC lock. Expand every collapsed spec/details tab before DRY. Do not DRY off first-paint hero + Drug Facts alone. No Walgreens pack attach until Brandon sends the KYR5-d job. Live missing UPC = 122 (in-store 93 + online 29). Walk list A is a hunt queue only.
+Last Updated: September 19, 2026 — Honest=product summary / ingredients=why-or-pending / one Immune tile / Absorbine grade untouched. Display fill only. No barcode factory. No grades. Live missing UPC = 122 (in-store 93 + online 29). ALL-SITE accordion + 11-digit UPC lock still stands.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -154,14 +154,14 @@ POST-SCAN (locked template)
 - Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
 - Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
-- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary on the three preview SKUs. Not methodology jargon.
-- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared.
+- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary only — how THIS product got Clean / Usable / Not clean. One driver only if that driver is the whole grade. Never paste the full inactive list into Honest. Founder-lock dumps stay in draft files; display fill does not restage. Absorbine Jr. PRO Cream stays Avoid (Not clean) — methylparaben. Not methodology jargon.
+- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared. Ingredient panel ≠ label dump. Label / DailyMed not reviewed on that ingredient → “Pending DailyMed review”. Reviewed + Clean → one-line why it stayed Clean. Reviewed + Usable / Not clean → one-line why (fact, not “unsafe”).
 - Cleaner carousel on Usable + Not clean only (internal caution + avoid). Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
 - No Overview tab. No Photos tab.
 
 SEARCH (locked)
 - Empty: search field + 2-column use-category TILES.
-- Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Prenatal is its own tile (not stuffed only under Vitamins).
+- Use categories only. Homeopathic is NOT a shelf. Allergy + Allergies = one Allergies tile. Immune + Immune Support = one Immune Support tile (Immune aliases to the same bucket / same query). Do not add categories. Prenatal is its own tile (not stuffed only under Vitamins).
 - Pain rubs live under Pain & Fever with the swallow SKUs. Wound care / antibiotic ointment stays First Aid. Do not invent a third “Topical” aisle.
 - Tap category: A–Z list; tiles become a thin chip row; then Clean/Usable/Not clean filter chips (multi). Type further filters that list.
 - Type from the FIRST letter with NO category: matches by name/brand, cap ~35, “Keep typing to narrow” if more exist; hide category chips AND hide verdict chips.
@@ -413,7 +413,7 @@ Honest always. Every flagged or context-scoped inactive needs a plain-language w
 - Vague label (unspecified rice extract, unnamed flavor class, undisclosed caramel class, etc.): say the label did not name the form/class, so we mark Caution until it does. Named locked forms stay whatever §5 says.
 - Vague vs named twins: when two label strings look related but grade differently (named hull vs “rice extract”; paprika extract vs “color added”; citrus extract vs lemon oil; seed oil in gummy vs capsule/drop), the vague twin’s tap must explain the named twin. Honest always.
 - Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
-Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story.
+Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story. Ingredient taps: not reviewed → “Pending DailyMed review”; reviewed + Clean → one-line why Clean; reviewed + Usable / Not clean → one-line why (fact, not “unsafe”). Never invert those two fields (Absorbine Jr. PRO Cream was the example — display fill only; verdict stays Avoid).
 
 Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Limited opacity + the vague-form tap sentence.
 
@@ -1399,3 +1399,4 @@ Named dry leftovers (do not reopen)
 
 LIVE QUERY / in-store 93 / online 29 / total 122 / Biofreeze 10% spray named-dry merge to 10.5%.
 ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
+Honest=product summary / ingredients=why-or-pending / one Immune tile / Absorbine grade untouched.

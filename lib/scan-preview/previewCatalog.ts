@@ -70,7 +70,7 @@ import {
   BATCH68_KYR6_FOUNDER_PANELS,
   BATCH69_KYR6_STORE_PANELS,
 } from '@/lib/rating-drafts';
-import type { Verdict } from '@/lib/clean-picks/verdictLabels';
+import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
@@ -208,7 +208,7 @@ const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
   [PREVIEW_USABLE_ID]:
     'This Gold tablet is Usable, not Clean, because it uses mannitol — a sugar alcohol that can bother the gut at volume. Magnesium stearate is cleared, and the formula is aspirin-free. Labeled for ages 12 and up. Fine in moderation for occasional heartburn; pause if sugar alcohols upset your stomach.',
   [PREVIEW_AVOID_ID]:
-    'This Assorted Fruit chew is Avoid because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
+    'This Assorted Fruit chew is Not clean because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
 };
 
 // Preview-only catalog pack shots. Does not edit draft rows.
@@ -1192,13 +1192,72 @@ export function previewOverlayImage(
   );
 }
 
+function formWord(record: Pick<RatingRecord, 'form'>): string {
+  const form = (record.form ?? '').trim().toLowerCase();
+  return form || 'product';
+}
+
+function flaggedNames(record: RatingRecord, level: RiskLevel): string[] {
+  return (record.inactiveIngredients ?? [])
+    .filter((ingredient) => ingredient.riskLevel === level)
+    .map((ingredient) => ingredient.name);
+}
+
+function joinDrivers(names: string[]): string {
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  return `${names[0]}, ${names[1]}, and ${names[2]}`;
+}
+
+// Display fill only. Does not rewrite draft honestNotes or restage verdicts.
+export function displayHonestNote(record: RatingRecord): string {
+  const overlay = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  if (overlay) return overlay;
+
+  const form = formWord(record);
+  const high = flaggedNames(record, 'high');
+  const moderate = flaggedNames(record, 'moderate');
+  const limited = flaggedNames(record, 'limited');
+
+  if (record.verdict === 'clean') {
+    return `This ${form} is Clean. The extras we reviewed on this formula stayed Clean.`;
+  }
+
+  if (record.verdict === 'avoid') {
+    if (high.length === 1) {
+      return `This ${form} is Not clean because of ${high[0]}. That one extra is why.`;
+    }
+    if (high.length > 1) {
+      return `This ${form} is Not clean because of ${joinDrivers(high.slice(0, 3))}.`;
+    }
+    return `This ${form} is Not clean.`;
+  }
+
+  if (moderate.length === 1 && limited.length === 0) {
+    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
+  }
+  if (moderate.length > 1) {
+    return `This ${form} is Usable, not Clean, because of Moderate extras.`;
+  }
+  if (moderate.length === 1) {
+    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
+  }
+  if (limited.length === 1) {
+    return `This ${form} is Usable, not Clean, because of ${limited[0]}.`;
+  }
+  if (limited.length > 1) {
+    return `This ${form} is Usable, not Clean, because of Limited extras. None of them is a High-list item.`;
+  }
+  return `This ${form} is ${VERDICT_LABELS[record.verdict]}, not Clean.`;
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const honestNote = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
+  const honestNote = displayHonestNote(record);
   const productImage = previewOverlayImage(record);
-  if (!honestNote && !productImage) return record;
+  if (honestNote === record.honestNote && !productImage) return record;
   return {
     ...record,
-    ...(honestNote ? { honestNote } : {}),
+    honestNote,
     ...(productImage ? { productImage } : {}),
   };
 }
@@ -2599,6 +2658,13 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
     ?? CATALOG.find((record) => record.formulaId === id);
 }
 
+{
+  const absorbineProCream = findDraftRecord('absorbine-jr-pro-cream');
+  if (!absorbineProCream || absorbineProCream.verdict !== 'avoid') {
+    throw new Error('absorbine-jr-pro-cream must stay verdict avoid');
+  }
+}
+
 export function isParkedFromBrowse(id: string | undefined): boolean {
   return isParkedBrowseId(id);
 }
@@ -2615,6 +2681,7 @@ export function loadedPreviewDrafts(): RatingRecord[] {
 // Display-side Search tiles/chips only. Do not rewrite draft category strings.
 const SEARCH_ALLERGIES_LABEL = 'Allergies';
 const SEARCH_PRENATAL_LABEL = 'Prenatal';
+const SEARCH_IMMUNE_LABEL = 'Immune Support';
 const PRENATAL_BATCH_IDS = new Set(BATCH15_PRENATALS.map((record) => record.id));
 
 function prenatalHaystack(record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>): string {
@@ -2638,6 +2705,7 @@ export function displayCategoryForRecord(
   const lowered = raw.toLowerCase();
   if (lowered === 'homeopathic') return null;
   if (lowered === 'allergy' || lowered === 'allergies') return SEARCH_ALLERGIES_LABEL;
+  if (lowered === 'immune' || lowered === 'immune support') return SEARCH_IMMUNE_LABEL;
   if (lowered === 'prenatal') return SEARCH_PRENATAL_LABEL;
   return raw;
 }
@@ -2671,8 +2739,13 @@ export function matchesSearchCategory(
   record: Pick<RatingRecord, 'id' | 'formulaId' | 'productName' | 'category'>,
   category: string,
 ): boolean {
+  const lowered = category.trim().toLowerCase();
   if (category === SEARCH_ALLERGIES_LABEL) {
     return record.category === 'Allergy' || record.category === 'Allergies';
+  }
+  if (lowered === 'immune' || lowered === 'immune support') {
+    const raw = (record.category ?? '').trim().toLowerCase();
+    return raw === 'immune' || raw === 'immune support';
   }
   if (category === SEARCH_PRENATAL_LABEL) {
     return isPrenatalDraft(record);
@@ -2691,6 +2764,10 @@ export function loadedPreviewCategories(): string[] {
     if (lowered === 'homeopathic') continue;
     if (lowered === 'allergy' || lowered === 'allergies') {
       names.add(SEARCH_ALLERGIES_LABEL);
+      continue;
+    }
+    if (lowered === 'immune' || lowered === 'immune support') {
+      names.add(SEARCH_IMMUNE_LABEL);
       continue;
     }
     if (lowered === 'prenatal') {
@@ -2953,6 +3030,29 @@ export type IngredientWhy = {
   sourceHref: string | null;
 };
 
+export const PENDING_DAILYMED_REVIEW = 'Pending DailyMed review';
+
+function isIngredientReviewed(ingredient: IngredientFlag): boolean {
+  const source = (ingredient.source ?? '').trim();
+  if (!source) return false;
+  const lower = source.toLowerCase();
+  if (lower.includes('not in methodology') || lower.includes('ungraded')) return false;
+  return true;
+}
+
+function reviewedWhyFallback(ingredient: IngredientFlag): string {
+  if (ingredient.riskLevel === 'cleared') {
+    return 'Reviewed on this label. It stayed Clean — no High or Caution flag on this token.';
+  }
+  if (ingredient.riskLevel === 'limited') {
+    return 'Limited extra. Fact: it is an opacity or volume listing. It does not make a product Not clean by itself.';
+  }
+  if (ingredient.riskLevel === 'moderate') {
+    return 'Moderate extra. Cleaner formulas leave it out. That is a fact about the listing, not a claim it is unsafe.';
+  }
+  return 'High-list extra. Cleaner formulas exclude it.';
+}
+
 function normalizeName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
@@ -2975,6 +3075,18 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     || /fd c|d c|aluminum lake|blue no|red no|yellow no|green no/.test(name)
   ) {
     return 'Synthetic color. Independent reviews link this dye family to hyperactivity warnings in the EU; we score the family High risk, and cleaner formulas exclude it.';
+  }
+
+  if (name.includes('paraben') || source.includes('paraben')) {
+    return 'Paraben preservative. We score this family High in every form, including creams and patches. Cleaner formulas exclude it.';
+  }
+
+  if (
+    name.includes('titanium dioxide')
+    || source.includes('titanium dioxide')
+    || source.includes('e171')
+  ) {
+    return 'Titanium dioxide (E171). The EU dropped it as a food additive after a genotoxicity data gap. We score it High.';
   }
 
   if (name.includes('talc') || source.includes('talc')) {
@@ -3064,6 +3176,43 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     return 'Undisclosed flavor mixture. Limited risk for opacity, not a known hazard; cleaner formulas exclude it.';
   }
 
+  if (name.includes('fragrance') || name.includes('parfum') || source.includes('fragrance / parfum')) {
+    if (ingredient.riskLevel === 'cleared') {
+      return 'Fragrance is listed on this label. On this formula it stayed Clean.';
+    }
+    return 'Fragrance / parfum. Population sensitization listing. That is a fact about the extra, not a claim it is unsafe.';
+  }
+
+  if (
+    name.includes('sd alcohol')
+    || name.includes('alcohol denat')
+    || source.includes('alcohol / ethyl alcohol')
+    || source.includes('isopropyl alcohol')
+  ) {
+    return 'Alcohol is the vehicle here, not a drinking-alcohol active and not the gummy seed-oil High rule.';
+  }
+
+  if (
+    name.includes('polyethylene glycol')
+    || /\bpeg(?:-|\s|\d)/.test(name)
+    || source.includes('pegs —')
+  ) {
+    return 'PEG (polyethylene glycol). Moderate listing from processing leftovers. Cleaner formulas leave it out.';
+  }
+
+  if (name.includes('polysorbate') || source.includes('polysorbate')) {
+    return 'Polysorbate emulsifier. Moderate listing. Cleaner formulas leave it out.';
+  }
+
+  if (
+    name.includes('silicon dioxide')
+    || name === 'silica'
+    || name.startsWith('silica ')
+    || source.includes('silicon dioxide')
+  ) {
+    return 'Silicon dioxide / silica is a Caution cap. It does not make a product Not clean by itself.';
+  }
+
   if (
     source.includes('flagged in gummies')
     || source.includes('capsule/softgel')
@@ -3075,12 +3224,12 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
 
   if (ingredient.riskLevel === 'cleared') {
     if (source.includes('not in methodology') || source.includes('ungraded')) {
-      return 'Why pending review';
+      return PENDING_DAILYMED_REVIEW;
     }
     if (name.includes('magnesium stearate') || name.includes('stearic acid') || name.includes('calcium stearate')) {
       return 'Standard lubricant (stearate-family class). EFSA 2018 found no safety concern.';
     }
-    if (name.includes('purified water')) {
+    if (name === 'water' || name.includes('purified water')) {
       return 'Purified water. Methodology §5 lists it among cleared bases.';
     }
     if (name.includes('corn starch') || name.includes('pregelatinized starch')) {
@@ -3103,9 +3252,12 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
 export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
   const display = sourceDisplay(ingredient.source);
   const body = lockedWhyBody(ingredient);
-  if (body) return { body, ...display };
+  if (body && body !== PENDING_DAILYMED_REVIEW) return { body, ...display };
+  if (isIngredientReviewed(ingredient)) {
+    return { body: reviewedWhyFallback(ingredient), ...display };
+  }
   return {
-    body: 'Why pending review',
+    body: PENDING_DAILYMED_REVIEW,
     ...display,
   };
 }
