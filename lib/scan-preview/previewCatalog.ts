@@ -70,6 +70,7 @@ import {
   BATCH67_KYR6_MEMBERS_MARK,
   BATCH68_KYR6_FOUNDER_PANELS,
   BATCH69_KYR6_STORE_PANELS,
+  BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -160,6 +161,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH67_KYR6_MEMBERS_MARK,
   ...BATCH68_KYR6_FOUNDER_PANELS,
   ...BATCH69_KYR6_STORE_PANELS,
+  ...BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
