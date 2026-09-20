@@ -486,6 +486,11 @@ const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   // KYR5-c barcode-tile chunk 1 — Dollar General grocery PDP 60-ct
   // tablets (not ODT 370030169856). Loratadine 10 mg.
   'dg-health-loratadine-tablets': '370030658145',
+  // KYR5-d full missing-UPC rescan — DG grocery PDP barcode tile /
+  // productDetails.upc. 24-ct coated tablets 359726235259
+  // (/p/.../359726235259). 100-ct tablets 370030167425. Not dyed+talc
+  // 50-ct 370030015290 (already flagged ≠ iron-oxide 55910-604).
+  'dg-health-ibuprofen-tablets': '359726235259 370030167425',
 };
 
 export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
@@ -1266,6 +1271,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productName: 'DG Health Ibuprofen 200 mg Film-Coated Tablets',
     brand: 'DG Health',
     category: PAIN_FEVER,
+    barcode: BATCH29_CATCHUP_BARCODES['dg-health-ibuprofen-tablets'],
     formulaId: 'dg-health-ibuprofen-coated-tio2',
     audience: ADULT,
     minAge: 12,
