@@ -381,6 +381,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // fever (323900040045) or Free Of (32390003495). Do not glue. Official
   // Vicks shield from vicks.com. Per-id only.
   'dayquil-nyquil-kids-berry-cold-cough': brandMark('vicks-mark.png'),
+  // Attempted Cold & Flu leftovers — live genexa.com PDPs are day+night
+  // combo packs only. Do not glue the combo carton onto a night-only row.
+  // Official Genexa mark already on disk. Per-id only.
+  'genexa-kids-nighttime-cough': brandMark('genexa-mark.png'),
+  'genexa-kids-nighttime-multi-cold-flu': brandMark('genexa-mark.png'),
+  'genexa-nighttime-severe-cold-flu': brandMark('genexa-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -527,6 +533,25 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'equate-childrens-cough-congestion-dn': 'Equate',
   'equate-childrens-multi-night': 'Equate',
   'equate-childrens-vaporizing-rub': 'Equate',
+  // Attempted Cold & Flu leftovers — walmart.com / dollargeneral.com /
+  // familydollar.com / costco.com / samsclub.com PDPs not retrieved from
+  // this environment. DailyMed faces are 2D dielines. No standalone
+  // official Equate / Family Wellness / Kirkland / Member's Mark mark
+  // file (equate.com is Kuwait petrochemical — refuse). Do not stay letters.
+  'equate-daytime-cold-flu': 'Equate',
+  'equate-kids-dex-cough-gels': 'Equate',
+  'equate-mucus-er-600': 'Equate',
+  'family-wellness-guaifenesin-ir-400': 'Family Wellness',
+  'family-wellness-guaifenesin-dm-ir': 'Family Wellness',
+  'kirkland-mucus-dm-max-er': 'Kirkland',
+  'members-mark-mucus-er-max-dyefree': "Member's Mark",
+  'members-mark-mucus-dm-max-blue1': "Member's Mark",
+  // Attempted Cold & Flu leftovers — hylands.com sells Baby Mucus + Cold
+  // Night and Baby Tiny Cold Night only as combo packs. Do not glue the
+  // combo carton. No standalone official Hyland's mark file. Do not stay
+  // letters.
+  'hylands-baby-mucus-cold-night': "Hyland's",
+  'hylands-baby-tiny-cold-night': "Hyland's",
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1424,6 +1449,70 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'dayquil-kids-dye-free-cold-cough-mucus.jpg',
   ),
   'delsym-12hr-grape': catalogShot('delsym-12hr-grape.jpg'),
+  // Cold & Flu leftover daytime run — official US 3D packshots.
+  'genexa-cold-crush': catalogShot('genexa-cold-crush.jpg'),
+  'genexa-cough-chest-congestion': catalogShot('genexa-cough-chest-congestion.jpg'),
+  'genexa-daytime-severe-cold-flu': catalogShot(
+    'genexa-daytime-severe-cold-flu.jpg',
+  ),
+  'genexa-flu-fix': catalogShot('genexa-flu-fix.jpg'),
+  'genexa-kids-cold-crush': catalogShot('genexa-kids-cold-crush.jpg'),
+  'genexa-kids-cough-chest-congestion-liquid': catalogShot(
+    'genexa-kids-cough-chest-congestion-liquid.jpg',
+  ),
+  'genexa-kids-honey-cough-syrup': catalogShot(
+    'genexa-kids-honey-cough-syrup.jpg',
+  ),
+  'genexa-kids-multi-cold-flu-liquid': catalogShot(
+    'genexa-kids-multi-cold-flu-liquid.jpg',
+  ),
+  'hylands-4kids-cold-n-cough': catalogShot('hylands-4kids-cold-n-cough.jpg'),
+  'hylands-4kids-cold-n-cough-original': catalogShot(
+    'hylands-4kids-cold-n-cough-original.jpg',
+  ),
+  'hylands-4kids-cold-n-cough-night-grape': catalogShot(
+    'hylands-4kids-cold-n-cough-night-grape.jpg',
+  ),
+  'hylands-4kids-cold-n-cough-night-original': catalogShot(
+    'hylands-4kids-cold-n-cough-night-original.jpg',
+  ),
+  'hylands-baby-mucus-cold-day': catalogShot('hylands-baby-mucus-cold-day.jpg'),
+  'hylands-baby-tiny-cold-day': catalogShot('hylands-baby-tiny-cold-day.jpg'),
+  'hylands-calc-fluor-6x': catalogShot('hylands-calc-fluor-6x.jpg'),
+  'hylands-nat-mur-6x': catalogShot('hylands-nat-mur-6x.jpg'),
+  'hylands-kids-cough-mucus-day': catalogShot(
+    'hylands-kids-cough-mucus-day.jpg',
+  ),
+  'hylands-kids-cough-mucus-night': catalogShot(
+    'hylands-kids-cough-mucus-night.jpg',
+  ),
+  'hylands-4kids-stuffy-nose-sinus': catalogShot(
+    'hylands-4kids-stuffy-nose-sinus.jpg',
+  ),
+  'hylands-organic-baby-all-in-one-cough-day': catalogShot(
+    'hylands-organic-baby-all-in-one-cough-day.jpg',
+  ),
+  'hylands-organic-baby-all-in-one-cough-night': catalogShot(
+    'hylands-organic-baby-all-in-one-cough-night.jpg',
+  ),
+  'hylands-organic-baby-cough-immune-day': catalogShot(
+    'hylands-organic-baby-cough-immune-day.jpg',
+  ),
+  'hylands-organic-baby-cough-immune-night': catalogShot(
+    'hylands-organic-baby-cough-immune-night.jpg',
+  ),
+  'hylands-organic-kids-all-in-one-cough-day': catalogShot(
+    'hylands-organic-kids-all-in-one-cough-day.jpg',
+  ),
+  'hylands-organic-kids-all-in-one-cough-night': catalogShot(
+    'hylands-organic-kids-all-in-one-cough-night.jpg',
+  ),
+  'hylands-organic-kids-cough-immune-day': catalogShot(
+    'hylands-organic-kids-cough-immune-day.jpg',
+  ),
+  'hylands-organic-kids-cough-immune-night': catalogShot(
+    'hylands-organic-kids-cough-immune-night.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1792,6 +1881,21 @@ assertBrandMark(
   'dayquil-nyquil-kids-berry-cold-cough',
   'Vicks',
   'vicks-mark.png',
+);
+assertBrandMark(
+  'genexa-kids-nighttime-cough',
+  'Genexa',
+  'genexa-mark.png',
+);
+assertBrandMark(
+  'genexa-kids-nighttime-multi-cold-flu',
+  'Genexa',
+  'genexa-mark.png',
+);
+assertBrandMark(
+  'genexa-nighttime-severe-cold-flu',
+  'Genexa',
+  'genexa-mark.png',
 );
 
 {
@@ -2202,6 +2306,44 @@ assertBrandTextTile(
   'Equate',
   'Equate',
 );
+assertBrandTextTile('equate-daytime-cold-flu', 'Equate', 'Equate');
+assertBrandTextTile('equate-kids-dex-cough-gels', 'Equate', 'Equate');
+assertBrandTextTile('equate-mucus-er-600', 'Equate', 'Equate');
+assertBrandTextTile(
+  'family-wellness-guaifenesin-ir-400',
+  'Family Wellness',
+  'Family Wellness',
+);
+assertBrandTextTile(
+  'family-wellness-guaifenesin-dm-ir',
+  'Family Wellness',
+  'Family Wellness',
+);
+assertBrandTextTile(
+  'kirkland-mucus-dm-max-er',
+  'Kirkland Signature',
+  'Kirkland',
+);
+assertBrandTextTile(
+  'members-mark-mucus-er-max-dyefree',
+  "Member's Mark",
+  "Member's Mark",
+);
+assertBrandTextTile(
+  'members-mark-mucus-dm-max-blue1',
+  "Member's Mark",
+  "Member's Mark",
+);
+assertBrandTextTile(
+  'hylands-baby-mucus-cold-night',
+  "Hyland's",
+  "Hyland's",
+);
+assertBrandTextTile(
+  'hylands-baby-tiny-cold-night',
+  "Hyland's",
+  "Hyland's",
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -2210,7 +2352,6 @@ assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertLetterOnly('upup-mucus-relief-600-blue', 'up&up');
-assertLetterOnly('equate-mucus-er-600', 'Equate');
 assertLetterOnly('signature-care-daytime-severe', 'Signature Care');
 assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
 assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
@@ -3147,6 +3288,133 @@ assertExactCarton(
   'delsym-12hr-grape',
   'Delsym',
   'delsym-12hr-grape.jpg',
+);
+assertExactCarton('genexa-cold-crush', 'Genexa', 'genexa-cold-crush.jpg');
+assertExactCarton(
+  'genexa-cough-chest-congestion',
+  'Genexa',
+  'genexa-cough-chest-congestion.jpg',
+);
+assertExactCarton(
+  'genexa-daytime-severe-cold-flu',
+  'Genexa',
+  'genexa-daytime-severe-cold-flu.jpg',
+);
+assertExactCarton('genexa-flu-fix', 'Genexa', 'genexa-flu-fix.jpg');
+assertExactCarton(
+  'genexa-kids-cold-crush',
+  'Genexa',
+  'genexa-kids-cold-crush.jpg',
+);
+assertExactCarton(
+  'genexa-kids-cough-chest-congestion-liquid',
+  'Genexa',
+  'genexa-kids-cough-chest-congestion-liquid.jpg',
+);
+assertExactCarton(
+  'genexa-kids-honey-cough-syrup',
+  'Genexa',
+  'genexa-kids-honey-cough-syrup.jpg',
+);
+assertExactCarton(
+  'genexa-kids-multi-cold-flu-liquid',
+  'Genexa',
+  'genexa-kids-multi-cold-flu-liquid.jpg',
+);
+assertExactCarton(
+  'hylands-4kids-cold-n-cough',
+  "Hyland's",
+  'hylands-4kids-cold-n-cough.jpg',
+);
+assertExactCarton(
+  'hylands-4kids-cold-n-cough-original',
+  "Hyland's",
+  'hylands-4kids-cold-n-cough-original.jpg',
+);
+assertExactCarton(
+  'hylands-4kids-cold-n-cough-night-grape',
+  "Hyland's",
+  'hylands-4kids-cold-n-cough-night-grape.jpg',
+);
+assertExactCarton(
+  'hylands-4kids-cold-n-cough-night-original',
+  "Hyland's",
+  'hylands-4kids-cold-n-cough-night-original.jpg',
+);
+assertExactCarton(
+  'hylands-baby-mucus-cold-day',
+  "Hyland's",
+  'hylands-baby-mucus-cold-day.jpg',
+);
+assertExactCarton(
+  'hylands-baby-tiny-cold-day',
+  "Hyland's",
+  'hylands-baby-tiny-cold-day.jpg',
+);
+assertExactCarton(
+  'hylands-calc-fluor-6x',
+  "Hyland's",
+  'hylands-calc-fluor-6x.jpg',
+);
+assertExactCarton(
+  'hylands-nat-mur-6x',
+  "Hyland's",
+  'hylands-nat-mur-6x.jpg',
+);
+assertExactCarton(
+  'hylands-kids-cough-mucus-day',
+  "Hyland's",
+  'hylands-kids-cough-mucus-day.jpg',
+);
+assertExactCarton(
+  'hylands-kids-cough-mucus-night',
+  "Hyland's",
+  'hylands-kids-cough-mucus-night.jpg',
+);
+assertExactCarton(
+  'hylands-4kids-stuffy-nose-sinus',
+  "Hyland's",
+  'hylands-4kids-stuffy-nose-sinus.jpg',
+);
+assertExactCarton(
+  'hylands-organic-baby-all-in-one-cough-day',
+  "Hyland's",
+  'hylands-organic-baby-all-in-one-cough-day.jpg',
+);
+assertExactCarton(
+  'hylands-organic-baby-all-in-one-cough-night',
+  "Hyland's",
+  'hylands-organic-baby-all-in-one-cough-night.jpg',
+);
+assertExactCarton(
+  'hylands-organic-baby-cough-immune-day',
+  "Hyland's",
+  'hylands-organic-baby-cough-immune-day.jpg',
+);
+assertExactCarton(
+  'hylands-organic-baby-cough-immune-night',
+  "Hyland's",
+  'hylands-organic-baby-cough-immune-night.jpg',
+);
+assertExactCarton(
+  'hylands-organic-kids-all-in-one-cough-day',
+  "Hyland's",
+  'hylands-organic-kids-all-in-one-cough-day.jpg',
+);
+assertExactCarton(
+  'hylands-organic-kids-all-in-one-cough-night',
+  "Hyland's",
+  'hylands-organic-kids-all-in-one-cough-night.jpg',
+);
+assertExactCarton(
+  'hylands-organic-kids-cough-immune-day',
+  "Hyland's",
+  'hylands-organic-kids-cough-immune-day.jpg',
+);
+assertExactCarton(
+  'hylands-organic-kids-cough-immune-night',
+  "Hyland's",
+  'hylands-organic-kids-cough-immune-night.jpg',
 );
 assertExactCarton(
   'bt-cough-bronchial-daytime',
