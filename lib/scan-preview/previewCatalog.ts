@@ -1288,6 +1288,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-kali-bichromicum-pellets': catalogShot(
     'boiron-kali-bichromicum-pellets.jpg',
   ),
+  // Cold & Flu leftover batch 4 — official US 3D packshots.
+  'boiron-kali-muriaticum-pellets': catalogShot(
+    'boiron-kali-muriaticum-pellets.jpg',
+  ),
+  'boiron-kali-sulphuricum-pellets': catalogShot(
+    'boiron-kali-sulphuricum-pellets.jpg',
+  ),
+  'oscillococcinum': catalogShot('oscillococcinum.jpg'),
+  'boiron-phosphorus-pellets': catalogShot('boiron-phosphorus-pellets.jpg'),
+  'boiron-phytolacca-decandra-pellets': catalogShot(
+    'boiron-phytolacca-decandra-pellets.jpg',
+  ),
+  'boiron-pulsatilla-pellets': catalogShot('boiron-pulsatilla-pellets.jpg'),
+  'boiron-rumex-crispus-pellets': catalogShot(
+    'boiron-rumex-crispus-pellets.jpg',
+  ),
+  'boiron-sambucus-nigra-6c-cough-cold-relief-pellets': catalogShot(
+    'boiron-sambucus-nigra-6c-cough-cold-relief-pellets.jpg',
+  ),
+  'boiron-sambucusnigra-pellets': catalogShot(
+    'boiron-sambucusnigra-pellets.jpg',
+  ),
+  'boiron-scillamaritima-pellets': catalogShot(
+    'boiron-scillamaritima-pellets.jpg',
+  ),
+  'boiron-senegaofficinalis-pellets': catalogShot(
+    'boiron-senegaofficinalis-pellets.jpg',
+  ),
+  'boiron-sinuscalm-pellets': catalogShot('boiron-sinuscalm-pellets.jpg'),
+  'boiron-sinuscalm-tablets': catalogShot('boiron-sinuscalm-tablets.jpg'),
+  'boiron-spongia-tosta-pellets': catalogShot(
+    'boiron-spongia-tosta-pellets.jpg',
+  ),
+  'boiron-stictapulmonaria-pellets': catalogShot(
+    'boiron-stictapulmonaria-pellets.jpg',
+  ),
+  'boiron-throatcalm-pellets': catalogShot('boiron-throatcalm-pellets.jpg'),
+  'boiron-throatcalm-spray': catalogShot('boiron-throatcalm-spray.jpg'),
+  'boiron-throatcalm-tablets': catalogShot('boiron-throatcalm-tablets.jpg'),
+  'boiron-verbascumthapsus-pellets': catalogShot(
+    'boiron-verbascumthapsus-pellets.jpg',
+  ),
+  'boiron-voicecalm-tablets': catalogShot('boiron-voicecalm-tablets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3011,6 +3054,106 @@ assertExactCarton(
   'boiron-kali-bichromicum-pellets',
   'Boiron',
   'boiron-kali-bichromicum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-kali-muriaticum-pellets',
+  'Boiron',
+  'boiron-kali-muriaticum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-kali-sulphuricum-pellets',
+  'Boiron',
+  'boiron-kali-sulphuricum-pellets.jpg',
+);
+assertExactCarton(
+  'oscillococcinum',
+  'Boiron',
+  'oscillococcinum.jpg',
+);
+assertExactCarton(
+  'boiron-phosphorus-pellets',
+  'Boiron',
+  'boiron-phosphorus-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-phytolacca-decandra-pellets',
+  'Boiron',
+  'boiron-phytolacca-decandra-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-pulsatilla-pellets',
+  'Boiron',
+  'boiron-pulsatilla-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-rumex-crispus-pellets',
+  'Boiron',
+  'boiron-rumex-crispus-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-sambucus-nigra-6c-cough-cold-relief-pellets',
+  'Boiron',
+  'boiron-sambucus-nigra-6c-cough-cold-relief-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-sambucusnigra-pellets',
+  'Boiron',
+  'boiron-sambucusnigra-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-scillamaritima-pellets',
+  'Boiron',
+  'boiron-scillamaritima-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-senegaofficinalis-pellets',
+  'Boiron',
+  'boiron-senegaofficinalis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-sinuscalm-pellets',
+  'Boiron',
+  'boiron-sinuscalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-sinuscalm-tablets',
+  'Boiron',
+  'boiron-sinuscalm-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-spongia-tosta-pellets',
+  'Boiron',
+  'boiron-spongia-tosta-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-stictapulmonaria-pellets',
+  'Boiron',
+  'boiron-stictapulmonaria-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-throatcalm-pellets',
+  'Boiron',
+  'boiron-throatcalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-throatcalm-spray',
+  'Boiron',
+  'boiron-throatcalm-spray.jpg',
+);
+assertExactCarton(
+  'boiron-throatcalm-tablets',
+  'Boiron',
+  'boiron-throatcalm-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-verbascumthapsus-pellets',
+  'Boiron',
+  'boiron-verbascumthapsus-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-voicecalm-tablets',
+  'Boiron',
+  'boiron-voicecalm-tablets.jpg',
 );
 assertExactCarton(
   'biofreeze-colorless-gel-4',
