@@ -55,8 +55,10 @@
 //   (prenatal). HonestNote: labeled for pregnancy — no dosing / medical
 //   advice. Zinc parked.
 // - H14 Sprouts Organic Prenatal Once Daily Whole Food Multi = Caution
-//   until full label matched — do NOT invent Clean. Confirm carton for
-//   SiO2 / coatings. retailers: ['Sprouts'].
+//   (do NOT invent Clean / do not restage). Founder carton OI + UPC
+//   646670681882 filled on this existing row. Front does not say Organic.
+//   `modified cellulose` stays the exact §5 Limited string. SiO2 left as
+//   printed for founder later. retailers: ['Sprouts'].
 // - H15 Sprouts Organic Prenatal Whole Food Vitamin = Caution until full
 //   label matched — do NOT invent Clean. retailers: ['Sprouts'].
 // CLEAN
@@ -122,6 +124,8 @@ const METH = {
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
+  modifiedCellulose:
+    'Methodology §5 Limited-risk (unlabeled modified cellulose — unspecified modified cellulose/starch neighborhood; named MCC / HPMC / ethylcellulose / methylcellulose stay Cleared; locked Sept 16, 2026)',
   stevia:
     'Methodology §5 Cleared (stevia / steviol glycosides, high-purity extract — locked v1.6; founder Cleared-class on this carton)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
@@ -183,7 +187,7 @@ const WFM_MENS_MULTI_CITE =
 const WFM_PRENATAL_CITE =
   '365 Prenatal Multi Once Daily HelloPharmacist / retailer other-ingredients (MCC / stearic acid / SiO2 / croscarmellose / magnesium stearate — no TiO2 on that list)';
 const SPROUTS_ONCE_CITE =
-  'Sprouts Organic Prenatal Once Daily Whole Food Multi shop.sprouts listing (SKU exists; full other-ingredients not matched)';
+  'Sprouts Prenatal Once Daily 60-ct founder carton (front does not say Organic; UPC 646670681882). Other ingredients exact: Microcrystalline cellulose, stearic acid, modified cellulose, croscarmellose sodium, hypromellose, silicon dioxide, magnesium stearate, glycerin';
 const SPROUTS_WHOLE_CITE =
   'Sprouts Organic Prenatal Whole Food Vitamin shop.sprouts listing (SKU exists; full other-ingredients not matched)';
 
@@ -192,7 +196,9 @@ const SPROUTS_WHOLE_CITE =
 // KYR5-b in-store 365 — Amazon UPC/model + HelloPharmacist/DSLD + WFM
 // image GTIN (GTIN-13 0+UPC-A → 12-digit UPC-A). Pack extras share formulaId.
 const BATCH16_CATCHUP_BARCODES: Record<string, string> = {
-  'sprouts-organic-prenatal-once-daily': '646670548536 646670548529',
+  // KYR5-b shop.sprouts 30-ct + 60-ct plus founder carton 60-ct UPC 646670681882
+  // (front does not say Organic). Same existing row — do not add a second product.
+  'sprouts-organic-prenatal-once-daily': '646670548536 646670548529 646670681882',
   'sprouts-organic-prenatal-whole-food': '646670549984',
   '365-adult-once-daily-multi': '099482402075 099482406455',
   '365-mens-one-daily-multi': '099482418502 099482418519',
@@ -540,10 +546,27 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
         strength: '1 tablet (label serving)',
       },
     ],
-    inactiveIngredients: [],
+    inactiveIngredients: [
+      labelCleared(SPROUTS_ONCE_CITE, 'Microcrystalline cellulose'),
+      labelCleared(SPROUTS_ONCE_CITE, 'stearic acid'),
+      flag(
+        'modified cellulose',
+        'limited',
+        labelCite(SPROUTS_ONCE_CITE, METH.modifiedCellulose),
+      ),
+      labelCleared(SPROUTS_ONCE_CITE, 'croscarmellose sodium'),
+      labelCleared(SPROUTS_ONCE_CITE, 'hypromellose'),
+      flag(
+        'silicon dioxide',
+        'cleared',
+        labelCite(SPROUTS_ONCE_CITE, METH.sio2),
+      ),
+      labelCleared(SPROUTS_ONCE_CITE, 'magnesium stearate'),
+      labelCleared(SPROUTS_ONCE_CITE, 'glycerin'),
+    ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER CALL: Sprouts Organic Prenatal Once Daily Whole Food Multi = Caution until the full label is matched — do NOT invent Clean. Shop.sprouts lists the SKU (organic / gluten-free / Sprouts brand) but does not publish other-ingredients. Confirm the carton for silicon dioxide and coatings before any later grade change. Inactive list left empty on purpose — do not invent SiO2 / oil / coating flags. Separate formulaId from `sprouts-organic-prenatal-whole-food`. ' +
+      'FOUNDER LOCK: Sprouts Prenatal Once Daily 60-ct carton (front does not say Organic) maps to this existing row. UPC 646670681882 attached. Founder other-ingredients filled exactly: Microcrystalline cellulose, stearic acid, modified cellulose, croscarmellose sodium, hypromellose, silicon dioxide, magnesium stearate, glycerin. `modified cellulose` kept as the exact §5 Limited string — not aliased to MCC / HPMC. Silicon dioxide left as printed for founder later — do not remove / do not restage. Grade stays Caution — do NOT invent Clean. Separate formulaId from `sprouts-organic-prenatal-whole-food`. ' +
       PRENATAL_LABEL +
       ' ' +
       ZINC_PARKED +
@@ -551,7 +574,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     retailers: ['Sprouts'],
     barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-once-daily'],
     sourcesGeneral: [
-      `${SPROUTS_ONCE_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
+      `${SPROUTS_ONCE_CITE} — draft, not verified; no DailyMed drug SPL. Grade not restaged.`,
     ],
   },
   {
@@ -753,5 +776,44 @@ for (const record of BATCH16_365_SPROUTS) {
     (record.brand === 'Sprouts' || record.brand === '365 Whole Foods Market')
   ) {
     throw new Error(`batch 16 must not invent barcodes on ${record.id}`);
+  }
+}
+
+{
+  const prenatal = BATCH16_365_SPROUTS.find(
+    (row) => row.id === 'sprouts-organic-prenatal-once-daily',
+  );
+  if (!prenatal) {
+    throw new Error('KYR6 fill: missing existing sprouts-organic-prenatal-once-daily');
+  }
+  if (prenatal.verdict !== 'caution') {
+    throw new Error('KYR6 fill: do not restage sprouts-organic-prenatal-once-daily');
+  }
+  if (!prenatal.barcode?.includes('646670681882')) {
+    throw new Error('KYR6 fill: founder 60-ct UPC 646670681882 must stay on the existing prenatal row');
+  }
+  const oiNames = prenatal.inactiveIngredients.map((flag) => flag.name);
+  const expectedOi = [
+    'Microcrystalline cellulose',
+    'stearic acid',
+    'modified cellulose',
+    'croscarmellose sodium',
+    'hypromellose',
+    'silicon dioxide',
+    'magnesium stearate',
+    'glycerin',
+  ];
+  if (oiNames.join('|') !== expectedOi.join('|')) {
+    throw new Error('KYR6 fill: prenatal other-ingredients must stay the founder exact list');
+  }
+  const modified = prenatal.inactiveIngredients.find((flag) => flag.name === 'modified cellulose');
+  if (!modified || modified.riskLevel !== 'limited') {
+    throw new Error('KYR6 fill: modified cellulose must stay the exact §5 Limited string');
+  }
+  if (!prenatal.inactiveIngredients.some((flag) => flag.name === 'silicon dioxide')) {
+    throw new Error('KYR6 fill: silicon dioxide stays on the panel for founder later');
+  }
+  if (BATCH16_365_SPROUTS.filter((row) => row.id === 'sprouts-organic-prenatal-once-daily').length !== 1) {
+    throw new Error('KYR6 fill: do not add a second Sprouts prenatal row');
   }
 }

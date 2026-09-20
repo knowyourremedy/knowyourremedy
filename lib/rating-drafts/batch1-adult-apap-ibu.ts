@@ -791,6 +791,9 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'up&up Extra Strength Acetaminophen',
     brand: 'up&up',
     category: PAIN_FEVER,
+    // KYR6 existing-row attach — Target carton photo 225-ct film-coated
+    // UPC 349483342260. Same row (was DRY / missing UPC). Do not add a second row.
+    barcode: '349483342260',
     formulaId: 'apap-upup-es-red40-tio2',
     audience: ADULT,
     minAge: 12,
@@ -1267,3 +1270,19 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
 
 // Verdict tally (33 records): Clean 3 · Caution 10 · Avoid 20
 // APAP 19 (Clean 3 / Caution 7 / Avoid 9) · IBU 14 (Clean 0 / Caution 3 / Avoid 11)
+
+{
+  const upupEs = BATCH1_ADULT_APAP_IBU.find((row) => row.id === 'upup-es-red40-tio2');
+  if (!upupEs) {
+    throw new Error('KYR6 attach: missing existing upup-es-red40-tio2');
+  }
+  if (upupEs.barcode !== '349483342260') {
+    throw new Error('KYR6 attach: upup-es-red40-tio2 must keep Target 225-ct UPC 349483342260');
+  }
+  if (upupEs.verdict !== 'avoid') {
+    throw new Error('KYR6 attach: do not restage upup-es-red40-tio2');
+  }
+  if (BATCH1_ADULT_APAP_IBU.filter((row) => row.id === 'upup-es-red40-tio2').length !== 1) {
+    throw new Error('KYR6 attach: do not add a second up&up Extra Strength Acetaminophen row');
+  }
+}
