@@ -390,6 +390,19 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Attempted Cold & Flu leftover — Save Mart / DailyMed faces are 2D
   // dielines. Official TopCare mark already on disk. Per-id only.
   'topcare-mucus-dm-er': brandMark('topcare-mark.png'),
+  // Attempted Cold & Flu leftover — draft is Formula 44 DM Painful Cough
+  // & Sore Throat (APAP + DXM). Live vicks.com Formula 44 pages are
+  // DXM-only cough or DXM + guaifenesin cough & congestion. Do not glue.
+  // Official Vicks shield already on disk. Per-id only.
+  'vicks-formula-44-dm': brandMark('vicks-mark.png'),
+  // Attempted Cold & Flu leftovers — walgreens.com PDPs not retrieved
+  // from this environment. DailyMed faces are 2D dielines. Official
+  // Walgreens mark already on disk. Per-id only.
+  'walgreens-childrens-chest-rub': brandMark('walgreens-mark.png'),
+  'walgreens-childrens-cold-cough-runny': brandMark('walgreens-mark.png'),
+  'walgreens-childrens-cough-chest': brandMark('walgreens-mark.png'),
+  'walgreens-childrens-night-cough': brandMark('walgreens-mark.png'),
+  'walgreens-kids-honey-night-cold': brandMark('walgreens-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -569,6 +582,42 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'signature-care-daytime-severe': 'Signature Care',
   'theraflu-severe-cold-day-powder': 'Theraflu',
   'umcka-coldcare-alcohol-free': "Nature's Way",
+  // Attempted Cold & Flu leftovers — live naturesway.com Cold&Flu
+  // Chewables page is Orange OR Berry (too broad). Cold&Flu FastActives
+  // live PDP is Berry SKU 15349 already wired to umcka-fastactives-berry.
+  // Do not glue. No standalone official Nature's Way colored mark file.
+  'umcka-cold-flu-chewables': "Nature's Way",
+  'umcka-cold-flu-fastactives': "Nature's Way",
+  // Attempted Cold & Flu leftovers — target.com / brand-site PDPs not
+  // retrieved, or leftover is too-broad vs live SKUs. No standalone
+  // official up&up / Wedderspoon / Zarbee's mark file. Do not stay letters.
+  'upup-childrens-multi-cold': 'up&up',
+  'upup-daytime-honey-cold-flu': 'up&up',
+  'upup-mucus-relief-600-blue': 'up&up',
+  'upup-mucus-relief-dm-yellow': 'up&up',
+  'wedderspoon-manuka-honey-drops': 'Wedderspoon',
+  'zarbees-childrens-cough-immune': "Zarbee's",
+  // Attempted Allergies leftovers — no matching official 3D pack face.
+  // 365: wholefoodsmarket.com is product photos / DailyMed 2D only.
+  // Alaway: brand-site faces are marketing composites with badges.
+  // Amazon Basic Care / Basics: amazon.com PDPs not retrieved; mid-rebrand.
+  // Assured: Dollar Tree PDP not retrieved. No standalone official marks.
+  '365-cetirizine-softgels-peg': '365',
+  '365-diphenhydramine-softgels-peg': '365',
+  'alaway-multidose-bak': 'Alaway',
+  'amazon-basic-care-cetirizine-aurohealth': 'Basic Care',
+  'amazon-basic-care-cetirizine-coated': 'Basic Care',
+  'amazon-basic-care-dph-25-l479': 'Basic Care',
+  'amazon-basic-care-fexofenadine-lakes': 'Basic Care',
+  'amazon-basic-care-kids-cetirizine-liquid': 'Basic Care',
+  'amazon-basic-care-kids-loratadine-chew': 'Basic Care',
+  'amazon-basic-care-kids-loratadine-liquid': 'Basic Care',
+  'amazon-basic-care-levocetirizine': 'Basic Care',
+  'amazon-basic-care-loratadine-l612': 'Basic Care',
+  'amazon-basic-care-loratadine-odt': 'Basic Care',
+  'amazon-basics-fluticasone-nasal': 'Amazon Basics',
+  'amazon-basics-mometasone-nasal': 'Amazon Basics',
+  'assured-advanced-relief-eye': 'Assured',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1601,6 +1650,28 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'umcka-cold-flu-elderberry-syrup': catalogShot(
     'umcka-cold-flu-elderberry-syrup.jpg',
   ),
+  // Cold & Flu leftover daytime run 3 — official US 3D packshots.
+  'umcka-cold-flu-relief-syrup': catalogShot(
+    'umcka-cold-flu-relief-syrup.jpg',
+  ),
+  'umcka-cold-relief-chewables': catalogShot(
+    'umcka-cold-relief-chewables.jpg',
+  ),
+  'umcka-cold-relief-drops': catalogShot('umcka-cold-relief-drops.jpg'),
+  'umcka-cold-relief-syrup': catalogShot('umcka-cold-relief-syrup.jpg'),
+  'umcka-cough-relief-syrup': catalogShot('umcka-cough-relief-syrup.jpg'),
+  'umcka-kids-cold-relief-chewables': catalogShot(
+    'umcka-kids-cold-relief-chewables.jpg',
+  ),
+  'umcka-kids-cold-relief-syrup': catalogShot(
+    'umcka-kids-cold-relief-syrup.jpg',
+  ),
+  'umcka-zero-sugar-cold-relief-syrup': catalogShot(
+    'umcka-zero-sugar-cold-relief-syrup.jpg',
+  ),
+  // Allergies leftover daytime run 3 — official US 3D packshots.
+  'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
+  'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1989,6 +2060,36 @@ assertBrandMark(
   'topcare-mucus-dm-er',
   'TopCare',
   'topcare-mark.png',
+);
+assertBrandMark(
+  'vicks-formula-44-dm',
+  'Vicks',
+  'vicks-mark.png',
+);
+assertBrandMark(
+  'walgreens-childrens-chest-rub',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'walgreens-childrens-cold-cough-runny',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'walgreens-childrens-cough-chest',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'walgreens-childrens-night-cough',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'walgreens-kids-honey-night-cold',
+  'Walgreens',
+  'walgreens-mark.png',
 );
 
 {
@@ -2472,6 +2573,122 @@ assertBrandTextTile(
   "Nature's Way",
   "Nature's Way",
 );
+assertBrandTextTile(
+  'umcka-cold-flu-chewables',
+  "Nature's Way",
+  "Nature's Way",
+);
+assertBrandTextTile(
+  'umcka-cold-flu-fastactives',
+  "Nature's Way",
+  "Nature's Way",
+);
+assertBrandTextTile(
+  'upup-childrens-multi-cold',
+  'up & up',
+  'up&up',
+);
+assertBrandTextTile(
+  'upup-daytime-honey-cold-flu',
+  'up&up',
+  'up&up',
+);
+assertBrandTextTile(
+  'upup-mucus-relief-600-blue',
+  'up&up',
+  'up&up',
+);
+assertBrandTextTile(
+  'upup-mucus-relief-dm-yellow',
+  'up&up',
+  'up&up',
+);
+assertBrandTextTile(
+  'wedderspoon-manuka-honey-drops',
+  'Wedderspoon',
+  'Wedderspoon',
+);
+assertBrandTextTile(
+  'zarbees-childrens-cough-immune',
+  "Zarbee's",
+  "Zarbee's",
+);
+assertBrandTextTile(
+  '365-cetirizine-softgels-peg',
+  '365 Whole Foods Market',
+  '365',
+);
+assertBrandTextTile(
+  '365-diphenhydramine-softgels-peg',
+  '365 Whole Foods Market',
+  '365',
+);
+assertBrandTextTile('alaway-multidose-bak', 'Alaway', 'Alaway');
+assertBrandTextTile(
+  'amazon-basic-care-cetirizine-aurohealth',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-cetirizine-coated',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-dph-25-l479',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-fexofenadine-lakes',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-kids-cetirizine-liquid',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-kids-loratadine-chew',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-kids-loratadine-liquid',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-levocetirizine',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-loratadine-l612',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-loratadine-odt',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basics-fluticasone-nasal',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'amazon-basics-mometasone-nasal',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'assured-advanced-relief-eye',
+  'Assured',
+  'Assured',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -2479,10 +2696,8 @@ assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
-assertLetterOnly('upup-mucus-relief-600-blue', 'up&up');
 assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
 assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
-assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertExactCarton(
   'biofreeze-menthol-patches',
@@ -3690,6 +3905,52 @@ assertExactCarton(
   "Nature's Way",
   'umcka-cold-flu-elderberry-syrup.jpg',
 );
+assertExactCarton(
+  'umcka-cold-flu-relief-syrup',
+  "Nature's Way",
+  'umcka-cold-flu-relief-syrup.jpg',
+);
+assertExactCarton(
+  'umcka-cold-relief-chewables',
+  "Nature's Way",
+  'umcka-cold-relief-chewables.jpg',
+);
+assertExactCarton(
+  'umcka-cold-relief-drops',
+  "Nature's Way",
+  'umcka-cold-relief-drops.jpg',
+);
+assertExactCarton(
+  'umcka-cold-relief-syrup',
+  "Nature's Way",
+  'umcka-cold-relief-syrup.jpg',
+);
+assertExactCarton(
+  'umcka-cough-relief-syrup',
+  "Nature's Way",
+  'umcka-cough-relief-syrup.jpg',
+);
+assertExactCarton(
+  'umcka-kids-cold-relief-chewables',
+  "Nature's Way",
+  'umcka-kids-cold-relief-chewables.jpg',
+);
+assertExactCarton(
+  'umcka-kids-cold-relief-syrup',
+  "Nature's Way",
+  'umcka-kids-cold-relief-syrup.jpg',
+);
+assertExactCarton(
+  'umcka-zero-sugar-cold-relief-syrup',
+  "Nature's Way",
+  'umcka-zero-sugar-cold-relief-syrup.jpg',
+);
+assertExactCarton(
+  'allegra-allergy-24hr',
+  'Allegra',
+  'allegra-allergy-24hr.jpg',
+);
+assertExactCarton('allegra-d-24hr', 'Allegra', 'allegra-d-24hr.jpg');
 assertExactCarton(
   'bt-cough-bronchial-daytime',
   'Boericke & Tafel',
