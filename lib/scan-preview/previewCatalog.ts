@@ -366,6 +366,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Cold & Flu leftover — draft name says Honey; cited boironusa URL is
   // Chestal Cold & Cough Original. Do not glue either syrup carton.
   'boiron-chestal-cold-cough-honey': brandMark('boiron-mark.png'),
+  // Attempted Cold & Flu leftovers — official delsym.com kids combo URLs
+  // redirect to the collection; current live packshots are adult 12-hour /
+  // adult chest-DM / adult night. DailyMed faces are 2D dielines. Official
+  // Delsym RGB mark from delsym.com. Per-id only.
+  'delsym-childrens-cough-chest-dm': brandMark('delsym-mark.png'),
+  'delsym-childrens-cough-cold-night': brandMark('delsym-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -482,6 +488,18 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basic-care-sf-menthol-cough-drops': 'Basic Care',
   'amazon-basics-chest-rub': 'Amazon Basics',
   'amazon-basics-nighttime-severe-cold-flu-liquid': 'Amazon Basics',
+  // Attempted Cold & Flu leftovers — no matching official 3D pack face.
+  // robitussin.com 12-hour page is PDF-only; live children's long-acting
+  // pack is Cough & Cold (chlorpheniramine), not the DXM-only leftover.
+  // DailyMed faces are 2D dielines. Official header wordmark is white-on-
+  // dark only — no standalone colored mark file. Do not stay letters.
+  'robitussin-childrens-12hr': 'Robitussin',
+  'robitussin-childrens-long-acting': 'Robitussin',
+  // Attempted Cold & Flu leftovers — cvs.com PDPs 403 from this
+  // environment. DailyMed faces are 2D dielines. No standalone official
+  // CVS Health mark file. Do not stay letters.
+  'cvs-adult-cough-chest-dm-dyefree': 'CVS Health',
+  'cvs-childrens-cough-chest-dn': 'CVS Health',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1331,6 +1349,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'boiron-verbascumthapsus-pellets.jpg',
   ),
   'boiron-voicecalm-tablets': catalogShot('boiron-voicecalm-tablets.jpg'),
+  // Cold & Flu leftover batch 5 — official US 3D packshots.
+  'natures-way-bronchial-soothe': catalogShot(
+    'natures-way-bronchial-soothe.jpg',
+  ),
+  'dimetapp-cold-allergy-liquid': catalogShot(
+    'dimetapp-cold-allergy-liquid.jpg',
+  ),
+  'dimetapp-cold-cough-liquid': catalogShot(
+    'dimetapp-cold-cough-liquid.jpg',
+  ),
+  'dimetapp-night-cold-cough': catalogShot(
+    'dimetapp-night-cold-cough.jpg',
+  ),
+  'mucinex-childrens-multi-cold-liquid': catalogShot(
+    'mucinex-childrens-multi-cold-liquid.jpg',
+  ),
+  'mucinex-childrens-multi-daynight-kit': catalogShot(
+    'mucinex-childrens-multi-daynight-kit.jpg',
+  ),
+  'robitussin-childrens-dm-liquid': catalogShot(
+    'robitussin-childrens-dm-liquid.jpg',
+  ),
+  'robitussin-childrens-honey-night-dm': catalogShot(
+    'robitussin-childrens-honey-night-dm.jpg',
+  ),
+  'robitussin-childrens-night-long-dm': catalogShot(
+    'robitussin-childrens-night-long-dm.jpg',
+  ),
+  'sudafed-pe-childrens-cold-cough': catalogShot(
+    'sudafed-pe-childrens-cold-cough.jpg',
+  ),
+  'sudafed-pe-childrens-nasal': catalogShot(
+    'sudafed-pe-childrens-nasal.jpg',
+  ),
+  'sudafed-childrens-pseudo-liquid': catalogShot(
+    'sudafed-childrens-pseudo-liquid.jpg',
+  ),
+  'fon-cold-flu-kids': catalogShot('fon-cold-flu-kids.jpg'),
+  'fon-cold-flu-max': catalogShot('fon-cold-flu-max.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1680,6 +1737,16 @@ assertBrandMark(
   'GoodSense',
   'goodsense-mark.png',
 );
+assertBrandMark(
+  'delsym-childrens-cough-chest-dm',
+  'Delsym',
+  'delsym-mark.png',
+);
+assertBrandMark(
+  'delsym-childrens-cough-cold-night',
+  'Delsym',
+  'delsym-mark.png',
+);
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -1998,6 +2065,26 @@ assertBrandTextTile(
   'amazon-basics-nighttime-severe-cold-flu-liquid',
   'Amazon Basics',
   'Amazon Basics',
+);
+assertBrandTextTile(
+  'robitussin-childrens-12hr',
+  'Robitussin',
+  'Robitussin',
+);
+assertBrandTextTile(
+  'robitussin-childrens-long-acting',
+  'Robitussin',
+  'Robitussin',
+);
+assertBrandTextTile(
+  'cvs-adult-cough-chest-dm-dyefree',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-childrens-cough-chest-dn',
+  'CVS Health',
+  'CVS Health',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -2854,6 +2941,76 @@ assertExactCarton(
   'natures-way-air-power',
   "Nature's Way",
   'natures-way-air-power.jpg',
+);
+assertExactCarton(
+  'natures-way-bronchial-soothe',
+  "Nature's Way",
+  'natures-way-bronchial-soothe.jpg',
+);
+assertExactCarton(
+  'dimetapp-cold-allergy-liquid',
+  'Dimetapp',
+  'dimetapp-cold-allergy-liquid.jpg',
+);
+assertExactCarton(
+  'dimetapp-cold-cough-liquid',
+  'Dimetapp',
+  'dimetapp-cold-cough-liquid.jpg',
+);
+assertExactCarton(
+  'dimetapp-night-cold-cough',
+  'Dimetapp',
+  'dimetapp-night-cold-cough.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-multi-cold-liquid',
+  'Mucinex',
+  'mucinex-childrens-multi-cold-liquid.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-multi-daynight-kit',
+  'Mucinex',
+  'mucinex-childrens-multi-daynight-kit.jpg',
+);
+assertExactCarton(
+  'robitussin-childrens-dm-liquid',
+  'Robitussin',
+  'robitussin-childrens-dm-liquid.jpg',
+);
+assertExactCarton(
+  'robitussin-childrens-honey-night-dm',
+  'Robitussin',
+  'robitussin-childrens-honey-night-dm.jpg',
+);
+assertExactCarton(
+  'robitussin-childrens-night-long-dm',
+  'Robitussin',
+  'robitussin-childrens-night-long-dm.jpg',
+);
+assertExactCarton(
+  'sudafed-pe-childrens-cold-cough',
+  'Sudafed',
+  'sudafed-pe-childrens-cold-cough.jpg',
+);
+assertExactCarton(
+  'sudafed-pe-childrens-nasal',
+  'Sudafed',
+  'sudafed-pe-childrens-nasal.jpg',
+);
+assertExactCarton(
+  'sudafed-childrens-pseudo-liquid',
+  'Sudafed',
+  'sudafed-childrens-pseudo-liquid.jpg',
+);
+assertExactCarton(
+  'fon-cold-flu-kids',
+  'Forces of Nature',
+  'fon-cold-flu-kids.jpg',
+);
+assertExactCarton(
+  'fon-cold-flu-max',
+  'Forces of Nature',
+  'fon-cold-flu-max.jpg',
 );
 assertExactCarton(
   'bt-cough-bronchial-daytime',
