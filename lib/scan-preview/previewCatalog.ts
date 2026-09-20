@@ -363,6 +363,9 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-ibuprofen-liquid-gels': brandMark('goodsense-mark.png'),
   // Batch 2 leftover — DailyMed is a 2D dieline, not a 3D packshot.
   'goodsense-es-pain-relief-l484': brandMark('goodsense-mark.png'),
+  // Cold & Flu leftover — draft name says Honey; cited boironusa URL is
+  // Chestal Cold & Cough Original. Do not glue either syrup carton.
+  'boiron-chestal-cold-cough-honey': brandMark('boiron-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -1202,6 +1205,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'bt-cough-bronchial-nighttime': catalogShot(
     'bt-cough-bronchial-nighttime.jpg',
   ),
+  // Cold & Flu leftover batch 2 — official US 3D packshots.
+  'badger-aromatic-chest-rub': catalogShot('badger-aromatic-chest-rub.jpg'),
+  'beekeepers-propolis-throat-spray': catalogShot(
+    'beekeepers-propolis-throat-spray.jpg',
+  ),
+  'medinatura-bhi-flu-cold': catalogShot('medinatura-bhi-flu-cold.jpg'),
+  'medinatura-bhi-mucus': catalogShot('medinatura-bhi-mucus.jpg'),
+  'medinatura-bhi-sinus-congestion': catalogShot(
+    'medinatura-bhi-sinus-congestion.jpg',
+  ),
+  'boiron-aconitum-napellus-pellets': catalogShot(
+    'boiron-aconitum-napellus-pellets.jpg',
+  ),
+  'boiron-allium-cepa-pellets': catalogShot('boiron-allium-cepa-pellets.jpg'),
+  'boiron-alliumsativum-pellets': catalogShot(
+    'boiron-alliumsativum-pellets.jpg',
+  ),
+  'boiron-antimonium-tartaricum-pellets': catalogShot(
+    'boiron-antimonium-tartaricum-pellets.jpg',
+  ),
+  'boiron-baptisiatinctoria-pellets': catalogShot(
+    'boiron-baptisiatinctoria-pellets.jpg',
+  ),
+  'boiron-bryonia-pellets': catalogShot('boiron-bryonia-pellets.jpg'),
+  'boiron-causticum-pellets': catalogShot('boiron-causticum-pellets.jpg'),
+  'boiron-chestal-cold-cough-pellets': catalogShot(
+    'boiron-chestal-cold-cough-pellets.jpg',
+  ),
+  'boiron-chestal-cold-cough-tablets': catalogShot(
+    'boiron-chestal-cold-cough-tablets.jpg',
+  ),
+  'boiron-chestal-cough-mucus-tablets': catalogShot(
+    'boiron-chestal-cough-mucus-tablets.jpg',
+  ),
+  'chestal-adult-honey': catalogShot('chestal-adult-honey.jpg'),
+  'boiron-chestal-kids-honey': catalogShot('boiron-chestal-kids-honey.jpg'),
+  'boiron-chestal-kids-pellets': catalogShot('boiron-chestal-kids-pellets.jpg'),
+  'boiron-chestal-kids-dry-cough-pellets': catalogShot(
+    'boiron-chestal-kids-dry-cough-pellets.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1414,6 +1457,11 @@ assertBrandMark('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-mark.pn
 assertBrandMark('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
 assertBrandMark('absorbine-jr-xl-back-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
 assertBrandMark('absorbine-jr-plus-knee-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
+assertBrandMark(
+  'boiron-chestal-cold-cough-honey',
+  'Boiron',
+  'boiron-mark.png',
+);
 assertBrandMark(
   'qunol-extra-strength-turmeric-1500-oleoresin',
   'Qunol',
@@ -2730,6 +2778,101 @@ assertExactCarton(
   'bt-cough-bronchial-nighttime',
   'Boericke & Tafel',
   'bt-cough-bronchial-nighttime.jpg',
+);
+assertExactCarton(
+  'badger-aromatic-chest-rub',
+  'Badger',
+  'badger-aromatic-chest-rub.jpg',
+);
+assertExactCarton(
+  'beekeepers-propolis-throat-spray',
+  "Beekeeper's Naturals",
+  'beekeepers-propolis-throat-spray.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-flu-cold',
+  'MediNatura',
+  'medinatura-bhi-flu-cold.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-mucus',
+  'MediNatura',
+  'medinatura-bhi-mucus.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-sinus-congestion',
+  'MediNatura',
+  'medinatura-bhi-sinus-congestion.jpg',
+);
+assertExactCarton(
+  'boiron-aconitum-napellus-pellets',
+  'Boiron',
+  'boiron-aconitum-napellus-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-allium-cepa-pellets',
+  'Boiron',
+  'boiron-allium-cepa-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-alliumsativum-pellets',
+  'Boiron',
+  'boiron-alliumsativum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-antimonium-tartaricum-pellets',
+  'Boiron',
+  'boiron-antimonium-tartaricum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-baptisiatinctoria-pellets',
+  'Boiron',
+  'boiron-baptisiatinctoria-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-bryonia-pellets',
+  'Boiron',
+  'boiron-bryonia-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-causticum-pellets',
+  'Boiron',
+  'boiron-causticum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-cold-cough-pellets',
+  'Boiron',
+  'boiron-chestal-cold-cough-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-cold-cough-tablets',
+  'Boiron',
+  'boiron-chestal-cold-cough-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-cough-mucus-tablets',
+  'Boiron',
+  'boiron-chestal-cough-mucus-tablets.jpg',
+);
+assertExactCarton(
+  'chestal-adult-honey',
+  'Boiron',
+  'chestal-adult-honey.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-kids-honey',
+  'Boiron',
+  'boiron-chestal-kids-honey.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-kids-pellets',
+  'Boiron',
+  'boiron-chestal-kids-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-kids-dry-cough-pellets',
+  'Boiron',
+  'boiron-chestal-kids-dry-cough-pellets.jpg',
 );
 assertExactCarton(
   'biofreeze-colorless-gel-4',
