@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 20, 2026 — KYR6 existing MAIN rows only. Attached up&up Extra Strength Acetaminophen 225-ct UPC 349483342260 to existing `upup-es-red40-tio2` (no second row). Filled founder OI + UPC 646670681882 on existing `sprouts-organic-prenatal-once-daily` (front does not say Organic; `modified cellulose` exact Limited; SiO2 left as printed; grade stays Caution — not restaged). Zero new products. Sprouts house stays STASHED. #187 stays dead. Live missing UPC 100 (in-store 80 + online 20). Factory #121–#221 stay closed.
+Last Updated: September 20, 2026 — §11 verify gate + master role / 2-shot default / scan-front interim tile / not built this pass. Spec only. Do not build camera, accounts, or scanner UI — parked with Real camera + Accounts. Do not reopen factory #121–#221. Do not catalog Sprouts. No grades invented. Live missing UPC 100 (in-store 80 + online 20). KYR6 existing-row attach (up&up ES 225-ct; prenatal OI) still stands.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -196,14 +196,15 @@ CABINET
 - localStorage for this preview only.
 
 Parked
-- Real barcode camera / UPC fill
-- Catalog photo factory (night routine + barcodes). Digestive demo aisle is filled; other aisles follow the night order.
-- User photo upload + review queue
-- Accounts / cloud sync of Cabinet
+- Real barcode camera / UPC fill. Do not build camera, accounts, or scanner UI this pass — parked here with Accounts.
+- Catalog photo factory (night routine + barcodes). Digestive demo aisle is filled; other aisles follow the night order. Do not reopen factory #121–#221.
+- User photo upload + review queue (§11 tighten 2026-09-20 is spec only — not built)
+- Accounts / cloud sync of Cabinet. Parked with Real camera. Do not build this pass.
 - App icon + trademark: see APP ICON + TRADEMARK (parked Sept 15 night). Do not file from a bot chat.
 - docs/SOURCES.md = working bibliography for founder-call packets. Methodology §4a still owns the hierarchy and the grade. Fill this file as packets cite new refs. Worwood = oils info-only (Valerie Ann Worwood — spell it Worwood, not Norwood).
 - Advisor-chat handoff letter lives with Brandon + this file; new advisor reads GitHub MAIN notes + methodology, not a Project pin. Sprouts stash is founder walk list ≈55 plus 3 refused names in batch36 header. Full name list may still sit in the old advisor thread until copied.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
+- §11 TIGHTEN + MASTER SCANNER (2026-09-20) is spec only. Do not build camera / accounts / scanner UI.
 
 Next session
 - LIVE NOW: Amazon 3P brands not on main. batch69 LANDED (PR #231). Sprouts still stashed. KYR6 existing-row attach: `upup-es-red40-tio2` UPC 349483342260; `sprouts-organic-prenatal-once-daily` OI + UPC 646670681882 (grade not restaged). Do not catalog Sprouts. Do not reopen #187. Do not reopen #121–#221. Live missing UPC 100 (in-store 80 / online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
@@ -1053,9 +1054,44 @@ A user submission can NEVER overwrite a verified record (recordStatus = verified
 If the same barcode receives conflicting submissions from different users → freeze auto-grading for that barcode and send to the review queue.
 Review queue (founder/admin workload management):
 
-Matching, readable, non-conflicting submissions can go live as provisional immediately and simply wait for a later spot-check — Brandon does NOT need to review every ordinary matching submission in real time.
+Matching, readable, non-conflicting submissions can go live as provisional immediately and simply wait for a later spot-check — Brandon does NOT need to review every ordinary matching submission in real time. TIGHTENED 2026-09-20: that sentence now means the verify gate below must ALL pass before any live Search write. This does not delete §11. Keep: verified rows cannot be overwritten; conflicting barcodes freeze auto-grade; exceptions-only founder review.
 Founder/admin review is needed ONLY for exceptions: mismatches, unrecognized/uncategorized ingredients, conflicting submissions on the same barcode, or a proposed change to an already-verified product.
 User-facing language requirement: when showing an auto-generated grade from a user submission, make CLEAR to the user that the grade is based on their submitted label photos and may be marked pending verification. Never present a provisional grade with the same confidence/framing as a verified one.
+
+§11 TIGHTEN + MASTER SCANNER (2026-09-20). Spec only. Do not build camera, accounts, or scanner UI this pass.
+
+Unknown beep copy: “Not in our system yet.”
+Master CTA: “Add this bottle.” User CTA: “Save a preview.”
+
+Photo order (master and user, same script)
+1) Front of carton (name + count).
+2) Other Ingredients / Drug Facts / Supplement Facts.
+3) Barcode photo ONLY if beep digits, front name, and panel don’t match or a panel is unreadable. Not the happy path. Two shots default.
+
+Verify gate (seconds) — required before ANY live Search write
+- UPC is valid.
+- Front name / form / count readable and consistent with the OI panel.
+- Every OI line already exists in MAIN methodology + SOURCES.
+- No conflict with a verified row.
+- Photos pass junk/blur screen.
+ALL pass → live provisional (Clean / Usable / Not clean from the table). UI: grade is from these photos, pending verification. Not framed as a verified catalog row.
+ANY fail (unknown OI, unreadable, name mismatch, conflicting barcode) → preview / review inbox. NO live grade. New inactive = 7-step packet. Do not invent.
+
+Master role
+- Brandon now. Brandon may grant master to future employees.
+- Same verify gate. Same photo order.
+- Master does not wait on a second human when the gate passes.
+- Master still cannot auto-live a new / unreadable OI.
+- Master may force-save UPC + photos to inbox when the gate fails.
+
+Interim carton art
+- The scan front photo is the Search / post-scan tile until KYR4 or KYR4-b upgrades it on the shelf loop (exact SKU carton → brand mark → letter only if unattempted).
+- Tag scan-front user vs master. Prefer master front if both exist.
+- Bot only upgrades or fills empty. Do not replace a good catalog carton with a worse scan shot.
+- OI photo is not the thumbnail.
+
+Oils stay name+URL / oil screen. Never Search-graded.
+
 Package/SKU variants (barcode/formula rule — see §5 for the schema): different pack sizes of the same formula (e.g. 60ct vs 120ct) usually have different barcodes and therefore need separate records, linked via a shared formulaId, so a grade correction on one propagates to all. VERIFY PER-PRODUCT rather than assuming — if a manufacturer genuinely reuses one barcode/SKU across sizes (uncommon), one record can cover it. Default to separate-records-with-shared-formulaId when unverified, since that's the common case. Do not re-grade each size separately unless the inactive ingredients actually differ between sizes.
 
 ================================================================ 12. BOT-ASSISTED DATABASE SCALING (NEW — August 2026)
@@ -1111,7 +1147,7 @@ Build the post-scan product-detail screen as a real React component using placeh
 Ingredients tab and Photos tab content/behavior not yet designed — only Overview tab was mocked.
 Catalog-first image pipeline, saved-star (Medicine Cabinet) tap animation/toast — designed on paper, not yet built.
 Build the oil scan-result screen (§9) — usage classification, dosing display, safety disclaimer logic.
-Build the user-submission intake flow + review queue (§11) — draft record creation, OCR/vision label reading, mismatch detection, provisional-grade display with correct user-facing language.
+Build the user-submission intake flow + review queue (§11) — draft record creation, OCR/vision label reading, mismatch detection, provisional-grade display with correct user-facing language. §11 TIGHTEN + MASTER SCANNER (2026-09-20) is spec only — not built this pass. Parked with Real camera + Accounts.
 Oil Library
 
 DONE (Aug 8): data split into lib/oilsData.js; medsData.js + DosageCalculatorIcon.tsx removed; dead Tools-row links removed from the detail page.
@@ -1526,3 +1562,4 @@ OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
 KYR5 factory DONE / named-dry 97/26/13 / highest draft batch69 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken.
 Sprouts walk = bay-first / prenatal once daily WRITTEN on existing row / do not catalog Sprouts / #187 stays dead.
+§11 verify gate + master role / 2-shot default / scan-front interim tile / not built this pass.
