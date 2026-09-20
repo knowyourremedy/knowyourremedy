@@ -372,6 +372,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Delsym RGB mark from delsym.com. Per-id only.
   'delsym-childrens-cough-chest-dm': brandMark('delsym-mark.png'),
   'delsym-childrens-cough-cold-night': brandMark('delsym-mark.png'),
+  // Attempted Cold & Flu leftover — draft name is grape OR orange (too
+  // broad). Do not glue the official grape 5 oz carton. Official Delsym
+  // RGB mark from delsym.com. Per-id only.
+  'delsym-12hr-grape-or-orange': brandMark('delsym-mark.png'),
+  // Attempted Cold & Flu leftover — draft UPC 323900031012 is
+  // chlorpheniramine + DXM berry day/night. Live vicks.com combos are
+  // fever (323900040045) or Free Of (32390003495). Do not glue. Official
+  // Vicks shield from vicks.com. Per-id only.
+  'dayquil-nyquil-kids-berry-cold-cough': brandMark('vicks-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -500,6 +509,24 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // CVS Health mark file. Do not stay letters.
   'cvs-adult-cough-chest-dm-dyefree': 'CVS Health',
   'cvs-childrens-cough-chest-dn': 'CVS Health',
+  'cvs-childrens-cough-relief-dm': 'CVS Health',
+  'cvs-childrens-multi-cold': 'CVS Health',
+  'cvs-cough-chest-dm-liquid': 'CVS Health',
+  'cvs-pharmacy-childrens-cold-allergy': 'CVS Health',
+  // Attempted Cold & Flu leftovers — dollargeneral.com / walmart.com PDPs
+  // not retrieved from this environment. DailyMed faces are 2D dielines.
+  // No standalone official DG Health or Equate mark file (equate.com is
+  // Kuwait petrochemical — refuse). Do not stay letters.
+  'dg-health-cold-flu-day-softgels': 'DG Health',
+  'dg-health-cold-flu-night-liquid': 'DG Health',
+  'dg-health-guaifenesin-ir': 'DG Health',
+  'dg-health-mucus-dm-er': 'DG Health',
+  'dg-health-mucus-er': 'DG Health',
+  'dg-health-mucus-er-max-dyefree': 'DG Health',
+  'equate-childrens-cold-cough': 'Equate',
+  'equate-childrens-cough-congestion-dn': 'Equate',
+  'equate-childrens-multi-night': 'Equate',
+  'equate-childrens-vaporizing-rub': 'Equate',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1388,6 +1415,15 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'fon-cold-flu-kids': catalogShot('fon-cold-flu-kids.jpg'),
   'fon-cold-flu-max': catalogShot('fon-cold-flu-max.jpg'),
+  // Cold & Flu leftover batch 6 — official US 3D packshots.
+  'dayquil-cold-flu-liquid': catalogShot('dayquil-cold-flu-liquid.jpg'),
+  'dayquil-kids-cold-cough-fever-dyed': catalogShot(
+    'dayquil-kids-cold-cough-fever-dyed.jpg',
+  ),
+  'dayquil-kids-dye-free-cold-cough-mucus': catalogShot(
+    'dayquil-kids-dye-free-cold-cough-mucus.jpg',
+  ),
+  'delsym-12hr-grape': catalogShot('delsym-12hr-grape.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1747,6 +1783,16 @@ assertBrandMark(
   'Delsym',
   'delsym-mark.png',
 );
+assertBrandMark(
+  'delsym-12hr-grape-or-orange',
+  'Delsym',
+  'delsym-mark.png',
+);
+assertBrandMark(
+  'dayquil-nyquil-kids-berry-cold-cough',
+  'Vicks',
+  'vicks-mark.png',
+);
 
 {
   const colorlessRoll = previewOverlayImage({
@@ -2085,6 +2131,76 @@ assertBrandTextTile(
   'cvs-childrens-cough-chest-dn',
   'CVS Health',
   'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-childrens-cough-relief-dm',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-childrens-multi-cold',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-cough-chest-dm-liquid',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-pharmacy-childrens-cold-allergy',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'dg-health-cold-flu-day-softgels',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'dg-health-cold-flu-night-liquid',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'dg-health-guaifenesin-ir',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'dg-health-mucus-dm-er',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'dg-health-mucus-er',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'dg-health-mucus-er-max-dyefree',
+  'DG Health',
+  'DG Health',
+);
+assertBrandTextTile(
+  'equate-childrens-cold-cough',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile(
+  'equate-childrens-cough-congestion-dn',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile(
+  'equate-childrens-multi-night',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile(
+  'equate-childrens-vaporizing-rub',
+  'Equate',
+  'Equate',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -3011,6 +3127,26 @@ assertExactCarton(
   'fon-cold-flu-max',
   'Forces of Nature',
   'fon-cold-flu-max.jpg',
+);
+assertExactCarton(
+  'dayquil-cold-flu-liquid',
+  'Vicks',
+  'dayquil-cold-flu-liquid.jpg',
+);
+assertExactCarton(
+  'dayquil-kids-cold-cough-fever-dyed',
+  'Vicks',
+  'dayquil-kids-cold-cough-fever-dyed.jpg',
+);
+assertExactCarton(
+  'dayquil-kids-dye-free-cold-cough-mucus',
+  'Vicks',
+  'dayquil-kids-dye-free-cold-cough-mucus.jpg',
+);
+assertExactCarton(
+  'delsym-12hr-grape',
+  'Delsym',
+  'delsym-12hr-grape.jpg',
 );
 assertExactCarton(
   'bt-cough-bronchial-daytime',
