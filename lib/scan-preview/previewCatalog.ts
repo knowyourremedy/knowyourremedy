@@ -443,6 +443,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'upup-children-apap-dyefree': brandMark('upup-mark.png'),
   'upup-children-ibu-dyefree-liquid': brandMark('upup-mark.png'),
   'upup-children-ibu-dyed': brandMark('upup-mark.png'),
+  // Exact 73581-912 carton hunt failed: DailyMed face is a 2D dieline
+  // for NDC 73581-111 (wrong SKU). wellspringmeds.com 15/30/40 live
+  // PDPs print the 73581-911 ethylhexyl OI, already wired to the
+  // other WELMATE row. Parent mark from official pack wordmark.
+  'welmate-lidocaine-4-patch-parabens': brandMark('welmate-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -453,11 +458,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted Cold & Flu leftover — no 3D pack on wholefoodsmarket.com.
   // DailyMed is a 2D bottle wrap. Do not invent a logo. Do not stay on "3".
   '365-guaifenesin-er-600': '365',
-  // Remaining P&F brand-text after the 40-tile cleanup (Search-order tail).
-  'upup-infants-apap-dyefree': 'up&up',
-  'upup-children-ibu-chew-dyed': 'up&up',
-  'upup-infants-ibu-dyefree': 'up&up',
-  'welmate-lidocaine-4-patch-parabens': 'WELMATE',
   // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
   // (Basic Care rows are also mid-rebrand to Amazon Basics). DailyMed hits
   // are 2D dielines / label flats / a day+night combo carton. No standalone
@@ -1733,6 +1733,14 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'biofreeze-pain-relief-spray-10-5': catalogShot(
     'biofreeze-pain-relief-spray-10-5.jpg',
   ),
+  // Pain & Fever close — last 4 brand-text tiles. Exact US 3D Target
+  // cartons matched to the row barcode (grape chew 370030622429,
+  // grape infants APAP 370030623631, berry infants IBU 370030118427).
+  'upup-children-ibu-chew-dyed': catalogShot(
+    'upup-children-ibu-chew-dyed.jpg',
+  ),
+  'upup-infants-apap-dyefree': catalogShot('upup-infants-apap-dyefree.jpg'),
+  'upup-infants-ibu-dyefree': catalogShot('upup-infants-ibu-dyefree.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -2137,6 +2145,30 @@ assertBrandMark(
       'Professional aerosol must not inherit the consumer denatonium spray carton',
     );
   }
+  const equateChew = previewOverlayImage({
+    id: 'equate-children-ibu-chew-dyed',
+    formulaId: 'store-children-ibu-dyed-chew',
+    brand: 'Equate',
+  });
+  if (
+    !equateChew?.url.endsWith('/equate-mark.png') ||
+    equateChew.verifiedSku
+  ) {
+    throw new Error('Equate chew must not inherit the up&up grape carton');
+  }
+  const equateInfantsApap = previewOverlayImage({
+    id: 'equate-infants-apap-dyefree',
+    formulaId: 'store-infants-apap-dyefree-liquid',
+    brand: 'Equate',
+  });
+  if (
+    !equateInfantsApap?.url.endsWith('/equate-mark.png') ||
+    equateInfantsApap.verifiedSku
+  ) {
+    throw new Error(
+      'Equate infants APAP must not inherit the up&up grape carton',
+    );
+  }
 }
 
 // Remaining later-catalog P&F leftovers stay letters until attempted.
@@ -2186,15 +2218,6 @@ assertBrandTextTile(
   '365-guaifenesin-er-600',
   '365 Whole Foods Market',
   '365',
-);
-// Remaining P&F brand-text after the 40-tile cleanup.
-assertBrandTextTile('upup-infants-apap-dyefree', 'up&up', 'up&up');
-assertBrandTextTile('upup-children-ibu-chew-dyed', 'up&up', 'up&up');
-assertBrandTextTile('upup-infants-ibu-dyefree', 'up&up', 'up&up');
-assertBrandTextTile(
-  'welmate-lidocaine-4-patch-parabens',
-  'WELMATE',
-  'WELMATE',
 );
 // Pain & Fever brand-text cleanup (40) — parent marks, not cartons.
 assertBrandMark('aplus-health-dual-action', 'A+Health', 'aplus-health-mark.png');
@@ -2341,6 +2364,11 @@ assertBrandMark(
   'upup-mark.png',
 );
 assertBrandMark('upup-children-ibu-dyed', 'up&up', 'upup-mark.png');
+assertBrandMark(
+  'welmate-lidocaine-4-patch-parabens',
+  'WELMATE',
+  'welmate-mark.png',
+);
 assertBrandTextTile(
   'amazon-basic-care-cherry-menthol-cough-drops',
   'Amazon Basic Care',
@@ -4018,6 +4046,21 @@ assertExactCarton(
   'welmate-lidocaine-4-patch-ethylhexyl',
   'WELMATE',
   'welmate-lidocaine-4-patch-ethylhexyl.jpg',
+);
+assertExactCarton(
+  'upup-children-ibu-chew-dyed',
+  'up&up',
+  'upup-children-ibu-chew-dyed.jpg',
+);
+assertExactCarton(
+  'upup-infants-apap-dyefree',
+  'up&up',
+  'upup-infants-apap-dyefree.jpg',
+);
+assertExactCarton(
+  'upup-infants-ibu-dyefree',
+  'up&up',
+  'upup-infants-ibu-dyefree.jpg',
 );
 assertExactCarton('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-pro-spray.jpg');
 assertExactCarton(
