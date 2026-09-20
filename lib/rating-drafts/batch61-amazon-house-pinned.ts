@@ -144,6 +144,11 @@ const BATCH61_CATCHUP_BARCODES: Record<string, string> = {
   // (not the day/night kit UPC).
   'amazon-basic-care-daytime-cold-flu-softgel': '370030145171',
   'amazon-basic-care-nighttime-cold-flu-softgel': '195515012669',
+  // KYR5-d online leftover — Original Severe 12 fl oz B09HJTM8DK
+  // Product details field "UPC". OI matches 72288-189 (Yellow #10 +
+  // Green #3 + Yellow 6; no HFCS). Do not steal Berry B00ASEO13A
+  // 370030145201 (Blue #1 / Red #40) or honey 195515032933.
+  'amazon-basics-nighttime-severe-cold-flu-liquid': '195515119740 370030145508',
 };
 
 const METH = {
@@ -785,6 +790,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
     productName: 'Amazon Basics Nighttime Severe Cold & Flu Liquid',
     brand: BASICS,
     category: COLD_FLU,
+    barcode: BATCH61_CATCHUP_BARCODES['amazon-basics-nighttime-severe-cold-flu-liquid'],
     formulaId: 'amazon-basics-nighttime-severe-cold-flu-liquid',
     audience: ADULT,
     minAge: 12,

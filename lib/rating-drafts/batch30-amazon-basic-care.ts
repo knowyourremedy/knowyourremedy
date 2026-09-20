@@ -291,6 +291,15 @@ const BATCH30_CATCHUP_BARCODES: Record<string, string> = {
   'amazon-basic-care-es-apap-l484': '370030114078',
   // Original / max-strength 1 fl oz oxymetazoline (not no-drip 370030145546).
   'amazon-basic-care-oxymetazoline-nasal': '195515004251',
+  // KYR5-d online leftover — Amazon / a2basics Product details field
+  // "UPC" on 216-ct pack-of-1 (Previously Care). JSON-LD gtin12 =
+  // 195515033503. Pack-of-2 B0DH6C3BS1 had no UPC field.
+  'amazon-basic-care-dual-action': '195515033503 195515042895',
+  // KYR5-d online leftover — same Yellow #10 1200/60 formula.
+  // 42-ct B07HLYF33L Product details "UPC" 370030145119 195515119566
+  // + "Global Trade Identification Number" 00370030145119.
+  // 14-ct B08ZF2CXB7 Product details "UPC" 195515004060.
+  'amazon-basic-care-mucus-dm-er': '370030145119 195515119566 195515004060',
 };
 
 const METH = {
@@ -1085,6 +1094,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Basic Care Mucus-DM ER (Guaifenesin 1200 mg / DXM 60 mg)',
     brand: BASIC_CARE,
     category: COLD_FLU,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-mucus-dm-er'],
     formulaId: MUCUS_DM_YELLOW10,
     audience: ADULT,
     minAge: 12,
@@ -1425,6 +1435,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productName: 'Amazon Basic Care Dual Action (Acetaminophen 250 mg / Ibuprofen 125 mg)',
     brand: BASIC_CARE,
     category: PAIN_FEVER,
+    barcode: BATCH30_CATCHUP_BARCODES['amazon-basic-care-dual-action'],
     formulaId: 'amazon-basic-care-dual-action-tio2-talc',
     audience: ADULT,
     minAge: 12,

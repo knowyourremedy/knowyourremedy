@@ -1055,6 +1055,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'HealthA2Z Ibuprofen 200 mg Fast Relief',
     brand: 'HealthA2Z',
     category: PAIN_FEVER,
+    barcode: '369168335301 369168335349',
     formulaId: ID.ha2z335,
     audience: ADULT,
     minAge: 12,
@@ -1248,6 +1249,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     productName: 'Amazon Basics Pain Relief Patch with 4% Lidocaine',
     brand: 'Amazon Basics',
     category: PAIN_FEVER,
+    barcode: '195515033107',
     formulaId: ID.amzLido,
     audience: ADULT,
     minAge: 12,
@@ -1431,6 +1433,17 @@ const BATCH54_CATCHUP_BARCODES: Record<string, string> = {
   // Pain Relief Patch (ethylhexyl / 73581-911 family). Not paraben
   // 73581-912. Not Amazon Basics 72288-967.
   [ID.welmateEh]: '373581104307',
+  // KYR5-d online leftover — HealthA2Z brand PDP field "UPC:" on
+  // 24×30 value pack (a2z-life.com) 369168335301 + Amazon Product
+  // details field "UPC" on 3×30 B0CTS5RF57 369168335349. Same
+  // 69168-335 Fast Relief family as the 382 brand-printed attach.
+  // Not a computed DailyMed pad. Not 382 / 369168466050 / 369168381056.
+  [ID.ha2z335]: '369168335301 369168335349',
+  // KYR5-d online leftover — Amazon Basic Care 15-ct B0B6HC56GY
+  // Product details field "UPC" 195515033107. Drug Facts print
+  // 3-(2-ethylhexyloxy)propane-1,2-diol (72288-967 family). Title
+  // says Previously HealthWise — do not steal HealthWise 845717011037.
+  [ID.amzLido]: '195515033107',
 };
 for (const record of BATCH54_AMAZON_PF_HOLES) {
   const expected = BATCH54_CATCHUP_BARCODES[record.id];

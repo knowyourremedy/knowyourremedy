@@ -290,6 +290,9 @@ const BATCH57_CATCHUP_BARCODES: Record<string, string> = {
   [ID.topricin]: '609863047049',
   [ID.jointflex]: '372917000030',
   [ID.ha2zNap]: '369168394179',
+  // KYR5-d online leftover — Teemofe 40-ct B0DW7XBBJS Product details
+  // field "UPC" 762501440944 (valid UPC-A; not an NDC pad).
+  [ID.teemofe]: '762501440944',
 };
 
 const CITE = {
@@ -758,6 +761,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Teemofe Lidocaine 4% Pain Relief Patch',
     brand: 'Teemofe',
     category: PAIN_FEVER,
+    barcode: BATCH57_CATCHUP_BARCODES[ID.teemofe],
     formulaId: ID.teemofe,
     audience: ADULT,
     minAge: 12,

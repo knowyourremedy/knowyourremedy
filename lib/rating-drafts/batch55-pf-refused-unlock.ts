@@ -206,6 +206,12 @@ const BATCH55_CATCHUP_BARCODES: Record<string, string> = {
   // KYR5-c barcode-tile chunk 3 — brown 200-ct iron-oxide coat (not dyed-talc
   // 370030146048 and not TiO2-only 195515004138).
   [ID.bcIbu]: '370030114177',
+  // KYR5-d online leftover — Amazon Basics 100-ct B087D3H3WD Product
+  // details field "UPC" 195515120173 842379190759 + "Global Trade
+  // Identification Number" 00842379190759. Listing copy is 50
+  // two-tablet pouches (72288-080). Same iron-oxide-yellow OI as
+  // Basic Care 370030114177 — do not overwrite that 200-ct code.
+  [ID.basicsIbu]: '195515120173 842379190759',
 };
 
 const IBU_FORMULA = ID.bcIbu;
@@ -321,6 +327,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     productName: 'Amazon Basics Ibuprofen 200 mg (iron oxide yellow)',
     brand: 'Amazon Basics',
     category: PAIN_FEVER,
+    barcode: BATCH55_CATCHUP_BARCODES[ID.basicsIbu],
     formulaId: IBU_FORMULA,
     audience: ADULT,
     minAge: 12,
