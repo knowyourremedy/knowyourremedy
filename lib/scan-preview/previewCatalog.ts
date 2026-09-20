@@ -1245,6 +1245,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-chestal-kids-dry-cough-pellets': catalogShot(
     'boiron-chestal-kids-dry-cough-pellets.jpg',
   ),
+  // Cold & Flu leftover batch 3 — official US 3D packshots.
+  'boiron-chestal-kids-original': catalogShot(
+    'boiron-chestal-kids-original.jpg',
+  ),
+  'boiron-chestal-meltaway-pellets': catalogShot(
+    'boiron-chestal-meltaway-pellets.jpg',
+  ),
+  'boiron-chestal-original': catalogShot('boiron-chestal-original.jpg'),
+  'boiron-coccuscacti-pellets': catalogShot('boiron-coccuscacti-pellets.jpg'),
+  'boiron-coldcalm-baby': catalogShot('boiron-coldcalm-baby.jpg'),
+  'boiron-coldcalm-kids-liquid': catalogShot(
+    'boiron-coldcalm-kids-liquid.jpg',
+  ),
+  // 60-ct official carton matches kids-row UPC 306962607609 only.
+  // Adult leftover `coldcalm-meltaways` (UPC 306969048290) must not inherit.
+  'boiron-coldcalm-meltaways': catalogShot('boiron-coldcalm-meltaways.jpg'),
+  'coldcalm-meltaways': brandMark('boiron-mark.png'),
+  'boiron-coldcalm-pellets': catalogShot('boiron-coldcalm-pellets.jpg'),
+  'boiron-drosera-pellets': catalogShot('boiron-drosera-pellets.jpg'),
+  'boiron-dulcamara-pellets': catalogShot('boiron-dulcamara-pellets.jpg'),
+  'boiron-eucalyptusglobulus-pellets': catalogShot(
+    'boiron-eucalyptusglobulus-pellets.jpg',
+  ),
+  'boiron-eupatorium-perfoliatum-pellets': catalogShot(
+    'boiron-eupatorium-perfoliatum-pellets.jpg',
+  ),
+  'boiron-ferrum-phosphoricum-pellets': catalogShot(
+    'boiron-ferrum-phosphoricum-pellets.jpg',
+  ),
+  'boiron-gelsemium-sempervirens-pellets': catalogShot(
+    'boiron-gelsemium-sempervirens-pellets.jpg',
+  ),
+  'boiron-grindelia-pellets': catalogShot('boiron-grindelia-pellets.jpg'),
+  'boiron-hepar-sulphuris-calcareum-pellets': catalogShot(
+    'boiron-hepar-sulphuris-calcareum-pellets.jpg',
+  ),
+  'boiron-hydrastis-canadensis-pellets': catalogShot(
+    'boiron-hydrastis-canadensis-pellets.jpg',
+  ),
+  'boiron-ipecacuanha-pellets': catalogShot('boiron-ipecacuanha-pellets.jpg'),
+  'boiron-kali-bichromicum-pellets': catalogShot(
+    'boiron-kali-bichromicum-pellets.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1462,6 +1505,7 @@ assertBrandMark(
   'Boiron',
   'boiron-mark.png',
 );
+assertBrandMark('coldcalm-meltaways', 'Boiron', 'boiron-mark.png');
 assertBrandMark(
   'qunol-extra-strength-turmeric-1500-oleoresin',
   'Qunol',
@@ -1926,7 +1970,6 @@ assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
 assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
 assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
-assertLetterOnly('coldcalm-meltaways', 'Boiron');
 assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
 assertExactCarton(
   'biofreeze-menthol-patches',
@@ -2873,6 +2916,101 @@ assertExactCarton(
   'boiron-chestal-kids-dry-cough-pellets',
   'Boiron',
   'boiron-chestal-kids-dry-cough-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-kids-original',
+  'Boiron',
+  'boiron-chestal-kids-original.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-meltaway-pellets',
+  'Boiron',
+  'boiron-chestal-meltaway-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-chestal-original',
+  'Boiron',
+  'boiron-chestal-original.jpg',
+);
+assertExactCarton(
+  'boiron-coccuscacti-pellets',
+  'Boiron',
+  'boiron-coccuscacti-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-coldcalm-baby',
+  'Boiron',
+  'boiron-coldcalm-baby.jpg',
+);
+assertExactCarton(
+  'boiron-coldcalm-kids-liquid',
+  'Boiron',
+  'boiron-coldcalm-kids-liquid.jpg',
+);
+assertExactCarton(
+  'boiron-coldcalm-meltaways',
+  'Boiron',
+  'boiron-coldcalm-meltaways.jpg',
+);
+assertExactCarton(
+  'boiron-coldcalm-pellets',
+  'Boiron',
+  'boiron-coldcalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-drosera-pellets',
+  'Boiron',
+  'boiron-drosera-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-dulcamara-pellets',
+  'Boiron',
+  'boiron-dulcamara-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-eucalyptusglobulus-pellets',
+  'Boiron',
+  'boiron-eucalyptusglobulus-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-eupatorium-perfoliatum-pellets',
+  'Boiron',
+  'boiron-eupatorium-perfoliatum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-ferrum-phosphoricum-pellets',
+  'Boiron',
+  'boiron-ferrum-phosphoricum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-gelsemium-sempervirens-pellets',
+  'Boiron',
+  'boiron-gelsemium-sempervirens-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-grindelia-pellets',
+  'Boiron',
+  'boiron-grindelia-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-hepar-sulphuris-calcareum-pellets',
+  'Boiron',
+  'boiron-hepar-sulphuris-calcareum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-hydrastis-canadensis-pellets',
+  'Boiron',
+  'boiron-hydrastis-canadensis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-ipecacuanha-pellets',
+  'Boiron',
+  'boiron-ipecacuanha-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-kali-bichromicum-pellets',
+  'Boiron',
+  'boiron-kali-bichromicum-pellets.jpg',
 );
 assertExactCarton(
   'biofreeze-colorless-gel-4',
