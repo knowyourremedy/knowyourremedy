@@ -285,35 +285,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aspercreme-arthritis-pain-gel': brandMark('aspercreme-mark.png'),
   // Salonpas diclofenac gel: not on salonpas.us; DailyMed is instructional art.
   'salonpas-diclofenac-arthritis-pain-gel': brandMark('salonpas-mark.png'),
-  // Icy Hot liquid / Performance / Revive / vanishing: brand site has no
-  // matching carton (roll-on ≠ liquid; Performance / vanishing / Revive
-  // packs not on icyhot.com). Per-id so other Icy Hot SKUs stay letters.
+  // Icy Hot liquid / Performance / Revive: brand site has no matching carton
+  // (roll-on ≠ liquid; Performance / Revive packs not on icyhot.com).
+  // Per-id so other Icy Hot SKUs stay letters.
   'icy-hot-lidocaine-no-mess-liquid': brandMark('icy-hot-mark.png'),
   'icy-hot-performance-cream': brandMark('icy-hot-mark.png'),
   'icy-hot-performance-no-mess-cream': brandMark('icy-hot-mark.png'),
   'icy-hot-revive-recovery-roll-on': brandMark('icy-hot-mark.png'),
-  'icy-hot-vanishing-scent-gel': brandMark('icy-hot-mark.png'),
-  // Tiger Balm siblings: Active rub/gel have no distinct official carton;
-  // Neck & Shoulder non-vanishing row is not the current vanishing-scent pack.
-  'tiger-balm-active-muscle-rub': brandMark('tiger-balm-mark.png'),
-  'tiger-balm-active-muscle-gel': brandMark('tiger-balm-mark.png'),
+  // Tiger Balm Neck & Shoulder leftover is the non-vanishing row, not the
+  // already-overlaid vanishing-scent pack. Per-id only.
   'tiger-balm-neck-shoulder-rub': brandMark('tiger-balm-mark.png'),
   // Batch 2 attempted leftovers — no matching carton. Per-id only.
   'tiger-balm-hydrogel-patch': brandMark('tiger-balm-mark.png'),
   'icy-hot-original-menthol-patch': brandMark('icy-hot-mark.png'),
   'icy-hot-pro-microbeads-cream': brandMark('icy-hot-mark.png'),
   'aspercreme-lidocaine-foot-2in1': brandMark('aspercreme-mark.png'),
-  'aspercreme-lidocaine-no-mess-lavender': brandMark('aspercreme-mark.png'),
-  'aspercreme-lidocaine-rosemary-mint': brandMark('aspercreme-mark.png'),
-  'aspercreme-lidocaine-xl-patch': brandMark('aspercreme-mark.png'),
   'salonpas-arthritis-pain-patch-large': brandMark('salonpas-mark.png'),
-  // Batch 2 attempted leftovers — no matching carton. Per-id only.
-  'absorbine-jr-pro-spray': brandMark('absorbine-jr-mark.png'),
-  'absorbine-jr-plus-ultra-patch': brandMark('absorbine-jr-mark.png'),
-  'absorbine-jr-xl-back-patch': brandMark('absorbine-jr-mark.png'),
+  // Batch 2 leftover — lifestyle 4-pack is not the plus knee carton.
   'absorbine-jr-plus-knee-patch': brandMark('absorbine-jr-mark.png'),
   'qunol-extra-strength-turmeric-1500-oleoresin': brandMark('qunol-mark.png'),
-  'motrin-arthritis-pain-gel': brandMark('motrin-mark.png'),
   // Batch 3 attempted leftovers — no matching official 3D pack face.
   // Flavor-generic dyed chew (grape / bubblegum cartons exist — do not glue).
   'tylenol-children-chew-dyed': brandMark('tylenol-mark.png'),
@@ -324,36 +314,21 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'junior-strength-advil-coated': brandMark('advil-mark.png'),
   // Too-broad leftover (film-coated / menstrual named as one row).
   'advil-film-coated-menstrual': brandMark('advil-mark.png'),
-  // Batch 2 leftovers — Cool Patch / regular+wider hydrogel have no distinct
-  // official 3D carton (tigerbalm.com/us Cool Patch absent; hydrogel twins
-  // are not the already-overlaid cloth patch or Large hydrogel). Per-id only.
+  // Batch 2 leftovers — Cool Patch / wider hydrogel have no distinct
+  // official 3D carton (tigerbalm.com/us Cool Patch absent; wider hydrogel
+  // is not the regular hydrogel carton). Per-id only.
   'tiger-balm-cool-patch': brandMark('tiger-balm-mark.png'),
-  'tiger-balm-pain-relieving-patch-regular-hydrogel': brandMark(
-    'tiger-balm-mark.png',
-  ),
   'tiger-balm-pain-relieving-patch-wider-hydrogel': brandMark(
     'tiger-balm-mark.png',
   ),
   // Batch 2 leftovers — biofreeze.com current catalog has no matching
-  // 3.5% gel / Professional 5% / 10.5% alcohol spray / 10% spray /
-  // Professional 13% / overnight cream / foam / pen / strip / foot cream.
+  // 3.5% gel / green Professional 5% / 10% spray / Professional 13%.
   // Per-id only so already-overlaid Biofreeze cartons stay exact.
   'biofreeze-gel-3-5-paraben': brandMark('biofreeze-mark.png'),
   'biofreeze-professional-gel-5': brandMark('biofreeze-mark.png'),
   'biofreeze-professional-roll-on-5': brandMark('biofreeze-mark.png'),
-  'biofreeze-professional-colorless-gel-5': brandMark('biofreeze-mark.png'),
-  'biofreeze-professional-colorless-roll-on-5': brandMark(
-    'biofreeze-mark.png',
-  ),
-  'biofreeze-pain-relief-spray-10-5': brandMark('biofreeze-mark.png'),
-  'biofreeze-professional-spray-10-5': brandMark('biofreeze-mark.png'),
-  'biofreeze-precision-relief-pen': brandMark('biofreeze-mark.png'),
   'biofreeze-pain-relief-spray-10': brandMark('biofreeze-mark.png'),
   'biofreeze-professional-spray-13': brandMark('biofreeze-mark.png'),
-  'biofreeze-overnight-relief-cream': brandMark('biofreeze-mark.png'),
-  'biofreeze-foam': brandMark('biofreeze-mark.png'),
-  'biofreeze-flexible-relief-strip': brandMark('biofreeze-mark.png'),
-  'biofreeze-foot-cream': brandMark('biofreeze-mark.png'),
   // Batch leftovers — DailyMed faces are 2D dielines / minis, not 3D
   // packshots. Official GoodSense wordmark from goodsense.com (Perrigo).
   // Per-id only so other-aisle GoodSense rows stay letters.
@@ -416,7 +391,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted P&F leftovers / flavor-generic kids. Target media kit is
   // product photos only — no standalone official up&up mark file.
   // Do not invent a logo. Do not stay on the letter "U".
-  'upup-es-red40-tio2': 'up&up',
   'upup-children-apap-dyed': 'up&up',
   'upup-infants-apap-dyefree': 'up&up',
   'upup-children-apap-dyefree': 'up&up',
@@ -448,8 +422,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Shop PDP photo is Joint Support + Turmeric — not Inflacalm Ache Relief.
   'sprouts-inflacalm-ache-relief': 'Sprouts',
   // Attempted P&F leftovers — no official US carton / no standalone mark file.
-  'flexall-max-strength-gel': 'Flexall',
-  'midol-complete': 'Midol',
   'now-turmeric-curcumin-bioperine': 'NOW',
   'gol-mykind-turmeric-inflammatory-gummies': 'Garden of Life',
   'organic-india-turmeric-formula': 'Organic India',
@@ -459,34 +431,16 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Caplets/Tablets, ES 500/Aspirina, Back & Body/Aspirina Cafeína, and
   // enteric 81+325 are too-broad combined names — parent text tile.
   'aleve-caplets-tablets': 'Aleve',
-  'aleve-gelcaps': 'Aleve',
-  'aleve-liquid-gels': 'Aleve',
-  'aleve-back-muscle-pain': 'Aleve',
-  'aleve-headache-pain': 'Aleve',
   'bayer-es-500-aspirina': 'Bayer',
   'bayer-back-body-aspirina-cafeina': 'Bayer',
   'bayer-aspirin-regimen-enteric': 'Bayer',
-  'bayer-chewable-81-orange': 'Bayer',
-  'bayer-chewable-81-cherry': 'Bayer',
-  'genuine-bayer-aspirin-325': 'Bayer',
-  'alevex-pain-relieving-lotion-roll-on': 'AleveX',
-  'alevex-pain-relieving-lotion-tube': 'AleveX',
-  'alevex-pain-relieving-spray': 'AleveX',
-  // Attempted leftover — aleve.com 403; DailyMed arthritis gel faces are
-  // 2D dielines, not a 3D packshot. No standalone official mark file.
-  'aleve-arthritis-pain-gel': 'Aleve',
   // Attempted P&F leftovers — DailyMed hits are 2D dielines / label flats,
   // not 3D packshots. No standalone official mark file on a brand site.
   'timecap-naproxen-220': 'TIME-Cap',
-  'healtha2z-ibuprofen-200-382': 'HealthA2Z',
-  'healthwise-lidocaine-4-patch': 'HealthWise',
   'welmate-lidocaine-4-patch-parabens': 'WELMATE',
   'healtha2z-ibuprofen-200-335': 'HealthA2Z',
   'amazon-basics-lidocaine-4-patch': 'Amazon Basics',
-  'welmate-lidocaine-4-patch-ethylhexyl': 'WELMATE',
-  'amazon-basic-care-ibuprofen-iron-oxide-yellow': 'Basic Care',
   'amazon-basics-ibuprofen-iron-oxide-yellow': 'Amazon Basics',
-  'aplus-health-dual-action-oxides': 'A+Health',
   'aplus-health-dual-action': 'A+Health',
   // Batch 2 leftovers — DailyMed / brand-site hits are 2D dielines,
   // wrong-brand faces, or a different NDC. No standalone official mark.
@@ -496,7 +450,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-elements-turmeric-complex': 'Amazon Elements',
   'teemofe-lidocaine-4-patch': 'Teemofe',
   'healtha2z-naproxen-220-300': 'HealthA2Z',
-  'amazon-basic-care-apap-650-er-l544': 'Basic Care',
   'amazon-basic-care-aspirin-81-chew-l467': 'Basic Care',
   'amazon-elements-turmeric-root': 'Amazon Elements',
   // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
@@ -1672,6 +1625,106 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Allergies leftover daytime run 3 — official US 3D packshots.
   'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
   'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
+  // Pain & Fever daytime photo run — exact US 3D packshots.
+  // Letter-queue upgrades (20).
+  'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
+  'aleve-back-muscle-pain': catalogShot('aleve-back-muscle-pain.jpg'),
+  'aleve-gelcaps': catalogShot('aleve-gelcaps.jpg'),
+  'aleve-headache-pain': catalogShot('aleve-headache-pain.jpg'),
+  'aleve-liquid-gels': catalogShot('aleve-liquid-gels.jpg'),
+  'alevex-pain-relieving-lotion-roll-on': catalogShot(
+    'alevex-pain-relieving-lotion-roll-on.jpg',
+  ),
+  'alevex-pain-relieving-lotion-tube': catalogShot(
+    'alevex-pain-relieving-lotion-tube.jpg',
+  ),
+  'alevex-pain-relieving-spray': catalogShot(
+    'alevex-pain-relieving-spray.jpg',
+  ),
+  'bayer-chewable-81-cherry': catalogShot('bayer-chewable-81-cherry.jpg'),
+  'bayer-chewable-81-orange': catalogShot('bayer-chewable-81-orange.jpg'),
+  'flexall-max-strength-gel': catalogShot('flexall-max-strength-gel.jpg'),
+  'genuine-bayer-aspirin-325': catalogShot('genuine-bayer-aspirin-325.jpg'),
+  'midol-complete': catalogShot('midol-complete.jpg'),
+  'amazon-basic-care-apap-650-er-l544': catalogShot(
+    'amazon-basic-care-apap-650-er-l544.jpg',
+  ),
+  'aplus-health-dual-action-oxides': catalogShot(
+    'aplus-health-dual-action-oxides.jpg',
+  ),
+  'healtha2z-ibuprofen-200-382': catalogShot(
+    'healtha2z-ibuprofen-200-382.jpg',
+  ),
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow': catalogShot(
+    'amazon-basic-care-ibuprofen-iron-oxide-yellow.jpg',
+  ),
+  // Shares formulaId with Basic Care iron-oxide-yellow — do not inherit
+  // the Basic Care bottle carton. Basics leftover is a pouch pack.
+  'amazon-basics-ibuprofen-iron-oxide-yellow': brandTextTile('Amazon Basics'),
+  'healthwise-lidocaine-4-patch': catalogShot(
+    'healthwise-lidocaine-4-patch.jpg',
+  ),
+  'upup-es-red40-tio2': catalogShot('upup-es-red40-tio2.jpg'),
+  'welmate-lidocaine-4-patch-ethylhexyl': catalogShot(
+    'welmate-lidocaine-4-patch-ethylhexyl.jpg',
+  ),
+  // Brand-mark → exact carton upgrades (20).
+  'absorbine-jr-pro-spray': catalogShot('absorbine-jr-pro-spray.jpg'),
+  'absorbine-jr-plus-ultra-patch': catalogShot(
+    'absorbine-jr-plus-ultra-patch.jpg',
+  ),
+  'absorbine-jr-xl-back-patch': catalogShot(
+    'absorbine-jr-xl-back-patch.jpg',
+  ),
+  'biofreeze-foam': catalogShot('biofreeze-foam.jpg'),
+  'biofreeze-foot-cream': catalogShot('biofreeze-foot-cream.jpg'),
+  'tiger-balm-active-muscle-rub': catalogShot(
+    'tiger-balm-active-muscle-rub.jpg',
+  ),
+  'tiger-balm-active-muscle-gel': catalogShot(
+    'tiger-balm-active-muscle-gel.jpg',
+  ),
+  'icy-hot-vanishing-scent-gel': catalogShot(
+    'icy-hot-vanishing-scent-gel.jpg',
+  ),
+  'motrin-arthritis-pain-gel': catalogShot('motrin-arthritis-pain-gel.jpg'),
+  'biofreeze-professional-colorless-gel-5': catalogShot(
+    'biofreeze-professional-colorless-gel-5.jpg',
+  ),
+  'biofreeze-precision-relief-pen': catalogShot(
+    'biofreeze-precision-relief-pen.jpg',
+  ),
+  'biofreeze-overnight-relief-cream': catalogShot(
+    'biofreeze-overnight-relief-cream.jpg',
+  ),
+  'biofreeze-flexible-relief-strip': catalogShot(
+    'biofreeze-flexible-relief-strip.jpg',
+  ),
+  'tiger-balm-pain-relieving-patch-regular-hydrogel': catalogShot(
+    'tiger-balm-pain-relieving-patch-regular-hydrogel.jpg',
+  ),
+  // Shares formulaId with regular hydrogel — do not inherit the 4x2.75 carton.
+  'tiger-balm-pain-relieving-patch-wider-hydrogel': brandMark(
+    'tiger-balm-mark.png',
+  ),
+  'aspercreme-lidocaine-xl-patch': catalogShot(
+    'aspercreme-lidocaine-xl-patch.jpg',
+  ),
+  'biofreeze-professional-colorless-roll-on-5': catalogShot(
+    'biofreeze-professional-colorless-roll-on-5.jpg',
+  ),
+  'aspercreme-lidocaine-rosemary-mint': catalogShot(
+    'aspercreme-lidocaine-rosemary-mint.jpg',
+  ),
+  'aspercreme-lidocaine-no-mess-lavender': catalogShot(
+    'aspercreme-lidocaine-no-mess-lavender.jpg',
+  ),
+  'biofreeze-professional-spray-10-5': catalogShot(
+    'biofreeze-professional-spray-10-5.jpg',
+  ),
+  'biofreeze-pain-relief-spray-10-5': catalogShot(
+    'biofreeze-pain-relief-spray-10-5.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1868,21 +1921,12 @@ assertBrandMark('icy-hot-lidocaine-no-mess-liquid', 'Icy Hot', 'icy-hot-mark.png
 assertBrandMark('icy-hot-performance-cream', 'Icy Hot', 'icy-hot-mark.png');
 assertBrandMark('icy-hot-performance-no-mess-cream', 'Icy Hot', 'icy-hot-mark.png');
 assertBrandMark('icy-hot-revive-recovery-roll-on', 'Icy Hot', 'icy-hot-mark.png');
-assertBrandMark('icy-hot-vanishing-scent-gel', 'Icy Hot', 'icy-hot-mark.png');
-assertBrandMark('tiger-balm-active-muscle-rub', 'Tiger Balm', 'tiger-balm-mark.png');
-assertBrandMark('tiger-balm-active-muscle-gel', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark('tiger-balm-neck-shoulder-rub', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark('tiger-balm-hydrogel-patch', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark('icy-hot-original-menthol-patch', 'Icy Hot', 'icy-hot-mark.png');
 assertBrandMark('icy-hot-pro-microbeads-cream', 'Icy Hot', 'icy-hot-mark.png');
 assertBrandMark('aspercreme-lidocaine-foot-2in1', 'Aspercreme', 'aspercreme-mark.png');
-assertBrandMark('aspercreme-lidocaine-no-mess-lavender', 'Aspercreme', 'aspercreme-mark.png');
-assertBrandMark('aspercreme-lidocaine-rosemary-mint', 'Aspercreme', 'aspercreme-mark.png');
-assertBrandMark('aspercreme-lidocaine-xl-patch', 'Aspercreme', 'aspercreme-mark.png');
 assertBrandMark('salonpas-arthritis-pain-patch-large', 'Salonpas', 'salonpas-mark.png');
-assertBrandMark('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-mark.png');
-assertBrandMark('absorbine-jr-plus-ultra-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
-assertBrandMark('absorbine-jr-xl-back-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
 assertBrandMark('absorbine-jr-plus-knee-patch', 'Absorbine Jr.', 'absorbine-jr-mark.png');
 assertBrandMark(
   'boiron-chestal-cold-cough-honey',
@@ -1895,7 +1939,6 @@ assertBrandMark(
   'Qunol',
   'qunol-mark.png',
 );
-assertBrandMark('motrin-arthritis-pain-gel', 'Motrin', 'motrin-mark.png');
 assertBrandMark('biofreeze-colorless-roll-on-4', 'Biofreeze', 'biofreeze-mark.png');
 assertBrandMark(
   'absorbine-jr-pro-roll-on-liquid',
@@ -1924,11 +1967,6 @@ assertBrandMark(
 );
 assertBrandMark('tiger-balm-cool-patch', 'Tiger Balm', 'tiger-balm-mark.png');
 assertBrandMark(
-  'tiger-balm-pain-relieving-patch-regular-hydrogel',
-  'Tiger Balm',
-  'tiger-balm-mark.png',
-);
-assertBrandMark(
   'tiger-balm-pain-relieving-patch-wider-hydrogel',
   'Tiger Balm',
   'tiger-balm-mark.png',
@@ -1949,32 +1987,7 @@ assertBrandMark(
   'biofreeze-mark.png',
 );
 assertBrandMark(
-  'biofreeze-professional-colorless-gel-5',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark(
-  'biofreeze-professional-colorless-roll-on-5',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark(
   'biofreeze-professional-aerosol-10-5-denatonium',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark(
-  'biofreeze-pain-relief-spray-10-5',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark(
-  'biofreeze-professional-spray-10-5',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark(
-  'biofreeze-precision-relief-pen',
   'Biofreeze',
   'biofreeze-mark.png',
 );
@@ -1988,18 +2001,6 @@ assertBrandMark(
   'Biofreeze',
   'biofreeze-mark.png',
 );
-assertBrandMark(
-  'biofreeze-overnight-relief-cream',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark('biofreeze-foam', 'Biofreeze', 'biofreeze-mark.png');
-assertBrandMark(
-  'biofreeze-flexible-relief-strip',
-  'Biofreeze',
-  'biofreeze-mark.png',
-);
-assertBrandMark('biofreeze-foot-cream', 'Biofreeze', 'biofreeze-mark.png');
 assertBrandMark(
   'goodsense-naproxen-220',
   'GoodSense',
@@ -2178,7 +2179,6 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
-assertBrandTextTile('upup-es-red40-tio2', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-apap-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-infants-apap-dyefree', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-apap-dyefree', 'up&up', 'up&up');
@@ -2202,8 +2202,6 @@ assertBrandTextTile('amazon-basic-care-ibuprofen-liqui-gels', 'Amazon Basic Care
 assertBrandTextTile('amazon-basic-care-infants-ibuprofen', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('amazon-basic-care-kids-apap-dyefree', 'Amazon Basic Care', 'Basic Care');
 assertBrandTextTile('sprouts-inflacalm-ache-relief', 'Sprouts', 'Sprouts');
-assertBrandTextTile('flexall-max-strength-gel', 'Flexall', 'Flexall');
-assertBrandTextTile('midol-complete', 'Midol', 'Midol');
 assertBrandTextTile('now-turmeric-curcumin-bioperine', 'NOW', 'NOW');
 assertBrandTextTile(
   'gol-mykind-turmeric-inflammatory-gummies',
@@ -2216,10 +2214,6 @@ assertBrandTextTile(
   'Organic India',
 );
 assertBrandTextTile('aleve-caplets-tablets', 'Aleve', 'Aleve');
-assertBrandTextTile('aleve-gelcaps', 'Aleve', 'Aleve');
-assertBrandTextTile('aleve-liquid-gels', 'Aleve', 'Aleve');
-assertBrandTextTile('aleve-back-muscle-pain', 'Aleve', 'Aleve');
-assertBrandTextTile('aleve-headache-pain', 'Aleve', 'Aleve');
 assertBrandTextTile('bayer-es-500-aspirina', 'Bayer', 'Bayer');
 assertBrandTextTile(
   'bayer-back-body-aspirina-cafeina',
@@ -2227,32 +2221,7 @@ assertBrandTextTile(
   'Bayer',
 );
 assertBrandTextTile('bayer-aspirin-regimen-enteric', 'Bayer', 'Bayer');
-assertBrandTextTile('bayer-chewable-81-orange', 'Bayer', 'Bayer');
-assertBrandTextTile('bayer-chewable-81-cherry', 'Bayer', 'Bayer');
-assertBrandTextTile('genuine-bayer-aspirin-325', 'Bayer', 'Bayer');
-assertBrandTextTile(
-  'alevex-pain-relieving-lotion-roll-on',
-  'AleveX',
-  'AleveX',
-);
-assertBrandTextTile(
-  'alevex-pain-relieving-lotion-tube',
-  'AleveX',
-  'AleveX',
-);
-assertBrandTextTile('alevex-pain-relieving-spray', 'AleveX', 'AleveX');
-assertBrandTextTile('aleve-arthritis-pain-gel', 'Aleve', 'Aleve');
 assertBrandTextTile('timecap-naproxen-220', 'TIME-Cap Labs', 'TIME-Cap');
-assertBrandTextTile(
-  'healtha2z-ibuprofen-200-382',
-  'HealthA2Z',
-  'HealthA2Z',
-);
-assertBrandTextTile(
-  'healthwise-lidocaine-4-patch',
-  'HealthWise',
-  'HealthWise',
-);
 assertBrandTextTile(
   'welmate-lidocaine-4-patch-parabens',
   'WELMATE',
@@ -2269,24 +2238,9 @@ assertBrandTextTile(
   'Amazon Basics',
 );
 assertBrandTextTile(
-  'welmate-lidocaine-4-patch-ethylhexyl',
-  'WELMATE',
-  'WELMATE',
-);
-assertBrandTextTile(
-  'amazon-basic-care-ibuprofen-iron-oxide-yellow',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
   'amazon-basics-ibuprofen-iron-oxide-yellow',
   'Amazon Basics',
   'Amazon Basics',
-);
-assertBrandTextTile(
-  'aplus-health-dual-action-oxides',
-  'A+Health',
-  'A+Health',
 );
 assertBrandTextTile('aplus-health-dual-action', 'A+Health', 'A+Health');
 assertBrandTextTile(
@@ -2314,11 +2268,6 @@ assertBrandTextTile(
   'healtha2z-naproxen-220-300',
   'HealthA2Z',
   'HealthA2Z',
-);
-assertBrandTextTile(
-  'amazon-basic-care-apap-650-er-l544',
-  'Amazon Basic Care',
-  'Basic Care',
 );
 assertBrandTextTile(
   'amazon-basic-care-aspirin-81-chew-l467',
@@ -3951,6 +3900,147 @@ assertExactCarton(
   'allegra-allergy-24hr.jpg',
 );
 assertExactCarton('allegra-d-24hr', 'Allegra', 'allegra-d-24hr.jpg');
+// Pain & Fever daytime photo run — exact US 3D packshots (40).
+assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
+assertExactCarton('aleve-back-muscle-pain', 'Aleve', 'aleve-back-muscle-pain.jpg');
+assertExactCarton('aleve-gelcaps', 'Aleve', 'aleve-gelcaps.jpg');
+assertExactCarton('aleve-headache-pain', 'Aleve', 'aleve-headache-pain.jpg');
+assertExactCarton('aleve-liquid-gels', 'Aleve', 'aleve-liquid-gels.jpg');
+assertExactCarton(
+  'alevex-pain-relieving-lotion-roll-on',
+  'Aleve',
+  'alevex-pain-relieving-lotion-roll-on.jpg',
+);
+assertExactCarton(
+  'alevex-pain-relieving-lotion-tube',
+  'Aleve',
+  'alevex-pain-relieving-lotion-tube.jpg',
+);
+assertExactCarton(
+  'alevex-pain-relieving-spray',
+  'Aleve',
+  'alevex-pain-relieving-spray.jpg',
+);
+assertExactCarton('bayer-chewable-81-cherry', 'Bayer', 'bayer-chewable-81-cherry.jpg');
+assertExactCarton('bayer-chewable-81-orange', 'Bayer', 'bayer-chewable-81-orange.jpg');
+assertExactCarton('flexall-max-strength-gel', 'Flexall', 'flexall-max-strength-gel.jpg');
+assertExactCarton('genuine-bayer-aspirin-325', 'Bayer', 'genuine-bayer-aspirin-325.jpg');
+assertExactCarton('midol-complete', 'Midol', 'midol-complete.jpg');
+assertExactCarton(
+  'amazon-basic-care-apap-650-er-l544',
+  'Amazon Basic Care',
+  'amazon-basic-care-apap-650-er-l544.jpg',
+);
+assertExactCarton(
+  'aplus-health-dual-action-oxides',
+  'A+Health',
+  'aplus-health-dual-action-oxides.jpg',
+);
+assertExactCarton(
+  'healtha2z-ibuprofen-200-382',
+  'HealthA2Z',
+  'healtha2z-ibuprofen-200-382.jpg',
+);
+assertExactCarton(
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow',
+  'Amazon Basic Care',
+  'amazon-basic-care-ibuprofen-iron-oxide-yellow.jpg',
+);
+assertExactCarton(
+  'healthwise-lidocaine-4-patch',
+  'HealthWise',
+  'healthwise-lidocaine-4-patch.jpg',
+);
+assertExactCarton('upup-es-red40-tio2', 'up&up', 'upup-es-red40-tio2.jpg');
+assertExactCarton(
+  'welmate-lidocaine-4-patch-ethylhexyl',
+  'WELMATE',
+  'welmate-lidocaine-4-patch-ethylhexyl.jpg',
+);
+assertExactCarton('absorbine-jr-pro-spray', 'Absorbine Jr.', 'absorbine-jr-pro-spray.jpg');
+assertExactCarton(
+  'absorbine-jr-plus-ultra-patch',
+  'Absorbine Jr.',
+  'absorbine-jr-plus-ultra-patch.jpg',
+);
+assertExactCarton(
+  'absorbine-jr-xl-back-patch',
+  'Absorbine Jr.',
+  'absorbine-jr-xl-back-patch.jpg',
+);
+assertExactCarton('biofreeze-foam', 'Biofreeze', 'biofreeze-foam.jpg');
+assertExactCarton('biofreeze-foot-cream', 'Biofreeze', 'biofreeze-foot-cream.jpg');
+assertExactCarton(
+  'tiger-balm-active-muscle-rub',
+  'Tiger Balm',
+  'tiger-balm-active-muscle-rub.jpg',
+);
+assertExactCarton(
+  'tiger-balm-active-muscle-gel',
+  'Tiger Balm',
+  'tiger-balm-active-muscle-gel.jpg',
+);
+assertExactCarton(
+  'icy-hot-vanishing-scent-gel',
+  'Icy Hot',
+  'icy-hot-vanishing-scent-gel.jpg',
+);
+assertExactCarton('motrin-arthritis-pain-gel', 'Motrin', 'motrin-arthritis-pain-gel.jpg');
+assertExactCarton(
+  'biofreeze-professional-colorless-gel-5',
+  'Biofreeze',
+  'biofreeze-professional-colorless-gel-5.jpg',
+);
+assertExactCarton(
+  'biofreeze-precision-relief-pen',
+  'Biofreeze',
+  'biofreeze-precision-relief-pen.jpg',
+);
+assertExactCarton(
+  'biofreeze-overnight-relief-cream',
+  'Biofreeze',
+  'biofreeze-overnight-relief-cream.jpg',
+);
+assertExactCarton(
+  'biofreeze-flexible-relief-strip',
+  'Biofreeze',
+  'biofreeze-flexible-relief-strip.jpg',
+);
+assertExactCarton(
+  'tiger-balm-pain-relieving-patch-regular-hydrogel',
+  'Tiger Balm',
+  'tiger-balm-pain-relieving-patch-regular-hydrogel.jpg',
+);
+assertExactCarton(
+  'aspercreme-lidocaine-xl-patch',
+  'Aspercreme',
+  'aspercreme-lidocaine-xl-patch.jpg',
+);
+assertExactCarton(
+  'biofreeze-professional-colorless-roll-on-5',
+  'Biofreeze',
+  'biofreeze-professional-colorless-roll-on-5.jpg',
+);
+assertExactCarton(
+  'aspercreme-lidocaine-rosemary-mint',
+  'Aspercreme',
+  'aspercreme-lidocaine-rosemary-mint.jpg',
+);
+assertExactCarton(
+  'aspercreme-lidocaine-no-mess-lavender',
+  'Aspercreme',
+  'aspercreme-lidocaine-no-mess-lavender.jpg',
+);
+assertExactCarton(
+  'biofreeze-professional-spray-10-5',
+  'Biofreeze',
+  'biofreeze-professional-spray-10-5.jpg',
+);
+assertExactCarton(
+  'biofreeze-pain-relief-spray-10-5',
+  'Biofreeze',
+  'biofreeze-pain-relief-spray-10-5.jpg',
+);
 assertExactCarton(
   'bt-cough-bronchial-daytime',
   'Boericke & Tafel',
