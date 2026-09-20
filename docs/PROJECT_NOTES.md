@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 20, 2026 — KYR5-d full missing-UPC rescan after #245. Attached 8 unique empty Search rows (7 online + DG IBU 24/100). Live missing UPC 101 (in-store 81 + online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Highest rating-draft is batch69 (PR #231). batch67 = PR #229 — do not edit. Do not reopen batch65 / 66 / 67 / 68 or PR #230. Factory #121–#221 stay closed. Oils bottles: hunt-list only. Never Search-graded.
+Last Updated: September 19, 2026 — Sprouts walk = bay-first / prenatal once daily locked / do not catalog Sprouts. 187 stays dead. No grades. No new Search rows. Store BAY first, not form — do not group “all liquids.” Prenatal Once Daily 60-ct FOUNDER LOCK this trip: UPC 646670681882 (maps to sprouts-organic-prenatal-once-daily; front does not say Organic). Unwritten ~55 names still not on MAIN — do not invent. Park: up&up ES APAP 500 mg 225-ct UPC 349483342260; up&up Nighttime Relief Lubricant Eye Ointment still missing. Live missing UPC 101 (in-store 81 + online 20) after #245. Factory #121–#221 stay closed.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -211,7 +211,8 @@ Next session
 - Count-tab lock stays: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
 - Thrive hole punch DONE (batch59 — 241). Thrive refused unlock DONE (batch60 — 36). Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea food/OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
-- Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187.
+- Sprouts house stays STASHED. Do not catalog Sprouts. Do not reopen 187. Walk-list lock (founder 2026-09-19): store BAY first, not form. Do not group “all liquids.” See SPROUTS HOUSE WALK MAP. No grades. No new Search rows.
+- Target-trip park (not Sprouts): up&up Extra Strength Acetaminophen 500 mg 225-ct UPC 349483342260. up&up Nighttime Relief Lubricant Eye Ointment still missing.
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 101 (in-store 81 / online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
@@ -658,6 +659,38 @@ Completed (main, unverified drafts unless noted):
   Still blocked / stashed: founder walk list ≈ 55 unread house panels + the 3 batch36 refused names above. Do not guess OI. Do not send KYR3 at this pile until Brandon un-stashes it.
   Organic MCT Oil bottle = oil hunt list, not Search.
   Do NOT write the old unread-harvest leftover count again.
+
+SPROUTS HOUSE WALK MAP (stash + DRY leftovers). Founder 2026-09-19. Do not catalog Sprouts. 187 stays dead. No grades. No new Search rows.
+Walk-list lock: store BAY first, not form. Do not group “all liquids” together. Lion’s Mane liquid lives in mushrooms/immune. UT Support liquid lives in women’s/urinary. Chlorophyll lives in greens. A walk list that says “liquids” wastes the aisle.
+One bay, finish, then move. Unwritten ~55 names are still not copied onto MAIN. Do not invent them. New house bottles Brandon photos = name-park under the matching bay.
+
+Bay 1 Multis
+- Sprouts Organic Once Daily Men's Multivitamin (batch36 refused — photo OI if found, do not invent)
+
+Bay 2 Prenatal / pregnancy
+- Sprouts Prenatal Once Daily 60-ct — FOUNDER LOCK this trip: UPC 646670681882. OI: microcrystalline cellulose, stearic acid, modified cellulose, croscarmellose sodium, hypromellose, silicon dioxide, magnesium stearate, glycerin. Front does not say Organic. Maps to existing sprouts-organic-prenatal-once-daily row. No grade tonight.
+- Sprouts Organic Prenatal Whole Food (tablet multi — NOT multi+DHA combo pack)
+
+Bay 3 Mushrooms / immune
+- Sprouts Lion’s Mane Liquid (DRY row). Capsules ≠ this row. Reishi / Mushroom Immune = name-park only until un-stash.
+
+Bay 4 Women’s / urinary
+- Sprouts UT Support liquid (batch36 refused)
+
+Bay 5 Greens / chlorophyll / powders
+- Sprouts Chlorophyll Glycerite (batch36 refused)
+- Sprouts Moringa 100% Powder (DRY)
+
+Bay 6 Men’s / prostate
+- Sprouts Saw Palmetto Powder Cap (DRY)
+
+Bay 7 Oils wall
+- Name + front photo only. Never Search-graded.
+
+TARGET-TRIP PARK (not a Sprouts bay; do not invent a Search row tonight)
+- up&up Extra Strength Acetaminophen 500 mg 225-ct UPC 349483342260
+- up&up Nighttime Relief Lubricant Eye Ointment still missing
+
 - MediNatura + Boericke & Tafel — Sept 15, 2026 — batch37-medinatura-bt.ts — 39 rows (Clean 1 / Caution 38 / Avoid 0). Traumeel Tablets independently Clean. Traumeel ≠ T-Relief. List 4 PR-comment only. REFUSED OI: none. DONE for that write. Do not re-catalog.
 - Nature’s Way — Sept 15, 2026 — batch38-natures-way.ts — 262 rows (Clean 126 / Caution 130 / Avoid 6). Reuse Umcka + Sambucus kids gummies + all B&T twins from batch37. naturesway.com OI pass. DONE for that write. Do not re-catalog.
 - Tylenol / Advil / Aleve holes — Sept 15, 2026 — batch39-tylenol-advil-aleve-holes.ts — 20 NEW (Clean 0 / Caution 6 / Avoid 14) + reuse 28 ids from batches 1/2/7. Pain & Fever / Sleep holes only. List 4 (cold/flu, kits, CA/EU, topicals already in 41+) = not Search rows. DONE for that holes pass. Do not start a fresh full-line Tylenol catalog.
@@ -1492,3 +1525,4 @@ Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
 OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
 KYR5 factory DONE / named-dry 97/26/13 / highest draft batch69 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken.
+Sprouts walk = bay-first / prenatal once daily locked / do not catalog Sprouts.
