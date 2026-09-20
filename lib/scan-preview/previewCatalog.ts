@@ -378,6 +378,71 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'walgreens-childrens-cough-chest': brandMark('walgreens-mark.png'),
   'walgreens-childrens-night-cough': brandMark('walgreens-mark.png'),
   'walgreens-kids-honey-night-cold': brandMark('walgreens-mark.png'),
+  // Pain & Fever brand-text cleanup — exact US carton hunt attempted;
+  // leftover names are flavor-generic / too-broad / no matching 3D pack.
+  // Parent brand marks only (per-id). DailyMed 2D dielines were refused.
+  // Official files: HealthA2Z (a2z-life.com), Garden of Life header SVG,
+  // Sprouts farmers-market SVG, Organic India USA logo, TIME-Cap Labs
+  // wordmark (timecaplabs.com). Other parent marks use official US pack
+  // wordmark colors after carton hunt failed.
+  'aplus-health-dual-action': brandMark('aplus-health-mark.png'),
+  'aleve-caplets-tablets': brandMark('aleve-mark.png'),
+  'amazon-basic-care-aspirin-81-chew-l467': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basic-care-kids-apap-dyefree': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basic-care-ibuprofen-liqui-gels': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basic-care-infants-ibuprofen': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basic-care-apap-rs-aurohealth': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basics-ibuprofen-iron-oxide-yellow': brandMark(
+    'amazon-basics-mark.png',
+  ),
+  'amazon-basics-lidocaine-4-patch': brandMark('amazon-basics-mark.png'),
+  'amazon-elements-turmeric-complex': brandMark('amazon-elements-mark.png'),
+  'amazon-elements-turmeric-root': brandMark('amazon-elements-mark.png'),
+  'bayer-aspirin-regimen-enteric': brandMark('bayer-mark.png'),
+  'bayer-back-body-aspirina-cafeina': brandMark('bayer-mark.png'),
+  'bayer-es-500-aspirina': brandMark('bayer-mark.png'),
+  'dg-health-ibuprofen-liquid-gels': brandMark('dg-health-mark.png'),
+  'dg-health-infants-ibuprofen': brandMark('dg-health-mark.png'),
+  'equate-children-apap-dyed': brandMark('equate-mark.png'),
+  'equate-children-ibu-chew-dyed': brandMark('equate-mark.png'),
+  'equate-children-ibu-dyed': brandMark('equate-mark.png'),
+  'equate-infants-apap-dyefree': brandMark('equate-mark.png'),
+  'family-wellness-childrens-apap': brandMark('family-wellness-mark.png'),
+  'gol-mykind-turmeric-inflammatory-gummies': brandMark(
+    'garden-of-life-mark.png',
+  ),
+  'healtha2z-childrens-apap-chew': brandMark('healtha2z-mark.png'),
+  'healtha2z-ibuprofen-200-335': brandMark('healtha2z-mark.png'),
+  'healtha2z-naproxen-220-300': brandMark('healtha2z-mark.png'),
+  'now-turmeric-curcumin-bioperine': brandMark('now-mark.png'),
+  'organic-india-turmeric-formula': brandMark('organic-india-mark.png'),
+  'signature-care-children-apap-dyed': brandMark('signature-care-mark.png'),
+  'signature-care-children-ibu-chew-dyed': brandMark(
+    'signature-care-mark.png',
+  ),
+  'signature-care-children-ibu-dyed': brandMark('signature-care-mark.png'),
+  'signature-care-infants-apap-dyefree': brandMark(
+    'signature-care-mark.png',
+  ),
+  'sprouts-inflacalm-ache-relief': brandMark('sprouts-mark.png'),
+  'sumifun-lidocaine-4-patch': brandMark('sumifun-mark.png'),
+  'teemofe-lidocaine-4-patch': brandMark('teemofe-mark.png'),
+  'timecap-ibuprofen-200': brandMark('timecap-mark.png'),
+  'timecap-naproxen-220': brandMark('timecap-mark.png'),
+  'upup-children-apap-dyed': brandMark('upup-mark.png'),
+  'upup-children-apap-dyefree': brandMark('upup-mark.png'),
+  'upup-children-ibu-dyefree-liquid': brandMark('upup-mark.png'),
+  'upup-children-ibu-dyed': brandMark('upup-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -388,70 +453,11 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted Cold & Flu leftover — no 3D pack on wholefoodsmarket.com.
   // DailyMed is a 2D bottle wrap. Do not invent a logo. Do not stay on "3".
   '365-guaifenesin-er-600': '365',
-  // Attempted P&F leftovers / flavor-generic kids. Target media kit is
-  // product photos only — no standalone official up&up mark file.
-  // Do not invent a logo. Do not stay on the letter "U".
-  'upup-children-apap-dyed': 'up&up',
+  // Remaining P&F brand-text after the 40-tile cleanup (Search-order tail).
   'upup-infants-apap-dyefree': 'up&up',
-  'upup-children-apap-dyefree': 'up&up',
-  'upup-children-ibu-dyed': 'up&up',
   'upup-children-ibu-chew-dyed': 'up&up',
   'upup-infants-ibu-dyefree': 'up&up',
-  'upup-children-ibu-dyefree-liquid': 'up&up',
-  // Flavor-generic kids / too-broad leftover. No standalone official
-  // Walmart Equate mark (equate.com is Kuwait petrochemical — refuse).
-  'equate-children-apap-dyed': 'Equate',
-  'equate-infants-apap-dyefree': 'Equate',
-  'equate-children-ibu-dyed': 'Equate',
-  'equate-children-ibu-chew-dyed': 'Equate',
-  // Flavor-generic kids. No standalone official Albertsons/Safeway mark.
-  'signature-care-children-apap-dyed': 'Signature Care',
-  'signature-care-infants-apap-dyefree': 'Signature Care',
-  'signature-care-children-ibu-dyed': 'Signature Care',
-  'signature-care-children-ibu-chew-dyed': 'Signature Care',
-  // Flavor-generic cherry carton. No standalone Family Dollar mark file.
-  'family-wellness-childrens-apap': 'Family Wellness',
-  // Infants carton is berry (flavor-generic). Liquid gels DailyMed face is minis.
-  'dg-health-infants-ibuprofen': 'DG Health',
-  'dg-health-ibuprofen-liquid-gels': 'DG Health',
-  // Brand-mismatch carton (Amazon Basics) / flavor-generic kids / liqui-gel minis.
-  'amazon-basic-care-apap-rs-aurohealth': 'Basic Care',
-  'amazon-basic-care-ibuprofen-liqui-gels': 'Basic Care',
-  'amazon-basic-care-infants-ibuprofen': 'Basic Care',
-  'amazon-basic-care-kids-apap-dyefree': 'Basic Care',
-  // Shop PDP photo is Joint Support + Turmeric — not Inflacalm Ache Relief.
-  'sprouts-inflacalm-ache-relief': 'Sprouts',
-  // Attempted P&F leftovers — no official US carton / no standalone mark file.
-  'now-turmeric-curcumin-bioperine': 'NOW',
-  'gol-mykind-turmeric-inflammatory-gummies': 'Garden of Life',
-  'organic-india-turmeric-formula': 'Organic India',
-  // Attempted P&F leftovers — aleve.com / bayeraspirin.com 403 from this
-  // environment; DailyMed hits are 2D dielines / label flats, not 3D
-  // packshots. No standalone official mark file. Do not stay letters.
-  // Caplets/Tablets, ES 500/Aspirina, Back & Body/Aspirina Cafeína, and
-  // enteric 81+325 are too-broad combined names — parent text tile.
-  'aleve-caplets-tablets': 'Aleve',
-  'bayer-es-500-aspirina': 'Bayer',
-  'bayer-back-body-aspirina-cafeina': 'Bayer',
-  'bayer-aspirin-regimen-enteric': 'Bayer',
-  // Attempted P&F leftovers — DailyMed hits are 2D dielines / label flats,
-  // not 3D packshots. No standalone official mark file on a brand site.
-  'timecap-naproxen-220': 'TIME-Cap',
   'welmate-lidocaine-4-patch-parabens': 'WELMATE',
-  'healtha2z-ibuprofen-200-335': 'HealthA2Z',
-  'amazon-basics-lidocaine-4-patch': 'Amazon Basics',
-  'amazon-basics-ibuprofen-iron-oxide-yellow': 'Amazon Basics',
-  'aplus-health-dual-action': 'A+Health',
-  // Batch 2 leftovers — DailyMed / brand-site hits are 2D dielines,
-  // wrong-brand faces, or a different NDC. No standalone official mark.
-  'healtha2z-childrens-apap-chew': 'HealthA2Z',
-  'timecap-ibuprofen-200': 'TIME-Cap',
-  'sumifun-lidocaine-4-patch': 'Sumifun',
-  'amazon-elements-turmeric-complex': 'Amazon Elements',
-  'teemofe-lidocaine-4-patch': 'Teemofe',
-  'healtha2z-naproxen-220-300': 'HealthA2Z',
-  'amazon-basic-care-aspirin-81-chew-l467': 'Basic Care',
-  'amazon-elements-turmeric-root': 'Amazon Elements',
   // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
   // (Basic Care rows are also mid-rebrand to Amazon Basics). DailyMed hits
   // are 2D dielines / label flats / a day+night combo carton. No standalone
@@ -1660,7 +1666,9 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Shares formulaId with Basic Care iron-oxide-yellow — do not inherit
   // the Basic Care bottle carton. Basics leftover is a pouch pack.
-  'amazon-basics-ibuprofen-iron-oxide-yellow': brandTextTile('Amazon Basics'),
+  'amazon-basics-ibuprofen-iron-oxide-yellow': brandMark(
+    'amazon-basics-mark.png',
+  ),
   'healthwise-lidocaine-4-patch': catalogShot(
     'healthwise-lidocaine-4-patch.jpg',
   ),
@@ -2179,106 +2187,160 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
-assertBrandTextTile('upup-children-apap-dyed', 'up&up', 'up&up');
+// Remaining P&F brand-text after the 40-tile cleanup.
 assertBrandTextTile('upup-infants-apap-dyefree', 'up&up', 'up&up');
-assertBrandTextTile('upup-children-apap-dyefree', 'up&up', 'up&up');
-assertBrandTextTile('upup-children-ibu-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-ibu-chew-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-infants-ibu-dyefree', 'up&up', 'up&up');
-assertBrandTextTile('upup-children-ibu-dyefree-liquid', 'up&up', 'up&up');
-assertBrandTextTile('equate-children-apap-dyed', 'Equate', 'Equate');
-assertBrandTextTile('equate-infants-apap-dyefree', 'Equate', 'Equate');
-assertBrandTextTile('equate-children-ibu-dyed', 'Equate', 'Equate');
-assertBrandTextTile('equate-children-ibu-chew-dyed', 'Equate', 'Equate');
-assertBrandTextTile('signature-care-children-apap-dyed', 'Signature Care', 'Signature Care');
-assertBrandTextTile('signature-care-infants-apap-dyefree', 'Signature Care', 'Signature Care');
-assertBrandTextTile('signature-care-children-ibu-dyed', 'Signature Care', 'Signature Care');
-assertBrandTextTile('signature-care-children-ibu-chew-dyed', 'Signature Care', 'Signature Care');
-assertBrandTextTile('family-wellness-childrens-apap', 'Family Wellness', 'Family Wellness');
-assertBrandTextTile('dg-health-infants-ibuprofen', 'DG Health', 'DG Health');
-assertBrandTextTile('dg-health-ibuprofen-liquid-gels', 'DG Health', 'DG Health');
-assertBrandTextTile('amazon-basic-care-apap-rs-aurohealth', 'Amazon Basic Care', 'Basic Care');
-assertBrandTextTile('amazon-basic-care-ibuprofen-liqui-gels', 'Amazon Basic Care', 'Basic Care');
-assertBrandTextTile('amazon-basic-care-infants-ibuprofen', 'Amazon Basic Care', 'Basic Care');
-assertBrandTextTile('amazon-basic-care-kids-apap-dyefree', 'Amazon Basic Care', 'Basic Care');
-assertBrandTextTile('sprouts-inflacalm-ache-relief', 'Sprouts', 'Sprouts');
-assertBrandTextTile('now-turmeric-curcumin-bioperine', 'NOW', 'NOW');
-assertBrandTextTile(
-  'gol-mykind-turmeric-inflammatory-gummies',
-  'Garden of Life',
-  'Garden of Life',
-);
-assertBrandTextTile(
-  'organic-india-turmeric-formula',
-  'Organic India',
-  'Organic India',
-);
-assertBrandTextTile('aleve-caplets-tablets', 'Aleve', 'Aleve');
-assertBrandTextTile('bayer-es-500-aspirina', 'Bayer', 'Bayer');
-assertBrandTextTile(
-  'bayer-back-body-aspirina-cafeina',
-  'Bayer',
-  'Bayer',
-);
-assertBrandTextTile('bayer-aspirin-regimen-enteric', 'Bayer', 'Bayer');
-assertBrandTextTile('timecap-naproxen-220', 'TIME-Cap Labs', 'TIME-Cap');
 assertBrandTextTile(
   'welmate-lidocaine-4-patch-parabens',
   'WELMATE',
   'WELMATE',
 );
-assertBrandTextTile(
-  'healtha2z-ibuprofen-200-335',
-  'HealthA2Z',
-  'HealthA2Z',
-);
-assertBrandTextTile(
-  'amazon-basics-lidocaine-4-patch',
-  'Amazon Basics',
-  'Amazon Basics',
-);
-assertBrandTextTile(
-  'amazon-basics-ibuprofen-iron-oxide-yellow',
-  'Amazon Basics',
-  'Amazon Basics',
-);
-assertBrandTextTile('aplus-health-dual-action', 'A+Health', 'A+Health');
-assertBrandTextTile(
-  'healtha2z-childrens-apap-chew',
-  'HealthA2Z',
-  'HealthA2Z',
-);
-assertBrandTextTile('timecap-ibuprofen-200', 'TIME-Cap Labs', 'TIME-Cap');
-assertBrandTextTile(
-  'sumifun-lidocaine-4-patch',
-  'Sumifun',
-  'Sumifun',
-);
-assertBrandTextTile(
-  'amazon-elements-turmeric-complex',
-  'Amazon Elements',
-  'Amazon Elements',
-);
-assertBrandTextTile(
-  'teemofe-lidocaine-4-patch',
-  'Teemofe',
-  'Teemofe',
-);
-assertBrandTextTile(
-  'healtha2z-naproxen-220-300',
-  'HealthA2Z',
-  'HealthA2Z',
-);
-assertBrandTextTile(
+// Pain & Fever brand-text cleanup (40) — parent marks, not cartons.
+assertBrandMark('aplus-health-dual-action', 'A+Health', 'aplus-health-mark.png');
+assertBrandMark('aleve-caplets-tablets', 'Aleve', 'aleve-mark.png');
+assertBrandMark(
   'amazon-basic-care-aspirin-81-chew-l467',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
+  'amazon-basic-care-kids-apap-dyefree',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-ibuprofen-liqui-gels',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-infants-ibuprofen',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-apap-rs-aurohealth',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-ibuprofen-iron-oxide-yellow',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-lidocaine-4-patch',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-elements-turmeric-complex',
+  'Amazon Elements',
+  'amazon-elements-mark.png',
+);
+assertBrandMark(
   'amazon-elements-turmeric-root',
   'Amazon Elements',
-  'Amazon Elements',
+  'amazon-elements-mark.png',
 );
+assertBrandMark('bayer-aspirin-regimen-enteric', 'Bayer', 'bayer-mark.png');
+assertBrandMark(
+  'bayer-back-body-aspirina-cafeina',
+  'Bayer',
+  'bayer-mark.png',
+);
+assertBrandMark('bayer-es-500-aspirina', 'Bayer', 'bayer-mark.png');
+assertBrandMark(
+  'dg-health-ibuprofen-liquid-gels',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark('dg-health-infants-ibuprofen', 'DG Health', 'dg-health-mark.png');
+assertBrandMark('equate-children-apap-dyed', 'Equate', 'equate-mark.png');
+assertBrandMark('equate-children-ibu-chew-dyed', 'Equate', 'equate-mark.png');
+assertBrandMark('equate-children-ibu-dyed', 'Equate', 'equate-mark.png');
+assertBrandMark('equate-infants-apap-dyefree', 'Equate', 'equate-mark.png');
+assertBrandMark(
+  'family-wellness-childrens-apap',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'gol-mykind-turmeric-inflammatory-gummies',
+  'Garden of Life',
+  'garden-of-life-mark.png',
+);
+assertBrandMark(
+  'healtha2z-childrens-apap-chew',
+  'HealthA2Z',
+  'healtha2z-mark.png',
+);
+assertBrandMark(
+  'healtha2z-ibuprofen-200-335',
+  'HealthA2Z',
+  'healtha2z-mark.png',
+);
+assertBrandMark(
+  'healtha2z-naproxen-220-300',
+  'HealthA2Z',
+  'healtha2z-mark.png',
+);
+assertBrandMark(
+  'now-turmeric-curcumin-bioperine',
+  'NOW',
+  'now-mark.png',
+);
+assertBrandMark(
+  'organic-india-turmeric-formula',
+  'Organic India',
+  'organic-india-mark.png',
+);
+assertBrandMark(
+  'signature-care-children-apap-dyed',
+  'Signature Care',
+  'signature-care-mark.png',
+);
+assertBrandMark(
+  'signature-care-children-ibu-chew-dyed',
+  'Signature Care',
+  'signature-care-mark.png',
+);
+assertBrandMark(
+  'signature-care-children-ibu-dyed',
+  'Signature Care',
+  'signature-care-mark.png',
+);
+assertBrandMark(
+  'signature-care-infants-apap-dyefree',
+  'Signature Care',
+  'signature-care-mark.png',
+);
+assertBrandMark(
+  'sprouts-inflacalm-ache-relief',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sumifun-lidocaine-4-patch', 'Sumifun', 'sumifun-mark.png');
+assertBrandMark('teemofe-lidocaine-4-patch', 'Teemofe', 'teemofe-mark.png');
+assertBrandMark(
+  'timecap-ibuprofen-200',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-naproxen-220',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark('upup-children-apap-dyed', 'up&up', 'upup-mark.png');
+assertBrandMark('upup-children-apap-dyefree', 'up&up', 'upup-mark.png');
+assertBrandMark(
+  'upup-children-ibu-dyefree-liquid',
+  'up&up',
+  'upup-mark.png',
+);
+assertBrandMark('upup-children-ibu-dyed', 'up&up', 'upup-mark.png');
 assertBrandTextTile(
   'amazon-basic-care-cherry-menthol-cough-drops',
   'Amazon Basic Care',
