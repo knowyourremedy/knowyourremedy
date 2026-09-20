@@ -387,6 +387,9 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'genexa-kids-nighttime-cough': brandMark('genexa-mark.png'),
   'genexa-kids-nighttime-multi-cold-flu': brandMark('genexa-mark.png'),
   'genexa-nighttime-severe-cold-flu': brandMark('genexa-mark.png'),
+  // Attempted Cold & Flu leftover — Save Mart / DailyMed faces are 2D
+  // dielines. Official TopCare mark already on disk. Per-id only.
+  'topcare-mucus-dm-er': brandMark('topcare-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -552,6 +555,20 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // letters.
   'hylands-baby-mucus-cold-night': "Hyland's",
   'hylands-baby-tiny-cold-night': "Hyland's",
+  // Attempted Cold & Flu leftovers — no matching official 3D pack face.
+  // Member's Mark: samsclub.com blocked. Mucinex FreeFrom multi live PDP
+  // is elderberry OR cherry (too broad). Signature Care Albertsons PDPs
+  // not retrieved. Theraflu daytime powder is honey-lemon / honey-ginger /
+  // berry-burst (too broad). Umcka ColdCare Alcohol-Free live PDP is
+  // drops, not this liquid leftover. No standalone official mark files.
+  // Do not stay letters.
+  'members-mark-mucus-dm-max-yellow10': "Member's Mark",
+  'mucinex-childrens-freefrom-multi': 'Mucinex',
+  'signature-care-childrens-12hr-cough': 'Signature Care',
+  'signature-care-childrens-multi-cold': 'Signature Care',
+  'signature-care-daytime-severe': 'Signature Care',
+  'theraflu-severe-cold-day-powder': 'Theraflu',
+  'umcka-coldcare-alcohol-free': "Nature's Way",
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1513,6 +1530,77 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'hylands-organic-kids-cough-immune-night': catalogShot(
     'hylands-organic-kids-cough-immune-night.jpg',
   ),
+  // Cold & Flu leftover daytime run 2 — official US 3D packshots.
+  'mucinex-er-600': catalogShot('mucinex-er-600.jpg'),
+  'mucinex-childrens-fever-sore-cough': catalogShot(
+    'mucinex-childrens-fever-sore-cough.jpg',
+  ),
+  'mucinex-childrens-freefrom-stuffy': catalogShot(
+    'mucinex-childrens-freefrom-stuffy.jpg',
+  ),
+  'mucinex-childrens-mighty-chews-cold-flu': catalogShot(
+    'mucinex-childrens-mighty-chews-cold-flu.jpg',
+  ),
+  'mucinex-childrens-mighty-chews-cough': catalogShot(
+    'mucinex-childrens-mighty-chews-cough.jpg',
+  ),
+  'mucinex-childrens-mighty-chews-night': catalogShot(
+    'mucinex-childrens-mighty-chews-night.jpg',
+  ),
+  'mucinex-dm-er': catalogShot('mucinex-dm-er.jpg'),
+  'mucinex-fastmax-cold-flu-gels': catalogShot(
+    'mucinex-fastmax-cold-flu-gels.jpg',
+  ),
+  'mucinex-fastmax-dm-max': catalogShot('mucinex-fastmax-dm-max.jpg'),
+  'mucinex-sinusmax-severe-cong-pain': catalogShot(
+    'mucinex-sinusmax-severe-cong-pain.jpg',
+  ),
+  'pediacare-cough-cold': catalogShot('pediacare-cough-cold.jpg'),
+  'pediacare-cough-congestion': catalogShot(
+    'pediacare-cough-congestion.jpg',
+  ),
+  'medinatura-reboost-cold-flu-zinc-lemon': catalogShot(
+    'medinatura-reboost-cold-flu-zinc-lemon.jpg',
+  ),
+  'medinatura-reboost-sore-throat-spray-cherry': catalogShot(
+    'medinatura-reboost-sore-throat-spray-cherry.jpg',
+  ),
+  'robitussin-dm-liquid': catalogShot('robitussin-dm-liquid.jpg'),
+  'robitussin-coughgels': catalogShot('robitussin-coughgels.jpg'),
+  'robitussin-dm-max-liquid': catalogShot('robitussin-dm-max-liquid.jpg'),
+  'sambucol-original-syrup': catalogShot('sambucol-original-syrup.jpg'),
+  'natures-way-sambucus-cold-flu-relief-chewables': catalogShot(
+    'natures-way-sambucus-cold-flu-relief-chewables.jpg',
+  ),
+  'natures-way-sambucus-cold-flu-relief-syrup': catalogShot(
+    'natures-way-sambucus-cold-flu-relief-syrup.jpg',
+  ),
+  'natures-way-sambucus-cough-immune-gummies': catalogShot(
+    'natures-way-sambucus-cough-immune-gummies.jpg',
+  ),
+  'natures-way-sambucus-flu-relief-syrup': catalogShot(
+    'natures-way-sambucus-flu-relief-syrup.jpg',
+  ),
+  'natures-way-sambucus-kids-cough-immune-gummies': catalogShot(
+    'natures-way-sambucus-kids-cough-immune-gummies.jpg',
+  ),
+  'fon-sinus-max': catalogShot('fon-sinus-max.jpg'),
+  'sprouts-bronchial-syrup': catalogShot('sprouts-bronchial-syrup.jpg'),
+  'sprouts-ginger-wild-cherry-bronchial': catalogShot(
+    'sprouts-ginger-wild-cherry-bronchial.jpg',
+  ),
+  'sprouts-original-herb-lozenges': catalogShot(
+    'sprouts-original-herb-lozenges.jpg',
+  ),
+  'sudafed-pe-sinus-congestion': catalogShot(
+    'sudafed-pe-sinus-congestion.jpg',
+  ),
+  'sudafed-12hr': catalogShot('sudafed-12hr.jpg'),
+  'umcka-fastactives-berry': catalogShot('umcka-fastactives-berry.jpg'),
+  'umcka-menthol-syrup': catalogShot('umcka-menthol-syrup.jpg'),
+  'umcka-cold-flu-elderberry-syrup': catalogShot(
+    'umcka-cold-flu-elderberry-syrup.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1896,6 +1984,11 @@ assertBrandMark(
   'genexa-nighttime-severe-cold-flu',
   'Genexa',
   'genexa-mark.png',
+);
+assertBrandMark(
+  'topcare-mucus-dm-er',
+  'TopCare',
+  'topcare-mark.png',
 );
 
 {
@@ -2344,6 +2437,41 @@ assertBrandTextTile(
   "Hyland's",
   "Hyland's",
 );
+assertBrandTextTile(
+  'members-mark-mucus-dm-max-yellow10',
+  "Member's Mark",
+  "Member's Mark",
+);
+assertBrandTextTile(
+  'mucinex-childrens-freefrom-multi',
+  'Mucinex',
+  'Mucinex',
+);
+assertBrandTextTile(
+  'signature-care-childrens-12hr-cough',
+  'Signature Care',
+  'Signature Care',
+);
+assertBrandTextTile(
+  'signature-care-childrens-multi-cold',
+  'Signature Care',
+  'Signature Care',
+);
+assertBrandTextTile(
+  'signature-care-daytime-severe',
+  'Signature Care',
+  'Signature Care',
+);
+assertBrandTextTile(
+  'theraflu-severe-cold-day-powder',
+  'Theraflu',
+  'Theraflu',
+);
+assertBrandTextTile(
+  'umcka-coldcare-alcohol-free',
+  "Nature's Way",
+  "Nature's Way",
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -2352,12 +2480,10 @@ assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertLetterOnly('upup-mucus-relief-600-blue', 'up&up');
-assertLetterOnly('signature-care-daytime-severe', 'Signature Care');
 assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
 assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
 assertLetterOnly('amazon-basic-care-loratadine-l612', 'Amazon Basic Care');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
-assertLetterOnly('sprouts-bronchial-syrup', 'Sprouts');
 assertExactCarton(
   'biofreeze-menthol-patches',
   'Biofreeze',
@@ -3415,6 +3541,154 @@ assertExactCarton(
   'hylands-organic-kids-cough-immune-night',
   "Hyland's",
   'hylands-organic-kids-cough-immune-night.jpg',
+);
+assertExactCarton('mucinex-er-600', 'Mucinex', 'mucinex-er-600.jpg');
+assertExactCarton(
+  'mucinex-childrens-fever-sore-cough',
+  'Mucinex',
+  'mucinex-childrens-fever-sore-cough.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-freefrom-stuffy',
+  'Mucinex',
+  'mucinex-childrens-freefrom-stuffy.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-mighty-chews-cold-flu',
+  'Mucinex',
+  'mucinex-childrens-mighty-chews-cold-flu.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-mighty-chews-cough',
+  'Mucinex',
+  'mucinex-childrens-mighty-chews-cough.jpg',
+);
+assertExactCarton(
+  'mucinex-childrens-mighty-chews-night',
+  'Mucinex',
+  'mucinex-childrens-mighty-chews-night.jpg',
+);
+assertExactCarton('mucinex-dm-er', 'Mucinex', 'mucinex-dm-er.jpg');
+assertExactCarton(
+  'mucinex-fastmax-cold-flu-gels',
+  'Mucinex',
+  'mucinex-fastmax-cold-flu-gels.jpg',
+);
+assertExactCarton(
+  'mucinex-fastmax-dm-max',
+  'Mucinex',
+  'mucinex-fastmax-dm-max.jpg',
+);
+assertExactCarton(
+  'mucinex-sinusmax-severe-cong-pain',
+  'Mucinex',
+  'mucinex-sinusmax-severe-cong-pain.jpg',
+);
+assertExactCarton(
+  'pediacare-cough-cold',
+  'PediaCare',
+  'pediacare-cough-cold.jpg',
+);
+assertExactCarton(
+  'pediacare-cough-congestion',
+  'PediaCare',
+  'pediacare-cough-congestion.jpg',
+);
+assertExactCarton(
+  'medinatura-reboost-cold-flu-zinc-lemon',
+  'MediNatura',
+  'medinatura-reboost-cold-flu-zinc-lemon.jpg',
+);
+assertExactCarton(
+  'medinatura-reboost-sore-throat-spray-cherry',
+  'MediNatura',
+  'medinatura-reboost-sore-throat-spray-cherry.jpg',
+);
+assertExactCarton(
+  'robitussin-dm-liquid',
+  'Robitussin',
+  'robitussin-dm-liquid.jpg',
+);
+assertExactCarton(
+  'robitussin-coughgels',
+  'Robitussin',
+  'robitussin-coughgels.jpg',
+);
+assertExactCarton(
+  'robitussin-dm-max-liquid',
+  'Robitussin',
+  'robitussin-dm-max-liquid.jpg',
+);
+assertExactCarton(
+  'sambucol-original-syrup',
+  'Sambucol',
+  'sambucol-original-syrup.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-cold-flu-relief-chewables',
+  "Nature's Way",
+  'natures-way-sambucus-cold-flu-relief-chewables.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-cold-flu-relief-syrup',
+  "Nature's Way",
+  'natures-way-sambucus-cold-flu-relief-syrup.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-cough-immune-gummies',
+  "Nature's Way",
+  'natures-way-sambucus-cough-immune-gummies.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-flu-relief-syrup',
+  "Nature's Way",
+  'natures-way-sambucus-flu-relief-syrup.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-kids-cough-immune-gummies',
+  "Nature's Way",
+  'natures-way-sambucus-kids-cough-immune-gummies.jpg',
+);
+assertExactCarton(
+  'fon-sinus-max',
+  'Forces of Nature',
+  'fon-sinus-max.jpg',
+);
+assertExactCarton(
+  'sprouts-bronchial-syrup',
+  'Sprouts',
+  'sprouts-bronchial-syrup.jpg',
+);
+assertExactCarton(
+  'sprouts-ginger-wild-cherry-bronchial',
+  'Sprouts',
+  'sprouts-ginger-wild-cherry-bronchial.jpg',
+);
+assertExactCarton(
+  'sprouts-original-herb-lozenges',
+  'Sprouts',
+  'sprouts-original-herb-lozenges.jpg',
+);
+assertExactCarton(
+  'sudafed-pe-sinus-congestion',
+  'Sudafed',
+  'sudafed-pe-sinus-congestion.jpg',
+);
+assertExactCarton('sudafed-12hr', 'Sudafed', 'sudafed-12hr.jpg');
+assertExactCarton(
+  'umcka-fastactives-berry',
+  "Nature's Way",
+  'umcka-fastactives-berry.jpg',
+);
+assertExactCarton(
+  'umcka-menthol-syrup',
+  "Nature's Way",
+  'umcka-menthol-syrup.jpg',
+);
+assertExactCarton(
+  'umcka-cold-flu-elderberry-syrup',
+  "Nature's Way",
+  'umcka-cold-flu-elderberry-syrup.jpg',
 );
 assertExactCarton(
   'bt-cough-bronchial-daytime',
