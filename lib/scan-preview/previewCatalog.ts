@@ -370,6 +370,9 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
 // character "3". Same beige tile as the letter helper, brand name "365".
 const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   '365-probiotic-fiber-gummies-sunflower': '365',
+  // Attempted Cold & Flu leftover — no 3D pack on wholefoodsmarket.com.
+  // DailyMed is a 2D bottle wrap. Do not invent a logo. Do not stay on "3".
+  '365-guaifenesin-er-600': '365',
   // Attempted P&F leftovers / flavor-generic kids. Target media kit is
   // product photos only — no standalone official up&up mark file.
   // Do not invent a logo. Do not stay on the letter "U".
@@ -456,6 +459,26 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basic-care-apap-650-er-l544': 'Basic Care',
   'amazon-basic-care-aspirin-81-chew-l467': 'Basic Care',
   'amazon-elements-turmeric-root': 'Amazon Elements',
+  // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
+  // (Basic Care rows are also mid-rebrand to Amazon Basics). DailyMed hits
+  // are 2D dielines / label flats / a day+night combo carton. No standalone
+  // official Basic Care or Amazon Basics mark file. Do not stay letters.
+  'amazon-basic-care-cherry-menthol-cough-drops': 'Basic Care',
+  'amazon-basic-care-daytime-cold-flu-liquid': 'Basic Care',
+  'amazon-basic-care-daytime-cold-flu-softgel': 'Basic Care',
+  'amazon-basic-care-mucus-dm-er': 'Basic Care',
+  'amazon-basic-care-mucus-dm-er-dye-free': 'Basic Care',
+  'amazon-basic-care-mucus-er-600': 'Basic Care',
+  'amazon-basic-care-mucus-er-max-blue1': 'Basic Care',
+  'amazon-basic-care-mucus-er-max-dyefree': 'Basic Care',
+  'amazon-basic-care-oxymetazoline-nasal': 'Basic Care',
+  'amazon-basic-care-nighttime-cold-flu-liquid': 'Basic Care',
+  'amazon-basic-care-nighttime-cold-flu-softgel': 'Basic Care',
+  'amazon-basic-care-no-drip-nasal': 'Basic Care',
+  'amazon-basic-care-sf-honey-lemon-cough-drops': 'Basic Care',
+  'amazon-basic-care-sf-menthol-cough-drops': 'Basic Care',
+  'amazon-basics-chest-rub': 'Amazon Basics',
+  'amazon-basics-nighttime-severe-cold-flu-liquid': 'Amazon Basics',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1173,6 +1196,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'bioschwartz-turmeric-curcumin-1500': catalogShot(
     'bioschwartz-turmeric-curcumin-1500.jpg',
   ),
+  // Cold & Flu leftover pass — official naturesway.com 3D packshots.
+  'natures-way-air-power': catalogShot('natures-way-air-power.jpg'),
+  'bt-cough-bronchial-daytime': catalogShot('bt-cough-bronchial-daytime.jpg'),
+  'bt-cough-bronchial-nighttime': catalogShot(
+    'bt-cough-bronchial-nighttime.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -1598,6 +1627,11 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
+assertBrandTextTile(
+  '365-guaifenesin-er-600',
+  '365 Whole Foods Market',
+  '365',
+);
 assertBrandTextTile('upup-es-red40-tio2', 'up&up', 'up&up');
 assertBrandTextTile('upup-children-apap-dyed', 'up&up', 'up&up');
 assertBrandTextTile('upup-infants-apap-dyefree', 'up&up', 'up&up');
@@ -1749,6 +1783,86 @@ assertBrandTextTile(
   'amazon-elements-turmeric-root',
   'Amazon Elements',
   'Amazon Elements',
+);
+assertBrandTextTile(
+  'amazon-basic-care-cherry-menthol-cough-drops',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-daytime-cold-flu-liquid',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-daytime-cold-flu-softgel',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-mucus-dm-er',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-mucus-dm-er-dye-free',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-mucus-er-600',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-mucus-er-max-blue1',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-mucus-er-max-dyefree',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-oxymetazoline-nasal',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-nighttime-cold-flu-liquid',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-nighttime-cold-flu-softgel',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-no-drip-nasal',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-sf-honey-lemon-cough-drops',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basic-care-sf-menthol-cough-drops',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile(
+  'amazon-basics-chest-rub',
+  'Amazon Basics',
+  'Amazon Basics',
+);
+assertBrandTextTile(
+  'amazon-basics-nighttime-severe-cold-flu-liquid',
+  'Amazon Basics',
+  'Amazon Basics',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -2601,6 +2715,21 @@ assertExactCarton(
   'natures-way-devils-claw-secondary-root',
   "Nature's Way",
   'natures-way-devils-claw-secondary-root.jpg',
+);
+assertExactCarton(
+  'natures-way-air-power',
+  "Nature's Way",
+  'natures-way-air-power.jpg',
+);
+assertExactCarton(
+  'bt-cough-bronchial-daytime',
+  'Boericke & Tafel',
+  'bt-cough-bronchial-daytime.jpg',
+);
+assertExactCarton(
+  'bt-cough-bronchial-nighttime',
+  'Boericke & Tafel',
+  'bt-cough-bronchial-nighttime.jpg',
 );
 assertExactCarton(
   'biofreeze-colorless-gel-4',
