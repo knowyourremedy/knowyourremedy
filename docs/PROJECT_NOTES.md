@@ -1561,6 +1561,6 @@ ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
 Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
 OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
-KYR5 factory DONE / named-dry 97/26/13 / highest draft batch69 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken.
+KYR5 factory DONE / named-dry 97/26/13 / highest draft batch70 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken. Amazon 3P leftover N=8 after Micro Ingredients first slice.
 Sprouts walk = bay-first / prenatal once daily WRITTEN on existing row / do not catalog Sprouts / #187 stays dead.
 §11 verify gate + master role / 2-shot default / scan-front interim tile / not built this pass.
