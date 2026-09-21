@@ -475,6 +475,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
     'amazon-basic-care-mark.png',
   ),
   'boiron-allergycalm-pellets': brandMark('boiron-mark.png'),
+  // Allergies leftover night run batch 2 — leftover barcode lists grape
+  // (300450209269) and bubblegum (300450209047). Do not glue either
+  // syrup carton. Official Zyrtec mark from zyrtec.com. Per-id only.
+  'childrens-zyrtec-liquid': brandMark('zyrtec-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -612,6 +616,20 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // discontinued. No standalone official Alaway mark file.
   '365-loratadine-plain-ssg': '365',
   'alaway-preservative-free': 'Alaway',
+  // Allergies leftover night run batch 2 — attempted, no matching
+  // official 3D pack face. claritin.com 403s from this environment;
+  // live chewable PDP is now dye-free grape/bubblegum, not the dyed
+  // leftover (Red 27 + Blue 2). RediTabs leftover spans 5 mg / 10 mg
+  // barcodes. No standalone official Claritin or Benadryl mark file
+  // (header/favicon only). Do not stay letters.
+  'childrens-benadryl-chewables': 'Benadryl',
+  'childrens-claritin-liquid': 'Claritin',
+  'childrens-claritin-chewable': 'Claritin',
+  'claritin-allergy-liquid': 'Claritin',
+  'claritin-allergy-tablets-plain': 'Claritin',
+  'claritin-chewable': 'Claritin',
+  'claritin-reditabs': 'Claritin',
+  'claritin-d-12hr': 'Claritin',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1745,6 +1763,35 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'boiron-luffaoperculata-pellets.jpg',
   ),
   'boiron-sabadilla-pellets': catalogShot('boiron-sabadilla-pellets.jpg'),
+  // Allergies leftover night run (3:00 PT) batch 2 — official US 3D
+  // packshots. Per-id only so formulaId siblings do not inherit
+  // (boiron-single-remedy-pellets; flonase-allergy-relief-bkc-ps80;
+  // claritin-chewable-aspartame-dye).
+  'boiron-sinuscalm-allergy-tablets': catalogShot(
+    'boiron-sinuscalm-allergy-tablets.jpg',
+  ),
+  'boiron-solidagovirgaurea-pellets': catalogShot(
+    'boiron-solidagovirgaurea-pellets.jpg',
+  ),
+  'boiron-wyethiahelenioides-pellets': catalogShot(
+    'boiron-wyethiahelenioides-pellets.jpg',
+  ),
+  'childrens-allegra-liquid': catalogShot('childrens-allegra-liquid.jpg'),
+  'childrens-allegra-odt': catalogShot('childrens-allegra-odt.jpg'),
+  'childrens-benadryl-allergy-liquid': catalogShot(
+    'childrens-benadryl-allergy-liquid.jpg',
+  ),
+  'childrens-benadryl-allergy-plus-congestion': catalogShot(
+    'childrens-benadryl-allergy-plus-congestion.jpg',
+  ),
+  'childrens-benadryl-dyefree-liquid': catalogShot(
+    'childrens-benadryl-dyefree-liquid.jpg',
+  ),
+  'childrens-flonase-allergy-relief': catalogShot(
+    'childrens-flonase-allergy-relief.jpg',
+  ),
+  'childrens-zyrtec-chewable': catalogShot('childrens-zyrtec-chewable.jpg'),
+  'childrens-zyrtec-dissolve': catalogShot('childrens-zyrtec-dissolve.jpg'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -2852,6 +2899,34 @@ assertBrandTextTile(
   'Alaway',
   'Alaway',
 );
+assertBrandTextTile(
+  'childrens-benadryl-chewables',
+  'Benadryl',
+  'Benadryl',
+);
+assertBrandTextTile(
+  'childrens-claritin-liquid',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile(
+  'childrens-claritin-chewable',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile(
+  'claritin-allergy-liquid',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile(
+  'claritin-allergy-tablets-plain',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile('claritin-chewable', 'Claritin', 'Claritin');
+assertBrandTextTile('claritin-reditabs', 'Claritin', 'Claritin');
+assertBrandTextTile('claritin-d-12hr', 'Claritin', 'Claritin');
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -4262,10 +4337,79 @@ assertBrandMark(
   'Boiron',
   'boiron-mark.png',
 );
-// Later Allergies single-tube leftovers share formulaId
-// boiron-single-remedy-pellets — must not inherit this batch's tubes.
-assertLetterOnly('boiron-solidagovirgaurea-pellets', 'Boiron');
-assertLetterOnly('boiron-wyethiahelenioides-pellets', 'Boiron');
+assertExactCarton(
+  'boiron-sinuscalm-allergy-tablets',
+  'Boiron',
+  'boiron-sinuscalm-allergy-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-solidagovirgaurea-pellets',
+  'Boiron',
+  'boiron-solidagovirgaurea-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-wyethiahelenioides-pellets',
+  'Boiron',
+  'boiron-wyethiahelenioides-pellets.jpg',
+);
+assertExactCarton(
+  'childrens-allegra-liquid',
+  'Allegra',
+  'childrens-allegra-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-allegra-odt',
+  'Allegra',
+  'childrens-allegra-odt.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-allergy-liquid',
+  'Benadryl',
+  'childrens-benadryl-allergy-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-allergy-plus-congestion',
+  'Benadryl',
+  'childrens-benadryl-allergy-plus-congestion.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-dyefree-liquid',
+  'Benadryl',
+  'childrens-benadryl-dyefree-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-flonase-allergy-relief',
+  'Flonase',
+  'childrens-flonase-allergy-relief.jpg',
+);
+assertExactCarton(
+  'childrens-zyrtec-chewable',
+  'Zyrtec',
+  'childrens-zyrtec-chewable.jpg',
+);
+assertExactCarton(
+  'childrens-zyrtec-dissolve',
+  'Zyrtec',
+  'childrens-zyrtec-dissolve.jpg',
+);
+assertBrandMark(
+  'childrens-zyrtec-liquid',
+  'Zyrtec',
+  'zyrtec-mark.png',
+);
+// Adult Flonase shares formulaId flonase-allergy-relief-bkc-ps80 —
+// must not inherit the kids bottle. Unattempted this pass.
+assertLetterOnly('flonase-allergy-relief', 'Flonase');
+{
+  const adultFlonase = previewOverlayImage({
+    id: 'flonase-allergy-relief',
+    formulaId: 'flonase-allergy-relief-bkc-ps80',
+    brand: 'Flonase',
+  });
+  if (adultFlonase?.url.includes('childrens-flonase-allergy-relief.jpg')) {
+    throw new Error('Adult Flonase must not inherit the kids bottle');
+  }
+}
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
 assertExactCarton('aleve-back-muscle-pain', 'Aleve', 'aleve-back-muscle-pain.jpg');
