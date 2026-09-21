@@ -615,6 +615,27 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'benadryl-allergy-liquid': 'Benadryl',
   'childrens-benadryl-chewables': 'Benadryl',
   'childrens-claritin-liquid': 'Claritin',
+  // Attempted Allergies leftovers — night run 2026-09-21 batch 2.
+  // Claritin: claritin.com still site-maintenance from this environment.
+  // DailyMed 2D is not a carton. No standalone official Claritin mark.
+  'childrens-claritin-chewable': 'Claritin',
+  'claritin-allergy-liquid': 'Claritin',
+  'claritin-allergy-tablets-plain': 'Claritin',
+  'claritin-chewable': 'Claritin',
+  'claritin-reditabs': 'Claritin',
+  'claritin-d-12hr': 'Claritin',
+  // CVS.com PDPs 403 from this environment. No standalone official
+  // CVS Health mark file.
+  'cvs-cetirizine-tablets': 'CVS Health',
+  'cvs-kids-dph-chews': 'CVS Health',
+  'cvs-kids-cetirizine-liquid': 'CVS Health',
+  'cvs-kids-loratadine-liquid': 'CVS Health',
+  'cvs-kids-dph-liquid': 'CVS Health',
+  'cvs-kids-loratadine-chew': 'CVS Health',
+  'cvs-loratadine-tablets-plain': 'CVS Health',
+  'cvs-health-nighttime-dry-eye': 'CVS Health',
+  // DG Health: no retrievable official 3D carton. No standalone mark.
+  'dg-health-cetirizine-tablets': 'DG Health',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1743,6 +1764,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'childrens-benadryl-dyefree-liquid': catalogShot(
     'childrens-benadryl-dyefree-liquid.jpg',
   ),
+  // Allergies leftover night run 2026-09-21 batch 2 — official US 3D
+  // packshots. Per-id only so formulaId siblings do not inherit.
+  'childrens-flonase-allergy-relief': catalogShot(
+    'childrens-flonase-allergy-relief.jpg',
+  ),
+  'childrens-zyrtec-liquid': catalogShot('childrens-zyrtec-liquid.jpg'),
+  'childrens-zyrtec-chewable': catalogShot(
+    'childrens-zyrtec-chewable.jpg',
+  ),
+  'childrens-zyrtec-dissolve': catalogShot(
+    'childrens-zyrtec-dissolve.jpg',
+  ),
+  'clear-eyes-redness-relief': catalogShot(
+    'clear-eyes-redness-relief.jpg',
+  ),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -2862,6 +2898,53 @@ assertBrandTextTile(
   'childrens-claritin-liquid',
   'Claritin',
   'Claritin',
+);
+assertBrandTextTile(
+  'childrens-claritin-chewable',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile('claritin-allergy-liquid', 'Claritin', 'Claritin');
+assertBrandTextTile(
+  'claritin-allergy-tablets-plain',
+  'Claritin',
+  'Claritin',
+);
+assertBrandTextTile('claritin-chewable', 'Claritin', 'Claritin');
+assertBrandTextTile('claritin-reditabs', 'Claritin', 'Claritin');
+assertBrandTextTile('claritin-d-12hr', 'Claritin', 'Claritin');
+assertBrandTextTile('cvs-cetirizine-tablets', 'CVS Health', 'CVS Health');
+assertBrandTextTile('cvs-kids-dph-chews', 'CVS Health', 'CVS Health');
+assertBrandTextTile(
+  'cvs-kids-cetirizine-liquid',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-kids-loratadine-liquid',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile('cvs-kids-dph-liquid', 'CVS Health', 'CVS Health');
+assertBrandTextTile(
+  'cvs-kids-loratadine-chew',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-loratadine-tablets-plain',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'cvs-health-nighttime-dry-eye',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile(
+  'dg-health-cetirizine-tablets',
+  'DG Health',
+  'DG Health',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -4255,6 +4338,31 @@ assertExactCarton(
   'childrens-benadryl-dyefree-liquid',
   'Benadryl',
   'childrens-benadryl-dyefree-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-flonase-allergy-relief',
+  'Flonase',
+  'childrens-flonase-allergy-relief.jpg',
+);
+assertExactCarton(
+  'childrens-zyrtec-liquid',
+  'Zyrtec',
+  'childrens-zyrtec-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-zyrtec-chewable',
+  'Zyrtec',
+  'childrens-zyrtec-chewable.jpg',
+);
+assertExactCarton(
+  'childrens-zyrtec-dissolve',
+  'Zyrtec',
+  'childrens-zyrtec-dissolve.jpg',
+);
+assertExactCarton(
+  'clear-eyes-redness-relief',
+  'Clear Eyes',
+  'clear-eyes-redness-relief.jpg',
 );
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
