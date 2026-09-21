@@ -479,6 +479,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'boiron-sabadilla-pellets': brandMark('boiron-mark.png'),
   'boiron-solidagovirgaurea-pellets': brandMark('boiron-mark.png'),
   'boiron-wyethiahelenioides-pellets': brandMark('boiron-mark.png'),
+  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 2.
+  // Family Wellness: familydollar.com / store PDPs not retrieved as 3D
+  // cartons. Official Family Wellness mark already on disk. Per-id only.
+  'family-wellness-loratadine-10': brandMark('family-wellness-mark.png'),
+  'family-wellness-cetirizine-tablets': brandMark(
+    'family-wellness-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -659,6 +666,19 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'equate-fexofenadine-tablets': 'Equate',
   'equate-fluticasone-nasal': 'Equate',
   'equate-kids-fluticasone-nasal': 'Equate',
+  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 2.
+  // Equate: walmart.com PDPs still blocked. equate.com is Kuwait
+  // petrochemical — refuse. No standalone official Equate mark file.
+  'equate-loratadine-tablets-plain': 'Equate',
+  'equate-cetirizine-d': 'Equate',
+  'equate-fexofenadine-d': 'Equate',
+  'equate-kids-cetirizine-liquid': 'Equate',
+  'equate-kids-loratadine-liquid': 'Equate',
+  'equate-kids-dph-chews': 'Equate',
+  'equate-loratadine-mint-odt': 'Equate',
+  'equate-lubricant-eye-bkc': 'Equate',
+  'equate-lubricant-eye-pf': 'Equate',
+  'equate-nighttime-lubricant-ointment': 'Equate',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1818,6 +1838,20 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'dg-health-childrens-loratadine-chew': catalogShot(
     'dg-health-childrens-loratadine-chew.jpg',
   ),
+  // Allergies leftover night run 2026-09-21 5:30 PT batch 2 — official
+  // US 3D packshots. Per-id only so formulaId siblings do not inherit.
+  'natures-way-eyebright': catalogShot('natures-way-eyebright.jpg'),
+  'natures-way-herbal-eyebright': catalogShot(
+    'natures-way-herbal-eyebright.jpg',
+  ),
+  'flonase-allergy-relief': catalogShot('flonase-allergy-relief.jpg'),
+  'flonase-sensimist': catalogShot('flonase-sensimist.jpg'),
+  'genexa-allergy-care': catalogShot('genexa-allergy-care.jpg'),
+  'genexa-kids-allergy-dph-liquid': catalogShot(
+    'genexa-kids-allergy-dph-liquid.jpg',
+  ),
+  'genexa-kids-allergy-care': catalogShot('genexa-kids-allergy-care.jpg'),
+  'ollois-histaminum-30c': catalogShot('ollois-histaminum-30c.jpg'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -2998,6 +3032,32 @@ assertBrandTextTile(
   'Equate',
   'Equate',
 );
+assertBrandTextTile(
+  'equate-loratadine-tablets-plain',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile('equate-cetirizine-d', 'Equate', 'Equate');
+assertBrandTextTile('equate-fexofenadine-d', 'Equate', 'Equate');
+assertBrandTextTile(
+  'equate-kids-cetirizine-liquid',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile(
+  'equate-kids-loratadine-liquid',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile('equate-kids-dph-chews', 'Equate', 'Equate');
+assertBrandTextTile('equate-loratadine-mint-odt', 'Equate', 'Equate');
+assertBrandTextTile('equate-lubricant-eye-bkc', 'Equate', 'Equate');
+assertBrandTextTile('equate-lubricant-eye-pf', 'Equate', 'Equate');
+assertBrandTextTile(
+  'equate-nighttime-lubricant-ointment',
+  'Equate',
+  'Equate',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -3005,7 +3065,6 @@ assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
-assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertExactCarton(
   'biofreeze-menthol-patches',
@@ -4489,6 +4548,52 @@ assertBrandMark(
   'boiron-wyethiahelenioides-pellets',
   'Boiron',
   'boiron-mark.png',
+);
+assertExactCarton(
+  'natures-way-eyebright',
+  "Nature's Way",
+  'natures-way-eyebright.jpg',
+);
+assertExactCarton(
+  'natures-way-herbal-eyebright',
+  "Nature's Way",
+  'natures-way-herbal-eyebright.jpg',
+);
+assertExactCarton(
+  'flonase-allergy-relief',
+  'Flonase',
+  'flonase-allergy-relief.jpg',
+);
+assertExactCarton('flonase-sensimist', 'Flonase', 'flonase-sensimist.jpg');
+assertExactCarton(
+  'genexa-allergy-care',
+  'Genexa',
+  'genexa-allergy-care.jpg',
+);
+assertExactCarton(
+  'genexa-kids-allergy-dph-liquid',
+  'Genexa',
+  'genexa-kids-allergy-dph-liquid.jpg',
+);
+assertExactCarton(
+  'genexa-kids-allergy-care',
+  'Genexa',
+  'genexa-kids-allergy-care.jpg',
+);
+assertExactCarton(
+  'ollois-histaminum-30c',
+  'Ollois',
+  'ollois-histaminum-30c.jpg',
+);
+assertBrandMark(
+  'family-wellness-loratadine-10',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'family-wellness-cetirizine-tablets',
+  'Family Wellness',
+  'family-wellness-mark.png',
 );
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
