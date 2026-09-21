@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 20, 2026 — NOW #261 refuse aliases locked to existing §5 / no new grades. Map and write; do not 7-step. Do not restage batch71. Do not reopen batch70. Do not start Nutricost. No new products. Live missing UPC 100 (in-store 80 + online 20). Factory #121–#221 stay closed. Amazon 3P leftover N=7 after NOW.
+Last Updated: September 21, 2026 — NOW refuse backfill done (batch72). Do not restage batch71. Do not reopen batch70. Do not start Nutricost. Leftover 3P still 7. Live missing UPC 100 (in-store 80 + online 20). Factory #121–#221 stay closed.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -207,7 +207,7 @@ Parked
 - §11 TIGHTEN + MASTER SCANNER (2026-09-20) is spec only. Do not build camera / accounts / scanner UI.
 
 Next session
-- LIVE NOW: Amazon 3P leftover brand slices after NOW Foods slice (N=7): Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense full lines. batch71 LANDED (NOW). batch70 LANDED (Micro Ingredients). batch69 LANDED (PR #231). Sprouts still stashed. KYR6 existing-row attach: `upup-es-red40-tio2` UPC 349483342260; `sprouts-organic-prenatal-once-daily` OI + UPC 646670681882 (grade not restaged). Do not catalog Sprouts. Do not reopen #187. Do not reopen #121–#221. Live missing UPC 100 (in-store 80 / online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
+- LIVE NOW: Amazon 3P leftover brand slices after NOW Foods slice (N=7): Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense full lines. batch72 LANDED (NOW refuse backfill). batch71 LANDED (NOW). batch70 LANDED (Micro Ingredients). batch69 LANDED (PR #231). Sprouts still stashed. KYR6 existing-row attach: `upup-es-red40-tio2` UPC 349483342260; `sprouts-organic-prenatal-once-daily` OI + UPC 646670681882 (grade not restaged). Do not catalog Sprouts. Do not reopen #187. Do not reopen #121–#221. Live missing UPC 100 (in-store 80 / online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. Do not reopen batch65 / 66 / 67 / 68 or PR #230.
 - OI / inactive accordion lock: missing-OI MAIN Search rows only. Do not reopen full inactive lists. Do not add products. Confirmed-empty 100% powders stay empty. No Sprouts hunt.
 - Count-tab lock stays: click every pack-count tab/pill then that tab’s spec accordion. One page ≠ one UPC.
 - Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. 3P Amazon later.
@@ -217,7 +217,7 @@ Next session
 - Brand-close: no SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls Sprouts-style pile.
 - KYR4 photos on paste only. Cron OFF.
 - KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Live missing UPC 100 (in-store 80 / online 20). Named dry, do not reopen: set-id 97 / in-store 26 / online 13. OI hunt order already on notes (carousel + Amazon + Google) also applies to finding a UPC on a label photo.
-- Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch71. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). batch70 = Micro Ingredients first slice — do not edit. batch71 = NOW Foods. Do not reopen batch61–70 or PR #230. Do not restage batch71 grades.
+- Before proposing a brand, read lib/rating-drafts/ filenames. Highest rating-draft after this write is batch72. batch67 = PR #229 — do not edit. batch69 LANDED (PR #231). batch70 = Micro Ingredients first slice — do not edit. batch71 = NOW Foods — do not edit. batch72 = NOW refuse backfill. Do not reopen batch61–71 or PR #230. Do not restage batch71 grades.
 - NOW #261 REFUSE ALIAS LOCK (founder 2026-09-20): these tokens are NOT new inactives. Map and write. Do not 7-step. Vegetarian Coating / Vegetable Coating (unnamed) = Vegetable-Based Tablet Coating Caution; Vegetarian Coating named (HPMC, glycerin) = named-coat Cleared; Carob (plain) = Carob Extract Caution unless the panel says powder-as-food only; Sucrose = existing Limited sugar; Calcium carbonate as Other Ingredient (filler) = existing mineral-filler Cleared (distinct from Ca as a labeled active); Vegetable polysaccharide capsule = HPMC / veg cap Cleared; Pharmaceutical glaze = Shellac Cleared. #261 refused 251 on token mismatch. After this lock lands, a later KYR6 pass may backfill those NOW SKUs only. Do not reopen batch70. Do not start Nutricost in this patch.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
@@ -728,16 +728,17 @@ TARGET-TRIP PARK (not a Sprouts bay; do not invent a Search row)
 - Already on main from #230 (do not rewrite): MM Advanced Women’s / Men’s / Women’s 50+; Kirkland Wild Alaskan FO 1400 UPC 096619653539; up&up PM ointment (`store-pm-ointment-lanolin-alcohol`). Assured Headache PM already batch29.
 - KYR6 store-panel write — Sept 18, 2026 — batch69-kyr6-store-panels.ts / PR #231. Search 5 new (Clean 1 / Caution 2 / Avoid 2). NEW 5 / REUSE-formula 1 / SKIPPED already-on-main Equate Complete Multi + Kirkland D3 + Kirkland porcine FO + Kirkland Mucus DM Max ER; Equate D3 no_OI. REFUSED §5: Kirkland Krill (Ethyl Vanillin); TopCare adult + Women’s gummies (Spirulina); TopCare Men’s gummies (Hibiscus Concentrate). MM D3 50 mcg shares `members-mark-d3-softgels-safflower` (do not edit batch67 / PR #229). TopCare Vitamin C uses founder fruit-juice / paprika panel (no palm; do not attach UPC 036800464049 palm twin). up&up ES APAP PM 100-ct uses founder PVA + talc + SiO2 stack (own formulaId; do not reuse `dg-health-pain-relief-pm`). Do not reopen 65/66/68 or PR #230.
 - KYR6 Amazon 3P FIRST SLICE — Sept 20, 2026 — batch70-kyr6-amazon-3p-micro-ingredients.ts. Micro Ingredients only. Search 7 new (Clean 3 / Caution 4 / Avoid 0). NEW 6 / REUSE-formula 1 (lemon FO 120 shares `micro-ingredients-omega3-lemon`) / SKIPPED 12 / REFUSED 0. Written: Pure Mg glycinate 240 gelatin-only Clean; D3 5,000 IU coconut 500 Clean UPC 850056167819; D3+K2 10,000/200 coconut 300 Clean; Glucosamine 7-in-1 300 Caution (unnamed coating — parked ex-Elements Glucosamine); Peach Mg powder Caution UPC 850056167741; lemon FO 240 + 120 Caution. SKIPPED no_OI: lemonade Mg powder (do not steal peach); MiracleMag; Mag Duo; sunflower D3+K2 180. Do not reopen 61–69 / #230 / house / Mama Bear. Micro Ingredients leftover no_OI / OUT stays in batch70 SKIPPED — do not reopen.
-- KYR6 Amazon 3P NOW Foods — Sept 21, 2026 — batch71-kyr6-amazon-3p-now.ts. NOW / NOW Foods only. Search 705 (Clean 201 / Caution 482 / Avoid 22). NEW 604 / REUSE-formula 101 / SKIPPED 514 (cosmetics/Solutions 130; EO/MCT/cooking-oil pour bottles 119; food 107; no_OI 75; protein 34; sweeteners 32; pet 9; empty capsule shells 7; already-on-MAIN turmeric BioPerine UPC 733739047922) / REFUSED 251 (§5 missing exact at write: Vegetarian Coating 67; Carob 40; calcium carbonate 19; pharmaceutical glaze / enteric-glaze; vegetable polysaccharide; sucrose; grapefruit fiber — 7-step packets in PR, NO Search row). Founder 2026-09-20 NOW #261 REFUSE ALIAS LOCK: those refuse strings except grapefruit fiber map to existing §5 — do not 7-step; do not restage batch71. A later KYR6 pass may backfill those NOW SKUs only. Grapefruit fiber stays refused / 7-step. Do not reopen batch70. Do not start Nutricost. Pin = current Vitacost Ingredients + UPC-A 733739…. Avoid = undisclosed caramel color. SiO2 + rice flour = Caution. Softgel named-oil fill / HPMC±stearate-only = Clean. Do not reopen 61–70 / #230 / house / Mama Bear / batch70. Still-missing 3P leftover N=7 (Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense).
+- KYR6 Amazon 3P NOW Foods — Sept 21, 2026 — batch71-kyr6-amazon-3p-now.ts. NOW / NOW Foods only. Search 705 (Clean 201 / Caution 482 / Avoid 22). NEW 604 / REUSE-formula 101 / SKIPPED 514 (cosmetics/Solutions 130; EO/MCT/cooking-oil pour bottles 119; food 107; no_OI 75; protein 34; sweeteners 32; pet 9; empty capsule shells 7; already-on-MAIN turmeric BioPerine UPC 733739047922) / REFUSED 251 (§5 missing exact at write: Vegetarian Coating 67; Carob 40; calcium carbonate 19; pharmaceutical glaze / enteric-glaze; vegetable polysaccharide; sucrose; grapefruit fiber — 7-step packets in PR, NO Search row). Founder 2026-09-20 NOW #261 REFUSE ALIAS LOCK: those refuse strings except grapefruit fiber map to existing §5 — do not 7-step; do not restage batch71. Grapefruit fiber stays refused / 7-step. Do not reopen batch70. Do not start Nutricost. Pin = current Vitacost Ingredients + UPC-A 733739…. Avoid = undisclosed caramel color. SiO2 + rice flour = Caution. Softgel named-oil fill / HPMC±stearate-only = Clean. Do not reopen 61–70 / #230 / house / Mama Bear / batch70. Still-missing 3P leftover N=7 (Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense).
+- KYR6 NOW refuse backfill — Sept 21, 2026 — batch72-kyr6-now-refuse-backfill.ts. NOW only. Unlock #261 refuse tokens now aliased on MAIN (unnamed Vegetarian/Vegetable Coating Caution; named HPMC+glycerin coat Cleared; plain Carob = Carob Extract Caution; Sucrose Limited; Ca carbonate OI filler Cleared; veg polysaccharide capsule = HPMC Cleared; pharmaceutical glaze = Shellac Cleared). Search 111 (Clean 11 / Caution 99 / Avoid 1 caramel). NEW 82 / REUSE-formula 29 / SKIPPED already-written batch71 705 / REFUSED 24 (still-unknown: sodium ascorbate, ammonium bicarbonate, l-arginine, flax seed oil, cinnamon bark powder, magnesium carbonate, carob powder-as-food, sorghum, etc. — 7-step, no Search row). Do not edit batch71. Do not start Nutricost. Leftover 3P still 7.
 
 Scale lock: Limited-only never auto-Avoid. Avoid needs High.
 
 ================================================================
 ADVISOR HANDOFF — Sept 18, 2026 late
 ================================================================
-Highest rating-draft: batch71-kyr6-amazon-3p-now.ts.
+Highest rating-draft: batch72-kyr6-now-refuse-backfill.ts.
 batch67 = open PR #229 — do not edit that file.
-batch69 LANDED (PR #231). batch70 = Micro Ingredients first slice — do not edit. batch71 = NOW Foods. Do not reopen 61–70 / #230.
+batch69 LANDED (PR #231). batch70 = Micro Ingredients first slice — do not edit. batch71 = NOW Foods — do not edit. batch72 = NOW refuse backfill. Do not reopen 61–71 / #230.
 
 KYR6 leftover write DONE. Do not resend.
 SKIP (unchanged): Kirkland enteric FO; Nice! adult multi; Assured; Kirkland guaifenesin-only; MM Advanced multis on 68; Kirkland Wild Alaskan 1400 on 68; up&up PM ointment on 68.
@@ -774,7 +775,7 @@ TOKEN / SCOPE LOCKS
 - Limited-in-one / cleared-in-another must say WHY in ingredient notes + honest note.
 
 LIVE NOW
-1) Amazon 3P leftover brand slices after NOW Foods slice — N=7: Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense full lines. batch71 NOW LANDED. batch70 Micro Ingredients LANDED (leftover MI no_OI / OUT stays in batch70 SKIPPED).
+1) Amazon 3P leftover brand slices after NOW Foods slice — N=7: Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense full lines. batch72 NOW refuse backfill LANDED. batch71 NOW LANDED. batch70 Micro Ingredients LANDED (leftover MI no_OI / OUT stays in batch70 SKIPPED).
 THEN (not live): un-stash Sprouts house (~55 walk + 3 refused). Do not catalog Sprouts. 187 is dead.
 KYR5 / KYR5-b / KYR5-c DONE. KYR5-d founder-lock attach. Do not reopen #121–#221.
 Live missing UPC on notes: 100 (in-store 80 / online-only 20). Named dry: set-id 97 / in-store 26 / online 13.
@@ -792,10 +793,10 @@ KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not 
 batch69 LANDED (PR #231). Do not resend. Do not reopen 65 / 66 / 68 / #230.
 1) Thrive no_OI stash CLOSEOUT DONE (batch64 — 18). Bandages OUT. Butterfly Pea OUT. Liver Vitality skipped-out (NF-only). Active Skin Repair hydrogel IN (Caution).
 2) Store generics leftover closeout — batch69 LANDED. Do not resend. Do not reopen 65 / 66 / 68 / #230. batch67 = PR #229 — do not edit.
-3) Amazon 3P leftover after NOW Foods slice — LIVE (N=7 brand slices: Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). batch71 LANDED. batch70 LANDED.
+3) Amazon 3P leftover after NOW Foods slice — LIVE (N=7 brand slices: Nutricost, NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). batch72 LANDED. batch71 LANDED. batch70 LANDED.
 THEN (not live)
 4) Un-stash Sprouts house ≈55 + 3 refused (when Brandon walks). Do not catalog Sprouts. 187 is dead.
-Do NOT mark complete: Amazon 3P. Highest rating-draft is batch71. batch67 = PR #229 — do not edit. Do not reopen batch61–70 or PR #230. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
+Do NOT mark complete: Amazon 3P. Highest rating-draft is batch72. batch67 = PR #229 — do not edit. Do not reopen batch61–71 or PR #230. Amazon house punch DONE this pass (batch63 — 35). Do not reopen batch61 / batch62. Mama Bear four + PR #118’s 18 stay closed. Thrive punch 241 + refused unlock 36 + no_OI closeout 18 are DONE. Sprouts house is STASHED (not the live job). Do not catalog Sprouts. MediNatura / B&T, Nature’s Way, and Tylenol / Advil / Aleve holes are DONE for those writes — do not list them as unstarted.
 
 BOT PASTES
 - Include “Merge if GitHub UI flakes” on photo jobs.
@@ -1563,7 +1564,7 @@ ALL-SITE accordion + 11-digit UPC lock / no DRY on first paint.
 Honest=product summary / ingredients=why-or-pending / Absorbine grade untouched.
 OI accordion lock = missing-OI MAIN rows only (do not re-hunt full lists; no new products).
 Count-tab lock / click every pack-count tab then that tab’s spec accordion / one page ≠ one UPC / accordion lock stays / no grades / factory #121–#221 closed.
-KYR5 factory DONE / named-dry 97/26/13 / highest draft batch71 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken. Amazon 3P leftover N=7 after NOW Foods slice.
+KYR5 factory DONE / named-dry 97/26/13 / highest draft batch72 / oils hunt-list only / do not reopen Search-post-scan-Home-Cabinet unless broken. ON MAIN / NOW refuse backfill done / leftover 3P still 7.
 Sprouts walk = bay-first / prenatal once daily WRITTEN on existing row / do not catalog Sprouts / #187 stays dead.
 §11 verify gate + master role / 2-shot default / scan-front interim tile / not built this pass.
 NOW refuse aliases locked to existing §5 / no new grades.
