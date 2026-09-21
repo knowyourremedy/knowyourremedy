@@ -1686,6 +1686,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-oralbiotic-60': catalogShot('now-oralbiotic-60.jpg'),
   'now-oregano-oil-90': catalogShot('now-oregano-oil-90.jpg'),
   'now-zinc-glycinate-120': catalogShot('now-zinc-glycinate-120.jpg'),
+  // Cold & Flu leftover night run batch 2 — last 2 letter leftovers.
+  // Per-id only: zinc 250 shares formulaId now-zinc-100 (Vitamins aisle).
+  'now-zinc-picolinate-50-mg-120': catalogShot(
+    'now-zinc-picolinate-50-mg-120.jpg',
+  ),
+  'now-zinc-250': catalogShot('now-zinc-250.jpg'),
   // Allergies leftover daytime run 3 — official US 3D packshots.
   'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
   'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
@@ -4095,6 +4101,12 @@ assertExactCarton('now-l-lysine-500-mg-250', 'NOW', 'now-l-lysine-500-mg-250.jpg
 assertExactCarton('now-oralbiotic-60', 'NOW', 'now-oralbiotic-60.jpg');
 assertExactCarton('now-oregano-oil-90', 'NOW', 'now-oregano-oil-90.jpg');
 assertExactCarton('now-zinc-glycinate-120', 'NOW', 'now-zinc-glycinate-120.jpg');
+assertExactCarton(
+  'now-zinc-picolinate-50-mg-120',
+  'NOW',
+  'now-zinc-picolinate-50-mg-120.jpg',
+);
+assertExactCarton('now-zinc-250', 'NOW', 'now-zinc-250.jpg');
 assertBrandMark(
   'now-acerola-4-1-extract-powder-6',
   'NOW',
