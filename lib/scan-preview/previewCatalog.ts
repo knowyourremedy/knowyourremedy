@@ -465,6 +465,20 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'now-acerola-4-1-extract-powder-6': brandMark('now-mark.png'),
   'now-oregano-450-mg-100': brandMark('now-mark.png'),
   'nyquil-cold-flu-liquid': brandMark('vicks-mark.png'),
+  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 1.
+  // Boiron single-remedy tubes: boironusa.com 429 from this environment
+  // after the official-site carton hunt. DailyMed class faces are 2D.
+  // Official Boiron mark already on disk. Per-id only so the shared
+  // formulaId `boiron-single-remedy-pellets` does not inherit.
+  'boiron-ambrosiaartemisiaefolia-pellets': brandMark('boiron-mark.png'),
+  'boiron-arundomauritanica-pellets': brandMark('boiron-mark.png'),
+  'boiron-euphrasia-officinalis-pellets': brandMark('boiron-mark.png'),
+  'boiron-galphimia-glauca-pellets': brandMark('boiron-mark.png'),
+  'boiron-histaminum-hydrochloricum-pellets': brandMark('boiron-mark.png'),
+  'boiron-luffaoperculata-pellets': brandMark('boiron-mark.png'),
+  'boiron-sabadilla-pellets': brandMark('boiron-mark.png'),
+  'boiron-solidagovirgaurea-pellets': brandMark('boiron-mark.png'),
+  'boiron-wyethiahelenioides-pellets': brandMark('boiron-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -636,6 +650,15 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'cvs-health-nighttime-dry-eye': 'CVS Health',
   // DG Health: no retrievable official 3D carton. No standalone mark.
   'dg-health-cetirizine-tablets': 'DG Health',
+  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 1.
+  // Equate: walmart.com PDPs blocked from this environment. equate.com is
+  // Kuwait petrochemical — refuse. No standalone official Equate mark
+  // file. Do not stay letters.
+  'equate-loratadine-d': 'Equate',
+  'equate-cetirizine-tablets': 'Equate',
+  'equate-fexofenadine-tablets': 'Equate',
+  'equate-fluticasone-nasal': 'Equate',
+  'equate-kids-fluticasone-nasal': 'Equate',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1778,6 +1801,22 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'clear-eyes-redness-relief': catalogShot(
     'clear-eyes-redness-relief.jpg',
+  ),
+  // Allergies leftover night run 2026-09-21 5:30 PT batch 1 — official
+  // US 3D packshots. Per-id only so formulaId siblings do not inherit.
+  'medinatura-bhi-allergy': catalogShot('medinatura-bhi-allergy.jpg'),
+  'medinatura-clearlife-allergy-tablets': catalogShot(
+    'medinatura-clearlife-allergy-tablets.jpg',
+  ),
+  'dg-health-loratadine-tablets': catalogShot(
+    'dg-health-loratadine-tablets.jpg',
+  ),
+  'dg-health-fluticasone-nasal': catalogShot(
+    'dg-health-fluticasone-nasal.jpg',
+  ),
+  'dg-health-loratadine-odt': catalogShot('dg-health-loratadine-odt.jpg'),
+  'dg-health-childrens-loratadine-chew': catalogShot(
+    'dg-health-childrens-loratadine-chew.jpg',
   ),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
@@ -2946,6 +2985,19 @@ assertBrandTextTile(
   'DG Health',
   'DG Health',
 );
+assertBrandTextTile('equate-loratadine-d', 'Equate', 'Equate');
+assertBrandTextTile('equate-cetirizine-tablets', 'Equate', 'Equate');
+assertBrandTextTile(
+  'equate-fexofenadine-tablets',
+  'Equate',
+  'Equate',
+);
+assertBrandTextTile('equate-fluticasone-nasal', 'Equate', 'Equate');
+assertBrandTextTile(
+  'equate-kids-fluticasone-nasal',
+  'Equate',
+  'Equate',
+);
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
@@ -2954,7 +3006,6 @@ assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertLetterOnly('family-wellness-loratadine-10', 'Family Wellness');
-assertLetterOnly('dg-health-loratadine-tablets', 'DG Health');
 assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
 assertExactCarton(
   'biofreeze-menthol-patches',
@@ -4363,6 +4414,81 @@ assertExactCarton(
   'clear-eyes-redness-relief',
   'Clear Eyes',
   'clear-eyes-redness-relief.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-allergy',
+  'MediNatura',
+  'medinatura-bhi-allergy.jpg',
+);
+assertExactCarton(
+  'medinatura-clearlife-allergy-tablets',
+  'MediNatura',
+  'medinatura-clearlife-allergy-tablets.jpg',
+);
+assertExactCarton(
+  'dg-health-loratadine-tablets',
+  'DG Health',
+  'dg-health-loratadine-tablets.jpg',
+);
+assertExactCarton(
+  'dg-health-fluticasone-nasal',
+  'DG Health',
+  'dg-health-fluticasone-nasal.jpg',
+);
+assertExactCarton(
+  'dg-health-loratadine-odt',
+  'DG Health',
+  'dg-health-loratadine-odt.jpg',
+);
+assertExactCarton(
+  'dg-health-childrens-loratadine-chew',
+  'DG Health',
+  'dg-health-childrens-loratadine-chew.jpg',
+);
+assertBrandMark(
+  'boiron-ambrosiaartemisiaefolia-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-arundomauritanica-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-euphrasia-officinalis-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-galphimia-glauca-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-histaminum-hydrochloricum-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-luffaoperculata-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-sabadilla-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-solidagovirgaurea-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark(
+  'boiron-wyethiahelenioides-pellets',
+  'Boiron',
+  'boiron-mark.png',
 );
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
