@@ -594,6 +594,27 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basics-fluticasone-nasal': 'Amazon Basics',
   'amazon-basics-mometasone-nasal': 'Amazon Basics',
   'assured-advanced-relief-eye': 'Assured',
+  // Attempted Allergies leftovers — night run 2026-09-21 batch 1.
+  // 365: wholefoodsmarket.com PDP not retrieved; DailyMed is 2D. Tile
+  // text 365, never the letter 3.
+  '365-loratadine-plain-ssg': '365',
+  // Alaway PF: alaway.com / Bausch faces are the 10 mL BAK bottle, not
+  // the single-use PF carton. Same as multidose leftover — no standalone
+  // official Alaway mark file.
+  'alaway-preservative-free': 'Alaway',
+  // Amazon Basic Care Aurohealth loratadine: amazon.com 3D packshot not
+  // retrieved (mid-rebrand). No standalone official Basic Care mark.
+  'amazon-basic-care-loratadine-aurohealth': 'Basic Care',
+  // Astepro: asteproallergy.com returned site-maintenance from this
+  // environment. No standalone official Astepro mark file.
+  'astepro-allergy': 'Astepro',
+  // Adult Benadryl Allergy Liquid: no live benadryl.com PDP (kids cherry
+  // is a different UPC). Children's chewables: no dedicated live pack
+  // file. Children's Claritin grape liquid: claritin.com maintenance.
+  // No standalone official Benadryl / Claritin mark files.
+  'benadryl-allergy-liquid': 'Benadryl',
+  'childrens-benadryl-chewables': 'Benadryl',
+  'childrens-claritin-liquid': 'Claritin',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1695,6 +1716,33 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Allergies leftover daytime run 3 — official US 3D packshots.
   'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
   'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
+  // Allergies leftover night run 2026-09-21 batch 1 — official US 3D
+  // packshots. Per-id only so formulaId siblings do not inherit.
+  'fon-allergy-max': catalogShot('fon-allergy-max.jpg'),
+  'natures-way-alleraide': catalogShot('natures-way-alleraide.jpg'),
+  'beekeepers-nasal-spray': catalogShot('beekeepers-nasal-spray.jpg'),
+  'benadryl-liqui-gels': catalogShot('benadryl-liqui-gels.jpg'),
+  'benadryl-ultratabs': catalogShot('benadryl-ultratabs.jpg'),
+  'boiron-allergycalm-pellets': catalogShot(
+    'boiron-allergycalm-pellets.jpg',
+  ),
+  'boiron-allergycalm-meltaways': catalogShot(
+    'boiron-allergycalm-meltaways.jpg',
+  ),
+  'boiron-sinuscalm-allergy-tablets': catalogShot(
+    'boiron-sinuscalm-allergy-tablets.jpg',
+  ),
+  'childrens-allegra-liquid': catalogShot('childrens-allegra-liquid.jpg'),
+  'childrens-allegra-odt': catalogShot('childrens-allegra-odt.jpg'),
+  'childrens-benadryl-allergy-liquid': catalogShot(
+    'childrens-benadryl-allergy-liquid.jpg',
+  ),
+  'childrens-benadryl-allergy-plus-congestion': catalogShot(
+    'childrens-benadryl-allergy-plus-congestion.jpg',
+  ),
+  'childrens-benadryl-dyefree-liquid': catalogShot(
+    'childrens-benadryl-dyefree-liquid.jpg',
+  ),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -2791,6 +2839,29 @@ assertBrandTextTile(
   'assured-advanced-relief-eye',
   'Assured',
   'Assured',
+);
+assertBrandTextTile(
+  '365-loratadine-plain-ssg',
+  '365 Whole Foods Market',
+  '365',
+);
+assertBrandTextTile('alaway-preservative-free', 'Alaway', 'Alaway');
+assertBrandTextTile(
+  'amazon-basic-care-loratadine-aurohealth',
+  'Amazon Basic Care',
+  'Basic Care',
+);
+assertBrandTextTile('astepro-allergy', 'Astepro', 'Astepro');
+assertBrandTextTile('benadryl-allergy-liquid', 'Benadryl', 'Benadryl');
+assertBrandTextTile(
+  'childrens-benadryl-chewables',
+  'Benadryl',
+  'Benadryl',
+);
+assertBrandTextTile(
+  'childrens-claritin-liquid',
+  'Claritin',
+  'Claritin',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -4120,6 +4191,71 @@ assertExactCarton(
   'allegra-allergy-24hr.jpg',
 );
 assertExactCarton('allegra-d-24hr', 'Allegra', 'allegra-d-24hr.jpg');
+assertExactCarton(
+  'fon-allergy-max',
+  'Forces of Nature',
+  'fon-allergy-max.jpg',
+);
+assertExactCarton(
+  'natures-way-alleraide',
+  "Nature's Way",
+  'natures-way-alleraide.jpg',
+);
+assertExactCarton(
+  'beekeepers-nasal-spray',
+  "Beekeeper's Naturals",
+  'beekeepers-nasal-spray.jpg',
+);
+assertExactCarton(
+  'benadryl-liqui-gels',
+  'Benadryl',
+  'benadryl-liqui-gels.jpg',
+);
+assertExactCarton(
+  'benadryl-ultratabs',
+  'Benadryl',
+  'benadryl-ultratabs.jpg',
+);
+assertExactCarton(
+  'boiron-allergycalm-pellets',
+  'Boiron',
+  'boiron-allergycalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-allergycalm-meltaways',
+  'Boiron',
+  'boiron-allergycalm-meltaways.jpg',
+);
+assertExactCarton(
+  'boiron-sinuscalm-allergy-tablets',
+  'Boiron',
+  'boiron-sinuscalm-allergy-tablets.jpg',
+);
+assertExactCarton(
+  'childrens-allegra-liquid',
+  'Allegra',
+  'childrens-allegra-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-allegra-odt',
+  'Allegra',
+  'childrens-allegra-odt.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-allergy-liquid',
+  'Benadryl',
+  'childrens-benadryl-allergy-liquid.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-allergy-plus-congestion',
+  'Benadryl',
+  'childrens-benadryl-allergy-plus-congestion.jpg',
+);
+assertExactCarton(
+  'childrens-benadryl-dyefree-liquid',
+  'Benadryl',
+  'childrens-benadryl-dyefree-liquid.jpg',
+);
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
 assertExactCarton('aleve-back-muscle-pain', 'Aleve', 'aleve-back-muscle-pain.jpg');
