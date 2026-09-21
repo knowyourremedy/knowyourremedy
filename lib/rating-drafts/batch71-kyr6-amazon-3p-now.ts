@@ -29,7 +29,7 @@
 //
 // TALLY (unverified drafts in THIS file): 705 rows —
 // Clean 201 / Caution 482 / Avoid 22.
-// NEW 609 / REUSE-formula 96 / SKIPPED + REFUSED
+// NEW 604 / REUSE-formula 101 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
 import type {
@@ -11930,7 +11930,7 @@ if (_ROWS.some((r) => r.brand !== BRAND)) {
 if (_ROWS.some((r) => r.barcode && !/^733739\d{6}$/.test(r.barcode))) {
   throw new Error('batch71 invented or non-NOW UPC');
 }
-if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 96) {
+if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 101) {
   throw new Error('batch71 REUSE-formula tally drift');
 }
 if (!BATCH71_SKIPPED.some((s) => /already-on-MAIN/i.test(s.reason))) {
