@@ -465,6 +465,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'now-acerola-4-1-extract-powder-6': brandMark('now-mark.png'),
   'now-oregano-450-mg-100': brandMark('now-mark.png'),
   'nyquil-cold-flu-liquid': brandMark('vicks-mark.png'),
+  // Allergies leftover night run — attempted, no matching official 3D pack.
+  // Amazon Basic Care Aurohealth loratadine: amazon.com PDP not retrieved;
+  // DailyMed faces are 2D label flats. Official Basic Care wordmark already
+  // on disk. AllergyCalm Kids/OTG leftover is two live boironusa.com SKUs
+  // — do not glue either carton. Official Boiron mark already on disk.
+  // Per-id only.
+  'amazon-basic-care-loratadine-aurohealth': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'boiron-allergycalm-pellets': brandMark('boiron-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -594,6 +604,14 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basics-fluticasone-nasal': 'Amazon Basics',
   'amazon-basics-mometasone-nasal': 'Amazon Basics',
   'assured-advanced-relief-eye': 'Assured',
+  // Allergies leftover night run — attempted, no matching official 3D pack.
+  // 365 loratadine: wholefoodsmarket.com has no live PDP; DailyMed is 2D
+  // label flats. Do not invent a logo. Do not stay on "3".
+  // Alaway PF: current alaway.com products page lists only the 10 mL BAK
+  // bottle / twin pack — PF carton not on the brand site. Looks
+  // discontinued. No standalone official Alaway mark file.
+  '365-loratadine-plain-ssg': '365',
+  'alaway-preservative-free': 'Alaway',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1695,6 +1713,38 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Allergies leftover daytime run 3 — official US 3D packshots.
   'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
   'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
+  // Allergies leftover night run (3:00 PT) batch 1 — official US 3D
+  // packshots. Per-id only so formulaId siblings do not inherit.
+  'natures-way-alleraide': catalogShot('natures-way-alleraide.jpg'),
+  'fon-allergy-max': catalogShot('fon-allergy-max.jpg'),
+  'astepro-allergy': catalogShot('astepro-allergy.jpg'),
+  'beekeepers-nasal-spray': catalogShot('beekeepers-nasal-spray.jpg'),
+  'benadryl-liqui-gels': catalogShot('benadryl-liqui-gels.jpg'),
+  'benadryl-allergy-liquid': catalogShot('benadryl-allergy-liquid.jpg'),
+  'benadryl-ultratabs': catalogShot('benadryl-ultratabs.jpg'),
+  'medinatura-bhi-allergy': catalogShot('medinatura-bhi-allergy.jpg'),
+  'boiron-allergycalm-meltaways': catalogShot(
+    'boiron-allergycalm-meltaways.jpg',
+  ),
+  'boiron-ambrosiaartemisiaefolia-pellets': catalogShot(
+    'boiron-ambrosiaartemisiaefolia-pellets.jpg',
+  ),
+  'boiron-arundomauritanica-pellets': catalogShot(
+    'boiron-arundomauritanica-pellets.jpg',
+  ),
+  'boiron-euphrasia-officinalis-pellets': catalogShot(
+    'boiron-euphrasia-officinalis-pellets.jpg',
+  ),
+  'boiron-galphimia-glauca-pellets': catalogShot(
+    'boiron-galphimia-glauca-pellets.jpg',
+  ),
+  'boiron-histaminum-hydrochloricum-pellets': catalogShot(
+    'boiron-histaminum-hydrochloricum-pellets.jpg',
+  ),
+  'boiron-luffaoperculata-pellets': catalogShot(
+    'boiron-luffaoperculata-pellets.jpg',
+  ),
+  'boiron-sabadilla-pellets': catalogShot('boiron-sabadilla-pellets.jpg'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -2791,6 +2841,16 @@ assertBrandTextTile(
   'assured-advanced-relief-eye',
   'Assured',
   'Assured',
+);
+assertBrandTextTile(
+  '365-loratadine-plain-ssg',
+  '365 Whole Foods Market',
+  '365',
+);
+assertBrandTextTile(
+  'alaway-preservative-free',
+  'Alaway',
+  'Alaway',
 );
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
@@ -4120,6 +4180,92 @@ assertExactCarton(
   'allegra-allergy-24hr.jpg',
 );
 assertExactCarton('allegra-d-24hr', 'Allegra', 'allegra-d-24hr.jpg');
+assertExactCarton(
+  'natures-way-alleraide',
+  "Nature's Way",
+  'natures-way-alleraide.jpg',
+);
+assertExactCarton('fon-allergy-max', 'Forces of Nature', 'fon-allergy-max.jpg');
+assertExactCarton('astepro-allergy', 'Astepro', 'astepro-allergy.jpg');
+assertExactCarton(
+  'beekeepers-nasal-spray',
+  "Beekeeper's Naturals",
+  'beekeepers-nasal-spray.jpg',
+);
+assertExactCarton(
+  'benadryl-liqui-gels',
+  'Benadryl',
+  'benadryl-liqui-gels.jpg',
+);
+assertExactCarton(
+  'benadryl-allergy-liquid',
+  'Benadryl',
+  'benadryl-allergy-liquid.jpg',
+);
+assertExactCarton(
+  'benadryl-ultratabs',
+  'Benadryl',
+  'benadryl-ultratabs.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-allergy',
+  'MediNatura',
+  'medinatura-bhi-allergy.jpg',
+);
+assertExactCarton(
+  'boiron-allergycalm-meltaways',
+  'Boiron',
+  'boiron-allergycalm-meltaways.jpg',
+);
+assertExactCarton(
+  'boiron-ambrosiaartemisiaefolia-pellets',
+  'Boiron',
+  'boiron-ambrosiaartemisiaefolia-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-arundomauritanica-pellets',
+  'Boiron',
+  'boiron-arundomauritanica-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-euphrasia-officinalis-pellets',
+  'Boiron',
+  'boiron-euphrasia-officinalis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-galphimia-glauca-pellets',
+  'Boiron',
+  'boiron-galphimia-glauca-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-histaminum-hydrochloricum-pellets',
+  'Boiron',
+  'boiron-histaminum-hydrochloricum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-luffaoperculata-pellets',
+  'Boiron',
+  'boiron-luffaoperculata-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-sabadilla-pellets',
+  'Boiron',
+  'boiron-sabadilla-pellets.jpg',
+);
+assertBrandMark(
+  'amazon-basic-care-loratadine-aurohealth',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'boiron-allergycalm-pellets',
+  'Boiron',
+  'boiron-mark.png',
+);
+// Later Allergies single-tube leftovers share formulaId
+// boiron-single-remedy-pellets — must not inherit this batch's tubes.
+assertLetterOnly('boiron-solidagovirgaurea-pellets', 'Boiron');
+assertLetterOnly('boiron-wyethiahelenioides-pellets', 'Boiron');
 // Pain & Fever daytime photo run — exact US 3D packshots (40).
 assertExactCarton('aleve-arthritis-pain-gel', 'Aleve', 'aleve-arthritis-pain-gel.jpg');
 assertExactCarton('aleve-back-muscle-pain', 'Aleve', 'aleve-back-muscle-pain.jpg');
