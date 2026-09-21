@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 21, 2026 (NOW leftover tokens — founder stamp; exact §4):** Caution (Limited) — Sodium coco-sulfate (same irritant class as SLS; not High); Fulvic acid as OI; Sorghum powder (unspecified grain powder; ≠ named hull); Chlorella powder (unspecified algae); Non-fat dry milk; Bare soy (lecithin stays Cleared); Bare wheat; Orange fruit juice powder as sweetener (≠ juice-as-color); Sustained-release caffeine as OI. Cleared (0) — Polyglyceryl-10 laurate; Flax seed oil as fill/OI (named oil fill; not gummy High; not oil-bottle grade); Cocoa powder (≠ cocoa butter; ≠ extract); Phytosterols from soy, highly refined; Taurine as OI; L-arginine as OI; Nicotinamide as OI; Cyanocobalamin as OI; Carob powder / powder-as-food (Carob Extract stays Caution). Spirulina powder + spirulina extract stay REFUSED. No row.
+
 **Changed Sept 20, 2026 (NOW #261 refuse aliases — not new inactives; map and write; do not 7-step):** Vegetarian Coating / Vegetable Coating (unnamed) = Vegetable-Based Tablet Coating Caution; Vegetarian Coating named (HPMC, glycerin) = named-coat Cleared; Carob (plain) = Carob Extract Caution unless the panel says powder-as-food only; Sucrose = existing Limited sugar; Calcium carbonate as Other Ingredient (filler) = existing mineral-filler Cleared (distinct from Ca as a labeled active); Vegetable polysaccharide capsule = HPMC / veg cap Cleared; Pharmaceutical glaze = Shellac Cleared.
 
 **Changed in v1.6 (Aug 2026 — the big ingredient-lock session):** ran roughly 20 remaining inactive ingredients through the full §4a source-hierarchy workflow and locked founder calls on all of them, closing out the "~20% remaining" categorization gap flagged in earlier sessions. **THE INACTIVE-INGREDIENT METHODOLOGY IS NOW CONSIDERED LOCKED ENOUGH TO BEGIN BOT-ASSISTED DATABASE BATCHES (PROJECT_NOTES §12).** New standing rule added (§4a): any inactive ingredient encountered later that isn't in the §5 table yet is NOT graded on the spot by a bot or an assistant — it gets the 7-step workflow packet and a founder call before it goes live in any product record. This is a permanent process rule, not a one-time gate.
@@ -263,6 +265,15 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Tapioca Dextrose / Organic Tapioca Dextrose — LOCKED (Sept 16, 2026) | tapioca dextrose, organic tapioca dextrose | Limited. Sugar / dextrin neighborhood. Distinct from Cleared tapioca syrup / cane sugar / tapioca syrup-dextrose sweetener row. |
 | Beet Sugar — LOCKED (Sept 16, 2026) | beet sugar | Sugar row. Limited. Not High. Distinct from Cleared cane sugar. |
 | Fructose as sweetener — **LOCKED (Sept 14, 2026 housekeeping)** | — | Treat with sugars. Not High. Not the parked HFCS case and not an Avoid sweetener. |
+| Sodium coco-sulfate — LOCKED (Sept 21, 2026) | sodium coco-sulfate, SCS | Same irritant class as SLS. Limited, not High. Distinct from Cleared sodium sulfate / saline salts. Do not alias to SLS as High. |
+| Fulvic acid as OI — LOCKED (Sept 21, 2026) | fulvic acid (Other Ingredient) | Exact token as OI. Limited. Not High. |
+| Sorghum powder — LOCKED (Sept 21, 2026) | sorghum powder | Unspecified grain powder. Limited. Distinct from named hull / rice-hull Cleared. |
+| Chlorella powder — LOCKED (Sept 21, 2026) | chlorella powder | Unspecified algae. Limited. Distinct from REFUSED spirulina powder / spirulina extract (no row). |
+| Non-fat dry milk — LOCKED (Sept 21, 2026) | non-fat dry milk, nonfat dry milk | Exact token. Limited. Allergen disclosure, not High. |
+| Bare soy — LOCKED (Sept 21, 2026) | soy (bare / unspecified) | Bare soy as OI. Limited. Lecithin stays Cleared. Do not alias soy lecithin to this row. |
+| Bare wheat — LOCKED (Sept 21, 2026) | wheat (bare / unspecified) | Bare wheat as OI. Limited. Allergen disclosure, not High. |
+| Orange fruit juice powder as sweetener — LOCKED (Sept 21, 2026) | orange fruit juice powder (sweetener) | Limited sugar. Distinct from Cleared named juice-as-color. |
+| Sustained-release caffeine as OI — LOCKED (Sept 21, 2026) | sustained-release caffeine (Other Ingredient) | Exact token as OI. Limited. Not High. |
 | Caramel color, CONFIRMED Class I or II — **LOCKED (v1.6)** | plain caramel (E150a), caustic sulfite caramel (E150b) | No ammonia process, no 4-MEI. Still a color additive serving appearance only — doesn't clear to Clean by default; revisit case-by-case. Only applies when the label explicitly confirms Class I/II. |
 
 ### Cleared — no demerit
@@ -314,7 +325,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Glyceryl stearate — LOCKED (Sept 15, 2026) | Topical emollient / stearate cousin. |
 | Diisopropyl adipate — LOCKED (Sept 15, 2026) | Topical emollient ester. |
 | Methyl glucose dioleate — LOCKED (Sept 15, 2026) | Topical emollient. |
-| cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Named butter as cream vehicle / fill. Cleared. Not a cousin shortcut. Do not Caution when it is the cream vehicle. |
+| cocoa seed butter — LOCKED (Sept 15, 2026) | Exact INCI. Named butter as cream vehicle / fill. Cleared. Not a cousin shortcut. Do not Caution when it is the cream vehicle. Distinct from Cleared cocoa powder (Sept 21, 2026). Do not alias powder to butter. |
 | glyceryl dilaurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | soybean sterols — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | C15-19 alkane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as undecane / tridecane / Coconut Alkanes. Do not alias those tokens to this row. |
@@ -384,7 +395,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Paprika extract / capsanthin as COLOR only — LOCKED (Sept 14, 2026) | Named spice color. Same posture as turmeric-as-color. Unnamed “color added” stays Caution. |
 | Black carrot / named fruit-or-vegetable juice concentrate as COLOR — LOCKED (Sept 14, 2026) | Named plant color. Same posture as paprika / turmeric-as-color. Exact strings restamped Sept 16, 2026 (no grade change): Natural Color (Black Carrot); Black Carrot (For Color); Purple Carrot (Color); Red Radish (For Color); Beetroot Juice Powder (Color); Color (Organic Maqui Berry); Vegetable Juice (Color); Natural Color (Turmeric); Lycopene (color). Vegetable Juice Extract (Color) / Furit And Vegetable Juice Extract (Color) are aliases of named vegetable-juice-as-color (Sept 16, 2026; Furit is the label typo). Unnamed “color added” stays Caution. Unspecified Natural Colors is the Limited opacity row. |
 | Disodium EDTA, TRACE preservative/stabilizer use — **LOCKED (v1.6)** | Confirmed safe at the actual trace concentrations used (0.001%–0.25% w/v) in eye drops/topical formulations. The neurotoxicity/chelation-risk literature is specific to gram-level IV THERAPEUTIC chelation doses — a different dose and context, noted as a disclaimer only. |
-| Lecithin (canola, soy, or sunflower) — **LOCKED (v1.6; canola named Sept 14, 2026)** | EFSA 2017: no safety concern, no ADI needed. Canola / soy / sunflower lecithin are the same lock — canola is already covered; this line names it. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). Canola lecithin is Cleared-class lecithin, not the gummy seed-oil High rule. |
+| Lecithin (canola, soy, or sunflower) — **LOCKED (v1.6; canola named Sept 14, 2026)** | EFSA 2017: no safety concern, no ADI needed. Canola / soy / sunflower lecithin are the same lock — canola is already covered; this line names it. Sunflower lecithin: no allergen concern. Soy lecithin: requires a soy-allergy note (disclosure issue, not toxicity). Canola lecithin is Cleared-class lecithin, not the gummy seed-oil High rule. Distinct from Limited bare soy (Sept 21, 2026). Do not alias bare soy to this row. |
 | Mixed tocopherols, ascorbyl palmitate (as antioxidants) — **LOCKED (v1.6)** | Long-established GRAS vitamin-E-derived antioxidants; the natural BHA/BHT alternative. No safety flags found. D-Alpha-Tocopherol as inactive sits on this same mixed-tocopherols row (Sept 16, 2026). Distinct from Caution tocopheryl acetate. |
 | Castor oil, polyoxyl castor oil derivatives (oral/topical use) — **LOCKED (v1.6)** | "Essentially non-toxic and non-irritant" across acute/chronic toxicity studies for oral/topical/general pharmaceutical use. The Cremophor hypersensitivity/anaphylaxis history is specific to IV/injectable use — out of scope for KYR, which does not grade injectable drugs. |
 | calcium gluconate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -407,7 +418,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | cetearyl glucoside — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from cetearyl alcohol and from arachidyl glucoside. |
 | sodium lactate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | glyceryl stearate citrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from glyceryl stearate / glyceryl stearate SE / glyceryl distearate. |
-| polyglyceryl-3 diisostearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| polyglyceryl-3 diisostearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Polyglyceryl-10 laurate (Sept 21, 2026 Cleared). Do not alias. |
 | calcium chloride — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | arachidyl alcohol — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. |
 | behenyl alcohol — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. |
@@ -470,6 +481,15 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Electrolyzed Water — LOCKED (Sept 17, 2026) | Exact token. Cleared. Tap: HOCl / electrolyzed saline vehicle. Not the purified-water row. Not a bleach bottle. Distinct from Caution Sodium Hypochlorite (Trace). |
 | Sodium Sulfate — LOCKED (Sept 17, 2026) | Exact token. Cleared. Salt / saline neighborhood with sodium chloride. Distinct from Caution SLS. |
 | Phosphates (unnamed, this gel) — LOCKED (Sept 17, 2026) | Exact token. Existing phosphate-salt Cleared-by-class (dicalcium / tricalcium / potassium phosphate). Tap: not phosphoric acid. Do not invent a phosphoric-acid grade. |
+| Polyglyceryl-10 laurate — LOCKED (Sept 21, 2026) | Exact INCI. Cleared. Distinct from polyglyceryl-3 diisostearate (already Cleared). Do not alias. |
+| Flax seed oil as fill/OI — LOCKED (Sept 21, 2026) | Named oil fill / OI. Cleared. NOT gummy High. NOT oil-bottle grade. Tap fill ≠ gummy High. Distinct from parked bottle / cooking oils. |
+| Cocoa powder — LOCKED (Sept 21, 2026) | Exact token as powder. Cleared. Distinct from Cleared cocoa seed butter / cocoa butter. Distinct from extract. Do not alias to cocoa butter. |
+| Phytosterols from soy, highly refined — LOCKED (Sept 21, 2026) | Highly refined soy phytosterols as OI. Cleared. Distinct from Limited bare soy. Lecithin stays Cleared. |
+| Taurine as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. |
+| L-arginine as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. Also written l-arginine. |
+| Nicotinamide as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. B3 as inactive. |
+| Cyanocobalamin as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. B12 as inactive. Same posture as Pyridoxine HCl / Cholecalciferol as inactive. |
+| Carob powder / powder-as-food — LOCKED (Sept 21, 2026) | Exact tokens when the panel says powder or powder-as-food. Cleared. Carob Extract stays Caution. Not auto-Cleared from the extract row. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -638,7 +658,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Non-GMO corn zein (beadlets) — LOCKED (Sept 16, 2026) | Exact token. Coating polymer, not pea-protein isolate (Cleared). Tap why: named twin / specified protein is cleaner. | Standard alternatives rule. Not Avoid. |
 | oral hydrated silica — LOCKED (Sept 16, 2026) | Exact token as oral. Same nanoparticle Caution cap as silicon dioxide. Tap vs topical hydrated silica (separate row). Do not alias the topical row to this oral cap. | Standard alternatives rule. Not Avoid. |
 | Silica (oral) — LOCKED (Sept 16, 2026) | Exact token. Same nanoparticle Caution cap as silicon dioxide / Silica. Tap vs topical hydrated silica. | Standard alternatives rule. Not Avoid. |
-| Carob Extract — LOCKED (Sept 16, 2026) | Exact token. Extract. Caution. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
+| Carob Extract — LOCKED (Sept 16, 2026) | Exact token. Extract. Caution. Not a named-color pass. Distinct from Cleared Carob powder / powder-as-food (Sept 21, 2026). | Standard alternatives rule. Not Avoid. |
 | edible ink (unspecified) — LOCKED (Sept 16, 2026) | Exact token. Unspecified ink. Caution. Named plant-color / named dye rows are not this string. | Standard alternatives rule. Not Avoid. |
 | white edible ink — LOCKED (Sept 18, 2026) | Exact token. Same class as locked edible ink (unspecified). Caution. Named plant-color inks stay separate. | Standard alternatives rule. Not Avoid. |
 | mica-based pearlescent pigment — LOCKED (Sept 18, 2026) | Exact token. Colorant. Caution. FDA 21 CFR 73.350 ≠ Clean. | Standard alternatives rule. Not Avoid. |
@@ -663,7 +683,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
-| Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. |
+| Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. Distinct from Cleared flax seed oil as fill/OI (Sept 21, 2026). |
+| Spirulina powder / Organic spirulina powder / spirulina extract | Same TopCare §5 refuse. Founder 2026-09-21: stay REFUSED. No §5 row. No Search row. |
 
 ## 6. Posture
 
