@@ -456,6 +456,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // PDPs print the 73581-911 ethylhexyl OI, already wired to the
   // other WELMATE row. Parent mark from official pack wordmark.
   'welmate-lidocaine-4-patch-parabens': brandMark('welmate-mark.png'),
+  // Cold & Flu leftover night run — attempted, no matching official 3D
+  // pack. Acerola 4:1 6 oz (SKU 0740) has no live nowfoods.com PDP /
+  // CDN bottle. Oregano 450 mg 100 veg caps (SKU 4724) page exists but
+  // no retrievable 3D pack file. NyQuil leftover name is flavor-generic;
+  // UPC 323900045149 is Cherry 4 oz and vicks.com hero is Original.
+  // Official NOW wordmark / Vicks shield already on disk. Per-id only.
+  'now-acerola-4-1-extract-powder-6': brandMark('now-mark.png'),
+  'now-oregano-450-mg-100': brandMark('now-mark.png'),
+  'nyquil-cold-flu-liquid': brandMark('vicks-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -1636,6 +1645,47 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'umcka-zero-sugar-cold-relief-syrup': catalogShot(
     'umcka-zero-sugar-cold-relief-syrup.jpg',
   ),
+  // Cold & Flu leftover night run (12:30 PT) — official nowfoods.com
+  // 3D bottle packshots. Per-id only so pack-size / formulaId siblings
+  // do not inherit the wrong count face.
+  'now-alphasorb-c-500-180': catalogShot('now-alphasorb-c-500-180.jpg'),
+  'now-buffered-c-1000-complex-180': catalogShot(
+    'now-buffered-c-1000-complex-180.jpg',
+  ),
+  // UPC 733739006806 is C-1000 Sustained Release 100 tablets (SKU 0680),
+  // not the regular rose-hips + bioflavonoid tablet line.
+  'now-c-1000-with-rose-hips-100': catalogShot(
+    'now-c-1000-with-rose-hips-100.jpg',
+  ),
+  'now-c-1000-100': catalogShot('now-c-1000-100.jpg'),
+  'now-c-1000-250': catalogShot('now-c-1000-250.jpg'),
+  // UPC 733739006820 is C-1000 Sustained Release 250 (SKU 0682).
+  'now-c-1000-250-733739006820': catalogShot(
+    'now-c-1000-250-733739006820.jpg',
+  ),
+  'now-c-1000-500': catalogShot('now-c-1000-500.jpg'),
+  'now-c-500-with-rose-hips-250': catalogShot(
+    'now-c-500-with-rose-hips-250.jpg',
+  ),
+  'now-c-500-calcium-ascorbate-c-250': catalogShot(
+    'now-c-500-calcium-ascorbate-c-250.jpg',
+  ),
+  'now-chewable-c-500-cherry-100': catalogShot(
+    'now-chewable-c-500-cherry-100.jpg',
+  ),
+  'now-l-lysine-100-733739001139': catalogShot(
+    'now-l-lysine-100-733739001139.jpg',
+  ),
+  'now-l-lysine-250-733739001238': catalogShot(
+    'now-l-lysine-250-733739001238.jpg',
+  ),
+  'now-l-lysine-250-733739001023': catalogShot(
+    'now-l-lysine-250-733739001023.jpg',
+  ),
+  'now-l-lysine-500-mg-250': catalogShot('now-l-lysine-500-mg-250.jpg'),
+  'now-oralbiotic-60': catalogShot('now-oralbiotic-60.jpg'),
+  'now-oregano-oil-90': catalogShot('now-oregano-oil-90.jpg'),
+  'now-zinc-glycinate-120': catalogShot('now-zinc-glycinate-120.jpg'),
   // Allergies leftover daytime run 3 — official US 3D packshots.
   'allegra-allergy-24hr': catalogShot('allegra-allergy-24hr.jpg'),
   'allegra-d-24hr': catalogShot('allegra-d-24hr.jpg'),
@@ -3992,6 +4042,66 @@ assertExactCarton(
   "Nature's Way",
   'umcka-zero-sugar-cold-relief-syrup.jpg',
 );
+assertExactCarton('now-alphasorb-c-500-180', 'NOW', 'now-alphasorb-c-500-180.jpg');
+assertExactCarton(
+  'now-buffered-c-1000-complex-180',
+  'NOW',
+  'now-buffered-c-1000-complex-180.jpg',
+);
+assertExactCarton(
+  'now-c-1000-with-rose-hips-100',
+  'NOW',
+  'now-c-1000-with-rose-hips-100.jpg',
+);
+assertExactCarton('now-c-1000-100', 'NOW', 'now-c-1000-100.jpg');
+assertExactCarton('now-c-1000-250', 'NOW', 'now-c-1000-250.jpg');
+assertExactCarton(
+  'now-c-1000-250-733739006820',
+  'NOW',
+  'now-c-1000-250-733739006820.jpg',
+);
+assertExactCarton('now-c-1000-500', 'NOW', 'now-c-1000-500.jpg');
+assertExactCarton(
+  'now-c-500-with-rose-hips-250',
+  'NOW',
+  'now-c-500-with-rose-hips-250.jpg',
+);
+assertExactCarton(
+  'now-c-500-calcium-ascorbate-c-250',
+  'NOW',
+  'now-c-500-calcium-ascorbate-c-250.jpg',
+);
+assertExactCarton(
+  'now-chewable-c-500-cherry-100',
+  'NOW',
+  'now-chewable-c-500-cherry-100.jpg',
+);
+assertExactCarton(
+  'now-l-lysine-100-733739001139',
+  'NOW',
+  'now-l-lysine-100-733739001139.jpg',
+);
+assertExactCarton(
+  'now-l-lysine-250-733739001238',
+  'NOW',
+  'now-l-lysine-250-733739001238.jpg',
+);
+assertExactCarton(
+  'now-l-lysine-250-733739001023',
+  'NOW',
+  'now-l-lysine-250-733739001023.jpg',
+);
+assertExactCarton('now-l-lysine-500-mg-250', 'NOW', 'now-l-lysine-500-mg-250.jpg');
+assertExactCarton('now-oralbiotic-60', 'NOW', 'now-oralbiotic-60.jpg');
+assertExactCarton('now-oregano-oil-90', 'NOW', 'now-oregano-oil-90.jpg');
+assertExactCarton('now-zinc-glycinate-120', 'NOW', 'now-zinc-glycinate-120.jpg');
+assertBrandMark(
+  'now-acerola-4-1-extract-powder-6',
+  'NOW',
+  'now-mark.png',
+);
+assertBrandMark('now-oregano-450-mg-100', 'NOW', 'now-mark.png');
+assertBrandMark('nyquil-cold-flu-liquid', 'Vicks', 'vicks-mark.png');
 assertExactCarton(
   'allegra-allergy-24hr',
   'Allegra',
