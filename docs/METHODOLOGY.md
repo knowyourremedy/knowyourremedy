@@ -4,7 +4,9 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
-**Changed Sept 21, 2026 (NOW leftover tokens — founder stamp; exact §4):** Caution (Limited) — Sodium coco-sulfate (same irritant class as SLS; not High); Fulvic acid as OI; Sorghum powder (unspecified grain powder; ≠ named hull); Chlorella powder (unspecified algae); Non-fat dry milk; Bare soy (lecithin stays Cleared); Bare wheat; Orange fruit juice powder as sweetener (≠ juice-as-color); Sustained-release caffeine as OI. Cleared (0) — Polyglyceryl-10 laurate; Flax seed oil as fill/OI (named oil fill; not gummy High; not oil-bottle grade); Cocoa powder (≠ cocoa butter; ≠ extract); Phytosterols from soy, highly refined; Taurine as OI; L-arginine as OI; Nicotinamide as OI; Cyanocobalamin as OI; Carob powder / powder-as-food (Carob Extract stays Caution). Spirulina powder + spirulina extract stay REFUSED. No row.
+**Changed Sept 21, 2026 (Spirulina — founder stamp):** Spirulina powder as OI / blend = Caution (Limited). Unspecified algae + contamination class. Same neighborhood as chlorella powder. Spirulina extract as OI / color in a multi = Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Reopens the old TopCare + NOW spirulina refuse. Those SKUs may be written on a later KYR6 pass only.
+
+**Changed Sept 21, 2026 (NOW leftover tokens — founder stamp; exact §4):** Caution (Limited) — Sodium coco-sulfate (same irritant class as SLS; not High); Fulvic acid as OI; Sorghum powder (unspecified grain powder; ≠ named hull); Chlorella powder (unspecified algae); Non-fat dry milk; Bare soy (lecithin stays Cleared); Bare wheat; Orange fruit juice powder as sweetener (≠ juice-as-color); Sustained-release caffeine as OI. Cleared (0) — Polyglyceryl-10 laurate; Flax seed oil as fill/OI (named oil fill; not gummy High; not oil-bottle grade); Cocoa powder (≠ cocoa butter; ≠ extract); Phytosterols from soy, highly refined; Taurine as OI; L-arginine as OI; Nicotinamide as OI; Cyanocobalamin as OI; Carob powder / powder-as-food (Carob Extract stays Caution). Spirulina powder + spirulina extract later locked Caution (see Sept 21 Spirulina stamp).
 
 **Changed Sept 20, 2026 (NOW #261 refuse aliases — not new inactives; map and write; do not 7-step):** Vegetarian Coating / Vegetable Coating (unnamed) = Vegetable-Based Tablet Coating Caution; Vegetarian Coating named (HPMC, glycerin) = named-coat Cleared; Carob (plain) = Carob Extract Caution unless the panel says powder-as-food only; Sucrose = existing Limited sugar; Calcium carbonate as Other Ingredient (filler) = existing mineral-filler Cleared (distinct from Ca as a labeled active); Vegetable polysaccharide capsule = HPMC / veg cap Cleared; Pharmaceutical glaze = Shellac Cleared.
 
@@ -268,12 +270,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sodium coco-sulfate — LOCKED (Sept 21, 2026) | sodium coco-sulfate, SCS | Same irritant class as SLS. Limited, not High. Distinct from Cleared sodium sulfate / saline salts. Do not alias to SLS as High. |
 | Fulvic acid as OI — LOCKED (Sept 21, 2026) | fulvic acid (Other Ingredient) | Exact token as OI. Limited. Not High. |
 | Sorghum powder — LOCKED (Sept 21, 2026) | sorghum powder | Unspecified grain powder. Limited. Distinct from named hull / rice-hull Cleared. |
-| Chlorella powder — LOCKED (Sept 21, 2026) | chlorella powder | Unspecified algae. Limited. Distinct from REFUSED spirulina powder / spirulina extract (no row). |
+| Chlorella powder — LOCKED (Sept 21, 2026) | chlorella powder | Unspecified algae. Limited. Same neighborhood as Spirulina powder as OI / blend (Caution Limited). Distinct from Spirulina extract as OI / color. |
 | Non-fat dry milk — LOCKED (Sept 21, 2026) | non-fat dry milk, nonfat dry milk | Exact token. Limited. Allergen disclosure, not High. |
 | Bare soy — LOCKED (Sept 21, 2026) | soy (bare / unspecified) | Bare soy as OI. Limited. Lecithin stays Cleared. Do not alias soy lecithin to this row. |
 | Bare wheat — LOCKED (Sept 21, 2026) | wheat (bare / unspecified) | Bare wheat as OI. Limited. Allergen disclosure, not High. |
 | Orange fruit juice powder as sweetener — LOCKED (Sept 21, 2026) | orange fruit juice powder (sweetener) | Limited sugar. Distinct from Cleared named juice-as-color. |
 | Sustained-release caffeine as OI — LOCKED (Sept 21, 2026) | sustained-release caffeine (Other Ingredient) | Exact token as OI. Limited. Not High. |
+| Spirulina powder as OI / blend — LOCKED (Sept 21, 2026) | spirulina powder, Organic spirulina powder (Other Ingredient / blend) | Caution (Limited). Unspecified algae + contamination class. Same neighborhood as chlorella powder. Not Avoid. Not Cleared. Reopens the old TopCare + NOW refuse. |
+| Spirulina extract as OI / color — LOCKED (Sept 21, 2026) | spirulina extract (Other Ingredient / color in a multi) | Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Distinct from Spirulina powder as OI / blend. Reopens the old TopCare + NOW refuse. |
 | Caramel color, CONFIRMED Class I or II — **LOCKED (v1.6)** | plain caramel (E150a), caustic sulfite caramel (E150b) | No ammonia process, no 4-MEI. Still a color additive serving appearance only — doesn't clear to Clean by default; revisit case-by-case. Only applies when the label explicitly confirms Class I/II. |
 
 ### Cleared — no demerit
@@ -684,7 +688,6 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
 | Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. Distinct from Cleared flax seed oil as fill/OI (Sept 21, 2026). |
-| Spirulina powder / Organic spirulina powder / spirulina extract | Same TopCare §5 refuse. Founder 2026-09-21: stay REFUSED. No §5 row. No Search row. |
 
 ## 6. Posture
 
