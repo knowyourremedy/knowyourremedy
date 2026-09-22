@@ -492,6 +492,27 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'family-wellness-cetirizine-tablets': brandMark(
     'family-wellness-mark.png',
   ),
+  // Attempted Allergies leftovers — night run 2026-09-22 12:30 PT batch 2.
+  // Carton hunts failed (target.com / walgreens.com / albertsons blocked
+  // or no matching 3D pack). Official marks already on disk, plus a new
+  // Similasan wordmark from similasanusa.com. Per-id only.
+  'signature-care-loratadine-mint-odt': brandMark(
+    'signature-care-mark.png',
+  ),
+  'similasan-allergy-eye-multidose': brandMark('similasan-mark.png'),
+  'similasan-allergy-eye-pf': brandMark('similasan-mark.png'),
+  'topcare-all-day-allergy-cetirizine': brandMark('topcare-mark.png'),
+  'topcare-allergy-congestion-loratadine-d': brandMark('topcare-mark.png'),
+  'topcare-allergy-relief-loratadine': brandMark('topcare-mark.png'),
+  'topcare-original-eye-drops': brandMark('topcare-mark.png'),
+  'upup-loratadine-tablets-plain': brandMark('upup-mark.png'),
+  'upup-kids-cetirizine-bubblegum': brandMark('upup-mark.png'),
+  'upup-kids-cetirizine-grape': brandMark('upup-mark.png'),
+  'upup-kids-loratadine-liquid': brandMark('upup-mark.png'),
+  'upup-kids-dph-melts': brandMark('upup-mark.png'),
+  'upup-pm-lubricant-ointment': brandMark('upup-mark.png'),
+  'walgreens-allergy-relief-cetirizine': brandMark('walgreens-mark.png'),
+  'walgreens-allergy-relief-loratadine': brandMark('walgreens-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -709,6 +730,10 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Rexall: dollargeneral.com PDP for UPC 370030659432 served the
   // placeholder image, not a 3D carton. No standalone official mark.
   'rexall-cetirizine-tablets': 'Rexall',
+  // Attempted Allergies leftover — night run 2026-09-22 12:30 PT batch 2.
+  // Systane Ultra PF leftover lists both single-use vials and a PF bottle
+  // twin. Do not glue one carton. No standalone official Systane mark file.
+  'systane-ultra-pf': 'Systane',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1903,6 +1928,16 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'now-quercetin-500-mg-100': catalogShot('now-quercetin-500-mg-100.jpg'),
   'nasalcrom': catalogShot('nasalcrom.jpg'),
+  // Allergies leftover night run 2026-09-22 12:30 PT batch 2 — official
+  // US 3D packshots. Per-id only so formulaId siblings do not inherit.
+  'now-stinging-nettle-root-extract-250-mg-90': catalogShot(
+    'now-stinging-nettle-root-extract-250-mg-90.jpg',
+  ),
+  'umcka-allergy-sinus-chewables': catalogShot(
+    'umcka-allergy-sinus-chewables.jpg',
+  ),
+  'visine-red-eye-comfort': catalogShot('visine-red-eye-comfort.jpg'),
+  'theratears-pf': catalogShot('theratears-pf.jpg'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -3201,7 +3236,90 @@ assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 assertLetterOnly('tylenol-pm-es', 'Tylenol');
 assertLetterOnly('advil-pm-liquigels', 'Advil');
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
-assertLetterOnly('topcare-allergy-relief-loratadine', 'TopCare');
+assertBrandMark(
+  'signature-care-loratadine-mint-odt',
+  'Signature Care',
+  'signature-care-mark.png',
+);
+assertBrandMark(
+  'similasan-allergy-eye-multidose',
+  'Similasan',
+  'similasan-mark.png',
+);
+assertBrandMark(
+  'similasan-allergy-eye-pf',
+  'Similasan',
+  'similasan-mark.png',
+);
+assertBrandTextTile('systane-ultra-pf', 'Systane', 'Systane');
+assertBrandMark(
+  'topcare-all-day-allergy-cetirizine',
+  'TopCare',
+  'topcare-mark.png',
+);
+assertBrandMark(
+  'topcare-allergy-congestion-loratadine-d',
+  'TopCare',
+  'topcare-mark.png',
+);
+assertBrandMark(
+  'topcare-allergy-relief-loratadine',
+  'TopCare',
+  'topcare-mark.png',
+);
+assertBrandMark(
+  'topcare-original-eye-drops',
+  'TopCare',
+  'topcare-mark.png',
+);
+assertExactCarton(
+  'now-stinging-nettle-root-extract-250-mg-90',
+  'NOW',
+  'now-stinging-nettle-root-extract-250-mg-90.jpg',
+);
+assertExactCarton(
+  'umcka-allergy-sinus-chewables',
+  "Nature's Way",
+  'umcka-allergy-sinus-chewables.jpg',
+);
+assertExactCarton(
+  'visine-red-eye-comfort',
+  'Visine',
+  'visine-red-eye-comfort.jpg',
+);
+assertExactCarton('theratears-pf', 'TheraTears', 'theratears-pf.jpg');
+assertBrandMark(
+  'upup-loratadine-tablets-plain',
+  'up&up',
+  'upup-mark.png',
+);
+assertBrandMark(
+  'upup-kids-cetirizine-bubblegum',
+  'up&up',
+  'upup-mark.png',
+);
+assertBrandMark('upup-kids-cetirizine-grape', 'up&up', 'upup-mark.png');
+assertBrandMark(
+  'upup-kids-loratadine-liquid',
+  'up&up',
+  'upup-mark.png',
+);
+assertBrandMark('upup-kids-dph-melts', 'up&up', 'upup-mark.png');
+assertBrandMark(
+  'upup-pm-lubricant-ointment',
+  'up&up',
+  'upup-mark.png',
+);
+assertBrandMark(
+  'walgreens-allergy-relief-cetirizine',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'walgreens-allergy-relief-loratadine',
+  'Walgreens',
+  'walgreens-mark.png',
+);
 assertExactCarton(
   'biofreeze-menthol-patches',
   'Biofreeze',
