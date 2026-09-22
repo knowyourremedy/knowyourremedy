@@ -4,7 +4,9 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
-**Changed Sept 21, 2026 (Spirulina — founder stamp):** Spirulina powder as OI / blend = Caution (Limited). Unspecified algae + contamination class. Same neighborhood as chlorella powder. Spirulina extract as OI / color in a multi = Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Reopens the old TopCare + NOW spirulina refuse. Those SKUs may be written on a later KYR6 pass only.
+**Changed Sept 22, 2026 (Nutricost batch76 clean tokens — founder stamp):** Caution — blue spirulina (for color); bare sugar; sodium caseinate; dextrin; starch sodium octenyl succinate; organic bamboo extract; unspecified starch; zinc oxide as OI. Cleared — beet root / beetroot powder (for color); Himalayan rock salt; pure olive oil as fill. Soybean oil stays the existing form split (gummy/lozenge Avoid; fill/cream Cleared). No grade change on that split.
+
+**Changed Sept 21, 2026 (Spirulina — founder stamp):** Spirulina powder as OI / blend = Caution (Limited). Unspecified algae + contamination class. Same neighborhood as chlorella powder. Spirulina extract as OI / color in a multi = Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Reopens the old TopCare + NOW spirulina refuse. Those SKUs may be written on a later KYR6 pass only. Blue spirulina (for color) is its own Caution row (Sept 22, 2026).
 
 **Changed Sept 21, 2026 (NOW leftover tokens — founder stamp; exact §4):** Caution (Limited) — Sodium coco-sulfate (same irritant class as SLS; not High); Fulvic acid as OI; Sorghum powder (unspecified grain powder; ≠ named hull); Chlorella powder (unspecified algae); Non-fat dry milk; Bare soy (lecithin stays Cleared); Bare wheat; Orange fruit juice powder as sweetener (≠ juice-as-color); Sustained-release caffeine as OI. Cleared (0) — Polyglyceryl-10 laurate; Flax seed oil as fill/OI (named oil fill; not gummy High; not oil-bottle grade); Cocoa powder (≠ cocoa butter; ≠ extract); Phytosterols from soy, highly refined; Taurine as OI; L-arginine as OI; Nicotinamide as OI; Cyanocobalamin as OI; Carob powder / powder-as-food (Carob Extract stays Caution). Spirulina powder + spirulina extract later locked Caution (see Sept 21 Spirulina stamp).
 
@@ -202,7 +204,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
 | Aspartame — **LOCKED** | E951, NutraSweet | IARC 2B (2023) + founder's strict-sweetener stance. Cite IARC and JECFA both; "agencies split" does not downgrade this. |
 | Seed/industrial oils (gummies / lozenges) | soybean, canola, palm, safflower, sunflower, "vegetable oil" | Clean-standard exclusion for gummy formulations. Lozenges / cough drops with soybean oil sit on this same High row (Sept 16, 2026 founder lock). Gummy print of safflower / sunflower / palm stays High. Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Tablet / capsule / softgel / drop fill of Organic Palm Oil, High Oleic Safflower Oil, safflower oil as softgel fill, Medium Chain Glycerides, or named Medium Chain Triglycerides (derived from palm kernel oil) is NOT this High rule (see Cleared; tap both sides). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
-| soybean oil in lozenges / cough drops — LOCKED (Sept 16, 2026) | soybean oil (lozenge / cough drop) | Exact form lock. Same High as gummy seed-oil. Avoid. Distinct from Cleared soybean oil as cream/ointment base and from Cleared softgel fill oils. |
+| soybean oil in lozenges / cough drops — LOCKED (Sept 16, 2026) | soybean oil (lozenge / cough drop) | Exact form lock. Same High as gummy seed-oil. Avoid. Distinct from Cleared soybean oil as cream/ointment base and from Cleared softgel fill oils. Restamp Sept 22, 2026 — no grade change: gummy/lozenge stays Avoid; fill/cream stays Cleared. |
 | Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. Exact restamp Sept 16, 2026 — no grade change: caramel color undisclosed class stays Avoid (existing 3-way split). |
 | Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
 | Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral / swallow OTC/vitamin/supplement/protein products. Topical talc in a cream/patch is Caution (form tap) — not this High swallow rule. |
@@ -249,7 +251,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Barley malt (syrup/sweetener) — LOCKED (Sept 15, 2026) | barley malt, barley malt syrup | Not Avoid. |
 | Allulose — LOCKED (Sept 15, 2026) | D-allulose, psicose, allulose | Novel sweetener; not Avoid. Exact string allulose restamped Sept 16, 2026. Same Limited row. |
 | Maltose — LOCKED (Sept 15, 2026) | malt sugar | With the sugars. |
-| Modified starch — LOCKED (Sept 15, 2026) | modified food starch, Organic Rice Starch, Non-GMO Maize Starch, Pea Starch | Unspecified starch. Organic Rice Starch, Non-GMO Maize Starch, and Pea Starch sit on this same Limited unspecified/modified-starch row (Sept 16, 2026). Distinct from Cleared named corn starch / potato starch / pregelatinized starch. |
+| Modified starch — LOCKED (Sept 15, 2026) | modified food starch, Organic Rice Starch, Non-GMO Maize Starch, Pea Starch | Unspecified modified-starch neighborhood. Organic Rice Starch, Non-GMO Maize Starch, and Pea Starch sit on this same Limited row (Sept 16, 2026). Distinct from Cleared named corn starch / potato starch / pregelatinized starch. Distinct from Caution unspecified starch (Sept 22, 2026 exact token). Do not flip this Limited row. |
 | Pea Starch — LOCKED (Sept 16, 2026) | pea starch | Exact token. Same Limited unspecified/modified-starch row. Distinct from Cleared pea protein isolate. |
 | unlabeled modified cellulose — LOCKED (Sept 16, 2026) | modified cellulose (unspecified) | Limited. Unspecified modified cellulose / starch neighborhood. Distinct from Cleared named MCC / HPMC / ethylcellulose / methylcellulose / HPC. Do not alias those named rows to this unlabeled string. |
 | Organic Rice Starch; Non-GMO Maize Starch — LOCKED (Sept 16, 2026) | organic rice starch, non-GMO maize starch | Exact tokens. Same Limited unspecified/modified-starch row. Distinct from Cleared named corn starch / potato starch / pregelatinized starch. |
@@ -263,7 +265,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Caprylyl glycol / hexanediol / sorbic acid — LOCKED (Sept 14, 2026) | caprylyl glycol, 1,2-hexanediol, sorbic acid | Limited preservative family. |
 | Maltodextrin (organic or non-organic) | organic maltodextrin | Glycemic; minor. Organic maltodextrin is the same Limited as non-organic. |
 | Polydextrose — **LOCKED (Sept 14, 2026 housekeeping)** | — | Limited (maltodextrin-like). Glycemic bulking fiber. |
-| Tapioca Dextrin; Tapioca Powder — LOCKED (Sept 16, 2026) | tapioca dextrin, tapioca powder | Limited (maltodextrin-like). Distinct from Cleared tapioca syrup / Organic Tapioca Fiber Powder / soluble tapioca fiber. |
+| Tapioca Dextrin; Tapioca Powder — LOCKED (Sept 16, 2026) | tapioca dextrin, tapioca powder | Limited (maltodextrin-like). Distinct from Cleared tapioca syrup / Organic Tapioca Fiber Powder / soluble tapioca fiber. Distinct from Caution bare dextrin (Sept 22, 2026). Do not flip this Limited row. |
 | Tapioca Dextrose / Organic Tapioca Dextrose — LOCKED (Sept 16, 2026) | tapioca dextrose, organic tapioca dextrose | Limited. Sugar / dextrin neighborhood. Distinct from Cleared tapioca syrup / cane sugar / tapioca syrup-dextrose sweetener row. |
 | Beet Sugar — LOCKED (Sept 16, 2026) | beet sugar | Sugar row. Limited. Not High. Distinct from Cleared cane sugar. |
 | Fructose as sweetener — **LOCKED (Sept 14, 2026 housekeeping)** | — | Treat with sugars. Not High. Not the parked HFCS case and not an Avoid sweetener. |
@@ -315,7 +317,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Calcium Hydroxide / Magnesium Hydroxide as pH adjuster — LOCKED (Sept 16, 2026) | Exact tokens as pH adjuster. Same job as NaOH. Cleared. Distinct from the aluminum-hydroxide antacid active-safety cap. |
 | Dimethicone / dimethicone copolyol — LOCKED (Sept 14, 2026) | Dimethicone copolyol is Cleared with dimethicone. |
 | Shea butter / coconut oil / sweet almond oil in cream or topical — LOCKED (Sept 15, 2026) | NOT the gummy seed-oil High rule. Form tap required: seed/industrial oils are flagged in gummies; in this cream/topical they are not that High rule. Sweet almond oil is the same cream form tap. |
-| Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. High Oleic Safflower Oil as fill/coating is its own Cleared fill row (Sept 16, 2026) — gummy print of safflower stays High. |
+| Safflower oil / soybean oil as CREAM or OINTMENT base — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. High Oleic Safflower Oil as fill/coating is its own Cleared fill row (Sept 16, 2026) — gummy print of safflower stays High. Soybean oil fill/cream stays Cleared (Sept 22, 2026 restamp — no grade change). Gummy/lozenge soybean oil stays Avoid. |
 | Linseed oil in lotion/cream fill — LOCKED (Sept 15, 2026) | Not gummy High. Tap form. |
 | Avocado oil as cream fill — LOCKED (Sept 15, 2026) | Named single oil as cream vehicle. Cleared. Not gummy High. Tap form. Do not Caution when it is the cream vehicle. |
 | Urea (topical) — LOCKED (Sept 15, 2026) | Topical humectant. |
@@ -340,7 +342,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | butylene glycol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | squalane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | oleyl alcohol — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
-| zinc oxide (inactive / topical) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Distinct from parked zinc-as-active. |
+| zinc oxide (inactive / topical) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive topical. Cleared. Distinct from parked zinc-as-active. Distinct from Caution zinc oxide as OI (Sept 22, 2026). Do not flip this topical row. |
 | glucosamine / glucosamine sulfate (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
 | MSM / methylsulfonylmethane (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
 | chondroitin sulfate (as labeled inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. |
@@ -384,7 +386,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | High Oleic Safflower Oil as fill/coating — LOCKED (Sept 16, 2026) | Exact token as fill / coating. Cleared. NOT gummy High. Tap both sides. Gummy print of safflower / sunflower / palm stays High. Distinct from safflower oil as cream/ointment base (already Cleared). |
 | safflower oil as softgel fill — LOCKED (Sept 16, 2026) | Exact token as softgel fill. Cleared. NOT gummy High. Tap both sides. Gummy print of safflower stays High. Distinct from High Oleic Safflower Oil as fill/coating and from safflower oil as cream/ointment base. |
 | Pea protein isolate — LOCKED (Sept 14, 2026) | Food protein excipient. Not a flag. Distinct from Caution Non-GMO corn zein (beadlets) — coating polymer, not this row. |
-| Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. |
+| Organic beet root (food / excipient / color-food) — LOCKED (Sept 14, 2026) | Whole-food. Not a synthetic dye. Beet root powder (for color) / beetroot powder (for color) sit on this same Cleared color row (Sept 22, 2026). Both strings written. |
 | Organic acerola — LOCKED (Sept 14, 2026) | Food fruit. |
 | Grape seed extract as inactive — LOCKED (Sept 14, 2026) | Named plant-part food botanical. Not grape seed oil unless the label says oil. Not a High row. |
 | Named food/botanical extracts as oral inactive (fennel seed, chamomile flower, calendula, lemon balm leaf, and like named plant-part food botanicals) — LOCKED (Sept 15, 2026) | Cleared-class food/botanical. Same class as grape seed extract. Not flavor-opacity. Not a High row. Do not Caution the product on these extracts alone. |
@@ -494,6 +496,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Nicotinamide as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. B3 as inactive. |
 | Cyanocobalamin as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. B12 as inactive. Same posture as Pyridoxine HCl / Cholecalciferol as inactive. |
 | Carob powder / powder-as-food — LOCKED (Sept 21, 2026) | Exact tokens when the panel says powder or powder-as-food. Cleared. Carob Extract stays Caution. Not auto-Cleared from the extract row. |
+| Beet root powder (for color) / beetroot powder (for color) — LOCKED (Sept 22, 2026) | Exact tokens as color. Same Cleared row as organic beet root / named plant color. Both strings written. Not a synthetic dye. |
+| Himalayan rock salt — LOCKED (Sept 22, 2026) | Exact token. Cleared. Salt / saline neighborhood with sodium chloride. Not a grade driver. |
+| Pure olive oil as fill — LOCKED (Sept 22, 2026) | Named oil as fill. Cleared. NOT gummy High. NOT oil-bottle grade. Tap fill ≠ gummy High. Distinct from parked bottle / cooking olive oil. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -669,6 +674,14 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | sodium pyruvate — LOCKED (Sept 16, 2026) | Exact token. Caution. | Standard alternatives rule. Not Avoid. |
 | Lithium Magnesium Sodium Silicate — LOCKED (Sept 17, 2026) | Exact token. Laponite-class clay thickener. Silicate neighborhood with calcium silicate / magnesium trisilicate. Not the SiO2 nanoparticle cap. Not kaolin (Cleared) and not calcined kaolin. | Standard alternatives rule. Not Avoid. |
 | Sodium Hypochlorite (Trace) — LOCKED (Sept 17, 2026) | Exact token. Residual oxidizer. Caution. FDA wound-wash allow ≠ Clean. Distinct from Cleared Electrolyzed Water (HOCl vehicle). | Standard alternatives rule. Not Avoid. |
+| Blue spirulina (for color) — LOCKED (Sept 22, 2026) | blue spirulina (for color) | Exact token as color. Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Distinct from Spirulina powder as OI / blend and from Spirulina extract as OI / color. | Standard alternatives rule. Not Avoid. |
+| Bare sugar — LOCKED (Sept 22, 2026) | sugar (bare / unspecified) | Exact token when the label prints bare sugar. Caution. Distinct from Cleared cane sugar and from Limited beet sugar / sucrose. | Standard alternatives rule. Not Avoid. |
+| Sodium caseinate — LOCKED (Sept 22, 2026) | sodium caseinate | Exact token. Caution. Milk-protein allergen neighborhood with non-fat dry milk. Not High. | Standard alternatives rule. Not Avoid. |
+| Dextrin — LOCKED (Sept 22, 2026) | dextrin (bare) | Exact token. Caution. Distinct from Limited tapioca dextrin / tapioca powder. Do not flip that Limited row. | Standard alternatives rule. Not Avoid. |
+| Starch sodium octenyl succinate — LOCKED (Sept 22, 2026) | starch sodium octenyl succinate, sodium starch octenyl succinate | Exact token. Caution. Modified-starch emulsifier. Distinct from Limited modified starch and from Cleared named corn / potato / pregelatinized starch. | Standard alternatives rule. Not Avoid. |
+| Organic bamboo extract — LOCKED (Sept 22, 2026) | organic bamboo extract | Exact token. Caution. Extract. Not a named-color pass. Distinct from Cleared rice hull / rice bran. | Standard alternatives rule. Not Avoid. |
+| Unspecified starch — LOCKED (Sept 22, 2026) | unspecified starch | Exact token. Caution. Distinct from Limited modified starch / modified food starch and from Cleared named corn starch / potato starch / pregelatinized starch. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
+| Zinc oxide as OI — LOCKED (Sept 22, 2026) | zinc oxide (Other Ingredient) | Exact token as Other Ingredient. Caution. Distinct from Cleared zinc oxide (inactive / topical). Distinct from parked zinc-as-active. Do not flip the topical row. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
@@ -687,7 +700,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |
 | Zinc (as a nutrient/active — gluconate, acetate, oxide, etc.) | This is an active ingredient (immune-support lozenges, topical zinc oxide), not an inactive additive. Does not belong in the §5 table. If graded, it follows the active-safety-cap process (§4) like colloidal silver and aluminum hydroxide — not yet done as of v1.6, does not block inactive-ingredient database work. |
 | Menthol, camphor, eucalyptol (topical rub actives) | Active ingredients already in live Clean Picks products (e.g., chest rubs). Not inactive-table candidates. Pending active-safety-cap review — camphor in particular warrants young-children attention when reviewed. Does not block inactive-ingredient database work. |
-| Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. Distinct from Cleared flax seed oil as fill/OI (Sept 21, 2026). |
+| Bottle / cooking oils (MCT oil bottles, olive oil, etc.) | Info-only. Never a Search grade. Record name+URL on a brand sweep; do not grade. oilInfoRecord page later. Distinct from Cleared flax seed oil as fill/OI (Sept 21, 2026) and from Cleared pure olive oil as fill (Sept 22, 2026). |
 
 ## 6. Posture
 
