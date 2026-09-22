@@ -685,6 +685,30 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'equate-lubricant-eye-bkc': 'Equate',
   'equate-lubricant-eye-pf': 'Equate',
   'equate-nighttime-lubricant-ointment': 'Equate',
+  // Attempted Allergies leftovers — night run 2026-09-22 12:30 PT batch 1.
+  // Kirkland: costco.com product URLs 404 from this environment. No
+  // standalone official Kirkland mark file. Do not stay letters.
+  'kirkland-aller-tec-cetirizine': 'Kirkland',
+  'kirkland-aller-tec-d-cetirizine-pse': 'Kirkland',
+  'kirkland-allerclear-loratadine-plain': 'Kirkland',
+  // Member's Mark: samsclub.com human-check wall. No standalone official
+  // mark file. Do not stay letters.
+  'members-mark-cetirizine-tablets': "Member's Mark",
+  'members-mark-loratadine-tablets': "Member's Mark",
+  // Nasacort: adult leftover spans 60 / 120 / twin UPCs. The live
+  // nasacort.com 60ct face is a badge composite, not a clean carton.
+  // Kids leftover barcode 041167580059 is the adult 120 spray, not the
+  // Children's Nasacort NDC 41167-5900 carton. Nav wordmark is white on
+  // transparent and would disappear on the tile. No colored mark file.
+  'nasacort-allergy-24hr': 'Nasacort',
+  'nasacort-allergy-24hr-kids': 'Nasacort',
+  // Refresh: refresheyedrops.com returned a bot wall. No standalone
+  // official Refresh mark file. Do not stay letters.
+  'refresh-pm-ointment': 'Refresh',
+  'refresh-tears-pf': 'Refresh',
+  // Rexall: dollargeneral.com PDP for UPC 370030659432 served the
+  // placeholder image, not a 3D carton. No standalone official mark.
+  'rexall-cetirizine-tablets': 'Rexall',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1858,6 +1882,27 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'genexa-kids-allergy-care': catalogShot('genexa-kids-allergy-care.jpg'),
   'ollois-histaminum-30c': catalogShot('ollois-histaminum-30c.jpg'),
+  // Allergies leftover night run 2026-09-22 12:30 PT batch 1 — official
+  // US 3D packshots. Per-id only so formulaId siblings do not inherit.
+  // Bromelain 240 shares formulaId now-quercetin-with-bromelain-120.
+  'hylands-seasonal-allergy-relief': catalogShot(
+    'hylands-seasonal-allergy-relief.jpg',
+  ),
+  'now-nac-quercetin-zinc-90': catalogShot('now-nac-quercetin-zinc-90.jpg'),
+  'neilmed-sinus-rinse': catalogShot('neilmed-sinus-rinse.jpg'),
+  'natures-way-nettle-leaf': catalogShot('natures-way-nettle-leaf.jpg'),
+  'pataday-once-daily': catalogShot('pataday-once-daily.jpg'),
+  'now-quercetin-phytosome-90': catalogShot(
+    'now-quercetin-phytosome-90.jpg',
+  ),
+  'now-quercetin-with-bromelain-120': catalogShot(
+    'now-quercetin-with-bromelain-120.jpg',
+  ),
+  'now-quercetin-with-bromelain-240': catalogShot(
+    'now-quercetin-with-bromelain-240.jpg',
+  ),
+  'now-quercetin-500-mg-100': catalogShot('now-quercetin-500-mg-100.jpg'),
+  'nasalcrom': catalogShot('nasalcrom.jpg'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -3064,6 +3109,91 @@ assertBrandTextTile(
   'Equate',
   'Equate',
 );
+assertBrandTextTile(
+  'kirkland-aller-tec-cetirizine',
+  'Kirkland Signature',
+  'Kirkland',
+);
+assertBrandTextTile(
+  'kirkland-aller-tec-d-cetirizine-pse',
+  'Kirkland Signature',
+  'Kirkland',
+);
+assertBrandTextTile(
+  'kirkland-allerclear-loratadine-plain',
+  'Kirkland Signature',
+  'Kirkland',
+);
+assertBrandTextTile(
+  'members-mark-cetirizine-tablets',
+  "Member's Mark",
+  "Member's Mark",
+);
+assertBrandTextTile(
+  'members-mark-loratadine-tablets',
+  "Member's Mark",
+  "Member's Mark",
+);
+assertBrandTextTile('nasacort-allergy-24hr', 'Nasacort', 'Nasacort');
+assertBrandTextTile('nasacort-allergy-24hr-kids', 'Nasacort', 'Nasacort');
+assertBrandTextTile('refresh-pm-ointment', 'Refresh', 'Refresh');
+assertBrandTextTile('refresh-tears-pf', 'Refresh', 'Refresh');
+assertBrandTextTile('rexall-cetirizine-tablets', 'Rexall', 'Rexall');
+assertExactCarton(
+  'hylands-seasonal-allergy-relief',
+  "Hyland's",
+  'hylands-seasonal-allergy-relief.jpg',
+);
+assertExactCarton(
+  'now-nac-quercetin-zinc-90',
+  'NOW',
+  'now-nac-quercetin-zinc-90.jpg',
+);
+assertExactCarton(
+  'neilmed-sinus-rinse',
+  'NeilMed',
+  'neilmed-sinus-rinse.jpg',
+);
+assertExactCarton(
+  'natures-way-nettle-leaf',
+  "Nature's Way",
+  'natures-way-nettle-leaf.jpg',
+);
+assertExactCarton('pataday-once-daily', 'Pataday', 'pataday-once-daily.jpg');
+assertExactCarton(
+  'now-quercetin-phytosome-90',
+  'NOW',
+  'now-quercetin-phytosome-90.jpg',
+);
+assertExactCarton(
+  'now-quercetin-with-bromelain-120',
+  'NOW',
+  'now-quercetin-with-bromelain-120.jpg',
+);
+assertExactCarton(
+  'now-quercetin-with-bromelain-240',
+  'NOW',
+  'now-quercetin-with-bromelain-240.jpg',
+);
+assertExactCarton(
+  'now-quercetin-500-mg-100',
+  'NOW',
+  'now-quercetin-500-mg-100.jpg',
+);
+assertExactCarton('nasalcrom', 'NasalCrom', 'nasalcrom.jpg');
+{
+  const bromelain240 = previewOverlayImage({
+    id: 'now-quercetin-with-bromelain-240',
+    formulaId: 'now-quercetin-with-bromelain-120',
+    brand: 'NOW',
+  });
+  if (
+    !bromelain240?.url.endsWith('/now-quercetin-with-bromelain-240.jpg') ||
+    !bromelain240.verifiedSku
+  ) {
+    throw new Error('bromelain 240 must not inherit the 120-count carton');
+  }
+}
 assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
