@@ -539,6 +539,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Per-id only.
   'equate-sleep-aid-softgels': brandMark('equate-mark.png'),
   'equate-sleep-aid-tablets-dyed': brandMark('equate-mark.png'),
+  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 2.
+  'equate-childrens-melatonin-liquid': brandMark('equate-mark.png'),
+  // Melatonin-SR leftover spans 30ct and 60ct UPCs. Official faces are
+  // count-specific. Pure Encapsulations mark already on disk. Per-id only.
+  'pure-encapsulations-melatonin-sr-3mg': brandMark(
+    'pure-encapsulations-mark.png',
+  ),
+  // DG Health Sleep leftovers — upcitemdb returned no usable 3D pack.
+  // Official DG Health mark already on disk. Per-id only.
+  'dg-health-pain-relief-pm': brandMark('dg-health-mark.png'),
+  'dg-health-sleep-aid-dph': brandMark('dg-health-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -782,6 +793,16 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // CVS Health Sleep liquid — cvs.com / upcitemdb returned no retrievable
   // 3D pack for UPC 050428438015. No standalone CVS Health mark file.
   'cvs-sleep-aid-liquid-dyed': 'CVS Health',
+  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 2.
+  // Dye-free CVS Sleep liquid — upcitemdb title only, no image.
+  'cvs-sleep-aid-liquid-dyefree': 'CVS Health',
+  // OLLY Kids Sleep coconut-only oil listing — no barcode; draft name is
+  // an oil-listing split, not a shoppable pack face. Do not glue the
+  // canola SKU carton. No standalone OLLY mark file.
+  'olly-kids-sleep-coconut-only': 'OLLY',
+  // Assured Headache PM — no barcode on the draft row; no retrievable
+  // exact US 3D pack. No standalone Assured mark file.
+  'assured-headache-pm': 'Assured',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -2030,6 +2051,62 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'upup-sleep-aid-liquid-dyed': catalogShot(
     'upup-sleep-aid-liquid-dyed.jpg',
   ),
+  // Sleep leftover night run 2026-09-22 5:30 PT batch 2 — official US
+  // 3D packshots / exact-SKU store faces. Per-id only.
+  // Hyland's Sleep 100 quick-dissolving tablets, UPC 354973320611
+  // (not on live hylands.com catalog; Walmart ASR pack).
+  'hylands-sleep': catalogShot('hylands-sleep.jpg'),
+  // Hyland's Rest 50 quick-dissolving tablets, UPC 354973333215.
+  'hylands-rest': catalogShot('hylands-rest.jpg'),
+  // Hyland's 4 Kids Calm 'n Restful 125 tablets, UPC 354973316119
+  // (Target scene7).
+  'hylands-4kids-calm-restful': catalogShot(
+    'hylands-4kids-calm-restful.jpg',
+  ),
+  // Boiron SleepCalm Kids Meltaway Pellets, UPC 306969308424
+  // (boironusa.com official).
+  'boiron-sleepcalm-kids-pellets': catalogShot(
+    'boiron-sleepcalm-kids-pellets.jpg',
+  ),
+  // Genexa Kids' Sleepology 60 chewables, UPC 857630006199
+  // (genexa.com official).
+  'genexa-kids-sleepology': catalogShot('genexa-kids-sleepology.jpg'),
+  // Boiron SleepCalm Kids Liquid Doses 15ct, UPC 306969309094
+  // (boironusa.com official).
+  'boiron-sleepcalm-kids-liquid': catalogShot(
+    'boiron-sleepcalm-kids-liquid.jpg',
+  ),
+  // Natrol Kids Melatonin 1 mg gummies 90ct, UPC 047469075309
+  // (Target scene7).
+  'natrol-kids-melatonin-gummies': catalogShot(
+    'natrol-kids-melatonin-gummies.jpg',
+  ),
+  // Zarbee's Children's Sleep liquid with melatonin 1 fl oz,
+  // UPC 858438005711 (Target scene7).
+  'zarbees-kids-sleep-liquid': catalogShot(
+    'zarbees-kids-sleep-liquid.jpg',
+  ),
+  // Zarbee's Children's Sleep melatonin gummies 50ct,
+  // UPC 858438005438.
+  'zarbees-kids-sleep-gummies': catalogShot(
+    'zarbees-kids-sleep-gummies.jpg',
+  ),
+  // OLLY Kids Sleep (coconut + canola) 50ct, UPC 850004462065.
+  'olly-kids-sleep-canola': catalogShot('olly-kids-sleep-canola.jpg'),
+  // Thorne Melaton-3 60 capsules, UPC 693749788027 (thorne.com).
+  'thorne-melaton-3': catalogShot('thorne-melaton-3.jpg'),
+  // Thorne Melaton-5 60 capsules, UPC 693749780021 (thorne.com).
+  'thorne-melaton-5': catalogShot('thorne-melaton-5.jpg'),
+  // Amazon Elements Melatonin 5 mg 195 capsules, UPC 842379103650.
+  'amazon-elements-melatonin-5': catalogShot(
+    'amazon-elements-melatonin-5.jpg',
+  ),
+  // Batch 1 formulaId inheritance fix — DG Health / Amazon Basics
+  // doxylamine share formulaId `upup-doxylamine-sleeptabs`. Per-id
+  // mark overlay must win so they do not inherit the up&up carton.
+  // Not verifiedSku.
+  'dg-health-sleep-aid-doxylamine': brandMark('dg-health-mark.png'),
+  'amazon-basics-doxylamine': brandMark('amazon-basics-mark.png'),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -3424,6 +3501,55 @@ assertExactCarton(
   'up&up',
   'upup-sleep-aid-liquid-dyed.jpg',
 );
+assertExactCarton('hylands-sleep', "Hyland's", 'hylands-sleep.jpg');
+assertExactCarton('hylands-rest', "Hyland's", 'hylands-rest.jpg');
+assertExactCarton(
+  'hylands-4kids-calm-restful',
+  "Hyland's",
+  'hylands-4kids-calm-restful.jpg',
+);
+assertExactCarton(
+  'boiron-sleepcalm-kids-pellets',
+  'Boiron',
+  'boiron-sleepcalm-kids-pellets.jpg',
+);
+assertExactCarton(
+  'genexa-kids-sleepology',
+  'Genexa',
+  'genexa-kids-sleepology.jpg',
+);
+assertExactCarton(
+  'boiron-sleepcalm-kids-liquid',
+  'Boiron',
+  'boiron-sleepcalm-kids-liquid.jpg',
+);
+assertExactCarton(
+  'natrol-kids-melatonin-gummies',
+  'Natrol',
+  'natrol-kids-melatonin-gummies.jpg',
+);
+assertExactCarton(
+  'zarbees-kids-sleep-liquid',
+  "Zarbee's",
+  'zarbees-kids-sleep-liquid.jpg',
+);
+assertExactCarton(
+  'zarbees-kids-sleep-gummies',
+  "Zarbee's",
+  'zarbees-kids-sleep-gummies.jpg',
+);
+assertExactCarton(
+  'olly-kids-sleep-canola',
+  'OLLY',
+  'olly-kids-sleep-canola.jpg',
+);
+assertExactCarton('thorne-melaton-3', 'Thorne', 'thorne-melaton-3.jpg');
+assertExactCarton('thorne-melaton-5', 'Thorne', 'thorne-melaton-5.jpg');
+assertExactCarton(
+  'amazon-elements-melatonin-5',
+  'Amazon Elements',
+  'amazon-elements-melatonin-5.jpg',
+);
 {
   const decongestant = previewOverlayImage({
     id: 'xlear-nasal-spray-bkc',
@@ -3488,6 +3614,71 @@ assertBrandTextTile(
   'CVS Health',
   'CVS Health',
 );
+assertBrandTextTile(
+  'cvs-sleep-aid-liquid-dyefree',
+  'CVS Health',
+  'CVS Health',
+);
+assertBrandTextTile('olly-kids-sleep-coconut-only', 'OLLY', 'OLLY');
+assertBrandTextTile('assured-headache-pm', 'Assured', 'Assured');
+assertBrandMark(
+  'equate-childrens-melatonin-liquid',
+  'Equate',
+  'equate-mark.png',
+);
+assertBrandMark(
+  'pure-encapsulations-melatonin-sr-3mg',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'dg-health-pain-relief-pm',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'dg-health-sleep-aid-dph',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'dg-health-sleep-aid-doxylamine',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-doxylamine',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+{
+  const dgDox = previewOverlayImage({
+    id: 'dg-health-sleep-aid-doxylamine',
+    formulaId: 'upup-doxylamine-sleeptabs',
+    brand: 'DG Health',
+  });
+  if (
+    !dgDox?.url.endsWith('/dg-health-mark.png') ||
+    dgDox.verifiedSku
+  ) {
+    throw new Error(
+      'DG Health doxylamine must not inherit the up&up carton',
+    );
+  }
+  const basicsDox = previewOverlayImage({
+    id: 'amazon-basics-doxylamine',
+    formulaId: 'upup-doxylamine-sleeptabs',
+    brand: 'Amazon Basics',
+  });
+  if (
+    !basicsDox?.url.endsWith('/amazon-basics-mark.png') ||
+    basicsDox.verifiedSku
+  ) {
+    throw new Error(
+      'Amazon Basics doxylamine must not inherit the up&up carton',
+    );
+  }
+}
 assertBrandMark(
   'upup-loratadine-tablets-plain',
   'up&up',
