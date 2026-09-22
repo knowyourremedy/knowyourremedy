@@ -527,6 +527,18 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // formulaId `zyrtec-allergy-tablets-tio2` siblings do not inherit.
   'zyrtec-allergy-liquid-gels': brandMark('zyrtec-mark.png'),
   'zyrtec-allergy-tablets': brandMark('zyrtec-mark.png'),
+  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 1.
+  // Tylenol PM / Advil PM leftovers span multiple count UPCs. Official
+  // faces are count-specific. Do not glue one count. Marks already on
+  // disk. Per-id only.
+  'tylenol-pm-es': brandMark('tylenol-mark.png'),
+  'advil-pm-liquigels': brandMark('advil-mark.png'),
+  'advil-pm-caplets': brandMark('advil-mark.png'),
+  // Equate Sleep leftovers — walmart.com / upcitemdb returned no live
+  // 3D pack for these UPCs. Official Equate mark already on disk.
+  // Per-id only.
+  'equate-sleep-aid-softgels': brandMark('equate-mark.png'),
+  'equate-sleep-aid-tablets-dyed': brandMark('equate-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -754,6 +766,22 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // carton. Do not glue the 10 mL face. No standalone official Zaditor
   // mark file (Systane parent mark is not this product name).
   'zaditor': 'Zaditor',
+  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 1.
+  // Unisom SleepTabs leftover spans 16 / 32 / larger count UPCs. Official
+  // unisom.com hero is the 16ct face only. Do not glue one count. No
+  // standalone Unisom mark file.
+  'unisom-sleeptabs-doxylamine': 'Unisom',
+  // ZzzQuil LiquiCaps leftover spans 12 / 24 / 48 count UPCs. Official
+  // zzzquil.com hero is count-generic branding but live pack faces are
+  // count-specific. Do not glue one count. No standalone ZzzQuil mark.
+  'zzzquil-liquicaps': 'ZzzQuil',
+  // FREE OF Artificial Dyes leftover UPC 323900033856 is not the live
+  // zzzquil.com Alcohol Free / Free-Of hero (UPC 323900038561). Do not
+  // glue the Alcohol Free bottle. No standalone ZzzQuil mark file.
+  'zzzquil-free-of-artificial': 'ZzzQuil',
+  // CVS Health Sleep liquid — cvs.com / upcitemdb returned no retrievable
+  // 3D pack for UPC 050428438015. No standalone CVS Health mark file.
+  'cvs-sleep-aid-liquid-dyed': 'CVS Health',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1969,6 +1997,38 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // grapefruit seed extract). Not the 0.75 oz squeeze bottle.
   'xlear-nasal-spray-no-bkc': catalogShot(
     'xlear-nasal-spray-no-bkc.jpg',
+  ),
+  // Sleep leftover night run 2026-09-22 5:30 PT batch 1 — official US
+  // 3D packshots / exact-SKU store faces. Per-id only.
+  // Hyland's Calms Forté 100ct, UPC 354973325722 (hylands.com).
+  'hylands-calms-forte': catalogShot('hylands-calms-forte.jpg'),
+  // Genexa Acetaminophen PM Extra Strength 100ct, UPC 850015736148
+  // (Walmart ASR pack; not on live genexa.com catalog).
+  'genexa-acetaminophen-pm': catalogShot('genexa-acetaminophen-pm.jpg'),
+  // Unisom SleepMelts cherry 24ct, UPC 041167001400.
+  'unisom-sleepmelts': catalogShot('unisom-sleepmelts.jpg'),
+  // Unisom SleepMinis 60 mini-capsules, UPC 041167006702.
+  'unisom-sleepminis': catalogShot('unisom-sleepminis.jpg'),
+  // Unisom PM Pain 30 caplets, UPC 041167004043.
+  'unisom-pm-pain': catalogShot('unisom-pm-pain.jpg'),
+  // ZzzQuil Calming Vanilla Cherry 12 fl oz, UPC 323900038585
+  // (zzzquil.com official hero).
+  'zzzquil-liquid-dyed': catalogShot('zzzquil-liquid-dyed.jpg'),
+  // ZzzQuil Soothing Sleep Chamomile Honey 12 fl oz, UPC 323900033146
+  // (zzzquil.com UPC-named asset).
+  'zzzquil-soothing-honey': catalogShot('zzzquil-soothing-honey.jpg'),
+  // Simply Sleep 100 caplets, UPC 300450843104.
+  'simply-sleep': catalogShot('simply-sleep.jpg'),
+  // Sominex Original 72 tablets, UPC 042037103576.
+  'sominex': catalogShot('sominex.jpg'),
+  // up&up Doxylamine 25 mg 96ct, UPC 370030014965 (Target scene7).
+  'upup-doxylamine-sleeptabs': catalogShot(
+    'upup-doxylamine-sleeptabs.jpg',
+  ),
+  // up&up Nighttime Sleep Aid Liquid berry 12 fl oz, UPC 370030275809
+  // (Target scene7).
+  'upup-sleep-aid-liquid-dyed': catalogShot(
+    'upup-sleep-aid-liquid-dyed.jpg',
   ),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
@@ -3265,8 +3325,7 @@ assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 // Unattempted other-aisle rows stay letters. Marks are per-id only.
-assertLetterOnly('tylenol-pm-es', 'Tylenol');
-assertLetterOnly('advil-pm-liquigels', 'Advil');
+// tylenol-pm-es / advil-pm-liquigels attempted in Sleep night batch 1
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertBrandMark(
   'signature-care-loratadine-mint-odt',
@@ -3330,6 +3389,41 @@ assertExactCarton(
   'Xlear',
   'xlear-nasal-spray-no-bkc.jpg',
 );
+assertExactCarton(
+  'hylands-calms-forte',
+  "Hyland's",
+  'hylands-calms-forte.jpg',
+);
+assertExactCarton(
+  'genexa-acetaminophen-pm',
+  'Genexa',
+  'genexa-acetaminophen-pm.jpg',
+);
+assertExactCarton('unisom-sleepmelts', 'Unisom', 'unisom-sleepmelts.jpg');
+assertExactCarton('unisom-sleepminis', 'Unisom', 'unisom-sleepminis.jpg');
+assertExactCarton('unisom-pm-pain', 'Unisom', 'unisom-pm-pain.jpg');
+assertExactCarton(
+  'zzzquil-liquid-dyed',
+  'ZzzQuil',
+  'zzzquil-liquid-dyed.jpg',
+);
+assertExactCarton(
+  'zzzquil-soothing-honey',
+  'ZzzQuil',
+  'zzzquil-soothing-honey.jpg',
+);
+assertExactCarton('simply-sleep', 'Simply Sleep', 'simply-sleep.jpg');
+assertExactCarton('sominex', 'Sominex', 'sominex.jpg');
+assertExactCarton(
+  'upup-doxylamine-sleeptabs',
+  'up&up',
+  'upup-doxylamine-sleeptabs.jpg',
+);
+assertExactCarton(
+  'upup-sleep-aid-liquid-dyed',
+  'up&up',
+  'upup-sleep-aid-liquid-dyed.jpg',
+);
 {
   const decongestant = previewOverlayImage({
     id: 'xlear-nasal-spray-bkc',
@@ -3369,6 +3463,31 @@ assertBrandMark('zyrtec-allergy-tablets', 'Zyrtec', 'zyrtec-mark.png');
   }
 }
 assertBrandTextTile('zaditor', 'Zaditor', 'Zaditor');
+assertBrandMark('tylenol-pm-es', 'Tylenol', 'tylenol-mark.png');
+assertBrandMark('advil-pm-liquigels', 'Advil', 'advil-mark.png');
+assertBrandMark('advil-pm-caplets', 'Advil', 'advil-mark.png');
+assertBrandMark('equate-sleep-aid-softgels', 'Equate', 'equate-mark.png');
+assertBrandMark(
+  'equate-sleep-aid-tablets-dyed',
+  'Equate',
+  'equate-mark.png',
+);
+assertBrandTextTile(
+  'unisom-sleeptabs-doxylamine',
+  'Unisom',
+  'Unisom',
+);
+assertBrandTextTile('zzzquil-liquicaps', 'ZzzQuil', 'ZzzQuil');
+assertBrandTextTile(
+  'zzzquil-free-of-artificial',
+  'ZzzQuil',
+  'ZzzQuil',
+);
+assertBrandTextTile(
+  'cvs-sleep-aid-liquid-dyed',
+  'CVS Health',
+  'CVS Health',
+);
 assertBrandMark(
   'upup-loratadine-tablets-plain',
   'up&up',
