@@ -513,6 +513,20 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'upup-pm-lubricant-ointment': brandMark('upup-mark.png'),
   'walgreens-allergy-relief-cetirizine': brandMark('walgreens-mark.png'),
   'walgreens-allergy-relief-loratadine': brandMark('walgreens-mark.png'),
+  // Attempted Allergies leftover — night run 2026-09-22 3:00 PT.
+  // NDC 0363-7274 (setid 6bb68dc4) DailyMed face is a 2D label flat,
+  // not a 3D pack. walgreens.com has no live house-brand PDP for this
+  // ointment. Do not glue Refresh / Systane. Official Walgreens mark
+  // already on disk. Per-id only so formulaId
+  // `store-pm-ointment-lanolin-alcohol` siblings stay on their own tiles.
+  'walgreens-pm-lubricant-ointment': brandMark('walgreens-mark.png'),
+  // Zyrtec leftovers span multiple count UPCs. Official zyrtec.com
+  // faces are count-specific (40ct liquid gels / 30ct and 60ct tablets).
+  // 30ct tablet face also carries a New Look badge. Do not glue one
+  // count. Official 2025 mark from zyrtec.com. Per-id only so
+  // formulaId `zyrtec-allergy-tablets-tio2` siblings do not inherit.
+  'zyrtec-allergy-liquid-gels': brandMark('zyrtec-mark.png'),
+  'zyrtec-allergy-tablets': brandMark('zyrtec-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -734,6 +748,12 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Systane Ultra PF leftover lists both single-use vials and a PF bottle
   // twin. Do not glue one carton. No standalone official Systane mark file.
   'systane-ultra-pf': 'Systane',
+  // Attempted Allergies leftover — night run 2026-09-22 3:00 PT.
+  // zaditor.com redirects to systane.myalcon.com. Live hero is a 10 mL
+  // carton+vial composite. Row UPC 300654011057 is the 5 mL / 0.17 fl oz
+  // carton. Do not glue the 10 mL face. No standalone official Zaditor
+  // mark file (Systane parent mark is not this product name).
+  'zaditor': 'Zaditor',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -1938,6 +1958,18 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'visine-red-eye-comfort': catalogShot('visine-red-eye-comfort.jpg'),
   'theratears-pf': catalogShot('theratears-pf.jpg'),
+  // Allergies leftover night run 2026-09-22 3:00 PT — official US 3D
+  // packshots from xlear.com. Per-id only so the two Xlear formulaIds
+  // do not inherit each other.
+  // Decongestant: 12-hour oxymetazoline 0.5 fl oz, UPC 700596000209.
+  // Not the drug-free saline.
+  'xlear-nasal-spray-bkc': catalogShot('xlear-nasal-spray-bkc.jpg'),
+  // Saline + xylitol 1.5 fl oz metered mist, UPC 700596000001.
+  // Four-ingredient label (water, xylitol, USP sodium chloride,
+  // grapefruit seed extract). Not the 0.75 oz squeeze bottle.
+  'xlear-nasal-spray-no-bkc': catalogShot(
+    'xlear-nasal-spray-no-bkc.jpg',
+  ),
   // Pain & Fever daytime photo run — exact US 3D packshots.
   // Letter-queue upgrades (20).
   'aleve-arthritis-pain-gel': catalogShot('aleve-arthritis-pain-gel.jpg'),
@@ -3288,6 +3320,55 @@ assertExactCarton(
   'visine-red-eye-comfort.jpg',
 );
 assertExactCarton('theratears-pf', 'TheraTears', 'theratears-pf.jpg');
+assertExactCarton(
+  'xlear-nasal-spray-bkc',
+  'Xlear',
+  'xlear-nasal-spray-bkc.jpg',
+);
+assertExactCarton(
+  'xlear-nasal-spray-no-bkc',
+  'Xlear',
+  'xlear-nasal-spray-no-bkc.jpg',
+);
+{
+  const decongestant = previewOverlayImage({
+    id: 'xlear-nasal-spray-bkc',
+    formulaId: 'xlear-nasal-spray-bkc',
+    brand: 'Xlear',
+  });
+  const saline = previewOverlayImage({
+    id: 'xlear-nasal-spray-no-bkc',
+    formulaId: 'xlear-nasal-spray-no-bkc',
+    brand: 'Xlear',
+  });
+  if (decongestant?.url === saline?.url) {
+    throw new Error('Xlear decongestant must not share the saline carton');
+  }
+}
+assertBrandMark(
+  'walgreens-pm-lubricant-ointment',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertBrandMark(
+  'zyrtec-allergy-liquid-gels',
+  'Zyrtec',
+  'zyrtec-mark.png',
+);
+assertBrandMark('zyrtec-allergy-tablets', 'Zyrtec', 'zyrtec-mark.png');
+{
+  const familyCet = previewOverlayImage({
+    id: 'family-wellness-cetirizine-tablets',
+    formulaId: 'zyrtec-allergy-tablets-tio2',
+    brand: 'Family Wellness',
+  });
+  if (familyCet?.url.endsWith('/zyrtec-mark.png')) {
+    throw new Error(
+      'Family Wellness cetirizine must not inherit the Zyrtec mark',
+    );
+  }
+}
+assertBrandTextTile('zaditor', 'Zaditor', 'Zaditor');
 assertBrandMark(
   'upup-loratadine-tablets-plain',
   'up&up',
