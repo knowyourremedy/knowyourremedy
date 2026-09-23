@@ -609,11 +609,11 @@ if (mgPure?.verdict !== 'clean') {
 if (mgPure.inactiveIngredients.some((i) => /rice flour|silicon dioxide|silica/i.test(i.name))) {
   throw new Error('do not import the rice-flour Mg twin onto the gelatin-only row');
 }
-if (mgPure.barcode !== '850056167857') {
-  throw new Error('pure Mg 240 must use Target UPC-A 850056167857');
-}
 if (mgPure.barcode === '850069023881') {
   throw new Error('do not attach the rice-flour Mg twin UPC');
+}
+if (mgPure.barcode !== '850056167857') {
+  throw new Error('pure Mg 240 must use Target UPC-A 850056167857');
 }
 
 const fo240 = _ROWS.find((r) => r.id === FO_LEMON);
