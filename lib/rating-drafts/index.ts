@@ -78,3 +78,4 @@ export { BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL } from './batch77-kyr6-nutricost-
 export { BATCH78_KYR6_NUTRICOST_TOKEN_BACKFILL_2 } from './batch78-kyr6-nutricost-token-backfill-2';
 export { BATCH79_KYR6_NUTRICOST_NO_OI } from './batch79-kyr6-nutricost-no-oi';
 export { BATCH80_KYR6_NUTRICOST_79_REFUSE } from './batch80-kyr6-nutricost-79-refuse';
+export { BATCH81_KYR6_NUTRICOST_UBIQUINOL_240 } from './batch81-kyr6-nutricost-ubiquinol-240';
