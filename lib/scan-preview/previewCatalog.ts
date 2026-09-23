@@ -2447,6 +2447,76 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-milk-thistle-extract-with-turmeric-60': catalogShot(
     'now-milk-thistle-extract-with-turmeric-60.jpg',
   ),
+  // Pain & Fever leftover night run 2026-09-23 3:00 PT batch 2.
+  // Next 20 letter tiles after batch 1. Per-id only so a shared
+  // formulaId does not inherit the wrong count.
+  // SAMe 200 mg, 60 veg capsules, UPC 733739001276.
+  'now-same-200-mg-60': catalogShot('now-same-200-mg-60.jpg'),
+  // Advanced UC-II Joint Relief, 60 capsules, UPC 733739031372.
+  'now-advanced-uc-ii-joint-relief-60': catalogShot(
+    'now-advanced-uc-ii-joint-relief-60.jpg',
+  ),
+  // Glucosamine Sulfate 750 mg, 240 capsules, UPC 733739032386.
+  // Not the 120-count bottle.
+  'now-glucosamine-sulfate-240': catalogShot('now-glucosamine-sulfate-240.jpg'),
+  // Glucosamine '1000', 180 capsules, UPC 733739032393.
+  // Not the 60-count bottle.
+  'now-glucosamine-1000-180': catalogShot('now-glucosamine-1000-180.jpg'),
+  // Vegetarian Glucosamine '1000', 90 veg capsules, UPC 733739031327.
+  'now-vegetarian-glucosamine-1000-90': catalogShot(
+    'now-vegetarian-glucosamine-1000-90.jpg',
+  ),
+  // Hyaluronic Acid with MSM, 60 veg capsules, UPC 733739031563.
+  'now-hyaluronic-acid-with-msm-60': catalogShot(
+    'now-hyaluronic-acid-with-msm-60.jpg',
+  ),
+  // Shark Cartilage 750 mg, 100 capsules, UPC 733739032706.
+  // Not the 300-count bottle.
+  'now-shark-cartilage-100': catalogShot('now-shark-cartilage-100.jpg'),
+  // Cal-Mag DK, 180 capsules, UPC 733739012678.
+  'now-cal-mag-dk-180': catalogShot('now-cal-mag-dk-180.jpg'),
+  // Glucosamine & Chondroitin, 120 veg capsules, UPC 733739032287.
+  // Not the 240-count bottle and not the tablet SKU.
+  'now-glucosamine-chondroitin-120': catalogShot(
+    'now-glucosamine-chondroitin-120.jpg',
+  ),
+  // Glucosamine & Chondroitin, 240 capsules, UPC 733739032294.
+  'now-glucosamine-chondroitin-240': catalogShot(
+    'now-glucosamine-chondroitin-240.jpg',
+  ),
+  // SAMe 200 mg, 120 veg capsules, UPC 733739001283.
+  // Not the 60-count bottle.
+  'now-same-200-mg-120': catalogShot('now-same-200-mg-120.jpg'),
+  // Turmeric Curcumin 665 mg, 60 veg capsules, UPC 733739046383.
+  // Not the 120-count bottle.
+  'now-turmeric-curcumin-60': catalogShot('now-turmeric-curcumin-60.jpg'),
+  // Glucosamine & MSM, 60 veg capsules, UPC 733739032782.
+  // Not the 180-count bottle.
+  'now-glucosamine-msm-60': catalogShot('now-glucosamine-msm-60.jpg'),
+  // Certified Organic Turmeric Extract, 2 fl oz, UPC 733739048233.
+  'now-certified-organic-turmeric-extract-2-fl-oz-59-ml': catalogShot(
+    'now-certified-organic-turmeric-extract-2-fl-oz-59-ml.jpg',
+  ),
+  // Sports Advanced Joint Support, 60 capsules, UPC 733739022776.
+  'now-sports-advanced-joint-support-60': catalogShot(
+    'now-sports-advanced-joint-support-60.jpg',
+  ),
+  // Glucosamine Sulfate 750 mg, 120 capsules, UPC 733739032355.
+  'now-glucosamine-sulfate-120': catalogShot('now-glucosamine-sulfate-120.jpg'),
+  // Glucosamine & Chondroitin extra strength, 60 tablets, UPC 733739032423.
+  // Not the veg-capsule bottles.
+  'now-glucosamine-chondroitin-60': catalogShot(
+    'now-glucosamine-chondroitin-60.jpg',
+  ),
+  // Celadrin & MSM, 120 capsules, UPC 733739030160.
+  'now-celadrin-msm-120': catalogShot('now-celadrin-msm-120.jpg'),
+  // Joint Support, 90 capsules, UPC 733739032904.
+  'now-joint-support-90': catalogShot('now-joint-support-90.jpg'),
+  // Turmeric Curcumin Gels 475 mg, 120 softgels, UPC 733739049391.
+  // Not the 60-softgel bottle.
+  'now-turmeric-curcumin-gels-475-mg-120': catalogShot(
+    'now-turmeric-curcumin-gels-475-mg-120.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -4055,6 +4125,86 @@ assertExactCarton(
   'now-milk-thistle-extract-with-turmeric-60',
   'NOW',
   'now-milk-thistle-extract-with-turmeric-60.jpg',
+);
+assertExactCarton('now-same-200-mg-60', 'NOW', 'now-same-200-mg-60.jpg');
+assertExactCarton(
+  'now-advanced-uc-ii-joint-relief-60',
+  'NOW',
+  'now-advanced-uc-ii-joint-relief-60.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-sulfate-240',
+  'NOW',
+  'now-glucosamine-sulfate-240.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-1000-180',
+  'NOW',
+  'now-glucosamine-1000-180.jpg',
+);
+assertExactCarton(
+  'now-vegetarian-glucosamine-1000-90',
+  'NOW',
+  'now-vegetarian-glucosamine-1000-90.jpg',
+);
+assertExactCarton(
+  'now-hyaluronic-acid-with-msm-60',
+  'NOW',
+  'now-hyaluronic-acid-with-msm-60.jpg',
+);
+assertExactCarton(
+  'now-shark-cartilage-100',
+  'NOW',
+  'now-shark-cartilage-100.jpg',
+);
+assertExactCarton('now-cal-mag-dk-180', 'NOW', 'now-cal-mag-dk-180.jpg');
+assertExactCarton(
+  'now-glucosamine-chondroitin-120',
+  'NOW',
+  'now-glucosamine-chondroitin-120.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-chondroitin-240',
+  'NOW',
+  'now-glucosamine-chondroitin-240.jpg',
+);
+assertExactCarton('now-same-200-mg-120', 'NOW', 'now-same-200-mg-120.jpg');
+assertExactCarton(
+  'now-turmeric-curcumin-60',
+  'NOW',
+  'now-turmeric-curcumin-60.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-msm-60',
+  'NOW',
+  'now-glucosamine-msm-60.jpg',
+);
+assertExactCarton(
+  'now-certified-organic-turmeric-extract-2-fl-oz-59-ml',
+  'NOW',
+  'now-certified-organic-turmeric-extract-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-sports-advanced-joint-support-60',
+  'NOW',
+  'now-sports-advanced-joint-support-60.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-sulfate-120',
+  'NOW',
+  'now-glucosamine-sulfate-120.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-chondroitin-60',
+  'NOW',
+  'now-glucosamine-chondroitin-60.jpg',
+);
+assertExactCarton('now-celadrin-msm-120', 'NOW', 'now-celadrin-msm-120.jpg');
+assertExactCarton('now-joint-support-90', 'NOW', 'now-joint-support-90.jpg');
+assertExactCarton(
+  'now-turmeric-curcumin-gels-475-mg-120',
+  'NOW',
+  'now-turmeric-curcumin-gels-475-mg-120.jpg',
 );
 {
   const decongestant = previewOverlayImage({
