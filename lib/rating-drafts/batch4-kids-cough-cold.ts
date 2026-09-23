@@ -1478,6 +1478,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     productName: "Children's Dimetapp Nighttime Cold & Cough",
     brand: 'Dimetapp',
     category: COLD_FLU,
+    // KYR5-d — DailyMed carton image setid 179115ad (nighttime-01.jpg),
+    // zbar UPC-A. Diphenhydramine-only nighttime liquid. Not the
+    // phenylephrine congestion twin (setid 96a1055f).
+    barcode: '850026660029',
     formulaId: 'dimetapp-night-cold-cough',
     audience: KIDS,
     minAge: 6,

@@ -266,6 +266,9 @@ const EYE_PF_ALTS: CleanAlternative[] = [
 
 export const BATCH68_CATCHUP_BARCODES: Record<string, string> = {
   [KIRK_WILD_FO]: '096619653539',
+  // KYR5-d — DailyMed carton image setid e92a258b (575.jpg), zbar UPC-A.
+  // Mineral oil 42.5% + white petrolatum 57.3% + lanolin alcohol.
+  [UPUP_PM]: '780707005750',
 };
 
 export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
@@ -452,6 +455,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
     productName: 'up&up Nighttime Relief Lubricant Eye Ointment',
     brand: 'up&up',
     category: ALLERGY,
+    barcode: BATCH68_CATCHUP_BARCODES[UPUP_PM],
     formulaId: STORE_PM_LANOLIN,
     audience: ADULT,
     minAge: 2,
@@ -467,7 +471,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
     ],
     verdict: 'caution',
     honestNote:
-      'FOUNDER-LOCK DRAFT: up&up Nighttime Relief lubricant eye ointment = Caution (lanolin alcohol). DailyMed setid e92a258b (NDC 11673-575). Actives are mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohol — locked Caution wool-alcohol family (Sept 16). No High. New product id only — reuses `store-pm-ointment-lanolin-alcohol` from batch65 Equate / CVS and batch66 Walgreens PM ointment (same actives + lanolin-alcohol inactive). SPL notes an inactivated NDC code; this is the setid the founder locked for the write, not a new invented Target SKU. No Target UPC harvested — omitted (do not invent). Prefer PF tears over this PM ointment. Draft, not verified.',
+      'FOUNDER-LOCK DRAFT: up&up Nighttime Relief lubricant eye ointment = Caution (lanolin alcohol). DailyMed setid e92a258b (NDC 11673-575). Actives are mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohol — locked Caution wool-alcohol family (Sept 16). No High. New product id only — reuses `store-pm-ointment-lanolin-alcohol` from batch65 Equate / CVS and batch66 Walgreens PM ointment (same actives + lanolin-alcohol inactive). SPL notes an inactivated NDC code; this is the setid the founder locked for the write, not a new invented Target SKU. UPC-A 780707005750 confirmed on the DailyMed carton image for this setid (zbar). NDC ≠ UPC. Prefer PF tears over this PM ointment. Draft, not verified.',
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET_UPUP_PM} (up&up PM lubricant NDC 11673-575; ${UNVERIFIED_NOTE}) — reuse ${STORE_PM_LANOLIN}`,
@@ -627,8 +631,8 @@ const upup = _ROWS.find((r) => r.id === UPUP_PM);
 if (upup?.verdict !== 'caution' || upup.formulaId !== STORE_PM_LANOLIN) {
   throw new Error('up&up PM ointment must reuse store-pm-ointment-lanolin-alcohol');
 }
-if (upup.barcode) {
-  throw new Error('up&up PM ointment has no confirmed Target UPC — omit barcode');
+if (upup.barcode !== '780707005750') {
+  throw new Error('up&up PM ointment carton barcode must be UPC-A 780707005750');
 }
 
 const REUSE_FORMULA_COUNT = _ROWS.filter((r) => r.formulaId === STORE_PM_LANOLIN).length;

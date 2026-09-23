@@ -428,6 +428,10 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     productName: 'Tylenol Regular Strength Caplets (coated)',
     brand: 'Tylenol',
     category: PAIN_FEVER,
+    // KYR5-d — DailyMed carton image setid 01f41fae (tylenol-1.jpg).
+    // GS1 AI 01 GTIN-14 00350580458112 → item UPC-A 350580458112
+    // (indicator 0). Coated RS caplets. Not the uncoated RS tablets.
+    barcode: '350580458112',
     formulaId: 'apap-tylenol-rs-coated',
     audience: ADULT,
     minAge: 12,

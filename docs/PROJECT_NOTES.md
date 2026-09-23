@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 23, 2026 — KYR5-d missing-UPC attach (barcodes only, no grades) after batch80. Live missing UPC 185 (in-store 80 + online 105). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover stays 79. OUT 135 stays dead. Gummy sunflower oil and gummy vegetable oil stay Avoid. Do not restage batch70–80 grades.
+Last Updated: September 23, 2026 — KYR5-d live missing-UPC attach after #284 (barcodes only). Live missing UPC 178 (in-store 73 + online 105). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover stays 79. OUT 135 stays dead. Gummy sunflower oil and gummy vegetable oil stay Avoid. Do not restage batch70–80 grades. Do not reopen #284 DRY Nutricost/Micro leftovers.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -1253,7 +1253,9 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — live scoreboard after KYR5-d founder + rescan (Sept 19, 2026)
 ================================================================
-Last Updated: September 23, 2026 — KYR5-d barcode attach only. Newly attached 638 empty Search rows (Nutricost batch76–79: 627; batch80: 9; Micro Ingredients glucosamine 300-ct 850069023232 and lemon fish oil 240-ct 850015616068 from Vitacost UPC fields). NOW batch71–75 already had UPC-A (870). Not overwritten. DRY this pass: Nutricost 83 (no exact pack on the row, no matching count tab, ambiguous strength/flavor tab, or blank variant barcode) and Micro Ingredients 2 (pure Mg glycinate 240; D3+K2 10,000/200 300 — brand count tabs print Amazon X-codes, not UPC-A; iHerb 403). In-store 80 not reopened (named-dry stays closed). Live query after batch80: Search 3837 / with UPC 3652 / missing 185 (in-store 80 + online 105).
+Last Updated: September 23, 2026 — KYR5-d live pile after #284. Newly attached 7 empty in-store Search rows from DailyMed carton images (zbar UPC-A, check digit passed). Not overwritten. Named-dry / #284 DRY Nutricost 83 + Micro 2 stay closed. Online 105 not reopened this pass. Live query: Search 3837 / with UPC 3659 / missing 178 (in-store 73 + online 105).
+
+Prior (#284): Newly attached 638 empty Search rows (Nutricost batch76–79: 627; batch80: 9; Micro Ingredients glucosamine 300-ct 850069023232 and lemon fish oil 240-ct 850015616068 from Vitacost UPC fields). NOW batch71–75 already had UPC-A (870). DRY that pass: Nutricost 83 and Micro Ingredients 2.
 
 Prior scoreboard (September 20, 2026 — KYR6 existing MAIN rows only): Attached 1 empty Search row (up&up ES APAP 225-ct). Prenatal already had UPC; OI filled on that existing row. Count-tab + accordion lock stays. Factory #121–#221 stay closed. Walk list A is a hunt queue only.
 
@@ -1353,8 +1355,8 @@ False-missing / merge-note (still count in the 82 because the leftover row has n
 - Boiron Chestal Cold & Cough Honey — size-less twin of Chestal Adult/Kids honey rows that already have UPC (`chestal-adult-honey` 306969032282; `boiron-chestal-kids-honey` 306969033289). NAMED-DRY / merge-note.
 - Biofreeze Pain Relieving Spray 10% — founder lock 2026-09-18 night. 4 oz single does not exist on US retail shelf. Current 4 oz / 3 oz sprays print Menthol 10.5%. NAMED-DRY / merge-note to Biofreeze Professional 360 Spray 10.5% 4 fl oz 359316120200 and Biofreeze Pain Relief Spray 10.5% 3 fl oz 731124000109. Do not hunt a 10% UPC. Do not invent one. Do not reopen Biofreeze 10% hunt.
 
-IN-STORE missing UPC by brand — live 80
-Member’s Mark 11; Equate 5; Family Wellness 5; Walgreens 5; Icy Hot 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; CVS Health 3; DG Health 3; Sprouts 3; Biofreeze 2; Boiron 2; Culturelle 2; Genexa 2; Nature’s Way 2; OLLY 2; Signature Care 2; TopCare 2; Tylenol 2; Alaway 1; Blue-Emu 1; Carlson 1; Centrum 1; Dimetapp 1; Excedrin 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Tiger Balm 1; Zarbee’s 1; up&up 1.
+IN-STORE missing UPC by brand — live 73
+Member’s Mark 11; Equate 5; Family Wellness 4; Walgreens 4; Icy Hot 4; Absorbine Jr. 3; Aspercreme 3; Assured 3; CVS Health 2; DG Health 2; Sprouts 3; Biofreeze 2; Boiron 2; Culturelle 2; Genexa 2; Nature’s Way 2; OLLY 2; Signature Care 2; TopCare 2; Tylenol 1; Alaway 1; Blue-Emu 1; Carlson 1; Centrum 1; Excedrin 1; Kirkland Signature 1; L’il Critters 1; MaryRuth’s 1; Nature Made 1; Qunol 1; Tiger Balm 1; Zarbee’s 1.
 
 Walk list A — IN-STORE missing UPC names (LIVE query). Hunt queue only — not the count. DRY / named-dry / no-row-skipped = skip. Fields from the live Search row only: brand — name — form — strength — pack count if on row (count unknown if the row has no count). Do not invent a count. No barcodes.
 Walgreens (5)
@@ -1363,7 +1365,7 @@ Walgreens (5)
 - Walgreens — Walgreens Children's Nighttime Cough — liquid — Chlorpheniramine maleate 2mg / 10mL; Dextromethorphan HBr 15mg / 10mL — count unknown (kit only this hunt)
 - ~~Walgreens — Walgreens Dye-Free Wal-Sleep Z (Diphenhydramine 50 mg / 30 mL) — liquid — Diphenhydramine HCl 50mg / 30mL~~ CLOSED — 12 fl oz 311917169149
 - ~~Walgreens — Walgreens Famotidine 20 mg — film-coated tablet — Famotidine 20mg~~ CLOSED — Max Strength 50-ct 311917010151
-- Walgreens — Walgreens Nighttime Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
+- ~~Walgreens — Walgreens Nighttime Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3%~~ CLOSED — DailyMed carton 311917177274
 - ~~Walgreens — Walgreens Nighttime Sleep Aid Liquid (Diphenhydramine 50 mg / 30 mL) — liquid — Diphenhydramine HCl 50mg / 30mL~~ CLOSED — Berry 6 / 12 fl oz
 - Walgreens — Walgreens Omeprazole 20 mg Delayed-Release — delayed-release tablet — Omeprazole 20mg — count unknown
 - Walgreens — Walgreens Pain Reliever (multi-dye + talc SPL) — caplet — Acetaminophen 500mg — count unknown
@@ -1411,10 +1413,10 @@ Family Wellness (5)
 - Family Wellness — Family Wellness Chest Congestion Relief DM (Guaifenesin 400 mg + DXM 20 mg) — tablet — Guaifenesin 400mg; Dextromethorphan HBr 20mg — count unknown
 - Family Wellness — Family Wellness Pain Scar Itch Triple Antibiotic (69396-054) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g; Pramoxine HCl 10mg / g — count unknown
 - Family Wellness — Family Wellness Triple Antibiotic Ointment — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
-- Family Wellness — Family Wellness Triple Antibiotic Original — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
+- ~~Family Wellness — Family Wellness Triple Antibiotic Original — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g~~ CLOSED — DailyMed carton 032251533150
 DG Health (3)
 - ~~DG Health — DG Health Ibuprofen 200 mg Film-Coated Tablets — film-coated tablet — Ibuprofen 200mg~~ CLOSED — 24-ct 359726235259; 100-ct 370030167425 (not dyed+talc 50-ct 370030015290)
-- DG Health — DG Health Immediate Release Mucus Relief (Guaifenesin 400 mg) — tablet — Guaifenesin 400mg — count unknown
+- ~~DG Health — DG Health Immediate Release Mucus Relief (Guaifenesin 400 mg) — tablet — Guaifenesin 400mg~~ CLOSED — DailyMed carton 023513807300
 - DG Health — DG Health Pain Relief (Acetaminophen 500 mg, dyed lakes) — film-coated tablet — Acetaminophen 500mg — count unknown
 - DG Health — DG Health Triple Antibiotic Ointment (Oil-Blend) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 Icy Hot (4)
@@ -1437,7 +1439,7 @@ Assured (3)
 CVS Health (3)
 - CVS Health — CVS Children's Allergy Chews (Diphenhydramine) — chewable tablet — Diphenhydramine HCl 12.5mg — count unknown
 - CVS Health — CVS Health Extra Strength Acetaminophen (coated red) — film-coated tablet — Acetaminophen 500mg — count unknown
-- CVS Health — CVS Nighttime Dry-Eye Relief Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
+- ~~CVS Health — CVS Nighttime Dry-Eye Relief Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3%~~ CLOSED — DailyMed carton 050428353721
 GoodSense (0)
 - ~~GoodSense — GoodSense Extra Strength Pain Relief (Acetaminophen 500 mg, L484) — caplet — Acetaminophen 500mg — count unknown~~ CLOSED — L484 500-ct 301130484907
 - ~~GoodSense — GoodSense Ibuprofen Liquid Gels 200 mg — liquid gel — Solubilized ibuprofen 200mg — count unknown~~ CLOSED — mini 80/160 301134501273 301134501068
@@ -1449,7 +1451,7 @@ Sprouts (3)
 up&up (1)
 - ~~up&up — up&up Daytime Honey Cold & Flu — liquid — Acetaminophen 325mg / 15mL; Dextromethorphan HBr 10mg / 15mL; Guaifenesin 200mg / 15mL; Phenylephrine HCl 5mg / 15mL — count unknown~~ CLOSED — 12 fl oz 370030117369
 - ~~up&up — up&up Extra Strength Acetaminophen — film-coated tablet — Acetaminophen 500mg — count unknown DRY~~ CLOSED — Target carton 225-ct 349483342260 on existing `upup-es-red40-tio2` (no second row)
-- up&up — up&up Nighttime Relief Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3% — count unknown
+- ~~up&up — up&up Nighttime Relief Lubricant Eye Ointment — ointment — Mineral oil 42.5%; White petrolatum 57.3%~~ CLOSED — DailyMed carton 780707005750
 Boiron (2)
 - Boiron — Boiron Arnicare Cream (DailyMed PEG panel) — cream — Arnica montana 1X HPUS 7% — count unknown DRY / merge-note — size-less twin of sized Arnicare Cream (already has UPC). Do not re-barcode. Do not reopen Boiron 23.
 - Boiron — Boiron Chestal Cold & Cough Honey — syrup — Dulcamara 5C HPUS; Ferrum phosphoricum 9C HPUS; Hydrastis canadensis 9C HPUS; Kali bichromicum 9C HPUS; Nux vomica 9C HPUS — count unknown DRY / merge-note — size-less twin of Chestal Adult/Kids honey (already have UPC). Do not re-barcode. Do not reopen Boiron 23.
@@ -1470,7 +1472,7 @@ Signature Care (2)
 - Signature Care — Signature Care Ibuprofen — tablet — Ibuprofen 200mg — count unknown DRY
 Tylenol (2)
 - Tylenol — Tylenol For Children Plus Adults Liquid — liquid — Acetaminophen 160mg / 5mL — count unknown
-- Tylenol — Tylenol Regular Strength Caplets (coated) — caplet — Acetaminophen 325mg — count unknown
+- ~~Tylenol — Tylenol Regular Strength Caplets (coated) — caplet — Acetaminophen 325mg~~ CLOSED — DailyMed carton GTIN-14 00350580458112 → UPC-A 350580458112
 Alaway (1)
 - Alaway — Alaway Preservative Free — single-use eye drop — Ketotifen 0.025% — count unknown DRY
 Blue-Emu (1)
@@ -1480,7 +1482,7 @@ Carlson (1)
 Centrum (1)
 - Centrum — Centrum Prenatal / Centrum Specialist Prenatal — film-coated tablet — Prenatal multivitamin / multimineral 1 tablet (label serving); Folic acid 800mcg; Iron 27mg; Zinc (as zinc oxide) 11mg — count unknown
 Dimetapp (1)
-- Dimetapp — Children's Dimetapp Nighttime Cold & Cough — liquid — Diphenhydramine HCl 12.5mg / 10mL — count unknown
+- ~~Dimetapp — Children's Dimetapp Nighttime Cold & Cough — liquid — Diphenhydramine HCl 12.5mg / 10mL~~ CLOSED — DailyMed carton 850026660029
 Excedrin (1)
 - Excedrin — Excedrin Extra Strength (TiO2-only coat) — film-coated tablet — Acetaminophen 250mg; Aspirin 250mg; Caffeine 65mg — count unknown
 Kirkland Signature (1)

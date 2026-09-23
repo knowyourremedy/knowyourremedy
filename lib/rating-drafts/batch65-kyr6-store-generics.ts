@@ -658,6 +658,9 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     productName: 'CVS Nighttime Dry-Eye Relief Ointment',
     brand: 'CVS Health',
     category: ALLERGY,
+    // KYR5-d — DailyMed carton image setid fc1c3dad (35372.jpg), zbar UPC-A.
+    // Mineral oil 42.5% + white petrolatum 57.3% + lanolin alcohol.
+    barcode: '050428353721',
     formulaId: STORE_PM_LANOLIN,
     audience: ADULT,
     minAge: 2,

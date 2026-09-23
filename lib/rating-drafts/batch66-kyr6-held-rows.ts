@@ -205,6 +205,15 @@ export const BATCH66_CATCHUP_BARCODES: Record<string, string> = {
   'topcare-swimmers-ear': '036800001053',
   // topcarebrand.com + SmartLabel 0.4 fl oz homeopathic glycerin-only.
   'topcare-ear-relief': '036800171695',
+  // KYR5-d — DailyMed carton image setid 915759af, zbar UPC-A
+  // 032251533150 (EAN-13 0032251533150). Same 1 oz Original panel.
+  'family-wellness-triple-original': '032251533150',
+  // KYR5-d — DailyMed carton image setid 6bb68dc4, zbar UPC-A.
+  // 42.5% / 57.3% + lanolin alcohols. Not the 3% / 94% twin.
+  'walgreens-pm-lubricant-ointment': '311917177274',
+  // KYR5-d — DailyMed carton image setid f60a9d1b, zbar UPC-A.
+  // Guaifenesin 400 mg IR only (not the PE / DM twins).
+  'dg-health-guaifenesin-ir': '023513807300',
 };
 
 export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
@@ -214,6 +223,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     productName: 'Family Wellness Triple Antibiotic Original',
     brand: 'Family Wellness',
     category: FIRST_AID,
+    barcode: BATCH66_CATCHUP_BARCODES[FW_TRIPLE_ORIGINAL],
     formulaId: FW_TRIPLE_ORIGINAL,
     audience: ADULT,
     minAge: 2,
@@ -235,7 +245,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     ],
     verdict: 'clean',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Family Wellness Triple Original 69396-041 = Clean. DailyMed setid 915759af Drug Facts: Cetyl Alcohol, Light Mineral Oil, White Petrolatum, Squalane, Stearic Acid, Vitamin E. Structured SPL maps vitamin E to alpha-tocopherol (Cleared mixed-tocopherols row) — not tocopheryl acetate. Cetyl alcohol is already §5 Cleared (Sept 15 fatty-alcohol family) — not a new token and not a cousin-ask. Squalane / light mineral oil / white petrolatum / stearic acid are Cleared. Own formulaId — not the petrolatum ± mineral oil Clean twin (`family-wellness-triple-antibiotic` / 69571-003) and not Pain Scar Itch 69396-054 (sodium pyruvate Caution). UPC 0032251533150 was not confirmed on carton / Family Dollar PDP / DailyMed for this Original NDC — omitted (NDC ≠ UPC). Ages 2+ (under 2: ask a doctor). Draft, not verified.',
+      'FOUNDER-LOCK DRAFT: Family Wellness Triple Original 69396-041 = Clean. DailyMed setid 915759af Drug Facts: Cetyl Alcohol, Light Mineral Oil, White Petrolatum, Squalane, Stearic Acid, Vitamin E. Structured SPL maps vitamin E to alpha-tocopherol (Cleared mixed-tocopherols row) — not tocopheryl acetate. Cetyl alcohol is already §5 Cleared (Sept 15 fatty-alcohol family) — not a new token and not a cousin-ask. Squalane / light mineral oil / white petrolatum / stearic acid are Cleared. Own formulaId — not the petrolatum ± mineral oil Clean twin (`family-wellness-triple-antibiotic` / 69571-003) and not Pain Scar Itch 69396-054 (sodium pyruvate Caution). UPC-A 032251533150 confirmed on the DailyMed carton image for this setid (zbar; EAN-13 0032251533150). NDC ≠ UPC. Ages 2+ (under 2: ask a doctor). Draft, not verified.',
     sourcesGeneral: [
       `DailyMed setid ${SET.fw041} (Family Wellness Triple Original NDC 69396-041; ${UNVERIFIED_NOTE})`,
     ],
@@ -299,6 +309,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     productName: 'Walgreens Nighttime Lubricant Eye Ointment',
     brand: 'Walgreens',
     category: ALLERGY,
+    barcode: BATCH66_CATCHUP_BARCODES['walgreens-pm-lubricant-ointment'],
     formulaId: STORE_PM_LANOLIN,
     audience: ADULT,
     minAge: 2,
@@ -325,6 +336,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     productName: 'DG Health Immediate Release Mucus Relief (Guaifenesin 400 mg)',
     brand: 'DG Health',
     category: COLD_FLU,
+    barcode: BATCH66_CATCHUP_BARCODES[DG_GUAIF_IR],
     formulaId: DG_GUAIF_IR,
     audience: ADULT,
     minAge: 6,
@@ -445,8 +457,8 @@ if (!fw041.inactiveIngredients.some((i) => /cetyl alcohol/i.test(i.name))) {
 if (fw041.inactiveIngredients.some((i) => i.riskLevel !== 'cleared' && i.riskLevel !== 'limited')) {
   throw new Error('FW 69396-041 must not invent a High/Moderate on this Cleared panel');
 }
-if (fw041.barcode) {
-  throw new Error('FW 69396-041 UPC 0032251533150 was not confirmed — omit barcode');
+if (fw041.barcode !== '032251533150') {
+  throw new Error('FW 69396-041 carton barcode must be UPC-A 032251533150');
 }
 
 const kirk = _ROWS.find((r) => r.id === 'kirkland-sleep-aid-doxylamine');
