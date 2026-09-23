@@ -220,6 +220,12 @@ export const BATCH70_CATCHUP_BARCODES: Record<string, string> = {
   [FO_LEMON_120]: '850056167222',
   [GLUCOSAMINE]: '850069023232',
   [FO_LEMON]: '850015616068',
+  // Target primary_barcode. Gelatin (capsule) only; vitamin C 204 mg;
+  // magnesium 400 mg; 240 ct. Not the rice-flour twin 850069023881.
+  [MG_PURE]: '850056167857',
+  // Target primary_barcode on the 10,000 IU + 200 mcg coconut 300-ct
+  // pouch. Not an Amazon X-code.
+  [D3_K2]: '850056167628',
 };
 
 export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
@@ -229,6 +235,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     productName: 'Pure Magnesium Glycinate Capsules, 400 mg (240 ct)',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH70_CATCHUP_BARCODES[MG_PURE],
     formulaId: MG_PURE,
     audience: ADULT,
     minAge: 18,
@@ -243,7 +250,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
       flag('Gelatin (capsule)', 'cleared', labelCite(CITE.mgPure, METH.gelatin)),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Pure Magnesium Glycinate 240 capsules = Clean. Current iHerb other-ingredients: Gelatin (capsule) only. Live Amazon US filler-free 240-ct B0DGRNP1ZL. Gelatin is Cleared. Vitamin C as ascorbyl palmitate is the labeled Supplement Facts vitamin — not an inactive flag. Distinct from iHerb 850069023881 rice-flour / SiO2 / gelatin twin and from Amazon veggie 350 mg B0DWDHJZ4T (no_OI this hunt). Do not write lemonade powder / MiracleMag / Mag Duo here. Pack sizes of this gelatin-only 400 mg/serving formula share this formulaId. No carton UPC harvested — omitted. No DailyMed drug SPL (dietary supplement). Adults. Draft, not verified.`,
+    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Pure Magnesium Glycinate 240 capsules = Clean. Current iHerb other-ingredients: Gelatin (capsule) only. Live Amazon US filler-free 240-ct B0DGRNP1ZL. Gelatin is Cleared. Vitamin C as ascorbyl palmitate is the labeled Supplement Facts vitamin — not an inactive flag. Distinct from iHerb 850069023881 rice-flour / SiO2 / gelatin twin and from Amazon veggie 350 mg B0DWDHJZ4T (no_OI this hunt). Do not write lemonade powder / MiracleMag / Mag Duo here. Pack sizes of this gelatin-only 400 mg/serving formula share this formulaId. Target primary barcode UPC-A 850056167857 (gelatin capsule; vitamin C 204 mg; magnesium 400 mg; 240 ct). Not 850069023881. No DailyMed drug SPL (dietary supplement). Adults. Draft, not verified.`,
     cleanAlternatives: MG_ALTS,
     sourcesGeneral: [`${CITE.mgPure} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -278,6 +285,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     productName: 'Vitamin D3 10,000 IU + K2 200 mcg Softgels (300 ct)',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH70_CATCHUP_BARCODES[D3_K2],
     formulaId: D3_K2,
     audience: ADULT,
     minAge: 18,
@@ -295,7 +303,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
       flag('Purified water', 'cleared', labelCite(CITE.d3k2, METH.water)),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Vitamin D3 10,000 IU + K2 200 mcg 300 softgels = Clean. Current iHerb other-ingredients: Coconut oil, softgel (gelatin, glycerin, purified water). ${OIL_FILL_TAP} Same coconut / gelatin / glycerin / water family as the 5,000 IU D3-only pouch, but K2 + 10,000 IU per-softgel active ≠ that row — own formulaId \`${D3_K2}\`. Distinct from Amazon sunflower-oil D3 5,000 + K2 100 mcg 180-ct B0D2S6DMDS (no full OI; skipped) and from DSLD 232088 125 mcg / 100 mcg gelatin-only. No 12-digit harvested — omitted. Contains coconut. No DailyMed drug SPL. Adults. Draft, not verified.`,
+    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Vitamin D3 10,000 IU + K2 200 mcg 300 softgels = Clean. Current iHerb other-ingredients: Coconut oil, softgel (gelatin, glycerin, purified water). ${OIL_FILL_TAP} Same coconut / gelatin / glycerin / water family as the 5,000 IU D3-only pouch, but K2 + 10,000 IU per-softgel active ≠ that row — own formulaId \`${D3_K2}\`. Distinct from Amazon sunflower-oil D3 5,000 + K2 100 mcg 180-ct B0D2S6DMDS (no full OI; skipped) and from DSLD 232088 125 mcg / 100 mcg gelatin-only. Target primary barcode UPC-A 850056167628 on the 10,000 IU + 200 mcg coconut 300-ct pouch. Contains coconut. No DailyMed drug SPL. Adults. Draft, not verified.`,
     cleanAlternatives: D3_ALTS,
     sourcesGeneral: [`${CITE.d3k2} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -590,8 +598,8 @@ const d3k2 = _ROWS.find((r) => r.id === D3_K2);
 if (d3k2?.verdict !== 'clean' || d3k2.formulaId === D3_5000) {
   throw new Error('D3+K2 10k/200 must be Clean on its own formulaId');
 }
-if (d3k2.barcode) {
-  throw new Error('D3+K2 must not attach an invented UPC');
+if (d3k2.barcode !== '850056167628') {
+  throw new Error('D3+K2 300-ct must use Target UPC-A 850056167628');
 }
 
 const mgPure = _ROWS.find((r) => r.id === MG_PURE);
@@ -600,6 +608,12 @@ if (mgPure?.verdict !== 'clean') {
 }
 if (mgPure.inactiveIngredients.some((i) => /rice flour|silicon dioxide|silica/i.test(i.name))) {
   throw new Error('do not import the rice-flour Mg twin onto the gelatin-only row');
+}
+if (mgPure.barcode !== '850056167857') {
+  throw new Error('pure Mg 240 must use Target UPC-A 850056167857');
+}
+if (mgPure.barcode === '850069023881') {
+  throw new Error('do not attach the rice-flour Mg twin UPC');
 }
 
 const fo240 = _ROWS.find((r) => r.id === FO_LEMON);

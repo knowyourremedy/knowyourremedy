@@ -186,6 +186,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-creatine-monohydrate-powder-77-servings",
     productName: "Nutricost Creatine Monohydrate Powder (77 servings)",
+    barcode: "810139570073",
     category: "Vitamins",
     formulaId: "nutricost-creatine-monohydrate-powder-77-servings",
     audience: ADULT,
@@ -196,7 +197,7 @@ const COMPACT: Compact[] = [
     flags: [["Malic acid", "cleared", "malic"], ["Sucralose", "moderate", "sucralose"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Beet root powder (for color)", "cleared", "beetColor"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Sucralose; Natural and artificial flavors. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Creatine_MonohydrateWatermelon_500GM_32OZ_SFP_Square.jpg) other-ingredients: Malic acid, sucralose, citric acid, natural & artificial flavors, beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Creatine_MonohydrateWatermelon_500GM_32OZ_SFP_Square.jpg) other-ingredients: Malic acid, sucralose, citric acid, natural & artificial flavors, beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570073 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-creatine-monohydrate-powder-46-servings",
@@ -615,6 +616,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-chlorophyll-60-softgels-2",
     productName: "Nutricost Chlorophyll (60 softgels)",
+    barcode: "810139572664",
     category: "Vitamins",
     formulaId: "nutricost-chlorophyll-60-softgels-2",
     audience: ADULT,
@@ -625,7 +627,7 @@ const COMPACT: Compact[] = [
     flags: [["Sunflower seed oil", "cleared", "sunflowerFill"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Beeswax", "cleared", "wax"], ["Purified water", "cleared", "water"], ["Lecithin", "cleared", "lecithin"], ["Polyethylene glycol", "moderate", "peg"], ["Zinc oxide", "limited", "zincOi"], ["Caramel color", "high", "caramel"], ["FD&C blue #1", "high", "dye"]],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Driver is Caramel color; FD&C blue #1. Avoid needs High. Limited-only never Avoid.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-chlorophyll; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Chlorophyll_50MGX2_60SFG_100CC_SFP_Square.jpg) other-ingredients: Sunflower seed oil, gelatin, glycerin, beeswax, purified water, lecithin, polyethylene glycol, zinc oxide, caramel (for color), FD&C blue #1 (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-chlorophyll; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Chlorophyll_50MGX2_60SFG_100CC_SFP_Square.jpg) other-ingredients: Sunflower seed oil, gelatin, glycerin, beeswax, purified water, lecithin, polyethylene glycol, zinc oxide, caramel (for color), FD&C blue #1 (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139572664 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-pre-workout-complex-60-servings-2",
@@ -805,6 +807,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-creatine-monohydrate-powder-68-servings",
     productName: "Nutricost Creatine Monohydrate Powder (68 servings)",
+    barcode: "810139578277",
     category: "Vitamins",
     formulaId: "nutricost-creatine-monohydrate-powder-68-servings",
     audience: ADULT,
@@ -815,7 +818,7 @@ const COMPACT: Compact[] = [
     flags: [["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beet root (for color)", "cleared", "beetColor"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_SourWatermelon_500GM_32OZ_SFP_Square.jpg) other-ingredients: Citric acid, malic acid, natural and artificial flavors, sucralose, beet root (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_SourWatermelon_500GM_32OZ_SFP_Square.jpg) other-ingredients: Citric acid, malic acid, natural and artificial flavors, sucralose, beet root (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139578277 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-bcaa-powder-30-servings-2",
@@ -1024,6 +1027,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-pre-workout-complex-30-servings-4",
     productName: "Nutricost Pre-Workout Complex (30 servings)",
+    barcode: "810139577461",
     category: "Vitamins",
     formulaId: "nutricost-pre-workout-complex-30-servings-4",
     audience: ADULT,
@@ -1034,7 +1038,7 @@ const COMPACT: Compact[] = [
     flags: [["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Himalayan rock salt", "cleared", "himalayan"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Maltodextrin", "limited", "maltodextrin"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Maltodextrin; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-A_StrawberryMagarita_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Natural and artificial flavors, citric acid, malic acid, sucralose, beet root powder (for color), Himalayan rock salt, calcium silicate, silica, maltodextrin, sodium citrate, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-A_StrawberryMagarita_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Natural and artificial flavors, citric acid, malic acid, sucralose, beet root powder (for color), Himalayan rock salt, calcium silicate, silica, maltodextrin, sodium citrate, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577461 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-calcium-peach-mango-60-servings",
@@ -1087,6 +1091,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-vitamin-e-400-iu-softgels-240-softgels",
     productName: "Nutricost Vitamin E 400 IU Softgels (240 softgels)",
+    barcode: "702669933216",
     category: "Vitamins",
     formulaId: "nutricost-vitamin-e-400-iu-softgels-240-softgels",
     audience: ADULT,
@@ -1097,7 +1102,7 @@ const COMPACT: Compact[] = [
     flags: [["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Soybean oil", "cleared", "soyFill"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / beet color / Himalayan rock salt / pure olive oil fill as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower, soybean, or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-e-400-iu-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminE_400IU_240SFG_400CC_SFP_Square_3ab1ac02-39fd-4bb0-8006-58a8295f9329.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water), soybean oil. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-e-400-iu-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminE_400IU_240SFG_400CC_SFP_Square_3ab1ac02-39fd-4bb0-8006-58a8295f9329.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water), soybean oil. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933216 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-l-glutamine-powder-76-servings",
@@ -1485,6 +1490,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-creatine-monohydrate-powder-44-servings",
     productName: "Nutricost Creatine Monohydrate Powder (44 servings)",
+    barcode: "810139577553",
     category: "Vitamins",
     formulaId: "nutricost-creatine-monohydrate-powder-44-servings",
     audience: ADULT,
@@ -1495,7 +1501,7 @@ const COMPACT: Compact[] = [
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Acesulfame potassium", "moderate", "acek"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beet root powder (for color)", "cleared", "beetColor"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NCW_CreatineMonohydrate_Shaqberry_300GM_20OZ_SFP_Square.jpg) other-ingredients: Citric acid, natural flavors, sucralose, acesulfame potassium, blue spirulina (for color), beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NCW_CreatineMonohydrate_Shaqberry_300GM_20OZ_SFP_Square.jpg) other-ingredients: Citric acid, natural flavors, sucralose, acesulfame potassium, blue spirulina (for color), beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577553 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-creatine-monohydrate-powder-75-servings",

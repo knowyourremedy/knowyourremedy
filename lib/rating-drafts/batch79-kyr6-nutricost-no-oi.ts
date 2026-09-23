@@ -395,6 +395,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-bisglycinate-unflavored",
     productName: "Nutricost Magnesium Bisglycinate, Unflavored",
+    barcode: "810014675961",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-bisglycinate-unflavored",
     audience: ADULT,
@@ -426,6 +427,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-grass-fed-beef-gelatin-powder",
     productName: "Nutricost Grass-Fed Beef Gelatin Powder",
+    barcode: "810139576822",
     category: "Vitamins",
     formulaId: "nutricost-b79-grass-fed-beef-gelatin-powder",
     audience: ADULT,

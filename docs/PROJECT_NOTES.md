@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 23, 2026 — KYR5-d live missing-UPC attach after #284 (barcodes only). Live missing UPC 178 (in-store 73 + online 105). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover stays 79. OUT 135 stays dead. Gummy sunflower oil and gummy vegetable oil stay Avoid. Do not restage batch70–80 grades. Do not reopen #284 DRY Nutricost/Micro leftovers.
+Last Updated: September 23, 2026 — KYR5-d batch70–80 3P empty-UPC pass (barcodes only). Worklist was the 85 Search rows from batch70–80 Micro Ingredients / NOW / Nutricost that were still empty after #284. Attached 58 exact-pack UPC-A. Already-had 0 on that worklist. 3P still-empty 27. In-store 73 not touched. Live missing UPC 120 (in-store 73 + online 47). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover stays 79. OUT 135 stays dead. Gummy sunflower oil and gummy vegetable oil stay Avoid. Do not restage batch70–80 grades. No NatureWise. No toothpaste. No Sprouts.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -1253,7 +1253,9 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — live scoreboard after KYR5-d founder + rescan (Sept 19, 2026)
 ================================================================
-Last Updated: September 23, 2026 — KYR5-d live pile after #284. Newly attached 7 empty in-store Search rows from DailyMed carton images (zbar UPC-A, check digit passed). Not overwritten. Named-dry / #284 DRY Nutricost 83 + Micro 2 stay closed. Online 105 not reopened this pass. Live query: Search 3837 / with UPC 3659 / missing 178 (in-store 73 + online 105).
+Last Updated: September 23, 2026 — KYR5-d batch70–80 3P empty-UPC pass. Worklist start 85 (Nutricost 83 + Micro Ingredients 2; NOW batch71–75 already had UPC and were not recounted). Newly attached 58 empty Search rows from nutricost.com variant barcodes (exact count/strength tab) and two Target primary_barcode fields (Micro Ingredients pure Mg glycinate 240-ct 850056167857; D3 10,000 IU + K2 200 mcg 300-ct 850056167628). Check digits passed. Not overwritten. Already-had 0. 3P still-empty 27 (blank variant barcode, no exact tab, or pack/strength conflict). In-store 73 not touched. Live missing UPC 120 (in-store 73 + online 47).
+
+Prior in-store pass: Newly attached 7 empty in-store Search rows from DailyMed carton images (zbar UPC-A, check digit passed). Not overwritten. Live query then: Search 3837 / with UPC 3659 / missing 178 (in-store 73 + online 105).
 
 Prior (#284): Newly attached 638 empty Search rows (Nutricost batch76–79: 627; batch80: 9; Micro Ingredients glucosamine 300-ct 850069023232 and lemon fish oil 240-ct 850015616068 from Vitacost UPC fields). NOW batch71–75 already had UPC-A (870). DRY that pass: Nutricost 83 and Micro Ingredients 2.
 
