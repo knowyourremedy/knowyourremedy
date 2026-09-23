@@ -2109,6 +2109,75 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'amazon-elements-melatonin-5': catalogShot(
     'amazon-elements-melatonin-5.jpg',
   ),
+  // Sleep leftover night run 2026-09-23 12:30 PT batch 1 — official US
+  // 3D packshots. Per-id only so shared formulaIds do not inherit.
+  // Amazon Basic Care Acetaminophen PM 100 caplets, UPC 370030114054
+  // (Walmart ASR pack; DailyMed image-01 is a flat label).
+  'amazon-basic-care-acetaminophen-pm': catalogShot(
+    'amazon-basic-care-acetaminophen-pm.jpg',
+  ),
+  // MegaFood Magtein 90 capsules, UPC 051494105801 (megafood.com).
+  'megafood-magtein-magnesium-l-threonate': catalogShot(
+    'megafood-magtein-magnesium-l-threonate.jpg',
+  ),
+  // Relax + Calm powder Raspberry Lemonade 50 servings, UPC 051494601716.
+  'megafood-relax-calm-powder-raspberry': catalogShot(
+    'megafood-relax-calm-powder-raspberry.jpg',
+  ),
+  // Relax + Calm powder Blackberry Hibiscus 50 servings, UPC 051494601709.
+  'megafood-relax-calm-powder-blackberry': catalogShot(
+    'megafood-relax-calm-powder-blackberry.jpg',
+  ),
+  // Melatonin Berry Good Sleep gummies 54ct / 3 mg, UPC 051494104156.
+  'megafood-melatonin-sleep-gummies': catalogShot(
+    'megafood-melatonin-sleep-gummies.jpg',
+  ),
+  // Grape soft chews 30ct (15-day), UPC 051494103999. Not the live 60ct
+  // (UPC 051494105412).
+  'megafood-relax-calm-soft-chews-grape': catalogShot(
+    'megafood-relax-calm-soft-chews-grape.jpg',
+  ),
+  // Strawberry soft chews 30ct, UPC 051494105436 (megafood.com).
+  'megafood-relax-calm-soft-chews-strawberry': catalogShot(
+    'megafood-relax-calm-soft-chews-strawberry.jpg',
+  ),
+  // Genexa Sleepology 1-pack, UPC 857630006090 (genexa.com hero).
+  'genexa-sleepology': catalogShot('genexa-sleepology.jpg'),
+  // Genexa Kids' Calm Keeper 1-pack, UPC 857630006106.
+  'genexa-kids-calm-keeper': catalogShot('genexa-kids-calm-keeper.jpg'),
+  // Genexa Stress 1-pack, UPC 857630006007.
+  'genexa-stress': catalogShot('genexa-stress.jpg'),
+  // Hyland's Nerve Tonic 50 tablets, UPC 354973301443 (hylands.com).
+  'hylands-nerve-tonic': catalogShot('hylands-nerve-tonic.jpg'),
+  // Hyland's Cell Salt #6 Kali Phos 6X 100 tablets. Official hylands.com
+  // carton for the draft product page. DailyMed NDC 54973-4092-1
+  // (UPC 354973409217) is this 100-count; the flat DailyMed label is not
+  // the pack shot.
+  'hylands-kali-phos-6x': catalogShot('hylands-kali-phos-6x.jpg'),
+  // Kids Sleep Calm + Immunity with melatonin 4 fl oz, UPC 810087820664.
+  'hylands-kids-sleep-calm-immunity': catalogShot(
+    'hylands-kids-sleep-calm-immunity.jpg',
+  ),
+  // Organic Kids Sleep Calm + Immunity melatonin-free 4 fl oz,
+  // UPC 810087820657. Not the conventional melatonin bottle.
+  'hylands-kids-sleep-calm-immunity-organic': catalogShot(
+    'hylands-kids-sleep-calm-immunity-organic.jpg',
+  ),
+  // Boiron SleepCalm 60 tablets, UPC 306969310045 (boironusa.com).
+  'boiron-sleepcalm-tablets': catalogShot('boiron-sleepcalm-tablets.jpg'),
+  // Boiron StressCalm 60 tablets, UPC 306969333044.
+  'boiron-stresscalm-tablets': catalogShot('boiron-stresscalm-tablets.jpg'),
+  // SleepCalm On the Go pellets, UPC 306969311424.
+  'boiron-sleepcalm-pellets': catalogShot('boiron-sleepcalm-pellets.jpg'),
+  // StressCalm On the Go pellets, UPC 306969334423.
+  'boiron-stresscalm-pellets': catalogShot('boiron-stresscalm-pellets.jpg'),
+  // Camilia Bedtime 30 liquid doses, UPC 306969102091.
+  'boiron-camilia-bedtime': catalogShot('boiron-camilia-bedtime.jpg'),
+  // Avena sativa 30C tube, UPC 306960095132. Per-id only — shares
+  // formulaId boiron-single-remedy-pellets.
+  'boiron-avenasativa-pellets': catalogShot(
+    'boiron-avenasativa-pellets.jpg',
+  ),
   // Batch 1 formulaId inheritance fix — DG Health / Amazon Basics
   // doxylamine share formulaId `upup-doxylamine-sleeptabs`. Per-id
   // mark overlay must win so they do not inherit the up&up carton.
@@ -3557,6 +3626,90 @@ assertExactCarton(
   'amazon-elements-melatonin-5',
   'Amazon Elements',
   'amazon-elements-melatonin-5.jpg',
+);
+assertExactCarton(
+  'amazon-basic-care-acetaminophen-pm',
+  'Amazon Basic Care',
+  'amazon-basic-care-acetaminophen-pm.jpg',
+);
+assertExactCarton(
+  'megafood-magtein-magnesium-l-threonate',
+  'MegaFood',
+  'megafood-magtein-magnesium-l-threonate.jpg',
+);
+assertExactCarton(
+  'megafood-relax-calm-powder-raspberry',
+  'MegaFood',
+  'megafood-relax-calm-powder-raspberry.jpg',
+);
+assertExactCarton(
+  'megafood-relax-calm-powder-blackberry',
+  'MegaFood',
+  'megafood-relax-calm-powder-blackberry.jpg',
+);
+assertExactCarton(
+  'megafood-melatonin-sleep-gummies',
+  'MegaFood',
+  'megafood-melatonin-sleep-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-relax-calm-soft-chews-grape',
+  'MegaFood',
+  'megafood-relax-calm-soft-chews-grape.jpg',
+);
+assertExactCarton(
+  'megafood-relax-calm-soft-chews-strawberry',
+  'MegaFood',
+  'megafood-relax-calm-soft-chews-strawberry.jpg',
+);
+assertExactCarton('genexa-sleepology', 'Genexa', 'genexa-sleepology.jpg');
+assertExactCarton(
+  'genexa-kids-calm-keeper',
+  'Genexa',
+  'genexa-kids-calm-keeper.jpg',
+);
+assertExactCarton('genexa-stress', 'Genexa', 'genexa-stress.jpg');
+assertExactCarton('hylands-nerve-tonic', "Hyland's", 'hylands-nerve-tonic.jpg');
+assertExactCarton('hylands-kali-phos-6x', "Hyland's", 'hylands-kali-phos-6x.jpg');
+assertExactCarton(
+  'hylands-kids-sleep-calm-immunity',
+  "Hyland's",
+  'hylands-kids-sleep-calm-immunity.jpg',
+);
+assertExactCarton(
+  'hylands-kids-sleep-calm-immunity-organic',
+  "Hyland's",
+  'hylands-kids-sleep-calm-immunity-organic.jpg',
+);
+assertExactCarton(
+  'boiron-sleepcalm-tablets',
+  'Boiron',
+  'boiron-sleepcalm-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-stresscalm-tablets',
+  'Boiron',
+  'boiron-stresscalm-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-sleepcalm-pellets',
+  'Boiron',
+  'boiron-sleepcalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-stresscalm-pellets',
+  'Boiron',
+  'boiron-stresscalm-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-camilia-bedtime',
+  'Boiron',
+  'boiron-camilia-bedtime.jpg',
+);
+assertExactCarton(
+  'boiron-avenasativa-pellets',
+  'Boiron',
+  'boiron-avenasativa-pellets.jpg',
 );
 {
   const decongestant = previewOverlayImage({
