@@ -2,7 +2,7 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-Last Updated: September 22, 2026 — batch79 refuse mapped / no NatureWise. Do not edit batch76–79 rows. Live missing UPC 100 (in-store 80 + online 20). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover after batch79 = 79. OUT 135 stays dead.
+Last Updated: September 23, 2026 — KYR5-d missing-UPC attach (barcodes only, no grades). Live missing UPC 185 (in-store 80 + online 105). Factory #121–#221 stay closed. Leftover 3P still 6 (NatureWise, WELMATE, A+Health, HealthA2Z, TIME-Cap, GoodSense). Nutricost no_OI leftover after batch79 = 79. OUT 135 stays dead. Do not restage batch70–79 grades.
 
 ================================================================ ⚡ READ FIRST — How Brandon Works
 Brandon is a novice developer using Cursor IDE on Windows PowerShell. He's smart, decisive, and editorially sharp. Follow these working-style rules without exception — they were earned across many sessions.
@@ -1251,7 +1251,9 @@ May 26 — Cold & Flu Clean Picks (13) + editorial standard locked. Equate Mucus
 ================================================================
 Missing barcodes — live scoreboard after KYR5-d founder + rescan (Sept 19, 2026)
 ================================================================
-Last Updated: September 20, 2026 — KYR6 existing MAIN rows only. Attached 1 empty Search row (up&up ES APAP 225-ct). Prenatal already had UPC; OI filled on that existing row. Count-tab + accordion lock stays. Factory #121–#221 stay closed. Live missing UPC = 100 (in-store 80 + online 20). Walk list A is a hunt queue only.
+Last Updated: September 23, 2026 — KYR5-d barcode attach only. Newly attached 629 empty Search rows (Nutricost 627 from nutricost.com count-tab barcodes; Micro Ingredients glucosamine 300-ct 850069023232 and lemon fish oil 240-ct 850015616068 from Vitacost UPC fields). NOW batch71–75 already had UPC-A (870). Not overwritten. DRY this pass: Nutricost 83 (no exact pack on the row, no matching count tab, ambiguous strength/flavor tab, or blank variant barcode) and Micro Ingredients 2 (pure Mg glycinate 240; D3+K2 10,000/200 300 — brand count tabs print Amazon X-codes, not UPC-A; iHerb 403). In-store 80 not reopened (named-dry stays closed). Live query: Search 3828 / with UPC 3643 / missing 185 (in-store 80 + online 105).
+
+Prior scoreboard (September 20, 2026 — KYR6 existing MAIN rows only): Attached 1 empty Search row (up&up ES APAP 225-ct). Prenatal already had UPC; OI filled on that existing row. Count-tab + accordion lock stays. Factory #121–#221 stay closed. Walk list A is a hunt queue only.
 
 Live query (Search catalog, parked Pedialyte out). A Search row HAS a UPC if barcode/upc has 8+ digits. Do not invent codes. Do not grade.
 - Search rows: 2241

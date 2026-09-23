@@ -130,6 +130,7 @@ type Compact = {
   id: string;
   productName: string;
   category: string;
+  barcode?: string;
   formulaId: string;
   audience: typeof ADULT;
   minAge: number;
@@ -153,11 +154,18 @@ function expand(d: Compact): RatingRecord {
     const pair = main[d.category as keyof typeof main];
     if (pair) alts.push(alt(pair[0], pair[1]));
   }
+  const cite = d.barcode
+    ? d.cite.replace(
+        /No 12-digit UPC decoded[^.]*\./,
+        `UPC-A ${d.barcode} attached from nutricost.com variant barcode (exact count tab).`,
+      )
+    : d.cite;
   return row({
     id: d.id,
     productName: d.productName,
     brand: BRAND,
     category: d.category,
+    barcode: d.barcode,
     formulaId: d.formulaId,
     audience: d.audience,
     minAge: d.minAge,
@@ -165,13 +173,13 @@ function expand(d: Compact): RatingRecord {
     productType: d.productType,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
-      flag(n, risk, labelCite(d.cite, METH[meth])),
+      flag(n, risk, labelCite(cite, METH[meth])),
     ),
     verdict: d.verdict,
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. Adults unless the name says kids. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
+    sourcesGeneral: [`${cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   });
 }
 
@@ -195,6 +203,7 @@ const COMPACT: Compact[] = [
   {
     id: BCAA_GRAPE,
     productName: "Nutricost BCAA Powder, Grape (30 servings)",
+    barcode: "857077008527",
     category: "Vitamins",
     formulaId: BCAA_GRAPE,
     audience: ADULT,
@@ -210,6 +219,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-bcaa-powder-grape-60-servings",
     productName: "Nutricost BCAA Powder, Grape (60 servings)",
+    barcode: "857077008534",
     category: "Vitamins",
     formulaId: BCAA_GRAPE,
     audience: ADULT,
@@ -225,6 +235,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-bcaa-powder-grape-90-servings",
     productName: "Nutricost BCAA Powder, Grape (90 servings)",
+    barcode: "857077008541",
     category: "Vitamins",
     formulaId: BCAA_GRAPE,
     audience: ADULT,
@@ -240,6 +251,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-bcaa-powder-grape-120-servings",
     productName: "Nutricost BCAA Powder, Grape (120 servings)",
+    barcode: "810014671109",
     category: "Vitamins",
     formulaId: BCAA_GRAPE,
     audience: ADULT,
@@ -255,6 +267,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-bcaa-powder-pomegranate-guava-30-servings",
     productName: "Nutricost BCAA Powder, Pomegranate Guava (30 servings)",
+    barcode: "810139574538",
     category: "Vitamins",
     formulaId: "nutricost-bcaa-powder-pomegranate-guava-30-servings",
     audience: ADULT,
@@ -270,6 +283,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-creatine-monohydrate-powder-grape-45-servings",
     productName: "Nutricost Creatine Monohydrate Powder, Grape (45 servings)",
+    barcode: "810139573982",
     category: "Vitamins",
     formulaId: "nutricost-creatine-monohydrate-powder-grape-45-servings",
     audience: ADULT,
@@ -285,6 +299,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-creatine-energy-powder-grape-30-servings",
     productName: "Nutricost Creatine + Energy Powder, Grape (30 servings)",
+    barcode: "810139575580",
     category: "Vitamins",
     formulaId: "nutricost-creatine-energy-powder-grape-30-servings",
     audience: ADULT,
@@ -300,6 +315,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-l-glutamine-powder-blackberry-lemonade-78-servings",
     productName: "Nutricost L-Glutamine Powder, Blackberry Lemonade (78 servings)",
+    barcode: "810014678979",
     category: "Vitamins",
     formulaId: "nutricost-l-glutamine-powder-blackberry-lemonade-78-servings",
     audience: ADULT,
@@ -315,6 +331,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-l-glutamine-powder-green-apple-83-servings",
     productName: "Nutricost L-Glutamine Powder, Green Apple (83 servings)",
+    barcode: "810139570097",
     category: "Vitamins",
     formulaId: "nutricost-l-glutamine-powder-green-apple-83-servings",
     audience: ADULT,
@@ -345,6 +362,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings",
     productName: "Nutricost Calcium + Magnesium + Zinc Citrates with Vitamin D3 Powder, Raspberry Lemonade (30 servings)",
+    barcode: "810014672939",
     category: "Vitamins",
     formulaId: "nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings",
     audience: ADULT,
@@ -360,6 +378,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-melatonin-tablets-5mg-240-tablets",
     productName: "Nutricost Melatonin Tablets 5 mg (240 tablets)",
+    barcode: "810014672724",
     category: "Sleep",
     formulaId: "nutricost-melatonin-tablets-5mg-240-tablets",
     audience: ADULT,
@@ -375,6 +394,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-melatonin-tablets-3mg-240-tablets",
     productName: "Nutricost Melatonin Tablets 3 mg (240 tablets)",
+    barcode: "810014672717",
     category: "Sleep",
     formulaId: "nutricost-melatonin-tablets-3mg-240-tablets",
     audience: ADULT,
@@ -390,6 +410,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-mct-oil-powder-salted-caramel-36-servings",
     productName: "Nutricost MCT Oil Powder, Salted Caramel (36 servings)",
+    barcode: "810139571322",
     category: "Vitamins",
     formulaId: "nutricost-mct-oil-powder-salted-caramel-36-servings",
     audience: ADULT,
@@ -420,6 +441,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-c8-mct-oil-powder-90-servings",
     productName: "Nutricost C8 MCT Oil Powder, Unflavored (90 servings)",
+    barcode: "702669935012",
     category: "Vitamins",
     formulaId: "nutricost-c8-mct-oil-powder-90-servings",
     audience: ADULT,
@@ -435,6 +457,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-melatonin-extended-release-capsules-5mg-240-capsules",
     productName: "Nutricost Melatonin Extended Release Capsules 5 mg (240 capsules)",
+    barcode: "810139577799",
     category: "Sleep",
     formulaId: "nutricost-melatonin-extended-release-capsules-5mg-240-capsules",
     audience: ADULT,
@@ -450,6 +473,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-pre-x-workout-complex-powder-grape-30-servings",
     productName: "Nutricost Pre-X Workout Complex Powder, Grape (30 servings)",
+    barcode: "810014670966",
     category: "Vitamins",
     formulaId: "nutricost-pre-x-workout-complex-powder-grape-30-servings",
     audience: ADULT,
@@ -465,6 +489,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-pre-x-workout-complex-powder-grape-60-servings",
     productName: "Nutricost Pre-X Workout Complex Powder, Grape (60 servings)",
+    barcode: "810014670973",
     category: "Vitamins",
     formulaId: "nutricost-pre-x-workout-complex-powder-grape-60-servings",
     audience: ADULT,
@@ -480,6 +505,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings",
     productName: "Nutricost Multi Collagen (Hair, Skin, Nails Formula), Hot Cocoa (30 servings)",
+    barcode: "810139571209",
     category: "Vitamins",
     formulaId: "nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings",
     audience: ADULT,
@@ -495,6 +521,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-vitamin-d3-gummies-5000-iu-120-gummies",
     productName: "Nutricost Vitamin D3 Gummies 5,000 IU (120 gummies)",
+    barcode: "810014673066",
     category: "Vitamins",
     formulaId: "nutricost-vitamin-d3-gummies-5000-iu-120-gummies",
     audience: ADULT,
@@ -542,8 +569,16 @@ if (_ids.size !== _ROWS.length) throw new Error('batch78 duplicate ids');
 if (_ROWS.some((r) => r.brand !== BRAND)) {
   throw new Error('batch78 writes Nutricost only');
 }
-if (_ROWS.some((r) => r.barcode)) {
-  throw new Error('batch78 must not attach an invented UPC');
+if (_ROWS.some((r) => r.barcode && !/^\d{12}$/.test(r.barcode))) {
+  throw new Error('batch78 barcode must be a 12-digit UPC-A');
+}
+if (_ROWS.some((r) => {
+  if (!r.barcode) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(r.barcode[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 !== Number(r.barcode[11]);
+})) {
+  throw new Error('batch78 barcode failed UPC-A check digit');
 }
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 3) {
   throw new Error('batch78 REUSE-formula tally drift');
