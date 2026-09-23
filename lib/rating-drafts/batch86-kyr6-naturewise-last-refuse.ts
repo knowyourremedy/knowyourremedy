@@ -172,6 +172,7 @@ const COMPACT: Compact[] = [
   {
     id: ORAL,
     productName: "NatureWise Oral Probiotics - Chewable Tablets (30 Count)",
+    barcode: "810157850867",
     category: "Digestive",
     formulaId: ORAL,
     audience: ADULT,
@@ -188,12 +189,13 @@ const COMPACT: Compact[] = [
       ["Stevia leaf extract", "limited", "steviaLeaf"],
     ],
     verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Inulin is Cleared fiber. Dicalcium phosphate is Cleared filler. This chewable is not a gummy. The 60 Count graphic prints the same Other Ingredients line, so they share formulaId. The 3 Pack multipack stays the batch82 OUT row and was not reopened. These supplement graphics do not print a GTIN-12, so no UPC is attached.",
-    cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/oral-probiotics-chewable-tablets; image ${img("NW-OralHealthProbiotics-7-Supplement301_1.jpg")}) other-ingredients: Isomalt, inulin, behenoyl polyoxyl-8 glycerides, dicalcium phosphate, natural peppermint flavor, stevia leaf extract. The 60 Count graphic prints the same Other Ingredients line (${img("NW-OralHealthProbiotics-7-Supplement601.jpg")}). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. These graphics do not print a GTIN-12, so no UPC is attached. No DailyMed drug SPL.`,
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Inulin is Cleared fiber. Dicalcium phosphate is Cleared filler. This chewable is not a gummy. The 60 Count graphic prints the same Other Ingredients line, so they share formulaId. The 3 Pack multipack stays the batch82 OUT row and was not reopened. UPC-A 810157850867 is the published GTIN-12 for this 30 Count (Target primary barcode, 30 chewable tablets). The 60 Count and 3 Pack codes are not copied onto this count.",
+    cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/oral-probiotics-chewable-tablets; image ${img("NW-OralHealthProbiotics-7-Supplement301_1.jpg")}) other-ingredients: Isomalt, inulin, behenoyl polyoxyl-8 glycerides, dicalcium phosphate, natural peppermint flavor, stevia leaf extract. The 60 Count graphic prints the same Other Ingredients line (${img("NW-OralHealthProbiotics-7-Supplement601.jpg")}). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157850867 is the published GTIN-12 for this 30 Count (Target primary barcode, 30 chewable tablets). The 60 Count and 3 Pack codes are not this row. No DailyMed drug SPL.`,
   },
   {
     id: "naturewise-b86-oral-probiotics-chewable-60",
     productName: "NatureWise Oral Probiotics - Chewable Tablets (60 Count)",
+    barcode: "858081006356",
     category: "Digestive",
     formulaId: ORAL,
     audience: ADULT,
@@ -210,8 +212,8 @@ const COMPACT: Compact[] = [
       ["Stevia leaf extract", "limited", "steviaLeaf"],
     ],
     verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Same Other Ingredients line as the 30 Count, so they share formulaId. This chewable is not a gummy. This graphic does not print a GTIN-12, so no UPC is attached. The 30 Count barcode is not copied onto this count.",
-    cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/oral-probiotics-chewable-tablets; image ${img("NW-OralHealthProbiotics-7-Supplement601.jpg")}) other-ingredients: Isomalt, inulin, behenoyl polyoxyl-8 glycerides, dicalcium phosphate, natural peppermint flavor, stevia leaf extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. This graphic does not print a GTIN-12, so no UPC is attached. No DailyMed drug SPL.`,
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Same Other Ingredients line as the 30 Count, so they share formulaId. This chewable is not a gummy. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count.",
+    cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/oral-probiotics-chewable-tablets; image ${img("NW-OralHealthProbiotics-7-Supplement601.jpg")}) other-ingredients: Isomalt, inulin, behenoyl polyoxyl-8 glycerides, dicalcium phosphate, natural peppermint flavor, stevia leaf extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count. No DailyMed drug SPL.`,
   },
 ];
 
@@ -268,8 +270,8 @@ if (_ROWS.some((r) => /\boil\b/i.test(r.productName) && !/softgel|capsule|gumm|t
 }
 const _upcById: Record<string, string | undefined> = {
   'naturewise-b86-vegan-k2-mk7': '810157852861',
-  'naturewise-b86-oral-probiotics-chewable': undefined,
-  'naturewise-b86-oral-probiotics-chewable-60': undefined,
+  'naturewise-b86-oral-probiotics-chewable': '810157850867',
+  'naturewise-b86-oral-probiotics-chewable-60': '858081006356',
 };
 for (const record of _ROWS) {
   if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
