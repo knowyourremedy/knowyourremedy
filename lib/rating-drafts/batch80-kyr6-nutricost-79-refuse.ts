@@ -132,6 +132,7 @@ type Compact = {
   id: string;
   productName: string;
   category: string;
+  barcode?: string;
   formulaId: string;
   audience: typeof ADULT | typeof KIDS;
   minAge: number;
@@ -156,11 +157,18 @@ function expand(d: Compact): RatingRecord {
     const pair = main[d.category as keyof typeof main];
     if (pair) alts.push(alt(pair[0], pair[1]));
   }
+  const cite = d.barcode
+    ? d.cite.replace(
+        /No 12-digit UPC printed on the PDP — omitted\./,
+        `UPC-A ${d.barcode} attached from nutricost.com variant barcode (exact count tab).`,
+      )
+    : d.cite;
   return row({
     id: d.id,
     productName: d.productName,
     brand: BRAND,
     category: d.category,
+    barcode: d.barcode,
     formulaId: d.formulaId,
     audience: d.audience,
     minAge: d.minAge,
@@ -168,13 +176,13 @@ function expand(d: Compact): RatingRecord {
     productType: d.productType,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
-      flag(n, risk, labelCite(d.cite, METH[meth])),
+      flag(n, risk, labelCite(cite, METH[meth])),
     ),
     verdict: d.verdict,
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. Adults unless the name says kids. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
+    sourcesGeneral: [`${cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   });
 }
 
@@ -184,6 +192,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-organic-cats-claw-liquid-drops",
     productName: "Nutricost Organic Cat's Claw Liquid Drops",
+    barcode: "810139576556",
     category: "Immune Support",
     formulaId: "nutricost-b80-organic-cats-claw-liquid-drops",
     audience: ADULT,
@@ -207,6 +216,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-ubiquinol-120-softgels",
     productName: "Nutricost Ubiquinol Softgels (120 softgels)",
+    barcode: "810014678931",
     category: "Vitamins",
     formulaId: "nutricost-b80-ubiquinol-120-softgels",
     audience: ADULT,
@@ -236,6 +246,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-coq10-200mg-120-softgels",
     productName: "Nutricost CoQ10 Softgels (200 mg, 120 softgels)",
+    barcode: "857077008275",
     category: "Vitamins",
     formulaId: "nutricost-b80-coq10-200mg-120-softgels",
     audience: ADULT,
@@ -262,6 +273,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-kids-fiber-gummies",
     productName: "Nutricost Kids Fiber Gummies (60 gummies)",
+    barcode: "810139578185",
     category: "Digestive",
     formulaId: "nutricost-b80-kids-fiber-gummies",
     audience: KIDS,
@@ -292,6 +304,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-suntheanine-60-capsules",
     productName: "Nutricost Suntheanine (60 capsules)",
+    barcode: "810139578390",
     category: "Sleep",
     formulaId: "nutricost-b80-suntheanine-60-capsules",
     audience: ADULT,
@@ -320,6 +333,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-echinacea-goldenseal-240-capsules",
     productName: "Nutricost Echinacea & Goldenseal Root Capsules (240 capsules)",
+    barcode: "810014675022",
     category: "Immune Support",
     formulaId: "nutricost-b80-echinacea-goldenseal-240-capsules",
     audience: ADULT,
@@ -349,6 +363,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-marshmallow-root-120-capsules",
     productName: "Nutricost Marshmallow Root Capsules (120 capsules)",
+    barcode: "810014671413",
     category: "Digestive",
     formulaId: BROOM,
     audience: ADULT,
@@ -378,6 +393,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-l-tryptophan-120-capsules",
     productName: "Nutricost L-Tryptophan Capsules (120 capsules)",
+    barcode: "702669933070",
     category: "Sleep",
     formulaId: "nutricost-b80-l-tryptophan-120-capsules",
     audience: ADULT,
@@ -411,6 +427,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b80-cordyceps-180-capsules",
     productName: "Nutricost Made With Organic Cordyceps Capsules (180 capsules)",
+    barcode: "810014670812",
     category: "Vitamins",
     formulaId: "nutricost-b80-cordyceps-180-capsules",
     audience: ADULT,
@@ -462,7 +479,17 @@ if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch80 every row needs fo
 const _ids = new Set(_ROWS.map((r) => r.id));
 if (_ids.size !== _ROWS.length) throw new Error('batch80 duplicate ids');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch80 writes Nutricost only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch80 must not attach an invented UPC');
+if (_ROWS.some((r) => r.barcode && !/^\d{12}$/.test(r.barcode))) {
+  throw new Error('batch80 barcode must be a 12-digit UPC-A');
+}
+if (_ROWS.some((r) => {
+  if (!r.barcode) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(r.barcode[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 !== Number(r.barcode[11]);
+})) {
+  throw new Error('batch80 barcode failed UPC-A check digit');
+}
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 1) throw new Error('batch80 REUSE-formula tally drift');
 if (_ROWS.filter((r) => r.formulaId === BROOM).length !== 1) throw new Error('batch80 marshmallow must reuse the broom formula');
 if (_ROWS.some((r) => /toothpaste|sprouts|now foods|naturewise|welmate|goodsense|healtha2z|time-cap|a\+health/i.test(r.brand + r.productName))) {

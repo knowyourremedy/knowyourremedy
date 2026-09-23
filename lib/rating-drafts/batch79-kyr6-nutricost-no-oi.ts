@@ -122,6 +122,7 @@ type Compact = {
   id: string;
   productName: string;
   category: string;
+  barcode?: string;
   formulaId: string;
   audience: typeof ADULT | typeof KIDS;
   minAge: number;
@@ -146,11 +147,18 @@ function expand(d: Compact): RatingRecord {
     const pair = main[d.category as keyof typeof main];
     if (pair) alts.push(alt(pair[0], pair[1]));
   }
+  const cite = d.barcode
+    ? d.cite.replace(
+        /No 12-digit UPC decoded[^.]*\./,
+        `UPC-A ${d.barcode} attached from nutricost.com variant barcode (exact count tab).`,
+      )
+    : d.cite;
   return row({
     id: d.id,
     productName: d.productName,
     brand: BRAND,
     category: d.category,
+    barcode: d.barcode,
     formulaId: d.formulaId,
     audience: d.audience,
     minAge: d.minAge,
@@ -158,13 +166,13 @@ function expand(d: Compact): RatingRecord {
     productType: d.productType,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
-      flag(n, risk, labelCite(d.cite, METH[meth])),
+      flag(n, risk, labelCite(cite, METH[meth])),
     ),
     verdict: d.verdict,
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. Adults unless the name says kids. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
+    sourcesGeneral: [`${cite} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   });
 }
 
@@ -179,6 +187,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-reishi-120-capsules",
     productName: "Nutricost Made With Organic Reishi Mushroom Capsules (120 capsules)",
+    barcode: "810014670294",
     category: "Vitamins",
     formulaId: "nutricost-b79-reishi-120-capsules",
     audience: ADULT,
@@ -194,6 +203,7 @@ const COMPACT: Compact[] = [
   {
     id: CINNAMON,
     productName: "Nutricost Cinnamon Made with Organic Ceylon Capsules (240 capsules)",
+    barcode: "810139574453",
     category: "Vitamins",
     formulaId: CINNAMON,
     audience: ADULT,
@@ -209,6 +219,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-cinnamon-ceylon-150-capsules",
     productName: "Nutricost Cinnamon Made with Organic Ceylon Capsules (150 capsules)",
+    barcode: "810014670454",
     category: "Vitamins",
     formulaId: CINNAMON,
     audience: ADULT,
@@ -224,6 +235,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-chamomile-240-capsules",
     productName: "Nutricost Chamomile Capsules (240 capsules)",
+    barcode: "810014674063",
     category: "Sleep",
     formulaId: "nutricost-b79-chamomile-240-capsules",
     audience: ADULT,
@@ -239,6 +251,7 @@ const COMPACT: Compact[] = [
   {
     id: LIVER,
     productName: "Nutricost Grass-Fed Desiccated Beef Liver Capsules (240 capsules)",
+    barcode: "810014672304",
     category: "Vitamins",
     formulaId: LIVER,
     audience: ADULT,
@@ -254,6 +267,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-beef-liver-120-capsules",
     productName: "Nutricost Grass-Fed Desiccated Beef Liver Capsules (120 capsules)",
+    barcode: "810014678450",
     category: "Vitamins",
     formulaId: LIVER,
     audience: ADULT,
@@ -269,6 +283,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-calcium-lactate-180-capsules",
     productName: "Nutricost Calcium Lactate Capsules (180 capsules)",
+    barcode: "810014678757",
     category: "Vitamins",
     formulaId: "nutricost-b79-calcium-lactate-180-capsules",
     audience: ADULT,
@@ -284,6 +299,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-noni-240-capsules",
     productName: "Nutricost Made With Organic Noni Capsules (240 capsules)",
+    barcode: "810014672809",
     category: "Vitamins",
     formulaId: "nutricost-b79-noni-240-capsules",
     audience: ADULT,
@@ -299,6 +315,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-cordyceps-90-capsules",
     productName: "Nutricost Made With Organic Cordyceps Capsules (90 capsules)",
+    barcode: "810014670829",
     category: "Vitamins",
     formulaId: "nutricost-b79-cordyceps-90-capsules",
     audience: ADULT,
@@ -314,6 +331,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-creatine-hcl-120-capsules",
     productName: "Nutricost Creatine HCl Capsules (120 capsules)",
+    barcode: "810139575252",
     category: "Vitamins",
     formulaId: "nutricost-b79-creatine-hcl-120-capsules",
     audience: ADULT,
@@ -329,6 +347,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-hmb-powder-250g",
     productName: "Nutricost HMB Powder (250 g)",
+    barcode: "857077008916",
     category: "Vitamins",
     formulaId: "nutricost-b79-hmb-powder-250g",
     audience: ADULT,
@@ -344,6 +363,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-l-leucine-powder-500g",
     productName: "Nutricost L-Leucine Powder, Unflavored (500 g)",
+    barcode: "702669932103",
     category: "Vitamins",
     formulaId: "nutricost-b79-l-leucine-powder-500g",
     audience: ADULT,
@@ -359,6 +379,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-chaga-powder-8oz",
     productName: "Nutricost Organic Chaga Mushroom Powder (8 oz)",
+    barcode: "810014670355",
     category: "Vitamins",
     formulaId: "nutricost-b79-chaga-powder-8oz",
     audience: ADULT,
@@ -389,6 +410,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-beef-gelatin-powder-1lb",
     productName: "Nutricost Beef Gelatin Powder (1 lb)",
+    barcode: "810139571179",
     category: "Vitamins",
     formulaId: "nutricost-b79-beef-gelatin-powder-1lb",
     audience: ADULT,
@@ -419,6 +441,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-calcium-hydroxyapatite-120-capsules",
     productName: "Nutricost Calcium Hydroxyapatite Capsules (120 capsules)",
+    barcode: "810139576983",
     category: "Vitamins",
     formulaId: "nutricost-b79-calcium-hydroxyapatite-120-capsules",
     audience: ADULT,
@@ -434,6 +457,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-eaa-unflavored-30-servings",
     productName: "Nutricost EAA Powder, Unflavored (30 servings)",
+    barcode: "810014674223",
     category: "Vitamins",
     formulaId: "nutricost-b79-eaa-unflavored-30-servings",
     audience: ADULT,
@@ -449,6 +473,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-peak-atp-120-capsules",
     productName: "Nutricost ATP Supplement (120 capsules)",
+    barcode: "810139576648",
     category: "Vitamins",
     formulaId: "nutricost-b79-peak-atp-120-capsules",
     audience: ADULT,
@@ -464,6 +489,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-tongkat-ali-60-capsules",
     productName: "Nutricost Tongkat Ali Capsules (60 capsules)",
+    barcode: "810014679525",
     category: "Vitamins",
     formulaId: "nutricost-b79-tongkat-ali-60-capsules",
     audience: ADULT,
@@ -479,6 +505,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-tongkat-ali-120-capsules",
     productName: "Nutricost Tongkat Ali Capsules (120 capsules)",
+    barcode: "810014678610",
     category: "Vitamins",
     formulaId: "nutricost-b79-tongkat-ali-120-capsules",
     audience: ADULT,
@@ -494,6 +521,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-myhmb-120-capsules",
     productName: "Nutricost Performance myHMB Capsules (120 capsules)",
+    barcode: "810139571728",
     category: "Vitamins",
     formulaId: "nutricost-b79-myhmb-120-capsules",
     audience: ADULT,
@@ -509,6 +537,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-white-willow-120-capsules",
     productName: "Nutricost White Willow Bark Capsules (120 capsules)",
+    barcode: "810014679990",
     category: "Vitamins",
     formulaId: "nutricost-b79-white-willow-120-capsules",
     audience: ADULT,
@@ -524,6 +553,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-malate-180-capsules",
     productName: "Nutricost Magnesium Malate Capsules (180 capsules)",
+    barcode: "810014672960",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-malate-180-capsules",
     audience: ADULT,
@@ -539,6 +569,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-oxide-375mg-240-capsules",
     productName: "Nutricost Magnesium Oxide Capsules (375 mg, 240 capsules)",
+    barcode: "857077008053",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-oxide-375mg-240-capsules",
     audience: ADULT,
@@ -554,6 +585,7 @@ const COMPACT: Compact[] = [
   {
     id: ALA,
     productName: "Nutricost Alpha Lipoic Acid Capsules (120 capsules)",
+    barcode: "810014671666",
     category: "Vitamins",
     formulaId: ALA,
     audience: ADULT,
@@ -569,6 +601,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-ala-240-capsules",
     productName: "Nutricost Alpha Lipoic Acid Capsules (240 capsules)",
+    barcode: "702669931861",
     category: "Vitamins",
     formulaId: ALA,
     audience: ADULT,
@@ -584,6 +617,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-complex-regular-240-capsules",
     productName: "Nutricost Magnesium+ Regular Strength Capsules (240 capsules)",
+    barcode: "810139571308",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-complex-regular-240-capsules",
     audience: ADULT,
@@ -599,6 +633,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-soluble-fiber-berry-30-servings",
     productName: "Nutricost Soluble Fiber, Berry (30 servings)",
+    barcode: "810139572633",
     category: "Digestive",
     formulaId: "nutricost-b79-soluble-fiber-berry-30-servings",
     audience: ADULT,
@@ -614,6 +649,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-kids-vitamin-d3-gummies",
     productName: "Nutricost Kids Vitamin D3 Gummies",
+    barcode: "810014672519",
     category: "Vitamins",
     formulaId: "nutricost-b79-kids-vitamin-d3-gummies",
     audience: KIDS,
@@ -624,11 +660,12 @@ const COMPACT: Compact[] = [
     flags: [["Glucose syrup", "cleared", "glucoseSyrup"], ["Sugar", "limited", "sugar"], ["Glucose", "limited", "glucose"], ["Pectin", "cleared", "pectin"], ["Citric acid", "cleared", "citric"], ["Sodium citrate", "cleared", "citrate"], ["Natural flavors", "limited", "flavors"], ["Vegetable oil", "high", "vegOilGummy"], ["Carnauba wax", "cleared", "wax"], ["Fruit and vegetable juice concentrate (for color)", "cleared", "juiceColor"]],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Driver is Vegetable oil. Vegetable oil in this gummy is the gummy seed-oil High row. Avoid needs High. Limited-only never Avoid. The panel image did not print a minimum age; the kids name is carried as minAge 4.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-kids-vitamin-d-gummies; image https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-kids-vitamin-d3-gummies-173862.jpg) other-ingredients: Glucose syrup, sugar, glucose, pectin, citric acid, sodium citrate, natural flavors, vegetable oil (contains carnauba wax), fruit and vegetable juice concentrate (for color). Brand-site pack image is the pin (the label image was read before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-kids-vitamin-d-gummies; image https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-kids-vitamin-d3-gummies-173862.jpg) other-ingredients: Glucose syrup, sugar, glucose, pectin, citric acid, sodium citrate, natural flavors, vegetable oil (contains carnauba wax), fruit and vegetable juice concentrate (for color). Brand-site pack image is the pin (the label image was read before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672519 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-b79-elderberry-gummies-vitamin-c-zinc",
     productName: "Nutricost Elderberry Gummies with Vitamin C & Zinc (90 gummies)",
+    barcode: "810014670041",
     category: "Immune Support",
     formulaId: "nutricost-b79-elderberry-gummies-vitamin-c-zinc",
     audience: ADULT,
@@ -639,11 +676,12 @@ const COMPACT: Compact[] = [
     flags: [["Glucose syrup", "cleared", "glucoseSyrup"], ["Isomalt", "limited", "polyol"], ["Sugar", "limited", "sugar"], ["Glucose", "limited", "glucose"], ["Pectin", "cleared", "pectin"], ["Citric acid", "cleared", "citric"], ["Sodium citrate", "cleared", "citrate"], ["Natural flavors", "limited", "flavors"], ["Vegetable oil", "high", "vegOilGummy"], ["Carnauba wax", "cleared", "wax"]],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Driver is Vegetable oil. Vegetable oil in this gummy is the gummy seed-oil High row. Avoid needs High. Limited-only never Avoid.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-elderberry-90mg-with-vitamin-c-zinc-90-gummies; image https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-elderberry-gummies-with-vitamin-c-zinc-940698.jpg) other-ingredients: Glucose syrup, isomalt, sugar, glucose, pectin, citric acid, sodium citrate, natural flavors, vegetable oil (contains carnauba wax). Brand-site pack image is the pin (the label image was read before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-elderberry-90mg-with-vitamin-c-zinc-90-gummies; image https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-elderberry-gummies-with-vitamin-c-zinc-940698.jpg) other-ingredients: Glucose syrup, isomalt, sugar, glucose, pectin, citric acid, sodium citrate, natural flavors, vegetable oil (contains carnauba wax). Brand-site pack image is the pin (the label image was read before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670041 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-b79-elderberry-gummies-90",
     productName: "Nutricost Elderberry Gummies (90 gummies)",
+    barcode: "810014670041",
     category: "Immune Support",
     formulaId: "nutricost-b79-elderberry-gummies-90",
     audience: ADULT,
@@ -659,6 +697,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-elderberry-gummies-60",
     productName: "Nutricost Elderberry Gummies (60 gummies)",
+    barcode: "810014672670",
     category: "Immune Support",
     formulaId: "nutricost-b79-elderberry-gummies-60",
     audience: ADULT,
@@ -674,6 +713,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-mushroom-complex-120-capsules",
     productName: "Nutricost Mushroom Complex Capsules (120 capsules)",
+    barcode: "810014674926",
     category: "Vitamins",
     formulaId: "nutricost-b79-mushroom-complex-120-capsules",
     audience: ADULT,
@@ -704,6 +744,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-oxide-750mg-240-capsules",
     productName: "Nutricost Magnesium Oxide Capsules (750 mg, 240 capsules)",
+    barcode: "702669934398",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-oxide-750mg-240-capsules",
     audience: ADULT,
@@ -719,6 +760,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-magnesium-oxide-400mg-240-capsules",
     productName: "Nutricost Magnesium Oxide Capsules (400 mg, 240 capsules)",
+    barcode: "810139578116",
     category: "Digestive",
     formulaId: "nutricost-b79-magnesium-oxide-400mg-240-capsules",
     audience: ADULT,
@@ -734,6 +776,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-keratin-120-capsules",
     productName: "Nutricost Keratin Capsules (120 capsules)",
+    barcode: "810014678740",
     category: "Vitamins",
     formulaId: "nutricost-b79-keratin-120-capsules",
     audience: ADULT,
@@ -749,6 +792,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-potassium-magnesium-citrate-240-capsules",
     productName: "Nutricost Potassium + Magnesium Citrate Capsules (240 capsules)",
+    barcode: "810014673509",
     category: "Digestive",
     formulaId: "nutricost-b79-potassium-magnesium-citrate-240-capsules",
     audience: ADULT,
@@ -764,6 +808,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-bcaa-unflavored-90-servings",
     productName: "Nutricost BCAA Powder, Unflavored (90 servings)",
+    barcode: "702669931618",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-bcaa-powder-30-servings",
     audience: ADULT,
@@ -779,6 +824,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-niacin-500mg-30-capsules",
     productName: "Nutricost Vitamin B3 Niacin Capsules (500 mg, 30 capsules)",
+    barcode: "810014677279",
     category: "Vitamins",
     formulaId: "nutricost-b79-niacin-500mg-30-capsules",
     audience: ADULT,
@@ -794,6 +840,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-psyllium-husk-500-capsules",
     productName: "Nutricost Psyllium Husk Capsules (500 capsules)",
+    barcode: "702669932653",
     category: "Digestive",
     formulaId: "nutricost-b79-psyllium-husk-500-capsules",
     audience: ADULT,
@@ -809,6 +856,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-turmeric-90-capsules",
     productName: "Nutricost Turmeric Capsules (90 capsules)",
+    barcode: "810139575757",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-turmeric-capsules-120-capsules",
     audience: ADULT,
@@ -824,6 +872,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-vitamin-b-complex-240-capsules",
     productName: "Nutricost Vitamin B Complex Capsules (240 capsules)",
+    barcode: "702669937573",
     category: "Vitamins",
     formulaId: "nutricost-b79-vitamin-b-complex-240-capsules",
     audience: ADULT,
@@ -839,6 +888,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-kelp-120-capsules",
     productName: "Nutricost Kelp Capsules (120 capsules)",
+    barcode: "810014674896",
     category: "Vitamins",
     formulaId: "nutricost-b79-kelp-120-capsules",
     audience: ADULT,
@@ -854,6 +904,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-luteolin-rutin-120-capsules",
     productName: "Nutricost Luteolin with Rutin Complex Capsules (120 capsules)",
+    barcode: "810014673974",
     category: "Vitamins",
     formulaId: "nutricost-b79-luteolin-rutin-120-capsules",
     audience: ADULT,
@@ -869,6 +920,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-b79-l-isoleucine-240-capsules",
     productName: "Nutricost L-Isoleucine Capsules (240 capsules)",
+    barcode: "702669934411",
     category: "Vitamins",
     formulaId: "nutricost-b79-l-isoleucine-240-capsules",
     audience: ADULT,
@@ -1016,7 +1068,17 @@ if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch79 every row needs fo
 const _ids = new Set(_ROWS.map((r) => r.id));
 if (_ids.size !== _ROWS.length) throw new Error('batch79 duplicate ids');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch79 writes Nutricost only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch79 must not attach an invented UPC');
+if (_ROWS.some((r) => r.barcode && !/^\d{12}$/.test(r.barcode))) {
+  throw new Error('batch79 barcode must be a 12-digit UPC-A');
+}
+if (_ROWS.some((r) => {
+  if (!r.barcode) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(r.barcode[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 !== Number(r.barcode[11]);
+})) {
+  throw new Error('batch79 barcode failed UPC-A check digit');
+}
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 5) throw new Error('batch79 REUSE-formula tally drift');
 if (_ROWS.some((r) => /toothpaste|sprouts|now foods|naturewise|welmate|goodsense|healtha2z|time-cap|a\+health/i.test(r.brand + r.productName))) {
   throw new Error('batch79 leftover 3P / Sprouts / toothpaste / NOW must stay out');

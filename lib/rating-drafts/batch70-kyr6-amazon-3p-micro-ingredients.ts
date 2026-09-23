@@ -218,6 +218,8 @@ export const BATCH70_CATCHUP_BARCODES: Record<string, string> = {
   [D3_5000]: '850056167819',
   [MG_PEACH]: '850056167741',
   [FO_LEMON_120]: '850056167222',
+  [GLUCOSAMINE]: '850069023232',
+  [FO_LEMON]: '850015616068',
 };
 
 export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
@@ -304,6 +306,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     productName: 'Glucosamine Chondroitin MSM & Turmeric 7-in-1 Tablets (300 ct)',
     brand: BRAND,
     category: PAIN_FEVER,
+    barcode: BATCH70_CATCHUP_BARCODES[GLUCOSAMINE],
     formulaId: GLUCOSAMINE,
     audience: ADULT,
     minAge: 18,
@@ -342,7 +345,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Glucosamine Chondroitin MSM & Turmeric 7-in-1 300 bisected tablets = Caution. Driver is unnamed “coating” (Vegetable Coating / Vegetable-Based Tablet Coating Caution; not the named HPMC+glycerin Cleared coat). ${COAT_TAP} Current iHerb / Vitacost OI: Microcrystalline cellulose, croscarmellose sodium, coating, magnesium stearate. Live Amazon US B0DK683WHV — this is the parked ex-Elements Glucosamine 3P SKU. MCC / croscarmellose / magnesium stearate are Cleared. No High. ${LIMITED_STACK} Do not invent a coat recipe. Vitacost UPC field empty this hunt — omitted. Joint actives listed neutrally — this draft grades inactives only. Own formulaId. No DailyMed drug SPL. Adults. Draft, not verified.`,
+    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Glucosamine Chondroitin MSM & Turmeric 7-in-1 300 bisected tablets = Caution. Driver is unnamed “coating” (Vegetable Coating / Vegetable-Based Tablet Coating Caution; not the named HPMC+glycerin Cleared coat). ${COAT_TAP} Current iHerb / Vitacost OI: Microcrystalline cellulose, croscarmellose sodium, coating, magnesium stearate. Live Amazon US B0DK683WHV — this is the parked ex-Elements Glucosamine 3P SKU. MCC / croscarmellose / magnesium stearate are Cleared. No High. ${LIMITED_STACK} Do not invent a coat recipe. Vitacost UPC field 850069023232 on the 300-ct bisected tablet PDP. Joint actives listed neutrally — this draft grades inactives only. Own formulaId. No DailyMed drug SPL. Adults. Draft, not verified.`,
     cleanAlternatives: GLUCOSAMINE_ALTS,
     sourcesGeneral: [`${CITE.glucosamine} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -386,6 +389,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     productName: 'Triple Strength Omega-3 Fish Oil Softgels, Lemon, 240 ct',
     brand: BRAND,
     category: VITAMINS,
+    barcode: BATCH70_CATCHUP_BARCODES[FO_LEMON],
     formulaId: FO_LEMON_FORMULA,
     audience: ADULT,
     minAge: 18,
@@ -404,7 +408,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
       flag('Purified water', 'cleared', labelCite(CITE.lemonFo, METH.water)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Triple Strength Omega-3 Fish Oil lemon 240-ct = Caution (Limited named lemon oil as flavor). Current Vitacost Ingredients: Softgel (gelatin, glycerin, natural lemon oil, purified water). Gelatin / glycerin / water are Cleared. No High. ${LIMITED_STACK} Marketing “enteric coated” is not printed on the OI line — do not invent enteric polymers. Distinct from older DSLD 231854 unflavored gelatin/glycerin/water fish oil. 120-ct shares formulaId \`${FO_LEMON_FORMULA}\` when this OI holds. 240-ct Vitacost UPC field empty this hunt — omitted. Contains fish (anchovies, sardines). No DailyMed drug SPL. Adults. Draft, not verified.`,
+    honestNote: `FOUNDER-LOCK DRAFT: Micro Ingredients Triple Strength Omega-3 Fish Oil lemon 240-ct = Caution (Limited named lemon oil as flavor). Current Vitacost Ingredients: Softgel (gelatin, glycerin, natural lemon oil, purified water). Gelatin / glycerin / water are Cleared. No High. ${LIMITED_STACK} Marketing “enteric coated” is not printed on the OI line — do not invent enteric polymers. Distinct from older DSLD 231854 unflavored gelatin/glycerin/water fish oil. 120-ct shares formulaId \`${FO_LEMON_FORMULA}\` when this OI holds. 240-ct Vitacost UPC field 850015616068. Contains fish (anchovies, sardines). No DailyMed drug SPL. Adults. Draft, not verified.`,
     cleanAlternatives: FO_ALTS,
     sourcesGeneral: [`${CITE.lemonFo} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -557,8 +561,8 @@ if (!gluc.inactiveIngredients.some((i) => /^coating$/i.test(i.name))) {
 if (gluc.inactiveIngredients.some((i) => /hpmc|hypromellose|glycerin/i.test(i.name))) {
   throw new Error('do not invent a named coat on glucosamine');
 }
-if (gluc.barcode) {
-  throw new Error('glucosamine must not attach an invented UPC');
+if (gluc.barcode !== '850069023232') {
+  throw new Error('glucosamine 300-ct must use Vitacost UPC 850069023232');
 }
 
 const peach = _ROWS.find((r) => r.id === MG_PEACH);
@@ -609,8 +613,8 @@ if (fo240?.verdict !== 'caution' || fo120?.verdict !== 'caution') {
 if (fo120.barcode !== '850056167222') {
   throw new Error('lemon FO 120 must use UPC 850056167222');
 }
-if (fo240.barcode) {
-  throw new Error('lemon FO 240 must not invent a UPC');
+if (fo240.barcode !== '850015616068') {
+  throw new Error('lemon FO 240 must use Vitacost UPC 850015616068');
 }
 
 if (_ROWS.filter((r) => r.formulaId === FO_LEMON_FORMULA).length !== 2) {
