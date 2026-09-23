@@ -76,3 +76,4 @@ export { BATCH75_KYR6_SPIRULINA_CAUTION } from './batch75-kyr6-spirulina-caution
 export { BATCH76_KYR6_AMAZON_3P_NUTRICOST } from './batch76-kyr6-amazon-3p-nutricost';
 export { BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL } from './batch77-kyr6-nutricost-token-backfill';
 export { BATCH78_KYR6_NUTRICOST_TOKEN_BACKFILL_2 } from './batch78-kyr6-nutricost-token-backfill-2';
+export { BATCH79_KYR6_NUTRICOST_NO_OI } from './batch79-kyr6-nutricost-no-oi';
