@@ -2369,6 +2369,84 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'upup-infants-apap-dyefree': catalogShot('upup-infants-apap-dyefree.jpg'),
   'upup-infants-ibu-dyefree': catalogShot('upup-infants-ibu-dyefree.jpg'),
+  // Pain & Fever leftover night run 2026-09-23 3:00 PT batch 1.
+  // Recount on MAIN: this aisle still had 48 letter tiles (NOW joint
+  // drafts + Micro Ingredients 7-in-1). Sleep was not first unfinished.
+  // Per-id only so a shared formulaId does not inherit the wrong count.
+  // Micro Ingredients 7-in-1, 300 bisected tablets, UPC 850069023232
+  // (microingredients.com).
+  'micro-ingredients-glucosamine-7in1-300': catalogShot(
+    'micro-ingredients-glucosamine-7in1-300.jpg',
+  ),
+  // Glucosamine & Chondroitin with MSM, 180 capsules, UPC 733739031723.
+  'now-glucosamine-chondroitin-with-msm-180': catalogShot(
+    'now-glucosamine-chondroitin-with-msm-180.jpg',
+  ),
+  // Turmeric Curcumin 665 mg, 120 veg capsules, UPC 733739046390.
+  'now-turmeric-curcumin-120': catalogShot('now-turmeric-curcumin-120.jpg'),
+  // MSM 1,000 mg, 240 veg capsules, UPC 733739021212.
+  'now-msm-1-000-mg-240': catalogShot('now-msm-1-000-mg-240.jpg'),
+  // Turmeric & Bromelain, 90 veg capsules, UPC 733739031105.
+  'now-turmeric-bromelain-90': catalogShot('now-turmeric-bromelain-90.jpg'),
+  // Vegetarian Glucosamine & MSM, 120 veg capsules, UPC 733739031303.
+  'now-vegetarian-glucosamine-msm-120': catalogShot(
+    'now-vegetarian-glucosamine-msm-120.jpg',
+  ),
+  // BioCell Collagen hydrolyzed type II, 120 capsules, UPC 733739030085.
+  'now-biocell-collagen-hydrolyzed-type-ii-120': catalogShot(
+    'now-biocell-collagen-hydrolyzed-type-ii-120.jpg',
+  ),
+  // Vegetarian Glucosamine & MSM, 240 veg capsules, UPC 733739031310.
+  // Not the 120-count bottle.
+  'now-vegetarian-glucosamine-msm-240': catalogShot(
+    'now-vegetarian-glucosamine-msm-240.jpg',
+  ),
+  // Milk Thistle Extract with Turmeric, 120 veg capsules, UPC 733739047373.
+  'now-milk-thistle-extract-with-turmeric-120': catalogShot(
+    'now-milk-thistle-extract-with-turmeric-120.jpg',
+  ),
+  // Glucosamine & Chondroitin with MSM, 90 capsules, UPC 733739031709.
+  // Not the 180-count bottle.
+  'now-glucosamine-chondroitin-with-msm-90': catalogShot(
+    'now-glucosamine-chondroitin-with-msm-90.jpg',
+  ),
+  // Boswellia Extract, 120 veg capsules, UPC 733739046147.
+  'now-boswellia-extract-120': catalogShot('now-boswellia-extract-120.jpg'),
+  // CurcuBrain 400 mg, 50 veg capsules, UPC 733739023957.
+  'now-curcubrain-400-mg-50': catalogShot('now-curcubrain-400-mg-50.jpg'),
+  // Shark Cartilage 750 mg, 300 capsules, UPC 733739032720.
+  'now-shark-cartilage-750-mg-300': catalogShot(
+    'now-shark-cartilage-750-mg-300.jpg',
+  ),
+  // MSM 1,000 mg, 120 veg capsules, UPC 733739021205.
+  // Not the 240-count bottle.
+  'now-msm-methylsulfonylmethane-120': catalogShot(
+    'now-msm-methylsulfonylmethane-120.jpg',
+  ),
+  // Chondroitin Sulfate 600 mg, 120 capsules, UPC 733739032263.
+  'now-chondroitin-sulfate-600-mg-120': catalogShot(
+    'now-chondroitin-sulfate-600-mg-120.jpg',
+  ),
+  // CurcuFresh Curcumin 500 mg, 60 veg capsules, UPC 733739049377.
+  'now-curcufresh-curcumin-500-mg-60': catalogShot(
+    'now-curcufresh-curcumin-500-mg-60.jpg',
+  ),
+  // Eggshell Membrane 500 mg, 60 capsules, UPC 733739033857.
+  'now-eggshell-membrane-500-mg-60': catalogShot(
+    'now-eggshell-membrane-500-mg-60.jpg',
+  ),
+  // Turmeric Curcumin Phytosome with Meriva 500 mg, 60 veg capsules,
+  // UPC 733739046420.
+  'now-turmeric-curcumin-phytosome-with-meriva-60': catalogShot(
+    'now-turmeric-curcumin-phytosome-with-meriva-60.jpg',
+  ),
+  // Glucosamine & MSM, 180 capsules, UPC 733739032799.
+  'now-glucosamine-msm-180': catalogShot('now-glucosamine-msm-180.jpg'),
+  // Milk Thistle Extract with Turmeric, 60 veg capsules, UPC 733739047359.
+  // Not the 120-count bottle.
+  'now-milk-thistle-extract-with-turmeric-60': catalogShot(
+    'now-milk-thistle-extract-with-turmeric-60.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3881,6 +3959,102 @@ assertExactCarton(
   'sprouts-holy-basil-liquid',
   'Sprouts',
   'sprouts-holy-basil-liquid.jpg',
+);
+assertExactCarton(
+  'micro-ingredients-glucosamine-7in1-300',
+  'Micro Ingredients',
+  'micro-ingredients-glucosamine-7in1-300.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-chondroitin-with-msm-180',
+  'NOW',
+  'now-glucosamine-chondroitin-with-msm-180.jpg',
+);
+assertExactCarton(
+  'now-turmeric-curcumin-120',
+  'NOW',
+  'now-turmeric-curcumin-120.jpg',
+);
+assertExactCarton('now-msm-1-000-mg-240', 'NOW', 'now-msm-1-000-mg-240.jpg');
+assertExactCarton(
+  'now-turmeric-bromelain-90',
+  'NOW',
+  'now-turmeric-bromelain-90.jpg',
+);
+assertExactCarton(
+  'now-vegetarian-glucosamine-msm-120',
+  'NOW',
+  'now-vegetarian-glucosamine-msm-120.jpg',
+);
+assertExactCarton(
+  'now-biocell-collagen-hydrolyzed-type-ii-120',
+  'NOW',
+  'now-biocell-collagen-hydrolyzed-type-ii-120.jpg',
+);
+assertExactCarton(
+  'now-vegetarian-glucosamine-msm-240',
+  'NOW',
+  'now-vegetarian-glucosamine-msm-240.jpg',
+);
+assertExactCarton(
+  'now-milk-thistle-extract-with-turmeric-120',
+  'NOW',
+  'now-milk-thistle-extract-with-turmeric-120.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-chondroitin-with-msm-90',
+  'NOW',
+  'now-glucosamine-chondroitin-with-msm-90.jpg',
+);
+assertExactCarton(
+  'now-boswellia-extract-120',
+  'NOW',
+  'now-boswellia-extract-120.jpg',
+);
+assertExactCarton(
+  'now-curcubrain-400-mg-50',
+  'NOW',
+  'now-curcubrain-400-mg-50.jpg',
+);
+assertExactCarton(
+  'now-shark-cartilage-750-mg-300',
+  'NOW',
+  'now-shark-cartilage-750-mg-300.jpg',
+);
+assertExactCarton(
+  'now-msm-methylsulfonylmethane-120',
+  'NOW',
+  'now-msm-methylsulfonylmethane-120.jpg',
+);
+assertExactCarton(
+  'now-chondroitin-sulfate-600-mg-120',
+  'NOW',
+  'now-chondroitin-sulfate-600-mg-120.jpg',
+);
+assertExactCarton(
+  'now-curcufresh-curcumin-500-mg-60',
+  'NOW',
+  'now-curcufresh-curcumin-500-mg-60.jpg',
+);
+assertExactCarton(
+  'now-eggshell-membrane-500-mg-60',
+  'NOW',
+  'now-eggshell-membrane-500-mg-60.jpg',
+);
+assertExactCarton(
+  'now-turmeric-curcumin-phytosome-with-meriva-60',
+  'NOW',
+  'now-turmeric-curcumin-phytosome-with-meriva-60.jpg',
+);
+assertExactCarton(
+  'now-glucosamine-msm-180',
+  'NOW',
+  'now-glucosamine-msm-180.jpg',
+);
+assertExactCarton(
+  'now-milk-thistle-extract-with-turmeric-60',
+  'NOW',
+  'now-milk-thistle-extract-with-turmeric-60.jpg',
 );
 {
   const decongestant = previewOverlayImage({
