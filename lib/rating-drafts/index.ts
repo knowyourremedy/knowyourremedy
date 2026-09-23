@@ -74,3 +74,4 @@ export { BATCH73_KYR6_NOW_EXACT_S5_BACKFILL } from './batch73-kyr6-now-exact-s5-
 export { BATCH74_KYR6_NOW_TOKEN_STAMP_BACKFILL } from './batch74-kyr6-now-token-stamp-backfill';
 export { BATCH75_KYR6_SPIRULINA_CAUTION } from './batch75-kyr6-spirulina-caution';
 export { BATCH76_KYR6_AMAZON_3P_NUTRICOST } from './batch76-kyr6-amazon-3p-nutricost';
+export { BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL } from './batch77-kyr6-nutricost-token-backfill';
