@@ -333,7 +333,7 @@ if (!BATCH84_SKIPPED.every((s) => /not a no_OI hunt/i.test(s.reason) && /not an 
 }
 if (BATCH84_REFUSED.length !== 3) throw new Error('batch84 refuse tally drift');
 if (BATCH84_REFUSED.some((s) => !/`[^`]+`/.test(s.reason))) throw new Error('batch84 REFUSED must quote an exact panel string');
-const _written = _ROWS.map((r) => `${r.productName} ${r.inactiveIngredients.map((i) => i.name).join(' ')} ${r.sourcesGeneral.join(' ')}`).join('\n');
+const _written = _ROWS.map((r) => `${r.productName} ${r.inactiveIngredients.map((i) => i.name).join(' ')} ${(r.sourcesGeneral ?? []).join(' ')}`).join('\n');
 if (!/cranberry fruit/i.test(_written)) throw new Error('batch84 missing cranberry fruit');
 if (!/organic raspberry powder/i.test(_written)) throw new Error('batch84 missing organic raspberry powder');
 if (!/blueberry juice concentrate/i.test(_written)) throw new Error('batch84 missing blueberry juice concentrate');
