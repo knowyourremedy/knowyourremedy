@@ -77,6 +77,7 @@ import {
   BATCH74_KYR6_NOW_TOKEN_STAMP_BACKFILL,
   BATCH75_KYR6_SPIRULINA_CAUTION,
   BATCH76_KYR6_AMAZON_3P_NUTRICOST,
+  BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -174,6 +175,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH74_KYR6_NOW_TOKEN_STAMP_BACKFILL,
   ...BATCH75_KYR6_SPIRULINA_CAUTION,
   ...BATCH76_KYR6_AMAZON_3P_NUTRICOST,
+  ...BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
