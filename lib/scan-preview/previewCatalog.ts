@@ -558,6 +558,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Official DG Health mark already on disk. Per-id only.
   'dg-health-pain-relief-pm': brandMark('dg-health-mark.png'),
   'dg-health-sleep-aid-dph': brandMark('dg-health-mark.png'),
+  // Attempted Sleep leftover — night run 2026-09-23 5:30 PT batch 1.
+  // Sprouts Melatonin 3 mg 60ct (UPC 646670690303). shop.sprouts.com
+  // served a flat label, not a 3D bottle. Do not glue the label.
+  // Official Sprouts mark already on disk. Per-id only.
+  'sprouts-melatonin-3mg-tablets': brandMark('sprouts-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -811,6 +816,12 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Assured Headache PM — no barcode on the draft row; no retrievable
   // exact US 3D pack. No standalone Assured mark file.
   'assured-headache-pm': 'Assured',
+  // Attempted Sleep leftovers — night run 2026-09-23 5:30 PT batch 1.
+  // Nature's Way faces are count-specific. Do not glue one count.
+  // No standalone official Nature's Way colored mark file.
+  'natures-way-calmaid': "Nature's Way",
+  'natures-way-5-htp': "Nature's Way",
+  'natures-way-cortisol-manager': "Nature's Way",
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -2516,6 +2527,58 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Not the 60-softgel bottle.
   'now-turmeric-curcumin-gels-475-mg-120': catalogShot(
     'now-turmeric-curcumin-gels-475-mg-120.jpg',
+  ),
+  // Sleep leftover night run 2026-09-23 5:30 PT batch 1 — official US
+  // 3D packshots. Per-id only.
+  // Lemon balm liquid tincture 1 fl oz, UPC 646670620621
+  // (shop.sprouts.com).
+  'sprouts-lemonbalm-liquid': catalogShot('sprouts-lemonbalm-liquid.jpg'),
+  // Rhodiola liquid tincture 1 fl oz, UPC 646670620881.
+  'sprouts-rhodiola-liquid': catalogShot('sprouts-rhodiola-liquid.jpg'),
+  // Holy Basil powder capsules 60ct, UPC 646670621253.
+  'sprouts-holy-basil-cap': catalogShot('sprouts-holy-basil-cap.jpg'),
+  // Rhodiola powder capsules 60ct, UPC 646670621314.
+  'sprouts-rhodiola-powder-cap': catalogShot('sprouts-rhodiola-powder-cap.jpg'),
+  // Alcohol-free kava liquid 1 fl oz, UPC 646670631351.
+  // Not the alcohol kava tincture.
+  'sprouts-kava-liquid': catalogShot('sprouts-kava-liquid.jpg'),
+  // Alcohol-free valerian liquid 1 fl oz, UPC 646670621055.
+  // Not the grain-alcohol valerian tincture.
+  'sprouts-valerian-alcohol-free': catalogShot(
+    'sprouts-valerian-alcohol-free.jpg',
+  ),
+  // Kava powder capsules 90ct, UPC 646670155604.
+  'sprouts-kava-powder-cap': catalogShot('sprouts-kava-powder-cap.jpg'),
+  // WellMind Calming 100 tablets. medinatura.com SKU is UPC 787647704033.
+  'medinatura-wellmind-calming-tablets': catalogShot(
+    'medinatura-wellmind-calming-tablets.jpg',
+  ),
+  // BHI Calming Support 100 tablets. SKU is UPC 787647100101.
+  'medinatura-bhi-calming-support': catalogShot(
+    'medinatura-bhi-calming-support.jpg',
+  ),
+  // Sleep Tonight 28 tablets, UPC 763948004584 (naturesway.com).
+  'natures-way-sleep-tonight': catalogShot('natures-way-sleep-tonight.jpg'),
+  // Ashwagandha 60 capsules, UPC 033674153871.
+  'natures-way-ashwagandha-silicate': catalogShot(
+    'natures-way-ashwagandha-silicate.jpg',
+  ),
+  // Chamomile Flowers 100 capsules, UPC 033674116005.
+  'natures-way-chamomile-flowers': catalogShot(
+    'natures-way-chamomile-flowers.jpg',
+  ),
+  // Holy Basil standardized extract 60 capsules, UPC 033674154939.
+  'natures-way-holy-basil': catalogShot('natures-way-holy-basil.jpg'),
+  // Hops Flowers 100 capsules, UPC 033674141557.
+  'natures-way-hops-flowers': catalogShot('natures-way-hops-flowers.jpg'),
+  // Melissa-Lemon Balm Leaf 100 capsules, UPC 033674146507.
+  'natures-way-melissa-lemon-balm': catalogShot(
+    'natures-way-melissa-lemon-balm.jpg',
+  ),
+  // St. John's Wort standardized extract 90 capsules, UPC 033674630006.
+  // Not the whole-herb capsule row.
+  'natures-way-st-johns-wort-premium-extract': catalogShot(
+    'natures-way-st-johns-wort-premium-extract.jpg',
   ),
 };
 
