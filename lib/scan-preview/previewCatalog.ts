@@ -79,6 +79,7 @@ import {
   BATCH76_KYR6_AMAZON_3P_NUTRICOST,
   BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL,
   BATCH78_KYR6_NUTRICOST_TOKEN_BACKFILL_2,
+  BATCH79_KYR6_NUTRICOST_NO_OI,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -178,6 +179,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH76_KYR6_AMAZON_3P_NUTRICOST,
   ...BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL,
   ...BATCH78_KYR6_NUTRICOST_TOKEN_BACKFILL_2,
+  ...BATCH79_KYR6_NUTRICOST_NO_OI,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
