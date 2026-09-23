@@ -83,6 +83,7 @@ import {
   BATCH80_KYR6_NUTRICOST_79_REFUSE,
   BATCH81_KYR6_NUTRICOST_UBIQUINOL_240,
   BATCH82_KYR6_AMAZON_3P_NATUREWISE,
+  BATCH83_KYR6_NATUREWISE_TOKEN_BACKFILL,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -186,6 +187,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH80_KYR6_NUTRICOST_79_REFUSE,
   ...BATCH81_KYR6_NUTRICOST_UBIQUINOL_240,
   ...BATCH82_KYR6_AMAZON_3P_NATUREWISE,
+  ...BATCH83_KYR6_NATUREWISE_TOKEN_BACKFILL,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
