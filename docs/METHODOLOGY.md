@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 22, 2026 (Nutricost leftover clean tokens — founder stamp; MAIN methodology + SOURCES):** Caution — bare spirulina (for color); cassava dextrin; glucose; stevia extract; hydrogenated vegetable oil as OI (gummy fat blend still Avoid). Cleared — grape (fruit) powder (for color); cocoa powder alkali; choline chloride as OI. Avoid — titanium oxide when it is titanium dioxide. OCR junk stays refuse. no_OI 140 stays hunt list.
+
 **Changed Sept 22, 2026 (Nutricost batch76 clean tokens — founder stamp):** Caution — blue spirulina (for color); bare sugar; sodium caseinate; dextrin; starch sodium octenyl succinate; organic bamboo extract; unspecified starch; zinc oxide as OI. Cleared — beet root / beetroot powder (for color); Himalayan rock salt; pure olive oil as fill. Soybean oil stays the existing form split (gummy/lozenge Avoid; fill/cream Cleared). No grade change on that split.
 
 **Changed Sept 21, 2026 (Spirulina — founder stamp):** Spirulina powder as OI / blend = Caution (Limited). Unspecified algae + contamination class. Same neighborhood as chlorella powder. Spirulina extract as OI / color in a multi = Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Reopens the old TopCare + NOW spirulina refuse. Those SKUs may be written on a later KYR6 pass only. Blue spirulina (for color) is its own Caution row (Sept 22, 2026).
@@ -194,7 +196,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 
 | Additive | Also appears as | Why high-risk |
 |---|---|---|
-| Titanium dioxide | E171, "color added" | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. |
+| Titanium dioxide | E171, "color added", titanium oxide | EU banned as a food additive (2022) after EFSA could not rule out genotoxicity. Still GRAS in the US. Titanium oxide, when it is titanium dioxide, sits on this same High/Avoid row (Sept 22, 2026). FDA allow ≠ Clean. Do not invent a second class. |
 | Synthetic dyes | FD&C/D&C colors, aluminum lakes, D&C red #27 aluminum lake, D&C red #30 aluminum lake | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. D&C red #27 / #30 aluminum lake sit on this same High family — exact strings added. |
 | D&C red #27 aluminum lake / D&C red #30 aluminum lake — LOCKED (Sept 15, 2026) | D&C Red No. 27, D&C Red No. 30, red 27 lake, red 30 lake | Exact High-family strings. Same synthetic-dye Avoid row. |
 | Methylisothiazolinone / MIT (leave-on cream) — LOCKED (Sept 15, 2026) | MIT, methylisothiazolinone | High/Avoid in leave-on cream. Exact tokens. |
@@ -203,7 +205,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
 | Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
 | Aspartame — **LOCKED** | E951, NutraSweet | IARC 2B (2023) + founder's strict-sweetener stance. Cite IARC and JECFA both; "agencies split" does not downgrade this. |
-| Seed/industrial oils (gummies / lozenges) | soybean, canola, palm, safflower, sunflower, "vegetable oil" | Clean-standard exclusion for gummy formulations. Lozenges / cough drops with soybean oil sit on this same High row (Sept 16, 2026 founder lock). Gummy print of safflower / sunflower / palm stays High. Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Tablet / capsule / softgel / drop fill of Organic Palm Oil, High Oleic Safflower Oil, safflower oil as softgel fill, Medium Chain Glycerides, or named Medium Chain Triglycerides (derived from palm kernel oil) is NOT this High rule (see Cleared; tap both sides). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
+| Seed/industrial oils (gummies / lozenges) | soybean, canola, palm, safflower, sunflower, "vegetable oil" | Clean-standard exclusion for gummy formulations. Lozenges / cough drops with soybean oil sit on this same High row (Sept 16, 2026 founder lock). Gummy print of safflower / sunflower / palm stays High. Hydrogenated vegetable oil as a gummy fat blend stays Avoid (Sept 22, 2026 restamp — no grade change). Coconut oil alone in gummies/chews is NOT this High rule (see Cleared). Tablet / capsule / softgel / drop fill of Organic Palm Oil, High Oleic Safflower Oil, safflower oil as softgel fill, Medium Chain Glycerides, or named Medium Chain Triglycerides (derived from palm kernel oil) is NOT this High rule (see Cleared; tap both sides). Liquid-drop oil carriers and cream / topical vegetable oil use the same non-gummy rule as capsule/softgel fill; tap text required. |
 | soybean oil in lozenges / cough drops — LOCKED (Sept 16, 2026) | soybean oil (lozenge / cough drop) | Exact form lock. Same High as gummy seed-oil. Avoid. Distinct from Cleared soybean oil as cream/ointment base and from Cleared softgel fill oils. Restamp Sept 22, 2026 — no grade change: gummy/lozenge stays Avoid; fill/cream stays Cleared. |
 | Caramel color, UNDISCLOSED CLASS — **LOCKED (v1.6)** | "caramel color"/"caramel colour," no class stated | IARC 2B (4-MEI byproduct), Prop 65 listed, EU exposure limit. Undisclosed class treated as Class III/IV — burden on the label to prove otherwise. Exact restamp Sept 16, 2026 — no grade change: caramel color undisclosed class stays Avoid (existing 3-way split). |
 | Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
@@ -286,7 +288,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 
 | Additive | Notes |
 |---|---|
-| Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). |
+| Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). Distinct from Caution bare glucose (Sept 22, 2026). Do not flip this Cleared syrup row. |
 | Caramel sugar syrup (named syrup, lozenge sweetener) — LOCKED | Food sugar. NOT caramel color / E150d. |
 | Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. Microcrystalline Cellulosse is a MCC typo alias (Sept 16, 2026) — both strings written; honest note “label typo.” |
 | Ethylcellulose — LOCKED (Sept 15, 2026) | Cellulose coating family. |
@@ -394,7 +396,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Honey (oral sweetener) — LOCKED (Sept 14, 2026) | Cleared-class sweetener. Tap + honest: not for under 1. Not a grade change to Avoid. |
 | Oat in oral syrup (named food soother) — LOCKED (Sept 15, 2026) | Named food soother. |
 | Organic Myceliated Oats — LOCKED (Sept 16, 2026) | Exact token. Food-state oat / ferment. Cleared as an inactive. If it is the mushroom active, it is not an Other Ingredient — do not grade it as OI. |
-| Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Rebaudioside M / Reb M is a named high-purity steviol glycoside sibling (Sept 15, 2026). Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. |
+| Stevia / steviol glycosides, high-purity extract — **LOCKED (v1.6)** | EFSA ADI established (2011); no carcinogen/genotoxicity/endocrine signal. Rebaudioside M / Reb M is a named high-purity steviol glycoside sibling (Sept 15, 2026). Whole-leaf/crude stevia is a DIFFERENT case — see the Caution row; do not auto-Clean it. Bare stevia extract is its own Caution row (Sept 22, 2026). Do not flip this high-purity Cleared row. |
 | Monk fruit / mogrosides, high-purity extract — **LOCKED (v1.6)** | FDA GRAS; EFSA positive opinion (2024). Same whole-leaf-style caveat does not apply (no crude/whole-fruit version typically used). Lo Han Fruit Concentrate sits on this same monk fruit / luo han sibling row (Sept 16, 2026). Both strings written. |
 | Turmeric/curcumin, AS A COLOR ONLY — **LOCKED (v1.6)** | E100, trace color-additive use levels only. Liver-injury reports in the literature are tied to CONCENTRATED SUPPLEMENT-DOSE curcumin, a different context — does not apply to trace color use. Exact string restamped Sept 16, 2026 (no grade change): Natural Color (Turmeric). Distinct from Caution oleoresin turmeric. |
 | Riboflavin used as color — LOCKED (Sept 15, 2026) | Named B2. |
@@ -440,13 +442,13 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | glyceryl caprylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | glyceryl monostearate SE — LOCKED (Sept 15, 2026) | Exact words. Cleared. Alias of glyceryl stearate SE. Both strings written. |
 | Glycerol Monostearate / glyceryl monostearate / GMS — LOCKED (Sept 16, 2026) | Exact tokens. Both strings written. Cleared. Alias of each other. Distinct from glyceryl monostearate SE / glyceryl stearate SE. Distinct from Caution unspecified Mono- and Diglycerides. |
-| hydrogenated vegetable oil as cream fill — LOCKED (Sept 15, 2026) | Exact token as cream fill. Cleared. Tap fill ≠ gummy High. |
+| hydrogenated vegetable oil as cream fill — LOCKED (Sept 15, 2026) | Exact token as cream fill. Cleared. Tap fill ≠ gummy High. Distinct from Caution hydrogenated vegetable oil as OI and from Avoid gummy fat blend (Sept 22, 2026). Do not flip this cream-fill row. |
 | C12-15 alkyl benzoate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | ethylhexyl stearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | methyl gluceth-20 — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | methyl glucose sesquistearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Cleared methyl glucose dioleate. |
 | cetyl myristoleate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
-| choline bitartrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| choline bitartrate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Cleared choline chloride as OI (Sept 22, 2026). Both strings written. |
 | dipotassium glycyrrhizinate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Caution ammonium glycyrrhizin and from Cleared licorice extract. |
 | coco-caprylate/caprate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from cocoyl caprylocaprate. |
 | dimethiconol stearate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -489,7 +491,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Phosphates (unnamed, this gel) — LOCKED (Sept 17, 2026) | Exact token. Existing phosphate-salt Cleared-by-class (dicalcium / tricalcium / potassium phosphate). Tap: not phosphoric acid. Do not invent a phosphoric-acid grade. |
 | Polyglyceryl-10 laurate — LOCKED (Sept 21, 2026) | Exact INCI. Cleared. Distinct from polyglyceryl-3 diisostearate (already Cleared). Do not alias. |
 | Flax seed oil as fill/OI — LOCKED (Sept 21, 2026) | Named oil fill / OI. Cleared. NOT gummy High. NOT oil-bottle grade. Tap fill ≠ gummy High. Distinct from parked bottle / cooking oils. |
-| Cocoa powder — LOCKED (Sept 21, 2026) | Exact token as powder. Cleared. Distinct from Cleared cocoa seed butter / cocoa butter. Distinct from extract. Do not alias to cocoa butter. |
+| Cocoa powder — LOCKED (Sept 21, 2026) | Exact token as powder. Cleared. Distinct from Cleared cocoa seed butter / cocoa butter. Distinct from extract. Do not alias to cocoa butter. Cocoa powder alkali / cocoa powder (processed with alkali) is its own Cleared token (Sept 22, 2026). |
 | Phytosterols from soy, highly refined — LOCKED (Sept 21, 2026) | Highly refined soy phytosterols as OI. Cleared. Distinct from Limited bare soy. Lecithin stays Cleared. |
 | Taurine as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. |
 | L-arginine as OI — LOCKED (Sept 21, 2026) | Exact token when labeled as Other Ingredient. Cleared. Also written l-arginine. |
@@ -499,6 +501,9 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Beet root powder (for color) / beetroot powder (for color) — LOCKED (Sept 22, 2026) | Exact tokens as color. Same Cleared row as organic beet root / named plant color. Both strings written. Not a synthetic dye. |
 | Himalayan rock salt — LOCKED (Sept 22, 2026) | Exact token. Cleared. Salt / saline neighborhood with sodium chloride. Not a grade driver. |
 | Pure olive oil as fill — LOCKED (Sept 22, 2026) | Named oil as fill. Cleared. NOT gummy High. NOT oil-bottle grade. Tap fill ≠ gummy High. Distinct from parked bottle / cooking olive oil. |
+| Grape (fruit) powder (for color) — LOCKED (Sept 22, 2026) | Exact token as color. Cleared named plant color. Distinct from Cleared grape seed extract and from Cleared grape seed oil as cream fill. Not a synthetic dye. |
+| Cocoa powder alkali / cocoa powder (processed with alkali) — LOCKED (Sept 22, 2026) | Exact tokens. Both strings written. Cleared. Distinct from Cleared cocoa powder and from Cleared cocoa seed butter. Distinct from extract. |
+| Choline chloride as OI — LOCKED (Sept 22, 2026) | Exact token when labeled as Other Ingredient. Cleared. Distinct from Cleared choline bitartrate. |
 
 ### Caution — real but population/context-specific, not additive-scored
 
@@ -519,7 +524,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Sodium copper chlorophyllin (E141) — LOCKED (Sept 14, 2026) | Caution. Copper-complex color, not raw chlorophyll / parsley. Not a High/Avoid dye row. | Standard alternatives rule. Not Avoid. |
 | Organic cultured dextrose — LOCKED (Sept 14, 2026) | Caution. Ferment preservative system, not the same as dextrose/cane sugar sweetener. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Lactobacillus ferment (topical) — LOCKED (Sept 14, 2026) | Caution ferment system. | Standard alternatives rule. Not Avoid. |
-| Whole-leaf / crude stevia — **LOCKED (Sept 14, 2026 housekeeping)** | Do not auto-Clean. Different case from high-purity steviol glycosides (Cleared). Already stated on the Cleared row; this is the Caution row so it is not a missing-row. | Standard alternatives rule. Not Avoid. |
+| Whole-leaf / crude stevia — **LOCKED (Sept 14, 2026 housekeeping)** | Do not auto-Clean. Different case from high-purity steviol glycosides (Cleared). Already stated on the Cleared row; this is the Caution row so it is not a missing-row. Distinct from Caution stevia extract (Sept 22, 2026). | Standard alternatives rule. Not Avoid. |
 | Methacrylic acid copolymer / unnamed delayed-release composites — **LOCKED (Sept 14, 2026 housekeeping)** | Caution until specified. Enteric / delayed-release coat family. Unnamed coating blend / bare Enteric Coating sit on this same Caution row (Sept 16, 2026). Do not invent Clean or Avoid from the coat name alone. | Standard alternatives rule. Not Avoid. |
 | Unnamed coating blend / Enteric Coating (bare) — LOCKED (Sept 16, 2026) | Exact tokens. Same Caution as unnamed delayed-release / enteric coat family. Already locked; restamped. | Standard alternatives rule. Not Avoid. |
 | Vegetable-Based Tablet Coating — LOCKED (Sept 16, 2026) | Exact token. Unnamed / blank coat. Named wax / GMS stays Cleared. Vegetable Coating NAMED as (HPMC, glycerin) is the Cleared named-coat row — not this blank Caution row. | Standard alternatives rule. Not Avoid. |
@@ -674,14 +679,19 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | sodium pyruvate — LOCKED (Sept 16, 2026) | Exact token. Caution. | Standard alternatives rule. Not Avoid. |
 | Lithium Magnesium Sodium Silicate — LOCKED (Sept 17, 2026) | Exact token. Laponite-class clay thickener. Silicate neighborhood with calcium silicate / magnesium trisilicate. Not the SiO2 nanoparticle cap. Not kaolin (Cleared) and not calcined kaolin. | Standard alternatives rule. Not Avoid. |
 | Sodium Hypochlorite (Trace) — LOCKED (Sept 17, 2026) | Exact token. Residual oxidizer. Caution. FDA wound-wash allow ≠ Clean. Distinct from Cleared Electrolyzed Water (HOCl vehicle). | Standard alternatives rule. Not Avoid. |
-| Blue spirulina (for color) — LOCKED (Sept 22, 2026) | blue spirulina (for color) | Exact token as color. Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Distinct from Spirulina powder as OI / blend and from Spirulina extract as OI / color. | Standard alternatives rule. Not Avoid. |
+| Blue spirulina (for color) — LOCKED (Sept 22, 2026) | blue spirulina (for color) | Exact token as color. Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Distinct from Spirulina powder as OI / blend and from Spirulina extract as OI / color. Distinct from Caution bare spirulina (for color). | Standard alternatives rule. Not Avoid. |
 | Bare sugar — LOCKED (Sept 22, 2026) | sugar (bare / unspecified) | Exact token when the label prints bare sugar. Caution. Distinct from Cleared cane sugar and from Limited beet sugar / sucrose. | Standard alternatives rule. Not Avoid. |
 | Sodium caseinate — LOCKED (Sept 22, 2026) | sodium caseinate | Exact token. Caution. Milk-protein allergen neighborhood with non-fat dry milk. Not High. | Standard alternatives rule. Not Avoid. |
-| Dextrin — LOCKED (Sept 22, 2026) | dextrin (bare) | Exact token. Caution. Distinct from Limited tapioca dextrin / tapioca powder. Do not flip that Limited row. | Standard alternatives rule. Not Avoid. |
+| Dextrin — LOCKED (Sept 22, 2026) | dextrin (bare) | Exact token. Caution. Distinct from Limited tapioca dextrin / tapioca powder and from Caution cassava dextrin. Do not flip the tapioca Limited row. | Standard alternatives rule. Not Avoid. |
 | Starch sodium octenyl succinate — LOCKED (Sept 22, 2026) | starch sodium octenyl succinate, sodium starch octenyl succinate | Exact token. Caution. Modified-starch emulsifier. Distinct from Limited modified starch and from Cleared named corn / potato / pregelatinized starch. | Standard alternatives rule. Not Avoid. |
 | Organic bamboo extract — LOCKED (Sept 22, 2026) | organic bamboo extract | Exact token. Caution. Extract. Not a named-color pass. Distinct from Cleared rice hull / rice bran. | Standard alternatives rule. Not Avoid. |
 | Unspecified starch — LOCKED (Sept 22, 2026) | unspecified starch | Exact token. Caution. Distinct from Limited modified starch / modified food starch and from Cleared named corn starch / potato starch / pregelatinized starch. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 | Zinc oxide as OI — LOCKED (Sept 22, 2026) | zinc oxide (Other Ingredient) | Exact token as Other Ingredient. Caution. Distinct from Cleared zinc oxide (inactive / topical). Distinct from parked zinc-as-active. Do not flip the topical row. | Standard alternatives rule. Not Avoid. |
+| Bare spirulina (for color) — LOCKED (Sept 22, 2026) | spirulina (for color) | Exact token as color without the word blue. Caution. FDA color allow ≠ Clean. Not Avoid. Not Cleared. Distinct from Blue spirulina (for color), Spirulina powder as OI / blend, and Spirulina extract as OI / color. | Standard alternatives rule. Not Avoid. |
+| Cassava dextrin — LOCKED (Sept 22, 2026) | cassava dextrin | Exact token. Caution. Distinct from Cleared organic cassava syrup, from Caution bare dextrin, and from Limited tapioca dextrin. | Standard alternatives rule. Not Avoid. |
+| Glucose — LOCKED (Sept 22, 2026) | glucose (bare) | Exact token when the label prints bare glucose. Caution. Distinct from Cleared cane sugar / glucose syrup / tapioca syrup-dextrose. Do not flip that Cleared syrup row. | Standard alternatives rule. Not Avoid. |
+| Stevia extract — LOCKED (Sept 22, 2026) | stevia extract | Exact token. Unspecified extract. Caution. Distinct from Cleared high-purity steviol glycosides / Reb M and from Caution whole-leaf / crude stevia. Do not flip the high-purity Cleared row. | Standard alternatives rule. Not Avoid. |
+| Hydrogenated vegetable oil as OI — LOCKED (Sept 22, 2026) | hydrogenated vegetable oil (Other Ingredient) | Exact token as Other Ingredient. Caution. Cream fill stays Cleared. Gummy fat blend stays Avoid. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
