@@ -563,6 +563,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // served a flat label, not a 3D bottle. Do not glue the label.
   // Official Sprouts mark already on disk. Per-id only.
   'sprouts-melatonin-3mg-tablets': brandMark('sprouts-mark.png'),
+  // Attempted Sleep leftovers — night run 2026-09-23 5:30 PT batch 2.
+  // Aleve PM spans three count UPCs. Official faces are count-specific.
+  // Do not glue one count. Aleve mark already on disk. Per-id only.
+  'aleve-pm': brandMark('aleve-mark.png'),
+  // Motrin PM spans two count UPCs. Official faces are count-specific.
+  // Motrin mark already on disk. Per-id only.
+  'motrin-pm': brandMark('motrin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -822,6 +829,21 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'natures-way-calmaid': "Nature's Way",
   'natures-way-5-htp': "Nature's Way",
   'natures-way-cortisol-manager': "Nature's Way",
+  // Attempted Sleep leftovers — night run 2026-09-23 5:30 PT batch 2.
+  // Count-specific Nature's Way faces. Do not glue one count.
+  'natures-way-st-johns-wort': "Nature's Way",
+  'natures-way-valerian-root': "Nature's Way",
+  // Excedrin PM Headache spans two count UPCs. No standalone official
+  // Excedrin mark file. Do not glue one count. Do not stay a letter.
+  'excedrin-pm-headache': 'Excedrin',
+  // Hilma Sleep Support: hilma.co puts UPC 850023615077 on the 2-bottle
+  // variant and leaves the 50ct single without a barcode. Do not glue
+  // the single bottle. No standalone Hilma mark file.
+  'hilma-sleep-support': 'Hilma',
+  // Nordic Zero Sugar Melatonin gummies: nordic.com returned 403 from
+  // this environment. No verified 3D pack for UPC 768990301889. No
+  // standalone Nordic Naturals mark file.
+  'nordic-zero-sugar-melatonin-gummies': 'Nordic Naturals',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -2579,6 +2601,62 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Not the whole-herb capsule row.
   'natures-way-st-johns-wort-premium-extract': catalogShot(
     'natures-way-st-johns-wort-premium-extract.jpg',
+  ),
+  // Sleep leftover night run 2026-09-23 5:30 PT batch 2 — official US
+  // 3D packshots. Per-id only.
+  // Skullcap Herb 100 capsules, UPC 033674169001 (naturesway.com).
+  'natures-way-skullcap-herb': catalogShot('natures-way-skullcap-herb.jpg'),
+  // Valerian standardized extract 90 capsules, UPC 033674634004.
+  // Not the whole-root row.
+  'natures-way-valerian': catalogShot('natures-way-valerian.jpg'),
+  // Goody's PM 16 powder packs, UPC 042037102951. Walmart 3D face
+  // for that UPC. Not the 6-count carton.
+  'goodys-pm-powder': catalogShot('goodys-pm-powder.jpg'),
+  // CALM Sleep gummies Blueberry Pomegranate 120ct, UPC 183405043459
+  // (naturalvitality.com). Not the 60ct sibling.
+  'natural-vitality-calm-sleep-gummies': catalogShot(
+    'natural-vitality-calm-sleep-gummies.jpg',
+  ),
+  // Kids Lemon Balm Calm alcohol-free 1 fl oz, UPC 090700015244
+  // (herb-pharm.com).
+  'herb-pharm-kids-lemon-balm-calm-af': catalogShot(
+    'herb-pharm-kids-lemon-balm-calm-af.jpg',
+  ),
+  // Turmeric Force Nighttime 30-day, UPC 727783901224 (newchapter.com).
+  'new-chapter-turmeric-force-nighttime': catalogShot(
+    'new-chapter-turmeric-force-nighttime.jpg',
+  ),
+  // Kids Liquid Nighttime Multimineral Peaches and Cream 15.22 fl oz,
+  // UPC 810104623520 (maryruthorganics.com).
+  'maryruth-kids-nighttime-multimineral': catalogShot(
+    'maryruth-kids-nighttime-multimineral.jpg',
+  ),
+  // Kids Sleep Zero Melatonin 60 gummies, UPC 817053024569
+  // (smartypantsvitamins.com). Not the melatonin 0.5 mg kids bottle.
+  'smartypants-kids-sleep-zero-melatonin': catalogShot(
+    'smartypants-kids-sleep-zero-melatonin.jpg',
+  ),
+  // Adult Fast Acting Sleep 60 gummies, UPC 817053024545.
+  'smartypants-adult-fast-acting-sleep': catalogShot(
+    'smartypants-adult-fast-acting-sleep.jpg',
+  ),
+  // WonderSleep Wild Elderberry 60 gummies, UPC 860006835668
+  // (plantpeople.co).
+  'plant-people-wonder-sleep': catalogShot('plant-people-wonder-sleep.jpg'),
+  // Liquid Nighttime Multimineral Coconut Dream 15.22 fl oz,
+  // UPC 810104622066. Not the 32 oz sibling.
+  'maryruth-nighttime-multimineral': catalogShot(
+    'maryruth-nighttime-multimineral.jpg',
+  ),
+  // Amazon Elements Melatonin 3 mg 260 tablets, UPC 842379106576.
+  // Not the 5 mg capsule bottle.
+  'amazon-elements-melatonin-3-tablets': catalogShot(
+    'amazon-elements-melatonin-3-tablets.jpg',
+  ),
+  // Amazon Basics Melatonin 5 mg strawberry gummies 120ct,
+  // UPC 195515033381. Not the kids 1 mg gummies.
+  'amazon-basics-melatonin-5-gummies': catalogShot(
+    'amazon-basics-melatonin-5-gummies.jpg',
   ),
 };
 
