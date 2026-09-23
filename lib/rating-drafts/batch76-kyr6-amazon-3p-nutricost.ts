@@ -221,6 +221,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-astaxanthin-softgels-panel",
     productName: "Nutricost Astaxanthin Softgels",
+    barcode: "810139572510",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-astaxanthin-softgels-panel",
     audience: ADULT,
@@ -231,7 +232,7 @@ const COMPACT: Compact[] = [
     flags: [["Sunflower oil", "cleared", "sunflowerFill"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Caramel color", "high", "caramel"], ["Beeswax", "cleared", "wax"]],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Driver is Caramel color. Avoid needs High. Limited-only never Avoid.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-astaxanthin-softgel-12mg; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Astaxantin_12MG_30FG_150CC_SFP_Square.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water, caramel color), beeswax. {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-astaxanthin-softgel-12mg; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Astaxantin_12MG_30FG_150CC_SFP_Square.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water, caramel color), beeswax. {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139572510 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-astaxanthin-softgels-120-softgels-2",
@@ -347,6 +348,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-creatine-monohydrate-powder-panel",
     productName: "Nutricost Creatine Monohydrate Powder",
+    barcode: "810139571629",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-creatine-monohydrate-powder-1-kg",
     audience: ADULT,
@@ -357,7 +359,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_SFP_SQUARE_72b4208e-51d7-42f8-8147-d2502f9c3035.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_SFP_SQUARE_72b4208e-51d7-42f8-8147-d2502f9c3035.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139571629 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-creatine-monohydrate-powder-1-kg",
@@ -410,6 +412,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-creatine-monohydrate-powder-panel-2",
     productName: "Nutricost Creatine Monohydrate Powder",
+    barcode: "810139573975",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-creatine-monohydrate-powder-300-gm-3",
     audience: ADULT,
@@ -420,7 +423,7 @@ const COMPACT: Compact[] = [
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beta-carotene (for color)", "limited", "betaCarotene"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Beta-carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/810139573975_SFP_1.jpg) other-ingredients: Citric acid, natural flavors, sucralose, beta carotene (for color). t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/810139573975_SFP_1.jpg) other-ingredients: Citric acid, natural flavors, sucralose, beta carotene (for color). t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139573975 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-creatine-monohydrate-powder-300-gm-3",
@@ -761,6 +764,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-zinc-picolinate-30mg-30-capsules",
     productName: "Nutricost Zinc Picolinate (30mg)",
+    barcode: "810014677170",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-zinc-picolinate-30mg-30-capsules",
     audience: ADULT,
@@ -771,7 +775,7 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-picolinate-30mg; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_ZincPicolinate_30CAP_100CC_SFP_1.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule magnesium stearate (vegetable source). t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-picolinate-30mg; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_ZincPicolinate_30CAP_100CC_SFP_1.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule magnesium stearate (vegetable source). t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014677170 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-k2-mk-7-softgels-120-softgels",
@@ -1016,6 +1020,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-calcium-citrate-powder-panel",
     productName: "Nutricost Calcium Citrate Powder",
+    barcode: "702669934541",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-calcium-citrate-powder-500-gm",
     audience: ADULT,
@@ -1026,7 +1031,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-citrate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumCitrate_250G_SFP.jpg) other-ingredients: None healthcare poet ‘taking medication stot of chien Donate jie ae have not been evaluated by the. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-citrate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumCitrate_250G_SFP.jpg) other-ingredients: None healthcare poet ‘taking medication stot of chien Donate jie ae have not been evaluated by the. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669934541 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-cognizin-citicoline-60-capsules",
@@ -1047,6 +1052,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-magnesium-glycinate-powder-panel",
     productName: "Nutricost Magnesium Glycinate Powder",
+    barcode: "702669934527",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-magnesium-glycinate-powder-panel",
     audience: ADULT,
@@ -1057,7 +1063,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-magnesium-glycinate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Magnesium_Glycinate_UF_250_GM_16_OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-magnesium-glycinate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Magnesium_Glycinate_UF_250_GM_16_OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669934527 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-bcaa-powder-30-servings",
@@ -1382,6 +1388,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-dhea-capsules-panel",
     productName: "Nutricost DHEA Capsules",
+    barcode: "810014671833",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-dhea-capsules-120-capsules",
     audience: ADULT,
@@ -1392,7 +1399,7 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dhea; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DHEA_100MG_120CPA_175CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dhea; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DHEA_100MG_120CPA_175CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014671833 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-dhea-capsules-240-capsules-4",
@@ -2661,6 +2668,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets",
     productName: "Nutricost N-Acetyl L-Cysteine (NAC) Tablets (240 tablets)",
+    barcode: "810139574330",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets",
     audience: ADULT,
@@ -2671,7 +2679,7 @@ const COMPACT: Compact[] = [
     flags: [["Microcrystalline cellulose", "cleared", "mcc"], ["Dicalcium phosphate", "cleared", "dical"], ["Magnesium stearate", "cleared", "stearate"], ["Coating powder", "limited", "vegCoat"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Coating powder. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-n-acetyl-l-cysteine-nac-tablets; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_N-AcetylL-Cysteine__NAC___Vegan__1_000MG_240TAB_500CC_SFP_Square_1.jpg) other-ingredients: Microcrystalline cellulose, dicalcium Phosphate, stearic acid, coating. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-n-acetyl-l-cysteine-nac-tablets; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_N-AcetylL-Cysteine__NAC___Vegan__1_000MG_240TAB_500CC_SFP_Square_1.jpg) other-ingredients: Microcrystalline cellulose, dicalcium Phosphate, stearic acid, coating. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139574330 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-120-tablets",
@@ -2868,6 +2876,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-irish-sea-moss-capsules-120-capsules",
     productName: "Nutricost Irish Sea Moss Capsules (120 capsules)",
+    barcode: "810139579120",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-irish-sea-moss-capsules-120-capsules",
     audience: ADULT,
@@ -2878,11 +2887,12 @@ const COMPACT: Compact[] = [
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Pea protein isolate", "cleared", "ppi"], ["Magnesium stearate", "cleared", "stearate"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-irish-sea-moss; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_IrishSeaMoss_600MGX2_V00_120CAP_275CC_SFP_Square.jpg) other-ingredients: Hypromellose (cellulose) capsule, pea protein isolate, calcium laurate. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-irish-sea-moss; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_IrishSeaMoss_600MGX2_V00_120CAP_275CC_SFP_Square.jpg) other-ingredients: Hypromellose (cellulose) capsule, pea protein isolate, calcium laurate. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139579120 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-irish-sea-moss-capsules-120-capsules-2",
     productName: "Nutricost Irish Sea Moss Capsules (120 capsules)",
+    barcode: "810139579120",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-irish-sea-moss-capsules-120-capsules",
     audience: ADULT,
@@ -2893,7 +2903,7 @@ const COMPACT: Compact[] = [
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Pea protein isolate", "cleared", "ppi"], ["Magnesium stearate", "cleared", "stearate"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-irish-sea-moss; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_IrishSeaMoss_600MGX2_V00_120CAP_275CC_SFP_Square_1.jpg) other-ingredients: Hypromellose (cellulose) capsule, pea protein isolate, calcium laurate. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-irish-sea-moss; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_IrishSeaMoss_600MGX2_V00_120CAP_275CC_SFP_Square_1.jpg) other-ingredients: Hypromellose (cellulose) capsule, pea protein isolate, calcium laurate. +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139579120 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-turmeric-ginger-120-capsules",
@@ -3265,6 +3275,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-methylfolate-120-capsules",
     productName: "Nutricost L-Methylfolate (120 capsules)",
+    barcode: "810014670232",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-methylfolate-120-capsules",
     audience: ADULT,
@@ -3275,7 +3286,7 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-methylfolate; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Methylfolate_1000MG_120CAP_SFP.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule. t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-methylfolate; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Methylfolate_1000MG_120CAP_SFP.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule. t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670232 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-methylfolate-120-capsules-2",
@@ -4208,6 +4219,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms",
     productName: "Nutricost Creatine Monohydrate (Creapure®) Powder (500 gms)",
+    barcode: "702669934237",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg",
     audience: ADULT,
@@ -4218,7 +4230,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creapure-creatine-monohydrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreapurePowder_UF_500GMS_25OZ_SFP_Square_6eb0f14b-b3d4-492a-bca8-e015c345722d.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creapure-creatine-monohydrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreapurePowder_UF_500GMS_25OZ_SFP_Square_6eb0f14b-b3d4-492a-bca8-e015c345722d.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669934237 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-organic-saw-palmetto-powder-8-oz",
@@ -4303,6 +4315,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-serine-powder-227-gms",
     productName: "Nutricost L-Serine Powder (227 gms)",
+    barcode: "810014671383",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-serine-powder-227-gms",
     audience: ADULT,
@@ -4313,7 +4326,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-serine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-SerinePowder_227GMS_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-serine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-SerinePowder_227GMS_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014671383 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-benfotiamine-300-mg-90-caps-panel",
@@ -4670,6 +4683,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2",
     productName: "Nutricost Calcium + Magnesium + Zinc Citrates with Vitamin D3 Powder (30 servings)",
+    barcode: "810014672922",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2",
     audience: ADULT,
@@ -4680,7 +4694,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumMagnesiumZincVitaminD3_30SERV_SFP.jpg) other-ingredients: None tf. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumMagnesiumZincVitaminD3_30SERV_SFP.jpg) other-ingredients: None tf. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672922 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-sodium-citrate-powder-1-lb",
@@ -5308,6 +5322,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms",
     productName: "Nutricost Pure Agmatine Sulfate Powder (100 gms)",
+    barcode: "700425812171",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms",
     audience: ADULT,
@@ -5318,7 +5333,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pure-agmatine-sulfate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_AgmatineSulfatePowder_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pure-agmatine-sulfate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_AgmatineSulfatePowder_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 700425812171 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm",
@@ -5355,6 +5370,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-proline-powder-250-gms",
     productName: "Nutricost L-Proline Powder (250 gms)",
+    barcode: "810014671376",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-proline-powder-250-gms",
     audience: ADULT,
@@ -5365,7 +5381,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-proline-powder-250-grams-2-000mg-per-serving-non-gmo; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-Proline_250GMS_25OZ_SFP_Square_8094e7c5-fe51-4e45-be76-0be557532c76.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-proline-powder-250-grams-2-000mg-per-serving-non-gmo; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-Proline_250GMS_25OZ_SFP_Square_8094e7c5-fe51-4e45-be76-0be557532c76.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014671376 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-carnosine-powder-50-gm",
@@ -5514,6 +5530,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-beta-glucan-powder-100-gms",
     productName: "Nutricost Beta Glucan Powder (100 gms)",
+    barcode: "810014670584",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-beta-glucan-powder-100-gms",
     audience: ADULT,
@@ -5524,7 +5541,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-beta-glucan-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BetaGlucanPowder_UF_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-beta-glucan-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BetaGlucanPowder_UF_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670584 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-beta-glucan-capsules-60-capsules",
@@ -5753,6 +5770,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-biotin-softgels-150-softgels",
     productName: "Nutricost Biotin Softgels (150 softgels)",
+    barcode: "810014670270",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-biotin-softgels-150-softgels",
     audience: ADULT,
@@ -5763,7 +5781,7 @@ const COMPACT: Compact[] = [
     flags: [["Coconut oil", "cleared", "coconut"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Beeswax", "cleared", "wax"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-biotin-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BiotinSoftgels_5000IU_150SFG_175CC_SFP_Square_05113473-f818-4946-b389-ed7065da83af.jpg) other-ingredients: Coconut oil, softgel (gelatin, glycerin, purified water), beeswax. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-biotin-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BiotinSoftgels_5000IU_150SFG_175CC_SFP_Square_05113473-f818-4946-b389-ed7065da83af.jpg) other-ingredients: Coconut oil, softgel (gelatin, glycerin, purified water), beeswax. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670270 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-baikal-skullcap-capsules-120-capsules",
@@ -5923,6 +5941,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-organic-cordyceps-powder-panel",
     productName: "Nutricost Organic Cordyceps Powder",
+    barcode: "857077008060",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-organic-cordyceps-powder-16-oz",
     audience: ADULT,
@@ -5933,11 +5952,12 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-organic-cordyceps-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Organic_Cordyceps_Mushroom_Powder_250_Grams_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-organic-cordyceps-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Organic_Cordyceps_Mushroom_Powder_250_Grams_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 857077008060 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-organic-greens-25-oz",
     productName: "Nutricost Organic Greens (25 oz)",
+    barcode: "810014670249",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-organic-greens-25-oz",
     audience: ADULT,
@@ -5948,7 +5968,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-organic-greens; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_OrganicGreens_270G_25OZ_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-organic-greens; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_OrganicGreens_270G_25OZ_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670249 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-organic-greens-25-oz-2",
@@ -6033,6 +6053,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-probiotic-complex-capsules-60-capsules",
     productName: "Nutricost Probiotic Complex Capsules (60 capsules)",
+    barcode: "810139575191",
     category: "Digestive",
     formulaId: "nutricost-nutricost-probiotic-complex-capsules-60-capsules",
     audience: ADULT,
@@ -6043,7 +6064,7 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Maltodextrin", "limited", "maltodextrin"], ["Silica", "limited", "sio2"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-probiotic-complex-50-billion-cfu-60-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_ProbioticComplex_40Billion_60CAP_150CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, maltodextrin, silica. {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-probiotic-complex-50-billion-cfu-60-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_ProbioticComplex_40Billion_60CAP_150CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, maltodextrin, silica. {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139575191 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-probiotic-complex-capsules-60-capsules-2",
@@ -6063,6 +6084,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-vitamin-e-softgels-240-softgels",
     productName: "Nutricost Vitamin E Softgels (240 softgels)",
+    barcode: "810139578192",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-e-softgels-240-softgels",
     audience: ADULT,
@@ -6073,11 +6095,12 @@ const COMPACT: Compact[] = [
     flags: [["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-e-400-iu-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminE_1_000IU_240SFG_750CC_SFP_Square.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water). Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-e-400-iu-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminE_1_000IU_240SFG_750CC_SFP_Square.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water). Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139578192 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-a-softgels-500-softgels",
     productName: "Nutricost Vitamin A Softgels (500 softgels)",
+    barcode: "810014674810",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-a-softgels-500-softgels",
     audience: ADULT,
@@ -6088,11 +6111,12 @@ const COMPACT: Compact[] = [
     flags: [["Sunflower oil", "cleared", "sunflowerFill"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-a-10-000-iu-500-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Vitamin_A_25000_IU_500SFG_SFP.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). PACKAGED AND QUALITY TESTED IN THE USA WITH GLOBALLY SOURCED INGREDIENTS. t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-a-10-000-iu-500-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Vitamin_A_25000_IU_500SFG_SFP.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). PACKAGED AND QUALITY TESTED IN THE USA WITH GLOBALLY SOURCED INGREDIENTS. t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014674810 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-a-softgels-500-softgels-2",
     productName: "Nutricost Vitamin A Softgels (500 softgels)",
+    barcode: "702669933230",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-a-softgels-500-softgels",
     audience: ADULT,
@@ -6103,7 +6127,7 @@ const COMPACT: Compact[] = [
     flags: [["Sunflower oil", "cleared", "sunflowerFill"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-a-10-000-iu-500-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminA_10_000IU_500SFG_275CC_SFP_Squarejpg.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-a-10-000-iu-500-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminA_10_000IU_500SFG_275CC_SFP_Squarejpg.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933230 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-garlic-softgels-240-softgels",
@@ -6172,6 +6196,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-theanine-powder-100-gms",
     productName: "Nutricost L-Theanine Powder (100 gms)",
+    barcode: "810139572190",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-theanine-powder-100-gms",
     audience: ADULT,
@@ -6182,11 +6207,12 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-theanine-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-TheaninePowder_UF_100GMS_16OZ_SFP_Square_b737fa64-90f6-44ce-a9ba-80b582c5e2f4.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-theanine-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-TheaninePowder_UF_100GMS_16OZ_SFP_Square_b737fa64-90f6-44ce-a9ba-80b582c5e2f4.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139572190 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-dmae-bitartrate-powder-panel",
     productName: "Nutricost DMAE Bitartrate Powder",
+    barcode: "702669931076",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-dmae-bitartrate-powder-panel",
     audience: ADULT,
@@ -6197,7 +6223,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dmae-bitartrate-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DMAE_350MG_286SER_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dmae-bitartrate-powder-100-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DMAE_350MG_286SER_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669931076 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-organic-mucuna-pruriens-powder-250-gm",
@@ -6234,6 +6260,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-arginine-akg-powder-panel",
     productName: "Nutricost Arginine AKG Powder",
+    barcode: "700425812492",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-arginine-akg-powder-panel",
     audience: ADULT,
@@ -6244,11 +6271,12 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-arginine-akg-powder-300-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_ArginineAKG_300G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-arginine-akg-powder-300-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_ArginineAKG_300G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 700425812492 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-d-aspartic-acid-powder-panel",
     productName: "Nutricost D-Aspartic Acid Powder",
+    barcode: "700425812201",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-d-aspartic-acid-powder-panel",
     audience: ADULT,
@@ -6259,7 +6287,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-d-aspartic-acid-powder-300-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_D-AsparticAcid_300G_SFP_4475bd63-d66d-48c2-a8ce-1b8fbc1ba275.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-d-aspartic-acid-powder-300-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_D-AsparticAcid_300G_SFP_4475bd63-d66d-48c2-a8ce-1b8fbc1ba275.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 700425812201 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules",
@@ -6360,6 +6388,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules",
     productName: "Nutricost Lactobacillus Acidophilus Capsules (120 capsules)",
+    barcode: "810139574668",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules",
     audience: ADULT,
@@ -6370,11 +6399,12 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Maltodextrin", "limited", "maltodextrin"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-lactobacillus-acidophilus-10-billion-cfu-120-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_LactobacillusAcidophilus_2BillionCFU_120CAP_225CC_SFP_Square_a760a1c2-b63c-4c2a-aee7-c905c49ee0d6.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsve, maltodextrin. tt. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-lactobacillus-acidophilus-10-billion-cfu-120-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_LactobacillusAcidophilus_2BillionCFU_120CAP_225CC_SFP_Square_a760a1c2-b63c-4c2a-aee7-c905c49ee0d6.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsve, maltodextrin. tt. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139574668 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2",
     productName: "Nutricost Lactobacillus Acidophilus Capsules (120 capsules)",
+    barcode: "810139575207",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2",
     audience: ADULT,
@@ -6385,7 +6415,7 @@ const COMPACT: Compact[] = [
     flags: [["Rice flour", "limited", "riceFlour"], ["Maltodextrin", "limited", "maltodextrin"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-lactobacillus-acidophilus-10-billion-cfu-120-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L.Acidophilus_500MillionCFU_120CAP_225CC_SFP_Square_e05b05ab-ff36-4f0f-bbf0-0df18a47ebe1.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule maltodextrin {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-lactobacillus-acidophilus-10-billion-cfu-120-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L.Acidophilus_500MillionCFU_120CAP_225CC_SFP_Square_e05b05ab-ff36-4f0f-bbf0-0df18a47ebe1.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule maltodextrin {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139575207 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-goldenseal-root-capsules-120-capsules",
@@ -6454,6 +6484,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-glutamine-powder-250-gms",
     productName: "Nutricost L-Glutamine Powder (250 gms)",
+    barcode: "702669931151",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-glutamine-powder-1-kg",
     audience: ADULT,
@@ -6464,7 +6495,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-glutamine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-GlutaminePowder_250GMS_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-glutamine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-GlutaminePowder_250GMS_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669931151 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-glutamine-powder-1-kg",
@@ -6565,6 +6596,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-carnitine-tartrate-powder-250-gms",
     productName: "Nutricost L-Carnitine Tartrate Powder (250 gms)",
+    barcode: "702669933803",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-carnitine-tartrate-powder-100-gm",
     audience: ADULT,
@@ -6575,7 +6607,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-carnitine-tartrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-CarnitineTartratePowder_UF_250GMS_20OZ_SFP_Square_56bc8ed6-1527-465d-b41b-ebed61b4124a.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-carnitine-tartrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-CarnitineTartratePowder_UF_250GMS_20OZ_SFP_Square_56bc8ed6-1527-465d-b41b-ebed61b4124a.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933803 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-maca-root-capsules-180-capsules",
@@ -6612,6 +6644,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-dandelion-extract-capsules-panel",
     productName: "Nutricost Dandelion Extract Capsules",
+    barcode: "702669935142",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-dandelion-extract-capsules-panel",
     audience: ADULT,
@@ -6622,7 +6655,7 @@ const COMPACT: Compact[] = [
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice hulls", "cleared", "riceHull"], ["Lecithin", "cleared", "lecithin"], ["Oat fiber", "cleared", "oatFiber"], ["Gum arabic", "cleared", "acacia"], ["Rice flour", "limited", "riceFlour"], ["Magnesium stearate", "cleared", "stearate"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dandelion-root-525mg-180-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DandelionRoot_525MG_180CA_300CC_SFP_Square_1.jpg) other-ingredients: Hypromellose (cellulose) capsule, organic flow agent blend (organic rice hull concentrate, organic ‘sunflower lecithin, organic oat fiber, organic gum arabic), rice flour, magnesium stearate (vegetable source). ‘t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-dandelion-root-525mg-180-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_DandelionRoot_525MG_180CA_300CC_SFP_Square_1.jpg) other-ingredients: Hypromellose (cellulose) capsule, organic flow agent blend (organic rice hull concentrate, organic ‘sunflower lecithin, organic oat fiber, organic gum arabic), rice flour, magnesium stearate (vegetable source). ‘t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669935142 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-d-aspartic-acid-capsules-180-capsules",
@@ -7105,6 +7138,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-evening-primrose-oil-softgels-panel",
     productName: "Nutricost Evening Primrose Oil Softgels",
+    barcode: "857077008282",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-evening-primrose-oil-softgels-panel",
     audience: ADULT,
@@ -7115,7 +7149,7 @@ const COMPACT: Compact[] = [
     flags: [["Gelatin", "cleared", "gelatin"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-evening-primrose-oil-softgels-1300mg-120-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Evening_Primrose_Oil_Softgel_1300_MG_120_SFG_400_CC_SFP_Square.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water, ‘miistaton. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-evening-primrose-oil-softgels-1300mg-120-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Evening_Primrose_Oil_Softgel_1300_MG_120_SFG_400_CC_SFP_Square.jpg) other-ingredients: Softgel (gelatin, glycerin, purified water, ‘miistaton. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 857077008282 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-coq10-softgels-120-softgels",
@@ -7487,6 +7521,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-natural-vitamin-c-acerola-cherry-powder-8-oz",
     productName: "Nutricost Natural Vitamin C (Acerola Cherry) Powder (8 oz)",
+    barcode: "810139572701",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-natural-vitamin-c-acerola-cherry-powder-8-oz",
     audience: ADULT,
@@ -7497,7 +7532,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-natural-vitamin-c-acerola-cherry-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_NaturalVitaminC_AcerolaCherry___RB2___8OZ__16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-natural-vitamin-c-acerola-cherry-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_NaturalVitaminC_AcerolaCherry___RB2___8OZ__16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139572701 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-cdp-choline-capsules-120-capsules",
@@ -7534,6 +7569,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-long-jack-powder-100-gms",
     productName: "Nutricost Long Jack Powder (100 gms)",
+    barcode: "702669934251",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-long-jack-powder-100-gms",
     audience: ADULT,
@@ -7544,7 +7580,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-longjack-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_LongJack__100-1__Powder_UF_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-longjack-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_LongJack__100-1__Powder_UF_100GMS_8OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669934251 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-tudca-capsules-60-capsules",
@@ -7596,6 +7632,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-vitamin-d3-softgels-240-softgels",
     productName: "Nutricost Vitamin D3 Softgels (240 softgels)",
+    barcode: "702669933223",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-d3-softgels-240-softgels",
     audience: ADULT,
@@ -7606,11 +7643,12 @@ const COMPACT: Compact[] = [
     flags: [["Safflower oil", "cleared", "safflower"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_10000IU_240SFG_275CC_SFP_SQUARE_315c98f2-acca-4d5f-ae9b-c30d7818559d.jpg) other-ingredients: Safflower oil, softgel (gelatin, glycerin, purified water). {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_10000IU_240SFG_275CC_SFP_SQUARE_315c98f2-acca-4d5f-ae9b-c30d7818559d.jpg) other-ingredients: Safflower oil, softgel (gelatin, glycerin, purified water). {. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933223 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-d3-softgels-240-softgels-2",
     productName: "Nutricost Vitamin D3 Softgels (240 softgels)",
+    barcode: "810014674438",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-d3-softgels-240-softgels",
     audience: ADULT,
@@ -7621,11 +7659,12 @@ const COMPACT: Compact[] = [
     flags: [["Safflower oil", "cleared", "safflower"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_2000IU_240SFG_175CC_SFP_Square.jpg) other-ingredients: Safflower oil, softgel (gelatin, glycerin, purified water). +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_2000IU_240SFG_175CC_SFP_Square.jpg) other-ingredients: Safflower oil, softgel (gelatin, glycerin, purified water). +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014674438 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-vitamin-d3-softgels-240-softgels-3",
     productName: "Nutricost Vitamin D3 Softgels (240 softgels)",
+    barcode: "702669935357",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-vitamin-d3-softgels-240-softgels-3",
     audience: ADULT,
@@ -7636,7 +7675,7 @@ const COMPACT: Compact[] = [
     flags: [["Sunflower oil", "cleared", "sunflowerFill"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"]],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_5000IU_240SFG_175CC_SFP_Square.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). ‘t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d3-240-softgels; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD3_5000IU_240SFG_175CC_SFP_Square.jpg) other-ingredients: Sunflower oil, softgel (gelatin, glycerin, purified water). ‘t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669935357 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-wheatgrass-powder-1-lb",
@@ -7657,6 +7696,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-betaine-anhydrous-tmg-powder-panel",
     productName: "Nutricost Betaine Anhydrous (TMG) Powder",
+    barcode: "702669932042",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-betaine-anhydrous-tmg-powder-panel",
     audience: ADULT,
@@ -7667,7 +7707,7 @@ const COMPACT: Compact[] = [
     flags: [["Calcium silicate", "limited", "caSilicate"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Calcium silicate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-betaine-anhydrous-trimethylglicine-tmg-powder-500-grams-unflavored; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BetaineAnhydrousTrimethylglycine_TMG_Powder_500Grams_SFP_1_599320e2-0f26-4fe2-aef2-5e76c92df466.jpg) other-ingredients: Calcium silicate. oti De Norce sees vee Sone +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-betaine-anhydrous-trimethylglicine-tmg-powder-500-grams-unflavored; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BetaineAnhydrousTrimethylglycine_TMG_Powder_500Grams_SFP_1_599320e2-0f26-4fe2-aef2-5e76c92df466.jpg) other-ingredients: Calcium silicate. oti De Norce sees vee Sone +. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669932042 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-gaba-powder-500-gm",
@@ -7992,6 +8032,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel",
     productName: "Nutricost N-Acetyl Cysteine (NAC) Vegetarian Powder",
+    barcode: "702669938235",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm",
     audience: ADULT,
@@ -8002,7 +8043,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-n-acetyl-l-cysteine-nac-vegan-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_N-AcetylL-Cysteine_1200MG_500G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-n-acetyl-l-cysteine-nac-vegan-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_N-AcetylL-Cysteine_1200MG_500G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669938235 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-calcium-ascorbate-powder-250-gm",
@@ -8023,6 +8064,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-magnesium-citrate-powder-250-gm",
     productName: "Nutricost Magnesium Citrate Powder (250 gm)",
+    barcode: "702669934503",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-magnesium-citrate-powder-250-gm",
     audience: ADULT,
@@ -8033,7 +8075,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-magnesium-citrate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_MagnesiumCitrate_250GM_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-magnesium-citrate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_MagnesiumCitrate_250GM_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669934503 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-600-gm",
@@ -8102,6 +8144,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-taurine-powder-1-kg",
     productName: "Nutricost Taurine Powder (1 kg)",
+    barcode: "702669933810",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-taurine-powder-1-kg",
     audience: ADULT,
@@ -8112,7 +8155,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-taurine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Taurine_UF_1KG_1500CC_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-taurine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Taurine_UF_1KG_1500CC_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933810 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-organic-spirulina-powder-1-lb",
@@ -8245,6 +8288,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-tyrosine-powder-100-gms",
     productName: "Nutricost L-Tyrosine Powder (100 gms)",
+    barcode: "702669930871",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-tyrosine-powder-100-gms",
     audience: ADULT,
@@ -8255,7 +8299,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-tyrosine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-TyrosinePowder_UF_100GMS_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-tyrosine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-TyrosinePowder_UF_100GMS_16OZ_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669930871 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-tyrosine-powder-250-gm",
@@ -8276,6 +8320,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-l-tyrosine-powder-panel",
     productName: "Nutricost L-Tyrosine Powder",
+    barcode: "702669937481",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-tyrosine-powder-100-gms",
     audience: ADULT,
@@ -8286,11 +8331,12 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-tyrosine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-Tyrosine_500G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-tyrosine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-Tyrosine_500G_SFP.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669937481 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-arginine-powder-1-kg",
     productName: "Nutricost L-Arginine Powder (1 kg)",
+    barcode: "702669932363",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-arginine-powder-1-kg",
     audience: ADULT,
@@ -8301,11 +8347,12 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-arginine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_L-Arginine_UF_1KG_2000CC_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-arginine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_L-Arginine_UF_1KG_2000CC_SFP_Square.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669932363 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-l-arginine-powder-1-kg-2",
     productName: "Nutricost L-Arginine Powder (1 kg)",
+    barcode: "702669932363",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-l-arginine-powder-1-kg",
     audience: ADULT,
@@ -8316,7 +8363,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-arginine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_L-Arginine_UF_1KG_2000CC_SFP_Square_1.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-arginine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_L-Arginine_UF_1KG_2000CC_SFP_Square_1.jpg) other-ingredients: None. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669932363 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
     id: "nutricost-nutricost-d-mannose-powder-100-gm",
@@ -8497,6 +8544,7 @@ const COMPACT: Compact[] = [
   {
     id: "nutricost-nutricost-acetyl-l-carnitine-powder-500-gms",
     productName: "Nutricost Acetyl L-Carnitine Powder (500 gms)",
+    barcode: "702669931106",
     category: "Vitamins",
     formulaId: "nutricost-nutricost-acetyl-l-carnitine-powder-100-gm",
     audience: ADULT,
@@ -8507,7 +8555,7 @@ const COMPACT: Compact[] = [
     flags: [],
     verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named non-gummy oil fill / rice hull / fiber as present). No SiO2 / rice flour / dye / TiO2 / undisclosed caramel. Sunflower or palm oil on this non-gummy form is not the gummy seed-oil High rule.",
-    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-acetyl-l-carnitine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_AcetylL-CarnitinePowder_500GMS_46OZ_SFP_Square.jpg) other-ingredients: None condition epatft ve se Pret Eh nutricost | | ll. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel — omitted. No DailyMed drug SPL.",
+    cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-acetyl-l-carnitine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_AcetylL-CarnitinePowder_500GMS_46OZ_SFP_Square.jpg) other-ingredients: None condition epatft ve se Pret Eh nutricost | | ll. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669931106 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
 ];
 export const BATCH76_KYR6_AMAZON_3P_NUTRICOST: RatingRecord[] = COMPACT.map(expand);
