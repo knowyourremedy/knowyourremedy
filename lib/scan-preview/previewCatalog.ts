@@ -2178,6 +2178,81 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-avenasativa-pellets': catalogShot(
     'boiron-avenasativa-pellets.jpg',
   ),
+  // Sleep leftover night run 2026-09-23 12:30 PT batch 2 — official US
+  // 3D packshots. Per-id only. Boiron singles are the 30C tube that
+  // matches each row UPC, not another dilution on the same page.
+  // Coffea cruda 30C, UPC 306960224136 (boironusa.com).
+  'boiron-coffea-cruda-pellets': catalogShot(
+    'boiron-coffea-cruda-pellets.jpg',
+  ),
+  // Coffea tosta 30C, UPC 306961048137.
+  'boiron-coffeatosta-pellets': catalogShot(
+    'boiron-coffeatosta-pellets.jpg',
+  ),
+  // Hyoscyamus niger 30C, UPC 306960375135.
+  'boiron-hyoscyamusniger-pellets': catalogShot(
+    'boiron-hyoscyamusniger-pellets.jpg',
+  ),
+  // Ignatia amara 30C, UPC 306960384137.
+  'boiron-ignatia-amara-pellets': catalogShot(
+    'boiron-ignatia-amara-pellets.jpg',
+  ),
+  // Kali phosphoricum 30C, UPC 306960407133.
+  'boiron-kali-phosphoricum-pellets': catalogShot(
+    'boiron-kali-phosphoricum-pellets.jpg',
+  ),
+  // Nux moschata 30C, UPC 306960526131.
+  'boiron-nuxmoschata-pellets': catalogShot(
+    'boiron-nuxmoschata-pellets.jpg',
+  ),
+  // Passiflora incarnata 30C, UPC 306960562139.
+  'boiron-passifloraincarnata-pellets': catalogShot(
+    'boiron-passifloraincarnata-pellets.jpg',
+  ),
+  // Scutellaria lateriflora 30C, UPC 306960661139.
+  'boiron-scutellarialateriflora-pellets': catalogShot(
+    'boiron-scutellarialateriflora-pellets.jpg',
+  ),
+  // Stramonium 30C, UPC 306960705130 (not the 6C tube).
+  'boiron-stramonium-2-pellets': catalogShot(
+    'boiron-stramonium-2-pellets.jpg',
+  ),
+  // Valeriana officinalis 30C, UPC 306960772132.
+  'boiron-valerianaofficinalis-pellets': catalogShot(
+    'boiron-valerianaofficinalis-pellets.jpg',
+  ),
+  // Sprouts storefront 3D faces (shop.sprouts.com). Per-id only.
+  // Sleep powder capsules 90ct, UPC 646670621123.
+  'sprouts-sleep-powder-cap': catalogShot('sprouts-sleep-powder-cap.jpg'),
+  // Relax-All Calm & Sleep 60 capsules, UPC 646670681806.
+  'sprouts-relax-all-calm-sleep': catalogShot(
+    'sprouts-relax-all-calm-sleep.jpg',
+  ),
+  // Ashwagandha powder capsules 90ct, UPC 646670621161.
+  'sprouts-ashwagandha-powder-cap': catalogShot(
+    'sprouts-ashwagandha-powder-cap.jpg',
+  ),
+  // Unflavored Relax-All Ease powder 8 oz, UPC 646670681783.
+  // Not the dragonfruit tub.
+  'sprouts-relax-all-ease-unflavored': catalogShot(
+    'sprouts-relax-all-ease-unflavored.jpg',
+  ),
+  // Dragonfruit Relax-All Ease powder 8 oz, UPC 646670681790.
+  'sprouts-relax-all-ease-dragonfruit': catalogShot(
+    'sprouts-relax-all-ease-dragonfruit.jpg',
+  ),
+  // Melatonin 3 mg liquid 2 fl oz, UPC 646670130021.
+  'sprouts-melatonin-3mg-liquid': catalogShot(
+    'sprouts-melatonin-3mg-liquid.jpg',
+  ),
+  // Sleep liquid tincture 1 fl oz, UPC 646670631429.
+  'sprouts-sleep-liquid': catalogShot('sprouts-sleep-liquid.jpg'),
+  // Valerian liquid tincture 1 fl oz, UPC 646670631337.
+  'sprouts-valerian-liquid': catalogShot('sprouts-valerian-liquid.jpg'),
+  // Optimal Sleep 60 capsules, UPC 646670125805.
+  'sprouts-optimal-sleep-mct': catalogShot('sprouts-optimal-sleep-mct.jpg'),
+  // Holy Basil liquid 1 fl oz, UPC 646670157813.
+  'sprouts-holy-basil-liquid': catalogShot('sprouts-holy-basil-liquid.jpg'),
   // Batch 1 formulaId inheritance fix — DG Health / Amazon Basics
   // doxylamine share formulaId `upup-doxylamine-sleeptabs`. Per-id
   // mark overlay must win so they do not inherit the up&up carton.
@@ -3710,6 +3785,102 @@ assertExactCarton(
   'boiron-avenasativa-pellets',
   'Boiron',
   'boiron-avenasativa-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-coffea-cruda-pellets',
+  'Boiron',
+  'boiron-coffea-cruda-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-coffeatosta-pellets',
+  'Boiron',
+  'boiron-coffeatosta-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-hyoscyamusniger-pellets',
+  'Boiron',
+  'boiron-hyoscyamusniger-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-ignatia-amara-pellets',
+  'Boiron',
+  'boiron-ignatia-amara-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-kali-phosphoricum-pellets',
+  'Boiron',
+  'boiron-kali-phosphoricum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-nuxmoschata-pellets',
+  'Boiron',
+  'boiron-nuxmoschata-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-passifloraincarnata-pellets',
+  'Boiron',
+  'boiron-passifloraincarnata-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-scutellarialateriflora-pellets',
+  'Boiron',
+  'boiron-scutellarialateriflora-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-stramonium-2-pellets',
+  'Boiron',
+  'boiron-stramonium-2-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-valerianaofficinalis-pellets',
+  'Boiron',
+  'boiron-valerianaofficinalis-pellets.jpg',
+);
+assertExactCarton(
+  'sprouts-sleep-powder-cap',
+  'Sprouts',
+  'sprouts-sleep-powder-cap.jpg',
+);
+assertExactCarton(
+  'sprouts-relax-all-calm-sleep',
+  'Sprouts',
+  'sprouts-relax-all-calm-sleep.jpg',
+);
+assertExactCarton(
+  'sprouts-ashwagandha-powder-cap',
+  'Sprouts',
+  'sprouts-ashwagandha-powder-cap.jpg',
+);
+assertExactCarton(
+  'sprouts-relax-all-ease-unflavored',
+  'Sprouts',
+  'sprouts-relax-all-ease-unflavored.jpg',
+);
+assertExactCarton(
+  'sprouts-relax-all-ease-dragonfruit',
+  'Sprouts',
+  'sprouts-relax-all-ease-dragonfruit.jpg',
+);
+assertExactCarton(
+  'sprouts-melatonin-3mg-liquid',
+  'Sprouts',
+  'sprouts-melatonin-3mg-liquid.jpg',
+);
+assertExactCarton('sprouts-sleep-liquid', 'Sprouts', 'sprouts-sleep-liquid.jpg');
+assertExactCarton(
+  'sprouts-valerian-liquid',
+  'Sprouts',
+  'sprouts-valerian-liquid.jpg',
+);
+assertExactCarton(
+  'sprouts-optimal-sleep-mct',
+  'Sprouts',
+  'sprouts-optimal-sleep-mct.jpg',
+);
+assertExactCarton(
+  'sprouts-holy-basil-liquid',
+  'Sprouts',
+  'sprouts-holy-basil-liquid.jpg',
 );
 {
   const decongestant = previewOverlayImage({
