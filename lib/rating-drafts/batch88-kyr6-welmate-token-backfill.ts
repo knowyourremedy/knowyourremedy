@@ -372,6 +372,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b88-lidocaine-5-cholesterol-1oz',
+    // KYR5-d — Target primary barcode, lidocaine 5% 1 oz tube (TCIN 92212555).
+    barcode: '373581000289',
     productName: 'WELMATE Lidocaine 5% Cream, 1 oz Tube',
     category: 'Pain & Fever',
     formulaId: LIDO_CHOL,
@@ -383,10 +385,12 @@ const COMPACT: Compact[] = [
     flags: LIDO_CHOL_FLAGS,
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 5.5 oz jar, so they share formulaId. Drivers are benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, trolamine, and vitamin E acetate. Not the C10-18 triglyceride cream. No High.',
-    cite: `Wellspring 1 oz inactive line (${SHOP}/welmate-5-numbing-cream-maximum-strength-topical-anesthetic-1-oz-tube): benzyl alcohol, carbomer 940, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, purified water, trolamine, vitamin E acetate. ${PG_TOPICAL_TAP} No GTIN-12 on the page.`,
+    cite: `Wellspring 1 oz inactive line (${SHOP}/welmate-5-numbing-cream-maximum-strength-topical-anesthetic-1-oz-tube): benzyl alcohol, carbomer 940, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, purified water, trolamine, vitamin E acetate. ${PG_TOPICAL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
     id: LIDO_C10,
+    // KYR5-d — Target primary barcode, lidocaine 5% 2 oz (TCIN 92212552).
+    barcode: '373581000296',
     productName: 'WELMATE Lidocaine 5% Cream, 2 oz',
     category: 'Pain & Fever',
     formulaId: LIDO_C10,
@@ -398,10 +402,12 @@ const COMPACT: Compact[] = [
     flags: LIDO_C10_FLAGS,
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, PEG-100 stearate, and triethanolamine. C10-18 triglycerides is the Sept 23 Cleared fill row on this cream, not gummy seed-oil High and not an oil-bottle grade. Glycine soja (soybean) oil is Cleared cream-base soybean oil. Soy disclosure only. Tocopherol is Cleared mixed-tocopherol antioxidant, not Caution tocopheryl acetate. PEG-100 stearate stays Caution, not the Moderate PEG row. Not the cholesterol / hydrogenated-lecithin cream. The current 2 oz HTML bullets print that cholesterol list and were not treated as the panel. No High.',
-    cite: `Batch87 carton pin for the 2 oz: benzyl alcohol, carbomer, C10-18 triglycerides, cetearyl alcohol, glyceryl stearate, glycine soja (soybean) oil, isopropyl myristate, PEG-100 stearate, propylene glycol, stearic acid, tocopherol, triethanolamine, water. The 6 oz page (${SHOP}/welmate-lidocaine-cream-6oz-jar) prints that same list, spelling glycine soja (soyabean) oil and water (aqua). Current HTML bullets on the 2 oz URL (${SHOP}/welmate-5-lidocaine-numbing-cream-maximum-strength-topical-anesthetic-aches-back-pain-itching-soreness-burning-bruises-unscented-child-resistant-packaging-2-oz-60-g) print the cholesterol cream and were not the panel. ${CREAM_OIL_TAP} ${PG_TOPICAL_TAP} No GTIN-12 on the page.`,
+    cite: `Batch87 carton pin for the 2 oz: benzyl alcohol, carbomer, C10-18 triglycerides, cetearyl alcohol, glyceryl stearate, glycine soja (soybean) oil, isopropyl myristate, PEG-100 stearate, propylene glycol, stearic acid, tocopherol, triethanolamine, water. The 6 oz page (${SHOP}/welmate-lidocaine-cream-6oz-jar) prints that same list, spelling glycine soja (soyabean) oil and water (aqua). Current HTML bullets on the 2 oz URL (${SHOP}/welmate-5-lidocaine-numbing-cream-maximum-strength-topical-anesthetic-aches-back-pain-itching-soreness-burning-bruises-unscented-child-resistant-packaging-2-oz-60-g) print the cholesterol cream and were not the panel. ${CREAM_OIL_TAP} ${PG_TOPICAL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
     id: 'welmate-b88-lidocaine-5-c10-6oz',
+    // KYR5-d — Target primary barcode, lidocaine 5% 6 oz jar (TCIN 92212550).
+    barcode: '373581000401',
     productName: 'WELMATE Lidocaine 5% Cream, 6 oz',
     category: 'Pain & Fever',
     formulaId: LIDO_C10,
@@ -413,7 +419,7 @@ const COMPACT: Compact[] = [
     flags: LIDO_C10_FLAGS,
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 2 oz carton, so they share formulaId. The 6 oz page spells soyabean and water (aqua). Drivers are benzyl alcohol, PEG-100 stearate, and triethanolamine. C10-18 triglycerides stays Cleared fill. Not the cholesterol cream. No High.',
-    cite: `Wellspring 6 oz inactive line (${SHOP}/welmate-lidocaine-cream-6oz-jar): benzyl alcohol, carbomer, C10-18 triglycerides, cetearyl alcohol, glyceryl stearate, glycine soja (soyabean) oil, isopropyl myristate, PEG-100 stearate, propylene glycol, stearic acid, tocopherol, triethanolamine, water (aqua). ${CREAM_OIL_TAP} No GTIN-12 on the page.`,
+    cite: `Wellspring 6 oz inactive line (${SHOP}/welmate-lidocaine-cream-6oz-jar): benzyl alcohol, carbomer, C10-18 triglycerides, cetearyl alcohol, glyceryl stearate, glycine soja (soyabean) oil, isopropyl myristate, PEG-100 stearate, propylene glycol, stearic acid, tocopherol, triethanolamine, water (aqua). ${CREAM_OIL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
     id: BUTEN,
@@ -432,6 +438,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b88-butenafine-3pack',
+    // KYR5-d — Target primary barcode, butenafine 1 oz pack of 3 (TCIN 92308460).
+    barcode: '373581000432',
     productName: 'WELMATE Butenafine HCl 1% Cream, 1 oz, Pack of 3',
     category: 'First Aid',
     formulaId: BUTEN,
@@ -443,7 +451,7 @@ const COMPACT: Compact[] = [
     flags: BUTEN_FLAGS,
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 1 oz single, so they share formulaId. Not a second formula. Drivers are benzyl alcohol, polyoxyethylene (23) cetyl ether, propylene glycol dicaprylate, sodium benzoate, and trolamine. No High.',
-    cite: `Wellspring pack of 3 (${SHOP}/welmate-athletes-foot-treatment-extra-strength-antifungal-cream-butenafine-hydrochloride-relief-from-ringworm-athletes-foot-jock-itch-foot-care-nail-fungus-treatment-for-toenail-3-pk) is the 1 oz cream. DailyMed NDC 73581-210 inactive line is the pin. No GTIN-12 on the page.`,
+    cite: `Wellspring pack of 3 (${SHOP}/welmate-athletes-foot-treatment-extra-strength-antifungal-cream-butenafine-hydrochloride-relief-from-ringworm-athletes-foot-jock-itch-foot-care-nail-fungus-treatment-for-toenail-3-pk) is the 1 oz cream. DailyMed NDC 73581-210 inactive line is the pin. Wellspring page and the DailyMed carton image had no readable GTIN-12.`,
   },
   {
     id: 'welmate-b88-docosanol',
@@ -495,6 +503,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: AREDS,
+    // KYR5-d — Target primary barcode, AREDS 2 120 mini softgels (TCIN 1002521959).
+    barcode: '373581000593',
     productName: 'WELMATE AREDS 2 Mini Softgels, 120 Count',
     category: 'Vitamins',
     formulaId: AREDS,
@@ -512,11 +522,13 @@ const COMPACT: Compact[] = [
     ],
     flags: AREDS_FLAGS,
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Marigold extract (tagetes erecta), copper oxide, and carmine are Caution. Medium chain triglycerides do not name a plant source, so they stay Limited unlabeled MCT. dl-alpha tocopheryl acetate is the Sept 23 Cleared token and the labeled vitamin E source. It is not Caution tocopheryl acetate. Copper oxide on the other-ingredients line is the Sept 23 Caution token and the labeled copper source. Marigold extract is the lutein source printed on that same other-ingredients line. Ascorbic acid and zinc oxide on that line are the labeled vitamin C and zinc sources, not a second inactive grade. Zinc oxide as OI Caution is not applied to the labeled zinc active. Safflower oil on this softgel is Cleared fill. Not an oil-bottle grade. Not gummy High. The 240-count page prints the same other-ingredients line. No GTIN-12.',
-    cite: `Wellspring other-ingredients (${SHOP}/welmate-areds-2-60-servings-eye-vitamin-and-mineral-supplement-vitamin-c-zinc-lutein-macular-health-doctor-formulated-clinically-tested-eye-care-gluten-free-120-mini-softgels): Ascorbic acid, dl-alpha tocopheryl acetate, gelatin, zinc oxide, glycerin, medium chain triglycerides, marigold extract (tagetes erecta), copper oxide, safflower oil, purified water, carmine, and titanium dioxide. Serving amounts on that page: Vitamin C 250 mg, Vitamin E 90 mg, Zinc 40 mg, Copper 1 mg, Lutein 5 mg, Zeaxanthin 1 mg. The 240-count page prints the same other-ingredients line. ${FILL_TAP} No DailyMed WELMATE drug SPL for this supplement. No GTIN-12 on the page.`,
+    note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Marigold extract (tagetes erecta), copper oxide, and carmine are Caution. Medium chain triglycerides do not name a plant source, so they stay Limited unlabeled MCT. dl-alpha tocopheryl acetate is the Sept 23 Cleared token and the labeled vitamin E source. It is not Caution tocopheryl acetate. Copper oxide on the other-ingredients line is the Sept 23 Caution token and the labeled copper source. Marigold extract is the lutein source printed on that same other-ingredients line. Ascorbic acid and zinc oxide on that line are the labeled vitamin C and zinc sources, not a second inactive grade. Zinc oxide as OI Caution is not applied to the labeled zinc active. Safflower oil on this softgel is Cleared fill. Not an oil-bottle grade. Not gummy High. The 240-count page prints the same other-ingredients line.',
+    cite: `Wellspring other-ingredients (${SHOP}/welmate-areds-2-60-servings-eye-vitamin-and-mineral-supplement-vitamin-c-zinc-lutein-macular-health-doctor-formulated-clinically-tested-eye-care-gluten-free-120-mini-softgels): Ascorbic acid, dl-alpha tocopheryl acetate, gelatin, zinc oxide, glycerin, medium chain triglycerides, marigold extract (tagetes erecta), copper oxide, safflower oil, purified water, carmine, and titanium dioxide. Serving amounts on that page: Vitamin C 250 mg, Vitamin E 90 mg, Zinc 40 mg, Copper 1 mg, Lutein 5 mg, Zeaxanthin 1 mg. The 240-count page prints the same other-ingredients line. ${FILL_TAP} No DailyMed WELMATE drug SPL for this supplement. Wellspring page had no GTIN-12.`,
   },
   {
     id: 'welmate-b88-areds2-240',
+    // KYR5-d — Target primary barcode, AREDS 2 240 mini softgels (TCIN 1002521962).
+    barcode: '373581000609',
     productName: 'WELMATE AREDS 2 Mini Softgels, 240 Count',
     category: 'Vitamins',
     formulaId: AREDS,
@@ -535,7 +547,7 @@ const COMPACT: Compact[] = [
     flags: AREDS_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same other-ingredients line as the 120-count, so they share formulaId. Driver is titanium dioxide. dl-alpha tocopheryl acetate stays the Cleared token. Marigold extract and copper oxide stay Caution. Not an oil-bottle grade.',
-    cite: `Wellspring 240-count other-ingredients (${SHOP}/welmate-areds-2-120-servings-eye-vitamin-and-mineral-supplement-vitamin-c-zinc-lutein-macular-health-doctor-formulated-clinically-tested-eye-care-gluten-free-240-mini-softgels) match the 120-count line, including dl-alpha tocopheryl acetate, marigold extract (tagetes erecta), copper oxide, safflower oil, carmine, and titanium dioxide. ${FILL_TAP} No GTIN-12 on the page.`,
+    cite: `Wellspring 240-count other-ingredients (${SHOP}/welmate-areds-2-120-servings-eye-vitamin-and-mineral-supplement-vitamin-c-zinc-lutein-macular-health-doctor-formulated-clinically-tested-eye-care-gluten-free-240-mini-softgels) match the 120-count line, including dl-alpha tocopheryl acetate, marigold extract (tagetes erecta), copper oxide, safflower oil, carmine, and titanium dioxide. ${FILL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
     id: 'welmate-b88-loperamide-simethicone',
@@ -599,7 +611,13 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) throw new Error('batch88 formulaId must point at a row in this file');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch88 writes WELMATE only');
 const _UPC: Record<string, string> = {
+  'welmate-b88-lidocaine-5-cholesterol-1oz': '373581000289',
+  'welmate-b88-lidocaine-5-c10': '373581000296',
+  'welmate-b88-lidocaine-5-c10-6oz': '373581000401',
+  'welmate-b88-butenafine-3pack': '373581000432',
   'welmate-b88-diphenhydramine-1000': '373581000302',
+  'welmate-b88-areds2': '373581000593',
+  'welmate-b88-areds2-240': '373581000609',
   'welmate-b88-loperamide-simethicone': '373581000722',
 };
 function _upcOk(code: string): boolean {
@@ -608,7 +626,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 2) throw new Error('batch88 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 8) throw new Error('batch88 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
