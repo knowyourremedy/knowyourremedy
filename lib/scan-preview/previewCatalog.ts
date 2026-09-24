@@ -593,6 +593,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // (311917047614). Official faces are count-specific. Do not glue
   // one size. Walgreens mark already on disk. Per-id only.
   'walgreens-sleep-aid-liquid-dyed': brandMark('walgreens-mark.png'),
+  // Immune Support night run 2026-09-24 5:30 PT batch 1.
+  // Kids Sambucus gummies: two count UPCs (033674123461 / 033674122853).
+  // Faces are count-specific. Do not glue one count. Veg-oil twin has
+  // no barcode — do not glue the kids bottles onto that oil split.
+  // Official naturesway.com script wordmark. Per-id only.
+  'natures-way-sambucus-kids-gummies-coconut': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-kids-gummies-veg-oil': brandMark('natures-way-mark.png'),
+  // Wellness Formula tablets span 021078000228 / 021078000211 / 021078019596.
+  // Capsules span five count UPCs. Official faces are count-specific.
+  // Do not glue one count. sourcenaturals.com wordmark. Per-id only.
+  'source-naturals-wellness-formula-tabs': brandMark('source-naturals-mark.png'),
+  'source-naturals-wellness-formula-caps': brandMark('source-naturals-mark.png'),
+  // Complex C spans 30 / 60 / a third count (051494101322 / 051494101339 /
+  // 051494101353). Official faces are count-specific. Do not glue one
+  // count. megafood.com footer wordmark. Per-id only.
+  'megafood-complex-c': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2894,6 +2910,47 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Doxylamine succinate 25 mg, 100 tablets. Wellspring carton.
   // Not the 200-count bottle that shares this formulaId.
   'welmate-b87-doxylamine-100': catalogShot('welmate-b87-doxylamine-100.jpg'),
+  // Immune Support night run 2026-09-24 5:30 PT batch 1 — exact US pack
+  // faces. Per-id only.
+  // Homeopathic Cold & Flu Relief tablets, 30 count, UPC 896116001501.
+  'sambucol-cold-flu-relief-homeopathic': catalogShot(
+    'sambucol-cold-flu-relief-homeopathic.jpg',
+  ),
+  // Natural Cherry lozenges, 25 count, UPC 091108320251.
+  'cold-eeze-lozenge-classic': catalogShot('cold-eeze-lozenge-classic.jpg'),
+  // Citrus chewable tablets, 96 count, UPC 647865962977.
+  'airborne-chewable': catalogShot('airborne-chewable.jpg'),
+  // Barcode 647865962991 is the Assorted Fruit Immune Support gummies,
+  // 63 count. Not the chewable bottle.
+  'airborne-gummies': catalogShot('airborne-gummies.jpg'),
+  // Super Orange powder, 30 packets, UPC 885898330251.
+  'emergenc-super-orange': catalogShot('emergenc-super-orange.jpg'),
+  // Bio-Active Silver Hydrosol 10 ppm dropper, 2 fl oz, UPC 684088232364.
+  'sovereign-silver-hydrosol': catalogShot('sovereign-silver-hydrosol.jpg'),
+  // Children's Daily Immune Support syrup, 8 fl oz, UPC 850007424893.
+  // Not the cough + mucus bottle.
+  'zarbees-kids-immune-syrup': catalogShot('zarbees-kids-immune-syrup.jpg'),
+  // Children's Elderberry Immune Support gummies, 42 count, UPC 898115002749.
+  'zarbees-kids-immune-gummies': catalogShot('zarbees-kids-immune-gummies.jpg'),
+  // Black Elderberry gummies with vitamin C and zinc, 30 count,
+  // UPC 896116001228. Not the homeopathic tablet carton.
+  'sambucol-elderberry-gummies': catalogShot('sambucol-elderberry-gummies.jpg'),
+  // Sugar Free Wild Cherry lozenges, 25 count, UPC 091108324259.
+  // Not the natural cherry box.
+  'cold-eeze-lozenge-acek': catalogShot('cold-eeze-lozenge-acek.jpg'),
+  // UltraMELT orange chewable tablets, 24 count, UPC 091108350241.
+  'cold-eeze-ultramelt-dyed': catalogShot('cold-eeze-ultramelt-dyed.jpg'),
+  // RapidMelts cherry quick-dissolve tablets, 25 count, UPC 732216300048.
+  // Not the Ultra 18-count carton.
+  'zicam-rapidmelts-dyed': catalogShot('zicam-rapidmelts-dyed.jpg'),
+  // Ultra RapidMelts cherry, 18 count, UPC 732216300925.
+  // Not the 25-count RapidMelts carton.
+  'zicam-ultra-rapidmelts': catalogShot('zicam-ultra-rapidmelts.jpg'),
+  // 365 by Whole Foods Market Elderberry Gummies, 60 count,
+  // UPC 099482487591.
+  '365-elderberry-gummies': catalogShot('365-elderberry-gummies.jpg'),
+  // Wholesome Immunity capsules, UPC 850063728140. Official bottle front.
+  'we-heart-wholesome-immunity': catalogShot('we-heart-wholesome-immunity.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -4086,7 +4143,6 @@ assertExactCarton('nasalcrom', 'NasalCrom', 'nasalcrom.jpg');
     throw new Error('bromelain 240 must not inherit the 120-count carton');
   }
 }
-assertLetterOnly('365-elderberry-gummies', '365 Whole Foods Market');
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
 assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 // Unattempted other-aisle rows stay letters. Marks are per-id only.
@@ -6900,6 +6956,94 @@ assertExactCarton(
   'WELMATE',
   'welmate-b87-doxylamine-100.jpg',
 );
+assertExactCarton(
+  'sambucol-cold-flu-relief-homeopathic',
+  'Sambucol',
+  'sambucol-cold-flu-relief-homeopathic.jpg',
+);
+assertExactCarton(
+  'cold-eeze-lozenge-classic',
+  'Cold-EEZE',
+  'cold-eeze-lozenge-classic.jpg',
+);
+assertExactCarton('airborne-chewable', 'Airborne', 'airborne-chewable.jpg');
+assertExactCarton('airborne-gummies', 'Airborne', 'airborne-gummies.jpg');
+assertExactCarton(
+  'emergenc-super-orange',
+  'Emergen-C',
+  'emergenc-super-orange.jpg',
+);
+assertExactCarton(
+  'sovereign-silver-hydrosol',
+  'Sovereign Silver',
+  'sovereign-silver-hydrosol.jpg',
+);
+assertExactCarton(
+  'zarbees-kids-immune-syrup',
+  "Zarbee's",
+  'zarbees-kids-immune-syrup.jpg',
+);
+assertExactCarton(
+  'zarbees-kids-immune-gummies',
+  "Zarbee's",
+  'zarbees-kids-immune-gummies.jpg',
+);
+assertExactCarton(
+  'sambucol-elderberry-gummies',
+  'Sambucol',
+  'sambucol-elderberry-gummies.jpg',
+);
+assertExactCarton(
+  'cold-eeze-lozenge-acek',
+  'Cold-EEZE',
+  'cold-eeze-lozenge-acek.jpg',
+);
+assertExactCarton(
+  'cold-eeze-ultramelt-dyed',
+  'Cold-EEZE',
+  'cold-eeze-ultramelt-dyed.jpg',
+);
+assertExactCarton(
+  'zicam-rapidmelts-dyed',
+  'Zicam',
+  'zicam-rapidmelts-dyed.jpg',
+);
+assertExactCarton(
+  'zicam-ultra-rapidmelts',
+  'Zicam',
+  'zicam-ultra-rapidmelts.jpg',
+);
+assertExactCarton(
+  '365-elderberry-gummies',
+  '365 Whole Foods Market',
+  '365-elderberry-gummies.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-immunity',
+  'We Heart Nutrition',
+  'we-heart-wholesome-immunity.jpg',
+);
+assertBrandMark(
+  'natures-way-sambucus-kids-gummies-coconut',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-kids-gummies-veg-oil',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'source-naturals-wellness-formula-tabs',
+  'Source Naturals',
+  'source-naturals-mark.png',
+);
+assertBrandMark(
+  'source-naturals-wellness-formula-caps',
+  'Source Naturals',
+  'source-naturals-mark.png',
+);
+assertBrandMark('megafood-complex-c', 'MegaFood', 'megafood-mark.png');
 {
   const twelveMg = previewOverlayImage({
     id: 'nutricost-melatonin-tablets-240-tablets',
