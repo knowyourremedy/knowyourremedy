@@ -609,6 +609,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // 051494101353). Official faces are count-specific. Do not glue one
   // count. megafood.com footer wordmark. Per-id only.
   'megafood-complex-c': brandMark('megafood-mark.png'),
+  // Immune Support night run 2026-09-24 5:30 PT batch 2.
+  // Count-specific megafood.com faces. Do not glue one count.
+  // MegaFood mark already on disk. Per-id only.
+  'megafood-ultra-c-400': brandMark('megafood-mark.png'),
+  'megafood-vitamin-d3-1000': brandMark('megafood-mark.png'),
+  'megafood-vitamin-d3-2000': brandMark('megafood-mark.png'),
+  'megafood-c-defense-gummies': brandMark('megafood-mark.png'),
+  'megafood-vitamin-d3-5000-k-k2': brandMark('megafood-mark.png'),
+  'megafood-turmeric-whole-body-minis': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2951,6 +2960,59 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   '365-elderberry-gummies': catalogShot('365-elderberry-gummies.jpg'),
   // Wholesome Immunity capsules, UPC 850063728140. Official bottle front.
   'we-heart-wholesome-immunity': catalogShot('we-heart-wholesome-immunity.jpg'),
+  // Immune Support night run 2026-09-24 5:30 PT batch 2 — exact US pack
+  // faces from megafood.com / genexa.com. Per-id only. Single barcode
+  // on each row, so the count on the face is that SKU.
+  // Zinc bisglycinate 120 tablets, UPC 051494104408. Not the 60-count.
+  'megafood-zinc-bisglycinate': catalogShot('megafood-zinc-bisglycinate.jpg'),
+  // Selenium tablets, 60 count, UPC 051494101865.
+  'megafood-selenium-tablet': catalogShot('megafood-selenium-tablet.jpg'),
+  // Liposomal glutathione, 60 capsules, UPC 051494106044.
+  'megafood-liposomal-glutathione': catalogShot(
+    'megafood-liposomal-glutathione.jpg',
+  ),
+  // Quercetin with bromelain, 60 capsules, UPC 051494105627.
+  'megafood-quercetin-bromelain': catalogShot(
+    'megafood-quercetin-bromelain.jpg',
+  ),
+  // NAC, 120 capsules, UPC 051494105993.
+  'megafood-nac': catalogShot('megafood-nac.jpg'),
+  // Sea Moss Complex, 120 capsules, UPC 051494105832.
+  'megafood-sea-moss-complex': catalogShot('megafood-sea-moss-complex.jpg'),
+  // Vitamin D3 + K2 5000 IU gummies, 60 count, UPC 051494106037.
+  'megafood-vitamin-d3-k2-5000-gummies': catalogShot(
+    'megafood-vitamin-d3-k2-5000-gummies.jpg',
+  ),
+  // Elderberry Immune Support gummies, 54 count, UPC 051494104149.
+  'megafood-elderberry-immune-gummies': catalogShot(
+    'megafood-elderberry-immune-gummies.jpg',
+  ),
+  // D3 2000 IU gummies, 70 count, UPC 051494104125.
+  'megafood-d3-2000-gummies': catalogShot('megafood-d3-2000-gummies.jpg'),
+  // High-absorption selenium capsules, 120 count, UPC 051494106365.
+  // Not the 60-count selenium tablet.
+  'megafood-high-absorption-selenium-capsules': catalogShot(
+    'megafood-high-absorption-selenium-capsules.jpg',
+  ),
+  // Liposomal vitamin C, 120 capsules, UPC 051494105863.
+  'megafood-liposomal-vitamin-c': catalogShot(
+    'megafood-liposomal-vitamin-c.jpg',
+  ),
+  // Turmeric Curcumin Extra Strength Joint, 60 tablets, UPC 051494103104.
+  // Not the liver bottle.
+  'megafood-turmeric-extra-strength-joint': catalogShot(
+    'megafood-turmeric-extra-strength-joint.jpg',
+  ),
+  // Turmeric Curcumin Extra Strength Liver, 90 tablets, UPC 051494103074.
+  // Not the 60-count liver bottle.
+  'megafood-turmeric-extra-strength-liver': catalogShot(
+    'megafood-turmeric-extra-strength-liver.jpg',
+  ),
+  // Infants' Daytime Cough & Immune Support, UPC 850015736933.
+  // Official genexa.com hero. Not a kids acetaminophen bottle.
+  'genexa-infants-daytime-cough-immune': catalogShot(
+    'genexa-infants-daytime-cough-immune.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7044,6 +7106,86 @@ assertBrandMark(
   'source-naturals-mark.png',
 );
 assertBrandMark('megafood-complex-c', 'MegaFood', 'megafood-mark.png');
+assertBrandMark('megafood-ultra-c-400', 'MegaFood', 'megafood-mark.png');
+assertBrandMark('megafood-vitamin-d3-1000', 'MegaFood', 'megafood-mark.png');
+assertBrandMark('megafood-vitamin-d3-2000', 'MegaFood', 'megafood-mark.png');
+assertBrandMark('megafood-c-defense-gummies', 'MegaFood', 'megafood-mark.png');
+assertBrandMark(
+  'megafood-vitamin-d3-5000-k-k2',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertBrandMark(
+  'megafood-turmeric-whole-body-minis',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertExactCarton(
+  'megafood-zinc-bisglycinate',
+  'MegaFood',
+  'megafood-zinc-bisglycinate.jpg',
+);
+assertExactCarton(
+  'megafood-selenium-tablet',
+  'MegaFood',
+  'megafood-selenium-tablet.jpg',
+);
+assertExactCarton(
+  'megafood-liposomal-glutathione',
+  'MegaFood',
+  'megafood-liposomal-glutathione.jpg',
+);
+assertExactCarton(
+  'megafood-quercetin-bromelain',
+  'MegaFood',
+  'megafood-quercetin-bromelain.jpg',
+);
+assertExactCarton('megafood-nac', 'MegaFood', 'megafood-nac.jpg');
+assertExactCarton(
+  'megafood-sea-moss-complex',
+  'MegaFood',
+  'megafood-sea-moss-complex.jpg',
+);
+assertExactCarton(
+  'megafood-vitamin-d3-k2-5000-gummies',
+  'MegaFood',
+  'megafood-vitamin-d3-k2-5000-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-elderberry-immune-gummies',
+  'MegaFood',
+  'megafood-elderberry-immune-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-d3-2000-gummies',
+  'MegaFood',
+  'megafood-d3-2000-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-high-absorption-selenium-capsules',
+  'MegaFood',
+  'megafood-high-absorption-selenium-capsules.jpg',
+);
+assertExactCarton(
+  'megafood-liposomal-vitamin-c',
+  'MegaFood',
+  'megafood-liposomal-vitamin-c.jpg',
+);
+assertExactCarton(
+  'megafood-turmeric-extra-strength-joint',
+  'MegaFood',
+  'megafood-turmeric-extra-strength-joint.jpg',
+);
+assertExactCarton(
+  'megafood-turmeric-extra-strength-liver',
+  'MegaFood',
+  'megafood-turmeric-extra-strength-liver.jpg',
+);
+assertExactCarton(
+  'genexa-infants-daytime-cough-immune',
+  'Genexa',
+  'genexa-infants-daytime-cough-immune.jpg',
+);
 {
   const twelveMg = previewOverlayImage({
     id: 'nutricost-melatonin-tablets-240-tablets',
