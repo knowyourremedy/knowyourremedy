@@ -2747,6 +2747,85 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Melatonin 3 mg 60 veg capsules, UPC 733739032553 (NOW-03255).
   // Not the 180-capsule bottle.
   'now-melatonin-3-mg-60': catalogShot('now-melatonin-3-mg-60.jpg'),
+  // Sleep leftover night run 2026-09-24 12:30 PT batch 2 — official US
+  // 3D packshots. Per-id only.
+  // 5-HTP with glycine, taurine & inositol, 120 veg capsules,
+  // UPC 733739001115 (NOW-00111). Not the 60-capsule bottle.
+  'now-5-htp-with-glycine-taurine-inositol-120': catalogShot(
+    'now-5-htp-with-glycine-taurine-inositol-120.jpg',
+  ),
+  // Melatonin 3 mg 180 lozenges, UPC 733739032591 (NOW-03259).
+  // Not the 90-lozenge bottle.
+  'now-melatonin-180': catalogShot('now-melatonin-180.jpg'),
+  // Melatonin 5 mg 60 veg capsules, UPC 733739035554 (NOW-03555).
+  // Not the 180-capsule bottle.
+  'now-melatonin-5-mg-60': catalogShot('now-melatonin-5-mg-60.jpg'),
+  // Melatonin 3 mg 90 lozenges, UPC 733739032584 (NOW-03258).
+  // Not the 180-lozenge bottle.
+  'now-melatonin-90': catalogShot('now-melatonin-90.jpg'),
+  // L-Tryptophan 500 mg 60 veg capsules, UPC 733739001665 (NOW-00166).
+  // Not the 120-capsule bottle.
+  'now-l-tryptophan-500-mg-60': catalogShot(
+    'now-l-tryptophan-500-mg-60.jpg',
+  ),
+  // 5-HTP 50 mg 90 veg capsules, UPC 733739000996 (NOW-00099).
+  // Not the 30- or 180-capsule bottles.
+  'now-5-htp-50-mg-90': catalogShot('now-5-htp-50-mg-90.jpg'),
+  // 5-HTP 100 mg 60 veg capsules, UPC 733739001054 (NOW-00105).
+  // Not the 120-capsule bottle.
+  'now-5-htp-100-mg-60': catalogShot('now-5-htp-100-mg-60.jpg'),
+  // Sleep Regimen 3-in-1 90 veg capsules, UPC 733739047694 (NOW-04769).
+  'now-sleep-regimen-3-in-1-90': catalogShot(
+    'now-sleep-regimen-3-in-1-90.jpg',
+  ),
+  // 5-HTP 50 mg 180 veg capsules, UPC 733739001016 (NOW-00101).
+  'now-5-htp-50-mg-180': catalogShot('now-5-htp-50-mg-180.jpg'),
+  // 5-HTP with glycine, taurine & inositol, 60 veg capsules,
+  // UPC 733739001085 (NOW-00108). Not the 120-capsule bottle.
+  'now-5-htp-with-glycine-taurine-inositol-60': catalogShot(
+    'now-5-htp-with-glycine-taurine-inositol-60.jpg',
+  ),
+  // 5-HTP 50 mg 30 veg capsules, UPC 733739000972 (NOW-00097).
+  'now-5-htp-50-mg-30': catalogShot('now-5-htp-50-mg-30.jpg'),
+  // L-Tryptophan powder 2 oz, UPC 733739002631 (NOW-00263).
+  // Not a capsule bottle.
+  'now-l-tryptophan-powder-2': catalogShot('now-l-tryptophan-powder-2.jpg'),
+  // 5-HTP citrus 100 mg 90 chewables, UPC 733739001092 (NOW-00109).
+  'now-5-htp-citrus-100-mg-90-chewables': catalogShot(
+    'now-5-htp-citrus-100-mg-90-chewables.jpg',
+  ),
+  // L-Tryptophan 1,000 mg 60 tablets, UPC 733739001696 (NOW-00169).
+  // Not the 500 mg capsule bottles.
+  'now-l-tryptophan-60': catalogShot('now-l-tryptophan-60.jpg'),
+  // Melatonin 1 mg 100 tablets, UPC 733739032621 (NOW-03262).
+  'now-melatonin-100-733739032621': catalogShot(
+    'now-melatonin-100-733739032621.jpg',
+  ),
+  // Nutricost melatonin 5 mg 240 capsules, UPC 702669931335
+  // (nutricost.com variant front). Not the 10 mg or 20 mg bottles.
+  'nutricost-nutricost-melatonin-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-melatonin-capsules-240-capsules.jpg',
+  ),
+  // Nutricost melatonin 10 mg 240 capsules, UPC 810014675787.
+  // Not the 5 mg bottle and not UPC 810014672731.
+  'nutricost-nutricost-melatonin-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-melatonin-capsules-240-capsules-2.jpg',
+  ),
+  // Nutricost melatonin 20 mg 240 capsules, UPC 810014675794.
+  'nutricost-nutricost-melatonin-capsules-240-capsules-3': catalogShot(
+    'nutricost-nutricost-melatonin-capsules-240-capsules-3.jpg',
+  ),
+  // Fast-dissolve melatonin 5 mg 240 tablets, UPC 810014673141.
+  // Not a capsule bottle.
+  'nutricost-nutricost-melatonin-tablets-fast-dissolve-240-tablets':
+    catalogShot(
+      'nutricost-nutricost-melatonin-tablets-fast-dissolve-240-tablets.jpg',
+    ),
+  // nutricost.com variant barcode 810014672731 is the 10 mg 240-capsule
+  // front (shopify title 10MG). Not the 3 mg tablet and not UPC 810014675787.
+  'nutricost-nutricost-melatonin-tablets-240-capsules': catalogShot(
+    'nutricost-nutricost-melatonin-tablets-240-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
