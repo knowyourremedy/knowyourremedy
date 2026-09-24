@@ -588,6 +588,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Motrin PM spans two count UPCs. Official faces are count-specific.
   // Motrin mark already on disk. Per-id only.
   'motrin-pm': brandMark('motrin-mark.png'),
+  // Attempted Sleep leftover — night run 2026-09-24 12:30 PT batch 1.
+  // Dyed Berry liquid spans 6 fl oz (311917188188) and 12 fl oz
+  // (311917047614). Official faces are count-specific. Do not glue
+  // one size. Walgreens mark already on disk. Per-id only.
+  'walgreens-sleep-aid-liquid-dyed': brandMark('walgreens-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2676,6 +2681,72 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'amazon-basics-melatonin-5-gummies': catalogShot(
     'amazon-basics-melatonin-5-gummies.jpg',
   ),
+  // Sleep leftover night run 2026-09-24 12:30 PT batch 1 — official US
+  // 3D packshots. Per-id only.
+  // Kids Melatonin 1 mg mixed berry gummies 90ct, UPC 195515117661
+  // (amazon.com ASIN B0F5W6C3PL). Not the adult 5 mg gummies.
+  'amazon-basics-kids-melatonin-1-gummies': catalogShot(
+    'amazon-basics-kids-melatonin-1-gummies.jpg',
+  ),
+  // Nighttime Sleep Aid 25 mg 100 caplets, UPC 036800327405
+  // (hy-vee.com GTIN 0036800327405). Not the 24-count blister.
+  'topcare-sleep-aid-dph': catalogShot('topcare-sleep-aid-dph.jpg'),
+  // Dye-free Berry 12 fl oz, UPC 311917169149 (walgreens.com).
+  // Not the dyed 6 / 12 fl oz pair.
+  'walgreens-sleep-z-dyefree': catalogShot('walgreens-sleep-z-dyefree.jpg'),
+  // Doxylamine 25 mg, 2 x 96 (192 tablets), UPC 096619857692.
+  'kirkland-sleep-aid-doxylamine': catalogShot(
+    'kirkland-sleep-aid-doxylamine.jpg',
+  ),
+  // Timed-release melatonin 10 mg 250 tablets, UPC 078742094632.
+  // Not the later 300-count face.
+  'members-mark-melatonin-10mg-tr': catalogShot(
+    'members-mark-melatonin-10mg-tr.jpg',
+  ),
+  // Extra Strength Acetaminophen PM 100 caplets, UPC 359726863117
+  // (target.com). Not a different count.
+  'upup-es-acetaminophen-pm-100': catalogShot(
+    'upup-es-acetaminophen-pm-100.jpg',
+  ),
+  // Melatonin 10 mg 100 veg capsules, UPC 733739035578 (NOW-03557).
+  'now-melatonin-10-mg-100': catalogShot('now-melatonin-10-mg-100.jpg'),
+  // Melatonin 5 mg 120 tablets, UPC 733739035547 (NOW-03554).
+  // Not the 180-capsule bottle.
+  'now-melatonin-5-mg-120': catalogShot('now-melatonin-5-mg-120.jpg'),
+  // 5-HTP 100 mg 120 veg capsules, UPC 733739001061 (NOW-00106).
+  'now-5-htp-100-mg-120': catalogShot('now-5-htp-100-mg-120.jpg'),
+  // Melatonin 3 mg 180 veg capsules, UPC 733739032577 (NOW-03257).
+  // Not the 60-capsule bottle.
+  'now-melatonin-3-mg-180': catalogShot('now-melatonin-3-mg-180.jpg'),
+  // Valerian root 500 mg 100 veg capsules, UPC 733739047700 (NOW-04770).
+  // Not the 250-capsule bottle.
+  'now-valerian-root-100': catalogShot('now-valerian-root-100.jpg'),
+  // Melatonin 5 mg 180 veg capsules, UPC 733739035561 (NOW-03556).
+  // Not the 120-tablet bottle.
+  'now-melatonin-5-mg-180': catalogShot('now-melatonin-5-mg-180.jpg'),
+  // Valerian root 500 mg 250 veg capsules, UPC 733739047717 (NOW-04771).
+  'now-valerian-root-500-mg-250': catalogShot(
+    'now-valerian-root-500-mg-250.jpg',
+  ),
+  // L-Tryptophan 500 mg 120 veg capsules, UPC 733739001672 (NOW-00167).
+  'now-l-tryptophan-500-mg-120': catalogShot(
+    'now-l-tryptophan-500-mg-120.jpg',
+  ),
+  // Melatonin 20 mg 90 veg capsules, UPC 733739035585 (NOW-03558).
+  'now-melatonin-20-mg-90': catalogShot('now-melatonin-20-mg-90.jpg'),
+  // Liquid melatonin 2 fl oz, UPC 733739032614 (NOW-03261).
+  'now-liquid-melatonin-2-fl-oz-59-ml': catalogShot(
+    'now-liquid-melatonin-2-fl-oz-59-ml.jpg',
+  ),
+  // Sleep 90 veg capsules, UPC 733739047687 (NOW-04768).
+  'now-sleep-90': catalogShot('now-sleep-90.jpg'),
+  // Valerian root extract 2 fl oz, UPC 733739049704 (NOW-04970).
+  'now-valerian-root-extract-2-fl-oz-59-ml': catalogShot(
+    'now-valerian-root-extract-2-fl-oz-59-ml.jpg',
+  ),
+  // Melatonin 3 mg 60 veg capsules, UPC 733739032553 (NOW-03255).
+  // Not the 180-capsule bottle.
+  'now-melatonin-3-mg-60': catalogShot('now-melatonin-3-mg-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
