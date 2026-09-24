@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 24, 2026 (formaldehyde-releasers — founder stamp):** As Other Ingredients, Avoid (Not clean): diazolidinyl urea; imidazolidinyl urea; DMDM hydantoin; Quaternium-15; Bronopol; Bronidox. Un-parked. Harm-first. FDA allow ≠ Clean. Founder bump from the Sept 15 Caution lock and from the parked list.
+
 **Changed Sept 24, 2026 (A+Health batch93 — founder stamp; use existing §5 where named):** Map — gylcerin → glycerin Cleared; vitamin E → tocopherol Cleared (not tocopheryl acetate); lanolin alcohols → lanolin alcohol Caution; MCC + CMC combo → those two Cleared locks; cetyl / cetostearyl alcohol → fatty-alcohol cream base Cleared. Caution — pharmaceutical ink / imprinting ink; flavor / banana flavor / flavadew coolmint; sorbitol sorbitan solution; sodium lauroyl sarcosinate; sodium stannate; simethicone / simethicone emulsion as OI; magnesium aluminum silicate; sodium saccharin; nonoxynol-9; benzoic acid; thyme oil as OI; white wax; C30-45 alkyl cetearyl dimethicone crosspolymer; alicyclic hydrocarbon resin; styrene isoprene; styrene block copolymer. Cleared — dibasic sodium phosphate. Avoid — plain caramel powder (undisclosed caramel class). Diazolidnyl urea = diazolidinyl urea. Parked formaldehyde-releaser. No new row. Do not flip the Sept 15 Caution lock.
 
 **Changed Sept 24, 2026 (poloxamer 182 — founder stamp):** Poloxamer 182 = Caution. PEG-style surfactant. Not High. Hunt order stays DailyMed → brand → retail → Google AI last.
@@ -229,6 +231,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Caramel color, CONFIRMED Class III or IV — **LOCKED (v1.6)** | ammonia caramel (E150c), sulphite ammonia caramel (E150d) | Same basis, directly confirmed. |
 | Talc — **LOCKED (v1.6)** | Magnesium silicate | IARC Group 2A (2024, upgraded from 2B) + separate asbestos-contamination pathway. No pharma-grade/asbestos-tested exception — unverifiable from a label. Avoid in ALL oral / swallow OTC/vitamin/supplement/protein products. Topical talc in a cream/patch is Caution (form tap) — not this High swallow rule. |
 | BVO (brominated vegetable oil) — **LOCKED (v1.6)** | Brominated soybean oil | Federal ban, effective Aug 2024. Documented tissue-bromine accumulation + neurological harm mechanism. |
+| Formaldehyde-releasers as OI — LOCKED (Sept 24, 2026) | diazolidinyl urea, Diazolidnyl urea, imidazolidinyl urea, DMDM hydantoin, Quaternium-15, Bronopol, Bronidox | Avoid (Not clean). Un-parked. Harm-first. FDA allow ≠ Clean. Founder bump from the Sept 15 Caution lock. |
 
 ### Precautionary — capped at Caution (nanoparticle review pending, v1.4)
 
@@ -611,8 +614,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | LPG / liquefied petroleum gas — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Synthetic beeswax — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Distinct from Cleared beeswax. | Standard alternatives rule. Not Avoid. |
 | Topical talc in a cream/patch — LOCKED (Sept 15, 2026) | Caution. Not the oral-talc High swallow rule. Tap form. | Standard alternatives rule. Not Avoid. |
-| DMDM hydantoin / diazolidinyl urea — LOCKED (Sept 15, 2026) | Formaldehyde-donor. Caution. Not Avoid unless founder later bumps. | Standard alternatives rule. Not Avoid. |
-| diazolidinyl urea — LOCKED (Sept 15, 2026) | Exact string. Same Caution as the DMDM / diazolidinyl urea row. Already locked; restamped so the bare token matches. Diazolidnyl urea is this spelling (Sept 24, 2026). No new row. Do not flip this Caution lock. | Standard alternatives rule. Not Avoid. |
+| DMDM hydantoin / diazolidinyl urea — LOCKED (Sept 15, 2026) | Formaldehyde-donor. Founder restamp Sept 24, 2026: Avoid (Not clean). Same row as formaldehyde-releasers as OI. Not Caution. | Standard alternatives rule. Avoid. |
+| diazolidinyl urea — LOCKED (Sept 15, 2026) | Exact string. Founder restamp Sept 24, 2026: Avoid (Not clean) with the formaldehyde-releaser row. Diazolidnyl urea is this spelling. Not Caution. | Standard alternatives rule. Avoid. |
 | aluminum hydroxide (topical / patch) — LOCKED (Sept 15, 2026) | Exact inactive token. Not the oral antacid active-safety cap row. | Standard alternatives rule. Not Avoid. |
 | aluminum silicate / synthetic aluminum silicate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | dihydroxyaluminum aminoacetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
@@ -778,7 +781,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 
 | Item | Reason parked |
 |---|---|
-| Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol) | Still parked. DMDM hydantoin / diazolidinyl urea moved to Caution (formaldehyde-donor) for in-scope topical OTC — not Avoid unless founder later bumps. |
+| Formaldehyde-releasers (imidazolidinyl urea, Quaternium-15, Bronidox, Bronopol, DMDM hydantoin, diazolidinyl urea) | Un-parked Sept 24, 2026. Avoid (Not clean) on the High table. FDA allow ≠ Clean. |
 | Backing / adhesive plaster / film / baking cloth | Patch/device materials. Not gradeable inactives. Do not block a row on those words. |
 | Unlabeled “Vegetable Capsule” | Capsule shell not named. Do not invent a grade. Not a §5 inactive token. Stays ungraded (Sept 16, 2026 restamp). |
 | High-fructose corn syrup (HFCS) | Overwhelmingly a food/beverage sweetener; not confirmed as an inactive ingredient on any real OTC/vitamin/supplement/protein label in scope. Park unless it's actually found on a real product label — do not proactively grade a food-only sweetener. |

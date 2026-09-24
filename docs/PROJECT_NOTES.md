@@ -237,6 +237,7 @@ Next session
 - FOUNDER STAMP 2026-09-23 — cucumis sativus (cucumber) fruit extract → cucumber extract Caution. Same token. Not a new grade. OCR chonüoitin stays refuse. batch88 is on MAIN. Do not edit batch70–88 product rows. No next 3P brand.
 - FOUNDER STAMP 2026-09-24 — poloxamer 182 = Caution (PEG-style surfactant; not High). Hunt order stays DailyMed → brand → retail → Google AI last. batch90 is on MAIN. Do not edit batch70–90 product rows. No A+Health.
 - FOUNDER STAMP 2026-09-24 — A+Health batch93. Map: gylcerin → glycerin; vitamin E → tocopherol; lanolin alcohols → lanolin alcohol; MCC + CMC combo → those two locks; cetyl / cetostearyl alcohol → fatty-alcohol cream base Cleared. Caution: pharmaceutical ink / imprinting ink; flavor / banana flavor / flavadew coolmint; sorbitol sorbitan solution; sodium lauroyl sarcosinate; sodium stannate; simethicone / simethicone emulsion as OI; magnesium aluminum silicate; sodium saccharin; nonoxynol-9; benzoic acid; thyme oil as OI; white wax; C30-45 alkyl cetearyl dimethicone crosspolymer; alicyclic hydrocarbon resin; styrene isoprene; styrene block copolymer. Dibasic sodium phosphate is Cleared. Avoid: plain caramel powder (undisclosed caramel class). Diazolidnyl urea = diazolidinyl urea — parked formaldehyde-releaser, no new row. Do not flip the Sept 15 Caution lock. batch93 is on MAIN. Do not edit batch70–93 product rows. No HealthA2Z.
+- FOUNDER STAMP 2026-09-24 — formaldehyde-releasers as OI = Avoid (Not clean): diazolidinyl urea; imidazolidinyl urea; DMDM hydantoin; Quaternium-15; Bronopol; Bronidox. Un-parked. Harm-first. FDA allow ≠ Clean. Do not edit batch70–94 product rows. No HealthA2Z slice.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -1625,4 +1626,5 @@ ON MAIN / cucumber fruit extract aliased / STOPPED
 ON MAIN / hunt order DailyMed→brand→retail→Google AI last / STOPPED
 ON MAIN / poloxamer 182 Caution / STOPPED
 ON MAIN / A+Health tokens stamped / STOPPED
+ON MAIN / formaldehyde-releasers Avoid / STOPPED
 ON MAIN / notes scoreboard #312+#313 / STOPPED
