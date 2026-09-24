@@ -90,6 +90,7 @@ import {
   BATCH87_KYR6_AMAZON_3P_WELMATE,
   BATCH88_KYR6_WELMATE_TOKEN_BACKFILL,
   BATCH89_KYR6_WELMATE_CUCUMBER_SPRAY,
+  BATCH90_KYR6_WELMATE_NO_OI,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -200,6 +201,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH87_KYR6_AMAZON_3P_WELMATE,
   ...BATCH88_KYR6_WELMATE_TOKEN_BACKFILL,
   ...BATCH89_KYR6_WELMATE_CUCUMBER_SPRAY,
+  ...BATCH90_KYR6_WELMATE_NO_OI,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
