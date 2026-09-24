@@ -84,3 +84,4 @@ export { BATCH83_KYR6_NATUREWISE_TOKEN_BACKFILL } from './batch83-kyr6-naturewis
 export { BATCH84_KYR6_NATUREWISE_FRUIT_FOAM } from './batch84-kyr6-naturewise-fruit-foam';
 export { BATCH85_KYR6_NATUREWISE_NO_OI } from './batch85-kyr6-naturewise-no-oi';
 export { BATCH86_KYR6_NATUREWISE_LAST_REFUSE } from './batch86-kyr6-naturewise-last-refuse';
+export { BATCH87_KYR6_AMAZON_3P_WELMATE } from './batch87-kyr6-amazon-3p-welmate';
