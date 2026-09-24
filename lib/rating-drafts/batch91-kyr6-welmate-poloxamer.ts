@@ -94,8 +94,11 @@ function row(
   return { ...opts, recordStatus: opts.recordStatus ?? UNVERIFIED };
 }
 
+const pin =
+  `DailyMed carton image adapalene-01.jpg (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=${SETID}; setid ${SETID}; NDC ${NDC}; 45 g / 1.6 oz tube in 1 carton). Carton barcode decodes as GTIN 0373581000203 (UPC-A ${UPC}), the same GTIN batch90 recorded on this carton and on the Wellspring 1.6 oz offer. Directions: adults and children 12 years of age and older; children under 12 years of age ask a doctor. ${PG_TOPICAL_TAP}`;
+
 const cite =
-  `DailyMed carton image adapalene-01.jpg (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=${SETID}; setid ${SETID}; NDC ${NDC}; 45 g / 1.6 oz tube in 1 carton) inactive ingredients: ${PRINTED_OI}. Carton barcode decodes as GTIN 0373581000203 (UPC-A ${UPC}), the same GTIN batch90 recorded on this carton and on the Wellspring 1.6 oz offer. Directions: adults and children 12 years of age and older; children under 12 years of age ask a doctor. Poloxamer 182 maps to the locked Sept 24 Caution token. Not High. ${PG_TOPICAL_TAP}`;
+  `${pin} Inactive ingredients: ${PRINTED_OI}. Poloxamer 182 maps to the locked Sept 24 Caution token. Not High.`;
 
 export const BATCH91_KYR6_WELMATE_POLOXAMER: RatingRecord[] = [
   row({
@@ -119,7 +122,7 @@ export const BATCH91_KYR6_WELMATE_POLOXAMER: RatingRecord[] = [
         ['Purified water', 'cleared', 'water'],
         ['Sodium hydroxide', 'cleared', 'naoh'],
       ] as [string, IngredientFlag['riskLevel'], keyof typeof METH][]
-    ).map(([name, risk, meth]) => flag(name, risk, labelCite(cite, METH[meth]))),
+    ).map(([name, risk, meth]) => flag(name, risk, labelCite(pin, METH[meth]))),
     verdict: 'avoid',
     honestNote:
       `FOUNDER-LOCK DRAFT: Avoid. Driver is methylparaben. High in every form, including this gel. Poloxamer 182 maps to the locked Sept 24 Caution token (PEG-style surfactant). Not High. Not the Moderate polyethylene glycol row. Distinct from Caution behenoyl polyoxyl-8 glycerides and from Caution polyoxyethylene (23) cetyl ether. Topical propylene glycol stays Cleared. Edetate disodium stays Cleared disodium EDTA, not tetrasodium EDTA. Carbomer homopolymer type C stays Cleared. Sodium hydroxide is the Cleared pH adjuster. Ages 12+ (under 12: ask a doctor). ${LIMITED_STACK} Pack sizes share formulaId \`${FORMULA}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
@@ -200,7 +203,15 @@ for (const record of _ROWS) {
     throw new Error('batch91 poloxamer 182 must map to the locked Caution token');
   }
   const methyl = record.inactiveIngredients.find((i) => i.name === 'Methylparaben');
-  if (!methyl || methyl.riskLevel !== 'high') throw new Error('batch91 methylparaben must stay High');
+  if (!methyl || methyl.riskLevel !== 'high' || !/paraben/i.test(methyl.source ?? '')) {
+    throw new Error('batch91 methylparaben must stay High');
+  }
+  for (const ingredient of record.inactiveIngredients) {
+    if (ingredient.name === 'Methylparaben') continue;
+    if (/paraben/i.test(ingredient.source ?? '')) {
+      throw new Error(`batch91 ${ingredient.name} source must not carry the paraben why trigger`);
+    }
+  }
   const pg = record.inactiveIngredients.find((i) => i.name === 'Propylene glycol');
   if (!pg || pg.riskLevel !== 'cleared' || !/topical/.test(pg.source ?? '')) {
     throw new Error('batch91 topical propylene glycol must stay Cleared');

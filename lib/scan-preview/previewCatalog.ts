@@ -7806,6 +7806,10 @@ function lockedWhyBody(ingredient: IngredientFlag): string | null {
     return 'Polysorbate emulsifier. Moderate listing. Cleaner formulas leave it out.';
   }
 
+  if (name.includes('poloxamer 182') || source.includes('poloxamer 182')) {
+    return 'Poloxamer 182 is a locked Caution PEG-style surfactant. Not High. It does not make a product Not clean by itself.';
+  }
+
   if (
     name.includes('silicon dioxide')
     || name === 'silica'
@@ -7878,5 +7882,16 @@ export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
   }
   if (!/paraben/i.test(why.body)) {
     throw new Error('absorbine-jr-pro-cream methylparaben why must be the paraben line');
+  }
+  const adapalene = findDraftRecord('welmate-b91-adapalene-01-gel');
+  const poloxamer = adapalene?.inactiveIngredients.find((ingredient) =>
+    ingredient.name === 'Poloxamer 182',
+  );
+  if (!poloxamer || poloxamer.riskLevel !== 'limited') {
+    throw new Error('welmate adapalene must keep poloxamer 182 as Caution');
+  }
+  const poloxamerWhy = ingredientWhy(poloxamer);
+  if (!/PEG-style surfactant/.test(poloxamerWhy.body) || /paraben/i.test(poloxamerWhy.body)) {
+    throw new Error('poloxamer 182 why must be the Caution surfactant line, not the paraben line');
   }
 }
