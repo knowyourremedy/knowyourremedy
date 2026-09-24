@@ -88,3 +88,4 @@ export { BATCH87_KYR6_AMAZON_3P_WELMATE } from './batch87-kyr6-amazon-3p-welmate
 export { BATCH88_KYR6_WELMATE_TOKEN_BACKFILL } from './batch88-kyr6-welmate-token-backfill';
 export { BATCH89_KYR6_WELMATE_CUCUMBER_SPRAY } from './batch89-kyr6-welmate-cucumber-spray';
 export { BATCH90_KYR6_WELMATE_NO_OI } from './batch90-kyr6-welmate-no-oi';
+export { BATCH91_KYR6_WELMATE_POLOXAMER } from './batch91-kyr6-welmate-poloxamer';
