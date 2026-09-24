@@ -15,7 +15,7 @@
 // No separate A+Health vitamin / supplement PDP with an Other Ingredients
 // panel turned up under the a+health mark. An AI blurb is not OI or a UPC.
 // NDC is not a UPC. KYR5-d attaches a UPC-A only where the carton bars
-// or a US barcode listing matched this exact pack. Empty stays empty.
+// on the DailyMed image matched this exact pack. Empty stays empty.
 //
 // Already-on-MAIN twins left alone: aplus-health-dual-action-oxides
 // (setid 04ccc4b2 / NDC 69452-394, 216-ct and 400-ct) and
@@ -404,10 +404,6 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b93-loperamide-24',
-    // KYR5-d — barcodeindex.com/tag/a-health, 24-count softgels, NDC 69452-266-12.
-    barcode: '369452266120',
-    upcNote:
-      'UPC-A 369452266120 is the barcodeindex listing for this 24-count loperamide softgel (NDC 69452-266-12).',
     productName: 'A+Health Anti-Diarrheal Loperamide HCl 2 mg, 24 Softgels',
     category: 'Digestive',
     formulaId: 'aplushealth-b93-loperamide-softgel',
@@ -752,7 +748,6 @@ if (_ROWS.some((r) => r.brand !== 'A+Health')) throw new Error('batch93 brand dr
 const _UPC: Record<string, string> = {
   'aplushealth-b93-dph-25-600': '369452444313',
   'aplushealth-b93-iodine-tincture-30': '369452484364',
-  'aplushealth-b93-loperamide-24': '369452266120',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -760,7 +755,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 3) throw new Error('batch93 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 2) throw new Error('batch93 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
