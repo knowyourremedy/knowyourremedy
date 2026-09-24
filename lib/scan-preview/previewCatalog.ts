@@ -2826,17 +2826,96 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-melatonin-tablets-240-capsules': catalogShot(
     'nutricost-nutricost-melatonin-tablets-240-capsules.jpg',
   ),
+  // Sleep leftover night run 2026-09-24 3:00 PT — official US pack fronts.
+  // Per-id only. This aisle finishes in this batch.
+  // Unbarcoded 3 mg 240-tablet front from the pinned 3MG_240TAB gallery.
+  // Draft name says capsules; the panel and bottle are tablets.
+  // Not the barcoded 3 mg COMPAX tablet (UPC 810014672717).
+  'nutricost-melatonin-capsules-240-tablets': catalogShot(
+    'nutricost-melatonin-capsules-240-tablets.jpg',
+  ),
+  // Sleep Aid Complex 90 capsules, UPC 702669934145.
+  'nutricost-sleep-aid-complex-capsules-90-capsules': catalogShot(
+    'nutricost-sleep-aid-complex-capsules-90-capsules.jpg',
+  ),
+  // Barcode 810014672748 is the 12 mg 240-tablet front. Draft name omits
+  // 12 mg. Not the 3 mg tablet that shares this formulaId.
+  'nutricost-melatonin-tablets-240-tablets': catalogShot(
+    'nutricost-melatonin-tablets-240-tablets.jpg',
+  ),
+  // Melatonin 5 mg 240 tablets, UPC 810014672724.
+  // Not the 5 mg 240-capsule bottle.
+  'nutricost-melatonin-tablets-5mg-240-tablets': catalogShot(
+    'nutricost-melatonin-tablets-5mg-240-tablets.jpg',
+  ),
+  // Melatonin 3 mg 240 tablets, UPC 810014672717 (COMPAX front).
+  // Not the unbarcoded 3 mg 240TAB bottle.
+  'nutricost-melatonin-tablets-3mg-240-tablets': catalogShot(
+    'nutricost-melatonin-tablets-3mg-240-tablets.jpg',
+  ),
+  // Extended-release melatonin 5 mg 240 capsules, UPC 810139577799.
+  // Not an immediate-release capsule or tablet.
+  'nutricost-melatonin-extended-release-capsules-5mg-240-capsules':
+    catalogShot(
+      'nutricost-melatonin-extended-release-capsules-5mg-240-capsules.jpg',
+    ),
+  // Chamomile 240 capsules, UPC 810014674063. Front reads 240 capsules.
+  'nutricost-b79-chamomile-240-capsules': catalogShot(
+    'nutricost-b79-chamomile-240-capsules.jpg',
+  ),
+  // Suntheanine 150 mg 60 capsules, UPC 810139578390.
+  'nutricost-b80-suntheanine-60-capsules': catalogShot(
+    'nutricost-b80-suntheanine-60-capsules.jpg',
+  ),
+  // L-Tryptophan 500 mg 120 capsules, UPC 702669933070.
+  // Not a NOW tryptophan bottle.
+  'nutricost-b80-l-tryptophan-120-capsules': catalogShot(
+    'nutricost-b80-l-tryptophan-120-capsules.jpg',
+  ),
+  // Fast-dissolve melatonin 5 mg 150 tablets, UPC 850053810350.
+  // Not the 10 mg / 100-tablet bottle.
+  'naturewise-b82-melatonin': catalogShot('naturewise-b82-melatonin.jpg'),
+  // Fast-dissolve melatonin 10 mg 100 tablets, UPC 810157852120.
+  // Not the 5 mg bottle that shares this formulaId.
+  'naturewise-b82-melatonin-10-mg-100-count': catalogShot(
+    'naturewise-b82-melatonin-10-mg-100-count.jpg',
+  ),
+  // Sleep Complex 60 capsules, UPC 810157852601.
+  'naturewise-b85-sleep-complex': catalogShot(
+    'naturewise-b85-sleep-complex.jpg',
+  ),
+  // Magnesium Stress & Sleep 60 tablets, UPC 810157852823.
+  'naturewise-b85-magnesium-stress-sleep': catalogShot(
+    'naturewise-b85-magnesium-stress-sleep.jpg',
+  ),
+  // Doxylamine succinate 25 mg, 200 tablets. Wellspring carton.
+  // Not the 100-count bottle.
+  'welmate-b87-doxylamine': catalogShot('welmate-b87-doxylamine.jpg'),
+  // Doxylamine succinate 25 mg, 100 tablets. Wellspring carton.
+  // Not the 200-count bottle that shares this formulaId.
+  'welmate-b87-doxylamine-100': catalogShot('welmate-b87-doxylamine-100.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
 // brand-level mark → brand-initial tile. Exact pack shot always wins.
 // Marks and text tiles are not cartons and are never verifiedSku.
+// Same other-ingredients formulaId as Sleep Aid Complex, but these are
+// different SKUs. Do not inherit that bottle. Stay letters until attempted.
+const PREVIEW_NO_FORMULA_IMAGE = new Set([
+  'nutricost-dong-quai-capsules-120-capsules',
+  'nutricost-sage-extract-120-capsules',
+]);
+
 export function previewOverlayImage(
   record: Pick<RatingRecord, 'id' | 'formulaId' | 'brand'>,
 ): ProductImage | undefined {
   const fromId = PREVIEW_IMAGE_OVERLAY[record.id];
   if (fromId) return fromId;
-  if (record.formulaId && record.formulaId !== record.id) {
+  if (
+    record.formulaId
+    && record.formulaId !== record.id
+    && !PREVIEW_NO_FORMULA_IMAGE.has(record.id)
+  ) {
     const fromFormula = PREVIEW_IMAGE_OVERLAY[record.formulaId];
     if (fromFormula) return fromFormula;
   }
@@ -6746,6 +6825,121 @@ assertExactCarton(
   'Nutricost',
   'nutricost-turmeric-curcumin-2300.jpg',
 );
+assertExactCarton(
+  'nutricost-melatonin-capsules-240-tablets',
+  'Nutricost',
+  'nutricost-melatonin-capsules-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-sleep-aid-complex-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-sleep-aid-complex-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-melatonin-tablets-240-tablets',
+  'Nutricost',
+  'nutricost-melatonin-tablets-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-melatonin-tablets-5mg-240-tablets',
+  'Nutricost',
+  'nutricost-melatonin-tablets-5mg-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-melatonin-tablets-3mg-240-tablets',
+  'Nutricost',
+  'nutricost-melatonin-tablets-3mg-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-melatonin-extended-release-capsules-5mg-240-capsules',
+  'Nutricost',
+  'nutricost-melatonin-extended-release-capsules-5mg-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-b79-chamomile-240-capsules',
+  'Nutricost',
+  'nutricost-b79-chamomile-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-b80-suntheanine-60-capsules',
+  'Nutricost',
+  'nutricost-b80-suntheanine-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-b80-l-tryptophan-120-capsules',
+  'Nutricost',
+  'nutricost-b80-l-tryptophan-120-capsules.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-melatonin',
+  'NatureWise',
+  'naturewise-b82-melatonin.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-melatonin-10-mg-100-count',
+  'NatureWise',
+  'naturewise-b82-melatonin-10-mg-100-count.jpg',
+);
+assertExactCarton(
+  'naturewise-b85-sleep-complex',
+  'NatureWise',
+  'naturewise-b85-sleep-complex.jpg',
+);
+assertExactCarton(
+  'naturewise-b85-magnesium-stress-sleep',
+  'NatureWise',
+  'naturewise-b85-magnesium-stress-sleep.jpg',
+);
+assertExactCarton(
+  'welmate-b87-doxylamine',
+  'WELMATE',
+  'welmate-b87-doxylamine.jpg',
+);
+assertExactCarton(
+  'welmate-b87-doxylamine-100',
+  'WELMATE',
+  'welmate-b87-doxylamine-100.jpg',
+);
+{
+  const twelveMg = previewOverlayImage({
+    id: 'nutricost-melatonin-tablets-240-tablets',
+    formulaId: 'nutricost-melatonin-capsules-240-tablets',
+    brand: 'Nutricost',
+  });
+  if (
+    !twelveMg?.url.endsWith('/nutricost-melatonin-tablets-240-tablets.jpg') ||
+    !twelveMg.verifiedSku
+  ) {
+    throw new Error('12 mg melatonin tablets must not inherit the 3 mg carton');
+  }
+  const tenMg = previewOverlayImage({
+    id: 'naturewise-b82-melatonin-10-mg-100-count',
+    formulaId: 'naturewise-b82-melatonin',
+    brand: 'NatureWise',
+  });
+  if (
+    !tenMg?.url.endsWith('/naturewise-b82-melatonin-10-mg-100-count.jpg') ||
+    !tenMg.verifiedSku
+  ) {
+    throw new Error('NatureWise 10 mg melatonin must not inherit the 5 mg carton');
+  }
+  const welmate100 = previewOverlayImage({
+    id: 'welmate-b87-doxylamine-100',
+    formulaId: 'welmate-b87-doxylamine',
+    brand: 'WELMATE',
+  });
+  if (
+    !welmate100?.url.endsWith('/welmate-b87-doxylamine-100.jpg') ||
+    !welmate100.verifiedSku
+  ) {
+    throw new Error('WELMATE 100-count must not inherit the 200-count carton');
+  }
+}
+assertLetterOnly(
+  'nutricost-dong-quai-capsules-120-capsules',
+  'Nutricost',
+);
+assertLetterOnly('nutricost-sage-extract-120-capsules', 'Nutricost');
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
