@@ -1074,6 +1074,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
   },
   {
     id: 'assured-headache-pm',
+    // KYR5-d — zbar on DailyMed carton VH Headache PM (Aspirin Free) 20ct (setid d9d22e45).
+    barcode: '850026889116',
     productName: 'Assured Headache PM Aspirin-Free (APAP 500 + DPH citrate 38 mg)',
     brand: 'Assured',
     category: SLEEP,
@@ -1105,7 +1107,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     retailers: [...DT],
     cleanAlternatives: [...SLEEP_ALTS, ...APAP_500_ALTS],
     sourcesGeneral: [
-      `DailyMed setid ${SET_A3} (Assured Headache PM NDC 68210-4135-2; draft, not verified)`,
+      `DailyMed setid ${SET_A3} (Assured Headache PM NDC 68210-4135-2, 20 caplets; draft, not verified). UPC-A 850026889116 is zbar on the carton image in that SPL zip.`,
     ],
   },
   {

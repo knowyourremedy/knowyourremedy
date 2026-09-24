@@ -184,6 +184,8 @@ const GUA_OI =
 const COMPACT: Compact[] = [
   {
     id: 'welmate-b90-simethicone-125',
+    // KYR5-d — Target primary barcode, simethicone 125 mg 365 softgels (TCIN 92214416).
+    barcode: '373581301362',
     productName: 'WELMATE Simethicone 125 mg, 365 Softgels',
     category: 'Digestive',
     formulaId: 'welmate-b90-simethicone-125',
@@ -205,10 +207,13 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are FD&C blue #1, FD&C yellow #10, and titanium dioxide. FD&C yellow #10 is the carton spelling on the locked FD&C / D&C synthetic-dye High row. Peppermint oil is the locked flavor/EO Limited row, not an oil-bottle grade. Sorbitol 70% solution sits on the locked sorbitol Limited row. Softgel fill is not gummy seed-oil High. Ages 12+.',
-    cite: `DailyMed carton front (${dmImage(SIM_SET, '01b LBL_(PDP) Gas Relief_Simethicone_125mg_365ct.jpg')}) prints NDC 73581-301-36 on the 365-count simethicone 125 mg softgel. Drug Facts on the same label (${dmImage(SIM_SET, '01 LBL_(DF)_Gas Relief_Simethicone_125mg_365ct.jpg')}; label code L9027-365-103-0) inactive ingredients: FD&C blue #1, FD&C yellow #10, gelatin, glycerin, peppermint oil, povidone, purified water, sorbitol 70% solution, titanium dioxide. Wellspring carousel (${SIM_SHOP}) did not show a readable inactive line, and its accordion text was not used. No GTIN-12 printed on these tiles. Ages 12+.`,
+    cite: `DailyMed carton front (${dmImage(SIM_SET, '01b LBL_(PDP) Gas Relief_Simethicone_125mg_365ct.jpg')}) prints NDC 73581-301-36 on the 365-count simethicone 125 mg softgel. Drug Facts on the same label (${dmImage(SIM_SET, '01 LBL_(DF)_Gas Relief_Simethicone_125mg_365ct.jpg')}; label code L9027-365-103-0) inactive ingredients: FD&C blue #1, FD&C yellow #10, gelatin, glycerin, peppermint oil, povidone, purified water, sorbitol 70% solution, titanium dioxide. Wellspring carousel (${SIM_SHOP}) did not show a readable inactive line, and its accordion text was not used. DailyMed tiles did not decode a GTIN. UPC-A 373581301362 is the Target primary barcode on the 365-count page (TCIN 92214416). Ages 12+.`,
   },
   {
     id: 'welmate-b90-levocetirizine-180',
+    // KYR5-d — Target primary barcode, levocetirizine 5 mg 180 tablets (TCIN 92205193).
+    // 360-count primary barcode 373581000104 stays off this row.
+    barcode: '373581201808',
     productName: 'WELMATE Levocetirizine 5 mg, 180 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b90-levocetirizine-180',
@@ -229,7 +234,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Polyethylene glycol and polysorbate 80 are Moderate, not the Avoid driver. Colloidal silicon dioxide is the 0-pt Caution cap. Contains lactose. The 360-count is not this package and was not given this list. Ages 6+ (under 6: do not use).',
-    cite: `DailyMed 180-count Drug Facts (${dmImage(LEVO_SET, '01b LBL_Allergy Relief_180mg_DF2.jpg')}; front ${dmImage(LEVO_SET, '01b LBL_Allergy Relief_180mg_PDP.jpg')} prints 180 tablets; label code G7067-180-103-0) inactive ingredients: colloidal silicon dioxide, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide. SPL setid ${LEVO_SET} package NDC 73581-201-80 is the 180-count. Wellspring carousel (${LEVO180_SHOP}) did not show a readable inactive line. No GTIN-12 printed on these tiles. The 360-count is not a package on this SPL.`,
+    cite: `DailyMed 180-count Drug Facts (${dmImage(LEVO_SET, '01b LBL_Allergy Relief_180mg_DF2.jpg')}; front ${dmImage(LEVO_SET, '01b LBL_Allergy Relief_180mg_PDP.jpg')} prints 180 tablets; label code G7067-180-103-0) inactive ingredients: colloidal silicon dioxide, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide. SPL setid ${LEVO_SET} package NDC 73581-201-80 is the 180-count. Wellspring carousel (${LEVO180_SHOP}) did not show a readable inactive line. DailyMed tiles did not decode a GTIN. UPC-A 373581201808 is the Target primary barcode on the 180-count page (TCIN 92205193). The 360-count primary barcode 373581000104 is not this row. The 360-count is not a package on this SPL.`,
   },
   {
     id: 'welmate-b90-guaifenesin-1200',
@@ -327,6 +332,8 @@ if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 1) throw new Error('bat
 const _UPC: Record<string, string> = {
   'welmate-b90-guaifenesin-1200': '373581000173',
   'welmate-b90-guaifenesin-1200-35': '373581000661',
+  'welmate-b90-simethicone-125': '373581301362',
+  'welmate-b90-levocetirizine-180': '373581201808',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -334,7 +341,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 2) throw new Error('batch90 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 4) throw new Error('batch90 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
