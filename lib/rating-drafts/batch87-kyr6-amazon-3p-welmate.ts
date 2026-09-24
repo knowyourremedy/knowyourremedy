@@ -11,7 +11,8 @@
 // No graded oil pour bottles. No factory.
 // recordStatus is 'unverified'. Internal keys only: clean | caution | avoid.
 // Search wiring only. Not wired into Clean Picks UI. Letter tiles only.
-// No GTIN-12 printed on these cartons — no barcode attached.
+// KYR5-d: UPC-A is attached only where a carton barcode or a published
+// Target UPC field matched this exact pack. Empty stays empty. NDC is not a UPC.
 //
 // Leftover Amazon 3P after this slice: 4 (A+Health, HealthA2Z, TIME-Cap, GoodSense).
 // NatureWise leftovers stay parked. batch70–86 are not edited.
@@ -141,6 +142,7 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
   retailers?: string[];
 };
 
@@ -202,7 +204,10 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: d.retailers ?? [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [
+      `${d.cite}${d.barcode ? ` UPC-A ${d.barcode} is the GTIN-12 for this exact pack.` : ''} — ${UNVERIFIED_NOTE}`,
+    ],
   });
 }
 
@@ -261,6 +266,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-famotidine-10-90',
+    barcode: '043292564713',
     productName: 'WELMATE Acid Reducer Famotidine 10 mg, 90 Tablets',
     category: 'Digestive',
     formulaId: 'welmate-b87-famotidine',
@@ -287,6 +293,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-famotidine-10-300',
+    barcode: '373581000098',
     productName: 'WELMATE Acid Reducer Famotidine 10 mg, 300 Tablets',
     category: 'Digestive',
     formulaId: 'welmate-b87-famotidine',
@@ -571,6 +578,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-phenylephrine',
+    barcode: '373581204021',
     productName: 'WELMATE Nasal Decongestant Phenylephrine HCl 10 mg, 200 Tablets',
     category: 'Cold & Flu',
     formulaId: 'welmate-b87-phenylephrine',
@@ -599,6 +607,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-loperamide-softgel',
+    barcode: '373581102242',
     productName: 'WELMATE Anti-Diarrheal Loperamide HCl 2 mg, 24 Softgels',
     category: 'Digestive',
     formulaId: 'welmate-b87-loperamide-softgel',
@@ -646,6 +655,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-loperamide-tablet-101',
+    barcode: '373581101245',
     productName: 'WELMATE Anti-Diarrheal Loperamide HCl 2 mg, 24 Tablets',
     category: 'Digestive',
     formulaId: 'welmate-b87-loperamide-tablet-101',
@@ -670,6 +680,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-loratadine',
+    barcode: '373581203369',
     productName: 'WELMATE Allergy Relief Loratadine 10 mg, 365 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-loratadine',
@@ -710,6 +721,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-guaifenesin-er',
+    barcode: '373581000159',
     productName: 'WELMATE Mucus Relief Guaifenesin 600 mg, 200 Extended-Release Tablets',
     category: 'Cold & Flu',
     formulaId: 'welmate-b87-guaifenesin-er',
@@ -731,6 +743,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-guaifenesin-er-70',
+    barcode: '373581000678',
     productName: 'WELMATE Mucus Relief Guaifenesin 600 mg, 70 Extended-Release Tablets',
     category: 'Cold & Flu',
     formulaId: 'welmate-b87-guaifenesin-er',
@@ -752,6 +765,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-mucus-dm-405',
+    barcode: '373581000715',
     productName: 'WELMATE Maximum Strength Mucus DM, 98 Extended-Release Tablets',
     category: 'Cold & Flu',
     formulaId: 'welmate-b87-mucus-dm-405',
@@ -853,6 +867,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-clotrimazole-solution',
+    barcode: '373581000319',
     productName: 'WELMATE Clotrimazole Topical Solution 1%, 0.33 fl oz',
     category: 'First Aid',
     formulaId: 'welmate-b87-clotrimazole-solution',
@@ -888,6 +903,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-bifidobacterium',
+    barcode: '373581000081',
     productName: 'WELMATE Bifidobacterium Probiotic, 200 Capsules',
     category: 'Digestive',
     formulaId: 'welmate-b87-bifidobacterium',
@@ -904,7 +920,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide and rice flour.',
-    cite: `Wellspring supplement-facts panel (${SHOP}/welmate-bifidobacterium-probiotic-supplement-value-size-200-count-capsules-24-7-digestive-support) other ingredients: hypromellose (capsule), magnesium stearate, silicon dioxide, rice flour. No GTIN-12. No DailyMed drug SPL.`,
+    cite: `Wellspring supplement-facts panel (${SHOP}/welmate-bifidobacterium-probiotic-supplement-value-size-200-count-capsules-24-7-digestive-support) other ingredients: hypromellose (capsule), magnesium stearate, silicon dioxide, rice flour. No DailyMed drug SPL.`,
   },
   {
     id: 'welmate-b87-saccharomyces-boulardii',
@@ -928,6 +944,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-zinc-sulfate',
+    barcode: '373581301010',
     productName: 'WELMATE Zinc Sulfate 220 mg, 200 Tablets',
     category: 'Immune Support',
     formulaId: 'welmate-b87-zinc-sulfate',
@@ -951,6 +968,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-phenazopyridine',
+    barcode: '373581000630',
     productName: 'WELMATE Urinary Pain Relief Phenazopyridine HCl 99.5 mg, 36 Tablets',
     category: 'Pain & Fever',
     formulaId: 'welmate-b87-phenazopyridine',
@@ -976,6 +994,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-phenazopyridine-72',
+    barcode: '373581909728',
     productName: 'WELMATE Urinary Pain Relief Phenazopyridine HCl 99.5 mg, 72 Tablets',
     category: 'Pain & Fever',
     formulaId: 'welmate-b87-phenazopyridine',
@@ -1157,7 +1176,38 @@ if (_ids.size !== _ROWS.length) throw new Error('batch87 duplicate ids');
 const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) throw new Error('batch87 formulaId must point at a row in this file');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch87 writes WELMATE only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch87 must not attach a barcode');
+const _UPC: Record<string, string> = {
+  'welmate-b87-famotidine-10-90': '043292564713',
+  'welmate-b87-famotidine-10-300': '373581000098',
+  'welmate-b87-phenylephrine': '373581204021',
+  'welmate-b87-loperamide-softgel': '373581102242',
+  'welmate-b87-loperamide-tablet-101': '373581101245',
+  'welmate-b87-loratadine': '373581203369',
+  'welmate-b87-guaifenesin-er': '373581000159',
+  'welmate-b87-guaifenesin-er-70': '373581000678',
+  'welmate-b87-mucus-dm-405': '373581000715',
+  'welmate-b87-clotrimazole-solution': '373581000319',
+  'welmate-b87-bifidobacterium': '373581000081',
+  'welmate-b87-zinc-sulfate': '373581301010',
+  'welmate-b87-phenazopyridine': '373581000630',
+  'welmate-b87-phenazopyridine-72': '373581909728',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 14) throw new Error('batch87 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch87 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch87 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch87 unexpected barcode on ${record.id}`);
+  }
+}
 if (_ROWS.some((r) => /toothpaste|sprouts|now foods|nutricost|naturewise|goodsense|healtha2z|time-cap|a\+health/i.test(r.brand + r.productName))) {
   throw new Error('batch87 other 3P / Sprouts / toothpaste / NOW / Nutricost / NatureWise must stay out');
 }

@@ -9,7 +9,8 @@
 // REFUSED with that exact string.
 // wellspringmeds.com pages and the DailyMed NDCs named in batch87 are the
 // pins. HTML bullets were not treated as a panel when a carton list was
-// already transcribed. No GTIN-12 printed on these PDPs — no barcode attached.
+// already transcribed. KYR5-d attaches a UPC-A only where the carton barcode
+// matched this exact pack. Empty stays empty. NDC is not a UPC.
 // OCR `chonüoitin sulfate` stays refused. The Latin cucumber fruit-extract
 // string is not the locked token `cucumber extract`, so the spray stays refused.
 // batch87 no_OI 6 was not hunted. OUT multipacks that were not in the
@@ -184,6 +185,7 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -232,7 +234,10 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [
+      `${d.cite}${d.barcode ? ` UPC-A ${d.barcode} is the GTIN-12 for this exact pack.` : ''} — ${UNVERIFIED_NOTE}`,
+    ],
   });
 }
 
@@ -464,6 +469,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b88-diphenhydramine-1000',
+    barcode: '373581000302',
     productName: 'WELMATE Diphenhydramine HCl 50 mg, 1000 Capsules',
     category: 'Allergies',
     formulaId: 'welmate-b88-diphenhydramine-1000',
@@ -485,7 +491,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are D&C red #28, FD&C blue #1, and FD&C red #40. Black iron oxide maps to the locked Caution iron oxide-as-color row. It is not a new grade and not a dye High. Sodium lauryl sulfate is standalone Caution and is not an Avoid driver. Contains lactose. The 50-count package on the same NDC was not a separate batch87 refuse and was not added.',
-    cite: `Wellspring inactive line (${SHOP}/welmate-allergy-relief-diphenhydramine-50-mg-1000-count-capsules-antihistamine): black iron oxide, d&c red #28, fd&c blue #1, fd&c red #40, gelatin, lactose monohydrate, magnesium stearate, silicon dioxide, sodium lauryl sulfate. Matches DailyMed NDC 73581-020 (setid 4b012549-3958-43c1-9de7-897c5d8b20d3), package 73581-020-10. No GTIN-12 on the page.`,
+    cite: `Wellspring inactive line (${SHOP}/welmate-allergy-relief-diphenhydramine-50-mg-1000-count-capsules-antihistamine): black iron oxide, d&c red #28, fd&c blue #1, fd&c red #40, gelatin, lactose monohydrate, magnesium stearate, silicon dioxide, sodium lauryl sulfate. Matches DailyMed NDC 73581-020 (setid 4b012549-3958-43c1-9de7-897c5d8b20d3), package 73581-020-10.`,
   },
   {
     id: AREDS,
@@ -533,6 +539,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b88-loperamide-simethicone',
+    barcode: '373581000722',
     productName: 'WELMATE Loperamide 2 mg + Simethicone 125 mg, 24 Caplets',
     category: 'Digestive',
     formulaId: 'welmate-b88-loperamide-simethicone',
@@ -555,7 +562,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are acesulfame potassium, colloidal silicon dioxide, and vanilla flavor. Vanilla flavor is the Sept 23 Caution flavor row, not Limited natural flavors. Anhydrous dicalcium phosphate is Cleared filler. No High.',
-    cite: `Wellspring inactive line (${SHOP}/welmate-anti-diarrheal-anti-gas-loperamide-2mg-simethicone-125mg-24-caplets-generic-immodium-multi-symptom-relief): acesulfame potassium, anhydrous dicalcium phosphate, colloidal silicon dioxide, croscarmellose sodium, microcrystalline cellulose, stearic acid, vanilla flavor. Matches DailyMed NDC 73581-178 (setid 46f5c653-eec2-4729-8aaa-79f2e188eac3). No GTIN-12 printed on the page.`,
+    cite: `Wellspring inactive line (${SHOP}/welmate-anti-diarrheal-anti-gas-loperamide-2mg-simethicone-125mg-24-caplets-generic-immodium-multi-symptom-relief): acesulfame potassium, anhydrous dicalcium phosphate, colloidal silicon dioxide, croscarmellose sodium, microcrystalline cellulose, stearic acid, vanilla flavor. Matches DailyMed NDC 73581-178 (setid 46f5c653-eec2-4729-8aaa-79f2e188eac3).`,
   },
 ];
 
@@ -591,7 +598,26 @@ if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 5) throw new Error('bat
 const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) throw new Error('batch88 formulaId must point at a row in this file');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch88 writes WELMATE only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch88 must not attach a barcode');
+const _UPC: Record<string, string> = {
+  'welmate-b88-diphenhydramine-1000': '373581000302',
+  'welmate-b88-loperamide-simethicone': '373581000722',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 2) throw new Error('batch88 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch88 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch88 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch88 unexpected barcode on ${record.id}`);
+  }
+}
 if (_ROWS.some((r) => /toothpaste|sprouts|now foods|nutricost|naturewise|goodsense|healtha2z|time-cap|a\+health/i.test(r.brand + r.productName))) {
   throw new Error('batch88 other 3P / Sprouts / toothpaste / NOW / Nutricost / NatureWise must stay out');
 }
