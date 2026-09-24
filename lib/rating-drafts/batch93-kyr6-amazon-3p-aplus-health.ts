@@ -14,7 +14,8 @@
 // timed out in this environment. Amazon US PDP fetch was not used as a pin.
 // No separate A+Health vitamin / supplement PDP with an Other Ingredients
 // panel turned up under the a+health mark. An AI blurb is not OI or a UPC.
-// NDC is not a UPC. No GTIN-12 was printed on the SPL, so no barcode is attached.
+// NDC is not a UPC. KYR5-d attaches a UPC-A only where the carton bars
+// or a US barcode listing matched this exact pack. Empty stays empty.
 //
 // Already-on-MAIN twins left alone: aplus-health-dual-action-oxides
 // (setid 04ccc4b2 / NDC 69452-394, 216-ct and 400-ct) and
@@ -149,6 +150,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -197,13 +200,18 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
 const COMPACT: Compact[] = [
   {
     id: 'aplushealth-b93-dph-25-600',
+    // KYR5-d — zbar on DailyMed 600ct-bottle-2.jpg, NDC 69452-444-31.
+    barcode: '369452444313',
+    upcNote:
+      'UPC-A 369452444313 is the code under the bars on the DailyMed 600-count bottle image for NDC 69452-444-31.',
     productName: 'A+Health Allergy Relief Diphenhydramine HCl 25 mg, 600 Tablets',
     category: 'Allergies',
     formulaId: 'aplushealth-b93-dph-25',
@@ -348,6 +356,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b93-iodine-tincture-30',
+    // KYR5-d — zbar on DailyMed bottle.jpg, NDC 69452-484-36.
+    barcode: '369452484364',
+    upcNote:
+      'UPC-A 369452484364 is the code under the bars on the DailyMed bottle image for NDC 69452-484-36 (1 fl oz / 30 mL).',
     productName: 'A+Health Mild Iodine Tincture 2%, 1 fl oz (30 mL)',
     category: 'First Aid',
     formulaId: 'aplushealth-b93-iodine-tincture',
@@ -392,6 +404,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b93-loperamide-24',
+    // KYR5-d — barcodeindex.com/tag/a-health, 24-count softgels, NDC 69452-266-12.
+    barcode: '369452266120',
+    upcNote:
+      'UPC-A 369452266120 is the barcodeindex listing for this 24-count loperamide softgel (NDC 69452-266-12).',
     productName: 'A+Health Anti-Diarrheal Loperamide HCl 2 mg, 24 Softgels',
     category: 'Digestive',
     formulaId: 'aplushealth-b93-loperamide-softgel',
@@ -733,7 +749,27 @@ if (BATCH93_REFUSED.some((s) => !/`[^`]+`/.test(s.reason))) {
   throw new Error('batch93 REFUSED must quote an exact panel string');
 }
 if (_ROWS.some((r) => r.brand !== 'A+Health')) throw new Error('batch93 brand drift');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch93 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'aplushealth-b93-dph-25-600': '369452444313',
+  'aplushealth-b93-iodine-tincture-30': '369452484364',
+  'aplushealth-b93-loperamide-24': '369452266120',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 3) throw new Error('batch93 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch93 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch93 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch93 unexpected barcode on ${record.id}`);
+  }
+}
 if (new Set(_ROWS.map((r) => r.id)).size !== _ROWS.length) throw new Error('batch93 duplicate id');
 const _blob = [
   ..._ROWS.map((r) => `${r.brand} ${r.productName} ${r.id}`),

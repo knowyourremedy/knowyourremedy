@@ -9,8 +9,9 @@
 // REFUSED with that exact string. A pack that is still not one pinned list
 // stays REFUSED.
 // The pin is the DailyMed inactive paragraph batch93 named, plus the
-// principal-display count. NDC is not a UPC. No GTIN-12 printed on these
-// SPLs, so no barcode is attached.
+// principal-display count. NDC is not a UPC. KYR5-d attaches a UPC-A only
+// where the carton bars or a US barcode listing matched this exact pack.
+// Empty stays empty. The itch gel and the dual-panel ibuprofen minis stay refused.
 // Diazolidnyl Urea stays no row (parked formaldehyde-releaser). Castor oil
 // 177 mL stays OUT. Toothpaste stays out. HealthA2Z, TIME-Cap, and
 // GoodSense stay out.
@@ -244,6 +245,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -300,7 +303,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -626,6 +630,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: IBU_US,
+    // KYR5-d — barcodeindex.com/upc/369452260791, 160-count Made in USA, NDC 69452-260-79.
+    barcode: '369452260791',
+    upcNote:
+      'UPC-A 369452260791 is the barcodeindex listing for this 160-count Made in USA ibuprofen softgel (NDC 69452-260-79).',
     productName: 'A+Health Pain Relief Ibuprofen 200 mg, 160 Softgels',
     category: 'Pain & Fever',
     formulaId: IBU_US,
@@ -641,6 +649,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-ibu-200-240',
+    // KYR5-d — barcodeindex.com/tag/a-health, 240-count softgels, NDC 69452-260-82.
+    barcode: '369452260821',
+    upcNote:
+      'UPC-A 369452260821 is the barcodeindex listing for this 240-count ibuprofen softgel (NDC 69452-260-82).',
     productName: 'A+Health Pain Relief Ibuprofen 200 mg, 240 Softgels',
     category: 'Pain & Fever',
     formulaId: IBU_US,
@@ -701,6 +713,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-cetirizine-65',
+    // KYR5-d — barcodeindex.com/tag/a-health, cetirizine 65-count, NDC 69452-265-88 (not the dye-free 65).
+    barcode: '369452265888',
+    upcNote:
+      'UPC-A 369452265888 is the barcodeindex listing for this 65-count cetirizine softgel (NDC 69452-265-88), not the dye-free 65-count.',
     productName: 'A+Health Allergy Relief Cetirizine HCl 10 mg, 65 Softgels',
     category: 'Allergies',
     formulaId: CET,
@@ -735,6 +751,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: PM,
+    // KYR5-d — barcodeindex.com/tag/a-health, ibuprofen PM 120-count, NDC 69452-264-22.
+    barcode: '369452264225',
+    upcNote:
+      'UPC-A 369452264225 is the barcodeindex listing for this 120-count ibuprofen PM softgel (NDC 69452-264-22).',
     productName:
       'A+Health Pain Relief PM Ibuprofen 200 mg and Diphenhydramine HCl 25 mg, 120 Softgels',
     category: 'Pain & Fever',
@@ -784,6 +804,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-naproxen-180-259',
+    // KYR5-d — barcodeindex.com/tag/a-health, naproxen 180-count, encodes NDC 69452-259-25 (not 284-25).
+    barcode: '369452259252',
+    upcNote:
+      'UPC-A 369452259252 is the barcodeindex listing for this 180-count naproxen liquid gel (NDC 69452-259-25), not NDC 69452-284-25.',
     productName: 'A+Health Naproxen Sodium 220 mg, 180 Liquid Gels',
     category: 'Pain & Fever',
     formulaId: NAP,
@@ -814,6 +838,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: MIG,
+    // KYR5-d — barcodeindex.com/tag/a-health, migraine 160-count, NDC 69452-263-79.
+    barcode: '369452263792',
+    upcNote:
+      'UPC-A 369452263792 is the barcodeindex listing for this 160-count migraine ibuprofen softgel (NDC 69452-263-79).',
     productName: 'A+Health Migraine Relief Ibuprofen 200 mg, 160 Softgels',
     category: 'Pain & Fever',
     formulaId: MIG,
@@ -905,6 +933,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-sleep-dyefree-120',
+    // KYR5-d — zbar on DailyMed front.jpg, NDC 69452-451-22, 120 softgels.
+    barcode: '369452451229',
+    upcNote:
+      'UPC-A 369452451229 is the code under the bars on the DailyMed front image for NDC 69452-451-22 (120 dye-free softgels).',
     productName:
       'A+Health Nighttime Sleep-Aid Diphenhydramine HCl 50 mg Dye-Free, 120 Softgels',
     category: 'Sleep',
@@ -984,6 +1016,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: LOP,
+    // KYR5-d — zbar on DailyMed image001-ch.jpg, label prints 4 fl oz (120 mL), NDC 69452-405-55.
+    barcode: '369452405550',
+    upcNote:
+      'UPC-A 369452405550 is the code under the bars on the DailyMed 4 fl oz (120 mL) label for NDC 69452-405-55.',
     productName: 'A+Health Loperamide HCl Oral Solution, 4 fl oz (120 mL)',
     category: 'Digestive',
     formulaId: LOP,
@@ -999,6 +1035,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-loperamide-240',
+    // KYR5-d — zbar on DailyMed image001-ad.jpg, label prints 8 fl oz (240 mL), NDC 69452-405-93.
+    barcode: '369452405932',
+    upcNote:
+      'UPC-A 369452405932 is the code under the bars on the DailyMed 8 fl oz (240 mL) label for NDC 69452-405-93.',
     productName: 'A+Health Loperamide HCl Oral Solution, 8 fl oz (240 mL)',
     category: 'Digestive',
     formulaId: LOP,
@@ -1074,6 +1114,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b94-pinworm-473',
+    // KYR5-d — zbar on DailyMed bottle-front.jpg; the same label prints 16 fl oz (473 mL).
+    barcode: '369452409886',
+    upcNote:
+      'UPC-A 369452409886 is the code under the bars on the DailyMed bottle-front image that prints 16 fl oz (473 mL).',
     productName: 'A+Health Pinworm Treatment Pyrantel Pamoate, 16 fl oz (473 mL)',
     category: 'Digestive',
     formulaId: PIN,
@@ -1089,6 +1133,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: PVP,
+    // KYR5-d — zbar on DailyMed bottle-label.jpg, NDC 69452-483-93.
+    barcode: '369452483930',
+    upcNote:
+      'UPC-A 369452483930 is the code under the bars on the DailyMed bottle label for NDC 69452-483-93 (8 fl oz / 237 mL).',
     productName: 'A+Health Povidone-Iodine 10%, 8 fl oz (237 mL)',
     category: 'First Aid',
     formulaId: PVP,
@@ -1104,6 +1152,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: MAG,
+    // KYR5-d — zbar on DailyMed bottle.jpg, label prints 10 oz, NDC 69452-398-98.
+    barcode: '369452398982',
+    upcNote:
+      'UPC-A 369452398982 is the code under the bars on the DailyMed 10 fl oz bottle image for NDC 69452-398-98.',
     productName: 'A+Health Magnesium Citrate Oral Solution, Lemon, 10 fl oz (296 mL)',
     category: 'Digestive',
     formulaId: MAG,
@@ -1278,7 +1330,38 @@ if (_ROWS.some((r) => r.brand !== 'A+Health')) throw new Error('batch94 brand dr
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch94 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch94 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'aplushealth-b94-ibu-200-us-ink': '369452260791',
+  'aplushealth-b94-ibu-200-240': '369452260821',
+  'aplushealth-b94-cetirizine-65': '369452265888',
+  'aplushealth-b94-pm-dyes': '369452264225',
+  'aplushealth-b94-naproxen-180-259': '369452259252',
+  'aplushealth-b94-migraine-160': '369452263792',
+  'aplushealth-b94-sleep-dyefree-120': '369452451229',
+  'aplushealth-b94-loperamide-sol': '369452405550',
+  'aplushealth-b94-loperamide-240': '369452405932',
+  'aplushealth-b94-pinworm-473': '369452409886',
+  'aplushealth-b94-povidone-iodine': '369452483930',
+  'aplushealth-b94-mag-citrate': '369452398982',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 12) throw new Error('batch94 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch94 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch94 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch94 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch94 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('aplushealth-b94-'))) {
   throw new Error('batch94 ids must use aplushealth-b94-');
 }
