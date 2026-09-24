@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 24, 2026 (poloxamer 182 — founder stamp):** Poloxamer 182 = Caution. PEG-style surfactant. Not High. Hunt order stays DailyMed → brand → retail → Google AI last.
+
 **Changed Sept 23, 2026 (cucumber fruit extract — founder stamp):** Map — cucumis sativus (cucumber) fruit extract → cucumber extract Caution. Same token. Not a new grade. OCR `chonüoitin` stays refuse.
 
 **Changed Sept 23, 2026 (WELMATE batch87 refuse — founder stamp; use existing §5 where named):** Map — ferrosoferric oxide + black iron oxide → iron oxide as color Caution; aloe barbadensis leaf extract → aloe as OI Caution. Caution — cucumber extract; vanilla flavor; sucrose stearate / distearate; polyoxyethylene (23) cetyl ether; propylene glycol dicaprylate; hydrogenated lecithin; cholesterol as OI; copper oxide; marigold extract (Tagetes erecta); disodium cocoamphodipropionate. Cleared — DL-alpha tocopheryl acetate; C10-18 triglycerides as fill (not gummy seed-oil). OCR `chonüoitin` stays refuse until a clean chondroitin panel. Do not flip Caution tocopheryl acetate, Cleared lecithin, or Cleared chondroitin sulfate. WELMATE no_OI 6 stays hunt list.
@@ -745,6 +747,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Copper oxide — LOCKED (Sept 23, 2026) | copper oxide | Exact token. Caution. Distinct from Caution iron oxide as color. Do not alias it there. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Marigold extract (Tagetes erecta) — LOCKED (Sept 23, 2026) | marigold extract, Tagetes erecta | Exact token. Caution. Extract. Both strings written. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
 | Disodium cocoamphodipropionate — LOCKED (Sept 23, 2026) | disodium cocoamphodipropionate | Exact token. Caution. Not High. Distinct from Caution SLS. Do not flip that row. | Standard alternatives rule. Not Avoid. |
+| Poloxamer 182 — LOCKED (Sept 24, 2026) | poloxamer 182 | Exact token. PEG-style surfactant. Caution. Not High. Distinct from Caution behenoyl polyoxyl-8 glycerides and from Caution polyoxyethylene (23) cetyl ether. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
