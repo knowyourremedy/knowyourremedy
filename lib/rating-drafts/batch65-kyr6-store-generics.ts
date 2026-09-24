@@ -567,6 +567,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
   }),
   row({
     id: 'family-wellness-pain-scar-itch',
+    // KYR5-d — zbar on DailyMed carton "69396-054-01 fd pain scar itch" (setid 9e507ec5), 28.4 g tube.
+    barcode: '032251533143',
     productName: 'Family Wellness Pain Scar Itch Triple Antibiotic (69396-054)',
     brand: 'Family Wellness',
     category: FIRST_AID,
@@ -594,7 +596,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     honestNote: `FOUNDER-LOCK DRAFT: Family Wellness Pain Scar Itch 69396-054 = Caution. Driver is sodium pyruvate (Caution, Sept 16 lock). DailyMed setid 9e507ec5 Drug Facts: cocoa butter, Levant cottonseed oil, olive oil, petrolatum, sodium pyruvate, vitamin E. Structured SPL maps vitamin E to alpha-tocopherol (Cleared mixed-tocopherols row) — not tocopheryl acetate. Own formulaId — do not silently merge into \`${TRIPLE_OIL_BLEND}\` (that family flags tocopheryl acetate). ${OIL_FILL_TAP} Not 69396-041 (cetyl alcohol ungraded — skipped). Not the petrolatum ± mineral oil Clean twins. Ages 2+ (under 2: ask a doctor). Draft, not verified.`,
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
-      `DailyMed setid ${SET.fwScar} (Family Wellness Pain Scar Itch NDC 69396-054; ${UNVERIFIED_NOTE})`,
+      `DailyMed setid ${SET.fwScar} (Family Wellness Pain Scar Itch NDC 69396-054-01, 28.4 g tube; ${UNVERIFIED_NOTE}). UPC-A 032251533143 is zbar on that carton image. Not 032251533150 (plain triple antibiotic).`,
     ],
   }),
   row({
@@ -629,6 +631,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
   }),
   row({
     id: 'equate-nighttime-lubricant-ointment',
+    // KYR5-d — zbar EAN-13 0194346254897 on DailyMed carton (setid 152171db), 3.5 g tube.
+    barcode: '194346254897',
     productName: 'Equate Nighttime Relief Lubricant Eye Ointment',
     brand: 'Equate',
     category: ALLERGY,
@@ -650,7 +654,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       'FOUNDER-LOCK DRAFT: Equate Nighttime Relief Lubricant ointment = Caution (lanolin alcohols). DailyMed setid 152171db (NDC 79903-260). Actives are light mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohols — locked Caution wool-alcohol family (Sept 16). No High. Shared formulaId with the CVS Nighttime Dry-Eye twin (same actives + lanolin alcohol). Prefer in-batch / already-on-main PF tears over this PM ointment. Equate PF + BKC multi-dose already on main — this is the skipped E6 store PM hole. Draft, not verified.',
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
-      `DailyMed setid ${SET.eqPm} (Equate Nighttime Relief Lubricant NDC 79903-260; ${UNVERIFIED_NOTE})`,
+      `DailyMed setid ${SET.eqPm} (Equate Nighttime Relief Lubricant NDC 79903-260-35, 3.5 g; ${UNVERIFIED_NOTE}). UPC-A 194346254897 is zbar on that carton (EAN-13 0194346254897).`,
     ],
   }),
   row({
