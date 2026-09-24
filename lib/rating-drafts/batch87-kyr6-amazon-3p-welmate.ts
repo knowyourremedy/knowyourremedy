@@ -240,6 +240,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-famotidine-20-300',
+    // KYR5-d — Target primary barcode, famotidine 20 mg 300-count (TCIN 93966910).
+    barcode: '373581000135',
     productName: 'WELMATE Acid Reducer Famotidine 20 mg, 300 Tablets',
     category: 'Digestive',
     formulaId: 'welmate-b87-famotidine',
@@ -320,6 +322,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-cetirizine',
+    // KYR5-d — Target primary barcode, cetirizine 10 mg 100-count (TCIN 92205239).
+    barcode: '373581202010',
     productName: 'WELMATE Allergy Relief Cetirizine HCl 10 mg, 100 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-cetirizine',
@@ -344,6 +348,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-cetirizine-500',
+    // KYR5-d — Target primary barcode, cetirizine 10 mg 500-count (TCIN 92205242).
+    barcode: '373581202058',
     productName: 'WELMATE Allergy Relief Cetirizine HCl 10 mg, 500 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-cetirizine',
@@ -368,6 +374,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-doxylamine',
+    // KYR5-d — Target primary barcode, doxylamine 25 mg 200-count (TCIN 92215949).
+    barcode: '373581205028',
     productName: 'WELMATE Sleep Aid Doxylamine Succinate 25 mg, 200 Tablets',
     category: 'Sleep',
     formulaId: 'welmate-b87-doxylamine',
@@ -389,6 +397,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-doxylamine-100',
+    // KYR5-d — Target primary barcode, doxylamine 25 mg 100-count (TCIN 1002521932).
+    barcode: '373581000654',
     productName: 'WELMATE Sleep Aid Doxylamine Succinate 25 mg, 100 Tablets',
     category: 'Sleep',
     formulaId: 'welmate-b87-doxylamine',
@@ -410,6 +420,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine',
+    // KYR5-d — Target primary barcode, fexofenadine 180 mg 100-count (TCIN 92205254).
+    barcode: '373581011803',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 180 mg, 100 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -438,6 +450,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine-180-200',
+    // KYR5-d — Target primary barcode, fexofenadine 180 mg 200-count (TCIN 92205241).
+    barcode: '373581000210',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 180 mg, 200 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -466,6 +480,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine-180-40',
+    // KYR5-d — Target primary barcode, fexofenadine 180 mg 40-count (TCIN 1002521941).
+    barcode: '373581000623',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 180 mg, 40 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -494,6 +510,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine-60-100',
+    // KYR5-d — Target primary barcode, fexofenadine 60 mg 100-count (TCIN 92205238).
+    barcode: '373581103102',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 60 mg, 100 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -522,6 +540,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine-60-200',
+    // KYR5-d — Target primary barcode, fexofenadine 60 mg 200-count (TCIN 92205252).
+    barcode: '373581000272',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 60 mg, 200 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -550,6 +570,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-fexofenadine-60-60',
+    // KYR5-d — Target primary barcode, fexofenadine 60 mg 60-count (TCIN 1002521944).
+    barcode: '373581000616',
     productName: 'WELMATE Allergy Relief Fexofenadine HCl 60 mg, 60 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-fexofenadine',
@@ -701,6 +723,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-loratadine-100',
+    // KYR5-d — Target primary barcode, loratadine 10 mg 100-count (TCIN 92205253).
+    barcode: '373581203017',
     productName: 'WELMATE Allergy Relief Loratadine 10 mg, 100 Tablets',
     category: 'Allergies',
     formulaId: 'welmate-b87-loratadine',
@@ -924,6 +948,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-saccharomyces-boulardii',
+    // KYR5-d — Target primary barcode, Saccharomyces boulardii 200 veg capsules (TCIN 92209584).
+    barcode: '373581000005',
     productName: 'WELMATE Saccharomyces Boulardii 500 mg, 200 Veg Capsules',
     category: 'Digestive',
     formulaId: 'welmate-b87-saccharomyces-boulardii',
@@ -1020,6 +1046,8 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'welmate-b87-phenazopyridine-120',
+    // KYR5-d — DailyMed setid f2d9f6aa label.jpg 120-count panel, zbar EAN-13 0373581000647.
+    barcode: '373581000647',
     productName: 'WELMATE Urinary Pain Relief Phenazopyridine HCl 99.5 mg, 120 Tablets',
     category: 'Pain & Fever',
     formulaId: 'welmate-b87-phenazopyridine',
@@ -1179,18 +1207,32 @@ if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch87 writes WELMAT
 const _UPC: Record<string, string> = {
   'welmate-b87-famotidine-10-90': '043292564713',
   'welmate-b87-famotidine-10-300': '373581000098',
+  'welmate-b87-famotidine-20-300': '373581000135',
+  'welmate-b87-cetirizine': '373581202010',
+  'welmate-b87-cetirizine-500': '373581202058',
+  'welmate-b87-doxylamine': '373581205028',
+  'welmate-b87-doxylamine-100': '373581000654',
+  'welmate-b87-fexofenadine': '373581011803',
+  'welmate-b87-fexofenadine-180-200': '373581000210',
+  'welmate-b87-fexofenadine-180-40': '373581000623',
+  'welmate-b87-fexofenadine-60-100': '373581103102',
+  'welmate-b87-fexofenadine-60-200': '373581000272',
+  'welmate-b87-fexofenadine-60-60': '373581000616',
   'welmate-b87-phenylephrine': '373581204021',
   'welmate-b87-loperamide-softgel': '373581102242',
   'welmate-b87-loperamide-tablet-101': '373581101245',
   'welmate-b87-loratadine': '373581203369',
+  'welmate-b87-loratadine-100': '373581203017',
   'welmate-b87-guaifenesin-er': '373581000159',
   'welmate-b87-guaifenesin-er-70': '373581000678',
   'welmate-b87-mucus-dm-405': '373581000715',
   'welmate-b87-clotrimazole-solution': '373581000319',
   'welmate-b87-bifidobacterium': '373581000081',
+  'welmate-b87-saccharomyces-boulardii': '373581000005',
   'welmate-b87-zinc-sulfate': '373581301010',
   'welmate-b87-phenazopyridine': '373581000630',
   'welmate-b87-phenazopyridine-72': '373581909728',
+  'welmate-b87-phenazopyridine-120': '373581000647',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1198,7 +1240,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 14) throw new Error('batch87 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 28) throw new Error('batch87 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
