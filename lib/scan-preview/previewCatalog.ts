@@ -699,6 +699,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-leg-veins': brandMark('natures-way-mark.png'),
   'natures-way-pau-darco-inner-bark': brandMark('natures-way-mark.png'),
   'natures-way-siberian-eleuthero': brandMark('natures-way-mark.png'),
+  // Immune Support night run 2026-09-25 5:30 PT batch 1.
+  // Count-specific naturesway.com faces. Do not glue one bottle.
+  // Official Nature's Way mark already on disk. Per-id only.
+  'natures-way-wild-yam': brandMark('natures-way-mark.png'),
+  'natures-way-cayenne-fruit': brandMark('natures-way-mark.png'),
+  'natures-way-echinacea': brandMark('natures-way-mark.png'),
+  'natures-way-hawthorn-berries': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3206,6 +3213,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-rosemary-leaves': catalogShot('natures-way-rosemary-leaves.jpg'),
   // Saffron, 60 capsules, UPC 033674160817.
   'natures-way-saffron': catalogShot('natures-way-saffron.jpg'),
+  // Clear Thinking, 40 capsules, UPC 033674136904.
+  'natures-way-clear-thinking': catalogShot('natures-way-clear-thinking.jpg'),
+  // Damiana Leaves, 100 capsules, UPC 033674122006.
+  'natures-way-damiana-leaves': catalogShot('natures-way-damiana-leaves.jpg'),
+  // DGL Ultra Premium Extract, 90 capsules, UPC 033674129159.
+  'natures-way-dgl-ultra-capsules': catalogShot('natures-way-dgl-ultra-capsules.jpg'),
+  // Fiber Fusion Daily, 150 capsules, UPC 763948084524.
+  'natures-way-fiber-fusion-daily': catalogShot('natures-way-fiber-fusion-daily.jpg'),
+  // Forskohlii Standardized Extract, 60 capsules, UPC 033674100066.
+  'natures-way-forskohlii': catalogShot('natures-way-forskohlii.jpg'),
+  // Garden Veggies, 60 capsules, UPC 033674147931.
+  'natures-way-garden-veggies': catalogShot('natures-way-garden-veggies.jpg'),
+  // Hawthorn Standardized Extract, 90 capsules, UPC 033674619001.
+  // Not Hawthorn Berries 100-count or 180-count.
+  'natures-way-hawthorn': catalogShot('natures-way-hawthorn.jpg'),
+  // Olive Leaf Standardized Extract, 60 capsules, UPC 033674154809.
+  // Not the other 60-count standardized extract (033674640005) or the whole leaf.
+  'natures-way-olive-leaf-premium-extract-20-oleuropein': catalogShot(
+    'natures-way-olive-leaf-premium-extract-20-oleuropein.jpg',
+  ),
+  // Orchard Fruits, 60 capsules, UPC 033674147948.
+  'natures-way-orchard-fruits': catalogShot('natures-way-orchard-fruits.jpg'),
+  // Raspberry Leaf, 100 capsules, UPC 033674161005.
+  'natures-way-raspberry-leaf': catalogShot('natures-way-raspberry-leaf.jpg'),
+  // Red Yeast Rice, 120 capsules, UPC 033674155400.
+  'natures-way-red-yeast-rice': catalogShot('natures-way-red-yeast-rice.jpg'),
+  // Rest and Restore, 30 capsules, UPC 033674157633.
+  'natures-way-rest-and-restore': catalogShot('natures-way-rest-and-restore.jpg'),
+  // Revitalizing Sleep Formula, 90 capsules, UPC 763948032396.
+  'natures-way-fatigued-to-fantastic-revitalizing-sleep-formula': catalogShot(
+    'natures-way-fatigued-to-fantastic-revitalizing-sleep-formula.jpg',
+  ),
+  // Tart Cherry Ultra Capsules, 90 capsules, UPC 763948564453.
+  'natures-way-tart-cherry-ultra-capsules': catalogShot(
+    'natures-way-tart-cherry-ultra-capsules.jpg',
+  ),
+  // MyCommunity capsules, 120 count, UPC 633422038131.
+  // Not the 30-count or 60-count bottles.
+  'host-defense-mycommunity': catalogShot('host-defense-mycommunity.jpg'),
+  // Kids Immune Avenger alcohol-free, 1 fl oz, UPC 090700003081.
+  'herb-pharm-kids-immune-avenger-af': catalogShot(
+    'herb-pharm-kids-immune-avenger-af.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7670,6 +7720,90 @@ assertBrandMark(
   'natures-way-siberian-eleuthero',
   "Nature's Way",
   'natures-way-mark.png',
+);
+assertBrandMark('natures-way-wild-yam', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark('natures-way-cayenne-fruit', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark('natures-way-echinacea', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark(
+  'natures-way-hawthorn-berries',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertExactCarton(
+  'natures-way-clear-thinking',
+  "Nature's Way",
+  'natures-way-clear-thinking.jpg',
+);
+assertExactCarton(
+  'natures-way-damiana-leaves',
+  "Nature's Way",
+  'natures-way-damiana-leaves.jpg',
+);
+assertExactCarton(
+  'natures-way-dgl-ultra-capsules',
+  "Nature's Way",
+  'natures-way-dgl-ultra-capsules.jpg',
+);
+assertExactCarton(
+  'natures-way-fiber-fusion-daily',
+  "Nature's Way",
+  'natures-way-fiber-fusion-daily.jpg',
+);
+assertExactCarton(
+  'natures-way-forskohlii',
+  "Nature's Way",
+  'natures-way-forskohlii.jpg',
+);
+assertExactCarton(
+  'natures-way-garden-veggies',
+  "Nature's Way",
+  'natures-way-garden-veggies.jpg',
+);
+assertExactCarton('natures-way-hawthorn', "Nature's Way", 'natures-way-hawthorn.jpg');
+assertExactCarton(
+  'natures-way-olive-leaf-premium-extract-20-oleuropein',
+  "Nature's Way",
+  'natures-way-olive-leaf-premium-extract-20-oleuropein.jpg',
+);
+assertExactCarton(
+  'natures-way-orchard-fruits',
+  "Nature's Way",
+  'natures-way-orchard-fruits.jpg',
+);
+assertExactCarton(
+  'natures-way-raspberry-leaf',
+  "Nature's Way",
+  'natures-way-raspberry-leaf.jpg',
+);
+assertExactCarton(
+  'natures-way-red-yeast-rice',
+  "Nature's Way",
+  'natures-way-red-yeast-rice.jpg',
+);
+assertExactCarton(
+  'natures-way-rest-and-restore',
+  "Nature's Way",
+  'natures-way-rest-and-restore.jpg',
+);
+assertExactCarton(
+  'natures-way-fatigued-to-fantastic-revitalizing-sleep-formula',
+  "Nature's Way",
+  'natures-way-fatigued-to-fantastic-revitalizing-sleep-formula.jpg',
+);
+assertExactCarton(
+  'natures-way-tart-cherry-ultra-capsules',
+  "Nature's Way",
+  'natures-way-tart-cherry-ultra-capsules.jpg',
+);
+assertExactCarton(
+  'host-defense-mycommunity',
+  'Host Defense',
+  'host-defense-mycommunity.jpg',
+);
+assertExactCarton(
+  'herb-pharm-kids-immune-avenger-af',
+  'Herb Pharm',
+  'herb-pharm-kids-immune-avenger-af.jpg',
 );
 {
   const twelveMg = previewOverlayImage({
