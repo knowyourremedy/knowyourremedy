@@ -706,6 +706,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-cayenne-fruit': brandMark('natures-way-mark.png'),
   'natures-way-echinacea': brandMark('natures-way-mark.png'),
   'natures-way-hawthorn-berries': brandMark('natures-way-mark.png'),
+  // Immune Support night run 2026-09-25 5:30 PT batch 2.
+  // Amazon search for UPC 842379151743 did not return a pack.
+  // Official Amazon Elements mark already on disk. Per-id only.
+  'amazon-elements-sambucus-gummies': brandMark('amazon-elements-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -980,6 +984,11 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // this environment. No verified 3D pack for UPC 768990301889. No
   // standalone Nordic Naturals mark file.
   'nordic-zero-sugar-melatonin-gummies': 'Nordic Naturals',
+  // Immune Support night run 2026-09-25 5:30 PT batch 2.
+  // us.manukahealth.com lemon-ginger lozenge is the vitamin C SKU.
+  // Its barcode is not 895015002336. Do not glue that tin.
+  // Header wordmark SVG renders clipped. No standalone mark file.
+  'manuka-health-lemon-ginger-lozenges': 'Manuka Health',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -3255,6 +3264,78 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Kids Immune Avenger alcohol-free, 1 fl oz, UPC 090700003081.
   'herb-pharm-kids-immune-avenger-af': catalogShot(
     'herb-pharm-kids-immune-avenger-af.jpg',
+  ),
+  // Kids Immune Fortifier alcohol-free, 1 fl oz, UPC 090700030834.
+  // Not the 4 fl oz bottle (090700030841).
+  'herb-pharm-kids-immune-fortifier-af': catalogShot(
+    'herb-pharm-kids-immune-fortifier-af.jpg',
+  ),
+  // Oregano Spirits, 1 fl oz, UPC 090700003487.
+  // Not the 4 fl oz bottle (090700003494).
+  'herb-pharm-oregano-spirits': catalogShot('herb-pharm-oregano-spirits.jpg'),
+  // Organic Kids Immunity Gummies, UPC 810104620253 (maryruthorganics.com).
+  'maryruth-kids-immunity-gummies': catalogShot(
+    'maryruth-kids-immunity-gummies.jpg',
+  ),
+  // Oregano Oil Drops, 1 fl oz, UPC 850018471725.
+  // Brand-site hero is a benefits collage. Thrive front-of-pack is this UPC.
+  'maryruth-oregano-oil-drops': catalogShot('maryruth-oregano-oil-drops.jpg'),
+  // Throat Spray Vanilla, 1 fl oz, UPC 810104622745.
+  'maryruth-throat-spray-vanilla': catalogShot(
+    'maryruth-throat-spray-vanilla.jpg',
+  ),
+  // Organic Elderberry Drops Blueberry Raspberry, 1 fl oz, UPC 856645008150.
+  // Brand-site hero is a benefits collage. Thrive front-of-pack is this UPC.
+  'maryruth-elderberry-drops': catalogShot('maryruth-elderberry-drops.jpg'),
+  // myKind Organics Elderberry Immune Gummies, UPC 658010121774.
+  // Not Dr. Formulated Elderberry (658010128070).
+  'gol-mykind-elderberry-immune-gummies': catalogShot(
+    'gol-mykind-elderberry-immune-gummies.jpg',
+  ),
+  // Dr. Formulated Quercetin Immune, UPC 658010130547 (gardenoflife.com).
+  'gol-dr-formulated-quercetin': catalogShot(
+    'gol-dr-formulated-quercetin.jpg',
+  ),
+  // Kids Plus Multi & Immunity, 60 gummies, UPC 817053024453.
+  'smartypants-kids-plus-immunity': catalogShot(
+    'smartypants-kids-plus-immunity.jpg',
+  ),
+  // Kids Triple Action Immunity, 60 gummies, UPC 817053024064.
+  // Not the Plus Multi bottle.
+  'smartypants-kids-triple-action-immunity': catalogShot(
+    'smartypants-kids-triple-action-immunity.jpg',
+  ),
+  // Elderberry Plus capsules, UPC 671635734600 (thrivemarket.com).
+  'wellmade-elderberry': catalogShot('wellmade-elderberry.jpg'),
+  // Immune Support Propolis Throat Spray, UPC 671635745750.
+  'wellmade-propolis-throat-spray': catalogShot(
+    'wellmade-propolis-throat-spray.jpg',
+  ),
+  // Elderberry Syrup + Honey, UPC 727783902733 (newchapter.com).
+  'new-chapter-elderberry-syrup': catalogShot(
+    'new-chapter-elderberry-syrup.jpg',
+  ),
+  // Kids Elderberry Syrup + Honey, UPC 727783903181.
+  'new-chapter-kids-elderberry-syrup': catalogShot(
+    'new-chapter-kids-elderberry-syrup.jpg',
+  ),
+  // Kids Organic Elderberry Whole-Food Gummies, UPC 727783903099.
+  'new-chapter-kids-elderberry-gummies': catalogShot(
+    'new-chapter-kids-elderberry-gummies.jpg',
+  ),
+  // Fermented Vitamin C, 60 tablets, UPC 727783902573.
+  // Not the 30-day bottle (727783902566).
+  'new-chapter-fermented-c': catalogShot('new-chapter-fermented-c.jpg'),
+  // Fermented Zinc Complex, 90 tablets, UPC 727783903563.
+  // Not the 30-day or 60-day bottles.
+  'new-chapter-fermented-zinc-complex': catalogShot(
+    'new-chapter-fermented-zinc-complex.jpg',
+  ),
+  // Kids Black Elderberry Gummies, 60 count, UPC 842379152665.
+  // Current amazon.com face is Amazon Basics (Previously Mama Bear).
+  // Not the 2-pack listing.
+  'mama-bear-kids-black-elderberry-gummies': catalogShot(
+    'mama-bear-kids-black-elderberry-gummies.jpg',
   ),
 };
 
@@ -7804,6 +7885,106 @@ assertExactCarton(
   'herb-pharm-kids-immune-avenger-af',
   'Herb Pharm',
   'herb-pharm-kids-immune-avenger-af.jpg',
+);
+assertExactCarton(
+  'herb-pharm-kids-immune-fortifier-af',
+  'Herb Pharm',
+  'herb-pharm-kids-immune-fortifier-af.jpg',
+);
+assertExactCarton(
+  'herb-pharm-oregano-spirits',
+  'Herb Pharm',
+  'herb-pharm-oregano-spirits.jpg',
+);
+assertExactCarton(
+  'maryruth-kids-immunity-gummies',
+  "MaryRuth's",
+  'maryruth-kids-immunity-gummies.jpg',
+);
+assertExactCarton(
+  'maryruth-oregano-oil-drops',
+  "MaryRuth's",
+  'maryruth-oregano-oil-drops.jpg',
+);
+assertExactCarton(
+  'maryruth-throat-spray-vanilla',
+  "MaryRuth's",
+  'maryruth-throat-spray-vanilla.jpg',
+);
+assertExactCarton(
+  'maryruth-elderberry-drops',
+  "MaryRuth's",
+  'maryruth-elderberry-drops.jpg',
+);
+assertExactCarton(
+  'gol-mykind-elderberry-immune-gummies',
+  'Garden of Life',
+  'gol-mykind-elderberry-immune-gummies.jpg',
+);
+assertExactCarton(
+  'gol-dr-formulated-quercetin',
+  'Garden of Life',
+  'gol-dr-formulated-quercetin.jpg',
+);
+assertExactCarton(
+  'smartypants-kids-plus-immunity',
+  'SmartyPants',
+  'smartypants-kids-plus-immunity.jpg',
+);
+assertExactCarton(
+  'smartypants-kids-triple-action-immunity',
+  'SmartyPants',
+  'smartypants-kids-triple-action-immunity.jpg',
+);
+assertExactCarton(
+  'wellmade-elderberry',
+  'wellmade by Thrive Market',
+  'wellmade-elderberry.jpg',
+);
+assertExactCarton(
+  'wellmade-propolis-throat-spray',
+  'wellmade by Thrive Market',
+  'wellmade-propolis-throat-spray.jpg',
+);
+assertExactCarton(
+  'new-chapter-elderberry-syrup',
+  'New Chapter',
+  'new-chapter-elderberry-syrup.jpg',
+);
+assertExactCarton(
+  'new-chapter-kids-elderberry-syrup',
+  'New Chapter',
+  'new-chapter-kids-elderberry-syrup.jpg',
+);
+assertExactCarton(
+  'new-chapter-kids-elderberry-gummies',
+  'New Chapter',
+  'new-chapter-kids-elderberry-gummies.jpg',
+);
+assertExactCarton(
+  'new-chapter-fermented-c',
+  'New Chapter',
+  'new-chapter-fermented-c.jpg',
+);
+assertExactCarton(
+  'new-chapter-fermented-zinc-complex',
+  'New Chapter',
+  'new-chapter-fermented-zinc-complex.jpg',
+);
+assertExactCarton(
+  'mama-bear-kids-black-elderberry-gummies',
+  'Mama Bear',
+  'mama-bear-kids-black-elderberry-gummies.jpg',
+);
+assertBrandMark(
+  'amazon-elements-sambucus-gummies',
+  'Amazon Elements',
+  'amazon-elements-mark.png',
+);
+assertBrandTextTile(
+  'manuka-health-lemon-ginger-lozenges',
+  'Manuka Health',
+  'Manuka Health',
 );
 {
   const twelveMg = previewOverlayImage({
