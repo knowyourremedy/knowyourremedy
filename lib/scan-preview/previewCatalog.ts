@@ -686,6 +686,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-sambucus-immune-lozenges-eucalyptus': brandMark('natures-way-mark.png'),
   'natures-way-sambucus-zero-sugar-immune-gummy': brandMark('natures-way-mark.png'),
   'natures-way-garlinase-5000': brandMark('natures-way-mark.png'),
+  // Immune Support night run 2026-09-25 3:00 PT batch 1.
+  // Count-specific naturesway.com faces. Do not glue one bottle.
+  // Official Nature's Way mark already on disk. Per-id only.
+  'natures-way-asian-ginseng': brandMark('natures-way-mark.png'),
+  'natures-way-astragalus-root': brandMark('natures-way-mark.png'),
+  'natures-way-echinacea-goldenseal': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3105,6 +3111,55 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-sambucus-zero-sugar-kids-immune-gummy': catalogShot(
     'natures-way-sambucus-zero-sugar-kids-immune-gummy.jpg',
   ),
+  // Immune Support night run 2026-09-25 3:00 PT batch 1 — exact US pack
+  // faces from naturesway.com. Per-id only. One barcode on each row.
+  // Moringa, 120 capsules, UPC 033674159637.
+  'natures-way-moringa': catalogShot('natures-way-moringa.jpg'),
+  // Schisandra Fruit, 100 capsules, UPC 033674168004.
+  'natures-way-schisandra': catalogShot('natures-way-schisandra.jpg'),
+  // Black Elderberry, 100 capsules, UPC 033674124406.
+  'natures-way-black-elderberry': catalogShot('natures-way-black-elderberry.jpg'),
+  // Alfa-Max, 100 capsules, UPC 033674020111.
+  'natures-way-alfa-max': catalogShot('natures-way-alfa-max.jpg'),
+  // Asian Ginseng Standardized Extract, 60 capsules, UPC 033674617007.
+  // Not the whole-root 50-count or 100-count bottles.
+  'natures-way-asian-ginseng-premium-extract': catalogShot(
+    'natures-way-asian-ginseng-premium-extract.jpg',
+  ),
+  // Astragalus premium blend, 60 capsules, UPC 033674153833.
+  // Not the Astragalus Root 100-count or 180-count bottles.
+  'natures-way-astragalus': catalogShot('natures-way-astragalus.jpg'),
+  // B-Stress Formula, 100 capsules, UPC 033674406311.
+  'natures-way-b-stress-formula': catalogShot('natures-way-b-stress-formula.jpg'),
+  // Black Walnut Hulls, 100 capsules, UPC 033674106006.
+  'natures-way-black-walnut-hulls': catalogShot(
+    'natures-way-black-walnut-hulls.jpg',
+  ),
+  // Bladderwrack, 100 capsules, UPC 033674153802.
+  'natures-way-bladderwrack': catalogShot('natures-way-bladderwrack.jpg'),
+  // Burdock Root, 100 capsules, UPC 033674112007.
+  'natures-way-burdock-root': catalogShot('natures-way-burdock-root.jpg'),
+  // Butcher's Broom Root, 100 capsules, UPC 033674112502.
+  'natures-way-butchers-broom-root': catalogShot(
+    'natures-way-butchers-broom-root.jpg',
+  ),
+  // Cat's Claw Bark, 100 capsules, UPC 033674114506.
+  // Not the standardized extract 60-count bottle.
+  'natures-way-cats-claw-bark': catalogShot('natures-way-cats-claw-bark.jpg'),
+  // Cat's Claw Standardized Extract, 60 capsules, UPC 033674607008.
+  'natures-way-cats-claw-premium-extract': catalogShot(
+    'natures-way-cats-claw-premium-extract.jpg',
+  ),
+  // Cherry Fruit Sweet Cherry Extract, 180 capsules, UPC 763948085408.
+  'natures-way-cherry-fruit': catalogShot('natures-way-cherry-fruit.jpg'),
+  // Corn Silk, 100 capsules, UPC 033674141526.
+  'natures-way-corn-silk': catalogShot('natures-way-corn-silk.jpg'),
+  // Echinacea Astragalus & Reishi, 100 capsules, UPC 033674004135.
+  'natures-way-echinacea-astragalus-reishi': catalogShot(
+    'natures-way-echinacea-astragalus-reishi.jpg',
+  ),
+  // EstroSoy Premium Blend, 60 capsules, UPC 033674145364.
+  'natures-way-estrosoy': catalogShot('natures-way-estrosoy.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7393,6 +7448,98 @@ assertExactCarton(
   'natures-way-sambucus-zero-sugar-kids-immune-gummy',
   "Nature's Way",
   'natures-way-sambucus-zero-sugar-kids-immune-gummy.jpg',
+);
+assertExactCarton('natures-way-moringa', "Nature's Way", 'natures-way-moringa.jpg');
+assertExactCarton(
+  'natures-way-schisandra',
+  "Nature's Way",
+  'natures-way-schisandra.jpg',
+);
+assertExactCarton(
+  'natures-way-black-elderberry',
+  "Nature's Way",
+  'natures-way-black-elderberry.jpg',
+);
+assertExactCarton('natures-way-alfa-max', "Nature's Way", 'natures-way-alfa-max.jpg');
+assertExactCarton(
+  'natures-way-asian-ginseng-premium-extract',
+  "Nature's Way",
+  'natures-way-asian-ginseng-premium-extract.jpg',
+);
+assertExactCarton(
+  'natures-way-astragalus',
+  "Nature's Way",
+  'natures-way-astragalus.jpg',
+);
+assertExactCarton(
+  'natures-way-b-stress-formula',
+  "Nature's Way",
+  'natures-way-b-stress-formula.jpg',
+);
+assertExactCarton(
+  'natures-way-black-walnut-hulls',
+  "Nature's Way",
+  'natures-way-black-walnut-hulls.jpg',
+);
+assertExactCarton(
+  'natures-way-bladderwrack',
+  "Nature's Way",
+  'natures-way-bladderwrack.jpg',
+);
+assertExactCarton(
+  'natures-way-burdock-root',
+  "Nature's Way",
+  'natures-way-burdock-root.jpg',
+);
+assertExactCarton(
+  'natures-way-butchers-broom-root',
+  "Nature's Way",
+  'natures-way-butchers-broom-root.jpg',
+);
+assertExactCarton(
+  'natures-way-cats-claw-bark',
+  "Nature's Way",
+  'natures-way-cats-claw-bark.jpg',
+);
+assertExactCarton(
+  'natures-way-cats-claw-premium-extract',
+  "Nature's Way",
+  'natures-way-cats-claw-premium-extract.jpg',
+);
+assertExactCarton(
+  'natures-way-cherry-fruit',
+  "Nature's Way",
+  'natures-way-cherry-fruit.jpg',
+);
+assertExactCarton(
+  'natures-way-corn-silk',
+  "Nature's Way",
+  'natures-way-corn-silk.jpg',
+);
+assertExactCarton(
+  'natures-way-echinacea-astragalus-reishi',
+  "Nature's Way",
+  'natures-way-echinacea-astragalus-reishi.jpg',
+);
+assertExactCarton(
+  'natures-way-estrosoy',
+  "Nature's Way",
+  'natures-way-estrosoy.jpg',
+);
+assertBrandMark(
+  'natures-way-asian-ginseng',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-astragalus-root',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-echinacea-goldenseal',
+  "Nature's Way",
+  'natures-way-mark.png',
 );
 {
   const twelveMg = previewOverlayImage({
