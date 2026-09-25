@@ -93,3 +93,4 @@ export { BATCH92_KYR6_MISSING_OI_RESCAN } from './batch92-kyr6-missing-oi-rescan
 export { BATCH93_KYR6_AMAZON_3P_APLUS_HEALTH } from './batch93-kyr6-amazon-3p-aplus-health';
 export { BATCH94_KYR6_APLUS_TOKEN_BACKFILL } from './batch94-kyr6-aplus-token-backfill';
 export { BATCH95_KYR6_APLUS_ITCH_GEL } from './batch95-kyr6-aplus-itch-gel';
+export { BATCH96_KYR6_AMAZON_3P_HEALTHA2Z } from './batch96-kyr6-amazon-3p-healtha2z';
