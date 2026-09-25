@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 24, 2026 (HealthA2Z batch96 — founder stamp; use existing §5 where named):** Map — colloidal anhydrous silica → silica / SiO2 Caution; polyethyleneglycol → PEG Caution; red iron oxide / yellow iron oxide → iron oxide as color Caution; anhydrous lactose → lactose Cleared; shellac glaze → shellac Cleared; pregelantinized starch → pregelatinized starch Cleared; propylene glycol USP → propylene glycol (oral) Caution; gelatin USP → gelatin Cleared; sorbitol sorbitan solution USP → existing sorbitol sorbitan solution Caution; methyl paraben / propyl paraben → parabens Avoid; sodium carboxy methyl cellulose → CMC / cellulose gum Cleared. Caution aliases — polyvinyl acetate pthalate (PVAP) → existing polyvinyl acetate phthalate Caution; dihydroxy aluminium aminoacetate → existing dihydroxyaluminum aminoacetate Caution. Day/night dual-panel stays no-row.
+
 **Changed Sept 24, 2026 (formaldehyde-releasers — founder stamp):** As Other Ingredients, Avoid (Not clean): diazolidinyl urea; imidazolidinyl urea; DMDM hydantoin; Quaternium-15; Bronopol; Bronidox. Un-parked. Harm-first. FDA allow ≠ Clean. Founder bump from the Sept 15 Caution lock and from the parked list.
 
 **Changed Sept 24, 2026 (A+Health batch93 — founder stamp; use existing §5 where named):** Map — gylcerin → glycerin Cleared; vitamin E → tocopherol Cleared (not tocopheryl acetate); lanolin alcohols → lanolin alcohol Caution; MCC + CMC combo → those two Cleared locks; cetyl / cetostearyl alcohol → fatty-alcohol cream base Cleared. Caution — pharmaceutical ink / imprinting ink; flavor / banana flavor / flavadew coolmint; sorbitol sorbitan solution; sodium lauroyl sarcosinate; sodium stannate; simethicone / simethicone emulsion as OI; magnesium aluminum silicate; sodium saccharin; nonoxynol-9; benzoic acid; thyme oil as OI; white wax; C30-45 alkyl cetearyl dimethicone crosspolymer; alicyclic hydrocarbon resin; styrene isoprene; styrene block copolymer. Cleared — dibasic sodium phosphate. Avoid — plain caramel powder (undisclosed caramel class). Diazolidnyl urea = diazolidinyl urea. Parked formaldehyde-releaser. No new row. Do not flip the Sept 15 Caution lock.
@@ -220,7 +222,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Synthetic dyes | FD&C/D&C colors, aluminum lakes, D&C red #27 aluminum lake, D&C red #30 aluminum lake | FDA revoked Red No. 3 (2025). Red 40, Yellow 5/6, Blue 1/2, Green 3 carry EU hyperactivity warnings (Southampton study). Applies equally to lake (insoluble tablet) forms. D&C red #27 / #30 aluminum lake sit on this same High family — exact strings added. |
 | D&C red #27 aluminum lake / D&C red #30 aluminum lake — LOCKED (Sept 15, 2026) | D&C Red No. 27, D&C Red No. 30, red 27 lake, red 30 lake | Exact High-family strings. Same synthetic-dye Avoid row. |
 | Methylisothiazolinone / MIT (leave-on cream) — LOCKED (Sept 15, 2026) | MIT, methylisothiazolinone | High/Avoid in leave-on cream. Exact tokens. |
-| Parabens — LOCKED (Sept 15, 2026 form lock) | methyl-, ethyl-, propyl-, butyl-, isobutylparaben | High in every form, including rubs and patches. Not a topical exception. EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. |
+| Parabens — LOCKED (Sept 15, 2026 form lock) | methyl-, ethyl-, propyl-, butyl-, isobutylparaben, methyl paraben, propyl paraben | High in every form, including rubs and patches. Not a topical exception. EU banned propylparaben in food (2006); butyl-/isobutylparaben are EU-designated endocrine disruptors. Methyl paraben and propyl paraben map here (Sept 24, 2026). Not a new grade. |
 | BHA | butylated hydroxyanisole, E320 | NTP "reasonably anticipated" human carcinogen; Prop 65 listed. |
 | BHT — **LOCKED** | butylated hydroxytoluene, E321 | EU-restricted (2022) for endocrine disruption. Restriction-not-ban does not downgrade this. |
 | Propyl gallate — **LOCKED (v1.6)** | E310 | Confirmed endocrine-disrupting activity (Pop et al. 2018), alone and in mixtures with BHA/BHT/butylparaben; clastogenic in 3/4 in vitro cytogenetic studies. Same harm-mechanism logic as BHT — no ban required. |
@@ -237,17 +239,17 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 
 | Additive | Also appears as | Why precautionary |
 |---|---|---|
-| Silicon dioxide | Silica, E551, oral hydrated silica, Silica (oral) | EFSA 2018: no confirmed harm, but open nanoparticle data-gap review still unresolved. Distinct from crystalline silica (unrelated inhalation hazard). Oral hydrated silica and Silica (oral) sit on this same nanoparticle Caution cap (Sept 16, 2026). Tap vs topical hydrated silica (separate Caution row — not this oral cap). |
+| Silicon dioxide | Silica, SiO2, E551, oral hydrated silica, Silica (oral), colloidal anhydrous silica | EFSA 2018: no confirmed harm, but open nanoparticle data-gap review still unresolved. Distinct from crystalline silica (unrelated inhalation hazard). Oral hydrated silica and Silica (oral) sit on this same nanoparticle Caution cap (Sept 16, 2026). Colloidal anhydrous silica maps here (Sept 24, 2026). Not a new grade. Tap vs topical hydrated silica (separate Caution row — not this oral cap). |
 
 ### Moderate-risk — 2 points each
 
 | Additive | Also appears as | Why moderate-risk |
 |---|---|---|
-| Propylene glycol (oral) | PG, E1520 | Thin direct harm evidence; excluded by clean brands. |
+| Propylene glycol (oral) | PG, E1520, propylene glycol USP | Thin direct harm evidence; excluded by clean brands. Propylene glycol USP maps here (Sept 24, 2026). Not a new grade. |
 | Sucralose | E955, Splenda | Metabolite genotoxicity signal (2023 study); microbiome concerns. |
 | Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity/microbiome signals; thin evidence. |
 | Saccharin | E954 | Historical rat finding, but NTP delisted (2000), IARC reclassified Group 3 (1999). |
-| PEGs | polyethylene glycol 400/3350, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. |
+| PEGs | polyethylene glycol 400/3350, polyethyleneglycol, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. Polyethyleneglycol maps here (Sept 24, 2026). Not a new grade. |
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 | Polysorbate 60 | P60, Tween 60 | Same Moderate family as P80 / P20. Do not duplicate as a new class. |
@@ -310,7 +312,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 |---|---|
 | Cane sugar, glucose syrup, tapioca syrup/dextrose | Acceptable sweeteners. Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). Distinct from Caution bare glucose (Sept 22, 2026). Do not flip this Cleared syrup row. |
 | Caramel sugar syrup (named syrup, lozenge sweetener) — LOCKED | Food sugar. NOT caramel color / E150d. |
-| Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. Microcrystalline Cellulosse is a MCC typo alias (Sept 16, 2026) — both strings written; honest note “label typo.” An MCC + CMC combo maps to these two Cleared locks (Sept 24, 2026). Not a new grade. |
+| Microcrystalline cellulose, croscarmellose sodium, cellulose gum, powdered cellulose, capsule cellulose | Standard disintegrants / cellulose-family fillers. EFSA 2017: no carcinogenicity, no ADI needed. Cellulose gum, powdered cellulose, and capsule cellulose are Cleared-by-class with MCC. Microcrystalline Cellulosse is a MCC typo alias (Sept 16, 2026) — both strings written; honest note “label typo.” An MCC + CMC combo maps to these two Cleared locks (Sept 24, 2026). Sodium carboxy methyl cellulose maps to cellulose gum / CMC (Sept 24, 2026). Not a new grade. |
 | Ethylcellulose — LOCKED (Sept 15, 2026) | Cellulose coating family. |
 | Magnesium stearate, stearic acid, calcium stearate, calcium laurate, palmitostearic acid | Standard lubricants (same stearate-family class). EFSA 2018: no safety concern. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid. Calcium laurate is Cleared-by-class with the stearate family (Sept 14, 2026 housekeeping). Palmitostearic acid / palmitic + stearic mix is Cleared-by-class with stearic acid / calcium stearate. Sodium Stearyl Fumarate is Cleared-by-class with the stearate-family lubricants (Sept 16, 2026). |
 | Sodium stearoyl glutamate — LOCKED | Stearate-family emulsifier. |
@@ -383,14 +385,14 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. Organic Tapioca Fiber Powder and soluble tapioca fiber are the same row (Sept 16, 2026). Both strings written. |
 | Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
 | Soluble corn fiber — LOCKED (Sept 15, 2026) | Fiber; ≠ maltodextrin. |
-| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. Water / bare water sit on this same purified-water row (Sept 22, 2026). Electrolyzed Water is NOT this purified-water row (Sept 17, 2026). |
+| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. Water / bare water sit on this same purified-water row (Sept 22, 2026). Electrolyzed Water is NOT this purified-water row (Sept 17, 2026). Anhydrous lactose maps to lactose. Gelatin USP maps to gelatin (Sept 24, 2026). Not a new grade. |
 | Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
 | Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. Also written Candellila Wax (typo alias; Sept 16, 2026). Both strings written. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Copovidone — **LOCKED (Sept 14, 2026 housekeeping)** | Povidone-family copolymer. Same Cleared class as povidone / crospovidone. |
 | Methylcellulose | Same family as Hypromellose; EFSA: no carcinogenicity, no ADI needed. |
-| Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. |
+| Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. Pregelantinized starch is this spelling (Sept 24, 2026). Same Cleared row. |
 | Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). Culture Media (Saccharomyces cerevisiae) / Cultured Yeast (Saccharomyces cerevisiae) / Culture Media (Molasses, Saccharomyces cerevisiae) sit on this ferment-media family (Sept 16, 2026). |
 | Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). Locust Bean Gum sits on this same family (Sept 16, 2026). gum arabic is the same as acacia / organic acacia gum (Sept 16, 2026 restamp). |
 | Gum ghatti — LOCKED (Sept 15, 2026) | Gum family with acacia/xanthan. |
@@ -456,7 +458,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | gamma-cyclodextrin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | succinic acid — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | polyvinyl alcohol (oral coating) — LOCKED (Sept 15, 2026) | Exact token as oral coating. Cleared. Distinct from PVA (topical film). |
-| shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Shellac glaze maps here (Sept 24, 2026). Not a new grade. |
 | emu oil as topical fill — LOCKED (Sept 15, 2026) | Named single oil as topical fill. Cleared. Tap fill ≠ gummy High. |
 | glyceryl dibehenate — LOCKED (Sept 15, 2026) | Exact words. Cleared. Stearate / dibehenin neighborhood. Dibehenin already Cleared ≠ this string. |
 | glyceryl caprylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -618,7 +620,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | diazolidinyl urea — LOCKED (Sept 15, 2026) | Exact string. Founder restamp Sept 24, 2026: Avoid (Not clean) with the formaldehyde-releaser row. Diazolidnyl urea is this spelling. Not Caution. | Standard alternatives rule. Avoid. |
 | aluminum hydroxide (topical / patch) — LOCKED (Sept 15, 2026) | Exact inactive token. Not the oral antacid active-safety cap row. | Standard alternatives rule. Not Avoid. |
 | aluminum silicate / synthetic aluminum silicate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
-| dihydroxyaluminum aminoacetate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| dihydroxyaluminum aminoacetate — LOCKED (Sept 15, 2026) | Exact INCI. Also written dihydroxy aluminium aminoacetate (Sept 24, 2026). Same Caution. Not a new row. | Standard alternatives rule. Not Avoid. |
 | silodrate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | dicetyl phosphate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
 | capsaicin (when listed as inactive) — LOCKED (Sept 15, 2026) | Exact token when listed as inactive. | Standard alternatives rule. Not Avoid. |
@@ -676,7 +678,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | iron oxide yellow / ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact alias. Same Caution. Both strings written. Distinct from iron oxide red / ferric oxide red. | Standard alternatives rule. Not Avoid. |
 | iron oxides — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric ferrocyanide. Iron oxide as color sits on this same Caution family (Sept 22, 2026 exact token). Ferrosoferric oxide and black iron oxide map to iron oxide as color (Sept 23, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | iron oxide red — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric oxide red and from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
-| polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
+| polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. Also written polyvinyl acetate pthalate and PVAP (Sept 24, 2026). Same Caution. Not a new row. | Standard alternatives rule. Not Avoid. |
 | ammonium glycyrrhizin — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from Cleared licorice / Glycyrrhiza extract. | Standard alternatives rule. Not Avoid. |
 | oleoresin turmeric — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared turmeric/curcumin as a color only. Distinct from Caution bare turmeric as OI (Sept 23, 2026). Do not alias those rows to this one. | Standard alternatives rule. Not Avoid. |
 | caprylhydroxamic acid — LOCKED (Sept 15, 2026) | Exact INCI. | Standard alternatives rule. Not Avoid. |
@@ -724,7 +726,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Glucose — LOCKED (Sept 22, 2026) | glucose (bare) | Exact token when the label prints bare glucose. Caution. Distinct from Cleared cane sugar / glucose syrup / tapioca syrup-dextrose. Do not flip that Cleared syrup row. | Standard alternatives rule. Not Avoid. |
 | Stevia extract — LOCKED (Sept 22, 2026) | stevia extract, stevia leaf extract | Exact token. Unspecified extract. Caution. Distinct from Cleared high-purity steviol glycosides / Reb M and from Caution whole-leaf / crude stevia. Do not flip the high-purity Cleared row. Stevia leaf extract maps here (Sept 23, 2026). Not a new grade. Not whole-leaf. Not Reb A / Reb M. | Standard alternatives rule. Not Avoid. |
 | Hydrogenated vegetable oil as OI — LOCKED (Sept 22, 2026) | hydrogenated vegetable oil (Other Ingredient) | Exact token as Other Ingredient. Caution. Cream fill stays Cleared. Gummy fat blend stays Avoid. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
-| Iron oxide as color — LOCKED (Sept 22, 2026) | iron oxide (as color), ferrosoferric oxide, black iron oxide | Exact token as color. Caution. Same family as iron oxides / iron oxide red / iron oxide yellow. Not Avoid. Ferrosoferric oxide and black iron oxide map here (Sept 23, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
+| Iron oxide as color — LOCKED (Sept 22, 2026) | iron oxide (as color), ferrosoferric oxide, black iron oxide, red iron oxide, yellow iron oxide | Exact token as color. Caution. Same family as iron oxides / iron oxide red / iron oxide yellow. Not Avoid. Ferrosoferric oxide and black iron oxide map here (Sept 23, 2026). Red iron oxide and yellow iron oxide map here (Sept 24, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Lemon juice concentrate as sweetener — LOCKED (Sept 22, 2026) | lemon juice concentrate, organic lemon juice concentrate (sweetener) | Exact token as sweetener. Caution. Distinct from Cleared lemon juice concentrate as color and from Limited fruit-puree / juice-concentrate gummy base. | Standard alternatives rule. Not Avoid. |
 | Pea starch — LOCKED (Sept 22, 2026) | pea starch | Founder restamp. Caution. Was Limited (Sept 16). Distinct from Cleared pea protein isolate and from Limited modified starch. | Standard alternatives rule. Not Avoid. |
 | Organic oat fiber — LOCKED (Sept 22, 2026) | organic oat fiber | Exact token. Caution. Distinct from Cleared Oat Fiber. Do not flip that Cleared row. | Standard alternatives rule. Not Avoid. |
@@ -755,7 +757,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Poloxamer 182 — LOCKED (Sept 24, 2026) | poloxamer 182 | Exact token. PEG-style surfactant. Caution. Not High. Distinct from Caution behenoyl polyoxyl-8 glycerides and from Caution polyoxyethylene (23) cetyl ether. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 | Pharmaceutical ink / imprinting ink — LOCKED (Sept 24, 2026) | pharmaceutical ink, imprinting ink | Exact tokens. Caution. Distinct from Caution edible ink and white edible ink. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 | Flavor / banana flavor / flavadew coolmint — LOCKED (Sept 24, 2026) | flavor, banana flavor, flavadew coolmint | Exact tokens. Caution. Distinct from Limited natural flavors. Do not flip that row. | Standard alternatives rule. Not Avoid. |
-| Sorbitol sorbitan solution — LOCKED (Sept 24, 2026) | sorbitol sorbitan solution | Exact token. Caution. Distinct from Limited oral sorbitol and from Caution sorbitan esters. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
+| Sorbitol sorbitan solution — LOCKED (Sept 24, 2026) | sorbitol sorbitan solution, sorbitol sorbitan solution USP | Exact token. Caution. Distinct from Limited oral sorbitol and from Caution sorbitan esters. Do not flip those rows. Sorbitol sorbitan solution USP maps here (Sept 24, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Sodium lauroyl sarcosinate — LOCKED (Sept 24, 2026) | sodium lauroyl sarcosinate | Exact token. Caution. Not High. Distinct from Caution SLS. Do not flip that row. | Standard alternatives rule. Not Avoid. |
 | Sodium stannate — LOCKED (Sept 24, 2026) | sodium stannate | Exact token. Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Simethicone / simethicone emulsion as OI — LOCKED (Sept 24, 2026) | simethicone, simethicone emulsion | Exact tokens as Other Ingredient. Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |

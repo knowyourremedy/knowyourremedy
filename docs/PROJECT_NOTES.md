@@ -238,6 +238,7 @@ Next session
 - FOUNDER STAMP 2026-09-24 — poloxamer 182 = Caution (PEG-style surfactant; not High). Hunt order stays DailyMed → brand → retail → Google AI last. batch90 is on MAIN. Do not edit batch70–90 product rows. No A+Health.
 - FOUNDER STAMP 2026-09-24 — A+Health batch93. Map: gylcerin → glycerin; vitamin E → tocopherol; lanolin alcohols → lanolin alcohol; MCC + CMC combo → those two locks; cetyl / cetostearyl alcohol → fatty-alcohol cream base Cleared. Caution: pharmaceutical ink / imprinting ink; flavor / banana flavor / flavadew coolmint; sorbitol sorbitan solution; sodium lauroyl sarcosinate; sodium stannate; simethicone / simethicone emulsion as OI; magnesium aluminum silicate; sodium saccharin; nonoxynol-9; benzoic acid; thyme oil as OI; white wax; C30-45 alkyl cetearyl dimethicone crosspolymer; alicyclic hydrocarbon resin; styrene isoprene; styrene block copolymer. Dibasic sodium phosphate is Cleared. Avoid: plain caramel powder (undisclosed caramel class). Diazolidnyl urea = diazolidinyl urea — parked formaldehyde-releaser, no new row. Do not flip the Sept 15 Caution lock. batch93 is on MAIN. Do not edit batch70–93 product rows. No HealthA2Z.
 - FOUNDER STAMP 2026-09-24 — formaldehyde-releasers as OI = Avoid (Not clean): diazolidinyl urea; imidazolidinyl urea; DMDM hydantoin; Quaternium-15; Bronopol; Bronidox. Un-parked. Harm-first. FDA allow ≠ Clean. Do not edit batch70–94 product rows. No HealthA2Z slice.
+- FOUNDER STAMP 2026-09-24 — HealthA2Z batch96 maps. colloidal anhydrous silica → silica / SiO2; polyethyleneglycol → PEG; red / yellow iron oxide → iron oxide; anhydrous lactose → lactose; shellac glaze → shellac; pregelantinized starch → pregelatinized starch; propylene glycol USP → PG; gelatin USP → gelatin; sorbitol sorbitan solution USP → existing Caution; methyl / propyl paraben → parabens Avoid; sodium carboxy methyl cellulose → CMC. Caution: polyvinyl acetate pthalate (PVAP); dihydroxy aluminium aminoacetate. Day/night dual-panel stays no-row. batch96 is on MAIN. Do not edit batch70–96 product rows. No TIME-Cap. No GoodSense.
 - Oils bottles: hunt-list only (name + URL). Never Search-graded.
 - Do not reopen Search / post-scan / Home / Cabinet unless broken.
 
@@ -1628,3 +1629,4 @@ ON MAIN / poloxamer 182 Caution / STOPPED
 ON MAIN / A+Health tokens stamped / STOPPED
 ON MAIN / formaldehyde-releasers Avoid / STOPPED
 ON MAIN / notes scoreboard #312+#313 / STOPPED
+ON MAIN / HealthA2Z maps stamped / STOPPED
