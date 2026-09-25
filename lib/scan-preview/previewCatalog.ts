@@ -636,6 +636,31 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'megafood-c-defense-gummies': brandMark('megafood-mark.png'),
   'megafood-vitamin-d3-5000-k-k2': brandMark('megafood-mark.png'),
   'megafood-turmeric-whole-body-minis': brandMark('megafood-mark.png'),
+  // Immune Support night run 2026-09-25 12:30 PT batch 1.
+  // Adult 60-count (810087820022 / HAIEO-G60) and kids 48-count
+  // (810087820008 / HKIEO-G48) share this formulaId. Faces differ.
+  // Do not glue one bottle. Official hylands.com wordmark. Per-id only.
+  'hylands-organic-elderberry-plus-gummies': brandMark('hylands-mark.png'),
+  // shop.sprouts.com heroes are flat label scans, not 3D bottles.
+  // Do not glue the label. Official Sprouts mark already on disk.
+  // Per-id only so other Sprouts rows stay letters.
+  'sprouts-ginger-elderberry-immune': brandMark('sprouts-mark.png'),
+  'sprouts-elderberry-umckaloabo-zinc': brandMark('sprouts-mark.png'),
+  'sprouts-immune-rescue': brandMark('sprouts-mark.png'),
+  'sprouts-oregano-oil-liquid-cap': brandMark('sprouts-mark.png'),
+  'sprouts-zinc-lozenges-cool-lemon': brandMark('sprouts-mark.png'),
+  'sprouts-l-lysine-1000': brandMark('sprouts-mark.png'),
+  'sprouts-l-lysine-500': brandMark('sprouts-mark.png'),
+  'sprouts-astragalus-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-lymph-tonic-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-mullein-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-nettle-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-osha-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-propolis-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-red-chinese-ginseng-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-reishi-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-glutathione-500': brandMark('sprouts-mark.png'),
+  'sprouts-lions-mane-veggie-cap': brandMark('sprouts-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3031,6 +3056,14 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'genexa-infants-daytime-cough-immune': catalogShot(
     'genexa-infants-daytime-cough-immune.jpg',
   ),
+  // Immune Support night run 2026-09-25 12:30 PT batch 1 — exact US pack
+  // faces. Per-id only.
+  // Cell Salt Bioplasma, 100 quick-dissolving tablets.
+  // Draft barcode 354973408616 is the 100-count (hylands.com BIOP-T100).
+  // The 300-count on that page is a 3-pack and is not this face.
+  'hylands-bioplasma': catalogShot('hylands-bioplasma.jpg'),
+  // Influenzinum 30C pellets. boironusa.com SKU 306960909118.
+  'boiron-influenzinum': catalogShot('boiron-influenzinum.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7203,6 +7236,54 @@ assertExactCarton(
   'genexa-infants-daytime-cough-immune',
   'Genexa',
   'genexa-infants-daytime-cough-immune.jpg',
+);
+assertExactCarton('hylands-bioplasma', "Hyland's", 'hylands-bioplasma.jpg');
+assertExactCarton('boiron-influenzinum', 'Boiron', 'boiron-influenzinum.jpg');
+assertBrandMark(
+  'hylands-organic-elderberry-plus-gummies',
+  "Hyland's",
+  'hylands-mark.png',
+);
+assertBrandMark(
+  'sprouts-ginger-elderberry-immune',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'sprouts-elderberry-umckaloabo-zinc',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-immune-rescue', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-oregano-oil-liquid-cap',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'sprouts-zinc-lozenges-cool-lemon',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-l-lysine-1000', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-l-lysine-500', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-astragalus-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-lymph-tonic-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-mullein-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-nettle-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-osha-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-propolis-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-red-chinese-ginseng-liquid',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-reishi-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-glutathione-500', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-lions-mane-veggie-cap',
+  'Sprouts',
+  'sprouts-mark.png',
 );
 {
   const twelveMg = previewOverlayImage({
