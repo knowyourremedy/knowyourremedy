@@ -692,6 +692,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-asian-ginseng': brandMark('natures-way-mark.png'),
   'natures-way-astragalus-root': brandMark('natures-way-mark.png'),
   'natures-way-echinacea-goldenseal': brandMark('natures-way-mark.png'),
+  // Immune Support night run 2026-09-25 3:00 PT batch 2.
+  // Count-specific naturesway.com faces. Do not glue one bottle.
+  // Official Nature's Way mark already on disk. Per-id only.
+  'natures-way-goldenseal-root': brandMark('natures-way-mark.png'),
+  'natures-way-leg-veins': brandMark('natures-way-mark.png'),
+  'natures-way-pau-darco-inner-bark': brandMark('natures-way-mark.png'),
+  'natures-way-siberian-eleuthero': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3160,6 +3167,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // EstroSoy Premium Blend, 60 capsules, UPC 033674145364.
   'natures-way-estrosoy': catalogShot('natures-way-estrosoy.jpg'),
+  // Immune Support night run 2026-09-25 3:00 PT batch 2 — exact US pack
+  // faces from naturesway.com. Per-id only. One barcode on each row.
+  // Fenu-Thyme Premium Blend, 100 capsules, UPC 033674003503.
+  'natures-way-fenu-thyme': catalogShot('natures-way-fenu-thyme.jpg'),
+  // Fo-Ti Root, 100 capsules, UPC 033674129005.
+  'natures-way-fo-ti-root': catalogShot('natures-way-fo-ti-root.jpg'),
+  // Garlic Bulb, 100 capsules, UPC 033674130001.
+  // Not GarliNase 30-count or 100-count softgels.
+  'natures-way-garlic': catalogShot('natures-way-garlic.jpg'),
+  // Goldenseal Herb, 100 capsules, UPC 033674137000.
+  // Not Goldenseal Root 50-count or 100-count.
+  'natures-way-goldenseal': catalogShot('natures-way-goldenseal.jpg'),
+  // Horse Chestnut, 90 capsules, UPC 033674620007.
+  'natures-way-horse-chestnut': catalogShot('natures-way-horse-chestnut.jpg'),
+  // Kidney Bladder Premium Blend, 100 capsules, UPC 033674001103.
+  'natures-way-kidney-bladder': catalogShot('natures-way-kidney-bladder.jpg'),
+  // Kudzu Root, 50 capsules, UPC 033674145500.
+  'natures-way-kudzu': catalogShot('natures-way-kudzu.jpg'),
+  // Myrrh Gum Tree Resin, 100 capsules, UPC 033674151006.
+  'natures-way-myrrh-gum': catalogShot('natures-way-myrrh-gum.jpg'),
+  // Neem Leaf, 100 capsules, UPC 033674151204.
+  'natures-way-neem-leaf': catalogShot('natures-way-neem-leaf.jpg'),
+  // Olive Leaf, 100 capsules, UPC 033674145210.
+  // Not the standardized extract 60-count bottle.
+  'natures-way-olive-leaf': catalogShot('natures-way-olive-leaf.jpg'),
+  // Olive Leaf Standardized Extract, 60 capsules, UPC 033674640005.
+  'natures-way-olive-leaf-premium-extract': catalogShot(
+    'natures-way-olive-leaf-premium-extract.jpg',
+  ),
+  // Oregon Grape, 90 capsules, UPC 033674141595.
+  'natures-way-oregon-grape': catalogShot('natures-way-oregon-grape.jpg'),
+  // Parsley Leaf, 100 capsules, UPC 033674153000.
+  'natures-way-parsley-leaf': catalogShot('natures-way-parsley-leaf.jpg'),
+  // Reishi Mushroom Standardized Extract, 100 capsules, UPC 033674627006.
+  'natures-way-reishi-mushroom': catalogShot('natures-way-reishi-mushroom.jpg'),
+  // Rosemary Leaf, 100 capsules, UPC 033674141625.
+  'natures-way-rosemary-leaves': catalogShot('natures-way-rosemary-leaves.jpg'),
+  // Saffron, 60 capsules, UPC 033674160817.
+  'natures-way-saffron': catalogShot('natures-way-saffron.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7538,6 +7584,90 @@ assertBrandMark(
 );
 assertBrandMark(
   'natures-way-echinacea-goldenseal',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertExactCarton(
+  'natures-way-fenu-thyme',
+  "Nature's Way",
+  'natures-way-fenu-thyme.jpg',
+);
+assertExactCarton(
+  'natures-way-fo-ti-root',
+  "Nature's Way",
+  'natures-way-fo-ti-root.jpg',
+);
+assertExactCarton('natures-way-garlic', "Nature's Way", 'natures-way-garlic.jpg');
+assertExactCarton(
+  'natures-way-goldenseal',
+  "Nature's Way",
+  'natures-way-goldenseal.jpg',
+);
+assertExactCarton(
+  'natures-way-horse-chestnut',
+  "Nature's Way",
+  'natures-way-horse-chestnut.jpg',
+);
+assertExactCarton(
+  'natures-way-kidney-bladder',
+  "Nature's Way",
+  'natures-way-kidney-bladder.jpg',
+);
+assertExactCarton('natures-way-kudzu', "Nature's Way", 'natures-way-kudzu.jpg');
+assertExactCarton(
+  'natures-way-myrrh-gum',
+  "Nature's Way",
+  'natures-way-myrrh-gum.jpg',
+);
+assertExactCarton(
+  'natures-way-neem-leaf',
+  "Nature's Way",
+  'natures-way-neem-leaf.jpg',
+);
+assertExactCarton(
+  'natures-way-olive-leaf',
+  "Nature's Way",
+  'natures-way-olive-leaf.jpg',
+);
+assertExactCarton(
+  'natures-way-olive-leaf-premium-extract',
+  "Nature's Way",
+  'natures-way-olive-leaf-premium-extract.jpg',
+);
+assertExactCarton(
+  'natures-way-oregon-grape',
+  "Nature's Way",
+  'natures-way-oregon-grape.jpg',
+);
+assertExactCarton(
+  'natures-way-parsley-leaf',
+  "Nature's Way",
+  'natures-way-parsley-leaf.jpg',
+);
+assertExactCarton(
+  'natures-way-reishi-mushroom',
+  "Nature's Way",
+  'natures-way-reishi-mushroom.jpg',
+);
+assertExactCarton(
+  'natures-way-rosemary-leaves',
+  "Nature's Way",
+  'natures-way-rosemary-leaves.jpg',
+);
+assertExactCarton('natures-way-saffron', "Nature's Way", 'natures-way-saffron.jpg');
+assertBrandMark(
+  'natures-way-goldenseal-root',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark('natures-way-leg-veins', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark(
+  'natures-way-pau-darco-inner-bark',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-siberian-eleuthero',
   "Nature's Way",
   'natures-way-mark.png',
 );
