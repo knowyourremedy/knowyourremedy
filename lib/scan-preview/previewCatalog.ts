@@ -661,6 +661,31 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'sprouts-reishi-liquid': brandMark('sprouts-mark.png'),
   'sprouts-glutathione-500': brandMark('sprouts-mark.png'),
   'sprouts-lions-mane-veggie-cap': brandMark('sprouts-mark.png'),
+  // Immune Support night run 2026-09-25 12:30 PT batch 2.
+  // shop.sprouts.com heroes are flat label scans, not 3D bottles.
+  // Garlic softgels: no house PDP with a barcode retrieved.
+  // Lion's Mane liquid draft has no barcode; the live 2 fl oz organic
+  // bottle (646670545924) is a different pack. Do not glue.
+  // Official Sprouts mark already on disk. Per-id only.
+  'sprouts-oregano-supreme': brandMark('sprouts-mark.png'),
+  'sprouts-garlic-capsules': brandMark('sprouts-mark.png'),
+  'sprouts-mullein-cap': brandMark('sprouts-mark.png'),
+  'sprouts-nettle-cap': brandMark('sprouts-mark.png'),
+  'sprouts-garlic-softgels': brandMark('sprouts-mark.png'),
+  'sprouts-lions-mane-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-reishi-cap': brandMark('sprouts-mark.png'),
+  'sprouts-turkey-tail': brandMark('sprouts-mark.png'),
+  'sprouts-organic-mushroom-blend-100-powder': brandMark('sprouts-mark.png'),
+  // Count- or flavor-specific naturesway.com faces. Do not glue one.
+  // Nature's Way mark already on disk. Per-id only.
+  'natures-way-sambucus-adult-immune-gummy': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-immune-syrup': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-kids-immune-syrup': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-traditional-immune-syrup': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-immune-lozenges': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-immune-lozenges-eucalyptus': brandMark('natures-way-mark.png'),
+  'natures-way-sambucus-zero-sugar-immune-gummy': brandMark('natures-way-mark.png'),
+  'natures-way-garlinase-5000': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3064,6 +3089,22 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'hylands-bioplasma': catalogShot('hylands-bioplasma.jpg'),
   // Influenzinum 30C pellets. boironusa.com SKU 306960909118.
   'boiron-influenzinum': catalogShot('boiron-influenzinum.jpg'),
+  // Immune Support night run 2026-09-25 12:30 PT batch 2 — exact US pack
+  // faces from naturesway.com. Per-id only. One barcode on each row.
+  // Original elderberry lozenges, 30 count, UPC 033674140017.
+  // Not the 24-count vitamin C or zinc flavor boxes.
+  'natures-way-sambucus-elderberry-immune-lozenge': catalogShot(
+    'natures-way-sambucus-elderberry-immune-lozenge.jpg',
+  ),
+  // Ultra Immune Juicy Burst, 25 chews, UPC 033674154816.
+  'natures-way-sambucus-ultra-immune-juicy-burst': catalogShot(
+    'natures-way-sambucus-ultra-immune-juicy-burst.jpg',
+  ),
+  // Zero Sugar immune gummies for kids, 50 count, UPC 033674150276.
+  // Not the adult 50-count or 70-count zero-sugar pouch.
+  'natures-way-sambucus-zero-sugar-kids-immune-gummy': catalogShot(
+    'natures-way-sambucus-zero-sugar-kids-immune-gummy.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7284,6 +7325,74 @@ assertBrandMark(
   'sprouts-lions-mane-veggie-cap',
   'Sprouts',
   'sprouts-mark.png',
+);
+assertBrandMark('sprouts-oregano-supreme', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-garlic-capsules', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-mullein-cap', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-nettle-cap', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-garlic-softgels', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-lions-mane-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-reishi-cap', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-turkey-tail', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-organic-mushroom-blend-100-powder',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-adult-immune-gummy',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-immune-syrup',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-kids-immune-syrup',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-traditional-immune-syrup',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-immune-lozenges',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-immune-lozenges-eucalyptus',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-sambucus-zero-sugar-immune-gummy',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-garlinase-5000',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertExactCarton(
+  'natures-way-sambucus-elderberry-immune-lozenge',
+  "Nature's Way",
+  'natures-way-sambucus-elderberry-immune-lozenge.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-ultra-immune-juicy-burst',
+  "Nature's Way",
+  'natures-way-sambucus-ultra-immune-juicy-burst.jpg',
+);
+assertExactCarton(
+  'natures-way-sambucus-zero-sugar-kids-immune-gummy',
+  "Nature's Way",
+  'natures-way-sambucus-zero-sugar-kids-immune-gummy.jpg',
 );
 {
   const twelveMg = previewOverlayImage({
