@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Sept 25, 2026 (HealthA2Z leftover — founder stamp; use existing §5 where named):** Map — lactose anhydrous → lactose Cleared; ironoxide yellow → iron oxide as color Caution; pre-gelatinized starch → pregelatinized starch Cleared; macrogol + polyethylene glylcol → PEG Caution; white ink → pharmaceutical ink Caution; flavors → flavor Caution. Shellac wax = Caution. Distinct from Cleared shellac / shellac glaze. Do not flip that Cleared row. Light liquid paraffin = paraffin / mineral-oil Caution. Distinct from Cleared paraffin + mineral oil as a topical ointment occlusive. Do not flip that Cleared row. Caution — sorbitol special; dextrates (bare; dextrates hydrated stays Cleared); sorbitan monooleate → existing sorbitan oleate Caution; potassium hydroxide (not Cleared NaOH). Cleared — pectin as gum. Gummy seed-oils stay Avoid. Dual-panel day/night stays no-row.
+
 **Changed Sept 24, 2026 (HealthA2Z batch96 — founder stamp; use existing §5 where named):** Map — colloidal anhydrous silica → silica / SiO2 Caution; polyethyleneglycol → PEG Caution; red iron oxide / yellow iron oxide → iron oxide as color Caution; anhydrous lactose → lactose Cleared; shellac glaze → shellac Cleared; pregelantinized starch → pregelatinized starch Cleared; propylene glycol USP → propylene glycol (oral) Caution; gelatin USP → gelatin Cleared; sorbitol sorbitan solution USP → existing sorbitol sorbitan solution Caution; methyl paraben / propyl paraben → parabens Avoid; sodium carboxy methyl cellulose → CMC / cellulose gum Cleared. Caution aliases — polyvinyl acetate pthalate (PVAP) → existing polyvinyl acetate phthalate Caution; dihydroxy aluminium aminoacetate → existing dihydroxyaluminum aminoacetate Caution. Day/night dual-panel stays no-row.
 
 **Changed Sept 24, 2026 (formaldehyde-releasers — founder stamp):** As Other Ingredients, Avoid (Not clean): diazolidinyl urea; imidazolidinyl urea; DMDM hydantoin; Quaternium-15; Bronopol; Bronidox. Un-parked. Harm-first. FDA allow ≠ Clean. Founder bump from the Sept 15 Caution lock and from the parked list.
@@ -249,7 +251,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Sucralose | E955, Splenda | Metabolite genotoxicity signal (2023 study); microbiome concerns. |
 | Acesulfame potassium | Ace-K, E950 | Emerging genotoxicity/microbiome signals; thin evidence. |
 | Saccharin | E954 | Historical rat finding, but NTP delisted (2000), IARC reclassified Group 3 (1999). |
-| PEGs | polyethylene glycol 400/3350, polyethyleneglycol, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. Polyethyleneglycol maps here (Sept 24, 2026). Not a new grade. |
+| PEGs | polyethylene glycol 400/3350, polyethyleneglycol, polyethylene glylcol, macrogol, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides | Ethylene-oxide/1,4-dioxane contamination risk. PEG-stearate, pegoxol-7 stearate, and lauroyl macrogolglycerides sit on this same Moderate/Caution family row. Polyethyleneglycol maps here (Sept 24, 2026). Macrogol and polyethylene glylcol map here (Sept 25, 2026). Not a new grade. |
 | Polysorbate 80 | E433 | Emerging gut-barrier/inflammation signal (2023 comparative study). |
 | Polysorbate 20 — **LOCKED (v1.6)** | — | Same 2023 comparative study found P20 impairs gut epithelial barrier integrity essentially identically to P80. Same grade, same evidence, not treated as cleaner or harsher than P80. |
 | Polysorbate 60 | P60, Tween 60 | Same Moderate family as P80 / P20. Do not duplicate as a new class. |
@@ -328,7 +330,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Potassium chloride — LOCKED (Sept 15, 2026) | Salt / electrolyte. Not a grade driver. |
 | Xylitol, erythritol (topical/nasal) | Not a concern by this route. |
 | Petrolatum (topical) — LOCKED (Sept 14, 2026) | First-aid ointment base. |
-| Paraffin + mineral oil as topical ointment occlusive — LOCKED (Sept 15, 2026) | Petrolatum neighborhood. Tap: not an oral oil. |
+| Paraffin + mineral oil as topical ointment occlusive — LOCKED (Sept 15, 2026) | Petrolatum neighborhood. Tap: not an oral oil. Light liquid paraffin is not this Cleared row (Sept 25, 2026 Caution). Do not flip this lock. |
 | ceresin — LOCKED (Sept 16, 2026) | Exact token. Wax / petrolatum neighborhood. Cleared. Distinct from Caution synthetic beeswax. |
 | special petrolatum — LOCKED (Sept 16, 2026) | Exact token. Petrolatum neighborhood. Cleared. Distinct from Cleared petrolatum / white petrolatum / ceresin. Do not silently alias. |
 | Aloe as topical base — LOCKED (Sept 15, 2026) | Topical base. |
@@ -385,16 +387,16 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | FOS / fructooligosaccharides / soluble tapioca fiber syrup — LOCKED | Fiber family with inulin / tapioca syrup. Organic Tapioca Fiber Powder and soluble tapioca fiber are the same row (Sept 16, 2026). Both strings written. |
 | Isomaltooligosaccharides (IMO) — LOCKED (Sept 15, 2026) | Prebiotic fiber / inulin neighborhood. |
 | Soluble corn fiber — LOCKED (Sept 15, 2026) | Fiber; ≠ maltodextrin. |
-| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. Water / bare water sit on this same purified-water row (Sept 22, 2026). Electrolyzed Water is NOT this purified-water row (Sept 17, 2026). Anhydrous lactose maps to lactose. Gelatin USP maps to gelatin (Sept 24, 2026). Not a new grade. |
+| Lactose, gelatin, carnauba wax, beeswax, purified water | Yellow Beeswax sits on this same wax row (Sept 16, 2026). Distinct from Caution synthetic beeswax. Water / bare water sit on this same purified-water row (Sept 22, 2026). Electrolyzed Water is NOT this purified-water row (Sept 17, 2026). Anhydrous lactose maps to lactose. Lactose anhydrous is the same spelling (Sept 25, 2026). Gelatin USP maps to gelatin (Sept 24, 2026). Not a new grade. |
 | Sunflower seed wax — LOCKED (Sept 15, 2026) | Wax ≠ oil. Carnauba family. |
 | Candelilla wax — LOCKED (Sept 15, 2026) | Wax family. Also written Candellila Wax (typo alias; Sept 16, 2026). Both strings written. |
 | Povidone (PVP) — **LOCKED (v1.6)** | EFSA: sufficient safety margin, "unlikely to be of safety concern." Inert, non-toxic, biocompatible. |
 | Crospovidone — **LOCKED (v1.6)** | Cross-linked PVP analog. Decades of oral pharmaceutical use, non-toxic, non-irritant, not absorbed orally, not a known carcinogen. Only flagged risk (pulmonary emboli) is specific to IV drug abuse of crushed tablets — not relevant to normal use. |
 | Copovidone — **LOCKED (Sept 14, 2026 housekeeping)** | Povidone-family copolymer. Same Cleared class as povidone / crospovidone. |
 | Methylcellulose | Same family as Hypromellose; EFSA: no carcinogenicity, no ADI needed. |
-| Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. Pregelantinized starch is this spelling (Sept 24, 2026). Same Cleared row. |
+| Pregelatinized starch, corn starch, potato starch, and similar simple starches | Same profile as MCC — well-established, no concern found. Pregelantinized starch is this spelling (Sept 24, 2026). Pre-gelatinized starch is the same Cleared row (Sept 25, 2026). |
 | Rice protein, ferment media, organic/brown rice, rice syrup — **LOCKED (Sept 14, 2026 housekeeping)** | Food-state / starch family. Same profile as simple starches. Distinct from silicon dioxide — the SiO₂ nanoparticle Caution cap does NOT apply. Distinct from unspecified “rice extract” (Limited opacity). Organic Cassava Syrup is a food-syrup sibling of rice syrup / tapioca syrup (Sept 16, 2026). Culture Media (Saccharomyces cerevisiae) / Cultured Yeast (Saccharomyces cerevisiae) / Culture Media (Molasses, Saccharomyces cerevisiae) sit on this ferment-media family (Sept 16, 2026). |
-| Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). Locust Bean Gum sits on this same family (Sept 16, 2026). gum arabic is the same as acacia / organic acacia gum (Sept 16, 2026 restamp). |
+| Xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — **LOCKED (v1.6; gellan named Sept 14, 2026)** | Standard food gums. Gellan gum is Cleared-by-class with the xanthan/guar family (one family row). Locust Bean Gum sits on this same family (Sept 16, 2026). gum arabic is the same as acacia / organic acacia gum (Sept 16, 2026 restamp). Pectin as gum sits here (Sept 25, 2026). Gummy seed-oils stay Avoid. |
 | Gum ghatti — LOCKED (Sept 15, 2026) | Gum family with acacia/xanthan. |
 | Alginic acid — **LOCKED (Sept 14, 2026 housekeeping)** | Gum/fiber family. Cleared-by-class with the xanthan/guar/pectin gums. Sodium Alginate sits on this same alginic family (Sept 16, 2026). Both strings written. |
 | Agar / agar-agar — LOCKED (Sept 14, 2026) | Seaweed gel; gum/fiber family with pectin. |
@@ -458,7 +460,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | gamma-cyclodextrin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | succinic acid — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | polyvinyl alcohol (oral coating) — LOCKED (Sept 15, 2026) | Exact token as oral coating. Cleared. Distinct from PVA (topical film). |
-| shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Shellac glaze maps here (Sept 24, 2026). Not a new grade. |
+| shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Shellac glaze maps here (Sept 24, 2026). Not a new grade. Shellac wax is not this row (Sept 25, 2026 Caution). Do not flip this lock. |
 | emu oil as topical fill — LOCKED (Sept 15, 2026) | Named single oil as topical fill. Cleared. Tap fill ≠ gummy High. |
 | glyceryl dibehenate — LOCKED (Sept 15, 2026) | Exact words. Cleared. Stearate / dibehenin neighborhood. Dibehenin already Cleared ≠ this string. |
 | glyceryl caprylate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -479,7 +481,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | trideceth-6 — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | C13-14 isoparaffin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Distinct from Caution isohexadecane. |
 | polyethylene (chew binder) — LOCKED (Sept 15, 2026) | Exact token as chew binder. Cleared. Distinct from PEG / polyethylene glycol (Moderate). |
-| dextrates hydrated — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| dextrates hydrated — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Bare dextrates is not this row (Sept 25, 2026 Caution). Do not flip this lock. |
 | Cholecalciferol (vitamin D3 as inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Cleared. |
 | Coconut Alkanes — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
 | Pyridoxine HCl (vitamin B6 as inactive) — LOCKED (Sept 15, 2026) | Exact token when labeled as inactive. Cleared. |
@@ -583,7 +585,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Isobutane, isopentane, propane (pain-spray propellants) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Chlorhexidine digluconate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Isohexadecane (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
-| Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Sorbitan oleate (topical) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. Sorbitan monooleate maps here (Sept 25, 2026). Same Caution. Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Sorbitan (plain / sorbitan esters as emulsifier) — LOCKED (Sept 15, 2026) | Polysorbate neighborhood. Not Avoid. Not the same row as sorbitol. | Standard alternatives rule. Not Avoid. |
 | Sodium polyacrylate / polyacrylic acid (topical gel polymer) — LOCKED (Sept 15, 2026) | Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
 | Pine needle oil, citronella oil, eucalyptus oil, jojoba oil as gel inactives — LOCKED (Sept 15, 2026) | Fragrance/EO line. | Standard alternatives rule. Not Avoid. |
@@ -675,7 +677,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | rice flour — LOCKED (Sept 15, 2026) | Exact token. Distinct from Cleared rice-hull / rice-bran / rice protein and from Caution organic rice meal. | Standard alternatives rule. Not Avoid. |
 | ferric oxide red — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
 | ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact INCI. Distinct from ferric ferrocyanide. Also written as iron oxide yellow. | Standard alternatives rule. Not Avoid. |
-| iron oxide yellow / ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact alias. Same Caution. Both strings written. Distinct from iron oxide red / ferric oxide red. | Standard alternatives rule. Not Avoid. |
+| iron oxide yellow / ferric oxide yellow — LOCKED (Sept 15, 2026) | Exact alias. Same Caution. Both strings written. Distinct from iron oxide red / ferric oxide red. Ironoxide yellow maps here (Sept 25, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | iron oxides — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric ferrocyanide. Iron oxide as color sits on this same Caution family (Sept 22, 2026 exact token). Ferrosoferric oxide and black iron oxide map to iron oxide as color (Sept 23, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | iron oxide red — LOCKED (Sept 15, 2026) | Exact token. Distinct from ferric oxide red and from ferric ferrocyanide. | Standard alternatives rule. Not Avoid. |
 | polyvinyl acetate phthalate — LOCKED (Sept 15, 2026) | Exact INCI. Also written polyvinyl acetate pthalate and PVAP (Sept 24, 2026). Same Caution. Not a new row. | Standard alternatives rule. Not Avoid. |
@@ -726,7 +728,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Glucose — LOCKED (Sept 22, 2026) | glucose (bare) | Exact token when the label prints bare glucose. Caution. Distinct from Cleared cane sugar / glucose syrup / tapioca syrup-dextrose. Do not flip that Cleared syrup row. | Standard alternatives rule. Not Avoid. |
 | Stevia extract — LOCKED (Sept 22, 2026) | stevia extract, stevia leaf extract | Exact token. Unspecified extract. Caution. Distinct from Cleared high-purity steviol glycosides / Reb M and from Caution whole-leaf / crude stevia. Do not flip the high-purity Cleared row. Stevia leaf extract maps here (Sept 23, 2026). Not a new grade. Not whole-leaf. Not Reb A / Reb M. | Standard alternatives rule. Not Avoid. |
 | Hydrogenated vegetable oil as OI — LOCKED (Sept 22, 2026) | hydrogenated vegetable oil (Other Ingredient) | Exact token as Other Ingredient. Caution. Cream fill stays Cleared. Gummy fat blend stays Avoid. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
-| Iron oxide as color — LOCKED (Sept 22, 2026) | iron oxide (as color), ferrosoferric oxide, black iron oxide, red iron oxide, yellow iron oxide | Exact token as color. Caution. Same family as iron oxides / iron oxide red / iron oxide yellow. Not Avoid. Ferrosoferric oxide and black iron oxide map here (Sept 23, 2026). Red iron oxide and yellow iron oxide map here (Sept 24, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
+| Iron oxide as color — LOCKED (Sept 22, 2026) | iron oxide (as color), ferrosoferric oxide, black iron oxide, red iron oxide, yellow iron oxide, ironoxide yellow | Exact token as color. Caution. Same family as iron oxides / iron oxide red / iron oxide yellow. Not Avoid. Ferrosoferric oxide and black iron oxide map here (Sept 23, 2026). Red iron oxide and yellow iron oxide map here (Sept 24, 2026). Ironoxide yellow maps here (Sept 25, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Lemon juice concentrate as sweetener — LOCKED (Sept 22, 2026) | lemon juice concentrate, organic lemon juice concentrate (sweetener) | Exact token as sweetener. Caution. Distinct from Cleared lemon juice concentrate as color and from Limited fruit-puree / juice-concentrate gummy base. | Standard alternatives rule. Not Avoid. |
 | Pea starch — LOCKED (Sept 22, 2026) | pea starch | Founder restamp. Caution. Was Limited (Sept 16). Distinct from Cleared pea protein isolate and from Limited modified starch. | Standard alternatives rule. Not Avoid. |
 | Organic oat fiber — LOCKED (Sept 22, 2026) | organic oat fiber | Exact token. Caution. Distinct from Cleared Oat Fiber. Do not flip that Cleared row. | Standard alternatives rule. Not Avoid. |
@@ -755,8 +757,8 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Marigold extract (Tagetes erecta) — LOCKED (Sept 23, 2026) | marigold extract, Tagetes erecta | Exact token. Caution. Extract. Both strings written. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
 | Disodium cocoamphodipropionate — LOCKED (Sept 23, 2026) | disodium cocoamphodipropionate | Exact token. Caution. Not High. Distinct from Caution SLS. Do not flip that row. | Standard alternatives rule. Not Avoid. |
 | Poloxamer 182 — LOCKED (Sept 24, 2026) | poloxamer 182 | Exact token. PEG-style surfactant. Caution. Not High. Distinct from Caution behenoyl polyoxyl-8 glycerides and from Caution polyoxyethylene (23) cetyl ether. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
-| Pharmaceutical ink / imprinting ink — LOCKED (Sept 24, 2026) | pharmaceutical ink, imprinting ink | Exact tokens. Caution. Distinct from Caution edible ink and white edible ink. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
-| Flavor / banana flavor / flavadew coolmint — LOCKED (Sept 24, 2026) | flavor, banana flavor, flavadew coolmint | Exact tokens. Caution. Distinct from Limited natural flavors. Do not flip that row. | Standard alternatives rule. Not Avoid. |
+| Pharmaceutical ink / imprinting ink — LOCKED (Sept 24, 2026) | pharmaceutical ink, imprinting ink, white ink | Exact tokens. Caution. Distinct from Caution edible ink and white edible ink. Do not flip those rows. White ink maps here (Sept 25, 2026). Not a new grade. Distinct from Caution white wax. | Standard alternatives rule. Not Avoid. |
+| Flavor / banana flavor / flavadew coolmint — LOCKED (Sept 24, 2026) | flavor, flavors, banana flavor, flavadew coolmint | Exact tokens. Caution. Distinct from Limited natural flavors. Do not flip that row. Flavors maps here (Sept 25, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Sorbitol sorbitan solution — LOCKED (Sept 24, 2026) | sorbitol sorbitan solution, sorbitol sorbitan solution USP | Exact token. Caution. Distinct from Limited oral sorbitol and from Caution sorbitan esters. Do not flip those rows. Sorbitol sorbitan solution USP maps here (Sept 24, 2026). Not a new grade. | Standard alternatives rule. Not Avoid. |
 | Sodium lauroyl sarcosinate — LOCKED (Sept 24, 2026) | sodium lauroyl sarcosinate | Exact token. Caution. Not High. Distinct from Caution SLS. Do not flip that row. | Standard alternatives rule. Not Avoid. |
 | Sodium stannate — LOCKED (Sept 24, 2026) | sodium stannate | Exact token. Caution. Not Avoid. | Standard alternatives rule. Not Avoid. |
@@ -771,6 +773,11 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Alicyclic hydrocarbon resin — LOCKED (Sept 24, 2026) | alicyclic hydrocarbon resin | Exact token. Caution. Distinct from Caution alicyclic saturated hydrocarbon resin. Do not flip that row. | Standard alternatives rule. Not Avoid. |
 | Styrene isoprene — LOCKED (Sept 24, 2026) | styrene isoprene | Exact token. Caution. Distinct from Caution SIS / polyisobutylene patch adhesives. Do not flip that row. | Standard alternatives rule. Not Avoid. |
 | Styrene block copolymer — LOCKED (Sept 24, 2026) | styrene block copolymer | Exact token. Caution. Distinct from Caution styrene isoprene and from Caution SIS. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
+| Shellac wax — LOCKED (Sept 25, 2026) | shellac wax | Exact token. Caution. Distinct from Cleared shellac and from Cleared shellac glaze. Do not flip that Cleared row. | Standard alternatives rule. Not Avoid. |
+| Light liquid paraffin — LOCKED (Sept 25, 2026) | light liquid paraffin, paraffin, mineral oil | Exact token. Paraffin / mineral-oil Caution. Distinct from Cleared paraffin + mineral oil as a topical ointment occlusive. Do not flip that Cleared row. Not Avoid. | Standard alternatives rule. Not Avoid. |
+| Sorbitol special — LOCKED (Sept 25, 2026) | sorbitol special | Exact token. Caution. Distinct from Limited oral sorbitol and from Caution sorbitol sorbitan solution. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
+| Dextrates — LOCKED (Sept 25, 2026) | dextrates | Exact bare token. Caution. Distinct from Cleared dextrates hydrated. Do not flip that Cleared row. | Standard alternatives rule. Not Avoid. |
+| Potassium hydroxide — LOCKED (Sept 25, 2026) | potassium hydroxide | Exact token. Caution. Distinct from Cleared sodium hydroxide as a pH adjuster and from Cleared calcium hydroxide / magnesium hydroxide. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 
 ### Active-ingredient safety cap — worked examples (§4)
 
