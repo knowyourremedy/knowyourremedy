@@ -749,6 +749,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Walgreens 70% isopropyl, 32 oz. DailyMed files are flat label wraps.
   // Official Walgreens mark already on disk. Per-id only.
   'isopropyl-alcohol-plain': brandMark('walgreens-mark.png'),
+  // First Aid night run 2026-09-26 3:00 AM PT batch 2.
+  // Walgreens medicated calamine lotion (benzyl). Do not glue the plain
+  // calamine bottle or the Calamine Plus spray. Official Walgreens mark
+  // already on disk. Per-id only.
+  'calamine-plus-benzyl': brandMark('walgreens-mark.png'),
+  // Desitin Maximum Strength talc jar (UPC 074300000657, 16 oz).
+  // The live 3D faces are the talc-free paste tube. Do not glue that tube.
+  // Official desitin.com wordmark. Per-id only.
+  'desitin-max-talc': brandMark('desitin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3581,6 +3590,58 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Bactine MAX Wound Wash, no-sting, UPC 365197820801.
   // Not the Original spray and not the Max lidocaine spray.
   'bactine-wound-wash': catalogShot('bactine-wound-wash.jpg'),
+  // First Aid night run 2026-09-26 3:00 AM PT batch 2.
+  // Exact US pack faces. Per-id only. One barcode on each row.
+  // Desitin Maximum Strength paste, 4.8 oz, UPC 312547034234.
+  // desitin.com front. Not the 16 oz talc jar.
+  'desitin-max-strength': catalogShot('desitin-max-strength.jpg'),
+  // Neosporin + Pain Relief cream, 1 oz, UPC 312547237796.
+  // Not the ointment.
+  'neosporin-plus-pain-cream': catalogShot('neosporin-plus-pain-cream.jpg'),
+  // Equate Antibiotic + Pain Relief cream, 0.5 oz, UPC 681131082440.
+  // Not the ointment.
+  'equate-antibiotic-cream-paraben': catalogShot(
+    'equate-antibiotic-cream-paraben.jpg',
+  ),
+  // Cortizone-10 Soothing Aloe cream, 1 oz, UPC 041167003916.
+  'cortizone10-soothing-aloe': catalogShot('cortizone10-soothing-aloe.jpg'),
+  // Cortizone-10 Cooling gel, UPC 041167003626. Matched SPL is the gel.
+  // Not the aloe cream and not the water-resistant ointment.
+  'cortizone10-cooling': catalogShot('cortizone10-cooling.jpg'),
+  // CVS Health hydrocortisone anti-itch cream with aloe, 2 oz.
+  // Not a toothbrush pack that shares a bad UPC hit.
+  'cvs-hydrocortisone-aloe': catalogShot('cvs-hydrocortisone-aloe.jpg'),
+  // Benadryl Extra Strength Itch Stopping Cream, 1 oz, UPC 312547171670.
+  // Not the cooling spray.
+  'benadryl-itch-stopping-cream': catalogShot(
+    'benadryl-itch-stopping-cream.jpg',
+  ),
+  // Caladryl Clear lotion, 6 fl oz, UPC 301875466060.
+  // Not the pink calamine lotion.
+  'caladryl-clear': catalogShot('caladryl-clear.jpg'),
+  // GNP 70% isopropyl with wintergreen, 16 fl oz, UPC 087701427282.
+  // Not the plain Walgreens bottle.
+  'isopropyl-alcohol-dyed': catalogShot('isopropyl-alcohol-dyed.jpg'),
+  // Aquaphor Baby Fast Relief diaper rash paste, 3.5 oz, UPC 072140026615.
+  // Not Healing Ointment.
+  'aquaphor-diaper-rash-zno': catalogShot('aquaphor-diaper-rash-zno.jpg'),
+  // Boudreaux's Butt Barrier ointment, UPC 362103000203.
+  // Not Original Butt Paste.
+  'boudreauxs-butt-barrier': catalogShot('boudreauxs-butt-barrier.jpg'),
+  // Equate Cortisone 1% anti-itch spray. Not a cream.
+  'equate-cortisone-simple': catalogShot('equate-cortisone-simple.jpg'),
+  // Boogie Bottoms No-Rub diaper rash spray. Not the cream.
+  'boogie-bottoms-rash-spray': catalogShot('boogie-bottoms-rash-spray.jpg'),
+  // Boudreaux's Original Butt Paste, 4 oz. Not Butt Barrier.
+  'boudreauxs-butt-paste': catalogShot('boudreauxs-butt-paste.jpg'),
+  // Balmex Multi-Purpose Healing Ointment, 3.5 oz, UPC 030103043000.
+  'balmex-multipurpose': catalogShot('balmex-multipurpose.jpg'),
+  // Boogie Hands antibacterial wipes. Not the saline nose-wipe 3-pack.
+  'boogie-hands-bkc': catalogShot('boogie-hands-bkc.jpg'),
+  // Swim-Ear, 1 fl oz, UPC 301680126913. Not a store-brand swimmer drop.
+  'swim-ear': catalogShot('swim-ear.jpg'),
+  // Similasan Earache Relief, 0.33 fl oz, UPC 094841255149.
+  'similasan-earache-relief': catalogShot('similasan-earache-relief.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3596,6 +3657,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'family-wellness-triple-antibiotic-pain',
   'amazon-basic-care-triple-pain-ointment',
   'amazon-basics-antibiotic-burn-relief',
+  // Same isopropyl-in-glycerin idea, different brand and strength.
+  // Do not inherit the Swim-Ear bottle. Stay a letter until attempted.
+  'topcare-swimmers-ear',
 ]);
 
 export function previewOverlayImage(
@@ -8599,6 +8663,95 @@ assertExactCarton('bactine-wound-wash', 'Bactine', 'bactine-wound-wash.jpg');
     || basicsTwin.verifiedSku
   ) {
     throw new Error('Amazon Basics burn ointment must not inherit the Neosporin carton');
+  }
+}
+assertExactCarton('desitin-max-strength', 'Desitin', 'desitin-max-strength.jpg');
+assertExactCarton(
+  'neosporin-plus-pain-cream',
+  'Neosporin',
+  'neosporin-plus-pain-cream.jpg',
+);
+assertExactCarton(
+  'equate-antibiotic-cream-paraben',
+  'Equate',
+  'equate-antibiotic-cream-paraben.jpg',
+);
+assertExactCarton(
+  'cortizone10-soothing-aloe',
+  'Cortizone-10',
+  'cortizone10-soothing-aloe.jpg',
+);
+assertExactCarton('cortizone10-cooling', 'Cortizone-10', 'cortizone10-cooling.jpg');
+assertExactCarton(
+  'cvs-hydrocortisone-aloe',
+  'CVS Health',
+  'cvs-hydrocortisone-aloe.jpg',
+);
+assertExactCarton(
+  'benadryl-itch-stopping-cream',
+  'Benadryl',
+  'benadryl-itch-stopping-cream.jpg',
+);
+assertExactCarton('caladryl-clear', 'Caladryl', 'caladryl-clear.jpg');
+assertExactCarton(
+  'isopropyl-alcohol-dyed',
+  'GNP (Good Neighbor Pharmacy)',
+  'isopropyl-alcohol-dyed.jpg',
+);
+assertExactCarton(
+  'aquaphor-diaper-rash-zno',
+  'Aquaphor',
+  'aquaphor-diaper-rash-zno.jpg',
+);
+assertExactCarton(
+  'boudreauxs-butt-barrier',
+  "Boudreaux's",
+  'boudreauxs-butt-barrier.jpg',
+);
+assertExactCarton(
+  'equate-cortisone-simple',
+  'Equate',
+  'equate-cortisone-simple.jpg',
+);
+assertExactCarton(
+  'boogie-bottoms-rash-spray',
+  'Boogie',
+  'boogie-bottoms-rash-spray.jpg',
+);
+assertExactCarton(
+  'boudreauxs-butt-paste',
+  "Boudreaux's",
+  'boudreauxs-butt-paste.jpg',
+);
+assertExactCarton('balmex-multipurpose', 'Balmex', 'balmex-multipurpose.jpg');
+assertExactCarton('boogie-hands-bkc', 'Boogie', 'boogie-hands-bkc.jpg');
+assertBrandMark('calamine-plus-benzyl', 'Walgreens', 'walgreens-mark.png');
+assertBrandMark('desitin-max-talc', 'Desitin', 'desitin-mark.png');
+assertExactCarton('swim-ear', 'Swim-Ear', 'swim-ear.jpg');
+assertExactCarton(
+  'similasan-earache-relief',
+  'Similasan',
+  'similasan-earache-relief.jpg',
+);
+{
+  const topcareEar = previewOverlayImage({
+    id: 'topcare-swimmers-ear',
+    formulaId: 'swim-ear',
+    brand: 'TopCare',
+  });
+  if (
+    !topcareEar?.url.startsWith('data:image/svg')
+    || topcareEar.verifiedSku
+  ) {
+    throw new Error('TopCare swimmer drops must not inherit the Swim-Ear bottle');
+  }
+  const talcJar = previewOverlayImage({
+    id: 'desitin-max-talc',
+    formulaId: 'desitin-max-talc',
+    brand: 'Desitin',
+  });
+  if (!talcJar?.url.endsWith('/desitin-mark.png') || talcJar.verifiedSku) {
+    throw new Error('Desitin talc jar must stay on the Desitin mark');
   }
 }
 {
