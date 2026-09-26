@@ -3359,6 +3359,89 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'mama-bear-kids-black-elderberry-gummies': catalogShot(
     'mama-bear-kids-black-elderberry-gummies.jpg',
   ),
+  // Immune Support night run 2026-09-26 12:30 AM PT batch 1.
+  // Exact US pack faces. Per-id only so count siblings do not inherit
+  // the other bottle. nowfoods.com was Cloudflare-blocked; Vitacost
+  // PDP fronts are barcode-matched to the row UPC. One barcode each.
+  // C-1000 with Bioflavonoids, 250 veg capsules, UPC 733739006929.
+  // Not plain C-1000 (733739006820) or the rose-hips tablet line.
+  'now-c-1000-with-bioflavonoids-250': catalogShot(
+    'now-c-1000-with-bioflavonoids-250.jpg',
+  ),
+  // Extra Strength Beta-Glucans with ImmunEnhancer, 60 veg capsules,
+  // UPC 733739030337.
+  'now-beta-glucans-with-immunenhancer-60': catalogShot(
+    'now-beta-glucans-with-immunenhancer-60.jpg',
+  ),
+  // Citrus Bioflavonoids 700 mg, 100 veg capsules, UPC 733739006103.
+  'now-citrus-bioflavonoids-100': catalogShot(
+    'now-citrus-bioflavonoids-100.jpg',
+  ),
+  // Elderberry Liquid, 8 fl oz, UPC 733739048523.
+  // Not the kids liquid (733739048516).
+  'now-elderberry-liquid-8-fl-oz-237-ml': catalogShot(
+    'now-elderberry-liquid-8-fl-oz-237-ml.jpg',
+  ),
+  // Elderberry 500 mg, 60 veg capsules, UPC 733739046673.
+  // Not the 120-count bottle.
+  'now-elderberry-500-mg-60': catalogShot('now-elderberry-500-mg-60.jpg'),
+  // Olive Leaf Extract 500 mg, 120 veg capsules, UPC 733739047229.
+  // Not the 60-count bottle. formulaId points at the 60-count row.
+  'now-olive-leaf-extract-500-mg-120': catalogShot(
+    'now-olive-leaf-extract-500-mg-120.jpg',
+  ),
+  // Astragalus Extract 500 mg, 90 veg capsules, UPC 733739045980.
+  // Standardized extract. Not the whole-root 100-count.
+  'now-astragalus-extract-500-mg-90': catalogShot(
+    'now-astragalus-extract-500-mg-90.jpg',
+  ),
+  // Elderberry 500 mg, 120 veg capsules, UPC 733739046697.
+  // formulaId is the 60-count row. Do not inherit that face.
+  'now-elderberry-500-mg-120': catalogShot('now-elderberry-500-mg-120.jpg'),
+  // Sambucus Zinc-C, 60 lozenges, UPC 733739033840.
+  'now-sambucus-zinc-c-60': catalogShot('now-sambucus-zinc-c-60.jpg'),
+  // Echinacea & Goldenseal Root, 100 veg capsules, UPC 733739046659.
+  // Vitacost and Swanson had no listing. Walmart pack face for this UPC.
+  // Not the Plus liquid or the glycerite.
+  'now-echinacea-goldenseal-root-100': catalogShot(
+    'now-echinacea-goldenseal-root-100.jpg',
+  ),
+  // Andrographis Extract 400 mg, 90 veg capsules, UPC 733739045911.
+  'now-andrographis-extract-400-mg-90': catalogShot(
+    'now-andrographis-extract-400-mg-90.jpg',
+  ),
+  // Astragalus 500 mg, 100 veg capsules, UPC 733739046055.
+  // Whole root. Not the standardized extract.
+  'now-astragalus-500-mg-100': catalogShot('now-astragalus-500-mg-100.jpg'),
+  // Echinacea 400 mg, 250 veg capsules, UPC 733739046628.
+  // Not the 100-count bottle.
+  'now-echinacea-250': catalogShot('now-echinacea-250.jpg'),
+  // C-1000 Zinc Immune, 90 veg capsules, UPC 733739006943.
+  // Not the 180-count bottle.
+  'now-c-1000-zinc-immune-90': catalogShot('now-c-1000-zinc-immune-90.jpg'),
+  // Mushroom Immune Renew, 90 veg capsules, UPC 733739030559.
+  'now-mushroom-immune-renew-90': catalogShot(
+    'now-mushroom-immune-renew-90.jpg',
+  ),
+  // Echinacea 400 mg, 100 veg capsules, UPC 733739046604.
+  'now-echinacea-400-mg-100': catalogShot('now-echinacea-400-mg-100.jpg'),
+  // C-1000 Zinc Immune, 180 veg capsules, UPC 733739006950.
+  'now-c-1000-zinc-immune-180': catalogShot(
+    'now-c-1000-zinc-immune-180.jpg',
+  ),
+  // Olive Leaf Extract 500 mg, 60 veg capsules, UPC 733739047236.
+  'now-olive-leaf-extract-500-mg-60': catalogShot(
+    'now-olive-leaf-extract-500-mg-60.jpg',
+  ),
+  // Echinacea & Goldenseal Plus liquid, 2 fl oz, UPC 733739048509.
+  // Not the root capsules or the alcohol-free glycerite.
+  'now-echinacea-goldenseal-plus-2-fl-oz-59-ml': catalogShot(
+    'now-echinacea-goldenseal-plus-2-fl-oz-59-ml.jpg',
+  ),
+  // Olive Leaf Glycerite, alcohol-free, 2 fl oz, UPC 733739048981.
+  'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml': catalogShot(
+    'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8008,6 +8091,126 @@ assertBrandTextTile(
   'Manuka Health',
   'Manuka Health',
 );
+assertExactCarton(
+  'now-c-1000-with-bioflavonoids-250',
+  'NOW',
+  'now-c-1000-with-bioflavonoids-250.jpg',
+);
+assertExactCarton(
+  'now-beta-glucans-with-immunenhancer-60',
+  'NOW',
+  'now-beta-glucans-with-immunenhancer-60.jpg',
+);
+assertExactCarton(
+  'now-citrus-bioflavonoids-100',
+  'NOW',
+  'now-citrus-bioflavonoids-100.jpg',
+);
+assertExactCarton(
+  'now-elderberry-liquid-8-fl-oz-237-ml',
+  'NOW',
+  'now-elderberry-liquid-8-fl-oz-237-ml.jpg',
+);
+assertExactCarton(
+  'now-elderberry-500-mg-60',
+  'NOW',
+  'now-elderberry-500-mg-60.jpg',
+);
+assertExactCarton(
+  'now-olive-leaf-extract-500-mg-120',
+  'NOW',
+  'now-olive-leaf-extract-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-astragalus-extract-500-mg-90',
+  'NOW',
+  'now-astragalus-extract-500-mg-90.jpg',
+);
+assertExactCarton(
+  'now-elderberry-500-mg-120',
+  'NOW',
+  'now-elderberry-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-sambucus-zinc-c-60',
+  'NOW',
+  'now-sambucus-zinc-c-60.jpg',
+);
+assertExactCarton(
+  'now-echinacea-goldenseal-root-100',
+  'NOW',
+  'now-echinacea-goldenseal-root-100.jpg',
+);
+assertExactCarton(
+  'now-andrographis-extract-400-mg-90',
+  'NOW',
+  'now-andrographis-extract-400-mg-90.jpg',
+);
+assertExactCarton(
+  'now-astragalus-500-mg-100',
+  'NOW',
+  'now-astragalus-500-mg-100.jpg',
+);
+assertExactCarton('now-echinacea-250', 'NOW', 'now-echinacea-250.jpg');
+assertExactCarton(
+  'now-c-1000-zinc-immune-90',
+  'NOW',
+  'now-c-1000-zinc-immune-90.jpg',
+);
+assertExactCarton(
+  'now-mushroom-immune-renew-90',
+  'NOW',
+  'now-mushroom-immune-renew-90.jpg',
+);
+assertExactCarton(
+  'now-echinacea-400-mg-100',
+  'NOW',
+  'now-echinacea-400-mg-100.jpg',
+);
+assertExactCarton(
+  'now-c-1000-zinc-immune-180',
+  'NOW',
+  'now-c-1000-zinc-immune-180.jpg',
+);
+assertExactCarton(
+  'now-olive-leaf-extract-500-mg-60',
+  'NOW',
+  'now-olive-leaf-extract-500-mg-60.jpg',
+);
+assertExactCarton(
+  'now-echinacea-goldenseal-plus-2-fl-oz-59-ml',
+  'NOW',
+  'now-echinacea-goldenseal-plus-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml',
+  'NOW',
+  'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml.jpg',
+);
+{
+  const elder120 = previewOverlayImage({
+    id: 'now-elderberry-500-mg-120',
+    formulaId: 'now-elderberry-500-mg-60',
+    brand: 'NOW',
+  });
+  if (
+    !elder120?.url.endsWith('/now-elderberry-500-mg-120.jpg')
+    || !elder120.verifiedSku
+  ) {
+    throw new Error('Elderberry 120 must not inherit the 60-count carton');
+  }
+  const olive120 = previewOverlayImage({
+    id: 'now-olive-leaf-extract-500-mg-120',
+    formulaId: 'now-olive-leaf-extract-500-mg-60',
+    brand: 'NOW',
+  });
+  if (
+    !olive120?.url.endsWith('/now-olive-leaf-extract-500-mg-120.jpg')
+    || !olive120.verifiedSku
+  ) {
+    throw new Error('Olive leaf 120 must not inherit the 60-count carton');
+  }
+}
 {
   const twelveMg = previewOverlayImage({
     id: 'nutricost-melatonin-tablets-240-tablets',
