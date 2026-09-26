@@ -110,3 +110,4 @@ export { BATCH109_KYR6B_AMAZON_3P_GOODSENSE } from './batch109-kyr6b-amazon-3p-g
 export { BATCH110_KYR6B_GOODSENSE_REMATCH } from './batch110-kyr6b-goodsense-rematch';
 export { BATCH111_KYR6B_GOODSENSE_TOKEN_BACKFILL } from './batch111-kyr6b-goodsense-token-backfill';
 export { BATCH112_KYR6B_GOODSENSE_TOKEN_BACKFILL_2 } from './batch112-kyr6b-goodsense-token-backfill-2';
+export { BATCH113_KYR6B_GOODSENSE_TOKEN_BACKFILL_3 } from './batch113-kyr6b-goodsense-token-backfill-3';
