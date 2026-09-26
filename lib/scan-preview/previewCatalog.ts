@@ -775,6 +775,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'amazon-basic-care-hydrocortisone-parabens': brandMark(
     'amazon-basic-care-mark.png',
   ),
+  // First Aid night run 2026-09-26 5:30 AM PT batch 2.
+  // PEG panel shares setid 542b41dd with the shea shop cream but the
+  // live boironusa.com cream is the shea panel. Do not glue that tube.
+  'boiron-arnicare-cream-peg-panel': brandMark('boiron-mark.png'),
+  // Foot Care is not a current boironusa.com slug. UPC 306969055823
+  // retailer titles say 4.2 oz; the retrieved face read as 1.5 oz.
+  // Do not glue Arnicare Cream. Official Boiron mark. Per-id only.
+  'boiron-arnicare-foot-care': brandMark('boiron-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3705,6 +3713,60 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // YeastCalm suppositories, 7 count, UPC 306969376621.
   'boiron-yeastcalm-suppositories': catalogShot(
     'boiron-yeastcalm-suppositories.jpg',
+  ),
+  // First Aid night run 2026-09-26 5:30 AM PT batch 2.
+  // Exact boironusa.com variation faces. Per-id only. One barcode each.
+  // Arnicare Ointment, simple SKU, UPC 306960229506. Not the cream or gel.
+  'boiron-arnicare-ointment': catalogShot('boiron-arnicare-ointment.jpg'),
+  // Arnicare Cream shea shop panel, 2.5 oz, UPC 306962033569.
+  // Not the 1.4 oz (306962032555) or 4.2 oz (306969022825).
+  // Not the PEG-panel row.
+  'boiron-arnicare-cream': catalogShot('boiron-arnicare-cream.jpg'),
+  // Arnicare Bruise cream, 1.4 oz, UPC 306969085127.
+  // Not the 2.5 oz or 4.2 oz bruise cream. Not the bruise gel.
+  'boiron-arnicare-bruise-cream': catalogShot(
+    'boiron-arnicare-bruise-cream.jpg',
+  ),
+  // Calendula Gel, 2.6 oz, UPC 306962046590.
+  // Not the 1.5 oz (306961105540). Not Calendula Cream or Ointment.
+  'boiron-calendula-gel': catalogShot('boiron-calendula-gel.jpg'),
+  // Arnicare Bruise gel, 1.5 oz, UPC 306969084540.
+  // Not the 2.6 oz or 4.2 oz bruise gel. Not Arnicare Gel.
+  'boiron-arnicare-bruise-gel': catalogShot('boiron-arnicare-bruise-gel.jpg'),
+  // Single-remedy 30C tubes, about 80 pellets. Not another dilution.
+  // Do not share one tube across remedies.
+  'boiron-apis-mellifica-pellets': catalogShot(
+    'boiron-apis-mellifica-pellets.jpg',
+  ),
+  'boiron-bellisperennis-pellets': catalogShot(
+    'boiron-bellisperennis-pellets.jpg',
+  ),
+  'boiron-calendulaofficinalis-pellets': catalogShot(
+    'boiron-calendulaofficinalis-pellets.jpg',
+  ),
+  'boiron-cantharis-pellets': catalogShot('boiron-cantharis-pellets.jpg'),
+  'boiron-hamamelis-virginiana-pellets': catalogShot(
+    'boiron-hamamelis-virginiana-pellets.jpg',
+  ),
+  'boiron-heklalava-pellets': catalogShot('boiron-heklalava-pellets.jpg'),
+  'boiron-hypericum-perforatum-pellets': catalogShot(
+    'boiron-hypericum-perforatum-pellets.jpg',
+  ),
+  'boiron-ledum-palustre-pellets': catalogShot(
+    'boiron-ledum-palustre-pellets.jpg',
+  ),
+  'boiron-silicea-pellets': catalogShot('boiron-silicea-pellets.jpg'),
+  'boiron-staphysagria-pellets': catalogShot(
+    'boiron-staphysagria-pellets.jpg',
+  ),
+  'boiron-symphytum-officinale-pellets': catalogShot(
+    'boiron-symphytum-officinale-pellets.jpg',
+  ),
+  'boiron-thuja-occidentalis-pellets': catalogShot(
+    'boiron-thuja-occidentalis-pellets.jpg',
+  ),
+  'boiron-urtica-urens-pellets': catalogShot(
+    'boiron-urtica-urens-pellets.jpg',
   ),
 };
 
@@ -8894,6 +8956,108 @@ for (const assuredId of [
   const label = decodeURIComponent(tile?.url.split(',')[1] ?? '');
   if (!label.includes('>Assured</text>') || tile?.verifiedSku) {
     throw new Error(`${assuredId} must use the Assured text tile`);
+  }
+}
+assertExactCarton(
+  'boiron-arnicare-ointment',
+  'Boiron',
+  'boiron-arnicare-ointment.jpg',
+);
+assertExactCarton('boiron-arnicare-cream', 'Boiron', 'boiron-arnicare-cream.jpg');
+assertExactCarton(
+  'boiron-arnicare-bruise-cream',
+  'Boiron',
+  'boiron-arnicare-bruise-cream.jpg',
+);
+assertExactCarton('boiron-calendula-gel', 'Boiron', 'boiron-calendula-gel.jpg');
+assertExactCarton(
+  'boiron-arnicare-bruise-gel',
+  'Boiron',
+  'boiron-arnicare-bruise-gel.jpg',
+);
+assertExactCarton(
+  'boiron-apis-mellifica-pellets',
+  'Boiron',
+  'boiron-apis-mellifica-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-bellisperennis-pellets',
+  'Boiron',
+  'boiron-bellisperennis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-calendulaofficinalis-pellets',
+  'Boiron',
+  'boiron-calendulaofficinalis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-cantharis-pellets',
+  'Boiron',
+  'boiron-cantharis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-hamamelis-virginiana-pellets',
+  'Boiron',
+  'boiron-hamamelis-virginiana-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-heklalava-pellets',
+  'Boiron',
+  'boiron-heklalava-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-hypericum-perforatum-pellets',
+  'Boiron',
+  'boiron-hypericum-perforatum-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-ledum-palustre-pellets',
+  'Boiron',
+  'boiron-ledum-palustre-pellets.jpg',
+);
+assertExactCarton('boiron-silicea-pellets', 'Boiron', 'boiron-silicea-pellets.jpg');
+assertExactCarton(
+  'boiron-staphysagria-pellets',
+  'Boiron',
+  'boiron-staphysagria-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-symphytum-officinale-pellets',
+  'Boiron',
+  'boiron-symphytum-officinale-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-thuja-occidentalis-pellets',
+  'Boiron',
+  'boiron-thuja-occidentalis-pellets.jpg',
+);
+assertExactCarton(
+  'boiron-urtica-urens-pellets',
+  'Boiron',
+  'boiron-urtica-urens-pellets.jpg',
+);
+assertBrandMark(
+  'boiron-arnicare-cream-peg-panel',
+  'Boiron',
+  'boiron-mark.png',
+);
+assertBrandMark('boiron-arnicare-foot-care', 'Boiron', 'boiron-mark.png');
+{
+  const otherPellet = previewOverlayImage({
+    id: 'boiron-abelmoschus-pellets',
+    formulaId: 'boiron-single-remedy-pellets',
+    brand: 'Boiron',
+  });
+  if (otherPellet?.url.includes('apis-mellifica')) {
+    throw new Error('Other Boiron pellet tubes must not inherit the Apis face');
+  }
+  const peg = previewOverlayImage({
+    id: 'boiron-arnicare-cream-peg-panel',
+    formulaId: 'boiron-arnicare-cream-peg-panel',
+    brand: 'Boiron',
+  });
+  if (peg?.url.includes('arnicare-cream.jpg') || peg?.verifiedSku) {
+    throw new Error('Arnicare PEG panel must not use the shea cream carton');
   }
 }
 {
