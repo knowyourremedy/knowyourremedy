@@ -111,6 +111,7 @@ import {
   BATCH108_KYR6B_TIMECAP_FDC_ALIASES,
   BATCH109_KYR6B_AMAZON_3P_GOODSENSE,
   BATCH110_KYR6B_GOODSENSE_REMATCH,
+  BATCH111_KYR6B_GOODSENSE_TOKEN_BACKFILL,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -242,6 +243,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH108_KYR6B_TIMECAP_FDC_ALIASES,
   ...BATCH109_KYR6B_AMAZON_3P_GOODSENSE,
   ...BATCH110_KYR6B_GOODSENSE_REMATCH,
+  ...BATCH111_KYR6B_GOODSENSE_TOKEN_BACKFILL,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
