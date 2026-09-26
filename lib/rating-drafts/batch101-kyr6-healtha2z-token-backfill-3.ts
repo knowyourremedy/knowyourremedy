@@ -563,6 +563,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-bisacodyl-398-250',
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168398030',
+    upcNote:
+      'UPC-A 369168398030 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z bisacodyl 5 mg 250-tablet bottle (FPA167) (https://a2z-life.com/healtha2z-woman-s-gentle-laxative-bisacodyl-stimulant-laxative-5mg-250-tablets-constipation-relief-gentle-and-reliable-overnight-relief/).',
     productName: 'HealthA2Z Bisacodyl 5 mg, 250 tablets, NDC 69168-398-03 (FPA167)',
     category: 'Digestive',
     formulaId: BISA398,
@@ -653,6 +657,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-bismuth-262-200',
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168046986',
+    upcNote:
+      'UPC-A 369168046986 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z bismuth subsalicylate 262 mg 200-tablet bottle (FP1345) (https://a2z-life.com/healtha2z-bismuth-bismuth-subsalicylate-262mg-multi-symptom-relief-200-count/).',
     productName: 'HealthA2Z Bismuth subsalicylate 262 mg, 200 chewable tablets, NDC 69168-046-98 (FP1345)',
     category: 'Digestive',
     formulaId: BISMUTH,
@@ -698,6 +706,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-bismuth-262-30',
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168046313',
+    upcNote:
+      'UPC-A 369168046313 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z bismuth subsalicylate 262 mg 30-tablet bottle (https://a2z-life.com/healtha2z-bismuth-subsalicylate-262-mg-30-tablets/).',
     productName: 'HealthA2Z Bismuth subsalicylate 262 mg, 30 chewable tablets, NDC 69168-046-88 (FP0529)',
     category: 'Digestive',
     formulaId: BISMUTH,
@@ -713,6 +725,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: CAL500,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168219021',
+    upcNote:
+      'UPC-A 369168219021 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z calcium carbonate 500 mg 150-tablet assorted-fruit bottle (https://a2z-life.com/healtha2z-calcium-antacid-500mg-regular-strength-150-tablets/).',
     productName: 'HealthA2Z Calcium antacid, calcium carbonate 500 mg, 150 chewable tablets, NDC 69168-219-02 (FP0535)',
     category: 'Digestive',
     formulaId: CAL500,
@@ -728,6 +744,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: CAL750,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168229969',
+    upcNote:
+      'UPC-A 369168229969 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z calcium carbonate 750 mg bottle labeled 96 chewable tablets (https://a2z-life.com/healtha2z-calcium-antacid-750mg-extra-strength-relief-from-sour-upset-stomach-acid-indigestion-24-packs-of-96-chewable-tablets-2304-tablets-total-value-pack/).',
     productName: 'HealthA2Z Calcium antacid, calcium carbonate 750 mg, 96 chewable tablets, NDC 69168-229-96 (FP0938V)',
     category: 'Digestive',
     formulaId: CAL750,
@@ -743,6 +763,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: DOCUSATE,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168420014',
+    upcNote:
+      'UPC-A 369168420014 is printed beside HealthA2Z docusate sodium 100 mg single-tone, code FPA059, 100 softgels per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Docusate sodium 100 mg, 100 softgels, NDC 69168-420-01 (FPA059)',
     category: 'Digestive',
     formulaId: DOCUSATE,
@@ -758,6 +782,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-docusate-420-fpa002',
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168314016',
+    upcNote:
+      'UPC-A 369168314016 is printed beside HealthA2Z docusate sodium 100 mg two-tone, code FPA002, 100 softgels per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Docusate sodium 100 mg, 100 softgels, NDC 69168-420-01 (FPA002)',
     category: 'Digestive',
     formulaId: DOCUSATE,
@@ -803,6 +831,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: IBU,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168363076',
+    upcNote:
+      'UPC-A 369168363076 is printed beside HealthA2Z ibuprofen 200 mg, code FP0660, 10 softgels per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Ibuprofen 200 mg liquid-filled capsules, 10 softgels, NDC 69168-368-07 (FP0660)',
     category: 'Pain & Fever',
     formulaId: IBU,
@@ -983,6 +1015,14 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b101-aspirin-81-chew': '369168288362',
+  'healtha2z-b101-bisacodyl-398-250': '369168398030',
+  'healtha2z-b101-bismuth-262-200': '369168046986',
+  'healtha2z-b101-bismuth-262-30': '369168046313',
+  'healtha2z-b101-calcium-500': '369168219021',
+  'healtha2z-b101-calcium-750': '369168229969',
+  'healtha2z-b101-docusate-420': '369168420014',
+  'healtha2z-b101-docusate-420-fpa002': '369168314016',
+  'healtha2z-b101-ibu-368': '369168363076',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -990,7 +1030,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 1) throw new Error('batch101 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 9) throw new Error('batch101 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

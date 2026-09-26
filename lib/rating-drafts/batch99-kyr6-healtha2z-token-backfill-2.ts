@@ -377,6 +377,10 @@ const OI_410 =
 const COMPACT: Compact[] = [
   {
     id: ASPIRIN_DYE_FREE,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168457980',
+    upcNote:
+      'UPC-A 369168457980 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z aspirin 81 mg dye-free 200-tablet bottle (FPA154) (https://a2z-life.com/healtha2z-aspirin-81-mg-dye-free-low-strength-200-counts-pain-relief-reduces-minor-aches-muscle-pain-cramps-fever-reducer-reduces-headache-nsaid/).',
     productName: 'HealthA2Z Aspirin 81 mg dye-free, 200 tablets, NDC 69168-457-98 (FPA154)',
     category: 'Pain & Fever',
     formulaId: ASPIRIN_DYE_FREE,
@@ -392,6 +396,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: ASPIRIN_430,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168430990',
+    upcNote:
+      'UPC-A 369168430990 is printed beside HealthA2Z aspirin 81 mg enteric coated, code FPA069, 365 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Aspirin 81 mg enteric-coated, 365 tablets, NDC 69168-430-99 (FPA069)',
     category: 'Pain & Fever',
     formulaId: ASPIRIN_430,
@@ -407,6 +415,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: FEXO_PARAFFIN,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168450820',
+    upcNote:
+      'UPC-A 369168450820 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z fexofenadine HCl 180 mg 90-caplet bottle (FPA150) (https://a2z-life.com/healtha2z-fexofenadine-hydrochloride-180mg-antihistamine-for-allergy-relief-24-hour-antihistamine-for-allergy-relief-90-counts/).',
     productName: 'HealthA2Z Fexofenadine HCl 180 mg, 90 coated caplets, NDC 69168-450-82 (FPA150)',
     category: 'Allergies',
     formulaId: FEXO_PARAFFIN,
@@ -573,6 +585,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: DPH_25,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168431966',
+    upcNote:
+      'UPC-A 369168431966 is printed beside HealthA2Z diphenhydramine HCl 25 mg nighttime sleep aid, code FPA072, 96 softgels per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Diphenhydramine HCl 25 mg nighttime sleep softgels, 96 count, NDC 69168-431-96 (FPA072)',
     category: 'Sleep',
     formulaId: DPH_25,
@@ -921,6 +937,10 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b99-apap-pm-es': '369168267992',
+  'healtha2z-b99-aspirin-81-430': '369168430990',
+  'healtha2z-b99-aspirin-81-dye-free': '369168457980',
+  'healtha2z-b99-dph-25-softgel': '369168431966',
+  'healtha2z-b99-fexo-180-paraffin': '369168450820',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -928,7 +948,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 1) throw new Error('batch99 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 5) throw new Error('batch99 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

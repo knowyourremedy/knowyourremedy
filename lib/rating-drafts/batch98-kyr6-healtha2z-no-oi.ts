@@ -268,6 +268,10 @@ const CITE_MUCUS = 'Brand drug-facts tile detail_200 on https://a2z-life.com/hea
 const COMPACT: Compact[] = [
   {
     id: 'healtha2z-b98-pe-5-300',
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168271173',
+    upcNote:
+      'UPC-A 369168271173 is printed beside HealthA2Z phenylephrine HCl 5 mg, code FPA067, 300 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). That page has no second UPC for this count.',
     productName: 'HealthA2Z Phenylephrine HCl 5 mg, 300 tablets, NDC 69168-271-17 (FPA067)',
     category: 'Cold & Flu',
     formulaId: 'healtha2z-b98-pe-5-300',
@@ -298,6 +302,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-bone-90',
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168811829',
+    upcNote:
+      'UPC-A 369168811829 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z Bone Support algae calcium 90-capsule bottle (BoneSupportBack) (https://a2z-life.com/healtha2z-bone-support-algae-calcium-complex-90-capsules/).',
     productName: 'HealthA2Z Bone Support algae calcium complex, 90 capsules (FPHK1248)',
     category: 'Vitamins',
     formulaId: 'healtha2z-b98-bone-90',
@@ -318,6 +326,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-mucus-dm-200',
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168345980',
+    upcNote:
+      'UPC-A 369168345980 is printed beside HealthA2Z mucus relief DM, code FPA016, 200 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Mucus Relief DM, dextromethorphan HBr 20 mg and guaifenesin 400 mg, 200 tablets (FPA016)',
     category: 'Cold & Flu',
     formulaId: 'healtha2z-b98-mucus-dm-200',
@@ -351,6 +363,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-cetirizine-10-1',
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168310094',
+    upcNote:
+      'UPC-A 369168310094 is printed beside HealthA2Z cetirizine HCl 10 mg, code FP0895, 10 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Cetirizine HCl 10 mg, 10 tablets, NDC 69168-396-09 (FP0895)',
     category: 'Allergies',
     formulaId: 'healtha2z-b96-cetirizine-10',
@@ -396,6 +412,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-cetirizine-10-30',
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168310308',
+    upcNote:
+      'UPC-A 369168310308 is printed beside HealthA2Z cetirizine HCl 10 mg, code FP0896, 30 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Cetirizine HCl 10 mg, 30 tablets, NDC 69168-396-30 (FP0896)',
     category: 'Allergies',
     formulaId: 'healtha2z-b96-cetirizine-10',
@@ -441,6 +461,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-apap-650-300',
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168461178',
+    upcNote:
+      'UPC-A 369168461178 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z acetaminophen 650 mg extended-release 300-caplet bottle (https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-300-caplets-8-hours-arthritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/).',
     productName: 'HealthA2Z Acetaminophen 650 mg extended-release caplets, 300 count, NDC 69168-461-17 (FPN013)',
     category: 'Pain & Fever',
     formulaId: 'healtha2z-b96-apap-650-er',
@@ -608,6 +632,12 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch98 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b98-apap-650-300': '369168461178',
+  'healtha2z-b98-bone-90': '369168811829',
+  'healtha2z-b98-cetirizine-10-1': '369168310094',
+  'healtha2z-b98-cetirizine-10-30': '369168310308',
+  'healtha2z-b98-mucus-dm-200': '369168345980',
+  'healtha2z-b98-pe-5-300': '369168271173',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -615,7 +645,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 0) throw new Error('batch98 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 6) throw new Error('batch98 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
