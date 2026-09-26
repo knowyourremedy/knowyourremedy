@@ -128,6 +128,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -164,7 +166,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -271,6 +274,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b108-apap-rr-400',
+    // KYR5-d — zbar on DailyMed 697R-Timely-APAP-RR-label-400s.jpg.
+    barcode: '349483697438',
+    upcNote:
+      'UPC-A 349483697438 is the code under the bars on DailyMed image 697R-Timely-APAP-RR-label-400s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c9f80d24-bd05-e1ce-e053-2995a90aa646&name=697R-Timely-APAP-RR-label-400s.jpg).',
     productName:
       'Timely Extra Strength Acetaminophen 500 mg rapid release, 400 count, NDC 49483-697',
     category: 'Pain & Fever',
@@ -291,6 +298,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b108-pse-30-96',
+    // KYR5-d — zbar on DailyMed 29RLABEL.jpg.
+    barcode: '049483016962',
+    upcNote:
+      'UPC-A 049483016962 is the code under the bars on DailyMed image 29RLABEL.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=d8dace20-752e-4686-8026-c8fc97591fa8&name=29RLABEL.jpg).',
     productName:
       'Timely Pseudo-Time pseudoephedrine HCl 30 mg tablets, 96 count, NDC 49483-016',
     category: 'Cold & Flu',
@@ -373,7 +384,28 @@ if (_ROWS.some((r) => r.brand !== 'TIME-Cap Labs')) throw new Error('batch108 br
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch108 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch108 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'timecap-b108-apap-rr-400': '349483697438',
+  'timecap-b108-pse-30-96': '049483016962',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 2) throw new Error('batch108 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch108 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch108 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch108 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch108 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('timecap-b108-'))) {
   throw new Error('batch108 ids must use timecap-b108-');
 }

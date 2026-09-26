@@ -176,6 +176,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -224,7 +226,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Packs with this OI list share formulaId \`${d.formulaId}\`. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -451,6 +454,10 @@ const OI_368 =
 const COMPACT: Compact[] = [
   {
     id: ASPIRIN,
+    // KYR5-d — zbar on DailyMed 288---health-a2z-aspirin-81mg-chewable-orange-1.jpg.
+    barcode: '369168288362',
+    upcNote:
+      'UPC-A 369168288362 is the code under the bars on DailyMed image 288---health-a2z-aspirin-81mg-chewable-orange-1.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=92b8637b-03a9-461f-b2f6-6eddaa214953&name=288---health-a2z-aspirin-81mg-chewable-orange-1.jpg).',
     productName: 'HealthA2Z Aspirin 81 mg chewable, 36 tablets, NDC 69168-288-36 (FPA035E)',
     category: 'Pain & Fever',
     formulaId: ASPIRIN,
@@ -974,7 +981,27 @@ if (_ROWS.some((r) => r.brand !== 'HealthA2Z')) throw new Error('batch101 brand 
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch101 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch101 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'healtha2z-b101-aspirin-81-chew': '369168288362',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 1) throw new Error('batch101 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch101 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch101 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch101 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch101 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('healtha2z-b101-'))) {
   throw new Error('batch101 ids must use healtha2z-b101-');
 }

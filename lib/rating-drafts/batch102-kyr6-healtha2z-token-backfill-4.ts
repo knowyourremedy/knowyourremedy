@@ -167,6 +167,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -215,7 +217,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Packs with this OI list share formulaId \`${d.formulaId}\`. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -434,6 +437,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: MOTION,
+    // KYR5-d — zbar on DailyMed 408---dimenhydrinate-50mg-1.jpg.
+    barcode: '369168408869',
+    upcNote:
+      'UPC-A 369168408869 is the code under the bars on DailyMed image 408---dimenhydrinate-50mg-1.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=7b0aa993-f08f-4dff-a82d-f35b3ebe3cc1&name=408---dimenhydrinate-50mg-1.jpg).',
     productName:
       'HealthA2Z Motion Sickness Relief, dimenhydrinate 50 mg, 12 tablets, NDC 69168-408-86 (FPA027E)',
     category: 'Digestive',
@@ -589,7 +596,27 @@ if (_ROWS.some((r) => r.brand !== 'HealthA2Z')) throw new Error('batch102 brand 
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch102 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch102 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'healtha2z-b102-dimenhydrinate-50': '369168408869',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 1) throw new Error('batch102 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch102 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch102 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch102 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch102 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('healtha2z-b102-'))) {
   throw new Error('batch102 ids must use healtha2z-b102-');
 }
