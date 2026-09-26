@@ -32,6 +32,7 @@
 // SKIPPED 144 (no_OI 0 / OUT 144) /
 // REFUSED 141.
 // Search grade: Clean 23 / Caution 3 / Avoid 94.
+// UPC count: 25.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -492,6 +493,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-er-0198',
+    barcode: '301132023609',
+    upcNote:
+      'UPC-A 301132023609 is the upc field on the Thrifty White product JSON for Good Sense Mucus Relief Extended Release 12Hr Tablets, 600 mg - 20 ct (https://shop.thriftywhite.com/good-sense-mucus-relief-extended-release-12hr-tablets-600-mg-20-ct/).',
     productName: 'GoodSense Mucus er (Guaifenesin 600mg), 20 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-er-0198',
@@ -567,6 +571,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-levocetirizine-7ba9',
+    barcode: '301130241012',
+    upcNote:
+      'UPC-A 301130241012 is the upc field on the Thrifty White product JSON for Good Sense Levocetirizine Allergy Relief Tablets, 5 mg - 35 ct (https://shop.thriftywhite.com/good-sense-levocetirizine-allergy-relief-tablets-5-mg-35-ct/).',
     productName: 'GoodSense Levocetirizine (Levocetirizine Dihydrochloride 5mg), 35 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-levocetirizine-7ba9',
@@ -597,6 +604,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-dm-eb2d',
+    barcode: '301132219019',
+    upcNote:
+      'UPC-A 301132219019 is the upc field on the Thrifty White product JSON for Good Sense Mucus Relief DM Extended Release Tablets, 600 mg/30 mg - 20 ct (https://shop.thriftywhite.com/good-sense-mucus-relief-dm-extended-release-tablets-600-mg-30-mg-20-ct/).',
     productName: 'GoodSense Mucus DM (Dextromethorphan Hydrobromide 30mg / Guaifenesin 600mg), 20 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-dm-eb2d',
@@ -834,6 +844,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-allergy-relief-78a7',
+    barcode: '370030146628',
+    upcNote:
+      'UPC-A 370030146628 is the upc field on the Thrifty White product JSON for Good Sense Allergy Relief Loratadine Tablets, 10 mg - 10 ct (https://shop.thriftywhite.com/good-sense-allergy-relief-loratadine-tablets-10-mg-10-ct/).',
     productName: 'GoodSense Allergy relief (Loratadine 10mg), 10 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-allergy-relief-78a7',
@@ -894,6 +907,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-allergy-relief-78a7-90',
+    barcode: '301130612751',
+    upcNote:
+      'UPC-A 301130612751 is the upc field on the Thrifty White product JSON for Good Sense Allergy Relief Loratadine 24hr Tablets, 10 mg - 90 ct (https://shop.thriftywhite.com/good-sense-allergy-relief-loratadine-24hr-tablets-10-mg-90-ct/).',
     productName: 'GoodSense Allergy relief (Loratadine 10mg), 90 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-allergy-relief-78a7',
@@ -1044,6 +1060,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-migraine-formula-46cf-100',
+    barcode: '301130374789',
+    upcNote:
+      'UPC-A 301130374789 is the upc field on the Thrifty White product JSON for Good Sense Migraine Relief Caplets - 100 ct (https://shop.thriftywhite.com/good-sense-migraine-relief-caplets-100-ct/).',
     productName: 'GoodSense Migraine formula (Acetaminophen 250mg / Aspirin 250mg / Caffeine 65mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-migraine-formula-46cf',
@@ -1404,6 +1423,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-all-day-allergy-ef89-30',
+    barcode: '370030148462',
+    upcNote:
+      'UPC-A 370030148462 is the upc field on the Thrifty White product JSON for Good Sense Cetirizine All Day Allergy Relief Tablets, 10mg - 30 ct (https://shop.thriftywhite.com/good-sense-cetirizine-all-day-allergy-relief-tablets-10mg-30-ct/).',
     productName: 'GoodSense All day allergy (Cetirizine Hydrochloride 10mg), 30 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-all-day-allergy-ef89',
@@ -1434,6 +1456,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-all-day-allergy-ef89-45',
+    barcode: '370030149674',
+    upcNote:
+      'UPC-A 370030149674 is the upc field on the Thrifty White product JSON for Good Sense Cetirizine All Day Allergy Tablets, 10 mg - 45 ct (https://shop.thriftywhite.com/good-sense-cetirizine-all-day-allergy-tablets-10-mg-45-ct/).',
     productName: 'GoodSense All day allergy (Cetirizine Hydrochloride 10mg), 45 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-all-day-allergy-ef89',
@@ -1464,6 +1489,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-all-day-allergy-ef89-90',
+    barcode: '301139458756',
+    upcNote:
+      'UPC-A 301139458756 is the upc field on the Thrifty White product JSON for Good Sense Cetirizine Allergy Relief Tablets, 10 mg - 90 ct (https://shop.thriftywhite.com/good-sense-cetirizine-allergy-relief-tablets-10-mg-90-ct/).',
     productName: 'GoodSense All day allergy (Cetirizine Hydrochloride 10mg), 90 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-all-day-allergy-ef89',
@@ -1590,6 +1618,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-ac08-100',
+    barcode: '070030130329',
+    upcNote:
+      'UPC-A 070030130329 is the gtin12 field on the Thrifty White product JSON for Good Sense RS Pain Relief Tablets, 325 mg - 100 ct (https://shop.thriftywhite.com/good-sense-rs-pain-relief-tablets-325-mg-100-ct/).',
     productName: 'GoodSense Pain relief (Acetaminophen 325mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-ac08',
@@ -1605,6 +1636,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-3644',
+    barcode: '070030135133',
+    upcNote:
+      'UPC-A 070030135133 is the gtin12 field on the Thrifty White product JSON for Good Sense Pain Relief XS Caplets, 500 mg - 24 ct (https://shop.thriftywhite.com/good-sense-pain-relief-xs-caplets-500-mg-24-ct/).',
     productName: 'GoodSense Pain Relief (Acetaminophen 500mg), 24 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-3644',
@@ -1635,6 +1669,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-3644-100',
+    barcode: '301130484785',
+    upcNote:
+      'UPC-A 301130484785 is the upc field on the Thrifty White product JSON for Good Sense Pain Relief XS Caplets, 500 mg - 100 ct (https://shop.thriftywhite.com/good-sense-pain-relief-xs-caplets-500-mg-100-ct/).',
     productName: 'GoodSense Pain Relief (Acetaminophen 500mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-3644',
@@ -1680,6 +1717,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-aller-ease-5c71',
+    barcode: '301130571393',
+    upcNote:
+      'UPC-A 301130571393 is the upc field on the Thrifty White product JSON for Good Sense Aller-Ease 24 Hour Allergy Tablets, 180 mg - 30 ct (https://shop.thriftywhite.com/good-sense-aller-ease-24-hour-allergy-tablets-180-mg-30-ct/).',
     productName: 'GoodSense Aller ease (Fexofenadine Hydrochloride 180mg), 30 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-aller-ease-5c71',
@@ -1695,6 +1735,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-aller-ease-5c71-45',
+    barcode: '370030129072',
+    upcNote:
+      'UPC-A 370030129072 is the upc field on the Thrifty White product JSON for Good Sense Aller-Ease Tablets, 180 mg - 45 ct (https://shop.thriftywhite.com/good-sense-aller-ease-tablets-180-mg-45-ct/).',
     productName: 'GoodSense Aller ease (Fexofenadine Hydrochloride 180mg), 45 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-aller-ease-5c71',
@@ -1908,6 +1951,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-er-7f6c',
+    barcode: '301133650743',
+    upcNote:
+      'UPC-A 301133650743 is the upc field on the Thrifty White product JSON for Good Sense Mucus Relief Max Strength Extended Release Tablets, 1200 mg - 14 ct (https://shop.thriftywhite.com/good-sense-mucus-relief-max-strength-extended-release-tablets-1200-mg-14-ct/).',
     productName: 'GoodSense Mucus ER (Guaifenesin 1200mg), 14 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-er-7f6c',
@@ -1923,6 +1969,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-allergy-relief-df82',
+    barcode: '070030132644',
+    upcNote:
+      'UPC-A 070030132644 is the gtin12 field on the Thrifty White product JSON for Good Sense Diphenhydramine Allergy Tablets, 25 mg - 100 ct (https://shop.thriftywhite.com/good-sense-diphenhydramine-allergy-tablets-25-mg-100-ct/).',
     productName: 'GoodSense Allergy relief (Diphenhydramine Hydrochloride 25mg), 100 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-allergy-relief-df82',
@@ -2013,6 +2062,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-fiber-laxative-147-981f',
+    barcode: '846036009163',
+    upcNote:
+      'UPC-A 846036009163 is the upc field on the Thrifty White product JSON for Good Sense Fiber Laxative Caplets - 140 ct (https://shop.thriftywhite.com/good-sense-fiber-laxative-caplets-140-ct/).',
     productName: 'GoodSense Fiber laxative 147 (Calcium Polycarbophil 625mg), 140 count',
     category: 'Digestive',
     formulaId: 'goodsense-b109-fiber-laxative-147-981f',
@@ -2367,6 +2419,23 @@ const _UPC: Record<string, string> = {
   'goodsense-b109-pain-relief-56b4-30': '371335254513',
   'goodsense-b109-ibuprofen-3059-20': '371335204716',
   'goodsense-b109-pain-relief-pm-8818': '363629588015',
+  'goodsense-b109-levocetirizine-7ba9': '301130241012',
+  'goodsense-b109-mucus-dm-eb2d': '301132219019',
+  'goodsense-b109-mucus-er-0198': '301132023609',
+  'goodsense-b109-mucus-er-7f6c': '301133650743',
+  'goodsense-b109-allergy-relief-78a7': '370030146628',
+  'goodsense-b109-allergy-relief-78a7-90': '301130612751',
+  'goodsense-b109-all-day-allergy-ef89-30': '370030148462',
+  'goodsense-b109-all-day-allergy-ef89-45': '370030149674',
+  'goodsense-b109-all-day-allergy-ef89-90': '301139458756',
+  'goodsense-b109-allergy-relief-df82': '070030132644',
+  'goodsense-b109-pain-relief-3644': '070030135133',
+  'goodsense-b109-pain-relief-3644-100': '301130484785',
+  'goodsense-b109-pain-relief-ac08-100': '070030130329',
+  'goodsense-b109-fiber-laxative-147-981f': '846036009163',
+  'goodsense-b109-migraine-formula-46cf-100': '301130374789',
+  'goodsense-b109-aller-ease-5c71': '301130571393',
+  'goodsense-b109-aller-ease-5c71-45': '370030129072',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -2374,7 +2443,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 8) throw new Error('batch109 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 25) throw new Error('batch109 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
