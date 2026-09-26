@@ -459,6 +459,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: ACV,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168758605',
+    upcNote:
+      'UPC-A 369168758605 is the UPC field on the a2z-life.com page for this exact pack, Apple Cider Vinegar 500 mg gummy, 60 ct (https://a2z-life.com/healtha2z-apple-cider-vinegar-500mg-gummy-4g-60-ct/).',
     productName: 'HealthA2Z Apple Cider Vinegar 500 mg gummy, 60 ct (FPHK1044)',
     category: 'Vitamins',
     formulaId: ACV,
@@ -517,6 +521,7 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch103 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b103-acv-gummy-60': '369168758605',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -524,7 +529,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 0) throw new Error('batch103 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 1) throw new Error('batch103 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

@@ -356,6 +356,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b100-mucus-dm-10',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168345072',
+    upcNote:
+      'UPC-A 369168345072 is the UPC field on the a2z-life.com page for Mucus Relief DM, dextromethorphan HBr 20 mg and guaifenesin 400 mg, 10 tablets. The page chooser also lists a 3-pack and a 6-pack, so the code is attached only to the single pack (https://a2z-life.com/healtha2z-mucus-relief-dm-dextromethorphan-hbr-20mg-guaifenesin-400mg-10-caplets/). Founder-confirmed.',
     productName:
       'HealthA2Z Mucus Relief DM, dextromethorphan HBr 20 mg and guaifenesin 400 mg, 10 tablets, NDC 69168-432-07 (FPA049E, 1 pack)',
     category: 'Cold & Flu',
@@ -432,6 +436,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: COLD_ID,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168302938',
+    upcNote:
+      'UPC-A 369168302938 is the UPC field on the a2z-life.com page for this exact pack, Cold & Allergy, chlorpheniramine maleate 4 mg and phenylephrine HCl 10 mg, 24 tablets (https://a2z-life.com/healtha2z-cold-allergy-relief-chlorpheniramine-maleate-4mg-phenylephrine-hcl-10mg-antihistamine-nasal-decongestant-dye-free-24-tablets/). Founder-confirmed.',
     productName:
       'HealthA2Z Cold & Allergy, chlorpheniramine maleate 4 mg and phenylephrine HCl 10 mg, 24 tablets, NDC 69168-406-93 (FP0943)',
     category: 'Cold & Flu',
@@ -651,6 +659,8 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch100 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b100-cold-allergy-24': '369168302938',
+  'healtha2z-b100-mucus-dm-10': '369168345072',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -658,7 +668,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 0) throw new Error('batch100 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 2) throw new Error('batch100 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

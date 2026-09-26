@@ -496,6 +496,10 @@ const MENSTRUAL_FLAGS: Compact['flags'] = [
 const COMPACT: Compact[] = [
   {
     id: "healtha2z-b96-cetirizine-10",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168396050',
+    upcNote:
+      'UPC-A 369168396050 is the UPC field on the a2z-life.com page for this exact pack, Cetirizine HCl 10 mg, 500 tablets (https://a2z-life.com/healtha2z-allergy-relief-cetirizine-10mg-500-tablets-all-day-allergy-relief-indoor-outdoor-relief-from-itchy-throat-sneezing-runny-noses/).',
     productName: "HealthA2Z Cetirizine HCl 10 mg, 500 tablets, NDC 69168-396-05 (FPA187)",
     category: "Allergies",
     formulaId: "healtha2z-b96-cetirizine-10",
@@ -513,6 +517,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-cetirizine-10-60",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168396609',
+    upcNote:
+      'UPC-A 369168396609 is the UPC field on the a2z-life.com page for this exact pack, Cetirizine HCl 10 mg, 60 tablets (https://a2z-life.com/healtha2z-allergy-relief-60-tablets-relief-from-itchy-throat-sneezing-and-runny-nose/).',
     productName: "HealthA2Z Cetirizine HCl 10 mg, 60 tablets, NDC 69168-396-60 (FPA085)",
     category: "Allergies",
     formulaId: "healtha2z-b96-cetirizine-10",
@@ -602,6 +610,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-guaifenesin-600",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168459021',
+    upcNote:
+      'UPC-A 369168459021 is the UPC field on the a2z-life.com page for this exact pack, Guaifenesin 600 mg extended-release tablets, 150 count (https://a2z-life.com/healtha2z-mucus-relief-guaifenesin-600-mg-no-benzene-extended-release-150-tablets-12-hour-expectorant-relieves-chest-congestion-thins-and-loosens-mucus/).',
     productName: "HealthA2Z Guaifenesin 600 mg extended-release tablets, 150 count, NDC 69168-459-02 (FPA147)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-guaifenesin-600",
@@ -619,6 +631,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-guaifenesin-600-300",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168459175',
+    upcNote:
+      'UPC-A 369168459175 is the UPC field on the a2z-life.com page for this exact pack, Guaifenesin 600 mg extended-release tablets, 300 count (https://a2z-life.com/healtha2z-mucus-relief-guaifenesin-600-mg-12-hour-300-counts-no-benzene-expectorant-relieves-chest-congestion-thins-and-loosens-mucus-extended-release/).',
     productName: "HealthA2Z Guaifenesin 600 mg extended-release tablets, 300 count, NDC 69168-459-17 (FPA169)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-guaifenesin-600",
@@ -636,6 +652,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-guaifenesin-600-75",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168459755',
+    upcNote:
+      'UPC-A 369168459755 is the UPC field on the a2z-life.com page for this exact pack, Guaifenesin 600 mg extended-release tablets, 75 count (https://a2z-life.com/healtha2z-mucus-relief-guaifenesin-600-mg-75-tablets-12-hour-no-benzene-expectorant-relieves-chest-congestion-thins-and-loosens-mucus-extended-release/).',
     productName: "HealthA2Z Guaifenesin 600 mg extended-release tablets, 75 count, NDC 69168-459-75 (FPA146)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-guaifenesin-600",
@@ -670,6 +690,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-senna-8-6-300",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168371170',
+    upcNote:
+      'UPC-A 369168371170 is the UPC field on the a2z-life.com page for this exact pack, Sennosides 8.6 mg, 300 tablets (https://a2z-life.com/healtha2z-senna-laxative-300-count/).',
     productName: "HealthA2Z Sennosides 8.6 mg, 300 tablets, NDC 69168-371-17 (FPA091)",
     category: "Digestive",
     formulaId: "healtha2z-b96-senna-8-6",
@@ -687,6 +711,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-125",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168419063',
+    upcNote:
+      'UPC-A 369168419063 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 125 mg softgels, 150 count (https://a2z-life.com/healtha2z-gas-relief-125mg-softgel-150-count/).',
     productName: "HealthA2Z Simethicone 125 mg softgels, 150 count, NDC 69168-419-06 (FPA058)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-125",
@@ -704,6 +732,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-125-365",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168419995',
+    upcNote:
+      'UPC-A 369168419995 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 125 mg softgels, 365 count (https://a2z-life.com/healtha2z-gas-relief-simethicone-125mg-relieves-gas-fast-and-bloating-365-counts/).',
     productName: "HealthA2Z Simethicone 125 mg softgels, 365 count, NDC 69168-419-99 (FPA111)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-125",
@@ -721,6 +753,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-125-72",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168419728',
+    upcNote:
+      'UPC-A 369168419728 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 125 mg softgels, 72 count (https://a2z-life.com/healtha2z-gas-relief-simethicone-125mg-72-counts/).',
     productName: "HealthA2Z Simethicone 125 mg softgels, 72 count, NDC 69168-419-72 (FPA110)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-125",
@@ -738,6 +774,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-docusate-100-single",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168424814',
+    upcNote:
+      'UPC-A 369168424814 is the UPC field on the a2z-life.com page for this exact pack, Docusate sodium 100 mg softgels, single tone, 400 count (https://a2z-life.com/healtha2z-stool-softener-docusate-sodium-100mg-400-counts-single-tone/).',
     productName: "HealthA2Z Docusate sodium 100 mg softgels, single tone, 400 count, NDC 69168-424-81 (FPA065)",
     category: "Digestive",
     formulaId: "healtha2z-b96-docusate-100-single",
@@ -755,6 +795,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-250",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168434509',
+    upcNote:
+      'UPC-A 369168434509 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 250 mg softgels, 50 count (https://a2z-life.com/healtha2z-gas-relief-simethicone-250mg-50-counts/).',
     productName: "HealthA2Z Simethicone 250 mg softgels, 50 count, NDC 69168-434-50 (FPA113)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-250",
@@ -772,6 +816,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-250-200",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168434981',
+    upcNote:
+      'UPC-A 369168434981 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 250 mg softgels, 200 count (https://a2z-life.com/healtha2z-gas-relief-simethicone-250mg-200-softgels-relieves-from-stomach-discomfort-and-gas/).',
     productName: "HealthA2Z Simethicone 250 mg softgels, 200 count, NDC 69168-434-98 (FPA083)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-250",
@@ -789,6 +837,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-250-100",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168434011',
+    upcNote:
+      'UPC-A 369168434011 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 250 mg softgels, 100 count (https://a2z-life.com/healtha2z-gas-relief-100-counts-simethicone-250mg-relieve-symptoms-naturally/).',
     productName: "HealthA2Z Simethicone 250 mg softgels, 100 count, NDC 69168-434-01 (FPA076)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-250",
@@ -806,6 +858,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-earwax-6-5",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168488687',
+    upcNote:
+      'UPC-A 369168488687 is the UPC field on the a2z-life.com page for this exact pack, Ear wax removal drops, carbamide peroxide 6.5%, 0.5 fl oz (15 mL) (https://a2z-life.com/healtha2z-ear-wax-removal-kit-carbamide-peroxide-6-5-microfoam-cleansing-action-alcohol-free-includes-rubber-bulb-dropper-0-5-fl-oz-15ml/).',
     productName: "HealthA2Z Ear wax removal drops, carbamide peroxide 6.5%, 0.5 fl oz (15 mL), NDC 69168-488-68 (FPA189)",
     category: "First Aid",
     formulaId: "healtha2z-b96-earwax-6-5",
@@ -840,6 +896,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-fluticasone-50",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168448018',
+    upcNote:
+      'UPC-A 369168448018 is the UPC field on the a2z-life.com page for this exact pack, Fluticasone propionate 50 mcg nasal spray, 72 sprays, 0.38 fl oz (https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-72-sprays-0-38-fl-oz-11-1ml-relief-from-nasal-congestion-runny-nose-sneezing/).',
     productName: "HealthA2Z Fluticasone propionate 50 mcg nasal spray, 72 sprays, 0.38 fl oz, NDC 69168-448-01 (FPA126)",
     category: "Allergies",
     formulaId: "healtha2z-b96-fluticasone-50",
@@ -954,6 +1014,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-dual-action",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168462359',
+    upcNote:
+      'UPC-A 369168462359 is the UPC field on the a2z-life.com page for this exact pack, Dual action acetaminophen 250 mg and ibuprofen 125 mg, 80 caplets (https://a2z-life.com/healtha2z-dual-action-pain-relief-80-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/).',
     productName: "HealthA2Z Dual action acetaminophen 250 mg and ibuprofen 125 mg, 80 caplets, NDC 69168-462-35 (FPA142)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-dual-action",
@@ -972,6 +1036,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-dual-action-150",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168462021',
+    upcNote:
+      'UPC-A 369168462021 is the UPC field on the a2z-life.com page for this exact pack, Dual action acetaminophen 250 mg and ibuprofen 125 mg, 150 caplets (https://a2z-life.com/healtha2z-dual-action-pain-relief-150-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/).',
     productName: "HealthA2Z Dual action acetaminophen 250 mg and ibuprofen 125 mg, 150 caplets, NDC 69168-462-02 (FPA143)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-dual-action",
@@ -990,6 +1058,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-dual-action-300",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168462175',
+    upcNote:
+      'UPC-A 369168462175 is the UPC field on the a2z-life.com page for this exact pack, Dual action acetaminophen 250 mg and ibuprofen 125 mg, 300 caplets (https://a2z-life.com/healtha2z-dual-action-pain-relief-300-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/).',
     productName: "HealthA2Z Dual action acetaminophen 250 mg and ibuprofen 125 mg, 300 caplets, NDC 69168-462-17 (FPA171)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-dual-action",
@@ -1029,6 +1101,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-guaifenesin-1200-100",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168460324',
+    upcNote:
+      'UPC-A 369168460324 is the UPC field on the a2z-life.com page for this exact pack, Guaifenesin 1200 mg extended-release tablets, 100 count (https://a2z-life.com/healtha2z-mucus-relief-guaifenesin-1200-mg-no-benzene-100-tablets-maximum-strength-12-hour-expectorant-relieves-chest-congestion-thins-and-loosens-mucus/).',
     productName: "HealthA2Z Guaifenesin 1200 mg extended-release tablets, 100 count, NDC 69168-460-32 (FPA145)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-guaifenesin-1200",
@@ -1063,6 +1139,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-dph-25-caplet-600",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168048201',
+    upcNote:
+      'UPC-A 369168048201 is the UPC field on the a2z-life.com page for this exact pack, Diphenhydramine HCl 25 mg, 600 caplets (https://a2z-life.com/healtha2z-allergy-relief-compare-to-benadryl-active-ingredients-600-count-capsules/).',
     productName: "HealthA2Z Diphenhydramine HCl 25 mg, 600 caplets, NDC 69168-048-20 (FPA063)",
     category: "Allergies",
     formulaId: "healtha2z-b96-dph-25-caplet",
@@ -1173,6 +1253,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-loratadine-10-10",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168309098',
+    upcNote:
+      'UPC-A 369168309098 is the UPC field on the a2z-life.com page for Loratadine 10 mg, 10 tablets. The page chooser also lists a 3-pack and a 6-pack, so the code is attached only to the single pack (https://a2z-life.com/healtha2z-allergy-relief-loratadine-10mg-antihistamine-10-tablets-1-pack-3-packs-6-packs/).',
     productName: "HealthA2Z Loratadine 10 mg, 10 tablets, NDC 69168-309-09",
     category: "Allergies",
     formulaId: "healtha2z-b96-loratadine-10",
@@ -1224,6 +1308,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-180",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168433175',
+    upcNote:
+      'UPC-A 369168433175 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 180 mg softgels, 300 count (https://a2z-life.com/healtha2z-anti-gas-300-counts).',
     productName: "HealthA2Z Simethicone 180 mg softgels, 300 count, NDC 69168-433-17 (FPA084)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-180",
@@ -1262,6 +1350,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-180-60",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168433601',
+    upcNote:
+      'UPC-A 369168433601 is the UPC field on the a2z-life.com page for this exact pack, Simethicone 180 mg softgels, 60 count (https://a2z-life.com/healtha2z-gas-relief-60-counts-simethicone-180mg/).',
     productName: "HealthA2Z Simethicone 180 mg softgels, 60 count, NDC 69168-433-60 (FPA112)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-180",
@@ -1301,6 +1393,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-tension-16",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168029262',
+    upcNote:
+      'UPC-A 369168029262 is the UPC field on the a2z-life.com page for Tension headache acetaminophen 500 mg and caffeine 65 mg, 16 caplets. The page chooser also lists a 3-pack and a 6-pack, so the code is attached only to the single pack (https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/).',
     productName: "HealthA2Z Tension headache acetaminophen 500 mg and caffeine 65 mg, 16 caplets, NDC 69168-029-26 (FP1088)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-tension",
@@ -1397,6 +1493,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-apap-650-er",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168461031',
+    upcNote:
+      'UPC-A 369168461031 is the UPC field on the a2z-life.com page for this exact pack, Acetaminophen 650 mg extended-release caplets, 250 count (https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-250-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/).',
     productName: "HealthA2Z Acetaminophen 650 mg extended-release caplets, 250 count, NDC 69168-461-03 (FPA149)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-apap-650-er",
@@ -1414,6 +1514,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-apap-650-er-100",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168461321',
+    upcNote:
+      'UPC-A 369168461321 is the UPC field on the a2z-life.com page for this exact pack, Acetaminophen 650 mg extended-release caplets, 100 count (https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-100-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/).',
     productName: "HealthA2Z Acetaminophen 650 mg extended-release caplets, 100 count, NDC 69168-461-32 (FPA148)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-apap-650-er",
@@ -1469,6 +1573,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-peg-3350-473-55",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168473553',
+    upcNote:
+      'UPC-A 369168473553 is the UPC field on the a2z-life.com page for this exact pack, Polyethylene glycol 3350 powder, 17 g (https://a2z-life.com/healtha2z-lax-relief-unflavored-powder-grit-free-polyethlene-glycol-3350-17g-powder-for-oral-solution-osmotic-laxative-constipation-relief-softens-stool/).',
     productName: "HealthA2Z Polyethylene glycol 3350 powder, 17 g, NDC 69168-473-55 (FPA162-1)",
     category: "Digestive",
     formulaId: "healtha2z-b96-peg-3350",
@@ -1503,6 +1611,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-fexofenadine-180-413",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168413030',
+    upcNote:
+      'UPC-A 369168413030 is the UPC field on the a2z-life.com page for this exact pack, Fexofenadine HCl 180 mg, 250 caplets (https://a2z-life.com/healtha2z-allergy-relief-fexofenadine-hydrochloride-180mg-24-hour-antihistamine-indoor-outdoor-allergy-relief-250-counts/).',
     productName: "HealthA2Z Fexofenadine HCl 180 mg, 250 caplets, NDC 69168-413-03 (FPA190)",
     category: "Allergies",
     formulaId: "healtha2z-b96-fexofenadine-180-413",
@@ -1520,6 +1632,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-lidocaine-rectal-5",
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168484023',
+    upcNote:
+      'UPC-A 369168484023 is the UPC field on the a2z-life.com page for this exact pack, Lidocaine 5% rectal cream, 28 g (https://a2z-life.com/healtha2z-rectal-care-cream-lidocaine-5-local-anesthetic-28g-tube-topical-numbing-cream-other-anorectal-disorders-relieves-pain-itching-burning/).',
     productName: "HealthA2Z Lidocaine 5% rectal cream, 28 g, NDC 69168-484-02 (FPA182)",
     category: "First Aid",
     formulaId: "healtha2z-b96-lidocaine-rectal-5",
@@ -1764,17 +1880,46 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b96-apap-500': '369168328013',
+  'healtha2z-b96-apap-650-er': '369168461031',
+  'healtha2z-b96-apap-650-er-100': '369168461321',
   'healtha2z-b96-aspirin-325': '369168312173',
+  'healtha2z-b96-cetirizine-10': '369168396050',
+  'healtha2z-b96-cetirizine-10-60': '369168396609',
+  'healtha2z-b96-docusate-100-single': '369168424814',
+  'healtha2z-b96-dph-25-caplet-600': '369168048201',
+  'healtha2z-b96-dual-action': '369168462359',
+  'healtha2z-b96-dual-action-150': '369168462021',
+  'healtha2z-b96-dual-action-300': '369168462175',
+  'healtha2z-b96-earwax-6-5': '369168488687',
+  'healtha2z-b96-fexofenadine-180-413': '369168413030',
+  'healtha2z-b96-fluticasone-50': '369168448018',
   'healtha2z-b96-fluticasone-50-120-2pk': '369168380028',
   'healtha2z-b96-fluticasone-50-380-01': '369168380011',
   'healtha2z-b96-fluticasone-50-kids-72': '369168014015',
   'healtha2z-b96-guaifenesin-1200': '369168460980',
+  'healtha2z-b96-guaifenesin-1200-100': '369168460324',
+  'healtha2z-b96-guaifenesin-600': '369168459021',
+  'healtha2z-b96-guaifenesin-600-300': '369168459175',
+  'healtha2z-b96-guaifenesin-600-75': '369168459755',
+  'healtha2z-b96-lidocaine-rectal-5': '369168484023',
   'healtha2z-b96-loratadine-10': '369168309302',
+  'healtha2z-b96-loratadine-10-10': '369168309098',
   'healtha2z-b96-loratadine-10-5': '369168309081',
   'healtha2z-b96-peg-3350': '369168473560',
+  'healtha2z-b96-peg-3350-473-55': '369168473553',
   'healtha2z-b96-phenylephrine-10': '369168272170',
+  'healtha2z-b96-senna-8-6-300': '369168371170',
+  'healtha2z-b96-simethicone-125': '369168419063',
+  'healtha2z-b96-simethicone-125-365': '369168419995',
+  'healtha2z-b96-simethicone-125-72': '369168419728',
+  'healtha2z-b96-simethicone-180': '369168433175',
   'healtha2z-b96-simethicone-180-120': '369168433069',
+  'healtha2z-b96-simethicone-180-60': '369168433601',
+  'healtha2z-b96-simethicone-250': '369168434509',
+  'healtha2z-b96-simethicone-250-100': '369168434011',
+  'healtha2z-b96-simethicone-250-200': '369168434981',
   'healtha2z-b96-tension': '369168029989',
+  'healtha2z-b96-tension-16': '369168029262',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1782,7 +1927,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 12) throw new Error('batch96 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 41) throw new Error('batch96 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

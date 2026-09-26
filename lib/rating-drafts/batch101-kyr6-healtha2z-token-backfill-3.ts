@@ -488,6 +488,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: FEXO,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168437982',
+    upcNote:
+      'UPC-A 369168437982 is the UPC field on the a2z-life.com page for this exact pack, Fexofenadine HCl 60 mg, 200 coated caplets (https://a2z-life.com/healtha2z-fexofenadine-hydrochloride-60mg-200-count-coated-caplets-12-hour-antihistamine-for-allergy-relief/). Founder-confirmed.',
     productName: 'HealthA2Z Fexofenadine HCl 60 mg, 200 coated caplets, NDC 69168-437-98 (FPA086)',
     category: 'Allergies',
     formulaId: FEXO,
@@ -503,6 +507,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-fexo-60-120',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168437067',
+    upcNote:
+      'UPC-A 369168437067 is the UPC field on the a2z-life.com page for this exact pack, Fexofenadine HCl 60 mg, 120 caplets (https://a2z-life.com/healtha2z-fexofenadine-hydrochloride-60mg-antihistamine-allergy-relief-120-count-caplets-indoor-outdoor-relief-12-hours/). Founder-confirmed.',
     productName: 'HealthA2Z Fexofenadine HCl 60 mg, 120 caplets, NDC 69168-437-06 (FPA099)',
     category: 'Allergies',
     formulaId: FEXO,
@@ -518,6 +526,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: BISA398,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168398023',
+    upcNote:
+      'UPC-A 369168398023 is the UPC field on the a2z-life.com page for this exact pack, Bisacodyl 5 mg, 150 tablets (https://a2z-life.com/healtha2z-womans-gentle-laxative-bisacodyl-stimulant-laxative-5mg-150-tablets/). Founder-confirmed.',
     productName: 'HealthA2Z Bisacodyl 5 mg, 150 tablets, NDC 69168-398-02 (FPA129)',
     category: 'Digestive',
     formulaId: BISA398,
@@ -533,6 +545,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-bisacodyl-398-25',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168398924',
+    upcNote:
+      'UPC-A 369168398924 is the UPC field on the a2z-life.com page for Bisacodyl 5 mg, 25 tablets. The page chooser also lists a 3-pack and a 6-pack, so the code is attached only to the single pack (https://a2z-life.com/healtha2z-womans-gentle-laxative-bisacodyl-stimulant-laxative-5mg-1-pack-of-25-tablets-1-pack-3-packs-6-packs/).',
     productName: 'HealthA2Z Bisacodyl 5 mg, 25 tablets, NDC 69168-398-92 (FP0886A)',
     category: 'Digestive',
     formulaId: BISA398,
@@ -627,6 +643,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: BISA404,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168404328',
+    upcNote:
+      'UPC-A 369168404328 is the UPC field on the a2z-life.com page for this exact pack, Bisacodyl 5 mg, 100 tablets (https://a2z-life.com/healtha2z-laxative-100-counts/).',
     productName: 'HealthA2Z Bisacodyl 5 mg, 100 tablets, NDC 69168-404-32 (FPA094)',
     category: 'Digestive',
     formulaId: BISA404,
@@ -642,6 +662,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: BISMUTH,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168046320',
+    upcNote:
+      'UPC-A 369168046320 is the UPC field on the a2z-life.com page for this exact pack, Bismuth subsalicylate 262 mg, 100 chewable tablets (https://a2z-life.com/healtha2z-bismuth-bismuth-subsalicylate-262mg-multi-symptom-relief-100-chewable-tablets/).',
     productName: 'HealthA2Z Bismuth subsalicylate 262 mg, 100 chewable tablets, NDC 69168-046-32 (FPA102)',
     category: 'Digestive',
     formulaId: BISMUTH,
@@ -816,6 +840,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b101-docusate-420-30',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168314306',
+    upcNote:
+      'UPC-A 369168314306 is the UPC field on the a2z-life.com page for Docusate sodium 100 mg, 30 softgels. The page chooser also lists a 3-pack and a 6-pack, so the code is attached only to the single pack (https://a2z-life.com/healtha2z-stool-softener-docusate-sodium-100mg-30-capsules-1-pack-3-packs-6-packs/).',
     productName: 'HealthA2Z Docusate sodium 100 mg, 30 softgels, NDC 69168-420-30 (FP1024/FP0567)',
     category: 'Digestive',
     formulaId: DOCUSATE,
@@ -1015,13 +1043,20 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b101-aspirin-81-chew': '369168288362',
+  'healtha2z-b101-bisacodyl-398': '369168398023',
+  'healtha2z-b101-bisacodyl-398-25': '369168398924',
   'healtha2z-b101-bisacodyl-398-250': '369168398030',
+  'healtha2z-b101-bisacodyl-404': '369168404328',
+  'healtha2z-b101-bismuth-262': '369168046320',
   'healtha2z-b101-bismuth-262-200': '369168046986',
   'healtha2z-b101-bismuth-262-30': '369168046313',
   'healtha2z-b101-calcium-500': '369168219021',
   'healtha2z-b101-calcium-750': '369168229969',
   'healtha2z-b101-docusate-420': '369168420014',
+  'healtha2z-b101-docusate-420-30': '369168314306',
   'healtha2z-b101-docusate-420-fpa002': '369168314016',
+  'healtha2z-b101-fexo-60': '369168437982',
+  'healtha2z-b101-fexo-60-120': '369168437067',
   'healtha2z-b101-ibu-368': '369168363076',
 };
 function _upcOk(code: string): boolean {
@@ -1030,7 +1065,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 9) throw new Error('batch101 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 16) throw new Error('batch101 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
