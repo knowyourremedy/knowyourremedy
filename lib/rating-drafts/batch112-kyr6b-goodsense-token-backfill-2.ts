@@ -30,7 +30,7 @@
 // REFUSED 12.
 // 42 of the 54 setids lock fully.
 // Search grade: Clean 0 / Caution 12 / Avoid 33.
-// UPC count: 4.
+// UPC count: 8.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -695,6 +695,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-sleep-time-c1b4-355-ml',
+    barcode: '301130186405',
+    upcNote:
+      'UPC-A 301130186405 is the upc field on the Thrifty White product JSON for Good Sense Sleep Time Liquid, Berry - 12 oz, the 355 mL pack (https://shop.thriftywhite.com/good-sense-sleep-time-liquid-berry-12-oz/).',
     productName: 'GoodSense Sleep Time (Diphenhydramine Hydrochloride 50mg), 355 mL',
     category: 'Sleep',
     formulaId: 'goodsense-b112-sleep-time-c1b4',
@@ -860,6 +863,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-regular-strength-antacid-peppermint-0eb5',
+    barcode: '846036008449',
+    upcNote:
+      'UPC-A 846036008449 is the upc field on the Thrifty White product JSON for Good Sense Antacid RS Chew Tablets, Peppermint - 150 ct (https://shop.thriftywhite.com/good-sense-antacid-rs-chew-tablets-peppermint-150-ct/).',
     productName: 'GoodSense Regular Strength Antacid Peppermint (Calcium Carbonate 500mg), 150 count',
     category: 'Digestive',
     formulaId: 'goodsense-b112-regular-strength-antacid-peppermint-0eb5',
@@ -875,6 +881,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb',
+    barcode: '846036008456',
+    upcNote:
+      'UPC-A 846036008456 is the upc field on the Thrifty White product JSON for Good Sense Antacid Ultra Strength Chewable Tablets, Asst Fruit - 72 ct (https://shop.thriftywhite.com/good-sense-antacid-ultra-strength-chewable-tablets-asst-fruit-72-ct/).',
     productName: 'GoodSense Ultra Strength Antacid Assorted Fruit (Calcium Carbonate 1000mg), 72 count',
     category: 'Digestive',
     formulaId: 'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb',
@@ -890,6 +899,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb',
+    barcode: '846036008463',
+    upcNote:
+      'UPC-A 846036008463 is the upc field on the Thrifty White product JSON for Good Sense Antacid XS Chewable Tablets, Asst Fruit - 96 ct (https://shop.thriftywhite.com/good-sense-antacid-xs-chewable-tablets-asst-fruit-96-ct/).',
     productName: 'GoodSense Extra Strength Antacid Assorted Fruit (Calcium Carbonate 750mg), 96 count',
     category: 'Digestive',
     formulaId: 'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb',
@@ -1007,6 +1019,10 @@ const _UPC: Record<string, string> = {
   'goodsense-b112-pain-relief-roll-on-0885': '846036009842',
   'goodsense-b112-effervescent-cold-relief-81e2': '846036001631',
   'goodsense-b112-allergy-2a73': '368071373448',
+  'goodsense-b112-regular-strength-antacid-peppermint-0eb5': '846036008449',
+  'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb': '846036008456',
+  'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb': '846036008463',
+  'goodsense-b112-sleep-time-c1b4-355-ml': '301130186405',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1014,7 +1030,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 4) throw new Error('batch112 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 8) throw new Error('batch112 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

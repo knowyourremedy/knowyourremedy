@@ -27,7 +27,7 @@
 // REFUSED 54.
 // 75 of the 129 setids lock fully.
 // Search grade: Clean 1 / Caution 9 / Avoid 96.
-// UPC count: 7.
+// UPC count: 9.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -253,6 +253,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-nicotine-7972-50',
+    barcode: '301130170718',
+    upcNote:
+      'UPC-A 301130170718 is the upc field on the Thrifty White product JSON for Good Sense Nicotine Gum Original, 4 mg - 50 pc (https://shop.thriftywhite.com/good-sense-nicotine-gum-original-4-mg-original-50-pc/).',
     productName: 'GoodSense Nicotine (Nicotine 4mg), 50 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-nicotine-7972',
@@ -1501,6 +1504,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-tussin-dm-712a',
+    barcode: '301131725269',
+    upcNote:
+      'UPC-A 301131725269 is the upc field on the Thrifty White product JSON for Good Sense Tussin DM Cough and Chest Congestion Liquid, Raspberry - 4 oz, the 118 mL pack (https://shop.thriftywhite.com/good-sense-tussin-dm-cough-chest-congestion-liquid-raspberry-4-oz/).',
     productName: 'GoodSense Tussin dm (Dextromethorphan Hydrobromide 20mg / Guaifenesin 200mg), 118 mL',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b111-tussin-dm-712a',
@@ -1963,6 +1969,8 @@ const _UPC: Record<string, string> = {
   'goodsense-b111-infants-ibuprofen-ebbe': '301130040103',
   'goodsense-b111-nicotine-1ac2': '301130456607',
   'goodsense-b111-nighttime-0317-237-ml': '301130459349',
+  'goodsense-b111-tussin-dm-712a': '301131725269',
+  'goodsense-b111-nicotine-7972-50': '301130170718',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1970,7 +1978,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 7) throw new Error('batch111 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 9) throw new Error('batch111 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

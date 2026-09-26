@@ -30,7 +30,7 @@
 // REFUSED 0.
 // 12 of the 12 setids lock fully.
 // Search grade: Clean 0 / Caution 0 / Avoid 16.
-// UPC count: 3.
+// UPC count: 5.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -317,6 +317,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b113-tussin-dm-max-26d0-237-ml',
+    barcode: '370030149599',
+    upcNote:
+      'UPC-A 370030149599 is the upc field on the Thrifty White product JSON for Good Sense Tussin DM Max Cough Liquid - 8 oz, the 237 mL pack (https://shop.thriftywhite.com/good-sense-tussin-dm-max-cough-liquid-8-oz/).',
     productName: 'GoodSense Tussin DM Max (Dextromethorphan Hydrobromide 20mg / Guaifenesin 400mg), 237 mL',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b113-tussin-dm-max-26d0',
@@ -347,6 +350,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b113-antacid-soft-chew-e3e9',
+    barcode: '846036006162',
+    upcNote:
+      'UPC-A 846036006162 is the upc field on the Thrifty White product JSON for Good Sense Antacid Soft Chews, Cherry - 36 ct (https://shop.thriftywhite.com/good-sense-antacid-soft-chews-cherry-36-ct/).',
     productName: 'GoodSense Antacid Soft Chew (Calcium Carbonate 1177mg), 36 count',
     category: 'Digestive',
     formulaId: 'goodsense-b113-antacid-soft-chew-e3e9',
@@ -563,6 +569,8 @@ const _UPC: Record<string, string> = {
   'goodsense-b113-cherry-zinc-lozenges-5be3': '846036009392',
   'goodsense-b113-antacid-fruit-chews-5411': '846036009408',
   'goodsense-b113-dual-action-complete-258b': '370030148660',
+  'goodsense-b113-antacid-soft-chew-e3e9': '846036006162',
+  'goodsense-b113-tussin-dm-max-26d0-237-ml': '370030149599',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -570,7 +578,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 3) throw new Error('batch113 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 5) throw new Error('batch113 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
