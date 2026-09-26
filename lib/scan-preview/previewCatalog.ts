@@ -737,6 +737,18 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // The plain 90 draft is a palm-oil panel. Do not glue that bottle.
   // Official nutricost.com wordmark. Per-id only.
   'nutricost-b79-elderberry-gummies-90': brandMark('nutricost-mark.png'),
+  // First Aid night run 2026-09-26 3:00 AM PT batch 1.
+  // Walmart 3D for UPC 681131040372 was the triple-antibiotic ointment,
+  // not Pain / Itch / Scar. DailyMed face is a 2D dieline. Official
+  // Equate mark already on disk. Per-id only.
+  'equate-antibiotic-oil-blend': brandMark('equate-mark.png'),
+  // Family Wellness calamine (Family Dollar). DailyMed is a flat label,
+  // not a 3D bottle. Official Family Wellness mark already on disk.
+  // Per-id only.
+  'calamine-lotion-plain': brandMark('family-wellness-mark.png'),
+  // Walgreens 70% isopropyl, 32 oz. DailyMed files are flat label wraps.
+  // Official Walgreens mark already on disk. Per-id only.
+  'isopropyl-alcohol-plain': brandMark('walgreens-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3522,6 +3534,53 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // WELMATE Zinc Sulfate 220 mg, 200 tablets, UPC 373581301010.
   // wellspringmeds.com front.
   'welmate-b87-zinc-sulfate': catalogShot('welmate-b87-zinc-sulfate.jpg'),
+  // First Aid night run 2026-09-26 3:00 AM PT batch 1.
+  // Exact US pack faces. Per-id only. One barcode on each row.
+  // Calendula Cream, 2.5 oz, UPC 306962043568. Not the 0.5 oz tube.
+  'boiron-calendula-cream': catalogShot('boiron-calendula-cream.jpg'),
+  // Calendula Ointment, 1 oz, UPC 306962052508. Not Calendula Burn.
+  'boiron-calendula-ointment': catalogShot('boiron-calendula-ointment.jpg'),
+  // Arnicare Gel, 2.6 oz, UPC 306969000595. Not the cream or ointment.
+  'boiron-arnicare-gel': catalogShot('boiron-arnicare-gel.jpg'),
+  // Neosporin Original, 1 oz, UPC 300810730877.
+  // Row also lists 0.5 oz barcodes. This face is the 1 oz carton.
+  'neosporin-original-ointment': catalogShot('neosporin-original-ointment.jpg'),
+  // Neosporin + Pain Relief ointment, 0.5 oz, UPC 300810746885.
+  // Not the cream. Not a store-brand twin.
+  'neosporin-plus-pain-ointment': catalogShot('neosporin-plus-pain-ointment.jpg'),
+  // Polysporin 0.9 g packets, 144 count, UPC 312547238137.
+  // Not the 1 oz consumer tube.
+  'polysporin-ointment': catalogShot('polysporin-ointment.jpg'),
+  // Equate Bacitracin ointment, 1 oz, UPC 194346256778.
+  'equate-bacitracin-ointment': catalogShot('equate-bacitracin-ointment.jpg'),
+  // Equate First Aid Antibiotic + Pain Relief ointment, 1 oz,
+  // UPC 681131082433.
+  'equate-triple-antibiotic-pain-ointment': catalogShot(
+    'equate-triple-antibiotic-pain-ointment.jpg',
+  ),
+  // Cortizone-10 Water Resistant ointment, 2 oz, UPC 041167033968.
+  'cortizone10-water-resistant': catalogShot('cortizone10-water-resistant.jpg'),
+  // Aquaphor Itch Relief 1% hydrocortisone ointment, UPC 072140031114.
+  'aquaphor-itch-relief-hc': catalogShot('aquaphor-itch-relief-hc.jpg'),
+  // Benadryl Extra Strength Itch Cooling Spray, 2 fl oz travel,
+  // UPC 312547170048. Not the itch-stopping cream.
+  'benadryl-itch-cooling-gel': catalogShot('benadryl-itch-cooling-gel.jpg'),
+  // Equate Hydrogen Peroxide 3%, 32 fl oz, UPC 681131175838.
+  'hydrogen-peroxide-3': catalogShot('hydrogen-peroxide-3.jpg'),
+  // Aquaphor Healing Ointment, 1.75 oz, UPC 072140019457.
+  'aquaphor-healing-ointment': catalogShot('aquaphor-healing-ointment.jpg'),
+  // Desitin Multi-Purpose Healing Ointment, 3.5 oz, UPC 312547034913.
+  // Not Maximum Strength.
+  'desitin-multipurpose': catalogShot('desitin-multipurpose.jpg'),
+  // Walgreens Calamine Plus itch-relief spray, 4.1 oz, UPC 311917148588.
+  // Not the medicated lotion.
+  'calamine-plus-fragrance': catalogShot('calamine-plus-fragrance.jpg'),
+  // Bactine MAX first-aid spray, 5 fl oz. Official bactine.com hero
+  // (4% lidocaine, no-sting). Not the Original spray.
+  'bactine-max-bkc': catalogShot('bactine-max-bkc.jpg'),
+  // Bactine MAX Wound Wash, no-sting, UPC 365197820801.
+  // Not the Original spray and not the Max lidocaine spray.
+  'bactine-wound-wash': catalogShot('bactine-wound-wash.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3532,6 +3591,11 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
 const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-dong-quai-capsules-120-capsules',
   'nutricost-sage-extract-120-capsules',
+  // Same inactives as Neosporin + Pain Relief ointment. Different brands.
+  // Do not inherit that carton. Stay letters until attempted.
+  'family-wellness-triple-antibiotic-pain',
+  'amazon-basic-care-triple-pain-ointment',
+  'amazon-basics-antibiotic-burn-relief',
 ]);
 
 export function previewOverlayImage(
@@ -8420,6 +8484,121 @@ assertExactCarton(
     || plain90.verifiedSku
   ) {
     throw new Error('Plain elderberry 90 must stay on the Nutricost mark');
+  }
+}
+assertExactCarton('boiron-calendula-cream', 'Boiron', 'boiron-calendula-cream.jpg');
+assertExactCarton(
+  'boiron-calendula-ointment',
+  'Boiron',
+  'boiron-calendula-ointment.jpg',
+);
+assertExactCarton('boiron-arnicare-gel', 'Boiron', 'boiron-arnicare-gel.jpg');
+assertExactCarton(
+  'neosporin-original-ointment',
+  'Neosporin',
+  'neosporin-original-ointment.jpg',
+);
+assertExactCarton(
+  'neosporin-plus-pain-ointment',
+  'Neosporin',
+  'neosporin-plus-pain-ointment.jpg',
+);
+assertExactCarton('polysporin-ointment', 'Polysporin', 'polysporin-ointment.jpg');
+assertExactCarton(
+  'equate-bacitracin-ointment',
+  'Equate',
+  'equate-bacitracin-ointment.jpg',
+);
+assertExactCarton(
+  'equate-triple-antibiotic-pain-ointment',
+  'Equate',
+  'equate-triple-antibiotic-pain-ointment.jpg',
+);
+assertBrandMark(
+  'equate-antibiotic-oil-blend',
+  'Equate',
+  'equate-mark.png',
+);
+assertExactCarton(
+  'cortizone10-water-resistant',
+  'Cortizone-10',
+  'cortizone10-water-resistant.jpg',
+);
+assertExactCarton(
+  'aquaphor-itch-relief-hc',
+  'Aquaphor',
+  'aquaphor-itch-relief-hc.jpg',
+);
+assertExactCarton(
+  'benadryl-itch-cooling-gel',
+  'Benadryl',
+  'benadryl-itch-cooling-gel.jpg',
+);
+assertBrandMark(
+  'calamine-lotion-plain',
+  'Family Dollar',
+  'family-wellness-mark.png',
+);
+assertExactCarton(
+  'hydrogen-peroxide-3',
+  'Equate',
+  'hydrogen-peroxide-3.jpg',
+);
+assertBrandMark(
+  'isopropyl-alcohol-plain',
+  'Walgreens',
+  'walgreens-mark.png',
+);
+assertExactCarton(
+  'aquaphor-healing-ointment',
+  'Aquaphor',
+  'aquaphor-healing-ointment.jpg',
+);
+assertExactCarton(
+  'desitin-multipurpose',
+  'Desitin',
+  'desitin-multipurpose.jpg',
+);
+assertExactCarton(
+  'calamine-plus-fragrance',
+  'Walgreens',
+  'calamine-plus-fragrance.jpg',
+);
+assertExactCarton('bactine-max-bkc', 'Bactine', 'bactine-max-bkc.jpg');
+assertExactCarton('bactine-wound-wash', 'Bactine', 'bactine-wound-wash.jpg');
+{
+  const familyTwin = previewOverlayImage({
+    id: 'family-wellness-triple-antibiotic-pain',
+    formulaId: 'neosporin-plus-pain-ointment',
+    brand: 'Family Wellness',
+  });
+  if (
+    !familyTwin?.url.startsWith('data:image/svg')
+    || familyTwin.verifiedSku
+  ) {
+    throw new Error('Family Wellness pain ointment must not inherit the Neosporin carton');
+  }
+  const amazonTwin = previewOverlayImage({
+    id: 'amazon-basic-care-triple-pain-ointment',
+    formulaId: 'neosporin-plus-pain-ointment',
+    brand: 'Amazon Basic Care',
+  });
+  if (
+    !amazonTwin?.url.startsWith('data:image/svg')
+    || amazonTwin.verifiedSku
+  ) {
+    throw new Error('Amazon Basic Care pain ointment must not inherit the Neosporin carton');
+  }
+  const basicsTwin = previewOverlayImage({
+    id: 'amazon-basics-antibiotic-burn-relief',
+    formulaId: 'neosporin-plus-pain-ointment',
+    brand: 'Amazon Basics',
+  });
+  if (
+    !basicsTwin?.url.startsWith('data:image/svg')
+    || basicsTwin.verifiedSku
+  ) {
+    throw new Error('Amazon Basics burn ointment must not inherit the Neosporin carton');
   }
 }
 {
