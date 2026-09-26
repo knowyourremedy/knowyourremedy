@@ -732,6 +732,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Amazon search for UPC 842379151743 did not return a pack.
   // Official Amazon Elements mark already on disk. Per-id only.
   'amazon-elements-sambucus-gummies': brandMark('amazon-elements-mark.png'),
+  // Immune Support night run 2026-09-26 12:30 AM PT batch 2.
+  // UPC 810014670041 on nutricost.com is the Vitamin C & Zinc 90-count.
+  // The plain 90 draft is a palm-oil panel. Do not glue that bottle.
+  // Official nutricost.com wordmark. Per-id only.
+  'nutricost-b79-elderberry-gummies-90': brandMark('nutricost-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3442,6 +3447,81 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml': catalogShot(
     'now-olive-leaf-glycerite-alcohol-free-2-fl-oz-59-ml.jpg',
   ),
+  // Immune Support night run 2026-09-26 12:30 AM PT batch 2.
+  // Exact US pack faces. Per-id only. One barcode on each row.
+  // Echinacea Extract liquid, 2 fl oz, UPC 733739048400.
+  'now-echinacea-extract-2-fl-oz-59-ml': catalogShot(
+    'now-echinacea-extract-2-fl-oz-59-ml.jpg',
+  ),
+  // ElderMune, 90 veg capsules, UPC 733739046642.
+  'now-eldermune-90': catalogShot('now-eldermune-90.jpg'),
+  // Immune PostBiotic, 60 capsules, UPC 733739030375.
+  'now-immune-postbiotic-60': catalogShot('now-immune-postbiotic-60.jpg'),
+  // Elderberry Liquid for Kids, 8 fl oz, UPC 733739048516.
+  // Not the adult liquid.
+  'now-elderberry-liquid-for-kids-8-fl-oz-237-ml': catalogShot(
+    'now-elderberry-liquid-for-kids-8-fl-oz-237-ml.jpg',
+  ),
+  // Kids Liquid Echinacea, orange, 2 fl oz, UPC 733739048493.
+  'now-kids-liquid-echinacea-orange-2-fl-oz-59-ml': catalogShot(
+    'now-kids-liquid-echinacea-orange-2-fl-oz-59-ml.jpg',
+  ),
+  // Echinacea & Goldenseal Glycerite, alcohol-free, 2 fl oz,
+  // UPC 733739048486. Not the Plus liquid or the root capsules.
+  'now-echinacea-goldenseal-glycerite-alcohol-free-2-fl-oz-59-ml': catalogShot(
+    'now-echinacea-goldenseal-glycerite-alcohol-free-2-fl-oz-59-ml.jpg',
+  ),
+  // AlliBiotic CF, 60 softgels, UPC 733739018113.
+  'now-allibiotic-cf-60': catalogShot('now-allibiotic-cf-60.jpg'),
+  // Black Elderberry capsules, 120 count, UPC 857077008848.
+  // nutricost.com front (575 mg).
+  'nutricost-nutricost-black-elderberry-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-black-elderberry-capsules-120-capsules.jpg',
+  ),
+  // Echinacea capsules, 240 count, UPC 702669936408.
+  // nutricost.com front for that barcode (800 mg serving on the face).
+  'nutricost-nutricost-echinacea-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-echinacea-capsules-240-capsules.jpg',
+  ),
+  // Elderberry Gummies with Vitamin C & Zinc, 90 count,
+  // UPC 810014670041. Not the 60-count elderberry gummy.
+  'nutricost-b79-elderberry-gummies-vitamin-c-zinc': catalogShot(
+    'nutricost-b79-elderberry-gummies-vitamin-c-zinc.jpg',
+  ),
+  // Elderberry Gummies, 60 count, UPC 810014672670.
+  // Not the 90-count Vitamin C & Zinc bottle.
+  'nutricost-b79-elderberry-gummies-60': catalogShot(
+    'nutricost-b79-elderberry-gummies-60.jpg',
+  ),
+  // Organic Cat's Claw liquid drops, 4 oz, UPC 810139576556.
+  'nutricost-b80-organic-cats-claw-liquid-drops': catalogShot(
+    'nutricost-b80-organic-cats-claw-liquid-drops.jpg',
+  ),
+  // Echinacea & Goldenseal Root, 240 capsules, UPC 810014675022.
+  'nutricost-b80-echinacea-goldenseal-240-capsules': catalogShot(
+    'nutricost-b80-echinacea-goldenseal-240-capsules.jpg',
+  ),
+  // Zinc Picolinate 30 mg, 120 capsules, UPC 810157852236.
+  // naturewise.com main image. Only count on that PDP.
+  'naturewise-b82-zinc': catalogShot('naturewise-b82-zinc.jpg'),
+  // Vitamin C capsules, 60 count, UPC 810157850232.
+  // Not the 120-count or 360-count bottle. formulaId parent.
+  'naturewise-b82-vitamin-c': catalogShot('naturewise-b82-vitamin-c.jpg'),
+  // Vitamin C capsules, 120 count, UPC 810157850249.
+  'naturewise-b82-vitamin-c-120-count': catalogShot(
+    'naturewise-b82-vitamin-c-120-count.jpg',
+  ),
+  // Vitamin C capsules, 360 count, UPC 810157850256.
+  'naturewise-b82-vitamin-c-360-count': catalogShot(
+    'naturewise-b82-vitamin-c-360-count.jpg',
+  ),
+  // Elderberry Plus, 120 capsules, UPC 810157852243.
+  'naturewise-b83-elderberry-plus': catalogShot(
+    'naturewise-b83-elderberry-plus.jpg',
+  ),
+  // WELMATE Zinc Sulfate 220 mg, 200 tablets, UPC 373581301010.
+  // wellspringmeds.com front.
+  'welmate-b87-zinc-sulfate': catalogShot('welmate-b87-zinc-sulfate.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8209,6 +8289,137 @@ assertExactCarton(
     || !olive120.verifiedSku
   ) {
     throw new Error('Olive leaf 120 must not inherit the 60-count carton');
+  }
+}
+assertExactCarton(
+  'now-echinacea-extract-2-fl-oz-59-ml',
+  'NOW',
+  'now-echinacea-extract-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton('now-eldermune-90', 'NOW', 'now-eldermune-90.jpg');
+assertExactCarton(
+  'now-immune-postbiotic-60',
+  'NOW',
+  'now-immune-postbiotic-60.jpg',
+);
+assertExactCarton(
+  'now-elderberry-liquid-for-kids-8-fl-oz-237-ml',
+  'NOW',
+  'now-elderberry-liquid-for-kids-8-fl-oz-237-ml.jpg',
+);
+assertExactCarton(
+  'now-kids-liquid-echinacea-orange-2-fl-oz-59-ml',
+  'NOW',
+  'now-kids-liquid-echinacea-orange-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-echinacea-goldenseal-glycerite-alcohol-free-2-fl-oz-59-ml',
+  'NOW',
+  'now-echinacea-goldenseal-glycerite-alcohol-free-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-allibiotic-cf-60',
+  'NOW',
+  'now-allibiotic-cf-60.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-black-elderberry-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-black-elderberry-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-echinacea-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-echinacea-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-b79-elderberry-gummies-vitamin-c-zinc',
+  'Nutricost',
+  'nutricost-b79-elderberry-gummies-vitamin-c-zinc.jpg',
+);
+assertExactCarton(
+  'nutricost-b79-elderberry-gummies-60',
+  'Nutricost',
+  'nutricost-b79-elderberry-gummies-60.jpg',
+);
+assertBrandMark(
+  'nutricost-b79-elderberry-gummies-90',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-b80-organic-cats-claw-liquid-drops',
+  'Nutricost',
+  'nutricost-b80-organic-cats-claw-liquid-drops.jpg',
+);
+assertExactCarton(
+  'nutricost-b80-echinacea-goldenseal-240-capsules',
+  'Nutricost',
+  'nutricost-b80-echinacea-goldenseal-240-capsules.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-zinc',
+  'NatureWise',
+  'naturewise-b82-zinc.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-vitamin-c',
+  'NatureWise',
+  'naturewise-b82-vitamin-c.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-vitamin-c-120-count',
+  'NatureWise',
+  'naturewise-b82-vitamin-c-120-count.jpg',
+);
+assertExactCarton(
+  'naturewise-b82-vitamin-c-360-count',
+  'NatureWise',
+  'naturewise-b82-vitamin-c-360-count.jpg',
+);
+assertExactCarton(
+  'naturewise-b83-elderberry-plus',
+  'NatureWise',
+  'naturewise-b83-elderberry-plus.jpg',
+);
+assertExactCarton(
+  'welmate-b87-zinc-sulfate',
+  'WELMATE',
+  'welmate-b87-zinc-sulfate.jpg',
+);
+{
+  const c120 = previewOverlayImage({
+    id: 'naturewise-b82-vitamin-c-120-count',
+    formulaId: 'naturewise-b82-vitamin-c',
+    brand: 'NatureWise',
+  });
+  if (
+    !c120?.url.endsWith('/naturewise-b82-vitamin-c-120-count.jpg')
+    || !c120.verifiedSku
+  ) {
+    throw new Error('NatureWise vitamin C 120 must not inherit the 60-count carton');
+  }
+  const c360 = previewOverlayImage({
+    id: 'naturewise-b82-vitamin-c-360-count',
+    formulaId: 'naturewise-b82-vitamin-c',
+    brand: 'NatureWise',
+  });
+  if (
+    !c360?.url.endsWith('/naturewise-b82-vitamin-c-360-count.jpg')
+    || !c360.verifiedSku
+  ) {
+    throw new Error('NatureWise vitamin C 360 must not inherit the 60-count carton');
+  }
+  const plain90 = previewOverlayImage({
+    id: 'nutricost-b79-elderberry-gummies-90',
+    formulaId: 'nutricost-b79-elderberry-gummies-90',
+    brand: 'Nutricost',
+  });
+  if (
+    !plain90?.url.endsWith('/nutricost-mark.png')
+    || plain90.verifiedSku
+  ) {
+    throw new Error('Plain elderberry 90 must stay on the Nutricost mark');
   }
 }
 {
