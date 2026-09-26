@@ -758,6 +758,23 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // The live 3D faces are the talc-free paste tube. Do not glue that tube.
   // Official desitin.com wordmark. Per-id only.
   'desitin-max-talc': brandMark('desitin-mark.png'),
+  // First Aid night run 2026-09-26 5:30 AM PT batch 1.
+  // Tried the SKU. DailyMed faces are flat labels, not 3D cartons.
+  // Do not glue a sibling tube. Official marks already on disk. Per-id only.
+  'family-wellness-dual-antibiotic': brandMark('family-wellness-mark.png'),
+  'family-wellness-triple-antibiotic': brandMark('family-wellness-mark.png'),
+  'family-wellness-hc-max': brandMark('family-wellness-mark.png'),
+  'dg-health-hydrocortisone-bht': brandMark('dg-health-mark.png'),
+  'amazon-basic-care-triple-pain-ointment': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  'amazon-basics-antibiotic-burn-relief': brandMark('amazon-basics-mark.png'),
+  'amazon-basics-petroleum-jelly': brandMark('amazon-basics-mark.png'),
+  // Parabens HC UPC 370030114542 is titled 2 oz plus 10 moisturizers.
+  // The retrieved face read as a 1 oz tube. Do not glue it.
+  'amazon-basic-care-hydrocortisone-parabens': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -1037,6 +1054,12 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Its barcode is not 895015002336. Do not glue that tin.
   // Header wordmark SVG renders clipped. No standalone mark file.
   'manuka-health-lemon-ginger-lozenges': 'Manuka Health',
+  // First Aid night run 2026-09-26 5:30 AM PT batch 1.
+  // Assured HC cream and lidocaine gel: DailyMed faces are flat labels.
+  // No standalone official Assured mark file on dollartree.com.
+  // Do not stay letters.
+  'assured-hydrocortisone-cream': 'Assured',
+  'assured-lidocaine-pain-gel': 'Assured',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -3642,6 +3665,47 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'swim-ear': catalogShot('swim-ear.jpg'),
   // Similasan Earache Relief, 0.33 fl oz, UPC 094841255149.
   'similasan-earache-relief': catalogShot('similasan-earache-relief.jpg'),
+  // First Aid night run 2026-09-26 5:30 AM PT batch 1.
+  // Exact US pack faces. Per-id only. One barcode on each row.
+  // Hyland's Naturals Earache Drops, 0.33 fl oz, UPC 354973412415.
+  // hylands.com SKU EARS----L0.33Z. Not a swimmer's-ear kit.
+  'hylands-naturals-earache-drops': catalogShot(
+    'hylands-naturals-earache-drops.jpg',
+  ),
+  // Debrox Earwax Removal Aid drops, 0.5 fl oz, UPC 042037104788.
+  // Not the earwax removal kit.
+  'debrox-earwax-removal': catalogShot('debrox-earwax-removal.jpg'),
+  // Equate Ear Wax Removal drops, 0.5 fl oz, UPC 681131082365.
+  // Not the kit with a bulb syringe.
+  'equate-ear-wax-removal': catalogShot('equate-ear-wax-removal.jpg'),
+  // Family Wellness Triple Antibiotic + Pain Relief box.
+  // NDC 69396-053 / UPC 032251533129. Not the Pain / Itch / Scar tube
+  // and not the Neosporin carton this formulaId shares.
+  'family-wellness-triple-antibiotic-pain': catalogShot(
+    'family-wellness-triple-antibiotic-pain.jpg',
+  ),
+  // Basic Care Hydrocortisone 1% cream, 1 oz, UPC 370030145683.
+  // The BHT formula. Not the 2 oz plus-10-moisturizers parabens tube.
+  'amazon-basic-care-hydrocortisone-bht': catalogShot(
+    'amazon-basic-care-hydrocortisone-bht.jpg',
+  ),
+  // Cell Salt #12 Silicea 6X, 500 tablets, UPC 354973409811.
+  // Not the live 100-count (barcode 354973808119).
+  'hylands-silicea-6x': catalogShot('hylands-silicea-6x.jpg'),
+  // PRID Drawing Salve, 18 g / 0.63 oz. Official face for UPC 354973406919.
+  // Row also lists 354973413016. This file is the 406919 pack.
+  'hylands-prid-drawing-salve': catalogShot('hylands-prid-drawing-salve.jpg'),
+  // WartCalm meltaway tablets, 60 count, UPC 306969372043.
+  'boiron-wartcalm-tablets': catalogShot('boiron-wartcalm-tablets.jpg'),
+  // Arnicare Bruise tablets, 60 count, UPC 306969083048.
+  // Not the bruise cream or gel.
+  'boiron-arnicare-bruise-tablets': catalogShot(
+    'boiron-arnicare-bruise-tablets.jpg',
+  ),
+  // YeastCalm suppositories, 7 count, UPC 306969376621.
+  'boiron-yeastcalm-suppositories': catalogShot(
+    'boiron-yeastcalm-suppositories.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3653,7 +3717,7 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-dong-quai-capsules-120-capsules',
   'nutricost-sage-extract-120-capsules',
   // Same inactives as Neosporin + Pain Relief ointment. Different brands.
-  // Do not inherit that carton. Stay letters until attempted.
+  // Do not inherit that carton. Each id has its own overlay.
   'family-wellness-triple-antibiotic-pain',
   'amazon-basic-care-triple-pain-ointment',
   'amazon-basics-antibiotic-burn-relief',
@@ -8637,10 +8701,11 @@ assertExactCarton('bactine-wound-wash', 'Bactine', 'bactine-wound-wash.jpg');
     brand: 'Family Wellness',
   });
   if (
-    !familyTwin?.url.startsWith('data:image/svg')
-    || familyTwin.verifiedSku
+    !familyTwin?.url.endsWith('/family-wellness-triple-antibiotic-pain.jpg')
+    || !familyTwin.verifiedSku
+    || familyTwin.url.includes('neosporin')
   ) {
-    throw new Error('Family Wellness pain ointment must not inherit the Neosporin carton');
+    throw new Error('Family Wellness pain ointment must keep its own carton');
   }
   const amazonTwin = previewOverlayImage({
     id: 'amazon-basic-care-triple-pain-ointment',
@@ -8648,8 +8713,9 @@ assertExactCarton('bactine-wound-wash', 'Bactine', 'bactine-wound-wash.jpg');
     brand: 'Amazon Basic Care',
   });
   if (
-    !amazonTwin?.url.startsWith('data:image/svg')
+    !amazonTwin?.url.endsWith('/amazon-basic-care-mark.png')
     || amazonTwin.verifiedSku
+    || amazonTwin.url.includes('neosporin')
   ) {
     throw new Error('Amazon Basic Care pain ointment must not inherit the Neosporin carton');
   }
@@ -8659,8 +8725,9 @@ assertExactCarton('bactine-wound-wash', 'Bactine', 'bactine-wound-wash.jpg');
     brand: 'Amazon Basics',
   });
   if (
-    !basicsTwin?.url.startsWith('data:image/svg')
+    !basicsTwin?.url.endsWith('/amazon-basics-mark.png')
     || basicsTwin.verifiedSku
+    || basicsTwin.url.includes('neosporin')
   ) {
     throw new Error('Amazon Basics burn ointment must not inherit the Neosporin carton');
   }
@@ -8733,6 +8800,102 @@ assertExactCarton(
   'Similasan',
   'similasan-earache-relief.jpg',
 );
+assertExactCarton(
+  'hylands-naturals-earache-drops',
+  "Hyland's",
+  'hylands-naturals-earache-drops.jpg',
+);
+assertExactCarton('debrox-earwax-removal', 'Debrox', 'debrox-earwax-removal.jpg');
+assertExactCarton(
+  'equate-ear-wax-removal',
+  'Equate',
+  'equate-ear-wax-removal.jpg',
+);
+assertExactCarton(
+  'family-wellness-triple-antibiotic-pain',
+  'Family Wellness',
+  'family-wellness-triple-antibiotic-pain.jpg',
+);
+assertExactCarton(
+  'amazon-basic-care-hydrocortisone-bht',
+  'Amazon Basic Care',
+  'amazon-basic-care-hydrocortisone-bht.jpg',
+);
+assertExactCarton('hylands-silicea-6x', "Hyland's", 'hylands-silicea-6x.jpg');
+assertExactCarton(
+  'hylands-prid-drawing-salve',
+  "Hyland's",
+  'hylands-prid-drawing-salve.jpg',
+);
+assertExactCarton(
+  'boiron-wartcalm-tablets',
+  'Boiron',
+  'boiron-wartcalm-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-arnicare-bruise-tablets',
+  'Boiron',
+  'boiron-arnicare-bruise-tablets.jpg',
+);
+assertExactCarton(
+  'boiron-yeastcalm-suppositories',
+  'Boiron',
+  'boiron-yeastcalm-suppositories.jpg',
+);
+assertBrandMark(
+  'family-wellness-dual-antibiotic',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'family-wellness-triple-antibiotic',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'family-wellness-hc-max',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'dg-health-hydrocortisone-bht',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-triple-pain-ointment',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-antibiotic-burn-relief',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-petroleum-jelly',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-hydrocortisone-parabens',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+for (const assuredId of [
+  'assured-hydrocortisone-cream',
+  'assured-lidocaine-pain-gel',
+] as const) {
+  const tile = previewOverlayImage({
+    id: assuredId,
+    formulaId: assuredId,
+    brand: 'Assured',
+  });
+  const label = decodeURIComponent(tile?.url.split(',')[1] ?? '');
+  if (!label.includes('>Assured</text>') || tile?.verifiedSku) {
+    throw new Error(`${assuredId} must use the Assured text tile`);
+  }
+}
 {
   const topcareEar = previewOverlayImage({
     id: 'topcare-swimmers-ear',
