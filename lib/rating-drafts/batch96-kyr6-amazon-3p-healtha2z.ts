@@ -564,6 +564,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-aspirin-325",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168312173',
+    upcNote:
+      'UPC-A 369168312173 is printed beside HealthA2Z aspirin 325 mg, code FPA001, 300 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Aspirin 325 mg uncoated tablets, 300 count, NDC 69168-312-17 (FPA001)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-aspirin-325",
@@ -908,6 +912,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-fluticasone-50-380-01",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168380011',
+    upcNote:
+      'UPC-A 369168380011 is printed beside HealthA2Z fluticasone propionate nasal spray, code FPA006, 120 sprays per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Fluticasone propionate 50 mcg nasal spray, NDC 69168-380-01 (FPA006)",
     category: "Allergies",
     formulaId: "healtha2z-b96-fluticasone-50",
@@ -925,6 +933,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-fluticasone-50-120-2pk",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168380028',
+    upcNote:
+      'UPC-A 369168380028 is printed beside HealthA2Z fluticasone propionate nasal spray, code FPA025, 2 pack of 120 sprays per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Fluticasone propionate 50 mcg nasal spray, 2 pack of 120 sprays, NDC 69168-380-02 (FPA025)",
     category: "Allergies",
     formulaId: "healtha2z-b96-fluticasone-50",
@@ -996,6 +1008,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-guaifenesin-1200",
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168460980',
+    upcNote:
+      'UPC-A 369168460980 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z guaifenesin 1200 mg 200-tablet bottle (https://a2z-life.com/healtha2z-mucus-relief-guaifenesin-1200-mg-no-benzene-200-tablets-maximum-strength-12-hour-expectorant-relieves-chest-congestion-thins-and-loosens-mucus/).',
     productName: "HealthA2Z Guaifenesin 1200 mg extended-release tablets, 200 count, NDC 69168-460-98 (FPA170)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-guaifenesin-1200",
@@ -1064,6 +1080,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-loratadine-10",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168309302',
+    upcNote:
+      'UPC-A 369168309302 is printed beside HealthA2Z loratadine 10 mg, code FP0930, 30 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Loratadine 10 mg, 30 tablets, NDC 69168-309-30 (FP0930)",
     category: "Allergies",
     formulaId: "healtha2z-b96-loratadine-10",
@@ -1098,6 +1118,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-loratadine-10-5",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168309081',
+    upcNote:
+      'UPC-A 369168309081 is printed beside HealthA2Z loratadine 10 mg, code FP0552, 5 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Loratadine 10 mg, 5 tablets, NDC 69168-309-08 (FP0552)",
     category: "Allergies",
     formulaId: "healtha2z-b96-loratadine-10",
@@ -1217,6 +1241,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-simethicone-180-120",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168433069',
+    upcNote:
+      'UPC-A 369168433069 is printed beside HealthA2Z simethicone 180 mg, code FPA075, 120 softgels per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Simethicone 180 mg softgels, 120 count, NDC 69168-433-06 (FPA075)",
     category: "Digestive",
     formulaId: "healtha2z-b96-simethicone-180",
@@ -1251,6 +1279,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-tension",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168029989',
+    upcNote:
+      'UPC-A 369168029989 is printed beside HealthA2Z tension headache relief, code FPA005, 200 caplets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Tension headache acetaminophen 500 mg and caffeine 65 mg, 200 caplets, NDC 69168-029-98 (FPA005)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-tension",
@@ -1323,6 +1355,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-phenylephrine-10",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168272170',
+    upcNote:
+      'UPC-A 369168272170 is printed beside HealthA2Z phenylephrine HCl 10 mg, code FPA066, 300 tablets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Phenylephrine HCl 10 mg, 300 tablets, NDC 69168-272-17 (FPA066)",
     category: "Cold & Flu",
     formulaId: "healtha2z-b96-phenylephrine-10",
@@ -1340,6 +1376,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-apap-500",
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168328013',
+    upcNote:
+      'UPC-A 369168328013 is printed beside HealthA2Z acetaminophen 500 mg, code FP0568, 100 caplets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: "HealthA2Z Acetaminophen 500 mg caplets, 100 count, NDC 69168-328-01 (FP0568)",
     category: "Pain & Fever",
     formulaId: "healtha2z-b96-apap-500",
@@ -1723,8 +1763,18 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch96 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b96-apap-500': '369168328013',
+  'healtha2z-b96-aspirin-325': '369168312173',
+  'healtha2z-b96-fluticasone-50-120-2pk': '369168380028',
+  'healtha2z-b96-fluticasone-50-380-01': '369168380011',
   'healtha2z-b96-fluticasone-50-kids-72': '369168014015',
+  'healtha2z-b96-guaifenesin-1200': '369168460980',
+  'healtha2z-b96-loratadine-10': '369168309302',
+  'healtha2z-b96-loratadine-10-5': '369168309081',
   'healtha2z-b96-peg-3350': '369168473560',
+  'healtha2z-b96-phenylephrine-10': '369168272170',
+  'healtha2z-b96-simethicone-180-120': '369168433069',
+  'healtha2z-b96-tension': '369168029989',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1732,7 +1782,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 2) throw new Error('batch96 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 12) throw new Error('batch96 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

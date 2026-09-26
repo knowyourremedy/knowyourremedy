@@ -253,6 +253,10 @@ const PATCH_NOTE =
 const COMPACT: Compact[] = [
   {
     id: FEXO_180_416,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168416062',
+    upcNote:
+      'UPC-A 369168416062 is printed beside HealthA2Z fexofenadine HCl 180 mg, code FPA056, 120 coated caplets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName:
       'HealthA2Z Fexofenadine HCl 180 mg, 120 coated caplets, NDC 69168-416-06 (FPA056)',
     category: 'Allergies',
@@ -301,6 +305,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: LORATADINE_10_PREGEL,
+    // KYR5-d retailer ladder — Target spec field.
+    barcode: '369168414174',
+    upcNote:
+      'UPC-A 369168414174 is the Target specifications UPC for HealthA2Z loratadine 10 mg, 300 tablets (https://www.target.com/p/healtha2z-loratadine-10-mg-allergy-relief-antihistamine-24-hour-relief-300-tablets/-/A-1004974136). The Allegiant Health 2024 catalog prints the same code beside code FPA057, 300 tablets per unit.',
     productName:
       'HealthA2Z Loratadine 10 mg, 300 tablets, NDC 69168-414-17 (FPA057)',
     category: 'Allergies',
@@ -686,6 +694,8 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch97 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b97-fexo-180-416': '369168416062',
+  'healtha2z-b97-loratadine-10-pregel': '369168414174',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -693,7 +703,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 0) throw new Error('batch97 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 2) throw new Error('batch97 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

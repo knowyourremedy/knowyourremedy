@@ -407,6 +407,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: LOPERAMIDE,
+    // KYR5-d retailer ladder — Google-cited page.
+    barcode: '369168248861',
+    upcNote:
+      'UPC-A 369168248861 is printed beside HealthA2Z loperamide HCl 2 mg, code FP0697, 12 caplets per unit in the Allegiant Health 2024 product catalog (https://allegiant-health.com/wp-content/uploads/2024/02/Allegiant-Health-Products-Catalog_final_2024.pdf). The brand-site UPC field for that same code and count matches this line.',
     productName: 'HealthA2Z Loperamide HCl 2 mg, 12 caplets, NDC 69168-248-86 (FP0697)',
     category: 'Digestive',
     formulaId: LOPERAMIDE,
@@ -473,6 +477,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: ROLL,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168483675',
+    upcNote:
+      'UPC-A 369168483675 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z menthol 4% 74 mL roll-on carton (https://a2z-life.com/healtha2z-cold-roll-on-pain-relieving-gel-menthol-4-external-analgesic-2-5-oz-74-ml-temporary-relieves-minor-aches-and-pains-of-muscle/).',
     productName: 'HealthA2Z Cold Therapy roll-on, menthol 4%, 74 mL, NDC 69168-483-67 (FPA183)',
     category: 'Pain & Fever',
     formulaId: ROLL,
@@ -488,6 +496,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: ELDER,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168760820',
+    upcNote:
+      'UPC-A 369168760820 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z elderberry gummy 60-count bottle (Elderberry_Gummy_60_ct_Back) (https://a2z-life.com/healtha2z-elderberry-gummy-60-ct/).',
     productName: 'HealthA2Z Elderberry gummies, blueberry, vitamin C and zinc, 60 pieces (FP1066)',
     category: 'Vitamins',
     formulaId: ELDER,
@@ -598,6 +610,9 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b102-dimenhydrinate-50': '369168408869',
+  'healtha2z-b102-elderberry-gummy-60': '369168760820',
+  'healtha2z-b102-loperamide-2': '369168248861',
+  'healtha2z-b102-menthol-roll-on': '369168483675',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -605,7 +620,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 1) throw new Error('batch102 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 4) throw new Error('batch102 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

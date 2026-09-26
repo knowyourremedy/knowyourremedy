@@ -143,6 +143,10 @@ const MAG_CITE = `DailyMed dietary supplement label (${DM}${MAG_SET}; setid ${MA
 const COMPACT: Compact[] = [
   {
     id: MAG_ID,
+    // KYR5-d retailer ladder — brand-site bar photo.
+    barcode: '369168306820',
+    upcNote:
+      'UPC-A 369168306820 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z magnesium oxide bottle labeled 90 tablets (the inner unit, not the 24-pack case) (https://a2z-life.com/healtha2z-wellness-magnesium-oxide-420mg-bone-muscle-support-dietary-supplement-value-pack-24-packs-of-90-tablets-each-2-160-tablets-total/).',
     productName: 'HealthA2Z Mag Oxide 420 mg tablets, 90 count (FPHK1069)',
     category: 'Digestive',
     formulaId: MAG_ID,
@@ -581,6 +585,7 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch104 recordStatus must stay unverified');
 }
 const _UPC: Record<string, string> = {
+  'healtha2z-b104-mag-oxide-90': '369168306820',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -588,7 +593,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 0) throw new Error('batch104 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 1) throw new Error('batch104 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
