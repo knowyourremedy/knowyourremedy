@@ -109,3 +109,4 @@ export { BATCH108_KYR6B_TIMECAP_FDC_ALIASES } from './batch108-kyr6b-timecap-fdc
 export { BATCH109_KYR6B_AMAZON_3P_GOODSENSE } from './batch109-kyr6b-amazon-3p-goodsense';
 export { BATCH110_KYR6B_GOODSENSE_REMATCH } from './batch110-kyr6b-goodsense-rematch';
 export { BATCH111_KYR6B_GOODSENSE_TOKEN_BACKFILL } from './batch111-kyr6b-goodsense-token-backfill';
+export { BATCH112_KYR6B_GOODSENSE_TOKEN_BACKFILL_2 } from './batch112-kyr6b-goodsense-token-backfill-2';
