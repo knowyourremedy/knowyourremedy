@@ -106,3 +106,4 @@ export { BATCH105_KYR6_HEALTHA2Z_THREE_GUMMIES } from './batch105-kyr6-healtha2z
 export { BATCH106_KYR6B_AMAZON_3P_TIME_CAP } from './batch106-kyr6b-amazon-3p-time-cap';
 export { BATCH107_KYR6B_TIMECAP_TOKEN_BACKFILL } from './batch107-kyr6b-timecap-token-backfill';
 export { BATCH108_KYR6B_TIMECAP_FDC_ALIASES } from './batch108-kyr6b-timecap-fdc-aliases';
+export { BATCH109_KYR6B_AMAZON_3P_GOODSENSE } from './batch109-kyr6b-amazon-3p-goodsense';
