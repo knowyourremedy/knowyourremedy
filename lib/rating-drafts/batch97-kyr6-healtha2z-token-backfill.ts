@@ -273,6 +273,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-fexo-180-416-30',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168416307',
+    upcNote:
+      'UPC-A 369168416307 is the UPC field on the a2z-life.com page for this exact pack, Fexofenadine HCl 180 mg, 30 coated caplets (https://a2z-life.com/healtha2z-fexo-30-coated-caplets/).',
     productName:
       'HealthA2Z Fexofenadine HCl 180 mg, 30 coated caplets, NDC 69168-416-30 (FPA062)',
     category: 'Allergies',
@@ -325,6 +329,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-loratadine-10-pregel-150',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168414020',
+    upcNote:
+      'UPC-A 369168414020 is the UPC field on the a2z-life.com page for this exact pack, Loratadine 10 mg, 150 tablets (https://a2z-life.com/healtha2z-allergy-relief-loratadine-10mg-150-counts-24-hours-allergy-medicine/).',
     productName:
       'HealthA2Z Loratadine 10 mg, 150 tablets, NDC 69168-414-02 (FPA117)',
     category: 'Allergies',
@@ -341,6 +349,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-loratadine-10-pregel-60',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168414600',
+    upcNote:
+      'UPC-A 369168414600 is the UPC field on the a2z-life.com page for this exact pack, Loratadine 10 mg, 60 tablets (https://a2z-life.com/healtha2z-allergy-relief-loratadine-10mg-antihistamine-relief-from-itchy-throat-sneezing-runny-noses-24-hours-allergy-medicine-60-tablets/).',
     productName:
       'HealthA2Z Loratadine 10 mg, 60 tablets, NDC 69168-414-60 (FPA087)',
     category: 'Allergies',
@@ -357,6 +369,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-loratadine-10-pregel-500',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168475052',
+    upcNote:
+      'UPC-A 369168475052 is the UPC field on the a2z-life.com page for this exact pack, Loratadine 10 mg, 500 tablets (https://a2z-life.com/healtha2z-allergy-relief-loratadine-10mg-antihistamine-500-tablets-relief-from-itchy-throat-sneezing-runny-noses-24-hours-allergy-medicine/).',
     productName:
       'HealthA2Z Loratadine 10 mg, 500 tablets, NDC 69168-475-05 (FPA188)',
     category: 'Allergies',
@@ -373,6 +389,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: IBU_200_381,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168381032',
+    upcNote:
+      'UPC-A 369168381032 is the UPC field on the a2z-life.com page for this exact pack, Ibuprofen 200 mg, 250 tablets (https://a2z-life.com/healtha2z-ibuprofen-200mg-pain-relief-250-count/).',
     productName:
       'HealthA2Z Ibuprofen 200 mg, 250 tablets, NDC 69168-381-03 (FPA116)',
     category: 'Pain & Fever',
@@ -389,6 +409,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-ibu-200-381-100',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168381322',
+    upcNote:
+      'UPC-A 369168381322 is the UPC field on the a2z-life.com page for this exact pack, Ibuprofen 200 mg, 100 tablets (https://a2z-life.com/healtha2z-ibuprofen-100-counts-/).',
     productName:
       'HealthA2Z Ibuprofen 200 mg, 100 tablets, NDC 69168-381-32 (FPA092)',
     category: 'Pain & Fever',
@@ -405,6 +429,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b97-ibu-200-381-500',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168381056',
+    upcNote:
+      'UPC-A 369168381056 is the UPC field on the a2z-life.com page for this exact pack, Ibuprofen 200 mg, 500 tablets (https://a2z-life.com/healtha2z-ibuprofen-tablets-200mg-500counts/).',
     productName:
       'HealthA2Z Ibuprofen 200 mg, 500 tablets, NDC 69168-381-05 (FPA081)',
     category: 'Pain & Fever',
@@ -421,6 +449,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: LIDOCAINE_4_PATCH,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168481077',
+    upcNote:
+      'UPC-A 369168481077 is the UPC field on the a2z-life.com page for this exact pack, Lidocaine 4% patch, 30 patches (https://a2z-life.com/healtha2z-pain-relief-patch-lidocaine-4-topical-anesthetic-flexible-adhesive-patch-unscented-single-use-30-patches/).',
     productName:
       'HealthA2Z Lidocaine 4% patch, 30 patches, NDC 69168-481-07 (FPA181)',
     category: 'Pain & Fever',
@@ -695,7 +727,15 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b97-fexo-180-416': '369168416062',
+  'healtha2z-b97-fexo-180-416-30': '369168416307',
+  'healtha2z-b97-ibu-200-381': '369168381032',
+  'healtha2z-b97-ibu-200-381-100': '369168381322',
+  'healtha2z-b97-ibu-200-381-500': '369168381056',
+  'healtha2z-b97-lidocaine-4-patch': '369168481077',
   'healtha2z-b97-loratadine-10-pregel': '369168414174',
+  'healtha2z-b97-loratadine-10-pregel-150': '369168414020',
+  'healtha2z-b97-loratadine-10-pregel-500': '369168475052',
+  'healtha2z-b97-loratadine-10-pregel-60': '369168414600',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -703,7 +743,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 2) throw new Error('batch97 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 10) throw new Error('batch97 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

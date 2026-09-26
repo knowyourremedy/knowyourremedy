@@ -434,6 +434,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-fexo-180-paraffin-180',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168450806',
+    upcNote:
+      'UPC-A 369168450806 is the UPC field on the a2z-life.com page for this exact pack, Fexofenadine HCl 180 mg, 180 caplets (https://a2z-life.com/healtha2z-allergy-relief-fexofenadine-hydrochloride-180mg-180-caplets-antihistamine/).',
     productName: 'HealthA2Z Fexofenadine HCl 180 mg, 180 caplets, NDC 69168-450-80 (FPA151)',
     category: 'Allergies',
     formulaId: FEXO_PARAFFIN,
@@ -449,6 +453,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: TUSSIN,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168477667',
+    upcNote:
+      'UPC-A 369168477667 is the UPC field on the a2z-life.com page for this 8 fl oz sugar-free tussin, SKU FPA184 (https://a2z-life.com/healtha2z-tussin-dm-sugar-free-dextromethorphan-hbr-20mg-guaifenesin-200mg-cough-suppressant-expectorant-for-adults-with-high-blood-pressure-diabetes-8-fl-oz-raspberry-flavor/). The description states dextromethorphan HBr 10 mg and guaifenesin 100 mg.',
     productName:
       'HealthA2Z Tussin DM sugar-free, dextromethorphan HBr 10 mg and guaifenesin 100 mg per 5 mL, 8 fl oz (237 mL), NDC 69168-477-66 (FPA184)',
     category: 'Cold & Flu',
@@ -468,6 +476,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: FAMOTIDINE,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168443327',
+    upcNote:
+      'UPC-A 369168443327 is the UPC field on the a2z-life.com page for this exact pack, Famotidine 20 mg, 100 tablets (https://a2z-life.com/healtha2z-acid-reducer-100-tablets-famotidine-20mg-maximum-strength-relief-from-heart-burn-due-to-acid-indigestion/).',
     productName: 'HealthA2Z Famotidine 20 mg, 100 tablets, NDC 69168-443-32 (FPA124)',
     category: 'Digestive',
     formulaId: FAMOTIDINE,
@@ -483,6 +495,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-famotidine-20-443-225',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168443525',
+    upcNote:
+      'UPC-A 369168443525 is the UPC field on the a2z-life.com page for this exact pack, Famotidine 20 mg, 225 tablets (https://a2z-life.com/healtha2z-acid-reducer-225-tablets-famotidine-20mg-maximum-strength-relief-from-heart-burn-due-to-acid-indigestion/).',
     productName: 'HealthA2Z Famotidine 20 mg, 225 tablets, NDC 69168-443-52 (FPA125)',
     category: 'Digestive',
     formulaId: FAMOTIDINE,
@@ -498,6 +514,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-famotidine-20-443-365',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168443990',
+    upcNote:
+      'UPC-A 369168443990 is the UPC field on the a2z-life.com page for this exact pack, Famotidine 20 mg, 365 tablets (https://a2z-life.com/healtha2z-acid-reducer-famotidine-20mg-365-count-maximum-strength-relief-from-heart-burn-due-to-acid-indigestion/).',
     productName: 'HealthA2Z Famotidine 20 mg, 365 tablets, NDC 69168-443-99 (FPA161)',
     category: 'Digestive',
     formulaId: FAMOTIDINE,
@@ -604,6 +624,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-dph-25-softgel-250',
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168431034',
+    upcNote:
+      'UPC-A 369168431034 is the UPC field on the a2z-life.com page for this exact pack, Diphenhydramine HCl 25 mg nighttime sleep softgels, 250 count (https://a2z-life.com/healtha2z-nighttime-sleep-aid-250-softgels/).',
     productName: 'HealthA2Z Diphenhydramine HCl 25 mg nighttime sleep softgels, 250 count, NDC 69168-431-03 (FPA103)',
     category: 'Sleep',
     formulaId: DPH_25,
@@ -635,6 +659,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: DPH_50,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168410985',
+    upcNote:
+      'UPC-A 369168410985 is the UPC field on the a2z-life.com page for this exact pack, Diphenhydramine HCl 50 mg sleep softgels, 200 count (https://a2z-life.com/healtha2z-sleep-aid-diphenhydramine-50mg-200-softgels-supports-deeper-restful-sleeping/).',
     productName: 'HealthA2Z Diphenhydramine HCl 50 mg sleep softgels, 200 count, NDC 69168-410-98 (FPA172)',
     category: 'Sleep',
     formulaId: DPH_50,
@@ -940,7 +968,14 @@ const _UPC: Record<string, string> = {
   'healtha2z-b99-aspirin-81-430': '369168430990',
   'healtha2z-b99-aspirin-81-dye-free': '369168457980',
   'healtha2z-b99-dph-25-softgel': '369168431966',
+  'healtha2z-b99-dph-25-softgel-250': '369168431034',
+  'healtha2z-b99-dph-50-softgel': '369168410985',
+  'healtha2z-b99-famotidine-20-443': '369168443327',
+  'healtha2z-b99-famotidine-20-443-225': '369168443525',
+  'healtha2z-b99-famotidine-20-443-365': '369168443990',
   'healtha2z-b99-fexo-180-paraffin': '369168450820',
+  'healtha2z-b99-fexo-180-paraffin-180': '369168450806',
+  'healtha2z-b99-tussin-dm-sf': '369168477667',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -948,7 +983,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 5) throw new Error('batch99 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 12) throw new Error('batch99 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

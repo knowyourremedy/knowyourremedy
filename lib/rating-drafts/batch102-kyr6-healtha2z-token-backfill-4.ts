@@ -361,6 +361,10 @@ const OI_ELDER =
 const COMPACT: Compact[] = [
   {
     id: DOXY,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168439986',
+    upcNote:
+      'UPC-A 369168439986 is the UPC field on the a2z-life.com page for this exact pack, Doxylamine succinate 25 mg, 200 tablets (https://a2z-life.com/healtha2z-sleep-aid-doxylamine-succinate-25mg-200-counts/).',
     productName: 'HealthA2Z Doxylamine succinate 25 mg, 200 tablets, NDC 69168-439-98 (FPA122)',
     category: 'Sleep',
     formulaId: DOXY,
@@ -391,6 +395,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: KIDS_ALLERGY,
+    // KYR5-d spec text — brand-site UPC field.
+    barcode: '369168471597',
+    upcNote:
+      'UPC-A 369168471597 is the UPC field on the a2z-life.com page for this exact pack, Childrens diphenhydramine HCl 12.5 mg/5 mL, 237 mL (https://a2z-life.com/healtha2z-children-s-allergy-relief-dye-free-diphenhyrdramine-12-5-mg-5ml-oral-solution-8fl-oz-237-ml-antihistamine-clear-bubble-gum-flavored-alcohol-and-sugar-free/).',
     productName:
       'HealthA2Z Children\u2019s diphenhydramine HCl 12.5 mg/5 mL, 237 mL, NDC 69168-471-59 (FPA164)',
     category: 'Allergies',
@@ -610,7 +618,9 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
 }
 const _UPC: Record<string, string> = {
   'healtha2z-b102-dimenhydrinate-50': '369168408869',
+  'healtha2z-b102-doxylamine-25': '369168439986',
   'healtha2z-b102-elderberry-gummy-60': '369168760820',
+  'healtha2z-b102-kids-diphen-liquid': '369168471597',
   'healtha2z-b102-loperamide-2': '369168248861',
   'healtha2z-b102-menthol-roll-on': '369168483675',
 };
@@ -620,7 +630,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 4) throw new Error('batch102 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 6) throw new Error('batch102 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
