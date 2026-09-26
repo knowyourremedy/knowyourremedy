@@ -13,7 +13,8 @@
 // Already-on-MAIN twins left alone: goodsense-es-pain-relief-l484,
 // goodsense-naproxen-220, goodsense-ibuprofen-liquid-gels,
 // goodsense-dual-action, goodsense-childrens-ibuprofen-chew.
-// No UPC attached. An NDC is not a UPC. HTML bullets are not OI.
+// UPC only where a DailyMed carton or label barcode decoded for that exact pack.
+// An NDC is not a UPC. HTML bullets are not OI.
 //
 // Do NOT edit batch70–batch108. No house Amazon. No HealthA2Z.
 // No A+Health. No TIME-Cap. No toothpaste. No Sprouts. No factory.
@@ -145,6 +146,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -193,7 +196,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -260,6 +264,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-3059-20',
+    barcode: '371335204716',
+    upcNote:
+      'UPC-A 371335204716 is the Data Matrix GTIN on DailyMed image lbl713352047.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=d6460cc3-c207-44e0-bf78-ad6fef055ed5&name=lbl713352047.jpg). 20 tablets, NDC 71335-2047-1.',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 20 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-3059',
@@ -605,6 +612,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-dm-eb2d-30',
+    barcode: '385766172308',
+    upcNote:
+      'UPC-A 385766172308 is the QR GTIN on the 30-count line of DailyMed image label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=81fb0ce7-1b13-4b9d-8f98-671ffd9205c3&name=label.jpg). NDC 85766-172-30.',
     productName: 'GoodSense Mucus DM (Dextromethorphan Hydrobromide 30mg / Guaifenesin 600mg), 30 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-dm-eb2d',
@@ -635,6 +645,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-dm-eb2d-60',
+    barcode: '385766172605',
+    upcNote:
+      'UPC-A 385766172605 is the QR GTIN on the 60-count line of DailyMed image label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=81fb0ce7-1b13-4b9d-8f98-671ffd9205c3&name=label.jpg). NDC 85766-172-60.',
     productName: 'GoodSense Mucus DM (Dextromethorphan Hydrobromide 30mg / Guaifenesin 600mg), 60 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-dm-eb2d',
@@ -650,6 +663,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-mucus-dm-eb2d-90',
+    barcode: '385766172902',
+    upcNote:
+      'UPC-A 385766172902 is the QR GTIN on the 90-count line of DailyMed image label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=81fb0ce7-1b13-4b9d-8f98-671ffd9205c3&name=label.jpg). NDC 85766-172-90.',
     productName: 'GoodSense Mucus DM (Dextromethorphan Hydrobromide 30mg / Guaifenesin 600mg), 90 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b109-mucus-dm-eb2d',
@@ -710,6 +726,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-56b4-30',
+    barcode: '371335254513',
+    upcNote:
+      'UPC-A 371335254513 is the Data Matrix GTIN on DailyMed image lbl713352545.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=7b0b07f6-242a-4e1a-ab39-84f0334d4716&name=lbl713352545.jpg). 30 tablets, NDC 71335-2545-1.',
     productName: 'GoodSense Pain Relief (Acetaminophen 650mg), 30 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-56b4',
@@ -1490,6 +1509,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-ac08',
+    barcode: '368071391763',
+    upcNote:
+      'UPC-A 368071391763 is the EAN-13 under the bars on DailyMed image 68071-3917-6.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=440c13d7-edf0-f611-e063-6394a90af995&name=68071-3917-6.jpg). 6 tablets, NDC 68071-3917-6.',
     productName: 'GoodSense Pain relief (Acetaminophen 325mg), 6 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-ac08',
@@ -1505,6 +1527,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-ac08-20',
+    barcode: '368071388329',
+    upcNote:
+      'UPC-A 368071388329 is the EAN-13 under the bars on DailyMed image 68071-3883-2.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=3c1f505d-0319-a179-e063-6294a90a0b17&name=68071-3883-2.jpg). 20 tablets, NDC 68071-3883-2.',
     productName: 'GoodSense Pain relief (Acetaminophen 325mg), 20 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-ac08',
@@ -1745,6 +1770,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-pm-8818',
+    barcode: '363629588015',
+    upcNote:
+      'UPC-A 363629588015 is the Data Matrix GTIN on DailyMed image lbl636295880.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=e08a7ab1-4b68-422a-97bd-2c5326633943&name=lbl636295880.jpg). 14 tablets, NDC 63629-5880-1.',
     productName: 'GoodSense Pain relief pm (Acetaminophen 500mg / Diphenhydramine Hydrochloride 25mg), 14 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-pm-8818',
@@ -2330,7 +2358,34 @@ if (BATCH109_REFUSED.length !== 141) throw new Error('batch109 REFUSED drift');
 if (_ROWS.some((r) => r.recordStatus !== 'unverified')) {
   throw new Error('batch109 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch109 unexpected barcode');
+const _UPC: Record<string, string> = {
+  'goodsense-b109-pain-relief-ac08': '368071391763',
+  'goodsense-b109-pain-relief-ac08-20': '368071388329',
+  'goodsense-b109-mucus-dm-eb2d-30': '385766172308',
+  'goodsense-b109-mucus-dm-eb2d-60': '385766172605',
+  'goodsense-b109-mucus-dm-eb2d-90': '385766172902',
+  'goodsense-b109-pain-relief-56b4-30': '371335254513',
+  'goodsense-b109-ibuprofen-3059-20': '371335204716',
+  'goodsense-b109-pain-relief-pm-8818': '363629588015',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 8) throw new Error('batch109 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch109 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch109 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch109 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch109 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('goodsense-b109-'))) {
   throw new Error('batch109 ids must use goodsense-b109-');
 }

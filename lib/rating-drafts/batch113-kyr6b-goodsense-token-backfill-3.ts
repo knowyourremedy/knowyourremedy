@@ -21,7 +21,7 @@
 // Oil form split stays as it is on main. Dual-panel day/night stays no-row.
 // Formaldehyde-releasers stay Avoid. Gummy vegetable oil and gummy
 // coconut oil stay Avoid.
-// No UPC attached. No GTIN-12 was read under barcode bars.
+// UPC only where a DailyMed carton or label barcode decoded for that exact pack.
 //
 // TALLY (unverified drafts in THIS file): 16 rows —
 // Clean 0 / Caution 0 / Avoid 16.
@@ -30,7 +30,7 @@
 // REFUSED 0.
 // 12 of the 12 setids lock fully.
 // Search grade: Clean 0 / Caution 0 / Avoid 16.
-// UPC count: 0.
+// UPC count: 3.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -199,6 +199,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -247,7 +249,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -359,6 +362,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b113-dual-action-complete-258b',
+    barcode: '370030148660',
+    upcNote:
+      'UPC-A 370030148660 is the EAN-13 under the bars on DailyMed image goodsense-dual-action-complete-container-image.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=b7154648-8c8c-4ce6-88b7-5442a16143c5&name=goodsense-dual-action-complete-container-image.jpg). 25 chewable tablets.',
     productName: 'GoodSense Dual Action Complete (Famotidine 10mg / Calcium Carbonate 800mg / Magnesium Hydroxide 165mg), 25 count',
     category: 'Digestive',
     formulaId: 'goodsense-b113-dual-action-complete-258b',
@@ -464,6 +470,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b113-cherry-zinc-lozenges-5be3',
+    barcode: '846036009392',
+    upcNote:
+      'UPC-A 846036009392 is the EAN-13 under the bars on DailyMed image GoodSense Cherry Zinc 18ct 60001800 6-30-2021.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c5fe07e0-3a2b-adf5-e053-2995a90a99ae&name=GoodSense+Cherry+Zinc+18ct+60001800+6-30-2021.jpg). 18 lozenges.',
     productName: 'GoodSense Cherry Zinc Lozenges (Zinc Gluconate 2[hp_X]), 18 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b113-cherry-zinc-lozenges-5be3',
@@ -479,6 +488,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b113-antacid-fruit-chews-5411',
+    barcode: '846036009408',
+    upcNote:
+      'UPC-A 846036009408 is the EAN-13 under the bars on DailyMed image GoodSense Assorted Fruit Antacids 32ct 60001799 6-30-2021.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c5ffaaee-0f78-4a13-e053-2995a90ad6ba&name=GoodSense+Assorted+Fruit+Antacids+32ct+60001799+6-30-2021.jpg). 32 chewables.',
     productName: 'GoodSense Antacid Fruit Chews (Calcium Carbonate 750mg), 32 count',
     category: 'Digestive',
     formulaId: 'goodsense-b113-antacid-fruit-chews-5411',
@@ -547,7 +559,29 @@ if (BATCH113_REFUSED.length !== 0) throw new Error('batch113 REFUSED drift');
 if (_ROWS.some((r) => r.recordStatus !== 'unverified')) {
   throw new Error('batch113 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch113 unexpected barcode');
+const _UPC: Record<string, string> = {
+  'goodsense-b113-cherry-zinc-lozenges-5be3': '846036009392',
+  'goodsense-b113-antacid-fruit-chews-5411': '846036009408',
+  'goodsense-b113-dual-action-complete-258b': '370030148660',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 3) throw new Error('batch113 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch113 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch113 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch113 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch113 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('goodsense-b113-'))) {
   throw new Error('batch113 ids must use goodsense-b113-');
 }

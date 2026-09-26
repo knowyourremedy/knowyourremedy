@@ -18,7 +18,7 @@
 // Oil form split stays as it is on main. Dual-panel day/night stays no-row.
 // Formaldehyde-releasers stay Avoid. Gummy vegetable oil and gummy
 // coconut oil stay Avoid.
-// No UPC attached. No GTIN-12 was read under barcode bars.
+// UPC only where a DailyMed carton or label barcode decoded for that exact pack.
 //
 // TALLY (unverified drafts in THIS file): 106 rows —
 // Clean 1 / Caution 9 / Avoid 96.
@@ -27,7 +27,7 @@
 // REFUSED 54.
 // 75 of the 129 setids lock fully.
 // Search grade: Clean 1 / Caution 9 / Avoid 96.
-// UPC count: 0.
+// UPC count: 7.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -180,6 +180,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -228,7 +230,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -415,6 +418,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-infants-ibuprofen-ebbe',
+    barcode: '301130040103',
+    upcNote:
+      'UPC-A 301130040103 is the EAN-13 under the bars on DailyMed carton goodsense-infants-ibuprofen-berry-carton-image.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=3d2fa7ad-1574-4c79-959d-3ee284468a99&name=goodsense-infants-ibuprofen-berry-carton-image.jpg). 1 fl oz (30 mL), one bottle in the carton.',
     productName: 'GoodSense Infants Ibuprofen (Ibuprofen 50mg), 30 mL',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-infants-ibuprofen-ebbe',
@@ -520,6 +526,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-nicotine-1ac2',
+    barcode: '301130456607',
+    upcNote:
+      'UPC-A 301130456607 is the EAN-13 under the bars on DailyMed carton goodsense-nicotine-gum-carton-image-2.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=74ce5bd9-98ad-4e41-80b0-5d7aaa122ac8&name=goodsense-nicotine-gum-carton-image-2.jpg). 20 pieces, NDC 0113-0456-60.',
     productName: 'GoodSense Nicotine (Nicotine 2mg), 20 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-nicotine-1ac2',
@@ -1090,6 +1099,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-nighttime-0317-237-ml',
+    barcode: '301130459349',
+    upcNote:
+      'UPC-A 301130459349 is the EAN-13 under the bars on DailyMed image 45934C2F5.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f90bd64a-dd1a-4319-87cd-427d57f677ab&name=45934C2F5.jpg). 8 fl oz (237 mL), NDC 0113-0459-34.',
     productName: 'GoodSense Nighttime (Acetaminophen 650mg / Dextromethorphan Hydrobromide 30mg / Doxylamine Succinate 12.5mg), 237 mL',
     category: 'Sleep',
     formulaId: 'goodsense-b111-nighttime-0317',
@@ -1210,6 +1222,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-cherry-cough-drops-f2a6',
+    barcode: '180410000422',
+    upcNote:
+      'UPC-A 180410000422 is the EAN-13 under the bars on DailyMed image Good Sense Cherry 30ct 60002193 4-13-2023.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c72db7f0-9324-8ed2-e053-2995a90a9868&name=Good+Sense+Cherry+30ct+60002193+4-13-2023.jpg). 30 drops.',
     productName: 'GoodSense Cherry Cough Drops (Menthol 5.8mg), 30 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b111-cherry-cough-drops-f2a6',
@@ -1225,6 +1240,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-honey-lemon-cough-drops-9e75',
+    barcode: '180410000439',
+    upcNote:
+      'UPC-A 180410000439 is the EAN-13 under the bars on DailyMed image Good Sense Honey Lemon 30ct 60002194 4-25-2023.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c72e557f-0211-81b9-e053-2995a90a1437&name=Good+Sense+Honey+Lemon+30ct+60002194+4-25-2023.jpg). 30 drops.',
     productName: 'GoodSense Honey Lemon Cough Drops (Menthol 7.5mg), 30 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b111-honey-lemon-cough-drops-9e75',
@@ -1240,6 +1258,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-cherry-benzocaine-lozenges-3814',
+    barcode: '846036006599',
+    upcNote:
+      'UPC-A 846036006599 is the EAN-13 under the bars on DailyMed image Good Sense Cherry Benz 18ct 60001811 8-26-2021.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7404c94-09eb-5cc5-e053-2995a90af021&name=Good+Sense+Cherry+Benz+18ct+60001811+8-26-2021.jpg). 18 lozenges.',
     productName: 'GoodSense Cherry Benzocaine Lozenges (Benzocaine 15mg / Menthol 3.6mg), 18 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-cherry-benzocaine-lozenges-3814',
@@ -1795,6 +1816,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-menthol-cough-drops-6243',
+    barcode: '180410000415',
+    upcNote:
+      'UPC-A 180410000415 is the EAN-13 under the bars on DailyMed image Good Sense Menthol 30ct 60002192 5-30-2023.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c6b25d69-8930-6867-e053-2a95a90ad208&name=Good+Sense+Menthol+30ct+60002192+5-30-2023.jpg). 30 drops.',
     productName: 'GoodSense Menthol Cough Drops (Menthol 5.4mg), 30 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b111-menthol-cough-drops-6243',
@@ -1931,7 +1955,33 @@ if (BATCH111_REFUSED.length !== 54) throw new Error('batch111 REFUSED drift');
 if (_ROWS.some((r) => r.recordStatus !== 'unverified')) {
   throw new Error('batch111 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch111 unexpected barcode');
+const _UPC: Record<string, string> = {
+  'goodsense-b111-menthol-cough-drops-6243': '180410000415',
+  'goodsense-b111-cherry-cough-drops-f2a6': '180410000422',
+  'goodsense-b111-honey-lemon-cough-drops-9e75': '180410000439',
+  'goodsense-b111-cherry-benzocaine-lozenges-3814': '846036006599',
+  'goodsense-b111-infants-ibuprofen-ebbe': '301130040103',
+  'goodsense-b111-nicotine-1ac2': '301130456607',
+  'goodsense-b111-nighttime-0317-237-ml': '301130459349',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 7) throw new Error('batch111 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch111 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch111 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch111 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch111 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('goodsense-b111-'))) {
   throw new Error('batch111 ids must use goodsense-b111-');
 }

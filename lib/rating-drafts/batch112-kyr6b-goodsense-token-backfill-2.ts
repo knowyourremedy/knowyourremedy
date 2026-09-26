@@ -21,7 +21,7 @@
 // Oil form split stays as it is on main. Dual-panel day/night stays no-row.
 // Formaldehyde-releasers stay Avoid. Gummy vegetable oil and gummy
 // coconut oil stay Avoid.
-// No UPC attached. No GTIN-12 was read under barcode bars.
+// UPC only where a DailyMed carton or label barcode decoded for that exact pack.
 //
 // TALLY (unverified drafts in THIS file): 45 rows —
 // Clean 0 / Caution 12 / Avoid 33.
@@ -30,7 +30,7 @@
 // REFUSED 12.
 // 42 of the 54 setids lock fully.
 // Search grade: Clean 0 / Caution 12 / Avoid 33.
-// UPC count: 0.
+// UPC count: 4.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -193,6 +193,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -241,13 +243,17 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
 const PACKS: Compact[] = [
   {
     id: 'goodsense-b112-allergy-2a73',
+    barcode: '368071373448',
+    upcNote:
+      'UPC-A 368071373448 is the Data Matrix GTIN on DailyMed image 68071-3734-4.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=2861b801-e778-822d-e063-6394a90aa1a8&name=68071-3734-4.jpg). 5 mL, NDC 68071-3734-4.',
     productName: 'GoodSense Allergy (Diphenhydramine Hydrochloride 12.5mg), 5 mL',
     category: 'Allergies',
     formulaId: 'goodsense-b112-allergy-2a73',
@@ -563,6 +569,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-pain-relief-roll-on-0885',
+    barcode: '846036009842',
+    upcNote:
+      'UPC-A 846036009842 is the EAN-13 under the bars on DailyMed image GS_Pain Relief Roll-On IFC_GDS-LDRLR-25_VIEW2 copy.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=38e76fd6-e5fb-493c-e063-6294a90afed4&name=GS_Pain+Relief+Roll-On+IFC_GDS-LDRLR-25_VIEW2+copy.jpg). 2.5 oz (71 g).',
     productName: 'GoodSense Pain Relief Roll On (Lidocaine Hydrochloride 4g per 100g), 71 g',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b112-pain-relief-roll-on-0885',
@@ -653,6 +662,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-effervescent-cold-relief-81e2',
+    barcode: '846036001631',
+    upcNote:
+      'UPC-A 846036001631 is the EAN-13 under the bars on DailyMed image 87360 GS C2 Good Sense Cold 20_APPRVL.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd25e250-bb8b-7e83-e053-2a95a90a2639&name=87360+GS+C2+Good+Sense+Cold+20_APPRVL.jpg). 10 tablets, NDC 50804-873-20.',
     productName: 'GoodSense Effervescent Cold Relief (Chlorpheniramine Maleate 2mg / Aspirin 325mg / Phenylephrine Bitartrate 7.8mg), 10 count',
     category: 'Allergies',
     formulaId: 'goodsense-b112-effervescent-cold-relief-81e2',
@@ -908,6 +920,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-regular-strength-antacid-e6fb',
+    barcode: '846036008432',
+    upcNote:
+      'UPC-A 846036008432 is the EAN-13 under the bars on DailyMed image gs-126.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=53de9018-fbe4-425a-85f6-ebf08d108730&name=gs-126.jpg). 150 chewable tablets.',
     productName: 'GoodSense Regular Strength Antacid (Calcium Carbonate 500mg), 150 count',
     category: 'Digestive',
     formulaId: 'goodsense-b112-regular-strength-antacid-e6fb',
@@ -987,7 +1002,30 @@ if (BATCH112_REFUSED.length !== 12) throw new Error('batch112 REFUSED drift');
 if (_ROWS.some((r) => r.recordStatus !== 'unverified')) {
   throw new Error('batch112 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch112 unexpected barcode');
+const _UPC: Record<string, string> = {
+  'goodsense-b112-regular-strength-antacid-e6fb': '846036008432',
+  'goodsense-b112-pain-relief-roll-on-0885': '846036009842',
+  'goodsense-b112-effervescent-cold-relief-81e2': '846036001631',
+  'goodsense-b112-allergy-2a73': '368071373448',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 4) throw new Error('batch112 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch112 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch112 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch112 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch112 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('goodsense-b112-'))) {
   throw new Error('batch112 ids must use goodsense-b112-');
 }
