@@ -105,6 +105,7 @@ import {
   BATCH102_KYR6_HEALTHA2Z_TOKEN_BACKFILL_4,
   BATCH103_KYR6_HEALTHA2Z_TOKEN_BACKFILL_5,
   BATCH104_KYR6_HEALTHA2Z_NO_OI_AIMODE,
+  BATCH105_KYR6_HEALTHA2Z_THREE_GUMMIES,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -230,6 +231,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH102_KYR6_HEALTHA2Z_TOKEN_BACKFILL_4,
   ...BATCH103_KYR6_HEALTHA2Z_TOKEN_BACKFILL_5,
   ...BATCH104_KYR6_HEALTHA2Z_NO_OI_AIMODE,
+  ...BATCH105_KYR6_HEALTHA2Z_THREE_GUMMIES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
