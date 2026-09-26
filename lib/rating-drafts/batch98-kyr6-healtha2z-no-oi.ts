@@ -495,10 +495,6 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b98-fexo-180-30x24',
-    // KYR5-d retailer ladder — brand-site bar photo.
-    barcode: '369168413306',
-    upcNote:
-      'UPC-A 369168413306 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z fexofenadine HCl 180 mg value pack labeled 24 packs of 30 caplets (https://a2z-life.com/healtha2z-fexofenadine-hydrochloride-180mg-antihistamine-value-pack-24-hour-antihistamine-for-allergy-relief-30-count-pack-of-24-720-total-capelets/).',
     productName: 'HealthA2Z Fexofenadine HCl 180 mg, 24 packs of 30 caplets (720), NDC 69168-416-30 (FP1179)',
     category: 'Allergies',
     formulaId: 'healtha2z-b97-fexo-180-416',
@@ -640,7 +636,6 @@ const _UPC: Record<string, string> = {
   'healtha2z-b98-bone-90': '369168811829',
   'healtha2z-b98-cetirizine-10-1': '369168310094',
   'healtha2z-b98-cetirizine-10-30': '369168310308',
-  'healtha2z-b98-fexo-180-30x24': '369168413306',
   'healtha2z-b98-mucus-dm-200': '369168345980',
   'healtha2z-b98-pe-5-300': '369168271173',
 };
@@ -650,7 +645,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 7) throw new Error('batch98 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 6) throw new Error('batch98 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

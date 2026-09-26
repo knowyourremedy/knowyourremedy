@@ -513,10 +513,6 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-famotidine-20-443-50x24',
-    // KYR5-d retailer ladder — brand-site bar photo.
-    barcode: '369168443501',
-    upcNote:
-      'UPC-A 369168443501 is the 12-digit code printed under the bars on the brand-site image of the HealthA2Z famotidine 20 mg value pack labeled 24 packs of 50 tablets (1,200) (https://a2z-life.com/healtha2z-acid-reducer-famotidine-20mg-maximum-strength-relief-from-heartburn-acid-indigestion-24-packs-of-50-tablets-1-200-tablets-total-value-pack/).',
     productName: 'HealthA2Z Famotidine 20 mg, 24 packs of 50 tablets (1,200), NDC 69168-443-50 (FP1205)',
     category: 'Digestive',
     formulaId: FAMOTIDINE,
@@ -944,7 +940,6 @@ const _UPC: Record<string, string> = {
   'healtha2z-b99-aspirin-81-430': '369168430990',
   'healtha2z-b99-aspirin-81-dye-free': '369168457980',
   'healtha2z-b99-dph-25-softgel': '369168431966',
-  'healtha2z-b99-famotidine-20-443-50x24': '369168443501',
   'healtha2z-b99-fexo-180-paraffin': '369168450820',
 };
 function _upcOk(code: string): boolean {
@@ -953,7 +948,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 6) throw new Error('batch99 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 5) throw new Error('batch99 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
