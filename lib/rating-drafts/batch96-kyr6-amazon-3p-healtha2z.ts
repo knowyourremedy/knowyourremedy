@@ -172,6 +172,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -224,7 +226,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -850,6 +853,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-fluticasone-50-kids-72",
+    // KYR5-d — zbar on DailyMed 448--childrens-fluticasone-propionate-nasal-spray-1.jpg.
+    barcode: '369168014015',
+    upcNote:
+      'UPC-A 369168014015 is the code under the bars on DailyMed image 448--childrens-fluticasone-propionate-nasal-spray-1.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f4b9fcfc-f3f7-4ce0-8f97-3d475081aa67&name=448--childrens-fluticasone-propionate-nasal-spray-1.jpg).',
     productName: "HealthA2Z Children's fluticasone propionate 50 mcg nasal spray, 72 sprays, NDC 69168-014-01 (FP1340)",
     category: "Allergies",
     formulaId: "healtha2z-b96-fluticasone-50",
@@ -1401,6 +1408,10 @@ const COMPACT: Compact[] = [
   },
   {
     id: "healtha2z-b96-peg-3350",
+    // KYR5-d — zbar on DailyMed 473---peg-3350-powder-2.jpg.
+    barcode: '369168473560',
+    upcNote:
+      'UPC-A 369168473560 is the code under the bars on DailyMed image 473---peg-3350-powder-2.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=13851c9a-a226-481b-9db5-bc7053997df7&name=473---peg-3350-powder-2.jpg).',
     productName: "HealthA2Z Polyethylene glycol 3350 powder, 17 g, 8.3 oz (238 g), NDC 69168-473-56 (FPA162)",
     category: "Digestive",
     formulaId: "healtha2z-b96-peg-3350",
@@ -1711,7 +1722,28 @@ if (_ROWS.some((r) => r.brand !== 'HealthA2Z')) throw new Error('batch96 brand d
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch96 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch96 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'healtha2z-b96-fluticasone-50-kids-72': '369168014015',
+  'healtha2z-b96-peg-3350': '369168473560',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 2) throw new Error('batch96 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch96 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch96 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch96 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch96 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('healtha2z-b96-'))) {
   throw new Error('batch96 ids must use healtha2z-b96-');
 }

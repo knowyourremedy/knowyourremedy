@@ -148,6 +148,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -184,7 +186,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -343,6 +346,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b107-eso-20-42',
+    // KYR5-d — zbar on DailyMed 718T-Esomeprazole-42ct-carton.jpg.
+    barcode: '349483718416',
+    upcNote:
+      'UPC-A 349483718416 is the code under the bars on DailyMed image 718T-Esomeprazole-42ct-carton.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=08acf79f-f50d-8416-e063-6294a90a2704&name=718T-Esomeprazole-42ct-carton.jpg).',
     productName:
       'Timely Esomeprazole magnesium delayed-release capsules 20 mg, 42 count, NDC 49483-718',
     category: 'Digestive',
@@ -363,6 +370,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b107-asa-81-120',
+    // KYR5-d — zbar on DailyMed 481r-timely-120s.jpg.
+    barcode: '349483181128',
+    upcNote:
+      'UPC-A 349483181128 is the code under the bars on DailyMed image 481r-timely-120s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=1acc8c1a-c746-4635-800c-de1ad758fce0&name=481r-timely-120s.jpg).',
     productName:
       'Timely Aspirin 81 mg delayed-release tablets, 120 count, NDC 49483-481',
     category: 'Pain & Fever',
@@ -383,6 +394,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b107-asa-81-300',
+    // KYR5-d — zbar on DailyMed 481R-Low dose Aspirin 81mg-300T-Label.jpg.
+    barcode: '349483481310',
+    upcNote:
+      'UPC-A 349483481310 is the code under the bars on DailyMed image 481R-Low dose Aspirin 81mg-300T-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=1acc8c1a-c746-4635-800c-de1ad758fce0&name=481R-Low+dose+Aspirin+81mg-300T-Label.jpg).',
     productName:
       'Timely Aspirin 81 mg delayed-release tablets, 300 count, NDC 49483-481',
     category: 'Pain & Fever',
@@ -463,6 +478,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b107-bisa-5-25',
+    // KYR5-d — zbar on DailyMed 14RBLISTER.jpg.
+    barcode: '349483003529',
+    upcNote:
+      'UPC-A 349483003529 is the code under the bars on DailyMed image 14RBLISTER.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=e0a9f8d9-660b-431c-8043-6d8ec81f98e5&name=14RBLISTER.jpg).',
     productName:
       'Timely Bisacodyl 5 mg delayed-release tablets, 25 count, NDC 49483-003',
     category: 'Digestive',
@@ -604,7 +623,30 @@ if (_ROWS.some((r) => r.brand !== 'TIME-Cap Labs')) throw new Error('batch107 br
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch107 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch107 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'timecap-b107-asa-81-120': '349483181128',
+  'timecap-b107-asa-81-300': '349483481310',
+  'timecap-b107-bisa-5-25': '349483003529',
+  'timecap-b107-eso-20-42': '349483718416',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 4) throw new Error('batch107 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch107 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch107 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch107 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch107 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('timecap-b107-'))) {
   throw new Error('batch107 ids must use timecap-b107-');
 }

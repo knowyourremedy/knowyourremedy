@@ -126,6 +126,8 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
+  upcNote?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -174,7 +176,8 @@ function expand(d: Compact): RatingRecord {
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
-    sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`],
+    barcode: d.barcode,
+    sourcesGeneral: [`${d.cite}${d.upcNote ? ` ${d.upcNote}` : ''} — ${UNVERIFIED_NOTE}`],
   });
 }
 
@@ -410,6 +413,10 @@ function pack(
 const COMPACT: Compact[] = [
   pack({
     id: 'timecap-b106-ibu-200-softgel',
+    // KYR5-d — zbar on DailyMed 700T-Ibuprofen-240ct-label.jpg.
+    barcode: '349483700398',
+    upcNote:
+      'UPC-A 349483700398 is the code under the bars on DailyMed image 700T-Ibuprofen-240ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=059cb22f-f6db-5d03-e063-6294a90a9ec1&name=700T-Ibuprofen-240ct-label.jpg).',
     productName: 'Timely Ibuprofen 200 mg mini liquid-filled capsules, 240 count, NDC 49483-700',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -436,6 +443,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-softgel-80',
+    // KYR5-d — zbar on DailyMed 610T-timely-ibusgc-label-80s.jpg.
+    barcode: '349483133806',
+    upcNote:
+      'UPC-A 349483133806 is the code under the bars on DailyMed image 610T-timely-ibusgc-label-80s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7c51cf3-9e95-f8d0-e053-2995a90a7371&name=610T-timely-ibusgc-label-80s.jpg).',
     productName: 'Timely Ibuprofen 200 mg liquid-filled capsules, 80 count, NDC 49483-133',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -449,6 +460,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-softgel-120',
+    // KYR5-d — zbar on DailyMed 610T-timely-ibusgc-label-120s.jpg.
+    barcode: '349483133127',
+    upcNote:
+      'UPC-A 349483133127 is the code under the bars on DailyMed image 610T-timely-ibusgc-label-120s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7c51cf3-9e95-f8d0-e053-2995a90a7371&name=610T-timely-ibusgc-label-120s.jpg).',
     productName: 'Timely Ibuprofen 200 mg liquid-filled capsules, 120 count, NDC 49483-133',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -462,6 +477,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-softgel-160',
+    // KYR5-d — zbar on DailyMed 610T-timely-160ct-label.jpg.
+    barcode: '349483133370',
+    upcNote:
+      'UPC-A 349483133370 is the code under the bars on DailyMed image 610T-timely-160ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7c51cf3-9e95-f8d0-e053-2995a90a7371&name=610T-timely-160ct-label.jpg).',
     productName: 'Timely Ibuprofen 200 mg liquid-filled capsules, 160 count, NDC 49483-133',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -475,6 +494,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-softgel-200',
+    // KYR5-d — zbar on DailyMed 610T-timely-ibusgc-200s.jpg.
+    barcode: '349483133202',
+    upcNote:
+      'UPC-A 349483133202 is the code under the bars on DailyMed image 610T-timely-ibusgc-200s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7c51cf3-9e95-f8d0-e053-2995a90a7371&name=610T-timely-ibusgc-200s.jpg).',
     productName: 'Timely Ibuprofen 200 mg liquid-filled capsules, 200 count, NDC 49483-133',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -488,6 +511,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-softgel-300',
+    // KYR5-d — zbar on DailyMed 610T-TCL-Ibuprofen 300mg-bottle label-ct300.jpg.
+    barcode: '349483133318',
+    upcNote:
+      'UPC-A 349483133318 is the code under the bars on DailyMed image 610T-TCL-Ibuprofen 300mg-bottle label-ct300.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=c7c51cf3-9e95-f8d0-e053-2995a90a7371&name=610T-TCL-Ibuprofen+300mg-bottle+label-ct300.jpg).',
     productName: 'Timely Ibuprofen 200 mg liquid-filled capsules, 300 count, NDC 49483-133',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-softgel',
@@ -501,6 +528,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-loratadine-10',
+    // KYR5-d — zbar on DailyMed loratadine-label-365s.jpg.
+    barcode: '349483732658',
+    upcNote:
+      'UPC-A 349483732658 is the code under the bars on DailyMed image loratadine-label-365s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=2c80ea14-8490-4d26-e063-6294a90aecf0&name=loratadine-label-365s.jpg).',
     productName: 'Timely Loratadine tablets USP 10 mg, 365 count, NDC 49483-732',
     category: 'Allergies',
     formulaId: 'timecap-b106-loratadine-10',
@@ -520,6 +551,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-cetirizine-10',
+    // KYR5-d — zbar on DailyMed cetirizine-hcl-100s-label.jpg.
+    barcode: '349483692013',
+    upcNote:
+      'UPC-A 349483692013 is the code under the bars on DailyMed image cetirizine-hcl-100s-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=d78223ba-80d5-47f8-e053-2a95a90aebdb&name=cetirizine-hcl-100s-label.jpg).',
     productName: 'Timely Cetirizine hydrochloride tablets USP 10 mg, 100 count, NDC 49483-692',
     category: 'Allergies',
     formulaId: 'timecap-b106-cetirizine-10',
@@ -546,6 +581,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-cetirizine-10-365',
+    // KYR5-d — zbar on DailyMed 692R-Timely-Cetirizine-bottle-label-365s.jpg.
+    barcode: '349483692655',
+    upcNote:
+      'UPC-A 349483692655 is the code under the bars on DailyMed image 692R-Timely-Cetirizine-bottle-label-365s.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=d78223ba-80d5-47f8-e053-2a95a90aebdb&name=692R-Timely-Cetirizine-bottle-label-365s.jpg).',
     productName: 'Timely Cetirizine hydrochloride tablets USP 10 mg, 365 count, NDC 49483-692',
     category: 'Allergies',
     formulaId: 'timecap-b106-cetirizine-10',
@@ -559,6 +598,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-cetirizine-10-500',
+    // KYR5-d — zbar on DailyMed 692R-timely-cetirizine10mg-500ct-label.jpg.
+    barcode: '349483692501',
+    upcNote:
+      'UPC-A 349483692501 is the code under the bars on DailyMed image 692R-timely-cetirizine10mg-500ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=d78223ba-80d5-47f8-e053-2a95a90aebdb&name=692R-timely-cetirizine10mg-500ct-label.jpg).',
     productName: 'Timely Cetirizine hydrochloride tablets USP 10 mg, 500 count, NDC 49483-692',
     category: 'Allergies',
     formulaId: 'timecap-b106-cetirizine-10',
@@ -572,6 +615,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-cetirizine-5',
+    // KYR5-d — zbar on DailyMed 682R-timely-cetirizine10mg-100ct-label.jpg.
+    barcode: '349483682014',
+    upcNote:
+      'UPC-A 349483682014 is the code under the bars on DailyMed image 682R-timely-cetirizine10mg-100ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=dfbddafb-9455-5805-e053-2a95a90ad0d9&name=682R-timely-cetirizine10mg-100ct-label.jpg).',
     productName: 'Timely Cetirizine hydrochloride tablets USP 5 mg, 100 count, NDC 49483-682',
     category: 'Allergies',
     formulaId: 'timecap-b106-cetirizine-5',
@@ -585,6 +632,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-500',
+    // KYR5-d — zbar on DailyMed 252R 100 CT LABEL.jpg.
+    barcode: '349483252019',
+    upcNote:
+      'UPC-A 349483252019 is the code under the bars on DailyMed image 252R 100 CT LABEL.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=eb4f7437-7fd8-4083-b50f-80b0d115bec9&name=252R+100+CT+LABEL.jpg).',
     productName: 'Timely Extra Strength Acetaminophen tablets 500 mg, 100 count, NDC 49483-252',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-500',
@@ -623,6 +674,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-650-er',
+    // KYR5-d — zbar on DailyMed apap-100s-label.jpg.
+    barcode: '349483699012',
+    upcNote:
+      'UPC-A 349483699012 is the code under the bars on DailyMed image apap-100s-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd4d0ad4-7206-94c8-e053-2a95a90aaa14&name=apap-100s-label.jpg).',
     productName: 'Timely Acetaminophen extended-release caplets 650 mg, 100 count, NDC 49483-699',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-650-er',
@@ -636,6 +691,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-650-er-24',
+    // KYR5-d — zbar on DailyMed 699R-Timely-APAPArthritis-24s-IFC.jpg.
+    barcode: '349483699425',
+    upcNote:
+      'UPC-A 349483699425 is the code under the bars on DailyMed image 699R-Timely-APAPArthritis-24s-IFC.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd4d0ad4-7206-94c8-e053-2a95a90aaa14&name=699R-Timely-APAPArthritis-24s-IFC.jpg).',
     productName: 'Timely Acetaminophen extended-release caplets 650 mg, 24 count, NDC 49483-699',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-650-er',
@@ -662,6 +721,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-650-er-400',
+    // KYR5-d — zbar on DailyMed apap-400s-label.jpg.
+    barcode: '349483699401',
+    upcNote:
+      'UPC-A 349483699401 is the code under the bars on DailyMed image apap-400s-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd4d0ad4-7206-94c8-e053-2a95a90aaa14&name=apap-400s-label.jpg).',
     productName: 'Timely Acetaminophen extended-release caplets 650 mg, 400 count, NDC 49483-699',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-650-er',
@@ -675,6 +738,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-650-er-muscle-50',
+    // KYR5-d — zbar on DailyMed 704R-Timely-APAPMuscle-50s-IFC.jpg.
+    barcode: '349483704051',
+    upcNote:
+      'UPC-A 349483704051 is the code under the bars on DailyMed image 704R-Timely-APAPMuscle-50s-IFC.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd4d0ad4-7206-94c8-e053-2a95a90aaa14&name=704R-Timely-APAPMuscle-50s-IFC.jpg).',
     productName: 'Timely Acetaminophen extended-release caplets 650 mg, 50 count, NDC 49483-704',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-650-er',
@@ -688,6 +755,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-apap-650-er-225',
+    // KYR5-d — zbar on DailyMed 699R-Timely-APAPArthritis-225s-Label.jpg.
+    barcode: '349483699265',
+    upcNote:
+      'UPC-A 349483699265 is the code under the bars on DailyMed image 699R-Timely-APAPArthritis-225s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=cd4d0ad4-7206-94c8-e053-2a95a90aaa14&name=699R-Timely-APAPArthritis-225s-Label.jpg).',
     productName: 'Timely Acetaminophen extended-release caplets 650 mg, 225 count, NDC 49483-699',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-apap-650-er',
@@ -743,6 +814,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-famotidine-20-100',
+    // KYR5-d — zbar on DailyMed timely-famo-100.jpg.
+    barcode: '349483720013',
+    upcNote:
+      'UPC-A 349483720013 is the code under the bars on DailyMed image timely-famo-100.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=fe25e1e2-7158-6fe0-e053-6394a90a3bb1&name=timely-famo-100.jpg).',
     productName: 'Timely Famotidine tablets USP 20 mg, 100 count, NDC 49483-720',
     category: 'Digestive',
     formulaId: 'timecap-b106-famotidine-20',
@@ -842,6 +917,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-guaif-er-600',
+    // KYR5-d — zbar on DailyMed guaifenesin-600mg-500ct-label.jpg.
+    barcode: '349483723502',
+    upcNote:
+      'UPC-A 349483723502 is the code under the bars on DailyMed image guaifenesin-600mg-500ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=10c42869-7df0-3046-e063-6394a90aa679&name=guaifenesin-600mg-500ct-label.jpg).',
     productName: 'TIME-Cap Labs Guaifenesin extended-release tablets 600 mg, 500 count, NDC 49483-723',
     category: 'Cold & Flu',
     formulaId: 'timecap-b106-guaif-er-600',
@@ -861,6 +940,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-guaif-er-1200',
+    // KYR5-d — zbar on DailyMed guaifenesin-1200mg-70ct-label.jpg.
+    barcode: '349483724707',
+    upcNote:
+      'UPC-A 349483724707 is the code under the bars on DailyMed image guaifenesin-1200mg-70ct-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=10c42869-7df0-3046-e063-6394a90aa679&name=guaifenesin-1200mg-70ct-label.jpg).',
     productName: 'TIME-Cap Labs Guaifenesin extended-release tablets 1200 mg, 70 count, NDC 49483-724',
     category: 'Cold & Flu',
     formulaId: 'timecap-b106-guaif-er-600',
@@ -880,6 +963,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-brown',
+    // KYR5-d — zbar on DailyMed 601R-Timely-Ibuprofen Tablet-100s-Label.jpg.
+    barcode: '349483601015',
+    upcNote:
+      'UPC-A 349483601015 is the code under the bars on DailyMed image 601R-Timely-Ibuprofen Tablet-100s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f58d35f9-e44b-417b-98ce-0766b537cd2f&name=601R-Timely-Ibuprofen+Tablet-100s-Label.jpg).',
     productName: 'TIME-Cap Labs Ibuprofen 200 mg brown film-coated tablets, 100 count, NDC 49483-601',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-brown',
@@ -906,6 +993,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-brown-tab-200',
+    // KYR5-d — zbar on DailyMed 601R-Timely-Ibuprofen Tablets-200s-Label.jpg.
+    barcode: '349483114171',
+    upcNote:
+      'UPC-A 349483114171 is the code under the bars on DailyMed image 601R-Timely-Ibuprofen Tablets-200s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f58d35f9-e44b-417b-98ce-0766b537cd2f&name=601R-Timely-Ibuprofen+Tablets-200s-Label.jpg).',
     productName: 'TIME-Cap Labs Ibuprofen 200 mg brown film-coated tablets, 200 count, NDC 49483-601',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-brown',
@@ -945,6 +1036,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-brown-cap-50',
+    // KYR5-d — zbar on DailyMed 600R-Timely-Ibuprofen Caplet-50s-Label.jpg.
+    barcode: '349483600056',
+    upcNote:
+      'UPC-A 349483600056 is the code under the bars on DailyMed image 600R-Timely-Ibuprofen Caplet-50s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f58d35f9-e44b-417b-98ce-0766b537cd2f&name=600R-Timely-Ibuprofen+Caplet-50s-Label.jpg).',
     productName: 'TIME-Cap Labs Ibuprofen 200 mg brown film-coated caplets, 50 count, NDC 49483-600',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-brown',
@@ -958,6 +1053,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-brown-cap-100',
+    // KYR5-d — zbar on DailyMed 600R-Timely-Ibuprofen Caplet-100s-Label.jpg.
+    barcode: '349483600018',
+    upcNote:
+      'UPC-A 349483600018 is the code under the bars on DailyMed image 600R-Timely-Ibuprofen Caplet-100s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f58d35f9-e44b-417b-98ce-0766b537cd2f&name=600R-Timely-Ibuprofen+Caplet-100s-Label.jpg).',
     productName: 'TIME-Cap Labs Ibuprofen 200 mg brown film-coated caplets, 100 count, NDC 49483-600',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-brown',
@@ -971,6 +1070,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-ibu-200-brown-cap-500',
+    // KYR5-d — zbar on DailyMed 600R-Timely-Ibuprofen Caplet-500s-Label.jpg.
+    barcode: '349483600506',
+    upcNote:
+      'UPC-A 349483600506 is the code under the bars on DailyMed image 600R-Timely-Ibuprofen Caplet-500s-Label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=f58d35f9-e44b-417b-98ce-0766b537cd2f&name=600R-Timely-Ibuprofen+Caplet-500s-Label.jpg).',
     productName: 'TIME-Cap Labs Ibuprofen 200 mg brown film-coated caplets, 500 count, NDC 49483-600',
     category: 'Pain & Fever',
     formulaId: 'timecap-b106-ibu-200-brown',
@@ -1041,6 +1144,10 @@ const COMPACT: Compact[] = [
   }),
   pack({
     id: 'timecap-b106-senna-s',
+    // KYR5-d — zbar on DailyMed 192R-Timely-SennaS-1000-bottle-label.jpg.
+    barcode: '349483081107',
+    upcNote:
+      'UPC-A 349483081107 is the code under the bars on DailyMed image 192R-Timely-SennaS-1000-bottle-label.jpg (https://dailymed.nlm.nih.gov/dailymed/image.cfm?setid=dc491692-8d3a-4ccd-a17d-4c630f122595&name=192R-Timely-SennaS-1000-bottle-label.jpg).',
     productName: 'Timely Senna-Time S tablets, docusate sodium 50 mg / sennosides 8.6 mg, 1000 count, NDC 49483-081',
     category: 'Digestive',
     formulaId: 'timecap-b106-senna-s',
@@ -1172,7 +1279,52 @@ if (_ROWS.some((r) => r.brand !== 'TIME-Cap Labs')) throw new Error('batch106 br
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch106 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch106 must not invent a UPC');
+const _UPC: Record<string, string> = {
+  'timecap-b106-apap-500': '349483252019',
+  'timecap-b106-apap-650-er': '349483699012',
+  'timecap-b106-apap-650-er-225': '349483699265',
+  'timecap-b106-apap-650-er-24': '349483699425',
+  'timecap-b106-apap-650-er-400': '349483699401',
+  'timecap-b106-apap-650-er-muscle-50': '349483704051',
+  'timecap-b106-cetirizine-10': '349483692013',
+  'timecap-b106-cetirizine-10-365': '349483692655',
+  'timecap-b106-cetirizine-10-500': '349483692501',
+  'timecap-b106-cetirizine-5': '349483682014',
+  'timecap-b106-famotidine-20-100': '349483720013',
+  'timecap-b106-guaif-er-1200': '349483724707',
+  'timecap-b106-guaif-er-600': '349483723502',
+  'timecap-b106-ibu-200-brown': '349483601015',
+  'timecap-b106-ibu-200-brown-cap-100': '349483600018',
+  'timecap-b106-ibu-200-brown-cap-50': '349483600056',
+  'timecap-b106-ibu-200-brown-cap-500': '349483600506',
+  'timecap-b106-ibu-200-brown-tab-200': '349483114171',
+  'timecap-b106-ibu-200-softgel': '349483700398',
+  'timecap-b106-ibu-200-softgel-120': '349483133127',
+  'timecap-b106-ibu-200-softgel-160': '349483133370',
+  'timecap-b106-ibu-200-softgel-200': '349483133202',
+  'timecap-b106-ibu-200-softgel-300': '349483133318',
+  'timecap-b106-ibu-200-softgel-80': '349483133806',
+  'timecap-b106-loratadine-10': '349483732658',
+  'timecap-b106-senna-s': '349483081107',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 26) throw new Error('batch106 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch106 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch106 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch106 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch106 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('timecap-b106-'))) {
   throw new Error('batch106 ids must use timecap-b106-');
 }
