@@ -103,3 +103,4 @@ export { BATCH102_KYR6_HEALTHA2Z_TOKEN_BACKFILL_4 } from './batch102-kyr6-health
 export { BATCH103_KYR6_HEALTHA2Z_TOKEN_BACKFILL_5 } from './batch103-kyr6-healtha2z-token-backfill-5';
 export { BATCH104_KYR6_HEALTHA2Z_NO_OI_AIMODE } from './batch104-kyr6-healtha2z-no-oi-aimode';
 export { BATCH105_KYR6_HEALTHA2Z_THREE_GUMMIES } from './batch105-kyr6-healtha2z-three-gummies';
+export { BATCH106_KYR6B_AMAZON_3P_TIME_CAP } from './batch106-kyr6b-amazon-3p-time-cap';
