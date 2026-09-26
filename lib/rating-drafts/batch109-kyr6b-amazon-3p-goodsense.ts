@@ -32,7 +32,7 @@
 // SKIPPED 144 (no_OI 0 / OUT 144) /
 // REFUSED 141.
 // Search grade: Clean 23 / Caution 3 / Avoid 94.
-// UPC count: 22.
+// UPC count: 25.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -1060,6 +1060,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-migraine-formula-46cf-100',
+    barcode: '301130374789',
+    upcNote:
+      'UPC-A 301130374789 is the upc field on the Thrifty White product JSON for Good Sense Migraine Relief Caplets - 100 ct (https://shop.thriftywhite.com/good-sense-migraine-relief-caplets-100-ct/).',
     productName: 'GoodSense Migraine formula (Acetaminophen 250mg / Aspirin 250mg / Caffeine 65mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-migraine-formula-46cf',
@@ -1714,6 +1717,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-aller-ease-5c71',
+    barcode: '301130571393',
+    upcNote:
+      'UPC-A 301130571393 is the upc field on the Thrifty White product JSON for Good Sense Aller-Ease 24 Hour Allergy Tablets, 180 mg - 30 ct (https://shop.thriftywhite.com/good-sense-aller-ease-24-hour-allergy-tablets-180-mg-30-ct/).',
     productName: 'GoodSense Aller ease (Fexofenadine Hydrochloride 180mg), 30 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-aller-ease-5c71',
@@ -1729,6 +1735,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-aller-ease-5c71-45',
+    barcode: '370030129072',
+    upcNote:
+      'UPC-A 370030129072 is the upc field on the Thrifty White product JSON for Good Sense Aller-Ease Tablets, 180 mg - 45 ct (https://shop.thriftywhite.com/good-sense-aller-ease-tablets-180-mg-45-ct/).',
     productName: 'GoodSense Aller ease (Fexofenadine Hydrochloride 180mg), 45 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-aller-ease-5c71',
@@ -2424,6 +2433,9 @@ const _UPC: Record<string, string> = {
   'goodsense-b109-pain-relief-3644-100': '301130484785',
   'goodsense-b109-pain-relief-ac08-100': '070030130329',
   'goodsense-b109-fiber-laxative-147-981f': '846036009163',
+  'goodsense-b109-migraine-formula-46cf-100': '301130374789',
+  'goodsense-b109-aller-ease-5c71': '301130571393',
+  'goodsense-b109-aller-ease-5c71-45': '370030129072',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -2431,7 +2443,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 22) throw new Error('batch109 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 25) throw new Error('batch109 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
