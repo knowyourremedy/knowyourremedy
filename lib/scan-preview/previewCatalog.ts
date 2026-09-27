@@ -1139,6 +1139,36 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Row UPC 016500554356 is the 180-count. Retrieved faces are a 70-count
   // bottle or a thumbnail. Do not glue the 70-count.
   'flintstones-complete-gummies-palm': 'Flintstones',
+  // Vitamins night run 2026-09-27 3:00 AM PT batch 2.
+  // Tried the SKU. No matching official 3D pack face. No standalone
+  // official mark file. Do not stay letters.
+  // Gummy Vites spans 70-count 027917006239 and 190-count 027917016290.
+  'lil-critters-gummy-vites-palm': "L'il Critters",
+  // No barcode. Live B12 softgels are 90-count 031604027322 and
+  // 150-count 031604029166. Do not glue one count.
+  'nature-made-b12-softgels-clear': 'Nature Made',
+  // Row UPC 096619926626 is Fish Oil 1000 mg, 400 softgels.
+  // The Walmart face on that UPC page is Wild Alaskan 1400 mg.
+  // Do not glue it.
+  'kirkland-fish-oil-softgels-clear': 'Kirkland',
+  // Row UPC 031604029265 is a 270-count 2-pack. Live singles are
+  // other barcodes. Do not glue a single or the 2-pack.
+  'nature-made-fish-oil-1200-clear': 'Nature Made',
+  // Row UPC 076314302970 is Super Orange 10-count. The retrieved
+  // face is the 30-count box. Do not glue it.
+  'emergen-c-original': 'Emergen-C',
+  // Row name is plain B12 tablets. UPC 031604027315 is the
+  // Time Release 160-count. Do not glue that bottle.
+  'nature-made-b12-tablets': 'Nature Made',
+  // No barcode. Live drops are 90-drop 088395126109 and
+  // 365-drop 088395012600. Do not glue one size.
+  'carlson-kids-super-daily-d3-drops': 'Carlson',
+  // Two barcodes (768990567803 and 768990027239). nordic.com 403.
+  // Do not glue one size.
+  'nordic-naturals-childrens-dha-liquid': 'Nordic Naturals',
+  // No barcode. Live bottles are 60-count and 120-count
+  // (027917014340). Do not glue one count.
+  'lil-critters-omega3-gummies-lecithin': "L'il Critters",
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -3922,6 +3952,64 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Bottle only. Front asset is a badge composite — not used.
   'smartypants-kids-plus-multi-omegas': catalogShot(
     'smartypants-kids-plus-multi-omegas.jpg',
+  ),
+  // Vitamins night run 2026-09-27 3:00 AM PT batch 2.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // One A Day Kids Multi Gummies, 180 count, UPC 016500604419.
+  // Not the adult tablets.
+  'one-a-day-kids-multi-gummies-palm': catalogShot(
+    'one-a-day-kids-multi-gummies-palm.jpg',
+  ),
+  // Kirkland Signature Children's Complete Multivitamin Gummies,
+  // 320 gummies, UPC 096619637997. Not the adult Daily Multi.
+  'kirkland-childrens-multi-gummies-palm': catalogShot(
+    'kirkland-childrens-multi-gummies-palm.jpg',
+  ),
+  // Equate Kids Multivitamin Gummies, 190 count, UPC 681131057172.
+  // Not the adult Complete Multi.
+  'equate-kids-multi-gummies-palm': catalogShot(
+    'equate-kids-multi-gummies-palm.jpg',
+  ),
+  // MaryRuth's Organic Kids Multivitamin Gummies, UPC 810104620291.
+  // Not the liquid morning multi.
+  'maryruth-organic-kids-multi-gummies-sunflower': catalogShot(
+    'maryruth-organic-kids-multi-gummies-sunflower.jpg',
+  ),
+  // Flintstones Complete chewable tablets, 180 count, UPC 016500576082.
+  // Not the gummies.
+  'flintstones-complete-chewables-dyed': catalogShot(
+    'flintstones-complete-chewables-dyed.jpg',
+  ),
+  // Nature Made Vitamin D3 2000 IU softgels, 250 count, UPC 031604026783.
+  // naturemade.com variant image. Not the 90-count (031604025854).
+  // No color added.
+  'nature-made-d3-softgels-clear': catalogShot(
+    'nature-made-d3-softgels-clear.jpg',
+  ),
+  // Kirkland Signature Extra Strength D3, 2000 IU, 600 softgels,
+  // UPC 096619393916. Not a 50 mcg tablet.
+  'kirkland-d3-softgels-clear': catalogShot('kirkland-d3-softgels-clear.jpg'),
+  // Nature Made Vitamin C 1000 mg tablets, 100 count, UPC 031604014896.
+  // naturemade.com variant image. Not the 300-count (031604017804).
+  'nature-made-vitamin-c-1000-tablets': catalogShot(
+    'nature-made-vitamin-c-1000-tablets.jpg',
+  ),
+  // vitafusion Power C Extra Strength, 92 gummies, UPC 027917260099.
+  // Bottle only. Not the 150-count Power C (027917019208).
+  // Hero with floating badges was not used.
+  'vitafusion-power-c-gummies-no-seed-oil': catalogShot(
+    'vitafusion-power-c-gummies-no-seed-oil.jpg',
+  ),
+  // Nature Made Burp-Less Fish Oil 1200 mg, 200 softgels, UPC 031604026578.
+  // naturemade.com variant image. Not the 60-count. Not the standard
+  // (non-burp-less) fish oil.
+  'nature-made-fish-oil-1200-burpless': catalogShot(
+    'nature-made-fish-oil-1200-burpless.jpg',
+  ),
+  // Carlson Kid's Vitamin C Gummies, UPC 088395490309. carlsonlabs.com.
+  // Not the adult Vitamin C gummies.
+  'carlson-kids-vitamin-c-gummies': catalogShot(
+    'carlson-kids-vitamin-c-gummies.jpg',
   ),
 };
 
@@ -9405,6 +9493,78 @@ assertBrandTextTile(
   'flintstones-complete-gummies-palm',
   'Flintstones',
   'Flintstones',
+);
+assertExactCarton(
+  'one-a-day-kids-multi-gummies-palm',
+  'One A Day',
+  'one-a-day-kids-multi-gummies-palm.jpg',
+);
+assertExactCarton(
+  'kirkland-childrens-multi-gummies-palm',
+  'Kirkland Signature',
+  'kirkland-childrens-multi-gummies-palm.jpg',
+);
+assertExactCarton(
+  'equate-kids-multi-gummies-palm',
+  'Equate',
+  'equate-kids-multi-gummies-palm.jpg',
+);
+assertExactCarton(
+  'maryruth-organic-kids-multi-gummies-sunflower',
+  "MaryRuth's",
+  'maryruth-organic-kids-multi-gummies-sunflower.jpg',
+);
+assertExactCarton(
+  'flintstones-complete-chewables-dyed',
+  'Flintstones',
+  'flintstones-complete-chewables-dyed.jpg',
+);
+assertExactCarton(
+  'nature-made-d3-softgels-clear',
+  'Nature Made',
+  'nature-made-d3-softgels-clear.jpg',
+);
+assertExactCarton(
+  'kirkland-d3-softgels-clear',
+  'Kirkland Signature',
+  'kirkland-d3-softgels-clear.jpg',
+);
+assertExactCarton(
+  'nature-made-vitamin-c-1000-tablets',
+  'Nature Made',
+  'nature-made-vitamin-c-1000-tablets.jpg',
+);
+assertExactCarton(
+  'vitafusion-power-c-gummies-no-seed-oil',
+  'vitafusion',
+  'vitafusion-power-c-gummies-no-seed-oil.jpg',
+);
+assertExactCarton(
+  'nature-made-fish-oil-1200-burpless',
+  'Nature Made',
+  'nature-made-fish-oil-1200-burpless.jpg',
+);
+assertExactCarton(
+  'carlson-kids-vitamin-c-gummies',
+  'Carlson',
+  'carlson-kids-vitamin-c-gummies.jpg',
+);
+assertBrandTextTile('lil-critters-gummy-vites-palm', "L'il Critters", "L'il Critters");
+assertBrandTextTile('nature-made-b12-softgels-clear', 'Nature Made', 'Nature Made');
+assertBrandTextTile('kirkland-fish-oil-softgels-clear', 'Kirkland Signature', 'Kirkland');
+assertBrandTextTile('nature-made-fish-oil-1200-clear', 'Nature Made', 'Nature Made');
+assertBrandTextTile('emergen-c-original', 'Emergen-C', 'Emergen-C');
+assertBrandTextTile('nature-made-b12-tablets', 'Nature Made', 'Nature Made');
+assertBrandTextTile('carlson-kids-super-daily-d3-drops', 'Carlson', 'Carlson');
+assertBrandTextTile(
+  'nordic-naturals-childrens-dha-liquid',
+  'Nordic Naturals',
+  'Nordic Naturals',
+);
+assertBrandTextTile(
+  'lil-critters-omega3-gummies-lecithin',
+  "L'il Critters",
+  "L'il Critters",
 );
 {
   const dgOil = previewOverlayImage({
