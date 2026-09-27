@@ -824,6 +824,29 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // MegaFood One Daily spans 60 / 90 / 180 (051494101513 / 101520 / 101537).
   // Do not glue one count. Official MegaFood mark already on disk.
   'megafood-one-daily': brandMark('megafood-mark.png'),
+  // Vitamins night run 2026-09-27 5:30 AM PT batch 1.
+  // Tried the SKU. No single matching carton. Official marks. Per-id only.
+  // Not a text tile. Pure Encapsulations D3 spans four pack barcodes.
+  'pure-encapsulations-d3-5000': brandMark('pure-encapsulations-mark.png'),
+  // Ultimate Omega lemon spans five pack barcodes. Do not glue one count.
+  // Wordmark cropped from the nordicpro.com header (consumer line).
+  'nordic-naturals-ultimate-omega-lemon': brandMark('nordic-naturals-mark.png'),
+  // O.N.E. Multivitamin spans 766298023137 / 114996 / 017136.
+  'pure-encapsulations-one-multivitamin': brandMark('pure-encapsulations-mark.png'),
+  // Magnesium (glycinate) spans 766298001746 / 001753 / 007571.
+  'pure-encapsulations-magnesium-glycinate': brandMark('pure-encapsulations-mark.png'),
+  // Designs for Health Magnesium Glycinate Complex spans three barcodes.
+  // Wordmark is the designsforhealth.com header logo.
+  'dfh-magnesium-glycinate-complex': brandMark('designs-for-health-mark.png'),
+  // Ascorbic Acid 1000 mg spans 766298000190 / 000206.
+  'pure-encapsulations-ascorbic-acid-1000': brandMark('pure-encapsulations-mark.png'),
+  // Junior Nutrients UPC 766298013176. No verified 3D carton retrieved.
+  'pure-encapsulations-junior-nutrients': brandMark('pure-encapsulations-mark.png'),
+  // Magnesium (citrate) spans 766298001722 / 001739. Not the glycinate.
+  'pure-encapsulations-magnesium-citrate': brandMark('pure-encapsulations-mark.png'),
+  // Thorne Magnesium Glycinate capsules span 693749015338 / 015680.
+  // Not the bisglycinate powder.
+  'thorne-magnesium-glycinate-capsules': brandMark('thorne-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4011,6 +4034,50 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'carlson-kids-vitamin-c-gummies': catalogShot(
     'carlson-kids-vitamin-c-gummies.jpg',
   ),
+  // Vitamins night run 2026-09-27 5:30 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // L'il Critters Immune C Plus Zinc & Vitamin D, 190 gummies.
+  // lilcritters.com barcode 027917019451. Not the echinacea listing.
+  'lil-critters-immune-c-zinc-d-gummies-palm': catalogShot(
+    'lil-critters-immune-c-zinc-d-gummies-palm.jpg',
+  ),
+  // Nordic Naturals Children's DHA Gummy Chews, 30 count, tropical punch.
+  // UPC 768990017094. Not the liquid DHA.
+  'nordic-naturals-childrens-dha-gummies-canola': catalogShot(
+    'nordic-naturals-childrens-dha-gummies-canola.jpg',
+  ),
+  // Seeking Health Optimal Multivitamin, 240 capsules, UPC 810007520940.
+  // The live seekinghealth.com bottle is barcode 798295548993. Do not glue it.
+  'seeking-health-optimal-multivitamin': catalogShot(
+    'seeking-health-optimal-multivitamin.jpg',
+  ),
+  // Thorne Vitamin C as Ascorbic Acid, 60 capsules, UPC 693749012498.
+  // Not the flavonoids capsule. Not the buffered powder.
+  'thorne-vitamin-c-ascorbic-acid': catalogShot(
+    'thorne-vitamin-c-ascorbic-acid.jpg',
+  ),
+  // Thorne Magnesium Bisglycinate powder, UPC 693749006442.
+  // Not the glycinate capsules.
+  'thorne-magnesium-bisglycinate-powder': catalogShot(
+    'thorne-magnesium-bisglycinate-powder.jpg',
+  ),
+  // We Heart Nutrition bottles. Brand-site barcodes match the rows.
+  'we-heart-wholesome-womens-multi': catalogShot(
+    'we-heart-wholesome-womens-multi.jpg',
+  ),
+  'we-heart-wholesome-womens-multi-40': catalogShot(
+    'we-heart-wholesome-womens-multi-40.jpg',
+  ),
+  'we-heart-wholesome-mens-multi': catalogShot(
+    'we-heart-wholesome-mens-multi.jpg',
+  ),
+  'we-heart-wholesome-iron': catalogShot('we-heart-wholesome-iron.jpg'),
+  'we-heart-wholesome-magnesium-glycinate': catalogShot(
+    'we-heart-wholesome-magnesium-glycinate.jpg',
+  ),
+  'we-heart-wholesome-postnatal': catalogShot(
+    'we-heart-wholesome-postnatal.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5219,7 +5286,6 @@ assertExactCarton('nasalcrom', 'NasalCrom', 'nasalcrom.jpg');
   }
 }
 assertLetterOnly('thorne-basic-prenatal', 'Thorne');
-assertLetterOnly('we-heart-wholesome-womens-multi', 'We Heart Nutrition');
 // Unattempted other-aisle rows stay letters. Marks are per-id only.
 // tylenol-pm-es / advil-pm-liquigels attempted in Sleep night batch 1
 assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
@@ -9565,6 +9631,106 @@ assertBrandTextTile(
   'lil-critters-omega3-gummies-lecithin',
   "L'il Critters",
   "L'il Critters",
+);
+assertExactCarton(
+  'lil-critters-immune-c-zinc-d-gummies-palm',
+  "L'il Critters",
+  'lil-critters-immune-c-zinc-d-gummies-palm.jpg',
+);
+assertExactCarton(
+  'nordic-naturals-childrens-dha-gummies-canola',
+  'Nordic Naturals',
+  'nordic-naturals-childrens-dha-gummies-canola.jpg',
+);
+assertBrandMark(
+  'pure-encapsulations-d3-5000',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'nordic-naturals-ultimate-omega-lemon',
+  'Nordic Naturals',
+  'nordic-naturals-mark.png',
+);
+assertExactCarton(
+  'seeking-health-optimal-multivitamin',
+  'Seeking Health',
+  'seeking-health-optimal-multivitamin.jpg',
+);
+assertBrandMark(
+  'pure-encapsulations-one-multivitamin',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'pure-encapsulations-magnesium-glycinate',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'dfh-magnesium-glycinate-complex',
+  'Designs for Health',
+  'designs-for-health-mark.png',
+);
+assertBrandMark(
+  'pure-encapsulations-ascorbic-acid-1000',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'pure-encapsulations-junior-nutrients',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertExactCarton(
+  'thorne-vitamin-c-ascorbic-acid',
+  'Thorne',
+  'thorne-vitamin-c-ascorbic-acid.jpg',
+);
+assertExactCarton(
+  'thorne-magnesium-bisglycinate-powder',
+  'Thorne',
+  'thorne-magnesium-bisglycinate-powder.jpg',
+);
+assertBrandMark(
+  'pure-encapsulations-magnesium-citrate',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark(
+  'thorne-magnesium-glycinate-capsules',
+  'Thorne',
+  'thorne-mark.png',
+);
+assertExactCarton(
+  'we-heart-wholesome-womens-multi',
+  'We Heart Nutrition',
+  'we-heart-wholesome-womens-multi.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-womens-multi-40',
+  'We Heart Nutrition',
+  'we-heart-wholesome-womens-multi-40.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-mens-multi',
+  'We Heart Nutrition',
+  'we-heart-wholesome-mens-multi.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-iron',
+  'We Heart Nutrition',
+  'we-heart-wholesome-iron.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-magnesium-glycinate',
+  'We Heart Nutrition',
+  'we-heart-wholesome-magnesium-glycinate.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-postnatal',
+  'We Heart Nutrition',
+  'we-heart-wholesome-postnatal.jpg',
 );
 {
   const dgOil = previewOverlayImage({
