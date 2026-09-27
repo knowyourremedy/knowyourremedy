@@ -32,7 +32,7 @@
 // SKIPPED 144 (no_OI 0 / OUT 144) /
 // REFUSED 141.
 // Search grade: Clean 23 / Caution 3 / Avoid 94.
-// UPC count: 25.
+// UPC count: 37.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -283,6 +283,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-3059-24',
+    barcode: '070030132071',
+    upcNote:
+      'UPC-A 070030132071 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Tablets, 200 mg - 24 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-tablets-200-mg-24-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 24 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-3059',
@@ -328,6 +331,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-3059-50',
+    barcode: '070030139971',
+    upcNote:
+      'UPC-A 070030139971 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Tablets, 200 mg - 50 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-tablets-200-mg-50-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 50 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-3059',
@@ -388,6 +394,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-3059-100',
+    barcode: '070030139964',
+    upcNote:
+      'UPC-A 070030139964 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Tablets, 200 mg - 100 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-tablets-200-mg-100-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-3059',
@@ -448,6 +457,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-3059-500',
+    barcode: '070030132460',
+    upcNote:
+      'UPC-A 070030132460 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Tablets Brown, 200 mg - 500 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-tablets-brown-200-mg-500-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 500 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-3059',
@@ -526,6 +538,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-9a03',
+    barcode: '070030131654',
+    upcNote:
+      'UPC-A 070030131654 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Caplets, 200 mg - 50 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-caplets-200-mg-50-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 50 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-9a03',
@@ -541,6 +556,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-ibuprofen-9a03-100',
+    barcode: '070030131357',
+    upcNote:
+      'UPC-A 070030131357 is the gtin12 field on the Thrifty White product JSON for Good Sense Ibuprofen Caplets Brown, 200 mg - 100 ct (https://shop.thriftywhite.com/good-sense-ibuprofen-caplets-brown-200-mg-100-ct/).',
     productName: 'GoodSense Ibuprofen (Ibuprofen 200mg), 100 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-ibuprofen-9a03',
@@ -862,6 +880,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-allergy-relief-78a7-30',
+    barcode: '370030146673',
+    upcNote:
+      'UPC-A 370030146673 is the upc field on the Thrifty White product JSON for Good Sense Allergy Relief Tablets, 10 mg - 30 ct (https://shop.thriftywhite.com/good-sense-allergy-relief-tablets-10-mg-30-ct/).',
     productName: 'GoodSense Allergy relief (Loratadine 10mg), 30 count',
     category: 'Allergies',
     formulaId: 'goodsense-b109-allergy-relief-78a7',
@@ -1318,6 +1339,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-clear-lax-da39-238-g',
+    barcode: '370030149155',
+    upcNote:
+      'UPC-A 370030149155 is the upc field on the Thrifty White product JSON for Good Sense ClearLax Laxative Powder - 8.3 oz (https://shop.thriftywhite.com/good-sense-clearlax-laxative-powder-8-3-oz/).',
     productName: 'GoodSense Clear Lax (Polyethylene Glycol 3350 17g), 238 g',
     category: 'Digestive',
     formulaId: 'goodsense-b109-clear-lax-da39',
@@ -1348,6 +1372,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-clear-lax-da39-510-g',
+    barcode: '370030149162',
+    upcNote:
+      'UPC-A 370030149162 is the upc field on the Thrifty White product JSON for Good Sense ClearLax Laxative Powder - 17.9 oz (https://shop.thriftywhite.com/good-sense-clearlax-laxative-powder-17-9-oz/).',
     productName: 'GoodSense Clear Lax (Polyethylene Glycol 3350 17g), 510 g',
     category: 'Digestive',
     formulaId: 'goodsense-b109-clear-lax-da39',
@@ -1654,6 +1681,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-3644-50',
+    barcode: '070030131340',
+    upcNote:
+      'UPC-A 070030131340 is the gtin12 field on the Thrifty White product JSON for Good Sense Pain Relief XS Caplets, 500 mg - 50 ct (https://shop.thriftywhite.com/good-sense-pain-relief-xs-caplets-500-mg-50-ct/).',
     productName: 'GoodSense Pain Relief (Acetaminophen 500mg), 50 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-3644',
@@ -1798,6 +1828,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-pain-relief-f26d',
+    barcode: '301130227719',
+    upcNote:
+      'UPC-A 301130227719 is the upc field on the Thrifty White product JSON for Good Sense Pain Relief XS Easy Tablets, 500 mg - 50 ct (https://shop.thriftywhite.com/good-sense-pain-relief-xs-easy-tablets-500-mg-50-ct/).',
     productName: 'GoodSense Pain relief (Acetaminophen 500mg), 50 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b109-pain-relief-f26d',
@@ -2002,6 +2035,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b109-clearlax-0a9b',
+    barcode: '301131023020',
+    upcNote:
+      'UPC-A 301131023020 is the UPC field on the xeteor product page for GoodSense ClearLax Orange Flavor 8.3 oz, one bottle (https://xeteor.com/goodsense-clearlax-polyethylene-glycol-3350-orange-flavor-8-3-oz-miralax/).',
     productName: 'GoodSense Clearlax (Polyethylene Glycol 3350 17g), 238 g',
     category: 'Digestive',
     formulaId: 'goodsense-b109-clearlax-0a9b',
@@ -2436,6 +2472,18 @@ const _UPC: Record<string, string> = {
   'goodsense-b109-migraine-formula-46cf-100': '301130374789',
   'goodsense-b109-aller-ease-5c71': '301130571393',
   'goodsense-b109-aller-ease-5c71-45': '370030129072',
+  'goodsense-b109-ibuprofen-3059-24': '070030132071',
+  'goodsense-b109-ibuprofen-3059-50': '070030139971',
+  'goodsense-b109-ibuprofen-3059-100': '070030139964',
+  'goodsense-b109-ibuprofen-3059-500': '070030132460',
+  'goodsense-b109-ibuprofen-9a03': '070030131654',
+  'goodsense-b109-ibuprofen-9a03-100': '070030131357',
+  'goodsense-b109-allergy-relief-78a7-30': '370030146673',
+  'goodsense-b109-clear-lax-da39-238-g': '370030149155',
+  'goodsense-b109-clear-lax-da39-510-g': '370030149162',
+  'goodsense-b109-pain-relief-3644-50': '070030131340',
+  'goodsense-b109-pain-relief-f26d': '301130227719',
+  'goodsense-b109-clearlax-0a9b': '301131023020',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -2443,7 +2491,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 25) throw new Error('batch109 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 37) throw new Error('batch109 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

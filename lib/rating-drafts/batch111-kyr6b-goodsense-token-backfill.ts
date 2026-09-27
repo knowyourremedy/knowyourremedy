@@ -27,7 +27,7 @@
 // REFUSED 54.
 // 75 of the 129 setids lock fully.
 // Search grade: Clean 1 / Caution 9 / Avoid 96.
-// UPC count: 9.
+// UPC count: 11.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -316,6 +316,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-nicotine-aef5',
+    barcode: '301130422251',
+    upcNote:
+      'UPC-A 301130422251 is the upc field on the Thrifty White product JSON for Good Sense Nicotine Gum Mint, 4 mg Mint - 110 pc (https://shop.thriftywhite.com/good-sense-nicotine-gum-mint-4-mg-mint-110-pc/).',
     productName: 'GoodSense Nicotine (Nicotine 4mg), 110 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-nicotine-aef5',
@@ -712,6 +715,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-nicotine-75f0',
+    barcode: '301130206257',
+    upcNote:
+      'UPC-A 301130206257 is the upc field on the Thrifty White product JSON for Good Sense Nicotine Gum Mint, 2 mg Mint - 110 pc (https://shop.thriftywhite.com/good-sense-nicotine-gum-mint-2-mg-mint-110-pc/).',
     productName: 'GoodSense Nicotine (Nicotine 2mg), 110 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b111-nicotine-75f0',
@@ -1971,6 +1977,8 @@ const _UPC: Record<string, string> = {
   'goodsense-b111-nighttime-0317-237-ml': '301130459349',
   'goodsense-b111-tussin-dm-712a': '301131725269',
   'goodsense-b111-nicotine-7972-50': '301130170718',
+  'goodsense-b111-nicotine-aef5': '301130422251',
+  'goodsense-b111-nicotine-75f0': '301130206257',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1978,7 +1986,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 9) throw new Error('batch111 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 11) throw new Error('batch111 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

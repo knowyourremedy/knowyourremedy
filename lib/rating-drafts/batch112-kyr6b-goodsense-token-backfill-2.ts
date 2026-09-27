@@ -30,7 +30,7 @@
 // REFUSED 12.
 // 42 of the 54 setids lock fully.
 // Search grade: Clean 0 / Caution 12 / Avoid 33.
-// UPC count: 8.
+// UPC count: 11.
 // TALLY is asserted at the bottom.
 
 import type {
@@ -374,6 +374,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-aspirin-334c',
+    barcode: '070030136086',
+    upcNote:
+      'UPC-A 070030136086 is the gtin12 field on the Thrifty White product JSON for Good Sense Aspirin Low Dose Chewable Tablets, Cherry - 36 ct (https://shop.thriftywhite.com/good-sense-aspirin-low-dose-chewable-tablets-cherry-36-ct/).',
     productName: 'GoodSense Aspirin (Aspirin 81mg), 36 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b112-aspirin-334c',
@@ -494,6 +497,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-aspirin-16c3',
+    barcode: '070030132392',
+    upcNote:
+      'UPC-A 070030132392 is the gtin12 field on the Thrifty White product JSON for Good Sense Low Dose Chewable Aspirin Tablets, 81mg Orange - 36 ct (https://shop.thriftywhite.com/good-sense-low-dose-chewable-aspirin-tablets-81mg-orange-36-ct/).',
     productName: 'GoodSense Aspirin (Aspirin 81mg), 36 count',
     category: 'Pain & Fever',
     formulaId: 'goodsense-b112-aspirin-16c3',
@@ -647,6 +653,9 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b112-omeprazole-c62e',
+    barcode: '301130915746',
+    upcNote:
+      'UPC-A 301130915746 is the upc field on the Thrifty White product JSON for Good Sense Omeprazole Acid Reducer Tablets, 20 mg - 14 ct (https://shop.thriftywhite.com/good-sense-omeprazole-acid-reducer-tablets-20-mg-14-ct/).',
     productName: 'GoodSense Omeprazole (Omeprazole 20mg), 14 count',
     category: 'Digestive',
     formulaId: 'goodsense-b112-omeprazole-c62e',
@@ -1023,6 +1032,9 @@ const _UPC: Record<string, string> = {
   'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb': '846036008456',
   'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb': '846036008463',
   'goodsense-b112-sleep-time-c1b4-355-ml': '301130186405',
+  'goodsense-b112-aspirin-334c': '070030136086',
+  'goodsense-b112-aspirin-16c3': '070030132392',
+  'goodsense-b112-omeprazole-c62e': '301130915746',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1030,7 +1042,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 8) throw new Error('batch112 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 11) throw new Error('batch112 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
