@@ -1,7 +1,7 @@
 // DRAFT / not verified / batch 93 KYR6 Amazon 3P A+Health.
 // Methodology v1.6 + MAIN §5. Harm-first. No invented grades. No invented OI.
 // No invented UPCs. One empty row later received a DailyMed bar
-// decode only (dye-free ibuprofen 400 mini softgels 369458513211).
+// decode only (dye-free ibuprofen 400 mini softgels 369452513811).
 // Founder owns final Avoid vs Caution vs Clean.
 //
 // A+Health only. The carton word is a+health. DailyMed labeler is Bionpharma
@@ -313,7 +313,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b93-ibu-dyefree-400',
-    barcode: '369458513211',
+    barcode: '369452513811',
     productName: 'A+Health Dye-Free Pain Relief Ibuprofen 200 mg, 400 Mini Softgels',
     category: 'Pain & Fever',
     formulaId: 'aplushealth-b93-ibu-dyefree',
@@ -751,7 +751,7 @@ if (_ROWS.some((r) => r.brand !== 'A+Health')) throw new Error('batch93 brand dr
 const _UPC: Record<string, string> = {
   'aplushealth-b93-dph-25-600': '369452444313',
   'aplushealth-b93-iodine-tincture-30': '369452484364',
-  'aplushealth-b93-ibu-dyefree-400': '369458513211',
+  'aplushealth-b93-ibu-dyefree-400': '369452513811',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
