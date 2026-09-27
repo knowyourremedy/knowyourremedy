@@ -809,6 +809,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Do not inherit the Swim-Ear bottle. Different brand.
   'topcare-swimmers-ear': brandMark('topcare-mark.png'),
   'topcare-ear-relief': brandMark('topcare-mark.png'),
+  // First Aid night run 2026-09-27 12:30 AM PT batch 2.
+  // Tried the SKU. DailyMed faces are flat labels or dielines, not 3D
+  // cartons. Official A+Health mark already on disk. Per-id only.
+  // The two itch gels share a formulaId. Do not glue one face onto the other.
+  'aplushealth-b93-iodine-tincture-30': brandMark('aplus-health-mark.png'),
+  'aplushealth-b94-povidone-iodine': brandMark('aplus-health-mark.png'),
+  'aplushealth-b94-hemorrhoidal': brandMark('aplus-health-mark.png'),
+  'aplushealth-b94-itch-cream': brandMark('aplus-health-mark.png'),
+  'aplushealth-b94-zinc-oxide': brandMark('aplus-health-mark.png'),
+  'aplushealth-b95-itch-gel': brandMark('aplus-health-mark.png'),
+  'aplushealth-b95-itch-gel-496': brandMark('aplus-health-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3833,6 +3844,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Docosanol 10%, 2 g, pack of 2. Not a single tube.
   'welmate-b88-docosanol': catalogShot('welmate-b88-docosanol.jpg'),
+  // First Aid night run 2026-09-27 12:30 AM PT batch 2.
+  // Exact US pack faces. Per-id only.
+  // Adapalene Gel 0.1%, 1.6 oz single (UPC 373581000203).
+  // Not the wellspringmeds.com 2-pack.
+  'welmate-b91-adapalene-01-gel': catalogShot(
+    'welmate-b91-adapalene-01-gel.jpg',
+  ),
+  // Ear wax removal kit, carbamide peroxide 6.5%, 0.5 fl oz, UPC 369168488687.
+  // a2z-life.com FPA189. Kit includes the bulb. Not drops-only.
+  'healtha2z-b96-earwax-6-5': catalogShot('healtha2z-b96-earwax-6-5.jpg'),
+  // Lidocaine 5% rectal cream, 28 g, UPC 369168484023. a2z-life.com FPA182.
+  // Not a 4% pain cream.
+  'healtha2z-b96-lidocaine-rectal-5': catalogShot(
+    'healtha2z-b96-lidocaine-rectal-5.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3856,6 +3882,8 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'dg-health-triple-abx-oil-blend',
   // Same butenafine cream. The 3-pack is a different carton.
   'welmate-b88-butenafine-3pack',
+  // Same itch-gel inactives. NDC 69452-496 is a different carton from 376.
+  'aplushealth-b95-itch-gel-496',
 ]);
 
 export function previewOverlayImage(
@@ -9204,6 +9232,56 @@ assertBrandMark(
 );
 assertBrandMark('topcare-swimmers-ear', 'TopCare', 'topcare-mark.png');
 assertBrandMark('topcare-ear-relief', 'TopCare', 'topcare-mark.png');
+assertExactCarton(
+  'welmate-b91-adapalene-01-gel',
+  'WELMATE',
+  'welmate-b91-adapalene-01-gel.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-earwax-6-5',
+  'HealthA2Z',
+  'healtha2z-b96-earwax-6-5.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-lidocaine-rectal-5',
+  'HealthA2Z',
+  'healtha2z-b96-lidocaine-rectal-5.jpg',
+);
+assertBrandMark(
+  'aplushealth-b93-iodine-tincture-30',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b94-povidone-iodine',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b94-hemorrhoidal',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b94-itch-cream',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b94-zinc-oxide',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b95-itch-gel',
+  'A+Health',
+  'aplus-health-mark.png',
+);
+assertBrandMark(
+  'aplushealth-b95-itch-gel-496',
+  'A+Health',
+  'aplus-health-mark.png',
+);
 {
   const dgOil = previewOverlayImage({
     id: 'dg-health-triple-abx-oil-blend',
