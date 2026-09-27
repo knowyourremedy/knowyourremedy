@@ -18,6 +18,8 @@
 // Formaldehyde-releasers stay Avoid. Gummy vegetable oil and gummy
 // coconut oil stay Avoid.
 // No UPC attached. No GTIN-12 was read under barcode bars.
+// One empty row later received a Thrifty White spec UPC only
+// (regular-strength bismuth chew tablets 30 count 846036009156).
 //
 // TALLY (unverified drafts in THIS file): 12 rows —
 // Clean 0 / Caution 4 / Avoid 8.
@@ -172,6 +174,7 @@ type Compact = {
   verdict: RatingRecord['verdict'];
   note: string;
   cite: string;
+  barcode?: string;
 };
 
 function expand(d: Compact): RatingRecord {
@@ -217,6 +220,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
+    barcode: d.barcode,
     honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
@@ -381,6 +385,7 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b110-regular-strength-stomach-relief-122-30f8',
+    barcode: '846036009156',
     productName: 'GoodSense Regular strength Stomach Relief 122 (Bismuth Subsalicylate 262mg), 30 count',
     category: 'Digestive',
     formulaId: 'goodsense-b110-regular-strength-stomach-relief-122-30f8',
@@ -592,7 +597,27 @@ if (BATCH110_REFUSED.length !== 129) throw new Error('batch110 REFUSED drift');
 if (_ROWS.some((r) => r.recordStatus !== 'unverified')) {
   throw new Error('batch110 recordStatus must stay unverified');
 }
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch110 unexpected barcode');
+const _UPC: Record<string, string> = {
+  'goodsense-b110-regular-strength-stomach-relief-122-30f8': '846036009156',
+};
+function _upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+if (Object.keys(_UPC).length !== 1) throw new Error('batch110 UPC allowlist drift');
+for (const record of _ROWS) {
+  const expected = _UPC[record.id];
+  if (expected) {
+    if (record.barcode !== expected) throw new Error(`batch110 UPC attach drift on ${record.id}`);
+    if (!_upcOk(record.barcode ?? '')) throw new Error(`batch110 barcode failed UPC-A check on ${record.id}`);
+  } else if (record.barcode) {
+    throw new Error(`batch110 unexpected barcode on ${record.id}`);
+  }
+}
+const _upcValues = Object.values(_UPC);
+if (new Set(_upcValues).size !== _upcValues.length) throw new Error('batch110 duplicate UPC');
 if (_ROWS.some((r) => !r.id.startsWith('goodsense-b110-'))) {
   throw new Error('batch110 ids must use goodsense-b110-');
 }

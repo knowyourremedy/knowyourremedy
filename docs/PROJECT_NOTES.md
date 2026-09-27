@@ -1736,3 +1736,4 @@ ON MAIN / scan-miss + Search-tile lock / no UI build / STOPPED
 ON MAIN / formulaId dry-run / no merge / STOPPED
 ON MAIN / formula-tile collapse + closed sizes row spec / no UI / no merge / STOPPED
 ON MAIN / collapse A / rows kept / STOPPED
+“Do not edit batches 70–113” = no panel / grade / OI / formulaId / name rewrite. Empty barcode field attach IS allowed on those batches. Value pack / 24×N stay empty. Named-dry stay closed. Factory #121–#221 stay closed.

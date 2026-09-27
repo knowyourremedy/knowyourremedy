@@ -1,6 +1,8 @@
 // DRAFT / not verified / batch 93 KYR6 Amazon 3P A+Health.
 // Methodology v1.6 + MAIN §5. Harm-first. No invented grades. No invented OI.
-// No invented UPCs. Founder owns final Avoid vs Caution vs Clean.
+// No invented UPCs. One empty row later received a DailyMed bar
+// decode only (dye-free ibuprofen 400 mini softgels 369452513811).
+// Founder owns final Avoid vs Caution vs Clean.
 //
 // A+Health only. The carton word is a+health. DailyMed labeler is Bionpharma
 // Inc. (NDC 69452), not the TIME-Cap leftover. TIME-Cap-branded, HealthA2Z,
@@ -311,6 +313,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'aplushealth-b93-ibu-dyefree-400',
+    barcode: '369452513811',
     productName: 'A+Health Dye-Free Pain Relief Ibuprofen 200 mg, 400 Mini Softgels',
     category: 'Pain & Fever',
     formulaId: 'aplushealth-b93-ibu-dyefree',
@@ -748,6 +751,7 @@ if (_ROWS.some((r) => r.brand !== 'A+Health')) throw new Error('batch93 brand dr
 const _UPC: Record<string, string> = {
   'aplushealth-b93-dph-25-600': '369452444313',
   'aplushealth-b93-iodine-tincture-30': '369452484364',
+  'aplushealth-b93-ibu-dyefree-400': '369452513811',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -755,7 +759,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 2) throw new Error('batch93 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 3) throw new Error('batch93 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {

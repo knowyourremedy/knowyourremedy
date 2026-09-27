@@ -1,6 +1,8 @@
 // DRAFT / not verified / batch 99 KYR6 HealthA2Z leftover-token backfill 2.
 // Methodology v1.6 + MAIN §5 after c6270f6 (Sept 25, 2026 HealthA2Z leftover
 // maps). Harm-first. No invented grades. No invented OI. No invented UPCs.
+// One empty row later received an Allegiant catalog UPC only
+// (diphenhydramine 50 mg 250 softgels FPA028 369168410039).
 // Founder owns final Avoid vs Caution vs Clean.
 //
 // ONE write. HealthA2Z only. Unlocks batch96 / batch97 / batch98 REFUSED
@@ -678,6 +680,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: 'healtha2z-b99-dph-50-softgel-250',
+    barcode: '369168410039',
     productName: 'HealthA2Z Diphenhydramine HCl 50 mg sleep softgels, 250 count, NDC 69168-410-03 (FPA028/FP1082)',
     category: 'Sleep',
     formulaId: DPH_50,
@@ -970,6 +973,7 @@ const _UPC: Record<string, string> = {
   'healtha2z-b99-dph-25-softgel': '369168431966',
   'healtha2z-b99-dph-25-softgel-250': '369168431034',
   'healtha2z-b99-dph-50-softgel': '369168410985',
+  'healtha2z-b99-dph-50-softgel-250': '369168410039',
   'healtha2z-b99-famotidine-20-443': '369168443327',
   'healtha2z-b99-famotidine-20-443-225': '369168443525',
   'healtha2z-b99-famotidine-20-443-365': '369168443990',
@@ -983,7 +987,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 12) throw new Error('batch99 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 13) throw new Error('batch99 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
