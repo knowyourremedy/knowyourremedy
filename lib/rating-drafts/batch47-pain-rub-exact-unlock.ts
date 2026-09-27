@@ -6,7 +6,10 @@
 // ONE write. Pain & Fever only (pain rubs live with swallow SKUs).
 // Do NOT invent a Topical aisle. Do NOT move Arniflora off First Aid.
 // recordStatus is 'unverified' on every row. Internal keys only:
-// clean | caution | avoid. Do NOT invent UPCs / barcodes. Pack sizes
+// clean | caution | avoid. Do NOT invent UPCs / barcodes. Two empty
+// rows later received a retailer spec UPC only (Icy Hot lidocaine
+// roll-on 041167171530; Aspercreme rosemary-mint cream 041167056509).
+// Pack sizes
 // of the same name+form+inactives share formulaId. Same OI+actives
 // share formulaId. Form is labeled on cleanAlternatives, not a hard
 // filter (§6). Not wired into Clean Picks UI. No live Clean Picks
@@ -577,6 +580,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Icy Hot Lidocaine No-Mess Roll On',
     brand: 'Icy Hot',
     category: PAIN_FEVER,
+    barcode: '041167171530',
     formulaId: ID.icyLidoRoll,
     audience: ADULT,
     minAge: 12,
@@ -1039,6 +1043,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     productName: 'Aspercreme Lidocaine with Rosemary and Mint',
     brand: 'Aspercreme',
     category: PAIN_FEVER,
+    barcode: '041167056509',
     formulaId: ID.asperRosLiq,
     audience: ADULT,
     minAge: 12,
@@ -1475,6 +1480,8 @@ const BATCH47_CATCHUP_BARCODES: Record<string, string> = {
   [ID.icyBalm]: '041167079003',
   [ID.asperEuc]: '041167056608',
   [ID.asperRosLiq]: '041167059876',
+  [ID.icyLidoRoll]: '041167171530',
+  [ID.asperRosCream]: '041167056509',
 };
 for (const record of BATCH47_PAIN_RUB_EXACT_UNLOCK) {
   const expected = BATCH47_CATCHUP_BARCODES[record.id];
