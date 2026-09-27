@@ -1,6 +1,8 @@
 // DRAFT / not verified / batch 111 KYR6-b GoodSense token backfill.
 // Methodology v1.6 + MAIN §5 through the Sept 26, 2026 GoodSense stamp.
 // Harm-first. No invented grades. No invented OI. No invented UPCs.
+// One empty row later received a DailyMed bar decode only
+// (SF honey lemon cough drops 25 count 846036009477).
 // No new token strings. Founder owns final Avoid vs Caution vs Clean.
 //
 // Scope is ONLY the 129 SKUs still REFUSED in PR #347 (batch110).
@@ -1285,6 +1287,7 @@ const PACKS: Compact[] = [
   },
   {
     id: 'goodsense-b111-sf-honey-lemon-cough-drops-c59c',
+    barcode: '846036009477',
     productName: 'GoodSense SF Honey Lemon Cough Drops (Menthol 7.6mg), 25 count',
     category: 'Cold & Flu',
     formulaId: 'goodsense-b111-sf-honey-lemon-cough-drops-c59c',
@@ -1979,6 +1982,7 @@ const _UPC: Record<string, string> = {
   'goodsense-b111-nicotine-7972-50': '301130170718',
   'goodsense-b111-nicotine-aef5': '301130422251',
   'goodsense-b111-nicotine-75f0': '301130206257',
+  'goodsense-b111-sf-honey-lemon-cough-drops-c59c': '846036009477',
 };
 function _upcOk(code: string): boolean {
   if (!/^\d{12}$/.test(code)) return false;
@@ -1986,7 +1990,7 @@ function _upcOk(code: string): boolean {
   for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
-if (Object.keys(_UPC).length !== 11) throw new Error('batch111 UPC allowlist drift');
+if (Object.keys(_UPC).length !== 12) throw new Error('batch111 UPC allowlist drift');
 for (const record of _ROWS) {
   const expected = _UPC[record.id];
   if (expected) {
