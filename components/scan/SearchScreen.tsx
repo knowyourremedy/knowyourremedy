@@ -13,6 +13,7 @@ import {
   matchesSearchCategory,
   previewOverlayImage,
 } from '@/lib/scan-preview/previewCatalog';
+import { collapseSearchTiles, searchTileTitle } from '@/lib/scan-preview/searchTileCollapse';
 
 const BRAND_GREEN = '#2d4a3e';
 const CANVAS = '#faf7f2';
@@ -44,12 +45,6 @@ function matchesQuery(record: RatingRecord, query: string): boolean {
   if (!query) return true;
   const haystack = `${record.productName} ${record.brand}`.toLowerCase();
   return haystack.includes(query);
-}
-
-function sortByName(records: RatingRecord[]): RatingRecord[] {
-  return [...records].sort((a, b) =>
-    a.productName.localeCompare(b.productName, undefined, { sensitivity: 'base' }),
-  );
 }
 
 function rowImage(record: RatingRecord): ProductImage | undefined {
@@ -112,6 +107,7 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
   const chipRowRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const drafts = useMemo(() => loadedPreviewDrafts(), []);
+  const tiles = useMemo(() => collapseSearchTiles(drafts), [drafts]);
   const categories = useMemo(() => loadedPreviewCategories(), []);
   const normalized = query.trim().toLowerCase();
   const categoryOn = selectedCategory != null;
@@ -121,18 +117,24 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
   const results = useMemo(() => {
     if (showTiles) return null;
 
-    let rows = drafts;
+    let rows = tiles;
     if (selectedCategory) {
-      rows = rows.filter((record) => matchesSearchCategory(record, selectedCategory));
+      rows = rows.filter((tile) =>
+        tile.packs.some((record) => matchesSearchCategory(record, selectedCategory)),
+      );
     }
     if (categoryOn && selectedVerdicts.length > 0) {
-      rows = rows.filter((record) => selectedVerdicts.includes(record.verdict));
+      rows = rows.filter((tile) =>
+        tile.packs.some((record) => selectedVerdicts.includes(record.verdict)),
+      );
     }
     if (normalized) {
-      rows = rows.filter((record) => matchesQuery(record, normalized));
+      rows = rows.filter((tile) =>
+        tile.packs.some((record) => matchesQuery(record, normalized)),
+      );
     }
-    return sortByName(rows);
-  }, [categoryOn, drafts, normalized, selectedCategory, selectedVerdicts, showTiles]);
+    return rows;
+  }, [categoryOn, normalized, selectedCategory, selectedVerdicts, showTiles, tiles]);
 
   function toggleCategory(name: string) {
     const next = selectedCategory === name ? null : name;
@@ -350,11 +352,14 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
               onScroll={(event) => onStateChange({ listScrollTop: event.currentTarget.scrollTop })}
               style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: '0.9rem', flex: 1, minHeight: 0, overflow: 'auto' }}
             >
-              {visibleResults.map((record) => {
+              {visibleResults.map((tile) => {
+                const record = selectedVerdicts.length > 0
+                  ? tile.packs.find((pack) => selectedVerdicts.includes(pack.verdict)) ?? tile.record
+                  : tile.record;
                 const color = VERDICT_COLORS[record.verdict];
                 return (
                   <button
-                    key={record.id}
+                    key={tile.record.id}
                     type="button"
                     onClick={() => onOpenProduct(record.id)}
                     style={{
@@ -382,7 +387,7 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
                         lineHeight: 1.25,
                         letterSpacing: '-0.01em',
                       }}>
-                        {record.productName}
+                        {searchTileTitle(tile)}
                       </div>
                       <div style={{
                         fontSize: '0.76rem',

@@ -11,6 +11,7 @@ import {
   ingredientWhy,
   PENDING_DAILYMED_REVIEW,
   loadPreviewCabinetIds,
+  loadedPreviewDrafts,
   matchCleanAlternatives,
   NO_CLEANER_MATCH_COPY,
   previewOverlayImage,
@@ -20,6 +21,7 @@ import {
   type IngredientWhy,
   type MatchedCleanAlternative,
 } from '@/lib/scan-preview/previewCatalog';
+import { packSizeLine, packsOnSearchTile } from '@/lib/scan-preview/searchTileCollapse';
 
 const BRAND_GREEN = '#2d4a3e';
 const BLUE_B = '#4a6781';
@@ -637,6 +639,63 @@ function ActivesBlock({ record }: { record: RatingRecord }) {
   );
 }
 
+function SizesRow({ packs }: { packs: RatingRecord[] }) {
+  const [open, setOpen] = useState(false);
+  if (packs.length < 2) return null;
+  const count = packs.length;
+
+  return (
+    <div style={{ marginTop: 2 }}>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        aria-label={`${count} sizes, same inactives`}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 3,
+          width: 'auto',
+          maxWidth: '100%',
+          background: 'none',
+          border: 'none',
+          padding: '0.1rem 0',
+          cursor: 'pointer',
+          fontFamily: 'inherit',
+          textAlign: 'left',
+        }}
+      >
+        <span style={{
+          fontSize: '0.7rem',
+          fontWeight: 600,
+          color: '#3a433e',
+          lineHeight: 1.2,
+        }}>
+          {count} sizes · same inactives
+        </span>
+        <Chevron open={open} size={12} />
+      </button>
+      {open && (
+        <div>
+          {packs.map((pack) => (
+            <div
+              key={pack.id}
+              style={{
+                fontSize: '0.68rem',
+                color: '#8a938e',
+                lineHeight: 1.35,
+                padding: '0.08rem 0',
+              }}
+            >
+              {packSizeLine(pack)}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function InactiveIngredientsLabel() {
   return (
     <div style={{ margin: '0.85rem 0 0.15rem' }}>
@@ -751,6 +810,10 @@ export default function PostScanProductScreen({
   const saved = savedProp ?? savedLocal;
 
   const inactives = useMemo(() => sortedInactives(record), [record]);
+  const sizePacks = useMemo(
+    () => packsOnSearchTile(loadedPreviewDrafts(), record.id),
+    [record.id],
+  );
   const label = VERDICT_LABELS[record.verdict];
   const color = VERDICT_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
@@ -904,6 +967,7 @@ export default function PostScanProductScreen({
               {record.brand}
             </div>
             <ActivesBlock key={`actives-${record.id}`} record={record} />
+            <SizesRow packs={sizePacks} />
           </div>
         </div>
 
