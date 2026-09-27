@@ -820,6 +820,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aplushealth-b94-zinc-oxide': brandMark('aplus-health-mark.png'),
   'aplushealth-b95-itch-gel': brandMark('aplus-health-mark.png'),
   'aplushealth-b95-itch-gel-496': brandMark('aplus-health-mark.png'),
+  // Vitamins night run 2026-09-27 3:00 AM PT batch 1.
+  // MegaFood One Daily spans 60 / 90 / 180 (051494101513 / 101520 / 101537).
+  // Do not glue one count. Official MegaFood mark already on disk.
+  'megafood-one-daily': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -1105,6 +1109,36 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Do not stay letters.
   'assured-hydrocortisone-cream': 'Assured',
   'assured-lidocaine-pain-gel': 'Assured',
+  // Vitamins night run 2026-09-27 3:00 AM PT batch 1.
+  // Tried the SKU. No matching official 3D pack face. No standalone
+  // official mark file. Do not stay letters. 365 never uses the letter 3.
+  // Kirkland TiO2 twin has no barcode. Do not glue the no-TiO2 500-ct bottle.
+  'kirkland-daily-multi-tio2': 'Kirkland',
+  // One A Day Men's Health Formula row UPC 016500586944 is the 100-count.
+  // Retrieved Walmart and Walgreens faces are the 200-count bottle.
+  'one-a-day-mens-coated': 'One A Day',
+  // OLLY Men's Multi canola row has no barcode. Live men's bottles are
+  // 858158005022 and 840160203749. Do not glue one of those.
+  'olly-mens-multi-canola': 'OLLY',
+  // Women's canola row UPC 852933008031 is the 65-serving variant.
+  // The variant image reads as a 90-gummy bottle (the 45-serving
+  // 858158005015 face). Do not glue that bottle.
+  'olly-womens-multi-canola': 'OLLY',
+  // Row UPC 031604028411 is a 90-count 12-pack. Live single on
+  // naturemade.com is 150-count barcode 031604041724. Do not glue it.
+  'nature-made-multi-gummies': 'Nature Made',
+  // Two pack barcodes. Do not glue one count. No standalone 365 mark.
+  '365-adult-once-daily-multi': '365',
+  '365-mens-one-daily-multi': '365',
+  // Single UPCs. No clean official 3D face retrieved.
+  '365-calcium-d3-tio2': '365',
+  '365-cal-mag-zinc-d3-tio2': '365',
+  // No barcode. Live apple-berry bottle is UPC 810104623513. Draft
+  // color is grape skin extract. Do not glue the apple-berry bottle.
+  'maryruth-kids-morning-liquid-multi': "MaryRuth's",
+  // Row UPC 016500554356 is the 180-count. Retrieved faces are a 70-count
+  // bottle or a thumbnail. Do not glue the 70-count.
+  'flintstones-complete-gummies-palm': 'Flintstones',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -3858,6 +3892,36 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Not a 4% pain cream.
   'healtha2z-b96-lidocaine-rectal-5': catalogShot(
     'healtha2z-b96-lidocaine-rectal-5.jpg',
+  ),
+  // Vitamins night run 2026-09-27 3:00 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Kirkland Signature Daily Multi, 500 tablets, UPC 096619416073.
+  // Current no-TiO2 bottle. Not the TiO2 twin.
+  'kirkland-daily-multi-no-tio2': catalogShot(
+    'kirkland-daily-multi-no-tio2.jpg',
+  ),
+  // Nature Made Multi with Iron, 130 tablets, UPC 031604025182.
+  // naturemade.com. Not a no-iron bottle.
+  'nature-made-multi-complete': catalogShot('nature-made-multi-complete.jpg'),
+  // Centrum Adults, 200 tablets, UPC 305734451747. centrum.com.
+  // Not Silver. Not the gummies.
+  'centrum-adults-coated': catalogShot('centrum-adults-coated.jpg'),
+  // Centrum Silver Adults 50+, 80 tablets, UPC 305734463818.
+  // Not the 220-count centrum.com hero.
+  'centrum-silver-adults': catalogShot('centrum-silver-adults.jpg'),
+  // Equate Complete Multivitamin Adults, 130 tablets, UPC 681131119771.
+  // Not the kids gummies.
+  'equate-complete-multi': catalogShot('equate-complete-multi.jpg'),
+  // One A Day Women's Complete, 100 tablets, UPC 016500595809.
+  // Not the 200-count face. Not Men's.
+  'one-a-day-womens-coated': catalogShot('one-a-day-womens-coated.jpg'),
+  // vitafusion MultiVites, 150 gummies, UPC 027917023335.
+  // Not the live 120-count bottle (027917004068).
+  'vitafusion-multivites-palm': catalogShot('vitafusion-multivites-palm.jpg'),
+  // SmartyPants Kids Plus Multi & Omegas, 60 count, UPC 817053023968.
+  // Bottle only. Front asset is a badge composite — not used.
+  'smartypants-kids-plus-multi-omegas': catalogShot(
+    'smartypants-kids-plus-multi-omegas.jpg',
   ),
 };
 
@@ -9281,6 +9345,66 @@ assertBrandMark(
   'aplushealth-b95-itch-gel-496',
   'A+Health',
   'aplus-health-mark.png',
+);
+assertExactCarton(
+  'kirkland-daily-multi-no-tio2',
+  'Kirkland Signature',
+  'kirkland-daily-multi-no-tio2.jpg',
+);
+assertExactCarton(
+  'nature-made-multi-complete',
+  'Nature Made',
+  'nature-made-multi-complete.jpg',
+);
+assertExactCarton(
+  'centrum-adults-coated',
+  'Centrum',
+  'centrum-adults-coated.jpg',
+);
+assertExactCarton(
+  'centrum-silver-adults',
+  'Centrum',
+  'centrum-silver-adults.jpg',
+);
+assertExactCarton(
+  'equate-complete-multi',
+  'Equate',
+  'equate-complete-multi.jpg',
+);
+assertExactCarton(
+  'one-a-day-womens-coated',
+  'One A Day',
+  'one-a-day-womens-coated.jpg',
+);
+assertExactCarton(
+  'vitafusion-multivites-palm',
+  'vitafusion',
+  'vitafusion-multivites-palm.jpg',
+);
+assertExactCarton(
+  'smartypants-kids-plus-multi-omegas',
+  'SmartyPants',
+  'smartypants-kids-plus-multi-omegas.jpg',
+);
+assertBrandMark('megafood-one-daily', 'MegaFood', 'megafood-mark.png');
+assertBrandTextTile('kirkland-daily-multi-tio2', 'Kirkland Signature', 'Kirkland');
+assertBrandTextTile('one-a-day-mens-coated', 'One A Day', 'One A Day');
+assertBrandTextTile('olly-mens-multi-canola', 'OLLY', 'OLLY');
+assertBrandTextTile('olly-womens-multi-canola', 'OLLY', 'OLLY');
+assertBrandTextTile('nature-made-multi-gummies', 'Nature Made', 'Nature Made');
+assertBrandTextTile('365-adult-once-daily-multi', '365 Whole Foods Market', '365');
+assertBrandTextTile('365-mens-one-daily-multi', '365 Whole Foods Market', '365');
+assertBrandTextTile('365-calcium-d3-tio2', '365 Whole Foods Market', '365');
+assertBrandTextTile('365-cal-mag-zinc-d3-tio2', '365 Whole Foods Market', '365');
+assertBrandTextTile(
+  'maryruth-kids-morning-liquid-multi',
+  "MaryRuth's",
+  "MaryRuth's",
+);
+assertBrandTextTile(
+  'flintstones-complete-gummies-palm',
+  'Flintstones',
+  'Flintstones',
 );
 {
   const dgOil = previewOverlayImage({
