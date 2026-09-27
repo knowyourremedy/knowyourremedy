@@ -847,6 +847,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Thorne Magnesium Glycinate capsules span 693749015338 / 015680.
   // Not the bisglycinate powder.
   'thorne-magnesium-glycinate-capsules': brandMark('thorne-mark.png'),
+  // Vitamins night run 2026-09-27 5:30 AM PT batch 2.
+  // Super EPA 180-count UPC 693749015727. The retrieved face for that
+  // code read as the 90-count bottle. Do not glue it. Shares formulaId
+  // thorne-super-epa with the 90-count and the NSF bottle — per-id only.
+  'thorne-super-epa-180': brandMark('thorne-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4077,6 +4082,62 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'we-heart-wholesome-postnatal': catalogShot(
     'we-heart-wholesome-postnatal.jpg',
+  ),
+  // Vitamins night run 2026-09-27 5:30 AM PT batch 2.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // We Heart barcodes match weheartnutrition.com.
+  'we-heart-wholesome-balance': catalogShot('we-heart-wholesome-balance.jpg'),
+  'we-heart-wholesome-omega-3': catalogShot('we-heart-wholesome-omega-3.jpg'),
+  // wellmade Real Food Vitamin C, 60 capsules, SKU 671635733771.
+  // The first Thrive gallery frame on that SKU is Organic Vitamin D3.
+  // This is the vitamin C bottle frame, not the D3 frame.
+  'thrive-wellmade-real-food-vitamin-c': catalogShot(
+    'thrive-wellmade-real-food-vitamin-c.jpg',
+  ),
+  // Fish Oil, 240 softgels, SKU 671635733955.
+  'thrive-wellmade-fish-oil': catalogShot('thrive-wellmade-fish-oil.jpg'),
+  // Magnesium Glycinate, SKU 671635734464.
+  'thrive-wellmade-magnesium-glycinate': catalogShot(
+    'thrive-wellmade-magnesium-glycinate.jpg',
+  ),
+  // Vitamin C tablets, 250 count, SKU 671635733818. Not the chewable.
+  'thrive-wellmade-vitamin-c-tablets': catalogShot(
+    'thrive-wellmade-vitamin-c-tablets.jpg',
+  ),
+  // Chewable Vitamin C, SKU 671635734044. Not the 250-count tablets.
+  'thrive-wellmade-chewable-vitamin-c': catalogShot(
+    'thrive-wellmade-chewable-vitamin-c.jpg',
+  ),
+  // Thorne Women's Multi 50+, UPC 693749011316. Not Men's.
+  'thorne-womens-multi-50-plus': catalogShot('thorne-womens-multi-50-plus.jpg'),
+  // Thorne Men's Multi 50+, UPC 693749011323. Not Women's.
+  'thorne-mens-multi-50-plus': catalogShot('thorne-mens-multi-50-plus.jpg'),
+  // Super EPA NSF, UPC 693749608059. thorne.com SKU SP608.
+  // Not the non-NSF 90-count (693749006909). Not the 180-count.
+  'thorne-super-epa-nsf': catalogShot('thorne-super-epa-nsf.jpg'),
+  // Super EPA 90 gelcaps, UPC 693749006909 (SP608NC). Not NSF. Not 180.
+  'thorne-super-epa-90': catalogShot('thorne-super-epa-90.jpg'),
+  // Super EPA Pro, UPC 693749610014. Not Super EPA.
+  'thorne-super-epa-pro': catalogShot('thorne-super-epa-pro.jpg'),
+  // Omega-3 with CoQ10, 90 gelcaps, UPC 693749616030.
+  'thorne-omega-3-with-coq10': catalogShot('thorne-omega-3-with-coq10.jpg'),
+  // Vitamin C with Flavonoids, UPC 693749012481. Not plain ascorbic acid.
+  'thorne-vitamin-c-with-flavonoids': catalogShot(
+    'thorne-vitamin-c-with-flavonoids.jpg',
+  ),
+  // Buffered C powder, UPC 693749155027. The high-potency buffered powder row.
+  'thorne-high-potency-vitamin-c-powder': catalogShot(
+    'thorne-high-potency-vitamin-c-powder.jpg',
+  ),
+  // Ashwagandha, UPC 693749015543.
+  'thorne-ashwagandha': catalogShot('thorne-ashwagandha.jpg'),
+  // Berberine, UPC 693749048008.
+  'thorne-berberine': catalogShot('thorne-berberine.jpg'),
+  // Glycine, UPC 693749512028.
+  'thorne-glycine': catalogShot('thorne-glycine.jpg'),
+  // Selenium, UPC 693749225010.
+  'thorne-selenium-selenomethionine': catalogShot(
+    'thorne-selenium-selenomethionine.jpg',
   ),
 };
 
@@ -9732,6 +9793,109 @@ assertExactCarton(
   'We Heart Nutrition',
   'we-heart-wholesome-postnatal.jpg',
 );
+assertExactCarton(
+  'we-heart-wholesome-balance',
+  'We Heart Nutrition',
+  'we-heart-wholesome-balance.jpg',
+);
+assertExactCarton(
+  'we-heart-wholesome-omega-3',
+  'We Heart Nutrition',
+  'we-heart-wholesome-omega-3.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-real-food-vitamin-c',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-real-food-vitamin-c.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-fish-oil',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-fish-oil.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-magnesium-glycinate',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-magnesium-glycinate.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-vitamin-c-tablets',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-vitamin-c-tablets.jpg',
+);
+assertExactCarton(
+  'thrive-wellmade-chewable-vitamin-c',
+  'wellmade by Thrive Market',
+  'thrive-wellmade-chewable-vitamin-c.jpg',
+);
+assertExactCarton(
+  'thorne-womens-multi-50-plus',
+  'Thorne',
+  'thorne-womens-multi-50-plus.jpg',
+);
+assertExactCarton(
+  'thorne-mens-multi-50-plus',
+  'Thorne',
+  'thorne-mens-multi-50-plus.jpg',
+);
+assertExactCarton(
+  'thorne-super-epa-nsf',
+  'Thorne',
+  'thorne-super-epa-nsf.jpg',
+);
+assertExactCarton('thorne-super-epa-90', 'Thorne', 'thorne-super-epa-90.jpg');
+assertBrandMark('thorne-super-epa-180', 'Thorne', 'thorne-mark.png');
+assertExactCarton('thorne-super-epa-pro', 'Thorne', 'thorne-super-epa-pro.jpg');
+assertExactCarton(
+  'thorne-omega-3-with-coq10',
+  'Thorne',
+  'thorne-omega-3-with-coq10.jpg',
+);
+assertExactCarton(
+  'thorne-vitamin-c-with-flavonoids',
+  'Thorne',
+  'thorne-vitamin-c-with-flavonoids.jpg',
+);
+assertExactCarton(
+  'thorne-high-potency-vitamin-c-powder',
+  'Thorne',
+  'thorne-high-potency-vitamin-c-powder.jpg',
+);
+assertExactCarton('thorne-ashwagandha', 'Thorne', 'thorne-ashwagandha.jpg');
+assertExactCarton('thorne-berberine', 'Thorne', 'thorne-berberine.jpg');
+assertExactCarton('thorne-glycine', 'Thorne', 'thorne-glycine.jpg');
+assertExactCarton(
+  'thorne-selenium-selenomethionine',
+  'Thorne',
+  'thorne-selenium-selenomethionine.jpg',
+);
+{
+  const epa180 = previewOverlayImage({
+    id: 'thorne-super-epa-180',
+    formulaId: 'thorne-super-epa',
+    brand: 'Thorne',
+  });
+  if (!epa180?.url.endsWith('/thorne-mark.png') || epa180.verifiedSku) {
+    throw new Error('Super EPA 180 must stay on the Thorne mark');
+  }
+  const epa90 = previewOverlayImage({
+    id: 'thorne-super-epa-90',
+    formulaId: 'thorne-super-epa',
+    brand: 'Thorne',
+  });
+  const epaNsf = previewOverlayImage({
+    id: 'thorne-super-epa-nsf',
+    formulaId: 'thorne-super-epa',
+    brand: 'Thorne',
+  });
+  if (
+    !epa90?.url.endsWith('/thorne-super-epa-90.jpg')
+    || !epaNsf?.url.endsWith('/thorne-super-epa-nsf.jpg')
+    || epa90.url === epaNsf.url
+  ) {
+    throw new Error('Super EPA 90 and NSF must keep separate cartons');
+  }
+}
 {
   const dgOil = previewOverlayImage({
     id: 'dg-health-triple-abx-oil-blend',
