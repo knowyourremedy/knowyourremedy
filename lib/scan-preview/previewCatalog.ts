@@ -791,6 +791,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // retailer titles say 4.2 oz; the retrieved face read as 1.5 oz.
   // Do not glue Arnicare Cream. Official Boiron mark. Per-id only.
   'boiron-arnicare-foot-care': brandMark('boiron-mark.png'),
+  // First Aid night run 2026-09-27 12:30 AM PT batch 1.
+  // Tried the SKU. DailyMed faces are flat labels, not 3D cartons.
+  // Do not glue a sibling tube. Official marks already on disk. Per-id only.
+  // Basic Care oil-blend shares formulaId with the DG oil-blend.
+  // Do not let either inherit the other face.
+  'amazon-basic-care-triple-abx-oil-blend': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // 14 oz healing jar (72288-247). DailyMed mm01 is a wide label strip.
+  'amazon-basics-advanced-healing-ointment': brandMark(
+    'amazon-basics-mark.png',
+  ),
+  'dg-health-triple-abx-oil-blend': brandMark('dg-health-mark.png'),
+  'family-wellness-pain-scar-itch': brandMark('family-wellness-mark.png'),
+  'family-wellness-triple-original': brandMark('family-wellness-mark.png'),
+  // Do not inherit the Swim-Ear bottle. Different brand.
+  'topcare-swimmers-ear': brandMark('topcare-mark.png'),
+  'topcare-ear-relief': brandMark('topcare-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -3776,6 +3794,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-urtica-urens-pellets': catalogShot(
     'boiron-urtica-urens-pellets.jpg',
   ),
+  // First Aid night run 2026-09-27 12:30 AM PT batch 1.
+  // Exact US pack faces. Per-id only. One barcode on each row.
+  // Sprouts Kids Ear Clear Oil, 1 fl oz, UPC 646670620591.
+  // shop.sprouts.com PDP 17858505. Not an Eden's / Betsy's bottle.
+  'sprouts-kids-ear-clear-oil': catalogShot('sprouts-kids-ear-clear-oil.jpg'),
+  // BHI Skin Eczema Relief, 100 tablets. Shopify sku matches UPC 787647100613.
+  'medinatura-bhi-skin-eczema': catalogShot('medinatura-bhi-skin-eczema.jpg'),
+  // Boericke & Tafel faces are the naturesway.com variation for that UPC.
+  // Arniflora Arnica Gel, 2.75 oz (78 g), UPC 308078250977.
+  'bt-arniflora-arnica-gel': catalogShot('bt-arniflora-arnica-gel.jpg'),
+  // Ssssting Stop Gel, 1 oz (28 g), UPC 308078253909.
+  'bt-ssssting-stop-gel': catalogShot('bt-ssssting-stop-gel.jpg'),
+  // Florasone cream, 1 oz (28 g), UPC 308078503905.
+  'bt-florasone-cream': catalogShot('bt-florasone-cream.jpg'),
+  // Psoriaflora cream, 1 oz (28 g), UPC 308078509907.
+  'bt-psoriaflora-cream': catalogShot('bt-psoriaflora-cream.jpg'),
+  // Oral Ivy Drops, 1 fl oz (30 ml), UPC 308079009901.
+  'natures-way-oral-ivy-drops': catalogShot('natures-way-oral-ivy-drops.jpg'),
+  // Wart Control Extra Strength, 11 ml, UPC 830743009127.
+  // Not the 4 ml rollerball (830743011212).
+  'fon-wart-extra-strength': catalogShot('fon-wart-extra-strength.jpg'),
+  // Repair Hydrogel, 3 fl oz, UPC 818582012102. Not the spray.
+  'active-skin-repair-hydrogel': catalogShot(
+    'active-skin-repair-hydrogel.jpg',
+  ),
+  // WELMATE faces are the wellspringmeds.com pack for that count.
+  // Clotrimazole 1% topical solution, 0.33 fl oz, UPC 373581000319.
+  'welmate-b87-clotrimazole-solution': catalogShot(
+    'welmate-b87-clotrimazole-solution.jpg',
+  ),
+  // Butenafine 1% cream, 1 oz single. Not the 3-pack.
+  'welmate-b88-butenafine': catalogShot('welmate-b88-butenafine.jpg'),
+  // Butenafine 1% cream, 1 oz, pack of 3, UPC 373581000432.
+  // Not the single tube.
+  'welmate-b88-butenafine-3pack': catalogShot(
+    'welmate-b88-butenafine-3pack.jpg',
+  ),
+  // Docosanol 10%, 2 g, pack of 2. Not a single tube.
+  'welmate-b88-docosanol': catalogShot('welmate-b88-docosanol.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -3792,8 +3849,13 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'amazon-basic-care-triple-pain-ointment',
   'amazon-basics-antibiotic-burn-relief',
   // Same isopropyl-in-glycerin idea, different brand and strength.
-  // Do not inherit the Swim-Ear bottle. Stay a letter until attempted.
+  // Do not inherit the Swim-Ear bottle.
   'topcare-swimmers-ear',
+  // Same oil-blend inactives as Basic Care triple. Different brand.
+  // Do not inherit that tube.
+  'dg-health-triple-abx-oil-blend',
+  // Same butenafine cream. The 3-pack is a different carton.
+  'welmate-b88-butenafine-3pack',
 ]);
 
 export function previewOverlayImage(
@@ -9050,6 +9112,127 @@ assertBrandMark(
   'boiron-mark.png',
 );
 assertBrandMark('boiron-arnicare-foot-care', 'Boiron', 'boiron-mark.png');
+assertExactCarton(
+  'sprouts-kids-ear-clear-oil',
+  'Sprouts',
+  'sprouts-kids-ear-clear-oil.jpg',
+);
+assertExactCarton(
+  'medinatura-bhi-skin-eczema',
+  'MediNatura',
+  'medinatura-bhi-skin-eczema.jpg',
+);
+assertExactCarton(
+  'bt-arniflora-arnica-gel',
+  'Boericke & Tafel',
+  'bt-arniflora-arnica-gel.jpg',
+);
+assertExactCarton(
+  'bt-ssssting-stop-gel',
+  'Boericke & Tafel',
+  'bt-ssssting-stop-gel.jpg',
+);
+assertExactCarton(
+  'bt-florasone-cream',
+  'Boericke & Tafel',
+  'bt-florasone-cream.jpg',
+);
+assertExactCarton(
+  'bt-psoriaflora-cream',
+  'Boericke & Tafel',
+  'bt-psoriaflora-cream.jpg',
+);
+assertExactCarton(
+  'natures-way-oral-ivy-drops',
+  "Nature's Way",
+  'natures-way-oral-ivy-drops.jpg',
+);
+assertExactCarton(
+  'fon-wart-extra-strength',
+  'Forces of Nature',
+  'fon-wart-extra-strength.jpg',
+);
+assertExactCarton(
+  'active-skin-repair-hydrogel',
+  'Active Skin Repair',
+  'active-skin-repair-hydrogel.jpg',
+);
+assertExactCarton(
+  'welmate-b87-clotrimazole-solution',
+  'WELMATE',
+  'welmate-b87-clotrimazole-solution.jpg',
+);
+assertExactCarton(
+  'welmate-b88-butenafine',
+  'WELMATE',
+  'welmate-b88-butenafine.jpg',
+);
+assertExactCarton(
+  'welmate-b88-butenafine-3pack',
+  'WELMATE',
+  'welmate-b88-butenafine-3pack.jpg',
+);
+assertExactCarton(
+  'welmate-b88-docosanol',
+  'WELMATE',
+  'welmate-b88-docosanol.jpg',
+);
+assertBrandMark(
+  'amazon-basic-care-triple-abx-oil-blend',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-advanced-healing-ointment',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'dg-health-triple-abx-oil-blend',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'family-wellness-pain-scar-itch',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'family-wellness-triple-original',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark('topcare-swimmers-ear', 'TopCare', 'topcare-mark.png');
+assertBrandMark('topcare-ear-relief', 'TopCare', 'topcare-mark.png');
+{
+  const dgOil = previewOverlayImage({
+    id: 'dg-health-triple-abx-oil-blend',
+    formulaId: 'amazon-basic-care-triple-abx-oil-blend',
+    brand: 'DG Health',
+  });
+  if (
+    dgOil?.url.includes('amazon-basic-care')
+    || dgOil?.verifiedSku
+  ) {
+    throw new Error('DG oil-blend must not inherit the Basic Care tube');
+  }
+  const butenafine3 = previewOverlayImage({
+    id: 'welmate-b88-butenafine-3pack',
+    formulaId: 'welmate-b88-butenafine',
+    brand: 'WELMATE',
+  });
+  if (!butenafine3?.url.endsWith('/welmate-b88-butenafine-3pack.jpg')) {
+    throw new Error('Butenafine 3-pack must not inherit the single tube');
+  }
+  const swim = previewOverlayImage({
+    id: 'topcare-swimmers-ear',
+    formulaId: 'swim-ear',
+    brand: 'TopCare',
+  });
+  if (swim?.url.includes('swim-ear') || swim?.verifiedSku) {
+    throw new Error("TopCare Swimmer's Ear must not inherit the Swim-Ear bottle");
+  }
+}
 {
   const otherPellet = previewOverlayImage({
     id: 'boiron-abelmoschus-pellets',
@@ -9075,10 +9258,10 @@ assertBrandMark('boiron-arnicare-foot-care', 'Boiron', 'boiron-mark.png');
     brand: 'TopCare',
   });
   if (
-    !topcareEar?.url.startsWith('data:image/svg')
+    !topcareEar?.url.endsWith('/topcare-mark.png')
     || topcareEar.verifiedSku
   ) {
-    throw new Error('TopCare swimmer drops must not inherit the Swim-Ear bottle');
+    throw new Error('TopCare swimmer drops must stay on the TopCare mark');
   }
   const talcJar = previewOverlayImage({
     id: 'desitin-max-talc',
