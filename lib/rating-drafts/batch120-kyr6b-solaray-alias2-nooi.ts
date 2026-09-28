@@ -425,6 +425,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Inositol Powder 700mg (4oz)",
     formulaId: "solaray-b120-076280043563",
     form: "powder",
+    barcode: "076280043563",
     actives: [
       { name: "Inositol", strength: "700 mg" },
     ],

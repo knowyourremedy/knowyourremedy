@@ -732,6 +732,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray HMB + Vitamin D3 Vanilla (30 servings)",
     formulaId: "solaray-b129-076280110098",
     form: "powder",
+    barcode: "076280110098",
     actives: [
       { name: "HMB + Vitamin D3", strength: "1 scoop" },
     ],
@@ -750,6 +751,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vegan Collagen Booster (25 servings)",
     formulaId: "solaray-b129-076280149074",
     form: "powder",
+    barcode: "076280149074",
     actives: [
       { name: "Vegan Collagen Booster", strength: "1 scoop" },
     ],
@@ -790,6 +792,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Colostrum+ Unflavored (30 servings)",
     formulaId: "solaray-b129-076280529586",
     form: "powder",
+    barcode: "076280529586",
     actives: [
       { name: "Colostrum", strength: "1 scoop" },
     ],
