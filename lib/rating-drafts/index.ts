@@ -117,3 +117,4 @@ export { BATCH116_KYR6B_SOLARAY_FIRST_SLICE } from './batch116-kyr6b-solaray-fir
 export { BATCH117_KYR6B_SOLARAY_STAMP_BACKFILL } from './batch117-kyr6b-solaray-stamp-backfill';
 export { BATCH118_KYR6B_SOLARAY_CLEANUP } from './batch118-kyr6b-solaray-cleanup';
 export { BATCH119_KYR6B_SOLARAY_ALIAS_NETTLE } from './batch119-kyr6b-solaray-alias-nettle';
+export { BATCH120_KYR6B_SOLARAY_ALIAS2_NOOI } from './batch120-kyr6b-solaray-alias2-nooi';
