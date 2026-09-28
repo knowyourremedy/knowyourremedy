@@ -882,6 +882,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'megafood-mens-one-daily': brandMark('megafood-mark.png'),
   'megafood-mens-55-one-daily': brandMark('megafood-mark.png'),
   'megafood-womens-advanced': brandMark('megafood-mark.png'),
+  // Vitamins night run 2026-09-28 12:50 AM PT batch 2.
+  // Several count barcodes on one row. Faces differ by count.
+  'megafood-kids-one-daily-mini': brandMark('megafood-mark.png'),
+  'megafood-blood-builder': brandMark('megafood-mark.png'),
+  'megafood-balanced-b-complex': brandMark('megafood-mark.png'),
+  'megafood-magnesium-tablet': brandMark('megafood-mark.png'),
+  'megafood-turmeric-whole-body': brandMark('megafood-mark.png'),
+  'megafood-thyroid-strength': brandMark('megafood-mark.png'),
+  'megafood-adrenal-strength': brandMark('megafood-mark.png'),
+  'megafood-skin-nails-hair-2': brandMark('megafood-mark.png'),
+  'megafood-baby-me-2-postnatal-multi': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4208,6 +4219,43 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Not the 60ct and not Women's Advanced without the 40+.
   'megafood-womens-40-advanced': catalogShot(
     'megafood-womens-40-advanced.jpg',
+  ),
+  // Vitamins night run 2026-09-28 12:50 AM PT batch 2.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Women's 55+ Advanced, UPC 051494102718, 60 tablets. Not the 120ct.
+  'megafood-womens-55-advanced': catalogShot(
+    'megafood-womens-55-advanced.jpg',
+  ),
+  // Men's Advanced, UPC 051494103203, 120 tablets / 60 servings. Not the 60ct.
+  'megafood-mens-advanced': catalogShot('megafood-mens-advanced.jpg'),
+  // Men's 40+ Advanced, UPC 051494103180, 120 tablets. Not the 60ct.
+  'megafood-mens-40-advanced': catalogShot('megafood-mens-40-advanced.jpg'),
+  // Men's 55+ Advanced, UPC 051494102732, 60 tablets / 30 servings. Not the 120ct.
+  'megafood-mens-55-advanced': catalogShot('megafood-mens-55-advanced.jpg'),
+  // Kids B Complex Minis, UPC 051494102756, 30 minitablets. Not the 90ct.
+  'megafood-kids-b-complex-minis': catalogShot(
+    'megafood-kids-b-complex-minis.jpg',
+  ),
+  // Blood Builder Minis, UPC 051494103371, 60 minitablets. Not Blood Builder.
+  'megafood-blood-builder-minis': catalogShot(
+    'megafood-blood-builder-minis.jpg',
+  ),
+  // Extra Strength Methyl B12, UPC 051494105672, 90 capsules.
+  'megafood-extra-strength-methyl-b12': catalogShot(
+    'megafood-extra-strength-methyl-b12.jpg',
+  ),
+  // Vegan B12, UPC 051494120019, 30 minitablets.
+  'megafood-vegan-b12': catalogShot('megafood-vegan-b12.jpg'),
+  // Calcium & Magnesium, UPC 051494102312, 60 tablets / 20 servings. Not the 90ct.
+  'megafood-calcium-magnesium': catalogShot('megafood-calcium-magnesium.jpg'),
+  // Ashwagandha Complex, UPC 051494104330, 60 minitablets / 30 servings.
+  'megafood-ashwagandha-complex': catalogShot(
+    'megafood-ashwagandha-complex.jpg',
+  ),
+  // Extra Strength Magnesium Glycinate, UPC 051494106204, 120 capsules.
+  // Not the regular glycinate.
+  'megafood-extra-strength-magnesium-glycinate': catalogShot(
+    'megafood-extra-strength-magnesium-glycinate.jpg',
   ),
 };
 
