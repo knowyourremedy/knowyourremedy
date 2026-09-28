@@ -893,6 +893,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'megafood-adrenal-strength': brandMark('megafood-mark.png'),
   'megafood-skin-nails-hair-2': brandMark('megafood-mark.png'),
   'megafood-baby-me-2-postnatal-multi': brandMark('megafood-mark.png'),
+  // Vitamins night run 2026-09-28 3:00 AM PT batch 2.
+  // Two count barcodes on one row. Do not glue the live 70ct face.
+  'megafood-b12-energy-gummies-cranberry': brandMark('megafood-mark.png'),
+  'megafood-b12-energy-gummies-ginger': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4328,6 +4332,69 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // High Absorption Magnesium Citrate Gummies, UPC 051494105917, 60 gummies.
   'megafood-magnesium-citrate-gummies': catalogShot(
     'megafood-magnesium-citrate-gummies.jpg',
+  ),
+  // Vitamins night run 2026-09-28 3:00 AM PT batch 2.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Iron Energy Gummies, UPC 051494104583, 60 gummies.
+  'megafood-iron-energy-gummies': catalogShot(
+    'megafood-iron-energy-gummies.jpg',
+  ),
+  // Kids Multi Gummies, UPC 051494104361, 60 gummies.
+  'megafood-kids-multi-gummies': catalogShot('megafood-kids-multi-gummies.jpg'),
+  // Kids One Daily Soft Chews, UPC 051494103746, 30 chews. Grape.
+  'megafood-kids-one-daily-soft-chews': catalogShot(
+    'megafood-kids-one-daily-soft-chews.jpg',
+  ),
+  // Women's One Daily Soft Chews, UPC 051494103722, 30 chews. Mixed berry.
+  'megafood-womens-one-daily-soft-chews': catalogShot(
+    'megafood-womens-one-daily-soft-chews.jpg',
+  ),
+  // Women's Whole Body Tablets, UPC 051494105900, 90 tablets.
+  'megafood-womens-whole-body-tablets': catalogShot(
+    'megafood-womens-whole-body-tablets.jpg',
+  ),
+  // Methyl B12 tablets, UPC 051494103333, 90 tablets. Not the 60ct.
+  'megafood-methyl-b12': catalogShot('megafood-methyl-b12.jpg'),
+  // Ashwagandha Gummies, UPC 051494106099, 60 gummies. Not the complex tablets.
+  'megafood-ashwagandha-gummies': catalogShot(
+    'megafood-ashwagandha-gummies.jpg',
+  ),
+  // Berberine Phytosome, UPC 051494105634, 60 capsules.
+  'megafood-berberine-phytosome': catalogShot(
+    'megafood-berberine-phytosome.jpg',
+  ),
+  // Daily Turmeric Nutrient Booster Powder, UPC 051494601389, 30 servings.
+  'megafood-daily-turmeric-nutrient-booster-powder': catalogShot(
+    'megafood-daily-turmeric-nutrient-booster-powder.jpg',
+  ),
+  // Creatine Monohydrate Gummies, UPC 051494106150, 90 gummies.
+  'megafood-creatine-monohydrate-gummies': catalogShot(
+    'megafood-creatine-monohydrate-gummies.jpg',
+  ),
+  // Genexa Infants' Vitamin D, UPC 857630006601, single box. Not the 3-pack.
+  'genexa-infants-vitamin-d': catalogShot('genexa-infants-vitamin-d.jpg'),
+  // Hyland's Kids Multi + Brain & Eye, UPC 810087820732, 60 gummies.
+  'hylands-kids-multi-brain-eye-gummies': catalogShot(
+    'hylands-kids-multi-brain-eye-gummies.jpg',
+  ),
+  // Boiron gemmotherapy 2 fl oz. Shop SKU is the row UPC.
+  'boiron-gemmo-black-currant-buds': catalogShot(
+    'boiron-gemmo-black-currant-buds.jpg',
+  ),
+  'boiron-gemmo-briar-rose-young-shoots': catalogShot(
+    'boiron-gemmo-briar-rose-young-shoots.jpg',
+  ),
+  'boiron-gemmo-common-birch-buds': catalogShot(
+    'boiron-gemmo-common-birch-buds.jpg',
+  ),
+  'boiron-gemmo-common-juniper-young-shoots': catalogShot(
+    'boiron-gemmo-common-juniper-young-shoots.jpg',
+  ),
+  'boiron-gemmo-cowberry-young-shoots': catalogShot(
+    'boiron-gemmo-cowberry-young-shoots.jpg',
+  ),
+  'boiron-gemmo-english-hawthorn-young-shoots': catalogShot(
+    'boiron-gemmo-english-hawthorn-young-shoots.jpg',
   ),
 };
 
@@ -10280,6 +10347,102 @@ assertExactCarton(
   'megafood-magnesium-citrate-gummies',
   'MegaFood',
   'megafood-magnesium-citrate-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-iron-energy-gummies',
+  'MegaFood',
+  'megafood-iron-energy-gummies.jpg',
+);
+assertBrandMark(
+  'megafood-b12-energy-gummies-cranberry',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertBrandMark(
+  'megafood-b12-energy-gummies-ginger',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertExactCarton(
+  'megafood-kids-multi-gummies',
+  'MegaFood',
+  'megafood-kids-multi-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-kids-one-daily-soft-chews',
+  'MegaFood',
+  'megafood-kids-one-daily-soft-chews.jpg',
+);
+assertExactCarton(
+  'megafood-womens-one-daily-soft-chews',
+  'MegaFood',
+  'megafood-womens-one-daily-soft-chews.jpg',
+);
+assertExactCarton(
+  'megafood-womens-whole-body-tablets',
+  'MegaFood',
+  'megafood-womens-whole-body-tablets.jpg',
+);
+assertExactCarton('megafood-methyl-b12', 'MegaFood', 'megafood-methyl-b12.jpg');
+assertExactCarton(
+  'megafood-ashwagandha-gummies',
+  'MegaFood',
+  'megafood-ashwagandha-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-berberine-phytosome',
+  'MegaFood',
+  'megafood-berberine-phytosome.jpg',
+);
+assertExactCarton(
+  'megafood-daily-turmeric-nutrient-booster-powder',
+  'MegaFood',
+  'megafood-daily-turmeric-nutrient-booster-powder.jpg',
+);
+assertExactCarton(
+  'megafood-creatine-monohydrate-gummies',
+  'MegaFood',
+  'megafood-creatine-monohydrate-gummies.jpg',
+);
+assertExactCarton(
+  'genexa-infants-vitamin-d',
+  'Genexa',
+  'genexa-infants-vitamin-d.jpg',
+);
+assertExactCarton(
+  'hylands-kids-multi-brain-eye-gummies',
+  "Hyland's",
+  'hylands-kids-multi-brain-eye-gummies.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-black-currant-buds',
+  'Boiron',
+  'boiron-gemmo-black-currant-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-briar-rose-young-shoots',
+  'Boiron',
+  'boiron-gemmo-briar-rose-young-shoots.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-common-birch-buds',
+  'Boiron',
+  'boiron-gemmo-common-birch-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-common-juniper-young-shoots',
+  'Boiron',
+  'boiron-gemmo-common-juniper-young-shoots.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-cowberry-young-shoots',
+  'Boiron',
+  'boiron-gemmo-cowberry-young-shoots.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-english-hawthorn-young-shoots',
+  'Boiron',
+  'boiron-gemmo-english-hawthorn-young-shoots.jpg',
 );
 assertLetterOnly(
   'nutricost-dong-quai-capsules-120-capsules',
