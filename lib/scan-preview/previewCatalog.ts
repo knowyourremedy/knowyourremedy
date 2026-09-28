@@ -126,6 +126,7 @@ import {
   BATCH123_KYR6B_SOLARAY_CLOSEOUT_NO_UPC,
   BATCH124_KYR6B_SOLARAY_FAT_CLOSEOUT,
   BATCH125_KYR6B_SOLARAY_LAST_FAMILY_CLOSEOUT,
+  BATCH126_KYR6B_SOLARAY_ONE_SHOT,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -272,6 +273,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH123_KYR6B_SOLARAY_CLOSEOUT_NO_UPC,
   ...BATCH124_KYR6B_SOLARAY_FAT_CLOSEOUT,
   ...BATCH125_KYR6B_SOLARAY_LAST_FAMILY_CLOSEOUT,
+  ...BATCH126_KYR6B_SOLARAY_ONE_SHOT,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
