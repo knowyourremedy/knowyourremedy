@@ -77,5 +77,15 @@ Alias stamps already on a locked row (Sept 28, 2026) — not new grades
 - Chlorophyll → chlorophyll named pigment. Same Cleared. Chlorophyllin stays unstamped.
 - Zinc Oxide as an other ingredient → zinc oxide as OI. Same Caution. Not the topical Cleared row.
 - Aqueous Coating unnamed → unnamed vegetable / tablet coat. Same Caution. Named HPMC+glycerin coat stays Cleared.
+- Ascorbyl Palmitate and Ascorbyl Palmitate (antioxidant) → mixed tocopherols / ascorbyl palmitate antioxidant. Same Cleared. Not tocopheryl acetate.
+- Monoglycerides and Diglycerides, any case → unspecified mono- and diglycerides. Same Caution. Not glycerol monostearate.
+- Gummy / lozenge soybean oil stays High / Avoid. Non-gummy soybean oil fill stays Cleared.
+- Named natural flavor strings and bare flavors → flavor family. Same Caution. Exact “Natural flavors” opacity stays Limited.
+- On a gummy, Citric Acid (from Non-GMO Tapioca) and Citric Acid (from Non-GMO Cassava) → gummy acidulant Caution. Bare citric acid stays Cleared. Off-gummy parenthetical citric stays Cleared.
+- Stevia leaf extract strings stay stevia extract Caution.
+- Sucrose stays the existing Limited sugar row (Sept 20). Not High. Beet sugar stays Limited. Bare sugar stays Caution.
+- Mixed Carotenoids as an other ingredient → beta-carotene as color. Same Caution. Not the Food Carotene active. Not titanium dioxide.
+- Carrot Juice Powder → juice-powder color/flavor. Same Caution neighborhood as purple carrot juice.
+- Eleuthero Root on the Other Ingredients line → unspecified herb excipient. Caution. Parsley Leaf is not stamped.
 
 Do not turn this into a 400-row dump of every PubMed URL on day one. Add as we cite.
