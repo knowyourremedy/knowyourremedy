@@ -142,6 +142,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Borage Seed Oil GLA 1000mg (50ct)',
     formulaId: 'solaray-b119-076280008340',
     form: 'softgel',
+    barcode: '076280008340',
     actives: [{ name: 'Borage Seed Oil (Borago officinalis)', strength: '1,000 mg' }],
     flags: [
       ['Gelatin', 'cleared', 'gelatin'],
@@ -156,6 +157,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Evening Primrose 500mg (90ct)',
     formulaId: 'solaray-b119-076280008364',
     form: 'softgel',
+    barcode: '076280008364',
     actives: [
       { name: 'Evening Primrose Oil (Oenothera biennis)', strength: '500 mg' },
     ],
@@ -173,6 +175,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Pumpkin Seed Oil 1000mg (90ct)',
     formulaId: 'solaray-b119-076280107272',
     form: 'softgel',
+    barcode: '076280107272',
     actives: [{ name: 'Pumpkin Seed Oil (Cucurbita spp.)', strength: '1,000 mg' }],
     flags: [
       ['Gelatin', 'cleared', 'gelatin'],
@@ -188,6 +191,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Super Omega 3-7-9 (120 ct)',
     formulaId: 'solaray-b119-076280610093',
     form: 'softgel',
+    barcode: '076280610093',
     actives: [
       { name: 'Salmon Oil (fish)', strength: '1,000 mg' },
       { name: 'Sea Buckthorn Fruit Oil', strength: '200 mg' },
@@ -235,8 +239,21 @@ if (!nettle || nettle.verdict !== 'clean' || nettle.barcode !== '076280194104') 
 if (!nettle.productName.includes('Organic')) {
   throw new Error('batch119 organic nettle name must stay distinct');
 }
-if (_ROWS.filter((r) => r.barcode).length !== 1) {
-  throw new Error('batch119 UPC only on the restored organic nettle');
+if (_ROWS.filter((r) => r.barcode).length !== 5) {
+  throw new Error('batch119 UPC count drift');
+}
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch119 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch119 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch119 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
 }
 if (_ROWS.some((r) => r.form === 'gummy')) throw new Error('batch119 has no gummy rows');
 if (_ROWS.some((r) => r.form === 'liquid')) {

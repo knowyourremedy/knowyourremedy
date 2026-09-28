@@ -95,6 +95,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -121,6 +122,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
@@ -143,6 +145,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Peppermint Oil, Enteric Coated (60ct)',
     formulaId: 'solaray-b122-076280008685',
     form: 'softgel',
+    barcode: '076280008685',
     actives: [
       { name: 'Peppermint Oil', strength: '200 mg' },
       { name: 'Quercetin', strength: '50 mg' },
@@ -170,6 +173,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Total Cleanse Kidney (60ct)',
     formulaId: 'solaray-b122-076280083644',
     form: 'capsule',
+    barcode: '076280083644',
     actives: [{ name: 'Total Cleanse Kidney Blend', strength: '2 VegCaps' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -187,6 +191,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Vitamin E, Mixed Tocopherols 268mg (100ct)',
     formulaId: 'solaray-b122-076280041637',
     form: 'softgel',
+    barcode: '076280041637',
     actives: [
       { name: 'Vitamin E (as d-Alpha Tocopherol)', strength: '268 mg' },
       { name: 'Mixed Tocopherols', strength: '67 mg' },
@@ -205,6 +210,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Vitamin E, Mixed Tocopherols 268mg (50ct)',
     formulaId: 'solaray-b122-076280041637',
     form: 'softgel',
+    barcode: '076280041620',
     actives: [
       { name: 'Vitamin E (as d-Alpha Tocopherol)', strength: '268 mg' },
       { name: 'Mixed Tocopherols', strength: '67 mg' },
@@ -223,6 +229,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Red Yeast Rice + CoQ-10 (90ct)',
     formulaId: 'solaray-b121-076280088922',
     form: 'capsule',
+    barcode: '076280121551',
     actives: [
       { name: 'Niacin (as Inositol Hexanicotinate)', strength: '50 mg' },
       { name: 'Red Yeast Rice', strength: '600 mg' },
@@ -548,7 +555,19 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch122 
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 3) throw new Error('batch122 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 2) throw new Error('batch122 REUSE tally drift');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch122 writes Solaray only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch122 UPC must stay blank');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch122 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch122 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch122 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'gummy' || r.form === 'liquid')) throw new Error('batch122 must not grade gummies or pour bottles');
 if (BATCH122_SKIPPED_NO_OI.length !== 1) throw new Error('batch122 no_OI leftover drift');
 if (BATCH122_SKIPPED_OUT.length !== 0) throw new Error('batch122 OUT drift');

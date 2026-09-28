@@ -99,6 +99,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -125,6 +126,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
@@ -147,6 +149,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Vitamin D3 Liquid Unflavored (0.5 fl oz)',
     formulaId: 'solaray-b118-076280731613',
     form: 'liquid',
+    barcode: '076280731613',
     actives: [
       { name: 'Vitamin D (as Cholecalciferol) (D-3)', strength: '25 mcg' },
     ],
@@ -167,6 +170,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Berberine & Curcumin (60ct)',
     formulaId: 'solaray-b118-076280316247',
     form: 'capsule',
+    barcode: '076280316247',
     actives: [{ name: 'Berberine & Curcumin', strength: 'label serving' }],
     flags: [
       ['Acacia Gum', 'cleared', 'acacia'],
@@ -181,6 +185,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray AHCC + NAC & Beta Glucan (30ct)',
     formulaId: 'solaray-b118-076280749748',
     form: 'capsule',
+    barcode: '076280749748',
     actives: [{ name: 'AHCC + NAC & Beta Glucan', strength: 'label serving' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -196,6 +201,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Chamomile Flowering Top 350mg (100 ct)',
     formulaId: 'solaray-b118-076280011609',
     form: 'capsule',
+    barcode: '076280011609',
     actives: [
       { name: 'Chamomile (Matricaria recutita) (flowering tops)', strength: '350 mg' },
     ],
@@ -212,6 +218,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Olive Leaf Extract 22%, 250mg (120ct)',
     formulaId: 'solaray-b118-076280402490',
     form: 'capsule',
+    barcode: '076280402490',
     actives: [{ name: 'Olive (Olea europaea) (leaf extract)', strength: '250 mg' }],
     flags: [
       ['Whole Rice Concentrate', 'cleared', 'riceConc'],
@@ -229,6 +236,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Green Tea Leaf Extract, Double 500mg (30ct)',
     formulaId: 'solaray-b118-076280107463',
     form: 'capsule',
+    barcode: '076280107463',
     actives: [{ name: 'Green Tea (Camellia sinensis) (leaf extract)', strength: '500 mg' }],
     flags: [
       ['Whole Rice Concentrate', 'cleared', 'riceConc'],
@@ -245,6 +253,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Hyaluronic Acid 20mg (30ct)',
     formulaId: 'solaray-b118-076280924008',
     form: 'capsule',
+    barcode: '076280924008',
     actives: [{ name: 'Hyaluronic Acid (Microbial Fermentation)', strength: '20 mg' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -261,6 +270,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray ActiveMag (60ct)',
     formulaId: 'solaray-b118-076280477986',
     form: 'capsule',
+    barcode: '076280477986',
     actives: [{ name: 'Magnesium (Magnesium Malate)', strength: '210 mg' }],
     flags: [
       ['Citric Acid', 'cleared', 'citric'],
@@ -278,6 +288,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Testosterone Support (60ct)',
     formulaId: 'solaray-b118-076280524420',
     form: 'capsule',
+    barcode: '076280524420',
     actives: [{ name: 'Testosterone Support', strength: 'label serving' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -294,6 +305,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray SharpMind Nootropics Energy (30 ct)',
     formulaId: 'solaray-b118-076280648065',
     form: 'capsule',
+    barcode: '076280648065',
     actives: [{ name: 'SharpMind Nootropics Energy', strength: 'label serving' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -311,6 +323,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray SharpMind Nootropics Sleep (30 ct)',
     formulaId: 'solaray-b118-076280507874',
     form: 'capsule',
+    barcode: '076280507874',
     actives: [{ name: 'SharpMind Nootropics Sleep', strength: 'label serving' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -327,6 +340,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray StressMag (60ct)',
     formulaId: 'solaray-b118-076280615579',
     form: 'capsule',
+    barcode: '076280615579',
     actives: [{ name: 'StressMag', strength: 'label serving' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -344,6 +358,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray AMPK Activator+Dihydroberberine (60ct)',
     formulaId: 'solaray-b118-076280400120',
     form: 'capsule',
+    barcode: '076280400120',
     actives: [{ name: 'AMPK Activator+Dihydroberberine', strength: 'label serving' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -360,6 +375,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Shilajit (60ct)',
     formulaId: 'solaray-b118-076280517149',
     form: 'capsule',
+    barcode: '076280517149',
     actives: [{ name: 'Shilajit', strength: 'label serving' }],
     flags: [
       ['Maltodextrin', 'limited', 'maltodextrin'],
@@ -377,6 +393,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Mycrobiome Complete Probiotic Active (30ct)',
     formulaId: 'solaray-b118-076280489453',
     form: 'capsule',
+    barcode: '076280489453',
     actives: [{ name: 'Mycrobiome Complete Probiotic Active', strength: 'label serving' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -392,6 +409,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray PEAK ATP (30ct)',
     formulaId: 'solaray-b118-076280955002',
     form: 'capsule',
+    barcode: '076280955002',
     actives: [{ name: 'PEAK ATP', strength: 'label serving' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -408,6 +426,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Moro Red Orange Extract Morosil (30 ct)',
     formulaId: 'solaray-b118-076280903966',
     form: 'capsule',
+    barcode: '076280903966',
     actives: [{ name: 'Moro Red Orange Extract Morosil', strength: 'label serving' }],
     flags: [
       ['Maltodextrin', 'limited', 'maltodextrin'],
@@ -424,6 +443,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray ProSorb Ashwagandha 18x 240mg (30ct)',
     formulaId: 'solaray-b118-076280417463',
     form: 'capsule',
+    barcode: '076280417463',
     actives: [{ name: 'ProSorb Ashwagandha 18x 240mg', strength: '240 mg' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -459,7 +479,19 @@ if (_ROWS.some((r) => r.formulaId !== r.id)) {
   throw new Error('batch118 REUSE tally drift');
 }
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch118 writes Solaray only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch118 UPC must stay empty');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch118 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch118 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch118 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'gummy')) throw new Error('batch118 has no gummy rows');
 const d3 = _ROWS.find((r) => r.id === 'solaray-b118-076280731613');
 if (!d3 || d3.form !== 'liquid' || d3.verdict !== 'caution') {

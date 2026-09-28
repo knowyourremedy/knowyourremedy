@@ -89,6 +89,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -109,6 +110,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -126,6 +128,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray DHA Neuromins 100mg (60ct)",
     formulaId: "solaray-b125-076280008111",
     form: "softgel",
+    barcode: "076280008111",
     actives: [
       { name: "DHA (Docosahexaenoic Acid) (from Algal Oil)", strength: "100 mg" },
     ],
@@ -152,6 +155,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray GlucoReg, Blood Glucose Support (30ct)",
     formulaId: "solaray-b125-076280031577",
     form: "capsule",
+    barcode: "076280031577",
     actives: [
       { name: "Bitter Melon (Momordica charantia) (fruit extract)", strength: "500 mg" },
       { name: "Gymnema (Gymnema sylvestre) (leaf extract)", strength: "150 mg" },
@@ -172,6 +176,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Maca Root Extract 300 mg (60ct)",
     formulaId: "solaray-b125-076280036879",
     form: "capsule",
+    barcode: "076280036879",
     actives: [
       { name: "Maca (Lepidium meyenii) (root extract)", strength: "300 mg" },
     ],
@@ -191,6 +196,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Phytoestrogen (120ct)",
     formulaId: "solaray-b125-076280037586",
     form: "capsule",
+    barcode: "076280037586",
     actives: [
       { name: "Non-GMO Soy (Glycine max) (bean extract)", strength: "200 mg" },
       { name: "Wild Yam (Dioscorea villosa) (root)", strength: "200 mg" },
@@ -213,6 +219,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin A, Dry Form 7500mcg (60ct)",
     formulaId: "solaray-b125-076280041309",
     form: "capsule",
+    barcode: "076280041309",
     actives: [
       { name: "Vitamin A (as 60% Beta Carotene and 40% Retinyl Palmitate)", strength: "7,500 mcg" },
       { name: "Carrot Powder", strength: "230 mg" },
@@ -233,6 +240,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Stress (100ct)",
     formulaId: "solaray-b125-076280042153",
     form: "capsule",
+    barcode: "076280042153",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "600 mg" },
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "15 mg" },
@@ -255,6 +263,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Stress AM, Timed-Release (120ct)",
     formulaId: "solaray-b125-076280042214",
     form: "capsule",
+    barcode: "076280042214",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid, Rose Hips, Acerola Cherry)", strength: "500 mg" },
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "50 mg" },
@@ -279,6 +288,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Vitamin B-Stress, Timed-Release (240ct)",
     formulaId: "solaray-b125-076280042429",
     form: "capsule",
+    barcode: "076280042429",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid from Rose Hips, from Acerola Cherry)", strength: "1,000 mg" },
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "100 mg" },
@@ -303,6 +313,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 50mg (100ct)",
     formulaId: "solaray-b125-076280042719",
     form: "capsule",
+    barcode: "076280042719",
     actives: [
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "50 mg" },
       { name: "Riboflavin", strength: "50 mg" },
@@ -325,6 +336,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 100 (250ct)",
     formulaId: "solaray-b125-076280043037",
     form: "capsule",
+    barcode: "076280043037",
     actives: [
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "100 mg" },
       { name: "Riboflavin", strength: "100 mg" },
@@ -347,6 +359,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-1, 100mg (100ct)",
     formulaId: "solaray-b125-076280043259",
     form: "capsule",
+    barcode: "076280043259",
     actives: [
       { name: "Thiamine (as Thiamine Mononitrate)", strength: "100 mg" },
     ],
@@ -364,6 +377,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-2 (Riboflavin) 100mg (100ct)",
     formulaId: "solaray-b125-076280043273",
     form: "capsule",
+    barcode: "076280043273",
     actives: [
       { name: "Riboflavin", strength: "100 mg" },
     ],
@@ -382,6 +396,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Niacinamide 500mg (100ct)",
     formulaId: "solaray-b125-076280043655",
     form: "capsule",
+    barcode: "076280043655",
     actives: [
       { name: "Niacinamide", strength: "500 mg" },
     ],
@@ -399,6 +414,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pantothenic Acid 500mg (250ct)",
     formulaId: "solaray-b123-076280043808",
     form: "capsule",
+    barcode: "076280043815",
     actives: [
       { name: "Pantothenic Acid (as Calcium d-Pantothenate)", strength: "500 mg" },
       { name: "Calcium (as Calcium d-Pantothenate)", strength: "45 mg" },
@@ -419,6 +435,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C 500mg, Cherry (100ct)",
     formulaId: "solaray-b125-076280044904",
     form: "chewable",
+    barcode: "076280044904",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "500 mg" },
     ],
@@ -447,6 +464,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Potassium Bromelain (60ct)",
     formulaId: "solaray-b125-076280045161",
     form: "capsule",
+    barcode: "076280045161",
     actives: [
       { name: "Magnesium (as Aquamin Marine Magnesium and Magnesium Glycinate)", strength: "300 mg" },
       { name: "Potassium (from Potassium Citrate)", strength: "99 mg" },
@@ -469,6 +487,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Potassium Bromelain (120ct)",
     formulaId: "solaray-b125-076280045161",
     form: "capsule",
+    barcode: "076280045178",
     actives: [
       { name: "Magnesium (as Aquamin Marine Magnesium and Magnesium Glycinate)", strength: "300 mg" },
       { name: "Potassium (from Potassium Citrate)", strength: "99 mg" },
@@ -491,6 +510,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Copper Citrate 2mg (60ct)",
     formulaId: "solaray-b125-076280045963",
     form: "capsule",
+    barcode: "076280045963",
     actives: [
       { name: "Copper (from Copper Citrate)", strength: "2 mg" },
     ],
@@ -513,6 +533,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega-Mineral Multivitamin (120ct)",
     formulaId: "solaray-b125-076280047721",
     form: "capsule",
+    barcode: "076280047721",
     actives: [
       { name: "Vitamin A (as Beta Carotene, Retinyl Palmitate)", strength: "7,470 mcg" },
       { name: "Vitamin C (as Ascorbic Acid, Rose Hips, Acerola Cherry)", strength: "300 mg" },
@@ -559,6 +580,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray L-Lysine 1000mg (90ct)",
     formulaId: "solaray-b125-076280048605",
     form: "tablet",
+    barcode: "076280048605",
     actives: [
       { name: "L-Lysine (as L-Lysine HCl)", strength: "1,000 mg" },
       { name: "Vitamin C (as Ascorbic Acid)", strength: "1,000 mg" },
@@ -580,6 +602,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cool Cayenne Pepper 40,000 Hu (90ct)",
     formulaId: "solaray-b125-076280081008",
     form: "capsule",
+    barcode: "076280081008",
     actives: [
       { name: "Cayenne (Capsicum annuum) (pepper)", strength: "600 mg" },
     ],
@@ -599,6 +622,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cool Cayenne Pepper 40,000 Hu (180ct)",
     formulaId: "solaray-b125-076280081008",
     form: "capsule",
+    barcode: "076280081015",
     actives: [
       { name: "Cayenne (Capsicum annuum) (pepper)", strength: "600 mg" },
     ],
@@ -618,6 +642,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Extra Hot Cool Cayenne Pepper 100,000 Hu (90ct)",
     formulaId: "solaray-b125-076280081022",
     form: "capsule",
+    barcode: "076280081022",
     actives: [
       { name: "Cayenne (Capsicum annuum) (fruit)", strength: "600 mg" },
     ],
@@ -637,6 +662,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cool Cayenne Pepper 40,000 HU (90ct)",
     formulaId: "solaray-b125-076280081039",
     form: "capsule",
+    barcode: "076280081039",
     actives: [
       { name: "Cayenne (Capsicum annuum) (pepper)", strength: "320 mg" },
       { name: "Butcher's Broom (Ruscus aculeatus) (root)", strength: "320 mg" },
@@ -657,6 +683,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Yeast-Cleanse (90ct)",
     formulaId: "solaray-b125-076280081329",
     form: "capsule",
+    barcode: "076280081329",
     actives: [
       { name: "Caprylic Acid (from Calcium Caprylate, Magnesium Caprylate, and Zinc Caprylate)", strength: "2,180 mg" },
       { name: "Calcium (from Calcium Caprylate)", strength: "162 mg" },
@@ -681,6 +708,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Yeast-Cleanse (180ct)",
     formulaId: "solaray-b125-076280081329",
     form: "capsule",
+    barcode: "076280081381",
     actives: [
       { name: "Caprylic Acid (from Calcium Caprylate, Magnesium Caprylate, and Zinc Caprylate)", strength: "2,180 mg" },
       { name: "Calcium (from Calcium Caprylate)", strength: "162 mg" },
@@ -705,6 +733,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Total Cleanse Colon (60ct)",
     formulaId: "solaray-b125-076280083620",
     form: "capsule",
+    barcode: "076280083620",
     actives: [
       { name: "Magnesium (as Magnesium Citrate)", strength: "80 mg" },
       { name: "Total Cleanse Colon Herbal Blend", strength: "825 mg" },
@@ -725,6 +754,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Triple Strength Sambuactin (60ct)",
     formulaId: "solaray-b125-076280238396",
     form: "tablet",
+    barcode: "076280238396",
     actives: [
       { name: "Black Elderberry (Sambucus nigra) (berry extract)", strength: "1,200 mg" },
       { name: "Vitamin C (as Ascorbic Acid)", strength: "400 mg" },
@@ -748,6 +778,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Phytoestrogen (240ct)",
     formulaId: "solaray-b125-076280037586",
     form: "capsule",
+    barcode: "076280375831",
     actives: [
       { name: "Non-GMO Soy (Glycine max) (bean extract)", strength: "200 mg" },
       { name: "Wild Yam (Dioscorea villosa) (root)", strength: "200 mg" },
@@ -770,6 +801,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray PhytoEstrogen Plus EFA's (60ct)",
     formulaId: "solaray-b125-076280375923",
     form: "softgel",
+    barcode: "076280375923",
     actives: [
       { name: "Non-GMO Soy (Glycine max) (bean extract)", strength: "150 mg" },
       { name: "Wild Yam (Dioscorea villosa) (root)", strength: "200 mg" },
@@ -790,6 +822,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mycrobiome Probiotic Colon Formula, 50bn, 18 Strain Once Daily (30ct)",
     formulaId: "solaray-b125-076280669671",
     form: "capsule",
+    barcode: "076280669671",
     actives: [
       { name: "mycrobiome Colon Formula Blend (supplying 50 billion CFU)", strength: "600 mg" },
     ],
@@ -812,6 +845,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mycrobiome Probiotic Weight Formula, 50 Billion, 18 Strain Once Daily (30ct)",
     formulaId: "solaray-b125-076280693034",
     form: "capsule",
+    barcode: "076280693034",
     actives: [
       { name: "mycrobiome Weight Formula Blend (supplying 50 billion CFU)", strength: "600 mg" },
     ],
@@ -834,6 +868,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Sugar-Free L-Theanine Chewable, Lemon-Lime Flavor (30ct)",
     formulaId: "solaray-b125-076280975123",
     form: "chewable",
+    barcode: "076280975123",
     actives: [
       { name: "L-Theanine", strength: "200 mg" },
       { name: "Vitamin B-6 (as Pyridoxine HCl)", strength: "20 mg" },
@@ -2443,7 +2478,19 @@ if (_ROWS.filter((r) => r.formulaId === r.id).length !== 29) throw new Error('ba
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 5) throw new Error('batch125 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch125 recordStatus');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch125 brand');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch125 UPC must stay blank');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch125 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch125 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch125 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'liquid')) throw new Error('batch125 must not grade pour bottles');
 if (_ROWS.some((r) => !/\(\d/.test(r.productName))) throw new Error('batch125 row missing pack size');
 if (BATCH125_SKIPPED_NO_OI.length !== 1) throw new Error('batch125 no_OI');

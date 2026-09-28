@@ -75,6 +75,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -95,6 +96,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -112,6 +114,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Kidney Blend SP-6 (100ct)",
     formulaId: "solaray-b128-076280002607",
     form: "capsule",
+    barcode: "076280002607",
     actives: [
       { name: "Proprietary Blend", strength: "940 ml" },
     ],
@@ -166,6 +169,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Prostate Blend Sp-16 (100ct)",
     formulaId: "solaray-b128-076280021608",
     form: "capsule",
+    barcode: "076280021608",
     actives: [
       { name: "Proprietary Blend", strength: "1000 mg" },
     ],
@@ -182,6 +186,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Vitamin B-Stress, Timed-Release (60ct)",
     formulaId: "solaray-b126-076280042412",
     form: "capsule",
+    barcode: "076280042405",
     actives: [
       { name: "Miamncesascoe", strength: "000 mg" },
       { name: "Mononitrate) (B-1 PABA", strength: "100 mg" },
@@ -233,6 +238,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Multi Mineral (200ct)",
     formulaId: "solaray-b128-076280045116",
     form: "capsule",
+    barcode: "076280045116",
     actives: [
       { name: "Calcium (from Calcium Amino Acid Chelate Complex)", strength: "1000 mg" },
       { name: "Phosphorus (from Potassium Phosphate)", strength: "22 mg" },
@@ -260,6 +266,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Multi Mineral, Iron-Free (100ct)",
     formulaId: "solaray-b128-076280045130",
     form: "capsule",
+    barcode: "076280045130",
     actives: [
       { name: "Calcium (from Calcium Amino Acid Chelate Complex)", strength: "1000 mg" },
       { name: "Phosphorus (from Potassium Phosphate)", strength: "22 mg" },
@@ -290,6 +297,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Multi Mineral, Iron-Free (200ct)",
     formulaId: "solaray-b128-076280045130",
     form: "capsule",
+    barcode: "076280045147",
     actives: [
       { name: "Calcium (from Calcium Amino Acid Chelate Complex)", strength: "1000 mg" },
       { name: "Phosphorus (from Potassium Phosphate)", strength: "22 mg" },
@@ -320,6 +328,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Citrate With Vitamin D-2, 1:1 (90ct)",
     formulaId: "solaray-b128-076280045239",
     form: "capsule",
+    barcode: "076280045239",
     actives: [
       { name: "Vitamin D (as Ergocalciferol) (D-2)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate, Calcium Hydroxide)", strength: "1000 mg" },
@@ -362,6 +371,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Citrate (180ct)",
     formulaId: "solaray-b128-076280045253",
     form: "capsule",
+    barcode: "076280045253",
     actives: [
       { name: "Calcium (from Calcium Citrate, Calcium Hydroxide)", strength: "1000 mg" },
       { name: "Magnesium (from Magnesium Oxide,)", strength: "1000 mg" },
@@ -383,6 +393,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cal-Mag Citrate w/D-2, 2:1 Ratio (180ct)",
     formulaId: "solaray-b128-076280045277",
     form: "capsule",
+    barcode: "076280045277",
     actives: [
       { name: "Vitamin D (as Ergocalciferol) (D-2)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate)", strength: "1000 mg" },
@@ -406,6 +417,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate Supreme, Bone (180ct)",
     formulaId: "solaray-b128-076280045291",
     form: "capsule",
+    barcode: "076280045291",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "500 mg" },
       { name: "Vitamin D (as Cholecalciferol) (D-3)", strength: "6.4 mcg" },
@@ -435,6 +447,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium, AAC 2:1 (180ct)",
     formulaId: "solaray-b128-076280045314",
     form: "capsule",
+    barcode: "076280045314",
     actives: [
       { name: "Calcium (from Calcium Amino Acid Chelate Complex, Calcium)", strength: "1000 mg" },
       { name: "Magnesium (from Magnesium Amino Acid Chelate Complex,)", strength: "500 mg" },
@@ -462,6 +475,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Amino Acid (90ct)",
     formulaId: "solaray-b128-076280045345",
     form: "capsule",
+    barcode: "076280045345",
     actives: [
       { name: "Vitamin D (as Ergocalciferol) (D-2)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Carbonate, Calcium Hydroxide, Calcium)", strength: "1000 mg" },
@@ -488,6 +502,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium, Magnesium, Zinc (100ct)",
     formulaId: "solaray-b128-076280045604",
     form: "capsule",
+    barcode: "076280045604",
     actives: [
       { name: "Calcium (from Calcium Carbonate, Calcium Hydroxide,)", strength: "1000 mg" },
       { name: "Zinc (from Zinc Amino Acid Chelate)", strength: "25 mg" },
@@ -511,6 +526,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium, Magnesium, Zinc (250ct)",
     formulaId: "solaray-b128-076280045604",
     form: "capsule",
+    barcode: "076280045611",
     actives: [
       { name: "Calcium (from Calcium Carbonate, Calcium Hydroxide, Calcium Citrate,)", strength: "1000 mg" },
       { name: "Magnesium (from ium Oxide, M ium Citrate, Ma i)", strength: "500 mg" },
@@ -535,6 +551,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate With Vitamin D-3 1000mg (90ct)",
     formulaId: "solaray-b128-076280045833",
     form: "capsule",
+    barcode: "076280045833",
     actives: [
       { name: "Vitamin D (as C! i (D-3))", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate, Calcium Carbonate)", strength: "1000 mg" },
@@ -555,6 +572,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate 1000mg (120ct)",
     formulaId: "solaray-b128-076280045857",
     form: "capsule",
+    barcode: "076280045857",
     actives: [
       { name: "Calcium Citrate", strength: "1000 mg" },
     ],
@@ -574,6 +592,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Iron Asporotate 18mg (100ct)",
     formulaId: "solaray-b128-076280046007",
     form: "capsule",
+    barcode: "076280046007",
     actives: [
       { name: "Iron (from Iron Asporotate™ [Iron Aspartate, Iron Citrate and Iron)", strength: "18 mg" },
     ],
@@ -594,6 +613,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Asporotate 400mg (60ct)",
     formulaId: "solaray-b128-076280046205",
     form: "capsule",
+    barcode: "076280046205",
     actives: [
       { name: "Magnesium (from Magnesium Asporotate™ Complex)", strength: "400 mg" },
     ],
@@ -612,6 +632,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Asporotate 400mg (120ct)",
     formulaId: "solaray-b128-076280046212",
     form: "capsule",
+    barcode: "076280046212",
     actives: [
       { name: "Magnesium Asporotate", strength: "400 mg" },
     ],
@@ -630,6 +651,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium, Amino Acid Chelate 200mg (100ct)",
     formulaId: "solaray-b128-076280046304",
     form: "capsule",
+    barcode: "076280046304",
     actives: [
       { name: "Magnesium (from Magnesium Amino Acid Chelate Complex,)", strength: "200 mg" },
     ],
@@ -649,6 +671,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Manganese 50mg (100ct)",
     formulaId: "solaray-b128-076280046502",
     form: "capsule",
+    barcode: "076280046502",
     actives: [
       { name: "Manganese", strength: "50 mg" },
     ],
@@ -686,6 +709,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Potassium 99mg (100ct)",
     formulaId: "solaray-b128-076280046700",
     form: "capsule",
+    barcode: "076280046700",
     actives: [
       { name: "Potassium", strength: "99 mg" },
     ],
@@ -707,6 +731,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Multivitamin (100ct)",
     formulaId: "solaray-b128-076280047813",
     form: "capsule",
+    barcode: "076280047813",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "1000 mg" },
       { name: "Vitamin E (as d-Alpha Tocopheryl Acetate/Succinate)", strength: "268 mg" },
@@ -735,6 +760,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Multivitamin (250ct)",
     formulaId: "solaray-b128-076280047813",
     form: "capsule",
+    barcode: "076280047820",
     actives: [
       { name: "Pe st <", strength: "1 g" },
       { name: "Vitamin C (as Ascorbic Acid) 7,000 mg 1,111% J Lecithin (soy)", strength: "50 mg" },
@@ -763,6 +789,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Multivitamin (360ct)",
     formulaId: "solaray-b128-076280047813",
     form: "capsule",
+    barcode: "076280047837",
     actives: [
       { name: "TotalCarbohydrate ~~ ~~ ~~ ~<", strength: "1 g" },
       { name: "Vitamin A (as 60% Beta Carotene,)", strength: "7500 mcg" },
@@ -791,6 +818,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Multivitamin, Iron-Free (250ct)",
     formulaId: "solaray-b128-076280047851",
     form: "capsule",
+    barcode: "076280047851",
     actives: [
       { name: "Vitamin A (as 60% Beta Carotene, Retinyl Palmitate) 7,500 mcg 833% _}! Lecithin (oy)", strength: "50 mg" },
       { name: "Vitamin C (as Ascorbic Acid) 1,000mg___1,111% Bioflavonoid Concentrate =. ‘", strength: "60 mg" },
@@ -819,6 +847,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Hair Nutrients (60ct)",
     formulaId: "solaray-b128-076280047905",
     form: "capsule",
+    barcode: "076280047905",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "200 mg" },
       { name: "Thiamine (as Thiamine Mononitrate) (B-1)", strength: "15 mg" },
@@ -845,6 +874,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Adrenal Caps (60 ct)",
     formulaId: "solaray-b128-076280051001",
     form: "capsule",
+    barcode: "076280051001",
     actives: [
       { name: "Adrenal (bovine)", strength: "340 mg" },
       { name: "Adrenal Caps™ Proprietary Herb Activators™", strength: "430 mg" },
@@ -865,6 +895,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Resveratrol, Japanese Knotweed 75mg (60ct)",
     formulaId: "solaray-b128-076280103489",
     form: "capsule",
+    barcode: "076280103489",
     actives: [
       { name: "Japanese Knotweed (Polygonum cuspidatum) (root/rhizome extract)", strength: "75 mg" },
       { name: "Resveratrol and", strength: "15 mg" },
@@ -885,6 +916,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Biocitrate Potassium 99mg (60ct)",
     formulaId: "solaray-b128-076280121094",
     form: "capsule",
+    barcode: "076280121094",
     actives: [
       { name: "Biocitrate Potassium", strength: "99 mg" },
     ],
@@ -907,6 +939,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cal-Mag Citrate w/D-2, 2:1 Ratio (360ct)",
     formulaId: "solaray-b128-076280045277",
     form: "capsule",
+    barcode: "076280131758",
     actives: [
       { name: "Vitamin D (as Ergocalciferol) (D-2)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate)", strength: "1000 mg" },
@@ -930,6 +963,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate With Vitamin D-3 1000mg (240ct)",
     formulaId: "solaray-b128-076280045833",
     form: "capsule",
+    barcode: "076280131765",
     actives: [
       { name: "Vitamin D (as Cholecalciferol) (D-3)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate, Calcium Carbonate)", strength: "1000 mg" },
@@ -950,6 +984,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Asporotate 400mg (180ct)",
     formulaId: "solaray-b128-076280046212",
     form: "capsule",
+    barcode: "076280132236",
     actives: [
       { name: "Magnesium Asporotate", strength: "400 mg" },
     ],
@@ -968,6 +1003,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cal-Mag Citrate Vitamin with D-2, 1:3 (180ct)",
     formulaId: "solaray-b128-076280228786",
     form: "capsule",
+    barcode: "076280228786",
     actives: [
       { name: "Vitamin D (as Ergocalciferol) (D-2)", strength: "10 mcg" },
       { name: "Calcium (from Calcium Citrate, Calcium Hydroxide)", strength: "1000 mg" },
@@ -990,6 +1026,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray ProSorb Turmeric 29x 500mg (30 ct)",
     formulaId: "solaray-b128-076280229639",
     form: "capsule",
+    barcode: "076280229639",
     actives: [
       { name: "Meriva® (Curcumin Phytosome™)", strength: "500 mg" },
     ],
@@ -1009,6 +1046,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Her Life Stages Libido (60 ct)",
     formulaId: "solaray-b128-076280360448",
     form: "capsule",
+    barcode: "076280360448",
     actives: [
       { name: "Organic KSM-66 (Withania ifera) (root extract)", strength: "600 mg" },
       { name: "Shatavari (Asp (root extract))", strength: "150 mg" },
@@ -1030,6 +1068,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate With Vitamin D-3 1000mg (180ct)",
     formulaId: "solaray-b128-076280045833",
     form: "capsule",
+    barcode: "076280458350",
     actives: [
       { name: "Calcium (from Calcium Citrate, Calcium Carbonate)", strength: "1000 mg" },
     ],
@@ -1049,6 +1088,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium Citrate 1000mg (240ct)",
     formulaId: "solaray-b128-076280045857",
     form: "capsule",
+    barcode: "076280458527",
     actives: [
       { name: "Calcium (from Calcium Citrate [85%], Calcium Carbonate)", strength: "1000 mg" },
     ],
@@ -1068,6 +1108,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Iron 50mg (60ct)",
     formulaId: "solaray-b128-076280461053",
     form: "capsule",
+    barcode: "076280461053",
     actives: [
       { name: "Iron (from Iron Amino Acid Chelate Complex)", strength: "50 mg" },
     ],
@@ -1085,6 +1126,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Citrate 400mg (90ct)",
     formulaId: "solaray-b128-076280463019",
     form: "capsule",
+    barcode: "076280463019",
     actives: [
       { name: "Magnesium (from Magnesium Citrate,)", strength: "400 mg" },
     ],
@@ -1107,6 +1149,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Her Life Stages Menopause (60 ct)",
     formulaId: "solaray-b128-076280469363",
     form: "capsule",
+    barcode: "076280469363",
     actives: [
       { name: "Chromax® Chromium (Chromium Picolinate)", strength: "200 mcg" },
       { name: "Morosil® Moro Red Orange (Citrus sinensis (L.) Osbeck) (fruit extract)", strength: "400 mg" },
@@ -1128,6 +1171,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Biocitrate Strontium 250mg (60 ct)",
     formulaId: "solaray-b128-076280474848",
     form: "capsule",
+    barcode: "076280474848",
     actives: [
       { name: "Strontium (from Strontium Citrate)", strength: "250 mg" },
     ],
@@ -1147,6 +1191,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Multivitamin, Iron-Free (360ct)",
     formulaId: "solaray-b128-076280478556",
     form: "capsule",
+    barcode: "076280478556",
     actives: [
       { name: "Protei 1 2% Potassium (from Potassium)", strength: "88 mg" },
       { name: "Vitamin A (as 60% Beta Carotene,)", strength: "7500 mcg" },
@@ -1175,6 +1220,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mushroom Herb Complex (90ct)",
     formulaId: "solaray-b128-076280600438",
     form: "capsule",
+    barcode: "076280600438",
     actives: [
       { name: "Mushroom Herb Complex", strength: "800 mg" },
     ],
@@ -1193,6 +1239,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Her Life Stages Postmenopause (60 ct)",
     formulaId: "solaray-b128-076280675559",
     form: "capsule",
+    barcode: "076280675559",
     actives: [
       { name: "Chromax® Chromium (from Chromium Picolinate)", strength: "200 mcg" },
       { name: "Morosil® Moro Red Orange (Citrus sinensis (L.) Osbeck) (fruit extract)", strength: "400 mg" },
@@ -1215,6 +1262,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray ProSorb Berberine 9x 550mg (30 ct)",
     formulaId: "solaray-b128-076280773279",
     form: "capsule",
+    barcode: "076280773279",
     actives: [
       { name: "BerbeVis® (Berberine Phytosome™)", strength: "550 mg" },
     ],
@@ -1236,6 +1284,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Citrate W/ Vitamin D-3, 2:1 Ratio (180ct)",
     formulaId: "solaray-b128-076280884500",
     form: "capsule",
+    barcode: "076280884500",
     actives: [
       { name: "Vitamin D (as Cholecalciferol) (D-3)", strength: "25 mcg" },
       { name: "Calcium (from Calcium Citrate)", strength: "1000 mg" },
@@ -1259,6 +1308,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Her Life Stages PMS & Menstrual (24 ct)",
     formulaId: "solaray-b128-076280946123",
     form: "capsule",
+    barcode: "076280946123",
     actives: [
       { name: "Thiamin (Thiamine HC!)", strength: "100 mg" },
       { name: "Cramp Bark (Viburnum opulus) (bark)", strength: "100 mg" },
@@ -1283,6 +1333,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Her Life Stages Perimenopause (60 ct)",
     formulaId: "solaray-b128-076280955781",
     form: "capsule",
+    barcode: "076280955781",
     actives: [
       { name: "Chromium (Chromium Picolinate)", strength: "200 mcg" },
       { name: "Maca (Lepidium meyenii) (root extract)", strength: "500 mg" },
@@ -1849,7 +1900,19 @@ if (_ROWS.filter((r) => r.formulaId === r.id).length !== 44) throw new Error("ba
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 10) throw new Error("batch128 REUSE tally drift");
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error("batch128 recordStatus");
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error("batch128 brand");
-if (_ROWS.some((r) => r.barcode)) throw new Error("batch128 UPC must stay blank");
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch128 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch128 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch128 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === "liquid")) throw new Error("batch128 must not grade pour bottles");
 if (_ROWS.some((r) => !/\([^)]*\d/.test(r.productName))) throw new Error("batch128 row missing pack size");
 if (_ROWS.some((r) => !r.form)) throw new Error("batch128 row missing form");
