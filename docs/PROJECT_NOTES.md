@@ -116,7 +116,7 @@ Merge without a new founder grade:
 - Case / extra parenthetical / hydrate / concentrate vs extract vs powder do not create a refuse when the family is on MAIN
 - Parsley / parsley bases, bare Vegetable Capsule / Vegetarian Capsule, and homeopathic 3x / 6x salts are stamped (Sept 28, 2026). See §5. Do not map bare Vegetable Capsule to Vegetable Cellulose Capsule / HPMC. Do not map 3x / 6x salts as filler salt / silica lubricant.
 
-PARK RULE (2026-09-28). Do not park a token only because MAIN has no exact row. If methodology + SOURCES already cover the family, stamp the alias and write. A brand is not “closed” while writable leftovers remain. Park only: OCR / trademark junk, oil pour bottles (hunt-list), or a token with no family after that check. Do not say CLOSED on a brand that still has writable refuses.
+PARK RULE (2026-09-28). If MAIN has no family for a real token, run methodology + SOURCES and stamp a new §5 family, then write the packs. Do not park “no row yet.” Park only OCR / trademark junk and oil pour bottles (hunt-list). A brand is not closed while a real leftover token is ungraded.
 
 BRAND-CLOSE WORKFLOW
 - Finish the brand you started. Do not hop brands.
