@@ -124,3 +124,4 @@ export { BATCH123_KYR6B_SOLARAY_CLOSEOUT_NO_UPC } from './batch123-kyr6b-solaray
 export { BATCH124_KYR6B_SOLARAY_FAT_CLOSEOUT } from './batch124-kyr6b-solaray-fat-closeout';
 export { BATCH125_KYR6B_SOLARAY_LAST_FAMILY_CLOSEOUT } from './batch125-kyr6b-solaray-last-family-closeout';
 export { BATCH126_KYR6B_SOLARAY_ONE_SHOT } from './batch126-kyr6b-solaray-one-shot';
+export { BATCH127_KYR6B_SOLARAY_CA_ASCORBATE } from './batch127-kyr6b-solaray-ca-ascorbate';
