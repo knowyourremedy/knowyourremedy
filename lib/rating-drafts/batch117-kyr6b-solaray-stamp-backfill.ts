@@ -5043,7 +5043,7 @@ const COMPACT: Compact[] = [
     id: "solaray-b117-076280048254",
     productName: "Solaray Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice (30ct)",
     formulaId: "solaray-b117-076280048254",
-    form: "liquid",
+    form: "capsule",
     actives: [
       { name: "Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice", strength: "label serving" }
     ],
@@ -5061,7 +5061,7 @@ const COMPACT: Compact[] = [
     id: "solaray-b117-076280048278",
     productName: "Solaray Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice (120ct)",
     formulaId: "solaray-b117-076280048254",
-    form: "liquid",
+    form: "capsule",
     actives: [
       { name: "Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice", strength: "label serving" }
     ],
