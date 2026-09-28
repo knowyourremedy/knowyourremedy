@@ -912,6 +912,33 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'sprouts-organic-blue-spirulina': brandMark('sprouts-mark.png'),
   'sprouts-d3-1000-rice-bran': brandMark('sprouts-mark.png'),
   'sprouts-d3-2000-rice-bran': brandMark('sprouts-mark.png'),
+  // Vitamins night run 2026-09-28 5:30 AM PT batch 2.
+  // Tried the SKU. shop.sprouts.com heroes are flat label scans.
+  // Beet root's second tile is Supplement Facts. Do not glue a label.
+  // Vitamin C spans 646670672347 / 646670672354. B Complex Raspberry
+  // spans 646670130212 / 646670130229. B-12 500 spans 646670670114 /
+  // 646670670121. B-6 spans 646670670138 / 646670670152. Do not glue
+  // one count. Official Sprouts mark already on disk. Per-id only.
+  'sprouts-organic-beet-root': brandMark('sprouts-mark.png'),
+  'sprouts-vitamin-c-1000-capsules': brandMark('sprouts-mark.png'),
+  'sprouts-zinc-50-tablets': brandMark('sprouts-mark.png'),
+  'sprouts-b12-1000-pr': brandMark('sprouts-mark.png'),
+  'sprouts-b12-alcohol-free-sublingual': brandMark('sprouts-mark.png'),
+  'sprouts-b-complex-raspberry-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-b12-folic-b6-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-d3-5000-citrus-mct': brandMark('sprouts-mark.png'),
+  'sprouts-b12-500-resin': brandMark('sprouts-mark.png'),
+  'sprouts-calcium-citrate-d-trisilicate': brandMark('sprouts-mark.png'),
+  'sprouts-omega3-turmeric-tio2': brandMark('sprouts-mark.png'),
+  'sprouts-calcium-600-d-softgel-tio2': brandMark('sprouts-mark.png'),
+  'sprouts-d3-k2-gummies': brandMark('sprouts-mark.png'),
+  'sprouts-hawthorn-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-male-virility-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-moringa-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-saw-palmetto-liquid': brandMark('sprouts-mark.png'),
+  'sprouts-b12-raspberry-1000': brandMark('sprouts-mark.png'),
+  'sprouts-b6-100': brandMark('sprouts-mark.png'),
+  'sprouts-red-yeast-rice': brandMark('sprouts-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -10569,6 +10596,50 @@ assertBrandMark(
 );
 assertBrandMark('sprouts-d3-1000-rice-bran', 'Sprouts', 'sprouts-mark.png');
 assertBrandMark('sprouts-d3-2000-rice-bran', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-organic-beet-root', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-vitamin-c-1000-capsules',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-zinc-50-tablets', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-b12-1000-pr', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-b12-alcohol-free-sublingual',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'sprouts-b-complex-raspberry-liquid',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-b12-folic-b6-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-d3-5000-citrus-mct', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-b12-500-resin', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-calcium-citrate-d-trisilicate',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'sprouts-omega3-turmeric-tio2',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark(
+  'sprouts-calcium-600-d-softgel-tio2',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-d3-k2-gummies', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-hawthorn-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-male-virility-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-moringa-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-saw-palmetto-liquid', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-b12-raspberry-1000', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-b6-100', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-red-yeast-rice', 'Sprouts', 'sprouts-mark.png');
 assertLetterOnly(
   'nutricost-dong-quai-capsules-120-capsules',
   'Nutricost',
