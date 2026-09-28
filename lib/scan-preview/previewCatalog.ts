@@ -4257,6 +4257,78 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'megafood-extra-strength-magnesium-glycinate': catalogShot(
     'megafood-extra-strength-magnesium-glycinate.jpg',
   ),
+  // Vitamins night run 2026-09-28 3:00 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Magnesium Glycinate, UPC 051494105597, 120 capsules. Not Extra Strength.
+  'megafood-magnesium-glycinate': catalogShot(
+    'megafood-magnesium-glycinate.jpg',
+  ),
+  // Vitamin K1 & K2, UPC 051494106136, 60 capsules.
+  'megafood-vitamin-k1-k2': catalogShot('megafood-vitamin-k1-k2.jpg'),
+  // Women's Whole Body Multi Capsules, UPC 051494106068, 60 capsules.
+  'megafood-womens-whole-body-capsules': catalogShot(
+    'megafood-womens-whole-body-capsules.jpg',
+  ),
+  // Men's Whole Body Multi Capsules, UPC 051494106051, 60 capsules.
+  'megafood-mens-whole-body-capsules': catalogShot(
+    'megafood-mens-whole-body-capsules.jpg',
+  ),
+  // Hair Growth Capsules, UPC 051494106082, 30 capsules.
+  'megafood-hair-growth-capsules': catalogShot(
+    'megafood-hair-growth-capsules.jpg',
+  ),
+  // NAD+ Boost, UPC 051494105979, 60 capsules.
+  'megafood-nad-boost': catalogShot('megafood-nad-boost.jpg'),
+  // High Absorption CoQ10, UPC 051494105696, 60 capsules.
+  'megafood-high-absorption-coq10': catalogShot(
+    'megafood-high-absorption-coq10.jpg',
+  ),
+  // Fast Acting Turmeric, UPC 051494105689, 60 capsules.
+  'megafood-fast-acting-turmeric': catalogShot(
+    'megafood-fast-acting-turmeric.jpg',
+  ),
+  // Shilajit, UPC 051494105986, 60 capsules.
+  'megafood-shilajit': catalogShot('megafood-shilajit.jpg'),
+  // L-Theanine & B-Complex, UPC 051494105450, 60 tablets.
+  'megafood-l-theanine-b-complex': catalogShot(
+    'megafood-l-theanine-b-complex.jpg',
+  ),
+  // Superfood Mushroom Stress Relief, UPC 051494105474, 60 capsules.
+  'megafood-mushroom-stress-relief': catalogShot(
+    'megafood-mushroom-stress-relief.jpg',
+  ),
+  // Superfood Mushroom Focus Support, UPC 051494105467, 60 capsules.
+  'megafood-mushroom-focus-support': catalogShot(
+    'megafood-mushroom-focus-support.jpg',
+  ),
+  // Omega-3 Fish Oil, UPC 051494105948, 90 softgels. Not the 180ct.
+  'megafood-omega-3-fish-oil': catalogShot('megafood-omega-3-fish-oil.jpg'),
+  // Omega 3-6-9, UPC 051494105399, 60 capsules.
+  'megafood-omega-3-6-9': catalogShot('megafood-omega-3-6-9.jpg'),
+  // Blood Builder Liquid Iron, UPC 051494103678, 7.7 oz.
+  'megafood-blood-builder-liquid': catalogShot(
+    'megafood-blood-builder-liquid.jpg',
+  ),
+  // Women's Whole Body Multi Gummies, UPC 051494105719, 90 gummies.
+  'megafood-womens-whole-body-gummies': catalogShot(
+    'megafood-womens-whole-body-gummies.jpg',
+  ),
+  // Men's Whole Body Multi Gummies, UPC 051494105726, 90 gummies.
+  'megafood-mens-whole-body-gummies': catalogShot(
+    'megafood-mens-whole-body-gummies.jpg',
+  ),
+  // Women's 55+ Whole Body Multi Gummies, UPC 051494105733, 90 gummies.
+  'megafood-womens-55-whole-body-gummies': catalogShot(
+    'megafood-womens-55-whole-body-gummies.jpg',
+  ),
+  // Men's 55+ Whole Body Multi Gummies, UPC 051494105740, 90 gummies.
+  'megafood-mens-55-whole-body-gummies': catalogShot(
+    'megafood-mens-55-whole-body-gummies.jpg',
+  ),
+  // High Absorption Magnesium Citrate Gummies, UPC 051494105917, 60 gummies.
+  'megafood-magnesium-citrate-gummies': catalogShot(
+    'megafood-magnesium-citrate-gummies.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10117,6 +10189,98 @@ assertExactCarton(
     throw new Error('WELMATE 100-count must not inherit the 200-count carton');
   }
 }
+assertExactCarton(
+  'megafood-magnesium-glycinate',
+  'MegaFood',
+  'megafood-magnesium-glycinate.jpg',
+);
+assertExactCarton(
+  'megafood-vitamin-k1-k2',
+  'MegaFood',
+  'megafood-vitamin-k1-k2.jpg',
+);
+assertExactCarton(
+  'megafood-womens-whole-body-capsules',
+  'MegaFood',
+  'megafood-womens-whole-body-capsules.jpg',
+);
+assertExactCarton(
+  'megafood-mens-whole-body-capsules',
+  'MegaFood',
+  'megafood-mens-whole-body-capsules.jpg',
+);
+assertExactCarton(
+  'megafood-hair-growth-capsules',
+  'MegaFood',
+  'megafood-hair-growth-capsules.jpg',
+);
+assertExactCarton('megafood-nad-boost', 'MegaFood', 'megafood-nad-boost.jpg');
+assertExactCarton(
+  'megafood-high-absorption-coq10',
+  'MegaFood',
+  'megafood-high-absorption-coq10.jpg',
+);
+assertExactCarton(
+  'megafood-fast-acting-turmeric',
+  'MegaFood',
+  'megafood-fast-acting-turmeric.jpg',
+);
+assertExactCarton('megafood-shilajit', 'MegaFood', 'megafood-shilajit.jpg');
+assertExactCarton(
+  'megafood-l-theanine-b-complex',
+  'MegaFood',
+  'megafood-l-theanine-b-complex.jpg',
+);
+assertExactCarton(
+  'megafood-mushroom-stress-relief',
+  'MegaFood',
+  'megafood-mushroom-stress-relief.jpg',
+);
+assertExactCarton(
+  'megafood-mushroom-focus-support',
+  'MegaFood',
+  'megafood-mushroom-focus-support.jpg',
+);
+assertExactCarton(
+  'megafood-omega-3-fish-oil',
+  'MegaFood',
+  'megafood-omega-3-fish-oil.jpg',
+);
+assertExactCarton(
+  'megafood-omega-3-6-9',
+  'MegaFood',
+  'megafood-omega-3-6-9.jpg',
+);
+assertExactCarton(
+  'megafood-blood-builder-liquid',
+  'MegaFood',
+  'megafood-blood-builder-liquid.jpg',
+);
+assertExactCarton(
+  'megafood-womens-whole-body-gummies',
+  'MegaFood',
+  'megafood-womens-whole-body-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-mens-whole-body-gummies',
+  'MegaFood',
+  'megafood-mens-whole-body-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-womens-55-whole-body-gummies',
+  'MegaFood',
+  'megafood-womens-55-whole-body-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-mens-55-whole-body-gummies',
+  'MegaFood',
+  'megafood-mens-55-whole-body-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-magnesium-citrate-gummies',
+  'MegaFood',
+  'megafood-magnesium-citrate-gummies.jpg',
+);
 assertLetterOnly(
   'nutricost-dong-quai-capsules-120-capsules',
   'Nutricost',
