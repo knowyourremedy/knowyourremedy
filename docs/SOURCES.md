@@ -72,5 +72,10 @@ How a packet uses this file
 Alias stamps already on a locked row (Sept 28, 2026) — not new grades
 - Lecithin (Soy) = Lecithin (soy) = soy lecithin. Same Cleared lecithin row (EFSA 2017, no ADI; already on the methodology lecithin lock). Case is not a new token. Soy-allergy note still applies. Not bare soy.
 - Bare Rosemary Extract stays on Rosemary Extract (A Natural Preservative) oral. Same Caution. Not a new token.
+- Magnesium Sterate → magnesium stearate / stearate family. Same Cleared. Only when the panel lists it as that lubricant. Same rule as Maanesium Stearate. EFSA 2018, no safety concern; already on the stearate lock.
+- Soybean Oil as a non-gummy enteric / softgel / capsule fill → named soybean-oil fill. Same Cleared. Gummy / lozenge soybean oil stays High / Avoid.
+- Chlorophyll → chlorophyll named pigment. Same Cleared. Chlorophyllin stays unstamped.
+- Zinc Oxide as an other ingredient → zinc oxide as OI. Same Caution. Not the topical Cleared row.
+- Aqueous Coating unnamed → unnamed vegetable / tablet coat. Same Caution. Named HPMC+glycerin coat stays Cleared.
 
 Do not turn this into a 400-row dump of every PubMed URL on day one. Add as we cite.

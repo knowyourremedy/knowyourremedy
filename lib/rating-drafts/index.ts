@@ -119,3 +119,4 @@ export { BATCH118_KYR6B_SOLARAY_CLEANUP } from './batch118-kyr6b-solaray-cleanup
 export { BATCH119_KYR6B_SOLARAY_ALIAS_NETTLE } from './batch119-kyr6b-solaray-alias-nettle';
 export { BATCH120_KYR6B_SOLARAY_ALIAS2_NOOI } from './batch120-kyr6b-solaray-alias2-nooi';
 export { BATCH121_KYR6B_SOLARAY_SOY_32 } from './batch121-kyr6b-solaray-soy-32';
+export { BATCH122_KYR6B_SOLARAY_STERATE_PEPPERMINT_2 } from './batch122-kyr6b-solaray-sterate-peppermint-2';
