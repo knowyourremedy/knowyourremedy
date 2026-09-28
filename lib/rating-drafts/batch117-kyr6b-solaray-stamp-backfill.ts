@@ -8,14 +8,17 @@
 // Rice Bran Extract → named rice-bran extract (Cleared).
 // Whole Rice Concentrate → rice concentrate / hull-concentrate (Cleared).
 // Bare Vegetable Capsule stays ungraded. It is not mapped.
-// No aliases beyond those six. batch70–batch116 were not edited.
+// No aliases beyond those six. batch70–batch115 were not edited.
 // No NatureWise / NOW / Nutricost / WELMATE / GoodSense / TIME-Cap reopen.
 // No oil pour bottles. Vitamin D3 Liquid Unflavored is a dropper and is REFUSED.
 // recordStatus is 'unverified' on every row. UPC stays empty.
 //
-// TALLY (unverified drafts in THIS file): 300 rows —
-// Clean 121 / Caution 179 / Avoid 0.
-// NEW 268 / REUSE 32 / SKIPPED no_OI 123 / SKIPPED OUT 0 / REFUSED 326.
+// TALLY (unverified drafts in THIS file): 299 rows —
+// Clean 120 / Caution 179 / Avoid 0.
+// NEW 267 / REUSE 32 / SKIPPED no_OI 123 / SKIPPED OUT 0 / REFUSED 326.
+// Cleanup edited only the 7 formerly sizeless rows (count added) and
+// removed the organic Nettle Leaf 900mg 100 ct twin (076280194104).
+// Kept the conventional 100ct Caution panel (076280014105).
 // Distinct leftover unknown tokens: 322.
 // TALLY is asserted at the bottom.
 
@@ -411,21 +414,6 @@ const COMPACT: Compact[] = [
     verdict: "clean",
     note: CLEARED_NOTE,
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/glucosamine-sulfate other-ingredients: Gelatin Capsule, Cellulose and Magnesium Stearate. Exact pack Solaray Glucosamine Sulfate 500mg (120ct). SKU 076280081459. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
-  },
-  {
-    id: "solaray-b117-076280194104",
-    productName: "Solaray Nettle Leaf 900mg (100 ct)",
-    formulaId: "solaray-b117-076280194104",
-    form: "capsule",
-    actives: [
-      { name: "Nettle Leaf 900mg", strength: "900 mg" }
-    ],
-    flags: [
-      ["Vegetable Cellulose Capsule", "cleared", "capsuleCellulose"]
-    ],
-    verdict: "clean",
-    note: CLEARED_NOTE,
-    cite: "solaray.com supplement-facts image https://www.solaray.com/products/organically-grown-nettle-leaf other-ingredients: Vegetable Cellulose Capsule. Exact pack Solaray Nettle Leaf 900mg (100 ct). SKU 076280194104. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280008791",
@@ -2237,7 +2225,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280012422",
-    productName: "Solaray Echinacea Purpurea Root 440mg",
+    productName: "Solaray Echinacea Purpurea Root 440mg (100 ct)",
     formulaId: "solaray-b117-076280012422",
     form: "capsule",
     actives: [
@@ -2249,7 +2237,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Silica (Limited). No High.",
-    cite: "solaray.com supplement-facts image https://www.solaray.com/products/echinacea-purpurea-root other-ingredients: Vegetable Cellulose Capsule and Silica. Exact pack Solaray Echinacea Purpurea Root 440mg. SKU 076280012422. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com supplement-facts image https://www.solaray.com/products/echinacea-purpurea-root other-ingredients: Vegetable Cellulose Capsule and Silica. Exact pack Solaray Echinacea Purpurea Root 440mg (100 ct). SKU 076280012422. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280397260",
@@ -2725,7 +2713,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280142600",
-    productName: "Solaray Iodine (as Potassium Iodine) 500mcg",
+    productName: "Solaray Iodine (as Potassium Iodine) 500mcg (30 ct)",
     formulaId: "solaray-b117-076280142600",
     form: "capsule",
     actives: [
@@ -2739,7 +2727,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Silica (Limited). No High.",
-    cite: "solaray.com supplement-facts image https://www.solaray.com/products/iodine other-ingredients: Cellulose, Vegetable Cellulose Capsule, Rice Bran Extract and Silica. Exact pack Solaray Iodine (as Potassium Iodine) 500mcg. SKU 076280142600. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com supplement-facts image https://www.solaray.com/products/iodine other-ingredients: Cellulose, Vegetable Cellulose Capsule, Rice Bran Extract and Silica. Exact pack Solaray Iodine (as Potassium Iodine) 500mcg (30 ct). SKU 076280142600. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280015904",
@@ -3189,7 +3177,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280505139",
-    productName: "Solaray Extended-Release Melatonin with L-Glycine",
+    productName: "Solaray Extended-Release Melatonin with L-Glycine (30 ct)",
     formulaId: "solaray-b117-076280505139",
     form: "capsule",
     actives: [
@@ -3203,7 +3191,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Silica (Limited). No High.",
-    cite: "solaray.com supplement-facts image https://www.solaray.com/products/extended-release-melatonin other-ingredients: Vegetable Cellulose Capsule, Cellulose, Stearic Acid, and Silica. Exact pack Solaray Extended-Release Melatonin with L-Glycine. SKU 076280505139. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com supplement-facts image https://www.solaray.com/products/extended-release-melatonin other-ingredients: Vegetable Cellulose Capsule, Cellulose, Stearic Acid, and Silica. Exact pack Solaray Extended-Release Melatonin with L-Glycine (30 ct). SKU 076280505139. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280599121",
@@ -4201,7 +4189,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280862133",
-    productName: "Solaray Affron Saffron Extract",
+    productName: "Solaray Affron Saffron Extract (30 ct)",
     formulaId: "solaray-b117-076280862133",
     form: "capsule",
     actives: [
@@ -4215,7 +4203,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Silica (Limited). No High.",
-    cite: "solaray.com supplement-facts image https://www.solaray.com/products/affron-saffron-extract other-ingredients: Glycine, Cellulose, Vegetable Cellulose Capsule, Silica. Exact pack Solaray Affron Saffron Extract. SKU 076280862133. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com supplement-facts image https://www.solaray.com/products/affron-saffron-extract other-ingredients: Glycine, Cellulose, Vegetable Cellulose Capsule, Silica. Exact pack Solaray Affron Saffron Extract (30 ct). SKU 076280862133. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280366662",
@@ -4487,7 +4475,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280330922",
-    productName: "Solaray Turmeric Root Extract Super Bio",
+    productName: "Solaray Turmeric Root Extract Super Bio (30 ct)",
     formulaId: "solaray-b117-076280330922",
     form: "capsule",
     actives: [
@@ -4500,7 +4488,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "clean",
     note: CLEARED_NOTE,
-    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/turmeric-root-extract-super-bio other-ingredients: AquaTurm® Micronized Turmeric (Curcuma longa) (root extract), Acacia Gum, Whole Rice Concentrate and Vegetable Cellulose Capsule. Exact pack Solaray Turmeric Root Extract Super Bio. SKU 076280330922. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/turmeric-root-extract-super-bio other-ingredients: AquaTurm® Micronized Turmeric (Curcuma longa) (root extract), Acacia Gum, Whole Rice Concentrate and Vegetable Cellulose Capsule. Exact pack Solaray Turmeric Root Extract Super Bio (30 ct). SKU 076280330922. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280048803",
@@ -4520,7 +4508,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280658095",
-    productName: "Solaray Sweet Wormwood Aerial 300mg",
+    productName: "Solaray Sweet Wormwood Aerial 300mg (100 ct)",
     formulaId: "solaray-b117-076280658095",
     form: "capsule",
     actives: [
@@ -4534,7 +4522,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic Rice Extract Blend, Silica (Limited). No High.",
-    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/sweet-wormwood-aerial other-ingredients: Sweet Wormwood (aerial), Vegetable Cellulose Capsule, Cellulose, Organic Rice Extract Blend and Silica. Exact pack Solaray Sweet Wormwood Aerial 300mg. SKU 076280658095. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/sweet-wormwood-aerial other-ingredients: Sweet Wormwood (aerial), Vegetable Cellulose Capsule, Cellulose, Organic Rice Extract Blend and Silica. Exact pack Solaray Sweet Wormwood Aerial 300mg (100 ct). SKU 076280658095. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280039702",
@@ -4644,7 +4632,7 @@ const COMPACT: Compact[] = [
   },
   {
     id: "solaray-b117-076280013214",
-    productName: "Solaray Glucomannan, Rhizome Extract",
+    productName: "Solaray Glucomannan, Rhizome Extract (100 ct)",
     formulaId: "solaray-b117-076280013214",
     form: "capsule",
     actives: [
@@ -4658,7 +4646,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Silica (Limited). No High.",
-    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/glucomannan-rhizome-extract other-ingredients: Glucomannan (from Konjac) (Amorphophallus konjac) (rhizome extract), Vegetable Cellulose Capsule, Rice Bran Extract, Silica and Cellulose. Exact pack Solaray Glucomannan, Rhizome Extract. SKU 076280013214. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
+    cite: "solaray.com Ingredients accordion https://www.solaray.com/products/glucomannan-rhizome-extract other-ingredients: Glucomannan (from Konjac) (Amorphophallus konjac) (rhizome extract), Vegetable Cellulose Capsule, Rice Bran Extract, Silica and Cellulose. Exact pack Solaray Glucomannan, Rhizome Extract (100 ct). SKU 076280013214. Shopify variant barcode field was empty and these 12 digits did not print contiguous in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b117-076280048308",
@@ -5992,8 +5980,8 @@ export const BATCH117_LEFTOVER_TOKENS: string[] = [
 
 
 const _ROWS = BATCH117_KYR6B_SOLARAY_STAMP_BACKFILL;
-if (_ROWS.length !== 300) throw new Error('batch117 tally drift: expected 300 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 121) {
+if (_ROWS.length !== 299) throw new Error('batch117 tally drift: expected 299 rows');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 120) {
   throw new Error('batch117 Clean tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'caution').length !== 179) {
@@ -6005,7 +5993,7 @@ if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch117 recordStatus must stay unverified');
 }
-if (_ROWS.filter((r) => r.formulaId === r.id).length !== 268) {
+if (_ROWS.filter((r) => r.formulaId === r.id).length !== 267) {
   throw new Error('batch117 NEW tally drift');
 }
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 32) {

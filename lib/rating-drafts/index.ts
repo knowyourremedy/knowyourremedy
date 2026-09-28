@@ -115,3 +115,4 @@ export { BATCH114_KYR6B_NATUREWISE_NO_OI } from './batch114-kyr6b-naturewise-no-
 export { BATCH115_KYR6B_NATUREWISE_CLOSEOUT } from './batch115-kyr6b-naturewise-closeout';
 export { BATCH116_KYR6B_SOLARAY_FIRST_SLICE } from './batch116-kyr6b-solaray-first-slice';
 export { BATCH117_KYR6B_SOLARAY_STAMP_BACKFILL } from './batch117-kyr6b-solaray-stamp-backfill';
+export { BATCH118_KYR6B_SOLARAY_CLEANUP } from './batch118-kyr6b-solaray-cleanup';
