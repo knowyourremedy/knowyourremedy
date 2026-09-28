@@ -112,3 +112,4 @@ export { BATCH111_KYR6B_GOODSENSE_TOKEN_BACKFILL } from './batch111-kyr6b-goodse
 export { BATCH112_KYR6B_GOODSENSE_TOKEN_BACKFILL_2 } from './batch112-kyr6b-goodsense-token-backfill-2';
 export { BATCH113_KYR6B_GOODSENSE_TOKEN_BACKFILL_3 } from './batch113-kyr6b-goodsense-token-backfill-3';
 export { BATCH114_KYR6B_NATUREWISE_NO_OI } from './batch114-kyr6b-naturewise-no-oi';
+export { BATCH115_KYR6B_NATUREWISE_CLOSEOUT } from './batch115-kyr6b-naturewise-closeout';
