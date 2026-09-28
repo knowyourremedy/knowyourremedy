@@ -113,6 +113,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -139,6 +140,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
@@ -163,6 +165,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Lactase (100ct)",
     formulaId: "solaray-b120-076280106152",
     form: "capsule",
+    barcode: "076280106152",
     actives: [
       { name: "Lactase Enzyme Concentrate", strength: "40 mg" },
     ],
@@ -204,6 +207,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Bio CoQ-10 100mg (60ct)",
     formulaId: "solaray-b120-076280090109",
     form: "softgel",
+    barcode: "076280090123",
     actives: [
       { name: "Coenzyme Q-10", strength: "100 mg" },
     ],
@@ -225,6 +229,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Food Carotene, Vitamin A As Beta Carotene 500 mcg (100ct)",
     formulaId: "solaray-b120-076280041101",
     form: "softgel",
+    barcode: "076280041101",
     actives: [
       { name: "Vitamin A (as natural beta carotene)", strength: "500 mcg" },
     ],
@@ -245,6 +250,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Food Carotene, Vitamin A As Beta Carotene 500 mcg (200ct)",
     formulaId: "solaray-b120-076280041101",
     form: "softgel",
+    barcode: "076280041118",
     actives: [
       { name: "Vitamin A (as natural beta carotene)", strength: "500 mcg" },
     ],
@@ -265,6 +271,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Food Carotene, Vitamin A As Beta Carotene 7500mcg (100ct)",
     formulaId: "solaray-b120-076280041200",
     form: "softgel",
+    barcode: "076280041200",
     actives: [
       { name: "Vitamin A (as natural beta carotene)", strength: "7,500 mcg" },
     ],
@@ -285,6 +292,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Food Carotene, Vitamin A As Beta Carotene 7500mcg (50ct)",
     formulaId: "solaray-b120-076280041200",
     form: "softgel",
+    barcode: "076280041156",
     actives: [
       { name: "Vitamin A (as natural beta carotene)", strength: "7,500 mcg" },
     ],
@@ -325,6 +333,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vit E Tocotrienols, Annatto 50mg (60ct)",
     formulaId: "solaray-b120-076280613575",
     form: "softgel",
+    barcode: "076280613575",
     actives: [
       { name: "Tocotrienols (from annatto)", strength: "50 mg" },
     ],
@@ -361,6 +370,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin E, D-Alpha Tocopherol 670mg (60ct)",
     formulaId: "solaray-b120-076280042047",
     form: "softgel",
+    barcode: "076280042047",
     actives: [
       { name: "Vitamin E (as d-alpha tocopherol)", strength: "670 mg" },
     ],
@@ -377,6 +387,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Lycopene 10mg (60 ct)",
     formulaId: "solaray-b120-076280041262",
     form: "softgel",
+    barcode: "076280041262",
     actives: [
       { name: "Lycopene", strength: "10 mg" },
     ],
@@ -395,6 +406,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Oregano Oil 70% Carvacrol, 57mg (60 ct)",
     formulaId: "solaray-b120-076280413496",
     form: "softgel",
+    barcode: "076280413496",
     actives: [
       { name: "Oregano Oil (aerial extract)", strength: "57 mg" },
     ],
@@ -427,6 +439,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C with Rose Hips & Acerola 500mg (100ct)",
     formulaId: "solaray-b120-076280043907",
     form: "capsule",
+    barcode: "076280043907",
     actives: [
       { name: "Vitamin C with Rose Hips and Acerola", strength: "500 mg" },
     ],
@@ -443,6 +456,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C & Echinacea (120ct)",
     formulaId: "solaray-b120-076280043945",
     form: "capsule",
+    barcode: "076280043945",
     actives: [
       { name: "Vitamin C and Echinacea", strength: "label serving" },
     ],
@@ -459,6 +473,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C With Bioflavonoid Complex 500mg (250ct)",
     formulaId: "solaray-b120-076280044218",
     form: "capsule",
+    barcode: "076280044218",
     actives: [
       { name: "Vitamin C with Bioflavonoid Complex", strength: "500 mg" },
     ],
@@ -476,6 +491,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C & Bioflavonoids 1:1 500mg (250ct)",
     formulaId: "solaray-b120-076280044331",
     form: "capsule",
+    barcode: "076280044331",
     actives: [
       { name: "Vitamin C and Bioflavonoids 1:1", strength: "500 mg" },
     ],
@@ -493,6 +509,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Asporotate (240ct)",
     formulaId: "solaray-b120-076280045222",
     form: "capsule",
+    barcode: "076280045222",
     actives: [
       { name: "Calcium and Magnesium Asporotate", strength: "label serving" },
     ],
@@ -546,6 +563,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Kelp Seaweed 550mg (100ct)",
     formulaId: "solaray-b120-076280013658",
     form: "capsule",
+    barcode: "076280013658",
     actives: [
       { name: "Kelp Seaweed", strength: "550 mg" },
     ],
@@ -563,6 +581,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray L-Theanine 200mg (45ct)",
     formulaId: "solaray-b120-076280049923",
     form: "capsule",
+    barcode: "076280049923",
     actives: [
       { name: "L-Theanine", strength: "200 mg" },
     ],
@@ -596,6 +615,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Horse Chestnut Seed Extract 400mg (120ct)",
     formulaId: "solaray-b120-076280366594",
     form: "capsule",
+    barcode: "076280366594",
     actives: [
       { name: "Horse Chestnut Seed Extract", strength: "400 mg" },
     ],
@@ -612,6 +632,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray L-5-HTP with Vitamin B-6 & C, 100mg (30ct)",
     formulaId: "solaray-b120-076280366679",
     form: "capsule",
+    barcode: "076280366679",
     actives: [
       { name: "L-5-HTP with Vitamin B-6 and C", strength: "100 mg" },
     ],
@@ -664,6 +685,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C with Rose Hips, Acerola & Bioflavonoids 1000mg (250ct)",
     formulaId: "solaray-b120-076280044416",
     form: "capsule",
+    barcode: "076280044416",
     actives: [
       { name: "Vitamin C with Rose Hips, Acerola and Bioflavonoids", strength: "1,000 mg" },
     ],
@@ -680,6 +702,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Grapefruit Seed Extract With Zinc, Betaglucan & Astragalus (60ct)",
     formulaId: "solaray-b120-076280085211",
     form: "capsule",
+    barcode: "076280085211",
     actives: [
       { name: "Grapefruit Seed Extract with Zinc, Betaglucan and Astragalus", strength: "label serving" },
     ],
@@ -699,6 +722,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pomegranate Fruit Extract 200mg (60ct)",
     formulaId: "solaray-b120-076280375909",
     form: "capsule",
+    barcode: "076280375909",
     actives: [
       { name: "Pomegranate Fruit Extract", strength: "200 mg" },
     ],
@@ -717,6 +741,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Fulvic Minerals 100mg (30ct)",
     formulaId: "solaray-b120-076280512847",
     form: "capsule",
+    barcode: "076280512847",
     actives: [
       { name: "Fulvic Minerals", strength: "100 mg" },
     ],
@@ -735,6 +760,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray BriteSide Mood Support Formula (90 ct)",
     formulaId: "solaray-b120-076280613605",
     form: "capsule",
+    barcode: "076280613605",
     actives: [
       { name: "BriteSide Mood Support Formula", strength: "label serving" },
     ],
@@ -754,6 +780,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Lutein Eyes 18, Triple Strength (60ct)",
     formulaId: "solaray-b120-076280832167",
     form: "capsule",
+    barcode: "076280832167",
     actives: [
       { name: "Lutein Eyes 18, Triple Strength", strength: "label serving" },
     ],
@@ -771,6 +798,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Lutein Eyes 24, Advanced 24mg (30ct)",
     formulaId: "solaray-b120-076280832174",
     form: "capsule",
+    barcode: "076280832174",
     actives: [
       { name: "Lutein Eyes 24", strength: "24 mg" },
     ],
@@ -809,6 +837,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multivitamin, Iron-Free (60ct)",
     formulaId: "solaray-b120-076280473049",
     form: "capsule",
+    barcode: "076280473056",
     actives: [
       { name: "Once Daily High Energy Multivitamin, Iron-Free", strength: "label serving" },
     ],
@@ -828,6 +857,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multivitamin, Iron-Free (90ct)",
     formulaId: "solaray-b120-076280473049",
     form: "capsule",
+    barcode: "076280473063",
     actives: [
       { name: "Once Daily High Energy Multivitamin, Iron-Free", strength: "label serving" },
     ],
@@ -869,6 +899,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multi (60ct)",
     formulaId: "solaray-b120-076280472950",
     form: "capsule",
+    barcode: "076280047301",
     actives: [
       { name: "Once Daily High Energy Multi", strength: "label serving" },
     ],
@@ -891,6 +922,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multi (120ct)",
     formulaId: "solaray-b120-076280472950",
     form: "capsule",
+    barcode: "076280047318",
     actives: [
       { name: "Once Daily High Energy Multi", strength: "label serving" },
     ],
@@ -913,6 +945,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multi (180ct)",
     formulaId: "solaray-b120-076280472950",
     form: "capsule",
+    barcode: "076280473124",
     actives: [
       { name: "Once Daily High Energy Multi", strength: "label serving" },
     ],
@@ -935,6 +968,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Bilberry & Lutein, One Daily (30 ct)",
     formulaId: "solaray-b120-076280031157",
     form: "capsule",
+    barcode: "076280031157",
     actives: [
       { name: "Bilberry and Lutein, One Daily", strength: "label serving" },
     ],
@@ -955,6 +989,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Olive Leaf Extract 22%, 250mg (60ct)",
     formulaId: "solaray-b120-076280404562",
     form: "capsule",
+    barcode: "076280404562",
     actives: [
       { name: "Olive Leaf Extract 22%", strength: "250 mg" },
     ],
@@ -974,6 +1009,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Caralluma Aerial Extract 500mg (30ct)",
     formulaId: "solaray-b120-076280660548",
     form: "capsule",
+    barcode: "076280660548",
     actives: [
       { name: "Caralluma (aerial extract)", strength: "500 mg" },
     ],
@@ -992,6 +1028,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spectro Woman Multivitamin (120ct)",
     formulaId: "solaray-b120-076280566192",
     form: "capsule",
+    barcode: "076280566192",
     actives: [
       { name: "Spectro Woman Multivitamin", strength: "label serving" },
     ],
@@ -1395,7 +1432,19 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch120 
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 35) throw new Error('batch120 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 11) throw new Error('batch120 REUSE tally drift');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch120 writes Solaray only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch120 UPC must stay blank');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch120 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch120 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch120 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'gummy' || r.form === 'liquid')) throw new Error('batch120 must not grade gummies or pour bottles');
 if (BATCH120_SKIPPED_NO_OI.length !== 32) throw new Error('batch120 no_OI leftover drift');
 if (BATCH120_SKIPPED_OUT.length !== 0) throw new Error('batch120 OUT drift');

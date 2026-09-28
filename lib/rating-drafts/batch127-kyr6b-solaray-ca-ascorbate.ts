@@ -42,6 +42,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -58,6 +59,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -74,6 +76,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Activated Broccoli Seed Extract 350mg (30ct)",
     formulaId: "solaray-b127-076280282467",
     form: "capsule",
+    barcode: "076280282467",
     actives: [
       { name: "Broccoli (Brassica oleracea italica) (seed extract)", strength: "350 mg" },
       { name: "Myrosinase Enzyme (Brassica oleracea italica)", strength: "13 mg" },
@@ -1139,7 +1142,19 @@ if (_ROWS.filter((r) => r.formulaId === r.id).length !== 1) throw new Error("bat
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 0) throw new Error("batch127 REUSE tally drift");
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error("batch127 recordStatus");
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error("batch127 brand");
-if (_ROWS.some((r) => r.barcode)) throw new Error("batch127 UPC must stay blank");
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch127 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch127 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch127 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === "liquid")) throw new Error("batch127 must not grade pour bottles");
 if (_ROWS.some((r) => !/\([^)]*\d/.test(r.productName))) throw new Error("batch127 row missing pack size");
 if (_ROWS.some((r) => !r.form)) throw new Error("batch127 row missing form");

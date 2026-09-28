@@ -87,6 +87,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -113,6 +114,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
@@ -135,6 +137,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Tart Cherry & Celery Seed 620mg (60ct)',
     formulaId: 'solaray-b121-076280174045',
     form: 'capsule',
+    barcode: '076280174045',
     actives: [{ name: 'Tart Cherry & Celery Seed', strength: '620 mg' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -151,6 +154,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Mega Quercetin 600mg (60ct)',
     formulaId: 'solaray-b121-076280446869',
     form: 'capsule',
+    barcode: '076280446869',
     actives: [{ name: 'Mega Quercetin', strength: '600 mg' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -167,6 +171,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Spectro Man Multivitamin (120ct)',
     formulaId: 'solaray-b121-076280850406',
     form: 'capsule',
+    barcode: '076280850406',
     actives: [{ name: 'Spectro Man Multivitamin', strength: '4 VegCaps' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -201,6 +206,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Bacillus Coagulans (60ct)',
     formulaId: 'solaray-b121-076280731767',
     form: 'capsule',
+    barcode: '076280731767',
     actives: [{ name: 'Bacillus coagulans', strength: '1 VegCap' }],
     flags: [
       ['Maltodextrin', 'limited', 'maltodextrin'],
@@ -230,6 +236,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Black Cohosh Root Extract 80mg (30ct)',
     formulaId: 'solaray-b121-076280031737',
     form: 'capsule',
+    barcode: '076280031737',
     actives: [{ name: 'Black Cohosh Root Extract', strength: '80 mg' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -277,6 +284,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Vitamin D3 + K2 (60ct)',
     formulaId: 'solaray-b121-076280385847',
     form: 'capsule',
+    barcode: '076280385847',
     actives: [{ name: 'Vitamin D3 + K2', strength: '125 mcg D3' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -295,6 +303,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Red Yeast Rice + CoQ-10 (60ct)',
     formulaId: 'solaray-b121-076280088922',
     form: 'capsule',
+    barcode: '076280088922',
     actives: [
       { name: 'Niacin (as Inositol Hexanicotinate)', strength: '50 mg' },
       { name: 'Red Yeast Rice', strength: '600 mg' },
@@ -315,6 +324,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray SharpMind Nootropics Mood (30ct)',
     formulaId: 'solaray-b121-076280970500',
     form: 'capsule',
+    barcode: '076280970500',
     actives: [{ name: 'SharpMind Nootropics Mood', strength: '30 VegCaps' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],
@@ -332,6 +342,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Cleanse - Liver (60ct)',
     formulaId: 'solaray-b121-076280083637',
     form: 'capsule',
+    barcode: '076280083637',
     actives: [
       { name: 'Vitamin C (as Natural Ascorbic Acid)', strength: '120 mg' },
       { name: 'Selenium (as Selenomethionine)', strength: '100 mcg' },
@@ -818,7 +829,19 @@ if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch121 
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 13) throw new Error('batch121 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 0) throw new Error('batch121 REUSE tally drift');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch121 writes Solaray only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch121 UPC must stay blank');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch121 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch121 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch121 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'gummy' || r.form === 'liquid')) throw new Error('batch121 must not grade gummies or pour bottles');
 if (BATCH121_SKIPPED_NO_OI.length !== 2) throw new Error('batch121 no_OI leftover drift');
 if (BATCH121_SKIPPED_OUT.length !== 0) throw new Error('batch121 OUT drift');

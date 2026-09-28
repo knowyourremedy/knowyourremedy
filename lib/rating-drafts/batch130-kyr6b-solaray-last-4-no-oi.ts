@@ -49,6 +49,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -69,6 +70,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -86,6 +88,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Flaxseed Oil 1000mg (100ct)",
     formulaId: "solaray-b130-076280008029",
     form: "softgel",
+    barcode: "076280008029",
     actives: [
       { name: "Organic Flaxseed Oil", strength: "3 g" },
     ],

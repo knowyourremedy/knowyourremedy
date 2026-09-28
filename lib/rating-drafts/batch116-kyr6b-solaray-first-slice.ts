@@ -73,6 +73,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -99,6 +100,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) =>
@@ -125,6 +127,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C Crystalline, Buffered (8 oz)",
     formulaId: "solaray-b116-vitamin-c-crystalline-buffered-8oz",
     form: "powder",
+    barcode: "076280044973",
     actives: [
       { name: "Vitamin C (from calcium ascorbate)", strength: "5,000 mg" },
       { name: "Calcium (from calcium ascorbate)", strength: "570 mg" },
@@ -139,6 +142,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin C Crystalline (8 oz)",
     formulaId: "solaray-b116-vitamin-c-crystalline-8oz",
     form: "powder",
+    barcode: "076280044959",
     actives: [
       { name: "Vitamin C (as ascorbic acid)", strength: "5,000 mg" },
     ],
@@ -178,6 +182,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Creatine + MBP (9.21 oz)",
     formulaId: "solaray-b116-creatine-mbp-9-21oz",
     form: "powder",
+    barcode: "076280453294",
     actives: [
       { name: "Creatine monohydrate", strength: "8,000 mg" },
       { name: "L-Leucine", strength: "500 mg" },
@@ -193,6 +198,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Creatine with Shilajit (6.1 oz, Unflavored)",
     formulaId: "solaray-b116-creatine-shilajit-unflavored-6-1oz",
     form: "powder",
+    barcode: "076280185461",
     actives: [
       { name: "Creatine monohydrate", strength: "5,000 mg" },
       { name: "L-Leucine", strength: "500 mg" },
@@ -252,6 +258,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Extra-Strength Magnesium Glycinate Powder 500 mg (8.4 oz, Unflavored)",
     formulaId: "solaray-b116-magnesium-glycinate-500-8-4oz",
     form: "powder",
+    barcode: "076280668636",
     actives: [
       { name: "Magnesium (magnesium bisglycinate)", strength: "500 mg" },
     ],
@@ -282,6 +289,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Okra Fiber (2.63 oz / 74.7 g)",
     formulaId: "solaray-b116-okra-fiber-2-63oz",
     form: "powder",
+    barcode: "076280901689",
     actives: [
       { name: "Okralin (Abelmoschus esculentus) (fruit)", strength: "2,490 mg" },
     ],
@@ -298,6 +306,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mycrobiome Prebiotic (5.64 oz / 160 g, Unflavored)",
     formulaId: "solaray-b116-mycrobiome-prebiotic-5-64oz",
     form: "powder",
+    barcode: "076280266191",
     actives: [
       { name: "POTATODAAT resistant starch (Solanum tuberosum)", strength: "5,000 mg" },
       { name: "Organic baobab fruit powder", strength: "2,000 mg" },
@@ -313,6 +322,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Activated Charcoal 500 mg (5.3 oz)",
     formulaId: "solaray-b116-activated-charcoal-500-5-3oz",
     form: "powder",
+    barcode: "076280426083",
     actives: [
       { name: "Activated charcoal (from coconut)", strength: "500 mg" },
     ],
@@ -326,6 +336,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray D-Ribose (150 g)",
     formulaId: "solaray-b116-d-ribose-150g",
     form: "powder",
+    barcode: "076280890853",
     actives: [
       { name: "D-Ribose", strength: "5 g" },
     ],
@@ -339,6 +350,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Inositol Powder 700 mg (2 oz)",
     formulaId: "solaray-b116-inositol-powder-2oz",
     form: "powder",
+    barcode: "076280043556",
     actives: [
       { name: "Inositol", strength: "700 mg" },
     ],
@@ -366,6 +378,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray GutShield (150 g / 5.3 oz)",
     formulaId: "solaray-b116-gutshield-150g",
     form: "powder",
+    barcode: "076280638578",
     actives: [
       { name: "Vitamin C (ascorbic acid)", strength: "100 mg" },
       { name: "Zinc (zinc L-carnosine)", strength: "8 mg" },
@@ -394,6 +407,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Triple Fiber (14 oz)",
     formulaId: "solaray-b116-triple-fiber-14oz",
     form: "powder",
+    barcode: "076280983500",
     actives: [
       { name: "PHGG (partially hydrolyzed guar gum)", strength: "per 13 g scoop" },
       { name: "Solnul resistant potato starch", strength: "per 13 g scoop" },
@@ -1525,7 +1539,19 @@ if (_ROWS.some((r) => r.formulaId !== r.id)) {
   throw new Error('batch116 REUSE tally drift');
 }
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch116 writes Solaray only');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch116 UPC must stay empty');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch116 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch116 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch116 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (
   _ROWS.some((r) =>
     /naturewise|nutricost|welmate|goodsense|time-cap|healtha2z|micro ingredients|mama bear|sprouts|toothpaste|now foods/i.test(

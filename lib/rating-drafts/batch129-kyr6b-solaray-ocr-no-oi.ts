@@ -148,6 +148,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   audience?: 'adult' | 'kids';
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
@@ -168,6 +169,7 @@ function expand(d: Compact): RatingRecord {
     formulaId: d.formulaId,
     ...(d.audience === KIDS ? { audience: KIDS } : { audience: ADULT, minAge: 18 }),
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -185,6 +187,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Dandelion Root 1040mg (100ct)",
     formulaId: "solaray-b129-076280012101",
     form: "capsule",
+    barcode: "076280012101",
     actives: [
       { name: "Dandelion (root)", strength: "1040 mg" },
     ],
@@ -202,6 +205,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Dandelion Root 1040mg (180ct)",
     formulaId: "solaray-b129-076280012101",
     form: "capsule",
+    barcode: "076280012118",
     actives: [
       { name: "Dandelion (root)", strength: "1040 mg" },
     ],
@@ -219,6 +223,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Histamine Blend SP-33 (100ct)",
     formulaId: "solaray-b129-076280023305",
     form: "capsule",
+    barcode: "076280023305",
     actives: [
       { name: "Histamine Blend", strength: "1 VegCap" },
     ],
@@ -237,6 +242,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Feverfew Leaf Extract 400mg (60ct)",
     formulaId: "solaray-b129-076280034202",
     form: "capsule",
+    barcode: "076280034202",
     actives: [
       { name: "Feverfew Leaf Extract", strength: "400 mg" },
     ],
@@ -254,6 +260,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Citrate with Vitamin D-2, 2:1 Ratio (90ct)",
     formulaId: "solaray-b129-076280045260",
     form: "capsule",
+    barcode: "076280045260",
     actives: [
       { name: "Calcium & Magnesium Citrate", strength: "2:1" },
     ],
@@ -275,6 +282,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray OptiZinc 30mg (60ct)",
     formulaId: "solaray-b129-076280047073",
     form: "capsule",
+    barcode: "076280047073",
     actives: [
       { name: "Zinc (OptiZinc)", strength: "30 mg" },
     ],
@@ -293,6 +301,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Twice Daily Multi Vitamin (120ct)",
     formulaId: "solaray-b129-076280047455",
     form: "capsule",
+    barcode: "076280047455",
     actives: [
       { name: "Multi Vitamin", strength: "2 capsules" },
     ],
@@ -316,6 +325,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Children's Multivitamin (60ct)",
     formulaId: "solaray-b129-076280047967",
     form: "chewable",
+    barcode: "076280047967",
     audience: KIDS,
     actives: [
       { name: "Vitamin A (as Beta Carotene)", strength: "1500 mcg" },
@@ -344,6 +354,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Oil Of Oregano 150mg (60ct)",
     formulaId: "solaray-b129-076280082524",
     form: "softgel",
+    barcode: "076280082524",
     actives: [
       { name: "Oil of Oregano", strength: "150 mg" },
     ],
@@ -380,6 +391,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Continence with Flowtrol (60ct)",
     formulaId: "solaray-b129-076280084269",
     form: "capsule",
+    barcode: "076280084269",
     actives: [
       { name: "Continence with Flowtrol", strength: "1 VegCap" },
     ],
@@ -401,6 +413,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Total Calm, Mood Support (30ct)",
     formulaId: "solaray-b129-076280088618",
     form: "capsule",
+    barcode: "076280088618",
     actives: [
       { name: "Total Calm", strength: "2 VegCaps" },
     ],
@@ -421,6 +434,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Triple Strength Tart Cherry Fruit Extract (90ct)",
     formulaId: "solaray-b129-076280223149",
     form: "capsule",
+    barcode: "076280223149",
     actives: [
       { name: "Tart Cherry Fruit Extract", strength: "1 VegCap" },
     ],
@@ -440,6 +454,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Methyl B-12 Cherry (60ct)",
     formulaId: "solaray-b129-076280342987",
     form: "lozenge",
+    barcode: "076280342987",
     actives: [
       { name: "Methyl B-12", strength: "1 VegCap" },
     ],
@@ -460,6 +475,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin K-2, MK-7 50mcg (30ct)",
     formulaId: "solaray-b129-076280361537",
     form: "capsule",
+    barcode: "076280361537",
     actives: [
       { name: "Vitamin K-2 (MK-7)", strength: "50 mcg" },
     ],
@@ -481,6 +497,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Liposomal Multivitamin Women (60ct)",
     formulaId: "solaray-b129-076280616903",
     form: "capsule",
+    barcode: "076280616903",
     actives: [
       { name: "Liposomal Multivitamin", strength: "2 VegCaps" },
     ],
@@ -507,6 +524,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Liposomal Multivitamin Men's (60ct)",
     formulaId: "solaray-b129-076280882896",
     form: "capsule",
+    barcode: "076280882896",
     actives: [
       { name: "Liposomal Multivitamin", strength: "2 VegCaps" },
     ],
@@ -551,6 +569,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Valerian Root Extract 300mg (30ct)",
     formulaId: "solaray-b129-076280039054",
     form: "capsule",
+    barcode: "076280039054",
     actives: [
       { name: "Valerian (root extract)", strength: "300 mg" },
     ],
@@ -571,6 +590,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium, AAC 2:1 (90ct)",
     formulaId: "solaray-b129-076280045307",
     form: "capsule",
+    barcode: "076280045307",
     actives: [
       { name: "Calcium & Magnesium AAC", strength: "2:1" },
     ],
@@ -596,6 +616,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Hair Nutrients (120ct)",
     formulaId: "solaray-b129-076280047912",
     form: "capsule",
+    barcode: "076280047912",
     actives: [
       { name: "Hair Nutrients", strength: "2 VegCaps" },
     ],
@@ -618,6 +639,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Super Forskohlii Root Extract 400mg (60ct)",
     formulaId: "solaray-b129-076280644753",
     form: "capsule",
+    barcode: "076280644753",
     actives: [
       { name: "Forskohlii (root extract)", strength: "400 mg" },
     ],
@@ -635,6 +657,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Cal-Mag Citrate with D-3 & K-2, 2:1 Ratio (180ct)",
     formulaId: "solaray-b129-076280648843",
     form: "capsule",
+    barcode: "076280648843",
     actives: [
       { name: "Cal-Mag Citrate", strength: "6 capsules" },
     ],
@@ -654,6 +677,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Folic Acid (Vitamin B-9) (100ct)",
     formulaId: "solaray-b129-076280043525",
     form: "capsule",
+    barcode: "076280043525",
     actives: [
       { name: "Folate", strength: "800 mcg DFE" },
     ],
@@ -671,6 +695,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Niacin 100mg (100ct)",
     formulaId: "solaray-b129-076280043594",
     form: "capsule",
+    barcode: "076280043594",
     actives: [
       { name: "Niacin", strength: "100 mg" },
     ],
@@ -688,6 +713,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pantothenic Acid 250mg (100ct)",
     formulaId: "solaray-b129-076280043709",
     form: "capsule",
+    barcode: "076280043709",
     actives: [
       { name: "Pantothenic Acid", strength: "250 mg" },
     ],
@@ -744,6 +770,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Plant Melatonin (30ct)",
     formulaId: "solaray-b129-076280329568",
     form: "capsule",
+    barcode: "076280329568",
     actives: [
       { name: "Plant Melatonin", strength: "1 VegCap" },
     ],
@@ -798,6 +825,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray NADH (30ct)",
     formulaId: "solaray-b129-076280595499",
     form: "capsule",
+    barcode: "076280595499",
     actives: [
       { name: "NADH", strength: "1 VegCap" },
     ],
@@ -819,6 +847,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Aged Black Garlic (30ct)",
     formulaId: "solaray-b129-076280598933",
     form: "capsule",
+    barcode: "076280598933",
     actives: [
       { name: "Aged Black Garlic", strength: "1 VegCap" },
     ],
@@ -837,6 +866,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Liposomal Glutathione (60ct)",
     formulaId: "solaray-b129-076280728507",
     form: "capsule",
+    barcode: "076280728507",
     actives: [
       { name: "Liposomal Glutathione", strength: "2 VegCaps" },
     ],
@@ -856,6 +886,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Spermidine (60ct)",
     formulaId: "solaray-b129-076280788020",
     form: "capsule",
+    barcode: "076280788020",
     actives: [
       { name: "Spermidine", strength: "1 VegCap" },
     ],
@@ -875,6 +906,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Opti-5 Magnesium (60ct)",
     formulaId: "solaray-b129-076280886757",
     form: "capsule",
+    barcode: "076280886757",
     actives: [
       { name: "Magnesium", strength: "2 VegCaps" },
     ],
@@ -892,6 +924,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Nattokinase and Serrapeptase (30ct)",
     formulaId: "solaray-b129-076280937145",
     form: "capsule",
+    barcode: "076280937145",
     actives: [
       { name: "Nattokinase", strength: "150 mg" },
       { name: "Serrapeptase", strength: "30 mg" },
@@ -913,6 +946,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Liposomal Multivitamin Prenatal (60ct)",
     formulaId: "solaray-b129-076280968682",
     form: "capsule",
+    barcode: "076280968682",
     actives: [
       { name: "Liposomal Prenatal", strength: "2 VegCaps" },
     ],
@@ -936,6 +970,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Liver Blend SP-13 (100ct)",
     formulaId: "solaray-b129-076280021301",
     form: "capsule",
+    barcode: "076280021301",
     actives: [
       { name: "Proprietary Blend", strength: "475 mg" },
     ],
@@ -974,6 +1009,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Acetyl L-Carnitine 500mg (30ct)",
     formulaId: "solaray-b129-076280130645",
     form: "capsule",
+    barcode: "076280130645",
     actives: [
       { name: "Acetyl L-Carnitine", strength: "500 mg" },
     ],
@@ -992,6 +1028,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Ginkgo Biloba Leaf Extract 60mg (60ct)",
     formulaId: "solaray-b129-076280036008",
     form: "capsule",
+    barcode: "076280036008",
     actives: [
       { name: "Ginkgo (leaf extract)", strength: "60 mg" },
     ],
@@ -1051,6 +1088,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 50mg (50ct)",
     formulaId: "solaray-b129-076280042702",
     form: "capsule",
+    barcode: "076280042702",
     actives: [
       { name: "Vitamin B-Complex", strength: "50 mg" },
     ],
@@ -1070,6 +1108,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 50mg (250ct)",
     formulaId: "solaray-b129-076280042702",
     form: "capsule",
+    barcode: "076280042726",
     actives: [
       { name: "Vitamin B-Complex", strength: "50 mg" },
     ],
@@ -1089,6 +1128,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 100 (100ct)",
     formulaId: "solaray-b129-076280043013",
     form: "capsule",
+    barcode: "076280043013",
     actives: [
       { name: "Vitamin B-Complex", strength: "100 mg" },
     ],
@@ -1108,6 +1148,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-Complex 100 (50ct)",
     formulaId: "solaray-b129-076280043013",
     form: "capsule",
+    barcode: "076280043006",
     actives: [
       { name: "Vitamin B-Complex", strength: "100 mg" },
     ],
@@ -1127,6 +1168,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Magnesium Citrate 400mg (180ct)",
     formulaId: "solaray-b129-076280374025",
     form: "capsule",
+    barcode: "076280374025",
     actives: [
       { name: "Magnesium (from Magnesium Citrate)", strength: "400 mg" },
     ],
@@ -1148,6 +1190,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray GTF Chromium 200mcg (200ct)",
     formulaId: "solaray-b126-076280045901",
     form: "capsule",
+    barcode: "076280045918",
     actives: [
       { name: "Chromium (from GTF Chromium Yeast)", strength: "200 mcg" },
     ],
@@ -1165,6 +1208,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Potassium 99mg (200ct)",
     formulaId: "solaray-b129-076280046717",
     form: "capsule",
+    barcode: "076280046717",
     actives: [
       { name: "Potassium (from Potassium Amino Acid Complex)", strength: "99 mg" },
     ],
@@ -1186,6 +1230,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vitamin B-6, Timed-Release 100mg (120ct)",
     formulaId: "solaray-b129-076280127430",
     form: "capsule",
+    barcode: "076280127430",
     actives: [
       { name: "Vitamin B-6 (as Pyridoxine HCl)", strength: "100 mg" },
     ],
@@ -1205,6 +1250,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Potassium Asporotate 99mg (200ct)",
     formulaId: "solaray-b129-076280046618",
     form: "capsule",
+    barcode: "076280046618",
     actives: [
       { name: "Potassium (from Potassium Asporotate)", strength: "99 mg" },
     ],

@@ -73,6 +73,7 @@ type Compact = {
   productName: string;
   formulaId: string;
   form: string;
+  barcode?: string;
   actives: RatingRecord['activeIngredients'];
   flags: [string, IngredientFlag['riskLevel'], keyof typeof METH][];
   verdict: RatingRecord['verdict'];
@@ -93,6 +94,7 @@ function expand(d: Compact): RatingRecord {
     audience: ADULT,
     minAge: 18,
     form: d.form,
+    ...(d.barcode ? { barcode: d.barcode } : {}),
     productType: SUPPLEMENT,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags.map(([n, risk, meth]) => flag(n, risk, labelCite(d.cite, METH[meth]))),
@@ -111,6 +113,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Bio Vitamin E + Selenium 268mg (60ct)',
     formulaId: 'solaray-b124-076280041682',
     form: 'softgel',
+    barcode: '076280041682',
     actives: [
       { name: 'Vitamin E (as d-Alpha Tocopherol)', strength: '268 mg' },
       { name: 'Selenium (as L-Selenomethionine)', strength: '100 mcg' },
@@ -131,6 +134,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Bio Vitamin E + Selenium 268mg (120ct)',
     formulaId: 'solaray-b124-076280041682',
     form: 'softgel',
+    barcode: '076280041699',
     actives: [
       { name: 'Vitamin E (as d-Alpha Tocopherol)', strength: '268 mg' },
       { name: 'Selenium (as L-Selenomethionine)', strength: '100 mcg' },
@@ -151,6 +155,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Women\'s Golden Multivitamin (90 ct)',
     formulaId: 'solaray-b124-076280047929',
     form: 'capsule',
+    barcode: '076280047929',
     actives: [
       { name: 'Vitamin C (as Ascorbic Acid)', strength: '400 mg' },
       { name: 'Vitamin D (as Cholecalciferol)', strength: '10 mcg' },
@@ -174,6 +179,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Men\'s Golden Multivitamin (90ct)',
     formulaId: 'solaray-b124-076280047943',
     form: 'capsule',
+    barcode: '076280047943',
     actives: [
       { name: 'Vitamin C (as Ascorbic Acid)', strength: '400 mg' },
       { name: 'Vitamin D (as Cholecalciferol)', strength: '10 mcg' },
@@ -196,6 +202,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Hawthorn Aerial Ext, One Daily 600mg (30 ct)',
     formulaId: 'solaray-b124-076280036640',
     form: 'capsule',
+    barcode: '076280036640',
     actives: [
       { name: 'Hawthorn (Crataegus oxyacantha) (leaf and flower extract)', strength: '600 mg' },
       { name: 'Hawthorn (Crataegus oxyacantha) (berry)', strength: '100 mg' },
@@ -215,6 +222,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Vitamin D-3 - 10mcg (120ct)',
     formulaId: 'solaray-b124-076280041408',
     form: 'softgel',
+    barcode: '076280041408',
     actives: [
       { name: 'Vitamin D-3 (as Cholecalciferol)', strength: '10 mcg' },
     ],
@@ -276,6 +284,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Organic Elderberry Gummies (60ct)',
     formulaId: 'solaray-b124-076280635003',
     form: 'gummy',
+    barcode: '076280635003',
     actives: [
       { name: 'Organic Elderberry (Sambucus nigra) Fruit Powder', strength: '150 mg' },
       { name: 'Vitamin C (as Ascorbic Acid)', strength: '45 mg' },
@@ -302,6 +311,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Saw Palmetto Berry Extract 160mg (60ct)',
     formulaId: 'solaray-b123-076280037814',
     form: 'softgel',
+    barcode: '076280037821',
     actives: [
       { name: 'Saw Palmetto Berry Extract', strength: '160 mg' },
     ],
@@ -319,6 +329,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Saw Palmetto Berry Extract 160mg (120ct)',
     formulaId: 'solaray-b123-076280037814',
     form: 'softgel',
+    barcode: '076280037838',
     actives: [
       { name: 'Saw Palmetto Berry Extract', strength: '160 mg' },
     ],
@@ -336,6 +347,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Saw Palmetto Berry Extract 160mg (240ct)',
     formulaId: 'solaray-b123-076280037814',
     form: 'softgel',
+    barcode: '076280037845',
     actives: [
       { name: 'Saw Palmetto Berry Extract', strength: '160 mg' },
     ],
@@ -353,6 +365,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Once Daily Active Man Multivitamin (90ct)',
     formulaId: 'solaray-b124-076280200553',
     form: 'capsule',
+    barcode: '076280200553',
     actives: [
       { name: 'Vitamin C (as Ascorbic Acid, from Rose Hips, Acerola Cherry)', strength: '100 mg' },
       { name: 'Vitamin D (as Cholecalciferol)', strength: '25 mcg' },
@@ -377,6 +390,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Echinacea Angustifolia Root Ext 125mg (60ct)',
     formulaId: 'solaray-b124-076280034004',
     form: 'capsule',
+    barcode: '076280034004',
     actives: [
       { name: 'Echinacea (Echinacea angustifolia) (root extract)', strength: '125 mg' },
       { name: 'Echinacea (Echinacea angustifolia) (root)', strength: '43 mg' },
@@ -395,6 +409,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Super Digestaway (60ct)',
     formulaId: 'solaray-b124-076280048001',
     form: 'capsule',
+    barcode: '076280048001',
     actives: [
       { name: 'Pancreatin 4x', strength: '175 mg' },
       { name: 'Papain (from Papaya)', strength: '50 mg' },
@@ -416,6 +431,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Super Digestaway (90ct)',
     formulaId: 'solaray-b124-076280048001',
     form: 'capsule',
+    barcode: '076280048018',
     actives: [
       { name: 'Pancreatin 4x', strength: '175 mg' },
       { name: 'Papain (from Papaya)', strength: '50 mg' },
@@ -437,6 +453,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Super Digestaway (180ct)',
     formulaId: 'solaray-b124-076280048001',
     form: 'capsule',
+    barcode: '076280048025',
     actives: [
       { name: 'Pancreatin 4x', strength: '175 mg' },
       { name: 'Papain (from Papaya)', strength: '50 mg' },
@@ -814,7 +831,19 @@ if (_ROWS.filter((r) => r.formulaId === r.id).length !== 12) throw new Error('ba
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 6) throw new Error('batch124 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch124 recordStatus');
 if (_ROWS.some((r) => r.brand !== BRAND)) throw new Error('batch124 brand');
-if (_ROWS.some((r) => r.barcode)) throw new Error('batch124 UPC must stay blank');
+{
+  const _seenUpc = new Set<string>();
+  for (const _r of _ROWS) {
+    const _b = _r.barcode ?? '';
+    if (!_b) continue;
+    if (!/^\d{12}$/.test(_b)) throw new Error('batch124 barcode not GTIN-12 on ' + _r.id);
+    const _d = _b.split('').map(Number);
+    const _sum = _d.slice(0, 11).reduce((acc, n, i) => acc + n * (i % 2 === 0 ? 3 : 1), 0);
+    if ((10 - (_sum % 10)) % 10 !== _d[11]) throw new Error('batch124 barcode check digit ' + _r.id);
+    if (_seenUpc.has(_b)) throw new Error('batch124 duplicate barcode ' + _b);
+    _seenUpc.add(_b);
+  }
+}
 if (_ROWS.some((r) => r.form === 'liquid')) throw new Error('batch124 must not grade pour bottles');
 if (_ROWS.some((r) => !/\(\d/.test(r.productName) && !/oz|g\)/.test(r.productName))) throw new Error('batch124 row missing pack size');
 if (BATCH124_SKIPPED_NO_OI.length !== 1) throw new Error('batch124 no_OI');
