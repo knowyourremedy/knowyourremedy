@@ -114,3 +114,4 @@ export { BATCH113_KYR6B_GOODSENSE_TOKEN_BACKFILL_3 } from './batch113-kyr6b-good
 export { BATCH114_KYR6B_NATUREWISE_NO_OI } from './batch114-kyr6b-naturewise-no-oi';
 export { BATCH115_KYR6B_NATUREWISE_CLOSEOUT } from './batch115-kyr6b-naturewise-closeout';
 export { BATCH116_KYR6B_SOLARAY_FIRST_SLICE } from './batch116-kyr6b-solaray-first-slice';
+export { BATCH117_KYR6B_SOLARAY_STAMP_BACKFILL } from './batch117-kyr6b-solaray-stamp-backfill';
