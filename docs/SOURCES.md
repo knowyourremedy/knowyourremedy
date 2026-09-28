@@ -87,5 +87,13 @@ Alias stamps already on a locked row (Sept 28, 2026) — not new grades
 - Mixed Carotenoids as an other ingredient → beta-carotene as color. Same Caution. Not the Food Carotene active. Not titanium dioxide.
 - Carrot Juice Powder → juice-powder color/flavor. Same Caution neighborhood as purple carrot juice.
 - Eleuthero Root on the Other Ingredients line → unspecified herb excipient. Caution. Parsley Leaf is not stamped.
+- Soy Oil = soybean oil. Non-gummy fill stays Cleared. Gummy / lozenge / cough drop stays High / Avoid. Same form split already on the soybean-oil lock. Not a new oil class.
+- Bare Natural Lemon, Natural Peach, and Natural Raspberry = named-flavor family. Same Caution. Organic Natural Lemon is the Organic-prefix form of Natural Lemon. Natural Mango is not this stamp. Exact “Natural flavors” opacity stays Limited.
+- Sucrose stays the existing Limited sugar row (Sept 20). Not High. Multi Energy Two Daily is not flipped.
+- Magnesium Sterate stays magnesium stearate Cleared, only as the lubricant. Same rule as Maanesium Stearate. Not a new grade.
+- Bare Soy on an Other Ingredients line stays the Sept 21 Limited bare-soy row. Not soy lecithin.
+- Extra Virgin Olive Oil as softgel fill stays pure olive oil as fill. Cleared. Not a pour bottle.
+- Sodium Crosscarmellose is croscarmellose sodium. Vegetable Celluose Capsule is Vegetable Cellulose Capsule. Dicalcium Phosphate is calcium phosphate. Gum Acacia is acacia / gum arabic. Same existing grades.
+- Parsley Leaf is not stamped. OCR, Italy, LLC, and trademark sentences are not stamped.
 
 Do not turn this into a 400-row dump of every PubMed URL on day one. Add as we cite.
