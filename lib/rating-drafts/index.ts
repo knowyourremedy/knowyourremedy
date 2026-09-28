@@ -127,3 +127,4 @@ export { BATCH126_KYR6B_SOLARAY_ONE_SHOT } from './batch126-kyr6b-solaray-one-sh
 export { BATCH127_KYR6B_SOLARAY_CA_ASCORBATE } from './batch127-kyr6b-solaray-ca-ascorbate';
 export { BATCH128_KYR6B_SOLARAY_LAST_16 } from './batch128-kyr6b-solaray-last-16';
 export { BATCH129_KYR6B_SOLARAY_OCR_NO_OI } from './batch129-kyr6b-solaray-ocr-no-oi';
+export { BATCH130_KYR6B_SOLARAY_LAST_4_NO_OI } from './batch130-kyr6b-solaray-last-4-no-oi';
