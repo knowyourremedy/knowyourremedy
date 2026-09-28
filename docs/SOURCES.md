@@ -69,4 +69,8 @@ How a packet uses this file
 - Majority of independent sources wins. Split → Brandon. Do not invent a live grade.
 - After a lock, add the citation to this file if it is new.
 
+Alias stamps already on a locked row (Sept 28, 2026) — not new grades
+- Lecithin (Soy) = Lecithin (soy) = soy lecithin. Same Cleared lecithin row (EFSA 2017, no ADI; already on the methodology lecithin lock). Case is not a new token. Soy-allergy note still applies. Not bare soy.
+- Bare Rosemary Extract stays on Rosemary Extract (A Natural Preservative) oral. Same Caution. Not a new token.
+
 Do not turn this into a 400-row dump of every PubMed URL on day one. Add as we cite.
