@@ -122,6 +122,7 @@ import {
   BATCH119_KYR6B_SOLARAY_ALIAS_NETTLE,
   BATCH120_KYR6B_SOLARAY_ALIAS2_NOOI,
   BATCH121_KYR6B_SOLARAY_SOY_32,
+  BATCH122_KYR6B_SOLARAY_STERATE_PEPPERMINT_2,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -264,6 +265,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH119_KYR6B_SOLARAY_ALIAS_NETTLE,
   ...BATCH120_KYR6B_SOLARAY_ALIAS2_NOOI,
   ...BATCH121_KYR6B_SOLARAY_SOY_32,
+  ...BATCH122_KYR6B_SOLARAY_STERATE_PEPPERMINT_2,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
