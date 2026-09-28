@@ -864,6 +864,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // code read as the 90-count bottle. Do not glue it. Shares formulaId
   // thorne-super-epa with the 90-count and the NSF bottle — per-id only.
   'thorne-super-epa-180': brandMark('thorne-mark.png'),
+  // Vitamins night run 2026-09-28 12:50 AM PT batch 1.
+  // Attempted leftovers with no single matching carton. Not verifiedSku.
+  // Creatine SF903 is sold as 90 and 180 servings. The row stores both
+  // 693749006350 and 693749015239. The hero face is one net weight.
+  'thorne-creatine-powder': brandMark('thorne-mark.png'),
+  // amazon.com pack page returned no usable bottle (503 / packaging may
+  // vary). UPC 842379103087 is the 130-count capsule. Do not glue a
+  // 2-pack. Official Amazon Elements mark already on disk.
+  'amazon-elements-biotin-5000': brandMark('amazon-elements-mark.png'),
+  // MegaFood rows that list several count barcodes. Faces differ by
+  // count. Do not glue one size. Per-id only.
+  'megafood-one-daily-iron-free': brandMark('megafood-mark.png'),
+  'megafood-womens-one-daily': brandMark('megafood-mark.png'),
+  'megafood-womens-40-one-daily': brandMark('megafood-mark.png'),
+  'megafood-womens-55-one-daily': brandMark('megafood-mark.png'),
+  'megafood-mens-one-daily': brandMark('megafood-mark.png'),
+  'megafood-mens-55-one-daily': brandMark('megafood-mark.png'),
+  'megafood-womens-advanced': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4150,6 +4168,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Selenium, UPC 693749225010.
   'thorne-selenium-selenomethionine': catalogShot(
     'thorne-selenium-selenomethionine.jpg',
+  ),
+  // Vitamins night run 2026-09-28 12:50 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Thorne Niacinamide, SKU B131, 180 capsules. thorne.com.
+  'thorne-niacinamide': catalogShot('thorne-niacinamide.jpg'),
+  // L-Glutamine Powder, SKU SA519, 90 scoops. Not the SA518 capsules.
+  'thorne-l-glutamine-powder': catalogShot('thorne-l-glutamine-powder.jpg'),
+  // Calcium (DiCalcium Malate), SKU M281, 120 capsules, 250 mg.
+  'thorne-calcium-dicalcium-malate': catalogShot(
+    'thorne-calcium-dicalcium-malate.jpg',
+  ),
+  // Phosphatidyl Choline, SKU SP605, 60 gelcaps.
+  'thorne-phosphatidyl-choline': catalogShot(
+    'thorne-phosphatidyl-choline.jpg',
+  ),
+  // Glucosamine & Chondroitin, SKU SF767, 90 capsules.
+  'thorne-glucosamine-chondroitin': catalogShot(
+    'thorne-glucosamine-chondroitin.jpg',
+  ),
+  // NiaCel 400, SKU SP654, 60 capsules.
+  'thorne-niacel-400': catalogShot('thorne-niacel-400.jpg'),
+  // Advanced Nutrients, SKU VMX, 120 capsules. Not Basic Nutrients.
+  'thorne-advanced-nutrients': catalogShot('thorne-advanced-nutrients.jpg'),
+  // Magnesium Citrate powder, SKU M286, 60 scoops, citrus berry.
+  // Not Magnesium CitraMate (M272) and not the glycinate.
+  'thorne-magnesium-citrate-powder': catalogShot(
+    'thorne-magnesium-citrate-powder.jpg',
+  ),
+  // MegaFood Magnesium 300 mg capsules. Gallery file for UPC
+  // 051494103968 is the 60-capsule / 30-serving bottle. The live 120ct
+  // hero is a different barcode. Not the glycinate.
+  'megafood-magnesium-300-capsules': catalogShot(
+    'megafood-magnesium-300-capsules.jpg',
+  ),
+  // Men's 40+ One Daily, UPC 051494102701, 90 tablets. Not the 60ct.
+  'megafood-mens-40-one-daily': catalogShot('megafood-mens-40-one-daily.jpg'),
+  // Women's 40+ Advanced, UPC 051494103227, 120 tablets / 60 servings.
+  // Not the 60ct and not Women's Advanced without the 40+.
+  'megafood-womens-40-advanced': catalogShot(
+    'megafood-womens-40-advanced.jpg',
   ),
 };
 
