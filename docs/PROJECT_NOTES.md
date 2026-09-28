@@ -99,6 +99,23 @@ OI / INACTIVE HUNT ACCORDION LOCK (2026-09-19 founder — one lock; do not wipe 
 - Confirmed-empty cartons (100% powder / DailyMed “inactive ingredients: none”) are not missing-OI. Leave them alone.
 - This pass: no OI fill. The only empty-pending MAIN Search rows are two Sprouts prenatals (house STASHED — do not catalog Sprouts).
 
+FAMILY MERGE LOCK (2026-09-28) — bots must merge. Exact-string refuse is only for tokens with no family on MAIN.
+Merge without a new founder grade:
+- Sea Salt → sodium chloride
+- Food Starch → starch
+- Orange / grapefruit / vegetable juice, juice concentrate, juice powder with no “color” → juice-as-sweetener Caution (not a new fruit)
+- Bare Natural [fruit] → natural flavors Caution
+- Sunflower Phospholipids → sunflower lecithin
+- Named seed-oil fill already on MAIN (pumpkin, sunflower, soy, soybean, soy oil) stays that oil form split
+- Brewer's Yeast / Nutritional Yeast → cultured yeast
+- Cassava Flour → cassava / tapioca family
+- Resistant Potato Starch → potato starch
+- Magnesium Carbonate → calcium carbonate mineral-carbonate filler class
+- Rice Bran Concentrate → rice bran family (not a new class)
+- Caramel Liquid → caramel color Avoid
+- Case / extra parenthetical / hydrate / concentrate vs extract vs powder do not create a refuse when the family is on MAIN
+- Still do NOT map: bare Vegetable Capsule / Vegetarian Capsule; Parsley and parsley bases; homeopathic 3x / 6x salts as filler salts.
+
 BRAND-CLOSE WORKFLOW
 - Finish the brand you started. Do not hop brands.
 - No SKU skip. Missing OI = hunt then write or refuse. Stash only if founder calls a Sprouts-style pile.
