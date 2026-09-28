@@ -897,6 +897,21 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Two count barcodes on one row. Do not glue the live 70ct face.
   'megafood-b12-energy-gummies-cranberry': brandMark('megafood-mark.png'),
   'megafood-b12-energy-gummies-ginger': brandMark('megafood-mark.png'),
+  // Vitamins night run 2026-09-28 5:30 AM PT batch 1.
+  // Tried the SKU. shop.sprouts.com heroes are flat label scans, or a
+  // Supplement Facts panel (blue spirulina). Not a 3D bottle. Do not
+  // glue the label. Vitamin A also spans two pack barcodes
+  // (646670672309 / 646670672316). Official Sprouts mark already on
+  // disk. Per-id only.
+  'sprouts-zinc-picolinate-30': brandMark('sprouts-mark.png'),
+  'sprouts-ginkgo-biloba': brandMark('sprouts-mark.png'),
+  'sprouts-womens-hair-skin-nails': brandMark('sprouts-mark.png'),
+  'sprouts-krill-oil': brandMark('sprouts-mark.png'),
+  'sprouts-vitamin-a-10k': brandMark('sprouts-mark.png'),
+  'sprouts-vitamin-e-400': brandMark('sprouts-mark.png'),
+  'sprouts-organic-blue-spirulina': brandMark('sprouts-mark.png'),
+  'sprouts-d3-1000-rice-bran': brandMark('sprouts-mark.png'),
+  'sprouts-d3-2000-rice-bran': brandMark('sprouts-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4395,6 +4410,40 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'boiron-gemmo-english-hawthorn-young-shoots': catalogShot(
     'boiron-gemmo-english-hawthorn-young-shoots.jpg',
+  ),
+  // Vitamins night run 2026-09-28 5:30 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // Gemmotherapy 2 fl oz. Shop SKU is the row UPC. LEFT34 bottle.
+  'boiron-gemmo-european-grapevine-buds': catalogShot(
+    'boiron-gemmo-european-grapevine-buds.jpg',
+  ),
+  'boiron-gemmo-european-hornbeam-buds': catalogShot(
+    'boiron-gemmo-european-hornbeam-buds.jpg',
+  ),
+  'boiron-gemmo-european-olive-young-shoots': catalogShot(
+    'boiron-gemmo-european-olive-young-shoots.jpg',
+  ),
+  'boiron-gemmo-european-walnut-buds': catalogShot(
+    'boiron-gemmo-european-walnut-buds.jpg',
+  ),
+  'boiron-gemmo-fig-tree-buds': catalogShot('boiron-gemmo-fig-tree-buds.jpg'),
+  'boiron-gemmo-giant-redwood-young-shoots': catalogShot(
+    'boiron-gemmo-giant-redwood-young-shoots.jpg',
+  ),
+  'boiron-gemmo-horse-chestnut-buds': catalogShot(
+    'boiron-gemmo-horse-chestnut-buds.jpg',
+  ),
+  'boiron-gemmo-lime-tree-buds': catalogShot(
+    'boiron-gemmo-lime-tree-buds.jpg',
+  ),
+  'boiron-gemmo-lithy-tree-buds': catalogShot(
+    'boiron-gemmo-lithy-tree-buds.jpg',
+  ),
+  'boiron-gemmo-mountain-pine-buds': catalogShot(
+    'boiron-gemmo-mountain-pine-buds.jpg',
+  ),
+  'boiron-gemmo-rosemary-young-shoots': catalogShot(
+    'boiron-gemmo-rosemary-young-shoots.jpg',
   ),
 };
 
@@ -10444,6 +10493,82 @@ assertExactCarton(
   'Boiron',
   'boiron-gemmo-english-hawthorn-young-shoots.jpg',
 );
+assertExactCarton(
+  'boiron-gemmo-european-grapevine-buds',
+  'Boiron',
+  'boiron-gemmo-european-grapevine-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-european-hornbeam-buds',
+  'Boiron',
+  'boiron-gemmo-european-hornbeam-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-european-olive-young-shoots',
+  'Boiron',
+  'boiron-gemmo-european-olive-young-shoots.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-european-walnut-buds',
+  'Boiron',
+  'boiron-gemmo-european-walnut-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-fig-tree-buds',
+  'Boiron',
+  'boiron-gemmo-fig-tree-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-giant-redwood-young-shoots',
+  'Boiron',
+  'boiron-gemmo-giant-redwood-young-shoots.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-horse-chestnut-buds',
+  'Boiron',
+  'boiron-gemmo-horse-chestnut-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-lime-tree-buds',
+  'Boiron',
+  'boiron-gemmo-lime-tree-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-lithy-tree-buds',
+  'Boiron',
+  'boiron-gemmo-lithy-tree-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-mountain-pine-buds',
+  'Boiron',
+  'boiron-gemmo-mountain-pine-buds.jpg',
+);
+assertExactCarton(
+  'boiron-gemmo-rosemary-young-shoots',
+  'Boiron',
+  'boiron-gemmo-rosemary-young-shoots.jpg',
+);
+assertBrandMark(
+  'sprouts-zinc-picolinate-30',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-ginkgo-biloba', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-womens-hair-skin-nails',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-krill-oil', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-vitamin-a-10k', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-vitamin-e-400', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark(
+  'sprouts-organic-blue-spirulina',
+  'Sprouts',
+  'sprouts-mark.png',
+);
+assertBrandMark('sprouts-d3-1000-rice-bran', 'Sprouts', 'sprouts-mark.png');
+assertBrandMark('sprouts-d3-2000-rice-bran', 'Sprouts', 'sprouts-mark.png');
 assertLetterOnly(
   'nutricost-dong-quai-capsules-120-capsules',
   'Nutricost',
