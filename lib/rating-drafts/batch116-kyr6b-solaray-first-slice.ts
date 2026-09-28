@@ -11,9 +11,11 @@
 // print under the bars or an official GTIN field names that exact pack.
 // Shopify variant barcode was empty, so the SKU is not used as a UPC.
 //
-// TALLY (unverified drafts in THIS file): 21 rows —
-// Clean 20 / Caution 1 / Avoid 0.
-// NEW 21 / REUSE 0 / SKIPPED no_OI 176 / SKIPPED OUT 12 / REFUSED 571.
+// TALLY (unverified drafts in THIS file): 20 rows —
+// Clean 19 / Caution 1 / Avoid 0.
+// NEW 20 / REUSE 0 / SKIPPED no_OI 176 / SKIPPED OUT 12 / REFUSED 571.
+// Sizeless Maca Root Powder removed in the Solaray cleanup. The sized
+// 7.4 oz / 210 g row stays in batch117 (solaray-b117-076280661668).
 // Distinct leftover unknown tokens: 319.
 // TALLY is asserted at the bottom.
 
@@ -244,19 +246,6 @@ const COMPACT: Compact[] = [
     verdict: "clean",
     note: CLEARED_NOTE,
     cite: "solaray.com https://www.solaray.com/products/organic-beet-root-juice supplement-facts image https://cdn.shopify.com/s/files/1/0270/2317/9836/products/lb_facts_076280914122_029e9932-d70f-4867-bf25-21114020a985.png other-ingredients: Water, Citric Acid. Exact pack Solaray Organic Beet Root Juice (16 oz). SKU 076280914122. Shopify variant barcode field was empty and these 12 digits did not print in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
-  },
-  {
-    id: "solaray-b116-maca-root-powder",
-    productName: "Solaray Maca Root Powder",
-    formulaId: "solaray-b116-maca-root-powder",
-    form: "powder",
-    actives: [
-      { name: "Organic maca (Lepidium meyenii) (root)", strength: "3,500 mg" },
-    ],
-    flags: [],
-    verdict: "clean",
-    note: NONE_NOTE,
-    cite: "solaray.com https://www.solaray.com/products/maca-root-powder supplement-facts image https://cdn.shopify.com/s/files/1/0270/2317/9836/files/076280661668-SOL-2751107v0526-Final-SFP.png other-ingredients: None. Exact pack Solaray Maca Root Powder. SKU 076280661668. Shopify variant barcode field was empty and these 12 digits did not print in the facts OCR, so UPC is blank. No NDC on the solaray.com listing.",
   },
   {
     id: "solaray-b116-magnesium-glycinate-500-8-4oz",
@@ -1516,8 +1505,8 @@ export const BATCH116_LEFTOVER_TOKENS: string[] = [
 ];
 
 const _ROWS = BATCH116_KYR6B_SOLARAY_FIRST_SLICE;
-if (_ROWS.length !== 21) throw new Error('batch116 tally drift: expected 21 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 20) {
+if (_ROWS.length !== 20) throw new Error('batch116 tally drift: expected 20 rows');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 19) {
   throw new Error('batch116 Clean tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) {
