@@ -807,6 +807,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Valerian Root Extract 50mg',
     formulaId: 'solaray-b123-076280039009',
     form: 'capsule',
+    barcode: '076280039009',
     actives: [
       { name: 'Valerian (Valeriana officinalis) (root)', strength: '230 mg' },
     ],
@@ -1597,6 +1598,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Cold Pressed Black Seed 3% Thymoquinone 500mg (60ct)',
     formulaId: 'solaray-b123-076280292572',
     form: 'softgel',
+    barcode: '076280292572',
     actives: [
       { name: 'Cold Pressed Black Seed', strength: '500 mg' },
     ],
@@ -1636,6 +1638,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Astaxanthin',
     formulaId: 'solaray-b123-076280325966',
     form: 'softgel',
+    barcode: '076280325966',
     actives: [
       { name: 'Astaxanthin', strength: '1 serving' },
     ],
@@ -1906,6 +1909,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Electrolyte Recovery',
     formulaId: 'solaray-b123-076280545753',
     form: 'powder',
+    barcode: '076280545753',
     actives: [
       { name: 'Electrolyte Recovery', strength: '1 serving' },
     ],
@@ -2136,6 +2140,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray SleepMag',
     formulaId: 'solaray-b123-076280763232',
     form: 'capsule',
+    barcode: '076280763232',
     actives: [
       { name: 'Magnesium (Magnesium Bisglycinate)', strength: '50 mg' },
     ],
@@ -2253,6 +2258,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Creatine with Shilajit',
     formulaId: 'solaray-b123-076280849202',
     form: 'powder',
+    barcode: '076280849202',
     actives: [
       { name: 'Creatine Monohydrate', strength: '5,000 mg' },
       { name: 'L-Leucine', strength: '500 mg' },
@@ -2306,6 +2312,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Black Garlic Bulb',
     formulaId: 'solaray-b123-076280986372',
     form: 'capsule',
+    barcode: '076280986372',
     actives: [
       { name: 'Fermented Black Garlic (Allium sativum) (bulb)', strength: '500 mg' },
     ],

@@ -473,6 +473,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Guggul Ext & Red Yeast Rice (60ct)",
     formulaId: "solaray-b126-076280036596",
     form: "capsule",
+    barcode: "076280036596",
     actives: [
       { name: "Red Yeast Rice (Monascus purpureus) (extract)", strength: "400 mg" },
     ],
@@ -1804,6 +1805,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray HMB + Vitamin D3 (Lemon Lime, 30 servings)",
     formulaId: "solaray-b126-076280615470",
     form: "powder",
+    barcode: "076280615470",
     actives: [
       { name: "Calcium (from myHMB\u00ae Calcium 3-Hydroxy-3-Methylbutyrate Monohydrate)", strength: "411 mg" },
       { name: "HMB (myHMB\u00ae Calcium 3-Hydroxy-3-Methylbutyrate Monohydrate)", strength: "3000 mg" },
