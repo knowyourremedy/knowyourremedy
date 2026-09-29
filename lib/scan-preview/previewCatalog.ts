@@ -5029,6 +5029,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b82-flaxseed-oil': catalogShot(
     'naturewise-b82-flaxseed-oil.jpg',
   ),
+  // Vitamins night run 2026-09-29 5:30 AM PT batch 1.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Flaxseed Oil 1242 mg, UPC 858081006059, 120 softgels.
+  // Own overlay. Not the 1000 mg / 120-count bottle.
+  'naturewise-b82-flaxseed-oil-1242-mg-120-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-1242-mg-120-count.jpg',
+  ),
+  // Flaxseed Oil 1242 mg, UPC 858081006035, 240 softgels.
+  'naturewise-b82-flaxseed-oil-1242-mg-240-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-1242-mg-240-count.jpg',
+  ),
+  // Flaxseed Oil 1242 mg, UPC 810157850164, 30 softgels.
+  'naturewise-b82-flaxseed-oil-1242-mg-30-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-1242-mg-30-count.jpg',
+  ),
+  // Flaxseed Oil 1242 mg, UPC 810157850171, 60 softgels.
+  'naturewise-b82-flaxseed-oil-1242-mg-60-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-1242-mg-60-count.jpg',
+  ),
+  // Flaxseed Oil 1400 mg, UPC 810157850966, 120 softgels.
+  'naturewise-b82-flaxseed-oil-1400-mg-120-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-1400-mg-120-count.jpg',
+  ),
+  // Flaxseed Oil 3000 mg, UPC 810157851284, 120 softgels.
+  // Not the 3000 mg / 90-count bottle.
+  'naturewise-b82-flaxseed-oil-3000-mg-120-count': catalogShot(
+    'naturewise-b82-flaxseed-oil-3000-mg-120-count.jpg',
+  ),
+  // Garcinia Cambogia, UPC 858081006073, 90 capsules.
+  'naturewise-b82-garcinia-cambogia': catalogShot(
+    'naturewise-b82-garcinia-cambogia.jpg',
+  ),
+  // Garcinia Cambogia, UPC 858081006011, 180 capsules.
+  // Own overlay. The 90-count bottle is a different face.
+  'naturewise-b82-garcinia-cambogia-180-count': catalogShot(
+    'naturewise-b82-garcinia-cambogia-180-count.jpg',
+  ),
+  // Garlic Pills, UPC 855724007527, 60 softgels.
+  'naturewise-b82-garlic-pills': catalogShot(
+    'naturewise-b82-garlic-pills.jpg',
+  ),
+  // Ginger Root, UPC 810157852588, 90 capsules.
+  'naturewise-b82-ginger-root': catalogShot(
+    'naturewise-b82-ginger-root.jpg',
+  ),
+  // Lion's Mane Mushroom, UPC 810157851888, 120 capsules.
+  'naturewise-b82-lions-mane-mushroom': catalogShot(
+    'naturewise-b82-lions-mane-mushroom.jpg',
+  ),
+  // Magnesium 7 Complex, UPC 810157851543, 60 capsules.
+  'naturewise-b82-magnesium-7-complex': catalogShot(
+    'naturewise-b82-magnesium-7-complex.jpg',
+  ),
+  // Magnesium Glycinate with D3 + K2 2000 IU, UPC 810157852250, 60 softgels.
+  'naturewise-b82-magnesium-glycinate-d3-k2': catalogShot(
+    'naturewise-b82-magnesium-glycinate-d3-k2.jpg',
+  ),
+  // Magnesium Glycinate with D3 + K2 10000 IU, UPC 810157851659, 60 softgels.
+  // Own overlay. The 2000 IU bottle is a different face.
+  'naturewise-b82-magnesium-glycinate-d3-k2-10000-iu-60-count': catalogShot(
+    'naturewise-b82-magnesium-glycinate-d3-k2-10000-iu-60-count.jpg',
+  ),
+  // Magnesium Glycinate with D3 + K2 4000 IU, UPC 810157853394, 90 softgels.
+  'naturewise-b82-magnesium-glycinate-d3-k2-4000-iu-90-count': catalogShot(
+    'naturewise-b82-magnesium-glycinate-d3-k2-4000-iu-90-count.jpg',
+  ),
+  // Magnesium Glycinate Softgels, UPC 810157853417, 120 softgels.
+  'naturewise-b82-magnesium-glycinate-softgels': catalogShot(
+    'naturewise-b82-magnesium-glycinate-softgels.jpg',
+  ),
+  // Marine Magnesium, UPC 855724007466, 90 softgels.
+  'naturewise-b82-magnesium-softgels': catalogShot(
+    'naturewise-b82-magnesium-softgels.jpg',
+  ),
+  // Magnesium Taurate, UPC 810157853189, 210 capsules.
+  'naturewise-b82-magnesium-taurate': catalogShot(
+    'naturewise-b82-magnesium-taurate.jpg',
+  ),
+  // Men's Multivitamin with Stress Support, UPC 858081006660, 60 capsules.
+  'naturewise-b82-mens-multivitamin-stress-support': catalogShot(
+    'naturewise-b82-mens-multivitamin-stress-support.jpg',
+  ),
+  // Methylated B12 1000 mcg, UPC 810157851819, 60 capsules.
+  'naturewise-b82-methylcobalamin': catalogShot(
+    'naturewise-b82-methylcobalamin.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5073,8 +5160,8 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b82-cla-1250-mg-180-count',
   'naturewise-b82-cla-1300-mg-180-count',
   'naturewise-b82-cla-1300-mg-90-count',
-  // Batch 2 shared-formula counts. Each attempted row has its own
-  // carton. Unattempted flaxseed sizes stay letters.
+  // Shared-formula counts. Each attempted row has its own carton.
+  // Do not inherit a sibling bottle onto a different count or strength.
   'naturewise-b82-coq10-black-pepper-100-mg-90-count',
   'naturewise-b82-coq10-black-pepper-200-mg-200-count',
   'naturewise-b82-coq10-black-pepper-200-mg-30-count',
@@ -5095,6 +5182,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b82-flaxseed-oil-1242-mg-240-count',
   'naturewise-b82-flaxseed-oil-1400-mg-120-count',
   'naturewise-b82-flaxseed-oil-3000-mg-120-count',
+  'naturewise-b82-garcinia-cambogia-180-count',
+  'naturewise-b82-magnesium-glycinate-d3-k2-10000-iu-60-count',
+  'naturewise-b82-magnesium-glycinate-d3-k2-4000-iu-90-count',
 ]);
 
 export function previewOverlayImage(
