@@ -1064,6 +1064,28 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-gotu-kola': brandMark('natures-way-mark.png'),
   // Grape Seed: 30-count 033674143209 and 60-count 033674153529.
   'natures-way-grape-seed': brandMark('natures-way-mark.png'),
+  // Vitamins night run 2026-09-29 3:00 AM PT batch 1.
+  // Tried the SKU. naturesway.com sells more than one count on the
+  // same page. Do not glue one count's bottle onto the shared row.
+  // Official Nature's Way mark already on disk. Per-id only.
+  // Kelp: 100-count 033674145005 and 180-count 033674145081.
+  'natures-way-kelp': brandMark('natures-way-mark.png'),
+  // L-Theanine: 60-count 763948095568 and 180-count 763948095506.
+  'natures-way-l-theanine': brandMark('natures-way-mark.png'),
+  // Vitamin B-100 Complex: 60-count 033674405208 and 100-count 033674405215.
+  'natures-way-vitamin-b-100-complex': brandMark('natures-way-mark.png'),
+  // Vitamin C with Bioflavonoids: 100-count 033674403303 and 250-count 033674403310.
+  'natures-way-vitamin-c-with-bioflavonoids': brandMark('natures-way-mark.png'),
+  // Vitamin C with Bioflavonoids Extra Strength: 100-count 033674154649
+  // and 250-count 033674154656.
+  'natures-way-vitamin-c-with-bioflavonoids-extra-strength': brandMark(
+    'natures-way-mark.png',
+  ),
+  // Vitamin C with Rose Hips Extra Strength: 100-count 033674403129
+  // and 250-count 033674403136.
+  'natures-way-vitamin-c-with-rose-hips-extra-strength': brandMark(
+    'natures-way-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4732,6 +4754,43 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Hydraplenish with MSM, UPC 033674156032, 60 capsules.
   'natures-way-hydraplenish-with-msm': catalogShot(
     'natures-way-hydraplenish-with-msm.jpg',
+  ),
+  // Vitamins night run 2026-09-29 3:00 AM PT batch 1.
+  // Exact US pack faces from naturesway.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Inositol, UPC 033674404614, 100 capsules.
+  'natures-way-inositol': catalogShot('natures-way-inositol.jpg'),
+  // Maca Standardized Extract, UPC 033674642009, 60 capsules.
+  'natures-way-maca': catalogShot('natures-way-maca.jpg'),
+  // Niacin Vitamin B3, UPC 033674404706, 100 capsules.
+  'natures-way-niacin': catalogShot('natures-way-niacin.jpg'),
+  // Niacinamide, UPC 033674404805, 100 capsules.
+  'natures-way-niacinamide': catalogShot('natures-way-niacinamide.jpg'),
+  // Pantothenic Acid Vitamin B5, UPC 033674404911, 100 capsules.
+  'natures-way-pantothenic-acid': catalogShot(
+    'natures-way-pantothenic-acid.jpg',
+  ),
+  // Pomegranate Standardized Extract, UPC 033674153857, 60 capsules.
+  'natures-way-pomegranate': catalogShot('natures-way-pomegranate.jpg'),
+  // Resveratrol, UPC 033674156117, 60 capsules.
+  'natures-way-resveratrol': catalogShot('natures-way-resveratrol.jpg'),
+  // Riboflavin Vitamin B2, UPC 033674404218, 100 capsules.
+  'natures-way-riboflavin-vitamin-b2': catalogShot(
+    'natures-way-riboflavin-vitamin-b2.jpg',
+  ),
+  // Selenium, UPC 033674410813, 100 capsules.
+  'natures-way-selenium': catalogShot('natures-way-selenium.jpg'),
+  // Spirulina Micro-Algae, UPC 033674172001, 100 capsules.
+  'natures-way-spirulina': catalogShot('natures-way-spirulina.jpg'),
+  // Vitamin B1 High Potency Thiamin HCl, UPC 033674404119, 100 capsules.
+  'natures-way-vitamin-b1': catalogShot('natures-way-vitamin-b1.jpg'),
+  // Vitamin B6 High Potency, UPC 033674404317, 100 capsules.
+  'natures-way-vitamin-b6': catalogShot('natures-way-vitamin-b6.jpg'),
+  // Zinc Chelate, UPC 033674410912, 100 capsules.
+  'natures-way-zinc': catalogShot('natures-way-zinc.jpg'),
+  // Adrenal Stress-End, UPC 763948040353, 60 capsules.
+  'natures-way-fatigued-to-fantastic-adrenal-stress-end': catalogShot(
+    'natures-way-fatigued-to-fantastic-adrenal-stress-end.jpg',
   ),
 };
 
