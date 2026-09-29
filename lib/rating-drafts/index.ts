@@ -132,3 +132,4 @@ export { BATCH131_KYR6B_SOLARAY_LAST_TWO_PINNED } from './batch131-kyr6b-solaray
 export { BATCH132_KYR6B_ZYRTEC_FIRST_SLICE } from './batch132-kyr6b-zyrtec-first-slice';
 export { BATCH133_KYR6B_ZYRTEC_FIX } from './batch133-kyr6b-zyrtec-fix';
 export { BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP } from './batch135-kyr6b-zyrtec-8oz-syrup';
+export { BATCH136_KYR6B_CLARITIN_FIRST_SLICE } from './batch136-kyr6b-claritin-first-slice';
