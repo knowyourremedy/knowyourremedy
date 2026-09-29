@@ -5116,6 +5116,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b82-methylcobalamin': catalogShot(
     'naturewise-b82-methylcobalamin.jpg',
   ),
+  // Vitamins night run 2026-09-29 5:30 AM PT batch 2.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Myo-Inositol & D-Chiro Inositol, UPC 810157851475, 120 capsules.
+  // Not the 3-pack.
+  'naturewise-b82-myo-inositol': catalogShot(
+    'naturewise-b82-myo-inositol.jpg',
+  ),
+  // Omega-3 500 mg, UPC 810157850331, 60 softgels.
+  'naturewise-b82-omega-3': catalogShot('naturewise-b82-omega-3.jpg'),
+  // Omega-3 500 mg, UPC 810157850355, 180 softgels.
+  // Own overlay. The 60-count bottle is a different face.
+  'naturewise-b82-omega-3-180-count': catalogShot(
+    'naturewise-b82-omega-3-180-count.jpg',
+  ),
+  // Omega-3 500 mg, UPC 810157850348, 90 softgels.
+  'naturewise-b82-omega-3-90-count': catalogShot(
+    'naturewise-b82-omega-3-90-count.jpg',
+  ),
+  // Omega-3 + Vitamin E 1000 mg, UPC 855724007602, 60 softgels.
+  'naturewise-b82-omega-3-vitamin-e': catalogShot(
+    'naturewise-b82-omega-3-vitamin-e.jpg',
+  ),
+  // Omega-3 + Vitamin E 1000 mg, UPC 855724007633, 180 softgels.
+  'naturewise-b82-omega-3-vitamin-e-180-count': catalogShot(
+    'naturewise-b82-omega-3-vitamin-e-180-count.jpg',
+  ),
+  // Omega-3 + Vitamin E 1000 mg, UPC 855724007657, 360 softgels.
+  'naturewise-b82-omega-3-vitamin-e-360-count': catalogShot(
+    'naturewise-b82-omega-3-vitamin-e-360-count.jpg',
+  ),
+  // Organic Moringa 800 mg, UPC 810157852281, 60 capsules.
+  'naturewise-b82-organic-moringa': catalogShot(
+    'naturewise-b82-organic-moringa.jpg',
+  ),
+  // Triple Magnesium Complex, UPC 810157851796, 90 capsules.
+  'naturewise-b82-triple-magnesium-complex': catalogShot(
+    'naturewise-b82-triple-magnesium-complex.jpg',
+  ),
+  // Triple Strength Astaxanthin 12 mg, UPC 810157851963, 60 softgels.
+  // Not the 3-pack.
+  'naturewise-b82-triple-strength-astaxanthin': catalogShot(
+    'naturewise-b82-triple-strength-astaxanthin.jpg',
+  ),
+  // Vegan Oil of Oregano, UPC 810157852496, 150 softgels.
+  'naturewise-b82-vegan-oregano-oil': catalogShot(
+    'naturewise-b82-vegan-oregano-oil.jpg',
+  ),
+  // Vegan Vitamin B12 500 mcg, UPC 810157851611, 100 tablets.
+  'naturewise-b82-vegan-vitamin-b12': catalogShot(
+    'naturewise-b82-vegan-vitamin-b12.jpg',
+  ),
+  // Vegan Vitamin B12 2500 mcg, UPC 810157851741, 60 tablets.
+  // Own overlay. The 500 mcg bottle is a different face.
+  'naturewise-b82-vegan-vitamin-b12-2500-mcg-60-count': catalogShot(
+    'naturewise-b82-vegan-vitamin-b12-2500-mcg-60-count.jpg',
+  ),
+  // Vegan Vitamin D3 + K2, UPC 855724007695, 60 capsules.
+  'naturewise-b82-vegan-vitamin-d3-k2': catalogShot(
+    'naturewise-b82-vegan-vitamin-d3-k2.jpg',
+  ),
+  // Vegan Vitamin E 1000 IU, UPC 810157851093, 120 softgels.
+  'naturewise-b82-vegan-vitamin-e': catalogShot(
+    'naturewise-b82-vegan-vitamin-e.jpg',
+  ),
+  // Vitamin B Complex, UPC 850053810008, 60 softgels.
+  'naturewise-b82-vitamin-b-complex-2': catalogShot(
+    'naturewise-b82-vitamin-b-complex-2.jpg',
+  ),
+  // Vitamin B Complex, UPC 850053810015, 150 softgels.
+  'naturewise-b82-vitamin-b-complex-2-150-count': catalogShot(
+    'naturewise-b82-vitamin-b-complex-2-150-count.jpg',
+  ),
+  // Vitamin B Complex, UPC 850053810022, 360 softgels.
+  'naturewise-b82-vitamin-b-complex-2-360-count': catalogShot(
+    'naturewise-b82-vitamin-b-complex-2-360-count.jpg',
+  ),
+  // Vitamin D3 1000 IU, UPC 855724007749, 30 softgels.
+  // Other IU and count faces stay letters until attempted.
+  'naturewise-b82-vitamin-d3': catalogShot('naturewise-b82-vitamin-d3.jpg'),
+  // Vitamin D3 1000 IU, UPC 850053810428, 200 softgels.
+  // Own overlay. The 30-count bottle is a different face.
+  'naturewise-b82-vitamin-d3-1000-iu-200-count': catalogShot(
+    'naturewise-b82-vitamin-d3-1000-iu-200-count.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5185,6 +5270,32 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b82-garcinia-cambogia-180-count',
   'naturewise-b82-magnesium-glycinate-d3-k2-10000-iu-60-count',
   'naturewise-b82-magnesium-glycinate-d3-k2-4000-iu-90-count',
+  // Batch 2 shared-formula counts. Own carton when attempted.
+  // Unattempted Vitamin D3 IU/count faces stay letters.
+  'naturewise-b82-omega-3-180-count',
+  'naturewise-b82-omega-3-90-count',
+  'naturewise-b82-omega-3-vitamin-e-180-count',
+  'naturewise-b82-omega-3-vitamin-e-360-count',
+  'naturewise-b82-vegan-vitamin-b12-2500-mcg-60-count',
+  'naturewise-b82-vitamin-b-complex-2-150-count',
+  'naturewise-b82-vitamin-b-complex-2-360-count',
+  'naturewise-b82-vitamin-d3-1000-iu-200-count',
+  'naturewise-b82-vitamin-d3-1000-iu-90-count',
+  'naturewise-b82-vitamin-d3-1000-iu-360-count',
+  'naturewise-b82-vitamin-d3-2000-iu-30-count',
+  'naturewise-b82-vitamin-d3-2000-iu-90-count',
+  'naturewise-b82-vitamin-d3-2000-iu-200-count',
+  'naturewise-b82-vitamin-d3-2000-iu-360-count',
+  'naturewise-b82-vitamin-d3-4000-iu-30-count',
+  'naturewise-b82-vitamin-d3-4000-iu-90-count',
+  'naturewise-b82-vitamin-d3-4000-iu-200-count',
+  'naturewise-b82-vitamin-d3-4000-iu-360-count',
+  'naturewise-b82-vitamin-d3-5000-iu-30-count',
+  'naturewise-b82-vitamin-d3-5000-iu-90-count',
+  'naturewise-b82-vitamin-d3-5000-iu-200-count',
+  'naturewise-b82-vitamin-d3-5000-iu-360-count',
+  'naturewise-b82-vitamin-d3-10000-iu-30-count',
+  'naturewise-b82-vitamin-d3-10000-iu-90-count',
 ]);
 
 export function previewOverlayImage(
