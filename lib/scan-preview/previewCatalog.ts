@@ -1046,6 +1046,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-super-fisol': brandMark('natures-way-mark.png'),
   // Ginkgo: 60-count 033674616000 and 120-count 033674153512.
   'natures-way-ginkgo': brandMark('natures-way-mark.png'),
+  // Vitamins night run 2026-09-29 1:45 AM PT batch 2.
+  // Tried the SKU. naturesway.com sells more than one count on the
+  // same page. Do not glue one count's bottle onto the shared row.
+  // Official Nature's Way mark already on disk. Per-id only.
+  // Calcium & Magnesium: 100-count 033674413104 and 250-count 033674413111.
+  'natures-way-calcium-magnesium': brandMark('natures-way-mark.png'),
+  // Calcium-Magnesium-Vitamin D: 100-count 033674414200 and 250-count 033674414217.
+  'natures-way-calcium-magnesium-vitamin-d': brandMark('natures-way-mark.png'),
+  // Calcium-Magnesium-Zinc: 100-count 033674414101 and 250-count 033674414118.
+  'natures-way-calcium-magnesium-zinc': brandMark('natures-way-mark.png'),
+  // Cell Forté IP-6 & Inositol: 120-count 763948058020 and 240-count 763948058006.
+  'natures-way-cell-fort-ip-6-inositol': brandMark('natures-way-mark.png'),
+  // Cinnamon: 60-count 033674154922 and 120-count 033674150825.
+  'natures-way-cinnamon': brandMark('natures-way-mark.png'),
+  // Gotu Kola: 100-count 033674140000 and 180-count 033674140086.
+  'natures-way-gotu-kola': brandMark('natures-way-mark.png'),
+  // Grape Seed: 30-count 033674143209 and 60-count 033674153529.
+  'natures-way-grape-seed': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4677,6 +4695,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-ginkgold-max': catalogShot('natures-way-ginkgold-max.jpg'),
   // 7-KETO DHEA, UPC 763948051861, 60 capsules.
   'natures-way-7-keto-dhea': catalogShot('natures-way-7-keto-dhea.jpg'),
+  // Vitamins night run 2026-09-29 1:45 AM PT batch 2.
+  // Exact US pack faces from naturesway.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Acid-A-Cal, UPC 763948011513, 100 capsules.
+  'natures-way-acid-a-cal': catalogShot('natures-way-acid-a-cal.jpg'),
+  // ADRENergize, UPC 763948040858, 50 capsules.
+  'natures-way-adrenergize': catalogShot('natures-way-adrenergize.jpg'),
+  // B-50 Complex, UPC 033674405116, 100 capsules.
+  'natures-way-b-50-complex': catalogShot('natures-way-b-50-complex.jpg'),
+  // Blood Sugar Manager, UPC 033674792001, 90 capsules.
+  'natures-way-blood-sugar-manager': catalogShot(
+    'natures-way-blood-sugar-manager.jpg',
+  ),
+  // Boron Complex, UPC 033674411018, 100 capsules.
+  'natures-way-boron-complex': catalogShot('natures-way-boron-complex.jpg'),
+  // Chlorella, UPC 033674118504, 100 capsules.
+  'natures-way-chlorella': catalogShot('natures-way-chlorella.jpg'),
+  // Choline & Inositol, UPC 033674404621, 100 capsules.
+  'natures-way-choline-inositol': catalogShot(
+    'natures-way-choline-inositol.jpg',
+  ),
+  // Folate, UPC 033674404515, 100 capsules. 800 mcg.
+  'natures-way-folate': catalogShot('natures-way-folate.jpg'),
+  // GTF Chromium, UPC 033674410219, 100 capsules.
+  'natures-way-gtf-chromium': catalogShot('natures-way-gtf-chromium.jpg'),
+  // Horny Goat Weed, UPC 033674153116, 60 capsules.
+  'natures-way-horny-goat-weed': catalogShot(
+    'natures-way-horny-goat-weed.jpg',
+  ),
+  // Horsetail Grass, UPC 033674143001, 100 capsules.
+  'natures-way-horsetail-grass': catalogShot('natures-way-horsetail-grass.jpg'),
+  // Hydraplenish, UPC 033674156018, 60 capsules.
+  // Own overlay. The MSM bottle is a different face.
+  'natures-way-hydraplenish': catalogShot('natures-way-hydraplenish.jpg'),
+  // Hydraplenish with MSM, UPC 033674156032, 60 capsules.
+  'natures-way-hydraplenish-with-msm': catalogShot(
+    'natures-way-hydraplenish-with-msm.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
