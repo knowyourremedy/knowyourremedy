@@ -273,6 +273,7 @@ const COMPACT: Spec[] = [
     id: 'zyrtec-b132-d-12ct',
     productName: 'Zyrtec-D Allergy + Congestion Extended-Release Tablets (12ct)',
     formulaId: TABLET_FORMULA,
+    barcode: '300450204271',
     audience: 'adult',
     minAge: 12,
     form: 'extended-release tablet',
