@@ -558,6 +558,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Baby Me Now Prenatal Multivitamin (150ct)",
     formulaId: "solaray-b125-076280047875",
     form: "tablet",
+    barcode: "076280047875",
     actives: [
       { name: "Vitamin A (from Retinyl Palmitate and Beta Carotene)", strength: "3,900 mcg" },
       { name: "Vitamin C (as Calcium Ascorbate, Magnesium Ascorbate, Rose Hips, Acerola Cherry)", strength: "350 mg" },

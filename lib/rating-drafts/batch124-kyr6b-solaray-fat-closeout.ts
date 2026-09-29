@@ -475,6 +475,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Mycrobiome Prebiotic, Citrus (5.64 oz / 160 g)',
     formulaId: 'solaray-b124-076280355307',
     form: 'powder',
+    barcode: '076280355307',
     actives: [
       { name: 'POTATODAAT (Solanum tuberosum) (Resistant Starch)', strength: '5,000 mg' },
       { name: 'MICROBIOMEX Orange and Grapefruit Prebiotic Blend', strength: '250 mg' },

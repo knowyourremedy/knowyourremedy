@@ -131,6 +131,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Menopause Blend SP-7D (100 ct)",
     formulaId: "solaray-b128-076280002775",
     form: "capsule",
+    barcode: "076280002775",
     actives: [
       { name: "Proprietary Blend Red", strength: "930 mg" },
     ],

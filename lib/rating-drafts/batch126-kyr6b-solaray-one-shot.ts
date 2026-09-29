@@ -519,6 +519,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pygeum & Saw Palmetto w/CranActin (90ct)",
     formulaId: "solaray-b126-076280037692",
     form: "capsule",
+    barcode: "076280037692",
     actives: [
       { name: "Vitamin B-6 (as Pyridoxine HCI,)", strength: "20 mg" },
       { name: "Zinc (as Zinc Monomethionine) (OptiZinc\u2122)", strength: "15 mg" },
@@ -827,6 +828,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Zinc Asporotate 15mg (100ct)",
     formulaId: "solaray-b126-076280047004",
     form: "capsule",
+    barcode: "076280047004",
     actives: [
       { name: "Zinc (from Zinc Asporotate\u2122 [Zinc Aspartate, Zinc Citrate,)", strength: "15 mg" },
       { name: "Pumpkin (Cucurbita pepo) (seed)", strength: "100 mg" },
@@ -1007,6 +1009,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray CranActin Cranberry Extract 400mg (30ct)",
     formulaId: "solaray-b126-076280083996",
     form: "capsule",
+    barcode: "076280083996",
     actives: [
       { name: "Vitamin C (as Ascorbic Acid)", strength: "30 mg" },
       { name: "Cranberry (Vaccinum macrocarpor) (berry extract) (as CranActin\u00ae)", strength: "400 mg" },
@@ -1265,6 +1268,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Immufight Ultimate Immune Support (90ct)",
     formulaId: "solaray-b126-076280254921",
     form: "capsule",
+    barcode: "076280254921",
     actives: [
       { name: "Zinc (from Zinc Citrate)", strength: "25 mg" },
       { name: "Selenium (from Yeast-Free Selenomethionine)", strength: "110 mcg" },

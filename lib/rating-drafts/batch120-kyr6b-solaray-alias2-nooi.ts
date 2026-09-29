@@ -655,6 +655,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray MSM & Glucosamine (90ct)",
     formulaId: "solaray-b120-076280008524",
     form: "capsule",
+    barcode: "076280008524",
     actives: [
       { name: "MSM and Glucosamine", strength: "label serving" },
     ],
