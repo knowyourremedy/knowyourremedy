@@ -68,6 +68,8 @@ Claritin-D 24 Hour (15ct, ethylcellulose). Left empty.
 
 Walmart 15-count specifications had no UPC row and did not name ethylcellulose or talc. CVS returned Access Denied. The ethylcellulose label has no 15-count image.
 
+Founder lock. Walgreens Product Specifications 15.0 ea prints `04110081088` + check digit 5 = UPC-A `041100810885`. The panel on the same Walgreens PDP is ethylcellulose, no talc. Attached on `claritin-b136-d24-ec-15` only. The talc 15-count and the ethylcellulose 10-count (`041100810861`) were not touched.
+
 ## `claritin-b136-d24-talc-10`
 
 Claritin-D 24 Hour (10ct, talc). Left empty.
