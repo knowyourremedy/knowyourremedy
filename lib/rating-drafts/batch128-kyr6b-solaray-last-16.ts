@@ -211,6 +211,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Mega Multi Mineral (100ct)",
     formulaId: "solaray-b128-076280045109",
     form: "capsule",
+    barcode: "076280045109",
     actives: [
       { name: "Calcium (from Calcium Amino Acid Chelate Complex)", strength: "1000 mg" },
       { name: "Iron (from Iron Amino Acid Chelate Complex)", strength: "18 mg" },
@@ -351,6 +352,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Calcium & Magnesium Citrate, 1:1 Ratio (90ct)",
     formulaId: "solaray-b128-076280045246",
     form: "capsule",
+    barcode: "076280045246",
     actives: [
       { name: "Magnesium (from Magnesium Oxide, Magnesium)", strength: "1000 mg" },
     ],
@@ -692,6 +694,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Potassium Asporotate 99mg (100ct)",
     formulaId: "solaray-b128-076280046601",
     form: "capsule",
+    barcode: "076280046601",
     actives: [
       { name: "Potassium (from Potassium Asporotate™ [Potassium)", strength: "99 mg" },
     ],

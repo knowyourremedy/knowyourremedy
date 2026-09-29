@@ -418,6 +418,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Glucosamine Sulfate 500mg (120ct)",
     formulaId: "solaray-b117-076280081459",
     form: "capsule",
+    barcode: "076280081459",
     actives: [
       { name: "Glucosamine Sulfate 500mg", strength: "500 mg" }
     ],
@@ -554,6 +555,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Suma Root 500mg (100ct)",
     formulaId: "solaray-b117-076280016154",
     form: "capsule",
+    barcode: "076280016154",
     actives: [
       { name: "Suma Root 500mg", strength: "500 mg" }
     ],
@@ -1847,6 +1849,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Green Tea Leaf Extract 250mg (30ct)",
     formulaId: "solaray-b117-076280036589",
     form: "capsule",
+    barcode: "076280036589",
     actives: [
       { name: "Green Tea Leaf Extract 250mg", strength: "250 mg" }
     ],
@@ -2220,6 +2223,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Super Resveratrol with Pterostilbene, 255mg (30ct)",
     formulaId: "solaray-b117-076280846522",
     form: "capsule",
+    barcode: "076280846522",
     actives: [
       { name: "Super Resveratrol with Pterostilbene, 255mg", strength: "255 mg" }
     ],
@@ -2677,6 +2681,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Siliverin, Liver Cleanse (90ct)",
     formulaId: "solaray-b117-076280037500",
     form: "capsule",
+    barcode: "076280037500",
     actives: [
       { name: "Siliverin, Liver Cleanse", strength: "label serving" }
     ],
@@ -2784,6 +2789,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Vegan Digestaway, Plant Enzyme (60ct)",
     formulaId: "solaray-b117-076280357547",
     form: "capsule",
+    barcode: "076280357547",
     actives: [
       { name: "Vegan Digestaway, Plant Enzyme", strength: "label serving" }
     ],
@@ -3459,6 +3465,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Choline, Timed-Release 300mg (100ct)",
     formulaId: "solaray-b117-076280043570",
     form: "capsule",
+    barcode: "076280043570",
     actives: [
       { name: "Choline, Timed-Release 300mg", strength: "300 mg" }
     ],
@@ -4048,6 +4055,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Bilberry Extract 42mg (60ct)",
     formulaId: "solaray-b117-076280031003",
     form: "capsule",
+    barcode: "076280031003",
     actives: [
       { name: "Bilberry Extract 42mg", strength: "42 mg" }
     ],
@@ -4683,6 +4691,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Beet Root Juice Organic (16 fl oz)",
     formulaId: "solaray-b117-076280539318",
     form: "liquid",
+    barcode: "076280539318",
     actives: [
       { name: "Certified organic beetroot (Beta vulgaris) juice", strength: "label serving" }
     ],
@@ -4804,6 +4813,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Goldenseal Root 550mg (50ct)",
     formulaId: "solaray-b117-076280013207",
     form: "capsule",
+    barcode: "076280013207",
     actives: [
       { name: "Goldenseal Root 550mg", strength: "550 mg" }
     ],
@@ -4859,6 +4869,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Acidophilus 3 Strain Probiotic & Prebiotic Goat's Milk (50ct)",
     formulaId: "solaray-b117-076280048209",
     form: "capsule",
+    barcode: "076280048209",
     actives: [
       { name: "Acidophilus 3 Strain Probiotic & Prebiotic Goat's Milk", strength: "label serving" }
     ],
@@ -5005,6 +5016,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Dong Quai Root 550mg (100ct)",
     formulaId: "solaray-b117-076280012354",
     form: "capsule",
+    barcode: "076280012354",
     actives: [
       { name: "Dong Quai Root 550mg", strength: "550 mg" }
     ],
