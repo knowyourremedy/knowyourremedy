@@ -5201,6 +5201,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b82-vitamin-d3-1000-iu-200-count': catalogShot(
     'naturewise-b82-vitamin-d3-1000-iu-200-count.jpg',
   ),
+  // Vitamins night run 2026-09-29 6:45 AM PT batch 1.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Vitamin D3 1000 IU, UPC 858081006394, 360 softgels.
+  // Own overlay. Not the 30-count or 200-count bottle.
+  // The 1000 IU / 90-count face stays a letter until attempted.
+  'naturewise-b82-vitamin-d3-1000-iu-360-count': catalogShot(
+    'naturewise-b82-vitamin-d3-1000-iu-360-count.jpg',
+  ),
+  // Vitamin D3 2000 IU, UPC 855724007732, 30 softgels.
+  'naturewise-b82-vitamin-d3-2000-iu-30-count': catalogShot(
+    'naturewise-b82-vitamin-d3-2000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 2000 IU, UPC 855724007879, 90 softgels.
+  'naturewise-b82-vitamin-d3-2000-iu-90-count': catalogShot(
+    'naturewise-b82-vitamin-d3-2000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 2000 IU, UPC 850053810411, 200 softgels.
+  'naturewise-b82-vitamin-d3-2000-iu-200-count': catalogShot(
+    'naturewise-b82-vitamin-d3-2000-iu-200-count.jpg',
+  ),
+  // Vitamin D3 2000 IU, UPC 858081006400, 360 softgels.
+  'naturewise-b82-vitamin-d3-2000-iu-360-count': catalogShot(
+    'naturewise-b82-vitamin-d3-2000-iu-360-count.jpg',
+  ),
+  // Vitamin D3 4000 IU, UPC 850053810404, 30 softgels.
+  'naturewise-b82-vitamin-d3-4000-iu-30-count': catalogShot(
+    'naturewise-b82-vitamin-d3-4000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 4000 IU, UPC 850053810398, 90 softgels.
+  'naturewise-b82-vitamin-d3-4000-iu-90-count': catalogShot(
+    'naturewise-b82-vitamin-d3-4000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 4000 IU, UPC 850053810381, 200 softgels.
+  'naturewise-b82-vitamin-d3-4000-iu-200-count': catalogShot(
+    'naturewise-b82-vitamin-d3-4000-iu-200-count.jpg',
+  ),
+  // Vitamin D3 4000 IU, UPC 855724007411, 360 softgels.
+  'naturewise-b82-vitamin-d3-4000-iu-360-count': catalogShot(
+    'naturewise-b82-vitamin-d3-4000-iu-360-count.jpg',
+  ),
+  // Vitamin D3 5000 IU, UPC 855724007725, 30 softgels.
+  'naturewise-b82-vitamin-d3-5000-iu-30-count': catalogShot(
+    'naturewise-b82-vitamin-d3-5000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 5000 IU, UPC 858081006202, 90 softgels.
+  'naturewise-b82-vitamin-d3-5000-iu-90-count': catalogShot(
+    'naturewise-b82-vitamin-d3-5000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 5000 IU, UPC 850053810374, 200 softgels.
+  'naturewise-b82-vitamin-d3-5000-iu-200-count': catalogShot(
+    'naturewise-b82-vitamin-d3-5000-iu-200-count.jpg',
+  ),
+  // Vitamin D3 5000 IU, UPC 858081006042, 360 softgels.
+  'naturewise-b82-vitamin-d3-5000-iu-360-count': catalogShot(
+    'naturewise-b82-vitamin-d3-5000-iu-360-count.jpg',
+  ),
+  // Vitamin D3 10000 IU, UPC 810157850768, 30 softgels.
+  'naturewise-b82-vitamin-d3-10000-iu-30-count': catalogShot(
+    'naturewise-b82-vitamin-d3-10000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 10000 IU, UPC 810157850775, 90 softgels.
+  'naturewise-b82-vitamin-d3-10000-iu-90-count': catalogShot(
+    'naturewise-b82-vitamin-d3-10000-iu-90-count.jpg',
+  ),
+  // Selenium 200 mcg, UPC 810157853288, 250 softgels.
+  'naturewise-b83-selenium': catalogShot('naturewise-b83-selenium.jpg'),
+  // Magnesium with Ashwagandha, UPC 810157852526, 120 tablets.
+  'naturewise-b83-magnesium-ashwagandha': catalogShot(
+    'naturewise-b83-magnesium-ashwagandha.jpg',
+  ),
+  // Ashwagandha softgels, UPC 810157852472, 60 softgels.
+  // Not a gummy and not a multipack.
+  'naturewise-b83-ashwagandha-softgels': catalogShot(
+    'naturewise-b83-ashwagandha-softgels.jpg',
+  ),
+  // Algae Calcium, UPC 810157852229, 120 capsules.
+  // Shared formulaId with L-Theanine and Green Tea. Those rows
+  // stay letters until their own faces are attempted.
+  'naturewise-b83-algae-calcium': catalogShot(
+    'naturewise-b83-algae-calcium.jpg',
+  ),
+  // Magnesium Citrate Complex, UPC 810157852403, 120 capsules.
+  // Do not inherit this bottle onto Iron Bisglycinate.
+  'naturewise-b83-magnesium-citrate-complex': catalogShot(
+    'naturewise-b83-magnesium-citrate-complex.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5296,6 +5383,15 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b82-vitamin-d3-5000-iu-360-count',
   'naturewise-b82-vitamin-d3-10000-iu-30-count',
   'naturewise-b82-vitamin-d3-10000-iu-90-count',
+  // Algae Calcium formula is also on L-Theanine and Green Tea.
+  // Magnesium Citrate Complex formula is also on Iron Bisglycinate.
+  // Those rows are different bottles. Do not inherit.
+  'naturewise-b83-l-theanine-200',
+  'naturewise-b83-l-theanine-400',
+  'naturewise-b83-green-tea-60',
+  'naturewise-b83-green-tea-90',
+  'naturewise-b83-green-tea-120',
+  'naturewise-b83-iron-bisglycinate',
 ]);
 
 export function previewOverlayImage(
