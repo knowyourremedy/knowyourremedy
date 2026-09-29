@@ -13,7 +13,7 @@ Barcode-only. Check digit is the GS1 GTIN-12 digit. An NDC was not turned into a
 | `zyrtec-b132-10mg-120ct` | Zyrtec Allergy Tablets 10mg (120ct) | 120 count | film-coated tablet | `300450206121` |
 | `zyrtec-b132-5mg-15ct` | Zyrtec Allergy Tablets 5mg (15ct) | 15 count | film-coated tablet | empty |
 | `zyrtec-b132-5mg-35ct` | Zyrtec Allergy Tablets 5mg (35ct) | 35 count | film-coated tablet | `300450256355` |
-| `zyrtec-b132-d-12ct` | Zyrtec-D Allergy + Congestion Extended-Release Tablets (12ct) | 12 count | extended-release tablet | empty (batch133 wins; batch132 still holds filename code `300450204271`, which is not the search row) |
+| `zyrtec-b132-d-12ct` | Zyrtec-D Allergy + Congestion Extended-Release Tablets (12ct) | 12 count | extended-release tablet | empty on the search row (batch133 wins). Shadowed batch132 copy started with filename code `300450204271` |
 | `zyrtec-b132-d-24ct` | Zyrtec-D Allergy + Congestion Extended-Release Tablets (24ct) | 24 count | extended-release tablet | `300450204240` |
 | `zyrtec-b132-hives-tab-30ct` | Zyrtec Hives Tablets 10mg (30ct) | 30 count | film-coated tablet | `300450138323` |
 | `zyrtec-b132-hives-syrup-4oz` | Children's Zyrtec Hives Syrup (4 fl oz) | 4 fl oz | liquid | `300450139146` |
@@ -31,7 +31,7 @@ Barcode-only. Check digit is the GS1 GTIN-12 digit. An NDC was not turned into a
 ## Counts
 
 - Kept: 14
-- Blanked: 1
+- Blanked: 2
 - Newly attached: 1
 - Still empty: 3
 
@@ -59,6 +59,7 @@ Barcode-only. Check digit is the GS1 GTIN-12 digit. An NDC was not turned into a
 | Row id | Old code | Why |
 | --- | --- | --- |
 | `zyrtec-b132-gels-65ct` | `300450204677` | zyrtec.com 65-count `eanUpc` is empty. The digits sit in the image filename and image title. The only Product UPC field that contains this code is a 15 pc tray of "65 ct. 10mg LIQUID GELS (25 + 40)" on the Kenvue rewards list, which is a tray of the 25-count plus 40-count combo, not a single 65-count carton spec. DailyMed setid `0face45c` decodes `300450204318`, the 12-count liquid gel. Blanked. |
+| `zyrtec-b132-d-12ct` (shadowed batch132 copy) | `300450204271` | Filename and image-title only on zyrtec.com. The search row is the batch133 copy, which already had no barcode. The `barcode` line on the batch132 copy was removed. The `source` string still names that code; no test asserts it. |
 
 ## Newly attached
 
@@ -70,7 +71,7 @@ Barcode-only. Check digit is the GS1 GTIN-12 digit. An NDC was not turned into a
 
 | Row id | Reason | Last URLs tried |
 | --- | --- | --- |
-| `zyrtec-b132-d-12ct` | 12-count `eanUpc` on zyrtec.com is empty. `300450204271` is only in the 12-count image title and filename, so it was not attached. The page JSON-LD GTIN `00300450204240` is the 24-count. No 12-count Product UPC cell on the Kenvue list. | https://www.zyrtec.com/products/zyrtec-d ; https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1ecf9ba-1c03-7fb7-e053-2a95a90a875a ; https://www.activaterewards.com/newyear/participating-products |
+| `zyrtec-b132-d-12ct` | Search row stays empty. 12-count `eanUpc` on zyrtec.com is empty. The filename code `300450204271` was blanked on the shadowed batch132 copy (see Blanked) and was not attached here. The page JSON-LD GTIN `00300450204240` is the 24-count. No 12-count Product UPC cell on the Kenvue list. | https://www.zyrtec.com/products/zyrtec-d ; https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1ecf9ba-1c03-7fb7-e053-2a95a90a875a ; https://www.activaterewards.com/newyear/participating-products |
 | `zyrtec-b132-adult-dissolve-12ct` | Current adult dissolve page has a Citrus 24-count variant. `eanUpc` for a 12-count adult dissolve did not open. `300450242136` is the children's 12ct dissolve already on MAIN. | https://www.zyrtec.com/products/zyrtec-adult-dissolve-tabs ; https://www.target.com/p/zyrtec-oral-allergy-and-sinus-dissolve-cetirizine-tablets-24ct/-/A-93368630 (404) ; https://www.activaterewards.com/newyear/participating-products |
 | no row — Children's Zyrtec Allergy Syrup 8 fl oz | Still `no_OI`. No row was added. A Product UPC cell does exist for Children's Zyrtec 1 mg/mL grape dye/sugar-free syrup, 8 fl oz, `300450209146`. Attaching it would create a product row. The zyrtec.com "8 ounces" image title is the hives 4 fl oz file (`300450139146`), so that image was not used. | https://www.zyrtec.com/products/zyrtec-children-allergy-syrup ; https://www.activaterewards.com/newyear/participating-products ; https://www.cvs.com/search?searchTerm=zyrtec%2045%20count (403) |
 
