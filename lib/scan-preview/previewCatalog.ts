@@ -1033,6 +1033,19 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-alive-womens-gummy': brandMark('natures-way-mark.png'),
   // Men's gummies: 60 / 130 / 150 fruit.
   'natures-way-alive-mens-gummy': brandMark('natures-way-mark.png'),
+  // Vitamins night run 2026-09-29 1:45 AM PT batch 1.
+  // Tried the SKU. naturesway.com sells more than one count on the
+  // same page. Do not glue one count's bottle onto the shared row.
+  // Official Nature's Way mark already on disk. Per-id only.
+  // Vitamin D3: 120-count 033674155905 and 240-count 033674156049.
+  // Vitamin D3 Max is a different bottle and keeps its own carton.
+  'natures-way-vitamin-d3-softgel': brandMark('natures-way-mark.png'),
+  // Garlicin Cardio: 90-count 033674067932 and 180-count 033674150672.
+  'natures-way-garlicin-cardio': brandMark('natures-way-mark.png'),
+  // Super Fisol: 90-count 033674156889 and 180-count 033674155189.
+  'natures-way-super-fisol': brandMark('natures-way-mark.png'),
+  // Ginkgo: 60-count 033674616000 and 120-count 033674153512.
+  'natures-way-ginkgo': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4609,6 +4622,61 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-alive-max-potency-liquid': catalogShot(
     'natures-way-alive-max-potency-liquid.jpg',
   ),
+  // Vitamins night run 2026-09-29 1:45 AM PT batch 1.
+  // Exact US pack faces from naturesway.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Alive! Kids Gummy, UPC 033674157886, 60 gummies. Cherry, Orange & Grape.
+  'natures-way-alive-kids-gummy': catalogShot(
+    'natures-way-alive-kids-gummy.jpg',
+  ),
+  // Vitamin C Gummies, UPC 033674136072, 120 gummies. Orange.
+  'natures-way-vitamin-c-gummies': catalogShot(
+    'natures-way-vitamin-c-gummies.jpg',
+  ),
+  // CoQ10, UPC 763948062027, 120 softgels.
+  'natures-way-coq10': catalogShot('natures-way-coq10.jpg'),
+  // Vitamin D3 Max, UPC 033674158364, 240 softgels. 10,000 IU.
+  // Own overlay. The two-count Vitamin D3 row stays on the mark.
+  'natures-way-vitamin-d3-max': catalogShot('natures-way-vitamin-d3-max.jpg'),
+  // Calcium & Vitamin D3 liquid, UPC 371401388166, 16 fl oz. Citrus.
+  'natures-way-calcium-vitamin-d3-liquid': catalogShot(
+    'natures-way-calcium-vitamin-d3-liquid.jpg',
+  ),
+  // Men's Garden Goodness, UPC 033674121122, 60 tablets.
+  'natures-way-alive-garden-goodness-mens': catalogShot(
+    'natures-way-alive-garden-goodness-mens.jpg',
+  ),
+  // Women's Garden Goodness, UPC 033674121115, 60 tablets.
+  // Own overlay so it does not inherit the men's bottle.
+  'natures-way-alive-garden-goodness-womens': catalogShot(
+    'natures-way-alive-garden-goodness-womens.jpg',
+  ),
+  // Vitamin E D-Alpha Tocopherol, UPC 033674402115, 100 softgels. 400 IU.
+  'natures-way-vitamin-e-d-alpha': catalogShot(
+    'natures-way-vitamin-e-d-alpha.jpg',
+  ),
+  // Zero Sugar Women's Gummy, UPC 033674146187, 50 gummies. Strawberry.
+  'natures-way-alive-zero-sugar-womens-gummy': catalogShot(
+    'natures-way-alive-zero-sugar-womens-gummy.jpg',
+  ),
+  // Zero Sugar Men's Gummy, UPC 033674146200, 50 gummies. Peach.
+  'natures-way-alive-zero-sugar-mens-gummy': catalogShot(
+    'natures-way-alive-zero-sugar-mens-gummy.jpg',
+  ),
+  // Zero Sugar Kids Gummy, UPC 033674150009, 40 gummies. Berry-Citrus.
+  'natures-way-alive-zero-sugar-kids-gummy': catalogShot(
+    'natures-way-alive-zero-sugar-kids-gummy.jpg',
+  ),
+  // Fisol Fish Oil, UPC 033674153345, 180 softgels.
+  'natures-way-fisol': catalogShot('natures-way-fisol.jpg'),
+  // SMART Q10, UPC 763948061136, 30 chewables. Tropical Fruit.
+  'natures-way-smart-q10': catalogShot('natures-way-smart-q10.jpg'),
+  // Gymnema, UPC 033674637005, 60 capsules.
+  'natures-way-gymnema': catalogShot('natures-way-gymnema.jpg'),
+  // Ginkgold Max, UPC 033674152515, 60 tablets.
+  'natures-way-ginkgold-max': catalogShot('natures-way-ginkgold-max.jpg'),
+  // 7-KETO DHEA, UPC 763948051861, 60 capsules.
+  'natures-way-7-keto-dhea': catalogShot('natures-way-7-keto-dhea.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
