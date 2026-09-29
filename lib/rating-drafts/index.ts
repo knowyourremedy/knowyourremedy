@@ -130,3 +130,4 @@ export { BATCH129_KYR6B_SOLARAY_OCR_NO_OI } from './batch129-kyr6b-solaray-ocr-n
 export { BATCH130_KYR6B_SOLARAY_LAST_4_NO_OI } from './batch130-kyr6b-solaray-last-4-no-oi';
 export { BATCH131_KYR6B_SOLARAY_LAST_TWO_PINNED } from './batch131-kyr6b-solaray-last-two-pinned';
 export { BATCH132_KYR6B_ZYRTEC_FIRST_SLICE } from './batch132-kyr6b-zyrtec-first-slice';
+export { BATCH133_KYR6B_ZYRTEC_FIX } from './batch133-kyr6b-zyrtec-fix';
