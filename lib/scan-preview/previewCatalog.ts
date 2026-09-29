@@ -1086,6 +1086,35 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-vitamin-c-with-rose-hips-extra-strength': brandMark(
     'natures-way-mark.png',
   ),
+  // Vitamins night run 2026-09-29 3:00 AM PT batch 2.
+  // Tried the SKU. naturesway.com sells more than one count on the
+  // same page. Do not glue one count's bottle onto the shared row.
+  // Official Nature's Way mark already on disk. Per-id only.
+  // Beet Root: 100-count 033674104002 and 320-count 033674119259.
+  'natures-way-beet-root': brandMark('natures-way-mark.png'),
+  // Bilberry: 60-count 033674605004 and 90-count 033674605103.
+  'natures-way-bilberry': brandMark('natures-way-mark.png'),
+  // Calcium Citrate, Carbonate & Malate: 100-count 033674410103
+  // and 250-count 033674410110.
+  'natures-way-calcium-citrate': brandMark('natures-way-mark.png'),
+  // Fenugreek Seed: 100-count 033674128008, 180-count 033674146101,
+  // and 320-count 033674119242.
+  'natures-way-fenugreek-seed': brandMark('natures-way-mark.png'),
+  // Saw Palmetto Berries: 100-count 033674167502 and 180-count 033674167588.
+  'natures-way-saw-palmetto-berries': brandMark('natures-way-mark.png'),
+  // Vitamin C with Rose Hips: 100-count 033674403105 and 250-count 033674403112.
+  'natures-way-vitamin-c-with-rose-hips': brandMark('natures-way-mark.png'),
+  // Tried the SKU. naturalvitality.com now assigns UPC 183405000025 to
+  // MAXCALM Unflavored 16 oz, not this original CALM powder row.
+  // Do not glue MAXCALM. Official colored CALM mark from
+  // naturalvitality.com header logo.svg. The site's NATURAL VITALITY
+  // wordmark is white-only and would vanish on the light tile.
+  // Per-id only. Not a text tile.
+  'natural-vitality-calm-unflavored': brandMark('natural-vitality-mark.png'),
+  // Tried the SKU. UPC 183405000117 is now MAXCALM Raspberry-Lemon
+  // 16 oz, and 183405043503 is MAXCALM Raspberry-Lemon 8 oz.
+  // Do not glue MAXCALM onto this original CALM powder row.
+  'natural-vitality-calm-raspberry-lemon': brandMark('natural-vitality-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4791,6 +4820,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Adrenal Stress-End, UPC 763948040353, 60 capsules.
   'natures-way-fatigued-to-fantastic-adrenal-stress-end': catalogShot(
     'natures-way-fatigued-to-fantastic-adrenal-stress-end.jpg',
+  ),
+  // Vitamins night run 2026-09-29 3:00 AM PT batch 2.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Berberine with Cinnamon, UPC 033674150443, 60 capsules.
+  'natures-way-berberine-with-cinnamon': catalogShot(
+    'natures-way-berberine-with-cinnamon.jpg',
+  ),
+  // GS-500 Glucosamine Sulfate, UPC 763948017874, 240 capsules.
+  'natures-way-gs-500-glucosamine-sulfate': catalogShot(
+    'natures-way-gs-500-glucosamine-sulfate.jpg',
+  ),
+  // Hem-Care Premium Blend, UPC 763948032099, 90 capsules.
+  'natures-way-hem-care': catalogShot('natures-way-hem-care.jpg'),
+  // Iron, UPC 033674410417, 100 capsules.
+  'natures-way-iron': catalogShot('natures-way-iron.jpg'),
+  // Maca Root, UPC 033674153109, 100 capsules.
+  // Own overlay. The standardized-extract bottle is a different face.
+  'natures-way-maca-root': catalogShot('natures-way-maca-root.jpg'),
+  // Magnesium Complex, UPC 033674410516, 100 capsules.
+  'natures-way-magnesium-complex': catalogShot(
+    'natures-way-magnesium-complex.jpg',
+  ),
+  // Potassium, UPC 033674410714, 100 capsules.
+  'natures-way-potassium': catalogShot('natures-way-potassium.jpg'),
+  // Rhodiola, UPC 033674153215, 60 capsules.
+  'natures-way-rhodiola': catalogShot('natures-way-rhodiola.jpg'),
+  // Natal Choline, UPC 850031975323. ritual.com bottle.
+  'ritual-natal-choline': catalogShot('ritual-natal-choline.jpg'),
+  // Omega-3 DHA+EPA, UPC 850031975316. ritual.com bottle.
+  'ritual-omega-3-dha-epa': catalogShot('ritual-omega-3-dha-epa.jpg'),
+  // CALM Gummies Raspberry-Lemon, UPC 875534002406, 120 gummies.
+  // naturalvitality.com. Not the orange pouch.
+  'natural-vitality-calm-gummies-raspberry-lemon': catalogShot(
+    'natural-vitality-calm-gummies-raspberry-lemon.jpg',
+  ),
+  // CALM Gummies Orange, UPC 183405043084, 120 gummies.
+  // Own overlay so it does not inherit the raspberry-lemon pouch.
+  'natural-vitality-calm-gummies-orange': catalogShot(
+    'natural-vitality-calm-gummies-orange.jpg',
   ),
 };
 
