@@ -96,6 +96,7 @@ export const BATCH133_KYR6B_ZYRTEC_FIX: RatingRecord[] = [
     productName: 'Zyrtec-D Allergy + Congestion Extended-Release Tablets (12ct)',
     brand: 'Zyrtec',
     category: ALLERGIES,
+    barcode: '300450204271',
     formulaId: D_FORMULA,
     audience: ADULT,
     minAge: 12,
