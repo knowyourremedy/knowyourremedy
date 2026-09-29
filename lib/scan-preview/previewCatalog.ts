@@ -4946,6 +4946,89 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b82-collagen-gummies': catalogShot(
     'naturewise-b82-collagen-gummies.jpg',
   ),
+  // Vitamins night run 2026-09-29 4:15 AM PT batch 2.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // CoQ10 + Black Pepper 100 mg, UPC 850053810138, 30 softgels.
+  'naturewise-b82-coq10-black-pepper': catalogShot(
+    'naturewise-b82-coq10-black-pepper.jpg',
+  ),
+  // CoQ10 + Black Pepper 100 mg, UPC 850053810268, 90 softgels.
+  // Own overlay. The 30-count bottle is a different face.
+  'naturewise-b82-coq10-black-pepper-100-mg-90-count': catalogShot(
+    'naturewise-b82-coq10-black-pepper-100-mg-90-count.jpg',
+  ),
+  // CoQ10 + Black Pepper 200 mg, UPC 850053810503, 200 softgels.
+  'naturewise-b82-coq10-black-pepper-200-mg-200-count': catalogShot(
+    'naturewise-b82-coq10-black-pepper-200-mg-200-count.jpg',
+  ),
+  // CoQ10 + Black Pepper 200 mg, UPC 850053810473, 30 softgels.
+  'naturewise-b82-coq10-black-pepper-200-mg-30-count': catalogShot(
+    'naturewise-b82-coq10-black-pepper-200-mg-30-count.jpg',
+  ),
+  // CoQ10 + Black Pepper 200 mg, UPC 850053810480, 90 softgels.
+  'naturewise-b82-coq10-black-pepper-200-mg-90-count': catalogShot(
+    'naturewise-b82-coq10-black-pepper-200-mg-90-count.jpg',
+  ),
+  // Vitamin D3 + K2 1000 IU, UPC 810157850560, 30 softgels.
+  'naturewise-b82-d3-k2': catalogShot('naturewise-b82-d3-k2.jpg'),
+  // Vitamin D3 + K2 1000 IU, UPC 810157850577, 90 softgels.
+  'naturewise-b82-d3-k2-1000-iu-90-count': catalogShot(
+    'naturewise-b82-d3-k2-1000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 + K2 10000 IU, UPC 810157850720, 30 softgels.
+  'naturewise-b82-d3-k2-10000-iu-30-count': catalogShot(
+    'naturewise-b82-d3-k2-10000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 + K2 10000 IU, UPC 810157850737, 90 softgels.
+  'naturewise-b82-d3-k2-10000-iu-90-count': catalogShot(
+    'naturewise-b82-d3-k2-10000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 + K2 2000 IU, UPC 810157850607, 30 softgels.
+  'naturewise-b82-d3-k2-2000-iu-30-count': catalogShot(
+    'naturewise-b82-d3-k2-2000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 + K2 2000 IU, UPC 810157850614, 90 softgels.
+  'naturewise-b82-d3-k2-2000-iu-90-count': catalogShot(
+    'naturewise-b82-d3-k2-2000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 + K2 4000 IU, UPC 810157850645, 30 softgels.
+  'naturewise-b82-d3-k2-4000-iu-30-count': catalogShot(
+    'naturewise-b82-d3-k2-4000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 + K2 4000 IU, UPC 810157850652, 90 softgels.
+  'naturewise-b82-d3-k2-4000-iu-90-count': catalogShot(
+    'naturewise-b82-d3-k2-4000-iu-90-count.jpg',
+  ),
+  // Vitamin D3 + K2 5000 IU, UPC 810157850683, 30 softgels.
+  'naturewise-b82-d3-k2-5000-iu-30-count': catalogShot(
+    'naturewise-b82-d3-k2-5000-iu-30-count.jpg',
+  ),
+  // Vitamin D3 + K2 5000 IU, UPC 810157850690, 90 softgels.
+  // Own overlay. Do not inherit the 1000 IU bottle.
+  'naturewise-b82-d3-k2-5000-iu-90-count': catalogShot(
+    'naturewise-b82-d3-k2-5000-iu-90-count.jpg',
+  ),
+  // DIM, UPC 810157852311, 60 capsules.
+  'naturewise-b82-dim': catalogShot('naturewise-b82-dim.jpg'),
+  // Extra Strength Garlic 4000 mg, UPC 810157850805, 60 softgels.
+  'naturewise-b82-extra-strength-garlic': catalogShot(
+    'naturewise-b82-extra-strength-garlic.jpg',
+  ),
+  // Extra Strength Garlic 4000 mg, UPC 810157850812, 180 softgels.
+  // Own overlay. The 60-count bottle is a different face.
+  'naturewise-b82-extra-strength-garlic-4000-mg-180-count': catalogShot(
+    'naturewise-b82-extra-strength-garlic-4000-mg-180-count.jpg',
+  ),
+  // Fast Dissolve Vitamin B12 3000 mcg, UPC 810157851550, 50 tablets.
+  'naturewise-b82-fast-dissolve-vitamin-b12': catalogShot(
+    'naturewise-b82-fast-dissolve-vitamin-b12.jpg',
+  ),
+  // Flaxseed Oil 1000 mg, UPC 810157851000, 120 softgels.
+  // Not the 3000 mg / 90-count bottle, and not the 1242 mg sizes.
+  'naturewise-b82-flaxseed-oil': catalogShot(
+    'naturewise-b82-flaxseed-oil.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -4990,6 +5073,28 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b82-cla-1250-mg-180-count',
   'naturewise-b82-cla-1300-mg-180-count',
   'naturewise-b82-cla-1300-mg-90-count',
+  // Batch 2 shared-formula counts. Each attempted row has its own
+  // carton. Unattempted flaxseed sizes stay letters.
+  'naturewise-b82-coq10-black-pepper-100-mg-90-count',
+  'naturewise-b82-coq10-black-pepper-200-mg-200-count',
+  'naturewise-b82-coq10-black-pepper-200-mg-30-count',
+  'naturewise-b82-coq10-black-pepper-200-mg-90-count',
+  'naturewise-b82-d3-k2-1000-iu-90-count',
+  'naturewise-b82-d3-k2-10000-iu-30-count',
+  'naturewise-b82-d3-k2-10000-iu-90-count',
+  'naturewise-b82-d3-k2-2000-iu-30-count',
+  'naturewise-b82-d3-k2-2000-iu-90-count',
+  'naturewise-b82-d3-k2-4000-iu-30-count',
+  'naturewise-b82-d3-k2-4000-iu-90-count',
+  'naturewise-b82-d3-k2-5000-iu-30-count',
+  'naturewise-b82-d3-k2-5000-iu-90-count',
+  'naturewise-b82-extra-strength-garlic-4000-mg-180-count',
+  'naturewise-b82-flaxseed-oil-1242-mg-30-count',
+  'naturewise-b82-flaxseed-oil-1242-mg-60-count',
+  'naturewise-b82-flaxseed-oil-1242-mg-120-count',
+  'naturewise-b82-flaxseed-oil-1242-mg-240-count',
+  'naturewise-b82-flaxseed-oil-1400-mg-120-count',
+  'naturewise-b82-flaxseed-oil-3000-mg-120-count',
 ]);
 
 export function previewOverlayImage(
