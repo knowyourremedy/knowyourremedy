@@ -4861,6 +4861,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natural-vitality-calm-gummies-orange': catalogShot(
     'natural-vitality-calm-gummies-orange.jpg',
   ),
+  // Vitamins night run 2026-09-29 4:15 AM PT batch 1.
+  // Exact US pack faces from the brand site. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // CALM Kids Gummies Sweet Citrus, UPC 183405043817, 120 gummies.
+  // naturalvitality.com. Not the adult orange or raspberry-lemon pouch.
+  'natural-vitality-calm-kids-gummies': catalogShot(
+    'natural-vitality-calm-kids-gummies.jpg',
+  ),
+  // Flaxseed Oil 3000 mg, UPC 810157851277, 90 softgels. naturewise.com.
+  'naturewise-b114-flaxseed-oil-3000-90': catalogShot(
+    'naturewise-b114-flaxseed-oil-3000-90.jpg',
+  ),
+  // Women's Multivitamin with Stress Support, UPC 858081006707, 60 capsules.
+  'naturewise-b114-womens-multivitamin-stress-60': catalogShot(
+    'naturewise-b114-womens-multivitamin-stress-60.jpg',
+  ),
+  // Vitamin B12 1000 mcg, UPC 858081006233, 150 softgels.
+  // Own overlay. The 60-count bottle is a different face.
+  'naturewise-b115-b12-1000-150': catalogShot(
+    'naturewise-b115-b12-1000-150.jpg',
+  ),
+  // Vitamin B12 1000 mcg, UPC 855724007770, 60 softgels.
+  'naturewise-b115-b12-1000-60': catalogShot(
+    'naturewise-b115-b12-1000-60.jpg',
+  ),
+  // Vitamin B12 3000 mcg, UPC 810157850973, 60 softgels.
+  'naturewise-b115-b12-3000-60': catalogShot(
+    'naturewise-b115-b12-3000-60.jpg',
+  ),
+  // Vitamin B12 5000 mcg, UPC 810157851017, 60 softgels.
+  // Own overlay. Shares formulaId with the 3000 mcg row. Do not inherit it.
+  'naturewise-b115-b12-5000-60': catalogShot(
+    'naturewise-b115-b12-5000-60.jpg',
+  ),
+  // Creatine Monohydrate, UPC 810157851369, 100 servings.
+  'naturewise-b115-creatine-monohydrate-100': catalogShot(
+    'naturewise-b115-creatine-monohydrate-100.jpg',
+  ),
+  // 5-HTP 100 mg, UPC 858081006097, 120 capsules.
+  'naturewise-b82-5-htp': catalogShot('naturewise-b82-5-htp.jpg'),
+  // 5-HTP 200 mg, UPC 858081006103, 30 capsules.
+  // Own overlay. The 100 mg / 120-count bottle is a different face.
+  'naturewise-b82-5-htp-200-mg-30-count': catalogShot(
+    'naturewise-b82-5-htp-200-mg-30-count.jpg',
+  ),
+  // 5-HTP 200 mg, UPC 858081006523, 60 capsules.
+  'naturewise-b82-5-htp-200-mg-60-count': catalogShot(
+    'naturewise-b82-5-htp-200-mg-60-count.jpg',
+  ),
+  // Calcium Citrate, UPC 810157852298, 60 capsules.
+  'naturewise-b82-calcium-citrate': catalogShot(
+    'naturewise-b82-calcium-citrate.jpg',
+  ),
+  // Calcium Citrate, UPC 810157852304, 180 capsules.
+  // Own overlay. The 60-count bottle is a different face.
+  'naturewise-b82-calcium-citrate-180-count': catalogShot(
+    'naturewise-b82-calcium-citrate-180-count.jpg',
+  ),
+  // Calcium + Vitamin D3, UPC 810157850539, 60 softgels.
+  'naturewise-b82-calcium-vitamin-d3': catalogShot(
+    'naturewise-b82-calcium-vitamin-d3.jpg',
+  ),
+  // Calcium + Vitamin D3, UPC 810157850553, 200 softgels.
+  'naturewise-b82-calcium-vitamin-d3-200-count': catalogShot(
+    'naturewise-b82-calcium-vitamin-d3-200-count.jpg',
+  ),
+  // CLA 1250 mg, UPC 858081006066, 90 softgels.
+  'naturewise-b82-cla': catalogShot('naturewise-b82-cla.jpg'),
+  // CLA 1250 mg, UPC 858081006028, 180 softgels.
+  // Own overlay. The 90-count 1250 mg bottle is a different face.
+  'naturewise-b82-cla-1250-mg-180-count': catalogShot(
+    'naturewise-b82-cla-1250-mg-180-count.jpg',
+  ),
+  // CLA 1300 mg, UPC 858081006509, 180 softgels.
+  'naturewise-b82-cla-1300-mg-180-count': catalogShot(
+    'naturewise-b82-cla-1300-mg-180-count.jpg',
+  ),
+  // CLA 1300 mg, UPC 858081006516, 90 softgels.
+  'naturewise-b82-cla-1300-mg-90-count': catalogShot(
+    'naturewise-b82-cla-1300-mg-90-count.jpg',
+  ),
+  // Collagen Gummies, UPC 855724007459, 60 gummies.
+  'naturewise-b82-collagen-gummies': catalogShot(
+    'naturewise-b82-collagen-gummies.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -4893,6 +4978,18 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'natures-way-alive-womens-ultra',
   'natures-way-alive-mens-50-ultra',
   'natures-way-alive-womens-50-ultra',
+  // NatureWise shared-formula counts. Each attempted row has its own
+  // carton. Do not inherit a sibling bottle onto a different count
+  // or a different strength.
+  'naturewise-b115-b12-1000-150',
+  'naturewise-b115-b12-5000-60',
+  'naturewise-b82-5-htp-200-mg-30-count',
+  'naturewise-b82-5-htp-200-mg-60-count',
+  'naturewise-b82-calcium-citrate-180-count',
+  'naturewise-b82-calcium-vitamin-d3-200-count',
+  'naturewise-b82-cla-1250-mg-180-count',
+  'naturewise-b82-cla-1300-mg-180-count',
+  'naturewise-b82-cla-1300-mg-90-count',
 ]);
 
 export function previewOverlayImage(
