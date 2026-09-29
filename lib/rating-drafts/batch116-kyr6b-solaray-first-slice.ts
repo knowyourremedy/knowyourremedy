@@ -229,6 +229,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Organic Tart Cherry Juice (16 oz)",
     formulaId: "solaray-b116-organic-tart-cherry-juice-16oz",
     form: "liquid",
+    barcode: "076280502596",
     actives: [
       { name: "Organic tart cherry (Prunus cerasus) juice concentrate", strength: "31.5 g" },
     ],
@@ -242,6 +243,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Organic Beet Root Juice (16 oz)",
     formulaId: "solaray-b116-organic-beet-root-juice-16oz",
     form: "liquid",
+    barcode: "076280914122",
     actives: [
       { name: "Certified organic beetroot (Beta vulgaris) juice", strength: "label serving" },
     ],
@@ -364,6 +366,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray StrongMag (8.2 oz / 233.5 g, Unflavored)",
     formulaId: "solaray-b116-strongmag-8-2oz",
     form: "powder",
+    barcode: "076280753141",
     actives: [
       { name: "Magnesium (magnesium malate)", strength: "300 mg" },
       { name: "Creatine monohydrate", strength: "5,000 mg" },

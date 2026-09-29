@@ -186,6 +186,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Bio CoQ-10 100mg (30ct)",
     formulaId: "solaray-b120-076280090109",
     form: "softgel",
+    barcode: "076280090109",
     actives: [
       { name: "Coenzyme Q-10", strength: "100 mg" },
     ],
@@ -313,6 +314,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Food Carotene, Vitamin A As Beta Carotene 7500mcg (200ct)",
     formulaId: "solaray-b120-076280041200",
     form: "softgel",
+    barcode: "076280041217",
     actives: [
       { name: "Vitamin A (as natural beta carotene)", strength: "7,500 mcg" },
     ],
@@ -352,6 +354,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Sunflower Vitamin E 268mg (60ct)",
     formulaId: "solaray-b120-076280320640",
     form: "softgel",
+    barcode: "076280320640",
     actives: [
       { name: "Vitamin E (as d-alpha tocopherol from sunflower oil)", strength: "268 mg" },
     ],
@@ -600,6 +603,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Turmeric Root Extract 300mg (120ct)",
     formulaId: "solaray-b120-076280129281",
     form: "capsule",
+    barcode: "076280129281",
     actives: [
       { name: "Turmeric Root Extract", strength: "300 mg" },
     ],
@@ -669,6 +673,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Bilberry Extract 42mg (120ct)",
     formulaId: "solaray-b117-076280031003",
     form: "capsule",
+    barcode: "076280031010",
     actives: [
       { name: "Bilberry Extract", strength: "42 mg" },
     ],
@@ -819,6 +824,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multivitamin, Iron-Free (30ct)",
     formulaId: "solaray-b120-076280473049",
     form: "capsule",
+    barcode: "076280473049",
     actives: [
       { name: "Once Daily High Energy Multivitamin, Iron-Free", strength: "label serving" },
     ],
@@ -878,6 +884,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Once Daily High Energy Multi (30ct)",
     formulaId: "solaray-b120-076280472950",
     form: "capsule",
+    barcode: "076280472950",
     actives: [
       { name: "Once Daily High Energy Multi", strength: "label serving" },
     ],

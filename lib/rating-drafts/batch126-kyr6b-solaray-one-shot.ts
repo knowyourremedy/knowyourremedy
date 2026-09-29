@@ -454,6 +454,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Asparagus Rhizome Extract 175mg (60ct)",
     formulaId: "solaray-b126-076280030693",
     form: "capsule",
+    barcode: "076280030693",
     actives: [
       { name: "Asparagus (Asparagus officinalis) (rhizome [root] extract)", strength: "175 mg" },
       { name: "Asparagus (Asparagus officinalis) (whole)", strength: "200 mg" },
@@ -847,6 +848,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pituitary Caps, Freeze-Dried (60ct)",
     formulaId: "solaray-b126-076280051803",
     form: "capsule",
+    barcode: "076280051803",
     actives: [
       { name: "Pituitary (Bovine)", strength: "196 mg" },
       { name: "Pituitary Caps\u2122 Proprietary Herb Activators\u2122 Eleuthero", strength: "487 mg" },
@@ -1129,6 +1131,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Hyaluronic Acid 60mg (30ct)",
     formulaId: "solaray-b126-076280114836",
     form: "capsule",
+    barcode: "076280114836",
     actives: [
       { name: "Hyaluronic Acid (Microbial Fermentation)", strength: "60 mg" },
     ],
@@ -1332,6 +1335,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Immufight Immune Response (90ct)",
     formulaId: "solaray-b126-076280279771",
     form: "capsule",
+    barcode: "076280279771",
     actives: [
       { name: "Vitamin C (from Calcium Strontium Ascorbate as Reacta-Ce)", strength: "500 mg" },
       { name: "Zinc (from Zinc Citrate)", strength: "8.3 mg" },
@@ -1509,6 +1513,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Pygeum & Saw Palmetto Extracts 420mg (240ct)",
     formulaId: "solaray-b126-076280376814",
     form: "capsule",
+    barcode: "076280376814",
     actives: [
       { name: "Vitamin B-6 (as Pyridoxine HCl)", strength: "20 mg" },
     ],
@@ -1878,6 +1883,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray CoQ-10, Ubiquinol 100mg (30ct)",
     formulaId: "solaray-b126-076280824810",
     form: "softgel",
+    barcode: "076280824810",
     actives: [
       { name: "Ubiquinol (CoQH2; reduced CoQ10) (as Kaneka Q+\u00ae)", strength: "100 mg" },
     ],

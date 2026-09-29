@@ -373,6 +373,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray MigraGard 400mg (60ct)",
     formulaId: "solaray-b129-076280083323",
     form: "capsule",
+    barcode: "076280083323",
     actives: [
       { name: "MigraGard", strength: "400 mg" },
     ],
@@ -549,6 +550,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Curcumin Root Extract 250mg (30ct)",
     formulaId: "solaray-b129-076280903522",
     form: "softgel",
+    barcode: "076280903522",
     actives: [
       { name: "Curcumin Root Extract", strength: "250 mg" },
     ],
@@ -809,6 +811,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Colostrum+ Peach Mango (30 servings)",
     formulaId: "solaray-b129-076280582505",
     form: "powder",
+    barcode: "076280582505",
     actives: [
       { name: "Colostrum", strength: "1 scoop" },
     ],
@@ -1050,6 +1053,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Ginkgo Biloba Extract, One Daily 120mg (30ct)",
     formulaId: "solaray-b129-076280036039",
     form: "capsule",
+    barcode: "076280036039",
     actives: [
       { name: "Ginkgo (leaf extract)", strength: "120 mg" },
       { name: "Gotu Kola (aerial)", strength: "180 mg" },
@@ -1068,6 +1072,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Saw Palmetto & Pygeum with Zinc & Vitamin E (30ct)",
     formulaId: "solaray-b129-076280037661",
     form: "softgel",
+    barcode: "076280037661",
     actives: [
       { name: "Saw Palmetto (berry oil)", strength: "320 mg" },
       { name: "Pygeum (bark extract)", strength: "100 mg" },

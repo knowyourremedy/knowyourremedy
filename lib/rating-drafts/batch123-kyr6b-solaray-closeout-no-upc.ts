@@ -716,6 +716,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Olive Leaf Extract 17% - 250mg (30ct)',
     formulaId: 'solaray-b123-076280037579',
     form: 'capsule',
+    barcode: '076280037579',
     actives: [
       { name: 'Lemon Balm (Melissa officinalis) (aerial)', strength: '85 mg' },
     ],
@@ -735,6 +736,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Pygeum Bark Extract, 100mg (30ct)',
     formulaId: 'solaray-b123-076280037623',
     form: 'capsule',
+    barcode: '076280037623',
     actives: [
       { name: 'Pygeum (Pygeum africanum) (bark)', strength: '50 mg' },
     ],
@@ -2161,6 +2163,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray White Peony Root Extract 500mg (60ct)',
     formulaId: 'solaray-b123-076280790030',
     form: 'capsule',
+    barcode: '076280790030',
     actives: [
       { name: 'White Peony Root Extract', strength: '500 mg' },
     ],
@@ -2218,6 +2221,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray EMIQ 50mg (30ct)',
     formulaId: 'solaray-b123-076280837162',
     form: 'capsule',
+    barcode: '076280837162',
     actives: [
       { name: 'EMIQ (Enzymatically Modified Isoquercitrin)', strength: '50 mg' },
       { name: 'Quercetin', strength: '72 mg' },

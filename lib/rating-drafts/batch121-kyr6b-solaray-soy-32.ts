@@ -253,6 +253,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Bilberry Extract 60mg (120ct)',
     formulaId: 'solaray-b121-076280031119',
     form: 'capsule',
+    barcode: '076280031119',
     actives: [{ name: 'Bilberry Extract', strength: '60 mg' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
@@ -268,6 +269,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Bilberry Extract 60mg (60ct)',
     formulaId: 'solaray-b121-076280031102',
     form: 'capsule',
+    barcode: '076280031102',
     actives: [{ name: 'Bilberry Extract', strength: '60 mg' }],
     flags: [
       ['Cellulose', 'cleared', 'mcc'],
