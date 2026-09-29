@@ -136,6 +136,7 @@ import {
   BATCH133_KYR6B_ZYRTEC_FIX,
   BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP,
   BATCH136_KYR6B_CLARITIN_FIRST_SLICE,
+  BATCH137_KYR6B_ALLEGRA_FIRST_SLICE,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -292,6 +293,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH132_KYR6B_ZYRTEC_FIRST_SLICE,
   ...BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP,
   ...BATCH136_KYR6B_CLARITIN_FIRST_SLICE,
+  ...BATCH137_KYR6B_ALLEGRA_FIRST_SLICE,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
