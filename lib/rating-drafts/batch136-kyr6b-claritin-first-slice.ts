@@ -568,6 +568,7 @@ export const BATCH136_KYR6B_CLARITIN_FIRST_SLICE: RatingRecord[] = [
     id: 'claritin-b136-d24-ec-15',
     productName: 'Claritin-D 24 Hour (15ct, ethylcellulose)',
     formulaId: D24_EC,
+    barcode: '041100810885',
     audience: 'adult',
     minAge: 12,
     form: 'ER tablet',
