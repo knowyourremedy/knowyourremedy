@@ -1003,6 +1003,36 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // glue one count. Official Nature's Way mark already on disk.
   // Per-id only so the no-iron twin stays a letter until attempted.
   'natures-way-alive-max6': brandMark('natures-way-mark.png'),
+  // Vitamins night run 2026-09-29 12:30 AM PT batch 2.
+  // Tried the SKU. naturesway.com sells more than one count on the
+  // same page. Do not glue one count's bottle onto the shared row.
+  // Official Nature's Way mark already on disk. Per-id only.
+  // Max6 no-iron: 90-count 033674150924 and 180-count 033674157091.
+  'natures-way-alive-max6-no-iron': brandMark('natures-way-mark.png'),
+  // Men's / Women's / 50+ Ultra share formulaId with Adult Ultra.
+  // Adult Ultra's 60-count bottle is a different face. Blocked in
+  // PREVIEW_NO_FORMULA_IMAGE. Each of these spans 60 and 150.
+  'natures-way-alive-mens-ultra': brandMark('natures-way-mark.png'),
+  'natures-way-alive-womens-ultra': brandMark('natures-way-mark.png'),
+  'natures-way-alive-mens-50-ultra': brandMark('natures-way-mark.png'),
+  'natures-way-alive-womens-50-ultra': brandMark('natures-way-mark.png'),
+  // Max3 adult: 90-count 033674149270 and 180-count 033674149287.
+  'natures-way-alive-max3': brandMark('natures-way-mark.png'),
+  // Max3 no-iron: 90-count 033674149317 and 180-count 033674149324.
+  'natures-way-alive-max3-no-iron': brandMark('natures-way-mark.png'),
+  // Men's Complete: 50-count 033674136607 and 130-count 033674137161.
+  'natures-way-alive-mens-complete': brandMark('natures-way-mark.png'),
+  // Men's 50+ Complete: 50-count 033674136614 and 130-count 033674142837.
+  'natures-way-alive-mens-50-complete': brandMark('natures-way-mark.png'),
+  // Women's Complete: 50-count 033674136638 and 130-count 033674137109.
+  'natures-way-alive-womens-complete': brandMark('natures-way-mark.png'),
+  // Women's 50+ Complete: 50 / 110 / 130
+  // (033674136621 / 033674139011 / 033674142103).
+  'natures-way-alive-womens-50-complete': brandMark('natures-way-mark.png'),
+  // Women's gummies: 60 / 130 / 150 mixed berry.
+  'natures-way-alive-womens-gummy': brandMark('natures-way-mark.png'),
+  // Men's gummies: 60 / 130 / 150 fruit.
+  'natures-way-alive-mens-gummy': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4546,6 +4576,39 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-alive-hair-skin-nails-softgel': catalogShot(
     'natures-way-alive-hair-skin-nails-softgel.jpg',
   ),
+  // Vitamins night run 2026-09-29 12:30 AM PT batch 2.
+  // Exact US pack faces from naturesway.com. Per-id only. verifiedSku.
+  // One variant each. Gender twins that share a formulaId have their
+  // own face or a mark, and do not inherit this bottle.
+  // Adult Ultra, UPC 033674156797, 60 tablets.
+  'natures-way-alive-adult-ultra': catalogShot(
+    'natures-way-alive-adult-ultra.jpg',
+  ),
+  // Max3 Men's, UPC 033674155424, 90 tablets.
+  'natures-way-alive-max3-mens': catalogShot(
+    'natures-way-alive-max3-mens.jpg',
+  ),
+  // Max3 Women's, UPC 033674155431, 90 tablets.
+  'natures-way-alive-max3-womens': catalogShot(
+    'natures-way-alive-max3-womens.jpg',
+  ),
+  // Men's 50+ Ultra Minis, UPC 033674159736, 180 tablets.
+  'natures-way-alive-mens-50-ultra-minis': catalogShot(
+    'natures-way-alive-mens-50-ultra-minis.jpg',
+  ),
+  // Women's 50+ Ultra Minis, UPC 033674159743, 180 tablets.
+  // Own overlay so it does not inherit the men's minis bottle.
+  'natures-way-alive-womens-50-ultra-minis': catalogShot(
+    'natures-way-alive-womens-50-ultra-minis.jpg',
+  ),
+  // Kids Chewable, UPC 033674157862, 120 chewables. Orange & Berry.
+  'natures-way-alive-kids-chewable': catalogShot(
+    'natures-way-alive-kids-chewable.jpg',
+  ),
+  // Max Potency liquid, UPC 033674153956, 30.4 fl oz. Citrus.
+  'natures-way-alive-max-potency-liquid': catalogShot(
+    'natures-way-alive-max-potency-liquid.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -4571,6 +4634,13 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'welmate-b88-butenafine-3pack',
   // Same itch-gel inactives. NDC 69452-496 is a different carton from 376.
   'aplushealth-b95-itch-gel-496',
+  // Adult Ultra 60-count bottle is a different face from Men's /
+  // Women's / 50+ Ultra. Those rows also span 60 and 150. Do not
+  // inherit the Adult bottle. Each has its own mark.
+  'natures-way-alive-mens-ultra',
+  'natures-way-alive-womens-ultra',
+  'natures-way-alive-mens-50-ultra',
+  'natures-way-alive-womens-50-ultra',
 ]);
 
 export function previewOverlayImage(
