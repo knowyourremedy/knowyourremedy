@@ -222,6 +222,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Mushroom Complete 1175mg (60ct)',
     formulaId: 'solaray-b121-076280105056',
     form: 'capsule',
+    barcode: '076280105056',
     actives: [{ name: 'Mushroom Complete', strength: '1,175 mg' }],
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'capsuleCellulose'],

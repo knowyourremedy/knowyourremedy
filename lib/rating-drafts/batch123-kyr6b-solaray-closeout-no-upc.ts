@@ -773,6 +773,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Saw Palmetto Berry Extract 160mg (30ct)',
     formulaId: 'solaray-b123-076280037814',
     form: 'softgel',
+    barcode: '076280037814',
     actives: [
       { name: 'Saw Palmetto Berry Extract', strength: '160 mg' },
     ],
@@ -827,6 +828,7 @@ const COMPACT: Compact[] = [
     productName: 'Solaray Food Carotene, Vit A as Beta C (30ct)',
     formulaId: 'solaray-b123-076280041132',
     form: 'capsule',
+    barcode: '076280041132',
     actives: [
       { name: 'Vitamin A (as Natural Beta Carotene)', strength: '500 mcg' },
       { name: 'Carotenoid Complex', strength: '80 mg' },

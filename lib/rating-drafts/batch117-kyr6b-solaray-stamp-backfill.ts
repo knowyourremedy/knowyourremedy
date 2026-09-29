@@ -281,6 +281,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice (60ct)",
     formulaId: "solaray-b117-076280048261",
     form: "capsule",
+    barcode: "076280048261",
     actives: [
       { name: "Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice", strength: "label serving" }
     ],
@@ -488,6 +489,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Alfalfa Leaf 860mg (100ct)",
     formulaId: "solaray-b117-076280001105",
     form: "capsule",
+    barcode: "076280001105",
     actives: [
       { name: "Alfalfa Leaf 860mg", strength: "860 mg" }
     ],
@@ -995,6 +997,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Wild Yam Root 400mg (100ct)",
     formulaId: "solaray-b117-076280016703",
     form: "capsule",
+    barcode: "076280016703",
     actives: [
       { name: "Wild Yam Root 400mg", strength: "400 mg" }
     ],
@@ -1865,6 +1868,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Huperzine A - 50mcg (60ct)",
     formulaId: "solaray-b117-076280366624",
     form: "capsule",
+    barcode: "076280366624",
     actives: [
       { name: "Huperzine A - 50mcg", strength: "50 mcg" }
     ],
@@ -2827,6 +2831,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Echinacea Angustifolia 450mg (100ct)",
     formulaId: "solaray-b117-076280012408",
     form: "capsule",
+    barcode: "076280012408",
     actives: [
       { name: "Echinacea Angustifolia 450mg", strength: "450 mg" }
     ],
@@ -3447,6 +3452,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Milk Thistle Seed Extract 350mg (30ct)",
     formulaId: "solaray-b117-076280037036",
     form: "capsule",
+    barcode: "076280037036",
     actives: [
       { name: "Milk Thistle Seed Extract 350mg", strength: "350 mg" }
     ],
@@ -3810,6 +3816,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Myrrh Gum 620mg (100ct)",
     formulaId: "solaray-b117-076280014006",
     form: "capsule",
+    barcode: "076280014006",
     actives: [
       { name: "Myrrh Gum 620mg", strength: "620 mg" }
     ],
@@ -4251,6 +4258,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Echinacea Purpurea 900mg (100ct)",
     formulaId: "solaray-b117-076280192421",
     form: "capsule",
+    barcode: "076280192421",
     actives: [
       { name: "Echinacea Purpurea 900mg", strength: "900 mg" }
     ],
@@ -5197,6 +5205,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Black Cohosh Root 540mg (180ct)",
     formulaId: "solaray-b117-076280001709",
     form: "capsule",
+    barcode: "076280017038",
     actives: [
       { name: "Black Cohosh Root 540mg", strength: "540 mg" }
     ],
@@ -5322,6 +5331,7 @@ const COMPACT: Compact[] = [
     productName: "Solaray Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice (120ct)",
     formulaId: "solaray-b117-076280048254",
     form: "capsule",
+    barcode: "076280048278",
     actives: [
       { name: "Acidophilus 3 Strain Probiotic & Prebiotic Carrot Juice", strength: "label serving" }
     ],
