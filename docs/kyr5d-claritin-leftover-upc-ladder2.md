@@ -101,3 +101,5 @@ Claritin-D 12 Hour (30ct). Left empty.
 | still empty | — | Kroger-family 13-digit field only. `0004110080319` would restore to `041100803191`. No second independent US source. | https://www.kroger.com/p/claritin-d-12-hour-non-drowsy-indoor-outdoor-allergy-relief-tablets/0004110080319 ; https://www.fredmeyer.com/p/claritin-d-12-hour-non-drowsy-indoor-outdoor-allergy-relief-tablets/0004110080319 ; https://www.ralphs.com/p/claritin-d-12-hour-non-drowsy-indoor-outdoor-allergy-relief-tablets/0004110080319 ; https://www.instacart.com/store/s?k=claritin-d%2012%20hour%2030 ; https://www.claritin.com/products/claritin-d/tablets-24hour |
 
 Fred Meyer and Ralphs repeat the same Kroger field. Instacart search did not list a Claritin-D 30-count. The 10-count code `041100802088` stayed on the MAIN 12-hour row.
+
+Founder lock. Walgreens Product Specifications 30.0 ea prints `04110080319` (11-digit). Stored as valid UPC-A `041100803191`. Matches Kroger field `0004110080319`. Attached on this row only. `claritin-b136-d12-20` (`041100802170`) was not touched.

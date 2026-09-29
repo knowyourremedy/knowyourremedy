@@ -625,6 +625,7 @@ export const BATCH136_KYR6B_CLARITIN_FIRST_SLICE: RatingRecord[] = [
     id: 'claritin-b136-d12-30',
     productName: 'Claritin-D 12 Hour (30ct)',
     formulaId: D12,
+    barcode: '041100803191',
     audience: 'adult',
     minAge: 12,
     form: 'ER tablet',
