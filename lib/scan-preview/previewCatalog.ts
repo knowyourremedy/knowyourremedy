@@ -971,6 +971,38 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'sprouts-b12-raspberry-1000': brandMark('sprouts-mark.png'),
   'sprouts-b6-100': brandMark('sprouts-mark.png'),
   'sprouts-red-yeast-rice': brandMark('sprouts-mark.png'),
+  // Vitamins night run 2026-09-29 12:30 AM PT batch 1.
+  // Tried the SKU. shop.sprouts.com heroes are flat label scans, or a
+  // Supplement Facts panel (Vitamin C + Rose Hips). Not a 3D bottle.
+  // Do not glue the label. Vitamin C + Rose Hips spans 646670528637 /
+  // 646670528644. Saw Palmetto 160 mg spans 646670680892 /
+  // 646670680908 (the opened 250-count face is one of those). Do not
+  // glue one count. Saw Palmetto powder cap has no house powder-cap
+  // PDP (the 160 mg pages are the softgel). Moringa 100% powder shop
+  // hero is a flat pouch label. Official Sprouts mark already on disk.
+  // Per-id only.
+  'sprouts-vitamin-c-rose-hips-1000': brandMark('sprouts-mark.png'),
+  'sprouts-b12-2500': brandMark('sprouts-mark.png'),
+  'sprouts-organic-womens-once-daily-multi': brandMark('sprouts-mark.png'),
+  'sprouts-fenugreek-powder-cap': brandMark('sprouts-mark.png'),
+  'sprouts-mega-magnesium': brandMark('sprouts-mark.png'),
+  'sprouts-maca-powder-cap': brandMark('sprouts-mark.png'),
+  'sprouts-thyroid-powder-cap': brandMark('sprouts-mark.png'),
+  'sprouts-hawthorn-cap': brandMark('sprouts-mark.png'),
+  'sprouts-saw-palmetto-powder-cap': brandMark('sprouts-mark.png'),
+  'sprouts-saw-palmetto-160-softgels': brandMark('sprouts-mark.png'),
+  'sprouts-iodine-with-kelp': brandMark('sprouts-mark.png'),
+  'sprouts-moringa-powder-cap': brandMark('sprouts-mark.png'),
+  'sprouts-moringa-100-powder': brandMark('sprouts-mark.png'),
+  'sprouts-organic-irish-moss-100-powder': brandMark('sprouts-mark.png'),
+  'sprouts-folic-acid-800': brandMark('sprouts-mark.png'),
+  'sprouts-vitamin-e-1000': brandMark('sprouts-mark.png'),
+  'sprouts-vitamin-e-with-selenium': brandMark('sprouts-mark.png'),
+  // Alive! Max6 spans 90-count 033674150900 and 180-count 033674157084.
+  // naturesway.com hero of that page is the 90-count bottle. Do not
+  // glue one count. Official Nature's Way mark already on disk.
+  // Per-id only so the no-iron twin stays a letter until attempted.
+  'natures-way-alive-max6': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -4503,6 +4535,16 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   'boiron-gemmo-rosemary-young-shoots': catalogShot(
     'boiron-gemmo-rosemary-young-shoots.jpg',
+  ),
+  // Vitamins night run 2026-09-29 12:30 AM PT batch 1.
+  // Exact US pack faces from naturesway.com. Per-id only. verifiedSku.
+  // Energizing Iron, UPC 763948052196, 90 softgels. One variant.
+  'natures-way-energizing-iron': catalogShot(
+    'natures-way-energizing-iron.jpg',
+  ),
+  // Alive! Hair, Skin & Nails, UPC 033674110942, 60 softgels. Strawberry.
+  'natures-way-alive-hair-skin-nails-softgel': catalogShot(
+    'natures-way-alive-hair-skin-nails-softgel.jpg',
   ),
 };
 
