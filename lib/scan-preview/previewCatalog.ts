@@ -5288,6 +5288,97 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b83-magnesium-citrate-complex': catalogShot(
     'naturewise-b83-magnesium-citrate-complex.jpg',
   ),
+  // Vitamins night run 2026-09-29 6:45 AM PT batch 2.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Iron Bisglycinate, UPC 810157852786, 90 capsules.
+  // Own overlay. Not the Magnesium Citrate Complex bottle.
+  'naturewise-b83-iron-bisglycinate': catalogShot(
+    'naturewise-b83-iron-bisglycinate.jpg',
+  ),
+  // L-Theanine 200 mg, UPC 810157851932, 120 capsules.
+  // Own overlay. Not the Algae Calcium bottle.
+  'naturewise-b83-l-theanine-200': catalogShot(
+    'naturewise-b83-l-theanine-200.jpg',
+  ),
+  // L-Theanine 400 mg, UPC 810157853080, 120 capsules.
+  // Own overlay. The 200 mg bottle is a different face.
+  'naturewise-b83-l-theanine-400': catalogShot(
+    'naturewise-b83-l-theanine-400.jpg',
+  ),
+  // Super K Complex, UPC 810157852366, 90 softgels.
+  'naturewise-b83-super-k': catalogShot('naturewise-b83-super-k.jpg'),
+  // Fast Dissolve Vitamin D3 5000 IU, UPC 810157852175, 90 tablets.
+  // Mixed berry. Not a softgel D3 bottle.
+  'naturewise-b83-fast-dissolve-vitamin-d3': catalogShot(
+    'naturewise-b83-fast-dissolve-vitamin-d3.jpg',
+  ),
+  // Krill Oil + D3, UPC 810157852045, 60 softgels.
+  // The brand page for this barcode is Krill Oil + D3. Front leads
+  // with Krill Oil 1000 mg. Not a multipack.
+  'naturewise-b83-krill-oil-d3': catalogShot(
+    'naturewise-b83-krill-oil-d3.jpg',
+  ),
+  // Zinc + D3 & K2, UPC 810157851772, 30 capsules.
+  'naturewise-b83-zinc-d3-k2': catalogShot(
+    'naturewise-b83-zinc-d3-k2.jpg',
+  ),
+  // Zinc + D3 & K2, UPC 810157851789, 60 capsules.
+  // Own overlay. The 30-count bottle is a different face.
+  'naturewise-b83-zinc-d3-k2-60': catalogShot(
+    'naturewise-b83-zinc-d3-k2-60.jpg',
+  ),
+  // Turmeric Saffron + Cinnamon & Cardamom, UPC 810157851697, 60 capsules.
+  'naturewise-b83-turmeric-saffron': catalogShot(
+    'naturewise-b83-turmeric-saffron.jpg',
+  ),
+  // Turmeric Boswellia, UPC 810157851581, 60 capsules.
+  'naturewise-b83-turmeric-boswellia': catalogShot(
+    'naturewise-b83-turmeric-boswellia.jpg',
+  ),
+  // Vegan Biotin 5000 mcg, UPC 810157851918, 120 softgels.
+  // Not the gelatin biotin bottles.
+  'naturewise-b83-vegan-biotin': catalogShot(
+    'naturewise-b83-vegan-biotin.jpg',
+  ),
+  // L-Methylfolate 5-MTHF + B12, UPC 810157851710, 60 capsules.
+  'naturewise-b83-l-methylfolate': catalogShot(
+    'naturewise-b83-l-methylfolate.jpg',
+  ),
+  // Mushroom Complex, UPC 810157851468, 90 capsules.
+  'naturewise-b83-mushroom-complex': catalogShot(
+    'naturewise-b83-mushroom-complex.jpg',
+  ),
+  // Biotin 5000 mcg, UPC 810157851673, 150 softgels.
+  'naturewise-b83-biotin-5000': catalogShot(
+    'naturewise-b83-biotin-5000.jpg',
+  ),
+  // Biotin 10000 mcg, UPC 810157851727, 120 softgels.
+  // Own overlay. The 5000 mcg bottle is a different face.
+  'naturewise-b83-biotin-10000': catalogShot(
+    'naturewise-b83-biotin-10000.jpg',
+  ),
+  // NAD+ Support Complex, UPC 810157851420, 60 capsules.
+  'naturewise-b83-nad-complex': catalogShot(
+    'naturewise-b83-nad-complex.jpg',
+  ),
+  // Berberine, UPC 810157851444, 60 capsules.
+  // Do not inherit this bottle onto Milk Thistle.
+  'naturewise-b83-berberine': catalogShot('naturewise-b83-berberine.jpg'),
+  // Hydro-Soluble Turmeric Curcumin 1000 mg, UPC 810157850935, 60 capsules.
+  'naturewise-b83-hydro-soluble-turmeric-1000': catalogShot(
+    'naturewise-b83-hydro-soluble-turmeric-1000.jpg',
+  ),
+  // Hydro-Soluble Turmeric Curcumin 1500 mg, UPC 810157852168, 90 capsules.
+  // Own overlay. The 1000 mg bottle is a different face.
+  'naturewise-b83-hydro-soluble-turmeric-1500': catalogShot(
+    'naturewise-b83-hydro-soluble-turmeric-1500.jpg',
+  ),
+  // Vitamin D3 + K2 with MCT Oil 5000 IU, UPC 810157851123, 30 softgels.
+  // Other MCT counts stay letters until attempted.
+  'naturewise-b83-vitamin-d3-k2-mct-5000-30': catalogShot(
+    'naturewise-b83-vitamin-d3-k2-mct-5000-30.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5392,6 +5483,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b83-green-tea-90',
   'naturewise-b83-green-tea-120',
   'naturewise-b83-iron-bisglycinate',
+  // Zinc 60-count and Turmeric 1500 mg have their own faces.
+  // Do not inherit the 30-count zinc or the 1000 mg turmeric.
+  'naturewise-b83-zinc-d3-k2-60',
+  'naturewise-b83-hydro-soluble-turmeric-1500',
+  // Berberine formula is also on Milk Thistle. Different bottles.
+  'naturewise-b83-milk-thistle',
+  'naturewise-b83-milk-thistle-180',
+  // D3 + K2 MCT 5000 IU / 30-count is not the other MCT counts.
+  'naturewise-b83-vitamin-d3-k2-mct-5000-90',
+  'naturewise-b83-vitamin-d3-k2-mct-10000-30',
+  'naturewise-b83-vitamin-d3-k2-mct-10000-90',
 ]);
 
 export function previewOverlayImage(
