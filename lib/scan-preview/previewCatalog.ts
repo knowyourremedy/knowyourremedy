@@ -6196,6 +6196,94 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280008623': catalogShot(
     'solaray-b117-076280008623.jpg',
   ),
+  // Vitamins night run 2026-09-30 5:30 AM PT batch 2.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // The variant SKU on that face matches the row.
+  // Grapefruit Seed Extract 250 mg, UPC 076280085204, 60 capsules.
+  'solaray-b117-076280085204': catalogShot(
+    'solaray-b117-076280085204.jpg',
+  ),
+  // 5-HTP 100 mg, UPC 076280366655, 30 capsules.
+  // The face also names St. John's Wort. Not the 60-count L-5-HTP bottle.
+  'solaray-b117-076280366655': catalogShot(
+    'solaray-b117-076280366655.jpg',
+  ),
+  // Cascara Sagrada Bark 450 mg, UPC 076280011210, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280011210': catalogShot(
+    'solaray-b117-076280011210.jpg',
+  ),
+  // Irish Sea Moss, UPC 076280577013, 100 capsules.
+  // The file name says 90ct. The bottle face says 100 VegCaps
+  // and the variant title is 100 ct. Do not treat the file name as the count.
+  'solaray-b117-076280577013': catalogShot(
+    'solaray-b117-076280577013.jpg',
+  ),
+  // Fermented Ginger Root 400 mg, UPC 076280386875, 100 capsules.
+  'solaray-b117-076280386875': catalogShot(
+    'solaray-b117-076280386875.jpg',
+  ),
+  // Fermented Chaga Mushroom 1000 mg, UPC 076280387353, 60 capsules.
+  'solaray-b117-076280387353': catalogShot(
+    'solaray-b117-076280387353.jpg',
+  ),
+  // Avena Sativa 350 mg, UPC 076280014181, 100 capsules.
+  'solaray-b117-076280014181': catalogShot(
+    'solaray-b117-076280014181.jpg',
+  ),
+  // SharpMind Nootropics Focus, UPC 076280499674, 30 capsules.
+  'solaray-b117-076280499674': catalogShot(
+    'solaray-b117-076280499674.jpg',
+  ),
+  // Glucosamine, Chondroitin with Hyaluronic Acid, UPC 076280081589, 90 capsules.
+  'solaray-b117-076280081589': catalogShot(
+    'solaray-b117-076280081589.jpg',
+  ),
+  // Activated Charcoal 280 mg, UPC 076280008609, 90 capsules.
+  'solaray-b117-076280008609': catalogShot(
+    'solaray-b117-076280008609.jpg',
+  ),
+  // Betaine HCl with Pepsin 250 mg, UPC 076280048162, 180 capsules.
+  'solaray-b117-076280048162': catalogShot(
+    'solaray-b117-076280048162.jpg',
+  ),
+  // Liposomal Vitamin C, UPC 076280574197, 100 capsules.
+  'solaray-b117-076280574197': catalogShot(
+    'solaray-b117-076280574197.jpg',
+  ),
+  // Liposomal NAD+, UPC 076280553307, 60 capsules.
+  'solaray-b117-076280553307': catalogShot(
+    'solaray-b117-076280553307.jpg',
+  ),
+  // Fucoxanthin, Kombu Seaweed Extract 200 mg, UPC 076280429077, 30 capsules.
+  'solaray-b117-076280429077': catalogShot(
+    'solaray-b117-076280429077.jpg',
+  ),
+  // Neem Leaf 460 mg, UPC 076280014051, 100 capsules.
+  'solaray-b117-076280014051': catalogShot(
+    'solaray-b117-076280014051.jpg',
+  ),
+  // L-Lysine Monolaurin 1:1, UPC 076280352818, 60 capsules.
+  'solaray-b117-076280352818': catalogShot(
+    'solaray-b117-076280352818.jpg',
+  ),
+  // Super Resveratrol with Pterostilbene 255 mg, UPC 076280846522, 30 capsules.
+  'solaray-b117-076280846522': catalogShot(
+    'solaray-b117-076280846522.jpg',
+  ),
+  // Vitamin C with Rose Hips & Acerola 1000 mg, UPC 076280044515, 250 capsules.
+  // Not the 100-count bottle. The file name drops the leading zero.
+  'solaray-b117-076280044515': catalogShot(
+    'solaray-b117-076280044515.jpg',
+  ),
+  // Chromium Picolinate 500 mcg, UPC 076280458954, 60 tablets.
+  'solaray-b117-076280458954': catalogShot(
+    'solaray-b117-076280458954.jpg',
+  ),
+  // Garlic Bulb Extract, Odor-Free 500 mg, UPC 076280034707, 60 capsules.
+  'solaray-b117-076280034707': catalogShot(
+    'solaray-b117-076280034707.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
