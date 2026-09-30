@@ -5656,6 +5656,96 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b116-vitamin-c-crystalline-8oz': catalogShot(
     'solaray-b116-vitamin-c-crystalline-8oz.jpg',
   ),
+  // Vitamins night run 2026-09-30 1:45 AM PT batch 2.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // One variant each. The SKU on that variant matches the row.
+  // Psyllium Husk Fiber, UPC 076280793383, 6 oz, unflavored.
+  'solaray-b116-psyllium-husk-fiber-6oz': catalogShot(
+    'solaray-b116-psyllium-husk-fiber-6oz.jpg',
+  ),
+  // Psyllium Whole Husk, UPC 076280447583, 350 g, unflavored.
+  'solaray-b116-psyllium-whole-husk-350g': catalogShot(
+    'solaray-b116-psyllium-whole-husk-350g.jpg',
+  ),
+  // Creatine + MBP, UPC 076280453294, 9.21 oz.
+  'solaray-b116-creatine-mbp-9-21oz': catalogShot(
+    'solaray-b116-creatine-mbp-9-21oz.jpg',
+  ),
+  // Creatine with Shilajit, UPC 076280185461, 6.1 oz, unflavored.
+  // Not the pineapple bottle.
+  'solaray-b116-creatine-shilajit-unflavored-6-1oz': catalogShot(
+    'solaray-b116-creatine-shilajit-unflavored-6-1oz.jpg',
+  ),
+  // Tart Cherry Concentrate, UPC 076280985221, 16 fl oz.
+  // Not the tart cherry juice bottle.
+  'solaray-b116-tart-cherry-concentrate-16floz': catalogShot(
+    'solaray-b116-tart-cherry-concentrate-16floz.jpg',
+  ),
+  // Organic Tart Cherry Juice, UPC 076280502596, 16 oz.
+  // Own face. Not the concentrate bottle.
+  'solaray-b116-organic-tart-cherry-juice-16oz': catalogShot(
+    'solaray-b116-organic-tart-cherry-juice-16oz.jpg',
+  ),
+  // Organic Beet Root Juice, UPC 076280914122, 16 oz.
+  'solaray-b116-organic-beet-root-juice-16oz': catalogShot(
+    'solaray-b116-organic-beet-root-juice-16oz.jpg',
+  ),
+  // Extra-Strength Magnesium Glycinate Powder 500 mg, UPC 076280668636, 8.4 oz, unflavored.
+  // Not the lemon-lime bottle and not the 350 mg / 9.8 oz bottle.
+  'solaray-b116-magnesium-glycinate-500-8-4oz': catalogShot(
+    'solaray-b116-magnesium-glycinate-500-8-4oz.jpg',
+  ),
+  // Magnesium Glycinate Powder 350 mg, UPC 076280709711, 9.8 oz.
+  // Own face. Not the 500 mg / 8.4 oz bottle.
+  'solaray-b116-magnesium-glycinate-powder-9-8oz': catalogShot(
+    'solaray-b116-magnesium-glycinate-powder-9-8oz.jpg',
+  ),
+  // Okra Fiber, UPC 076280901689, 2.63 oz.
+  'solaray-b116-okra-fiber-2-63oz': catalogShot(
+    'solaray-b116-okra-fiber-2-63oz.jpg',
+  ),
+  // Mycrobiome Prebiotic, UPC 076280266191, 5.64 oz, unflavored.
+  // Not the citrus bottle.
+  'solaray-b116-mycrobiome-prebiotic-5-64oz': catalogShot(
+    'solaray-b116-mycrobiome-prebiotic-5-64oz.jpg',
+  ),
+  // Activated Charcoal 500 mg, UPC 076280426083, 5.3 oz.
+  'solaray-b116-activated-charcoal-500-5-3oz': catalogShot(
+    'solaray-b116-activated-charcoal-500-5-3oz.jpg',
+  ),
+  // D-Ribose, UPC 076280890853, 150 g.
+  'solaray-b116-d-ribose-150g': catalogShot(
+    'solaray-b116-d-ribose-150g.jpg',
+  ),
+  // Inositol Powder, UPC 076280043556, 2 oz.
+  // Not the 4 oz bottle.
+  'solaray-b116-inositol-powder-2oz': catalogShot(
+    'solaray-b116-inositol-powder-2oz.jpg',
+  ),
+  // StrongMag, UPC 076280753141, 8.2 oz, unflavored.
+  'solaray-b116-strongmag-8-2oz': catalogShot(
+    'solaray-b116-strongmag-8-2oz.jpg',
+  ),
+  // GutShield, UPC 076280638578, 150 g / 5.3 oz.
+  'solaray-b116-gutshield-150g': catalogShot(
+    'solaray-b116-gutshield-150g.jpg',
+  ),
+  // Oat Fiber, UPC 076280544084, 2.63 oz.
+  'solaray-b116-oat-fiber-2-63oz': catalogShot(
+    'solaray-b116-oat-fiber-2-63oz.jpg',
+  ),
+  // Triple Fiber, UPC 076280983500, 14 oz.
+  'solaray-b116-triple-fiber-14oz': catalogShot(
+    'solaray-b116-triple-fiber-14oz.jpg',
+  ),
+  // Mangosteen Fruit 475 mg, UPC 076280118087, 100 capsules.
+  'solaray-b117-076280118087': catalogShot(
+    'solaray-b117-076280118087.jpg',
+  ),
+  // Chlorella Broken Cell 410 mg, UPC 076280011845, 100 capsules.
+  'solaray-b117-076280011845': catalogShot(
+    'solaray-b117-076280011845.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
