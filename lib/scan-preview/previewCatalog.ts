@@ -1204,6 +1204,30 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'timecap-b107-asa-81-365': brandMark('timecap-mark.png'),
   // Easy-swallow 100. Brand site lists code 342R, not a count carton.
   'timecap-b108-apap-342-100': brandMark('timecap-mark.png'),
+  // Daytime photo run batch 2 — tried the count. No matching 3D pack.
+  // Thrifty White reused a 100-count face on other counts. Dollar General
+  // listed 24 and 100 tablets only. Do not glue those bottles.
+  // Official GoodSense wordmark. Per-id so other GoodSense rows stay letters.
+  'goodsense-b109-ibuprofen-3059': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-10': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-15': brandMark('goodsense-mark.png'),
+  // 20-count barcode is a repack NDC, not a GoodSense retail bottle.
+  'goodsense-b109-ibuprofen-3059-20': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-30': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-40': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-50': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-56': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-60': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-90': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-120': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-200': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-250': brandMark('goodsense-mark.png'),
+  // 500-count page photo was a 100-count caplet bottle. Not glued.
+  'goodsense-b109-ibuprofen-3059-500': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-550': brandMark('goodsense-mark.png'),
+  'goodsense-b109-ibuprofen-3059-1000': brandMark('goodsense-mark.png'),
+  // 50-count caplets. Tablet bottles are a different face.
+  'goodsense-b109-ibuprofen-9a03': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6603,6 +6627,18 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'timecap-b107-asa-81-120': catalogShot('timecap-b107-asa-81-120.jpg'),
   // Same aspirin, 1000 tablets. Not the 120.
   'timecap-b107-asa-81-1000': catalogShot('timecap-b107-asa-81-1000.jpg'),
+  // Daytime photo run batch 2. Per-id.
+  // Rapid release acetaminophen 500 mg, 400 gelcaps. UPC 349483697438.
+  'timecap-b108-apap-rr-400': catalogShot('timecap-b108-apap-rr-400.jpg'),
+  // GoodSense ibuprofen 200 mg coated tablets, 24 count.
+  // Dollar General PDP UPC 070030132071. Not the 100-count bottle.
+  'goodsense-b109-ibuprofen-3059-24': catalogShot(
+    'goodsense-b109-ibuprofen-3059-24.jpg',
+  ),
+  // Same tablets, 100 count. Dollar General PDP UPC 070030139964.
+  'goodsense-b109-ibuprofen-3059-100': catalogShot(
+    'goodsense-b109-ibuprofen-3059-100.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13234,6 +13270,53 @@ const asa1000 = previewOverlayImage({
 if (!asa1000?.url.endsWith('/timecap-b107-asa-81-1000.jpg') || !asa1000.verifiedSku) {
   throw new Error('1000-count aspirin must keep its own carton');
 }
+assertExactCarton(
+  'timecap-b108-apap-rr-400',
+  'TIME-Cap Labs',
+  'timecap-b108-apap-rr-400.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-ibuprofen-3059-24',
+  'GoodSense',
+  'goodsense-b109-ibuprofen-3059-24.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-ibuprofen-3059-100',
+  'GoodSense',
+  'goodsense-b109-ibuprofen-3059-100.jpg',
+);
+for (const shared of [
+  'goodsense-b109-ibuprofen-3059',
+  'goodsense-b109-ibuprofen-3059-10',
+  'goodsense-b109-ibuprofen-3059-15',
+  'goodsense-b109-ibuprofen-3059-20',
+  'goodsense-b109-ibuprofen-3059-30',
+  'goodsense-b109-ibuprofen-3059-40',
+  'goodsense-b109-ibuprofen-3059-50',
+  'goodsense-b109-ibuprofen-3059-56',
+  'goodsense-b109-ibuprofen-3059-60',
+  'goodsense-b109-ibuprofen-3059-90',
+  'goodsense-b109-ibuprofen-3059-120',
+  'goodsense-b109-ibuprofen-3059-200',
+  'goodsense-b109-ibuprofen-3059-250',
+  'goodsense-b109-ibuprofen-3059-500',
+  'goodsense-b109-ibuprofen-3059-550',
+  'goodsense-b109-ibuprofen-3059-1000',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b109-ibuprofen-3059',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the GoodSense mark, not a sibling bottle`);
+  }
+}
+assertBrandMark(
+  'goodsense-b109-ibuprofen-9a03',
+  'GoodSense',
+  'goodsense-mark.png',
+);
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
