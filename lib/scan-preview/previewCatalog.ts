@@ -6109,6 +6109,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280043211': catalogShot(
     'solaray-b117-076280043211.jpg',
   ),
+  // Vitamins night run 2026-09-30 5:30 AM PT batch 1.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // The variant SKU on that face matches the row.
+  // Mycrobiome Complete Probiotic Women's, UPC 076280683073, 30 capsules.
+  'solaray-b117-076280683073': catalogShot(
+    'solaray-b117-076280683073.jpg',
+  ),
+  // Kelp Seaweed 550 mg, UPC 076280136517, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280136517': catalogShot(
+    'solaray-b117-076280136517.jpg',
+  ),
+  // Mastic Gum Extract 1000 mg, UPC 076280036886, 45 capsules.
+  'solaray-b117-076280036886': catalogShot(
+    'solaray-b117-076280036886.jpg',
+  ),
+  // Reishi Mushroom 600 mg, UPC 076280015058, 100 capsules.
+  'solaray-b117-076280015058': catalogShot(
+    'solaray-b117-076280015058.jpg',
+  ),
+  // Once Daily High Energy Multivitamin, Iron-Free, UPC 076280109054, 120 capsules.
+  'solaray-b117-076280109054': catalogShot(
+    'solaray-b117-076280109054.jpg',
+  ),
+  // Vitamin C & Bioflavonoids 1:1 500 mg, UPC 076280044324, 100 capsules.
+  // Not the 250-count bottle.
+  'solaray-b117-076280044324': catalogShot(
+    'solaray-b117-076280044324.jpg',
+  ),
+  // Uva Ursi Leaf 460 mg, UPC 076280016208, 100 capsules.
+  'solaray-b117-076280016208': catalogShot(
+    'solaray-b117-076280016208.jpg',
+  ),
+  // Blood Glucose Success, UPC 076280398120, 90 capsules.
+  'solaray-b117-076280398120': catalogShot(
+    'solaray-b117-076280398120.jpg',
+  ),
+  // Nettle Leaf 900 mg, UPC 076280014105, 100 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280014105': catalogShot(
+    'solaray-b117-076280014105.jpg',
+  ),
+  // Damiana Leaf 370 mg, UPC 076280012002, 100 capsules.
+  'solaray-b117-076280012002': catalogShot(
+    'solaray-b117-076280012002.jpg',
+  ),
+  // Parsley Leaf 860 mg, UPC 076280014204, 100 capsules.
+  'solaray-b117-076280014204': catalogShot(
+    'solaray-b117-076280014204.jpg',
+  ),
+  // Collagen Keratin, UPC 076280737998, 60 capsules.
+  'solaray-b117-076280737998': catalogShot(
+    'solaray-b117-076280737998.jpg',
+  ),
+  // Total Cleanse Uric Acid, UPC 076280350074, 60 capsules.
+  'solaray-b117-076280350074': catalogShot(
+    'solaray-b117-076280350074.jpg',
+  ),
+  // St. John's Wort Aerial 325 mg, UPC 076280015539, 100 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280015539': catalogShot(
+    'solaray-b117-076280015539.jpg',
+  ),
+  // Phosphatidylserine Plus, UPC 076280832433, 60 capsules.
+  'solaray-b117-076280832433': catalogShot(
+    'solaray-b117-076280832433.jpg',
+  ),
+  // Green Tea Leaf Extract 250 mg, UPC 076280036589, 30 capsules.
+  'solaray-b117-076280036589': catalogShot(
+    'solaray-b117-076280036589.jpg',
+  ),
+  // Huperzine A 50 mcg, UPC 076280366624, 60 capsules.
+  'solaray-b117-076280366624': catalogShot(
+    'solaray-b117-076280366624.jpg',
+  ),
+  // Olive Leaf 410 mg, UPC 076280014136, 100 capsules.
+  'solaray-b117-076280014136': catalogShot(
+    'solaray-b117-076280014136.jpg',
+  ),
+  // Sea Buckthorn Berry 600 mg, UPC 076280137996, 100 capsules.
+  'solaray-b117-076280137996': catalogShot(
+    'solaray-b117-076280137996.jpg',
+  ),
+  // MSM 750 mg with Turmeric & Boswellia, UPC 076280008623, 90 capsules.
+  'solaray-b117-076280008623': catalogShot(
+    'solaray-b117-076280008623.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6260,6 +6347,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280049411',
   // Echinacea Purpurea 180-count is not the 100-count bottle.
   'solaray-b117-076280124354',
+  // Nettle Leaf 180-count is not the 100-count bottle.
+  'solaray-b117-076280014129',
+  // St. John's Wort 180-count is not the 100-count bottle.
+  'solaray-b117-076280015546',
 ]);
 
 export function previewOverlayImage(
