@@ -5928,6 +5928,97 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280192766': catalogShot(
     'solaray-b117-076280192766.jpg',
   ),
+  // Vitamins night run 2026-09-30 4:15 AM PT batch 1.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // One variant each. The SKU on that variant matches the row.
+  // Valerian Root 470 mg, UPC 076280016314, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280016314': catalogShot(
+    'solaray-b117-076280016314.jpg',
+  ),
+  // Black Walnut Hull 500 mg, UPC 076280001808, 100 capsules.
+  'solaray-b117-076280001808': catalogShot(
+    'solaray-b117-076280001808.jpg',
+  ),
+  // Organically Grown Fermented Beet Root 500 mg, UPC 076280791433, 100 capsules.
+  'solaray-b117-076280791433': catalogShot(
+    'solaray-b117-076280791433.jpg',
+  ),
+  // Celery Seed Extract 100 mg, UPC 076280103694, 30 capsules.
+  'solaray-b117-076280103694': catalogShot(
+    'solaray-b117-076280103694.jpg',
+  ),
+  // L-Theanine 200 mg, UPC 076280131734, 90 capsules.
+  // Not the 45-count bottle.
+  'solaray-b117-076280131734': catalogShot(
+    'solaray-b117-076280131734.jpg',
+  ),
+  // Echinacea Root & Goldenseal Root 500 mg, UPC 076280012446, 100 capsules.
+  'solaray-b117-076280012446': catalogShot(
+    'solaray-b117-076280012446.jpg',
+  ),
+  // Wild Yam Root 400 mg, UPC 076280016703, 100 capsules.
+  'solaray-b117-076280016703': catalogShot(
+    'solaray-b117-076280016703.jpg',
+  ),
+  // Berberine Root Extract 250 mg, UPC 076280206777, 60 capsules.
+  'solaray-b117-076280206777': catalogShot(
+    'solaray-b117-076280206777.jpg',
+  ),
+  // CoQ-10 200 mg, UPC 076280261691, 30 capsules.
+  // Not the 100 mg / 30-count bottle.
+  'solaray-b117-076280261691': catalogShot(
+    'solaray-b117-076280261691.jpg',
+  ),
+  // Fo-Ti Root 610 mg, UPC 076280012804, 100 capsules.
+  'solaray-b117-076280012804': catalogShot(
+    'solaray-b117-076280012804.jpg',
+  ),
+  // DHEA, UPC 076280884616, 60 capsules.
+  'solaray-b117-076280884616': catalogShot(
+    'solaray-b117-076280884616.jpg',
+  ),
+  // Fenugreek Seed 1240 mg, UPC 076280012712, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280012712': catalogShot(
+    'solaray-b117-076280012712.jpg',
+  ),
+  // Mullein Leaf 330 mg, UPC 076280013900, 100 capsules.
+  // Not the 200-count bottle.
+  'solaray-b117-076280013900': catalogShot(
+    'solaray-b117-076280013900.jpg',
+  ),
+  // Licorice Root 900 mg, UPC 076280193701, 100 capsules.
+  'solaray-b117-076280193701': catalogShot(
+    'solaray-b117-076280193701.jpg',
+  ),
+  // Tribulus Fruit Extract 450 mg, UPC 076280037975, 60 capsules.
+  'solaray-b117-076280037975': catalogShot(
+    'solaray-b117-076280037975.jpg',
+  ),
+  // Bergamot Extract 500 mg, UPC 076280494167, 60 capsules.
+  'solaray-b117-076280494167': catalogShot(
+    'solaray-b117-076280494167.jpg',
+  ),
+  // Saw Palmetto Berry 580 mg, UPC 076280015522, 360 capsules.
+  // Not the 50-, 100-, or 180-count bottle.
+  'solaray-b117-076280015522': catalogShot(
+    'solaray-b117-076280015522.jpg',
+  ),
+  // L-Lysine, Free Form 500 mg, UPC 076280049404, 60 capsules.
+  // Not the 120-count bottle.
+  'solaray-b117-076280049404': catalogShot(
+    'solaray-b117-076280049404.jpg',
+  ),
+  // Magnesium Glycinate 350 mg, UPC 076280895049, 240 capsules.
+  // Not the 120-count bottle.
+  'solaray-b117-076280895049': catalogShot(
+    'solaray-b117-076280895049.jpg',
+  ),
+  // Maca Root 525 mg, UPC 076280013764, 100 capsules.
+  'solaray-b117-076280013764': catalogShot(
+    'solaray-b117-076280013764.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6073,6 +6164,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280397260',
   // Vitamin C With Rose Hips & Acerola 250-count is not the 100-count bottle.
   'solaray-b117-076280044010',
+  // Mullein Leaf 200-count is not the 100-count bottle.
+  'solaray-b117-X0042AEJKH',
+  // L-Lysine 120-count is not the 60-count bottle.
+  'solaray-b117-076280049411',
 ]);
 
 export function previewOverlayImage(
