@@ -1165,6 +1165,18 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // mark already on disk. Per-id only.
   'healtha2z-b96-tension-48': brandMark('healtha2z-mark.png'),
   'healtha2z-b96-tension-96': brandMark('healtha2z-mark.png'),
+  // Timely / TIME-Cap count faces. timecaplabs.com shows code thumbnails,
+  // not a count-specific retail carton. DailyMed files are label flats.
+  // Official TIME-CAP mark already on disk. Per-id so counts do not share.
+  'timecap-b106-ibu-200-softgel': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-20': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-80': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-120': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-160': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-200': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-softgel-300': brandMark('timecap-mark.png'),
+  'timecap-b106-apap-500': brandMark('timecap-mark.png'),
+  'timecap-b106-apap-500-dyefree': brandMark('timecap-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6510,6 +6522,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Aspirin 81 mg dye-free, 200 tablets. SKU FPA154.
   'healtha2z-b99-aspirin-81-dye-free': catalogShot(
     'healtha2z-b99-aspirin-81-dye-free.jpg',
+  ),
+  // Daytime photo run batch 2 — a2z-life.com pack fronts. Per-id.
+  // Aspirin 81 mg enteric-coated, 365 tablets. SKU FPA069.
+  'healtha2z-b99-aspirin-81-430': catalogShot(
+    'healtha2z-b99-aspirin-81-430.jpg',
+  ),
+  // Extra Strength Pain Relief PM, 365 caplets. SKU FPA004.
+  'healtha2z-b99-apap-pm-es': catalogShot('healtha2z-b99-apap-pm-es.jpg'),
+  // Same PM formula, 150 caplets. SKU FPA061. Not the 365.
+  'healtha2z-b99-apap-pm-es-150': catalogShot(
+    'healtha2z-b99-apap-pm-es-150.jpg',
+  ),
+  // PM value pack, 24×20 (480). SKU FP1085.
+  'healtha2z-b100-apap-pm-20x24': catalogShot(
+    'healtha2z-b100-apap-pm-20x24.jpg',
+  ),
+  // Aspirin 81 mg chewable, 36 tablets. SKU FPA035E.
+  // Not the 24×36 value carton.
+  'healtha2z-b101-aspirin-81-chew': catalogShot(
+    'healtha2z-b101-aspirin-81-chew.jpg',
+  ),
+  // Aspirin 81 mg chewable, 24×36 (864). SKU FP0545.
+  'healtha2z-b101-aspirin-81-chew-864': catalogShot(
+    'healtha2z-b101-aspirin-81-chew-864.jpg',
+  ),
+  // Ibuprofen 200 mg liquid-filled, 10 softgels. SKU FP0660.
+  'healtha2z-b101-ibu-368': catalogShot('healtha2z-b101-ibu-368.jpg'),
+  // Ibuprofen softgels, 24×10 (240). SKU FP0660V. Not the 10-count bottle.
+  'healtha2z-b101-ibu-368-240': catalogShot('healtha2z-b101-ibu-368-240.jpg'),
+  // Ibuprofen softgels, 24×30 (720). SKU FP0706.
+  'healtha2z-b101-ibu-368-720': catalogShot('healtha2z-b101-ibu-368-720.jpg'),
+  // Aspirin 81 mg enteric-coated, 300 tablets. SKU FPA013. Not the 365.
+  'healtha2z-b102-aspirin-81-ec-318': catalogShot(
+    'healtha2z-b102-aspirin-81-ec-318.jpg',
+  ),
+  // Cold Therapy roll-on, menthol 4%, 74 mL. SKU FPA183.
+  'healtha2z-b102-menthol-roll-on': catalogShot(
+    'healtha2z-b102-menthol-roll-on.jpg',
   ),
 };
 
@@ -12912,6 +12962,98 @@ assertExactCarton(
   'healtha2z-b99-aspirin-81-dye-free',
   'HealthA2Z',
   'healtha2z-b99-aspirin-81-dye-free.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-aspirin-81-430',
+  'HealthA2Z',
+  'healtha2z-b99-aspirin-81-430.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-apap-pm-es',
+  'HealthA2Z',
+  'healtha2z-b99-apap-pm-es.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-apap-pm-es-150',
+  'HealthA2Z',
+  'healtha2z-b99-apap-pm-es-150.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-apap-pm-20x24',
+  'HealthA2Z',
+  'healtha2z-b100-apap-pm-20x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b101-aspirin-81-chew',
+  'HealthA2Z',
+  'healtha2z-b101-aspirin-81-chew.jpg',
+);
+assertExactCarton(
+  'healtha2z-b101-aspirin-81-chew-864',
+  'HealthA2Z',
+  'healtha2z-b101-aspirin-81-chew-864.jpg',
+);
+assertExactCarton('healtha2z-b101-ibu-368', 'HealthA2Z', 'healtha2z-b101-ibu-368.jpg');
+assertExactCarton(
+  'healtha2z-b101-ibu-368-240',
+  'HealthA2Z',
+  'healtha2z-b101-ibu-368-240.jpg',
+);
+assertExactCarton(
+  'healtha2z-b101-ibu-368-720',
+  'HealthA2Z',
+  'healtha2z-b101-ibu-368-720.jpg',
+);
+assertExactCarton(
+  'healtha2z-b102-aspirin-81-ec-318',
+  'HealthA2Z',
+  'healtha2z-b102-aspirin-81-ec-318.jpg',
+);
+assertExactCarton(
+  'healtha2z-b102-menthol-roll-on',
+  'HealthA2Z',
+  'healtha2z-b102-menthol-roll-on.jpg',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-20',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-80',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-120',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-160',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-200',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-softgel-300',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark('timecap-b106-apap-500', 'TIME-Cap Labs', 'timecap-mark.png');
+assertBrandMark(
+  'timecap-b106-apap-500-dyefree',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
 );
 
 const exactWins = previewOverlayImage({
