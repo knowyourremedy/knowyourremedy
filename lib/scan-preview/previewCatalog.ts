@@ -1117,6 +1117,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // 16 oz, and 183405043503 is MAXCALM Raspberry-Lemon 8 oz.
   // Do not glue MAXCALM onto this original CALM powder row.
   'natural-vitality-calm-raspberry-lemon': brandMark('natural-vitality-mark.png'),
+  // Vitamins night run 2026-09-30 12:30 AM PT batch 2.
+  // Tried the SKU. naturewise.com Mixed Berry liquid collagen is
+  // 10-pack 855724007831, 30-pack 855724007855, and 60-pack
+  // 810157851208. This row has no barcode and no pack count.
+  // Do not glue one pack. Official wordmark from naturewise.com
+  // header logo (naturewise-logo-main.svg). Per-id only.
+  'naturewise-b84-liquid-collagen-berry': brandMark('naturewise-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -5469,9 +5476,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'naturewise-b83-raspberry-ketones.jpg',
   ),
   // Liver Balance Complete, UPC 855724007404, 60 capsules.
-  // The 120-count face stays a letter until attempted.
+  // The 120-count face has its own overlay.
   'naturewise-b83-liver-balance': catalogShot(
     'naturewise-b83-liver-balance.jpg',
+  ),
+  // Vitamins night run 2026-09-30 12:30 AM PT batch 2.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Liver Balance Complete, UPC 858081006813, 120 capsules.
+  // Own overlay. Not the 60-count bottle.
+  'naturewise-b83-liver-balance-120': catalogShot(
+    'naturewise-b83-liver-balance-120.jpg',
+  ),
+  // Ashwagandha for Stress, UPC 858081006776, 60 capsules.
+  'naturewise-b83-ashwagandha-for-stress': catalogShot(
+    'naturewise-b83-ashwagandha-for-stress.jpg',
+  ),
+  // Vitamin C Chewables, UPC 850053810046, 90 tablets.
+  'naturewise-b83-vitamin-c-chewables': catalogShot(
+    'naturewise-b83-vitamin-c-chewables.jpg',
+  ),
+  // CoQ10 200 mg, UPC 850053810527, 30 softgels.
+  'naturewise-b83-coq10': catalogShot('naturewise-b83-coq10.jpg'),
+  // CoQ10 200 mg, UPC 850053810534, 90 softgels.
+  // Own overlay. The 30-count bottle is a different face.
+  'naturewise-b83-coq10-90': catalogShot('naturewise-b83-coq10-90.jpg'),
+  // Liquid Multivitamin, UPC 810157851116, 30 oz.
+  // Only variant on this page. Raspberry flavor on the front.
+  'naturewise-b84-liquid-multivitamin': catalogShot(
+    'naturewise-b84-liquid-multivitamin.jpg',
+  ),
+  // Liquid Multivitamin + Hair Growth, UPC 810157851222, 30 oz.
+  // Not the 15.22 oz bottle and not the 2-pack.
+  'naturewise-b84-liquid-multi-hair': catalogShot(
+    'naturewise-b84-liquid-multi-hair.jpg',
+  ),
+  // Liquid Collagen Mango, UPC 810157852434, 10 liquid tubes.
+  // Not the 30-pack or the 60-pack. Not Mixed Berry.
+  'naturewise-b84-liquid-collagen-mango': catalogShot(
+    'naturewise-b84-liquid-collagen-mango.jpg',
+  ),
+  // Vegan Algae Omega-3, UPC 810157852830, 60 softgels.
+  'naturewise-b85-algae-vegan-omega3': catalogShot(
+    'naturewise-b85-algae-vegan-omega3.jpg',
+  ),
+  // Alpha Lipoic Acid, UPC 810157853035, 120 capsules.
+  'naturewise-b85-alpha-lipoic-acid': catalogShot(
+    'naturewise-b85-alpha-lipoic-acid.jpg',
+  ),
+  // Calcium Citrate Extra-Strength 500 mg, UPC 810157851185, 90 capsules.
+  'naturewise-b85-calcium-citrate-extra': catalogShot(
+    'naturewise-b85-calcium-citrate-extra.jpg',
+  ),
+  // Calcium Citrate Extra-Strength 500 mg, UPC 810157852182, 180 capsules.
+  // Own overlay. The 90-count bottle is a different face.
+  'naturewise-b85-calcium-citrate-extra-180': catalogShot(
+    'naturewise-b85-calcium-citrate-extra-180.jpg',
+  ),
+  // Green Coffee Bean Extract, UPC 858081006004, 60 capsules.
+  'naturewise-b85-green-coffee-bean': catalogShot(
+    'naturewise-b85-green-coffee-bean.jpg',
+  ),
+  // Hair, Skin & Nails, UPC 855724007718, 150 softgels.
+  'naturewise-b85-hair-skin-nails': catalogShot(
+    'naturewise-b85-hair-skin-nails.jpg',
+  ),
+  // Hair, Skin & Nails, UPC 855724007817, 270 softgels.
+  // Own overlay. The 150-count bottle is a different face.
+  'naturewise-b85-hair-skin-nails-270': catalogShot(
+    'naturewise-b85-hair-skin-nails-270.jpg',
+  ),
+  // Turmeric + Ginger 2400 mg, UPC 810157851383, 90 capsules.
+  'naturewise-b85-turmeric-ginger': catalogShot(
+    'naturewise-b85-turmeric-ginger.jpg',
+  ),
+  // Quadruple Strength Omega-3, UPC 810157851529, 120 softgels.
+  'naturewise-b85-quadruple-omega-3': catalogShot(
+    'naturewise-b85-quadruple-omega-3.jpg',
+  ),
+  // Vegan Vitamin D3 5000 IU, UPC 855724007701, 60 softgels.
+  'naturewise-b85-vegan-vitamin-d3': catalogShot(
+    'naturewise-b85-vegan-vitamin-d3.jpg',
+  ),
+  // SunPine Vegan Vitamin D3 + K2, UPC 810157852571, 60 softgels.
+  // Front says 60-day supply. Variant title is 60 Count.
+  'naturewise-b85-sunpine-d3-k2': catalogShot(
+    'naturewise-b85-sunpine-d3-k2.jpg',
   ),
 };
 
@@ -5594,6 +5684,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b83-magnesium-glycinate-400-180',
   // Liver Balance 120-count is not the 60-count bottle.
   'naturewise-b83-liver-balance-120',
+  // CoQ10 200 mg / 90-count is not the 30-count bottle.
+  'naturewise-b83-coq10-90',
+  // Calcium Citrate Extra-Strength 180-count is not the 90-count bottle.
+  'naturewise-b85-calcium-citrate-extra-180',
+  // Hair, Skin & Nails 270-count is not the 150-count bottle.
+  'naturewise-b85-hair-skin-nails-270',
 ]);
 
 export function previewOverlayImage(
