@@ -5838,6 +5838,96 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280493009': catalogShot(
     'solaray-b117-076280493009.jpg',
   ),
+  // Vitamins night run 2026-09-30 3:00 AM PT batch 2.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // One variant each. The SKU on that variant matches the row.
+  // Neem Leaf 400 mg, UPC 076280941388, 100 capsules.
+  'solaray-b117-076280941388': catalogShot(
+    'solaray-b117-076280941388.jpg',
+  ),
+  // Suma Root 500 mg, UPC 076280016154, 100 capsules.
+  'solaray-b117-076280016154': catalogShot(
+    'solaray-b117-076280016154.jpg',
+  ),
+  // Magnesium Glycinate 350 mg, UPC 076280549010, 120 capsules.
+  // Not the 240-count bottle.
+  'solaray-b117-076280549010': catalogShot(
+    'solaray-b117-076280549010.jpg',
+  ),
+  // Rutin 500 mg, UPC 076280329896, 90 capsules.
+  'solaray-b117-076280329896': catalogShot(
+    'solaray-b117-076280329896.jpg',
+  ),
+  // St. John's Wort Mood Support, UPC 076280037784, 60 capsules.
+  'solaray-b117-076280037784': catalogShot(
+    'solaray-b117-076280037784.jpg',
+  ),
+  // Turmeric Root Extract 300 mg, UPC 076280038002, 60 capsules.
+  // Not the 120-count bottle.
+  'solaray-b117-076280038002': catalogShot(
+    'solaray-b117-076280038002.jpg',
+  ),
+  // Yellow Dock Root 500 mg, UPC 076280017007, 100 capsules.
+  'solaray-b117-076280017007': catalogShot(
+    'solaray-b117-076280017007.jpg',
+  ),
+  // Fenugreek Seed & Thyme Leaf 950 mg, UPC 076280012729, 100 capsules.
+  'solaray-b117-076280012729': catalogShot(
+    'solaray-b117-076280012729.jpg',
+  ),
+  // Bladderwrack Seaweed 580 mg, UPC 076280001853, 100 capsules.
+  'solaray-b117-076280001853': catalogShot(
+    'solaray-b117-076280001853.jpg',
+  ),
+  // Chickweed Aerial 385 mg, UPC 076280011807, 100 capsules.
+  'solaray-b117-076280011807': catalogShot(
+    'solaray-b117-076280011807.jpg',
+  ),
+  // Cascara Sagrada Bark 450 mg, UPC 076280011203, 100 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280011203': catalogShot(
+    'solaray-b117-076280011203.jpg',
+  ),
+  // DAO Enzyme, UPC 076280363180, 30 capsules.
+  // Not the 90-count bottle.
+  'solaray-b117-076280363180': catalogShot(
+    'solaray-b117-076280363180.jpg',
+  ),
+  // Milk Thistle Seed Extract 350 mg, UPC 076280106794, 60 capsules.
+  // Not the 30-count bottle.
+  'solaray-b117-076280106794': catalogShot(
+    'solaray-b117-076280106794.jpg',
+  ),
+  // Super Aloe Vera, UPC 076280001235, 100 capsules.
+  'solaray-b117-076280001235': catalogShot(
+    'solaray-b117-076280001235.jpg',
+  ),
+  // Selenium 100 mcg, Yeast-Free, UPC 076280046762, 90 capsules.
+  'solaray-b117-076280046762': catalogShot(
+    'solaray-b117-076280046762.jpg',
+  ),
+  // Vitamin C With Rose Hips & Acerola 500 mg, UPC 076280044003, 100 capsules.
+  // Not the 250-count bottle.
+  'solaray-b117-076280044003': catalogShot(
+    'solaray-b117-076280044003.jpg',
+  ),
+  // Vitamin E, Dry 165 mg (200 IU), UPC 076280041712, 100 capsules.
+  'solaray-b117-076280041712': catalogShot(
+    'solaray-b117-076280041712.jpg',
+  ),
+  // MSM & Glucosamine, UPC 076280008562, 180 capsules.
+  // Not the 90-count bottle.
+  'solaray-b117-076280008562': catalogShot(
+    'solaray-b117-076280008562.jpg',
+  ),
+  // Marshmallow 480 mg, UPC 076280013801, 100 capsules.
+  'solaray-b117-076280013801': catalogShot(
+    'solaray-b117-076280013801.jpg',
+  ),
+  // Feverfew Leaf 455 mg, UPC 076280192766, 100 capsules.
+  'solaray-b117-076280192766': catalogShot(
+    'solaray-b117-076280192766.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5975,6 +6065,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280017038',
   // Multidophilus 50-count is not the 100-count bottle.
   'solaray-b117-076280493016',
+  // Magnesium Glycinate 240-count is not the 120-count bottle.
+  'solaray-b117-076280895049',
+  // Cascara Sagrada 180-count is not the 100-count bottle.
+  'solaray-b117-076280011210',
+  // DAO Enzyme 90-count is not the 30-count bottle.
+  'solaray-b117-076280397260',
+  // Vitamin C With Rose Hips & Acerola 250-count is not the 100-count bottle.
+  'solaray-b117-076280044010',
 ]);
 
 export function previewOverlayImage(
