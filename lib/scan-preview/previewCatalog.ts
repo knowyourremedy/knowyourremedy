@@ -6284,6 +6284,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280034707': catalogShot(
     'solaray-b117-076280034707.jpg',
   ),
+  // Pain & Fever night run 2026-09-30 6:45 AM PT batch 1.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // NOW faces are the Vitacost PDP featured image whose UPC field matches
+  // the row (nowfoods.com was Cloudflare-blocked). NatureWise and WELMATE
+  // faces are the brand-site variant whose barcode matches the row.
+  // Glucosamine '1000', UPC 733739032379, 60 capsules.
+  // Not the 180-count bottle (that face is already overlaid).
+  'now-glucosamine-1000-60': catalogShot('now-glucosamine-1000-60.jpg'),
+  // Turmeric Curcumin Gels, UPC 733739049384, 60 softgels.
+  // Not the 120-count bottle.
+  'now-turmeric-curcumin-gels-60': catalogShot(
+    'now-turmeric-curcumin-gels-60.jpg',
+  ),
+  // Boswellia Extract 500 mg, UPC 733739049360, 90 softgels.
+  'now-boswellia-extract-90': catalogShot('now-boswellia-extract-90.jpg'),
+  // Glucosamine & Chondroitin, UPC 733739032447, 240 tablets.
+  // Not the 120-count bottle.
+  'now-glucosamine-chondroitin-240-tablet': catalogShot(
+    'now-glucosamine-chondroitin-240-tablet.jpg',
+  ),
+  // MSM 1,500 mg, UPC 733739021311, 200 tablets.
+  'now-msm-200': catalogShot('now-msm-200.jpg'),
+  // Glucosamine & Chondroitin, UPC 733739032430, 120 tablets.
+  // Not the 240-count bottle.
+  'now-glucosamine-chondroitin-120-tablet': catalogShot(
+    'now-glucosamine-chondroitin-120-tablet.jpg',
+  ),
+  // UC-II Joint Health, UPC 733739031365, 120 capsules.
+  // Not the 60-count bottle.
+  'now-uc-ii-joint-health-120': catalogShot(
+    'now-uc-ii-joint-health-120.jpg',
+  ),
+  // UC-II Joint Health, UPC 733739031341, 60 capsules.
+  // Not the 120-count bottle.
+  'now-uc-ii-joint-health-60': catalogShot('now-uc-ii-joint-health-60.jpg'),
+  // Turmeric with Garlic + Ginger, UPC 810157852090, 120 capsules.
+  'naturewise-b82-turmeric-garlic-ginger': catalogShot(
+    'naturewise-b82-turmeric-garlic-ginger.jpg',
+  ),
+  // Extra Strength Turmeric Curcumin, UPC 810157851765, 120 capsules.
+  'naturewise-b82-extra-strength-turmeric-curcumin': catalogShot(
+    'naturewise-b82-extra-strength-turmeric-curcumin.jpg',
+  ),
+  // Turmeric Curcumin Complex, UPC 810157851703, 90 capsules.
+  'naturewise-b82-turmeric-curcumin-complex': catalogShot(
+    'naturewise-b82-turmeric-curcumin-complex.jpg',
+  ),
+  // Turmeric Softgels, UPC 810157850300, 30 softgels.
+  // Not the 90-count or 180-count bottle.
+  'naturewise-b82-turmeric-softgels': catalogShot(
+    'naturewise-b82-turmeric-softgels.jpg',
+  ),
+  // Turmeric Softgels, UPC 810157850317, 90 softgels.
+  'naturewise-b82-turmeric-softgels-90-count': catalogShot(
+    'naturewise-b82-turmeric-softgels-90-count.jpg',
+  ),
+  // Turmeric Softgels, UPC 810157850324, 180 softgels.
+  'naturewise-b82-turmeric-softgels-180-count': catalogShot(
+    'naturewise-b82-turmeric-softgels-180-count.jpg',
+  ),
+  // Glucosamine Chondroitin, UPC 810157852915, 90 capsules.
+  'naturewise-b85-glucosamine-chondroitin': catalogShot(
+    'naturewise-b85-glucosamine-chondroitin.jpg',
+  ),
+  // Diclofenac Sodium Topical Gel 1%, 150 g. Brand-site face is the
+  // 5.29 oz / 150 g tube. The row's barcode field is empty.
+  'welmate-b87-diclofenac-gel': catalogShot('welmate-b87-diclofenac-gel.jpg'),
+  // Phenazopyridine HCl 99.5 mg, UPC 373581000630, 36 tablets.
+  // Not the 72-count or 120-count bottle.
+  'welmate-b87-phenazopyridine': catalogShot(
+    'welmate-b87-phenazopyridine.jpg',
+  ),
+  // Phenazopyridine HCl 99.5 mg, UPC 373581909728, 72 tablets.
+  'welmate-b87-phenazopyridine-72': catalogShot(
+    'welmate-b87-phenazopyridine-72.jpg',
+  ),
+  // Phenazopyridine HCl 99.5 mg, UPC 373581000647, 120 tablets.
+  'welmate-b87-phenazopyridine-120': catalogShot(
+    'welmate-b87-phenazopyridine-120.jpg',
+  ),
+  // Lidocaine 5% Cream, 5.5 oz jar. Not the 1 oz tube.
+  // The row's barcode field is empty. The brand-site face is the 5.5 oz jar.
+  'welmate-b88-lidocaine-5-cholesterol': catalogShot(
+    'welmate-b88-lidocaine-5-cholesterol.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6439,6 +6524,8 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280014129',
   // St. John's Wort 180-count is not the 100-count bottle.
   'solaray-b117-076280015546',
+  // Lidocaine 5% 1 oz tube is not the 5.5 oz jar.
+  'welmate-b88-lidocaine-5-cholesterol-1oz',
 ]);
 
 export function previewOverlayImage(
