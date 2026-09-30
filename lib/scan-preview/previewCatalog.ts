@@ -1228,6 +1228,30 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-ibuprofen-3059-1000': brandMark('goodsense-mark.png'),
   // 50-count caplets. Tablet bottles are a different face.
   'goodsense-b109-ibuprofen-9a03': brandMark('goodsense-mark.png'),
+  // Daytime photo run — tried the count. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark.
+  // Per-id only.
+  // 8-hour 650 mg. The 100-count bottle is a different face.
+  // 19, 20, 24, and 30 are repack counts, not a retail bottle.
+  'goodsense-b109-pain-relief-56b4': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-20': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-24': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-30': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-50': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-60': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-90': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-120': brandMark('goodsense-mark.png'),
+  'goodsense-b109-pain-relief-56b4-400': brandMark('goodsense-mark.png'),
+  // Migraine formula. The 100-count bottle is a different face.
+  // No 24, 30, 60, 90, or 200 retail front. The 50-count NDC ended in 2014.
+  'goodsense-b109-migraine-formula-46cf': brandMark('goodsense-mark.png'),
+  'goodsense-b109-migraine-formula-46cf-30': brandMark('goodsense-mark.png'),
+  'goodsense-b109-migraine-formula-46cf-50': brandMark('goodsense-mark.png'),
+  'goodsense-b109-migraine-formula-46cf-60': brandMark('goodsense-mark.png'),
+  'goodsense-b109-migraine-formula-46cf-90': brandMark('goodsense-mark.png'),
+  'goodsense-b109-migraine-formula-46cf-200': brandMark('goodsense-mark.png'),
+  // Naproxen PM 20-count. Retrieved faces are 50 and 160. Do not glue those.
+  'goodsense-b109-naproxen-sodium-9943': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6638,6 +6662,27 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Same tablets, 100 count. Dollar General PDP UPC 070030139964.
   'goodsense-b109-ibuprofen-3059-100': catalogShot(
     'goodsense-b109-ibuprofen-3059-100.jpg',
+  ),
+  // Daytime photo run. Thrifty White pack fronts. Per-id.
+  // Brown ibuprofen 200 mg, 100 caplet-shaped tablets.
+  // UPC 070030131357. Not the 50-count and not the 500-count.
+  'goodsense-b109-ibuprofen-9a03-100': catalogShot(
+    'goodsense-b109-ibuprofen-9a03-100.jpg',
+  ),
+  // Same brown ibuprofen, 500 coated tablets. UPC 070030132460.
+  // Not the 100-count bottle.
+  'goodsense-b109-ibuprofen-9a03-500': catalogShot(
+    'goodsense-b109-ibuprofen-9a03-500.jpg',
+  ),
+  // 8-hour acetaminophen 650 mg, 100 caplets.
+  // Not the 19, 24, 50, or 400.
+  'goodsense-b109-pain-relief-56b4-100': catalogShot(
+    'goodsense-b109-pain-relief-56b4-100.jpg',
+  ),
+  // Migraine formula, 100 coated caplets. UPC 301130374789.
+  // Not the 24-count.
+  'goodsense-b109-migraine-formula-46cf-100': catalogShot(
+    'goodsense-b109-migraine-formula-46cf-100.jpg',
   ),
 };
 
@@ -13314,6 +13359,68 @@ for (const shared of [
 }
 assertBrandMark(
   'goodsense-b109-ibuprofen-9a03',
+  'GoodSense',
+  'goodsense-mark.png',
+);
+assertExactCarton(
+  'goodsense-b109-ibuprofen-9a03-100',
+  'GoodSense',
+  'goodsense-b109-ibuprofen-9a03-100.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-ibuprofen-9a03-500',
+  'GoodSense',
+  'goodsense-b109-ibuprofen-9a03-500.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-pain-relief-56b4-100',
+  'GoodSense',
+  'goodsense-b109-pain-relief-56b4-100.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-migraine-formula-46cf-100',
+  'GoodSense',
+  'goodsense-b109-migraine-formula-46cf-100.jpg',
+);
+for (const shared of [
+  'goodsense-b109-pain-relief-56b4',
+  'goodsense-b109-pain-relief-56b4-20',
+  'goodsense-b109-pain-relief-56b4-24',
+  'goodsense-b109-pain-relief-56b4-30',
+  'goodsense-b109-pain-relief-56b4-50',
+  'goodsense-b109-pain-relief-56b4-60',
+  'goodsense-b109-pain-relief-56b4-90',
+  'goodsense-b109-pain-relief-56b4-120',
+  'goodsense-b109-pain-relief-56b4-400',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b109-pain-relief-56b4',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the GoodSense mark, not the 100-count bottle`);
+  }
+}
+for (const shared of [
+  'goodsense-b109-migraine-formula-46cf',
+  'goodsense-b109-migraine-formula-46cf-30',
+  'goodsense-b109-migraine-formula-46cf-50',
+  'goodsense-b109-migraine-formula-46cf-60',
+  'goodsense-b109-migraine-formula-46cf-90',
+  'goodsense-b109-migraine-formula-46cf-200',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b109-migraine-formula-46cf',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the GoodSense mark, not the 100-count bottle`);
+  }
+}
+assertBrandMark(
+  'goodsense-b109-naproxen-sodium-9943',
   'GoodSense',
   'goodsense-mark.png',
 );
