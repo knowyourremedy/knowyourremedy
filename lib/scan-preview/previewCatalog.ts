@@ -1135,6 +1135,31 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // bottle. Official header wordmark from solaray.com. Per-id only.
   // Not a text tile.
   'solaray-b117-076280512519': brandMark('solaray-mark.png'),
+  // Pain & Fever night run 2026-09-30 6:45 AM PT batch 2.
+  // Tried the SKU. No matching carton. Official brand mark. Per-id only.
+  // Not a text tile. Not a letter.
+  // Spray: the only DailyMed image on the 142 g setid reads as a 5 fl oz can.
+  // Do not glue that face onto the 142 g row.
+  'welmate-b89-lidocaine-5-spray': brandMark('welmate-mark.png'),
+  // Dye-free ibuprofen 400 mini softgels: DailyMed front is a 240-count bottle.
+  'aplushealth-b93-ibu-dyefree-400': brandMark('aplus-health-mark.png'),
+  // Ibuprofen 240 softgels: DailyMed faces on this setid are 20, 160, and 300.
+  // No 240-count face.
+  'aplushealth-b94-ibu-200-240': brandMark('aplus-health-mark.png'),
+  // Dye-free PM 80 softgels: DailyMed carton is a 20-count bottle.
+  'aplushealth-b94-pm-dyefree': brandMark('aplus-health-mark.png'),
+  // PM 120 softgels: DailyMed front is a 20-count bottle.
+  'aplushealth-b94-pm-dyes': brandMark('aplus-health-mark.png'),
+  // Naproxen 120 liquid gels: DailyMed front is a 20-count bottle.
+  'aplushealth-b94-naproxen-220': brandMark('aplus-health-mark.png'),
+  // Naproxen 120 liquid gels, NDC 69452-259-22: same 20-count front.
+  'aplushealth-b94-naproxen-120-22': brandMark('aplus-health-mark.png'),
+  // Naproxen 180 liquid gels, NDC 69452-259-25: same 20-count front.
+  'aplushealth-b94-naproxen-180-259': brandMark('aplus-health-mark.png'),
+  // Naproxen 180 liquid gels, NDC 69452-284-25: DailyMed front is a 20-count bottle.
+  'aplushealth-b94-naproxen-180-284': brandMark('aplus-health-mark.png'),
+  // Aspirin NDC 69168-312-06 is 120 tablets. The only DailyMed image is the 300-count bottle.
+  'healtha2z-b96-aspirin-325-312-06': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6369,6 +6394,57 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'welmate-b88-lidocaine-5-cholesterol': catalogShot(
     'welmate-b88-lidocaine-5-cholesterol.jpg',
   ),
+  // Pain & Fever night run 2026-09-30 6:45 AM PT batch 2.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // WELMATE faces are the brand-site variant whose barcode matches the row.
+  // A+Health and HealthA2Z faces are the DailyMed carton for that count.
+  // Lidocaine 5% Cream, UPC 373581000289, 1 oz tube.
+  // Not the 5.5 oz jar.
+  'welmate-b88-lidocaine-5-cholesterol-1oz': catalogShot(
+    'welmate-b88-lidocaine-5-cholesterol-1oz.jpg',
+  ),
+  // Lidocaine 5% Cream, UPC 373581000296, 2 oz / 60 g tube.
+  // Not the 6 oz jar.
+  'welmate-b88-lidocaine-5-c10': catalogShot(
+    'welmate-b88-lidocaine-5-c10.jpg',
+  ),
+  // Lidocaine 5% Cream, UPC 373581000401, 6 oz jar.
+  // Not the 2 oz tube.
+  'welmate-b88-lidocaine-5-c10-6oz': catalogShot(
+    'welmate-b88-lidocaine-5-c10-6oz.jpg',
+  ),
+  // Ibuprofen 200 mg, 300 softgels. DailyMed image1 on setid
+  // 2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8. Not the 20-count front
+  // and not the 160-count image.
+  'aplushealth-b93-ibu-200-300-india': catalogShot(
+    'aplushealth-b93-ibu-200-300-india.jpg',
+  ),
+  // Cool & Heat, menthol 16%, 2.5 fl oz (74 mL). DailyMed carton.
+  'aplushealth-b93-cool-heat-74': catalogShot(
+    'aplushealth-b93-cool-heat-74.jpg',
+  ),
+  // Ibuprofen 200 mg, UPC-less, 160 softgels. DailyMed image2.
+  // Not the 300-count image and not the 20-count front.
+  'aplushealth-b94-ibu-200-us-ink': catalogShot(
+    'aplushealth-b94-ibu-200-us-ink.jpg',
+  ),
+  // Migraine Relief Ibuprofen 200 mg, 160 softgels. DailyMed front.
+  'aplushealth-b94-migraine-160': catalogShot(
+    'aplushealth-b94-migraine-160.jpg',
+  ),
+  // Lidocaine 4% Roll-On, 2.5 fl oz (74 mL). DailyMed carton.
+  'aplushealth-b94-lidocaine-roll': catalogShot(
+    'aplushealth-b94-lidocaine-roll.jpg',
+  ),
+  // Lidocaine 4% Patch, 6 count. DailyMed carton.
+  'aplushealth-b94-lidocaine-patch': catalogShot(
+    'aplushealth-b94-lidocaine-patch.jpg',
+  ),
+  // Aspirin 325 mg, UPC 369168312173, 300 tablets.
+  // NDC 69168-312-17. Not the 120-count NDC 69168-312-06.
+  'healtha2z-b96-aspirin-325': catalogShot(
+    'healtha2z-b96-aspirin-325.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6526,6 +6602,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280015546',
   // Lidocaine 5% 1 oz tube is not the 5.5 oz jar.
   'welmate-b88-lidocaine-5-cholesterol-1oz',
+  // Ibuprofen 240 softgels is not the 160-count bottle.
+  'aplushealth-b94-ibu-200-240',
+  // Aspirin NDC 69168-312-06 is 120 tablets, not the 300-count bottle.
+  'healtha2z-b96-aspirin-325-312-06',
+  // Aspirin 24 packs of 40 (960) is not the 300-count bottle.
+  'healtha2z-b98-aspirin-325-40x24',
 ]);
 
 export function previewOverlayImage(
