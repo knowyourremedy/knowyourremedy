@@ -1129,6 +1129,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // label (Final_8) and a supplement-facts panel. No 3D carton.
   // Official header wordmark from solaray.com. Per-id only.
   'solaray-b117-076280717556': brandMark('solaray-mark.png'),
+  // Vitamins night run 2026-09-30 4:15 AM PT batch 2.
+  // Tried the SKU. solaray.com pack file for UPC 076280512519 is
+  // labeled 60 capsules. This row is 30 ct. Do not glue the 60-count
+  // bottle. Official header wordmark from solaray.com. Per-id only.
+  // Not a text tile.
+  'solaray-b117-076280512519': brandMark('solaray-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6019,6 +6025,90 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280013764': catalogShot(
     'solaray-b117-076280013764.jpg',
   ),
+  // Vitamins night run 2026-09-30 4:15 AM PT batch 2.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // One variant each. The SKU on that variant matches the row.
+  // Organically Grown Fermented Turkey Tail 1000 mg, UPC 076280367386, 60 capsules.
+  'solaray-b117-076280367386': catalogShot(
+    'solaray-b117-076280367386.jpg',
+  ),
+  // L-Phenylalanine, Free Form 500 mg, UPC 076280049718, 60 capsules.
+  'solaray-b117-076280049718': catalogShot(
+    'solaray-b117-076280049718.jpg',
+  ),
+  // Echinacea Purpurea & Angustifolia 460 mg, UPC 076280012439, 100 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280012439': catalogShot(
+    'solaray-b117-076280012439.jpg',
+  ),
+  // Astragalus Root 400 mg, UPC 076280134179, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280134179': catalogShot(
+    'solaray-b117-076280134179.jpg',
+  ),
+  // DIM Supreme 100 mg, UPC 076280381696, 60 capsules.
+  'solaray-b117-076280381696': catalogShot(
+    'solaray-b117-076280381696.jpg',
+  ),
+  // Yarrow Aerial 320 mg, UPC 076280016901, 100 capsules.
+  'solaray-b117-076280016901': catalogShot(
+    'solaray-b117-076280016901.jpg',
+  ),
+  // Quercetin 500 mg, UPC 076280446852, 90 capsules.
+  'solaray-b117-076280446852': catalogShot(
+    'solaray-b117-076280446852.jpg',
+  ),
+  // L-5-HTP with Vitamin B-6 & C 100 mg, UPC 076280366686, 60 capsules.
+  // Not the 30-count bottle.
+  'solaray-b117-076280366686': catalogShot(
+    'solaray-b117-076280366686.jpg',
+  ),
+  // Bilberry Extract 160 mg, UPC 076280031126, 30 capsules.
+  'solaray-b117-076280031126': catalogShot(
+    'solaray-b117-076280031126.jpg',
+  ),
+  // Matcha Green Tea 300 mg, UPC 076280837643, 100 capsules.
+  'solaray-b117-076280837643': catalogShot(
+    'solaray-b117-076280837643.jpg',
+  ),
+  // Super Multidophilus 24 Strain, 30 Billion CFU, UPC 076280905786, 60 capsules.
+  'solaray-b117-076280905786': catalogShot(
+    'solaray-b117-076280905786.jpg',
+  ),
+  // Tetra-Boron 3 mg, UPC 076280045789, 100 capsules.
+  'solaray-b117-076280045789': catalogShot(
+    'solaray-b117-076280045789.jpg',
+  ),
+  // Cinnamon Bark Extract 300 mg, UPC 076280118360, 60 capsules.
+  'solaray-b117-076280118360': catalogShot(
+    'solaray-b117-076280118360.jpg',
+  ),
+  // Catuaba Bark 930 mg, UPC 076280011272, 100 capsules.
+  'solaray-b117-076280011272': catalogShot(
+    'solaray-b117-076280011272.jpg',
+  ),
+  // Vitamin C With Bioflavonoid Complex 500 mg, UPC 076280044201, 100 capsules.
+  // Not the 250-count bottle.
+  'solaray-b117-076280044201': catalogShot(
+    'solaray-b117-076280044201.jpg',
+  ),
+  // Passion Flower Aerial 700 mg, UPC 076280014303, 100 capsules.
+  'solaray-b117-076280014303': catalogShot(
+    'solaray-b117-076280014303.jpg',
+  ),
+  // Psyllium Husk 525 mg, UPC 076280014600, 100 capsules.
+  'solaray-b117-076280014600': catalogShot(
+    'solaray-b117-076280014600.jpg',
+  ),
+  // Dong Quai Root 550 mg, UPC 076280012361, 180 capsules.
+  // Not the 100-count bottle.
+  'solaray-b117-076280012361': catalogShot(
+    'solaray-b117-076280012361.jpg',
+  ),
+  // Lipotropic + 1000, UPC 076280043211, 100 capsules.
+  'solaray-b117-076280043211': catalogShot(
+    'solaray-b117-076280043211.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6168,6 +6258,8 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-X0042AEJKH',
   // L-Lysine 120-count is not the 60-count bottle.
   'solaray-b117-076280049411',
+  // Echinacea Purpurea 180-count is not the 100-count bottle.
+  'solaray-b117-076280124354',
 ]);
 
 export function previewOverlayImage(
