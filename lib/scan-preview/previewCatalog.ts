@@ -1177,6 +1177,33 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'timecap-b106-ibu-200-softgel-300': brandMark('timecap-mark.png'),
   'timecap-b106-apap-500': brandMark('timecap-mark.png'),
   'timecap-b106-apap-500-dyefree': brandMark('timecap-mark.png'),
+  // Daytime photo run — tried the SKU. No matching count-specific 3D
+  // pack. timecaplabs.com is bulk-code thumbnails. DailyMed files are
+  // label flats. Do not glue a sibling count. Official TIME-CAP mark.
+  // Per-id only.
+  // 24-count and 50-count arthritis bottles were not retrieved.
+  'timecap-b106-apap-650-er-24': brandMark('timecap-mark.png'),
+  'timecap-b106-apap-650-er-50': brandMark('timecap-mark.png'),
+  // 400-count listing reused the 225-caplet photo. Do not glue it.
+  'timecap-b106-apap-650-er-400': brandMark('timecap-mark.png'),
+  // Muscle-ache 50-count (NDC 49483-704) is a different face.
+  'timecap-b106-apap-650-er-muscle-50': brandMark('timecap-mark.png'),
+  // 100-count brown tablets. Caplet and other tablet counts are different.
+  'timecap-b106-ibu-200-brown': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-brown-tab-50': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-brown-tab-500': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-brown-tab-1000': brandMark('timecap-mark.png'),
+  // Caplets are not the 200-count tablet bottle.
+  'timecap-b106-ibu-200-brown-cap-50': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-brown-cap-100': brandMark('timecap-mark.png'),
+  'timecap-b106-ibu-200-brown-cap-500': brandMark('timecap-mark.png'),
+  // Gelcaps. No retail front retrieved. Not the rapid-release 400.
+  'timecap-b106-apap-500-gelcap': brandMark('timecap-mark.png'),
+  // 300 and 365 aspirin. Not the 120 or the 1000.
+  'timecap-b107-asa-81-300': brandMark('timecap-mark.png'),
+  'timecap-b107-asa-81-365': brandMark('timecap-mark.png'),
+  // Easy-swallow 100. Brand site lists code 342R, not a count carton.
+  'timecap-b108-apap-342-100': brandMark('timecap-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6561,6 +6588,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b102-menthol-roll-on': catalogShot(
     'healtha2z-b102-menthol-roll-on.jpg',
   ),
+  // Daytime photo run — Timely retail fronts. Per-id so counts do not share.
+  // 8-hour arthritis caplets, 100 count. UPC 349483699012.
+  'timecap-b106-apap-650-er': catalogShot('timecap-b106-apap-650-er.jpg'),
+  // Same formula, 225 caplets. Not the 100.
+  'timecap-b106-apap-650-er-225': catalogShot(
+    'timecap-b106-apap-650-er-225.jpg',
+  ),
+  // Brown film-coated tablets, 200 count. UPC 349483114171. Not a caplet.
+  'timecap-b106-ibu-200-brown-tab-200': catalogShot(
+    'timecap-b106-ibu-200-brown-tab-200.jpg',
+  ),
+  // Low-dose aspirin 81 mg enteric-coated, 120 tablets. UPC 349483181128.
+  'timecap-b107-asa-81-120': catalogShot('timecap-b107-asa-81-120.jpg'),
+  // Same aspirin, 1000 tablets. Not the 120.
+  'timecap-b107-asa-81-1000': catalogShot('timecap-b107-asa-81-1000.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6727,6 +6769,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Tension 3-pack and 6-pack are not the 200-count or 16-count bottle.
   'healtha2z-b96-tension-48',
   'healtha2z-b96-tension-96',
+  // 8-hour arthritis counts. Do not inherit the 100-count bottle.
+  'timecap-b106-apap-650-er-24',
+  'timecap-b106-apap-650-er-50',
+  'timecap-b106-apap-650-er-225',
+  'timecap-b106-apap-650-er-400',
+  'timecap-b106-apap-650-er-muscle-50',
+  // Low-dose aspirin counts. Do not inherit the 120-count bottle.
+  'timecap-b107-asa-81-300',
+  'timecap-b107-asa-81-365',
+  'timecap-b107-asa-81-1000',
 ]);
 
 export function previewOverlayImage(
@@ -13055,6 +13107,133 @@ assertBrandMark(
   'TIME-Cap Labs',
   'timecap-mark.png',
 );
+assertExactCarton(
+  'timecap-b106-apap-650-er',
+  'TIME-Cap Labs',
+  'timecap-b106-apap-650-er.jpg',
+);
+assertExactCarton(
+  'timecap-b106-apap-650-er-225',
+  'TIME-Cap Labs',
+  'timecap-b106-apap-650-er-225.jpg',
+);
+assertExactCarton(
+  'timecap-b106-ibu-200-brown-tab-200',
+  'TIME-Cap Labs',
+  'timecap-b106-ibu-200-brown-tab-200.jpg',
+);
+assertExactCarton(
+  'timecap-b107-asa-81-120',
+  'TIME-Cap Labs',
+  'timecap-b107-asa-81-120.jpg',
+);
+assertExactCarton(
+  'timecap-b107-asa-81-1000',
+  'TIME-Cap Labs',
+  'timecap-b107-asa-81-1000.jpg',
+);
+assertBrandMark(
+  'timecap-b106-apap-650-er-24',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-apap-650-er-50',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-apap-650-er-400',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-apap-650-er-muscle-50',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-tab-50',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-tab-500',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-tab-1000',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-cap-50',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-cap-100',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-ibu-200-brown-cap-500',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark(
+  'timecap-b106-apap-500-gelcap',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+assertBrandMark('timecap-b107-asa-81-300', 'TIME-Cap Labs', 'timecap-mark.png');
+assertBrandMark('timecap-b107-asa-81-365', 'TIME-Cap Labs', 'timecap-mark.png');
+assertBrandMark(
+  'timecap-b108-apap-342-100',
+  'TIME-Cap Labs',
+  'timecap-mark.png',
+);
+// Real rows share a formulaId with a count that has a carton.
+// The shared bottle must not replace these faces.
+for (const shared of [
+  'timecap-b106-apap-650-er-24',
+  'timecap-b106-apap-650-er-50',
+  'timecap-b106-apap-650-er-400',
+  'timecap-b106-apap-650-er-muscle-50',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'timecap-b106-apap-650-er',
+    brand: 'TIME-Cap Labs',
+  });
+  if (!image?.url.endsWith('/timecap-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the TIME-CAP mark, not the 100-count bottle`);
+  }
+}
+for (const shared of ['timecap-b107-asa-81-300', 'timecap-b107-asa-81-365'] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'timecap-b107-asa-81-120',
+    brand: 'TIME-Cap Labs',
+  });
+  if (!image?.url.endsWith('/timecap-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the TIME-CAP mark, not the 120-count bottle`);
+  }
+}
+const asa1000 = previewOverlayImage({
+  id: 'timecap-b107-asa-81-1000',
+  formulaId: 'timecap-b107-asa-81-120',
+  brand: 'TIME-Cap Labs',
+});
+if (!asa1000?.url.endsWith('/timecap-b107-asa-81-1000.jpg') || !asa1000.verifiedSku) {
+  throw new Error('1000-count aspirin must keep its own carton');
+}
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
