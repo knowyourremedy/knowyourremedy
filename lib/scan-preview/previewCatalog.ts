@@ -5377,9 +5377,101 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     'naturewise-b83-hydro-soluble-turmeric-1500.jpg',
   ),
   // Vitamin D3 + K2 with MCT Oil 5000 IU, UPC 810157851123, 30 softgels.
-  // Other MCT counts stay letters until attempted.
+  // Other MCT counts have their own overlays.
   'naturewise-b83-vitamin-d3-k2-mct-5000-30': catalogShot(
     'naturewise-b83-vitamin-d3-k2-mct-5000-30.jpg',
+  ),
+  // Vitamins night run 2026-09-30 12:30 AM PT batch 1.
+  // Exact US pack faces from naturewise.com. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Vitamin D3 + K2 with MCT Oil 5000 IU, UPC 810157851130, 90 softgels.
+  // Own overlay. Not the 30-count bottle.
+  'naturewise-b83-vitamin-d3-k2-mct-5000-90': catalogShot(
+    'naturewise-b83-vitamin-d3-k2-mct-5000-90.jpg',
+  ),
+  // Vitamin D3 + K2 with MCT Oil 10000 IU, UPC 810157851161, 30 softgels.
+  'naturewise-b83-vitamin-d3-k2-mct-10000-30': catalogShot(
+    'naturewise-b83-vitamin-d3-k2-mct-10000-30.jpg',
+  ),
+  // Vitamin D3 + K2 with MCT Oil 10000 IU, UPC 810157851178, 90 softgels.
+  // Own overlay. The 30-count 10000 IU bottle is a different face.
+  'naturewise-b83-vitamin-d3-k2-mct-10000-90': catalogShot(
+    'naturewise-b83-vitamin-d3-k2-mct-10000-90.jpg',
+  ),
+  // Creatine Monohydrate Pills, UPC 810157851376, 60 capsules.
+  'naturewise-b83-creatine-pills': catalogShot(
+    'naturewise-b83-creatine-pills.jpg',
+  ),
+  // Iron Bisglycinate Plus, UPC 810157851055, 30 tablets.
+  // Not the 90-capsule Iron Bisglycinate bottle.
+  'naturewise-b83-iron-bisglycinate-plus': catalogShot(
+    'naturewise-b83-iron-bisglycinate-plus.jpg',
+  ),
+  // Iron Bisglycinate Plus, UPC 810157851062, 90 tablets.
+  // Own overlay. The 30-count bottle is a different face.
+  'naturewise-b83-iron-bisglycinate-plus-90': catalogShot(
+    'naturewise-b83-iron-bisglycinate-plus-90.jpg',
+  ),
+  // Magnesium Glycinate 400 mg, UPC 810157852458, 90 capsules.
+  // Not the 625 mg bottles and not the softgel bottle.
+  'naturewise-b83-magnesium-glycinate-400-90': catalogShot(
+    'naturewise-b83-magnesium-glycinate-400-90.jpg',
+  ),
+  // Magnesium Glycinate 400 mg, UPC 810157852465, 180 capsules.
+  // Own overlay. The 90-count bottle is a different face.
+  'naturewise-b83-magnesium-glycinate-400-180': catalogShot(
+    'naturewise-b83-magnesium-glycinate-400-180.jpg',
+  ),
+  // Allicin Garlic +, UPC 810157850836, 60 tablets.
+  'naturewise-b83-allicin-garlic': catalogShot(
+    'naturewise-b83-allicin-garlic.jpg',
+  ),
+  // Super B Complex + Vitamin C, UPC 810157851154, 60 capsules.
+  'naturewise-b83-super-b-complex': catalogShot(
+    'naturewise-b83-super-b-complex.jpg',
+  ),
+  // Milk Thistle, UPC 810157850850, 60 capsules.
+  // Own overlay. Not the Berberine bottle. Front also names dandelion root.
+  'naturewise-b83-milk-thistle': catalogShot(
+    'naturewise-b83-milk-thistle.jpg',
+  ),
+  // Milk Thistle, UPC 810157851086, 180 capsules.
+  // Own overlay. The 60-count bottle is a different face.
+  'naturewise-b83-milk-thistle-180': catalogShot(
+    'naturewise-b83-milk-thistle-180.jpg',
+  ),
+  // Multi Collagen Complex, UPC 810157850904, 90 capsules.
+  // The variant image filename says 60 CT. The bottle face says 90 capsules.
+  'naturewise-b83-multi-collagen': catalogShot(
+    'naturewise-b83-multi-collagen.jpg',
+  ),
+  // Beet Root, UPC 810157850270, 120 capsules.
+  'naturewise-b83-beet-root': catalogShot('naturewise-b83-beet-root.jpg'),
+  // Cranberry Pills, UPC 850053810954, 60 capsules.
+  'naturewise-b83-cranberry-pills': catalogShot(
+    'naturewise-b83-cranberry-pills.jpg',
+  ),
+  // Green Tea Extract, UPC 850053810886, 60 capsules.
+  // Own overlay. Not the Algae Calcium bottle.
+  'naturewise-b83-green-tea-60': catalogShot(
+    'naturewise-b83-green-tea-60.jpg',
+  ),
+  // Green Tea Extract, UPC 850053810893, 90 capsules.
+  'naturewise-b83-green-tea-90': catalogShot(
+    'naturewise-b83-green-tea-90.jpg',
+  ),
+  // Green Tea Extract, UPC 850053810909, 120 capsules.
+  'naturewise-b83-green-tea-120': catalogShot(
+    'naturewise-b83-green-tea-120.jpg',
+  ),
+  // Raspberry Ketones Plus+, UPC 858081006172, 120 capsules.
+  'naturewise-b83-raspberry-ketones': catalogShot(
+    'naturewise-b83-raspberry-ketones.jpg',
+  ),
+  // Liver Balance Complete, UPC 855724007404, 60 capsules.
+  // The 120-count face stays a letter until attempted.
+  'naturewise-b83-liver-balance': catalogShot(
+    'naturewise-b83-liver-balance.jpg',
   ),
 };
 
@@ -5496,6 +5588,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b83-vitamin-d3-k2-mct-5000-90',
   'naturewise-b83-vitamin-d3-k2-mct-10000-30',
   'naturewise-b83-vitamin-d3-k2-mct-10000-90',
+  // Iron Bisglycinate Plus 90-count is not the 30-count bottle.
+  'naturewise-b83-iron-bisglycinate-plus-90',
+  // Magnesium Glycinate 400 mg / 180-count is not the 90-count bottle.
+  'naturewise-b83-magnesium-glycinate-400-180',
+  // Liver Balance 120-count is not the 60-count bottle.
+  'naturewise-b83-liver-balance-120',
 ]);
 
 export function previewOverlayImage(
