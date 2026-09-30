@@ -1124,6 +1124,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Do not glue one pack. Official wordmark from naturewise.com
   // header logo (naturewise-logo-main.svg). Per-id only.
   'naturewise-b84-liquid-collagen-berry': brandMark('naturewise-mark.png'),
+  // Vitamins night run 2026-09-30 3:00 AM PT batch 1.
+  // Tried the SKU. solaray.com DIM Complex pack files are a flat
+  // label (Final_8) and a supplement-facts panel. No 3D carton.
+  // Official header wordmark from solaray.com. Per-id only.
+  'solaray-b117-076280717556': brandMark('solaray-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -5746,6 +5751,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280011845': catalogShot(
     'solaray-b117-076280011845.jpg',
   ),
+  // Vitamins night run 2026-09-30 3:00 AM PT batch 1.
+  // Exact US pack faces from solaray.com. Per-id only. verifiedSku.
+  // One variant each. The SKU on that variant matches the row.
+  // Total Cleanse Lymph, UPC 076280083330, 60 ct veg caps.
+  'solaray-b117-076280083330': catalogShot(
+    'solaray-b117-076280083330.jpg',
+  ),
+  // Super Digestaway + Probiotics, UPC 076280274752, 60 capsules.
+  'solaray-b117-076280274752': catalogShot(
+    'solaray-b117-076280274752.jpg',
+  ),
+  // Alpha Lipoic Acid 250 mg, UPC 076280083194, 60 capsules.
+  'solaray-b117-076280083194': catalogShot(
+    'solaray-b117-076280083194.jpg',
+  ),
+  // Tongkat Ali 400 mg, UPC 076280544336, 60 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280544336': catalogShot(
+    'solaray-b117-076280544336.jpg',
+  ),
+  // SharpMind Nootropics Stress, UPC 076280571141, 30 capsules.
+  // Bottle face. Not the flat label on the same page.
+  'solaray-b117-076280571141': catalogShot(
+    'solaray-b117-076280571141.jpg',
+  ),
+  // Acidophilus 3 Strain, UPC 076280048261, 60 capsules.
+  // Not the 30-count or 120-count bottle.
+  'solaray-b117-076280048261': catalogShot(
+    'solaray-b117-076280048261.jpg',
+  ),
+  // Black Cohosh Root 540 mg, UPC 076280001709, 100 capsules.
+  // Not the 180-count bottle.
+  'solaray-b117-076280001709': catalogShot(
+    'solaray-b117-076280001709.jpg',
+  ),
+  // Celery Seed 1010 mg, UPC 076280011548, 100 capsules.
+  'solaray-b117-076280011548': catalogShot(
+    'solaray-b117-076280011548.jpg',
+  ),
+  // Shiitake Mushroom 600 mg, UPC 076280015805, 100 capsules.
+  'solaray-b117-076280015805': catalogShot(
+    'solaray-b117-076280015805.jpg',
+  ),
+  // Cinnamon Bark 1000 mg, variant SKU 076280116632, 60 capsules.
+  // The draft barcode field is empty. The shopify variant SKU matches this id.
+  'solaray-b117-076280116632': catalogShot(
+    'solaray-b117-076280116632.jpg',
+  ),
+  // Rose Hips Fruit 550 mg, UPC 076280015102, 100 capsules.
+  'solaray-b117-076280015102': catalogShot(
+    'solaray-b117-076280015102.jpg',
+  ),
+  // Vitamin K-1 100 mcg, UPC 076280042122, 100 tablets.
+  'solaray-b117-076280042122': catalogShot(
+    'solaray-b117-076280042122.jpg',
+  ),
+  // Glucosamine Sulfate 500 mg, UPC 076280081459, 120 capsules.
+  'solaray-b117-076280081459': catalogShot(
+    'solaray-b117-076280081459.jpg',
+  ),
+  // Beta Glucan With Vitamin C 10 mg, UPC 076280008791, 60 capsules.
+  'solaray-b117-076280008791': catalogShot(
+    'solaray-b117-076280008791.jpg',
+  ),
+  // Turmeric Root Extract 600 mg, UPC 076280186628, 60 capsules.
+  // Not the 30-count bottle.
+  'solaray-b117-076280186628': catalogShot(
+    'solaray-b117-076280186628.jpg',
+  ),
+  // Vitamin C & Echinacea, UPC 076280043938, 60 capsules.
+  // Not the 120-count bottle.
+  'solaray-b117-076280043938': catalogShot(
+    'solaray-b117-076280043938.jpg',
+  ),
+  // Alfalfa Leaf 860 mg, UPC 076280001105, 100 capsules.
+  'solaray-b117-076280001105': catalogShot(
+    'solaray-b117-076280001105.jpg',
+  ),
+  // Calcium Bisglycinate w/D-3 1000 mg, UPC 076280457940, 120 capsules.
+  'solaray-b117-076280457940': catalogShot(
+    'solaray-b117-076280457940.jpg',
+  ),
+  // Multidophilus 12 Strain, 20 Billion CFU, UPC 076280493009, 100 capsules.
+  // Not the 50-count bottle.
+  'solaray-b117-076280493009': catalogShot(
+    'solaray-b117-076280493009.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5877,6 +5969,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b85-vegan-b-complex-120',
   // AREDS 2 240-count is not the 120-count bottle.
   'welmate-b88-areds2-240',
+  // Tongkat Ali 180-count is not the 60-count bottle.
+  'solaray-b117-X003KT6RIN',
+  // Black Cohosh 180-count is not the 100-count bottle.
+  'solaray-b117-076280017038',
+  // Multidophilus 50-count is not the 100-count bottle.
+  'solaray-b117-076280493016',
 ]);
 
 export function previewOverlayImage(
