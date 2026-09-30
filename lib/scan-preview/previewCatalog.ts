@@ -5563,6 +5563,99 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'naturewise-b85-sunpine-d3-k2': catalogShot(
     'naturewise-b85-sunpine-d3-k2.jpg',
   ),
+  // Vitamins night run 2026-09-30 1:45 AM PT batch 1.
+  // Exact US pack faces. Per-id only. verifiedSku.
+  // One variant each. The barcode on that variant matches the row.
+  // Vitamin C with Citrus Bioflavonoids, UPC 810157852984, 90 capsules.
+  'naturewise-b85-vitamin-c-bioflavonoids': catalogShot(
+    'naturewise-b85-vitamin-c-bioflavonoids.jpg',
+  ),
+  // Liquid Hair Growth Plus, Pistachio Caramel, UPC 810157851352, 15.22 oz.
+  // Not the 2-pack.
+  'naturewise-b85-liquid-hair-growth': catalogShot(
+    'naturewise-b85-liquid-hair-growth.jpg',
+  ),
+  // Triple Calm Magnesium, UPC 810157853271, 120 capsules.
+  'naturewise-b85-triple-calm-magnesium': catalogShot(
+    'naturewise-b85-triple-calm-magnesium.jpg',
+  ),
+  // OmegaWise for Women, UPC 810157852694, 120 softgels.
+  'naturewise-b85-omegawise-women': catalogShot(
+    'naturewise-b85-omegawise-women.jpg',
+  ),
+  // OmegaWise DHA Boost, UPC 810157852700, 60 softgels.
+  'naturewise-b85-omegawise-dha': catalogShot(
+    'naturewise-b85-omegawise-dha.jpg',
+  ),
+  // Sea Moss Multimineral, UPC 810157853493, 90 capsules.
+  // The naturewise.com variant front reads Complete Multimineral.
+  // That variant barcode is this row.
+  'naturewise-b85-sea-moss': catalogShot('naturewise-b85-sea-moss.jpg'),
+  // Ultra Omega-3 Fish Oil, UPC 810157850140, 2200 mg / 120 softgels.
+  // Own face. Not the 60-count or 180-count bottle.
+  // Front leads with 1300 mg. The variant title is 2200 mg / 120 Count.
+  'naturewise-b85-ultra-omega-3': catalogShot(
+    'naturewise-b85-ultra-omega-3.jpg',
+  ),
+  // Vegan Vitamin B Complex, UPC 810157852625, 60 softgels.
+  // Do not inherit this bottle onto the 120-count.
+  'naturewise-b85-vegan-b-complex': catalogShot(
+    'naturewise-b85-vegan-b-complex.jpg',
+  ),
+  // Vegan Vitamin B Complex, UPC 810157852632, 120 softgels.
+  // Own face. The 60-count bottle is a different face.
+  'naturewise-b85-vegan-b-complex-120': catalogShot(
+    'naturewise-b85-vegan-b-complex-120.jpg',
+  ),
+  // Vitamin E, UPC 850053810237, 60 softgels.
+  // Not the 120-count or 200-count bottle.
+  'naturewise-b85-vitamin-e-softgels': catalogShot(
+    'naturewise-b85-vitamin-e-softgels.jpg',
+  ),
+  // Vegan Vitamin K2 as MK-7, UPC 810157852861, 100 mcg / 120 softgels.
+  'naturewise-b86-vegan-k2-mk7': catalogShot(
+    'naturewise-b86-vegan-k2-mk7.jpg',
+  ),
+  // WELMATE AREDS 2, UPC 373581000593, 120 mini softgels.
+  // Do not inherit this bottle onto the 240-count.
+  'welmate-b88-areds2': catalogShot('welmate-b88-areds2.jpg'),
+  // WELMATE AREDS 2, UPC 373581000609, 240 mini softgels.
+  // Own face. The 120-count bottle is a different face.
+  'welmate-b88-areds2-240': catalogShot('welmate-b88-areds2-240.jpg'),
+  // HealthA2Z Bone Support algae calcium, 90 capsules.
+  // a2z-life.com pack render for this bottle. UPC 369168811829.
+  'healtha2z-b98-bone-90': catalogShot('healtha2z-b98-bone-90.jpg'),
+  // HealthA2Z Elderberry gummies, blueberry, 60 pieces.
+  // a2z-life.com front. UPC 369168760820.
+  'healtha2z-b102-elderberry-gummy-60': catalogShot(
+    'healtha2z-b102-elderberry-gummy-60.jpg',
+  ),
+  // HealthA2Z Apple Cider Vinegar gummies, 60 pieces, FPHK1044.
+  // a2z-life.com front for this page. UPC 369168758605.
+  // Front prints 1000 mg. The page is the 500 mg / 60-count bottle.
+  'healtha2z-b103-acv-gummy-60': catalogShot(
+    'healtha2z-b103-acv-gummy-60.jpg',
+  ),
+  // HealthA2Z Vitamin C gummies, orange, 250 mg, 60 pieces.
+  // a2z-life.com front for this page.
+  'healtha2z-b105-fphk1065-vitamin-c-gummies': catalogShot(
+    'healtha2z-b105-fphk1065-vitamin-c-gummies.jpg',
+  ),
+  // HealthA2Z Women's Multivitamin gummies, peach orange strawberry, 60 pieces.
+  // a2z-life.com front for this page.
+  'healtha2z-b105-fphk1130-womens-multi-gummies': catalogShot(
+    'healtha2z-b105-fphk1130-womens-multi-gummies.jpg',
+  ),
+  // Solaray Vitamin C Crystalline, Buffered, UPC 076280044973, 8 oz.
+  // solaray.com pack face. Not the unbuffered bottle.
+  'solaray-b116-vitamin-c-crystalline-buffered-8oz': catalogShot(
+    'solaray-b116-vitamin-c-crystalline-buffered-8oz.jpg',
+  ),
+  // Solaray Vitamin C Crystalline, UPC 076280044959, 8 oz.
+  // Own face. Not the buffered bottle.
+  'solaray-b116-vitamin-c-crystalline-8oz': catalogShot(
+    'solaray-b116-vitamin-c-crystalline-8oz.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -5690,6 +5783,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'naturewise-b85-calcium-citrate-extra-180',
   // Hair, Skin & Nails 270-count is not the 150-count bottle.
   'naturewise-b85-hair-skin-nails-270',
+  // Vegan B Complex 120-count is not the 60-count bottle.
+  'naturewise-b85-vegan-b-complex-120',
+  // AREDS 2 240-count is not the 120-count bottle.
+  'welmate-b88-areds2-240',
 ]);
 
 export function previewOverlayImage(
