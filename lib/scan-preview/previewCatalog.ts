@@ -1160,6 +1160,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aplushealth-b94-naproxen-180-284': brandMark('aplus-health-mark.png'),
   // Aspirin NDC 69168-312-06 is 120 tablets. The only DailyMed image is the 300-count bottle.
   'healtha2z-b96-aspirin-325-312-06': brandMark('healtha2z-mark.png'),
+  // Tension 3-pack and 6-pack share one a2z-life.com chooser. The only
+  // pack face is the 16-count bottle. Do not glue it. Official HealthA2Z
+  // mark already on disk. Per-id only.
+  'healtha2z-b96-tension-48': brandMark('healtha2z-mark.png'),
+  'healtha2z-b96-tension-96': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6445,6 +6450,67 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b96-aspirin-325': catalogShot(
     'healtha2z-b96-aspirin-325.jpg',
   ),
+  // Daytime photo run — HealthA2Z pack fronts from a2z-life.com.
+  // Per-id so a shared formula does not inherit the wrong count.
+  // Acetaminophen 325 mg, 24 packs of 30 (720). SKU FP1089.
+  'healtha2z-b96-apap-325': catalogShot('healtha2z-b96-apap-325.jpg'),
+  // Dual Action 80 caplets. SKU FPA142. Not the 150 or 300.
+  'healtha2z-b96-dual-action': catalogShot('healtha2z-b96-dual-action.jpg'),
+  // Dual Action 150 caplets. SKU FPA143.
+  'healtha2z-b96-dual-action-150': catalogShot(
+    'healtha2z-b96-dual-action-150.jpg',
+  ),
+  // Dual Action 300 caplets. SKU FPA171.
+  'healtha2z-b96-dual-action-300': catalogShot(
+    'healtha2z-b96-dual-action-300.jpg',
+  ),
+  // Tension Headache 200 caplets. SKU FPA005. Not the 16-count.
+  'healtha2z-b96-tension': catalogShot('healtha2z-b96-tension.jpg'),
+  // Tension Headache 16 caplets, one bottle. SKU FP1088.
+  // Not the 3-pack or 6-pack.
+  'healtha2z-b96-tension-16': catalogShot('healtha2z-b96-tension-16.jpg'),
+  // Extra Strength Acetaminophen 500 mg, 100 caplets. SKU FP0568.
+  'healtha2z-b96-apap-500': catalogShot('healtha2z-b96-apap-500.jpg'),
+  // Acetaminophen 650 mg ER, 250 caplets. SKU FPA149.
+  'healtha2z-b96-apap-650-er': catalogShot('healtha2z-b96-apap-650-er.jpg'),
+  // Acetaminophen 650 mg ER, 100 caplets. SKU FPA148. Not the 250.
+  'healtha2z-b96-apap-650-er-100': catalogShot(
+    'healtha2z-b96-apap-650-er-100.jpg',
+  ),
+  // Menstrual Complete 90 caplets. The page also sells 120. This face says 90.
+  'healtha2z-b96-menstrual': catalogShot('healtha2z-b96-menstrual.jpg'),
+  // Ibuprofen 200 mg, 250 tablets. SKU FPA116.
+  'healtha2z-b97-ibu-200-381': catalogShot('healtha2z-b97-ibu-200-381.jpg'),
+  // Ibuprofen 200 mg, 100 tablets. SKU FPA092. Not the 250 or 500.
+  'healtha2z-b97-ibu-200-381-100': catalogShot(
+    'healtha2z-b97-ibu-200-381-100.jpg',
+  ),
+  // Ibuprofen 200 mg, 500 tablets. SKU FPA081.
+  'healtha2z-b97-ibu-200-381-500': catalogShot(
+    'healtha2z-b97-ibu-200-381-500.jpg',
+  ),
+  // Lidocaine 4% patch, 30 patches. SKU FPA181 front. Not the drug-facts panel.
+  'healtha2z-b97-lidocaine-4-patch': catalogShot(
+    'healtha2z-b97-lidocaine-4-patch.jpg',
+  ),
+  // Aspirin 325 mg, 24 packs of 40 (960). SKU FP1165.
+  // Not the 300-count bottle.
+  'healtha2z-b98-aspirin-325-40x24': catalogShot(
+    'healtha2z-b98-aspirin-325-40x24.jpg',
+  ),
+  // Acetaminophen 650 mg ER, 300 caplets. SKU FPN013. Not the 100 or 250.
+  'healtha2z-b98-apap-650-300': catalogShot(
+    'healtha2z-b98-apap-650-300.jpg',
+  ),
+  // Naproxen 220 mg, 24 packs of 10 (240). SKU FP0940.
+  // Not the 300-count bottle.
+  'healtha2z-b98-naproxen-220-10x24': catalogShot(
+    'healtha2z-b98-naproxen-220-10x24.jpg',
+  ),
+  // Aspirin 81 mg dye-free, 200 tablets. SKU FPA154.
+  'healtha2z-b99-aspirin-81-dye-free': catalogShot(
+    'healtha2z-b99-aspirin-81-dye-free.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6608,6 +6674,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b96-aspirin-325-312-06',
   // Aspirin 24 packs of 40 (960) is not the 300-count bottle.
   'healtha2z-b98-aspirin-325-40x24',
+  // Tension 3-pack and 6-pack are not the 200-count or 16-count bottle.
+  'healtha2z-b96-tension-48',
+  'healtha2z-b96-tension-96',
 ]);
 
 export function previewOverlayImage(
@@ -12756,6 +12825,94 @@ assertLetterOnly(
   'Nutricost',
 );
 assertLetterOnly('nutricost-sage-extract-120-capsules', 'Nutricost');
+assertExactCarton(
+  'healtha2z-b96-apap-325',
+  'HealthA2Z',
+  'healtha2z-b96-apap-325.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-dual-action',
+  'HealthA2Z',
+  'healtha2z-b96-dual-action.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-dual-action-150',
+  'HealthA2Z',
+  'healtha2z-b96-dual-action-150.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-dual-action-300',
+  'HealthA2Z',
+  'healtha2z-b96-dual-action-300.jpg',
+);
+assertExactCarton('healtha2z-b96-tension', 'HealthA2Z', 'healtha2z-b96-tension.jpg');
+assertExactCarton(
+  'healtha2z-b96-tension-16',
+  'HealthA2Z',
+  'healtha2z-b96-tension-16.jpg',
+);
+assertBrandMark('healtha2z-b96-tension-48', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b96-tension-96', 'HealthA2Z', 'healtha2z-mark.png');
+assertExactCarton(
+  'healtha2z-b96-apap-500',
+  'HealthA2Z',
+  'healtha2z-b96-apap-500.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-apap-650-er',
+  'HealthA2Z',
+  'healtha2z-b96-apap-650-er.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-apap-650-er-100',
+  'HealthA2Z',
+  'healtha2z-b96-apap-650-er-100.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-menstrual',
+  'HealthA2Z',
+  'healtha2z-b96-menstrual.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-ibu-200-381',
+  'HealthA2Z',
+  'healtha2z-b97-ibu-200-381.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-ibu-200-381-100',
+  'HealthA2Z',
+  'healtha2z-b97-ibu-200-381-100.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-ibu-200-381-500',
+  'HealthA2Z',
+  'healtha2z-b97-ibu-200-381-500.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-lidocaine-4-patch',
+  'HealthA2Z',
+  'healtha2z-b97-lidocaine-4-patch.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-aspirin-325-40x24',
+  'HealthA2Z',
+  'healtha2z-b98-aspirin-325-40x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-apap-650-300',
+  'HealthA2Z',
+  'healtha2z-b98-apap-650-300.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-naproxen-220-10x24',
+  'HealthA2Z',
+  'healtha2z-b98-naproxen-220-10x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-aspirin-81-dye-free',
+  'HealthA2Z',
+  'healtha2z-b99-aspirin-81-dye-free.jpg',
+);
 
 const exactWins = previewOverlayImage({
   id: PREVIEW_AVOID_ID,
