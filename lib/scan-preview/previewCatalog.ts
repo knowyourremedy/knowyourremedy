@@ -1625,6 +1625,41 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Claritin-D 24 hour, 5 count. The only carton file is a flat
   // 10-count dieline. Do not glue the 10.
   'claritin-b136-d24-ec-5': brandMark('claritin-mark.png'),
+  // Allergies night run 2026-10-01 6:45 AM PT batch 2.
+  // Tried each SKU. No matching 3D pack. Official brand mark.
+  // Per-id only. Later counts stay letters.
+  // Claritin-D 24 hour ethylcellulose, 10 count. DailyMed file
+  // is a flat 10-count dieline, not a 3D carton.
+  'claritin-b136-d24-ec-10': brandMark('claritin-mark.png'),
+  // Same ethylcellulose, 15 count (three 5-count blisters).
+  // Do not glue the 10-count dieline.
+  'claritin-b136-d24-ec-15': brandMark('claritin-mark.png'),
+  // Claritin-D 24 hour talc, 10 count. DailyMed file is a flat dieline.
+  'claritin-b136-d24-talc-10': brandMark('claritin-mark.png'),
+  // Same talc formula, 15 count. Do not glue the 10-count dieline.
+  'claritin-b136-d24-talc-15': brandMark('claritin-mark.png'),
+  // Claritin-D 12 hour, 20 count. The only carton file is a 10-count
+  // dieline. Do not glue it.
+  'claritin-b136-d12-20': brandMark('claritin-mark.png'),
+  // Same 12 hour, 30 count. Do not glue the 10.
+  'claritin-b136-d12-30': brandMark('claritin-mark.png'),
+  // Allegra 24 hour tablets, 45 count. Target sizes are 5, 15, 30,
+  // 70, 90, and 100. No 45-count box.
+  'allegra-b137-tab-45': brandMark('allegra-mark.png'),
+  // Same tablets, 40 count. No 40-count box.
+  'allegra-b137-tab-40': brandMark('allegra-mark.png'),
+  // Same tablets, 60 count. Not the gelcap 60. No 60-tablet box.
+  'allegra-b137-tab-60': brandMark('allegra-mark.png'),
+  // Allegra 12 hour, 36 count. No 36-count box. Do not glue the 12 or 24.
+  'allegra-b137-tab12-36': brandMark('allegra-mark.png'),
+  // Allegra Hives, 5 count. The DailyMed file is a flat 30-count dieline.
+  // Do not glue the 30.
+  'allegra-b137-hives-tab-5': brandMark('allegra-mark.png'),
+  // Allegra Hives, 15 count. Same flat 30-count dieline. Do not glue it.
+  'allegra-b137-hives-tab-15': brandMark('allegra-mark.png'),
+  // Allegra gelcaps, 8 count. DailyMed file is a flat dieline that
+  // prints 8 gelcaps. Not a 3D carton. Do not glue the 24.
+  'allegra-b137-gel-8': brandMark('allegra-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7757,6 +7792,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Children's grape syrup, 4 fl oz. UPC 041100811028. Not the 8 oz.
   'claritin-b136-kids-syrup-4oz': catalogShot('claritin-b136-kids-syrup-4oz.jpg'),
+  // Allergies night run 2026-10-01 6:45 AM PT batch 2.
+  // Allegra 24 hour tablets, 5 count. UPC 041167412008. Not the 15.
+  'allegra-b137-tab-5': catalogShot('allegra-b137-tab-5.jpg'),
+  // Same 24 hour tablets, 90 count. UPC 041167412404. Not the 100.
+  'allegra-b137-tab-90': catalogShot('allegra-b137-tab-90.jpg'),
+  // Same 24 hour tablets, 100 count. UPC 041167412480. Not the 90.
+  'allegra-b137-tab-100': catalogShot('allegra-b137-tab-100.jpg'),
+  // Allegra 12 hour tablets, 12 count. UPC 041167413128. Not the 24.
+  'allegra-b137-tab12-12': catalogShot('allegra-b137-tab12-12.jpg'),
+  // Same 12 hour tablets, 24 count. UPC 041167413142. Not the 12.
+  'allegra-b137-tab12-24': catalogShot('allegra-b137-tab12-24.jpg'),
+  // Allegra Hives tablets, 30 count. UPC 041167412640. Not the 5 or 15.
+  'allegra-b137-hives-tab-30': catalogShot('allegra-b137-hives-tab-30.jpg'),
+  // Allegra gelcaps, 24 count. UPC 041167412213. Not the 8 or the 60.
+  'allegra-b137-gel-24': catalogShot('allegra-b137-gel-24.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8123,6 +8173,30 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'claritin-b136-chew-dye-free-grape-60',
   'claritin-b136-chew-max-grape-30',
   'claritin-b136-d24-ec-5',
+  // Allergies night run 2026-10-01 6:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'claritin-b136-d24-ec-10',
+  'claritin-b136-d24-ec-15',
+  'claritin-b136-d24-talc-10',
+  'claritin-b136-d24-talc-15',
+  'claritin-b136-d12-20',
+  'claritin-b136-d12-30',
+  'allegra-b137-tab-5',
+  'allegra-b137-tab-45',
+  'allegra-b137-tab-40',
+  'allegra-b137-tab-60',
+  'allegra-b137-tab-90',
+  'allegra-b137-tab-100',
+  'allegra-b137-tab12-12',
+  'allegra-b137-tab12-24',
+  'allegra-b137-tab12-36',
+  'allegra-b137-hives-tab-5',
+  'allegra-b137-hives-tab-15',
+  'allegra-b137-hives-tab-30',
+  'allegra-b137-gel-8',
+  'allegra-b137-gel-24',
+  // 60 gelcaps share the gelcap formula. Do not inherit the 24.
+  'allegra-b137-gel-60',
 ]);
 
 export function previewOverlayImage(
@@ -15683,6 +15757,13 @@ assertExactCarton(
   'Claritin',
   'claritin-b136-kids-syrup-4oz.jpg',
 );
+assertExactCarton('allegra-b137-tab-5', 'Allegra', 'allegra-b137-tab-5.jpg');
+assertExactCarton('allegra-b137-tab-90', 'Allegra', 'allegra-b137-tab-90.jpg');
+assertExactCarton('allegra-b137-tab-100', 'Allegra', 'allegra-b137-tab-100.jpg');
+assertExactCarton('allegra-b137-tab12-12', 'Allegra', 'allegra-b137-tab12-12.jpg');
+assertExactCarton('allegra-b137-tab12-24', 'Allegra', 'allegra-b137-tab12-24.jpg');
+assertExactCarton('allegra-b137-hives-tab-30', 'Allegra', 'allegra-b137-hives-tab-30.jpg');
+assertExactCarton('allegra-b137-gel-24', 'Allegra', 'allegra-b137-gel-24.jpg');
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
@@ -15783,6 +15864,19 @@ for (const [id, formulaId, brand, file] of [
   ['claritin-b136-chew-bubblegum-10', 'claritin-b136-chew-bubblegum', 'Claritin', 'claritin-mark.png'],
   ['claritin-b136-chew-cool-mint-8', 'claritin-b136-chew-cool-mint', 'Claritin', 'claritin-mark.png'],
   ['claritin-b136-d24-ec-5', 'claritin-b136-d24-ethylcellulose', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d24-ec-10', 'claritin-b136-d24-ethylcellulose', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d24-ec-15', 'claritin-b136-d24-ethylcellulose', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d24-talc-10', 'claritin-b136-d24-talc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d24-talc-15', 'claritin-b136-d24-talc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d12-20', 'claritin-d-12hr-tio2', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d12-30', 'claritin-d-12hr-tio2', 'Claritin', 'claritin-mark.png'],
+  ['allegra-b137-tab-45', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-tab-40', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-tab-60', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-tab12-36', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-hives-tab-5', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-hives-tab-15', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-gel-8', 'allegra-b137-gelcaps', 'Allegra', 'allegra-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
