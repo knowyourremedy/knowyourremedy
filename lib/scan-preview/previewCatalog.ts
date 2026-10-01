@@ -1473,6 +1473,20 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b111-tussin-dm-712a': brandMark('goodsense-mark.png'),
   'goodsense-b111-tussin-dm-712a-237-ml': brandMark('goodsense-mark.png'),
   'goodsense-b111-day-time-cold-and-flu-168b': brandMark('goodsense-mark.png'),
+  // Night photo run — last 7 Cold & Flu letter leftovers. Tried each
+  // SKU. DailyMed faces are label flats, a bag dieline, or one shared
+  // wrap. Do not glue the 148 mL cough carton art onto 89 mL, or the
+  // DM Max wrap onto both 118 mL and 237 mL. NDC 50090-2336 is a tiny
+  // repack file, not a retail 118 mL carton. goodsense.com redirects
+  // to the Perrigo trade portal. No matching 3D pack. Official
+  // GoodSense mark already on disk. Per-id only.
+  'goodsense-b111-tussin-dm-17a6': brandMark('goodsense-mark.png'),
+  'goodsense-b111-menthol-cough-drops-6243': brandMark('goodsense-mark.png'),
+  'goodsense-b111-tussin-cf-multi-symptom-cold-raspber-5377': brandMark('goodsense-mark.png'),
+  'goodsense-b113-cough-dm-d543': brandMark('goodsense-mark.png'),
+  'goodsense-b113-cough-dm-d543-148-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b113-tussin-dm-max-26d0': brandMark('goodsense-mark.png'),
+  'goodsense-b113-tussin-dm-max-26d0-237-ml': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -14634,6 +14648,13 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b111-tussin-dm-712a', 'goodsense-b111-tussin-dm-712a', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b111-tussin-dm-712a-237-ml', 'goodsense-b111-tussin-dm-712a', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b111-day-time-cold-and-flu-168b', 'goodsense-b111-day-time-cold-and-flu-168b', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-tussin-dm-17a6', 'goodsense-b111-tussin-dm-17a6', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-menthol-cough-drops-6243', 'goodsense-b111-menthol-cough-drops-6243', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-tussin-cf-multi-symptom-cold-raspber-5377', 'goodsense-b111-tussin-cf-multi-symptom-cold-raspber-5377', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b113-cough-dm-d543', 'goodsense-b113-cough-dm-d543', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b113-cough-dm-d543-148-ml', 'goodsense-b113-cough-dm-d543', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b113-tussin-dm-max-26d0', 'goodsense-b113-tussin-dm-max-26d0', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b113-tussin-dm-max-26d0-237-ml', 'goodsense-b113-tussin-dm-max-26d0', 'GoodSense', 'goodsense-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
