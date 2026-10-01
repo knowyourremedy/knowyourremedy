@@ -1503,6 +1503,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // 65 softgels, yellow #6. Not the 25-count carton and not the
   // dye-free 65-count bottle.
   'aplushealth-b94-cetirizine-65': brandMark('aplus-health-mark.png'),
+  // Allergies night run 2026-10-01 3:00 AM PT batch 2.
+  // Tried each SKU. No matching 3D pack. Official mark already
+  // on disk. Per-id only.
+  // NDC 69168-396-03 is 250 tablets. The brand page that resolved
+  // is a 300-count bottle. DailyMed file is a flat label.
+  // Do not glue the 300 or the 500.
+  'healtha2z-b96-cetirizine-10-396-03': brandMark('healtha2z-mark.png'),
+  // 144-spray 2-pack. The brand hero on that URL is a 120-spray
+  // twin pack. DailyMed file for the 144 2-pack is a flat label.
+  // Do not glue either.
+  'healtha2z-b96-fluticasone-50-144-2pk': brandMark('healtha2z-mark.png'),
+  // 3 packs of the 5-tablet card (15). The shared page hero is
+  // the single 5-count card. Do not glue it.
+  'healtha2z-b96-loratadine-10-15': brandMark('healtha2z-mark.png'),
+  // 6 packs of the 5-tablet card (30). Same single-card hero.
+  'healtha2z-b96-loratadine-10-30-blister': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7303,6 +7319,81 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'aplushealth-b94-cetirizine-yellow6': catalogShot(
     'aplushealth-b94-cetirizine-yellow6.jpg',
   ),
+  // Allergies night run 2026-10-01 3:00 AM PT batch 2.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // A+Health faces are the DailyMed 3D pack for that count.
+  // HealthA2Z faces are the a2z-life.com hero for that count,
+  // except the 144-spray bottle, which is the DailyMed 3D pack
+  // (the brand hero on that page is the 72-spray bottle).
+  // Diphenhydramine HCl 50 mg, 300 softgels. Not the sleep-aid 120.
+  'aplushealth-b94-dph-50-peg600': catalogShot(
+    'aplushealth-b94-dph-50-peg600.jpg',
+  ),
+  // Diphenhydramine HCl 25 mg dye-free, 48 softgels (4 cards of 12).
+  'aplushealth-b94-dph-25': catalogShot('aplushealth-b94-dph-25.jpg'),
+  // Cetirizine HCl 10 mg, 500 tablets. UPC 369168396050. Not the 60,
+  // the 300, or the 1080 shipper.
+  'healtha2z-b96-cetirizine-10': catalogShot(
+    'healtha2z-b96-cetirizine-10.jpg',
+  ),
+  // Same cetirizine, 60 tablets. UPC 369168396609. Not the 500.
+  'healtha2z-b96-cetirizine-10-60': catalogShot(
+    'healtha2z-b96-cetirizine-10-60.jpg',
+  ),
+  // 24 packs of 45 tablets (1080). Not the single 45-count bottle
+  // and not the 500.
+  'healtha2z-b96-cetirizine-10-1080': catalogShot(
+    'healtha2z-b96-cetirizine-10-1080.jpg',
+  ),
+  // Fluticasone 50 mcg, 72 sprays. UPC 369168448018. Not the 144.
+  'healtha2z-b96-fluticasone-50': catalogShot(
+    'healtha2z-b96-fluticasone-50.jpg',
+  ),
+  // Children's fluticasone, 72 sprays. UPC 369168014015.
+  // Not the adult 72.
+  'healtha2z-b96-fluticasone-50-kids-72': catalogShot(
+    'healtha2z-b96-fluticasone-50-kids-72.jpg',
+  ),
+  // 144 metered sprays. DailyMed 3D bottle on setid
+  // 4250d331-17b0-46be-a779-fb4f09bade16. Not the 72 and not the 2-pack.
+  'healtha2z-b96-fluticasone-50-144': catalogShot(
+    'healtha2z-b96-fluticasone-50-144.jpg',
+  ),
+  // NDC 69168-380-01 / FPA006. Brand page is the 120-spray bottle.
+  // UPC 369168380011. Not the 2-pack.
+  'healtha2z-b96-fluticasone-50-380-01': catalogShot(
+    'healtha2z-b96-fluticasone-50-380-01.jpg',
+  ),
+  // 2 pack of 120 sprays. UPC 369168380028. Not a 144-spray twin pack.
+  'healtha2z-b96-fluticasone-50-120-2pk': catalogShot(
+    'healtha2z-b96-fluticasone-50-120-2pk.jpg',
+  ),
+  // Diphenhydramine HCl 25 mg, 24 packs of 24 caplets (576).
+  // Not the 600-count bottle.
+  'healtha2z-b96-dph-25-caplet': catalogShot(
+    'healtha2z-b96-dph-25-caplet.jpg',
+  ),
+  // Same caplet, 600 count. UPC 369168048201. Not the 576 shipper.
+  'healtha2z-b96-dph-25-caplet-600': catalogShot(
+    'healtha2z-b96-dph-25-caplet-600.jpg',
+  ),
+  // Loratadine 10 mg, 30 tablets. UPC 369168309302. Not a blister card.
+  'healtha2z-b96-loratadine-10': catalogShot(
+    'healtha2z-b96-loratadine-10.jpg',
+  ),
+  // 24 packs of 10 tablets (240). Not the single 10-count card.
+  'healtha2z-b96-loratadine-10-240': catalogShot(
+    'healtha2z-b96-loratadine-10-240.jpg',
+  ),
+  // 5-tablet card, 1 pack. Not the 3-pack or the 6-pack.
+  'healtha2z-b96-loratadine-10-5': catalogShot(
+    'healtha2z-b96-loratadine-10-5.jpg',
+  ),
+  // 10-tablet card, 1 pack. UPC 369168309098.
+  // Not the 3-pack or the 6-pack.
+  'healtha2z-b96-loratadine-10-10': catalogShot(
+    'healtha2z-b96-loratadine-10-10.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7574,6 +7665,32 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 40 and 65 yellow #6 softgels are not the 25-count carton.
   'aplushealth-b94-cetirizine-40',
   'aplushealth-b94-cetirizine-65',
+  // Allergies night run batch 2. Shared-formula counts.
+  // Do not inherit a sibling face. Unattempted rows stay letters.
+  // Sleep 120 shares the 300-softgel formula. Sleep was not attempted.
+  'aplushealth-b94-sleep-dyefree-120',
+  'healtha2z-b96-cetirizine-10-60',
+  'healtha2z-b96-cetirizine-10-396-03',
+  'healtha2z-b96-cetirizine-10-1080',
+  'healtha2z-b98-cetirizine-10-1',
+  'healtha2z-b98-cetirizine-10-3',
+  'healtha2z-b98-cetirizine-10-6',
+  'healtha2z-b98-cetirizine-10-30',
+  'healtha2z-b96-fluticasone-50-kids-72',
+  'healtha2z-b96-fluticasone-50-144',
+  'healtha2z-b96-fluticasone-50-144-2pk',
+  'healtha2z-b96-fluticasone-50-380-01',
+  'healtha2z-b96-fluticasone-50-120-2pk',
+  'healtha2z-b96-dph-25-caplet-600',
+  'healtha2z-b96-loratadine-10-240',
+  'healtha2z-b96-loratadine-10-5',
+  'healtha2z-b96-loratadine-10-15',
+  'healtha2z-b96-loratadine-10-30-blister',
+  'healtha2z-b96-loratadine-10-10',
+  'healtha2z-b96-loratadine-10-30-tens',
+  'healtha2z-b96-loratadine-10-60',
+  'healtha2z-b98-loratadine-10-30x24',
+  'healtha2z-b98-loratadine-10-5x24',
 ]);
 
 export function previewOverlayImage(
@@ -14791,6 +14908,109 @@ for (const [id, formulaId] of [
   const image = previewOverlayImage({ id, formulaId, brand: 'A+Health' });
   if (!image?.url.endsWith('/aplus-health-mark.png') || image.verifiedSku) {
     throw new Error(`${id} must stay the A+Health mark, not a sibling carton`);
+  }
+}
+assertExactCarton(
+  'aplushealth-b94-dph-50-peg600',
+  'A+Health',
+  'aplushealth-b94-dph-50-peg600.jpg',
+);
+assertExactCarton('aplushealth-b94-dph-25', 'A+Health', 'aplushealth-b94-dph-25.jpg');
+assertExactCarton(
+  'healtha2z-b96-cetirizine-10',
+  'HealthA2Z',
+  'healtha2z-b96-cetirizine-10.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-cetirizine-10-60',
+  'HealthA2Z',
+  'healtha2z-b96-cetirizine-10-60.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-cetirizine-10-1080',
+  'HealthA2Z',
+  'healtha2z-b96-cetirizine-10-1080.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fluticasone-50',
+  'HealthA2Z',
+  'healtha2z-b96-fluticasone-50.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fluticasone-50-kids-72',
+  'HealthA2Z',
+  'healtha2z-b96-fluticasone-50-kids-72.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fluticasone-50-144',
+  'HealthA2Z',
+  'healtha2z-b96-fluticasone-50-144.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fluticasone-50-380-01',
+  'HealthA2Z',
+  'healtha2z-b96-fluticasone-50-380-01.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fluticasone-50-120-2pk',
+  'HealthA2Z',
+  'healtha2z-b96-fluticasone-50-120-2pk.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-dph-25-caplet',
+  'HealthA2Z',
+  'healtha2z-b96-dph-25-caplet.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-dph-25-caplet-600',
+  'HealthA2Z',
+  'healtha2z-b96-dph-25-caplet-600.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-loratadine-10',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-loratadine-10-240',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10-240.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-loratadine-10-5',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10-5.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-loratadine-10-10',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10-10.jpg',
+);
+for (const [id, formulaId] of [
+  ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
+  ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
+  ['healtha2z-b96-loratadine-10-15', 'healtha2z-b96-loratadine-10'],
+  ['healtha2z-b96-loratadine-10-30-blister', 'healtha2z-b96-loratadine-10'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'HealthA2Z' });
+  if (!image?.url.endsWith('/healtha2z-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the HealthA2Z mark, not a sibling carton`);
+  }
+}
+for (const [id, formulaId, brand] of [
+  ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health'],
+  ['healtha2z-b98-cetirizine-10-1', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
+  ['healtha2z-b98-cetirizine-10-3', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
+  ['healtha2z-b98-cetirizine-10-6', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
+  ['healtha2z-b98-cetirizine-10-30', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
+  ['healtha2z-b96-loratadine-10-30-tens', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
+  ['healtha2z-b96-loratadine-10-60', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
+  ['healtha2z-b98-loratadine-10-30x24', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
+  ['healtha2z-b98-loratadine-10-5x24', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand });
+  if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+    throw new Error(`${id} must stay a letter until attempted`);
   }
 }
 for (const [id, formulaId, brand, file] of [
