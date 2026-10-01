@@ -1333,6 +1333,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b111-childrens-pain-and-fever-23fa': brandMark('goodsense-mark.png'),
   // Bubble gum. 4 oz and 8 oz have their own faces. No 148 mL package.
   'goodsense-b111-childrens-pain-and-fever-952c-148-ml': brandMark('goodsense-mark.png'),
+  // Daytime photo run — tried the count. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark. Per-id only.
+  // Coated mint 4 mg. The 20 and 160 have their own faces.
+  // NDC 0113-0532-78 (100 count) marketing ended 2020-03-01.
+  'goodsense-b111-nicotine-ff03-100': brandMark('goodsense-mark.png'),
+  // Bubble gum ibuprofen. The 4 oz box is a different face.
+  'goodsense-b111-ibuprofen-21a3-150-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-ibuprofen-21a3-240-ml': brandMark('goodsense-mark.png'),
+  // Grape ibuprofen. The 4 oz box is a different face. No 150 mL front.
+  'goodsense-b111-ibuprofen-9de3-150-ml': brandMark('goodsense-mark.png'),
+  // Dyed berry ibuprofen. The 4 oz box is a different face.
+  'goodsense-b111-ibuprofen-749e-150-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-ibuprofen-749e-240-ml': brandMark('goodsense-mark.png'),
+  // Dye-free berry. The retrieved berry face is the dyed 4 oz. Do not glue it.
+  'goodsense-b111-ibuprofen-404a': brandMark('goodsense-mark.png'),
+  'goodsense-b111-ibuprofen-404a-240-ml': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6859,6 +6875,61 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b111-nicotine-7daf-50': catalogShot(
     'goodsense-b111-nicotine-7daf-50.jpg',
   ),
+  // Daytime photo run. Retail pack fronts. Per-id.
+  // Original uncoated nicotine gum 2 mg, 110 pieces.
+  // Not the 20 or the 50.
+  'goodsense-b111-nicotine-7daf-110': catalogShot(
+    'goodsense-b111-nicotine-7daf-110.jpg',
+  ),
+  // Same original gum, 220 pieces. Not the 110 or the 310.
+  'goodsense-b111-nicotine-7daf-220': catalogShot(
+    'goodsense-b111-nicotine-7daf-220.jpg',
+  ),
+  // Same original gum, 310 pieces. Not the 220.
+  'goodsense-b111-nicotine-7daf-310': catalogShot(
+    'goodsense-b111-nicotine-7daf-310.jpg',
+  ),
+  // Coated mint nicotine gum 4 mg, 20 pieces.
+  // "Coated for Extreme Flavor." Not the 160.
+  'goodsense-b111-nicotine-ff03': catalogShot(
+    'goodsense-b111-nicotine-ff03.jpg',
+  ),
+  // Same coated mint gum, 160 pieces. Not the 20.
+  // Not the 2017 "Bold Flavor" mint (NDC 0113-0053).
+  'goodsense-b111-nicotine-ff03-160': catalogShot(
+    'goodsense-b111-nicotine-ff03-160.jpg',
+  ),
+  // Coated soft cinnamon nicotine gum 4 mg, 160 pieces.
+  'goodsense-b111-nicotine-3a3a': catalogShot(
+    'goodsense-b111-nicotine-3a3a.jpg',
+  ),
+  // Coated fruit nicotine gum 2 mg, 100 pieces. Not the 160.
+  'goodsense-b111-nicotine-a6cd': catalogShot(
+    'goodsense-b111-nicotine-a6cd.jpg',
+  ),
+  // Same fruit gum, 160 pieces. Not the 100.
+  'goodsense-b111-nicotine-a6cd-160': catalogShot(
+    'goodsense-b111-nicotine-a6cd-160.jpg',
+  ),
+  // Children's ibuprofen oral suspension, bubble gum, 4 fl oz (120 mL).
+  // Not the 150 mL or the 240 mL.
+  'goodsense-b111-ibuprofen-21a3': catalogShot(
+    'goodsense-b111-ibuprofen-21a3.jpg',
+  ),
+  // Cherry benzocaine sore throat lozenges, 18 count. UPC 846036006599.
+  'goodsense-b111-cherry-benzocaine-lozenges-3814': catalogShot(
+    'goodsense-b111-cherry-benzocaine-lozenges-3814.jpg',
+  ),
+  // Children's ibuprofen oral suspension, grape, 4 oz (120 mL).
+  // Not the 150 mL. Not the berry box.
+  'goodsense-b111-ibuprofen-9de3': catalogShot(
+    'goodsense-b111-ibuprofen-9de3.jpg',
+  ),
+  // Children's ibuprofen oral suspension, berry, 4 fl oz (120 mL).
+  // Dyed berry. Not dye-free. Not the 150 mL or the 240 mL.
+  'goodsense-b111-ibuprofen-749e': catalogShot(
+    'goodsense-b111-ibuprofen-749e.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7059,11 +7130,26 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b111-childrens-pain-and-fever-952c-148-ml',
   'goodsense-b111-childrens-pain-and-fever-952c-236-ml',
   // Original 2 mg gum counts. Do not inherit the 20-count box.
-  // 110, 220, and 310 stay letters until attempted.
+  // 110, 220, and 310 have their own faces.
   'goodsense-b111-nicotine-7daf-50',
   'goodsense-b111-nicotine-7daf-110',
   'goodsense-b111-nicotine-7daf-220',
   'goodsense-b111-nicotine-7daf-310',
+  // Coated mint 4 mg. 100-count is not the 20 or the 160.
+  'goodsense-b111-nicotine-ff03-100',
+  'goodsense-b111-nicotine-ff03-160',
+  // Fruit 2 mg. The 160-count is not the 100-count box.
+  'goodsense-b111-nicotine-a6cd-160',
+  // Bubble gum ibuprofen. 150 mL and 240 mL are not the 4 oz box.
+  'goodsense-b111-ibuprofen-21a3-150-ml',
+  'goodsense-b111-ibuprofen-21a3-240-ml',
+  // Grape ibuprofen. 150 mL is not the 4 oz box.
+  'goodsense-b111-ibuprofen-9de3-150-ml',
+  // Dyed berry ibuprofen. 150 mL and 240 mL are not the 4 oz box.
+  'goodsense-b111-ibuprofen-749e-150-ml',
+  'goodsense-b111-ibuprofen-749e-240-ml',
+  // Dye-free berry. Not the dyed 4 oz box.
+  'goodsense-b111-ibuprofen-404a-240-ml',
 ]);
 
 export function previewOverlayImage(
@@ -13896,18 +13982,78 @@ for (const shared of [
     throw new Error('50-count original 2 mg gum must keep its own carton');
   }
 }
-for (const shared of [
-  'goodsense-b111-nicotine-7daf-110',
-  'goodsense-b111-nicotine-7daf-220',
-  'goodsense-b111-nicotine-7daf-310',
+for (const [id, file] of [
+  ['goodsense-b111-nicotine-7daf-110', 'goodsense-b111-nicotine-7daf-110.jpg'],
+  ['goodsense-b111-nicotine-7daf-220', 'goodsense-b111-nicotine-7daf-220.jpg'],
+  ['goodsense-b111-nicotine-7daf-310', 'goodsense-b111-nicotine-7daf-310.jpg'],
 ] as const) {
   const image = previewOverlayImage({
-    id: shared,
+    id,
     formulaId: 'goodsense-b111-nicotine-7daf',
     brand: 'GoodSense',
   });
-  if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
-    throw new Error(`${shared} must stay a letter until attempted`);
+  if (!image?.url.endsWith(`/${file}`) || !image.verifiedSku) {
+    throw new Error(`${id} must keep its own carton, not the 20-count box`);
+  }
+}
+assertExactCarton(
+  'goodsense-b111-nicotine-ff03',
+  'GoodSense',
+  'goodsense-b111-nicotine-ff03.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-ff03-160',
+  'GoodSense',
+  'goodsense-b111-nicotine-ff03-160.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-3a3a',
+  'GoodSense',
+  'goodsense-b111-nicotine-3a3a.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-a6cd',
+  'GoodSense',
+  'goodsense-b111-nicotine-a6cd.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-a6cd-160',
+  'GoodSense',
+  'goodsense-b111-nicotine-a6cd-160.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-ibuprofen-21a3',
+  'GoodSense',
+  'goodsense-b111-ibuprofen-21a3.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-cherry-benzocaine-lozenges-3814',
+  'GoodSense',
+  'goodsense-b111-cherry-benzocaine-lozenges-3814.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-ibuprofen-9de3',
+  'GoodSense',
+  'goodsense-b111-ibuprofen-9de3.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-ibuprofen-749e',
+  'GoodSense',
+  'goodsense-b111-ibuprofen-749e.jpg',
+);
+for (const [id, formulaId] of [
+  ['goodsense-b111-nicotine-ff03-100', 'goodsense-b111-nicotine-ff03'],
+  ['goodsense-b111-ibuprofen-21a3-150-ml', 'goodsense-b111-ibuprofen-21a3'],
+  ['goodsense-b111-ibuprofen-21a3-240-ml', 'goodsense-b111-ibuprofen-21a3'],
+  ['goodsense-b111-ibuprofen-9de3-150-ml', 'goodsense-b111-ibuprofen-9de3'],
+  ['goodsense-b111-ibuprofen-749e-150-ml', 'goodsense-b111-ibuprofen-749e'],
+  ['goodsense-b111-ibuprofen-749e-240-ml', 'goodsense-b111-ibuprofen-749e'],
+  ['goodsense-b111-ibuprofen-404a', 'goodsense-b111-ibuprofen-404a'],
+  ['goodsense-b111-ibuprofen-404a-240-ml', 'goodsense-b111-ibuprofen-404a'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the GoodSense mark, not a sibling carton`);
   }
 }
 for (const [id, formulaId] of [
