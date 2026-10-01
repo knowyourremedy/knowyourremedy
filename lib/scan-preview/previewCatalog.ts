@@ -7394,6 +7394,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b96-loratadine-10-10': catalogShot(
     'healtha2z-b96-loratadine-10-10.jpg',
   ),
+  // Allergies night run 2026-10-01 4:15 AM PT batch 1.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // HealthA2Z faces are the a2z-life.com hero for that count.
+  // 3 packs of the 10-tablet card (30). Not the single card.
+  'healtha2z-b96-loratadine-10-30-tens': catalogShot(
+    'healtha2z-b96-loratadine-10-30-tens.jpg',
+  ),
+  // 6 packs of the 10-tablet card (60). Not the single card.
+  'healtha2z-b96-loratadine-10-60': catalogShot(
+    'healtha2z-b96-loratadine-10-60.jpg',
+  ),
+  // Chlorpheniramine maleate 4 mg, 24 packs of 24 (576). FP0550.
+  'healtha2z-b96-chlorpheniramine-4': catalogShot(
+    'healtha2z-b96-chlorpheniramine-4.jpg',
+  ),
+  // Levocetirizine 5 mg. NDC 69168-451-06. Bottle face is 35 tablets.
+  'healtha2z-b96-levocetirizine-5': catalogShot(
+    'healtha2z-b96-levocetirizine-5.jpg',
+  ),
+  // Fexofenadine HCl 180 mg, 250 caplets. NDC 69168-413-03. FPA190.
+  'healtha2z-b96-fexofenadine-180-413': catalogShot(
+    'healtha2z-b96-fexofenadine-180-413.jpg',
+  ),
+  // Same 180 mg coated caplets, 120 count. NDC 69168-416-06. FPA056.
+  // Not the 30, the 72 shipper, or the 720.
+  'healtha2z-b97-fexo-180-416': catalogShot(
+    'healtha2z-b97-fexo-180-416.jpg',
+  ),
+  // Same formula, 30 coated caplets. NDC 69168-416-30. Not the 120.
+  'healtha2z-b97-fexo-180-416-30': catalogShot(
+    'healtha2z-b97-fexo-180-416-30.jpg',
+  ),
+  // 24 packs of 3 tablets (72). Not a single 3-count card.
+  'healtha2z-b97-fexo-180-416-72': catalogShot(
+    'healtha2z-b97-fexo-180-416-72.jpg',
+  ),
+  // Loratadine 10 mg, 300 tablets. NDC 69168-414-17. FPA057.
+  // Pregelatinized-starch formula. Not the 150, 60, or 500.
+  'healtha2z-b97-loratadine-10-pregel': catalogShot(
+    'healtha2z-b97-loratadine-10-pregel.jpg',
+  ),
+  // Same formula, 150 tablets. NDC 69168-414-02.
+  'healtha2z-b97-loratadine-10-pregel-150': catalogShot(
+    'healtha2z-b97-loratadine-10-pregel-150.jpg',
+  ),
+  // Same formula, 60 tablets. NDC 69168-414-60.
+  'healtha2z-b97-loratadine-10-pregel-60': catalogShot(
+    'healtha2z-b97-loratadine-10-pregel-60.jpg',
+  ),
+  // Same formula, 500 tablets. NDC 69168-475-05. Not the 300.
+  'healtha2z-b97-loratadine-10-pregel-500': catalogShot(
+    'healtha2z-b97-loratadine-10-pregel-500.jpg',
+  ),
+  // Cetirizine HCl 10 mg, one 10-tablet card. Not the 3-pack or the 6-pack.
+  'healtha2z-b98-cetirizine-10-1': catalogShot(
+    'healtha2z-b98-cetirizine-10-1.jpg',
+  ),
+  // 3 packs of the 10-tablet card (30). Not the single card.
+  'healtha2z-b98-cetirizine-10-3': catalogShot(
+    'healtha2z-b98-cetirizine-10-3.jpg',
+  ),
+  // 6 packs of the 10-tablet card (60). Not the single card.
+  'healtha2z-b98-cetirizine-10-6': catalogShot(
+    'healtha2z-b98-cetirizine-10-6.jpg',
+  ),
+  // Cetirizine HCl 10 mg, 30 tablets. FP0896. Not the 10-count card.
+  'healtha2z-b98-cetirizine-10-30': catalogShot(
+    'healtha2z-b98-cetirizine-10-30.jpg',
+  ),
+  // Loratadine 10 mg, 24 packs of 30 tablets (720). Not the single 30.
+  'healtha2z-b98-loratadine-10-30x24': catalogShot(
+    'healtha2z-b98-loratadine-10-30x24.jpg',
+  ),
+  // Loratadine 10 mg, 24 packs of 5 tablets (120). Not the single 5-count card.
+  'healtha2z-b98-loratadine-10-5x24': catalogShot(
+    'healtha2z-b98-loratadine-10-5x24.jpg',
+  ),
+  // Fexofenadine HCl 180 mg, 24 packs of 30 caplets (720). Not the single 30.
+  'healtha2z-b98-fexo-180-30x24': catalogShot(
+    'healtha2z-b98-fexo-180-30x24.jpg',
+  ),
+  // Fexofenadine HCl 180 mg, 90 coated caplets. NDC 69168-450-82. FPA150.
+  // Not the 180-count bottle.
+  'healtha2z-b99-fexo-180-paraffin': catalogShot(
+    'healtha2z-b99-fexo-180-paraffin.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7691,6 +7777,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b96-loratadine-10-60',
   'healtha2z-b98-loratadine-10-30x24',
   'healtha2z-b98-loratadine-10-5x24',
+  // Allergies night run 2026-10-01 4:15 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'healtha2z-b97-fexo-180-416-30',
+  'healtha2z-b97-fexo-180-416-72',
+  'healtha2z-b98-fexo-180-30x24',
+  'healtha2z-b97-loratadine-10-pregel-150',
+  'healtha2z-b97-loratadine-10-pregel-60',
+  'healtha2z-b97-loratadine-10-pregel-500',
+  // 180-count shares the 90-count formula. Not attempted in this batch.
+  'healtha2z-b99-fexo-180-paraffin-180',
 ]);
 
 export function previewOverlayImage(
@@ -14986,6 +15082,106 @@ assertExactCarton(
   'HealthA2Z',
   'healtha2z-b96-loratadine-10-10.jpg',
 );
+assertExactCarton(
+  'healtha2z-b96-loratadine-10-30-tens',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10-30-tens.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-loratadine-10-60',
+  'HealthA2Z',
+  'healtha2z-b96-loratadine-10-60.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-chlorpheniramine-4',
+  'HealthA2Z',
+  'healtha2z-b96-chlorpheniramine-4.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-levocetirizine-5',
+  'HealthA2Z',
+  'healtha2z-b96-levocetirizine-5.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-fexofenadine-180-413',
+  'HealthA2Z',
+  'healtha2z-b96-fexofenadine-180-413.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-fexo-180-416',
+  'HealthA2Z',
+  'healtha2z-b97-fexo-180-416.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-fexo-180-416-30',
+  'HealthA2Z',
+  'healtha2z-b97-fexo-180-416-30.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-fexo-180-416-72',
+  'HealthA2Z',
+  'healtha2z-b97-fexo-180-416-72.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-loratadine-10-pregel',
+  'HealthA2Z',
+  'healtha2z-b97-loratadine-10-pregel.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-loratadine-10-pregel-150',
+  'HealthA2Z',
+  'healtha2z-b97-loratadine-10-pregel-150.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-loratadine-10-pregel-60',
+  'HealthA2Z',
+  'healtha2z-b97-loratadine-10-pregel-60.jpg',
+);
+assertExactCarton(
+  'healtha2z-b97-loratadine-10-pregel-500',
+  'HealthA2Z',
+  'healtha2z-b97-loratadine-10-pregel-500.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-cetirizine-10-1',
+  'HealthA2Z',
+  'healtha2z-b98-cetirizine-10-1.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-cetirizine-10-3',
+  'HealthA2Z',
+  'healtha2z-b98-cetirizine-10-3.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-cetirizine-10-6',
+  'HealthA2Z',
+  'healtha2z-b98-cetirizine-10-6.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-cetirizine-10-30',
+  'HealthA2Z',
+  'healtha2z-b98-cetirizine-10-30.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-loratadine-10-30x24',
+  'HealthA2Z',
+  'healtha2z-b98-loratadine-10-30x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-loratadine-10-5x24',
+  'HealthA2Z',
+  'healtha2z-b98-loratadine-10-5x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-fexo-180-30x24',
+  'HealthA2Z',
+  'healtha2z-b98-fexo-180-30x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-fexo-180-paraffin',
+  'HealthA2Z',
+  'healtha2z-b99-fexo-180-paraffin.jpg',
+);
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
@@ -14999,14 +15195,7 @@ for (const [id, formulaId] of [
 }
 for (const [id, formulaId, brand] of [
   ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health'],
-  ['healtha2z-b98-cetirizine-10-1', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
-  ['healtha2z-b98-cetirizine-10-3', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
-  ['healtha2z-b98-cetirizine-10-6', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
-  ['healtha2z-b98-cetirizine-10-30', 'healtha2z-b96-cetirizine-10', 'HealthA2Z'],
-  ['healtha2z-b96-loratadine-10-30-tens', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
-  ['healtha2z-b96-loratadine-10-60', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
-  ['healtha2z-b98-loratadine-10-30x24', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
-  ['healtha2z-b98-loratadine-10-5x24', 'healtha2z-b96-loratadine-10', 'HealthA2Z'],
+  ['healtha2z-b99-fexo-180-paraffin-180', 'healtha2z-b99-fexo-180-paraffin', 'HealthA2Z'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
