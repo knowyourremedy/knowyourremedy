@@ -134,3 +134,4 @@ export { BATCH133_KYR6B_ZYRTEC_FIX } from './batch133-kyr6b-zyrtec-fix';
 export { BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP } from './batch135-kyr6b-zyrtec-8oz-syrup';
 export { BATCH136_KYR6B_CLARITIN_FIRST_SLICE } from './batch136-kyr6b-claritin-first-slice';
 export { BATCH137_KYR6B_ALLEGRA_FIRST_SLICE } from './batch137-kyr6b-allegra-first-slice';
+export { BATCH138_KYR6B_ALLEGRA_D24 } from './batch138-kyr6b-allegra-d24';
