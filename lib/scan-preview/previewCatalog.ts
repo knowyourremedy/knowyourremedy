@@ -1553,6 +1553,42 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-allergy-relief-78a7-40': brandMark('goodsense-mark.png'),
   // GoodSense loratadine 45 count. DailyMed file is a flat label.
   'goodsense-b109-allergy-relief-78a7-45': brandMark('goodsense-mark.png'),
+  // Allergies night run 2026-10-01 5:30 AM PT batch 1.
+  // Tried each SKU. No matching 3D pack. Official GoodSense mark
+  // already on disk. Per-id only.
+  // 100 tablets. The shared DailyMed file is one flat label that
+  // prints 30 and 100. No 100-count bottle retrieved. Do not glue
+  // the 90 or the flat.
+  'goodsense-b109-allergy-relief-78a7-100': brandMark('goodsense-mark.png'),
+  // 300 tablets. Same shared flat. No 300-count bottle.
+  'goodsense-b109-allergy-relief-78a7-300': brandMark('goodsense-mark.png'),
+  // 365 tablets. The shared flat prints 365 among other counts.
+  // No 365-count bottle retrieved. Do not glue the 90.
+  'goodsense-b109-allergy-relief-78a7-365': brandMark('goodsense-mark.png'),
+  // Cetirizine 10 mg, 5 count. DailyMed file is a flat 14-count
+  // card. No 5-count face.
+  'goodsense-b109-all-day-allergy-ef89': brandMark('goodsense-mark.png'),
+  // Same cetirizine, 40 count. The shared label prints 30, 45, 90,
+  // and 14. No 40-count bottle.
+  'goodsense-b109-all-day-allergy-ef89-40': brandMark('goodsense-mark.png'),
+  // 60 count. DailyMed file is a tiny repack label, not a retail
+  // bottle. Do not glue the 30, 45, or 90.
+  'goodsense-b109-all-day-allergy-ef89-60': brandMark('goodsense-mark.png'),
+  // Aller-Ease 180 mg, 150 tablets. The shared flat prints 30 and
+  // 45. No 150-count bottle.
+  'goodsense-b109-aller-ease-5c71-150': brandMark('goodsense-mark.png'),
+  // Diphenhydramine 25 mg, 400 tablets. The shared flat prints 100
+  // and 24. Do not glue the 100-count bottle.
+  'goodsense-b109-allergy-relief-df82-400': brandMark('goodsense-mark.png'),
+  // Children's cetirizine grape, 240 mL. The only 3D carton is the
+  // 4 fl oz (118 mL). Do not glue it.
+  'goodsense-b111-childrens-all-day-allergy-3b14-240-ml': brandMark('goodsense-mark.png'),
+  // Allergy-D 12 count. DailyMed file is one flat label that prints
+  // both 12 and 24. No dedicated 12-count box.
+  'goodsense-b111-all-day-allergy-d-a985': brandMark('goodsense-mark.png'),
+  // Same Allergy-D, 24 count. Same shared flat. Do not glue a
+  // 12-count face.
+  'goodsense-b111-all-day-allergy-d-a985-24': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7550,6 +7586,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b109-allergy-relief-78a7-30': catalogShot(
     'goodsense-b109-allergy-relief-78a7-30.jpg',
   ),
+  // Allergies night run 2026-10-01 5:30 AM PT batch 1.
+  // GoodSense loratadine 10 mg, 90 tablets. UPC 301130612751.
+  // Not the 10 or the 30.
+  'goodsense-b109-allergy-relief-78a7-90': catalogShot(
+    'goodsense-b109-allergy-relief-78a7-90.jpg',
+  ),
+  // Cetirizine 10 mg, 30 tablets. UPC 370030148462. Not the 45 or 90.
+  'goodsense-b109-all-day-allergy-ef89-30': catalogShot(
+    'goodsense-b109-all-day-allergy-ef89-30.jpg',
+  ),
+  // Same cetirizine, 45 tablets. UPC 370030149674. Not the 30.
+  'goodsense-b109-all-day-allergy-ef89-45': catalogShot(
+    'goodsense-b109-all-day-allergy-ef89-45.jpg',
+  ),
+  // Same cetirizine, 90 tablets. UPC 301139458756. Not the 30 or 45.
+  'goodsense-b109-all-day-allergy-ef89-90': catalogShot(
+    'goodsense-b109-all-day-allergy-ef89-90.jpg',
+  ),
+  // Aller-Ease fexofenadine 180 mg, 30 tablets. UPC 301130571393.
+  // Not the 45 or the 150.
+  'goodsense-b109-aller-ease-5c71': catalogShot(
+    'goodsense-b109-aller-ease-5c71.jpg',
+  ),
+  // Same Aller-Ease, 45 tablets. UPC 370030129072. Not the 30.
+  'goodsense-b109-aller-ease-5c71-45': catalogShot(
+    'goodsense-b109-aller-ease-5c71-45.jpg',
+  ),
+  // Diphenhydramine 25 mg, 100 tablets. UPC 070030132644. Not the 400.
+  'goodsense-b109-allergy-relief-df82': catalogShot(
+    'goodsense-b109-allergy-relief-df82.jpg',
+  ),
+  // Children's cetirizine grape, 4 fl oz (118 mL). Not the 240 mL
+  // and not the bubble-gum bottle.
+  'goodsense-b111-childrens-all-day-allergy-3b14': catalogShot(
+    'goodsense-b111-childrens-all-day-allergy-3b14.jpg',
+  ),
+  // Children's cetirizine bubble gum, 4 fl oz (118 mL). Not the grape.
+  'goodsense-b111-childrens-all-day-allergy-b790': catalogShot(
+    'goodsense-b111-childrens-all-day-allergy-b790.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7864,11 +7940,23 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b109-allergy-relief-78a7-30',
   'goodsense-b109-allergy-relief-78a7-40',
   'goodsense-b109-allergy-relief-78a7-45',
-  // Later counts on the 10-count formula. Still unattempted.
+  // Later counts on the 10-count formula. Do not inherit the 10.
   'goodsense-b109-allergy-relief-78a7-90',
   'goodsense-b109-allergy-relief-78a7-100',
   'goodsense-b109-allergy-relief-78a7-300',
   'goodsense-b109-allergy-relief-78a7-365',
+  // Allergies night run 2026-10-01 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b109-all-day-allergy-ef89-30',
+  'goodsense-b109-all-day-allergy-ef89-40',
+  'goodsense-b109-all-day-allergy-ef89-45',
+  'goodsense-b109-all-day-allergy-ef89-60',
+  'goodsense-b109-all-day-allergy-ef89-90',
+  'goodsense-b109-aller-ease-5c71-45',
+  'goodsense-b109-aller-ease-5c71-150',
+  'goodsense-b109-allergy-relief-df82-400',
+  'goodsense-b111-childrens-all-day-allergy-3b14-240-ml',
+  'goodsense-b111-all-day-allergy-d-a985-24',
 ]);
 
 export function previewOverlayImage(
@@ -15300,6 +15388,51 @@ assertExactCarton(
   'GoodSense',
   'goodsense-b109-allergy-relief-78a7-30.jpg',
 );
+assertExactCarton(
+  'goodsense-b109-allergy-relief-78a7-90',
+  'GoodSense',
+  'goodsense-b109-allergy-relief-78a7-90.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-all-day-allergy-ef89-30',
+  'GoodSense',
+  'goodsense-b109-all-day-allergy-ef89-30.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-all-day-allergy-ef89-45',
+  'GoodSense',
+  'goodsense-b109-all-day-allergy-ef89-45.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-all-day-allergy-ef89-90',
+  'GoodSense',
+  'goodsense-b109-all-day-allergy-ef89-90.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-aller-ease-5c71',
+  'GoodSense',
+  'goodsense-b109-aller-ease-5c71.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-aller-ease-5c71-45',
+  'GoodSense',
+  'goodsense-b109-aller-ease-5c71-45.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-allergy-relief-df82',
+  'GoodSense',
+  'goodsense-b109-allergy-relief-df82.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-childrens-all-day-allergy-3b14',
+  'GoodSense',
+  'goodsense-b111-childrens-all-day-allergy-3b14.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-childrens-all-day-allergy-b790',
+  'GoodSense',
+  'goodsense-b111-childrens-all-day-allergy-b790.jpg',
+);
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
@@ -15314,10 +15447,6 @@ for (const [id, formulaId] of [
 }
 for (const [id, formulaId, brand] of [
   ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health'],
-  ['goodsense-b109-allergy-relief-78a7-90', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
-  ['goodsense-b109-allergy-relief-78a7-100', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
-  ['goodsense-b109-allergy-relief-78a7-300', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
-  ['goodsense-b109-allergy-relief-78a7-365', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
@@ -15381,6 +15510,17 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b109-levocetirizine-7ba9-80', 'goodsense-b109-levocetirizine-7ba9', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b109-allergy-relief-78a7-40', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b109-allergy-relief-78a7-45', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-78a7-100', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-78a7-300', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-78a7-365', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-all-day-allergy-ef89', 'goodsense-b109-all-day-allergy-ef89', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-all-day-allergy-ef89-40', 'goodsense-b109-all-day-allergy-ef89', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-all-day-allergy-ef89-60', 'goodsense-b109-all-day-allergy-ef89', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-aller-ease-5c71-150', 'goodsense-b109-aller-ease-5c71', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-df82-400', 'goodsense-b109-allergy-relief-df82', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-childrens-all-day-allergy-3b14-240-ml', 'goodsense-b111-childrens-all-day-allergy-3b14', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-all-day-allergy-d-a985', 'goodsense-b111-all-day-allergy-d-a985', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-all-day-allergy-d-a985-24', 'goodsense-b111-all-day-allergy-d-a985', 'GoodSense', 'goodsense-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
