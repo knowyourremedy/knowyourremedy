@@ -1313,6 +1313,26 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b111-infants-pain-and-fever-86ed': brandMark('goodsense-mark.png'),
   // Fruit coated 4 mg. FDA lists the 100-count only. No 20-count face.
   'goodsense-b111-nicotine-4ba2': brandMark('goodsense-mark.png'),
+  // Daytime photo run batch 2 — tried the count. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark. Per-id only.
+  // Ice Mint coated 2 mg. Marketing start 2026-01-02. No retail front.
+  'goodsense-b111-nicotine-349e': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-349e-160': brandMark('goodsense-mark.png'),
+  // Cool Mint coated 2 mg. The 20-count box is a different face.
+  // 100-count is not a current FDA package. No 160-count face.
+  'goodsense-b111-nicotine-1ac2-100': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-1ac2-160': brandMark('goodsense-mark.png'),
+  // Arctic Mint 2 mg. The 110-count box is a different face.
+  'goodsense-b111-nicotine-75f0-220': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-75f0-310': brandMark('goodsense-mark.png'),
+  // Dye-free cherry 4 oz is a different face. No 8 oz cherry carton.
+  'goodsense-b111-pain-and-fever-86ed-237-ml': brandMark('goodsense-mark.png'),
+  // NDC 68788-8646 is a repack of the 118 mL cherry suspension.
+  'goodsense-b111-pain-and-fever-50f0': brandMark('goodsense-mark.png'),
+  // NDC 33261-770 is a repack. No GoodSense retail front.
+  'goodsense-b111-childrens-pain-and-fever-23fa': brandMark('goodsense-mark.png'),
+  // Bubble gum. 4 oz and 8 oz have their own faces. No 148 mL package.
+  'goodsense-b111-childrens-pain-and-fever-952c-148-ml': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6789,6 +6809,56 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b111-nicotine-aef5': catalogShot(
     'goodsense-b111-nicotine-aef5.jpg',
   ),
+  // Daytime photo run batch 2. Retail pack fronts. Per-id.
+  // Coated fruit chill nicotine gum 4 mg, 100 pieces.
+  // Not the 20-count, which has no current package.
+  'goodsense-b111-nicotine-4ba2-100': catalogShot(
+    'goodsense-b111-nicotine-4ba2-100.jpg',
+  ),
+  // Infants' concentrated ibuprofen drops, dye-free berry, 1 fl oz (30 mL).
+  // UPC 301130040103. Not the 15 mL box.
+  'goodsense-b111-infants-ibuprofen-ebbe': catalogShot(
+    'goodsense-b111-infants-ibuprofen-ebbe.jpg',
+  ),
+  // Cool Mint coated nicotine gum 2 mg, 20 pieces. UPC 301130456607.
+  // Not the 100 or the 160.
+  'goodsense-b111-nicotine-1ac2': catalogShot(
+    'goodsense-b111-nicotine-1ac2.jpg',
+  ),
+  // Infants' concentrated ibuprofen drops, berry, 0.5 fl oz (15 mL).
+  // Not the dye-free 30 mL box.
+  'goodsense-b111-ibuprofen-92a3': catalogShot(
+    'goodsense-b111-ibuprofen-92a3.jpg',
+  ),
+  // Arctic Mint uncoated nicotine gum 2 mg, 110 pieces. UPC 301130206257.
+  // Not the 220 or the 310.
+  'goodsense-b111-nicotine-75f0': catalogShot(
+    'goodsense-b111-nicotine-75f0.jpg',
+  ),
+  // Children's dye-free cherry pain and fever, 4 fl oz (118 mL).
+  // Not the 8 oz.
+  'goodsense-b111-pain-and-fever-86ed': catalogShot(
+    'goodsense-b111-pain-and-fever-86ed.jpg',
+  ),
+  // Children's bubble gum pain and fever, 4 fl oz (118 mL). UPC 301130020266.
+  // Not the 8 oz and not the cherry box.
+  'goodsense-b111-childrens-pain-and-fever-952c': catalogShot(
+    'goodsense-b111-childrens-pain-and-fever-952c.jpg',
+  ),
+  // Same bubble gum suspension, 8 fl oz. FDA package quantity is 236 mL.
+  // Not the 4 oz.
+  'goodsense-b111-childrens-pain-and-fever-952c-236-ml': catalogShot(
+    'goodsense-b111-childrens-pain-and-fever-952c-236-ml.jpg',
+  ),
+  // Original uncoated nicotine gum 2 mg, 20 pieces. UPC 301130029603.
+  // Not the 50.
+  'goodsense-b111-nicotine-7daf': catalogShot(
+    'goodsense-b111-nicotine-7daf.jpg',
+  ),
+  // Same original gum, 50 pieces. UPC 301130029719. Not the 20.
+  'goodsense-b111-nicotine-7daf-50': catalogShot(
+    'goodsense-b111-nicotine-7daf-50.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6977,6 +7047,23 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Arctic Mint 4 mg counts. Do not inherit the 110-count box.
   'goodsense-b111-nicotine-aef5-220',
   'goodsense-b111-nicotine-aef5-310',
+  // Cool Mint 2 mg counts. Do not inherit the 20-count box.
+  'goodsense-b111-nicotine-1ac2-100',
+  'goodsense-b111-nicotine-1ac2-160',
+  // Arctic Mint 2 mg counts. Do not inherit the 110-count box.
+  'goodsense-b111-nicotine-75f0-220',
+  'goodsense-b111-nicotine-75f0-310',
+  // Dye-free cherry 8 oz is not the 4 oz carton.
+  'goodsense-b111-pain-and-fever-86ed-237-ml',
+  // Bubble gum counts. Do not inherit the 4 oz carton.
+  'goodsense-b111-childrens-pain-and-fever-952c-148-ml',
+  'goodsense-b111-childrens-pain-and-fever-952c-236-ml',
+  // Original 2 mg gum counts. Do not inherit the 20-count box.
+  // 110, 220, and 310 stay letters until attempted.
+  'goodsense-b111-nicotine-7daf-50',
+  'goodsense-b111-nicotine-7daf-110',
+  'goodsense-b111-nicotine-7daf-220',
+  'goodsense-b111-nicotine-7daf-310',
 ]);
 
 export function previewOverlayImage(
@@ -13703,6 +13790,135 @@ for (const shared of [
   });
   if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
     throw new Error(`${shared} must stay the GoodSense mark, not the 110-count box`);
+  }
+}
+assertExactCarton(
+  'goodsense-b111-nicotine-4ba2-100',
+  'GoodSense',
+  'goodsense-b111-nicotine-4ba2-100.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-infants-ibuprofen-ebbe',
+  'GoodSense',
+  'goodsense-b111-infants-ibuprofen-ebbe.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-1ac2',
+  'GoodSense',
+  'goodsense-b111-nicotine-1ac2.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-ibuprofen-92a3',
+  'GoodSense',
+  'goodsense-b111-ibuprofen-92a3.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-75f0',
+  'GoodSense',
+  'goodsense-b111-nicotine-75f0.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-pain-and-fever-86ed',
+  'GoodSense',
+  'goodsense-b111-pain-and-fever-86ed.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-childrens-pain-and-fever-952c',
+  'GoodSense',
+  'goodsense-b111-childrens-pain-and-fever-952c.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-childrens-pain-and-fever-952c-236-ml',
+  'GoodSense',
+  'goodsense-b111-childrens-pain-and-fever-952c-236-ml.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-7daf',
+  'GoodSense',
+  'goodsense-b111-nicotine-7daf.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-7daf-50',
+  'GoodSense',
+  'goodsense-b111-nicotine-7daf-50.jpg',
+);
+for (const shared of [
+  'goodsense-b111-nicotine-349e',
+  'goodsense-b111-nicotine-349e-160',
+  'goodsense-b111-nicotine-1ac2-100',
+  'goodsense-b111-nicotine-1ac2-160',
+  'goodsense-b111-nicotine-75f0-220',
+  'goodsense-b111-nicotine-75f0-310',
+  'goodsense-b111-pain-and-fever-86ed-237-ml',
+  'goodsense-b111-pain-and-fever-50f0',
+  'goodsense-b111-childrens-pain-and-fever-23fa',
+  'goodsense-b111-childrens-pain-and-fever-952c-148-ml',
+] as const) {
+  assertBrandMark(shared, 'GoodSense', 'goodsense-mark.png');
+}
+{
+  const eightOz = previewOverlayImage({
+    id: 'goodsense-b111-childrens-pain-and-fever-952c-236-ml',
+    formulaId: 'goodsense-b111-childrens-pain-and-fever-952c',
+    brand: 'GoodSense',
+  });
+  if (
+    !eightOz?.url.endsWith('/goodsense-b111-childrens-pain-and-fever-952c-236-ml.jpg')
+    || !eightOz.verifiedSku
+  ) {
+    throw new Error('8 oz bubble gum must keep its own carton');
+  }
+  const oneFourEight = previewOverlayImage({
+    id: 'goodsense-b111-childrens-pain-and-fever-952c-148-ml',
+    formulaId: 'goodsense-b111-childrens-pain-and-fever-952c',
+    brand: 'GoodSense',
+  });
+  if (!oneFourEight?.url.endsWith('/goodsense-mark.png') || oneFourEight.verifiedSku) {
+    throw new Error('148 mL bubble gum must stay the GoodSense mark, not the 4 oz box');
+  }
+  const cherryEight = previewOverlayImage({
+    id: 'goodsense-b111-pain-and-fever-86ed-237-ml',
+    formulaId: 'goodsense-b111-pain-and-fever-86ed',
+    brand: 'GoodSense',
+  });
+  if (!cherryEight?.url.endsWith('/goodsense-mark.png') || cherryEight.verifiedSku) {
+    throw new Error('8 oz cherry must stay the GoodSense mark, not the 4 oz box');
+  }
+  const originalFifty = previewOverlayImage({
+    id: 'goodsense-b111-nicotine-7daf-50',
+    formulaId: 'goodsense-b111-nicotine-7daf',
+    brand: 'GoodSense',
+  });
+  if (
+    !originalFifty?.url.endsWith('/goodsense-b111-nicotine-7daf-50.jpg')
+    || !originalFifty.verifiedSku
+  ) {
+    throw new Error('50-count original 2 mg gum must keep its own carton');
+  }
+}
+for (const shared of [
+  'goodsense-b111-nicotine-7daf-110',
+  'goodsense-b111-nicotine-7daf-220',
+  'goodsense-b111-nicotine-7daf-310',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b111-nicotine-7daf',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
+    throw new Error(`${shared} must stay a letter until attempted`);
+  }
+}
+for (const [id, formulaId] of [
+  ['goodsense-b111-nicotine-1ac2-100', 'goodsense-b111-nicotine-1ac2'],
+  ['goodsense-b111-nicotine-1ac2-160', 'goodsense-b111-nicotine-1ac2'],
+  ['goodsense-b111-nicotine-75f0-220', 'goodsense-b111-nicotine-75f0'],
+  ['goodsense-b111-nicotine-75f0-310', 'goodsense-b111-nicotine-75f0'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the GoodSense mark, not a sibling carton`);
   }
 }
 
