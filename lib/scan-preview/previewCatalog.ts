@@ -1419,6 +1419,35 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'healtha2z-b100-mucus-dm-10x3': brandMark('healtha2z-mark.png'),
   // Same DM, 6 packs of 10. No dedicated 6-pack face.
   'healtha2z-b100-mucus-dm-10x6': brandMark('healtha2z-mark.png'),
+  // Night photo run — Cold & Flu leftovers. Tried the SKU.
+  // Travel pages cover 1, 3, and 6 packs. The only front is the
+  // single 8-softgel card. Do not glue it onto the combined row.
+  'healtha2z-b103-day-cold-8': brandMark('healtha2z-mark.png'),
+  'healtha2z-b103-night-cold-8': brandMark('healtha2z-mark.png'),
+  // timecaplabs.com cold page is code thumbnails, not a count carton.
+  // DailyMed files are label flats (48-ct IFC, 200-ct labels, 500/70
+  // labels, Pseudo-Time label). Do not glue a flat. Official TIME-CAP
+  // mark already on disk. Per-id only.
+  'timecap-b106-day-cold-48': brandMark('timecap-mark.png'),
+  'timecap-b106-mucosa-dm': brandMark('timecap-mark.png'),
+  'timecap-b106-guaifenesin-400': brandMark('timecap-mark.png'),
+  'timecap-b106-guaif-er-600': brandMark('timecap-mark.png'),
+  'timecap-b106-guaif-er-1200': brandMark('timecap-mark.png'),
+  'timecap-b108-pse-30-96': brandMark('timecap-mark.png'),
+  // GoodSense leftovers — DailyMed faces are 2D dielines. The 20-count
+  // mucus DM carton image does not print a count that separates 20 from
+  // 30/40/60/90. No retailer 3D pack retrieved. Official GoodSense mark
+  // already on disk. Per-id only.
+  'goodsense-b109-daytime-c552': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-er-0198': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-er-0198-40': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d-30': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d-40': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d-60': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d-90': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-dm-eb2d-b': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-er-6e83': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7136,6 +7165,18 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b100-cold-allergy-24x24': catalogShot(
     'healtha2z-b100-cold-allergy-24x24.jpg',
   ),
+  // Night photo run — a2z-life.com multipack for SKU FP0999.
+  // Page is 24 packs of 8 softgels (192). Inner cards read 8 softgels.
+  // Do not inherit this shipper onto the 1/3/6-pack row.
+  'healtha2z-b103-day-cold-192': catalogShot(
+    'healtha2z-b103-day-cold-192.jpg',
+  ),
+  // Night photo run — a2z-life.com multipack for SKU FP1003.
+  // Page is 24 packs of 8 softgels (192). Inner cards read 8 softgels.
+  // Do not inherit this shipper onto the 1/3/6-pack row.
+  'healtha2z-b103-night-cold-192': catalogShot(
+    'healtha2z-b103-night-cold-192.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7370,6 +7411,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Do not inherit the 24 packs of 30 (720) carton.
   'healtha2z-b100-mucus-dm-10x3',
   'healtha2z-b100-mucus-dm-10x6',
+  // 8-softgel travel rows cover 1, 3, and 6 packs. Do not inherit
+  // the 24×8 (192) shipper.
+  'healtha2z-b103-day-cold-8',
+  'healtha2z-b103-night-cold-8',
+  // 1200 mg 70-count shares the 600 mg formula id. Do not inherit
+  // a 600 mg face if one is added later.
+  'timecap-b106-guaif-er-1200',
+  // Mucus ER 40-count is not the 20-count.
+  'goodsense-b109-mucus-er-0198-40',
+  // Mucus DM counts. Do not inherit one count onto another.
+  'goodsense-b109-mucus-dm-eb2d-30',
+  'goodsense-b109-mucus-dm-eb2d-40',
+  'goodsense-b109-mucus-dm-eb2d-60',
+  'goodsense-b109-mucus-dm-eb2d-90',
+  'goodsense-b109-mucus-dm-eb2d-b',
 ]);
 
 export function previewOverlayImage(
@@ -14494,6 +14550,41 @@ for (const [id, formulaId] of [
   const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
   if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
     throw new Error(`${id} must stay the GoodSense mark, not a sibling carton`);
+  }
+}
+assertExactCarton(
+  'healtha2z-b103-day-cold-192',
+  'HealthA2Z',
+  'healtha2z-b103-day-cold-192.jpg',
+);
+assertExactCarton(
+  'healtha2z-b103-night-cold-192',
+  'HealthA2Z',
+  'healtha2z-b103-night-cold-192.jpg',
+);
+for (const [id, formulaId, brand, file] of [
+  ['healtha2z-b103-day-cold-8', 'healtha2z-b103-day-cold-192', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b103-night-cold-8', 'healtha2z-b103-night-cold-192', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['timecap-b106-day-cold-48', 'timecap-b106-day-cold-48', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-mucosa-dm', 'timecap-b106-mucosa-dm', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-guaifenesin-400', 'timecap-b106-guaifenesin-400', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-guaif-er-600', 'timecap-b106-guaif-er-600', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-guaif-er-1200', 'timecap-b106-guaif-er-600', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b108-pse-30-96', 'timecap-b108-pse-30-96', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['goodsense-b109-daytime-c552', 'goodsense-b109-daytime-c552', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-er-0198', 'goodsense-b109-mucus-er-0198', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-er-0198-40', 'goodsense-b109-mucus-er-0198', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d-30', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d-40', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d-60', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d-90', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-dm-eb2d-b', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-er-6e83', 'goodsense-b109-mucus-er-6e83', 'GoodSense', 'goodsense-mark.png'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand });
+  if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+    throw new Error(`${id} must stay the brand mark, not a sibling carton`);
   }
 }
 
