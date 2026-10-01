@@ -1349,6 +1349,34 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Dye-free berry. The retrieved berry face is the dyed 4 oz. Do not glue it.
   'goodsense-b111-ibuprofen-404a': brandMark('goodsense-mark.png'),
   'goodsense-b111-ibuprofen-404a-240-ml': brandMark('goodsense-mark.png'),
+  // Daytime photo run batch 2 — tried the SKU. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark. Per-id only.
+  // Infants' grape 30 mL (NDC 0113-0946). The children's 4 oz grape is a different SPL.
+  'goodsense-b111-childrens-pain-and-fever-237e': brandMark('goodsense-mark.png'),
+  // Children's grape. 4 oz and 8 oz have their own faces. No 5 oz (148 mL) front.
+  'goodsense-b111-childrens-pain-and-fever-237e-148-ml': brandMark('goodsense-mark.png'),
+  // Aspirin effervescent, 18 tablets (2 per pouch). The 36-count antacid is a different product.
+  'goodsense-b111-effervescent-pain-relief-e6f7': brandMark('goodsense-mark.png'),
+  // Children's cherry (red 40). No 4 oz or 5 oz cherry front. Do not glue the grape box.
+  'goodsense-b111-childrens-pain-and-fever-3964': brandMark('goodsense-mark.png'),
+  'goodsense-b111-childrens-pain-and-fever-3964-148-ml': brandMark('goodsense-mark.png'),
+  // Small pain-and-fever bottles, 30 mL and 59 mL, red 40. Not the children's grape carton.
+  'goodsense-b111-pain-and-fever-3964': brandMark('goodsense-mark.png'),
+  'goodsense-b111-pain-and-fever-3964-59-ml': brandMark('goodsense-mark.png'),
+  // Coated mint 4 mg "Bold Flavor," 160 pieces (NDC 0113-0053, SPL 2021).
+  // The current 160 mint box is Extreme Flavor, a different SPL. Not glued.
+  'goodsense-b111-nicotine-43f3': brandMark('goodsense-mark.png'),
+  // Icy mint coated lozenge 4 mg. The 20-count box is a different face.
+  // 40 is a container. No 40-count carton retrieved.
+  'goodsense-b112-nicotine-c5cd-40': brandMark('goodsense-mark.png'),
+  // Icy mint coated lozenge 2 mg. The 20-count box is a different face.
+  'goodsense-b112-nicotine-c5cd-b-40': brandMark('goodsense-mark.png'),
+  // Citrus mini lozenge 2 mg. 27 is the inner container of a 3-vial carton. Not glued.
+  'goodsense-b112-nicotine-2f22': brandMark('goodsense-mark.png'),
+  // Mint lozenge 4 mg (calcium polycarbophil). Not the icy-mint coated box.
+  // No 20-count face. 27 is the inner container of a 108 carton.
+  'goodsense-b112-nicotine-bb29': brandMark('goodsense-mark.png'),
+  'goodsense-b112-nicotine-bb29-27': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6930,6 +6958,39 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b111-ibuprofen-749e': catalogShot(
     'goodsense-b111-ibuprofen-749e.jpg',
   ),
+  // Daytime photo run batch 2. Retail pack fronts. Per-id.
+  // Children's grape pain and fever, 4 fl oz (118 mL).
+  // Not the infants' 30 mL, not the 5 oz, not the 8 oz.
+  'goodsense-b111-childrens-pain-and-fever-237e-118-ml': catalogShot(
+    'goodsense-b111-childrens-pain-and-fever-237e-118-ml.jpg',
+  ),
+  // Same children's grape suspension, 8 fl oz (236 mL). Not the 4 oz.
+  'goodsense-b111-childrens-pain-and-fever-237e-236-ml': catalogShot(
+    'goodsense-b111-childrens-pain-and-fever-237e-236-ml.jpg',
+  ),
+  // Icy mint coated nicotine lozenge 4 mg, 20 lozenges.
+  // Not the 40-count container and not the 80-count box.
+  'goodsense-b112-nicotine-c5cd': catalogShot(
+    'goodsense-b112-nicotine-c5cd.jpg',
+  ),
+  // Icy mint coated nicotine lozenge 2 mg, 20 lozenges. Not the 4 mg box.
+  'goodsense-b112-nicotine-c5cd-b': catalogShot(
+    'goodsense-b112-nicotine-c5cd-b.jpg',
+  ),
+  // Citrus mini nicotine lozenge 4 mg, 20 lozenges. Not the 2 mg 27-count vial.
+  'goodsense-b112-nicotine-2f22-b': catalogShot(
+    'goodsense-b112-nicotine-2f22-b.jpg',
+  ),
+  // Low-dose chewable aspirin, cherry, 81 mg, 36 tablets. UPC 070030136086.
+  // Not the orange bottle.
+  'goodsense-b112-aspirin-334c': catalogShot(
+    'goodsense-b112-aspirin-334c.jpg',
+  ),
+  // Low-dose chewable aspirin, orange, 81 mg, 36 tablets. UPC 070030132392.
+  // Not the cherry bottle.
+  'goodsense-b112-aspirin-16c3': catalogShot(
+    'goodsense-b112-aspirin-16c3.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7150,6 +7211,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b111-ibuprofen-749e-240-ml',
   // Dye-free berry. Not the dyed 4 oz box.
   'goodsense-b111-ibuprofen-404a-240-ml',
+  // Icy mint coated lozenge 4 mg. 40 is not the 20-count box.
+  'goodsense-b112-nicotine-c5cd-40',
+  // Icy mint coated lozenge 2 mg. 40 is not the 20-count box.
+  'goodsense-b112-nicotine-c5cd-b-40',
 ]);
 
 export function previewOverlayImage(
@@ -14050,6 +14115,61 @@ for (const [id, formulaId] of [
   ['goodsense-b111-ibuprofen-749e-240-ml', 'goodsense-b111-ibuprofen-749e'],
   ['goodsense-b111-ibuprofen-404a', 'goodsense-b111-ibuprofen-404a'],
   ['goodsense-b111-ibuprofen-404a-240-ml', 'goodsense-b111-ibuprofen-404a'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the GoodSense mark, not a sibling carton`);
+  }
+}
+assertExactCarton(
+  'goodsense-b111-childrens-pain-and-fever-237e-118-ml',
+  'GoodSense',
+  'goodsense-b111-childrens-pain-and-fever-237e-118-ml.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-childrens-pain-and-fever-237e-236-ml',
+  'GoodSense',
+  'goodsense-b111-childrens-pain-and-fever-237e-236-ml.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-nicotine-c5cd',
+  'GoodSense',
+  'goodsense-b112-nicotine-c5cd.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-nicotine-c5cd-b',
+  'GoodSense',
+  'goodsense-b112-nicotine-c5cd-b.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-nicotine-2f22-b',
+  'GoodSense',
+  'goodsense-b112-nicotine-2f22-b.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-aspirin-334c',
+  'GoodSense',
+  'goodsense-b112-aspirin-334c.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-aspirin-16c3',
+  'GoodSense',
+  'goodsense-b112-aspirin-16c3.jpg',
+);
+for (const [id, formulaId] of [
+  ['goodsense-b111-childrens-pain-and-fever-237e', 'goodsense-b111-childrens-pain-and-fever-237e'],
+  ['goodsense-b111-childrens-pain-and-fever-237e-148-ml', 'goodsense-b111-childrens-pain-and-fever-237e'],
+  ['goodsense-b111-effervescent-pain-relief-e6f7', 'goodsense-b111-effervescent-pain-relief-e6f7'],
+  ['goodsense-b111-childrens-pain-and-fever-3964', 'goodsense-b111-childrens-pain-and-fever-3964'],
+  ['goodsense-b111-childrens-pain-and-fever-3964-148-ml', 'goodsense-b111-childrens-pain-and-fever-3964'],
+  ['goodsense-b111-pain-and-fever-3964', 'goodsense-b111-pain-and-fever-3964'],
+  ['goodsense-b111-pain-and-fever-3964-59-ml', 'goodsense-b111-pain-and-fever-3964'],
+  ['goodsense-b111-nicotine-43f3', 'goodsense-b111-nicotine-43f3'],
+  ['goodsense-b112-nicotine-c5cd-40', 'goodsense-b112-nicotine-c5cd'],
+  ['goodsense-b112-nicotine-c5cd-b-40', 'goodsense-b112-nicotine-c5cd-b'],
+  ['goodsense-b112-nicotine-2f22', 'goodsense-b112-nicotine-2f22'],
+  ['goodsense-b112-nicotine-bb29', 'goodsense-b112-nicotine-bb29'],
+  ['goodsense-b112-nicotine-bb29-27', 'goodsense-b112-nicotine-bb29'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
   if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
