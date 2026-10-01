@@ -1608,6 +1608,23 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b112-effervescent-cold-relief-81e2': brandMark('goodsense-mark.png'),
   // Loratadine syrup, 120 mL. DailyMed file is a flat label.
   'goodsense-b112-product-7da9': brandMark('goodsense-mark.png'),
+  // Allergies night run 2026-10-01 6:45 AM PT batch 1.
+  // Tried each SKU. No matching 3D pack. Official Claritin mark.
+  // Per-id only. Claritin still has unattempted counts.
+  // 45-count window box is an unfolded dieline, not a 3D carton.
+  'claritin-b136-tablets-45': brandMark('claritin-mark.png'),
+  // 50-count file is a dump bin of one-count pouches, not a 50-tablet box.
+  'claritin-b136-tablets-50': brandMark('claritin-mark.png'),
+  // Liqui-Gels, 10 count. No 10-count carton. Do not glue the 30.
+  'claritin-b136-liquigels-10': brandMark('claritin-mark.png'),
+  // Bubblegum chewables, 10 count. DailyMed file is a flat dieline.
+  // Do not glue the 30.
+  'claritin-b136-chew-bubblegum-10': brandMark('claritin-mark.png'),
+  // Cool mint chewables, 8 count. DailyMed file is a flat dieline.
+  'claritin-b136-chew-cool-mint-8': brandMark('claritin-mark.png'),
+  // Claritin-D 24 hour, 5 count. The only carton file is a flat
+  // 10-count dieline. Do not glue the 10.
+  'claritin-b136-d24-ec-5': brandMark('claritin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7692,6 +7709,54 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'zyrtec-b132-adult-dissolve-12ct': catalogShot(
     'zyrtec-b132-adult-dissolve-12ct.jpg',
   ),
+  // Allergies night run 2026-10-01 6:45 AM PT batch 1.
+  // Zyrtec liquid gels, 25 count. UPC 300450204257. Not the 65.
+  'zyrtec-b132-gels-25ct': catalogShot('zyrtec-b132-gels-25ct.jpg'),
+  // Same liquid gels, 65 count. Official single 65-count box.
+  // Not the 25. Not a 25+40 tray.
+  'zyrtec-b132-gels-65ct': catalogShot('zyrtec-b132-gels-65ct.jpg'),
+  // Claritin 24-hour tablets, 30 count. UPC 041100810984. Not the 70.
+  'claritin-b136-tablets-30': catalogShot('claritin-b136-tablets-30.jpg'),
+  // Same tablets, 70 count. UPC 041100809643. Not the 30.
+  'claritin-b136-tablets-70': catalogShot('claritin-b136-tablets-70.jpg'),
+  // MCC 100-count tablets. UPC 041100575678. Not the starch formula.
+  'claritin-b136-tablets-100-mcc': catalogShot(
+    'claritin-b136-tablets-100-mcc.jpg',
+  ),
+  // Liqui-Gels, 30 count. UPC 041100807984. Not the 60. Not the 10.
+  'claritin-b136-liquigels-30': catalogShot('claritin-b136-liquigels-30.jpg'),
+  // Liqui-Gels, 60 count. UPC 041100576859. Not the 30.
+  'claritin-b136-liquigels-60': catalogShot('claritin-b136-liquigels-60.jpg'),
+  // Children's bubblegum chewables, 30 count. UPC 041100598714.
+  // Not the 10.
+  'claritin-b136-chew-bubblegum-30': catalogShot(
+    'claritin-b136-chew-bubblegum-30.jpg',
+  ),
+  // Dye-free grape chewables, 10 count. UPC 041100598776.
+  // Not the 30 or the 60.
+  'claritin-b136-chew-dye-free-grape-10': catalogShot(
+    'claritin-b136-chew-dye-free-grape-10.jpg',
+  ),
+  // Same dye-free grape, 30 count. Not the 10 or the 60.
+  // Not the 10 mg max.
+  'claritin-b136-chew-dye-free-grape-30': catalogShot(
+    'claritin-b136-chew-dye-free-grape-30.jpg',
+  ),
+  // Same dye-free grape, 60 count. Not the 10 or the 30.
+  'claritin-b136-chew-dye-free-grape-60': catalogShot(
+    'claritin-b136-chew-dye-free-grape-60.jpg',
+  ),
+  // Max strength dye-free grape, 10 mg, 30 count. UPC 041100606303.
+  // Not the 5 mg grape boxes.
+  'claritin-b136-chew-max-grape-30': catalogShot(
+    'claritin-b136-chew-max-grape-30.jpg',
+  ),
+  // Children's RediTabs, 30 count. UPC 041100593689.
+  'claritin-b136-kids-reditab-30': catalogShot(
+    'claritin-b136-kids-reditab-30.jpg',
+  ),
+  // Children's grape syrup, 4 fl oz. UPC 041100811028. Not the 8 oz.
+  'claritin-b136-kids-syrup-4oz': catalogShot('claritin-b136-kids-syrup-4oz.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8040,6 +8105,24 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'zyrtec-b132-kids-dissolve-24ct',
   'zyrtec-b132-adult-dissolve-24ct',
   'zyrtec-b132-adult-dissolve-12ct',
+  // Allergies night run 2026-10-01 6:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'zyrtec-b132-gels-25ct',
+  'zyrtec-b132-gels-65ct',
+  'claritin-b136-tablets-30',
+  'claritin-b136-tablets-70',
+  'claritin-b136-tablets-45',
+  'claritin-b136-tablets-50',
+  'claritin-b136-liquigels-10',
+  'claritin-b136-liquigels-30',
+  'claritin-b136-liquigels-60',
+  'claritin-b136-chew-bubblegum-10',
+  'claritin-b136-chew-bubblegum-30',
+  'claritin-b136-chew-dye-free-grape-10',
+  'claritin-b136-chew-dye-free-grape-30',
+  'claritin-b136-chew-dye-free-grape-60',
+  'claritin-b136-chew-max-grape-30',
+  'claritin-b136-d24-ec-5',
 ]);
 
 export function previewOverlayImage(
@@ -15554,6 +15637,52 @@ assertExactCarton(
   'Zyrtec',
   'zyrtec-b132-adult-dissolve-12ct.jpg',
 );
+assertExactCarton('zyrtec-b132-gels-25ct', 'Zyrtec', 'zyrtec-b132-gels-25ct.jpg');
+assertExactCarton('zyrtec-b132-gels-65ct', 'Zyrtec', 'zyrtec-b132-gels-65ct.jpg');
+assertExactCarton('claritin-b136-tablets-30', 'Claritin', 'claritin-b136-tablets-30.jpg');
+assertExactCarton('claritin-b136-tablets-70', 'Claritin', 'claritin-b136-tablets-70.jpg');
+assertExactCarton(
+  'claritin-b136-tablets-100-mcc',
+  'Claritin',
+  'claritin-b136-tablets-100-mcc.jpg',
+);
+assertExactCarton('claritin-b136-liquigels-30', 'Claritin', 'claritin-b136-liquigels-30.jpg');
+assertExactCarton('claritin-b136-liquigels-60', 'Claritin', 'claritin-b136-liquigels-60.jpg');
+assertExactCarton(
+  'claritin-b136-chew-bubblegum-30',
+  'Claritin',
+  'claritin-b136-chew-bubblegum-30.jpg',
+);
+assertExactCarton(
+  'claritin-b136-chew-dye-free-grape-10',
+  'Claritin',
+  'claritin-b136-chew-dye-free-grape-10.jpg',
+);
+assertExactCarton(
+  'claritin-b136-chew-dye-free-grape-30',
+  'Claritin',
+  'claritin-b136-chew-dye-free-grape-30.jpg',
+);
+assertExactCarton(
+  'claritin-b136-chew-dye-free-grape-60',
+  'Claritin',
+  'claritin-b136-chew-dye-free-grape-60.jpg',
+);
+assertExactCarton(
+  'claritin-b136-chew-max-grape-30',
+  'Claritin',
+  'claritin-b136-chew-max-grape-30.jpg',
+);
+assertExactCarton(
+  'claritin-b136-kids-reditab-30',
+  'Claritin',
+  'claritin-b136-kids-reditab-30.jpg',
+);
+assertExactCarton(
+  'claritin-b136-kids-syrup-4oz',
+  'Claritin',
+  'claritin-b136-kids-syrup-4oz.jpg',
+);
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
@@ -15648,6 +15777,12 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b112-childrens-allergy-relief-3685', 'goodsense-b112-childrens-allergy-relief-3685', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b112-effervescent-cold-relief-81e2', 'goodsense-b112-effervescent-cold-relief-81e2', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b112-product-7da9', 'goodsense-b112-product-7da9', 'GoodSense', 'goodsense-mark.png'],
+  ['claritin-b136-tablets-45', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-tablets-50', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-liquigels-10', 'claritin-b136-liquigels', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-chew-bubblegum-10', 'claritin-b136-chew-bubblegum', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-chew-cool-mint-8', 'claritin-b136-chew-cool-mint', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b136-d24-ec-5', 'claritin-b136-d24-ethylcellulose', 'Claritin', 'claritin-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
