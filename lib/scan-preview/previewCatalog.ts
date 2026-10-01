@@ -1278,6 +1278,41 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // PM caplets. The 50-count bottle is a different face.
   'goodsense-b109-pain-relief-pm-8818': brandMark('goodsense-mark.png'),
   'goodsense-b109-pain-relief-pm-8818-100': brandMark('goodsense-mark.png'),
+  // Daytime photo run — tried the SKU. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark.
+  // Per-id only.
+  // Cherry 2 mg lozenge. 24 and 27 are inner vials.
+  // Retail cartons are 72 (3x24) and 108 (4x27). Not glued.
+  'goodsense-b110-nicotine-8be0': brandMark('goodsense-mark.png'),
+  'goodsense-b110-nicotine-8be0-27': brandMark('goodsense-mark.png'),
+  // Peppermint 4 mg lozenge. 24 is the inner of a 72 or 144 carton.
+  // 27 is the inner of a 216 carton. Not glued.
+  'goodsense-b110-nicotine-d940': brandMark('goodsense-mark.png'),
+  'goodsense-b110-nicotine-d940-27': brandMark('goodsense-mark.png'),
+  // NDC 50090-7259 is an A-S Medication Solutions repack, not a
+  // GoodSense retail 28 g tube.
+  'goodsense-b110-first-aid-antibiotic-5acb': brandMark('goodsense-mark.png'),
+  // Peppermint 2 mg lozenge. Same inner-vial counts. Not the 72 or 216.
+  'goodsense-b110-nicotine-d940-b': brandMark('goodsense-mark.png'),
+  'goodsense-b110-nicotine-d940-b-27': brandMark('goodsense-mark.png'),
+  // Cherry 4 mg. 27 is the inner vial. Retail carton is 108 (4x27).
+  'goodsense-b110-nicotine-8be0-b': brandMark('goodsense-mark.png'),
+  // NDC 68258 repacks. Flavor is not named. No retail front.
+  'goodsense-b110-nicotine-47c2': brandMark('goodsense-mark.png'),
+  'goodsense-b110-nicotine-47c2-b': brandMark('goodsense-mark.png'),
+  // Original 4 mg gum. 20 and 50 have their own faces.
+  // 110 is not a current FDA package. 220 and 310 faces were not retrieved.
+  'goodsense-b111-nicotine-7972-110': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-7972-220': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-7972-310': brandMark('goodsense-mark.png'),
+  // Arctic Mint 4 mg. The 110-count box is a different face.
+  'goodsense-b111-nicotine-aef5-220': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nicotine-aef5-310': brandMark('goodsense-mark.png'),
+  // Infants' grape 60 mL started 2026-05-07. Retrieved faces were a
+  // Good Neighbor box and a label flat. No GoodSense 60 mL carton.
+  'goodsense-b111-infants-pain-and-fever-86ed': brandMark('goodsense-mark.png'),
+  // Fruit coated 4 mg. FDA lists the 100-count only. No 20-count face.
+  'goodsense-b111-nicotine-4ba2': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6739,6 +6774,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b109-pain-relief-pm-8818-50': catalogShot(
     'goodsense-b109-pain-relief-pm-8818-50.jpg',
   ),
+  // Daytime photo run. Retail pack fronts. Per-id.
+  // Original uncoated nicotine gum 4 mg, 20 pieces. UPC 301130170602.
+  // Not the 50, 110, 220, or 310.
+  'goodsense-b111-nicotine-7972': catalogShot(
+    'goodsense-b111-nicotine-7972.jpg',
+  ),
+  // Same original gum, 50 pieces. UPC 301130170718. Not the 20.
+  'goodsense-b111-nicotine-7972-50': catalogShot(
+    'goodsense-b111-nicotine-7972-50.jpg',
+  ),
+  // Arctic Mint uncoated nicotine gum 4 mg, 110 pieces. UPC 301130422251.
+  // Not the 220 or the 310.
+  'goodsense-b111-nicotine-aef5': catalogShot(
+    'goodsense-b111-nicotine-aef5.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -6919,6 +6969,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b109-pain-relief-3644-50',
   'goodsense-b109-pain-relief-3644-100',
   'goodsense-b109-pain-relief-3644-400',
+  // Original 4 mg gum counts. Do not inherit the 20-count box.
+  'goodsense-b111-nicotine-7972-50',
+  'goodsense-b111-nicotine-7972-110',
+  'goodsense-b111-nicotine-7972-220',
+  'goodsense-b111-nicotine-7972-310',
+  // Arctic Mint 4 mg counts. Do not inherit the 110-count box.
+  'goodsense-b111-nicotine-aef5-220',
+  'goodsense-b111-nicotine-aef5-310',
 ]);
 
 export function previewOverlayImage(
@@ -13569,6 +13627,82 @@ for (const shared of [
     || !pmFifty.verifiedSku
   ) {
     throw new Error('50-count PM must keep its own carton');
+  }
+}
+assertExactCarton(
+  'goodsense-b111-nicotine-7972',
+  'GoodSense',
+  'goodsense-b111-nicotine-7972.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-7972-50',
+  'GoodSense',
+  'goodsense-b111-nicotine-7972-50.jpg',
+);
+assertExactCarton(
+  'goodsense-b111-nicotine-aef5',
+  'GoodSense',
+  'goodsense-b111-nicotine-aef5.jpg',
+);
+for (const shared of [
+  'goodsense-b110-nicotine-8be0',
+  'goodsense-b110-nicotine-8be0-27',
+  'goodsense-b110-nicotine-d940',
+  'goodsense-b110-nicotine-d940-27',
+  'goodsense-b110-first-aid-antibiotic-5acb',
+  'goodsense-b110-nicotine-d940-b',
+  'goodsense-b110-nicotine-d940-b-27',
+  'goodsense-b110-nicotine-8be0-b',
+  'goodsense-b110-nicotine-47c2',
+  'goodsense-b110-nicotine-47c2-b',
+  'goodsense-b111-nicotine-7972-110',
+  'goodsense-b111-nicotine-7972-220',
+  'goodsense-b111-nicotine-7972-310',
+  'goodsense-b111-nicotine-aef5-220',
+  'goodsense-b111-nicotine-aef5-310',
+  'goodsense-b111-infants-pain-and-fever-86ed',
+  'goodsense-b111-nicotine-4ba2',
+] as const) {
+  assertBrandMark(shared, 'GoodSense', 'goodsense-mark.png');
+}
+{
+  const fifty = previewOverlayImage({
+    id: 'goodsense-b111-nicotine-7972-50',
+    formulaId: 'goodsense-b111-nicotine-7972',
+    brand: 'GoodSense',
+  });
+  if (
+    !fifty?.url.endsWith('/goodsense-b111-nicotine-7972-50.jpg')
+    || !fifty.verifiedSku
+  ) {
+    throw new Error('50-count original gum must keep its own carton');
+  }
+}
+for (const shared of [
+  'goodsense-b111-nicotine-7972-110',
+  'goodsense-b111-nicotine-7972-220',
+  'goodsense-b111-nicotine-7972-310',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b111-nicotine-7972',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the GoodSense mark, not the 20-count box`);
+  }
+}
+for (const shared of [
+  'goodsense-b111-nicotine-aef5-220',
+  'goodsense-b111-nicotine-aef5-310',
+] as const) {
+  const image = previewOverlayImage({
+    id: shared,
+    formulaId: 'goodsense-b111-nicotine-aef5',
+    brand: 'GoodSense',
+  });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${shared} must stay the GoodSense mark, not the 110-count box`);
   }
 }
 
