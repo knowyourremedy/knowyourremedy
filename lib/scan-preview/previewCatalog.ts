@@ -1377,6 +1377,39 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // No 20-count face. 27 is the inner container of a 108 carton.
   'goodsense-b112-nicotine-bb29': brandMark('goodsense-mark.png'),
   'goodsense-b112-nicotine-bb29-27': brandMark('goodsense-mark.png'),
+  // Daytime photo run — tried the SKU. No matching 3D pack.
+  // Do not glue a sibling count. Official GoodSense wordmark. Per-id only.
+  // Cherry 2 mg. NDC 0113-7020-00 is 27 in 1 container. The retail
+  // carton is a 5-container pack. Not glued.
+  'goodsense-b112-nicotine-8a46': brandMark('goodsense-mark.png'),
+  // Cherry ice 4 mg. NDC 0113-7031-27 is 27 in 1 container. Not the 5-pack.
+  'goodsense-b112-nicotine-8a46-b': brandMark('goodsense-mark.png'),
+  // Mint 2 mg. NDC 0113-0734-60 is a 20-count carton, but the only
+  // retrieved face is a 2D dieline. The live 72-count mint is a different box.
+  'goodsense-b112-nicotine-bb29-b': brandMark('goodsense-mark.png'),
+  // Same mint 2 mg. NDC 0113-0734-01 is 27 in 1 container. Not the 20 or the 72.
+  'goodsense-b112-nicotine-bb29-b-27': brandMark('goodsense-mark.png'),
+  // Wild berry coated 2 mg, 20 in 1 container. Perrigo's 20-count mini
+  // is mint. Do not glue the mint tube.
+  'goodsense-b113-nicotine-7ac8': brandMark('goodsense-mark.png'),
+  // 80-count Ibuprofen PM (NDC 0113-0050-27) marketing ended 2015-05-16.
+  // Not the 20 or the 40.
+  'goodsense-b113-ibuprofen-pm-b55e-80': brandMark('goodsense-mark.png'),
+  // NDC 50090-7255 is an A-S Medication Solutions repack of the cream.
+  // The live Perrigo face is the ointment. Do not glue it.
+  'goodsense-b113-anti-itch-70fd': brandMark('goodsense-mark.png'),
+  // NDC 68258-2994 is a Dispensing Solutions repack of the 24-count chewable.
+  // No GoodSense retail 24-count front.
+  'goodsense-b113-ibuprofen-6c80': brandMark('goodsense-mark.png'),
+  // Cherry zinc 18-count. DailyMed face is a flat label. NDC 75981-011-18
+  // is inactivated. No 3D box retrieved.
+  'goodsense-b113-cherry-zinc-lozenges-5be3': brandMark('goodsense-mark.png'),
+  // 70-count guaifenesin 600 mg. The 200-count bottle is a different face.
+  'welmate-b87-guaifenesin-er-70': brandMark('welmate-mark.png'),
+  // Maximum Strength Mucus DM 50. Not the 98-count bottle.
+  'welmate-b87-mucus-dm-406': brandMark('welmate-mark.png'),
+  // Same formula, 100 count. Not the 50 and not the 98.
+  'welmate-b87-mucus-dm-406-100': brandMark('welmate-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -6991,6 +7024,40 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b112-aspirin-16c3': catalogShot(
     'goodsense-b112-aspirin-16c3.jpg',
   ),
+  // Daytime photo run. Retail pack fronts. Per-id.
+  // Lidocaine 4% roll-on, 2.5 fl oz. NDC 50804-187-02 is the 71 g bottle.
+  'goodsense-b112-pain-relief-roll-on-0885': catalogShot(
+    'goodsense-b112-pain-relief-roll-on-0885.jpg',
+  ),
+  // Diclofenac sodium 1% gel, 3.53 oz (100 g). Not the 5.29 oz (150 g).
+  'goodsense-b112-arthritis-pain-99d8': catalogShot(
+    'goodsense-b112-arthritis-pain-99d8.jpg',
+  ),
+  // Ibuprofen PM coated caplets, 20 count. Not the 40. Not the discontinued 80.
+  'goodsense-b113-ibuprofen-pm-b55e': catalogShot(
+    'goodsense-b113-ibuprofen-pm-b55e.jpg',
+  ),
+  // Same Ibuprofen PM, 40 coated caplets. Not the 20.
+  'goodsense-b113-ibuprofen-pm-b55e-40': catalogShot(
+    'goodsense-b113-ibuprofen-pm-b55e-40.jpg',
+  ),
+  // Phenylephrine HCl 10 mg, 200 tablets. UPC 373581204021.
+  'welmate-b87-phenylephrine': catalogShot(
+    'welmate-b87-phenylephrine.jpg',
+  ),
+  // Guaifenesin 600 mg extended-release, 200 tablets. Not the 70.
+  'welmate-b87-guaifenesin-er': catalogShot(
+    'welmate-b87-guaifenesin-er.jpg',
+  ),
+  // Maximum Strength Mucus DM, guaifenesin 1200 mg / dextromethorphan 60 mg,
+  // 98 tablets. Not the 50 or the 100.
+  'welmate-b87-mucus-dm-405': catalogShot(
+    'welmate-b87-mucus-dm-405.jpg',
+  ),
+  // Guaifenesin 1200 mg extended-release, 100 tablets. Not the 35.
+  'welmate-b90-guaifenesin-1200': catalogShot(
+    'welmate-b90-guaifenesin-1200.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7215,6 +7282,13 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b112-nicotine-c5cd-40',
   // Icy mint coated lozenge 2 mg. 40 is not the 20-count box.
   'goodsense-b112-nicotine-c5cd-b-40',
+  // Ibuprofen PM 80-count is discontinued. Do not inherit the 20 or the 40.
+  'goodsense-b113-ibuprofen-pm-b55e-80',
+  // Guaifenesin 600 mg 70-count is not the 200-count bottle.
+  'welmate-b87-guaifenesin-er-70',
+  // Guaifenesin 1200 mg 35-count is not the 100-count bottle.
+  // Stays a letter until that count is attempted.
+  'welmate-b90-guaifenesin-1200-35',
 ]);
 
 export function previewOverlayImage(
@@ -14156,6 +14230,46 @@ assertExactCarton(
   'GoodSense',
   'goodsense-b112-aspirin-16c3.jpg',
 );
+assertExactCarton(
+  'goodsense-b112-pain-relief-roll-on-0885',
+  'GoodSense',
+  'goodsense-b112-pain-relief-roll-on-0885.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-arthritis-pain-99d8',
+  'GoodSense',
+  'goodsense-b112-arthritis-pain-99d8.jpg',
+);
+assertExactCarton(
+  'goodsense-b113-ibuprofen-pm-b55e',
+  'GoodSense',
+  'goodsense-b113-ibuprofen-pm-b55e.jpg',
+);
+assertExactCarton(
+  'goodsense-b113-ibuprofen-pm-b55e-40',
+  'GoodSense',
+  'goodsense-b113-ibuprofen-pm-b55e-40.jpg',
+);
+assertExactCarton(
+  'welmate-b87-phenylephrine',
+  'WELMATE',
+  'welmate-b87-phenylephrine.jpg',
+);
+assertExactCarton(
+  'welmate-b87-guaifenesin-er',
+  'WELMATE',
+  'welmate-b87-guaifenesin-er.jpg',
+);
+assertExactCarton(
+  'welmate-b87-mucus-dm-405',
+  'WELMATE',
+  'welmate-b87-mucus-dm-405.jpg',
+);
+assertExactCarton(
+  'welmate-b90-guaifenesin-1200',
+  'WELMATE',
+  'welmate-b90-guaifenesin-1200.jpg',
+);
 for (const [id, formulaId] of [
   ['goodsense-b111-childrens-pain-and-fever-237e', 'goodsense-b111-childrens-pain-and-fever-237e'],
   ['goodsense-b111-childrens-pain-and-fever-237e-148-ml', 'goodsense-b111-childrens-pain-and-fever-237e'],
@@ -14170,10 +14284,39 @@ for (const [id, formulaId] of [
   ['goodsense-b112-nicotine-2f22', 'goodsense-b112-nicotine-2f22'],
   ['goodsense-b112-nicotine-bb29', 'goodsense-b112-nicotine-bb29'],
   ['goodsense-b112-nicotine-bb29-27', 'goodsense-b112-nicotine-bb29'],
+  ['goodsense-b112-nicotine-8a46', 'goodsense-b112-nicotine-8a46'],
+  ['goodsense-b112-nicotine-8a46-b', 'goodsense-b112-nicotine-8a46-b'],
+  ['goodsense-b112-nicotine-bb29-b', 'goodsense-b112-nicotine-bb29-b'],
+  ['goodsense-b112-nicotine-bb29-b-27', 'goodsense-b112-nicotine-bb29-b'],
+  ['goodsense-b113-nicotine-7ac8', 'goodsense-b113-nicotine-7ac8'],
+  ['goodsense-b113-ibuprofen-pm-b55e-80', 'goodsense-b113-ibuprofen-pm-b55e'],
+  ['goodsense-b113-anti-itch-70fd', 'goodsense-b113-anti-itch-70fd'],
+  ['goodsense-b113-ibuprofen-6c80', 'goodsense-b113-ibuprofen-6c80'],
+  ['goodsense-b113-cherry-zinc-lozenges-5be3', 'goodsense-b113-cherry-zinc-lozenges-5be3'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
   if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
     throw new Error(`${id} must stay the GoodSense mark, not a sibling carton`);
+  }
+}
+for (const [id, formulaId] of [
+  ['welmate-b87-guaifenesin-er-70', 'welmate-b87-guaifenesin-er'],
+  ['welmate-b87-mucus-dm-406', 'welmate-b87-mucus-dm-406'],
+  ['welmate-b87-mucus-dm-406-100', 'welmate-b87-mucus-dm-406'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'WELMATE' });
+  if (!image?.url.endsWith('/welmate-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the WELMATE mark, not a sibling carton`);
+  }
+}
+{
+  const stillLetter = previewOverlayImage({
+    id: 'welmate-b90-guaifenesin-1200-35',
+    formulaId: 'welmate-b90-guaifenesin-1200',
+    brand: 'WELMATE',
+  });
+  if (!stillLetter?.url.startsWith('data:image/svg+xml') || stillLetter.verifiedSku) {
+    throw new Error('welmate-b90-guaifenesin-1200-35 must stay a letter, not the 100-count bottle');
   }
 }
 for (const [id, formulaId] of [
