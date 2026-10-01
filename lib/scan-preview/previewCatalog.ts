@@ -1448,6 +1448,31 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-mucus-dm-eb2d-90': brandMark('goodsense-mark.png'),
   'goodsense-b109-mucus-dm-eb2d-b': brandMark('goodsense-mark.png'),
   'goodsense-b109-mucus-er-6e83': brandMark('goodsense-mark.png'),
+  // Night photo run batch 2 — tried each SKU. DailyMed faces are 2D
+  // dielines or one shared bottle wrap. Retailer 3D packs were not
+  // retrieved. Do not glue a 237 mL wrap onto 177 / 296 / 354, or a
+  // 118 mL wrap onto 237. Official GoodSense mark already on disk.
+  // Per-id only.
+  'goodsense-b109-daytime-ffcd': brandMark('goodsense-mark.png'),
+  'goodsense-b109-severe-day-time-cold-and-flu-9538': brandMark('goodsense-mark.png'),
+  'goodsense-b109-mucus-er-7f6c': brandMark('goodsense-mark.png'),
+  'goodsense-b109-tussin-dm-dda8': brandMark('goodsense-mark.png'),
+  'goodsense-b111-daytime-df13': brandMark('goodsense-mark.png'),
+  'goodsense-b111-daytime-d604': brandMark('goodsense-mark.png'),
+  'goodsense-b111-daytime-d604-237-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-daytime-d604-296-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-daytime-d604-354-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-severe-daytime-cold-and-flu-c644': brandMark('goodsense-mark.png'),
+  'goodsense-b111-severe-daytime-cold-and-flu-c644-354-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-tussin-dfea': brandMark('goodsense-mark.png'),
+  'goodsense-b111-childrens-cold-and-cough-4184': brandMark('goodsense-mark.png'),
+  'goodsense-b111-childrens-cold-cough-4184': brandMark('goodsense-mark.png'),
+  'goodsense-b111-cherry-cough-drops-f2a6': brandMark('goodsense-mark.png'),
+  'goodsense-b111-honey-lemon-cough-drops-9e75': brandMark('goodsense-mark.png'),
+  'goodsense-b111-sf-honey-lemon-cough-drops-c59c': brandMark('goodsense-mark.png'),
+  'goodsense-b111-tussin-dm-712a': brandMark('goodsense-mark.png'),
+  'goodsense-b111-tussin-dm-712a-237-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-day-time-cold-and-flu-168b': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7426,6 +7451,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b109-mucus-dm-eb2d-60',
   'goodsense-b109-mucus-dm-eb2d-90',
   'goodsense-b109-mucus-dm-eb2d-b',
+  // Daytime liquid sizes. Do not inherit one bottle onto another.
+  'goodsense-b111-daytime-d604-237-ml',
+  'goodsense-b111-daytime-d604-296-ml',
+  'goodsense-b111-daytime-d604-354-ml',
+  // Severe daytime 354 mL is not the 237 mL.
+  'goodsense-b111-severe-daytime-cold-and-flu-c644-354-ml',
+  // Tussin DM 237 mL is not the 118 mL.
+  'goodsense-b111-tussin-dm-712a-237-ml',
 ]);
 
 export function previewOverlayImage(
@@ -14581,6 +14614,26 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b109-mucus-dm-eb2d-90', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b109-mucus-dm-eb2d-b', 'goodsense-b109-mucus-dm-eb2d', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b109-mucus-er-6e83', 'goodsense-b109-mucus-er-6e83', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-daytime-ffcd', 'goodsense-b109-daytime-ffcd', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-severe-day-time-cold-and-flu-9538', 'goodsense-b109-severe-day-time-cold-and-flu-9538', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-mucus-er-7f6c', 'goodsense-b109-mucus-er-7f6c', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-tussin-dm-dda8', 'goodsense-b109-tussin-dm-dda8', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-daytime-df13', 'goodsense-b111-daytime-df13', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-daytime-d604', 'goodsense-b111-daytime-d604', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-daytime-d604-237-ml', 'goodsense-b111-daytime-d604', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-daytime-d604-296-ml', 'goodsense-b111-daytime-d604', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-daytime-d604-354-ml', 'goodsense-b111-daytime-d604', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-severe-daytime-cold-and-flu-c644', 'goodsense-b111-severe-daytime-cold-and-flu-c644', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-severe-daytime-cold-and-flu-c644-354-ml', 'goodsense-b111-severe-daytime-cold-and-flu-c644', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-tussin-dfea', 'goodsense-b111-tussin-dfea', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-childrens-cold-and-cough-4184', 'goodsense-b111-childrens-cold-and-cough-4184', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-childrens-cold-cough-4184', 'goodsense-b111-childrens-cold-cough-4184', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-cherry-cough-drops-f2a6', 'goodsense-b111-cherry-cough-drops-f2a6', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-honey-lemon-cough-drops-9e75', 'goodsense-b111-honey-lemon-cough-drops-9e75', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-sf-honey-lemon-cough-drops-c59c', 'goodsense-b111-sf-honey-lemon-cough-drops-c59c', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-tussin-dm-712a', 'goodsense-b111-tussin-dm-712a', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-tussin-dm-712a-237-ml', 'goodsense-b111-tussin-dm-712a', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-day-time-cold-and-flu-168b', 'goodsense-b111-day-time-cold-and-flu-168b', 'GoodSense', 'goodsense-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
