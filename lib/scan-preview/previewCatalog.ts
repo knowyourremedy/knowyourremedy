@@ -1487,6 +1487,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b113-cough-dm-d543-148-ml': brandMark('goodsense-mark.png'),
   'goodsense-b113-tussin-dm-max-26d0': brandMark('goodsense-mark.png'),
   'goodsense-b113-tussin-dm-max-26d0-237-ml': brandMark('goodsense-mark.png'),
+  // Allergies night run 2026-10-01 3:00 AM PT batch 1.
+  // Tried each SKU. No matching 3D pack. Official A+Health mark
+  // already on disk. Per-id only.
+  // 48-count is 4 blister cards. DailyMed carton.jpg on this setid
+  // is the 150-tablet box. Do not glue it.
+  'aplushealth-b93-dph-50-48': brandMark('aplus-health-mark.png'),
+  // 400-count cetirizine. DailyMed files are flat label art
+  // (label.jpg / label2.jpg), not a bottle. Amazon images were
+  // not retrieved. Do not glue a label flat.
+  'aplushealth-b93-cetirizine-10-400': brandMark('aplus-health-mark.png'),
+  // 40 softgels share the yellow #6 list. The DailyMed carton is
+  // the 25-count. Do not glue it.
+  'aplushealth-b94-cetirizine-40': brandMark('aplus-health-mark.png'),
+  // 65 softgels, yellow #6. Not the 25-count carton and not the
+  // dye-free 65-count bottle.
+  'aplushealth-b94-cetirizine-65': brandMark('aplus-health-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7216,6 +7232,77 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b103-night-cold-192': catalogShot(
     'healtha2z-b103-night-cold-192.jpg',
   ),
+  // Allergies night run 2026-10-01 3:00 AM PT batch 1.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // WELMATE faces are the wellspringmeds.com hero for that count.
+  // A+Health faces are the DailyMed 3D pack for that count.
+  // Cetirizine HCl 10 mg, 100 tablets. NDC 73581-202-01.
+  // Shop barcode field was empty. Bottle face prints 100 tablets.
+  // Not the 500.
+  'welmate-b87-cetirizine': catalogShot('welmate-b87-cetirizine.jpg'),
+  // Same cetirizine, 500 tablets. UPC 373581202058. Not the 100.
+  'welmate-b87-cetirizine-500': catalogShot(
+    'welmate-b87-cetirizine-500.jpg',
+  ),
+  // Fexofenadine HCl 180 mg, 100 tablets. UPC 373581011803.
+  // Not the 200, the 40, or a 60 mg bottle.
+  'welmate-b87-fexofenadine': catalogShot('welmate-b87-fexofenadine.jpg'),
+  // Same 180 mg, 200 tablets. UPC 373581000210. Not the 100.
+  'welmate-b87-fexofenadine-180-200': catalogShot(
+    'welmate-b87-fexofenadine-180-200.jpg',
+  ),
+  // Same 180 mg, 40 tablets. UPC 373581000623. Not the 100 or the 200.
+  'welmate-b87-fexofenadine-180-40': catalogShot(
+    'welmate-b87-fexofenadine-180-40.jpg',
+  ),
+  // Fexofenadine HCl 60 mg, 100 tablets. UPC 373581103102.
+  // Not a 180 mg bottle.
+  'welmate-b87-fexofenadine-60-100': catalogShot(
+    'welmate-b87-fexofenadine-60-100.jpg',
+  ),
+  // Same 60 mg, 200 tablets. UPC 373581000272. Not the 100.
+  'welmate-b87-fexofenadine-60-200': catalogShot(
+    'welmate-b87-fexofenadine-60-200.jpg',
+  ),
+  // Same 60 mg, 60 tablets. UPC 373581000616. Not the 100 or the 200.
+  'welmate-b87-fexofenadine-60-60': catalogShot(
+    'welmate-b87-fexofenadine-60-60.jpg',
+  ),
+  // Loratadine 10 mg, 365 tablets. UPC 373581203369. Not the 100.
+  'welmate-b87-loratadine': catalogShot('welmate-b87-loratadine.jpg'),
+  // Same loratadine, 100 tablets. UPC 373581203017. Not the 365.
+  'welmate-b87-loratadine-100': catalogShot(
+    'welmate-b87-loratadine-100.jpg',
+  ),
+  // Diphenhydramine HCl 50 mg, 1000 capsules. UPC 373581000302.
+  'welmate-b88-diphenhydramine-1000': catalogShot(
+    'welmate-b88-diphenhydramine-1000.jpg',
+  ),
+  // Levocetirizine 5 mg, 180 tablets. UPC 373581201808.
+  // Not the 360-count page.
+  'welmate-b90-levocetirizine-180': catalogShot(
+    'welmate-b90-levocetirizine-180.jpg',
+  ),
+  // Diphenhydramine HCl 25 mg, 600 tablets. DailyMed 600ct-bottle-2
+  // on setid 23750ea1-18a4-bfa7-e063-6394a90afd09. UPC 369452444313.
+  'aplushealth-b93-dph-25-600': catalogShot(
+    'aplushealth-b93-dph-25-600.jpg',
+  ),
+  // Diphenhydramine HCl 50 mg, 150 tablets. DailyMed carton on
+  // setid 3c1953a1-32e9-6c81-e063-6294a90a9fa2. Not the 48-count blister.
+  'aplushealth-b93-dph-50-150': catalogShot(
+    'aplushealth-b93-dph-50-150.jpg',
+  ),
+  // Cetirizine HCl 10 mg dye-free, 65 softgels. DailyMed image001
+  // on setid 4fe8f764-a8e2-a432-e063-6294a90a33b0. Not the yellow #6 bottle.
+  'aplushealth-b94-cetirizine-dyefree': catalogShot(
+    'aplushealth-b94-cetirizine-dyefree.jpg',
+  ),
+  // Cetirizine HCl 10 mg, 25 softgels. DailyMed carton on setid
+  // 2c2c4828-0479-4ff3-b2b0-dde5fa74efaf. Not the 40 or the 65.
+  'aplushealth-b94-cetirizine-yellow6': catalogShot(
+    'aplushealth-b94-cetirizine-yellow6.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7473,6 +7560,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b111-severe-daytime-cold-and-flu-c644-354-ml',
   // Tussin DM 237 mL is not the 118 mL.
   'goodsense-b111-tussin-dm-712a-237-ml',
+  // Allergies night run. Shared-formula counts. Do not inherit a
+  // sibling bottle onto a different count or strength.
+  'welmate-b87-cetirizine-500',
+  'welmate-b87-fexofenadine-180-200',
+  'welmate-b87-fexofenadine-180-40',
+  'welmate-b87-fexofenadine-60-100',
+  'welmate-b87-fexofenadine-60-200',
+  'welmate-b87-fexofenadine-60-60',
+  'welmate-b87-loratadine-100',
+  // 48-count blister is not the 150-tablet carton.
+  'aplushealth-b93-dph-50-48',
+  // 40 and 65 yellow #6 softgels are not the 25-count carton.
+  'aplushealth-b94-cetirizine-40',
+  'aplushealth-b94-cetirizine-65',
 ]);
 
 export function previewOverlayImage(
@@ -14609,6 +14710,89 @@ assertExactCarton(
   'HealthA2Z',
   'healtha2z-b103-night-cold-192.jpg',
 );
+assertExactCarton('welmate-b87-cetirizine', 'WELMATE', 'welmate-b87-cetirizine.jpg');
+assertExactCarton(
+  'welmate-b87-cetirizine-500',
+  'WELMATE',
+  'welmate-b87-cetirizine-500.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine',
+  'WELMATE',
+  'welmate-b87-fexofenadine.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine-180-200',
+  'WELMATE',
+  'welmate-b87-fexofenadine-180-200.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine-180-40',
+  'WELMATE',
+  'welmate-b87-fexofenadine-180-40.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine-60-100',
+  'WELMATE',
+  'welmate-b87-fexofenadine-60-100.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine-60-200',
+  'WELMATE',
+  'welmate-b87-fexofenadine-60-200.jpg',
+);
+assertExactCarton(
+  'welmate-b87-fexofenadine-60-60',
+  'WELMATE',
+  'welmate-b87-fexofenadine-60-60.jpg',
+);
+assertExactCarton('welmate-b87-loratadine', 'WELMATE', 'welmate-b87-loratadine.jpg');
+assertExactCarton(
+  'welmate-b87-loratadine-100',
+  'WELMATE',
+  'welmate-b87-loratadine-100.jpg',
+);
+assertExactCarton(
+  'welmate-b88-diphenhydramine-1000',
+  'WELMATE',
+  'welmate-b88-diphenhydramine-1000.jpg',
+);
+assertExactCarton(
+  'welmate-b90-levocetirizine-180',
+  'WELMATE',
+  'welmate-b90-levocetirizine-180.jpg',
+);
+assertExactCarton(
+  'aplushealth-b93-dph-25-600',
+  'A+Health',
+  'aplushealth-b93-dph-25-600.jpg',
+);
+assertExactCarton(
+  'aplushealth-b93-dph-50-150',
+  'A+Health',
+  'aplushealth-b93-dph-50-150.jpg',
+);
+assertExactCarton(
+  'aplushealth-b94-cetirizine-dyefree',
+  'A+Health',
+  'aplushealth-b94-cetirizine-dyefree.jpg',
+);
+assertExactCarton(
+  'aplushealth-b94-cetirizine-yellow6',
+  'A+Health',
+  'aplushealth-b94-cetirizine-yellow6.jpg',
+);
+for (const [id, formulaId] of [
+  ['aplushealth-b93-dph-50-48', 'aplushealth-b93-dph-50'],
+  ['aplushealth-b93-cetirizine-10-400', 'aplushealth-b93-cetirizine-10-tab'],
+  ['aplushealth-b94-cetirizine-40', 'aplushealth-b94-cetirizine-yellow6'],
+  ['aplushealth-b94-cetirizine-65', 'aplushealth-b94-cetirizine-yellow6'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'A+Health' });
+  if (!image?.url.endsWith('/aplus-health-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the A+Health mark, not a sibling carton`);
+  }
+}
 for (const [id, formulaId, brand, file] of [
   ['healtha2z-b103-day-cold-8', 'healtha2z-b103-day-cold-192', 'HealthA2Z', 'healtha2z-mark.png'],
   ['healtha2z-b103-night-cold-8', 'healtha2z-b103-night-cold-192', 'HealthA2Z', 'healtha2z-mark.png'],
