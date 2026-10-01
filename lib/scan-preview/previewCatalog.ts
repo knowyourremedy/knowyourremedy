@@ -1519,6 +1519,40 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'healtha2z-b96-loratadine-10-15': brandMark('healtha2z-mark.png'),
   // 6 packs of the 5-tablet card (30). Same single-card hero.
   'healtha2z-b96-loratadine-10-30-blister': brandMark('healtha2z-mark.png'),
+  // Allergies night run 2026-10-01 4:15 AM PT batch 2.
+  // Tried each SKU. No matching 3D pack. Official mark already
+  // on disk. Per-id only.
+  // 180 caplets. The brand page hero is the 90-count bottle
+  // (NDC 69168-450-82). DailyMed file is one flat label that
+  // prints both 90 and 180. Do not glue either.
+  'healtha2z-b99-fexo-180-paraffin-180': brandMark('healtha2z-mark.png'),
+  // Timely loratadine 365. DailyMed file is a flat bottle label.
+  'timecap-b106-loratadine-10': brandMark('timecap-mark.png'),
+  // Timely cetirizine 10 mg, 100. DailyMed file is a flat label.
+  'timecap-b106-cetirizine-10': brandMark('timecap-mark.png'),
+  // Same 10 mg, 200 count. DailyMed file is a flat label.
+  'timecap-b106-cetirizine-10-200': brandMark('timecap-mark.png'),
+  // Same 10 mg, 500 count. DailyMed file is a flat label.
+  // The 365-count bottle is a different face.
+  'timecap-b106-cetirizine-10-500': brandMark('timecap-mark.png'),
+  // Timely cetirizine 5 mg, 100. DailyMed file is a flat label
+  // named for a 10 mg bottle. Do not glue it.
+  'timecap-b106-cetirizine-5': brandMark('timecap-mark.png'),
+  // Timely diphenhydramine 25 mg, 100 caplets. DailyMed files
+  // are a flat label and an unfolded IFC dieline.
+  'timecap-b106-dph-25': brandMark('timecap-mark.png'),
+  // Same caplet, 24 count. IFC dieline and a flat label.
+  'timecap-b106-dph-25-24': brandMark('timecap-mark.png'),
+  // Same caplet, 365 count. DailyMed file is a flat label.
+  'timecap-b106-dph-25-365': brandMark('timecap-mark.png'),
+  // GoodSense levocetirizine 80 count. The only 3D carton is
+  // the 35-count. Do not glue it.
+  'goodsense-b109-levocetirizine-7ba9-80': brandMark('goodsense-mark.png'),
+  // GoodSense loratadine 40 count. No 40-count face. The shared
+  // DailyMed file is a flat 30-count label.
+  'goodsense-b109-allergy-relief-78a7-40': brandMark('goodsense-mark.png'),
+  // GoodSense loratadine 45 count. DailyMed file is a flat label.
+  'goodsense-b109-allergy-relief-78a7-45': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7480,6 +7514,42 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b99-fexo-180-paraffin': catalogShot(
     'healtha2z-b99-fexo-180-paraffin.jpg',
   ),
+  // Allergies night run 2026-10-01 4:15 AM PT batch 2.
+  // Exact pack faces. Per-id only. verifiedSku.
+  // Fexofenadine HCl 60 mg, 200 coated caplets. NDC 69168-437-98.
+  'healtha2z-b101-fexo-60': catalogShot('healtha2z-b101-fexo-60.jpg'),
+  // Same 60 mg, 120 caplets. NDC 69168-437-06. Not the 200.
+  'healtha2z-b101-fexo-60-120': catalogShot(
+    'healtha2z-b101-fexo-60-120.jpg',
+  ),
+  // Children's diphenhydramine 12.5 mg/5 mL, 8 fl oz (237 mL).
+  // Dye-free bubble gum. FPA164.
+  'healtha2z-b102-kids-diphen-liquid': catalogShot(
+    'healtha2z-b102-kids-diphen-liquid.jpg',
+  ),
+  // Azelastine nasal spray, 2 bottles, 240 sprays. Not a single bottle.
+  'healtha2z-b103-azelastine-240': catalogShot(
+    'healtha2z-b103-azelastine-240.jpg',
+  ),
+  // Timely cetirizine HCl 10 mg, 365 tablets. UPC 349483692655.
+  // Not the 100, 200, or 500.
+  'timecap-b106-cetirizine-10-365': catalogShot(
+    'timecap-b106-cetirizine-10-365.jpg',
+  ),
+  // GoodSense levocetirizine 5 mg, 35 tablets. UPC 301130241012.
+  // Not the 80.
+  'goodsense-b109-levocetirizine-7ba9': catalogShot(
+    'goodsense-b109-levocetirizine-7ba9.jpg',
+  ),
+  // GoodSense loratadine 10 mg, 10 tablets. UPC 370030146628.
+  // Not the 30.
+  'goodsense-b109-allergy-relief-78a7': catalogShot(
+    'goodsense-b109-allergy-relief-78a7.jpg',
+  ),
+  // Same loratadine, 30 tablets. UPC 370030146673. Not the 10.
+  'goodsense-b109-allergy-relief-78a7-30': catalogShot(
+    'goodsense-b109-allergy-relief-78a7-30.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7785,8 +7855,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b97-loratadine-10-pregel-150',
   'healtha2z-b97-loratadine-10-pregel-60',
   'healtha2z-b97-loratadine-10-pregel-500',
-  // 180-count shares the 90-count formula. Not attempted in this batch.
+  // 180-count shares the 90-count formula. Mark, not the 90 bottle.
   'healtha2z-b99-fexo-180-paraffin-180',
+  // Allergies night run 2026-10-01 4:15 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'healtha2z-b101-fexo-60-120',
+  'goodsense-b109-levocetirizine-7ba9-80',
+  'goodsense-b109-allergy-relief-78a7-30',
+  'goodsense-b109-allergy-relief-78a7-40',
+  'goodsense-b109-allergy-relief-78a7-45',
+  // Later counts on the 10-count formula. Still unattempted.
+  'goodsense-b109-allergy-relief-78a7-90',
+  'goodsense-b109-allergy-relief-78a7-100',
+  'goodsense-b109-allergy-relief-78a7-300',
+  'goodsense-b109-allergy-relief-78a7-365',
 ]);
 
 export function previewOverlayImage(
@@ -15182,11 +15264,48 @@ assertExactCarton(
   'HealthA2Z',
   'healtha2z-b99-fexo-180-paraffin.jpg',
 );
+assertExactCarton('healtha2z-b101-fexo-60', 'HealthA2Z', 'healtha2z-b101-fexo-60.jpg');
+assertExactCarton(
+  'healtha2z-b101-fexo-60-120',
+  'HealthA2Z',
+  'healtha2z-b101-fexo-60-120.jpg',
+);
+assertExactCarton(
+  'healtha2z-b102-kids-diphen-liquid',
+  'HealthA2Z',
+  'healtha2z-b102-kids-diphen-liquid.jpg',
+);
+assertExactCarton(
+  'healtha2z-b103-azelastine-240',
+  'HealthA2Z',
+  'healtha2z-b103-azelastine-240.jpg',
+);
+assertExactCarton(
+  'timecap-b106-cetirizine-10-365',
+  'TIME-Cap Labs',
+  'timecap-b106-cetirizine-10-365.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-levocetirizine-7ba9',
+  'GoodSense',
+  'goodsense-b109-levocetirizine-7ba9.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-allergy-relief-78a7',
+  'GoodSense',
+  'goodsense-b109-allergy-relief-78a7.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-allergy-relief-78a7-30',
+  'GoodSense',
+  'goodsense-b109-allergy-relief-78a7-30.jpg',
+);
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
   ['healtha2z-b96-loratadine-10-15', 'healtha2z-b96-loratadine-10'],
   ['healtha2z-b96-loratadine-10-30-blister', 'healtha2z-b96-loratadine-10'],
+  ['healtha2z-b99-fexo-180-paraffin-180', 'healtha2z-b99-fexo-180-paraffin'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand: 'HealthA2Z' });
   if (!image?.url.endsWith('/healtha2z-mark.png') || image.verifiedSku) {
@@ -15195,7 +15314,10 @@ for (const [id, formulaId] of [
 }
 for (const [id, formulaId, brand] of [
   ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health'],
-  ['healtha2z-b99-fexo-180-paraffin-180', 'healtha2z-b99-fexo-180-paraffin', 'HealthA2Z'],
+  ['goodsense-b109-allergy-relief-78a7-90', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
+  ['goodsense-b109-allergy-relief-78a7-100', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
+  ['goodsense-b109-allergy-relief-78a7-300', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
+  ['goodsense-b109-allergy-relief-78a7-365', 'goodsense-b109-allergy-relief-78a7', 'GoodSense'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
@@ -15248,6 +15370,17 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b113-cough-dm-d543-148-ml', 'goodsense-b113-cough-dm-d543', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b113-tussin-dm-max-26d0', 'goodsense-b113-tussin-dm-max-26d0', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b113-tussin-dm-max-26d0-237-ml', 'goodsense-b113-tussin-dm-max-26d0', 'GoodSense', 'goodsense-mark.png'],
+  ['timecap-b106-loratadine-10', 'timecap-b106-loratadine-10', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-cetirizine-10', 'timecap-b106-cetirizine-10', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-cetirizine-10-200', 'timecap-b106-cetirizine-10', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-cetirizine-10-500', 'timecap-b106-cetirizine-10', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-cetirizine-5', 'timecap-b106-cetirizine-5', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-dph-25', 'timecap-b106-dph-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-dph-25-24', 'timecap-b106-dph-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['timecap-b106-dph-25-365', 'timecap-b106-dph-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+  ['goodsense-b109-levocetirizine-7ba9-80', 'goodsense-b109-levocetirizine-7ba9', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-78a7-40', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b109-allergy-relief-78a7-45', 'goodsense-b109-allergy-relief-78a7', 'GoodSense', 'goodsense-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
