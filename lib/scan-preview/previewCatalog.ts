@@ -1410,6 +1410,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'welmate-b87-mucus-dm-406': brandMark('welmate-mark.png'),
   // Same formula, 100 count. Not the 50 and not the 98.
   'welmate-b87-mucus-dm-406-100': brandMark('welmate-mark.png'),
+  // Daytime photo run — tried the SKU. No matching 3D pack.
+  // DXM HBr 15 mg, 60 softgels. No 60-count bottle retrieved.
+  // Do not glue another brand's cough gels.
+  'aplushealth-b94-dxm-15': brandMark('aplus-health-mark.png'),
+  // Mucus Relief DM 3 packs of 10. The brand page is a 1+3+6 composite.
+  // Not the single card and not the 24-pack of 30.
+  'healtha2z-b100-mucus-dm-10x3': brandMark('healtha2z-mark.png'),
+  // Same DM, 6 packs of 10. No dedicated 6-pack face.
+  'healtha2z-b100-mucus-dm-10x6': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7058,6 +7067,75 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'welmate-b90-guaifenesin-1200': catalogShot(
     'welmate-b90-guaifenesin-1200.jpg',
   ),
+  // Daytime photo run. Retail pack fronts. Per-id.
+  // Guaifenesin 1200 mg extended-release, 35 tablets. Not the 100.
+  'welmate-b90-guaifenesin-1200-35': catalogShot(
+    'welmate-b90-guaifenesin-1200-35.jpg',
+  ),
+  // Guaifenesin 600 mg extended-release, 150 tablets. Not the 300 or the 75.
+  'healtha2z-b96-guaifenesin-600': catalogShot(
+    'healtha2z-b96-guaifenesin-600.jpg',
+  ),
+  // Same 600 mg, 300 tablets. Not the 150 or the 75.
+  'healtha2z-b96-guaifenesin-600-300': catalogShot(
+    'healtha2z-b96-guaifenesin-600-300.jpg',
+  ),
+  // Same 600 mg, 75 tablets. Not the 150 or the 300.
+  'healtha2z-b96-guaifenesin-600-75': catalogShot(
+    'healtha2z-b96-guaifenesin-600-75.jpg',
+  ),
+  // Guaifenesin 1200 mg extended-release, 200 tablets. Not the 100.
+  'healtha2z-b96-guaifenesin-1200': catalogShot(
+    'healtha2z-b96-guaifenesin-1200.jpg',
+  ),
+  // Same 1200 mg, 100 tablets. Not the 200.
+  'healtha2z-b96-guaifenesin-1200-100': catalogShot(
+    'healtha2z-b96-guaifenesin-1200-100.jpg',
+  ),
+  // Phenylephrine HCl 10 mg, 300 tablets. Not the 5 mg bottle.
+  'healtha2z-b96-phenylephrine-10': catalogShot(
+    'healtha2z-b96-phenylephrine-10.jpg',
+  ),
+  // Phenylephrine HCl 5 mg, 300 tablets. Not the 10 mg bottle.
+  'healtha2z-b98-pe-5-300': catalogShot(
+    'healtha2z-b98-pe-5-300.jpg',
+  ),
+  // Phenylephrine HCl 10 mg, 24 packs of 24 tablets (576). Not the 300.
+  'healtha2z-b98-pe-10-24x24': catalogShot(
+    'healtha2z-b98-pe-10-24x24.jpg',
+  ),
+  // Mucus Relief DM, 20 mg / 400 mg, 200 tablets. Not the value packs.
+  'healtha2z-b98-mucus-dm-200': catalogShot(
+    'healtha2z-b98-mucus-dm-200.jpg',
+  ),
+  // Sugar-free tussin DM, 8 fl oz. Per 5 mL is 10 mg / 100 mg.
+  'healtha2z-b99-tussin-dm-sf': catalogShot(
+    'healtha2z-b99-tussin-dm-sf.jpg',
+  ),
+  // Mucus Relief DM, 24 packs of 30 tablets (720). Not the 20- or 10-count packs.
+  'healtha2z-b100-mucus-dm-30x24': catalogShot(
+    'healtha2z-b100-mucus-dm-30x24.jpg',
+  ),
+  // Same DM, 24 packs of 20 tablets (480). Not the 720.
+  'healtha2z-b100-mucus-dm-20x24': catalogShot(
+    'healtha2z-b100-mucus-dm-20x24.jpg',
+  ),
+  // Same DM, one 10-tablet card. Not the 3-pack, 6-pack, or 24-pack.
+  'healtha2z-b100-mucus-dm-10': catalogShot(
+    'healtha2z-b100-mucus-dm-10.jpg',
+  ),
+  // Same DM, 24 packs of 10 tablets (240). Not the single card.
+  'healtha2z-b100-mucus-dm-10x24': catalogShot(
+    'healtha2z-b100-mucus-dm-10x24.jpg',
+  ),
+  // Cold & Allergy, chlorpheniramine 4 mg / phenylephrine 10 mg, 24 tablets.
+  'healtha2z-b100-cold-allergy-24': catalogShot(
+    'healtha2z-b100-cold-allergy-24.jpg',
+  ),
+  // Same Cold & Allergy, 24 packs of 24 tablets (576). Not the single 24.
+  'healtha2z-b100-cold-allergy-24x24': catalogShot(
+    'healtha2z-b100-cold-allergy-24x24.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7287,8 +7365,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Guaifenesin 600 mg 70-count is not the 200-count bottle.
   'welmate-b87-guaifenesin-er-70',
   // Guaifenesin 1200 mg 35-count is not the 100-count bottle.
-  // Stays a letter until that count is attempted.
   'welmate-b90-guaifenesin-1200-35',
+  // Mucus Relief DM 3-pack and 6-pack of the 10-count card.
+  // Do not inherit the 24 packs of 30 (720) carton.
+  'healtha2z-b100-mucus-dm-10x3',
+  'healtha2z-b100-mucus-dm-10x6',
 ]);
 
 export function previewOverlayImage(
@@ -14270,6 +14351,91 @@ assertExactCarton(
   'WELMATE',
   'welmate-b90-guaifenesin-1200.jpg',
 );
+assertExactCarton(
+  'welmate-b90-guaifenesin-1200-35',
+  'WELMATE',
+  'welmate-b90-guaifenesin-1200-35.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-guaifenesin-600',
+  'HealthA2Z',
+  'healtha2z-b96-guaifenesin-600.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-guaifenesin-600-300',
+  'HealthA2Z',
+  'healtha2z-b96-guaifenesin-600-300.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-guaifenesin-600-75',
+  'HealthA2Z',
+  'healtha2z-b96-guaifenesin-600-75.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-guaifenesin-1200',
+  'HealthA2Z',
+  'healtha2z-b96-guaifenesin-1200.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-guaifenesin-1200-100',
+  'HealthA2Z',
+  'healtha2z-b96-guaifenesin-1200-100.jpg',
+);
+assertExactCarton(
+  'healtha2z-b96-phenylephrine-10',
+  'HealthA2Z',
+  'healtha2z-b96-phenylephrine-10.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-pe-5-300',
+  'HealthA2Z',
+  'healtha2z-b98-pe-5-300.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-pe-10-24x24',
+  'HealthA2Z',
+  'healtha2z-b98-pe-10-24x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b98-mucus-dm-200',
+  'HealthA2Z',
+  'healtha2z-b98-mucus-dm-200.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-tussin-dm-sf',
+  'HealthA2Z',
+  'healtha2z-b99-tussin-dm-sf.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-mucus-dm-30x24',
+  'HealthA2Z',
+  'healtha2z-b100-mucus-dm-30x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-mucus-dm-20x24',
+  'HealthA2Z',
+  'healtha2z-b100-mucus-dm-20x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-mucus-dm-10',
+  'HealthA2Z',
+  'healtha2z-b100-mucus-dm-10.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-mucus-dm-10x24',
+  'HealthA2Z',
+  'healtha2z-b100-mucus-dm-10x24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-cold-allergy-24',
+  'HealthA2Z',
+  'healtha2z-b100-cold-allergy-24.jpg',
+);
+assertExactCarton(
+  'healtha2z-b100-cold-allergy-24x24',
+  'HealthA2Z',
+  'healtha2z-b100-cold-allergy-24x24.jpg',
+);
 for (const [id, formulaId] of [
   ['goodsense-b111-childrens-pain-and-fever-237e', 'goodsense-b111-childrens-pain-and-fever-237e'],
   ['goodsense-b111-childrens-pain-and-fever-237e-148-ml', 'goodsense-b111-childrens-pain-and-fever-237e'],
@@ -14309,14 +14475,14 @@ for (const [id, formulaId] of [
     throw new Error(`${id} must stay the WELMATE mark, not a sibling carton`);
   }
 }
-{
-  const stillLetter = previewOverlayImage({
-    id: 'welmate-b90-guaifenesin-1200-35',
-    formulaId: 'welmate-b90-guaifenesin-1200',
-    brand: 'WELMATE',
-  });
-  if (!stillLetter?.url.startsWith('data:image/svg+xml') || stillLetter.verifiedSku) {
-    throw new Error('welmate-b90-guaifenesin-1200-35 must stay a letter, not the 100-count bottle');
+for (const [id, formulaId, brand, file] of [
+  ['aplushealth-b94-dxm-15', 'aplushealth-b94-dxm-15', 'A+Health', 'aplus-health-mark.png'],
+  ['healtha2z-b100-mucus-dm-10x3', 'healtha2z-b100-mucus-dm-30x24', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b100-mucus-dm-10x6', 'healtha2z-b100-mucus-dm-30x24', 'HealthA2Z', 'healtha2z-mark.png'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand });
+  if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+    throw new Error(`${id} must stay the brand mark, not a sibling carton`);
   }
 }
 for (const [id, formulaId] of [
