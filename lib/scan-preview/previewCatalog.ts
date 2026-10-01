@@ -1589,6 +1589,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Same Allergy-D, 24 count. Same shared flat. Do not glue a
   // 12-count face.
   'goodsense-b111-all-day-allergy-d-a985-24': brandMark('goodsense-mark.png'),
+  // Allergies night run 2026-10-01 5:30 AM PT batch 2.
+  // Tried each SKU. No matching 3D pack. Official GoodSense mark
+  // already on disk. Per-id only.
+  // Cetirizine liquid gels, 25 count. DailyMed file is one flat
+  // label that prints both 25 and 40. No 25-count box.
+  'goodsense-b111-all-day-allergy-8731': brandMark('goodsense-mark.png'),
+  // Diphenhydramine liquid, 5 mL. DailyMed file is a tiny repack
+  // label, not a retail carton. Do not glue the 4 fl oz.
+  'goodsense-b112-allergy-2a73': brandMark('goodsense-mark.png'),
+  // Same liquid, 237 mL. The only 3D carton is 4 fl oz (118 mL).
+  'goodsense-b112-allergy-2a73-237-ml': brandMark('goodsense-mark.png'),
+  // Children's loratadine grape. The carton on this setid prints
+  // 4 fl oz (118 mL). This row is the 120 mL. Do not glue it.
+  'goodsense-b112-childrens-allergy-relief-3685': brandMark('goodsense-mark.png'),
+  // Effervescent cold relief, 10 count. The carton prints 20
+  // tablets. Do not glue it.
+  'goodsense-b112-effervescent-cold-relief-81e2': brandMark('goodsense-mark.png'),
+  // Loratadine syrup, 120 mL. DailyMed file is a flat label.
+  'goodsense-b112-product-7da9': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7626,6 +7645,53 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b111-childrens-all-day-allergy-b790': catalogShot(
     'goodsense-b111-childrens-all-day-allergy-b790.jpg',
   ),
+  // Allergies night run 2026-10-01 5:30 AM PT batch 2.
+  // Diphenhydramine liquid, 4 fl oz (118 mL). Not the 5 mL cup
+  // and not the 237 mL.
+  'goodsense-b112-allergy-2a73-118-ml': catalogShot(
+    'goodsense-b112-allergy-2a73-118-ml.jpg',
+  ),
+  // Children's loratadine grape, 8 fl oz (240 mL). Not the 4 fl oz.
+  'goodsense-b112-childrens-allergy-relief-3685-240-ml': catalogShot(
+    'goodsense-b112-childrens-allergy-relief-3685-240-ml.jpg',
+  ),
+  // Zyrtec-D, 12 extended-release tablets. UPC 300450204271.
+  // Not the 24.
+  'zyrtec-b132-d-12ct': catalogShot('zyrtec-b132-d-12ct.jpg'),
+  // Zyrtec-D, 24 extended-release tablets. UPC 300450204240.
+  // Not the 12.
+  'zyrtec-b132-d-24ct': catalogShot('zyrtec-b132-d-24ct.jpg'),
+  // Zyrtec 10 mg tablets, 45 count. UPC 300450204653. Not the 90
+  // or the 120.
+  'zyrtec-b132-10mg-45ct': catalogShot('zyrtec-b132-10mg-45ct.jpg'),
+  // Same 10 mg, 90 tablets. UPC 300450206909.
+  'zyrtec-b132-10mg-90ct': catalogShot('zyrtec-b132-10mg-90ct.jpg'),
+  // Same 10 mg, 120 tablets. UPC 300450206121. Not a smaller multipack.
+  'zyrtec-b132-10mg-120ct': catalogShot('zyrtec-b132-10mg-120ct.jpg'),
+  // Zyrtec 5 mg tablets, 15 count. Not the 35.
+  'zyrtec-b132-5mg-15ct': catalogShot('zyrtec-b132-5mg-15ct.jpg'),
+  // Same 5 mg, 35 tablets. UPC 300450256355. Not the 15.
+  'zyrtec-b132-5mg-35ct': catalogShot('zyrtec-b132-5mg-35ct.jpg'),
+  // Zyrtec Hives 10 mg, 30 tablets. UPC 300450138323.
+  'zyrtec-b132-hives-tab-30ct': catalogShot('zyrtec-b132-hives-tab-30ct.jpg'),
+  // Dye-free chewable 10 mg, 24 tablets. UPC 300450250247.
+  'zyrtec-b132-dye-free-chew-24ct': catalogShot(
+    'zyrtec-b132-dye-free-chew-24ct.jpg',
+  ),
+  // Children's dissolve tabs, citrus, 24 count. UPC 300450242259.
+  // Not the adult dissolve box.
+  'zyrtec-b132-kids-dissolve-24ct': catalogShot(
+    'zyrtec-b132-kids-dissolve-24ct.jpg',
+  ),
+  // Adult dissolve tabs, citrus, 24 count. UPC 300450242242.
+  // Not the 12.
+  'zyrtec-b132-adult-dissolve-24ct': catalogShot(
+    'zyrtec-b132-adult-dissolve-24ct.jpg',
+  ),
+  // Adult dissolve tabs, citrus, 12 count. Not the 24.
+  'zyrtec-b132-adult-dissolve-12ct': catalogShot(
+    'zyrtec-b132-adult-dissolve-12ct.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -7957,6 +8023,23 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b109-allergy-relief-df82-400',
   'goodsense-b111-childrens-all-day-allergy-3b14-240-ml',
   'goodsense-b111-all-day-allergy-d-a985-24',
+  // Allergies night run 2026-10-01 5:30 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b112-allergy-2a73-118-ml',
+  'goodsense-b112-allergy-2a73-237-ml',
+  'goodsense-b112-childrens-allergy-relief-3685-240-ml',
+  'zyrtec-b132-d-12ct',
+  'zyrtec-b132-d-24ct',
+  'zyrtec-b132-10mg-45ct',
+  'zyrtec-b132-10mg-90ct',
+  'zyrtec-b132-10mg-120ct',
+  'zyrtec-b132-5mg-15ct',
+  'zyrtec-b132-5mg-35ct',
+  'zyrtec-b132-hives-tab-30ct',
+  'zyrtec-b132-dye-free-chew-24ct',
+  'zyrtec-b132-kids-dissolve-24ct',
+  'zyrtec-b132-adult-dissolve-24ct',
+  'zyrtec-b132-adult-dissolve-12ct',
 ]);
 
 export function previewOverlayImage(
@@ -15433,6 +15516,44 @@ assertExactCarton(
   'GoodSense',
   'goodsense-b111-childrens-all-day-allergy-b790.jpg',
 );
+assertExactCarton(
+  'goodsense-b112-allergy-2a73-118-ml',
+  'GoodSense',
+  'goodsense-b112-allergy-2a73-118-ml.jpg',
+);
+assertExactCarton(
+  'goodsense-b112-childrens-allergy-relief-3685-240-ml',
+  'GoodSense',
+  'goodsense-b112-childrens-allergy-relief-3685-240-ml.jpg',
+);
+assertExactCarton('zyrtec-b132-d-12ct', 'Zyrtec', 'zyrtec-b132-d-12ct.jpg');
+assertExactCarton('zyrtec-b132-d-24ct', 'Zyrtec', 'zyrtec-b132-d-24ct.jpg');
+assertExactCarton('zyrtec-b132-10mg-45ct', 'Zyrtec', 'zyrtec-b132-10mg-45ct.jpg');
+assertExactCarton('zyrtec-b132-10mg-90ct', 'Zyrtec', 'zyrtec-b132-10mg-90ct.jpg');
+assertExactCarton('zyrtec-b132-10mg-120ct', 'Zyrtec', 'zyrtec-b132-10mg-120ct.jpg');
+assertExactCarton('zyrtec-b132-5mg-15ct', 'Zyrtec', 'zyrtec-b132-5mg-15ct.jpg');
+assertExactCarton('zyrtec-b132-5mg-35ct', 'Zyrtec', 'zyrtec-b132-5mg-35ct.jpg');
+assertExactCarton('zyrtec-b132-hives-tab-30ct', 'Zyrtec', 'zyrtec-b132-hives-tab-30ct.jpg');
+assertExactCarton(
+  'zyrtec-b132-dye-free-chew-24ct',
+  'Zyrtec',
+  'zyrtec-b132-dye-free-chew-24ct.jpg',
+);
+assertExactCarton(
+  'zyrtec-b132-kids-dissolve-24ct',
+  'Zyrtec',
+  'zyrtec-b132-kids-dissolve-24ct.jpg',
+);
+assertExactCarton(
+  'zyrtec-b132-adult-dissolve-24ct',
+  'Zyrtec',
+  'zyrtec-b132-adult-dissolve-24ct.jpg',
+);
+assertExactCarton(
+  'zyrtec-b132-adult-dissolve-12ct',
+  'Zyrtec',
+  'zyrtec-b132-adult-dissolve-12ct.jpg',
+);
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
@@ -15521,6 +15642,12 @@ for (const [id, formulaId, brand, file] of [
   ['goodsense-b111-childrens-all-day-allergy-3b14-240-ml', 'goodsense-b111-childrens-all-day-allergy-3b14', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b111-all-day-allergy-d-a985', 'goodsense-b111-all-day-allergy-d-a985', 'GoodSense', 'goodsense-mark.png'],
   ['goodsense-b111-all-day-allergy-d-a985-24', 'goodsense-b111-all-day-allergy-d-a985', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b111-all-day-allergy-8731', 'goodsense-b111-all-day-allergy-8731', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b112-allergy-2a73', 'goodsense-b112-allergy-2a73', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b112-allergy-2a73-237-ml', 'goodsense-b112-allergy-2a73', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b112-childrens-allergy-relief-3685', 'goodsense-b112-childrens-allergy-relief-3685', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b112-effervescent-cold-relief-81e2', 'goodsense-b112-effervescent-cold-relief-81e2', 'GoodSense', 'goodsense-mark.png'],
+  ['goodsense-b112-product-7da9', 'goodsense-b112-product-7da9', 'GoodSense', 'goodsense-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
