@@ -139,6 +139,7 @@ import {
   BATCH137_KYR6B_ALLEGRA_FIRST_SLICE,
   BATCH138_KYR6B_ALLEGRA_D24,
   BATCH139_KYR6B_SPROUTS_HOUSE_SCAN,
+  BATCH140_KYR6B_SPROUTS_HELD_BOTTLES,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -195,6 +196,8 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH33_HYLANDS,
   ...BATCH34_BOIRON,
   ...BATCH35_SPROUTS,
+  // batch140 before batch36 so uniqueById keeps the held-bottle grades.
+  ...BATCH140_KYR6B_SPROUTS_HELD_BOTTLES,
   ...BATCH36_SPROUTS_LEFTOVERS,
   ...BATCH37_MEDINATURA_BT,
   ...BATCH38_NATURES_WAY,

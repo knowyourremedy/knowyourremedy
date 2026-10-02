@@ -136,3 +136,4 @@ export { BATCH136_KYR6B_CLARITIN_FIRST_SLICE } from './batch136-kyr6b-claritin-f
 export { BATCH137_KYR6B_ALLEGRA_FIRST_SLICE } from './batch137-kyr6b-allegra-first-slice';
 export { BATCH138_KYR6B_ALLEGRA_D24 } from './batch138-kyr6b-allegra-d24';
 export { BATCH139_KYR6B_SPROUTS_HOUSE_SCAN } from './batch139-kyr6b-sprouts-house-scan';
+export { BATCH140_KYR6B_SPROUTS_HELD_BOTTLES } from './batch140-kyr6b-sprouts-held-bottles';
