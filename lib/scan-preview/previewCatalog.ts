@@ -145,6 +145,7 @@ import {
   BATCH143_KYR6B_ZYRTEC_75CT,
   BATCH144_KYR6B_CLARITIN_US_OTC,
   BATCH145_KYR6B_CLARITIN_HELD_UPC,
+  BATCH146_KYR5D_CLARITIN_UPC_OVERRIDE,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -309,6 +310,8 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH141_KYR6B_ZYRTEC_US_OTC,
   ...BATCH142_KYR6B_ZYRTEC_MISSING_UPC,
   ...BATCH143_KYR6B_ZYRTEC_75CT,
+  // batch146 before batch144/145 so uniqueById keeps the barcode overrides.
+  ...BATCH146_KYR5D_CLARITIN_UPC_OVERRIDE,
   ...BATCH144_KYR6B_CLARITIN_US_OTC,
   ...BATCH145_KYR6B_CLARITIN_HELD_UPC,
 ]);
