@@ -1749,6 +1749,35 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'amazon-basic-care-mucus-er-max-blue1': brandMark('amazon-basic-care-mark.png'),
   // Orange or berry chewables. Do not glue one flavor.
   'umcka-cold-flu-chewables': brandMark('natures-way-mark.png'),
+  // Sleep night run 2026-10-02 1:45 AM PT batch 1.
+  // Tried each SKU. No matching 3D pack. Official mark already on disk.
+  // Per-id only.
+  // Maximum Strength 160 with titanium dioxide and MCT. The Amazon
+  // 160-count drug facts are the blue formula (PEG 400/600, FD&C blue
+  // #1, sorbitol sorbitan). DailyMed face is a flat wrap. Do not glue
+  // the blue 160.
+  'aplushealth-b93-sleep-50-160': brandMark('aplus-health-mark.png'),
+  // Blue 32. DailyMed image is a flat wrap that prints 32. No 3D bottle.
+  // Do not glue the 60 or the 160.
+  'aplushealth-b94-sleep-blue': brandMark('aplus-health-mark.png'),
+  // Blue 60. DailyMed image is a flat wrap that prints 60. No 3D bottle.
+  'aplushealth-b94-sleep-blue-60': brandMark('aplus-health-mark.png'),
+  // 24 packs of 12. Do not glue the 96-count or the 250-count bottle.
+  'healtha2z-b99-dph-25-softgel-12x24': brandMark('healtha2z-mark.png'),
+  // 24 packs of 10. Do not glue the 200-count or the 250-count bottle.
+  'healtha2z-b99-dph-50-softgel-10x24': brandMark('healtha2z-mark.png'),
+  // 24 caplets. DailyMed file is a flat label. The brand chooser covers
+  // 1, 3, and 6 packs. Do not glue one pack.
+  'healtha2z-b100-dph-25-24': brandMark('healtha2z-mark.png'),
+  'healtha2z-b100-dph-25-24x3': brandMark('healtha2z-mark.png'),
+  'healtha2z-b100-dph-25-24x6': brandMark('healtha2z-mark.png'),
+  'healtha2z-b100-dph-25-30x24': brandMark('healtha2z-mark.png'),
+  'healtha2z-b100-dph-25-24x24': brandMark('healtha2z-mark.png'),
+  // 2 softgels. DailyMed file is a flat label that prints 24 softgels.
+  // Do not glue the 24.
+  'goodsense-b109-night-time-1158': brandMark('goodsense-mark.png'),
+  // 2 caplets. The only 3D carton is the 100-count box. Do not glue it.
+  'goodsense-b109-nighttime-sleep-aid-bc4e': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -7894,6 +7923,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Zyrtec 10 mg tablets, 40-count bonus pack. UPC 300450204462.
   // Not the 30, 45, or 3.
   'zyrtec-b141-10mg-40ct': catalogShot('zyrtec-b141-10mg-40ct.jpg'),
+  // Sleep night run 2026-10-02 1:45 AM PT batch 1.
+  // Dye-free 120 softgels. UPC 369452451229. Pack face prints 120 and
+  // dye-free. Not the 300-count allergy bottle.
+  'aplushealth-b94-sleep-dyefree-120': catalogShot(
+    'aplushealth-b94-sleep-dyefree-120.jpg',
+  ),
+  // Blue formula, 160 softgels. Pack face prints 160. Drug facts on that
+  // listing are FD&C blue #1, PEG 400, PEG 600, and sorbitol sorbitan.
+  // Not the titanium dioxide / MCT 160. Not the 32 or the 60.
+  'aplushealth-b94-sleep-blue-160': catalogShot(
+    'aplushealth-b94-sleep-blue-160.jpg',
+  ),
+  // 25 mg softgels, 96 count. Front prints NDC 69168-431-96. Not the 250.
+  'healtha2z-b99-dph-25-softgel': catalogShot(
+    'healtha2z-b99-dph-25-softgel.jpg',
+  ),
+  // Same 25 mg, 250 count. Front prints NDC 69168-431-03. Not the 96.
+  'healtha2z-b99-dph-25-softgel-250': catalogShot(
+    'healtha2z-b99-dph-25-softgel-250.jpg',
+  ),
+  // 50 mg softgels, 200 count. Front prints NDC 69168-410-98. Not the 250.
+  'healtha2z-b99-dph-50-softgel': catalogShot(
+    'healtha2z-b99-dph-50-softgel.jpg',
+  ),
+  // Same 50 mg, 250 count. Front prints NDC 69168-410-03 and UPC
+  // 369168410039. Not the 200.
+  'healtha2z-b99-dph-50-softgel-250': catalogShot(
+    'healtha2z-b99-dph-50-softgel-250.jpg',
+  ),
+  // Doxylamine succinate 25 mg, 200 tablets. Bottle prints 200. Not the
+  // DailyMed 96-count label.
+  'healtha2z-b102-doxylamine-25': catalogShot(
+    'healtha2z-b102-doxylamine-25.jpg',
+  ),
+  // GoodSense diphenhydramine 25 mg, 100 caplets. Carton prints 100.
+  // Not the 2-count blister.
+  'goodsense-b109-nighttime-sleep-aid-bc4e-100': catalogShot(
+    'goodsense-b109-nighttime-sleep-aid-bc4e-100.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8167,8 +8235,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'aplushealth-b94-cetirizine-65',
   // Allergies night run batch 2. Shared-formula counts.
   // Do not inherit a sibling face. Unattempted rows stay letters.
-  // Sleep 120 shares the 300-softgel formula. Sleep was not attempted.
+  // Sleep 120 shares the 300-softgel formula. Own carton. Do not inherit the 300.
   'aplushealth-b94-sleep-dyefree-120',
+  // Sleep night run 2026-10-02 1:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'aplushealth-b94-sleep-blue-60',
+  'aplushealth-b94-sleep-blue-160',
+  'healtha2z-b99-dph-25-softgel-250',
+  'healtha2z-b99-dph-25-softgel-12x24',
+  'healtha2z-b99-dph-50-softgel-250',
+  'healtha2z-b99-dph-50-softgel-10x24',
+  'healtha2z-b100-dph-25-24x3',
+  'healtha2z-b100-dph-25-24x6',
+  'healtha2z-b100-dph-25-30x24',
+  'healtha2z-b100-dph-25-24x24',
+  'goodsense-b109-nighttime-sleep-aid-bc4e-100',
   'healtha2z-b96-cetirizine-10-60',
   'healtha2z-b96-cetirizine-10-396-03',
   'healtha2z-b96-cetirizine-10-1080',
@@ -15686,6 +15767,59 @@ assertBrandMark('allegra-b137-d12-10', 'Allegra', 'allegra-mark.png');
 assertBrandMark('allegra-b137-d12-30', 'Allegra', 'allegra-mark.png');
 assertBrandMark('allegra-b138-d24-10', 'Allegra', 'allegra-mark.png');
 assertBrandMark('zyrtec-b142-10mg-3ct', 'Zyrtec', 'zyrtec-mark.png');
+// Sleep night run 2026-10-02 1:45 AM PT batch 1.
+assertExactCarton(
+  'aplushealth-b94-sleep-dyefree-120',
+  'A+Health',
+  'aplushealth-b94-sleep-dyefree-120.jpg',
+);
+assertExactCarton(
+  'aplushealth-b94-sleep-blue-160',
+  'A+Health',
+  'aplushealth-b94-sleep-blue-160.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-dph-25-softgel',
+  'HealthA2Z',
+  'healtha2z-b99-dph-25-softgel.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-dph-25-softgel-250',
+  'HealthA2Z',
+  'healtha2z-b99-dph-25-softgel-250.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-dph-50-softgel',
+  'HealthA2Z',
+  'healtha2z-b99-dph-50-softgel.jpg',
+);
+assertExactCarton(
+  'healtha2z-b99-dph-50-softgel-250',
+  'HealthA2Z',
+  'healtha2z-b99-dph-50-softgel-250.jpg',
+);
+assertExactCarton(
+  'healtha2z-b102-doxylamine-25',
+  'HealthA2Z',
+  'healtha2z-b102-doxylamine-25.jpg',
+);
+assertExactCarton(
+  'goodsense-b109-nighttime-sleep-aid-bc4e-100',
+  'GoodSense',
+  'goodsense-b109-nighttime-sleep-aid-bc4e-100.jpg',
+);
+assertBrandMark('aplushealth-b93-sleep-50-160', 'A+Health', 'aplus-health-mark.png');
+assertBrandMark('aplushealth-b94-sleep-blue', 'A+Health', 'aplus-health-mark.png');
+assertBrandMark('aplushealth-b94-sleep-blue-60', 'A+Health', 'aplus-health-mark.png');
+assertBrandMark('healtha2z-b99-dph-25-softgel-12x24', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b99-dph-50-softgel-10x24', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b100-dph-25-24', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b100-dph-25-24x3', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b100-dph-25-24x6', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b100-dph-25-30x24', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('healtha2z-b100-dph-25-24x24', 'HealthA2Z', 'healtha2z-mark.png');
+assertBrandMark('goodsense-b109-night-time-1158', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b109-nighttime-sleep-aid-bc4e', 'GoodSense', 'goodsense-mark.png');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
@@ -15739,12 +15873,29 @@ for (const [id, formulaId] of [
     throw new Error(`${id} must stay the HealthA2Z mark, not a sibling carton`);
   }
 }
-for (const [id, formulaId, brand] of [
-  ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health'],
+for (const [id, formulaId, brand, file] of [
+  ['aplushealth-b94-sleep-dyefree-120', 'aplushealth-b94-dph-50-peg600', 'A+Health', 'aplushealth-b94-sleep-dyefree-120.jpg'],
+  ['aplushealth-b94-sleep-blue-60', 'aplushealth-b94-sleep-blue', 'A+Health', 'aplus-health-mark.png'],
+  ['aplushealth-b94-sleep-blue-160', 'aplushealth-b94-sleep-blue', 'A+Health', 'aplushealth-b94-sleep-blue-160.jpg'],
+  ['healtha2z-b99-dph-25-softgel-250', 'healtha2z-b99-dph-25-softgel', 'HealthA2Z', 'healtha2z-b99-dph-25-softgel-250.jpg'],
+  ['healtha2z-b99-dph-25-softgel-12x24', 'healtha2z-b99-dph-25-softgel', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b99-dph-50-softgel-250', 'healtha2z-b99-dph-50-softgel', 'HealthA2Z', 'healtha2z-b99-dph-50-softgel-250.jpg'],
+  ['healtha2z-b99-dph-50-softgel-10x24', 'healtha2z-b99-dph-50-softgel', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b100-dph-25-24x3', 'healtha2z-b100-dph-25-24', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b100-dph-25-24x6', 'healtha2z-b100-dph-25-24', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b100-dph-25-30x24', 'healtha2z-b100-dph-25-24', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['healtha2z-b100-dph-25-24x24', 'healtha2z-b100-dph-25-24', 'HealthA2Z', 'healtha2z-mark.png'],
+  ['goodsense-b109-nighttime-sleep-aid-bc4e-100', 'goodsense-b109-nighttime-sleep-aid-bc4e', 'GoodSense', 'goodsense-b109-nighttime-sleep-aid-bc4e-100.jpg'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
-  if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
-    throw new Error(`${id} must stay a letter until attempted`);
+  if (!image?.url.endsWith(`/${file}`)) {
+    throw new Error(`${id} must stay ${file}, not a sibling face`);
+  }
+  if (file.endsWith('-mark.png') && image.verifiedSku) {
+    throw new Error(`${id} mark must not set verifiedSku`);
+  }
+  if (file.endsWith('.jpg') && !image.verifiedSku) {
+    throw new Error(`${id} carton must set verifiedSku`);
   }
 }
 for (const [id, formulaId, brand, file] of [
