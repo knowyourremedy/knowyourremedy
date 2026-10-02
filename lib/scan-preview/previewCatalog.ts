@@ -1818,6 +1818,32 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // is the 355 mL. Do not glue it onto the 177 mL.
   'goodsense-b112-sleep-time-c1b4': brandMark('goodsense-mark.png'),
   'goodsense-b112-sleep-time-c1b4-355-ml': brandMark('goodsense-mark.png'),
+  // Vitamins night run 2026-10-02 4:15 AM PT batch 1.
+  // Tried each SKU. Official mark. Not a letter.
+  // D3 5000 page is a 2-pack (two 100-count bottles). Do not glue it.
+  'jarrow-vitamin-d3-5000': brandMark('jarrow-mark.png'),
+  // MK-7 gallery is shared by 60, 90, and 120. Row barcode is the 60.
+  // No count-specific face. Do not glue one count.
+  'jarrow-vitamin-k2-mk7': brandMark('jarrow-mark.png'),
+  // Cherry 5000 mcg gallery is shared by 60 and 90. Row barcode is the 60.
+  'jarrow-methyl-b12-cherry-5000': brandMark('jarrow-mark.png'),
+  // Hyaluronic acid gallery is shared by 60 and 120. Row barcode is the 60.
+  'jarrow-hyaluronic-acid': brandMark('jarrow-mark.png'),
+  // Glutathione gallery is shared by 60, 120, and 150. Row barcode is the 60.
+  'jarrow-glutathione-reduced': brandMark('jarrow-mark.png'),
+  // Q-absorb gallery is shared by 60 and 120. Row barcode is the 120.
+  // Do not glue the 60.
+  'jarrow-q-absorb': brandMark('jarrow-mark.png'),
+  // Master Blend gallery is shared by 84 and 168. Row barcode is the 84.
+  'om-master-blend-capsules': brandMark('om-mark.png'),
+  // Lion's Mane gallery is shared by 90 and 180. Row barcode is the 180.
+  'om-lions-mane-capsules': brandMark('om-mark.png'),
+  // Wonder Day hero shows Standard and Double Strength together.
+  // Row barcode is Standard Strength wild raspberry. Do not glue both.
+  'plant-people-wonder-day': brandMark('plant-people-mark.png'),
+  // Mixed Berry creatine gummies are not on arrae.com. Live Tone
+  // faces are watermelon and green apple. Do not glue those flavors.
+  'arrae-tone-creatine-gummies': brandMark('arrae-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8007,6 +8033,39 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // (row 646670121401). Bottle prints GARLIC and 1 FL OZ (30 mL).
   // Not the garlic capsules. Not the garlic softgels.
   'sprouts-b140-garlic-1oz': catalogShot('sprouts-b140-garlic-1oz.jpg'),
+  // Vitamins night run 2026-10-02 4:15 AM PT batch 1.
+  // Chlorophyll Glycerite, 1 fl oz. Shop page UPC 00646670620201
+  // (row 646670620201). Bottle prints CHLOROPHYLL and 1 FL. OZ.
+  'sprouts-b140-chlorophyll-glycerite': catalogShot(
+    'sprouts-b140-chlorophyll-glycerite.jpg',
+  ),
+  // Lion's Mane capsules, 60 count. Barcode 633422031620 is that
+  // variant. Not the 30. Not the 120.
+  'host-defense-lions-mane': catalogShot('host-defense-lions-mane.jpg'),
+  // MycoBenefits Focus capsules. Only variant barcode 633422714103.
+  // Front prints NCFS60.
+  'host-defense-mycobenefits-focus': catalogShot(
+    'host-defense-mycobenefits-focus.jpg',
+  ),
+  // Ashwagandha alcohol-free, 1 oz. Barcode 090700032265 is that
+  // size. Not the 2 oz. Not the 4 oz.
+  'herb-pharm-ashwagandha-af': catalogShot('herb-pharm-ashwagandha-af.jpg'),
+  // MagMind, 90 veggie caps. Only variant barcode 790011290629.
+  'jarrow-magmind': catalogShot('jarrow-magmind.jpg'),
+  // Theanine 200 mg, 60 veggie caps. Only variant barcode 790011150572.
+  'jarrow-theanine-200': catalogShot('jarrow-theanine-200.jpg'),
+  // Wonder Burn ripe mango, 60 gummies. Only variant barcode
+  // 860011717904.
+  'plant-people-wonder-burn': catalogShot('plant-people-wonder-burn.jpg'),
+  // Wonder Greens Kids green apple, 30 gummies. Only variant barcode
+  // 860010813065.
+  'plant-people-wonder-greens-kids': catalogShot(
+    'plant-people-wonder-greens-kids.jpg',
+  ),
+  // MB-1 bottle. Barcode 850045105143. Not MB-1 45+ or MB-1 Max.
+  'arrae-mb-1': catalogShot('arrae-mb-1.jpg'),
+  // Full Spectrum Mag. Barcode 850045105136.
+  'arrae-magnesium': catalogShot('arrae-magnesium.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15901,6 +15960,39 @@ assertBrandMark('goodsense-b112-sleep-time-c1b4', 'GoodSense', 'goodsense-mark.p
 assertBrandMark('goodsense-b112-sleep-time-c1b4-355-ml', 'GoodSense', 'goodsense-mark.png');
 // Immune Support night run 2026-10-02 3:00 AM PT batch 1.
 assertExactCarton('sprouts-b140-garlic-1oz', 'Sprouts', 'sprouts-b140-garlic-1oz.jpg');
+// Vitamins night run 2026-10-02 4:15 AM PT batch 1.
+assertExactCarton(
+  'sprouts-b140-chlorophyll-glycerite',
+  'Sprouts',
+  'sprouts-b140-chlorophyll-glycerite.jpg',
+);
+assertExactCarton('host-defense-lions-mane', 'Host Defense', 'host-defense-lions-mane.jpg');
+assertExactCarton(
+  'host-defense-mycobenefits-focus',
+  'Host Defense',
+  'host-defense-mycobenefits-focus.jpg',
+);
+assertExactCarton('herb-pharm-ashwagandha-af', 'Herb Pharm', 'herb-pharm-ashwagandha-af.jpg');
+assertExactCarton('jarrow-magmind', 'Jarrow Formulas', 'jarrow-magmind.jpg');
+assertExactCarton('jarrow-theanine-200', 'Jarrow Formulas', 'jarrow-theanine-200.jpg');
+assertExactCarton('plant-people-wonder-burn', 'Plant People', 'plant-people-wonder-burn.jpg');
+assertExactCarton(
+  'plant-people-wonder-greens-kids',
+  'Plant People',
+  'plant-people-wonder-greens-kids.jpg',
+);
+assertExactCarton('arrae-mb-1', 'Arrae', 'arrae-mb-1.jpg');
+assertExactCarton('arrae-magnesium', 'Arrae', 'arrae-magnesium.jpg');
+assertBrandMark('jarrow-vitamin-d3-5000', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('jarrow-vitamin-k2-mk7', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('jarrow-methyl-b12-cherry-5000', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('jarrow-hyaluronic-acid', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('jarrow-glutathione-reduced', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('jarrow-q-absorb', 'Jarrow Formulas', 'jarrow-mark.png');
+assertBrandMark('om-master-blend-capsules', 'OM Mushrooms', 'om-mark.png');
+assertBrandMark('om-lions-mane-capsules', 'OM Mushrooms', 'om-mark.png');
+assertBrandMark('plant-people-wonder-day', 'Plant People', 'plant-people-mark.png');
+assertBrandMark('arrae-tone-creatine-gummies', 'Arrae', 'arrae-mark.png');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
