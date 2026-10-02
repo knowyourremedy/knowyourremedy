@@ -1671,6 +1671,23 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Allegra gelcaps, 8 count. DailyMed file is a flat dieline that
   // prints 8 gelcaps. Not a 3D carton. Do not glue the 24.
   'allegra-b137-gel-8': brandMark('allegra-mark.png'),
+  // Allergies night run 2026-10-02 12:30 AM PT. Tried each SKU.
+  // No matching 3D pack. Official mark already on disk. Per-id only.
+  // Children's Hives grape: allegra.com files are flat carton dielines,
+  // not a 3D box. Do not glue the berry 8 oz allergy liquid.
+  'allegra-b137-hives-liq-240': brandMark('allegra-mark.png'),
+  // Allegra-D 12 hour, 10 count. The live 3D box is the 20-count.
+  // DailyMed face is a flat 30-count dieline. Do not glue either.
+  'allegra-b137-d12-10': brandMark('allegra-mark.png'),
+  // Same 12 hour, 30 count. Do not glue the 20-count box.
+  'allegra-b137-d12-30': brandMark('allegra-mark.png'),
+  // Allegra-D 24 hour, 10 count. The live 3D box prints NDC
+  // 41167-4320-7 (15 tablets). Do not glue the 15.
+  'allegra-b138-d24-10': brandMark('allegra-mark.png'),
+  // Zyrtec 10 mg, 3-count travel carton. zyrtec.com tablet counts are
+  // 30 / 45 / 60 / 90 / 120. DailyMed file on this setid is the
+  // 30-count dieline. Walgreens PDP did not return. Do not glue the 40.
+  'zyrtec-b142-10mg-3ct': brandMark('zyrtec-mark.png'),
   // Daytime photo run — Cold & Flu brand-text upgrades. Per-id only.
   // Five flavor UPCs on one row. Do not glue one flavor box.
   'wedderspoon-manuka-honey-drops': brandMark('wedderspoon-mark.png'),
@@ -7860,6 +7877,23 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'allegra-b137-hives-tab-30': catalogShot('allegra-b137-hives-tab-30.jpg'),
   // Allegra gelcaps, 24 count. UPC 041167412213. Not the 8 or the 60.
   'allegra-b137-gel-24': catalogShot('allegra-b137-gel-24.jpg'),
+  // Allergies night run 2026-10-02 12:30 AM PT.
+  // Gelcaps, 60 count. UPC 041167412220. Carton prints NDC
+  // 41167-4122-2. Not the 24. Not the 8.
+  'allegra-b137-gel-60': catalogShot('allegra-b137-gel-60.jpg'),
+  // Children's orange cream dissolve tabs, 24 count. Not a 12-count.
+  'allegra-b137-odt-24': catalogShot('allegra-b137-odt-24.jpg'),
+  // Children's berry liquid, 8 fl oz (240 mL). UPC 041167424414.
+  // Not the grape Hives bottle.
+  'allegra-b137-liq-8oz': catalogShot('allegra-b137-liq-8oz.jpg'),
+  // Allegra-D 12 hour, 20 tablets. UPC 041167431047. Not the 10 or 30.
+  'allegra-b137-d12-20': catalogShot('allegra-b137-d12-20.jpg'),
+  // Allegra-D 24 hour, 15 tablets. Carton prints NDC 41167-4320-7.
+  // Not the 10.
+  'allegra-b138-d24-15': catalogShot('allegra-b138-d24-15.jpg'),
+  // Zyrtec 10 mg tablets, 40-count bonus pack. UPC 300450204462.
+  // Not the 30, 45, or 3.
+  'zyrtec-b141-10mg-40ct': catalogShot('zyrtec-b141-10mg-40ct.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8250,6 +8284,18 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'allegra-b137-gel-24',
   // 60 gelcaps share the gelcap formula. Do not inherit the 24.
   'allegra-b137-gel-60',
+  // Allergies night run 2026-10-02 12:30 AM PT.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'allegra-b137-odt-24',
+  'allegra-b137-liq-8oz',
+  'allegra-b137-hives-liq-240',
+  'allegra-b137-d12-10',
+  'allegra-b137-d12-20',
+  'allegra-b137-d12-30',
+  'allegra-b138-d24-10',
+  'allegra-b138-d24-15',
+  'zyrtec-b141-10mg-40ct',
+  'zyrtec-b142-10mg-3ct',
 ]);
 
 export function previewOverlayImage(
@@ -15629,6 +15675,17 @@ assertExactCarton('allegra-b137-tab12-12', 'Allegra', 'allegra-b137-tab12-12.jpg
 assertExactCarton('allegra-b137-tab12-24', 'Allegra', 'allegra-b137-tab12-24.jpg');
 assertExactCarton('allegra-b137-hives-tab-30', 'Allegra', 'allegra-b137-hives-tab-30.jpg');
 assertExactCarton('allegra-b137-gel-24', 'Allegra', 'allegra-b137-gel-24.jpg');
+assertExactCarton('allegra-b137-gel-60', 'Allegra', 'allegra-b137-gel-60.jpg');
+assertExactCarton('allegra-b137-odt-24', 'Allegra', 'allegra-b137-odt-24.jpg');
+assertExactCarton('allegra-b137-liq-8oz', 'Allegra', 'allegra-b137-liq-8oz.jpg');
+assertExactCarton('allegra-b137-d12-20', 'Allegra', 'allegra-b137-d12-20.jpg');
+assertExactCarton('allegra-b138-d24-15', 'Allegra', 'allegra-b138-d24-15.jpg');
+assertExactCarton('zyrtec-b141-10mg-40ct', 'Zyrtec', 'zyrtec-b141-10mg-40ct.jpg');
+assertBrandMark('allegra-b137-hives-liq-240', 'Allegra', 'allegra-mark.png');
+assertBrandMark('allegra-b137-d12-10', 'Allegra', 'allegra-mark.png');
+assertBrandMark('allegra-b137-d12-30', 'Allegra', 'allegra-mark.png');
+assertBrandMark('allegra-b138-d24-10', 'Allegra', 'allegra-mark.png');
+assertBrandMark('zyrtec-b142-10mg-3ct', 'Zyrtec', 'zyrtec-mark.png');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
@@ -15783,6 +15840,11 @@ for (const [id, formulaId, brand, file] of [
   ['allegra-b137-hives-tab-5', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
   ['allegra-b137-hives-tab-15', 'allegra-b137-film-tablets', 'Allegra', 'allegra-mark.png'],
   ['allegra-b137-gel-8', 'allegra-b137-gelcaps', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-hives-liq-240', 'allegra-b137-kids-liquid', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-d12-10', 'allegra-b137-d12', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b137-d12-30', 'allegra-b137-d12', 'Allegra', 'allegra-mark.png'],
+  ['allegra-b138-d24-10', 'allegra-b138-d24', 'Allegra', 'allegra-mark.png'],
+  ['zyrtec-b142-10mg-3ct', 'zyrtec-allergy-tablets-tio2', 'Zyrtec', 'zyrtec-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
