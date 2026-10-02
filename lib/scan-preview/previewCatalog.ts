@@ -1698,6 +1698,40 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'equate-kids-dex-cough-gels': brandMark('equate-mark.png'),
   // Row is DXM / guaifenesin / phenylephrine. The berry 4 oz face is acetaminophen / chlorpheniramine.
   'upup-childrens-multi-cold': brandMark('upup-mark.png'),
+  // UPC 050428345191. No 3D pack retrieved.
+  'cvs-childrens-cough-relief-dm': brandMark('cvs-mark.png'),
+  // Day/night kit. UPC 050428548080. No 3D pack retrieved.
+  'cvs-childrens-cough-chest-dn': brandMark('cvs-mark.png'),
+  // Very Berry liquid. UPC 050428348178. No 3D pack retrieved.
+  'cvs-childrens-multi-cold': brandMark('cvs-mark.png'),
+  // UPC 050428002094. No 3D pack retrieved.
+  'cvs-pharmacy-childrens-cold-allergy': brandMark('cvs-mark.png'),
+  // UPC 321130168843. No 3D pack retrieved.
+  'signature-care-childrens-multi-cold': brandMark('signature-care-mark.png'),
+  // UPC 321130168904. No 3D pack retrieved.
+  'signature-care-childrens-12hr-cough': brandMark('signature-care-mark.png'),
+  // UPC 196633992000 is the 84-count. Costco pack photo was blocked.
+  'kirkland-mucus-dm-max-er': brandMark('kirkland-mark.png'),
+  // UPC 370030100903. No 3D pack. Do not glue the up&up 20-count.
+  'dg-health-mucus-er': brandMark('dg-health-mark.png'),
+  // UPC 370030100897. No 3D pack. Do not glue the up&up DM 20-count.
+  'dg-health-mucus-dm-er': brandMark('dg-health-mark.png'),
+  // UPC 370030641635. Listing was a 3-box shipper, not one retail carton.
+  'dg-health-cold-flu-day-softgels': brandMark('dg-health-mark.png'),
+  // UPC 370030640027. No 3D pack retrieved.
+  'dg-health-cold-flu-night-liquid': brandMark('dg-health-mark.png'),
+  // No barcode. Do not glue a dyed DM bottle.
+  'amazon-basic-care-mucus-dm-er-dye-free': brandMark('amazon-basic-care-mark.png'),
+  // 1 fl oz oxymetazoline. Not the no-drip bottle.
+  'amazon-basic-care-oxymetazoline-nasal': brandMark('amazon-basic-care-mark.png'),
+  // UPC 195515018524. No 3D pack. Do not glue the up&up 20-count.
+  'amazon-basic-care-mucus-er-600': brandMark('amazon-basic-care-mark.png'),
+  // Three barcodes. Do not glue one count.
+  'amazon-basic-care-mucus-dm-er': brandMark('amazon-basic-care-mark.png'),
+  // UPC 195515115735. No 3D pack. Not the dye-free max.
+  'amazon-basic-care-mucus-er-max-blue1': brandMark('amazon-basic-care-mark.png'),
+  // Orange or berry chewables. Do not glue one flavor.
+  'umcka-cold-flu-chewables': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -1708,26 +1742,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted Cold & Flu leftover — no 3D pack on wholefoodsmarket.com.
   // DailyMed is a 2D bottle wrap. Do not invent a logo. Do not stay on "3".
   '365-guaifenesin-er-600': '365',
-  'amazon-basic-care-mucus-dm-er': 'Basic Care',
-  'amazon-basic-care-mucus-dm-er-dye-free': 'Basic Care',
-  'amazon-basic-care-mucus-er-600': 'Basic Care',
-  'amazon-basic-care-mucus-er-max-blue1': 'Basic Care',
-  'amazon-basic-care-oxymetazoline-nasal': 'Basic Care',
-  'amazon-basic-care-no-drip-nasal': 'Basic Care',
-  'cvs-childrens-cough-chest-dn': 'CVS Health',
-  'cvs-childrens-cough-relief-dm': 'CVS Health',
-  'cvs-childrens-multi-cold': 'CVS Health',
-  'cvs-pharmacy-childrens-cold-allergy': 'CVS Health',
-  'dg-health-cold-flu-day-softgels': 'DG Health',
-  'dg-health-cold-flu-night-liquid': 'DG Health',
-  'dg-health-mucus-dm-er': 'DG Health',
-  'dg-health-mucus-er': 'DG Health',
-  'kirkland-mucus-dm-max-er': 'Kirkland',
-  'hylands-baby-mucus-cold-night': "Hyland's",
-  'hylands-baby-tiny-cold-night': "Hyland's",
-  'signature-care-childrens-12hr-cough': 'Signature Care',
-  'signature-care-childrens-multi-cold': 'Signature Care',
-  'umcka-cold-flu-chewables': "Nature's Way",
   // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
   // (Basic Care rows are also mid-rebrand to Amazon Basics). DailyMed hits
   // are 2D dielines / label flats / a day+night combo carton. No standalone
@@ -7422,6 +7436,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'mucinex-childrens-freefrom-multi': catalogShot('mucinex-childrens-freefrom-multi.jpg'),
   // Cough long-acting, fruit punch, 4 fl oz. DXM only. Not Cough & Cold.
   'robitussin-childrens-long-acting': catalogShot('robitussin-childrens-long-acting.jpg'),
+  // No-drip oxymetazoline, 1 fl oz. UPC 370030145546. Not the regular nasal spray.
+  'amazon-basic-care-no-drip-nasal': catalogShot('amazon-basic-care-no-drip-nasal.jpg'),
+  // Baby Tiny Cold nighttime tablets, 125 count. UPC 354973325210. Not a day/night combo.
+  'hylands-baby-tiny-cold-night': catalogShot('hylands-baby-tiny-cold-night.jpg'),
+  // Baby Mucus + Cold nighttime liquid, 4 fl oz. UPC 354973337121. Not a combo carton.
+  'hylands-baby-mucus-cold-night': catalogShot('hylands-baby-mucus-cold-night.jpg'),
   // Allergies night run 2026-10-01 3:00 AM PT batch 1.
   // Exact pack faces. Per-id only. verifiedSku.
   // WELMATE faces are the wellspringmeds.com hero for that count.
@@ -8703,106 +8723,6 @@ assertBrandTextTile(
   '365-probiotic-fiber-gummies-sunflower',
   '365 Whole Foods Market',
   '365',
-);
-assertBrandTextTile(
-  'amazon-basic-care-mucus-dm-er',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-mucus-dm-er-dye-free',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-mucus-er-600',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-mucus-er-max-blue1',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-oxymetazoline-nasal',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-no-drip-nasal',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'cvs-childrens-cough-chest-dn',
-  'CVS Health',
-  'CVS Health',
-);
-assertBrandTextTile(
-  'cvs-childrens-cough-relief-dm',
-  'CVS Health',
-  'CVS Health',
-);
-assertBrandTextTile(
-  'cvs-childrens-multi-cold',
-  'CVS Health',
-  'CVS Health',
-);
-assertBrandTextTile(
-  'cvs-pharmacy-childrens-cold-allergy',
-  'CVS Health',
-  'CVS Health',
-);
-assertBrandTextTile(
-  'dg-health-cold-flu-day-softgels',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'dg-health-cold-flu-night-liquid',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'dg-health-mucus-dm-er',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'dg-health-mucus-er',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'kirkland-mucus-dm-max-er',
-  'Kirkland Signature',
-  'Kirkland',
-);
-assertBrandTextTile(
-  'hylands-baby-mucus-cold-night',
-  "Hyland's",
-  "Hyland's",
-);
-assertBrandTextTile(
-  'hylands-baby-tiny-cold-night',
-  "Hyland's",
-  "Hyland's",
-);
-assertBrandTextTile(
-  'signature-care-childrens-12hr-cough',
-  'Signature Care',
-  'Signature Care',
-);
-assertBrandTextTile(
-  'signature-care-childrens-multi-cold',
-  'Signature Care',
-  'Signature Care',
-);
-assertBrandTextTile(
-  'umcka-cold-flu-chewables',
-  "Nature's Way",
-  "Nature's Way",
 );
 assertBrandTextTile(
   '365-guaifenesin-er-600',
@@ -15717,6 +15637,9 @@ assertExactCarton('upup-mucus-relief-dm-yellow', 'up&up', 'upup-mucus-relief-dm-
 assertExactCarton('upup-daytime-honey-cold-flu', 'up&up', 'upup-daytime-honey-cold-flu.jpg');
 assertExactCarton('mucinex-childrens-freefrom-multi', 'Mucinex', 'mucinex-childrens-freefrom-multi.jpg');
 assertExactCarton('robitussin-childrens-long-acting', 'Robitussin', 'robitussin-childrens-long-acting.jpg');
+assertExactCarton('amazon-basic-care-no-drip-nasal', 'Amazon Basic Care', 'amazon-basic-care-no-drip-nasal.jpg');
+assertExactCarton('hylands-baby-tiny-cold-night', "Hyland's", 'hylands-baby-tiny-cold-night.jpg');
+assertExactCarton('hylands-baby-mucus-cold-night', "Hyland's", 'hylands-baby-mucus-cold-night.jpg');
 assertBrandMark('wedderspoon-manuka-honey-drops', 'Wedderspoon', 'wedderspoon-mark.png');
 assertBrandMark('equate-mucus-er-600', 'Equate', 'equate-mark.png');
 assertBrandMark('cvs-adult-cough-chest-dm-dyefree', 'CVS Health', 'cvs-mark.png');
@@ -15730,6 +15653,23 @@ assertBrandMark('equate-childrens-cough-congestion-dn', 'Equate', 'equate-mark.p
 assertBrandMark('equate-childrens-multi-night', 'Equate', 'equate-mark.png');
 assertBrandMark('equate-kids-dex-cough-gels', 'Equate', 'equate-mark.png');
 assertBrandMark('upup-childrens-multi-cold', 'up & up', 'upup-mark.png');
+assertBrandMark('cvs-childrens-cough-relief-dm', 'CVS Health', 'cvs-mark.png');
+assertBrandMark('cvs-childrens-cough-chest-dn', 'CVS Health', 'cvs-mark.png');
+assertBrandMark('cvs-childrens-multi-cold', 'CVS Health', 'cvs-mark.png');
+assertBrandMark('cvs-pharmacy-childrens-cold-allergy', 'CVS Health', 'cvs-mark.png');
+assertBrandMark('signature-care-childrens-multi-cold', 'Signature Care', 'signature-care-mark.png');
+assertBrandMark('signature-care-childrens-12hr-cough', 'Signature Care', 'signature-care-mark.png');
+assertBrandMark('kirkland-mucus-dm-max-er', 'Kirkland Signature', 'kirkland-mark.png');
+assertBrandMark('dg-health-mucus-er', 'DG Health', 'dg-health-mark.png');
+assertBrandMark('dg-health-mucus-dm-er', 'DG Health', 'dg-health-mark.png');
+assertBrandMark('dg-health-cold-flu-day-softgels', 'DG Health', 'dg-health-mark.png');
+assertBrandMark('dg-health-cold-flu-night-liquid', 'DG Health', 'dg-health-mark.png');
+assertBrandMark('amazon-basic-care-mucus-dm-er-dye-free', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+assertBrandMark('amazon-basic-care-oxymetazoline-nasal', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+assertBrandMark('amazon-basic-care-mucus-er-600', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+assertBrandMark('amazon-basic-care-mucus-dm-er', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+assertBrandMark('amazon-basic-care-mucus-er-max-blue1', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+assertBrandMark('umcka-cold-flu-chewables', "Nature's Way", 'natures-way-mark.png');
 for (const [id, formulaId] of [
   ['healtha2z-b96-cetirizine-10-396-03', 'healtha2z-b96-cetirizine-10'],
   ['healtha2z-b96-fluticasone-50-144-2pk', 'healtha2z-b96-fluticasone-50'],
