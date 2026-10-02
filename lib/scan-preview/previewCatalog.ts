@@ -142,6 +142,7 @@ import {
   BATCH140_KYR6B_SPROUTS_HELD_BOTTLES,
   BATCH141_KYR6B_ZYRTEC_US_OTC,
   BATCH142_KYR6B_ZYRTEC_MISSING_UPC,
+  BATCH143_KYR6B_ZYRTEC_75CT,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -305,6 +306,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH139_KYR6B_SPROUTS_HOUSE_SCAN,
   ...BATCH141_KYR6B_ZYRTEC_US_OTC,
   ...BATCH142_KYR6B_ZYRTEC_MISSING_UPC,
+  ...BATCH143_KYR6B_ZYRTEC_75CT,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
