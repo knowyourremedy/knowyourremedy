@@ -1844,6 +1844,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Mixed Berry creatine gummies are not on arrae.com. Live Tone
   // faces are watermelon and green apple. Do not glue those flavors.
   'arrae-tone-creatine-gummies': brandMark('arrae-mark.png'),
+  // Vitamins night run 2026-10-02 4:15 AM PT batch 2.
+  // Mega-Mag live barcode is 885631698587. Row barcode is 878941000256.
+  // Do not glue that bottle.
+  'trace-mega-mag': brandMark('trace-minerals-mark.png'),
+  // Orange Dream barcode 878941008894 is a variant on the powder page.
+  // The gallery faces are Mixed Berry. Do not glue that canister.
+  'trace-mg-glycinate-orange-dream': brandMark('trace-minerals-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8066,6 +8073,57 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'arrae-mb-1': catalogShot('arrae-mb-1.jpg'),
   // Full Spectrum Mag. Barcode 850045105136.
   'arrae-magnesium': catalogShot('arrae-magnesium.jpg'),
+  // Vitamins night run 2026-10-02 4:15 AM PT batch 2.
+  // Liposomal Glutathione, 60 capsules. Barcode 743474867532.
+  'bodybio-liposomal-glutathione': catalogShot(
+    'bodybio-liposomal-glutathione.jpg',
+  ),
+  // Liposomal Vitamin C, 60 capsules. Barcode 743474867594.
+  // Not the glutathione bottle.
+  'bodybio-liposomal-vitamin-c': catalogShot('bodybio-liposomal-vitamin-c.jpg'),
+  // TUDCA, 60 capsules. Barcode 743474325742.
+  'bodybio-tudca': catalogShot('bodybio-tudca.jpg'),
+  // Remineralize, 4 fl oz. Only size on bodybio.com.
+  'bodybio-remineralize': catalogShot('bodybio-remineralize.jpg'),
+  // Magnesium glycinate capsules, 180 count. Barcode 878941008153.
+  // Not the 90.
+  'trace-magnesium-glycinate': catalogShot('trace-magnesium-glycinate.jpg'),
+  // Liquid Ionic D3 & K2. Only variant barcode 878941006715.
+  'trace-liquid-ionic-d3-k2': catalogShot('trace-liquid-ionic-d3-k2.jpg'),
+  // Beef Liver capsules. Only variant barcode 878941007453.
+  'trace-beef-liver': catalogShot('trace-beef-liver.jpg'),
+  // ConcenTrace drops, 4 oz. Barcode 878941000065. Not the 8 oz.
+  // Not the 2 oz.
+  'trace-concentrace-drops': catalogShot('trace-concentrace-drops.jpg'),
+  // 40,000 Volts. Only variant barcode 878941001109.
+  'trace-40000-volts': catalogShot('trace-40000-volts.jpg'),
+  // Berberine 500 mg, 60 capsules. Barcode 076280477054.
+  // Not ProSorb Berberine 550 mg.
+  'solaray-berberine-500': catalogShot('solaray-berberine-500.jpg'),
+  // Vitamin D3 + K2, 120 capsules. Barcode 076280574456.
+  // Not the 60.
+  'solaray-d3-k2': catalogShot('solaray-d3-k2.jpg'),
+  // Kids chewable black cherry, 120 count. Barcode 076280047974.
+  // Not the 60.
+  'solaray-kids-chewable': catalogShot('solaray-kids-chewable.jpg'),
+  // Magnesium Glycinate 350, 160 vegcaps. Barcode 021245390220.
+  'kal-magnesium-glycinate-350': catalogShot('kal-magnesium-glycinate-350.jpg'),
+  // Vitamin D3 5000 IU, 200 softgels. Barcode 015794058083.
+  // Not the 60. Not the 365.
+  'country-life-d3-5000': catalogShot('country-life-d3-5000.jpg'),
+  // Ashwagandha, 60 capsules. Barcode 850502007584. Not the 90.
+  'youtheory-ashwagandha-ksm66': catalogShot('youtheory-ashwagandha-ksm66.jpg'),
+  // Collagen tablets, 290 count. Barcode 853244003036.
+  // Not the 120. Not the 160. Not Verisol.
+  'youtheory-collagen-tablets': catalogShot('youtheory-collagen-tablets.jpg'),
+  // Organic SuperGreens 1-pack. Barcode 816401025616.
+  // Not the 3-pack. Not the 6-pack.
+  'ancient-super-greens-unflavored': catalogShot(
+    'ancient-super-greens-unflavored.jpg',
+  ),
+  // Magnesium capsules, single bottle (ANM3360). Barcode 816401023360.
+  // Not a 3-pack or 6-pack sleeve.
+  'ancient-nutrition-magnesium': catalogShot('ancient-nutrition-magnesium.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15993,6 +16051,67 @@ assertBrandMark('om-master-blend-capsules', 'OM Mushrooms', 'om-mark.png');
 assertBrandMark('om-lions-mane-capsules', 'OM Mushrooms', 'om-mark.png');
 assertBrandMark('plant-people-wonder-day', 'Plant People', 'plant-people-mark.png');
 assertBrandMark('arrae-tone-creatine-gummies', 'Arrae', 'arrae-mark.png');
+// Vitamins night run 2026-10-02 4:15 AM PT batch 2.
+assertExactCarton(
+  'bodybio-liposomal-glutathione',
+  'BodyBio',
+  'bodybio-liposomal-glutathione.jpg',
+);
+assertExactCarton(
+  'bodybio-liposomal-vitamin-c',
+  'BodyBio',
+  'bodybio-liposomal-vitamin-c.jpg',
+);
+assertExactCarton('bodybio-tudca', 'BodyBio', 'bodybio-tudca.jpg');
+assertExactCarton('bodybio-remineralize', 'BodyBio', 'bodybio-remineralize.jpg');
+assertExactCarton(
+  'trace-magnesium-glycinate',
+  'Trace Minerals',
+  'trace-magnesium-glycinate.jpg',
+);
+assertExactCarton(
+  'trace-liquid-ionic-d3-k2',
+  'Trace Minerals',
+  'trace-liquid-ionic-d3-k2.jpg',
+);
+assertExactCarton('trace-beef-liver', 'Trace Minerals', 'trace-beef-liver.jpg');
+assertExactCarton(
+  'trace-concentrace-drops',
+  'Trace Minerals',
+  'trace-concentrace-drops.jpg',
+);
+assertExactCarton('trace-40000-volts', 'Trace Minerals', 'trace-40000-volts.jpg');
+assertBrandMark('trace-mega-mag', 'Trace Minerals', 'trace-minerals-mark.png');
+assertBrandMark(
+  'trace-mg-glycinate-orange-dream',
+  'Trace Minerals',
+  'trace-minerals-mark.png',
+);
+assertExactCarton('solaray-berberine-500', 'Solaray', 'solaray-berberine-500.jpg');
+assertExactCarton('solaray-d3-k2', 'Solaray', 'solaray-d3-k2.jpg');
+assertExactCarton('solaray-kids-chewable', 'Solaray', 'solaray-kids-chewable.jpg');
+assertExactCarton('kal-magnesium-glycinate-350', 'KAL', 'kal-magnesium-glycinate-350.jpg');
+assertExactCarton('country-life-d3-5000', 'Country Life', 'country-life-d3-5000.jpg');
+assertExactCarton(
+  'youtheory-ashwagandha-ksm66',
+  'Youtheory',
+  'youtheory-ashwagandha-ksm66.jpg',
+);
+assertExactCarton(
+  'youtheory-collagen-tablets',
+  'Youtheory',
+  'youtheory-collagen-tablets.jpg',
+);
+assertExactCarton(
+  'ancient-super-greens-unflavored',
+  'Ancient Nutrition',
+  'ancient-super-greens-unflavored.jpg',
+);
+assertExactCarton(
+  'ancient-nutrition-magnesium',
+  'Ancient Nutrition',
+  'ancient-nutrition-magnesium.jpg',
+);
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
