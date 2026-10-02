@@ -8294,6 +8294,58 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'maryruth-toddler-d3-k2-unflavored': catalogShot(
     'maryruth-toddler-d3-k2-unflavored.jpg',
   ),
+  // Vitamins night run 2026-10-02 6:45 AM PT batch 2.
+  // D3 + B12 gummies, strawberry, 60 count. Barcode 861212000383.
+  // Not the sugar-free raspberry gummies.
+  'maryruth-d3-b12-gummies-strawberry': catalogShot(
+    'maryruth-d3-b12-gummies-strawberry.jpg',
+  ),
+  // Kids Multivitamin Liposomal, strawberry cherry vanilla.
+  // Barcode 850029392781.
+  'maryruth-kids-multi-liposomal': catalogShot('maryruth-kids-multi-liposomal.jpg'),
+  // Kids Vitamin C drops, orange vanilla, 2 oz. Barcode 850018471497.
+  // Not the infant 2 oz or the toddler 1 oz.
+  'maryruth-kids-c-drops': catalogShot('maryruth-kids-c-drops.jpg'),
+  // Infant Vitamin C drops, orange vanilla, 2 oz. Barcode 850018471329.
+  'maryruth-infant-c-drops': catalogShot('maryruth-infant-c-drops.jpg'),
+  // Toddler Vitamin C drops, orange vanilla, 1 oz. Barcode 850018471312.
+  'maryruth-toddler-c-drops': catalogShot('maryruth-toddler-c-drops.jpg'),
+  // Women's Multivitamin Liposomal, vanilla peach. Barcode 850029392743.
+  'maryruth-womens-multi-liposomal': catalogShot(
+    'maryruth-womens-multi-liposomal.jpg',
+  ),
+  // Sea Moss with Spirulina and Chlorella, limeade. Barcode 810104623087.
+  // Not the citrus berry immune bottle.
+  'maryruth-sea-moss-spirulina': catalogShot('maryruth-sea-moss-spirulina.jpg'),
+  // Sea Moss Immune & Energy, citrus berry. Barcode 810104623094.
+  'maryruth-sea-moss-immune-energy': catalogShot(
+    'maryruth-sea-moss-immune-energy.jpg',
+  ),
+  // Liquid Iron, berry. Barcode 856645008419.
+  'maryruth-iron-liquid-berry': catalogShot('maryruth-iron-liquid-berry.jpg'),
+  // B-Complex liquid drops, cherry. Barcode 856645008136.
+  'maryruth-b-complex-cherry': catalogShot('maryruth-b-complex-cherry.jpg'),
+  // Toddler Iron liquid drops, grape. Barcode 850036700562.
+  'maryruth-toddler-iron': catalogShot('maryruth-toddler-iron.jpg'),
+  // Infant Multivitamin with Iron drops, orange vanilla. Barcode 810104620949.
+  'maryruth-infant-multi-iron': catalogShot('maryruth-infant-multi-iron.jpg'),
+  // Vitamin Code RAW Vitamin C, 120 capsules. Barcode 658010116558.
+  'gol-vitamin-code-raw-c': catalogShot('gol-vitamin-code-raw-c.jpg'),
+  // Vitamin Code RAW D3, 5,000 IU, 60 capsules. Barcode 658010115865.
+  'gol-vitamin-code-raw-d3': catalogShot('gol-vitamin-code-raw-d3.jpg'),
+  // Vitamin Code RAW Zinc, 60 capsules. Barcode 658010116527.
+  'gol-vitamin-code-raw-zinc': catalogShot('gol-vitamin-code-raw-zinc.jpg'),
+  // Vitamin Code RAW B-12, 30 capsules. Barcode 658010113793.
+  'gol-vitamin-code-raw-b12': catalogShot('gol-vitamin-code-raw-b12.jpg'),
+  // Vitamin Code RAW Iron, 30 capsules. Barcode 658010113762.
+  'gol-vitamin-code-raw-iron': catalogShot('gol-vitamin-code-raw-iron.jpg'),
+  // Vitamin Code RAW B-Complex, 120 capsules. Barcode 658010113809.
+  'gol-vitamin-code-raw-b-complex': catalogShot('gol-vitamin-code-raw-b-complex.jpg'),
+  // Vitamin Code Women, 120 capsules. Barcode 658010113663.
+  // Not the 50 & Wiser bottle.
+  'gol-vitamin-code-womens': catalogShot('gol-vitamin-code-womens.jpg'),
+  // Vitamin Code Men, 120 capsules. Barcode 658010113687.
+  'gol-vitamin-code-mens': catalogShot('gol-vitamin-code-mens.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16468,6 +16520,86 @@ assertExactCarton(
   "MaryRuth's",
   'maryruth-toddler-d3-k2-unflavored.jpg',
 );
+assertExactCarton(
+  'maryruth-d3-b12-gummies-strawberry',
+  "MaryRuth's",
+  'maryruth-d3-b12-gummies-strawberry.jpg',
+);
+assertExactCarton(
+  'maryruth-kids-multi-liposomal',
+  "MaryRuth's",
+  'maryruth-kids-multi-liposomal.jpg',
+);
+assertExactCarton('maryruth-kids-c-drops', "MaryRuth's", 'maryruth-kids-c-drops.jpg');
+assertExactCarton('maryruth-infant-c-drops', "MaryRuth's", 'maryruth-infant-c-drops.jpg');
+assertExactCarton('maryruth-toddler-c-drops', "MaryRuth's", 'maryruth-toddler-c-drops.jpg');
+assertExactCarton(
+  'maryruth-womens-multi-liposomal',
+  "MaryRuth's",
+  'maryruth-womens-multi-liposomal.jpg',
+);
+assertExactCarton(
+  'maryruth-sea-moss-spirulina',
+  "MaryRuth's",
+  'maryruth-sea-moss-spirulina.jpg',
+);
+assertExactCarton(
+  'maryruth-sea-moss-immune-energy',
+  "MaryRuth's",
+  'maryruth-sea-moss-immune-energy.jpg',
+);
+assertExactCarton(
+  'maryruth-iron-liquid-berry',
+  "MaryRuth's",
+  'maryruth-iron-liquid-berry.jpg',
+);
+assertExactCarton(
+  'maryruth-b-complex-cherry',
+  "MaryRuth's",
+  'maryruth-b-complex-cherry.jpg',
+);
+assertExactCarton('maryruth-toddler-iron', "MaryRuth's", 'maryruth-toddler-iron.jpg');
+assertExactCarton(
+  'maryruth-infant-multi-iron',
+  "MaryRuth's",
+  'maryruth-infant-multi-iron.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-c',
+  'Garden of Life',
+  'gol-vitamin-code-raw-c.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-d3',
+  'Garden of Life',
+  'gol-vitamin-code-raw-d3.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-zinc',
+  'Garden of Life',
+  'gol-vitamin-code-raw-zinc.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-b12',
+  'Garden of Life',
+  'gol-vitamin-code-raw-b12.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-iron',
+  'Garden of Life',
+  'gol-vitamin-code-raw-iron.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-raw-b-complex',
+  'Garden of Life',
+  'gol-vitamin-code-raw-b-complex.jpg',
+);
+assertExactCarton(
+  'gol-vitamin-code-womens',
+  'Garden of Life',
+  'gol-vitamin-code-womens.jpg',
+);
+assertExactCarton('gol-vitamin-code-mens', 'Garden of Life', 'gol-vitamin-code-mens.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
