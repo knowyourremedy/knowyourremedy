@@ -8002,6 +8002,11 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b109-nighttime-sleep-aid-bc4e-100': catalogShot(
     'goodsense-b109-nighttime-sleep-aid-bc4e-100.jpg',
   ),
+  // Immune Support night run 2026-10-02 3:00 AM PT batch 1.
+  // Sprouts Garlic liquid, 1 fl oz. Shop page UPC 00646670121401
+  // (row 646670121401). Bottle prints GARLIC and 1 FL OZ (30 mL).
+  // Not the garlic capsules. Not the garlic softgels.
+  'sprouts-b140-garlic-1oz': catalogShot('sprouts-b140-garlic-1oz.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15894,6 +15899,8 @@ assertBrandMark('goodsense-b111-severe-nighttime-cold-and-flu-79bc', 'GoodSense'
 assertBrandMark('goodsense-b111-severe-nighttime-cold-and-flu-79bc-354-ml', 'GoodSense', 'goodsense-mark.png');
 assertBrandMark('goodsense-b112-sleep-time-c1b4', 'GoodSense', 'goodsense-mark.png');
 assertBrandMark('goodsense-b112-sleep-time-c1b4-355-ml', 'GoodSense', 'goodsense-mark.png');
+// Immune Support night run 2026-10-02 3:00 AM PT batch 1.
+assertExactCarton('sprouts-b140-garlic-1oz', 'Sprouts', 'sprouts-b140-garlic-1oz.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
