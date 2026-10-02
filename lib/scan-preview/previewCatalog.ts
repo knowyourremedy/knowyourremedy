@@ -143,6 +143,7 @@ import {
   BATCH141_KYR6B_ZYRTEC_US_OTC,
   BATCH142_KYR6B_ZYRTEC_MISSING_UPC,
   BATCH143_KYR6B_ZYRTEC_75CT,
+  BATCH144_KYR6B_CLARITIN_US_OTC,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -307,6 +308,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH141_KYR6B_ZYRTEC_US_OTC,
   ...BATCH142_KYR6B_ZYRTEC_MISSING_UPC,
   ...BATCH143_KYR6B_ZYRTEC_75CT,
+  ...BATCH144_KYR6B_CLARITIN_US_OTC,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
