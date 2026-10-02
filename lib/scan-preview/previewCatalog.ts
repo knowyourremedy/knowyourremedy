@@ -1778,6 +1778,46 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-night-time-1158': brandMark('goodsense-mark.png'),
   // 2 caplets. The only 3D carton is the 100-count box. Do not glue it.
   'goodsense-b109-nighttime-sleep-aid-bc4e': brandMark('goodsense-mark.png'),
+  // Sleep night run 2026-10-02 1:45 AM PT batch 2.
+  // Tried each SKU. DailyMed files are flat labels, not 3D bottles.
+  // Official GoodSense mark already on disk. Per-id only.
+  // Night Time liquid. The flat prints 12 fl oz (354 mL). Do not glue
+  // it onto 177, 237, or 296.
+  'goodsense-b111-night-time-b40c': brandMark('goodsense-mark.png'),
+  'goodsense-b111-night-time-b40c-237-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-night-time-b40c-296-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-night-time-b40c-354-ml': brandMark('goodsense-mark.png'),
+  // Same 12 fl oz flat. This row is the 354 mL. Not a 3D bottle.
+  'goodsense-b111-night-time-df13': brandMark('goodsense-mark.png'),
+  // Nighttime liquid. The flat prints 8 fl oz (237 mL). UPC
+  // 301130459349 is that 237 mL. Do not glue it onto 177, 296, or 354.
+  'goodsense-b111-nighttime-0317': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nighttime-0317-237-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nighttime-0317-296-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-nighttime-0317-354-ml': brandMark('goodsense-mark.png'),
+  // Doxylamine tablets. The flat prints 48 tablets, NDC 0113-6044-67.
+  // No 3D carton of the 48 or the 96.
+  'goodsense-b111-sleep-aid-d758': brandMark('goodsense-mark.png'),
+  'goodsense-b111-sleep-aid-d758-96': brandMark('goodsense-mark.png'),
+  // Ultra mini-tabs. The flat prints one count, NDC 0113-4032-62.
+  // Do not glue it onto the 48.
+  'goodsense-b111-sleep-aid-ultra-437e': brandMark('goodsense-mark.png'),
+  'goodsense-b111-sleep-aid-ultra-437e-48': brandMark('goodsense-mark.png'),
+  // Night time cold and flu. The flat prints 12 fl oz (354 mL).
+  // Not a 3D bottle.
+  'goodsense-b111-night-time-cold-and-flu-168b': brandMark('goodsense-mark.png'),
+  // Severe NightTime. The flat prints one size. Do not glue it
+  // onto the 354 mL.
+  'goodsense-b111-severe-nighttime-9cd7': brandMark('goodsense-mark.png'),
+  'goodsense-b111-severe-nighttime-9cd7-354-ml': brandMark('goodsense-mark.png'),
+  // Severe NightTime Cold and Flu. The flat prints one size.
+  // Do not glue it onto the other count.
+  'goodsense-b111-severe-nighttime-cold-and-flu-79bc': brandMark('goodsense-mark.png'),
+  'goodsense-b111-severe-nighttime-cold-and-flu-79bc-354-ml': brandMark('goodsense-mark.png'),
+  // Sleep Time liquid. The flat prints 12 fl oz. UPC 301130186405
+  // is the 355 mL. Do not glue it onto the 177 mL.
+  'goodsense-b112-sleep-time-c1b4': brandMark('goodsense-mark.png'),
+  'goodsense-b112-sleep-time-c1b4-355-ml': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8250,6 +8290,19 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b100-dph-25-30x24',
   'healtha2z-b100-dph-25-24x24',
   'goodsense-b109-nighttime-sleep-aid-bc4e-100',
+  // Sleep night run 2026-10-02 1:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b111-night-time-b40c-237-ml',
+  'goodsense-b111-night-time-b40c-296-ml',
+  'goodsense-b111-night-time-b40c-354-ml',
+  'goodsense-b111-nighttime-0317-237-ml',
+  'goodsense-b111-nighttime-0317-296-ml',
+  'goodsense-b111-nighttime-0317-354-ml',
+  'goodsense-b111-sleep-aid-d758-96',
+  'goodsense-b111-sleep-aid-ultra-437e-48',
+  'goodsense-b111-severe-nighttime-9cd7-354-ml',
+  'goodsense-b111-severe-nighttime-cold-and-flu-79bc-354-ml',
+  'goodsense-b112-sleep-time-c1b4-355-ml',
   'healtha2z-b96-cetirizine-10-60',
   'healtha2z-b96-cetirizine-10-396-03',
   'healtha2z-b96-cetirizine-10-1080',
@@ -15820,6 +15873,27 @@ assertBrandMark('healtha2z-b100-dph-25-30x24', 'HealthA2Z', 'healtha2z-mark.png'
 assertBrandMark('healtha2z-b100-dph-25-24x24', 'HealthA2Z', 'healtha2z-mark.png');
 assertBrandMark('goodsense-b109-night-time-1158', 'GoodSense', 'goodsense-mark.png');
 assertBrandMark('goodsense-b109-nighttime-sleep-aid-bc4e', 'GoodSense', 'goodsense-mark.png');
+// Sleep night run 2026-10-02 1:45 AM PT batch 2.
+assertBrandMark('goodsense-b111-night-time-b40c', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-night-time-b40c-237-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-night-time-b40c-296-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-night-time-b40c-354-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-night-time-df13', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-nighttime-0317', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-nighttime-0317-237-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-nighttime-0317-296-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-nighttime-0317-354-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-sleep-aid-d758', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-sleep-aid-d758-96', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-sleep-aid-ultra-437e', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-sleep-aid-ultra-437e-48', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-night-time-cold-and-flu-168b', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-severe-nighttime-9cd7', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-severe-nighttime-9cd7-354-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-severe-nighttime-cold-and-flu-79bc', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b111-severe-nighttime-cold-and-flu-79bc-354-ml', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b112-sleep-time-c1b4', 'GoodSense', 'goodsense-mark.png');
+assertBrandMark('goodsense-b112-sleep-time-c1b4-355-ml', 'GoodSense', 'goodsense-mark.png');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
@@ -15896,6 +15970,24 @@ for (const [id, formulaId, brand, file] of [
   }
   if (file.endsWith('.jpg') && !image.verifiedSku) {
     throw new Error(`${id} carton must set verifiedSku`);
+  }
+}
+for (const [id, formulaId] of [
+  ['goodsense-b111-night-time-b40c-237-ml', 'goodsense-b111-night-time-b40c'],
+  ['goodsense-b111-night-time-b40c-296-ml', 'goodsense-b111-night-time-b40c'],
+  ['goodsense-b111-night-time-b40c-354-ml', 'goodsense-b111-night-time-b40c'],
+  ['goodsense-b111-nighttime-0317-237-ml', 'goodsense-b111-nighttime-0317'],
+  ['goodsense-b111-nighttime-0317-296-ml', 'goodsense-b111-nighttime-0317'],
+  ['goodsense-b111-nighttime-0317-354-ml', 'goodsense-b111-nighttime-0317'],
+  ['goodsense-b111-sleep-aid-d758-96', 'goodsense-b111-sleep-aid-d758'],
+  ['goodsense-b111-sleep-aid-ultra-437e-48', 'goodsense-b111-sleep-aid-ultra-437e'],
+  ['goodsense-b111-severe-nighttime-9cd7-354-ml', 'goodsense-b111-severe-nighttime-9cd7'],
+  ['goodsense-b111-severe-nighttime-cold-and-flu-79bc-354-ml', 'goodsense-b111-severe-nighttime-cold-and-flu-79bc'],
+  ['goodsense-b112-sleep-time-c1b4-355-ml', 'goodsense-b112-sleep-time-c1b4'],
+] as const) {
+  const image = previewOverlayImage({ id, formulaId, brand: 'GoodSense' });
+  if (!image?.url.endsWith('/goodsense-mark.png') || image.verifiedSku) {
+    throw new Error(`${id} must stay the GoodSense mark, not a sibling face`);
   }
 }
 for (const [id, formulaId, brand, file] of [
