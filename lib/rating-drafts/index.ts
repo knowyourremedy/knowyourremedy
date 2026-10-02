@@ -138,3 +138,4 @@ export { BATCH138_KYR6B_ALLEGRA_D24 } from './batch138-kyr6b-allegra-d24';
 export { BATCH139_KYR6B_SPROUTS_HOUSE_SCAN } from './batch139-kyr6b-sprouts-house-scan';
 export { BATCH140_KYR6B_SPROUTS_HELD_BOTTLES } from './batch140-kyr6b-sprouts-held-bottles';
 export { BATCH141_KYR6B_ZYRTEC_US_OTC } from './batch141-kyr6b-zyrtec-us-otc';
+export { BATCH142_KYR6B_ZYRTEC_MISSING_UPC } from './batch142-kyr6b-zyrtec-missing-upc';
