@@ -8234,6 +8234,66 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'codeage-creatine-monohydrate-powder': catalogShot(
     'codeage-creatine-monohydrate-powder.jpg',
   ),
+  // Vitamins night run 2026-10-02 6:45 AM PT batch 1.
+  // GLP-Harmony Companion+. Barcode 850049609685.
+  'codeage-glp-harmony': catalogShot('codeage-glp-harmony.jpg'),
+  // Full Spectrum Binder+. Barcode 853919008434.
+  'codeage-full-spectrum-binder': catalogShot('codeage-full-spectrum-binder.jpg'),
+  // Hair Vitamins Platinum bottle. Barcode 850068815944 matches this row.
+  // Not Hair Vitamins 853919008496.
+  'codeage-hair-platinum': catalogShot('codeage-hair-platinum.jpg'),
+  // Teen Brain Focus Vitamins+. Barcode 850068815340.
+  'codeage-teen-brain-focus': catalogShot('codeage-teen-brain-focus.jpg'),
+  // Liposomal Urolithin A Eternal, 60 capsules. Barcode 850043333845.
+  // Not the current Liposomal Urolithin A bottle 810196121539.
+  'codeage-urolithin-a-eternal': catalogShot('codeage-urolithin-a-eternal.jpg'),
+  // Liposomal Vitamin C+ Platinum. Barcode 850068815883.
+  // Not the 90-count 850068815920. Not the large 853919008649.
+  'codeage-vitamin-c-platinum': catalogShot('codeage-vitamin-c-platinum.jpg'),
+  // Menopause Hair & Skin Vitamins+. Barcode 850068815746.
+  'codeage-menopause-hair-skin': catalogShot('codeage-menopause-hair-skin.jpg'),
+  // Instantfood Whole Food Vitamin C. Barcode 850068815357.
+  'codeage-instantfood-whole-food-c': catalogShot(
+    'codeage-instantfood-whole-food-c.jpg',
+  ),
+  // Molecular Hydrogen effervescent tablets. Barcode 850068815371.
+  'codeage-molecular-hydrogen': catalogShot('codeage-molecular-hydrogen.jpg'),
+  // Berberine Phytosome+. Barcode 850049609265.
+  'codeage-berberine-phytosome': catalogShot('codeage-berberine-phytosome.jpg'),
+  // Teen's Daily Multivitamin+ Platinum. Barcode 850068815968.
+  // Not Teen's Daily Multivitamin 850068815470.
+  'codeage-teen-multi-platinum': catalogShot('codeage-teen-multi-platinum.jpg'),
+  // Liposomal Vitamin C+ large bottle. Barcode 853919008649.
+  // Not the 90-count 850068815920. Not Platinum.
+  'codeage-liposomal-c-capsules': catalogShot('codeage-liposomal-c-capsules.jpg'),
+  // Biotin Marine Collagen capsules. Barcode 853919008571.
+  'codeage-biotin-marine-collagen': catalogShot('codeage-biotin-marine-collagen.jpg'),
+  // Teen Athlete Multivitamin. Barcode 810196120082.
+  'codeage-teen-athlete-multi': catalogShot('codeage-teen-athlete-multi.jpg'),
+  // Raw Wildcrafted Sea Moss capsules. Barcode 850026121216.
+  // Not the strawberry gummies 850049609722.
+  'codeage-raw-wildcrafted-sea-moss': catalogShot(
+    'codeage-raw-wildcrafted-sea-moss.jpg',
+  ),
+  // Men's Fermented Multivitamin, 120 capsules. Barcode 853919008519.
+  // Not Men's Daily 30-count 850068815494.
+  'codeage-mens-fermented-multi': catalogShot('codeage-mens-fermented-multi.jpg'),
+  // Hair Vitamins. Barcode 853919008496. Not Platinum 850068815944.
+  'codeage-hair-vitamins': catalogShot('codeage-hair-vitamins.jpg'),
+  // Irish Sea Moss Gummies, strawberry. Barcode 850049609722.
+  // Not the raw capsules.
+  'codeage-irish-sea-moss-gummies': catalogShot(
+    'codeage-irish-sea-moss-gummies.jpg',
+  ),
+  // Infant and Toddler Organic Vitamin D3 drops, unflavored.
+  // Barcode 850036700685.
+  'maryruth-infant-toddler-d3-unflavored': catalogShot(
+    'maryruth-infant-toddler-d3-unflavored.jpg',
+  ),
+  // Toddler Vitamin D3 + K2 drops, unflavored. Barcode 850018471404.
+  'maryruth-toddler-d3-k2-unflavored': catalogShot(
+    'maryruth-toddler-d3-k2-unflavored.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16323,6 +16383,90 @@ assertExactCarton(
   'codeage-creatine-monohydrate-powder',
   'Codeage',
   'codeage-creatine-monohydrate-powder.jpg',
+);
+assertExactCarton('codeage-glp-harmony', 'Codeage', 'codeage-glp-harmony.jpg');
+assertExactCarton(
+  'codeage-full-spectrum-binder',
+  'Codeage',
+  'codeage-full-spectrum-binder.jpg',
+);
+assertExactCarton('codeage-hair-platinum', 'Codeage', 'codeage-hair-platinum.jpg');
+assertExactCarton('codeage-teen-brain-focus', 'Codeage', 'codeage-teen-brain-focus.jpg');
+assertExactCarton(
+  'codeage-urolithin-a-eternal',
+  'Codeage',
+  'codeage-urolithin-a-eternal.jpg',
+);
+assertExactCarton(
+  'codeage-vitamin-c-platinum',
+  'Codeage',
+  'codeage-vitamin-c-platinum.jpg',
+);
+assertExactCarton(
+  'codeage-menopause-hair-skin',
+  'Codeage',
+  'codeage-menopause-hair-skin.jpg',
+);
+assertExactCarton(
+  'codeage-instantfood-whole-food-c',
+  'Codeage',
+  'codeage-instantfood-whole-food-c.jpg',
+);
+assertExactCarton(
+  'codeage-molecular-hydrogen',
+  'Codeage',
+  'codeage-molecular-hydrogen.jpg',
+);
+assertExactCarton(
+  'codeage-berberine-phytosome',
+  'Codeage',
+  'codeage-berberine-phytosome.jpg',
+);
+assertExactCarton(
+  'codeage-teen-multi-platinum',
+  'Codeage',
+  'codeage-teen-multi-platinum.jpg',
+);
+assertExactCarton(
+  'codeage-liposomal-c-capsules',
+  'Codeage',
+  'codeage-liposomal-c-capsules.jpg',
+);
+assertExactCarton(
+  'codeage-biotin-marine-collagen',
+  'Codeage',
+  'codeage-biotin-marine-collagen.jpg',
+);
+assertExactCarton(
+  'codeage-teen-athlete-multi',
+  'Codeage',
+  'codeage-teen-athlete-multi.jpg',
+);
+assertExactCarton(
+  'codeage-raw-wildcrafted-sea-moss',
+  'Codeage',
+  'codeage-raw-wildcrafted-sea-moss.jpg',
+);
+assertExactCarton(
+  'codeage-mens-fermented-multi',
+  'Codeage',
+  'codeage-mens-fermented-multi.jpg',
+);
+assertExactCarton('codeage-hair-vitamins', 'Codeage', 'codeage-hair-vitamins.jpg');
+assertExactCarton(
+  'codeage-irish-sea-moss-gummies',
+  'Codeage',
+  'codeage-irish-sea-moss-gummies.jpg',
+);
+assertExactCarton(
+  'maryruth-infant-toddler-d3-unflavored',
+  "MaryRuth's",
+  'maryruth-infant-toddler-d3-unflavored.jpg',
+);
+assertExactCarton(
+  'maryruth-toddler-d3-k2-unflavored',
+  "MaryRuth's",
+  'maryruth-toddler-d3-k2-unflavored.jpg',
 );
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
