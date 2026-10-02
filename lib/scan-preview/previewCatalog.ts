@@ -8178,6 +8178,62 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'owh-ashwagandha': catalogShot('owh-ashwagandha.jpg'),
   // Rhodiola, 60 capsules. Barcode 706195004150.
   'owh-rhodiola': catalogShot('owh-rhodiola.jpg'),
+  // Vitamins night run 2026-10-02 5:30 AM PT batch 2.
+  // Ginger, 90 capsules. Barcode 706195000527. Not the 180.
+  'owh-ginger': catalogShot('owh-ginger.jpg'),
+  // Hawthorn, 90 capsules. Barcode 706195004204.
+  'owh-hawthorn': catalogShot('owh-hawthorn.jpg'),
+  // Echinacea with Zinc and Vitamin C, 90 capsules. Barcode 706195000572.
+  // Not plain echinacea 706195000954.
+  'owh-echinacea-zn-c': catalogShot('owh-echinacea-zn-c.jpg'),
+  // Women's Daily Multivitamin+, 120 capsules. Barcode 853919008311.
+  'codeage-womens-fermented-multi': catalogShot(
+    'codeage-womens-fermented-multi.jpg',
+  ),
+  // Teen's Daily Multivitamin, 30 capsules. Barcode 850068815470.
+  // Not Teen's Daily Multivitamin+ 853919008526.
+  'codeage-teen-multi': catalogShot('codeage-teen-multi.jpg'),
+  // Liposomal NR+, 60 capsules. Barcode 850049609210.
+  'codeage-liposomal-nr-eternal': catalogShot('codeage-liposomal-nr-eternal.jpg'),
+  // Liposomal Glutathione 1000 mg. Barcode 850026121599.
+  // Not the other glutathione 853919008229.
+  'codeage-liposomal-glutathione': catalogShot('codeage-liposomal-glutathione.jpg'),
+  // Fermented Digestive Enzymes, 180 capsules. Barcode 853919008502.
+  // Not the 30-count 850049609975.
+  'codeage-fermented-digestive-enzymes': catalogShot(
+    'codeage-fermented-digestive-enzymes.jpg',
+  ),
+  // A D K Vitamins. Barcode 853919008236.
+  'codeage-adk': catalogShot('codeage-adk.jpg'),
+  // Grass Fed Beef Organs. Barcode 853919008106.
+  'codeage-grass-fed-beef-organs': catalogShot('codeage-grass-fed-beef-organs.jpg'),
+  // Grass Fed Beef Liver. Barcode 853919008090. Not the organs blend.
+  'codeage-grass-fed-beef-liver': catalogShot('codeage-grass-fed-beef-liver.jpg'),
+  // Liposomal NMN, 30 capsules. Barcode 850026121827. Not Platinum.
+  'codeage-liposomal-nmn': catalogShot('codeage-liposomal-nmn.jpg'),
+  // Liposomal NMN Platinum, 30 capsules. Barcode 850026121148.
+  // Not the regular NMN.
+  'codeage-liposomal-nmn-platinum': catalogShot('codeage-liposomal-nmn-platinum.jpg'),
+  // Liposomal NAD+, 60 capsules. Barcode 850049609029. Not Ultra.
+  'codeage-liposomal-nad': catalogShot('codeage-liposomal-nad.jpg'),
+  // Liposomal NAD+ Ultra. Barcode 850049609036. Not the regular NAD+.
+  'codeage-liposomal-nad-ultra-sport': catalogShot(
+    'codeage-liposomal-nad-ultra-sport.jpg',
+  ),
+  // Liposomal Magnesium L-Threonate. Barcode 850049609258.
+  'codeage-mag-l-threonate': catalogShot('codeage-mag-l-threonate.jpg'),
+  // Liposomal Magnesium Glycinate, 120 capsules. Barcode 850043333715.
+  // Not the 240-count 850026121643.
+  'codeage-mag-glycinate': catalogShot('codeage-mag-glycinate.jpg'),
+  // Liposomal Ovarian Inositol+. Barcode 850043333890. Not the powder.
+  'codeage-ovarian-inositol': catalogShot('codeage-ovarian-inositol.jpg'),
+  // Teen Clearface. Barcode 853919008779.
+  'codeage-teen-clearface': catalogShot('codeage-teen-clearface.jpg'),
+  // Liposomal Creatine powder, large canister. Barcode 850026121223.
+  // Not the smaller canister 850049609067.
+  'codeage-creatine-monohydrate-powder': catalogShot(
+    'codeage-creatine-monohydrate-powder.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16215,6 +16271,59 @@ assertBrandMark('hum-ashwagandha-calm-gummies', 'HUM', 'hum-mark.png');
 assertBrandMark('pluscbd-mens-performance-ignite', 'PlusCBD', 'pluscbd-mark.png');
 assertBrandMark('rookie-wake-raspberry-lemonade', 'Rookie Wellness', 'rookie-mark.png');
 assertBrandMark('carlson-super-omega-3-gems', 'Carlson', 'carlson-mark.png');
+// Vitamins night run 2026-10-02 5:30 AM PT batch 2.
+assertExactCarton('owh-ginger', "Oregon's Wild Harvest", 'owh-ginger.jpg');
+assertExactCarton('owh-hawthorn', "Oregon's Wild Harvest", 'owh-hawthorn.jpg');
+assertExactCarton('owh-echinacea-zn-c', "Oregon's Wild Harvest", 'owh-echinacea-zn-c.jpg');
+assertExactCarton(
+  'codeage-womens-fermented-multi',
+  'Codeage',
+  'codeage-womens-fermented-multi.jpg',
+);
+assertExactCarton('codeage-teen-multi', 'Codeage', 'codeage-teen-multi.jpg');
+assertExactCarton(
+  'codeage-liposomal-nr-eternal',
+  'Codeage',
+  'codeage-liposomal-nr-eternal.jpg',
+);
+assertExactCarton(
+  'codeage-liposomal-glutathione',
+  'Codeage',
+  'codeage-liposomal-glutathione.jpg',
+);
+assertExactCarton(
+  'codeage-fermented-digestive-enzymes',
+  'Codeage',
+  'codeage-fermented-digestive-enzymes.jpg',
+);
+assertExactCarton('codeage-adk', 'Codeage', 'codeage-adk.jpg');
+assertExactCarton(
+  'codeage-grass-fed-beef-organs',
+  'Codeage',
+  'codeage-grass-fed-beef-organs.jpg',
+);
+assertExactCarton('codeage-grass-fed-beef-liver', 'Codeage', 'codeage-grass-fed-beef-liver.jpg');
+assertExactCarton('codeage-liposomal-nmn', 'Codeage', 'codeage-liposomal-nmn.jpg');
+assertExactCarton(
+  'codeage-liposomal-nmn-platinum',
+  'Codeage',
+  'codeage-liposomal-nmn-platinum.jpg',
+);
+assertExactCarton('codeage-liposomal-nad', 'Codeage', 'codeage-liposomal-nad.jpg');
+assertExactCarton(
+  'codeage-liposomal-nad-ultra-sport',
+  'Codeage',
+  'codeage-liposomal-nad-ultra-sport.jpg',
+);
+assertExactCarton('codeage-mag-l-threonate', 'Codeage', 'codeage-mag-l-threonate.jpg');
+assertExactCarton('codeage-mag-glycinate', 'Codeage', 'codeage-mag-glycinate.jpg');
+assertExactCarton('codeage-ovarian-inositol', 'Codeage', 'codeage-ovarian-inositol.jpg');
+assertExactCarton('codeage-teen-clearface', 'Codeage', 'codeage-teen-clearface.jpg');
+assertExactCarton(
+  'codeage-creatine-monohydrate-powder',
+  'Codeage',
+  'codeage-creatine-monohydrate-powder.jpg',
+);
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
