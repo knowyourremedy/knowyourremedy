@@ -1851,6 +1851,27 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Orange Dream barcode 878941008894 is a variant on the powder page.
   // The gallery faces are Mixed Berry. Do not glue that canister.
   'trace-mg-glycinate-orange-dream': brandMark('trace-minerals-mark.png'),
+  // Vitamins night run 2026-10-02 5:30 AM PT batch 1.
+  // Tried each SKU. Official mark. Not a letter.
+  // StressCare live barcodes are 605069062893 (60), 605069060677 (120),
+  // and 605069061353 (240). Row barcode is 605069003018. Do not glue a count.
+  'himalaya-stresscare': brandMark('himalaya-mark.png'),
+  // Live 90-count bottle is Menopause Balance, barcode 618192013618.
+  // The face does not say Women's Natural Transition. Do not glue it.
+  'banyan-womens-natural-transition': brandMark('banyan-mark.png'),
+  // Live bottle is Mixed Berry Ashwagandha Calm. The row is Sweet Calm.
+  // Do not glue that flavor.
+  'hum-ashwagandha-calm-gummies': brandMark('hum-mark.png'),
+  // Official image is a 2D label flat, not a 3D bottle. UPC on the flat
+  // is 850043735755. Do not glue the flat.
+  'pluscbd-mens-performance-ignite': brandMark('pluscbd-mark.png'),
+  // Raspberry Lemonade live 30-stick barcode is 850024067820.
+  // Row barcode is 850024067776. Do not glue that box.
+  'rookie-wake-raspberry-lemonade': brandMark('rookie-mark.png'),
+  // Row barcode 088395015243 is the 100+30 bonus pack. The only gallery
+  // file for that barcode is a supplement-facts panel. Do not glue it.
+  // Do not glue the 50, 100, 180, 250, or 300.
+  'carlson-super-omega-3-gems': brandMark('carlson-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8124,6 +8145,39 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Magnesium capsules, single bottle (ANM3360). Barcode 816401023360.
   // Not a 3-pack or 6-pack sleeve.
   'ancient-nutrition-magnesium': catalogShot('ancient-nutrition-magnesium.jpg'),
+  // Vitamins night run 2026-10-02 5:30 AM PT batch 1.
+  // Liver Formula tablets, 90 count. Barcode 618192011812.
+  'banyan-liver-formula': catalogShot('banyan-liver-formula.jpg'),
+  // Myo & D-Chiro, 120 capsules. Barcode 860003257845. Not the 360.
+  'wholesome-story-myo-d-chiro': catalogShot('wholesome-story-myo-d-chiro.jpg'),
+  // Greens Peach Mango, 14 sticks. Barcode 850024067639. Not the 30.
+  'rookie-greens-peach-mango': catalogShot('rookie-greens-peach-mango.jpg'),
+  // Greens Crisp Apple, 14 sticks. Barcode 850024067622. Not the 30.
+  'rookie-greens-crisp-apple': catalogShot('rookie-greens-crisp-apple.jpg'),
+  // Red Juice single pouch. Barcode 850001165020. Not the 3-pack or 6-pack.
+  'organifi-red-juice': catalogShot('organifi-red-juice.jpg'),
+  // Green Juice single canister. Barcode 850001165006. Not the 3 or 6.
+  'organifi-green-juice': catalogShot('organifi-green-juice.jpg'),
+  // Beef Gelatin, 16 oz can. Barcode 322654002118. Not a multipack.
+  'great-lakes-beef-gelatin': catalogShot('great-lakes-beef-gelatin.jpg'),
+  // Vanilla collagen pouch. Barcode 671635732521. Not the packet 671635732811.
+  'thrive-collagen-peptides-vanilla': catalogShot(
+    'thrive-collagen-peptides-vanilla.jpg',
+  ),
+  // Unflavored collagen pouch. Barcode 671635732590. Not the packet 671635732583.
+  'thrive-collagen-peptides-unflavored': catalogShot(
+    'thrive-collagen-peptides-unflavored.jpg',
+  ),
+  // Milk Thistle, 90 capsules. Barcode 706195000190.
+  'owh-milk-thistle': catalogShot('owh-milk-thistle.jpg'),
+  // Milk Thistle + Dandelion, 90 capsules. Barcode 706195000855.
+  'owh-milk-thistle-dandelion': catalogShot('owh-milk-thistle-dandelion.jpg'),
+  // Saw Palmetto, 90 capsules. Barcode 706195000534.
+  'owh-saw-palmetto': catalogShot('owh-saw-palmetto.jpg'),
+  // Ashwagandha, 90 capsules. Barcode 706195000909.
+  'owh-ashwagandha': catalogShot('owh-ashwagandha.jpg'),
+  // Rhodiola, 60 capsules. Barcode 706195004150.
+  'owh-rhodiola': catalogShot('owh-rhodiola.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16112,6 +16166,55 @@ assertExactCarton(
   'Ancient Nutrition',
   'ancient-nutrition-magnesium.jpg',
 );
+// Vitamins night run 2026-10-02 5:30 AM PT batch 1.
+assertExactCarton('banyan-liver-formula', 'Banyan Botanicals', 'banyan-liver-formula.jpg');
+assertExactCarton(
+  'wholesome-story-myo-d-chiro',
+  'Wholesome Story',
+  'wholesome-story-myo-d-chiro.jpg',
+);
+assertExactCarton(
+  'rookie-greens-peach-mango',
+  'Rookie Wellness',
+  'rookie-greens-peach-mango.jpg',
+);
+assertExactCarton(
+  'rookie-greens-crisp-apple',
+  'Rookie Wellness',
+  'rookie-greens-crisp-apple.jpg',
+);
+assertExactCarton('organifi-red-juice', 'Organifi', 'organifi-red-juice.jpg');
+assertExactCarton('organifi-green-juice', 'Organifi', 'organifi-green-juice.jpg');
+assertExactCarton(
+  'great-lakes-beef-gelatin',
+  'Great Lakes Wellness',
+  'great-lakes-beef-gelatin.jpg',
+);
+assertExactCarton(
+  'thrive-collagen-peptides-vanilla',
+  'Thrive Market',
+  'thrive-collagen-peptides-vanilla.jpg',
+);
+assertExactCarton(
+  'thrive-collagen-peptides-unflavored',
+  'Thrive Market',
+  'thrive-collagen-peptides-unflavored.jpg',
+);
+assertExactCarton('owh-milk-thistle', "Oregon's Wild Harvest", 'owh-milk-thistle.jpg');
+assertExactCarton(
+  'owh-milk-thistle-dandelion',
+  "Oregon's Wild Harvest",
+  'owh-milk-thistle-dandelion.jpg',
+);
+assertExactCarton('owh-saw-palmetto', "Oregon's Wild Harvest", 'owh-saw-palmetto.jpg');
+assertExactCarton('owh-ashwagandha', "Oregon's Wild Harvest", 'owh-ashwagandha.jpg');
+assertExactCarton('owh-rhodiola', "Oregon's Wild Harvest", 'owh-rhodiola.jpg');
+assertBrandMark('himalaya-stresscare', 'Himalaya', 'himalaya-mark.png');
+assertBrandMark('banyan-womens-natural-transition', 'Banyan Botanicals', 'banyan-mark.png');
+assertBrandMark('hum-ashwagandha-calm-gummies', 'HUM', 'hum-mark.png');
+assertBrandMark('pluscbd-mens-performance-ignite', 'PlusCBD', 'pluscbd-mark.png');
+assertBrandMark('rookie-wake-raspberry-lemonade', 'Rookie Wellness', 'rookie-mark.png');
+assertBrandMark('carlson-super-omega-3-gems', 'Carlson', 'carlson-mark.png');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
