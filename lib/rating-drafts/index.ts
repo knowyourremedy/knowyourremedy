@@ -139,3 +139,4 @@ export { BATCH139_KYR6B_SPROUTS_HOUSE_SCAN } from './batch139-kyr6b-sprouts-hous
 export { BATCH140_KYR6B_SPROUTS_HELD_BOTTLES } from './batch140-kyr6b-sprouts-held-bottles';
 export { BATCH141_KYR6B_ZYRTEC_US_OTC } from './batch141-kyr6b-zyrtec-us-otc';
 export { BATCH142_KYR6B_ZYRTEC_MISSING_UPC } from './batch142-kyr6b-zyrtec-missing-upc';
+export { BATCH143_KYR6B_ZYRTEC_75CT } from './batch143-kyr6b-zyrtec-75ct';
