@@ -140,3 +140,4 @@ export { BATCH140_KYR6B_SPROUTS_HELD_BOTTLES } from './batch140-kyr6b-sprouts-he
 export { BATCH141_KYR6B_ZYRTEC_US_OTC } from './batch141-kyr6b-zyrtec-us-otc';
 export { BATCH142_KYR6B_ZYRTEC_MISSING_UPC } from './batch142-kyr6b-zyrtec-missing-upc';
 export { BATCH143_KYR6B_ZYRTEC_75CT } from './batch143-kyr6b-zyrtec-75ct';
+export { BATCH144_KYR6B_CLARITIN_US_OTC } from './batch144-kyr6b-claritin-us-otc';
