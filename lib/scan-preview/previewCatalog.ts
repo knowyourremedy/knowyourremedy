@@ -8878,6 +8878,68 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-standardized-extract-ashwagandha-450-mg-180': catalogShot(
     'now-standardized-extract-ashwagandha-450-mg-180.jpg',
   ),
+  // Vitamins night run 2026-10-03 5:30 AM PT batch 2.
+  // Official nowfoods.com face for that SKU. Not a sibling count.
+  // Vitamin D3 10,000 IU, 120 softgels. Barcode 733739003768.
+  'now-vitamin-d-3-high-potency-10-000-iu-120': catalogShot(
+    'now-vitamin-d-3-high-potency-10-000-iu-120.jpg',
+  ),
+  // Magtein, 90 veg capsules. Barcode 733739023902.
+  // Not the 180-count.
+  'now-magtein-90': catalogShot('now-magtein-90.jpg'),
+  // Dandelion root 500 mg, 100 veg capsules. Barcode 733739046451.
+  'now-dandelion-root-500-mg-100': catalogShot(
+    'now-dandelion-root-500-mg-100.jpg',
+  ),
+  // Biotin 10 mg, 120 veg capsules. Barcode 733739004796.
+  'now-biotin-10-mg-120': catalogShot('now-biotin-10-mg-120.jpg'),
+  // Vitamin B-2 100 mg, 100 veg capsules. Barcode 733739004475.
+  'now-b-2-100-mg-100': catalogShot('now-b-2-100-mg-100.jpg'),
+  // Choline and inositol, 100 veg capsules. Barcode 733739004703.
+  'now-choline-inositol-100': catalogShot('now-choline-inositol-100.jpg'),
+  // Vitamin D3 2,000 IU, 120 softgels. Barcode 733739003676.
+  // Not the 240-count.
+  'now-vitamin-d3-2-000-iu-120': catalogShot('now-vitamin-d3-2-000-iu-120.jpg'),
+  // Taurine powder, 8 oz. Barcode 733739002600. Not a capsule bottle.
+  'now-taurine-powder-8': catalogShot('now-taurine-powder-8.jpg'),
+  // Ginkgo biloba double strength, 200 veg capsules.
+  // Barcode 733739046819. Not the 100-count.
+  'now-ginkgo-biloba-200': catalogShot('now-ginkgo-biloba-200.jpg'),
+  // Vitamin B-1 100 mg, 100 tablets. Barcode 733739004468.
+  'now-b-1-100-mg-100': catalogShot('now-b-1-100-mg-100.jpg'),
+  // Sunflower lecithin 1,200 mg, 100 softgels. Barcode 733739023117.
+  // Not the 200-count.
+  'now-sunflower-lecithin-1-200-mg-100': catalogShot(
+    'now-sunflower-lecithin-1-200-mg-100.jpg',
+  ),
+  // Saw palmetto extract, 90 veggie softgels. Barcode 733739047564.
+  'now-saw-palmetto-extract-90-veggie-softgels': catalogShot(
+    'now-saw-palmetto-extract-90-veggie-softgels.jpg',
+  ),
+  // Biotin 5,000 mcg, 120 veg capsules. Barcode 733739004741.
+  'now-biotin-5-000-mcg-120': catalogShot('now-biotin-5-000-mcg-120.jpg'),
+  // Magtein, 180 veg capsules. Barcode 733739023940. Not the 90-count.
+  'now-magtein-magnesium-l-threonate-180': catalogShot(
+    'now-magtein-magnesium-l-threonate-180.jpg',
+  ),
+  // Magnesium citrate, 120 veg capsules. Barcode 733739012944.
+  'now-magnesium-citrate-120': catalogShot('now-magnesium-citrate-120.jpg'),
+  // Milk thistle extract 750 mg, 90 veg capsules. Barcode 733739047953.
+  'now-milk-thistle-extract-750-mg-90': catalogShot(
+    'now-milk-thistle-extract-750-mg-90.jpg',
+  ),
+  // L-Glutamine 500 mg, 120 veg capsules. Barcode 733739000927.
+  'now-l-glutamine-500-mg-120': catalogShot('now-l-glutamine-500-mg-120.jpg'),
+  // D-Mannose 500 mg, 240 veg capsules. Barcode 733739028167.
+  // Not the 120-count.
+  'now-d-mannose-500-mg-240': catalogShot('now-d-mannose-500-mg-240.jpg'),
+  // Niacinamide 500 mg, 100 veg capsules. Barcode 733739004789.
+  'now-niacinamide-500-mg-100': catalogShot('now-niacinamide-500-mg-100.jpg'),
+  // Vitamin D3 1,000 IU, 360 softgels. Barcode 733739003751.
+  // Not the 180-count.
+  'now-vitamin-d-3-high-potency-1-000-iu-360': catalogShot(
+    'now-vitamin-d-3-high-potency-1-000-iu-360.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
