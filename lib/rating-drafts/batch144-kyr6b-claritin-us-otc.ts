@@ -5,8 +5,9 @@
 // formulaId. UPC stays empty when the bars or a count-specific spec were
 // not read for that pack. Multipacks and kits are not rows.
 //
-// TALLY: 45 written — Clean 24 / Caution 6 / Avoid 15.
-// NEW 0 / REUSE 45. Ungraded tokens: 0.
+// TALLY: 17 written — Clean 10 / Caution 3 / Avoid 4.
+// 28 counts removed: no buyable pack on a page that opened.
+// NEW 0 / REUSE 17. Ungraded tokens: 0.
 
 import type {
   CleanAlternative,
@@ -34,7 +35,6 @@ const METH = {
   benzoate: 'Methodology §5 Limited (sodium benzoate).',
   mct: 'Methodology §5 Limited (unlabeled MCT). Caprylic/capric glycerides names no plant.',
   ink: 'Methodology §5 Caution (pharmaceutical ink).',
-  carmine: 'Methodology §5 Caution (carmine). Not Avoid.',
   sio2: 'Methodology §5 Caution (silicon dioxide, 0-point nanoparticle cap).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
@@ -44,7 +44,6 @@ const MCC = 'claritin-b136-tablets-mcc';
 const GEL = 'claritin-b136-liquigels';
 const REDITAB = 'claritin-reditabs';
 const KIDS_LIQUID = 'childrens-claritin-liquid';
-const BUBBLE = 'claritin-b136-chew-bubblegum';
 const MINT = 'claritin-b136-chew-cool-mint';
 
 const STARCH_SET = '660ac9df-f1b1-4c89-94dd-9fae0a013f3c';
@@ -54,7 +53,6 @@ const MCC_SET = 'acf2d393-53d7-062f-e053-2995a90a0d60';
 const GEL_SET = '8e14b61f-faf6-43a8-a080-75f64514217a';
 const REDI_SET = 'b681ea25-d00b-4c8a-8054-cc6f983ce337';
 const KIDS_LIQ_SET = '170061e9-e529-4ff0-e054-00144ff8d46c';
-const BUBBLE_SET = '20938e05-bc3e-51aa-e054-00144ff88e88';
 const MINT_SET = '98b99bb9-d499-9ab4-e053-2a95a90a6ae6';
 
 function flag(name: string, riskLevel: IngredientFlag['riskLevel'], source: string): IngredientFlag {
@@ -131,20 +129,6 @@ function kidsLiquidFlags(): IngredientFlag[] {
     cleared(KIDS_LIQ_SET, 'Purified water'),
   ];
 }
-function bubbleFlags(): IngredientFlag[] {
-  return [
-    flag('Aspartame', 'high', cite(BUBBLE_SET, METH.aspartame)),
-    flag('Carmine', 'limited', cite(BUBBLE_SET, METH.carmine)),
-    flag('Flavor', 'limited', cite(BUBBLE_SET, METH.flavor)),
-    flag('Mannitol', 'limited', cite(BUBBLE_SET, METH.mannitol)),
-    flag('Colloidal silicon dioxide', 'limited', cite(BUBBLE_SET, METH.sio2)),
-    cleared(BUBBLE_SET, 'Citric acid'),
-    cleared(BUBBLE_SET, 'Magnesium stearate'),
-    cleared(BUBBLE_SET, 'Microcrystalline cellulose'),
-    cleared(BUBBLE_SET, 'Sodium starch glycolate'),
-    cleared(BUBBLE_SET, 'Stearic acid'),
-  ];
-}
 function mintFlags(): IngredientFlag[] {
   return [
     flag('Aspartame', 'high', cite(MINT_SET, METH.aspartame)),
@@ -161,7 +145,6 @@ function mintFlags(): IngredientFlag[] {
 }
 
 const LORA = [{ name: 'Loratadine', strength: '10 mg' }];
-const LORA5 = [{ name: 'Loratadine', strength: '5 mg' }];
 const SYRUP_ACTIVE = [{ name: 'Loratadine', strength: '5 mg / 5 mL' }];
 
 const STARCH_NOTE =
@@ -172,8 +155,6 @@ const GEL_NOTE =
   'FOUNDER-LOCK DRAFT: Avoid. Driver is FD&C Blue No. 1. Polysorbate 80 is Moderate and is not the Avoid driver. Caprylic/capric glycerides stay the unlabeled MCT row. Same inactive line as claritin-b136-liquigels. The 10, 30, and 60 count rows were not rewritten. Ages 6+.';
 const REDI_NOTE =
   'FOUNDER-LOCK DRAFT: Caution. Mannitol and mint flavor are Limited. Same inactive line as claritin-reditabs. This is the 10 mg RediTabs count. The 30-count kids row and the 5 mg codes on the no-count row were not rewritten. Ages 6+.';
-const BUBBLE_NOTE =
-  'FOUNDER-LOCK DRAFT: Avoid. Driver is aspartame. Carmine is Caution and is not the Avoid driver. Same inactive line as claritin-b136-chew-bubblegum. Ages 2+.';
 const MINT_NOTE =
   'FOUNDER-LOCK DRAFT: Avoid. Drivers are aspartame and FD&C Blue No. 1 aluminum lake. Menthol on the inactive line is the flavor row. Same inactive line as claritin-b136-chew-cool-mint. The 8-count was not rewritten. Ages 6+.';
 const SYRUP_NOTE =
@@ -235,20 +216,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid dc65f7ec-bb83-7b29-e053-2995a90a99de. Inactive ingredients: lactose monohydrate, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. Package NDC 11523-0800-1 is 5 tablets in 1 blister in 1 carton. This is not the starch 5-count code on claritin-allergy-tablets-plain. UPC left empty.',
   }),
-  expand({
-    id: 'claritin-b144-tablets-mcc-10',
-    productName: 'Claritin 24-Hour Allergy Tablets (10ct MCC)',
-    formulaId: MCC,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: mccFlags(MCC_SET),
-    verdict: 'clean',
-    note: MCC_NOTE,
-    source: `${MCC_SRC} Package NDC 11523-0007-1 is 10 tablets in 1 blister in 1 carton. This is not the starch 10-count code on claritin-allergy-tablets-plain.`,
-  }),
-  expand({
+    expand({
     id: 'claritin-b144-tablets-mcc-20',
     productName: 'Claritin 24-Hour Allergy Tablets (20ct MCC)',
     formulaId: MCC,
@@ -300,20 +268,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: MCC_NOTE,
     source: `${MCC_SRC} Package NDC 11523-0007-5 is 45 tablets in 1 bottle. The starch 45-count row claritin-b136-tablets-45 was not rewritten.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-mcc-60',
-    productName: 'Claritin 24-Hour Allergy Tablets (60ct MCC bottle)',
-    formulaId: MCC,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: mccFlags(MCC_SET),
-    verdict: 'clean',
-    note: MCC_NOTE,
-    source: `${MCC_SRC} Package NDC 11523-0007-9 is 60 tablets in 1 bottle.`,
-  }),
-  expand({
+    expand({
     id: 'claritin-b144-tablets-mcc-70',
     productName: 'Claritin 24-Hour Allergy Tablets (70ct MCC bottle)',
     formulaId: MCC,
@@ -326,33 +281,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: MCC_NOTE,
     source: `${MCC_SRC} Package NDC 11523-0007-6 is 70 tablets in 1 bottle. The starch 70-count row claritin-b136-tablets-70 was not rewritten.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-mcc-85',
-    productName: 'Claritin 24-Hour Allergy Tablets (85ct MCC bottle)',
-    formulaId: MCC,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: mccFlags(MCC_SET),
-    verdict: 'clean',
-    note: MCC_NOTE,
-    source: `${MCC_SRC} Package NDC 11523-0007-7 is 85 tablets in 1 bottle.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-15',
-    productName: 'Claritin 24-Hour Allergy Tablets (15ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-7237-6 is 3 blisters of 5 in 1 carton.`,
-  }),
-  expand({
+      expand({
     id: 'claritin-b144-tablets-starch-20',
     productName: 'Claritin 24-Hour Allergy Tablets (20ct)',
     formulaId: PLAIN,
@@ -365,33 +294,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: STARCH_NOTE,
     source: `${STARCH_SRC} Package NDC 11523-7160-3 is 2 blisters of 10 in 1 carton.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-starch-25',
-    productName: 'Claritin 24-Hour Allergy Tablets (25ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_70_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-6655-7 is 25 one-count pouches in 1 box. The 50-count pouch box already on MAIN was not rewritten.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-35',
-    productName: 'Claritin 24-Hour Allergy Tablets (35ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-9 is 35 tablets in 1 bottle in 1 carton.`,
-  }),
-  expand({
+      expand({
     id: 'claritin-b144-tablets-starch-40',
     productName: 'Claritin 24-Hour Allergy Tablets (40ct)',
     formulaId: PLAIN,
@@ -404,33 +307,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: STARCH_NOTE,
     source: `${STARCH_SRC} Package NDC 11523-7237-7 is 4 blisters of 10 in 1 carton. Package NDC 11523-4359-1 is 40 tablets in 1 bottle in 1 carton. Same starch line, one 40-count row. The MCC 40-count bottle is a separate row.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-starch-55',
-    productName: 'Claritin 24-Hour Allergy Tablets (55ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-4 is 55 tablets in 1 bottle in 1 carton.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-60',
-    productName: 'Claritin 24-Hour Allergy Tablets (60ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDCs 11523-7160-8 and 11523-7160-9 are 60 tablets in 1 bottle in 1 carton. Setid ac32d6f9 package NDC 11523-6655-5 is the same 60-count bottle. The 2-bottle pack NDC 11523-4359-8 is not this row.`,
-  }),
-  expand({
+      expand({
     id: 'claritin-b144-tablets-starch-80',
     productName: 'Claritin 24-Hour Allergy Tablets (80ct)',
     formulaId: PLAIN,
@@ -443,20 +320,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: STARCH_NOTE,
     source: `${STARCH_SRC} Package NDC 11523-6655-9 is 80 tablets in 1 bottle in 1 carton.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-starch-85',
-    productName: 'Claritin 24-Hour Allergy Tablets (85ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-5 is 85 tablets in 1 bottle in 1 carton. The MCC 85-count bottle is a separate row.`,
-  }),
-  expand({
+    expand({
     id: 'claritin-b144-tablets-starch-90',
     productName: 'Claritin 24-Hour Allergy Tablets (90ct)',
     formulaId: PLAIN,
@@ -469,100 +333,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     note: STARCH_NOTE,
     source: `${STARCH_SRC} Package NDC 11523-7237-9 is 90 tablets in 1 bottle in 1 carton. Package NDC 11523-7237-5 is the same 90-count bottle.`,
   }),
-  expand({
-    id: 'claritin-b144-tablets-starch-100',
-    productName: 'Claritin 24-Hour Allergy Tablets (100ct starch)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-2 is 100 tablets in 1 bottle in 1 carton. The MCC 100-count row claritin-b136-tablets-100-mcc was not rewritten.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-105',
-    productName: 'Claritin 24-Hour Allergy Tablets (105ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_70_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDCs 11523-6655-4 and 11523-6655-6 are 105 tablets in 1 bottle.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-108',
-    productName: 'Claritin 24-Hour Allergy Tablets (108ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-7237-8 is 108 tablets in 1 bottle in 1 carton.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-110',
-    productName: 'Claritin 24-Hour Allergy Tablets (110ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-6 is 110 tablets in 1 bottle in 1 carton.`,
-  }),
-  expand({
-    id: 'claritin-b144-tablets-starch-115',
-    productName: 'Claritin 24-Hour Allergy Tablets (115ct)',
-    formulaId: PLAIN,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: starchFlags(STARCH_SET),
-    verdict: 'clean',
-    note: STARCH_NOTE,
-    source: `${STARCH_SRC} Package NDC 11523-4359-7 is 115 tablets in 1 bottle. The MCC 2-bottle carton NDC 11523-0007-8 is not this row.`,
-  }),
-  expand({
-    id: 'claritin-b144-liquigels-5',
-    productName: 'Claritin Liqui-Gels (5ct)',
-    formulaId: GEL,
-    audience: 'adult',
-    minAge: 6,
-    form: 'liquid-filled capsule',
-    actives: LORA,
-    flags: gelFlags(),
-    verdict: 'avoid',
-    note: GEL_NOTE,
-    source:
-      'DailyMed setid 8e14b61f-faf6-43a8-a080-75f64514217a. Inactive ingredients: caprylic/capric glycerides, FD&C blue no. 1, gelatin, glycerin, pharmaceutical ink, polysorbate 80, povidone, purified water, sorbitol. Package NDC 11523-7333-1 is 5 capsules in 1 blister in 1 carton. Marketing status active. The carton images on this setid are the 30-count and were not used. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-liquigels-36',
-    productName: 'Claritin Liqui-Gels (36ct)',
-    formulaId: GEL,
-    audience: 'adult',
-    minAge: 6,
-    form: 'liquid-filled capsule',
-    actives: LORA,
-    flags: gelFlags(),
-    verdict: 'avoid',
-    note: GEL_NOTE,
-    source:
-      'DailyMed setid 8e14b61f-faf6-43a8-a080-75f64514217a, same liqui-gel inactive line. Package NDC 11523-7333-3 is 4 blisters of 9 in 1 carton. Marketing status active. UPC left empty. The 30-count carton image was not used.',
-  }),
-  expand({
+                expand({
     id: 'claritin-b144-liquigels-40',
     productName: 'Claritin Liqui-Gels (40ct)',
     formulaId: GEL,
@@ -576,35 +347,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid 8e14b61f-faf6-43a8-a080-75f64514217a, same liqui-gel inactive line. Package NDC 11523-7200-8 is 4 blisters of 10 in 1 carton, marketing status active. UPC left empty.',
   }),
-  expand({
-    id: 'claritin-b144-liquigels-70',
-    productName: 'Claritin Liqui-Gels (70ct)',
-    formulaId: GEL,
-    audience: 'adult',
-    minAge: 6,
-    form: 'liquid-filled capsule',
-    actives: LORA,
-    flags: gelFlags(),
-    verdict: 'avoid',
-    note: GEL_NOTE,
-    source:
-      'DailyMed setid 8e14b61f-faf6-43a8-a080-75f64514217a, same liqui-gel inactive line. Package NDC 11523-7333-4 is 7 blisters of 10 in 1 carton. Marketing status active. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-liquigels-100',
-    productName: 'Claritin Liqui-Gels (100ct)',
-    formulaId: GEL,
-    audience: 'adult',
-    minAge: 6,
-    form: 'liquid-filled capsule',
-    actives: LORA,
-    flags: gelFlags(),
-    verdict: 'avoid',
-    note: GEL_NOTE,
-    source:
-      'DailyMed setid 8e14b61f-faf6-43a8-a080-75f64514217a, same liqui-gel inactive line. Package NDC 11523-7333-5 is 10 blisters of 10 in 1 carton. Marketing status active. UPC left empty.',
-  }),
-  expand({
+      expand({
     id: 'claritin-b144-reditabs-10',
     productName: 'Claritin RediTabs (10ct)',
     formulaId: REDITAB,
@@ -618,49 +361,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid b681ea25-d00b-4c8a-8054-cc6f983ce337. Active loratadine 10 mg. Inactive ingredients: anhydrous citric acid, gelatin, mannitol, mint flavor. Package NDC 11523-7157-2 is 10 orally disintegrating tablets in 1 blister in 1 carton. UPC left empty. The 5 mg codes on claritin-reditabs were not copied.',
   }),
-  expand({
-    id: 'claritin-b144-reditabs-20',
-    productName: 'Claritin RediTabs (20ct)',
-    formulaId: REDITAB,
-    audience: 'adult',
-    minAge: 6,
-    form: 'orally disintegrating tablet',
-    actives: LORA,
-    flags: rediFlags(),
-    verdict: 'caution',
-    note: REDI_NOTE,
-    source:
-      'DailyMed setid b681ea25-d00b-4c8a-8054-cc6f983ce337, same RediTabs inactive line. Package NDC 11523-7157-4 is 2 blisters of 10 in 1 carton. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-reditabs-40',
-    productName: 'Claritin RediTabs (40ct)',
-    formulaId: REDITAB,
-    audience: 'adult',
-    minAge: 6,
-    form: 'orally disintegrating tablet',
-    actives: LORA,
-    flags: rediFlags(),
-    verdict: 'caution',
-    note: REDI_NOTE,
-    source:
-      'DailyMed setid b681ea25-d00b-4c8a-8054-cc6f983ce337, same RediTabs inactive line. Package NDC 11523-7157-7 is 4 blisters of 10 in 1 carton. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-reditabs-50',
-    productName: 'Claritin RediTabs (50ct)',
-    formulaId: REDITAB,
-    audience: 'adult',
-    minAge: 6,
-    form: 'orally disintegrating tablet',
-    actives: LORA,
-    flags: rediFlags(),
-    verdict: 'caution',
-    note: REDI_NOTE,
-    source:
-      'DailyMed setid b681ea25-d00b-4c8a-8054-cc6f983ce337, same RediTabs inactive line. Package NDC 11523-7157-8 is 5 blisters of 10 in 1 carton. UPC left empty.',
-  }),
-  expand({
+        expand({
     id: 'claritin-b144-reditabs-60',
     productName: 'Claritin RediTabs (60ct)',
     formulaId: REDITAB,
@@ -688,49 +389,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid b681ea25-d00b-4c8a-8054-cc6f983ce337, same RediTabs inactive line. Package NDC 11523-7157-9 is 7 blisters of 10 in 1 carton. UPC left empty.',
   }),
-  expand({
-    id: 'claritin-b144-chew-bubblegum-40',
-    productName: "Children's Claritin Chewable Tablets, Bubblegum (40ct)",
-    formulaId: BUBBLE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: bubbleFlags(),
-    verdict: 'avoid',
-    note: BUBBLE_NOTE,
-    source:
-      'DailyMed setid 20938e05-bc3e-51aa-e054-00144ff88e88. Inactive ingredients: aspartame, carmine, citric acid, colloidal silicon dioxide, flavor, magnesium stearate, mannitol, microcrystalline cellulose, sodium starch glycolate, stearic acid. Package NDC 11523-4330-4 is 4 blisters of 10 in 1 carton. The 10-count and 30-count rows were not rewritten. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-chew-cool-mint-2',
-    productName: 'Claritin Chewable Tablets, Cool Mint (2ct)',
-    formulaId: MINT,
-    audience: 'adult',
-    minAge: 6,
-    form: 'chewable tablet',
-    actives: LORA,
-    flags: mintFlags(),
-    verdict: 'avoid',
-    note: MINT_NOTE,
-    source:
-      'DailyMed setid 98b99bb9-d499-9ab4-e053-2a95a90a6ae6. Inactive ingredients: anhydrous citric acid, aspartame, FD&C blue no. 1 aluminum lake, magnesium stearate, mannitol, menthol, microcrystalline cellulose, silicon dioxide, sodium starch glycolate, stearic acid. Package NDC 11523-4364-2 is 2 chewable tablets in 1 blister in 1 carton. UPC left empty. The 8-count code 041100580979 was not copied.',
-  }),
-  expand({
-    id: 'claritin-b144-chew-cool-mint-4',
-    productName: 'Claritin Chewable Tablets, Cool Mint (4ct)',
-    formulaId: MINT,
-    audience: 'adult',
-    minAge: 6,
-    form: 'chewable tablet',
-    actives: LORA,
-    flags: mintFlags(),
-    verdict: 'avoid',
-    note: MINT_NOTE,
-    source:
-      'DailyMed setid 98b99bb9-d499-9ab4-e053-2a95a90a6ae6, same cool-mint inactive line. Package NDC 11523-4364-3 is 4 chewable tablets in 1 blister in 1 carton. UPC left empty.',
-  }),
-  expand({
+        expand({
     id: 'claritin-b144-chew-cool-mint-24',
     productName: 'Claritin Chewable Tablets, Cool Mint (24ct)',
     formulaId: MINT,
@@ -758,49 +417,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid 98b99bb9-d499-9ab4-e053-2a95a90a6ae6, same cool-mint inactive line. Package NDC 11523-4364-4 is 7 blisters of 8 in 1 carton. UPC left empty.',
   }),
-  expand({
-    id: 'claritin-b144-chew-cool-mint-64',
-    productName: 'Claritin Chewable Tablets, Cool Mint (64ct)',
-    formulaId: MINT,
-    audience: 'adult',
-    minAge: 6,
-    form: 'chewable tablet',
-    actives: LORA,
-    flags: mintFlags(),
-    verdict: 'avoid',
-    note: MINT_NOTE,
-    source:
-      'DailyMed setid 98b99bb9-d499-9ab4-e053-2a95a90a6ae6, same cool-mint inactive line. Package NDC 11523-4364-5 is 8 blisters of 8 in 1 carton. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-kids-syrup-1oz',
-    productName: "Children's Claritin Allergy Syrup, Grape (1 fl oz)",
-    formulaId: KIDS_LIQUID,
-    audience: 'kids',
-    minAge: 2,
-    form: 'liquid',
-    actives: SYRUP_ACTIVE,
-    flags: kidsLiquidFlags(),
-    verdict: 'avoid',
-    note: SYRUP_NOTE,
-    source:
-      'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c. Inactive ingredients: edetate disodium, flavor, glycerin, maltitol, monobasic sodium phosphate, phosphoric acid, propylene glycol, purified water, sodium benzoate, sorbitol, sucralose. Package NDC 11523-4360-4 is 30 mL in 1 bottle in 1 carton. The grape carton image on this setid decoded to 041100810991, already on childrens-claritin-liquid, and was not copied here. UPC left empty.',
-  }),
-  expand({
-    id: 'claritin-b144-kids-syrup-2oz',
-    productName: "Children's Claritin Allergy Syrup, Grape (2 fl oz)",
-    formulaId: KIDS_LIQUID,
-    audience: 'kids',
-    minAge: 2,
-    form: 'liquid',
-    actives: SYRUP_ACTIVE,
-    flags: kidsLiquidFlags(),
-    verdict: 'avoid',
-    note: SYRUP_NOTE,
-    source:
-      'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c, same grape syrup inactive line. Package NDC 11523-4360-1 is 60 mL in 1 bottle in 1 carton. UPC left empty. The carton image code 041100810991 was not copied.',
-  }),
-  expand({
+        expand({
     id: 'claritin-b144-kids-syrup-5oz',
     productName: "Children's Claritin Allergy Syrup, Grape (5 fl oz)",
     formulaId: KIDS_LIQUID,
@@ -814,30 +431,16 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source:
       'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c, same grape syrup inactive line. Package NDC 11523-4360-3 is 150 mL in 1 bottle in 1 carton. UPC left empty.',
   }),
-  expand({
-    id: 'claritin-b144-kids-syrup-6oz',
-    productName: "Children's Claritin Allergy Syrup, Grape (6 fl oz)",
-    formulaId: KIDS_LIQUID,
-    audience: 'kids',
-    minAge: 2,
-    form: 'liquid',
-    actives: SYRUP_ACTIVE,
-    flags: kidsLiquidFlags(),
-    verdict: 'avoid',
-    note: SYRUP_NOTE,
-    source:
-      'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c, same grape syrup inactive line. Package NDC 11523-4360-6 is 180 mL in 1 bottle in 1 carton. This is the single bottle, not the 2-pack NDC 11523-4360-7. UPC left empty.',
-  }),
-];
+  ];
 
 const ROWS = BATCH144_KYR6B_CLARITIN_US_OTC;
-if (ROWS.length !== 45) throw new Error(`batch144 row count ${ROWS.length}`);
-if (new Set(ROWS.map((r) => r.id)).size !== 45) throw new Error('batch144 duplicate id');
+if (ROWS.length !== 17) throw new Error(`batch144 row count ${ROWS.length}`);
+if (new Set(ROWS.map((r) => r.id)).size !== 17) throw new Error('batch144 duplicate id');
 if (ROWS.some((r) => r.barcode)) throw new Error('batch144 unexpected upc');
 const clean = ROWS.filter((r) => r.verdict === 'clean');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
-if (clean.length !== 24 || caution.length !== 6 || avoid.length !== 15) {
+if (clean.length !== 10 || caution.length !== 3 || avoid.length !== 4) {
   throw new Error(`batch144 verdicts ${clean.length}/${caution.length}/${avoid.length}`);
 }
 if (clean.some((r) => r.formulaId !== MCC && r.formulaId !== PLAIN)) throw new Error('batch144 clean formula');

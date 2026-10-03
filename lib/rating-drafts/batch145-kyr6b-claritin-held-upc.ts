@@ -3,8 +3,9 @@
 // row were not reused and were not edited. batch70–144 were not edited.
 // No UPC override: every code read this pass already sits on another row.
 //
-// TALLY: 12 written — Clean 0 / Caution 3 / Avoid 9.
-// NEW 12 / REUSE 0. Ungraded tokens: 0.
+// TALLY: 6 written — Clean 0 / Caution 2 / Avoid 4.
+// 6 counts removed: no buyable pack on a page that opened.
+// NEW 6 / REUSE 0. Ungraded tokens: 0.
 
 import type {
   CleanAlternative,
@@ -148,20 +149,7 @@ function expand(d: Spec): RatingRecord {
 }
 
 export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
-  expand({
-    id: 'claritin-b145-chew-grape-2',
-    productName: "Children's Claritin Chewable Tablets, Grape (2ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4328-4 is 2 chewable tablets in 1 blister in 1 pouch.`,
-  }),
-  expand({
+    expand({
     id: 'claritin-b145-chew-grape-10',
     productName: "Children's Claritin Chewable Tablets, Grape (10ct)",
     formulaId: GRAPE,
@@ -200,33 +188,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     note: GRAPE_NOTE,
     source: `${GRAPE_SRC} Package NDC 11523-4328-3 is 3 blisters of 10 in 1 carton.`,
   }),
-  expand({
-    id: 'claritin-b145-chew-grape-40',
-    productName: "Children's Claritin Chewable Tablets, Grape (40ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4328-9 and NDC 11523-4331-1 are each 4 blisters of 10 in 1 carton. Same inactive section.`,
-  }),
-  expand({
-    id: 'claritin-b145-chew-grape-50',
-    productName: "Children's Claritin Chewable Tablets, Grape (50ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4328-5 is 5 blisters of 10 in 1 carton.`,
-  }),
-  expand({
+      expand({
     id: 'claritin-b145-chew-grape-60',
     productName: "Children's Claritin Chewable Tablets, Grape (60ct)",
     formulaId: GRAPE,
@@ -239,46 +201,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     note: GRAPE_NOTE,
     source: `${GRAPE_SRC} Package NDC 11523-4331-2 is 6 blisters of 10 in 1 carton.`,
   }),
-  expand({
-    id: 'claritin-b145-chew-grape-80',
-    productName: "Children's Claritin Chewable Tablets, Grape (80ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4331-6 is 8 blisters of 10 in 1 carton.`,
-  }),
-  expand({
-    id: 'claritin-b145-chew-grape-100',
-    productName: "Children's Claritin Chewable Tablets, Grape (100ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4328-6 is 50 pouches of 2 in 1 box (100 tablets). Not the combination pack.`,
-  }),
-  expand({
-    id: 'claritin-b145-adult-liquid-30ml',
-    productName: 'Claritin Allergy Liquid (30 mL)',
-    formulaId: LIQUID,
-    audience: 'adult',
-    minAge: 2,
-    form: 'liquid',
-    actives: SYRUP_ACTIVE,
-    flags: liquidFlags(),
-    verdict: 'caution',
-    note: LIQUID_NOTE,
-    source: `${LIQUID_SRC} Package NDC 11523-0101-1 is 30 mL in 1 bottle in 1 carton. Marketing status active. No size-specific carton image.`,
-  }),
-  expand({
+        expand({
     id: 'claritin-b145-adult-liquid-80ml',
     productName: 'Claritin Allergy Liquid (80 mL)',
     formulaId: LIQUID,
@@ -307,15 +230,15 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
 ];
 
 const ROWS = BATCH145_KYR6B_CLARITIN_HELD_UPC;
-if (ROWS.length !== 12) throw new Error(`batch145 row count ${ROWS.length}`);
-if (new Set(ROWS.map((r) => r.id)).size !== 12) throw new Error('batch145 duplicate id');
+if (ROWS.length !== 6) throw new Error(`batch145 row count ${ROWS.length}`);
+if (new Set(ROWS.map((r) => r.id)).size !== 6) throw new Error('batch145 duplicate id');
 if (ROWS.some((r) => r.barcode)) throw new Error('batch145 unexpected upc');
 if (ROWS.some((r) => r.formulaId === 'claritin-chewable-aspartame-dye' || r.formulaId === 'claritin-allergy-liquid')) {
   throw new Error('batch145 reused founder formula');
 }
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
-if (avoid.length !== 9 || caution.length !== 3) throw new Error('batch145 verdicts');
+if (avoid.length !== 4 || caution.length !== 2) throw new Error('batch145 verdicts');
 if (avoid.some((r) => r.formulaId !== GRAPE)) throw new Error('batch145 grape');
 if (caution.some((r) => r.formulaId !== LIQUID)) throw new Error('batch145 liquid');
 if (caution.some((r) => r.inactiveIngredients.some((i) => i.name === 'Phosphoric acid' && i.riskLevel === 'high'))) {

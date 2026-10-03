@@ -1600,7 +1600,7 @@ TopCare (2)
 Biofreeze (2)
 - ~~Biofreeze — Biofreeze Pain Relief Spray 10.5% (denatonium) — spray — Menthol 10.5% — count unknown~~ CLOSED — 731124000109 (3 fl oz retail 360)
 - Biofreeze — Biofreeze Pain Relieving Gel 3.5% (paraben SPL) — gel — Menthol 3.5% — count unknown
-- Biofreeze — Biofreeze Pain Relieving Spray 10% — spray — Menthol 10% — count unknown DRY / merge-note — 4 oz single does not exist on US retail shelf. Merge to Pro 360 Spray 10.5% 4 fl oz 359316120200 and retail Pain Relief Spray 10.5% 3 fl oz 731124000109. Do not hunt a 10% UPC. Do not reopen Biofreeze 10% hunt.
+- ~~Biofreeze — Biofreeze Pain Relieving Spray 10% — spray — Menthol 10%~~ CLOSED — no buyable 10% pack. Opened sprays are menthol 10.5% (Target A-51405730, biofreeze.com aerosol, Target Professional A-94817353). 4 oz single does not exist on US retail shelf. Merge to Pro 360 Spray 10.5% 4 fl oz 359316120200 and retail Pain Relief Spray 10.5% 3 fl oz 731124000109. Do not hunt a 10% UPC. Do not reopen Biofreeze 10% hunt.
 - ~~Biofreeze — Biofreeze Professional Spray 10.5% (denatonium aerosol) — spray — Menthol 10.5% — count unknown~~ CLOSED — 359316120200 (4 fl oz Professional 360)
 - ~~Biofreeze — Biofreeze Professional Spray 13% — spray — Menthol 13% — count unknown~~ CLOSED — 731124445216 (4 oz 2-pack)
 Equate (5)
@@ -1622,9 +1622,9 @@ DG Health (3)
 - DG Health — DG Health Triple Antibiotic Ointment (Oil-Blend) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 Icy Hot (4)
 - Icy Hot — Icy Hot Lidocaine No-Mess Roll On — roll-on — Lidocaine HCl 4% — count unknown
-- Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
-- Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11% — count unknown
-- Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
+- ~~Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16%~~ CLOSED — not on the opened icyhot.com lineup
+- ~~Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11%~~ CLOSED — not on the opened icyhot.com lineup
+- ~~Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16%~~ CLOSED — not on the opened icyhot.com lineup
 Absorbine Jr. (3)
 - Absorbine Jr. — Absorbine Jr. Back Patch 7.5% — patch — Menthol 7.5% — count unknown
 - Absorbine Jr. — Absorbine Jr. Pain Relieving Knee Patch 7.5% — patch — Menthol 7.5% — count unknown
