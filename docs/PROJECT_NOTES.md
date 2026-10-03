@@ -21,7 +21,7 @@ Still open
 - KYR4 is the night photo bot. KYR4-b stays paused on those wakes.
 
 Catalog job
-- Claritin US OTC. Founder named it Oct 2, 2026. The KYR6-b run landed on MAIN at PR #468 / 9b38159, batch144. The “in flight / not written” line is struck. US only. No Canada. No EU. No store-brand loratadine. Do not reopen Zyrtec or Allegra. Do not rewrite those rows in this notes patch.
+- Claritin US OTC catalog pass is closed. PR #468 / 9b38159 wrote batch144. PR #469 / 9bc1ec1 wrote the dyed-grape and adult-liquid formulas. PR #470 / f21a297 attached 9 codes. PR #471 / fa92f312961d attached Cool Mint 56ct 041100580993, Claritin-D 24 Hour 5ct 041100080493, and starch 80ct 041100810830. Do not attach those three again. PR #472 / 18a9baa removed 34 unsold counts. Those stay off. Not a hunt. RediTabs 10ct qualifies and stays. Still-open empty rows stay off Brandon's hunt list. US only. No Canada. No EU. No store-brand loratadine. Do not reopen Zyrtec or Allegra.
 
 Process lock
 - A bot paste starts by naming the bot. If it is the wrong bot, it stops and tells Brandon which chat the paste belongs in.
