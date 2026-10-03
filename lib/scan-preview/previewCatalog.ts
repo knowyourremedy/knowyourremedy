@@ -8484,6 +8484,60 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'wellmade-hsn': catalogShot('wellmade-hsn.jpg'),
   // wellmade Red Yeast Rice with CoQ10, 60 capsules. Barcode 671635734655.
   'wellmade-red-yeast-rice': catalogShot('wellmade-red-yeast-rice.jpg'),
+  // Vitamins night run 2026-10-03 1:45 AM PT batch 2.
+  // wellmade Cranberry, 60 capsules. Barcode 671635734648.
+  'wellmade-cranberry': catalogShot('wellmade-cranberry.jpg'),
+  // wellmade Irish Sea Moss, 60 capsules. Barcode 671635734662.
+  'wellmade-irish-sea-moss': catalogShot('wellmade-irish-sea-moss.jpg'),
+  // wellmade Evening Primrose Oil, 60 softgels. Barcode 671635733849.
+  'wellmade-evening-primrose': catalogShot('wellmade-evening-primrose.jpg'),
+  // wellmade L-Theanine, 60 capsules. Barcode 671635734105.
+  'wellmade-l-theanine': catalogShot('wellmade-l-theanine.jpg'),
+  // wellmade Resveratrol, 60 capsules. Barcode 671635733993.
+  'wellmade-resveratrol': catalogShot('wellmade-resveratrol.jpg'),
+  // wellmade Selenium, 60 tablets. Barcode 671635733986.
+  'wellmade-selenium': catalogShot('wellmade-selenium.jpg'),
+  // Organic Greens Superfood Blend Original, unflavored. Barcode 671635733047.
+  // Not the berry canister.
+  'wellmade-superfood-greens-original': catalogShot(
+    'wellmade-superfood-greens-original.jpg',
+  ),
+  // Organic Greens Superfood Blend Berry. Barcode 671635733054.
+  // Not the original canister.
+  'wellmade-superfood-greens-berry': catalogShot('wellmade-superfood-greens-berry.jpg'),
+  // Real Food Organic Vitamin D3, 60 tablets. Barcode 671635733788.
+  'wellmade-real-food-d3': catalogShot('wellmade-real-food-d3.jpg'),
+  // Real Food Organic Calcium and Magnesium, 60 tablets. Barcode 671635733764.
+  'wellmade-real-food-ca-mg': catalogShot('wellmade-real-food-ca-mg.jpg'),
+  // Real Food Organic B-Complex, 60 tablets. Barcode 671635733795.
+  'wellmade-real-food-b-complex': catalogShot('wellmade-real-food-b-complex.jpg'),
+  // Real Food Organic Iron, 60 tablets. Barcode 671635733801.
+  'wellmade-real-food-iron': catalogShot('wellmade-real-food-iron.jpg'),
+  // Real Food Organic Women's Multivitamin, 60 tablets. Barcode 671635733740.
+  // Not the men's bottle.
+  'wellmade-real-food-womens-multi': catalogShot('wellmade-real-food-womens-multi.jpg'),
+  // Real Food Organic Men's Multivitamin, 60 tablets. Barcode 671635733757.
+  'wellmade-real-food-mens-multi': catalogShot('wellmade-real-food-mens-multi.jpg'),
+  // Every Woman's One Daily, 48 tablets. Barcode 727783003072.
+  // Brand-site bottle is shared across 30 / 48 / 72 / 96. Do not glue it.
+  // This face is the 48-count barcode.
+  'new-chapter-every-womans-one-daily': catalogShot(
+    'new-chapter-every-womans-one-daily.jpg',
+  ),
+  // Every Man's One Daily, 72 tablets. Barcode 727783003287.
+  // Not the 30, 48, or 96.
+  'new-chapter-every-mans-one-daily': catalogShot(
+    'new-chapter-every-mans-one-daily.jpg',
+  ),
+  // Wholemega row. Current bottle is Omega-3 Complex, 30 softgels.
+  // Barcode 727783902924. Only one count on newchapter.com.
+  'new-chapter-wholemega': catalogShot('new-chapter-wholemega.jpg'),
+  // Estrotone, 60 capsules. Barcode 727783900661. Not the 30.
+  'new-chapter-estrotone': catalogShot('new-chapter-estrotone.jpg'),
+  // Prostate 5LX, 90 capsules. Barcode 727783900692. Not the 30 or the 60.
+  'new-chapter-prostate-5lx': catalogShot('new-chapter-prostate-5lx.jpg'),
+  // Magnesium + L-Theanine powder. Barcode 727783904621. One count.
+  'new-chapter-mag-l-theanine': catalogShot('new-chapter-mag-l-theanine.jpg'),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -16806,6 +16860,27 @@ assertExactCarton('wellmade-ashwagandha', 'wellmade by Thrive Market', 'wellmade
 assertExactCarton('wellmade-milk-thistle', 'wellmade by Thrive Market', 'wellmade-milk-thistle.jpg');
 assertExactCarton('wellmade-hsn', 'wellmade by Thrive Market', 'wellmade-hsn.jpg');
 assertExactCarton('wellmade-red-yeast-rice', 'wellmade by Thrive Market', 'wellmade-red-yeast-rice.jpg');
+// Vitamins night run 2026-10-03 1:45 AM PT batch 2.
+assertExactCarton('wellmade-cranberry', 'wellmade by Thrive Market', 'wellmade-cranberry.jpg');
+assertExactCarton('wellmade-irish-sea-moss', 'wellmade by Thrive Market', 'wellmade-irish-sea-moss.jpg');
+assertExactCarton('wellmade-evening-primrose', 'wellmade by Thrive Market', 'wellmade-evening-primrose.jpg');
+assertExactCarton('wellmade-l-theanine', 'wellmade by Thrive Market', 'wellmade-l-theanine.jpg');
+assertExactCarton('wellmade-resveratrol', 'wellmade by Thrive Market', 'wellmade-resveratrol.jpg');
+assertExactCarton('wellmade-selenium', 'wellmade by Thrive Market', 'wellmade-selenium.jpg');
+assertExactCarton('wellmade-superfood-greens-original', 'wellmade by Thrive Market', 'wellmade-superfood-greens-original.jpg');
+assertExactCarton('wellmade-superfood-greens-berry', 'wellmade by Thrive Market', 'wellmade-superfood-greens-berry.jpg');
+assertExactCarton('wellmade-real-food-d3', 'wellmade by Thrive Market', 'wellmade-real-food-d3.jpg');
+assertExactCarton('wellmade-real-food-ca-mg', 'wellmade by Thrive Market', 'wellmade-real-food-ca-mg.jpg');
+assertExactCarton('wellmade-real-food-b-complex', 'wellmade by Thrive Market', 'wellmade-real-food-b-complex.jpg');
+assertExactCarton('wellmade-real-food-iron', 'wellmade by Thrive Market', 'wellmade-real-food-iron.jpg');
+assertExactCarton('wellmade-real-food-womens-multi', 'wellmade by Thrive Market', 'wellmade-real-food-womens-multi.jpg');
+assertExactCarton('wellmade-real-food-mens-multi', 'wellmade by Thrive Market', 'wellmade-real-food-mens-multi.jpg');
+assertExactCarton('new-chapter-every-womans-one-daily', 'New Chapter', 'new-chapter-every-womans-one-daily.jpg');
+assertExactCarton('new-chapter-every-mans-one-daily', 'New Chapter', 'new-chapter-every-mans-one-daily.jpg');
+assertExactCarton('new-chapter-wholemega', 'New Chapter', 'new-chapter-wholemega.jpg');
+assertExactCarton('new-chapter-estrotone', 'New Chapter', 'new-chapter-estrotone.jpg');
+assertExactCarton('new-chapter-prostate-5lx', 'New Chapter', 'new-chapter-prostate-5lx.jpg');
+assertExactCarton('new-chapter-mag-l-theanine', 'New Chapter', 'new-chapter-mag-l-theanine.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
