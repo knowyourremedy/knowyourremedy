@@ -2015,6 +2015,27 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'members-mark-d3-50mcg-softgels': brandMark('members-mark-mark.png'),
   'members-mark-d3-125mcg-softgels': brandMark('members-mark-mark.png'),
   'members-mark-adult-multi-gummies': brandMark('members-mark-mark.png'),
+  // Vitamins night run 2026-10-03 4:15 AM PT batch 2.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Advanced multis. No barcode on the row. Counts are not on the row.
+  // Do not glue one count.
+  'members-mark-advanced-womens-multi': brandMark('members-mark-mark.png'),
+  'members-mark-advanced-mens-multi': brandMark('members-mark-mark.png'),
+  'members-mark-advanced-womens-50-multi': brandMark('members-mark-mark.png'),
+  // High potency vitamin C gummies. No barcode on the row.
+  // Do not glue one count.
+  'topcare-hp-vitamin-c-gummies': brandMark('topcare-mark.png'),
+  // Adults multi, 200 tablets. Barcode 311917199139.
+  // Retrieved face is a flat label, not a 3D bottle.
+  'walgreens-adults-multi-tablets': brandMark('walgreens-mark.png'),
+  // Peach powder, 12 oz. Barcode 850056167741.
+  // Brand face is a flat label, not a 3D pouch.
+  'micro-ingredients-mg-glycinate-powder-peach-12oz': brandMark(
+    'micro-ingredients-mark.png',
+  ),
+  // Lemon fish oil row is the 240-count. Barcode 850015616068.
+  // Retrieved pouch is the 300-count. Do not glue it.
+  'micro-ingredients-omega3-lemon-240': brandMark('micro-ingredients-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8727,6 +8748,58 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'kirkland-wild-alaskan-fish-oil': catalogShot(
     'kirkland-wild-alaskan-fish-oil.jpg',
   ),
+  // Vitamins night run 2026-10-03 4:15 AM PT batch 2.
+  // Magnesium glycinate, 400 mg, 240 capsules. Barcode 850056167857.
+  'micro-ingredients-pure-mg-glycinate-240': catalogShot(
+    'micro-ingredients-pure-mg-glycinate-240.jpg',
+  ),
+  // Vitamin D3 5,000 IU, 500 softgels, coconut oil. Barcode 850056167819.
+  'micro-ingredients-d3-5000-coconut-500': catalogShot(
+    'micro-ingredients-d3-5000-coconut-500.jpg',
+  ),
+  // Vitamin D3 10,000 IU + K2 200 mcg, 300 softgels, coconut oil.
+  // Barcode 850056167628.
+  'micro-ingredients-d3-k2-10000-200-coconut-300': catalogShot(
+    'micro-ingredients-d3-k2-10000-200-coconut-300.jpg',
+  ),
+  // Triple strength omega-3, lemon, 120 softgels. Barcode 850056167222.
+  // Not the 240-count pouch.
+  'micro-ingredients-omega3-lemon-120': catalogShot(
+    'micro-ingredients-omega3-lemon-120.jpg',
+  ),
+  // Magnesium glycinate with BioPerine, 180 veg capsules.
+  // Barcode 733739012876.
+  'now-magnesium-glycinate-with-bioperine-180': catalogShot(
+    'now-magnesium-glycinate-with-bioperine-180.jpg',
+  ),
+  // Vitamin D3 & K2, 1,000 IU / 45 mcg, 120 veg capsules.
+  // Barcode 733739003690.
+  'now-vitamin-d3-k2-120': catalogShot('now-vitamin-d3-k2-120.jpg'),
+  // Vitamin D3 5,000 IU, 240 softgels. Barcode 733739003737.
+  // Not the 120-count.
+  'now-vitamin-d-3-high-potency-5-000-iu-240': catalogShot(
+    'now-vitamin-d-3-high-potency-5-000-iu-240.jpg',
+  ),
+  // Vitamin D3 2,000 IU, 240 softgels. Barcode 733739003775.
+  'now-vitamin-d-3-high-potency-2-000-iu-240': catalogShot(
+    'now-vitamin-d-3-high-potency-2-000-iu-240.jpg',
+  ),
+  // Mega D3 & MK-7, 5,000 IU / 180 mcg, 120 veg capsules.
+  // Barcode 733739003867.
+  'now-mega-d3-mk-7-120': catalogShot('now-mega-d3-mk-7-120.jpg'),
+  // Berberine Glucose Support, 90 softgels. Barcode 733739014184.
+  // Not the 60-count.
+  'now-berberine-glucose-support-90': catalogShot(
+    'now-berberine-glucose-support-90.jpg',
+  ),
+  // NAC 600 mg, 250 capsules. Barcode 733739000866.
+  'now-nac-600-mg-250': catalogShot('now-nac-600-mg-250.jpg'),
+  // MK-7 vitamin K2, 100 mcg, 120 veg capsules. Barcode 733739009937.
+  'now-mk-7-vitamin-k-2-100-mcg-120': catalogShot(
+    'now-mk-7-vitamin-k-2-100-mcg-120.jpg',
+  ),
+  // Taurine 500 mg, 100 veg capsules. Barcode 733739001405.
+  'now-taurine-500-mg-100': catalogShot('now-taurine-500-mg-100.jpg'),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -17261,6 +17334,83 @@ assertBrandMark(
   "Member's Mark",
   'members-mark-mark.png',
 );
+// Vitamins night run 2026-10-03 4:15 AM PT batch 2.
+assertBrandMark(
+  'members-mark-advanced-womens-multi',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'members-mark-advanced-mens-multi',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'members-mark-advanced-womens-50-multi',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark('topcare-hp-vitamin-c-gummies', 'TopCare', 'topcare-mark.png');
+assertBrandMark('walgreens-adults-multi-tablets', 'Walgreens', 'walgreens-mark.png');
+assertBrandMark(
+  'micro-ingredients-mg-glycinate-powder-peach-12oz',
+  'Micro Ingredients',
+  'micro-ingredients-mark.png',
+);
+assertBrandMark(
+  'micro-ingredients-omega3-lemon-240',
+  'Micro Ingredients',
+  'micro-ingredients-mark.png',
+);
+assertExactCarton(
+  'micro-ingredients-pure-mg-glycinate-240',
+  'Micro Ingredients',
+  'micro-ingredients-pure-mg-glycinate-240.jpg',
+);
+assertExactCarton(
+  'micro-ingredients-d3-5000-coconut-500',
+  'Micro Ingredients',
+  'micro-ingredients-d3-5000-coconut-500.jpg',
+);
+assertExactCarton(
+  'micro-ingredients-d3-k2-10000-200-coconut-300',
+  'Micro Ingredients',
+  'micro-ingredients-d3-k2-10000-200-coconut-300.jpg',
+);
+assertExactCarton(
+  'micro-ingredients-omega3-lemon-120',
+  'Micro Ingredients',
+  'micro-ingredients-omega3-lemon-120.jpg',
+);
+assertExactCarton(
+  'now-magnesium-glycinate-with-bioperine-180',
+  'NOW',
+  'now-magnesium-glycinate-with-bioperine-180.jpg',
+);
+assertExactCarton('now-vitamin-d3-k2-120', 'NOW', 'now-vitamin-d3-k2-120.jpg');
+assertExactCarton(
+  'now-vitamin-d-3-high-potency-5-000-iu-240',
+  'NOW',
+  'now-vitamin-d-3-high-potency-5-000-iu-240.jpg',
+);
+assertExactCarton(
+  'now-vitamin-d-3-high-potency-2-000-iu-240',
+  'NOW',
+  'now-vitamin-d-3-high-potency-2-000-iu-240.jpg',
+);
+assertExactCarton('now-mega-d3-mk-7-120', 'NOW', 'now-mega-d3-mk-7-120.jpg');
+assertExactCarton(
+  'now-berberine-glucose-support-90',
+  'NOW',
+  'now-berberine-glucose-support-90.jpg',
+);
+assertExactCarton('now-nac-600-mg-250', 'NOW', 'now-nac-600-mg-250.jpg');
+assertExactCarton(
+  'now-mk-7-vitamin-k-2-100-mcg-120',
+  'NOW',
+  'now-mk-7-vitamin-k-2-100-mcg-120.jpg',
+);
+assertExactCarton('now-taurine-500-mg-100', 'NOW', 'now-taurine-500-mg-100.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
