@@ -8436,6 +8436,54 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'gol-vitamin-code-womens': catalogShot('gol-vitamin-code-womens.jpg'),
   // Vitamin Code Men, 120 capsules. Barcode 658010113687.
   'gol-vitamin-code-mens': catalogShot('gol-vitamin-code-mens.jpg'),
+  // Vitamins night run 2026-10-03 1:45 AM PT batch 1.
+  // Vitamin Code 50 & Wiser Women, 120 capsules. Barcode 658010113670.
+  // Not the regular Women's bottle 658010113663.
+  'gol-vitamin-code-womens-50': catalogShot('gol-vitamin-code-womens-50.jpg'),
+  // Vitamin Code RAW Calcium, 120 capsules. Barcode 658010113908.
+  'gol-vitamin-code-raw-calcium': catalogShot('gol-vitamin-code-raw-calcium.jpg'),
+  // RAW Perfect Food Original green powder. Barcode 658010114059.
+  // Not the Alkalizer & Detoxifier canister.
+  'gol-raw-perfect-food-original': catalogShot('gol-raw-perfect-food-original.jpg'),
+  // Vitamin Code Kids chewable, cherry berry, 60 count. Barcode 658010114400.
+  'gol-vitamin-code-kids-chewable': catalogShot('gol-vitamin-code-kids-chewable.jpg'),
+  // mykind Organics Men's Multi 40+, 120 tablets. Barcode 658010117692.
+  'gol-mykind-mens-40': catalogShot('gol-mykind-mens-40.jpg'),
+  // mykind Organics Plant Calcium, 180 tablets. Barcode 658010117616.
+  'gol-mykind-plant-calcium': catalogShot('gol-mykind-plant-calcium.jpg'),
+  // mykind Organics Ashwagandha, 60 tablets. Barcode 658010121873.
+  'gol-mykind-ashwagandha': catalogShot('gol-mykind-ashwagandha.jpg'),
+  // Men's Organic Multi & Omegas, 120 gummies. Barcode 817053020820.
+  // Single variant OM120. Not a women's or kids bottle.
+  'smartypants-organic-mens': catalogShot('smartypants-organic-mens.jpg'),
+  // Women's Organic Multi & Omegas, 120 gummies. Barcode 817053020813.
+  'smartypants-organic-womens': catalogShot('smartypants-organic-womens.jpg'),
+  // Toddler Organic Multi & Omegas, 60 gummies. Barcode 817053020875.
+  'smartypants-organic-toddlers': catalogShot('smartypants-organic-toddlers.jpg'),
+  // Kids Fiber & Veggies, 60 gummies. Barcode 817053024026.
+  'smartypants-kids-fiber-veggies': catalogShot('smartypants-kids-fiber-veggies.jpg'),
+  // Kids Zero Sugar Multi & Omegas, 60 gummies. Barcode 817053024514.
+  'smartypants-kids-zero-sugar': catalogShot('smartypants-kids-zero-sugar.jpg'),
+  // Women's 50+ Multi & Omegas, 90 gummies. Barcode 817053024019.
+  // Not the 120-count organic women's bottle.
+  'smartypants-womens-50': catalogShot('smartypants-womens-50.jpg'),
+  // Adult Multi & Fiber, 90 gummies. Barcode 817053024491.
+  'smartypants-adult-multi-fiber': catalogShot('smartypants-adult-multi-fiber.jpg'),
+  // Teen Girl Plus Multi & Omegas, 60 gummies. Barcode 817053024088.
+  'smartypants-teen-girl-plus': catalogShot('smartypants-teen-girl-plus.jpg'),
+  // Kids Organic Multi & Omegas, 120 gummies. Barcode 817053020790.
+  // Current bottle for the Kids Formula Organic row. Not the 60-count toddler.
+  'smartypants-kids-formula-organic-multi': catalogShot(
+    'smartypants-kids-formula-organic-multi.jpg',
+  ),
+  // wellmade Ashwagandha, 60 capsules. Barcode 671635734587.
+  'wellmade-ashwagandha': catalogShot('wellmade-ashwagandha.jpg'),
+  // wellmade Milk Thistle, 60 capsules. Barcode 671635734624.
+  'wellmade-milk-thistle': catalogShot('wellmade-milk-thistle.jpg'),
+  // wellmade Hair Skin Nails, 60 capsules. Barcode 671635734679.
+  'wellmade-hsn': catalogShot('wellmade-hsn.jpg'),
+  // wellmade Red Yeast Rice with CoQ10, 60 capsules. Barcode 671635734655.
+  'wellmade-red-yeast-rice': catalogShot('wellmade-red-yeast-rice.jpg'),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -16737,6 +16785,27 @@ assertExactCarton(
   'gol-vitamin-code-womens.jpg',
 );
 assertExactCarton('gol-vitamin-code-mens', 'Garden of Life', 'gol-vitamin-code-mens.jpg');
+// Vitamins night run 2026-10-03 1:45 AM PT batch 1.
+assertExactCarton('gol-vitamin-code-womens-50', 'Garden of Life', 'gol-vitamin-code-womens-50.jpg');
+assertExactCarton('gol-vitamin-code-raw-calcium', 'Garden of Life', 'gol-vitamin-code-raw-calcium.jpg');
+assertExactCarton('gol-raw-perfect-food-original', 'Garden of Life', 'gol-raw-perfect-food-original.jpg');
+assertExactCarton('gol-vitamin-code-kids-chewable', 'Garden of Life', 'gol-vitamin-code-kids-chewable.jpg');
+assertExactCarton('gol-mykind-mens-40', 'Garden of Life', 'gol-mykind-mens-40.jpg');
+assertExactCarton('gol-mykind-plant-calcium', 'Garden of Life', 'gol-mykind-plant-calcium.jpg');
+assertExactCarton('gol-mykind-ashwagandha', 'Garden of Life', 'gol-mykind-ashwagandha.jpg');
+assertExactCarton('smartypants-organic-mens', 'SmartyPants', 'smartypants-organic-mens.jpg');
+assertExactCarton('smartypants-organic-womens', 'SmartyPants', 'smartypants-organic-womens.jpg');
+assertExactCarton('smartypants-organic-toddlers', 'SmartyPants', 'smartypants-organic-toddlers.jpg');
+assertExactCarton('smartypants-kids-fiber-veggies', 'SmartyPants', 'smartypants-kids-fiber-veggies.jpg');
+assertExactCarton('smartypants-kids-zero-sugar', 'SmartyPants', 'smartypants-kids-zero-sugar.jpg');
+assertExactCarton('smartypants-womens-50', 'SmartyPants', 'smartypants-womens-50.jpg');
+assertExactCarton('smartypants-adult-multi-fiber', 'SmartyPants', 'smartypants-adult-multi-fiber.jpg');
+assertExactCarton('smartypants-teen-girl-plus', 'SmartyPants', 'smartypants-teen-girl-plus.jpg');
+assertExactCarton('smartypants-kids-formula-organic-multi', 'SmartyPants', 'smartypants-kids-formula-organic-multi.jpg');
+assertExactCarton('wellmade-ashwagandha', 'wellmade by Thrive Market', 'wellmade-ashwagandha.jpg');
+assertExactCarton('wellmade-milk-thistle', 'wellmade by Thrive Market', 'wellmade-milk-thistle.jpg');
+assertExactCarton('wellmade-hsn', 'wellmade by Thrive Market', 'wellmade-hsn.jpg');
+assertExactCarton('wellmade-red-yeast-rice', 'wellmade by Thrive Market', 'wellmade-red-yeast-rice.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
