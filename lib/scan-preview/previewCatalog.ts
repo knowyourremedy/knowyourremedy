@@ -8940,6 +8940,88 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-vitamin-d-3-high-potency-1-000-iu-360': catalogShot(
     'now-vitamin-d-3-high-potency-1-000-iu-360.jpg',
   ),
+  // Vitamins night run 2026-10-03 6:45 AM PT batch 1.
+  // Official nowfoods.com face for that SKU. Not a sibling count.
+  // Ginkgo biloba with eleuthero, 100 veg capsules. Barcode 733739046833.
+  // Not the 50-count. Not the 200-count.
+  'now-ginkgo-biloba-with-eleuthero-root-100': catalogShot(
+    'now-ginkgo-biloba-with-eleuthero-root-100.jpg',
+  ),
+  // Pumpkin seed oil 1,000 mg, 200 softgels. Barcode 733739018434.
+  // Not the 100-count.
+  'now-pumpkin-seed-oil-1-000-mg-200': catalogShot(
+    'now-pumpkin-seed-oil-1-000-mg-200.jpg',
+  ),
+  // Mannose cranberry, 90 veg capsules. Barcode 733739028143.
+  'now-mannose-cranberry-90': catalogShot('now-mannose-cranberry-90.jpg'),
+  // Taurine 1,000 mg, 100 veg capsules. Barcode 733739001429.
+  // Not the 250-count.
+  'now-taurine-1-000-mg-100': catalogShot('now-taurine-1-000-mg-100.jpg'),
+  // L-Lysine 500 mg, 100 veg capsules. Barcode 733739001108.
+  // Not the 250-count.
+  'now-l-lysine-500-mg-100': catalogShot('now-l-lysine-500-mg-100.jpg'),
+  // Calcium hydroxyapatite, 120 capsules. Barcode 733739012531.
+  'now-calcium-hydroxyapatite-caps-120': catalogShot(
+    'now-calcium-hydroxyapatite-caps-120.jpg',
+  ),
+  // Cod liver oil 1,000 mg, 180 softgels. Barcode 733739017444.
+  // Not the 90-count.
+  'now-cod-liver-oil-1-000-mg-180': catalogShot(
+    'now-cod-liver-oil-1-000-mg-180.jpg',
+  ),
+  // Chromium picolinate 200 mcg, 250 veg capsules. Barcode 733739014221.
+  // Not the 100-count.
+  'now-chromium-picolinate-200-mcg-250': catalogShot(
+    'now-chromium-picolinate-200-mcg-250.jpg',
+  ),
+  // Magnesium citrate, 180 softgels. Barcode 733739012982.
+  // Not the 90-count. Not a veg-capsule bottle.
+  'now-magnesium-citrate-180': catalogShot('now-magnesium-citrate-180.jpg'),
+  // Methyl B-12 1,000 mcg, 100 lozenges. Barcode 733739004956.
+  // Not the 250-count.
+  'now-methyl-b-12-1-000-mcg-100': catalogShot(
+    'now-methyl-b-12-1-000-mcg-100.jpg',
+  ),
+  // L-Theanine double strength 200 mg, 60 veg capsules. Barcode 733739001474.
+  // Not the 120-count.
+  'now-l-theanine-60': catalogShot('now-l-theanine-60.jpg'),
+  // Magnesium bisglycinate powder, 8 oz. Barcode 733739012999.
+  // Not a capsule bottle.
+  'now-magnesium-bisglycinate-powder-8': catalogShot(
+    'now-magnesium-bisglycinate-powder-8.jpg',
+  ),
+  // Green black walnut wormwood complex, 2 fl oz. Barcode 733739049827.
+  // Not a capsule bottle.
+  'now-green-black-walnut-wormwood-complex-2-fl-oz-59-ml': catalogShot(
+    'now-green-black-walnut-wormwood-complex-2-fl-oz-59-ml.jpg',
+  ),
+  // Vitamin D3 1,000 IU, 180 softgels. Barcode 733739003652.
+  // Not the 360-count.
+  'now-vitamin-d-3-high-potency-1-000-iu-180': catalogShot(
+    'now-vitamin-d-3-high-potency-1-000-iu-180.jpg',
+  ),
+  // Selenium 200 mcg, 180 veg capsules. Barcode 733739014863.
+  // Not the 90-count.
+  'now-selenium-200-mcg-180': catalogShot('now-selenium-200-mcg-180.jpg'),
+  // Boron 3 mg, 100 veg capsules. Barcode 733739014108.
+  // Not the 250-count.
+  'now-boron-3-mg-100': catalogShot('now-boron-3-mg-100.jpg'),
+  // Rutin 450 mg, 100 veg capsules. Barcode 733739007353.
+  'now-rutin-450-mg-100': catalogShot('now-rutin-450-mg-100.jpg'),
+  // Hyaluronic acid with L-proline, 100 mg, 60 veg capsules.
+  // Barcode 733739031556. Not the 120-count.
+  'now-hyaluronic-acid-with-l-proline-alpha-lipoic-acid-and-grape-seed-extract-100-mg-60':
+    catalogShot(
+      'now-hyaluronic-acid-with-l-proline-alpha-lipoic-acid-and-grape-seed-extract-100-mg-60.jpg',
+    ),
+  // Black cumin seed oil 1,000 mg, 60 softgels. Barcode 733739017116.
+  'now-black-cumin-seed-oil-1-000-mg-60': catalogShot(
+    'now-black-cumin-seed-oil-1-000-mg-60.jpg',
+  ),
+  // Magnesium caps 400 mg, 180 veg capsules. Barcode 733739012838.
+  'now-magnesium-caps-400-mg-180': catalogShot(
+    'now-magnesium-caps-400-mg-180.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -9404,6 +9486,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'xyzal-b148-tablets-60',
   'xyzal-b148-tablets-80',
   'xyzal-b148-tablets-90',
+  // Vitamins night run 2026-10-03 6:45 AM PT batch 1.
+  // 250-count shares the 100-count lozenge formula. Do not inherit the 100.
+  'now-methyl-b-12-1-000-mcg-250',
 ]);
 
 export function previewOverlayImage(
