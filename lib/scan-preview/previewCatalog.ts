@@ -9022,6 +9022,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-magnesium-caps-400-mg-180': catalogShot(
     'now-magnesium-caps-400-mg-180.jpg',
   ),
+  // Vitamins night run 2026-10-03 6:45 AM PT batch 2.
+  // Official nowfoods.com face for that SKU. Not a sibling count.
+  // Vitamin D3 10,000 IU, 240 softgels. Barcode 733739003850.
+  // Not the 30-count. Not the 120-count.
+  'now-vitamin-d-3-high-potency-240': catalogShot(
+    'now-vitamin-d-3-high-potency-240.jpg',
+  ),
+  // Alpha lipoic acid 600 mg, 120 veg capsules. Barcode 733739030450.
+  // Not the 60-count.
+  'now-alpha-lipoic-acid-600-mg-120': catalogShot(
+    'now-alpha-lipoic-acid-600-mg-120.jpg',
+  ),
+  // Red mineral algae, 180 veg capsules. Barcode 733739015389.
+  'now-red-mineral-algae-180': catalogShot('now-red-mineral-algae-180.jpg'),
+  // Vegetarian dry vitamin D 1,000 IU, 120 veg capsules. Barcode 733739003683.
+  // Dry D2. Not a D3 softgel.
+  'now-vegetarian-dry-vitamin-d-1-000-iu-120': catalogShot(
+    'now-vegetarian-dry-vitamin-d-1-000-iu-120.jpg',
+  ),
+  // Ultra omega-3 fish oil, 180 fish gelatin softgels. Barcode 733739016652.
+  // Not the bovine softgels. Not Ultra Omega-3-D.
+  'now-ultra-omega-3-fish-oil-180-fish-softgels': catalogShot(
+    'now-ultra-omega-3-fish-oil-180-fish-softgels.jpg',
+  ),
+  // Magnesium citrate, 60 veg capsules. Barcode 733739012913.
+  // Not the 120, 180, or 240 veg-capsule counts. Not the softgel bottle.
+  'now-magnesium-citrate-60': catalogShot('now-magnesium-citrate-60.jpg'),
+  // Slippery elm 400 mg, 100 veg capsules. Barcode 733739047502.
+  // Not the powder.
+  'now-slippery-elm-400-mg-100': catalogShot(
+    'now-slippery-elm-400-mg-100.jpg',
+  ),
+  // DIM 200 mg, 90 veg capsules. Barcode 733739030498.
+  'now-dim-200-90': catalogShot('now-dim-200-90.jpg'),
+  // Vitamin E-400 with mixed tocopherols, 250 softgels. Barcode 733739008947.
+  // Not the 50-count. Not the 100-count.
+  'now-e-400-with-mixed-tocopherols-268-mg-400-iu-250': catalogShot(
+    'now-e-400-with-mixed-tocopherols-268-mg-400-iu-250.jpg',
+  ),
+  // Acetyl-L-carnitine 500 mg, 200 veg capsules. Barcode 733739000842.
+  // Not the 50-count. Not the 100-count.
+  'now-acetyl-l-carnitine-200': catalogShot(
+    'now-acetyl-l-carnitine-200.jpg',
+  ),
+  // Odorless garlic, 250 softgels. Barcode 733739018083.
+  // Not the 100-count.
+  'now-odorless-garlic-250': catalogShot('now-odorless-garlic-250.jpg'),
+  // MK-7 vitamin K-2 300 mcg, 60 veg capsules. Barcode 733739009944.
+  // Not the 120-count. Not the 100 mcg MK-7 line.
+  'now-mk-7-vitamin-k-2-300-mcg-60': catalogShot(
+    'now-mk-7-vitamin-k-2-300-mcg-60.jpg',
+  ),
+  // Vitamin K-2 MK-4 100 mcg, 100 veg capsules. Barcode 733739009906.
+  // Not the 250-count.
+  'now-vitamin-k-2-100-mcg-100': catalogShot(
+    'now-vitamin-k-2-100-mcg-100.jpg',
+  ),
+  // Iron 18 mg, 120 veg capsules. Barcode 733739014436.
+  // Not the 36 mg double strength.
+  'now-iron-18-mg-120': catalogShot('now-iron-18-mg-120.jpg'),
+  // Hawthorn berry 540 mg, 100 veg capsules. Barcode 733739047151.
+  // Not a hawthorn extract bottle.
+  'now-hawthorn-berry-100': catalogShot('now-hawthorn-berry-100.jpg'),
+  // Zinc picolinate 50 mg, 60 veg capsules. Barcode 733739015501.
+  // Not the 30-count. Not the 120-count.
+  'now-zinc-picolinate-50-mg-60': catalogShot(
+    'now-zinc-picolinate-50-mg-60.jpg',
+  ),
+  // Vitamin A 25,000 IU, 250 softgels. Barcode 733739003423.
+  // Not the 100-count.
+  'now-vitamin-a-7-500-mcg-25-000-iu-250': catalogShot(
+    'now-vitamin-a-7-500-mcg-25-000-iu-250.jpg',
+  ),
+  // Cranberry caps, 100 veg capsules. Barcode 733739032300.
+  // Not mannose cranberry. Not the PACs bottle.
+  'now-cranberry-caps-100': catalogShot('now-cranberry-caps-100.jpg'),
+  // Calcium D-glucarate 500 mg, 90 veg capsules. Barcode 733739030979.
+  'now-calcium-d-glucarate-500-mg-90': catalogShot(
+    'now-calcium-d-glucarate-500-mg-90.jpg',
+  ),
+  // Milk thistle extract 300 mg, 200 veg capsules. Barcode 733739047533.
+  // Not the 50, 90, or 100 counts. Not the 150 mg or 450 mg softgel.
+  'now-milk-thistle-extract-300-mg-200': catalogShot(
+    'now-milk-thistle-extract-300-mg-200.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -9489,6 +9574,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-03 6:45 AM PT batch 1.
   // 250-count shares the 100-count lozenge formula. Do not inherit the 100.
   'now-methyl-b-12-1-000-mcg-250',
+  // Vitamins night run 2026-10-03 6:45 AM PT batch 2.
+  // 250-count shares the 100-count MK-4 formula. Do not inherit the 100.
+  'now-vitamin-k-2-100-mcg-250',
 ]);
 
 export function previewOverlayImage(
