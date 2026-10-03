@@ -2089,6 +2089,44 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Immediate-release 400 mg. UPC 023513807300. Retrieved photo
   // was loose tablets, not a carton. Do not glue the ER max.
   'dg-health-guaifenesin-ir': brandMark('dg-health-mark.png'),
+  // Daytime photo run — Allergies letters, then brand-text.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Bubble gum 5 fl oz. UPC 041167353011. The retrieved 5 oz
+  // face is tutti frutti. Do not glue it. Do not glue grape.
+  'xyzal-b149-liquid-bubblegum-5oz': brandMark('xyzal-mark.png'),
+  // Preservative-free vials. No barcode. The 10 mL bottle is BAK.
+  // Colored wordmark from alaway.com.
+  'alaway-preservative-free': brandMark('alaway-mark.png'),
+  // Plain tablets span several count barcodes. Do not glue one count.
+  'claritin-allergy-tablets-plain': brandMark('claritin-mark.png'),
+  // UPC 681131731713 listings disagree (60, 45, a 6-pack).
+  // Retrieved bottle reads 90. Do not glue it.
+  'equate-loratadine-tablets-plain': brandMark('equate-mark.png'),
+  // UPC 050428000335. No 3D pack retrieved.
+  'cvs-loratadine-tablets-plain': brandMark('cvs-mark.png'),
+  // RediTabs span several count barcodes. Do not glue one count.
+  'claritin-reditabs': brandMark('claritin-mark.png'),
+  // Mint ODT. UPC 194346498161. No 3D pack retrieved.
+  'equate-loratadine-mint-odt': brandMark('equate-mark.png'),
+  // Fluticasone spray. UPC 194346371907. No 3D pack retrieved.
+  // Same barcode as the kids-facing row. Do not invent a carton.
+  'equate-fluticasone-nasal': brandMark('equate-mark.png'),
+  // Adult spray spans 60 / 120 / twin barcodes. Do not glue one.
+  // Blue wordmark from nasacort.com.
+  'nasacort-allergy-24hr': brandMark('nasacort-mark.png'),
+  // UPC 041100810748 listing is Children's 40-count (30+10).
+  // This row is not the children's id. Do not glue that box.
+  'claritin-chewable': brandMark('claritin-mark.png'),
+  // Liquid. UPC 041100595416 is the honey listing. The retrieved
+  // 8 oz photo does not show a readable flavor. Do not guess.
+  'claritin-allergy-liquid': brandMark('claritin-mark.png'),
+  // Fexofenadine 180 mg. UPC 681131366403 is listed as 60 tablets
+  // and as a 2 x 30. Do not glue one bottle.
+  'equate-fexofenadine-tablets': brandMark('equate-mark.png'),
+  // UPC 193968140366 page is a sports bra, not cetirizine.
+  'members-mark-cetirizine-tablets': brandMark('members-mark-mark.png'),
+  // UPC 194346065837 page is trash bags, not Allegra-D.
+  'equate-fexofenadine-d': brandMark('equate-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2109,7 +2147,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Assured: Dollar Tree PDP not retrieved. No standalone official marks.
   '365-cetirizine-softgels-peg': '365',
   '365-diphenhydramine-softgels-peg': '365',
-  'alaway-multidose-bak': 'Alaway',
   'amazon-basic-care-cetirizine-aurohealth': 'Basic Care',
   'amazon-basic-care-cetirizine-coated': 'Basic Care',
   'amazon-basic-care-dph-25-l479': 'Basic Care',
@@ -2127,10 +2164,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // 365: wholefoodsmarket.com PDP not retrieved; DailyMed is 2D. Tile
   // text 365, never the letter 3.
   '365-loratadine-plain-ssg': '365',
-  // Alaway PF: alaway.com / Bausch faces are the 10 mL BAK bottle, not
-  // the single-use PF carton. Same as multidose leftover — no standalone
-  // official Alaway mark file.
-  'alaway-preservative-free': 'Alaway',
   // Amazon Basic Care Aurohealth loratadine: amazon.com 3D packshot not
   // retrieved (mid-rebrand). No standalone official Basic Care mark.
   'amazon-basic-care-loratadine-aurohealth': 'Basic Care',
@@ -2148,20 +2181,13 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Claritin: claritin.com still site-maintenance from this environment.
   // DailyMed 2D is not a carton. No standalone official Claritin mark.
   'childrens-claritin-chewable': 'Claritin',
-  'claritin-allergy-liquid': 'Claritin',
-  'claritin-allergy-tablets-plain': 'Claritin',
-  'claritin-chewable': 'Claritin',
-  'claritin-reditabs': 'Claritin',
-  'claritin-d-12hr': 'Claritin',
   // CVS.com PDPs 403 from this environment. No standalone official
   // CVS Health mark file.
-  'cvs-cetirizine-tablets': 'CVS Health',
   'cvs-kids-dph-chews': 'CVS Health',
   'cvs-kids-cetirizine-liquid': 'CVS Health',
   'cvs-kids-loratadine-liquid': 'CVS Health',
   'cvs-kids-dph-liquid': 'CVS Health',
   'cvs-kids-loratadine-chew': 'CVS Health',
-  'cvs-loratadine-tablets-plain': 'CVS Health',
   'cvs-health-nighttime-dry-eye': 'CVS Health',
   // DG Health: no retrievable official 3D carton. No standalone mark.
   'dg-health-cetirizine-tablets': 'DG Health',
@@ -2170,20 +2196,14 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Kuwait petrochemical — refuse. No standalone official Equate mark
   // file. Do not stay letters.
   'equate-loratadine-d': 'Equate',
-  'equate-cetirizine-tablets': 'Equate',
-  'equate-fexofenadine-tablets': 'Equate',
-  'equate-fluticasone-nasal': 'Equate',
   'equate-kids-fluticasone-nasal': 'Equate',
   // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 2.
   // Equate: walmart.com PDPs still blocked. equate.com is Kuwait
   // petrochemical — refuse. No standalone official Equate mark file.
-  'equate-loratadine-tablets-plain': 'Equate',
   'equate-cetirizine-d': 'Equate',
-  'equate-fexofenadine-d': 'Equate',
   'equate-kids-cetirizine-liquid': 'Equate',
   'equate-kids-loratadine-liquid': 'Equate',
   'equate-kids-dph-chews': 'Equate',
-  'equate-loratadine-mint-odt': 'Equate',
   'equate-lubricant-eye-bkc': 'Equate',
   'equate-lubricant-eye-pf': 'Equate',
   'equate-nighttime-lubricant-ointment': 'Equate',
@@ -2192,17 +2212,14 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // standalone official Kirkland mark file. Do not stay letters.
   'kirkland-aller-tec-cetirizine': 'Kirkland',
   'kirkland-aller-tec-d-cetirizine-pse': 'Kirkland',
-  'kirkland-allerclear-loratadine-plain': 'Kirkland',
   // Member's Mark: samsclub.com human-check wall. No standalone official
   // mark file. Do not stay letters.
-  'members-mark-cetirizine-tablets': "Member's Mark",
   'members-mark-loratadine-tablets': "Member's Mark",
   // Nasacort: adult leftover spans 60 / 120 / twin UPCs. The live
   // nasacort.com 60ct face is a badge composite, not a clean carton.
   // Kids leftover barcode 041167580059 is the adult 120 spray, not the
   // Children's Nasacort NDC 41167-5900 carton. Nav wordmark is white on
   // transparent and would disappear on the tile. No colored mark file.
-  'nasacort-allergy-24hr': 'Nasacort',
   'nasacort-allergy-24hr-kids': 'Nasacort',
   // Refresh: refresheyedrops.com returned a bot wall. No standalone
   // official Refresh mark file. Do not stay letters.
@@ -2220,7 +2237,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // carton+vial composite. Row UPC 300654011057 is the 5 mL / 0.17 fl oz
   // carton. Do not glue the 10 mL face. No standalone official Zaditor
   // mark file (Systane parent mark is not this product name).
-  'zaditor': 'Zaditor',
   // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 1.
   // Unisom SleepTabs leftover spans 16 / 32 / larger count UPCs. Official
   // unisom.com hero is the 16ct face only. Do not glue one count. No
@@ -9129,6 +9145,22 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'xyzal-b149-liquid-grape-5oz': catalogShot(
     'xyzal-b149-liquid-grape-5oz.jpg',
   ),
+  // Daytime photo run — Allergies brand-text upgrades.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // AllerClear loratadine 10 mg, 365 tablets. UPC 096619529681.
+  'kirkland-allerclear-loratadine-plain': catalogShot(
+    'kirkland-allerclear-loratadine-plain.jpg',
+  ),
+  // Alaway multi-dose, 10 mL. UPC 310119022412. Not preservative-free.
+  'alaway-multidose-bak': catalogShot('alaway-multidose-bak.jpg'),
+  // Zaditor 5 mL / 0.17 fl oz. UPC 300654011057. Not the 10 mL.
+  'zaditor': catalogShot('zaditor.jpg'),
+  // Claritin-D 12 Hour, 10 extended-release tablets. UPC 041100802088.
+  'claritin-d-12hr': catalogShot('claritin-d-12hr.jpg'),
+  // Equate cetirizine 10 mg, 300 tablets. UPC 681131288248.
+  'equate-cetirizine-tablets': catalogShot('equate-cetirizine-tablets.jpg'),
+  // CVS cetirizine 10 mg, 30 tablets. UPC 050428415368.
+  'cvs-cetirizine-tablets': catalogShot('cvs-cetirizine-tablets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10313,7 +10345,7 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
-assertBrandTextTile('alaway-multidose-bak', 'Alaway', 'Alaway');
+assertExactCarton('alaway-multidose-bak', 'Alaway', 'alaway-multidose-bak.jpg');
 assertBrandTextTile(
   'amazon-basic-care-cetirizine-aurohealth',
   'Amazon Basic Care',
@@ -10384,7 +10416,7 @@ assertBrandTextTile(
   '365 Whole Foods Market',
   '365',
 );
-assertBrandTextTile('alaway-preservative-free', 'Alaway', 'Alaway');
+assertBrandMark('alaway-preservative-free', 'Alaway', 'alaway-mark.png');
 assertBrandTextTile(
   'amazon-basic-care-loratadine-aurohealth',
   'Amazon Basic Care',
@@ -10407,16 +10439,20 @@ assertBrandTextTile(
   'Claritin',
   'Claritin',
 );
-assertBrandTextTile('claritin-allergy-liquid', 'Claritin', 'Claritin');
-assertBrandTextTile(
+assertBrandMark('claritin-allergy-liquid', 'Claritin', 'claritin-mark.png');
+assertBrandMark(
   'claritin-allergy-tablets-plain',
   'Claritin',
-  'Claritin',
+  'claritin-mark.png',
 );
-assertBrandTextTile('claritin-chewable', 'Claritin', 'Claritin');
-assertBrandTextTile('claritin-reditabs', 'Claritin', 'Claritin');
-assertBrandTextTile('claritin-d-12hr', 'Claritin', 'Claritin');
-assertBrandTextTile('cvs-cetirizine-tablets', 'CVS Health', 'CVS Health');
+assertBrandMark('claritin-chewable', 'Claritin', 'claritin-mark.png');
+assertBrandMark('claritin-reditabs', 'Claritin', 'claritin-mark.png');
+assertExactCarton('claritin-d-12hr', 'Claritin', 'claritin-d-12hr.jpg');
+assertExactCarton(
+  'cvs-cetirizine-tablets',
+  'CVS Health',
+  'cvs-cetirizine-tablets.jpg',
+);
 assertBrandTextTile('cvs-kids-dph-chews', 'CVS Health', 'CVS Health');
 assertBrandTextTile(
   'cvs-kids-cetirizine-liquid',
@@ -10434,10 +10470,10 @@ assertBrandTextTile(
   'CVS Health',
   'CVS Health',
 );
-assertBrandTextTile(
+assertBrandMark(
   'cvs-loratadine-tablets-plain',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
 assertBrandTextTile(
   'cvs-health-nighttime-dry-eye',
@@ -10450,25 +10486,29 @@ assertBrandTextTile(
   'DG Health',
 );
 assertBrandTextTile('equate-loratadine-d', 'Equate', 'Equate');
-assertBrandTextTile('equate-cetirizine-tablets', 'Equate', 'Equate');
-assertBrandTextTile(
+assertExactCarton(
+  'equate-cetirizine-tablets',
+  'Equate',
+  'equate-cetirizine-tablets.jpg',
+);
+assertBrandMark(
   'equate-fexofenadine-tablets',
   'Equate',
-  'Equate',
+  'equate-mark.png',
 );
-assertBrandTextTile('equate-fluticasone-nasal', 'Equate', 'Equate');
+assertBrandMark('equate-fluticasone-nasal', 'Equate', 'equate-mark.png');
 assertBrandTextTile(
   'equate-kids-fluticasone-nasal',
   'Equate',
   'Equate',
 );
-assertBrandTextTile(
+assertBrandMark(
   'equate-loratadine-tablets-plain',
   'Equate',
-  'Equate',
+  'equate-mark.png',
 );
 assertBrandTextTile('equate-cetirizine-d', 'Equate', 'Equate');
-assertBrandTextTile('equate-fexofenadine-d', 'Equate', 'Equate');
+assertBrandMark('equate-fexofenadine-d', 'Equate', 'equate-mark.png');
 assertBrandTextTile(
   'equate-kids-cetirizine-liquid',
   'Equate',
@@ -10480,7 +10520,7 @@ assertBrandTextTile(
   'Equate',
 );
 assertBrandTextTile('equate-kids-dph-chews', 'Equate', 'Equate');
-assertBrandTextTile('equate-loratadine-mint-odt', 'Equate', 'Equate');
+assertBrandMark('equate-loratadine-mint-odt', 'Equate', 'equate-mark.png');
 assertBrandTextTile('equate-lubricant-eye-bkc', 'Equate', 'Equate');
 assertBrandTextTile('equate-lubricant-eye-pf', 'Equate', 'Equate');
 assertBrandTextTile(
@@ -10498,22 +10538,22 @@ assertBrandTextTile(
   'Kirkland Signature',
   'Kirkland',
 );
-assertBrandTextTile(
+assertExactCarton(
   'kirkland-allerclear-loratadine-plain',
   'Kirkland Signature',
-  'Kirkland',
+  'kirkland-allerclear-loratadine-plain.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'members-mark-cetirizine-tablets',
   "Member's Mark",
-  "Member's Mark",
+  'members-mark-mark.png',
 );
 assertBrandTextTile(
   'members-mark-loratadine-tablets',
   "Member's Mark",
   "Member's Mark",
 );
-assertBrandTextTile('nasacort-allergy-24hr', 'Nasacort', 'Nasacort');
+assertBrandMark('nasacort-allergy-24hr', 'Nasacort', 'nasacort-mark.png');
 assertBrandTextTile('nasacort-allergy-24hr-kids', 'Nasacort', 'Nasacort');
 assertBrandTextTile('refresh-pm-ointment', 'Refresh', 'Refresh');
 assertBrandTextTile('refresh-tears-pf', 'Refresh', 'Refresh');
@@ -11117,7 +11157,12 @@ assertBrandMark('zyrtec-allergy-tablets', 'Zyrtec', 'zyrtec-mark.png');
     );
   }
 }
-assertBrandTextTile('zaditor', 'Zaditor', 'Zaditor');
+assertExactCarton('zaditor', 'Zaditor', 'zaditor.jpg');
+assertBrandMark(
+  'xyzal-b149-liquid-bubblegum-5oz',
+  'Xyzal',
+  'xyzal-mark.png',
+);
 assertBrandMark('tylenol-pm-es', 'Tylenol', 'tylenol-mark.png');
 assertBrandMark('advil-pm-liquigels', 'Advil', 'advil-mark.png');
 assertBrandMark('advil-pm-caplets', 'Advil', 'advil-mark.png');
