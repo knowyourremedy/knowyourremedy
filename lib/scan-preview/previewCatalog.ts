@@ -1933,6 +1933,35 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'claritin-b144-tablets-starch-20': brandMark('claritin-mark.png'),
   // RediTabs 10. DailyMed 10-count file is a cropped label, not a box.
   'claritin-b144-reditabs-10': brandMark('claritin-mark.png'),
+  // Allergies night run 2026-10-03 12:30 AM PT batch 2.
+  // Tried each SKU. Official mark. Not a letter.
+  // Dyed grape chewables, 10. DailyMed setid 37732ca2 front is a 2D
+  // dieline that prints 10 CHEWABLE TABLETS. Not a 3D carton.
+  // Dye-free grape faces are a different formula. Do not glue them.
+  'claritin-b145-chew-grape-10': brandMark('claritin-mark.png'),
+  // Dyed grape chewables, 20. NDC 11523-4328-2 is 2 blisters of 10.
+  // No 20-count 3D face. Do not glue the 10 dieline or the 40 flat.
+  'claritin-b145-chew-grape-20': brandMark('claritin-mark.png'),
+  // Dyed grape chewables, 60. NDC 11523-4331-2 is 6 blisters of 10.
+  // DailyMed grape photo is the 40-count 2D flat. Do not glue the 40.
+  'claritin-b145-chew-grape-60': brandMark('claritin-mark.png'),
+  // Adult allergy liquid, 240 mL. DailyMed Cooling Honey carton prints
+  // 8 FL OZ (240 mL). That face and barcode belong to
+  // claritin-allergy-liquid. Do not glue the honey carton.
+  'claritin-b145-adult-liquid-240ml': brandMark('claritin-mark.png'),
+  // Xyzal Allergy 24HR tablets. Eight counts share one formula.
+  // xyzal.com gallery and the PDP popup do not print a readable count.
+  // DailyMed setid 8be45c2a images are 2D flats. The 40-count DAM file
+  // is a drug-facts panel. Do not glue one face onto every count.
+  // Wordmark paths are the official Xyzal_Logo_2023.svg letterforms.
+  'xyzal-b148-tablets-10': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-20': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-35': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-40': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-55': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-60': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-80': brandMark('xyzal-mark.png'),
+  'xyzal-b148-tablets-90': brandMark('xyzal-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8863,6 +8892,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'claritin-b144-tablets-mcc-70',
   'claritin-b144-tablets-starch-20',
   'claritin-b144-reditabs-10',
+  // Allergies night run 2026-10-03 12:30 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'claritin-b145-chew-grape-10',
+  'claritin-b145-chew-grape-20',
+  'claritin-b145-chew-grape-60',
+  'claritin-b145-adult-liquid-240ml',
+  'xyzal-b148-tablets-10',
+  'xyzal-b148-tablets-20',
+  'xyzal-b148-tablets-35',
+  'xyzal-b148-tablets-40',
+  'xyzal-b148-tablets-55',
+  'xyzal-b148-tablets-60',
+  'xyzal-b148-tablets-80',
+  'xyzal-b148-tablets-90',
 ]);
 
 export function previewOverlayImage(
@@ -16907,6 +16950,18 @@ for (const [id, formulaId, brand, file] of [
   ['claritin-b144-tablets-mcc-70', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
   ['claritin-b144-tablets-starch-20', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
   ['claritin-b144-reditabs-10', 'claritin-reditabs', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-chew-grape-10', 'claritin-b145-chew-grape-dye', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-chew-grape-20', 'claritin-b145-chew-grape-dye', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-chew-grape-60', 'claritin-b145-chew-grape-dye', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-adult-liquid-240ml', 'claritin-b145-adult-liquid', 'Claritin', 'claritin-mark.png'],
+  ['xyzal-b148-tablets-10', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-20', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-35', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-40', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-55', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-60', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-80', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
+  ['xyzal-b148-tablets-90', 'xyzal-b148-tablets', 'Xyzal', 'xyzal-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
