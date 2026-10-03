@@ -1622,9 +1622,9 @@ DG Health (3)
 - DG Health — DG Health Triple Antibiotic Ointment (Oil-Blend) — ointment — Bacitracin zinc 400 units / g; Neomycin sulfate 3.5mg / g; Polymyxin B sulfate 5,000 units / g — count unknown
 Icy Hot (4)
 - Icy Hot — Icy Hot Lidocaine No-Mess Roll On — roll-on — Lidocaine HCl 4% — count unknown
-- ~~Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16%~~ CLOSED — not on the opened icyhot.com lineup
-- ~~Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11%~~ CLOSED — not on the opened icyhot.com lineup
-- ~~Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16%~~ CLOSED — not on the opened icyhot.com lineup
+- Icy Hot — Icy Hot Performance Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
+- Icy Hot — Icy Hot Performance Dry Spray — spray — Menthol 16%; Camphor (synthetic) 11% — count unknown
+- Icy Hot — Icy Hot Performance No-Mess Pain Relief Cream — cream — Camphor (synthetic) 11%; Menthol 16% — count unknown
 Absorbine Jr. (3)
 - Absorbine Jr. — Absorbine Jr. Back Patch 7.5% — patch — Menthol 7.5% — count unknown
 - Absorbine Jr. — Absorbine Jr. Pain Relieving Knee Patch 7.5% — patch — Menthol 7.5% — count unknown
