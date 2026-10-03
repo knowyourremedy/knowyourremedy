@@ -143,3 +143,4 @@ export { BATCH143_KYR6B_ZYRTEC_75CT } from './batch143-kyr6b-zyrtec-75ct';
 export { BATCH144_KYR6B_CLARITIN_US_OTC } from './batch144-kyr6b-claritin-us-otc';
 export { BATCH145_KYR6B_CLARITIN_HELD_UPC } from './batch145-kyr6b-claritin-held-upc';
 export { BATCH146_KYR5D_CLARITIN_UPC_OVERRIDE } from './batch146-kyr5d-claritin-upc-override';
+export { BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3 } from './batch147-kyr5d-claritin-upc-override-3';

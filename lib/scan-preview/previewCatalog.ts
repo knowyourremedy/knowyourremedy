@@ -146,6 +146,7 @@ import {
   BATCH144_KYR6B_CLARITIN_US_OTC,
   BATCH145_KYR6B_CLARITIN_HELD_UPC,
   BATCH146_KYR5D_CLARITIN_UPC_OVERRIDE,
+  BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -303,6 +304,10 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH133_KYR6B_ZYRTEC_FIX,
   ...BATCH132_KYR6B_ZYRTEC_FIRST_SLICE,
   ...BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP,
+  // batch147 before batch136 and before batch146 so uniqueById keeps
+  // these barcodes. claritin-b136-d24-ec-5 lives in batch136, which is
+  // earlier than batch146. No earlier spread contains these three ids.
+  ...BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3,
   ...BATCH136_KYR6B_CLARITIN_FIRST_SLICE,
   ...BATCH137_KYR6B_ALLEGRA_FIRST_SLICE,
   ...BATCH138_KYR6B_ALLEGRA_D24,
