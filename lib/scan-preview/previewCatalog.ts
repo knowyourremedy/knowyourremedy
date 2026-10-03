@@ -1982,6 +1982,21 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Bone Strength 40-day barcode. Same bottle art as 20/30/60/90.
   // A retailer face for this barcode was titled 120 tablets. Do not glue.
   'new-chapter-bone-strength': brandMark('new-chapter-mark.png'),
+  // Vitamins night run 2026-10-03 3:00 AM PT batch 2.
+  // Tried each SKU. Official mark. Not a letter.
+  // Whole Food Vitamin C 500 mg. No barcode on the row.
+  'amazon-elements-whole-food-vitamin-c-500': brandMark('amazon-elements-mark.png'),
+  // Vitamin D3 5000 IU softgels. No barcode on the row.
+  'amazon-elements-vitamin-d3-5000-softgels': brandMark('amazon-elements-mark.png'),
+  // Fish Oil gummies. Barcode 195515033374 had no pack photo.
+  'amazon-basics-fish-oil-gummies': brandMark('amazon-basics-mark.png'),
+  // Women's One Daily gummies. Barcode 842379157097 listed with no image.
+  'amazon-basics-womens-one-daily-gummies': brandMark('amazon-basics-mark.png'),
+  // Adult One Daily gummies. Barcode 195515034494 had no listing.
+  'amazon-basics-adult-one-daily-gummies': brandMark('amazon-basics-mark.png'),
+  // Women's and Men's One Daily tablets. No barcode on the row.
+  'amazon-basics-womens-one-daily-tablets': brandMark('amazon-basics-mark.png'),
+  'amazon-basics-mens-one-daily-tablets': brandMark('amazon-basics-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8594,6 +8609,51 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'new-chapter-mens-advanced': catalogShot('new-chapter-mens-advanced.jpg'),
   // Daily Skin Renewal, 30 day. Barcode 727783904577. One count.
   'new-chapter-daily-skin': catalogShot('new-chapter-daily-skin.jpg'),
+  // Vitamins night run 2026-10-03 3:00 AM PT batch 2.
+  // Lion's Mane powder, 100 g. Barcode 892392002096.
+  // Not the 60 g, 180 g, or 200 g pouch.
+  'om-lions-mane-powder': catalogShot('om-lions-mane-powder.jpg'),
+  // Mama Bear Organic Kids Multivitamin, 60 gummies. Barcode 842379148811.
+  'mama-bear-organic-kids-multivitamin-gummies': catalogShot(
+    'mama-bear-organic-kids-multivitamin-gummies.jpg',
+  ),
+  // Mama Bear Organic Kids Vitamin D3, 80 gummies. Barcode 842379159305.
+  'mama-bear-organic-kids-vitamin-d3-gummies': catalogShot(
+    'mama-bear-organic-kids-vitamin-d3-gummies.jpg',
+  ),
+  // Mama Bear Vegan Kids Vitamin C, 60 gummies. Barcode 842379148835.
+  'mama-bear-vegan-kids-vitamin-c-gummies': catalogShot(
+    'mama-bear-vegan-kids-vitamin-c-gummies.jpg',
+  ),
+  // Omega 3-6-9, 60 softgels. Barcode 842379150586. Revly face of that code.
+  // Not a different count.
+  'amazon-elements-omega-3-6-9': catalogShot('amazon-elements-omega-3-6-9.jpg'),
+  // B Complex, 65 capsules. Barcode 842379103612. Elements bottle of that code.
+  'amazon-basics-b-complex': catalogShot('amazon-basics-b-complex.jpg'),
+  // Vitamin C gummies, 70 count. Barcode 842379149641.
+  'amazon-elements-vitamin-c-gummies': catalogShot(
+    'amazon-elements-vitamin-c-gummies.jpg',
+  ),
+  // Collagen Complex, 90 capsules. Barcode 842379150630.
+  'amazon-elements-collagen-complex': catalogShot(
+    'amazon-elements-collagen-complex.jpg',
+  ),
+  // Super Omega-3, 90 softgels, lemon. Barcode 842379150678.
+  'amazon-basics-super-omega-3': catalogShot('amazon-basics-super-omega-3.jpg'),
+  // B12 5000 mcg lozenges, 65 count. Barcode 842379103674.
+  'amazon-elements-b12-5000-lozenges': catalogShot(
+    'amazon-elements-b12-5000-lozenges.jpg',
+  ),
+  // Chelated Magnesium, 240 tablets. Barcode 842379146244.
+  'amazon-elements-chelated-magnesium': catalogShot(
+    'amazon-elements-chelated-magnesium.jpg',
+  ),
+  // Vitamin C 1000 mg, 300 tablets. Barcode 842379103643.
+  'amazon-elements-vitamin-c-1000-tablets': catalogShot(
+    'amazon-elements-vitamin-c-1000-tablets.jpg',
+  ),
+  // Iron 18 mg, 195 capsules. Barcode 842379103094. Not Solimo Iron.
+  'amazon-elements-iron': catalogShot('amazon-elements-iron.jpg'),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -16978,6 +17038,91 @@ assertBrandMark('new-chapter-fermented-b12', 'New Chapter', 'new-chapter-mark.pn
 assertBrandMark('new-chapter-fermented-d3', 'New Chapter', 'new-chapter-mark.png');
 assertBrandMark('new-chapter-bone-strength', 'New Chapter', 'new-chapter-mark.png');
 assertExactCarton('new-chapter-daily-skin', 'New Chapter', 'new-chapter-daily-skin.jpg');
+// Vitamins night run 2026-10-03 3:00 AM PT batch 2.
+assertExactCarton('om-lions-mane-powder', 'OM', 'om-lions-mane-powder.jpg');
+assertBrandMark(
+  'amazon-elements-whole-food-vitamin-c-500',
+  'Amazon Elements',
+  'amazon-elements-mark.png',
+);
+assertExactCarton(
+  'mama-bear-organic-kids-multivitamin-gummies',
+  'Mama Bear',
+  'mama-bear-organic-kids-multivitamin-gummies.jpg',
+);
+assertExactCarton(
+  'mama-bear-organic-kids-vitamin-d3-gummies',
+  'Mama Bear',
+  'mama-bear-organic-kids-vitamin-d3-gummies.jpg',
+);
+assertExactCarton(
+  'mama-bear-vegan-kids-vitamin-c-gummies',
+  'Mama Bear',
+  'mama-bear-vegan-kids-vitamin-c-gummies.jpg',
+);
+assertExactCarton(
+  'amazon-elements-omega-3-6-9',
+  'Amazon Elements',
+  'amazon-elements-omega-3-6-9.jpg',
+);
+assertBrandMark(
+  'amazon-elements-vitamin-d3-5000-softgels',
+  'Amazon Elements',
+  'amazon-elements-mark.png',
+);
+assertExactCarton('amazon-basics-b-complex', 'Amazon Basics', 'amazon-basics-b-complex.jpg');
+assertExactCarton(
+  'amazon-elements-vitamin-c-gummies',
+  'Amazon Elements',
+  'amazon-elements-vitamin-c-gummies.jpg',
+);
+assertExactCarton(
+  'amazon-elements-collagen-complex',
+  'Amazon Elements',
+  'amazon-elements-collagen-complex.jpg',
+);
+assertBrandMark('amazon-basics-fish-oil-gummies', 'Amazon Basics', 'amazon-basics-mark.png');
+assertBrandMark(
+  'amazon-basics-womens-one-daily-gummies',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-adult-one-daily-gummies',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertExactCarton(
+  'amazon-basics-super-omega-3',
+  'Amazon Basics',
+  'amazon-basics-super-omega-3.jpg',
+);
+assertBrandMark(
+  'amazon-basics-womens-one-daily-tablets',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-mens-one-daily-tablets',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertExactCarton(
+  'amazon-elements-b12-5000-lozenges',
+  'Amazon Elements',
+  'amazon-elements-b12-5000-lozenges.jpg',
+);
+assertExactCarton(
+  'amazon-elements-chelated-magnesium',
+  'Amazon Elements',
+  'amazon-elements-chelated-magnesium.jpg',
+);
+assertExactCarton(
+  'amazon-elements-vitamin-c-1000-tablets',
+  'Amazon Elements',
+  'amazon-elements-vitamin-c-1000-tablets.jpg',
+);
+assertExactCarton('amazon-elements-iron', 'Amazon Elements', 'amazon-elements-iron.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
