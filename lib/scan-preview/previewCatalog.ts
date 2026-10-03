@@ -8806,6 +8806,78 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'claritin-b144-tablets-starch-80': catalogShot(
     'claritin-b144-tablets-starch-80.jpg',
   ),
+  // Vitamins night run 2026-10-03 5:30 AM PT batch 1.
+  // Official nowfoods.com face for that SKU. Not a sibling count.
+  // L-Theanine double strength 200 mg, 120 veg capsules.
+  // Barcode 733739001481. Not the 60-count.
+  'now-l-theanine-120': catalogShot('now-l-theanine-120.jpg'),
+  // Vitamin D3 5,000 IU, 120 softgels. Barcode 733739003720.
+  // Not the 240-count.
+  'now-vitamin-d-3-high-potency-125-mcg-5-000-iu-120': catalogShot(
+    'now-vitamin-d-3-high-potency-125-mcg-5-000-iu-120.jpg',
+  ),
+  // Sunflower lecithin 1,200 mg, 200 softgels. Barcode 733739023131.
+  // Not the 100-count.
+  'now-sunflower-lecithin-200': catalogShot('now-sunflower-lecithin-200.jpg'),
+  // Hyaluronic acid 100 mg, 120 veg capsules. Barcode 733739031518.
+  'now-hyaluronic-acid-100-mg-120': catalogShot(
+    'now-hyaluronic-acid-100-mg-120.jpg',
+  ),
+  // Glycine 1,000 mg, 100 veg capsules. Barcode 733739001078.
+  'now-glycine-100': catalogShot('now-glycine-100.jpg'),
+  // Sunflower lecithin powder, 1 lb. Barcode 733739023148.
+  // Not a softgel bottle.
+  'now-sunflower-lecithin-pure-powder-1': catalogShot(
+    'now-sunflower-lecithin-pure-powder-1.jpg',
+  ),
+  // Taurine 1,000 mg, 250 veg capsules. Barcode 733739001436.
+  // Not the 100-count.
+  'now-taurine-1-000-mg-250': catalogShot('now-taurine-1-000-mg-250.jpg'),
+  // MK-7 vitamin K2 100 mcg, 60 veg capsules. Barcode 733739009920.
+  // Not the 120-count.
+  'now-mk-7-vitamin-k-2-100-mcg-60': catalogShot(
+    'now-mk-7-vitamin-k-2-100-mcg-60.jpg',
+  ),
+  // Pumpkin seed oil 1,000 mg, 100 softgels. Barcode 733739018403.
+  'now-pumpkin-seed-oil-100': catalogShot('now-pumpkin-seed-oil-100.jpg'),
+  // NAC 600 mg with selenium, 100 capsules. Barcode 733739000859.
+  // Not the 250-count.
+  'now-nac-with-selenium-100': catalogShot('now-nac-with-selenium-100.jpg'),
+  // Vitamin A 10,000 IU, 100 softgels. Barcode 733739003300.
+  'now-vitamin-a-3-000-mcg-10-000-iu-100': catalogShot(
+    'now-vitamin-a-3-000-mcg-10-000-iu-100.jpg',
+  ),
+  // Potassium citrate 99 mg, 180 veg capsules. Barcode 733739014481.
+  'now-potassium-citrate-99-mg-180': catalogShot(
+    'now-potassium-citrate-99-mg-180.jpg',
+  ),
+  // L-Tyrosine 500 mg, 120 capsules. Barcode 733739001627.
+  'now-l-tyrosine-500-mg-120': catalogShot('now-l-tyrosine-500-mg-120.jpg'),
+  // Ashwagandha 450 mg, 90 veg capsules. Barcode 733739046031.
+  // Not the 180-count.
+  'now-ashwagandha-standardized-extract-450-mg-90': catalogShot(
+    'now-ashwagandha-standardized-extract-450-mg-90.jpg',
+  ),
+  // Magnesium glycinate with BioPerine, 60 veg capsules.
+  // Barcode 733739012845. Not the 180-count.
+  'now-magnesium-glycinate-with-bioperine-60': catalogShot(
+    'now-magnesium-glycinate-with-bioperine-60.jpg',
+  ),
+  // Boron 3 mg, 250 veg capsules. Barcode 733739014122.
+  'now-boron-3-mg-250': catalogShot('now-boron-3-mg-250.jpg'),
+  // D-Mannose 500 mg, 120 veg capsules. Barcode 733739028112.
+  // Not the 240-count.
+  'now-d-mannose-500-mg-120': catalogShot('now-d-mannose-500-mg-120.jpg'),
+  // Mega D3 & MK-7, 60 capsules. Barcode 733739003843.
+  // Not the 120-count.
+  'now-mega-d3-mk-7-60': catalogShot('now-mega-d3-mk-7-60.jpg'),
+  // Inositol 500 mg, 100 veg capsules. Barcode 733739004758.
+  'now-inositol-500-mg-100': catalogShot('now-inositol-500-mg-100.jpg'),
+  // Ashwagandha 450 mg, 180 veg capsules. Barcode 733739045935.
+  // Not the 90-count.
+  'now-standardized-extract-ashwagandha-450-mg-180': catalogShot(
+    'now-standardized-extract-ashwagandha-450-mg-180.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
