@@ -14,8 +14,8 @@
 // photos. Letter tiles only on new ids. No fake Clean alts. No
 // methodology rewrite.
 //
-// TALLY (unverified drafts in THIS file): 13 rows — Clean 0 /
-// Caution 13 / Avoid 0.
+// TALLY (unverified drafts in THIS file): 12 rows — Clean 0 /
+// Caution 12 / Avoid 0. Performance dry spray removed: not on icyhot.com.
 // Independently Clean topical analog already on main:
 // boiron-arnicare-gel. No Clean conventional NSAID / lidocaine /
 // menthol cream invented.
@@ -378,29 +378,6 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     ],
   }),
   row({
-    id: ID.icyPerf,
-    productName: 'Icy Hot Performance Dry Spray',
-    brand: 'Icy Hot',
-    category: PAIN_FEVER,
-    formulaId: ID.icyPerf,
-    audience: ADULT,
-    minAge: 12,
-    form: 'spray',
-    activeIngredients: [
-      { name: 'Menthol', strength: '16%' },
-      { name: 'Camphor (synthetic)', strength: '11%' },
-    ],
-    inactiveIngredients: icyMentholCamphorDrySprayInactives(SET.icyPerf),
-    verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Performance Dry Spray = Caution. Alcohol denat. Limited + isobutane standalone Caution. ${PG_TOPICAL_TAP} DailyMed OI + actives (menthol 16% / camphor 11%) match Icy Hot Pro Dry Spray (setid ${SET.icyPro}) — shared formulaId ${ID.icyPerf}, two Search rows (Performance vs Pro). Distinct from Original (menthol-only actives). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
-    retailers: [...PF_RETAILERS, 'icyhot.com'],
-    cleanAlternatives: TOPICAL_ALTS,
-    sourcesGeneral: [
-      `DailyMed setid ${SET.icyPerf}; Pro twin ${SET.icyPro} — same OI + actives, shared formulaId — ${UNVERIFIED_NOTE}`,
-    ],
-  }),
-  row({
     id: ID.icyOrig,
     productName: 'Icy Hot Dry Spray Original',
     brand: 'Icy Hot',
@@ -609,14 +586,13 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
 const VOLTAREN = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.voltaren);
 const ASPER_NF = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.asperNf);
 const ASPER_FR = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.asperFr);
-const ICY_PERF = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.icyPerf);
 const ICY_PRO = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.icyPro);
 const ICY_ORIG = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.icyOrig);
 const ICY_LIDO = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.icyLidoSpray);
 const ASPER_LIDO = BATCH44_PAIN_RUBS_LIST2.find((r) => r.id === ID.asperLidoSpray);
 
-if (BATCH44_PAIN_RUBS_LIST2.length !== 13) {
-  throw new Error('batch 44 must write exactly 13 list-2 Search rows');
+if (BATCH44_PAIN_RUBS_LIST2.length !== 12) {
+  throw new Error('batch 44 must write exactly 12 list-2 Search rows');
 }
 if (BATCH44_PAIN_RUBS_LIST2.some((record) => record.verdict !== 'caution')) {
   throw new Error('batch 44 list-2 tally is Caution-only');
@@ -653,17 +629,18 @@ if (VOLTAREN?.formulaId === 'aleve-arthritis-pain-gel') {
 if (ASPER_NF?.formulaId === ASPER_FR?.formulaId) {
   throw new Error('Aspercreme fragrance vs no-fragrance must split formulaId');
 }
-if (ICY_PERF?.formulaId !== ICY_PRO?.formulaId) {
-  throw new Error('Icy Hot Performance and Pro must share formulaId');
+if (ICY_PRO?.formulaId !== ID.icyPerf) {
+  throw new Error('Icy Hot Pro dry spray must keep the shared dry-spray formulaId');
 }
-if (ICY_ORIG?.formulaId === ICY_PERF?.formulaId) {
-  throw new Error('Icy Hot Original must not share Performance/Pro formulaId');
+if (ICY_ORIG?.formulaId === ID.icyPerf) {
+  throw new Error('Icy Hot Original must not share the Pro dry-spray formulaId');
 }
 if (ICY_LIDO?.formulaId === ASPER_LIDO?.formulaId) {
   throw new Error('Lidocaine dry sprays must not share formulaId (actives differ)');
 }
 
-// Verdict tally (13 records): Clean 0 · Caution 13 · Avoid 0
+// Verdict tally (12 records): Clean 0 · Caution 12 · Avoid 0
+// Removed icy-hot-performance-dry-spray: not on the opened icyhot.com lineup.
 // Written: Voltaren gel (own id) + Aspercreme arthritis NF/FR + Salonpas
 //   diclofenac gel + Salonpas Jet Spray + Icy Hot Performance / Original /
 //   Pro dry sprays + Icy Hot + Aspercreme lidocaine dry sprays + Icy Hot

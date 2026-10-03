@@ -16,8 +16,8 @@
 // rewrite. No Sprouts. Do NOT rewrite list-2 batch 49 or batches
 // 41–48.
 //
-// TALLY (unverified drafts in THIS file): 44 rows — Clean 0 /
-// Caution 31 / Avoid 13.
+// TALLY (unverified drafts in THIS file): 43 rows — Clean 0 /
+// Caution 30 / Avoid 13. 10% spray removed: opened packs are 10.5%.
 // Independently Clean topical analog already on main:
 // boiron-arnicare-gel. No Clean conventional NSAID / lidocaine /
 // menthol cream invented.
@@ -1035,42 +1035,6 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     sourcesGeneral: [
       `DailyMed setid ${SET.pen} (NDC 59316-830) — ${UNVERIFIED_NOTE}`,
       `shared formulaId with alcohol-denat. spray setid ${SET.sprayAlc} — ${UNVERIFIED_NOTE}`,
-    ],
-  }),
-  row({
-    id: ID.spray10,
-    productName: 'Biofreeze Pain Relieving Spray 10%',
-    brand: 'Biofreeze',
-    category: PAIN_FEVER,
-    formulaId: FID.spray10,
-    audience: ADULT,
-    minAge: 12,
-    form: 'spray',
-    activeIngredients: [
-      { name: 'Menthol', strength: '10%' },
-    ],
-    inactiveIngredients: [
-      ...botanicals(SET.spray10, [
-        'Arnica Montana',
-        'Calendula',
-        'Chamomile',
-      ]),
-      flag('Dimethyl Sulfone', 'cleared', dailymed(SET.spray10, METH.msm)),
-      ...botanicals(SET.spray10, ['Echinacea']),
-      flag('Ethanol', 'limited', dailymed(SET.spray10, METH.alcoholVehicle)),
-      ...botanicals(SET.spray10, ['ilex Paraguarenis']),
-      flag('Isopropyl Myristate', 'cleared', dailymed(SET.spray10, METH.ipm)),
-      ...botanicals(SET.spray10, ['Juniper Berry']),
-      cleared(SET.spray10, 'water'),
-      ...botanicals(SET.spray10, ['White Tea']),
-    ],
-    verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relieving Spray 10% (older SPL) = Caution. Arnica / calendula / chamomile / echinacea / ilex / juniper berry / white tea are locked topical-botanical Caution tokens. Ethanol Limited. Dimethyl sulfone is MSM Cleared. IPM / water Cleared. No High. Distinct from the current 10.5% sprays (different OI). Pack sizes (NDC 59316-104) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
-    retailers: [...PF_RETAILERS, 'biofreeze.com'],
-    cleanAlternatives: TOPICAL_ALTS,
-    sourcesGeneral: [
-      `DailyMed setid ${SET.spray10} (NDC 59316-104) — ${UNVERIFIED_NOTE}`,
     ],
   }),
   row({
@@ -2124,14 +2088,14 @@ const CAP_HP = BATCH50_PAIN_FEVER_LIST3.find((r) => r.id === ID.capzasinHp);
 const OVN_GEL = BATCH50_PAIN_FEVER_LIST3.find((r) => r.id === ID.ovnGel);
 const OVN_ROLL = BATCH50_PAIN_FEVER_LIST3.find((r) => r.id === ID.ovnRoll);
 
-if (BATCH50_PAIN_FEVER_LIST3.length !== 44) {
-  throw new Error('batch 50 must write exactly 44 list-3 Search rows');
+if (BATCH50_PAIN_FEVER_LIST3.length !== 43) {
+  throw new Error('batch 50 must write exactly 43 list-3 Search rows');
 }
 if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 50 Clean tally is 0');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 31) {
-  throw new Error('batch 50 Caution tally is 31');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 30) {
+  throw new Error('batch 50 Caution tally is 30');
 }
 if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 13) {
   throw new Error('batch 50 Avoid tally is 13');
@@ -2253,7 +2217,8 @@ if (BATCH50_LIST3_REFUSED.some((item) => item.missing[0] == null)) {
   throw new Error('each refused SKU must quote the missing exact token');
 }
 
-// Verdict tally (44 records): Clean 0 · Caution 31 · Avoid 13
+// Verdict tally (43 records): Clean 0 · Caution 30 · Avoid 13
+// Removed biofreeze-pain-relief-spray-10: opened sprays are menthol 10.5%.
 // Written: list-3 Biofreeze / Bengay / Capzasin HP / Mineral Ice Extreme
 //   gel + stick / Absorbine Jr. (minus 3 refused)
 // Reuse: batches 41 / 42 / 44 / 45 / 46 / 47 / 48 / 49 untouched
