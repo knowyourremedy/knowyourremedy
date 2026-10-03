@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 3, 2026 (Xyzal children's liquid aliases — founder lock; aliases only, grades unchanged):** Glacial acetic acid → acetic acid Cleared. Same row. Not a new ingredient. Sodium acetate trihydrate → sodium acetate anhydrous Cleared. Same row. Hydration only. Not potassium acetate. Do not map the trihydrate onto the potassium acetate token. Packet basis is the existing methodology rows plus FDA, EFSA, and JECFA. No split. Not a new grade.
+
 **Changed Oct 1, 2026 (deionized water + grain alcohol — founder lock):** Exact token deionized water = Cleared. Same row as purified water / bare water. It is a way of making purified water, not a new ingredient. Not electrolyzed water. Do not flip purified water Cleared. Exact token grain alcohol = Caution (Usable). Same lock as alcohol / ethyl alcohol as a vehicle: Limited, not Avoid. The 46–56% by volume on a bottle is the strength of that vehicle, not a new token. The Sept 28 “Grain Alcohol (45–55% by volume)” phrase is that same vehicle strength. Do not flip the alcohol-vehicle Caution. Do not write Sprouts rows in this stamp. Do not attach a UPC.
 
 **Changed Oct 1, 2026 (cellulose acetate — founder lock):** Exact token cellulose acetate = Caution (Usable). Not on IARC / NTP / Prop 65 High lists. FDA IID osmotic-membrane use is allow, not Clean. Not cellulose, MCC, HPC, or HPMC — those stay Cleared. Same neighborhood as hypromellose acetate succinate / hypromellose phthalate and polyvinyl acetate. Do not flip HPC/HPMC Cleared. Do not flip HPMCAS Caution. Not a map onto those rows. Allegra-D 24 Hour 10-ct and 15-ct stay unwritten until this stamp is on MAIN. Grade stays Avoid on talc + titanium dioxide + FD&C Blue No. 1 aluminum lake. Cellulose acetate is not the Avoid driver. Do not rewrite batch137. Do not hunt UPCs in this stamp.
@@ -489,7 +491,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | magnesium sulfate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | lysine — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | Glycine — LOCKED (Sept 26, 2026) | Exact token. Cleared. Amino-acid filler. Neighborhood with lysine. Not the same token as lysine. Not a Caution. |
-| Acetic acid — LOCKED (Sept 26, 2026) | Exact token. Cleared. Acidulant with citric acid. Distinct from phosphoric acid Caution. Do not flip that Caution row. |
+| Acetic acid — LOCKED (Sept 26, 2026) | Exact token. Cleared. Acidulant with citric acid. Distinct from phosphoric acid Caution. Do not flip that Caution row. Glacial acetic acid maps here (Oct 3, 2026). Same Cleared. Same row. Not a new ingredient. Not a new grade. |
 | copper sulfate / cupric sulfate — LOCKED (Sept 15, 2026) | Both spellings. Exact tokens. Cleared. |
 | manganese chloride, aluminum chloride, magnesium chloride, zinc chloride — LOCKED (Sept 15, 2026) | Exact salt tokens. Cleared. |
 | lauryl laurate — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
@@ -579,7 +581,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | Grape (fruit) powder (for color) — LOCKED (Sept 22, 2026) | Exact token as color. Cleared named plant color. Distinct from Cleared grape seed extract and from Cleared grape seed oil as cream fill. Not a synthetic dye. |
 | Cocoa powder alkali / cocoa powder (processed with alkali) — LOCKED (Sept 22, 2026) | Exact tokens. Both strings written. Cleared. Distinct from Cleared cocoa powder and from Cleared cocoa seed butter. Distinct from extract. |
 | Choline chloride as OI — LOCKED (Sept 22, 2026) | Exact token when labeled as Other Ingredient. Cleared. Distinct from Cleared choline bitartrate. |
-| Potassium acetate — LOCKED (Sept 23, 2026) | Exact token. Cleared. Acetate-salt neighborhood with Cleared sodium acetate anhydrous. Not a new class. |
+| Potassium acetate — LOCKED (Sept 23, 2026) | Exact token. Cleared. Acetate-salt neighborhood with Cleared sodium acetate anhydrous. Not a new class. Sodium acetate trihydrate does not map to this token (Oct 3, 2026). |
+| Sodium acetate anhydrous — LOCKED (Sept 23, 2026) | Exact token. Cleared. Already the Cleared acetate named beside potassium acetate. Not potassium acetate. Sodium acetate trihydrate maps here (Oct 3, 2026). Same row. Hydration only. Not a new grade. |
 | Corn oil as fill — LOCKED (Sept 23, 2026) | Exact token as capsule / softgel / tablet fill. Named fill. Cleared. NOT gummy High. Tap both sides. Gummy print of corn oil stays Avoid. Same oil form split as soybean oil. No new oil class. Not an oil-bottle grade. |
 | Cranberry / raspberry / blueberry juice or fruit powder as named fruit color — LOCKED (Sept 23, 2026) | Exact tokens when the panel uses them as named fruit color. Cleared. Same posture as named fruit-or-vegetable juice as color. Distinct from Caution when the same juice or fruit powder is an unspecified sweetener. Cranberry fruit, organic raspberry, and organic raspberry powder are their own Cleared tokens (Sept 23 leftover stamp). Do not alias those three onto the sweetener Caution row. |
 | Cranberry fruit — LOCKED (Sept 23, 2026) | Exact token. Cleared. Named fruit. Distinct from cranberry juice / cranberry fruit powder (color Cleared; unspecified sweetener Caution). |
