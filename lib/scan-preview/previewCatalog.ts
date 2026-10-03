@@ -1962,6 +1962,26 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'xyzal-b148-tablets-60': brandMark('xyzal-mark.png'),
   'xyzal-b148-tablets-80': brandMark('xyzal-mark.png'),
   'xyzal-b148-tablets-90': brandMark('xyzal-mark.png'),
+  // Vitamins night run 2026-10-03 3:00 AM PT batch 1.
+  // Tried each SKU. Official mark. Not a letter.
+  // WonderCalm live gallery is floating-ingredient art, not a pouch.
+  'plant-people-wonder-calm': brandMark('plant-people-mark.png'),
+  // WonderFocus live pouch has no barcode. Row barcode 860002142425
+  // is a Restore CBD face mask. Do not glue either face.
+  'plant-people-wonder-focus': brandMark('plant-people-mark.png'),
+  // WonderGreens barcode matches, but the only pack photo is a
+  // pouch-plus-bottle lifestyle. Do not glue that set shot.
+  'plant-people-wonder-greens': brandMark('plant-people-mark.png'),
+  // PlusCBD 15 mg 60-count page is a flat label, not a 3D bottle.
+  'pluscbd-daily-balance-15': brandMark('pluscbd-mark.png'),
+  // Fermented singles. Brand bottle is shared across counts and does
+  // not print the count. Row is one count. Do not glue it.
+  'new-chapter-fermented-coenzyme-b-complex': brandMark('new-chapter-mark.png'),
+  'new-chapter-fermented-b12': brandMark('new-chapter-mark.png'),
+  'new-chapter-fermented-d3': brandMark('new-chapter-mark.png'),
+  // Bone Strength 40-day barcode. Same bottle art as 20/30/60/90.
+  // A retailer face for this barcode was titled 120 tablets. Do not glue.
+  'new-chapter-bone-strength': brandMark('new-chapter-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8538,6 +8558,42 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'new-chapter-prostate-5lx': catalogShot('new-chapter-prostate-5lx.jpg'),
   // Magnesium + L-Theanine powder. Barcode 727783904621. One count.
   'new-chapter-mag-l-theanine': catalogShot('new-chapter-mag-l-theanine.jpg'),
+  // Vitamins night run 2026-10-03 3:00 AM PT batch 1.
+  // Essential for Women 18+, mint, 30 servings. Barcode 850031975002.
+  // Variant featured bottle. Not the citrus barcode 850031975286.
+  'ritual-womens-18-multi': catalogShot('ritual-womens-18-multi.jpg'),
+  // Essential for Men 18+, 30 servings. Barcode 850031975026.
+  // Not the women's bottle. 90-serving variant has no barcode.
+  'ritual-mens-18-multi': catalogShot('ritual-mens-18-multi.jpg'),
+  // Essential for Women 50+. Barcode 850031975019. One variant.
+  'ritual-womens-50-multi': catalogShot('ritual-womens-50-multi.jpg'),
+  // Stress Relief. Barcode 850031975330. One variant.
+  'ritual-stress-relief': catalogShot('ritual-stress-relief.jpg'),
+  // Wonder Beauty gummies, 60 count. Barcode 860011717928.
+  'plant-people-wonder-beauty': catalogShot('plant-people-wonder-beauty.jpg'),
+  // Every Woman's One Daily 40+. Barcodes are the 30/48/72/96 day
+  // variants. Bottle names 40+ and does not print one count.
+  'new-chapter-every-womans-one-daily-40': catalogShot(
+    'new-chapter-every-womans-one-daily-40.jpg',
+  ),
+  // Every Man's One Daily 40+. Same count set. Not the women's bottle.
+  'new-chapter-every-mans-one-daily-40': catalogShot(
+    'new-chapter-every-mans-one-daily-40.jpg',
+  ),
+  // Every Woman's One Daily 55+. Bottle names 55+. Not the 40+.
+  'new-chapter-every-womans-one-daily-55': catalogShot(
+    'new-chapter-every-womans-one-daily-55.jpg',
+  ),
+  // Every Man's One Daily 55+. Not the women's 55+.
+  'new-chapter-every-mans-one-daily-55': catalogShot(
+    'new-chapter-every-mans-one-daily-55.jpg',
+  ),
+  // Women's Advanced. Barcodes are the 24/36/60 day variants.
+  'new-chapter-womens-advanced': catalogShot('new-chapter-womens-advanced.jpg'),
+  // Men's Advanced. Not the women's bottle.
+  'new-chapter-mens-advanced': catalogShot('new-chapter-mens-advanced.jpg'),
+  // Daily Skin Renewal, 30 day. Barcode 727783904577. One count.
+  'new-chapter-daily-skin': catalogShot('new-chapter-daily-skin.jpg'),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -16881,6 +16937,47 @@ assertExactCarton('new-chapter-wholemega', 'New Chapter', 'new-chapter-wholemega
 assertExactCarton('new-chapter-estrotone', 'New Chapter', 'new-chapter-estrotone.jpg');
 assertExactCarton('new-chapter-prostate-5lx', 'New Chapter', 'new-chapter-prostate-5lx.jpg');
 assertExactCarton('new-chapter-mag-l-theanine', 'New Chapter', 'new-chapter-mag-l-theanine.jpg');
+// Vitamins night run 2026-10-03 3:00 AM PT batch 1.
+assertExactCarton('ritual-womens-18-multi', 'Ritual', 'ritual-womens-18-multi.jpg');
+assertExactCarton('ritual-mens-18-multi', 'Ritual', 'ritual-mens-18-multi.jpg');
+assertExactCarton('ritual-womens-50-multi', 'Ritual', 'ritual-womens-50-multi.jpg');
+assertExactCarton('ritual-stress-relief', 'Ritual', 'ritual-stress-relief.jpg');
+assertExactCarton('plant-people-wonder-beauty', 'Plant People', 'plant-people-wonder-beauty.jpg');
+assertBrandMark('plant-people-wonder-calm', 'Plant People', 'plant-people-mark.png');
+assertBrandMark('plant-people-wonder-focus', 'Plant People', 'plant-people-mark.png');
+assertBrandMark('plant-people-wonder-greens', 'Plant People', 'plant-people-mark.png');
+assertBrandMark('pluscbd-daily-balance-15', 'PlusCBD', 'pluscbd-mark.png');
+assertExactCarton(
+  'new-chapter-every-womans-one-daily-40',
+  'New Chapter',
+  'new-chapter-every-womans-one-daily-40.jpg',
+);
+assertExactCarton(
+  'new-chapter-every-mans-one-daily-40',
+  'New Chapter',
+  'new-chapter-every-mans-one-daily-40.jpg',
+);
+assertExactCarton(
+  'new-chapter-every-womans-one-daily-55',
+  'New Chapter',
+  'new-chapter-every-womans-one-daily-55.jpg',
+);
+assertExactCarton(
+  'new-chapter-every-mans-one-daily-55',
+  'New Chapter',
+  'new-chapter-every-mans-one-daily-55.jpg',
+);
+assertExactCarton('new-chapter-womens-advanced', 'New Chapter', 'new-chapter-womens-advanced.jpg');
+assertExactCarton('new-chapter-mens-advanced', 'New Chapter', 'new-chapter-mens-advanced.jpg');
+assertBrandMark(
+  'new-chapter-fermented-coenzyme-b-complex',
+  'New Chapter',
+  'new-chapter-mark.png',
+);
+assertBrandMark('new-chapter-fermented-b12', 'New Chapter', 'new-chapter-mark.png');
+assertBrandMark('new-chapter-fermented-d3', 'New Chapter', 'new-chapter-mark.png');
+assertBrandMark('new-chapter-bone-strength', 'New Chapter', 'new-chapter-mark.png');
+assertExactCarton('new-chapter-daily-skin', 'New Chapter', 'new-chapter-daily-skin.jpg');
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
