@@ -2041,6 +2041,54 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Lemon fish oil row is the 240-count. Barcode 850015616068.
   // Retrieved pouch is the 300-count. Do not glue it.
   'micro-ingredients-omega3-lemon-240': brandMark('micro-ingredients-mark.png'),
+  // Daytime photo run — Cold & Flu brand-text upgrades. Per-id only.
+  // Tried each SKU. Official mark already on disk. Not a letter.
+  // FastActives live PDP is Berry SKU 15349, already on
+  // umcka-fastactives-berry. This row has no barcode. Do not glue berry.
+  'umcka-cold-flu-fastactives': brandMark('natures-way-mark.png'),
+  // Dye-free 1200 mg. UPC 195515012881. No 3D pack retrieved.
+  // Do not glue a dyed max or the up&up 42-count.
+  'amazon-basic-care-mucus-er-max-dyefree': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Two barcodes (195515119740 and 370030145508). No 3D pack
+  // for either. Do not glue the non-severe nighttime bottle.
+  'amazon-basics-nighttime-severe-cold-flu-liquid': brandMark(
+    'amazon-basics-mark.png',
+  ),
+  // Chest rub. UPC 195515034692. No 3D pack retrieved.
+  'amazon-basics-chest-rub': brandMark('amazon-basics-mark.png'),
+  // Sugar-free honey lemon drops. UPC 195515027212. No 3D bag.
+  // Do not glue the cherry or plain menthol bag.
+  'amazon-basic-care-sf-honey-lemon-cough-drops': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Cherry menthol drops. UPC 195515006408. No 3D bag.
+  'amazon-basic-care-cherry-menthol-cough-drops': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Sugar-free menthol drops. UPC 195515006422. No 3D bag.
+  'amazon-basic-care-sf-menthol-cough-drops': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // DG dye-free 1200 mg. UPC 370030118014. No 3D pack.
+  // Shares the Basic Care dye-free formula. Do not glue that box.
+  'dg-health-mucus-er-max-dyefree': brandMark('dg-health-mark.png'),
+  // No barcode. Do not glue the Basic Care dye-free box.
+  'members-mark-mucus-er-max-dyefree': brandMark('members-mark-mark.png'),
+  // No barcode. Do not glue a different guaifenesin count.
+  'family-wellness-guaifenesin-ir-400': brandMark('family-wellness-mark.png'),
+  // No barcode. DM is not the plain IR tablet. Do not glue one box.
+  'family-wellness-guaifenesin-dm-ir': brandMark('family-wellness-mark.png'),
+  // No barcode. Do not glue an adult vapor rub.
+  'equate-childrens-vaporizing-rub': brandMark('equate-mark.png'),
+  // No barcode. Formula is the Kirkland DM max. Do not glue Kirkland.
+  'members-mark-mucus-dm-max-yellow10': brandMark('members-mark-mark.png'),
+  // No barcode. Blue #1 DM is not the yellow #10 box.
+  'members-mark-mucus-dm-max-blue1': brandMark('members-mark-mark.png'),
+  // Immediate-release 400 mg. UPC 023513807300. Retrieved photo
+  // was loose tablets, not a carton. Do not glue the ER max.
+  'dg-health-guaifenesin-ir': brandMark('dg-health-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2051,61 +2099,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Attempted Cold & Flu leftover — no 3D pack on wholefoodsmarket.com.
   // DailyMed is a 2D bottle wrap. Do not invent a logo. Do not stay on "3".
   '365-guaifenesin-er-600': '365',
-  // Attempted Cold & Flu leftovers — amazon.com 3D packshots not retrieved
-  // (Basic Care rows are also mid-rebrand to Amazon Basics). DailyMed hits
-  // are 2D dielines / label flats / a day+night combo carton. No standalone
-  // official Basic Care or Amazon Basics mark file. Do not stay letters.
-  'amazon-basic-care-cherry-menthol-cough-drops': 'Basic Care',
-  'amazon-basic-care-daytime-cold-flu-liquid': 'Basic Care',
-  'amazon-basic-care-daytime-cold-flu-softgel': 'Basic Care',
-  'amazon-basic-care-mucus-er-max-dyefree': 'Basic Care',
-  'amazon-basic-care-nighttime-cold-flu-liquid': 'Basic Care',
-  'amazon-basic-care-nighttime-cold-flu-softgel': 'Basic Care',
-  'amazon-basic-care-sf-honey-lemon-cough-drops': 'Basic Care',
-  'amazon-basic-care-sf-menthol-cough-drops': 'Basic Care',
-  'amazon-basics-chest-rub': 'Amazon Basics',
-  'amazon-basics-nighttime-severe-cold-flu-liquid': 'Amazon Basics',
-  // Attempted Cold & Flu leftovers — no matching official 3D pack face.
-  // robitussin.com 12-hour page is PDF-only; live children's long-acting
-  // pack is Cough & Cold (chlorpheniramine), not the DXM-only leftover.
-  // DailyMed faces are 2D dielines. Official header wordmark is white-on-
-  // dark only — no standalone colored mark file. Do not stay letters.
-  // Attempted Cold & Flu leftovers — cvs.com PDPs 403 from this
-  // environment. DailyMed faces are 2D dielines. No standalone official
-  // CVS Health mark file. Do not stay letters.
-  // Attempted Cold & Flu leftovers — dollargeneral.com / walmart.com PDPs
-  // not retrieved from this environment. DailyMed faces are 2D dielines.
-  // No standalone official DG Health or Equate mark file (equate.com is
-  // Kuwait petrochemical — refuse). Do not stay letters.
-  'dg-health-guaifenesin-ir': 'DG Health',
-  'dg-health-mucus-er-max-dyefree': 'DG Health',
-  'equate-childrens-vaporizing-rub': 'Equate',
-  // Attempted Cold & Flu leftovers — walmart.com / dollargeneral.com /
-  // familydollar.com / costco.com / samsclub.com PDPs not retrieved from
-  // this environment. DailyMed faces are 2D dielines. No standalone
-  // official Equate / Family Wellness / Kirkland / Member's Mark mark
-  // file (equate.com is Kuwait petrochemical — refuse). Do not stay letters.
-  'family-wellness-guaifenesin-ir-400': 'Family Wellness',
-  'family-wellness-guaifenesin-dm-ir': 'Family Wellness',
-  'members-mark-mucus-er-max-dyefree': "Member's Mark",
-  'members-mark-mucus-dm-max-blue1': "Member's Mark",
-  // Attempted Cold & Flu leftovers — hylands.com sells Baby Mucus + Cold
-  // Night and Baby Tiny Cold Night only as combo packs. Do not glue the
-  // combo carton. No standalone official Hyland's mark file. Do not stay
-  // letters.
-  // Attempted Cold & Flu leftovers — no matching official 3D pack face.
-  // Member's Mark: samsclub.com blocked. Mucinex FreeFrom multi live PDP
-  // is elderberry OR cherry (too broad). Signature Care Albertsons PDPs
-  // not retrieved. Theraflu daytime powder is honey-lemon / honey-ginger /
-  // berry-burst (too broad). Umcka ColdCare Alcohol-Free live PDP is
-  // drops, not this liquid leftover. No standalone official mark files.
-  // Do not stay letters.
-  'members-mark-mucus-dm-max-yellow10': "Member's Mark",
-  // Attempted Cold & Flu leftovers — live naturesway.com Cold&Flu
-  // Chewables page is Orange OR Berry (too broad). Cold&Flu FastActives
-  // live PDP is Berry SKU 15349 already wired to umcka-fastactives-berry.
-  // Do not glue. No standalone official Nature's Way colored mark file.
-  'umcka-cold-flu-fastactives': "Nature's Way",
   // Attempted Cold & Flu leftovers — target.com / brand-site PDPs not
   // retrieved, or leftover is too-broad vs live SKUs. No standalone
   // official up&up / Wedderspoon / Zarbee's mark file. Do not stay letters.
@@ -9112,6 +9105,30 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-milk-thistle-extract-300-mg-200': catalogShot(
     'now-milk-thistle-extract-300-mg-200.jpg',
   ),
+  // Daytime photo run — Cold & Flu brand-text upgrades.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Daytime liquid, 12 fl oz. UPC 370030145188. Current Amazon
+  // Basics bottle (previously Basic Care). Not the Severe formula.
+  'amazon-basic-care-daytime-cold-flu-liquid': catalogShot(
+    'amazon-basic-care-daytime-cold-flu-liquid.jpg',
+  ),
+  // Nighttime liquid, 12 fl oz. UPC 370030114368. Not Severe.
+  'amazon-basic-care-nighttime-cold-flu-liquid': catalogShot(
+    'amazon-basic-care-nighttime-cold-flu-liquid.jpg',
+  ),
+  // Daytime softgels, 48 count. UPC 370030145171. Not the 24.
+  'amazon-basic-care-daytime-cold-flu-softgel': catalogShot(
+    'amazon-basic-care-daytime-cold-flu-softgel.jpg',
+  ),
+  // Nighttime softgels, 24 count. UPC 195515012669. Not the 16.
+  'amazon-basic-care-nighttime-cold-flu-softgel': catalogShot(
+    'amazon-basic-care-nighttime-cold-flu-softgel.jpg',
+  ),
+  // Children's Xyzal grape liquid, 5 fl oz. UPC 041167353059.
+  // Not the 10 oz. Not bubble gum. Brand-site hero is both flavors.
+  'xyzal-b149-liquid-grape-5oz': catalogShot(
+    'xyzal-b149-liquid-grape-5oz.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10211,100 +10228,80 @@ assertBrandMark(
   'WELMATE',
   'welmate-mark.png',
 );
-assertBrandTextTile(
-  'amazon-basic-care-cherry-menthol-cough-drops',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-daytime-cold-flu-liquid',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-daytime-cold-flu-softgel',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-mucus-er-max-dyefree',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-nighttime-cold-flu-liquid',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-nighttime-cold-flu-softgel',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-sf-honey-lemon-cough-drops',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basic-care-sf-menthol-cough-drops',
-  'Amazon Basic Care',
-  'Basic Care',
-);
-assertBrandTextTile(
-  'amazon-basics-chest-rub',
-  'Amazon Basics',
-  'Amazon Basics',
-);
-assertBrandTextTile(
-  'amazon-basics-nighttime-severe-cold-flu-liquid',
-  'Amazon Basics',
-  'Amazon Basics',
-);
-assertBrandTextTile(
-  'dg-health-guaifenesin-ir',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'dg-health-mucus-er-max-dyefree',
-  'DG Health',
-  'DG Health',
-);
-assertBrandTextTile(
-  'equate-childrens-vaporizing-rub',
-  'Equate',
-  'Equate',
-);
-assertBrandTextTile(
-  'family-wellness-guaifenesin-ir-400',
-  'Family Wellness',
-  'Family Wellness',
-);
-assertBrandTextTile(
-  'family-wellness-guaifenesin-dm-ir',
-  'Family Wellness',
-  'Family Wellness',
-);
-assertBrandTextTile(
-  'members-mark-mucus-er-max-dyefree',
-  "Member's Mark",
-  "Member's Mark",
-);
-assertBrandTextTile(
-  'members-mark-mucus-dm-max-blue1',
-  "Member's Mark",
-  "Member's Mark",
-);
-assertBrandTextTile(
-  'members-mark-mucus-dm-max-yellow10',
-  "Member's Mark",
-  "Member's Mark",
-);
-assertBrandTextTile(
+assertBrandMark(
   'umcka-cold-flu-fastactives',
   "Nature's Way",
-  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-mucus-er-max-dyefree',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-nighttime-severe-cold-flu-liquid',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basics-chest-rub',
+  'Amazon Basics',
+  'amazon-basics-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-sf-honey-lemon-cough-drops',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-cherry-menthol-cough-drops',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'amazon-basic-care-sf-menthol-cough-drops',
+  'Amazon Basic Care',
+  'amazon-basic-care-mark.png',
+);
+assertBrandMark(
+  'dg-health-mucus-er-max-dyefree',
+  'DG Health',
+  'dg-health-mark.png',
+);
+assertBrandMark(
+  'members-mark-mucus-er-max-dyefree',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'family-wellness-guaifenesin-ir-400',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'family-wellness-guaifenesin-dm-ir',
+  'Family Wellness',
+  'family-wellness-mark.png',
+);
+assertBrandMark(
+  'equate-childrens-vaporizing-rub',
+  'Equate',
+  'equate-mark.png',
+);
+assertBrandMark(
+  'members-mark-mucus-dm-max-yellow10',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'members-mark-mucus-dm-max-blue1',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'dg-health-guaifenesin-ir',
+  'DG Health',
+  'dg-health-mark.png',
 );
 assertBrandTextTile(
   '365-cetirizine-softgels-peg',
