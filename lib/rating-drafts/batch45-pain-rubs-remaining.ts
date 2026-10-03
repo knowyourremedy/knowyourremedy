@@ -16,8 +16,8 @@
 // Picks UI. No live Clean Picks file is edited. No photos. Letter
 // tiles only on new ids. No fake Clean alts. No methodology rewrite.
 //
-// TALLY (unverified drafts in THIS file): 16 rows — Clean 1 /
-// Caution 10 / Avoid 5. Performance creams removed: not on icyhot.com.
+// TALLY (unverified drafts in THIS file): 18 rows — Clean 1 /
+// Caution 12 / Avoid 5.
 // Independently Clean topical analog already on main:
 // boiron-arnicare-gel. Icy Hot Original Balm is Clean on inactives
 // (paraffin + white petrolatum only). No Clean conventional NSAID /
@@ -254,6 +254,33 @@ function row(opts: RatingRecord): RatingRecord {
   };
 }
 
+function performanceKohCreamInactives(setid: string): IngredientFlag[] {
+  return [
+    flag('4-t-butylcyclohexanol', 'cleared', dailymed(setid, METH.butylcyclo)),
+    flag(
+      'Acrylates/C10-30 alkyl acrylate crosspolymer',
+      'cleared',
+      dailymed(setid, METH.acrylate),
+    ),
+    flag('Alcohol denat.', 'limited', dailymed(setid, METH.alcoholVehicle)),
+    flag('Allantoin', 'cleared', dailymed(setid, METH.allantoin)),
+    flag('Aloe barbadensis leaf juice', 'cleared', dailymed(setid, METH.aloe)),
+    flag('Cetyl alcohol', 'cleared', dailymed(setid, METH.fattyAlcohol)),
+    flag('Grapefruit peel oil', 'cleared', dailymed(setid, METH.grapefruit)),
+    flag('Farnesol', 'cleared', dailymed(setid, METH.farnesol)),
+    flag('Fragrance', 'cleared', dailymed(setid, METH.fragrance)),
+    flag('Glyceryl stearate', 'cleared', dailymed(setid, METH.glycerylStearate)),
+    flag('Peppermint oil', 'limited', dailymed(setid, METH.peppermint)),
+    flag('Spearmint leaf oil', 'cleared', dailymed(setid, METH.spearmint)),
+    flag('Pentylene glycol', 'cleared', dailymed(setid, METH.pentylene)),
+    flag('Propanediol', 'cleared', dailymed(setid, METH.pentylene)),
+    flag('Potassium hydroxide', 'cleared', dailymed(setid, METH.koh)),
+    flag('Steareth-21', 'cleared', dailymed(setid, METH.steareth)),
+    flag('Stearic acid', 'cleared', dailymed(setid, METH.stearic)),
+    cleared(setid, 'Purified water'),
+  ];
+}
+
 function advancedTeaCreamInactives(setid: string): IngredientFlag[] {
   return [
     flag('4-t-butylcyclohexanol', 'cleared', dailymed(setid, METH.butylcyclo)),
@@ -379,6 +406,52 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.icyCream} (cream NDC 41167-0088) — ${UNVERIFIED_NOTE}`,
+    ],
+  }),
+  row({
+    id: ID.icyPerfNoMess,
+    productName: 'Icy Hot Performance No-Mess Pain Relief Cream',
+    brand: 'Icy Hot',
+    category: PAIN_FEVER,
+    formulaId: ID.icyPerfCream,
+    audience: ADULT,
+    minAge: 12,
+    form: 'cream',
+    activeIngredients: [
+      { name: 'Camphor (synthetic)', strength: '11%' },
+      { name: 'Menthol', strength: '16%' },
+    ],
+    inactiveIngredients: performanceKohCreamInactives(SET.icyPerfNoMess),
+    verdict: 'caution',
+    honestNote:
+      `FOUNDER-LOCK DRAFT: Icy Hot Performance No-Mess Pain Relief Cream = Caution. Alcohol denat. + peppermint Limited; 4-t-butylcyclohexanol / acrylates / grapefruit / farnesol / fragrance / spearmint / steareth-21 standalone Caution. KOH / glyceryl stearate / pentylene / propanediol / allantoin / aloe / cetyl / stearic Cleared. DailyMed OI + actives (menthol 16% / camphor 11%) match Icy Hot Performance Cream (setid ${SET.icyPerfCream}) — shared formulaId ${ID.icyPerfCream}, two Search rows. Distinct from Advanced / Pro No-Mess (those SPLs use TEA, not KOH). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+    retailers: [...PF_RETAILERS, 'icyhot.com'],
+    cleanAlternatives: TOPICAL_ALTS,
+    sourcesGeneral: [
+      `DailyMed setid ${SET.icyPerfNoMess}; Performance Cream twin ${SET.icyPerfCream} — same OI + actives, shared formulaId — ${UNVERIFIED_NOTE}`,
+    ],
+  }),
+  row({
+    id: ID.icyPerfCream,
+    productName: 'Icy Hot Performance Cream',
+    brand: 'Icy Hot',
+    category: PAIN_FEVER,
+    formulaId: ID.icyPerfCream,
+    audience: ADULT,
+    minAge: 12,
+    form: 'cream',
+    activeIngredients: [
+      { name: 'Camphor (synthetic)', strength: '11%' },
+      { name: 'Menthol', strength: '16%' },
+    ],
+    inactiveIngredients: performanceKohCreamInactives(SET.icyPerfCream),
+    verdict: 'caution',
+    honestNote:
+      `FOUNDER-LOCK DRAFT: Icy Hot Performance Cream = Caution. OI + actives match Icy Hot Performance No-Mess Pain Relief Cream (setid ${SET.icyPerfNoMess}) — one formulaId, two Search rows. NDC 41167-0803 pack sizes (3 g packet / 680 g bottle) share this formulaId. Not merged into Advanced / Pro No-Mess (TEA vs KOH). Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+    retailers: [...PF_RETAILERS, 'icyhot.com'],
+    cleanAlternatives: TOPICAL_ALTS,
+    sourcesGeneral: [
+      `DailyMed setid ${SET.icyPerfCream}; No-Mess twin ${SET.icyPerfNoMess} — same OI + actives, shared formulaId — ${UNVERIFIED_NOTE}`,
     ],
   }),
   row({
@@ -1049,14 +1122,14 @@ const TB_ACTIVE = BATCH45_PAIN_RUBS_REMAINING.find((r) => r.id === ID.tbActiveRu
 const ICY_BALM = BATCH45_PAIN_RUBS_REMAINING.find((r) => r.id === ID.icyBalm);
 const ICY_VANISH = BATCH45_PAIN_RUBS_REMAINING.find((r) => r.id === ID.icyVanish);
 
-if (BATCH45_PAIN_RUBS_REMAINING.length !== 16) {
-  throw new Error('batch 45 must write exactly 16 remaining Search rows');
+if (BATCH45_PAIN_RUBS_REMAINING.length !== 18) {
+  throw new Error('batch 45 must write exactly 18 remaining Search rows');
 }
 if (BATCH45_PAIN_RUBS_REMAINING.filter((r) => r.verdict === 'clean').length !== 1) {
   throw new Error('batch 45 Clean tally is the Original Balm only');
 }
-if (BATCH45_PAIN_RUBS_REMAINING.filter((r) => r.verdict === 'caution').length !== 10) {
-  throw new Error('batch 45 Caution tally is 10');
+if (BATCH45_PAIN_RUBS_REMAINING.filter((r) => r.verdict === 'caution').length !== 12) {
+  throw new Error('batch 45 Caution tally is 12');
 }
 if (BATCH45_PAIN_RUBS_REMAINING.filter((r) => r.verdict === 'avoid').length !== 5) {
   throw new Error('batch 45 Avoid tally is 5');
@@ -1114,9 +1187,7 @@ if (ICY_VANISH?.verdict !== 'avoid') {
   throw new Error('Vanishing Scent must stay Avoid (parabens)');
 }
 
-// Verdict tally (16 records): Clean 1 · Caution 10 · Avoid 5
-// Removed icy-hot-performance-cream and icy-hot-performance-no-mess-cream:
-// not on the opened icyhot.com lineup. Formula id stays on the Advanced note.
+// Verdict tally (18 records): Clean 1 · Caution 12 · Avoid 5
 // Written: Icy Hot Original Balm (Clean) + Original Cream + Performance
 //   Cream / No-Mess Cream + Advanced / Pro No-Mess + Nighttime /
 //   Revive roll-ons + Vanishing Scent (Avoid) + Salonpas Lidocaine
