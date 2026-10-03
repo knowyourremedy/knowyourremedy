@@ -1888,6 +1888,51 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // file for that barcode is a supplement-facts panel. Do not glue it.
   // Do not glue the 50, 100, 180, 250, or 300.
   'carlson-super-omega-3-gems': brandMark('carlson-mark.png'),
+  // Allergies night run 2026-10-03 12:30 AM PT batch 1.
+  // Tried each SKU. Official mark. Not a letter.
+  // Cool Mint 56. claritin.com has no count on the chewable page.
+  // DailyMed setid 98b99bb9 is the 8-count carton. Do not glue the 8.
+  'claritin-b144-chew-cool-mint-56': brandMark('claritin-mark.png'),
+  // Zyrtec 10 mg, 75 tablets. Barcode 300450204752.
+  // zyrtec.com tablet counts are 30, 45, 60, 90, and 120. No 75 file.
+  // Do not glue a sibling count.
+  'zyrtec-b143-10mg-75ct': brandMark('zyrtec-mark.png'),
+  // Starch 40. No 40-count 3D face. Do not glue the 30 or the 70.
+  'claritin-b144-tablets-starch-40': brandMark('claritin-mark.png'),
+  // Starch 90. No 90-count 3D face. Do not glue the 70 or the 100.
+  'claritin-b144-tablets-starch-90': brandMark('claritin-mark.png'),
+  // Liqui-Gels 40. DailyMed face is the 30. The 30 and 60 are
+  // already overlaid. Do not glue either onto the 40.
+  'claritin-b144-liquigels-40': brandMark('claritin-mark.png'),
+  // RediTabs 60. DailyMed files are cropped labels, not a 60 box.
+  'claritin-b144-reditabs-60': brandMark('claritin-mark.png'),
+  // RediTabs 70. Same cropped labels. Do not glue the 60.
+  'claritin-b144-reditabs-70': brandMark('claritin-mark.png'),
+  // Cool Mint 24. Same 8-count DailyMed carton. Do not glue the 8
+  // or the 56.
+  'claritin-b144-chew-cool-mint-24': brandMark('claritin-mark.png'),
+  // Children's grape syrup, 5 fl oz. Barcode 041100811042.
+  // DailyMed grape carton is 4 fl oz. The overlaid 4 oz is not this row.
+  'claritin-b144-kids-syrup-5oz': brandMark('claritin-mark.png'),
+  // Dyed grape chewables, 30. DailyMed grape chew is the 40-count flat.
+  // Dye-free grape 30 is a different formula. Do not glue either.
+  'claritin-b145-chew-grape-30': brandMark('claritin-mark.png'),
+  // Adult allergy liquid, 80 mL. DailyMed liquid face is Cooling Honey
+  // and a flat. Do not glue that flavor.
+  'claritin-b145-adult-liquid-80ml': brandMark('claritin-mark.png'),
+  // MCC bottles. Starch cartons (30, 70, 100) are a different formula.
+  // Target 5-count drug facts list corn starch, not this MCC line.
+  // DailyMed MCC image is the 10-count only. Do not glue a starch face.
+  'claritin-b144-tablets-mcc-5': brandMark('claritin-mark.png'),
+  'claritin-b144-tablets-mcc-20': brandMark('claritin-mark.png'),
+  'claritin-b144-tablets-mcc-30': brandMark('claritin-mark.png'),
+  'claritin-b144-tablets-mcc-40': brandMark('claritin-mark.png'),
+  'claritin-b144-tablets-mcc-45': brandMark('claritin-mark.png'),
+  'claritin-b144-tablets-mcc-70': brandMark('claritin-mark.png'),
+  // Starch 20. No 20-count 3D carton. Do not glue the 10 or the 30.
+  'claritin-b144-tablets-starch-20': brandMark('claritin-mark.png'),
+  // RediTabs 10. DailyMed 10-count file is a cropped label, not a box.
+  'claritin-b144-reditabs-10': brandMark('claritin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8362,6 +8407,12 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'gol-vitamin-code-womens': catalogShot('gol-vitamin-code-womens.jpg'),
   // Vitamin Code Men, 120 capsules. Barcode 658010113687.
   'gol-vitamin-code-mens': catalogShot('gol-vitamin-code-mens.jpg'),
+  // Allergies night run 2026-10-03 12:30 AM PT batch 1.
+  // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
+  // Not the 70. Not the 30. Not an MCC bottle.
+  'claritin-b144-tablets-starch-80': catalogShot(
+    'claritin-b144-tablets-starch-80.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -8790,6 +8841,28 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'allegra-b138-d24-15',
   'zyrtec-b141-10mg-40ct',
   'zyrtec-b142-10mg-3ct',
+  // Allergies night run 2026-10-03 12:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'claritin-b144-chew-cool-mint-56',
+  'claritin-b144-tablets-starch-80',
+  'zyrtec-b143-10mg-75ct',
+  'claritin-b144-tablets-starch-40',
+  'claritin-b144-tablets-starch-90',
+  'claritin-b144-liquigels-40',
+  'claritin-b144-reditabs-60',
+  'claritin-b144-reditabs-70',
+  'claritin-b144-chew-cool-mint-24',
+  'claritin-b144-kids-syrup-5oz',
+  'claritin-b145-chew-grape-30',
+  'claritin-b145-adult-liquid-80ml',
+  'claritin-b144-tablets-mcc-5',
+  'claritin-b144-tablets-mcc-20',
+  'claritin-b144-tablets-mcc-30',
+  'claritin-b144-tablets-mcc-40',
+  'claritin-b144-tablets-mcc-45',
+  'claritin-b144-tablets-mcc-70',
+  'claritin-b144-tablets-starch-20',
+  'claritin-b144-reditabs-10',
 ]);
 
 export function previewOverlayImage(
@@ -16125,6 +16198,11 @@ assertExactCarton(
   'Claritin',
   'claritin-b136-tablets-100-mcc.jpg',
 );
+assertExactCarton(
+  'claritin-b144-tablets-starch-80',
+  'Claritin',
+  'claritin-b144-tablets-starch-80.jpg',
+);
 assertExactCarton('claritin-b136-liquigels-30', 'Claritin', 'claritin-b136-liquigels-30.jpg');
 assertExactCarton('claritin-b136-liquigels-60', 'Claritin', 'claritin-b136-liquigels-60.jpg');
 assertExactCarton(
@@ -16810,6 +16888,25 @@ for (const [id, formulaId, brand, file] of [
   ['allegra-b137-d12-30', 'allegra-b137-d12', 'Allegra', 'allegra-mark.png'],
   ['allegra-b138-d24-10', 'allegra-b138-d24', 'Allegra', 'allegra-mark.png'],
   ['zyrtec-b142-10mg-3ct', 'zyrtec-allergy-tablets-tio2', 'Zyrtec', 'zyrtec-mark.png'],
+  ['claritin-b144-chew-cool-mint-56', 'claritin-b136-chew-cool-mint', 'Claritin', 'claritin-mark.png'],
+  ['zyrtec-b143-10mg-75ct', 'zyrtec-allergy-tablets-tio2', 'Zyrtec', 'zyrtec-mark.png'],
+  ['claritin-b144-tablets-starch-40', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-starch-90', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-liquigels-40', 'claritin-b136-liquigels', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-reditabs-60', 'claritin-reditabs', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-reditabs-70', 'claritin-reditabs', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-chew-cool-mint-24', 'claritin-b136-chew-cool-mint', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-kids-syrup-5oz', 'childrens-claritin-liquid', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-chew-grape-30', 'claritin-b145-chew-grape-dye', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b145-adult-liquid-80ml', 'claritin-b145-adult-liquid', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-5', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-20', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-30', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-40', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-45', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-mcc-70', 'claritin-b136-tablets-mcc', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-tablets-starch-20', 'claritin-allergy-tablets-plain', 'Claritin', 'claritin-mark.png'],
+  ['claritin-b144-reditabs-10', 'claritin-reditabs', 'Claritin', 'claritin-mark.png'],
 ] as const) {
   const image = previewOverlayImage({ id, formulaId, brand });
   if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
