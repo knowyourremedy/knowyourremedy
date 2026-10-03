@@ -1997,6 +1997,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Women's and Men's One Daily tablets. No barcode on the row.
   'amazon-basics-womens-one-daily-tablets': brandMark('amazon-basics-mark.png'),
   'amazon-basics-mens-one-daily-tablets': brandMark('amazon-basics-mark.png'),
+  // Vitamins night run 2026-10-03 4:15 AM PT batch 1.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Men's Multi gummies. No barcode on the row. Live jars are
+  // count-specific. Do not glue one count.
+  'amazon-elements-mens-multi-gummies': brandMark('amazon-elements-mark.png'),
+  // Multi-Collagen Peptides Unflavored. No barcode on the row.
+  // Pouches come in more than one size. Do not glue the other
+  // collagen carton already on disk.
+  'thrive-market-multi-collagen': brandMark('thrive-market-mark.png'),
+  // Happiness Tonic. No barcode on the row. Bottles come in more
+  // than one size. Header wordmark from animamundiherbals.com.
+  'anima-mundi-happiness-tonic': brandMark('anima-mundi-mark.png'),
+  // Member's Mark D3 and adult multi. No barcode on the row.
+  // Counts are not on the row. samsclub.com human-check. Wordmark
+  // from the Sam's Club Member's Mark press logo. Do not glue one count.
+  'members-mark-d3-50mcg-softgels': brandMark('members-mark-mark.png'),
+  'members-mark-d3-125mcg-softgels': brandMark('members-mark-mark.png'),
+  'members-mark-adult-multi-gummies': brandMark('members-mark-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -8654,6 +8672,61 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Iron 18 mg, 195 capsules. Barcode 842379103094. Not Solimo Iron.
   'amazon-elements-iron': catalogShot('amazon-elements-iron.jpg'),
+  // Vitamins night run 2026-10-03 4:15 AM PT batch 1.
+  // Organic Whole Food Calcium & Magnesium, 90 tablets.
+  // Barcode 842379199394. Not the Calcium Complex capsules.
+  'amazon-elements-calcium-magnesium': catalogShot(
+    'amazon-elements-calcium-magnesium.jpg',
+  ),
+  // Women's Multi gummies, 90 count. Barcode 842379149566.
+  // Revly face of that code. Not the men's jar.
+  'amazon-elements-womens-multi-gummies': catalogShot(
+    'amazon-elements-womens-multi-gummies.jpg',
+  ),
+  // Biotin 2500 mcg gummies, 60 count, strawberry. Barcode 842379149535.
+  // Not the 70-count B-complex gummies.
+  'amazon-elements-biotin-gummies': catalogShot(
+    'amazon-elements-biotin-gummies.jpg',
+  ),
+  // Reishi powder, 100 g / 3.5 oz. Barcode 892392002027.
+  // Not the 7 oz or 3.57 oz of another mushroom.
+  'om-reishi-powder': catalogShot('om-reishi-powder.jpg'),
+  // Turkey Tail powder, 3.5 oz / 100 g. Barcode 892392002041.
+  'om-turkey-tail-powder': catalogShot('om-turkey-tail-powder.jpg'),
+  // Master Blend powder, 3.17 oz. Barcode 856210008974.
+  // Not a single-mushroom pouch.
+  'om-master-blend-powder': catalogShot('om-master-blend-powder.jpg'),
+  // Women's Multivitamin Platinum, 90 capsules. Barcode 850068815975.
+  // 3D bottle. Not the flat front label.
+  'codeage-womens-multi-platinum': catalogShot(
+    'codeage-womens-multi-platinum.jpg',
+  ),
+  // Teens Fermented Multi, 60 capsules. Barcode 853919008526.
+  'codeage-teens-fermented-multi': catalogShot(
+    'codeage-teens-fermented-multi.jpg',
+  ),
+  // ConcenTrace Daily Mineral Powder, Blue Hawaiian, 60 servings.
+  // Barcode 878941009457. Not Blue Raspberry. Not Blue Açai.
+  'trace-blue-hawaiian-powder': catalogShot('trace-blue-hawaiian-powder.jpg'),
+  // Electrolyte Stamina Power Pak, Mixed Berry, 30 packets.
+  // Barcode 878941002878. Not another flavor.
+  'trace-mixed-berry-power-pak': catalogShot(
+    'trace-mixed-berry-power-pak.jpg',
+  ),
+  // Shilajit capsules, 1000 mg, 150 count. Barcode 878941008900.
+  // Not the gummies.
+  'trace-shilajit-capsules': catalogShot('trace-shilajit-capsules.jpg'),
+  // Multi Collagen capsules, 90 count. Barcode 860507000480.
+  // Not the powder pouch.
+  'codeage-multi-collagen': catalogShot('codeage-multi-collagen.jpg'),
+  // Creatine powder, Pineapple Orange. Barcode 693749015581.
+  // Not the unflavored tub. Not strawberry.
+  'thorne-creatine-flavored': catalogShot('thorne-creatine-flavored.jpg'),
+  // Wild Alaskan Fish Oil 1400 mg, 230 softgels. Barcode 096619653539.
+  // Not the 1000 mg bottle.
+  'kirkland-wild-alaskan-fish-oil': catalogShot(
+    'kirkland-wild-alaskan-fish-oil.jpg',
+  ),
   // Allergies night run 2026-10-03 12:30 AM PT batch 1.
   // Claritin 24-hour tablets, 80 count. Barcode 041100810830.
   // Not the 70. Not the 30. Not an MCC bottle.
@@ -17123,6 +17196,71 @@ assertExactCarton(
   'amazon-elements-vitamin-c-1000-tablets.jpg',
 );
 assertExactCarton('amazon-elements-iron', 'Amazon Elements', 'amazon-elements-iron.jpg');
+// Vitamins night run 2026-10-03 4:15 AM PT batch 1.
+assertExactCarton(
+  'amazon-elements-calcium-magnesium',
+  'Amazon Elements',
+  'amazon-elements-calcium-magnesium.jpg',
+);
+assertExactCarton(
+  'amazon-elements-womens-multi-gummies',
+  'Amazon Elements',
+  'amazon-elements-womens-multi-gummies.jpg',
+);
+assertExactCarton(
+  'amazon-elements-biotin-gummies',
+  'Amazon Elements',
+  'amazon-elements-biotin-gummies.jpg',
+);
+assertExactCarton('om-reishi-powder', 'OM', 'om-reishi-powder.jpg');
+assertExactCarton('om-turkey-tail-powder', 'OM', 'om-turkey-tail-powder.jpg');
+assertExactCarton('om-master-blend-powder', 'OM', 'om-master-blend-powder.jpg');
+assertExactCarton(
+  'codeage-womens-multi-platinum',
+  'Codeage',
+  'codeage-womens-multi-platinum.jpg',
+);
+assertExactCarton(
+  'codeage-teens-fermented-multi',
+  'Codeage',
+  'codeage-teens-fermented-multi.jpg',
+);
+assertExactCarton('trace-blue-hawaiian-powder', 'Trace', 'trace-blue-hawaiian-powder.jpg');
+assertExactCarton(
+  'trace-mixed-berry-power-pak',
+  'Trace',
+  'trace-mixed-berry-power-pak.jpg',
+);
+assertExactCarton('trace-shilajit-capsules', 'Trace', 'trace-shilajit-capsules.jpg');
+assertExactCarton('codeage-multi-collagen', 'Codeage', 'codeage-multi-collagen.jpg');
+assertExactCarton('thorne-creatine-flavored', 'Thorne', 'thorne-creatine-flavored.jpg');
+assertExactCarton(
+  'kirkland-wild-alaskan-fish-oil',
+  'Kirkland Signature',
+  'kirkland-wild-alaskan-fish-oil.jpg',
+);
+assertBrandMark(
+  'amazon-elements-mens-multi-gummies',
+  'Amazon Elements',
+  'amazon-elements-mark.png',
+);
+assertBrandMark('thrive-market-multi-collagen', 'Thrive Market', 'thrive-market-mark.png');
+assertBrandMark('anima-mundi-happiness-tonic', 'Anima Mundi', 'anima-mundi-mark.png');
+assertBrandMark(
+  'members-mark-d3-50mcg-softgels',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'members-mark-d3-125mcg-softgels',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
+assertBrandMark(
+  'members-mark-adult-multi-gummies',
+  "Member's Mark",
+  'members-mark-mark.png',
+);
 // Daytime photo run — Cold & Flu brand-text upgrades.
 assertExactCarton('umcka-coldcare-alcohol-free', "Nature's Way", 'umcka-coldcare-alcohol-free.jpg');
 assertExactCarton('theraflu-severe-cold-day-powder', 'Theraflu', 'theraflu-severe-cold-day-powder.jpg');
