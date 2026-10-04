@@ -2127,6 +2127,41 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'members-mark-cetirizine-tablets': brandMark('members-mark-mark.png'),
   // UPC 194346065837 page is trash bags, not Allegra-D.
   'equate-fexofenadine-d': brandMark('equate-mark.png'),
+  // Daytime photo run — Allergies brand-text, then Sleep.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Cetirizine-D ER. UPC 681131099103. No 3D pack. DailyMed is a flat.
+  'equate-cetirizine-d': brandMark('equate-mark.png'),
+  // Dye-free children's DPH chews. No barcode. No retrieved pack.
+  'equate-kids-dph-chews': brandMark('equate-mark.png'),
+  // Multi-dose CMC 0.5%. UPC 194346489855. No 3D pack retrieved.
+  'equate-lubricant-eye-bkc': brandMark('equate-mark.png'),
+  // Nighttime ointment. UPC 194346254897. DailyMed photo is a flat label.
+  'equate-nighttime-lubricant-ointment': brandMark('equate-mark.png'),
+  // Aller-Tec D. UPC 096619261574 is the 24-count warehouse SKU.
+  // The retrieved listing is an open-box "23" face. Do not glue it.
+  'kirkland-aller-tec-d-cetirizine-pse': brandMark('kirkland-mark.png'),
+  // Row is the 200-count. UPC 078742091426. Sam's asset is a price tag.
+  // The other face is the 400-count twin. Do not glue the 400.
+  'members-mark-loratadine-tablets': brandMark('members-mark-mark.png'),
+  // Kids-facing row. Barcode 041167580059 is the adult 120-spray.
+  // Do not glue that carton. Blue wordmark from nasacort.com.
+  'nasacort-allergy-24hr-kids': brandMark('nasacort-mark.png'),
+  // Two barcodes: 30-vial 300650431330 and 25-vial 300651432060.
+  // Do not glue one count. Wordmark from systane.myalcon.com.
+  'systane-ultra-pf': brandMark('systane-mark.png'),
+  // SleepTabs span 16 / 32 / larger UPCs. Do not glue the 32-count.
+  // Letterforms from unisom.com (header navy #0B2142).
+  'unisom-sleeptabs-doxylamine': brandMark('unisom-mark.png'),
+  // LiquiCaps span 12 / 24 / 48. Do not glue the 48-count.
+  // Wordmark from zzzquil.com on the site header purple.
+  'zzzquil-liquicaps': brandMark('zzzquil-mark.png'),
+  // UPC 323900033856. No 3D pack. Do not glue the Alcohol Free bottle
+  // (UPC 323900038561).
+  'zzzquil-free-of-artificial': brandMark('zzzquil-mark.png'),
+  // Dyed sleep liquid. UPC 050428438015. No 3D pack retrieved.
+  'cvs-sleep-aid-liquid-dyed': brandMark('cvs-mark.png'),
+  // Dye-free sleep liquid. UPC 050428594568. Title only, no image.
+  'cvs-sleep-aid-liquid-dyefree': brandMark('cvs-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2197,65 +2232,10 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // file. Do not stay letters.
   'equate-loratadine-d': 'Equate',
   'equate-kids-fluticasone-nasal': 'Equate',
-  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 2.
-  // Equate: walmart.com PDPs still blocked. equate.com is Kuwait
-  // petrochemical — refuse. No standalone official Equate mark file.
-  'equate-cetirizine-d': 'Equate',
-  'equate-kids-cetirizine-liquid': 'Equate',
-  'equate-kids-loratadine-liquid': 'Equate',
-  'equate-kids-dph-chews': 'Equate',
-  'equate-lubricant-eye-bkc': 'Equate',
-  'equate-lubricant-eye-pf': 'Equate',
-  'equate-nighttime-lubricant-ointment': 'Equate',
-  // Attempted Allergies leftovers — night run 2026-09-22 12:30 PT batch 1.
-  // Kirkland: costco.com product URLs 404 from this environment. No
-  // standalone official Kirkland mark file. Do not stay letters.
-  'kirkland-aller-tec-cetirizine': 'Kirkland',
-  'kirkland-aller-tec-d-cetirizine-pse': 'Kirkland',
-  // Member's Mark: samsclub.com human-check wall. No standalone official
-  // mark file. Do not stay letters.
-  'members-mark-loratadine-tablets': "Member's Mark",
-  // Nasacort: adult leftover spans 60 / 120 / twin UPCs. The live
-  // nasacort.com 60ct face is a badge composite, not a clean carton.
-  // Kids leftover barcode 041167580059 is the adult 120 spray, not the
-  // Children's Nasacort NDC 41167-5900 carton. Nav wordmark is white on
-  // transparent and would disappear on the tile. No colored mark file.
-  'nasacort-allergy-24hr-kids': 'Nasacort',
-  // Refresh: refresheyedrops.com returned a bot wall. No standalone
-  // official Refresh mark file. Do not stay letters.
-  'refresh-pm-ointment': 'Refresh',
-  'refresh-tears-pf': 'Refresh',
-  // Rexall: dollargeneral.com PDP for UPC 370030659432 served the
-  // placeholder image, not a 3D carton. No standalone official mark.
+  // Daytime re-attempt — dollargeneral.com PDP for UPC 370030659432
+  // is still the placeholder image, not a 3D carton. No standalone
+  // official Rexall mark on that page. Do not use the Dollar General logo.
   'rexall-cetirizine-tablets': 'Rexall',
-  // Attempted Allergies leftover — night run 2026-09-22 12:30 PT batch 2.
-  // Systane Ultra PF leftover lists both single-use vials and a PF bottle
-  // twin. Do not glue one carton. No standalone official Systane mark file.
-  'systane-ultra-pf': 'Systane',
-  // Attempted Allergies leftover — night run 2026-09-22 3:00 PT.
-  // zaditor.com redirects to systane.myalcon.com. Live hero is a 10 mL
-  // carton+vial composite. Row UPC 300654011057 is the 5 mL / 0.17 fl oz
-  // carton. Do not glue the 10 mL face. No standalone official Zaditor
-  // mark file (Systane parent mark is not this product name).
-  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 1.
-  // Unisom SleepTabs leftover spans 16 / 32 / larger count UPCs. Official
-  // unisom.com hero is the 16ct face only. Do not glue one count. No
-  // standalone Unisom mark file.
-  'unisom-sleeptabs-doxylamine': 'Unisom',
-  // ZzzQuil LiquiCaps leftover spans 12 / 24 / 48 count UPCs. Official
-  // zzzquil.com hero is count-generic branding but live pack faces are
-  // count-specific. Do not glue one count. No standalone ZzzQuil mark.
-  'zzzquil-liquicaps': 'ZzzQuil',
-  // FREE OF Artificial Dyes leftover UPC 323900033856 is not the live
-  // zzzquil.com Alcohol Free / Free-Of hero (UPC 323900038561). Do not
-  // glue the Alcohol Free bottle. No standalone ZzzQuil mark file.
-  'zzzquil-free-of-artificial': 'ZzzQuil',
-  // CVS Health Sleep liquid — cvs.com / upcitemdb returned no retrievable
-  // 3D pack for UPC 050428438015. No standalone CVS Health mark file.
-  'cvs-sleep-aid-liquid-dyed': 'CVS Health',
-  // Attempted Sleep leftovers — night run 2026-09-22 5:30 PT batch 2.
-  // Dye-free CVS Sleep liquid — upcitemdb title only, no image.
-  'cvs-sleep-aid-liquid-dyefree': 'CVS Health',
   // OLLY Kids Sleep coconut-only oil listing — no barcode; draft name is
   // an oil-listing split, not a shoppable pack face. Do not glue the
   // canola SKU carton. No standalone OLLY mark file.
@@ -9161,6 +9141,28 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'equate-cetirizine-tablets': catalogShot('equate-cetirizine-tablets.jpg'),
   // CVS cetirizine 10 mg, 30 tablets. UPC 050428415368.
   'cvs-cetirizine-tablets': catalogShot('cvs-cetirizine-tablets.jpg'),
+  // Daytime photo run — Allergies brand-text upgrades.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Children's cetirizine liquid, 4 fl oz grape. UPC 681131447782.
+  'equate-kids-cetirizine-liquid': catalogShot(
+    'equate-kids-cetirizine-liquid.jpg',
+  ),
+  // Children's loratadine liquid, 8 fl oz grape. UPC 681131276788.
+  'equate-kids-loratadine-liquid': catalogShot(
+    'equate-kids-loratadine-liquid.jpg',
+  ),
+  // Preservative-free single-use vials, 25 count. UPC 681131349888.
+  // Not the multi-dose BKC bottle.
+  'equate-lubricant-eye-pf': catalogShot('equate-lubricant-eye-pf.jpg'),
+  // Aller-Tec cetirizine 10 mg, 365 tablets. UPC 096619311675.
+  'kirkland-aller-tec-cetirizine': catalogShot(
+    'kirkland-aller-tec-cetirizine.jpg',
+  ),
+  // Refresh P.M. ointment, 0.12 oz / 3.5 g. UPC 300230667043.
+  'refresh-pm-ointment': catalogShot('refresh-pm-ointment.jpg'),
+  // Refresh Tears PF multi-dose, 0.33 fl oz / 10 mL. UPC 300233110102.
+  // Not the 30-vial carton.
+  'refresh-tears-pf': catalogShot('refresh-tears-pf.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10507,36 +10509,40 @@ assertBrandMark(
   'Equate',
   'equate-mark.png',
 );
-assertBrandTextTile('equate-cetirizine-d', 'Equate', 'Equate');
+assertBrandMark('equate-cetirizine-d', 'Equate', 'equate-mark.png');
 assertBrandMark('equate-fexofenadine-d', 'Equate', 'equate-mark.png');
-assertBrandTextTile(
+assertExactCarton(
   'equate-kids-cetirizine-liquid',
   'Equate',
-  'Equate',
+  'equate-kids-cetirizine-liquid.jpg',
 );
-assertBrandTextTile(
+assertExactCarton(
   'equate-kids-loratadine-liquid',
   'Equate',
-  'Equate',
+  'equate-kids-loratadine-liquid.jpg',
 );
-assertBrandTextTile('equate-kids-dph-chews', 'Equate', 'Equate');
+assertBrandMark('equate-kids-dph-chews', 'Equate', 'equate-mark.png');
 assertBrandMark('equate-loratadine-mint-odt', 'Equate', 'equate-mark.png');
-assertBrandTextTile('equate-lubricant-eye-bkc', 'Equate', 'Equate');
-assertBrandTextTile('equate-lubricant-eye-pf', 'Equate', 'Equate');
-assertBrandTextTile(
+assertBrandMark('equate-lubricant-eye-bkc', 'Equate', 'equate-mark.png');
+assertExactCarton(
+  'equate-lubricant-eye-pf',
+  'Equate',
+  'equate-lubricant-eye-pf.jpg',
+);
+assertBrandMark(
   'equate-nighttime-lubricant-ointment',
   'Equate',
-  'Equate',
+  'equate-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'kirkland-aller-tec-cetirizine',
   'Kirkland Signature',
-  'Kirkland',
+  'kirkland-aller-tec-cetirizine.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'kirkland-aller-tec-d-cetirizine-pse',
   'Kirkland Signature',
-  'Kirkland',
+  'kirkland-mark.png',
 );
 assertExactCarton(
   'kirkland-allerclear-loratadine-plain',
@@ -10548,15 +10554,15 @@ assertBrandMark(
   "Member's Mark",
   'members-mark-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'members-mark-loratadine-tablets',
   "Member's Mark",
-  "Member's Mark",
+  'members-mark-mark.png',
 );
 assertBrandMark('nasacort-allergy-24hr', 'Nasacort', 'nasacort-mark.png');
-assertBrandTextTile('nasacort-allergy-24hr-kids', 'Nasacort', 'Nasacort');
-assertBrandTextTile('refresh-pm-ointment', 'Refresh', 'Refresh');
-assertBrandTextTile('refresh-tears-pf', 'Refresh', 'Refresh');
+assertBrandMark('nasacort-allergy-24hr-kids', 'Nasacort', 'nasacort-mark.png');
+assertExactCarton('refresh-pm-ointment', 'Refresh', 'refresh-pm-ointment.jpg');
+assertExactCarton('refresh-tears-pf', 'Refresh', 'refresh-tears-pf.jpg');
 assertBrandTextTile('rexall-cetirizine-tablets', 'Rexall', 'Rexall');
 assertExactCarton(
   'hylands-seasonal-allergy-relief',
@@ -10632,7 +10638,7 @@ assertBrandMark(
   'Similasan',
   'similasan-mark.png',
 );
-assertBrandTextTile('systane-ultra-pf', 'Systane', 'Systane');
+assertBrandMark('systane-ultra-pf', 'Systane', 'systane-mark.png');
 assertBrandMark(
   'topcare-all-day-allergy-cetirizine',
   'TopCare',
@@ -11172,26 +11178,26 @@ assertBrandMark(
   'Equate',
   'equate-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'unisom-sleeptabs-doxylamine',
   'Unisom',
-  'Unisom',
+  'unisom-mark.png',
 );
-assertBrandTextTile('zzzquil-liquicaps', 'ZzzQuil', 'ZzzQuil');
-assertBrandTextTile(
+assertBrandMark('zzzquil-liquicaps', 'ZzzQuil', 'zzzquil-mark.png');
+assertBrandMark(
   'zzzquil-free-of-artificial',
   'ZzzQuil',
-  'ZzzQuil',
+  'zzzquil-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'cvs-sleep-aid-liquid-dyed',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'cvs-sleep-aid-liquid-dyefree',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
 assertBrandTextTile('olly-kids-sleep-coconut-only', 'OLLY', 'OLLY');
 assertBrandTextTile('assured-headache-pm', 'Assured', 'Assured');
