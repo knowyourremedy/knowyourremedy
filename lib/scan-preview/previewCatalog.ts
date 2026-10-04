@@ -2273,6 +2273,46 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Official Assured wordmark already on disk (USPTO reg. 3106543).
   // Not a text tile. Not a letter.
   'assured-advanced-relief-eye': brandMark('assured-mark.png'),
+  // Vitamins night run 2026-10-04 5:30 AM PT batch 1.
+  // Non-365 brand-text rows. Tried each SKU. Official brand mark.
+  // Not a text tile. Not a letter.
+  // Men's coated multi. UPC 016500586944 is the 100-count.
+  // Retailer faces for that code are the 200-count bottle. Do not glue them.
+  // shop.oneaday.com header is the 1-color white knockout. Inked black
+  // so it reads on the light tile. Not the women's masterbrand.
+  'one-a-day-mens-coated': brandMark('one-a-day-mark.png'),
+  // No barcode. Live apple-berry bottle is UPC 810104623513.
+  // Draft color is grape skin extract. Do not glue the apple-berry bottle.
+  // Text logo from maryruthorganics.com.
+  'maryruth-kids-morning-liquid-multi': brandMark('maryruth-mark.png'),
+  // Gummy Vites spans 70-count 027917006239 and 190-count 027917016290.
+  // Do not glue one count. Header logo from lilcritters.com.
+  'lil-critters-gummy-vites-palm': brandMark('lil-critters-mark.png'),
+  // No barcode. Live bottles are 60-count and 120-count (027917014340).
+  // Do not glue one count.
+  'lil-critters-omega3-gummies-lecithin': brandMark('lil-critters-mark.png'),
+  // No barcode. Live B12 softgels are 90-count 031604027322 and
+  // 150-count 031604029166. Do not glue one count.
+  'nature-made-b12-softgels-clear': brandMark('nature-made-mark.png'),
+  // Row name is plain B12 tablets. UPC 031604027315 is the
+  // Time Release 160-count. Do not glue that bottle.
+  'nature-made-b12-tablets': brandMark('nature-made-mark.png'),
+  // Row UPC 031604029265 is a 270-count 2-pack. Live singles are
+  // other barcodes. Do not glue a single or the 2-pack.
+  'nature-made-fish-oil-1200-clear': brandMark('nature-made-mark.png'),
+  // Row UPC 096619926626 is Fish Oil 1000 mg, 400 softgels.
+  // The Walmart face on that UPC page is Wild Alaskan 1400 mg.
+  // Do not glue it.
+  'kirkland-fish-oil-softgels-clear': brandMark('kirkland-mark.png'),
+  // Row UPC 076314302970 is Super Orange 10-count. The retrieved
+  // face is the 30-count box. Do not glue it. Wordmark from emergenc.com.
+  'emergen-c-original': brandMark('emergen-c-mark.png'),
+  // No barcode. Live drops are 90-drop 088395126109 and
+  // 365-drop 088395012600. Do not glue one size.
+  'carlson-kids-super-daily-d3-drops': brandMark('carlson-mark.png'),
+  // Two barcodes (768990567803 and 768990027239). nordic.com 403.
+  // Do not glue one size. Official mark already on disk.
+  'nordic-naturals-childrens-dha-liquid': brandMark('nordic-naturals-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2300,11 +2340,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
   'rexall-cetirizine-tablets': 'Rexall',
-  // Daytime re-attempt. UPC 016500586944 is the 100-count.
-  // Walmart, Walgreens, and Target faces are the 200-count bottle.
-  // oneaday.com nav logo 403. shop.oneaday.com header is the
-  // women's masterbrand, not this men's row. Do not glue either.
-  'one-a-day-mens-coated': 'One A Day',
   // Daytime re-attempt. Two pack barcodes. Do not glue one count.
   // wholefoodsmarket.com still has no standalone 365 mark. Never the letter 3.
   '365-adult-once-daily-multi': '365',
@@ -2312,42 +2347,13 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Single UPCs. No clean official 3D face retrieved.
   '365-calcium-d3-tio2': '365',
   '365-cal-mag-zinc-d3-tio2': '365',
-  // No barcode. Live apple-berry bottle is UPC 810104623513. Draft
-  // color is grape skin extract. Do not glue the apple-berry bottle.
-  'maryruth-kids-morning-liquid-multi': "MaryRuth's",
   // Row UPC 016500554356 is the 180-count. Retrieved faces are a 70-count
   // bottle or a thumbnail. Do not glue the 70-count.
+  // Night photo 2026-10-04 5:30 AM PT retried the official mark.
+  // flintstonesvitamins.com nav file flintstones-logo_0.png is the
+  // brand logo, but that host blocked this run. Do not use the
+  // Hanna-Barbera cartoon logo. Text tile stays until that file loads.
   'flintstones-complete-gummies-palm': 'Flintstones',
-  // Vitamins night run 2026-09-27 3:00 AM PT batch 2.
-  // Tried the SKU. No matching official 3D pack face. No standalone
-  // official mark file. Do not stay letters.
-  // Gummy Vites spans 70-count 027917006239 and 190-count 027917016290.
-  'lil-critters-gummy-vites-palm': "L'il Critters",
-  // No barcode. Live B12 softgels are 90-count 031604027322 and
-  // 150-count 031604029166. Do not glue one count.
-  'nature-made-b12-softgels-clear': 'Nature Made',
-  // Row UPC 096619926626 is Fish Oil 1000 mg, 400 softgels.
-  // The Walmart face on that UPC page is Wild Alaskan 1400 mg.
-  // Do not glue it.
-  'kirkland-fish-oil-softgels-clear': 'Kirkland',
-  // Row UPC 031604029265 is a 270-count 2-pack. Live singles are
-  // other barcodes. Do not glue a single or the 2-pack.
-  'nature-made-fish-oil-1200-clear': 'Nature Made',
-  // Row UPC 076314302970 is Super Orange 10-count. The retrieved
-  // face is the 30-count box. Do not glue it.
-  'emergen-c-original': 'Emergen-C',
-  // Row name is plain B12 tablets. UPC 031604027315 is the
-  // Time Release 160-count. Do not glue that bottle.
-  'nature-made-b12-tablets': 'Nature Made',
-  // No barcode. Live drops are 90-drop 088395126109 and
-  // 365-drop 088395012600. Do not glue one size.
-  'carlson-kids-super-daily-d3-drops': 'Carlson',
-  // Two barcodes (768990567803 and 768990027239). nordic.com 403.
-  // Do not glue one size.
-  'nordic-naturals-childrens-dha-liquid': 'Nordic Naturals',
-  // No barcode. Live bottles are 60-count and 120-count
-  // (027917014340). Do not glue one count.
-  'lil-critters-omega3-gummies-lecithin': "L'il Critters",
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -9238,6 +9244,97 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // d9d22e45 carton barcode zbar is 850026889116. Not the ValuHealth
   // 3-bottle listing that reuses that number. Not a flat label.
   'assured-headache-pm': catalogShot('assured-headache-pm.jpg'),
+  // Vitamins night run 2026-10-04 5:30 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // L-Proline 500 mg, 120 veg capsules. Barcode 733739001337.
+  'now-l-proline-120': catalogShot('now-l-proline-120.jpg'),
+  // Krill Oil 500 mg, 120 softgels. Barcode 733739016263.
+  // Not Krill 1000.
+  'now-krill-oil-500-mg-120': catalogShot('now-krill-oil-500-mg-120.jpg'),
+  // B-50, 100 veg capsules. Barcode 733739004208. Not the 250.
+  'now-b-50-100': catalogShot('now-b-50-100.jpg'),
+  // L-Theanine 100 mg, 90 veg capsules. Barcode 733739001450.
+  // Not the 200 mg double-strength bottle.
+  'now-l-theanine-90': catalogShot('now-l-theanine-90.jpg'),
+  // Ginkgo Biloba 60 mg, 120 veg capsules. Barcode 733739046871.
+  // Not the 60-count or the 240-count.
+  'now-ginkgo-biloba-60-mg-120': catalogShot('now-ginkgo-biloba-60-mg-120.jpg'),
+  // Glycine 1,000 mg, 250 veg capsules. Barcode 733739001313.
+  // Not the 100-count.
+  'now-glycine-1-000-mg-250': catalogShot('now-glycine-1-000-mg-250.jpg'),
+  // E-400 with mixed tocopherols, 100 softgels. Barcode 733739008923.
+  // Not the 250-count.
+  'now-e-400-with-mixed-tocopherols-268-mg-400-iu-100': catalogShot(
+    'now-e-400-with-mixed-tocopherols-268-mg-400-iu-100.jpg',
+  ),
+  // P-5-P 50 mg, 90 veg capsules. Barcode 733739004611.
+  'now-p-5-p-90': catalogShot('now-p-5-p-90.jpg'),
+  // Vitamins night run 2026-10-04 5:30 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Indole-3-Carbinol 200 mg, 60 veg capsules. Barcode 733739030566.
+  'now-indole-3-carbinol-60': catalogShot('now-indole-3-carbinol-60.jpg'),
+  // GABA 500 mg with vitamin B-6, 200 veg capsules. Barcode 733739000880.
+  // Not the plain GABA bottle.
+  'now-gaba-with-vitamin-b-6-200': catalogShot(
+    'now-gaba-with-vitamin-b-6-200.jpg',
+  ),
+  // Black Currant Oil 1,000 mg, 100 softgels. Barcode 733739017178.
+  'now-black-currant-oil-100': catalogShot('now-black-currant-oil-100.jpg'),
+  // Alpha Lipoic Acid 250 mg, 120 veg capsules. Barcode 733739030436.
+  'now-alpha-lipoic-acid-250-mg-120': catalogShot(
+    'now-alpha-lipoic-acid-250-mg-120.jpg',
+  ),
+  // Chlorella 1 g, 120 tablets. Barcode 733739026323. Not the 60-count.
+  'now-chlorella-120': catalogShot('now-chlorella-120.jpg'),
+  // Ultra Omega 3-D, 180 fish softgels. Barcode 733739016645.
+  'now-ultra-omega-3-d-fish-oil-180-fish-softgels': catalogShot(
+    'now-ultra-omega-3-d-fish-oil-180-fish-softgels.jpg',
+  ),
+  // Super Primrose 1,300 mg, 120 softgels. Barcode 733739017574.
+  'now-super-primrose-1-300-mg-120': catalogShot(
+    'now-super-primrose-1-300-mg-120.jpg',
+  ),
+  // EGCg green tea extract 400 mg, 180 veg capsules. Barcode 733739047571.
+  // Not the 90-count.
+  'now-egcg-green-tea-extract-400-mg-180': catalogShot(
+    'now-egcg-green-tea-extract-400-mg-180.jpg',
+  ),
+  // GABA 500 mg, 100 veg capsules. Barcode 733739000873.
+  // Not the B-6 combo. Not the 750 mg bottle.
+  'now-gaba-100': catalogShot('now-gaba-100.jpg'),
+  // Milk Thistle Extract 750 mg, 100 veg capsules. Barcode 733739047397.
+  // Not the 450 mg softgel.
+  'now-milk-thistle-extract-100': catalogShot(
+    'now-milk-thistle-extract-100.jpg',
+  ),
+  // Candida Support, 90 veg capsules. Barcode 733739033086.
+  'now-candida-support-90': catalogShot('now-candida-support-90.jpg'),
+  // Iron 36 mg, 90 veg capsules. Barcode 733739014443.
+  'now-iron-36-mg-90': catalogShot('now-iron-36-mg-90.jpg'),
+  // Krill 1000, 120 softgels. Barcode 733739016294. Not the 500 mg bottle.
+  'now-krill-1000-120': catalogShot('now-krill-1000-120.jpg'),
+  // Magnesium and potassium aspartate with taurine, 120 veg capsules.
+  // Barcode 733739013200.
+  'now-magnesium-potassium-aspartate-with-taurine-120': catalogShot(
+    'now-magnesium-potassium-aspartate-with-taurine-120.jpg',
+  ),
+  // Liver Refresh, 180 veg capsules. Barcode 733739024497.
+  'now-liver-refresh-180': catalogShot('now-liver-refresh-180.jpg'),
+  // Phosphatidyl Serine 100 mg, 120 veg capsules. Barcode 733739023810.
+  // Not the 60-count.
+  'now-phosphatidyl-serine-120': catalogShot('now-phosphatidyl-serine-120.jpg'),
+  // Lycopene 10 mg, 120 softgels. Barcode 733739030610. Not the 60-count.
+  // Not the 20 mg 50-count.
+  'now-lycopene-10-mg-120': catalogShot('now-lycopene-10-mg-120.jpg'),
+  // Copper Glycinate 3 mg, 120 tablets. Barcode 733739014337.
+  'now-copper-glycinate-120': catalogShot('now-copper-glycinate-120.jpg'),
+  // Nattokinase 100 mg (2,000 FU), 120 veg capsules. Barcode 733739031419.
+  // Not the 60-count.
+  'now-nattokinase-100-mg-120': catalogShot('now-nattokinase-100-mg-120.jpg'),
+  // Kelp 325 mcg, 250 veg capsules. Barcode 733739026750.
+  'now-kelp-325-mcg-250': catalogShot('now-kelp-325-mcg-250.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -9708,6 +9805,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-03 6:45 AM PT batch 2.
   // 250-count shares the 100-count MK-4 formula. Do not inherit the 100.
   'now-vitamin-k-2-100-mcg-250',
+  // Vitamins night run 2026-10-04 5:30 AM PT.
+  // Different count or a different barcode. Do not inherit the new face.
+  'now-b-50-250-733739004284',
+  'now-b-50-100-733739004260',
+  'now-black-currant-oil-100-733739017154',
 ]);
 
 export function previewOverlayImage(
@@ -14988,7 +15090,7 @@ assertBrandMark(
   'Kirkland Signature',
   'kirkland-mark.png',
 );
-assertBrandTextTile('one-a-day-mens-coated', 'One A Day', 'One A Day');
+assertBrandMark('one-a-day-mens-coated', 'One A Day', 'one-a-day-mark.png');
 assertBrandMark('olly-mens-multi-canola', 'OLLY', 'olly-mark.png');
 assertBrandMark('olly-womens-multi-canola', 'OLLY', 'olly-mark.png');
 assertBrandMark(
@@ -15000,10 +15102,10 @@ assertBrandTextTile('365-adult-once-daily-multi', '365 Whole Foods Market', '365
 assertBrandTextTile('365-mens-one-daily-multi', '365 Whole Foods Market', '365');
 assertBrandTextTile('365-calcium-d3-tio2', '365 Whole Foods Market', '365');
 assertBrandTextTile('365-cal-mag-zinc-d3-tio2', '365 Whole Foods Market', '365');
-assertBrandTextTile(
+assertBrandMark(
   'maryruth-kids-morning-liquid-multi',
   "MaryRuth's",
-  "MaryRuth's",
+  'maryruth-mark.png',
 );
 assertBrandTextTile(
   'flintstones-complete-gummies-palm',
@@ -15065,23 +15167,133 @@ assertExactCarton(
   'Carlson',
   'carlson-kids-vitamin-c-gummies.jpg',
 );
-assertBrandTextTile('lil-critters-gummy-vites-palm', "L'il Critters", "L'il Critters");
-assertBrandTextTile('nature-made-b12-softgels-clear', 'Nature Made', 'Nature Made');
-assertBrandTextTile('kirkland-fish-oil-softgels-clear', 'Kirkland Signature', 'Kirkland');
-assertBrandTextTile('nature-made-fish-oil-1200-clear', 'Nature Made', 'Nature Made');
-assertBrandTextTile('emergen-c-original', 'Emergen-C', 'Emergen-C');
-assertBrandTextTile('nature-made-b12-tablets', 'Nature Made', 'Nature Made');
-assertBrandTextTile('carlson-kids-super-daily-d3-drops', 'Carlson', 'Carlson');
-assertBrandTextTile(
+assertBrandMark(
+  'lil-critters-gummy-vites-palm',
+  "L'il Critters",
+  'lil-critters-mark.png',
+);
+assertBrandMark(
+  'nature-made-b12-softgels-clear',
+  'Nature Made',
+  'nature-made-mark.png',
+);
+assertBrandMark(
+  'kirkland-fish-oil-softgels-clear',
+  'Kirkland Signature',
+  'kirkland-mark.png',
+);
+assertBrandMark(
+  'nature-made-fish-oil-1200-clear',
+  'Nature Made',
+  'nature-made-mark.png',
+);
+assertBrandMark('emergen-c-original', 'Emergen-C', 'emergen-c-mark.png');
+assertBrandMark('nature-made-b12-tablets', 'Nature Made', 'nature-made-mark.png');
+assertBrandMark(
+  'carlson-kids-super-daily-d3-drops',
+  'Carlson',
+  'carlson-mark.png',
+);
+assertBrandMark(
   'nordic-naturals-childrens-dha-liquid',
   'Nordic Naturals',
-  'Nordic Naturals',
+  'nordic-naturals-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'lil-critters-omega3-gummies-lecithin',
   "L'il Critters",
-  "L'il Critters",
+  'lil-critters-mark.png',
 );
+assertExactCarton('now-l-proline-120', 'NOW', 'now-l-proline-120.jpg');
+assertExactCarton('now-krill-oil-500-mg-120', 'NOW', 'now-krill-oil-500-mg-120.jpg');
+assertExactCarton('now-b-50-100', 'NOW', 'now-b-50-100.jpg');
+assertExactCarton('now-l-theanine-90', 'NOW', 'now-l-theanine-90.jpg');
+assertExactCarton(
+  'now-ginkgo-biloba-60-mg-120',
+  'NOW',
+  'now-ginkgo-biloba-60-mg-120.jpg',
+);
+assertExactCarton('now-glycine-1-000-mg-250', 'NOW', 'now-glycine-1-000-mg-250.jpg');
+assertExactCarton(
+  'now-e-400-with-mixed-tocopherols-268-mg-400-iu-100',
+  'NOW',
+  'now-e-400-with-mixed-tocopherols-268-mg-400-iu-100.jpg',
+);
+assertExactCarton('now-p-5-p-90', 'NOW', 'now-p-5-p-90.jpg');
+assertExactCarton('now-indole-3-carbinol-60', 'NOW', 'now-indole-3-carbinol-60.jpg');
+assertExactCarton(
+  'now-gaba-with-vitamin-b-6-200',
+  'NOW',
+  'now-gaba-with-vitamin-b-6-200.jpg',
+);
+assertExactCarton('now-black-currant-oil-100', 'NOW', 'now-black-currant-oil-100.jpg');
+assertExactCarton(
+  'now-alpha-lipoic-acid-250-mg-120',
+  'NOW',
+  'now-alpha-lipoic-acid-250-mg-120.jpg',
+);
+assertExactCarton('now-chlorella-120', 'NOW', 'now-chlorella-120.jpg');
+assertExactCarton(
+  'now-ultra-omega-3-d-fish-oil-180-fish-softgels',
+  'NOW',
+  'now-ultra-omega-3-d-fish-oil-180-fish-softgels.jpg',
+);
+assertExactCarton(
+  'now-super-primrose-1-300-mg-120',
+  'NOW',
+  'now-super-primrose-1-300-mg-120.jpg',
+);
+assertExactCarton(
+  'now-egcg-green-tea-extract-400-mg-180',
+  'NOW',
+  'now-egcg-green-tea-extract-400-mg-180.jpg',
+);
+assertExactCarton('now-gaba-100', 'NOW', 'now-gaba-100.jpg');
+assertExactCarton(
+  'now-milk-thistle-extract-100',
+  'NOW',
+  'now-milk-thistle-extract-100.jpg',
+);
+assertExactCarton('now-candida-support-90', 'NOW', 'now-candida-support-90.jpg');
+assertExactCarton('now-iron-36-mg-90', 'NOW', 'now-iron-36-mg-90.jpg');
+assertExactCarton('now-krill-1000-120', 'NOW', 'now-krill-1000-120.jpg');
+assertExactCarton(
+  'now-magnesium-potassium-aspartate-with-taurine-120',
+  'NOW',
+  'now-magnesium-potassium-aspartate-with-taurine-120.jpg',
+);
+assertExactCarton('now-liver-refresh-180', 'NOW', 'now-liver-refresh-180.jpg');
+assertExactCarton(
+  'now-phosphatidyl-serine-120',
+  'NOW',
+  'now-phosphatidyl-serine-120.jpg',
+);
+assertExactCarton('now-lycopene-10-mg-120', 'NOW', 'now-lycopene-10-mg-120.jpg');
+assertExactCarton('now-copper-glycinate-120', 'NOW', 'now-copper-glycinate-120.jpg');
+assertExactCarton(
+  'now-nattokinase-100-mg-120',
+  'NOW',
+  'now-nattokinase-100-mg-120.jpg',
+);
+assertExactCarton('now-kelp-325-mcg-250', 'NOW', 'now-kelp-325-mcg-250.jpg');
+{
+  const b50Large = previewOverlayImage({
+    id: 'now-b-50-250-733739004284',
+    formulaId: 'now-b-50-100',
+    brand: 'NOW',
+  });
+  if (b50Large?.url.endsWith('/now-b-50-100.jpg')) {
+    throw new Error('B-50 250 must not inherit the 100-count carton');
+  }
+  const currantTwin = previewOverlayImage({
+    id: 'now-black-currant-oil-100-733739017154',
+    formulaId: 'now-black-currant-oil-100',
+    brand: 'NOW',
+  });
+  if (currantTwin?.url.endsWith('/now-black-currant-oil-100.jpg')) {
+    throw new Error('Black currant twin must not inherit the 733739017178 face');
+  }
+}
 assertExactCarton(
   'lil-critters-immune-c-zinc-d-gummies-palm',
   "L'il Critters",
