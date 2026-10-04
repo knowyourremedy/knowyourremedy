@@ -2285,9 +2285,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
   'rexall-cetirizine-tablets': 'Rexall',
-  // Daytime re-attempt. UPC 850026889116 has no retrievable 3D pack.
-  // dollartree.com has no standalone Assured wordmark. Do not invent one.
-  'assured-headache-pm': 'Assured',
   // Daytime re-attempt. DailyMed faces are flat labels.
   // No standalone official Assured mark on dollartree.com.
   'assured-hydrocortisone-cream': 'Assured',
@@ -9223,6 +9220,13 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'amazon-basic-care-kids-cetirizine-liquid': catalogShot(
     'amazon-basic-care-kids-cetirizine-liquid.jpg',
   ),
+  // Night photo run 2026-10-04 1:45 AM PT — Sleep. Exact US carton.
+  // dollartree.com product 334109 is the 20-caplet box: Assured,
+  // Aspirin Free, Headache PM, acetaminophen 500 mg, diphenhydramine
+  // citrate 38 mg. Same count and actives as the row. DailyMed setid
+  // d9d22e45 carton barcode zbar is 850026889116. Not the ValuHealth
+  // 3-bottle listing that reuses that number. Not a flat label.
+  'assured-headache-pm': catalogShot('assured-headache-pm.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11264,7 +11268,11 @@ assertBrandMark(
   'cvs-mark.png',
 );
 assertBrandMark('olly-kids-sleep-coconut-only', 'OLLY', 'olly-mark.png');
-assertBrandTextTile('assured-headache-pm', 'Assured', 'Assured');
+assertExactCarton(
+  'assured-headache-pm',
+  'Assured',
+  'assured-headache-pm.jpg',
+);
 assertBrandMark('natures-way-calmaid', "Nature's Way", 'natures-way-mark.png');
 assertBrandMark('natures-way-5-htp', "Nature's Way", 'natures-way-mark.png');
 assertBrandMark(
