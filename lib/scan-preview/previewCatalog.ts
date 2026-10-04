@@ -2230,6 +2230,29 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'amazon-basics-fluticasone-nasal': brandMark('amazon-basics-mark.png'),
   // Mometasone spray. UPC 195515118675. No 3D pack retrieved.
   'amazon-basics-mometasone-nasal': brandMark('amazon-basics-mark.png'),
+  // Night photo run 2026-10-04 12:30 AM PT — Allergies brand-text batch 2.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Aurohealth cetirizine spans 30 / 90 / 300 / 365. UPC 195515003889
+  // is not a verified single face. Do not glue the coated 300-count.
+  'amazon-basic-care-cetirizine-aurohealth': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Grape chewables, 40 count. UPC 370030114832. No 3D pack retrieved.
+  // Do not glue the Children's Claritin 40-count box.
+  'amazon-basic-care-kids-loratadine-chew': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Fexofenadine 180 mg. UPC 195515041089. No 3D pack retrieved.
+  'amazon-basic-care-fexofenadine-lakes': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Levocetirizine 5 mg. UPC 195515120036. No 3D pack retrieved.
+  'amazon-basic-care-levocetirizine': brandMark('amazon-basic-care-mark.png'),
+  // Diphenhydramine 25 mg, L479. UPC 370030114146. No 3D pack retrieved.
+  'amazon-basic-care-dph-25-l479': brandMark('amazon-basic-care-mark.png'),
+  // Nighttime ointment. UPC 050428353721. DailyMed is a flat label.
+  // Do not glue the Refresh P.M. carton.
+  'cvs-health-nighttime-dry-eye': brandMark('cvs-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2250,14 +2273,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Assured: Dollar Tree PDP not retrieved. No standalone official marks.
   '365-cetirizine-softgels-peg': '365',
   '365-diphenhydramine-softgels-peg': '365',
-  'amazon-basic-care-cetirizine-aurohealth': 'Basic Care',
-  'amazon-basic-care-cetirizine-coated': 'Basic Care',
-  'amazon-basic-care-dph-25-l479': 'Basic Care',
-  'amazon-basic-care-fexofenadine-lakes': 'Basic Care',
-  'amazon-basic-care-kids-cetirizine-liquid': 'Basic Care',
-  'amazon-basic-care-kids-loratadine-chew': 'Basic Care',
-  'amazon-basic-care-kids-loratadine-liquid': 'Basic Care',
-  'amazon-basic-care-levocetirizine': 'Basic Care',
   // Assured Advanced Relief Eye: UPC 639277837691. No 3D pack.
   // dollartree.com still has no standalone Assured wordmark.
   // Do not invent one. Text tile stays.
@@ -2266,8 +2281,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // 365: wholefoodsmarket.com PDP not retrieved; DailyMed is 2D. Tile
   // text 365, never the letter 3.
   '365-loratadine-plain-ssg': '365',
-  // CVS Nighttime Dry-Eye stays a text tile until its own attempt.
-  'cvs-health-nighttime-dry-eye': 'CVS Health',
   // Daytime re-attempt — dollargeneral.com PDP for UPC 370030659432
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
@@ -9193,6 +9206,23 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'amazon-basic-care-loratadine-l612': catalogShot(
     'amazon-basic-care-loratadine-l612.jpg',
   ),
+  // Night photo run 2026-10-04 12:30 AM PT — Allergies brand-text batch 2.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Coated cetirizine 10 mg, 300 tablets. UPC 370030114108.
+  // Compare-to-Zyrtec bottle. Not the Aurohealth TiO2-only twin.
+  'amazon-basic-care-cetirizine-coated': catalogShot(
+    'amazon-basic-care-cetirizine-coated.jpg',
+  ),
+  // Children's loratadine liquid, grape, 8 fl oz. UPC 370030114825.
+  // Dye-free / sugar-free. Not a 4 fl oz bottle.
+  'amazon-basic-care-kids-loratadine-liquid': catalogShot(
+    'amazon-basic-care-kids-loratadine-liquid.jpg',
+  ),
+  // Children's cetirizine liquid, grape, 8 fl oz. UPC 370030114122.
+  // Not the bubble-gum twin.
+  'amazon-basic-care-kids-cetirizine-liquid': catalogShot(
+    'amazon-basic-care-kids-cetirizine-liquid.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10378,45 +10408,45 @@ assertBrandTextTile(
   '365',
 );
 assertExactCarton('alaway-multidose-bak', 'Alaway', 'alaway-multidose-bak.jpg');
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-cetirizine-aurohealth',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'amazon-basic-care-cetirizine-coated',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-cetirizine-coated.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-dph-25-l479',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-fexofenadine-lakes',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'amazon-basic-care-kids-cetirizine-liquid',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-kids-cetirizine-liquid.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-kids-loratadine-chew',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'amazon-basic-care-kids-loratadine-liquid',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-kids-loratadine-liquid.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-levocetirizine',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
 assertExactCarton(
   'amazon-basic-care-loratadine-l612',
@@ -10511,10 +10541,10 @@ assertBrandMark(
   'CVS Health',
   'cvs-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'cvs-health-nighttime-dry-eye',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
 assertBrandMark(
   'dg-health-cetirizine-tablets',
