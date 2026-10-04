@@ -884,6 +884,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'dg-health-triple-abx-oil-blend': brandMark('dg-health-mark.png'),
   'family-wellness-pain-scar-itch': brandMark('family-wellness-mark.png'),
   'family-wellness-triple-original': brandMark('family-wellness-mark.png'),
+  // First Aid night run 2026-10-04 3:00 AM PT.
+  // Hydrocortisone: DailyMed setid bc97f364 is a flat label, not a 3D
+  // carton. dollartree.com and familydollar.com do not list this Assured
+  // tube. Do not glue Thera Plus, Natureplex, or Family Wellness.
+  // Lidocaine: DailyMed setid bdbd4106 is a flat label. NDC 69159-100-01
+  // is an inactivated patch. Do not glue Coralite or Thera Plus lidocaine.
+  // Official Assured wordmark is USPTO reg. 3106543 (Greenbrier
+  // International, Dollar Tree, OTC class 005). dollartree.com has no
+  // standalone logo file. Per-id only. Leave assured-advanced-relief-eye.
+  'assured-hydrocortisone-cream': brandMark('assured-mark.png'),
+  'assured-lidocaine-pain-gel': brandMark('assured-mark.png'),
   // Do not inherit the Swim-Ear bottle. Different brand.
   'topcare-swimmers-ear': brandMark('topcare-mark.png'),
   'topcare-ear-relief': brandMark('topcare-mark.png'),
@@ -2285,10 +2296,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
   'rexall-cetirizine-tablets': 'Rexall',
-  // Daytime re-attempt. DailyMed faces are flat labels.
-  // No standalone official Assured mark on dollartree.com.
-  'assured-hydrocortisone-cream': 'Assured',
-  'assured-lidocaine-pain-gel': 'Assured',
   // Daytime re-attempt. UPC 016500586944 is the 100-count.
   // Walmart, Walgreens, and Target faces are the 200-count bottle.
   // oneaday.com nav logo 403. shop.oneaday.com header is the
@@ -14695,20 +14702,16 @@ assertBrandMark(
   'Amazon Basic Care',
   'amazon-basic-care-mark.png',
 );
-for (const assuredId of [
+assertBrandMark(
   'assured-hydrocortisone-cream',
+  'Assured',
+  'assured-mark.png',
+);
+assertBrandMark(
   'assured-lidocaine-pain-gel',
-] as const) {
-  const tile = previewOverlayImage({
-    id: assuredId,
-    formulaId: assuredId,
-    brand: 'Assured',
-  });
-  const label = decodeURIComponent(tile?.url.split(',')[1] ?? '');
-  if (!label.includes('>Assured</text>') || tile?.verifiedSku) {
-    throw new Error(`${assuredId} must use the Assured text tile`);
-  }
-}
+  'Assured',
+  'assured-mark.png',
+);
 assertExactCarton(
   'boiron-arnicare-ointment',
   'Boiron',
