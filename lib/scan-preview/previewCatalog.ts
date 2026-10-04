@@ -2197,6 +2197,39 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // the 150-count single (031604041724). Do not glue it.
   // Header wordmark from naturemade.com.
   'nature-made-multi-gummies': brandMark('nature-made-mark.png'),
+  // Night photo run 2026-10-04 12:30 AM PT — Allergies brand-text batch 1.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Loratadine-D spans 10-count and 20-count faces on the same
+  // Walmart page. Do not glue one count. Wordmark already on disk.
+  'equate-loratadine-d': brandMark('equate-mark.png'),
+  // Kids-facing row. Barcode 194346371907 is the adult Equate spray.
+  // Do not invent a kids carton.
+  'equate-kids-fluticasone-nasal': brandMark('equate-mark.png'),
+  // UPC 050428057131 lookup is a swim mask, not this liquid.
+  // No verified CVS carton. Wordmark already on disk.
+  'cvs-kids-loratadine-liquid': brandMark('cvs-mark.png'),
+  // UPC 050428057162. No 3D pack retrieved.
+  'cvs-kids-cetirizine-liquid': brandMark('cvs-mark.png'),
+  // Dye-free grape chews. Retrieved 20-count face does not say dye-free.
+  // Do not glue it. No barcode on the chews row below.
+  'cvs-kids-loratadine-chew': brandMark('cvs-mark.png'),
+  'cvs-kids-dph-chews': brandMark('cvs-mark.png'),
+  // Dye-free liquid. Retrieved face is cherry, not dye-free.
+  'cvs-kids-dph-liquid': brandMark('cvs-mark.png'),
+  // DG cetirizine 10 mg. UPC 370030116669. No 3D pack retrieved.
+  'dg-health-cetirizine-tablets': brandMark('dg-health-mark.png'),
+  // Aurohealth loratadine. UPC 195515003902 is the 30-count.
+  // No verified 3D bottle. Do not glue the 300-count L612 bottle.
+  'amazon-basic-care-loratadine-aurohealth': brandMark(
+    'amazon-basic-care-mark.png',
+  ),
+  // Mint ODT, 30 count. UPC 842379190742. No 3D pack retrieved.
+  'amazon-basic-care-loratadine-odt': brandMark('amazon-basic-care-mark.png'),
+  // UPC 195515014106 listings say Basic Care, not this Basics row.
+  // Do not glue that box.
+  'amazon-basics-fluticasone-nasal': brandMark('amazon-basics-mark.png'),
+  // Mometasone spray. UPC 195515118675. No 3D pack retrieved.
+  'amazon-basics-mometasone-nasal': brandMark('amazon-basics-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2225,48 +2258,16 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   'amazon-basic-care-kids-loratadine-chew': 'Basic Care',
   'amazon-basic-care-kids-loratadine-liquid': 'Basic Care',
   'amazon-basic-care-levocetirizine': 'Basic Care',
-  'amazon-basic-care-loratadine-l612': 'Basic Care',
-  'amazon-basic-care-loratadine-odt': 'Basic Care',
-  'amazon-basics-fluticasone-nasal': 'Amazon Basics',
-  'amazon-basics-mometasone-nasal': 'Amazon Basics',
+  // Assured Advanced Relief Eye: UPC 639277837691. No 3D pack.
+  // dollartree.com still has no standalone Assured wordmark.
+  // Do not invent one. Text tile stays.
   'assured-advanced-relief-eye': 'Assured',
   // Attempted Allergies leftovers — night run 2026-09-21 batch 1.
   // 365: wholefoodsmarket.com PDP not retrieved; DailyMed is 2D. Tile
   // text 365, never the letter 3.
   '365-loratadine-plain-ssg': '365',
-  // Amazon Basic Care Aurohealth loratadine: amazon.com 3D packshot not
-  // retrieved (mid-rebrand). No standalone official Basic Care mark.
-  'amazon-basic-care-loratadine-aurohealth': 'Basic Care',
-  // Astepro: asteproallergy.com returned site-maintenance from this
-  // environment. No standalone official Astepro mark file.
-  'astepro-allergy': 'Astepro',
-  // Adult Benadryl Allergy Liquid: no live benadryl.com PDP (kids cherry
-  // is a different UPC). Children's chewables: no dedicated live pack
-  // file. Children's Claritin grape liquid: claritin.com maintenance.
-  // No standalone official Benadryl / Claritin mark files.
-  'benadryl-allergy-liquid': 'Benadryl',
-  'childrens-benadryl-chewables': 'Benadryl',
-  'childrens-claritin-liquid': 'Claritin',
-  // Attempted Allergies leftovers — night run 2026-09-21 batch 2.
-  // Claritin: claritin.com still site-maintenance from this environment.
-  // DailyMed 2D is not a carton. No standalone official Claritin mark.
-  'childrens-claritin-chewable': 'Claritin',
-  // CVS.com PDPs 403 from this environment. No standalone official
-  // CVS Health mark file.
-  'cvs-kids-dph-chews': 'CVS Health',
-  'cvs-kids-cetirizine-liquid': 'CVS Health',
-  'cvs-kids-loratadine-liquid': 'CVS Health',
-  'cvs-kids-dph-liquid': 'CVS Health',
-  'cvs-kids-loratadine-chew': 'CVS Health',
+  // CVS Nighttime Dry-Eye stays a text tile until its own attempt.
   'cvs-health-nighttime-dry-eye': 'CVS Health',
-  // DG Health: no retrievable official 3D carton. No standalone mark.
-  'dg-health-cetirizine-tablets': 'DG Health',
-  // Attempted Allergies leftovers — night run 2026-09-21 5:30 PT batch 1.
-  // Equate: walmart.com PDPs blocked from this environment. equate.com is
-  // Kuwait petrochemical — refuse. No standalone official Equate mark
-  // file. Do not stay letters.
-  'equate-loratadine-d': 'Equate',
-  'equate-kids-fluticasone-nasal': 'Equate',
   // Daytime re-attempt — dollargeneral.com PDP for UPC 370030659432
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
@@ -9166,6 +9167,32 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'manuka-health-lemon-ginger-lozenges': catalogShot(
     'manuka-health-lemon-ginger-lozenges.jpg',
   ),
+  // Night photo run 2026-10-04 12:30 AM PT — Allergies brand-text batch 1.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Astepro 120 metered sprays. UPC 041100589903. Not the 60-spray
+  // Walgreens face. Not the 180-spray Thrifty White bottle.
+  'astepro-allergy': catalogShot('astepro-allergy.jpg'),
+  // Adult Benadryl Allergy liquid, wild cherry, 4 fl oz.
+  // UPC 300450534248. Not the children's 4 fl oz cherry bottle.
+  'benadryl-allergy-liquid': catalogShot('benadryl-allergy-liquid.jpg'),
+  // Children's Claritin grape syrup, 8 fl oz. UPC 041100810991.
+  // Not the 4 fl oz bottle.
+  'childrens-claritin-liquid': catalogShot('childrens-claritin-liquid.jpg'),
+  // Children's Claritin grape chewables, 40 tablets.
+  // UPC 041100810748. Not the 10-count box.
+  'childrens-claritin-chewable': catalogShot(
+    'childrens-claritin-chewable.jpg',
+  ),
+  // Children's Benadryl grape chewables, 20 tablets.
+  // UPC 300450553201. Not the dye-free grape box.
+  'childrens-benadryl-chewables': catalogShot(
+    'childrens-benadryl-chewables.jpg',
+  ),
+  // Basic Care loratadine 10 mg, 300 tablets. UPC 370030114221.
+  // Compare-to-Claritin bottle. Not the 30-count Aurohealth bottle.
+  'amazon-basic-care-loratadine-l612': catalogShot(
+    'amazon-basic-care-loratadine-l612.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10391,25 +10418,25 @@ assertBrandTextTile(
   'Amazon Basic Care',
   'Basic Care',
 );
-assertBrandTextTile(
+assertExactCarton(
   'amazon-basic-care-loratadine-l612',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-loratadine-l612.jpg',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-loratadine-odt',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basics-fluticasone-nasal',
   'Amazon Basics',
-  'Amazon Basics',
+  'amazon-basics-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basics-mometasone-nasal',
   'Amazon Basics',
-  'Amazon Basics',
+  'amazon-basics-mark.png',
 );
 assertBrandTextTile(
   'assured-advanced-relief-eye',
@@ -10422,27 +10449,31 @@ assertBrandTextTile(
   '365',
 );
 assertBrandMark('alaway-preservative-free', 'Alaway', 'alaway-mark.png');
-assertBrandTextTile(
+assertBrandMark(
   'amazon-basic-care-loratadine-aurohealth',
   'Amazon Basic Care',
-  'Basic Care',
+  'amazon-basic-care-mark.png',
 );
-assertBrandTextTile('astepro-allergy', 'Astepro', 'Astepro');
-assertBrandTextTile('benadryl-allergy-liquid', 'Benadryl', 'Benadryl');
-assertBrandTextTile(
+assertExactCarton('astepro-allergy', 'Astepro', 'astepro-allergy.jpg');
+assertExactCarton(
+  'benadryl-allergy-liquid',
+  'Benadryl',
+  'benadryl-allergy-liquid.jpg',
+);
+assertExactCarton(
   'childrens-benadryl-chewables',
   'Benadryl',
-  'Benadryl',
+  'childrens-benadryl-chewables.jpg',
 );
-assertBrandTextTile(
+assertExactCarton(
   'childrens-claritin-liquid',
   'Claritin',
-  'Claritin',
+  'childrens-claritin-liquid.jpg',
 );
-assertBrandTextTile(
+assertExactCarton(
   'childrens-claritin-chewable',
   'Claritin',
-  'Claritin',
+  'childrens-claritin-chewable.jpg',
 );
 assertBrandMark('claritin-allergy-liquid', 'Claritin', 'claritin-mark.png');
 assertBrandMark(
@@ -10458,22 +10489,22 @@ assertExactCarton(
   'CVS Health',
   'cvs-cetirizine-tablets.jpg',
 );
-assertBrandTextTile('cvs-kids-dph-chews', 'CVS Health', 'CVS Health');
-assertBrandTextTile(
+assertBrandMark('cvs-kids-dph-chews', 'CVS Health', 'cvs-mark.png');
+assertBrandMark(
   'cvs-kids-cetirizine-liquid',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'cvs-kids-loratadine-liquid',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
-assertBrandTextTile('cvs-kids-dph-liquid', 'CVS Health', 'CVS Health');
-assertBrandTextTile(
+assertBrandMark('cvs-kids-dph-liquid', 'CVS Health', 'cvs-mark.png');
+assertBrandMark(
   'cvs-kids-loratadine-chew',
   'CVS Health',
-  'CVS Health',
+  'cvs-mark.png',
 );
 assertBrandMark(
   'cvs-loratadine-tablets-plain',
@@ -10485,12 +10516,12 @@ assertBrandTextTile(
   'CVS Health',
   'CVS Health',
 );
-assertBrandTextTile(
+assertBrandMark(
   'dg-health-cetirizine-tablets',
   'DG Health',
-  'DG Health',
+  'dg-health-mark.png',
 );
-assertBrandTextTile('equate-loratadine-d', 'Equate', 'Equate');
+assertBrandMark('equate-loratadine-d', 'Equate', 'equate-mark.png');
 assertExactCarton(
   'equate-cetirizine-tablets',
   'Equate',
@@ -10502,10 +10533,10 @@ assertBrandMark(
   'equate-mark.png',
 );
 assertBrandMark('equate-fluticasone-nasal', 'Equate', 'equate-mark.png');
-assertBrandTextTile(
+assertBrandMark(
   'equate-kids-fluticasone-nasal',
   'Equate',
-  'Equate',
+  'equate-mark.png',
 );
 assertBrandMark(
   'equate-loratadine-tablets-plain',
