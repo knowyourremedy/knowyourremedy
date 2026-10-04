@@ -9415,6 +9415,84 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-daily-vits-multi-vitamin-mineral-120': catalogShot(
     'now-daily-vits-multi-vitamin-mineral-120.jpg',
   ),
+  // Vitamins night run 2026-10-04 6:45 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Glutathione 500 mg, 120 veg capsules. Barcode 733739001764.
+  // Not the milk-thistle combo.
+  'now-glutathione-500-mg-120': catalogShot('now-glutathione-500-mg-120.jpg'),
+  // Omega-3 1,000 mg, 200 fish softgels. Barcode 733739016485.
+  // Not the regular 200-count softgel (733739016522).
+  'now-omega-3-fish-oil-1-000-mg-200-fish-softgels': catalogShot(
+    'now-omega-3-fish-oil-1-000-mg-200-fish-softgels.jpg',
+  ),
+  // Evening Primrose Oil 1,000 mg, 90 veggie softgels. Barcode 733739017581.
+  // Not the non-vegan primrose bottle.
+  'now-evening-primrose-oil-1-000-mg-90-veggie-softgels': catalogShot(
+    'now-evening-primrose-oil-1-000-mg-90-veggie-softgels.jpg',
+  ),
+  // DGL with Aloe Vera 400 mg, 100 veg capsules. Barcode 733739046543.
+  'now-dgl-with-aloe-vera-400-mg-100': catalogShot(
+    'now-dgl-with-aloe-vera-400-mg-100.jpg',
+  ),
+  // Methyl B-12 5,000 mcg, 90 veg capsules. Barcode 733739005052.
+  'now-methyl-b-12-5-000-mcg-90': catalogShot(
+    'now-methyl-b-12-5-000-mcg-90.jpg',
+  ),
+  // Vegetarian Dry E-400, 100 veg capsules. Barcode 733739008503.
+  // Not the softgel E-400.
+  'now-vegetarian-dry-e-400-268-mg-400-iu-100': catalogShot(
+    'now-vegetarian-dry-e-400-268-mg-400-iu-100.jpg',
+  ),
+  // Methyl Folate 5,000 mcg, 50 veg capsules. Barcode 733739005021.
+  'now-methyl-folate-5-000-mcg-50': catalogShot(
+    'now-methyl-folate-5-000-mcg-50.jpg',
+  ),
+  // B-100, 100 veg capsules. Barcode 733739004369. Not the 250-count.
+  'now-b-100-100': catalogShot('now-b-100-100.jpg'),
+  // Omega-3 Fish Oil 1,000 mg, 200 softgels. Barcode 733739016522.
+  // Not the 500-count. Not the fish-softgel 200.
+  'now-omega-3-fish-oil-1-000-mg-200': catalogShot(
+    'now-omega-3-fish-oil-1-000-mg-200.jpg',
+  ),
+  // Black Currant Oil 500 mg, 100 softgels. Barcode 733739017154.
+  // Not the 1,000 mg bottle (733739017178).
+  'now-black-currant-oil-100-733739017154': catalogShot(
+    'now-black-currant-oil-100-733739017154.jpg',
+  ),
+  // Maca 500 mg, 250 veg capsules. Barcode 733739047625. Not the 100-count.
+  'now-maca-500-mg-250': catalogShot('now-maca-500-mg-250.jpg'),
+  // Garlic Oil, 250 softgels. Barcode 733739017925. Not the odorless tablet.
+  'now-garlic-oil-250': catalogShot('now-garlic-oil-250.jpg'),
+  // Glutathione with milk thistle and ALA, 60 veg capsules.
+  // Barcode 733739001047. Not the 30-count. Not plain glutathione.
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60': catalogShot(
+    'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60.jpg',
+  ),
+  // PQQ with alpha lipoic acid, 50 veg capsules. Barcode 733739030733.
+  'now-pqq-with-alpha-lipoic-acid-50': catalogShot(
+    'now-pqq-with-alpha-lipoic-acid-50.jpg',
+  ),
+  // Pantothenic Acid, 250 veg capsules. Barcode 733739004888.
+  // Not the 100-count.
+  'now-pantothenic-acid-250': catalogShot('now-pantothenic-acid-250.jpg'),
+  // Cranberry with PACs, 90 veg capsules. Barcode 733739046321.
+  'now-cranberry-with-pacs-90': catalogShot('now-cranberry-with-pacs-90.jpg'),
+  // Garlic 5000, 90 tablets. Barcode 733739018144. Not the oil softgel.
+  'now-garlic-5000-90': catalogShot('now-garlic-5000-90.jpg'),
+  // KSM-66 Ashwagandha 600 mg, 90 veg capsules. Barcode 733739046338.
+  'now-ksm-66-ashwagandha-600-mg-90': catalogShot(
+    'now-ksm-66-ashwagandha-600-mg-90.jpg',
+  ),
+  // Hyaluronic Acid 50 mg, 120 veg capsules. Barcode 733739031570.
+  'now-hyaluronic-acid-50-mg-120': catalogShot(
+    'now-hyaluronic-acid-50-mg-120.jpg',
+  ),
+  // Vitamin D-3 max potency 50,000 IU, 50 softgels. Barcode 733739003782.
+  // Not the 12-count. Not the 400 IU bottle.
+  'now-vitamin-d-3-max-potency-50-000-iu-50': catalogShot(
+    'now-vitamin-d-3-max-potency-50-000-iu-50.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15428,6 +15506,82 @@ assertExactCarton(
   'NOW',
   'now-daily-vits-multi-vitamin-mineral-120.jpg',
 );
+assertExactCarton(
+  'now-glutathione-500-mg-120',
+  'NOW',
+  'now-glutathione-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-omega-3-fish-oil-1-000-mg-200-fish-softgels',
+  'NOW',
+  'now-omega-3-fish-oil-1-000-mg-200-fish-softgels.jpg',
+);
+assertExactCarton(
+  'now-evening-primrose-oil-1-000-mg-90-veggie-softgels',
+  'NOW',
+  'now-evening-primrose-oil-1-000-mg-90-veggie-softgels.jpg',
+);
+assertExactCarton(
+  'now-dgl-with-aloe-vera-400-mg-100',
+  'NOW',
+  'now-dgl-with-aloe-vera-400-mg-100.jpg',
+);
+assertExactCarton(
+  'now-methyl-b-12-5-000-mcg-90',
+  'NOW',
+  'now-methyl-b-12-5-000-mcg-90.jpg',
+);
+assertExactCarton(
+  'now-vegetarian-dry-e-400-268-mg-400-iu-100',
+  'NOW',
+  'now-vegetarian-dry-e-400-268-mg-400-iu-100.jpg',
+);
+assertExactCarton(
+  'now-methyl-folate-5-000-mcg-50',
+  'NOW',
+  'now-methyl-folate-5-000-mcg-50.jpg',
+);
+assertExactCarton('now-b-100-100', 'NOW', 'now-b-100-100.jpg');
+assertExactCarton(
+  'now-omega-3-fish-oil-1-000-mg-200',
+  'NOW',
+  'now-omega-3-fish-oil-1-000-mg-200.jpg',
+);
+assertExactCarton(
+  'now-black-currant-oil-100-733739017154',
+  'NOW',
+  'now-black-currant-oil-100-733739017154.jpg',
+);
+assertExactCarton('now-maca-500-mg-250', 'NOW', 'now-maca-500-mg-250.jpg');
+assertExactCarton('now-garlic-oil-250', 'NOW', 'now-garlic-oil-250.jpg');
+assertExactCarton(
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60',
+  'NOW',
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60.jpg',
+);
+assertExactCarton(
+  'now-pqq-with-alpha-lipoic-acid-50',
+  'NOW',
+  'now-pqq-with-alpha-lipoic-acid-50.jpg',
+);
+assertExactCarton('now-pantothenic-acid-250', 'NOW', 'now-pantothenic-acid-250.jpg');
+assertExactCarton('now-cranberry-with-pacs-90', 'NOW', 'now-cranberry-with-pacs-90.jpg');
+assertExactCarton('now-garlic-5000-90', 'NOW', 'now-garlic-5000-90.jpg');
+assertExactCarton(
+  'now-ksm-66-ashwagandha-600-mg-90',
+  'NOW',
+  'now-ksm-66-ashwagandha-600-mg-90.jpg',
+);
+assertExactCarton(
+  'now-hyaluronic-acid-50-mg-120',
+  'NOW',
+  'now-hyaluronic-acid-50-mg-120.jpg',
+);
+assertExactCarton(
+  'now-vitamin-d-3-max-potency-50-000-iu-50',
+  'NOW',
+  'now-vitamin-d-3-max-potency-50-000-iu-50.jpg',
+);
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -15442,8 +15596,11 @@ assertExactCarton(
     formulaId: 'now-black-currant-oil-100',
     brand: 'NOW',
   });
-  if (currantTwin?.url.endsWith('/now-black-currant-oil-100.jpg')) {
-    throw new Error('Black currant twin must not inherit the 733739017178 face');
+  if (
+    !currantTwin?.url.endsWith('/now-black-currant-oil-100-733739017154.jpg')
+    || !currantTwin.verifiedSku
+  ) {
+    throw new Error('Black currant twin must stay the 733739017154 carton');
   }
   const k2Large = previewOverlayImage({
     id: 'now-vitamin-k-2-100-mcg-250',
@@ -15495,6 +15652,58 @@ assertExactCarton(
   });
   if (!vitaminA100?.url.endsWith('/now-vitamin-a-7-500-mcg-25-000-iu-250.jpg')) {
     throw new Error('Vitamin A 250 must not inherit the 100-count carton');
+  }
+  const maca250 = previewOverlayImage({
+    id: 'now-maca-500-mg-250',
+    formulaId: 'now-maca-500-mg-100',
+    brand: 'NOW',
+  });
+  if (!maca250?.url.endsWith('/now-maca-500-mg-250.jpg') || !maca250.verifiedSku) {
+    throw new Error('Maca 250 must stay its own carton, not the 100-count');
+  }
+  const glutathione60 = previewOverlayImage({
+    id: 'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60',
+    formulaId: 'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30',
+    brand: 'NOW',
+  });
+  if (
+    !glutathione60?.url.endsWith(
+      '/now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60.jpg',
+    )
+    || !glutathione60.verifiedSku
+  ) {
+    throw new Error('Glutathione combo 60 must stay its own carton, not the 30-count');
+  }
+  const d3Max = previewOverlayImage({
+    id: 'now-vitamin-d-3-max-potency-50-000-iu-50',
+    formulaId: 'now-vitamin-d-3-max-potency-50-000-iu-12',
+    brand: 'NOW',
+  });
+  if (
+    !d3Max?.url.endsWith('/now-vitamin-d-3-max-potency-50-000-iu-50.jpg')
+    || !d3Max.verifiedSku
+  ) {
+    throw new Error('D-3 50,000 IU 50 must stay its own carton, not the 12-count');
+  }
+  const omega200 = previewOverlayImage({
+    id: 'now-omega-3-fish-oil-1-000-mg-500',
+    formulaId: 'now-omega-3-fish-oil-1-000-mg-200',
+    brand: 'NOW',
+  });
+  if (!omega200?.url.endsWith('/now-omega-3-fish-oil-1-000-mg-500.jpg')) {
+    throw new Error('Omega-3 500 must not inherit the 200-count carton');
+  }
+  const fishSoftgel = previewOverlayImage({
+    id: 'now-omega-3-fish-oil-1-000-mg-200-fish-softgels',
+    formulaId: 'now-omega-3-fish-oil-1-000-mg-200-fish-softgels',
+    brand: 'NOW',
+  });
+  if (
+    !fishSoftgel?.url.endsWith(
+      '/now-omega-3-fish-oil-1-000-mg-200-fish-softgels.jpg',
+    )
+  ) {
+    throw new Error('Fish-softgel 200 must not inherit the regular 200-count');
   }
 }
 assertExactCarton(
