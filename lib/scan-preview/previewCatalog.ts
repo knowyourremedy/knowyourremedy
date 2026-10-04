@@ -9335,6 +9335,86 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-nattokinase-100-mg-120': catalogShot('now-nattokinase-100-mg-120.jpg'),
   // Kelp 325 mcg, 250 veg capsules. Barcode 733739026750.
   'now-kelp-325-mcg-250': catalogShot('now-kelp-325-mcg-250.jpg'),
+  // Vitamins night run 2026-10-04 6:45 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Milk Thistle Extract 450 mg, 120 softgels. Barcode 733739047854.
+  // Not the 750 mg capsule.
+  'now-milk-thistle-extract-450-mg-120': catalogShot(
+    'now-milk-thistle-extract-450-mg-120.jpg',
+  ),
+  // Liquid Vitamin D-3, 1,000 IU, 1 fl oz. Barcode 733739003713.
+  // Not the 2 fl oz bottle.
+  'now-liquid-vitamin-d-3-1-000-iu-1-fl-oz-30-ml': catalogShot(
+    'now-liquid-vitamin-d-3-1-000-iu-1-fl-oz-30-ml.jpg',
+  ),
+  // Borage Oil 1,000 mg, 120 softgels. Barcode 733739017222.
+  // Not the 60-count.
+  'now-borage-oil-120': catalogShot('now-borage-oil-120.jpg'),
+  // GABA 750 mg, 200 veg capsules. Barcode 733739001290.
+  // Not the 100-count. Not the 500 mg bottles.
+  'now-gaba-750-mg-200': catalogShot('now-gaba-750-mg-200.jpg'),
+  // Lycopene 20 mg, 50 softgels. Barcode 733739030627.
+  // Not the 10 mg 120-count.
+  'now-lycopene-20-mg-50': catalogShot('now-lycopene-20-mg-50.jpg'),
+  // Vitamin A 7,500 mcg (25,000 IU), 100 softgels. Barcode 733739003409.
+  // Not the 250-count.
+  'now-vitamin-a-7-500-mcg-25-000-iu-100': catalogShot(
+    'now-vitamin-a-7-500-mcg-25-000-iu-100.jpg',
+  ),
+  // Caprylic Acid 600 mg, 100 softgels. Barcode 733739033475.
+  'now-caprylic-acid-600-mg-100': catalogShot(
+    'now-caprylic-acid-600-mg-100.jpg',
+  ),
+  // Magnesium Malate 95 mg, 180 veg capsules. Barcode 733739013033.
+  'now-magnesium-malate-caps-95-mg-180': catalogShot(
+    'now-magnesium-malate-caps-95-mg-180.jpg',
+  ),
+  // Vitamin K-2 (MK-4) 100 mcg, 250 veg capsules. Barcode 733739009913.
+  // Not the 100-count.
+  'now-vitamin-k-2-100-mcg-250': catalogShot(
+    'now-vitamin-k-2-100-mcg-250.jpg',
+  ),
+  // Gastro Comfort with PepZin GI, 60 veg capsules. Barcode 733739035202.
+  'now-gastro-comfort-with-pepzin-gi-60': catalogShot(
+    'now-gastro-comfort-with-pepzin-gi-60.jpg',
+  ),
+  // Liquid Chlorophyll, mint, 16 fl oz. Barcode 733739026446.
+  'now-liquid-chlorophyll-mint-16-fl-oz-473-ml': catalogShot(
+    'now-liquid-chlorophyll-mint-16-fl-oz-473-ml.jpg',
+  ),
+  // Pantothenic Acid 500 mg, 100 veg capsules. Barcode 733739004864.
+  // Not the 250-count.
+  'now-pantothenic-acid-500-mg-100': catalogShot(
+    'now-pantothenic-acid-500-mg-100.jpg',
+  ),
+  // Menopause Support, 90 veg capsules. Barcode 733739033253.
+  'now-menopause-support-90': catalogShot('now-menopause-support-90.jpg'),
+  // Omega-3 Fish Oil, 100 softgels. Barcode 733739016508.
+  // Not the 200-count or the 500-count.
+  'now-omega-3-fish-oil-100': catalogShot('now-omega-3-fish-oil-100.jpg'),
+  // Liquid Vitamin D-3, 2 fl oz. Barcode 733739003706.
+  // Not the 1 fl oz bottle.
+  'now-liquid-vitamin-d-3-2-fl-oz-59-ml': catalogShot(
+    'now-liquid-vitamin-d-3-2-fl-oz-59-ml.jpg',
+  ),
+  // B-100, 250 veg capsules. Barcode 733739004383. Not the 100-count.
+  'now-b-100-250': catalogShot('now-b-100-250.jpg'),
+  // Vitamin D-3 400 IU, 180 softgels. Barcode 733739003645.
+  // Not a high-potency bottle.
+  'now-vitamin-d-3-400-iu-180': catalogShot('now-vitamin-d-3-400-iu-180.jpg'),
+  // Omega-3 Fish Oil 1,000 mg, 500 softgels. Barcode 733739016539.
+  // Not the 200-count.
+  'now-omega-3-fish-oil-1-000-mg-500': catalogShot(
+    'now-omega-3-fish-oil-1-000-mg-500.jpg',
+  ),
+  // B-50, 250 veg capsules. Barcode 733739004222.
+  // Not the 100-count. Not barcode 733739004284.
+  'now-b-50-250': catalogShot('now-b-50-250.jpg'),
+  // Daily Vits multi, 120 veg capsules. Barcode 733739037763.
+  'now-daily-vits-multi-vitamin-mineral-120': catalogShot(
+    'now-daily-vits-multi-vitamin-mineral-120.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15276,6 +15356,78 @@ assertExactCarton(
   'now-nattokinase-100-mg-120.jpg',
 );
 assertExactCarton('now-kelp-325-mcg-250', 'NOW', 'now-kelp-325-mcg-250.jpg');
+assertExactCarton(
+  'now-milk-thistle-extract-450-mg-120',
+  'NOW',
+  'now-milk-thistle-extract-450-mg-120.jpg',
+);
+assertExactCarton(
+  'now-liquid-vitamin-d-3-1-000-iu-1-fl-oz-30-ml',
+  'NOW',
+  'now-liquid-vitamin-d-3-1-000-iu-1-fl-oz-30-ml.jpg',
+);
+assertExactCarton('now-borage-oil-120', 'NOW', 'now-borage-oil-120.jpg');
+assertExactCarton('now-gaba-750-mg-200', 'NOW', 'now-gaba-750-mg-200.jpg');
+assertExactCarton('now-lycopene-20-mg-50', 'NOW', 'now-lycopene-20-mg-50.jpg');
+assertExactCarton(
+  'now-vitamin-a-7-500-mcg-25-000-iu-100',
+  'NOW',
+  'now-vitamin-a-7-500-mcg-25-000-iu-100.jpg',
+);
+assertExactCarton(
+  'now-caprylic-acid-600-mg-100',
+  'NOW',
+  'now-caprylic-acid-600-mg-100.jpg',
+);
+assertExactCarton(
+  'now-magnesium-malate-caps-95-mg-180',
+  'NOW',
+  'now-magnesium-malate-caps-95-mg-180.jpg',
+);
+assertExactCarton(
+  'now-vitamin-k-2-100-mcg-250',
+  'NOW',
+  'now-vitamin-k-2-100-mcg-250.jpg',
+);
+assertExactCarton(
+  'now-gastro-comfort-with-pepzin-gi-60',
+  'NOW',
+  'now-gastro-comfort-with-pepzin-gi-60.jpg',
+);
+assertExactCarton(
+  'now-liquid-chlorophyll-mint-16-fl-oz-473-ml',
+  'NOW',
+  'now-liquid-chlorophyll-mint-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton(
+  'now-pantothenic-acid-500-mg-100',
+  'NOW',
+  'now-pantothenic-acid-500-mg-100.jpg',
+);
+assertExactCarton('now-menopause-support-90', 'NOW', 'now-menopause-support-90.jpg');
+assertExactCarton('now-omega-3-fish-oil-100', 'NOW', 'now-omega-3-fish-oil-100.jpg');
+assertExactCarton(
+  'now-liquid-vitamin-d-3-2-fl-oz-59-ml',
+  'NOW',
+  'now-liquid-vitamin-d-3-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton('now-b-100-250', 'NOW', 'now-b-100-250.jpg');
+assertExactCarton(
+  'now-vitamin-d-3-400-iu-180',
+  'NOW',
+  'now-vitamin-d-3-400-iu-180.jpg',
+);
+assertExactCarton(
+  'now-omega-3-fish-oil-1-000-mg-500',
+  'NOW',
+  'now-omega-3-fish-oil-1-000-mg-500.jpg',
+);
+assertExactCarton('now-b-50-250', 'NOW', 'now-b-50-250.jpg');
+assertExactCarton(
+  'now-daily-vits-multi-vitamin-mineral-120',
+  'NOW',
+  'now-daily-vits-multi-vitamin-mineral-120.jpg',
+);
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -15292,6 +15444,57 @@ assertExactCarton('now-kelp-325-mcg-250', 'NOW', 'now-kelp-325-mcg-250.jpg');
   });
   if (currantTwin?.url.endsWith('/now-black-currant-oil-100.jpg')) {
     throw new Error('Black currant twin must not inherit the 733739017178 face');
+  }
+  const k2Large = previewOverlayImage({
+    id: 'now-vitamin-k-2-100-mcg-250',
+    formulaId: 'now-vitamin-k-2-100-mcg-100',
+    brand: 'NOW',
+  });
+  if (!k2Large?.url.endsWith('/now-vitamin-k-2-100-mcg-250.jpg') || !k2Large.verifiedSku) {
+    throw new Error('K-2 250 must stay its own carton, not the 100-count');
+  }
+  const b100Large = previewOverlayImage({
+    id: 'now-b-100-250',
+    formulaId: 'now-b-100-100',
+    brand: 'NOW',
+  });
+  if (!b100Large?.url.endsWith('/now-b-100-250.jpg') || !b100Large.verifiedSku) {
+    throw new Error('B-100 250 must stay its own carton, not the 100-count');
+  }
+  const borage120 = previewOverlayImage({
+    id: 'now-borage-oil-120',
+    formulaId: 'now-borage-oil-60',
+    brand: 'NOW',
+  });
+  if (!borage120?.url.endsWith('/now-borage-oil-120.jpg') || !borage120.verifiedSku) {
+    throw new Error('Borage 120 must stay its own carton, not the 60-count');
+  }
+  const gaba200 = previewOverlayImage({
+    id: 'now-gaba-750-mg-200',
+    formulaId: 'now-gaba-750-mg-100',
+    brand: 'NOW',
+  });
+  if (!gaba200?.url.endsWith('/now-gaba-750-mg-200.jpg') || !gaba200.verifiedSku) {
+    throw new Error('GABA 750 mg 200 must stay its own carton, not the 100-count');
+  }
+  const omega500 = previewOverlayImage({
+    id: 'now-omega-3-fish-oil-1-000-mg-500',
+    formulaId: 'now-omega-3-fish-oil-1-000-mg-200',
+    brand: 'NOW',
+  });
+  if (
+    !omega500?.url.endsWith('/now-omega-3-fish-oil-1-000-mg-500.jpg')
+    || !omega500.verifiedSku
+  ) {
+    throw new Error('Omega-3 500 must stay its own carton, not the 200-count');
+  }
+  const vitaminA100 = previewOverlayImage({
+    id: 'now-vitamin-a-7-500-mcg-25-000-iu-250',
+    formulaId: 'now-vitamin-a-7-500-mcg-25-000-iu-100',
+    brand: 'NOW',
+  });
+  if (!vitaminA100?.url.endsWith('/now-vitamin-a-7-500-mcg-25-000-iu-250.jpg')) {
+    throw new Error('Vitamin A 250 must not inherit the 100-count carton');
   }
 }
 assertExactCarton(
