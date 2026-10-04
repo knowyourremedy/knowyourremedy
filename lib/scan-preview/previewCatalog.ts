@@ -2162,6 +2162,41 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'cvs-sleep-aid-liquid-dyed': brandMark('cvs-mark.png'),
   // Dye-free sleep liquid. UPC 050428594568. Title only, no image.
   'cvs-sleep-aid-liquid-dyefree': brandMark('cvs-mark.png'),
+  // Daytime photo run — Sleep, Immune, First Aid, then Vitamins.
+  // Tried each SKU. Official mark. Not a letter. Not a text tile.
+  // Kids Sleep coconut-only listing has no barcode. Do not glue
+  // the canola bottle. Wordmark from olly.com.
+  'olly-kids-sleep-coconut-only': brandMark('olly-mark.png'),
+  // CalmAid spans 30-count 033674158197 and 90-count 033674147139.
+  // Do not glue the 30. Wordmark from naturesway.com.
+  'natures-way-calmaid': brandMark('natures-way-mark.png'),
+  // 5-HTP spans 033674452400 (30) and 033674452509. Do not glue the 30.
+  'natures-way-5-htp': brandMark('natures-way-mark.png'),
+  // Two barcodes. 871791003811 is Integrative Therapeutics Cortisol
+  // Manager, not a Nature's Way bottle. Do not glue one count.
+  'natures-way-cortisol-manager': brandMark('natures-way-mark.png'),
+  // St. John's Wort spans 033674173008 (100) and 033674140413.
+  'natures-way-st-johns-wort': brandMark('natures-way-mark.png'),
+  // Valerian spans 033674177006 (100) and 033674177082.
+  'natures-way-valerian-root': brandMark('natures-way-mark.png'),
+  // PM Headache spans two count UPCs. Do not glue one count.
+  // Wordmark from excedrin.com.
+  'excedrin-pm-headache': brandMark('excedrin-mark.png'),
+  // UPC 850023615077 is the 2-bottle variant on hilma.co.
+  // Retrieved face is a single bottle. Do not glue it.
+  // Wordmark paths from the hilma.co header.
+  'hilma-sleep-support': brandMark('hilma-mark.png'),
+  // No barcode. Do not glue the no-TiO2 500-count bottle.
+  'kirkland-daily-multi-tio2': brandMark('kirkland-mark.png'),
+  // Men's canola row has no barcode. Live bottles are other UPCs.
+  'olly-mens-multi-canola': brandMark('olly-mark.png'),
+  // Women's canola UPC 852933008031 is the 65-serving variant.
+  // Retrieved face reads as the 90-gummy bottle. Do not glue it.
+  'olly-womens-multi-canola': brandMark('olly-mark.png'),
+  // UPC 031604028411 is a 90-count 12-pack. Retrieved faces are
+  // the 150-count single (031604041724). Do not glue it.
+  // Header wordmark from naturemade.com.
+  'nature-made-multi-gummies': brandMark('nature-made-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2236,64 +2271,20 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // is still the placeholder image, not a 3D carton. No standalone
   // official Rexall mark on that page. Do not use the Dollar General logo.
   'rexall-cetirizine-tablets': 'Rexall',
-  // OLLY Kids Sleep coconut-only oil listing — no barcode; draft name is
-  // an oil-listing split, not a shoppable pack face. Do not glue the
-  // canola SKU carton. No standalone OLLY mark file.
-  'olly-kids-sleep-coconut-only': 'OLLY',
-  // Assured Headache PM — no barcode on the draft row; no retrievable
-  // exact US 3D pack. No standalone Assured mark file.
+  // Daytime re-attempt. UPC 850026889116 has no retrievable 3D pack.
+  // dollartree.com has no standalone Assured wordmark. Do not invent one.
   'assured-headache-pm': 'Assured',
-  // Attempted Sleep leftovers — night run 2026-09-23 5:30 PT batch 1.
-  // Nature's Way faces are count-specific. Do not glue one count.
-  // No standalone official Nature's Way colored mark file.
-  'natures-way-calmaid': "Nature's Way",
-  'natures-way-5-htp': "Nature's Way",
-  'natures-way-cortisol-manager': "Nature's Way",
-  // Attempted Sleep leftovers — night run 2026-09-23 5:30 PT batch 2.
-  // Count-specific Nature's Way faces. Do not glue one count.
-  'natures-way-st-johns-wort': "Nature's Way",
-  'natures-way-valerian-root': "Nature's Way",
-  // Excedrin PM Headache spans two count UPCs. No standalone official
-  // Excedrin mark file. Do not glue one count. Do not stay a letter.
-  'excedrin-pm-headache': 'Excedrin',
-  // Hilma Sleep Support: hilma.co puts UPC 850023615077 on the 2-bottle
-  // variant and leaves the 50ct single without a barcode. Do not glue
-  // the single bottle. No standalone Hilma mark file.
-  'hilma-sleep-support': 'Hilma',
-  // Nordic Zero Sugar Melatonin gummies: nordic.com returned 403 from
-  // this environment. No verified 3D pack for UPC 768990301889. No
-  // standalone Nordic Naturals mark file.
-  'nordic-zero-sugar-melatonin-gummies': 'Nordic Naturals',
-  // Immune Support night run 2026-09-25 5:30 PT batch 2.
-  // us.manukahealth.com lemon-ginger lozenge is the vitamin C SKU.
-  // Its barcode is not 895015002336. Do not glue that tin.
-  // Header wordmark SVG renders clipped. No standalone mark file.
-  'manuka-health-lemon-ginger-lozenges': 'Manuka Health',
-  // First Aid night run 2026-09-26 5:30 AM PT batch 1.
-  // Assured HC cream and lidocaine gel: DailyMed faces are flat labels.
-  // No standalone official Assured mark file on dollartree.com.
-  // Do not stay letters.
+  // Daytime re-attempt. DailyMed faces are flat labels.
+  // No standalone official Assured mark on dollartree.com.
   'assured-hydrocortisone-cream': 'Assured',
   'assured-lidocaine-pain-gel': 'Assured',
-  // Vitamins night run 2026-09-27 3:00 AM PT batch 1.
-  // Tried the SKU. No matching official 3D pack face. No standalone
-  // official mark file. Do not stay letters. 365 never uses the letter 3.
-  // Kirkland TiO2 twin has no barcode. Do not glue the no-TiO2 500-ct bottle.
-  'kirkland-daily-multi-tio2': 'Kirkland',
-  // One A Day Men's Health Formula row UPC 016500586944 is the 100-count.
-  // Retrieved Walmart and Walgreens faces are the 200-count bottle.
+  // Daytime re-attempt. UPC 016500586944 is the 100-count.
+  // Walmart, Walgreens, and Target faces are the 200-count bottle.
+  // oneaday.com nav logo 403. shop.oneaday.com header is the
+  // women's masterbrand, not this men's row. Do not glue either.
   'one-a-day-mens-coated': 'One A Day',
-  // OLLY Men's Multi canola row has no barcode. Live men's bottles are
-  // 858158005022 and 840160203749. Do not glue one of those.
-  'olly-mens-multi-canola': 'OLLY',
-  // Women's canola row UPC 852933008031 is the 65-serving variant.
-  // The variant image reads as a 90-gummy bottle (the 45-serving
-  // 858158005015 face). Do not glue that bottle.
-  'olly-womens-multi-canola': 'OLLY',
-  // Row UPC 031604028411 is a 90-count 12-pack. Live single on
-  // naturemade.com is 150-count barcode 031604041724. Do not glue it.
-  'nature-made-multi-gummies': 'Nature Made',
-  // Two pack barcodes. Do not glue one count. No standalone 365 mark.
+  // Daytime re-attempt. Two pack barcodes. Do not glue one count.
+  // wholefoodsmarket.com still has no standalone 365 mark. Never the letter 3.
   '365-adult-once-daily-multi': '365',
   '365-mens-one-daily-multi': '365',
   // Single UPCs. No clean official 3D face retrieved.
@@ -9163,6 +9154,18 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Refresh Tears PF multi-dose, 0.33 fl oz / 10 mL. UPC 300233110102.
   // Not the 30-vial carton.
   'refresh-tears-pf': catalogShot('refresh-tears-pf.jpg'),
+  // Daytime photo run — Sleep / Immune brand-text upgrades.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Zero Sugar Melatonin gummies, raspberry, 60 count.
+  // UPC 768990301889. Not a different count.
+  'nordic-zero-sugar-melatonin-gummies': catalogShot(
+    'nordic-zero-sugar-melatonin-gummies.jpg',
+  ),
+  // MGO 400+ lemon and ginger lozenges, 15 count.
+  // UPC 895015002336. This code is this tin.
+  'manuka-health-lemon-ginger-lozenges': catalogShot(
+    'manuka-health-lemon-ginger-lozenges.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11199,8 +11202,32 @@ assertBrandMark(
   'CVS Health',
   'cvs-mark.png',
 );
-assertBrandTextTile('olly-kids-sleep-coconut-only', 'OLLY', 'OLLY');
+assertBrandMark('olly-kids-sleep-coconut-only', 'OLLY', 'olly-mark.png');
 assertBrandTextTile('assured-headache-pm', 'Assured', 'Assured');
+assertBrandMark('natures-way-calmaid', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark('natures-way-5-htp', "Nature's Way", 'natures-way-mark.png');
+assertBrandMark(
+  'natures-way-cortisol-manager',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-st-johns-wort',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark(
+  'natures-way-valerian-root',
+  "Nature's Way",
+  'natures-way-mark.png',
+);
+assertBrandMark('excedrin-pm-headache', 'Excedrin', 'excedrin-mark.png');
+assertBrandMark('hilma-sleep-support', 'Hilma', 'hilma-mark.png');
+assertExactCarton(
+  'nordic-zero-sugar-melatonin-gummies',
+  'Nordic Naturals',
+  'nordic-zero-sugar-melatonin-gummies.jpg',
+);
 assertBrandMark(
   'equate-childrens-melatonin-liquid',
   'Equate',
@@ -14075,10 +14102,10 @@ assertBrandMark(
   'Amazon Elements',
   'amazon-elements-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'manuka-health-lemon-ginger-lozenges',
   'Manuka Health',
-  'Manuka Health',
+  'manuka-health-lemon-ginger-lozenges.jpg',
 );
 assertExactCarton(
   'now-c-1000-with-bioflavonoids-250',
@@ -14880,11 +14907,19 @@ assertExactCarton(
   'smartypants-kids-plus-multi-omegas.jpg',
 );
 assertBrandMark('megafood-one-daily', 'MegaFood', 'megafood-mark.png');
-assertBrandTextTile('kirkland-daily-multi-tio2', 'Kirkland Signature', 'Kirkland');
+assertBrandMark(
+  'kirkland-daily-multi-tio2',
+  'Kirkland Signature',
+  'kirkland-mark.png',
+);
 assertBrandTextTile('one-a-day-mens-coated', 'One A Day', 'One A Day');
-assertBrandTextTile('olly-mens-multi-canola', 'OLLY', 'OLLY');
-assertBrandTextTile('olly-womens-multi-canola', 'OLLY', 'OLLY');
-assertBrandTextTile('nature-made-multi-gummies', 'Nature Made', 'Nature Made');
+assertBrandMark('olly-mens-multi-canola', 'OLLY', 'olly-mark.png');
+assertBrandMark('olly-womens-multi-canola', 'OLLY', 'olly-mark.png');
+assertBrandMark(
+  'nature-made-multi-gummies',
+  'Nature Made',
+  'nature-made-mark.png',
+);
 assertBrandTextTile('365-adult-once-daily-multi', '365 Whole Foods Market', '365');
 assertBrandTextTile('365-mens-one-daily-multi', '365 Whole Foods Market', '365');
 assertBrandTextTile('365-calcium-d3-tio2', '365 Whole Foods Market', '365');
