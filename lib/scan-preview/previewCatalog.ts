@@ -892,7 +892,8 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // is an inactivated patch. Do not glue Coralite or Thera Plus lidocaine.
   // Official Assured wordmark is USPTO reg. 3106543 (Greenbrier
   // International, Dollar Tree, OTC class 005). dollartree.com has no
-  // standalone logo file. Per-id only. Leave assured-advanced-relief-eye.
+  // standalone logo file. Per-id only. The Allergies eye row uses
+  // the same file.
   'assured-hydrocortisone-cream': brandMark('assured-mark.png'),
   'assured-lidocaine-pain-gel': brandMark('assured-mark.png'),
   // Do not inherit the Swim-Ear bottle. Different brand.
@@ -2264,6 +2265,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Nighttime ointment. UPC 050428353721. DailyMed is a flat label.
   // Do not glue the Refresh P.M. carton.
   'cvs-health-nighttime-dry-eye': brandMark('cvs-mark.png'),
+  // Night photo run 2026-10-04 4:15 AM PT — Allergies brand-text.
+  // Tried the SKU. UPC 639277837691. DailyMed setid 593d1899
+  // (NDC 33992-8376-5) package photo is a flat label, not a 3D carton.
+  // Dollar Tree lists Visine Advance Relief, not this Assured bottle.
+  // Do not glue Visine or Assured Original Relief Eye (NDC 33992-9376).
+  // Official Assured wordmark already on disk (USPTO reg. 3106543).
+  // Not a text tile. Not a letter.
+  'assured-advanced-relief-eye': brandMark('assured-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2281,13 +2290,8 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // 365: wholefoodsmarket.com is product photos / DailyMed 2D only.
   // Alaway: brand-site faces are marketing composites with badges.
   // Amazon Basic Care / Basics: amazon.com PDPs not retrieved; mid-rebrand.
-  // Assured: Dollar Tree PDP not retrieved. No standalone official marks.
   '365-cetirizine-softgels-peg': '365',
   '365-diphenhydramine-softgels-peg': '365',
-  // Assured Advanced Relief Eye: UPC 639277837691. No 3D pack.
-  // dollartree.com still has no standalone Assured wordmark.
-  // Do not invent one. Text tile stays.
-  'assured-advanced-relief-eye': 'Assured',
   // Attempted Allergies leftovers — night run 2026-09-21 batch 1.
   // 365: wholefoodsmarket.com PDP not retrieved; DailyMed is 2D. Tile
   // text 365, never the letter 3.
@@ -10479,10 +10483,10 @@ assertBrandMark(
   'Amazon Basics',
   'amazon-basics-mark.png',
 );
-assertBrandTextTile(
+assertBrandMark(
   'assured-advanced-relief-eye',
   'Assured',
-  'Assured',
+  'assured-mark.png',
 );
 assertBrandTextTile(
   '365-loratadine-plain-ssg',
