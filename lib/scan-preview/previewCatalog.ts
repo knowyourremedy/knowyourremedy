@@ -10165,6 +10165,84 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Thyroid Energy, 180 veg capsules. Barcode 733739033697.
   'now-thyroid-energy-180': catalogShot('now-thyroid-energy-180.jpg'),
+  // Vitamins night run 2026-10-05 6:45 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // L-Carnosine 500 mg, 50 veg capsules. Barcode 733739000781.
+  'now-l-carnosine-500-mg-50': catalogShot('now-l-carnosine-500-mg-50.jpg'),
+  // Fo-Ti 560 mg, 100 veg capsules. Barcode 733739046758.
+  'now-fo-ti-560-mg-100': catalogShot('now-fo-ti-560-mg-100.jpg'),
+  // Pycnogenol with Bioflavonoids, 150 veg capsules. Barcode 733739032669.
+  // Not the 60-count.
+  'now-pycnogenol-with-bioflavonoids-150': catalogShot(
+    'now-pycnogenol-with-bioflavonoids-150.jpg',
+  ),
+  // Royal Jelly, 60 softgels, 303 mg. Barcode 733739025609.
+  // Not the 500 mg capsule.
+  'now-royal-jelly-60-733739025609': catalogShot(
+    'now-royal-jelly-60-733739025609.jpg',
+  ),
+  // L-Phenylalanine 500 mg, 120 veg capsules. Barcode 733739001320.
+  'now-l-phenylalanine-500-mg-120': catalogShot(
+    'now-l-phenylalanine-500-mg-120.jpg',
+  ),
+  // Certified Organic Ashwagandha Extract, 2 fl oz. Barcode 733739048219.
+  'now-certified-organic-ashwagandha-extract-2-fl-oz-59-ml': catalogShot(
+    'now-certified-organic-ashwagandha-extract-2-fl-oz-59-ml.jpg',
+  ),
+  // Kava Kava Extract with glycerin, 2 fl oz. Barcode 733739048936.
+  'now-kava-kava-extract-with-glycerin-2-fl-oz-59-ml': catalogShot(
+    'now-kava-kava-extract-with-glycerin-2-fl-oz-59-ml.jpg',
+  ),
+  // Butterbur with Feverfew, 60 veg capsules. Barcode 733739046024.
+  'now-butterbur-with-feverfew-60': catalogShot(
+    'now-butterbur-with-feverfew-60.jpg',
+  ),
+  // Sports Arginine & Citrulline, 240 veg capsules. Barcode 733739000385.
+  // Not the 120-count.
+  'now-sports-arginine-citrulline-240': catalogShot(
+    'now-sports-arginine-citrulline-240.jpg',
+  ),
+  // Coral Calcium Plus, 250 veg capsules. Barcode 733739012814.
+  // Not the 100-count.
+  'now-coral-calcium-plus-250': catalogShot('now-coral-calcium-plus-250.jpg'),
+  // Ascorbyl Palmitate 500 mg, 100 veg capsules. Barcode 733739006080.
+  'now-ascorbyl-palmitate-500-mg-100': catalogShot(
+    'now-ascorbyl-palmitate-500-mg-100.jpg',
+  ),
+  // Sports Amino Complete, 120 veg capsules. Barcode 733739000118.
+  // Not the 360-count.
+  'now-sports-amino-complete-120': catalogShot(
+    'now-sports-amino-complete-120.jpg',
+  ),
+  // Instant Energy B12, 75 packets. Barcode 733739004970.
+  'now-instant-energy-b12-75-packets-0p035': catalogShot(
+    'now-instant-energy-b12-75-packets-0p035.jpg',
+  ),
+  // Black Walnut Hulls 500 mg, 100 veg capsules. Barcode 733739046062.
+  'now-black-walnut-hulls-500-mg-100': catalogShot(
+    'now-black-walnut-hulls-500-mg-100.jpg',
+  ),
+  // Sports Branched-Chain Amino Acids, 240 veg capsules. Barcode 733739000545.
+  'now-sports-branched-chain-amino-acids-240': catalogShot(
+    'now-sports-branched-chain-amino-acids-240.jpg',
+  ),
+  // Vitamin D-3 2,000 IU, 30 softgels. Barcode 733739003553.
+  'now-vitamin-d-3-2-000-iu-30': catalogShot('now-vitamin-d-3-2-000-iu-30.jpg'),
+  // Pycnogenol with Bioflavonoids, 60 veg capsules. Barcode 733739032645.
+  // Not the 150-count.
+  'now-pycnogenol-with-bioflavonoids-60': catalogShot(
+    'now-pycnogenol-with-bioflavonoids-60.jpg',
+  ),
+  // Cayenne 500 mg, 100 veg capsules. Barcode 733739046253.
+  // Not the 250-count.
+  'now-cayenne-500-mg-100': catalogShot('now-cayenne-500-mg-100.jpg'),
+  // Energy, 90 veg capsules. Barcode 733739033260.
+  'now-energy-90': catalogShot('now-energy-90.jpg'),
+  // Flush-Free Niacin 250 mg, 180 veg capsules. Barcode 733739004840.
+  'now-flush-free-niacin-250-mg-180': catalogShot(
+    'now-flush-free-niacin-250-mg-180.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10658,6 +10736,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-05 5:30 AM PT batch 1.
   // 250-count shares the 100-count E-400 formula. Do not inherit the 100.
   'now-e-400-268-mg-400-iu-250',
+  // Vitamins night run 2026-10-05 6:45 AM PT batch 1.
+  // 150-count shares the 60-count Pycnogenol with Bioflavonoids formula.
+  // Do not inherit the 60.
+  'now-pycnogenol-with-bioflavonoids-150',
 ]);
 
 export function previewOverlayImage(
@@ -16966,6 +17048,90 @@ assertExactCarton(
   'now-super-omega-epa-fish-oil-120.jpg',
 );
 assertExactCarton('now-thyroid-energy-180', 'NOW', 'now-thyroid-energy-180.jpg');
+assertExactCarton('now-l-carnosine-500-mg-50', 'NOW', 'now-l-carnosine-500-mg-50.jpg');
+assertExactCarton('now-fo-ti-560-mg-100', 'NOW', 'now-fo-ti-560-mg-100.jpg');
+assertExactCarton(
+  'now-pycnogenol-with-bioflavonoids-150',
+  'NOW',
+  'now-pycnogenol-with-bioflavonoids-150.jpg',
+);
+assertExactCarton(
+  'now-royal-jelly-60-733739025609',
+  'NOW',
+  'now-royal-jelly-60-733739025609.jpg',
+);
+assertExactCarton(
+  'now-l-phenylalanine-500-mg-120',
+  'NOW',
+  'now-l-phenylalanine-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-certified-organic-ashwagandha-extract-2-fl-oz-59-ml',
+  'NOW',
+  'now-certified-organic-ashwagandha-extract-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-kava-kava-extract-with-glycerin-2-fl-oz-59-ml',
+  'NOW',
+  'now-kava-kava-extract-with-glycerin-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-butterbur-with-feverfew-60',
+  'NOW',
+  'now-butterbur-with-feverfew-60.jpg',
+);
+assertExactCarton(
+  'now-sports-arginine-citrulline-240',
+  'NOW',
+  'now-sports-arginine-citrulline-240.jpg',
+);
+assertExactCarton(
+  'now-coral-calcium-plus-250',
+  'NOW',
+  'now-coral-calcium-plus-250.jpg',
+);
+assertExactCarton(
+  'now-ascorbyl-palmitate-500-mg-100',
+  'NOW',
+  'now-ascorbyl-palmitate-500-mg-100.jpg',
+);
+assertExactCarton(
+  'now-sports-amino-complete-120',
+  'NOW',
+  'now-sports-amino-complete-120.jpg',
+);
+assertExactCarton(
+  'now-instant-energy-b12-75-packets-0p035',
+  'NOW',
+  'now-instant-energy-b12-75-packets-0p035.jpg',
+);
+assertExactCarton(
+  'now-black-walnut-hulls-500-mg-100',
+  'NOW',
+  'now-black-walnut-hulls-500-mg-100.jpg',
+);
+assertExactCarton(
+  'now-sports-branched-chain-amino-acids-240',
+  'NOW',
+  'now-sports-branched-chain-amino-acids-240.jpg',
+);
+assertExactCarton(
+  'now-vitamin-d-3-2-000-iu-30',
+  'NOW',
+  'now-vitamin-d-3-2-000-iu-30.jpg',
+);
+assertExactCarton(
+  'now-pycnogenol-with-bioflavonoids-60',
+  'NOW',
+  'now-pycnogenol-with-bioflavonoids-60.jpg',
+);
+assertExactCarton('now-cayenne-500-mg-100', 'NOW', 'now-cayenne-500-mg-100.jpg');
+assertExactCarton('now-energy-90', 'NOW', 'now-energy-90.jpg');
+assertExactCarton(
+  'now-flush-free-niacin-250-mg-180',
+  'NOW',
+  'now-flush-free-niacin-250-mg-180.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -17377,8 +17543,68 @@ assertExactCarton('now-thyroid-energy-180', 'NOW', 'now-thyroid-energy-180.jpg')
     formulaId: 'now-royal-jelly-60',
     brand: 'NOW',
   });
-  if (royalSoftgel?.url.endsWith('/now-royal-jelly-60.jpg')) {
-    throw new Error('Royal jelly softgel 733739025609 must not inherit the capsule');
+  if (
+    !royalSoftgel?.url.endsWith('/now-royal-jelly-60-733739025609.jpg')
+    || !royalSoftgel.verifiedSku
+  ) {
+    throw new Error('Royal jelly softgel 733739025609 must stay its own carton, not the capsule');
+  }
+  const royalCapsule = previewOverlayImage({
+    id: 'now-royal-jelly-60',
+    formulaId: 'now-royal-jelly-60',
+    brand: 'NOW',
+  });
+  if (!royalCapsule?.url.endsWith('/now-royal-jelly-60.jpg') || !royalCapsule.verifiedSku) {
+    throw new Error('Royal jelly 500 mg capsules must stay their own carton, not the softgel');
+  }
+  const pyc150 = previewOverlayImage({
+    id: 'now-pycnogenol-with-bioflavonoids-150',
+    formulaId: 'now-pycnogenol-with-bioflavonoids-60',
+    brand: 'NOW',
+  });
+  if (
+    !pyc150?.url.endsWith('/now-pycnogenol-with-bioflavonoids-150.jpg')
+    || !pyc150.verifiedSku
+  ) {
+    throw new Error('Pycnogenol with Bioflavonoids 150 must stay its own carton, not the 60-count');
+  }
+  const pyc60 = previewOverlayImage({
+    id: 'now-pycnogenol-with-bioflavonoids-60',
+    formulaId: 'now-pycnogenol-with-bioflavonoids-60',
+    brand: 'NOW',
+  });
+  if (
+    !pyc60?.url.endsWith('/now-pycnogenol-with-bioflavonoids-60.jpg')
+    || !pyc60.verifiedSku
+  ) {
+    throw new Error('Pycnogenol with Bioflavonoids 60 must stay its own carton, not the 150-count');
+  }
+  const arg120 = previewOverlayImage({
+    id: 'now-sports-arginine-citrulline-120',
+    formulaId: 'now-sports-arginine-citrulline-120',
+    brand: 'NOW',
+  });
+  if (arg120?.url.endsWith('/now-sports-arginine-citrulline-240.jpg')) {
+    throw new Error('Arginine & Citrulline 120 must not inherit the 240-count carton');
+  }
+  const coral100 = previewOverlayImage({
+    id: 'now-coral-calcium-plus-100',
+    formulaId: 'now-coral-calcium-plus-100',
+    brand: 'NOW',
+  });
+  if (coral100?.url.endsWith('/now-coral-calcium-plus-250.jpg')) {
+    throw new Error('Coral Calcium Plus 100 must not inherit the 250-count carton');
+  }
+  const cayenne250 = previewOverlayImage({
+    id: 'now-cayenne-500-mg-250',
+    formulaId: 'now-cayenne-500-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !cayenne250?.url.endsWith('/now-cayenne-500-mg-250.jpg')
+    || !cayenne250.verifiedSku
+  ) {
+    throw new Error('Cayenne 250 must stay its own carton, not the 100-count');
   }
   const dopa180 = previewOverlayImage({
     id: 'now-dopa-mucuna-180',
