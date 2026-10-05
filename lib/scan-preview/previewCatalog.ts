@@ -9746,6 +9746,67 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-flax-oil-1-000-mg-120-veggie-softgels': catalogShot(
     'now-flax-oil-1-000-mg-120-veggie-softgels.jpg',
   ),
+  // Vitamins night run 2026-10-05 3:00 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Apple Cider Vinegar 450 mg, 180 veg capsules. Barcode 733739033178.
+  'now-apple-cider-vinegar-450-mg-180': catalogShot(
+    'now-apple-cider-vinegar-450-mg-180.jpg',
+  ),
+  // Castor Oil, 120 softgels. Barcode 733739017239.
+  'now-castor-oil-120': catalogShot('now-castor-oil-120.jpg'),
+  // Rhodiola 500 mg, 120 veg capsules. Barcode 733739047670.
+  'now-rhodiola-500-mg-120': catalogShot('now-rhodiola-500-mg-120.jpg'),
+  // Super Primrose, 60 softgels. Barcode 733739017550.
+  'now-super-primrose-60': catalogShot('now-super-primrose-60.jpg'),
+  // Saw Palmetto Extract 160 mg, 120 softgels. Barcode 733739047427.
+  // Not the 240-count.
+  'now-saw-palmetto-extract-160-mg-120': catalogShot(
+    'now-saw-palmetto-extract-160-mg-120.jpg',
+  ),
+  // Odorless Garlic concentrated extract, 25 mg, 100 softgels.
+  // Barcode 733739018076.
+  'now-odorless-garlic-concentrated-extract-100': catalogShot(
+    'now-odorless-garlic-concentrated-extract-100.jpg',
+  ),
+  // Maca 500 mg, 100 veg capsules. Barcode 733739047212. Not the 250-count.
+  'now-maca-500-mg-100': catalogShot('now-maca-500-mg-100.jpg'),
+  // Chewable L-Theanine, berry, 90 chewables. Barcode 733739001443.
+  'now-chewable-l-theanine-berry-90-chewables': catalogShot(
+    'now-chewable-l-theanine-berry-90-chewables.jpg',
+  ),
+  // Alfalfa 650 mg, 500 tablets. Barcode 733739026224. Not the 250-count.
+  'now-alfalfa-650-mg-500': catalogShot('now-alfalfa-650-mg-500.jpg'),
+  // Choline 300 mg, 100 veg capsules. Barcode 733739005069.
+  'now-choline-300-mg-100': catalogShot('now-choline-300-mg-100.jpg'),
+  // Cayenne 500 mg, 250 veg capsules. Barcode 733739046277. Not the 100-count.
+  'now-cayenne-500-mg-250': catalogShot('now-cayenne-500-mg-250.jpg'),
+  // Borage Oil, 60 softgels. Barcode 733739017208. Not the 120-count.
+  'now-borage-oil-60': catalogShot('now-borage-oil-60.jpg'),
+  // Methyl B-12 10,000 mcg, 60 lozenges. Barcode 733739005014.
+  'now-methyl-b-12-10-000-mcg-60': catalogShot(
+    'now-methyl-b-12-10-000-mcg-60.jpg',
+  ),
+  // Policosanol, 90 veg capsules. Barcode 733739018243.
+  'now-policosanol-90': catalogShot('now-policosanol-90.jpg'),
+  // Evening Primrose Oil 500 mg, 100 softgels. Barcode 733739017505.
+  // Not the 250-count.
+  'now-evening-primrose-oil-500-mg-100': catalogShot(
+    'now-evening-primrose-oil-500-mg-100.jpg',
+  ),
+  // Brain Elevate, 60 veg capsules. Barcode 733739033031. Not the 120-count.
+  'now-brain-elevate-60': catalogShot('now-brain-elevate-60.jpg'),
+  // Kidney Cleanse, 90 veg capsules. Barcode 733739024633.
+  'now-kidney-cleanse-90': catalogShot('now-kidney-cleanse-90.jpg'),
+  // Non-GMO Lecithin, 400 softgels. Barcode 733739022141. Not the 100-count.
+  'now-non-gmo-lecithin-400': catalogShot('now-non-gmo-lecithin-400.jpg'),
+  // True Calm, 90 veg capsules. Barcode 733739001559.
+  'now-true-calm-90': catalogShot('now-true-calm-90.jpg'),
+  // E-200 with mixed tocopherols, 134 mg (200 IU), 100 softgels.
+  // Barcode 733739008800.
+  'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100': catalogShot(
+    'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10233,6 +10294,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 303 mg softgels, barcode 733739025609. Do not inherit the
   // 500 mg capsule face (733739025654).
   'now-royal-jelly-60-733739025609',
+  // Vitamins night run 2026-10-05 3:00 AM PT batch 1.
+  // 240-count shares the 120-count saw palmetto formula. Do not inherit the 120.
+  'now-saw-palmetto-extract-160-mg-240',
 ]);
 
 export function previewOverlayImage(
@@ -16115,6 +16179,68 @@ assertExactCarton(
   'NOW',
   'now-flax-oil-1-000-mg-120-veggie-softgels.jpg',
 );
+assertExactCarton(
+  'now-apple-cider-vinegar-450-mg-180',
+  'NOW',
+  'now-apple-cider-vinegar-450-mg-180.jpg',
+);
+assertExactCarton('now-castor-oil-120', 'NOW', 'now-castor-oil-120.jpg');
+assertExactCarton('now-rhodiola-500-mg-120', 'NOW', 'now-rhodiola-500-mg-120.jpg');
+assertExactCarton('now-super-primrose-60', 'NOW', 'now-super-primrose-60.jpg');
+assertExactCarton(
+  'now-saw-palmetto-extract-160-mg-120',
+  'NOW',
+  'now-saw-palmetto-extract-160-mg-120.jpg',
+);
+assertExactCarton(
+  'now-odorless-garlic-concentrated-extract-100',
+  'NOW',
+  'now-odorless-garlic-concentrated-extract-100.jpg',
+);
+assertExactCarton('now-maca-500-mg-100', 'NOW', 'now-maca-500-mg-100.jpg');
+assertExactCarton(
+  'now-chewable-l-theanine-berry-90-chewables',
+  'NOW',
+  'now-chewable-l-theanine-berry-90-chewables.jpg',
+);
+assertExactCarton('now-alfalfa-650-mg-500', 'NOW', 'now-alfalfa-650-mg-500.jpg');
+assertExactCarton('now-choline-300-mg-100', 'NOW', 'now-choline-300-mg-100.jpg');
+assertExactCarton('now-cayenne-500-mg-250', 'NOW', 'now-cayenne-500-mg-250.jpg');
+assertExactCarton('now-borage-oil-60', 'NOW', 'now-borage-oil-60.jpg');
+assertExactCarton(
+  'now-methyl-b-12-10-000-mcg-60',
+  'NOW',
+  'now-methyl-b-12-10-000-mcg-60.jpg',
+);
+assertExactCarton('now-policosanol-90', 'NOW', 'now-policosanol-90.jpg');
+assertExactCarton(
+  'now-evening-primrose-oil-500-mg-100',
+  'NOW',
+  'now-evening-primrose-oil-500-mg-100.jpg',
+);
+assertExactCarton('now-brain-elevate-60', 'NOW', 'now-brain-elevate-60.jpg');
+assertExactCarton('now-kidney-cleanse-90', 'NOW', 'now-kidney-cleanse-90.jpg');
+assertExactCarton(
+  'now-non-gmo-lecithin-400',
+  'NOW',
+  'now-non-gmo-lecithin-400.jpg',
+);
+assertExactCarton('now-true-calm-90', 'NOW', 'now-true-calm-90.jpg');
+assertExactCarton(
+  'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100',
+  'NOW',
+  'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100.jpg',
+);
+{
+  const saw240 = previewOverlayImage({
+    id: 'now-saw-palmetto-extract-160-mg-240',
+    formulaId: 'now-saw-palmetto-extract-160-mg-120',
+    brand: 'NOW',
+  });
+  if (saw240?.url.endsWith('/now-saw-palmetto-extract-160-mg-120.jpg')) {
+    throw new Error('Saw palmetto 240 must not inherit the 120-count carton');
+  }
+}
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
