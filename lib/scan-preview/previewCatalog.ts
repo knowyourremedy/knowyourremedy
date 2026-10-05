@@ -9683,6 +9683,69 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-cinnamon-bark-120': catalogShot('now-cinnamon-bark-120.jpg'),
   // Serrapeptase, 60 veg capsules. Barcode 733739029737.
   'now-serrapeptase-60': catalogShot('now-serrapeptase-60.jpg'),
+  // Vitamins night run 2026-10-05 1:45 AM PT batch 2.
+  // Vitacost pack face for that UPC, except L-Glutamine 240.
+  // nowfoods.com was blocked. Per-id only. Not a sibling count.
+  // Phosphatidyl Serine, 60 veg capsules. Barcode 733739023803.
+  // Not the 120-count.
+  'now-phosphatidyl-serine-60': catalogShot('now-phosphatidyl-serine-60.jpg'),
+  // Glutathione 250 mg, 60 veg capsules. Barcode 733739000965.
+  'now-glutathione-250-mg-60': catalogShot('now-glutathione-250-mg-60.jpg'),
+  // Selenium 200 mcg, 90 veg capsules. Barcode 733739014856.
+  'now-selenium-200-mcg-90': catalogShot('now-selenium-200-mcg-90.jpg'),
+  // Sports Creatine Monohydrate powder, 8 oz. Barcode 733739020307.
+  // Not a capsule bottle.
+  'now-sports-creatine-monohydrate-8': catalogShot(
+    'now-sports-creatine-monohydrate-8.jpg',
+  ),
+  // Milk Thistle Extract, 50 veg capsules. Barcode 733739047380.
+  'now-milk-thistle-extract-50': catalogShot('now-milk-thistle-extract-50.jpg'),
+  // Resveratrol 350 mg, 60 veg capsules. Barcode 733739033864.
+  'now-resveratrol-350-mg-60': catalogShot('now-resveratrol-350-mg-60.jpg'),
+  // B-12 1,000 mcg, 250 lozenges. Barcode 733739004680.
+  'now-b-12-250': catalogShot('now-b-12-250.jpg'),
+  // Lycopene 10 mg, 60 softgels. Barcode 733739030603. Not the 120-count.
+  'now-lycopene-10-mg-60': catalogShot('now-lycopene-10-mg-60.jpg'),
+  // Dopa Mucuna, 180 veg capsules. Barcode 733739030931. Not the 90-count.
+  'now-dopa-mucuna-180': catalogShot('now-dopa-mucuna-180.jpg'),
+  // Saffron 50 mg, 60 veg capsules. Barcode 733739047915.
+  'now-saffron-50-mg-60': catalogShot('now-saffron-50-mg-60.jpg'),
+  // L-Carnitine 500 mg, 180 veg capsules. Barcode 733739000736.
+  // Not the 60-count.
+  'now-l-carnitine-500-mg-180': catalogShot('now-l-carnitine-500-mg-180.jpg'),
+  // Sports L-Glutamine 1,000 mg, 240 veg capsules. Barcode 733739000910.
+  // Vitacost's image on that UPC is the 120-count bottle. Do not glue it.
+  // HerbsPro pack face is the 240-count. Not the 120-count.
+  'now-sports-l-glutamine-1-000-mg-240': catalogShot(
+    'now-sports-l-glutamine-1-000-mg-240.jpg',
+  ),
+  // Alpha Lipoic Acid 250 mg, 60 veg capsules. Barcode 733739030429.
+  // Not the 600 mg bottle.
+  'now-alpha-lipoic-acid-250-mg-60': catalogShot(
+    'now-alpha-lipoic-acid-250-mg-60.jpg',
+  ),
+  // Candida Support, 180 veg capsules. Barcode 733739033192.
+  'now-candida-support-180': catalogShot('now-candida-support-180.jpg'),
+  // Royal Jelly, 60 capsules (500 mg). Barcode 733739025654.
+  // Front says 1,500 mg equivalency. Not the 303 mg softgel.
+  'now-royal-jelly-60': catalogShot('now-royal-jelly-60.jpg'),
+  // Evening Primrose Oil 500 mg, 250 softgels. Barcode 733739017529.
+  // Not the 100-count.
+  'now-evening-primrose-oil-500-mg-250': catalogShot(
+    'now-evening-primrose-oil-500-mg-250.jpg',
+  ),
+  // Sports Kre-Alkalyn Creatine, 240 veg capsules. Barcode 733739020536.
+  'now-sports-kre-alkalyn-creatine-240': catalogShot(
+    'now-sports-kre-alkalyn-creatine-240.jpg',
+  ),
+  // PABA 500 mg, 100 veg capsules. Barcode 733739004857.
+  'now-paba-500-mg-100': catalogShot('now-paba-500-mg-100.jpg'),
+  // Calcium Citrate Caps, 240 veg capsules. Barcode 733739012371.
+  'now-calcium-citrate-caps-240': catalogShot('now-calcium-citrate-caps-240.jpg'),
+  // Flax Oil 1,000 mg, 120 veggie softgels. Barcode 733739017734.
+  'now-flax-oil-1-000-mg-120-veggie-softgels': catalogShot(
+    'now-flax-oil-1-000-mg-120-veggie-softgels.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10166,6 +10229,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Different count or a different barcode. Do not inherit the new face.
   'now-non-gmo-lecithin-400',
   'now-pycnogenol-60-733739031693',
+  // Vitamins night run 2026-10-05 1:45 AM PT batch 2.
+  // 303 mg softgels, barcode 733739025609. Do not inherit the
+  // 500 mg capsule face (733739025654).
+  'now-royal-jelly-60-733739025609',
 ]);
 
 export function previewOverlayImage(
@@ -15980,6 +16047,74 @@ assertExactCarton(
 );
 assertExactCarton('now-cinnamon-bark-120', 'NOW', 'now-cinnamon-bark-120.jpg');
 assertExactCarton('now-serrapeptase-60', 'NOW', 'now-serrapeptase-60.jpg');
+assertExactCarton(
+  'now-phosphatidyl-serine-60',
+  'NOW',
+  'now-phosphatidyl-serine-60.jpg',
+);
+assertExactCarton(
+  'now-glutathione-250-mg-60',
+  'NOW',
+  'now-glutathione-250-mg-60.jpg',
+);
+assertExactCarton('now-selenium-200-mcg-90', 'NOW', 'now-selenium-200-mcg-90.jpg');
+assertExactCarton(
+  'now-sports-creatine-monohydrate-8',
+  'NOW',
+  'now-sports-creatine-monohydrate-8.jpg',
+);
+assertExactCarton(
+  'now-milk-thistle-extract-50',
+  'NOW',
+  'now-milk-thistle-extract-50.jpg',
+);
+assertExactCarton(
+  'now-resveratrol-350-mg-60',
+  'NOW',
+  'now-resveratrol-350-mg-60.jpg',
+);
+assertExactCarton('now-b-12-250', 'NOW', 'now-b-12-250.jpg');
+assertExactCarton('now-lycopene-10-mg-60', 'NOW', 'now-lycopene-10-mg-60.jpg');
+assertExactCarton('now-dopa-mucuna-180', 'NOW', 'now-dopa-mucuna-180.jpg');
+assertExactCarton('now-saffron-50-mg-60', 'NOW', 'now-saffron-50-mg-60.jpg');
+assertExactCarton(
+  'now-l-carnitine-500-mg-180',
+  'NOW',
+  'now-l-carnitine-500-mg-180.jpg',
+);
+assertExactCarton(
+  'now-sports-l-glutamine-1-000-mg-240',
+  'NOW',
+  'now-sports-l-glutamine-1-000-mg-240.jpg',
+);
+assertExactCarton(
+  'now-alpha-lipoic-acid-250-mg-60',
+  'NOW',
+  'now-alpha-lipoic-acid-250-mg-60.jpg',
+);
+assertExactCarton('now-candida-support-180', 'NOW', 'now-candida-support-180.jpg');
+assertExactCarton('now-royal-jelly-60', 'NOW', 'now-royal-jelly-60.jpg');
+assertExactCarton(
+  'now-evening-primrose-oil-500-mg-250',
+  'NOW',
+  'now-evening-primrose-oil-500-mg-250.jpg',
+);
+assertExactCarton(
+  'now-sports-kre-alkalyn-creatine-240',
+  'NOW',
+  'now-sports-kre-alkalyn-creatine-240.jpg',
+);
+assertExactCarton('now-paba-500-mg-100', 'NOW', 'now-paba-500-mg-100.jpg');
+assertExactCarton(
+  'now-calcium-citrate-caps-240',
+  'NOW',
+  'now-calcium-citrate-caps-240.jpg',
+);
+assertExactCarton(
+  'now-flax-oil-1-000-mg-120-veggie-softgels',
+  'NOW',
+  'now-flax-oil-1-000-mg-120-veggie-softgels.jpg',
+);
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -16273,6 +16408,63 @@ assertExactCarton('now-serrapeptase-60', 'NOW', 'now-serrapeptase-60.jpg');
     || !cascara250.verifiedSku
   ) {
     throw new Error('Cascara 250 must stay its own carton, not the 100-count');
+  }
+  const ps120 = previewOverlayImage({
+    id: 'now-phosphatidyl-serine-120',
+    formulaId: 'now-phosphatidyl-serine-60',
+    brand: 'NOW',
+  });
+  if (
+    !ps120?.url.endsWith('/now-phosphatidyl-serine-120.jpg')
+    || !ps120.verifiedSku
+  ) {
+    throw new Error('Phosphatidyl serine 120 must stay its own carton, not the 60-count');
+  }
+  const lyc120 = previewOverlayImage({
+    id: 'now-lycopene-10-mg-120',
+    formulaId: 'now-lycopene-10-mg-60',
+    brand: 'NOW',
+  });
+  if (!lyc120?.url.endsWith('/now-lycopene-10-mg-120.jpg') || !lyc120.verifiedSku) {
+    throw new Error('Lycopene 120 must stay its own carton, not the 60-count');
+  }
+  const royalSoftgel = previewOverlayImage({
+    id: 'now-royal-jelly-60-733739025609',
+    formulaId: 'now-royal-jelly-60',
+    brand: 'NOW',
+  });
+  if (royalSoftgel?.url.endsWith('/now-royal-jelly-60.jpg')) {
+    throw new Error('Royal jelly softgel 733739025609 must not inherit the capsule');
+  }
+  const dopa180 = previewOverlayImage({
+    id: 'now-dopa-mucuna-180',
+    formulaId: 'now-dopa-mucuna-90',
+    brand: 'NOW',
+  });
+  if (!dopa180?.url.endsWith('/now-dopa-mucuna-180.jpg') || !dopa180.verifiedSku) {
+    throw new Error('Dopa Mucuna 180 must stay its own carton, not the 90-count');
+  }
+  const carnitine180 = previewOverlayImage({
+    id: 'now-l-carnitine-500-mg-180',
+    formulaId: 'now-l-carnitine-500-mg-60',
+    brand: 'NOW',
+  });
+  if (
+    !carnitine180?.url.endsWith('/now-l-carnitine-500-mg-180.jpg')
+    || !carnitine180.verifiedSku
+  ) {
+    throw new Error('L-Carnitine 180 must stay its own carton, not the 60-count');
+  }
+  const glutamine240 = previewOverlayImage({
+    id: 'now-sports-l-glutamine-1-000-mg-240',
+    formulaId: 'now-sports-l-glutamine-1-000-mg-120',
+    brand: 'NOW',
+  });
+  if (
+    !glutamine240?.url.endsWith('/now-sports-l-glutamine-1-000-mg-240.jpg')
+    || !glutamine240.verifiedSku
+  ) {
+    throw new Error('L-Glutamine 240 must stay its own carton, not the 120-count');
   }
 }
 assertExactCarton(
