@@ -9626,6 +9626,63 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-l-carnosine-500-mg-100': catalogShot('now-l-carnosine-500-mg-100.jpg'),
   // Folic acid 800 mcg, 250 tablets. Barcode 733739004765.
   'now-folic-acid-250': catalogShot('now-folic-acid-250.jpg'),
+  // Vitamins night run 2026-10-05 1:45 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count or a second barcode.
+  // Brain Elevate, 120 veg capsules. Barcode 733739033048.
+  'now-brain-elevate-120': catalogShot('now-brain-elevate-120.jpg'),
+  // Magnesium Transporters, 180 veg capsules. Barcode 733739013057.
+  'now-magnesium-transporters-180': catalogShot(
+    'now-magnesium-transporters-180.jpg',
+  ),
+  // Acetyl-L-Carnitine 500 mg, 100 veg capsules. Barcode 733739000767.
+  'now-acetyl-l-carnitine-500-mg-100': catalogShot(
+    'now-acetyl-l-carnitine-500-mg-100.jpg',
+  ),
+  // Non-GMO Lecithin, 100 softgels. Barcode 733739022103. Not the 400-count.
+  'now-non-gmo-lecithin-100': catalogShot('now-non-gmo-lecithin-100.jpg'),
+  // Chlorophyll, 90 capsules. Barcode 733739026453.
+  'now-chlorophyll-90': catalogShot('now-chlorophyll-90.jpg'),
+  // Cordyceps 750 mg, 90 veg capsules. Barcode 733739030054.
+  'now-cordyceps-90': catalogShot('now-cordyceps-90.jpg'),
+  // GABA 750 mg, 100 veg capsules. Barcode 733739000897. Not the 200-count.
+  'now-gaba-750-mg-100': catalogShot('now-gaba-750-mg-100.jpg'),
+  // DMAE 250 mg, 100 veg capsules. Barcode 733739030900.
+  'now-dmae-250-mg-100': catalogShot('now-dmae-250-mg-100.jpg'),
+  // Sports Amino Complete, 360 capsules. Barcode 733739000132. Not the 120.
+  'now-sports-amino-complete-360': catalogShot(
+    'now-sports-amino-complete-360.jpg',
+  ),
+  // Coral Calcium 1,000 mg, 250 capsules. Barcode 733739012791.
+  'now-coral-calcium-1-000-mg-250': catalogShot(
+    'now-coral-calcium-1-000-mg-250.jpg',
+  ),
+  // B-12 2,000 mcg, 100 lozenges. Barcode 733739004598.
+  'now-b-12-2-000-mcg-100': catalogShot('now-b-12-2-000-mcg-100.jpg'),
+  // Methyl B-12 5,000 mcg, 120 lozenges. Barcode 733739004932.
+  // Not the 60-count (733739004963).
+  'now-methyl-b-12-120': catalogShot('now-methyl-b-12-120.jpg'),
+  // Soy Isoflavones, 120 veg capsules. Barcode 733739032881.
+  'now-soy-isoflavones-120': catalogShot('now-soy-isoflavones-120.jpg'),
+  // Pycnogenol, 60 veg capsules. Barcode 733739032676.
+  // Not barcode 733739031693.
+  'now-pycnogenol-60': catalogShot('now-pycnogenol-60.jpg'),
+  // Krill Oil 500 mg, 60 softgels. Barcode 733739016256.
+  'now-krill-oil-500-mg-60': catalogShot('now-krill-oil-500-mg-60.jpg'),
+  // Magnesium Citrate, 90 softgels. Barcode 733739012975. Not the 180-count.
+  'now-magnesium-citrate-90': catalogShot('now-magnesium-citrate-90.jpg'),
+  // Daily Vits, 30 veg capsules. Barcode 733739037756.
+  'now-daily-vits-30': catalogShot('now-daily-vits-30.jpg'),
+  // Cascara Sagrada 450 mg, 250 veg capsules. Barcode 733739046239.
+  // Not the 100-count.
+  'now-cascara-sagrada-450-mg-250': catalogShot(
+    'now-cascara-sagrada-450-mg-250.jpg',
+  ),
+  // Cinnamon Bark 600 mg, 120 veg capsules. Barcode 733739046369.
+  // Not the 240-count.
+  'now-cinnamon-bark-120': catalogShot('now-cinnamon-bark-120.jpg'),
+  // Serrapeptase, 60 veg capsules. Barcode 733739029737.
+  'now-serrapeptase-60': catalogShot('now-serrapeptase-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10105,6 +10162,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Same 60-count name, different barcode and strength. Do not inherit
   // the 600 mg bottle (733739030467).
   'now-alpha-lipoic-acid-60-733739030405',
+  // Vitamins night run 2026-10-05 1:45 AM PT batch 1.
+  // Different count or a different barcode. Do not inherit the new face.
+  'now-non-gmo-lecithin-400',
+  'now-pycnogenol-60-733739031693',
 ]);
 
 export function previewOverlayImage(
@@ -15879,6 +15940,46 @@ assertExactCarton(
   'now-l-carnosine-500-mg-100.jpg',
 );
 assertExactCarton('now-folic-acid-250', 'NOW', 'now-folic-acid-250.jpg');
+assertExactCarton('now-brain-elevate-120', 'NOW', 'now-brain-elevate-120.jpg');
+assertExactCarton(
+  'now-magnesium-transporters-180',
+  'NOW',
+  'now-magnesium-transporters-180.jpg',
+);
+assertExactCarton(
+  'now-acetyl-l-carnitine-500-mg-100',
+  'NOW',
+  'now-acetyl-l-carnitine-500-mg-100.jpg',
+);
+assertExactCarton('now-non-gmo-lecithin-100', 'NOW', 'now-non-gmo-lecithin-100.jpg');
+assertExactCarton('now-chlorophyll-90', 'NOW', 'now-chlorophyll-90.jpg');
+assertExactCarton('now-cordyceps-90', 'NOW', 'now-cordyceps-90.jpg');
+assertExactCarton('now-gaba-750-mg-100', 'NOW', 'now-gaba-750-mg-100.jpg');
+assertExactCarton('now-dmae-250-mg-100', 'NOW', 'now-dmae-250-mg-100.jpg');
+assertExactCarton(
+  'now-sports-amino-complete-360',
+  'NOW',
+  'now-sports-amino-complete-360.jpg',
+);
+assertExactCarton(
+  'now-coral-calcium-1-000-mg-250',
+  'NOW',
+  'now-coral-calcium-1-000-mg-250.jpg',
+);
+assertExactCarton('now-b-12-2-000-mcg-100', 'NOW', 'now-b-12-2-000-mcg-100.jpg');
+assertExactCarton('now-methyl-b-12-120', 'NOW', 'now-methyl-b-12-120.jpg');
+assertExactCarton('now-soy-isoflavones-120', 'NOW', 'now-soy-isoflavones-120.jpg');
+assertExactCarton('now-pycnogenol-60', 'NOW', 'now-pycnogenol-60.jpg');
+assertExactCarton('now-krill-oil-500-mg-60', 'NOW', 'now-krill-oil-500-mg-60.jpg');
+assertExactCarton('now-magnesium-citrate-90', 'NOW', 'now-magnesium-citrate-90.jpg');
+assertExactCarton('now-daily-vits-30', 'NOW', 'now-daily-vits-30.jpg');
+assertExactCarton(
+  'now-cascara-sagrada-450-mg-250',
+  'NOW',
+  'now-cascara-sagrada-450-mg-250.jpg',
+);
+assertExactCarton('now-cinnamon-bark-120', 'NOW', 'now-cinnamon-bark-120.jpg');
+assertExactCarton('now-serrapeptase-60', 'NOW', 'now-serrapeptase-60.jpg');
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -16118,6 +16219,60 @@ assertExactCarton('now-folic-acid-250', 'NOW', 'now-folic-acid-250.jpg');
     )
   ) {
     throw new Error('Fish-softgel 200 must not inherit the regular 200-count');
+  }
+  const lecithin400 = previewOverlayImage({
+    id: 'now-non-gmo-lecithin-400',
+    formulaId: 'now-non-gmo-lecithin-100',
+    brand: 'NOW',
+  });
+  if (lecithin400?.url.endsWith('/now-non-gmo-lecithin-100.jpg')) {
+    throw new Error('Lecithin 400 must not inherit the 100-count carton');
+  }
+  const pycOther = previewOverlayImage({
+    id: 'now-pycnogenol-60-733739031693',
+    formulaId: 'now-pycnogenol-60',
+    brand: 'NOW',
+  });
+  if (pycOther?.url.endsWith('/now-pycnogenol-60.jpg')) {
+    throw new Error('Pycnogenol barcode 733739031693 must not inherit 733739032676');
+  }
+  const mag180 = previewOverlayImage({
+    id: 'now-magnesium-citrate-180',
+    formulaId: 'now-magnesium-citrate-90',
+    brand: 'NOW',
+  });
+  if (!mag180?.url.endsWith('/now-magnesium-citrate-180.jpg') || !mag180.verifiedSku) {
+    throw new Error('Magnesium citrate 180 must stay its own carton, not the 90-count');
+  }
+  const amino360 = previewOverlayImage({
+    id: 'now-sports-amino-complete-360',
+    formulaId: 'now-sports-amino-complete-120',
+    brand: 'NOW',
+  });
+  if (
+    !amino360?.url.endsWith('/now-sports-amino-complete-360.jpg')
+    || !amino360.verifiedSku
+  ) {
+    throw new Error('Amino Complete 360 must stay its own carton, not the 120-count');
+  }
+  const methyl120 = previewOverlayImage({
+    id: 'now-methyl-b-12-120',
+    formulaId: 'now-methyl-b-12-60',
+    brand: 'NOW',
+  });
+  if (!methyl120?.url.endsWith('/now-methyl-b-12-120.jpg') || !methyl120.verifiedSku) {
+    throw new Error('Methyl B-12 120 must stay its own carton, not the 60-count');
+  }
+  const cascara250 = previewOverlayImage({
+    id: 'now-cascara-sagrada-450-mg-250',
+    formulaId: 'now-cascara-sagrada-450-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !cascara250?.url.endsWith('/now-cascara-sagrada-450-mg-250.jpg')
+    || !cascara250.verifiedSku
+  ) {
+    throw new Error('Cascara 250 must stay its own carton, not the 100-count');
   }
 }
 assertExactCarton(
