@@ -9553,6 +9553,79 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Omega-3 fish oil 1 g, 30 softgels. Barcode 733739016492.
   // Not the 100, 200, or 500.
   'now-omega-3-fish-oil-30': catalogShot('now-omega-3-fish-oil-30.jpg'),
+  // Vitamins night run 2026-10-05 12:30 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // B-6 100 mg, 250 veg capsules. Barcode 733739004581. Not the 100-count.
+  'now-b-6-100-mg-250': catalogShot('now-b-6-100-mg-250.jpg'),
+  // Potassium gluconate 99 mg, 100 tablets. Barcode 733739014603.
+  // Not the 250-count.
+  'now-potassium-gluconate-99-mg-100': catalogShot(
+    'now-potassium-gluconate-99-mg-100.jpg',
+  ),
+  // Sports creatine monohydrate, 750 mg, 120 veg capsules.
+  // Barcode 733739020352. Not a powder.
+  'now-sports-creatine-monohydrate-120': catalogShot(
+    'now-sports-creatine-monohydrate-120.jpg',
+  ),
+  // Saw palmetto berries 550 mg, 250 veg capsules. Barcode 733739047489.
+  // Not the 100-count.
+  'now-saw-palmetto-berries-550-mg-250': catalogShot(
+    'now-saw-palmetto-berries-550-mg-250.jpg',
+  ),
+  // Relora 300 mg, 120 veg capsules. Barcode 733739033437. Not the 60-count.
+  'now-relora-300-mg-120': catalogShot('now-relora-300-mg-120.jpg'),
+  // Panax ginseng 500 mg, 250 veg capsules. Barcode 733739040145.
+  'now-panax-ginseng-500-mg-250': catalogShot(
+    'now-panax-ginseng-500-mg-250.jpg',
+  ),
+  // Selenium 100 mcg, 100 tablets. Barcode 733739014801. Not the 250-count.
+  'now-selenium-100-mcg-100': catalogShot('now-selenium-100-mcg-100.jpg'),
+  // Super Omega 3-6-9, 180 softgels. Barcode 733739018410. Not the 90-count.
+  'now-super-omega-3-6-9-fish-oil-180': catalogShot(
+    'now-super-omega-3-6-9-fish-oil-180.jpg',
+  ),
+  // Flush-free niacin 500 mg, 180 veg capsules. Barcode 733739005007.
+  // Not the 90-count.
+  'now-flush-free-niacin-500-mg-180': catalogShot(
+    'now-flush-free-niacin-500-mg-180.jpg',
+  ),
+  // Activated charcoal 280 mg, 200 veg capsules. Barcode 733739029157.
+  'now-activated-charcoal-200': catalogShot('now-activated-charcoal-200.jpg'),
+  // Hawthorn extract 600 mg, 90 veg capsules. Barcode 733739046994.
+  'now-hawthorn-extract-600-mg-90': catalogShot(
+    'now-hawthorn-extract-600-mg-90.jpg',
+  ),
+  // MK-7 vitamin K-2 300 mcg, 120 veg capsules. Barcode 733739009951.
+  'now-mk-7-vitamin-k-2-300-mcg-120': catalogShot(
+    'now-mk-7-vitamin-k-2-300-mcg-120.jpg',
+  ),
+  // Blood Pressure Health, 90 veg capsules. Barcode 733739030665.
+  'now-blood-pressure-health-90': catalogShot(
+    'now-blood-pressure-health-90.jpg',
+  ),
+  // PQQ Energy, 30 veg capsules. Barcode 733739031686.
+  // Not the PQQ plus alpha-lipoic bottle.
+  'now-pqq-energy-30': catalogShot('now-pqq-energy-30.jpg'),
+  // Sun-E 400, 268 mg (400 IU), 120 softgels. Barcode 733739009364.
+  'now-sun-e-400-268-mg-400-iu-120': catalogShot(
+    'now-sun-e-400-268-mg-400-iu-120.jpg',
+  ),
+  // Bilberry complex, 100 veg capsules. Barcode 733739046123.
+  'now-bilberry-complex-100': catalogShot('now-bilberry-complex-100.jpg'),
+  // Ginger root extract 250 mg, 90 veg capsules. Barcode 733739046895.
+  'now-ginger-root-extract-250-mg-90': catalogShot(
+    'now-ginger-root-extract-250-mg-90.jpg',
+  ),
+  // Super Omega EPA, 1,000 mg, 240 softgels. Barcode 733739016836.
+  // Not the 120-count.
+  'now-super-omega-epa-fish-oil-240': catalogShot(
+    'now-super-omega-epa-fish-oil-240.jpg',
+  ),
+  // L-Carnosine 500 mg, 100 veg capsules. Barcode 733739000798.
+  'now-l-carnosine-500-mg-100': catalogShot('now-l-carnosine-500-mg-100.jpg'),
+  // Folic acid 800 mcg, 250 tablets. Barcode 733739004765.
+  'now-folic-acid-250': catalogShot('now-folic-acid-250.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15722,6 +15795,90 @@ assertExactCarton(
   'NOW',
   'now-omega-3-fish-oil-30.jpg',
 );
+assertExactCarton('now-b-6-100-mg-250', 'NOW', 'now-b-6-100-mg-250.jpg');
+assertExactCarton(
+  'now-potassium-gluconate-99-mg-100',
+  'NOW',
+  'now-potassium-gluconate-99-mg-100.jpg',
+);
+assertExactCarton(
+  'now-sports-creatine-monohydrate-120',
+  'NOW',
+  'now-sports-creatine-monohydrate-120.jpg',
+);
+assertExactCarton(
+  'now-saw-palmetto-berries-550-mg-250',
+  'NOW',
+  'now-saw-palmetto-berries-550-mg-250.jpg',
+);
+assertExactCarton('now-relora-300-mg-120', 'NOW', 'now-relora-300-mg-120.jpg');
+assertExactCarton(
+  'now-panax-ginseng-500-mg-250',
+  'NOW',
+  'now-panax-ginseng-500-mg-250.jpg',
+);
+assertExactCarton(
+  'now-selenium-100-mcg-100',
+  'NOW',
+  'now-selenium-100-mcg-100.jpg',
+);
+assertExactCarton(
+  'now-super-omega-3-6-9-fish-oil-180',
+  'NOW',
+  'now-super-omega-3-6-9-fish-oil-180.jpg',
+);
+assertExactCarton(
+  'now-flush-free-niacin-500-mg-180',
+  'NOW',
+  'now-flush-free-niacin-500-mg-180.jpg',
+);
+assertExactCarton(
+  'now-activated-charcoal-200',
+  'NOW',
+  'now-activated-charcoal-200.jpg',
+);
+assertExactCarton(
+  'now-hawthorn-extract-600-mg-90',
+  'NOW',
+  'now-hawthorn-extract-600-mg-90.jpg',
+);
+assertExactCarton(
+  'now-mk-7-vitamin-k-2-300-mcg-120',
+  'NOW',
+  'now-mk-7-vitamin-k-2-300-mcg-120.jpg',
+);
+assertExactCarton(
+  'now-blood-pressure-health-90',
+  'NOW',
+  'now-blood-pressure-health-90.jpg',
+);
+assertExactCarton('now-pqq-energy-30', 'NOW', 'now-pqq-energy-30.jpg');
+assertExactCarton(
+  'now-sun-e-400-268-mg-400-iu-120',
+  'NOW',
+  'now-sun-e-400-268-mg-400-iu-120.jpg',
+);
+assertExactCarton(
+  'now-bilberry-complex-100',
+  'NOW',
+  'now-bilberry-complex-100.jpg',
+);
+assertExactCarton(
+  'now-ginger-root-extract-250-mg-90',
+  'NOW',
+  'now-ginger-root-extract-250-mg-90.jpg',
+);
+assertExactCarton(
+  'now-super-omega-epa-fish-oil-240',
+  'NOW',
+  'now-super-omega-epa-fish-oil-240.jpg',
+);
+assertExactCarton(
+  'now-l-carnosine-500-mg-100',
+  'NOW',
+  'now-l-carnosine-500-mg-100.jpg',
+);
+assertExactCarton('now-folic-acid-250', 'NOW', 'now-folic-acid-250.jpg');
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -15865,6 +16022,82 @@ assertExactCarton(
   });
   if (alaOther?.url.endsWith('/now-alpha-lipoic-acid-60.jpg')) {
     throw new Error('ALA barcode 733739030405 must not inherit the 600 mg carton');
+  }
+  const b6250 = previewOverlayImage({
+    id: 'now-b-6-100-mg-250',
+    formulaId: 'now-b-6-100-mg-100',
+    brand: 'NOW',
+  });
+  if (!b6250?.url.endsWith('/now-b-6-100-mg-250.jpg') || !b6250.verifiedSku) {
+    throw new Error('B-6 250 must stay its own carton, not the 100-count');
+  }
+  const potassium100 = previewOverlayImage({
+    id: 'now-potassium-gluconate-99-mg-100',
+    formulaId: 'now-potassium-gluconate-99-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !potassium100?.url.endsWith('/now-potassium-gluconate-99-mg-100.jpg')
+    || !potassium100.verifiedSku
+  ) {
+    throw new Error('Potassium gluconate 100 must stay its own carton, not the 250-count');
+  }
+  const relora120 = previewOverlayImage({
+    id: 'now-relora-300-mg-120',
+    formulaId: 'now-relora-300-mg-60',
+    brand: 'NOW',
+  });
+  if (!relora120?.url.endsWith('/now-relora-300-mg-120.jpg') || !relora120.verifiedSku) {
+    throw new Error('Relora 120 must stay its own carton, not the 60-count');
+  }
+  const omega369 = previewOverlayImage({
+    id: 'now-super-omega-3-6-9-fish-oil-180',
+    formulaId: 'now-super-omega-3-6-9-fish-oil-90',
+    brand: 'NOW',
+  });
+  if (
+    !omega369?.url.endsWith('/now-super-omega-3-6-9-fish-oil-180.jpg')
+    || !omega369.verifiedSku
+  ) {
+    throw new Error('Super Omega 3-6-9 180 must stay its own carton, not the 90-count');
+  }
+  const niacin180 = previewOverlayImage({
+    id: 'now-flush-free-niacin-500-mg-180',
+    formulaId: 'now-flush-free-niacin-500-mg-90',
+    brand: 'NOW',
+  });
+  if (
+    !niacin180?.url.endsWith('/now-flush-free-niacin-500-mg-180.jpg')
+    || !niacin180.verifiedSku
+  ) {
+    throw new Error('Flush-free niacin 180 must stay its own carton, not the 90-count');
+  }
+  const epa240 = previewOverlayImage({
+    id: 'now-super-omega-epa-fish-oil-240',
+    formulaId: 'now-super-omega-epa-fish-oil-120',
+    brand: 'NOW',
+  });
+  if (
+    !epa240?.url.endsWith('/now-super-omega-epa-fish-oil-240.jpg')
+    || !epa240.verifiedSku
+  ) {
+    throw new Error('Super Omega EPA 240 must stay its own carton, not the 120-count');
+  }
+  const saw250 = previewOverlayImage({
+    id: 'now-saw-palmetto-berries-550-mg-250',
+    formulaId: 'now-saw-palmetto-berries-550-mg-250',
+    brand: 'NOW',
+  });
+  if (!saw250?.url.endsWith('/now-saw-palmetto-berries-550-mg-250.jpg')) {
+    throw new Error('Saw palmetto 250 must not inherit the 100-count carton');
+  }
+  const selenium100 = previewOverlayImage({
+    id: 'now-selenium-100-mcg-100',
+    formulaId: 'now-selenium-100-mcg-100',
+    brand: 'NOW',
+  });
+  if (!selenium100?.url.endsWith('/now-selenium-100-mcg-100.jpg')) {
+    throw new Error('Selenium 100 must not inherit the 250-count carton');
   }
   const omega200 = previewOverlayImage({
     id: 'now-omega-3-fish-oil-1-000-mg-500',
