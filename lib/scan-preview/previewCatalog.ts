@@ -9493,6 +9493,66 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-vitamin-d-3-max-potency-50-000-iu-50': catalogShot(
     'now-vitamin-d-3-max-potency-50-000-iu-50.jpg',
   ),
+  // Vitamins night run 2026-10-05 12:30 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count or a second barcode.
+  // Biotin 1,000 mcg, 100 veg capsules. Barcode 733739004697.
+  'now-biotin-1-000-mcg-100': catalogShot('now-biotin-1-000-mcg-100.jpg'),
+  // Willow bark extract 400 mg, 100 veg capsules. Barcode 733739047755.
+  'now-willow-bark-extract-100': catalogShot('now-willow-bark-extract-100.jpg'),
+  // Cinnamon bark 600 mg, 240 veg capsules. Barcode 733739046376.
+  'now-cinnamon-bark-600-mg-240': catalogShot(
+    'now-cinnamon-bark-600-mg-240.jpg',
+  ),
+  // L-Arginine 500 mg, 250 veg capsules. Barcode 733739000316.
+  // Not the 100-count.
+  'now-l-arginine-500-mg-250': catalogShot('now-l-arginine-500-mg-250.jpg'),
+  // L-Methionine, 100 veg capsules. Barcode 733739001177.
+  'now-l-methionine-100': catalogShot('now-l-methionine-100.jpg'),
+  // L-Tyrosine 750 mg, 90 veg capsules. Barcode 733739001658.
+  'now-l-tyrosine-750-mg-90': catalogShot('now-l-tyrosine-750-mg-90.jpg'),
+  // Rhodiola 500 mg, 60 veg capsules. Barcode 733739047540.
+  'now-rhodiola-500-mg-60': catalogShot('now-rhodiola-500-mg-60.jpg'),
+  // Grape seed extract 500 mg, 90 veg capsules. Barcode 733739033956.
+  'now-grape-seed-extract-500-mg-90': catalogShot(
+    'now-grape-seed-extract-500-mg-90.jpg',
+  ),
+  // DMG 125 mg, 100 veg capsules. Barcode 733739004727.
+  'now-dmg-125-mg-100': catalogShot('now-dmg-125-mg-100.jpg'),
+  // Thyroid Energy, 90 veg capsules. Barcode 733739033680.
+  'now-thyroid-energy-90': catalogShot('now-thyroid-energy-90.jpg'),
+  // Ginkgo biloba 60 mg, 240 veg capsules. Barcode 733739046840.
+  // Not the 60-count.
+  'now-ginkgo-biloba-60-mg-240': catalogShot('now-ginkgo-biloba-60-mg-240.jpg'),
+  // Potassium gluconate 99 mg, 250 tablets. Barcode 733739014627.
+  // Not the 100-count.
+  'now-potassium-gluconate-99-mg-250': catalogShot(
+    'now-potassium-gluconate-99-mg-250.jpg',
+  ),
+  // Tart cherry 500 mg, 90 veg capsules. Barcode 733739047861.
+  'now-tart-cherry-500-mg-90': catalogShot('now-tart-cherry-500-mg-90.jpg'),
+  // Selenium 100 mcg, 250 tablets. Barcode 733739014825.
+  // Not the 100-count.
+  'now-selenium-100-mcg-250': catalogShot('now-selenium-100-mcg-250.jpg'),
+  // Artichoke extract 450 mg, 90 veg capsules. Barcode 733739045928.
+  'now-artichoke-extract-90': catalogShot('now-artichoke-extract-90.jpg'),
+  // Alpha lipoic acid 600 mg, 60 veg capsules. Barcode 733739030467.
+  // Not barcode 733739030405.
+  'now-alpha-lipoic-acid-60': catalogShot('now-alpha-lipoic-acid-60.jpg'),
+  // Saw palmetto berries 550 mg, 100 veg capsules. Barcode 733739047472.
+  // Not the 250-count.
+  'now-saw-palmetto-berries-550-mg-100': catalogShot(
+    'now-saw-palmetto-berries-550-mg-100.jpg',
+  ),
+  // NADH 10 mg, 60 capsules. Barcode 733739031037.
+  'now-nadh-10-mg-60': catalogShot('now-nadh-10-mg-60.jpg'),
+  // Flax oil with essential omega-3s, 250 softgels. Barcode 733739017727.
+  'now-flax-oil-with-essential-omega-3-s-250': catalogShot(
+    'now-flax-oil-with-essential-omega-3-s-250.jpg',
+  ),
+  // Omega-3 fish oil 1 g, 30 softgels. Barcode 733739016492.
+  // Not the 100, 200, or 500.
+  'now-omega-3-fish-oil-30': catalogShot('now-omega-3-fish-oil-30.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -9968,6 +10028,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-b-50-250-733739004284',
   'now-b-50-100-733739004260',
   'now-black-currant-oil-100-733739017154',
+  // Vitamins night run 2026-10-05 12:30 AM PT batch 1.
+  // Same 60-count name, different barcode and strength. Do not inherit
+  // the 600 mg bottle (733739030467).
+  'now-alpha-lipoic-acid-60-733739030405',
 ]);
 
 export function previewOverlayImage(
@@ -15582,6 +15646,82 @@ assertExactCarton(
   'NOW',
   'now-vitamin-d-3-max-potency-50-000-iu-50.jpg',
 );
+assertExactCarton('now-biotin-1-000-mcg-100', 'NOW', 'now-biotin-1-000-mcg-100.jpg');
+assertExactCarton(
+  'now-willow-bark-extract-100',
+  'NOW',
+  'now-willow-bark-extract-100.jpg',
+);
+assertExactCarton(
+  'now-cinnamon-bark-600-mg-240',
+  'NOW',
+  'now-cinnamon-bark-600-mg-240.jpg',
+);
+assertExactCarton(
+  'now-l-arginine-500-mg-250',
+  'NOW',
+  'now-l-arginine-500-mg-250.jpg',
+);
+assertExactCarton('now-l-methionine-100', 'NOW', 'now-l-methionine-100.jpg');
+assertExactCarton(
+  'now-l-tyrosine-750-mg-90',
+  'NOW',
+  'now-l-tyrosine-750-mg-90.jpg',
+);
+assertExactCarton('now-rhodiola-500-mg-60', 'NOW', 'now-rhodiola-500-mg-60.jpg');
+assertExactCarton(
+  'now-grape-seed-extract-500-mg-90',
+  'NOW',
+  'now-grape-seed-extract-500-mg-90.jpg',
+);
+assertExactCarton('now-dmg-125-mg-100', 'NOW', 'now-dmg-125-mg-100.jpg');
+assertExactCarton('now-thyroid-energy-90', 'NOW', 'now-thyroid-energy-90.jpg');
+assertExactCarton(
+  'now-ginkgo-biloba-60-mg-240',
+  'NOW',
+  'now-ginkgo-biloba-60-mg-240.jpg',
+);
+assertExactCarton(
+  'now-potassium-gluconate-99-mg-250',
+  'NOW',
+  'now-potassium-gluconate-99-mg-250.jpg',
+);
+assertExactCarton(
+  'now-tart-cherry-500-mg-90',
+  'NOW',
+  'now-tart-cherry-500-mg-90.jpg',
+);
+assertExactCarton(
+  'now-selenium-100-mcg-250',
+  'NOW',
+  'now-selenium-100-mcg-250.jpg',
+);
+assertExactCarton(
+  'now-artichoke-extract-90',
+  'NOW',
+  'now-artichoke-extract-90.jpg',
+);
+assertExactCarton(
+  'now-alpha-lipoic-acid-60',
+  'NOW',
+  'now-alpha-lipoic-acid-60.jpg',
+);
+assertExactCarton(
+  'now-saw-palmetto-berries-550-mg-100',
+  'NOW',
+  'now-saw-palmetto-berries-550-mg-100.jpg',
+);
+assertExactCarton('now-nadh-10-mg-60', 'NOW', 'now-nadh-10-mg-60.jpg');
+assertExactCarton(
+  'now-flax-oil-with-essential-omega-3-s-250',
+  'NOW',
+  'now-flax-oil-with-essential-omega-3-s-250.jpg',
+);
+assertExactCarton(
+  'now-omega-3-fish-oil-30',
+  'NOW',
+  'now-omega-3-fish-oil-30.jpg',
+);
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
@@ -15684,6 +15824,47 @@ assertExactCarton(
     || !d3Max.verifiedSku
   ) {
     throw new Error('D-3 50,000 IU 50 must stay its own carton, not the 12-count');
+  }
+  const arginine250 = previewOverlayImage({
+    id: 'now-l-arginine-500-mg-250',
+    formulaId: 'now-l-arginine-500-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !arginine250?.url.endsWith('/now-l-arginine-500-mg-250.jpg')
+    || !arginine250.verifiedSku
+  ) {
+    throw new Error('L-Arginine 250 must stay its own carton, not the 100-count');
+  }
+  const ginkgo240 = previewOverlayImage({
+    id: 'now-ginkgo-biloba-60-mg-240',
+    formulaId: 'now-ginkgo-biloba-60-mg-60',
+    brand: 'NOW',
+  });
+  if (
+    !ginkgo240?.url.endsWith('/now-ginkgo-biloba-60-mg-240.jpg')
+    || !ginkgo240.verifiedSku
+  ) {
+    throw new Error('Ginkgo 240 must stay its own carton, not the 60-count');
+  }
+  const potassium250 = previewOverlayImage({
+    id: 'now-potassium-gluconate-99-mg-250',
+    formulaId: 'now-potassium-gluconate-99-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !potassium250?.url.endsWith('/now-potassium-gluconate-99-mg-250.jpg')
+    || !potassium250.verifiedSku
+  ) {
+    throw new Error('Potassium gluconate 250 must stay its own carton, not the 100-count');
+  }
+  const alaOther = previewOverlayImage({
+    id: 'now-alpha-lipoic-acid-60-733739030405',
+    formulaId: 'now-alpha-lipoic-acid-60',
+    brand: 'NOW',
+  });
+  if (alaOther?.url.endsWith('/now-alpha-lipoic-acid-60.jpg')) {
+    throw new Error('ALA barcode 733739030405 must not inherit the 600 mg carton');
   }
   const omega200 = previewOverlayImage({
     id: 'now-omega-3-fish-oil-1-000-mg-500',
