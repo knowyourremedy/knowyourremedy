@@ -2321,6 +2321,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'now-kids-kid-vits-berry-lemonade-120-chewable-tablets': brandMark(
     'now-mark.png',
   ),
+  // Vitamins night run 2026-10-05 5:30 AM PT batch 1.
+  // Vitamin E-Oil, 1 fl oz. Barcode 733739009203.
+  // Vitacost image for that code is a flat label, not a 3D bottle.
+  // Official NOW wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'now-vitamin-e-oil-antioxidant-protection-1-fl-oz-30-ml': brandMark(
+    'now-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -10031,6 +10039,64 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     catalogShot(
       'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels.jpg',
     ),
+  // Vitamins night run 2026-10-05 5:30 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Gotu Kola 450 mg, 100 veg capsules. Barcode 733739047007.
+  'now-gotu-kola-450-mg-100': catalogShot('now-gotu-kola-450-mg-100.jpg'),
+  // Iron Complex, 100 veg capsules. Barcode 733739014412.
+  'now-iron-complex-caps-100': catalogShot('now-iron-complex-caps-100.jpg'),
+  // Sports Beet Root, 180 veg capsules. Barcode 733739050564.
+  'now-sports-beet-root-180': catalogShot('now-sports-beet-root-180.jpg'),
+  // DHA-1000 fish oil, 90 softgels. Barcode 733739016140.
+  'now-dha-1000-fish-oil-90': catalogShot('now-dha-1000-fish-oil-90.jpg'),
+  // Panax Ginseng 500 mg, 100 veg capsules. Barcode 733739040121.
+  'now-panax-ginseng-500-mg-100': catalogShot(
+    'now-panax-ginseng-500-mg-100.jpg',
+  ),
+  // Coral Calcium 350 mg, 100 capsules. Barcode 733739012739.
+  'now-coral-calcium-350-mg-100': catalogShot(
+    'now-coral-calcium-350-mg-100.jpg',
+  ),
+  // L-Arginine 500 mg, 100 veg capsules. Barcode 733739000309.
+  // Not the 250-count.
+  'now-l-arginine-500-mg-100': catalogShot('now-l-arginine-500-mg-100.jpg'),
+  // Lecithin, 200 softgels. Barcode 733739022127.
+  'now-lecithin-200': catalogShot('now-lecithin-200.jpg'),
+  // Krill 1000, 1,000 mg, 60 softgels. Barcode 733739016270.
+  'now-krill-1000-1-000-mg-60': catalogShot('now-krill-1000-1-000-mg-60.jpg'),
+  // Tri-Amino, 120 capsules. Barcode 733739001528.
+  'now-tri-amino-120': catalogShot('now-tri-amino-120.jpg'),
+  // Resveratrol 200 mg, 120 veg capsules. Barcode 733739033543.
+  'now-resveratrol-200-mg-120': catalogShot('now-resveratrol-200-mg-120.jpg'),
+  // Full Spectrum Minerals, 240 capsules. Barcode 733739015457.
+  'now-full-spectrum-minerals-caps-240': catalogShot(
+    'now-full-spectrum-minerals-caps-240.jpg',
+  ),
+  // E-400, 268 mg (400 IU), 100 softgels. Barcode 733739008374.
+  // Not the 250-count.
+  'now-e-400-268-mg-400-iu-100': catalogShot(
+    'now-e-400-268-mg-400-iu-100.jpg',
+  ),
+  // Devil's Claw, 100 veg capsules. Barcode 733739046505.
+  'now-devil-s-claw-100': catalogShot('now-devil-s-claw-100.jpg'),
+  // Raw Maca 750 mg, 90 veg capsules. Barcode 733739047779.
+  'now-raw-maca-750-mg-90': catalogShot('now-raw-maca-750-mg-90.jpg'),
+  // Goldenseal Root 500 mg, 50 veg capsules. Barcode 733739046901.
+  'now-goldenseal-root-500-mg-50': catalogShot(
+    'now-goldenseal-root-500-mg-50.jpg',
+  ),
+  // 7-KETO 100 mg, 120 veg capsules. Barcode 733739030146.
+  // Not the 60-count.
+  'now-7-keto-100-mg-120': catalogShot('now-7-keto-100-mg-120.jpg'),
+  // D-Mannose 500 mg, 60 veg capsules. Barcode 733739028082.
+  // Not the 120-count or the 240-count.
+  'now-d-mannose-500-mg-60': catalogShot('now-d-mannose-500-mg-60.jpg'),
+  // Zinc Picolinate 50 mg, 30 veg capsules. Barcode 733739015495.
+  // Not the 60-count or the 120-count.
+  'now-zinc-picolinate-50-mg-30': catalogShot(
+    'now-zinc-picolinate-50-mg-30.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -10521,6 +10587,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-05 3:00 AM PT batch 1.
   // 240-count shares the 120-count saw palmetto formula. Do not inherit the 120.
   'now-saw-palmetto-extract-160-mg-240',
+  // Vitamins night run 2026-10-05 5:30 AM PT batch 1.
+  // 250-count shares the 100-count E-400 formula. Do not inherit the 100.
+  'now-e-400-268-mg-400-iu-250',
 ]);
 
 export function previewOverlayImage(
@@ -16705,6 +16774,66 @@ assertExactCarton(
   'NOW',
   'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels.jpg',
 );
+assertBrandMark(
+  'now-vitamin-e-oil-antioxidant-protection-1-fl-oz-30-ml',
+  'NOW',
+  'now-mark.png',
+);
+assertExactCarton('now-gotu-kola-450-mg-100', 'NOW', 'now-gotu-kola-450-mg-100.jpg');
+assertExactCarton('now-iron-complex-caps-100', 'NOW', 'now-iron-complex-caps-100.jpg');
+assertExactCarton('now-sports-beet-root-180', 'NOW', 'now-sports-beet-root-180.jpg');
+assertExactCarton('now-dha-1000-fish-oil-90', 'NOW', 'now-dha-1000-fish-oil-90.jpg');
+assertExactCarton(
+  'now-panax-ginseng-500-mg-100',
+  'NOW',
+  'now-panax-ginseng-500-mg-100.jpg',
+);
+assertExactCarton(
+  'now-coral-calcium-350-mg-100',
+  'NOW',
+  'now-coral-calcium-350-mg-100.jpg',
+);
+assertExactCarton(
+  'now-l-arginine-500-mg-100',
+  'NOW',
+  'now-l-arginine-500-mg-100.jpg',
+);
+assertExactCarton('now-lecithin-200', 'NOW', 'now-lecithin-200.jpg');
+assertExactCarton(
+  'now-krill-1000-1-000-mg-60',
+  'NOW',
+  'now-krill-1000-1-000-mg-60.jpg',
+);
+assertExactCarton('now-tri-amino-120', 'NOW', 'now-tri-amino-120.jpg');
+assertExactCarton(
+  'now-resveratrol-200-mg-120',
+  'NOW',
+  'now-resveratrol-200-mg-120.jpg',
+);
+assertExactCarton(
+  'now-full-spectrum-minerals-caps-240',
+  'NOW',
+  'now-full-spectrum-minerals-caps-240.jpg',
+);
+assertExactCarton(
+  'now-e-400-268-mg-400-iu-100',
+  'NOW',
+  'now-e-400-268-mg-400-iu-100.jpg',
+);
+assertExactCarton('now-devil-s-claw-100', 'NOW', 'now-devil-s-claw-100.jpg');
+assertExactCarton('now-raw-maca-750-mg-90', 'NOW', 'now-raw-maca-750-mg-90.jpg');
+assertExactCarton(
+  'now-goldenseal-root-500-mg-50',
+  'NOW',
+  'now-goldenseal-root-500-mg-50.jpg',
+);
+assertExactCarton('now-7-keto-100-mg-120', 'NOW', 'now-7-keto-100-mg-120.jpg');
+assertExactCarton('now-d-mannose-500-mg-60', 'NOW', 'now-d-mannose-500-mg-60.jpg');
+assertExactCarton(
+  'now-zinc-picolinate-50-mg-30',
+  'NOW',
+  'now-zinc-picolinate-50-mg-30.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -16852,6 +16981,57 @@ assertExactCarton(
     || !arginine250.verifiedSku
   ) {
     throw new Error('L-Arginine 250 must stay its own carton, not the 100-count');
+  }
+  const e400Large = previewOverlayImage({
+    id: 'now-e-400-268-mg-400-iu-250',
+    formulaId: 'now-e-400-268-mg-400-iu-100',
+    brand: 'NOW',
+  });
+  if (
+    !e400Large?.url.startsWith('data:image/svg+xml')
+    || e400Large.url.includes('now-e-400-268-mg-400-iu-100')
+  ) {
+    throw new Error('E-400 250 must stay a letter, not the 100-count carton');
+  }
+  const keto60 = previewOverlayImage({
+    id: 'now-7-keto-100-mg-60',
+    formulaId: 'now-7-keto-100-mg-60',
+    brand: 'NOW',
+  });
+  if (keto60?.url.endsWith('/now-7-keto-100-mg-120.jpg')) {
+    throw new Error('7-KETO 60 must not inherit the 120-count carton');
+  }
+  const mannose120 = previewOverlayImage({
+    id: 'now-d-mannose-500-mg-120',
+    formulaId: 'now-d-mannose-500-mg-60',
+    brand: 'NOW',
+  });
+  if (!mannose120?.url.endsWith('/now-d-mannose-500-mg-120.jpg') || !mannose120.verifiedSku) {
+    throw new Error('D-Mannose 120 must stay its own carton, not the 60-count');
+  }
+  const mannose240 = previewOverlayImage({
+    id: 'now-d-mannose-500-mg-240',
+    formulaId: 'now-d-mannose-500-mg-60',
+    brand: 'NOW',
+  });
+  if (!mannose240?.url.endsWith('/now-d-mannose-500-mg-240.jpg') || !mannose240.verifiedSku) {
+    throw new Error('D-Mannose 240 must stay its own carton, not the 60-count');
+  }
+  const zinc60 = previewOverlayImage({
+    id: 'now-zinc-picolinate-50-mg-60',
+    formulaId: 'now-zinc-picolinate-50-mg-30',
+    brand: 'NOW',
+  });
+  if (!zinc60?.url.endsWith('/now-zinc-picolinate-50-mg-60.jpg') || !zinc60.verifiedSku) {
+    throw new Error('Zinc picolinate 60 must stay its own carton, not the 30-count');
+  }
+  const zinc120 = previewOverlayImage({
+    id: 'now-zinc-picolinate-50-mg-120',
+    formulaId: 'now-zinc-picolinate-50-mg-30',
+    brand: 'NOW',
+  });
+  if (!zinc120?.url.endsWith('/now-zinc-picolinate-50-mg-120.jpg') || !zinc120.verifiedSku) {
+    throw new Error('Zinc picolinate 120 must stay its own carton, not the 30-count');
   }
   const ginkgo240 = previewOverlayImage({
     id: 'now-ginkgo-biloba-60-mg-240',
