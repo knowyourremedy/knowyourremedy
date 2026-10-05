@@ -10243,6 +10243,79 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-flush-free-niacin-250-mg-180': catalogShot(
     'now-flush-free-niacin-250-mg-180.jpg',
   ),
+  // Vitamins night run 2026-10-05 6:45 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Celery Seed Extract, 60 veg capsules. Barcode 733739046260.
+  'now-celery-seed-extract-60': catalogShot('now-celery-seed-extract-60.jpg'),
+  // Zinc Transporters, 90 tablets. Barcode 733739015327.
+  'now-zinc-transporters-90': catalogShot('now-zinc-transporters-90.jpg'),
+  // Green Tea Extract 400 mg, 250 veg capsules. Barcode 733739047069.
+  // Not the 100-count.
+  'now-green-tea-extract-400-mg-250': catalogShot(
+    'now-green-tea-extract-400-mg-250.jpg',
+  ),
+  // Feverfew, 100 veg capsules. Barcode 733739046703.
+  'now-feverfew-100': catalogShot('now-feverfew-100.jpg'),
+  // Grape Seed, 200 veg capsules. Barcode 733739032492.
+  // Not the 100-count.
+  'now-grape-seed-200': catalogShot('now-grape-seed-200.jpg'),
+  // Silver Sol, 8 fl oz. Barcode 733739014085.
+  'now-silver-sol-8-fl-oz-237-ml': catalogShot(
+    'now-silver-sol-8-fl-oz-237-ml.jpg',
+  ),
+  // L-Carnitine 250 mg, 60 veg capsules. Barcode 733739000620.
+  'now-l-carnitine-250-mg-60': catalogShot('now-l-carnitine-250-mg-60.jpg'),
+  // Flax Oil 1,000 mg, 100 softgels. Barcode 733739017703.
+  'now-flax-oil-1-000-mg-100': catalogShot('now-flax-oil-1-000-mg-100.jpg'),
+  // Men's Virility Power, 120 veg capsules. Barcode 733739033291.
+  // Not the 60-count.
+  'now-men-s-virility-power-120': catalogShot(
+    'now-men-s-virility-power-120.jpg',
+  ),
+  // Tri-3D Omega fish oil, 90 softgels. Barcode 733739016867.
+  // Not the 180-count.
+  'now-tri-3d-omega-fish-oil-90': catalogShot(
+    'now-tri-3d-omega-fish-oil-90.jpg',
+  ),
+  // Propolis 2000, 90 softgels. Barcode 733739025432.
+  'now-propolis-2000-5-1-extract-90': catalogShot(
+    'now-propolis-2000-5-1-extract-90.jpg',
+  ),
+  // E-1000 with Mixed Tocopherols, 100 softgels. Barcode 733739009029.
+  // Not the 50-count.
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-100': catalogShot(
+    'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-100.jpg',
+  ),
+  // Red Clover 375 mg, 100 veg capsules. Barcode 733739047304.
+  'now-red-clover-375-mg-100': catalogShot('now-red-clover-375-mg-100.jpg'),
+  // Vitamin D-3 5,000 IU, 30 softgels. Barcode 733739003744.
+  // Not the 240-count.
+  'now-vitamin-d-3-high-potency-5-000-iu-30': catalogShot(
+    'now-vitamin-d-3-high-potency-5-000-iu-30.jpg',
+  ),
+  // St. John's Wort 300 mg, 100 veg capsules. Barcode 733739047601.
+  // Not the 250-count.
+  'now-st-john-s-wort-300-mg-100': catalogShot(
+    'now-st-john-s-wort-300-mg-100.jpg',
+  ),
+  // Ginseng & Royal Jelly, 90 capsules. Barcode 733739040077.
+  'now-ginseng-royal-jelly-90': catalogShot('now-ginseng-royal-jelly-90.jpg'),
+  // Alfalfa 650 mg, 250 tablets. Barcode 733739026200.
+  // Not the 500-count.
+  'now-alfalfa-650-mg-250': catalogShot('now-alfalfa-650-mg-250.jpg'),
+  // Mood Support with St. John's Wort, 90 veg capsules. Barcode 733739033512.
+  'now-mood-support-with-st-john-s-wort-90': catalogShot(
+    'now-mood-support-with-st-john-s-wort-90.jpg',
+  ),
+  // Kava Kava Extract, 120 veg capsules. Barcode 733739047175.
+  // Not the 60-count.
+  'now-kava-kava-extract-120': catalogShot('now-kava-kava-extract-120.jpg'),
+  // Super Omega 3-6-9 fish oil, 90 softgels. Barcode 733739018397.
+  // Not the 180-count.
+  'now-super-omega-3-6-9-fish-oil-90': catalogShot(
+    'now-super-omega-3-6-9-fish-oil-90.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17132,6 +17205,66 @@ assertExactCarton(
   'NOW',
   'now-flush-free-niacin-250-mg-180.jpg',
 );
+assertExactCarton('now-celery-seed-extract-60', 'NOW', 'now-celery-seed-extract-60.jpg');
+assertExactCarton('now-zinc-transporters-90', 'NOW', 'now-zinc-transporters-90.jpg');
+assertExactCarton(
+  'now-green-tea-extract-400-mg-250',
+  'NOW',
+  'now-green-tea-extract-400-mg-250.jpg',
+);
+assertExactCarton('now-feverfew-100', 'NOW', 'now-feverfew-100.jpg');
+assertExactCarton('now-grape-seed-200', 'NOW', 'now-grape-seed-200.jpg');
+assertExactCarton(
+  'now-silver-sol-8-fl-oz-237-ml',
+  'NOW',
+  'now-silver-sol-8-fl-oz-237-ml.jpg',
+);
+assertExactCarton('now-l-carnitine-250-mg-60', 'NOW', 'now-l-carnitine-250-mg-60.jpg');
+assertExactCarton('now-flax-oil-1-000-mg-100', 'NOW', 'now-flax-oil-1-000-mg-100.jpg');
+assertExactCarton(
+  'now-men-s-virility-power-120',
+  'NOW',
+  'now-men-s-virility-power-120.jpg',
+);
+assertExactCarton(
+  'now-tri-3d-omega-fish-oil-90',
+  'NOW',
+  'now-tri-3d-omega-fish-oil-90.jpg',
+);
+assertExactCarton(
+  'now-propolis-2000-5-1-extract-90',
+  'NOW',
+  'now-propolis-2000-5-1-extract-90.jpg',
+);
+assertExactCarton(
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-100',
+  'NOW',
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-100.jpg',
+);
+assertExactCarton('now-red-clover-375-mg-100', 'NOW', 'now-red-clover-375-mg-100.jpg');
+assertExactCarton(
+  'now-vitamin-d-3-high-potency-5-000-iu-30',
+  'NOW',
+  'now-vitamin-d-3-high-potency-5-000-iu-30.jpg',
+);
+assertExactCarton(
+  'now-st-john-s-wort-300-mg-100',
+  'NOW',
+  'now-st-john-s-wort-300-mg-100.jpg',
+);
+assertExactCarton('now-ginseng-royal-jelly-90', 'NOW', 'now-ginseng-royal-jelly-90.jpg');
+assertExactCarton('now-alfalfa-650-mg-250', 'NOW', 'now-alfalfa-650-mg-250.jpg');
+assertExactCarton(
+  'now-mood-support-with-st-john-s-wort-90',
+  'NOW',
+  'now-mood-support-with-st-john-s-wort-90.jpg',
+);
+assertExactCarton('now-kava-kava-extract-120', 'NOW', 'now-kava-kava-extract-120.jpg');
+assertExactCarton(
+  'now-super-omega-3-6-9-fish-oil-90',
+  'NOW',
+  'now-super-omega-3-6-9-fish-oil-90.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -17605,6 +17738,79 @@ assertExactCarton(
     || !cayenne250.verifiedSku
   ) {
     throw new Error('Cayenne 250 must stay its own carton, not the 100-count');
+  }
+  const greenTea100 = previewOverlayImage({
+    id: 'now-green-tea-extract-400-mg-100',
+    formulaId: 'now-green-tea-extract-400-mg-100',
+    brand: 'NOW',
+  });
+  if (greenTea100?.url.endsWith('/now-green-tea-extract-400-mg-250.jpg')) {
+    throw new Error('Green tea 100 must not inherit the 250-count carton');
+  }
+  const grape100 = previewOverlayImage({
+    id: 'now-grape-seed-100',
+    formulaId: 'now-grape-seed-100',
+    brand: 'NOW',
+  });
+  if (grape100?.url.endsWith('/now-grape-seed-200.jpg')) {
+    throw new Error('Grape seed 100 must not inherit the 200-count carton');
+  }
+  const virility60 = previewOverlayImage({
+    id: 'now-men-s-virility-power-60',
+    formulaId: 'now-men-s-virility-power-60',
+    brand: 'NOW',
+  });
+  if (virility60?.url.endsWith('/now-men-s-virility-power-120.jpg')) {
+    throw new Error('Virility Power 60 must not inherit the 120-count carton');
+  }
+  const e1000x50 = previewOverlayImage({
+    id: 'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50',
+    formulaId: 'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50',
+    brand: 'NOW',
+  });
+  if (e1000x50?.url.endsWith('/now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-100.jpg')) {
+    throw new Error('E-1000 50 must not inherit the 100-count carton');
+  }
+  const kava60 = previewOverlayImage({
+    id: 'now-kava-kava-extract-60',
+    formulaId: 'now-kava-kava-extract-60',
+    brand: 'NOW',
+  });
+  if (kava60?.url.endsWith('/now-kava-kava-extract-120.jpg')) {
+    throw new Error('Kava Kava 60 must not inherit the 120-count carton');
+  }
+  const d3_240 = previewOverlayImage({
+    id: 'now-vitamin-d-3-high-potency-5-000-iu-240',
+    formulaId: 'now-vitamin-d-3-high-potency-5-000-iu-30',
+    brand: 'NOW',
+  });
+  if (
+    !d3_240?.url.endsWith('/now-vitamin-d-3-high-potency-5-000-iu-240.jpg')
+    || !d3_240.verifiedSku
+  ) {
+    throw new Error('Vitamin D-3 5,000 IU 240 must stay its own carton, not the 30-count');
+  }
+  const wort250 = previewOverlayImage({
+    id: 'now-st-john-s-wort-300-mg-250',
+    formulaId: 'now-st-john-s-wort-300-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    !wort250?.url.endsWith('/now-st-john-s-wort-300-mg-250.jpg')
+    || !wort250.verifiedSku
+  ) {
+    throw new Error("St. John's Wort 250 must stay its own carton, not the 100-count");
+  }
+  const alfalfa500 = previewOverlayImage({
+    id: 'now-alfalfa-650-mg-500',
+    formulaId: 'now-alfalfa-650-mg-250',
+    brand: 'NOW',
+  });
+  if (
+    !alfalfa500?.url.endsWith('/now-alfalfa-650-mg-500.jpg')
+    || !alfalfa500.verifiedSku
+  ) {
+    throw new Error('Alfalfa 500 must stay its own carton, not the 250-count');
   }
   const dopa180 = previewOverlayImage({
     id: 'now-dopa-mucuna-180',
