@@ -2313,6 +2313,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Two barcodes (768990567803 and 768990027239). nordic.com 403.
   // Do not glue one size. Official mark already on disk.
   'nordic-naturals-childrens-dha-liquid': brandMark('nordic-naturals-mark.png'),
+  // Vitamins night run 2026-10-05 4:15 AM PT batch 1.
+  // Kid Vits berry lemonade, 120 chewables. Barcode 733739038821.
+  // Vitacost images for that code are a flat label and a facts panel.
+  // No 3D carton. Official NOW wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'now-kids-kid-vits-berry-lemonade-120-chewable-tablets': brandMark(
+    'now-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -9873,6 +9881,77 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // L-Ornithine 500 mg, 120 veg capsules. Barcode 733739001221.
   'now-l-ornithine-500-mg-120': catalogShot('now-l-ornithine-500-mg-120.jpg'),
+  // Vitamins night run 2026-10-05 4:15 AM PT batch 1.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Propolis 1500, 300 mg, 100 capsules. Barcode 733739025401.
+  'now-propolis-1500-300-mg-100': catalogShot(
+    'now-propolis-1500-300-mg-100.jpg',
+  ),
+  // Senna Leaves 470 mg, 100 veg capsules. Barcode 733739047526.
+  'now-senna-leaves-470-mg-100': catalogShot(
+    'now-senna-leaves-470-mg-100.jpg',
+  ),
+  // Sun-E 400, 268 mg (400 IU), 60 softgels. Barcode 733739009357.
+  'now-sun-e-400-268-mg-400-iu-60': catalogShot(
+    'now-sun-e-400-268-mg-400-iu-60.jpg',
+  ),
+  // B-12, 60 lozenges. Barcode 733739004628.
+  'now-b-12-60': catalogShot('now-b-12-60.jpg'),
+  // American Ginseng Extract 500 mg, 100 veg capsules. Barcode 733739040046.
+  'now-american-ginseng-extract-100': catalogShot(
+    'now-american-ginseng-extract-100.jpg',
+  ),
+  // Bee Pollen Caps 500 mg, 100 capsules. Barcode 733739025203.
+  'now-bee-pollen-caps-500-mg-100': catalogShot(
+    'now-bee-pollen-caps-500-mg-100.jpg',
+  ),
+  // Sports L-Glutamine 1,000 mg, 120 veg capsules. Barcode 733739000941.
+  // Not the 240-count.
+  'now-sports-l-glutamine-1-000-mg-120': catalogShot(
+    'now-sports-l-glutamine-1-000-mg-120.jpg',
+  ),
+  // Nattokinase 100 mg, 60 veg capsules. Barcode 733739031402.
+  // Not the 120-count.
+  'now-nattokinase-100-mg-60': catalogShot('now-nattokinase-100-mg-60.jpg'),
+  // Chewable Vitamin D-3, mint, 5,000 IU, 120 chewables. Barcode 733739003584.
+  'now-chewable-vitamin-d-3-mint-5-000-iu-120-chewables': catalogShot(
+    'now-chewable-vitamin-d-3-mint-5-000-iu-120-chewables.jpg',
+  ),
+  // Potassium Plus Iodine, 180 tablets. Barcode 733739014528.
+  'now-potassium-plus-iodine-180': catalogShot(
+    'now-potassium-plus-iodine-180.jpg',
+  ),
+  // Tri-Chromium, 180 veg capsules. Barcode 733739014269.
+  'now-tri-chromium-180': catalogShot('now-tri-chromium-180.jpg'),
+  // Ultra Omega 3-D fish oil, 90 fish softgels. Barcode 733739016638.
+  'now-ultra-omega-3-d-fish-oil-90-fish-softgels': catalogShot(
+    'now-ultra-omega-3-d-fish-oil-90-fish-softgels.jpg',
+  ),
+  // Sports L-Carnitine, triple strength, citrus, 16 fl oz. Barcode 733739000644.
+  'now-sports-l-carnitine-triple-strength-citrus-16-fl-oz-473-ml': catalogShot(
+    'now-sports-l-carnitine-triple-strength-citrus-16-fl-oz-473-ml.jpg',
+  ),
+  // Beta-1,3/1,6-D-Glucan, 90 veg capsules. Barcode 733739030542.
+  'now-beta-1-3-1-6-d-glucan-90': catalogShot(
+    'now-beta-1-3-1-6-d-glucan-90.jpg',
+  ),
+  // Relora 300 mg, 60 veg capsules. Barcode 733739033420. Not the 120-count.
+  'now-relora-300-mg-60': catalogShot('now-relora-300-mg-60.jpg'),
+  // Pycnogenol with acerola and rutin, 50 veg capsules. Barcode 733739032775.
+  'now-pycnogenol-with-acerola-rutin-50': catalogShot(
+    'now-pycnogenol-with-acerola-rutin-50.jpg',
+  ),
+  // Licorice Root 450 mg, 100 veg capsules. Barcode 733739047182.
+  'now-licorice-root-450-mg-100': catalogShot(
+    'now-licorice-root-450-mg-100.jpg',
+  ),
+  // Bacopa Extract 450 mg, 90 veg capsules. Barcode 733739045881.
+  'now-bacopa-extract-450-mg-90': catalogShot(
+    'now-bacopa-extract-450-mg-90.jpg',
+  ),
+  // 7-Keto 25 mg, 90 veg capsules. Barcode 733739030108.
+  'now-7-keto-90': catalogShot('now-7-keto-90.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16374,6 +16453,90 @@ assertExactCarton(
   'now-l-ornithine-500-mg-120',
   'NOW',
   'now-l-ornithine-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-propolis-1500-300-mg-100',
+  'NOW',
+  'now-propolis-1500-300-mg-100.jpg',
+);
+assertExactCarton(
+  'now-senna-leaves-470-mg-100',
+  'NOW',
+  'now-senna-leaves-470-mg-100.jpg',
+);
+assertExactCarton(
+  'now-sun-e-400-268-mg-400-iu-60',
+  'NOW',
+  'now-sun-e-400-268-mg-400-iu-60.jpg',
+);
+assertExactCarton('now-b-12-60', 'NOW', 'now-b-12-60.jpg');
+assertExactCarton(
+  'now-american-ginseng-extract-100',
+  'NOW',
+  'now-american-ginseng-extract-100.jpg',
+);
+assertExactCarton(
+  'now-bee-pollen-caps-500-mg-100',
+  'NOW',
+  'now-bee-pollen-caps-500-mg-100.jpg',
+);
+assertExactCarton(
+  'now-sports-l-glutamine-1-000-mg-120',
+  'NOW',
+  'now-sports-l-glutamine-1-000-mg-120.jpg',
+);
+assertExactCarton(
+  'now-nattokinase-100-mg-60',
+  'NOW',
+  'now-nattokinase-100-mg-60.jpg',
+);
+assertExactCarton(
+  'now-chewable-vitamin-d-3-mint-5-000-iu-120-chewables',
+  'NOW',
+  'now-chewable-vitamin-d-3-mint-5-000-iu-120-chewables.jpg',
+);
+assertExactCarton(
+  'now-potassium-plus-iodine-180',
+  'NOW',
+  'now-potassium-plus-iodine-180.jpg',
+);
+assertExactCarton('now-tri-chromium-180', 'NOW', 'now-tri-chromium-180.jpg');
+assertExactCarton(
+  'now-ultra-omega-3-d-fish-oil-90-fish-softgels',
+  'NOW',
+  'now-ultra-omega-3-d-fish-oil-90-fish-softgels.jpg',
+);
+assertExactCarton(
+  'now-sports-l-carnitine-triple-strength-citrus-16-fl-oz-473-ml',
+  'NOW',
+  'now-sports-l-carnitine-triple-strength-citrus-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton(
+  'now-beta-1-3-1-6-d-glucan-90',
+  'NOW',
+  'now-beta-1-3-1-6-d-glucan-90.jpg',
+);
+assertExactCarton('now-relora-300-mg-60', 'NOW', 'now-relora-300-mg-60.jpg');
+assertExactCarton(
+  'now-pycnogenol-with-acerola-rutin-50',
+  'NOW',
+  'now-pycnogenol-with-acerola-rutin-50.jpg',
+);
+assertExactCarton(
+  'now-licorice-root-450-mg-100',
+  'NOW',
+  'now-licorice-root-450-mg-100.jpg',
+);
+assertExactCarton(
+  'now-bacopa-extract-450-mg-90',
+  'NOW',
+  'now-bacopa-extract-450-mg-90.jpg',
+);
+assertExactCarton('now-7-keto-90', 'NOW', 'now-7-keto-90.jpg');
+assertBrandMark(
+  'now-kids-kid-vits-berry-lemonade-120-chewable-tablets',
+  'NOW',
+  'now-mark.png',
 );
 {
   const b50Large = previewOverlayImage({
