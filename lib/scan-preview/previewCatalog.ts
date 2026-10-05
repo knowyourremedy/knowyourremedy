@@ -9807,6 +9807,72 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100': catalogShot(
     'now-e-200-with-mixed-tocopherols-134-mg-200-iu-100.jpg',
   ),
+  // Vitamins night run 2026-10-05 3:00 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Omega-3 Mini Gels fish oil, 180 softgels (0.5 g). Barcode 733739016850.
+  'now-omega-3-mini-gels-fish-oil-180': catalogShot(
+    'now-omega-3-mini-gels-fish-oil-180.jpg',
+  ),
+  // Niacin 500 mg, 100 veg capsules. Barcode 733739004819.
+  'now-niacin-500-mg-100': catalogShot('now-niacin-500-mg-100.jpg'),
+  // True Focus, 90 capsules. Barcode 733739001573.
+  'now-true-focus-90': catalogShot('now-true-focus-90.jpg'),
+  // Brewer's Yeast 650 mg, 200 tablets. Barcode 733739024107.
+  'now-brewer-s-yeast-650-mg-200': catalogShot(
+    'now-brewer-s-yeast-650-mg-200.jpg',
+  ),
+  // Cod Liver Oil 650 mg, 250 softgels. Barcode 733739017420.
+  'now-cod-liver-oil-650-mg-250': catalogShot(
+    'now-cod-liver-oil-650-mg-250.jpg',
+  ),
+  // Dopa Mucuna, 90 veg capsules. Barcode 733739030924. Not the 180-count.
+  'now-dopa-mucuna-90': catalogShot('now-dopa-mucuna-90.jpg'),
+  // Dong Quai 520 mg, 100 veg capsules. Barcode 733739046550.
+  'now-dong-quai-520-mg-100': catalogShot('now-dong-quai-520-mg-100.jpg'),
+  // Flush-Free Niacin 500 mg, 90 veg capsules. Barcode 733739004987.
+  // Not the 180-count.
+  'now-flush-free-niacin-500-mg-90': catalogShot(
+    'now-flush-free-niacin-500-mg-90.jpg',
+  ),
+  // B-6 100 mg, 100 veg capsules. Barcode 733739004567. Not the 250-count.
+  'now-b-6-100-mg-100': catalogShot('now-b-6-100-mg-100.jpg'),
+  // L-Citrulline 750 mg, 180 veg capsules. Barcode 733739001030.
+  'now-l-citrulline-750-mg-180': catalogShot('now-l-citrulline-750-mg-180.jpg'),
+  // L-Carnitine 500 mg, 60 veg capsules. Barcode 733739000729. Not the 180-count.
+  'now-l-carnitine-500-mg-60': catalogShot('now-l-carnitine-500-mg-60.jpg'),
+  // St. John's Wort 300 mg, 250 veg capsules. Barcode 733739047618.
+  // Not the 100-count.
+  'now-st-john-s-wort-300-mg-250': catalogShot(
+    'now-st-john-s-wort-300-mg-250.jpg',
+  ),
+  // C-500 Calcium Ascorbate-C, 100 veg capsules. Barcode 733739006769.
+  // Not the 250-count.
+  'now-c-500-calcium-ascorbate-c-100': catalogShot(
+    'now-c-500-calcium-ascorbate-c-100.jpg',
+  ),
+  // Virgin Coconut Oil 1,000 mg, 120 softgels. Barcode 733739017185.
+  'now-virgin-coconut-oil-1-000-mg-120': catalogShot(
+    'now-virgin-coconut-oil-1-000-mg-120.jpg',
+  ),
+  // B-12 1,000 mcg, 100 lozenges. Barcode 733739004666. Not the 250-count.
+  'now-b-12-100': catalogShot('now-b-12-100.jpg'),
+  // Yucca 500 mg, 100 capsules. Barcode 733739047809.
+  'now-yucca-100': catalogShot('now-yucca-100.jpg'),
+  // Liquid Hyaluronic Acid, berry, 100 mg, 16 fl oz (473 ml).
+  // Barcode 733739031594.
+  'now-liquid-hyaluronic-acid-berry-100-mg-16-fl-oz-473-ml': catalogShot(
+    'now-liquid-hyaluronic-acid-berry-100-mg-16-fl-oz-473-ml.jpg',
+  ),
+  // Biotin 5,000 mcg, 60 veg capsules. Barcode 733739004710.
+  'now-biotin-5-000-mcg-60': catalogShot('now-biotin-5-000-mcg-60.jpg'),
+  // EGCg green tea extract 400 mg, 90 veg capsules. Barcode 733739047045.
+  // Not the 180-count.
+  'now-egcg-green-tea-extract-400-mg-90': catalogShot(
+    'now-egcg-green-tea-extract-400-mg-90.jpg',
+  ),
+  // L-Ornithine 500 mg, 120 veg capsules. Barcode 733739001221.
+  'now-l-ornithine-500-mg-120': catalogShot('now-l-ornithine-500-mg-120.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16241,6 +16307,74 @@ assertExactCarton(
     throw new Error('Saw palmetto 240 must not inherit the 120-count carton');
   }
 }
+assertExactCarton(
+  'now-omega-3-mini-gels-fish-oil-180',
+  'NOW',
+  'now-omega-3-mini-gels-fish-oil-180.jpg',
+);
+assertExactCarton('now-niacin-500-mg-100', 'NOW', 'now-niacin-500-mg-100.jpg');
+assertExactCarton('now-true-focus-90', 'NOW', 'now-true-focus-90.jpg');
+assertExactCarton(
+  'now-brewer-s-yeast-650-mg-200',
+  'NOW',
+  'now-brewer-s-yeast-650-mg-200.jpg',
+);
+assertExactCarton(
+  'now-cod-liver-oil-650-mg-250',
+  'NOW',
+  'now-cod-liver-oil-650-mg-250.jpg',
+);
+assertExactCarton('now-dopa-mucuna-90', 'NOW', 'now-dopa-mucuna-90.jpg');
+assertExactCarton('now-dong-quai-520-mg-100', 'NOW', 'now-dong-quai-520-mg-100.jpg');
+assertExactCarton(
+  'now-flush-free-niacin-500-mg-90',
+  'NOW',
+  'now-flush-free-niacin-500-mg-90.jpg',
+);
+assertExactCarton('now-b-6-100-mg-100', 'NOW', 'now-b-6-100-mg-100.jpg');
+assertExactCarton(
+  'now-l-citrulline-750-mg-180',
+  'NOW',
+  'now-l-citrulline-750-mg-180.jpg',
+);
+assertExactCarton(
+  'now-l-carnitine-500-mg-60',
+  'NOW',
+  'now-l-carnitine-500-mg-60.jpg',
+);
+assertExactCarton(
+  'now-st-john-s-wort-300-mg-250',
+  'NOW',
+  'now-st-john-s-wort-300-mg-250.jpg',
+);
+assertExactCarton(
+  'now-c-500-calcium-ascorbate-c-100',
+  'NOW',
+  'now-c-500-calcium-ascorbate-c-100.jpg',
+);
+assertExactCarton(
+  'now-virgin-coconut-oil-1-000-mg-120',
+  'NOW',
+  'now-virgin-coconut-oil-1-000-mg-120.jpg',
+);
+assertExactCarton('now-b-12-100', 'NOW', 'now-b-12-100.jpg');
+assertExactCarton('now-yucca-100', 'NOW', 'now-yucca-100.jpg');
+assertExactCarton(
+  'now-liquid-hyaluronic-acid-berry-100-mg-16-fl-oz-473-ml',
+  'NOW',
+  'now-liquid-hyaluronic-acid-berry-100-mg-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton('now-biotin-5-000-mcg-60', 'NOW', 'now-biotin-5-000-mcg-60.jpg');
+assertExactCarton(
+  'now-egcg-green-tea-extract-400-mg-90',
+  'NOW',
+  'now-egcg-green-tea-extract-400-mg-90.jpg',
+);
+assertExactCarton(
+  'now-l-ornithine-500-mg-120',
+  'NOW',
+  'now-l-ornithine-500-mg-120.jpg',
+);
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
