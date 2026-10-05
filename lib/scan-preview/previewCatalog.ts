@@ -9952,6 +9952,85 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // 7-Keto 25 mg, 90 veg capsules. Barcode 733739030108.
   'now-7-keto-90': catalogShot('now-7-keto-90.jpg'),
+  // Vitamins night run 2026-10-05 4:15 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Glutathione with milk thistle and alpha lipoic acid, 30 veg capsules.
+  // Barcode 733739001757. Not the 60-count.
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30': catalogShot(
+    'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30.jpg',
+  ),
+  // Ashwagandha Stress Relief, 60 veg capsules. Barcode 733739023759.
+  'now-ashwagandha-stress-relief-60': catalogShot(
+    'now-ashwagandha-stress-relief-60.jpg',
+  ),
+  // Cascara Sagrada 450 mg, 100 veg capsules. Barcode 733739046208.
+  // Not the 250-count.
+  'now-cascara-sagrada-450-mg-100': catalogShot(
+    'now-cascara-sagrada-450-mg-100.jpg',
+  ),
+  // Passion Flower 350 mg, 90 veg capsules. Barcode 733739047632.
+  'now-passion-flower-350-mg-90': catalogShot(
+    'now-passion-flower-350-mg-90.jpg',
+  ),
+  // Sports MCT Oil 1,000 mg, 150 softgels. Barcode 733739021960.
+  'now-sports-mct-oil-1-000-mg-150': catalogShot(
+    'now-sports-mct-oil-1-000-mg-150.jpg',
+  ),
+  // Cod Liver Oil 1,000 mg, 90 softgels. Barcode 733739017437.
+  // Not the 180-count.
+  'now-cod-liver-oil-1-000-mg-90': catalogShot(
+    'now-cod-liver-oil-1-000-mg-90.jpg',
+  ),
+  // Liver Refresh, 90 veg capsules. Barcode 733739024480.
+  'now-liver-refresh-90': catalogShot('now-liver-refresh-90.jpg'),
+  // Ginkgo Biloba 60 mg, 60 veg capsules. Barcode 733739046864.
+  // Not the 120-count or the 240-count.
+  'now-ginkgo-biloba-60-mg-60': catalogShot('now-ginkgo-biloba-60-mg-60.jpg'),
+  // Red Yeast Rice with CoQ10, 120 veg capsules. Barcode 733739033345.
+  // Not the 60-count.
+  'now-red-yeast-rice-with-coq10-120': catalogShot(
+    'now-red-yeast-rice-with-coq10-120.jpg',
+  ),
+  // Vitamin E liquid, d-alpha tocopherol, 4 fl oz. Barcode 733739009128.
+  'now-vitamin-e-liquid-d-alpha-tocopherol-4-fl-oz-118-ml': catalogShot(
+    'now-vitamin-e-liquid-d-alpha-tocopherol-4-fl-oz-118-ml.jpg',
+  ),
+  // Cat's Claw 500 mg, 250 veg capsules. Barcode 733739046215.
+  // Not the 100-count.
+  'now-cat-s-claw-500-mg-250': catalogShot('now-cat-s-claw-500-mg-250.jpg'),
+  // Hydrolyzed Beef Gelatin 550 mg, 200 capsules. Barcode 733739065056.
+  'now-hydrolyzed-beef-gelatin-200': catalogShot(
+    'now-hydrolyzed-beef-gelatin-200.jpg',
+  ),
+  // Alpha Lipoic Acid 100 mg, 120 veg capsules. Barcode 733739030412.
+  'now-alpha-lipoic-acid-100-mg-120': catalogShot(
+    'now-alpha-lipoic-acid-100-mg-120.jpg',
+  ),
+  // Fenugreek 500 mg, 250 veg capsules. Barcode 733739046789.
+  // Not the 100-count.
+  'now-fenugreek-500-mg-250': catalogShot('now-fenugreek-500-mg-250.jpg'),
+  // Chaste Berry Vitex Extract 300 mg, 90 veg capsules. Barcode 733739047731.
+  'now-chaste-berry-vitex-extract-300-mg-90': catalogShot(
+    'now-chaste-berry-vitex-extract-300-mg-90.jpg',
+  ),
+  // Grape Seed extra strength, 90 veg capsules. Barcode 733739032744.
+  'now-grape-seed-90': catalogShot('now-grape-seed-90.jpg'),
+  // ADAM Superior Men's Multi, 90 veg capsules. Barcode 733739038784.
+  'now-adam-superior-men-s-multi-90': catalogShot(
+    'now-adam-superior-men-s-multi-90.jpg',
+  ),
+  // Fenugreek 500 mg, 100 veg capsules. Barcode 733739046772.
+  // Not the 250-count.
+  'now-fenugreek-500-mg-100': catalogShot('now-fenugreek-500-mg-100.jpg'),
+  // Vitamin A & D, 100 softgels. Barcode 733739003508.
+  'now-vitamin-a-d-100': catalogShot('now-vitamin-a-d-100.jpg'),
+  // Kid's DHA fish oil chewables, tasty fruit, 60 chewable softgels.
+  // Barcode 733739016072.
+  'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels':
+    catalogShot(
+      'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels.jpg',
+    ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16538,6 +16617,128 @@ assertBrandMark(
   'NOW',
   'now-mark.png',
 );
+assertExactCarton(
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30',
+  'NOW',
+  'now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30.jpg',
+);
+assertExactCarton(
+  'now-ashwagandha-stress-relief-60',
+  'NOW',
+  'now-ashwagandha-stress-relief-60.jpg',
+);
+assertExactCarton(
+  'now-cascara-sagrada-450-mg-100',
+  'NOW',
+  'now-cascara-sagrada-450-mg-100.jpg',
+);
+assertExactCarton(
+  'now-passion-flower-350-mg-90',
+  'NOW',
+  'now-passion-flower-350-mg-90.jpg',
+);
+assertExactCarton(
+  'now-sports-mct-oil-1-000-mg-150',
+  'NOW',
+  'now-sports-mct-oil-1-000-mg-150.jpg',
+);
+assertExactCarton(
+  'now-cod-liver-oil-1-000-mg-90',
+  'NOW',
+  'now-cod-liver-oil-1-000-mg-90.jpg',
+);
+assertExactCarton('now-liver-refresh-90', 'NOW', 'now-liver-refresh-90.jpg');
+assertExactCarton(
+  'now-ginkgo-biloba-60-mg-60',
+  'NOW',
+  'now-ginkgo-biloba-60-mg-60.jpg',
+);
+assertExactCarton(
+  'now-red-yeast-rice-with-coq10-120',
+  'NOW',
+  'now-red-yeast-rice-with-coq10-120.jpg',
+);
+assertExactCarton(
+  'now-vitamin-e-liquid-d-alpha-tocopherol-4-fl-oz-118-ml',
+  'NOW',
+  'now-vitamin-e-liquid-d-alpha-tocopherol-4-fl-oz-118-ml.jpg',
+);
+assertExactCarton(
+  'now-cat-s-claw-500-mg-250',
+  'NOW',
+  'now-cat-s-claw-500-mg-250.jpg',
+);
+assertExactCarton(
+  'now-hydrolyzed-beef-gelatin-200',
+  'NOW',
+  'now-hydrolyzed-beef-gelatin-200.jpg',
+);
+assertExactCarton(
+  'now-alpha-lipoic-acid-100-mg-120',
+  'NOW',
+  'now-alpha-lipoic-acid-100-mg-120.jpg',
+);
+assertExactCarton(
+  'now-fenugreek-500-mg-250',
+  'NOW',
+  'now-fenugreek-500-mg-250.jpg',
+);
+assertExactCarton(
+  'now-chaste-berry-vitex-extract-300-mg-90',
+  'NOW',
+  'now-chaste-berry-vitex-extract-300-mg-90.jpg',
+);
+assertExactCarton('now-grape-seed-90', 'NOW', 'now-grape-seed-90.jpg');
+assertExactCarton(
+  'now-adam-superior-men-s-multi-90',
+  'NOW',
+  'now-adam-superior-men-s-multi-90.jpg',
+);
+assertExactCarton(
+  'now-fenugreek-500-mg-100',
+  'NOW',
+  'now-fenugreek-500-mg-100.jpg',
+);
+assertExactCarton('now-vitamin-a-d-100', 'NOW', 'now-vitamin-a-d-100.jpg');
+assertExactCarton(
+  'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels',
+  'NOW',
+  'now-kid-s-dha-fish-oil-chewables-tasty-fruit-60-chewable-softgels.jpg',
+);
+{
+  const ryr60 = previewOverlayImage({
+    id: 'now-red-yeast-rice-with-coq10-60',
+    formulaId: 'now-red-yeast-rice-with-coq10-60',
+    brand: 'NOW',
+  });
+  if (ryr60?.url.endsWith('/now-red-yeast-rice-with-coq10-120.jpg')) {
+    throw new Error('Red yeast rice 60 must not inherit the 120-count carton');
+  }
+  const claw100 = previewOverlayImage({
+    id: 'now-cat-s-claw-500-mg-100',
+    formulaId: 'now-cat-s-claw-500-mg-100',
+    brand: 'NOW',
+  });
+  if (claw100?.url.endsWith('/now-cat-s-claw-500-mg-250.jpg')) {
+    throw new Error("Cat's claw 100 must not inherit the 250-count carton");
+  }
+  const fenugreek250 = previewOverlayImage({
+    id: 'now-fenugreek-500-mg-250',
+    formulaId: 'now-fenugreek-500-mg-250',
+    brand: 'NOW',
+  });
+  const fenugreek100 = previewOverlayImage({
+    id: 'now-fenugreek-500-mg-100',
+    formulaId: 'now-fenugreek-500-mg-100',
+    brand: 'NOW',
+  });
+  if (
+    fenugreek250?.url.endsWith('/now-fenugreek-500-mg-100.jpg')
+    || fenugreek100?.url.endsWith('/now-fenugreek-500-mg-250.jpg')
+  ) {
+    throw new Error('Fenugreek 100 and 250 must keep their own cartons');
+  }
+}
 {
   const b50Large = previewOverlayImage({
     id: 'now-b-50-250-733739004284',
