@@ -10097,6 +10097,74 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-zinc-picolinate-50-mg-30': catalogShot(
     'now-zinc-picolinate-50-mg-30.jpg',
   ),
+  // Vitamins night run 2026-10-05 5:30 AM PT batch 2.
+  // Vitacost pack face for that UPC. nowfoods.com was blocked.
+  // Per-id only. Not a sibling count.
+  // Pau D'Arco 500 mg, 250 veg capsules. Barcode 733739047267.
+  'now-pau-d-arco-500-mg-250': catalogShot('now-pau-d-arco-500-mg-250.jpg'),
+  // Rei-Shi Mushrooms, 100 veg capsules. Barcode 733739047335.
+  'now-rei-shi-mushrooms-100': catalogShot('now-rei-shi-mushrooms-100.jpg'),
+  // Holy Basil Extract 500 mg, 90 veg capsules. Barcode 733739031242.
+  'now-holy-basil-extract-500-mg-90': catalogShot(
+    'now-holy-basil-extract-500-mg-90.jpg',
+  ),
+  // Ultra A & D3, 100 softgels. Barcode 733739003614.
+  'now-ultra-a-d3-100': catalogShot('now-ultra-a-d3-100.jpg'),
+  // Vein Supreme, 90 veg capsules. Barcode 733739031235.
+  'now-vein-supreme-90': catalogShot('now-vein-supreme-90.jpg'),
+  // Adrenal Stress Support, 90 veg capsules. Barcode 733739033444.
+  'now-adrenal-stress-support-90': catalogShot(
+    'now-adrenal-stress-support-90.jpg',
+  ),
+  // Sports ZMA, 180 veg capsules. Barcode 733739022011.
+  // Not the 90-count.
+  'now-sports-zma-180': catalogShot('now-sports-zma-180.jpg'),
+  // Methyl B-12, 60 lozenges. Barcode 733739004963.
+  // Not the 120-count.
+  'now-methyl-b-12-60': catalogShot('now-methyl-b-12-60.jpg'),
+  // D-Flame, 90 veg capsules. Barcode 733739031211.
+  'now-d-flame-90': catalogShot('now-d-flame-90.jpg'),
+  // Garlic Oil 1,500 mg, 100 softgels. Barcode 733739017901.
+  'now-garlic-oil-1-500-mg-100': catalogShot(
+    'now-garlic-oil-1-500-mg-100.jpg',
+  ),
+  // Black Cohosh Root, 90 veg capsules. Barcode 733739046079.
+  'now-black-cohosh-root-90': catalogShot('now-black-cohosh-root-90.jpg'),
+  // L-Histidine 600 mg, 60 veg capsules. Barcode 733739001214.
+  'now-l-histidine-600-mg-60': catalogShot('now-l-histidine-600-mg-60.jpg'),
+  // Sports Amino-9 Essentials powder, 11.64 oz. Barcode 733739002068.
+  'now-sports-amino-9-essentials-powder-11p64': catalogShot(
+    'now-sports-amino-9-essentials-powder-11p64.jpg',
+  ),
+  // Hawthorn Extract 300 mg, 90 veg capsules. Barcode 733739047083.
+  'now-hawthorn-extract-300-mg-90': catalogShot(
+    'now-hawthorn-extract-300-mg-90.jpg',
+  ),
+  // Eve Superior Women's Multi, iron-free, 120 veg capsules.
+  // Barcode 733739037985.
+  'now-eve-superior-women-s-multi-iron-free-120': catalogShot(
+    'now-eve-superior-women-s-multi-iron-free-120.jpg',
+  ),
+  // Sports Beta-Alanine Endurance, 750 mg, 120 veg capsules.
+  // Barcode 733739020086.
+  'now-sports-beta-alanine-endurance-120': catalogShot(
+    'now-sports-beta-alanine-endurance-120.jpg',
+  ),
+  // Phosphatidyl Serine 300 mg, 50 softgels. Barcode 733739023926.
+  'now-phosphatidyl-serine-300-mg-50': catalogShot(
+    'now-phosphatidyl-serine-300-mg-50.jpg',
+  ),
+  // E-200, 134 mg (200 IU), 100 softgels. Barcode 733739008251.
+  'now-e-200-134-mg-200-iu-100': catalogShot(
+    'now-e-200-134-mg-200-iu-100.jpg',
+  ),
+  // Super Omega EPA fish oil, 120 softgels. Barcode 733739016829.
+  // Not the 240-count.
+  'now-super-omega-epa-fish-oil-120': catalogShot(
+    'now-super-omega-epa-fish-oil-120.jpg',
+  ),
+  // Thyroid Energy, 180 veg capsules. Barcode 733739033697.
+  'now-thyroid-energy-180': catalogShot('now-thyroid-energy-180.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16834,6 +16902,70 @@ assertExactCarton(
   'NOW',
   'now-zinc-picolinate-50-mg-30.jpg',
 );
+assertExactCarton(
+  'now-pau-d-arco-500-mg-250',
+  'NOW',
+  'now-pau-d-arco-500-mg-250.jpg',
+);
+assertExactCarton('now-rei-shi-mushrooms-100', 'NOW', 'now-rei-shi-mushrooms-100.jpg');
+assertExactCarton(
+  'now-holy-basil-extract-500-mg-90',
+  'NOW',
+  'now-holy-basil-extract-500-mg-90.jpg',
+);
+assertExactCarton('now-ultra-a-d3-100', 'NOW', 'now-ultra-a-d3-100.jpg');
+assertExactCarton('now-vein-supreme-90', 'NOW', 'now-vein-supreme-90.jpg');
+assertExactCarton(
+  'now-adrenal-stress-support-90',
+  'NOW',
+  'now-adrenal-stress-support-90.jpg',
+);
+assertExactCarton('now-sports-zma-180', 'NOW', 'now-sports-zma-180.jpg');
+assertExactCarton('now-methyl-b-12-60', 'NOW', 'now-methyl-b-12-60.jpg');
+assertExactCarton('now-d-flame-90', 'NOW', 'now-d-flame-90.jpg');
+assertExactCarton(
+  'now-garlic-oil-1-500-mg-100',
+  'NOW',
+  'now-garlic-oil-1-500-mg-100.jpg',
+);
+assertExactCarton('now-black-cohosh-root-90', 'NOW', 'now-black-cohosh-root-90.jpg');
+assertExactCarton('now-l-histidine-600-mg-60', 'NOW', 'now-l-histidine-600-mg-60.jpg');
+assertExactCarton(
+  'now-sports-amino-9-essentials-powder-11p64',
+  'NOW',
+  'now-sports-amino-9-essentials-powder-11p64.jpg',
+);
+assertExactCarton(
+  'now-hawthorn-extract-300-mg-90',
+  'NOW',
+  'now-hawthorn-extract-300-mg-90.jpg',
+);
+assertExactCarton(
+  'now-eve-superior-women-s-multi-iron-free-120',
+  'NOW',
+  'now-eve-superior-women-s-multi-iron-free-120.jpg',
+);
+assertExactCarton(
+  'now-sports-beta-alanine-endurance-120',
+  'NOW',
+  'now-sports-beta-alanine-endurance-120.jpg',
+);
+assertExactCarton(
+  'now-phosphatidyl-serine-300-mg-50',
+  'NOW',
+  'now-phosphatidyl-serine-300-mg-50.jpg',
+);
+assertExactCarton(
+  'now-e-200-134-mg-200-iu-100',
+  'NOW',
+  'now-e-200-134-mg-200-iu-100.jpg',
+);
+assertExactCarton(
+  'now-super-omega-epa-fish-oil-120',
+  'NOW',
+  'now-super-omega-epa-fish-oil-120.jpg',
+);
+assertExactCarton('now-thyroid-energy-180', 'NOW', 'now-thyroid-energy-180.jpg');
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -17201,6 +17333,14 @@ assertExactCarton(
   });
   if (!methyl120?.url.endsWith('/now-methyl-b-12-120.jpg') || !methyl120.verifiedSku) {
     throw new Error('Methyl B-12 120 must stay its own carton, not the 60-count');
+  }
+  const zma90 = previewOverlayImage({
+    id: 'now-sports-zma-90',
+    formulaId: 'now-sports-zma-90',
+    brand: 'NOW',
+  });
+  if (zma90?.url.endsWith('/now-sports-zma-180.jpg')) {
+    throw new Error('ZMA 90 must not inherit the 180-count carton');
   }
   const cascara250 = previewOverlayImage({
     id: 'now-cascara-sagrada-450-mg-250',
