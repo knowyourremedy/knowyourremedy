@@ -10613,6 +10613,74 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // CLA 800 mg, 90 softgels. Barcode 733739017277.
   // Not the 180-count.
   'now-cla-90': catalogShot('now-cla-90.jpg'),
+  // Vitamins night run 2026-10-06 3:00 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // L-Cysteine 500 mg, 90 veg capsules. Barcode 733739001771.
+  'now-l-cysteine-90': catalogShot('now-l-cysteine-90.jpg'),
+  // Liquid Chlorophyll, mint, 4 fl oz. Barcode 733739026422.
+  // Not the 16 fl oz mint bottle.
+  'now-liquid-chlorophyll-mint-4-fl-oz-118-ml': catalogShot(
+    'now-liquid-chlorophyll-mint-4-fl-oz-118-ml.jpg',
+  ),
+  // Sports Pyruvate, 100 veg capsules. Barcode 733739022400.
+  'now-sports-pyruvate-100': catalogShot('now-sports-pyruvate-100.jpg'),
+  // Clinical Cardio, 90 capsules. Barcode 733739033833.
+  'now-clinical-cardio-90': catalogShot('now-clinical-cardio-90.jpg'),
+  // Liquid Chlorophyll, unflavored, 4 fl oz. Barcode 733739026439.
+  // Not the 16 fl oz unflavored bottle and not the mint bottle.
+  'now-liquid-chlorophyll-unflavored-4-fl-oz-118-ml': catalogShot(
+    'now-liquid-chlorophyll-unflavored-4-fl-oz-118-ml.jpg',
+  ),
+  // Kid Vits, Grape Splash, 120 chewables. Barcode 733739038739.
+  // Not the berry lemonade chewables.
+  'now-kid-vits-grape-splash-120-chewable-tablets': catalogShot(
+    'now-kid-vits-grape-splash-120-chewable-tablets.jpg',
+  ),
+  // Sports Arginine & Ornithine, 100 veg capsules. Barcode 733739000408.
+  'now-sports-arginine-ornithine-100': catalogShot(
+    'now-sports-arginine-ornithine-100.jpg',
+  ),
+  // Sports BCAA Big 6, watermelon, 21.16 oz. Barcode 733739002129.
+  'now-sports-bcaa-big-6-watermelon-21p16': catalogShot(
+    'now-sports-bcaa-big-6-watermelon-21p16.jpg',
+  ),
+  // Graviola 500 mg, 100 veg capsules. Barcode 733739047038.
+  'now-graviola-500-mg-100': catalogShot('now-graviola-500-mg-100.jpg'),
+  // Gymnema Sylvestre Extract, 90 veg capsules. Barcode 733739047076.
+  'now-gymnema-sylvestre-extract-90': catalogShot(
+    'now-gymnema-sylvestre-extract-90.jpg',
+  ),
+  // NAC with Selenium, 30 capsules. Barcode 733739001832.
+  // Not the 100-count.
+  'now-nac-with-selenium-30': catalogShot('now-nac-with-selenium-30.jpg'),
+  // Glucose Metabolic Support, 90 veg capsules. Barcode 733739033185.
+  'now-glucose-metabolic-support-90': catalogShot(
+    'now-glucose-metabolic-support-90.jpg',
+  ),
+  // Special Two multi, 120 veg capsules. Barcode 733739038685.
+  // Not the 240-count.
+  'now-special-two-multi-vitamin-120': catalogShot(
+    'now-special-two-multi-vitamin-120.jpg',
+  ),
+  // E-400, 268 mg (400 IU), 250 softgels. Barcode 733739008398.
+  // Not the 100-count.
+  'now-e-400-268-mg-400-iu-250': catalogShot(
+    'now-e-400-268-mg-400-iu-250.jpg',
+  ),
+  // Berberine Glucose Support, 60 softgels. Barcode 733739914187.
+  'now-berberine-glucose-support-60': catalogShot(
+    'now-berberine-glucose-support-60.jpg',
+  ),
+  // Rest & Repair, 90 veg capsules. Barcode 733739022257.
+  'now-rest-repair-90': catalogShot('now-rest-repair-90.jpg'),
+  // L-Serine 500 mg, 120 veg capsules. Barcode 733739002587.
+  'now-l-serine-500-mg-120': catalogShot('now-l-serine-500-mg-120.jpg'),
+  // AAKG 2200, 180 veg capsules. Barcode 733739000712.
+  'now-aakg-2200-180': catalogShot('now-aakg-2200-180.jpg'),
+  // Ashwagandha 450 mg, 30 veg capsules. Barcode 733739045959.
+  'now-ashwagandha-450-mg-30': catalogShot('now-ashwagandha-450-mg-30.jpg'),
+  // Magnesium 500 mg, 120 veg capsules. Barcode 733739012852.
+  'now-magnesium-500-mg-120': catalogShot('now-magnesium-500-mg-120.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17877,6 +17945,78 @@ assertExactCarton(
   'now-liquid-chlorophyll-unflavored-16-fl-oz-473-ml.jpg',
 );
 assertExactCarton('now-cla-90', 'NOW', 'now-cla-90.jpg');
+assertExactCarton('now-l-cysteine-90', 'NOW', 'now-l-cysteine-90.jpg');
+assertExactCarton(
+  'now-liquid-chlorophyll-mint-4-fl-oz-118-ml',
+  'NOW',
+  'now-liquid-chlorophyll-mint-4-fl-oz-118-ml.jpg',
+);
+assertExactCarton('now-sports-pyruvate-100', 'NOW', 'now-sports-pyruvate-100.jpg');
+assertExactCarton('now-clinical-cardio-90', 'NOW', 'now-clinical-cardio-90.jpg');
+assertExactCarton(
+  'now-liquid-chlorophyll-unflavored-4-fl-oz-118-ml',
+  'NOW',
+  'now-liquid-chlorophyll-unflavored-4-fl-oz-118-ml.jpg',
+);
+assertExactCarton(
+  'now-kid-vits-grape-splash-120-chewable-tablets',
+  'NOW',
+  'now-kid-vits-grape-splash-120-chewable-tablets.jpg',
+);
+assertExactCarton(
+  'now-sports-arginine-ornithine-100',
+  'NOW',
+  'now-sports-arginine-ornithine-100.jpg',
+);
+assertExactCarton(
+  'now-sports-bcaa-big-6-watermelon-21p16',
+  'NOW',
+  'now-sports-bcaa-big-6-watermelon-21p16.jpg',
+);
+assertExactCarton('now-graviola-500-mg-100', 'NOW', 'now-graviola-500-mg-100.jpg');
+assertExactCarton(
+  'now-gymnema-sylvestre-extract-90',
+  'NOW',
+  'now-gymnema-sylvestre-extract-90.jpg',
+);
+assertExactCarton(
+  'now-nac-with-selenium-30',
+  'NOW',
+  'now-nac-with-selenium-30.jpg',
+);
+assertExactCarton(
+  'now-glucose-metabolic-support-90',
+  'NOW',
+  'now-glucose-metabolic-support-90.jpg',
+);
+assertExactCarton(
+  'now-special-two-multi-vitamin-120',
+  'NOW',
+  'now-special-two-multi-vitamin-120.jpg',
+);
+assertExactCarton(
+  'now-e-400-268-mg-400-iu-250',
+  'NOW',
+  'now-e-400-268-mg-400-iu-250.jpg',
+);
+assertExactCarton(
+  'now-berberine-glucose-support-60',
+  'NOW',
+  'now-berberine-glucose-support-60.jpg',
+);
+assertExactCarton('now-rest-repair-90', 'NOW', 'now-rest-repair-90.jpg');
+assertExactCarton('now-l-serine-500-mg-120', 'NOW', 'now-l-serine-500-mg-120.jpg');
+assertExactCarton('now-aakg-2200-180', 'NOW', 'now-aakg-2200-180.jpg');
+assertExactCarton(
+  'now-ashwagandha-450-mg-30',
+  'NOW',
+  'now-ashwagandha-450-mg-30.jpg',
+);
+assertExactCarton(
+  'now-magnesium-500-mg-120',
+  'NOW',
+  'now-magnesium-500-mg-120.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -18034,10 +18174,11 @@ assertExactCarton('now-cla-90', 'NOW', 'now-cla-90.jpg');
     brand: 'NOW',
   });
   if (
-    !e400Large?.url.startsWith('data:image/svg+xml')
+    !e400Large?.url.endsWith('/now-e-400-268-mg-400-iu-250.jpg')
+    || !e400Large.verifiedSku
     || e400Large.url.includes('now-e-400-268-mg-400-iu-100')
   ) {
-    throw new Error('E-400 250 must stay a letter, not the 100-count carton');
+    throw new Error('E-400 250 must stay its own carton, not the 100-count');
   }
   const keto60 = previewOverlayImage({
     id: 'now-7-keto-100-mg-60',
