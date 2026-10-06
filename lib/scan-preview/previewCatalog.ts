@@ -10681,6 +10681,75 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-ashwagandha-450-mg-30': catalogShot('now-ashwagandha-450-mg-30.jpg'),
   // Magnesium 500 mg, 120 veg capsules. Barcode 733739012852.
   'now-magnesium-500-mg-120': catalogShot('now-magnesium-500-mg-120.jpg'),
+  // Vitamins night run 2026-10-06 3:00 AM PT batch 2.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // NMN 250 mg, 60 veg capsules. Barcode 733739005045.
+  'now-nmn-250-mg-60': catalogShot('now-nmn-250-mg-60.jpg'),
+  // Mega D3 & MK-7, 30 capsules. Barcode 733739003638.
+  // Not the 120-count.
+  'now-mega-d3-mk-7-30': catalogShot('now-mega-d3-mk-7-30.jpg'),
+  // Omega-3 Fish Oil Gummy Chews, passion fruit, 36 gummies.
+  // Barcode 733739016478.
+  'now-omega-3-fish-oil-gummy-chews-passion-fruit': catalogShot(
+    'now-omega-3-fish-oil-gummy-chews-passion-fruit.jpg',
+  ),
+  // Berberine Phytosome, 60 veg capsules. Barcode 733739014290.
+  'now-berberine-phytosome-60': catalogShot('now-berberine-phytosome-60.jpg'),
+  // Vitamin D-3 10,000 IU, 30 softgels. Barcode 733739003874.
+  // Not the 120-count or the 240-count.
+  'now-vitamin-d-3-high-potency-10-000-iu-30': catalogShot(
+    'now-vitamin-d-3-high-potency-10-000-iu-30.jpg',
+  ),
+  // Certified Organic Licorice Root, 2 fl oz. Barcode 733739049599.
+  'now-certified-organic-licorice-root-2-fl-oz-59-ml': catalogShot(
+    'now-certified-organic-licorice-root-2-fl-oz-59-ml.jpg',
+  ),
+  // Alpha GPC 600 mg, 60 veg capsules. Barcode 733739030948.
+  'now-alpha-gpc-600-mg-60': catalogShot('now-alpha-gpc-600-mg-60.jpg'),
+  // PharmaGABA 100 mg with magnesium citrate, 90 veg capsules.
+  // Barcode 733739001252. Not the 250 mg 60-count.
+  'now-pharmagaba-with-magnesium-citrate-90': catalogShot(
+    'now-pharmagaba-with-magnesium-citrate-90.jpg',
+  ),
+  // PharmaGABA 250 mg with magnesium citrate, 60 veg capsules.
+  // Barcode 733739001269. Not the 100 mg 90-count.
+  'now-pharmagaba-with-magnesium-citrate-60': catalogShot(
+    'now-pharmagaba-with-magnesium-citrate-60.jpg',
+  ),
+  // Sports Pre-Workout Advanced Energy, watermelon, 21.16 oz.
+  // Barcode 733739019455.
+  'now-sports-pre-workout-advanced-energy-watermelon-21p16': catalogShot(
+    'now-sports-pre-workout-advanced-energy-watermelon-21p16.jpg',
+  ),
+  // Colostrum Powder, 3 oz. Barcode 733739032140.
+  'now-colostrum-powder-3': catalogShot('now-colostrum-powder-3.jpg'),
+  // Vitamin D-3 50,000 IU, 12 softgels. Barcode 733739003881.
+  // Not the 50-count.
+  'now-vitamin-d-3-max-potency-50-000-iu-12': catalogShot(
+    'now-vitamin-d-3-max-potency-50-000-iu-12.jpg',
+  ),
+  // Resveratrol 600 mg, 60 veg capsules. Barcode 733739033871.
+  'now-resveratrol-600-mg-60-veg-capsule': catalogShot(
+    'now-resveratrol-600-mg-60-veg-capsule.jpg',
+  ),
+  // 7-Day Colon Cleanse, 56 veg capsules. Barcode 733739024589.
+  'now-7-day-colon-cleanse-56': catalogShot('now-7-day-colon-cleanse-56.jpg'),
+  // Chromium Picolinate 200 mcg, 100 veg capsules. Barcode 733739014207.
+  // Not the 250-count.
+  'now-chromium-picolinate-200-mcg-100': catalogShot(
+    'now-chromium-picolinate-200-mcg-100.jpg',
+  ),
+  // Sports TestoJack N.O., 90 veg capsules. Barcode 733739022691.
+  'now-sports-testojack-n-o-90': catalogShot('now-sports-testojack-n-o-90.jpg'),
+  // Magnesium Glycinate, 180 tablets. Barcode 733739012890.
+  // Not the 90-count.
+  'now-magnesium-glycinate-180': catalogShot('now-magnesium-glycinate-180.jpg'),
+  // NAC 1,000 mg, 120 tablets. Barcode 733739001856.
+  'now-nac-120': catalogShot('now-nac-120.jpg'),
+  // Magnesium Citrate, 240 veg capsules. Barcode 733739012968.
+  'now-magnesium-citrate-240': catalogShot('now-magnesium-citrate-240.jpg'),
+  // Lion's Mane 500 mg, 60 veg capsules. Barcode 733739047892.
+  'now-lion-s-mane-60': catalogShot('now-lion-s-mane-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -18017,6 +18086,82 @@ assertExactCarton(
   'NOW',
   'now-magnesium-500-mg-120.jpg',
 );
+assertExactCarton('now-nmn-250-mg-60', 'NOW', 'now-nmn-250-mg-60.jpg');
+assertExactCarton('now-mega-d3-mk-7-30', 'NOW', 'now-mega-d3-mk-7-30.jpg');
+assertExactCarton(
+  'now-omega-3-fish-oil-gummy-chews-passion-fruit',
+  'NOW',
+  'now-omega-3-fish-oil-gummy-chews-passion-fruit.jpg',
+);
+assertExactCarton(
+  'now-berberine-phytosome-60',
+  'NOW',
+  'now-berberine-phytosome-60.jpg',
+);
+assertExactCarton(
+  'now-vitamin-d-3-high-potency-10-000-iu-30',
+  'NOW',
+  'now-vitamin-d-3-high-potency-10-000-iu-30.jpg',
+);
+assertExactCarton(
+  'now-certified-organic-licorice-root-2-fl-oz-59-ml',
+  'NOW',
+  'now-certified-organic-licorice-root-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton('now-alpha-gpc-600-mg-60', 'NOW', 'now-alpha-gpc-600-mg-60.jpg');
+assertExactCarton(
+  'now-pharmagaba-with-magnesium-citrate-90',
+  'NOW',
+  'now-pharmagaba-with-magnesium-citrate-90.jpg',
+);
+assertExactCarton(
+  'now-pharmagaba-with-magnesium-citrate-60',
+  'NOW',
+  'now-pharmagaba-with-magnesium-citrate-60.jpg',
+);
+assertExactCarton(
+  'now-sports-pre-workout-advanced-energy-watermelon-21p16',
+  'NOW',
+  'now-sports-pre-workout-advanced-energy-watermelon-21p16.jpg',
+);
+assertExactCarton('now-colostrum-powder-3', 'NOW', 'now-colostrum-powder-3.jpg');
+assertExactCarton(
+  'now-vitamin-d-3-max-potency-50-000-iu-12',
+  'NOW',
+  'now-vitamin-d-3-max-potency-50-000-iu-12.jpg',
+);
+assertExactCarton(
+  'now-resveratrol-600-mg-60-veg-capsule',
+  'NOW',
+  'now-resveratrol-600-mg-60-veg-capsule.jpg',
+);
+assertExactCarton(
+  'now-7-day-colon-cleanse-56',
+  'NOW',
+  'now-7-day-colon-cleanse-56.jpg',
+);
+assertExactCarton(
+  'now-chromium-picolinate-200-mcg-100',
+  'NOW',
+  'now-chromium-picolinate-200-mcg-100.jpg',
+);
+assertExactCarton(
+  'now-sports-testojack-n-o-90',
+  'NOW',
+  'now-sports-testojack-n-o-90.jpg',
+);
+assertExactCarton(
+  'now-magnesium-glycinate-180',
+  'NOW',
+  'now-magnesium-glycinate-180.jpg',
+);
+assertExactCarton('now-nac-120', 'NOW', 'now-nac-120.jpg');
+assertExactCarton(
+  'now-magnesium-citrate-240',
+  'NOW',
+  'now-magnesium-citrate-240.jpg',
+);
+assertExactCarton('now-lion-s-mane-60', 'NOW', 'now-lion-s-mane-60.jpg');
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
