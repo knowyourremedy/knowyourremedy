@@ -11123,6 +11123,88 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Omega 3-6-9, 250 softgels. Barcode 733739018373. Not the 100-count.
   'now-omega-3-6-9-250': catalogShot('now-omega-3-6-9-250.jpg'),
+  // Vitamins night run 2026-10-06 6:45 AM PT batch 2.
+  // Vitacost pack face for the NOW rows. Nutricost fronts are the
+  // brand-site bottle for that variant barcode. Per-id only.
+  // Omega 3-6-9, 100 softgels. Barcode 733739018359. Not the 250-count.
+  'now-omega-3-6-9-100': catalogShot('now-omega-3-6-9-100.jpg'),
+  // Turkey Tail 500 mg, 90 veg capsules. Barcode 733739047946.
+  'now-turkey-tail-500-mg-90': catalogShot('now-turkey-tail-500-mg-90.jpg'),
+  // Kid Cal, orange, 100 chewables. Barcode 733739012333.
+  'now-kid-cal-orange-100': catalogShot('now-kid-cal-orange-100.jpg'),
+  // Kid Vits, juicy orange, 60 chewables. Barcode 733739038845.
+  // Not the berry lemonade chewable.
+  'now-kids-kid-vits-juicy-orange-60': catalogShot(
+    'now-kids-kid-vits-juicy-orange-60.jpg',
+  ),
+  // Liquid Multi with xylitol, tropical orange, 16 fl oz.
+  // Barcode 733739037725. Not a tablet multi.
+  'now-liquid-multi-xylitol-tropical-orange-16': catalogShot(
+    'now-liquid-multi-xylitol-tropical-orange-16.jpg',
+  ),
+  // Chewable Vitamin C-500, orange, 100 tablets. Barcode 733739006301.
+  'now-chewable-vitamin-c-500-orange-100': catalogShot(
+    'now-chewable-vitamin-c-500-orange-100.jpg',
+  ),
+  // Colloidal Minerals, 32 fl oz. Barcode 733739014054.
+  'now-colloidal-minerals-32': catalogShot('now-colloidal-minerals-32.jpg'),
+  // Effer-Hydrate, lemon lime, 10 tablets. Barcode 733739022417.
+  // Not orange strawberry.
+  'now-effer-hydrate-lemon-lime-10': catalogShot(
+    'now-effer-hydrate-lemon-lime-10.jpg',
+  ),
+  // Effer-Hydrate, orange strawberry, 10 tablets. Barcode 733739022431.
+  // Not lemon lime.
+  'now-effer-hydrate-orange-strawberry-10': catalogShot(
+    'now-effer-hydrate-orange-strawberry-10.jpg',
+  ),
+  // Effer-Energy, tropical punch, 10 tablets. Barcode 733739022486.
+  'now-effer-energy-tropical-punch-10': catalogShot(
+    'now-effer-energy-tropical-punch-10.jpg',
+  ),
+  // Sustained Energy, 90 veg capsules. Barcode 733739019950.
+  'now-sustained-energy-90': catalogShot('now-sustained-energy-90.jpg'),
+  // E-Sport Reaction, chocolate milkshake, 1 lb. Barcode 733739019103.
+  'now-e-sport-reaction-chocolate-1': catalogShot(
+    'now-e-sport-reaction-chocolate-1.jpg',
+  ),
+  // Organic Hot Cocoa, 14 oz powder. Barcode 733739066718.
+  'now-organic-hot-cocoa-14': catalogShot('now-organic-hot-cocoa-14.jpg'),
+  // Saw palmetto extract 160 mg, 240 softgels. Barcode 733739047441.
+  // Not the 120-count.
+  'now-saw-palmetto-extract-160-mg-240': catalogShot(
+    'now-saw-palmetto-extract-160-mg-240.jpg',
+  ),
+  // Certified Organic Spirulina powder, 1 lb. Barcode 733739027146.
+  // Not the 4 oz pouch.
+  'now-organic-spirulina-powder-1': catalogShot(
+    'now-organic-spirulina-powder-1.jpg',
+  ),
+  // Certified Organic Spirulina powder, 4 oz. Barcode 733739026903.
+  // Not the 1 lb pouch.
+  'now-organic-spirulina-powder-4': catalogShot(
+    'now-organic-spirulina-powder-4.jpg',
+  ),
+  // EVE Superior Women's Multi, 180 tablets. Barcode 733739037978.
+  // Not the 90-count. Not the softgel bottle.
+  'now-eve-superior-womens-multi-180-tablets': catalogShot(
+    'now-eve-superior-womens-multi-180-tablets.jpg',
+  ),
+  // EVE Superior Women's Multi, 90 tablets. Barcode 733739037961.
+  // Not the 180-count. Not the softgel bottle.
+  'now-eve-tablets-superior-womens-multi-90': catalogShot(
+    'now-eve-tablets-superior-womens-multi-90.jpg',
+  ),
+  // Astaxanthin 4 mg, 120 softgels. Barcode 810014673189.
+  // nutricost.com front for that variant. Not the 12 mg bottles.
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-120-softgels.jpg',
+  ),
+  // Astaxanthin 12 mg, 30 softgels. Barcode 810139572510.
+  // nutricost.com front for that variant. Not the 60-count bottle.
+  'nutricost-nutricost-astaxanthin-softgels-panel': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-panel.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11663,8 +11745,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-prostate-health-90',
   'now-same-400-mg-30',
   'now-organic-chlorella-powder-4',
-  // 100-count is still unattempted. Do not glue the 250.
+  // The 100-count has its own face. Do not glue the 250.
   'now-omega-3-6-9-100',
+  // Vitamins night run 2026-10-06 6:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'now-organic-spirulina-powder-4',
+  'now-eve-tablets-superior-womens-multi-90',
 ]);
 
 export function previewOverlayImage(
@@ -19080,8 +19166,122 @@ assertExactCarton('now-omega-3-6-9-250', 'NOW', 'now-omega-3-6-9-250.jpg');
     formulaId: 'now-omega-3-6-9-250',
     brand: 'NOW',
   });
-  if (!omega100?.url.startsWith('data:image/svg+xml') || omega100.verifiedSku) {
-    throw new Error('Omega 3-6-9 100 must stay a letter until attempted');
+  if (
+    !omega100?.url.endsWith('/now-omega-3-6-9-100.jpg')
+    || !omega100.verifiedSku
+  ) {
+    throw new Error('Omega 3-6-9 100 must stay its own carton, not the 250-count');
+  }
+}
+assertExactCarton('now-omega-3-6-9-100', 'NOW', 'now-omega-3-6-9-100.jpg');
+assertExactCarton('now-turkey-tail-500-mg-90', 'NOW', 'now-turkey-tail-500-mg-90.jpg');
+assertExactCarton('now-kid-cal-orange-100', 'NOW', 'now-kid-cal-orange-100.jpg');
+assertExactCarton(
+  'now-kids-kid-vits-juicy-orange-60',
+  'NOW',
+  'now-kids-kid-vits-juicy-orange-60.jpg',
+);
+assertExactCarton(
+  'now-liquid-multi-xylitol-tropical-orange-16',
+  'NOW',
+  'now-liquid-multi-xylitol-tropical-orange-16.jpg',
+);
+assertExactCarton(
+  'now-chewable-vitamin-c-500-orange-100',
+  'NOW',
+  'now-chewable-vitamin-c-500-orange-100.jpg',
+);
+assertExactCarton('now-colloidal-minerals-32', 'NOW', 'now-colloidal-minerals-32.jpg');
+assertExactCarton(
+  'now-effer-hydrate-lemon-lime-10',
+  'NOW',
+  'now-effer-hydrate-lemon-lime-10.jpg',
+);
+assertExactCarton(
+  'now-effer-hydrate-orange-strawberry-10',
+  'NOW',
+  'now-effer-hydrate-orange-strawberry-10.jpg',
+);
+assertExactCarton(
+  'now-effer-energy-tropical-punch-10',
+  'NOW',
+  'now-effer-energy-tropical-punch-10.jpg',
+);
+assertExactCarton('now-sustained-energy-90', 'NOW', 'now-sustained-energy-90.jpg');
+assertExactCarton(
+  'now-e-sport-reaction-chocolate-1',
+  'NOW',
+  'now-e-sport-reaction-chocolate-1.jpg',
+);
+assertExactCarton('now-organic-hot-cocoa-14', 'NOW', 'now-organic-hot-cocoa-14.jpg');
+assertExactCarton(
+  'now-saw-palmetto-extract-160-mg-240',
+  'NOW',
+  'now-saw-palmetto-extract-160-mg-240.jpg',
+);
+assertExactCarton(
+  'now-organic-spirulina-powder-1',
+  'NOW',
+  'now-organic-spirulina-powder-1.jpg',
+);
+assertExactCarton(
+  'now-organic-spirulina-powder-4',
+  'NOW',
+  'now-organic-spirulina-powder-4.jpg',
+);
+assertExactCarton(
+  'now-eve-superior-womens-multi-180-tablets',
+  'NOW',
+  'now-eve-superior-womens-multi-180-tablets.jpg',
+);
+assertExactCarton(
+  'now-eve-tablets-superior-womens-multi-90',
+  'NOW',
+  'now-eve-tablets-superior-womens-multi-90.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-panel',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-panel.jpg',
+);
+{
+  const spirulina4 = previewOverlayImage({
+    id: 'now-organic-spirulina-powder-4',
+    formulaId: 'now-organic-spirulina-powder-1',
+    brand: 'NOW',
+  });
+  if (
+    !spirulina4?.url.endsWith('/now-organic-spirulina-powder-4.jpg')
+    || !spirulina4.verifiedSku
+  ) {
+    throw new Error('Spirulina 4 oz must stay its own carton, not the 1 lb pouch');
+  }
+  const eve90 = previewOverlayImage({
+    id: 'now-eve-tablets-superior-womens-multi-90',
+    formulaId: 'now-eve-superior-womens-multi-180-tablets',
+    brand: 'NOW',
+  });
+  if (
+    !eve90?.url.endsWith('/now-eve-tablets-superior-womens-multi-90.jpg')
+    || !eve90.verifiedSku
+  ) {
+    throw new Error('EVE 90 tablets must stay their own carton, not the 180-count');
+  }
+  const saw240 = previewOverlayImage({
+    id: 'now-saw-palmetto-extract-160-mg-240',
+    formulaId: 'now-saw-palmetto-extract-160-mg-120',
+    brand: 'NOW',
+  });
+  if (
+    !saw240?.url.endsWith('/now-saw-palmetto-extract-160-mg-240.jpg')
+    || !saw240.verifiedSku
+  ) {
+    throw new Error('Saw palmetto 240 must stay its own carton, not the 120-count');
   }
 }
 {
