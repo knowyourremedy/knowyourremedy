@@ -10826,6 +10826,83 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-e-400-d-alpha-with-mixed-tocopherols-100': catalogShot(
     'now-e-400-d-alpha-with-mixed-tocopherols-100.jpg',
   ),
+  // Vitamins night run 2026-10-06 4:15 AM PT batch 2.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Calcium citrate, 250 tablets. Barcode 733739012326.
+  'now-calcium-citrate-250': catalogShot('now-calcium-citrate-250.jpg'),
+  // L-Lysine 500 mg, 100 tablets. Barcode 733739001009.
+  // Not the 250-count.
+  'now-l-lysine-100-733739001009': catalogShot(
+    'now-l-lysine-100-733739001009.jpg',
+  ),
+  // Prostate Support, 90 softgels. Barcode 733739033406.
+  // Not the 180-count.
+  'now-prostate-support-90': catalogShot('now-prostate-support-90.jpg'),
+  // C-1000 with rose hips and bioflavonoids, 100 tablets.
+  // Barcode 733739006851. Not a plain C-1000 bottle.
+  'now-c-1000-with-rose-hips-bioflavonoids-100': catalogShot(
+    'now-c-1000-with-rose-hips-bioflavonoids-100.jpg',
+  ),
+  // Pantethine 300 mg, 60 softgels. Barcode 733739004871.
+  // Not the 600 mg bottle.
+  'now-pantethine-60': catalogShot('now-pantethine-60.jpg'),
+  // Daily Vits multi vitamin and mineral, 250 tablets. Barcode 733739037718.
+  'now-daily-vits-multi-vitamin-mineral-250': catalogShot(
+    'now-daily-vits-multi-vitamin-mineral-250.jpg',
+  ),
+  // Aloe vera gels, 100 softgels. Barcode 733739030368.
+  // Not the 250-count.
+  'now-aloe-vera-gels-100': catalogShot('now-aloe-vera-gels-100.jpg'),
+  // Cholesterol Pro, 120 tablets. Barcode 733739035103.
+  'now-cholesterol-pro-120': catalogShot('now-cholesterol-pro-120.jpg'),
+  // GTF Chromium 200 mcg, 250 tablets. Barcode 733739014320.
+  // Not the 100-count.
+  'now-gtf-chromium-250': catalogShot('now-gtf-chromium-250.jpg'),
+  // Pantethine 600 mg, 60 softgels. Barcode 733739004895.
+  // Not the 300 mg bottle.
+  'now-pantethine-60-733739004895': catalogShot(
+    'now-pantethine-60-733739004895.jpg',
+  ),
+  // L-Carnitine 1,000 mg, 100 tablets. Barcode 733739000682.
+  // Not the 50-count. Not the 500 mg bottle.
+  'now-l-carnitine-100': catalogShot('now-l-carnitine-100.jpg'),
+  // Sustained Release B-100, 100 tablets. Barcode 733739004390.
+  'now-sustained-release-b-100-100': catalogShot(
+    'now-sustained-release-b-100-100.jpg',
+  ),
+  // Buffered C-1000 Complex, 90 tablets. Barcode 733739007001.
+  // Not the 180-count.
+  'now-buffered-c-1000-complex-90': catalogShot(
+    'now-buffered-c-1000-complex-90.jpg',
+  ),
+  // Saw palmetto extract, 320 mg, 90 softgels. Barcode 733739047342.
+  // Not the 160 mg extract line.
+  'now-saw-palmetto-extract-90': catalogShot(
+    'now-saw-palmetto-extract-90.jpg',
+  ),
+  // Red yeast rice 600 mg, 120 veg capsules. Barcode 733739035011.
+  // Not the 60-count or the 240-count.
+  'now-red-yeast-rice-120': catalogShot('now-red-yeast-rice-120.jpg'),
+  // Magnesium citrate 200 mg, 100 tablets. Barcode 733739012906.
+  // Not the 250-count. Not a veg-capsule or softgel bottle.
+  'now-magnesium-citrate-100': catalogShot('now-magnesium-citrate-100.jpg'),
+  // Beta-Sitosterol plant sterols, 90 softgels. Barcode 733739030788.
+  // Not the 180-count.
+  'now-beta-sitosterol-plant-sterols-90': catalogShot(
+    'now-beta-sitosterol-plant-sterols-90.jpg',
+  ),
+  // Aloe vera gels, 250 softgels. Barcode 733739030313.
+  // Not the 100-count.
+  'now-aloe-vera-gels-250': catalogShot('now-aloe-vera-gels-250.jpg'),
+  // Sports HMB with vitamin D-3, 90 tablets. Barcode 733739020581.
+  'now-sports-hmb-with-vitamin-d-3-90': catalogShot(
+    'now-sports-hmb-with-vitamin-d-3-90.jpg',
+  ),
+  // C-500 with rose hips, 100 tablets. Barcode 733739006707.
+  // Not the 250-count.
+  'now-c-500-with-rose-hips-100': catalogShot(
+    'now-c-500-with-rose-hips-100.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11335,6 +11412,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-dha-500-fish-oil-180',
   'now-natural-beta-carotene-180',
   'now-red-yeast-rice-240',
+  // Vitamins night run 2026-10-06 4:15 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // 600 mg pantethine must not inherit the 300 mg bottle.
+  'now-pantethine-60-733739004895',
+  'now-aloe-vera-gels-250',
+  'now-gtf-chromium-250',
+  'now-l-carnitine-100',
+  'now-red-yeast-rice-120',
 ]);
 
 export function previewOverlayImage(
@@ -18327,6 +18412,149 @@ assertExactCarton(
   'NOW',
   'now-e-400-d-alpha-with-mixed-tocopherols-100.jpg',
 );
+assertExactCarton('now-calcium-citrate-250', 'NOW', 'now-calcium-citrate-250.jpg');
+assertExactCarton(
+  'now-l-lysine-100-733739001009',
+  'NOW',
+  'now-l-lysine-100-733739001009.jpg',
+);
+assertExactCarton('now-prostate-support-90', 'NOW', 'now-prostate-support-90.jpg');
+assertExactCarton(
+  'now-c-1000-with-rose-hips-bioflavonoids-100',
+  'NOW',
+  'now-c-1000-with-rose-hips-bioflavonoids-100.jpg',
+);
+assertExactCarton('now-pantethine-60', 'NOW', 'now-pantethine-60.jpg');
+assertExactCarton(
+  'now-daily-vits-multi-vitamin-mineral-250',
+  'NOW',
+  'now-daily-vits-multi-vitamin-mineral-250.jpg',
+);
+assertExactCarton('now-aloe-vera-gels-100', 'NOW', 'now-aloe-vera-gels-100.jpg');
+assertExactCarton('now-cholesterol-pro-120', 'NOW', 'now-cholesterol-pro-120.jpg');
+assertExactCarton('now-gtf-chromium-250', 'NOW', 'now-gtf-chromium-250.jpg');
+assertExactCarton(
+  'now-pantethine-60-733739004895',
+  'NOW',
+  'now-pantethine-60-733739004895.jpg',
+);
+assertExactCarton('now-l-carnitine-100', 'NOW', 'now-l-carnitine-100.jpg');
+assertExactCarton(
+  'now-sustained-release-b-100-100',
+  'NOW',
+  'now-sustained-release-b-100-100.jpg',
+);
+assertExactCarton(
+  'now-buffered-c-1000-complex-90',
+  'NOW',
+  'now-buffered-c-1000-complex-90.jpg',
+);
+assertExactCarton(
+  'now-saw-palmetto-extract-90',
+  'NOW',
+  'now-saw-palmetto-extract-90.jpg',
+);
+assertExactCarton('now-red-yeast-rice-120', 'NOW', 'now-red-yeast-rice-120.jpg');
+assertExactCarton(
+  'now-magnesium-citrate-100',
+  'NOW',
+  'now-magnesium-citrate-100.jpg',
+);
+assertExactCarton(
+  'now-beta-sitosterol-plant-sterols-90',
+  'NOW',
+  'now-beta-sitosterol-plant-sterols-90.jpg',
+);
+assertExactCarton('now-aloe-vera-gels-250', 'NOW', 'now-aloe-vera-gels-250.jpg');
+assertExactCarton(
+  'now-sports-hmb-with-vitamin-d-3-90',
+  'NOW',
+  'now-sports-hmb-with-vitamin-d-3-90.jpg',
+);
+assertExactCarton(
+  'now-c-500-with-rose-hips-100',
+  'NOW',
+  'now-c-500-with-rose-hips-100.jpg',
+);
+{
+  const pantethine600 = previewOverlayImage({
+    id: 'now-pantethine-60-733739004895',
+    formulaId: 'now-pantethine-60',
+    brand: 'NOW',
+  });
+  if (
+    !pantethine600?.url.endsWith('/now-pantethine-60-733739004895.jpg')
+    || !pantethine600.verifiedSku
+  ) {
+    throw new Error('Pantethine 600 mg must stay its own carton, not the 300 mg');
+  }
+  const aloe250 = previewOverlayImage({
+    id: 'now-aloe-vera-gels-250',
+    formulaId: 'now-aloe-vera-gels-100',
+    brand: 'NOW',
+  });
+  if (
+    !aloe250?.url.endsWith('/now-aloe-vera-gels-250.jpg')
+    || !aloe250.verifiedSku
+  ) {
+    throw new Error('Aloe vera gels 250 must stay its own carton, not the 100-count');
+  }
+  const mag250 = previewOverlayImage({
+    id: 'now-magnesium-citrate-250',
+    formulaId: 'now-magnesium-citrate-100',
+    brand: 'NOW',
+  });
+  if (
+    !mag250?.url.endsWith('/now-magnesium-citrate-250.jpg')
+    || !mag250.verifiedSku
+  ) {
+    throw new Error('Magnesium citrate 250 must stay its own carton, not the 100-count');
+  }
+  const prostate180 = previewOverlayImage({
+    id: 'now-prostate-support-180',
+    formulaId: 'now-prostate-support-90',
+    brand: 'NOW',
+  });
+  if (
+    !prostate180?.url.endsWith('/now-prostate-support-180.jpg')
+    || !prostate180.verifiedSku
+  ) {
+    throw new Error('Prostate Support 180 must stay its own carton, not the 90-count');
+  }
+  const lysine250 = previewOverlayImage({
+    id: 'now-l-lysine-250-733739001023',
+    formulaId: 'now-l-lysine-100-733739001009',
+    brand: 'NOW',
+  });
+  if (
+    !lysine250?.url.endsWith('/now-l-lysine-250-733739001023.jpg')
+    || !lysine250.verifiedSku
+  ) {
+    throw new Error('L-Lysine 250 must stay its own carton, not the 100-count');
+  }
+  const ryr240 = previewOverlayImage({
+    id: 'now-red-yeast-rice-240',
+    formulaId: 'now-red-yeast-rice-60',
+    brand: 'NOW',
+  });
+  if (
+    !ryr240?.url.endsWith('/now-red-yeast-rice-240.jpg')
+    || !ryr240.verifiedSku
+  ) {
+    throw new Error('Red yeast rice 240 must stay its own carton, not the 120-count');
+  }
+  const beta90 = previewOverlayImage({
+    id: 'now-beta-sitosterol-plant-sterols-90',
+    formulaId: 'now-beta-sitosterol-plant-sterols-90',
+    brand: 'NOW',
+  });
+  if (
+    !beta90?.url.endsWith('/now-beta-sitosterol-plant-sterols-90.jpg')
+    || !beta90.verifiedSku
+  ) {
+    throw new Error('Beta-sitosterol 90 must stay its own carton, not the 180-count');
+  }
+}
 {
   const omega180 = previewOverlayImage({
     id: 'now-ultra-omega-3-fish-oil-180',
