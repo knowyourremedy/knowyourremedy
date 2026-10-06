@@ -10903,6 +10903,76 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-c-500-with-rose-hips-100': catalogShot(
     'now-c-500-with-rose-hips-100.jpg',
   ),
+  // Vitamins night run 2026-10-06 5:30 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Calcium & Magnesium, 100 tablets. Barcode 733739012708.
+  // Not the 250-count.
+  'now-calcium-magnesium-100': catalogShot('now-calcium-magnesium-100.jpg'),
+  // Red yeast rice 600 mg, 60 veg capsules. Barcode 733739035004.
+  // Not the 120-count or the 240-count.
+  'now-red-yeast-rice-60': catalogShot('now-red-yeast-rice-60.jpg'),
+  // Sports Men's Active Sports Multi, 180 softgels. Barcode 733739038913.
+  // Not the 90-count.
+  'now-sports-men-s-active-sports-multi-180': catalogShot(
+    'now-sports-men-s-active-sports-multi-180.jpg',
+  ),
+  // Red yeast rice extract 1,200 mg, 120 tablets. Barcode 733739035035.
+  // Not the 60-count. Not the plain red yeast rice veg-capsule line.
+  'now-red-yeast-rice-extract-120': catalogShot(
+    'now-red-yeast-rice-extract-120.jpg',
+  ),
+  // NAC 1,000 mg, 60 tablets. Barcode 733739001849.
+  'now-nac-60': catalogShot('now-nac-60.jpg'),
+  // DHA-500 fish oil, 90 softgels. Barcode 733739016126.
+  // Not the 180-count.
+  'now-dha-500-fish-oil-90': catalogShot('now-dha-500-fish-oil-90.jpg'),
+  // Sports Tribulus 1,000 mg, 90 tablets. Barcode 733739021717.
+  // Not the 180-count.
+  'now-sports-tribulus-90': catalogShot('now-sports-tribulus-90.jpg'),
+  // Apple cider vinegar 750 mg, 180 tablets. Barcode 733739033765.
+  'now-apple-cider-vinegar-180-733739033765': catalogShot(
+    'now-apple-cider-vinegar-180-733739033765.jpg',
+  ),
+  // Triphala, 120 tablets. Barcode 733739047649.
+  'now-triphala-120': catalogShot('now-triphala-120.jpg'),
+  // Sports Tribulus 1,000 mg, 180 tablets. Barcode 733739022714.
+  // Not the 90-count.
+  'now-sports-tribulus-180': catalogShot('now-sports-tribulus-180.jpg'),
+  // Calcium lactate 85 mg, 250 tablets. Barcode 733739012609.
+  'now-calcium-lactate-250': catalogShot('now-calcium-lactate-250.jpg'),
+  // Niacin 500 mg, 250 tablets. Barcode 733739004826.
+  // Not the niacinamide bottle.
+  'now-niacin-250': catalogShot('now-niacin-250.jpg'),
+  // Liquid Multi Gels, 180 softgels. Barcode 733739038173.
+  // Not the 60-count.
+  'now-liquid-multi-gels-180': catalogShot('now-liquid-multi-gels-180.jpg'),
+  // Niacinamide 1,000 mg, 90 tablets. Barcode 733739004512.
+  // Not the niacin bottle.
+  'now-niacinamide-90': catalogShot('now-niacinamide-90.jpg'),
+  // Pygeum & Saw Palmetto, 60 softgels. Barcode 733739047281.
+  // Not the pumpkin-seed-oil 120-count.
+  'now-pygeum-saw-palmetto-60': catalogShot(
+    'now-pygeum-saw-palmetto-60.jpg',
+  ),
+  // Omega-3 fish oil, 180 softgels. Barcode 733739016577.
+  // Not the 90-count. Not the Ultra Omega-3 bottle.
+  'now-omega-3-fish-oil-180': catalogShot('now-omega-3-fish-oil-180.jpg'),
+  // GTF Chromium 200 mcg, 100 tablets. Barcode 733739014306.
+  // Not the 250-count.
+  'now-gtf-chromium-100': catalogShot('now-gtf-chromium-100.jpg'),
+  // Calcium citrate, 100 tablets. Barcode 733739012302.
+  // Not the 250-count.
+  'now-calcium-citrate-100': catalogShot('now-calcium-citrate-100.jpg'),
+  // Sports Men's Active Sports Multi, 90 softgels. Barcode 733739038906.
+  // Not the 180-count.
+  'now-sports-men-s-active-sports-multi-90': catalogShot(
+    'now-sports-men-s-active-sports-multi-90.jpg',
+  ),
+  // ADAM Superior Men's Multi, 120 tablets. Barcode 733739038760.
+  // Not the 60-count tablet bottle. Not the softgel bottle.
+  'now-adam-superior-men-s-multi-120': catalogShot(
+    'now-adam-superior-men-s-multi-120.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11420,6 +11490,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-gtf-chromium-250',
   'now-l-carnitine-100',
   'now-red-yeast-rice-120',
+  // Vitamins night run 2026-10-06 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'now-sports-men-s-active-sports-multi-180',
+  'now-red-yeast-rice-extract-120',
+  'now-sports-tribulus-180',
+  'now-liquid-multi-gels-180',
+  'now-omega-3-fish-oil-180',
+  'now-adam-superior-men-s-multi-120',
 ]);
 
 export function previewOverlayImage(
@@ -18476,6 +18554,150 @@ assertExactCarton(
   'NOW',
   'now-c-500-with-rose-hips-100.jpg',
 );
+assertExactCarton(
+  'now-calcium-magnesium-100',
+  'NOW',
+  'now-calcium-magnesium-100.jpg',
+);
+assertExactCarton('now-red-yeast-rice-60', 'NOW', 'now-red-yeast-rice-60.jpg');
+assertExactCarton(
+  'now-sports-men-s-active-sports-multi-180',
+  'NOW',
+  'now-sports-men-s-active-sports-multi-180.jpg',
+);
+assertExactCarton(
+  'now-red-yeast-rice-extract-120',
+  'NOW',
+  'now-red-yeast-rice-extract-120.jpg',
+);
+assertExactCarton('now-nac-60', 'NOW', 'now-nac-60.jpg');
+assertExactCarton(
+  'now-dha-500-fish-oil-90',
+  'NOW',
+  'now-dha-500-fish-oil-90.jpg',
+);
+assertExactCarton('now-sports-tribulus-90', 'NOW', 'now-sports-tribulus-90.jpg');
+assertExactCarton(
+  'now-apple-cider-vinegar-180-733739033765',
+  'NOW',
+  'now-apple-cider-vinegar-180-733739033765.jpg',
+);
+assertExactCarton('now-triphala-120', 'NOW', 'now-triphala-120.jpg');
+assertExactCarton(
+  'now-sports-tribulus-180',
+  'NOW',
+  'now-sports-tribulus-180.jpg',
+);
+assertExactCarton(
+  'now-calcium-lactate-250',
+  'NOW',
+  'now-calcium-lactate-250.jpg',
+);
+assertExactCarton('now-niacin-250', 'NOW', 'now-niacin-250.jpg');
+assertExactCarton(
+  'now-liquid-multi-gels-180',
+  'NOW',
+  'now-liquid-multi-gels-180.jpg',
+);
+assertExactCarton('now-niacinamide-90', 'NOW', 'now-niacinamide-90.jpg');
+assertExactCarton(
+  'now-pygeum-saw-palmetto-60',
+  'NOW',
+  'now-pygeum-saw-palmetto-60.jpg',
+);
+assertExactCarton(
+  'now-omega-3-fish-oil-180',
+  'NOW',
+  'now-omega-3-fish-oil-180.jpg',
+);
+assertExactCarton(
+  'now-gtf-chromium-100',
+  'NOW',
+  'now-gtf-chromium-100.jpg',
+);
+assertExactCarton(
+  'now-calcium-citrate-100',
+  'NOW',
+  'now-calcium-citrate-100.jpg',
+);
+assertExactCarton(
+  'now-sports-men-s-active-sports-multi-90',
+  'NOW',
+  'now-sports-men-s-active-sports-multi-90.jpg',
+);
+assertExactCarton(
+  'now-adam-superior-men-s-multi-120',
+  'NOW',
+  'now-adam-superior-men-s-multi-120.jpg',
+);
+{
+  const sports180 = previewOverlayImage({
+    id: 'now-sports-men-s-active-sports-multi-180',
+    formulaId: 'now-sports-men-s-active-sports-multi-90',
+    brand: 'NOW',
+  });
+  if (
+    !sports180?.url.endsWith('/now-sports-men-s-active-sports-multi-180.jpg')
+    || !sports180.verifiedSku
+  ) {
+    throw new Error('Active Sports Multi 180 must stay its own carton, not the 90-count');
+  }
+  const tribulus180 = previewOverlayImage({
+    id: 'now-sports-tribulus-180',
+    formulaId: 'now-sports-tribulus-90',
+    brand: 'NOW',
+  });
+  if (
+    !tribulus180?.url.endsWith('/now-sports-tribulus-180.jpg')
+    || !tribulus180.verifiedSku
+  ) {
+    throw new Error('Tribulus 180 must stay its own carton, not the 90-count');
+  }
+  const multi180 = previewOverlayImage({
+    id: 'now-liquid-multi-gels-180',
+    formulaId: 'now-liquid-multi-gels-60',
+    brand: 'NOW',
+  });
+  if (
+    !multi180?.url.endsWith('/now-liquid-multi-gels-180.jpg')
+    || !multi180.verifiedSku
+  ) {
+    throw new Error('Liquid Multi Gels 180 must stay its own carton, not the 60-count');
+  }
+  const omega3180 = previewOverlayImage({
+    id: 'now-omega-3-fish-oil-180',
+    formulaId: 'now-omega-3-fish-oil-90',
+    brand: 'NOW',
+  });
+  if (
+    !omega3180?.url.endsWith('/now-omega-3-fish-oil-180.jpg')
+    || !omega3180.verifiedSku
+  ) {
+    throw new Error('Omega-3 180 must stay its own carton, not the 90-count');
+  }
+  const adam120 = previewOverlayImage({
+    id: 'now-adam-superior-men-s-multi-120',
+    formulaId: 'now-adam-superior-men-s-multi-60',
+    brand: 'NOW',
+  });
+  if (
+    !adam120?.url.endsWith('/now-adam-superior-men-s-multi-120.jpg')
+    || !adam120.verifiedSku
+  ) {
+    throw new Error('ADAM 120 tablets must stay their own carton, not the 60-count');
+  }
+  const ryrExtract120 = previewOverlayImage({
+    id: 'now-red-yeast-rice-extract-120',
+    formulaId: 'now-red-yeast-rice-extract-60',
+    brand: 'NOW',
+  });
+  if (
+    !ryrExtract120?.url.endsWith('/now-red-yeast-rice-extract-120.jpg')
+    || !ryrExtract120.verifiedSku
+  ) {
+    throw new Error('Red yeast rice extract 120 must stay its own carton, not the 60-count');
+  }
+}
 {
   const pantethine600 = previewOverlayImage({
     id: 'now-pantethine-60-733739004895',
