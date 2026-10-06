@@ -5,7 +5,7 @@
 // formulaId. UPC stays empty when the bars or a count-specific spec were
 // not read for that pack. Multipacks and kits are not rows.
 //
-// TALLY: 17 written — Clean 10 / Caution 3 / Avoid 4.
+// TALLY: 16 written — Clean 9 / Caution 3 / Avoid 4.
 // 28 counts removed: no buyable pack on a page that opened.
 // NEW 0 / REUSE 17. Ungraded tokens: 0.
 
@@ -243,19 +243,6 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     source: `${MCC_SRC} Package NDC 11523-0007-3 is 30 tablets in 1 bottle. The starch 30-count row claritin-b136-tablets-30 was not rewritten.`,
   }),
   expand({
-    id: 'claritin-b144-tablets-mcc-40',
-    productName: 'Claritin 24-Hour Allergy Tablets (40ct MCC bottle)',
-    formulaId: MCC,
-    audience: 'adult',
-    minAge: 6,
-    form: 'tablet',
-    actives: LORA,
-    flags: mccFlags(MCC_SET),
-    verdict: 'clean',
-    note: MCC_NOTE,
-    source: `${MCC_SRC} Package NDC 11523-0007-4 is 40 tablets in 1 bottle.`,
-  }),
-  expand({
     id: 'claritin-b144-tablets-mcc-45',
     productName: 'Claritin 24-Hour Allergy Tablets (45ct MCC bottle)',
     formulaId: MCC,
@@ -434,13 +421,13 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
   ];
 
 const ROWS = BATCH144_KYR6B_CLARITIN_US_OTC;
-if (ROWS.length !== 17) throw new Error(`batch144 row count ${ROWS.length}`);
-if (new Set(ROWS.map((r) => r.id)).size !== 17) throw new Error('batch144 duplicate id');
+if (ROWS.length !== 16) throw new Error(`batch144 row count ${ROWS.length}`);
+if (new Set(ROWS.map((r) => r.id)).size !== 16) throw new Error('batch144 duplicate id');
 if (ROWS.some((r) => r.barcode)) throw new Error('batch144 unexpected upc');
 const clean = ROWS.filter((r) => r.verdict === 'clean');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
-if (clean.length !== 10 || caution.length !== 3 || avoid.length !== 4) {
+if (clean.length !== 9 || caution.length !== 3 || avoid.length !== 4) {
   throw new Error(`batch144 verdicts ${clean.length}/${caution.length}/${avoid.length}`);
 }
 if (clean.some((r) => r.formulaId !== MCC && r.formulaId !== PLAIN)) throw new Error('batch144 clean formula');
