@@ -10384,6 +10384,73 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   ),
   // Tri-Chromium 500 mcg, 90 veg capsules. Barcode 733739014283.
   'now-tri-chromium-500-mcg-90': catalogShot('now-tri-chromium-500-mcg-90.jpg'),
+  // Vitamins night run 2026-10-06 12:30 AM PT batch 2.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Green Tea Extract 400 mg, 100 veg capsules. Barcode 733739047052.
+  // Not the 250-count.
+  'now-green-tea-extract-400-mg-100': catalogShot(
+    'now-green-tea-extract-400-mg-100.jpg',
+  ),
+  // CLA 800 mg, 180 softgels. Barcode 733739017284.
+  'now-cla-800-mg-180': catalogShot('now-cla-800-mg-180.jpg'),
+  // Cat's Claw Extract, 120 veg capsules. Barcode 733739046284.
+  // Not the 500 mg 100-count.
+  'now-cat-s-claw-extract-120': catalogShot('now-cat-s-claw-extract-120.jpg'),
+  // Acai Liquid Concentrate, 16 fl oz. Barcode 733739048042.
+  // Not the freeze-dried capsules.
+  'now-acai-liquid-concentrate-16-fl-oz-473-ml': catalogShot(
+    'now-acai-liquid-concentrate-16-fl-oz-473-ml.jpg',
+  ),
+  // Acai, freeze-dried, 100 veg capsules. Barcode 733739033550.
+  // Not the liquid concentrate.
+  'now-acai-freeze-dried-100': catalogShot('now-acai-freeze-dried-100.jpg'),
+  // Men's Virility Power, 60 veg capsules. Barcode 733739033284.
+  // Not the 120-count.
+  'now-men-s-virility-power-60': catalogShot('now-men-s-virility-power-60.jpg'),
+  // Sports Arginine & Ornithine, 250 veg capsules. Barcode 733739000422.
+  'now-sports-arginine-ornithine-250': catalogShot(
+    'now-sports-arginine-ornithine-250.jpg',
+  ),
+  // Cat's Claw 500 mg, 100 veg capsules. Barcode 733739046185.
+  // Not the extract 120-count.
+  'now-cat-s-claw-500-mg-100': catalogShot('now-cat-s-claw-500-mg-100.jpg'),
+  // Vitamin D3 & K2, 240 capsules. Barcode 733739003928.
+  'now-vitamin-d3-k2-240': catalogShot('now-vitamin-d3-k2-240.jpg'),
+  // Potassium Iodide 30 mg, 60 tablets. Barcode 733739014542.
+  'now-potassium-iodide-30-mg-60': catalogShot(
+    'now-potassium-iodide-30-mg-60.jpg',
+  ),
+  // Resveratrol 200 mg, 60 veg capsules. Barcode 733739033536.
+  'now-resveratrol-200-mg-60': catalogShot('now-resveratrol-200-mg-60.jpg'),
+  // Calm & Focus with Zembrin & GABA, 60 veg capsules. Barcode 733739023964.
+  'now-calm-focus-with-zembrin-gaba-60': catalogShot(
+    'now-calm-focus-with-zembrin-gaba-60.jpg',
+  ),
+  // Sports Liquid L-Carnitine, citrus, 32 fl oz. Barcode 733739000699.
+  // Not the 16 fl oz bottle.
+  'now-sports-liquid-l-carnitine-citrus-32-fl-oz-946-ml': catalogShot(
+    'now-sports-liquid-l-carnitine-citrus-32-fl-oz-946-ml.jpg',
+  ),
+  // DHA-250 fish oil, 120 softgels. Barcode 733739016102.
+  'now-dha-250-fish-oil-120': catalogShot('now-dha-250-fish-oil-120.jpg'),
+  // Pau D'Arco 500 mg, 100 veg capsules. Barcode 733739047250.
+  'now-pau-d-arco-500-mg-100': catalogShot('now-pau-d-arco-500-mg-100.jpg'),
+  // TestoJack 100, 120 veg capsules. Barcode 733739021380.
+  'now-testojack-100-120': catalogShot('now-testojack-100-120.jpg'),
+  // Ojibwa Herbal Extract 450 mg, 180 veg capsules. Barcode 733739046741.
+  'now-ojibwa-herbal-extract-450-mg-180': catalogShot(
+    'now-ojibwa-herbal-extract-450-mg-180.jpg',
+  ),
+  // L-Arginine 700 mg, 180 veg capsules. Barcode 733739000330.
+  'now-l-arginine-700-mg-180': catalogShot('now-l-arginine-700-mg-180.jpg'),
+  // Ginkgo Biloba with Eleuthero Root, 50 veg capsules. Barcode 733739046826.
+  'now-ginkgo-biloba-with-eleuthero-root-50': catalogShot(
+    'now-ginkgo-biloba-with-eleuthero-root-50.jpg',
+  ),
+  // Phase 2 Starch Neutralizer 500 mg, 120 veg capsules. Barcode 733739030214.
+  'now-phase-2-starch-neutralizer-500-mg-120': catalogShot(
+    'now-phase-2-starch-neutralizer-500-mg-120.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17409,6 +17476,82 @@ assertExactCarton(
   'NOW',
   'now-tri-chromium-500-mcg-90.jpg',
 );
+assertExactCarton(
+  'now-green-tea-extract-400-mg-100',
+  'NOW',
+  'now-green-tea-extract-400-mg-100.jpg',
+);
+assertExactCarton('now-cla-800-mg-180', 'NOW', 'now-cla-800-mg-180.jpg');
+assertExactCarton(
+  'now-cat-s-claw-extract-120',
+  'NOW',
+  'now-cat-s-claw-extract-120.jpg',
+);
+assertExactCarton(
+  'now-acai-liquid-concentrate-16-fl-oz-473-ml',
+  'NOW',
+  'now-acai-liquid-concentrate-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton('now-acai-freeze-dried-100', 'NOW', 'now-acai-freeze-dried-100.jpg');
+assertExactCarton(
+  'now-men-s-virility-power-60',
+  'NOW',
+  'now-men-s-virility-power-60.jpg',
+);
+assertExactCarton(
+  'now-sports-arginine-ornithine-250',
+  'NOW',
+  'now-sports-arginine-ornithine-250.jpg',
+);
+assertExactCarton(
+  'now-cat-s-claw-500-mg-100',
+  'NOW',
+  'now-cat-s-claw-500-mg-100.jpg',
+);
+assertExactCarton('now-vitamin-d3-k2-240', 'NOW', 'now-vitamin-d3-k2-240.jpg');
+assertExactCarton(
+  'now-potassium-iodide-30-mg-60',
+  'NOW',
+  'now-potassium-iodide-30-mg-60.jpg',
+);
+assertExactCarton('now-resveratrol-200-mg-60', 'NOW', 'now-resveratrol-200-mg-60.jpg');
+assertExactCarton(
+  'now-calm-focus-with-zembrin-gaba-60',
+  'NOW',
+  'now-calm-focus-with-zembrin-gaba-60.jpg',
+);
+assertExactCarton(
+  'now-sports-liquid-l-carnitine-citrus-32-fl-oz-946-ml',
+  'NOW',
+  'now-sports-liquid-l-carnitine-citrus-32-fl-oz-946-ml.jpg',
+);
+assertExactCarton('now-dha-250-fish-oil-120', 'NOW', 'now-dha-250-fish-oil-120.jpg');
+assertExactCarton(
+  'now-pau-d-arco-500-mg-100',
+  'NOW',
+  'now-pau-d-arco-500-mg-100.jpg',
+);
+assertExactCarton('now-testojack-100-120', 'NOW', 'now-testojack-100-120.jpg');
+assertExactCarton(
+  'now-ojibwa-herbal-extract-450-mg-180',
+  'NOW',
+  'now-ojibwa-herbal-extract-450-mg-180.jpg',
+);
+assertExactCarton(
+  'now-l-arginine-700-mg-180',
+  'NOW',
+  'now-l-arginine-700-mg-180.jpg',
+);
+assertExactCarton(
+  'now-ginkgo-biloba-with-eleuthero-root-50',
+  'NOW',
+  'now-ginkgo-biloba-with-eleuthero-root-50.jpg',
+);
+assertExactCarton(
+  'now-phase-2-starch-neutralizer-500-mg-120',
+  'NOW',
+  'now-phase-2-starch-neutralizer-500-mg-120.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -17894,8 +18037,11 @@ assertExactCarton(
     formulaId: 'now-green-tea-extract-400-mg-100',
     brand: 'NOW',
   });
-  if (greenTea100?.url.endsWith('/now-green-tea-extract-400-mg-250.jpg')) {
-    throw new Error('Green tea 100 must not inherit the 250-count carton');
+  if (
+    !greenTea100?.url.endsWith('/now-green-tea-extract-400-mg-100.jpg')
+    || !greenTea100.verifiedSku
+  ) {
+    throw new Error('Green tea 100 must stay its own carton, not the 250-count');
   }
   const grape100 = previewOverlayImage({
     id: 'now-grape-seed-100',
@@ -17910,8 +18056,11 @@ assertExactCarton(
     formulaId: 'now-men-s-virility-power-60',
     brand: 'NOW',
   });
-  if (virility60?.url.endsWith('/now-men-s-virility-power-120.jpg')) {
-    throw new Error('Virility Power 60 must not inherit the 120-count carton');
+  if (
+    !virility60?.url.endsWith('/now-men-s-virility-power-60.jpg')
+    || !virility60.verifiedSku
+  ) {
+    throw new Error('Virility Power 60 must stay its own carton, not the 120-count');
   }
   const e1000x50 = previewOverlayImage({
     id: 'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50',
