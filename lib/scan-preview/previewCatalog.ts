@@ -10316,6 +10316,74 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-super-omega-3-6-9-fish-oil-90': catalogShot(
     'now-super-omega-3-6-9-fish-oil-90.jpg',
   ),
+  // Vitamins night run 2026-10-06 12:30 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Kava Kava Extract, 60 veg capsules. Barcode 733739047168.
+  // Not the 120-count.
+  'now-kava-kava-extract-60': catalogShot('now-kava-kava-extract-60.jpg'),
+  // B-50, 250 tablets. Barcode 733739004284.
+  // Not the veg-capsule 250 (733739004222) and not the 100-count tablets.
+  'now-b-50-250-733739004284': catalogShot('now-b-50-250-733739004284.jpg'),
+  // Pycnogenol, 60 veg capsules. Barcode 733739031693.
+  // Not the other Pycnogenol 60 (733739032676).
+  'now-pycnogenol-60-733739031693': catalogShot(
+    'now-pycnogenol-60-733739031693.jpg',
+  ),
+  // Sports HMB with Vitamin D-3, 120 capsules. Barcode 733739020543.
+  'now-sports-hmb-with-vitamin-d-3-120': catalogShot(
+    'now-sports-hmb-with-vitamin-d-3-120.jpg',
+  ),
+  // C-1000, 30 veg capsules. Barcode 733739006899.
+  'now-c-1000-30': catalogShot('now-c-1000-30.jpg'),
+  // Flush-Free Niacin 250 mg, 90 veg capsules. Barcode 733739004833.
+  'now-flush-free-niacin-250-mg-90': catalogShot(
+    'now-flush-free-niacin-250-mg-90.jpg',
+  ),
+  // Sports Tribulus 500 mg, 100 veg capsules. Barcode 733739021700.
+  'now-sports-tribulus-men-s-health-500-mg-100': catalogShot(
+    'now-sports-tribulus-men-s-health-500-mg-100.jpg',
+  ),
+  // GlucoFit, 60 softgels. Barcode 733739030955.
+  'now-glucofit-60': catalogShot('now-glucofit-60.jpg'),
+  // Sports Creatine Monohydrate 750 mg, 240 veg capsules. Barcode 733739020499.
+  'now-sports-creatine-monohydrate-750-mg-240': catalogShot(
+    'now-sports-creatine-monohydrate-750-mg-240.jpg',
+  ),
+  // Policosanol 40 mg, 90 veg capsules. Barcode 733739018250.
+  // Not the 10 mg bottle.
+  'now-policosanol-40-mg-90': catalogShot('now-policosanol-40-mg-90.jpg'),
+  // Super Antioxidants, 120 veg capsules. Barcode 733739033222.
+  'now-super-antioxidants-120': catalogShot('now-super-antioxidants-120.jpg'),
+  // E-400, 268 mg (400 IU), 50 softgels. Barcode 733739008909.
+  // Not the 100-count or the 250-count.
+  'now-e-400-268-mg-400-iu-50': catalogShot('now-e-400-268-mg-400-iu-50.jpg'),
+  // Acetyl-L-Carnitine 500 mg, 50 veg capsules. Barcode 733739000750.
+  'now-acetyl-l-carnitine-50': catalogShot('now-acetyl-l-carnitine-50.jpg'),
+  // Phosphatidyl Serine, soy-free, 60 veg capsules. Barcode 733739023896.
+  'now-phosphatidyl-serine-soy-free-60': catalogShot(
+    'now-phosphatidyl-serine-soy-free-60.jpg',
+  ),
+  // Eleuthero 500 mg, 250 veg capsules. Barcode 733739040336.
+  'now-eleuthero-500-mg-250': catalogShot('now-eleuthero-500-mg-250.jpg'),
+  // Sports Liquid L-Carnitine, citrus, 16 fl oz. Barcode 733739000651.
+  // Not the 32 fl oz bottle.
+  'now-sports-liquid-l-carnitine-citrus-16-fl-oz-473-ml': catalogShot(
+    'now-sports-liquid-l-carnitine-citrus-16-fl-oz-473-ml.jpg',
+  ),
+  // Policosanol 10 mg, 90 veg capsules. Barcode 733739018236.
+  // Not the 40 mg bottle.
+  'now-policosanol-10-mg-90': catalogShot('now-policosanol-10-mg-90.jpg'),
+  // Full Spectrum Mineral Caps, 120 capsules. Barcode 733739015440.
+  'now-full-spectrum-mineral-caps-120': catalogShot(
+    'now-full-spectrum-mineral-caps-120.jpg',
+  ),
+  // Magnesium Inositol Relax, lemonade, 16 oz tub. Barcode 733739012937.
+  // Front of the tub. Not the facts or directions panel.
+  'now-magnesium-inositol-relax-lemonade-16': catalogShot(
+    'now-magnesium-inositol-relax-lemonade-16.jpg',
+  ),
+  // Tri-Chromium 500 mcg, 90 veg capsules. Barcode 733739014283.
+  'now-tri-chromium-500-mcg-90': catalogShot('now-tri-chromium-500-mcg-90.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17265,6 +17333,82 @@ assertExactCarton(
   'NOW',
   'now-super-omega-3-6-9-fish-oil-90.jpg',
 );
+assertExactCarton('now-kava-kava-extract-60', 'NOW', 'now-kava-kava-extract-60.jpg');
+assertExactCarton(
+  'now-b-50-250-733739004284',
+  'NOW',
+  'now-b-50-250-733739004284.jpg',
+);
+assertExactCarton(
+  'now-pycnogenol-60-733739031693',
+  'NOW',
+  'now-pycnogenol-60-733739031693.jpg',
+);
+assertExactCarton(
+  'now-sports-hmb-with-vitamin-d-3-120',
+  'NOW',
+  'now-sports-hmb-with-vitamin-d-3-120.jpg',
+);
+assertExactCarton('now-c-1000-30', 'NOW', 'now-c-1000-30.jpg');
+assertExactCarton(
+  'now-flush-free-niacin-250-mg-90',
+  'NOW',
+  'now-flush-free-niacin-250-mg-90.jpg',
+);
+assertExactCarton(
+  'now-sports-tribulus-men-s-health-500-mg-100',
+  'NOW',
+  'now-sports-tribulus-men-s-health-500-mg-100.jpg',
+);
+assertExactCarton('now-glucofit-60', 'NOW', 'now-glucofit-60.jpg');
+assertExactCarton(
+  'now-sports-creatine-monohydrate-750-mg-240',
+  'NOW',
+  'now-sports-creatine-monohydrate-750-mg-240.jpg',
+);
+assertExactCarton('now-policosanol-40-mg-90', 'NOW', 'now-policosanol-40-mg-90.jpg');
+assertExactCarton(
+  'now-super-antioxidants-120',
+  'NOW',
+  'now-super-antioxidants-120.jpg',
+);
+assertExactCarton(
+  'now-e-400-268-mg-400-iu-50',
+  'NOW',
+  'now-e-400-268-mg-400-iu-50.jpg',
+);
+assertExactCarton(
+  'now-acetyl-l-carnitine-50',
+  'NOW',
+  'now-acetyl-l-carnitine-50.jpg',
+);
+assertExactCarton(
+  'now-phosphatidyl-serine-soy-free-60',
+  'NOW',
+  'now-phosphatidyl-serine-soy-free-60.jpg',
+);
+assertExactCarton('now-eleuthero-500-mg-250', 'NOW', 'now-eleuthero-500-mg-250.jpg');
+assertExactCarton(
+  'now-sports-liquid-l-carnitine-citrus-16-fl-oz-473-ml',
+  'NOW',
+  'now-sports-liquid-l-carnitine-citrus-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton('now-policosanol-10-mg-90', 'NOW', 'now-policosanol-10-mg-90.jpg');
+assertExactCarton(
+  'now-full-spectrum-mineral-caps-120',
+  'NOW',
+  'now-full-spectrum-mineral-caps-120.jpg',
+);
+assertExactCarton(
+  'now-magnesium-inositol-relax-lemonade-16',
+  'NOW',
+  'now-magnesium-inositol-relax-lemonade-16.jpg',
+);
+assertExactCarton(
+  'now-tri-chromium-500-mcg-90',
+  'NOW',
+  'now-tri-chromium-500-mcg-90.jpg',
+);
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
@@ -17305,8 +17449,11 @@ assertExactCarton(
     formulaId: 'now-b-50-100',
     brand: 'NOW',
   });
-  if (b50Large?.url.endsWith('/now-b-50-100.jpg')) {
-    throw new Error('B-50 250 must not inherit the 100-count carton');
+  if (
+    !b50Large?.url.endsWith('/now-b-50-250-733739004284.jpg')
+    || !b50Large.verifiedSku
+  ) {
+    throw new Error('B-50 250 tablets 733739004284 must stay their own carton, not the 100-count');
   }
   const currantTwin = previewOverlayImage({
     id: 'now-black-currant-oil-100-733739017154',
@@ -17603,8 +17750,11 @@ assertExactCarton(
     formulaId: 'now-pycnogenol-60',
     brand: 'NOW',
   });
-  if (pycOther?.url.endsWith('/now-pycnogenol-60.jpg')) {
-    throw new Error('Pycnogenol barcode 733739031693 must not inherit 733739032676');
+  if (
+    !pycOther?.url.endsWith('/now-pycnogenol-60-733739031693.jpg')
+    || !pycOther.verifiedSku
+  ) {
+    throw new Error('Pycnogenol barcode 733739031693 must stay its own carton, not 733739032676');
   }
   const mag180 = previewOverlayImage({
     id: 'now-magnesium-citrate-180',
@@ -17776,8 +17926,11 @@ assertExactCarton(
     formulaId: 'now-kava-kava-extract-60',
     brand: 'NOW',
   });
-  if (kava60?.url.endsWith('/now-kava-kava-extract-120.jpg')) {
-    throw new Error('Kava Kava 60 must not inherit the 120-count carton');
+  if (
+    !kava60?.url.endsWith('/now-kava-kava-extract-60.jpg')
+    || !kava60.verifiedSku
+  ) {
+    throw new Error('Kava Kava 60 must stay its own carton, not the 120-count');
   }
   const d3_240 = previewOverlayImage({
     id: 'now-vitamin-d-3-high-potency-5-000-iu-240',
