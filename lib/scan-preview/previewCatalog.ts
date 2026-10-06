@@ -10451,6 +10451,85 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-phase-2-starch-neutralizer-500-mg-120': catalogShot(
     'now-phase-2-starch-neutralizer-500-mg-120.jpg',
   ),
+  // Vitamins night run 2026-10-06 1:45 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Alpha Lipoic Acid, 100 mg, 60 veg capsules. Barcode 733739030405.
+  // Not the 600 mg 60-count (733739030467).
+  'now-alpha-lipoic-acid-60-733739030405': catalogShot(
+    'now-alpha-lipoic-acid-60-733739030405.jpg',
+  ),
+  // Sports ZMA, 90 veg capsules. Barcode 733739022004.
+  // Not the 180-count.
+  'now-sports-zma-90': catalogShot('now-sports-zma-90.jpg'),
+  // Cal-Mag Caps with Vitamins D and K, 240 capsules. Barcode 733739012661.
+  'now-cal-mag-caps-with-vitamins-d-and-k-240': catalogShot(
+    'now-cal-mag-caps-with-vitamins-d-and-k-240.jpg',
+  ),
+  // Chitosan with chromium, 240 veg capsules. Barcode 733739020260.
+  // Not the plus-chromium 120-count.
+  'now-chitosan-240': catalogShot('now-chitosan-240.jpg'),
+  // Sports L-Carnitine Liquid, tropical punch, 16 fl oz. Barcode 733739000668.
+  // Not the citrus 16 fl oz or the 32 fl oz bottle.
+  'now-sports-l-carnitine-liquid-tropical-punch-16-fl-oz-473-ml': catalogShot(
+    'now-sports-l-carnitine-liquid-tropical-punch-16-fl-oz-473-ml.jpg',
+  ),
+  // Ojibwa Tea, 16 fl oz. Barcode 733739048554.
+  'now-ojibwa-tea-16-fl-oz-473-ml': catalogShot(
+    'now-ojibwa-tea-16-fl-oz-473-ml.jpg',
+  ),
+  // Chitosan plus Chromium, 120 capsules. Barcode 733739020253.
+  // Not the 240-count.
+  'now-chitosan-plus-chromium-120': catalogShot(
+    'now-chitosan-plus-chromium-120.jpg',
+  ),
+  // B-50, 100 tablets. Barcode 733739004260.
+  // Not the veg-capsule 100 (733739004208) and not the 250-count tablets.
+  'now-b-50-100-733739004260': catalogShot(
+    'now-b-50-100-733739004260.jpg',
+  ),
+  // Red Yeast Rice with CoQ10, 60 veg capsules. Barcode 733739033215.
+  // Not the 120-count.
+  'now-red-yeast-rice-with-coq10-60': catalogShot(
+    'now-red-yeast-rice-with-coq10-60.jpg',
+  ),
+  // Female Balance, 90 veg capsules. Barcode 733739032959.
+  'now-female-balance-90': catalogShot('now-female-balance-90.jpg'),
+  // Sports Branched-Chain Amino Acids, 120 veg capsules. Barcode 733739000538.
+  'now-sports-branched-chain-amino-acids-120': catalogShot(
+    'now-sports-branched-chain-amino-acids-120.jpg',
+  ),
+  // Spirulina 500 mg, 120 veg capsules. Barcode 733739027023.
+  'now-spirulina-120': catalogShot('now-spirulina-120.jpg'),
+  // Chlorella 1,000 mg, 60 tablets. Barcode 733739026309.
+  // Not the 120-count.
+  'now-chlorella-60': catalogShot('now-chlorella-60.jpg'),
+  // Sports Arginine & Citrulline, 120 veg capsules. Barcode 733739000378.
+  // Not the 240-count.
+  'now-sports-arginine-citrulline-120': catalogShot(
+    'now-sports-arginine-citrulline-120.jpg',
+  ),
+  // 7-KETO 100 mg, 60 veg capsules. Barcode 733739030139.
+  // Not the 120-count.
+  'now-7-keto-100-mg-60': catalogShot('now-7-keto-100-mg-60.jpg'),
+  // Liver Caps with Milk Thistle & Eleuthero, 100 capsules. Barcode 733739024329.
+  'now-liver-caps-with-milk-thistle-eleuthero-100': catalogShot(
+    'now-liver-caps-with-milk-thistle-eleuthero-100.jpg',
+  ),
+  // Cider Vinegar, 180 veg capsules. Barcode 733739033161.
+  'now-cider-vinegar-180': catalogShot('now-cider-vinegar-180.jpg'),
+  // EcoGreen Multi, iron-free, 180 veg capsules. Barcode 733739037886.
+  'now-ecogreen-multi-iron-free-180': catalogShot(
+    'now-ecogreen-multi-iron-free-180.jpg',
+  ),
+  // Methyl B-12 1,000 mcg, 250 lozenges. Barcode 733739004673.
+  // Not the 100-count lozenge.
+  'now-methyl-b-12-1-000-mcg-250': catalogShot(
+    'now-methyl-b-12-1-000-mcg-250.jpg',
+  ),
+  // Silver Sol, 4 fl oz. Barcode 733739014078.
+  'now-silver-sol-4-fl-oz-118-ml': catalogShot(
+    'now-silver-sol-4-fl-oz-118-ml.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17551,6 +17630,78 @@ assertExactCarton(
   'now-phase-2-starch-neutralizer-500-mg-120',
   'NOW',
   'now-phase-2-starch-neutralizer-500-mg-120.jpg',
+);
+assertExactCarton(
+  'now-alpha-lipoic-acid-60-733739030405',
+  'NOW',
+  'now-alpha-lipoic-acid-60-733739030405.jpg',
+);
+assertExactCarton('now-sports-zma-90', 'NOW', 'now-sports-zma-90.jpg');
+assertExactCarton(
+  'now-cal-mag-caps-with-vitamins-d-and-k-240',
+  'NOW',
+  'now-cal-mag-caps-with-vitamins-d-and-k-240.jpg',
+);
+assertExactCarton('now-chitosan-240', 'NOW', 'now-chitosan-240.jpg');
+assertExactCarton(
+  'now-sports-l-carnitine-liquid-tropical-punch-16-fl-oz-473-ml',
+  'NOW',
+  'now-sports-l-carnitine-liquid-tropical-punch-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton(
+  'now-ojibwa-tea-16-fl-oz-473-ml',
+  'NOW',
+  'now-ojibwa-tea-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton(
+  'now-chitosan-plus-chromium-120',
+  'NOW',
+  'now-chitosan-plus-chromium-120.jpg',
+);
+assertExactCarton(
+  'now-b-50-100-733739004260',
+  'NOW',
+  'now-b-50-100-733739004260.jpg',
+);
+assertExactCarton(
+  'now-red-yeast-rice-with-coq10-60',
+  'NOW',
+  'now-red-yeast-rice-with-coq10-60.jpg',
+);
+assertExactCarton('now-female-balance-90', 'NOW', 'now-female-balance-90.jpg');
+assertExactCarton(
+  'now-sports-branched-chain-amino-acids-120',
+  'NOW',
+  'now-sports-branched-chain-amino-acids-120.jpg',
+);
+assertExactCarton('now-spirulina-120', 'NOW', 'now-spirulina-120.jpg');
+assertExactCarton('now-chlorella-60', 'NOW', 'now-chlorella-60.jpg');
+assertExactCarton(
+  'now-sports-arginine-citrulline-120',
+  'NOW',
+  'now-sports-arginine-citrulline-120.jpg',
+);
+assertExactCarton('now-7-keto-100-mg-60', 'NOW', 'now-7-keto-100-mg-60.jpg');
+assertExactCarton(
+  'now-liver-caps-with-milk-thistle-eleuthero-100',
+  'NOW',
+  'now-liver-caps-with-milk-thistle-eleuthero-100.jpg',
+);
+assertExactCarton('now-cider-vinegar-180', 'NOW', 'now-cider-vinegar-180.jpg');
+assertExactCarton(
+  'now-ecogreen-multi-iron-free-180',
+  'NOW',
+  'now-ecogreen-multi-iron-free-180.jpg',
+);
+assertExactCarton(
+  'now-methyl-b-12-1-000-mcg-250',
+  'NOW',
+  'now-methyl-b-12-1-000-mcg-250.jpg',
+);
+assertExactCarton(
+  'now-silver-sol-4-fl-oz-118-ml',
+  'NOW',
+  'now-silver-sol-4-fl-oz-118-ml.jpg',
 );
 {
   const ryr60 = previewOverlayImage({
