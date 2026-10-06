@@ -11041,6 +11041,88 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-c-1000-60': catalogShot('now-c-1000-60.jpg'),
   // Moringa leaf 400 mg, 90 veg capsules. Barcode 733739040206.
   'now-moringa-leaf-90': catalogShot('now-moringa-leaf-90.jpg'),
+  // Vitamins night run 2026-10-06 6:45 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only.
+  // Sports L-Citrulline 1,200 mg, 120 tablets. Barcode 733739001160.
+  // Not the 750 mg 180-count.
+  'now-sports-l-citrulline-120': catalogShot('now-sports-l-citrulline-120.jpg'),
+  // Calcium & Magnesium with vitamin D-3 and zinc, 240 softgels.
+  // Barcode 733739012524. Not the 120-count.
+  'now-calcium-magnesium-with-vitamin-d-3-and-zinc-240': catalogShot(
+    'now-calcium-magnesium-with-vitamin-d-3-and-zinc-240.jpg',
+  ),
+  // Calcium & Magnesium with vitamin D3 and zinc, 120 softgels.
+  // Barcode 733739012517. Not the 240-count.
+  'now-calcium-magnesium-with-vitamin-d3-and-zinc-120': catalogShot(
+    'now-calcium-magnesium-with-vitamin-d3-and-zinc-120.jpg',
+  ),
+  // Magnesium & Calcium with zinc and vitamin D-3, 100 tablets.
+  // Barcode 733739012777. Not the 250-count.
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100': catalogShot(
+    'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100.jpg',
+  ),
+  // ADAM Superior Men's Multi, 180 softgels. Barcode 733739038814.
+  // Not the 90-count softgels. Not the tablet bottle.
+  'now-adam-superior-men-s-multi-180-softgels': catalogShot(
+    'now-adam-superior-men-s-multi-180-softgels.jpg',
+  ),
+  // ADAM Superior Men's Multi, 90 softgels. Barcode 733739038807.
+  // Not the 180-count softgels. Not the tablet bottle.
+  'now-adam-superior-men-s-multi-90-softgels': catalogShot(
+    'now-adam-superior-men-s-multi-90-softgels.jpg',
+  ),
+  // Co-Enzyme B-Complex, 60 veg capsules. Barcode 733739004062.
+  // Not the 120-count with alpha lipoic acid and CoQ10.
+  'now-co-enzyme-b-complex-60': catalogShot('now-co-enzyme-b-complex-60.jpg'),
+  // Coenzyme B-Complex with alpha lipoic acid and CoQ10, 120 veg capsules.
+  // Barcode 733739004079. Not the plain 60-count.
+  'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120': catalogShot(
+    'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120.jpg',
+  ),
+  // TestoJack 200, 120 veg capsules. Barcode 733739021977.
+  // Not the 60-count.
+  'now-testojack-200-120': catalogShot('now-testojack-200-120.jpg'),
+  // TestoJack 200, 60 veg capsules. Barcode 733739021984.
+  // Not the 120-count.
+  'now-testojack-200-60': catalogShot('now-testojack-200-60.jpg'),
+  // Horse chestnut with added rutin, 90 veg capsules. Barcode 733739047137.
+  'now-horse-chestnut-with-added-rutin-90': catalogShot(
+    'now-horse-chestnut-with-added-rutin-90.jpg',
+  ),
+  // Prostate Health, Clinical Strength, 180 softgels. Barcode 733739033499.
+  // Not the 90-count.
+  'now-prostate-health-clinical-strength-180': catalogShot(
+    'now-prostate-health-clinical-strength-180.jpg',
+  ),
+  // Prostate Health, 90 softgels. Barcode 733739033482.
+  // Not the Clinical Strength 180-count.
+  'now-prostate-health-90': catalogShot('now-prostate-health-90.jpg'),
+  // EVE Superior Women's Multi, 180 softgels. Barcode 733739038036.
+  // Not the 90-count softgels. Not the tablet bottle.
+  'now-eve-superior-womens-multi-180-softgels': catalogShot(
+    'now-eve-superior-womens-multi-180-softgels.jpg',
+  ),
+  // EVE Superior Women's Multi, 90 softgels. Barcode 733739038029.
+  // Not the 180-count softgels. Not the tablet bottle.
+  'now-eve-superior-womens-multi-90-softgels': catalogShot(
+    'now-eve-superior-womens-multi-90-softgels.jpg',
+  ),
+  // SAMe 400 mg, 60 tablets. Barcode 733739001412. Not the 30-count.
+  'now-same-400-mg-60': catalogShot('now-same-400-mg-60.jpg'),
+  // SAMe 400 mg, 30 tablets. Barcode 733739001399. Not the 60-count.
+  'now-same-400-mg-30': catalogShot('now-same-400-mg-30.jpg'),
+  // Certified Organic Chlorella powder, 1 lb. Barcode 733739026385.
+  // Not the 4 oz pouch.
+  'now-organic-chlorella-powder-1': catalogShot(
+    'now-organic-chlorella-powder-1.jpg',
+  ),
+  // Certified Organic Chlorella powder, 4 oz. Barcode 733739026361.
+  // Not the 1 lb pouch.
+  'now-organic-chlorella-powder-4': catalogShot(
+    'now-organic-chlorella-powder-4.jpg',
+  ),
+  // Omega 3-6-9, 250 softgels. Barcode 733739018373. Not the 100-count.
+  'now-omega-3-6-9-250': catalogShot('now-omega-3-6-9-250.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11568,10 +11650,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-adam-superior-men-s-multi-120',
   // Vitamins night run 2026-10-06 5:30 AM PT batch 2.
   // Shared-formula counts. Do not inherit a sibling face.
-  // The 100-count is still unattempted. Do not glue the 250.
+  // The 100-count has its own face. Do not glue the 250.
   'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
   'now-sports-l-arginine-180',
   'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100',
+  // Vitamins night run 2026-10-06 6:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'now-calcium-magnesium-with-vitamin-d3-and-zinc-120',
+  'now-adam-superior-men-s-multi-90-softgels',
+  'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120',
+  'now-testojack-200-60',
+  'now-prostate-health-90',
+  'now-same-400-mg-30',
+  'now-organic-chlorella-powder-4',
+  // 100-count is still unattempted. Do not glue the 250.
+  'now-omega-3-6-9-100',
 ]);
 
 export function previewOverlayImage(
@@ -18836,6 +18929,161 @@ assertExactCarton(
 assertExactCarton('now-guggul-extract-90', 'NOW', 'now-guggul-extract-90.jpg');
 assertExactCarton('now-c-1000-60', 'NOW', 'now-c-1000-60.jpg');
 assertExactCarton('now-moringa-leaf-90', 'NOW', 'now-moringa-leaf-90.jpg');
+assertExactCarton(
+  'now-sports-l-citrulline-120',
+  'NOW',
+  'now-sports-l-citrulline-120.jpg',
+);
+assertExactCarton(
+  'now-calcium-magnesium-with-vitamin-d-3-and-zinc-240',
+  'NOW',
+  'now-calcium-magnesium-with-vitamin-d-3-and-zinc-240.jpg',
+);
+assertExactCarton(
+  'now-calcium-magnesium-with-vitamin-d3-and-zinc-120',
+  'NOW',
+  'now-calcium-magnesium-with-vitamin-d3-and-zinc-120.jpg',
+);
+assertExactCarton(
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100',
+  'NOW',
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100.jpg',
+);
+assertExactCarton(
+  'now-adam-superior-men-s-multi-180-softgels',
+  'NOW',
+  'now-adam-superior-men-s-multi-180-softgels.jpg',
+);
+assertExactCarton(
+  'now-adam-superior-men-s-multi-90-softgels',
+  'NOW',
+  'now-adam-superior-men-s-multi-90-softgels.jpg',
+);
+assertExactCarton('now-co-enzyme-b-complex-60', 'NOW', 'now-co-enzyme-b-complex-60.jpg');
+assertExactCarton(
+  'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120',
+  'NOW',
+  'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120.jpg',
+);
+assertExactCarton('now-testojack-200-120', 'NOW', 'now-testojack-200-120.jpg');
+assertExactCarton('now-testojack-200-60', 'NOW', 'now-testojack-200-60.jpg');
+assertExactCarton(
+  'now-horse-chestnut-with-added-rutin-90',
+  'NOW',
+  'now-horse-chestnut-with-added-rutin-90.jpg',
+);
+assertExactCarton(
+  'now-prostate-health-clinical-strength-180',
+  'NOW',
+  'now-prostate-health-clinical-strength-180.jpg',
+);
+assertExactCarton('now-prostate-health-90', 'NOW', 'now-prostate-health-90.jpg');
+assertExactCarton(
+  'now-eve-superior-womens-multi-180-softgels',
+  'NOW',
+  'now-eve-superior-womens-multi-180-softgels.jpg',
+);
+assertExactCarton(
+  'now-eve-superior-womens-multi-90-softgels',
+  'NOW',
+  'now-eve-superior-womens-multi-90-softgels.jpg',
+);
+assertExactCarton('now-same-400-mg-60', 'NOW', 'now-same-400-mg-60.jpg');
+assertExactCarton('now-same-400-mg-30', 'NOW', 'now-same-400-mg-30.jpg');
+assertExactCarton(
+  'now-organic-chlorella-powder-1',
+  'NOW',
+  'now-organic-chlorella-powder-1.jpg',
+);
+assertExactCarton(
+  'now-organic-chlorella-powder-4',
+  'NOW',
+  'now-organic-chlorella-powder-4.jpg',
+);
+assertExactCarton('now-omega-3-6-9-250', 'NOW', 'now-omega-3-6-9-250.jpg');
+{
+  const calMag120 = previewOverlayImage({
+    id: 'now-calcium-magnesium-with-vitamin-d3-and-zinc-120',
+    formulaId: 'now-calcium-magnesium-with-vitamin-d-3-and-zinc-240',
+    brand: 'NOW',
+  });
+  if (
+    !calMag120?.url.endsWith('/now-calcium-magnesium-with-vitamin-d3-and-zinc-120.jpg')
+    || !calMag120.verifiedSku
+  ) {
+    throw new Error('Calcium & Magnesium 120 must stay its own carton, not the 240-count');
+  }
+  const adam90 = previewOverlayImage({
+    id: 'now-adam-superior-men-s-multi-90-softgels',
+    formulaId: 'now-adam-superior-men-s-multi-180-softgels',
+    brand: 'NOW',
+  });
+  if (
+    !adam90?.url.endsWith('/now-adam-superior-men-s-multi-90-softgels.jpg')
+    || !adam90.verifiedSku
+  ) {
+    throw new Error('ADAM 90 softgels must stay their own carton, not the 180-count');
+  }
+  const coqB = previewOverlayImage({
+    id: 'now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120',
+    formulaId: 'now-co-enzyme-b-complex-60',
+    brand: 'NOW',
+  });
+  if (
+    !coqB?.url.endsWith(
+      '/now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120.jpg',
+    )
+    || !coqB.verifiedSku
+  ) {
+    throw new Error('Coenzyme B-Complex 120 must stay its own carton, not the 60-count');
+  }
+  const testo60 = previewOverlayImage({
+    id: 'now-testojack-200-60',
+    formulaId: 'now-testojack-200-120',
+    brand: 'NOW',
+  });
+  if (!testo60?.url.endsWith('/now-testojack-200-60.jpg') || !testo60.verifiedSku) {
+    throw new Error('TestoJack 60 must stay its own carton, not the 120-count');
+  }
+  const prostate90 = previewOverlayImage({
+    id: 'now-prostate-health-90',
+    formulaId: 'now-prostate-health-clinical-strength-180',
+    brand: 'NOW',
+  });
+  if (
+    !prostate90?.url.endsWith('/now-prostate-health-90.jpg')
+    || !prostate90.verifiedSku
+  ) {
+    throw new Error('Prostate Health 90 must stay its own carton, not the 180-count');
+  }
+  const same30 = previewOverlayImage({
+    id: 'now-same-400-mg-30',
+    formulaId: 'now-same-400-mg-60',
+    brand: 'NOW',
+  });
+  if (!same30?.url.endsWith('/now-same-400-mg-30.jpg') || !same30.verifiedSku) {
+    throw new Error('SAMe 30 must stay its own carton, not the 60-count');
+  }
+  const chlorella4 = previewOverlayImage({
+    id: 'now-organic-chlorella-powder-4',
+    formulaId: 'now-organic-chlorella-powder-1',
+    brand: 'NOW',
+  });
+  if (
+    !chlorella4?.url.endsWith('/now-organic-chlorella-powder-4.jpg')
+    || !chlorella4.verifiedSku
+  ) {
+    throw new Error('Chlorella 4 oz must stay its own carton, not the 1 lb pouch');
+  }
+  const omega100 = previewOverlayImage({
+    id: 'now-omega-3-6-9-100',
+    formulaId: 'now-omega-3-6-9-250',
+    brand: 'NOW',
+  });
+  if (!omega100?.url.startsWith('data:image/svg+xml') || omega100.verifiedSku) {
+    throw new Error('Omega 3-6-9 100 must stay a letter until attempted');
+  }
+}
 {
   const redOmega180 = previewOverlayImage({
     id: 'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
@@ -18866,8 +19114,11 @@ assertExactCarton('now-moringa-leaf-90', 'NOW', 'now-moringa-leaf-90.jpg');
     formulaId: 'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250',
     brand: 'NOW',
   });
-  if (!magCal100?.url.startsWith('data:image/svg+xml') || magCal100.verifiedSku) {
-    throw new Error('Magnesium & Calcium 100 must stay a letter until attempted');
+  if (
+    !magCal100?.url.endsWith('/now-magnesium-calcium-with-zinc-and-vitamin-d-3-100.jpg')
+    || !magCal100.verifiedSku
+  ) {
+    throw new Error('Magnesium & Calcium 100 must stay its own carton, not the 250-count');
   }
   const ryrExtract60 = previewOverlayImage({
     id: 'now-red-yeast-rice-extract-60',
