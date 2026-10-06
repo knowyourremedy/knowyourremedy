@@ -10973,6 +10973,74 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-adam-superior-men-s-multi-120': catalogShot(
     'now-adam-superior-men-s-multi-120.jpg',
   ),
+  // Vitamins night run 2026-10-06 5:30 AM PT batch 2.
+  // Vitacost pack face for that UPC, except Respir-All (iHerb pack
+  // face; Vitacost had no listing for 733739032829). Per-id only.
+  // Daily Vits, 100 tablets. Barcode 733739037701. Not the 250-count.
+  'now-daily-vits-multi-vitamin-mineral-100': catalogShot(
+    'now-daily-vits-multi-vitamin-mineral-100.jpg',
+  ),
+  // Garcinia extract, 120 tablets. Barcode 733739014351.
+  'now-garcinia-extract-120': catalogShot('now-garcinia-extract-120.jpg'),
+  // Magnesium & Calcium with zinc and vitamin D-3, 250 tablets.
+  // Barcode 733739012784. Not the 100-count.
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250': catalogShot(
+    'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250.jpg',
+  ),
+  // Red Omega fish oil with red yeast rice and CoQ10, 180 softgels.
+  // Barcode 733739016768. Not the 90-count.
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180': catalogShot(
+    'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180.jpg',
+  ),
+  // Red yeast rice extract 1,200 mg, 60 tablets. Barcode 733739035042.
+  // Not the 120-count. Not the plain veg-capsule line.
+  'now-red-yeast-rice-extract-60': catalogShot(
+    'now-red-yeast-rice-extract-60.jpg',
+  ),
+  // Respir-All, 60 tablets. Barcode 733739032829.
+  // iHerb pack face NOW-03282. Not a Vitacost listing.
+  'now-respir-all-60': catalogShot('now-respir-all-60.jpg'),
+  // ADAM Superior Men's Multi, 60 tablets. Barcode 733739038753.
+  // Not the 120-count. Not the softgel bottle.
+  'now-adam-superior-men-s-multi-60': catalogShot(
+    'now-adam-superior-men-s-multi-60.jpg',
+  ),
+  // L-Cysteine 500 mg, 100 tablets. Barcode 733739000774.
+  'now-l-cysteine-100': catalogShot('now-l-cysteine-100.jpg'),
+  // L-Carnitine 1,000 mg, 50 tablets. Barcode 733739000675.
+  // Not the 100-count. Not the 500 mg bottle.
+  'now-l-carnitine-50': catalogShot('now-l-carnitine-50.jpg'),
+  // Sports L-Arginine 1,000 mg, 180 tablets. Barcode 733739000262.
+  // Not the 60-count.
+  'now-sports-l-arginine-180': catalogShot('now-sports-l-arginine-180.jpg'),
+  // Ulcetrol, 60 tablets. Barcode 733739033451.
+  'now-ulcetrol-60': catalogShot('now-ulcetrol-60.jpg'),
+  // Red Omega fish oil with red yeast rice and CoQ10, 90 softgels.
+  // Barcode 733739016751. Not the 180-count.
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90': catalogShot(
+    'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90.jpg',
+  ),
+  // Omega-3 fish oil, 90 softgels. Barcode 733739016560.
+  // Not the 180-count. Not the Ultra Omega-3 bottle.
+  'now-omega-3-fish-oil-90': catalogShot('now-omega-3-fish-oil-90.jpg'),
+  // Sports L-Arginine 1,000 mg, 60 tablets. Barcode 733739000255.
+  // Not the 180-count.
+  'now-sports-l-arginine-60': catalogShot('now-sports-l-arginine-60.jpg'),
+  // Liquid Multi Gels, 60 softgels. Barcode 733739038166.
+  // Not the 180-count.
+  'now-liquid-multi-gels-60': catalogShot('now-liquid-multi-gels-60.jpg'),
+  // Acetyl-L Carnitine 750 mg, 90 tablets. Barcode 733739000811.
+  'now-acetyl-l-carnitine-90': catalogShot('now-acetyl-l-carnitine-90.jpg'),
+  // Magnesium glycinate 100 mg, 90 tablets. Barcode 733739012869.
+  // Not the 180-count.
+  'now-magnesium-glycinate-90': catalogShot('now-magnesium-glycinate-90.jpg'),
+  // Guggul extract, 90 tablets. Barcode 733739046987.
+  'now-guggul-extract-90': catalogShot('now-guggul-extract-90.jpg'),
+  // C-1000, 60 tablets. Barcode 733739006790.
+  // Not the 250-count. Not the rose-hips bottle.
+  'now-c-1000-60': catalogShot('now-c-1000-60.jpg'),
+  // Moringa leaf 400 mg, 90 veg capsules. Barcode 733739040206.
+  'now-moringa-leaf-90': catalogShot('now-moringa-leaf-90.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11498,6 +11566,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-liquid-multi-gels-180',
   'now-omega-3-fish-oil-180',
   'now-adam-superior-men-s-multi-120',
+  // Vitamins night run 2026-10-06 5:30 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // The 100-count is still unattempted. Do not glue the 250.
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
+  'now-sports-l-arginine-180',
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100',
 ]);
 
 export function previewOverlayImage(
@@ -18696,6 +18770,115 @@ assertExactCarton(
     || !ryrExtract120.verifiedSku
   ) {
     throw new Error('Red yeast rice extract 120 must stay its own carton, not the 60-count');
+  }
+}
+assertExactCarton(
+  'now-daily-vits-multi-vitamin-mineral-100',
+  'NOW',
+  'now-daily-vits-multi-vitamin-mineral-100.jpg',
+);
+assertExactCarton('now-garcinia-extract-120', 'NOW', 'now-garcinia-extract-120.jpg');
+assertExactCarton(
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250',
+  'NOW',
+  'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250.jpg',
+);
+assertExactCarton(
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
+  'NOW',
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180.jpg',
+);
+assertExactCarton(
+  'now-red-yeast-rice-extract-60',
+  'NOW',
+  'now-red-yeast-rice-extract-60.jpg',
+);
+assertExactCarton('now-respir-all-60', 'NOW', 'now-respir-all-60.jpg');
+assertExactCarton(
+  'now-adam-superior-men-s-multi-60',
+  'NOW',
+  'now-adam-superior-men-s-multi-60.jpg',
+);
+assertExactCarton('now-l-cysteine-100', 'NOW', 'now-l-cysteine-100.jpg');
+assertExactCarton('now-l-carnitine-50', 'NOW', 'now-l-carnitine-50.jpg');
+assertExactCarton(
+  'now-sports-l-arginine-180',
+  'NOW',
+  'now-sports-l-arginine-180.jpg',
+);
+assertExactCarton('now-ulcetrol-60', 'NOW', 'now-ulcetrol-60.jpg');
+assertExactCarton(
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90',
+  'NOW',
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90.jpg',
+);
+assertExactCarton('now-omega-3-fish-oil-90', 'NOW', 'now-omega-3-fish-oil-90.jpg');
+assertExactCarton(
+  'now-sports-l-arginine-60',
+  'NOW',
+  'now-sports-l-arginine-60.jpg',
+);
+assertExactCarton(
+  'now-liquid-multi-gels-60',
+  'NOW',
+  'now-liquid-multi-gels-60.jpg',
+);
+assertExactCarton(
+  'now-acetyl-l-carnitine-90',
+  'NOW',
+  'now-acetyl-l-carnitine-90.jpg',
+);
+assertExactCarton(
+  'now-magnesium-glycinate-90',
+  'NOW',
+  'now-magnesium-glycinate-90.jpg',
+);
+assertExactCarton('now-guggul-extract-90', 'NOW', 'now-guggul-extract-90.jpg');
+assertExactCarton('now-c-1000-60', 'NOW', 'now-c-1000-60.jpg');
+assertExactCarton('now-moringa-leaf-90', 'NOW', 'now-moringa-leaf-90.jpg');
+{
+  const redOmega180 = previewOverlayImage({
+    id: 'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
+    formulaId: 'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90',
+    brand: 'NOW',
+  });
+  if (
+    !redOmega180?.url.endsWith(
+      '/now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180.jpg',
+    )
+    || !redOmega180.verifiedSku
+  ) {
+    throw new Error('Red Omega 180 must stay its own carton, not the 90-count');
+  }
+  const arginine180 = previewOverlayImage({
+    id: 'now-sports-l-arginine-180',
+    formulaId: 'now-sports-l-arginine-60',
+    brand: 'NOW',
+  });
+  if (
+    !arginine180?.url.endsWith('/now-sports-l-arginine-180.jpg')
+    || !arginine180.verifiedSku
+  ) {
+    throw new Error('L-Arginine 180 must stay its own carton, not the 60-count');
+  }
+  const magCal100 = previewOverlayImage({
+    id: 'now-magnesium-calcium-with-zinc-and-vitamin-d-3-100',
+    formulaId: 'now-magnesium-calcium-with-zinc-and-vitamin-d-3-250',
+    brand: 'NOW',
+  });
+  if (!magCal100?.url.startsWith('data:image/svg+xml') || magCal100.verifiedSku) {
+    throw new Error('Magnesium & Calcium 100 must stay a letter until attempted');
+  }
+  const ryrExtract60 = previewOverlayImage({
+    id: 'now-red-yeast-rice-extract-60',
+    formulaId: 'now-red-yeast-rice-extract-60',
+    brand: 'NOW',
+  });
+  if (
+    !ryrExtract60?.url.endsWith('/now-red-yeast-rice-extract-60.jpg')
+    || !ryrExtract60.verifiedSku
+  ) {
+    throw new Error('Red yeast rice extract 60 must stay its own carton, not the 120-count');
   }
 }
 {
