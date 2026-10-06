@@ -10750,6 +10750,82 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-magnesium-citrate-240': catalogShot('now-magnesium-citrate-240.jpg'),
   // Lion's Mane 500 mg, 60 veg capsules. Barcode 733739047892.
   'now-lion-s-mane-60': catalogShot('now-lion-s-mane-60.jpg'),
+  // Vitamins night run 2026-10-06 4:15 AM PT batch 1.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // Ultra Omega-3 fish oil, 180 softgels. Barcode 733739016621.
+  // Bovine gelatin. Not the 90-count. Not the fish-softgel bottle.
+  'now-ultra-omega-3-fish-oil-180': catalogShot(
+    'now-ultra-omega-3-fish-oil-180.jpg',
+  ),
+  // Beta-Sitosterol plant sterols, 180 softgels. Barcode 733739030795.
+  // Not the 90-count.
+  'now-beta-sitosterol-plant-sterols-180': catalogShot(
+    'now-beta-sitosterol-plant-sterols-180.jpg',
+  ),
+  // Zinc 50 mg, 100 tablets. Barcode 733739015204.
+  // Not the 250-count.
+  'now-zinc-100': catalogShot('now-zinc-100.jpg'),
+  // Magnesium citrate 200 mg, 250 tablets. Barcode 733739012920.
+  // Not the 100-count. Not a veg-capsule or softgel bottle.
+  'now-magnesium-citrate-250': catalogShot('now-magnesium-citrate-250.jpg'),
+  // Calcium & Magnesium, 250 tablets. Barcode 733739012722.
+  // Not the 100-count.
+  'now-calcium-magnesium-250': catalogShot('now-calcium-magnesium-250.jpg'),
+  // Gamma E Complex, Advanced, 120 softgels. Barcode 733739008114.
+  'now-gamma-e-complex-advanced-120': catalogShot(
+    'now-gamma-e-complex-advanced-120.jpg',
+  ),
+  // L-Arginine 1,000 mg, 120 tablets. Barcode 733739000354.
+  'now-l-arginine-120': catalogShot('now-l-arginine-120.jpg'),
+  // Ultra Omega-3 fish oil, 90 softgels. Barcode 733739016614.
+  // Bovine gelatin. Not the 180-count. Not the fish-softgel bottle.
+  'now-ultra-omega-3-fish-oil-90': catalogShot(
+    'now-ultra-omega-3-fish-oil-90.jpg',
+  ),
+  // Prostate Support, 180 softgels. Barcode 733739033413.
+  // Not the 90-count.
+  'now-prostate-support-180': catalogShot('now-prostate-support-180.jpg'),
+  // Horny Goat Weed Extract, 90 tablets. Barcode 733739047588.
+  'now-horny-goat-weed-extract-90': catalogShot(
+    'now-horny-goat-weed-extract-90.jpg',
+  ),
+  // Pygeum & Saw Palmetto with pumpkin seed oil, 120 softgels.
+  // Barcode 733739047298.
+  'now-pygeum-saw-palmetto-with-pumpkin-seed-oil-120': catalogShot(
+    'now-pygeum-saw-palmetto-with-pumpkin-seed-oil-120.jpg',
+  ),
+  // Kelp 150 mcg, 200 tablets. Barcode 733739026804.
+  'now-kelp-200': catalogShot('now-kelp-200.jpg'),
+  // Magnesium malate 1,000 mg, 180 tablets. Barcode 733739013002.
+  'now-magnesium-malate-180': catalogShot('now-magnesium-malate-180.jpg'),
+  // DHA-500 fish oil, 180 softgels. Barcode 733739016133.
+  // Not the 90-count.
+  'now-dha-500-fish-oil-180': catalogShot('now-dha-500-fish-oil-180.jpg'),
+  // Natural beta carotene 7,500 mcg (25,000 IU), 180 softgels.
+  // Barcode 733739003225. Not the 90-count.
+  'now-natural-beta-carotene-180': catalogShot(
+    'now-natural-beta-carotene-180.jpg',
+  ),
+  // Natural beta carotene 7,500 mcg (25,000 IU), 90 softgels.
+  // Barcode 733739003201. Not the 180-count.
+  'now-natural-beta-carotene-90': catalogShot(
+    'now-natural-beta-carotene-90.jpg',
+  ),
+  // Red yeast rice 600 mg, 240 veg capsules. Barcode 733739034991.
+  // Not the 60-count or the 120-count.
+  'now-red-yeast-rice-240': catalogShot('now-red-yeast-rice-240.jpg'),
+  // Silica Complex with horsetail extract, 180 tablets. Barcode 733739014924.
+  'now-silica-complex-with-horsetail-extract-180': catalogShot(
+    'now-silica-complex-with-horsetail-extract-180.jpg',
+  ),
+  // Iron Complex, 100 tablets. Barcode 733739014405.
+  // Not the veg-capsule bottle.
+  'now-iron-complex-100': catalogShot('now-iron-complex-100.jpg'),
+  // E-400 D-alpha with mixed tocopherols, 100 softgels. Barcode 733739009067.
+  // Not the mixed-tocopherol-only E-400 bottle.
+  'now-e-400-d-alpha-with-mixed-tocopherols-100': catalogShot(
+    'now-e-400-d-alpha-with-mixed-tocopherols-100.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11250,6 +11326,15 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-06 1:45 AM PT batch 2.
   // 240-count shares the 120-count Special Two formula. Do not inherit the 120.
   'now-special-two-multi-vitamin-240',
+  // Vitamins night run 2026-10-06 4:15 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'now-ultra-omega-3-fish-oil-180',
+  'now-magnesium-citrate-250',
+  'now-calcium-magnesium-250',
+  'now-prostate-support-180',
+  'now-dha-500-fish-oil-180',
+  'now-natural-beta-carotene-180',
+  'now-red-yeast-rice-240',
 ]);
 
 export function previewOverlayImage(
@@ -18162,6 +18247,140 @@ assertExactCarton(
   'now-magnesium-citrate-240.jpg',
 );
 assertExactCarton('now-lion-s-mane-60', 'NOW', 'now-lion-s-mane-60.jpg');
+assertExactCarton(
+  'now-ultra-omega-3-fish-oil-180',
+  'NOW',
+  'now-ultra-omega-3-fish-oil-180.jpg',
+);
+assertExactCarton(
+  'now-beta-sitosterol-plant-sterols-180',
+  'NOW',
+  'now-beta-sitosterol-plant-sterols-180.jpg',
+);
+assertExactCarton('now-zinc-100', 'NOW', 'now-zinc-100.jpg');
+assertExactCarton(
+  'now-magnesium-citrate-250',
+  'NOW',
+  'now-magnesium-citrate-250.jpg',
+);
+assertExactCarton(
+  'now-calcium-magnesium-250',
+  'NOW',
+  'now-calcium-magnesium-250.jpg',
+);
+assertExactCarton(
+  'now-gamma-e-complex-advanced-120',
+  'NOW',
+  'now-gamma-e-complex-advanced-120.jpg',
+);
+assertExactCarton('now-l-arginine-120', 'NOW', 'now-l-arginine-120.jpg');
+assertExactCarton(
+  'now-ultra-omega-3-fish-oil-90',
+  'NOW',
+  'now-ultra-omega-3-fish-oil-90.jpg',
+);
+assertExactCarton(
+  'now-prostate-support-180',
+  'NOW',
+  'now-prostate-support-180.jpg',
+);
+assertExactCarton(
+  'now-horny-goat-weed-extract-90',
+  'NOW',
+  'now-horny-goat-weed-extract-90.jpg',
+);
+assertExactCarton(
+  'now-pygeum-saw-palmetto-with-pumpkin-seed-oil-120',
+  'NOW',
+  'now-pygeum-saw-palmetto-with-pumpkin-seed-oil-120.jpg',
+);
+assertExactCarton('now-kelp-200', 'NOW', 'now-kelp-200.jpg');
+assertExactCarton(
+  'now-magnesium-malate-180',
+  'NOW',
+  'now-magnesium-malate-180.jpg',
+);
+assertExactCarton(
+  'now-dha-500-fish-oil-180',
+  'NOW',
+  'now-dha-500-fish-oil-180.jpg',
+);
+assertExactCarton(
+  'now-natural-beta-carotene-180',
+  'NOW',
+  'now-natural-beta-carotene-180.jpg',
+);
+assertExactCarton(
+  'now-natural-beta-carotene-90',
+  'NOW',
+  'now-natural-beta-carotene-90.jpg',
+);
+assertExactCarton('now-red-yeast-rice-240', 'NOW', 'now-red-yeast-rice-240.jpg');
+assertExactCarton(
+  'now-silica-complex-with-horsetail-extract-180',
+  'NOW',
+  'now-silica-complex-with-horsetail-extract-180.jpg',
+);
+assertExactCarton('now-iron-complex-100', 'NOW', 'now-iron-complex-100.jpg');
+assertExactCarton(
+  'now-e-400-d-alpha-with-mixed-tocopherols-100',
+  'NOW',
+  'now-e-400-d-alpha-with-mixed-tocopherols-100.jpg',
+);
+{
+  const omega180 = previewOverlayImage({
+    id: 'now-ultra-omega-3-fish-oil-180',
+    formulaId: 'now-ultra-omega-3-fish-oil-90',
+    brand: 'NOW',
+  });
+  if (
+    !omega180?.url.endsWith('/now-ultra-omega-3-fish-oil-180.jpg')
+    || !omega180.verifiedSku
+  ) {
+    throw new Error('Ultra Omega-3 180 must stay its own carton, not the 90-count');
+  }
+  const omega90 = previewOverlayImage({
+    id: 'now-ultra-omega-3-fish-oil-90',
+    formulaId: 'now-ultra-omega-3-fish-oil-90',
+    brand: 'NOW',
+  });
+  if (
+    !omega90?.url.endsWith('/now-ultra-omega-3-fish-oil-90.jpg')
+    || !omega90.verifiedSku
+  ) {
+    throw new Error('Ultra Omega-3 90 must stay its own carton, not the 180-count');
+  }
+  const beta180 = previewOverlayImage({
+    id: 'now-natural-beta-carotene-180',
+    formulaId: 'now-natural-beta-carotene-90',
+    brand: 'NOW',
+  });
+  if (
+    !beta180?.url.endsWith('/now-natural-beta-carotene-180.jpg')
+    || !beta180.verifiedSku
+  ) {
+    throw new Error('Natural beta carotene 180 must stay its own carton, not the 90-count');
+  }
+  const zinc250 = previewOverlayImage({
+    id: 'now-zinc-250',
+    formulaId: 'now-zinc-100',
+    brand: 'NOW',
+  });
+  if (!zinc250?.url.endsWith('/now-zinc-250.jpg') || !zinc250.verifiedSku) {
+    throw new Error('Zinc 250 must stay its own carton, not the 100-count');
+  }
+  const fishSoft180 = previewOverlayImage({
+    id: 'now-ultra-omega-3-fish-oil-180-fish-softgels',
+    formulaId: 'now-ultra-omega-3-fish-oil-180-fish-softgels',
+    brand: 'NOW',
+  });
+  if (
+    !fishSoft180?.url.endsWith('/now-ultra-omega-3-fish-oil-180-fish-softgels.jpg')
+    || !fishSoft180.verifiedSku
+  ) {
+    throw new Error('Ultra Omega-3 fish softgels must not inherit the bovine 180');
+  }
+}
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
