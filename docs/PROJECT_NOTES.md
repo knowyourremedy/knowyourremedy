@@ -37,6 +37,8 @@ Process lock
 Removed, not stashed
 - Claritin 34 counts removed in PR #472 / 18a9baa. Do not re-add. Not a hunt. MCC tablets 10, 60, 85. Starch tablets 15, 25, 35, 55, 60, 85, 100, 105, 108, 110, 115. Liqui-Gels 5, 36, 70, 100. RediTabs 20, 40, 50. Bubblegum chew 40. Cool Mint chew 2, 4, 64. Kids syrup 1, 2, 6 fl oz. Dyed grape chew 2, 40, 50, 80, 100. Adult liquid 30 mL.
 - biofreeze-pain-relief-spray-10 removed in PR #472. Pages that opened were 10.5% menthol. Do not re-add. Not a hunt.
+- Claritin MCC tablets 40-count removed. DailyMed bottle listing only. The sold box is corn starch. Not a hunt.
+- Claritin dyed grape chew 20-count and 60-count removed. The shelf box is dye-free. Not a hunt.
 
 Still open, not removed
 - Icy Hot Performance dry spray, cream, and no-mess cream are back (PR #473 / 97ad7ed). Still open. Pages that opened had no Performance card. Walmart, CVS, Amazon, and Kroger were blocked. Do not remove them on a missing brand-lineup check.

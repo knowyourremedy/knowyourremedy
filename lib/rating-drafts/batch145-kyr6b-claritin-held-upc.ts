@@ -3,7 +3,7 @@
 // row were not reused and were not edited. batch70–144 were not edited.
 // No UPC override: every code read this pass already sits on another row.
 //
-// TALLY: 6 written — Clean 0 / Caution 2 / Avoid 4.
+// TALLY: 4 written — Clean 0 / Caution 2 / Avoid 2.
 // 6 counts removed: no buyable pack on a page that opened.
 // NEW 6 / REUSE 0. Ungraded tokens: 0.
 
@@ -163,19 +163,6 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     source: `${GRAPE_SRC} Package NDC 11523-4328-1 is 10 chewable tablets in 1 blister in 1 carton. The front image prints 10 CHEWABLE TABLETS.`,
   }),
   expand({
-    id: 'claritin-b145-chew-grape-20',
-    productName: "Children's Claritin Chewable Tablets, Grape (20ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4328-2 is 2 blisters of 10 in 1 carton.`,
-  }),
-  expand({
     id: 'claritin-b145-chew-grape-30',
     productName: "Children's Claritin Chewable Tablets, Grape (30ct)",
     formulaId: GRAPE,
@@ -187,19 +174,6 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     verdict: 'avoid',
     note: GRAPE_NOTE,
     source: `${GRAPE_SRC} Package NDC 11523-4328-3 is 3 blisters of 10 in 1 carton.`,
-  }),
-      expand({
-    id: 'claritin-b145-chew-grape-60',
-    productName: "Children's Claritin Chewable Tablets, Grape (60ct)",
-    formulaId: GRAPE,
-    audience: 'kids',
-    minAge: 2,
-    form: 'chewable tablet',
-    actives: LORA5,
-    flags: grapeFlags(),
-    verdict: 'avoid',
-    note: GRAPE_NOTE,
-    source: `${GRAPE_SRC} Package NDC 11523-4331-2 is 6 blisters of 10 in 1 carton.`,
   }),
         expand({
     id: 'claritin-b145-adult-liquid-80ml',
@@ -230,15 +204,15 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
 ];
 
 const ROWS = BATCH145_KYR6B_CLARITIN_HELD_UPC;
-if (ROWS.length !== 6) throw new Error(`batch145 row count ${ROWS.length}`);
-if (new Set(ROWS.map((r) => r.id)).size !== 6) throw new Error('batch145 duplicate id');
+if (ROWS.length !== 4) throw new Error(`batch145 row count ${ROWS.length}`);
+if (new Set(ROWS.map((r) => r.id)).size !== 4) throw new Error('batch145 duplicate id');
 if (ROWS.some((r) => r.barcode)) throw new Error('batch145 unexpected upc');
 if (ROWS.some((r) => r.formulaId === 'claritin-chewable-aspartame-dye' || r.formulaId === 'claritin-allergy-liquid')) {
   throw new Error('batch145 reused founder formula');
 }
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
-if (avoid.length !== 4 || caution.length !== 2) throw new Error('batch145 verdicts');
+if (avoid.length !== 2 || caution.length !== 2) throw new Error('batch145 verdicts');
 if (avoid.some((r) => r.formulaId !== GRAPE)) throw new Error('batch145 grape');
 if (caution.some((r) => r.formulaId !== LIQUID)) throw new Error('batch145 liquid');
 if (caution.some((r) => r.inactiveIngredients.some((i) => i.name === 'Phosphoric acid' && i.riskLevel === 'high'))) {
