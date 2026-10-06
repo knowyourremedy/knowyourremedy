@@ -10530,6 +10530,89 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-silver-sol-4-fl-oz-118-ml': catalogShot(
     'now-silver-sol-4-fl-oz-118-ml.jpg',
   ),
+  // Vitamins night run 2026-10-06 1:45 AM PT batch 2.
+  // Vitacost pack face for that UPC. Per-id only. Not a sibling count.
+  // E-1000 with Mixed Tocopherols, 670 mg (1,000 IU), 50 softgels.
+  // Barcode 733739009005. Not the 100-count.
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50': catalogShot(
+    'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50.jpg',
+  ),
+  // Hemp Seed Oil 1,000 mg, 120 softgels. Barcode 733739017994.
+  'now-hemp-seed-oil-1-000-mg-120': catalogShot(
+    'now-hemp-seed-oil-1-000-mg-120.jpg',
+  ),
+  // TestoJack 100, 60 veg capsules. Barcode 733739021687.
+  // Not the 120-count.
+  'now-testojack-100-60': catalogShot('now-testojack-100-60.jpg'),
+  // Liquid Iron 18 mg, 8 fl oz. Barcode 733739014474.
+  'now-liquid-iron-18-mg-8-fl-oz-237-ml': catalogShot(
+    'now-liquid-iron-18-mg-8-fl-oz-237-ml.jpg',
+  ),
+  // Sports Branched-Chain Amino Acid Powder, 12 oz tub. Barcode 733739002136.
+  // Front of the tub. Not the facts panel.
+  'now-sports-branched-chain-amino-acid-powder-12': catalogShot(
+    'now-sports-branched-chain-amino-acid-powder-12.jpg',
+  ),
+  // Vitamin D3 2,500 IU, 180 softgels. Barcode 733739003560.
+  'now-vitamin-d3-2-500-iu-180': catalogShot(
+    'now-vitamin-d3-2-500-iu-180.jpg',
+  ),
+  // Pau D'Arco Extract, 2 fl oz. Barcode 733739049100.
+  'now-pau-d-arco-extract-2-fl-oz-59-ml': catalogShot(
+    'now-pau-d-arco-extract-2-fl-oz-59-ml.jpg',
+  ),
+  // Sports Tribulus Extreme, 90 veg capsules. Barcode 733739022738.
+  'now-sports-tribulus-extreme-men-s-health-90': catalogShot(
+    'now-sports-tribulus-extreme-men-s-health-90.jpg',
+  ),
+  // Vitamin E Liquid, 1 fl oz. Barcode 733739009104.
+  // Not the 4 fl oz oil.
+  'now-vitamin-e-liquid-1-fl-oz-30-ml': catalogShot(
+    'now-vitamin-e-liquid-1-fl-oz-30-ml.jpg',
+  ),
+  // Grape Seed 100 mg, 100 veg capsules. Barcode 733739032485.
+  // Not the 200-count.
+  'now-grape-seed-100': catalogShot('now-grape-seed-100.jpg'),
+  // Vitamin E-Oil with Mixed Tocopherols, 4 fl oz. Barcode 733739009302.
+  // Not the 1 fl oz oil.
+  'now-vitamin-e-oil-with-mixed-tocopherols-58-mg-87-iu-4-fl-oz-118-ml':
+    catalogShot(
+      'now-vitamin-e-oil-with-mixed-tocopherols-58-mg-87-iu-4-fl-oz-118-ml.jpg',
+    ),
+  // Sports Energy Extreme, 90 capsules. Barcode 733739033529.
+  'now-sports-energy-extreme-90': catalogShot(
+    'now-sports-energy-extreme-90.jpg',
+  ),
+  // Special Two multi, 240 veg capsules. Barcode 733739038692.
+  // Not the 120-count.
+  'now-special-two-multi-vitamin-240': catalogShot(
+    'now-special-two-multi-vitamin-240.jpg',
+  ),
+  // Sports D-Ribose 750 mg, 120 veg capsules. Barcode 733739021458.
+  'now-sports-d-ribose-750-mg-120': catalogShot(
+    'now-sports-d-ribose-750-mg-120.jpg',
+  ),
+  // Coral Calcium Plus, 100 veg capsules. Barcode 733739012760.
+  // Not the 250-count.
+  'now-coral-calcium-plus-100': catalogShot('now-coral-calcium-plus-100.jpg'),
+  // Glutathione 250 mg, 120 veg capsules. Barcode 733739001962.
+  'now-glutathione-250-mg-120': catalogShot(
+    'now-glutathione-250-mg-120.jpg',
+  ),
+  // Berberine HCl 500 mg, 90 veg capsules. Barcode 733739014160.
+  'now-berberine-hcl-500-mg-90': catalogShot(
+    'now-berberine-hcl-500-mg-90.jpg',
+  ),
+  // Sports CLA Extreme, 90 softgels. Barcode 733739017314.
+  'now-sports-cla-extreme-90': catalogShot('now-sports-cla-extreme-90.jpg'),
+  // Liquid Chlorophyll, unflavored, 16 fl oz. Barcode 733739026460.
+  // Not the mint bottle and not the 4 fl oz bottle.
+  'now-liquid-chlorophyll-unflavored-16-fl-oz-473-ml': catalogShot(
+    'now-liquid-chlorophyll-unflavored-16-fl-oz-473-ml.jpg',
+  ),
+  // CLA 800 mg, 90 softgels. Barcode 733739017277.
+  // Not the 180-count.
+  'now-cla-90': catalogShot('now-cla-90.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11027,6 +11110,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 150-count shares the 60-count Pycnogenol with Bioflavonoids formula.
   // Do not inherit the 60.
   'now-pycnogenol-with-bioflavonoids-150',
+  // Vitamins night run 2026-10-06 1:45 AM PT batch 2.
+  // 240-count shares the 120-count Special Two formula. Do not inherit the 120.
+  'now-special-two-multi-vitamin-240',
 ]);
 
 export function previewOverlayImage(
@@ -17703,6 +17789,94 @@ assertExactCarton(
   'NOW',
   'now-silver-sol-4-fl-oz-118-ml.jpg',
 );
+assertExactCarton(
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50',
+  'NOW',
+  'now-e-1000-with-mixed-tocopherols-670-mg-1-000-iu-50.jpg',
+);
+assertExactCarton(
+  'now-hemp-seed-oil-1-000-mg-120',
+  'NOW',
+  'now-hemp-seed-oil-1-000-mg-120.jpg',
+);
+assertExactCarton('now-testojack-100-60', 'NOW', 'now-testojack-100-60.jpg');
+assertExactCarton(
+  'now-liquid-iron-18-mg-8-fl-oz-237-ml',
+  'NOW',
+  'now-liquid-iron-18-mg-8-fl-oz-237-ml.jpg',
+);
+assertExactCarton(
+  'now-sports-branched-chain-amino-acid-powder-12',
+  'NOW',
+  'now-sports-branched-chain-amino-acid-powder-12.jpg',
+);
+assertExactCarton(
+  'now-vitamin-d3-2-500-iu-180',
+  'NOW',
+  'now-vitamin-d3-2-500-iu-180.jpg',
+);
+assertExactCarton(
+  'now-pau-d-arco-extract-2-fl-oz-59-ml',
+  'NOW',
+  'now-pau-d-arco-extract-2-fl-oz-59-ml.jpg',
+);
+assertExactCarton(
+  'now-sports-tribulus-extreme-men-s-health-90',
+  'NOW',
+  'now-sports-tribulus-extreme-men-s-health-90.jpg',
+);
+assertExactCarton(
+  'now-vitamin-e-liquid-1-fl-oz-30-ml',
+  'NOW',
+  'now-vitamin-e-liquid-1-fl-oz-30-ml.jpg',
+);
+assertExactCarton('now-grape-seed-100', 'NOW', 'now-grape-seed-100.jpg');
+assertExactCarton(
+  'now-vitamin-e-oil-with-mixed-tocopherols-58-mg-87-iu-4-fl-oz-118-ml',
+  'NOW',
+  'now-vitamin-e-oil-with-mixed-tocopherols-58-mg-87-iu-4-fl-oz-118-ml.jpg',
+);
+assertExactCarton(
+  'now-sports-energy-extreme-90',
+  'NOW',
+  'now-sports-energy-extreme-90.jpg',
+);
+assertExactCarton(
+  'now-special-two-multi-vitamin-240',
+  'NOW',
+  'now-special-two-multi-vitamin-240.jpg',
+);
+assertExactCarton(
+  'now-sports-d-ribose-750-mg-120',
+  'NOW',
+  'now-sports-d-ribose-750-mg-120.jpg',
+);
+assertExactCarton(
+  'now-coral-calcium-plus-100',
+  'NOW',
+  'now-coral-calcium-plus-100.jpg',
+);
+assertExactCarton(
+  'now-glutathione-250-mg-120',
+  'NOW',
+  'now-glutathione-250-mg-120.jpg',
+);
+assertExactCarton(
+  'now-berberine-hcl-500-mg-90',
+  'NOW',
+  'now-berberine-hcl-500-mg-90.jpg',
+);
+assertExactCarton(
+  'now-sports-cla-extreme-90',
+  'NOW',
+  'now-sports-cla-extreme-90.jpg',
+);
+assertExactCarton(
+  'now-liquid-chlorophyll-unflavored-16-fl-oz-473-ml',
+  'NOW',
+  'now-liquid-chlorophyll-unflavored-16-fl-oz-473-ml.jpg',
+);
+assertExactCarton('now-cla-90', 'NOW', 'now-cla-90.jpg');
 {
   const ryr60 = previewOverlayImage({
     id: 'now-red-yeast-rice-with-coq10-60',
