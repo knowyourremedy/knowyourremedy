@@ -2347,6 +2347,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-07 1:45 AM PT batch 1.
+  // Calcium citrate unflavored 500 g. Barcode 702669934534.
+  // The image on that barcode is the 250 g tub. Not the 500 g.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-calcium-citrate-powder-500-gm': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Calcium citrate unflavored 250 g. Barcode 702669934541.
+  // The image on that barcode is the 500 g tub. Not the 250 g.
+  'nutricost-nutricost-calcium-citrate-powder-panel': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Organic lion's mane powder, 1 lb. Barcode 810014670508.
+  // The image on that barcode is the 8.1 oz bottle. No 1 lb front.
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-1-lb': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -11398,6 +11416,81 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-hmb-capsules-30-capsules': catalogShot(
     'nutricost-nutricost-hmb-capsules-30-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-07 1:45 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Vitamin C with rose hips, 30 capsules. Barcode 810014677101.
+  // Not the 120 or the 240.
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-30-capsules':
+    catalogShot(
+      'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-30-capsules.jpg',
+    ),
+  // Vitamin C with rose hips, 240 capsules. Barcode 702669935135.
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-240-capsules':
+    catalogShot(
+      'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-240-capsules.jpg',
+    ),
+  // Vitamin C with rose hips, 120 capsules. Barcode 810014671574.
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-120-capsules.jpg',
+    ),
+  // Fucoidan, 120 capsules. Barcode 810139578130.
+  'nutricost-nutricost-fucoidan-120-capsules': catalogShot(
+    'nutricost-nutricost-fucoidan-120-capsules.jpg',
+  ),
+  // Iron with vitamin C, 120 capsules. Barcode 810139578406.
+  'nutricost-nutricost-iron-with-vitamin-c-120-capsules': catalogShot(
+    'nutricost-nutricost-iron-with-vitamin-c-120-capsules.jpg',
+  ),
+  // L-citrulline, 180 capsules. Barcode 810014675411. The 180 bottle is 750 mg.
+  // Not the 500 mg 120-count.
+  'nutricost-nutricost-l-citrulline-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-l-citrulline-capsules-180-capsules.jpg',
+  ),
+  // L-citrulline 500 mg, 120 capsules. Barcode 857077008497. Not the 750 mg 180.
+  'nutricost-nutricost-l-citrulline-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-citrulline-capsules-120-capsules.jpg',
+  ),
+  // Cognizin citicoline, 60 capsules. Barcode 810139577829.
+  'nutricost-nutricost-cognizin-citicoline-60-capsules': catalogShot(
+    'nutricost-nutricost-cognizin-citicoline-60-capsules.jpg',
+  ),
+  // Magnesium glycinate powder, unflavored, 250 g. Barcode 702669934527.
+  'nutricost-nutricost-magnesium-glycinate-powder-panel': catalogShot(
+    'nutricost-nutricost-magnesium-glycinate-powder-panel.jpg',
+  ),
+  // BCAA pineapple, 30 servings. Barcode 857077008558. Not unflavored.
+  'nutricost-nutricost-bcaa-powder-30-servings': catalogShot(
+    'nutricost-nutricost-bcaa-powder-30-servings.jpg',
+  ),
+  // BCAA unflavored, 30 servings. Barcode 857077008190. Not the 150.
+  'nutricost-nutricost-bcaa-powder-30-servings-2': catalogShot(
+    'nutricost-nutricost-bcaa-powder-30-servings-2.jpg',
+  ),
+  // BCAA pineapple, 90 servings. Barcode 857077008572. Not the 30.
+  'nutricost-nutricost-bcaa-powder-90-servings': catalogShot(
+    'nutricost-nutricost-bcaa-powder-90-servings.jpg',
+  ),
+  // BCAA unflavored, 150 servings. Barcode 702669932332. Not the 60.
+  'nutricost-nutricost-bcaa-powder-150-servings': catalogShot(
+    'nutricost-nutricost-bcaa-powder-150-servings.jpg',
+  ),
+  // BCAA pineapple, 60 servings. Barcode 857077008565. Not the 90.
+  'nutricost-nutricost-bcaa-powder-60-servings': catalogShot(
+    'nutricost-nutricost-bcaa-powder-60-servings.jpg',
+  ),
+  // BCAA unflavored, 60 servings. Barcode 857077008206. Not grape.
+  'nutricost-nutricost-bcaa-powder-60-servings-2': catalogShot(
+    'nutricost-nutricost-bcaa-powder-60-servings-2.jpg',
+  ),
+  // Organic lion's mane powder, 4 oz. Barcode 810014670492. Not the 8.1 oz.
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz': catalogShot(
+    'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz.jpg',
+  ),
+  // Organic lion's mane powder, 8.1 oz. Barcode 810139571247. Not the 4 oz.
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11971,6 +12064,19 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // HMB 30 must not inherit the 120. The second 240 must not inherit a different face.
   'nutricost-nutricost-hmb-capsules-240-capsules-2',
   'nutricost-nutricost-hmb-capsules-30-capsules',
+  // Vitamins night run 2026-10-07 1:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Pineapple 90 and 60 must not inherit the pineapple 30.
+  'nutricost-nutricost-bcaa-powder-90-servings',
+  'nutricost-nutricost-bcaa-powder-60-servings',
+  // Unflavored 90 in batch79 must not inherit the pineapple 30.
+  'nutricost-b79-bcaa-unflavored-90-servings',
+  // Unflavored 30 and 60 must not inherit the unflavored 150.
+  'nutricost-nutricost-bcaa-powder-30-servings-2',
+  'nutricost-nutricost-bcaa-powder-60-servings-2',
+  // Lion's mane 4 oz and 8 oz must not inherit the 1 lb slot.
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz',
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz',
 ]);
 
 export function previewOverlayImage(
@@ -19715,6 +19821,151 @@ assertExactCarton(
     || !hmb30.verifiedSku
   ) {
     throw new Error('HMB 30 must stay its own carton, not the 120-count');
+  }
+}
+assertBrandMark(
+  'nutricost-nutricost-calcium-citrate-powder-500-gm',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-nutricost-calcium-citrate-powder-panel',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-1-lb',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-c-with-rose-hips-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-fucoidan-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-fucoidan-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-iron-with-vitamin-c-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-iron-with-vitamin-c-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cognizin-citicoline-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-cognizin-citicoline-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-glycinate-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-glycinate-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-30-servings-2',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-30-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-90-servings',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-90-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-150-servings',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-150-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-60-servings',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-60-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bcaa-powder-60-servings-2',
+  'Nutricost',
+  'nutricost-nutricost-bcaa-powder-60-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz.jpg',
+);
+{
+  const bcaa90 = previewOverlayImage({
+    id: 'nutricost-nutricost-bcaa-powder-90-servings',
+    formulaId: 'nutricost-nutricost-bcaa-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !bcaa90?.url.endsWith('/nutricost-nutricost-bcaa-powder-90-servings.jpg')
+    || !bcaa90.verifiedSku
+  ) {
+    throw new Error('BCAA pineapple 90 must stay its own carton, not the 30');
+  }
+  const bcaaUf30 = previewOverlayImage({
+    id: 'nutricost-nutricost-bcaa-powder-30-servings-2',
+    formulaId: 'nutricost-nutricost-bcaa-powder-150-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !bcaaUf30?.url.endsWith('/nutricost-nutricost-bcaa-powder-30-servings-2.jpg')
+    || !bcaaUf30.verifiedSku
+  ) {
+    throw new Error('BCAA unflavored 30 must stay its own carton, not the 150');
+  }
+  const bcaaUf90 = previewOverlayImage({
+    id: 'nutricost-b79-bcaa-unflavored-90-servings',
+    formulaId: 'nutricost-nutricost-bcaa-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (bcaaUf90?.url.includes('bcaa-powder-30-servings')) {
+    throw new Error('BCAA unflavored 90 must not inherit the pineapple 30');
+  }
+  const lion4 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz',
+    formulaId: 'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !lion4?.url.endsWith(
+      '/nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz.jpg',
+    )
+    || !lion4.verifiedSku
+  ) {
+    throw new Error("Lion's mane 4 oz must stay its own carton, not the 1 lb");
   }
 }
 {
