@@ -11491,6 +11491,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz': catalogShot(
     'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz.jpg',
   ),
+  // Vitamins night run 2026-10-07 1:45 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Resveratrol complex, 180 capsules. Barcode 810139577249.
+  'nutricost-nutricost-resveratrol-complex-180-capsules': catalogShot(
+    'nutricost-nutricost-resveratrol-complex-180-capsules.jpg',
+  ),
+  // Zinc sulfate 50 mg, 120 tablets. Barcode 810139578482.
+  'nutricost-nutricost-zinc-sulfate-120-tablets': catalogShot(
+    'nutricost-nutricost-zinc-sulfate-120-tablets.jpg',
+  ),
+  // Lecithin 1,200 mg, 120 softgels. Barcode 810139576747.
+  'nutricost-nutricost-lecithin-120-softgels': catalogShot(
+    'nutricost-nutricost-lecithin-120-softgels.jpg',
+  ),
+  // Nattokinase 4,000 FU, 120 capsules. Barcode 810139578468.
+  // Not the 2,000 FU bottle.
+  'nutricost-nutricost-nattokinase-120-capsules': catalogShot(
+    'nutricost-nutricost-nattokinase-120-capsules.jpg',
+  ),
+  // TTFD thiamine, 120 capsules. Barcode 810139578109.
+  'nutricost-nutricost-ttfd-thiamine-vitamin-b1-120-capsules': catalogShot(
+    'nutricost-nutricost-ttfd-thiamine-vitamin-b1-120-capsules.jpg',
+  ),
+  // Phosphatidylcholine, 120 softgels. Barcode 810139576754.
+  'nutricost-nutricost-phosphatidylcholine-120-softgels': catalogShot(
+    'nutricost-nutricost-phosphatidylcholine-120-softgels.jpg',
+  ),
+  // DHEA 25 mg, 120 capsules. Barcode 810014671857. Not the 50 mg.
+  'nutricost-nutricost-dhea-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-dhea-capsules-120-capsules.jpg',
+  ),
+  // DHEA 50 mg, 120 capsules. Barcode 810014671840. Not the 25 mg.
+  'nutricost-nutricost-dhea-capsules-120-capsules-2': catalogShot(
+    'nutricost-nutricost-dhea-capsules-120-capsules-2.jpg',
+  ),
+  // DHEA 25 mg, 240 capsules. Barcode 810014671796. Not the 120.
+  'nutricost-nutricost-dhea-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-dhea-capsules-240-capsules.jpg',
+  ),
+  // DHEA 50 mg, 240 capsules. Barcode 810014671789. Not the 25 mg 240.
+  'nutricost-nutricost-dhea-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-dhea-capsules-240-capsules-2.jpg',
+  ),
+  // DHEA 100 mg, 240 capsules. Barcode 810014671772. Not the 120.
+  'nutricost-nutricost-dhea-capsules-240-capsules-3': catalogShot(
+    'nutricost-nutricost-dhea-capsules-240-capsules-3.jpg',
+  ),
+  // DHEA 100 mg, 120 capsules. Barcode 810014671833. Not the 240.
+  'nutricost-nutricost-dhea-capsules-panel': catalogShot(
+    'nutricost-nutricost-dhea-capsules-panel.jpg',
+  ),
+  // DHEA 10 mg, 240 capsules. Barcode 810139578086. Not the 25 mg.
+  'nutricost-nutricost-dhea-capsules-240-capsules-4': catalogShot(
+    'nutricost-nutricost-dhea-capsules-240-capsules-4.jpg',
+  ),
+  // Acetyl L-carnitine 500 mg, 30 capsules. Barcode 810014677224. Not the 180.
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-capsules-30-capsules.jpg',
+  ),
+  // Acetyl L-carnitine 500 mg, 180 capsules. Barcode 702669936019. Not the 90.
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-capsules-180-capsules.jpg',
+  ),
+  // Acetyl L-carnitine 500 mg, 90 capsules. Barcode 810139577591. Not the 180.
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-capsules-90-capsules.jpg',
+  ),
+  // EAA powder, passion orange guava, 30 servings. Barcode 810014673622.
+  // Not blue raspberry, fruit punch, peach mango, or unflavored.
+  'nutricost-nutricost-eaa-powder-30-servings': catalogShot(
+    'nutricost-nutricost-eaa-powder-30-servings.jpg',
+  ),
+  // Banaba leaf extract, 240 capsules. Barcode 810139578017.
+  'nutricost-nutricost-banaba-leaf-extract-240-capsules': catalogShot(
+    'nutricost-nutricost-banaba-leaf-extract-240-capsules.jpg',
+  ),
+  // Vitamin B12 2,000 mcg, 120 capsules. Barcode 810014678498.
+  // Not the 5,000 mcg 120 and not the 240.
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-120-capsules.jpg',
+  ),
+  // Vitamin B12 2,000 mcg, 240 capsules. Barcode 702669933209.
+  // Not the 500 mcg 240 and not the 120.
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-240-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12077,6 +12163,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Lion's mane 4 oz and 8 oz must not inherit the 1 lb slot.
   'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-4-oz',
   'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-8-oz',
+  // Vitamins night run 2026-10-07 1:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Other DHEA strengths must not inherit the 25 mg 120.
+  'nutricost-nutricost-dhea-capsules-120-capsules-2',
+  'nutricost-nutricost-dhea-capsules-240-capsules',
+  'nutricost-nutricost-dhea-capsules-240-capsules-2',
+  'nutricost-nutricost-dhea-capsules-240-capsules-3',
+  'nutricost-nutricost-dhea-capsules-panel',
+  'nutricost-nutricost-dhea-capsules-240-capsules-4',
+  // B12 5,000 mcg 120 must not inherit the 2,000 mcg 120.
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2',
 ]);
 
 export function previewOverlayImage(
@@ -19966,6 +20063,129 @@ assertExactCarton(
     || !lion4.verifiedSku
   ) {
     throw new Error("Lion's mane 4 oz must stay its own carton, not the 1 lb");
+  }
+}
+assertExactCarton(
+  'nutricost-nutricost-resveratrol-complex-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-resveratrol-complex-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-sulfate-120-tablets',
+  'Nutricost',
+  'nutricost-nutricost-zinc-sulfate-120-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lecithin-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-lecithin-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nattokinase-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nattokinase-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ttfd-thiamine-vitamin-b1-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ttfd-thiamine-vitamin-b1-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-phosphatidylcholine-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-phosphatidylcholine-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-240-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-240-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-panel',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dhea-capsules-240-capsules-4',
+  'Nutricost',
+  'nutricost-nutricost-dhea-capsules-240-capsules-4.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-eaa-powder-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-eaa-powder-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-banaba-leaf-extract-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-banaba-leaf-extract-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules.jpg',
+);
+{
+  const dhea50 = previewOverlayImage({
+    id: 'nutricost-nutricost-dhea-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-dhea-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !dhea50?.url.endsWith(
+      '/nutricost-nutricost-dhea-capsules-120-capsules-2.jpg',
+    )
+    || !dhea50.verifiedSku
+  ) {
+    throw new Error('DHEA 50 mg 120 must stay its own carton, not the 25 mg');
+  }
+  const b12Five = previewOverlayImage({
+    id: 'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-vitamin-b12-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (b12Five?.url.includes('vitamin-b12-capsules-120-capsules.jpg')) {
+    throw new Error('B12 5,000 mcg 120 must not inherit the 2,000 mcg 120');
   }
 }
 {
