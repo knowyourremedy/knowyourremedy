@@ -2329,6 +2329,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'now-vitamin-e-oil-antioxidant-protection-1-fl-oz-30-ml': brandMark(
     'now-mark.png',
   ),
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 1.
+  // Creatine monohydrate, unflavored, 1 kg. Barcode 810014675312.
+  // The nutricost.com image on that barcode is the 500 g tub.
+  // The 1 kg gallery has a facts panel and a suggested-use panel only.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-creatine-monohydrate-powder-1-kg': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -11205,6 +11214,98 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-astaxanthin-softgels-panel': catalogShot(
     'nutricost-nutricost-astaxanthin-softgels-panel.jpg',
   ),
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Astaxanthin 6 mg, 120 softgels. Barcode 810014673196.
+  // Not the 4 mg bottle and not the 12 mg bottles.
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-2': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-120-softgels-2.jpg',
+  ),
+  // Astaxanthin 12 mg, 60 softgels. Barcode 810139571575.
+  // The variant featured image is shared with the 30 and the 120.
+  // This file is the 60-count front. Not the 120-count.
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-60-softgels.jpg',
+  ),
+  // Astaxanthin 12 mg, 120 softgels. Barcode 810139572596.
+  // Not the 60-count face that the variant slot was pointing at.
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-3': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-120-softgels-3.jpg',
+  ),
+  // Astaxanthin 24 mg, 60 softgels. No barcode on the row.
+  // The cited panel is the 24 mg 60-count. This is that front.
+  // Not the 6 mg 120 that shares the formula id.
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels-2': catalogShot(
+    'nutricost-nutricost-astaxanthin-softgels-60-softgels-2.jpg',
+  ),
+  // Organic turmeric powder, 2 lb. Barcode 810139579137. Not the 1 lb.
+  'nutricost-nutricost-organic-turmeric-powder-2-lb': catalogShot(
+    'nutricost-nutricost-organic-turmeric-powder-2-lb.jpg',
+  ),
+  // Organic turmeric powder, 1 lb. Barcode 810014672427. Not the 8 oz.
+  'nutricost-nutricost-organic-turmeric-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-turmeric-powder-1-lb.jpg',
+  ),
+  // Organic turmeric powder, 8 oz. Barcode 810139579144. Not the 1 lb.
+  'nutricost-nutricost-organic-turmeric-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-turmeric-powder-8-oz.jpg',
+  ),
+  // Creatine monohydrate, unflavored, 500 g. Barcode 810139571629.
+  // Not the 1 kg and not a flavored tub.
+  'nutricost-nutricost-creatine-monohydrate-powder-panel': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-panel.jpg',
+  ),
+  // Creatine monohydrate, unflavored, 300 g. Barcode 810139571865.
+  // Not the 500 g tub.
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-300-gm.jpg',
+  ),
+  // Creatine monohydrate, frozen lemonade, 30 servings. Barcode 810139577850.
+  // Not unflavored and not white behemoth.
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-30-servings.jpg',
+  ),
+  // Creatine monohydrate, mandarin orange, 500 g. Barcode 810139573975.
+  // Not the 300 g mandarin tub.
+  'nutricost-nutricost-creatine-monohydrate-powder-panel-2': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-panel-2.jpg',
+  ),
+  // Creatine monohydrate, mandarin orange, 300 g. Barcode 810139573999.
+  // Not the 500 g mandarin tub.
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm-3': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-300-gm-3.jpg',
+  ),
+  // Creatine monohydrate, white behemoth, 30 servings. Barcode 810139579304.
+  // Not frozen lemonade.
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings-2': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-powder-30-servings-2.jpg',
+  ),
+  // Serrapeptase 120,000 SPU, 120 capsules. Barcode 810014673998.
+  'nutricost-nutricost-serrapeptase-120-000-spu-20-mg-120-cap-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-serrapeptase-120-000-spu-20-mg-120-cap-120-capsules.jpg',
+    ),
+  // Ginkgo + ginseng, 120 capsules. Barcode 810139577911.
+  'nutricost-nutricost-ginkgo-ginseng-supplement-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-ginkgo-ginseng-supplement-capsules-120-capsules.jpg',
+    ),
+  // Taurine 1,000 mg, 400 capsules. Barcode 702669932639. Not the 30-count.
+  'nutricost-nutricost-taurine-capsules-400-capsules': catalogShot(
+    'nutricost-nutricost-taurine-capsules-400-capsules.jpg',
+  ),
+  // Taurine 1,000 mg, 30 capsules. Barcode 810014677187. Not the 400-count.
+  'nutricost-nutricost-taurine-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-taurine-capsules-30-capsules.jpg',
+  ),
+  // 5-HTP 100 mg, 240 capsules. Barcode 702669931342. Not the 200 mg bottle.
+  'nutricost-nutricost-5-htp-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-240-capsules.jpg',
+  ),
+  // 5-HTP 200 mg, 60 capsules. Barcode 810014675138. Not the 120-count.
+  'nutricost-nutricost-5-htp-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11751,6 +11852,23 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Shared-formula counts. Do not inherit a sibling face.
   'now-organic-spirulina-powder-4',
   'now-eve-tablets-superior-womens-multi-90',
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // 24 mg 60 must not inherit the 6 mg 120.
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels-2',
+  // Turmeric 2 lb and 8 oz must not inherit the 1 lb pouch.
+  'nutricost-nutricost-organic-turmeric-powder-2-lb',
+  'nutricost-nutricost-organic-turmeric-powder-8-oz',
+  // Creatine 500 g and 300 g must not inherit the 1 kg slot.
+  'nutricost-nutricost-creatine-monohydrate-powder-panel',
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm',
+  // Mandarin 500 g must not inherit the mandarin 300 g tub.
+  'nutricost-nutricost-creatine-monohydrate-powder-panel-2',
+  // Taurine 400 must not inherit the 30-count.
+  'nutricost-nutricost-taurine-capsules-400-capsules',
+  // 5-HTP 100 mg 240 and 200 mg 60 must not inherit the 120-count.
+  'nutricost-nutricost-5-htp-capsules-240-capsules',
+  'nutricost-nutricost-5-htp-capsules-60-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -19249,6 +19367,156 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-astaxanthin-softgels-panel.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-3',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-120-softgels-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-astaxanthin-softgels-60-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-turmeric-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-turmeric-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-turmeric-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-turmeric-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-turmeric-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-turmeric-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-panel.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-creatine-monohydrate-powder-1-kg',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-panel-2',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-panel-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm-3',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-300-gm-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings-2',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-powder-30-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-serrapeptase-120-000-spu-20-mg-120-cap-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-serrapeptase-120-000-spu-20-mg-120-cap-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ginkgo-ginseng-supplement-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ginkgo-ginseng-supplement-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-taurine-capsules-400-capsules',
+  'Nutricost',
+  'nutricost-nutricost-taurine-capsules-400-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-taurine-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-taurine-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
+);
+{
+  const asta24 = previewOverlayImage({
+    id: 'nutricost-nutricost-astaxanthin-softgels-60-softgels-2',
+    formulaId: 'nutricost-nutricost-astaxanthin-softgels-120-softgels-2',
+    brand: 'Nutricost',
+  });
+  if (
+    !asta24?.url.endsWith(
+      '/nutricost-nutricost-astaxanthin-softgels-60-softgels-2.jpg',
+    )
+    || !asta24.verifiedSku
+  ) {
+    throw new Error('Astaxanthin 24 mg 60 must stay its own carton, not the 6 mg 120');
+  }
+  const turmeric8 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-turmeric-powder-8-oz',
+    formulaId: 'nutricost-nutricost-organic-turmeric-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !turmeric8?.url.endsWith('/nutricost-nutricost-organic-turmeric-powder-8-oz.jpg')
+    || !turmeric8.verifiedSku
+  ) {
+    throw new Error('Turmeric 8 oz must stay its own carton, not the 1 lb pouch');
+  }
+  const creatine500 = previewOverlayImage({
+    id: 'nutricost-nutricost-creatine-monohydrate-powder-panel',
+    formulaId: 'nutricost-nutricost-creatine-monohydrate-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (
+    !creatine500?.url.endsWith(
+      '/nutricost-nutricost-creatine-monohydrate-powder-panel.jpg',
+    )
+    || !creatine500.verifiedSku
+  ) {
+    throw new Error('Creatine 500 g must stay its own carton, not the 1 kg mark');
+  }
+  const taurine400 = previewOverlayImage({
+    id: 'nutricost-nutricost-taurine-capsules-400-capsules',
+    formulaId: 'nutricost-nutricost-taurine-capsules-30-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !taurine400?.url.endsWith('/nutricost-nutricost-taurine-capsules-400-capsules.jpg')
+    || !taurine400.verifiedSku
+  ) {
+    throw new Error('Taurine 400 must stay its own carton, not the 30-count');
+  }
+}
 {
   const spirulina4 = previewOverlayImage({
     id: 'now-organic-spirulina-powder-4',
