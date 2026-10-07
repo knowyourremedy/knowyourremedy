@@ -147,3 +147,4 @@ export { BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3 } from './batch147-kyr5d-clariti
 export { BATCH148_KYR6B_XYZAL_US_OTC } from './batch148-kyr6b-xyzal-us-otc';
 export { BATCH149_KYR6B_XYZAL_CHILDRENS_LIQUID } from './batch149-kyr6b-xyzal-childrens-liquid';
 export { BATCH150_KYR5D_XYZAL_UPC_OVERRIDE } from './batch150-kyr5d-xyzal-upc-override';
+export { BATCH151_KYR6B_NASAL_US_OTC } from './batch151-kyr6b-nasal-us-otc';
