@@ -2,14 +2,14 @@ KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
 
-WHERE WE LEFT OFF — Oct 2, 2026
+WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
 - Zyrtec website loop closed. 40-count Avoid, UPC 300450204462, PR #452. 3-count Avoid, UPC 300450204431, and bubble-gum 4 fl oz Avoid, UPC 300450205049, PR #453. 75-count Avoid on zyrtec-allergy-tablets-tio2, UPC 300450204752, row zyrtec-b143-10mg-75ct, PR #467 / ead6dea. Do not reopen. Bot run #334 failed in the chat log. The merge landed.
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
-- Highest rating-draft is batch143. Do not edit batch70–143.
+- Highest rating-draft is batch150. Do not edit batch70–143. Next file is batch151.
 
 Not a hunt unless Brandon says go
 - Children's Zyrtec Dye-Free Chewable 2.5 mg 24-count is written. Caution is not locked. Do not copy the grape panel onto it.
@@ -21,9 +21,10 @@ Still open
 - KYR4 is the night photo bot. KYR4-b stays paused on those wakes.
 
 Catalog job
-- Claritin US OTC catalog pass is closed. PR #468 / 9b38159 wrote batch144. PR #469 / 9bc1ec1 wrote the dyed-grape and adult-liquid formulas. PR #470 / f21a297 attached 9 codes. PR #471 / fa92f312961d attached Cool Mint 56ct 041100580993, Claritin-D 24 Hour 5ct 041100080493, and starch 80ct 041100810830. Do not attach those three again. PR #472 / 18a9baa removed 34 unsold counts. Those stay off. Not a hunt. RediTabs 10ct qualifies and stays. Still-open empty rows stay off Brandon's hunt list. US only. No Canada. No EU. No store-brand loratadine. Do not reopen Zyrtec or Allegra.
+- Claritin US OTC catalog pass is closed. PR #468 / 9b38159 wrote batch144. PR #469 / 9bc1ec1 wrote the dyed-grape and adult-liquid formulas. PR #470 / f21a297 attached 9 codes. PR #471 / fa92f312961d attached Cool Mint 56ct 041100580993, Claritin-D 24 Hour 5ct 041100080493, and starch 80ct 041100810830. Do not attach those three again. PR #472 / 18a9baa removed 34 unsold counts. Those stay off. Not a hunt. RediTabs 10ct qualifies and stays. Still-open empty rows stay off Brandon's hunt list. US only. No Canada. No EU. No store-brand loratadine. Do not reopen Zyrtec or Allegra. PR #526 / 5704a03 removed the MCC 40-count, the dyed grape 20-count, and the dyed grape 60-count. Those stay off. Not a hunt. The starch 40-count code 041100803634 stays. The dye-free grape 60-count code 041100598813 stays. The grape 10-count and 30-count stay.
 - Xyzal US OTC. PR #474 / 90d46f4 wrote 8 tablet rows on xyzal-b148-tablets. Avoid on titanium dioxide. PR #487 / c81eeca wrote the grape 5 oz and bubble gum 5 oz on xyzal-b149-childrens-liquid. Avoid on methylparaben and propylparaben. UPC 041167353059 stays on the grape 5 oz. UPC 041167353011 stays on the bubble gum 5 oz. An 11-digit spec with a valid check digit is a scannable barcode. Bars are not required. Glacial acetic acid maps to acetic acid, Cleared. Sodium acetate trihydrate maps to sodium acetate anhydrous, Cleared. Not potassium acetate. Do not write the 10 oz liquids, the 5ct, or the 45ct. No sale page, or Google AI mode was not shown. They stay open. Not a hunt. Kits and Tutti Frutti stay off. US only. No Canada. No EU. No store-brand levocetirizine.
 - PR #489 / ce97516 attached four tablet codes in batch150. 20ct 041167351123. 40ct 041167351185. 60ct 041167351192. 90ct 041167351345. Do not attach those four again.
+- Xyzal catalog pass is closed except the named holds. Do not write the 10 oz liquids, the 5ct, or the 45ct. Not a hunt.
 
 Process lock
 - A bot paste starts by naming the bot. If it is the wrong bot, it stops and tells Brandon which chat the paste belongs in.
@@ -33,6 +34,7 @@ Process lock
 - Ungraded tokens come back in one packet. One Cursor text stamps the whole list. Not a few at a time. No live grade until the founder locks it.
 - KYR4 is the night photo bot. KYR4-b is the daytime photo bot, released when catalog is not running. Do not wake both.
 - A discontinued listing means do not write. An NDC on any site is only a maybe. DailyMed, a brand page, openFDA, or a store spec can all list a pack that is not for sale. Write a count only if a page that opened shows that same count for sale now. A listing that shows the NDC and not a buyable pack does not qualify. A blocked page is not proof the pack is dead. Those stay off the catalog and off Brandon's hunt list. The bot retries them later. Do not call them missing. A bonus box, a 2-pack, or a kit does not become its own row. A different inactive list is a different product only after the sold pack's panel is read.
+- An 11-digit spec with a valid check digit is a scannable barcode. Bars are not required. This applies to every future scan, not only Xyzal.
 
 Removed, not stashed
 - Claritin 34 counts removed in PR #472 / 18a9baa. Do not re-add. Not a hunt. MCC tablets 10, 60, 85. Starch tablets 15, 25, 35, 55, 60, 85, 100, 105, 108, 110, 115. Liqui-Gels 5, 36, 70, 100. RediTabs 20, 40, 50. Bubblegum chew 40. Cool Mint chew 2, 4, 64. Kids syrup 1, 2, 6 fl oz. Dyed grape chew 2, 40, 50, 80, 100. Adult liquid 30 mL.
