@@ -2338,6 +2338,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-creatine-monohydrate-powder-1-kg': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 2.
+  // Vitamin B3 niacin 100 mg, 240 capsules. Barcode 810014672212.
+  // The image on that barcode is a supplement facts panel.
+  // The gallery has no 100 mg 240 front. Not the 500 mg bottle.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -11306,6 +11315,89 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-5-htp-capsules-60-capsules': catalogShot(
     'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only.
+  // 5-HTP 200 mg, 120 capsules. Barcode 702669935166.
+  // Not the V0 225 cc bottle.
+  'nutricost-nutricost-5-htp-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-120-capsules.jpg',
+  ),
+  // Same 100 mg 240 bottle as the first 240-count row. Barcode 702669931342.
+  // The two front files on the brand site were the same image.
+  'nutricost-nutricost-5-htp-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-240-capsules.jpg',
+  ),
+  // Same 200 mg 60 bottle as the first 60-count row. Barcode 810014675138.
+  'nutricost-nutricost-5-htp-capsules-60-capsules-2': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
+  ),
+  // 5-HTP 100 mg, 30 capsules. Barcode 810014677149. Not the 200 mg bottle.
+  'nutricost-nutricost-5-htp-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-30-capsules.jpg',
+  ),
+  // 5-HTP 200 mg V0, 120 capsules, 225 cc. Cited panel is that bottle.
+  // Not the other 120-count that carries barcode 702669935166.
+  'nutricost-nutricost-5-htp-capsules-120-capsules-2': catalogShot(
+    'nutricost-nutricost-5-htp-capsules-120-capsules-2.jpg',
+  ),
+  // Vitamin B3 niacin 500 mg, 240 capsules. Barcode 702669933162.
+  // Not the 100 mg facts panel.
+  'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules-2.jpg',
+  ),
+  // Zinc 50 mg with selenium 200 mcg, 240 capsules. Barcode 810139577867.
+  'nutricost-zinc-with-selenium-240-capsules': catalogShot(
+    'nutricost-zinc-with-selenium-240-capsules.jpg',
+  ),
+  // Bacillus subtilis, 60 capsules. Barcode 810139578475.
+  'nutricost-bacillus-subtilis-60-capsules': catalogShot(
+    'nutricost-bacillus-subtilis-60-capsules.jpg',
+  ),
+  // Buffered vitamin C, 120 capsules. Barcode 810139577713.
+  'nutricost-nutricost-buffered-vitamin-c-120-capsules': catalogShot(
+    'nutricost-nutricost-buffered-vitamin-c-120-capsules.jpg',
+  ),
+  // Zinc picolinate 30 mg, 120 capsules. Barcode 810014673530. Not the 240.
+  'nutricost-nutricost-zinc-picolinate-30mg-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-picolinate-30mg-120-capsules.jpg',
+  ),
+  // Zinc picolinate 30 mg, 240 capsules. Barcode 810014673547. Not the 120.
+  'nutricost-nutricost-zinc-picolinate-30mg-240-capsules': catalogShot(
+    'nutricost-nutricost-zinc-picolinate-30mg-240-capsules.jpg',
+  ),
+  // Zinc picolinate 30 mg, 30 capsules. Barcode 810014677170. Not the 120.
+  'nutricost-nutricost-zinc-picolinate-30mg-30-capsules': catalogShot(
+    'nutricost-nutricost-zinc-picolinate-30mg-30-capsules.jpg',
+  ),
+  // Vitamin K2 MK-7, 120 softgels. Barcode 810139575740. Not the 240.
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-k2-mk-7-softgels-120-softgels.jpg',
+  ),
+  // Vitamin K2 MK-7, 30 softgels. Barcode 810139574118. Not the 120.
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-30-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-k2-mk-7-softgels-30-softgels.jpg',
+  ),
+  // Vitamin K2 MK-7, 240 softgels. Barcode 810014672649. Not the 120.
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-k2-mk-7-softgels-240-softgels.jpg',
+  ),
+  // HMB 500 mg, 120 capsules. Barcode 857077008879. Not the 240.
+  'nutricost-nutricost-hmb-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-hmb-capsules-120-capsules.jpg',
+  ),
+  // HMB 500 mg, 240 capsules. Barcode 857077008886. Not the 120.
+  'nutricost-nutricost-hmb-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-hmb-capsules-240-capsules.jpg',
+  ),
+  // Same 240-count HMB bottle. Barcode 857077008886.
+  'nutricost-nutricost-hmb-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-hmb-capsules-240-capsules.jpg',
+  ),
+  // HMB 500 mg, 30 capsules. Barcode 810014677194.
+  // The variant title says 60. The bottle print is 30. Not the 120.
+  'nutricost-nutricost-hmb-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-hmb-capsules-30-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -11869,6 +11961,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 5-HTP 100 mg 240 and 200 mg 60 must not inherit the 120-count.
   'nutricost-nutricost-5-htp-capsules-240-capsules',
   'nutricost-nutricost-5-htp-capsules-60-capsules',
+  // Vitamins night run 2026-10-07 12:30 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'nutricost-nutricost-5-htp-capsules-240-capsules-2',
+  'nutricost-nutricost-5-htp-capsules-60-capsules-2',
+  'nutricost-nutricost-5-htp-capsules-30-capsules',
+  // Zinc picolinate 240 must not inherit the 120.
+  'nutricost-nutricost-zinc-picolinate-30mg-240-capsules',
+  // HMB 30 must not inherit the 120. The second 240 must not inherit a different face.
+  'nutricost-nutricost-hmb-capsules-240-capsules-2',
+  'nutricost-nutricost-hmb-capsules-30-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -19467,6 +19569,154 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-60-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-capsules-120-capsules-2.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b3-niacin-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-zinc-with-selenium-240-capsules',
+  'Nutricost',
+  'nutricost-zinc-with-selenium-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-bacillus-subtilis-60-capsules',
+  'Nutricost',
+  'nutricost-bacillus-subtilis-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-buffered-vitamin-c-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-buffered-vitamin-c-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-picolinate-30mg-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-picolinate-30mg-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-picolinate-30mg-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-picolinate-30mg-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-picolinate-30mg-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-picolinate-30mg-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-30-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-30-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-k2-mk-7-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hmb-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-hmb-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hmb-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-hmb-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hmb-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-hmb-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hmb-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-hmb-capsules-30-capsules.jpg',
+);
+{
+  const htp30 = previewOverlayImage({
+    id: 'nutricost-nutricost-5-htp-capsules-30-capsules',
+    formulaId: 'nutricost-nutricost-5-htp-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !htp30?.url.endsWith('/nutricost-nutricost-5-htp-capsules-30-capsules.jpg')
+    || !htp30.verifiedSku
+  ) {
+    throw new Error('5-HTP 30 must stay its own carton, not the 120-count');
+  }
+  const htpV0 = previewOverlayImage({
+    id: 'nutricost-nutricost-5-htp-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-5-htp-capsules-120-capsules-2',
+    brand: 'Nutricost',
+  });
+  if (
+    !htpV0?.url.endsWith('/nutricost-nutricost-5-htp-capsules-120-capsules-2.jpg')
+    || !htpV0.verifiedSku
+  ) {
+    throw new Error('5-HTP V0 120 must stay its own carton, not the other 120');
+  }
+  const zinc240 = previewOverlayImage({
+    id: 'nutricost-nutricost-zinc-picolinate-30mg-240-capsules',
+    formulaId: 'nutricost-nutricost-zinc-picolinate-30mg-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !zinc240?.url.endsWith(
+      '/nutricost-nutricost-zinc-picolinate-30mg-240-capsules.jpg',
+    )
+    || !zinc240.verifiedSku
+  ) {
+    throw new Error('Zinc picolinate 240 must stay its own carton, not the 120');
+  }
+  const hmb30 = previewOverlayImage({
+    id: 'nutricost-nutricost-hmb-capsules-30-capsules',
+    formulaId: 'nutricost-nutricost-hmb-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !hmb30?.url.endsWith('/nutricost-nutricost-hmb-capsules-30-capsules.jpg')
+    || !hmb30.verifiedSku
+  ) {
+    throw new Error('HMB 30 must stay its own carton, not the 120-count');
+  }
+}
 {
   const asta24 = previewOverlayImage({
     id: 'nutricost-nutricost-astaxanthin-softgels-60-softgels-2',
