@@ -11717,6 +11717,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     catalogShot(
       'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz.jpg',
     ),
+  // Vitamins night run 2026-10-08 1:45 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Vitamin B complex, 30 capsules. Barcode 810139574071. Not the 120.
+  'nutricost-nutricost-vitamin-b-complex-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b-complex-capsules-30-capsules.jpg',
+  ),
+  // Vitamin B complex, 120 capsules. Barcode 702669933247. Not the 30.
+  'nutricost-nutricost-vitamin-b-complex-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b-complex-capsules-120-capsules.jpg',
+  ),
+  // Molybdenum, 240 capsules. Barcode 810139577614.
+  'nutricost-nutricost-molybdenum-240-capsules': catalogShot(
+    'nutricost-nutricost-molybdenum-240-capsules.jpg',
+  ),
+  // Turmeric capsules, 120 capsules. Barcode 702669931403.
+  'nutricost-nutricost-turmeric-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-turmeric-capsules-120-capsules.jpg',
+  ),
+  // Organic triphala, 120 capsules. Barcode 810139576976.
+  'nutricost-nutricost-organic-triphala-120-capsules': catalogShot(
+    'nutricost-nutricost-organic-triphala-120-capsules.jpg',
+  ),
+  // Chrysin with passion flower, 60 capsules. Barcode 810139577010.
+  'nutricost-nutricost-chrysin-with-passion-flower-extract-60-capsules':
+    catalogShot(
+      'nutricost-nutricost-chrysin-with-passion-flower-extract-60-capsules.jpg',
+    ),
+  // Polypodium leucotomos extract, 240 capsules. Barcode 810139576549.
+  'nutricost-nutricost-polypodium-leucotomos-extract-240-capsules': catalogShot(
+    'nutricost-nutricost-polypodium-leucotomos-extract-240-capsules.jpg',
+  ),
+  // Diosmin with hesperidin, 120 capsules. Barcode 810139576778.
+  'nutricost-nutricost-diosmin-with-hesperidin-120-capsules': catalogShot(
+    'nutricost-nutricost-diosmin-with-hesperidin-120-capsules.jpg',
+  ),
+  // UC-II collagen, 120 capsules. Barcode 810139576617.
+  'nutricost-nutricost-uc-ii-collagen-120-capsules': catalogShot(
+    'nutricost-nutricost-uc-ii-collagen-120-capsules.jpg',
+  ),
+  // Black cherry extract, 240 capsules. Barcode 810139577256.
+  'nutricost-nutricost-black-cherry-extract-240-capsules': catalogShot(
+    'nutricost-nutricost-black-cherry-extract-240-capsules.jpg',
+  ),
+  // Yellow dock extract, 180 capsules. Barcode 810139576259.
+  'nutricost-nutricost-yellow-dock-extract-180-capsules': catalogShot(
+    'nutricost-nutricost-yellow-dock-extract-180-capsules.jpg',
+  ),
+  // Sodium ascorbate powder, unflavored, 1 lb. Barcode 810139577522.
+  'nutricost-nutricost-sodium-ascorbate-powder-1-lb': catalogShot(
+    'nutricost-nutricost-sodium-ascorbate-powder-1-lb.jpg',
+  ),
+  // Grass fed beef organs, 180 capsules. Barcode 810139576563.
+  'nutricost-nutricost-grass-fed-beef-organs-180-capsules': catalogShot(
+    'nutricost-nutricost-grass-fed-beef-organs-180-capsules.jpg',
+  ),
+  // Chitosan, 120 capsules. Barcode 810139576914.
+  'nutricost-nutricost-chitosan-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-chitosan-capsules-120-capsules.jpg',
+  ),
+  // NAC + glycine powder, 250 g. Barcode 810139576679.
+  'nutricost-nutricost-nac-glycine-powder-250-gm': catalogShot(
+    'nutricost-nutricost-nac-glycine-powder-250-gm.jpg',
+  ),
+  // Gelatin with silica, 240 capsules. Barcode 810139576655.
+  'nutricost-nutricost-gelatin-with-silica-240-capsules': catalogShot(
+    'nutricost-nutricost-gelatin-with-silica-240-capsules.jpg',
+  ),
+  // Organic spirulina + chlorella, 360 tablets. Barcode 810139576426.
+  // Not the 180.
+  'nutricost-nutricost-organic-spirulina-chlorella-360-tablets': catalogShot(
+    'nutricost-nutricost-organic-spirulina-chlorella-360-tablets.jpg',
+  ),
+  // Organic spirulina + chlorella, 180 tablets. Barcode 810139576631.
+  // Not the 360.
+  'nutricost-nutricost-organic-spirulina-chlorella-180-tablets': catalogShot(
+    'nutricost-nutricost-organic-spirulina-chlorella-180-tablets.jpg',
+  ),
+  // Graviola extract, 240 capsules. Barcode 810139576716.
+  'nutricost-nutricost-graviola-extract-240-capsules': catalogShot(
+    'nutricost-nutricost-graviola-extract-240-capsules.jpg',
+  ),
+  // Sulforaphane glucosinolate, 120 capsules. Barcode 810139572800.
+  'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules': catalogShot(
+    'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12325,6 +12410,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules',
   // Acacia 2 lb must not inherit the 1 lb pouch.
   'nutricost-nutricost-organic-acacia-fiber-powder-2-lb',
+  // Vitamins night run 2026-10-08 1:45 AM PT batch 2.
+  // 360-count shares the 180-count formula. Do not inherit the 180.
+  'nutricost-nutricost-organic-spirulina-chlorella-360-tablets',
+  // Turmeric 90-count shares the 120 formula. Do not inherit the 120.
+  'nutricost-b79-turmeric-90-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -20416,6 +20506,129 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b-complex-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b-complex-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b-complex-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b-complex-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-molybdenum-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-molybdenum-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turmeric-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turmeric-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-triphala-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-organic-triphala-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-chrysin-with-passion-flower-extract-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-chrysin-with-passion-flower-extract-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-polypodium-leucotomos-extract-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-polypodium-leucotomos-extract-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-diosmin-with-hesperidin-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-diosmin-with-hesperidin-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-uc-ii-collagen-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-uc-ii-collagen-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-black-cherry-extract-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-black-cherry-extract-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-yellow-dock-extract-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-yellow-dock-extract-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sodium-ascorbate-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-sodium-ascorbate-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-grass-fed-beef-organs-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-grass-fed-beef-organs-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-chitosan-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-chitosan-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nac-glycine-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-nac-glycine-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-gelatin-with-silica-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-gelatin-with-silica-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-spirulina-chlorella-360-tablets',
+  'Nutricost',
+  'nutricost-nutricost-organic-spirulina-chlorella-360-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-spirulina-chlorella-180-tablets',
+  'Nutricost',
+  'nutricost-nutricost-organic-spirulina-chlorella-180-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-graviola-extract-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-graviola-extract-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules.jpg',
+);
+{
+  const turmeric90 = previewOverlayImage({
+    id: 'nutricost-b79-turmeric-90-capsules',
+    formulaId: 'nutricost-nutricost-turmeric-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (turmeric90?.url.includes('turmeric-capsules-120-capsules.jpg')) {
+    throw new Error('Turmeric 90 must not inherit the 120');
+  }
+  const spira360 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-spirulina-chlorella-360-tablets',
+    formulaId: 'nutricost-nutricost-organic-spirulina-chlorella-180-tablets',
+    brand: 'Nutricost',
+  });
+  if (
+    !spira360?.url.endsWith(
+      '/nutricost-nutricost-organic-spirulina-chlorella-360-tablets.jpg',
+    )
+    || !spira360.verifiedSku
+  ) {
+    throw new Error('Spirulina 360 must stay its own carton, not the 180');
+  }
+}
 assertExactCarton('flonase-b151-allergy-72', 'Flonase', 'flonase-b151-allergy-72.jpg');
 assertExactCarton('flonase-b151-allergy-144', 'Flonase', 'flonase-b151-allergy-144.jpg');
 assertExactCarton('astepro-b151-allergy-60', 'Astepro', 'astepro-b151-allergy-60.jpg');
