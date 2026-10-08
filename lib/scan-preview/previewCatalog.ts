@@ -11581,6 +11581,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-vitamin-b12-capsules-240-capsules': catalogShot(
     'nutricost-nutricost-vitamin-b12-capsules-240-capsules.jpg',
   ),
+  // Allergies night run 2026-10-08 12:30 AM PT.
+  // batch151 and batch152 spray counts. Per-id only.
+  // Do not glue a sibling count. Do not glue a 2-pack.
+  // Flonase Allergy Relief, 72 sprays. UPC 353100228899.
+  // The face prints 72 sprays. Not the 144 (0.62 fl oz).
+  'flonase-b151-allergy-72': catalogShot('flonase-b151-allergy-72.jpg'),
+  // Flonase Allergy Relief, 144 sprays. DailyMed carton
+  // "Flonase Allergy 144 sprays". 0.62 fl oz. Not the 72.
+  'flonase-b151-allergy-144': catalogShot('flonase-b151-allergy-144.jpg'),
+  // Astepro, 60 metered sprays. UPC 041100589927. 0.37 fl oz.
+  // Not the 120 and not the 200.
+  'astepro-b151-allergy-60': catalogShot('astepro-b151-allergy-60.jpg'),
+  // Astepro, 120 metered sprays. UPC 041100589903. 0.78 fl oz.
+  // Not the 60 and not the 200.
+  'astepro-b151-allergy-120': catalogShot('astepro-b151-allergy-120.jpg'),
+  // Astepro, 200 metered sprays. No barcode on the row.
+  // Carton prints 200 metered sprays and 1.01 fl oz (30 mL).
+  // Not the 120 (0.78 fl oz).
+  'astepro-b151-allergy-200': catalogShot('astepro-b151-allergy-200.jpg'),
+  // Nasacort Allergy 24HR, 30 sprays. UPC 041167580431.
+  // Carton prints 0.23 fl oz (6.7 mL). Not the 60 or the 120.
+  'nasacort-b152-allergy-30': catalogShot('nasacort-b152-allergy-30.jpg'),
+  // Nasacort Allergy 24HR, 60 sprays. DailyMed carton prints 60 sprays.
+  // Not the 30 and not the 120.
+  'nasacort-b152-allergy-60': catalogShot('nasacort-b152-allergy-60.jpg'),
+  // Nasacort Allergy 24HR, 120 sprays. DailyMed carton prints 120 sprays.
+  // Not the 60. Not the 240 twin pack.
+  'nasacort-b152-allergy-120': catalogShot('nasacort-b152-allergy-120.jpg'),
+  // Adult Sensimist, 60 sprays. UPC 353100202158. 0.20 fl oz.
+  // Not Children's. Not the 120 (0.31 fl oz).
+  'flonase-b152-sensimist-60': catalogShot('flonase-b152-sensimist-60.jpg'),
+  // Adult Sensimist, 120 sprays. DailyMed carton "Flonase Sensimist 120 sprays".
+  // 0.31 fl oz. Not the 60.
+  'flonase-b152-sensimist-120': catalogShot('flonase-b152-sensimist-120.jpg'),
+  // Children's Sensimist, 60 sprays. UPC 353100202301.
+  // DailyMed backercard prints Children's and 0.20 fl oz.
+  // Not the adult 60.
+  'flonase-b152-sensimist-child-60': catalogShot(
+    'flonase-b152-sensimist-child-60.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -20169,6 +20209,50 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-vitamin-b12-capsules-240-capsules.jpg',
 );
+assertExactCarton('flonase-b151-allergy-72', 'Flonase', 'flonase-b151-allergy-72.jpg');
+assertExactCarton('flonase-b151-allergy-144', 'Flonase', 'flonase-b151-allergy-144.jpg');
+assertExactCarton('astepro-b151-allergy-60', 'Astepro', 'astepro-b151-allergy-60.jpg');
+assertExactCarton('astepro-b151-allergy-120', 'Astepro', 'astepro-b151-allergy-120.jpg');
+assertExactCarton('astepro-b151-allergy-200', 'Astepro', 'astepro-b151-allergy-200.jpg');
+assertExactCarton('nasacort-b152-allergy-30', 'Nasacort', 'nasacort-b152-allergy-30.jpg');
+assertExactCarton('nasacort-b152-allergy-60', 'Nasacort', 'nasacort-b152-allergy-60.jpg');
+assertExactCarton('nasacort-b152-allergy-120', 'Nasacort', 'nasacort-b152-allergy-120.jpg');
+assertExactCarton(
+  'flonase-b152-sensimist-60',
+  'Flonase',
+  'flonase-b152-sensimist-60.jpg',
+);
+assertExactCarton(
+  'flonase-b152-sensimist-120',
+  'Flonase',
+  'flonase-b152-sensimist-120.jpg',
+);
+assertExactCarton(
+  'flonase-b152-sensimist-child-60',
+  'Flonase',
+  'flonase-b152-sensimist-child-60.jpg',
+);
+{
+  const nasalOwn: [string, string, string][] = [
+    ['flonase-b151-allergy-72', 'flonase-b151-propionate', 'flonase-b151-allergy-72.jpg'],
+    ['flonase-b151-allergy-144', 'flonase-b151-propionate', 'flonase-b151-allergy-144.jpg'],
+    ['astepro-b151-allergy-60', 'astepro-allergy-sucralose', 'astepro-b151-allergy-60.jpg'],
+    ['astepro-b151-allergy-120', 'astepro-allergy-sucralose', 'astepro-b151-allergy-120.jpg'],
+    ['astepro-b151-allergy-200', 'astepro-allergy-sucralose', 'astepro-b151-allergy-200.jpg'],
+    ['nasacort-b152-allergy-30', 'nasacort-b152-allergy', 'nasacort-b152-allergy-30.jpg'],
+    ['nasacort-b152-allergy-60', 'nasacort-b152-allergy', 'nasacort-b152-allergy-60.jpg'],
+    ['nasacort-b152-allergy-120', 'nasacort-b152-allergy', 'nasacort-b152-allergy-120.jpg'],
+    ['flonase-b152-sensimist-60', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-60.jpg'],
+    ['flonase-b152-sensimist-120', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-120.jpg'],
+    ['flonase-b152-sensimist-child-60', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-child-60.jpg'],
+  ];
+  for (const [id, formulaId, file] of nasalOwn) {
+    const image = previewOverlayImage({ id, formulaId, brand: 'Flonase' });
+    if (!image?.url.endsWith(`/${file}`) || !image.verifiedSku) {
+      throw new Error(`${id} must stay its own carton, not a sibling face`);
+    }
+  }
+}
 {
   const dhea50 = previewOverlayImage({
     id: 'nutricost-nutricost-dhea-capsules-120-capsules-2',
