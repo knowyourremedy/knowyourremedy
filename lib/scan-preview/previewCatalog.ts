@@ -11621,6 +11621,102 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'flonase-b152-sensimist-child-60': catalogShot(
     'flonase-b152-sensimist-child-60.jpg',
   ),
+  // Vitamins night run 2026-10-08 1:45 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Vitamin B12 5,000 mcg, 120 capsules. Barcode 810014678504.
+  // Not the 2,000 mcg 120 and not the 1,000 mcg 120.
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2.jpg',
+  ),
+  // Vitamin B12 1,000 mcg, 120 capsules. Barcode 810014678481.
+  // Not the 5,000 mcg 120 and not the 1,000 mcg 240.
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-3': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-120-capsules-3.jpg',
+  ),
+  // Vitamin B12 500 mcg, 240 capsules. Barcode 810139578147.
+  // Not the 2,000 mcg 240 and not the 1,000 mcg 240.
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-240-capsules-2.jpg',
+  ),
+  // Vitamin B12 1,000 mcg, 240 capsules. Barcode 810014672137.
+  // Not the 1,000 mcg 120.
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-3': catalogShot(
+    'nutricost-nutricost-vitamin-b12-capsules-240-capsules-3.jpg',
+  ),
+  // Organic maqui berry, 120 capsules. Barcode 810139576938.
+  'nutricost-nutricost-organic-maqui-berry-120-capsules': catalogShot(
+    'nutricost-nutricost-organic-maqui-berry-120-capsules.jpg',
+  ),
+  // Lithium orotate 5 mg, 120 capsules. Barcode 810014673363.
+  // Not the 10 mg and not the 1,000 mcg.
+  'nutricost-nutricost-lithium-orotate-120-capsules': catalogShot(
+    'nutricost-nutricost-lithium-orotate-120-capsules.jpg',
+  ),
+  // Lithium orotate 10 mg, 120 capsules. Barcode 810139576464.
+  // Not the 5 mg.
+  'nutricost-nutricost-lithium-orotate-120-capsules-2': catalogShot(
+    'nutricost-nutricost-lithium-orotate-120-capsules-2.jpg',
+  ),
+  // Lithium orotate 1,000 mcg, 120 capsules. Barcode 810139578437.
+  // Not the 5 mg and not the 10 mg.
+  'nutricost-nutricost-lithium-orotate-120-capsules-3': catalogShot(
+    'nutricost-nutricost-lithium-orotate-120-capsules-3.jpg',
+  ),
+  // Liposomal vitamin C, 120 capsules. Barcode 810139575993.
+  // Not the 60.
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-liposomal-vitamin-c-capsules-120-capsules.jpg',
+  ),
+  // Liposomal vitamin C, 60 capsules. Barcode 810139575986.
+  // Not the 120.
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules.jpg',
+  ),
+  // Epicatechin, 60 capsules. Barcode 810139577676.
+  'nutricost-nutricost-epicatechin-60-capsules': catalogShot(
+    'nutricost-nutricost-epicatechin-60-capsules.jpg',
+  ),
+  // Organic acacia fiber powder, 2 lb. Barcode 810014672328.
+  // Not the 1 lb pouch.
+  'nutricost-nutricost-organic-acacia-fiber-powder-2-lb': catalogShot(
+    'nutricost-nutricost-organic-acacia-fiber-powder-2-lb.jpg',
+  ),
+  // Organic acacia fiber powder, 1 lb. Barcode 810139577317.
+  // Not the 2 lb pouch.
+  'nutricost-nutricost-organic-acacia-fiber-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-acacia-fiber-powder-1-lb.jpg',
+  ),
+  // NAD+ 500 mg, 60 capsules. Barcode 810139578093.
+  // Not the 120.
+  'nutricost-nutricost-nad-60-capsules': catalogShot(
+    'nutricost-nutricost-nad-60-capsules.jpg',
+  ),
+  // NAD+ 500 mg, 120 capsules. Barcode 810139575559.
+  // Not the 60.
+  'nutricost-nutricost-nad-120-capsules': catalogShot(
+    'nutricost-nutricost-nad-120-capsules.jpg',
+  ),
+  // NMNH, 60 capsules. Barcode 810139577836.
+  'nutricost-nutricost-nmnh-60-capsules': catalogShot(
+    'nutricost-nutricost-nmnh-60-capsules.jpg',
+  ),
+  // Pine pollen powder, 8 oz. Barcode 810139577775.
+  'nutricost-nutricost-pine-pollen-powder-8-oz': catalogShot(
+    'nutricost-nutricost-pine-pollen-powder-8-oz.jpg',
+  ),
+  // Schisandra, 120 capsules. Barcode 810139577669.
+  'nutricost-nutricost-schisandra-120-capsules': catalogShot(
+    'nutricost-nutricost-schisandra-120-capsules.jpg',
+  ),
+  // Adrenal glandular, 90 capsules. Barcode 810139577607.
+  'nutricost-nutricost-adrenal-glandular-90-capsules': catalogShot(
+    'nutricost-nutricost-adrenal-glandular-90-capsules.jpg',
+  ),
+  // Organic vitamin B12 liquid drops, 4 fl oz. Barcode 810139576297.
+  'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz':
+    catalogShot(
+      'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz.jpg',
+    ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12218,6 +12314,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-dhea-capsules-240-capsules-4',
   // B12 5,000 mcg 120 must not inherit the 2,000 mcg 120.
   'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2',
+  // Vitamins night run 2026-10-08 1:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // B12 1,000 mcg 240 must not inherit the 1,000 mcg 120.
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-3',
+  // Lithium 10 mg and 1,000 mcg must not inherit the 5 mg bottle.
+  'nutricost-nutricost-lithium-orotate-120-capsules-2',
+  'nutricost-nutricost-lithium-orotate-120-capsules-3',
+  // Liposomal C 60 must not inherit the 120.
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules',
+  // Acacia 2 lb must not inherit the 1 lb pouch.
+  'nutricost-nutricost-organic-acacia-fiber-powder-2-lb',
 ]);
 
 export function previewOverlayImage(
@@ -20208,6 +20315,106 @@ assertExactCarton(
   'nutricost-nutricost-vitamin-b12-capsules-240-capsules',
   'Nutricost',
   'nutricost-nutricost-vitamin-b12-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-120-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b12-capsules-240-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-maqui-berry-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-organic-maqui-berry-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lithium-orotate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-lithium-orotate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lithium-orotate-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-lithium-orotate-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lithium-orotate-120-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-lithium-orotate-120-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-liposomal-vitamin-c-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-epicatechin-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-epicatechin-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-acacia-fiber-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-acacia-fiber-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-acacia-fiber-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-acacia-fiber-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nad-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nad-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nad-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nad-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nmnh-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nmnh-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pine-pollen-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-pine-pollen-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-schisandra-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-schisandra-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-adrenal-glandular-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-adrenal-glandular-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-vitamin-b12-methylcobalamin-liquid-drops-4-oz.jpg',
 );
 assertExactCarton('flonase-b151-allergy-72', 'Flonase', 'flonase-b151-allergy-72.jpg');
 assertExactCarton('flonase-b151-allergy-144', 'Flonase', 'flonase-b151-allergy-144.jpg');
