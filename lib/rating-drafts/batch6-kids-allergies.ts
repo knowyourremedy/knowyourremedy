@@ -585,50 +585,6 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       'DailyMed setid bc824143-b876-4c3d-86fd-81fb58673851 (same formula as adult batch 5; draft, not verified)',
     ],
   },
-  {
-    id: 'nasacort-allergy-24hr-kids',
-    productName: 'Nasacort Allergy 24HR — kids-facing',
-    brand: 'Nasacort',
-    category: ALLERGIES,
-    formulaId: 'nasacort-allergy-24hr-bkc-ps80',
-    audience: KIDS,
-    minAge: 2,
-    form: 'nasal spray',
-    recordStatus: UNVERIFIED,
-    productType: 'OTC',
-    activeIngredients: [
-      { name: 'Triamcinolone acetonide', strength: '55mcg / spray' },
-    ],
-    inactiveIngredients: [
-      flag(
-        'Benzalkonium chloride',
-        'cleared',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.bkc),
-      ),
-      flag(
-        'Polysorbate 80',
-        'moderate',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.ps80),
-      ),
-      flag(
-        'Edetate disodium',
-        'cleared',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.edta),
-      ),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Carboxymethylcellulose sodium'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Dextrose'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Microcrystalline cellulose'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Purified water'),
-    ],
-    verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nasacort kids-facing = Caution (BKC). Same formula / setid as adult batch 5 Nasacort (4bff57a5) — the label already carries 2–under-12 directions. Shared formulaId `nasacort-allergy-24hr-bkc-ps80`. HCl / NaOH pH adjusters are Cleared-class. Ages 2+ (under 2: do not use). No independently Clean kids nasal in this batch.',
-    retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
-    cleanAlternatives: NASAL_ALTS,
-    sourcesGeneral: [
-      'DailyMed setid 4bff57a5-cce0-401c-a0fe-23c65c1b7ddc (same formula as adult batch 5; draft, not verified)',
-    ],
-  },
 
   // ── Avoid ────────────────────────────────────────────────
   {
