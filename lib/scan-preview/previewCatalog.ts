@@ -12712,6 +12712,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-potassium-bicarbonate-powder-1-lb': catalogShot(
     'nutricost-nutricost-potassium-bicarbonate-powder-1-lb.jpg',
   ),
+  // Vitamins night run 2026-10-12 5:30 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Sodium bicarbonate powder, 2 lb. Barcode 810014671956.
+  'nutricost-nutricost-sodium-bicarbonate-powder-2-lb': catalogShot(
+    'nutricost-nutricost-sodium-bicarbonate-powder-2-lb.jpg',
+  ),
+  // Citric acid capsules, 1,000 mg, 120 capsules. Barcode 810014672038.
+  // Not the 240.
+  'nutricost-nutricost-citric-acid-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-citric-acid-capsules-120-capsules.jpg',
+  ),
+  // Malic acid powder, 2 lb. Barcode 810014673172. Not the 1 lb.
+  'nutricost-nutricost-malic-acid-powder-2-lb': catalogShot(
+    'nutricost-nutricost-malic-acid-powder-2-lb.jpg',
+  ),
+  // Malic acid powder, 1 lb. Barcode 810014671970. Not the 2 lb.
+  'nutricost-nutricost-malic-acid-powder-1-lb': catalogShot(
+    'nutricost-nutricost-malic-acid-powder-1-lb.jpg',
+  ),
+  // Yohimbe bark extract, 120 capsules. Barcode 810014670898.
+  'nutricost-nutricost-yohimbe-bark-extract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-yohimbe-bark-extract-capsules-120-capsules.jpg',
+  ),
+  // Organic shiitake mushroom powder, 8 oz. Barcode 810014671628. Not the 4 oz.
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz.jpg',
+  ),
+  // Made with organic lion's mane, 90 capsules. Barcode 810014670287.
+  'nutricost-nutricost-made-with-organic-lion-s-mane-capsules-90-capsules':
+    catalogShot(
+      'nutricost-nutricost-made-with-organic-lion-s-mane-capsules-90-capsules.jpg',
+    ),
+  // 5-HTP powder, 25 g. Barcode 702669934176. Not a capsule bottle.
+  'nutricost-nutricost-5-htp-powder-25-gm': catalogShot(
+    'nutricost-nutricost-5-htp-powder-25-gm.jpg',
+  ),
+  // Myrrh extract, 650 mg, 120 capsules. Barcode 810014670461.
+  'nutricost-nutricost-myrrh-exract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-myrrh-exract-capsules-120-capsules.jpg',
+  ),
+  // Agmatine sulfate powder, 100 g. Barcode 700425812171. Not the 250 g.
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms': catalogShot(
+    'nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms.jpg',
+  ),
+  // Agmatine sulfate powder, 250 g. Barcode 702669930987. Not the 100 g.
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm': catalogShot(
+    'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm.jpg',
+  ),
+  // L-arginine + L-citrulline, 750 mg, 120 capsules. Barcode 810014671246.
+  // Not the 240.
+  'nutricost-nutricost-l-arginine-l-citrulline-complex-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-l-arginine-l-citrulline-complex-capsules-120-capsules.jpg',
+    ),
+  // L-proline powder, 250 g. Barcode 810014671376.
+  'nutricost-nutricost-l-proline-powder-250-gms': catalogShot(
+    'nutricost-nutricost-l-proline-powder-250-gms.jpg',
+  ),
+  // L-carnosine powder, 50 g. Barcode 810014671260. Not the 100 g.
+  'nutricost-nutricost-l-carnosine-powder-50-gm': catalogShot(
+    'nutricost-nutricost-l-carnosine-powder-50-gm.jpg',
+  ),
+  // L-carnosine powder, 100 g. Barcode 810014671277. Not the 50 g.
+  'nutricost-nutricost-l-carnosine-powder-100-gm': catalogShot(
+    'nutricost-nutricost-l-carnosine-powder-100-gm.jpg',
+  ),
+  // Organic astragalus root powder, 1 lb. Barcode 810014670676.
+  'nutricost-nutricost-organic-astragalus-root-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-astragalus-root-powder-1-lb.jpg',
+  ),
+  // Glutathione, 500 mg, 240 capsules. Barcode 810014671307.
+  'nutricost-nutricost-glutathione-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-glutathione-capsules-240-capsules.jpg',
+  ),
+  // Aloe vera, 100 mg, 120 capsules. Barcode 810014671161.
+  'nutricost-nutricost-aloe-vera-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-aloe-vera-capsules-120-capsules.jpg',
+  ),
+  // Astragalus capsules, 550 mg, 240 capsules. Barcode 810014670423.
+  'nutricost-nutricost-astragalus-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-astragalus-capsules-240-capsules.jpg',
+  ),
+  // Cat's claw, 500 mg, 120 capsules. Barcode 810014670645.
+  'nutricost-nutricost-cat-s-claw-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-cat-s-claw-capsules-120-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13378,6 +13464,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-p5p-capsules-240-capsules-2',
   // Potassium bicarbonate 2 lb must not inherit the 1 lb.
   'nutricost-nutricost-potassium-bicarbonate-powder-2-lb',
+  // Vitamins night run 2026-10-12 5:30 AM PT batch 2.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // Malic acid 2 lb must not inherit the 1 lb.
+  'nutricost-nutricost-malic-acid-powder-2-lb',
+  // Shiitake 8 oz must not inherit the 4 oz.
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz',
+  // Agmatine 250 g must not inherit the 100 g.
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm',
+  // L-carnosine 50 g must not inherit the 100 g.
+  'nutricost-nutricost-l-carnosine-powder-50-gm',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -27338,6 +27434,54 @@ assertExactCarton(
   ) {
     throw new Error('potassium bicarbonate 2 lb must not inherit the 1 lb');
   }
+  const malic2 = previewOverlayImage({
+    id: 'nutricost-nutricost-malic-acid-powder-2-lb',
+    formulaId: 'nutricost-nutricost-malic-acid-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !malic2?.verifiedSku
+    || !malic2.url.endsWith('/nutricost-nutricost-malic-acid-powder-2-lb.jpg')
+  ) {
+    throw new Error('malic acid 2 lb must not inherit the 1 lb');
+  }
+  const shiitake8 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz',
+    formulaId: 'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz',
+    brand: 'Nutricost',
+  });
+  if (
+    !shiitake8?.verifiedSku
+    || !shiitake8.url.endsWith(
+      '/nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz.jpg',
+    )
+  ) {
+    throw new Error('shiitake 8 oz must not inherit the 4 oz');
+  }
+  const agmatine250 = previewOverlayImage({
+    id: 'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm',
+    formulaId: 'nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms',
+    brand: 'Nutricost',
+  });
+  if (
+    !agmatine250?.verifiedSku
+    || !agmatine250.url.endsWith(
+      '/nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm.jpg',
+    )
+  ) {
+    throw new Error('agmatine 250 g must not inherit the 100 g');
+  }
+  const carnosine50 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-carnosine-powder-50-gm',
+    formulaId: 'nutricost-nutricost-l-carnosine-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !carnosine50?.verifiedSku
+    || !carnosine50.url.endsWith('/nutricost-nutricost-l-carnosine-powder-50-gm.jpg')
+  ) {
+    throw new Error('L-carnosine 50 g must not inherit the 100 g');
+  }
 }
 assertExactCarton(
   'nutricost-nutricost-l-serine-capsules-120-capsules',
@@ -27438,4 +27582,104 @@ assertBrandMark(
   'nutricost-nutricost-boron-capsules-panel',
   'Nutricost',
   'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-sodium-bicarbonate-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-sodium-bicarbonate-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-citric-acid-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-citric-acid-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-malic-acid-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-malic-acid-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-malic-acid-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-malic-acid-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-yohimbe-bark-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-yohimbe-bark-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-made-with-organic-lion-s-mane-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-made-with-organic-lion-s-mane-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-5-htp-powder-25-gm',
+  'Nutricost',
+  'nutricost-nutricost-5-htp-powder-25-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-myrrh-exract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-myrrh-exract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms',
+  'Nutricost',
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-100-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-arginine-l-citrulline-complex-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-arginine-l-citrulline-complex-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-proline-powder-250-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-proline-powder-250-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnosine-powder-50-gm',
+  'Nutricost',
+  'nutricost-nutricost-l-carnosine-powder-50-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnosine-powder-100-gm',
+  'Nutricost',
+  'nutricost-nutricost-l-carnosine-powder-100-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-astragalus-root-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-astragalus-root-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-glutathione-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-glutathione-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-aloe-vera-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-aloe-vera-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-astragalus-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-astragalus-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cat-s-claw-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-cat-s-claw-capsules-120-capsules.jpg',
 );
