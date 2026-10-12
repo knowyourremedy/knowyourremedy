@@ -12109,6 +12109,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     catalogShot(
       'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules.jpg',
     ),
+  // Vitamins night run 2026-10-12 1:45 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Clove 10:1 extract, 100 mg, 120 capsules. Barcode 810139574576.
+  'nutricost-nutricost-clove-10-1-extract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-clove-10-1-extract-capsules-120-capsules.jpg',
+  ),
+  // Irish sea moss, 1,200 mg, 120 capsules. Barcode 810139579120.
+  // Not the 10,000 mg bladderwrack blend. Not the 240.
+  // The same-barcode duplicate row inherits this face.
+  'nutricost-nutricost-irish-sea-moss-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-irish-sea-moss-capsules-120-capsules.jpg',
+  ),
+  // Turmeric + ginger, 120 capsules. Barcode 810139575146.
+  'nutricost-nutricost-turmeric-ginger-120-capsules': catalogShot(
+    'nutricost-nutricost-turmeric-ginger-120-capsules.jpg',
+  ),
+  // Magnesium glycinate 210 mg, 90 capsules. Barcode 810139571384. Not the 360.
+  'nutricost-nutricost-magnesium-glycinate-210mg-90-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-glycinate-210mg-90-capsules.jpg',
+  ),
+  // Magnesium glycinate 210 mg, 360 capsules. Barcode 810139571407. Not the 90.
+  'nutricost-nutricost-magnesium-glycinate-210mg-360-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-glycinate-210mg-360-capsules.jpg',
+  ),
+  // Copper glycinate, 120 capsules. Barcode 810139572398.
+  'nutricost-nutricost-copper-glycinate-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-copper-glycinate-capsules-120-capsules.jpg',
+  ),
+  // Zinc + copper, 120 capsules. Barcode 810139572381.
+  'nutricost-nutricost-zinc-copper-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-copper-capsules-120-capsules.jpg',
+  ),
+  // Apple pectin, 180 capsules. Barcode 810139574255. Not the 90.
+  // The same-barcode duplicate row inherits this face.
+  'nutricost-nutricost-apple-pectin-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-apple-pectin-capsules-180-capsules.jpg',
+  ),
+  // Caprylic acid, 120 softgels. Barcode 810139574484.
+  'nutricost-nutricost-caprylic-acid-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-caprylic-acid-softgels-120-softgels.jpg',
+  ),
+  // Bioperine, 120 capsules. Barcode 810139573180.
+  'nutricost-nutricost-bioperine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-bioperine-capsules-120-capsules.jpg',
+  ),
+  // Dihydromyricetin, 90 capsules. Barcode 810139572817.
+  'nutricost-nutricost-dihydromyricetin-90-capsules': catalogShot(
+    'nutricost-nutricost-dihydromyricetin-90-capsules.jpg',
+  ),
+  // L-cysteine, 120 capsules. Barcode 810139575214.
+  'nutricost-nutricost-l-cysteine-120-capsules': catalogShot(
+    'nutricost-nutricost-l-cysteine-120-capsules.jpg',
+  ),
+  // Lumbrokinase, 120 capsules. Barcode 810139573210.
+  'nutricost-nutricost-lumbrokinase-120-capsules': catalogShot(
+    'nutricost-nutricost-lumbrokinase-120-capsules.jpg',
+  ),
+  // Berberine HCl with Ceylon cinnamon, 120 capsules. Barcode 810139571285.
+  'nutricost-nutricost-berberine-hci-with-ceylon-cinnamon-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-berberine-hci-with-ceylon-cinnamon-capsules-120-capsules.jpg',
+    ),
+  // Organic Ceylon cinnamon powder, 2 lb. Barcode 810014679969.
+  'nutricost-nutricost-organic-ceylon-cinnamon-powder-2-lb': catalogShot(
+    'nutricost-nutricost-organic-ceylon-cinnamon-powder-2-lb.jpg',
+  ),
+  // Performance myHMB, 60 capsules. Barcode 810139571711. Not the 120.
+  'nutricost-nutricost-performance-myhmb-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-performance-myhmb-capsules-60-capsules.jpg',
+  ),
+  // Egg shell membrane, 120 capsules. Barcode 810139574651.
+  'nutricost-nutricost-egg-shell-membrane-120-capsules': catalogShot(
+    'nutricost-nutricost-egg-shell-membrane-120-capsules.jpg',
+  ),
+  // Colostrum, 120 capsules. Barcode 702669934121.
+  'nutricost-nutricost-colostrum-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-colostrum-capsules-120-capsules.jpg',
+  ),
+  // Citrus bergamot, 120 capsules. Barcode 810014678412.
+  'nutricost-nutricost-citrus-bergamot-120-capsules': catalogShot(
+    'nutricost-nutricost-citrus-bergamot-120-capsules.jpg',
+  ),
+  // Organic MCT oil powder, unflavored, 1 lb. Barcode 810139573258.
+  // Not the 0.5 lb pouch. Not the 5 lb.
+  'nutricost-nutricost-organic-mct-oil-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-mct-oil-powder-1-lb.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12728,6 +12815,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-nadh-120-capsules-2',
   // Dihydroberberine 200 mg must not inherit the 100 mg 60.
   'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2',
+  // Vitamins night run 2026-10-12 1:45 AM PT batch 1.
+  // 5 lb shares the 1 lb formula. The page has 1 lb and 0.5 lb only.
+  // Do not inherit the 1 lb pouch.
+  'nutricost-nutricost-organic-mct-oil-powder-5-lb',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -25871,3 +25962,124 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-clove-10-1-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-clove-10-1-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-irish-sea-moss-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-irish-sea-moss-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turmeric-ginger-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turmeric-ginger-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-glycinate-210mg-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-glycinate-210mg-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-glycinate-210mg-360-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-glycinate-210mg-360-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-copper-glycinate-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-copper-glycinate-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-copper-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-copper-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-apple-pectin-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-apple-pectin-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-caprylic-acid-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-caprylic-acid-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bioperine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-bioperine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dihydromyricetin-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dihydromyricetin-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-cysteine-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-cysteine-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lumbrokinase-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-lumbrokinase-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-berberine-hci-with-ceylon-cinnamon-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-berberine-hci-with-ceylon-cinnamon-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-ceylon-cinnamon-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-ceylon-cinnamon-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-performance-myhmb-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-performance-myhmb-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-egg-shell-membrane-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-egg-shell-membrane-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-colostrum-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-colostrum-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-citrus-bergamot-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-citrus-bergamot-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-mct-oil-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-mct-oil-powder-1-lb.jpg',
+);
+{
+  const mct5 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
+    formulaId: 'nutricost-nutricost-organic-mct-oil-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (!mct5?.url.startsWith('data:image/svg') || mct5.verifiedSku) {
+    throw new Error('mct 5 lb must stay a letter, not the 1 lb pouch');
+  }
+  const seaMossTwin = previewOverlayImage({
+    id: 'nutricost-nutricost-irish-sea-moss-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-irish-sea-moss-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !seaMossTwin?.verifiedSku
+    || !seaMossTwin.url.endsWith('/nutricost-nutricost-irish-sea-moss-capsules-120-capsules.jpg')
+  ) {
+    throw new Error('irish sea moss duplicate must inherit the 1,200 mg 120 face');
+  }
+}
