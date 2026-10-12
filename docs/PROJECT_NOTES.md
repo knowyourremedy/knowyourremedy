@@ -25,6 +25,7 @@ Catalog job
 - Xyzal US OTC. PR #474 / 90d46f4 wrote 8 tablet rows on xyzal-b148-tablets. Avoid on titanium dioxide. PR #487 / c81eeca wrote the grape 5 oz and bubble gum 5 oz on xyzal-b149-childrens-liquid. Avoid on methylparaben and propylparaben. UPC 041167353059 stays on the grape 5 oz. UPC 041167353011 stays on the bubble gum 5 oz. An 11-digit spec with a valid check digit is a scannable barcode. Bars are not required. Glacial acetic acid maps to acetic acid, Cleared. Sodium acetate trihydrate maps to sodium acetate anhydrous, Cleared. Not potassium acetate. Do not write the 10 oz liquids, the 5ct, or the 45ct. No sale page, or Google AI mode was not shown. They stay open. Not a hunt. Kits and Tutti Frutti stay off. US only. No Canada. No EU. No store-brand levocetirizine.
 - PR #489 / ce97516 attached four tablet codes in batch150. 20ct 041167351123. 40ct 041167351185. 60ct 041167351192. 90ct 041167351345. Do not attach those four again.
 - Xyzal catalog pass is closed except the named holds. Do not write the 10 oz liquids, the 5ct, or the 45ct. Not a hunt.
+- Batch152 / 85a3518 wrote Nasacort 30, 60, and 120, and Flonase Sensimist 60, 120, and children's 60. All Usable. Dextrose anhydrous maps to dextrose, Caution. Hydrochloric acid is Caution as a finished-spray pH adjuster. Kits and the discontinued Nasacort 3x120 stay off. Still-open counts stay off Brandon's hunt list. Do not reopen them.
 
 Process lock
 - A bot paste starts by naming the bot. If it is the wrong bot, it stops and tells Brandon which chat the paste belongs in.
