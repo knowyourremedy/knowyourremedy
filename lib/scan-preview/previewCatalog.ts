@@ -2378,6 +2378,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-organic-mct-oil-powder-5-lb': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-12 5:30 AM PT batch 1.
+  // Boron capsules panel has no barcode and no count. Live bottles
+  // are 3 mg, 5 mg, and 10 mg, each 240 capsules. Do not glue the 3 mg.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-boron-capsules-panel': brandMark('nutricost-mark.png'),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -12626,6 +12632,86 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     catalogShot(
       'nutricost-nutricost-niacin-as-inositol-hexanicotinate-capsules-flush-free-120-capsules.jpg',
     ),
+  // Vitamins night run 2026-10-12 5:30 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // L-Serine, 500 mg, 120 capsules. Barcode 810014671321. Not the powder.
+  'nutricost-nutricost-l-serine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-serine-capsules-120-capsules.jpg',
+  ),
+  // Boron, 3 mg, 240 capsules. Barcode 810014671994. Not the 10 mg.
+  // The no-count panel does not inherit this face.
+  'nutricost-nutricost-boron-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-boron-capsules-240-capsules.jpg',
+  ),
+  // Boron, 10 mg, 240 capsules. Barcode 810014674858. Not the 3 mg.
+  'nutricost-nutricost-boron-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-boron-capsules-240-capsules-2.jpg',
+  ),
+  // Blueberry extract, 160 mg, 180 capsules. Barcode 857077008091.
+  'nutricost-nutricost-blueberry-extract-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-blueberry-extract-capsules-180-capsules.jpg',
+  ),
+  // P5P, 50 mg, 240 capsules. Barcode 810014672229. Not the 100 mg.
+  'nutricost-nutricost-p5p-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-p5p-capsules-240-capsules.jpg',
+  ),
+  // P5P, 100 mg, 240 capsules. Barcode 810014672236. Not the 50 mg.
+  'nutricost-nutricost-p5p-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-p5p-capsules-240-capsules-2.jpg',
+  ),
+  // Caffeine + L-theanine, 30 capsules. Barcode 810139572107. Not the 240.
+  'nutricost-nutricost-caffeine-l-theanine-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-caffeine-l-theanine-capsules-30-capsules.jpg',
+  ),
+  // White willow bark, 600 mg, 240 capsules. Barcode 810014672069. Not the 120.
+  'nutricost-nutricost-white-willow-bark-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-white-willow-bark-capsules-240-capsules.jpg',
+  ),
+  // Olive leaf extract, 750 mg, 90 capsules. Barcode 810014671420.
+  'nutricost-nutricost-olive-leaf-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-olive-leaf-capsules-90-capsules.jpg',
+  ),
+  // Phosphatidyl serine, soy free, 100 mg, 120 capsules. Barcode 810014671239.
+  'nutricost-nutricost-phosphatidyl-serine-soy-free-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-phosphatidyl-serine-soy-free-capsules-120-capsules.jpg',
+    ),
+  // Slippery elm bark, 1,000 mg, 120 capsules. Barcode 810014671468.
+  'nutricost-nutricost-slippery-elm-bark-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-slippery-elm-bark-capsules-120-capsules.jpg',
+  ),
+  // Himalayan salt, 1,000 mg, 240 capsules. Barcode 810014671581.
+  'nutricost-nutricost-himalayan-salt-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-himalayan-salt-capsules-240-capsules.jpg',
+  ),
+  // Moringa, 500 mg, 180 capsules. Barcode 810014671710.
+  'nutricost-nutricost-moringa-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-moringa-capsules-180-capsules.jpg',
+  ),
+  // Gotu kola, 500 mg, 180 capsules. Barcode 810014672298.
+  'nutricost-nutricost-gotu-kola-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-gotu-kola-capsules-180-capsules.jpg',
+  ),
+  // Organic inulin powder, 1 lb. Barcode 810014671086.
+  'nutricost-nutricost-organic-inulin-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-inulin-powder-1-lb.jpg',
+  ),
+  // Pterostilbene, 100 mg, 120 capsules. Barcode 810014672021.
+  'nutricost-nutricost-pterostilbene-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-pterostilbene-capsules-120-capsules.jpg',
+  ),
+  // Citric acid powder, 1 lb. Barcode 810014671963. Not the 2 lb or the 5 lb.
+  'nutricost-nutricost-citric-acid-powder-1-lb': catalogShot(
+    'nutricost-nutricost-citric-acid-powder-1-lb.jpg',
+  ),
+  // Potassium bicarbonate powder, 2 lb. Barcode 810014672205. Not the 1 lb.
+  'nutricost-nutricost-potassium-bicarbonate-powder-2-lb': catalogShot(
+    'nutricost-nutricost-potassium-bicarbonate-powder-2-lb.jpg',
+  ),
+  // Potassium bicarbonate powder, 1 lb. Barcode 810014672199. Not the 2 lb.
+  'nutricost-nutricost-potassium-bicarbonate-powder-1-lb': catalogShot(
+    'nutricost-nutricost-potassium-bicarbonate-powder-1-lb.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13284,6 +13370,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules',
   // Unflavored 60 servings must not inherit the unflavored 30.
   'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2',
+  // Vitamins night run 2026-10-12 5:30 AM PT batch 1.
+  // Shared-formula counts and strengths. Do not inherit a sibling face.
+  // No-count boron panel must not inherit the 3 mg 240.
+  'nutricost-nutricost-boron-capsules-panel',
+  // P5P 100 mg 240 must not inherit the 50 mg 240.
+  'nutricost-nutricost-p5p-capsules-240-capsules-2',
+  // Potassium bicarbonate 2 lb must not inherit the 1 lb.
+  'nutricost-nutricost-potassium-bicarbonate-powder-2-lb',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -27214,4 +27308,134 @@ assertExactCarton(
   ) {
     throw new Error('zinc gluconate duplicate must inherit the 180 face');
   }
+  const boronPanel = previewOverlayImage({
+    id: 'nutricost-nutricost-boron-capsules-panel',
+    formulaId: 'nutricost-nutricost-boron-capsules-240-capsules',
+    brand: 'Nutricost',
+  });
+  if (!boronPanel?.url.endsWith('/nutricost-mark.png') || boronPanel.verifiedSku) {
+    throw new Error('boron panel must stay the brand mark, not the 3 mg 240');
+  }
+  const p5p100 = previewOverlayImage({
+    id: 'nutricost-nutricost-p5p-capsules-240-capsules-2',
+    formulaId: 'nutricost-nutricost-p5p-capsules-240-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !p5p100?.verifiedSku
+    || !p5p100.url.endsWith('/nutricost-nutricost-p5p-capsules-240-capsules-2.jpg')
+  ) {
+    throw new Error('P5P 100 mg must not inherit the 50 mg');
+  }
+  const kbicarb2 = previewOverlayImage({
+    id: 'nutricost-nutricost-potassium-bicarbonate-powder-2-lb',
+    formulaId: 'nutricost-nutricost-potassium-bicarbonate-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !kbicarb2?.verifiedSku
+    || !kbicarb2.url.endsWith('/nutricost-nutricost-potassium-bicarbonate-powder-2-lb.jpg')
+  ) {
+    throw new Error('potassium bicarbonate 2 lb must not inherit the 1 lb');
+  }
 }
+assertExactCarton(
+  'nutricost-nutricost-l-serine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-serine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-boron-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-boron-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-boron-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-boron-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-blueberry-extract-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-blueberry-extract-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-p5p-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-p5p-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-p5p-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-p5p-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-caffeine-l-theanine-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-caffeine-l-theanine-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-white-willow-bark-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-white-willow-bark-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-olive-leaf-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-olive-leaf-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-phosphatidyl-serine-soy-free-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-phosphatidyl-serine-soy-free-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-slippery-elm-bark-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-slippery-elm-bark-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-himalayan-salt-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-himalayan-salt-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-moringa-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-moringa-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-gotu-kola-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-gotu-kola-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-inulin-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-inulin-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pterostilbene-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pterostilbene-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-citric-acid-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-citric-acid-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-potassium-bicarbonate-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-potassium-bicarbonate-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-potassium-bicarbonate-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-potassium-bicarbonate-powder-1-lb.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-boron-capsules-panel',
+  'Nutricost',
+  'nutricost-mark.png',
+);
