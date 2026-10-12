@@ -590,7 +590,6 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     productName: 'Nasacort Allergy 24HR — kids-facing',
     brand: 'Nasacort',
     category: ALLERGIES,
-    barcode: '041167580059',
     formulaId: 'nasacort-allergy-24hr-bkc-ps80',
     audience: KIDS,
     minAge: 2,
