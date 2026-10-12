@@ -2369,6 +2369,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-1-lb': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-12 1:45 AM PT batch 2.
+  // Organic MCT oil powder, 5 lb. No barcode on the row.
+  // nutricost.com lists 1 lb (810139573258) and 0.5 lb (810014670874).
+  // No 5 lb front. Do not glue the 1 lb pouch.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-organic-mct-oil-powder-5-lb': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -12196,6 +12205,87 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-organic-mct-oil-powder-1-lb': catalogShot(
     'nutricost-nutricost-organic-mct-oil-powder-1-lb.jpg',
   ),
+  // Vitamins night run 2026-10-12 1:45 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Triple magnesium complex, 120 capsules. Barcode 810139571834.
+  'nutricost-nutricost-triple-magnesium-complex-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-triple-magnesium-complex-capsules-120-capsules.jpg',
+    ),
+  // Beef gelatin powder, 2 lb. Barcode 810139571186. Not the 1 lb.
+  'nutricost-nutricost-beef-gelatin-powder-2-lb': catalogShot(
+    'nutricost-nutricost-beef-gelatin-powder-2-lb.jpg',
+  ),
+  // Multi collagen hair, skin, and nails, unflavored, 30 servings.
+  // Barcode 810139571193. Not hot cocoa.
+  'nutricost-nutricost-multi-collagen-hair-skin-nails-formula-30-servings':
+    catalogShot(
+      'nutricost-nutricost-multi-collagen-hair-skin-nails-formula-30-servings.jpg',
+    ),
+  // L-methylfolate, 1,000 mcg, 120 capsules. Barcode 810014670232. Not the 15 mg.
+  'nutricost-nutricost-l-methylfolate-120-capsules': catalogShot(
+    'nutricost-nutricost-l-methylfolate-120-capsules.jpg',
+  ),
+  // L-methylfolate, 15 mg, 120 capsules. Barcode 810139571827. Not the 1,000 mcg.
+  'nutricost-nutricost-l-methylfolate-120-capsules-2': catalogShot(
+    'nutricost-nutricost-l-methylfolate-120-capsules-2.jpg',
+  ),
+  // Magnesium citrate, 60 capsules. Barcode 810139574170. Not the 240.
+  'nutricost-nutricost-magnesium-citrate-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-citrate-capsules-60-capsules.jpg',
+  ),
+  // Magnesium citrate, 240 capsules. Barcode 810014671901. Not the 60.
+  'nutricost-nutricost-magnesium-citrate-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-citrate-capsules-240-capsules.jpg',
+  ),
+  // Bee pollen powder, 8 oz. Barcode 810139571162. Not the capsules.
+  'nutricost-nutricost-bee-pollen-powder-8-oz': catalogShot(
+    'nutricost-nutricost-bee-pollen-powder-8-oz.jpg',
+  ),
+  // Bee pollen, 240 capsules. Barcode 810139571155. Not the powder.
+  'nutricost-nutricost-bee-pollen-240-capsules': catalogShot(
+    'nutricost-nutricost-bee-pollen-240-capsules.jpg',
+  ),
+  // Mimosa pudica seed 10:1, 120 capsules. Barcode 810014679907.
+  'nutricost-nutricost-mimosa-pudica-seed-10-1-120-capsules': catalogShot(
+    'nutricost-nutricost-mimosa-pudica-seed-10-1-120-capsules.jpg',
+  ),
+  // Iron bisglycinate, 240 capsules. Barcode 810139572152. Not the 120.
+  'nutricost-nutricost-iron-bisglycinate-240-capsules': catalogShot(
+    'nutricost-nutricost-iron-bisglycinate-240-capsules.jpg',
+  ),
+  // Iron bisglycinate, 120 capsules. Barcode 810139572145. Not the 240.
+  'nutricost-nutricost-iron-bisglycinate-120-capsules': catalogShot(
+    'nutricost-nutricost-iron-bisglycinate-120-capsules.jpg',
+  ),
+  // Magnesium taurate, 240 capsules. Barcode 810014678597.
+  'nutricost-nutricost-magnesium-taurate-240-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-taurate-240-capsules.jpg',
+  ),
+  // Apigenin, 180 capsules. Barcode 810014678467.
+  'nutricost-nutricost-apigenin-180-capsules': catalogShot(
+    'nutricost-nutricost-apigenin-180-capsules.jpg',
+  ),
+  // Lycopene, 20 mg, 60 softgels. Barcode 810014678399. Not the 50 mg. Not the 120.
+  'nutricost-nutricost-lycopene-60-softgels': catalogShot(
+    'nutricost-nutricost-lycopene-60-softgels.jpg',
+  ),
+  // Lycopene, 50 mg, 60 softgels. Barcode 810014678405. Not the 20 mg. Not the 120.
+  'nutricost-nutricost-lycopene-60-softgels-2': catalogShot(
+    'nutricost-nutricost-lycopene-60-softgels-2.jpg',
+  ),
+  // Lycopene, 20 mg, 120 softgels. Barcode 810014673776. Not the 50 mg. Not the 60.
+  'nutricost-nutricost-lycopene-120-softgels': catalogShot(
+    'nutricost-nutricost-lycopene-120-softgels.jpg',
+  ),
+  // Lycopene, 50 mg, 120 softgels. Barcode 810014673783. Not the 20 mg. Not the 60.
+  'nutricost-nutricost-lycopene-120-softgels-2': catalogShot(
+    'nutricost-nutricost-lycopene-120-softgels-2.jpg',
+  ),
+  // Lactoferrin, 60 capsules. Barcode 810139571148.
+  'nutricost-nutricost-lactoferrin-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-lactoferrin-capsules-60-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12819,6 +12909,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 5 lb shares the 1 lb formula. The page has 1 lb and 0.5 lb only.
   // Do not inherit the 1 lb pouch.
   'nutricost-nutricost-organic-mct-oil-powder-5-lb',
+  // Vitamins night run 2026-10-12 1:45 AM PT batch 2.
+  // Shared-formula strengths. Do not inherit a sibling face.
+  // 15 mg methylfolate must not inherit the 1,000 mcg 120.
+  'nutricost-nutricost-l-methylfolate-120-capsules-2',
+  // Lycopene 50 mg 120 must not inherit the 20 mg 120.
+  'nutricost-nutricost-lycopene-120-softgels-2',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -26062,14 +26158,131 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-organic-mct-oil-powder-1-lb.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-triple-magnesium-complex-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-triple-magnesium-complex-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beef-gelatin-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-beef-gelatin-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-multi-collagen-hair-skin-nails-formula-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-multi-collagen-hair-skin-nails-formula-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-methylfolate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-methylfolate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-methylfolate-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-l-methylfolate-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-citrate-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-citrate-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-citrate-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-citrate-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bee-pollen-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-bee-pollen-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bee-pollen-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-bee-pollen-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-mimosa-pudica-seed-10-1-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-mimosa-pudica-seed-10-1-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-iron-bisglycinate-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-iron-bisglycinate-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-iron-bisglycinate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-iron-bisglycinate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-taurate-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-taurate-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-apigenin-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-apigenin-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lycopene-60-softgels',
+  'Nutricost',
+  'nutricost-nutricost-lycopene-60-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lycopene-60-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-lycopene-60-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lycopene-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-lycopene-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lycopene-120-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-lycopene-120-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lactoferrin-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-lactoferrin-capsules-60-capsules.jpg',
+);
 {
   const mct5 = previewOverlayImage({
     id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
     formulaId: 'nutricost-nutricost-organic-mct-oil-powder-1-lb',
     brand: 'Nutricost',
   });
-  if (!mct5?.url.startsWith('data:image/svg') || mct5.verifiedSku) {
-    throw new Error('mct 5 lb must stay a letter, not the 1 lb pouch');
+  if (!mct5?.url.endsWith('/nutricost-mark.png') || mct5.verifiedSku) {
+    throw new Error('mct 5 lb must stay the brand mark, not the 1 lb pouch');
+  }
+  const methyl15 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-methylfolate-120-capsules-2',
+    formulaId: 'nutricost-nutricost-l-methylfolate-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !methyl15?.verifiedSku
+    || !methyl15.url.endsWith('/nutricost-nutricost-l-methylfolate-120-capsules-2.jpg')
+  ) {
+    throw new Error('15 mg methylfolate must not inherit the 1,000 mcg bottle');
+  }
+  const lycopene50 = previewOverlayImage({
+    id: 'nutricost-nutricost-lycopene-120-softgels-2',
+    formulaId: 'nutricost-nutricost-lycopene-120-softgels',
+    brand: 'Nutricost',
+  });
+  if (
+    !lycopene50?.verifiedSku
+    || !lycopene50.url.endsWith('/nutricost-nutricost-lycopene-120-softgels-2.jpg')
+  ) {
+    throw new Error('lycopene 50 mg 120 must not inherit the 20 mg 120');
   }
   const seaMossTwin = previewOverlayImage({
     id: 'nutricost-nutricost-irish-sea-moss-capsules-120-capsules-2',
