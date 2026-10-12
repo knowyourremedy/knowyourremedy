@@ -152,6 +152,7 @@ import {
   BATCH150_KYR5D_XYZAL_UPC_OVERRIDE,
   BATCH151_KYR6B_NASAL_US_OTC,
   BATCH152_KYR6B_NASACORT_SENSIMIST,
+  BATCH153_KYR6B_SENSIMIST_72,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -330,6 +331,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH149_KYR6B_XYZAL_CHILDRENS_LIQUID,
   ...BATCH151_KYR6B_NASAL_US_OTC,
   ...BATCH152_KYR6B_NASACORT_SENSIMIST,
+  ...BATCH153_KYR6B_SENSIMIST_72,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /

@@ -149,3 +149,4 @@ export { BATCH149_KYR6B_XYZAL_CHILDRENS_LIQUID } from './batch149-kyr6b-xyzal-ch
 export { BATCH150_KYR5D_XYZAL_UPC_OVERRIDE } from './batch150-kyr5d-xyzal-upc-override';
 export { BATCH151_KYR6B_NASAL_US_OTC } from './batch151-kyr6b-nasal-us-otc';
 export { BATCH152_KYR6B_NASACORT_SENSIMIST } from './batch152-kyr6b-nasacort-sensimist';
+export { BATCH153_KYR6B_SENSIMIST_72 } from './batch153-kyr6b-sensimist-72';
