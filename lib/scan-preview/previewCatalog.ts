@@ -12020,6 +12020,95 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-corn-silk-capsules-90-capsules': catalogShot(
     'nutricost-nutricost-corn-silk-capsules-90-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 12:30 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Pre-Workout Complex with creatine, Peach Mango, 30 servings.
+  // Barcode 810139570486. Not Fruit Punch. Not Blue Raspberry.
+  'nutricost-nutricost-pre-workout-complex-with-creatine-30-servings':
+    catalogShot(
+      'nutricost-nutricost-pre-workout-complex-with-creatine-30-servings.jpg',
+    ),
+  // Hyaluronic acid powder, unflavored, 50 g. Barcode 810139571230.
+  'nutricost-nutricost-hyaluronic-acid-powder-50-gm': catalogShot(
+    'nutricost-nutricost-hyaluronic-acid-powder-50-gm.jpg',
+  ),
+  // Organic baobab fruit powder, unflavored, 1 lb. Barcode 810139572312.
+  'nutricost-nutricost-organic-baobab-fruit-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-baobab-fruit-powder-1-lb.jpg',
+  ),
+  // NADH 20 mg, 120 capsules. Barcode 810139575894. Not the 10 mg.
+  'nutricost-nutricost-nadh-120-capsules': catalogShot(
+    'nutricost-nutricost-nadh-120-capsules.jpg',
+  ),
+  // NADH 10 mg, 120 capsules. Barcode 810139575887. Not the 20 mg.
+  'nutricost-nutricost-nadh-120-capsules-2': catalogShot(
+    'nutricost-nutricost-nadh-120-capsules-2.jpg',
+  ),
+  // Sunflower lecithin powder, 1 lb. Barcode 810139575900.
+  'nutricost-nutricost-sunflower-lecithin-powder-1-lb': catalogShot(
+    'nutricost-nutricost-sunflower-lecithin-powder-1-lb.jpg',
+  ),
+  // Creatine HCl powder, 16 oz. Barcode 810139575245.
+  'nutricost-nutricost-creatine-hcl-powder-16-oz': catalogShot(
+    'nutricost-nutricost-creatine-hcl-powder-16-oz.jpg',
+  ),
+  // Calcium, magnesium, and zinc tablets, 180 tablets. Barcode 810014678924.
+  'nutricost-nutricost-calcium-magnesium-and-zinc-tablets-180-tablets':
+    catalogShot(
+      'nutricost-nutricost-calcium-magnesium-and-zinc-tablets-180-tablets.jpg',
+    ),
+  // NAC tablets, 240 tablets. Barcode 810139574330. Not the 120.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets':
+    catalogShot(
+      'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets.jpg',
+    ),
+  // NAC tablets, 120 tablets. Barcode 810139574323. Not the 240.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-120-tablets':
+    catalogShot(
+      'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-120-tablets.jpg',
+    ),
+  // Soluble fiber, unflavored, 30 servings. Barcode 810139572626. Not berry.
+  'nutricost-nutricost-soluble-fiber-30-servings': catalogShot(
+    'nutricost-nutricost-soluble-fiber-30-servings.jpg',
+  ),
+  // Beta ecdysterone, 120 capsules. Barcode 810139575375.
+  'nutricost-nutricost-beta-ecdysterone-120-capsules': catalogShot(
+    'nutricost-nutricost-beta-ecdysterone-120-capsules.jpg',
+  ),
+  // Monolaurin, 240 capsules. Barcode 810014678665.
+  'nutricost-nutricost-monolaurin-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-monolaurin-capsules-240-capsules.jpg',
+  ),
+  // Kava kava, 60 capsules. Barcode 810139571766.
+  'nutricost-nutricost-kava-kava-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-kava-kava-capsules-60-capsules.jpg',
+  ),
+  // EAA capsules, 240 capsules. Barcode 810014678436.
+  'nutricost-nutricost-eaa-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-eaa-capsules-240-capsules.jpg',
+  ),
+  // Dihydroberberine 100 mg, 60 capsules. Barcode 810139572374. Not the 200 mg.
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-dihydroberberine-capsules-60-capsules.jpg',
+  ),
+  // Dihydroberberine 200 mg, 60 capsules. Barcode 810139572367. Not the 100 mg.
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2': catalogShot(
+    'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2.jpg',
+  ),
+  // S-acetyl-L-glutathione, 60 capsules. Barcode 810139575306.
+  'nutricost-nutricost-s-acetyl-l-glutathione-60-capsules': catalogShot(
+    'nutricost-nutricost-s-acetyl-l-glutathione-60-capsules.jpg',
+  ),
+  // Magnesium bisglycinate powder, Fruit Punch, 250 g. Barcode 810014675954.
+  // Not the unflavored 20 oz.
+  'nutricost-nutricost-magnesium-bisglycinate-250-gm': catalogShot(
+    'nutricost-nutricost-magnesium-bisglycinate-250-gm.jpg',
+  ),
+  // DGL deglycyrrhizinated licorice extract, 120 capsules. Barcode 810139572428.
+  'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules.jpg',
+    ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12633,6 +12722,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-organic-spirulina-chlorella-360-tablets',
   // Turmeric 90-count shares the 120 formula. Do not inherit the 120.
   'nutricost-b79-turmeric-90-capsules',
+  // Vitamins night run 2026-10-12 12:30 AM PT batch 2.
+  // Shared-formula strengths. Do not inherit a sibling face.
+  // NADH 10 mg must not inherit the 20 mg 120.
+  'nutricost-nutricost-nadh-120-capsules-2',
+  // Dihydroberberine 200 mg must not inherit the 100 mg 60.
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -25675,4 +25770,104 @@ assertExactCarton(
   'nutricost-nutricost-corn-silk-capsules-90-capsules',
   'Nutricost',
   'nutricost-nutricost-corn-silk-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pre-workout-complex-with-creatine-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-pre-workout-complex-with-creatine-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hyaluronic-acid-powder-50-gm',
+  'Nutricost',
+  'nutricost-nutricost-hyaluronic-acid-powder-50-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-baobab-fruit-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-baobab-fruit-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nadh-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nadh-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nadh-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-nadh-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sunflower-lecithin-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-sunflower-lecithin-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-hcl-powder-16-oz',
+  'Nutricost',
+  'nutricost-nutricost-creatine-hcl-powder-16-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-magnesium-and-zinc-tablets-180-tablets',
+  'Nutricost',
+  'nutricost-nutricost-calcium-magnesium-and-zinc-tablets-180-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-120-tablets',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-tablets-120-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-soluble-fiber-30-servings',
+  'Nutricost',
+  'nutricost-nutricost-soluble-fiber-30-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-ecdysterone-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-beta-ecdysterone-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-monolaurin-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-monolaurin-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-kava-kava-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-kava-kava-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-eaa-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-eaa-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-dihydroberberine-capsules-60-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-s-acetyl-l-glutathione-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-s-acetyl-l-glutathione-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-bisglycinate-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-bisglycinate-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dgl-deglycyrrhizinated-licorice-extract-capsules-120-capsules.jpg',
 );
