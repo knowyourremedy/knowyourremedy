@@ -12286,6 +12286,90 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-lactoferrin-capsules-60-capsules': catalogShot(
     'nutricost-nutricost-lactoferrin-capsules-60-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 3:00 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Magnesium+ extra strength, 420 mg, 120 capsules. Barcode 810014672083.
+  // Not the 240.
+  'nutricost-nutricost-magnesium-extra-strength-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-magnesium-extra-strength-capsules-120-capsules.jpg',
+    ),
+  // Magnesium+ extra strength, 420 mg, 240 capsules. Barcode 810014672779.
+  // Not the 120. Different other-ingredients line.
+  'nutricost-nutricost-magnesium-extra-strength-capsules-240-capsules':
+    catalogShot(
+      'nutricost-nutricost-magnesium-extra-strength-capsules-240-capsules.jpg',
+    ),
+  // Fisetin, 100 mg, 60 capsules. Barcode 810014678566.
+  'nutricost-nutricost-fisetin-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-fisetin-capsules-60-capsules.jpg',
+  ),
+  // Bee propolis 10:1, 120 capsules. Barcode 810014678863.
+  'nutricost-nutricost-bee-propolis-10-1-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-bee-propolis-10-1-capsules-120-capsules.jpg',
+  ),
+  // Boswellia extract 65%, 180 capsules. Barcode 810014677026.
+  'nutricost-nutricost-boswellia-extract-65-boswellic-acid-capsules-180-capsules':
+    catalogShot(
+      'nutricost-nutricost-boswellia-extract-65-boswellic-acid-capsules-180-capsules.jpg',
+    ),
+  // Krill oil complex, 60 softgels. Barcode 702669932004.
+  'nutricost-nutricost-krill-oil-complex-softgels-60-softgels': catalogShot(
+    'nutricost-nutricost-krill-oil-complex-softgels-60-softgels.jpg',
+  ),
+  // Zinc carnosine, 120 capsules. Barcode 810014677033.
+  'nutricost-nutricost-zinc-carnosine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-carnosine-capsules-120-capsules.jpg',
+  ),
+  // Pau d'arco, 120 capsules. Barcode 810014677002.
+  'nutricost-nutricost-pau-d-arco-120-capsules': catalogShot(
+    'nutricost-nutricost-pau-d-arco-120-capsules.jpg',
+  ),
+  // Organic fiber, 150 capsules. Barcode 810014674803. Not the 300.
+  'nutricost-nutricost-organic-fiber-capsules-150-capsules': catalogShot(
+    'nutricost-nutricost-organic-fiber-capsules-150-capsules.jpg',
+  ),
+  // L-leucine, 120 capsules. Barcode 810014675008.
+  'nutricost-nutricost-l-leucine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-leucine-capsules-120-capsules.jpg',
+  ),
+  // Spermidine wheat germ, 120 capsules. Barcode 810014671499.
+  'nutricost-nutricost-spermidine-wheat-germ-120-capsules': catalogShot(
+    'nutricost-nutricost-spermidine-wheat-germ-120-capsules.jpg',
+  ),
+  // Feverfew, 120 capsules. Barcode 810014674933.
+  'nutricost-nutricost-feverfew-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-feverfew-capsules-120-capsules.jpg',
+  ),
+  // CoQ10, 100 mg, 60 capsules. Barcode 810014671642. Not the 200 mg. Not the 120.
+  'nutricost-nutricost-coq10-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-coq10-capsules-60-capsules.jpg',
+  ),
+  // CoQ10, 200 mg, 60 capsules. Barcode 810014671659. Not the 100 mg. Not the 120.
+  'nutricost-nutricost-coq10-capsules-60-capsules-2': catalogShot(
+    'nutricost-nutricost-coq10-capsules-60-capsules-2.jpg',
+  ),
+  // CoQ10, 100 mg, 120 capsules. Barcode 702669931410.
+  // The same-barcode duplicate row inherits this face.
+  'nutricost-nutricost-coq10-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-coq10-capsules-120-capsules.jpg',
+  ),
+  // L-glycine, 120 capsules. Barcode 810014674889.
+  'nutricost-nutricost-l-glycine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-glycine-capsules-120-capsules.jpg',
+  ),
+  // Iodine, 120 capsules. Barcode 810014674902.
+  'nutricost-nutricost-iodine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-iodine-capsules-120-capsules.jpg',
+  ),
+  // Turkesterone, 30 capsules. Barcode 810139572084. Not the 120.
+  'nutricost-nutricost-turkesterone-30-capsules': catalogShot(
+    'nutricost-nutricost-turkesterone-30-capsules.jpg',
+  ),
+  // Turkesterone, 120 capsules. Barcode 810014674414. Not the 30.
+  'nutricost-nutricost-turkesterone-120-capsules': catalogShot(
+    'nutricost-nutricost-turkesterone-120-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12915,6 +12999,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-l-methylfolate-120-capsules-2',
   // Lycopene 50 mg 120 must not inherit the 20 mg 120.
   'nutricost-nutricost-lycopene-120-softgels-2',
+  // Vitamins night run 2026-10-12 3:00 AM PT batch 1.
+  // Shared-formula counts and strengths. Do not inherit a sibling face.
+  // 100 mg 60 must not inherit the 100 mg 120.
+  'nutricost-nutricost-coq10-capsules-60-capsules',
+  // 200 mg 60 must not inherit the 100 mg 120.
+  'nutricost-nutricost-coq10-capsules-60-capsules-2',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -26253,6 +26343,101 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-lactoferrin-capsules-60-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-magnesium-extra-strength-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-extra-strength-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-extra-strength-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-extra-strength-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-fisetin-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-fisetin-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bee-propolis-10-1-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-bee-propolis-10-1-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-boswellia-extract-65-boswellic-acid-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-boswellia-extract-65-boswellic-acid-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-krill-oil-complex-softgels-60-softgels',
+  'Nutricost',
+  'nutricost-nutricost-krill-oil-complex-softgels-60-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-carnosine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-carnosine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pau-d-arco-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pau-d-arco-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-fiber-capsules-150-capsules',
+  'Nutricost',
+  'nutricost-nutricost-organic-fiber-capsules-150-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-leucine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-leucine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-spermidine-wheat-germ-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-spermidine-wheat-germ-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-feverfew-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-feverfew-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coq10-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-coq10-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coq10-capsules-60-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-coq10-capsules-60-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coq10-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-coq10-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glycine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-glycine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-iodine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-iodine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turkesterone-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turkesterone-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turkesterone-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turkesterone-120-capsules.jpg',
+);
 {
   const mct5 = previewOverlayImage({
     id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
@@ -26294,5 +26479,38 @@ assertExactCarton(
     || !seaMossTwin.url.endsWith('/nutricost-nutricost-irish-sea-moss-capsules-120-capsules.jpg')
   ) {
     throw new Error('irish sea moss duplicate must inherit the 1,200 mg 120 face');
+  }
+  const coq60 = previewOverlayImage({
+    id: 'nutricost-nutricost-coq10-capsules-60-capsules',
+    formulaId: 'nutricost-nutricost-coq10-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !coq60?.verifiedSku
+    || !coq60.url.endsWith('/nutricost-nutricost-coq10-capsules-60-capsules.jpg')
+  ) {
+    throw new Error('CoQ10 100 mg 60 must not inherit the 100 mg 120');
+  }
+  const coq60b = previewOverlayImage({
+    id: 'nutricost-nutricost-coq10-capsules-60-capsules-2',
+    formulaId: 'nutricost-nutricost-coq10-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !coq60b?.verifiedSku
+    || !coq60b.url.endsWith('/nutricost-nutricost-coq10-capsules-60-capsules-2.jpg')
+  ) {
+    throw new Error('CoQ10 200 mg 60 must not inherit the 100 mg 120');
+  }
+  const coq120dup = previewOverlayImage({
+    id: 'nutricost-nutricost-coq10-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-coq10-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !coq120dup?.verifiedSku
+    || !coq120dup.url.endsWith('/nutricost-nutricost-coq10-capsules-120-capsules.jpg')
+  ) {
+    throw new Error('CoQ10 100 mg 120 duplicate must inherit that face');
   }
 }
