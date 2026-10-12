@@ -12370,6 +12370,95 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-turkesterone-120-capsules': catalogShot(
     'nutricost-nutricost-turkesterone-120-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 3:00 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Inositol powder, 1 lb. Barcode 810014671758.
+  'nutricost-nutricost-inositol-powder-1-lb': catalogShot(
+    'nutricost-nutricost-inositol-powder-1-lb.jpg',
+  ),
+  // Strontium, 120 capsules. Barcode 810014674377. Not the 240.
+  'nutricost-nutricost-strontium-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-strontium-capsules-120-capsules.jpg',
+  ),
+  // Organic shatavari capsules, 180 capsules. Barcode 810014672977.
+  // Not the powder.
+  'nutricost-nutricost-made-with-organic-shatavari-capsules-180-capsules':
+    catalogShot(
+      'nutricost-nutricost-made-with-organic-shatavari-capsules-180-capsules.jpg',
+    ),
+  // Organic spirulina capsules, 180 capsules. Barcode 702669932660.
+  'nutricost-nutricost-made-with-organic-spirulina-capsules-180-capsules':
+    catalogShot(
+      'nutricost-nutricost-made-with-organic-spirulina-capsules-180-capsules.jpg',
+    ),
+  // L-citrulline tablets, 120 tablets. Barcode 810014674131.
+  'nutricost-nutricost-l-citrulline-tablets-120-tablets': catalogShot(
+    'nutricost-nutricost-l-citrulline-tablets-120-tablets.jpg',
+  ),
+  // Organic saw palmetto capsules, 120 capsules. Barcode 810014673295.
+  // Not the powder.
+  'nutricost-nutricost-made-with-organic-saw-palmetto-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-made-with-organic-saw-palmetto-capsules-120-capsules.jpg',
+    ),
+  // Manganese, 120 capsules. Barcode 810014674308.
+  'nutricost-nutricost-manganese-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-manganese-capsules-120-capsules.jpg',
+  ),
+  // Magnesium chloride powder, unflavored, 2 lb. Barcode 810139571056.
+  'nutricost-nutricost-magnesium-chloride-powder-uf-2-lb': catalogShot(
+    'nutricost-nutricost-magnesium-chloride-powder-uf-2-lb.jpg',
+  ),
+  // Alpha lipoic acid, 60 capsules. Barcode 810014677057. Not the 120. Not the 240.
+  'nutricost-nutricost-alpha-lipoic-acid-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-alpha-lipoic-acid-capsules-60-capsules.jpg',
+  ),
+  // Artemisinin, 120 capsules. Barcode 810014674025.
+  'nutricost-nutricost-artemisinin-120-capsules': catalogShot(
+    'nutricost-nutricost-artemisinin-120-capsules.jpg',
+  ),
+  // R-alpha lipoic acid, 120 capsules. Barcode 810014674001. Not the 240.
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-r-alpha-lipoic-acid-capsules-120-capsules.jpg',
+  ),
+  // R-alpha lipoic acid, 240 capsules. Barcode 810014674018. Not the 120.
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules.jpg',
+  ),
+  // Soy isoflavones, 150 mg, 180 capsules. Barcode 810014674056.
+  'nutricost-nutricost-soy-isoflavones-150-mg-180-cap-180-capsules': catalogShot(
+    'nutricost-nutricost-soy-isoflavones-150-mg-180-cap-180-capsules.jpg',
+  ),
+  // Organic shatavari powder, unflavored, 1 lb. Barcode 810014672953.
+  // Not the capsules.
+  'nutricost-nutricost-organic-shatavari-powder-uf-1-lb': catalogShot(
+    'nutricost-nutricost-organic-shatavari-powder-uf-1-lb.jpg',
+  ),
+  // Policosanol, 40 mg, 120 capsules. Barcode 810014673912. Not 25 mg. Not 100 mg.
+  'nutricost-nutricost-policosanol-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-policosanol-capsules-120-capsules.jpg',
+  ),
+  // Policosanol, 25 mg, 120 capsules. Barcode 810014673042. Not 40 mg. Not 100 mg.
+  'nutricost-nutricost-policosanol-capsules-120-capsules-2': catalogShot(
+    'nutricost-nutricost-policosanol-capsules-120-capsules-2.jpg',
+  ),
+  // Policosanol, 100 mg, 120 capsules. Barcode 810014673929. Not 25 mg. Not 40 mg.
+  'nutricost-nutricost-policosanol-capsules-120-capsules-3': catalogShot(
+    'nutricost-nutricost-policosanol-capsules-120-capsules-3.jpg',
+  ),
+  // Calcium D-glucarate, 120 capsules. Barcode 810014673806.
+  'nutricost-nutricost-calcium-d-glucarate-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-calcium-d-glucarate-capsules-120-capsules.jpg',
+  ),
+  // Organic Irish moss powder, 1 lb. Barcode 810014673387.
+  'nutricost-nutricost-organic-irish-moss-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-irish-moss-powder-1-lb.jpg',
+  ),
+  // Creatine monohydrate capsules, 180 capsules. Barcode 810014675657.
+  // Not the 500.
+  'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13005,6 +13094,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-coq10-capsules-60-capsules',
   // 200 mg 60 must not inherit the 100 mg 120.
   'nutricost-nutricost-coq10-capsules-60-capsules-2',
+  // Vitamins night run 2026-10-12 3:00 AM PT batch 2.
+  // Shared-formula counts and strengths. Do not inherit a sibling face.
+  // 240-count R-ALA must not inherit the 120.
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules',
+  // 25 mg policosanol must not inherit the 40 mg 120.
+  'nutricost-nutricost-policosanol-capsules-120-capsules-2',
+  // 100 mg policosanol must not inherit the 40 mg 120.
+  'nutricost-nutricost-policosanol-capsules-120-capsules-3',
+  // 500-count creatine capsules must not inherit the 180. Not attempted yet.
+  'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -26438,6 +26537,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-turkesterone-120-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-inositol-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-inositol-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-strontium-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-strontium-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-made-with-organic-shatavari-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-made-with-organic-shatavari-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-made-with-organic-spirulina-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-made-with-organic-spirulina-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-tablets-120-tablets',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-tablets-120-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-made-with-organic-saw-palmetto-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-made-with-organic-saw-palmetto-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-manganese-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-manganese-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-chloride-powder-uf-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-chloride-powder-uf-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-alpha-lipoic-acid-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-alpha-lipoic-acid-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-artemisinin-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-artemisinin-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-soy-isoflavones-150-mg-180-cap-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-soy-isoflavones-150-mg-180-cap-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-shatavari-powder-uf-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-shatavari-powder-uf-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-policosanol-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-policosanol-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-policosanol-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-policosanol-capsules-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-policosanol-capsules-120-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-policosanol-capsules-120-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-d-glucarate-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-calcium-d-glucarate-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-irish-moss-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-irish-moss-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules.jpg',
+);
 {
   const mct5 = previewOverlayImage({
     id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
@@ -26512,5 +26711,48 @@ assertExactCarton(
     || !coq120dup.url.endsWith('/nutricost-nutricost-coq10-capsules-120-capsules.jpg')
   ) {
     throw new Error('CoQ10 100 mg 120 duplicate must inherit that face');
+  }
+  const rala240 = previewOverlayImage({
+    id: 'nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-r-alpha-lipoic-acid-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !rala240?.verifiedSku
+    || !rala240.url.endsWith(
+      '/nutricost-nutricost-r-alpha-lipoic-acid-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('R-ALA 240 must not inherit the 120');
+  }
+  const poli25 = previewOverlayImage({
+    id: 'nutricost-nutricost-policosanol-capsules-120-capsules-2',
+    formulaId: 'nutricost-nutricost-policosanol-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !poli25?.verifiedSku
+    || !poli25.url.endsWith('/nutricost-nutricost-policosanol-capsules-120-capsules-2.jpg')
+  ) {
+    throw new Error('policosanol 25 mg must not inherit the 40 mg');
+  }
+  const poli100 = previewOverlayImage({
+    id: 'nutricost-nutricost-policosanol-capsules-120-capsules-3',
+    formulaId: 'nutricost-nutricost-policosanol-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !poli100?.verifiedSku
+    || !poli100.url.endsWith('/nutricost-nutricost-policosanol-capsules-120-capsules-3.jpg')
+  ) {
+    throw new Error('policosanol 100 mg must not inherit the 40 mg');
+  }
+  const creat500 = previewOverlayImage({
+    id: 'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules',
+    formulaId: 'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules',
+    brand: 'Nutricost',
+  });
+  if (!creat500?.url.startsWith('data:image/svg') || creat500.verifiedSku) {
+    throw new Error('creatine 500 must stay a letter until attempted');
   }
 }
