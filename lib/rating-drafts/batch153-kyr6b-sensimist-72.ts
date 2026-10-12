@@ -61,7 +61,7 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
     category: ALLERGIES,
     formulaId: SENSIMIST,
     audience: ADULT,
-    minAge: 2,
+    minAge: 12,
     form: 'nasal spray',
     recordStatus: UNVERIFIED,
     productType: OTC,
