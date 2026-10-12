@@ -12545,6 +12545,87 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
     catalogShot(
       'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
     ),
+  // Vitamins night run 2026-10-12 4:15 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // GABA, 240 capsules. Barcode 810014672786. Not GABA + B6.
+  'nutricost-nutricost-gaba-240-capsules': catalogShot(
+    'nutricost-nutricost-gaba-240-capsules.jpg',
+  ),
+  // GABA + B6, 240 capsules. Barcode 810014672793. Not plain GABA.
+  'nutricost-nutricost-gaba-b6-240-capsules': catalogShot(
+    'nutricost-nutricost-gaba-b6-240-capsules.jpg',
+  ),
+  // Turkey tail, 120 capsules. Barcode 810014673424. Not the 240.
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-turkey-tail-mushroom-capsules-120-capsules.jpg',
+  ),
+  // Turkey tail, 240 capsules. Barcode 810014673417. Not the 120.
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules.jpg',
+  ),
+  // Nitric oxide booster, 90 capsules. Barcode 810139572053. Not the 180.
+  'nutricost-nitric-oxide-booster-90-capsules': catalogShot(
+    'nutricost-nitric-oxide-booster-90-capsules.jpg',
+  ),
+  // Andrographis, 1,000 mg, 120 capsules. Barcode 810139570868. Not the 180.
+  'nutricost-nutricost-andrographis-extract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-andrographis-extract-capsules-120-capsules.jpg',
+  ),
+  // Andrographis, 450 mg, 180 capsules. Barcode 810014673325. Not the 120.
+  'nutricost-nutricost-andrographis-extract-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-andrographis-extract-capsules-180-capsules.jpg',
+  ),
+  // Potassium chloride powder, 1 kg. Barcode 810014672878.
+  'nutricost-nutricost-potassium-chloride-powder-1-kg': catalogShot(
+    'nutricost-nutricost-potassium-chloride-powder-1-kg.jpg',
+  ),
+  // Magnesium malate powder, 300 g. Barcode 810014672946.
+  'nutricost-nutricost-magnesium-malate-powder-300-gm': catalogShot(
+    'nutricost-nutricost-magnesium-malate-powder-300-gm.jpg',
+  ),
+  // Kelp tablets, 240 tablets. Barcode 810014672625.
+  'nutricost-nutricost-kelp-tablets-240-tablets': catalogShot(
+    'nutricost-nutricost-kelp-tablets-240-tablets.jpg',
+  ),
+  // Calcium magnesium zinc + D3 powder, unflavored, 60 servings.
+  // Barcode 810014672991. Not the 30-serving tub. Not a flavored tub.
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2':
+    catalogShot(
+      'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2.jpg',
+    ),
+  // Calcium magnesium zinc + D3 powder, unflavored, 30 servings.
+  // Barcode 810014672922. Not the 60-serving tub. Not a flavored tub.
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2':
+    catalogShot(
+      'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2.jpg',
+    ),
+  // Sodium citrate powder, 1 lb. Barcode 810014672885.
+  // The same-barcode duplicate row inherits this face. Not the 2 lb.
+  'nutricost-nutricost-sodium-citrate-powder-1-lb': catalogShot(
+    'nutricost-nutricost-sodium-citrate-powder-1-lb.jpg',
+  ),
+  // Organic spirulina tablets, 240 tablets. Barcode 810014672663.
+  'nutricost-nutricost-organic-spirulina-tablets-240-tablets': catalogShot(
+    'nutricost-nutricost-organic-spirulina-tablets-240-tablets.jpg',
+  ),
+  // Organic chlorella, 240 capsules. Barcode 810014672656.
+  'nutricost-nutricost-organic-chlorella-tablets-240-capsules': catalogShot(
+    'nutricost-nutricost-organic-chlorella-tablets-240-capsules.jpg',
+  ),
+  // Zinc gluconate tablets, 180 tablets. Barcode 810139573555.
+  // The same-barcode duplicate row inherits this face. Not the 150.
+  'nutricost-nutricost-zinc-gluconate-tablets-180-tablets': catalogShot(
+    'nutricost-nutricost-zinc-gluconate-tablets-180-tablets.jpg',
+  ),
+  // Choline bitartrate, 140 capsules. Barcode 810014673158.
+  'nutricost-nutricost-choline-bitartrate-capsules-140-capsules': catalogShot(
+    'nutricost-nutricost-choline-bitartrate-capsules-140-capsules.jpg',
+  ),
+  // Flush-free niacin, 120 capsules. Barcode 810014672120.
+  'nutricost-nutricost-niacin-as-inositol-hexanicotinate-capsules-flush-free-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-niacin-as-inositol-hexanicotinate-capsules-flush-free-120-capsules.jpg',
+    ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13197,6 +13278,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // 100 mg and 50 mg pregnenolone must not inherit the 10 mg bottle.
   'nutricost-nutricost-pregnenolone-120-capsules-2',
   'nutricost-nutricost-pregnenolone-120-capsules-3',
+  // Vitamins night run 2026-10-12 4:15 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Turkey tail 240 must not inherit the 120.
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules',
+  // Unflavored 60 servings must not inherit the unflavored 30.
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -26830,6 +26917,96 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-gaba-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-gaba-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-gaba-b6-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-gaba-b6-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nitric-oxide-booster-90-capsules',
+  'Nutricost',
+  'nutricost-nitric-oxide-booster-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-andrographis-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-andrographis-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-andrographis-extract-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-andrographis-extract-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-potassium-chloride-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-potassium-chloride-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-malate-powder-300-gm',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-malate-powder-300-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-kelp-tablets-240-tablets',
+  'Nutricost',
+  'nutricost-nutricost-kelp-tablets-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2',
+  'Nutricost',
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2',
+  'Nutricost',
+  'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sodium-citrate-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-sodium-citrate-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-spirulina-tablets-240-tablets',
+  'Nutricost',
+  'nutricost-nutricost-organic-spirulina-tablets-240-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-chlorella-tablets-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-organic-chlorella-tablets-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-gluconate-tablets-180-tablets',
+  'Nutricost',
+  'nutricost-nutricost-zinc-gluconate-tablets-180-tablets.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-choline-bitartrate-capsules-140-capsules',
+  'Nutricost',
+  'nutricost-nutricost-choline-bitartrate-capsules-140-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-niacin-as-inositol-hexanicotinate-capsules-flush-free-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-niacin-as-inositol-hexanicotinate-capsules-flush-free-120-capsules.jpg',
+);
 {
   const mct5 = previewOverlayImage({
     id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
@@ -26987,5 +27164,54 @@ assertExactCarton(
     || !preg50.url.endsWith('/nutricost-nutricost-pregnenolone-120-capsules-3.jpg')
   ) {
     throw new Error('pregnenolone 50 mg must not inherit the 10 mg');
+  }
+  const turkey240 = previewOverlayImage({
+    id: 'nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-turkey-tail-mushroom-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !turkey240?.verifiedSku
+    || !turkey240.url.endsWith(
+      '/nutricost-nutricost-turkey-tail-mushroom-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('turkey tail 240 must not inherit the 120');
+  }
+  const calmag60 = previewOverlayImage({
+    id: 'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2',
+    formulaId:
+      'nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings-2',
+    brand: 'Nutricost',
+  });
+  if (
+    !calmag60?.verifiedSku
+    || !calmag60.url.endsWith(
+      '/nutricost-nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2.jpg',
+    )
+  ) {
+    throw new Error('unflavored 60 servings must not inherit the 30');
+  }
+  const citrateDup = previewOverlayImage({
+    id: 'nutricost-nutricost-sodium-citrate-powder-1-lb-2',
+    formulaId: 'nutricost-nutricost-sodium-citrate-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !citrateDup?.verifiedSku
+    || !citrateDup.url.endsWith('/nutricost-nutricost-sodium-citrate-powder-1-lb.jpg')
+  ) {
+    throw new Error('sodium citrate duplicate must inherit the 1 lb face');
+  }
+  const zincDup = previewOverlayImage({
+    id: 'nutricost-nutricost-zinc-gluconate-tablets-180-tablets-2',
+    formulaId: 'nutricost-nutricost-zinc-gluconate-tablets-180-tablets',
+    brand: 'Nutricost',
+  });
+  if (
+    !zincDup?.verifiedSku
+    || !zincDup.url.endsWith('/nutricost-nutricost-zinc-gluconate-tablets-180-tablets.jpg')
+  ) {
+    throw new Error('zinc gluconate duplicate must inherit the 180 face');
   }
 }
