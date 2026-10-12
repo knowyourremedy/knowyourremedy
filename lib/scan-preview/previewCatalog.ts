@@ -2379,6 +2379,39 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // No 3D single-count carton retrieved for this row either.
   // Do not glue the 0.5 fl oz kit.
   'aplushealth-b94-ear-twin': brandMark('aplus-health-mark.png'),
+  // Daytime photo run — Prenatal letters. Tried each SKU.
+  // Official mark. Not a letter. Not a text tile.
+  // Name covers Centrum Prenatal and Specialist Prenatal. No barcode.
+  // Do not glue one bottle. Wordmark from centrum.com.
+  'centrum-prenatal-complete': brandMark('centrum-mark.png'),
+  // UPC 681131038904. No 3D pack retrieved. Do not glue the
+  // newer One Daily softgel (681131156608).
+  'equate-daily-prenatal': brandMark('equate-mark.png'),
+  // UPC 016500558170 is the 30-softgel listing. Retrieved face is a
+  // flat label, not a 3D bottle. Not the 60-count no-dye row.
+  'one-a-day-prenatal-1-softgels': brandMark('one-a-day-mark.png'),
+  // UPC 050428311776. CVS PDP did not return a 3D carton.
+  'cvs-health-prenatal-coated': brandMark('cvs-mark.png'),
+  // UPC 079524873414. Target PDP did not return a 3D carton.
+  'up-and-up-prenatal-coated': brandMark('upup-mark.png'),
+  // No barcode. Do not glue one count.
+  'walgreens-prenatal-coated': brandMark('walgreens-mark.png'),
+  // Four barcodes (766298016276, 766298016269, 766298024844,
+  // 766298024851). Do not glue one count.
+  'pure-encapsulations-prenatal-nutrients': brandMark(
+    'pure-encapsulations-mark.png',
+  ),
+  // Barcodes are the 60-count (051494103142) and the 120-count
+  // (051494103159). Do not glue one bottle.
+  'megafood-baby-me-2-prenatal-multi': brandMark('megafood-mark.png'),
+  // UPC 051494100271. The brand-site face for that code reads
+  // shelf-stable. This row is the refrigerated id. Do not glue it.
+  'megafood-baby-me-2-prenatal-probiotic-refrigerated': brandMark(
+    'megafood-mark.png',
+  ),
+  // UPC 051494106143 is the 90-count variant. The face on that
+  // variant reads 60 softgels. Do not glue it.
+  'megafood-baby-me-2-prenatal-multi-dha': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -2420,6 +2453,10 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // brand logo, but that host blocked this run. Do not use the
   // Hanna-Barbera cartoon logo. Text tile stays until that file loads.
   'flintstones-complete-gummies-palm': 'Flintstones',
+  // Daytime photo run — Prenatal letter. Tried the SKU.
+  // UPC 099482420819. wholefoodsmarket.com has no standalone 365 mark.
+  // No verified 3D carton. Never the letter 3.
+  '365-prenatal-multi': '365',
 };
 
 function brandMarkImage(brand: string | undefined): ProductImage | undefined {
@@ -11870,6 +11907,35 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'one-a-day-prenatal-softgels-no-dye': catalogShot(
     'one-a-day-prenatal-softgels-no-dye.jpg',
   ),
+  // Daytime photo run — Prenatal letters.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Prenatal gummies, 60 count. UPC 031604031275. Brand-site front.
+  'nature-made-prenatal-gummies': catalogShot('nature-made-prenatal-gummies.jpg'),
+  // Essential Prenatal, 60 gummies / 30 servings. UPC 858158005046.
+  // Not the 42-serving bottle (840160202582).
+  'olly-essential-prenatal': catalogShot('olly-essential-prenatal.jpg'),
+  // Basic Prenatal, 90 capsules. UPC 693749015048.
+  'thorne-basic-prenatal': catalogShot('thorne-basic-prenatal.jpg'),
+  // Prenatal Pro, 120 vegetarian capsules. UPC 879452002623.
+  'dfh-prenatal-pro': catalogShot('dfh-prenatal-pro.jpg'),
+  // Wholesome Prenatal. UPC 860009171473. Brand-site bottle.
+  'we-heart-wholesome-prenatal': catalogShot('we-heart-wholesome-prenatal.jpg'),
+  // Prenatal Multi Minis, 120 tablets. UPC 051494104477. Not the 180.
+  'megafood-baby-me-2-prenatal-minis': catalogShot(
+    'megafood-baby-me-2-prenatal-minis.jpg',
+  ),
+  // Prenatal DHA & Choline, 60 softgels. UPC 051494104293.
+  'megafood-baby-me-2-prenatal-dha-choline': catalogShot(
+    'megafood-baby-me-2-prenatal-dha-choline.jpg',
+  ),
+  // Prenatal Multi gummies, 60 count. UPC 051494104378.
+  'megafood-baby-me-2-prenatal-gummies': catalogShot(
+    'megafood-baby-me-2-prenatal-gummies.jpg',
+  ),
+  // Morning sickness chews, 30 count. UPC 051494103975.
+  'megafood-baby-me-2-nausea-soft-chews': catalogShot(
+    'megafood-baby-me-2-nausea-soft-chews.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13478,10 +13544,10 @@ assertExactCarton('nasalcrom', 'NasalCrom', 'nasalcrom.jpg');
     throw new Error('bromelain 240 must not inherit the 120-count carton');
   }
 }
-assertLetterOnly('thorne-basic-prenatal', 'Thorne');
+// thorne-basic-prenatal and walgreens-prenatal-coated were attempted
+// in the daytime Prenatal photo run. They no longer stay letters.
 // Unattempted other-aisle rows stay letters. Marks are per-id only.
 // tylenol-pm-es / advil-pm-liquigels attempted in Sleep night batch 1
-assertLetterOnly('walgreens-prenatal-coated', 'Walgreens');
 assertBrandMark(
   'signature-care-loratadine-mint-odt',
   'Signature Care',
@@ -25374,3 +25440,55 @@ assertExactCarton(
 );
 assertBrandMark('aplushealth-b94-ear-drops', 'A+Health', 'aplus-health-mark.png');
 assertBrandMark('aplushealth-b94-ear-twin', 'A+Health', 'aplus-health-mark.png');
+assertExactCarton('nature-made-prenatal-gummies', 'Nature Made', 'nature-made-prenatal-gummies.jpg');
+assertExactCarton('olly-essential-prenatal', 'OLLY', 'olly-essential-prenatal.jpg');
+assertExactCarton('thorne-basic-prenatal', 'Thorne', 'thorne-basic-prenatal.jpg');
+assertExactCarton('dfh-prenatal-pro', 'Designs for Health', 'dfh-prenatal-pro.jpg');
+assertExactCarton(
+  'we-heart-wholesome-prenatal',
+  'We Heart Nutrition',
+  'we-heart-wholesome-prenatal.jpg',
+);
+assertExactCarton(
+  'megafood-baby-me-2-prenatal-minis',
+  'MegaFood',
+  'megafood-baby-me-2-prenatal-minis.jpg',
+);
+assertExactCarton(
+  'megafood-baby-me-2-prenatal-dha-choline',
+  'MegaFood',
+  'megafood-baby-me-2-prenatal-dha-choline.jpg',
+);
+assertExactCarton(
+  'megafood-baby-me-2-prenatal-gummies',
+  'MegaFood',
+  'megafood-baby-me-2-prenatal-gummies.jpg',
+);
+assertExactCarton(
+  'megafood-baby-me-2-nausea-soft-chews',
+  'MegaFood',
+  'megafood-baby-me-2-nausea-soft-chews.jpg',
+);
+assertBrandMark('centrum-prenatal-complete', 'Centrum', 'centrum-mark.png');
+assertBrandMark('equate-daily-prenatal', 'Equate', 'equate-mark.png');
+assertBrandMark('one-a-day-prenatal-1-softgels', 'One A Day', 'one-a-day-mark.png');
+assertBrandMark('cvs-health-prenatal-coated', 'CVS Health', 'cvs-mark.png');
+assertBrandMark('up-and-up-prenatal-coated', 'up&up', 'upup-mark.png');
+assertBrandMark('walgreens-prenatal-coated', 'Walgreens', 'walgreens-mark.png');
+assertBrandMark(
+  'pure-encapsulations-prenatal-nutrients',
+  'Pure Encapsulations',
+  'pure-encapsulations-mark.png',
+);
+assertBrandMark('megafood-baby-me-2-prenatal-multi', 'MegaFood', 'megafood-mark.png');
+assertBrandMark(
+  'megafood-baby-me-2-prenatal-probiotic-refrigerated',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertBrandMark(
+  'megafood-baby-me-2-prenatal-multi-dha',
+  'MegaFood',
+  'megafood-mark.png',
+);
+assertBrandTextTile('365-prenatal-multi', '365 Whole Foods Market', '365');
