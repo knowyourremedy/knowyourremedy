@@ -45,6 +45,7 @@ Removed, not stashed
 - Claritin dyed grape chew 20-count and 60-count removed. The shelf box is dye-free. Not a hunt.
 - flonase-sensimist removed. No count. Same codes as the Sensimist 60 and 120 rows. Not a hunt.
 - nasacort-allergy-24hr removed. No count. Same codes as the Nasacort 60 and 120 rows. Not a hunt.
+- nasacort-allergy-24hr-kids removed. No Children's Nasacort product. The regular Nasacort label covers ages 2 to 12 with an adult. Children's Nasacort 60 does not qualify. Not a hunt.
 
 Still open, not removed
 - Icy Hot Performance dry spray, cream, and no-mess cream are back (PR #473 / 97ad7ed). Still open. Pages that opened had no Performance card. Walmart, CVS, Amazon, and Kroger were blocked. Do not remove them on a missing brand-lineup check.
