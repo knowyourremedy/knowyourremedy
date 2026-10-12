@@ -11936,6 +11936,90 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'megafood-baby-me-2-nausea-soft-chews': catalogShot(
     'megafood-baby-me-2-nausea-soft-chews.jpg',
   ),
+  // Vitamins night run 2026-10-12 12:30 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Wild yam root, 120 capsules. Barcode 810139576525.
+  'nutricost-nutricost-wild-yam-root-120-capsules': catalogShot(
+    'nutricost-nutricost-wild-yam-root-120-capsules.jpg',
+  ),
+  // Super antioxidants, 120 capsules. Barcode 810139576495.
+  'nutricost-nutricost-super-antioxidants-120-capsules': catalogShot(
+    'nutricost-nutricost-super-antioxidants-120-capsules.jpg',
+  ),
+  // Zinc bisglycinate, 120 capsules. Barcode 810139576068.
+  'nutricost-nutricost-zinc-bisglycinate-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-bisglycinate-120-capsules.jpg',
+  ),
+  // Lemon balm, 120 capsules. Barcode 810139575962.
+  'nutricost-nutricost-lemon-balm-120-capsules': catalogShot(
+    'nutricost-nutricost-lemon-balm-120-capsules.jpg',
+  ),
+  // Haritaki, 90 capsules. Barcode 810139576082.
+  'nutricost-nutricost-haritaki-90-capsules': catalogShot(
+    'nutricost-nutricost-haritaki-90-capsules.jpg',
+  ),
+  // Black garlic, 60 capsules. Barcode 810139576174.
+  'nutricost-nutricost-black-garlic-60-capsules': catalogShot(
+    'nutricost-nutricost-black-garlic-60-capsules.jpg',
+  ),
+  // Wild lettuce extract, 120 capsules. Barcode 810139576365.
+  'nutricost-nutricost-wild-lettuce-extract-120-capsules': catalogShot(
+    'nutricost-nutricost-wild-lettuce-extract-120-capsules.jpg',
+  ),
+  // Red raspberry leaf extract, 120 capsules. Barcode 810139576471.
+  'nutricost-nutricost-red-raspberry-leaf-extract-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-red-raspberry-leaf-extract-capsules-120-capsules.jpg',
+    ),
+  // Indole-3-carbinol, 120 capsules. Barcode 810139576396.
+  'nutricost-nutricost-indole-3-carbinol-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-indole-3-carbinol-capsules-120-capsules.jpg',
+  ),
+  // Damiana leaf, 120 capsules. Barcode 810139576280.
+  'nutricost-nutricost-damiana-leaf-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-damiana-leaf-capsules-120-capsules.jpg',
+  ),
+  // Pomegranate extract, 120 capsules. Barcode 810139576136.
+  'nutricost-nutricost-pomegranate-extract-120-capsules': catalogShot(
+    'nutricost-nutricost-pomegranate-extract-120-capsules.jpg',
+  ),
+  // Guggul extract, 120 capsules. Barcode 810139576167.
+  'nutricost-nutricost-guggul-extract-120-capsules': catalogShot(
+    'nutricost-nutricost-guggul-extract-120-capsules.jpg',
+  ),
+  // Zinc citrate, 120 capsules. Barcode 810139576402.
+  'nutricost-nutricost-zinc-citrate-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-citrate-120-capsules.jpg',
+  ),
+  // Kale extract, 120 capsules. Barcode 810139576112.
+  'nutricost-nutricost-kale-extract-120-capsules': catalogShot(
+    'nutricost-nutricost-kale-extract-120-capsules.jpg',
+  ),
+  // Nicotinamide riboside + resveratrol, 120 capsules. Barcode 810139576358.
+  'nutricost-nutricost-nicotinamide-riboside-resveratrol-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-nicotinamide-riboside-resveratrol-120-capsules.jpg',
+    ),
+  // L-methionine, 120 capsules. Barcode 810139575979.
+  'nutricost-nutricost-l-methionine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-methionine-capsules-120-capsules.jpg',
+  ),
+  // Sodium bicarbonate, 120 capsules. Barcode 810139576051.
+  'nutricost-nutricost-sodium-bicarbonate-120-capsules': catalogShot(
+    'nutricost-nutricost-sodium-bicarbonate-120-capsules.jpg',
+  ),
+  // Neem leaf, 120 capsules. Barcode 810139575924.
+  'nutricost-nutricost-neem-leaf-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-neem-leaf-capsules-120-capsules.jpg',
+  ),
+  // Benfotiamine 600 mg, 180 capsules. Barcode 810139576389.
+  'nutricost-nutricost-benfotiamine-600-mg-180-capsules': catalogShot(
+    'nutricost-nutricost-benfotiamine-600-mg-180-capsules.jpg',
+  ),
+  // Corn silk, 90 capsules. Barcode 810139575948.
+  'nutricost-nutricost-corn-silk-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-corn-silk-capsules-90-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -25492,3 +25576,103 @@ assertBrandMark(
   'megafood-mark.png',
 );
 assertBrandTextTile('365-prenatal-multi', '365 Whole Foods Market', '365');
+assertExactCarton(
+  'nutricost-nutricost-wild-yam-root-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-wild-yam-root-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-super-antioxidants-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-super-antioxidants-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-bisglycinate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-bisglycinate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lemon-balm-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-lemon-balm-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-haritaki-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-haritaki-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-black-garlic-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-black-garlic-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-wild-lettuce-extract-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-wild-lettuce-extract-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-red-raspberry-leaf-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-red-raspberry-leaf-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-indole-3-carbinol-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-indole-3-carbinol-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-damiana-leaf-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-damiana-leaf-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pomegranate-extract-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pomegranate-extract-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-guggul-extract-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-guggul-extract-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-citrate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-citrate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-kale-extract-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-kale-extract-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-nicotinamide-riboside-resveratrol-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-nicotinamide-riboside-resveratrol-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-methionine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-methionine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sodium-bicarbonate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-sodium-bicarbonate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-neem-leaf-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-neem-leaf-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-benfotiamine-600-mg-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-benfotiamine-600-mg-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-corn-silk-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-corn-silk-capsules-90-capsules.jpg',
+);
