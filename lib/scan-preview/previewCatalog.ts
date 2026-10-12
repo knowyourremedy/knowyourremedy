@@ -12459,6 +12459,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules': catalogShot(
     'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 4:15 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Creatine monohydrate capsules, 500 capsules. Barcode 702669933292.
+  // Not the 180.
+  'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules.jpg',
+  ),
+  // Creapure creatine powder, 1 kg. Barcode 702669934220. Not the 500 g.
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg.jpg',
+  ),
+  // Creapure creatine powder, 500 g. Barcode 702669934237. Not the 1 kg.
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms': catalogShot(
+    'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms.jpg',
+  ),
+  // Organic saw palmetto powder, 8 oz. Barcode 810014673516. Not the capsules.
+  'nutricost-nutricost-organic-saw-palmetto-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-saw-palmetto-powder-8-oz.jpg',
+  ),
+  // Stinging nettle root extract, 120 capsules. Barcode 810014674049.
+  'nutricost-nutricost-stinging-nettle-root-extract-120-capsules': catalogShot(
+    'nutricost-nutricost-stinging-nettle-root-extract-120-capsules.jpg',
+  ),
+  // SAM-e, 120 capsules. Barcode 810014673554.
+  'nutricost-nutricost-sam-e-s-adenosyl-l-methionine-120-capsules': catalogShot(
+    'nutricost-nutricost-sam-e-s-adenosyl-l-methionine-120-capsules.jpg',
+  ),
+  // Pygeum, 120 capsules. Barcode 810014673400.
+  'nutricost-nutricost-pygeum-120-capsules': catalogShot(
+    'nutricost-nutricost-pygeum-120-capsules.jpg',
+  ),
+  // Quercetin, 1,000 mg, 120 capsules. Barcode 810014673264.
+  'nutricost-nutricost-quercetin-1000mg-120-capsules': catalogShot(
+    'nutricost-nutricost-quercetin-1000mg-120-capsules.jpg',
+  ),
+  // L-serine powder, 227 g. Barcode 810014671383. Not the capsules.
+  'nutricost-nutricost-l-serine-powder-227-gms': catalogShot(
+    'nutricost-nutricost-l-serine-powder-227-gms.jpg',
+  ),
+  // Benfotiamine, 300 mg, 90 capsules. Barcode 810014673769.
+  'nutricost-nutricost-benfotiamine-300-mg-90-caps-panel': catalogShot(
+    'nutricost-nutricost-benfotiamine-300-mg-90-caps-panel.jpg',
+  ),
+  // Pregnenolone, 10 mg, 120 capsules. Barcode 810014673462.
+  // Not 30 mg, 50 mg, or 100 mg.
+  'nutricost-nutricost-pregnenolone-120-capsules': catalogShot(
+    'nutricost-nutricost-pregnenolone-120-capsules.jpg',
+  ),
+  // Pregnenolone, 100 mg, 120 capsules. Barcode 810014673493.
+  'nutricost-nutricost-pregnenolone-120-capsules-2': catalogShot(
+    'nutricost-nutricost-pregnenolone-120-capsules-2.jpg',
+  ),
+  // Pregnenolone, 50 mg, 120 capsules. Barcode 810014673486.
+  'nutricost-nutricost-pregnenolone-120-capsules-3': catalogShot(
+    'nutricost-nutricost-pregnenolone-120-capsules-3.jpg',
+  ),
+  // Pregnenolone, 30 mg, 120 capsules. Barcode 810014673479.
+  'nutricost-nutricost-pregnenolone-120-capsules-4': catalogShot(
+    'nutricost-nutricost-pregnenolone-120-capsules-4.jpg',
+  ),
+  // Saffron extract, 240 capsules. Barcode 810014673523.
+  'nutricost-nutricost-saffron-extract-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-saffron-extract-capsules-240-capsules.jpg',
+  ),
+  // Glycine powder, 1 lb. Barcode 810014672823. Not the capsules.
+  'nutricost-nutricost-glycine-powder-1-lb': catalogShot(
+    'nutricost-nutricost-glycine-powder-1-lb.jpg',
+  ),
+  // Pine bark extract, 180 capsules. Barcode 810014673585.
+  'nutricost-nutricost-pine-bark-extract-180-capsules': catalogShot(
+    'nutricost-nutricost-pine-bark-extract-180-capsules.jpg',
+  ),
+  // Magnesium orotate, 120 capsules. Barcode 810014673653.
+  'nutricost-nutricost-magnesium-orotate-120-capsules': catalogShot(
+    'nutricost-nutricost-magnesium-orotate-120-capsules.jpg',
+  ),
+  // Organic milk thistle powder, 8 oz. Barcode 810139573944.
+  'nutricost-nutricost-organic-milk-thistle-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-milk-thistle-powder-8-oz.jpg',
+  ),
+  // Grass-fed desiccated beef liver, 120 capsules. Barcode 810014678450.
+  // Not the 240.
+  'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
+    ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13102,8 +13188,15 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-policosanol-capsules-120-capsules-2',
   // 100 mg policosanol must not inherit the 40 mg 120.
   'nutricost-nutricost-policosanol-capsules-120-capsules-3',
-  // 500-count creatine capsules must not inherit the 180. Not attempted yet.
+  // 500-count creatine capsules must not inherit the 180.
   'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules',
+  // Vitamins night run 2026-10-12 4:15 AM PT batch 1.
+  // Shared-formula strengths. Do not inherit a sibling face.
+  // Creapure 500 g must not inherit the 1 kg pouch.
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms',
+  // 100 mg and 50 mg pregnenolone must not inherit the 10 mg bottle.
+  'nutricost-nutricost-pregnenolone-120-capsules-2',
+  'nutricost-nutricost-pregnenolone-120-capsules-3',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -26637,6 +26730,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-capsules-500-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms',
+  'Nutricost',
+  'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-saw-palmetto-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-saw-palmetto-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-stinging-nettle-root-extract-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-stinging-nettle-root-extract-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-sam-e-s-adenosyl-l-methionine-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-sam-e-s-adenosyl-l-methionine-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pygeum-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pygeum-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-quercetin-1000mg-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-quercetin-1000mg-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-serine-powder-227-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-serine-powder-227-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-benfotiamine-300-mg-90-caps-panel',
+  'Nutricost',
+  'nutricost-nutricost-benfotiamine-300-mg-90-caps-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pregnenolone-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pregnenolone-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pregnenolone-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-pregnenolone-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pregnenolone-120-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-pregnenolone-120-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pregnenolone-120-capsules-4',
+  'Nutricost',
+  'nutricost-nutricost-pregnenolone-120-capsules-4.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-saffron-extract-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-saffron-extract-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-glycine-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-glycine-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pine-bark-extract-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pine-bark-extract-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-orotate-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-orotate-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-milk-thistle-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-milk-thistle-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
+);
 {
   const mct5 = previewOverlayImage({
     id: 'nutricost-nutricost-organic-mct-oil-powder-5-lb',
@@ -26752,7 +26945,47 @@ assertExactCarton(
     formulaId: 'nutricost-nutricost-creatine-monohydrate-capsules-180-capsules',
     brand: 'Nutricost',
   });
-  if (!creat500?.url.startsWith('data:image/svg') || creat500.verifiedSku) {
-    throw new Error('creatine 500 must stay a letter until attempted');
+  if (
+    !creat500?.verifiedSku
+    || !creat500.url.endsWith(
+      '/nutricost-nutricost-creatine-monohydrate-capsules-500-capsules.jpg',
+    )
+  ) {
+    throw new Error('creatine 500 must not inherit the 180');
+  }
+  const creapure500 = previewOverlayImage({
+    id: 'nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms',
+    formulaId: 'nutricost-nutricost-creatine-monohydrate-creapure-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (
+    !creapure500?.verifiedSku
+    || !creapure500.url.endsWith(
+      '/nutricost-nutricost-creatine-monohydrate-creapure-powder-500-gms.jpg',
+    )
+  ) {
+    throw new Error('Creapure 500 g must not inherit the 1 kg');
+  }
+  const preg100 = previewOverlayImage({
+    id: 'nutricost-nutricost-pregnenolone-120-capsules-2',
+    formulaId: 'nutricost-nutricost-pregnenolone-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !preg100?.verifiedSku
+    || !preg100.url.endsWith('/nutricost-nutricost-pregnenolone-120-capsules-2.jpg')
+  ) {
+    throw new Error('pregnenolone 100 mg must not inherit the 10 mg');
+  }
+  const preg50 = previewOverlayImage({
+    id: 'nutricost-nutricost-pregnenolone-120-capsules-3',
+    formulaId: 'nutricost-nutricost-pregnenolone-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !preg50?.verifiedSku
+    || !preg50.url.endsWith('/nutricost-nutricost-pregnenolone-120-capsules-3.jpg')
+  ) {
+    throw new Error('pregnenolone 50 mg must not inherit the 10 mg');
   }
 }
