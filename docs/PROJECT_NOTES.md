@@ -42,6 +42,8 @@ Removed, not stashed
 - biofreeze-pain-relief-spray-10 removed in PR #472. Pages that opened were 10.5% menthol. Do not re-add. Not a hunt.
 - Claritin MCC tablets 40-count removed. DailyMed bottle listing only. The sold box is corn starch. Not a hunt.
 - Claritin dyed grape chew 20-count and 60-count removed. The shelf box is dye-free. Not a hunt.
+- flonase-sensimist removed. No count. Same codes as the Sensimist 60 and 120 rows. Not a hunt.
+- nasacort-allergy-24hr removed. No count. Same codes as the Nasacort 60 and 120 rows. Not a hunt.
 
 Still open, not removed
 - Icy Hot Performance dry spray, cream, and no-mess cream are back (PR #473 / 97ad7ed). Still open. Pages that opened had no Performance card. Walmart, CVS, Amazon, and Kroger were blocked. Do not remove them on a missing brand-lineup check.

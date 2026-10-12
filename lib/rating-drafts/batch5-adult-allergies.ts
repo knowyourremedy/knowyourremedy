@@ -903,51 +903,6 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     ],
   },
   {
-    id: 'flonase-sensimist',
-    productName: 'Flonase Sensimist Allergy Relief',
-    brand: 'Flonase',
-    category: ALLERGIES,
-    barcode: '353100202271 353100202158 353100202257',
-    formulaId: 'flonase-sensimist-bkc-ps80',
-    audience: ADULT,
-    minAge: 12,
-    form: 'nasal spray',
-    recordStatus: UNVERIFIED,
-    productType: 'OTC',
-    activeIngredients: [
-      { name: 'Fluticasone furoate', strength: '27.5mcg / spray' },
-    ],
-    inactiveIngredients: [
-      flag(
-        'Benzalkonium chloride',
-        'cleared',
-        dailymed('107100af-7ca2-44e8-b067-c0ab0a19a6dc', METH.bkc),
-      ),
-      flag(
-        'Polysorbate 80',
-        'moderate',
-        dailymed('107100af-7ca2-44e8-b067-c0ab0a19a6dc', METH.ps80),
-      ),
-      flag(
-        'Edetate disodium',
-        'cleared',
-        dailymed('107100af-7ca2-44e8-b067-c0ab0a19a6dc', METH.edta),
-      ),
-      cleared('107100af-7ca2-44e8-b067-c0ab0a19a6dc', 'Carboxymethylcellulose sodium'),
-      cleared('107100af-7ca2-44e8-b067-c0ab0a19a6dc', 'Dextrose anhydrous'),
-      cleared('107100af-7ca2-44e8-b067-c0ab0a19a6dc', 'Microcrystalline cellulose'),
-      cleared('107100af-7ca2-44e8-b067-c0ab0a19a6dc', 'Purified water'),
-    ],
-    verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Sensimist = Caution (BKC ± PS80). Separate formulaId from Flonase Allergy Relief (furoate vs propionate; EDTA present here). Adult SKU 12+.',
-    retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
-    cleanAlternatives: NASAL_ALTS,
-    sourcesGeneral: [
-      'DailyMed setid 107100af-7ca2-44e8-b067-c0ab0a19a6dc (draft, not verified)',
-    ],
-  },
-  {
     id: 'equate-fluticasone-nasal',
     productName: 'Equate Allergy Relief (Fluticasone Propionate)',
     brand: 'Equate',
@@ -988,51 +943,6 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
       'DailyMed setid bc824143-b876-4c3d-86fd-81fb58673851 (draft, not verified)',
-    ],
-  },
-  {
-    id: 'nasacort-allergy-24hr',
-    productName: 'Nasacort Allergy 24HR',
-    brand: 'Nasacort',
-    category: ALLERGIES,
-    barcode: '041167580059 041167580035 041167580028',
-    formulaId: 'nasacort-allergy-24hr-bkc-ps80',
-    audience: ADULT,
-    minAge: 12,
-    form: 'nasal spray',
-    recordStatus: UNVERIFIED,
-    productType: 'OTC',
-    activeIngredients: [
-      { name: 'Triamcinolone acetonide', strength: '55mcg / spray' },
-    ],
-    inactiveIngredients: [
-      flag(
-        'Benzalkonium chloride',
-        'cleared',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.bkc),
-      ),
-      flag(
-        'Polysorbate 80',
-        'moderate',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.ps80),
-      ),
-      flag(
-        'Edetate disodium',
-        'cleared',
-        dailymed('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', METH.edta),
-      ),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Carboxymethylcellulose sodium'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Dextrose'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Microcrystalline cellulose'),
-      cleared('4bff57a5-cce0-401c-a0fe-23c65c1b7ddc', 'Purified water'),
-    ],
-    verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nasacort = Caution (BKC ± PS80). HCl / NaOH pH adjusters are Cleared-class. Adult SKU 12+.',
-    retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
-    cleanAlternatives: NASAL_ALTS,
-    sourcesGeneral: [
-      'DailyMed setid 4bff57a5-cce0-401c-a0fe-23c65c1b7ddc (draft, not verified)',
     ],
   },
   {
