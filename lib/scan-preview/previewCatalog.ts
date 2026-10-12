@@ -2384,6 +2384,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Official Nutricost wordmark already on disk.
   // Not a text tile. Not a letter.
   'nutricost-nutricost-boron-capsules-panel': brandMark('nutricost-mark.png'),
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 1.
+  // Organic goji berry powder. Barcode 810014670706.
+  // The only nutricost.com front on that code is a 1 lb jar.
+  // 9 g is the serving, not the net weight. Do not glue the 1 lb.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-organic-goji-berry-powder-9-gm': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Activated charcoal powder panel has no barcode and no count.
+  // Live tubs are 1 lb and 2 lb. Do not glue the 1 lb.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-activated-charcoal-powder-panel': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -12798,6 +12814,87 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-cat-s-claw-capsules-120-capsules': catalogShot(
     'nutricost-nutricost-cat-s-claw-capsules-120-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Organic shiitake mushroom powder, 4 oz (113 g). Barcode 810014670195.
+  // Not the 8 oz bottle.
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz': catalogShot(
+    'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz.jpg',
+  ),
+  // Beta glucan powder, 100 g. Barcode 810014670584. Not an 8 oz tub.
+  'nutricost-nutricost-beta-glucan-powder-100-gms': catalogShot(
+    'nutricost-nutricost-beta-glucan-powder-100-gms.jpg',
+  ),
+  // Beta glucan capsules, 500 mg, 60 capsules. Barcode 810014670638.
+  'nutricost-nutricost-beta-glucan-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-beta-glucan-capsules-60-capsules.jpg',
+  ),
+  // Beta-alanine, 120 capsules. Barcode 857077008510. Not the 240.
+  'nutricost-nutricost-beta-alanine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-beta-alanine-capsules-120-capsules.jpg',
+  ),
+  // Beta-alanine, 240 capsules. Barcode 810014670157. Not the 120.
+  'nutricost-nutricost-beta-alanine-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-beta-alanine-capsules-240-capsules.jpg',
+  ),
+  // Theobromine, 400 mg, 90 capsules. Barcode 810014670737.
+  'nutricost-nutricost-theobromine-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-theobromine-capsules-90-capsules.jpg',
+  ),
+  // L-carnosine capsules, 500 mg, 120 capsules. Barcode 810014670652.
+  // Not the powder jars.
+  'nutricost-nutricost-l-carnosine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-carnosine-capsules-120-capsules.jpg',
+  ),
+  // Hyaluronic acid, 100 mg, 120 capsules. Barcode 810014670720.
+  'nutricost-nutricost-hyaluronic-acid-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-hyaluronic-acid-capsules-120-capsules.jpg',
+  ),
+  // Holy basil, 500 mg, 120 capsules. Barcode 810014670744.
+  'nutricost-nutricost-holy-basil-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-holy-basil-capsules-120-capsules.jpg',
+  ),
+  // White kidney bean, 650 mg, 120 capsules. Barcode 810014670577.
+  'nutricost-nutricost-white-kidney-bean-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-white-kidney-bean-capsules-120-capsules.jpg',
+  ),
+  // Wormwood, 450 mg, 120 capsules. Barcode 810014670478.
+  'nutricost-nutricost-wormwood-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-wormwood-capsules-120-capsules.jpg',
+  ),
+  // Organic alfalfa powder, 1 lb. Barcode 857077008947.
+  'nutricost-nutricost-organic-alfalfa-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-alfalfa-powder-1-lb.jpg',
+  ),
+  // Biotin softgels, 5,000 mcg, 150 softgels. Barcode 810014670270.
+  // Not the 10,000 mcg bottle.
+  'nutricost-nutricost-biotin-softgels-150-softgels': catalogShot(
+    'nutricost-nutricost-biotin-softgels-150-softgels.jpg',
+  ),
+  // Baikal skullcap, 500 mg, 120 capsules. Barcode 810014670430.
+  'nutricost-nutricost-baikal-skullcap-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-baikal-skullcap-capsules-120-capsules.jpg',
+  ),
+  // Vanadium with chromium, 2 mg, 180 capsules. Barcode 810014670218.
+  // Not a 120-count bottle.
+  'nutricost-nutricost-vanadium-with-chromium-capsules-180-capsules':
+    catalogShot(
+      'nutricost-nutricost-vanadium-with-chromium-capsules-180-capsules.jpg',
+    ),
+  // Natural caffeine, 200 mg, 250 capsules. Barcode 810014670058.
+  'nutricost-nutricost-natural-caffeine-capsules-250-capsules': catalogShot(
+    'nutricost-nutricost-natural-caffeine-capsules-250-capsules.jpg',
+  ),
+  // Activated charcoal powder, 1 lb. Barcode 810014670119. Not the 2 lb.
+  'nutricost-nutricost-activated-charcoal-powder-1-lb': catalogShot(
+    'nutricost-nutricost-activated-charcoal-powder-1-lb.jpg',
+  ),
+  // Tart cherry extract, 12,000 mg, 240 capsules. No barcode on the row.
+  // The cited facts panel is the 400 mg x3 / 12,000 mg 240-count.
+  // Not the 3,000 mg bottle.
+  'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13474,6 +13571,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-pure-agmatine-sulfate-powder-250-gm',
   // L-carnosine 50 g must not inherit the 100 g.
   'nutricost-nutricost-l-carnosine-powder-50-gm',
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 1.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // Beta-alanine 240 must not inherit the 120.
+  'nutricost-nutricost-beta-alanine-capsules-240-capsules',
+  // No-count charcoal panel must not inherit the 1 lb.
+  'nutricost-nutricost-activated-charcoal-powder-panel',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -27683,3 +27786,142 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-cat-s-claw-capsules-120-capsules.jpg',
 );
+assertBrandMark(
+  'nutricost-nutricost-organic-goji-berry-powder-9-gm',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-glucan-powder-100-gms',
+  'Nutricost',
+  'nutricost-nutricost-beta-glucan-powder-100-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-glucan-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-beta-glucan-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-alanine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-beta-alanine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-alanine-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-beta-alanine-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-theobromine-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-theobromine-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnosine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-carnosine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-hyaluronic-acid-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-hyaluronic-acid-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-holy-basil-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-holy-basil-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-white-kidney-bean-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-white-kidney-bean-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-wormwood-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-wormwood-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-alfalfa-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-alfalfa-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-biotin-softgels-150-softgels',
+  'Nutricost',
+  'nutricost-nutricost-biotin-softgels-150-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-baikal-skullcap-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-baikal-skullcap-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vanadium-with-chromium-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vanadium-with-chromium-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-natural-caffeine-capsules-250-capsules',
+  'Nutricost',
+  'nutricost-nutricost-natural-caffeine-capsules-250-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-activated-charcoal-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-activated-charcoal-powder-1-lb.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-activated-charcoal-powder-panel',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules.jpg',
+);
+{
+  const ala240 = previewOverlayImage({
+    id: 'nutricost-nutricost-beta-alanine-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-beta-alanine-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !ala240?.verifiedSku
+    || !ala240.url.endsWith(
+      '/nutricost-nutricost-beta-alanine-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('beta-alanine 240 must not inherit the 120');
+  }
+  const charcoalPanel = previewOverlayImage({
+    id: 'nutricost-nutricost-activated-charcoal-powder-panel',
+    formulaId: 'nutricost-nutricost-activated-charcoal-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !charcoalPanel?.url.endsWith('/nutricost-mark.png')
+    || charcoalPanel.verifiedSku
+  ) {
+    throw new Error('charcoal panel must stay the brand mark, not the 1 lb');
+  }
+  const shiitake8 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz',
+    formulaId: 'nutricost-nutricost-organic-shiitake-mushroom-powder-4-oz',
+    brand: 'Nutricost',
+  });
+  if (
+    !shiitake8?.verifiedSku
+    || !shiitake8.url.endsWith(
+      '/nutricost-nutricost-organic-shiitake-mushroom-powder-8-oz.jpg',
+    )
+  ) {
+    throw new Error('shiitake 8 oz must not inherit the 4 oz');
+  }
+}
