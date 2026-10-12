@@ -2369,6 +2369,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-organic-lion-s-mane-mushroom-powder-1-lb': brandMark(
     'nutricost-mark.png',
   ),
+  // Daytime photo run — Eye & Ear letters. Tried each SKU.
+  // Official A+Health wordmark already on disk. Not a letter.
+  // 0.5 fl oz single. No barcode. The Amazon face that opened is the
+  // twin pack. DailyMed setid e8bcf92c is a flat of that twin.
+  // Do not glue the twin or the bulb-syringe kit.
+  'aplushealth-b94-ear-drops': brandMark('aplus-health-mark.png'),
+  // Twin pack, 1 fl oz (two 0.5 fl oz bottles). No barcode.
+  // No 3D single-count carton retrieved for this row either.
+  // Do not glue the 0.5 fl oz kit.
+  'aplushealth-b94-ear-twin': brandMark('aplus-health-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -11802,6 +11812,64 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules': catalogShot(
     'nutricost-nutricost-sulforaphane-glucosinolate-120-capsules.jpg',
   ),
+  // Daytime photo run — Eye & Ear letters, then Prenatal.
+  // Exact US pack fronts. Per-id only. verifiedSku.
+  // Lutein 25 mg + zeaxanthin 5 mg, 60 softgels. UPC 733739030641.
+  // Not the 120.
+  'now-lutein-zeaxanthin-60': catalogShot('now-lutein-zeaxanthin-60.jpg'),
+  // Astaxanthin 4 mg, 90 softgels. UPC 733739023056. Not the veggie 60.
+  'now-astaxanthin-4-mg-90': catalogShot('now-astaxanthin-4-mg-90.jpg'),
+  // Lutein 20 mg, 90 veg capsules. UPC 733739030696. Not a softgel.
+  'now-lutein-20-mg-90': catalogShot('now-lutein-20-mg-90.jpg'),
+  // Lutein 25 mg + zeaxanthin 5 mg, 120 softgels. UPC 733739030894.
+  // Not the 60.
+  'now-lutein-zeaxanthin-120': catalogShot('now-lutein-zeaxanthin-120.jpg'),
+  // Astaxanthin 4 mg, 60 veggie softgels. UPC 733739032515. Not the 90.
+  'now-astaxanthin-4-mg-60-veggie-softgels': catalogShot(
+    'now-astaxanthin-4-mg-60-veggie-softgels.jpg',
+  ),
+  // Astaxanthin 12 mg, 60 veggie softgels. UPC 733739022530.
+  'now-astaxanthin-12-mg-60-veggie-softgels': catalogShot(
+    'now-astaxanthin-12-mg-60-veggie-softgels.jpg',
+  ),
+  // Lutein 10 mg, 120 softgels. UPC 733739030573. Not the 60.
+  'now-lutein-10-mg-120': catalogShot('now-lutein-10-mg-120.jpg'),
+  // Astaxanthin 10 mg, 30 softgels. UPC 733739022493. Not the 60.
+  'now-astaxanthin-10-mg-30': catalogShot('now-astaxanthin-10-mg-30.jpg'),
+  // Eye Moisturize with MaquiBright, 60 veg capsules. UPC 733739030849.
+  'now-eye-moisturize-with-maquibright-60': catalogShot(
+    'now-eye-moisturize-with-maquibright-60.jpg',
+  ),
+  // Astaxanthin 10 mg, 60 softgels. UPC 733739022516. Not the 30.
+  'now-astaxanthin-10-mg-60': catalogShot('now-astaxanthin-10-mg-60.jpg'),
+  // Lutein 10 mg, 60 softgels. UPC 733739030580. Not the 120.
+  'now-lutein-10-mg-60': catalogShot('now-lutein-10-mg-60.jpg'),
+  // Clinical Strength Ocu Support, 90 capsules. UPC 733739033017.
+  // Not the 120 veg-capsule bottle.
+  'now-clinical-strength-ocu-support-90': catalogShot(
+    'now-clinical-strength-ocu-support-90.jpg',
+  ),
+  // Macular Vision, 50 softgels. UPC 733739034021.
+  'now-macular-vision-50': catalogShot('now-macular-vision-50.jpg'),
+  // Ocu Support, 120 veg capsules. UPC 733739033024. Not clinical strength.
+  'now-ocu-support-120': catalogShot('now-ocu-support-120.jpg'),
+  // NatureWise Lutein, 120 softgels. UPC 810157852427.
+  // Brand-site variant for that code. Not a different count.
+  'naturewise-b82-lutein': catalogShot('naturewise-b82-lutein.jpg'),
+  // Sodium chloride 5% ointment, 1/8 oz (3.5 g). No barcode on the row.
+  // Retailer face is the single carton. The flat label was not used.
+  'welmate-b87-sodium-chloride-ointment': catalogShot(
+    'welmate-b87-sodium-chloride-ointment.jpg',
+  ),
+  // Prenatal Folic Acid + DHA, 250 tablets. UPC 031604014353.
+  'nature-made-prenatal-multi-tablets': catalogShot(
+    'nature-made-prenatal-multi-tablets.jpg',
+  ),
+  // Prenatal softgels, 60 count. UPC 016500560104.
+  // Not the TiO2 row 016500558170.
+  'one-a-day-prenatal-softgels-no-dye': catalogShot(
+    'one-a-day-prenatal-softgels-no-dye.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -12415,6 +12483,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-organic-spirulina-chlorella-360-tablets',
   // Turmeric 90-count shares the 120 formula. Do not inherit the 120.
   'nutricost-b79-turmeric-90-capsules',
+  // Daytime photo run — Eye & Ear. Shared-formula counts.
+  // 120-count must not inherit the 10 mg 60.
+  'now-lutein-10-mg-120',
+  // Twin pack must not inherit the 0.5 fl oz single.
+  'aplushealth-b94-ear-twin',
 ]);
 
 export function previewOverlayImage(
@@ -25252,3 +25325,52 @@ export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
     throw new Error('poloxamer 182 why must be the Caution surfactant line, not the paraben line');
   }
 }
+
+assertExactCarton('now-lutein-zeaxanthin-60', 'NOW', 'now-lutein-zeaxanthin-60.jpg');
+assertExactCarton('now-astaxanthin-4-mg-90', 'NOW', 'now-astaxanthin-4-mg-90.jpg');
+assertExactCarton('now-lutein-20-mg-90', 'NOW', 'now-lutein-20-mg-90.jpg');
+assertExactCarton('now-lutein-zeaxanthin-120', 'NOW', 'now-lutein-zeaxanthin-120.jpg');
+assertExactCarton(
+  'now-astaxanthin-4-mg-60-veggie-softgels',
+  'NOW',
+  'now-astaxanthin-4-mg-60-veggie-softgels.jpg',
+);
+assertExactCarton(
+  'now-astaxanthin-12-mg-60-veggie-softgels',
+  'NOW',
+  'now-astaxanthin-12-mg-60-veggie-softgels.jpg',
+);
+assertExactCarton('now-lutein-10-mg-120', 'NOW', 'now-lutein-10-mg-120.jpg');
+assertExactCarton('now-astaxanthin-10-mg-30', 'NOW', 'now-astaxanthin-10-mg-30.jpg');
+assertExactCarton(
+  'now-eye-moisturize-with-maquibright-60',
+  'NOW',
+  'now-eye-moisturize-with-maquibright-60.jpg',
+);
+assertExactCarton('now-astaxanthin-10-mg-60', 'NOW', 'now-astaxanthin-10-mg-60.jpg');
+assertExactCarton('now-lutein-10-mg-60', 'NOW', 'now-lutein-10-mg-60.jpg');
+assertExactCarton(
+  'now-clinical-strength-ocu-support-90',
+  'NOW',
+  'now-clinical-strength-ocu-support-90.jpg',
+);
+assertExactCarton('now-macular-vision-50', 'NOW', 'now-macular-vision-50.jpg');
+assertExactCarton('now-ocu-support-120', 'NOW', 'now-ocu-support-120.jpg');
+assertExactCarton('naturewise-b82-lutein', 'NatureWise', 'naturewise-b82-lutein.jpg');
+assertExactCarton(
+  'welmate-b87-sodium-chloride-ointment',
+  'WELMATE',
+  'welmate-b87-sodium-chloride-ointment.jpg',
+);
+assertExactCarton(
+  'nature-made-prenatal-multi-tablets',
+  'Nature Made',
+  'nature-made-prenatal-multi-tablets.jpg',
+);
+assertExactCarton(
+  'one-a-day-prenatal-softgels-no-dye',
+  'One A Day',
+  'one-a-day-prenatal-softgels-no-dye.jpg',
+);
+assertBrandMark('aplushealth-b94-ear-drops', 'A+Health', 'aplus-health-mark.png');
+assertBrandMark('aplushealth-b94-ear-twin', 'A+Health', 'aplus-health-mark.png');
