@@ -2400,6 +2400,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-activated-charcoal-powder-panel': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 2.
+  // Organic cordyceps powder, named 16 oz. Barcode 810014670799.
+  // The front on that code is a 100 g / 3.6 oz jar. Not 16 oz.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-organic-cordyceps-powder-16-oz': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Organic greens, named 25 oz, unflavored. Barcode 810014670249.
+  // The front on that code is 9.6 oz (270 g). Not 25 oz.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-organic-greens-25-oz': brandMark('nutricost-mark.png'),
+  // Organic greens, named 25 oz, mixed berry. Barcode 810014670256.
+  // The front on that code is 11.2 oz (317 g). Not 25 oz.
+  // Not the unflavored tub. Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  'nutricost-nutricost-organic-greens-25-oz-2': brandMark('nutricost-mark.png'),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -12895,6 +12913,80 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules': catalogShot(
     'nutricost-nutricost-tart-cherry-extract-capsules-240-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Organic cordyceps powder panel. Barcode 857077008060 is the 250 g jar.
+  // Not the 100 g jar on the 16 oz row.
+  'nutricost-nutricost-organic-cordyceps-powder-panel': catalogShot(
+    'nutricost-nutricost-organic-cordyceps-powder-panel.jpg',
+  ),
+  // Organic reishi mushroom powder, 8 oz. Barcode 810014670201.
+  'nutricost-nutricost-organic-reishi-mushroom-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-reishi-mushroom-powder-8-oz.jpg',
+  ),
+  // L-tyrosine, 500 mg, 180 capsules. Barcode 810014679396.
+  'nutricost-nutricost-l-tyrosine-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-l-tyrosine-capsules-180-capsules.jpg',
+  ),
+  // Coleus forskohlii, 60 capsules. Barcode 702669935197.
+  'nutricost-nutricost-coleus-forskohlii-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-coleus-forskohlii-capsules-60-capsules.jpg',
+  ),
+  // Betaine anhydrous (TMG), 120 capsules. Barcode 702669932080.
+  'nutricost-nutricost-betaine-anhydrous-tmg-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-betaine-anhydrous-tmg-capsules-120-capsules.jpg',
+  ),
+  // Vitamin E, 1,000 IU, 240 softgels. Barcode 810139578192.
+  // Not the 400 IU bottle.
+  'nutricost-nutricost-vitamin-e-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-e-softgels-240-softgels.jpg',
+  ),
+  // Vitamin A, 25,000 IU, 500 softgels. Barcode 810014674810.
+  // Not the 10,000 IU bottle.
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-a-softgels-500-softgels.jpg',
+  ),
+  // Vitamin A, 10,000 IU, 500 softgels. Barcode 702669933230.
+  // Not the 25,000 IU bottle.
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels-2': catalogShot(
+    'nutricost-nutricost-vitamin-a-softgels-500-softgels-2.jpg',
+  ),
+  // Garlic, 1,000 mg, 240 softgels. Barcode 702669934909.
+  'nutricost-nutricost-garlic-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-garlic-softgels-240-softgels.jpg',
+  ),
+  // Fish oil, 1,000 mg, 240 softgels. Barcode 702669934404.
+  'nutricost-nutricost-fish-oil-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-fish-oil-softgels-240-softgels.jpg',
+  ),
+  // CLA, 120 softgels. Barcode 810014678429. Not the 240.
+  'nutricost-nutricost-cla-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-cla-softgels-120-softgels.jpg',
+  ),
+  // CLA, 240 softgels. Barcode 702669933254. Not the 120.
+  'nutricost-nutricost-cla-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-cla-softgels-240-softgels.jpg',
+  ),
+  // L-theanine powder, 100 g. Barcode 810139572190. Not a 16 oz jar.
+  'nutricost-nutricost-l-theanine-powder-100-gms': catalogShot(
+    'nutricost-nutricost-l-theanine-powder-100-gms.jpg',
+  ),
+  // DMAE bitartrate powder. Barcode 702669931076 is the 100 g tub.
+  'nutricost-nutricost-dmae-bitartrate-powder-panel': catalogShot(
+    'nutricost-nutricost-dmae-bitartrate-powder-panel.jpg',
+  ),
+  // Organic mucuna pruriens powder, 250 g. Barcode 857077008787.
+  'nutricost-nutricost-organic-mucuna-pruriens-powder-250-gm': catalogShot(
+    'nutricost-nutricost-organic-mucuna-pruriens-powder-250-gm.jpg',
+  ),
+  // Bilberry powder, 250 g. Barcode 857077008930.
+  'nutricost-nutricost-bilberry-powder-250-gm': catalogShot(
+    'nutricost-nutricost-bilberry-powder-250-gm.jpg',
+  ),
+  // Arginine AKG powder. Barcode 700425812492 is the 300 g tub.
+  'nutricost-nutricost-arginine-akg-powder-panel': catalogShot(
+    'nutricost-nutricost-arginine-akg-powder-panel.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13577,6 +13669,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-beta-alanine-capsules-240-capsules',
   // No-count charcoal panel must not inherit the 1 lb.
   'nutricost-nutricost-activated-charcoal-powder-panel',
+  // Vitamins night run 2026-10-12 6:45 AM PT batch 2.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // Cordyceps 250 g panel must not inherit the 16 oz row.
+  'nutricost-nutricost-organic-cordyceps-powder-panel',
+  // Vitamin A 10,000 IU must not inherit the 25,000 IU.
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels-2',
   // Daytime photo run — Eye & Ear. Shared-formula counts.
   // 120-count must not inherit the 10 mg 60.
   'now-lutein-10-mg-120',
@@ -27923,5 +28021,133 @@ assertExactCarton(
     )
   ) {
     throw new Error('shiitake 8 oz must not inherit the 4 oz');
+  }
+}
+assertBrandMark(
+  'nutricost-nutricost-organic-cordyceps-powder-16-oz',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-cordyceps-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-organic-cordyceps-powder-panel.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-organic-greens-25-oz',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-nutricost-organic-greens-25-oz-2',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-reishi-mushroom-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-reishi-mushroom-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-tyrosine-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-tyrosine-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coleus-forskohlii-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-coleus-forskohlii-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-betaine-anhydrous-tmg-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-betaine-anhydrous-tmg-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-e-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-e-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-a-softgels-500-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-garlic-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-garlic-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-fish-oil-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-fish-oil-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cla-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-cla-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cla-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-cla-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-theanine-powder-100-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-theanine-powder-100-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dmae-bitartrate-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-dmae-bitartrate-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-mucuna-pruriens-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-organic-mucuna-pruriens-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bilberry-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-bilberry-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-arginine-akg-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-arginine-akg-powder-panel.jpg',
+);
+{
+  const cordycepsPanel = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-cordyceps-powder-panel',
+    formulaId: 'nutricost-nutricost-organic-cordyceps-powder-16-oz',
+    brand: 'Nutricost',
+  });
+  if (
+    !cordycepsPanel?.verifiedSku
+    || !cordycepsPanel.url.endsWith(
+      '/nutricost-nutricost-organic-cordyceps-powder-panel.jpg',
+    )
+  ) {
+    throw new Error('cordyceps 250 g must not inherit the 16 oz row');
+  }
+  const vita10 = previewOverlayImage({
+    id: 'nutricost-nutricost-vitamin-a-softgels-500-softgels-2',
+    formulaId: 'nutricost-nutricost-vitamin-a-softgels-500-softgels',
+    brand: 'Nutricost',
+  });
+  if (
+    !vita10?.verifiedSku
+    || !vita10.url.endsWith(
+      '/nutricost-nutricost-vitamin-a-softgels-500-softgels-2.jpg',
+    )
+  ) {
+    throw new Error('vitamin A 10,000 IU must not inherit the 25,000 IU');
   }
 }
