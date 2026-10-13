@@ -2462,6 +2462,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-l-lysine-powder-panel': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 2.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // Acerola powder named 8 oz. Barcode 810139572701 is the
+  // 0.5 lb variant. The front on that code reads 16 oz (1 lb).
+  // Do not glue it.
+  'nutricost-nutricost-natural-vitamin-c-acerola-cherry-powder-8-oz': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Long jack powder named 100 g. Barcode 702669934251.
+  // The front on that code reads 8 oz (227 g). Not 100 g.
+  'nutricost-nutricost-long-jack-powder-100-gms': brandMark(
+    'nutricost-mark.png',
+  ),
+  // TUDCA named 30 capsules. No barcode. Live bottles are
+  // 250 mg 30-count and 500 mg 30-count. Do not glue one.
+  'nutricost-nutricost-tudca-capsules-30-capsules': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -13265,6 +13284,75 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-l-lysine-powder-1-kg': catalogShot(
     'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
   ),
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 2.
+  // Same 1 kg tub and barcode 702669937771. Same file.
+  'nutricost-nutricost-l-lysine-powder-1-kg-2': catalogShot(
+    'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
+  ),
+  // Bitter melon, 600 mg, 180 capsules. Barcode 702669933469.
+  'nutricost-nutricost-bitter-melon-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-bitter-melon-capsules-180-capsules.jpg',
+  ),
+  // L-phenylalanine, 500 mg, 180 capsules. Barcode 702669932547.
+  'nutricost-nutricost-l-phenylalanine-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-l-phenylalanine-capsules-180-capsules.jpg',
+  ),
+  // L-ornithine, 500 mg, 180 capsules. Barcode 810139572213.
+  'nutricost-nutricost-l-ornithine-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-l-ornithine-capsules-180-capsules.jpg',
+  ),
+  // Vitamin B5, 500 mg, 240 capsules. Barcode 810014679464. Not the 120.
+  'nutricost-nutricost-vitamin-b5-pantothenic-acid-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b5-pantothenic-acid-capsules-240-capsules.jpg',
+  ),
+  // Vitamin B3 niacinamide, 500 mg, 240 capsules. Barcode 702669933773.
+  'nutricost-nutricost-vitamin-b3-niacinamide-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b3-niacinamide-capsules-240-capsules.jpg',
+  ),
+  // L-carnitine tartrate, 120 capsules. Barcode 810014671444. Not the 240.
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-carnitine-tartrate-capsules-120-capsules.jpg',
+  ),
+  // L-carnitine tartrate, 500 mg, 240 capsules. Barcode 702669934589. Not the 120.
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules.jpg',
+  ),
+  // Siberian eleuthero, 500 mg, 240 capsules. Barcode 702669935371.
+  'nutricost-nutricost-siberian-eleuthero-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-siberian-eleuthero-capsules-240-capsules.jpg',
+  ),
+  // Chlorella, 500 mg, 240 capsules. Barcode 702669931373.
+  'nutricost-nutricost-chlorella-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-chlorella-capsules-240-capsules.jpg',
+  ),
+  // St. John's wort, 500 mg, 120 capsules. Barcode 857077008725.
+  'nutricost-nutricost-st-johns-wort-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-st-johns-wort-capsules-120-capsules.jpg',
+  ),
+  // Resveratrol, 120 capsules. Barcode 702669931397. Front reads 700 mg.
+  'nutricost-nutricost-resveratrol-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-resveratrol-capsules-120-capsules.jpg',
+  ),
+  // D-mannose, 500 mg, 120 capsules. Barcode 702669935845.
+  'nutricost-nutricost-d-mannose-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-d-mannose-capsules-120-capsules.jpg',
+  ),
+  // Cranberry extract with vitamin C and E, 500 mg, 120 capsules. Barcode 702669934084.
+  'nutricost-nutricost-cranberry-extract-capsules-with-vitamin-c-and-e-120-capsules': catalogShot(
+    'nutricost-nutricost-cranberry-extract-capsules-with-vitamin-c-and-e-120-capsules.jpg',
+  ),
+  // CDP choline, 300 mg, 120 capsules. Barcode 857077008763. Not the 60.
+  'nutricost-nutricost-cdp-choline-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-cdp-choline-capsules-120-capsules.jpg',
+  ),
+  // CDP choline, 300 mg, 60 capsules. Barcode 857077008756. Not the 120.
+  'nutricost-nutricost-cdp-choline-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-cdp-choline-capsules-60-capsules.jpg',
+  ),
+  // TUDCA, 250 mg, 60 capsules. Barcode 702669931656. Not the 30. Not the 500 mg.
+  'nutricost-nutricost-tudca-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-tudca-capsules-60-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13989,8 +14077,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules',
   // No-count lysine powder must not inherit the 1 kg.
   'nutricost-nutricost-l-lysine-powder-panel',
-  // Same 1 kg bottle. Stay a letter until that row is attempted.
-  'nutricost-nutricost-l-lysine-powder-1-kg-2',
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 2.
+  // Carnitine 240 must not inherit the 120.
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -28823,6 +28912,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-l-lysine-powder-1-kg-2',
+  'Nutricost',
+  'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bitter-melon-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-bitter-melon-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-phenylalanine-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-phenylalanine-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-ornithine-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-ornithine-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b5-pantothenic-acid-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b5-pantothenic-acid-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b3-niacinamide-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b3-niacinamide-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-siberian-eleuthero-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-siberian-eleuthero-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-chlorella-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-chlorella-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-st-johns-wort-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-st-johns-wort-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-resveratrol-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-resveratrol-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-d-mannose-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-d-mannose-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cranberry-extract-capsules-with-vitamin-c-and-e-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-cranberry-extract-capsules-with-vitamin-c-and-e-120-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-natural-vitamin-c-acerola-cherry-powder-8-oz',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-cdp-choline-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-cdp-choline-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-cdp-choline-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-cdp-choline-capsules-60-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-long-jack-powder-100-gms',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-tudca-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-tudca-capsules-60-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-tudca-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-mark.png',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -28867,7 +29056,31 @@ assertExactCarton(
     formulaId: 'nutricost-nutricost-l-lysine-powder-1-kg',
     brand: 'Nutricost',
   });
-  if (!lysineDup?.url.startsWith('data:image/svg') || lysineDup.verifiedSku) {
-    throw new Error('Lysine 1 kg duplicate must stay a letter until attempted');
+  if (
+    !lysineDup?.verifiedSku
+    || !lysineDup.url.endsWith('/nutricost-nutricost-l-lysine-powder-1-kg.jpg')
+  ) {
+    throw new Error('Lysine 1 kg duplicate must use the same 1 kg tub');
+  }
+  const carnitine240 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-l-carnitine-tartrate-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !carnitine240?.verifiedSku
+    || !carnitine240.url.endsWith(
+      '/nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('Carnitine 240 must not inherit the 120');
+  }
+  const tudca30 = previewOverlayImage({
+    id: 'nutricost-nutricost-tudca-capsules-30-capsules',
+    formulaId: 'nutricost-nutricost-tudca-capsules-30-capsules',
+    brand: 'Nutricost',
+  });
+  if (!tudca30?.url.endsWith('/nutricost-mark.png') || tudca30.verifiedSku) {
+    throw new Error('TUDCA 30 with no barcode must stay the brand mark');
   }
 }
