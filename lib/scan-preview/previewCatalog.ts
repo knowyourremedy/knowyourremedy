@@ -11871,6 +11871,28 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'flonase-b152-sensimist-child-60': catalogShot(
     'flonase-b152-sensimist-child-60.jpg',
   ),
+  // Allergies night run 2026-10-13 6:45 AM PT. Last letter leftovers.
+  // Adult Sensimist, 72 metered sprays. NDC 0135-0615-06. 0.22 fl oz (6.4 mL).
+  // Not the 60 (0.20 fl oz) and not the 120 (0.31 fl oz). Not Children's.
+  'flonase-b153-sensimist-72': catalogShot('flonase-b153-sensimist-72.jpg'),
+  // Zaditor, 5 mL (0.17 fl oz). Barcode 300654011057.
+  // Same carton as zaditor. Not the twin pack.
+  'zaditor-b154-5ml': catalogShot('zaditor.jpg'),
+  // Rhinocort Allergy, 120 sprays. Barcode 300450646125. 0.285 fl oz (8.43 mL).
+  // Not the discontinued 60. Not the 3-bottle pack.
+  'rhinocort-b154-allergy-120': catalogShot('rhinocort-b154-allergy-120.jpg'),
+  // Nasonex 24HR, 60 metered sprays. Barcode 370030165766. 0.34 fl oz (10 mL).
+  // Not the 120 and not Children's.
+  'nasonex-b154-allergy-60': catalogShot('nasonex-b154-allergy-60.jpg'),
+  // Nasonex 24HR, 120 metered sprays. Barcode 370030165773. 0.57 fl oz (17 mL).
+  // Not the 60.
+  'nasonex-b154-allergy-120': catalogShot('nasonex-b154-allergy-120.jpg'),
+  // Children's Nasonex, 30 metered sprays. Barcode 370030100675.
+  // 0.25 fl oz (7.5 mL). Not the adult 60 and not the children's 60.
+  'nasonex-b154-child-30': catalogShot('nasonex-b154-child-30.jpg'),
+  // Children's Nasonex, 60 metered sprays. Barcode 370030100767.
+  // 0.34 fl oz (10 mL). Not the adult 60 and not the children's 30.
+  'nasonex-b154-child-60': catalogShot('nasonex-b154-child-60.jpg'),
   // Vitamins night run 2026-10-08 1:45 AM PT batch 1.
   // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
   // Vitamin B12 5,000 mcg, 120 capsules. Barcode 810014678504.
@@ -22934,6 +22956,13 @@ assertExactCarton(
     ['flonase-b152-sensimist-60', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-60.jpg'],
     ['flonase-b152-sensimist-120', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-120.jpg'],
     ['flonase-b152-sensimist-child-60', 'flonase-sensimist-bkc-ps80', 'flonase-b152-sensimist-child-60.jpg'],
+    ['flonase-b153-sensimist-72', 'flonase-sensimist-bkc-ps80', 'flonase-b153-sensimist-72.jpg'],
+    ['zaditor-b154-5ml', 'zaditor-bkc', 'zaditor.jpg'],
+    ['rhinocort-b154-allergy-120', 'rhinocort-b154-allergy', 'rhinocort-b154-allergy-120.jpg'],
+    ['nasonex-b154-allergy-60', 'amazon-basics-mometasone-nasal', 'nasonex-b154-allergy-60.jpg'],
+    ['nasonex-b154-allergy-120', 'amazon-basics-mometasone-nasal', 'nasonex-b154-allergy-120.jpg'],
+    ['nasonex-b154-child-30', 'amazon-basics-mometasone-nasal', 'nasonex-b154-child-30.jpg'],
+    ['nasonex-b154-child-60', 'amazon-basics-mometasone-nasal', 'nasonex-b154-child-60.jpg'],
   ];
   for (const [id, formulaId, file] of nasalOwn) {
     const image = previewOverlayImage({ id, formulaId, brand: 'Flonase' });
