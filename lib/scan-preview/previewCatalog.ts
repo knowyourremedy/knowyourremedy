@@ -2562,6 +2562,35 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-calcium-citrate-magnesium-citrate-powder-60-servings-2': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-13 5:30 AM PT batch 1.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // Magnesium citrate named 83 servings. Barcode 810014672854 is fruit punch 250 g.
+  // The front reads 250 g and 80 servings. Not 83.
+  'nutricost-magnesium-citrate-powder-83-servings': brandMark('nutricost-mark.png'),
+  // Chlorophyll named 60 softgels. Barcode 810139572664 is the 50 mg 60-count,
+  // already cartoned. The pinned panel is the 50 mg x 2 (100 mg) 60-count.
+  // Do not glue either bottle.
+  'nutricost-chlorophyll-60-softgels-2': brandMark('nutricost-mark.png'),
+  // L-glutamine named 78 servings. No barcode. Live tubs are 250 g, 500 g,
+  // and 1 kg across several flavors. Do not glue one.
+  'nutricost-l-glutamine-powder-78-servings': brandMark('nutricost-mark.png'),
+  // Creatine named 76 servings. Barcode 810014675305 is blue raspberry 500 g.
+  // The front reads 500 g and 100 servings. Not 76.
+  'nutricost-creatine-monohydrate-powder-76-servings-2': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Creatine named 68 servings. Barcode 810139578277 is sour watermelon 500 g.
+  // The front reads 500 g and 100 servings. Not 68.
+  'nutricost-creatine-monohydrate-powder-68-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Calcium citrate + magnesium citrate named 30 servings. No barcode.
+  // Live 30-serving tubs are fruit punch, peach mango, raspberry lemonade,
+  // and unflavored. Do not glue one.
+  'nutricost-calcium-citrate-magnesium-citrate-powder-30-servings': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -13704,6 +13733,66 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-stim-free-pre-workout-30-servings': catalogShot(
     'nutricost-stim-free-pre-workout-30-servings.jpg',
   ),
+  // Vitamins night run 2026-10-13 5:30 AM PT batch 1.
+  // Pre-X, fruit punch, 30 servings. Barcode 810014670904. Not the 60.
+  'nutricost-pre-x-workout-complex-powder-30-servings-3': catalogShot(
+    'nutricost-pre-x-workout-complex-powder-30-servings-3.jpg',
+  ),
+  // Pre-Workout Complex, peach mango, 60 servings. Barcode 810139570332.
+  // Same bottle as nutricost-pre-workout-complex-60-servings. Not a 30.
+  'nutricost-pre-workout-complex-60-servings-2': catalogShot(
+    'nutricost-pre-workout-complex-60-servings.jpg',
+  ),
+  // Pre-Workout Complex, strawberry kiwi, 30 servings. Barcode 810139577959.
+  'nutricost-pre-workout-complex-30-servings-2': catalogShot(
+    'nutricost-pre-workout-complex-30-servings-2.jpg',
+  ),
+  // Papaya leaf extract, 600 mg, 120 capsules. Barcode 810139576419.
+  'nutricost-papaya-leaf-extract-capsules-120-capsules': catalogShot(
+    'nutricost-papaya-leaf-extract-capsules-120-capsules.jpg',
+  ),
+  // Theacrine, 50 mg, 60 capsules. Barcode 810139575269.
+  'nutricost-theacrine-teacrine-60-capsules': catalogShot(
+    'nutricost-theacrine-teacrine-60-capsules.jpg',
+  ),
+  // Devil's claw, 1,200 mg, 120 capsules. Barcode 810014673578.
+  'nutricost-devil-s-claw-120-capsules': catalogShot(
+    'nutricost-devil-s-claw-120-capsules.jpg',
+  ),
+  // Panax ginseng, 500 mg, 240 capsules. Barcode 702669937986.
+  'nutricost-panax-ginseng-capsules-240-capsules': catalogShot(
+    'nutricost-panax-ginseng-capsules-240-capsules.jpg',
+  ),
+  // Agmatine sulfate, 500 mg, 120 capsules. Barcode 702669936392.
+  'nutricost-agmatine-sulfate-capsules-120-capsules': catalogShot(
+    'nutricost-agmatine-sulfate-capsules-120-capsules.jpg',
+  ),
+  // Calcium citrate + vitamin D, 180 capsules. Barcode 810139576228.
+  'nutricost-calcium-citrate-vitamin-d-180-capsules': catalogShot(
+    'nutricost-calcium-citrate-vitamin-d-180-capsules.jpg',
+  ),
+  // Creatine monohydrate, coastal explosion, 30 servings. Barcode 810139576860.
+  // Same bottle as nutricost-creatine-monohydrate-powder-30-servings. Not a 500 g tub.
+  'nutricost-creatine-monohydrate-powder-30-servings-2': catalogShot(
+    'nutricost-creatine-monohydrate-powder-30-servings.jpg',
+  ),
+  // BCAA, strawberry kiwi, 30 servings. Barcode 857077008589. Not the 90.
+  'nutricost-bcaa-powder-30-servings-2': catalogShot(
+    'nutricost-bcaa-powder-30-servings-2.jpg',
+  ),
+  // BCAA, green apple, 120 servings. Barcode 702669932349.
+  'nutricost-bcaa-powder-120-servings-2': catalogShot(
+    'nutricost-bcaa-powder-120-servings-2.jpg',
+  ),
+  // BCAA, raspberry lemonade, 60 servings. Barcode 857077008251. Not the 30.
+  'nutricost-bcaa-powder-60-servings-2': catalogShot(
+    'nutricost-bcaa-powder-60-servings-2.jpg',
+  ),
+  // Calcium + magnesium + zinc citrates with vitamin D3, fruit punch, 30 servings.
+  // Barcode 810139571032. Not the 60.
+  'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings': catalogShot(
+    'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -14493,6 +14582,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-bcaa-powder-60-servings',
   'nutricost-bcaa-powder-90-servings-2',
   'nutricost-bcaa-powder-30-servings-4',
+  // Vitamins night run 2026-10-13 5:30 AM PT batch 1.
+  // Shared-formula sizes and a different labeled product. Do not inherit a sibling face.
+  // The 60-serving tub must not inherit the fruit punch 30.
+  'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings',
+  // Calcium citrate + magnesium citrate is not the calcium-magnesium-zinc tub.
+  'nutricost-calcium-citrate-magnesium-citrate-powder-30-servings-2',
+  'nutricost-calcium-citrate-magnesium-citrate-powder-60-servings-3',
+  // Pre-X 60 must not inherit the fruit punch 30.
+  'nutricost-pre-x-workout-complex-powder-60-servings-4',
+  // BCAA 60 must not inherit the green apple 120.
+  'nutricost-bcaa-powder-60-servings-4',
 ]);
 
 export function previewOverlayImage(
@@ -29825,6 +29925,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-stim-free-pre-workout-30-servings.jpg',
 );
+assertBrandMark(
+  'nutricost-magnesium-citrate-powder-83-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-pre-x-workout-complex-powder-30-servings-3',
+  'Nutricost',
+  'nutricost-pre-x-workout-complex-powder-30-servings-3.jpg',
+);
+assertBrandMark(
+  'nutricost-chlorophyll-60-softgels-2',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-pre-workout-complex-60-servings-2',
+  'Nutricost',
+  'nutricost-pre-workout-complex-60-servings.jpg',
+);
+assertExactCarton(
+  'nutricost-pre-workout-complex-30-servings-2',
+  'Nutricost',
+  'nutricost-pre-workout-complex-30-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-papaya-leaf-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-papaya-leaf-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-theacrine-teacrine-60-capsules',
+  'Nutricost',
+  'nutricost-theacrine-teacrine-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-devil-s-claw-120-capsules',
+  'Nutricost',
+  'nutricost-devil-s-claw-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-panax-ginseng-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-panax-ginseng-capsules-240-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-l-glutamine-powder-78-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-agmatine-sulfate-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-agmatine-sulfate-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-calcium-citrate-vitamin-d-180-capsules',
+  'Nutricost',
+  'nutricost-calcium-citrate-vitamin-d-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-creatine-monohydrate-powder-30-servings-2',
+  'Nutricost',
+  'nutricost-creatine-monohydrate-powder-30-servings.jpg',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-76-servings-2',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-68-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-bcaa-powder-30-servings-2',
+  'Nutricost',
+  'nutricost-bcaa-powder-30-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-bcaa-powder-120-servings-2',
+  'Nutricost',
+  'nutricost-bcaa-powder-120-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-bcaa-powder-60-servings-2',
+  'Nutricost',
+  'nutricost-bcaa-powder-60-servings-2.jpg',
+);
+assertExactCarton(
+  'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings',
+  'Nutricost',
+  'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings.jpg',
+);
+assertBrandMark(
+  'nutricost-calcium-citrate-magnesium-citrate-powder-30-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -30123,8 +30323,33 @@ assertExactCarton(
     formulaId: 'nutricost-bcaa-powder-90-servings',
     brand: 'Nutricost',
   });
-  if (!bcaa30share?.url.startsWith('data:image/svg') || bcaa30share.verifiedSku) {
-    throw new Error('BCAA 30 that shares the 90 formula must stay a letter');
+  if (
+    !bcaa30share?.verifiedSku
+    || !bcaa30share.url.endsWith('/nutricost-bcaa-powder-30-servings-2.jpg')
+  ) {
+    throw new Error('BCAA strawberry kiwi 30 must not inherit the 90');
+  }
+  const bcaa60rasp = previewOverlayImage({
+    id: 'nutricost-bcaa-powder-60-servings-2',
+    formulaId: 'nutricost-bcaa-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !bcaa60rasp?.verifiedSku
+    || !bcaa60rasp.url.endsWith('/nutricost-bcaa-powder-60-servings-2.jpg')
+  ) {
+    throw new Error('BCAA raspberry lemonade 60 must not inherit the 30');
+  }
+  const pre60twin = previewOverlayImage({
+    id: 'nutricost-pre-workout-complex-60-servings-2',
+    formulaId: 'nutricost-pre-workout-complex-60-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !pre60twin?.verifiedSku
+    || !pre60twin.url.endsWith('/nutricost-pre-workout-complex-60-servings.jpg')
+  ) {
+    throw new Error('Pre-Workout peach mango 60 twin must use that bottle');
   }
   const bcaa60share = previewOverlayImage({
     id: 'nutricost-bcaa-powder-60-servings-3',
@@ -30168,5 +30393,45 @@ assertExactCarton(
   });
   if (!cit150?.url.startsWith('data:image/svg') || cit150.verifiedSku) {
     throw new Error('Citrulline 150 servings must stay a letter');
+  }
+  const cmz60 = previewOverlayImage({
+    id: 'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings',
+    formulaId: 'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (!cmz60?.url.startsWith('data:image/svg') || cmz60.verifiedSku) {
+    throw new Error('Calcium magnesium zinc 60 must not inherit the 30');
+  }
+  const caMg30 = previewOverlayImage({
+    id: 'nutricost-calcium-citrate-magnesium-citrate-powder-30-servings-2',
+    formulaId: 'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (!caMg30?.url.startsWith('data:image/svg') || caMg30.verifiedSku) {
+    throw new Error('Calcium citrate magnesium citrate 30 must not inherit the zinc tub');
+  }
+  const caMg60 = previewOverlayImage({
+    id: 'nutricost-calcium-citrate-magnesium-citrate-powder-60-servings-3',
+    formulaId: 'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (!caMg60?.url.startsWith('data:image/svg') || caMg60.verifiedSku) {
+    throw new Error('Calcium citrate magnesium citrate 60 must not inherit the zinc tub');
+  }
+  const prex60 = previewOverlayImage({
+    id: 'nutricost-pre-x-workout-complex-powder-60-servings-4',
+    formulaId: 'nutricost-pre-x-workout-complex-powder-30-servings-3',
+    brand: 'Nutricost',
+  });
+  if (!prex60?.url.startsWith('data:image/svg') || prex60.verifiedSku) {
+    throw new Error('Pre-X 60 must not inherit the fruit punch 30');
+  }
+  const bcaa60green = previewOverlayImage({
+    id: 'nutricost-bcaa-powder-60-servings-4',
+    formulaId: 'nutricost-bcaa-powder-120-servings-2',
+    brand: 'Nutricost',
+  });
+  if (!bcaa60green?.url.startsWith('data:image/svg') || bcaa60green.verifiedSku) {
+    throw new Error('BCAA 60 must not inherit the green apple 120');
   }
 }
