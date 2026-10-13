@@ -2454,6 +2454,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-vitamin-b6-capsules-panel': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 1.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // L-lysine powder has no barcode and no count. Live tubs are
+  // 500 g and 1 kg. Do not glue the 1 kg.
+  'nutricost-nutricost-l-lysine-powder-panel': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -13180,6 +13188,83 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-selenium-capsules-240-capsules': catalogShot(
     'nutricost-nutricost-selenium-capsules-240-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 1.
+  // Selenium, 100 mcg, 240 capsules. Barcode 810014674865. Not the 200 mcg.
+  'nutricost-nutricost-selenium-capsules-240-capsules-2': catalogShot(
+    'nutricost-nutricost-selenium-capsules-240-capsules-2.jpg',
+  ),
+  // Milk thistle, 250 mg, 240 capsules. Barcode 702669932561. Not the 120.
+  'nutricost-nutricost-milk-thistle-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-milk-thistle-capsules-240-capsules.jpg',
+  ),
+  // Ginger root extract, 550 mg, 240 capsules. Barcode 702669935111.
+  'nutricost-nutricost-ginger-root-extract-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-ginger-root-extract-capsules-240-capsules.jpg',
+  ),
+  // Folic acid, 1,000 mcg, 240 capsules. Barcode 810014679228. Not the 30.
+  'nutricost-nutricost-folic-acid-vitamin-b9-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-folic-acid-vitamin-b9-capsules-240-capsules.jpg',
+  ),
+  // Ferrochel iron, 36 mg, 240 capsules. Barcode 702669936293. Not the 18 mg.
+  'nutricost-nutricost-ferrochel-iron-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-ferrochel-iron-capsules-240-capsules.jpg',
+  ),
+  // Fenugreek, 240 capsules. Barcode 702669931489. Front reads 675 mg. Not the 120.
+  'nutricost-nutricost-fenugreek-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-fenugreek-capsules-240-capsules.jpg',
+  ),
+  // Fenugreek, 120 capsules. Barcode 810139578840. Not the 240.
+  'nutricost-nutricost-fenugreek-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-fenugreek-capsules-120-capsules.jpg',
+  ),
+  // Biotin, 10 mg, 120 capsules. Barcode 810139572534. Not the 240.
+  'nutricost-nutricost-biotin-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-biotin-capsules-120-capsules.jpg',
+  ),
+  // Biotin, 10 mg, 240 capsules. Barcode 810014675268. Not the 120.
+  'nutricost-nutricost-biotin-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-biotin-capsules-240-capsules.jpg',
+  ),
+  // Vitamin K2 100 mcg + D3 5,000 IU, 120 softgels. Barcode 857077008664.
+  'nutricost-nutricost-vitamin-k2-vitamin-d3-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-k2-vitamin-d3-softgels-120-softgels.jpg',
+  ),
+  // Evening primrose oil, 1,300 mg, 120 softgels. Barcode 857077008282.
+  'nutricost-nutricost-evening-primrose-oil-softgels-panel': catalogShot(
+    'nutricost-nutricost-evening-primrose-oil-softgels-panel.jpg',
+  ),
+  // CoQ10, 100 mg, 120 softgels. Barcode 810014678573. Not the 200 mg.
+  'nutricost-nutricost-coq10-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-coq10-softgels-120-softgels.jpg',
+  ),
+  // Coconut oil, 1,000 mg, 120 softgels. Barcode 857077008480. Not the 240.
+  'nutricost-nutricost-coconut-oil-softgels-120-softgels': catalogShot(
+    'nutricost-nutricost-coconut-oil-softgels-120-softgels.jpg',
+  ),
+  // Coconut oil, 1,000 mg, 240 softgels. Barcode 810014674070. Not the 120.
+  'nutricost-nutricost-coconut-oil-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-coconut-oil-softgels-240-softgels.jpg',
+  ),
+  // Butterbur extract, 75 mg, 120 capsules. Barcode 857077008718.
+  'nutricost-nutricost-butterbur-extract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-butterbur-extract-capsules-120-capsules.jpg',
+  ),
+  // Ashwagandha root extract, 600 mg, 120 capsules. Barcode 702669935388. Not the 30.
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-ashwagandha-root-extract-capsules-120-capsules.jpg',
+  ),
+  // Ashwagandha root extract, 600 mg, 30 capsules. Barcode 810139574200. Not the 120.
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules.jpg',
+  ),
+  // Activated charcoal, 260 mg, 120 capsules. Barcode 857077008503.
+  'nutricost-nutricost-activated-charcoal-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-activated-charcoal-capsules-120-capsules.jpg',
+  ),
+  // L-lysine powder, 1 kg. Barcode 702669937771. Not the 500 g.
+  'nutricost-nutricost-l-lysine-powder-1-kg': catalogShot(
+    'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13892,6 +13977,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-pqq-capsules-60-capsules',
   // No-count B6 panel must not inherit the 100 mg 240.
   'nutricost-nutricost-vitamin-b6-capsules-panel',
+  // Vitamins night run 2026-10-13 1:45 AM PT batch 1.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // Fenugreek 240 must not inherit the 120.
+  'nutricost-nutricost-fenugreek-capsules-240-capsules',
+  // Biotin 240 must not inherit the 120.
+  'nutricost-nutricost-biotin-capsules-240-capsules',
+  // Coconut oil 240 must not inherit the 120.
+  'nutricost-nutricost-coconut-oil-softgels-240-softgels',
+  // Ashwagandha 30 must not inherit the 120.
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules',
+  // No-count lysine powder must not inherit the 1 kg.
+  'nutricost-nutricost-l-lysine-powder-panel',
+  // Same 1 kg bottle. Stay a letter until that row is attempted.
+  'nutricost-nutricost-l-lysine-powder-1-kg-2',
 ]);
 
 export function previewOverlayImage(
@@ -28624,6 +28723,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-selenium-capsules-240-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-selenium-capsules-240-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-selenium-capsules-240-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-milk-thistle-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-milk-thistle-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ginger-root-extract-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ginger-root-extract-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-folic-acid-vitamin-b9-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-folic-acid-vitamin-b9-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ferrochel-iron-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ferrochel-iron-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-fenugreek-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-fenugreek-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-fenugreek-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-fenugreek-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-biotin-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-biotin-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-biotin-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-biotin-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-k2-vitamin-d3-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-k2-vitamin-d3-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-evening-primrose-oil-softgels-panel',
+  'Nutricost',
+  'nutricost-nutricost-evening-primrose-oil-softgels-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coq10-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-coq10-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coconut-oil-softgels-120-softgels',
+  'Nutricost',
+  'nutricost-nutricost-coconut-oil-softgels-120-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-coconut-oil-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-coconut-oil-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-butterbur-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-butterbur-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-ashwagandha-root-extract-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-activated-charcoal-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-activated-charcoal-capsules-120-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-l-lysine-powder-panel',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-lysine-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-l-lysine-powder-1-kg.jpg',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -28654,5 +28853,21 @@ assertExactCarton(
   });
   if (!b6Panel?.url.endsWith('/nutricost-mark.png') || b6Panel.verifiedSku) {
     throw new Error('B6 panel must stay the brand mark, not the 100 mg 240');
+  }
+  const lysinePanel = previewOverlayImage({
+    id: 'nutricost-nutricost-l-lysine-powder-panel',
+    formulaId: 'nutricost-nutricost-l-lysine-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (!lysinePanel?.url.endsWith('/nutricost-mark.png') || lysinePanel.verifiedSku) {
+    throw new Error('Lysine powder with no barcode must stay the brand mark');
+  }
+  const lysineDup = previewOverlayImage({
+    id: 'nutricost-nutricost-l-lysine-powder-1-kg-2',
+    formulaId: 'nutricost-nutricost-l-lysine-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (!lysineDup?.url.startsWith('data:image/svg') || lysineDup.verifiedSku) {
+    throw new Error('Lysine 1 kg duplicate must stay a letter until attempted');
   }
 }
