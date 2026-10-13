@@ -13438,6 +13438,92 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules': catalogShot(
     'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-13 3:00 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // D-ribose powder, 250 g. Barcode 702669932196. Front reads 250 g. Not the 500 g.
+  'nutricost-nutricost-d-ribose-powder-250-gm': catalogShot(
+    'nutricost-nutricost-d-ribose-powder-250-gm.jpg',
+  ),
+  // D-ribose powder, 500 g. Barcode 702669930505. Front reads 500 g. Not the 250 g.
+  'nutricost-nutricost-d-ribose-powder-500-gm': catalogShot(
+    'nutricost-nutricost-d-ribose-powder-500-gm.jpg',
+  ),
+  // NAC vegetarian powder, 250 g. Barcode 702669938228. Front reads 250 g. Not the 500 g.
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm': catalogShot(
+    'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm.jpg',
+  ),
+  // NAC vegetarian powder. Barcode 702669938235 is the 500 g pouch.
+  // Front reads 17.9 oz (500 g). Not the 250 g.
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel': catalogShot(
+    'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel.jpg',
+  ),
+  // Calcium ascorbate powder, 250 g. Barcode 702669938105. Front reads 250 g.
+  'nutricost-nutricost-calcium-ascorbate-powder-250-gm': catalogShot(
+    'nutricost-nutricost-calcium-ascorbate-powder-250-gm.jpg',
+  ),
+  // Magnesium citrate powder, unflavored, 250 g. Barcode 702669934503.
+  // Not a flavored tub.
+  'nutricost-nutricost-magnesium-citrate-powder-250-gm': catalogShot(
+    'nutricost-nutricost-magnesium-citrate-powder-250-gm.jpg',
+  ),
+  // L-citrulline malate 2:1, unflavored, 600 g. Barcode 702669931052.
+  // Front reads 600 g. Not the 1.2 kg.
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-600-gm': catalogShot(
+    'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-600-gm.jpg',
+  ),
+  // L-citrulline malate 2:1, unflavored, 1.2 kg. Barcode 702669932325.
+  // Front reads 1.2 kg. Not the 600 g.
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-1-2-kg': catalogShot(
+    'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-1-2-kg.jpg',
+  ),
+  // Vitamin C powder, 1 lb. Barcode 702669930574. Front reads 1 lb (454 g). Not the 2 lb.
+  'nutricost-nutricost-vitamin-c-powder-1-lb': catalogShot(
+    'nutricost-nutricost-vitamin-c-powder-1-lb.jpg',
+  ),
+  // Vitamin C powder, 2 lb. Barcode 702669930888. Front reads 2 lb (907 g). Not the 1 lb.
+  'nutricost-nutricost-vitamin-c-powder-2-lb': catalogShot(
+    'nutricost-nutricost-vitamin-c-powder-2-lb.jpg',
+  ),
+  // Taurine powder, 1 kg. Barcode 702669933810. Front reads 1 kg. Not the 250 g or 500 g.
+  'nutricost-nutricost-taurine-powder-1-kg': catalogShot(
+    'nutricost-nutricost-taurine-powder-1-kg.jpg',
+  ),
+  // Organic spirulina powder, 1 lb. Barcode 702669930802. Front reads 1 lb. Not the 2 lb.
+  'nutricost-nutricost-organic-spirulina-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-spirulina-powder-1-lb.jpg',
+  ),
+  // Organic spirulina powder, 2 lb. Barcode 702669937795. Front reads 2 lb. Not the 1 lb.
+  'nutricost-nutricost-organic-spirulina-powder-2-lb': catalogShot(
+    'nutricost-nutricost-organic-spirulina-powder-2-lb.jpg',
+  ),
+  // N-acetyl L-tyrosine powder, 100 g. Barcode 702669931083. Front reads 100 g.
+  'nutricost-nutricost-n-acetyl-l-tyrosine-nalt-powder-100-gm': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-tyrosine-nalt-powder-100-gm.jpg',
+  ),
+  // NAC capsules, 600 mg, 30 capsules. Barcode 810139574149. Not the 120.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules.jpg',
+  ),
+  // Same 600 mg 30-count and barcode 810139574149. Same file.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules-2': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules.jpg',
+  ),
+  // NAC capsules, 600 mg, 120 capsules. Barcode 810014675367. Not the 240.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-120-capsules.jpg',
+  ),
+  // NAC capsules, 600 mg, 180 capsules. Barcode 810014675350. Not the 120.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-180-capsules.jpg',
+  ),
+  // NAC capsules, 600 mg, 240 capsules. Barcode 810139571650. Not the 120.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules.jpg',
+  ),
+  // L-tyrosine powder, 100 g. Barcode 702669930871. Front reads 100 g. Not the 250 g.
+  'nutricost-nutricost-l-tyrosine-powder-100-gms': catalogShot(
+    'nutricost-nutricost-l-tyrosine-powder-100-gms.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -14173,6 +14259,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-l-theanine-capsules-240-capsules',
   // Yohimbine 240 must not inherit the 120.
   'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules',
+  // Vitamins night run 2026-10-13 3:00 AM PT batch 2.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // D-ribose 500 g must not inherit the 250 g.
+  'nutricost-nutricost-d-ribose-powder-500-gm',
+  // NAC powder 500 g must not inherit the 250 g.
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel',
+  // Vitamin C 2 lb must not inherit the 1 lb.
+  'nutricost-nutricost-vitamin-c-powder-2-lb',
+  // Spirulina 2 lb must not inherit the 1 lb.
+  'nutricost-nutricost-organic-spirulina-powder-2-lb',
+  // NAC 240 must not inherit the 120.
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules',
+  // L-tyrosine 250 g and the no-count panel must not inherit the 100 g.
+  'nutricost-nutricost-l-tyrosine-powder-250-gm',
+  'nutricost-nutricost-l-tyrosine-powder-panel',
 ]);
 
 export function previewOverlayImage(
@@ -29205,6 +29306,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-d-ribose-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-d-ribose-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-d-ribose-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-d-ribose-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-ascorbate-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-calcium-ascorbate-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-magnesium-citrate-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-magnesium-citrate-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-600-gm',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-600-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-1-2-kg',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-malate-2-1-unflavored-powder-1-2-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-c-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-c-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-c-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-c-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-taurine-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-taurine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-spirulina-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-spirulina-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-spirulina-powder-2-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-spirulina-powder-2-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-tyrosine-nalt-powder-100-gm',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-tyrosine-nalt-powder-100-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-tyrosine-powder-100-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-tyrosine-powder-100-gms.jpg',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -29327,5 +29528,95 @@ assertExactCarton(
     )
   ) {
     throw new Error('Betaine HCl duplicate must use the same pouch');
+  }
+  const ribose500 = previewOverlayImage({
+    id: 'nutricost-nutricost-d-ribose-powder-500-gm',
+    formulaId: 'nutricost-nutricost-d-ribose-powder-250-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !ribose500?.verifiedSku
+    || !ribose500.url.endsWith('/nutricost-nutricost-d-ribose-powder-500-gm.jpg')
+  ) {
+    throw new Error('D-ribose 500 g must not inherit the 250 g');
+  }
+  const nacPowder500 = previewOverlayImage({
+    id: 'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel',
+    formulaId: 'nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-250-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !nacPowder500?.verifiedSku
+    || !nacPowder500.url.endsWith(
+      '/nutricost-nutricost-n-acetyl-cysteine-nac-vegetarian-powder-panel.jpg',
+    )
+  ) {
+    throw new Error('NAC powder 500 g must not inherit the 250 g');
+  }
+  const vitaminC2 = previewOverlayImage({
+    id: 'nutricost-nutricost-vitamin-c-powder-2-lb',
+    formulaId: 'nutricost-nutricost-vitamin-c-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !vitaminC2?.verifiedSku
+    || !vitaminC2.url.endsWith('/nutricost-nutricost-vitamin-c-powder-2-lb.jpg')
+  ) {
+    throw new Error('Vitamin C 2 lb must not inherit the 1 lb');
+  }
+  const spirulina2 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-spirulina-powder-2-lb',
+    formulaId: 'nutricost-nutricost-organic-spirulina-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !spirulina2?.verifiedSku
+    || !spirulina2.url.endsWith(
+      '/nutricost-nutricost-organic-spirulina-powder-2-lb.jpg',
+    )
+  ) {
+    throw new Error('Spirulina 2 lb must not inherit the 1 lb');
+  }
+  const nac240 = previewOverlayImage({
+    id: 'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !nac240?.verifiedSku
+    || !nac240.url.endsWith(
+      '/nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('NAC 240 must not inherit the 120');
+  }
+  const nac30Dup = previewOverlayImage({
+    id: 'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules-2',
+    formulaId: 'nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !nac30Dup?.verifiedSku
+    || !nac30Dup.url.endsWith(
+      '/nutricost-nutricost-n-acetyl-l-cysteine-nac-capsules-30-capsules.jpg',
+    )
+  ) {
+    throw new Error('NAC 30 duplicate must use the same bottle');
+  }
+  const tyrosine250 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-tyrosine-powder-250-gm',
+    formulaId: 'nutricost-nutricost-l-tyrosine-powder-100-gms',
+    brand: 'Nutricost',
+  });
+  if (!tyrosine250?.url.startsWith('data:image/svg') || tyrosine250.verifiedSku) {
+    throw new Error('L-tyrosine 250 g must stay a letter until attempted');
+  }
+  const tyrosinePanel = previewOverlayImage({
+    id: 'nutricost-nutricost-l-tyrosine-powder-panel',
+    formulaId: 'nutricost-nutricost-l-tyrosine-powder-100-gms',
+    brand: 'Nutricost',
+  });
+  if (!tyrosinePanel?.url.startsWith('data:image/svg') || tyrosinePanel.verifiedSku) {
+    throw new Error('L-tyrosine panel must stay a letter until attempted');
   }
 }
