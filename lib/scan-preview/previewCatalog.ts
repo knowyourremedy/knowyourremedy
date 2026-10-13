@@ -2435,6 +2435,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-nutricost-l-carnitine-tartrate-powder-100-gm': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 2.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // D-aspartic acid capsules, 180 count. Barcode 810014676135
+  // is the 2,000 mg variant. The featured image on that code is
+  // the 750 mg / 3,000 mg serving bottle. The 2,000 mg shots are
+  // a flat facts panel and a directions panel. Do not glue either.
+  'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Same 180-count name. No barcode. Do not glue the sibling bottle.
+  'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Vitamin B6 panel has no barcode and no count. Live bottles are
+  // 25 mg and 100 mg, each 240 capsules. Do not glue the 100 mg.
+  'nutricost-nutricost-vitamin-b6-capsules-panel': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -13085,6 +13104,82 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms': catalogShot(
     'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms.jpg',
   ),
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 2.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // Maca root, 750 mg, 180 capsules. Barcode 702669931465.
+  'nutricost-nutricost-maca-root-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-maca-root-capsules-180-capsules.jpg',
+  ),
+  // L-glutamine capsules. Barcode 702669932820.
+  // The front reads 800 mg, 180 capsules. Not a powder tub.
+  'nutricost-nutricost-l-glutamine-capsules-180-capsules': catalogShot(
+    'nutricost-nutricost-l-glutamine-capsules-180-capsules.jpg',
+  ),
+  // Dandelion extract. Barcode 702669935142 is the 525 mg 180-capsule bottle.
+  'nutricost-nutricost-dandelion-extract-capsules-panel': catalogShot(
+    'nutricost-nutricost-dandelion-extract-capsules-panel.jpg',
+  ),
+  // Potassium citrate, 99 mg, 240 capsules. Barcode 810014677019.
+  // Not the 500.
+  'nutricost-nutricost-potassium-citrate-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-potassium-citrate-capsules-240-capsules.jpg',
+  ),
+  // Bilberry, 300 mg, 90 capsules. Barcode 857077008817.
+  'nutricost-nutricost-bilberry-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-bilberry-capsules-90-capsules.jpg',
+  ),
+  // MCT oil softgels, 1,000 mg, 150 softgels. Barcode 857077008671.
+  // Not the 300.
+  'nutricost-nutricost-mct-oil-softgels-150-softgels': catalogShot(
+    'nutricost-nutricost-mct-oil-softgels-150-softgels.jpg',
+  ),
+  // MCT oil softgels, 1,000 mg, 300 softgels. Barcode 857077008688.
+  // Not the 150.
+  'nutricost-nutricost-mct-oil-softgels-300-softgels': catalogShot(
+    'nutricost-nutricost-mct-oil-softgels-300-softgels.jpg',
+  ),
+  // PQQ, 20 mg, 60 capsules. Barcode 702669937658. Not the 30.
+  'nutricost-nutricost-pqq-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-pqq-capsules-60-capsules.jpg',
+  ),
+  // PQQ, 20 mg, 30 capsules. Barcode 702669937641. Not the 60.
+  'nutricost-nutricost-pqq-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-pqq-capsules-30-capsules.jpg',
+  ),
+  // Rhodiola rosea, 500 mg, 60 capsules. Barcode 702669937672.
+  // Same bottle on the duplicate row.
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules.jpg',
+  ),
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules-2': catalogShot(
+    'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules.jpg',
+  ),
+  // L-lysine, 500 capsules. Barcode 702669932622. Not the 250.
+  'nutricost-nutricost-l-lysine-capsules-500-capsules': catalogShot(
+    'nutricost-nutricost-l-lysine-capsules-500-capsules.jpg',
+  ),
+  // Zinc picolinate, 50 mg, 120 capsules. Barcode 810014671482.
+  // Not the 240. Not zinc gluconate.
+  'nutricost-nutricost-zinc-picolinate-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-zinc-picolinate-capsules-120-capsules.jpg',
+  ),
+  // Zinc picolinate, 50 mg, 240 capsules. Barcode 702669936279. Not the 120.
+  'nutricost-nutricost-zinc-picolinate-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-zinc-picolinate-capsules-240-capsules.jpg',
+  ),
+  // Zinc gluconate, 50 mg, 240 capsules. Barcode 702669936286.
+  // Not zinc picolinate. Not the 120.
+  'nutricost-nutricost-zinc-gluconate-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-zinc-gluconate-capsules-240-capsules.jpg',
+  ),
+  // Vitamin B6, 100 mg, 240 capsules. Barcode 702669933186. Not the 25 mg.
+  'nutricost-nutricost-vitamin-b6-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b6-capsules-240-capsules.jpg',
+  ),
+  // Selenium, 200 mcg, 240 capsules. Barcode 702669936439. Not the 100 mcg.
+  'nutricost-nutricost-selenium-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-selenium-capsules-240-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13789,6 +13884,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-l-citrulline-base-powder-600-gm',
   // Carnitine 250 g must not inherit the 100 g row.
   'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms',
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 2.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // No-barcode D-aspartic 180 must not inherit a sibling bottle.
+  'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
+  // PQQ 60 must not inherit the 30.
+  'nutricost-nutricost-pqq-capsules-60-capsules',
+  // No-count B6 panel must not inherit the 100 mg 240.
+  'nutricost-nutricost-vitamin-b6-capsules-panel',
 ]);
 
 export function previewOverlayImage(
@@ -28419,5 +28522,137 @@ assertExactCarton(
     )
   ) {
     throw new Error('carnitine 250 g must not inherit the 100 g row');
+  }
+}
+assertExactCarton(
+  'nutricost-nutricost-maca-root-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-maca-root-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glutamine-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-glutamine-capsules-180-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dandelion-extract-capsules-panel',
+  'Nutricost',
+  'nutricost-nutricost-dandelion-extract-capsules-panel.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-potassium-citrate-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-potassium-citrate-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-bilberry-capsules-90-capsules',
+  'Nutricost',
+  'nutricost-nutricost-bilberry-capsules-90-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-mct-oil-softgels-150-softgels',
+  'Nutricost',
+  'nutricost-nutricost-mct-oil-softgels-150-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-mct-oil-softgels-300-softgels',
+  'Nutricost',
+  'nutricost-nutricost-mct-oil-softgels-300-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pqq-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pqq-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-pqq-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-pqq-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-rhodiola-rosea-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-lysine-capsules-500-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-lysine-capsules-500-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-picolinate-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-picolinate-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-picolinate-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-picolinate-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-zinc-gluconate-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-zinc-gluconate-capsules-240-capsules.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-vitamin-b6-capsules-panel',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b6-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b6-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-selenium-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-selenium-capsules-240-capsules.jpg',
+);
+{
+  const daaNoBarcode = previewOverlayImage({
+    id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
+    formulaId: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !daaNoBarcode?.url.endsWith('/nutricost-mark.png')
+    || daaNoBarcode.verifiedSku
+  ) {
+    throw new Error('D-aspartic 180 with no barcode must stay the brand mark');
+  }
+  const pqq60 = previewOverlayImage({
+    id: 'nutricost-nutricost-pqq-capsules-60-capsules',
+    formulaId: 'nutricost-nutricost-pqq-capsules-30-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !pqq60?.verifiedSku
+    || !pqq60.url.endsWith('/nutricost-nutricost-pqq-capsules-60-capsules.jpg')
+  ) {
+    throw new Error('PQQ 60 must not inherit the 30');
+  }
+  const b6Panel = previewOverlayImage({
+    id: 'nutricost-nutricost-vitamin-b6-capsules-panel',
+    formulaId: 'nutricost-nutricost-vitamin-b6-capsules-240-capsules',
+    brand: 'Nutricost',
+  });
+  if (!b6Panel?.url.endsWith('/nutricost-mark.png') || b6Panel.verifiedSku) {
+    throw new Error('B6 panel must stay the brand mark, not the 100 mg 240');
   }
 }
