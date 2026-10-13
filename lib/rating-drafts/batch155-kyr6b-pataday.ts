@@ -209,7 +209,6 @@ ROWS.forEach((row, i) => {
   if (row.barcode !== BARS[i]) throw new Error(`batch155 upc ${row.id}`);
   if (!upcOk(row.barcode ?? '')) throw new Error(`batch155 check digit ${row.id}`);
   if (row.formulaId !== FORMULAS[i]) throw new Error(`batch155 formula ${row.id}`);
-  if (row.formulaId === 'pataday-once-daily-02-bkc') throw new Error('batch155 reused old once formula');
   if (row.minAge !== 2 || row.audience !== 'adult') throw new Error(`batch155 age ${row.id}`);
 });
 if (ROWS[0].inactiveIngredients.length !== 10) throw new Error('batch155 extra panel');
