@@ -2422,6 +2422,19 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Not the unflavored tub. Official Nutricost wordmark already on disk.
   // Not a text tile. Not a letter.
   'nutricost-nutricost-organic-greens-25-oz-2': brandMark('nutricost-mark.png'),
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 1.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // L-citrulline (base) named 20 oz. Barcode 857077008176.
+  // The front on that code is 250 g (8.8 oz). Not 20 oz.
+  'nutricost-nutricost-l-citrulline-base-powder-20-oz': brandMark(
+    'nutricost-mark.png',
+  ),
+  // L-carnitine tartrate 100 g. Barcode 700425812423.
+  // The image on that code is a flat label, not a 3D tub.
+  'nutricost-nutricost-l-carnitine-tartrate-powder-100-gm': brandMark(
+    'nutricost-mark.png',
+  ),
   // Daytime photo run — Eye & Ear letters. Tried each SKU.
   // Official A+Health wordmark already on disk. Not a letter.
   // 0.5 fl oz single. No barcode. The Amazon face that opened is the
@@ -12991,6 +13004,87 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-arginine-akg-powder-panel': catalogShot(
     'nutricost-nutricost-arginine-akg-powder-panel.jpg',
   ),
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // D-aspartic acid powder. Barcode 700425812201 is the unflavored 300 g tub.
+  // Not blue raspberry. Not the 500 g tub.
+  'nutricost-nutricost-d-aspartic-acid-powder-panel': catalogShot(
+    'nutricost-nutricost-d-aspartic-acid-powder-panel.jpg',
+  ),
+  // Vitamin B2, 400 mg, 30 capsules. Barcode 810014677088.
+  // Not the 100 mg 30. Same bottle on the duplicate row.
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules.jpg',
+  ),
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-2': catalogShot(
+    'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules.jpg',
+  ),
+  // Vitamin B2, 100 mg, 30 capsules. Barcode 810014677293. Not the 400 mg.
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-3': catalogShot(
+    'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-3.jpg',
+  ),
+  // Vitamin B2, 100 mg, 120 capsules. Barcode 857077008862. Not the 400 mg.
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b2-riboflavin-capsules-120-capsules.jpg',
+  ),
+  // Vitamin B1, 500 mg, 120 capsules. Barcode 702669933452. Not the 100 mg.
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules.jpg',
+  ),
+  // Vitamin B1, 100 mg, 120 capsules. Barcode 857077008855. Not the 500 mg.
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules-2': catalogShot(
+    'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules-2.jpg',
+  ),
+  // Lactobacillus acidophilus, 2 billion CFU, 120 capsules.
+  // Barcode 810139574668. Not the 500 million or the 10 billion.
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules':
+    catalogShot(
+      'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules.jpg',
+    ),
+  // Lactobacillus acidophilus, 500 million CFU, 120 capsules.
+  // Barcode 810139575207. Not the 2 billion.
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2':
+    catalogShot(
+      'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2.jpg',
+    ),
+  // Goldenseal root, 600 mg, 120 capsules. Barcode 702669936422.
+  'nutricost-nutricost-goldenseal-root-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-goldenseal-root-capsules-120-capsules.jpg',
+  ),
+  // DIM, 300 mg, 120 capsules. Barcode 702669933117. Not the 30.
+  'nutricost-nutricost-dim-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-dim-capsules-120-capsules.jpg',
+  ),
+  // DIM, 300 mg, 30 capsules. Barcode 810014677095. Not the 120.
+  'nutricost-nutricost-dim-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-dim-capsules-30-capsules.jpg',
+  ),
+  // L-glutamine powder, unflavored 250 g. Barcode 702669931151.
+  // Not a flavored 500 g pouch.
+  'nutricost-nutricost-l-glutamine-powder-250-gms': catalogShot(
+    'nutricost-nutricost-l-glutamine-powder-250-gms.jpg',
+  ),
+  // L-glutamine powder, unflavored 1 kg. Barcode 810014675244.
+  // Same tub on the duplicate row. Not the 250 g or the 500 g.
+  'nutricost-nutricost-l-glutamine-powder-1-kg': catalogShot(
+    'nutricost-nutricost-l-glutamine-powder-1-kg.jpg',
+  ),
+  'nutricost-nutricost-l-glutamine-powder-1-kg-2': catalogShot(
+    'nutricost-nutricost-l-glutamine-powder-1-kg.jpg',
+  ),
+  // L-glutamine powder, unflavored 500 g. Barcode 700425812218.
+  // Not a flavored 500 g pouch. Not the 1 kg.
+  'nutricost-nutricost-l-glutamine-powder-500-gm-2': catalogShot(
+    'nutricost-nutricost-l-glutamine-powder-500-gm-2.jpg',
+  ),
+  // L-citrulline (base), 600 g. Barcode 702669933780. Not the 250 g tub.
+  'nutricost-nutricost-l-citrulline-base-powder-600-gm': catalogShot(
+    'nutricost-nutricost-l-citrulline-base-powder-600-gm.jpg',
+  ),
+  // L-carnitine tartrate, 250 g. Barcode 702669933803. Not the 100 g label.
+  'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms': catalogShot(
+    'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -13684,6 +13778,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-lutein-10-mg-120',
   // Twin pack must not inherit the 0.5 fl oz single.
   'aplushealth-b94-ear-twin',
+  // Vitamins night run 2026-10-13 12:30 AM PT batch 1.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // DIM 30 must not inherit the 120.
+  'nutricost-nutricost-dim-capsules-30-capsules',
+  // Glutamine 250 g and 500 g must not inherit the 1 kg.
+  'nutricost-nutricost-l-glutamine-powder-250-gms',
+  'nutricost-nutricost-l-glutamine-powder-500-gm-2',
+  // Citrulline 600 g must not inherit the 20 oz row.
+  'nutricost-nutricost-l-citrulline-base-powder-600-gm',
+  // Carnitine 250 g must not inherit the 100 g row.
+  'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms',
 ]);
 
 export function previewOverlayImage(
@@ -28153,5 +28258,166 @@ assertExactCarton(
     )
   ) {
     throw new Error('vitamin A 10,000 IU must not inherit the 25,000 IU');
+  }
+}
+assertExactCarton(
+  'nutricost-nutricost-d-aspartic-acid-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-d-aspartic-acid-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-3',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-30-capsules-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b2-riboflavin-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-b1-thiamine-capsules-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-lactobacillus-acidophilus-capsules-120-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-goldenseal-root-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-goldenseal-root-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dim-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dim-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dim-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dim-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glutamine-powder-250-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-glutamine-powder-250-gms.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glutamine-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-l-glutamine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glutamine-powder-1-kg-2',
+  'Nutricost',
+  'nutricost-nutricost-l-glutamine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-glutamine-powder-500-gm-2',
+  'Nutricost',
+  'nutricost-nutricost-l-glutamine-powder-500-gm-2.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-l-citrulline-base-powder-20-oz',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-citrulline-base-powder-600-gm',
+  'Nutricost',
+  'nutricost-nutricost-l-citrulline-base-powder-600-gm.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-l-carnitine-tartrate-powder-100-gm',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms',
+  'Nutricost',
+  'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms.jpg',
+);
+{
+  const dim30 = previewOverlayImage({
+    id: 'nutricost-nutricost-dim-capsules-30-capsules',
+    formulaId: 'nutricost-nutricost-dim-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !dim30?.verifiedSku
+    || !dim30.url.endsWith('/nutricost-nutricost-dim-capsules-30-capsules.jpg')
+  ) {
+    throw new Error('DIM 30 must not inherit the 120');
+  }
+  const glut250 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-glutamine-powder-250-gms',
+    formulaId: 'nutricost-nutricost-l-glutamine-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (
+    !glut250?.verifiedSku
+    || !glut250.url.endsWith('/nutricost-nutricost-l-glutamine-powder-250-gms.jpg')
+  ) {
+    throw new Error('glutamine 250 g must not inherit the 1 kg');
+  }
+  const glut500 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-glutamine-powder-500-gm-2',
+    formulaId: 'nutricost-nutricost-l-glutamine-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (
+    !glut500?.verifiedSku
+    || !glut500.url.endsWith('/nutricost-nutricost-l-glutamine-powder-500-gm-2.jpg')
+  ) {
+    throw new Error('glutamine 500 g must not inherit the 1 kg');
+  }
+  const cit600 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-citrulline-base-powder-600-gm',
+    formulaId: 'nutricost-nutricost-l-citrulline-base-powder-20-oz',
+    brand: 'Nutricost',
+  });
+  if (
+    !cit600?.verifiedSku
+    || !cit600.url.endsWith(
+      '/nutricost-nutricost-l-citrulline-base-powder-600-gm.jpg',
+    )
+  ) {
+    throw new Error('citrulline 600 g must not inherit the 20 oz row');
+  }
+  const carn250 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-carnitine-tartrate-powder-250-gms',
+    formulaId: 'nutricost-nutricost-l-carnitine-tartrate-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !carn250?.verifiedSku
+    || !carn250.url.endsWith(
+      '/nutricost-nutricost-l-carnitine-tartrate-powder-250-gms.jpg',
+    )
+  ) {
+    throw new Error('carnitine 250 g must not inherit the 100 g row');
   }
 }
