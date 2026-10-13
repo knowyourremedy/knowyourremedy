@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 13, 2026 (boric acid + hydroxypropyl-gamma-cyclodextrin — founder lock):** Boric acid = Caution (Usable). Eye-drop form. Not "Not clean". Not the swallowed dose. Hydroxypropyl-gamma-cyclodextrin → gamma-cyclodextrin, Cleared. Same family. Not a new ingredient. Not a new grade. Label spelling hydroxypropylgamma- cyclodextrin is this token. Packet basis is methodology plus JECFA, EFSA, EWG, EMA, and FDA. No split. No new grade tier.
+
 **Changed Oct 7, 2026 (dextrose anhydrous + hydrochloric acid — founder lock):** Dextrose anhydrous → dextrose / bare glucose, Caution. Same row. Not a new ingredient. Not a new grade. Hydrochloric acid = Caution (Usable). pH adjuster in a finished spray. Not "Not clean". Not the concentrated acid. Distinct from Cleared sodium hydroxide as a pH adjuster. Do not flip that row. Packet basis is methodology plus FDA, JECFA, EFSA, Health Canada, IARC, ATSDR, FSANZ, CSPI, and EWG. No split.
 
 **Changed Oct 3, 2026 (Xyzal children's liquid aliases — founder lock; aliases only, grades unchanged):** Glacial acetic acid → acetic acid Cleared. Same row. Not a new ingredient. Sodium acetate trihydrate → sodium acetate anhydrous Cleared. Same row. Hydration only. Not potassium acetate. Do not map the trihydrate onto the potassium acetate token. Packet basis is the existing methodology rows plus FDA, EFSA, and JECFA. No split. Not a new grade.
@@ -511,7 +513,7 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 | arachidyl glucoside — LOCKED (Sept 15, 2026) | Exact words. Cleared. Do not alias; do not rely on the fatty-alcohol family row alone. Distinct from cetearyl glucoside. |
 | undecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
 | tridecane — LOCKED (Sept 15, 2026) | Exact INCI. Cleared cream emollient alkane. Same job as C15-19 alkane. Distinct token — do not alias. |
-| gamma-cyclodextrin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
+| gamma-cyclodextrin — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Hydroxypropyl-gamma-cyclodextrin maps here (Oct 13, 2026). Same family. Same Cleared. Not a new ingredient. Not a new grade. Label spelling hydroxypropylgamma- cyclodextrin is this token. |
 | succinic acid — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. |
 | polyvinyl alcohol (oral coating) — LOCKED (Sept 15, 2026) | Exact token as oral coating. Cleared. Distinct from PVA (topical film). |
 | shellac — LOCKED (Sept 15, 2026) | Exact INCI. Cleared. Shellac glaze maps here (Sept 24, 2026). Not a new grade. Shellac wax is not this row (Sept 25, 2026 Caution). Do not flip this lock. |
@@ -835,6 +837,7 @@ These don't fit the demerit-count system cleanly — each is a real, documented 
 | Dextrates — LOCKED (Sept 25, 2026) | dextrates | Exact bare token. Caution. Distinct from Cleared dextrates hydrated. Do not flip that Cleared row. | Standard alternatives rule. Not Avoid. |
 | Potassium hydroxide — LOCKED (Sept 25, 2026) | potassium hydroxide | Exact token. Caution. Distinct from Cleared sodium hydroxide as a pH adjuster and from Cleared calcium hydroxide / magnesium hydroxide. Do not flip those rows. | Standard alternatives rule. Not Avoid. |
 | Hydrochloric acid — LOCKED (Oct 7, 2026) | hydrochloric acid | Exact token when it is a pH adjuster in a finished spray. Caution (Usable). Not "Not clean". Not the concentrated acid. Distinct from Cleared sodium hydroxide as a pH adjuster. Do not flip that row. | Standard alternatives rule. Not Avoid. |
+| Boric acid — LOCKED (Oct 13, 2026) | boric acid | Exact token in an eye drop. Caution (Usable). Not "Not clean". Not the swallowed dose. | Standard alternatives rule. Not Avoid. |
 | Edetate disodium dihydrate — LOCKED (Sept 25, 2026) | edetate disodium dihydrate, edetate disodium | Exact token. EDTA Caution. Edetate disodium (no dihydrate) maps here (Sept 26, 2026). Same Caution. Not a new grade. Distinct from Cleared disodium EDTA trace use and from Caution tetrasodium EDTA. Do not assume the trace Cleared row. Do not flip the trace Cleared row. | Standard alternatives rule. Not Avoid. |
 | Unfiltered liquid ACV — LOCKED (Sept 25, 2026) | unfiltered liquid apple cider vinegar | Exact token. Caution. Not a named-color pass. | Standard alternatives rule. Not Avoid. |
 | Purple carrot concentrate — LOCKED (Sept 25, 2026) | purple carrot concentrate, purple carrot juice, purple carrot juice concentrate | Exact tokens. Carrot color Caution. Purple Carrot (Color) exact string stays Cleared. Do not flip that named-color string. | Standard alternatives rule. Not Avoid. |
