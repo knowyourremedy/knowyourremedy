@@ -2524,6 +2524,27 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // UPC 051494106143 is the 90-count variant. The face on that
   // variant reads 60 softgels. Do not glue it.
   'megafood-baby-me-2-prenatal-multi-dha': brandMark('megafood-mark.png'),
+  // Vitamins night run 2026-10-13 4:15 AM PT batch 1.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // D-mannose named 25 oz. Barcode 702669937313 is the 250 g variant.
+  // The front on that code reads 250 g (8.8 oz). Not 25 oz.
+  'nutricost-nutricost-d-mannose-powder-25-oz': brandMark('nutricost-mark.png'),
+  // Creatine named 77 servings. Barcode 810139570073 is watermelon 500 g.
+  // The front reads 500 g and 100 servings. Not 77.
+  'nutricost-creatine-monohydrate-powder-77-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Creatine named 46 servings. Barcode 810139571896 is pineapple mango 300 g.
+  // The front reads 300 g and 60 servings. Not 46.
+  'nutricost-creatine-monohydrate-powder-46-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Creatine named 76 servings. Barcode 810014675299 is fruit punch 500 g.
+  // The front reads 500 g and 100 servings. Not 76.
+  'nutricost-creatine-monohydrate-powder-76-servings': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -13524,6 +13545,73 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-l-tyrosine-powder-100-gms': catalogShot(
     'nutricost-nutricost-l-tyrosine-powder-100-gms.jpg',
   ),
+  // Vitamins night run 2026-10-13 4:15 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // L-tyrosine powder, 250 g. Barcode 702669937474. Front reads 250 g (8.8 oz). Not the 100 g or 500 g.
+  'nutricost-nutricost-l-tyrosine-powder-250-gm': catalogShot(
+    'nutricost-nutricost-l-tyrosine-powder-250-gm.jpg',
+  ),
+  // L-tyrosine powder. Barcode 702669937481 is the 500 g bottle.
+  // Front reads 500 g (1.1 lb). Not the 100 g or 250 g.
+  'nutricost-nutricost-l-tyrosine-powder-panel': catalogShot(
+    'nutricost-nutricost-l-tyrosine-powder-panel.jpg',
+  ),
+  // L-arginine powder, 1 kg. Barcode 702669932363. Front reads 1 kg (2.2 lb).
+  'nutricost-nutricost-l-arginine-powder-1-kg': catalogShot(
+    'nutricost-nutricost-l-arginine-powder-1-kg.jpg',
+  ),
+  // Same 1 kg tub and barcode 702669932363. Same file.
+  'nutricost-nutricost-l-arginine-powder-1-kg-2': catalogShot(
+    'nutricost-nutricost-l-arginine-powder-1-kg.jpg',
+  ),
+  // D-mannose powder, 100 g. Barcode 702669937306. Front reads 100 g (3.5 oz). Not the 500 g.
+  'nutricost-nutricost-d-mannose-powder-100-gm': catalogShot(
+    'nutricost-nutricost-d-mannose-powder-100-gm.jpg',
+  ),
+  // D-mannose powder, 500 g. Barcode 702669937320. Front reads 500 g (17.6 oz). Not the 100 g.
+  'nutricost-nutricost-d-mannose-powder-500-gm': catalogShot(
+    'nutricost-nutricost-d-mannose-powder-500-gm.jpg',
+  ),
+  // Organic chlorella powder, 8 oz. Barcode 702669930819. Front reads 8 oz (227 g). Not the 1 lb.
+  'nutricost-nutricost-organic-chlorella-powder-8-oz': catalogShot(
+    'nutricost-nutricost-organic-chlorella-powder-8-oz.jpg',
+  ),
+  // Organic chlorella powder, 1 lb. Barcode 857077008268. Front reads 1 lb (454 g). Not the 8 oz.
+  'nutricost-nutricost-organic-chlorella-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-chlorella-powder-1-lb.jpg',
+  ),
+  // Beta-alanine powder, 300 g. Barcode 810014679150. Front reads 300 g (10.7 oz). Not the 500 g.
+  'nutricost-nutricost-beta-alanine-powder-300-gm': catalogShot(
+    'nutricost-nutricost-beta-alanine-powder-300-gm.jpg',
+  ),
+  // Beta-alanine powder, 500 g. Barcode 810139571681. Front reads 500 g (17.6 oz). Not the 300 g.
+  'nutricost-nutricost-beta-alanine-powder-500-gm': catalogShot(
+    'nutricost-nutricost-beta-alanine-powder-500-gm.jpg',
+  ),
+  // Alpha GPC, 300 mg, 120 capsules. Barcode 702669936040. Not the 60.
+  'nutricost-nutricost-alpha-gpc-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-alpha-gpc-capsules-120-capsules.jpg',
+  ),
+  // Alpha GPC, 300 mg, 60 capsules. Barcode 702669935364. Not the 120.
+  'nutricost-nutricost-alpha-gpc-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-alpha-gpc-capsules-60-capsules.jpg',
+  ),
+  // Acetyl L-carnitine powder, 100 g. Barcode 700425812164. Front reads 100 g (3.5 oz).
+  'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm.jpg',
+  ),
+  // Acetyl L-carnitine powder, 250 g. Barcode 702669930970. Front reads 250 g (8.8 oz). Not the 100 g.
+  'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm.jpg',
+  ),
+  // Acetyl L-carnitine powder, 500 g. Barcode 702669931106. Front reads 500 g (17.6 oz). Not the 100 g.
+  'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms': catalogShot(
+    'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms.jpg',
+  ),
+  // BCAA powder, strawberry kiwi, 90 servings. Barcode 857077008602. Front reads 90 servings.
+  'nutricost-bcaa-powder-90-servings': catalogShot(
+    'nutricost-bcaa-powder-90-servings.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -14274,6 +14362,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // L-tyrosine 250 g and the no-count panel must not inherit the 100 g.
   'nutricost-nutricost-l-tyrosine-powder-250-gm',
   'nutricost-nutricost-l-tyrosine-powder-panel',
+  // Vitamins night run 2026-10-13 4:15 AM PT batch 1.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // D-mannose 25 oz and 500 g must not inherit the 100 g.
+  'nutricost-nutricost-d-mannose-powder-25-oz',
+  'nutricost-nutricost-d-mannose-powder-500-gm',
+  // Chlorella 8 oz must not inherit the 1 lb.
+  'nutricost-nutricost-organic-chlorella-powder-8-oz',
+  // Beta-alanine 500 g must not inherit the 300 g.
+  'nutricost-nutricost-beta-alanine-powder-500-gm',
+  // Acetyl L-carnitine 250 g and 500 g must not inherit the 100 g.
+  'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm',
+  'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms',
+  // BCAA 30 and 60 share the strawberry-kiwi 90 formula. Different counts.
+  'nutricost-bcaa-powder-30-servings-2',
+  'nutricost-bcaa-powder-60-servings-3',
 ]);
 
 export function previewOverlayImage(
@@ -29406,6 +29509,106 @@ assertExactCarton(
   'Nutricost',
   'nutricost-nutricost-l-tyrosine-powder-100-gms.jpg',
 );
+assertExactCarton(
+  'nutricost-nutricost-l-tyrosine-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-l-tyrosine-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-tyrosine-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-l-tyrosine-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-arginine-powder-1-kg',
+  'Nutricost',
+  'nutricost-nutricost-l-arginine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-arginine-powder-1-kg-2',
+  'Nutricost',
+  'nutricost-nutricost-l-arginine-powder-1-kg.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-d-mannose-powder-100-gm',
+  'Nutricost',
+  'nutricost-nutricost-d-mannose-powder-100-gm.jpg',
+);
+assertBrandMark(
+  'nutricost-nutricost-d-mannose-powder-25-oz',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-nutricost-d-mannose-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-d-mannose-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-chlorella-powder-8-oz',
+  'Nutricost',
+  'nutricost-nutricost-organic-chlorella-powder-8-oz.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-chlorella-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-chlorella-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-alanine-powder-300-gm',
+  'Nutricost',
+  'nutricost-nutricost-beta-alanine-powder-300-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-beta-alanine-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-beta-alanine-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-alpha-gpc-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-alpha-gpc-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-alpha-gpc-capsules-60-capsules',
+  'Nutricost',
+  'nutricost-nutricost-alpha-gpc-capsules-60-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms',
+  'Nutricost',
+  'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms.jpg',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-77-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-46-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-76-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertExactCarton(
+  'nutricost-bcaa-powder-90-servings',
+  'Nutricost',
+  'nutricost-bcaa-powder-90-servings.jpg',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -29608,15 +29811,111 @@ assertExactCarton(
     formulaId: 'nutricost-nutricost-l-tyrosine-powder-100-gms',
     brand: 'Nutricost',
   });
-  if (!tyrosine250?.url.startsWith('data:image/svg') || tyrosine250.verifiedSku) {
-    throw new Error('L-tyrosine 250 g must stay a letter until attempted');
+  if (
+    !tyrosine250?.verifiedSku
+    || !tyrosine250.url.endsWith('/nutricost-nutricost-l-tyrosine-powder-250-gm.jpg')
+  ) {
+    throw new Error('L-tyrosine 250 g must not inherit the 100 g');
   }
   const tyrosinePanel = previewOverlayImage({
     id: 'nutricost-nutricost-l-tyrosine-powder-panel',
     formulaId: 'nutricost-nutricost-l-tyrosine-powder-100-gms',
     brand: 'Nutricost',
   });
-  if (!tyrosinePanel?.url.startsWith('data:image/svg') || tyrosinePanel.verifiedSku) {
-    throw new Error('L-tyrosine panel must stay a letter until attempted');
+  if (
+    !tyrosinePanel?.verifiedSku
+    || !tyrosinePanel.url.endsWith('/nutricost-nutricost-l-tyrosine-powder-panel.jpg')
+  ) {
+    throw new Error('L-tyrosine 500 g must not inherit the 100 g');
+  }
+  const arginineDup = previewOverlayImage({
+    id: 'nutricost-nutricost-l-arginine-powder-1-kg-2',
+    formulaId: 'nutricost-nutricost-l-arginine-powder-1-kg',
+    brand: 'Nutricost',
+  });
+  if (
+    !arginineDup?.verifiedSku
+    || !arginineDup.url.endsWith('/nutricost-nutricost-l-arginine-powder-1-kg.jpg')
+  ) {
+    throw new Error('Arginine 1 kg duplicate must use the same tub');
+  }
+  const mannose25 = previewOverlayImage({
+    id: 'nutricost-nutricost-d-mannose-powder-25-oz',
+    formulaId: 'nutricost-nutricost-d-mannose-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (!mannose25?.url.endsWith('/nutricost-mark.png') || mannose25.verifiedSku) {
+    throw new Error('D-mannose 25 oz must stay the brand mark, not the 100 g');
+  }
+  const mannose500 = previewOverlayImage({
+    id: 'nutricost-nutricost-d-mannose-powder-500-gm',
+    formulaId: 'nutricost-nutricost-d-mannose-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !mannose500?.verifiedSku
+    || !mannose500.url.endsWith('/nutricost-nutricost-d-mannose-powder-500-gm.jpg')
+  ) {
+    throw new Error('D-mannose 500 g must not inherit the 100 g');
+  }
+  const chlorella8 = previewOverlayImage({
+    id: 'nutricost-nutricost-organic-chlorella-powder-8-oz',
+    formulaId: 'nutricost-nutricost-organic-chlorella-powder-1-lb',
+    brand: 'Nutricost',
+  });
+  if (
+    !chlorella8?.verifiedSku
+    || !chlorella8.url.endsWith('/nutricost-nutricost-organic-chlorella-powder-8-oz.jpg')
+  ) {
+    throw new Error('Chlorella 8 oz must not inherit the 1 lb');
+  }
+  const beta500 = previewOverlayImage({
+    id: 'nutricost-nutricost-beta-alanine-powder-500-gm',
+    formulaId: 'nutricost-nutricost-beta-alanine-powder-300-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !beta500?.verifiedSku
+    || !beta500.url.endsWith('/nutricost-nutricost-beta-alanine-powder-500-gm.jpg')
+  ) {
+    throw new Error('Beta-alanine 500 g must not inherit the 300 g');
+  }
+  const alc250 = previewOverlayImage({
+    id: 'nutricost-nutricost-acetyl-l-carnitine-powder-250-gm',
+    formulaId: 'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !alc250?.verifiedSku
+    || !alc250.url.endsWith('/nutricost-nutricost-acetyl-l-carnitine-powder-250-gm.jpg')
+  ) {
+    throw new Error('Acetyl L-carnitine 250 g must not inherit the 100 g');
+  }
+  const alc500 = previewOverlayImage({
+    id: 'nutricost-nutricost-acetyl-l-carnitine-powder-500-gms',
+    formulaId: 'nutricost-nutricost-acetyl-l-carnitine-powder-100-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !alc500?.verifiedSku
+    || !alc500.url.endsWith('/nutricost-nutricost-acetyl-l-carnitine-powder-500-gms.jpg')
+  ) {
+    throw new Error('Acetyl L-carnitine 500 g must not inherit the 100 g');
+  }
+  const bcaa30share = previewOverlayImage({
+    id: 'nutricost-bcaa-powder-30-servings-2',
+    formulaId: 'nutricost-bcaa-powder-90-servings',
+    brand: 'Nutricost',
+  });
+  if (!bcaa30share?.url.startsWith('data:image/svg') || bcaa30share.verifiedSku) {
+    throw new Error('BCAA 30 that shares the 90 formula must stay a letter');
+  }
+  const bcaa60share = previewOverlayImage({
+    id: 'nutricost-bcaa-powder-60-servings-3',
+    formulaId: 'nutricost-bcaa-powder-90-servings',
+    brand: 'Nutricost',
+  });
+  if (!bcaa60share?.url.startsWith('data:image/svg') || bcaa60share.verifiedSku) {
+    throw new Error('BCAA 60 that shares the 90 formula must stay a letter');
   }
 }
