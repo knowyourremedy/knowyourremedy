@@ -153,6 +153,7 @@ import {
   BATCH151_KYR6B_NASAL_US_OTC,
   BATCH152_KYR6B_NASACORT_SENSIMIST,
   BATCH153_KYR6B_SENSIMIST_72,
+  BATCH154_KYR6B_EYE_NASAL,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -332,6 +333,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH151_KYR6B_NASAL_US_OTC,
   ...BATCH152_KYR6B_NASACORT_SENSIMIST,
   ...BATCH153_KYR6B_SENSIMIST_72,
+  ...BATCH154_KYR6B_EYE_NASAL,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
