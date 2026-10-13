@@ -13353,6 +13353,91 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-tudca-capsules-60-capsules': catalogShot(
     'nutricost-nutricost-tudca-capsules-60-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-13 3:00 AM PT batch 1.
+  // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
+  // TUDCA, 500 mg, 30 capsules. Barcode 810014670690. Not the 250 mg 30.
+  'nutricost-nutricost-tudca-capsules-30-capsules-2': catalogShot(
+    'nutricost-nutricost-tudca-capsules-30-capsules-2.jpg',
+  ),
+  // Vitamin D3, 10,000 IU, 240 softgels. Barcode 702669933223. Not the 2,000 IU.
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels': catalogShot(
+    'nutricost-nutricost-vitamin-d3-softgels-240-softgels.jpg',
+  ),
+  // Vitamin D3, 2,000 IU, 240 softgels. Barcode 810014674438. Not the 10,000 IU.
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2': catalogShot(
+    'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2.jpg',
+  ),
+  // Vitamin D3, 5,000 IU, 240 softgels. Barcode 702669935357. Not the 10,000 IU.
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-3': catalogShot(
+    'nutricost-nutricost-vitamin-d3-softgels-240-softgels-3.jpg',
+  ),
+  // Organic wheatgrass powder, 1 lb. Barcode 702669937603.
+  // Front reads 16.2 oz (1 lb) (454 g).
+  'nutricost-nutricost-wheatgrass-powder-1-lb': catalogShot(
+    'nutricost-nutricost-wheatgrass-powder-1-lb.jpg',
+  ),
+  // Betaine anhydrous (TMG) powder. Barcode 702669932042 is the 500 g pouch.
+  // Front reads 17.9 oz (500 g).
+  'nutricost-nutricost-betaine-anhydrous-tmg-powder-panel': catalogShot(
+    'nutricost-nutricost-betaine-anhydrous-tmg-powder-panel.jpg',
+  ),
+  // GABA powder, 500 g. Barcode 702669931007. Front reads 500 g.
+  'nutricost-nutricost-gaba-powder-500-gm': catalogShot(
+    'nutricost-nutricost-gaba-powder-500-gm.jpg',
+  ),
+  // Glucomannan powder, 500 g. Barcode 702669932240. Front reads 500 g.
+  'nutricost-nutricost-glucomannan-powder-500-gm': catalogShot(
+    'nutricost-nutricost-glucomannan-powder-500-gm.jpg',
+  ),
+  // MSM powder, 500 g. Barcode 702669932066. Front reads 500 g.
+  'nutricost-nutricost-msm-powder-500-gm': catalogShot(
+    'nutricost-nutricost-msm-powder-500-gm.jpg',
+  ),
+  // Betaine HCl powder. Barcode 702669932059. Front reads 508 g.
+  'nutricost-nutricost-betaine-hcl-powder-507-gm': catalogShot(
+    'nutricost-nutricost-betaine-hcl-powder-507-gm.jpg',
+  ),
+  // Same 508 g pouch and barcode 702669932059. Same file.
+  'nutricost-nutricost-betaine-hcl-powder-507-gm-2': catalogShot(
+    'nutricost-nutricost-betaine-hcl-powder-507-gm.jpg',
+  ),
+  // Calcium carbonate powder, 500 g. Barcode 857077008008. Front reads 500 g.
+  'nutricost-nutricost-calcium-carbonate-powder-500-gm': catalogShot(
+    'nutricost-nutricost-calcium-carbonate-powder-500-gm.jpg',
+  ),
+  // Choline bitartrate powder, 500 g. Barcode 702669932073. Front reads 500 g.
+  'nutricost-nutricost-choline-bitartrate-powder-500-gm': catalogShot(
+    'nutricost-nutricost-choline-bitartrate-powder-500-gm.jpg',
+  ),
+  // Organic maca root powder, 1 lb. Barcode 702669934473.
+  // Front reads 16.2 oz (1 lb).
+  'nutricost-nutricost-organic-maca-root-powder-1-lb': catalogShot(
+    'nutricost-nutricost-organic-maca-root-powder-1-lb.jpg',
+  ),
+  // L-theanine, 200 mg, 30 capsules. Barcode 810014677200. Not the 120.
+  'nutricost-nutricost-l-theanine-capsules-30-capsules': catalogShot(
+    'nutricost-nutricost-l-theanine-capsules-30-capsules.jpg',
+  ),
+  // L-theanine, 200 mg, 120 capsules. Barcode 702669931946. Not the 240.
+  'nutricost-nutricost-l-theanine-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-l-theanine-capsules-120-capsules.jpg',
+  ),
+  // L-theanine, 200 mg, 240 capsules. Barcode 810014679365. Not the 120. Not the 400 mg.
+  'nutricost-nutricost-l-theanine-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-l-theanine-capsules-240-capsules.jpg',
+  ),
+  // Dong quai, 565 mg, 240 capsules. Barcode 702669935128. Not the 120.
+  'nutricost-nutricost-dong-quai-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-dong-quai-capsules-240-capsules.jpg',
+  ),
+  // Yohimbine HCl, 5 mg, 120 capsules. Barcode 702669933353. Not the 240.
+  'nutricost-nutricost-yohimbine-hcl-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-yohimbine-hcl-capsules-120-capsules.jpg',
+  ),
+  // Yohimbine HCl, 5 mg, 240 capsules. Barcode 702669933797. Not the 120.
+  'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -14080,6 +14165,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-13 1:45 AM PT batch 2.
   // Carnitine 240 must not inherit the 120.
   'nutricost-nutricost-l-carnitine-tartrate-capsules-240-capsules',
+  // Vitamins night run 2026-10-13 3:00 AM PT batch 1.
+  // Shared-formula strengths and counts. Do not inherit a sibling face.
+  // D3 2,000 IU must not inherit the 10,000 IU 240.
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2',
+  // L-theanine 240 must not inherit the 120.
+  'nutricost-nutricost-l-theanine-capsules-240-capsules',
+  // Yohimbine 240 must not inherit the 120.
+  'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -29012,6 +29105,106 @@ assertBrandMark(
   'Nutricost',
   'nutricost-mark.png',
 );
+assertExactCarton(
+  'nutricost-nutricost-tudca-capsules-30-capsules-2',
+  'Nutricost',
+  'nutricost-nutricost-tudca-capsules-30-capsules-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-3',
+  'Nutricost',
+  'nutricost-nutricost-vitamin-d3-softgels-240-softgels-3.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-wheatgrass-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-wheatgrass-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-betaine-anhydrous-tmg-powder-panel',
+  'Nutricost',
+  'nutricost-nutricost-betaine-anhydrous-tmg-powder-panel.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-gaba-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-gaba-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-glucomannan-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-glucomannan-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-msm-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-msm-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-betaine-hcl-powder-507-gm',
+  'Nutricost',
+  'nutricost-nutricost-betaine-hcl-powder-507-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-betaine-hcl-powder-507-gm-2',
+  'Nutricost',
+  'nutricost-nutricost-betaine-hcl-powder-507-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-calcium-carbonate-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-calcium-carbonate-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-choline-bitartrate-powder-500-gm',
+  'Nutricost',
+  'nutricost-nutricost-choline-bitartrate-powder-500-gm.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-organic-maca-root-powder-1-lb',
+  'Nutricost',
+  'nutricost-nutricost-organic-maca-root-powder-1-lb.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-theanine-capsules-30-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-theanine-capsules-30-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-theanine-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-theanine-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-l-theanine-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-l-theanine-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-dong-quai-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-dong-quai-capsules-240-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-yohimbine-hcl-capsules-120-capsules',
+  'Nutricost',
+  'nutricost-nutricost-yohimbine-hcl-capsules-120-capsules.jpg',
+);
+assertExactCarton(
+  'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules',
+  'Nutricost',
+  'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules.jpg',
+);
 {
   const daaNoBarcode = previewOverlayImage({
     id: 'nutricost-nutricost-d-aspartic-acid-capsules-180-capsules-2',
@@ -29082,5 +29275,57 @@ assertBrandMark(
   });
   if (!tudca30?.url.endsWith('/nutricost-mark.png') || tudca30.verifiedSku) {
     throw new Error('TUDCA 30 with no barcode must stay the brand mark');
+  }
+  const d3TwoThousand = previewOverlayImage({
+    id: 'nutricost-nutricost-vitamin-d3-softgels-240-softgels-2',
+    formulaId: 'nutricost-nutricost-vitamin-d3-softgels-240-softgels',
+    brand: 'Nutricost',
+  });
+  if (
+    !d3TwoThousand?.verifiedSku
+    || !d3TwoThousand.url.endsWith(
+      '/nutricost-nutricost-vitamin-d3-softgels-240-softgels-2.jpg',
+    )
+  ) {
+    throw new Error('D3 2,000 IU must not inherit the 10,000 IU');
+  }
+  const theanine240 = previewOverlayImage({
+    id: 'nutricost-nutricost-l-theanine-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-l-theanine-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !theanine240?.verifiedSku
+    || !theanine240.url.endsWith(
+      '/nutricost-nutricost-l-theanine-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('L-theanine 240 must not inherit the 120');
+  }
+  const yohimbine240 = previewOverlayImage({
+    id: 'nutricost-nutricost-yohimbine-hcl-capsules-240-capsules',
+    formulaId: 'nutricost-nutricost-yohimbine-hcl-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !yohimbine240?.verifiedSku
+    || !yohimbine240.url.endsWith(
+      '/nutricost-nutricost-yohimbine-hcl-capsules-240-capsules.jpg',
+    )
+  ) {
+    throw new Error('Yohimbine 240 must not inherit the 120');
+  }
+  const betaineDup = previewOverlayImage({
+    id: 'nutricost-nutricost-betaine-hcl-powder-507-gm-2',
+    formulaId: 'nutricost-nutricost-betaine-hcl-powder-507-gm',
+    brand: 'Nutricost',
+  });
+  if (
+    !betaineDup?.verifiedSku
+    || !betaineDup.url.endsWith(
+      '/nutricost-nutricost-betaine-hcl-powder-507-gm.jpg',
+    )
+  ) {
+    throw new Error('Betaine HCl duplicate must use the same pouch');
   }
 }
