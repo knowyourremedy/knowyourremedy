@@ -158,6 +158,7 @@ import {
   BATCH156_KYR6B_BENADRYL,
   BATCH157_KYR6B_BENADRYL,
   BATCH158_KYR6B_CHEWABLES,
+  BATCH159_KYR6B_ALAVERT,
 } from '@/lib/rating-drafts';
 import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -342,6 +343,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH156_KYR6B_BENADRYL,
   ...BATCH157_KYR6B_BENADRYL,
   ...BATCH158_KYR6B_CHEWABLES,
+  ...BATCH159_KYR6B_ALAVERT,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
