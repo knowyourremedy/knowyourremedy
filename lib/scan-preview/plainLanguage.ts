@@ -178,6 +178,8 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/cellulosse/g, 'cellulose')
     .replace(/celluose/g, 'cellulose')
     .replace(/crosscarmellose/g, 'croscarmellose')
+    .replace(/benazalkonium/g, 'benzalkonium')
+    .replace(/carboxymethylcellulose/g, 'carboxymethyl cellulose')
     .replace(/^water purified$/, 'purified water')
     .replace(/^water usp$/, 'purified water')
     .replace(/^water aqua eau$/, 'water')
@@ -391,6 +393,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (n === 'natural honey flavor') {
     return close('This flavor names honey. Exact natural flavors is a different line. It is not the honey sweetener.', level);
+  }
+
+  if (n === 'flavor' || n === 'flavors') {
+    return close(
+      'The label says flavor and does not name the food. Exact natural flavors is a different line.',
+      level,
+    );
   }
 
   if (/\bflavou?rs?\b/.test(n)) {
