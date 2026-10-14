@@ -74,12 +74,6 @@ const PF_RETAILERS = [
 const CREAM_OIL_LINE =
   'Seed/industrial oils are flagged in gummies. In this cream / gel they are not that High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / capsaicin / methyl salicylate / diclofenac actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -221,8 +215,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
       cleared(SET.advil, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Advil Targeted Relief Cream = Caution. Driver is oleth-3-phosphate (standalone Caution-table, not Avoid). Isocetyl stearate is Cleared (Sept 15 lock — topical emollient / stearate cousin). Cetyl esters wax / emulsifying wax are the locked wax-family Cleared row (Drug Facts names emulsifying wax; structured table also lists isocetyl stearate + carnauba wax). NDC 0573-6555 pack sizes (65 g / 71 g applicator / 3 g pouch / 113.4 g) share this formulaId. Fragrance-free carton. ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'advil.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -242,8 +235,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: motrinAleveBase(SET.motrin),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Motrin Arthritis Pain Gel = Caution. Drivers are isopropyl alcohol (Limited — distinct from the ethyl alcohol vehicle row) plus polyoxyl 20 cetostearyl ether + strong ammonia solution (standalone Caution, not Avoid). Fragrance-free carton — do not merge with Aleve Arthritis Pain Gel (that SPL names fragrance). ${IPA_TAP} ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} ${CREAM_OIL_LINE} 50 g / 100 g (NDC 50580-574) share this formulaId. ${PARKED_ACTIVES} Ask a doctor under 18. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'motrin.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -266,8 +258,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
       ...motrinAleveBase(SET.aleve),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aleve Arthritis Pain Gel = Caution. Own formulaId vs Motrin Arthritis Pain Gel — Drug Facts names fragrance (Caution; structured UNII table omits it; fragrance stays Caution). Same remaining locked stack as Motrin (isopropyl alcohol Limited, distinct from ethyl alcohol; polyoxyl 20 cetostearyl ether + strong ammonia standalone Caution). ${IPA_TAP} ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} ${CREAM_OIL_LINE} 50 g / 100 g (NDC 0280-0039) share this formulaId. ${PARKED_ACTIVES} Ask a doctor under 18. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

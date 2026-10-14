@@ -96,12 +96,6 @@ const SET = {
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const SEDATING =
-  'First-generation / sedating antihistamine — cleanliness note only; next-day drowsiness is a use note, not an invented active-safety grade.';
-
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
@@ -244,8 +238,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Vitamin E (alpha-tocopherol)', 'cleared', dailymed(SET.fw041, METH.tocopherols)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Family Wellness Triple Original 69396-041 = Clean. DailyMed setid 915759af Drug Facts: Cetyl Alcohol, Light Mineral Oil, White Petrolatum, Squalane, Stearic Acid, Vitamin E. Structured SPL maps vitamin E to alpha-tocopherol (Cleared mixed-tocopherols row) — not tocopheryl acetate. Cetyl alcohol is already §5 Cleared (Sept 15 fatty-alcohol family) — not a new token and not a cousin-ask. Squalane / light mineral oil / white petrolatum / stearic acid are Cleared. Own formulaId — not the petrolatum ± mineral oil Clean twin (`family-wellness-triple-antibiotic` / 69571-003) and not Pain Scar Itch 69396-054 (sodium pyruvate Caution). UPC-A 032251533150 confirmed on the DailyMed carton image for this setid (zbar; EAN-13 0032251533150). NDC ≠ UPC. Ages 2+ (under 2: ask a doctor). Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.fw041} (Family Wellness Triple Original NDC 69396-041; ${UNVERIFIED_NOTE})`,
     ],
@@ -267,8 +260,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Glycerin', 'cleared', dailymed(SET.tcSwim, METH.glycerin)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: TopCare Swimmer’s Ear = Clean. Reuses `swim-ear`. DailyMed setid 9dccbc25 (NDC 36800-064). Active is isopropyl alcohol 95% in anhydrous glycerin (ear drying aid — IPA is the ACTIVE, not an oral Limited vehicle demerit). Only inactive on Drug Facts is glycerin. Same IPA 95% + glycerin drying-aid family as Swim-Ear. Flammable — keep away from fire or flame. Do not use in the eyes. Directions: 4 to 5 drops in each affected ear (SPL types “5 to 5”). No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU. Not TopCare Ear Relief 36800-846 (homeopathic glycerin-only). Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.tcSwim} (TopCare Swimmer's Ear NDC 36800-064; ${UNVERIFIED_NOTE}) — reuse ${SWIM_EAR}`,
     ],
@@ -295,8 +287,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Vegetable glycerin', 'cleared', dailymed(SET.tcEar, METH.glycerin)),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: TopCare Ear Relief = Clean, homeopathic. DailyMed setid 2e8422f3 (NDC 36800-846). HPUS Chamomilla 10X / Mercurius solubilis 15X / Sulphur 12X. Only inactive is vegetable glycerin — no BKC, no PG, no purified-water twin. Own formulaId — do not silently merge into \`similasan-earache-relief\` (that family also lists purified water). Homeopathic otic — cleanliness only, no efficacy claim. ${CARLSTON} Children under 12 consult a doctor → minAge 12. For use in the ear only. Not TopCare Swimmer’s Ear 36800-064. Draft, not verified.`,
+
     sourcesGeneral: [
       `DailyMed setid ${SET.tcEar} (TopCare Ear Relief NDC 36800-846; ${UNVERIFIED_NOTE})`,
       CARLSTON,
@@ -324,8 +315,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Lanolin alcohols', 'cleared', dailymed(SET.walPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Walgreens Nighttime Lubricant Eye ointment = Caution (lanolin alcohol). DailyMed setid 6bb68dc4 (NDC 0363-7274). Actives are mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohols — locked Caution wool-alcohol family (Sept 16). No High. New product id only — reuses `store-pm-ointment-lanolin-alcohol` from batch65 Equate / CVS PM ointment (same actives + lanolin-alcohol inactive). Not Walgreens 0363-6855 (mineral oil 3% / petrolatum 94% / lanolin) and not 0363-8830 (20/80). Prefer PF tears over this PM ointment. Draft, not verified.',
+
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walPm} (Walgreens PM lubricant NDC 0363-7274; ${UNVERIFIED_NOTE}) — reuse ${STORE_PM_LANOLIN}`,
@@ -355,7 +345,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.dgIr, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: DG Health Immediate Release Mucus Relief guaifenesin 400 mg = Caution. DailyMed setid f60a9d1b (NDC 10956-059). Printed Drug Facts: magnesium stearate, microcrystalline cellulose. May also contain (colloidal) silicon dioxide, (co) povidone, dicalcium phosphate, maltodextrin, sodium starch glycolate, stearic acid. Printed DF is the authority (structured SPL lists maltodextrin / stearic acid / SiO2 / copovidone / magnesium stearate and omits MCC). SiO2 is present on the printed panel → 0-pt nanoparticle Caution cap. Maltodextrin is Limited. No High. ${LIMITED_STACK} ${SIO2_TAP} Own formulaId — not Family Wellness IR (\`family-wellness-guaifenesin-ir\`; that twin prints povidone K30 / 90F and does not list dicalcium / SSG) and not the dye-free ER Max family. Imprint PH063. Ages 6+ (6 to under 12: ½ tablet; 12+: 1 tablet every 4 hours; do not exceed 6 doses / 24 hours). Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.dgIr} (DG Health guaifenesin IR 400 NDC 10956-059; ${UNVERIFIED_NOTE})`,
@@ -388,7 +378,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.kirkSleep, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Kirkland Signature club sleep = Avoid (Blue #1 aluminum lake). Reuses \`unisom-sleeptabs-doxylamine\` — same doxylamine 25 mg + dibasic calcium phosphate dihydrate / Blue #1 lake / magnesium stearate / MCC / SSG list as Unisom SleepTabs (not the up&up anhydrous + dihydrate pair). DailyMed setid 74a728e1 (NDC 63981-986; imprint 44-386; Costco item 719940). One tablet 30 minutes before bed. Ages 12+ (under 12: do not use). ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.kirkSleep} (Kirkland doxylamine 25 NDC 63981-986; ${UNVERIFIED_NOTE}) — reuse ${UNISOM_DOXY}`,

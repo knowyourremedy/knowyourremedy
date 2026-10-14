@@ -105,9 +105,6 @@ const CARAMEL_SYRUP_TAP =
 const HONEY_LINE =
   'Honey is a Cleared-class sweetener. Not for under 1. No dosing.';
 
-const ZINC_PARKED =
-  'Zinc (picolinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
 const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   sio2:
@@ -286,10 +283,7 @@ function row(d: Draft): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.inactives,
     verdict: d.verdict,
-    honestNote:
-      `${d.note} ${d.zinc ? ZINC_PARKED + ' ' : ''}Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement unless noted). No dosing or medical advice in this draft. Draft, not verified.`
-        .replace(/\s+/g, ' ')
-        .trim(),
+
     retailers: [...RETAILERS],
     cleanAlternatives: d.alts,
     sourcesGeneral: [`${d.cite} — draft, not verified; no DailyMed drug SPL`],

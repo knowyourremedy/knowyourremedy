@@ -143,12 +143,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / ascorbate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const NO_CLEAN_C =
-  'No independently Clean vitamin C exists in this draft set (Nature Made C 1000 tablets are Caution, not Clean) — cleanAlternatives omitted (honest empty; form cannot be labeled on a nonexistent same-active §6 swap).';
-
 const NM_D3_CITE =
   'Nature Made Vitamin D3 2000 IU (50 mcg) softgels HelloPharmacist / Raley\'s other-ingredients (Soybean Oil, Gelatin, Glycerin, Water; no color added)';
 const KIRKLAND_D3_CITE =
@@ -227,8 +221,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(NM_D3_CITE, 'Water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Nature Made Vitamin D3 2000 IU softgels = Clean. HelloPharmacist / Raley\'s other-ingredients are Soybean Oil, Gelatin, Glycerin, Water — no color added, no TiO2 / FD&C. Softgel soybean-oil FILL is NOT the gummy seed/industrial-oil High rule; do not Avoid this clear shell for the carrier oil. Other Nature Made D3 softgel strengths share this formulaId only when the other-ingredients list holds. Contains soy. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_D3_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -256,8 +249,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(KIRKLAND_D3_CITE, 'Water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Vitamin D3 softgels = Clean. Open Food Facts / Costco Extra Strength 50 mcg (2000 IU) list Soybean Oil, Gelatin (Porcine), Glycerin, Water — same clear stack as Nature Made; no TiO2 / FD&C. Softgel soybean-oil FILL is NOT the gummy seed-oil High rule. Some Costco snapshots omit water on the short list — confirm the bottle still has no color / TiO2. Equate / Member\'s Mark clear twins were NOT written (Member\'s Mark HelloPharmacist adds corn oil; Equate D3 not confirmed identical). Contains soy. No DailyMed drug SPL. Adults.',
+
     retailers: ['Costco'],
     sourcesGeneral: [
       `${KIRKLAND_D3_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -288,8 +280,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       flag('Lecithin', 'cleared', labelCite(NM_B12_SG_CITE, METH.lecithin)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Nature Made B12 softgels = Clean when the carton is the clear “no color added” shell (gelatin / glycerin; no TiO2). Target / Stop & Shop / brand 1000 mcg lists Soybean Oil, Gelatin, Glycerin, Yellow Beeswax, Lecithin — B12 itself is red in color. Yellow beeswax and lecithin are Cleared-class. Softgel soybean-oil FILL is NOT gummy seed-oil High. 1000 mcg and Maximum Strength 5000 mcg share this formulaId ONLY when inactives match that no-color-added shell (strength differs in active amount only). Older / other retailer snapshots (Walgreens / some 5000 mcg lists) that say “colors added (including carmine)” are a different formula — not this Clean row; carmine would be a standalone Caution, and a TiO2 shell would be a separate Avoid formulaId (no reliable TiO2 B12 cite this batch — S13 skipped). Contains soy (soybean oil / lecithin). No DailyMed drug SPL. Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_B12_SG_CITE} — draft, not verified; carton must be no-color-added; no DailyMed drug SPL`,
@@ -318,8 +309,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       flag('Tocopherols', 'cleared', labelCite(KIRKLAND_FO_CITE, METH.tocopherols)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Fish Oil = Clean. Open Food Facts / Costco 1000 mg 400-ct: Fish Oil, Gelatin (Porcine), Glycerin, Water, Tocopherols — no TiO2 / FD&C. Tocopherols are Cleared-class antioxidants. This is the standard clear Costco fish oil, not the Wild Alaskan / enteric-coated Kirkland twins (different formulaIds; not written). Contains fish. No DailyMed drug SPL. Adults. Nordic Naturals Ultimate Omega was skipped (not confirmed on these shelves).',
+
     retailers: ['Costco'],
     sourcesGeneral: [
       `${KIRKLAND_FO_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -348,8 +338,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       flag('Tocopherols', 'cleared', labelCite(NM_FO_CLEAR_CITE, METH.tocopherols)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Nature Made Fish Oil 1200 mg standard (no color added) = Clean if no TiO2 / color. HelloPharmacist other-ingredients: Gelatin, Glycerin, Water, Tocopherols. Brand page states no color added. Separate formulaId from the burpless / enteric-coated Caution twin (`nature-made-fish-oil-1200-burpless`) — do not merge them. Confirm the carton: a bottle that lists methacrylic acid copolymer / polysorbate 80 / propylene glycol is the burpless row, not this one. Contains fish. No DailyMed drug SPL. Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_FO_CLEAR_CITE} — draft, not verified; carton-confirm vs burpless twin; no DailyMed drug SPL`,
@@ -380,10 +369,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(NM_C_CITE, 'Magnesium stearate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made Vitamin C 1000 mg tablets = Caution (PEG + SiO2; no TiO2). Fig / ThriftyWhite / Raley\'s other-ingredients: cellulose gel, hypromellose, croscarmellose sodium, stearic acid, magnesium stearate, silicon dioxide, polyethylene glycol. PEG is Moderate (2 pts). Silicon dioxide is the nanoparticle Caution cap (0 demerit points). No titanium dioxide / synthetic dye on those lists. Nature Made C gummies were skipped (oil not confirmed). ' +
-      NO_CLEAN_C +
-      ' No DailyMed drug SPL. Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -425,11 +411,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Emergen-C Original packet = Caution (flavors / maltodextrin Limited). Matched Original Formula Super Orange brand PDF lbl-00000524 / Target: fructose, maltodextrin, citric acid, malic acid; <2% acacia, beta-carotene (color), glycine, L-aspartic acid, natural flavors, orange juice concentrate, orange oil, silicon dioxide, tartaric acid, tocopherols. Maltodextrin + natural flavors are Limited. Silicon dioxide is the 0-pt Caution cap. Beta-carotene as a color additive is standalone Caution class (not additive-scored, not Avoid). Current Original Super Orange PDF does NOT list sucralose — if a later Original carton lists sucralose, still Caution unless another Moderate / Limited pushes 3 points; do not Avoid for sucralose alone here. Malic acid, tartaric acid, glycine, L-aspartic acid, orange oil, and orange juice concentrate are not in Methodology §5 (ungraded; v1.6 intake) — not required to reach Caution. Separate product id from batch 9 `emergenc-super-orange` (Immune aisle); this is the Vitamins-aisle Original Formula singles row. Carton ages 14+; this draft is adult / minAge 18. Zinc ascorbate is an active. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_C,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${EMERGENC_ORIG_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -464,9 +446,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(POWER_C_CITE, 'Fumaric acid'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: vitafusion Power C (Extra Strength Tropical Citrus Giant listing) = Caution. Matched other-ingredients: glucose syrup, sugar, water, gelatin; less than 2% citric acid, color (annatto extract), flavor, fumaric acid — no palm / canola / sunflower / vegetable oil on that carton. Drivers are natural flavor (Limited) + annatto (standalone Caution, not Avoid, not additive-scored). A palm / coconut-and/or-palm Power C carton would be a separate Avoid formulaId — SKIPPED this batch; no matched seed-oil Power C cite. Do not invent a coconut-only Clean / Caution twin. OLLY C gummies skipped (canola unconfirmed). Confirm the carton. No DailyMed drug SPL. Adults. ' +
-      NO_CLEAN_C,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${POWER_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -496,8 +476,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(NM_B12_TAB_CITE, 'Croscarmellose sodium'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made B12 tablets = Caution (SiO2 / no TiO2). HelloPharmacist 1000 mcg tablet other-ingredients: cellulose gel, hypromellose, stearic acid, silicon dioxide, magnesium stearate, croscarmellose sodium. PEG is NOT on that matched list — do not invent PEG. Silicon dioxide is the nanoparticle Caution cap (0 demerit points); that cap is enough for Caution and is not Avoid alone. No titanium dioxide / dye on the matched list. Time-release 1000 mcg cartons that also list calcium (dibasic calcium phosphate) as a Supplement Facts mineral share this formulaId when the other-ingredients list holds. Separate formulaId from the Clean clear softgel (`nature-made-b12-softgels-clear`). B12 gummies skipped (oil not confirmed). No DailyMed drug SPL. Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: B12_ALTS,
     sourcesGeneral: [
@@ -528,8 +507,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       flag('Tocopherols', 'cleared', labelCite(NM_FO_BURPLESS_CITE, METH.tocopherols)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made Fish Oil 1200 burpless coated twin = Caution (extra coat / flavor only; no TiO2). Giant / CVS Burp-Less listings: gelatin, glycerin, methacrylic acid copolymer, triethyl citrate, polysorbate 80, glyceryl monostearate, propylene glycol, tocopherols — no color added. Polysorbate 80 and oral propylene glycol are Moderate. Raw demerit math is PS80 2 + oral PG 2 → 4 pts Avoid — draft follows the locked Caution call (extra enteric coat only; no color / TiO2). Methacrylic acid copolymer, triethyl citrate, and glyceryl monostearate are not in Methodology §5 (ungraded; v1.6 intake; not a second grade). Separate formulaId from the Clean standard 1200 (`nature-made-fish-oil-1200-clear`) — do not merge them. Confirm the carton. Contains fish. No DailyMed drug SPL. Adults.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: FISH_OIL_ALTS,
     sourcesGeneral: [

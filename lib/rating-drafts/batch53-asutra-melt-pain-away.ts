@@ -64,12 +64,6 @@ const OTC = 'OTC' as const;
 const PAIN_FEVER = 'Pain & Fever';
 const UNVERIFIED_NOTE = 'draft, not verified';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only. Capsaicin 0.025% is the labeled ACTIVE on these rows — not the §5 inactive Caution token.';
-
 const CREAM_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. In this cream / body-butter fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -310,8 +304,7 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Asutra Melt Pain Away Magnesium Body Butter (DailyMed setid ${SET.dailymed}) = Caution. Capsaicin 0.025% is the labeled ACTIVE — not graded as the §5 inactive Caution token. Drivers are tocopheryl acetate (exact Caution INCI; distinct from Cleared mixed tocopherols), pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate (exact Caution INCI), Cymbopogon flexuosus oil (lemongrass scent — extract/scent Caution, not a cream-vehicle Clear), and hydroxyacetophenone. Sweet almond oil + shea butter are named cream vehicles (Cleared; not gummy High). ${CREAM_OIL_TAP} Sodium lactate / glyceryl stearate citrate / polyglyceryl-3 diisostearate / undecane / tridecane / calcium chloride are the locked exact Cleared Asutra tokens. No High. No parabens. Own formulaId ${ID.dailymed} — do NOT merge the Thrive / current Asutra.com carton (that OI is C15-19 alkane + arachidyl alcohols/glucoside + AMPS + unlabeled MCT + Cymbopogon citratus oil and has its own formulaId ${ID.thrive}). Jar 200 g (NDC 72683-003-01) + 1.9 g packet (NDC 72683-003-02) share this formulaId. Adults / 18+ (18 or younger: consult a doctor). External use only. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: ['Asutra'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -394,8 +387,7 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Asutra Melt Pain Away Magnesium Body Butter (Thrive / current Asutra.com carton) = Caution. Capsaicin 0.025% is the labeled ACTIVE — not graded as the §5 inactive Caution token. Current carton OI differs from DailyMed setid ${SET.dailymed} — own formulaId ${ID.thrive}, do NOT clone ${ID.dailymed}. Drivers are Cymbopogon citratus oil (lemongrass scent — extract/scent Caution, not a cream-vehicle Clear) and hydroxyethyl acrylate / sodium acryloyldimethyl taurate copolymer (AMPS Caution). Caprylic/capric triglyceride sits on the existing unlabeled-MCT Limited row (source not named on that token; cream / body-butter vehicle ≠ gummy High). ${MCT_UNLABELED_TAP} Potassium sorbate Limited. C15-19 alkane is the locked exact Cleared cream-emollient alkane (same job as undecane / tridecane — do not alias). Arachidyl alcohol / behenyl alcohol / arachidyl glucoside are the locked exact Cleared words. Shea butter is the named cream vehicle (Cleared; not gummy High). ${CREAM_OIL_TAP} No High. No parabens. Limited-only would stay Caution; Avoid needs High. ${LIMITED_STACK} 3.4 oz + 7.0 oz + tube share this formulaId when the carton OI holds. Thrive listing SKU 856458008873 is this carton family — barcode not invented on the record. Adults / 18+ (18 or younger: consult a doctor). External use only. Lavender Melt Pain Away is a different scent and is not this row. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: ['Thrive Market', 'Asutra'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.thrive} — ${UNVERIFIED_NOTE}; no matching DailyMed drug SPL for this carton OI`],

@@ -169,12 +169,6 @@ function homeopathicFields() {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const ZINC_PARKED =
-  'Zinc (gluconate / acetate / citrate / oxide / ascorbate, including homeopathic zincum gluconicum) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const AVOGADRO_200CK =
-  'STRONG HONEST NOTE: 200CK is far beyond Avogadro\'s number — no measurable active remains. Cleanliness grade only; no efficacy claim.';
-
 const OSCILLO_ID = 'oscillococcinum';
 const OSCILLO_FORMULA = 'boiron-oscillococcinum-200ck';
 const SAMBUCOL_SYRUP_FORMULA = 'sambucol-original-syrup';
@@ -247,12 +241,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_OSCILLO_2PLUS, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Oscillococcinum Immune Support row = Clean. SAME formulaId `boiron-oscillococcinum-200ck` and SAME Clean grade as batch 3 — do not invent a second grade. Draft Clean on inactives only (lactose, sucrose). ' +
-      AVOGADRO_200CK +
-      ' ' +
-      CARLSTON +
-      ' Immune aisle coverage: audience stays adult (standard drugstore SKU) with minAge 2 from the kids 2+ chart on setid 11a2f33d (under 2: ask a doctor). Batch 3 Cold & Flu row used setid 209c4ec1 with 12+ directions; inactives match. Contains lactose. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_OSCILLO_2PLUS} (2+ chart; draft, not verified)`,
@@ -304,8 +293,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Sambucol Original Syrup Immune row = Caution (potassium sorbate). SAME formulaId `sambucol-original-syrup` and SAME Caution grade as batch 3 — aisle-coverage row (batch 8 Benadryl Sleep pattern). Do not change the grade. Glucose syrup is Cleared. Immune aisle minAge 4 (kids chart on the Original Syrup carton; adult audience for the standard drugstore SKU). Gummies with vegetable oil are a different formula (`sambucol-elderberry-gummies`) and are not this row. No DailyMed SPL (dietary supplement).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -356,9 +344,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       flag('Beeswax', 'cleared', labelCite(NW_COCONUT_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature\'s Way Sambucus Kids gummies (coconut-only, current brand page) = Caution. Driver is natural flavors (Limited). Coconut oil alone is NOT the gummy seed/industrial-oil High rule. Separate formulaId from the palm / vegetable-oil Avoid twin — do not merge them. Confirm the carton: naturesway.com currently lists coconut oil + beeswax, not palm. No DailyMed drug SPL (dietary supplement). Ages 2+ (under 2: choking hazard / not for use). ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -403,11 +389,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_SAMBUCOL_HOMEOPATHIC, 'Sucrose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Sambucol Cold & Flu Relief homeopathic tablets = Caution. Drivers are maltodextrin (Limited) + elderberry flavor (Limited). Homeopathic ODT — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Ages 12+ (dissolve; do not chew). Zincum gluconicum is an active on this SPL. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -441,11 +423,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_COLDEEZE_CLASSIC, 'Sucrose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Cold-EEZE classic lozenge = Caution. Driver is natural flavors (Limited). Drug Facts list corn syrup, glycine, natural flavors, sucrose (structured inactive table omits flavors — draft follows the Drug Facts line). Homeopathic zinc lozenge — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 12+ (under 12: ask a doctor). Sugar-free Ace-K twin is a different formula (`cold-eeze-lozenge-acek`, Avoid). ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -504,9 +482,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Airborne chewable = Caution. Drivers are sucralose + flavors + SiO2 (± maltodextrin on some cartons / rbNA). Raw demerit math is sucralose 2 + flavors 1 (± maltodextrin 1) → 3–4 pts Avoid — draft follows the approved Caution call, not a 3-pt Avoid stack. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) and does not by itself raise or soften the grade. No DailyMed drug SPL expected (dietary supplement). Ages 12+. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -548,9 +524,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Airborne gummies = Caution (do not invent Avoid). Current Instacart / Swanson-style lists are sugar, corn syrup, water, gelatin, pectin, natural flavors, fruit/vegetable colors — no seed / vegetable oil on those snapshots. CARTON FLAG: confirm the physical bottle. A carton that lists vegetable / sunflower / canola / palm / soybean oil is a different formula (High Avoid) — not this row. Some older / other-barcode dumps show “vegetable oil”; that is not scored here because it is not confirmed on the current listings used for this draft. HFCS, if a later carton shows it, is notes-only (parked; never graded). Herbal-blend maltodextrin, if present, is Limited and still Caution on this approved row. No DailyMed drug SPL. Ages 12+. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -605,9 +579,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Emergen-C Super Orange = Caution. Brand PDF inactives: maltodextrin (Limited) + natural flavors (Limited) + silicon dioxide (nanoparticle Caution cap, 0 pts). Beta-carotene is listed as a color additive — standalone Caution class (not additive-scored, not Avoid). Malic acid, tartaric acid, glycine, L-aspartic acid, orange oil, and orange juice concentrate appear on the PDF and are not in Methodology §5 (ungraded; v1.6 intake) — not required to reach Caution. Fructose / acacia / tocopherols are Cleared-class. Ages 14+ (not formulated under 14). Zinc ascorbate is an active. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -665,9 +637,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Source Naturals Wellness Formula tablets = Caution. Silica / silicon dioxide is the locked nanoparticle Caution cap (0 demerit points) — not Avoid alone. Other listed inactives (MCC, dibasic calcium phosphate, hydroxypropyl cellulose, modified cellulose gum, stearic acid, magnesium stearate) are Cleared-class tablet fillers. Separate formulaId from the capsule row. Pregnancy warning on the brand label (do not use if pregnant, may become pregnant, or breastfeeding) is a label warning, not an inactive grade. Contains soy on some Wellness Formula SKUs — confirm the bottle. No DailyMed drug SPL. Adult Immune aisle. ' +
-      ZINC_PARKED,
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -714,9 +684,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Source Naturals Wellness Formula capsules = Caution. Colloidal silicon dioxide / silica is the locked nanoparticle Caution cap (0 demerit points) — not Avoid alone. Gelatin capsule is Cleared. Separate formulaId from the tablet row — do not merge them. Some bottle lists say “silica” rather than “colloidal silicon dioxide”; same Caution cap. Contains soy (allergen disclosure). Pregnancy warning on the brand label. Live Clean Picks Cold & Flu Caution draft describes the capsule pattern; this Immune row is the matching draft. No DailyMed drug SPL. Adult Immune aisle. ' +
-      ZINC_PARKED,
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -753,8 +721,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
         'Methodology §4 / §5 worked example — colloidal silver Caution cap (NCCIH, Mayo, peer-reviewed argyria case reports)',
     },
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL / LOCKED: Sovereign Silver hydrosol = Caution (active-safety cap). Additives are silver + purified water (0 demerit points) and would otherwise read Clean — do NOT invent Clean. Colloidal silver is the Methodology v1.3/v1.6 worked example: argyria (permanent, cumulative, no established safe level) plus concurrent antibiotic / thyroid interactions caps the verdict at Caution. This is not an inactive-table grade. Adult Immune aisle. First-aid gels under the same brand are a different formula (not this row).',
+
     retailers: ['Whole Foods', 'Sprouts', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -799,9 +766,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       flag('Citric acid', 'cleared', labelCite(ZARBEES_SYRUP_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Zarbee's Children's Daily Immune Support syrup = Caution. Brand page confirmed: organic agave + natural flavors + potassium sorbate + citric acid — no seed oil. Drivers are natural flavors (Limited) + potassium sorbate (Limited) = 2 pts Caution. Separate from batch 4 `zarbees-childrens-cough-immune` (cough + immune honey syrup). No DailyMed drug SPL. Ages 2+ (under 2: not recommended). " +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Target', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -856,9 +821,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Zarbee's Children's Elderberry Immune Support gummies = Caution, not Avoid. Current kids brand page (mighty-bee) has NO sunflower / canola / vegetable / palm oil — flavor + maltodextrin only (2 pts Caution). Do not invent a seed-oil Avoid on this formulaId. If a later carton shows seed / industrial oil, that is a different formula (not this row). Adult 12+ Zarbee's elderberry gummies on a different URL are not this kids row. No DailyMed drug SPL. Ages 2+ (2–3: 1 gummy; 4–12: 2 gummies). " +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Target', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -921,9 +884,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Sambucol elderberry gummies = Avoid. Vegetable oil in a gummy is High-tier (seed/industrial oils in gummies). US brand page + CVS listings. Separate formula from Original Syrup (Caution, shared batch 3 formulaId). Natural flavors are also Limited (not needed to reach Avoid). No DailyMed drug SPL. Carton is 4+; audience stays adult for the standard drugstore SKU. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -970,9 +931,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       flag('Beeswax', 'cleared', labelCite(NW_VEG_CITE, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Nature\'s Way Sambucus Kids gummies with vegetable oil (palm and coconut) / generic vegetable oil = Avoid. Palm / “vegetable oil” in a gummy is High-tier. Separate formulaId from the coconut-only Caution twin (current naturesway.com listing) — do not merge them. Coconut oil on the same “palm and coconut” line does not clear the palm High. Confirm the carton; the current brand page is the coconut-only row, not this one. No DailyMed drug SPL. Ages 2+. ' +
-      ZINC_PARKED,
+
     retailers: ['Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -1009,11 +968,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_COLDEEZE_ACEK, 'Glycine'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cold-EEZE Ace-K (sugar-free) lozenge = Avoid. Ace-K is Moderate (2 pts) + natural flavors Limited (1 pt) = 3 → Avoid per founder (2+1 points). Drug Facts: acesulfame-K, glycine, isomalt, natural flavors (structured table omits flavors — draft follows Drug Facts). Isomalt is scored in the oral sugar-alcohol Limited class; not needed to reach Avoid once 2+1 is met. Separate formulaId from the classic Caution lozenge. Homeopathic zinc lozenge — cleanliness only. ' +
-      CARLSTON +
-      ' Ages 12+ (under 12: ask a doctor). ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -1078,11 +1033,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_COLDEEZE_ULTRAMELT, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cold-EEZE UltraMELT dyed = Avoid. Red 40 + Yellow 5 aluminum lakes are High-tier. Ace-K, sucralose, flavors, xylitol, and erythritol also score; dyes alone reach Avoid. SPL Drug Facts typo “sucarlose” = sucralose. Homeopathic zinc chew — cleanliness only. ' +
-      CARLSTON +
-      ' Ages 12+ (under 12: ask a doctor). ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -1133,11 +1084,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_ZICAM_RAPIDMELTS_DYED, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Zicam RapidMelts dyed (representative Cherry SPL) = Avoid. Red 40 aluminum lake is High-tier; sucralose + flavor also score. Monoammonium glycyrrhizinate is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake) — not the Avoid driver. Homeopathic zinc RapidMelt — cleanliness only. ' +
-      CARLSTON +
-      ' Ages 12+ (under 12: ask a doctor). Ultra RapidMelts (dye-free, sucralose + flavor lock) are a different formulaId. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [
@@ -1175,11 +1122,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_ZICAM_ULTRA, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Zicam Ultra RapidMelts = Avoid. Sucralose + flavor is a founder lock even without dye (Moderate 2 + Limited 1 = 3 pts Avoid). Carton markets sugar-free / dye-free — dye-free is not Clean. Mannitol is also Limited (not needed to reach Avoid). Monoammonium glycyrrhizinate is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Homeopathic zinc RapidMelt — cleanliness only. ' +
-      CARLSTON +
-      ' Ages 12+ (under 12: ask a doctor). Separate from dyed Cherry RapidMelts. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
     sourcesGeneral: [

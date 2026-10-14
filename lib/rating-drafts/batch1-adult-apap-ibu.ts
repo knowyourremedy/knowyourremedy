@@ -127,9 +127,6 @@ const L484_INACTIVES: IngredientFlag[] = [
   flag('Carnauba wax', 'cleared', METH.cleared),
 ];
 
-const L484_NOTE =
-  'LNK L484 extra-strength acetaminophen family — oral PEG is Moderate (2 pts) → Caution. These store brands share inactives and formulaId; pack sizes are not graded separately. Some of the same retailers also sell dyed / titanium-dioxide ES SKUs under similar names — confirm the L484 / PEG list on the bottle.';
-
 function l484Record(opts: {
   id: string;
   productName: string;
@@ -156,7 +153,7 @@ function l484Record(opts: {
         : item,
     ),
     verdict: 'caution',
-    honestNote: L484_NOTE,
+
     retailers: opts.retailers,
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -181,9 +178,6 @@ const DYE_FREE_IBU_INACTIVES: IngredientFlag[] = [
   flag('Povidone', 'cleared', METH.cleared),
   flag('Stearic acid', 'cleared', METH.cleared),
 ];
-
-const DYE_FREE_IBU_NOTE =
-  'Dye-free LNK 44-438 family. Silicon dioxide is a nanoparticle Caution cap (0 demerit points); oral PEG is Moderate (2 pts). Combined product verdict is Caution — there is no Clean adult ibuprofen in this batch. Polydextrose and triacetin appear on the label and are not in the Methodology §5 table — flagged for later intake, not graded on the spot (v1.6).';
 
 function dyeFreeIbuRecord(opts: {
   id: string;
@@ -213,7 +207,7 @@ function dyeFreeIbuRecord(opts: {
           : item,
     ),
     verdict: 'caution',
-    honestNote: DYE_FREE_IBU_NOTE,
+
     retailers: opts.retailers,
     sourcesGeneral: [
       `DailyMed setid ${opts.setid} (LNK 44-438 dye-free IBU; draft, not verified)`,
@@ -263,8 +257,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Coated Extra Strength caplets. Titanium dioxide and FD&C Red 40 lake are each High-tier. If the goal is a cleaner adult 500 mg acetaminophen, look at the Clean rows in this batch — not this coating.',
+
     retailers: [
       'Walmart',
       'Target',
@@ -330,8 +323,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Rapid-release gelcaps. Brand label lists synthetic dyes, parabens, and titanium dioxide — any one is High-tier. Dual-action / gel / rapid-release Avoid rows stay.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -373,8 +365,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Liquid gels. Titanium dioxide plus Red 40 / Yellow 6 — High-tier dyes. Gel / rapid-release Avoid rows stay.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -416,8 +407,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Uncoated Regular Strength tablets — no titanium dioxide, dyes, or PEG on this SPL. Do not confuse with coated Regular Strength caplets (separate Avoid formula). DailyMed directions include ages 6 to under 12, so minAge is 6; this batch is still the adult SKU (audience remains adult).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Safeway'],
     sourcesGeneral: [
       'DailyMed setid 1622f694-4d63-4c56-8737-fae31f0ecfb7 (draft, not verified)',
@@ -451,8 +441,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Coated Regular Strength caplets — different formula from the uncoated RS tablets. Titanium dioxide and Red 40 lake are High-tier. If the bottle is the plain white tablet, that is the Clean RS row, not this one.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: RS_COATED_ALTS,
     sourcesGeneral: [
@@ -494,8 +483,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'PEG-only 8 HR formula — oral PEG is Moderate → Caution; no titanium dioxide on this SPL. Another 8 HR SPL contains titanium dioxide and is a separate Avoid formula (tylenol-8hr-tio2). Confirm the inactive list on the bottle before treating this as the PEG-only version.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Costco'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -522,8 +510,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Separate 8 HR formula from the PEG-only Caution row. Titanium dioxide is High-tier. Confirm the label — both 8 HR SPLs have been in circulation.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -570,8 +557,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER EXCEPTION: maltodextrin is Limited in Methodology §5 (1 pt would normally be Caution). Founder keeps this Clean so there is a recommendable adult acetaminophen. Sunflower oil on this tablet is not the gummy High-tier seed-oil rule. Stay under 4 g/day acetaminophen, same as any APAP.',
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart'],
     sourcesGeneral: [
       'DailyMed setid d6f968ca-719f-5a68-e053-2995a90a4afa (draft, not verified)',
@@ -663,8 +649,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'LNK 44-175 film-coated caplet. Castor oil is Cleared. No titanium dioxide, dye, or PEG on this SPL. CVS also sells a Red 40 / titanium-dioxide Extra Strength SKU — that is a different formula and a different row (Avoid). Confirm imprint 44-175 / this inactive list.',
+
     retailers: ['CVS'],
     sourcesGeneral: [
       'DailyMed setid afacdc0b-fb65-464e-91b8-e82ba7ecde44 (draft, not verified)',
@@ -699,8 +684,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Keep this SEPARATE from the CVS Health 44-175 castor-oil Clean row. Never one row. Red 40 lake and titanium dioxide are High-tier. Confirm the red coated bottle vs. the white 44-175 caplet.',
+
     retailers: ['CVS'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -736,8 +720,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Walgreens fields more than one Extra Strength coating. This row is the Red 40 + titanium dioxide formula only — different from the mineral-oil Caution SPL and from the multi-dye + talc Avoid SPL. Confirm the inactive list on the bottle.',
+
     retailers: ['Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -782,8 +765,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'Founder call: mineral-oil, no-titanium-dioxide Walgreens SPL is Caution until mineral oil is graded — not Clean. Mineral oil is not in the §5 table and was not graded on the spot. Some Walgreens mineral-oil uploads still show titanium dioxide in the structured table; if the physical label lists TiO2, that is a different Avoid formula. Different formulaId from the Red 40 / TiO2 and dyes-talc rows.',
+
     retailers: ['Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -817,8 +799,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Target up&up extra-strength coated red tablets. Red 40 lake and titanium dioxide are High-tier. Some older up&up ES listings also include talc — if talc is on the bottle, that is still Avoid (talc is High-tier). Not the L484 PEG family.',
+
     retailers: ['Target'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -859,8 +840,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Walgreens 679R / TCL341-style SPL: Red 40 + Yellow 6 + talc + titanium dioxide. Different formulaId from the Red 40 + TiO2-only row and from the mineral-oil Caution row. Confirm the bottle.',
+
     retailers: ['Walgreens'],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -899,8 +879,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Advil tablets. Titanium dioxide plus methylparaben / propylparaben — each High-tier. No Clean adult ibuprofen in this batch; dye-free store-brand 44-438 is the Caution analog.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Safeway'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -940,8 +919,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Liqui-Gels / Minis. FD&C Green No. 3 is High-tier (PROJECT_NOTES discovery: Advil Liqui-Gels are not clean). Gel Avoid rows stay. Soy lecithin is Cleared with a soy-allergy note only.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -983,8 +961,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Gel caplets. Red 40, Yellow 6, propyl gallate, and titanium dioxide are each High-tier. Gel Avoid rows stay.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1026,8 +1003,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Film-coated Motrin IB caplets. Red 40 / Yellow 6 lakes, talc, and titanium dioxide are High-tier.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Safeway'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1078,8 +1054,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Standard Equate ibuprofen (not the dye-free 44-438 SKU). Titanium dioxide is High-tier. Prefer the Equate dye-free row in this batch if the goal is a closer store-brand analog.',
+
     retailers: ['Walmart'],
     cleanAlternatives: ibuAlts('equate-ibuprofen-dye-free'),
     sourcesGeneral: [
@@ -1106,8 +1081,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kirkland ibuprofen tablets. Titanium dioxide is High-tier. Different formula from Kirkland IB caplets (dyes + talc + TiO2). No Kirkland dye-free SKU in this batch — dye-free 44-438 store brands are the Caution analog.',
+
     retailers: ['Costco'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1149,8 +1123,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kirkland IB caplets — different formulaId from Kirkland tablets. Dyes + talc + titanium dioxide are High-tier.',
+
     retailers: ['Costco'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1177,8 +1150,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Target up&up ibuprofen. Titanium dioxide is High-tier. No Target dye-free IBU in this batch — 44-438 store-brand dye-free is the Caution analog.',
+
     retailers: ['Target'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1204,8 +1176,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Signature Care ibuprofen. Titanium dioxide is High-tier. No Safeway dye-free IBU in this batch — 44-438 store-brand dye-free is the Caution analog.',
+
     retailers: ['Safeway'],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1231,8 +1202,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      "Member's Mark ibuprofen. Titanium dioxide is High-tier; some lots / related LNK brown tablets also list talc — if talc is on the bottle that is still Avoid. No Sam's Club dye-free IBU in this batch.",
+
     retailers: ["Sam's Club"],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1262,8 +1232,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dual-action Avoid row stays. Titanium dioxide is High-tier. This batch has no Clean combo product — listed swaps are single-active analogs only, not a 250/125 replacement.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: DUAL_ACTION_ALTS,
     sourcesGeneral: [

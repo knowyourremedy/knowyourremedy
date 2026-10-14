@@ -146,9 +146,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const NO_CLEAN_KIDS_PROBIOTIC =
-  'No independently Clean kids probiotic exists in the repo — cleanAlternatives omitted (honest empty; do not invent a Clean kids probiotic; do not point at adult Clean probiotics — §6 age-matching).';
-
 const WOMENS_PROBIOTIC_ID = 'thrive-wellmade-womens-daily-probiotic';
 const MENS_PROBIOTIC_ID = 'thrive-wellmade-mens-daily-probiotic';
 const REAL_FOOD_C_ID = 'thrive-wellmade-real-food-vitamin-c';
@@ -276,8 +273,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       labelCleared(WOMENS_PROBIOTIC_CITE, 'Microcrystalline cellulose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Women\'s Daily Probiotic = Clean. Thrive PDP SKU 671635733559 other-ingredients: Non-GMO Vegetable Cellulose Capsule, Microcrystalline Cellulose. Vegetable cellulose capsule / MCC are Cleared. CONFIRMED no gellan and no silicon dioxide / silica on that matched list. Labeled actives listed neutrally from the PDP Supplement Facts (not an efficacy claim): 50 billion CFU / 15 strains as labeled — Daily Probiotic Blend 250mg with Lactobacillus acidophilus, L. plantarum, L. casei, L. paracasei, L. bulgaricus, L. brevis, L. reuteri, L. salivarius, L. fermentum, L. gasseri, L. rhamnosus (total Lactobacillus 40 billion CFU as labeled) and Bifidobacterium lactis, B. bifidum, B. breve, B. infantis, B. longum (total Bifidobacterium 10 billion CFU as labeled); Organic Prebiotic Blend 377mg (organic tapioca starch powder, organic gum arabic / acacia). Inulin also appears on the scraped Supplement Facts after the bifido subtotal — listed neutrally if present on carton; not scored as an inactive. This draft grades inactives only. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${WOMENS_PROBIOTIC_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -321,8 +317,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       labelCleared(MENS_PROBIOTIC_CITE, 'Microcrystalline cellulose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Men\'s Daily Probiotic = Clean. Thrive PDP SKU 671635733535 other-ingredients: Non-GMO Vegetable Cellulose Capsule, Microcrystalline Cellulose — same OI stack as the Women\'s Daily Probiotic row. Vegetable cellulose capsule / MCC are Cleared. CONFIRMED no gellan and no silicon dioxide / silica on that matched list. Separate formulaId from the women\'s row (different labeled strain mix / CFU split). Labeled actives listed neutrally from the PDP Supplement Facts (not an efficacy claim): 50 billion CFU / 15 strains as labeled — Daily Probiotic Blend 250mg with Lactobacillus acidophilus, L. casei, L. gasseri, L. plantarum, L. paracasei, L. brevis, L. bulgaricus, L. rhamnosus, L. salivarius, L. fermentum, L. reuteri (total Lactobacillus 35 billion CFU as labeled) and Bifidobacterium lactis, B. bifidum, B. breve, B. infantis, B. longum (total Bifidobacterium 15 billion CFU as labeled); Organic Prebiotic Fiber Blend 407mg (organic tapioca starch powder, organic gum arabic / acacia). Inulin also appears on the scraped Supplement Facts — listed neutrally if present on carton; not scored as an inactive. Facility allergen note on the PDP: produced in a facility that also processes wheat and dairy. This draft grades inactives only. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${MENS_PROBIOTIC_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -367,8 +362,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Real Food Vitamin C = Clean. Thrive PDP SKU 671635733771 other-ingredients: Vegetarian Capsule (Hypromellose, Water), Organic Rice Hull Powder. HPMC / water are Cleared. Organic rice hull powder is Cleared (rice hull extract / rice concentrate / ground rice hulls class LOCKED Cleared — plant-fiber flow agent; distinct from rice flour; distinct from silicon dioxide; SiO₂ nanoparticle Caution cap does NOT apply). No gellan, silicon dioxide, titanium dioxide, or synthetic dye on that matched list. Active is Vitamin C 500mg per 2 vegan capsules as labeled (from acerola extract, as ascorbic acid, and from Food Complex Blend). Food Complex Blend 900mg and Probiotic and Enzyme Blend 60mg are labeled actives listed neutrally; this draft grades inactives only and makes no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${REAL_FOOD_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -405,8 +399,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Fish Oil 240 softgels = Clean. Thrive PDP SKU 671635733955 other-ingredients: Softgel (Gelatin, Glycerin And Water), Vitamin E. Gelatin / glycerin / water are Cleared. Vitamin E is Cleared-class (v1.6 tocopherol antioxidant lock). CONFIRMED no natural flavor on this 240-softgel SKU — do not merge with a lemon-flavored liquid fish oil or any flavored twin. Softgel fish-oil fill / gelatin-glycerin-water carrier is NOT the gummy seed/industrial-oil High rule and is not an OilInfoRecord (batch 23 oil drafts live elsewhere). Labeled actives: fish oil concentrate 1000mg per softgel with EPA 180mg / DHA 120mg as labeled (anchovy). Contains fish (anchovy). Contains gelatin. Pack sizes of this unflavored softgel share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${FISH_OIL_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -444,8 +437,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       flag('Silica', 'cleared', labelCite(MAGNESIUM_CITE, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Magnesium Glycinate = Caution (silica). Thrive PDP SKU 671635734464 other-ingredients: Vegan Capsules (Hypromellose, Water), Cellulose, Magnesium Stearate, Stearic Acid, Silica. HPMC / water, cellulose, magnesium stearate, and stearic acid are Cleared-class and do not raise the grade. Silica / silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 Nature Made Prenatal Multi tablets, batch 24 DFH Prenatal Pro, and batch 25 PE Probiotic-5 / Thorne FloraMend / Thorne Mg caps (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Do not invent a new Clean wellmade house magnesium. Active is magnesium (from magnesium glycinate) 400mg per 3 vegan capsules as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     cleanAlternatives: MAG_ALTS,
     sourcesGeneral: [
@@ -478,8 +470,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Vitamin C tablets = Caution (silica). Thrive PDP SKU 671635733818 other-ingredients: Cellulose, Stearic Acid, Magnesium Stearate, Silica. Cellulose / stearic acid / magnesium stearate are Cleared-class and do not raise the grade. Silica / silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 / 24 / 25 (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Separate formulaId from in-batch Clean Real Food Vitamin C (`thrive-wellmade-real-food-vitamin-c`) and from the chewable Caution row. Active is Vitamin C (as ascorbic acid) 1000mg per tablet as labeled. Facility allergen note on the PDP: made on the same equipment as milk, egg, anchovy, mackerel, shrimp, soy, coconut, and wheat. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     cleanAlternatives: VITAMIN_C_TABLET_ALTS,
     sourcesGeneral: [
@@ -527,8 +518,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Chewable Vitamin C = Caution. Thrive PDP SKU 671635734044 other-ingredients: Tapioca Dextrose, Mannitol, Acacia Powder, Natural Flavors, Stearic Acid, Silica, Orange Juice Powder, Sea Salt, Stevia Extract Powder (Reb A). Drivers are natural flavors (Limited) + silica (nanoparticle Caution cap, 0 demerit points — same encoding as batch 15 / 24 / 25; verdict caution, NOT avoid) plus mannitol (Limited sugar alcohol). Tapioca dextrose is Cleared. Acacia / gum arabic is Cleared (v1.6 gums lock). Stearic acid is Cleared. Sea salt / sodium chloride is on the PDP and is Cleared (§5). Stevia extract powder (Reb A) is Cleared (v1.6 high-purity steviol glycosides lock — not whole-leaf/crude). Orange juice powder is present on the label and is not in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored inactiveIngredients array (same notes-only pattern as batch 24 PE Melatonin-SR sodium alginate / Nordic rosemary extract); not a demerit driver; no invented riskLevel. Carton is an adult chewable (PDP: adults chew one tablet daily); form chewable tablet noted — not a kids row. Separate formulaId from in-batch Clean Real Food Vitamin C and from the tablet Caution row. Active is Vitamin C 500mg (as sodium ascorbate and ascorbic acid) as labeled. Orange mango flavor is the labeled flavor, not a second grade. Facility allergen note on the PDP: made on the same equipment as milk, egg, soy, wheat, coconut, anchovy, mackerel, shrimp. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     cleanAlternatives: CHEWABLE_C_ALTS,
     sourcesGeneral: [
@@ -590,9 +580,7 @@ export const BATCH27_THRIVE_WELLMADE: RatingRecord[] = [
       flag('Silica', 'cleared', labelCite(KIDS_PROBIOTIC_CITE, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: wellmade by Thrive Market Organic Kids Chewable Probiotic Super Strawberry Banana = Caution (natural flavors + silica). Thrive PDP SKU 671635734402 other-ingredients: Xylitol*, Tapioca Dextrose*, Medium Chain Triglycerides*, Pea Starch Powder*, Natural Flavors*, Stevia Extract Powder (Reb A)*, Silica, Beet Root Powder (Color)* (*Organic). Drivers are natural flavors (Limited) + silica (nanoparticle Caution cap, 0 demerit points — same encoding as batch 15 / 24 / 25; verdict caution, NOT avoid). Xylitol is Limited oral/ingested. Tapioca dextrose is Cleared. Pea starch powder is Cleared (v1.6 simple-starch housekeeping). Stevia extract powder (Reb A) is Cleared (v1.6 high-purity lock). Medium chain triglycerides are present on the label but are not in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored inactiveIngredients array (same notes-only pattern as batch 25 Thorne Magnesium Glycinate capsules MCT oil); founder lock: MCT stays a FLAG note, not a new grade; not a demerit driver; no invented riskLevel. Beet root powder (color) is on the label and is not independently listed in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored array; notes-only; not a second color-additive lock and not a demerit driver. REQUIRED audience kids. PDP age chart: children 4 years & older chew 1 tablet under adult supervision — minAge 4 from that carton floor (not a guessed 2–3). Labeled actives listed neutrally: proprietary probiotic blend 28mg / 5 billion CFU as labeled; Vitamin C 30mg from organic amla; Vitamin D3 10mcg (400 IU) from organic algae; Organic Prebiotic Fiber Blend 310mg. This draft grades inactives only and makes no efficacy claim. Sugar-free / vegan claims on the PDP are not grade drivers. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). ' +
-      NO_CLEAN_KIDS_PROBIOTIC,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${KIDS_PROBIOTIC_CITE} — draft, not verified; no DailyMed drug SPL`,

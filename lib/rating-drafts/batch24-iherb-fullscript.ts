@@ -139,18 +139,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / bisglycinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const PRENATAL_LABEL =
-  'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
-
-const IRON_OVERDOSE_CARTON =
-  'On-carton iron overdose warning (when iron is labeled): accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
-
-const NO_CLEAN_FISH_OIL =
-  'No independently Clean fish-oil row exists in this draft set — cleanAlternatives omitted (honest empty; do not point at Nature Made D3 or unrelated / out-of-batch fish oils).';
-
 const PE_MELATONIN_ID = 'pure-encapsulations-melatonin-sr-3mg';
 const PE_D3_ID = 'pure-encapsulations-d3-5000';
 const PE_PRENATAL_ID = 'pure-encapsulations-prenatal-nutrients';
@@ -213,8 +201,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       labelCleared(PE_MELATONIN_CITE, 'Carnauba wax'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Melatonin-SR 3 mg = Clean for the sleep hole. iHerb / DSLD 185040 / PURE_PIS_MelatoninSR.pdf other-ingredients: microcrystalline cellulose, vegetarian capsule (cellulose, water), hypoallergenic plant fiber (cellulose), hydroxypropyl methylcellulose / HPMC, sodium alginate, carnauba wax. Cellulose / HPMC / MCC / carnauba are Cleared. Sodium alginate is present on the label but is not in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored inactiveIngredients array (same notes-only pattern as batch 10 Gaviscon / Phillips ungraded alginates and batch 7 Genexa PM ungraded rice extract); not a demerit driver; no invented riskLevel. No titanium dioxide, synthetic dye, or sucralose on the matched list. Cleanliness grade only; no efficacy claim. Other PE melatonin strengths (including 20 mg) are not this row and were not written. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_MELATONIN_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -240,8 +227,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       labelCleared(PE_D3_CITE, 'Vegetarian capsule (cellulose, water)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Vitamin D3 5000 IU (125 mcg) = Clean. iHerb other-ingredients: hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water). No TiO2 / dye / sucralose on that list. This row is the 5000 IU SKU. Other PE D3 strengths share this formulaId ONLY when the other-ingredients list holds (same cellulose fiber + vegetarian capsule). 60-ct / 120-ct / 250-ct packs of the 5000 IU SKU share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_D3_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -274,13 +260,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations PreNatal Nutrients = Clean. Matched US iHerb / DSLD 186344 other-ingredients: vegetarian capsule (cellulose, water), ascorbyl palmitate. Ascorbyl palmitate is Cleared (v1.6 antioxidant lock). CONFIRMED no silicon dioxide, titanium dioxide, synthetic dye, or talc on that matched US label. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_PRENATAL_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -316,13 +296,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Basic Prenatal = Clean if hypromellose + calcium laurate. Current / on-market iHerb / DSLD 233482 other-ingredients: hypromellose (derived from cellulose) capsule, calcium laurate. Calcium laurate is treated as Cleared on that founder-approved stack (stearate-family lubricant; cite founder call + current label — not independently listed in the §5 Cleared table and not a new High lock). This draft is the current formula only. Historical / older DSLD lots that listed silicon dioxide are a different formula — old lots with SiO2 would be Caution (nanoparticle cap), not this Clean row. No titanium dioxide, synthetic dye, talc, or silicon dioxide on the current on-market label. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${THORNE_PRENATAL_CITE} — draft, not verified; current on-market label only; no DailyMed drug SPL`,
@@ -362,9 +336,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nordic Naturals Ultimate Omega lemon softgels = Caution (natural flavor only flag). iHerb other-ingredients: purified deep sea fish oil (from anchovies, sardines, mackerel, and herring); soft gel capsule (gelatin, glycerin, water, natural flavor); natural flavor; RRR-alpha tocopherol (antioxidant); rosemary extract (a natural preservative). Driver is natural lemon flavor (Limited → 1 pt Caution). Gelatin / glycerin / water are Cleared. RRR-alpha tocopherol / mixed tocopherols are Cleared-class antioxidants. Rosemary extract is on the label and is not independently listed in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored inactiveIngredients array (batch 7 Genexa PM rice-extract pattern); not a second grade and not a demerit driver. Softgel fish-oil fill is NOT the gummy seed/industrial-oil High rule. Fish-gelatin (tilapia) lemon twins share this formulaId when the rest of the inactives hold (gelatin vs fish gelatin are both Cleared-class shells). Pack sizes share formulaId. Contains fish. No DailyMed drug SPL. Adults. ' +
-      NO_CLEAN_FISH_OIL,
+
     retailers: ['iHerb'],
     sourcesGeneral: [
       `${NORDIC_OMEGA_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -403,13 +375,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       labelCleared(DFH_PRENATAL_CITE, 'Vegetable stearate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Designs for Health Prenatal Pro = Caution (SiO2). iHerb / Fullscript other-ingredients: cellulose (capsule), microcrystalline cellulose, sunflower lecithin, vegetable stearate, silicon dioxide. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 Nature Made Prenatal Multi tablets (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Cellulose capsule / MCC / sunflower lecithin / vegetable stearate are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     cleanAlternatives: PRENATAL_ALTS,
     sourcesGeneral: [

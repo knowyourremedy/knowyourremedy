@@ -188,15 +188,6 @@ function homeopathicFields() {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const PARKED_MCE =
-  'Menthol / camphor / eucalyptol as topical actives stay parked (Methodology §5) — inactives graded only; no invented active-safety grade.';
-
-const PARKED_ZNO =
-  'Zinc (oxide / acetate) as a topical / diaper-rash / skin-protectant active stays parked (Methodology §5) — inactives graded only; no invented active-safety grade.';
-
-const PARKED_FORMALDEHYDE =
-  'Diazolidinyl urea is a formaldehyde-releaser — parked / out-of-scope (Methodology §5). Notes only, not a demerit.';
-
 const CALENDULA_CREAM = 'boiron-calendula-cream';
 const CALENDULA_OINT = 'boiron-calendula-ointment';
 const ARNICARE_GEL = 'boiron-arnicare-gel';
@@ -333,10 +324,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', dailymed(SET_CAL_CREAM, METH.gums)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Calendula Cream = Clean. Draft Clean on the shea / coconut / glycerin family (setid 2ed51803). Arachidyl alcohol / glucoside, behenyl alcohol, shea butter, and lactobacillus ferment are not in Methodology §5 (ungraded; v1.6 intake) — not Clean-blockers. Coconut oil is topical ointment/cream oil, not the gummy seed-oil High rule. Homeopathic cream — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Adult First Aid row; Boiron topical calendula / Arnica sibling charts start at 1 year. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CAL_CREAM} (draft, not verified)`,
@@ -364,9 +352,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_CAL_OINT, 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Calendula Ointment = Clean. White petrolatum + alcohol + water on setid 28c76b61-2a0c. Petrolatum and topical alcohol are not in Methodology §5 (ungraded; v1.6 intake) — not Clean-blockers. The 2a0a SPL is a different cream-style base (PEG / caprylyl glycol panel) — not this row. Homeopathic ointment — cleanliness only, no efficacy claim. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CAL_OINT} (draft, not verified)`,
@@ -393,10 +379,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_ARNICA_GEL, 'Sodium hydroxide'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Arnicare Gel = Clean ONLY because the matched SPL (ce519152) has no fragrance and no paraben (alcohol / carbomer / purified water / sodium hydroxide). Cream SPL 542b41dd lists a shea/coconut panel and a PEG cream panel — Clean is not invented for cream. Ointment twin 9d03bd9c (petrolatum / alcohol / water) is also fragrance-free / paraben-free but this row is the gel. Homeopathic gel — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Arnicare ointment/cream sibling charts: adults and children 1 year and older (under 1: not recommended).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_ARNICA_GEL} (draft, not verified)`,
@@ -433,8 +416,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Neosporin Original Ointment = Clean. Petrolatum + cottonseed / olive / cocoa oils on setid 0ad21575. Topical ointment oils are not the gummy seed-oil High rule. Petrolatum and sodium pyruvate are not in Methodology §5 (ungraded; v1.6 intake). First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor). The Plus Pain cream is a separate Avoid formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_NEO_ORIG} (draft, not verified)`,
@@ -460,8 +442,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_NEO_PAIN_OINT, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Neosporin Plus Pain Relief Ointment = Clean. Petrolatum only on setid 32302dcd. Separate formulaId from the Plus Pain cream (methylparaben Avoid). Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_NEO_PAIN_OINT} (draft, not verified)`,
@@ -485,8 +466,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_POLY, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Polysporin ointment = Clean. Petrolatum only on setid e0fcf83e. Neomycin-free twin of the petrolatum ointment family. First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     sourcesGeneral: [`DailyMed setid ${SET_POLY} (draft, not verified)`],
   },
@@ -507,8 +487,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_EQ_BAC, 'White petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Bacitracin Ointment = Clean. White petrolatum only on setid 20908780. First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_BAC} (draft, not verified)`],
   },
@@ -532,8 +511,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_EQ_TRIPLE, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Triple Antibiotic + Pain ointment = Clean. Petrolatum only on setid 907d44c5. Separate from the Equate antibiotic cream (methylparaben Avoid) and from the cocoa/cottonseed/olive oil-blend SKU. Ages 2+ (under 2: consult a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_TRIPLE} (draft, not verified)`],
   },
@@ -568,8 +546,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate antibiotic oil-blend = Clean. Cocoa / cottonseed / olive / petrolatum Neosporin Original twin on setid 2b743271. Topical ointment oils are not the gummy seed-oil High rule. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_OIL} (draft, not verified)`],
   },
@@ -588,8 +565,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Hydrocortisone', strength: '1%' }],
     inactiveIngredients: [cleared(SET_C10_WR, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Water Resistant = Clean. Petrolatum only on setid 118e55e7. Separate from Soothing Aloe / Cooling (paraben Avoid). Ages 2+ (under 2: do not use, ask a doctor). External anal / genital itching chart is 12+ — not this row\'s minAge.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_C10_WR} (draft, not verified)`],
   },
@@ -617,8 +593,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_AQ_HC, 'Menthoxypropanediol'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Aquaphor Itch Relief HC = Clean — no paraben and no fragrance on setid b1d0333f. Mineral oil / ceresin / lanolin alcohol / panthenol / bisabolol / menthoxypropanediol are not in Methodology §5 (ungraded; v1.6 intake) — not Clean-blockers. Menthoxypropanediol is a cooling diol, not menthol; menthol / camphor / eucalyptol stay parked and are not on this SPL. Ages 2+ (under 2: do not use).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     sourcesGeneral: [`DailyMed setid ${SET_AQ_HC} (draft, not verified)`],
   },
@@ -646,10 +621,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_BEN_COOL, 'Tromethamine'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Benadryl itch-cooling (alcohol / glycerin / PVP / water) = Clean. Matched SPL a7eae5dc is Extra Strength Itch Cooling Spray; stick twin 309d9be0 is the same inactives. Founder lock id keeps "gel" — form on the cited carton is spray (labeled, not a hard filter §6). ' +
-      PARKED_ZNO +
-      ' Tromethamine / topical alcohol are not in Methodology §5 (ungraded). Separate from Extra Strength Itch Stopping Cream (paraben Avoid). Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_BEN_COOL} (draft, not verified)`],
   },
@@ -676,10 +648,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_CALAMINE, 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Plain calamine lotion = Clean IF bentonite / calcium hydroxide / glycerin / water holds. Family Dollar setid 1a03331e matches that list. ' +
-      PARKED_ZNO +
-      ' Bentonite magma and calcium hydroxide are not in Methodology §5 (ungraded; v1.6 intake). Fragrance / camphor Calamine Plus sprays are a separate Caution formulaId. Calamine monograph: ages 2+ typical (under 2: ask a doctor).',
+
     retailers: ['Family Dollar', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_CALAMINE} (draft, not verified)`],
   },
@@ -698,8 +667,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Hydrogen peroxide', strength: '3%' }],
     inactiveIngredients: [cleared(SET_H2O2, 'Purified water')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Hydrogen peroxide 3% = Clean. Water only on Equate setid e19228e9. Other brick-and-mortar 3% water-only bottles share this formulaId for grading. Oral-rinse chart on this SPL is ages 2+ (under 2: consult a dentist or doctor); first-aid antiseptic use is the same adult-catalog row.',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_H2O2} (draft, not verified)`],
   },
@@ -718,8 +686,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Isopropyl alcohol', strength: '70%' }],
     inactiveIngredients: [cleared(SET_IPA_PLAIN, 'Water')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Plain isopropyl alcohol = Clean. Water only on Walgreens setid 21f125a0. Other water-only 70% bottles (Leader 4b5d50cb, GNP 0ffd9643) share this formulaId for grading. The wintergreen Blue #1 + Yellow #5 twin is a separate Avoid formulaId. First-aid antiseptic monograph: ages 2+ typical.',
+
     retailers: ['Walgreens'],
     sourcesGeneral: [`DailyMed setid ${SET_IPA_PLAIN} (draft, not verified)`],
   },
@@ -745,8 +712,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_AQ_HEAL, 'Bisabolol'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Aquaphor Healing Ointment = Clean. setid 0a17bf6f — mineral oil / ceresin / lanolin alcohol / panthenol / glycerin / bisabolol. Those unlisted-in-§5 inactives are ungraded (v1.6 intake), not Clean-blockers. No fragrance / no paraben. Skin-protectant / diaper-rash directions have no lower-age floor (minAge 0). Adult First Aid catalog row; also labeled for diaper rash. Diaper-rash Fast Relief / Balm Stick SKUs are different formulaIds — not this row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_AQ_HEAL} (draft, not verified)`],
   },
@@ -774,8 +740,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Desitin Multi-Purpose = Clean — mineral oil / paraffin / cocoa butter / tocopherol blend holds on setid 30f06dbb. Active is petrolatum, not zinc oxide (Max Strength is the ZnO + fragrance twin). Cocoa butter is topical ointment oil, not the gummy seed-oil High rule. Mineral oil / paraffin are not in Methodology §5 (ungraded). No lower-age floor on the diaper-rash chart (minAge 0). Adult First Aid catalog row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_DES_MP} (draft, not verified)`],
   },
@@ -821,10 +786,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_CALAMINE_PLUS, 'Sorbitan trioleate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Calamine Plus fragrance = Caution. Fragrance is standalone Caution (not Avoid alone). ' +
-      PARKED_MCE +
-      ' Camphor is on this spray as an inactive listing and stays parked. Hydrated silica is the SiO2 nanoparticle Caution cap (0 pts). Benzyl alcohol is not the Avoid driver on this adult topical (oral/infant population split). CVS setid db6f518d and other store Calamine Plus sprays with the same fragrance + camphor list share this formulaId. Leader-style lotion twins that add parabens are a different Avoid family — not this row. Ages 2+ (under 2: consult a doctor).',
+
     retailers: ['Walgreens', 'CVS', 'Target', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
     sourcesGeneral: [
@@ -862,8 +824,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_BACTINE_MAX, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Bactine Max = Caution — BKC + fragrance. setid 28e8a311. BKC 0.13% is the labeled first-aid antiseptic active (also the §5 BKC Caution pattern) — no invented active-safety grade. Fragrance is the inactive Caution driver (not Avoid alone). Propylene glycol is oral-scoped and is not scored as Moderate on this topical. Wound Wash is a separate formulaId. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTISEPTIC_ALTS,
     sourcesGeneral: [
@@ -905,8 +866,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_BACTINE_WASH, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Bactine Wound Wash — confirm carton; Caution, not invented Clean. setid 39b26c28 inactives include PEG-100 stearate (PEG Moderate, 2 pts → Caution), aloe extract, EDTA, propylene glycol, water. No fragrance and no paraben on this SPL. PEG-100 stearate is a PEG ester (same EO / 1,4-dioxane Moderate family as PEG 400/3350). PG is oral-scoped and is not scored here. BKC is the labeled antiseptic active — no invented active-safety grade. First-aid antiseptic directions; ages 2+ typical (this SPL does not reprint a 2+ chart).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: ANTISEPTIC_ALTS,
     sourcesGeneral: [
@@ -950,10 +910,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Desitin Maximum Strength = Caution — fragrance (standalone Caution, not Avoid alone). ' +
-      PARKED_ZNO +
-      ' Cod liver oil / lanolin / sorbitan sesquioleate / the hindered-phenol antioxidant are not in Methodology §5 (ungraded; v1.6 intake) — not the Caution driver. Multi-Purpose (petrolatum active, no fragrance) is the independently Clean twin. No lower-age floor (minAge 0). Adult First Aid catalog row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: RASH_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_DES_MAX} (draft, not verified)`],
@@ -992,8 +949,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_NEO_CREAM, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Neosporin Plus Pain Cream = Avoid. Methylparaben is High-tier. Separate formulaId from the petrolatum-only Plus Pain ointment (Clean). Propylene glycol is oral-scoped and is not scored as Moderate on this topical. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OINTMENT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_NEO_CREAM} (draft, not verified)`],
@@ -1029,8 +985,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_EQ_CREAM, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate antibiotic cream = Avoid. Methylparaben is High-tier. setid e08b427f. Polysorbate 60 is not PS80 / PS20 and is not in Methodology §5 (ungraded) — Avoid already stands on the paraben. Separate from the Clean petrolatum ointments. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Walmart'],
     cleanAlternatives: OINTMENT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_EQ_CREAM} (draft, not verified)`],
@@ -1074,8 +1029,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_C10_ALOE, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Soothing Aloe = Avoid. Methylparaben + propylparaben are High-tier. SLS is standalone Caution (irritant, not additive-scored) and is not the Avoid driver. Creme twin 1a841bf0 is the same demerit family. Water Resistant (petrolatum only) is the independently Clean HC twin. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_C10_ALOE} (draft, not verified)`],
@@ -1125,8 +1079,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_C10_COOL, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Cooling = Avoid. Methylparaben is High-tier (propylparaben is also on this SPL). Menthyl lactate is a cooling ester, not menthol — menthol / camphor / eucalyptol stay parked and are not invented as active-safety grades. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_C10_COOL} (draft, not verified)`],
@@ -1170,8 +1123,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_CVS_HC, 'Water (purified)'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: CVS hydrocortisone aloe = Avoid. Parabens are High-tier; SLS is standalone Caution and is not the Avoid driver. Cortizone-10 Soothing Aloe twin pattern. Ages 2+ (under 2: do not use).',
+
     retailers: ['CVS'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_CVS_HC} (draft, not verified)`],
@@ -1210,12 +1162,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_BEN_CREAM, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl Extra Strength Itch Stopping Cream = Avoid. Parabens are High-tier. setid a1c1b878. Original-strength twin 920c50cb (1% DPH, same inactives) is the same Avoid family. ' +
-      PARKED_FORMALDEHYDE +
-      ' ' +
-      PARKED_ZNO +
-      ' Cooling spray / stick (alcohol / glycerin / PVP / water) is the independently Clean twin. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_BEN_CREAM} (draft, not verified)`],
@@ -1260,14 +1207,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_CALADRYL, 'Sodium citrate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Caladryl Clear = Avoid. Fragrance + parabens — Avoid stands on the parabens (fragrance is Caution, not Avoid alone). setid fca6f08b. ' +
-      PARKED_MCE +
-      ' ' +
-      PARKED_FORMALDEHYDE +
-      ' ' +
-      PARKED_ZNO +
-      ' Plain calamine is the independently Clean itch analog. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_CALADRYL} (draft, not verified)`],
@@ -1292,8 +1232,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       cleared(SET_IPA_DYED, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Dyed isopropyl alcohol = Avoid. Blue #1 + Yellow #5 are High-tier. GNP wintergreen setid 03247512. Methyl salicylate is not in Methodology §5 (ungraded; v1.6 intake) — Avoid already stands on the dyes. Plain water-only 70% IPA is the independently Clean twin. First-aid antiseptic monograph: ages 2+ typical.',
+
     retailers: ['Grocery', 'Independent pharmacy'],
     cleanAlternatives: ANTISEPTIC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IPA_DYED} (draft, not verified)`],

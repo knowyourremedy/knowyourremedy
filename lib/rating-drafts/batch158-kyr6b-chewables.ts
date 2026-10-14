@@ -54,9 +54,6 @@ const KIDS_ALTS: CleanAlternative[] = [
   alt('boiron-allergycalm-meltaways', 'Independently Clean homeopathic meltaway already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const NOTE =
-  'Avoid. Drivers are D&C red no. 30 aluminum lake, D&C red no. 7 calcium lake, and FD&C blue no. 1 aluminum lake. Sucralose is Moderate. Dextrose excipient is bare glucose Caution. Sugar spheres are bare sugar Caution. Flavors are the bare-flavors Caution family. Crospovidone, ethylcellulose, gum arabic, hydroxypropylcellulose, magnesium stearate, microcrystalline cellulose, and tartaric acid are Cleared. The older uncounted chewables row omitted ethylcellulose, hydroxypropylcellulose, sugar spheres, and tartaric acid, and stored dextrose as Cleared, so this line is a new formula. Grape. Ages 6+. Ages 2 to 5: do not use unless directed by a doctor. Under 2: do not use. Adults and children 12 years and over: 2 to 4 chewable tablets.';
-
 const PANEL =
   'DailyMed setid b08f71d8-a06c-41ba-8ed1-fbc41dbc1919 (Kenvue). Active: diphenhydramine HCl 12.5 mg. Inactive ingredients: crospovidone, D&C red no. 30 aluminum lake, D&C red no. 7 calcium lake, dextrose excipient, ethylcellulose, FD&C blue no. 1 aluminum lake, flavors, gum arabic, hydroxypropylcellulose, magnesium stearate, microcrystalline cellulose, sucralose, sugar spheres, tartaric acid. Package NDC 50580-232-01 is one carton with two 10-count blister packs, 20 chewable tablets. Grape.';
 
@@ -91,7 +88,7 @@ export const BATCH158_KYR6B_CHEWABLES: RatingRecord[] = [
       cleared('Tartaric acid', METH.tartaric),
     ],
     verdict: 'avoid',
-    honestNote: NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

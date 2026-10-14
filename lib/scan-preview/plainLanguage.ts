@@ -1,0 +1,962 @@
+import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
+
+// Shopper copy for the honest-note lock and the ingredient tab.
+// Facts below are the ones already stated in docs/METHODOLOGY.md and docs/SOURCES.md.
+// No new studies, doses, or grades.
+
+function norm(value: string): string {
+  return value.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function riskWord(level: RiskLevel): string {
+  if (level === 'high') return 'High risk';
+  if (level === 'moderate') return 'Moderate risk';
+  if (level === 'limited') return 'Limited risk';
+  return 'Cleared';
+}
+
+function close(fact: string, level: RiskLevel): string {
+  return `${fact} That is why it is ${riskWord(level)}.`;
+}
+
+function formWord(record: Pick<RatingRecord, 'form' | 'productName'>): string {
+  const form = norm(`${record.form ?? ''} ${record.productName ?? ''}`);
+  if (/\bsoftgel/.test(form)) return 'softgel';
+  if (/\bcapsule/.test(form)) return 'capsule';
+  if (/\b(cream|ointment|lotion|balm)\b/.test(form)) return 'cream';
+  if (/\b(drop|drops)\b/.test(form)) return 'drop';
+  if (/\b(gummy|gummies)\b/.test(form)) return 'gummy';
+  if (/\b(lozenge|cough drop)\b/.test(form)) return 'lozenge';
+  if (/\b(tablet|caplet|gelcap)\b/.test(form)) return 'tablet';
+  const raw = (record.form ?? '').trim().toLowerCase();
+  return raw || 'product';
+}
+
+function listPhrase(names: string[]): string {
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`;
+}
+
+function titleOil(name: string): string {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+// Seed and industrial oils that are Not clean in a gummy and not that rule in another form.
+function seedOilLabel(name: string): string | null {
+  const n = norm(name);
+  if (!/\boil\b/.test(n) && !/fractionated coconut/.test(n)) return null;
+  if (/lecithin|wax|phospholipid|glycerin|glycerine|glycerol|cellulose|capsule|starch|protein|sterol|fatty acid/.test(n)) {
+    return null;
+  }
+  if (/fractionated coconut/.test(n)) return 'fractionated coconut oil';
+  if (/coconut oil/.test(n)) return 'coconut oil';
+  if (/sunflower/.test(n) && /\boil\b/.test(n)) return 'sunflower oil';
+  if (/safflower/.test(n) && /\boil\b/.test(n)) return 'safflower oil';
+  if (/soybean oil|\bsoy oil\b/.test(n)) return 'soybean oil';
+  if (/canola/.test(n) && /\boil\b/.test(n)) return 'canola oil';
+  if (/vegetable oil/.test(n)) return 'vegetable oil';
+  if (/corn oil/.test(n)) return 'corn oil';
+  if (/\bpalm oil\b/.test(n)) return 'palm oil';
+  return null;
+}
+
+function oilWhere(record: Pick<RatingRecord, 'form' | 'productName'>, source: string): string {
+  const blob = norm(`${record.form ?? ''} ${record.productName ?? ''} ${source}`);
+  if (/\b(cream|ointment|lotion|balm|topical)\b/.test(blob)) return 'cream';
+  if (/\b(drop|drops)\b/.test(blob)) return 'drop';
+  if (/\bsoftgel/.test(blob)) return 'softgel';
+  if (/\bcapsule/.test(blob)) return 'capsule';
+  if (/\b(gummy|gummies)\b/.test(blob)) return 'gummy';
+  if (/\b(lozenge)\b/.test(blob)) return 'lozenge';
+  return formWord(record);
+}
+
+export function contradictionHonestNote(record: RatingRecord): string | null {
+  const sentences: string[] = [];
+  const where = formWord(record);
+  const oils = new Map<string, IngredientFlag>();
+  const namedRice = new Set<string>();
+
+  for (const ingredient of record.inactiveIngredients ?? []) {
+    const oil = seedOilLabel(ingredient.name);
+    if (oil && ingredient.riskLevel !== 'high') {
+      oils.set(oil, ingredient);
+    }
+    const rice = namedRiceForm(ingredient.name);
+    if (rice && ingredient.riskLevel === 'cleared') namedRice.add(rice);
+  }
+
+  if (oils.size > 0) {
+    const labels = [...oils.keys()];
+    const fractionated = labels.includes('fractionated coconut oil');
+    const rest = labels.filter((label) => label !== 'fractionated coconut oil');
+    if (fractionated) {
+      sentences.push(
+        'Coconut oil is Not clean in a gummy. This fractionated coconut oil is not that rule, so it did not pull the grade down.',
+      );
+    }
+    if (rest.length > 0) {
+      const subject = listPhrase(rest.map(titleOil));
+      const plural = rest.length > 1;
+      const be = plural ? 'are' : 'is';
+      const it = plural ? 'they' : 'it';
+      sentences.push(
+        `${subject} ${be} Not clean in a gummy. In this ${where} ${it} ${be} not that rule, so ${it} did not pull the grade down.`,
+      );
+    }
+  }
+
+  if (namedRice.size > 0) {
+    const named = listPhrase([...namedRice]);
+    sentences.push(
+      `Rice extract is flagged when the label does not name the form. This label names ${named}, so that flag did not pull the grade down.`,
+    );
+  }
+
+  if (sentences.length === 0) return null;
+  return sentences.join(' ');
+}
+
+function namedRiceForm(name: string): string | null {
+  const n = norm(name);
+  if (!/\brice\b/.test(n)) return null;
+  if (/flour|starch|syrup|protein|powder|oil|wax|dextrin|malt/.test(n)) return null;
+  if (/\bhull/.test(n)) return 'rice hull';
+  if (/bran (extract|concentrate)/.test(n) || /rice bran extract/.test(n) || /rice bran concentrate/.test(n)) {
+    return 'rice bran';
+  }
+  if (/concentrate/.test(n) && !/\bextract\b/.test(n.replace('concentrate', ''))) return 'rice concentrate';
+  if (/rice concentrate|whole rice concentrate/.test(n)) return 'rice concentrate';
+  return null;
+}
+
+function isSyntheticDye(name: string): boolean {
+  const n = norm(name);
+  if (/dye free|dyefree|no dye|without dye|undyed/.test(n)) return false;
+  return (
+    /\bfd c/.test(n)
+    || /\bd c\b/.test(n)
+    || /aluminum lake|brilliant blue|sunset yellow|allura red|tartrazine|indigo carmine|erythrosine|fast green/.test(n)
+    || /\b(red|yellow|blue|green) no \d/.test(n)
+    || /\b(red|yellow|blue|green) \d+\b/.test(n)
+  );
+}
+
+function isVagueRice(name: string): boolean {
+  const n = norm(name);
+  if (!/\brice\b/.test(n)) return false;
+  if (namedRiceForm(name)) return false;
+  if (/flour|starch|syrup|protein|oil|wax|hull|bran|concentrate|dextrin/.test(n)) return false;
+  return /\brice extract\b/.test(n) || n === 'rice' || /\borganic rice\b/.test(n) || /\brice extract blend\b/.test(n);
+}
+
+export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
+  const n = norm(ingredient.name);
+  const source = norm(ingredient.source ?? '');
+  const level = ingredient.riskLevel;
+  const oil = seedOilLabel(ingredient.name);
+
+  if (/aspartame|nutrasweet|\be951\b/.test(n)) {
+    return 'Aspartame is a sweetener. In 2023, the World Health Organization\'s cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.';
+  }
+
+  if (isSyntheticDye(ingredient.name)) {
+    return close(
+      'This is a synthetic dye. European labels warn that this dye family can affect activity and attention in children.',
+      level === 'high' ? 'high' : level,
+    );
+  }
+
+  if (/paraben/.test(n)) {
+    return close(
+      'This is a paraben preservative. The European Union banned propylparaben in food, and it classes some parabens as able to disrupt hormones. The same flag applies in creams and patches.',
+      level === 'high' ? 'high' : level,
+    );
+  }
+
+  if (/titanium dioxide|titanium oxide|\be171\b/.test(n)) {
+    return close(
+      'Titanium dioxide is a white color. In 2022 the European Union stopped allowing it in food after its food-safety agency could not rule out damage to DNA.',
+      level === 'high' ? 'high' : level,
+    );
+  }
+
+  if (/\btalc\b/.test(n) || n === 'magnesium silicate') {
+    return close(
+      'Talc is a mineral powder. The World Health Organization\'s cancer research agency classifies talc as probably carcinogenic to humans.',
+      level === 'high' ? 'high' : level,
+    );
+  }
+
+  if (/butylated hydroxyanisole|\bbha\b|\be320\b/.test(n)) {
+    return close(
+      'BHA is a preservative. The U.S. National Toxicology Program lists it as reasonably anticipated to be a human carcinogen, and California lists it under Proposition 65.',
+      level,
+    );
+  }
+
+  if (/butylated hydroxytoluene|\bbht\b|\be321\b/.test(n)) {
+    return close(
+      'BHT is a preservative. The European Union restricted it in 2022 because it can disrupt hormones.',
+      level,
+    );
+  }
+
+  if (/propyl gallate|\be310\b/.test(n)) {
+    return close(
+      'Propyl gallate is a preservative. A 2018 study found it can disrupt hormones, on its own and mixed with BHA and BHT.',
+      level,
+    );
+  }
+
+  if (/brominated vegetable|\bbvo\b|brominated soybean/.test(n)) {
+    return close(
+      'Brominated vegetable oil is a food additive the United States banned in 2024. It can build bromine up in body tissue.',
+      level,
+    );
+  }
+
+  if (/diazolidinyl urea|imidazolidinyl urea|dmdm hydantoin|quaternium 15|bronopol|bronidox/.test(n)) {
+    return close(
+      'This preservative can release formaldehyde.',
+      level,
+    );
+  }
+
+  if (/methylisothiazolinone|\bmit\b/.test(n)) {
+    return close(
+      'Methylisothiazolinone is a preservative used in leave-on creams.',
+      level,
+    );
+  }
+
+  if (/caramel/.test(n) && !/sugar syrup|caramel sugar/.test(n) && level === 'high') {
+    return close(
+      'This is caramel color, and the label does not name a class that is free of ammonia. The ammonia process can leave 4-MEI, which the World Health Organization\'s cancer research agency classifies as possibly carcinogenic.',
+      'high',
+    );
+  }
+
+  if (/blend of oils/.test(n) && /coconut|palm/.test(n)) {
+    return close(
+      'This blend can be coconut oil, palm oil, or both. In a gummy those oils are Not clean.',
+      level,
+    );
+  }
+
+  if (oil) {
+    const where = oilWhere({ form: '', productName: '' }, `${ingredient.name} ${ingredient.source ?? ''}`);
+    if (oil === 'fractionated coconut oil') {
+      return close(
+        'Fractionated coconut oil is not the coconut oil that is Not clean in a gummy.',
+        level,
+      );
+    }
+    if (level === 'high') {
+      return close(
+        `${titleOil(oil)} is a seed oil. In a gummy it is Not clean.`,
+        'high',
+      );
+    }
+    const place = /cream|topical|ointment|lotion/.test(source) ? 'cream' : where === 'product' ? 'form' : where;
+    return `${titleOil(oil)} is a seed oil. It is Not clean in a gummy. In this ${place} it is not that rule, so it did not pull the grade down.`;
+  }
+
+  if (/propylene glycol|\bpg\b|\be1520\b/.test(n) && !/dicaprylate|dipelargonate/.test(n)) {
+    if (level === 'cleared' || source.includes('topical')) {
+      return close('On this label propylene glycol is the topical form, not the swallowed solvent.', level);
+    }
+    return close(
+      'Propylene glycol is a solvent. The direct evidence of harm is thin, and cleaner formulas leave it out of things you swallow.',
+      level,
+    );
+  }
+
+  if (/sucralose|\be955\b|splenda/.test(n)) {
+    return close(
+      'Sucralose is a sweetener. A 2023 study found a signal that a breakdown product can damage DNA, and other work has raised questions about gut bacteria.',
+      level,
+    );
+  }
+
+  if (/acesulfame|ace k|\be950\b/.test(n)) {
+    return close(
+      'Acesulfame potassium is a sweetener. Studies have raised early questions about DNA damage and gut bacteria, and that evidence is still thin.',
+      level,
+    );
+  }
+
+  if (/saccharin|\be954\b/.test(n)) {
+    return close(
+      'Saccharin is a sweetener. Older rat studies raised a cancer question. Later reviews by the National Toxicology Program and the cancer research agency did not keep that classification.',
+      level,
+    );
+  }
+
+  if (/poloxamer/.test(n)) {
+    return close(
+      'Poloxamer is a surfactant in the same family as polyethylene glycol. It is not on the High risk list.',
+      level,
+    );
+  }
+
+  if (/polyethylene glycol|polyethyleneglycol|\bpeg\b|macrogol|pegoxol|lauroyl macrogol/.test(n)) {
+    if (/polyethylene\b/.test(n) && !/glycol/.test(n)) {
+      return close('This polyethylene is a chew binder, not polyethylene glycol.', level);
+    }
+    return close(
+      'Polyethylene glycol is a coating ingredient. Making it can leave traces of ethylene oxide and 1,4-dioxane.',
+      level,
+    );
+  }
+
+  if (/polysorbate/.test(n)) {
+    return close(
+      'Polysorbate is an emulsifier that keeps oil and water mixed. A 2023 study found it can weaken the gut barrier.',
+      level,
+    );
+  }
+
+  if (/silicon dioxide|\bsilica\b|\be551\b|colloidal anhydrous silica|colloidal silicone dioxide/.test(n) && !/silicate|6x|homeopathic/.test(n)) {
+    return close(
+      'Silicon dioxide is a powder that keeps ingredients from clumping. A 2018 European review found no confirmed harm, but left an open question about the tiny-particle form.',
+      level,
+    );
+  }
+
+  if (/xylitol|erythritol|sorbitol|maltitol|mannitol|isomalt/.test(n) && !/sorbitan/.test(n)) {
+    if (level === 'cleared') {
+      return close('This sugar alcohol is on the skin or in the nose, not swallowed. The gut warning is for the swallowed form.', level);
+    }
+    return close('This is a sugar alcohol. Large amounts can upset the gut.', level);
+  }
+
+  if (/^alcohol$|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol/.test(n)) {
+    return close(
+      'This alcohol is the liquid that carries the other ingredients. It is not a drinking-alcohol dose, and it is not the gummy seed-oil rule.',
+      level,
+    );
+  }
+
+  if (isVagueRice(ingredient.name)) {
+    return close(
+      'The label says rice extract and does not name hull, bran, or concentrate. Named rice hull is a different form and is not this flag.',
+      level,
+    );
+  }
+
+  if (namedRiceForm(ingredient.name) && level === 'cleared') {
+    return close(
+      'This is named rice hull, rice bran, or rice concentrate, used as a plant-fiber flow agent. It is not the vague rice extract that leaves the form unnamed.',
+      level,
+    );
+  }
+
+  if (/\bflavou?rs?\b/.test(n)) {
+    return close(
+      'This is a flavor mixture, and the label does not name every part. The flag is for that missing detail, not a named hazard.',
+      level,
+    );
+  }
+
+  if (/sodium benzoate|potassium sorbate|benzoic acid/.test(n)) {
+    return close(
+      'This is a preservative. On its own the risk is low. Benzoate plus vitamin C can form a trace of benzene.',
+      level,
+    );
+  }
+
+  if (/carrageenan|\be407\b/.test(n)) {
+    return close(
+      'Carrageenan is a seaweed thickener. Researchers disagree about whether it inflames the gut.',
+      level,
+    );
+  }
+
+  if (/magnesium stearate|stearic acid|calcium stearate|calcium laurate|sodium stearate|stearate family/.test(n) || /maanesium stearate|magnesium sterate|magenesium stereate|magensium stearate/.test(n)) {
+    return close(
+      'This is a stearate lubricant that helps a tablet press and leave the mold. A 2018 European review found no safety concern.',
+      level,
+    );
+  }
+
+  if (/microcrystalline cellulose|croscarmellose|cellulose gum|powdered cellulose|carboxymethyl cellulose|methylcellulose|silicified microcrystalline/.test(n) || n === 'cellulose' || n === 'mcc') {
+    return close(
+      'This is a cellulose filler or disintegrant. A 2017 European review found no carcinogenicity and no need for a daily intake limit.',
+      level,
+    );
+  }
+
+  if (/hypromellose|hydroxypropyl cellulose|\bhpmc\b|\bhpc\b/.test(n) && !/acetate succinate|phthalate/.test(n)) {
+    return close(
+      'This is a cellulose coating. Reviews have found no genotoxicity, carcinogenicity, or reproductive findings, and no set daily limit.',
+      level,
+    );
+  }
+
+  if (/povidone|crospovidone|copovidone|\bpvp\b/.test(n)) {
+    return close(
+      'Povidone is a tablet binder. A European review found a sufficient safety margin and called it unlikely to be a safety concern. The lung risk that shows up in reports is from injecting crushed tablets, not from swallowing one.',
+      level,
+    );
+  }
+
+  if (/^water$|purified water|deionized water|distilled water|water for injection|sterile water/.test(n)) {
+    return close('This is water used as a base.', level);
+  }
+
+  if (/corn starch|potato starch|pregelatinized starch|tapioca starch|^starch$/.test(n)) {
+    return close('This is a simple starch filler. Reviews have not found a safety concern for this form.', level);
+  }
+
+  if (/cane sugar|glucose syrup|tapioca syrup|caramel sugar syrup|\bcorn syrup\b|\brice syrup\b|molasses/.test(n)) {
+    return close('This is a food sugar or syrup used as a sweetener.', level);
+  }
+
+  if (/^sucrose$|beet sugar|^fructose$|maltose|maltodextrin|polydextrose/.test(n)) {
+    return close('This is a sugar or a starch-based bulk sweetener. It is not a High risk sweetener.', level);
+  }
+
+  if (/lactose/.test(n)) {
+    return close('Lactose is a milk sugar used as a filler.', level);
+  }
+
+  if (/^gelatin\b|gelatin capsule/.test(n)) {
+    return close('Gelatin is the capsule or gummy base.', level);
+  }
+
+  if (/glycerin|glycerine|glycerol/.test(n) && !/monostearate|stearate|dibeben/.test(n)) {
+    return close('Glycerin is a moisture-keeping ingredient and a softgel plasticizer.', level);
+  }
+
+  if (/citric acid|ascorbic acid|sodium citrate|trisodium citrate|magnesium citrate|potassium citrate|calcium ascorbate/.test(n)) {
+    return close('This is citric acid or a citrate salt, used to set acidity. Anhydrous citric acid is the same acid without water.', level);
+  }
+
+  if (/lecithin/.test(n)) {
+    return close(
+      'Lecithin is an emulsifier from soy, sunflower, or canola. A 2017 European review found no safety concern and set no daily limit. Soy lecithin is a soy allergen disclosure, not a toxicity flag.',
+      level,
+    );
+  }
+
+  if (/glycyrrhiza|licorice/.test(n) && !/ammonium|monoammonium|dipotassium/.test(n)) {
+    return 'Licorice extract is a named plant ingredient. Very high intakes of glycyrrhizin can affect blood pressure and potassium. That is not this syrup dose. That is why it is Cleared.';
+  }
+
+  if (/sodium chloride|sodium bicarbonate|potassium chloride|himalayan rock salt|sea salt/.test(n)) {
+    return close('This is a salt used as a base or electrolyte.', level);
+  }
+
+  if (/dicalcium phosphate|tricalcium phosphate|calcium phosphate|sodium phosphate/.test(n) && !/3x|6x/.test(n)) {
+    return close('This is a phosphate salt used as a mineral filler. It is not phosphoric acid.', level);
+  }
+
+  if (/xanthan|guar gum|gum arabic|arabic gum|acacia|pectin|gellan|locust bean|tragacanth|agar/.test(n)) {
+    return close('This is a food gum or seaweed gel used to thicken.', level);
+  }
+
+  if (/inulin|psyllium|chicory root fiber|fructooligosaccharide|\bfos\b|oat fiber|corn fiber|vegetable fiber/.test(n)) {
+    return close('This is a food fiber.', level);
+  }
+
+  if (/tocopherol|ascorbyl palmitate|vitamin e\b/.test(n) && !/acetate/.test(n)) {
+    return close('This is a vitamin E antioxidant used to keep oils from going rancid.', level);
+  }
+
+  if (/^fragrance$|parfum/.test(n)) {
+    return close(
+      'Fragrance is an undisclosed mixture. It can cause skin allergy in some people. European rules require many fragrance allergens to be named.',
+      level,
+    );
+  }
+
+  if (/sodium lauryl sulfate|\bsls\b/.test(n)) {
+    return close(
+      'Sodium lauryl sulfate is a foaming agent. Skin studies use it as a standard irritant. It can irritate skin or the mouth. It is not classified as a carcinogen.',
+      level,
+    );
+  }
+
+  if (/metabisulfite|bisulfite|\bsulfite/.test(n)) {
+    return close(
+      'Sulfites can trigger serious reactions in people who are sensitive to them, including some people with asthma. The U.S. Food and Drug Administration requires a warning on drugs that contain them.',
+      level,
+    );
+  }
+
+  if (/annatto|bixin|norbixin/.test(n)) {
+    return close(
+      'Annatto is a plant color. A study of people with chronic hives found that many of them reacted to it, and a European review warned that high consumers can pass the acceptable daily intake for one of its pigments.',
+      level,
+    );
+  }
+
+  if (/beta carotene|beta-carotene|carotene/.test(n) || /beta carotene/.test(n)) {
+    return close(
+      'Beta-carotene here is a color, not the vitamin dose. A large French study linked higher intake of some natural colors, including beta-carotene, with higher rates of cancer and type 2 diabetes. That link is not proof of cause.',
+      level,
+    );
+  }
+
+  if (/benzalkonium|benzylkonium|\bbkc\b/.test(n)) {
+    return close(
+      'Benzalkonium chloride can damage cilia in lab tests. Studies in people do not all agree. That split is why it stays on the Caution list.',
+      level,
+    );
+  }
+
+  if (/benzyl alcohol/.test(n)) {
+    return close(
+      'Benzyl alcohol has caused gasping syndrome in newborns at high doses. At ordinary doses in older children and adults it is far below that threshold.',
+      level,
+    );
+  }
+
+  if (/carmine|cochineal|carminic/.test(n)) {
+    return close('Carmine is a red color made from insects. It can cause allergic reactions in some people.', level);
+  }
+
+  if (/chlorophyllin/.test(n)) {
+    return close('Sodium copper chlorophyllin is a copper color complex. It is not the green plant pigment chlorophyll.', level);
+  }
+
+  if (/^chlorophyll\b/.test(n)) {
+    return close('This is the named green plant pigment, not the copper color complex chlorophyllin.', level);
+  }
+
+  if (/stearia|stevia|rebaudioside|reb m|monk fruit|mogroside|lo han/.test(n)) {
+    if (/whole leaf|crude|leaf extract|^stevia extract$|stevia leaf/.test(n) || (level !== 'cleared' && /stevia/.test(n) && !/rebaudioside|reb m|high purity/.test(n))) {
+      return close('This is a stevia extract that is not the high-purity steviol glycoside. The high-purity form is a different row.', level);
+    }
+    return close(
+      'This is a high-purity stevia or monk-fruit sweetener. A European review set an acceptable daily intake for high-purity steviol glycosides and did not find a cancer, DNA, or hormone signal.',
+      level,
+    );
+  }
+
+  if (/sorbitan/.test(n)) {
+    return close('Sorbitan is an emulsifier in the same neighborhood as polysorbate. It is not the sugar alcohol sorbitol.', level);
+  }
+
+  if (/potassium hydroxide|sodium hydroxide|\bnaoh\b/.test(n)) {
+    return close('This is a pH adjuster used in a trace amount. It is the same job as sodium hydroxide.', level);
+  }
+
+  if (/triacetin|glycerol triacetate/.test(n) && level === 'cleared') {
+    return close('Triacetin is a plasticizer in a tablet coating.', level);
+  }
+
+  if (/castor oil|polyoxyl castor/.test(n)) {
+    return close(
+      'Castor oil in a swallowed or skin product has looked essentially non-toxic in acute and chronic studies. The serious allergy history is from castor oil given in a vein, which this catalog does not grade.',
+      level,
+    );
+  }
+
+  if (/petrolatum|paraffin|mineral oil|ceresin/.test(n)) {
+    if (level === 'cleared') {
+      return close('This is an ointment base in the petrolatum family. It is not an oil you swallow.', level);
+    }
+    return close('Mineral oil here is not the topical ointment base. The ointment form is a different line.', level);
+  }
+
+  if (/honey\b/.test(n)) {
+    return close('Honey is a food sweetener. It is not for infants under 1 year.', level);
+  }
+
+  if (/citrus/.test(n) && /extract|oil/.test(n)) {
+    return close(
+      'The label says citrus and does not name lemon, orange, or lime, or juice versus peel. A named citrus oil is a different line.',
+      level,
+    );
+  }
+
+  if (/^color added$|colors added|colorant added|artificial color/.test(n)) {
+    return close('The label says color was added and does not name the color. A named plant color is a different line.', level);
+  }
+
+  if (/cellulose acetate/.test(n)) {
+    return close('Cellulose acetate is a coating polymer. It is not plain cellulose, microcrystalline cellulose, or hypromellose.', level);
+  }
+
+  if (/cellulose|vegetable capsule|vegetarian capsule/.test(n)) {
+    if (/cellulose/.test(n)) {
+      return close('This is a cellulose capsule or filler, in the same family as microcrystalline cellulose and hypromellose.', level);
+    }
+    return close('The label says vegetable capsule and does not name cellulose or hypromellose. A named cellulose capsule is a different line.', level);
+  }
+
+  if (/rice flour/.test(n)) {
+    return close('Rice flour is a flour. It is not rice hull or rice bran. Those named forms are a different grade.', level);
+  }
+
+  if (/carnauba/.test(n)) {
+    return close('Carnauba wax is a plant wax used as a coating.', level);
+  }
+
+  if (/beeswax/.test(n)) {
+    return close('Beeswax is a wax used as a coating or base.', level);
+  }
+
+  if (/malic acid|lactic acid|tartaric acid|fumaric acid|adipic acid/.test(n)) {
+    return close('This is an organic acid, in the same family as citric acid, used to set acidity.', level);
+  }
+
+  if (/olive oil/.test(n)) {
+    return close('This is olive oil used as a softgel fill. It is not the olive oil you cook with, and it is not the gummy seed-oil rule.', level);
+  }
+
+  if (/sodium starch glycolate/.test(n)) {
+    return close('Sodium starch glycolate is a starch disintegrant that helps a tablet break apart.', level);
+  }
+
+  if (/beet root|beetroot|beet powder|beet juice/.test(n)) {
+    return close('This is beet root used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/calcium silicate|magnesium trisilicate|magnesium aluminum silicate/.test(n)) {
+    return close('This is a silicate powder used to keep ingredients from clumping. It is not the silicon dioxide nanoparticle cap.', level);
+  }
+
+  if (/iron oxide|ferric oxide/.test(n)) {
+    return close('Iron oxide is a mineral color. It is not a synthetic FD&C dye.', level);
+  }
+
+  if (/pharmaceutical ink|edible ink|imprinting ink|black ink|white ink/.test(n) || n === 'ink') {
+    return close('This is printing ink on a tablet or capsule. The label does not name every pigment in the ink.', level);
+  }
+
+  if (/shellac|pharmaceutical glaze/.test(n)) {
+    return close('Shellac is a glaze used to coat tablets.', level);
+  }
+
+  if (/dimethicone|dimethiconol/.test(n)) {
+    return close('Dimethicone is a silicone used as a skin protectant or coating.', level);
+  }
+
+  if (/^aloe\b|aloe barbadensis|aloe vera/.test(n)) {
+    return close('Aloe on this label is a plant juice or gel. The topical base and the other-ingredient juice are graded from how the label uses it.', level);
+  }
+
+  if (/steareth|ceteareth|ceteth|stearyl alcohol|cetearyl alcohol|cetyl alcohol|cetostearyl/.test(n)) {
+    return close('This is a fatty alcohol or a fatty-alcohol ether used in a cream base.', level);
+  }
+
+  if (/glyceryl stearate|glyceryl monostearate|glycerol monostearate/.test(n)) {
+    return close('Glyceryl stearate is a wax-like emulsifier used in creams and coatings.', level);
+  }
+
+  if (/triethyl citrate/.test(n)) {
+    return close('Triethyl citrate is a coating plasticizer.', level);
+  }
+
+  if (/polyvinyl alcohol|\bpva\b/.test(n)) {
+    return close('Polyvinyl alcohol is a film used to coat a tablet.', level);
+  }
+
+  if (/alginate|alginic/.test(n)) {
+    return close('Alginate is a seaweed gum used to thicken.', level);
+  }
+
+  if (/carbomer/.test(n)) {
+    return close('Carbomer is a gel thickener. Current grades are not the older benzene-residue carbomers.', level);
+  }
+
+  if (/tocopheryl acetate|tocopherol acetate/.test(n)) {
+    return close('Tocopheryl acetate is a vitamin E ester. It is not the same token as mixed tocopherols.', level);
+  }
+
+  if (/edetate|disodium edta|\bedta\b/.test(n)) {
+    return close('This is an EDTA salt used as a stabilizer. The chelation risk in the literature is about large intravenous doses, not this trace use.', level);
+  }
+
+  if (/^menthol\b|menthol dl/.test(n)) {
+    return close('Menthol on an inactive line is a flavor or a cooling scent. When the panel lists it as the active drug, it is not graded as an inactive.', level);
+  }
+
+  if (/high fructose corn syrup|\bhfcs\b/.test(n)) {
+    return close('High fructose corn syrup is a sweetener. It is not the gummy seed-oil rule.', level);
+  }
+
+  if (/^dextrin\b|tapioca dextrin|maltodextrin/.test(n)) {
+    return close('This is a starch breakdown product used as a filler or sweetener bulk.', level);
+  }
+
+  if (/bamboo/.test(n)) {
+    return close('Bamboo extract here is a plant silica source used as a flow agent. It is not the silicon dioxide cap by another name until the label says silica.', level);
+  }
+
+  if (/gum base/.test(n)) {
+    return close('Gum base is an unnamed mix of gum, resin, and wax. The label does not name each part.', level);
+  }
+
+  if (/glyceride/.test(n) && (/\bmono\b|\bdi\b|monoglyceride|diglyceride/.test(n))) {
+    return close(
+      'This is a mono- and diglyceride emulsifier. It is not a named medium-chain triglyceride.',
+      level,
+    );
+  }
+
+  if (/medium chain triglyceride|\bmct\b|caprylic capric triglyceride|caprylic capric glyceride/.test(n)) {
+    if (/coconut|palm/.test(n)) {
+      return close('This medium-chain triglyceride names its plant source. It is not the unlabeled MCT line, and it is not the gummy seed-oil rule.', level);
+    }
+    return close('The label says MCT and does not name the plant. A medium-chain triglyceride that names coconut or palm is a different line.', level);
+  }
+
+  if (/simethicone/.test(n)) {
+    return close('Simethicone is an anti-gas agent. On an other-ingredients line it is not the labeled active.', level);
+  }
+
+  if (/calcium carbonate|magnesium hydroxide|sodium carbonate|potassium bicarbonate|calcium sulfate|sodium bicarbonate/.test(n)) {
+    return close('This is a mineral salt used as a filler or to set acidity.', level);
+  }
+
+  if (n === 'sugar' || n === 'bare sugar' || /confectioner/.test(n)) {
+    return close('The label says sugar and does not name cane sugar. Cane sugar is a different line.', level);
+  }
+
+  if (/peppermint oil|peppermint leaf/.test(n)) {
+    return close('Peppermint oil is a flavor oil. It is not the gummy seed-oil rule.', level);
+  }
+
+  if (/^alcohol \(vehicle\)|alcohol vehicle/.test(n)) {
+    return close('This alcohol is the liquid that carries the other ingredients. It is not a drinking-alcohol dose.', level);
+  }
+
+  if (/dandelion|alfalfa|parsley|watercress|nettle|chamomile|fennel seed|lemon balm|rose hip|eleuthero|ginger|yellow dock|horsetail|rosemary|burdock|arctium|chamomilla|matricaria|gotu kola|centella|saw palmetto|pygeum|cranberry/.test(n) && !/\boil\b/.test(n)) {
+    return close('This is a named plant-part ingredient. It is not an unnamed flavor mixture.', level);
+  }
+
+  if (/ferment media|cultured yeast|culture media/.test(n)) {
+    return close('This is a yeast ferment medium used as a food-state base. It is not the silicon dioxide cap.', level);
+  }
+
+  if (/phenoxyethanol/.test(n)) {
+    return close('Phenoxyethanol is a preservative used on the skin.', level);
+  }
+
+  if (/sodium polyacrylate|polyacrylic acid|polyacrylate/.test(n)) {
+    return close('This is a polyacrylate gel polymer.', level);
+  }
+
+  if (/triethanolamine|trolamine/.test(n) || n === 'tea') {
+    return close('Triethanolamine is a pH adjuster. It is not the salicylate drug.', level);
+  }
+
+  if (/arnica|ilex paraguariensis|camellia sinensis|calendula|echinacea|boswellia|eucalyptus oil|jojoba oil|clove oil|rosemary oil/.test(n)) {
+    return close('This is a plant extract used as a scent or an inactive in a cream. A named plant used as a cream base oil is a different line.', level);
+  }
+
+  if (/isopropyl myristate|isopropyl palmitate/.test(n)) {
+    return close('This is an emollient ester used in a cream.', level);
+  }
+
+  if (/spirulina/.test(n)) {
+    return close('Spirulina is an algae color or powder. A color listing is not the same as an unnamed algae powder, and neither one is a synthetic dye.', level);
+  }
+
+  if (/pea starch/.test(n)) {
+    return close('Pea starch is a starch filler. It is not pea protein.', level);
+  }
+
+  if (/rice bran wax/.test(n)) {
+    return close('Rice bran wax is a wax. It is not rice bran extract and it is not rice bran oil.', level);
+  }
+
+  if (/rice bran oil/.test(n)) {
+    return close('Rice bran oil is a carrier oil in a softgel. It is not the gummy seed-oil rule, and it is not rice bran extract.', level);
+  }
+
+  if (/^l leucine$|^leucine$/.test(n)) {
+    return close('Leucine is an amino acid used as a tablet filler.', level);
+  }
+
+  if (/agave/.test(n)) {
+    return close('Agave here is a plant sweetener or a plant fiber, depending on the label words. It is not a synthetic sweetener.', level);
+  }
+
+  if (/^brown rice$|organic brown rice/.test(n)) {
+    return close('This is brown rice as a food-state ingredient. It is not unspecified rice extract.', level);
+  }
+
+  if (/rice protein/.test(n)) {
+    return close('Rice protein is a food protein. It is not unspecified rice extract.', level);
+  }
+
+  if (/\bdextrose\b/.test(n)) {
+    return close('Dextrose is a sugar. Syrup forms that name tapioca or glucose syrup are a different line from bare dextrose.', level);
+  }
+
+  if (/sodium carbonate/.test(n)) {
+    return close('Sodium carbonate is a mineral salt used to set acidity.', level);
+  }
+
+  if (/ethylcellulose/.test(n)) {
+    return close('Ethylcellulose is a cellulose coating.', level);
+  }
+
+  if (/hydroxyethyl cellulose|hydroxyethylcellulose/.test(n)) {
+    return close('Hydroxyethyl cellulose is a cellulose thickener.', level);
+  }
+
+  if (/pullulan/.test(n)) {
+    return close('Pullulan is a starch-like capsule polymer in the same family as hypromellose capsules.', level);
+  }
+
+  if (/gelatin/.test(n)) {
+    return close('Gelatin is the capsule or gummy base.', level);
+  }
+
+  if (/allantoin/.test(n)) {
+    return close('Allantoin is a skin soother used in creams.', level);
+  }
+
+  if (/^kaolin\b|calcined kaolin/.test(n)) {
+    return close('Kaolin is a clay used as an absorbent. Calcined kaolin is a different token from plain kaolin.', level);
+  }
+
+  if (/^glycine\b/.test(n)) {
+    return close('Glycine is an amino acid used as a filler.', level);
+  }
+
+  if (/propanediol|pentylene glycol/.test(n)) {
+    return close('Propanediol is a moisture-keeping solvent.', level);
+  }
+
+  if (/sugar alcohol/.test(n)) {
+    return close('This is a sugar alcohol. Large amounts can upset the gut.', level);
+  }
+
+  if (/^carob\b|carob extract|carob powder/.test(n)) {
+    return close('Carob as a powder is a food ingredient. Carob extract is a different line from the powder.', level);
+  }
+
+  if (/ammonium hydroxide/.test(n)) {
+    return close('Ammonium hydroxide is a pH adjuster. It is not strong ammonia solution.', level);
+  }
+
+  if (/^glucose\b|bare glucose/.test(n)) {
+    return close('Glucose is a sugar. Glucose syrup is a different line from bare glucose.', level);
+  }
+
+  if (/enteric coating|vegetable coating|vegetable based tablet coating|aqueous coating/.test(n)) {
+    return close('The label names a coating and does not say it is hypromellose and glycerin. A coating that names those two is a different line.', level);
+  }
+
+  if (/lemon oil|lemon juice concentrate/.test(n)) {
+    return close('This is a named lemon oil or lemon juice. An unnamed citrus extract is a different line.', level);
+  }
+
+  if (/modified food starch|modified starch/.test(n)) {
+    return close('This is a modified starch. Plain corn starch and potato starch are a different line.', level);
+  }
+
+  if (/hydrochloric acid/.test(n)) {
+    return close('Hydrochloric acid here is a pH adjuster in a finished spray. It is not the concentrated acid, and it is not sodium hydroxide.', level);
+  }
+
+  if (/^mica\b|mica based pearlescent|pearlescent pigment/.test(n)) {
+    return close('Mica is a mineral pigment used for shine. It is not a synthetic dye.', level);
+  }
+
+  if (/sodium stearyl fumarate/.test(n)) {
+    return close('Sodium stearyl fumarate is a lubricant in the stearate family. A 2018 European review found no safety concern for that lubricant family.', level);
+  }
+
+  if (/grape \(fruit\) powder|grape fruit powder/.test(n)) {
+    return close('This is grape fruit powder used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/acerola/.test(n)) {
+    return close('Acerola is a food fruit. It is not a synthetic color.', level);
+  }
+
+  if (/tapioca fiber|soluble tapioca/.test(n)) {
+    return close('This is tapioca fiber, in the same fiber family as inulin.', level);
+  }
+
+  if (/^dextrates\b/.test(n)) {
+    return close('Dextrates are a starch sugar. Hydrated dextrates are a different line from bare dextrates.', level);
+  }
+
+  if (/sugar spheres/.test(n)) {
+    return close('Sugar spheres are a sugar core. The label does not name cane sugar.', level);
+  }
+
+  if (/boric acid/.test(n)) {
+    return close('Boric acid here is the eye-drop form. It is not the swallowed dose.', level);
+  }
+
+  if (/hypromellose phthalate|hypromellose acetate succinate|polyvinyl acetate phthalate|polyvinyl acetate pthalate|methacrylic|eudragit/.test(n)) {
+    return close('This is an enteric coating polymer. It is not plain hypromellose.', level);
+  }
+
+  if (/phosphoric acid/.test(n)) {
+    return close('Phosphoric acid sets acidity. It is not the phosphate salt used as a mineral filler.', level);
+  }
+
+  if (/magnesium oxide/.test(n)) {
+    return close('Magnesium oxide on an other-ingredients line is a mineral filler. It is not graded as the active antacid.', level);
+  }
+
+  if (/allulose/.test(n)) {
+    return close('Allulose is a rare sugar. It is not sucralose.', level);
+  }
+
+  if (/cocoa butter|theobroma cacao|shea butter|butyrospermum/.test(n)) {
+    return close('This is a butter used as an ointment or cream base. It is not the gummy seed-oil rule.', level);
+  }
+
+  if (/caprylyl glycol|hexanediol/.test(n)) {
+    return close('This is a skin-conditioning solvent in the caprylyl glycol and hexanediol family.', level);
+  }
+
+  if (/pea protein/.test(n)) {
+    return close('Pea protein is a food protein used as a filler. It is not pea starch.', level);
+  }
+
+  if (/candelilla/.test(n)) {
+    return close('Candelilla wax is a plant wax used as a coating.', level);
+  }
+
+  if (/turmeric/.test(n)) {
+    return close('This is turmeric used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/juice/.test(n) && /color|concentrate|powder|carrot|vegetable|fruit/.test(n)) {
+    return close('This is a named fruit or vegetable juice used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/panthenol/.test(n)) {
+    return close('Panthenol is a form of vitamin B5 used in a cream.', level);
+  }
+
+  if (/glyceryl dibehenate|glyceryl behenate|dibehenin/.test(n)) {
+    return close('Glyceryl dibehenate is a tablet lubricant. It is not the mono- and diglyceride row.', level);
+  }
+
+  if (/strong ammonia|ammonia solution/.test(n)) {
+    return close('This is an ammonia solution used to set pH. It is not ammonium hydroxide.', level);
+  }
+
+  if (/isobutane|isopentane|\bpropane\b/.test(n)) {
+    return close('This is a propellant in a spray. It is not an oil you swallow.', level);
+  }
+
+  if (n === 'soy' || n === 'bare soy') {
+    return close('The label says soy and does not name lecithin. Soy lecithin is a different line.', level);
+  }
+
+  if (/black carrot|carrot concentrate|carrot juice/.test(n)) {
+    return close('This is a named carrot color. It is not a synthetic dye.', level);
+  }
+
+  if (/^kelp\b/.test(n)) {
+    return close('Kelp is a seaweed. It is not an unnamed flavor mixture.', level);
+  }
+
+  return null;
+}

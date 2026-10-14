@@ -183,9 +183,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / bisglycinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
 const WOMENS_MULTI_ID = 'thorne-womens-multi-50-plus';
 const MENS_MULTI_ID = 'thorne-mens-multi-50-plus';
 const SUPER_EPA_FORMULA_ID = 'thorne-super-epa';
@@ -334,9 +331,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Women\'s Multi 50+ = Clean. Thorne.com alias API 2026-09-12 SKU VM6W / 180 InStock other-ingredients: Hypromellose (derived from cellulose) capsule. HPMC capsule is Cleared. CONFIRMED no silicon dioxide / silica, titanium dioxide, synthetic dye, talc, calcium laurate, or flavor on that matched other-ingredients list — do not invent calcium laurate from third-party listings. Labeled actives listed neutrally from the alias API (not an efficacy claim): 23 nutrients as labeled including Vitamin C 850mg, Vitamin D3 50mcg, folate 1.7mg DFE, zinc (as zinc bisglycinate) 15mg per 6-capsule serving. This draft grades inactives only. Pack sizes share formulaId when the other-ingredients list holds. Separate formulaId from reuse-only Thorne Basic Prenatal (`thorne-basic-prenatal`). No DailyMed drug SPL (dietary supplement). Adults (50+ labeled). No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${WOMENS_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -372,9 +367,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       labelCleared(MENS_MULTI_CITE, 'Microcrystalline cellulose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Men\'s Multi 50+ = Clean. Thorne.com alias API 2026-09-12 SKU VM6M / 180 InStock other-ingredients: Hypromellose (derived from cellulose) capsule; Microcrystalline Cellulose. HPMC / MCC are Cleared. CONFIRMED no silicon dioxide / silica, titanium dioxide, synthetic dye, talc, or flavor on that matched list. Separate formulaId from in-batch Women\'s Multi 50+ (different OI stack and labeled mineral mix). Labeled actives listed neutrally from the alias API (not an efficacy claim): including Vitamin C 850mg, Vitamin D3 25mcg, folate 1.7mg DFE, zinc (as zinc bisglycinate) 30mg, lycopene 15mg per 6-capsule serving. This draft grades inactives only. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults (50+ labeled). No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${MENS_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -408,8 +401,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Super EPA NSF / 90 / 180 twins share ONE formulaId (`thorne-super-epa`) because inactives match (gelatin / water / glycerin ± mixed tocopherols / Vitamin E mixed tocopherols). This row is Super EPA NSF SKU SP608 / 90. Thorne.com alias API 2026-09-12 other-ingredients: Mixed Tocopherols; Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap. Mixed tocopherols are Cleared-class antioxidants (v1.6 lock). Gelatin / purified water / glycerin softgel carriers are Cleared. Softgel / gelcap carrier is NOT the gummy seed/industrial-oil High rule and is not an OilInfoRecord. CONFIRMED no natural flavor on this SKU. Separate product id (`thorne-super-epa-nsf`) from the 90 / 180 twins; shared formulaId. Labeled actives: EPA 425mg / DHA 270mg per gelcap as labeled. Contains fish. Contains bovine gelatin. NSF Certified for Sport is a third-party sport-cert claim, not a cleanliness grade driver. Pack sizes of this unflavored gelcap share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${SUPER_EPA_NSF_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -443,8 +435,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Super EPA NSF / 90 / 180 twins share ONE formulaId (`thorne-super-epa`) because inactives match. This row is Super EPA SKU SP608NC / 90. Thorne.com alias API 2026-09-12 other-ingredients: Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap; Vitamin E (mixed tocopherols). Vitamin E (mixed tocopherols) is Cleared-class antioxidant (v1.6 lock) — same antioxidant class as Mixed Tocopherols on the NSF twin. Gelatin / purified water / glycerin are Cleared. Softgel / gelcap carrier is NOT the gummy seed-oil High rule and is not an OilInfoRecord. CONFIRMED no natural flavor. Separate product id (`thorne-super-epa-90`) from NSF / 180; shared formulaId. Labeled actives: EPA 425mg / DHA 270mg per gelcap as labeled. Contains fish. Contains bovine gelatin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${SUPER_EPA_90_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -478,8 +469,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Super EPA NSF / 90 / 180 twins share ONE formulaId (`thorne-super-epa`) because inactives match. This row is Super EPA SKU SP622NC / 180 — same other-ingredients list as SP608NC. Thorne.com alias API 2026-09-12 other-ingredients: Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap; Vitamin E (mixed tocopherols). Vitamin E (mixed tocopherols) is Cleared-class antioxidant. Gelatin / purified water / glycerin are Cleared. Softgel / gelcap carrier is NOT the gummy seed-oil High rule and is not an OilInfoRecord. CONFIRMED no natural flavor. Separate product id (`thorne-super-epa-180`) from NSF / 90; shared formulaId. Labeled actives: EPA 425mg / DHA 270mg per gelcap as labeled. Contains fish. Contains bovine gelatin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${SUPER_EPA_180_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -508,8 +498,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Super EPA Pro = Clean. OWN formulaId (`thorne-super-epa-pro`) because OI differs from the Super EPA twins (gelatin / water / glycerin gelcap ONLY — no tocopherols). Thorne.com alias API 2026-09-12 SKU SP610 / 120 InStock other-ingredients: Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap. Gelatin / purified water / glycerin are Cleared. Softgel / gelcap carrier is NOT the gummy seed-oil High rule and is not an OilInfoRecord. CONFIRMED no mixed tocopherols / Vitamin E and no natural flavor on this SKU. Do not merge with `thorne-super-epa`. Labeled actives: EPA 1300mg / DHA 320mg per 2-gelcap serving as labeled. Contains fish. Contains bovine gelatin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${SUPER_EPA_PRO_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -544,8 +533,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Omega-3 with CoQ10 = Clean if no flavor (confirmed). Own formulaId. Thorne.com alias API 2026-09-12 SKU SP616 / 90 InStock other-ingredients: Mixed Tocopherols; Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap. Mixed tocopherols are Cleared-class antioxidants. Gelatin / purified water / glycerin are Cleared. Softgel / gelcap carrier is NOT the gummy seed-oil High rule and is not an OilInfoRecord. CONFIRMED no natural flavor on this SKU — do not merge with mint / rosemary Advanced or Prenatal DHA (FLAG this pass). Separate formulaId from Super EPA twins and Super EPA Pro. Labeled actives: EPA 450mg / DHA 180mg / CoQ10 30mg per gelcap as labeled. Contains fish. Contains bovine gelatin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${OMEGA_COQ10_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -580,8 +568,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Vitamin C with Flavonoids = Clean (no SiO2). Thorne.com alias API 2026-09-12 SKU C154 / 90 InStock other-ingredients: Cellulose Powder; Calcium Laurate; Hypromellose (derived from cellulose) capsule. Cellulose powder / HPMC are Cleared. Calcium laurate is Cleared-by-class with magnesium stearate / stearic acid / calcium stearate (founder stack, same as Basic Prenatal). CONFIRMED no silicon dioxide on that matched list. Separate formulaId from reuse-only Thorne Vitamin C as Ascorbic Acid (`thorne-vitamin-c-ascorbic-acid`) — do not rewrite that row. Labeled actives: Vitamin C (as ascorbic acid) 500mg + citrus bioflavonoids 75mg as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${VIT_C_FLAV_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -607,8 +594,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne High Potency Vitamin C buffered powder = Clean. Thorne.com alias API 2026-09-12 SKU C155 InStock other-ingredients: none — API lists only Calcium (Ascorbate), Magnesium (Ascorbate), Potassium (Ascorbate), and Vitamin C (as Ascorbic Acid) as actives. Pure / actives-only powder with no scored inactives. Form: powder. Separate formulaId from in-batch Vitamin C with Flavonoids and from reuse-only Thorne Vitamin C as Ascorbic Acid. Labeled actives from the alias API: Vitamin C 2.35g + calcium ascorbate 350mg + magnesium ascorbate 350mg + potassium ascorbate 99mg per scoop as labeled. Pack sizes share formulaId when the other-ingredients list holds (still empty). No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${BUFFERED_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -642,8 +628,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Ashwagandha = Clean. Thorne.com alias API 2026-09-12 SKU SF828 InStock other-ingredients: Microcrystalline Cellulose; Hypromellose (derived from cellulose) capsule; Ascorbyl Palmitate. MCC / HPMC are Cleared. Ascorbyl palmitate is Cleared-class antioxidant (v1.6 lock). Cleared-only OI → Clean. Labeled active: ashwagandha extract (root, leaf) 120mg as labeled. This draft grades inactives only and makes no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${ASHWAGANDHA_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -680,8 +665,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Berberine = Clean. Thorne.com alias API 2026-09-12 SKU SF800 InStock other-ingredients: Calcium Laurate; Hypromellose (derived from cellulose) capsule. HPMC is Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal). Cleared-only OI → Clean. Labeled actives from the alias API: berberine HCl 450mg + berberine phytosome 550mg per serving as labeled. This draft grades inactives only and makes no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${BERBERINE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -713,8 +697,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Glycine = Clean. Thorne.com alias API 2026-09-12 SKU SA512 InStock other-ingredients: Hypromellose (derived from cellulose) capsule; Cellulose Powder; Calcium Laurate. HPMC / cellulose powder are Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal). Cleared-only OI → Clean. Labeled active: glycine 1g as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${GLYCINE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -743,8 +726,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Selenium (selenomethionine) = Clean. Thorne.com alias API 2026-09-12 SKU M225 InStock other-ingredients: Microcrystalline Cellulose; Hypromellose (derived from cellulose) capsule. MCC / HPMC are Cleared. Cleared-only OI → Clean. Labeled active: selenium (selenomethionine) 200mcg as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${SELENIUM_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -777,8 +759,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Niacinamide = Clean. Thorne.com alias API 2026-09-12 SKU B131 InStock other-ingredients: Hypromellose (derived from cellulose) capsule; Calcium Laurate. HPMC is Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal). Cleared-only OI → Clean. Labeled active: niacin (as niacinamide) 500mg as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${NIACINAMIDE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -801,8 +782,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Creatine powder = Clean. Thorne.com alias API 2026-09-12 SKU SF903 InStock other-ingredients: none — creatine monohydrate only. Pure powder with no scored inactives. Form: powder. Labeled active: creatine monohydrate 5g per scoop as labeled. Pack sizes share formulaId when the other-ingredients list holds (still empty). No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${CREATINE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -823,8 +803,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
     activeIngredients: [{ name: 'L-Glutamine', strength: '5g per scoop' }],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne L-Glutamine Powder = Clean. Thorne.com alias API 2026-09-12 SKU SA519 InStock other-ingredients: none — L-glutamine only. Pure powder with no scored inactives. Form: powder. Labeled active: L-glutamine 5g per scoop as labeled. Pack sizes share formulaId when the other-ingredients list holds (still empty). No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${GLUTAMINE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -857,8 +836,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Calcium (DiCalcium Malate) = Clean. Thorne.com alias API 2026-09-12 SKU M281 InStock other-ingredients: Hypromellose (derived from cellulose) capsule; Calcium Laurate. HPMC is Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal). Cleared-only OI → Clean. Labeled active: calcium (as DiCalcium Malate) 250mg as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${CALCIUM_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -886,8 +864,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Phosphatidyl Choline = Clean. Thorne.com alias API 2026-09-12 SKU SP605 InStock other-ingredients: Gelatin (bovine), Purified Water and Glycerin (vegetable source) gelcap. Gelatin / purified water / glycerin softgel carriers are Cleared. Softgel / gelcap carrier is NOT the gummy seed-oil High rule and is not an OilInfoRecord. CONFIRMED no flavor / tocopherols on that matched list. Labeled active: phosphatidylcholine 420mg per gelcap as labeled. Contains bovine gelatin. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${PC_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -921,8 +898,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Glucosamine & Chondroitin = Clean. Thorne.com alias API 2026-09-12 SKU SF767 InStock other-ingredients: Hypromellose Capsule; Calcium Laurate. HPMC capsule is Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal). Cleared-only OI → Clean. Labeled actives: glucosamine sulfate (potassium chloride) 500mg + chondroitin sulfate 250mg as labeled. This draft grades inactives only and makes no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${GLUCOSAMINE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -962,8 +938,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne NiaCel® 400 = Clean. Thorne.com alias API 2026-09-12 SKU SP654 InStock other-ingredients: Hypromellose (derived from cellulose) capsule; Ascorbyl Palmitate. HPMC is Cleared. Ascorbyl palmitate is Cleared-class antioxidant (v1.6 lock). Cleared-only OI → Clean. Labeled actives: nicotinamide riboside hydrogen malate 415mg + betaine anhydrous (trimethylglycine) 85mg as labeled. This draft grades inactives only and makes no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${NIACEL_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -998,8 +973,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne Melaton-3 = Caution (SiO2 cap). Sleep · adult. Thorne.com alias API 2026-09-12 SKU SF788 InStock other-ingredients: Microcrystalline Cellulose; Silicon Dioxide; Calcium Laurate; Hypromellose (derived from cellulose) capsule. MCC / HPMC are Cleared. Calcium laurate is Cleared-by-class (founder stack, same as Basic Prenatal) and does not raise the grade. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 / 24 / 25 / 27 (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Separate formulaId from Melaton-5 (different strength; OI wording also differs). Active is melatonin 3mg as labeled. Cleanliness grade only; no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. No independently Clean in-batch Thorne sleep — cleanAlternatives point at existing Clean PE Melatonin-SR 3 mg on main (form labeled §6).',
+
     retailers: [...RETAILERS],
     cleanAlternatives: MELATON_ALTS,
     sourcesGeneral: [
@@ -1030,8 +1004,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne Melaton-5 = Caution (SiO2). Sleep · adult. Thorne.com alias API 2026-09-12 SKU SF780 InStock other-ingredients: Hypromellose Capsule; Microcrystalline Cellulose; Silicon Dioxide; Calcium Laurate. HPMC / MCC are Cleared. Calcium laurate is Cleared-by-class and does not raise the grade. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 / 24 / 25 / 27 (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Separate formulaId from Melaton-3. Active is melatonin 5mg as labeled. Cleanliness grade only; no efficacy claim. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. No independently Clean in-batch Thorne sleep — cleanAlternatives point at existing Clean PE Melatonin-SR 3 mg on main (form labeled §6).',
+
     retailers: [...RETAILERS],
     cleanAlternatives: MELATON_ALTS,
     sourcesGeneral: [
@@ -1081,9 +1054,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne Advanced Nutrients = Caution (SiO2). Multi. Thorne.com alias API 2026-09-12 SKU VMX InStock other-ingredients: Microcrystalline Cellulose; Silicon Dioxide; Calcium Laurate; Hypromellose (derived from cellulose) capsule. MCC / HPMC are Cleared. Calcium laurate is Cleared-by-class and does not raise the grade. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 / 24 / 25 / 27 (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Separate formulaId from in-batch Clean Women\'s / Men\'s Multi 50+. Labeled actives listed neutrally from the alias API (not an efficacy claim): 4-capsule serving including Vitamin C 425mg, Vitamin D3 25mcg, folate 850mcg DFE, zinc (as zinc bisglycinate) 7.5mg as labeled. This draft grades inactives only. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADVANCED_NUTRIENTS_ALTS,
     sourcesGeneral: [
@@ -1123,8 +1094,7 @@ export const BATCH28_THORNE_COM: RatingRecord[] = [
       labelCleared(MAG_CITRATE_CITE, 'Sodium bicarbonate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne Magnesium Citrate powder = Caution (natural flavor only). Thorne.com alias API 2026-09-12 SKU M286 InStock other-ingredients: Natural Flavor; Citric Acid; Monk Fruit extract; Sodium Bicarbonate. Driver is natural flavor (Limited-risk opacity) — verdict caution when that is the driver. Citric acid is Cleared. Monk fruit extract is Cleared (v1.6 high-purity extract lock). Sodium bicarbonate is Cleared. Do not invent Clean on the flavor. Do not open a new Mag glycinate row and do not rewrite reuse-only `thorne-magnesium-glycinate-capsules` (existing Caution; Thorne.com MCT listing is already notes-only on that row). Separate formulaId from reuse-only Clean Thorne Magnesium Bisglycinate powder. Form: powder. Active is magnesium (as magnesium citrate) 250mg per scoop as labeled. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     cleanAlternatives: MAG_CITRATE_ALTS,
     sourcesGeneral: [

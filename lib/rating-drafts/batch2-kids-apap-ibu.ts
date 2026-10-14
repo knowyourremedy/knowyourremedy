@@ -149,8 +149,7 @@ function storeChildrenApapDyed(opts: {
       flag('Flavor', 'limited', dailymed(opts.setid, METH.flavors)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Store-brand children dyed APAP family (Perrigo-style). Synthetic dyes are High-tier; oral PG is Moderate. High-fructose corn syrup appears on these labels and is mentioned only as present — HFCS is parked / ungraded (Methodology §5). Do not treat this note as a new HFCS lock. Pack sizes share this formulaId.',
+
     retailers: opts.retailers,
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -195,8 +194,7 @@ function storeInfantsApapDyefree(opts: {
       flag('Flavor', 'limited', dailymed(opts.setid, METH.flavors)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — infant store-brand APAP. Removing the dye does not clear sucralose + oral PG (2+2 → Avoid). Infant-labeled; dosing charts often start at ages 2–3 / ask a doctor under 2. Prefer Genexa Infants liquid, not the 2+ Kids bottle.',
+
     retailers: opts.retailers,
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -248,8 +246,7 @@ function storeChildrenIbuDyedLiquid(opts: {
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Store-brand children dyed IBU suspension family. Dyes are High-tier. HFCS is on these labels and is parked / ungraded — Avoid already stands on dyes + PS80 + benzoate + sorbitol. No Clean kids IBU; listed swap is acetaminophen.',
+
     retailers: opts.retailers,
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -303,8 +300,7 @@ function storeChildrenIbuDyedChew(opts: {
       flag('Mannitol', 'limited', dailymed(opts.setid, METH.mannitol)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Store-brand children dyed IBU chewable family (grape L521-style). Aspartame and lake dyes are each High-tier. Soybean oil here is a chewable tablet excipient, not the gummy High-tier seed-oil rule. Form of the Clean swap is liquid.',
+
     retailers: opts.retailers,
     cleanAlternatives: [
       {
@@ -374,8 +370,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: draft Clean. Organic agave + organic flavors. Cherry and blueberry flavor SPLs share this clean inactive pattern (same formulaId; pack sizes not graded separately). Ages 2+. Always dose by weight.',
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart'],
     sourcesGeneral: [
       'DailyMed setid 5130c695-a80e-2dd3-e063-6294a90a404f (blueberry); 5a615118-33c9-1520-e063-6394a90a21a6 (cherry) — draft, not verified',
@@ -424,8 +419,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: draft Clean. Infant-labeled acetaminophen liquid (minAge 0 — marketed for infants; confirm the dosing chart / ask-a-doctor under 2 on the bottle). Not a swap for 2+ kids products. Same organic agave / organic flavor pattern as the Kids liquid.',
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart'],
     sourcesGeneral: [
       'DailyMed setid 4fd048c3-70bc-2ea7-e063-6394a90a55f2 (draft, not verified)',
@@ -473,8 +467,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: draft Caution for maltodextrin (Limited). The adult Genexa Extra Strength Clean founder exception does NOT apply to this chewable. Xylitol is also Limited (oral) — still Caution, not Avoid. Palm olein / dibehenin / glycerin are not in the §5 table and were not graded on the spot (v1.6 intake).',
+
     retailers: ['Whole Foods', 'Sprouts', 'Walmart'],
     cleanAlternatives: KIDS_APAP_LIQUID_FROM_CHEW,
     sourcesGeneral: [
@@ -523,8 +516,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Standard dyed Children\'s Tylenol suspension (cherry SPL cited; grape / bubblegum / strawberry use other FD&C/D&C dyes on the same sucralose + benzoate + sorbitol pattern). HFCS is on the dyed liquids and is parked / ungraded. Ages 2–11.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Safeway'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -566,8 +558,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap. No FD&C dye — still Avoid on sucralose + sorbitol + potassium sorbate. Cherry and apple dye-free SPLs share this inactive list.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -614,8 +605,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Infant-labeled dyed suspension (cherry Red 40 SPL cited; grape uses D&C Red 33 + Blue 1 on the same sucralose pattern). HFCS present, parked / ungraded. Prefer Genexa Infants liquid, not the 2+ Kids bottle.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -657,8 +647,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — same sucralose + sorbitol + potassium sorbate stack as Children\'s dye-free, infant-labeled. Prefer Genexa Infants liquid.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -705,8 +694,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — Ace-K + sucralose chewable / meltaway formula. Clean swap is Genexa Kids liquid (form labeled).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_FROM_CHEW,
     sourcesGeneral: [
@@ -806,8 +794,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — children\'s (2+) up&up APAP liquid. Distinct formulaId from the dyed store family and from the infant dye-free family even though inactives look similar. Sucralose + PG. Prefer Genexa Kids liquid, not the infant bottle.',
+
     retailers: ['Target'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -859,8 +846,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'CVS Children\'s Pain + Fever dyed grape-style liquid (Red 33 + Blue 1). Separate from the Equate/up&up/Signature Care Perrigo dyed family. CVS also fields other children APAP SPLs (including paraben variants) — confirm the bottle; those would still be Avoid.',
+
     retailers: ['CVS'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
     sourcesGeneral: [
@@ -909,8 +895,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dyed Children\'s Motrin suspension (Red 40 berry SPL cited; grape / bubblegum add other dyes on the same Ace-K + PS80 + benzoate pattern). No Clean kids IBU.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Safeway'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -952,8 +937,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — Ace-K + PS80 + benzoate. Removing the dye does not clear this liquid.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1000,8 +984,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — aspartame + Ace-K grape chewable. SLS is also on the label (population-specific Caution class, not additive-scored); verdict is already Avoid. Soybean oil is not the gummy seed-oil High-tier rule.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: [
       {
@@ -1049,8 +1032,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dyed Children\'s Motrin chewables — lake dyes + aspartame. Same Clean swap as the dye-free chew (liquid acetaminophen).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: [
       {
@@ -1108,8 +1090,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Infant-labeled concentrated drops (typically 6–23 months). Red 40 plus undisclosed-class caramel are each High-tier. No Clean infant IBU — listed swap is Genexa Infants acetaminophen (different active, same use-category, age-matched).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: INFANTS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1203,8 +1184,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — infant concentrated IBU. Avoid stands on PS80 + benzoate + sorbitol + flavors. This SPL uses sucrose, not HFCS; do not add an HFCS grade row. Labeled about 6–23 months. No Clean infant IBU.',
+
     retailers: ['Target'],
     cleanAlternatives: INFANTS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1246,8 +1226,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — children\'s IBU liquid. Avoid already stands on PS80 + benzoate + sorbitol + flavors. HFCS appears on this label and is parked / ungraded per the methodology park list — do not read this as a new HFCS lock. Confirm the dye-free children\'s bottle vs. dyed grape/bubblegum SKUs.',
+
     retailers: ['Target'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1301,8 +1280,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Widely stocked Junior Strength chewable (aspartame + Red 30 / Blue 2 lakes), typically ages 6–11. A separate coated junior tablet SPL (setid 5ed0d404) uses methylparaben — not given its own row; if the bottle is the coated tablet, that is still Avoid (parabens are High-tier). Clean swap is 2+ Genexa Kids liquid (lower-minimum, different active).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: JUNIOR_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1349,8 +1327,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dyed fruit Children\'s Advil suspension. Grape / other flavor SPLs on the same label add Blue 1 and sometimes BHT — still Avoid. Dye-free blue raspberry is a separate row.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [
@@ -1397,8 +1374,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free trap — DailyMed-backed blue raspberry Children\'s Advil ("Now Dye-Free"). PG + PS80 + benzoate. Separate formulaId from the dyed fruit suspension.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
     sourcesGeneral: [

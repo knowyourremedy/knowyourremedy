@@ -103,12 +103,6 @@ const PF_RETAILERS = [
   'Walgreens',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -398,8 +392,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Elements Turmeric Complex = Caution. Driver is silicon dioxide (0-pt Caution cap). Founder carton / photo OI: HPMC named + microcrystalline cellulose + magnesium stearate + silicon dioxide. Do NOT refuse Vegetable Capsule — founder says HPMC is named on this panel. Ginger and black pepper are labeled actives / botanicals, listed neutrally — this draft grades inactives only and makes no efficacy claim. Do not reuse the old harvest that refused this SKU on “Vegetable Capsule.” No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.turmeric} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -531,8 +524,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: JointFlex Pain Relief Cream = Caution. Drivers are Glycosaminoglycans (the PR #104 refuse string; now the locked exact Caution token) + acetylated / hydroxylated lanolin + acrylate/C10-30 alkyl acrylate crosspolymer + diazolidinyl urea + tocopheryl acetate + IPBC (standalone Caution) and polysorbate 20 (Moderate). Peppermint oil is the locked Limited flavor/EO row. DailyMed setid ${SET.jointflex} (NDC 72927-904) printed Drug Facts: Acetylated Lanolin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Aloe Vera, C12-15 Alkyl Benzoate, Chondroitin Sulfate, Diazolidinyl Urea, Dimethicone, Dimethiconol Stearate, Disodium EDTA, dl Panthenol, Glucosamine Sulfate, Glycerin, Glycerol Stearate, Glycosaminoglycans, Hydroxylated Lanolin, Hydroxypropyl methycellulose, Iodopropynyl Butylcarbamate, Methyl Gluceth-20, Methyl Glucose Sesquistearate, Peppermint Oil, Polysorbate 20, Potassium Carbomer, Purified Water, Tocopheryl Acetate (Vitamin E). Do not re-use the PR #104 refuse. No High. 4 oz + 1 oz pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} ${SCENT_EXTRACT_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'jointflex.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -616,8 +608,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Water/Aqua/Eau', 'cleared', labelCite(CITE.topricin, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Topricin Pain Relief Cream = Caution. Drivers are Steareth-20 (the PR #104 refuse string; now the locked exact Caution token) + caprylhydroxamic acid (standalone Caution) and unlabeled MCT / caprylic/capric triglyceride (Limited; coconut not named on that token). Official topricin.com Classic / Pain Relief Cream inactive: Water/Aqua/Eau, Caprylic/Capric Triglyceride, Isopropyl Myristate, Glycerin, Glyceryl Monostearate SE, Steareth-20, Hydrogenated Vegetable Oil, Caprylhydroxamic Acid, Glyceryl Caprylate, Cetyl Alcohol, Carbomer, Sodium Hydroxide. DailyMed setid ${SET.topricin} prints the same current OI. Hydrogenated vegetable oil is the locked cream-fill Cleared token (tap ≠ gummy High). Homeopathic actives listed neutrally — this draft grades inactives only and makes no efficacy claim. Do not re-use the PR #104 refuse. Do not write Topricin Foot Therapy (different OI / Steareth-21). Pack sizes share this formulaId. Ages 2+. ${PARKED_ACTIVES} ${LIMITED_STACK} ${MCT_UNLABELED_TAP} ${CREAM_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'topricin.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.topricin} — ${UNVERIFIED_NOTE}`],
@@ -750,8 +741,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(CITE.blueEmu, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Blue-Emu Original Super Strength = Avoid. Driver is FD&C Blue #1 on the founder jar photo (High — do NOT use any “no dye” harvest). Founder jar also prints methylparaben + propylparaben (High in every form). Cholecalciferol as inactive is now the locked Cleared token (the PR #104 refuse string). ${EMU_TAP} Founder jar OI: Water; Emu Oil; Glycerin; Dimethyl Sulfone (MSM); Mineral Oil; Acrylates/Acrylamide Copolymer; Polysorbate 85; Stearic Acid; Cetyl Alcohol; Dimethicone; Cholecalciferol; Tocopheryl Acetate; Retinyl Palmitate; Imidazolidinyl Urea; Aloe Vera Gel; Methylparaben; Propylparaben; Tetrasodium EDTA; Aesculus Hippocastanum (Horse Chestnut) Seed Extract; Anthemis Nobilis Flower Extract; Calendula Officinalis Flower Extract; Symphytum Officinale Root Extract; Zanthoxylum Alatum Fruit Extract; Allantoin; Panthenol; Glucosamine Sulfate; FD&C Blue #1; Triethanolamine; Oleyl Alcohol; Ethoxydiglycol. Imidazolidinyl urea stays parked (remaining formaldehyde-releaser; not graded; not an invented §5 class; not the Avoid driver). Later paraben-free / phenoxyethanol harvests are not this row. No Drug Facts monograph active on this jar. Pack sizes of this founder-jar OI share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${SCENT_EXTRACT_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'blue-emu.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.blueEmu} — ${UNVERIFIED_NOTE}`],
@@ -814,8 +804,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(CITE.teemofe, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Teemofe 4% lidocaine patch = Avoid. Driver is titanium dioxide (High). Founder carton / Drug Facts OI: Aluminum Glycinate, Aluminum Hydroxide, Cellulose Gum, DMDM hydantoin, Glycerin, Polyacrylic Acid, Polysorbate 80, Propylene Glycol, Ricinus Communis Seed Oil (castor), Silica, Sodium Polyacrylate, Tartaric Acid, Titanium Dioxide, Urea, Water. Do not refuse “no OI.” Silica is the locked SiO2 / silica Caution alias (0-pt cap; not the Avoid driver) — do not alias to the new exact-word silicon token. Aluminum glycinate / aluminum hydroxide (topical/patch) / DMDM hydantoin / polyacrylate are standalone Caution. Castor oil + urea (topical) are Cleared. Backing ignored. DF graded. Matching printed-DF family DailyMed setid ${SET.teemofeDf} is cited only to complete the panel — not a Teemofe-branded SPL claim. Do NOT clone HealthWise / WELMATE / Amazon Basics / Sumifun lidocaine rows already on main (different OI). Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.teemofe} — ${UNVERIFIED_NOTE}`],
@@ -864,8 +853,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.ha2zNap, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: HealthA2Z Naproxen Sodium 220 300-ct = Avoid. Drivers are FD&C Blue #2 aluminum lake + titanium dioxide (High). Founder OI: corn starch, Blue 2 lake, HPMC, MCC, PEG, povidone, SSG, stearic acid, TiO2. DailyMed setid ${SET.ha2zNap} (Allegiant NDC 69168-395; 300-ct is 69168-395-17) printed Drug Facts: FD&C blue #2 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, titanium dioxide. May contain: corn starch, croscarmellose sodium, magnesium stearate, purified water, silicon. Printed “silicon” (exact word) uses the new Caution silicon token — do not alias to silica / silicon dioxide (the PR #104 refuse string). PEG is Moderate (not needed to reach Avoid). Do NOT reuse timecap-naproxen-220 or HealthA2Z IBU 382 / 335 already on main. 50-ct / 10-ct pack twins on this setid share this formulaId. Ages 12+. Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [

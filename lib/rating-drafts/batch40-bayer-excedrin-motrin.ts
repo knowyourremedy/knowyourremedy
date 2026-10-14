@@ -62,9 +62,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const CARAMEL_TAP =
   'Label says caramel and does not name Class I/II vs III/IV. Undisclosed class is treated as Class III/IV — High / Avoid.';
 
@@ -82,9 +79,6 @@ const SLS_TAP =
 
 const SORBITAN_TAP =
   'Sorbitan (plain / sorbitan esters) is the locked Caution row — polysorbate neighborhood, not additive-scored, not Avoid. It is not the sugar-alcohol Limited row.';
-
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
 
 const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
@@ -256,8 +250,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.bayerEs, 'Powdered cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Bayer Extra Strength 500 + Aspirina Caplets = Avoid. Drivers are Red #7 / Blue #2 / Red #40 lakes + titanium dioxide (High). DailyMed setids 0ae64cdb (ES) and 2e6f5ba8 (Aspirina) list the same Other Ingredients — one formulaId, not cloned. Oral PG is Moderate (not needed to reach Avoid). Shellac / aluminum oxide (lake substrate) are not in Methodology §5 (ungraded; not the Avoid drivers). Triacetin is Cleared. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [
@@ -294,8 +287,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.backBody, 'Powdered cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Bayer Back & Body Extra Strength + Aspirina Cafeína = Avoid. Drivers are Red #30 / Yellow #10 lakes + titanium dioxide (High). DailyMed setids 0c77c484 (Back & Body) and 2e709acc (Cafeína) list the same Other Ingredients — one formulaId, not cloned. Distinct from Extra Strength 500 / Aspirina (different dye set; no caffeine). Shellac / aluminum oxide are ungraded (not the Avoid drivers). Triacetin is Cleared. Listed swap is a single-active analog, not a 500/32.5 replacement. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [
@@ -343,8 +335,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.enteric81, 'Powdered cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Bayer Aspirin Regimen enteric 81 + 325 = Avoid. Drivers are Yellow #10 + Yellow #6 lakes (High). DailyMed setids 075b103e (81 mg) and 0c6ae05f-7634 (325 mg) share this inactive list — one formulaId, not cloned. Distinct from chewable 81 orange (0c6ae05f-760f; Yellow #6 only, no enteric coat) and from cherry chew. ${METHACRYLIC_TAP} ${SLS_TAP} Black / brown iron oxides, shellac, and triethyl citrate are not in Methodology §5 (ungraded; not the Avoid drivers). Triacetin is Cleared. Strengths 81 and 325 share inactives; pack sizes are not graded separately. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [
@@ -380,8 +371,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.chewOrange, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Bayer Chewable 81 Orange = Avoid. Driver is Yellow #6 lake (High). Saccharin is Moderate; flavor is Limited. SEPARATE formulaId from cherry chew (Red #27 + Red #40) and from enteric 81/325 (Yellow #10 + Yellow #6 on a delayed-release coat — do not merge 0c6ae05f-760f into 0c6ae05f-7634). Silicon dioxide is the 0-pt Caution cap, not Avoid. Aluminum oxide (lake substrate) is ungraded. Ages 12+ (children under 12: consult a doctor on the carton).',
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.chewOrange} — ${UNVERIFIED_NOTE}`],
@@ -420,8 +410,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.chewCherry, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Bayer Chewable 81 Cherry = Avoid. Drivers are Red #27 + Red #40 lakes (High). SEPARATE formulaId from orange chew (Yellow #6 only) — do not merge flavors. Saccharin is Moderate; flavor is Limited. Silicon dioxide is the 0-pt Caution cap. Ages 12+ (children under 12: consult a doctor on the carton).',
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.chewCherry} — ${UNVERIFIED_NOTE}`],
@@ -471,8 +460,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.migraine, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Excedrin Migraine + Extra Strength Blue #1 coat = Avoid. Drivers are Blue #1 + titanium dioxide (High). DailyMed setids 7ed841fb (Migraine) and a71074a6 (ES Blue #1) list the same Other Ingredients — shared formulaId OK. SEPARATE from Extra Strength TiO2-only coat (0faa3592 — no Blue #1). ${SORBITAN_TAP} Light mineral oil is not in Methodology §5 (ungraded coat aid; not the Avoid driver; not the gummy seed-oil High rule). Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'excedrin.com'],
     cleanAlternatives: COMBO_ALTS,
     sourcesGeneral: [
@@ -510,8 +498,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.esTio2, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Excedrin Extra Strength TiO2-only coat = Avoid. Driver is titanium dioxide (High). No Blue #1 on DailyMed setid 0faa3592 — SEPARATE formulaId from the Blue #1 Migraine / ES coat (7ed841fb / a71074a6). ${SLS_TAP} Confirm the bottle: a Blue #1 line is the other row. Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'excedrin.com'],
     cleanAlternatives: COMBO_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.esTio2} — ${UNVERIFIED_NOTE}`],
@@ -557,8 +544,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.tension, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Excedrin Tension Headache = Avoid. Drivers are Red #27 / Blue #2 / Yellow #6 lakes + talc + titanium dioxide (each High). Aspirin-free (APAP 500 + caffeine 65). Distinct from Migraine / ES combo rows. Polyvinyl alcohol is not in Methodology §5 (ungraded; not the Avoid driver). Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'excedrin.com'],
     cleanAlternatives: APAP_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.tension} — ${UNVERIFIED_NOTE}`],
@@ -608,9 +594,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.pm, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Excedrin PM Headache (single SKU, not a kit) = Avoid. Drivers are Blue #1 lake + talc + titanium dioxide (High). DailyMed setid b3812d27 is the standalone PM caplet — kits that pair PM with Extra Strength / Tension (e.g. setid 444fa225) are OUT / no Search row. ${MCT_UNLABELED_TAP} ${LIMITED_STACK} Calcium carbonate, ferric oxide yellow, and silicified MCC are not in Methodology §5 as named (ungraded; not the Avoid drivers). Labeled 2 caplets at bedtime. Ages 12+. ` +
-      SEDATING,
+
     retailers: [...PF_RETAILERS, 'excedrin.com'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.pm} — ${UNVERIFIED_NOTE}`],
@@ -645,8 +629,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.rapid, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Excedrin Rapid Relief APAP 500 = Avoid. Driver is titanium dioxide (High). Aspirin-free / caffeine-free. Distinct from Migraine / ES combo rows and from Tension. Calcium carbonate is not in Methodology §5 as an inactive filler (ungraded; not the Avoid driver). Silicon dioxide is the 0-pt Caution cap. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'excedrin.com'],
     cleanAlternatives: APAP_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.rapid} — ${UNVERIFIED_NOTE}`],
@@ -682,8 +665,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.infantsDf, 'Xanthan gum'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Infants’ Motrin Concentrated Drops Dye-Free = Avoid. Driver is undisclosed-class caramel (High). ${CARAMEL_TAP} Dye-free does not clear this liquid. NEW formulaId — do not reuse motrin-infants-liquid-dyed (that dyed row is Red #40 + caramel). Berry SPL; typically 6–23 months. No independently Clean infant ibuprofen — listed swap is Genexa Infants acetaminophen (different active, age-matched).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: INFANTS_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.infantsDf} — ${UNVERIFIED_NOTE}`],
@@ -709,8 +691,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       cleared(SET.genuine, 'Powdered cellulose'),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Genuine Bayer Aspirin 325 coated = Clean. Triacetin is Cleared. DailyMed setid 44a08904 lists carnauba wax (may contain), corn starch, hypromellose, powdered cellulose, and triacetin — no High / Limited / Caution left on that SPL. ${TRIACETIN_TAP} Distinct from Extra Strength 500 / Aspirina (dye + TiO2 Avoid), from enteric regimen (dye lakes Avoid), and from the chewables. Confirm the carton matches this coated Genuine list. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'bayeraspirin.com'],
     sourcesGeneral: [`DailyMed setid ${SET.genuine} — ${UNVERIFIED_NOTE}`],
   }),

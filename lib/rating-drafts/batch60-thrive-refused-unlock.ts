@@ -74,9 +74,6 @@ const COLD_FLU = 'Cold & Flu';
 
 const THRIVE = ['Thrive Market'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const OIL_FILL_TAP =
   'Seed/industrial oils are flagged in gummies. In this capsule / softgel / drop fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -340,7 +337,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.ritual_womens_18, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Women's 18+ Multi = Caution. Driver is Non-GMO corn zein (beadlets) coating polymer plus the silica / SiO2 0-pt cap. Distinct from Cleared pea-protein isolate. Own formulaId vs Men's 18+ / Women's 50+ (actives differ; OI family matches). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ZEIN_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean Ritual Natal Choline already on main (glycerin / HPMC / water only). Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main.'),
@@ -368,7 +365,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.ritual_mens_18, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Men's 18+ Multi = Caution. Same zein + silica math as Women's 18+; labeled men's actives — own formulaId. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ZEIN_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean Ritual Natal Choline already on main. Form labeled, not a hard filter (§6).'),
@@ -396,7 +393,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.ritual_womens_50, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Women's 50+ Multi = Caution. Same zein + silica math; labeled 50+ actives (no iron) — own formulaId. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ZEIN_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean Ritual Natal Choline already on main. Form labeled, not a hard filter (§6).'),
@@ -428,7 +425,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.ritual_stress, 'Oat fiber', 'cleared', METH.oatFiber),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Stress Relief = Caution. Driver is Vegetable-Based Tablet Coating (unnamed coat) plus the silica cap. Psyllium Husk and Oat Fiber are now Cleared fiber. Named wax / GMS would be cleaner than the unnamed coat. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COAT_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean Ritual Natal Choline already on main. Form labeled, not a hard filter (§6).'),
@@ -455,7 +452,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.motherlove_moringa, 'Medium chain triglycerides (derived from palm kernel oil)', 'cleared', METH.mctNamed),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Motherlove Moringa capsules = Clean. Named Medium Chain Triglycerides (derived from palm kernel oil) is Cleared fill. Distinct from Limited unlabeled MCT. Softgel / capsule fill ≠ gummy High. Own formulaId vs More Milk Moringa / More Milk Plus (actives differ; OI family matches). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_NAMED_TAP} ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Motherlove'],
     sourcesGeneral: [`${CITE.motherlove_moringa} — ${UNVERIFIED_NOTE}`],
   }),
@@ -479,7 +476,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.motherlove_more_milk_moringa, 'Medium chain triglycerides (derived from palm kernel oil)', 'cleared', METH.mctNamed),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Motherlove More Milk Moringa = Clean. Same named-MCT fill as standalone Moringa; blend actives — own formulaId. 60 ct shares formulaId when OI holds. Draft, not verified. No dosing or medical advice. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_NAMED_TAP} ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Motherlove'],
     sourcesGeneral: [`${CITE.motherlove_more_milk_moringa} — ${UNVERIFIED_NOTE}`],
   }),
@@ -503,7 +500,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.motherlove_more_milk_plus, 'Medium chain triglycerides (derived from palm kernel oil)', 'cleared', METH.mctNamed),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Motherlove More Milk Plus = Clean. Same named-MCT fill; fenugreek blend actives — own formulaId. 120 ct shares formulaId when OI holds. Draft, not verified. No dosing or medical advice. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_NAMED_TAP} ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Motherlove'],
     sourcesGeneral: [`${CITE.motherlove_more_milk_plus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -535,7 +532,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_sleep, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Sleep = Caution. Maltitol + isomalt + flavor Limited. Fruit And Vegetable Juice Extract (Color) is now the locked named juice-as-color alias (Furit typo sibling). Coconut MCT labeled coconut Cleared. No sunflower oil on this carton — gummy seed-oil High not triggered. Distinct from batch59 Wonder Day (Vegetable Juice (Color) spelling). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COLOR_NAMED_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('new-chapter-turmeric-force-nighttime', 'Independently Clean New Chapter Turmeric Force Nighttime already on main. Form: capsule vs gummy — labeled, not a hard filter (§6).'),
@@ -566,7 +563,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_beauty, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Beauty = Caution. Maltitol + flavor Limited. Organic Fruit And Vegetable Juice Extract (Color) is the locked named juice-as-color alias. No sunflower oil on the current brand panel. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COLOR_NAMED_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean Garden of Life Mood+ already on main. Form labeled, not a hard filter (§6).'),
@@ -600,7 +597,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_calm, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Calm = Caution. Sugar-alcohol + flavor Limited. Fruit And Vegetable Juice Extract (Color) now Cleared named juice-as-color. No sunflower oil on this carton. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COLOR_NAMED_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean Garden of Life Mood+ already on main. Form labeled, not a hard filter (§6).'),
@@ -634,7 +631,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_focus, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Focus = Caution. Sugar-alcohol + flavor Limited. Vegetable Juice Extract (Color) is the locked named juice-as-color alias. Coconut MCT labeled coconut Cleared. No sunflower oil on the current brand panel. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COLOR_NAMED_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean Garden of Life Mood+ already on main. Form labeled, not a hard filter (§6).'),
@@ -666,7 +663,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Greens (adult) = Caution. Sugar-alcohol + flavor Limited. Current brand/iHerb panel prints no juice-extract color and no sunflower oil. Distinct from batch59 Wonder Greens Kids (own formulaId). Coconut MCT labeled coconut Cleared. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean Ancient Nutrition Super Greens Unflavored already on main. Form: powder vs gummy — labeled, not a hard filter (§6).'),
@@ -694,7 +691,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.bodybio_sodium_butyrate, 'Purified water', 'cleared', METH.water),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio Sodium Butyrate = Caution. Unlabeled MCT is Limited (source not named coconut). Sodium hydroxide as pH buffer is Cleared (same job as NaOH). Distinct from Cleared named Medium Chain Triglycerides (derived from palm kernel oil). 100 ct 743474999905 shares formulaId. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'BodyBio'],
     cleanAlternatives: [
       alt('bodybio-liposomal-glutathione', 'Independently Clean BodyBio Liposomal Glutathione already on main. Form labeled, not a hard filter (§6).'),
@@ -723,7 +720,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.bodybio_ca_mg_butyrate, 'Purified water', 'cleared', METH.water),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio Calcium-Magnesium Butyrate = Caution. Unlabeled MCT Limited. Calcium Hydroxide / Magnesium Hydroxide as pH adjuster now Cleared (same job as NaOH). SF also prints Calcium / Magnesium as those hydroxides — minerals under Supplement Facts are actives; the hydroxide tokens are listed because the brand prints them as buffers. Own formulaId vs Sodium Butyrate. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'BodyBio'],
     cleanAlternatives: [
       alt('bodybio-liposomal-glutathione', 'Independently Clean BodyBio Liposomal Glutathione already on main. Form labeled, not a hard filter (§6).'),
@@ -753,7 +750,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.pluscbd_daily_balance, 'Purified water', 'cleared', METH.water),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: PlusCBD Daily Balance 15 mg = Caution. Irish Moss as inactive is the locked unspecified-seaweed Caution token (not a named-color pass). Sorbitol + modified corn starch Limited. Olive-oil fill Cleared, ≠ gummy High. Official Gold Formula Irish Moss carton — do not write the retailer Daily Balance harvest that swaps in carrageenan. 30/90 ct share formulaId when OI holds. Distinct from batch59 Men's Ignite (unlabeled MCT gelatin). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'PlusCBD'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean Jarrow D3 5000 already on main (olive-oil softgel). Form labeled, not a hard filter (§6). Not a CBD swap.'),
@@ -784,7 +781,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.maryruth_nighttime, 'Evaporated sea water', 'cleared', METH.evaporatedSeaWater),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Nighttime Multimineral = Caution. Evaporated Sea Water as inactive is the locked vague mineral-water Caution token — distinct from Trace Minerals (From Seawater) and from minerals under Supplement Facts. Flavors + potassium sorbate Limited. Distinct from batch59 kids nighttime (no evaporated seawater). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean MaryRuth Oregano Oil Drops already on main. Form labeled, not a hard filter (§6).'),
@@ -815,7 +812,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.maryruth_prenatal_postnatal, 'Evaporated sea water', 'cleared', METH.evaporatedSeaWater),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Prenatal-Postnatal liquid = Caution. Evaporated Sea Water as inactive Caution (vague mineral-water line). Flavors + sorbate Limited. 15.2 oz shares formulaId when OI holds. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('nordic-prenatal-dha', 'Independently Clean Nordic Prenatal DHA already on main. Form: softgel vs liquid — labeled, not a hard filter (§6).'),
@@ -844,7 +841,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.fon_cold_flu_max, 'Grain alcohol', 'limited', METH.alcohol),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Cold & Flu Max = Caution. Ginger Oil is the locked EO / scent Caution token (distinct from ginger extract). Grain alcohol vehicle Limited. Homeopathic — cleanliness only, no efficacy claim. Distinct from batch59 Cold & Flu Kids (lemon oil, no Ginger Oil). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     cleanAlternatives: [
       alt('new-chapter-elderberry-syrup', 'Independently Clean New Chapter Elderberry Syrup already on main. Form labeled, not a hard filter (§6).'),
@@ -873,7 +870,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.fon_sinus_max, 'Grain alcohol', 'limited', METH.alcohol),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Sinus Max = Caution. Brand carton Ginger Oil + grain alcohol. DailyMed SPL inactive list omits Ginger Oil — brand/carton used; that is not a Wart-style conflicting extra ingredient. Own formulaId vs Cold & Flu Max (actives differ). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     cleanAlternatives: [
       alt('new-chapter-elderberry-syrup', 'Independently Clean New Chapter Elderberry Syrup already on main. Form labeled, not a hard filter (§6).'),
@@ -900,7 +897,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Woman's One Daily 40+ = Caution. Oral hydrated silica is the same SiO2 nanoparticle Caution cap (tap vs topical hydrated silica). Organic maltodextrin Limited. Organic Palm Oil coating Cleared + tap. Distinct from batch59 Every Woman's One Daily (no hydrated silica). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean Garden of Life Vitamin Code for Women already on main. Form labeled, not a hard filter (§6).'),
@@ -927,7 +924,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Man's One Daily 40+ = Caution. Oral hydrated silica = SiO2 cap. Distinct from batch59 Every Man's One Daily (silica, not hydrated silica). Own formulaId vs 40+ women's. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-mens', 'Independently Clean Garden of Life Vitamin Code for Men already on main. Form labeled, not a hard filter (§6).'),
@@ -956,7 +953,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Woman's One Daily 55+ = Caution. Oral hydrated silica cap + maltodextrin Limited. Psyllium Husk / Oat Fiber now Cleared. No gum acacia on this carton (own OI vs 40+). Palm coating Cleared. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens-50', 'Independently Clean Garden of Life Vitamin Code 50 & Wiser Women already on main. Form labeled, not a hard filter (§6).'),
@@ -986,7 +983,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Man's One Daily 55+ = Caution. Oral hydrated silica cap. Psyllium / oat fiber Cleared. Own formulaId vs 40+ / women's 55+. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-mens', 'Independently Clean Garden of Life Vitamin Code for Men already on main. Form labeled, not a hard filter (§6).'),
@@ -1013,7 +1010,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Perfect Prenatal = Caution. Oral hydrated silica = SiO2 cap. Palm coating Cleared. Own formulaId vs Perfect Postnatal (actives differ; OI family matches). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('nordic-prenatal-dha', 'Independently Clean Nordic Prenatal DHA already on main. Form: softgel vs tablet — labeled, not a hard filter (§6).'),
@@ -1040,7 +1037,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Perfect Postnatal = Caution. Oral hydrated silica = SiO2 cap. Same OI family as Perfect Prenatal; labeled postnatal actives — own formulaId. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('nordic-prenatal-dha', 'Independently Clean Nordic Prenatal DHA already on main. Form labeled, not a hard filter (§6).'),
@@ -1063,7 +1060,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: ncSilicaBase(CITE.nc_womens_advanced),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Women's Advanced = Caution. Oral hydrated silica = SiO2 cap. No gum acacia on this carton. Distinct from Every Woman's One Daily / 40+ / 55+. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean Garden of Life Vitamin Code for Women already on main. Form labeled, not a hard filter (§6).'),
@@ -1086,7 +1083,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: ncSilicaBase(CITE.nc_mens_advanced),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Men's Advanced = Caution. Oral hydrated silica = SiO2 cap. Own formulaId vs Women's Advanced (actives differ). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-mens', 'Independently Clean Garden of Life Vitamin Code for Men already on main. Form labeled, not a hard filter (§6).'),
@@ -1109,7 +1106,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: ncSilicaBase(CITE.nc_fermented_b),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Fermented Coenzyme B Complex = Caution. Official newchapter.com OI now pinned. Oral hydrated silica = SiO2 cap. Maltodextrin Limited. Palm coating Cleared. Distinct from the newer Fermented Vitamin B Complex SKU (not this write). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean Garden of Life Mood+ already on main. Form labeled, not a hard filter (§6).'),
@@ -1137,7 +1134,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Fermented Vitamin B12 = Caution. Official brand OI pinned. Oral hydrated silica = SiO2 cap. Unspecified rice extract blend Limited. Organic sunflower oil sits inside that blend as tablet flow agent — tap ≠ gummy High. Palm coating Cleared. Own formulaId vs Coenzyme B Complex. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${RICE_EXTRACT_TAP} ${SUNFLOWER_FILL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean Jarrow D3 5000 already on main. Form labeled, not a hard filter (§6).'),
@@ -1165,7 +1162,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Fermented Vitamin C = Caution. Official brand OI pinned. Oral hydrated silica = SiO2 cap. Rice extract blend Limited. Sunflower oil in that blend is tablet fill, not gummy High. Palm coating Cleared. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${RICE_EXTRACT_TAP} ${SUNFLOWER_FILL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('new-chapter-elderberry-syrup', 'Independently Clean New Chapter Elderberry Syrup already on main. Form labeled, not a hard filter (§6).'),
@@ -1192,7 +1189,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Fermented Vitamin D3 = Caution. Official brand OI pinned. Oral hydrated silica = SiO2 cap. Organic MCT oil is unlabeled MCT Limited (coconut not named) — tap vs named palm-kernel MCT Cleared. Palm coating Cleared. 3× Limited ≠ Avoid. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean Jarrow D3 5000 already on main. Form: softgel vs tablet — labeled, not a hard filter (§6).'),
@@ -1219,7 +1216,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       ]),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Fermented Zinc Complex = Caution. Official brand OI pinned. Oral hydrated silica = SiO2 cap. Maltodextrin Limited. Palm coating Cleared. 60 ct shares formulaId when OI holds. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ORAL_HYDRATED_SILICA_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('new-chapter-elderberry-syrup', 'Independently Clean New Chapter Elderberry Syrup already on main. Form labeled, not a hard filter (§6).'),
@@ -1247,7 +1244,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.nc_all_flora_multi_fiber, 'Organic ground rice hull', 'cleared', METH.riceHull),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter All-Flora Multi-Fiber = Caution. Unspecified seaweed extract is the locked Caution token (named kelp / named plant-color is not this row). Psyllium husk is under Supplement Facts (active), not OI. Distinct from batch59 All-Flora Probiotic gummy. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SEAWEED_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('wellmade-organic-acacia-fiber', 'Independently Clean wellmade Organic Acacia Fiber already on main. Form: powder vs capsule — labeled, not a hard filter (§6).'),
@@ -1281,7 +1278,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.nc_bone_strength, 'Organic agave fiber', 'cleared', METH.agave),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Bone Strength = Caution. Organic MCT oil is unlabeled MCT Limited (coconut not named) — tap vs Cleared named Medium Chain Triglycerides (derived from palm kernel oil). Psyllium Husk and Oat Fiber now Cleared. Maltodextrin Limited. 3× Limited ≠ Avoid. 60 ct 727783004079 shares formulaId. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP} ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-raw-calcium', 'Independently Clean Garden of Life Vitamin Code RAW Calcium already on main. Form labeled, not a hard filter (§6).'),
@@ -1312,7 +1309,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.nc_daily_skin, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Daily Skin = Caution. Unlabeled MCT Limited + silica 0-pt cap. Current brand panel does not print psyllium / oat fiber — those tokens are not invented. Distinct from Bone Strength (tablet; psyllium + oat fiber present). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('new-chapter-estrotone', 'Independently Clean New Chapter Estrotone already on main. Form labeled, not a hard filter (§6).'),
@@ -1337,7 +1334,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.om_lions_mane_powder, 'Organic myceliated oats', 'cleared', METH.myceliatedOats),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Lion's Mane powder = Clean. Organic Myceliated Oats is printed as Other Ingredients on a real SF panel and is now the locked food-state oat/ferment Cleared token. The mushroom blend is the Supplement Facts active — not graded as OI. Distinct from batch59 om-lions-mane-capsules (vegetable cellulose only; own formulaId). Master Blend / Reishi / Turkey Tail powders stay refused (still no_OI). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM'],
     sourcesGeneral: [`${CITE.om_lions_mane_powder} — ${UNVERIFIED_NOTE}`],
   }),

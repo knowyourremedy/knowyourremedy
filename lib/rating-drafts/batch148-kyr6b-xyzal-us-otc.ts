@@ -66,8 +66,6 @@ function tabletFlags(): IngredientFlag[] {
 }
 
 const ACTIVE = [{ name: 'Levocetirizine dihydrochloride', strength: '5 mg' }];
-const NOTE =
-  'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Colloidal anhydrous silica and polyethylene glycol 400 are not the Avoid driver. Hypromellose, lactose monohydrate, magnesium stearate, and microcrystalline cellulose are Cleared. Ages 6+. Half tablet for ages 6–11. Not the store-brand levocetirizine lines.';
 
 const PANEL =
   'DailyMed setid 8be45c2a-1eca-4a00-81b9-f7babdbdcd41 (OTC, updated March 11, 2026) and https://www.xyzal.com/en-us/products/adult-allergy-relief/ingredients. Active: levocetirizine dihydrochloride 5 mg. Inactive ingredients: colloidal anhydrous silica, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol 400, titanium dioxide. The Rx structured table that adds FD&C Red No. 40 and shellac was not used.';
@@ -104,7 +102,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: ACTIVE,
     inactiveIngredients: tabletFlags(),
     verdict: 'avoid',
-    honestNote: NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ALTS,
     sourcesGeneral: [d.source],

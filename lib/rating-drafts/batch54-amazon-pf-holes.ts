@@ -160,12 +160,6 @@ const PF_RETAILERS = [
   'Walgreens',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -491,8 +485,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.gsNapA, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: GoodSense Naproxen Sodium 220 film-coated = Avoid. Drivers are talc + titanium dioxide + FD&C Blue #2 aluminum lake (High). DailyMed setids a980b939 (NDC 0113-1412) and 494db9ba (NDC 0113-4368 / 50090-3369) list the same Drug Facts OI — one formulaId, not cloned. Distinct from TIME-Cap / Marksans 48cb1363 (no talc; adds SiO2 + croscarmellose). Distinct from amazon-basic-care-naproxen-blue2-tio2 already on main (do not clone). Ages 12+.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -526,8 +519,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.timecapNap, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: TIME-Cap Labs Naproxen Sodium 220 (Marksans DailyMed 48cb1363) = Avoid. Drivers are FD&C Blue #2 lake + titanium dioxide (High). Colloidal silicon dioxide is the 0-pt Caution cap (not the Avoid driver). No talc on this SPL — distinct from GoodSense a980b939 / 494db9ba. Pack sizes share this formulaId. Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -565,8 +557,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.ha2z382, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: HealthA2Z Ibuprofen 200 caplet NDC 69168-382 = Avoid. Drivers are FD&C Yellow #6 + titanium dioxide (High). DailyMed setid 2e33a153. Drug Facts: colloidal silicon dioxide, corn starch, FD&C yellow #6, hypromellose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, purified water, sodium starch glycolate, stearic acid, titanium dioxide. Distinct from NDC 69168-335 (talc + TiO2, no Yellow 6). Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -605,8 +596,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.mommy, 'Xanthan gum'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Mommy’s Bliss Infants’ Pain and Fever APAP liquid = Caution. Limited drivers are natural flavors + sodium benzoate. ${LIMITED_STACK} Organic elderberry juice concentrate is the locked named juice-as-color Cleared row (not a dye; not the Limited gummy-base juice row). DailyMed setid 05e26650 Drug Facts: anhydrous citric acid, glycerin, microcrystalline cellulose and carboxymethylcellulose sodium, natural flavors, organic elderberry juice concentrate, purified water, sodium benzoate, sucrose, xanthan gum. Carton dosing chart starts at 24 lb / 2 years (under 2: ask a doctor). Stay under labeled acetaminophen limits. Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: INFANT_ALTS,
     sourcesGeneral: [
@@ -637,8 +627,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: BioSchwartz Turmeric Curcumin 1500 = Clean. Official iHerb / Vitacost / Swanson other-ingredients: Hypromellose (vegetable capsule) only. HPMC-only (or HPMC ± veg stearate only) was the Clean gate — this panel is HPMC only. No SiO2 / dye / TiO2 / seed-oil gummy. Turmeric + BioPerine are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, 'iHerb', 'BioSchwartz'],
     sourcesGeneral: [`${CITE.bioschwartz} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -677,8 +666,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Nutricost Turmeric Curcumin 2300 = Clean. Official iHerb / HelloPharmacist other-ingredients: Hypromellose (cellulose) capsule + magnesium stearate (vegetable source). HPMC ± veg stearate only was the Clean gate. No SiO2 / dye / TiO2. Turmeric + BioPerine are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, 'Nutricost'],
     sourcesGeneral: [`${CITE.nutricost} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -714,8 +702,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(CITE.nowTurmeric, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: NOW Turmeric Curcumin (± BioPerine) veg caps = Caution. Driver is silicon dioxide (0-pt Caution cap). HPMC + calcium laurate are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap. Official NOWFoods.com / iHerb / PureFormulas other-ingredients: Hypromellose (cellulose capsule), Calcium Laurate and Silicon Dioxide. Turmeric + BioPerine are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, 'NOW'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.nowTurmeric} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -766,8 +753,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Doctor’s Best High Absorption Curcumin 1000 = Caution. Driver is silicon dioxide (0-pt Caution cap). Current DoctorsBest.com / Vitacost panel: MCC, sodium starch glycolate, vegetable magnesium stearate, silicon dioxide, hypromellose coating. Older stearic-acid / croscarmellose snapshots are a different unmatched formula — not this row. Do not invent Clean on the SiO2 cap. Pack sizes of this 1000 mg tablet share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, "Doctor's Best"],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.doctorsBest} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -803,8 +789,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(CITE.qunol1500, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Qunol Extra Strength Turmeric Curcumin Complex 1500 veg caps = Caution. Driver is silicon dioxide (0-pt Caution cap). Official Swanson / Vitacost / Target other-ingredients: vegetable hypromellose, magnesium stearate, and silicon dioxide. This is NOT the qunol.com Extra Strength 1000 hydro-soluble SKU (that row is written separately — gamma-cyclodextrin sits in the labeled 1000 mg complex) and NOT leftover cartons that still print oleoresin turmeric (those are refused). Do not invent Clean on the SiO2 cap. Pack sizes of this 1500 mg/3-cap formula share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, 'Qunol', 'Target'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.qunol1500} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -840,8 +825,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(CITE.qunol1000, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Qunol Extra Strength Turmeric Curcumin Complex 1000 / hydro-soluble (qunol.com) = Caution. Driver is silicon dioxide (0-pt Caution cap). Official other-ingredients: vegetable hypromellose, magnesium stearate and silicon dioxide. Gamma-cyclodextrin is named inside the labeled Bioenhanced Turmeric Complex (locked leftover Cleared token — not an Other-Ingredients string on this carton). Current official OI does not print oleoresin turmeric; leftover cartons that still print "oleoresin turmeric" are refused (oleoresin is NOT locked — do not alias). Distinct from the 1500 mg/3-cap row (different active strength / serving). Do not invent Clean on the SiO2 cap. Pack sizes of this 1000 mg/2-cap formula share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...AMAZON, 'Qunol'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.qunol1000} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -899,8 +883,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.healthwise, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: HealthWise Lidocaine 4% Patch = Avoid. Driver is titanium dioxide (High; no topical exception). DailyMed setid 31314dda Drug Facts: dihydroxyaluminium aminoacetate, edetate disodium, glycerin, hydroxyacetophenone, kaolin, polyacrylic acid, polysorbate 80, propylene glycol, PVP, sodium polyacrylate, tartaric acid, titanium dioxide, water. Backing / film is a patch device material — not a gradeable inactive; omitted, not a block. Own formulaId — do NOT clone WELMATE 4303fd30 (parabens) or e3b4f9b1 / cff71b75 (3-(2-ethylhexyloxy)propane-1,2-diol twin). Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -954,8 +937,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.welmateParaben, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: WELMATE Lidocaine 4% Patch (DailyMed 4303fd30 / NDC 73581-912) = Avoid. Drivers are methylparaben + propylparaben (High in every form, including patches). Titanium dioxide is also High. DailyMed Drug Facts: aluminum glycinate, glycerin, kaolin, methylparaben, polyacrylic acid, polysorbate 80, propylene glycol, propylparaben, PVP, sodium polyacrylate, tartaric acid, titanium dioxide, water. Own formulaId — do NOT clone HealthWise 31314dda and do NOT clone WELMATE 73581-911 / Amazon Basics e3b4f9b1 (those DF print 3-(2-ethylhexyloxy)propane-1,2-diol and have no parabens). Backing ignored. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -992,8 +974,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Rice hull', 'cleared', labelCite(CITE.naturewise, METH.riceHull)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: NatureWise Curcumin Turmeric 2250 = Caution. Driver is rice flour (locked exact Caution token; distinct from Cleared rice-hull / rice-bran / rice protein). ${RICE_FLOUR_TAP} Pullulan capsule is Cleared. Rice hull sits on the locked Cleared rice-hull family (distinct from rice flour). Official iHerb / Target other-ingredients: pullulan capsule, rice hull, rice flour. No SiO2 / dye / TiO2. Turmeric / ginger / BioPerine are labeled actives listed neutrally. Pack sizes (90 / 180 / 360) share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...AMAZON, 'Target', 'NatureWise'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.naturewise} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -1042,8 +1023,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.gsDual, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: GoodSense Dual Action APAP 250 / IBU 125 = Avoid. Drivers are talc + titanium dioxide (High). Ferric oxide yellow is the locked leftover Caution token (not the Avoid driver). Oral polyvinyl alcohol is now Cleared (oral-coating lock). Reuses formulaId `amazon-basic-care-dual-action-tio2-talc` — same OI+actives as the already-on-main Basic Care Dual Action row (7e27f5cb). That Basic Care row is not rewritten / not cloned. DailyMed setid b117358c (NDC 0113-5300). Sportpharm twin 3f4ade2c and Dual Action Back Pain 89476188 share this OI and are not extra Search rows. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: DUAL_ALTS,
     sourcesGeneral: [
@@ -1084,8 +1064,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.ha2z335, 'Sodium starch glycolate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: HealthA2Z Ibuprofen 200 NDC 69168-335 = Avoid. Drivers are talc + titanium dioxide (High). Iron oxide red is the locked leftover Caution token (exact string; distinct from ferric oxide red). DailyMed setid dd63b011 Drug Facts: corn starch, hypromellose, iron oxide red, magnesium stearate, microcrystalline cellulose, pregelatinized starch, silicon dioxide, sodium starch glycolate, talc, titanium dioxide, triacetin. Full current OI is now exact-covered. Not a rewrite of amazon-basic-care-ibuprofen-tio2 already on main (that SPL prints red iron oxide / yellow iron oxide — those strings stay ungraded; do not alias). Distinct from NDC 69168-382 (Yellow 6, no talc). Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -1141,8 +1120,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.gsKidsChew, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: GoodSense Children’s Ibuprofen 100 chew (DailyMed a8fc1b0c) = Avoid. Drivers are aspartame + FD&C Yellow #6 aluminum lake + soybean oil on this chew (gummy/chew seed-oil High). ${CHEW_OIL_TAP} Ammonium glycyrrhizin is the locked leftover Caution token (distinct from Cleared licorice extract). Succinic acid is the locked leftover Cleared token. Drug Facts: acesulfame potassium, ammonium glycyrrhizin, aspartame, carnauba wax, croscarmellose sodium, FD&C yellow no. 6 aluminum lake, hypromellose, magnesium stearate, mannitol, natural and artificial flavors, silicon dioxide, sodium lauryl sulfate, soybean oil, succinic acid. Phenylketonurics: phenylalanine 6 mg/tablet. Ages 2–11 (under 2: ask a doctor).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: KIDS_IBU_ALTS,
     sourcesGeneral: [
@@ -1194,8 +1172,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.gsLiqGel, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: GoodSense Ibuprofen liquid gels = Avoid. Drivers are FD&C Green #3 + titanium dioxide (High). Polyvinyl acetate phthalate is the locked leftover Caution token (not needed to reach Avoid). Drug Facts on DailyMed 0cb4b0ef (NDC 0113-4501 minis): ammonium hydroxide, caprylic and capric acid triglycerides, FD&C green No. 3, gelatin, isopropyl alcohol, lecithin, macrogol/PEG 400, polyethylene glycol, polyvinyl acetate phthalate, potassium hydroxide, propylene glycol, purified water, sorbitol sorbitan solution, titanium dioxide. Ammonium hydroxide is the locked exact Caution token (DF words — not aliased from structured AMMONIA). Distinct from amazon-basic-care-ibuprofen-liqui-gels already on main (do not clone). Ages 12+.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -1236,8 +1213,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.midol, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Midol Complete caplets = Avoid. Drivers are FD&C Blue #2 aluminum lake + titanium dioxide (High). Shellac is the locked leftover Cleared token (not a grade driver). DailyMed setid ce9e6acb Drug Facts: carnauba wax, croscarmellose sodium, FD&C blue #2 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, pregelatinized starch, propylene glycol, shellac, titanium dioxide, triacetin. Midol Complete Gelcaps are not this row (black iron oxide / ferrosoferric oxide is not an exact leftover lock). Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'midol.com'],
     cleanAlternatives: APAP_ALTS,
     sourcesGeneral: [
@@ -1299,8 +1275,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.amzLido, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Amazon Basics Pain Relief Patch with 4% Lidocaine = Avoid. Driver is titanium dioxide (High). DailyMed setid e3b4f9b1 Drug Facts print 3-(2-ethylhexyloxy)propane-1,2-diol — the locked exact ethylhexylglycerin alias Caution row (both strings written; not Avoid). Aluminum glycinate / IPBC / phenoxyethanol / polyacrylate are standalone Caution. Same OI+actives as WELMATE 73581-911 (cff71b75) — they share this formulaId (two Search rows). Do NOT clone HealthWise 31314dda or WELMATE 73581-912 paraben row (list 2). Backing ignored. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1367,8 +1342,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       cleared(SET.welmateEh, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: WELMATE Lidocaine 4% Pain Relieving Patch (NDC 73581-911 / DailyMed cff71b75) = Avoid. Same Drug Facts OI as Amazon Basics e3b4f9b1 — including printed 3-(2-ethylhexyloxy)propane-1,2-diol — so this row REUSES formulaId ${ID.amzLido} (not cloned). Do NOT merge into WELMATE 73581-912 (list 2 paraben Avoid) or HealthWise 31314dda. Backing ignored. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

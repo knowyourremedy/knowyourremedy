@@ -66,12 +66,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -80,9 +74,6 @@ const MINERAL_OIL_TAP =
 
 const CREAM_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. In this cream / stick / spray fill they are not that High rule. Named single oil as the base or fill is Cleared.';
-
-const ADHESIVE_IGNORE =
-  'Adhesive plaster / film / backing is a patch device material — not a gradeable inactive; omitted, not a block.';
 
 const MCT_UNLABELED_TAP =
   'Label says caprylic/capric triglyceride and does not name coconut. We mark that Limited because the source isn’t clear. This cream fill is not the gummy seed-oil High rule.';
@@ -658,8 +649,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: greenFourInactives(SET.greenGel),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relief Gel 4% = Avoid. Drivers are Blue 1 + Yellow 5 (synthetic dyes High). Remaining Drug Facts exact: aloe Cleared; burdock / arnica / boswellia / calendula / camellia / ilex / lemon balm botanical extracts Caution; camphor-as-inactive Caution; carbomer / glycerin / IPM / tocopheryl acetate / water Cleared; IPA Limited; silica is the SiO2 nanoparticle Caution cap; TEA Caution. Gel + Roll-On 4% share formulaId biofreeze-pain-relief-gel-4 (same OI + menthol 4%). Pack sizes (NDC 59316-102) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -681,8 +671,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: greenFourInactives(SET.greenRoll),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relief Roll-On 4% = Avoid. Same OI + menthol 4% as the green gel — shared formulaId biofreeze-pain-relief-gel-4. Drivers are Blue 1 + Yellow 5. Pack sizes (NDC 59316-205) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -705,8 +694,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: colorlessFourInactives(SET.colorlessGel),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Colorless Pain Relief Gel 4% = Caution. No High. Same botanical / camphor-inactive / silica / TEA / IPA stack as the green 4% gel minus Blue 1 + Yellow 5. Gel + Colorless Roll-On share formulaId biofreeze-colorless-gel-4. Pack sizes (NDC 59316-103) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -728,8 +716,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: colorlessFourInactives(SET.colorlessRoll),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Colorless Pain Relief Roll-On 4% = Caution. Same OI + menthol 4% as the colorless gel — shared formulaId biofreeze-colorless-gel-4. No High. Pack sizes (NDC 59316-206) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -764,8 +751,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.gel35, 'purified water USP'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relieving Gel 3.5% (older paraben SPL) = Avoid. Drivers are methylparaben (High in every form) + FD&C Blue #1 / Yellow #5. Unspecified herbal extract (ilex named in parentheses) is the locked herbal-extract Caution token. Camphor listed for scent is camphor-as-inactive Caution. ${PG_TOPICAL_TAP} Pack sizes (NDC 59316-101) share this formulaId. Distinct from the current 4% green gel (no paraben). Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -787,8 +773,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: proGreenFiveInactives(SET.proGel),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Gel 5% = Avoid. Drivers are Blue 1 + Yellow 5. Same botanical / silica / TEA / IPA stack as the 4% green gel minus camphor-as-inactive. Professional Gel + Professional Roll-On 5% share formulaId biofreeze-professional-gel-5 (same OI + menthol 5%). Do not clone the 4% green formulaId (that SPL lists camphor as inactive). Pack sizes (NDC 59316-115) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -810,8 +795,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: proGreenFiveInactives(SET.proRoll),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Roll-On 5% = Avoid. Same OI + menthol 5% as Professional Gel — shared formulaId biofreeze-professional-gel-5. Drivers are Blue 1 + Yellow 5. Pack sizes (NDC 59316-117) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -834,8 +818,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: proColorlessFiveInactives(SET.proColorGel),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Colorless Gel 5% = Caution. No High. Same botanical / silica / TEA / IPA stack as the 4% colorless gel minus camphor-as-inactive. Professional Colorless Gel + Colorless Roll-On 5% share formulaId biofreeze-professional-colorless-gel-5. Do not clone the 4% colorless formulaId. Pack sizes (NDC 59316-116) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -857,8 +840,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: proColorlessFiveInactives(SET.proColorRoll),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Colorless Roll-On 5% = Caution. Same OI + menthol 5% as Professional Colorless Gel — shared formulaId biofreeze-professional-colorless-gel-5. No High. Pack sizes (NDC 59316-118) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -881,8 +863,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: overnightGelInactives(SET.ovnGel, false),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Overnight Relief Gel 4% = Caution. Fragrance + botanical extracts are standalone Caution. Alcohol + IPA Limited. Carbomer interpolymer / aloe / glycerin / tocopherol acetate / water Cleared. No High. Distinct from Overnight Roll-On (that SPL adds colloidal silicon dioxide) — own formulaId. Pack sizes (NDC 59316-121) share this formulaId. Ages 2+ (2–12: use only under adult supervision; under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -904,8 +885,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: overnightGelInactives(SET.ovnRoll, true),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Overnight Relief Roll-On 4% = Caution. Same overnight botanical / fragrance / alcohol stack as the Overnight Gel plus colloidal silicon dioxide (SiO2 nanoparticle Caution cap). Own formulaId — do not clone the Overnight Gel. No High. Pack sizes (NDC 59316-207) share this formulaId. Ages 2+ (under 2: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -931,8 +911,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: denatoniumSprayInactives(SET.sprayDenat),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relief Spray 10.5% (denatonium) = Caution. Denatonium benzoate + botanical extracts/oils + tert-butyl alcohol are standalone Caution. Alcohol + IPA Limited. MSM / IPM / glycerin / water Cleared. No High. Consumer spray + Professional aerosol share formulaId biofreeze-pain-relief-spray-10-5-denatonium (same OI + menthol 10.5%). Distinct from the alcohol-denat. 10.5% spray (no denatonium / no tert-butyl alcohol). Pack sizes (NDC 59316-833) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -957,8 +936,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: denatoniumSprayInactives(SET.proAerosol),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Spray 10.5% (denatonium aerosol) = Caution. Same OI + menthol 10.5% as the consumer denatonium spray — shared formulaId biofreeze-pain-relief-spray-10-5-denatonium. No High. Pack sizes (NDC 59316-834) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -981,8 +959,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholDenatSprayInactives(SET.sprayAlc),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relief Spray 10.5% (alcohol denat., no denatonium) = Caution. Botanical extracts Caution. Alcohol denat. Limited. Dimethyl sulfone (MSM) / IPM / water Cleared. No High. Consumer spray + Professional spray + Precision Relief Pen share formulaId biofreeze-pain-relief-spray-10-5 (same OI + menthol 10.5%). Distinct from the denatonium 10.5% aerosol. Pack sizes (NDC 59316-114) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1004,8 +981,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholDenatSprayInactives(SET.proSprayAlc),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Spray 10.5% (alcohol denat.) = Caution. Same OI + menthol 10.5% as the consumer alcohol-denat. spray and the Precision Relief Pen — shared formulaId biofreeze-pain-relief-spray-10-5. No High. Pack sizes (NDC 59316-120) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1028,8 +1004,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholDenatSprayInactives(SET.pen),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Precision Relief Pen 10.5% = Caution. Same OI + menthol 10.5% as the alcohol-denat. 10.5% sprays — shared formulaId biofreeze-pain-relief-spray-10-5. Form (pen vs spray) is labeled, not a hard filter. No High. Pack sizes (NDC 59316-830) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1072,8 +1047,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Tert-Butyl Alcohol', 'cleared', dailymed(SET.proSpray13, METH.tertButyl)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Professional Spray 13% = Caution. Botanical extracts/oils + tert-butyl alcohol Caution. Alcohol + IPA Limited. MSM / IPM / glycerin / water Cleared. ${PG_TOPICAL_TAP} No High. Distinct from the 10.5% sprays (menthol 13% + PG on this SPL). Pack sizes (NDC 59316-835) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1119,8 +1093,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('PEG-4 Laurate', 'cleared', dailymed(SET.creamJar, METH.peg4)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Pain Relief Cream (jar) = Caution. Polysorbate 60 is Moderate (2 pts). Caprylic/capric triglyceride is unlabeled-MCT Limited. Alcohol / IPA / caprylyl glycol / sodium benzoate Limited. Ilex extract / IPBC / hydroxyacetophenone / phenoxyethanol / PEG-4 laurate standalone Caution. Grape seed oil is the named cream-vehicle Cleared oil (not gummy High). ${CREAM_OIL_TAP} No High. Distinct from Overnight Relief Cream (that SPL adds fragrance). Pack sizes (NDC 59316-869) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1167,8 +1140,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.ovnCream, METH.tocopherol)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Overnight Relief Cream = Caution. Fragrance + ilex extract / IPBC / hydroxyacetophenone / phenoxyethanol / PEG-4 laurate standalone Caution. Polysorbate 60 Moderate. Alcohol / IPA / unlabeled MCT / caprylyl glycol / sodium benzoate Limited. Grapeseed oil refined is the named cream-vehicle Cleared oil. ${CREAM_OIL_TAP} Own formulaId — do not clone the jar cream (that SPL has no fragrance). No High. Pack sizes (NDC 59316-870) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1215,8 +1187,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.foam, 'Water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Foam 7% = Caution. Botanical extracts + bis-PEG-10 dimethicone / PEG-12 dimethicone / PPG-24-glycereth-24 / hydroxyethyl cetyldimonium phosphate standalone Caution. Alcohol denat. Limited. Aloe / isopropyl palmitate / pentylene glycol / water Cleared. No High. Pack sizes (NDC 59316-991) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1253,8 +1224,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('stearic acid', 'cleared', dailymed(SET.stick, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Dry Stick 15% = Caution. Menthyl ethylamido oxalate is standalone Caution. Named fatty acids / C15-19 alkane / hydrogenated castor oil / oleic / stearic / tocopherol acetate Cleared. Paraffin + petrolatum are topical-occlusive Cleared. ${MINERAL_OIL_TAP} No High. Pack sizes (NDC 59316-230) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1278,8 +1248,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: tripleTargetInactives(SET.tripleRoll),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Triple Target Roll-On = Caution. Denatonium / ethylhexylglycerin / menthyl ethylamido oxalate / phenoxyethanol / steareth-2 / steareth-21 / tert-butyl alcohol / tetrasodium glutamate diacetate / TEA / acrylate crosspolymer standalone Caution. Alcohol / 1,2-hexanediol / caprylyl glycol Limited. Carbomer / glycerin / propanediol / water Cleared. No High. Roll-On + Gel share formulaId biofreeze-triple-target-roll-on (same OI + camphor 6% / capsaicin 0.05% / menthol 10%). Pack sizes (NDC 59316-208) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1303,8 +1272,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: tripleTargetInactives(SET.tripleGel),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Triple Target Gel = Caution. Same OI + actives as Triple Target Roll-On — shared formulaId biofreeze-triple-target-roll-on. No High. Pack sizes (NDC 59316-122) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1352,8 +1320,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Titanium Dioxide', 'high', dailymed(SET.mentholPatch, METH.tio2)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Menthol Pain Relief Patches (Large / XL) = Avoid. Driver is titanium dioxide (High; no topical exception). Botanical extracts / IPBC / ethylhexylglycerin / phenoxyethanol / dihydroxyaluminum aminoacetate / polyacrylate standalone Caution. Polysorbate 80 Moderate. 1,2-hexanediol Limited. ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} Large / XL pack sizes (NDC 59316-992) share this formulaId — one Search row. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1394,8 +1361,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Titanium Dioxide', 'high', dailymed(SET.ovnPatch, METH.tio2)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Overnight Relief Patches = Avoid. Driver is titanium dioxide (High). BKC / lauralkonium chloride / lavender oil / dihydroxyaluminum aminoacetate / polyacrylate standalone Caution. Polysorbate 80 Moderate. ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} Pack sizes (NDC 59316-005) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1445,8 +1411,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.flexStrip, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Flexible Relief Strip = Avoid. Driver is titanium dioxide (High). Botanical extracts / BKC / lauralkonium / nonoxynol-10 / dihydroxyaluminum aminoacetate / polyacrylate standalone Caution. Polysorbate 80 Moderate. ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} Pack sizes (NDC 59316-004) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1480,8 +1445,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.bengayCream, 'water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Bengay Ultra Strength Non-Greasy Cream = Caution. Lanolin + TEA standalone Caution. Polysorbate 80 Moderate. Glyceryl stearate SE / carbomer / disodium EDTA / KOH / stearic acid / water Cleared. No High. 57 g + 113 g pack sizes (NDC 69968-0538) share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1512,8 +1476,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.bengayGel, 'water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Bengay Vanishing Scent Gel = Caution. Camphor listed as inactive + DMDM hydantoin + isoceteth-20 standalone Caution. IPA Limited. PEG-40 hydrogenated castor oil sits on the locked polyoxyl castor oil Cleared row. Carbomer / NaOH / water Cleared. No High. Pack sizes (NDC 69968-0595) share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1563,8 +1526,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.bengayLido, 'water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Bengay 4% Lidocaine Tropical Jasmine Cream = Caution. Fragrance / AMP / AMPS / ceteth-10 phosphate / dicetyl phosphate / steareth-21 / phenoxyethanol / acrylate crosspolymer standalone Caution. Polysorbate 60 Moderate. SD alcohol 40-B + caprylyl glycol Limited. Glyceryl distearate / glyceryl monostearate / squalane / butylene glycol / dimethicone / cetostearyl alcohol / glycerin / water Cleared. No High. Pack sizes (NDC 69968-0614) share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1595,8 +1557,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.capzasinHp, 'water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Capzasin HP Arthritis Pain Relief Cream 0.1% = Caution. Benzyl alcohol as topical inactive is standalone Caution (does not change the oral population-split rule). PEG-40 stearate sits on the PEG-stearate Moderate row. Sorbitol Limited. Cetyl / glyceryl stearate / IPM / petrolatum / water Cleared. No High. Distinct from Capzasin Quick Relief Gel (batch 49, paraben Avoid). Pack sizes (NDC 41167-7514) share this formulaId. Ages 18+ (18 or younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1645,8 +1606,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Sodium Chloride', 'cleared', dailymed(SET.miExtremeGel, METH.nacl)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Mineral Ice Extreme Gel = Caution. Fragrance / AMP / ethylhexylglycerin / phenoxyethanol / phenethyl alcohol / polyacrylate crosspolymer-6 / acrylate crosspolymer (SPL spells Crosspolyer) standalone Caution. Alcohol denat. / sodium benzoate / caprylyl glycol Limited. ${PG_TOPICAL_TAP} Named salts / lysine / gluconolactone / calcium gluconate / water Cleared. No High. Distinct from batch 49 Mineral Ice Extreme Spray. Pack sizes (NDC 82632-253) share this formulaId. Ages 12+ (under 12: do not use, consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1678,8 +1638,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.miStick, METH.tocopherol)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Mineral Ice Extreme Dry Stick 16% = Caution. Fragrance + menthoxypropanediol standalone Caution. C15-19 alkane / hydrogenated castor oil / lauryl laurate / oleic / tocopheryl acetate Cleared. Paraffin + petrolatum topical-occlusive Cleared. ${MINERAL_OIL_TAP} SPL lists fragrance twice (including Fragrance @ 2.0%) — one fragrance Caution, not a second class. No High. Pack sizes (NDC 82632-250) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1701,8 +1660,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: plusLiquidInactives(SET.absPlusA),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Plus Extra Strength Liquid 4% = Avoid. Driver is FD&C Blue #1 (synthetic dye High). Acetone / chloroxylene (SPL spelling of chloroxylenol) / iodine / potassium iodide / thymol / calendula / echinacea / wormwood herb / wormwood oil standalone Caution. Water Cleared. Two setids (fd5d77fc-… NDC 69693-411 + 46f4ad3c-… NDC 69693-424) share this formulaId — one Search row. PRO Roll-On Liquid has the same OI + menthol 4% and shares this formulaId as a second Search row. Ages 2+ (under 2: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1724,8 +1682,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: plusLiquidInactives(SET.absProRoll),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. PRO Roll-On Liquid 4% = Avoid. Same OI + menthol 4% as Plus Extra Strength Liquid — shared formulaId absorbine-jr-plus-es-liquid. Driver is FD&C Blue #1. Pack sizes (NDC 69693-426) share this formulaId. Ages 2+ (under 2: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1772,8 +1729,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       ...botanicals(SET.absProCream, ['Zingiber officinale (ginger) root extract']),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. PRO Cream = Avoid. Driver is methylparaben (High in every form). Camphor leaf oil / ginger extract / Mentha arvensis leaf oil / fragrance / AMP / ceteth-20 phosphate / dicetyl phosphate / ethylhexylglycerin / steareth-21 / acrylate crosspolymer standalone Caution. SD alcohol 40 Limited. Aloe / bisabolol / cetearyl / glyceryl stearate / EDTA / water Cleared. Distinct from PRO No-Mess (no paraben on that SPL). Pack sizes (NDC 69693-418) share this formulaId. Ages 2+ (under 2: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1808,8 +1764,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       ...botanicals(SET.absNoMess, ['zingiber oficinale (ginger)']),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. PRO No-Mess Roll-On = Caution. Camphor leaf oil / ginger (SPL spelling zingiber oficinale) / Mentha arvensis leaf oil / fragrance / AMP standalone Caution. SD alcohol 40 Limited. Aloe / bisabolol / glycerin / hydroxyethylcellulose / water Cleared. No High. Distinct from PRO Cream (that SPL has methylparaben). Pack sizes (NDC 69693-419) share this formulaId. Ages 2+ (under 2: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1850,8 +1805,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       ...botanicals(SET.absProSpray, ['zingiber offcinale (ginger) root extract']),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. PRO Spray = Caution. Butane / isobutane / camphor-as-inactive / fragrance / Mentha arvensis leaf oil / ginger extract / phenoxyethanol standalone Caution. Alcohol denat. Limited. Safflower seed oil is the named single-oil fill (not gummy High). ${CREAM_OIL_TAP} Aloe (SPL spells barbadersis) / bisabolol / IPM / water Cleared. No High. Pack sizes (NDC 69693-420) share this formulaId. Ages 2+ (under 2: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1873,8 +1827,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: neckFamilyInactives(SET.absNeck),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Neck & Shoulder Patch 7.5% = Caution. Glyceryl hydrogenated rosinate / polyisobutylene / styrene/isoprene copolymer sit on the locked patch-adhesive Caution row. Hydrated silica is the locked topical Caution token. PEG-400 Moderate. Mineral oil topical-occlusive Cleared. ${MINERAL_OIL_TAP} No High. Neck + Back + Knee 7.5% menthol patches share formulaId absorbine-jr-neck-patch (same OI + menthol 7.5%). Pack sizes (NDC 69693-422) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1895,8 +1848,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: neckFamilyInactives(SET.absBack),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Back Patch 7.5% = Caution. Same OI + menthol 7.5% as the Neck & Shoulder and Knee 7.5% patches — shared formulaId absorbine-jr-neck-patch. No High. Pack sizes (NDC 69693-421) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1918,8 +1870,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     ],
     inactiveIngredients: neckFamilyInactives(SET.absKnee),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Pain Relieving Knee Patch 7.5% = Caution. Same OI + menthol 7.5% as the Neck & Shoulder and Back 7.5% patches — shared formulaId absorbine-jr-neck-patch. No High. Pack sizes (NDC 69693-423) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1968,8 +1919,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       cleared(SET.absUltra, 'water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Plus Ultra Strength Patch 6.5% = Avoid. Driver is titanium dioxide (High). Camphor-as-inactive / acrylate copolymer / silica / sodium polyacrylate / sodium polyacrylate starch / sorbitan oleate standalone Caution. Polysorbate 80 Moderate. Alcohol + sorbitol Limited. Pack sizes (NDC 69693-413) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1998,8 +1948,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('zinc oxide', 'cleared', dailymed(SET.absXl, METH.zno)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. XL Back Patch 5% = Avoid. Driver is titanium dioxide (High). ${ADHESIVE_IGNORE} dl-camphor as inactive / purified lanolin / spearmint (bare) standalone Caution. Aloe extract + zinc oxide (inactive) Cleared. Pack sizes (NDC 69693-412) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -2036,8 +1985,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Absorbine Jr. Plus Knee Patch = Caution. ${ADHESIVE_IGNORE} Eucalyptus leaf oil / gaultheria fragrantissima (wintergreen) oil / clove flower oil are locked fragrance/EO Caution tokens. No High. Distinct from the 7.5% menthol-only Knee Patch (different OI + actives). Pack sizes (NDC 69693-416) share this formulaId. Ages 12+ (12 or younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

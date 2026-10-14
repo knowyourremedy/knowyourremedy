@@ -139,9 +139,6 @@ function homeopathicFields() {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
-
 const CALMS_FORTE = 'hylands-calms-forte';
 
 // Independently Clean rows in THIS batch only. Form is labeled, not a hard
@@ -186,10 +183,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('63ce9942-a299-4d9b-b63b-35b297472dc9', 'Starch (corn and tapioca)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Hyland\'s Calms Forte tablets = Clean. Draft Clean on inactives (lactose, magnesium stearate, microcrystalline cellulose, corn and tapioca starch). Homeopathic tablets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Adult Sleep row; carton also has a 6–11 chart. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid 63ce9942-a299-4d9b-b63b-35b297472dc9 (draft, not verified)',
@@ -283,10 +277,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Genexa Acetaminophen PM Extra Strength = Caution (maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt → 2 pts). Do NOT apply the adult Genexa ES Clean maltodextrin exception. Organic sunflower oil / lecithin / palm olein are Cleared on this coated tablet (not a gummy). Rice hulls / organic rice bran extract / inulin / dibehenin (vegetable) are now §5 Cleared. Unspecified rice extract stays Limited opacity (not enough alone to Avoid). Stay under 4 g/day acetaminophen, same as any APAP. ' +
-      SEDATING +
-      ' Ages 12+ (under 12: ask a doctor).',
+
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -320,9 +311,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('7ae32d74-76a0-47e2-9e5c-812426413c4e', 'Sodium starch glycolate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Unisom SleepTabs = Avoid. FD&C Blue #1 aluminum lake is High-tier. Dose is one 25 mg tablet at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -370,9 +359,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('9105f4f1-7f94-408d-a025-83afb68dc9f0', 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Unisom SleepMelts = Avoid. Red 7 (High) plus sucralose (Moderate) and flavor (Limited). Mannitol is also Limited. Ethylcellulose / hydroxypropyl cellulose are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). Labeled 2 tablets (25 mg each) at bedtime. Ages 12+. Form: melt tablet vs Calms Forte swallowed tablet — labeled, not a hard filter (§6). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -424,9 +411,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('a9a44c2f-65eb-4a5a-9e72-43652dce57f7', 'Pregelatinized corn starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Unisom SleepMinis = Avoid. Blue #1 + Red #3 + titanium dioxide (High) and polysorbate 80 (Moderate). Red 3 remains High after the 2025 FDA revocation. Labeled 2 mini-capsules (50 mg) at bedtime. Ages 12+. ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -472,9 +457,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('451daeeb-88a9-44b1-9a2d-1ff0b0ec41cb', 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Unisom PM Pain = Avoid. Blue #1 lake is High-tier. Carton also lists magnesium silicate (talc — High; IARC 2A) and silica (SiO2 nanoparticle Caution cap, 0 pts). Mineral oil is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake) — not required to reach Avoid. One caplet at bedtime (APAP 325 mg + DPH 50 mg); do not exceed 1 caplet / 24 hours. Stay under 4 g/day acetaminophen from all sources. Ages 12+ (this adult product: do not use under 12). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -530,9 +513,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('0b2777be-85d4-443d-b65f-6750e0ba97ba', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: ZzzQuil LiquiCaps = Avoid. Dyes + titanium dioxide + PEG. Cited convenience-pack SPL 0b2777be (Lil\' Drug Store); P&G national LiquiCaps twin ad4babdb is the same dyes / TiO2 / PEG Avoid family. Shellac / simethicone / sorbitan are ungraded appearance / processing aids (not the Avoid drivers). Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -602,9 +583,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('05f77c69-c8ea-f8ba-e063-6394a90aa60f', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: ZzzQuil dyed liquid = Avoid. Blue #1 + Red #40 plus sucralose and saccharin. Alcohol is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake) — not the Avoid driver. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -665,9 +644,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('01906eed-78ee-f2a1-e063-6294a90a809b', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: ZzzQuil FREE OF artificial dyes = Avoid (dye-free trap). Sucralose + oral PG + saccharin + flavor + benzoate. Dye-free is not Clean. Polysorbate 20 is also Moderate (v1.6, same gut-barrier signal as PS80). One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -747,9 +724,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('0f8a8291-7468-735e-e063-6394a90a6643', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: ZzzQuil Soothing Sleep = Avoid. Multi dyes (Yellow 10 / Green 3 / Red 40 / Yellow 6) plus oral PG, saccharin, and flavors. Honey / chamomile sit inside the flavor declaration (Limited opacity) — not a Clean honey syrup. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -797,9 +772,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Simply Sleep = Avoid. Blue #1 lake + titanium dioxide + PEG + polysorbate 80. Labeled 2 caplets at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -847,9 +820,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('f70ce1a6-c334-025e-e053-6294a90ae53f', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Sominex = Avoid. Blue #1 + titanium dioxide + talc. SiO2 is the nanoparticle Caution cap (0 pts), not the Avoid driver. Light mineral oil / triacetin are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). Sominex Max (DailyMed setid e8f6991f, diphenhydramine 50 mg) is the same Blue #1 / TiO2 / talc demerit family — not a second formulaId. Medtech original SPL f7858ecf shares the same inactives. Ages 12+. ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -901,9 +872,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('435b1a31-353d-af20-e063-6294a90aa907', 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Tylenol PM Extra Strength = Avoid. Blue #1 lake + titanium dioxide + PEG + polysorbate 80. Labeled 2 caplets at bedtime; stay under 4 g/day acetaminophen from all sources. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -951,9 +920,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('405afdb4-c157-1d88-f232-848063ba4714', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Advil PM Liqui-Gels = Avoid. Red #33 + Blue #1 + PEG. Medium-chain triglycerides are on the SPL (not a gummy; not the seed/industrial-oil High rule). Pharmaceutical ink is ungraded appearance ink. Ages 12+. NSAID — take with food or milk if stomach upset; cleanliness grade only. ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1008,9 +975,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('52c67ae0-707c-851b-e063-6294a90afda4', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Advil PM caplets = Avoid. Blue #2 aluminum lake is High-tier. SPL also lists titanium dioxide (High) and PEG (Moderate). Silicon dioxide is the nanoparticle Caution cap (0 pts) — not a sole-Caution product. SLS is standalone Caution (irritant class, not additive-scored) and is not the Avoid driver. Diphenhydramine citrate 38 mg is the labeled PM-citrate salt (about 25 mg DPH HCl equivalent). Labeled 2 caplets at bedtime. Ages 12+. ' +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1043,9 +1008,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('24a0144d-cbfc-4d2f-873d-86adfa0468ca', 'Sodium starch glycolate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: up&up doxylamine SleepTabs analog = Avoid. Blue #1 aluminum lake — Unisom SleepTabs store twin, separate formulaId because the calcium-phosphate pair is listed both anhydrous and dihydrate. One tablet at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['Target'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1095,9 +1058,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('3d3f2e0c-e141-d49f-e063-6394a90ad0e6', 'Glycerin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Nighttime Sleep-Aid softgels = Avoid. Dyes + titanium dioxide + PEG (ZzzQuil LiquiCaps store analog). Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['Walmart'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1154,9 +1115,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('6e162152-b414-470c-b146-649d99870577', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Nighttime Sleep Aid tablets = Avoid. Dye lakes + PEG. Structured SPL also lists titanium dioxide and talc (both High) — same Avoid family, not a second grade. SiO2 is the Caution cap (0 pts). Labeled 2 caplets at bedtime. Ages 12+. ' +
-      SEDATING,
+
     retailers: ['Walmart'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1212,9 +1171,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('0ab5a374-d565-4385-bee3-538a8f09b19e', 'Sodium citrate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: up&up Nighttime Sleep Aid liquid = Avoid. Dyes + oral PG + saccharin. High-fructose corn syrup is on the locked carton (setid 0ab5a374) and is parked per Methodology §5 — notes only, never graded, not an Avoid driver. Alcohol and poloxamer 407 are also on that label and are not in Methodology §5 (ungraded; not the Avoid drivers). DailyMed v2 XML for 0ab5a374 is no longer published; this row uses the DailyMed HTML label snapshot for that setid. A later Target liquid SPL 0d1771df is a different sucralose / no-PG formula — not this row. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['Target'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1275,9 +1232,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('9f944edc-a317-4967-ae54-67b5d183591b', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: CVS Nighttime Sleep-Aid liquid dyed = Avoid. Blue #1 + Red #40 plus sucralose and flavor. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1328,9 +1283,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('03f521f4-d35f-4f66-b3ad-7e58a244eb93', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: CVS Health Nighttime Sleep Aid no-FD&C = Avoid, not Caution. Sucralose plus flavor / sodium benzoate / sorbitol (Moderate + Limited stack). Dye-free / no-FD&C is not Clean and is not parked at Caution. Berry-flavor alcohol-free liquid. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: ['CVS'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [

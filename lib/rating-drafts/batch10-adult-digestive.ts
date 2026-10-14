@@ -196,9 +196,6 @@ function homeopathicFields() {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const ALOH_NOTE =
-  'Aluminum hydroxide is a locked Methodology v1.6 active-safety Caution cap — not a §5 inactive-table row. Long-term use can deplete phosphate / contribute to osteomalacia even with normal kidneys; accumulation / encephalopathy risk is higher in CKD / dialysis; infants are a labeled risk population. Alzheimer\'s link is unproven (weak/contested). NOT Avoid for typical short-term antacid use on the active alone.';
-
 const ALOH_FLAG: ActiveSafetyFlag = {
   description:
     'Long-term phosphate depletion / osteomalacia; CKD and infant accumulation risk — Caution cap. NOT Avoid for typical short-term antacid use',
@@ -330,10 +327,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ACIDCALM, 'Magnesium stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron AcidCalm meltaway = Clean. Draft Clean on inactives (croscarmellose sodium, lactose, magnesium stearate). Homeopathic meltaway tablets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_ACIDCALM} (draft, not verified)`,
@@ -364,10 +358,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_NAUSEACALM, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron NauseaCalm pellets = Clean. Draft Clean on inactives (lactose + sucrose). Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Adult Digestive row; carton also has a 2+ chart.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_NAUSEACALM} (draft, not verified)`,
@@ -398,10 +389,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MOTIONCALM, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron MotionCalm pellets = Clean. Draft Clean on inactives (lactose + sucrose). Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Adult Digestive row; carton also has a 2+ chart.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_MOTIONCALM} (draft, not verified)`,
@@ -433,8 +421,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Phillips Original Milk of Magnesia = Clean IF the two-inactive list holds (purified water + sodium hypochlorite). DailyMed setid 0a57bb45 matches that list. Sodium hypochlorite is not in Methodology §5 and is not graded on the spot (v1.6 intake) — mentioned here, not used to invent a flag. Fresh Mint and Wild Cherry are separate formulaIds (Caution / Avoid). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_PHILLIPS_ORIG} (draft, not verified)`,
@@ -464,8 +451,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ALKA_GOLD, 'Magnesium stearate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Alka-Seltzer Gold = Caution. Mannitol is Limited (1 pt). Magnesium stearate is Cleared-class. A single Limited-risk additive is not Clean — do not upgrade. Aspirin-free Gold formula (citric acid / bicarbonates), not original Alka-Seltzer. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_ALKA_GOLD} (draft, not verified)`],
@@ -501,8 +487,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ROLAIDS_MINT, 'Sucrose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Rolaids Ultra/ES Mint = Caution (sucralose + flavor + SiO2). Raw demerit math is sucralose 2 + flavor 1 + maltodextrin 1 = 4 → Avoid; draft follows the approved Caution call. Silicon dioxide is the nanoparticle Caution cap (0 pts), not a softener and not the driver. Assorted Fruit / Advanced Berry dyed twins are separate Avoid rows. Ages 12+ (typical adult antacid chart).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_ROLAIDS_MINT} (draft, not verified)`],
@@ -531,8 +516,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PHILLIPS_MINT, 'Sodium hypochlorite'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Phillips Fresh Mint MOM = Caution (flavor + saccharin). Raw 1+2 math is 3 pts Avoid — draft follows the approved Caution call. Mineral oil appears on the SPL and is not in Methodology §5 (ungraded; v1.6 intake) — not the Caution driver. Original unsweetened MOM is the independently Clean twin. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PHILLIPS_MINT} (draft, not verified)`],
@@ -577,10 +561,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     ],
     activeSafetyFlag: ALOH_FLAG,
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Gaviscon Extra Strength Cool Mint liquid = Caution. Dye-free mint inactives confirmed on DailyMed setid 2d74e5bc Extra Strength Cool Mint panel (benzyl alcohol, edetate disodium, glycerin, natural and artificial flavors, purified water, simethicone emulsion, sodium alginate, sodium saccharin, sorbitol, xanthan gum). Floor is Caution from aluminum hydroxide — ' +
-      ALOH_NOTE +
-      ' Raw sucralose-class math is saccharin 2 + flavor 1 + sorbitol 1 = 4 → Avoid; draft follows the approved Caution / AlOH-floor call. Regular Strength dyed panel on the same SPL is a separate Avoid formulaId. Extra Strength Cherry liquid panel is dye-free like Cool Mint (same inactives) — not a separate row. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [
@@ -614,10 +595,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     ],
     activeSafetyFlag: ALOH_FLAG,
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Gaviscon Extra Strength tablets (plain, not Cherry) = Caution. Plain Extra Strength panel: alginic acid, calcium stearate, flavor, sodium bicarbonate, sucrose; may contain stearic acid / starch; contains sorbitol or mannitol. Flavor + sugar alcohol = Limited stack; floor is Caution from aluminum hydroxide. ' +
-      ALOH_NOTE +
-      ' Cherry Ace-K carton is a separate Avoid formulaId. Alginic acid / sodium alginate are not in Methodology §5 (ungraded; v1.6 intake). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [
@@ -652,8 +630,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_IMODIUM_CAP, 'Pregelatinized starch'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Imodium A-D caplets = Caution (PEG Moderate, 2 pts). Softgels / liquid / Multi-Symptom are separate Avoid formulaIds. Contains lactose. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IMODIUM_CAP} (draft, not verified)`],
@@ -683,8 +660,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLANTA_GAS, 'Tricalcium phosphate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Mylanta Gas Minis = Caution (sucralose + flavors + silica). Raw 2+1+maltodextrin/isomalt math is Avoid — draft follows the approved Caution call. Silicon dioxide is the 0-pt nanoparticle cap. Hydroxypropyl cellulose is on the SPL and is not independently graded in §5 (ungraded; not the driver). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_MYLANTA_GAS} (draft, not verified)`],
@@ -713,8 +689,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_EMETROL_CHEW, 'Sodium carboxymethylcellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Emetrol Chewables = Caution (sucralose + flavor + silica). Mixed Berry twin (setid 4965fab0) shares the same sucralose / flavor / silica demerit family — one row. Raw 2+1 math is Avoid — draft follows the approved Caution call. Cherry liquid is a separate Avoid formulaId. Ages 12+ adult row (carton charts may run younger).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_EMETROL_CHEW} (draft, not verified)`],
@@ -745,8 +720,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_TUMS_ULTRA, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Tums Ultra fruit-dyed = Avoid. Assorted Fruit panel (setid f4786707) lists Blue #1 / Red #40 / Yellow #5 / Yellow #6 lakes plus talc — each High-tier. Assorted Tropical Fruit panel on the same SPL drops Blue #1 but keeps dye lakes + talc (same Avoid family). A separate Ultra SPL (c544120f) is also dye lakes + talc. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_TUMS_ULTRA} (draft, not verified)`],
@@ -777,8 +751,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_TUMS_SMOOTH, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Tums Smoothies = Avoid (dye lakes High). Berry Fusion / Mixed Berry panel on the same SPL keeps Blue #1 + Red #40 lakes. Extra Strength Smoothies (setid 11078d7c) is a dye-free talc carton — still Avoid (talc High); same Avoid family, different formula, not merged. Contains soy on some Smoothies panels. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_TUMS_SMOOTH} (draft, not verified)`],
@@ -813,8 +786,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_TUMS_CHEWY, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Tums Chewy Bites = Avoid. Haleon multi-flavor SPL (72ac000c) carries dye lakes, titanium dioxide, and methylparaben / propylparaben — any one is High-tier. Corn / vegetable oil and coconut oil appear on Chewy Bites SPLs; this is a chew, not a gummy, so the seed/industrial-oil High gummy rule is not applied. Wintermint / Orange-and-Cream twins stay Avoid on dyes and/or TiO2 / parabens. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_TUMS_CHEWY} (draft, not verified)`],
@@ -852,8 +824,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ROLAIDS_FRUIT, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Rolaids Ultra Assorted Fruit = Avoid (dye lakes High). Advanced Wild Berry / Mixed Berry (setids 07649a83 / 3884c05a) add Blue #1 / Red #40 lakes — same Avoid demerit family; notes cover those twins. Mint Ultra is the separate Caution formulaId. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_ROLAIDS_FRUIT} (draft, not verified)`],
@@ -882,8 +853,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PHILLIPS_CHERRY, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Phillips Wild Cherry MOM = Avoid. D&C Red #28 is High-tier. Original unsweetened MOM is the independently Clean twin. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PHILLIPS_CHERRY} (draft, not verified)`],
@@ -922,9 +892,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     ],
     activeSafetyFlag: ALOH_FLAG,
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Gaviscon Regular Strength liquid = Avoid. AlOH Caution floor is overridden by D&C Yellow #10 + FD&C Blue #1 (High). Regular Strength panel on setid 2d74e5bc: benzyl alcohol, D&C yellow #10, edetate disodium, FD&C blue #1, flavor, glycerin, saccharin sodium, sodium alginate, sorbitol, water, xanthan gum. Extra Strength Cool Mint on the same SPL is the separate dye-free Caution formulaId. ' +
-      ALOH_NOTE,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [
@@ -965,9 +933,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     ],
     activeSafetyFlag: ALOH_FLAG,
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Gaviscon ES Cherry tablets = Avoid (separate formulaId from plain ES tablets). Extra Strength Cherry panel: Ace-K (Moderate 2) + artificial flavor (1) + mannitol (1) = 4 pts Avoid; AlOH cap does not save a High/3+ additive stack. Plain ES tablets remain the Caution twin. ' +
-      ALOH_NOTE,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [
@@ -997,8 +963,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPCID_AC, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepcid AC Original Strength = Avoid. Titanium dioxide and talc coatings are each High-tier. Red iron oxide is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake) — Avoid already stands on TiO2 / talc. Pepcid Complete is skipped. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPCID_AC} (draft, not verified)`],
@@ -1026,8 +991,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPCID_MAX, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepcid AC Maximum Strength = Avoid. Titanium dioxide + talc coating (High). Icy Cool Mint is a separate dyed / sucralose formulaId. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPCID_MAX} (draft, not verified)`],
@@ -1059,8 +1023,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPCID_ICY, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepcid AC Icy Cool Mint = Avoid. Titanium dioxide, Blue #1 lake, and talc are each High-tier; sucralose / PEG / PS80 stack on top. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPCID_ICY} (draft, not verified)`],
@@ -1094,8 +1057,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_EQUATE_FAM, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Famotidine = Avoid (TiO2 ± talc coating). Representative 20 mg film-coat SPL 8ac94821. A mint / sucralose Equate 20 mg twin (setid f38f8a8f: Blue #1 lake + sucralose + TiO2) is the same Avoid family — confirm the bottle. 10 mg Equate (15973213) is also TiO2 + talc. Polyvinyl alcohol is on the SPL and is not in Methodology §5 (ungraded). Ages 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_EQUATE_FAM} (draft, not verified)`],
@@ -1130,8 +1092,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PRILOSEC, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Prilosec OTC = Avoid. Titanium dioxide + talc + PEG coating. Wildberry twin (setid 35a79458) adds Blue #2 / Red #40 lakes + saccharin — still Avoid. Methacrylic acid copolymer / polyvinyl alcohol / acetyl tributyl citrate are delayed-release housekeeping and are not in Methodology §5 (ungraded; not the Avoid drivers). Nexium / Prevacid OTC are skipped. Labeled 18+ (children under 18: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PRILOSEC} (draft, not verified)`],
@@ -1162,8 +1123,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_IMODIUM_SOFT, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Imodium A-D softgels = Avoid. FD&C Blue #1 is High-tier (setid 31bfcbb4). BHA on the same SPL is also High. Caplets are the separate PEG Caution formulaId. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IMODIUM_SOFT} (draft, not verified)`],
@@ -1195,8 +1155,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_IMODIUM_LIQ, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Imodium A-D liquid = Avoid (dyes + sucralose + TiO2). Undisclosed-class caramel color is also High (v1.6 class-split). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IMODIUM_LIQ} (draft, not verified)`],
@@ -1230,8 +1189,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_IMODIUM_MULTI, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Imodium Multi-Symptom Relief = Avoid. Ace-K (Moderate 2) + flavor (Limited 1) = 3 pts Avoid. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IMODIUM_MULTI} (draft, not verified)`],
@@ -1265,8 +1223,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPTO_CAP, 'Sodium starch glycolate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepto-Bismol caplets = Avoid (pink dye lake High). Ultra caplets (setid 63283ebc) use the same Red #27 lake family. Contains salicylate — Reye warning is standard-of-care, not a cleanliness flag. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPTO_CAP} (draft, not verified)`],
@@ -1303,8 +1260,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPTO_CHEW, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepto-Bismol chewables = Avoid. Red #27 lake and talc are each High-tier. Contains salicylate — Reye warning is standard-of-care, not a cleanliness flag. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPTO_CHEW} (draft, not verified)`],
@@ -1332,8 +1288,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPTO_LIQ, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepto-Bismol liquid = Avoid (pink dye lakes High). Cherry / Ultra liquids (setids 67382f40 / 673893bd) keep D&C Red #22 / #28 — same Avoid family. Gellan gum / magnesium aluminum silicate are not in Methodology §5 (ungraded). Contains salicylate — Reye warning is standard-of-care. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PEPTO_LIQ} (draft, not verified)`],
@@ -1360,8 +1315,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_UPUP, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Store bismuth (up&up 5-Symptom Digestive Relief chewables) = Avoid (red lake + sucralose). Setid 7f6b2960. A swallow-tablet twin (6462e224) is Red #27 lake + SLS (SLS is standalone Caution, not the driver) — still Avoid; confirm the bottle. Contains salicylate. Ages 12+.',
+
     retailers: ['Target'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_UPUP} (draft, not verified)`],
@@ -1389,8 +1343,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GASX_MAX, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Gas-X Maximum Strength softgels = Avoid (TiO2 + dyes). Extra Strength 125 mg softgels (setid fa4a3b07) also use dyes + TiO2 — same Avoid family. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_GASX_MAX} (draft, not verified)`],
@@ -1420,8 +1373,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GASX_ULT, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Gas-X Ultimate Strength softgels = Avoid (Red #27 lake High). Medium-chain triglycerides appear on the SPL and are not in Methodology §5 (ungraded; not a gummy seed-oil High). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_GASX_ULT} (draft, not verified)`],
@@ -1460,8 +1412,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GASX_CHEW, 'Dextrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Gas-X Extra Strength chewables = Avoid (dye lakes High). Cherry/flavor twin SPL 7ce312ca is Red #30 lake + flavor + maltodextrin — same Avoid family. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_GASX_CHEW} (draft, not verified)`],
@@ -1488,8 +1439,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PHAZYME, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Phazyme Fast Gels = Avoid (dyes + TiO2). Representative 250 mg Fast Gel / Maximum Strength SPLs 470d2ea9 / ef3cb514. Ultra Strength 180 mg (Yellow #6) and Ultimate 500 mg (Blue #1) stay Avoid on dyes. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_PHAZYME} (draft, not verified)`],
@@ -1524,8 +1474,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_DRAM_LD, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Dramamine Less Drowsy = Avoid (Yellow #10 lake High). Kids Dramamine is skipped. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: MOTION_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_DRAM_LD} (draft, not verified)`],
@@ -1564,8 +1513,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_DRAM_OR, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Dramamine Chewable Orange = Avoid. Yellow #6 lake and BHT are each High-tier (locked). Kids Dramamine is skipped. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: MOTION_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_DRAM_OR} (draft, not verified)`],
@@ -1598,8 +1546,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_BONINE, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Bonine = Avoid (Red #40 lake High). Bonine Kids is skipped. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: MOTION_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_BONINE} (draft, not verified)`],
@@ -1629,8 +1576,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_EMETROL_LIQ, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Emetrol Cherry liquid = Avoid (Red #40 + methylparaben). Chewables are the separate Caution formulaId. Ages 12+ adult row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_EMETROL_LIQ} (draft, not verified)`],
@@ -1661,8 +1607,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_NAUZENE, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Nauzene Chewables = Avoid (dye + aspartame). Setid a60660b2. Ginger Honey twin (setid 25c9825d) is D&C Yellow #10 lake + sucralose + flavors — same Avoid family, different formula; notes cover the twin. Phenylketonurics: aspartame. Ages 12+ adult row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
     sourcesGeneral: [
@@ -1717,8 +1662,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Culturelle Digestive Daily = Avoid (TiO2 on supplement labels). Cited carton: Culturelle Canada brand page and US retailer labels (Stop & Shop) list titanium dioxide (color) with inulin, HPMC, sucrose, maltodextrin, sodium ascorbate, magnesium stearate, and silicon dioxide. Current culturelle.com US page describes a purple-carrot-concentrate capsule and does not list TiO2 — that is a different formula, not this row; do not invent Clean for the purple-carrot carton. Inulin is not in Methodology §5 (ungraded). Ages 12+ (brand directions).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [
@@ -1780,8 +1724,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Align Daily Probiotic = Avoid (TiO2 on supplement labels). Costco / grocery other-ingredients lists include microcrystalline cellulose, hypromellose, sucrose, magnesium stearate, sodium caseinate, titanium dioxide (color), trisodium citrate, propyl gallate, and gellan gum. Food Lion / Stop & Shop short lists still name titanium dioxide (color). Propyl gallate is also High when present. Contains milk (sodium caseinate). Brand site does not publish a full other-ingredients panel — retailer labels are the cite. Optional probiotic gummy with seed oil was skipped (no concrete SKU). Typical adult capsule; 18+ aisle.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
     sourcesGeneral: [

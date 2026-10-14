@@ -66,17 +66,8 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
-
-const PEG120_TAP =
-  'PEG-120 methyl glucose dioleate sits on the existing PEG Moderate family row (ethylene-oxide / 1,4-dioxane). It is not the Cleared plain methyl glucose dioleate row.';
 
 const METH = {
   dyes:
@@ -196,8 +187,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: hydrogelPatchInactives(SET.tbPatch),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Patch = Caution. Polysorbate 80 is Moderate; sorbitol is Limited; eucalyptus oil / sorbitan monooleate are standalone Caution; silicon dioxide is the 0-pt Caution cap. CMC / glycerin / tartaric acid / water Cleared. No High. Mentha oil is not on the current DailyMed OI (setid ${SET.tbPatch}) — that was the PR #93 refuse string. DailyMed OI + actives match Tiger Balm Pain Relieving Hydrogel Patch (setid ${SET.tbHydro}) — shared formulaId ${ID.tbPatch}, two Search rows. Pack sizes share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -224,8 +214,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: hydrogelPatchInactives(SET.tbHydro),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Hydrogel Patch = Caution. OI + actives match Tiger Balm Pain Relieving Patch (setid ${SET.tbPatch}) — one formulaId, two Search rows. Mentha oil is not on the current DailyMed OI. Distinct from Hydrogel Large (setid 064d04ca — refused; methyl acrylate still missing from §5) and from the Cool / regular / wider hydrogel SPLs (Mentha arvensis leaf oil + dihydroxyaluminum aminoacetate still missing). Pack sizes share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -263,8 +252,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.tbVanish, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Neck & Shoulder Rub (vanishing scent) = Avoid. Drivers are FD&C Blue No. 1 + methylparaben + propylparaben (High). PEG-120 methyl glucose dioleate is Moderate (PEG family — not Cleared plain methyl glucose dioleate). ${PEG120_TAP} Diazolidinyl urea / eucalyptus / trolamine are standalone Caution. PVM/MA Decadiene Crosspolymer is not on the current DailyMed OI (setid ${SET.tbVanish}) — that was the PR #93 refuse string. Own formulaId — do not clone tiger-balm-neck-shoulder-rub (carbomer / dementholised mint / lavender / plain methyl glucose dioleate SPL). Pack sizes (NDC 66761-341) share this formulaId. Ages 12+ (12 or younger: ask a doctor). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

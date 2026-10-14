@@ -154,21 +154,6 @@ function dyeFreeFlags(): IngredientFlag[] {
   ];
 }
 
-const ULTRA_NOTE =
-  'Avoid. Drivers are D&C red no. 27 aluminum lake and titanium dioxide. Carnauba wax is Caution. Polyethylene glycol and polysorbate 80 are Moderate. Croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, and microcrystalline cellulose are Cleared. The older uncounted ultratabs row omitted dibasic calcium phosphate and stored carnauba wax as Cleared, so this line is a new formula. Adult minimum age on this row is 12. The label also lists one tablet for ages 6 to under 12. Not a store brand. Not a multi-box kit.';
-
-const EXTRA_NOTE =
-  'Avoid. Driver is titanium dioxide. This 50 mg tablet line has no red lake. Carnauba wax is Caution. Polyethylene glycol and polysorbate 80 are Moderate. Croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, and microcrystalline cellulose are Cleared. Ages 12+. Children under 12: do not use. Not the 25 mg Ultratabs line.';
-
-const LIQUI_NOTE =
-  'Caution. Drivers are polyethylene glycol and sorbitol. Gelatin, glycerin, and purified water are Cleared. The capsule imprint is dye-free ink, not a separate inactive. No High inactive, so this is not Avoid. The printed line matches the older liqui-gel formula. Adult minimum age on this row is 12. The label also lists one capsule for ages 6 to under 12.';
-
-const CONG_NOTE =
-  'Avoid. Drivers are FD&C blue no. 1 aluminum lake, talc, and titanium dioxide. Carnauba wax and modified starch are Limited. Polyethylene glycol is Moderate. Magnesium stearate, microcrystalline cellulose, polyvinyl alcohol, powdered cellulose, pregelatinized starch, and sodium starch glycolate are Cleared. Actives are diphenhydramine HCl 25 mg and phenylephrine HCl 10 mg. Ages 12+. Children under 12: ask a doctor.';
-
-const DYE_FREE_NOTE =
-  'Caution. Drivers are saccharin sodium, flavors, sodium benzoate, and sorbitol solution. Anhydrous citric acid, carboxymethylcellulose sodium, glycerin, sodium citrate, and purified water are Cleared. Dye-free is not Clean. No High inactive, so this is not Avoid. The printed line matches the older dye-free formula. Ages 6+. Ages 2 to 5: do not use unless directed by a doctor. Under 2: do not use.';
-
 const ULTRA_PANEL =
   'DailyMed setid 702f9786-7ce9-43e4-921d-e1db09612127 (Kenvue, SPL effective June 4, 2012, label version published July 31, 2026). Active: diphenhydramine HCl 25 mg. Inactive ingredients: carnauba wax, croscarmellose sodium, D&C red no. 27 aluminum lake, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide.';
 
@@ -200,7 +185,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: ultraFlags(),
     verdict: 'avoid',
-    honestNote: ULTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -222,7 +207,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: ultraFlags(),
     verdict: 'avoid',
-    honestNote: ULTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -244,7 +229,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: ultraFlags(),
     verdict: 'avoid',
-    honestNote: ULTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -266,7 +251,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: ultraFlags(),
     verdict: 'avoid',
-    honestNote: ULTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -288,7 +273,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '50 mg' }],
     inactiveIngredients: extraFlags(),
     verdict: 'avoid',
-    honestNote: EXTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -310,7 +295,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: liquiFlags(),
     verdict: 'caution',
-    honestNote: LIQUI_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -335,7 +320,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     ],
     inactiveIngredients: congFlags(),
     verdict: 'avoid',
-    honestNote: CONG_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -357,7 +342,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyeFreeFlags(),
     verdict: 'caution',
-    honestNote: DYE_FREE_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -379,7 +364,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyeFreeFlags(),
     verdict: 'caution',
-    honestNote: DYE_FREE_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

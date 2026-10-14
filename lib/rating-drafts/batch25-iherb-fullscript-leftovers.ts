@@ -171,9 +171,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / bisglycinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
 const PE_PROBIOTIC_GI_ID = 'pure-encapsulations-probiotic-gi';
 const SEEKING_HEALTH_MULTI_ID = 'seeking-health-optimal-multivitamin';
 
@@ -270,8 +267,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       labelCleared(PE_PROBIOTIC_GI_CITE, 'Vegetarian capsule (cellulose, water)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Probiotic G.I. = Clean. Current US iHerb / Fullscript / DSLD 207959 other-ingredients: hypoallergenic plant fiber (cellulose), vegetarian capsule (cellulose, water). That matched current US list has no rice starch, no gellan, and no silicon dioxide — Cleared-only → Clean. Do NOT use older rice-starch PDFs / leftover retailer panels; those are a different formula, not this row. No gellan grade is invented (gellan products, including PE Probiotic 50B, stay FLAG / skip). Cleanliness grade only; no efficacy claim. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_PROBIOTIC_GI_CITE} — draft, not verified; current US label only; do not use older rice-starch PDFs; no DailyMed drug SPL`,
@@ -303,9 +299,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Seeking Health Optimal Multivitamin (240 caps) = Clean. Matched iHerb / Fullscript other-ingredients: vegetarian capsule (hypromellose and water), microcrystalline cellulose, ascorbyl palmitate — no silicon dioxide. Hypromellose / water / MCC are Cleared. Ascorbyl palmitate is Cleared (v1.6 antioxidant lock). Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${SEEKING_HEALTH_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -346,9 +340,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations O.N.E. Multivitamin = Clean. iHerb / Fullscript other-ingredients: vegetarian capsule (cellulose, water), hypoallergenic plant fiber (cellulose), ascorbyl palmitate, potato starch — all Cleared-class. MicroActive Q10-cyclodextrin complex is listed on Supplement Facts as a CoQ10 form / active carrier, not as an other-ingredients inactive — this draft does not invent an inactive grade for cyclodextrin. 30-ct / 60-ct / 120-ct packs share formulaId. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_ONE_MULTI_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -378,8 +370,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Magnesium (glycinate) = Clean. Matched DSLD 184649 / DSLD 205309 / iHerb other-ingredients: vegetarian capsule (cellulose, water), ascorbyl palmitate. Ascorbyl palmitate is Cleared (v1.6 antioxidant lock). Those matched lists do not add a separate hypoallergenic plant-fiber (cellulose) line — cellulose fiber is Cleared if a later matched carton lists it, but this draft does not invent that inactive. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_MAG_GLYCINATE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -408,8 +399,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       labelCleared(DFH_MAG_CITE, 'Vegetable stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Designs for Health Magnesium Glycinate Complex = Clean. Fullscript / iHerb other-ingredients: cellulose (capsule), vegetable stearate. Vegetable stearate is Cleared stearate-class — same Cleared encoding as batch 24 DFH Prenatal Pro vegetable stearate (`labelCleared` / Methodology §5 Cleared). No silicon dioxide / TiO2 / dye / talc on that matched list. 60-ct / 120-ct / 240-ct packs share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${DFH_MAG_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -437,8 +427,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Ascorbic Acid 1000 mg = Clean. iHerb / Fullscript other-ingredients: vegetarian capsule (cellulose, water), ascorbyl palmitate. Ascorbyl palmitate is Cleared (v1.6 antioxidant lock). Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_ASCORBIC_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -472,9 +461,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       labelCleared(PE_JUNIOR_CITE, 'Vegetarian capsule (cellulose, water)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Junior Nutrients = Clean. US iHerb / Fullscript / DSLD 185030 other-ingredients: vegetarian capsule (cellulose, water), ascorbyl palmitate. Ascorbyl palmitate is Cleared (v1.6 antioxidant lock). Carton age chart: ages 4–13 and ages 14+ (minAge 4 from the 4–13 floor). No iron on the matched formula. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Audience kids. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_JUNIOR_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -503,8 +490,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       labelCleared(THORNE_C_CITE, 'Cellulose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Vitamin C as Ascorbic Acid = Clean on the CURRENT / on-market label. iHerb / Fullscript other-ingredients: hypromellose (derived from cellulose) capsule, calcium laurate, cellulose — no silicon dioxide. Founder parallel to the Thorne Basic Prenatal hypromellose + calcium laurate Clean stack (batch 24). Calcium laurate is treated as Cleared on that founder-approved stack (stearate-family lubricant; cite founder call + current label — not independently listed in the §5 Cleared table and not a new High lock). This draft is the current formula only. Historical / older lots that listed silicon dioxide are a different formula — old lots with SiO2 would be Caution (nanoparticle cap), not this Clean row. Pack sizes share formulaId. Separate formulaId from Thorne Vitamin C with Flavonoids (not this row). No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${THORNE_C_CITE} — draft, not verified; current on-market label only; no DailyMed drug SPL`,
@@ -537,8 +523,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Thorne Magnesium Bisglycinate powder = Clean. iHerb / Fullscript other-ingredients: citric acid, monk fruit concentrate. Citric acid is Cleared. Monk fruit concentrate is Cleared (v1.6 high-purity extract lock; matched listings specify Tate and Lyle Purefruit Select™). Pack sizes share formulaId. Separate formulaId from Thorne Magnesium Glycinate capsules (Caution, SiO2). No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${THORNE_MAG_POWDER_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -568,8 +553,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Magnesium (Citrate) = Clean. Write the citrate SKU only — not Magnesium (citrate/malate). iHerb / Fullscript other-ingredients: vegetarian capsule (cellulose, water), ascorbyl palmitate. Veg capsule + ascorbyl palmitate are Cleared. Founder: pick one of the two PE citrate / citrate-malate SKUs unless inactives differ; this draft is citrate. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     sourcesGeneral: [
       `${PE_MAG_CITRATE_CITE} — draft, not verified; citrate SKU only; no DailyMed drug SPL`,
@@ -604,8 +588,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       labelCleared(PE_PROBIOTIC_5_CITE, 'Vegetarian capsule (cellulose, water)'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Pure Encapsulations Probiotic-5 (dairy-free) = Caution (SiO2). iHerb / Fullscript other-ingredients: rice starch, silicon dioxide, vegetarian capsule (cellulose, water). Rice starch is Cleared-class (v1.6 simple-starch housekeeping). Vegetarian capsule is Cleared. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 Nature Made Prenatal Multi tablets and batch 24 DFH Prenatal Pro (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Do not invent Clean on the SiO2 cap. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     cleanAlternatives: PROBIOTIC_ALTS,
     sourcesGeneral: [
@@ -643,8 +626,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       flag('Silica', 'cleared', labelCite(THORNE_FLORAMEND_CITE, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne FloraMend Prime Probiotic = Caution (silica). iHerb / Fullscript other-ingredients: delayed-release (hydroxypropyl methylcellulose, pectin, water) capsule, potato starch, silica. Delayed-release HPMC / pectin / water are Cleared-class (pectin is the v1.6 gums lock). Potato starch is Cleared (v1.6 simple-starch housekeeping). Silica / silicon dioxide is the nanoparticle Caution cap (0 demerit points) — same encoding as batch 15 Nature Made prenatal / batch 24 DFH (`riskLevel: \'cleared\'` + METH.sio2 source; verdict caution, NOT avoid). Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     cleanAlternatives: PROBIOTIC_ALTS,
     sourcesGeneral: [
@@ -671,8 +653,7 @@ export const BATCH25_IHERB_FULLSCRIPT_LEFTOVERS: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(THORNE_MAG_CAPS_CITE, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Thorne Magnesium Glycinate capsules = Caution (SiO2). iHerb / Fullscript other-ingredients: hypromellose (derived from cellulose) capsule, medium chain triglyceride oil, silicon dioxide. Hypromellose is Cleared. Medium chain triglyceride oil is present on the label but is not in Methodology §5 (ungraded; v1.6 intake) — omitted from the scored inactiveIngredients array (same notes-only pattern as batch 24 PE Melatonin-SR sodium alginate and Nordic rosemary extract); not a demerit driver; no invented riskLevel. Silicon dioxide is the nanoparticle Caution cap (0 demerit points) and the Caution driver — same encoding as batch 15 Nature Made prenatal / batch 24 DFH. Do not FLAG-skip this SKU; founder approved the Caution write. Separate formulaId from Clean Thorne Magnesium Bisglycinate powder. Pack sizes share formulaId. No DailyMed drug SPL (dietary supplement). Adults.',
+
     retailers: ['iHerb', 'Fullscript'],
     cleanAlternatives: MAG_ALTS,
     sourcesGeneral: [

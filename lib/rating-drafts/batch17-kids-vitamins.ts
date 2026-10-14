@@ -137,15 +137,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / gluconate / sulfate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const NO_CLEAN_KIDS_MULTI =
-  'No independently Clean kids multi exists in this draft set — cleanAlternatives omitted (honest empty; form cannot be labeled on a nonexistent §6 swap). Do not invent Clean.';
-
-const IRON_OVERDOSE_CARTON =
-  'On-carton iron overdose warning (when iron is labeled): accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
-
 const FLINTSTONES_GUMMY_CITE =
   'Flintstones Complete Gummies Target other-ingredients (vegetable oil (palm) + natural flavor)';
 const LIL_CRITTERS_CITE =
@@ -216,11 +207,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(SMARTYPANTS_CITE, 'Organic black carrot juice concentrate (color)'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: SmartyPants Kids Plus Multi & Omegas = Caution. Drivers are natural flavors (Limited) + annatto (standalone Caution, not Avoid, not additive-scored). Brand other-ingredients on smartypantsvitamins.com: organic cane sugar, organic tapioca syrup, pectin, gelatin, citric acid, natural flavors, colors added (organic annatto extract, organic turmeric extract, organic black carrot juice concentrate). That list has NO palm / canola / vegetable / coconut oil — do not invent a seed-oil Avoid on this formulaId. Vitamin E may appear on supplement facts as d-alpha-tocopherol from sunflower oil — that is the vitamin form, not an other-ingredients gummy oil. Toddler Plus / Organic Kids / Zero Sugar siblings that list organic sunflower oil are different formulas — not this row. Confirm the carton. No DailyMed drug SPL (dietary supplement). Ages 4+ (2 gummies daily as labeled). ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Target', 'Whole Foods', 'Vitamin shops', 'Grocery'],
     sourcesGeneral: [
       `${SMARTYPANTS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -250,11 +237,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(MARYRUTH_LIQUID_CITE, 'Grape skin extract (color)'),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: MaryRuth's Kids Morning Multivitamin Liquid = Caution. Driver is natural flavors (Limited). Target / IngredientList other-ingredients: purified water, vegetable glycerin, natural flavors, citric acid, xanthan gum, grape skin extract (color) — those remaining inactives are Cleared-class. No seed / industrial oil, no synthetic dye, no sucralose. Confirm the carton. No DailyMed drug SPL (dietary supplement). Ages 1+ as locked (label serving; some cartons also list a younger infant chart — confirm the bottle). " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Target', 'CVS', 'Vitamin shops'],
     sourcesGeneral: [
       `${MARYRUTH_LIQUID_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -294,11 +277,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Flintstones Complete Gummies = Avoid. Target other-ingredients list vegetable oil (palm) + natural flavor. Palm / vegetable oil in a gummy is High-tier. Natural flavor is Limited (not needed to reach Avoid). Juice-concentrate colors are Cleared-class (not synthetic dyes). Some 70-ct snapshots say “vegetable oil (coconut or palm)” — palm on that line is still this Avoid formulaId; coconut on the same or-line does not clear the palm High. Contains wheat (carton allergen). No DailyMed drug SPL. Ages 2–3: 1 gummy; 4+: 2 gummies as labeled. Not for children under 2. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Target', 'CVS', 'Walgreens', 'Walmart', 'Grocery'],
     sourcesGeneral: [
       `${FLINTSTONES_GUMMY_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -343,11 +322,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(LIL_CRITTERS_CITE, 'Sodium citrate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: L'il Critters Gummy Vites (standard) = Avoid. Target / Vitacost other-ingredients list blend of oils (coconut and/or palm) — palm on that and/or line is the gummy seed/industrial-oil High rule. This is NOT a coconut-only Caution (K9 coconut-only invent is skipped; no coconut-only carton). Coconut on the same and/or line does not clear the palm High. Flavors are Limited (not needed to reach Avoid). Annatto as color is a standalone Caution note only on this already-Avoid palm row. Paw Patrol L'il Critters shares the same oil blend — same Avoid family, not a second formulaId. No-sugar-added Gummy Vites that keep the coconut-and/or-palm blend stay this oil-Avoid family; a later coconut-only carton would need its own formulaId (not written). Contains coconut (tree nut). No DailyMed drug SPL. Ages 2–3: 1 gummy; 4+: 2 gummies as labeled. Not recommended under 2 (choking). " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Target', 'Walmart', 'Walgreens', 'Grocery'],
     sourcesGeneral: [
       `${LIL_CRITTERS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -387,13 +362,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(OAD_KIDS_GUMMY_CITE, 'White beeswax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: One A Day Kids Multi Gummies = Avoid. CVS / Fig other-ingredients list vegetable oil (palm). Palm in a gummy is High-tier. Natural flavors are Limited (not needed to reach Avoid). Multi + Iron gummies use the same vegetable oil (palm) inactive pattern (CVS: carrot and cherry juice concentrate + natural flavor + palm) — same Avoid oil family; iron is an active difference, not a second inactive grade. Juice-concentrate colors are Cleared-class. Confirm the carton. No DailyMed drug SPL. Ages 4+ (2 gummies daily as labeled; not for children under 4). ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${OAD_KIDS_GUMMY_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -433,11 +402,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(KIRKLAND_KIDS_GUMMY_CITE, 'Spirulina extract (color)'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: Kirkland Signature Children's Complete Multivitamin Gummies = Avoid. Instacart lists vegetable oil (palm) (contains carnauba wax); HelloPharmacist lists vegetable oil. Palm / vegetable oil in a gummy is High-tier. Natural flavors and non-organic maltodextrin are Limited (not needed to reach Avoid). Confirm the carton lists palm / vegetable oil — a later no-oil carton would be a different formula (not written). minAge 2 is the typical kids gummy floor used because the matched age chart was not locked on the HelloPharmacist snapshot — confirm the bottle (Costco kids complete gummies are commonly 2+; not for under 2 if the carton says so). No DailyMed drug SPL. " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Costco'],
     sourcesGeneral: [
       `${KIRKLAND_KIDS_GUMMY_CITE} — draft, not verified; carton-confirm required (oil + age); no DailyMed drug SPL`,
@@ -479,11 +444,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       flag('Pectin', 'cleared', labelCite(EQUATE_KIDS_GUMMY_CITE, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Kids Multivitamin Gummies = Avoid. Open Food Facts / retailer other-ingredients match a L\'il Critters-style blend of oils (coconut and/or palm) with beeswax and/or carnauba wax; HelloPharmacist lists blend of oils and “contains coconut.” Palm on that blend is High — this is NOT a coconut-only Caution. Natural flavors are Limited (not needed to reach Avoid). Confirm the carton: a later Equate kids gummy snapshot (cane sugar / tapioca syrup / pectin / no oil) is a different formula — not this row; do not invent Clean on that unmatched twin. minAge 2 with carton-confirm (OFF / retailer 2–3 year chart; typical kids gummy floor). Contains coconut (tree nut) on the palm-blend carton. No DailyMed drug SPL. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Walmart'],
     sourcesGeneral: [
       `${EQUATE_KIDS_GUMMY_CITE} — draft, not verified; carton-confirm required (oil + age); no DailyMed drug SPL`,
@@ -530,11 +491,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(MARYRUTH_GUMMY_CITE, 'Sodium citrate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: MaryRuth's Organic Kids Multivitamin Gummies = Avoid. IngredientList / brand / Target other-ingredients list organic sunflower oil + natural flavor + organic maltodextrin. Organic sunflower oil in a gummy is High-tier (seed/industrial oils in gummies). Natural flavors are Limited (not needed to reach Avoid). Organic maltodextrin is Cleared-class — do NOT score it as the Limited non-organic maltodextrin row (same lock as Genexa organic-maltodextrin rows). Sugar-free MaryRuth kids gummies are a different formula (not this row). Confirm the carton. No DailyMed drug SPL. Ages 4+ as labeled (unlike many 2+ kids gummies). " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['Target', 'Whole Foods', 'Vitamin shops'],
     sourcesGeneral: [
       `${MARYRUTH_GUMMY_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -594,13 +551,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       labelCleared(FLINTSTONES_CHEW_CITE, 'Soy lecithin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Flintstones Complete Chewable Tablets = Avoid. CVS inactive list / Open Food Facts: FD&C Blue #2 Aluminum Lake + FD&C Red #40 Aluminum Lake + FD&C Yellow #6 Aluminum Lake + sucralose + silicon dioxide + natural & artificial flavors + hydrogenated vegetable oil (soy). Synthetic lake dyes drive Avoid (High). Sucralose is Moderate; N&A flavors are Limited; SiO2 is the nanoparticle Caution cap (0 demerit points). Hydrogenated vegetable oil (soy) in a chewable tablet is NOT the gummy seed-oil High rule alone — do not treat chewable soy oil as a second High. Sorbitol / mannitol / maltodextrin are Limited on the CVS list (not needed to reach Avoid). Contains wheat and soy. Confirm the carton. No DailyMed drug SPL. Ages 2–3: ½ tablet; 4+: 1 tablet as labeled. Not for children under 2. ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_KIDS_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${FLINTSTONES_CHEW_CITE} — draft, not verified; no DailyMed drug SPL`,

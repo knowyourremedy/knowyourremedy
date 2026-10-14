@@ -81,12 +81,6 @@ const PF_RETAILERS = [
 const CREAM_OIL_LINE =
   'Seed/industrial oils are flagged in gummies. In this cream / balm / ointment they are not that High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / benzyl alcohol / trolamine salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -368,8 +362,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('White petrolatum', 'cleared', dailymed(SET.icyBalm, METH.petrolatum)),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original Pain Relief Balm = Clean. DailyMed Drug Facts list paraffin + white petrolatum only — no High / Limited / Caution-table inactive on this SPL. ${MINERAL_OIL_TAP} ${CREAM_OIL_LINE} Distinct from the Original Cream (same setid, different Drug Facts / actives 10% menthol + 30% methyl salicylate) and from the discontinued Extra Strength Stick (marketing end 01/31/2023 — list-4 OUT). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     sourcesGeneral: [
       `DailyMed setid ${SET.icyBalm} (balm NDC 41167-0087) — ${UNVERIFIED_NOTE}`,
@@ -400,8 +393,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       cleared(SET.icyCream, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original Cream = Caution. Drivers are oleth-3-phosphate + aminomethylpropanol (standalone Caution) and polysorbate 60 (Moderate family with P80 / P20). Carbomer / cetearyl alcohol / cetyl esters / stearic acid / water Cleared. Same DailyMed setid as the Original Balm — separate formulaId because OI + actives differ (this cream is menthol 10% / methyl salicylate 30%). Pack sizes (NDC 41167-0088) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -423,8 +415,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: performanceKohCreamInactives(SET.icyPerfNoMess),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Performance No-Mess Pain Relief Cream = Caution. Alcohol denat. + peppermint Limited; 4-t-butylcyclohexanol / acrylates / grapefruit / farnesol / fragrance / spearmint / steareth-21 standalone Caution. KOH / glyceryl stearate / pentylene / propanediol / allantoin / aloe / cetyl / stearic Cleared. DailyMed OI + actives (menthol 16% / camphor 11%) match Icy Hot Performance Cream (setid ${SET.icyPerfCream}) — shared formulaId ${ID.icyPerfCream}, two Search rows. Distinct from Advanced / Pro No-Mess (those SPLs use TEA, not KOH). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -446,8 +437,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: performanceKohCreamInactives(SET.icyPerfCream),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Performance Cream = Caution. OI + actives match Icy Hot Performance No-Mess Pain Relief Cream (setid ${SET.icyPerfNoMess}) — one formulaId, two Search rows. NDC 41167-0803 pack sizes (3 g packet / 680 g bottle) share this formulaId. Not merged into Advanced / Pro No-Mess (TEA vs KOH). Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -470,8 +460,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: advancedTeaCreamInactives(SET.icyAdvanced),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Advanced Pain Relief Cream = Caution. Same locked EO / steareth / acrylate / alcohol stack as Performance, but this SPL uses triethanolamine (TEA Caution) and does not name KOH — separate formulaId from ${ID.icyPerfCream}. DailyMed OI + actives match Icy Hot Pro No-Mess (setid ${SET.icyProNoMess}) — shared formulaId ${ID.icyAdvanced}, two Search rows. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -494,8 +483,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: advancedTeaCreamInactives(SET.icyProNoMess),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Pro No-Mess = Caution. OI + actives match Icy Hot Advanced Pain Relief Cream (setid ${SET.icyAdvanced}) — one formulaId, two Search rows (Pro No-Mess vs Advanced). Not merged into Performance (KOH vs TEA). NDC 41167-0079 / 41167-7181 pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -515,8 +503,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     activeIngredients: [{ name: 'Menthol', strength: '8%' }],
     inactiveIngredients: recoveryRollOnInactives(SET.icyNight),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original Nighttime Recovery No-Mess Roll On = Caution. Drivers are fragrance / steareth-2 / steareth-21 / acrylates / hydroxyacetophenone / ethylhexylglycerin (standalone Caution). Propanediol / diisopropyl adipate / aloe / allantoin / KOH / glycerin / water Cleared. No High. DailyMed OI + actives (menthol 8%) match Revive & Recovery No-Mess (setid ${SET.icyRevive}) — shared formulaId ${ID.icyNight}, two Search rows. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -536,8 +523,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     activeIngredients: [{ name: 'Menthol', strength: '8%' }],
     inactiveIngredients: recoveryRollOnInactives(SET.icyRevive),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Revive & Recovery No-Mess Roll On = Caution. OI + actives match Nighttime Recovery (setid ${SET.icyNight}) — one formulaId, two Search rows. Fragrance variants (NDC 41167-0802 / 0804 / 0806, including Lime & Mint) share this formulaId (same named OI). Not merged into the 16% menthol no-mess applicator (that SPL lists capsaicin as an inactive — refused). Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -571,8 +557,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       cleared(SET.icyVanish, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original Vanishing Scent Gel = Avoid. Drivers are methylparaben + propylparaben (High in every form, including rubs — Sept 15 lock). DMDM hydantoin / phenoxyethanol / steareth-2 / steareth-21 / triethanolamine are standalone Caution (not Avoid on their own). Alcohol denat. is Limited (vehicle). ${LIMITED_STACK} Distinct from the Original Balm (Clean) and Original Cream (Caution). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -613,8 +598,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       cleared(SET.salonpasLidoLiq, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Lidocaine Plus Pain Relieving Liquid (no-mess roll-on) = Caution. Aminomethylpropanol is standalone Caution; SD alcohol 40-B is Limited (vehicle). Aloe / carbomer / water Cleared. Benzyl alcohol 10% is an active on this SPL (parked — not the oral gasping-syndrome split). Distinct from the Lidocaine Plus cream (refused — butylene glycol / dicetyl phosphate / squalane / unspecified steareth + polysorbate). Distinct from Jet Spray and Deep Relieving Gel already on main. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -642,8 +626,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: muscleRubInactives(SET.tbMuscle),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Muscle Rub = Avoid. Drivers are methylparaben + propylparaben (High in every form). Diazolidinyl urea + triethanolamine are standalone Caution. Carbomer / methyl glucose dioleate / glycerin / water Cleared. ${PG_TOPICAL_TAP} DailyMed OI + actives match Tiger Balm Active Muscle Rub (setid ${SET.tbActiveRub}) — shared formulaId ${ID.tbMuscle}, two Search rows. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -667,8 +650,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
     ],
     inactiveIngredients: muscleRubInactives(SET.tbActiveRub),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Active Muscle Rub = Avoid. OI + actives match Tiger Balm Muscle Rub (setid ${SET.tbMuscle}) — one formulaId, two Search rows. Parabens High. Distinct from Active Muscle Gel (Blue 1 High; different OI / actives). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -712,8 +694,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       cleared(SET.tbNeck, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Neck & Shoulder Rub (lavender / carbomer SPL) = Avoid. Drivers are FD&C Blue 1 + methylparaben + propylparaben (High). Dementholised mint / eucalyptus / lavender fragrance / diazolidinyl urea / TEA are standalone Caution. The vanishing-scent twin on the same NDC family (setid 2f272d12, PVM/MA Decadiene Crosspolymer) is refused — that copolymer is still missing from §5. Pack sizes of this carbomer SPL share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -750,8 +731,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       cleared(SET.tbActiveGel, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Active Muscle Gel = Avoid. Driver is FD&C Blue No. 1 (High synthetic dye). Methylated spirit is Limited (same alcohol-vehicle row as ethyl alcohol). Fragrance / PEG-15 cocamine / PPG-5-ceteth-20 are standalone Caution. Carbomer 940 is the locked carbomer Cleared row (older 940 benzene concern does not apply). Distinct from Active Muscle Rub (paraben cream; different actives). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -778,8 +758,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('Liquefied petroleum gas', 'cleared', dailymed(SET.tbSpray, METH.lpg)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Muscle Spray = Caution. Ethanol / dehydrated alcohol is Limited (vehicle). LPG is standalone Caution (pain-spray propellant family). No High. ${LIMITED_STACK} Distinct from Tiger Balm Liniment already on main (eucalyptus / spike lavender / light mineral oil). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -808,8 +787,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('Paraffin petrolatum', 'cleared', dailymed(SET.tbRed, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Red Extra Strength = Caution. Cajuput / cassia / clove / dementholised mint are fragrance/EO standalone Caution. Paraffin petrolatum is Cleared (petrolatum neighborhood). ${MINERAL_OIL_TAP} Own formulaId — Ultra has the same OI but menthol 11% (actives differ). White has no cassia and menthol 8%. Export-only Red (NDC 66761-803) is list-4 OUT. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -838,8 +816,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('Paraffin petrolatum', 'cleared', dailymed(SET.tbUltra, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Ultra Strength = Caution. Same locked EO + petrolatum stack as Red Extra Strength, but menthol 11% vs Red 10% — separate formulaId. Non-staining carton. Pack sizes (including 2 g / 8 g / 10 g / 18 g / 50 g) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -867,8 +844,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('Paraffin petrolatum', 'cleared', dailymed(SET.tbWhite, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm White Regular Strength = Caution. Cajuput / clove / dementholised mint are fragrance/EO standalone Caution. No cassia on this SPL (unlike Red / Ultra) and menthol 8% — own formulaId. Paraffin petrolatum Cleared. ${MINERAL_OIL_TAP} Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

@@ -68,8 +68,6 @@ const PEARL_PALM_TAP =
   'Palm oil here is the pearl fill — not the gummy seed-oil High rule. ' + CAPSULE_OIL_TAP;
 const ALCOHOL_VEHICLE_LINE =
   'Alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active.';
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid.';
 const CA_SILICATE_TAP =
   'Calcium silicate is a founder-locked Caution (silicate anti-caking; Mg trisilicate neighborhood). It is not the silicon dioxide 0-pt nanoparticle cap.';
 const CARAMEL_TAP =
@@ -78,14 +76,8 @@ const STEVIA_LEAF_TAP =
   'Stevia leaf / Stevia rebaudiana leaf is the whole-leaf / crude Caution row. It is not high-purity Reb A / Reb M (Cleared).';
 const MCT_UNLABELED_TAP =
   'Label says medium-chain triglycerides and does not name coconut. We mark that Limited because the source isn’t clear. MCT labeled from coconut is Cleared on oral capsule/softgel/liquid supplements (not a cooking-oil bottle).';
-const ZINC_PARKED =
-  'Zinc (citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only.';
-const IRON_OVERDOSE =
-  'On-carton iron overdose warning (when iron is labeled): accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
-const PRENATAL_LABEL =
-  'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
 
 const METH = {
   cleared: 'Methodology §5 Cleared',
@@ -293,11 +285,7 @@ function row(d: RowIn): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.inactives,
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK}${
-      d.zinc ? ' ' + ZINC_PARKED : ''
-    }${d.iron ? ' ' + IRON_OVERDOSE : ''}${
-      d.prenatal ? ' ' + PRENATAL_LABEL : ''
-    }${homeo ? ' ' + CARLSTON : ''} Pack sizes of the same name+form+inactives share formulaId. Draft, not verified.`.replace(/\s+/g, ' ').trim(),
+
     retailers: [...RETAILERS],
     cleanAlternatives: d.verdict === 'clean' ? undefined : d.alts,
     sourcesGeneral: [`${d.cite} — ${UNVERIFIED_NOTE}`, ...(homeo ? [CARLSTON] : [])],

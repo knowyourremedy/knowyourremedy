@@ -256,8 +256,7 @@ function storeLoratadineLiquid(opts: {
       cleared(opts.setid, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store kids loratadine liquids = Avoid (sucralose + oral PG). Dye-free / sugar-free marketing does not clear two Moderate flags. Equate / up&up / CVS grape liquids share this formulaId (identical inactives). Ages 2+.',
+
     retailers: opts.retailers,
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -301,8 +300,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: draft Clean — exception KEPT after live OI update. Live Genexa.com now lists Natural Citrus Extract (Limited-class flavor under Sept 14 locks). This row has an explicit don\'t-demerit-natural-flavors founder exception, same as Kids APAP / Kids Multi conventional liquids — do not apply Limited → Caution on this REUSE id. Organic agave is Cleared. DailyMed setid a7bc5f7c previously said flavor (natural) only. Carton Ages 6+; children 2 to under 6 years: do not use unless directed by a doctor; under 2: do not use. Diphenhydramine is a first-generation (sedating) antihistamine — listed as a cleanliness / use note only, not an efficacy claim. Always dose with the enclosed cup. Live Clean Pick may stay; this draft does not edit allergyPicks.ts.',
+
     retailers: ['Walmart', 'CVS', 'Target', 'Whole Foods'],
     sourcesGeneral: [
       'https://www.genexa.com/products/kids-diphenhydramine-allergy-liquid (live OI; draft, not verified)',
@@ -335,10 +333,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('d9a509d9-15c8-20bb-e053-2a95a90a3edd', 'Magnesium stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: AllergyCalm meltaways = Clean kids-usable twin of the adult batch 5 formula — inactives match (croscarmellose sodium, lactose, magnesium stearate). Shared formulaId `boiron-allergycalm-meltaways` with the adult row so the Clean grade propagates conceptually. Cited setid d9a509d9 is titled AllergyCalm Kids Tablets and supplies 2+ directions; twin tablet SPL d92d9269 shares the same three inactives. Pellet SPLs (lactose / sucrose) are a different form and are not this row. Homeopathic meltaways — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid d9a509d9-15c8-20bb-e053-2a95a90a3edd (inactives + 2+ directions); d92d9269-7532-2f0e-e053-2a95a90ab0d6 (twin tablets) — draft, not verified',
@@ -390,10 +385,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Genexa Kids Allergy Care = Caution (organic maltodextrin Limited 1 pt). Do not extend the adult Genexa ES Clean exception. Organic flavors / dextrose / carnauba wax and organic rice bran extract are Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 3–11 (under 3: ask a doctor). Separate formulaId from adult Genexa Allergy Care (different actives, including Rosa damascena 6X).',
+
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: HOMEOPATHIC_ALTS,
     sourcesGeneral: [
@@ -440,8 +432,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Children\'s Zyrtec chewable = Caution (sucralose only). Raw demerit math is sucralose 2 + flavor 1 + mannitol 1 = 4 pts Avoid — draft follows the locked Caution call, not a 3-pt Avoid stack. 10 mg chewable twin (setid 0fe77356) shares the same inactives (minAge 6 on that carton). Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -491,8 +482,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('a1edc2e6-3661-4d7a-884c-709d73cb89e0', 'Sodium starch glycolate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Children\'s Zyrtec dissolve = Caution (sucralose only). Raw demerit math is sucralose 2 + flavors 1 + mannitol 1 = 4 pts Avoid — draft follows the locked Caution call. Amino methacrylate copolymer is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Silicon dioxide is the nanoparticle Caution cap (0 demerit points). Ages 6+ (under 6: do not use / ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DISSOLVE_ALTS,
     sourcesGeneral: [
@@ -534,8 +524,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('3adff80f-fca7-4cc5-b106-0f68f71c85b0', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Kids Flonase = Caution (BKC). BKC is standalone Caution (not Avoid). PS80 is Moderate (2 pts) → Caution. Phenylethyl alcohol is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Inactives match adult batch 5 Flonase — shared formulaId `flonase-allergy-relief-bkc-ps80`. Twin kids SPL fab7a1f4 shares the same inactives. Ages 4+ (under 4: do not use). No independently Clean kids nasal in this batch.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -577,8 +566,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('bc824143-b876-4c3d-86fd-81fb58673851', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Equate kids fluticasone = Caution (BKC). Same bottle / inactives as adult batch 5 Equate fluticasone (setid bc824143) — the label already carries a 4–11 chart. Shared formulaId `equate-fluticasone-bkc-ps80`. Phenylethyl alcohol is on the SPL and is not in §5 (ungraded). Ages 4+ (under 4: do not use). No independently Clean kids nasal in this batch.',
+
     retailers: ['Walmart'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -630,8 +618,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('9d8e78ea-af98-4f7c-8db5-044b49582f80', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Zyrtec / Claritin / store loratadine liquids = Avoid (sucralose + oral PG). Dye-free is not Clean. Twin syrup SPL ee8695ac shares the same inactives. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -693,8 +680,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('170061e9-e529-4ff0-e054-00144ff8d46c', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Claritin liquid = Avoid (sucralose + oral PG). Dye-free is not Clean. Separate formulaId from adult batch 5 Claritin liquid (19afd658 lists menthol; this grape kids SPL does not). Ages 2+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -747,8 +733,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Claritin chews = Avoid (aspartame ± dyes). Kids-facing grape carton (setid 37732ca2; also sold as Children\'s Claritin ages 2+). Shared formulaId `claritin-chewable-aspartame-dye` with adult batch 5. Perrigo-labeled twin f3b9c643 is the same grape aspartame + lake-dye list. Bubblegum twin (20938e05) is aspartame + carmine — still Avoid (aspartame High; carmine is Caution-not-Avoid). Cool Mint chewable (98b99bb9) is aspartame + Blue #1 lake, minAge 6 — still Avoid. Phenylketonurics: aspartame.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -792,8 +777,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('06115cea-5a44-409d-85ed-bb71743491c1', 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Allegra ODT = Avoid (aspartame). Phenylketonurics: aspartame. Ages 6+ (under 6: do not use).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DISSOLVE_ALTS,
     sourcesGeneral: [
@@ -853,8 +837,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('e2bd23c7-dfba-463a-adbe-2183970da740', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Allegra liquid = Avoid (TiO2 + oral PG). Poloxamer 407 is on the SPL and is not in Methodology §5 (ungraded; not the Avoid driver). Oral xylitol is flagged as a sugar alcohol (Limited); nasal xylitol Clearance does not apply. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -911,8 +894,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('b73950f4-af6f-4dc7-bce2-9ec43c45eee5', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Children\'s cetirizine = Avoid (parabens + PG + sucralose). Separate from the dye-free sucralose+PG store set (up&up / CVS). Ages 2+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -962,8 +944,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: up&up kids cetirizine = Avoid even if dye-free. Sucralose + oral PG. Bubblegum twin (setid 1f37c327) shares this formulaId (flavor line only). Ages 2+.',
+
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -1013,8 +994,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('1f37c327-cd4c-4bc1-ae70-713569694e2e', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: up&up kids cetirizine = Avoid even if dye-free. Same formulaId as the grape twin. Ages 2+.',
+
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -1088,8 +1068,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Confirmed brick-and-mortar kids cetirizine liquid (CVS). Same sucralose + oral PG Avoid pattern as Children\'s Zyrtec / up&up. Dye-free is not Clean. Ages 2+.',
+
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -1137,8 +1116,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('0b78fed4-69eb-f66f-e063-6294a90a3b89', 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Confirmed brick-and-mortar kids loratadine chew (CVS). Dye-free is not Clean — aspartame is High-tier. Phenylketonurics: aspartame. Ages 2+.',
+
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE2,
     sourcesGeneral: [
@@ -1197,8 +1175,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('569b8efa-8458-49f7-a665-6b7016a10505', 'Starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'KA16 confirmed (DailyMed setid 569b8efa). Dyes + sucralose. Sodium polystyrene sulfonate is on the SPL and is not in Methodology §5 (ungraded; not the Avoid driver). Ages 6+ (2–5: do not use unless directed by a doctor). First-generation / sedating — cleanliness note only.',
+
     retailers: ['CVS'],
     cleanAlternatives: CHEW_ALTS_AGE6,
     sourcesGeneral: [
@@ -1248,8 +1225,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('db5a5eff-1bb1-4d00-8c01-caae7a1c7223', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Confirmed brick-and-mortar kids DPH liquid (CVS dye-free). Dye-free is not Clean — sucralose + flavors + benzoate + sorbitol stack to Avoid. Ages 6+ (2–5: do not use unless directed by a doctor).',
+
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE6,
     sourcesGeneral: [
@@ -1303,8 +1279,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('18436026-b0e4-4481-a647-d735a27d0b00', 'Starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Confirmed brick-and-mortar kids DPH chew (Equate / Walmart dye-free). Dye-free is not Clean — propyl gallate is High-tier (locked v1.6). Sodium polystyrene sulfonate is on the SPL and is not in §5 (ungraded; not the Avoid driver). Ages 6+ (2–5: do not use unless directed by a doctor).',
+
     retailers: ['Walmart'],
     cleanAlternatives: CHEW_ALTS_AGE6,
     sourcesGeneral: [
@@ -1369,8 +1344,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('f98d1d54-8e11-4bb1-825a-ab5447d37847', 'Starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Confirmed brick-and-mortar kids DPH melt / chew (Target). Dyes + sucralose. Sodium polystyrene sulfonate is on the SPL and is not in §5 (ungraded). Ages 6+ (2–5: do not use unless directed by a doctor).',
+
     retailers: ['Target'],
     cleanAlternatives: CHEW_ALTS_AGE6,
     sourcesGeneral: [
@@ -1419,8 +1393,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('fc9181b9-c92d-493e-8d7c-4a4239c6c092', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Benadryl dyed = Avoid. Red #33 + Red #40. Poloxamer 407 and monoammonium glycyrrhizinate are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). HFCS is not on this SPL. Ages 6+ (2–5: do not use unless directed by a doctor; under 2: do not use). First-generation / sedating — cleanliness note only.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE6,
     sourcesGeneral: [
@@ -1470,8 +1443,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('10d478ff-ddc6-45da-87ff-cfe1b2b07a8e', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Benadryl dye-free = Avoid. Dye-free is not Clean — saccharin + flavors + benzoate + sorbitol. Ages 6+ (2–5: do not use unless directed by a doctor; under 2: do not use). First-generation / sedating — cleanliness note only.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE6,
     sourcesGeneral: [
@@ -1528,8 +1500,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('b08f71d8-a06c-41ba-8ed1-fbc41dbc1919', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl family (chewables) = Avoid. Lake dyes + sucralose. Ethylcellulose, hydroxypropyl cellulose, sugar spheres, and tartaric acid are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). Ages 6+ (2–5: do not use unless directed by a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: CHEW_ALTS_AGE6,
     sourcesGeneral: [
@@ -1595,8 +1566,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('b8b75904-3806-4258-89c1-d6ff486ed41c', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl family (Allergy Plus Congestion) = Avoid. Blue #1 + Red #40. Ages 6+ (under 4: do not use; 4–5: do not use unless directed by a doctor). First-generation / sedating — cleanliness note only.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE6,
     sourcesGeneral: [

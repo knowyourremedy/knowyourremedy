@@ -95,12 +95,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -281,8 +275,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: diclofenacGelInactives(SET.voltaren, true),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Voltaren Arthritis Pain Gel (Haleon) = Caution. Own brand-labeled formulaId — do not clone aleve-arthritis-pain-gel. Same math twin as the Aleve arthritis gel (isopropyl alcohol Limited + fragrance / polyoxyl 20 cetostearyl ether / strong ammonia Caution). ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} Carbomer + cocoyl caprylocaprate Cleared. Pack sizes of this gel share this formulaId. Voltaren kits (NDC 0067-8153 / 0067-8154) are list-4 OUT — no Search row. Ages 18+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'voltarengel.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -301,8 +294,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: diclofenacGelInactives(SET.asperNf, false),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Arthritis Pain Gel (no fragrance) = Caution. Motrin twin math — IPA Limited + polyoxyl 20 / ammonia Caution; no fragrance on setid ${SET.asperNf}. Separate formulaId from the fragrant Aspercreme arthritis gel. Do not clone motrin-arthritis-pain-gel. ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 18+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -322,8 +314,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: diclofenacGelInactives(SET.asperFr, true),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Arthritis Pain Gel (fragrance) = Caution. Aleve twin math — IPA Limited + fragrance / polyoxyl 20 / ammonia Caution. Separate formulaId from the no-fragrance Aspercreme arthritis gel (setid ${SET.asperNf}). Do not clone aleve-arthritis-pain-gel. ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 18+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -343,8 +334,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: diclofenacGelInactives(SET.salonpasDiclo, true),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Arthritis Pain Relief Gel (diclofenac) = Caution. Aleve twin math — IPA Limited + fragrance / polyoxyl 20 / ammonia Caution (Drug Facts lists fragrance; DailyMed also names coco-caprylate/caprate = cocoyl caprylocaprate Cleared). Own formulaId — not merged into Voltaren or Aspercreme fragrance. ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 18+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -369,8 +359,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       flag('Alcohol', 'limited', dailymed(SET.salonpasJet, METH.alcoholVehicle)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Pain Relieving Jet Spray = Caution. Alcohol-vehicle Limited-only — no High, no standalone Caution-table inactive on this SPL. ${LIMITED_STACK} Distinct from the diclofenac gel and Deep Relieving Gel. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -392,8 +381,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     ],
     inactiveIngredients: icyMentholCamphorDrySprayInactives(SET.icyPerf),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Performance Dry Spray = Caution. Alcohol denat. Limited + isobutane standalone Caution. ${PG_TOPICAL_TAP} DailyMed OI + actives (menthol 16% / camphor 11%) match Icy Hot Pro Dry Spray (setid ${SET.icyPro}) — shared formulaId ${ID.icyPerf}, two Search rows (Performance vs Pro). Distinct from Original (menthol-only actives). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -413,8 +401,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Menthol', strength: '16%' }],
     inactiveIngredients: icyMentholCamphorDrySprayInactives(SET.icyOrig),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Dry Spray Original = Caution. Same OI as Performance / Pro (alcohol denat. Limited + isobutane Caution) but menthol-only actives — separate formulaId. Do not merge into ${ID.icyPerf}. ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -437,8 +424,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     ],
     inactiveIngredients: icyMentholCamphorDrySprayInactives(SET.icyPro),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Pro Dry Spray = Caution. OI + actives match Icy Hot Performance Dry Spray (setid ${SET.icyPerf}) — one formulaId, two Search rows (Pro vs Performance). Not merged into Original (menthol-only). ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -461,8 +447,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     ],
     inactiveIngredients: lidoDrySprayInactives(SET.icyLidoSpray),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Lidocaine Dry Spray = Caution. Alcohol denat. Limited + unlabeled MCT (caprylic/capric triglyceride, coconut not named) Limited + isobutane standalone Caution. ${MCT_UNLABELED_TAP} ${PG_TOPICAL_TAP} Same OI as Aspercreme Lidocaine Dry Spray, but actives differ (this SPL is lidocaine 4% + menthol 1%) — separate formulaId. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -482,8 +467,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: lidoDrySprayInactives(SET.asperLidoSpray),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine Dry Spray = Caution. Same OI as Icy Hot Lidocaine Dry Spray (alcohol + unlabeled MCT Limited + isobutane Caution) but lidocaine-only actives (no menthol) — OI+actives do not match, so separate formulaId. ${MCT_UNLABELED_TAP} ${PG_TOPICAL_TAP} Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -517,8 +501,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       cleared(SET.icyNoMess, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot with Lidocaine No-Mess liquid = Caution. Alcohol denat. Limited + aminomethylpropanol standalone Caution. Citric acid / HPMC / glycerin / water Cleared. Distinct from the lidocaine dry sprays (no MCT / no isobutane on this SPL). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -560,8 +543,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       cleared(SET.salonpasDeep, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Deep Relieving Gel = Caution. Ammonium acryloyldimethyltaurate/VP copolymer + dimethyl isosorbide are standalone Caution; SD alcohol 40-B is Limited (vehicle). ${PG_TOPICAL_TAP} Distinct from the diclofenac gel and Jet Spray. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -596,8 +578,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Liniment = Caution. Eucalyptus oil + spike lavender oil are fragrance/EO standalone Caution. Light mineral oil is Cleared (topical occlusive, not an oral oil). ${MINERAL_OIL_TAP} Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

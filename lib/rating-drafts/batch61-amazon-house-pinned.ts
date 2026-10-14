@@ -77,9 +77,6 @@ const ELEMENTS = 'Amazon Elements';
 const MAMA_BEAR = 'Mama Bear';
 const AMAZON = ['Amazon'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const GUMMY_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. Sunflower / palm / safflower / vegetable oil used as a gummy coating or fill is that High rule. Capsule / softgel / drop fill of the same oil is not.';
 
@@ -88,18 +85,6 @@ const OIL_FILL_TAP =
 
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
-
-const HFCS_PARK =
-  'High-fructose corn syrup is parked / out-of-scope (Methodology §5). Mentioned as present only; not a live grade.';
-
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
-
-const ZINC_PARKED =
-  'Zinc (citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only.';
-
-const NO_CLEAN_KIDS_MULTI =
-  'No independently Clean kids multi exists in the drafted batches — cleanAlternatives omitted (honest empty; do not invent a Clean kids multi; do not point at adult multis — §6 age-matching).';
 
 const SET = {
   dph: '7d237d37-21c7-476d-a8b7-d91ea1b472ee',
@@ -357,8 +342,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.mucusDf, METH.ssg)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Mucus-ER Max dye-free 72288-650 = Clean. Printed Drug Facts (setid 9ab3d192): carbomer homopolymer type B, hypromellose, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. White tablet — no dye on Drug Facts. Structured SPL omits sodium starch glycolate; Drug Facts line is the authority. This is NOT the blue lake twin 72288-613 (batch30 Avoid `amazon-basic-care-mucus-er-max-blue1`). Own formulaId. Pack sizes 72288-650-02 / 72288-650-74 share this formulaId. Ages 12+. Swallow whole. Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.mucusDf} (Amazon Basic Care Mucus-ER Max dye-free NDC 72288-650; ${UNVERIFIED_NOTE}) — not amazon-basic-care-mucus-er-max-blue1`,
     ],
@@ -390,7 +374,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('White petrolatum', 'cleared', dailymed(SET.triple, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Triple Abx oil-blend 72288-067 = Caution. Drivers are sodium pyruvate (Caution, Sept 16 lock) + tocopheryl acetate (Caution; distinct from Cleared mixed tocopherols). No High. DailyMed setid c159b18d Drug Facts: cocoa butter, cottonseed oil, olive oil, sodium pyruvate, tocopheryl acetate, white petrolatum. Named ointment oils / cocoa butter are Cleared topical fill — not the gummy seed-oil High rule. ${OIL_FILL_TAP} Do not reuse batch12 Neosporin Original (that row was Clean when pyruvate was ungraded). Do not merge into petrolatum-only Triple + Pain (\`amazon-basic-care-triple-pain-ointment\` / \`neosporin-plus-pain-ointment\`). First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor). Draft, not verified.`,
+
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.triple} (Amazon Basic Care Triple Abx oil-blend NDC 72288-067; ${UNVERIFIED_NOTE})`,
@@ -417,7 +401,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(CITE.elementsC, METH.water)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Whole Food Vitamin C 500 mg vegan cap = Caution. Drivers are unlabeled modified cellulose (Limited; not named HPMC) + Rice Powder (Caution; DSLD 300213 prints “Rice, Powder” — not named rice hull / rice bran). Unlabeled Vegetable Capsule = no grade on the shell (not invented). ${LIMITED_STACK} Avoid needs High — none on this harvest. Distinct from Elements C 1000 / vegetable-coating FLAG (not written). Confirm carton. No DailyMed drug SPL (dietary supplement). No UPC harvested. Adults. Draft, not verified.`,
+
     cleanAlternatives: VITAMIN_C_ALTS,
     sourcesGeneral: [`${CITE.elementsC} — ${UNVERIFIED_NOTE}`],
   }),
@@ -450,8 +434,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.dph, METH.stearic)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Allergy Relief DPH 25 mg L479 = Avoid (D&C red #27 lake + TiO2). DailyMed setid 7d237d37 (NDC 72288-479-*). Printed Drug Facts: carnauba wax, crospovidone, D&C red no. 27 aluminum lake, dibasic calcium phosphate dihydrate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, pregelatinized starch, stearic acid, titanium dioxide. Structured SPL omits aluminum-lake wording / pregelatinized starch — Drug Facts is the authority. Own formulaId — do not clone Benadryl Ultratabs (that family uses croscarmellose, not crospovidone / DCP / pregel / stearic). Imprint L479. First-generation / sedating — cleanliness note only. Ages 6+ (under 6: do not use). Draft, not verified.',
+
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.dph} (Amazon Basic Care DPH 25 L479 NDC 72288-479; ${UNVERIFIED_NOTE})`,
@@ -484,8 +467,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.docusate, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Stool Softener docusate 100 mg L486 = Avoid (Red 33 + Blue 1 + Red 40 + Yellow 6 + TiO2). Edible ink is Caution (unspecified; Sept 16 lock) — not the Avoid driver. DailyMed setid 356a889f (NDC 72288-486-*). Printed Drug Facts also list gelatin, glycerin, PEG, PG, purified water, sorbitol sorbitan solution. Softgel carrier ≠ gummy seed-oil High. Structured SPL splits sorbitol sorbitan solution — Drug Facts token kept. Own formulaId. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.docusate} (Amazon Basic Care docusate L486 NDC 72288-486; ${UNVERIFIED_NOTE})`,
@@ -510,8 +492,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Glycerin', 'cleared', dailymed(SET.gas, METH.glycerin)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Gas Relief Ultra simethicone 180 mg L657 = Avoid (Red 40 + Yellow 6). Printed Drug Facts (setid 6cd13797, NDC 72288-657): FD&C red no. 40, FD&C yellow no. 6, gelatin, glycerin. Structured SPL additionally lists silicon dioxide — that token is NOT on the printed Drug Facts line; Drug Facts is the authority and SiO2 is flagged here as a structured-label discrepancy only (not scored). Softgel carrier ≠ gummy seed-oil High. Own formulaId — do not merge Gas-X families. Imprint L657. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.gas} (Amazon Basic Care Gas Relief Ultra L657 NDC 72288-657; printed Drug Facts OI; structured SPL also lists silicon dioxide — not scored; ${UNVERIFIED_NOTE})`,
@@ -541,8 +522,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Pregelatinized starch', 'cleared', dailymed(SET.lop224, METH.starch)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care loperamide 2 mg film-coated 72288-224 = Avoid (Yellow #10 lake + Blue #1 lake). DailyMed setid 732edad8. Printed Drug Facts: anhydrous lactose, carnauba wax, D&C yellow no. 10 aluminum lake, FD&C blue no. 1 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, pregelatinized starch. Contains lactose. OWN ROW — do not merge with Aurohealth 72288-225 or Basics softgel 72288-313. Do not reuse Imodium A-D caplets (that family is PEG-only Caution, no lakes). Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.lop224} (Amazon Basic Care loperamide film-coated NDC 72288-224; ${UNVERIFIED_NOTE}) — not 72288-225 / not 72288-313`,
@@ -570,8 +550,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.lop225, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care loperamide 2 mg Aurohealth 72288-225 = Avoid (Yellow #10 lake + Blue #1). DailyMed setid 10edd7bc. Printed Drug Facts: colloidal silicon dioxide, D & C yellow No. 10 aluminum lake, FD & C blue No. 1, lactose monohydrate, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. Tablet (capsule-shaped/biconvex) — not a softgel. SiO2 is the 0-pt Caution cap, not the Avoid driver. Contains lactose. Aurohealth / Made in India. OWN ROW — do not merge with film-coated 72288-224 or Basics softgel 72288-313. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.lop225} (Amazon Basic Care loperamide Aurohealth NDC 72288-225; ${UNVERIFIED_NOTE}) — not 72288-224 / not 72288-313`,
@@ -600,8 +579,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.lop313, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basics loperamide 2 mg softgel 72288-313 = Avoid (BHA + Blue #1). DailyMed setid 04a35525. Printed Drug Facts: butylated hydroxyanisole, edible ink, FD&C Blue #1, gelatin, glycerin, glyceryl caprylate, polyoxyl 40 hydrogenated castor oil, purified water. Edible ink is Caution (unspecified) — not the Avoid driver. Softgel carrier / named castor derivative ≠ gummy seed-oil High. OWN ROW — do not merge with film-coated 72288-224 or Aurohealth 72288-225. Do not reuse Imodium A-D softgels. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.lop313} (Amazon Basics loperamide softgel NDC 72288-313; ${UNVERIFIED_NOTE}) — not 72288-224 / not 72288-225`,
@@ -635,8 +613,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.apapEr, METH.stearic)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care APAP 650 ER L544 = Avoid (TiO2). DailyMed setid e88731b1 (NDC 72288-544-*). Printed Drug Facts: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, hypromellose, magnesium stearate, maltodextrin, microcrystalline cellulose, polyethylene glycol, polysorbate 80, povidone, pregelatinized starch, stearic acid, titanium dioxide. OI must match THIS label — do not clone Tylenol 8HR PEG-only Caution (`tylenol-8hr-peg`) or Tylenol 8HR TiO2 Avoid (`tylenol-8hr-tio2`); those families are different coats. Own formulaId. SiO2 is the 0-pt Caution cap, not the Avoid driver. Stay under 4 g/day acetaminophen. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: APAP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.apapEr} (Amazon Basic Care APAP 650 ER L544 NDC 72288-544; ${UNVERIFIED_NOTE}) — not tylenol-8hr-peg / not tylenol-8hr-tio2`,
@@ -672,8 +649,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.kitLiq, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Daytime Cold & Flu liquid (kit part 72288-656) = Avoid (BHA + Yellow 6). DailyMed kit setid 612719a9. Printed Drug Facts: butylated hydroxyanisole, edetate disodium, FD&C yellow no. 6, flavor, glycerin, menthol, monobasic sodium phosphate, polyethylene glycol, propylene glycol, purified water, saccharin sodium, sucrose, xanthan gum. Menthol is parked as a topical-active pending review (notes-only; not an inactive-table grade). Monobasic sodium phosphate is not an exact §5 token — notes-only; Avoid already stands on High. Kit = two rows because night OI differs. Pack sizes of this daytime liquid share this formulaId. Stay under 4 g/day acetaminophen. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.kitLiq} part NDC 72288-656 (Amazon Basic Care Daytime Cold & Flu liquid; ${UNVERIFIED_NOTE})`,
@@ -708,7 +684,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.kitLiq, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Nighttime Cold & Flu liquid (kit part 72288-459) = Avoid (Blue #1 + Red 40). DailyMed kit setid 612719a9. Printed Drug Facts: alcohol, anhydrous citric acid, FD&C blue no. 1, FD&C red no. 40, flavor, high fructose corn syrup, polyethylene glycol, propylene glycol, purified water, saccharin sodium, sodium citrate. ${HFCS_PARK} Alcohol is the Limited vehicle row (not Avoid). Kit = two rows because daytime OI differs (BHA / Yellow 6 / no HFCS). Honest twin note: DG Health night liquid (batch29) prints the same Drug Facts list — not cloned; Amazon keeps its own formulaId. Stay under 4 g/day acetaminophen. Ages 12+. ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.kitLiq} part NDC 72288-459 (Amazon Basic Care Nighttime Cold & Flu liquid; ${UNVERIFIED_NOTE})`,
@@ -743,8 +719,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.kitSoft, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Daytime Cold & Flu softgel (kit part 72288-994) = Avoid (Red 40 + Yellow 6). DailyMed setid ceb342da. Printed Drug Facts: edible ink* (may contain), FD&C red no. 40, FD&C yellow no. 6, gelatin, glycerin, polyethylene glycol, povidone, propylene glycol, purified water, sorbitol sorbitan solution. Edible ink is Caution (unspecified; may-contain) — not the Avoid driver. Softgel carrier ≠ gummy seed-oil High. Kit = two rows because night OI differs (Yellow #10 + Blue #1). Own formulaId. Stay under 4 g/day acetaminophen. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.kitSoft} part NDC 72288-994 (Amazon Basic Care Daytime Cold & Flu softgel; ${UNVERIFIED_NOTE})`,
@@ -779,7 +754,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.kitSoft, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Nighttime Cold & Flu softgel (kit part 72288-056) = Avoid (Yellow #10 + Blue #1). DailyMed setid ceb342da. Printed Drug Facts: D&C yellow no. 10, edible ink* (may contain), FD&C blue no. 1, gelatin, glycerin, polyethylene glycol, povidone, propylene glycol, purified water, sorbitol sorbitan solution. Edible ink is Caution (unspecified; may-contain) — not the Avoid driver. Softgel carrier ≠ gummy seed-oil High. Kit = two rows because daytime OI differs. Own formulaId. Stay under 4 g/day acetaminophen. Ages 12+. ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.kitSoft} part NDC 72288-056 (Amazon Basic Care Nighttime Cold & Flu softgel; ${UNVERIFIED_NOTE})`,
@@ -821,7 +796,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.nightSev, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Nighttime Severe Cold & Flu liquid 72288-189 = Avoid (Yellow #10 + Green #3 + Yellow 6). DailyMed setid 1341744c. Printed Drug Facts: alcohol, anhydrous citric acid, D&C yellow #10, edetate disodium, FD&C green #3, FD&C yellow #6, flavor, glycerin, propylene glycol, purified water, saccharin sodium, sodium benzoate, sodium chloride, sodium citrate, sorbitol solution, sucralose. No HFCS on this Severe label (unlike the kit night liquid). Alcohol is the Limited vehicle row. Title says Previously Care — one row (Basics previously Care; OI is this setid). Own formulaId — not the kit night liquid. Stay under 4 g/day acetaminophen. Ages 12+. ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.nightSev} (Amazon Basics Nighttime Severe Cold & Flu NDC 72288-189; ${UNVERIFIED_NOTE})`,
@@ -847,8 +822,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Dextrose excipient', 'cleared', dailymed(SET.aspirin, METH.sugar)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Amazon Basic Care Aspirin 81 mg orange chewable L467 = Avoid (Yellow #6 lake). DailyMed setid 265c7d85 (NDC 72288-467-*). Printed Drug Facts: corn starch, dextrose excipient, FD&C yellow no. 6 aluminum lake, flavors, saccharin sodium. Own formulaId — do not clone Bayer Chewable 81 Orange (that family adds SiO2 + MCC). Pack sizes 72288-467-08 / 72288-467-68 share this formulaId. Imprint L467. Ages 12+ (children under 12: consult a doctor on the carton). Draft, not verified.',
+
     cleanAlternatives: ASPIRIN_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.aspirin} (Amazon Basic Care aspirin 81 chew L467 NDC 72288-467; ${UNVERIFIED_NOTE})`,
@@ -899,7 +873,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.mamaMulti, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Organic Kids Multivitamin gummies = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Annatto is standalone Caution — not the Avoid driver. Named maqui / black carrot juice-as-color is Cleared. Lemon juice concentrate is the Limited gummy-base row. Harvest OI (HelloPharmacist / Spoonful); no carton UPC harvested. Confirm carton. No DailyMed drug SPL. Ages 2+. ${ZINC_PARKED} ${NO_CLEAN_KIDS_MULTI} Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.mamaMulti} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -946,7 +920,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Organic carnauba wax', 'cleared', labelCite(CITE.mamaFiber, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Kids Fiber gummies = Avoid. Organic sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Lo Han Fruit Concentrate is Cleared (monk fruit / luo han sibling; Sept 16 lock) — not a blocker. Chicory root fiber / inulin is Cleared. Annatto is standalone Caution — not the Avoid driver. Harvest OI; no carton UPC harvested. Confirm carton. No DailyMed drug SPL. Ages 2+. Draft, not verified.`,
+
     cleanAlternatives: FIBER_ALTS,
     sourcesGeneral: [`${CITE.mamaFiber} — ${UNVERIFIED_NOTE}`],
   }),

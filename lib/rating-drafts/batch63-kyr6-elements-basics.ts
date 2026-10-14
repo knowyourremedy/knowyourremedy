@@ -97,9 +97,6 @@ const BASICS = 'Amazon Basics';
 const BASIC_CARE = 'Amazon Basic Care';
 const AMAZON = ['Amazon'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const GUMMY_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. Sunflower / palm / safflower / vegetable oil used as a gummy coating or fill is that High rule. Capsule / softgel / drop fill of the same oil is not.';
 
@@ -111,12 +108,6 @@ const OIL_FILL_TAP =
 
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
-
-const ZINC_PARKED =
-  'Zinc (citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only.';
-
-const PARKED_RUB =
-  'Menthol / camphor / eucalyptus oil as labeled actives stay parked (Methodology §2 / §5). This draft grades inactives only.';
 
 // KYR5-b online-only chunk 1 — Amazon PDP / HelloPharmacist label
 // UPC-A. Exact pack + exact OI only. Do not steal softgel / tablet /
@@ -505,7 +496,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     activeIngredients: [{ name: 'Organic acacia gum (fiber)', strength: '6.5g per tbsp' }],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Acacia Fiber 100% powder (previously Revly) = Clean. No Other Ingredients on the pinned founder-carousel panel. DSLD 300221 prints Other Ingredients: NP (none / not provided) — not an ingredient token. Acacia gum is the labeled fiber active. Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No UPC harvested. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.acacia} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -527,7 +518,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Mixed tocopherols', 'cleared', labelCite(CITE.omega369, METH.tocopherols)),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Omega 3-6-9 softgels (previously Revly) = Clean. Pinned carousel OI: gelatin, glycerin, water, mixed tocopherols. No natural flavor. Softgel carrier ≠ gummy seed-oil High. ${OIL_FILL_TAP} Distinct from Basics Super Omega-3 (natural lemon flavor Caution; \`amazon-basics-super-omega-3\`). Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No UPC harvested. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.omega369} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -550,7 +541,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(CITE.d3soft, METH.water)),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Vitamin D3 5000 IU softgels = Clean. Safflower fill is Cleared (NOT gummy High; Sept 16 lock). ${OIL_FILL_TAP} Do not write the dead Solimo D3 5000 page. Do not reuse off-market DSLD 203856 (soybean / corn oil — different OI). Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No UPC harvested. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.d3soft} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -583,7 +574,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics B Complex (previously Elements) = Clean. Drivers are named HPMC vegetable capsule + organic rice hull concentrate. Cultured yeast / molasses ferment media is Cleared (Sept 16 lock). Do not use DSLD 300208 Organic Whole Food B Complex tablet (silica / palm — different OI / form). Basics previously Elements = one row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 203786 barcode 842379103612 (65 ct). Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.bComplex} — ${UNVERIFIED_NOTE}`],
   }),
 
@@ -606,7 +597,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Natural flavors', 'limited', labelCite(CITE.prenatalGummy, METH.flavors)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Prenatal DHA+D3 gummies (previously Revly) = Caution. No seed oil on the pinned founder-carousel panel. Driver is natural flavors (Limited opacity). ${LIMITED_STACK} Gummy ≠ the DSLD 300218 Prenatal DHA + D3 SOFTGEL (gelatin / glycerine / water; barcode 842379150562) — do not reuse that barcode or OI. Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No gummy UPC harvested. Adults. Draft, not verified.`,
+
     cleanAlternatives: PRENATAL_ALTS,
     sourcesGeneral: [`${CITE.prenatalGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -633,7 +624,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.vitCGummy, METH.gelatin)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Vitamin C gummies (previously Revly) = Caution. Founder carousel lock is annatto + flavors (no seed-oil High on the carousel panel). Annatto is standalone Caution — not Avoid. Natural flavors are Limited. ${LIMITED_STACK} DSLD 300222 older Revly panel also printed sunflower oil — carousel grade stays Caution; sunflower is not scored on this row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300222 barcode 842379149641 (70 ct). Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: VITAMIN_C_ALTS,
     sourcesGeneral: [`${CITE.vitCGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -664,7 +655,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(CITE.womensPro, METH.water)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Women's Probiotic caps (previously Revly) = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} Calcium silicate is standalone Caution (not the Avoid driver). Unlabeled modified cellulose is Limited. ${LIMITED_STACK} Avoid needs High — none on this harvest. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 319251. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: WOMENS_PRO_ALTS,
     sourcesGeneral: [`${CITE.womensPro} — ${UNVERIFIED_NOTE}`],
   }),
@@ -690,7 +681,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.collagen, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Collagen Complex (previously Revly) = Caution. Drivers are rice flour (Caution) + SiO2 (0-pt Caution cap). ${SIO2_TAP} No High. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 319236. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.collagen} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -729,7 +720,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.fishGummy, METH.gelatin)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Fish Oil gummies (previously Solimo) = Caution. Fractionated coconut in a gummy is NOT seed-oil High (Sept 16 coconut-in-gummy exception). Drivers are annatto (standalone Caution) + natural flavors (Limited). ${LIMITED_STACK} Do not write Solimo Fish Oil 1000 (dead / off-house). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 318718. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Contains fish (tuna). Draft, not verified.`,
+
     cleanAlternatives: OMEGA_ALTS,
     sourcesGeneral: [`${CITE.fishGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -771,7 +762,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.womensGummyDaily, METH.gelatin)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Women's One Daily gummies (previously Solimo) = Caution. Fractionated coconut in a gummy is NOT High. Drivers are annatto + natural flavors. ${LIMITED_STACK} Gummy ≠ Basics Women's One Daily tablets. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300224. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.womensGummyDaily} — ${UNVERIFIED_NOTE}`],
   }),
@@ -813,7 +804,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Choline bitartrate', 'cleared', labelCite(CITE.adultGummyDaily, METH.choline)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Adult One Daily gummies (previously Solimo) = Caution. Fractionated coconut in a gummy is NOT High. Driver is natural flavors (Limited). ${LIMITED_STACK} Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300223. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.adultGummyDaily} — ${UNVERIFIED_NOTE}`],
   }),
@@ -833,7 +824,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Silica', 'cleared', labelCite(CITE.pro5b, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Probiotic 5B caps (previously Solimo) = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} No standalone Basics / Solimo probiotic DSLD label harvested — remaining OI not invented. Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No UPC harvested. Adults. Draft, not verified.`,
+
     cleanAlternatives: WOMENS_PRO_ALTS,
     sourcesGeneral: [`${CITE.pro5b} — ${UNVERIFIED_NOTE}`],
   }),
@@ -859,7 +850,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('D-Alpha tocopherol', 'cleared', labelCite(CITE.superO3, METH.tocopherols)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Super Omega-3 softgels (previously Elements / Revly) = Caution. Driver is natural lemon flavor (Limited opacity). ${LIMITED_STACK} Softgel carrier / D-Alpha-Tocopherol ≠ gummy High. Distinct from Elements Omega 3-6-9 (no flavor; Clean). Basics previously Elements = one row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300219 barcode 842379150678 (90 ct). Confirm carton. No DailyMed drug SPL. Adults. Contains fish. Draft, not verified.`,
+
     cleanAlternatives: OMEGA_ALTS,
     sourcesGeneral: [`${CITE.superO3} — ${UNVERIFIED_NOTE}`],
   }),
@@ -876,7 +867,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     activeIngredients: [{ name: "Women's whole-food multivitamin", strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.womensTab),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Women's One Daily tablets (previously Elements) = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} Palm oil as tablet coating + named MCT coating are Cleared (NOT gummy High). ${OIL_FILL_TAP} Pea starch / tapioca dextrose / tapioca maltodextrin are Limited — not needed to reach Caution. ${LIMITED_STACK} Gummy ≠ tablet. Basics previously Elements = one row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300212. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.womensTab} — ${UNVERIFIED_NOTE}`],
   }),
@@ -893,7 +884,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     activeIngredients: [{ name: "Men's whole-food multivitamin", strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.mensTab),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Men's One Daily tablets (previously Elements) = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} Palm / named MCT tablet coating ≠ gummy High. Gummy ≠ tablet. Basics previously Elements = one row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300210. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.mensTab} — ${UNVERIFIED_NOTE}`],
   }),
@@ -910,7 +901,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     activeIngredients: [{ name: 'Prenatal whole-food multivitamin', strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.prenatalTab),
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Prenatal tablets (previously Elements) = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} Palm / named MCT tablet coating ≠ gummy High. Distinct from Prenatal DHA+D3 gummies. Basics previously Elements = one row. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300211. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: PRENATAL_ALTS,
     sourcesGeneral: [`${CITE.prenatalTab} — ${UNVERIFIED_NOTE}`],
   }),
@@ -938,7 +929,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.b12, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements B12 5000 mcg lozenges = Caution. Drivers are natural raspberry / berry flavors (Limited) + xylitol / mannitol (Limited sugar alcohols). ${LIMITED_STACK} Avoid needs High — none on this harvest. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 203788 barcode 842379103674 (65 ct). Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: B12_ALTS,
     sourcesGeneral: [`${CITE.b12} — ${UNVERIFIED_NOTE}`],
   }),
@@ -962,7 +953,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.mel3, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Melatonin 3 mg tablets = Caution. Driver is SiO2 (0-pt Caution cap). ${SIO2_TAP} Distinct from amazon-elements-melatonin-5 capsules and from Basics Melatonin 5 mg gummies (gummy ≠ tablet). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 337373. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Cleanliness only; no efficacy claim. Draft, not verified.`,
+
     cleanAlternatives: MELATONIN_ALTS,
     sourcesGeneral: [`${CITE.mel3} — ${UNVERIFIED_NOTE}`],
   }),
@@ -991,7 +982,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.mag, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Chelated Magnesium = Caution. Driver is SiO2 (0-pt Caution cap). ${SIO2_TAP} Named vegetable coating (HPMC, glycerin) is Cleared (Sept 16 named-coat row). Do not write Elements Mg lemon powder (Micro Ingredients / off-house). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 203803. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: MAG_ALTS,
     sourcesGeneral: [`${CITE.mag} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1022,7 +1013,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.turmericRoot, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Turmeric Root = Caution. Driver is SiO2 (0-pt Caution cap). ${SIO2_TAP} Distinct from amazon-elements-turmeric-complex already on main (different actives / OI). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 173065. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.turmericRoot} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1051,7 +1042,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Croscarmellose sodium', 'cleared', labelCite(CITE.vitC1000, METH.cellulose)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Vitamin C 1000 mg tablets = Caution. Driver is SiO2 (0-pt Caution cap). ${SIO2_TAP} Distinct from amazon-elements-whole-food-vitamin-c-500 (modified cellulose + rice powder) already on main. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 203855 barcode 842379103643 (300 ct). Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: VITAMIN_C_ALTS,
     sourcesGeneral: [`${CITE.vitC1000} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1077,7 +1068,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', labelCite(CITE.iron, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Iron = Caution. Driver is rice flour (Caution; distinct from Cleared rice hull). Do not write Solimo Iron (dead / off-house; same as Elements Iron). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 203822 (18 mg label). No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.iron} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -1105,7 +1096,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Calcium + Magnesium = Caution. Driver is silica (0-pt Caution cap). ${SIO2_TAP} Named palm / MCT coating is Cleared (NOT gummy High). ${OIL_FILL_TAP} Distinct from off-market DSLD 173068 Calcium Complex capsule (rice hull + SiO2 — different panel). Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL. No UPC harvested. Adults. Draft, not verified.`,
+
     cleanAlternatives: MAG_ALTS,
     sourcesGeneral: [`${CITE.camg} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1130,7 +1121,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Bisabolol', 'cleared', dailymed(SET.heal, METH.bisabolol)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Advanced Healing Ointment NDC 72288-247 = Caution. Driver is lanolin alcohol (Caution; wool-alcohol family; Sept 16 lock). Ceresin is Cleared. Bisabolol stays Cleared (already locked Sept 15 — not flipped). DailyMed setid cdf1bd12 Drug Facts: mineral oil, ceresin, lanolin alcohol, panthenol, glycerin, bisabolol. Structured SPL calls bisabolol LEVOMENOL / lanolin alcohol LANOLIN ALCOHOLS — Drug Facts wording is the authority. Pack sizes 72288-247-17 / 72288-247-41 share this formulaId. Solimo / Amazon Essentials cartons on this setid are the same formula (Basics previously Solimo = one row). Skin-protectant / diaper-rash directions have no lower-age floor (minAge 0). Draft, not verified.`,
+
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.heal} (Amazon Basics Advanced Healing Ointment NDC 72288-247; ${UNVERIFIED_NOTE})`,
@@ -1160,7 +1151,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Special petrolatum', 'cleared', dailymed(SET.chest, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Chest Rub NDC 72288-248 = Caution. Drivers are cedarleaf oil / nutmeg oil / spirits of turpentine / thymol (EO / scent / solvent Caution; Sept 16 / Sept 15 locks). Special petrolatum is Cleared (petrolatum neighborhood). No High. DailyMed setid 673996ab Drug Facts: cedarleaf oil, nutmeg oil, special petrolatum, spirits of turpentine, thymol. Camphor / eucalyptus oil / menthol are labeled actives — ${PARKED_RUB} Pack sizes 72288-248-17 / 72288-248-75 share this formulaId. Solimo carton on this setid is the same formula (Basics previously Solimo = one row). Ages 2+ (under 2: ask a doctor). Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.chest} (Amazon Basics Chest Rub NDC 72288-248; ${UNVERIFIED_NOTE})`,
@@ -1184,7 +1175,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       ...gummyBaseOrganic(CITE.mensGummy),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Men's Multi Gummies (previously Revly) = Avoid. Organic sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Organic flavors are Cleared. Lemon juice concentrate is the Limited gummy-base row — not needed to reach Avoid. Gummy ≠ Basics Men's One Daily tablets. Pack sizes share this formulaId. No carton UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. ${ZINC_PARKED} Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.mensGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1205,7 +1196,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       ...gummyBaseOrganic(CITE.womensGummy),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Women's Multi Gummies (previously Revly) = Avoid. Organic sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Gummy ≠ Basics Women's One Daily tablets / gummies. Pack sizes share this formulaId. No carton UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. ${ZINC_PARKED} Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.womensGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1235,7 +1226,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Sodium citrate', 'cleared', labelCite(CITE.sambucus, METH.citrate)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Sambucus gummies (previously Revly) = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} DSLD 273234 omitted sunflower oil; founder carousel is the authority. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 273234 barcode 842379151743 (60 ct). Confirm carton. No DailyMed drug SPL. Adults. ${ZINC_PARKED} Draft, not verified.`,
+
     cleanAlternatives: ELDER_ALTS,
     sourcesGeneral: [`${CITE.sambucus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1267,7 +1258,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.biotinGummy, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Elements Biotin gummies (previously Revly) = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Distinct from amazon-elements-biotin-5000 capsules (gummy ≠ capsule). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300220 barcode 842379149535 (60 ct). Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.biotinGummy} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -1302,7 +1293,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.fiberGummy, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Fiber gummies (previously Solimo) = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Lo Han Fruit Concentrate is Cleared. Annatto is standalone Caution — not the Avoid driver. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 298942. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: FIBER_ALTS,
     sourcesGeneral: [`${CITE.fiberGummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1334,7 +1325,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.mel5Gummy, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Melatonin 5 mg gummies (previously Solimo) = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Distinct from amazon-elements-melatonin-5 capsules and from Elements Melatonin 3 mg tablets (gummy ≠ tablet / capsule). Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 318722. No UPC harvested. Confirm carton. No DailyMed drug SPL. Adults (carton: not for under 18). Cleanliness only; no efficacy claim. Draft, not verified.`,
+
     cleanAlternatives: MELATONIN_ALTS,
     sourcesGeneral: [`${CITE.mel5Gummy} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1353,7 +1344,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Sunflower oil', 'high', labelCite(CITE.kidsMel, METH.seedOilGummies)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basics Kids Melatonin 1 mg gummies = Avoid. Sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} No public DSLD OI page harvested — remaining panel not invented. Distinct from adult Basics Melatonin 5 mg gummies (own formulaId; kids ≠ adult). Pack sizes share this formulaId. No UPC harvested. Confirm carton. No DailyMed drug SPL. Ages 4+ typical kids-melatonin chart (confirm carton). Cleanliness only; no efficacy claim. Draft, not verified.`,
+
     cleanAlternatives: KIDS_SLEEP_ALTS,
     sourcesGeneral: [`${CITE.kidsMel} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1392,7 +1383,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Water', 'cleared', dailymed(SET.honey, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Sugar-Free Honey Lemon Cough Drops NDC 72288-236 = Avoid. Lozenge soybean oil is High (Sept 16 founder lock). ${LOZENGE_OIL_TAP} Eucalyptus oil is standalone Caution — not the Avoid driver. Menthol is a parked active. DailyMed setid cf82fb0b Drug Facts: Acesulfame potassium, beta carotene, corn starch, eucalyptus oil, glycerine, isomalt, maltitol syrup, medium chain triglycerides, natural and artificial flavors, soybean oil, sucralose and water. Unlabeled MCT is Limited. Pack sizes share this formulaId. Ages 5+ (under 5: ask a doctor). Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.honey} (Amazon Basic Care SF Honey Lemon Cough Drops NDC 72288-236; ${UNVERIFIED_NOTE})`,
@@ -1431,7 +1422,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Water', 'cleared', dailymed(SET.cherry, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Cherry Menthol Cough Drops NDC 72288-231 = Avoid. Lozenge soybean oil + Red 40 are High. ${LOZENGE_OIL_TAP} Eucalyptus oil is standalone Caution — not needed to reach Avoid. DailyMed setid c0588221 Drug Facts: Corn starch, corn syrup, eucalyptus oil, FD&C red no. 40, glycerin, medium chain triglycerides, natural and artificial flavors, soybean oil, sucrose and water. Own formulaId — do not merge with the sugar-free twins. Pack sizes share this formulaId. Ages 5+. Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.cherry} (Amazon Basic Care Cherry Menthol Cough Drops NDC 72288-231; ${UNVERIFIED_NOTE})`,
@@ -1475,7 +1466,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Water', 'cleared', dailymed(SET.sfMenthol, METH.water)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Amazon Basic Care Sugar-Free Menthol Cough Drops NDC 72288-233 = Avoid. Lozenge soybean oil + Blue 1 + Red 40 are High. ${LOZENGE_OIL_TAP} Eucalyptus oil is standalone Caution — not needed to reach Avoid. DailyMed setid c0946295 Drug Facts: Acesulfame potassium, corn starch, eucalyptus oil, FD&C blue no. 1, FD&C red no. 40, glycerin, gum arabic, isomalt, maltitol syrup, medium chain triglycerides, natural and artificial flavors, potassium sorbate, soybean oil, sucralose and water. Own formulaId — do not merge with honey-lemon SF or cherry. Pack sizes share this formulaId. Ages 5+. Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.sfMenthol} (Amazon Basic Care SF Menthol Cough Drops NDC 72288-233; ${UNVERIFIED_NOTE})`,

@@ -293,8 +293,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: draft Clean. DailyMed actives are acetaminophen 320 mg + dextromethorphan HBr 5 mg per 10 mL only — do not list guaifenesin. Live Clean Picks still shows an older APAP + guaifenesin + DXM trio (stale; fix on that file write). Organic agave + organic blueberry flavor + natural flavors + purified water. Ages 4+ (under 4: do not use). Always dose by weight / the enclosed cup.',
+
     retailers: ['Walmart', 'Whole Foods', 'CVS', 'Walgreens', 'Target'],
     sourcesGeneral: [
       'DailyMed setid 2d918ec8-3098-1d09-e063-6294a90a9e8f (draft, not verified)',
@@ -341,9 +340,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: kids-usable Clean twin of the adult meltaway formula — inactives match (croscarmellose sodium, lactose, magnesium stearate). Cited setid 4ae2f15e is the current adult-only 18+ SPL; the 4+ / 6+ meltaway SPL (af4a4765) shares the same three inactives and supplies the kids minAge 4 directions. Separate from ColdCalm Kids liquid (KC4, alcohol vehicle). Homeopathic — cleanliness only, no efficacy claim. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid 4ae2f15e-45f3-e2e4-e063-6294a90a92bc (inactives); af4a4765-8255-44fb-821c-4345a2a45e2a (4+ directions) — draft, not verified',
@@ -382,9 +379,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Draft Clean on inactives (lactose, sucrose). Homeopathic pellets — cleanliness only, no efficacy claim. Ages 4+ (under 4: ask a doctor). Separate formula from Chestal Kids Honey syrup (KC3, benzoate Caution). ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart'],
     sourcesGeneral: [
       'DailyMed setid 2bd87a10-af3d-62dc-e063-6394a90ab125 (draft, not verified)',
@@ -430,8 +425,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL / Clean Picks Caution draft: natural flavor is Limited. Honey-based — not for infants under 12 months. No DailyMed SPL (dietary supplement). Same-batch Cleans start at minAge 4 — not an age-matched 2–3 swap.',
+
     retailers: ['CVS', 'Walgreens', 'Target', 'Walmart'],
     cleanAlternatives: AGE2_HERBAL_ALTS,
     sourcesGeneral: [
@@ -485,9 +479,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Caution (sodium benzoate). minAge is 4 per current SPL — not 2 (live Clean Picks ageBadge 2+ is stale). Alcohol appears on the inactive list and is not in Methodology §5 (ungraded; v1.6 intake). Honey — not for infants. Separate from Chestal Kids pellets (KC50, Clean). ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart'],
     cleanAlternatives: HOMEOPATHIC_ALTS,
     sourcesGeneral: [
@@ -525,9 +517,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Caution — alcohol vehicle (alcohol + purified water). Ethyl alcohol is not in Methodology §5 (ungraded; v1.6 intake); draft follows the locked Caution call, not a scored Avoid. Separate from ColdCalm meltaways (KC5, Clean). Ages 4+ (under 4: ask a doctor). ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_ALTS,
     sourcesGeneral: [
@@ -591,9 +581,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'Natural grape flavor + sodium benzoate (1+1 → Caution). Glycyrrhiza extract is Cleared — do not Caution on licorice alone. Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose. Grape daytime liquid only; grape packets share this formulaId. Do not reuse for Original or Nighttime. Ages 2+. Same-batch Cleans start at minAge 4. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: AGE2_HOMEOPATHIC_ALTS,
     sourcesGeneral: [
@@ -653,9 +641,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Caution (maltodextrin). Do NOT extend the adult Genexa Extra Strength Clean exception to this chewable. Organic maltodextrin is still the locked Caution driver. Ages 4+ (under 4: ask a doctor). ' +
-      CARLSTON,
+
     retailers: ['Walmart', 'Whole Foods', 'Target'],
     cleanAlternatives: HOMEOPATHIC_ALTS,
     sourcesGeneral: [
@@ -697,8 +683,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ]),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Red 40 and propyl gallate are each High-tier; oral PG + sucralose add Moderate points. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -736,8 +721,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ]),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Day/night kit. Daytime bottle matches the Multi-Symptom Cold Red 40 + propyl gallate + PG + sucralose family. Night bottle is a separate night formula on the same carton — Avoid already stands on the day inactives. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -795,8 +779,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-free FreeFrom trap — sucralose + oral PG (2+2 → Avoid) plus flavors / benzoate / sorbitol / maltodextrin. Cochineal carmine is on this SPL (v1.6 population Caution, not an Avoid driver). Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -848,8 +831,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Separate FreeFrom formulaId from the multi-flu bottle. Sucralose + oral PG → Avoid without a synthetic dye. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -884,8 +866,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote:
-      'Yellow 10 + Red 40 are High-tier; PG + sucralose are Moderate. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -928,8 +909,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Mighty Chews cough — Red 40 High-tier. Form of the Clean swaps is liquid / pellet / meltaway, not a chew. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -980,8 +960,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Night Mighty Chews — Blue 1 + Red 40. No night-specific Clean in this batch. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1024,8 +1003,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'DailyMed title lists APAP + DXM; the current SPL Drug Facts active line on this setid is dextromethorphan HBr 10 mg only. Red 40 High-tier. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1067,8 +1045,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Blue 1 + Red 40 High-tier; PEG + PG + sucralose are Moderate. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1119,8 +1096,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Honey nighttime DM — no synthetic dye on this SPL; sucralose + PG + PEG still stack to Avoid. Honey is Cleared. Zinc gluconate is on the inactive list and is parked as a nutrient/active (Methodology §5). Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1173,8 +1149,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Grape 12-hour polistirex — lake dyes + parabens are High-tier. Sodium metabisulfite is on the SPL (v1.6 sulfite population Caution, not the Avoid driver). HFCS is parked / ungraded. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1222,8 +1197,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Red 40 High-tier. HFCS is on this label and is parked / ungraded — Avoid already stands on dye + PG + saccharin. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1258,7 +1232,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote: 'Night long-acting DM — Red 40 + PG + sucralose. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1316,8 +1290,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kids-usable 12-hour row (directions down to age 4) for the same grape/orange family as the batch 3 adult grape row. Grape SPL (setid 234e6a2c): Red 33 + Blue 1 + parabens. Orange SPL (setid ce4b477c) uses Yellow 6 and is the same Avoid family. HFCS is parked / ungraded. Pack flavors share this formulaId for grading.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1355,8 +1328,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ]),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Children\'s Delsym chest DM — Red 40 + propyl gallate. Separate from 12-hour polistirex. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1394,7 +1366,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Night Delsym kids — Blue 1 + Red 40 + propyl gallate. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1430,7 +1402,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote: 'Dimetapp grape-style liquid — Blue 1 + Red 40. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1465,8 +1437,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote:
-      'Cold & Allergy — same Blue 1 / Red 40 / PG / sucralose family as Cold & Cough, different actives (no DXM). Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1505,8 +1476,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Nighttime Cold & Cough (diphenhydramine only on this SPL). Nighttime Cold & Congestion (setid 96a1055f) adds phenylephrine on the same inactive family. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1543,8 +1513,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dyed DayQuil Kids fever/cough — Blue 1 + Red 40. Labeled dose starts at 6 (4–6: ask a doctor). Separate from the dye-free bottle (KC27).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1577,8 +1546,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ]),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Berry kids day/night kit representative. This SPL lists chlorpheniramine + DXM with Red 40 + PG + sucralose + saccharin. Kit cartons may pair a day mucus bottle — Avoid already stands on these inactives. Ages 6+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -1635,8 +1603,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Avoid (sucralose + PG). Dye-free / sugar-free marketing does not clear two Moderate sweeteners/solvents (plus saccharin). Ages 6+ (4–6: ask a doctor).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1692,8 +1659,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Blue 1 + Red 40 High-tier. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1741,7 +1707,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Red 40 High-tier. Ages 4+.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1799,8 +1765,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Pseudoephedrine kids liquid — Blue 1 + Red 40. Poloxamer 407 is on the SPL and is not in Methodology §5 (ungraded). Ages 4+.',
+
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1856,8 +1821,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'No synthetic dye on this grape SPL — Ace-K + saccharin + PG + PEG still stack to Avoid. Ages 4+.',
+
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -1893,7 +1857,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote: 'Dimetapp-style grape — Blue 1 + Red 40. Ages 6+.',
+
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -1954,7 +1918,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Walmart kids cold/cough — Blue 1 + Red 40. Ages 6+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2022,8 +1986,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Day/night kids multi kit. Daytime inactives include Red 33 / Blue 1 / Red 40 + parabens + propyl gallate + PG + sucralose. Night bottle shares the dye/PG family. Daytime chart starts at 4.',
+
     retailers: ['Walmart'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -2060,7 +2023,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Nighttime multi — Blue 1 + Red 40 + propyl gallate. Ages 6+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -2093,8 +2056,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Chewable cough gels — sucralose + flavors (2+1 → Avoid). Beta-carotene is on the SPL as a color (v1.6 population Caution, not the Avoid driver). Medium-chain triglycerides are not in Methodology §5 (ungraded). Ages 6+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -2137,8 +2099,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Target kids multi — Blue 1 + Red 40 + propyl gallate. Ages 4+.',
+
     retailers: ['Target'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2173,7 +2134,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote: 'CVS kids cough DM — Red 40 + PG + sucralose. Ages 4+.',
+
     retailers: ['CVS'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -2213,8 +2174,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote:
-      'Kids day/night cough + chest kit. Daytime chart starts at 4; night bottle is 6+. Dyes + PG + sucralose on both.',
+
     retailers: ['CVS'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -2286,8 +2246,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Very Berry kids multi — dyes + parabens + propyl gallate. Ages 4+.',
+
     retailers: ['CVS'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2328,8 +2287,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kids cold & allergy — Blue 1 + Red 40 + propyl gallate. Ages 6+.',
+
     retailers: ['CVS'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2365,7 +2323,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote: 'Walgreens kids cough/chest — Red 40 + PG + sucralose. Ages 4+.',
+
     retailers: ['Walgreens'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -2404,8 +2362,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ],
     ),
     verdict: 'avoid',
-    honestNote:
-      "Walgreens children's nighttime cough (generic name NIGHTTIME COUGH on the SPL). Red 40 + PG + sucralose. Ages 6+.",
+
     retailers: ['Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -2472,8 +2429,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kids honey night cold — four synthetic dyes + propyl gallate. Ages 6+.',
+
     retailers: ['Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
     sourcesGeneral: [
@@ -2540,8 +2496,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Kids cold + cough + runny nose — Red 33 / Blue 1 / Red 40 + propyl gallate. Labeled dose starts at 6 (4–5: ask a doctor).',
+
     retailers: ['Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2584,8 +2539,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: include — label matched with setid 831da7b6. Blue 1 + Red 40 + propyl gallate. Ages 4+.',
+
     retailers: ['Safeway', 'Albertsons'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
     sourcesGeneral: [
@@ -2638,8 +2592,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: include — label matched with setid 62d71572. Grape 12-hour polistirex (Delsym-style) — lake dyes + parabens. Sodium metabisulfite is on the SPL (v1.6 sulfite population Caution). HFCS is parked / ungraded. Ages 4+.',
+
     retailers: ['Safeway', 'Albertsons'],
     cleanAlternatives: COUGH_ALTS,
     sourcesGeneral: [
@@ -2671,8 +2624,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: INCLUDE as Avoid (TiO2 High) — this is not the skipped petrolatum-only Vicks / Equate children's rub pair. Fragrance is on the SPL (v1.6 topical fragrance = population Caution, not the Avoid driver). Petrolatum, thymol, and turpentine oil are not in Methodology §5 (ungraded; same petrolatum-grade gap that skipped KC51/KC52/KC54). Menthol / camphor / eucalyptol as topical actives stay parked. Ages 2+ (under 2: ask a doctor). Same-batch Cleans are oral and start at minAge 4.",
+
     retailers: ['Walgreens'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

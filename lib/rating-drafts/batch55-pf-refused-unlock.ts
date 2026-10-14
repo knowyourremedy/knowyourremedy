@@ -89,9 +89,6 @@ const UNVERIFIED_NOTE = 'draft, not verified';
 
 const AMAZON = ['Amazon'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const COCONUT_GUMMY_TAP =
   'Seed/industrial oils are flagged in gummies (soybean, canola, vegetable oil, sunflower). Coconut oil / fractionated coconut oil alone in a gummy is NOT that High rule. Named coconut is the glaze / anti-stick, not an unpinned seed oil.';
 
@@ -314,8 +311,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '200mg' }],
     inactiveIngredients: IBU_INACTIVES(SET.bc604),
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Amazon Basic Care Ibuprofen leftover NDC 72288-604 / 72288-311 = Avoid. Driver is titanium dioxide (High). Iron oxide yellow is the locked exact Caution alias with ferric oxide yellow (the PR #102 refuse string; both strings written). Iron oxide red is the locked leftover Caution token. DailyMed 3329f487 (NDC 72288-604 bottles) and 9bbbedb3 (NDC 72288-311 pouches) print the same Drug Facts: colloidal silicon dioxide, corn starch, croscarmellose sodium, hypromellose, iron oxide red, iron oxide yellow, microcrystalline cellulose, polyethylene glycol, polysorbate 80, stearic acid, titanium dioxide. Pack sizes / pouch twin share this formulaId. Do NOT reuse amazon-basic-care-ibuprofen-tio2 already on main (113dd693 / NDC 72288-513 prints red iron oxide / yellow iron oxide and has no PS80 — that row is not rewritten). Distinct from amazon-basic-care-ibuprofen-dyed-talc (Red 40 / Yellow 6 / talc). Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -336,8 +332,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '200mg' }],
     inactiveIngredients: IBU_INACTIVES(SET.basics080),
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Amazon Basics Ibuprofen leftover NDC 72288-080 = Avoid. Same Drug Facts OI + ibuprofen 200 mg as Basic Care 72288-604 / 72288-311 — including printed iron oxide yellow — so this row REUSES formulaId ${IBU_FORMULA} (not cloned). DailyMed b5a47efe Drug Facts: colloidal silicon dioxide, corn starch, croscarmellose sodium, hypromellose, iron oxide red, iron oxide yellow, microcrystalline cellulose, polyethylene glycol, polysorbate 80, stearic acid, titanium dioxide. Basics pouch carton (50 pouches of 2). Do NOT rewrite amazon-basic-care-ibuprofen-tio2 already on main. Ages 12+.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -389,8 +384,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Gellan gum', 'cleared', labelCite(CITE.qunolOleo, METH.gellan)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Qunol Extra Strength Turmeric 1500 oleoresin + gellan carton = Caution. Drivers are oleoresin turmeric (locked exact Caution token — the PR #102 refuse string; ${OLEORESIN_TAP}) plus silicon dioxide (0-pt Caution cap). HelloPharmacist other-ingredients: gamma-cyclodextrin, vegetable hypromellose, oleoresin turmeric, magnesium stearate, gellan gum, silicon dioxide. Gamma-cyclodextrin is the locked leftover Cleared token (printed here as Other Ingredients). Gellan gum sits on the locked Cleared gum-family row. Own formulaId — do NOT reuse qunol-extra-strength-turmeric-1500 or qunol-extra-strength-turmeric-1000 already on main (those official OI lists omit oleoresin / gellan). No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...AMAZON, 'Qunol'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.qunolOleo} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -449,8 +443,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.aplusOxides, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: A+Health Dual Action APAP 250 / IBU 125 (DailyMed 04ccc4b2 / NDC 69452-394) = Avoid. Driver is titanium dioxide (High). Glyceryl dibehenate is the locked exact Cleared token (the PR #102 refuse string; dibehenin already Cleared ≠ this string). Full current Drug Facts OI is now exact-covered: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. Sodium lauryl sulphate is the printed British spelling of the locked SLS Caution token. Ferric oxide yellow / ferric oxide red are leftover Caution. Distinct from 4834aa7f (no ferric oxides — own formulaId). Do not reuse amazon-basic-care-dual-action-tio2-talc (that SPL has talc + sucralose + PVA). Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: DUAL_ALTS,
     sourcesGeneral: [
@@ -500,8 +493,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.aplusPlain, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: A+Health Dual Action APAP 250 / IBU 125 (DailyMed 4834aa7f / NDC 69452-469) = Avoid. Driver is titanium dioxide (High). Glyceryl dibehenate is the locked exact Cleared token (the PR #102 refuse string). Full current Drug Facts OI is now exact-covered: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. No ferric oxides on this SPL — own formulaId, do not share with 04ccc4b2. Do not reuse amazon-basic-care-dual-action-tio2-talc. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: DUAL_ALTS,
     sourcesGeneral: [
@@ -567,8 +559,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Qunol Zero Sugar Turmeric Gummies = Caution. Isomalt is the locked exact Limited token (the PR #102 refuse string) and was the only leftover. Official qunol.com other-ingredients: maltitol syrup, isomalt, maltodextrin, xylitol, pectin; less than 2% of carnauba wax, citric acid, fractionated coconut oil, monk fruit extract, natural flavors, sodium citrate. ${COCONUT_GUMMY_TAP} No unpinned seed oil and no High coating oil — fractionated coconut oil is coconut-named (not soybean / canola / sunflower / vegetable oil High). Limited-only stack (isomalt + maltitol + maltodextrin + xylitol + natural flavors) stays Caution. ${LIMITED_STACK} Gamma-cyclodextrin sits inside the labeled Bioenhanced Turmeric Complex (Cleared leftover lock — not an Other-Ingredients string on this carton). Pack sizes (90 / 120) share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...AMAZON, 'Qunol', 'Target'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.qunolGummies} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],

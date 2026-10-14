@@ -199,10 +199,6 @@ function homeopathicFields() {
   };
 }
 
-function homeoNote(lead: string): string {
-  return `${lead} Homeopathic — cleanliness only, no efficacy claim. ${CARLSTON} Pack sizes of the same name+form+strength share formulaId. ${LIMITED_STACK} Draft, not verified.`;
-}
-
 const ID = {
   traumeelTabs: 'medinatura-traumeel-tablets',
   tReliefXsDrops: 'medinatura-t-relief-xs-oral-drops',
@@ -548,9 +544,7 @@ function bhiRow(
     activeIngredients: actives,
     inactiveIngredients: tabletMaltodextrin(setid, hasLactose),
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: ${productName} = Caution. Driver is maltodextrin (Limited). Dextrose + magnesium stearate${hasLactose ? ' + lactose' : ''} Cleared. Own formulaId — do not merge BHI rows. ${extraNote}`,
-    ),
+
     cleanAlternatives: alts,
     sourcesGeneral: [dmUrl(setid) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   });
@@ -573,9 +567,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', dailymed(SET.traumeelTabs, METH.cleared)),
     ],
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Traumeel Tablets = Clean. Lactose + magnesium stearate = 0 pt. DailyMed setid 39630b57. Distinct from T-Relief (different actives — do NOT reuse as one formula) and from BHI Traumex (maltodextrin Caution). Adults and children 4+ (under 4: ask a doctor). Contains lactose.',
-    ),
+
     sourcesGeneral: [dmUrl(SET.traumeelTabs) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
 
@@ -609,9 +601,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.tReliefXsDrops, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: T-Relief Extra Strength Oral Drops = Caution. Driver is alcohol as the oral-homeopathic vehicle (Limited). Water Cleared. ${ALCOHOL_VEHICLE_LINE} Distinct from Traumeel Tablets (Clean) and from T-Relief gels/creams.`,
-    ),
+
     cleanAlternatives: ALTS.painOral,
     sourcesGeneral: [dmUrl(SET.tReliefXsDrops) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -648,9 +638,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.tReliefXsGel, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: T-Relief Extra Strength Gel = Caution. Drivers are phenoxyethanol (Caution-table) and alcohol vehicle (Limited). Carbomer + NaOH + water Cleared. Same OI stack as T-Relief Pain Gel — kept separate because Ruta is 4X here vs 2X on the Pain Gel. ${ALCOHOL_VEHICLE_LINE}`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.tReliefXsGel) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -687,9 +675,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.tReliefPainGel, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: T-Relief Pain Gel = Caution. Same OI stack as Extra Strength Gel (phenoxyethanol Caution-table + alcohol Limited). 2 oz / 8.75 oz share this formulaId. Kept separate from Extra Strength Gel because Ruta potency differs (2X here vs 4X). Distinct from Traumeel.',
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.tReliefPainGel) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -710,9 +696,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Magnesium stearate', 'cleared', dailymed(SET.tReliefXsTabs, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: T-Relief Extra Strength Tablets = Caution. Driver is maltodextrin (Limited). 100 ct / 250 ct share this formulaId. Distinct from T-Relief Pain Tablets (adds lactose; different potencies) and from Traumeel Tablets (Clean).',
-    ),
+
     cleanAlternatives: ALTS.painOral,
     sourcesGeneral: [dmUrl(SET.tReliefXsTabs) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -729,9 +713,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     activeIngredients: T_RELIEF_PAIN_ACTIVES,
     inactiveIngredients: tabletMaltodextrin(SET.tReliefPainTabs, true),
     verdict: 'caution',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: T-Relief Pain Tablets = Caution. Driver is maltodextrin (Limited). Lactose + dextrose + magnesium stearate Cleared. Distinct from Extra Strength Tablets and from Traumeel Tablets (Clean). Contains lactose.',
-    ),
+
     cleanAlternatives: ALTS.painOral,
     sourcesGeneral: [dmUrl(SET.tReliefPainTabs) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -748,9 +730,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     activeIngredients: T_RELIEF_ARTH_ACTIVES,
     inactiveIngredients: tabletMaltodextrin(SET.tReliefArthXsTabs, true),
     verdict: 'caution',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: T-Relief Arthritis Extra Strength Tablets = Caution. Driver is maltodextrin (Limited). 100 ct / 250 ct share this formulaId. Non–XS T-Relief Arthritis is list-4 / PR-comment only — not this row. Distinct from Traumeel.',
-    ),
+
     cleanAlternatives: ALTS.painOral,
     sourcesGeneral: [dmUrl(SET.tReliefArthXsTabs) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -790,9 +770,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Dextrose', 'cleared', dailymed(SET.clearlifeTabs, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: ClearLife Allergy Relief Tablets = Caution. Drivers are whole-leaf stevia (Caution-cap; DailyMed STEVIA REBAUDIUNA LEAF) and maltodextrin (Limited). ${STEVIA_LEAF_TAP} DailyMed title is Clearlife Extra Strength tablets — this is the oral tablet row, not ClearLife XS nasal (list-4 / PR-comment only). Contains lactose.`,
-    ),
+
     cleanAlternatives: ALTS.allergy,
     sourcesGeneral: [dmUrl(SET.clearlifeTabs) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -829,9 +807,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Dextrose', 'cleared', dailymed(SET.reboostZincLemon, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: ReBoost Cold & Flu Tablets Zinc +10 Lemon = Caution. Drivers are whole-leaf stevia (Caution-cap) and maltodextrin (Limited). ${STEVIA_LEAF_TAP} Zinc is parked as an active (Methodology v1.6) — this draft grades inactives only. ReBoost nasal is list-4 / PR-comment only. Contains lactose.`,
-    ),
+
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.reboostZincLemon) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -870,9 +846,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.reboostSpray, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: ReBoost Sore Throat Spray Cherry = Caution. Drivers are alcohol vehicle + fructose + cherry flavor (Limited-only — stays Caution, not Avoid). ${ALCOHOL_VEHICLE_LINE} Zinc parked as an active.`,
-    ),
+
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.reboostSpray) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -900,9 +874,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     ],
     inactiveIngredients: tabletMaltodextrin(SET.wellmindCalm, true),
     verdict: 'caution',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: WellMind Calming Tablets = Caution. Driver is maltodextrin (Limited). WellMind Vertigo / Mental Focus are list-4 / PR-comment only. Contains lactose.',
-    ),
+
     cleanAlternatives: ALTS.sleep,
     sourcesGeneral: [dmUrl(SET.wellmindCalm) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -928,9 +900,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.bodyanewKit, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-STYLE DRAFT: BodyAnew Cleanse/Detox Oral Drops = Caution. Driver is alcohol as the oral-homeopathic vehicle (Limited). Water Cleared. ${ALCOHOL_VEHICLE_LINE} Written as the drops formula only — the BodyAnew Kit is list-4 / PR-comment only. DailyMed setid e5f86823 is the kit SPL that carries the drops OI (alcohol + water). Adult 18+.`,
-    ),
+
     sourcesGeneral: [
       dmUrl(SET.bodyanewKit) + ' — kit SPL cited for drops OI only; kit is not a Search row — ' +
         UNVERIFIED_NOTE,
@@ -1270,9 +1240,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     ],
     inactiveIngredients: creamBaseCoconutMct(SET.tReliefPainCream),
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: T-Relief Pain Cream = Caution. Sodium polyacrylate Caution; phenoxyethanol Caution-table; alcohol Limited; carrageenan Limited. Safflower / soy (in aloe oil) / sunflower seed wax / aloe / shea / coconut Cleared with cream form taps. MCT labeled from coconut (Cocos nucifera) = Cleared, not unlabeled-MCT Limited. 2 oz / 4 oz share this formulaId. ${CREAM_OIL_LINE} Distinct from Extra Strength Cream (separate marketed strength / pack) and from Traumeel Ointment.`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.tReliefPainCream) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1303,9 +1271,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     ],
     inactiveIngredients: creamBaseCoconutMct(SET.tReliefXsCream),
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: T-Relief Extra Strength Cream = Caution. Same locked cream math as Pain Cream (sodium polyacrylate Caution; phenoxyethanol Caution; alcohol / carrageenan Limited; safflower / soy / seed wax / aloe Cleared). 3 oz / 8 oz share this formulaId. ${CREAM_OIL_LINE} Separate formulaId from Pain Cream (marketed Extra Strength vs regular; shop says 50% more of each botanical).`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.tReliefXsCream) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1340,9 +1306,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', labelCite(ARTH_CREAM_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: T-Relief Arthritis Extra Strength Cream = Caution. Same locked cream math (sodium polyacrylate Caution; safflower / soy / seed wax / aloe Cleared; phenoxyethanol Caution; alcohol Limited). Caprylic/capric triglycerides are not named coconut on the shop OI line → unlabeled MCT Limited. ${CREAM_OIL_LINE} No current DailyMed SPL (legacy arthritis-cream setid 861754ec is inactivated / list-4). OI from the current MediNatura 3 oz product page. Arthritis actives — do not merge into T-Relief Pain / Extra Strength Cream.`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [
       ARTH_CREAM_CITE + ' — shop OI; no current DailyMed SPL — ' + UNVERIFIED_NOTE,
@@ -1390,8 +1354,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.tReliefLido, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCKED DRAFT: T-Relief Lidocaine 4% Cream = Caution. Sodium polyacrylate Caution; safflower / soy Cleared with cream taps; phenoxyethanol Caution-table; unlabeled MCT Limited; carrageenan Limited. ${CREAM_OIL_LINE} Lidocaine is the OTC monograph active (parked for active-safety-cap review — inactives graded only). Homeopathic botanicals on the carton are listed as additional actives, not OI. Adults and children 4+ (under 4: ask a doctor). Not homeopathic-subtype — this is a 4% lidocaine cream. Distinct from T-Relief Pain / Extra Strength Cream. Pack sizes share formulaId. ${LIMITED_STACK} Draft, not verified.`,
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.tReliefLido) + ' — ' + UNVERIFIED_NOTE],
   }),
@@ -1429,9 +1392,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.traumeelOint, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: Original Traumeel Ointment = Caution. Paraffin / mineral oil Cleared; cetostearyl alcohol Cleared fatty-alcohol family; alcohol vehicle Limited → Limited-only stays Caution (not Clean). ${ALCOHOL_VEHICLE_LINE} ${OINTMENT_OIL_LINE} MediNatura setid c9962e63 — not the Heel legacy ointment SPL (list-4). Distinct from Traumeel Tablets (Clean) and from T-Relief creams.`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.traumeelOint) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1454,9 +1415,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.arniflora, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Arniflora Arnica Gel = Caution. Witch hazel Cleared; alcohol vehicle Limited → Caution (not Clean). ${ALCOHOL_VEHICLE_LINE} Schwabe North America setid 935bf19d — Mexico SPL is list-4 / PR-comment only.`,
-    ),
+
     cleanAlternatives: ALTS.firstAid,
     sourcesGeneral: [dmUrl(SET.arniflora) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1484,9 +1443,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.triflora, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Triflora Arthritis Gel = Caution. Witch hazel Cleared; pine needle oil Caution (founder gel-inactive lock); alcohol Limited. ${PINE_TAP} Schwabe North America setid — Mexico SPL is list-4.`,
-    ),
+
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [dmUrl(SET.triflora) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1516,9 +1473,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.ssssting, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Ssssting Stop Gel = Caution. Citronella / eucalyptus / jojoba as gel inactives = Caution; alcohol Limited; witch hazel Cleared. ${CITRONELLA_TAP} Schwabe North America setid — Mexico SPL is list-4.`,
-    ),
+
     cleanAlternatives: ALTS.firstAid,
     sourcesGeneral: [dmUrl(SET.ssssting) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1548,9 +1503,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.florasone, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Florasone Cream = Caution. Mineral oil / glycol stearate / IPM / stearyl heptanoate Cleared (this-pass lock). Benzyl alcohol is standalone Caution on this 6+ topical (not the under-3 Avoid split). Alcohol vehicle Limited. ${KOH_TAP} ${CREAM_OIL_LINE} Schwabe North America — Mexico SPL is list-4. Ages 6+.`,
-    ),
+
     cleanAlternatives: ALTS.firstAid,
     sourcesGeneral: [dmUrl(SET.florasone) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1577,9 +1530,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.psoriaflora, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Psoriaflora Cream = Caution. Same locked cream stack as Florasone (mineral oil / glycol stearate / IPM / stearyl heptanoate Cleared; benzyl alcohol Caution; alcohol Limited). ${KOH_TAP} Schwabe North America — Mexico SPL is list-4.`,
-    ),
+
     cleanAlternatives: ALTS.firstAid,
     sourcesGeneral: [dmUrl(SET.psoriaflora) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1611,9 +1562,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.coughDay, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Cough & Bronchial Daytime = Caution. Current US SPL (setid ab0a4fd6, 2026) is the oat formula — oat Cleared; no barley malt on this carton. Alcohol + potassium sorbate + sorbitol Limited → Limited-only stays Caution. ${OAT_TAP} Older barley-malt daytime SPLs (e8949f67 / 791a8da1) are not this row. Ages 12+. Contains lactose.`,
-    ),
+
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughDay) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),
@@ -1648,9 +1597,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', dailymed(SET.coughNight, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote: homeoNote(
-      `FOUNDER-LOCKED DRAFT: B&T Cough & Bronchial Nighttime = Caution. Current US SPL (setid 31445469, 2026) is the oat-inactive formula — oat Cleared; no barley malt. Alcohol + potassium sorbate + sorbitol Limited → not Clean (Clean only if the locked stack is Cleared-only). ${OAT_TAP} Older barley-malt nighttime SPLs (00d38f6f / b3899e48) are not this row. Ages 12+. Contains lactose.`,
-    ),
+
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughNight) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
   }),

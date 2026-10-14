@@ -419,14 +419,6 @@ function gemmoOi(slug: string): IngredientFlag[] {
   ];
 }
 
-function homeoNote(lead: string): string {
-  return `${lead} Homeopathic — cleanliness only, no efficacy claim. ${CARLSTON} Contains lactose. Pack sizes share formulaId.`;
-}
-
-function homeoNoteNoLac(lead: string): string {
-  return `${lead} Homeopathic — cleanliness only, no efficacy claim. ${CARLSTON} Pack sizes share formulaId.`;
-}
-
 const COLD_ALTS: CleanAlternative[] = [
   alt(
     COLDCALM,
@@ -501,11 +493,6 @@ const CHESTAL_ORIG_ALTS: CleanAlternative[] = [
     'Independently Clean homeopathic meltaway already on main (minAge 4). Form: meltaway tablet vs syrup — labeled, not a hard filter (§6).',
   ),
 ];
-
-const TUBE_NOTE =
-  'FOUNDER-STYLE DRAFT: single-remedy pellet tube = Clean. Class OI lactose+sucrose = 0 pt. Potencies/pack sizes share the class formulaId `boiron-single-remedy-pellets`. Do not invent a unique grade per tube. Carton has the use and age chart. Homeopathic — cleanliness only, no efficacy claim. ' +
-  CARLSTON +
-  ' Contains lactose.';
 
 // KYR5-b set-id-only chunks 5–11 — official BoironUSA shop 30C single-tube
 // SKU (UPC-A). Exact ~80 pellet tube. Not 3-pack / 240-pellet.
@@ -940,7 +927,7 @@ function singleTube(
     activeIngredients: [{ name: remedyName, strength: 'potency on tube' }],
     inactiveIngredients: pelletClassOi(slug),
     verdict: 'clean',
-    honestNote: TUBE_NOTE,
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       `${shop(slug)} — ${UNVERIFIED_NOTE}`,
@@ -1318,13 +1305,6 @@ const SINGLE_TUBES: RatingRecord[] = [
   singleTube('zincumsulphuricum', 'Zincum Sulphuricum', PAIN_FEVER),
 ];
 
-const GEMMO_NOTE =
-  'FOUNDER-STYLE DRAFT: Boiron Gemmotherapy herbal liquid = Caution. Driver is alcohol as the extract vehicle (Limited). Glycerin + purified water Cleared. Other Ingredients from the current BoironUSA shop page. ' +
-  ALCOHOL_VEHICLE_LINE +
-  ' ' +
-  LIMITED_STACK +
-  ' Herbal supplement (not a homeopathic drug SPL). Ages 12+. Shop does not name a use aisle — filed under Vitamins, not as a homeopathic shelf. formulaId == id. No independently Clean same-shelf gemmo swap listed (do not invent one).';
-
 // KYR5-b in-store Boiron gemmo — official BoironUSA shop SKU (UPC-A).
 // Exact 2 fl oz bud / young-shoot pack. Brand-site sku / item_id only.
 const BATCH34_GEMMO_CATCHUP_BARCODES: Record<string, string> = {
@@ -1372,7 +1352,7 @@ function gemmoRow(
     ],
     inactiveIngredients: gemmoOi(slug),
     verdict: 'caution',
-    honestNote: GEMMO_NOTE,
+
     retailers: ['BoironUSA.com'],
     sourcesGeneral: [`${shop(slug)} — ${UNVERIFIED_NOTE}`],
   };
@@ -1490,9 +1470,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4ae58d81-3952-b372-e063-6394a90a8499'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: SinusCalm Tablets = Clean. Croscarmellose sodium + lactose + magnesium stearate = 0 pt. Adult 18+ carton. Separate from SinusCalm Allergy (same actives, allergy aisle) and from SinusCalm pellets (lactose + sucrose).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('sinuscalm-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1521,9 +1499,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4d3f554a-c8b2-3121-e063-6394a90a1598'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: SinusCalm Allergy Tablets = Clean. Same three actives as SinusCalm Tablets; allergy-aisle carton / setid 4d3f554a. Croscarmellose + lactose + magnesium stearate = 0 pt. Adult 18+. Do not merge into the Cold & Flu SinusCalm row.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('sinuscalm-allergy-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1555,9 +1531,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4af6bc5b-7924-cb9f-e063-6394a90a7864'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: VoiceCalm Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 6+ (under 6: ask a doctor).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('voicecalm-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1592,9 +1566,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4ae45fc7-c0f4-3770-e063-6394a90ac80e'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: ThroatCalm Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Adult 18+ carton. Separate from ThroatCalm OTG pellets (minAge 3) and ThroatCalm Spray (alcohol + L-carvone Caution).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('throatcalm') + ' — ' + UNVERIFIED_NOTE,
@@ -1625,9 +1597,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4d7a3143-ec9d-310b-e063-6394a90ac46e'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Chestal Cold & Cough Meltaway Tablets = Clean. Dulcamara family. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 4+ (4–under 6 dissolve in water; under 4: ask a doctor). Separate from Chestal Cough & Mucus tablets (Antimonium/Bryonia family) and from reuse Chestal honey / kids C&C pellets.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('chestal-cold-cough-meltaway-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1662,9 +1632,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('4d77a058-e6c8-2af5-e063-6394a90afe1a'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Chestal Cough & Mucus Meltaway Tablets = Clean. Antimonium/Bryonia family (includes Rumex crispus 6C). Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 4+. Separate from the Dulcamara Cold & Cough tablet / pellet / honey rows.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('chestal-cough-mucus-meltaway-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1693,9 +1661,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('302786a1-c6a2-f7ea-e063-6394a90a327b'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: DiarrheaCalm Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 6+ (under 6: ask a doctor). Separate from DiarrheaCalm / Diaralia OTG pellets (lactose + sucrose).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('diarrheacalm-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1724,9 +1690,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('cd88e215-55e6-3c9d-e053-2a95a90ab8e7'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: WartCalm Meltaway Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 2+ (2–5 dissolve in water; under 2: ask a doctor).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('wartcalm-meltaway-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1756,9 +1720,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('a1db8417-baea-6914-e053-2a95a90a2fd3'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: SleepCalm Tablets = Clean. Quietude rename — do not write Quietude as its own id. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 12+. Separate from SleepCalm Kids pellets / liquid (reuse) and from SleepCalm OTG pellets in this file (same actives, lactose + sucrose).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('sleepcalm') + ' — ' + UNVERIFIED_NOTE,
@@ -1790,9 +1752,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('af489aa8-9737-33e1-e053-2995a90ad280'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: StressCalm Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 12+ (under 12: ask a doctor). Separate from StressCalm OTG pellets.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('stresscalm') + ' — ' + UNVERIFIED_NOTE,
@@ -1821,9 +1781,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('39c20cb2-79c4-4775-b3a9-55cfa67fb743'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Cyclease Cramps = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 12+. DailyMed prints Colcynthis — written as Colocynthis (HPUS name). Separate from Cyclease PMS / Menopause.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('cyclease-cramp') + ' — ' + UNVERIFIED_NOTE,
@@ -1852,9 +1810,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('09ff0633-2992-4aba-96ed-45a69f3ee589'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Cyclease PMS = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 12+ (under 12: not recommended). Separate from Cyclease Cramps / Menopause.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('cyclease-pms') + ' — ' + UNVERIFIED_NOTE,
@@ -1885,9 +1841,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: menopauseOi('a227e8d8-27a3-592f-e053-2a95a90ab31c'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Cyclease Menopause Tablets = Clean. Inactives are lactose + magnesium stearate + sucrose — NOT the croscarmellose trio. Still 0 pt. Adult 18+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('cyclease-menopause-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1916,9 +1870,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('8f8c295f-b6ec-6c6f-e053-2995a90aad9e'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: HemCalm Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 12+. Separate from HemCalm OTG pellets, ointment (alcohol Caution), and suppositories (hard fat Clean).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('hemcalmtablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1949,9 +1901,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('c77c3c90-0168-f7aa-e053-2995a90a9171'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: MotionCalm Meltaway Tablets = Clean. NEW FORM vs reuse `boiron-motioncalm` pellets (lactose + sucrose). Same five actives; croscarmellose + lactose + magnesium stearate = 0 pt. Ages 7+. Do not clone the pellet formulaId.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('motioncalm-meltaway-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -1982,9 +1932,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('c846971d-fcf8-2cf4-e053-2995a90aaec8'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: NauseaCalm Meltaway Tablets = Clean. NEW FORM vs reuse `boiron-nauseacalm` pellets. Same five actives; croscarmellose + lactose + magnesium stearate = 0 pt. Ages 2+. Do not clone the pellet formulaId.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('nauseacalm-meltaway-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -2011,9 +1959,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('0671385c-7370-03ac-e063-6394a90afc1c'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnicare Tablets / Arnica 30C Tablets = Clean. Same DailyMed setid 0671385c, same Arnica montana 30C, same croscarmellose + lactose + magnesium stearate — ONE row, no separate boiron-arnica-30c-tablets id. Ages 2+ (2–5 dissolve in water). Separate from Arnica 30X Tablets and from the named Arnica 30C Pellets tube.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnicare-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -2041,9 +1987,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBaseShop('https://www.boironusa.com/product/arnica-30x-tablets/'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnica 30X Tablets = Clean. Class tablet OI (croscarmellose + lactose + magnesium stearate) cited from the shop page — do not invent a unique grade. Different potency from Arnicare / Arnica 30C Tablets (30C). Ages 2+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnica-30x-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -2076,9 +2020,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('cb02378b-617d-4268-b565-4136e50009f4'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnicare Arthritis Tablets = Clean. Croscarmellose + lactose + magnesium stearate = 0 pt. Adult 18+ (under 18: ask a doctor). Separate from Arnicare Arthritis Cream (Caution — Caution-table inactives + PS80).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnicare-arthritis') + ' — ' + UNVERIFIED_NOTE,
@@ -2110,9 +2052,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('051a4e17-c665-ec4d-e063-6294a90aabe6'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnicare Leg Cramps Meltaway Tablets = Clean. Current UNFLAVORED carton (setid 051a4e17). Shop slugs arnicare-leg-cramps + arnicare-leg-cramps-pm-meltaway-tablets share this formulaId. Dead lemon SPL 6b658f98 is discontinued — NOT this row. Croscarmellose + lactose + magnesium stearate = 0 pt. Adult 18+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnicare-leg-cramps') + ' — ' + UNVERIFIED_NOTE,
@@ -2140,9 +2080,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: tabletBase('d5e1a96c-4a19-c58c-e053-2a95a90aca9e'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnicare Bruise Tablets = Clean. Arnica montana 9C. Croscarmellose + lactose + magnesium stearate = 0 pt. Ages 2+. Separate from Arnicare Bruise Cream (shea / ferment Caution) and Bruise Gel (alcohol Caution).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnicare-bruise-tablets') + ' — ' + UNVERIFIED_NOTE,
@@ -2176,9 +2114,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('da48192b-f3fc-5d6e-e053-2995a90a43fa'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: AllergyCalm Kids / OTG Pellets = Clean. ONE formula for kids + on-the-go. Lactose + sucrose = 0 pt. Ages 2+ (under 2: ask a doctor). Separate from reuse AllergyCalm meltaways (croscarmellose trio).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('allergycalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2214,9 +2150,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('da32d4e3-f049-e7c8-e053-2a95a90a5790'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: ColdCalm On the Go Pellets = Clean. Same ColdCalm actives as reuse meltaways; lactose + sucrose = 0 pt. Ages 4+. Do not clone `boiron-coldcalm-meltaways` or `boiron-coldcalm-kids-liquid`.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('coldcalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2247,9 +2181,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('2bd2f6ce-ce54-1945-e063-6294a90ad051'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Chestal Cold & Cough Meltaway Pellets = Clean. Dulcamara family. Lactose + sucrose = 0 pt. Ages 4+. Separate from reuse Chestal Kids C&C pellets (same actives, kids carton / different setid) — do not clone that formulaId.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('chestal-cold-cough-meltaway-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2283,9 +2215,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('a84e27cd-8e21-0fce-e053-2a95a90af2cf'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Chestal Meltaway Pellets (adult dry-cough) = Clean. Antimonium/Bryonia family on setid a84e27cd — Rumex crispus is on the Cough & Mucus tablet / adult honey reuse row, not this pellet SPL. Lactose + sucrose = 0 pt. Ages 4+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('chestal-meltaway-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2319,9 +2249,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('ab6f3c39-7841-92cc-e053-2995a90a7943'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Chestal Kids Meltaway Pellets (dry-cough) = Clean. SAME actives as adult dry-cough pellets; DIFFERENT from reuse `boiron-chestal-kids-pellets` (C&C / Dulcamara family). New row — do not clone the C&C kids formulaId. Lactose + sucrose = 0 pt. Kids 4+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('chestal-kids-meltaway-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2350,9 +2278,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('95872748-6d70-5c80-e053-2995a90a570c'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: SinusCalm Pellets = Clean. Same three actives as SinusCalm Tablets; lactose + sucrose = 0 pt. Ages 6+ (under 6: ask a doctor).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('sinuscalm-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2382,9 +2308,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('dda7a51d-7c2c-67f4-e053-2a95a90a8e72'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: SleepCalm On the Go Pellets = Clean. NEW vs reuse SleepCalm Kids pellets (different actives). Same four actives as SleepCalm Tablets; lactose + sucrose = 0 pt. Ages 12+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('sleepcalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2416,9 +2340,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('ddcbbaae-ca20-9e18-e053-2a95a90a267f'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: StressCalm On the Go Pellets = Clean. Same actives as StressCalm Tablets; lactose + sucrose = 0 pt. Ages 12+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('stresscalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2448,9 +2370,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('2df8a63e-0933-c0dc-e063-6394a90a8263'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: AcidCalm On the Go Pellets = Clean. NEW FORM vs reuse `boiron-acidcalm` tablets. Same four actives; lactose + sucrose = 0 pt. Ages 12+. Do not clone the tablet formulaId.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('acidcalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2479,9 +2399,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('dea9bd55-8e08-2165-e053-2995a90a8e81'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: HemCalm On the Go Pellets = Clean. Same actives as HemCalm Tablets; lactose + sucrose = 0 pt. Ages 12+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('hemcalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2516,9 +2434,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('de97d002-de84-bcef-e053-2995a90a319b'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: ThroatCalm On the Go Pellets = Clean. Same actives as ThroatCalm Tablets; lactose + sucrose = 0 pt. Ages 3+ (under 3: ask a doctor if sore throat is severe). Separate from the 18+ tablet carton and the spray.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('throatcalm-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2547,9 +2463,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('30293788-e30b-d650-e063-6394a90a9517'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: DiarrheaCalm / Diaralia On the Go Pellets = Clean. Same actives as DiarrheaCalm Tablets; lactose + sucrose = 0 pt. Ages 6+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('diaralia-on-the-go-pellets') + ' — ' + UNVERIFIED_NOTE,
@@ -2576,9 +2490,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletClassOi('arnica-montana'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Arnica 30C Pellets = Clean. Named Clean Picks tube. Class pellet OI lactose+sucrose cited from shop https://www.boironusa.com/product/arnica-montana/ + DailyMed class example setid 0682b0ee. Do not also emit arnica-montana in the single-remedy tube factory. Potencies/pack sizes share the class pellet cleanliness; this named row keeps its own formulaId. Ages 2+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('arnica-montana') + ' — ' + UNVERIFIED_NOTE,
@@ -2603,9 +2515,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: pelletBase('0590e5fd-6216-b75a-e063-6294a90acb86'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      'FOUNDER-STYLE DRAFT: Influenzinum Pellets = Clean. Influenzinum 12C. Lactose + sucrose = 0 pt. Unit-dose packs share this formulaId. Ages 2+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('influenzinum') + ' — ' + UNVERIFIED_NOTE,
@@ -2637,9 +2547,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: yeastSuppOi('cd384b93-b803-8810-e053-2a95a90acdf0'),
     verdict: 'clean',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: YeastCalm Suppositories = Clean. Gelatin + glycerin + purified water = 0 pt.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('yeastcalm-suppositories') + ' — ' + UNVERIFIED_NOTE,
@@ -2669,9 +2577,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: hemSuppOi('91ce4f52-d761-a3b5-e053-2995a90a45df'),
     verdict: 'clean',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: HemCalm Suppositories = Clean. Hard fat = 0 pt.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       'DailyMed setid 91ce4f52-d761-a3b5-e053-2995a90a45df — US SPL; not a current BoironUSA.com shop slug — ' +
@@ -2701,13 +2607,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: ointmentBase('9d03bd9c-ab1e-4414-afd2-8f9c80000164'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Ointment = Caution. Driver is alcohol as the topical vehicle (Limited). Petrolatum and water are Cleared. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE +
-        ' Ages 1+ (under 1: not recommended). Separate from reuse Arnicare Gel (Clean).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [
@@ -2737,13 +2637,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: ointmentBase('8ff1a5fc-93f6-5782-e053-2a95a90a1785'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: HemCalm Ointment = Caution. Same ointment base as Arnicare Ointment — alcohol Limited, petrolatum Cleared, water Cleared. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE +
-        ' Ages 12+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: HEMCALM_ALTS,
     sourcesGeneral: [
@@ -2774,12 +2668,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: honeySyrupOi('4ecd2dcf-7664-00b9-e063-6394a90a9686'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Chestal Cold & Cough Honey = Caution. NEW vs reuse `boiron-chestal-adult-honey` (different actives: Dulcamara family here; Antimonium/Bryonia on the reuse honey). Alcohol Limited + sodium benzoate Limited. Citric / honey / water / sucrose Cleared. Adult chart 12+; kids chart 4+ — minAge 4. Honey is not for under 1. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
@@ -2811,12 +2700,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: originalSyrupOi('b347fb77-a46d-4c1e-ad40-c69e89387618'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Chestal Original Cold Syrup (no honey) = Caution. Dulcamara family. Alcohol Limited + sodium benzoate Limited. Citric / water / sucrose Cleared. Adult chart 12+; kids chart lists 4+ — minAge 4. Separate from Chestal Cold & Cough Honey and from reuse Chestal Honey. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: CHESTAL_ORIG_ALTS,
     sourcesGeneral: [
@@ -2848,12 +2732,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: originalSyrupOi('cc5d12f6-9d39-48ff-b295-59bd592c84df'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Chestal Kids Original Cold Syrup = Caution. Same OI as adult Original (alcohol Limited + benzoate Limited; citric / water / sucrose Cleared). Kids 4+. Separate from reuse Chestal Kids Honey and Chestal Kids C&C pellets. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: KIDS_CHESTAL_ALTS,
     sourcesGeneral: [
@@ -2883,12 +2762,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholWaterOi('24246729-2d45-4d83-bc25-39db03e266d4'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Camilia Original Liquid Doses = Caution. Alcohol + water vehicle. Carton is 1 month+ (minAge 0). ColicComfort is not on the US shop — not written. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: BABY_COLD_ALTS,
     sourcesGeneral: [
@@ -2919,12 +2793,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholWaterOi('200c2af6-b457-b8bc-e063-6294a90a3800'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Camilia Bedtime = Caution. Alcohol + water vehicle. Kids minAge 0 (1 month+ chart). Separate from Camilia Original and Camilia Tummy. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: BABY_COLD_ALTS,
     sourcesGeneral: [
@@ -2955,12 +2824,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholWaterOi('06c011fd-2814-2a57-e063-6394a90a8099'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Camilia Tummy = Caution. Alcohol + water vehicle. Kids minAge 0 (1 month+). Replaces ColicComfort on the US shop — ColicComfort is not written. No age-matched independently Clean baby digestive swap is listed (do not invent one). ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     sourcesGeneral: [
       shop('camilia-tummy-liquid-doses') + ' — ' + UNVERIFIED_NOTE,
@@ -2994,12 +2858,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: alcoholWaterOi('94afe9a0-2d11-11e7-818f-424c58303031'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: ColdCalm Baby / Liquid Doses = Caution. Alcohol + water vehicle. Carton is 6 months+ (under 6 months: ask a doctor). minAge is 0 because 0.5 is not allowed — honest note carries the 6-month chart. Separate from reuse ColdCalm Kids liquid (4+) and ColdCalm meltaways. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: BABY_COLD_ALTS,
     sourcesGeneral: [
@@ -3028,12 +2887,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: sprayOi('f5788da2-f60b-d0b8-e053-2995a90a11c7'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: ThroatCalm Spray = Caution. Alcohol Limited + L-carvone Limited. Glycerin + water Cleared. Ages 12+. Separate from ThroatCalm Tablets (Clean). ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: THROAT_ALTS,
     sourcesGeneral: [
@@ -3061,11 +2915,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: sheaPanel('542b41dd-f285-4e48-a67b-8e69523b143a'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Cream = Caution. Driver is lactobacillus ferment (standalone Caution-table, not additive-scored, not Avoid). This row is the SHEA SHOP PANEL (arachidyl alcohol / glucoside, behenyl, shea, coconut, glycerin, ferment, water, xanthan) — current BoironUSA arnicare-cream. DailyMed setid 542b41dd also concatenates a PEG / cetyl palmitate panel; that OI differs, so it is a second row (`boiron-arnicare-cream-peg-panel`), not a clone of this shea formula. ' +
-        CREAM_OIL_LINE +
-        ' Ages 1+ (under 1: not recommended). Separate from reuse Arnicare Gel (Clean).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [
@@ -3092,13 +2942,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: creamPegPanel(CREAM_PEG_SETID),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Cream DailyMed PEG panel = Caution. Same setid 542b41dd as the shea shop cream, but OI differs — second row, not a clone. Driver is PEG-family Moderate (pegoxol-7 stearate + lauroyl macrogolglycerides; existing §5 PEG row). Alcohol Limited (topical vehicle). Caprylyl glycol + sorbic acid + 1,2-hexanediol Limited. Cetyl palmitate Cleared wax. Carbomer / glycerin / water / NaOH Cleared. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE +
-        ' Not the current shea shop cream (`boiron-arnicare-cream`). Ages 1+ (under 1: not recommended). Separate from reuse Arnicare Gel (Clean).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [
@@ -3127,11 +2971,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: sheaPanel('b957a592-e51b-61fc-e053-2995a90aaabd'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Bruise Cream = Caution. Same shea panel as Arnicare Cream. Driver is lactobacillus ferment (standalone Caution-table). Arnica montana 1X 7%. ' +
-        CREAM_OIL_LINE +
-        ' Ages 1+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [
@@ -3159,11 +2999,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: sheaPanel('6b3c511c-7b11-203f-e053-2991aa0a6e01'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Foot Care = Caution. Same shea panel. US DailyMed SPL 6b3c511c (not a current BoironUSA.com shop slug as of the 15 Sep 2026 sitemap). Driver is lactobacillus ferment (standalone Caution-table). ' +
-        CREAM_OIL_LINE +
-        ' Ages 1+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [
@@ -3193,12 +3029,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: arthritisCreamOi('da6c81e6-2c76-56de-e053-2a95a90a0397'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Arthritis Cream = Caution. Standalone Caution-table inactives: acrylamide copolymer, chlorhexidine, isohexadecane, sorbitan oleate (riskLevel cleared + §5 Caution source, not additive-scored). Alcohol Limited. Polysorbate 80 Moderate. Sweet almond oil Cleared with cream form tap. Pump pack shares this formulaId. Ages 12+. ' +
-        CREAM_OIL_LINE +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE,
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARTHRITIS_ALTS,
     sourcesGeneral: [
@@ -3227,11 +3058,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: calendulaGelOi('25764f5a-378b-4103-81a1-2a6309e3e8e1'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Calendula Gel = Caution. Caprylyl glycol + sorbic acid + 1,2-hexanediol are Limited (preservative family). Carbomer / dimethicone copolyol / EDTA / water / NaOH are Cleared. ' +
-        LIMITED_STACK +
-        ' Ages 1+. Separate from reuse Calendula Ointment (Clean).',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: CALENDULA_ALTS,
     sourcesGeneral: [
@@ -3259,13 +3086,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: bruiseGelOi('9d86cfb0-e155-4b0f-8bd0-ad5e8a335707'),
     verdict: 'caution',
-    honestNote: homeoNoteNoLac(
-      'FOUNDER-STYLE DRAFT: Arnicare Bruise Gel = Caution. Alcohol Limited + carbomer / water / NaOH Cleared. DO NOT reuse `boiron-arnicare-gel` Clean — different shop slug (arnicare-bruise) and a bruise-labeled gel. ' +
-        LIMITED_STACK +
-        ' ' +
-        ALCOHOL_VEHICLE_LINE +
-        ' Ages 1+.',
-    ),
+
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
     sourcesGeneral: [

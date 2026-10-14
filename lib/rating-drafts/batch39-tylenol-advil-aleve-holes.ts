@@ -71,9 +71,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const SOFTGEL_OIL_LINE =
   'Seed/industrial oils are flagged in gummies. In this capsule/softgel/liquid-drop fill they are not that High rule.';
 
@@ -85,9 +82,6 @@ const KOH_TAP =
 
 const SORBITAN_TAP =
   'Sorbitan (plain / sorbitan esters) is the locked Caution row — polysorbate neighborhood, not additive-scored, not Avoid. It is not the sugar-alcohol Limited row.';
-
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
 
 const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
@@ -285,8 +279,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.aleveCaplets, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Aleve Caplets / Tablets (current Blueshield) = Avoid. Drivers are FD&C Blue #2 aluminum lake + titanium dioxide (High). Current Bayer / Select Consumer SPLs 3ca84972, 02941928, and 31bad2d9 share this no-talc inactive list — Easy Open Arthritis / Soft Grip pack twins share this formulaId, not cloned. Older Aleve tablet SPLs (e.g. 00ef5b30 / a3745850) still list talc + Blue #2 + TiO2; if the bottle is that older talc list it is still Avoid (talc is High) and is not a second current formula row. aleve.com. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -328,8 +321,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.aleveGelcaps, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Aleve Gelcaps = Avoid. Drivers are Blue #1 + Yellow #6 lake + D&C Yellow #10 lake + talc + titanium dioxide (each High). Edible ink / edetate disodium are ungraded appearance / chelator aids (not the Avoid drivers). Distinct from current Blueshield caplets (no-talc) and from Liquid Gels. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -361,8 +353,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.aleveLiquidGels, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Aleve Liquid Gels (current) = Avoid. Driver is FD&C Blue #1 (High). PEG is Moderate; sorbitol / mannitol Limited. Sorbitan is the locked Caution emulsifier (not Avoid, not the sorbitol row) — ${SORBITAN_TAP} Pharmaceutical ink is ungraded appearance ink. Softgel fill has no seed-oil line on this SPL. Distinct from Gelcaps and from Blueshield caplets. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -400,9 +391,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.alevePm, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Aleve PM = Avoid. Drivers are Blue #2 lake + talc + titanium dioxide (High). Labeled 2 caplets at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.alevePm} — ${UNVERIFIED_NOTE}`],
@@ -429,8 +418,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.aleveBack, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Aleve Back & Muscle Pain = Avoid. Drivers are Blue #2 + talc + titanium dioxide (High). Own formulaId — do not merge into current Blueshield caplets (those current SPLs have no talc) or into Headache Pain (different named SKU). Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.aleveBack} — ${UNVERIFIED_NOTE}`],
@@ -457,8 +445,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.aleveHeadache, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Aleve Headache Pain = Avoid. Drivers are Blue #2 + talc + titanium dioxide (High). Own formulaId — do not merge into Back & Muscle or into current Blueshield caplets. Ages 12+.',
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.aleveHeadache} — ${UNVERIFIED_NOTE}`],
@@ -495,8 +482,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolEsDissolve, 'Sodium bicarbonate'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Tylenol Extra Strength Dissolve Packs = Caution. Driver is sucralose (Moderate, 2 pts) plus maltodextrin / xylitol / flavor (Limited). ${LIMITED_STACK} Berry flavor SPL. Distinct from Children's Dissolve Packs (160 mg, ages 6–11). Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_ADULT_ALTS,
     sourcesGeneral: [
@@ -537,8 +523,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolKidsDissolve, 'Sodium bicarbonate'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Children's Tylenol Dissolve Packs = Caution. Same sucralose Moderate + maltodextrin / xylitol Limited stack as the adult ES packs. ${LIMITED_STACK} Wild berry SPL; ages 6–11. Distinct formulaId from the adult 500 mg packs and from dye-free chewables already on main. Clean swap is Genexa Kids liquid (form labeled).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_KIDS_ALTS,
     sourcesGeneral: [
@@ -576,8 +561,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolEsLiquid, 'Xanthan gum'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Tylenol Extra Strength Adult Liquid / Suspension = Caution. Sucralose (Moderate) + potassium sorbate + sorbitol + flavors (Limited). ${LIMITED_STACK} Cherry SPL; DailyMed lists acetaminophen 960 mg with a 30 mL cup. This adult liquid is NOT the Children's dye-free Avoid trap already on main (tylenol-children-liquid-dyefree). Distinct from For Children Plus Adults (kids 2+ chart, 160 mg / 5 mL). Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_ADULT_ALTS,
     sourcesGeneral: [
@@ -618,8 +602,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolPlusAdults, 'Xanthan gum'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Tylenol For Children Plus Adults liquid = Caution. Same sucralose + potassium sorbate + sorbitol stack as the adult ES liquid; ${LIMITED_STACK} Cherry; 160 mg / 5 mL with a 2+ weight chart (under 2: ask a doctor) plus an adult 12+ line. Distinct from Children's dyed liquid (Avoid) and from Children's dye-free Avoid trap already on main. Do not merge into tylenol-es-liquid (different strength / age chart).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_KIDS_ALTS,
     sourcesGeneral: [
@@ -664,8 +647,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolKidsChewRed7, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Children\'s Tylenol Chewables (dyed) = Avoid. Driver is D&C Red No. 7 (High); grape SPL 9782fe86 also lists D&C Red 30 + FD&C Blue #1 lakes on the same sucralose pattern. SEPARATE from dye-free chew / meltaways already on main (tylenol-children-chew-dyefree). One dyed-chew formula row — pack / flavor sizes share this formulaId. Ages 2–11. Clean swap is Genexa Kids liquid (form labeled).',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_KIDS_ALTS,
     sourcesGeneral: [
@@ -707,8 +689,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.advilJrCoated, 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Junior Strength Advil coated tablets = Avoid. Drivers are titanium dioxide + methylparaben / propylparaben (High). OWN ROW — distinct from junior-strength-advil chewables already on main (aspartame + dye lakes). Synthetic iron oxides / pharmaceutical glaze / ink / acetylated monoglycerides are not in Methodology §5 (ungraded; not the Avoid drivers). Ages 6–11.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: JUNIOR_IBU_ALTS,
     sourcesGeneral: [
@@ -740,8 +721,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.infantsAdvil, 'Xanthan gum'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Infants\' Advil concentrated drops = Avoid. Driver is BHT (High, locked). Grape SPL; ages about 6–23 months. No independently Clean infant ibuprofen — listed swap is Genexa Infants acetaminophen (different active, age-matched). Distinct from Children\'s Advil suspension rows already on main.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_INFANTS_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.infantsAdvil} — ${UNVERIFIED_NOTE}`],
@@ -773,8 +753,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.advilMigraine, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Advil Migraine Liqui-Gels = Avoid. Drivers are Green #3 + Red #40 + D&C Yellow #10 (High). ≠ plain Advil Liqui-Gels / Minis already on main (those flag Green #3 + PEG only — do not reuse ibu-advil-liqui-gels). KOH is Cleared. ${SORBITAN_TAP} Pharmaceutical ink is ungraded. Softgel fill has no seed-oil line on this SPL. Labeled 18+ on typical Migraine cartons; confirm the bottle. Ages 12+ Drug Facts still apply if the carton says 12 — this row uses the Migraine adult carton.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.advilMigraine} — ${UNVERIFIED_NOTE}`],
@@ -812,8 +791,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.advilDualBack, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Advil Dual Action Back Pain = Avoid. Driver is titanium dioxide (High). Distinct from advil-dual-action already on main (plain Dual Action, TiO2 only — do not reuse that id). Ferric oxides / pharmaceutical ink / polyvinyl-style coat aids are not in Methodology §5 (ungraded; not the Avoid drivers). Listed swap is a single-active analog, not a 250/125 replacement. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: DUAL_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.advilDualBack} — ${UNVERIFIED_NOTE}`],
@@ -869,8 +847,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.advilFilm, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Advil Film-Coated / Menstrual Pain (ibuprofen sodium) = Avoid. Drivers are undisclosed-class caramel color + titanium dioxide (High). DailyMed setids 5be198b8 (film-coated) and ae1625f4 (Menstrual) list the same Other Ingredients — one formulaId, not cloned. ${MCT_UNLABELED_TAP} Ferric oxide / pharmaceutical ink are ungraded (not the Avoid drivers). SLS is standalone Caution, not the Avoid driver. Distinct from Advil tablets already on main (TiO2 + parabens). Ages 12+.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -910,8 +887,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.motrinDual, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Motrin Dual Action with Tylenol = Avoid. Drivers are titanium dioxide + talc (High). Distinct from advil-dual-action (TiO2 only) and from Advil Dual Action Back Pain. Polyvinyl alcohol is not in Methodology §5 (ungraded; not the Avoid driver). Listed swap is a single-active analog, not a 250/125 replacement. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: DUAL_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.motrinDual} — ${UNVERIFIED_NOTE}`],
@@ -952,9 +928,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.motrinPm, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: Motrin PM = Avoid. Drivers are titanium dioxide + talc (High). Distinct from Advil PM caplets / Liqui-Gels already on main. Polyvinyl alcohol is ungraded (not the Avoid driver). Diphenhydramine citrate 38 mg is the labeled PM-citrate salt. Labeled 2 caplets at bedtime. Ages 12+. ' +
-      SEDATING,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.motrinPm} — ${UNVERIFIED_NOTE}`],
@@ -985,8 +959,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.motrinIbGels, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Motrin IB Liquid Gels = Caution. KOH is Cleared. Sorbitan is Caution (not Avoid, not sorbitol). PEG is Moderate (2 pts); sorbitol is Limited. No High on this SPL — overall Caution. ${KOH_TAP} ${SORBITAN_TAP} ${LIMITED_STACK} Pharmaceutical ink is ungraded appearance ink. Softgel fill has no seed-oil line on this SPL (not the gummy High rule). Distinct from Motrin IB caplets already on main (dyes + talc + TiO2 Avoid) and from Advil Liqui-Gels (Green #3 Avoid). Ages 12+.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.motrinIbGels} — ${UNVERIFIED_NOTE}`],
@@ -1023,8 +996,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.motrinIbMigraineGels, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Motrin IB Migraine Liquid Gels = Caution. Same math as Motrin IB Liquid Gels: KOH Cleared + sorbitan Caution + PEG Moderate + sorbitol Limited → overall Caution (no High). ${KOH_TAP} ${SORBITAN_TAP} ${LIMITED_STACK} Own formulaId — do not merge into Motrin IB Liquid Gels or into Advil Migraine (that Advil row is dye Avoid). Softgel fill has no seed-oil line on this SPL. Confirm the carton age line (Migraine SKUs are often 18+).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [

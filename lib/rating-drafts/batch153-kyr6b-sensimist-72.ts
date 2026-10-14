@@ -50,9 +50,6 @@ const NASAL_ALTS: CleanAlternative[] = [
   alt('claritin-allergy-tablets-plain', 'Independently Clean plain loratadine tablets already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const SENSIMIST_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose anhydrous, edetate disodium, and polysorbate 80. Dextrose anhydrous is the dextrose / bare glucose row (Oct 7, 2026). Benzalkonium chloride solution is the benzalkonium chloride family. No High inactive, so this is not Avoid. Carboxymethylcellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 2+. Under 2: do not use. Not Flonase propionate. Not a store brand.';
-
 export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
   {
     id: 'flonase-b153-sensimist-72',
@@ -76,7 +73,7 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
       cleared('Purified water'),
     ],
     verdict: 'caution',
-    honestNote: SENSIMIST_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [

@@ -61,14 +61,8 @@ const DIGESTIVE = 'Digestive';
 const MAMA_BEAR = 'Mama Bear';
 const AMAZON = ['Amazon'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const GUMMY_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. Sunflower / palm / safflower / vegetable oil used as a gummy coating or fill is that High rule. Capsule / softgel / drop fill of the same oil is not.';
-
-const ZINC_PARKED =
-  'Zinc (citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only.';
 
 const CITE = {
   d3:
@@ -191,7 +185,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       flag('Sodium citrate', 'cleared', labelCite(CITE.elder, METH.citrate)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Kids Black Elderberry gummies = Caution. No seed oil on the pinned founder-carousel OI. Driver is natural flavors (Limited opacity — exact §5). ${LIMITED_STACK} Sugar / organic tapioca syrup / pectin / citric acid / sodium citrate are Cleared. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300217 barcode 842379152665 (60 ct). Confirm carton. No DailyMed drug SPL (dietary supplement). Ages 2+. ${ZINC_PARKED} Draft, not verified.`,
+
     cleanAlternatives: ELDER_ALTS,
     sourcesGeneral: [`${CITE.elder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -241,7 +235,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       flag('Organic carnauba wax', 'cleared', labelCite(CITE.d3, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Organic Kids Vitamin D3 gummies = Avoid. Organic sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Organic flavors are Cleared (§5 organic flavors/colors — not Limited natural flavors). Organic lemon juice concentrate is the Limited gummy-base row — not needed to reach Avoid. Annatto is standalone Caution — not the Avoid driver. Named black carrot / turmeric-as-color is Cleared. Pack sizes share this formulaId. HelloPharmacist / NIH DSLD 300215 barcode 842379159305 (80 ct). Confirm carton. No DailyMed drug SPL (dietary supplement). Ages 2+. Draft, not verified.`,
+
     cleanAlternatives: D3_ALTS,
     sourcesGeneral: [`${CITE.d3} — ${UNVERIFIED_NOTE}`],
   }),
@@ -279,7 +273,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       flag('Organic carnauba wax', 'cleared', labelCite(CITE.vitC, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Vegan Kids Vitamin C gummies = Avoid. Organic sunflower oil in a gummy is High. ${GUMMY_OIL_TAP} Natural flavors are Limited — not needed to reach Avoid. Organic Annatto Extract (Color) is standalone Caution — not the Avoid driver. Pack sizes share this formulaId. HelloPharmacist / DSLD barcode 842379148835 (60 ct). Confirm carton. No DailyMed drug SPL (dietary supplement). Ages 2+. Draft, not verified.`,
+
     cleanAlternatives: VITAMIN_C_ALTS,
     sourcesGeneral: [`${CITE.vitC} — ${UNVERIFIED_NOTE}`],
   }),
@@ -327,7 +321,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       flag('Organic carnauba wax', 'cleared', labelCite(CITE.probiotic, METH.gelatin)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Mama Bear Vegan Kids Probiotic gummies = Avoid. Organic sunflower oil (containing carnauba wax) in a gummy is High. ${GUMMY_OIL_TAP} Carnauba wax itself is Cleared. Natural flavors are Limited — not needed to reach Avoid. Named Natural Colors (organic maqui berry juice concentrate, black carrot juice concentrate) are Cleared named plant-color — not the unspecified Natural Colors Limited row. Organic evaporated cane sugar is the Cleared cane-sugar row. No carton / DSLD UPC harvested — do not invent a code. Pack sizes share this formulaId. Confirm carton. No DailyMed drug SPL (dietary supplement). Ages 2+ (2–3: 1 gummy; 4+: 2 gummies as labeled). No independently Clean kids probiotic exists in the drafted batches — cleanAlternatives omitted (honest empty; do not invent a Clean kids probiotic gummy; do not point at adult sex-specific probiotics). Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.probiotic} — ${UNVERIFIED_NOTE}`],
   }),
 ];

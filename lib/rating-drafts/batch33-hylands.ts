@@ -135,12 +135,6 @@ const ZINC_PARKED =
 const MELATONIN_CARTON =
   'Kids melatonin is on-carton only — no dosing in this draft. Cleanliness grade only; no efficacy claim.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid.';
-
-const CREAM_OIL_LINE =
-  'Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.';
-
 const HYLANDS_RETAILERS = [
   'Hylands.com',
   'CVS',
@@ -315,10 +309,6 @@ const PRID_ALTS: CleanAlternative[] = [
   ),
 ];
 
-function homeoNote(lead: string): string {
-  return `${lead} Homeopathic — cleanliness only, no efficacy claim. ${CARLSTON} Contains lactose. Pack sizes share formulaId.`;
-}
-
 export const BATCH33_HYLANDS: RatingRecord[] = [
   // ── Clean tablets (acacia + lactose = 0) ─────────────────
   {
@@ -336,9 +326,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Arnica montana', strength: '30X HPUS' }],
     inactiveIngredients: acaciaLactose('85fcf1c8-6f89-4862-85a8-4983cbea28f4'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Hyland's Arnica 30X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-arnica-tablets-30x — ' + UNVERIFIED_NOTE,
@@ -371,9 +359,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       'https://hylands.com/products/hylands-baby-oral-pain-relief',
     ),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Baby Oral Pain Daytime = Clean. Acacia gum + lactose = 0 pt. Site OI (no DailyMed SPL in the scan). Different actives from Nighttime — do not merge. Carton starts under 6 months (minAge 0).",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-baby-oral-pain-relief — ' + UNVERIFIED_NOTE,
@@ -406,9 +392,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       'https://hylands.com/products/hylands-baby-nighttime-oral-pain-relief',
     ),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Baby Oral Pain Nighttime = Clean. Acacia gum + lactose = 0 pt. Adds Magnesia Phosphorica + Silicea vs daytime — do not merge. Site OI (no DailyMed SPL in the scan). Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. Carton starts under 6 months (minAge 0).",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-baby-nighttime-oral-pain-relief — ' +
@@ -431,9 +415,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Ferrum phosphoricum', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('db9e7a2f-5ee0-57c7-e053-2995a90a7542'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Ferrum Phos 6X = Clean. Acacia gum + lactose = 0 pt. 30X Amazon bottles are a different strength — not this row.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-ferrum-phos — ' + UNVERIFIED_NOTE,
@@ -457,9 +439,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Magnesia phosphorica', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dd0750b0-f6b5-354f-e053-2995a90a9d1f'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Mag Phos 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-mag-phos — ' + UNVERIFIED_NOTE,
@@ -491,9 +471,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('53425c3b-6117-475c-bd8c-08f05b452078'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Leg Cramps tablets = Clean. Acacia gum + lactose = 0 pt. Current meltaway SPL only — do not merge with the older swallowed-tablet SPL (lactose + magnesium stearate + MCC) or with PM / +Arnica caplets / creams. 50/100 share formulaId.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-leg-cramps — ' + UNVERIFIED_NOTE,
@@ -528,9 +506,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('b0574a7e-88fa-417e-b6d5-60ced59eba47'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Leg Cramps PM tablets = Clean. Acacia gum + lactose = 0 pt. Different actives from daytime tablets — do not merge. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. 50/100 share formulaId.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-leg-cramps-pm — ' + UNVERIFIED_NOTE,
@@ -578,9 +554,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Leg Cramps + Arnica caplets = Clean. Lactose + magnesium stearate + MCC = 0 pt. Not the meltaway tablet and not the cream rows.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/leg-cramps-arnica-caplets — ' + UNVERIFIED_NOTE,
@@ -611,9 +585,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('36e5843c-916a-425c-becc-15674cda7a65'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Restful Legs = Clean. Acacia gum + lactose = 0 pt. Different actives from Restful Legs PM — do not merge. 50/100 share formulaId.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-restful-legs — ' + UNVERIFIED_NOTE,
@@ -646,9 +618,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('67667af8-b27b-1511-e053-2991aa0a3988'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Restful Legs PM = Clean. Acacia gum + lactose = 0 pt. Adds Chamomilla + Coffea vs daytime — do not merge. 50/100 share formulaId.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-restful-legs-pm — ' + UNVERIFIED_NOTE,
@@ -679,9 +649,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('101e6b80-cdae-49e5-acfb-f056448856ec'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Seasonal Allergy Relief = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-seasonal-allergy-relief-tablets — ' +
@@ -712,9 +680,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('c7ea84ee-5844-4b14-9792-2c45729fccab'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Nerve Tonic = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-nerve-tonic — ' + UNVERIFIED_NOTE,
@@ -743,9 +709,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('a00f1db3-cae4-5729-e053-2a95a90ab001'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Kids Stuffy Nose & Sinus = Clean. Acacia gum + lactose = 0 pt. Ages 2+.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hyland-s-4-kids-stuffy-nose-sinus — ' +
@@ -775,9 +739,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('7576bd5e-502e-4edf-99da-59cb1e97043f'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Baby Tiny Cold Daytime = Clean. Acacia gum + lactose = 0 pt. Different actives from Nighttime — do not merge. Under 6 months: ask a doctor (minAge 0).",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-baby-tiny-cold-tablets — ' + UNVERIFIED_NOTE,
@@ -807,9 +769,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('275f18d5-739e-4055-9553-10ae2be836ad'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Baby Tiny Cold Nighttime = Clean. Acacia gum + lactose = 0 pt. Adds Chamomilla vs daytime — do not merge. Combo-only on Hylands.com; written as the single-formula row. Under 6 months: ask a doctor (minAge 0).",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-baby-tiny-cold-tablets-day-and-nighttime-value-pack — combo page; ' +
@@ -847,9 +807,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: acaciaLactose('dd0a7ed2-d112-4b96-e053-2995a90ac6b6'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Bioplasma = Clean. Acacia gum + lactose = 0 pt. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. 100/300 share formulaId. Not the 8 Cell Salts Bundle kit.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-bioplasma — ' + UNVERIFIED_NOTE,
@@ -873,9 +831,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Calcarea fluorica', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dbed54cc-12ec-0a73-e053-2a95a90a8cc2'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #1 Calc Fluor 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-calc-fluor — ' + UNVERIFIED_NOTE,
@@ -899,9 +855,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Calcarea phosphorica', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dbef661a-26e9-7c2b-e053-2995a90a80e0'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #2 Calc Phos 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-calc-phos — ' + UNVERIFIED_NOTE,
@@ -925,9 +879,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Kali phosphoricum', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dbfe86e8-c06f-2a84-e053-2a95a90a1f3d'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #6 Kali Phos 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-kali-phos — ' + UNVERIFIED_NOTE,
@@ -951,9 +903,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Natrum muriaticum', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dcf0e2ac-3b69-3ae4-e053-2a95a90aaf41'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #9 Nat Mur 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-nat-mur — ' + UNVERIFIED_NOTE,
@@ -977,9 +927,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Natrum phosphoricum', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('dc7c259e-4bcc-c3d9-e053-2a95a90a0c01'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #10 Nat Phos 6X = Clean. Acacia gum + lactose = 0 pt.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-nat-phos — ' + UNVERIFIED_NOTE,
@@ -1003,9 +951,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     activeIngredients: [{ name: 'Silicea (silicon dioxide)', strength: '6X HPUS' }],
     inactiveIngredients: acaciaLactose('db4be3c1-aa7e-24a2-e053-2a95a90a0c66'),
     verdict: 'clean',
-    honestNote: homeoNote(
-      "FOUNDER-STYLE DRAFT: Cell Salt #12 Silicea 6X = Clean. Acacia gum + lactose = 0 pt. Silicon dioxide / Silicea is the homeopathic ACTIVE, not an inactive — the SiO2 nanoparticle Caution cap does not apply.",
-    ),
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/hylands-silicea — ' + UNVERIFIED_NOTE,
@@ -1051,8 +997,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER-STYLE DRAFT: Organic Kids Cough & Immune Daytime = Clean. Other Ingredients are water + citric acid = 0 pt. Honey / pomegranate sit on the formula side, not OI. Carton ages 1–12. Distinct from Nighttime and from Baby Daytime despite the same OI. No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId.",
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-kids-cough-immune-daytime — ' +
@@ -1095,8 +1040,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER-STYLE DRAFT: Organic Kids Cough & Immune Nighttime = Clean. Other Ingredients are water + citric acid = 0 pt. Chamomile sits on the formula side, not OI. Do not merge with daytime. Carton ages 1–12. No DailyMed drug SPL (dietary supplement).",
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-kids-cough-immune-nighttime — ' +
@@ -1139,8 +1083,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER-STYLE DRAFT: Organic Baby Cough & Immune Daytime = Clean. Other Ingredients are water + citric acid = 0 pt. No honey on the baby daytime formula (unlike Kids DT). Distinct from Kids Daytime despite the same OI. Babies 12 months and up (minAge 1). No DailyMed drug SPL (dietary supplement).",
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-baby-cough-immune-daytime — ' +
@@ -1183,8 +1126,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER-STYLE DRAFT: Organic Baby Cough & Immune Nighttime = Clean. Other Ingredients are water + citric acid = 0 pt. Chamomile sits on the formula side, not OI. Do not merge with Baby Daytime. Babies 12 months and up (minAge 1). No DailyMed drug SPL (dietary supplement).",
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-baby-cough-immune-nighttime — ' +
@@ -1287,10 +1229,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Elderberry Plus Gummies = Avoid. Organic sunflower oil in a gummy is the seed/industrial-oil High rule. Organic tapioca syrup / cane sugar / water / citric acid / organic flavors / carnauba / pectin / sodium citrate are 0 pt and do not save it. Adult 60ct + kids 48ct are ONE formula (same OI) — one formulaId. Kids carton ages 2+. ' +
-      ZINC_PARKED +
-      ' No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: ELDERBERRY_ALTS,
     sourcesGeneral: [
@@ -1325,11 +1264,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: syrupBase('804e0e7a-20eb-128b-e053-2991aa0aa82c'),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Cold & Cough Daytime Original = Caution. Sodium benzoate Limited 1 pt. Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' No grape flavor. Do not reuse `hylands-4kids-cold-n-cough` (Grape daytime). Adds Sulphur vs the grape daytime actives. Ages 2+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1364,11 +1299,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: syrupBase('71e93027-33c9-6147-e053-2a95a90aaa09'),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Cold & Cough Nighttime Original = Caution. Sodium benzoate Limited 1 pt. Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' No grape flavor. Adds Chamomilla + Coffea vs daytime Original — do not merge. Do not reuse grape daytime. Ages 2+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1410,11 +1341,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ]),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Cold & Cough Nighttime Grape = Caution. Natural grape flavor + sodium benzoate (1+1). Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' Different actives from daytime grape (adds Chamomilla + Coffea). Do not reuse `hylands-4kids-cold-n-cough`. Ages 2+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1455,11 +1382,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ]),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Cough & Mucus Daytime = Caution. Natural grape flavor + sodium benzoate (1+1). Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' Same grape-style inactives as Cold ’n Cough grape, but different actives — do not reuse `hylands-4kids-cold-n-cough`. Ages 2+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1501,11 +1424,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ]),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Cough & Mucus Nighttime = Caution. Natural grape flavor + sodium benzoate (1+1). Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' Adds Chamomilla + Hydrastis vs daytime — do not merge. Do not reuse grape daytime Cold ’n Cough. Ages 2+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1539,11 +1458,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: syrupBase('d934cc8a-1e43-4942-858a-05b5d068679a'),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Baby Mucus + Cold Daytime = Caution. Sodium benzoate Limited 1 pt. Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' No grape flavor — do not reuse `hylands-4kids-cold-n-cough`. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. Under 6 months: ask a doctor (minAge 0). ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: BABY_COLD_ALTS,
     sourcesGeneral: [
@@ -1583,11 +1498,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
     inactiveIngredients: syrupBase('736b2487-e81d-d172-e053-2a91aa0ab0cf'),
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Baby Mucus + Cold Nighttime = Caution. Sodium benzoate Limited 1 pt. Glycyrrhiza extract is Cleared — do not Caution on licorice alone. ' +
-      LICORICE_LINE +
-      ' No grape flavor. Different actives from daytime — do not merge. Combo-only on Hylands.com; written as the single-formula row. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. Under 6 months: ask a doctor (minAge 0). ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: BABY_COLD_ALTS,
     sourcesGeneral: [
@@ -1683,13 +1594,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Leg Cramps + Arnica PM Cream = Caution. Lavender oil is fragrance-style Caution (standalone, not Avoid). Ethyl alcohol Limited + potassium sorbate + sodium benzoate are Limited-only. ' +
-      LIMITED_STACK +
-      ' ' +
-      CREAM_OIL_LINE +
-      ' Separate row from the daytime cream (no wintergreen on this carton). Not the tablets / caplets. Ages 6+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
     sourcesGeneral: [
@@ -1781,13 +1686,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Leg Cramps + Arnica Cream (day) = Caution. Wintergreen extract inactive is standalone Caution (not Avoid). Ethyl alcohol Limited + potassium sorbate + sodium benzoate are Limited-only. ' +
-      LIMITED_STACK +
-      ' ' +
-      CREAM_OIL_LINE +
-      ' Separate row from PM (no lavender on this carton). Not the tablets / caplets. Ages 6+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
     sourcesGeneral: [
@@ -1843,14 +1742,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Sleep Calm + Immunity (purple, with melatonin) = Caution. Organic natural flavors Limited (opacity). ' +
-      LIMITED_STACK +
-      ' ' +
-      MELATONIN_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' Separate row from the blue melatonin-free Organic twin. Carton ages 2+. No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SLEEP_CALM_ALTS,
     sourcesGeneral: [
@@ -1919,12 +1811,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Kids Sleep Calm + Immunity (blue, no melatonin) = Caution. Same OI as the purple melatonin twin — organic natural flavors Limited (opacity). ' +
-      LIMITED_STACK +
-      ' No melatonin on this carton. ' +
-      ZINC_PARKED +
-      ' Separate row from the purple melatonin SKU. Carton ages 2+. No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SLEEP_CALM_ALTS,
     sourcesGeneral: [
@@ -1990,12 +1877,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Kids All-in-One Cough Daytime = Caution. Organic natural flavors Limited (opacity). ' +
-      LIMITED_STACK +
-      ' Honey / agave / botanicals sit on the formula side, not OI. ' +
-      ZINC_PARKED +
-      ' Distinct from Nighttime and from Baby All-in-One (no flavor line; Clean). Carton ages 1–12. No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_ALLINONE_ALTS,
     sourcesGeneral: [
@@ -2062,12 +1944,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Kids All-in-One Cough Nighttime = Caution. Same OI as daytime — organic natural flavors Limited (opacity). ' +
-      LIMITED_STACK +
-      ' Chamomile sits on the formula side. Do not merge with daytime. ' +
-      ZINC_PARKED +
-      ' Carton ages 1–12. No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: KIDS_ALLINONE_ALTS,
     sourcesGeneral: [
@@ -2124,10 +2001,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby All-in-One Cough Daytime = Clean. Other Ingredients are organic agave syrup + organic glycerin + water = 0 pt. No flavor line. Botanicals / zinc sit on the formula side, not OI. ' +
-      ZINC_PARKED +
-      ' Distinct from Nighttime and from Kids All-in-One (flavored = Caution). Carton ages 6 months+ (minAge 0). No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-baby-allinone-coughsyrup-daytime — founder carton OI; ' +
@@ -2184,10 +2058,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby All-in-One Cough Nighttime = Clean. Same OI as daytime — organic agave syrup + organic glycerin + water = 0 pt. No flavor line. Chamomile sits on the formula side. Do not merge with Baby Daytime. ' +
-      ZINC_PARKED +
-      ' Carton ages 6 months+ (minAge 0). No DailyMed drug SPL (dietary supplement).',
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/organic-baby-allinone-coughsyrup-nighttime — founder carton OI; ' +
@@ -2256,10 +2127,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Daytime = Caution. Organic cherry flavor Limited 1. ' +
-      LIMITED_STACK +
-      ' Herb list differs from Nighttime (night adds lemon balm + passionflower) — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Distinct from Organic Baby Soothing Drops (different SKU; drops list botanicals on the OI). No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_GEL_ALTS,
     sourcesGeneral: [
@@ -2333,10 +2201,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Gel Nighttime = Caution. Organic cherry flavor Limited 1. ' +
-      LIMITED_STACK +
-      ' Adds lemon balm + passionflower vs daytime — do not merge. Carton: do not use on babies less than 2 months (minAge 0). Distinct from Organic Baby Soothing Drops (different SKU; drops list botanicals on the OI). No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_GEL_ALTS,
     sourcesGeneral: [
@@ -2438,10 +2303,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Drops Daytime = Caution. Organic cherry flavor Limited 1. ' +
-      LIMITED_STACK +
-      ' Named botanicals on the OI (fennel / chamomile / calendula) are Cleared-class food/botanical — do not Caution on those extracts alone. Distinct from Nighttime (night swaps calendula for lemon balm) — do not merge. Distinct from Organic Baby Soothing Gel (different SKU; gels keep botanicals formula-side). Carton: do not use on babies less than 2 months (minAge 0). No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_DROPS_ALTS,
     sourcesGeneral: [
@@ -2543,10 +2405,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Organic Baby Soothing Drops Nighttime = Caution. Organic cherry flavor Limited 1. ' +
-      LIMITED_STACK +
-      ' Named botanicals on the OI (fennel / lemon balm / chamomile) are Cleared-class food/botanical — do not Caution on those extracts alone. Adds lemon balm vs daytime calendula — do not merge. Distinct from Organic Baby Soothing Gel (different SKU; gels keep botanicals formula-side). Carton: do not use on babies less than 2 months (minAge 0). No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: SOOTHING_DROPS_ALTS,
     sourcesGeneral: [
@@ -2614,9 +2473,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: PRID Drawing Salve = Caution. Wood rosin is standalone Caution (contact-allergy pattern, not Avoid). Ethyl alcohol Limited (topical vehicle — not oral-PG, not Avoid). Petrolatum + stearyl alcohol + beeswax + glycerin + water are Cleared. Not Avoid. Silicea is a homeopathic active, not the inactive SiO2 nanoparticle cap. Ages 6+. ' +
-      CARLSTON,
+
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: PRID_ALTS,
     sourcesGeneral: [
@@ -2749,12 +2606,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Multi + Brain & Eye Gummies = Caution. Maltitol + xylitol + erythritol + natural flavors are Limited-only. ' +
-      LIMITED_STACK +
-      ' Sunflower lecithin is Cleared — lecithin is not the gummy seed-oil High rule. Rebaudioside M is Cleared (high-purity steviol glycoside). Named vegetable juice color is Cleared. ' +
-      ZINC_PARKED +
-      ' No independently Clean kids multi on main — cleanAlternatives omitted (do not invent). Carton ages 2+. No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/kids-multivitamin-brain-and-eye — founder carton OI; ' +
@@ -2853,12 +2705,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids Multi + Digestive Support Gummies = Caution. Maltitol + natural flavors are Limited-only. ' +
-      LIMITED_STACK +
-      ' FOS / fructooligosaccharides is an active on this carton, not an OI score. Soluble tapioca fiber is Cleared (fiber family). Named fruit and vegetable juice color is Cleared. ' +
-      ZINC_PARKED +
-      ' No independently Clean kids multi on main — cleanAlternatives omitted (do not invent). Carton ages 2+. No DailyMed drug SPL.',
+
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
       'https://hylands.com/products/kids-multivitamin-digestive-support — founder carton OI; ' +

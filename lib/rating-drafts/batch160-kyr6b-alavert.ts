@@ -61,12 +61,6 @@ const ADULT_ALTS: CleanAlternative[] = [
   alt('boiron-allergycalm-meltaways', 'Independently Clean homeopathic meltaway already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const CITRUS_NOTE =
-  'Avoid. The driver is aspartame. Polysorbate 80 is Moderate. Flavors are the bare-flavors Caution family. Mannitol is Limited. Anhydrous citric acid and pullulan are Cleared. Citrus Burst. Ages 6+. Adults and children 6 years and over: 1 tablet daily. Phenylketonurics: contains phenylalanine 0.56 mg per tablet. This is the single 60-count, not a 2-pack.';
-
-const D12_NOTE =
-  'Avoid. The driver is titanium dioxide. Pharmaceutical ink is Caution. Croscarmellose sodium, dibasic calcium phosphate, hypromellose, lactose monohydrate, magnesium stearate, and povidone are Cleared. Ages 12+. Adults and children 12 years and over. This is the 12-tablet carton, not the 24-count. No barcode was printed on the page that showed this count in stock.';
-
 export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
   {
     id: 'alavert-b160-citrus-60',
@@ -90,7 +84,7 @@ export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
       cleared(CITRUS_SET, 'Pullulan', METH.pullulan),
     ],
     verdict: 'avoid',
-    honestNote: CITRUS_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -123,7 +117,7 @@ export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
       cleared(D12_SET, 'Povidone', METH.povidone),
     ],
     verdict: 'avoid',
-    honestNote: D12_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [

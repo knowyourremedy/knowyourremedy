@@ -156,12 +156,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const PRENATAL_LABEL =
-  'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
-
 const SET_IBU = 'e914472b-c785-4c73-b37c-4d459166cf41';
 const SET_GUAIF = '7c890031-8188-48be-bb69-06db0e01a0c0';
 const SET_LORATADINE = 'bba4e7c8-db8e-4522-915c-48ee809e3bce';
@@ -250,8 +244,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_LORATADINE, 'Sodium starch glycolate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: 365 Loratadine 10 mg tablets = Clean if inactives are only lactose / magnesium stearate / starch / SSG. DailyMed setid bba4e7c8 lists lactose monohydrate, magnesium stearate, pregelatinized starch (maize), sodium starch glycolate — match. This is NOT `loratadine-l612-plain` (lactose / Mg stearate / povidone / pregelatinized starch — HAS povidone, no SSG) and NOT `claritin-allergy-tablets-plain` (corn starch / lactose / Mg stearate — no SSG). New formulaId `365-loratadine-plain-ssg`. Other Clean plain loratadines already exist in batch 5; cleanAlternatives point at those productIds. Contains lactose. Ages 6+.',
+
     retailers: ['Whole Foods'],
     cleanAlternatives: H3_ALTS,
     sourcesGeneral: [
@@ -286,8 +279,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_GUAIF, 'Pregelatinized starch (maize)'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Guaifenesin ER 600 mg = Caution. Driver is colloidal silicon dioxide (nanoparticle Caution cap, 0 demerit points). DailyMed setid 7c890031 lists colloidal silicon dioxide, hypromellose, magnesium stearate, microcrystalline cellulose, povidone, pregelatinized starch (maize) — NO titanium dioxide and NO synthetic dye. MUST stay a separate formulaId from `mucinex-er-600-blue1` (Avoid; Blue #1 lake). Do not merge them. Ages 12+ (under 12: do not use).',
+
     retailers: ['Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_GUAIF} (365 guaifenesin ER 600; draft, not verified) — not mucinex-er-600-blue1`,
@@ -317,8 +309,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_CETIRIZINE, 'Sorbitan'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Cetirizine HCl 10 mg dye-free softgels = Caution (PEG Moderate). DailyMed setid 453b20b5 (dye-free WFM) lists gelatin, glycerin, mannitol, pharmaceutical ink, polyethylene glycol, purified water, sodium hydroxide, sorbitan, sorbitol — no TiO2 / synthetic dye. Raw demerit math is PEG 2 + mannitol 1 + sorbitol 1 = 4 pts Avoid — draft follows the locked Caution call. Pharmaceutical ink is ungraded appearance ink (v1.6 intake; not a second grade). Cetirizine is a different active from H3 loratadine — no same-active Clean swap in this batch; cleanAlternatives omitted. Ages 6+.',
+
     retailers: ['Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CETIRIZINE} (365 dye-free cetirizine softgels; draft, not verified)`,
@@ -348,8 +339,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_DPH, 'Sorbitol sorbitan solution'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Diphenhydramine HCl 25 mg dye-free softgels = Caution (PEG Moderate). ONE formulaId (`365-diphenhydramine-softgels-peg`), ONE category: Allergy. DailyMed setid 32352109 lists gelatin, glycerin, polyethylene glycol 400, propylene glycol, purified water, sorbitol sorbitan solution — dye-free. The same SKU is also sold / used as a nighttime sleep aid (SPL sleeplessness stop-use language) — do not invent a second grade, dual category field, or Sleep-aisle formulaId. Raw demerit math is PEG 2 + oral PG 2 + sorbitol 1 — draft follows the locked Caution call, not a 3-pt Avoid stack. First-generation / sedating — cleanliness note only. DPH is a different active from H3 loratadine — no same-active Clean swap; cleanAlternatives omitted. Ages 6+ (under 6: do not use).',
+
     retailers: ['Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_DPH} (365 dye-free DPH softgels; draft, not verified) — single Allergy row, not a dual Sleep grade`,
@@ -378,8 +368,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(FIG_ELDERBERRY_CITE, 'Sodium citrate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Elderberry gummies = Caution. Driver is natural flavors (Limited). Matched Fig other-ingredients are evaporated cane sugar, organic tapioca syrup, pectin, citric acid, sodium citrate, natural flavors — no palm / canola / vegetable / sunflower oil. Do not invent a seed-oil Avoid on this formulaId. A later carton that lists seed / industrial oil is a different formula. No DailyMed drug SPL (dietary supplement). Adults. No independently Clean Immune swap in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-elderberry-gummies'],
     sourcesGeneral: [
@@ -413,8 +402,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_ANTACID, 'Stearic acid'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 / Whole Foods Market Health Ultra Strength Natural Antacid Peppermint (CaCO3 1000 mg) = Caution. Drivers are maltodextrin + natural flavors (Limited). Stevia is Cleared-class on this founder call. DailyMed setid a2dc800d lists dextrose, maltodextrin, natural flavors, starch, stearic acid, stevia extract (stevia rebaudiana leaf) — talc-free (carton states Talc Free). Ages 12+. No independently Clean Digestive swap in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_ANTACID} (WFM Health Ultra Strength Natural Antacid Peppermint; draft, not verified)`,
@@ -447,10 +435,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Adult Once Daily Multi = Caution. Driver is silicon dioxide (nanoparticle Caution cap, 0 demerit points). WFM other-ingredients are MCC / vegetable stearic acid / SiO2 / croscarmellose / vegetable magnesium stearate / vegetable coating (sodium CMC) — no titanium dioxide on that list. Do not invent Clean on the SiO2 cap. Confirm the carton. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      ZINC_PARKED +
-      ' No independently Clean multi in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-adult-once-daily-multi'],
     sourcesGeneral: [
@@ -484,10 +469,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: 365 Men's One Daily Multi = Caution. Same SiO2 Caution-cap pattern as the Adult Once Daily Multi (MCC / stearate / veg coating CMC; no TiO2 on matched Instacart / WFM-family lists). Separate formulaId — do not merge the two multis. Do not invent Clean on the SiO2 cap. Confirm the carton. No DailyMed drug SPL. Adults. " +
-      ZINC_PARKED +
-      ' No independently Clean multi in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-mens-one-daily-multi'],
     sourcesGeneral: [
@@ -517,12 +499,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(WFM_PRENATAL_CITE, 'Magnesium stearate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: 365 Prenatal Multi Once Daily = Caution (SiO2). HelloPharmacist / retailer other-ingredients list MCC / stearic acid / silicon dioxide / croscarmellose / magnesium stearate — no TiO2 on that list. Do not invent Clean. Category is Vitamins (prenatal aisle coverage). Audience adult. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      ZINC_PARKED +
-      ' No independently Clean prenatal in this batch — cleanAlternatives omitted. No DailyMed drug SPL.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-prenatal-multi'],
     sourcesGeneral: [
@@ -565,12 +542,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(SPROUTS_ONCE_CITE, 'glycerin'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER LOCK: Sprouts Prenatal Once Daily 60-ct carton (front does not say Organic) maps to this existing row. UPC 646670681882 attached. Founder other-ingredients filled exactly: Microcrystalline cellulose, stearic acid, modified cellulose, croscarmellose sodium, hypromellose, silicon dioxide, magnesium stearate, glycerin. `modified cellulose` kept as the exact §5 Limited string — not aliased to MCC / HPMC. Silicon dioxide left as printed for founder later — do not remove / do not restage. Grade stays Caution — do NOT invent Clean. Separate formulaId from `sprouts-organic-prenatal-whole-food`. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      ZINC_PARKED +
-      ' No independently Clean prenatal in this batch — cleanAlternatives omitted.',
+
     retailers: ['Sprouts'],
     barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-once-daily'],
     sourcesGeneral: [
@@ -596,12 +568,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Sprouts Organic Prenatal Whole Food Vitamin = Caution until the full label is matched — do NOT invent Clean. Shop.sprouts lists a separate SKU from the Once Daily Whole Food Multi. Confirm the carton for SiO2 / coatings. Inactive list left empty on purpose — do not invent flags. Separate formulaId from `sprouts-organic-prenatal-once-daily`. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      ZINC_PARKED +
-      ' No independently Clean prenatal in this batch — cleanAlternatives omitted.',
+
     retailers: ['Sprouts'],
     barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-whole-food'],
     sourcesGeneral: [
@@ -639,8 +606,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_IBU, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: 365 Whole Foods Market Ibuprofen 200 mg film-coated = Avoid. DailyMed setid e914472b lists titanium dioxide (High) plus polyethylene glycol (Moderate), polysorbate 80 (Moderate), and colloidal silicon dioxide (Caution cap). Iron oxide red and iron oxide yellow are on the SPL and are not in Methodology §5 (ungraded; v1.6 intake) — Avoid already stands on TiO2. Ages 12+. No independently Clean ibuprofen in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_IBU} (365 ibuprofen 200 mg film-coated; draft, not verified)`,
@@ -681,8 +647,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(WFM_PROBIOTIC_CITE, 'Cornstarch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: 365 Probiotic + Fiber gummies = Avoid. Organic sunflower seed oil in a gummy is High-tier (seed/industrial oils in gummies). Natural flavor is Limited (not needed to reach Avoid). WFM ingredients: inulin (from chicory root), organic evaporated cane sugar, pectin, citric acid, natural flavor, sodium citrate, organic sunflower seed oil, organic carnauba wax, colors from juices, cornstarch. No DailyMed drug SPL. Adults. No independently Clean Digestive swap in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-probiotic-fiber-gummies-sunflower'],
     sourcesGeneral: [
@@ -716,8 +681,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(WFM_CALCIUM_CITE, 'Hydroxypropylcellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: 365 Calcium with Vitamin D3 = Avoid (TiO2 in vegetable coating). WFM other-ingredients: stearic acid (vegetable source), croscarmellose sodium, vegetable coating (HPMC, titanium dioxide [for color], sodium CMC), MCC, magnesium stearate (vegetable source), silicon dioxide, hydroxypropylcellulose. Separate formulaId from Cal-Mag-Zinc (`365-cal-mag-zinc-d3-tio2`) — same coat family, different actives; do not merge. Confirm the carton still lists titanium dioxide. No DailyMed drug SPL. Adults. No independently Clean calcium in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-calcium-d3-tio2'],
     sourcesGeneral: [
@@ -753,10 +717,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(WFM_CALMAG_CITE, 'Hydroxypropylcellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: 365 Cal-Mag-Zinc with Vitamin D3 = Avoid (same TiO2 vegetable coating as Calcium + D3). WFM other-ingredients match the HPMC / titanium dioxide [for color] / sodium CMC coat. Separate formulaId from `365-calcium-d3-tio2`. Confirm the carton. No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' No independently Clean mineral tablet in this batch — cleanAlternatives omitted.',
+
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-cal-mag-zinc-d3-tio2'],
     sourcesGeneral: [

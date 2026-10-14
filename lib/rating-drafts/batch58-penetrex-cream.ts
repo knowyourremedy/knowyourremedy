@@ -78,12 +78,6 @@ const PF_RETAILERS = [
   'Walgreens',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const CREAM_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. In this cream / topical fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -364,8 +358,7 @@ export const BATCH58_PENETREX_CREAM: RatingRecord[] = [
       flag('Water (Aqua)', 'cleared', labelCite(CITE.penetrex, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Penetrex Pain Relief Cream = Caution. Drivers are Steareth-20 / PEG-100 Stearate (PEG) / DMDM hydantoin / phenoxyethanol / Tea Tree (Melaleuca Alternifolia) Leaf Oil. Additional standalone Caution on this carton: arnica flower extract / boswellia (frankincense) oil / camphor-as-inactive / ethoxydiglycol / ceteareth-20 / Ammonium Acryloyldimethyltaurate/VP Copolymer (AMPS / VP). Peppermint oil is the locked Limited flavor/EO row. Current penetrex.com Ingredients (Cream) — not the old refuse harvest that omitted Coconut Alkanes and added IPBC: Water (Aqua), Arnica Montana Flower Extract (and) Glycerin, Coconut Alkanes, Sunflower (Helianthus Annuus) Seed Oil, Glyceryl Stearate, PEG-100 Stearate, Cetyl Esters, Dimethicone, Stearic Acid, Ammonium Acryloyldimethyltaurate/VP Copolymer, Steareth-20, Pyridoxine HCl (Vitamin B6), Methylsulfonyl Methane (MSM/DMSO2), Glucosamine HCl, Choline Bitartrate, Ethoxydiglycol, Methyl Gluceth-20, Cetyl Myristoleate, Aloe Vera (Aloe Barbadensis) Leaf Juice, Shea Butter (Butyrospermum Parkii) Extract, Frankincense (Boswellia Serrata) Oil, Peppermint (Mentha Piperita) Oil, Camphor, Tea Tree (Melaleuca Alternifolia) Leaf Oil, Tocopherol (Vitamin E), Dipotassium Glycyrrhizinate, Phenoxyethanol, DMDM Hydantoin, Ceteareth-20, Cetearyl Alcohol, Coco-Caprylate/Caprate, Glyceryl Stearates. Coconut Alkanes is the locked exact Cleared cream-emollient alkane (the PR #105 refuse string; do not alias to C15-19 alkane / undecane / tridecane). ${ALKANE_TAP} Pyridoxine HCl as inactive is the locked exact Cleared token. Named sunflower seed oil is cream fill Cleared (tap fill ≠ gummy High) — not the gummy seed-oil High rule. ${CREAM_OIL_TAP} Shea butter is the named cream-butter vehicle (Cleared). Tocopherol is the Cleared mixed-tocopherols row (not Caution tocopheryl acetate). Marketed Arnica / B6 / MSM / Boswellia listed neutrally — this draft grades inactives only and makes no efficacy claim. No High. Do not write the gel / warming / hemp / advanced menthol / morning / night SKUs (different OI). 2 oz + 4 oz cream pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} ${SCENT_EXTRACT_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'penetrex.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.penetrex} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL for this cream`],
