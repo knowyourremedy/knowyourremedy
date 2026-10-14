@@ -380,6 +380,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (/sorbic acid/.test(n)) {
+    return close('Sorbic acid is a preservative in the same limited family as caprylyl glycol.', level);
+  }
+
   if (/sodium benzoate|potassium sorbate|benzoic acid/.test(n)) {
     return close(
       'This is a preservative. On its own the risk is low. Benzoate plus vitamin C can form a trace of benzene.',
@@ -415,7 +419,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (/povidone|crospovidone|copovidone|\bpvp\b/.test(n)) {
+  if (/povidone|polyvinylpyrrolidone|crospovidone|copovidone|\bpvp\b/.test(n)) {
     return close(
       'Povidone is a tablet binder. A European review found a sufficient safety margin and called it unlikely to be a safety concern. The lung risk that shows up in reports is from injecting crushed tablets, not from swallowing one.',
       level,
