@@ -3,15 +3,15 @@
 // same count was for sale on a page that opened. No Canada. No EU.
 // No store brand. No bonus box, 2-pack, or kit.
 //
-// Not written, and not a hunt: packs whose opened panel contains an
-// ungraded token (packet at the end of the run), plus counts whose
-// panel was not read or whose sale page did not open. A shared barcode
-// printed on two different counts was not attached to either row.
+// Not written, and not a hunt: Wildberry 14, the strawberry sleep gummies,
+// and the Tums Ultra / Extra / Regular tablet lines. Those packs are not
+// rows in this file. The Oct 14 lock grades their tokens. This pass does
+// not add a product.
 //
 // TALLY: 22 written — Clean 0 / Caution 2 / Avoid 20.
 // Pepcid 15 (Avoid 14 / Caution 1). Prilosec 3 (Avoid 3). Tums 4 (Avoid 3 / Caution 1).
 // NEW 15 / REUSE 7. Written-row ungraded tokens: 0.
-// UPC attached 19 / empty 3.
+// UPC attached 21 / empty 1. Smoothies 12 is 307660740605. Smoothies 140 is 307667399646.
 
 import type { CleanAlternative, IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -697,6 +697,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     id: 'tums-b161-smoothies-assorted-12',
     productName: 'Tums Extra Strength Smoothies Assorted Fruit (12 chewable tablets)',
     brand: 'Tums',
+    barcode: '307660740605',
     formulaId: 'tums-b161-smoothies-assorted',
     minAge: 12,
     form: 'chewable tablet',
@@ -705,13 +706,14 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     inactiveIngredients: smoothiesLine(SMOOTH),
     verdict: 'avoid',
     sourcesGeneral: [
-      'Target TCIN 14779009 opened Tums Extra Strength antacid Smoothies, Assorted Fruit, 12 ct, with Add to cart. Active: calcium carbonate 750 mg. Inactive ingredients: acacia, adipic acid, calcium stearate, dextrose, FD&C blue no. 1 aluminum lake, FD&C red no. 40 aluminum lake, FD&C yellow no. 5 aluminum lake (tartrazine), FD&C yellow no. 6 aluminum lake, flavors, guar gum, microcrystalline cellulose, sorbitol. The page also prints “Contains: Soy,” which is an allergen line and is not an extra inactive. Primary barcode 307660740605 was also the primary barcode on the 140-count page, so it was not attached to this 12-count. Adults and children 12 years of age and over.',
+      'Target TCIN 14779009 opened Tums Extra Strength antacid Smoothies, Assorted Fruit, 12 ct, with Add to cart. Active: calcium carbonate 750 mg. Inactive ingredients: acacia, adipic acid, calcium stearate, dextrose, FD&C blue no. 1 aluminum lake, FD&C red no. 40 aluminum lake, FD&C yellow no. 5 aluminum lake (tartrazine), FD&C yellow no. 6 aluminum lake, flavors, guar gum, microcrystalline cellulose, sorbitol. The page also prints “Contains: Soy,” which is an allergen line and is not an extra inactive. Adults and children 12 years of age and over. The 12-count and 140-count Target pages both embed two size records. The 12-count record (buy URL for TCIN 14779009, 0.07 lb) has primary barcode 307660740605. The 140-count record has 307667399646. Dollar General opened the 12 Count page at the path ending 307660740605. upcitemdb opened 307660740605 as the 12ct. DailyMed setid c22944b8-8733-4689-be0c-f320467f79ea lists the 12-count NDC and does not print this UPC. The brand Smoothies page names a 12-count travel size and does not print a UPC field. CVS returned 403. Amazon’s 12-count page lists GTIN 00307660740605 together with 00307660740650. Walgreens 12 ea (prod1936614) uses GTIN 00307660740650, so that second code was not attached to this row.',
     ],
   }),
   row({
     id: 'tums-b161-smoothies-assorted-140',
     productName: 'Tums Extra Strength Smoothies Assorted Fruit (140 chewable tablets)',
     brand: 'Tums',
+    barcode: '307667399646',
     formulaId: 'tums-b161-smoothies-assorted',
     minAge: 12,
     form: 'chewable tablet',
@@ -720,7 +722,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     inactiveIngredients: smoothiesLine(SMOOTH),
     verdict: 'avoid',
     sourcesGeneral: [
-      'Target TCIN 16205593 opened Tums Extra Strength Smoothies, Assorted Fruit, 140 ct, with Add to cart. Inactive ingredients match the 12-count line, including the soy allergen line, which is not an inactive. Primary barcode 307660740605 was also on the 12-count page and was not attached.',
+      'Target TCIN 16205593 opened Tums Extra Strength Smoothies, Assorted Fruit, 140 ct, with Add to cart. Inactive ingredients match the 12-count line, including the soy allergen line, which is not an inactive. The 140-count product record on that page (buy URL for TCIN 16205593, 0.7 lb) has primary barcode 307667399646. Walgreens product prod6331822 opened as sizeCount 140.0 ea with GTIN 00307667399646. Barcode Spider opened 307667399646 as Tums Antacid Smoothies Assorted Fruit 140 CT. The 12-count code 307660740605 was not copied onto this 140-count.',
     ],
   }),
   row({
@@ -766,15 +768,20 @@ if (byBrand.Pepcid !== 15 || byBrand.Prilosec !== 3 || byBrand.Tums !== 4) {
 const ids = new Set(ROWS.map((item) => item.id));
 if (ids.size !== ROWS.length) throw new Error('batch161 duplicate id');
 const emptyUpc = ROWS.filter((item) => item.barcode === undefined).map((item) => item.id);
-if (emptyUpc.join() !== 'pepcid-b161-max-8,tums-b161-smoothies-assorted-12,tums-b161-smoothies-assorted-140') {
+if (emptyUpc.join() !== 'pepcid-b161-max-8') {
   throw new Error(`batch161 empty upc ${emptyUpc.join()}`);
 }
 const barcodes = ROWS.flatMap((item) => (item.barcode ? [item.barcode] : []));
-if (barcodes.length !== 19 || new Set(barcodes).size !== 19) throw new Error('batch161 upc count');
+if (barcodes.length !== 21 || new Set(barcodes).size !== 21) throw new Error('batch161 upc count');
 for (const code of barcodes) {
   if (!upcOk(code)) throw new Error(`batch161 bad upc ${code}`);
 }
-const blocked = ['030772202876', '307660740605', '037000809340', '037000359067'];
+const smooth12 = ROWS.find((item) => item.id === 'tums-b161-smoothies-assorted-12');
+const smooth140 = ROWS.find((item) => item.id === 'tums-b161-smoothies-assorted-140');
+if (smooth12?.barcode !== '307660740605' || smooth140?.barcode !== '307667399646') {
+  throw new Error('batch161 smoothies upc');
+}
+const blocked = ['030772202876', '307660740650', '037000809340', '037000359067'];
 for (const code of blocked) {
   if (barcodes.includes(code)) throw new Error(`batch161 blocked upc ${code}`);
 }
