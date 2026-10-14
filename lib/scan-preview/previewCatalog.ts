@@ -14348,6 +14348,108 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-b79-chaga-powder-8oz': catalogShot(
     'nutricost-b79-chaga-powder-8oz.jpg',
   ),
+  // Vitamins night run 2026-10-14 6:45 AM PT batch 1.
+  // Beef gelatin powder, 1 lb. Barcode 810139571179.
+  // Front reads 1 lb. Not the 2 lb.
+  'nutricost-b79-beef-gelatin-powder-1lb': catalogShot(
+    'nutricost-b79-beef-gelatin-powder-1lb.jpg',
+  ),
+  // Grass-fed beef gelatin powder, 1 lb. Barcode 810139576822.
+  // Front reads 1 lb grass fed. Not the regular gelatin tub.
+  'nutricost-b79-grass-fed-beef-gelatin-powder': catalogShot(
+    'nutricost-b79-grass-fed-beef-gelatin-powder.jpg',
+  ),
+  // Calcium hydroxyapatite, 120 capsules. Barcode 810139576983.
+  // Front reads 120 capsules.
+  'nutricost-b79-calcium-hydroxyapatite-120-capsules': catalogShot(
+    'nutricost-b79-calcium-hydroxyapatite-120-capsules.jpg',
+  ),
+  // EAA powder, unflavored, 30 servings. Barcode 810014674223.
+  // Front reads unflavored and 30 servings. Not a flavored tub.
+  'nutricost-b79-eaa-unflavored-30-servings': catalogShot(
+    'nutricost-b79-eaa-unflavored-30-servings.jpg',
+  ),
+  // PeakATP, 120 capsules. Barcode 810139576648.
+  // Front reads 120 capsules.
+  'nutricost-b79-peak-atp-120-capsules': catalogShot(
+    'nutricost-b79-peak-atp-120-capsules.jpg',
+  ),
+  // Tongkat ali, 60 capsules. Barcode 810014679525.
+  // Front reads 60 capsules. Not the 120.
+  'nutricost-b79-tongkat-ali-60-capsules': catalogShot(
+    'nutricost-b79-tongkat-ali-60-capsules.jpg',
+  ),
+  // Tongkat ali, 120 capsules. Barcode 810014678610.
+  // Front reads 120 capsules. Not the 60.
+  'nutricost-b79-tongkat-ali-120-capsules': catalogShot(
+    'nutricost-b79-tongkat-ali-120-capsules.jpg',
+  ),
+  // Performance myHMB, 120 capsules. Barcode 810139571728.
+  // Front reads 120 capsules. Not the 60.
+  'nutricost-b79-myhmb-120-capsules': catalogShot(
+    'nutricost-b79-myhmb-120-capsules.jpg',
+  ),
+  // White willow bark, 120 capsules. Barcode 810014679990.
+  // Front reads 120 capsules. Not the 240.
+  'nutricost-b79-white-willow-120-capsules': catalogShot(
+    'nutricost-b79-white-willow-120-capsules.jpg',
+  ),
+  // Alpha lipoic acid, 300 mg, 120 capsules. Barcode 810014671666.
+  // Front reads 120 capsules. Not the 240.
+  'nutricost-b79-ala-120-capsules': catalogShot(
+    'nutricost-b79-ala-120-capsules.jpg',
+  ),
+  // Alpha lipoic acid, 600 mg, 240 capsules. Barcode 702669931861.
+  // Front reads 240 capsules. Not the 120.
+  'nutricost-b79-ala-240-capsules': catalogShot(
+    'nutricost-b79-ala-240-capsules.jpg',
+  ),
+  // Kids vitamin D3 gummies. Barcode 810014672519.
+  // Only nutricost.com variant for this barcode.
+  'nutricost-b79-kids-vitamin-d3-gummies': catalogShot(
+    'nutricost-b79-kids-vitamin-d3-gummies.jpg',
+  ),
+  // Mushroom complex, 120 capsules. Barcode 810014674926.
+  // Front reads 120 capsules.
+  'nutricost-b79-mushroom-complex-120-capsules': catalogShot(
+    'nutricost-b79-mushroom-complex-120-capsules.jpg',
+  ),
+  // Calcium citrate + magnesium citrate, unflavored, 30 servings.
+  // No barcode on the row. Front reads unflavored and 30 servings.
+  // Not the 60-serving tub and not a flavored tub.
+  'nutricost-b79-ca-mg-citrate-unflavored-30-servings': catalogShot(
+    'nutricost-b79-ca-mg-citrate-unflavored-30-servings.jpg',
+  ),
+  // Keratin, 120 capsules. Barcode 810014678740.
+  // Front reads 120 capsules.
+  'nutricost-b79-keratin-120-capsules': catalogShot(
+    'nutricost-b79-keratin-120-capsules.jpg',
+  ),
+  // Vitamin B3 niacin, 500 mg, 30 capsules. Barcode 810014677279.
+  // Front reads 30 capsules. Not the 240.
+  'nutricost-b79-niacin-500mg-30-capsules': catalogShot(
+    'nutricost-b79-niacin-500mg-30-capsules.jpg',
+  ),
+  // Turmeric, 90 capsules. Barcode 810139575757.
+  // Front reads 90 capsules. Not the 120.
+  'nutricost-b79-turmeric-90-capsules': catalogShot(
+    'nutricost-b79-turmeric-90-capsules.jpg',
+  ),
+  // Vitamin B complex, 240 capsules. Barcode 702669937573.
+  // Front reads 240 capsules. Not the 120 or the 30.
+  'nutricost-b79-vitamin-b-complex-240-capsules': catalogShot(
+    'nutricost-b79-vitamin-b-complex-240-capsules.jpg',
+  ),
+  // Kelp, 120 capsules. Barcode 810014674896.
+  // Front reads 120 capsules.
+  'nutricost-b79-kelp-120-capsules': catalogShot(
+    'nutricost-b79-kelp-120-capsules.jpg',
+  ),
+  // Luteolin with rutin, 120 capsules. Barcode 810014673974.
+  // Front reads 120 capsules.
+  'nutricost-b79-luteolin-rutin-120-capsules': catalogShot(
+    'nutricost-b79-luteolin-rutin-120-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15160,6 +15262,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Allergies night run 2026-10-14 3:00 AM PT.
   // Dye-free 8 fl oz must not inherit the 4 fl oz bubble gum carton.
   'benadryl-b156-dyefree-8oz',
+  // Vitamins night run 2026-10-14 6:45 AM PT batch 1.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  // ALA 240 is 600 mg. It must not inherit the 300 mg 120.
+  'nutricost-b79-ala-240-capsules',
+  // Turmeric 90 must not inherit the 120.
+  'nutricost-b79-turmeric-90-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -31146,5 +31254,56 @@ assertBrandMark(
     )
   ) {
     throw new Error('Beef liver 120 must not inherit the 240');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-14 6:45 AM PT batch 1.
+  const batch1Cartons: [string, string][] = [
+    ['nutricost-b79-beef-gelatin-powder-1lb', 'nutricost-b79-beef-gelatin-powder-1lb.jpg'],
+    ['nutricost-b79-grass-fed-beef-gelatin-powder', 'nutricost-b79-grass-fed-beef-gelatin-powder.jpg'],
+    ['nutricost-b79-calcium-hydroxyapatite-120-capsules', 'nutricost-b79-calcium-hydroxyapatite-120-capsules.jpg'],
+    ['nutricost-b79-eaa-unflavored-30-servings', 'nutricost-b79-eaa-unflavored-30-servings.jpg'],
+    ['nutricost-b79-peak-atp-120-capsules', 'nutricost-b79-peak-atp-120-capsules.jpg'],
+    ['nutricost-b79-tongkat-ali-60-capsules', 'nutricost-b79-tongkat-ali-60-capsules.jpg'],
+    ['nutricost-b79-tongkat-ali-120-capsules', 'nutricost-b79-tongkat-ali-120-capsules.jpg'],
+    ['nutricost-b79-myhmb-120-capsules', 'nutricost-b79-myhmb-120-capsules.jpg'],
+    ['nutricost-b79-white-willow-120-capsules', 'nutricost-b79-white-willow-120-capsules.jpg'],
+    ['nutricost-b79-ala-120-capsules', 'nutricost-b79-ala-120-capsules.jpg'],
+    ['nutricost-b79-ala-240-capsules', 'nutricost-b79-ala-240-capsules.jpg'],
+    ['nutricost-b79-kids-vitamin-d3-gummies', 'nutricost-b79-kids-vitamin-d3-gummies.jpg'],
+    ['nutricost-b79-mushroom-complex-120-capsules', 'nutricost-b79-mushroom-complex-120-capsules.jpg'],
+    ['nutricost-b79-ca-mg-citrate-unflavored-30-servings', 'nutricost-b79-ca-mg-citrate-unflavored-30-servings.jpg'],
+    ['nutricost-b79-keratin-120-capsules', 'nutricost-b79-keratin-120-capsules.jpg'],
+    ['nutricost-b79-niacin-500mg-30-capsules', 'nutricost-b79-niacin-500mg-30-capsules.jpg'],
+    ['nutricost-b79-turmeric-90-capsules', 'nutricost-b79-turmeric-90-capsules.jpg'],
+    ['nutricost-b79-vitamin-b-complex-240-capsules', 'nutricost-b79-vitamin-b-complex-240-capsules.jpg'],
+    ['nutricost-b79-kelp-120-capsules', 'nutricost-b79-kelp-120-capsules.jpg'],
+    ['nutricost-b79-luteolin-rutin-120-capsules', 'nutricost-b79-luteolin-rutin-120-capsules.jpg'],
+  ];
+  for (const [id, file] of batch1Cartons) {
+    assertExactCarton(id, 'Nutricost', file);
+  }
+  const ala240 = previewOverlayImage({
+    id: 'nutricost-b79-ala-240-capsules',
+    formulaId: 'nutricost-b79-ala-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !ala240?.verifiedSku
+    || !ala240.url.endsWith('/nutricost-b79-ala-240-capsules.jpg')
+  ) {
+    throw new Error('ALA 240 must not inherit the 120');
+  }
+  const turmeric90 = previewOverlayImage({
+    id: 'nutricost-b79-turmeric-90-capsules',
+    formulaId: 'nutricost-nutricost-turmeric-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !turmeric90?.verifiedSku
+    || !turmeric90.url.endsWith('/nutricost-b79-turmeric-90-capsules.jpg')
+  ) {
+    throw new Error('Turmeric 90 must not inherit the 120');
   }
 }
