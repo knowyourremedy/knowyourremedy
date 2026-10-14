@@ -164,3 +164,4 @@ export { BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC } from './batch164-kyr6c-nexium-p
 export { BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE } from './batch165-kyr6c-zarbees-beekeepers-little';
 export { BATCH166_KYR6C_HELD_SLEEP_GRIPE } from './batch166-kyr6c-held-sleep-gripe';
 export { BATCH167_KYR6C_COUGH_NIGHT_FEVER } from './batch167-kyr6c-cough-night-fever';
+export { BATCH168_KYR6C_NASAL_MAX } from './batch168-kyr6c-nasal-max';
