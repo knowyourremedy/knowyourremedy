@@ -61,15 +61,28 @@ function seedOilLabel(name: string): string | null {
   return null;
 }
 
-function oilWhere(record: Pick<RatingRecord, 'form' | 'productName'>, source: string): string {
-  const blob = norm(`${record.form ?? ''} ${record.productName ?? ''} ${source}`);
-  if (/\b(cream|ointment|lotion|balm|topical)\b/.test(blob)) return 'cream';
-  if (/\b(drop|drops)\b/.test(blob)) return 'drop';
-  if (/\bsoftgel/.test(blob)) return 'softgel';
-  if (/\bcapsule/.test(blob)) return 'capsule';
-  if (/\b(gummy|gummies)\b/.test(blob)) return 'gummy';
-  if (/\b(lozenge)\b/.test(blob)) return 'lozenge';
-  return formWord(record);
+function differenceSentence(where: string, plural: boolean): string {
+  const oil = plural ? 'The oils are' : 'The oil is';
+  const they = plural ? 'they' : 'it';
+  if (where === 'softgel') {
+    return `This product is a softgel. ${oil} the fill that holds the vitamin, not a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  if (where === 'capsule') {
+    return `This product is a capsule. ${oil} the fill inside the capsule, not a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  if (where === 'cream') {
+    return `This product is a cream. ${oil} in the cream, not in a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  if (where === 'drop') {
+    return `This product is a liquid drop. ${oil} the carrier in the drop, not a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  if (where === 'tablet') {
+    return `This product is a tablet. ${oil} not the base of a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  if (where === 'lozenge') {
+    return `This product is a lozenge. ${oil} not the base of a gummy you chew, so ${they} did not pull this grade down.`;
+  }
+  return `This product is not a gummy. ${oil} not the base of a gummy you chew, so ${they} did not pull this grade down.`;
 }
 
 export function contradictionHonestNote(record: RatingRecord): string | null {
@@ -93,24 +106,25 @@ export function contradictionHonestNote(record: RatingRecord): string | null {
     const rest = labels.filter((label) => label !== 'fractionated coconut oil');
     if (fractionated) {
       sentences.push(
-        'Coconut oil is Not clean in a gummy. This fractionated coconut oil is not that rule, so it did not pull the grade down.',
+        'Coconut oil is Not clean when it is the base of a gummy. That is the form this app flags. This label lists fractionated coconut oil. That form is not the coconut oil in a gummy you chew, so it did not pull this grade down.',
       );
     }
     if (rest.length > 0) {
       const subject = listPhrase(rest.map(titleOil));
       const plural = rest.length > 1;
       const be = plural ? 'are' : 'is';
-      const it = plural ? 'they' : 'it';
+      const pronoun = plural ? 'they are' : 'it is';
       sentences.push(
-        `${subject} ${be} Not clean in a gummy. In this ${where} ${it} ${be} not that rule, so ${it} did not pull the grade down.`,
+        `${subject} ${be} Not clean when ${pronoun} the base of a gummy. That is the form this app flags. ${differenceSentence(where, plural)}`,
       );
     }
   }
 
   if (namedRice.size > 0) {
     const named = listPhrase([...namedRice]);
+    const plural = named.includes(' and ') || named.includes(', ');
     sentences.push(
-      `Rice extract is flagged when the label does not name the form. This label names ${named}, so that flag did not pull the grade down.`,
+      `Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names ${named}. ${plural ? 'Those named forms are' : 'That named form is'} not the vague extract, so the flag did not pull this grade down.`,
     );
   }
 
@@ -256,28 +270,17 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/blend of oils/.test(n) && /coconut|palm/.test(n)) {
-    return close(
-      'This blend can be coconut oil, palm oil, or both. In a gummy those oils are Not clean.',
-      level,
-    );
+    return 'This blend can be coconut oil, palm oil, or both. Those oils are Not clean when they are the base of a gummy. That is the form this app flags. That is why it is ' + riskWord(level) + '.';
   }
 
   if (oil) {
-    const where = oilWhere({ form: '', productName: '' }, `${ingredient.name} ${ingredient.source ?? ''}`);
     if (oil === 'fractionated coconut oil') {
-      return close(
-        'Fractionated coconut oil is not the coconut oil that is Not clean in a gummy.',
-        level,
-      );
+      return 'Coconut oil is Not clean when it is the base of a gummy. That is the form this app flags. Fractionated coconut oil is not that gummy oil, so it did not pull this grade down.';
     }
     if (level === 'high') {
-      return close(
-        `${titleOil(oil)} is a seed oil. In a gummy it is Not clean.`,
-        'high',
-      );
+      return `${titleOil(oil)} is Not clean when it is the base of a gummy. That is the form this app flags. That is why it is High risk.`;
     }
-    const place = /cream|topical|ointment|lotion/.test(source) ? 'cream' : where === 'product' ? 'form' : where;
-    return `${titleOil(oil)} is a seed oil. It is Not clean in a gummy. In this ${place} it is not that rule, so it did not pull the grade down.`;
+    return `${titleOil(oil)} is Not clean when it is the base of a gummy. That is the form this app flags. In this product the oil is not a gummy you chew, so it did not pull this grade down.`;
   }
 
   if (/propylene glycol|\bpg\b|\be1520\b/.test(n) && !/dicaprylate|dipelargonate/.test(n)) {
@@ -975,5 +978,85 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Kelp is a seaweed. It is not an unnamed flavor mixture.', level);
   }
 
-  return null;
+  return whyFromCitedLock(ingredient);
+}
+
+function finishLock(fact: string, level: RiskLevel): string {
+  return `${fact.replace(/\.$/, '')}. That is why it is ${riskWord(level)}.`;
+}
+
+function whyFromCitedLock(ingredient: IngredientFlag): string | null {
+  const source = ingredient.source ?? '';
+  const name = ingredient.name.trim();
+  const level = ingredient.riskLevel;
+  if (!source.trim()) return null;
+
+  if (/not in methodology|ungraded/i.test(source)) {
+    if (/residual sanitizer|clean-blocker/i.test(source)) {
+      return finishLock(
+        `${name} is a residual sanitizer. The ingredient rules do not treat that trace as a High risk flag`,
+        level,
+      );
+    }
+    return finishLock(
+      `${name} has no row in the ingredient rules, and that gap was not used to invent a High risk flag`,
+      level,
+    );
+  }
+
+  if (/not the gummy seed-oil/i.test(source)) {
+    return finishLock(
+      `${name} is not the oil that is Not clean as the base of a gummy`,
+      level,
+    );
+  }
+
+  const block = pickMethodologyBlock(name, source);
+  if (!block) {
+    if (/founder lock/i.test(source)) {
+      return finishLock(`${name} is named in the ingredient rules for this row`, level);
+    }
+    return null;
+  }
+
+  return finishLock(roleFact(name, block.grade, block.paren), level);
+}
+
+function pickMethodologyBlock(name: string, source: string): { grade: string; paren: string } | null {
+  const parts = source.split(/Methodology §5/i).slice(1);
+  if (parts.length === 0) return null;
+  const tokens = norm(name).split(' ').filter((word) => word.length > 4);
+  const hit = parts.find((part) => tokens.some((token) => part.toLowerCase().includes(token))) ?? parts[0];
+  const paren = hit.slice(0, 500);
+  const grade = paren.match(/^\s*(Cleared|Clear|Caution|Limited-risk|Limited|High|Avoid)/i)?.[1] ?? '';
+  return { grade, paren };
+}
+
+function roleFact(name: string, gradeWord: string, paren: string): string {
+  const detail = paren.toLowerCase();
+  if (/milk-protein|non-fat dry milk|nonfat dry milk/.test(detail)) {
+    return `${name} is a milk protein. The ingredient rules group it with non-fat dry milk, and that line is not a High risk listing`;
+  }
+  if (/topical emollient/.test(detail)) {
+    return `${name} is an emollient used on the skin. The ingredient rules list that use on its own line`;
+  }
+  if (/patch adhesive/.test(detail)) {
+    return `${name} is an adhesive used on a patch. The ingredient rules give that use its own line, and that line is not a High risk listing`;
+  }
+  if (/topical botanical|fragrance/.test(detail)) {
+    return `${name} is a plant scent used as an inactive. The ingredient rules give that use its own line, and that line is not a High risk listing`;
+  }
+  if (/oral antacid|swallowed antacid/.test(detail)) {
+    return `${name} is listed here as an inactive ingredient, not as a swallowed antacid. The ingredient rules keep that line off the High risk list`;
+  }
+  if (/inactive header|says inactive/.test(detail)) {
+    return `${name} is on the inactive part of the label. The ingredient rules flag that listing, and the flag is not a High risk listing`;
+  }
+  if (/^clear/i.test(gradeWord) && !/caution/.test(detail)) {
+    return `${name} is on the Cleared list in the ingredient rules`;
+  }
+  if (/caution|limited|not high|not avoid|standalone/.test(`${gradeWord} ${detail}`)) {
+    return `${name} has its own line in the ingredient rules, and that line is not a High risk listing`;
+  }
+  return `${name} is named in the ingredient rules for this row`;
 }
