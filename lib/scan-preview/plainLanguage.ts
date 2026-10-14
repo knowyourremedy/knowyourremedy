@@ -152,7 +152,24 @@ function isVagueRice(name: string): boolean {
 }
 
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
-  const n = norm(ingredient.name);
+  let n = norm(ingredient.name);
+  // Spellings the methodology already aliases onto a named row.
+  n = n
+    .replace(/gylcerin/g, 'glycerin')
+    .replace(/glylcol/g, 'glycol')
+    .replace(/pregelantinized/g, 'pregelatinized')
+    .replace(/\bacadia\b/g, 'acacia')
+    .replace(/paraban/g, 'paraben')
+    .replace(/dioxyde/g, 'dioxide')
+    .replace(/cellulosse/g, 'cellulose')
+    .replace(/celluose/g, 'cellulose')
+    .replace(/crosscarmellose/g, 'croscarmellose')
+    .replace(/^water purified$/, 'purified water')
+    .replace(/^water usp$/, 'purified water')
+    .replace(/^water aqua eau$/, 'water')
+    .replace(/^water aqua$/, 'water')
+    .replace(/^aqua$/, 'water')
+    .replace(/^filtered water$/, 'water');
   const source = norm(ingredient.source ?? '');
   const level = ingredient.riskLevel;
   const oil = seedOilLabel(ingredient.name);
