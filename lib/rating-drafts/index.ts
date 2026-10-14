@@ -160,3 +160,4 @@ export { BATCH160_KYR6B_ALAVERT } from './batch160-kyr6b-alavert';
 export { BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS } from './batch161-kyr6c-pepcid-prilosec-tums';
 export { BATCH162_KYR6C_HELD_TOKENS } from './batch162-kyr6c-held-tokens';
 export { BATCH163_KYR6C_TUMS_COUNTS } from './batch163-kyr6c-tums-counts';
+export { BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC } from './batch164-kyr6c-nexium-prevacid-zantac';
