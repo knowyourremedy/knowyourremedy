@@ -17,6 +17,7 @@ Not a hunt unless Brandon says go
 Still open
 - Solaray leftover 15 is a bottle-in-hand walk. Website ladders #386–#389 stay closed.
 - Sprouts house stays stashed. Held bottles are written (PR #451). The rest is a walk list, not a write. Do not catalog Sprouts. 187 is dead.
+- Visine, Clear Eyes, Systane, and Refresh stay stashed until the end or after launch. No Eye Drops tab in this pass. Do not strike them. Do not catalog them.
 - Missing-UPC old counts 72 / 73 / 91 / 100 / 101 / 122 / 178 are struck. The live number is a Search query after a pull.
 - KYR4 is the night photo bot. KYR4-b stays paused on those wakes.
 
@@ -57,7 +58,6 @@ Removed, not stashed
 - Tums Extra Strength 48. Not sold.
 - Alavert Fresh Mint 18. No such box. The 18 is Citrus Burst only.
 - Chlor-Trimeton 24. Name-brand not on a regular shelf.
-- Eye drops stay stashed. No Eye Drops tab in this pass. Visine, Clear Eyes, Systane, and Refresh stay off until the end or after launch.
 
 Still open, not removed
 - Icy Hot Performance dry spray, cream, and no-mess cream are back (PR #473 / 97ad7ed). Still open. Pages that opened had no Performance card. Walmart, CVS, Amazon, and Kroger were blocked. Do not remove them on a missing brand-lineup check.
