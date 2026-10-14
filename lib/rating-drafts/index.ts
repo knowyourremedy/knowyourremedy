@@ -166,3 +166,4 @@ export { BATCH166_KYR6C_HELD_SLEEP_GRIPE } from './batch166-kyr6c-held-sleep-gri
 export { BATCH167_KYR6C_COUGH_NIGHT_FEVER } from './batch167-kyr6c-cough-night-fever';
 export { BATCH168_KYR6C_NASAL_MAX } from './batch168-kyr6c-nasal-max';
 export { BATCH169_KYR6C_LOLLIPOPS } from './batch169-kyr6c-lollipops';
+export { BATCH170_KYR6C_GAS_DROPS_STRAWBERRY } from './batch170-kyr6c-gas-drops-strawberry';
