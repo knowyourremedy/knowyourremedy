@@ -171,6 +171,7 @@ import {
   BATCH169_KYR6C_LOLLIPOPS,
   BATCH170_KYR6C_GAS_DROPS_STRAWBERRY,
   BATCH171_KYR6C_AFRIN_NEO_SINEX,
+  BATCH172_KYR6C_NASAL_HELD,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -369,6 +370,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH169_KYR6C_LOLLIPOPS,
   ...BATCH170_KYR6C_GAS_DROPS_STRAWBERRY,
   ...BATCH171_KYR6C_AFRIN_NEO_SINEX,
+  ...BATCH172_KYR6C_NASAL_HELD,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
