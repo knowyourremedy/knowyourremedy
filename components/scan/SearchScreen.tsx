@@ -5,6 +5,7 @@ import type { Verdict } from '@/lib/clean-picks/verdictLabels';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
+  VERDICT_TYPE_COLORS,
 } from '@/lib/clean-picks/verdictLabels';
 import type { ProductImage, RatingRecord } from '@/lib/ratingRecord';
 import {
@@ -328,7 +329,7 @@ export default function SearchScreen({ onOpenProduct, state, onStateChange }: Pr
                     onClick={() => toggleVerdict(verdict)}
                     style={{
                       background: active ? color : '#fff',
-                      color: active ? '#fff' : color,
+                      color: active ? VERDICT_TYPE_COLORS[verdict] : color,
                       border: `1px solid ${color}`,
                       borderRadius: 999,
                       padding: '0.22rem 0.55rem',
