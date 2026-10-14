@@ -168,6 +168,7 @@ import {
   BATCH166_KYR6C_HELD_SLEEP_GRIPE,
   BATCH167_KYR6C_COUGH_NIGHT_FEVER,
   BATCH168_KYR6C_NASAL_MAX,
+  BATCH169_KYR6C_LOLLIPOPS,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -363,6 +364,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH166_KYR6C_HELD_SLEEP_GRIPE,
   ...BATCH167_KYR6C_COUGH_NIGHT_FEVER,
   ...BATCH168_KYR6C_NASAL_MAX,
+  ...BATCH169_KYR6C_LOLLIPOPS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /

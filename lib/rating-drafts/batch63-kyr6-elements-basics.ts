@@ -208,7 +208,7 @@ const METH = {
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity). Product display key is caution when this is the worst inactive (Limited-only never Avoid).',
   juiceBase:
-    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row)',
+    'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   sorbitol:
     'Methodology §5 Limited-risk (other sugar alcohols — sorbitol, maltitol, mannitol, xylitol oral — GI effects at volume)',
   isomalt: 'Methodology §5 Limited-risk (isomalt — sugar-alcohol neighborhood; locked Sept 15, 2026)',
@@ -444,7 +444,7 @@ const COLD_ALTS: CleanAlternative[] = [
 function gummyBaseOrganic(cite: string): IngredientFlag[] {
   return [
     flag('Organic flavors', 'cleared', labelCite(cite, METH.organicFlavor)),
-    flag('Organic lemon juice concentrate', 'limited', labelCite(cite, METH.juiceBase)),
+    flag('Organic lemon juice concentrate', 'cleared', labelCite(cite, METH.juiceBase)),
     flag(
       'Organic black carrot juice concentrate (color)',
       'cleared',

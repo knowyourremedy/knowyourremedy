@@ -154,7 +154,7 @@ const METH = {
   alcohol:
     'Methodology §5 Limited-risk (alcohol / ethyl alcohol / grain alcohol as a VEHICLE — Limited, not Avoid)',
   juiceBase:
-    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row)',
+    'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   modifiedCellulose:
     'Methodology §5 Limited-risk (unlabeled modified cellulose — unspecified modified cellulose/starch neighborhood; named MCC / HPMC / ethylcellulose / methylcellulose stay Cleared; locked Sept 16, 2026)',
   benzoate:
@@ -853,7 +853,7 @@ export const BATCH61_AMAZON_HOUSE_PINNED: RatingRecord[] = [
       flag('Organic flavors', 'limited', labelCite(CITE.mamaMulti, METH.flavors)),
       flag(
         'Lemon juice concentrate',
-        'limited',
+        'cleared',
         labelCite(CITE.mamaMulti, METH.juiceBase),
       ),
       flag(

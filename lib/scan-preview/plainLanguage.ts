@@ -381,6 +381,18 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This flavor names strawberry. Exact natural flavors is a different line.', level);
   }
 
+  if (n === 'natural apple flavor') {
+    return close('This flavor names apple. Exact natural flavors is a different line.', level);
+  }
+
+  if (n === 'natural mixed berry elderberry flavor') {
+    return close('This flavor names mixed berry and elderberry. Exact natural flavors is a different line.', level);
+  }
+
+  if (n === 'natural honey flavor') {
+    return close('This flavor names honey. Exact natural flavors is a different line. It is not the honey sweetener.', level);
+  }
+
   if (/\bflavou?rs?\b/.test(n)) {
     return close(
       'This is a flavor mixture, and the label does not name every part. The flag is for that missing detail, not a named hazard.',
@@ -912,6 +924,17 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/enteric coating|vegetable coating|vegetable based tablet coating|aqueous coating/.test(n)) {
     return close('The label names a coating and does not say it is hypromellose and glycerin. A coating that names those two is a different line.', level);
+  }
+
+  if (
+    /puree|juice concentrate|juice from concentrate/.test(n) &&
+    !/high fructose corn syrup/.test(n) &&
+    /these are the fruit/i.test(ingredient.source ?? '')
+  ) {
+    return close(
+      'This is the fruit. It is not a sugar, and it is not high fructose corn syrup.',
+      level,
+    );
   }
 
   if (/lemon oil|lemon juice concentrate/.test(n)) {

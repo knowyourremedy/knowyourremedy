@@ -56,8 +56,9 @@
 //   per-capsule active 1000 mg ≠ 500 mg → own formulaId).
 // - Garden of Life myKind Organics Inflammatory Response Turmeric
 //   Gummies — Avoid (sunflower oil coating = gummy seed-oil High).
-//   Organic rice meal Caution; fruit puree / juice concentrate
-//   Limited. Limited-only would stay Caution; Avoid needs High.
+//   Organic rice meal Caution. Fruit puree / juice concentrate
+//   when it is the fruit is Cleared (Oct 14, 2026). The Sept 15
+//   Limited gummy-base lock is struck. Avoid still needs High.
 // - Life-flo Magnesium Lotion Vanilla — Caution (fragrance).
 //   Remaining blockers were MCT + cetearyl glucoside. Cetearyl
 //   glucoside Cleared. Caprylic/Capric Triglyceride uses the
@@ -120,14 +121,14 @@ const RICE_MEAL_TAP =
   'Organic rice meal is the locked exact Caution token. Distinct from Cleared rice-hull / rice-bran / rice protein / rice flour and from Limited unspecified rice extract.';
 
 const FRUIT_PUREE_TAP =
-  'Fruit puree / juice concentrate as a gummy base is Limited. Distinct from the Cleared named juice-as-color row.';
+  'These are the fruit. Fruit puree and juice concentrate, when they are the fruit, are Cleared named fruit. Not a sugar row. Not Usable. Not high fructose corn syrup. The Sept 15 Limited gummy-base lock is struck. Distinct from the Cleared named juice-as-color row.';
 
 const METH = {
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
-  fruitPuree: `Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row; locked Sept 15, 2026). ${FRUIT_PUREE_TAP}`,
+  fruitPuree: `Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). ${FRUIT_PUREE_TAP}`,
   mctUnlabeled: `Methodology §5 Limited-risk (unlabeled MCT — coconut vs other source not named; opacity; not Avoid). ${MCT_UNLABELED_TAP}`,
   benzoate:
     'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate)',
@@ -741,17 +742,17 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Organic apple (fruit puree concentrate & juice concentrate)',
-        'limited',
+        'cleared',
         labelCite(CITE.golGummy, METH.fruitPuree),
       ),
       flag(
         'Organic peach (fruit puree concentrate)',
-        'limited',
+        'cleared',
         labelCite(CITE.golGummy, METH.fruitPuree),
       ),
       flag(
         'Organic lemon juice concentrate',
-        'limited',
+        'cleared',
         labelCite(CITE.golGummy, METH.fruitPuree),
       ),
       flag('Pectin (from apples and oranges)', 'cleared', labelCite(CITE.golGummy, METH.pectin)),
