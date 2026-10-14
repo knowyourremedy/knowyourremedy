@@ -13,8 +13,7 @@
 //
 // TALLY: 10 written — Clean 3 / Caution 7 / Avoid 0.
 // Zarbee's 4 (Caution 4). Beekeeper's 4 (Clean 2 / Caution 2). Little Remedies 2 (Clean 1 / Caution 1).
-// UPC attached 8 / empty 2.
-// Empty: Kid's Cough + Mucus Day 8 fl oz. Soothing Lozenges 24.
+// UPC attached 10 / empty 0.
 // Written-row ungraded tokens: 0.
 
 import type { CleanAlternative, IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
@@ -158,6 +157,7 @@ export const BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE: RatingRecord[] = [
     productName: "Zarbee's Kid's Cough + Mucus Day, Mixed Berry (8 fl oz)",
     brand: "Zarbee's",
     category: COLD,
+    barcode: '300450664051',
     formulaId: 'zarbees-b165-honey-base',
     audience: KIDS,
     minAge: 2,
@@ -176,7 +176,7 @@ export const BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE: RatingRecord[] = [
     retailers: ['Target'],
     cleanAlternatives: KIDS_COUGH_ALTS,
     sourcesGeneral: [
-      "Zarbee's Kid's Cough + Mucus Day panel and the Kenvue professional page: grade A proprietary blend of dark honey, English ivy leaf extract, black elderberry, zinc (as zinc gluconate); water, natural flavor, citric acid. Ages 2 to 6 years. The inactive line matches the baby honey syrups, so this row reuses formula zarbees-b165-honey-base. Target opened the mixed berry 8 fl oz with Add to cart, TCIN 87824548. Kenvue also lists a 4 fl oz. No 4 fl oz sale page opened, so that size is not a row. No barcode on the 8 fl oz page that opened was tied to this count alone. The day/night value pack is a kit and is not a row.",
+      "Zarbee's Kid's Cough + Mucus Day panel and the Kenvue professional page: grade A proprietary blend of dark honey, English ivy leaf extract, black elderberry, zinc (as zinc gluconate); water, natural flavor, citric acid. Ages 2 to 6 years. The inactive line matches the baby honey syrups, so this row reuses formula zarbees-b165-honey-base. Target opened the mixed berry 8 fl oz with Add to cart, TCIN 87824548. Kenvue also lists a 4 fl oz. No 4 fl oz sale page opened, so that size is not a row. DSLD label 302827 ties barcode 300450664051 to this 8 fl oz daytime bottle, and its other ingredients are water, natural flavor, citric acid. The 4 fl oz code 300450664075 was not copied here. The day/night value pack is a kit and is not a row.",
     ],
   },
   {
@@ -269,6 +269,7 @@ export const BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE: RatingRecord[] = [
     productName: "Beekeeper's Naturals Soothing Lozenges (24 lozenges)",
     brand: "Beekeeper's Naturals",
     category: COLD,
+    barcode: '834706002682',
     formulaId: 'beekeepers-b165-lozenges',
     audience: ADULT,
     minAge: 12,
@@ -285,7 +286,7 @@ export const BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE: RatingRecord[] = [
     verdict: 'clean',
     retailers: ["Beekeeper's Naturals"],
     sourcesGeneral: [
-      "Beekeeper's lozenge page opened 24 lozenges for sale at $9.99. The ingredient line matches the 14-count, so this row reuses formula beekeepers-b165-lozenges. The 14-count code 628055142508 was not copied onto this 24-count. No page that opened tied a different code to the 24-count alone.",
+      "Beekeeper's lozenge page opened 24 lozenges for sale at $9.99. The ingredient line matches the 14-count, so this row reuses formula beekeepers-b165-lozenges. The brand product record for this 24-lozenge page lists barcode 834706002682. The 14-count code 628055142508 was not copied here.",
     ],
   },
   {
@@ -385,11 +386,11 @@ if (ROWS.length !== 10) throw new Error(`batch165 row count ${ROWS.length}`);
 const expected = [
   ['zarbees-b165-baby-cough-grape-2', 'caution', '897233709011', 'zarbees-b165-honey-base', 1],
   ['zarbees-b165-baby-cough-peach-2', 'caution', '897233709042', 'zarbees-b165-honey-base', 1],
-  ['zarbees-b165-mucus-day-8', 'caution', '', 'zarbees-b165-honey-base', 2],
+  ['zarbees-b165-mucus-day-8', 'caution', '300450664051', 'zarbees-b165-honey-base', 2],
   ['zarbees-b165-saline-3', 'caution', '857647007165', 'zarbees-b165-saline', 0],
   ['beekeepers-b165-cough-day-4', 'caution', '628055142843', 'beekeepers-b165-cough-day', 12],
   ['beekeepers-b165-lozenges-14', 'clean', '628055142508', 'beekeepers-b165-lozenges', 12],
-  ['beekeepers-b165-lozenges-24', 'clean', '', 'beekeepers-b165-lozenges', 12],
+  ['beekeepers-b165-lozenges-24', 'clean', '834706002682', 'beekeepers-b165-lozenges', 12],
   ['beekeepers-b165-kids-throat-1', 'caution', '628055142195', 'beekeepers-b165-kids-throat', 1],
   ['little-remedies-b165-saline-drops-1', 'caution', '756184120118', 'little-remedies-b165-saline-drops', 0],
   ['little-remedies-b165-saline-mist-3', 'clean', '756184000090', 'little-remedies-b165-saline-mist', 0],
@@ -410,7 +411,7 @@ for (const [id, verdict, barcode, formulaId, minAge] of expected) {
 }
 
 const barcodes = ROWS.map((item) => item.barcode).filter((code): code is string => Boolean(code));
-if (new Set(barcodes).size !== 8) throw new Error('batch165 upc copy');
+if (new Set(barcodes).size !== 10) throw new Error('batch165 upc copy');
 
 const honey = lineKey(ROWS.find((item) => item.id === 'zarbees-b165-baby-cough-grape-2')!);
 const peach = lineKey(ROWS.find((item) => item.id === 'zarbees-b165-baby-cough-peach-2')!);

@@ -166,6 +166,7 @@ import {
   BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC,
   BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE,
   BATCH166_KYR6C_HELD_SLEEP_GRIPE,
+  BATCH167_KYR6C_COUGH_NIGHT_FEVER,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -359,6 +360,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC,
   ...BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE,
   ...BATCH166_KYR6C_HELD_SLEEP_GRIPE,
+  ...BATCH167_KYR6C_COUGH_NIGHT_FEVER,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
