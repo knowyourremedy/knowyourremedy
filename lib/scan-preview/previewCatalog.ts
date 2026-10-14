@@ -163,6 +163,7 @@ import {
   BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS,
   BATCH162_KYR6C_HELD_TOKENS,
   BATCH163_KYR6C_TUMS_COUNTS,
+  BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -353,6 +354,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS,
   ...BATCH162_KYR6C_HELD_TOKENS,
   ...BATCH163_KYR6C_TUMS_COUNTS,
+  ...BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
