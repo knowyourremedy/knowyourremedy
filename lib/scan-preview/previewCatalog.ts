@@ -2671,6 +2671,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-d-aspartic-acid-powder-green-apple-75-servings': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-14 5:30 AM PT batch 2.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // C8 MCT oil powder named 23 servings. No barcode.
+  // The unflavored 0.5 lb front reads 23 servings, barcode 702669936026.
+  // This row has no barcode. Do not glue that tub.
+  'nutricost-c8-mct-oil-powder-23-servings': brandMark('nutricost-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -14241,6 +14248,103 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Front reads 30 servings. Not peach mango.
   'nutricost-creatine-energy-powder-grape-30-servings': catalogShot(
     'nutricost-creatine-energy-powder-grape-30-servings.jpg',
+  ),
+  // Vitamins night run 2026-10-14 5:30 AM PT batch 2.
+  // Calcium + magnesium + zinc with D3, raspberry lemonade, 30 servings.
+  // Barcode 810014672939. Front reads 30 servings. Not the 60.
+  'nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings': catalogShot(
+    'nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings.jpg',
+  ),
+  // MCT oil powder, salted caramel, 1 lb, 36 servings. Barcode 810139571322.
+  // Front reads 36 servings. Not the unflavored tubs.
+  'nutricost-mct-oil-powder-salted-caramel-36-servings': catalogShot(
+    'nutricost-mct-oil-powder-salted-caramel-36-servings.jpg',
+  ),
+  // C8 MCT oil powder, unflavored, 2 lb, 90 servings. Barcode 702669935012.
+  // Front reads 90 servings and 2 lb. Not the 0.5 lb.
+  'nutricost-c8-mct-oil-powder-90-servings': catalogShot(
+    'nutricost-c8-mct-oil-powder-90-servings.jpg',
+  ),
+  // Pre-X, grape, 30 servings. Barcode 810014670966.
+  // Front reads 30 servings. Not the 60.
+  'nutricost-pre-x-workout-complex-powder-grape-30-servings': catalogShot(
+    'nutricost-pre-x-workout-complex-powder-grape-30-servings.jpg',
+  ),
+  // Pre-X, grape, 60 servings. Barcode 810014670973.
+  // Front reads 60 servings. Not the 30.
+  'nutricost-pre-x-workout-complex-powder-grape-60-servings': catalogShot(
+    'nutricost-pre-x-workout-complex-powder-grape-60-servings.jpg',
+  ),
+  // Multi collagen hair skin nails, hot cocoa, 30 servings. Barcode 810139571209.
+  // Front reads 30 servings and hot cocoa.
+  'nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings': catalogShot(
+    'nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings.jpg',
+  ),
+  // Vitamin D3 gummies, 5,000 IU, mixed berry, 120 gummies. Barcode 810014673066.
+  // Front reads 120 gummies.
+  'nutricost-vitamin-d3-gummies-5000-iu-120-gummies': catalogShot(
+    'nutricost-vitamin-d3-gummies-5000-iu-120-gummies.jpg',
+  ),
+  // Reishi mushroom, 120 capsules. Barcode 810014670294.
+  // Front reads 120 capsules.
+  'nutricost-b79-reishi-120-capsules': catalogShot(
+    'nutricost-b79-reishi-120-capsules.jpg',
+  ),
+  // Cinnamon made with organic Ceylon, 240 capsules. Barcode 810139574453.
+  // Front reads 240 capsules. Not the 150.
+  'nutricost-b79-cinnamon-ceylon-240-capsules': catalogShot(
+    'nutricost-b79-cinnamon-ceylon-240-capsules.jpg',
+  ),
+  // Cinnamon made with organic Ceylon, 150 capsules. Barcode 810014670454.
+  // Front reads 150 capsules. Not the 240.
+  'nutricost-b79-cinnamon-ceylon-150-capsules': catalogShot(
+    'nutricost-b79-cinnamon-ceylon-150-capsules.jpg',
+  ),
+  // Grass-fed desiccated beef liver, 240 capsules. Barcode 810014672304.
+  // Front reads 240 capsules. Not the 120.
+  'nutricost-b79-beef-liver-240-capsules': catalogShot(
+    'nutricost-b79-beef-liver-240-capsules.jpg',
+  ),
+  // Grass-fed desiccated beef liver, 120 capsules. Barcode 810014678450.
+  // Same barcode as the already-overlaid 120-count row. Share that carton.
+  // Not the 240.
+  'nutricost-b79-beef-liver-120-capsules': catalogShot(
+    'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
+  ),
+  // Calcium lactate, 180 capsules. Barcode 810014678757.
+  // Front reads 180 capsules.
+  'nutricost-b79-calcium-lactate-180-capsules': catalogShot(
+    'nutricost-b79-calcium-lactate-180-capsules.jpg',
+  ),
+  // Noni, 240 capsules. Barcode 810014672809.
+  // Front reads 240 capsules.
+  'nutricost-b79-noni-240-capsules': catalogShot(
+    'nutricost-b79-noni-240-capsules.jpg',
+  ),
+  // Cordyceps, 90 capsules. Barcode 810014670829.
+  // Front reads 90 capsules.
+  'nutricost-b79-cordyceps-90-capsules': catalogShot(
+    'nutricost-b79-cordyceps-90-capsules.jpg',
+  ),
+  // Creatine HCl, 120 capsules. Barcode 810139575252.
+  // Front reads 120 capsules.
+  'nutricost-b79-creatine-hcl-120-capsules': catalogShot(
+    'nutricost-b79-creatine-hcl-120-capsules.jpg',
+  ),
+  // HMB powder, 250 g. Barcode 857077008916.
+  // Front reads 250 grams.
+  'nutricost-b79-hmb-powder-250g': catalogShot(
+    'nutricost-b79-hmb-powder-250g.jpg',
+  ),
+  // L-leucine powder, unflavored, 500 g. Barcode 702669932103.
+  // Front reads 500 grams.
+  'nutricost-b79-l-leucine-powder-500g': catalogShot(
+    'nutricost-b79-l-leucine-powder-500g.jpg',
+  ),
+  // Organic chaga mushroom powder, 8 oz. Barcode 810014670355.
+  // Front reads 8 oz.
+  'nutricost-b79-chaga-powder-8oz': catalogShot(
+    'nutricost-b79-chaga-powder-8oz.jpg',
   ),
 };
 
@@ -30984,5 +31088,61 @@ assertBrandMark(
     || !grape60.url.endsWith('/nutricost-bcaa-powder-grape-60-servings.jpg')
   ) {
     throw new Error('BCAA grape 60 must not inherit the 30');
+  }
+}
+
+assertBrandMark(
+  'nutricost-c8-mct-oil-powder-23-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+{
+  const batch2Cartons: [string, string][] = [
+    ['nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings', 'nutricost-calcium-magnesium-zinc-citrates-d3-raspberry-30-servings.jpg'],
+    ['nutricost-mct-oil-powder-salted-caramel-36-servings', 'nutricost-mct-oil-powder-salted-caramel-36-servings.jpg'],
+    ['nutricost-c8-mct-oil-powder-90-servings', 'nutricost-c8-mct-oil-powder-90-servings.jpg'],
+    ['nutricost-pre-x-workout-complex-powder-grape-30-servings', 'nutricost-pre-x-workout-complex-powder-grape-30-servings.jpg'],
+    ['nutricost-pre-x-workout-complex-powder-grape-60-servings', 'nutricost-pre-x-workout-complex-powder-grape-60-servings.jpg'],
+    ['nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings', 'nutricost-multi-collagen-hair-skin-nails-hot-cocoa-30-servings.jpg'],
+    ['nutricost-vitamin-d3-gummies-5000-iu-120-gummies', 'nutricost-vitamin-d3-gummies-5000-iu-120-gummies.jpg'],
+    ['nutricost-b79-reishi-120-capsules', 'nutricost-b79-reishi-120-capsules.jpg'],
+    ['nutricost-b79-cinnamon-ceylon-240-capsules', 'nutricost-b79-cinnamon-ceylon-240-capsules.jpg'],
+    ['nutricost-b79-cinnamon-ceylon-150-capsules', 'nutricost-b79-cinnamon-ceylon-150-capsules.jpg'],
+    ['nutricost-b79-beef-liver-240-capsules', 'nutricost-b79-beef-liver-240-capsules.jpg'],
+    ['nutricost-b79-beef-liver-120-capsules', 'nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg'],
+    ['nutricost-b79-calcium-lactate-180-capsules', 'nutricost-b79-calcium-lactate-180-capsules.jpg'],
+    ['nutricost-b79-noni-240-capsules', 'nutricost-b79-noni-240-capsules.jpg'],
+    ['nutricost-b79-cordyceps-90-capsules', 'nutricost-b79-cordyceps-90-capsules.jpg'],
+    ['nutricost-b79-creatine-hcl-120-capsules', 'nutricost-b79-creatine-hcl-120-capsules.jpg'],
+    ['nutricost-b79-hmb-powder-250g', 'nutricost-b79-hmb-powder-250g.jpg'],
+    ['nutricost-b79-l-leucine-powder-500g', 'nutricost-b79-l-leucine-powder-500g.jpg'],
+    ['nutricost-b79-chaga-powder-8oz', 'nutricost-b79-chaga-powder-8oz.jpg'],
+  ];
+  for (const [id, file] of batch2Cartons) {
+    assertExactCarton(id, 'Nutricost', file);
+  }
+  const cin150 = previewOverlayImage({
+    id: 'nutricost-b79-cinnamon-ceylon-150-capsules',
+    formulaId: 'nutricost-b79-cinnamon-ceylon-240-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !cin150?.verifiedSku
+    || !cin150.url.endsWith('/nutricost-b79-cinnamon-ceylon-150-capsules.jpg')
+  ) {
+    throw new Error('Cinnamon 150 must not inherit the 240');
+  }
+  const liver120 = previewOverlayImage({
+    id: 'nutricost-b79-beef-liver-120-capsules',
+    formulaId: 'nutricost-b79-beef-liver-240-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !liver120?.verifiedSku
+    || !liver120.url.endsWith(
+      '/nutricost-nutricost-grass-fed-desiccated-beef-liver-capsules-120-capsules.jpg',
+    )
+  ) {
+    throw new Error('Beef liver 120 must not inherit the 240');
   }
 }
