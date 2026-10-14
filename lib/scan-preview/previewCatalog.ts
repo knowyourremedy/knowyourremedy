@@ -161,6 +161,7 @@ import {
   BATCH159_KYR6B_ALAVERT,
   BATCH160_KYR6B_ALAVERT,
   BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS,
+  BATCH162_KYR6C_HELD_TOKENS,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -349,6 +350,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH159_KYR6B_ALAVERT,
   ...BATCH160_KYR6B_ALAVERT,
   ...BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS,
+  ...BATCH162_KYR6C_HELD_TOKENS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
