@@ -19,6 +19,44 @@ function close(fact: string, level: RiskLevel): string {
   return `${fact} That is why it is ${riskWord(level)}.`;
 }
 
+const UNNAMED_FLAVOR =
+  'This is an unnamed flavor. The word hides the mixture, so you cannot see the solvents or the carriers. That is why it is Usable.';
+
+const UNNAMED_FLAVOR_WORDS = new Set([
+  'natural',
+  'artificial',
+  'flavor',
+  'flavors',
+  'flavour',
+  'flavours',
+  'and',
+  'other',
+  'with',
+  'organic',
+  'the',
+  'a',
+  'an',
+  'of',
+]);
+
+function isUnnamedFlavor(name: string): boolean {
+  return name.split(' ').every((word) => UNNAMED_FLAVOR_WORDS.has(word));
+}
+
+function unnamedFlavorWhy(level: RiskLevel): string {
+  if (level === 'high') {
+    return close('This is an unnamed flavor. The word hides the mixture, so you cannot see the solvents or the carriers.', level);
+  }
+  return UNNAMED_FLAVOR;
+}
+
+function namedFlavorWhy(food: string, level: RiskLevel, extra?: string): string {
+  const aside = extra ? ` ${extra}` : '';
+  const fact = `This flavor names ${food}. It is not a hidden flavor blend.${aside}`;
+  if (level === 'high') return close(fact, level);
+  return `${fact} That is why it is Usable.`;
+}
+
 function formWord(record: Pick<RatingRecord, 'form' | 'productName'>): string {
   const form = norm(`${record.form ?? ''} ${record.productName ?? ''}`);
   if (/\bsoftgel/.test(form)) return 'softgel';
@@ -376,37 +414,36 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (n === 'natural ginger flavor') {
-    return close('This flavor names ginger. Exact natural flavors is a different line.', level);
+    return namedFlavorWhy('ginger', level);
   }
 
   if (n === 'natural strawberry flavor') {
-    return close('This flavor names strawberry. Exact natural flavors is a different line.', level);
+    return namedFlavorWhy('strawberry', level);
   }
 
   if (n === 'natural apple flavor') {
-    return close('This flavor names apple. Exact natural flavors is a different line.', level);
+    return namedFlavorWhy('apple', level);
   }
 
   if (n === 'natural mixed berry elderberry flavor') {
-    return close('This flavor names mixed berry and elderberry. Exact natural flavors is a different line.', level);
+    return namedFlavorWhy('mixed berry and elderberry', level);
   }
 
   if (n === 'natural honey flavor') {
-    return close('This flavor names honey. Exact natural flavors is a different line. It is not the honey sweetener.', level);
+    return namedFlavorWhy('honey', level, 'It is not the honey sweetener.');
   }
 
   if (n === 'flavor' || n === 'flavors') {
-    return close(
-      'The label says flavor and does not name the food. Exact natural flavors is a different line.',
-      level,
-    );
+    return unnamedFlavorWhy(level);
   }
 
   if (/\bflavou?rs?\b/.test(n)) {
-    return close(
-      'This is a flavor mixture, and the label does not name every part. The flag is for that missing detail, not a named hazard.',
-      level,
-    );
+    if (isUnnamedFlavor(n)) return unnamedFlavorWhy(level);
+    const food = n
+      .split(' ')
+      .filter((word) => !UNNAMED_FLAVOR_WORDS.has(word))
+      .join(' ');
+    return namedFlavorWhy(food, level);
   }
 
   if (/sorbic acid/.test(n)) {
@@ -457,6 +494,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/^water$|purified water|deionized water|distilled water|water for injection|sterile water/.test(n)) {
     return close('This is water used as a base.', level);
+  }
+
+  if (/\bseawater\b/.test(n) && !/evaporated|trace mineral/.test(n)) {
+    return close('This is seawater used as the saline in a nasal spray. It is not evaporated sea water.', level);
   }
 
   if (/corn starch|potato starch|pregelatinized starch|tapioca starch|^starch$/.test(n)) {
@@ -527,10 +568,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/^fragrance$|parfum/.test(n)) {
-    return close(
-      'Fragrance is an undisclosed mixture. It can cause skin allergy in some people. European rules require many fragrance allergens to be named.',
-      level,
-    );
+    if (level === 'high') {
+      return close('This is an unnamed fragrance. The word hides the mixture, so you cannot see the solvents or the carriers.', level);
+    }
+    return 'This is an unnamed fragrance. The word hides the mixture, so you cannot see the solvents or the carriers. That is why it is Usable.';
   }
 
   if (/sodium lauryl sulfate|\bsls\b/.test(n)) {
@@ -746,7 +787,17 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/^menthol\b|menthol dl/.test(n)) {
-    return close('Menthol on an inactive line is a flavor or a cooling scent. When the panel lists it as the active drug, it is not graded as an inactive.', level);
+    if (level === 'high') {
+      return close('Menthol is a named chemical, not a hidden flavor blend. In this spray it is the cooling inactive, not the drug.', level);
+    }
+    return 'Menthol is a named chemical, not a hidden flavor blend. In this spray it is the cooling inactive, not the drug. That is why it is Usable.';
+  }
+
+  if (/^eucalyptol\b/.test(n)) {
+    if (level === 'high') {
+      return close('Eucalyptol is a named chemical, not a hidden flavor blend. In this spray it is the scent inactive, not the drug.', level);
+    }
+    return 'Eucalyptol is a named chemical, not a hidden flavor blend. In this spray it is the scent inactive, not the drug. That is why it is Usable.';
   }
 
   if (/high fructose corn syrup|\bhfcs\b/.test(n)) {
@@ -835,7 +886,11 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is an oregano leaf extract. It is not oregano oil.', level);
   }
 
-  if (/arnica|ilex paraguariensis|camellia sinensis|calendula|echinacea|boswellia|eucalyptus oil|jojoba oil|clove oil|rosemary oil/.test(n)) {
+  if (/\brosemary oil\b/.test(n)) {
+    return close('Rosemary oil is a scent oil. It is not the oral rosemary extract.', level);
+  }
+
+  if (/arnica|ilex paraguariensis|camellia sinensis|calendula|echinacea|boswellia|eucalyptus oil|jojoba oil|clove oil/.test(n)) {
     return close('This is a plant extract used as a scent or an inactive in a cream. A named plant used as a cream base oil is a different line.', level);
   }
 
