@@ -373,6 +373,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'natural ginger flavor') {
+    return close('This flavor names ginger. Exact natural flavors is a different line.', level);
+  }
+
   if (/\bflavou?rs?\b/.test(n)) {
     return close(
       'This is a flavor mixture, and the label does not name every part. The flag is for that missing detail, not a named hazard.',
@@ -384,7 +388,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Sorbic acid is a preservative in the same limited family as caprylyl glycol.', level);
   }
 
-  if (/sodium benzoate|potassium sorbate|benzoic acid/.test(n)) {
+  if (/sodium benzoate|potassium benzoate|potassium sorbate|benzoic acid/.test(n)) {
     return close(
       'This is a preservative. On its own the risk is low. Benzoate plus vitamin C can form a trace of benzene.',
       level,
@@ -483,6 +487,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/xanthan|guar gum|gum arabic|arabic gum|acacia|pectin|gellan|locust bean|tragacanth|agar/.test(n)) {
     return close('This is a food gum or seaweed gel used to thicken.', level);
+  }
+
+  if (n === 'oligofructose') {
+    return close('Oligofructose is in the same family as a fructooligosaccharide blend. Inulin is a different line.', level);
   }
 
   if (/inulin|psyllium|chicory root fiber|fructooligosaccharide|\bfos\b|oat fiber|corn fiber|vegetable fiber/.test(n)) {
@@ -603,6 +611,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/^color added$|colors added|colorant added|artificial color/.test(n)) {
     return close('The label says color was added and does not name the color. A named plant color is a different line.', level);
+  }
+
+  if (n === 'natural color') {
+    return close('The label says natural color and does not name the plant. A named color such as turmeric, or a named juice color, names the plant and is a different line.', level);
   }
 
   if (/cellulose acetate/.test(n)) {
@@ -944,6 +956,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/caprylyl glycol|hexanediol/.test(n)) {
     return close('This is a skin-conditioning solvent in the caprylyl glycol and hexanediol family.', level);
+  }
+
+  if (n === 'vegetable protein isolate') {
+    return close('The label says vegetable protein isolate and does not name the plant. Pea protein isolate names the plant and is a different line. This is not soy protein isolate.', level);
   }
 
   if (/pea protein/.test(n)) {
