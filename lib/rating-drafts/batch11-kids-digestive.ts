@@ -28,10 +28,11 @@
 //   organic beet root + organic rice bran extract Cleared (Sept 14 locks);
 //   organic flavors Cleared; organic maltodextrin Limited 1 pt matching
 //   locked Genexa chew siblings. Recalculated: still Caution. minAge 2.
-// - KD7 Little Remedies Gas Relief Drops = Caution. Live brand panel.
-//   Sucralose and oral propylene glycol are Moderate. Named strawberry
-//   flavor and sodium benzoate are Caution. No High. Infant / 0+ as
-//   labeled. Barcode stays 756184120415.
+// - KD7 Little Remedies Gas Relief Drops, Natural Berry = Caution.
+//   Target panel. Sucralose and oral propylene glycol are Moderate.
+//   Natural flavor and sodium benzoate are Limited. No High. Infant / 0+
+//   as labeled. Barcode stays 756184120415. The strawberry line is not
+//   this row.
 // - KD8 Culturelle Kids probiotic gummies coconut-only = Caution. Natural
 //   flavors + fractionated coconut oil. Coconut oil alone is NOT the gummy
 //   seed-oil High rule. Separate from a palm / veg-oil Avoid twin (none
@@ -120,7 +121,7 @@ const METH = {
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, "vegetable oil", sunflower, palm)',
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
   acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
-  flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  flavors: 'Methodology §5 Limited-risk (natural flavor / natural flavors — opacity). Exact natural flavors stays Limited. A named flavor is a different line.',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -133,7 +134,6 @@ const METH = {
     'Methodology §5 Caution (benzyl alcohol — general oral OTC; standalone Caution, not additive-scored, not Avoid on this population)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
-  flavorNamed: 'Methodology §5 Caution (named flavor). Exact natural flavors stays Limited.',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   citric: 'Methodology §5 Cleared (citric acid).',
@@ -212,7 +212,7 @@ const PEDIALYTE_POPS_CITE =
 const CULTURELLE_GUMMY_CITE =
   'Culturelle Kids Probiotic + Veggie Fiber / Daily Probiotic + Prebiotic gummies (culturelle.com + CVS other-ingredients) — natural flavors + fractionated coconut oil (containing carnauba wax)';
 const GAS_DROPS_PANEL =
-  'Little Remedies Gas Relief Drops brand page (https://www.littleremedies.com/remedies/stomach-gas-remedies/gas-relief-drops)';
+  'Target panel, Little Remedies Gas Relief Drops, Natural Berry, 1 fl oz';
 const CULTURELLE_PKT_CITE =
   'Culturelle Kids + Baby HCP sheet (CKEP11565) — Kids Purely Probiotics packets other ingredients include sucralose + natural flavor (xylitol, mannitol, HPC, stearic acid, magnesium stearate, citric acid, vegetable juice color, malic acid)';
 
@@ -562,7 +562,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
   },
   {
     id: 'little-remedies-gas-drops',
-    productName: 'Little Remedies Gas Relief Drops',
+    productName: 'Little Remedies Gas Relief Drops, Natural Berry (1 fl oz)',
     brand: 'Little Remedies',
     category: DIGESTIVE,
     barcode: '756184120415',
@@ -588,9 +588,9 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
         labelCite(GAS_DROPS_PANEL, METH.mcc),
       ),
       flag(
-        'Natural strawberry flavor',
+        'Natural flavor',
         'limited',
-        labelCite(GAS_DROPS_PANEL, METH.flavorNamed),
+        labelCite(GAS_DROPS_PANEL, METH.flavors),
       ),
       flag('Propylene glycol', 'moderate', labelCite(GAS_DROPS_PANEL, METH.pg)),
       flag('Purified water', 'cleared', labelCite(GAS_DROPS_PANEL, METH.water)),
@@ -607,7 +607,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
-      'Little Remedies Gas Relief Drops brand page: simethicone 20 mg per 0.3 mL. Inactive ingredients: carboxymethyl cellulose sodium, citric acid, microcrystalline cellulose, natural strawberry flavor, propylene glycol, purified water, sodium benzoate, sucralose, xanthan gum. Newborns and infants under 2 years, and children 2 and over. Barcode 756184120415 was already on this row and is the Natural Berry 1 fl oz. UPC 756184000137 is a different 1 fl oz listing and was not attached.',
+      'Target panel for Little Remedies Gas Relief Drops, Natural Berry, 1 fl oz. Simethicone 20 mg per 0.3 mL. Inactive ingredients: carboxymethyl cellulose sodium, citric acid, microcrystalline cellulose, natural flavor, propylene glycol, purified water, sodium benzoate, sucralose, xanthan gum. Newborns and infants under 2 years, and children 2 and over. Barcode 756184120415 stays on this Natural Berry 1 fl oz. The strawberry 1 fl oz is a different row.',
     ],
   },
   {
@@ -1081,4 +1081,18 @@ for (const record of BATCH11_KIDS_DIGESTIVE) {
   if (expected && record.barcode !== expected) {
     throw new Error(`batch 11 catch-up UPC drift on ${record.id}`);
   }
+}
+
+const gasDrops = BATCH11_KIDS_DIGESTIVE.find((record) => record.id === 'little-remedies-gas-drops');
+if (!gasDrops || gasDrops.barcode !== '756184120415' || gasDrops.verdict !== 'caution') {
+  throw new Error('Natural Berry gas drops must stay Caution on 756184120415');
+}
+if (gasDrops.inactiveIngredients.some((item) => /strawberry/i.test(item.name))) {
+  throw new Error('Natural Berry gas drops must not keep the strawberry flavor line');
+}
+if (!gasDrops.inactiveIngredients.some((item) => item.name === 'Natural flavor' && item.riskLevel === 'limited')) {
+  throw new Error('Natural Berry gas drops must list natural flavor');
+}
+if (/756184000137/.test(JSON.stringify(gasDrops))) {
+  throw new Error('Natural Berry gas drops must not carry the strawberry code');
 }
