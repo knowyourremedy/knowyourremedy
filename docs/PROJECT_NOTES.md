@@ -9,7 +9,7 @@ Done
 - Zyrtec website loop closed. 40-count Avoid, UPC 300450204462, PR #452. 3-count Avoid, UPC 300450204431, and bubble-gum 4 fl oz Avoid, UPC 300450205049, PR #453. 75-count Avoid on zyrtec-allergy-tablets-tio2, UPC 300450204752, row zyrtec-b143-10mg-75ct, PR #467 / ead6dea. Do not reopen. Bot run #334 failed in the chat log. The merge landed.
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
-- Highest rating-draft is batch155. Do not edit batch70–143. Next file is batch156.
+- Batch close: highest rating-draft on MAIN is batch160-kyr6b-alavert.ts. Do not edit batch70–143. Next file is batch161.
 
 Not a hunt unless Brandon says go
 - Children's Zyrtec Dye-Free Chewable 2.5 mg 24-count is written. Caution is not locked. Do not copy the grape panel onto it.
@@ -136,7 +136,7 @@ FOUNDER CALLS — MAJORITY RULE
 - Packet = METHODOLOGY.md on MAIN + a handful of sources. FDA is one source, not a veto. Include integrative sources when the question is harm-in-this-form.
 - Majority wins. 1 scare paper out of 10 ≠ Avoid. 1 “it’s fine” out of 10 ≠ Clean. Split → bring the split to Brandon. Do not invent a grade.
 - Methodology table updates on MAIN BEFORE KYR3 gets the write paste.
-- Vague vs named twins need tap + honest-note text. Honest always.
+- Vague vs named twins need one plain ingredient-tab why. Honest note stays off unless that form would look like a contradiction.
 
 OI / INACTIVE HUNT ACCORDION LOCK (2026-09-19 founder — one lock; do not wipe LIVE NOW)
 - Same accordion expand as the UPC hunt, but ONLY for existing MAIN Search rows that already have no inactive / OI list.
@@ -242,7 +242,9 @@ POST-SCAN (locked template)
 - Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
 - Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
-- Honest note: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon. Product-level summary only — how THIS product got Clean / Usable / Not clean. One driver only if that driver is the whole grade. Never paste the full inactive list into Honest. Founder-lock dumps stay in draft files; display fill does not restage. Absorbine Jr. PRO Cream stays Avoid (Not clean) — methylparaben. Not methodology jargon.
+- Honest note card, when a note is kept: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon.
+- Honest note: off by default. The grade bar and the ingredient list already say the grade. Do not write a note that only restates the grade and the one driver.
+- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive. Say why this form did not get the worse grade, in plain language. Example: sunflower oil is Not clean in a gummy. In this capsule it is not that rule, so it did not pull the grade down.
 - Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared. Ingredient panel ≠ label dump. Label / DailyMed not reviewed on that ingredient → “Pending DailyMed review”. Reviewed + Clean → one-line why it stayed Clean. Reviewed + Usable / Not clean → one-line why (fact, not “unsafe”).
 - Cleaner carousel on Usable + Not clean only (internal caution + avoid). Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
 - No Overview tab. No Photos tab.
@@ -614,8 +616,8 @@ Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock
 - Cream / topical vegetable oil uses the same non-gummy rule as capsule/softgel/liquid-drop fill. Tap: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
 - Coconut oil alone in gummies/chews is NOT seed-oil High (already practice; now in Methodology §5 Cleared).
 - Canola / soy / sunflower lecithin stays Cleared (same lecithin lock; canola named explicitly).
-- On every capsule/softgel/liquid-drop row that lists those oils as a fill, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this capsule/softgel/liquid-drop fill they are not that High rule.”
-- On every cream / topical row that lists vegetable oil / seed oil as a base, say this in BOTH honestNote AND the ingredient tap/source text: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
+- On every capsule/softgel/liquid-drop row that lists those oils as a fill, keep an honest note only because this form would look like a contradiction. Say why this form did not get the worse grade, in plain language. Example: sunflower oil is Not clean in a gummy. In this capsule it is not that rule, so it did not pull the grade down.
+- On every cream / topical row that lists vegetable oil / seed oil as a base, same contradiction note. Example: sunflower oil is Not clean in a gummy. In this cream it is not that rule, so it did not pull the grade down.
 
 Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §5 locks):
 - Pea protein isolate = Cleared-class food protein.
@@ -626,12 +628,10 @@ Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §
 - Organic rice bran extract = Cleared (Methodology §5, locked with hull/concentrate family). Unspecified “rice extract” = Limited opacity (now its own §5 row).
 - New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty. Audit list 2 still pending founder lock; no default Caution for missing-row.
 
-INGREDIENT TAP COPY (locked Sept 14, 2026)
-Honest always. Every flagged or context-scoped inactive needs a plain-language why in the collapsed ingredient panel — not jargon, not “unsafe.”
-- Vague label (unspecified rice extract, unnamed flavor class, undisclosed caramel class, etc.): say the label did not name the form/class, so we mark Caution until it does. Named locked forms stay whatever §5 says.
-- Vague vs named twins: when two label strings look related but grade differently (named hull vs “rice extract”; paprika extract vs “color added”; citrus extract vs lemon oil; seed oil in gummy vs capsule/drop), the vague twin’s tap must explain the named twin. Honest always.
-- Form-scoped rules (seed oils in gummies vs capsule/drop fill): say both sides in that ingredient’s tap text so users don’t think we grade sunflower two different ways for no reason.
-Honest note = product-level summary only. Do not dump every ingredient essay there unless one driver is the whole story. Ingredient taps: not reviewed → “Pending DailyMed review”; reviewed + Clean → one-line why Clean; reviewed + Usable / Not clean → one-line why (fact, not “unsafe”). Never invert those two fields (Absorbine Jr. PRO Cream was the example — display fill only; verdict stays Avoid).
+INGREDIENT TAP COPY (locked Oct 14, 2026)
+- Ingredient tab: one plain why for that ingredient. Say what it is and why it is flagged. A fact a shopper can read. Not jargon. Not "unsafe." Not "High-list extra." Not "agencies disagree, so we say Not clean anyway." Aspartame example: Aspartame is a sweetener. In 2023, the World Health Organization's cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.
+- Honest note: off by default. The grade bar and the ingredient list already say the grade. Do not write a note that only restates the grade and the one driver.
+- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive. Say why this form did not get the worse grade, in plain language. Example: sunflower oil is Not clean in a gummy. In this capsule it is not that rule, so it did not pull the grade down.
 
 Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Limited opacity + the vague-form tap sentence.
 
@@ -649,7 +649,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Named lemon oil as flavor = Limited (flavor row). Named is not a Clean auto-pass.
 - Unspecified “rice extract” = Limited opacity row (now in §5). Tap still uses the vague-form sentence.
 - “Natural flavor” stays Limited as already written.
-- Vague form tap copy stays: say the label didn’t name the form/class, so we mark Caution until it does. Vague twin must explain the named twin. Honest always. Honest note stays product-level.
+- Vague form stays Caution until the label names the form. The ingredient tab says that in one plain why. An honest note is kept only when that vague label sits next to a named form and would look like a contradiction.
 - Agar / agar-agar = Cleared (seaweed gel; gum/fiber family with pectin).
 - Dibehenin (vegetable) = Cleared (vegetable wax/lubricant; stearate / wax family).
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
@@ -1071,7 +1071,7 @@ Icons (LOCKED): Clean Picks ✨ · Essential Oils 🌱 · Home 🏠.
 Editorial voice (LOCKED)
 
 "Why this pick" callouts: ingredient quality + availability in 1-3 sentences. Brand-green left border.
-"Honest note" callouts: amber/cream banner. ALWAYS for caveats — pregnancy, age limits, allergy disclaimers, dilution honesty, dose/frequency-dependent harms.
+"Honest note" callouts: off by default. Keep one only when an ingredient would look like a contradiction (same ingredient, different form, different grade). The note says why this form did not get the worse grade, in plain language.
 Goal-framing, never prescriptive. "If your goal is X, consider Y" — never "stop taking" / "you should switch."
 Honest-disclosure principle: better to mark "no data available" than write a wrong claim. Refuse-when-uncertain is the credibility differentiator.
 Honest broker: rate conventional, natural, and homeopathic the same way. Cleanliness is judged on ingredients; we NEVER make or imply an efficacy claim. Where the basis is traditional use, say so and cite it (Carlston for homeopathy, Worwood for oils); where clinical evidence exists, cite it and label its strength honestly. Not the dismissive regulator, not the hype site.
