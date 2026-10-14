@@ -2640,6 +2640,37 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3-powder-60-servings-2': brandMark(
     'nutricost-mark.png',
   ),
+  // Vitamins night run 2026-10-14 5:30 AM PT batch 1.
+  // Official Nutricost wordmark already on disk.
+  // Not a text tile. Not a letter.
+  // L-citrulline malate named 79 servings. No barcode.
+  // Live 300 g fronts read 75 servings. Not 79.
+  // Blue raspberry, strawberry kiwi, and fruit punch exist in 300 g and 600 g.
+  // Do not glue one.
+  'nutricost-l-citrulline-malate-2-1-flavored-powder-79-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // Creatine monohydrate named 45 servings. Barcode 810139573982 is grape 300 g.
+  // The front reads 300 g and 60 servings. Not 45.
+  'nutricost-creatine-monohydrate-powder-grape-45-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // L-glutamine named 78 servings. Barcode 810014678979 is blackberry lemonade 500 g.
+  // The front reads 500 g and 100 servings. Not 78.
+  'nutricost-l-glutamine-powder-blackberry-lemonade-78-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // L-glutamine named 83 servings. Barcode 810139570097 is green apple 500 g.
+  // The front reads 500 g and 100 servings. Not 83.
+  'nutricost-l-glutamine-powder-green-apple-83-servings': brandMark(
+    'nutricost-mark.png',
+  ),
+  // D-aspartic acid named green apple, 75 servings. No barcode.
+  // nutricost.com has no green apple tub. Live tubs are unflavored 300 g,
+  // blue raspberry 300 g, and unflavored 500 g. Do not glue one.
+  'nutricost-d-aspartic-acid-powder-green-apple-75-servings': brandMark(
+    'nutricost-mark.png',
+  ),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -14142,6 +14173,75 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-mct-oil-powder-91-servings': catalogShot(
     'nutricost-mct-oil-powder-91-servings.jpg',
   ),
+  // Vitamins night run 2026-10-14 5:30 AM PT batch 1.
+  // Pre-X, blue raspberry, 30 servings. Barcode 810014670928.
+  // Front reads 30 servings. Not the 60.
+  'nutricost-pre-x-workout-complex-powder-30-servings-4': catalogShot(
+    'nutricost-pre-x-workout-complex-powder-30-servings-4.jpg',
+  ),
+  // Chlorophyll, 50 mg, 30 softgels. Barcode 810139572657.
+  // Front reads 30 softgels. Not the 60.
+  'nutricost-chlorophyll-30-softgels': catalogShot(
+    'nutricost-chlorophyll-30-softgels.jpg',
+  ),
+  // S.O.D., 300 mg, 120 capsules. Barcode 810139577232.
+  'nutricost-s-o-d-120-capsules': catalogShot(
+    'nutricost-s-o-d-120-capsules.jpg',
+  ),
+  // Pre-Workout, watermelon candy, 30 servings. Barcode 810139577454.
+  // Front reads 30 servings. Not blue raspberry.
+  'nutricost-pre-workout-complex-30-servings-6': catalogShot(
+    'nutricost-pre-workout-complex-30-servings-6.jpg',
+  ),
+  // Sage extract, 120 capsules. Barcode 810139576501.
+  // Front reads 120 capsules. Not the sleep-aid bottle.
+  'nutricost-sage-extract-120-capsules': catalogShot(
+    'nutricost-sage-extract-120-capsules.jpg',
+  ),
+  // Creatine + Energy, peach mango, 30 servings. Barcode 810139575573.
+  // Front reads 30 servings.
+  'nutricost-creatine-energy-powder-30-servings-3': catalogShot(
+    'nutricost-creatine-energy-powder-30-servings-3.jpg',
+  ),
+  // Turmeric gummies, 120 gummies. Barcode 810139573579.
+  // Front reads 120 gummies. Not the 240.
+  'nutricost-turmeric-gummies-120-gummies': catalogShot(
+    'nutricost-turmeric-gummies-120-gummies.jpg',
+  ),
+  // Huperzine A, 200 mcg, 240 capsules. Barcode 810014671390.
+  'nutricost-huperzine-a-capsules-240-capsules': catalogShot(
+    'nutricost-huperzine-a-capsules-240-capsules.jpg',
+  ),
+  // C8 MCT oil powder, vanilla, 1 lb, 41 servings. Barcode 810014670133.
+  // Front reads 41 servings. Not the unflavored tubs.
+  'nutricost-c8-mct-oil-powder-41-servings': catalogShot(
+    'nutricost-c8-mct-oil-powder-41-servings.jpg',
+  ),
+  // BCAA, grape, 30 servings. Barcode 857077008527. Not the 60, 90, or 120.
+  'nutricost-bcaa-powder-grape-30-servings': catalogShot(
+    'nutricost-bcaa-powder-grape-30-servings.jpg',
+  ),
+  // BCAA, grape, 60 servings. Barcode 857077008534. Not the 30.
+  'nutricost-bcaa-powder-grape-60-servings': catalogShot(
+    'nutricost-bcaa-powder-grape-60-servings.jpg',
+  ),
+  // BCAA, grape, 90 servings. Barcode 857077008541. Not the 30.
+  'nutricost-bcaa-powder-grape-90-servings': catalogShot(
+    'nutricost-bcaa-powder-grape-90-servings.jpg',
+  ),
+  // BCAA, grape, 120 servings. Barcode 810014671109. Not the 30.
+  'nutricost-bcaa-powder-grape-120-servings': catalogShot(
+    'nutricost-bcaa-powder-grape-120-servings.jpg',
+  ),
+  // BCAA, pomegranate guava, 30 servings. Barcode 810139574538.
+  'nutricost-bcaa-powder-pomegranate-guava-30-servings': catalogShot(
+    'nutricost-bcaa-powder-pomegranate-guava-30-servings.jpg',
+  ),
+  // Creatine + Energy, grape, 30 servings. Barcode 810139575580.
+  // Front reads 30 servings. Not peach mango.
+  'nutricost-creatine-energy-powder-grape-30-servings': catalogShot(
+    'nutricost-creatine-energy-powder-grape-30-servings.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -24629,7 +24729,11 @@ assertExactCarton(
   'Nutricost',
   'nutricost-dong-quai-capsules-120-capsules.jpg',
 );
-assertLetterOnly('nutricost-sage-extract-120-capsules', 'Nutricost');
+assertExactCarton(
+  'nutricost-sage-extract-120-capsules',
+  'Nutricost',
+  'nutricost-sage-extract-120-capsules.jpg',
+);
 assertExactCarton(
   'healtha2z-b96-apap-325',
   'HealthA2Z',
@@ -30638,7 +30742,10 @@ assertExactCarton(
     formulaId: 'nutricost-pre-x-workout-complex-powder-60-servings',
     brand: 'Nutricost',
   });
-  if (!prex30?.url.startsWith('data:image/svg') || prex30.verifiedSku) {
+  if (
+    !prex30?.verifiedSku
+    || !prex30.url.endsWith('/nutricost-pre-x-workout-complex-powder-30-servings-4.jpg')
+  ) {
     throw new Error('Pre-X 30 must not inherit the blue raspberry 60');
   }
   const caMg30 = previewOverlayImage({
@@ -30813,7 +30920,69 @@ assertBrandMark(
     formulaId: 'nutricost-turmeric-gummies-240-gummies',
     brand: 'Nutricost',
   });
-  if (!turmeric120?.url.startsWith('data:image/svg') || turmeric120.verifiedSku) {
+  if (
+    !turmeric120?.verifiedSku
+    || !turmeric120.url.endsWith('/nutricost-turmeric-gummies-120-gummies.jpg')
+  ) {
     throw new Error('Turmeric gummies 120 must not inherit the 240');
+  }
+}
+
+assertBrandMark(
+  'nutricost-l-citrulline-malate-2-1-flavored-powder-79-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-creatine-monohydrate-powder-grape-45-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-l-glutamine-powder-blackberry-lemonade-78-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-l-glutamine-powder-green-apple-83-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+assertBrandMark(
+  'nutricost-d-aspartic-acid-powder-green-apple-75-servings',
+  'Nutricost',
+  'nutricost-mark.png',
+);
+{
+  const batch1Cartons: [string, string][] = [
+    ['nutricost-pre-x-workout-complex-powder-30-servings-4', 'nutricost-pre-x-workout-complex-powder-30-servings-4.jpg'],
+    ['nutricost-chlorophyll-30-softgels', 'nutricost-chlorophyll-30-softgels.jpg'],
+    ['nutricost-s-o-d-120-capsules', 'nutricost-s-o-d-120-capsules.jpg'],
+    ['nutricost-pre-workout-complex-30-servings-6', 'nutricost-pre-workout-complex-30-servings-6.jpg'],
+    ['nutricost-sage-extract-120-capsules', 'nutricost-sage-extract-120-capsules.jpg'],
+    ['nutricost-creatine-energy-powder-30-servings-3', 'nutricost-creatine-energy-powder-30-servings-3.jpg'],
+    ['nutricost-turmeric-gummies-120-gummies', 'nutricost-turmeric-gummies-120-gummies.jpg'],
+    ['nutricost-huperzine-a-capsules-240-capsules', 'nutricost-huperzine-a-capsules-240-capsules.jpg'],
+    ['nutricost-c8-mct-oil-powder-41-servings', 'nutricost-c8-mct-oil-powder-41-servings.jpg'],
+    ['nutricost-bcaa-powder-grape-30-servings', 'nutricost-bcaa-powder-grape-30-servings.jpg'],
+    ['nutricost-bcaa-powder-grape-60-servings', 'nutricost-bcaa-powder-grape-60-servings.jpg'],
+    ['nutricost-bcaa-powder-grape-90-servings', 'nutricost-bcaa-powder-grape-90-servings.jpg'],
+    ['nutricost-bcaa-powder-grape-120-servings', 'nutricost-bcaa-powder-grape-120-servings.jpg'],
+    ['nutricost-bcaa-powder-pomegranate-guava-30-servings', 'nutricost-bcaa-powder-pomegranate-guava-30-servings.jpg'],
+    ['nutricost-creatine-energy-powder-grape-30-servings', 'nutricost-creatine-energy-powder-grape-30-servings.jpg'],
+  ];
+  for (const [id, file] of batch1Cartons) {
+    assertExactCarton(id, 'Nutricost', file);
+  }
+  const grape60 = previewOverlayImage({
+    id: 'nutricost-bcaa-powder-grape-60-servings',
+    formulaId: 'nutricost-bcaa-powder-grape-30-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !grape60?.verifiedSku
+    || !grape60.url.endsWith('/nutricost-bcaa-powder-grape-60-servings.jpg')
+  ) {
+    throw new Error('BCAA grape 60 must not inherit the 30');
   }
 }
