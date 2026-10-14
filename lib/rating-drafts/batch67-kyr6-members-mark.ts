@@ -38,8 +38,10 @@
 // Vegetable oil (coconut, canola) in a gummy = High → Avoid
 // (canola is the seed-oil High; coconut alone would not be
 // High). Named fruit-or-vegetable juice as color = Cleared.
-// Orange juice concentrate as its own gummy-base line =
-// Limited (not the Cleared named-color row). Natural flavor
+// Orange juice concentrate, when it is the fruit, is Cleared
+// named fruit (Oct 14, 2026). The Sept 15 Limited gummy-base
+// lock is struck. It is not the Cleared named-color row.
+// Natural flavor
 // = Limited. Maltodextrin Limited. Gelatin / glycerin /
 // purified water / pectin / carnauba wax / citric acid /
 // glucose syrup / sugar = Cleared. Limited-only never Avoid.
@@ -112,7 +114,7 @@ const METH = {
   maltodextrin:
     'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
   juiceBase:
-    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row)',
+    'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   safflowerFill: `Methodology §5 Cleared (safflower oil as softgel fill — NOT gummy High; locked Sept 16, 2026). ${OIL_FILL_TAP}`,
   gelatin:
     'Methodology §5 Cleared (lactose, gelatin, carnauba wax, beeswax, purified water)',
@@ -242,7 +244,7 @@ export const BATCH67_KYR6_MEMBERS_MARK: RatingRecord[] = [
       flag('Natural Flavor', 'limited', labelCite(CITE.gummy, METH.flavors)),
       flag(
         'Orange Juice Concentrate',
-        'limited',
+        'cleared',
         labelCite(CITE.gummy, METH.juiceBase),
       ),
       flag('Glucose Syrup', 'cleared', labelCite(CITE.gummy, METH.sugar)),

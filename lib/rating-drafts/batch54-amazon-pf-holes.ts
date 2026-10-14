@@ -173,7 +173,7 @@ const RICE_HULL_TAP =
   'Rice hull sits on the locked Cleared rice-hull family (organic rice hull extract / rice concentrate / ground rice hulls). Distinct from Caution rice flour.';
 
 const JUICE_COLOR_TAP =
-  'Named fruit-or-vegetable juice concentrate as COLOR is Cleared. Distinct from Limited fruit puree / juice concentrate as a gummy base.';
+  'Named fruit-or-vegetable juice concentrate as COLOR is Cleared. Distinct from Cleared fruit puree and from juice concentrate when it is the fruit. The Sept 15 Limited gummy-base lock is struck.';
 
 const METH = {
   dyes:

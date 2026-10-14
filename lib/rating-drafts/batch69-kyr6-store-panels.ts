@@ -160,7 +160,7 @@ const METH = {
   flavors:
     'Methodology §5 Limited-risk (natural flavors — undisclosed mixtures; opacity, not a known hazard)',
   fruitJuiceBase:
-    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row; locked Sept 15, 2026)',
+    'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   paprika:
     'Methodology §5 Cleared (paprika extract / capsanthin as color — named spice color; locked Sept 14, 2026)',
   sugar: 'Methodology §5 Cleared (cane sugar / glucose syrup / tapioca syrup)',
@@ -348,7 +348,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Gelatin', 'cleared', labelCite(CITE.tcC, METH.gelatin)),
       flag(
         'Fruit juice from concentrate (apple, pear, pineapple, peach, orange, lemon, raspberry, blackcurrant, strawberry, blackberry, blueberry, cherry)',
-        'limited',
+        'cleared',
         labelCite(CITE.tcC, METH.fruitJuiceBase),
       ),
       flag('Citric acid', 'cleared', labelCite(CITE.tcC, METH.citric)),
@@ -636,8 +636,11 @@ if (tcC.barcode) {
 if (tcC.inactiveIngredients.some((i) => /palm/i.test(i.name))) {
   throw new Error('TopCare Vitamin C founder panel has no palm — do not invent it');
 }
-if (!tcC.inactiveIngredients.some((i) => /fruit juice/i.test(i.name) && i.riskLevel === 'limited')) {
-  throw new Error('TopCare Vitamin C must Limited-flag fruit juice concentrate as gummy base');
+if (!tcC.inactiveIngredients.some((i) => /fruit juice/i.test(i.name) && i.riskLevel === 'cleared')) {
+  throw new Error('TopCare Vitamin C fruit juice from concentrate is the fruit and must be Cleared');
+}
+if (!tcC.inactiveIngredients.some((i) => /natural flavors/i.test(i.name) && i.riskLevel === 'limited')) {
+  throw new Error('TopCare Vitamin C stays Caution on natural flavors');
 }
 if (!tcC.inactiveIngredients.some((i) => /paprika/i.test(i.name) && i.riskLevel === 'cleared')) {
   throw new Error('TopCare Vitamin C paprika extract as color must be Cleared');

@@ -29,7 +29,9 @@
 // (RiskLevel has no caution key). Named plant colors (black
 // carrot / turmeric-as-color / maqui) = Cleared. Unspecified
 // Natural Colors is NOT this write (named strings inside
-// parentheses). Lemon juice concentrate as gummy base = Limited.
+// parentheses). Lemon juice concentrate, when it is the fruit, is
+// Cleared named fruit (Oct 14, 2026). The Sept 15 Limited
+// gummy-base lock is struck.
 // Display keys stay clean / caution / avoid.
 //
 // TALLY (unverified drafts in THIS file): 4 rows — Clean 0 /
@@ -84,7 +86,7 @@ const METH = {
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity). Product display key is caution when this is the worst inactive (Limited-only never Avoid).',
   juiceBase:
-    'Methodology §5 Limited-risk (fruit puree / juice concentrate as gummy base — not the Cleared named juice-as-color row)',
+    'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   organicFlavor:
     'Methodology §5 Cleared (organic flavors / organic colors — whole-food-derived; not Limited natural flavors)',
   annatto:
@@ -213,7 +215,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       ),
       flag(
         'Organic lemon juice concentrate',
-        'limited',
+        'cleared',
         labelCite(CITE.d3, METH.juiceBase),
       ),
       flag('Organic annatto (color)', 'cleared', labelCite(CITE.d3, METH.annatto)),
