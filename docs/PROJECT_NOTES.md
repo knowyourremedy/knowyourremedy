@@ -250,7 +250,7 @@ Four tabs: Home · Scan · Search · Cabinet. Marketing site header/old QuickNav
 Draft Clean/Usable/Not clean pills at the top are PREVIEW ONLY (flip sample SKUs). Not in the real app.
 
 POST-SCAN (locked template)
-- Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #d97706, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
+- Full-width grade bar, word + subline centered, star right. Colors: Clean #27ae60, Usable #c4a035 with black type, Not clean #c0392b. Internal key for Not clean stays avoid. No 0–100. No page wash.
 - Small header tile + name/brand. Image coming + ＋ toast if no exact-SKU photo.
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
 - Honest note card, when a note is kept: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon.
@@ -1071,7 +1071,7 @@ Rx blue: #2563eb · Blue B (section labels): #4a6781
 Rating status — INTERNAL keys UNCHANGED: 'clean' | 'caution' | 'avoid'. Do not rename the Verdict type. Do not rewrite draft files to a new key. Files keep verdict: 'caution'.
 DISPLAY LOCK (Sept 12–13, 2026 — supersedes the old "badge still says Caution" confirm-every-session line; this is NOT a Good/Caution/Avoid rename and NOT a grade change):
 - verdict 'clean' → badge Clean (green #27ae60)
-- verdict 'caution' → badge Usable (amber #d97706) + subline "Fine in moderation"
+- verdict 'caution' → badge Usable (#c4a035, black type) + subline "Fine in moderation"
 - verdict 'avoid' → badge Not clean (red / deep tint #c0392b). Internal key stays avoid.
 Amber lives on the badge, not a full-card siren. Flagged ingredient names stay visible. See §6.
 Oils: usage classification colors TBD (old External Only / Dilute First / Internal Only superseded — see §9; new three-way classification is Topical only / Internal confirmed / Unknown-unconfirmed)
@@ -1169,7 +1169,7 @@ White background, generous whitespace, hairline dividers. ONE monochrome line-ic
 VERDICT PLACEMENT (locked Aug 8 — supersedes July 12 version): the verdict badge sits on its OWN row at the very TOP of the screen, above the product image/name/brand block, with the saved star (Medicine Cabinet toggle — see §2) on the same row (right-aligned). No score. This was an explicit A/B decision: putting the verdict below the title (the more Yuka-literal placement) tested as "clean but slightly hidden" — it competed with the product name for attention and softened the instant gut-read the scan-then-verify trust loop depends on. Verdict-first wins.
 DISPLAY LOCK (locked Sept 12–13, 2026 — internal verdict unchanged). Badge map only; do not rename stored keys; do not rewrite drafts:
 - verdict 'clean' → badge Clean (green #27ae60). Untinted card.
-- verdict 'caution' → badge Usable (amber #d97706) + subline "Fine in moderation". Amber on the badge, not a full-card siren.
+- verdict 'caution' → badge Usable (#c4a035, black type) + subline "Fine in moderation". Color on the badge, not a full-card siren.
 - verdict 'avoid' → badge Not clean (red / deep tint #c0392b). Internal key stays avoid.
 Sept 11 "light tinted Caution/Avoid banner" is SUPERSEDED for Usable: no amber page-wash. Not clean may keep a deep red tint on the badge/verdict row. Clean stays a green badge, no wash. Not a methodology grade change.
 Below the verdict row: catalog product image + product name (Playfair serif — the one KYR signature flourish, everything else is clean sans) + brand + active ingredient/strength.
@@ -1179,7 +1179,7 @@ CLEARED (locked Sept 11, 2026): stays collapsed by default. Do not expand the cl
 Tabs up top (below the header block, above Flagged/Cleared): Overview · Ingredients · Photos.
 Color discipline (LOCKED) — color has exactly TWO jobs; everything else is monochrome:
 
-RATING color (Clean #27ae60 / Usable amber #d97706 / Not clean #c0392b) = the badge WORD + the per-row status dots + Not clean's deep tint. Always means "how clean it is." Usable amber stays on the badge.
+RATING color (Clean #27ae60 / Usable #c4a035, black type / Not clean #c0392b) = the badge WORD + the per-row status dots + Not clean's deep tint. Always means "how clean it is." Usable stays on the badge.
 BRAND green (#2d4a3e) = tappable/actionable things ONLY (scan button, "See all", active nav, links, the saved star). Always means "you can act here." Product photos carry the visual warmth — no full-card siren chrome. Rare exception allowed: a colored row-icon for an active-safety cap (e.g., colloidal silver), if it genuinely needs to stand out — start conservative.
 Saved star / Medicine Cabinet
 

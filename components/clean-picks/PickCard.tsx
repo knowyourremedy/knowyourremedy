@@ -1,7 +1,7 @@
 'use client';
 
 import { CLASS_COLORS, TOP_PICK_LABELS } from '@/lib/clean-picks/classColors';
-import { VERDICT_COLORS, VERDICT_LABELS, VERDICT_SUBLINES } from '@/lib/clean-picks/verdictLabels';
+import { VERDICT_COLORS, VERDICT_LABELS, VERDICT_SUBLINES, VERDICT_TYPE_COLORS } from '@/lib/clean-picks/verdictLabels';
 import RetailerChips from './RetailerChips';
 import type { Pick } from '@/lib/clean-picks/painFeverPicks';
 
@@ -60,7 +60,7 @@ export default function PickCard({ pick, showTopBadge = false }: Props) {
                   padding: '4px 10px',
                   borderRadius: '6px',
                   background: VERDICT_COLORS.caution,
-                  color: '#fff',
+                  color: VERDICT_TYPE_COLORS.caution,
                   whiteSpace: 'nowrap',
                 }}>
                   {VERDICT_LABELS.caution}

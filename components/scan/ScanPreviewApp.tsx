@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import {
   VERDICT_COLORS,
   VERDICT_LABELS,
+  VERDICT_TYPE_COLORS,
 } from '@/lib/clean-picks/verdictLabels';
 import {
   getPreviewCabinetServerSnapshot,
@@ -192,7 +193,7 @@ export default function ScanPreviewApp({ initialId }: Props) {
                   style={{
                     flex: 1,
                     background: active ? color : '#fff',
-                    color: active ? '#fff' : color,
+                    color: active ? VERDICT_TYPE_COLORS[item.verdict] : color,
                     border: `1px solid ${color}`,
                     borderRadius: 999,
                     padding: '0.4rem 0.3rem',

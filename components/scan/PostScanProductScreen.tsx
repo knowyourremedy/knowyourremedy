@@ -5,6 +5,7 @@ import {
   VERDICT_COLORS,
   VERDICT_LABELS,
   VERDICT_SUBLINES,
+  VERDICT_TYPE_COLORS,
 } from '@/lib/clean-picks/verdictLabels';
 import type { ActiveIngredient, ActiveSafetyFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
@@ -816,6 +817,7 @@ export default function PostScanProductScreen({
   );
   const label = VERDICT_LABELS[record.verdict];
   const color = VERDICT_COLORS[record.verdict];
+  const typeColor = VERDICT_TYPE_COLORS[record.verdict];
   const subline = VERDICT_SUBLINES[record.verdict];
 
   useEffect(() => {
@@ -874,7 +876,7 @@ export default function PostScanProductScreen({
               cursor: 'pointer',
               padding: 8,
               margin: -8,
-              color: '#fff',
+              color: typeColor,
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
@@ -884,7 +886,7 @@ export default function PostScanProductScreen({
             }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M15 6l-6 6 6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M15 6l-6 6 6 6" stroke={typeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         ) : (
@@ -894,7 +896,7 @@ export default function PostScanProductScreen({
           <div style={{
             fontSize: '1.7rem',
             fontWeight: 800,
-            color: '#fff',
+            color: typeColor,
             letterSpacing: '-0.03em',
             lineHeight: 1,
           }}>
@@ -904,7 +906,7 @@ export default function PostScanProductScreen({
             <div style={{
               fontSize: '0.74rem',
               fontWeight: 500,
-              color: 'rgba(255,255,255,0.92)',
+              color: typeColor,
               marginTop: 4,
             }}>
               {subline}

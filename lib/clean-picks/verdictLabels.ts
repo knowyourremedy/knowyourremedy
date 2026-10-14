@@ -19,6 +19,13 @@ export const VERDICT_SUBLINES: Record<Verdict, string | null> = {
 
 export const VERDICT_COLORS: Record<Verdict, string> = {
   clean: '#27ae60',
-  caution: '#d97706',
+  caution: '#c4a035',
   avoid: '#c0392b',
+};
+
+// Type on a filled grade. Usable is black. Clean and Not clean stay white.
+export const VERDICT_TYPE_COLORS: Record<Verdict, string> = {
+  clean: '#ffffff',
+  caution: '#000000',
+  avoid: '#ffffff',
 };
