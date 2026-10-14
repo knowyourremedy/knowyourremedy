@@ -158,3 +158,4 @@ export { BATCH158_KYR6B_CHEWABLES } from './batch158-kyr6b-chewables';
 export { BATCH159_KYR6B_ALAVERT } from './batch159-kyr6b-alavert';
 export { BATCH160_KYR6B_ALAVERT } from './batch160-kyr6b-alavert';
 export { BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS } from './batch161-kyr6c-pepcid-prilosec-tums';
+export { BATCH162_KYR6C_HELD_TOKENS } from './batch162-kyr6c-held-tokens';

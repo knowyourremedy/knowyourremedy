@@ -473,6 +473,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is a salt used as a base or electrolyte.', level);
   }
 
+  if (/sodium polyphosphate/.test(n)) {
+    return close('Sodium polyphosphate has its own line. It is not a phosphate salt used as a mineral filler, and it is not phosphoric acid.', level);
+  }
+
   if (/dicalcium phosphate|tricalcium phosphate|calcium phosphate|sodium phosphate/.test(n) && !/3x|6x/.test(n)) {
     return close('This is a phosphate salt used as a mineral filler. It is not phosphoric acid.', level);
   }
@@ -670,6 +674,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/glyceryl stearate|glyceryl monostearate|glycerol monostearate/.test(n)) {
     return close('Glyceryl stearate is a wax-like emulsifier used in creams and coatings.', level);
+  }
+
+  if (/acetyl tributyl citrate/.test(n)) {
+    return close('Acetyl tributyl citrate is a coating plasticizer. It is not triethyl citrate.', level);
   }
 
   if (/triethyl citrate/.test(n)) {
@@ -948,6 +956,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/turmeric/.test(n)) {
     return close('This is turmeric used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/color added/.test(n) && /vegetable juice/.test(n) && /fruit juice/.test(n)) {
+    return close('This box names vegetable juice and fruit juice as the color. It is not bare color added, and it is not the titanium dioxide color.', level);
   }
 
   if (/juice/.test(n) && /color|concentrate|powder|carrot|vegetable|fruit/.test(n)) {
