@@ -78,12 +78,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const CREAM_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. In this cream / stick / spray fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -268,8 +262,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.foot, 'Water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze Foot Cream = Caution. Tetrasodium EDTA is the locked exact Caution INCI (distinct from Cleared disodium EDTA trace — that was the PR #98 refuse string). Ilex extract / IPBC / hydroxyacetophenone / phenoxyethanol standalone Caution. Polysorbate 60 is Moderate. Caprylic/capric triglyceride is unlabeled-MCT Limited. Caprylyl glycol / sodium benzoate Limited. Grape seed oil is the named cream-vehicle Cleared oil (not gummy High). ${CREAM_OIL_TAP} No High. Own formulaId — do not clone biofreeze-pain-relief-cream (that SPL has alcohol / IPA / PEG-4 laurate / calcium gluconate / edetate sodium and no Tetrasodium EDTA). 3 oz (NDC 59316-001-10) + 4 oz (NDC 59316-001-20) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -334,8 +327,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.bengayPatch, 'water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Bengay Ultra Strength Pain Relieving Patch 5% = Avoid. Drivers are methylparaben + propylparaben (High in every form, including patches) + titanium dioxide (High; no topical exception). calcined kaolin is the locked exact Caution INCI (distinct from Cleared kaolin — that was the PR #98 refuse string; do not Clear this patch on plain kaolin). Acrylate copolymer / polyacrylic acid / sodium polyacrylate / sodium polyacrylate starch / sorbitan oleate standalone Caution. Polysorbate 80 Moderate. Sorbitol Limited. Silica is the 0-pt SiO2 Caution cap. 1-ct (NDC 69968-0487-1) + 4-ct (NDC 69968-0487-4) share this formulaId — one Search row. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -373,8 +365,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       flag('thymol', 'cleared', dailymed(SET.miOrig, METH.thymol)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Mineral Ice Original Therapeutic Menthol Gel 2% = Avoid. Driver is FD&C blue no. 1 (synthetic dye High). ammonium hydroxide is the locked exact Caution token (exact words; distinct from Strong ammonia solution — that was the PR #98 refuse string; do not alias). Thymol standalone Caution. Isopropyl alcohol Limited. Carbomer / cupric sulfate / magnesium sulfate / sodium hydroxide / water Cleared. 8 oz (NDC 0316-0226-08) + 16 oz (NDC 0316-0226-16) share this formulaId — one Search row. Own formulaId — do not clone mineral-ice-extreme-gel (10% menthol; different OI). Ages 2+ (under 2: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

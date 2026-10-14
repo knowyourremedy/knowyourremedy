@@ -131,7 +131,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.flags,
     verdict: 'caution',
-    honestNote: d.note,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [d.source],

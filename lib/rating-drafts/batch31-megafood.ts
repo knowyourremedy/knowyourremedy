@@ -142,14 +142,8 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / bisglycinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
 const PRENATAL_LABEL =
   'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
-
-const IRON_OVERDOSE_CARTON =
-  'On-carton iron overdose warning (when iron is labeled): accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
 
 const FERMENT_NOTE =
   'Contains ferment / yeast media and/or rice protein — food-state media, not an inactive-grade driver (same treatment as founder-skimmed megafood-one-daily).';
@@ -259,9 +253,6 @@ function cautionSio2(base: DraftBase & { extras?: string[]; maltodextrin?: boole
       : []),
     ...(base.extraInactives ?? []),
   ];
-  const math = base.maltodextrin
-    ? 'Demerit math: maltodextrin Limited 1 pt + SiO2 0-pt Caution cap → Caution (not Avoid).'
-    : 'Demerit math: SiO2 nanoparticle Caution cap (0 demerit points). MCC / stearic acid / hypromellose / ferment media are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap.';
   return {
     id: base.id,
     productName: base.productName,
@@ -277,15 +268,7 @@ function cautionSio2(base: DraftBase & { extras?: string[]; maltodextrin?: boole
     activeIngredients: base.actives,
     inactiveIngredients: inactives,
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-STYLE DRAFT: ${base.productName} = Caution. Driver is silicon dioxide (${math}) ${FERMENT_NOTE} No DailyMed drug SPL (dietary supplement). ${
-        base.prenatal ? PRENATAL_LABEL + ' ' : ''
-      }${base.ironCarton ? IRON_OVERDOSE_CARTON + ' ' : ''}${
-        base.zinc ? ZINC_PARKED + ' ' : ''
-      }${base.extraNote ?? ''} Pack sizes share formulaId when the other-ingredients list holds. No dosing or medical advice in this draft.`.replace(
-        /\s+/g,
-        ' ',
-      ).trim(),
+
     retailers: [...(base.retailers ?? US_WIDE)],
     cleanAlternatives: base.alts,
     sourcesGeneral: [`${base.cite} — draft, not verified; no DailyMed drug SPL`],
@@ -308,46 +291,7 @@ function cautionCustom(base: DraftBase & { inactives: IngredientFlag[]; math: st
     activeIngredients: base.actives,
     inactiveIngredients: base.inactives,
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-STYLE DRAFT: ${base.productName} = Caution. ${base.math} ${
-        base.prenatal ? PRENATAL_LABEL + ' ' : ''
-      }${base.ironCarton ? IRON_OVERDOSE_CARTON + ' ' : ''}${
-        base.zinc ? ZINC_PARKED + ' ' : ''
-      }${base.extraNote ?? ''} No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId when the other-ingredients list holds. No dosing or medical advice in this draft.`.replace(
-        /\s+/g,
-        ' ',
-      ).trim(),
-    retailers: [...(base.retailers ?? US_WIDE)],
-    cleanAlternatives: base.alts,
-    sourcesGeneral: [`${base.cite} — draft, not verified; no DailyMed drug SPL`],
-  };
-}
 
-function avoidCustom(base: DraftBase & { inactives: IngredientFlag[]; math: string }): RatingRecord {
-  return {
-    id: base.id,
-    productName: base.productName,
-    brand: BRAND,
-    category: base.category,
-    ...(base.barcode ? { barcode: base.barcode } : {}),
-    formulaId: base.id,
-    audience: base.audience ?? ADULT,
-    minAge: base.minAge ?? (base.audience === KIDS ? 4 : 18),
-    form: base.form,
-    recordStatus: UNVERIFIED,
-    productType: base.productType,
-    activeIngredients: base.actives,
-    inactiveIngredients: base.inactives,
-    verdict: 'avoid',
-    honestNote:
-      `FOUNDER-STYLE DRAFT: ${base.productName} = Avoid. ${base.math} ${
-        base.prenatal ? PRENATAL_LABEL + ' ' : ''
-      }${base.ironCarton ? IRON_OVERDOSE_CARTON + ' ' : ''}${
-        base.zinc ? ZINC_PARKED + ' ' : ''
-      }${base.extraNote ?? ''} No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId when the other-ingredients list holds. No dosing or medical advice in this draft.`.replace(
-        /\s+/g,
-        ' ',
-      ).trim(),
     retailers: [...(base.retailers ?? US_WIDE)],
     cleanAlternatives: base.alts,
     sourcesGeneral: [`${base.cite} — draft, not verified; no DailyMed drug SPL`],
@@ -377,15 +321,7 @@ function avoidOil(
     activeIngredients: base.actives,
     inactiveIngredients: inactives,
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-STYLE DRAFT: ${base.productName} = Avoid. Driver is ${base.oilName} in a gummy / soft chew (seed/industrial-oil High). Demerit math: High-tier oil = Avoid; SiO2 if present is a 0-pt cap and does not change Avoid. Coconut oil alone is not this High rule — this carton lists ${base.oilName}, not coconut-only. ${
-        base.prenatal ? PRENATAL_LABEL + ' ' : ''
-      }${base.ironCarton ? IRON_OVERDOSE_CARTON + ' ' : ''}${
-        base.zinc ? ZINC_PARKED + ' ' : ''
-      }${base.extraNote ?? ''} ${NO_CLEAN_GUMMY} No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId when the other-ingredients list holds. No dosing or medical advice in this draft.`.replace(
-        /\s+/g,
-        ' ',
-      ).trim(),
+
     retailers: [...(base.retailers ?? US_WIDE)],
     cleanAlternatives: base.alts,
     sourcesGeneral: [`${base.cite} — draft, not verified; no DailyMed drug SPL`],
@@ -644,8 +580,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       flag('Rice hull concentrate', 'cleared', labelCite(CITE.mag300, METH.riceHull)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: MegaFood Magnesium 300 mg Capsules = Clean on the matched no-SiO2 US retailer stack (iHerb / Vitacost / Hannaford / Swanson): hypromellose, ascorbyl palmitate, rice hull concentrate. Demerit math: every listed inactive is §5 Cleared (HPMC; ascorbyl palmitate antioxidant lock; rice hull concentrate / rice concentrate plant-fiber flow agent — SiO2 nanoparticle cap does NOT apply). CONFIRMED no silicon dioxide / silica, titanium dioxide, dye, talc, or flavor on that stack. A Whole Foods snapshot that also lists silicon dioxide is a different unmatched formula — not this Clean row; confirm the carton. Do not invent Clean for the SiO2 twin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...US_WIDE],
     sourcesGeneral: [`${CITE.mag300} — draft, not verified; no DailyMed drug SPL`],
   },
@@ -2378,8 +2313,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.berberine, 'Stearic acid'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Berberine Phytosome = Clean. Pea protein isolate is §5 Cleared. Grape seed extract as inactive is now §5 Cleared (named plant-part food botanical; not grape seed oil). HPMC / MCC / stearic acid are Cleared. Demerit math: 0 pts. Target label PDF (pea protein / sunflower lecithin / grape seed / vegetable cellulose / organic rice flour / magnesium stearate) is a different unmatched formula — not this row. No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.',
+
     retailers: [...US_WIDE],
     sourcesGeneral: [`${CITE.berberine} — draft, not verified; no DailyMed drug SPL`],
   },
@@ -2452,8 +2386,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.lipoC, 'Hypromellose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Liposomal Vitamin C = Clean. Named paprika extract as color is now §5 Cleared (same posture as turmeric-as-color) — that was the leftover Caution driver. Coconut-only MCT and sunflower lecithin are capsule fill / Cleared, not the gummy seed-oil High rule. Beeswax and hypromellose are Cleared. Demerit math: 0 pts. No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.',
+
     retailers: [...US_WIDE],
     sourcesGeneral: [`${CITE.lipoC} — draft, not verified; no DailyMed drug SPL`],
   },

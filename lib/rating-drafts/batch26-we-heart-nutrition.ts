@@ -127,24 +127,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / bisglycinate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const PRENATAL_LABEL =
-  'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
-
-const POSTNATAL_LABEL =
-  'Carton is labeled for postpartum / nursing use. No dosing or medical advice in this draft.';
-
-const IRON_FREE_NOT_DEMERIT =
-  'Iron is intentionally omitted on this formula (iron-free by design). That omission is not a cleanliness demerit.';
-
-const IRON_OVERDOSE_CARTON =
-  'On-carton iron overdose warning: accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
-
-const NO_CLEAN_FISH_OIL =
-  'No independently Clean fish-oil row exists in this draft set — cleanAlternatives omitted (honest empty; do not point at out-of-batch fish oils).';
-
 const WOMENS_MULTI_ID = 'we-heart-wholesome-womens-multi';
 const WOMENS_MULTI_40_ID = 'we-heart-wholesome-womens-multi-40';
 const MENS_MULTI_ID = 'we-heart-wholesome-mens-multi';
@@ -209,11 +191,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       flag('Organic Rice Flour', 'cleared', labelCite(WOMENS_MULTI_CITE, METH.starches)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Women\'s Multi = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour. HPMC / water and organic rice flour are Cleared (§5). No Organic Rice Hull Extract, calcium stearate, gellan, silicon dioxide, titanium dioxide, or synthetic dye on that panel. Iron-free design is not a cleanliness demerit. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      IRON_FREE_NOT_DEMERIT +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${WOMENS_MULTI_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -247,11 +225,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       flag('Organic Rice Flour', 'cleared', labelCite(WOMENS_MULTI_40_CITE, METH.starches)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Women\'s Multi 40+ = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour. HPMC / water and organic rice flour are Cleared (§5). No Organic Rice Hull Extract, calcium stearate, gellan, silicon dioxide, titanium dioxide, or synthetic dye on that panel. Carton is labeled for women 40+. Iron-free design is not a cleanliness demerit. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      IRON_FREE_NOT_DEMERIT +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${WOMENS_MULTI_40_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -284,9 +258,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       flag('Organic Rice Flour', 'cleared', labelCite(MENS_MULTI_CITE, METH.starches)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Men\'s Multi = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour. HPMC / water and organic rice flour are Cleared (§5). No Organic Rice Hull Extract, calcium stearate, gellan, silicon dioxide, titanium dioxide, or synthetic dye on that panel. Lycopene / beta-sitosterol / trans-resveratrol are labeled actives listed neutrally — this draft grades inactives only. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${MENS_MULTI_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -316,9 +288,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Iron = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Organic Rice Flour, Vegan Capsule (hydroxypropyl methylcellulose, water). HPMC / water and organic rice flour are Cleared (§5). No Organic Rice Hull Extract, calcium stearate, gellan, silicon dioxide, or synthetic dye on that panel. This draft grades inactives only and does not invent an iron active-safety Avoid or Caution beyond the on-carton overdose keep-away note. Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      IRON_OVERDOSE_CARTON,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${IRON_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -354,9 +324,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       flag('Organic Rice Flour', 'cleared', labelCite(IMMUNITY_CITE, METH.starches)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Immunity = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour. HPMC / water and organic rice flour are Cleared (§5). No Organic Rice Hull Extract, calcium stearate, gellan, silicon dioxide, or synthetic dye on that panel. Labeled actives (PureWay-C vitamin C, D3, zinc bisglycinate, selenium, beta-glucan, quercetin phytosome, bovine colostrum) are listed neutrally; this draft grades inactives only and makes no efficacy claim. Bovine colostrum is a milk-derived active — milk / colostrum allergen disclosure is a note, not a grade. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${IMMUNITY_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -390,8 +358,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Magnesium Glycinate = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Calcium Stearate. HPMC / water are Cleared. Calcium stearate is Cleared-by-class with magnesium stearate / stearic acid (Methodology §5). No rice flour, Organic Rice Hull Extract, gellan, silicon dioxide, or synthetic dye on that panel. Active is magnesium (as magnesium glycinate) 75mg per capsule as labeled. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${MAGNESIUM_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -429,13 +396,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Prenatal = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Hull Extract. HPMC / water are Cleared. Organic rice hull extract is Cleared (plant-fiber flow agent; distinct from rice flour; distinct from silicon dioxide; SiO₂ nanoparticle Caution cap does NOT apply). No rice flour, calcium stearate, gellan, silicon dioxide, titanium dioxide, or synthetic dye on that panel. Iron is intentionally omitted on this formula — iron-free design is not a cleanliness demerit. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_FREE_NOT_DEMERIT +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${PRENATAL_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -473,13 +434,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Postnatal = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Hull Extract. HPMC / water are Cleared. Organic rice hull extract is Cleared (plant-fiber flow agent; distinct from rice flour; distinct from silicon dioxide; SiO₂ nanoparticle Caution cap does NOT apply). No rice flour, calcium stearate, gellan, silicon dioxide, titanium dioxide, or synthetic dye on that panel. Iron is intentionally omitted on this formula — iron-free design is not a cleanliness demerit. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      POSTNATAL_LABEL +
-      ' ' +
-      IRON_FREE_NOT_DEMERIT +
-      ' ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${POSTNATAL_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -521,8 +476,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       flag('Organic Rice Flour', 'cleared', labelCite(PROBIOTIC_CITE, METH.starches)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Probiotic = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Hull Extract, Organic Rice Flour. HPMC / water and organic rice flour are Cleared. Organic rice hull extract is Cleared (plant-fiber flow agent; distinct from rice flour; distinct from silicon dioxide; SiO₂ nanoparticle Caution cap does NOT apply). No gellan, calcium stearate, silicon dioxide, or synthetic dye on that panel. Bacillus coagulans SNZ 1969 and Mucosave FG (prickly pear / olive) are labeled actives listed neutrally; this draft grades inactives only and makes no efficacy claim. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft.',
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${PROBIOTIC_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -561,9 +515,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Balance = Clean on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour, Organic Rice Hull Extract. HPMC / water and organic rice flour are Cleared. Organic rice hull extract is Cleared (plant-fiber flow agent; distinct from rice flour; distinct from silicon dioxide; SiO₂ nanoparticle Caution cap does NOT apply). No gellan, calcium stearate, silicon dioxide, or synthetic dye on that panel. Thiamin, zinc, turmeric, saffron, and ginger are labeled actives listed neutrally; this draft grades inactives only and makes no efficacy claim. Pack sizes / refill pouch vs starter bottle share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      ZINC_PARKED,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${BALANCE_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
@@ -605,9 +557,7 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: We Heart Nutrition Wholesome Omega-3 = Caution on the official SupplementFacts_*_0926.png panel only (not marketing-page text). Official other-ingredients: Highly Refined and Concentrated Omega-3 Fish Oil (anchovy), Bovine Gelatin, Glycerin, Purified Water, Lemon Oil (lemon peel extract), Natural Mixed Tocopherols. Driver is Lemon Oil (lemon peel extract) as natural-flavor Limited (1 pt Caution). Bovine gelatin / glycerin / purified water are Cleared. Natural mixed tocopherols are Cleared-class antioxidants. Softgel fish-oil fill is NOT the gummy seed/industrial-oil High rule. Fish oil (anchovy) is the labeled active, not an inactive demerit. Pack sizes share formulaId when the other-ingredients list holds. Contains fish (anchovy). Contains bovine gelatin. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. ' +
-      NO_CLEAN_FISH_OIL,
+
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${OMEGA_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,

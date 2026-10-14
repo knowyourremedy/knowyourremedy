@@ -96,10 +96,6 @@ const TC_VIT_C = 'topcare-hp-vitamin-c-gummies';
 const WG_MULTI = 'walgreens-adults-multi-tablets';
 const UPUP_APAP_PM = 'upup-es-acetaminophen-pm-100';
 const UPUP_APAP_PM_FORMULA = 'upup-es-acetaminophen-pm';
-
-const DG_APAP_PM = 'dg-health-pain-relief-pm';
-const NM_D3 = 'nature-made-d3-softgels-clear';
-const KIRK_D3 = 'kirkland-d3-softgels-clear';
 const PE_MELATONIN = 'pure-encapsulations-melatonin-sr-3mg';
 const CALMS_FORTE = 'hylands-calms-forte';
 const EQUATE_ES = 'equate-es-pain-reliever';
@@ -114,17 +110,8 @@ const THRIVE_C = 'thrive-wellmade-real-food-vitamin-c';
 const OIL_FILL_TAP =
   'Seed/industrial oils are flagged in gummies. Safflower / sunflower / palm / vegetable oil / canola used as a gummy coating or fill is that High rule. In this softgel fill they are not.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
-
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const SEDATING =
-  'Diphenhydramine is sedating. Ages 12+. Do not use with other diphenhydramine products.';
 
 const CITE = {
   mmD3:
@@ -291,7 +278,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Purified Water USP', 'cleared', labelCite(CITE.mmD3, METH.water)),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Vitamin D3 50 mcg (2000 IU) softgels = Clean. Founder-logged Other Ingredients: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol (the labeled active — not a second inactive grade). Safflower as softgel fill is Cleared (NOT gummy High; Sept 16 lock). ${OIL_FILL_TAP} New row on main shares formulaId \`${D3_FORMULA}\` already used on open PR #229 batch67 — attach 50 mcg potency here; do not edit batch67 files; do not write a conflicting soybean+corn / BHT panel. Do not reuse \`${KIRK_D3}\` / \`${NM_D3}\` (soybean fill). Do not attach DSLD 272823 UPC 193968030216. No 12-digit safflower-panel UPC harvested — omitted. Confirm carton. No DailyMed drug SPL (dietary supplement). Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.mmD3} — ${UNVERIFIED_NOTE}`],
   }),
 
@@ -336,7 +323,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(CITE.mmMelatonin, METH.carnauba)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Timed-Release Melatonin 10 mg tablets = Caution (PEG + silica cap). Live Sam’s 300-ct + HelloPharmacist / DSLD 46282 OI. Grade only true inactives — melatonin and pyridoxine HCl are the labeled actives (B6 as inactive is a different Cleared token and is not this SF vitamin). PEG is Moderate. Silica / silicon dioxide is the 0-pt nanoparticle Caution cap. Dicalcium phosphate / MCC / HPMC / croscarmellose / stearic / magnesium stearate / carnauba are Cleared. No High. ${LIMITED_STACK} ${SIO2_TAP} Own formulaId — not Member’s Mark Max Sleep (DPH; stay skipped). UPC 078742094632 attached (12-digit of the Sam’s / DSLD barcode; 250-ct and 300-ct share this formula when the other-ingredients list holds). No DailyMed drug SPL. Adults; one tablet at bedtime. Draft, not verified.`,
+
     cleanAlternatives: MELATONIN_ALTS,
     sourcesGeneral: [`${CITE.mmMelatonin} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -370,7 +357,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Color (paprika extract)', 'cleared', labelCite(CITE.tcC, METH.paprika)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: TopCare high potency Vitamin C gummies = Caution (Limited fruit-juice concentrate as gummy base + Limited natural flavors). Founder-logged OI has no palm. ${LIMITED_STACK} Named paprika extract as color is Cleared (not unspecified Natural Colors). Glucose syrup / sugar / water / gelatin / citric / lactic are Cleared. Distinct from Instacart / topcarebrand 240 mg orange UPC 036800464049 (palm oil + carnauba) and from Fig / Instacart 750 mg assorted (sucralose + radish / turmeric ± palm) — do not attach those barcodes and do not invent palm on this panel. Do not alias gummy Palm Oil to Organic Palm Oil coating. Own formulaId. No 12-digit matching this fruit-juice panel — omitted. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     cleanAlternatives: VIT_C_ALTS,
     sourcesGeneral: [`${CITE.tcC} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -420,7 +407,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Polyvinyl alcohol', 'cleared', labelCite(CITE.wgMulti, METH.pva)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Walgreens Adults Multivitamin tablets UPC 311917199139 = Avoid (Blue #2 / Red #40 / Yellow #6 lakes + TiO2 + talc). HelloPharmacist DSLD 274220 + founder UPC / OFF 0311917199139. Grade only true inactives — SF vitamins/minerals (including sodium metavanadate / stannous chloride as the labeled vanadium / tin mineral forms) are not High/Caution inactive flags. DL-alpha tocopheryl acetate is the labeled vitamin E SF form — not inactive tocopheryl acetate Caution. PEG is Moderate (not needed to reach Avoid). Maltodextrin / polydextrose / unspecified starch are Limited. Silica is the 0-pt cap. PVA oral coating is Cleared. ${LIMITED_STACK} ${SIO2_TAP} ${ZINC_PARKED} OFF OCR on this UPC is noisy and also reads BHT / unlabeled MCT — not written as a second conflicting panel and not required to reach Avoid. Own formulaId — not the 50+ Walgreens carton (UPC 31191719912 family) and not Nice! / Assured. No DailyMed drug SPL. Adults; iron overdose carton applies. Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [
       `${CITE.wgMulti} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`,
@@ -460,7 +447,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', labelCite(CITE.upupPm, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: up&up Extra Strength Acetaminophen PM 100-ct caplets = Avoid (Blue #1 / Blue #2 lakes + TiO2 + talc). Founder UPC 359726863117. Founder-logged inactives (PROJECT_NOTES) include PVA + SiO2 + talc — own formulaId \`${UPUP_APAP_PM_FORMULA}\`. Do not reuse \`${DG_APAP_PM}\` (DailyMed setid f1a10eba is a different stack: carnauba / crospovidone / PS80 / stearic, no PVA / talc / SiO2). Do not reuse \`tylenol-pm-es\` and do not reopen batch68 \`upup-pm-lubricant-ointment\` (eye ointment, not this swallow PM). PEG is Moderate (not needed to reach Avoid). ${SIO2_TAP} Stay under 4 g/day acetaminophen. ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: APAP_PM_ALTS,
     sourcesGeneral: [`${CITE.upupPm} — ${UNVERIFIED_NOTE}`],
   }),

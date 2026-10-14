@@ -130,15 +130,6 @@ function congFlags(): IngredientFlag[] {
   ];
 }
 
-const DYED_NOTE =
-  'Avoid. Drivers are D&C red no. 33 and FD&C red no. 40. Monoammonium glycyrrhizinate is the ammonium glycyrrhizin salt, Caution. Poloxamer 407 is Caution. Flavors, sodium benzoate, and sucrose are Limited. Anhydrous citric acid, glycerin, purified water, sodium chloride, and sodium citrate are Cleared. The older uncounted dyed-liquid rows omitted monoammonium glycyrrhizinate, poloxamer 407, sodium chloride, sodium citrate, and anhydrous citric acid, so this line is a new formula. The adult 118 mL panel and the children\'s dyed panel print the same inactive line. Dye-free liquid is a different line. Not a 2-pack.';
-
-const ULTRA_NOTE =
-  'Avoid. Drivers are D&C red no. 27 aluminum lake and titanium dioxide. Carnauba wax is Caution. Polyethylene glycol and polysorbate 80 are Moderate. Croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, and microcrystalline cellulose are Cleared. The printed line matches the batch156 Ultratabs formula. Adult minimum age on this row is 12. The label also lists one tablet for ages 6 to under 12. This is the single 12-tablet carton, not a case and not packets of 2.';
-
-const CONG_NOTE =
-  'Avoid. Drivers are FD&C blue no. 1 and FD&C red no. 40. Sucralose is Moderate. Edetate disodium is EDTA Caution. Flavors, sodium benzoate, and sorbitol solution are Limited. Anhydrous citric acid, carboxymethylcellulose sodium, glycerin, sodium citrate, and purified water are Cleared. The ingredient names match the older uncounted congestion-liquid formula. That older row stored edetate disodium as Cleared; this row grades it Caution. Actives are diphenhydramine HCl 12.5 mg / 5 mL and phenylephrine HCl 5 mg / 5 mL. Ages 6+. Ages 4 to 5: do not use unless directed by a doctor. Under 4: do not use.';
-
 const ADULT_PANEL =
   'DailyMed setid 224ba2a3-1a93-29c8-e063-6394a90a9bef (Kenvue). Active: diphenhydramine HCl 12.5 mg in each 5 mL. Inactive ingredients: anhydrous citric acid, D&C red no. 33, FD&C red no. 40, flavors, glycerin, monoammonium glycyrrhizinate, poloxamer 407, purified water, sodium benzoate, sodium chloride, sodium citrate, sucrose. Package NDC 50580-573-04 is one carton with 118 mL in one bottle, marketing start December 2, 2024, no end date. Adults and children 12 years and over: 10 mL to 20 mL.';
 
@@ -167,8 +158,7 @@ export const BATCH157_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyedFlags(ADULT_SET),
     verdict: 'avoid',
-    honestNote:
-      `${DYED_NOTE} Adult minimum age on this row is 12. The label also lists 5 mL to 10 mL for ages 6 to 11. Wild cherry. 118 mL is 4 fl oz.`,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -190,7 +180,7 @@ export const BATCH157_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyedFlags(DYED_SET),
     verdict: 'avoid',
-    honestNote: `${DYED_NOTE} Cherry. 118 mL is 4 fl oz. Not the dye-free bottle.`,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -212,7 +202,7 @@ export const BATCH157_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyedFlags(DYED_SET),
     verdict: 'avoid',
-    honestNote: `${DYED_NOTE} Cherry. 236 mL is 8 fl oz. Not the dye-free bottle.`,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -234,7 +224,7 @@ export const BATCH157_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25 mg' }],
     inactiveIngredients: ultraFlags(),
     verdict: 'avoid',
-    honestNote: ULTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -259,7 +249,7 @@ export const BATCH157_KYR6B_BENADRYL: RatingRecord[] = [
     ],
     inactiveIngredients: congFlags(),
     verdict: 'avoid',
-    honestNote: CONG_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

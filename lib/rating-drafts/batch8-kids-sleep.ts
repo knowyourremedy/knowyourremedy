@@ -136,12 +136,6 @@ function homeopathicFields() {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const SEDATING =
-  'First-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim. Not a dedicated nighttime sleep-aid monograph — this is a Sleep-category cleanliness row for a sedating allergy liquid.';
-
-const MELATONIN =
-  'Melatonin dietary supplement — cleanliness grade only; no efficacy claim.';
-
 const HYLANDS_SLEEP = 'hylands-sleep';
 const HYLANDS_REST = 'hylands-rest';
 const HYLANDS_4KIDS = 'hylands-4kids-calm-restful';
@@ -271,10 +265,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_SLEEP, 'Lactose'),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Hyland's Sleep meltaways = Clean. Draft Clean on inactives (acacia gum + lactose). Homeopathic meltaways — cleanliness only, no efficacy claim. " +
-      CARLSTON +
-      ' Contains lactose. Kids Sleep row; SPL chart is children 6 years to under 12 years (adults 12+ on the same carton). Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_SLEEP} (draft, not verified)`,
@@ -307,10 +298,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_REST, 'Lactose'),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Hyland's Rest meltaways = Clean. Draft Clean on inactives (acacia + lactose). Homeopathic meltaways — cleanliness only, no efficacy claim. " +
-      CARLSTON +
-      ' Contains lactose. Kids Sleep row; SPL chart is children 6 years to under 12 years. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_REST} (draft, not verified)`,
@@ -344,10 +332,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_4KIDS, 'Lactose'),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Hyland's 4 Kids Calm & Restful = Clean. Draft Clean on inactives (acacia + lactose). Carton ages 2–12; SPL chart starts at children 2 years to under 6 years. Homeopathic meltaways — cleanliness only, no efficacy claim. " +
-      CARLSTON +
-      ' Contains lactose. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_4KIDS} (draft, not verified)`,
@@ -384,10 +369,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_CALMS, 'Starch (corn and tapioca)'),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Hyland's Calms Forte tablets = Clean kids-usable twin of the adult batch 7 formula — inactives match (lactose, magnesium stearate, microcrystalline cellulose, corn and tapioca starch). Shared formulaId `hylands-calms-forte` with the adult row so the Clean grade propagates conceptually. Do not invent a second formulaId. Kids audience + minAge 6 per the SPL children 6 years to under 12 years chart (adult batch 7 stays minAge 12). Homeopathic tablets — cleanliness only, no efficacy claim. " +
-      CARLSTON +
-      ' Contains lactose. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CALMS} (draft, not verified)`,
@@ -419,10 +401,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_SLEEPCALM_PELLETS, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron SleepCalm kids pellets = Clean. Draft Clean on inactives (lactose + sucrose). Separate formulaId from SleepCalm Kids liquid (alcohol vehicle, Caution). Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Ages 3+ (under 3: ask a doctor). Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods'],
     sourcesGeneral: [
       `DailyMed setid ${SET_SLEEPCALM_PELLETS} (draft, not verified)`,
@@ -482,10 +461,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Genexa Kids Sleepology = Caution. Vanilla lavender / natural flavor Limited 1 pt + organic maltodextrin Limited 1 pt (same as non-organic) = 2 pts Caution. Organic rice bran extract is §5 Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 3–11 (under 3: ask a doctor).',
+
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: HOMEOPATHIC_ALTS_AGE3,
     sourcesGeneral: [
@@ -521,9 +497,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Caution — alcohol vehicle (alcohol + purified water), same locked pattern as batch 4 `boiron-coldcalm-kids-liquid`. Ethyl alcohol is not in Methodology §5 (ungraded; v1.6 intake); draft follows the locked Caution call, not a scored Avoid. Separate from SleepCalm kids pellets (Clean, lactose + sucrose). Carton markets “99.99% alcohol-free” / 0.0015% alcohol — still an alcohol + water vehicle. Ages 3+ (under 3: ask a doctor). ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_ALTS_AGE3,
     sourcesGeneral: [
@@ -568,9 +542,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag('Sodium citrate', 'cleared', labelCite(NATROL_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Natrol Kids Melatonin gummies = Caution. Driver is natural flavors (Limited). Coconut oil is a glazing / anti-stick listing only — coconut oil alone is NOT the gummy seed/industrial-oil High rule (soybean, canola, “vegetable oil”, sunflower). No DailyMed drug SPL expected (dietary supplement). Organic-labeled CVS twins that keep the same flavor + coconut-oil pattern stay this formulaId; a later carton that adds canola / sunflower / vegetable oil is a different formula. Ages 4+. ' +
-      MELATONIN,
+
     retailers: ['CVS', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: AGE4_ALTS,
     sourcesGeneral: [
@@ -620,9 +592,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(OLLY_COCONUT_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: OLLY Kids Sleep coconut-only oil listing = Caution. Driver is natural flavor (Limited). Vegetable oil (coconut) only — coconut oil alone is NOT the gummy seed-oil High rule. Separate formulaId from the coconut + canola twin (Avoid). Confirm the carton: Target / CVS current listings are the canola twin, not this row. No DailyMed drug SPL (dietary supplement). Ages 4+. ' +
-      MELATONIN,
+
     retailers: ['Grocery'],
     cleanAlternatives: AGE4_ALTS,
     sourcesGeneral: [
@@ -652,9 +622,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(ZARBEES_LIQUID_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Zarbee's Children's Sleep liquid with melatonin = Caution. Glycerin / water + natural flavor; no seed oil. Driver is natural flavor (Limited). No DailyMed drug SPL (dietary supplement). Ages 3+. " +
-      MELATONIN,
+
     retailers: ['CVS', 'Target', 'Walmart', 'Grocery'],
     cleanAlternatives: AGE3_ALTS,
     sourcesGeneral: [
@@ -694,9 +662,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Zarbee's Children's Sleep melatonin gummies = Caution, not Avoid. Driver is natural flavors (Limited). Current brand list has NO sunflower / canola / vegetable oil — do not invent a seed-oil Avoid on this formulaId. If a later carton shows seed / industrial oil, that is a different formula (not this row). Honey is on the gummy base (Cleared-class sweetener; not for infants — this carton is 3+). No DailyMed drug SPL. Ages 3+. " +
-      MELATONIN,
+
     retailers: ['CVS', 'Target', 'Walmart', 'Grocery'],
     cleanAlternatives: AGE3_ALTS,
     sourcesGeneral: [
@@ -721,9 +687,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag('Water', 'cleared', labelCite(EQUATE_CITE, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Equate Children's Melatonin liquid = Caution if the label holds the Zarbee's twin pattern (glycerin + natural flavor, no seed oil). Driver is natural flavor (Limited). Walmart compares-to-Zarbee's listing; Instacart snapshot lists glycerin + natural flavor. Confirm the bottle — a later carton that adds dyes, PG, or seed oil is a different formula. No DailyMed drug SPL. Ages 3+. " +
-      MELATONIN,
+
     retailers: ['Walmart'],
     cleanAlternatives: AGE3_ALTS,
     sourcesGeneral: [
@@ -772,9 +736,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       flag('Carnauba wax', 'cleared', labelCite(OLLY_CANOLA_CITE, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: OLLY Kids Sleep coconut + canola = Avoid. Canola oil in a gummy is High-tier (seed/industrial oils in gummies). Separate formulaId from the coconut-only Caution twin — do not merge them. Target / CVS current listings are this canola formula. Coconut oil on the same “vegetable oil (coconut, canola)” line does not clear the canola High. Natural flavor is also Limited (not needed to reach Avoid). No DailyMed drug SPL. Ages 4+. ' +
-      MELATONIN,
+
     retailers: ['Target', 'CVS'],
     cleanAlternatives: AGE4_ALTS,
     sourcesGeneral: [
@@ -811,9 +773,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_BENADRYL_DYED, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: Children's Benadryl dyed = Avoid (Sleep-category row). Red #33 + Red #40 are High-tier. Shared formulaId `childrens-benadryl-allergy-liquid` with batch 6 allergies (same inactives; setid fc9181b9). Poloxamer 407 and monoammonium glycyrrhizinate are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). HFCS is not on this SPL. Ages 6+ (2–5: do not use unless directed by a doctor; under 2: do not use). " +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: AGE6_ALTS,
     sourcesGeneral: [
@@ -855,9 +815,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
       cleared(SET_BENADRYL_DYEFREE, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: Children's Benadryl dye-free = Avoid (Sleep-category row; dye-free trap). Dye-free is not Clean — saccharin + flavors + benzoate + sorbitol. Shared formulaId `childrens-benadryl-dyefree-liquid` with batch 6 allergies (same inactives; setid 10d478ff). Ages 6+ (2–5: do not use unless directed by a doctor; under 2: do not use). " +
-      SEDATING,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: AGE6_ALTS,
     sourcesGeneral: [

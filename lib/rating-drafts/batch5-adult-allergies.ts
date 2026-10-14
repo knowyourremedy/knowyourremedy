@@ -309,8 +309,7 @@ function l612Record(opts: {
       cleared(opts.setid, 'Pregelatinized starch'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: plain loratadine tablets with no TiO2 = Clean. L612 store/club family (lactose / magnesium stearate / povidone / pregelatinized starch). Pack sizes share formulaId. Some of the same retailers also sell coated / -D SKUs under similar names — confirm this inactive list on the bottle.',
+
     retailers: opts.retailers,
     sourcesGeneral: [
       `DailyMed setid ${opts.setid} (L612 plain loratadine; draft, not verified)`,
@@ -355,8 +354,7 @@ function mintOdtRecord(opts: {
       cleared(opts.setid, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Equate / Signature Care mint dissolve loratadine (sucralose) = Caution. Raw demerit math is sucralose 2 + mannitol 1 + mint flavor 1 = 4 pts Avoid — draft follows the locked Caution call, not a 3-pt Avoid stack. Same mint-ODT formulaId across these store brands. Do not treat RediTabs (no sucralose) as this formula.',
+
     retailers: opts.retailers,
     cleanAlternatives: (() => {
       const sameStore = extraLoratadine(opts.preferredAlt);
@@ -399,10 +397,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('d9a509d9-15c8-20bb-e053-2a95a90a3edd', 'Magnesium stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: AllergyCalm meltaways = Clean. Draft Clean on inactives (croscarmellose sodium, lactose, magnesium stearate). Homeopathic meltaways — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Twin tablet SPL d92d9269 shares the same inactives. Pellet SPLs (lactose / sucrose) are a different form and are not this row. Contains lactose. Ages 6+.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid d9a509d9-15c8-20bb-e053-2a95a90a3edd (draft, not verified)',
@@ -443,8 +438,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Xlear no-BKC 4-ingredient formula = Clean, separate formulaId from the BKC decongestant. Manufacturer carton (xlear.com saline+xylitol mist / squeeze) lists purified water, xylitol, USP sodium chloride, grapefruit seed extract — matches Clean Picks. No DailyMed SPL (drug-free saline, not an OTC drug). Grapefruit seed extract is not in Methodology §5 (ungraded; v1.6 intake) — draft Clean follows the locked no-BKC call, not a new ingredient lock. Carton has no numeric age floor beyond keep-out-of-reach; minAge 2 is a conservative adult-batch floor for family saline, not a verified labeled age. Confirm the 4-ingredient list — a BKC / oxymetazoline bottle is a different product.',
+
     retailers: ['CVS', 'Walgreens', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'Xlear manufacturer label (purified water, xylitol, USP sodium chloride, grapefruit seed extract) — no DailyMed SPL; draft, not verified',
@@ -479,8 +473,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: NeilMed Sinus Rinse packets = Clean. Manufacturer / Clean Picks: USP-grade sodium chloride + sodium bicarbonate only — preservative-free, iodine-free. No DailyMed SPL (device / saline packet, not an OTC drug). Use only distilled, sterile, or previously boiled-and-cooled water — never untreated tap water (FDA guidance). Carton has no numeric age floor; minAge 2 is a conservative family-rinse floor, not a verified labeled age. Adult drugstore SKU.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Whole Foods'],
     sourcesGeneral: [
       'NeilMed manufacturer label (sodium chloride + sodium bicarbonate) — no DailyMed SPL; draft, not verified',
@@ -521,8 +514,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Beekeeper's nasal is Clean ONLY if bottle inactives match Clean Picks. Current manufacturer page lists saline solution, xylitol, propolis extract, E-polylysine, nisin, citric acid — matches Clean Picks (citric acid / nisin / poly-lysine). Nisin and poly-lysine are not in Methodology §5 (ungraded; v1.6 intake) — draft Clean follows the locked match call, not a new ingredient lock. No DailyMed SPL (dietary supplement / nasal hygiene). Bee-product allergy disclaimer. Manufacturer age floor 18+. If a later carton adds BKC or other graded flags, this Clean does not carry over. Max (eucalyptus / oregano) is a different formula and is not this row.",
+
     retailers: ['CVS', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       "Beekeeper's manufacturer label + Clean Picks match (draft, not verified; no DailyMed SPL)",
@@ -550,10 +542,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('39ee6e65-948f-42cc-88a3-cd8315c8a849', 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Similasan Allergy Eye = Clean only if PF / no BKC-type preservative. Single-use SPL (setid 39ee6e65; twin 3f0ddebd) is phosphate buffer + purified water — no BKC, no silver sulfate. Homeopathic — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 2+. DailyMed marks some NDCs inactivated — confirm the single-use carton. Multi-dose silver-sulfate bottle is a separate Caution formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid 39ee6e65-948f-42cc-88a3-cd8315c8a849 (draft, not verified)',
@@ -590,8 +579,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Alaway Preservative Free = Clean. Separate formulaId from the multi-dose BAK bottle. No DailyMed SPL for the PF SKU (NDC 24208-600 appears on Bausch listings; DailyMed only publishes the BAK bottle e4c310b5). Inactives from Bausch / Clean Picks / MPR: glycerin, water for injection, HCl and/or NaOH — no benzalkonium chloride. Ages 3+. Remove contact lenses before use. Confirm the single-use “Preservative Free” carton — the 10 mL bottle is Caution.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       'Bausch + Lomb / Clean Picks PF listing (glycerin, water, pH adjusters) — no DailyMed PF SPL; draft, not verified',
@@ -616,8 +604,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('219ab9c4-d0c4-4256-ab64-66d0260886bd', 'Magnesium stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: plain Claritin tablets with no TiO2 = Clean. Founder-cited setid 219ab9c4 (Navajo convenience) and Bayer national SPLs 660ac9df / ac32d6f9 share corn starch, lactose monohydrate, magnesium stearate. This is not RediTabs, not chewable, not liquid, not -D. Ages 6+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       'DailyMed setid 219ab9c4-d0c4-4256-ab64-66d0260886bd (draft, not verified)',
@@ -660,8 +647,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('3d716988-da63-59e6-e063-6394a90a5b4b', 'Povidone'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: plain CVS loratadine with no TiO2 = Clean. Separate formulaId from the L612 Equate / up&up / Kirkland family (this SPL adds corn starch + povidone). Confirm the uncoated tablet list — CVS also sells coated cetirizine and -D SKUs.',
+
     retailers: ['CVS'],
     sourcesGeneral: [
       'DailyMed setid 3d716988-da63-59e6-e063-6394a90a5b4b (draft, not verified)',
@@ -723,10 +709,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Genexa Allergy Care = Caution (organic maltodextrin Limited 1 pt). Do NOT keep the live Clean Picks Clean grade. Do not extend the adult Genexa ES Clean exception. Organic flavors / dextrose / carnauba wax and organic rice bran extract are Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Adult directions 12+ (a 3–11 chart exists — this row is the adult SKU).',
+
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: HOMEOPATHIC_ORAL_ALTS,
     sourcesGeneral: [
@@ -763,8 +746,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('1c1db71a-47d0-42ac-8cbe-95e76dca185f', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Xlear with BKC = Caution, separate formulaId from the no-BKC 4-ingredient saline. This is the DailyMed decongestant SPL (oxymetazoline 0.05% + benzalkonium chloride) — not the drug-free Clean Picks saline. BKC is a standalone Caution (not Avoid, not additive-scored). Grapefruit seed extract is not independently graded in §5. Ages 6+ with adult supervision. Limit oxymetazoline to labeled days (rebound congestion is standard-of-care, not a cleanliness flag).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -794,10 +776,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('3377eced-f9dd-4d6e-abfa-aede968d5242', 'Sodium nitrate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Similasan Allergy Eye = Caution if multi-dose preservative on label. 10 mL bottle SPL (setid 3377eced; twin 01b8052d) lists silver sulfate as preservative — not BKC, so this is not an Avoid. Silver sulfate is not in Methodology §5 (ungraded; v1.6 intake) — draft follows the locked multi-dose-preservative Caution, not a new ingredient lock and not the colloidal-silver active-safety cap. ' +
-      CARLSTON +
-      ' Ages 2+. DailyMed marks some NDCs inactivated — confirm the 10 mL carton still carries silver sulfate. PF single-use is a separate Clean formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Sprouts'],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -833,8 +812,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('7dc04b48-f053-4e4b-a493-9e8286d2a791', 'Gelatin'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Claritin RediTabs = Clean IF inactives stay clean (setid 7dc04b48). Matched SPL is anhydrous citric acid, gelatin, mannitol, mint flavor. Mannitol is Limited (sugar alcohol) and mint flavor is Limited (opacity) → 2 pts Caution. Clean is not invented. Twin 10 mg RediTabs SPL b681ea25 shares the same inactives (separate strength, same formula family). Ages 6+. This is not the sucralose mint-ODT store set.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DISSOLVE_ALTS,
     sourcesGeneral: [
@@ -894,8 +872,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('b6134ba0-b70a-4eac-9a82-cef64b242c1d', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Flonase = Caution (BKC ± PS80). BKC is standalone Caution (not Avoid). PS80 is Moderate (2 pts) → Caution. Phenylethyl alcohol is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake). Adult SKU 12+ (a children\'s Flonase exists — not this row).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -937,8 +914,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('bc824143-b876-4c3d-86fd-81fb58673851', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Equate fluticasone = Caution (BKC ± PS80). Flonase-style store spray. Phenylethyl alcohol is on the SPL and is not in §5 (ungraded). Adult 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -972,8 +948,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('b34d36ca-4df4-458c-af0f-c0d0c9a025d9', 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: NasalCrom = Caution (BKC) if including. BKC is standalone Caution (not Avoid). Ages 2+ (under 2: do not use unless directed by a doctor). Adult drugstore SKU.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: AGE2_NASAL_ALTS,
     sourcesGeneral: [
@@ -1007,8 +982,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('e4c310b5-1dba-4ddc-bc90-b27ebc765871', 'Water for injection'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: A36 multi-dose Alaway = Caution. Separate formulaId from Alaway PF. BAK 0.01% is standalone Caution (not Avoid). Ages 3+. The PF single-use carton is the Clean twin.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -1042,8 +1016,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Zaditor = Caution (BKC) if including. BAK 0.01%. Ages 3+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -1080,8 +1053,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('1c7d2342-ba1c-4244-9814-d92a05725d4e', 'Sodium chloride'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Pataday = Caution (BKC) if including. This row is Once Daily 0.2% (setid 1c7d2342). Extra Strength 0.7% (setid 6d07a5d6) also has BAK plus PEG 400 (Moderate) — still Caution, separate formula, not this row. Twice Daily 0.1% is another BAK formula. Ages 2+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -1126,8 +1098,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('b165db38-b302-4220-8627-77cb07bb078c', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Zyrtec tablets (TiO2) = Avoid. 5 mg film-coated twin (setid 2c1ecee3) shares the same TiO2 / PEG coat. Ages 6+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1168,8 +1139,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('0face45c-af24-3559-e063-6294a90abde5', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Zyrtec liquid gels (BHT) = Avoid. Pharmaceutical ink is on the SPL (ungraded appearance ink; not the Avoid driver). Ages 6+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1222,8 +1192,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Claritin chewables = Avoid. Grape chewable (aspartame + lake dyes). Bubblegum twin (setid 20938e05) is aspartame + carmine — still Avoid (aspartame High). Cool Mint chewable (98b99bb9) is aspartame + Blue #1 lake — still Avoid. Phenylketonurics: aspartame. Adult drugstore SKU; labeled down to young children — this row stays audience adult.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: AGE2_ORAL_ALTS,
     sourcesGeneral: [
@@ -1283,8 +1252,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('19afd658-8c67-af44-e063-6394a90abada', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Claritin liquid = Avoid. Sucralose + oral PG (2+2) plus flavors / sugar alcohols / benzoate. Dye-free is not Clean. Adult-labeled Claritin Allergy liquid; a Children Claritin twin exists — this row is the adult SKU name on DailyMed. Menthol is on the SPL (parked as a topical-active pending review; not an inactive-table grade).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: AGE2_ORAL_ALTS,
     sourcesGeneral: [
@@ -1328,8 +1296,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('81c1dcbb-28b3-4ad5-9f3d-9ccc16ddd173', 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Allegra 24hr tablets (TiO2) = Avoid. Iron oxide blends are on the SPL and are not in Methodology §5 (ungraded; not the Avoid driver). Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1366,8 +1333,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('a7125705-01ff-4418-8c53-9209c2bbb484', 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: -D combos = Avoid. Claritin-D 12 Hour is TiO2-coated. Claritin-D 24 Hour (setid f046a807) is a separate TiO2 formula (plus PEG / silica) — same Avoid family, not this row. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Pharmacy'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1423,8 +1389,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: -D combos = Avoid. Allegra-D 24 Hour stacks TiO2, talc, and Blue #1 lake. Ages 12+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Pharmacy'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1462,8 +1427,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: coated cetirizine store brands (TiO2) = Avoid. Equate / Member\'s Mark / CVS share the Blue #1 lake + TiO2 coat family. Pack sizes share this formulaId when the inactive list matches. Ages 6+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: oralAlts(EQUATE_LORATADINE),
     sourcesGeneral: [
@@ -1511,8 +1475,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate fexofenadine / TiO2 store brands = Avoid. Talc is also High. Iron oxides and light liquid paraffin are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). Ages 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: oralAlts(EQUATE_LORATADINE),
     sourcesGeneral: [
@@ -1550,8 +1513,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Member\'s Mark cetirizine / TiO2 = Avoid. Same Blue #1 lake + TiO2 coat as Equate cetirizine — shared formulaId. Ages 6+.',
+
     retailers: ["Sam's Club"],
     cleanAlternatives: oralAlts(KIRKLAND_LORATADINE),
     sourcesGeneral: [
@@ -1589,8 +1551,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: coated cetirizine store brands (TiO2) = Avoid. CVS indoor/outdoor 10 mg tablet matches the Equate / Member\'s Mark Blue #1 + TiO2 coat — shared formulaId. Ages 6+.',
+
     retailers: ['CVS'],
     cleanAlternatives: oralAlts(CVS_LORATADINE),
     sourcesGeneral: [
@@ -1641,8 +1602,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store -D combos = Avoid. Equate fexofenadine-D is a lake-dye ER tablet (Yellow #10 / Blue #2 / Yellow #6). Ages 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: oralAlts(EQUATE_LORATADINE),
     sourcesGeneral: [
@@ -1688,8 +1648,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store -D combos = Avoid. Equate cetirizine-D is TiO2 + talc. Ages 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: oralAlts(EQUATE_LORATADINE),
     sourcesGeneral: [
@@ -1726,8 +1685,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('306e8736-b27f-4445-b613-3e5b609f8d42', 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: -D combos = Avoid. Equate loratadine-D is the Claritin-D 12 Hour TiO2 coat on a store label. Ages 12+.',
+
     retailers: ['Walmart'],
     cleanAlternatives: oralAlts(EQUATE_LORATADINE),
     sourcesGeneral: [
@@ -1775,8 +1733,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('e0640846-19a6-7f79-e053-2995a90a8176', 'Sodium citrate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Astepro = Avoid. Sucralose (2) + sorbitol (1) = 3 pts Avoid. BKC is standalone Caution (not Avoid) and is not the Avoid driver. Adult SKU; children under 6 do not use. A children\'s Astepro twin exists — not this row.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -1824,8 +1781,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('702f9786-7ce9-43e4-921d-e1db09612127', 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl family (tablets) = Avoid. Ultratabs are Red #27 lake + TiO2. Extra Strength 50 mg tablets (setid dd0a8069) are TiO2 + PS80 without the red lake — still Avoid, separate strength. Ages 6+ (6–11 half dose). First-generation / sedating — listed as a cleanliness note only, not an efficacy claim.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1861,8 +1817,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('bfeae100-e2d1-4607-be3b-2d9b15cd4f7f', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl family (Liqui-Gels) = Avoid. Dye-free ink is called out on the SPL; PEG (2) + sorbitol (1) = 3 pts Avoid. Extra Strength Liqui-Gels are a separate SKU in the same Avoid family. Ages 6+.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [
@@ -1908,8 +1863,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('224ba2a3-1a93-29c8-e063-6394a90a9bef', 'Sucrose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Benadryl family (liquid) = Avoid. Red #33 + Red #40. Poloxamer 407 and monoammonium glycyrrhizinate are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). HFCS is not on this SPL. Ages 6+ (adult 12+ dose is 10–20 mL). Children\'s Benadryl twins are out of this adult batch.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),
     sourcesGeneral: [

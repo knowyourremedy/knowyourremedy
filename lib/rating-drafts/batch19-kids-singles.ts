@@ -118,12 +118,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / gluconate / sulfate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const NO_CLEAN_SAME_ACTIVE =
-  'No independently Clean same-active swap exists in this draft set (only Clean is Carlson Kid\'s Super Daily D3 drops) — cleanAlternatives omitted (honest empty; do not point at Caution Nordic DHA liquid as Clean, and do not invent a same-active C / omega Clean).';
-
 const CARLSON_D3_CITE =
   "Carlson Kid's Super Daily D3 drops Carlson / IngredientList other-ingredients (medium chain triglyceride oil (from coconut) only)";
 const LIL_IMMUNE_C_CITE =
@@ -173,8 +167,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER CALL: Carlson Kid's Super Daily D3 drops = Clean if inactives are only MCT oil (from coconut). Carlson / IngredientList other-ingredients: medium chain triglyceride oil (from coconut). Liquid / drop MCT fill is NOT the gummy seed/industrial-oil High rule — do not Avoid this bottle for the carrier oil. 90-drop and 365-drop packs share this formulaId when the list holds. 400 IU and 600 IU kids Super Daily D3 share this formulaId ONLY when the other-ingredients line is still MCT from coconut (strength differs in active amount only). Older snapshots that list MCT oil (coconut and palm source) are a different formula — not this Clean row; do not invent a coconut-and-palm Clean. Kid's Super Daily D3 + K2 is a different product (not this row). Confirm the carton. No DailyMed drug SPL (dietary supplement). Ages 1+: one drop daily as labeled. Contains coconut (MCT source) — confirm the allergen line.",
+
     retailers: ['Vitamin shops', 'iHerb', 'Grocery'],
     sourcesGeneral: [
       `${CARLSON_D3_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -207,9 +200,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       labelCleared(CARLSON_C_CITE, 'Sodium citrate'),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Carlson Kid's Vitamin C Gummies = Caution. Drivers are natural flavors (Limited) + annatto (standalone Caution, not Avoid, not additive-scored). IngredientList / brand other-ingredients: glucose syrup, sugar, water, pectin, sodium citrate, natural flavors, annatto (for color). That list has NO palm / canola / sunflower / vegetable oil — do not invent a seed-oil Avoid on this formulaId. Do not invent a coconut-only Clean / Caution twin. MaryRuth Kids C skipped (oil unconfirmed). Confirm the carton. No DailyMed drug SPL. Ages 4+: one gummy daily at mealtime as labeled. " +
-      NO_CLEAN_SAME_ACTIVE,
+
     retailers: ['Vitamin shops', 'iHerb', 'Grocery'],
     sourcesGeneral: [
       `${CARLSON_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -245,9 +236,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: Nordic Naturals Children's DHA liquid (strawberry) = Caution. Driver is natural flavor (Limited). iHerb / brand other-ingredients: purified arctic cod liver oil, natural flavor, RRR-alpha tocopherol (antioxidant), rosemary extract (a natural preservative). Tocopherol and rosemary are Cleared-class on this founder call. Liquid fish-oil / cod-liver-oil fill is NOT the gummy seed-oil High rule — do not Avoid this bottle for the oil. Some cartons say “natural strawberry flavor”; that is the same Limited flavor class. Chewable Children's DHA softgels are a different formula (not this row; Carlson Kids DHA softgels skipped — shelf / shell unconfirmed). This Caution liquid is NOT a Clean swap for the canola DHA gummy. Confirm the carton. Contains fish. No DailyMed drug SPL. Ages 1+: ½ teaspoon daily with food as labeled. " +
-      NO_CLEAN_SAME_ACTIVE,
+
     retailers: ['Vitamin shops', 'iHerb', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NORDIC_DHA_LIQUID_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -285,9 +274,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       labelCleared(LIL_OMEGA_CITE, 'Lactic acid'),
     ],
     verdict: 'caution',
-    honestNote:
-      "FOUNDER CALL: L'il Critters Omega-3 DHA gummies = Caution. Drivers are natural flavors (Limited). Giant / HelloPharmacist other-ingredients: glucose syrup, sugar, water, gelatin; less than 2% canola lecithin, citric acid, colors (blueberry and carrot concentrates, purple carrot juice concentrate, turmeric), fumaric acid, lactic acid, natural flavors. Canola lecithin is an emulsifier — it is NOT bulk canola oil and is NOT the gummy seed-oil High rule; do not Avoid this formulaId for lecithin alone. No palm / canola oil / sunflower / vegetable oil on that matched list. Older soy-lecithin Gummy Fish twins are a different formula (not this row) — confirm the carton says canola lecithin. Contains fish (anchovy and/or sardine with mackerel and/or herring). No DailyMed drug SPL. Ages 2–3: 1 gummy; 4+: 2 gummies as labeled. Not recommended under 2 (choking). " +
-      NO_CLEAN_SAME_ACTIVE,
+
     retailers: ['Giant', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${LIL_OMEGA_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -335,11 +322,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       flag('Pectin', 'cleared', labelCite(LIL_IMMUNE_C_CITE, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: L'il Critters Immune C Plus Zinc & Vitamin D gummies = Avoid. Giant other-ingredients list blend of oils (coconut and/or palm) with beeswax and/or carnauba wax + natural flavors. Palm on that and/or line is the gummy seed/industrial-oil High rule. This is NOT a coconut-only Caution — coconut on the same and/or line does not clear the palm High. One formulaId for this C + D + zinc SKU — do not write a second C or D grade for the same carton. Natural flavors are Limited (not needed to reach Avoid). Annatto as color is a standalone Caution note only on this already-Avoid palm row. Do not invent a coconut-only Clean / Caution twin. Carlson Super Daily D3 drops are the only in-batch Clean and are a weak / different-actives swap (D3-only vs C+D+zinc) — cleanAlternatives omitted. Contains coconut (tree nut). No DailyMed drug SPL. Ages 2–3: 1 gummy; 4+: 2 gummies as labeled. Not recommended under 2 (choking). " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_SAME_ACTIVE,
+
     retailers: ['Giant', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${LIL_IMMUNE_C_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -376,9 +359,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
       flag('Stevia', 'cleared', labelCite(NORDIC_DHA_GUMMY_CITE, METH.stevia)),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: Nordic Naturals Children's DHA Gummy Chews = Avoid. Instacart other-ingredients list canola oil + natural flavor (plus xylitol, purified water, sorbitol, gelatin, sodium citrate, malic acid, paprika extract, stevia). Canola oil in a gummy is High-tier. Natural flavor is Limited (not needed to reach Avoid). Oral xylitol / sorbitol are Limited sugar alcohols (not needed to reach Avoid). Stevia is Cleared-class (high-purity extract). Fish oil here is the omega active / fill, not a second gummy-oil High. Some retailer pages omit canola — Instacart (and matched carton reviews) list it last; confirm the physical carton still has canola. A later no-canola carton would be a different formulaId (not written). Children's Eye Health Gummy Chews are a different SKU (not this row). The strawberry DHA liquid (`nordic-naturals-childrens-dha-liquid`) is Caution, not Clean — do not list it as a cleanAlternative. minAge 2 from the brand 2–6 / ages 2+ chart (Instacart / brand / Target); confirm the carton. Contains fish. No DailyMed drug SPL. " +
-      NO_CLEAN_SAME_ACTIVE,
+
     retailers: ['Instacart', 'Target', 'Vitamin shops', 'Grocery'],
     sourcesGeneral: [
       `${NORDIC_DHA_GUMMY_CITE} — draft, not verified; carton-confirm required (canola + age); no DailyMed drug SPL`,

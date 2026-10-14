@@ -438,15 +438,6 @@ const KIDS_ALLERGY_ALTS: CleanAlternative[] = [
   },
 ];
 
-const L484_NOTE =
-  'LNK L484 extra-strength acetaminophen family — oral PEG is Moderate (2 pts) → Caution. These store brands share inactives and formulaId; pack sizes are not graded separately. Some of the same retailers also sell dyed / titanium-dioxide ES SKUs under similar names — confirm the L484 / PEG list on the bottle. Stay under 4 g/day acetaminophen. Ages 12+.';
-
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
-
-const PARKED_FORMALDEHYDE =
-  'Diazolidinyl urea is a formaldehyde-releaser — parked / out-of-scope (Methodology §5). Notes only, not a demerit.';
-
 const BATCH29_CATCHUP_BARCODES: Record<string, string> = {
   'dg-health-loratadine-odt': '370030169856',
   'dg-health-cetirizine-tablets': '370030116669',
@@ -515,8 +506,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R1, 'Pregelatinized starch'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: DG Health Allergy Relief loratadine 10 mg = Clean. Reuses `loratadine-l612-plain` (same L612 family as Equate / Kirkland AllerClear / Member\'s Mark / TopCare / up&up). DailyMed setid dfc4b065 (NDC 55910-806). Drug Facts inactive list: lactose monohydrate, magnesium stearate, povidone, pregelatinized starch. The structured SPL inactive table lists only lactose / magnesium stearate / povidone and may omit pregelatinized starch vs other L612 rows — confirm starch is still on the carton before treating pack sizes as the same formula. No TiO2 / dye. Contains lactose. Ages 6+ (under 6: ask a doctor). This is not a coated / ODT / -D SKU.',
+
     retailers: [...DG],
     sourcesGeneral: [
       `DailyMed setid ${SET_R1} (DG Health L612 plain loratadine NDC 55910-806; draft, not verified)`,
@@ -542,8 +532,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_C1, 'Sodium starch glycolate (corn)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Family Wellness All Day Allergy Relief loratadine 10 mg = Clean. New formulaId `family-wellness-loratadine-10` (formulaId===id) — distinct from `loratadine-l612-plain` (that family HAS povidone / pregelatinized starch and does not list MCC / SSG) and from `365-loratadine-plain-ssg` (365 lists pregelatinized starch maize + SSG, no MCC). DailyMed setid 6b8d786e (NDC 55319-938). Drug Facts: lactose monohydrate, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. No TiO2 / dye / povidone. Contains lactose. Ages 6+.',
+
     retailers: [...FD],
     sourcesGeneral: [
       `DailyMed setid ${SET_C1} (Family Wellness loratadine 10 NDC 55319-938; draft, not verified) — not loratadine-l612-plain`,
@@ -569,8 +558,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_R9, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Family Wellness Triple Antibiotic + Pain Relief ointment = Clean. Petrolatum only on setid 9e52c8f2 (NDC 69396-053-01). Reuses `neosporin-plus-pain-ointment` — same four actives + petrolatum-only inactive as batch 12 Neosporin Plus Pain / Equate Triple + Pain. Separate from the C3 petrolatum + mineral oil family and from the skipped oil-blend / sodium pyruvate SKU (69396-054). First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor).',
+
     retailers: [...FD],
     sourcesGeneral: [
       `DailyMed setid ${SET_R9} (Family Wellness Triple + Pain NDC 69396-053-01; draft, not verified)`,
@@ -597,8 +585,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ungraded(SET_C3_DUAL, 'Mineral oil'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Family Wellness dual antibiotic ointment = Clean. Confirmed actives + petrolatum ± mineral oil on DailyMed setid 9157681a (NDC 69396-037). Drug Facts: mineral oil, white petrolatum. New shared formulaId `family-wellness-abx-petrolatum-mineral-oil` — not the petrolatum-only Plus Pain twin (R9 / `neosporin-plus-pain-ointment`) and not `polysporin-ointment` (petrolatum only, no mineral oil). Mineral oil is not in Methodology §5 (ungraded; v1.6 intake) — not a Clean-blocker on this topical ointment. Ages 2+ (under 2: ask a doctor).',
+
     retailers: [...FD],
     sourcesGeneral: [
       `DailyMed setid ${SET_C3_DUAL} (Family Wellness dual Abx NDC 69396-037; draft, not verified)`,
@@ -625,8 +612,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ungraded(SET_C3_TRIPLE, 'Mineral oil'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Family Wellness plain Triple Antibiotic ointment = Clean. Confirmed actives + petrolatum ± mineral oil on DailyMed setid bd3b8146 (NDC 69571-003). Drug Facts: mineral oil, petrolatum. Shares `family-wellness-abx-petrolatum-mineral-oil` with the dual Abx row (same inactive pair). Not 69396-041 Family Wellness Original (squalane / cetyl alcohol / stearic acid / vitamin E extras — skipped as not petrolatum ± mineral oil). Not the oil-blend Pain Scar Itch 69396-054. Ages 2+ (under 2: ask a doctor).',
+
     retailers: [...FD],
     sourcesGeneral: [
       `DailyMed setid ${SET_C3_TRIPLE} (Family Wellness plain triple NDC 69571-003; draft, not verified)`,
@@ -655,8 +641,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R4, 'Carnauba wax'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER CALL: Family Wellness Extra Strength Pain Relief APAP 500 = Caution. Reuses \`${L484_FORMULA}\` — oral PEG Moderate. DailyMed setid f8383108 (NDC 55319-177). Drug Facts: hydroxypropyl methyl cellulose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate, stearic acid. Starch / SSG are Cleared housekeeping and are not a reason to split this L484 family. ${L484_NOTE}`,
+
     retailers: [...FD],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -684,8 +669,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R5, 'Carnauba wax'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER CALL: Rexall Pain Relief APAP tablets = Caution. Reuses \`${L484_FORMULA}\`. DailyMed setid 9783cf37 (NDC 55910-701). Drug Facts: carnauba wax, corn starch*, croscarmellose sodium*, hypromellose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate*, stearic acid (*may contain). Dollar General Rexall SKU. ${L484_NOTE}`,
+
     retailers: [...DG],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -716,8 +700,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R8, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: DG Health Allergy Relief Nasal fluticasone = Caution (BKC ± PS80). Reuses `equate-fluticasone-bkc-ps80` — same Flonase-style store spray as batch 5 / batch 6 Equate. DailyMed setid 5f0514bd (NDC 55910-773). Drug Facts: benzalkonium chloride, dextrose, microcrystalline cellulose, phenylethyl alcohol, polysorbate 80, purified water, sodium carboxymethylcellulose. Phenylethyl alcohol is on the SPL and is not in Methodology §5 (ungraded; v1.6 intake; notes-only — not the Caution driver). BKC is standalone Caution (not Avoid). Adult 12+.',
+
     retailers: [...DG],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -752,8 +735,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R10, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: DG Health loratadine ODT = Caution. Reuses `loratadine-mint-odt-sucralose` (same mint-dissolve sucralose family as Equate / Signature Care in batch 5). DailyMed setid 04258018 (NDC 55910-970) and twin setid c18c40ae (NDC 55910-594) share the same Drug Facts list: croscarmellose sodium, crospovidone, hypromellose, magnesium stearate, mannitol, microcrystalline cellulose, natural and artificial mint flavor, sucralose. Raw demerit math is sucralose 2 + mannitol 1 + mint flavor 1 = 4 pts Avoid — draft follows the locked Caution call, not a 3-pt Avoid stack. Do not treat RediTabs (no sucralose) as this formula. Ages 6+.',
+
     retailers: [...DG],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -788,8 +770,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_K1, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Assured Advanced Relief Eye = Caution (BKC). New formulaId `assured-advanced-relief-eye` (formulaId===id). DailyMed setid 593d1899 (NDC 33992-8376-5). Actives are dextran 70 + polyethylene glycol 400 + povidone + tetrahydrozoline HCl 0.05% (lubricant + redness combo). FOUNDER CALL — PEG 400 is the lubricant active, not an oral inactive Moderate demerit (same reading as batch 22 Systane Ultra PF). Inactives: benzalkonium chloride, boric acid, edetate disodium, purified water, sodium chloride, sodium borate. BKC is standalone Caution (not Avoid). Tetrahydrozoline rebound-redness is a labeled use note, not an invented active-safety grade. Not a cleaner alternative. Ages 6+ typical for this redness class (under 6: consult a doctor). Dollar Tree Assured SKU. Category uses the existing Allergy string (batch 22 eye-aisle home) — no new eye enum.',
+
     retailers: [...DT],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -821,8 +802,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polyethylene glycol', 'moderate', dailymed(SET_R2, METH.peg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health All Day Allergy cetirizine = Avoid. MUST reuse `store-cetirizine-coated-blue1-tio2` — same Blue #1 lake + TiO2 coat family as Equate / Member\'s Mark / CVS / Kirkland Aller-Tec / TopCare (batch 5 / 20 / 21). DailyMed setid b9ac489a (NDC 55910-458). Drug Facts: corn starch, FD&C blue no. 1 aluminum lake, hypromellose, lactose monohydrate, magnesium stearate, polydextrose, polyethylene glycol, povidone, titanium dioxide, triacetin. High drivers are TiO2 + Blue #1 lake. Polydextrose and triacetin are not independently graded in Methodology §5 (ungraded; v1.6 intake; not the Avoid drivers). Contains lactose. Ages 6+.',
+
     retailers: [...DG],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -852,8 +832,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polyethylene glycol', 'moderate', dailymed(SET_R3, METH.peg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Rexall All Day Allergy Relief cetirizine = Avoid. Reuses `store-cetirizine-coated-blue1-tio2`. DailyMed setid 4d79fb74 (NDC 55910-699-66). Same Blue #1 lake + TiO2 Drug Facts list as the DG Health cetirizine row. Dollar General Rexall SKU. Ages 6+.',
+
     retailers: [...DG],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -884,8 +863,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R6, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Mucus-ER = Avoid. Reuses `equate-mucus-er-600-blue1` — same Blue #1 aluminum lake mucus-ER family as Equate / Mucinex ER / up&up (batch 3). DailyMed setid bf99fa83 (NDC 55910-904-01). Drug Facts: carbomer homopolymer type B, FD&C blue #1 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. Blue #1 lake is High-tier Avoid. This is not Mucus-ER Max (FLAG-skipped until NDC 55910-626-74 shelf confirm — do not invent a dye-free Clean twin). Ages 12+ (under 12: do not use). Swallow whole — do not crush, chew, or break.',
+
     retailers: [...DG],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -917,8 +895,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', dailymed(SET_R7, METH.sio2)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Mucus-DM ER = Avoid. Reuses `upup-mucus-dm-er-yellow10` — same Yellow #10 lake family and 600/30 strength as Target up&up / Mucinex DM / TopCare (batch 3 / 21). DailyMed setid a95401cc (NDC 55910-746). Drug Facts: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide. Yellow #10 lake is High-tier Avoid. Copovidone is not in Methodology §5 (ungraded; v1.6 intake; notes-only — Avoid already stands on the dye). Silicon dioxide is the nanoparticle Caution cap (not needed to reach Avoid). Ages 12+ (under 12: do not use). Swallow whole with water — do not crush, chew, or break.',
+
     retailers: [...DG],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -953,8 +930,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_A9, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Family Wellness cetirizine coated = Avoid (TiO2). Reuses `zyrtec-allergy-tablets-tio2` — this SPL has no Blue #1 (so it is NOT `store-cetirizine-coated-blue1-tio2`); Drug Facts match the Zyrtec TiO2 / PEG / SiO2 coat family (colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide). DailyMed setid b90b5ef2 (NDC 55319-962). High driver is TiO2. Contains lactose. Ages 6+.',
+
     retailers: [...FD],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -987,9 +963,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_A16, 'Sodium starch glycolate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Sleep Aid doxylamine = Avoid. Reuses `upup-doxylamine-sleeptabs` — Blue #1 aluminum lake plus the anhydrous / dihydrate calcium-phosphate pair (same store-twin split from Unisom SleepTabs in batch 7). DailyMed setid a4c6b400 (NDC 55910-909). Drug Facts: anhydrous dibasic calcium phosphate, dibasic calcium phosphate dihydrate, FD&C blue no. 1 aluminum lake, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. One tablet at bedtime. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: [...DG],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1030,8 +1004,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Children’s loratadine chewable = Avoid (aspartame + dyes). Reuses `claritin-chewable-aspartame-dye` — same grape aspartame + Red 27 lake + Blue 2 lake family as Children’s Claritin chews (batch 5 / 6). DailyMed setid 302fc570 (NDC 55910-807-52). Drug Facts: artificial grape flavor, aspartame, colloidal silicon dioxide, D&C red #27 aluminum lake, FD&C blue #2 aluminum lake, magnesium stearate, mannitol, microcrystalline cellulose, sodium starch glycolate, stearic acid. Phenylketonurics: aspartame. Ages 2+. Do not invent a Clean dollar-store kids loratadine.',
+
     retailers: [...DG],
     cleanAlternatives: KIDS_ALLERGY_ALTS,
     sourcesGeneral: [
@@ -1064,8 +1037,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Assured Ibuprofen 200 film-coated = Avoid (TiO2 + talc). New formulaId `assured-ibuprofen-coated-tio2-talc`. DailyMed setid 5c65b691 (NDC 68210-0081). Drug Facts: colloidal silicon dioxide, croscarmellose sodium*, iron oxide red, magnesium stearate*, microcrystalline cellulose*, polyethylene glycol, polyvinyl alcohol, povidone k-30*, pregelatinized starch, sodium starch glycolate*, stearic acid*, talc, titanium dioxide (*contains one or more of these ingredients). High drivers are TiO2 + talc. Iron oxides / polyvinyl alcohol are not in Methodology §5 (ungraded; not the Avoid drivers). No Yellow #6 on this SPL — A2 dye twin not written (not distinct enough / not on this label). Ages 12+.',
+
     retailers: [...DT],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1101,9 +1073,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Assured Headache PM = Avoid (Blue #1 / #2 + TiO2). New formulaId `assured-headache-pm`. DailyMed setid d9d22e45 (NDC 68210-4135-2). Drug Facts: colloidal silicon dioxide, FD&C Blue #1, FD&C blue #2, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized corn starch, stearic acid, titanium dioxide. Diphenhydramine citrate 38 mg is the labeled PM-citrate salt (about 25 mg DPH HCl equivalent). Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SEDATING,
+
     retailers: [...DT],
     cleanAlternatives: [...SLEEP_ALTS, ...APAP_500_ALTS],
     sourcesGeneral: [
@@ -1132,8 +1102,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_A5, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Assured Gas Relief Extra Strength softgels = Avoid (Yellow #10 + Blue #1 + TiO2). New formulaId `assured-gas-relief-es`. DailyMed setid d5b412b4 (NDC 33992-0113-1). Drug Facts: D&C yellow 10, FD&C blue 1, gelatin, glycerin, purified water, titanium dioxide. Structured active lists dimethicone 125 mg — monograph name on the carton is Extra Strength simethicone 125 mg. Do not reuse `gasx-max-softgels` (that family flags Red 33 + Blue 1 + TiO2). Softgel carrier ≠ gummy seed-oil High. Ages 12+.',
+
     retailers: [...DT],
     cleanAlternatives: ACID_REDUCER_ALTS,
     sourcesGeneral: [
@@ -1160,10 +1129,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Tocopherol', 'cleared', dailymed(SET_A6, METH.tocopherols)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Assured Hydrocortisone cream = Avoid (methylparaben + ethylparaben). New formulaId `assured-hydrocortisone-parabens`. DailyMed setid bc97f364 (NDC 55621-018-28). Drug Facts also list aloe, cetyl alcohol, dimethicone, EDTA, glycerin, glyceryl monostearate, isohexadecane, methyl gluceth-20, petrolatum, phenoxyethanol, propylene glycol, sodium citrate, stearic acid, water, ginger root extract. Propylene glycol is oral-scoped and is not scored as Moderate on this topical (`' +
-      METH.pgTopical +
-      '). Phenoxyethanol / isohexadecane / ginger are not in Methodology §5 (ungraded; not the Avoid drivers). Ages 2+ (under 2: ask a doctor).',
+
     retailers: [...DT],
     cleanAlternatives: [
       {
@@ -1196,8 +1162,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polysorbate 80', 'moderate', dailymed(SET_A7, METH.ps80)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Assured Lidocaine pain gel = Avoid (parabens + TiO2). New formulaId `assured-lidocaine-parabens-tio2`. DailyMed setid bdbd4106 (NDC 69159-100-01). Drug Facts: dihydroxyaluminum aminoacetate, glycerin, kaolin, methylparaben, propylparaben, propylene glycol, PVP, polyacrylic acid, polysorbate 80, sodium polyacrylate, titanium dioxide, tartaric acid, water. Propylene glycol is oral-scoped and is not scored as Moderate on this topical. Kaolin / polyacrylate / tartaric acid are not in Methodology §5 (ungraded; not the Avoid drivers). Lidocaine as the topical anesthetic active stays parked — inactives graded only. Ages 12+ typical for 4% lidocaine.',
+
     retailers: [...DT],
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
@@ -1227,8 +1192,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', dailymed(SET_A10, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Family Wellness Children’s APAP suspension = Avoid (butylparaben + propylparaben + sucralose + oral PG). New formulaId `family-wellness-childrens-apap-parabens` — not `store-children-apap-dyed-liquid` (that family is dyed + benzoate, not parabens). DailyMed setid 902c1136 (NDC 55319-930-03). Drug Facts: butylparaben, citric acid, flavor, glycerin, maltitol, microcrystalline cellulose and carboxymethylcellulose sodium, propylene glycol, propylparaben, purified water, sucralose, xanthan gum. Ages 2+. Do not invent a Clean dollar-store kids APAP.',
+
     retailers: [...FD],
     cleanAlternatives: KIDS_APAP_ALTS,
     sourcesGeneral: [
@@ -1254,8 +1218,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Edetate disodium', 'cleared', dailymed(SET_A11, METH.edta)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Family Wellness Max Strength 1% HC cream = Avoid (methylparaben + propylparaben). New formulaId `family-wellness-hc-max-parabens`. DailyMed setid bca5ac2c (NDC 55319-982). Drug Facts: aloe barbadensis leaf juice, cetyl alcohol, disodium EDTA, glyceryl monostearate, methylparaben, mineral oil, petrolatum, polysorbate 60, propylene glycol, propylparaben, purified water, sorbitan monostearate. Polysorbate 60 is not PS80 / PS20 and is not in Methodology §5 (ungraded). Propylene glycol is oral-scoped and is not scored as Moderate on this topical. Separate from Assured HC (ethylparaben stack) and from DG Health HC (BHT). Ages 2+ (under 2: ask a doctor).',
+
     retailers: [...FD],
     cleanAlternatives: [
       {
@@ -1292,8 +1255,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Ibuprofen coated tablets = Avoid (TiO2). New formulaId `dg-health-ibuprofen-coated-tio2` — representative high-conf SPL setid fd27d4e1 (NDC 55910-604; iron-oxide brown coat, no dye lakes). Twin setid 98492b9f is the same TiO2 / PS80 / PEG list. Dyed + talc twin setid b514b589 (NDC 55910-758; Red 40 lake + Yellow 6 lake + talc + TiO2) is the same Avoid aisle and is not a second grade — confirm the bottle. Iron oxides are not in Methodology §5 (ungraded; not the Avoid driver). Do not silently merge into `ibu-equate-standard` / `ibu-kirkland-ib-caplets` (those are separate coats). Ages 12+.',
+
     retailers: [...DG],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1337,8 +1299,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_A13, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Ibuprofen liquid gels = Avoid (Green #3 + TiO2). New formulaId `dg-health-ibuprofen-liqui-gels-green3-tio2` — do not reuse `ibu-advil-liqui-gels` (Advil flags Green #3 + PEG, not TiO2) and do not silently merge into `ibu-topcare-liqui-gels-green3-tio2` (different MCT / ink stack). DailyMed setid 1dd4ffc5 (NDC 55910-650). Drug Facts: FD&C green 3, gelatin, lecithin, medium chain triglyceride, polyethylene glycol 600, potassium hydroxide, propylene glycol, purified water, shellac, sodium lauryl sulfate, sorbitol sorbitan solution, titanium dioxide. High drivers are Green #3 + TiO2. MCT is not in Methodology §5 (ungraded; v1.6 intake; notes-only — Avoid already stands on the dye). SLS is standalone Caution (irritant class, not additive-scored) and is not the Avoid driver. Softgel carrier ≠ gummy seed-oil High. Ages 12+.',
+
     retailers: [...DG],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -1372,8 +1333,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polysorbate 80', 'moderate', dailymed(SET_A14, METH.ps80)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Pain Relief APAP dyed lakes = Avoid (Red 40 lake + Yellow 6 lake). New formulaId `dg-health-apap-red40-yellow6` — not L484 / PEG-only (`apap-store-es-l484-peg`) and not the Red 40 + TiO2 CVS/up&up coats (this SPL has no titanium dioxide). DailyMed setid 42f0c87c (NDC 55910-506). Drug Facts: croscarmellose sodium, crospovidone, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, mica-based pearlescent pigment, polyethylene glycol, polysorbate 80, povidone, pregelatinized starch, stearic acid. Mica pigment is not in Methodology §5 (ungraded; not the Avoid driver). Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...DG],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -1412,9 +1372,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polysorbate 80', 'moderate', dailymed(SET_A15A, METH.ps80)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Pain Relief PM Extra Strength = Avoid (Blue #1 / #2 + TiO2). New formulaId `dg-health-pain-relief-pm`. DailyMed setid 4d1eddf0 (NDC 55910-437). Drug Facts: carnauba wax, crospovidone, FD&C blue #1 aluminum lake, FD&C blue #2 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, povidone, pregelatinized starch, sodium starch glycolate, stearic acid, titanium dioxide. Do not reuse `tylenol-pm-es` (different inactive stack). Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SEDATING,
+
     retailers: [...DG],
     cleanAlternatives: [...SLEEP_ALTS, ...APAP_500_ALTS],
     sourcesGeneral: [
@@ -1450,9 +1408,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Polysorbate 80', 'moderate', dailymed(SET_A15B, METH.ps80)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Sleep Aid DPH = Avoid (Blue #1 / #2 + TiO2). New formulaId `dg-health-sleep-aid-dph` — DPH-only, not the APAP + DPH Pain Relief PM row. DailyMed setid 038c1b4e (NDC 55910-431). Drug Facts: carnauba wax, crospovidone, dibasic calcium phosphate dihydrate, FD&C blue #1 aluminum lake, FD&C blue #2 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, pregelatinized starch, stearic acid, titanium dioxide. Ages 12+ (under 12: do not use). ' +
-      SEDATING,
+
     retailers: [...DG],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -1487,8 +1443,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_A17A, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Cold + Flu daytime softgels = Avoid (Red 40 + Yellow 6). Representative high-conf row — one of two A17 reps (do not explode into every day/night SKU). New formulaId `dg-health-cold-flu-day-softgels`. DailyMed setid ff4a2f0a (NDC 55910-994). Drug Facts: edible ink*, FD&C red no. 40, FD&C yellow no. 6, gelatin, glycerin, polyethylene glycol, povidone, propylene glycol, purified water, sorbitol sorbitan solution (*may contain). No TiO2 on this SPL. Softgel carrier ≠ gummy seed-oil High. Day/night kit setid ddcc1e78 is the same dyed-softgel Avoid aisle and is not a third grade. Stay under 4 g/day acetaminophen. Ages 12+.',
+
     retailers: [...DG],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1521,9 +1476,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Flavor', 'limited', dailymed(SET_A17B, METH.flavors)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Cold & Flu nighttime liquid = Avoid (Blue #1 + Red 40). Second A17 representative row. New formulaId `dg-health-cold-flu-night-liquid`. DailyMed setid 3d8ce88e (NDC 55910-459). Drug Facts: alcohol, anhydrous citric acid, FD&C blue no. 1, FD&C red no. 40, flavor, high fructose corn syrup, polyethylene glycol, propylene glycol, purified water, saccharin sodium, sodium citrate. HFCS is parked / ungraded (Methodology §5) — mentioned as present only; not a new lock. Alcohol is not in Methodology §5 (ungraded; not the Avoid driver). Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SEDATING,
+
     retailers: [...DG],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1547,10 +1500,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Butylated hydroxytoluene', 'high', dailymed(SET_A18, METH.bht)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Hydrocortisone 1% cream = Avoid (BHT). New formulaId `dg-health-hydrocortisone-bht`. DailyMed setid 3d298bd8 (NDC 55910-541-16). Drug Facts: water, cetearyl alcohol, cetyl palmitate, glycerin, isopropyl myristate, isostearyl neopentanoate, ceteareth-20, diazolidinyl urea, sorbic acid, aloe barbadensis leaf juice, BHT, sodium hydroxide. BHT is High-tier Avoid. ' +
-      PARKED_FORMALDEHYDE +
-      ' Sorbic acid / ceteareth-20 / isostearyl neopentanoate are not in Methodology §5 (ungraded; not the Avoid driver). Separate from Assured / Family Wellness paraben HC creams. Ages 2+ (under 2: ask a doctor).',
+
     retailers: [...DG],
     cleanAlternatives: [
       {
@@ -1587,8 +1537,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Omeprazole DR = Avoid (TiO2 + talc). New formulaId `dg-health-omeprazole-tio2-talc` — do not reuse `prilosec-otc` (that row is omeprazole magnesium with a different PEG coat). DailyMed setid 326bf21c (NDC 55910-915). Drug Facts: carnauba wax, ferric oxide red, ferric oxide yellow, hypromellose, hypromellose acetate succinate, lactose monohydrate, monoethanolamine, propylene glycol, sodium lauryl sulfate, sodium starch glycolate, sodium stearate, sodium stearyl fumarate, talc, titanium dioxide, triethyl citrate. High drivers are TiO2 + talc. SLS is standalone Caution (irritant class, not additive-scored) and is not the Avoid driver. Iron oxides / methacrylic housekeeping / triethyl citrate are not in Methodology §5 (ungraded; not the Avoid drivers). Contains lactose. Labeled 18+ (children under 18: ask a doctor).',
+
     retailers: [...DG],
     cleanAlternatives: ACID_REDUCER_ALTS,
     sourcesGeneral: [
@@ -1621,8 +1570,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', dailymed(SET_A21, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: DG Health Infants’ Ibuprofen = Avoid (Red 40). New formulaId `dg-health-infants-ibuprofen-red40` — infants concentrated 50 mg / 1.25 mL; do not merge into `store-children-ibu-dyed-liquid` (that family is 100 mg / 5 mL, minAge 2). DailyMed setid 9022e393 (NDC 55910-503-05). Drug Facts: anhydrous citric acid, FD&C red #40, glycerin, hypromellose, natural and artificial berry flavor, polysorbate 80, purified water, sodium benzoate, sorbitol solution, sucrose, xanthan gum. Infant-labeled (minAge 0; confirm the dosing chart / ask-a-doctor under 6 months on the bottle). No independently Clean kids ibuprofen exists in the drafted batches — cleanAlternatives omitted (honest empty; do not invent a Clean kids IBU; do not point at adult dye-free IBU — §6 age-matching). Prefer Genexa Infants acetaminophen only if a different-active analog is acceptable; that swap is not listed here because it is not ibuprofen.',
+
     retailers: [...DG],
     sourcesGeneral: [
       `DailyMed setid ${SET_A21} (DG Health infants IBU NDC 55910-503-05; draft, not verified)`,

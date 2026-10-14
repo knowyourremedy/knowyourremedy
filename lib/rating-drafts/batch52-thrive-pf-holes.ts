@@ -101,9 +101,6 @@ const UNVERIFIED_NOTE = 'draft, not verified';
 
 const THRIVE = ['Thrive Market'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const OIL_FILL_TAP =
   'Seed/industrial oils are flagged in gummies. In this capsule / softgel fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -321,8 +318,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       flag('Organic sucrose', 'cleared', labelCite(CITE.ollois, METH.sucrose)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Ollois Arnica Montana 12C pellets = Clean. Only scored inactive is organic sucrose (Cleared sweetener / pellet base). Lactose-free — do not clone Boiron Arnica 30C pellets (that row is lactose+sucrose and stays reuse-only on main). Homeopathic pellets — cleanliness only, no efficacy claim. Pack sizes share this formulaId. Label directions: adults/children. Ages 2+. Draft, not verified.',
+
     retailers: [...THRIVE, 'Ollois'],
     sourcesGeneral: [`${CITE.ollois} — ${UNVERIFIED_NOTE}`],
   }),
@@ -355,8 +351,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      "FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Turmeric = Clean. Current brand / NHC other-ingredients: pullulan capsules and nothing else. Organic pullulan is the locked HPMC-family vegan cap. Turmeric + BioPerine are labeled actives listed neutrally — this draft grades inactives only and makes no efficacy claim. Older gelatin-capsule snapshots are a different unmatched formula — not this row. Pack sizes (60 / 120) share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.",
+
     retailers: [...THRIVE, "Oregon's Wild Harvest"],
     sourcesGeneral: [`${CITE.owh} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -386,8 +381,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Organic India Turmeric Formula = Clean. Other-ingredients: organic pullulan only (locked HPMC-family vegan cap). Turmeric / black pepper / ginger / long pepper are labeled actives listed neutrally — this draft grades inactives only and makes no efficacy claim. 90-ct + 180-ct share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...THRIVE, 'Organic India'],
     sourcesGeneral: [`${CITE.organicIndia} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -427,8 +421,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Sports Research Turmeric Curcumin softgel = Clean. Named coconut-oil fill is Cleared (fill ≠ gummy High — that High rule is the Sports Research gummy SKU, not this softgel). ${OIL_FILL_TAP} Gelatin / glycerin / water / organic beeswax are Cleared. Contains tree nuts (coconut) — allergen disclosure, not a grade. Turmeric + BioPerine are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...THRIVE, 'Sports Research', 'Target'],
     sourcesGeneral: [`${CITE.sportsResearch} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -464,8 +457,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       flag('Silica', 'cleared', labelCite(CITE.wellmade, METH.sio2)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: wellmade by Thrive Market Turmeric = Caution. Driver is silica / silicon dioxide (0-pt Caution cap). HPMC / water / vegetable cellulose are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap. Distinct from batch 27 wellmade probiotics / vitamin C (those rows stay reuse-only). Turmeric + black pepper are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...THRIVE],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.wellmade} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -506,8 +498,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: New Chapter Turmeric Force = Clean. Extra-virgin olive oil is the named capsule fill (Cleared; fill ≠ gummy High). ${OIL_FILL_TAP} HPMC + organic yellow beeswax are Cleared. Do not write Turmeric Force Nighttime (founder skip). Turmeric extracts are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults (not recommended for use in children). No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.newChapter} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -546,8 +537,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Codeage Liposomal Turmeric+ = Clean. Current Fullscript / Swanson other-ingredients: methylcellulose capsule + phospholipid complex (non-GMO sunflower oil, sunflower lecithin). Sunflower-oil fill is Cleared (fill ≠ gummy High). ${OIL_FILL_TAP} Sunflower lecithin is the locked lecithin row. Methylcellulose is Cleared with the HPMC / MCC family. Older “sunflower lecithin, phosphatidylcholine” snapshots are a different unmatched formula — not this row. Fermented turmeric / botanical blends are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -573,8 +563,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Life-flo Pure Magnesium Oil spray = Clean. Label ingredients: magnesium chloride brine only (nothing added / nothing removed). Magnesium chloride is the locked exact Cleared salt token. This is a topical brine spray, not a cooking-oil bottle and not an OilInfoRecord. External use only. Pack sizes share this formulaId when the ingredients list holds. No DailyMed drug SPL. Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...THRIVE, 'Life-flo'],
     sourcesGeneral: [`${CITE.lifeFloOil} — ${UNVERIFIED_NOTE}`],
   }),
@@ -623,8 +612,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Gaia Herbs Turmeric Supreme Extra Strength = Clean. Chlorophyll is the named pigment (Cleared; ≠ Caution chlorophyllin). ${CHLOROPHYLL_TAP} Sunflower lecithin / HPMC / water / vegetable glycerin are Cleared. Do not write Gaia Golden Milk (founder skip). Turmeric + black pepper are labeled actives listed neutrally. Pack sizes share this formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...THRIVE, 'Gaia Herbs'],
     sourcesGeneral: [`${CITE.gaia} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
   }),
@@ -674,8 +662,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Thorne Curcumin Phytosome 500 mg = Caution. Driver is silicon dioxide (0-pt Caution cap). Leucine is the locked exact Cleared token. HPMC / calcium laurate / calcium citrate / MCC are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap. Own formulaId — do not share with the 1000 mg SKU (per-capsule active 500 mg ≠ 1000 mg even though OI matches). Do not clone Thorne L-Glutamine Powder or Glucosamine & Chondroitin (reuse-only on main). Pack sizes of this 500 mg/cap formula share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.',
+
     retailers: [...THRIVE, 'Thorne'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.thorne500} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -726,8 +713,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Thorne Curcumin Phytosome 1000 mg = Caution. Same OI math as the 500 mg SKU (SiO2 0-pt cap; leucine Cleared; HPMC / calcium laurate / calcium citrate / MCC Cleared). Per-capsule active is 1000 mg — own formulaId ${ID.thorne1000}, do NOT clone ${ID.thorne500}. Do not clone Thorne L-Glutamine Powder or Glucosamine & Chondroitin. Pack sizes of this 1000 mg/cap formula share this formulaId. No DailyMed drug SPL (dietary supplement). Adults. No dosing or medical advice in this draft. Draft, not verified.`,
+
     retailers: [...THRIVE, 'Thorne'],
     cleanAlternatives: TURMERIC_ALTS,
     sourcesGeneral: [`${CITE.thorne1000} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -786,8 +772,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Garden of Life myKind Organics Inflammatory Response Turmeric Gummies = Avoid. Driver is organic sunflower oil for coating (gummy seed-oil High). ${GUMMY_OIL_TAP} Organic rice meal is the locked exact Caution token. ${RICE_MEAL_TAP} Fruit puree / juice concentrate as the gummy base is Limited (not the Cleared juice-as-color row). ${FRUIT_PUREE_TAP} Organic apple flavor is Limited opacity. Pectin is Cleared. Limited-only would stay Caution; Avoid needs this High. Carton also says “lightly dusted with organic rice powder, not sugar” — that dusting is the Cleared rice-flour / simple-starch family, distinct from Caution organic rice meal, and is not a second High. Label: adults 4 gummies daily; children 4+ under adult supervision. Pack sizes share this formulaId. No DailyMed drug SPL (dietary supplement). ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: GUMMY_ALTS,
     sourcesGeneral: [`${CITE.golGummy} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`],
@@ -872,8 +857,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', labelCite(CITE.lotionVanilla, METH.xanthan)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Life-flo Magnesium Lotion Vanilla = Caution. Fragrance is standalone Caution. Caprylic/capric triglyceride sits on the existing unlabeled-MCT Limited row (source not named on that token; lotion emollient / vehicle ≠ gummy High — do not invent a new methodology string). ${MCT_UNLABELED_TAP} Cetearyl glucoside is the locked exact Cleared INCI. Potassium sorbate Limited. Coconut oil / shea butter are topical cream vehicles (Cleared; not gummy High). ${CREAM_OIL_TAP} Glyceryl stearate SE / emulsifying wax NF / cetearyl alcohol / HPMC / citric acid / xanthan / water / magnesium chloride Cleared. No High. Own formulaId — do not clone the unscented lotion (that SKU has no fragrance). External use only. Pack sizes share this formulaId. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...THRIVE, 'Life-flo'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.lotionVanilla} — ${UNVERIFIED_NOTE}`],
@@ -957,8 +941,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Life-flo Magnesium Lotion Unscented = Caution. Limited-only stack (unlabeled MCT + potassium sorbate) stays Caution — never Avoid. ${LIMITED_STACK} Caprylic/capric triglyceride sits on the existing unlabeled-MCT Limited row (source not named on that token; lotion emollient / vehicle ≠ gummy High — do not invent a new methodology string). ${MCT_UNLABELED_TAP} Cetearyl glucoside is the locked exact Cleared INCI. No fragrance on this SKU. Coconut oil / shea butter are topical cream vehicles (Cleared; not gummy High). ${CREAM_OIL_TAP} Own formulaId — do not clone the vanilla lotion (that SKU adds fragrance). Written from the PureFormulas / SBNF SKU-matched panel that still lists cetearyl glucoside (the remaining founder blockers). External use only. Pack sizes share this formulaId. Draft, not verified.`,
+
     retailers: [...THRIVE, 'Life-flo'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [`${CITE.lotionUnscented} — ${UNVERIFIED_NOTE}`],

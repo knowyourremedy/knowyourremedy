@@ -258,9 +258,6 @@ const ACID_REDUCER_ALTS: CleanAlternative[] = [
   },
 ];
 
-const SAVE_MART_NOTE =
-  'Graded for the Save Mart shelf only (retailers: Save Mart). TopCare is a Topco house brand; Lucky / FoodMaxx presence is not confirmed for this exact SKU and is not invented.';
-
 export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
   {
@@ -283,9 +280,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T5_L612, 'Pregelatinized starch'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: TopCare Allergy Relief loratadine 10 mg = Clean only if L612 match — confirmed. Reuses `loratadine-l612-plain` (same L612 family as Equate / Kirkland AllerClear / Member\'s Mark / up&up). DailyMed setid a500aebf (NDC 36800-612; imprint L612). Drug Facts inactive list: lactose monohydrate, magnesium stearate, povidone, pregelatinized starch. No TiO2 / dye. Contains lactose. Ages 6+ (under 6: ask a doctor). This is not a coated / -D SKU. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     sourcesGeneral: [
       `DailyMed setid ${SET_T5_L612} (L612 plain loratadine; draft, not verified)`,
@@ -326,9 +321,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T2_SOFTGELS, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Extra Strength Pain Relief APAP 500 softgels = Avoid (dyes). New formulaId `apap-topcare-es-softgels-red40-y6` — do not reuse `apap-tylenol-es-liquid-gels` (that Tylenol family flags titanium dioxide; this TopCare SPL does not list TiO2). DailyMed setid 8cc2c735 (NDC 36800-414; imprint PC24). Drug Facts: FD&C red #40, FD&C yellow #6, gelatin, glycerin, polyethylene glycol, povidone, propylene glycol, purified water, sorbitol special, and white edible ink. High drivers are Red #40 + Yellow #6. White edible ink is ungraded appearance ink (not the Avoid driver). Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -370,9 +363,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T1_TABLETS, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Extra Strength Pain Relief APAP 500 film-coated tablets = Avoid (dyed + TiO2). New formulaId `apap-topcare-es-red40-tio2-talc` — not L484 / PEG-only (`apap-store-es-l484-peg`) and not a close enough twin of `apap-cvs-es-red40-tio2` (that CVS coat is Red 40 lake + TiO2 + sucralose without talc). DailyMed setid 6aca88df (NDC 36800-973; imprint L31G). Drug Facts: corn starch*, FD&C red #40 aluminum lake, polyethylene glycol, polyvinyl alcohol, povidone, pregelatinized starch, sodium starch glycolate*, stearic acid, sucralose, talc, titanium dioxide (*may contain). High drivers are Red 40 lake + TiO2 + talc. Polyvinyl alcohol is not in Methodology §5 (ungraded; not the Avoid driver). Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: APAP_500_ALTS,
     sourcesGeneral: [
@@ -430,9 +421,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T3A_LIQUIGELS, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Ibuprofen liquid gels / minis = Avoid. New formulaId `ibu-topcare-liqui-gels-green3-tio2` — do not reuse `ibu-advil-liqui-gels` (Advil liquigel family flags Green #3 + PEG; this TopCare Drug Facts list also has titanium dioxide). DailyMed setid 0a24c758 (NDC 36800-705; Advil Liqui-Gels minis compare). Drug Facts: ammonium hydroxide, caprylic and capric acid triglycerides, FD&C green No. 3, gelatin, isopropyl alcohol, lecithin, macrogol/PEG 400, polyethylene glycol, polyvinyl acetate phthalate, potassium hydroxide, propylene glycol, purified water, sorbitol sorbitan solution, titanium dioxide. High drivers are Green #3 + TiO2. Medium-chain triglycerides / polyvinyl acetate phthalate / ink solvents are not in Methodology §5 (ungraded; not the Avoid drivers). Gel Avoid rows stay. Ages 12+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -481,9 +470,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T3B_CAPLETS, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Ibuprofen film-coated tablets = Avoid. One representative high-conf SPL: DailyMed setid 479a0c97 (NDC 36800-517; Motrin IB compare; imprint I2). Reuses `ibu-kirkland-ib-caplets` — same High-tier store twin (Red 40 lake + Yellow 6 lake + talc + TiO2). Drug Facts: colloidal silicon dioxide, corn starch, croscarmellose sodium, FD&C red no. 40 aluminum lake, FD&C yellow no. 6 aluminum lake, iron oxides, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, stearic acid, talc, titanium dioxide. Iron oxides and polyvinyl alcohol are not in Methodology §5 (ungraded; not the Avoid drivers). A separate TopCare tablet SPL (setid 66097f19, NDC 36800-604; Advil-compare brown I2 tablet) is TiO2 + iron oxides without dye lakes / talc — same Avoid family, different formula, not this row; do not merge into `ibu-equate-standard`. Ages 12+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: ibuAlts(),
     sourcesGeneral: [
@@ -531,9 +518,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T4_DUAL, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Dual Action = Avoid (high-tier inactives confirmed). New formulaId `apap-ibu-topcare-dual-action-tio2-talc` — do not reuse `apap-ibu-advil-dual-action` (Advil dual-action row is TiO2 only; this SPL also has talc). DailyMed setid dddc04c4 (NDC 76162-501 — still TopCare Dual Action on the label; Advil Dual Action compare; imprint I;I). Drug Facts: colloidal silicon dioxide, corn starch, croscarmellose sodium, crospovidone, ferric oxide yellow, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, povidone, pregelatinized starch, stearic acid, sucralose, talc, titanium dioxide. High drivers are TiO2 + talc. Ferric oxide yellow and polyvinyl alcohol are not in Methodology §5 (ungraded; not the Avoid drivers). Dual-action Avoid rows stay — listed swaps are single-active analogs, not a 250/125 replacement. Stay under 4 g/day acetaminophen. Ages 12+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: DUAL_ACTION_ALTS,
     sourcesGeneral: [
@@ -571,9 +556,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T6_LORATADINE_D, 'Povidone'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Allergy & Congestion Relief (loratadine-D) = Avoid. Reuses `equate-loratadine-d-tio2` — same 5/120 TiO2 family as Equate / Claritin-D 12 Hour (no dye lakes on this SPL). DailyMed setid dd93d172 (NDC 36800-611; imprint 7U0). Drug Facts: croscarmellose sodium, dibasic calcium phosphate, hypromellose, lactose monohydrate, magnesium stearate, pharmaceutical ink, povidone, titanium dioxide. High driver is TiO2. Pharmaceutical ink is ungraded appearance ink (not the Avoid driver). Contains lactose. Ages 12+ (under 12: ask a doctor). Swallow whole — do not divide, crush, chew, or dissolve. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -618,9 +601,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T7_CETIRIZINE, 'Triacetin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare All Day Allergy cetirizine 10 mg = Avoid. MUST reuse `store-cetirizine-coated-blue1-tio2` — same Blue #1 lake + TiO2 coat family as Equate / Member\'s Mark / CVS / Kirkland Aller-Tec (batch 5 / batch 20). DailyMed setid f2919aad (NDC 36800-458; imprint 4H2). Drug Facts: corn starch, FD&C blue no. 1 aluminum lake, hypromellose, lactose monohydrate, magnesium stearate, polydextrose, polyethylene glycol, povidone, titanium dioxide, triacetin. High drivers are TiO2 + Blue #1 lake. Polydextrose and triacetin are not independently graded in Methodology §5 (ungraded; v1.6 intake; not the Avoid drivers). Contains lactose. Ages 6+. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
@@ -662,9 +643,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T8_MUCUS_DM, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Mucus DM ER = Avoid (lakes = Avoid). Reuses `upup-mucus-dm-er-yellow10` — same Yellow #10 lake family and 600/30 strength as Target up&up / Mucinex DM (batch 3). DailyMed setid c12c68c3 (NDC 36800-219; imprint L219;600). Drug Facts: carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide. Yellow #10 lake is High-tier Avoid. Silicon dioxide is the nanoparticle Caution cap (not needed to reach Avoid). Do not silently merge into batch 20 `kirkland-mucus-dm-max-er` (that club row is 1200/60). Ages 12+ (under 12: do not use). Swallow whole with water — do not crush, chew, or break. ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -729,9 +708,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       cleared(SET_T10_ESOMEPRAZOLE, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: TopCare Esomeprazole Magnesium 20 mg delayed-release capsules = Avoid. New formulaId `topcare-esomeprazole-20-dyes-tio2` — different active from Prilosec OTC (omeprazole); do not reuse `prilosec-otc`. DailyMed setid 86384845 (NDC 36800-627; Nexium 24HR ClearMinis compare; imprint 7U4). Drug Facts: FD&C blue no. 1, FD&C blue no. 1 aluminum lake, FD&C red no. 3, ferric oxide, gelatin, glyceryl monostearate, hypromellose, magnesium stearate, meglumine, methacrylic acid and ethyl acrylate copolymer dispersion, polyethylene glycol, polysorbate 80, shellac, sodium lauryl sulfate, sugar spheres, talc, titanium dioxide, triethyl citrate. High drivers are Blue #1 (+ lake) + Red #3 + TiO2 + talc — same High-tier Avoid pattern as batch 10 Prilosec OTC (TiO2 / talc). SLS is standalone Caution (irritant class, not additive-scored) and is not the Avoid driver. Ferric oxide, meglumine, methacrylic copolymer, shellac, sugar spheres, glyceryl monostearate, and triethyl citrate are delayed-release / capsule housekeeping and are not in Methodology §5 (ungraded; not the Avoid drivers). Nexium 24HR / Prevacid OTC remain skipped. Labeled 18+ (children under 18: ask a doctor). ' +
-      SAVE_MART_NOTE,
+
     retailers: [...SAVE_MART],
     cleanAlternatives: ACID_REDUCER_ALTS,
     sourcesGeneral: [

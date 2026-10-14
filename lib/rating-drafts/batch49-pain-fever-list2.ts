@@ -76,12 +76,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -200,8 +194,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: ultraflexPatchInactives(SET.ultraflex),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze UltraFlex Lidocaine 4% Patch = Avoid. Driver is butylated hydroxytoluene (BHT High). Glyceryl hydrogenated rosinate sits on the locked rosin-ester Caution row. Polyisobutylene + styrene/isoprene/styrene block copolymer sit on the locked patch-adhesive Caution row. Mineral oil is topical-occlusive Cleared. 4-ct (NDC 59316-899-04) + 1-ct (NDC 59316-899-07) share this formulaId — one Search row. Do not merge into UltraFlex Plus (that SPL adds menthol 1%). Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -224,8 +217,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
     ],
     inactiveIngredients: ultraflexPatchInactives(SET.ultraflexPlus),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Biofreeze UltraFlex Plus Lidocaine 4% + Menthol 1% Patch = Avoid. Same OI math as UltraFlex (BHT High; glyceryl hydrogenated rosinate / PIB / SIS Caution; mineral oil Cleared). Actives differ (this SPL adds menthol 1%) — own formulaId ${ID.ultraflexPlus}, do NOT clone ${ID.ultraflex}. 4-ct (NDC 59316-898-04) + 1-ct (NDC 59316-898-07) share this formulaId — one Search row. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -280,8 +272,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
       cleared(SET.capzasin, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Capzasin Quick Relief Gel = Avoid. Drivers are methylparaben + propylparaben (High in every form, including rubs). Remaining Drug Facts exact: acrylates/C10-30 alkyl acrylate crosspolymer / DMDM hydantoin / fragrance / phenoxyethanol / steareth-2 / steareth-21 / triethanolamine standalone Caution; SD alcohol 40-2 Limited (vehicle); allantoin / aloe / glycerin / water Cleared. ${PG_TOPICAL_TAP} Pack sizes (NDC 41167-7516) share this formulaId. Ages 18+ (18 or younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -315,8 +306,7 @@ export const BATCH49_PAIN_FEVER_LIST2: RatingRecord[] = [
       cleared(SET.mineralIce, 'Water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Mineral Ice Extreme Menthol Pain Relief Spray 10.5% = Caution. Fragrance is standalone Caution. Alcohol denat. is Limited (vehicle). Methylsulfonymethane is the SPL spelling of MSM / methylsulfonylmethane — locked exact Cleared inactive token. Isopropyl myristate + water Cleared. No High. Pack sizes (NDC 82632-252) share this formulaId. Ages 12+ (under 12: consult a physician). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

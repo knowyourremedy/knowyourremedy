@@ -57,9 +57,6 @@ const ALLERGIES = 'Allergies';
 
 const THRIVE = ['Thrive Market'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const OIL_FILL_TAP =
   'Seed/industrial oils are flagged in gummies. In this capsule / softgel / drop fill they are not that High rule. Named single oil as the base or fill is Cleared.';
 
@@ -510,117 +507,6 @@ const CITE = {
   nordic_zero_sugar_melatonin_gummies: 'Thrive Nordic Zero Sugar Melatonin Gummies https://thrivemarket.com/p/nordic-naturals-zero-sugar-melatonin-gummies-raspberry SKU 768990301889 other-ingredients: Soluble Tapioca Fiber, Purified Water, Pectin, Citric Acid, Fruit And Vegetable Juice (Color), Sodium Citrate Dihydrate, Sunflower Oil, Carnauba Wax',
 } as const;
 
-const CLEAN_IN_BATCH = [
-  'ritual-natal-choline',
-  'natural-vitality-calm-unflavored',
-  'host-defense-mycommunity',
-  'host-defense-lions-mane',
-  'host-defense-mycobenefits-focus',
-  'enzymedica-digest-spectrum',
-  'enzymedica-digest-gold-atpro',
-  'biogaia-protectis-baby-drops-d3',
-  'hilma-dairy-gluten-enzymes',
-  'herb-pharm-ashwagandha-af',
-  'herb-pharm-kids-immune-avenger-af',
-  'herb-pharm-kids-lemon-balm-calm-af',
-  'herb-pharm-kids-immune-fortifier-af',
-  'jarrow-vitamin-d3-5000',
-  'om-master-blend-capsules',
-  'om-lions-mane-capsules',
-  'arrae-mb-1',
-  'arrae-bloat-relief',
-  'arrae-magnesium',
-  'bodybio-liposomal-glutathione',
-  'bodybio-liposomal-vitamin-c',
-  'bodybio-remineralize',
-  'trace-liquid-ionic-d3-k2',
-  'trace-beef-liver',
-  'trace-probiotic-55-billion',
-  'trace-concentrace-drops',
-  'trace-mega-mag',
-  'trace-40000-volts',
-  'solaray-berberine-500',
-  'country-life-activated-charcoal',
-  'youtheory-collagen-tablets',
-  'ancient-super-greens-unflavored',
-  'ancient-nutrition-magnesium',
-  'himalaya-stresscare',
-  'banyan-liver-formula',
-  'banyan-womens-natural-transition',
-  'carlson-super-omega-3-gems',
-  'great-lakes-beef-gelatin',
-  'thrive-collagen-peptides-unflavored',
-  'owh-milk-thistle',
-  'owh-milk-thistle-dandelion',
-  'owh-saw-palmetto',
-  'owh-ashwagandha',
-  'owh-rhodiola',
-  'owh-ginger',
-  'owh-hawthorn',
-  'owh-echinacea-zn-c',
-  'new-chapter-turmeric-force-nighttime',
-  'codeage-womens-fermented-multi',
-  'codeage-teen-multi',
-  'codeage-liposomal-nr-eternal',
-  'codeage-liposomal-glutathione',
-  'codeage-fermented-digestive-enzymes',
-  'codeage-adk',
-  'codeage-grass-fed-beef-organs',
-  'codeage-grass-fed-beef-liver',
-  'codeage-liposomal-nmn',
-  'codeage-liposomal-nmn-platinum',
-  'codeage-liposomal-nad',
-  'codeage-liposomal-nad-ultra-sport',
-  'codeage-mag-l-threonate',
-  'codeage-mag-glycinate',
-  'codeage-ovarian-inositol',
-  'codeage-teen-clearface',
-  'codeage-creatine-monohydrate-powder',
-  'codeage-glp-harmony',
-  'codeage-full-spectrum-binder',
-  'codeage-hair-platinum',
-  'codeage-teen-brain-focus',
-  'codeage-urolithin-a-eternal',
-  'codeage-vitamin-c-platinum',
-  'codeage-menopause-hair-skin',
-  'codeage-instantfood-whole-food-c',
-  'codeage-molecular-hydrogen',
-  'codeage-hair-vitamins',
-  'maryruth-oregano-oil-drops',
-  'maryruth-infant-toddler-d3-unflavored',
-  'maryruth-toddler-d3-k2-unflavored',
-  'gol-vitamin-code-raw-c',
-  'gol-vitamin-code-raw-d3',
-  'gol-vitamin-code-raw-zinc',
-  'gol-vitamin-code-raw-b12',
-  'gol-vitamin-code-raw-iron',
-  'gol-vitamin-code-raw-b-complex',
-  'gol-vitamin-code-womens',
-  'gol-vitamin-code-mens',
-  'gol-vitamin-code-womens-50',
-  'gol-vitamin-code-raw-calcium',
-  'gol-once-daily-womens-probiotic',
-  'gol-once-daily-mens-probiotic',
-  'gol-mood-plus',
-  'gol-womens-ph-pre-pro-post',
-  'wellmade-ashwagandha',
-  'wellmade-milk-thistle',
-  'wellmade-hsn',
-  'wellmade-red-yeast-rice',
-  'wellmade-cranberry',
-  'wellmade-elderberry',
-  'wellmade-mood-plus',
-  'wellmade-evening-primrose',
-  'wellmade-propolis-throat-spray',
-  'wellmade-organic-acacia-fiber',
-  'new-chapter-wholemega',
-  'new-chapter-elderberry-syrup',
-  'new-chapter-kids-elderberry-syrup',
-  'new-chapter-estrotone',
-  'new-chapter-prostate-5lx',
-  'nordic-prenatal-dha',
-] as const;
-
 export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
   row({
     id: 'ritual-natal-choline',
@@ -642,7 +528,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ritual_natal_choline, 'Purified water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Natal Choline = Clean. Glycerin / HPMC / water only. Distinct from the SiO2 prenatal / postnatal / omega rows. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Ritual'],
     sourcesGeneral: [`${CITE.ritual_natal_choline} — ${UNVERIFIED_NOTE}`],
   }),
@@ -668,7 +554,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ritual_womens_prenatal_multi, 'L-Leucine', 'cleared', METH.leucine),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Women's Prenatal (Thrive 040) = Caution. Driver is silica / SiO2. Do not write the current ritual.com citrus panel as this UPC. Own formulaId vs postnatal. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean in-batch ritual-natal-choline. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -697,7 +583,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ritual_womens_postnatal_multi, 'L-Leucine', 'cleared', METH.leucine),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Women's Postnatal = Caution. Same OI math as Thrive prenatal (SiO2) but labeled postnatal actives — own formulaId. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean in-batch ritual-natal-choline. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -725,7 +611,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ritual_omega_3_dha_epa, 'Mixed tocopherols', 'cleared', METH.tocopherols),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ritual Omega-3 = Caution. Silica cap + Limited orange-oil flavor. Named orange oil is not a Clean auto-pass. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Ritual'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -749,7 +635,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Unflavored = Clean. Ionic magnesium citrate is the active (formation chemistry under Supplement Facts). No flavor / stevia / silica. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     sourcesGeneral: [`${CITE.natural_vitality_calm_unflavored} — ${UNVERIFIED_NOTE}`],
   }),
@@ -772,7 +658,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.natural_vitality_calm_raspberry_lemon, 'Organic stevia (leaf) extract', 'cleared', METH.steviaLeaf),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Raspberry Lemon powder = Caution. Limited flavor + whole-leaf / leaf-extract stevia (do not auto-Clean). 16 oz + 8 oz share formulaId. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -804,7 +690,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.natural_vitality_calm_sleep_gummies, 'Organic carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Sleep gummies = Avoid. Organic sunflower oil in a gummy is High. Named juice-as-color Cleared. Flavors Limited (not needed for Avoid). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -837,7 +723,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.natural_vitality_calm_gummies_raspberry_lemon, 'Locust bean gum', 'cleared', METH.locust),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Raspberry Lemon gummies = Caution. Limited flavors. Locust bean + agar Cleared (Sept 16). Named black-carrot color Cleared. No sunflower oil — do not clone Sleep Avoid. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -869,7 +755,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.natural_vitality_calm_gummies_orange, 'Locust bean gum', 'cleared', METH.locust),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Orange gummies = Caution. Limited flavor + annatto (standalone Caution, not Avoid). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -902,7 +788,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.natural_vitality_calm_kids_gummies, 'Locust bean gum', 'cleared', METH.locust),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: CALM Kids Sweet Citrus = Caution. Limited flavors + annatto. 60/120 share formulaId. Ages 4+. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Natural Vitality'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -936,7 +822,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_kids_chewable_probiotic, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Kids Chewable = Caution. Xylitol + flavors Limited; silica 0-pt cap. Named beet-root color Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     sourcesGeneral: [`${CITE.lovebug_kids_chewable_probiotic} — ${UNVERIFIED_NOTE}`],
   }),
@@ -961,7 +847,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_advanced_strength_daily, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Advanced Strength (Thrive carton) = Caution. Silica cap. HPMC/gellan/MCC/leucine Cleared. Do not write the brand-site stearate panel as this UPC. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -988,7 +874,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_organic_baby_probiotic_drops, 'Natural source of vitamin E', 'cleared', METH.tocopherols),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Baby Drops = Caution. Unlabeled MCT (source not named) + SiO2 cap. Drop MCT fill is not gummy High. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     cleanAlternatives: [
       alt('biogaia-protectis-baby-drops-d3', 'Independently Clean in-batch biogaia-protectis-baby-drops-d3. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1016,7 +902,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_yeast_vaginal_ph, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Yeast & Vaginal pH = Caution. SiO2 cap. Capsule polymer is named HPMC — not the unnamed Enteric Coating Caution row. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1042,7 +928,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_tiny_tummies_0_6, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Tiny Tummies 0–6 = Caution. SiO2 cap. Organic Tapioca Fiber Powder Cleared (Sept 16). Own formulaId vs older ages (OI differs). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     sourcesGeneral: [`${CITE.lovebug_tiny_tummies_0_6} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1066,7 +952,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_tiny_tummies_6_12, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Tiny Tummies 6–12 = Caution. SiO2 cap. Inulin + tapioca fiber Cleared. Own formulaId vs 0–6 (added inulin). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     sourcesGeneral: [`${CITE.lovebug_tiny_tummies_6_12} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1090,7 +976,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_tiny_tummies_12mo_4yr, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Tiny Tummies 12 mo–4 yr = Caution. Same OI math as 6–12 but labeled toddler actives / age — own formulaId. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     sourcesGeneral: [`${CITE.lovebug_tiny_tummies_12mo_4yr} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1115,7 +1001,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_postnatal_probiotic, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Postnatal (Thrive carton) = Caution. SiO2 cap. Honest note: label typo Microcrystalline Cellulosse (MCC alias). Brand current SF without gellan/typo is a different unmatched formula. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     cleanAlternatives: [
       alt('ritual-natal-choline', 'Independently Clean in-batch ritual-natal-choline. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1149,7 +1035,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_kids_probiotic_gummies, 'Corn starch', 'cleared', METH.starch),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: LoveBug Kids Probiotic Gummies = Avoid. Organic sunflower oil in a gummy is High. Named black-carrot color now Cleared (Sept 16 restamp) — color is not the Avoid driver. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'LoveBug'],
     sourcesGeneral: [`${CITE.lovebug_kids_probiotic_gummies} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1172,7 +1058,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.host_defense_mycommunity, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Host Defense MyCommunity (Thrive carton) = Clean. Myceliated brown rice is food-state / ferment media. Pullulan Cleared. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Host Defense'],
     sourcesGeneral: [`${CITE.host_defense_mycommunity} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1194,7 +1080,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.host_defense_lions_mane, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Host Defense Lion's Mane capsules = Clean. Pullulan only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Host Defense'],
     sourcesGeneral: [`${CITE.host_defense_lions_mane} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1217,7 +1103,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.host_defense_mycobenefits_focus, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Host Defense MycoBenefits Focus = Clean. Dicalcium phosphate + pullulan. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Host Defense'],
     sourcesGeneral: [`${CITE.host_defense_mycobenefits_focus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1239,7 +1125,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.enzymedica_digest_spectrum, 'Vegetarian capsule (HPMC, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Enzymedica Digest Spectrum = Clean. HPMC / water only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Enzymedica'],
     sourcesGeneral: [`${CITE.enzymedica_digest_spectrum} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1261,7 +1147,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.enzymedica_digest_gold_atpro, 'Vegetarian capsule (HPMC, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Enzymedica Digest Gold + ATPro = Clean. HPMC / water only. Distinct formulaId from Digest Spectrum (actives differ). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Enzymedica'],
     sourcesGeneral: [`${CITE.enzymedica_digest_gold_atpro} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1284,7 +1170,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.biogaia_protectis_baby_drops_d3, 'Vitamin E', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: BioGaia Protectis Baby Drops + D3 = Clean. Named sunflower-oil fill is Cleared (fill ≠ gummy High). Tocopherols Cleared. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'BioGaia'],
     sourcesGeneral: [`${CITE.biogaia_protectis_baby_drops_d3} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1310,7 +1196,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_gas_bloat, 'Sunflower oil', 'cleared', METH.sunflowerFill),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Gas & Bloat = Caution. Unspecified rice extract is Limited opacity. Rice hull concentrate Cleared. Sunflower-oil fill ≠ gummy High. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1337,7 +1223,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_daily_pre_probiotic, 'Rice hull concentrate', 'cleared', METH.riceHull),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Daily Pre & Probiotic = Caution. Unspecified rice extract Limited. Honest note: Thrive prints Modigied Cellulose (label typo). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1364,7 +1250,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_sleep_support, 'Rice hull concentrate', 'cleared', METH.riceHull),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Sleep Support = Caution. Rice extract blend is unspecified rice extract (Limited). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('new-chapter-turmeric-force-nighttime', 'Independently Clean in-batch new-chapter-turmeric-force-nighttime. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1391,7 +1277,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_occasional_constipation, 'Rice hull concentrate', 'cleared', METH.riceHull),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Occasional Constipation = Caution. White rice flour is the locked Caution token (not Avoid). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1418,7 +1304,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_dairy_gluten_enzymes, 'Rice hull', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Dairy & Gluten Enzymes = Clean. Inulin + named cellulose capsule + rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Hilma'],
     sourcesGeneral: [`${CITE.hilma_dairy_gluten_enzymes} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1441,7 +1327,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_daily_fiber_enzymes, 'Monk fruit extract', 'cleared', METH.monk),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Daily Fiber & Enzymes = Caution. Rice Powder is the locked Sept 16 Caution token (distinct from rice flour). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('hilma-dairy-gluten-enzymes', 'Independently Clean in-batch hilma-dairy-gluten-enzymes. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1475,7 +1361,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_fiber_gummy, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Hilma Fiber Gummy (Thrive carton) = Caution. Annatto standalone Caution + Limited flavors. Coconut oil in a gummy is NOT High. Do not write the current brand sunflower-oil panel as this UPC. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COCONUT_GUMMY_TAP}`,
+
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
       alt('hilma-dairy-gluten-enzymes', 'Independently Clean in-batch hilma-dairy-gluten-enzymes. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1501,7 +1387,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.herb_pharm_ashwagandha_af, 'Distilled water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Herb Pharm Ashwagandha AF = Clean. Glycerin + water only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Herb Pharm'],
     sourcesGeneral: [`${CITE.herb_pharm_ashwagandha_af} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1524,7 +1410,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.herb_pharm_kids_immune_avenger_af, 'Distilled water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Herb Pharm Kids Immune Avenger AF = Clean. Glycerin + water. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Herb Pharm'],
     sourcesGeneral: [`${CITE.herb_pharm_kids_immune_avenger_af} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1547,7 +1433,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.herb_pharm_kids_lemon_balm_calm_af, 'Distilled water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Herb Pharm Kids Lemon Balm Calm AF = Clean. Glycerin + water. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Herb Pharm'],
     sourcesGeneral: [`${CITE.herb_pharm_kids_lemon_balm_calm_af} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1570,7 +1456,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.herb_pharm_kids_immune_fortifier_af, 'Distilled water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Herb Pharm Kids Immune Fortifier AF = Clean. Glycerin + water. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Herb Pharm'],
     sourcesGeneral: [`${CITE.herb_pharm_kids_immune_fortifier_af} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1593,7 +1479,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.herb_pharm_oregano_spirits, 'Distilled water', 'cleared', METH.water),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Herb Pharm Oregano Spirits = Caution. Cane alcohol vehicle is Limited (not Avoid). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Herb Pharm'],
     cleanAlternatives: [
       alt('herb-pharm-ashwagandha-af', 'Independently Clean in-batch herb-pharm-ashwagandha-af. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1619,7 +1505,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_vitamin_d3_5000, 'Softgel (bovine gelatin, glycerin, water)', 'cleared', METH.gelatin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow D3 5000 IU = Clean. Named olive-oil fill ≠ gummy High. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     sourcesGeneral: [`${CITE.jarrow_vitamin_d3_5000} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1644,7 +1530,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_vitamin_k2_mk7, 'Olive oil', 'cleared', METH.oliveFill),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow K2 MK-7 = Avoid. Undisclosed-class caramel color in the softgel. MCT is labeled modified coconut oil (Cleared, not unlabeled). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean in-batch jarrow-vitamin-d3-5000. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1672,7 +1558,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_magmind, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow MagMind = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1700,7 +1586,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_theanine_200, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow Theanine 200 = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('host-defense-lions-mane', 'Independently Clean in-batch host-defense-lions-mane. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1731,7 +1617,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_methyl_b12_cherry_5000, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow Methyl B-12 cherry = Caution. Xylitol + flavor Limited; SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean in-batch jarrow-vitamin-d3-5000. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1759,7 +1645,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_hyaluronic_acid, 'Magnesium stearate (vegetable source)', 'cleared', METH.stearate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow Hyaluronic Acid = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('youtheory-collagen-tablets', 'Independently Clean in-batch youtheory-collagen-tablets. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1787,7 +1673,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_glutathione_reduced, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow Glutathione Reduced = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('bodybio-liposomal-glutathione', 'Independently Clean in-batch bodybio-liposomal-glutathione. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1816,7 +1702,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.jarrow_q_absorb, 'Mixed tocopherols', 'cleared', METH.tocopherols),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Jarrow Q-absorb = Avoid. Undisclosed-class caramel in the shell. Medium Chain Glycerides (Modified Coconut, Palm Oil) is the Sept 16 Cleared fill token — not the Avoid driver. Carob in the shell is a color/food cousin of caramel already scored High; not a second grade. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Jarrow Formulas'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1841,7 +1727,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.om_master_blend_capsules, 'Vegetable cellulose (capsules)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Master Blend capsules = Clean. Named vegetable cellulose shell (not unlabeled Vegetable Capsule). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM Mushrooms'],
     sourcesGeneral: [`${CITE.om_master_blend_capsules} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1863,7 +1749,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.om_lions_mane_capsules, 'Vegetable cellulose (capsules)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Lion's Mane capsules = Clean. Named vegetable cellulose only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM Mushrooms'],
     sourcesGeneral: [`${CITE.om_lions_mane_capsules} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1894,7 +1780,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_day, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Day = Caution. Maltitol + isomalt Limited. Vegetable Juice (Color) is the locked named-color token. Coconut MCT is labeled coconut (Cleared, not unlabeled). Extract-spelling siblings STOPPED. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('om-master-blend-capsules', 'Independently Clean in-batch om-master-blend-capsules. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1925,7 +1811,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_burn, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Burn = Caution. Maltitol + flavor Limited. Coconut MCT labeled coconut Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
       alt('om-master-blend-capsules', 'Independently Clean in-batch om-master-blend-capsules. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -1957,7 +1843,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens_kids, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Plant People Wonder Greens Kids = Caution. Sugar-alcohol Limited + flavor. Coconut MCT labeled coconut. Ages 4+. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Plant People'],
     sourcesGeneral: [`${CITE.plant_people_wonder_greens_kids} — ${UNVERIFIED_NOTE}`],
   }),
@@ -1980,7 +1866,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.arrae_mb_1, 'Rice hull (ground)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Arrae MB-1 = Clean. HPMC + ground rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Arrae'],
     sourcesGeneral: [`${CITE.arrae_mb_1} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2002,7 +1888,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.arrae_bloat_relief, 'Hypromellose (capsule)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Arrae Bloat Relief = Clean. HPMC only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Arrae'],
     sourcesGeneral: [`${CITE.arrae_bloat_relief} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2025,7 +1911,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.arrae_magnesium, 'Rice hull (ground)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Arrae Magnesium = Clean. HPMC + ground rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Arrae'],
     sourcesGeneral: [`${CITE.arrae_magnesium} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2049,7 +1935,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.arrae_tribiotic_womens, 'Organic rice extract blend', 'limited', METH.riceExtract),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Arrae Tribiotic Women's = Caution. Organic rice extract blend is unspecified rice extract (Limited). Named rice concentrate Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Arrae'],
     cleanAlternatives: [
       alt('arrae-bloat-relief', 'Independently Clean in-batch arrae-bloat-relief. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2083,7 +1969,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.arrae_tone_creatine_gummies, 'Natural colors', 'limited', METH.naturalColors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Arrae Tone Creatine Gummies (Thrive carton) = Caution. Unspecified Natural Colors + flavors Limited. Coconut oil in a gummy is NOT High. Vague vs named color twin: brand beetroot juice would be the Cleared named-color row — this carton prints Natural Colors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${COCONUT_GUMMY_TAP}`,
+
     retailers: [...THRIVE, 'Arrae'],
     cleanAlternatives: [
       alt('arrae-magnesium', 'Independently Clean in-batch arrae-magnesium. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2109,7 +1995,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.bodybio_liposomal_glutathione, 'Hypromellose (capsule)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio Liposomal Glutathione = Clean. Sunflower phospholipids sit on the lecithin row. HPMC Cleared. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'BodyBio'],
     sourcesGeneral: [`${CITE.bodybio_liposomal_glutathione} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2132,7 +2018,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.bodybio_liposomal_vitamin_c, 'Hypromellose (capsule)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio Liposomal Vitamin C = Clean. Same OI family as glutathione but vitamin C actives — own formulaId. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'BodyBio'],
     sourcesGeneral: [`${CITE.bodybio_liposomal_vitamin_c} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2155,7 +2041,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.bodybio_tudca, 'Rice flour', 'cleared', METH.riceFlour),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio TUDCA = Caution. Rice flour is the locked Caution token. Honest note: Thrive prints Vegatable Capsule. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'BodyBio'],
     cleanAlternatives: [
       alt('bodybio-liposomal-glutathione', 'Independently Clean in-batch bodybio-liposomal-glutathione. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2179,7 +2065,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: BodyBio Remineralize = Clean. Ionic mineral concentrate is the Supplement Facts active (minerals are not OI). Mineral/ionic drops IN. Not a Pedialyte-class chug. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'BodyBio'],
     sourcesGeneral: [`${CITE.bodybio_remineralize} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2203,7 +2089,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_magnesium_glycinate, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Mg Glycinate capsules = Caution. SiO2 cap. Both pack sizes share formulaId. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2229,7 +2115,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_liquid_ionic_d3_k2, 'Mixed tocopherols', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Liquid Ionic D3 & K2 = Clean. MCT labeled coconut + tocopherols. Drop fill ≠ gummy High. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_liquid_ionic_d3_k2} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2251,7 +2137,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_beef_liver, 'Gelatin (capsules)', 'cleared', METH.gelatin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Beef Liver = Clean. Gelatin capsule only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_beef_liver} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2274,7 +2160,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_probiotic_55_billion, 'Hypromellose', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Probiotic 55 Billion = Clean. Stearic acid + HPMC. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_probiotic_55_billion} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2295,7 +2181,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace ConcenTrace drops = Clean. Concentrated seawater is the Supplement Facts mineral active, not OI. Mineral/ionic drops with SF = IN (not Pedialyte-class). 2/4/8 oz share formulaId. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_concentrace_drops} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2316,7 +2202,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Mega-Mag = Clean. Concentrated seawater is the mineral active. Mineral/ionic drops IN. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_mega_mag} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2340,7 +2226,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_40000_volts, 'Non-GMO citric acid', 'cleared', METH.citrate),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace 40,000 Volts = Clean. Water / KCl / citric are Cleared. Mineral complex is the SF active. Mineral/ionic drops IN. Not Pedialyte-class chug. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     sourcesGeneral: [`${CITE.trace_40000_volts} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2366,7 +2252,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.trace_mg_glycinate_orange_dream, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Mg Glycinate Orange Dream = Caution. Beta Carotene (For Color) standalone Caution + flavors Limited + SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2392,7 +2278,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.solaray_berberine_500, 'Whole rice concentrate', 'cleared', METH.wholeRice),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Solaray Berberine 500 = Clean. Vegetable cellulose + whole rice concentrate (rice-concentrate family). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Solaray'],
     sourcesGeneral: [`${CITE.solaray_berberine_500} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2418,7 +2304,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.solaray_d3_k2, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Solaray D3+K2 = Caution. SiO2 cap. Glycerol Monostearate is the Sept 16 Cleared GMS alias. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Solaray'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean in-batch jarrow-vitamin-d3-5000. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2452,7 +2338,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.solaray_kids_chewable, 'Acerola cherry juice powder (color)', 'cleared', METH.namedColor),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Solaray Kids Chewable = Caution. Mono- and Diglycerides unspecified blend is the Sept 16 Caution token (not named GMS). Sugar alcohols + flavors Limited; SiO2 cap. Named rose-hip / acerola colors Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Solaray'],
     sourcesGeneral: [`${CITE.solaray_kids_chewable} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2477,7 +2363,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.kal_magnesium_glycinate_350, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: KAL Mg Glycinate 350 = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'KAL'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2503,7 +2389,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.country_life_d3_5000, 'Softgel (gelatin, glycerin, water)', 'cleared', METH.gelatin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Country Life D3 5000 = Caution. Unlabeled MCT (source not named). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'Country Life'],
     cleanAlternatives: [
       alt('jarrow-vitamin-d3-5000', 'Independently Clean in-batch jarrow-vitamin-d3-5000. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2528,7 +2414,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.country_life_activated_charcoal, 'Hypromellose (vegetarian capsule shell derived from pine tree cellulose)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Country Life Activated Charcoal = Clean. Named HPMC shell only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Country Life'],
     sourcesGeneral: [`${CITE.country_life_activated_charcoal} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2553,7 +2439,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.youtheory_ashwagandha_ksm66, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Youtheory Ashwagandha KSM-66 = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Youtheory'],
     cleanAlternatives: [
       alt('herb-pharm-ashwagandha-af', 'Independently Clean in-batch herb-pharm-ashwagandha-af. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2578,7 +2464,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.youtheory_collagen_tablets, 'Magnesium stearate (vegetable source)', 'cleared', METH.stearate),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Youtheory Collagen tablets = Clean. Vegetable magnesium stearate only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Youtheory'],
     sourcesGeneral: [`${CITE.youtheory_collagen_tablets} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2600,7 +2486,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ancient_super_greens_unflavored, 'Organic luo han guo extract', 'cleared', METH.monk),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Ancient Super Greens unflavored = Clean. Monk fruit / Luo Han Guo only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Ancient Nutrition'],
     sourcesGeneral: [`${CITE.ancient_super_greens_unflavored} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2623,7 +2509,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.ancient_nutrition_magnesium, 'Gelatin', 'cleared', METH.gelatin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Ancient Nutrition Magnesium = Clean. Food-state Saccharomyces + gelatin capsule. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Ancient Nutrition'],
     sourcesGeneral: [`${CITE.ancient_nutrition_magnesium} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2645,7 +2531,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.himalaya_stresscare, 'Plant based cellulose (capsule)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Himalaya StressCare = Clean. Plant cellulose capsule only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Himalaya'],
     sourcesGeneral: [`${CITE.himalaya_stresscare} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2667,7 +2553,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.banyan_liver_formula, 'Gum acacia', 'cleared', METH.pectin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Banyan Liver Formula = Clean. Gum acacia only. DSLD older rice-flour snapshot is a different unmatched formula. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Banyan Botanicals'],
     sourcesGeneral: [`${CITE.banyan_liver_formula} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2689,7 +2575,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.banyan_womens_natural_transition, 'Gum acacia', 'cleared', METH.pectin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Banyan Women's Natural Transition = Clean. Gum acacia only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Banyan Botanicals'],
     sourcesGeneral: [`${CITE.banyan_womens_natural_transition} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2712,7 +2598,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wholesome_story_myo_d_chiro, 'Rice flour', 'cleared', METH.riceFlour),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Wholesome Story Myo & D-Chiro = Caution. Rice flour Caution token. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Wholesome Story'],
     cleanAlternatives: [
       alt('arrae-magnesium', 'Independently Clean in-batch arrae-magnesium. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2740,7 +2626,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.manuka_health_lemon_ginger_lozenges, 'Natural flavors (lemon oil, ginger extract)', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Manuka Lemon & Ginger lozenges = Caution. Named lemon oil is Limited flavor. Ginger extract as oral named botanical is Cleared-class and does not raise the grade. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Manuka Health'],
     cleanAlternatives: [
       alt('herb-pharm-kids-immune-avenger-af', 'Independently Clean in-batch herb-pharm-kids-immune-avenger-af. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2774,7 +2660,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hum_ashwagandha_calm_gummies, 'Organic tapioca starch', 'cleared', METH.starch),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: HUM Ashwagandha Calm gummies = Caution. Limited flavors. Named juice-as-color Cleared. No seed-oil High on this carton. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'HUM'],
     cleanAlternatives: [
       alt('herb-pharm-ashwagandha-af', 'Independently Clean in-batch herb-pharm-ashwagandha-af. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2802,7 +2688,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.pluscbd_mens_performance_ignite, 'Sunflower lecithin', 'cleared', METH.lecithin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: PlusCBD Men's Ignite = Caution. Unlabeled MCT. Softgel fill ≠ gummy High. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE, 'PlusCBD'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2834,7 +2720,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_wake_raspberry_lemonade, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Rookie Wake Raspberry Lemonade = Caution. Flavors Limited + SiO2 cap. Reb M is high-purity steviol glycoside Cleared. Named beet color Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2863,7 +2749,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_greens_peach_mango, 'Stevia extract', 'cleared', METH.stevia),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Rookie Greens Peach Mango = Caution. Limited flavor. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2892,7 +2778,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_greens_crisp_apple, 'Stevia extract', 'cleared', METH.stevia),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Rookie Greens Crisp Apple = Caution. Limited flavor. Own formulaId vs Peach Mango (flavor string differs). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2919,7 +2805,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.organifi_red_juice, 'Organic luo han guo (monk fruit) extract', 'cleared', METH.monk),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Organifi Red Juice = Caution. Limited flavor. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Organifi'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2947,7 +2833,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.organifi_green_juice, 'Organic luo han guo (monk fruit) extract', 'cleared', METH.monk),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Organifi Green Juice = Caution. Limited flavors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Organifi'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -2973,7 +2859,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.carlson_super_omega_3_gems, 'Mixed tocopherols', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Carlson Super Omega-3 Gems = Clean. Gelatin shell + tocopherols. Distinct from Carlson kids rows already on main. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Carlson'],
     sourcesGeneral: [`${CITE.carlson_super_omega_3_gems} — ${UNVERIFIED_NOTE}`],
   }),
@@ -2994,7 +2880,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Great Lakes Beef Gelatin = Clean. Single-ingredient bovine gelatin (the product is the gelatin). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Great Lakes Wellness'],
     sourcesGeneral: [`${CITE.great_lakes_beef_gelatin} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3017,7 +2903,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.thrive_collagen_peptides_vanilla, 'Monk (luo han Guo) fruit extract', 'cleared', METH.monk),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Thrive house vanilla collagen = Caution. Limited organic natural flavor. Packets 671635732811 share formulaId. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-collagen-peptides-unflavored', 'Independently Clean in-batch thrive-collagen-peptides-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -3041,7 +2927,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Thrive unflavored collagen = Clean. Peptides only (no inactives). Packets share formulaId. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.thrive_collagen_peptides_unflavored} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3063,7 +2949,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_milk_thistle, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Milk Thistle = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_milk_thistle} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3085,7 +2971,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_milk_thistle_dandelion, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Milk Thistle + Dandelion = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_milk_thistle_dandelion} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3107,7 +2993,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_saw_palmetto, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Saw Palmetto = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_saw_palmetto} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3129,7 +3015,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_ashwagandha, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Ashwagandha = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_ashwagandha} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3151,7 +3037,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_rhodiola, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Rhodiola = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_rhodiola} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3173,7 +3059,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_ginger, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Ginger = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_ginger} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3195,7 +3081,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_hawthorn, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Hawthorn = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_hawthorn} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3217,7 +3103,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.owh_echinacea_zn_c, 'Pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Oregon's Wild Harvest Echinacea + Zinc + Vitamin C = Clean. Pullulan only. Do not clone batch52 turmeric. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Oregon\'s Wild Harvest'],
     sourcesGeneral: [`${CITE.owh_echinacea_zn_c} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3242,7 +3128,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_turmeric_force_nighttime, 'Candelilla wax', 'cleared', METH.candelilla),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Turmeric Force Nighttime = Clean. Olive-oil fill ≠ gummy High. Own formulaId ≠ batch52 daytime Turmeric Force. Off-market DSLD 181117 not used. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_turmeric_force_nighttime} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3267,7 +3153,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_allergy_max, 'Grain alcohol', 'limited', METH.alcohol),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Allergy Max = Caution. Grain alcohol vehicle Limited. Homeopathic — cleanliness only, no efficacy claim. US homeo/OTC IN. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_allergy_max} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3293,7 +3179,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_cold_flu_kids, 'Lemon oil', 'limited', METH.lemonOil),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Cold & Flu Kids = Caution. Named lemon oil Limited flavor. Homeopathic — cleanliness only. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_cold_flu_kids} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3319,7 +3205,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_headache, 'Organic rosemary oil', 'cleared', METH.eoScent),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Headache roll-on = Caution. Sesame is the named topical base (Cleared, ≠ gummy High). Lavandin + rosemary are scent oils in a blend (Caution EO line). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_headache} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3347,7 +3233,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_muscle, 'Organic rosemary oil', 'cleared', METH.eoScent),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Muscle roll-on = Caution. Sesame base Cleared; remaining oils are scent/EO Caution. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_muscle} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3375,7 +3261,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_arniblend, 'Sesame oil', 'cleared', METH.sesameBase),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Arniblend = Caution. Sesame base Cleared; chamomile/lavandin/niaouli/rosemary scent oils Caution. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_arniblend} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3402,7 +3288,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_nerve, 'Sesame oil', 'cleared', METH.sesameBase),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Nerve = Caution. Sesame base Cleared; chamomile/lavandin scent oils Caution. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_nerve} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3430,7 +3316,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.fon_migraine, 'Sesame oil', 'cleared', METH.sesameBase),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Migraine & Headache = Caution. Sesame base Cleared; remaining oils scent/EO Caution. Own formulaId vs Headache (chamomile added). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     sourcesGeneral: [`${CITE.fon_migraine} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3453,7 +3339,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_womens_fermented_multi, 'Potassium chloride', 'cleared', METH.kcl),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Women's Fermented Multi+ = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_womens_fermented_multi} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3477,7 +3363,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_teen_multi, 'L-Leucine', 'cleared', METH.leucine),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teen Multi = Clean. Methylcellulose / MCC / leucine. minAge 13 as labeled teen class. Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_teen_multi} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3501,7 +3387,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_nr_eternal, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine; Thrive spelling Phospholids)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal NR+ Eternal = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_nr_eternal} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3523,7 +3409,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_glutathione, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal Glutathione = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_glutathione} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3545,7 +3431,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_fermented_digestive_enzymes, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Fermented Digestive Enzymes = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_fermented_digestive_enzymes} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3567,7 +3453,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_adk, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage ADK = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_adk} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3589,7 +3475,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_grass_fed_beef_organs, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Grass-Fed Beef Organs = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_grass_fed_beef_organs} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3611,7 +3497,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_grass_fed_beef_liver, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Grass-Fed Beef Liver = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_grass_fed_beef_liver} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3634,7 +3520,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_nmn, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal NMN = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_nmn} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3657,7 +3543,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_nmn_platinum, 'Non-GMO sunflower oil (containing phosphatidylcholine; liposomal delivery matrix)', 'cleared', METH.sunflowerFill),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal NMN Platinum = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_nmn_platinum} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3681,7 +3567,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_nad, 'Non-GMO sunflower oil (containing phosphatidylcholine; liposomal delivery matrix)', 'cleared', METH.sunflowerFill),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal NAD+ = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_nad} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3705,7 +3591,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_nad_ultra_sport, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal NAD+ Ultra Sport = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_liposomal_nad_ultra_sport} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3727,7 +3613,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_mag_l_threonate, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Magnesium L-Threonate = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_mag_l_threonate} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3751,7 +3637,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_mag_glycinate, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Magnesium Glycinate = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_mag_glycinate} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3775,7 +3661,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_ovarian_inositol, 'Non-GMO sunflower oil (containing phosphatidylcholine; liposomal delivery matrix)', 'cleared', METH.sunflowerFill),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Ovarian Inositol = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_ovarian_inositol} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3798,7 +3684,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_teen_clearface, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teen Clearface = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_teen_clearface} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3820,7 +3706,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_creatine_monohydrate_powder, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Creatine powder = Clean. Sunflower lecithin liposomal matrix only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_creatine_monohydrate_powder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3844,7 +3730,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_glp_harmony, 'Phospholipid complex (from non-GMO sunflower oil and lecithin; liposomal time-release matrix)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage GLP-Harmony = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_glp_harmony} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3867,7 +3753,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_full_spectrum_binder, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Full Spectrum Binder = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_full_spectrum_binder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3890,7 +3776,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_hair_platinum, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Hair Platinum = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_hair_platinum} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3915,7 +3801,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_teen_brain_focus, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teen Brain Focus = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_teen_brain_focus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3939,7 +3825,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_urolithin_a_eternal, 'Codeage Helix liposomal delivery (phospholipids from non-GMO sunflower lecithin, including phosphatidylcholine)', 'cleared', METH.lecithin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Urolithin A Eternal = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_urolithin_a_eternal} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3963,7 +3849,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_vitamin_c_platinum, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Vitamin C Platinum = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_vitamin_c_platinum} — ${UNVERIFIED_NOTE}`],
   }),
@@ -3988,7 +3874,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_menopause_hair_skin, 'Ascorbyl palmitate', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Menopause Hair & Skin = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_menopause_hair_skin} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4010,7 +3896,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_instantfood_whole_food_c, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Instantfood Whole Food C = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_instantfood_whole_food_c} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4036,7 +3922,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_molecular_hydrogen, 'Sodium stearyl fumarate', 'cleared', METH.sodiumStearyl),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Molecular Hydrogen = Clean. Methylcellulose / HPMC family + named sunflower phospholipid fill when present (fill ≠ gummy High). Distinct from batch52 Liposomal Turmeric+. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_molecular_hydrogen} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4061,7 +3947,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_berberine_phytosome, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Berberine Phytosome+ (Thrive) = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('solaray-berberine-500', 'Independently Clean in-batch solaray-berberine-500. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4090,7 +3976,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_teen_multi_platinum, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teen Multi+ Platinum = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('codeage-teen-multi', 'Independently Clean in-batch codeage-teen-multi. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4119,7 +4005,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_liposomal_c_capsules, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Liposomal C+ capsules = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('bodybio-liposomal-vitamin-c', 'Independently Clean in-batch bodybio-liposomal-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4146,7 +4032,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_biotin_marine_collagen, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Biotin Marine Collagen = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('youtheory-collagen-tablets', 'Independently Clean in-batch youtheory-collagen-tablets. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4173,7 +4059,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_teen_athlete_multi, 'Organic rice flour', 'cleared', METH.riceFlour),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teen Athlete Multi = Caution. Organic rice flour Caution token. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('codeage-teen-multi', 'Independently Clean in-batch codeage-teen-multi. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4199,7 +4085,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_raw_wildcrafted_sea_moss, 'Organic peppermint oil', 'limited', METH.peppermint),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Raw Sea Moss = Caution. Peppermint oil as flavor/EO Limited. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('om-master-blend-capsules', 'Independently Clean in-batch om-master-blend-capsules. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4226,7 +4112,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_akkermansia, 'Enteric coating', 'cleared', METH.enteric),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Akkermansia = Caution. Bare Enteric Coating is the unnamed delayed-release Caution row. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('enzymedica-digest-gold-atpro', 'Independently Clean in-batch enzymedica-digest-gold-atpro. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4254,7 +4140,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_mens_fermented_multi, 'Trace minerals (from seawater)', 'cleared', METH.traceMinerals),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Men's Fermented Multi+ = Caution. Trace Minerals (From Seawater) as an inactive line is the Sept 16 Caution token. Distinct from mineral-drop actives. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('codeage-womens-fermented-multi', 'Independently Clean in-batch codeage-womens-fermented-multi. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4280,7 +4166,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_hair_vitamins, 'Choline bitartrate', 'cleared', METH.choline),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Hair Vitamins = Clean. Choline bitartrate confirmed as inactive on this carton (Cleared). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_hair_vitamins} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4311,7 +4197,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_irish_sea_moss_gummies, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Irish Sea Moss Gummies = Avoid. Sunflower oil in a gummy is High. Unspecified Natural Colors Limited (not needed for Avoid). Vague vs named color twin. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
       alt('om-master-blend-capsules', 'Independently Clean in-batch om-master-blend-capsules. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4345,7 +4231,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_probiotic_gummies_strawberry, 'Organic corn starch', 'cleared', METH.starch),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Kids Probiotic Gummies = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse maryruth-organic-kids-multi-gummies-sunflower. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     sourcesGeneral: [`${CITE.maryruth_kids_probiotic_gummies_strawberry} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4376,7 +4262,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_immunity_gummies, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Kids Immunity Gummies = Avoid. Organic sunflower oil in a gummy is High. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     sourcesGeneral: [`${CITE.maryruth_kids_immunity_gummies} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4399,7 +4285,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_oregano_oil_drops, 'Mixed tocopherol oil', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Oregano Oil Drops = Clean. Named olive-oil fill ≠ gummy High. Distinct from Herb Pharm Oregano Spirits (alcohol). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     sourcesGeneral: [`${CITE.maryruth_oregano_oil_drops} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4421,7 +4307,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_infant_toddler_d3_unflavored, 'Organic olive oil', 'cleared', METH.oliveFill),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Infant/Toddler D3 unflavored = Clean. Olive-oil drop fill. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     sourcesGeneral: [`${CITE.maryruth_infant_toddler_d3_unflavored} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4443,7 +4329,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_toddler_d3_k2_unflavored, 'Organic olive oil', 'cleared', METH.oliveFill),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Toddler D3+K2 unflavored = Clean. Olive-oil drop fill. Own formulaId vs D3-only (actives differ). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     sourcesGeneral: [`${CITE.maryruth_toddler_d3_k2_unflavored} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4471,7 +4357,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_d3_b12_gummies_strawberry, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth D3+B12 gummies = Caution. Limited flavor. No sunflower oil on this carton — do not clone the kids probiotic Avoid. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4500,7 +4386,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_multi_liposomal, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Kids Multi Liposomal = Caution. Limited flavors. Ages 4+ class. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4528,7 +4414,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_c_drops, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Kids C drops = Caution. Limited flavors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4556,7 +4442,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_infant_c_drops, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Infant C drops = Caution. Limited flavors. Own formulaId vs kids/toddler C (age/serving). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4584,7 +4470,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_toddler_c_drops, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Toddler C drops = Caution. Limited flavors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4612,7 +4498,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_womens_multi_liposomal, 'Organic vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Women's Multi Liposomal = Caution. Limited flavors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4642,7 +4528,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_sea_moss_spirulina, 'Gum acacia', 'cleared', METH.pectin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Sea Moss Spirulina liposomal = Caution. Xylitol + flavors Limited. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4672,7 +4558,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_sea_moss_immune_energy, 'Citric acid', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Sea Moss Immune liposomal = Caution. Xylitol Limited. Vanilla extract as flavor Limited class. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4699,7 +4585,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_throat_spray_vanilla, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Throat Spray = Caution. Limited flavor. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4729,7 +4615,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_iron_liquid_berry, 'Xanthan gum', 'cleared', METH.pectin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Iron Liquid Berry = Caution. Limited flavor. Reb A is high-purity stevia Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4757,7 +4643,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_elderberry_drops, 'Citric acid', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Elderberry drops = Caution. Limited flavors. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4786,7 +4672,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_b_complex_cherry, 'Citric acid', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth B-Complex cherry = Caution. Limited flavor. Parenthetical Rebaudioside A = high-purity stevia (not whole-leaf Caution). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4814,7 +4700,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_toddler_iron, 'Organic citric acid', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Toddler iron = Caution. Limited flavor. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4843,7 +4729,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_nighttime_multimineral, 'Xanthan gum', 'cleared', METH.pectin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Kids nighttime multimineral = Caution. Limited flavors. No evaporated seawater on this carton. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4872,7 +4758,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_infant_multi_iron, 'Organic stevia leaf extract (rebaudioside A)', 'cleared', METH.stevia),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: MaryRuth Infant multi + iron = Caution. Limited flavors. Reb A parenthetical = high-purity stevia. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
       alt('maryruth-oregano-oil-drops', 'Independently Clean in-batch maryruth-oregano-oil-drops. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -4898,7 +4784,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_c, 'Organic rice (hull)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Vitamin Code Raw Vitamin C = Clean. Vegetable cellulose + organic rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_c} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4921,7 +4807,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_d3, 'Organic rice (hull)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Vitamin Code RAW D3 = Clean. Vegetable cellulose + organic rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_d3} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4944,7 +4830,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_zinc, 'Organic rice (hull)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Vitamin Code RAW Zinc = Clean. Vegetable cellulose + organic rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_zinc} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4967,7 +4853,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_b12, 'Organic rice (hull)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Vitamin Code RAW B-12 = Clean. Vegetable cellulose + organic rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_b12} — ${UNVERIFIED_NOTE}`],
   }),
@@ -4990,7 +4876,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_iron, 'Organic rice (hull)', 'cleared', METH.riceHull),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Vitamin Code RAW Iron = Clean. Vegetable cellulose + organic rice hull. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_iron} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5013,7 +4899,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_b_complex, 'Organic potato starch', 'cleared', METH.starch),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code RAW B-Complex = Clean. Cellulose + potato starch. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_b_complex} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5037,7 +4923,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_womens, 'Organic gum arabic', 'cleared', METH.pectin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code Women's = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_womens} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5061,7 +4947,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_mens, 'Organic gum arabic', 'cleared', METH.pectin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code Men's = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_mens} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5085,7 +4971,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_womens_50, 'Organic gum arabic', 'cleared', METH.pectin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code 50 & Wiser Women's = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_womens_50} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5108,7 +4994,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_raw_calcium, 'Organic potato starch', 'cleared', METH.starch),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code RAW Calcium = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_vitamin_code_raw_calcium} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5130,7 +5016,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_once_daily_womens_probiotic, 'Non-GMO vegetable cellulose (capsule)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Once Daily Women's probiotic = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_once_daily_womens_probiotic} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5152,7 +5038,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_once_daily_mens_probiotic, 'Non-GMO vegetable cellulose (capsule)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Once Daily Men's probiotic = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_once_daily_mens_probiotic} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5174,7 +5060,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mood_plus, 'Non-GMO vegetable pullulan (capsule)', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Mood+ = Clean. Pullulan capsule. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_mood_plus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5196,7 +5082,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_womens_ph_pre_pro_post, 'Non-GMO vegetable cellulose (capsule)', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Women's pH Pre+Pro+Post = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_womens_ph_pre_pro_post} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5218,7 +5104,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_raw_perfect_food_original, 'Organic pineapple flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL RAW Perfect Food Original = Caution. Limited pineapple flavor. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5252,7 +5138,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_kids_chewable, 'Organic vanilla flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Vitamin Code Kids Chewable = Caution. Limited flavors. Dextrose / gum / lecithin Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-vitamin-code-raw-c', 'Independently Clean in-batch gol-vitamin-code-raw-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5283,7 +5169,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mykind_elderberry_immune_gummies, 'Organic sunflower oil (for coating)', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL myKind Elderberry Immune Gummies = Avoid. Organic sunflower oil coating is gummy High. Distinct from batch52 turmeric gummies. Organic rice meal Caution token is not the Avoid driver. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean in-batch gol-mood-plus. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5316,7 +5202,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mykind_mens_40, 'Organic tapioca maltodextrin', 'limited', METH.maltodextrin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL myKind Organics Men's 40+ = Caution. Organic Palm Oil coating is Cleared (not gummy High). Unspecified brown-rice extract Limited + organic maltodextrin Limited.  Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean in-batch gol-vitamin-code-womens. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5349,7 +5235,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mykind_prenatal, 'Organic tapioca maltodextrin', 'limited', METH.maltodextrin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL myKind Organics Prenatal Multivitamin = Caution. Organic Palm Oil coating is Cleared (not gummy High). Unspecified brown-rice extract Limited + organic maltodextrin Limited.  Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean in-batch gol-vitamin-code-womens. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5382,7 +5268,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mykind_plant_calcium, 'Organic tapioca maltodextrin', 'limited', METH.maltodextrin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL myKind Organics Plant Calcium = Caution. Organic Palm Oil coating is Cleared (not gummy High). Unspecified brown-rice extract Limited + organic maltodextrin Limited.  Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean in-batch gol-vitamin-code-womens. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5413,7 +5299,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_mykind_ashwagandha, 'Organic guar gum', 'cleared', METH.pectin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL myKind Ashwagandha = Caution. Palm coating Cleared + tap. Organic maltodextrin Limited. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('herb-pharm-ashwagandha-af', 'Independently Clean in-batch herb-pharm-ashwagandha-af. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5444,7 +5330,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_dr_formulated_quercetin, 'Organic rice hull', 'cleared', METH.riceHull),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Dr. Formulated Quercetin = Caution. Palm coating Cleared. Organic maltodextrin Limited. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-vitamin-code-raw-c', 'Independently Clean in-batch gol-vitamin-code-raw-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5476,7 +5362,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_organic_kids_probiotics_berry_cherry, 'Organic dark cherry flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GOL Organic Kids+ Probiotics Berry Cherry = Caution. Palm in the chewable coating is Cleared (tablet/chew coating, not gummy High). Flavors + maltodextrin Limited. Ages 4+. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
       alt('gol-once-daily-womens-probiotic', 'Independently Clean in-batch gol-once-daily-womens-probiotic. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5509,7 +5395,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_organic_mens, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Organic Men's Multi & Omegas = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5542,7 +5428,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_organic_womens, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Organic Women's Multi & Omegas = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5575,7 +5461,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_organic_toddlers, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Organic Toddlers Multi & Omegas = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5608,7 +5494,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_fiber_veggies, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Fiber & Veggies = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5643,7 +5529,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_zero_sugar, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Zero Sugar Multi & Omegas = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5676,7 +5562,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_womens_50, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Women's 50+ Multi & Omegas = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5710,7 +5596,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_adult_multi_fiber, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Adult Multi & Fiber = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5742,7 +5628,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_sleep_zero_melatonin, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Sleep Zero Melatonin = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5774,7 +5660,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_adult_fast_acting_sleep, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Adult Fast Acting Sleep = Avoid. Organic sunflower oil in a gummy is High. Distinct from reuse Kids Plus Multi & Omegas (no sunflower on that carton). Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -5808,7 +5694,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_prebiotic_probiotic, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Prebiotic & Probiotic = Caution. Limited flavors. MCT from coconut Cleared (not unlabeled; not gummy High). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_kids_prebiotic_probiotic} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5836,7 +5722,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_teen_girl_plus, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Teen Girl Plus = Caution. Limited flavors. No sunflower oil on this carton. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_teen_girl_plus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5864,7 +5750,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_plus_immunity, 'Colors added (organic annatto extract, organic black carrot juice concentrate)', 'cleared', METH.annatto),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Plus Multi & Immunity = Caution. Annatto standalone Caution + flavors. Distinct from reuse Kids Plus Multi & Omegas. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_kids_plus_immunity} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5895,7 +5781,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_adult_probiotic_prebiotic, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Adult Probiotic = Caution. Limited flavors. Coconut MCT Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_adult_probiotic_prebiotic} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5926,7 +5812,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_2b_cfu, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids 2B CFU = Caution. Limited flavors. Coconut MCT Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_kids_2b_cfu} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5953,7 +5839,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_triple_action_immunity, 'Natural flavors', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Triple Action Immunity = Caution. Limited flavors. No sunflower oil. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_kids_triple_action_immunity} — ${UNVERIFIED_NOTE}`],
   }),
@@ -5984,7 +5870,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_adult_3b_cfu, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Adult 3B CFU = Caution. Limited flavors. Coconut MCT Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_adult_3b_cfu} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6014,7 +5900,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_formula_organic_multi, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: SmartyPants Kids Formula Organic Multi = Caution. Limited flavors. Coconut MCT Cleared. Distinct from reuse Kids Plus Multi & Omegas. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP} ${MCT_COCONUT_TAP}`,
+
     retailers: [...THRIVE, 'SmartyPants'],
     sourcesGeneral: [`${CITE.smartypants_kids_formula_organic_multi} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6036,7 +5922,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_ashwagandha, 'Vegan capsule (hypromellose, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Ashwagandha = Clean. HPMC/water only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_ashwagandha} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6059,7 +5945,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_milk_thistle, 'Vegetable cellulose', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Milk Thistle = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_milk_thistle} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6081,7 +5967,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_hsn, 'Vegan capsule (hypromellose, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade HSN = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_hsn} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6103,7 +5989,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_red_yeast_rice, 'Vegan capsule (hypromellose, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Red Yeast Rice = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_red_yeast_rice} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6126,7 +6012,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_cranberry, 'Vegetable cellulose', 'cleared', METH.cellulose),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Cranberry = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_cranberry} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6148,7 +6034,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_elderberry, 'Vegan capsule (hypromellose, water)', 'cleared', METH.hpmc),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Elderberry = Clean. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_elderberry} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6170,7 +6056,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_mood_plus, 'Non-GMO vegetable pullulan capsule', 'cleared', METH.pullulan),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Mood+ = Clean. Pullulan. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_mood_plus} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6194,7 +6080,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_irish_sea_moss, 'Vegetable cellulose', 'cleared', METH.cellulose),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Irish Sea Moss = Caution. Organic brown rice flour sits on the rice flour Caution token (not food-state brown rice without flour). Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('wellmade-ashwagandha', 'Independently Clean in-batch wellmade-ashwagandha. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6219,7 +6105,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_evening_primrose, 'Softgel (gelatin, glycerin, water)', 'cleared', METH.gelatin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Evening Primrose = Clean. Softgel shell only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_evening_primrose} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6242,7 +6128,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_propolis_throat_spray, 'Glycerin', 'cleared', METH.glycerin),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Propolis Throat Spray = Clean. Water + glycerin. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_propolis_throat_spray} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6263,7 +6149,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Organic Acacia Fiber = Clean. Identity is organic acacia powder (no separate OI). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.wellmade_organic_acacia_fiber} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6288,7 +6174,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_l_theanine, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade L-Theanine = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('wellmade-ashwagandha', 'Independently Clean in-batch wellmade-ashwagandha. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6317,7 +6203,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_resveratrol, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Resveratrol = Caution. SiO2 cap. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('wellmade-ashwagandha', 'Independently Clean in-batch wellmade-ashwagandha. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6347,7 +6233,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_selenium, 'Magnesium stearate', 'cleared', METH.stearate),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Selenium = Caution. SiO2 cap. Form tablet. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('wellmade-ashwagandha', 'Independently Clean in-batch wellmade-ashwagandha. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6375,7 +6261,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_superfood_greens_original, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Superfood Greens Original = Caution. Fructose Limited + flavor + SiO2. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6403,7 +6289,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_superfood_greens_berry, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Superfood Greens Berry = Caution. Same OI math as Original; berry flavor string — own formulaId if flavor differs, shared if identical. Wrote own id. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('ancient-super-greens-unflavored', 'Independently Clean in-batch ancient-super-greens-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6435,7 +6321,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_d3, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Vitamin D3 = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6467,7 +6353,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_ca_mg, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Calcium and Magnesium = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6499,7 +6385,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_b_complex, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic B-Complex = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited. This SKU OI omits MCT on some prints — Thrive list includes silica + palm coating. Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6531,7 +6417,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_prenatal, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Prenatal Multivitamin = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6563,7 +6449,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_iron, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Iron = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6595,7 +6481,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_womens_multi, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Women's Multivitamin = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6627,7 +6513,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.wellmade_real_food_mens_multi, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: wellmade Real Food Real Food Organic Men's Multivitamin = Caution. Organic Palm Oil coating Cleared + tap. Unlabeled MCT + silica cap + maltodextrin Limited.  Distinct from batch27 Real Food Vitamin C. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP} ${MCT_UNLABELED_TAP}`,
+
     retailers: [...THRIVE],
     cleanAlternatives: [
       alt('thrive-wellmade-real-food-vitamin-c', 'Independently Clean in-batch thrive-wellmade-real-food-vitamin-c. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6657,7 +6543,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_every_womans_one_daily, 'Guar gum', 'cleared', METH.pectin),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Woman's One Daily = Caution. Organic maltodextrin Limited. Organic Palm Oil coating Cleared + tap. No hydrated silica on this family. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-womens', 'Independently Clean in-batch gol-vitamin-code-womens. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6688,7 +6574,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_every_mans_one_daily, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Every Man's One Daily = Caution. Silica cap + maltodextrin Limited. Palm coating Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP} ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-vitamin-code-mens', 'Independently Clean in-batch gol-vitamin-code-mens. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6714,7 +6600,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_wholemega, 'Tocopherols', 'cleared', METH.tocopherols),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Wholemega = Clean. Gelatin / glycerin / tocopherols. Omega-3 Complex shares this OI when the list holds — same formulaId if OI+actives match; wrote Wholemega. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_wholemega} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6736,7 +6622,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_elderberry_syrup, 'Water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Elderberry Syrup = Clean. Water only. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_elderberry_syrup} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6758,7 +6644,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_kids_elderberry_syrup, 'Water', 'cleared', METH.water),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Kids Elderberry Syrup = Clean. Water only. Honey is a labeled active/sweetener food — Cleared-class oral honey if present as inactive; here OI is water. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_kids_elderberry_syrup} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6783,7 +6669,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_estrotone, 'Candelilla wax', 'cleared', METH.candelilla),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Estrotone = Clean. Same oil/wax family as Nighttime; different actives — own formulaId. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_estrotone} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6809,7 +6695,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_prostate_5lx, 'Ferment media', 'cleared', METH.ferment),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Prostate 5LX = Clean. Olive-oil fill + candelilla / beeswax / ferment media. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     sourcesGeneral: [`${CITE.new_chapter_prostate_5lx} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6834,7 +6720,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_mag_l_theanine, 'Natural flavors', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Mag + L-Theanine powder = Caution. Limited flavors. Named juice-as-color Cleared. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6860,7 +6746,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_all_flora_probiotic_gummy, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter All-Flora Probiotic gummy = Avoid. Organic sunflower oil in a gummy is High. Maqui color now Cleared — not the Avoid driver. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('gol-mood-plus', 'Independently Clean in-batch gol-mood-plus. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6886,7 +6772,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_organic_fiber_gummies, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Organic Fiber Gummies = Avoid. Organic sunflower oil in a gummy is High. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('wellmade-organic-acacia-fiber', 'Independently Clean in-batch wellmade-organic-acacia-fiber. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6914,7 +6800,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.new_chapter_kids_elderberry_gummies, 'Organic rice starch', 'limited', METH.modifiedStarch),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: New Chapter Kids Elderberry gummies = Caution. Organic rice flour Caution + Organic Rice Starch Limited + lemon juice concentrate Limited puree. No sunflower oil on this carton. Draft, not verified. Limited-only stack stays Caution (no 3-pt Avoid). Avoid needs High. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'New Chapter'],
     cleanAlternatives: [
       alt('new-chapter-kids-elderberry-syrup', 'Independently Clean in-batch new-chapter-kids-elderberry-syrup. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
@@ -6942,7 +6828,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.nordic_prenatal_dha, 'Cholecalciferol', 'cleared', METH.cholecalciferol),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Nordic Prenatal DHA = Clean. Gelatin shell + D-alpha tocopherol + olive-oil D3 carrier. Thrive 017483 prints no lemon flavor. Unflavored 017414 shares formulaId when OI holds. Distinct from reuse Ultimate Omega lemon. Rosemary-preservative fish-oil siblings STOPPED only when that exact token is the leftover — this carton does not print it. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${OIL_FILL_TAP}`,
+
     retailers: [...THRIVE, 'Nordic Naturals'],
     sourcesGeneral: [`${CITE.nordic_prenatal_dha} — ${UNVERIFIED_NOTE}`],
   }),
@@ -6971,7 +6857,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.nordic_zero_sugar_melatonin_gummies, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Nordic Zero Sugar Melatonin Gummies = Avoid. Sunflower oil in a gummy is High. Draft, not verified. Avoid needs this High. Limited-only would stay Caution. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${GUMMY_OIL_TAP}`,
+
     retailers: [...THRIVE, 'Nordic Naturals'],
     cleanAlternatives: [
       alt('new-chapter-turmeric-force-nighttime', 'Independently Clean in-batch new-chapter-turmeric-force-nighttime. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),

@@ -61,20 +61,11 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
 const MINERAL_OIL_TAP =
   'Paraffin + petrolatum / mineral oil as a topical occlusive is Cleared (petrolatum neighborhood). Tap: not an oral oil.';
-
-const CLOTH_FILM =
-  'Baking cloth + film are backing / device, not gradeable inactives — omitted, not graded.';
 
 const METH = {
   alcoholVehicle:
@@ -294,8 +285,7 @@ function mentholMsPatchRow(opts: {
     ],
     inactiveIngredients: nsaidPatchInactives(opts.setid, opts.sisName),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: ${opts.productName} = Caution. Alicyclic saturated hydrocarbon resin is the locked exact Caution INCI. Synthetic aluminum silicate is the locked exact Caution INCI. SIS / polyisobutylene (including 1,200,000 MW) sit on the locked patch-adhesive Caution row. No High. ${CLOTH_FILM} ${opts.twinNote} Pack sizes (NDC ${opts.ndc}) share this formulaId. Ages 18+ (under 18: do not use). ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -415,8 +405,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       cleared(SET.salonLidoCream, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Lidocaine Plus Pain Relieving Cream = Caution. Unspecified polysorbate is Moderate (P80 / P20 / P60 family alias — not a new class). SD alcohol 40-B is Limited (vehicle). Ceteth phosphate is the locked exact Caution INCI (not ceteth-20 phosphate). Unspecified steareth is the locked exact Caution token (not steareth-2 / steareth-21). Dicetyl phosphate / AMP / AMPS copolymer are standalone Caution. Butylene glycol + squalane are locked exact Cleared INCI. No High. Own formulaId — do not clone salonpas-lidocaine-plus-liquid (that SPL has no ceteth / steareth / polysorbate / squalane stack). Benzyl alcohol 10% is an active on this SPL (parked — not the oral gasping-syndrome split). Pack sizes (NDC 55328-902) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -545,8 +534,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Pain Relieving Gel-Patch HOT = Avoid. Drivers are methyparaben (label spelling of methylparaben) + propylparaben + titanium dioxide (High). Magnesium aluminometasilicate is the locked exact Caution INCI (not silodrate). Bare nonoxynol is the locked exact Caution token (not nonoxynol-30). Oleyl alcohol is the locked exact Cleared INCI. Methylacrylate/2-ethylhexyl acrylate copolymer sits on the locked acrylate-copolymer family row (2-ethylhexyl acrylate in the copolymer name is not ethylhexyl acetate). Own formulaId — not merged into the lidocaine gel-patch (different actives + OI). Pack sizes (NDC 46581-871) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -606,8 +594,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       flag('Zinc oxide', 'cleared', dailymed(SET.salonCapsicum, METH.zno)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas-HOT Capsicum Patch = Avoid. Drivers are butylated hydroxytoluene (BHT High) + titanium dioxide (High). Polybutene is the locked exact Caution INCI (not polyisobutylene). Rosin esters / polyisobutylene sit on the locked patch-adhesive Caution row. Natural rubber latex is standalone Caution. Zinc oxide is the locked exact Cleared inactive/topical token (not parked zinc-as-active). Silicon dioxide is the 0-pt Caution cap. Own formulaId — not merged into Gel-Patch HOT (that SPL adds menthol 1.25% + parabens + hydrogel stack). Pack sizes (NDC 46581-700) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -686,8 +673,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Hydrogel Patch Large = Caution. Mentha Oil is the locked exact generic-mint-EO Caution token (not Mentha arvensis leaf oil). Polysorbate 80 is Moderate; sorbitol is Limited; eucalyptus / sorbitan monooleate / methyl-acrylate copolymer / sodium polyacrylate are standalone Caution; silicon dioxide is the 0-pt Caution cap. PVA Solution sits on the locked PVA topical-film Cleared row. Sodium Polyacrylate Starch sits on the locked acrylate-copolymer family row (same posture as starch/acrylic acid graft on batch 47). No High. Own formulaId — do not clone tiger-balm-pain-relieving-patch / tiger-balm-hydrogel-patch (those SPLs have no Mentha Oil / methyl-acrylate / PVA / starch graft; actives are 110 / 33 / 22 mg). Pack sizes (NDC 66761-324) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -751,8 +737,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Cool Patch = Caution. Mentha Oil is the locked exact generic-mint-EO Caution token (not Mentha arvensis leaf oil). Polysorbate 80 is Moderate; sorbitol is Limited; dihydroxyaluminum aminoacetate / eucalyptus / polyacrylic acid / sodium polyacrylate / synthetic hydrotalcite are standalone Caution. Heavy kaolin sits on the locked kaolin Cleared row (Drug Facts missing comma after glycerin). No High. No capsicum on this SPL — own formulaId, not merged into the regular / wider hydrogel (those add capsicum + aluminium glycinate). Pack sizes (NDC 66761-325) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -776,8 +761,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     ],
     inactiveIngredients: regularWiderHydrogelInactives(SET.tbRegHydro),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Patch (regular hydrogel) = Caution. Mentha oil is the locked exact generic-mint-EO Caution token (not Mentha arvensis leaf oil). Polysorbate 80 is Moderate; sorbitol is Limited; aluminium glycinate / eucalyptus / hydrotalcite / polyacrylic acid / sodium polyacrylate are standalone Caution. No High. DailyMed OI matches Tiger Balm Pain Relieving Patch (wider hydrogel) (setid ${SET.tbWider}) — wider is the same formula at 2× mg/patch (160 / 48 / 32) — shared formulaId ${ID.tbRegHydro}, two Search rows. Do not clone tiger-balm-pain-relieving-patch (batch 46; Mentha oil gone from that SPL; actives 110 / 33 / 22 mg). Pack sizes (NDC 66761-322) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -854,8 +838,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Arthritis Rub = Avoid. Drivers are methyl paraben + propyl paraben (High in every form, including rubs). PEG-120 Methyl Glucose Dioleate is the locked exact Caution INCI (not Cleared plain methyl glucose dioleate; not the PEG Moderate family row used on batch-46 vanishing scent). Cajuput / cinnamon / clove / dementholised mint are fragrance/EO standalone Caution. Diazolidinyl urea is standalone Caution (formaldehyde-donor). Chondroitin sulfate / glucosamine sulfate / MSM are locked exact Cleared inactive tokens. Own formulaId — do not clone tiger-balm-neck-shoulder-rub or vanishing scent (those SPLs have no cinnamon / chondroitin / glucosamine / MSM stack). Pack sizes (NDC 66761-422) share this formulaId. Ages 12+ (children over 12). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -878,8 +861,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
     ],
     inactiveIngredients: regularWiderHydrogelInactives(SET.tbWider),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tiger Balm Pain Relieving Patch (wider hydrogel) = Caution. OI matches Tiger Balm Pain Relieving Patch (regular hydrogel) (setid ${SET.tbRegHydro}) — one formulaId, two Search rows. Wider is the same formula at 2× mg/patch (160 / 48 / 32 vs 80 / 24 / 16). Mentha oil is the locked exact generic-mint-EO Caution token. Pack sizes (NDC 66761-354) share this formulaId. Ages 12+ (under 12: consult a doctor). ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

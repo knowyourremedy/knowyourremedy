@@ -83,12 +83,6 @@ const PF_RETAILERS = [
 const CREAM_OIL_LINE =
   'Seed/industrial oils are flagged in gummies. In this cream / lotion they are not that High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -293,8 +287,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       ...preciseOlivateBase(SET.preciseFf),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tylenol Precise Pain Relieving Cream (fragrance-free) = Caution. Drivers are phenoxyethanol + sodium polyacrylate (standalone Caution-table, not Avoid). Cetearyl olivate / sorbitan olivate and isopropyl palmitate are Cleared (Sept 15 lock). ${PARKED_ACTIVES} Fragrance-free carton — not the Cooling / Warming / Nighttime / patch rows. Pack sizes share this formulaId. Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'tylenol.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -324,8 +317,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       ...preciseOlivateBase(SET.preciseCool),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tylenol Precise Cooling Cream = Caution. Same olivate / palmitate Cleared stack as the fragrance-free cream; drivers are phenoxyethanol + sodium polyacrylate. NDC 69968-0793 pack sizes share this formulaId. Distinct from fragrance-free / Warming / Nighttime / patch. ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'tylenol.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -367,8 +359,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       cleared(SET.preciseWarm, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tylenol Precise Warming Cream = Caution. Drivers are phenoxyethanol + vanillyl butyl ether (standalone Caution, not Avoid). Olivate pair + isopropyl palmitate + carbomer interpolymer are Cleared. No sodium polyacrylate on this SPL (carbomer interpolymer instead). Distinct from Cooling / Nighttime / fragrance-free / patch. ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'tylenol.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -417,8 +408,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       cleared(SET.preciseNight, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tylenol Precise Nighttime Cream = Caution. Same locked stack as Warming (phenoxyethanol + vanillyl Caution; olivate / palmitate / interpolymer Cleared). Distinct formulaId because actives differ (camphor + menthol, no lidocaine) even though the inactive list matches Warming. ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'tylenol.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -461,8 +451,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       cleared(SET.precisePatch, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Tylenol Precise Lidocaine 4% Patch = Avoid. Drivers are methylparaben + ethylparaben (High in every form, including patches — Sept 15 lock). DEGEE is standalone Caution (not Cleared). Isopropyl laurate is Cleared (IPM family). ${PG_TOPICAL_TAP} No copolymers on this SPL. ${PARKED_ACTIVES} Distinct from the Precise creams. Pack sizes share this formulaId. Ages 12+ (12–17: adult supervision). Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'tylenol.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -485,8 +474,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexLotion),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: AleveX Pain Relieving Lotion roll-on = Caution. PS80 is Moderate; alcohol vehicle + peppermint oil are Limited; clove / boswellia / thymus / rosemary / eucalyptus / vanillyl / isopulegol / menthoxypropanediol / aminomethylpropanol / sorbitan monooleate are standalone Caution. Linseed oil is Cleared (lotion fill ≠ gummy High). ${CREAM_OIL_LINE} DailyMed OI matches the 77 g tube (setid ${SET.alevexTube}, NDC 0280-0063) exactly — shared formulaId ${ID.alevexLotion}, not merged into one Search row (roll-on vs tube). Distinct from the spray. ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -509,8 +497,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexTube),
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: AleveX Pain Relieving Lotion tube 77 g = Caution. Same locked OI as the roll-on (setid ${SET.alevexLotion}) — one formulaId, two Search rows (roll-on vs tube). Do not merge with the spray (different OI). ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -575,8 +562,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       flag('Tocopherol', 'cleared', dailymed(SET.alevexSpray, METH.tocopherol)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: AleveX Pain Relieving Spray = Caution. Separate formulaId from the lotion — OI does not match (aerosol propellants + DMAEMA / vinyl copolymers + dimethyl isosorbide + propanediol; no PS80 / pentylene glycol / EDTA / sorbitan / aminomethylpropanol / glycerin / water on this SPL). Alcohol + peppermint Limited; EO / vanillyl / copolymer / DMI / propellant stack is standalone Caution, not Avoid. ${CREAM_OIL_LINE} ${PARKED_ACTIVES} Ages 12+. ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

@@ -68,12 +68,6 @@ const PF_RETAILERS = [
 const CREAM_OIL_LINE =
   'Seed/industrial oils are flagged in gummies. In this cream / balm / ointment they are not that High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -499,8 +493,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Pro Pain Massaging Balm = Caution. Drivers are synthetic beeswax + grapefruit / eucalyptus / spearmint (standalone Caution EO) and peppermint oil (Limited flavor/EO). Cocoa seed butter is the locked exact INCI (label Theobroma cacao (cocoa) seed butter — not cocoa butter). Sweet almond / coconut / avocado / hydrogenated vegetable oil are cream-fill Cleared — ${CREAM_OIL_LINE} Sunflower seed wax / carnauba Cleared. No High. Pack sizes (NDC 41167-0790) share this formulaId. Ages 12+ (under 12: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -523,8 +516,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: asperLidoPatchInactives(SET.icyLidoLarge),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot with Lidocaine Large Patch = Avoid. Drivers are methylparaben (High in every form, including patches) + titanium dioxide (High). Aluminum hydroxide is the locked topical/patch Caution token (not the oral antacid active-safety cap). Aluminum glycinate / nonoxynol-30 / polyacrylic acid / sodium polyacrylate / acrylate copolymer are standalone Caution. P80 is Moderate; silica is the 0-pt Caution cap. Same DailyMed OI as Aspercreme lidocaine patches — separate formulaId because this SPL adds menthol 1%. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -567,8 +559,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.icyProPatch, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Pro Pain Relief Patch = Avoid. Driver is titanium dioxide (High). No paraben on this SPL. Aluminum hydroxide is the locked topical/patch Caution token. Topical talc is Caution (not the oral-talc High swallow rule). Acrylate copolymer / nonoxynol-30 / polyacrylic acid / sodium polyacrylate standalone Caution; P80 Moderate; silica 0-pt cap. 2-ethylhexyl acrylate in the copolymer name is not ethylhexyl acetate — the copolymer sits on the locked acrylate-copolymer family row. Own formulaId (camphor 3% + menthol 5%). Pack sizes (NDC 41167-0074) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -588,8 +579,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine HCl', strength: '4%' }],
     inactiveIngredients: lidoNoMessBase(SET.icyLidoRoll),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Lidocaine No-Mess Roll On = Avoid. Driver is methylparaben (High). Dicetyl phosphate + ceteth-20 phosphate are the locked exact Caution rows (not bare ceteth phosphate). Steareth-2 / steareth-21 are the numbered locks (not unspecified steareth). P60 Moderate; alcohol denat. Limited. DailyMed OI + actives (lidocaine HCl 4%) match Aspercreme Lidocaine No-Mess Applicator (setid ${SET.asperAppl}) — shared formulaId ${ID.icyLidoRoll}, two Search rows. Distinct from Max Lidocaine cream (that SPL adds menthol 1% and drops steareth-2). Pack sizes (NDC 41167-1711) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -622,8 +612,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.icyOrigRoll, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original No-Mess Roll On (16% menthol applicator) = Caution. Capsaicin is listed as an inactive — locked exact Caution token (not the parked capsaicin active). Alcohol denat. Limited; acrylates / TEA standalone Caution. IPM / glycerin / water Cleared. No High. Distinct from Nighttime / Revive 8% menthol roll-ons already on main. Pack sizes (NDC 41167-0091) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -678,8 +667,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.icyMax, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Max Lidocaine Pain Relief Cream = Avoid. Driver is methylparaben (High). Dicetyl phosphate + ceteth-20 phosphate are locked exact Caution rows. No steareth-2 on this SPL (steareth-21 only) and actives add menthol 1% — own formulaId, not merged into ${ID.icyLidoRoll}. Pack sizes (NDC 41167-1710) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -727,8 +715,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.icyOrigPatch, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Original Menthol Patch (Arm/Neck/Leg + Back/XL/Value) = Avoid. Driver is titanium dioxide (High). Aluminum hydroxide is the locked topical/patch Caution token. Topical talc is Caution (not oral-talc High). Sorbitan sesquioleate sits on the locked sorbitan-esters Caution row. Starch/acrylic acid graft copolymer sits on the locked acrylate-copolymer family row (not free acrylic-acid monomer). Same setid covers Arm/Neck/Leg, Back, XL, and Value pack sizes — one formulaId. Ages 12+. ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -805,8 +792,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       flag('Citric acid', 'cleared', dailymed(SET.icyMicro, METH.citric)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Icy Hot Pro Pain Relief Cream with microbeads = Avoid. Driver is methylparaben (High). Glyceryl dilaurate + soybean sterols are locked exact Cleared INCI. Ferric ferrocyanide is the locked exact Caution INCI (not an FD&C High dye). PEG-150 stearate sits on the PEG-stearate also-appears-as line (not PEG-120 methyl glucose dioleate). P80 Moderate; alcohol denat. + peppermint Limited. Distinct from Advanced / Pro No-Mess already on main (those SPLs have no microbead / ferric / glyceryl dilaurate stack). Pack sizes (NDC 41167-0078) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -853,8 +839,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.asperEuc, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine with Eucalyptus Essential Oil cream = Caution. C15-19 alkane is the locked exact Cleared INCI. Unlabeled MCT is Limited opacity. P60 Moderate; alcohol denat. Limited; eucalyptus / steareth-2 / steareth-21 / ethylhexylglycerin / hydroxyacetophenone standalone Caution. No High. Pack sizes (NDC 41167-0566) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -906,8 +891,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       flag('Citric acid', 'cleared', dailymed(SET.asperFoot2, METH.citric)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine Foot (2-in-1) cream = Avoid. Driver is methylparaben (High). Dicetyl phosphate / panthenol / magnesium ascorbyl phosphate are locked exact rows. Distinct from Foot Pain Cream (that SPL has fragrance + triethyl citrate + hydroxyacetophenone and no paraben). Pack sizes (NDC 41167-0597) share this formulaId. Ages 12+ (12 or younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -933,8 +917,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       ),
     ]),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine No-Mess plus Lavender = Avoid. Driver is methylparaben (High). Lavender oil is standalone Caution. Same no-mess base as ${ID.icyLidoRoll} plus lavender — own formulaId. Pack sizes (NDC 41167-0568) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -954,8 +937,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: asperLidoPatchInactives(SET.asperLidoPatch),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme with Lidocaine Pain Relieving Patch = Avoid. Drivers are methylparaben + titanium dioxide (High). DailyMed Drug Facts OI + actives (lidocaine 4%) match Aspercreme with Lidocaine XL Patch (setid ${SET.asperXl}) — shared formulaId ${ID.asperLidoPatch}, two Search rows. Not merged into Icy Hot with Lidocaine Large Patch (that SPL adds menthol 1%). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -975,8 +957,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine HCl', strength: '4%' }],
     inactiveIngredients: lidoNoMessBase(SET.asperAppl),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine No-Mess Applicator / fragrance-free roll-on = Avoid. OI + actives match Icy Hot Lidocaine No-Mess Roll On (setid ${SET.icyLidoRoll}) — one formulaId, two Search rows. Driver is methylparaben (High). Pack sizes (NDC 41167-0581 / 0599) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1007,8 +988,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.asperOrig, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Original Pain Relief Cream = Avoid. Drivers are methylparaban + propylparaban (label spellings of the High paraben family — High in every form, including rubs). Potassium phosphate is the locked exact Cleared INCI. TEA is standalone Caution (not the salicylate active). Mineral oil is topical-occlusive Cleared. Pack sizes (NDC 41167-0570) share this formulaId. Ages 12+ (12 and younger: ask a doctor). ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1030,8 +1010,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       flag('Rosemary mint fragrance', 'cleared', dailymed(SET.asperRosLiq, METH.fragrance)),
     ]),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine Rosemary Mint liquid = Avoid. Driver is methylparaben (High). Rosemary mint fragrance is standalone Caution. DailyMed OI + actives match Aspercreme Lidocaine with Rosemary and Mint (setid ${SET.asperRosCream}) — shared formulaId ${ID.asperRosLiq}, two Search rows. Pack sizes (NDC 41167-0598) share this formulaId. Ages 12+ (12 or younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1057,8 +1036,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       ),
     ]),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine with Rosemary and Mint = Avoid. OI + actives match Aspercreme Lidocaine Rosemary Mint liquid (setid ${SET.asperRosLiq}) — one formulaId, two Search rows. Driver is methylparaben (High). Pack sizes (NDC 41167-0565) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1078,8 +1056,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: asperLidoPatchInactives(SET.asperXl),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme with Lidocaine XL Patch = Avoid. OI + actives match Aspercreme with Lidocaine Pain Relieving Patch (setid ${SET.asperLidoPatch}) — one formulaId, two Search rows. Current Drug Facts no longer list polygalic acid (that was a PR #94 refuse string; the token is now locked anyway). Drivers are methylparaben + titanium dioxide (High). Pack sizes (NDC 41167-0585) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1124,8 +1101,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.asperOdor, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme with Lidocaine Odor-Free Cream = Avoid. Driver is methylparaben (High). Shorter OI than the no-mess roll-on (no AMPS / isohexadecane / P60 / steareth-2) — own formulaId. Pack sizes (NDC 41167-0582 / 0587) share this formulaId. Ages 12+ (12 and younger: ask a doctor). ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1177,8 +1153,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Lidocaine Foot Pain Cream = Caution. No High. Dicetyl phosphate / triethyl citrate / panthenol / magnesium ascorbyl phosphate are locked exact rows. Fragrance / hydroxyacetophenone / ceteth-20 phosphate standalone Caution; alcohol denat. Limited. Distinct from Foot 2-in-1 (that SPL has methylparaben). Pack sizes (NDC 41167-0586) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1228,8 +1203,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       cleared(SET.asperPro, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Aspercreme Professional Cream = Caution. No High. Dicetyl phosphate / panthenol / magnesium ascorbyl phosphate / triethyl citrate are locked exact rows. Ceteth-20 phosphate / hydroxyacetophenone / C30-45 / ethylhexylglycerin standalone Caution; alcohol denat. Limited. Own formulaId (no fragrance vs Foot Pain; no paraben vs Foot 2-in-1). Pack sizes (NDC 41167-0564) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'aspercreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1249,8 +1223,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: salonGelPatchInactives(SET.salonGel, 'Titanium dioxide'),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Lidocaine 4% Pain Relieving Gel-Patch = Avoid. Drivers are methylparaben + propylparaben + titanium dioxide (High). Aluminum silicate + dihydroxyaluminum aminoacetate are locked exact Caution INCI. DailyMed OI + actives match the Hisamitsu America gel-patch (setid ${SET.salonGelHis}) — shared formulaId ${ID.salonGel}, two Search rows. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1277,8 +1250,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       'Aluminum silicate',
     ),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Pain Relieving Patch LARGE = Avoid. Driver is titanium dioxide (High). Aluminum silicate is the locked exact Caution INCI (same row as synthetic aluminum silicate on the regular patch). Perfume is fragrance Caution. SIS / polyisobutylene / terpene resin sit on the locked patch-adhesive Caution row. DailyMed OI + actives match Salonpas Pain Relieving Patch (setid ${SET.salonPrp}) — shared formulaId ${ID.salonPrp}, two Search rows. Pack sizes (NDC 46581-210) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1298,8 +1270,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: salonGelPatchInactives(SET.salonGelHis, 'Titanium dioxyde'),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Lidocaine 4% Pain Relieving Gel-Patch (Hisamitsu America) = Avoid. OI + actives match the Hisamitsu gel-patch (setid ${SET.salonGel}) — one formulaId, two Search rows. SPL spells titanium dioxide as “titanium dioxyde”; same High row. Drivers are methylparaben + propylparaben + titanium dioxide (High). Pack sizes (NDC 55328-100) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1330,8 +1301,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       flag('Terpene resin', 'cleared', dailymed(SET.salonFlex, METH.patchAdhesive)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Pain Relieving FLEX Patch Lidocaine 4% = Caution. No High (no titanium dioxide, no paraben). Aluminum silicate is the locked exact Caution INCI. SIS / polyisobutylene / terpene resin sit on the locked patch-adhesive Caution row. Own formulaId — not merged into the gel-patch (that SPL adds parabens + TiO2 + polyacrylic acid). Pack sizes (NDC 46581-840) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} ${MINERAL_OIL_TAP} ${LIMITED_STACK} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -1358,8 +1328,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       'Synthetic aluminum silicate',
     ),
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Salonpas Pain Relieving Patch = Avoid. OI + actives match Salonpas Pain Relieving Patch LARGE (setid ${SET.salonPrpLarge}) — one formulaId, two Search rows. Driver is titanium dioxide (High). Synthetic aluminum silicate sits on the same locked Caution row as aluminum silicate. Pack sizes (NDC 46581-110) share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${MINERAL_OIL_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'salonpas.us'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

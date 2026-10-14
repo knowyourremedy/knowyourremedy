@@ -177,8 +177,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       cleared(SET_MM_LORATADINE, 'Pregelatinized starch'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Member\'s Mark Allergy Relief loratadine 10 mg = Clean. Reuses `loratadine-l612-plain` (same L612 family as Equate / up&up / Kirkland AllerClear). DailyMed setid 95c2b45a (NDC 68196-711; imprint L612). Drug Facts inactive list: lactose monohydrate, magnesium stearate, povidone, pregelatinized starch. The structured SPL inactive table lists only lactose / magnesium stearate / povidone and may omit pregelatinized starch vs other L612 rows — confirm starch is still on the carton before treating pack sizes as the same formula. No TiO2 / dye. Contains lactose. Ages 6+ (under 6: ask a doctor). This is not a coated / -D SKU. Member\'s Mark cetirizine is a different Avoid formula already drafted in batch 5.',
+
     retailers: ["Sam's Club"],
     sourcesGeneral: [
       `DailyMed setid ${SET_MM_LORATADINE} (L612 plain loratadine; draft, not verified) — confirm pregelatinized starch on carton`,
@@ -224,8 +223,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       cleared(SET_KIRKLAND_CET, 'Triacetin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Aller-Tec cetirizine 10 mg (plain, NOT -D) = Avoid. Reuses `store-cetirizine-coated-blue1-tio2` — same Blue #1 lake + TiO2 coat family as Equate / Member\'s Mark / CVS cetirizine (batch 5). DailyMed setid d4a688aa: corn starch, FD&C blue no. 1 aluminum lake, hypromellose, lactose monohydrate, magnesium stearate, polydextrose, polyethylene glycol, povidone, titanium dioxide, triacetin. High drivers are TiO2 + Blue #1 lake. PEG is Moderate (not needed to reach Avoid). This is not Aller-Tec D (combo + ER; separate formulaId). Contains lactose. Ages 6+.',
+
     retailers: ['Costco'],
     cleanAlternatives: L612_CLARITIN_ALTS,
     sourcesGeneral: [
@@ -272,8 +270,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       cleared(SET_KIRKLAND_CET_D, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Aller-Tec D = Avoid. New formulaId `kirkland-aller-tec-d-cetirizine-pse` — do not reuse plain Aller-Tec / `store-cetirizine-coated-blue1-tio2` (this is a cetirizine 5 mg + pseudoephedrine 120 mg 12-hour ER combo). DailyMed setid a8e57b21 (NDC 63981-147; imprint L147). Inactive list: colloidal silicon dioxide, hypromellose, lactose monohydrate, low-substituted hydroxypropyl cellulose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, talc, titanium dioxide. High drivers from this SPL are TiO2 + talc (white film coat; no synthetic dye on the label). PEG is Moderate (not needed to reach Avoid). Silicon dioxide is the nanoparticle Caution cap (0 demerit points; not Avoid alone). Polyvinyl alcohol and low-substituted hydroxypropyl cellulose are on the SPL and are not in Methodology §5 (ungraded; not the Avoid drivers). Contains lactose. Ages 12+ (under 12: ask a doctor; 65+: ask a doctor). Swallow whole — do not break or chew.',
+
     retailers: ['Costco'],
     cleanAlternatives: L612_CLARITIN_ALTS,
     sourcesGeneral: [
@@ -315,8 +312,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       cleared(SET_KIRKLAND_MUCUS_DM, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Mucus-DM Max = Avoid. New club formulaId `kirkland-mucus-dm-max-er` — do not silently merge into `mucinex-dm-er-yellow10` (that national 600/30 SPL is a different strength and inactive stack). DailyMed setid d2151492 (NDC 63981-812; imprint L812): carbomer homopolymer type B, copovidone, D&C yellow #10 aluminum lake, hypromellose, magnesium hydroxide, magnesium stearate, microcrystalline cellulose, silicon dioxide. Yellow #10 lake is High-tier Avoid. Silicon dioxide is the nanoparticle Caution cap (not needed to reach Avoid). Member\'s Mark Mucus/DM twin was FLAG-skipped (no Sam\'s SPL). Kirkland guaifenesin-only was FLAG-skipped (no clean DailyMed). Ages 12+ (under 12: do not use). Swallow whole with water — do not crush, chew, or break.',
+
     retailers: ['Costco'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [

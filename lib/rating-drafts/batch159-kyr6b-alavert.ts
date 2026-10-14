@@ -54,12 +54,6 @@ const ADULT_ALTS: CleanAlternative[] = [
   alt('boiron-allergycalm-meltaways', 'Independently Clean homeopathic meltaway already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const CITRUS_NOTE =
-  'Avoid. The driver is aspartame. Polysorbate 80 is Moderate. Flavors are the bare-flavors Caution family. Mannitol is Limited. Anhydrous citric acid and pullulan are Cleared. Citrus Burst. Ages 6+. Adults and children 6 years and over: 1 tablet daily. Phenylketonurics: contains phenylalanine 0.56 mg per tablet.';
-
-const MINT_NOTE =
-  'Caution. Polysorbate 80 is Moderate. Mannitol is Limited. Peppermint flavor is the flavor Caution family. Anhydrous citric acid and pullulan are Cleared. No aspartame on this mint line. Fresh Mint. Ages 6+. Adults and children 6 years and over: 1 tablet daily.';
-
 export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
   {
     id: 'alavert-b159-citrus-20',
@@ -83,7 +77,7 @@ export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
       cleared(CITRUS_SET, 'Pullulan', METH.pullulan),
     ],
     verdict: 'avoid',
-    honestNote: CITRUS_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -111,7 +105,7 @@ export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
       cleared(MINT_SET, 'Pullulan', METH.pullulan),
     ],
     verdict: 'caution',
-    honestNote: MINT_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [

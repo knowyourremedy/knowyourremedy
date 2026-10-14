@@ -108,12 +108,6 @@ const DROP_OIL_TEXT =
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const ZINC_PARKED =
-  'Zinc is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const SEDATING =
-  'First-generation / sedating antihistamine — listed as a cleanliness / use note only, not an efficacy claim.';
-
 const GENEXA_RETAILERS = [
   'Genexa.com',
   'Whole Foods',
@@ -247,8 +241,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-STYLE DRAFT: Genexa Infants' Vitamin D = Clean. Sunflower oil is a liquid-drop carrier — not the gummy seed-oil High rule. Organic vanilla flavor is Cleared-class organic flavor (§5), not Limited natural-flavor opacity. Demerit math: 0 pts. Infant-labeled drops (6 months–12 months as directed on carton). No DailyMed drug SPL (dietary supplement). Pack sizes share formulaId. No dosing or medical advice in this draft.`,
+
     retailers: [...GENEXA_RETAILERS],
     sourcesGeneral: [
       `https://www.genexa.com/products/vitamin-d-3-drops-for-babies — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`,
@@ -307,8 +300,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Cough & Chest Congestion = Caution. Driver is natural flavors Limited 1 pt. Organic agave / organic blueberry are Cleared. Do not apply the Kids Multi / Kids APAP don\'t-demerit-natural-flavors exception — that exception is locked to those REUSE ids only. Prefer live Genexa.com OI (natural flavors; no citrus on the standalone page). Combo-pack DailyMed twins may list Natural Citrus Extract — same Limited flavor family, still Caution; one formulaId for pack sizes. Ages 4+ (under 4: do not use). Always dose with the enclosed cup. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -355,10 +347,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Nighttime Cough / Long-Acting Nighttime Cough = Caution. One formula for the combo naming. Driver is natural flavors Limited 1 pt. Organic agave / organic blueberry are Cleared. DailyMed setid 024bb864. Combo-pack twins may also list Natural Citrus Extract (same Limited flavor family). Do not add a second row. ' +
-      SEDATING +
-      ' Ages 6+ (under 6: do not use). Always dose with the enclosed cup. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -424,8 +413,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Daytime Severe Cold & Flu = Caution. Demerit math: natural flavor Limited 1 + xylitol oral Limited 1 = 2 pts Caution (not Avoid). Organic agave / organic blueberry are Cleared. Live Genexa.com OI. Stay under 4 g/day acetaminophen, same as any APAP. Ages 12+ (under 4: do not use; 4–under 12: ask a doctor). Kit / combo packs are OUT — this is the daytime formula only. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ADULT_COLD_ALTS,
     sourcesGeneral: [
@@ -471,10 +459,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Nighttime Multi-Symptom Cold & Flu = Caution. Driver is flavors (natural) Limited 1 pt. Organic agave / organic blueberry are Cleared. DailyMed night-formula OI on setid 213fe898 (combo SPL; kit row is OUT). Website combo pages also list xylitol / chamomile on a mixed day+night block — night SPL inactives are agave / blueberry / natural flavors / water only; do not invent those extras onto this formula. Do not apply the Kids Multi daytime Clean flavor exception. ' +
-      SEDATING +
-      ' Stay under 4 g/day acetaminophen. Ages 6+ (under 6: do not use unless directed by a doctor). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -529,10 +514,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Infants\' Daytime Cough & Immune Support = Caution. Driver is flavor (natural) Limited 1 pt. Organic agave / citric acid / water are Cleared. Zinc is the labeled active. ' +
-      ZINC_PARKED +
-      ' Dietary supplement — not an OTC cough monograph. Carton is 6 months+. No DailyMed drug SPL. Pack sizes share formulaId. No dosing or medical advice in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -605,8 +587,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Antacid Maximum Strength = Caution. Organic beet root + organic rice bran extract are Cleared under Sept 14 locks. Organic flavors are Cleared (§5) — they do not count as Limited. Driver is organic maltodextrin Limited 1 pt, matching locked Genexa chew siblings (do not invent Clean; do not extend the adult ES maltodextrin exception). DailyMed setid d4eb1687 matches the live Genexa.com list. Ages 12+. Calcium-carbonate antacid — cleanliness only. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ANTACID_ALTS,
     sourcesGeneral: [
@@ -661,10 +642,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Arnica Pain = Caution. Organic rice bran extract is Cleared. Driver is Grape Flavor Limited 1 pt (Sept 14 lock); organic maltodextrin is also Limited on this chew pattern (1+1 = 2 pts Caution, not Avoid). Do not invent Clean. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Adult SKU (12+; a 3–11 chart exists). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: PAIN_ALTS,
     sourcesGeneral: [
@@ -730,10 +708,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Sleepology (adult) = Caution. Separate id from genexa-kids-sleepology — do not clone. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Organic rice bran extract is Cleared. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 12+ (a 3–11 chart exists — this row is the adult SKU). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -807,10 +782,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Calm Keeper = Caution. Organic rice bran extract is Cleared. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 3–11 (under 3: ask a doctor). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_CALM_ALTS,
     sourcesGeneral: [
@@ -874,10 +846,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Stress = Caution. Organic rice bran extract is Cleared. Natural vanilla lavender flavor Limited 1 pt + organic maltodextrin Limited 1 pt = 2 pts Caution. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 12+ (a 3–11 chart exists — this row is the adult SKU). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -946,10 +915,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Flu Fix = Caution. Organic rice bran extract is Cleared. Organic açaí flavor is Cleared. Driver is organic maltodextrin Limited 1 pt, matching locked genexa-kids-cold-crush — do not invent Clean. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 12+ (a 4–11 chart exists — this row is the adult SKU). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ADULT_COLD_ALTS,
     sourcesGeneral: [
@@ -1024,10 +990,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Cold Crush (adult) = Caution. Different id from genexa-kids-cold-crush — do not clone. Organic rice bran extract is Cleared. Organic açaí flavor is Cleared. Driver is organic maltodextrin Limited 1 pt, matching locked kids-cold-crush — do not invent Clean. Homeopathic chewable — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Ages 12+ (a 4–11 chart exists — this row is the adult SKU). No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ADULT_COLD_ALTS,
     sourcesGeneral: [
@@ -1096,8 +1059,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Kids\' Honey Cough Syrup = Caution. Driver is organic cultured dextrose (standalone Caution, not Avoid; Sept 14 lock). Organic acerola is Cleared-class food. Honey is Cleared-class sweetener — honest note only: not for under 1. No dosing. Dietary supplement / herbal syrup — no DailyMed drug SPL. Carton has a 1–3 chart; this row is minAge 1 because honey is not for infants under 1. Pack sizes share formulaId. No medical advice in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
     sourcesGeneral: [
@@ -1167,8 +1129,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Cough & Chest Congestion (adult) = Caution. Prefer live Genexa.com OI. Driver is Natural Citrus Extract Limited 1 pt (Sept 14 lock); accompanying natural flavor is the same Limited flavor-opacity family (still Caution, not Avoid). Organic agave / organic blueberry are Cleared. Ages 12+ (under 12: do not use). Combo packs are OUT — this is the daytime cough formula only. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ADULT_COLD_ALTS,
     sourcesGeneral: [
@@ -1235,10 +1196,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-STYLE DRAFT: Nighttime Severe Cold & Flu = Caution. Driver is organic chamomile extract (standalone Caution, not Avoid; Sept 14 lock). Natural flavor is also Limited 1 pt. Organic agave / organic blueberry are Cleared. Night formula only — the day+night combo pack itself is OUT (no kit row). Live source is the combo product page because no standalone night PDP is sold. Stay under 4 g/day acetaminophen. ' +
-      SEDATING +
-      ' Ages 12+. No dosing in this draft.',
+
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: ADULT_COLD_ALTS,
     sourcesGeneral: [

@@ -124,18 +124,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const NO_CLEAN_PRENATAL =
-  'No independently Clean prenatal exists in this draft set — cleanAlternatives omitted (honest empty; form cannot be labeled on a nonexistent §6 swap). Do not invent Clean for an uncoated / dye-free prenatal without an exact SKU + matched label.';
-
-const PRENATAL_LABEL =
-  'Carton is labeled for prenatal / pregnancy use. No dosing or medical advice in this draft.';
-
-const IRON_OVERDOSE_CARTON =
-  'On-carton iron overdose warning (when iron is labeled): accidental overdose of iron-containing products is a leading cause of fatal poisoning in children under 6 — keep out of reach of children.';
-
 const CENTRUM_PRENATAL_CITE =
   'DailyMed setid d5fd7fd6-b5d8-4ada-adfd-6858343f7e30 (Centrum Specialist Prenatal tablet) / Centrum Prenatal US + Canada non-medicinal label patterns (TiO2 + talc + BHT ± carmine)';
 const EQUATE_PRENATAL_CITE =
@@ -198,17 +186,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(NM_PRENATAL_TAB_CITE, 'Gelatin'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made Prenatal Multi tablets = Caution (PEG + SiO2 + maltodextrin). Matched Target / Instacart other-ingredients have no titanium dioxide, synthetic dye, or talc. Raw demerit math is PEG 2 + maltodextrin 1 → 3 pts Avoid — draft follows the approved Caution call (SiO2 is a 0-pt cap, not a softener). Hydrogenated soybean oil appears on some older HelloPharmacist / DirectionsForMe lists; that is TABLET oil — not the gummy seed-oil High rule — and is not scored as Avoid on this row (' +
-      METH.tabletOil +
-      '). Current Target / Instacart lists omit it. Nature Made Prenatal + DHA softgels are a different unmatched formula — not this row (P8 skip). No DailyMed drug SPL (dietary supplement). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_PRENATAL_TAB_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -245,15 +223,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Soy lecithin'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: One A Day Prenatal softgel carton WITHOUT FD&C / titanium dioxide = Caution, NOT Clean, until the physical carton is matched. Official Bayer livewell Prenatal 1 PDF (05/28/20 Version 002) lists color (annatto extract [seed]) and does NOT list TiO2 or synthetic dyes on that PDF. Annatto is a standalone Caution (not Avoid; not additive-scored). Confirm the carton has no TiO2 / synthetic dye — a CVS-listed TiO2 + Blue #1 + Red #40 coat is the Avoid twin (`one-a-day-prenatal-1-softgels`), not this row. Separate formulaIds; do not merge them. Contains fish and soy (carton allergen labeling). No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${OAD_PRENATAL_NO_DYE_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -293,13 +263,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(NM_PRENATAL_GUMMY_CITE, 'Citric acid'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made Prenatal gummies (Folic Acid + DHA + Choline) = Caution (natural flavors + color added). Matched Target / CVS other-ingredients list no palm oil, canola, or vegetable oil. Sucrose fatty acid esters on those lists are NOT the gummy seed/industrial-oil High rule and are not scored as Avoid. Color added is listed without a synthetic-dye name on matched retailer pages (some cartons say color derived from a natural source) — this draft does not invent a dye High. Confirm the carton: a later palm / canola / vegetable-oil listing is a different formula. Contains fish. No iron on typical matched gummy cartons — iron-overdose warning does not apply unless iron is labeled. No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_PRENATAL_GUMMY_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -346,15 +310,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('Acacia', 'cleared', labelCite(CENTRUM_PRENATAL_CITE, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Centrum Prenatal / Centrum Specialist Prenatal coated tablet = Avoid. DailyMed Specialist Prenatal tablet (setid d5fd7fd6-b5d8-4ada-adfd-6858343f7e30) plus Centrum prenatal US / Canada non-medicinal patterns list titanium dioxide + talc + BHT. Any one of TiO2 / talc / BHT is High Avoid. Carmine (color) is a standalone Caution — note only on this already-Avoid row; not a second grade. PEG is Moderate and SiO2 is the 0-pt Caution cap (not needed to reach Avoid). Specialist kits pair the coated tablet with a separate DHA softgel — this formulaId grades the coated tablet. Confirm the carton still lists TiO2 / talc / BHT. Contains soy on the DailyMed Specialist tablet list. No DailyMed drug-monograph SPL (dietary supplement kit). Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${CENTRUM_PRENATAL_CITE} — draft, not verified; dietary-supplement DailyMed label`,
@@ -394,15 +350,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(EQUATE_PRENATAL_CITE, 'Calcium silicate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Daily Prenatal Multivitamin coated tablet = Avoid. HelloPharmacist / retailer other-ingredients list titanium dioxide + talc + FD&C Red #40 Aluminum Lake + FD&C Blue #2 Aluminum Lake + polyethylene glycol + silicon dioxide. TiO2, talc, or either lake dye is High Avoid. PEG is Moderate; SiO2 is the 0-pt Caution cap (not needed to reach Avoid). Equate One Daily Prenatal softgels (annatto, no TiO2 on some Instacart lists) are a different formula — not this row. Confirm the coated-tablet carton. No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['Walmart'],
     sourcesGeneral: [
       `${EQUATE_PRENATAL_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -437,15 +385,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(OAD_PRENATAL_DYE_CITE, 'Soy lecithin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: One A Day Prenatal 1 softgels WITH titanium dioxide / FD&C Blue #1 / FD&C Red #40 = Avoid. CVS inactive list names those three High-tier colorants. Separate formulaId from the no-dye / no-TiO2 Caution twin (`one-a-day-prenatal-softgels-no-dye`) — do not merge them. This row applies ONLY when the carton lists TiO2 or synthetic dye. Contains fish and soy (carton allergen labeling). No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${OAD_PRENATAL_DYE_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -490,15 +430,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('Acacia', 'cleared', labelCite(CVS_PRENATAL_CITE, METH.gums)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store coated prenatals with TiO2, dye, or talc = Avoid. CVS Health Prenatal Multivitamin coated — Open Food Facts / HelloPharmacist other-ingredients list titanium dioxide + talc + Red 40 Lake + Yellow 6 Lake + BHT (typical private-label twin pattern). Confirm the physical carton lists TiO2 / dye / talc before treating a bottle as this formulaId. Separate formulaId from up&up and Walgreens twins. No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['CVS'],
     sourcesGeneral: [
       `${CVS_PRENATAL_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -543,15 +475,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(UPANDUP_PRENATAL_CITE, 'Carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store coated prenatals with TiO2, dye, or talc = Avoid. up&up (Target) Prenatal Multivitamin coated — Target other-ingredients list titanium dioxide (color) + Blue 2 / Red 40 / Yellow 6 lakes + PEG + silica (typical private-label twin pattern; talc is not on this Target list). Target page also states the product contains artificial colors, including Red No. 40 and titanium dioxide. Confirm the physical carton lists TiO2 / dye / talc before treating a bottle as this formulaId. Separate formulaId from CVS Health and Walgreens twins. Contains soy (lecithin). No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['Target'],
     sourcesGeneral: [
       `${UPANDUP_PRENATAL_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -590,15 +514,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(WALGREENS_PRENATAL_CITE, 'Lecithin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: store coated prenatals with TiO2, dye, or talc = Avoid. Walgreens Prenatal Multivitamin coated — HelloPharmacist / retailer other-ingredients list titanium dioxide + Blue 2 / Red 40 / Yellow 6 lakes + PEG + silicon dioxide (typical private-label twin pattern; talc is not on that HelloPharmacist snapshot). Confirm the physical carton lists TiO2 / dye / talc before treating a bottle as this formulaId. Separate formulaId from CVS Health and up&up twins. No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      IRON_OVERDOSE_CARTON +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['Walgreens'],
     sourcesGeneral: [
       `${WALGREENS_PRENATAL_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -646,15 +562,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(OLLY_PRENATAL_CITE, 'Carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: OLLY Essential Prenatal Multivitamin gummies = Avoid. Target other-ingredients list vegetable oil (coconut, canola) + natural flavors. Canola in a gummy is High-tier (seed/industrial oils in gummies). Coconut oil on the same line does not clear the canola High (' +
-      METH.coconutOil +
-      '). Natural flavors are Limited (not needed to reach Avoid). Some older / other-count Target snapshots omit vegetable oil — confirm the carton; an oil-free listing would be a different formula (not invented here). Carton is labeled no iron added. Contains fish on some Essential Prenatal cartons. No DailyMed drug SPL. Adults. ' +
-      PRENATAL_LABEL +
-      ' ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_PRENATAL,
+
     retailers: ['Target', 'CVS', 'Walgreens', 'Grocery'],
     sourcesGeneral: [
       `${OLLY_PRENATAL_CITE} — draft, not verified; no DailyMed drug SPL`,

@@ -129,12 +129,6 @@ const SIO2_TAP =
 const OIL_FILL_TAP =
   'Named single oil / butter as the topical BASE or FILL is Cleared. Seed/industrial oils are flagged in gummies. In this ointment they are not that High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const SEDATING =
-  'First-generation / sedating antihistamine — cleanliness note only; next-day drowsiness is a use note, not an invented active-safety grade.';
-
 const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
@@ -312,9 +306,6 @@ const VAPOR_ALTS: CleanAlternative[] = [
   ),
 ];
 
-const L484_NOTE =
-  'LNK L484 extra-strength acetaminophen family — oral PEG is Moderate (2 pts) → Caution. These store brands share inactives and formulaId; pack sizes are not graded separately. Some of the same retailers also sell dyed / titanium-dioxide ES SKUs under similar names — confirm the L484 / PEG list on the bottle. Stay under 4 g/day acetaminophen. Ages 12+.';
-
 export const BATCH65_CATCHUP_BARCODES: Record<string, string> = {
   // Dollar General PDP path /p/.../370030118014 — store barcode tile, not the NDC.
   'dg-health-mucus-er-max-dyefree': '370030118014',
@@ -379,8 +370,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.dgMax, METH.ssg)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: DG Health Mucus-ER Max 55910-626-74 = Clean. DailyMed setid ea8deeb0 Drug Facts: carbomer homopolymer type B, hypromellose, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. White tablet — no dye on Drug Facts. Structured SPL omits sodium starch glycolate; Drug Facts line is the authority. Reuses `amazon-basic-care-mucus-er-max-dyefree` (same 1200 mg dye-free list). Dollar General PDP 14-ct confirms the live NDC. This is NOT the Blue #1 600 mg Mucus-ER (`dg-health-mucus-er`) and not the Blue #1 Max twin 55910-887 (not written). Ages 12+. Swallow whole. Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.dgMax} (DG Health Mucus-ER Max NDC 55910-626-74; ${UNVERIFIED_NOTE}) — reuse ${MUCUS_ER_MAX_DF}`,
       'Dollar General PDP /p/dg-health-maximum-strength-mucus-er-max-guaifenesin-extended-release-tablets-14-ct/370030118014',
@@ -406,8 +396,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.mmMax, METH.ssg)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Member’s Mark Maximum Strength Mucus Relief guaifenesin-only 1200 mg = Clean. DailyMed setid 00c40e3b (NDC 68196-405) Drug Facts: carbomer homopolymer type B, hypromellose, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. Same dye-free Max list as Amazon Basic Care / DG 55910-626. Reuses `amazon-basic-care-mucus-er-max-dyefree`. This is NOT the Mucus Relief DM twins (68196-812 Yellow #10 / 68196-999 Blue #1). Ages 12+. Swallow whole. Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.mmMax} (Member's Mark guaifenesin 1200 ER NDC 68196-405; ${UNVERIFIED_NOTE}) — reuse ${MUCUS_ER_MAX_DF}`,
     ],
@@ -435,8 +424,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Pregelatinized starch', 'cleared', dailymed(SET.walLorat, METH.starch)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Walgreens Allergy Relief loratadine 10 mg = Clean. Reuses `loratadine-l612-plain`. DailyMed setid 41f8fc1d (NDC 0363-1612). Drug Facts: lactose monohydrate, magnesium stearate, povidone, pregelatinized starch. Current Walgreens / W-brand house tablet (Free + Pure carton on this SPL). Not Wal-itin 0363-9150 / ended 0363-0699. Not a coated / ODT / -D SKU. Contains lactose. Ages 6+ (under 6: ask a doctor). Draft, not verified.',
+
     sourcesGeneral: [
       `DailyMed setid ${SET.walLorat} (Walgreens loratadine L612 NDC 0363-1612; ${UNVERIFIED_NOTE}) — reuse ${L612_FORMULA}`,
     ],
@@ -468,7 +456,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.gsL484, METH.ssg)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: GoodSense Extra Strength Pain Relief APAP 500 L484 = Caution. Reuses \`${L484_FORMULA}\` — oral PEG Moderate. DailyMed setid 7f78028a (NDC 0113-0484; imprint L484). Drug Facts: carnauba wax, corn starch*, croscarmellose sodium*, hypromellose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate*, stearic acid (*may contain). Starch / SSG are Cleared housekeeping and are not a reason to split this L484 family. Not the dyed / talc / TiO2 GoodSense twin (setid af7ae548 — not written). ${L484_NOTE}`,
+
     cleanAlternatives: APAP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.gsL484} (GoodSense ES APAP L484 NDC 0113-0484; ${UNVERIFIED_NOTE}) — reuse ${L484_FORMULA}`,
@@ -496,7 +484,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.fwIr, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Family Wellness Chest Congestion Relief guaifenesin IR 400 mg = Caution. DailyMed setid 412f3459 (NDC 55319-891). Drug Facts: magnesium stearate, microcrystalline cellulose, silicon dioxide, povidone K30, povidone 90F, maltodextrin, stearic acid. SiO2 is the 0-pt nanoparticle Caution cap. Maltodextrin is Limited. No High. ${LIMITED_STACK} ${SIO2_TAP} Own formulaId — not an ER mucus family and not the skipped DG IR (no live DG IR SPL this hunt). Copovidone is not on this label (povidone K30 / 90F are the locked povidone housekeeping row). Ages 12+. Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.fwIr} (Family Wellness guaifenesin IR 400 NDC 55319-891; ${UNVERIFIED_NOTE})`,
@@ -528,7 +516,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.fwDm, METH.stearic)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Family Wellness Chest Congestion Relief DM IR 400/20 = Caution. DailyMed setid 8aee8108 (NDC 55319-890). Same inactive list as the guaifenesin-only IR twin — shared formulaId \`${FW_GUAIF_IR}\`. SiO2 Caution cap + maltodextrin Limited. No High. ${LIMITED_STACK} Different actives (adds DXM 20 mg) — own product id. Ages 12+. Draft, not verified.`,
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.fwDm} (Family Wellness guaifenesin DM IR NDC 55319-890; ${UNVERIFIED_NOTE}) — share ${FW_GUAIF_IR}`,
@@ -559,7 +547,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('White petrolatum', 'cleared', dailymed(SET.dgTriple, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: DG Health Triple Antibiotic oil-blend 55910-209 = Caution. Drivers are sodium pyruvate (Caution, Sept 16 lock) + tocopheryl acetate (Caution; distinct from Cleared mixed tocopherols). No High. DailyMed setid 1694f4ee Drug Facts: cocoa butter, cottonseed oil, olive oil, sodium pyruvate, tocopheryl acetate, white petrolatum. Reuses \`${TRIPLE_OIL_BLEND}\`. Named ointment oils / cocoa butter are Cleared topical fill — not the gummy seed-oil High rule. ${OIL_FILL_TAP} Do not merge into petrolatum-only Triple + Pain. First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor). Draft, not verified.`,
+
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.dgTriple} (DG Health Triple Abx oil-blend NDC 55910-209; ${UNVERIFIED_NOTE}) — reuse ${TRIPLE_OIL_BLEND}`,
@@ -593,7 +581,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Petrolatum', 'cleared', dailymed(SET.fwScar, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Family Wellness Pain Scar Itch 69396-054 = Caution. Driver is sodium pyruvate (Caution, Sept 16 lock). DailyMed setid 9e507ec5 Drug Facts: cocoa butter, Levant cottonseed oil, olive oil, petrolatum, sodium pyruvate, vitamin E. Structured SPL maps vitamin E to alpha-tocopherol (Cleared mixed-tocopherols row) — not tocopheryl acetate. Own formulaId — do not silently merge into \`${TRIPLE_OIL_BLEND}\` (that family flags tocopheryl acetate). ${OIL_FILL_TAP} Not 69396-041 (cetyl alcohol ungraded — skipped). Not the petrolatum ± mineral oil Clean twins. Ages 2+ (under 2: ask a doctor). Draft, not verified.`,
+
     cleanAlternatives: FIRST_AID_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.fwScar} (Family Wellness Pain Scar Itch NDC 69396-054-01, 28.4 g tube; ${UNVERIFIED_NOTE}). UPC-A 032251533143 is zbar on that carton image. Not 032251533150 (plain triple antibiotic).`,
@@ -622,8 +610,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('White petrolatum', 'cleared', dailymed(SET.eqVap, METH.petrolatum)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Equate Children’s Vaporizing Rub = Caution. DailyMed setid 372e66a6 (NDC 49035-770). Drug Facts inactives: fragrance, thymol, turpentine oil, white petrolatum. Fragrance (topical) + thymol + spirits of turpentine / turpentine oil are locked Caution tokens. White petrolatum is Cleared (petrolatum grade is no longer an intake block). No High. Adult Equate Vaporizing 49035-872 prints the same inactive list — not a second row this write. Camphor / eucalyptus / menthol stay parked as actives. External use only; keep away from nostrils / mouth / eyes. Typical chest-rub monograph: ages 2+ (under 2: do not use). Draft, not verified.',
+
     cleanAlternatives: VAPOR_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.eqVap} (Equate Children's Vaporizing Rub NDC 49035-770; ${UNVERIFIED_NOTE})`,
@@ -650,8 +637,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Lanolin alcohols', 'cleared', dailymed(SET.eqPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Equate Nighttime Relief Lubricant ointment = Caution (lanolin alcohols). DailyMed setid 152171db (NDC 79903-260). Actives are light mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohols — locked Caution wool-alcohol family (Sept 16). No High. Shared formulaId with the CVS Nighttime Dry-Eye twin (same actives + lanolin alcohol). Prefer in-batch / already-on-main PF tears over this PM ointment. Equate PF + BKC multi-dose already on main — this is the skipped E6 store PM hole. Draft, not verified.',
+
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.eqPm} (Equate Nighttime Relief Lubricant NDC 79903-260-35, 3.5 g; ${UNVERIFIED_NOTE}). UPC-A 194346254897 is zbar on that carton (EAN-13 0194346254897).`,
@@ -679,8 +665,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Lanolin alcohol', 'cleared', dailymed(SET.cvsPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: CVS Nighttime Dry-Eye Relief ointment = Caution (lanolin alcohol). DailyMed setid fc1c3dad (NDC 59779-788). Same mineral oil 42.5% + white petrolatum 57.3% + lanolin-alcohol inactive as Equate Nighttime Relief — shared `store-pm-ointment-lanolin-alcohol`. NBE Refresh PM on the SPL title is a compare-to, not a Clean merge (Refresh PM already on main; do not reopen). Prefer PF tears. Draft, not verified.',
+
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.cvsPm} (CVS Nighttime Dry-Eye Relief NDC 59779-788; ${UNVERIFIED_NOTE}) — share ${STORE_PM_LANOLIN}`,
@@ -709,8 +694,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       cleared(SET.tcEye, 'Sodium chloride'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: TopCare Health Original Eye Drops = Caution (BKC). DailyMed setid 9c61a56a (NDC 36800-858). Inactives: benzalkonium chloride, boric acid, edetate disodium, purified water, sodium borate, sodium chloride. BKC is standalone Caution (not Avoid). Tetrahydrozoline rebound-redness is a labeled use note, not an invented active-safety grade. Not a cleaner alternative. Ages 6+ typical for this redness class (under 6: consult a doctor). Slice-2 eye hole from batch 21. Draft, not verified.',
+
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.tcEye} (TopCare Original Eye Drops NDC 36800-858; ${UNVERIFIED_NOTE})`,
@@ -745,8 +729,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Povidone', 'cleared', dailymed(SET.walCet, METH.povidone)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Walgreens Allergy Relief cetirizine 10 mg = Avoid (Blue #1 lake + TiO2). Reuses `store-cetirizine-coated-blue1-tio2`. DailyMed setid 678dcc09 (NDC 0363-4101). Drug Facts: corn starch, FD&C blue no. 1 aluminum lake, hypromellose, lactose monohydrate, magnesium stearate, polydextrose, polyethylene glycol, povidone, titanium dioxide, triacetin. Same Blue #1 + TiO2 coat family as Equate / Member’s Mark / CVS / Kirkland Aller-Tec / TopCare. Prefer in-batch L612 loratadine. Ages 6+. Draft, not verified.',
+
     cleanAlternatives: ALLERGY_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walCet} (Walgreens cetirizine NDC 0363-4101; ${UNVERIFIED_NOTE}) — reuse ${COATED_CETIRIZINE}`,
@@ -786,7 +769,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Stearic acid', 'cleared', dailymed(SET.tcDph, METH.stearic)),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: TopCare Sleep Aid Nighttime DPH 25 mg = Avoid (Blue #1 / #2 lakes + TiO2). Reuses \`dg-health-sleep-aid-dph\` — same Drug Facts list as DG Health Sleep Aid DPH (setid 038c1b4e). DailyMed setid 30284271 (NDC 36800-431): carnauba wax, crospovidone, dibasic calcium phosphate dihydrate, FD&C blue #1 aluminum lake, FD&C blue #2 aluminum lake, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, pregelatinized starch, stearic acid, titanium dioxide. Batch 21 T9 FLAG is closed by this complete panel. Ages 12+ (under 12: do not use). ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.tcDph} (TopCare Sleep Aid DPH NDC 36800-431; ${UNVERIFIED_NOTE}) — reuse ${DPH_SLEEP_COAT}`,
@@ -819,8 +802,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', dailymed(SET.mmDmY10, METH.sio2)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Member’s Mark Mucus Relief DM Max 1200/60 = Avoid (Yellow #10 lake). Reuses `kirkland-mucus-dm-max-er` — same carbomer / copovidone / Yellow #10 / HPMC / Mg hydroxide / Mg stearate / MCC / SiO2 list as Kirkland Mucus-DM Max (batch 20). DailyMed setid 3db5409d (NDC 68196-812). Copovidone is now the locked povidone-family Cleared row (not an intake block). This is NOT the Blue #1 MM DM twin 68196-999 and not the guaifenesin-only dye-free 68196-405. Ages 12+. Swallow whole. Draft, not verified.',
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.mmDmY10} (Member's Mark Mucus DM Max Y10 NDC 68196-812; ${UNVERIFIED_NOTE}) — reuse ${MUCUS_DM_MAX_Y10}`,
@@ -857,8 +839,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.mmDmBlue, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Member’s Mark Mucus Relief DM 68196-999 = Avoid (Blue #1). DailyMed setid 2b59f90b. Drug Facts: carbomer homopolymer type B, colloidal silicon dioxide, FD&C Blue #1, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, sodium starch glycolate. Own formulaId — not the Yellow #10 Max twin (`kirkland-mucus-dm-max-er`) and not guaifenesin-only dye-free. Confirm the carton (Sam’s has sold both DM coats). Ages 12+. Swallow whole. Draft, not verified.',
+
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.mmDmBlue} (Member's Mark Mucus DM Blue #1 NDC 68196-999; ${UNVERIFIED_NOTE})`,
@@ -891,7 +872,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       cleared(SET.walSleepDye, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Walgreens Nighttime Sleep Aid liquid dyed = Avoid (Blue #1 + Red #40). DailyMed setid 048cfa3a (NDC 0363-7300). Drug Facts: anhydrous citric acid, FD&C Blue No. 1, FD&C Red No. 40, flavor, glycerin, potassium citrate, purified water, sodium benzoate, sorbitol, sucralose. Own formulaId — not up&up dyed (that family adds oral PG + saccharin) and not CVS dyed 9f944edc. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walSleepDye} (Walgreens Nighttime Sleep Aid dyed NDC 0363-7300; ${UNVERIFIED_NOTE})`,
@@ -923,7 +904,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       cleared(SET.walSleepDf, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Walgreens Dye-Free Wal-Sleep Z = Avoid, not Caution. Reuses \`cvs-sleep-aid-liquid-dyefree\` — same sucralose + flavor + sodium benzoate + sorbitol dye-free trap locked Avoid in batch 7 (CVS Health no-FD&C setid 03f521f4). DailyMed setid 96948973 (NDC 0363-0753). Dye-free / no-FD&C is not Clean and is not parked at Caution. Berry-flavor alcohol-free liquid. One 30 mL dose at bedtime. Ages 12+ (under 12: do not use). ${SEDATING} Draft, not verified.`,
+
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walSleepDf} (Walgreens Dye-Free Wal-Sleep Z NDC 0363-0753; ${UNVERIFIED_NOTE}) — reuse ${SLEEP_LIQUID_DF}`,
@@ -954,8 +935,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.walOme, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Walgreens Omeprazole 20 mg DR = Avoid (TiO2 + talc). DailyMed setid 30a893d2 (NDC 0363-0915). Drug Facts: carnauba wax, ferric oxide red, ferric oxide yellow, hypromellose, hypromellose acetate succinate, lactose monohydrate, monoethanolamine, propylene glycol, sodium lauryl sulfate, sodium starch glycolate, sodium stearate, sodium stearyl fumarate, talc, titanium dioxide, triethyl citrate. Own formulaId — do not silently merge into `dg-health-omeprazole-dr` (confirm the bottle). SLS is standalone Caution (not the Avoid driver). minAge 18. Mirror batch 10 / 21 PPI TiO2/talc Avoid. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walOme} (Walgreens omeprazole 20 NDC 0363-0915; ${UNVERIFIED_NOTE})`,
@@ -988,8 +968,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Sodium starch glycolate', 'cleared', dailymed(SET.walFam, METH.ssg)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Walgreens Famotidine 20 mg = Avoid (TiO2 + talc). DailyMed setid 2766ffe7 (NDC 0363-5300). Drug Facts: carnauba wax, corn starch, hydroxypropyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, red iron oxide, sodium starch glycolate, talc, titanium dioxide, yellow iron oxide. Own formulaId — do not merge into `equate-famotidine` (that coat adds colloidal SiO2 / croscarmellose / lactose). HPC is the locked HPMC-family Cleared sibling. Ages 12+. Draft, not verified.',
+
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET.walFam} (Walgreens famotidine 20 NDC 0363-5300; ${UNVERIFIED_NOTE})`,

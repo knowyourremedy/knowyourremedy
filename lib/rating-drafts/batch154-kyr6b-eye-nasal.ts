@@ -72,21 +72,6 @@ const NASAL_ALTS: CleanAlternative[] = [
   alt('claritin-allergy-tablets-plain', 'Independently Clean plain loratadine tablets already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const ZADITOR_NOTE =
-  'Caution. Drivers are benzalkonium chloride and hydrochloric acid. Glycerol is the glycerin row. Sodium hydroxide and purified water are Cleared. No High inactive, so this is not Avoid. Ages 3+. Under 3: ask a doctor. Not a store brand. Not the twin pack.';
-
-const ALAWAY_NOTE =
-  'Caution. Drivers are benzalkonium chloride and hydrochloric acid. Glycerin, sodium hydroxide, and water for injection are Cleared. No High inactive, so this is not Avoid. Ages 3+. Under 3: ask a doctor. Not the preservative-free vial. Not a store brand. Not the twin pack.';
-
-const RHINO_NOTE =
-  'Caution. Drivers are dextrose anhydrous, disodium edetate, hydrochloric acid, polysorbate 80, and potassium sorbate. Disodium edetate is the edetate disodium / EDTA row, not Cleared trace disodium EDTA. Dextrose anhydrous is the dextrose / bare glucose row. No benzalkonium chloride. No High inactive, so this is not Avoid. Carboxylmethyl cellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 6+. Under 6: do not use. Not a store brand.';
-
-const NASONEX_NOTE =
-  'Caution. Drivers are benzalkonium chloride and polysorbate 80. Citric acid, glycerin, microcrystalline cellulose, carboxymethylcellulose sodium, purified water, and sodium citrate are Cleared. No High inactive, so this is not Avoid. Ages 2+. Under 2: do not use. Not a store brand.';
-
-const NASONEX_KIDS_NOTE =
-  'Caution. Same inactive line as adult Nasonex: benzalkonium chloride and polysorbate 80. No High inactive, so this is not Avoid. Ages 2+. Under 2: do not use. Separate children\'s carton. Not a store brand.';
-
 function zaditorFlags(): IngredientFlag[] {
   return [
     flag('Benzalkonium chloride', 'limited', cite(ZADITOR_SET, METH.bkc)),
@@ -164,7 +149,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Ketotifen', strength: '0.025%' }],
     inactiveIngredients: zaditorFlags(),
     verdict: 'caution',
-    honestNote: ZADITOR_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -186,7 +171,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Ketotifen', strength: '0.025%' }],
     inactiveIngredients: alawayFlags(),
     verdict: 'caution',
-    honestNote: ALAWAY_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -208,7 +193,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Budesonide', strength: '32 mcg / spray' }],
     inactiveIngredients: rhinoFlags(),
     verdict: 'caution',
-    honestNote: RHINO_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -230,7 +215,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Mometasone furoate', strength: '50 mcg / spray' }],
     inactiveIngredients: nasonexFlags(NASONEX_SET),
     verdict: 'caution',
-    honestNote: NASONEX_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -252,7 +237,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Mometasone furoate', strength: '50 mcg / spray' }],
     inactiveIngredients: nasonexFlags(NASONEX_SET),
     verdict: 'caution',
-    honestNote: NASONEX_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -274,7 +259,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Mometasone furoate', strength: '50 mcg / spray' }],
     inactiveIngredients: nasonexFlags(NASONEX_KIDS_SET),
     verdict: 'caution',
-    honestNote: NASONEX_KIDS_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -296,7 +281,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Mometasone furoate', strength: '50 mcg / spray' }],
     inactiveIngredients: nasonexFlags(NASONEX_KIDS_SET),
     verdict: 'caution',
-    honestNote: NASONEX_KIDS_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [

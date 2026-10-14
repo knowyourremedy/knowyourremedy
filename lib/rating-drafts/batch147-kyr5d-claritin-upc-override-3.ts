@@ -48,7 +48,9 @@ export const BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3: RatingRecord[] = ATTACH.map
   if (seenCodes.has(barcode)) throw new Error(`batch147 duplicate barcode ${barcode}`);
   seenCodes.add(barcode);
   const record = selectSource(id);
-  return { ...record, barcode };
+  const copy: RatingRecord = { ...record, barcode };
+  delete copy.honestNote;
+  return copy;
 });
 
 if (BATCH147_KYR5D_CLARITIN_UPC_OVERRIDE_3.length !== ATTACH.length) {

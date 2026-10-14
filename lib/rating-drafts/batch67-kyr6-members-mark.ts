@@ -99,12 +99,6 @@ const OIL_FILL_TAP =
 const GUMMY_OIL_TAP =
   'Seed/industrial oils are flagged in gummies. Vegetable oil (coconut, canola) on this gummy is that High rule because canola is printed. Coconut oil alone in a gummy is not High. Softgel safflower fill is not this High rule.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
 const CITE = {
   d3: 'Founder-logged Member’s Mark Vitamin D3 softgel Other Ingredients (Sam’s / PROJECT_NOTES ready-to-write; VitaCart 50 mcg carton matches): Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol. Distinct from HelloPharmacist / NIH DSLD 272823 (50 mcg) and 272824 (125 mcg) soybean oil + gelatin + glycerin + corn oil — those are a different formula and are not this row. No 12-digit carton / Sam’s tile UPC harvested on the safflower panel.',
   gummy:
@@ -202,7 +196,7 @@ export const BATCH67_KYR6_MEMBERS_MARK: RatingRecord[] = [
     ],
     inactiveIngredients: d3Inactives(),
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Vitamin D3 50 mcg (2000 IU) softgels = Clean. Founder-logged Other Ingredients: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol (the labeled active — not a second inactive grade). Safflower as softgel fill is Cleared (NOT gummy High; Sept 16 lock). ${OIL_FILL_TAP} Shared formulaId \`${D3_FORMULA}\` with the 125 mcg twin — founder lock is the same OI across potencies. Do not reuse \`kirkland-d3-softgels-clear\` / \`nature-made-d3-softgels-clear\` (soybean fill). Do not write HelloPharmacist / DSLD 272823 soybean + corn oil (or BHT-era twins) as this carton. No 12-digit tile UPC harvested — omitted. Confirm carton. No DailyMed drug SPL (dietary supplement). Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.d3} — ${UNVERIFIED_NOTE}`],
   }),
   row({
@@ -220,7 +214,7 @@ export const BATCH67_KYR6_MEMBERS_MARK: RatingRecord[] = [
     ],
     inactiveIngredients: d3Inactives(),
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Vitamin D3 125 mcg (5000 IU) softgels = Clean. Same safflower-fill OI as the 50 mcg twin — shared formulaId \`${D3_FORMULA}\`. Founder-logged Other Ingredients: Safflower Oil, Gelatin, Glycerin, Purified Water USP. Contains 2% or less of Cholecalciferol (the labeled active). Safflower as softgel fill is Cleared (NOT gummy High). ${OIL_FILL_TAP} Do not reuse DSLD 272824 soybean + corn oil. No 12-digit tile UPC harvested — omitted. Confirm carton. No DailyMed drug SPL. Adults. Draft, not verified.`,
+
     sourcesGeneral: [`${CITE.d3} — ${UNVERIFIED_NOTE}`],
   }),
 
@@ -269,7 +263,7 @@ export const BATCH67_KYR6_MEMBERS_MARK: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Adult Multi Gummies = Avoid. Founder-printed Other Ingredients include Vegetable Oil (Coconut, Canola). Canola in a gummy is the §5 seed/industrial-oil High rule. Coconut on the same line does not clear the canola High — coconut alone would not be High. ${GUMMY_OIL_TAP} Do not invent a new oil grade. Natural Flavor + maltodextrin + orange-juice-concentrate (gummy-base Limited, not the Cleared named-color row) are Limited and are not needed to reach Avoid. Colors (from fruits and vegetables) are the Cleared named plant-color row. Carnauba leaf wax / pectin / gelatin / glucose syrup / sugar / citric acid / water are Cleared. ${LIMITED_STACK} Gummy ≠ the skipped Women’s / Advanced Men’s / Advanced Women’s 50+ tablets. No 12-digit tile UPC harvested — omitted. Confirm carton. No DailyMed drug SPL. Adults. ${ZINC_PARKED} Draft, not verified.`,
+
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.gummy} — ${UNVERIFIED_NOTE}`],
   }),

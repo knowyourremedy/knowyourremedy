@@ -198,10 +198,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Draft Clean on inactives (croscarmellose sodium, lactose, magnesium stearate). Homeopathic meltaways — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Current adult-only 18+ meltaway SPL (setid 4ae2f15e) shares the same inactives; this row uses the 4+ / 6+ meltaway SPL. Audience stays adult (standard drugstore SKU).',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'DailyMed setid af4a4765-8255-44fb-821c-4345a2a45e2a (draft, not verified)',
@@ -239,10 +236,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Draft Clean on inactives only (lactose, sucrose). STRONG HONEST NOTE: 200CK is far beyond Avogadro\'s number — no measurable active remains. ' +
-      CARLSTON +
-      ' Current DailyMed adult directions are 12+ (ask a doctor under 12). No efficacy claim.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     sourcesGeneral: [
       'DailyMed setid 209c4ec1-e06c-5679-e063-6394a90a793a (draft, not verified)',
@@ -276,8 +270,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Clean topical. Petroleum-free olive-oil / castor-oil base. Olive oil is not in Methodology §5 — present on the label, not graded on the spot (v1.6 intake). Menthol / camphor / eucalyptol as topical actives stay parked (Methodology §5). Essential-oil balm — patch test; not a Vicks analog on actives. No DailyMed SPL (not an OTC drug).',
+
     retailers: ['Walmart', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       'Clean Picks coldFluPicks.ts + Badger label (draft, not verified; no DailyMed SPL)',
@@ -315,8 +308,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Included because Clean Picks already lists CVS / Walmart / Whole Foods / Sprouts — batch-1 store cough/sore-throat, not a lozenge-aisle expansion. Four-ingredient label. Bee-product allergy disclaimer (bees, poplar, balsam of Peru). Honey — not for infants. No DailyMed SPL (dietary supplement).',
+
     retailers: ['CVS', 'Whole Foods', 'Walmart', 'Sprouts'],
     sourcesGeneral: [
       'Clean Picks coldFluPicks.ts + Beekeeper\'s label (draft, not verified; no DailyMed SPL)',
@@ -352,8 +344,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'Included because Clean Picks already lists CVS / Walmart / Walgreens / Whole Foods / Kroger — batch-1 store cough/sore-throat, not a full lozenge aisle. Organic cane sugar + manuka honey + brown rice syrup + ginger / echinacea. Real sugar — moderate intake if managing blood sugar. Honey — not for infants. No DailyMed SPL (dietary supplement / candy-style drop).',
+
     retailers: ['CVS', 'Whole Foods', 'Walmart', 'Walgreens', 'Kroger'],
     sourcesGeneral: [
       'Clean Picks coldFluPicks.ts + Wedderspoon label (draft, not verified; no DailyMed SPL)',
@@ -407,10 +398,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Alcohol-Free SPL with potassium sorbate = Caution homeopathic. Separate formulaId from Menthol and FastActives. DailyMed also lists maltodextrin and sorbitol (each Limited) plus ethyl alcohol on this "Alcohol-Free" SPL — alcohol is not in Methodology §5 (ungraded; v1.6 intake). Draft follows the locked Caution call, not a 3-pt Avoid stack. 1X pelargonium — softer homeopathic note than 200CK. ' +
-      CARLSTON +
-      ' Adult dose on this SPL starts at 13; a kids chart exists down to age 1 — this row is the adult SKU. No Clean Umcka syrup row exists in this batch (current labels do not match the 5-inactive Clean Picks list).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Sprouts', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
     sourcesGeneral: [
@@ -459,9 +447,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Menthol syrup is a SEPARATE formulaId — Caution for natural flavor. Maltodextrin is also Limited (1+1 → Caution). Ethyl alcohol and menthol appear on the SPL and are not graded here (alcohol ungraded; menthol parked as a topical-active pending review). Do not merge with Alcohol-Free or FastActives. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
     sourcesGeneral: [
@@ -524,9 +510,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: FastActives Berry is a SEPARATE formulaId — Caution for natural flavor / silica. Silica is the nanoparticle Caution cap (0 demerit points). Maltodextrin and xylitol are also Limited; draft follows the locked Caution call rather than a 3-pt Avoid stack. Malic acid is on the SPL and is not in Methodology §5 (ungraded). Do not merge with ColdCare liquids. Adult dose 13+; 6–12 chart exists. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_FLU_ALTS,
     sourcesGeneral: [
@@ -576,8 +560,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Sambucol Original Syrup = Caution (potassium sorbate). Glucose syrup is Cleared. Gummies with vegetable oil are a different formula and are not this row. No DailyMed SPL (dietary supplement).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods', 'Sprouts'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -635,9 +618,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: confirm exact adult SPL — sodium benzoate only and no High flags → Caution (like kids Chestal). Do not invent Clean. Trace alcohol is listed (~0.00007%) and is not in Methodology §5 (ungraded). Honey — not for infants. Chestal Cold and Cough Honey (setid 4ecd2dcf) shares the same inactive list on a different active blend — same Caution family if the bottle matches benzoate / honey / sucrose. ' +
-      CARLSTON,
+
     retailers: ['CVS', 'Walgreens', 'Walmart'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
     sourcesGeneral: [
@@ -693,8 +674,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Mucinex ER Blue #1 aluminum lake is High-tier. No Clean guaifenesin analog in this batch (Equate IR Clean was skipped — no proven IR SPL). Closest Clean swap is a Cold & Flu homeopathic meltaway, not a 12-hour expectorant replacement.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens', 'Costco', "Sam's Club"],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -740,8 +720,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Mucinex DM Yellow #10 aluminum lake is High-tier. Separate formula from guaifenesin-only ER Blue #1. No Clean DM expectorant in this batch.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -789,8 +768,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Fast-Max / Sinus-Max dyed family — representative liquid-gel SKU, not every flavor. Yellow 6 and titanium dioxide are each High-tier.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -841,8 +819,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Fast-Max dyed liquid representative (Red 40 + propyl gallate). Not every Fast-Max SKU.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -894,8 +871,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Sinus-Max dyed family representative (Blue 1 + Red 40). Not every Sinus-Max SKU.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -952,8 +928,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'DayQuil liquid — Yellow 6 is High-tier. LiquiCap DayQuil is a separate dyed / TiO2 formula (not every SKU is this row). Stay under 4 g/day acetaminophen.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -1010,8 +985,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'NyQuil berry liquid — Blue 1 + Red 40 are High-tier. Original green NyQuil liquids use Yellow 10 / Green 3 / Yellow 6 and are the same Avoid family, not a separate Clean path.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -1067,8 +1041,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Robitussin DM liquid — Blue 1 + Red 40. Sugar-free dye-free Robitussin DM is a different formula (sucralose + PG + benzoate) and would still Avoid; not merged here.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1114,8 +1087,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Max-strength Robitussin DM liquid — same dyed family as the 200 mg guaifenesin DM liquid, separate formulaId because the guaifenesin strength differs.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1163,8 +1135,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'CoughGels — Blue 1 + Red 40 + propyl gallate. Separate from Robitussin DM liquids.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1222,8 +1193,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Dye-confirmed 12-hour grape Delsym (Red 33 + Blue 1) plus parabens. Orange 12-hour SPLs use Yellow 6 and are the same Avoid family. HFCS appears on this label and is parked / ungraded (Methodology §5) — Avoid already stands on dyes + parabens. Adult row; the same suspension is also labeled for younger ages on some cartons.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1271,8 +1241,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Sudafed PE — lake dyes + talc + titanium dioxide. Not a Clean decongestant analog in this batch; listed swap is the Clean Cold & Flu meltaway, different active.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1315,8 +1284,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Sudafed 12-hour — titanium dioxide is High-tier. Behind-the-counter PSE. Silicon dioxide is a Caution cap only and does not soften Avoid.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1372,8 +1340,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Theraflu powder family — aspartame is locked Avoid; Ace-K is Moderate; dyes are High-tier. Nighttime powders in this line also use aspartame / Ace-K. Contains phenylalanine (aspartame).',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -1429,8 +1396,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Vicks 44 included as the current Formula 44 DM cough/sore-throat liquid — multiple synthetic dyes. Formula 44 cough drops (Red 40) are a separate candy SKU and are not this row.',
+
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: [...COLD_ORAL_ALTS, ...THROAT_ALTS],
     sourcesGeneral: [
@@ -1475,8 +1441,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Equate Mucus-ER is totally separate from any immediate-release mucus tablet. Blue #1 aluminum lake — same family as Mucinex ER. PROJECT_NOTES Aug 8 correction stands. No Clean Equate IR row in this batch (IR SKU not proven on DailyMed).',
+
     retailers: ['Walmart'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1504,8 +1469,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'up&up mucus blue — Blue #1 aluminum lake, Mucinex-ER family. 1200 mg up&up ER SPLs also carry Blue #1 lake (separate pack / strength, same Avoid family).',
+
     retailers: ['Target'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1541,8 +1505,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'up&up mucus yellow — Yellow #10 aluminum lake, Mucinex-DM family.',
+
     retailers: ['Target'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1588,8 +1551,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: CVS Adult Cough + Chest Congestion DM dye-free = Avoid (sucralose + PG + benzoate). Dye-free is not Clean. 2+2+1 demerit points.',
+
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1640,8 +1602,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'CVS mucus / tussin-style DM liquid (dyed). Separate formulaId from the dye-free Avoid row. Red 40 + propyl gallate.',
+
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,
     sourcesGeneral: [
@@ -1689,8 +1650,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Signature Care daytime severe — Yellow 6 + BHA. DayQuil-style store liquid.',
+
     retailers: ['Safeway'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -1747,8 +1707,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'Equate daytime cold-flu dyed liquid representative (Yellow 6). Equate daytime severe (guaifenesin added, setid 69b24c67) is the same dyed family — not a separate Clean path.',
+
     retailers: ['Walmart'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [
@@ -1806,8 +1765,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'up&up daytime cold-flu dyed liquid representative (Yellow 10 / Green 3 / Red 40 / Yellow 6). Honey on the name does not clear the dyes.',
+
     retailers: ['Target'],
     cleanAlternatives: FLU_ORAL_ALTS,
     sourcesGeneral: [

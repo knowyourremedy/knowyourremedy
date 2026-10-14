@@ -161,8 +161,9 @@ import {
   BATCH159_KYR6B_ALAVERT,
   BATCH160_KYR6B_ALAVERT,
 } from '@/lib/rating-drafts';
-import { VERDICT_LABELS, type Verdict } from '@/lib/clean-picks/verdictLabels';
+import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
+import { contradictionHonestNote, plainIngredientWhy } from '@/lib/scan-preview/plainLanguage';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -388,18 +389,6 @@ export const PREVIEW_SWITCHER_IDS = PREVIEW_SWITCHER.map((item) => item.id);
 export const PREVIEW_CLEAN = mustFind(PREVIEW_CLEAN_ID);
 export const PREVIEW_USABLE = mustFind(PREVIEW_USABLE_ID);
 export const PREVIEW_AVOID = mustFind(PREVIEW_AVOID_ID);
-
-// Preview-only shopper copy. Does not edit draft rows or verdict keys.
-const PREVIEW_HONEST_NOTE_OVERLAY: Record<string, string> = {
-  [PREVIEW_CLEAN_ID]:
-    'This Original liquid is Clean. The bottle is magnesium hydroxide in purified water, plus a residual sanitizer that does not change the rating. Labeled for ages 12 and up. Fine for occasional digestive use; mint and cherry Phillips bottles are different formulas.',
-  [PREVIEW_USABLE_ID]:
-    'This Gold tablet is Usable, not Clean, because it uses mannitol — a sugar alcohol that can bother the gut at volume. Magnesium stearate is cleared, and the formula is aspirin-free. Labeled for ages 12 and up. Fine in moderation for occasional heartburn; pause if sugar alcohols upset your stomach.',
-  [PREVIEW_AVOID_ID]:
-    'This Assorted Fruit chew is Not clean because of synthetic dye lakes and talc — both High-risk extras. The dyes are the family linked to hyperactivity warnings in the EU; flavors are a smaller listing. Labeled for ages 12 and up. Skip this bottle for everyday use and pick a cleaner chew if you want one without dyes or talc.',
-  'absorbine-jr-pro-cream':
-    'This cream is Not clean because of methylparaben. That one extra is why the whole product is Not clean. Other listings on this formula are not the grade driver. Distinct from PRO No-Mess, which has no paraben on that label.',
-};
 
 // Preview-only catalog pack shots. Does not edit draft rows.
 // verifiedSku is true only when the DailyMed file is the exact SKU.
@@ -14742,108 +14731,16 @@ export function previewOverlayImage(
   );
 }
 
-function formWord(record: Pick<RatingRecord, 'form'>): string {
-  const form = (record.form ?? '').trim().toLowerCase();
-  return form || 'product';
-}
-
-function flaggedNames(record: RatingRecord, level: RiskLevel): string[] {
-  return (record.inactiveIngredients ?? [])
-    .filter((ingredient) => ingredient.riskLevel === level)
-    .map((ingredient) => ingredient.name.replace(/\.+$/, ''));
-}
-
-function joinDrivers(names: string[]): string {
-  if (names.length === 1) return names[0];
-  if (names.length === 2) return `${names[0]} and ${names[1]}`;
-  return `${names[0]}, ${names[1]}, and ${names[2]}`;
-}
 
 export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 
-const DUMP_HONEST_NOTE =
-  /FOUNDER-LOCK|FOUNDER CALL|FOUNDER-STYLE|Drug Facts:|DailyMed setid|formulaId|Draft, not verified|standalone Caution|Methodology §|pack sizes share|Inactive list left empty|do NOT invent Clean|carton-confirm|carton confirm/i;
-
-const INCOMPLETE_LABEL_NOTE =
-  /until the full label|carton-confirm|carton confirm|inactive list left empty on purpose|do NOT invent Clean|do not invent flags/i;
-
-function isDumpHonestNote(note: string | undefined): boolean {
-  if (!note) return true;
-  if (DUMP_HONEST_NOTE.test(note)) return true;
-  if ((note.match(/ \//g) ?? []).length >= 4) return true;
-  return note.length > 420;
-}
-
-function hasFounderWhy(record: RatingRecord): boolean {
-  return Boolean(record.honestNote?.trim());
-}
-
-function isIncompleteLabelRow(record: RatingRecord): boolean {
-  if (!hasFounderWhy(record)) return true;
-  const inactives = record.inactiveIngredients ?? [];
-  // Missing-OI + founder said the carton is not matched. Confirmed
-  // empty 100% powders / “inactives: none” keep their founder why.
-  return inactives.length === 0 && INCOMPLETE_LABEL_NOTE.test(record.honestNote ?? '');
-}
-
-function generatedHonestNote(record: RatingRecord): string {
-  const form = formWord(record);
-  const high = flaggedNames(record, 'high');
-  const moderate = flaggedNames(record, 'moderate');
-  const limited = flaggedNames(record, 'limited');
-  const inactives = record.inactiveIngredients ?? [];
-
-  if (record.verdict === 'clean') {
-    if (inactives.length === 0) {
-      return `This ${form} is Clean. The carton has no Other Ingredients line.`;
-    }
-    return `This ${form} is Clean. The extras we reviewed on this formula stayed Clean.`;
-  }
-
-  if (record.verdict === 'avoid') {
-    if (high.length === 1) {
-      return `This ${form} is Not clean because of ${high[0]}. That one extra is why.`;
-    }
-    if (high.length > 1) {
-      return `This ${form} is Not clean because of ${joinDrivers(high.slice(0, 3))}.`;
-    }
-    return `This ${form} is Not clean.`;
-  }
-
-  if (moderate.length === 1 && limited.length === 0) {
-    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
-  }
-  if (moderate.length > 1) {
-    return `This ${form} is Usable, not Clean, because of Moderate extras.`;
-  }
-  if (moderate.length === 1) {
-    return `This ${form} is Usable, not Clean, because of ${moderate[0]}.`;
-  }
-  if (limited.length === 1) {
-    return `This ${form} is Usable, not Clean, because of ${limited[0]}.`;
-  }
-  if (limited.length > 1) {
-    return `This ${form} is Usable, not Clean, because of Limited extras. None of them is a High-list item.`;
-  }
-  return `This ${form} is ${VERDICT_LABELS[record.verdict]}, not Clean.`;
-}
 
 // Display fill only. Does not rewrite draft honestNotes or restage verdicts.
 // Keep already-correct shopper copy. Replace label dumps / founder-lock essays.
+// Honest note is off unless this product has a form contradiction.
+// Grade restatements and inactive lists stay off, including founder-lock dumps.
 export function displayHonestNote(record: RatingRecord): string {
-  const overlay = PREVIEW_HONEST_NOTE_OVERLAY[record.id];
-  if (overlay) return overlay;
-
-  if (isIncompleteLabelRow(record)) {
-    return LABEL_NOT_FULLY_REVIEWED;
-  }
-
-  const draft = record.honestNote;
-  if (draft && !isDumpHonestNote(draft)) {
-    return draft;
-  }
-
-  return generatedHonestNote(record);
+  return contradictionHonestNote(record) ?? '';
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
@@ -26922,15 +26819,9 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
   if (!absorbineProCream || absorbineProCream.verdict !== 'avoid') {
     throw new Error('absorbine-jr-pro-cream must stay verdict avoid');
   }
-  if (!isDumpHonestNote(absorbineProCream.honestNote)) {
-    throw new Error('absorbine-jr-pro-cream draft Honest stays the founder-lock dump');
-  }
   const absorbineDisplay = displayHonestNote(absorbineProCream);
-  if (/FOUNDER-LOCK|standalone Caution|cetearyl|glyceryl stearate/i.test(absorbineDisplay)) {
-    throw new Error('absorbine-jr-pro-cream Honest display must not be the inactive dump');
-  }
-  if (!/methylparaben/i.test(absorbineDisplay)) {
-    throw new Error('absorbine-jr-pro-cream Honest display must name methylparaben');
+  if (absorbineDisplay) {
+    throw new Error('absorbine-jr-pro-cream honest note stays off; methylparaben is high in every form');
   }
 }
 
@@ -27309,18 +27200,6 @@ function isIngredientReviewed(ingredient: IngredientFlag): boolean {
   return true;
 }
 
-function reviewedWhyFallback(ingredient: IngredientFlag): string {
-  if (ingredient.riskLevel === 'cleared') {
-    return 'Reviewed on this label. It stayed Clean — no High or Caution flag on this token.';
-  }
-  if (ingredient.riskLevel === 'limited') {
-    return 'Limited extra. Fact: it is an opacity or volume listing. It does not make a product Not clean by itself.';
-  }
-  if (ingredient.riskLevel === 'moderate') {
-    return 'Moderate extra. Cleaner formulas leave it out. That is a fact about the listing, not a claim it is unsafe.';
-  }
-  return 'High-list extra. Cleaner formulas exclude it.';
-}
 
 function normalizeName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -27330,204 +27209,21 @@ function sourceDisplay(source?: string): Pick<IngredientWhy, 'sourceName' | 'sou
   if (!source) return { sourceName: null, sourceHref: null };
   const sourceHref = dailyMedHref(source);
   if (sourceHref) return { sourceName: 'DailyMed', sourceHref };
-  const first = source.split(';').map((part) => part.trim()).find(Boolean);
-  return { sourceName: first ?? source, sourceHref: null };
+  const first = source.split(';').map((part) => part.trim()).find(Boolean) ?? '';
+  if (!first || /^methodology\b/i.test(first) || /§\s*5/.test(first)) {
+    return { sourceName: null, sourceHref: null };
+  }
+  return { sourceName: first, sourceHref: null };
 }
 
-// Locked §5 wording + the draft source field. Do not invent studies, %, or grades.
-function lockedWhyBody(ingredient: IngredientFlag): string | null {
-  const name = normalizeName(ingredient.name);
-  const source = (ingredient.source ?? '').toLowerCase();
-
-  if (
-    source.includes('synthetic dyes')
-    || /fd c|d c|aluminum lake|blue no|red no|yellow no|green no/.test(name)
-  ) {
-    return 'Synthetic color. Independent reviews link this dye family to hyperactivity warnings in the EU; we score the family High risk, and cleaner formulas exclude it.';
-  }
-
-  if (name.includes('paraben') || source.includes('paraben')) {
-    return 'Paraben preservative. We score this family High in every form, including creams and patches. Cleaner formulas exclude it.';
-  }
-
-  if (
-    name.includes('titanium dioxide')
-    || source.includes('titanium dioxide')
-    || source.includes('e171')
-  ) {
-    return 'Titanium dioxide (E171). The EU dropped it as a food additive after a genotoxicity data gap. We score it High.';
-  }
-
-  if (name.includes('talc') || source.includes('talc')) {
-    return 'Contains talc (magnesium silicate). IARC classifies talc Group 2A, with a separate asbestos-contamination pathway; we score it High risk, and cleaner formulas exclude it.';
-  }
-
-  if (
-    name.includes('glycyrrhiza')
-    || name.includes('licorice extract')
-    || source.includes('that is not this syrup dose')
-  ) {
-    return 'Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.';
-  }
-
-  if (
-    ingredient.riskLevel === 'high'
-    && (
-      name.includes('sunflower oil')
-      || source.includes('seed/industrial oils in gummies')
-    )
-  ) {
-    return 'Seed/industrial oils are flagged in gummies. Organic sunflower oil in this gummy is that High rule.';
-  }
-
-  if (
-    name.includes('sorbitan')
-    || source.includes('sorbitan, plain')
-    || source.includes('sorbitan esters')
-  ) {
-    return 'Sorbitan (plain / sorbitan esters) is a locked Caution emulsifier — same neighborhood as polysorbate, not Avoid. It is not the sugar-alcohol Limited row.';
-  }
-
-  if (
-    name.includes('potassium hydroxide')
-    || source.includes('potassium hydroxide — pH adjuster')
-  ) {
-    return 'Potassium hydroxide is a locked Cleared pH adjuster (trace). Not a grade driver. Same job as sodium hydroxide as pH adjuster.';
-  }
-
-  if (
-    name.includes('potassium chloride')
-    || source.includes('potassium chloride — salt')
-  ) {
-    return 'Potassium chloride is a locked Cleared salt / electrolyte. Not a grade driver.';
-  }
-
-  if (name.includes('triacetin') || source.includes('triacetin')) {
-    return 'Triacetin is a locked Cleared tablet/caplet coating plasticizer. Not a grade driver.';
-  }
-
-  if (
-    ingredient.riskLevel === 'high'
-    && (name.includes('caramel') || source.includes('caramel color'))
-  ) {
-    return 'Label says caramel color and does not name Class I/II vs III/IV. Undisclosed class is treated as Class III/IV — High / Avoid.';
-  }
-
-  if (
-    name.includes('mannitol')
-    || name.includes('sorbitol')
-    || source.includes('mannitol')
-    || source.includes('sorbitol')
-    || source.includes('sugar alcohols')
-  ) {
-    return 'Sugar alcohol. Limited risk from GI effects at volume; cleaner formulas exclude it.';
-  }
-
-  if (
-    (name.includes('rice extract') && !name.includes('bran') && !name.includes('hull') && !name.includes('concentrate'))
-    || source.includes('unspecified rice extract')
-  ) {
-    return 'Label only says rice extract — it doesn’t name hull, bran, or concentrate. We mark that Caution because the form isn’t clear. Named organic rice hull extract, rice concentrate, ground rice hulls, or organic rice bran extract are Cleared.';
-  }
-
-  if (
-    ingredient.riskLevel === 'limited'
-    && (
-      (name.includes('citrus') && name.includes('extract'))
-      || source.includes('citrus fruit extract')
-      || source.includes('natural citrus extract')
-    )
-  ) {
-    return 'Label and DailyMed only say citrus fruit extract. They don’t name lemon, orange, or lime, or juice vs peel. We mark that Caution because the form isn’t clear.';
-  }
-
-  if (name.includes('flavor') || source.includes('flavors — opacity') || source.includes('natural / artificial flavors')) {
-    return 'Undisclosed flavor mixture. Limited risk for opacity, not a known hazard; cleaner formulas exclude it.';
-  }
-
-  if (name.includes('fragrance') || name.includes('parfum') || source.includes('fragrance / parfum')) {
-    if (ingredient.riskLevel === 'cleared') {
-      return 'Fragrance is listed on this label. On this formula it stayed Clean.';
-    }
-    return 'Fragrance / parfum. Population sensitization listing. That is a fact about the extra, not a claim it is unsafe.';
-  }
-
-  if (
-    name.includes('sd alcohol')
-    || name.includes('alcohol denat')
-    || source.includes('alcohol / ethyl alcohol')
-    || source.includes('isopropyl alcohol')
-  ) {
-    return 'Alcohol is the vehicle here, not a drinking-alcohol active and not the gummy seed-oil High rule.';
-  }
-
-  if (
-    name.includes('polyethylene glycol')
-    || /\bpeg(?:-|\s|\d)/.test(name)
-    || source.includes('pegs —')
-  ) {
-    return 'PEG (polyethylene glycol). Moderate listing from processing leftovers. Cleaner formulas leave it out.';
-  }
-
-  if (name.includes('polysorbate') || source.includes('polysorbate')) {
-    return 'Polysorbate emulsifier. Moderate listing. Cleaner formulas leave it out.';
-  }
-
-  if (name.includes('poloxamer 182') || source.includes('poloxamer 182')) {
-    return 'Poloxamer 182 is a locked Caution PEG-style surfactant. Not High. It does not make a product Not clean by itself.';
-  }
-
-  if (
-    name.includes('silicon dioxide')
-    || name === 'silica'
-    || name.startsWith('silica ')
-    || source.includes('silicon dioxide')
-  ) {
-    return 'Silicon dioxide / silica is a Caution cap. It does not make a product Not clean by itself.';
-  }
-
-  if (
-    source.includes('flagged in gummies')
-    || source.includes('capsule/softgel')
-    || source.includes('capsule / softgel')
-    || source.includes('in this liquid drop they are not that high rule')
-  ) {
-    return 'Seed/industrial oils are flagged in gummies. In this capsule/softgel/drop fill they are not that High rule.';
-  }
-
-  if (ingredient.riskLevel === 'cleared') {
-    if (source.includes('not in methodology') || source.includes('ungraded')) {
-      return PENDING_DAILYMED_REVIEW;
-    }
-    if (name.includes('magnesium stearate') || name.includes('stearic acid') || name.includes('calcium stearate')) {
-      return 'Standard lubricant (stearate-family class). EFSA 2018 found no safety concern.';
-    }
-    if (name === 'water' || name.includes('purified water')) {
-      return 'Purified water. Methodology §5 lists it among cleared bases.';
-    }
-    if (name.includes('corn starch') || name.includes('pregelatinized starch')) {
-      return 'Simple starch. Methodology §5 treats corn starch and similar starches as well-established, with no concern found.';
-    }
-    if (name === 'sucrose' || name.includes('cane sugar')) {
-      return 'Acceptable sweetener. Methodology §5 lists cane sugar among cleared sweeteners.';
-    }
-    if (name.includes('croscarmellose')) {
-      return 'Standard disintegrant. EFSA 2017: no carcinogenicity, no ADI needed.';
-    }
-    if (name.includes('lactose')) {
-      return 'Lactose. Methodology §5 lists it among cleared inactives.';
-    }
-  }
-
-  return null;
-}
 
 export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
   const display = sourceDisplay(ingredient.source);
-  const body = lockedWhyBody(ingredient);
-  if (body && body !== PENDING_DAILYMED_REVIEW) return { body, ...display };
+  const plain = plainIngredientWhy(ingredient);
+  if (plain) return { body: plain, ...display };
   if (isIngredientReviewed(ingredient)) {
-    return { body: reviewedWhyFallback(ingredient), ...display };
+    // Reviewed, but methodology states no shopper fact we can repeat. Do not invent one.
+    return { body: '', ...display };
   }
   return {
     body: PENDING_DAILYMED_REVIEW,
@@ -27558,8 +27254,8 @@ export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
     throw new Error('welmate adapalene must keep poloxamer 182 as Caution');
   }
   const poloxamerWhy = ingredientWhy(poloxamer);
-  if (!/PEG-style surfactant/.test(poloxamerWhy.body) || /paraben/i.test(poloxamerWhy.body)) {
-    throw new Error('poloxamer 182 why must be the Caution surfactant line, not the paraben line');
+  if (!/surfactant/.test(poloxamerWhy.body) || /paraben/i.test(poloxamerWhy.body) || /High-list extra/.test(poloxamerWhy.body)) {
+    throw new Error('poloxamer 182 why must be the plain surfactant line, not the paraben line');
   }
 }
 

@@ -260,8 +260,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E1, 'Sodium citrate dihydrate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Refresh Tears PF = Clean. DailyMed setid 9e1cba7b (Allergan; NDC 0023-3110). Actives are CMC sodium 0.5% + glycerin 0.9%. Inactives are borate / electrolyte buffers (boric acid, calcium chloride, magnesium chloride, potassium chloride, sodium borate, sodium citrate) plus purified water — no benzalkonium chloride, no PURITE / sodium chlorite. Erythritol and levocarnitine are not in Methodology §5 (ungraded; v1.6 intake) — draft Clean follows the locked no-preservative call, not a new ingredient lock. This SPL is the PF carton (replace cap / discard 90 days after opening). The PURITE multi-dose Refresh Tears bottle (E7) is a different formula and is not this row. No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_E1} (draft, not verified)`,
@@ -293,8 +292,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E2, 'Hydrochloric acid and/or sodium hydroxide (pH adjusters)'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Systane Ultra PF = Clean. FOUNDER CALL — PG is the lubricant active, not an oral inactive Moderate demerit. DailyMed setid a5c1c194 is the PF single-use vial SPL (Alcon; PDP “ULTRA PF PRESERVATIVE-FREE”; do not reuse / once opened, discard). Twin setid 751fb85f is the PF multi-dose bottle (replace cap; discard 90 days after opening) with the same inactive list — shared formulaId, not a second grade. Actives are PEG 400 0.4% + propylene glycol 0.3% as lubricant actives — do not score oral PG Moderate or PEG contamination Moderate on those actives. Inactives have no POLYQUAD / polyquaternium-1 / BKC. Aminomethylpropanol, hydroxypropyl guar, and ophthalmic sorbitol are not in Methodology §5 as scored inactives here (ungraded; v1.6 intake; oral sugar-alcohol Limited is not applied) — draft Clean follows the locked PF call. The POLYQUAD multi-dose Systane Ultra bottle (E8) is a different formula and is not this row. No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_E2} (PF single-use vials; draft, not verified)`,
@@ -327,8 +325,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E3, 'Water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: TheraTears PF single-use = Clean. DailyMed setid 797b0394. Active is CMC 0.25%. SPL states this product contains no preservatives (single-use vials; do not reuse / discard leftover). Electrolyte / borate / bicarbonate / phosphate buffer only — no BKC. Separate formulaId from Refresh Tears PF (different CMC strength, no glycerin active) and from Equate PF. No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_E3} (draft, not verified)`,
@@ -358,8 +355,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E4, 'Sodium lactate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Lubricant Eye Drops Preservative-Free = Clean (CONFIRMED PF). DailyMed setid 9228a39b; NDC 49035-245. Active is CMC 0.5%. Inactives: calcium chloride, magnesium chloride, potassium chloride, sodium chloride, purified water, sodium lactate, HCl / NaOH pH adjusters — NO preservative. New formulaId — not identical to Refresh Tears PF (that SPL adds glycerin as a second active plus borate / erythritol / levocarnitine / citrate). Separate formulaId from the Equate multi-dose BKC bottle (E10). Single-use vials (do not reuse / discard). No numeric labeled age beyond keep-out-of-reach. Walmart SKU.',
+
     retailers: ['Walmart'],
     sourcesGeneral: [
       `DailyMed setid ${SET_E4} (NDC 49035-245; draft, not verified)`,
@@ -382,8 +378,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     ],
     inactiveIngredients: [ungraded(SET_E5, 'Lanolin alcohols')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Refresh P.M. ointment = Clean. DailyMed setid 24365d64 (Allergan). Actives are mineral oil 42.5% + white petrolatum 57.3%. Only inactive is lanolin alcohols (not in Methodology §5 — ungraded; v1.6 intake; not used to invent Clean). Carton / PDP is labeled preservative-free. Nighttime lubricant ointment — not a store-brand PM ointment (E6 skipped). Contains lanolin. No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_E5} (draft, not verified)`,
@@ -403,8 +398,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     activeIngredients: [{ name: 'Isopropyl alcohol', strength: '95%' }],
     inactiveIngredients: [cleared(SET_R3, 'Anhydrous glycerin')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Swim-Ear = Clean. DailyMed setid b849acb5 (Fougera). Active is isopropyl alcohol 95% (ear drying aid). Only inactive is anhydrous glycerin 5% base. Flammable — keep away from fire or flame. Do not reuse the batch 12 70% IPA-in-water first-aid formulaId (different strength and vehicle). Directions: 4 to 5 drops in each affected ear. No numeric labeled age beyond keep-out-of-reach. Adult drugstore SKU.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_R3} (draft, not verified)`,
@@ -432,10 +426,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_R6, 'Vegetable glycerin'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Similasan Earache Relief = Clean. DailyMed setid 3b48e1d5. HPUS Chamomilla 10X / Mercurius solubilis 15X / Sulphur 12X. Inactives are purified water + vegetable glycerin only — no BKC, no PG. Homeopathic otic — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Directions: children under 12 years of age consult a doctor → minAge 12. For use in the ear only. Not Similasan Allergy Eye (already on main).',
+
     retailers: [...MAJOR, 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_R6} (draft, not verified)`,
@@ -468,10 +459,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_R7, 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Hyland’s Naturals Earache Drops = Clean. DailyMed setid 017ed754. Homeopathic otic (Belladonna / Calcarea carbonica / Chamomilla / Lycopodium / Pulsatilla / Sulphur 30C HPUS). Inactives: citric acid, glycerin (SPL spelling Glycerine), purified water — no BKC, no PG. Cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Labeled ages 4 years and over → minAge 4. Adult leftover-slice catalog row. Do not use with ear tubes, damaged eardrums, or after ear surgery. Keep away from eyes.',
+
     retailers: [...MAJOR],
     sourcesGeneral: [
       `DailyMed setid ${SET_R7} (draft, not verified)`,
@@ -506,8 +494,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E10, 'Water for injection'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Equate Lubricant Eye Drops multi-dose = Caution (BKC). DailyMed setid 44494842; NDC 79903-364. Active is CMC 0.5%. Inactive list includes benzalkonium chloride — standalone Caution (not Avoid, not additive-scored). Separate formulaId from Equate PF (E4). Prefer the PF twin as the cleaner alternative in carousel notes (cleanAlternatives) — do not invent Clean Picks UI changes. No numeric labeled age beyond keep-out-of-reach. Walmart SKU.',
+
     retailers: ['Walmart'],
     cleanAlternatives: equateBkCAlts(),
     sourcesGeneral: [
@@ -545,8 +532,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E13, 'Sodium phosphate dibasic'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Visine Red Eye Comfort = Caution + rebound-redness. Not a cleaner alternative. DailyMed setid d7abd7cb. Active is tetrahydrozoline HCl 0.05%. Current DailyMed inactive list has polyquaternium-42 / polixetonium chloride, NOT benzalkonium chloride — do not invent a BKC flag that is not on the SPL. Methodology §5 names BKC as the Caution preservative; this SPL preservative is polyquaternium-42 (ungraded; v1.6 intake; flagged as present, not scored as BKC). Founder Caution is the redness-reliever class + rebound (label: overuse may cause more eye redness) — not a BKC call. Ages 6+ (children under 6: consult a doctor; under 2: do not use).',
+
     retailers: [...MAJOR],
     cleanAlternatives: REDNESS_ALTS,
     sourcesGeneral: [
@@ -576,8 +562,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E14, 'Sodium borate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Clear Eyes Redness Relief = Caution (BKC + rebound). Not a cleaner alternative. DailyMed setid a26ef66e. Actives are naphazoline HCl 0.012% + glycerin 0.25% (lubricant). Inactives: benzalkonium chloride, boric acid, edetate disodium, purified water, sodium borate. BKC is standalone Caution (not Avoid). Label: overuse may produce increased redness of the eye. No numeric labeled age beyond keep-out-of-reach (unlike Visine’s 6+ chart). Adult drugstore SKU. Do not treat this redness reliever as a Clean PF lubricant swap.',
+
     retailers: [...MAJOR],
     cleanAlternatives: REDNESS_ALTS,
     sourcesGeneral: [
@@ -606,8 +591,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_R1, 'Water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Debrox = Caution for PG. DailyMed setid 43649ba3. Active is carbamide peroxide 6.5%. Inactives: citric acid, flavor (Limited), glycerin, propylene glycol, sodium lauroyl sarcosinate, water. Methodology §5 scopes PG as oral Moderate; founder locked Caution on this otic inactive (do not treat as topical-unscored Clean). Flavor is Limited when listed. Sodium lauroyl sarcosinate is not sodium lauryl sulfate and is not in Methodology §5 (ungraded; not an SLS Caution). Children under 12: consult a doctor → minAge 12. For use in the ear only.',
+
     retailers: [...MAJOR],
     cleanAlternatives: OTIC_ALTS,
     sourcesGeneral: [
@@ -640,8 +624,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_R2, 'Tartaric acid'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Equate Ear Wax Removal = Caution (PG + SLS). DailyMed setid 33065ba2. Active is carbamide peroxide 6.5%. Inactives: citric acid, glycerin, propylene glycol, sodium citrate, sodium lauryl sulfate, tartaric acid. Methodology §5 scopes PG as oral Moderate; founder locked Caution on this otic PG. SLS is standalone Caution (not Avoid). Separate formulaId from Debrox (Debrox has flavor + sodium lauroyl sarcosinate, not SLS). Children under 12: consult a doctor → minAge 12. Walmart SKU. For use in the ear only.',
+
     retailers: ['Walmart'],
     cleanAlternatives: OTIC_ALTS,
     sourcesGeneral: [

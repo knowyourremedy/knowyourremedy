@@ -79,9 +79,6 @@ const ALLERGIES = 'Allergies';
 
 const THRIVE = ['Thrive Market'] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
 
@@ -316,7 +313,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Reishi powder = Clean. Founder carton is 100% powder / no Other Ingredients line. Oats named under Supplement Facts as the culture substrate stay with the mushroom active — not graded as OI. Distinct from batch60 om-lions-mane-powder (printed OI oats; own formulaId) and from batch59 capsules. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM'],
     sourcesGeneral: [`${CITE.om_reishi_powder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -338,7 +335,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.om_turkey_tail_powder, 'Organic myceliated oats', 'cleared', METH.myceliatedOats),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Turkey Tail powder = Clean. Organic Myceliated Oats is the locked food-state oat / ferment Cleared token. The mushroom blend is the Supplement Facts active — not graded as OI. Distinct from batch60 om-lions-mane-powder (own formulaId). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM'],
     sourcesGeneral: [`${CITE.om_turkey_tail_powder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -359,7 +356,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: OM Master Blend powder = Clean. Founder carton is mushroom + ashwagandha with no Other Ingredients line. Culture oats stay under Supplement Facts with the mushroom blend. Distinct from batch59 om-master-blend-capsules (vegetable cellulose; own formulaId / UPC). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'OM'],
     sourcesGeneral: [`${CITE.om_master_blend_powder} — ${UNVERIFIED_NOTE}`],
   }),
@@ -387,7 +384,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Platinum (Women's Multivitamin Platinum carton) = Clean. Methylcellulose / HPMC family + named sunflower phospholipid Helix fill (fill ≠ gummy High). No SiO2 on this panel. Distinct from batch59 codeage-teen-multi-platinum (SiO2 Caution) and from Hair / NMN / Vitamin C Platinum. Men's Platinum twin shares formulaId when the other-ingredients list holds. Draft, not verified. No dosing or medical advice. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_platinum} — ${UNVERIFIED_NOTE}`],
   }),
@@ -410,7 +407,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.codeage_teens_fermented, 'Potassium chloride', 'cleared', METH.kcl),
     ],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Teens Fermented Multi = Clean. Methylcellulose capsule + potassium chloride (Cleared). Distinct from batch59 codeage-teen-multi and codeage-teen-multi-platinum (own formulaIds). Ages 12+ as labeled. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Codeage'],
     sourcesGeneral: [`${CITE.codeage_teens_fermented} — ${UNVERIFIED_NOTE}`],
   }),
@@ -430,7 +427,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Unflavored Organic Fiber = Clean. No Other Ingredients on the founder carton. The fiber blend is the Supplement Facts active. Distinct from citrus-flavored Organic Fiber and from batch59 fiber gummies. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     sourcesGeneral: [`${CITE.gol_organic_fiber} — ${UNVERIFIED_NOTE}`],
   }),
@@ -449,7 +446,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Thrive Market Multi-Collagen = Clean. No Other Ingredients on the founder carton. Collagen peptides are the labeled active. Do not write flavored Thrive grass-fed collagen (cocoa / flavor / monk fruit). Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE],
     sourcesGeneral: [`${CITE.thrive_multi_collagen} — ${UNVERIFIED_NOTE}`],
   }),
@@ -469,7 +466,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
     ],
     inactiveIngredients: [],
     verdict: 'clean',
-    honestNote: `FOUNDER-LOCK DRAFT: Himalaya Organic Psyllium = Clean. No Other Ingredients on the founder carton. Psyllium husk is the fiber active (Cleared when it appears as OI; here it is SF). Distinct from batch59 himalaya-stresscare. Draft, not verified. No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Himalaya'],
     sourcesGeneral: [`${CITE.himalaya_psyllium} — ${UNVERIFIED_NOTE}`],
   }),
@@ -504,7 +501,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.trace_blue_hawaiian, 'Blue spirulina (for color)', 'cleared', METH.namedColor),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Blue Hawaiian powder = Caution. Natural flavors Limited. Silica is the 0-pt nanoparticle Caution cap. Reb A / Reb M Cleared high-purity steviol glycosides. Blue spirulina (for color) is named plant-color Cleared. Distinct from Blue Raspberry / Blue Açai twins (own flavor strings). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     cleanAlternatives: MINERAL_ALTS,
     sourcesGeneral: [`${CITE.trace_blue_hawaiian} — ${UNVERIFIED_NOTE}`],
@@ -535,7 +532,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.trace_mixed_berry, 'Silica', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Mixed Berry = Caution. Natural flavors Limited. Silica is the 0-pt nanoparticle Caution cap. Exberry grape (color) is named fruit-color Cleared. Organic cane sugar / gum arabic / acids / Reb A / Reb M Cleared. Distinct from Blue Hawaiian powder (own formulaId). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     cleanAlternatives: MINERAL_ALTS,
     sourcesGeneral: [`${CITE.trace_mixed_berry} — ${UNVERIFIED_NOTE}`],
@@ -562,7 +559,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.trace_shilajit, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Trace Shilajit capsules = Caution. SiO2 cap. HPMC / MCC / magnesium stearate Cleared. Capsules — do not write Trace Shilajit gummies. Distinct from MegaFood Shilajit already on main. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Trace Minerals'],
     cleanAlternatives: SHILAJIT_ALTS,
     sourcesGeneral: [`${CITE.trace_shilajit} — ${UNVERIFIED_NOTE}`],
@@ -593,7 +590,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.fon_wart_xs, 'Clove Oil', 'cleared', METH.clove),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Forces of Nature Wart Extra Strength = Caution. Founder said bottle over DailyMed: Tea Tree / Lemon / Thuja / Thyme / Clove oils. Those oils are an EO / scent blend (not a single-oil vehicle). Bottle Thuja Oil = DailyMed cedar leaf oil — cedarleaf oil Caution row; do not invent a second thuja class. Homeopathic — cleanliness only, no efficacy claim. Distinct from batch60 Cold & Flu Max / Sinus Max. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${EO_BLEND_TAP} ${CEDAR_THUJA_TAP}`,
+
     retailers: [...THRIVE, 'Forces of Nature'],
     cleanAlternatives: WART_ALTS,
     sourcesGeneral: [`${CITE.fon_wart_xs} — ${UNVERIFIED_NOTE}`],
@@ -617,7 +614,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.anima_happiness, 'Cane spirits', 'limited', METH.alcohol),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Anima Mundi Happiness Tonic = Caution. Cane spirits / cane alcohol is the locked alcohol-vehicle Limited token. Filtered water + vegetable glycerin Cleared. Brand panel is SF-style herbal extracts + Other Ingredients — written. Butterfly Pea is OUT (not this row). Liver Vitality is skipped-out (Nutrition Facts only). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ALCOHOL_TAP}`,
+
     retailers: [...THRIVE, 'Anima Mundi'],
     cleanAlternatives: TONIC_ALTS,
     sourcesGeneral: [`${CITE.anima_happiness} — ${UNVERIFIED_NOTE}`],
@@ -643,7 +640,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.codeage_multi_collagen, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Codeage Multi Collagen = Caution. SiO2 cap. Ascorbyl palmitate is the locked mixed-tocopherols / ascorbyl palmitate Cleared antioxidant (already on MAIN §5 — used, not invented). Methylcellulose / MCC Cleared. Distinct from in-batch Thrive Market Multi-Collagen (Clean powder). Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${SIO2_TAP}`,
+
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: COLLAGEN_ALTS,
     sourcesGeneral: [`${CITE.codeage_multi_collagen} — ${UNVERIFIED_NOTE}`],
@@ -673,7 +670,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.gol_kids_sb, 'Organic strawberry banana flavor', 'limited', METH.flavors),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Garden of Life Kids+ Strawberry Banana chewable = Caution. Organic strawberry banana flavor Limited. Organic tapioca maltodextrin Limited. Not a gummy — Organic Palm Oil is the locked tablet / chew coating Cleared token (tap both sides). Distinct from batch59 Berry Cherry Kids+ (own formulaId). Ages 4+. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${PALM_COAT_TAP}`,
+
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [`${CITE.gol_kids_sb} — ${UNVERIFIED_NOTE}`],
@@ -698,7 +695,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.ollois_histaminum, 'Organic sucrose', 'cleared', METH.sugar),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Ollois Histaminum 30C = Caution. Founder carton grade (Sept 17) is Caution on this SKU. Only printed inactive is organic sucrose (Cleared cane-sugar / sucrose row). Distinct from batch52 ollois-arnica-montana-12c (same sucrose string; that row stays Clean — do not clone or flip it). Homeopathic pellets — cleanliness only, no efficacy claim. Ages 2+. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Ollois'],
     cleanAlternatives: HISTAMINUM_ALTS,
     sourcesGeneral: [`${CITE.ollois_histaminum} — ${UNVERIFIED_NOTE}`],
@@ -730,7 +727,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.thorne_creatine_flavored, 'Rebaudioside M', 'cleared', METH.stevia),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Thorne Creatine (flavored) = Caution. Natural flavors Limited. Reb M Cleared. Turmeric + beet juice powder (color) is named plant-color Cleared. Distinct from batch28 thorne-creatine-powder (unflavored Clean — do not clone). Pineapple Orange carton matches this OI (UPC 693749015581). Strawberry tub shares formulaId when the flavor / named-color family holds. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Labeled actives listed neutrally — this draft grades inactives only.`,
+
     retailers: [...THRIVE, 'Thorne'],
     cleanAlternatives: CREATINE_ALTS,
     sourcesGeneral: [`${CITE.thorne_creatine_flavored} — ${UNVERIFIED_NOTE}`],
@@ -759,7 +756,7 @@ export const BATCH64_KYR6_THRIVE_NO_OI: RatingRecord[] = [
       f(CITE.asr_hydrogel, 'Sodium Hypochlorite (Trace)', 'cleared', METH.hypochlorite),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Active Skin Repair hydrogel = Caution. Lithium Magnesium Sodium Silicate (not the SiO2 cap) + Sodium Hypochlorite (Trace) are the Sept 17 locked Caution tokens. Electrolyzed Water / NaCl / sodium bicarbonate / Phosphates / Sodium Sulfate Cleared. Usable — not Avoid. Draft, not verified. ${LIMITED_STACK} No dosing or medical advice. Pack sizes share this formulaId when the other-ingredients list holds. Labeled actives listed neutrally — this draft grades inactives only. ${ELECTROLYZED_TAP} ${SILICATE_TAP} ${HYPOCHLORITE_TAP} ${PHOSPHATE_TAP}`,
+
     retailers: [...THRIVE, 'Active Skin Repair'],
     cleanAlternatives: HYDROGEL_ALTS,
     sourcesGeneral: [`${CITE.asr_hydrogel} — ${UNVERIFIED_NOTE}`],

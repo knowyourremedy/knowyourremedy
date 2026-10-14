@@ -207,15 +207,6 @@ function alt(productId: string, rankReason: string): CleanAlternative {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const PARKED_MCE =
-  'Menthol / camphor / eucalyptol as topical actives stay parked (Methodology §5) — inactives graded only; no invented active-safety grade.';
-
-const PARKED_ZNO =
-  'Zinc (oxide / acetate) as a topical / diaper-rash / skin-protectant active stays parked (Methodology §5) — inactives graded only; no invented active-safety grade.';
-
-const SHARED_B12 =
-  'Shared formulaId with adult batch 12 so the grade propagates conceptually. Do not invent a second formulaId or change the adult grade. Kids-audience row.';
-
 // Shared adult batch 12 formulaIds — EXACT strings.
 const AQUAPHOR_HEAL = 'aquaphor-healing-ointment';
 const DESITIN_MP = 'desitin-multipurpose';
@@ -375,10 +366,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ungraded(SET_AQ_HEAL, 'Bisabolol'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Aquaphor Healing Ointment = Clean kids / infant twin of the adult batch 12 formula. ' +
-      SHARED_B12 +
-      ' setid 0a17bf6f — mineral oil / ceresin / lanolin alcohol / panthenol / glycerin / bisabolol. Those unlisted-in-§5 inactives are ungraded (v1.6 intake), not Clean-blockers. No fragrance / no paraben. Skin-protectant / diaper-rash directions have no lower-age floor (minAge 0 — infant diaper chart). Diaper-rash Fast Relief / 3-in-1 ZnO SKUs are a separate kids formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_AQ_HEAL} (draft, not verified)`],
   },
@@ -406,10 +394,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Desitin Multi-Purpose = Clean kids / infant twin of the adult batch 12 formula — mineral oil / paraffin / cocoa butter / tocopherol blend holds. ' +
-      SHARED_B12 +
-      ' Active is petrolatum, not zinc oxide (Max Strength fragrance-only is the Caution twin; Max + talc is a separate Avoid formulaId). Cocoa butter is topical ointment oil, not the gummy seed-oil High rule. No lower-age floor on the diaper-rash chart (minAge 0).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_DES_MP} (draft, not verified)`],
   },
@@ -436,12 +421,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_CALAMINE, 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Plain calamine lotion = Clean kids-usable twin of the adult batch 12 formula IF bentonite / calcium hydroxide / glycerin / water holds. ' +
-      SHARED_B12 +
-      ' Family Dollar setid 1a03331e matches that list. ' +
-      PARKED_ZNO +
-      ' Fragrance / benzyl / camphor Calamine Plus lotions are a separate kids formulaId. Calamine monograph: ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Family Dollar', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_CALAMINE} (draft, not verified)`],
   },
@@ -475,10 +455,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Neosporin Original Ointment = Clean kids-usable twin of the adult batch 12 formula. ' +
-      SHARED_B12 +
-      ' Petrolatum + cottonseed / olive / cocoa oils. Topical ointment oils are not the gummy seed-oil High rule. First-aid antibiotic monograph: ages 2+ (under 2: ask a doctor). The Plus Pain cream is a separate Avoid formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_NEO_ORIG} (draft, not verified)`],
   },
@@ -502,10 +479,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_NEO_PAIN_OINT, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Neosporin Plus Pain Relief Ointment = Clean kids-usable twin of the adult batch 12 formula (petrolatum only). ' +
-      SHARED_B12 +
-      ' Separate formulaId from the Plus Pain cream (methylparaben Avoid). Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_NEO_PAIN_OINT} (draft, not verified)`,
@@ -529,10 +503,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_POLY, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Polysporin ointment = Clean kids-usable twin of the adult batch 12 formula (petrolatum only). ' +
-      SHARED_B12 +
-      ' Neomycin-free twin of the petrolatum ointment family. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     sourcesGeneral: [`DailyMed setid ${SET_POLY} (draft, not verified)`],
   },
@@ -553,10 +524,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_EQ_BAC, 'White petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Bacitracin Ointment = Clean kids-usable twin of the adult batch 12 formula (white petrolatum only). ' +
-      SHARED_B12 +
-      ' Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_BAC} (draft, not verified)`],
   },
@@ -580,10 +548,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     ],
     inactiveIngredients: [cleared(SET_EQ_TRIPLE, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Triple Antibiotic + Pain ointment = Clean kids-usable twin of the adult batch 12 formula (petrolatum only). ' +
-      SHARED_B12 +
-      ' Separate from the Equate antibiotic cream (not written in this kids batch) and from the cocoa/cottonseed/olive oil-blend SKU. Ages 2+ (under 2: consult a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_TRIPLE} (draft, not verified)`],
   },
@@ -618,10 +583,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate antibiotic oil-blend = Clean kids-usable twin of the adult batch 12 formula. ' +
-      SHARED_B12 +
-      ' Cocoa / cottonseed / olive / petrolatum Neosporin Original twin. Topical ointment oils are not the gummy seed-oil High rule. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_OIL} (draft, not verified)`],
   },
@@ -640,10 +602,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Hydrocortisone', strength: '1%' }],
     inactiveIngredients: [cleared(SET_C10_WR, 'Petrolatum')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Water Resistant = Clean kids-usable twin of the adult batch 12 formula (petrolatum only). ' +
-      SHARED_B12 +
-      ' Separate from Soothing Aloe / Cooling (paraben Avoid). Ages 2+ (under 2: do not use, ask a doctor). External anal / genital itching chart is 12+ — not this row\'s minAge.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [`DailyMed setid ${SET_C10_WR} (draft, not verified)`],
   },
@@ -662,10 +621,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Hydrogen peroxide', strength: '3%' }],
     inactiveIngredients: [cleared(SET_H2O2, 'Purified water')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Hydrogen peroxide 3% = Clean kids-usable twin of the adult batch 12 formula (water only). ' +
-      SHARED_B12 +
-      ' Other brick-and-mortar 3% water-only bottles share this formulaId for grading. Oral-rinse / first-aid antiseptic charts on this family are ages 2+ (under 2: consult a dentist or doctor).',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_H2O2} (draft, not verified)`],
   },
@@ -684,10 +640,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
     activeIngredients: [{ name: 'Isopropyl alcohol', strength: '70%' }],
     inactiveIngredients: [cleared(SET_IPA_PLAIN, 'Water')],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Plain isopropyl alcohol = Clean kids-usable twin of the adult batch 12 formula (water only). ' +
-      SHARED_B12 +
-      ' The wintergreen Blue #1 + Yellow #5 twin is a separate Avoid formulaId. First-aid antiseptic monograph: ages 2+ typical.',
+
     retailers: ['Walgreens'],
     sourcesGeneral: [`DailyMed setid ${SET_IPA_PLAIN} (draft, not verified)`],
   },
@@ -718,12 +671,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', dailymed(SET_CAL_CREAM, METH.gums)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Calendula Cream = Clean kids-usable twin of the adult batch 12 formula. ' +
-      SHARED_B12 +
-      ' Draft Clean on the shea / coconut / glycerin family (setid 2ed51803). Homeopathic cream — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Boiron topical calendula sibling charts start at 1 year (minAge 1).',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CAL_CREAM} (draft, not verified)`,
@@ -751,12 +699,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_CAL_OINT, 'Purified water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Calendula Ointment = Clean kids-usable twin of the adult batch 12 formula. ' +
-      SHARED_B12 +
-      ' White petrolatum + alcohol + water on setid 28c76b61-2a0c. The 2a0a SPL is a different cream-style base — not this row. Homeopathic ointment — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Sibling charts start at 1 year (minAge 1).',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_CAL_OINT} (draft, not verified)`,
@@ -792,10 +735,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_AQ_ZNO, 'Water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Aquaphor diaper-rash ZnO = Clean — no fragrance / no paraben on the matched Fast Relief paste (setid 887e3566; carton: paraben and talc free, odor free). ' +
-      PARKED_ZNO +
-      ' Caprylic/capric triglyceride, octyldodecanol, polyglyceryl-4 blend, panthenol, and shea are not in Methodology §5 (ungraded; v1.6 intake) — not Clean-blockers. Sibling 15% 3-in-1 cream setid dec07dfc (mineral oil / glycerin / ceresin / polyglyceryl-4 / Mg stearate / panthenol / water; carton fragrance-free / paraben-free) holds the same Clean call — same formulaId family, not a second grade. Healing Ointment (petrolatum active, no ZnO) is a separate shared formulaId. Infant diaper-rash chart (minAge 0).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_AQ_ZNO} (draft, not verified)`,
@@ -834,8 +774,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boudreaux\'s Butt Barrier = Clean IF the matched blend holds. setid 06a5af4d — tocopherol acetate / castor seed oil / glyceryl hydroxystearate / hydrogenated castor oil. No fragrance, no balsam Peru, no paraben on this SPL. Castor oil / hydrogenated castor are Cleared (v1.6 oral/topical lock), not the gummy seed-oil High rule. Glyceryl hydroxystearate is not in Methodology §5 (ungraded; v1.6 intake) — not a Clean-blocker. Original Butt Paste (balsam Peru) is a separate Caution formulaId. SPL: use with infants, children and adults (minAge 0).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_BOUD_BARRIER} (draft, not verified)`,
@@ -861,8 +800,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_EQ_CORT, 'Water'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Equate Cortisone simple = Clean — alcohol / glycerin / water on setid 027fae33. Dimethyl isosorbide is not in Methodology §5 (ungraded; v1.6 intake) — not a Clean-blocker. No fragrance / no paraben / no SLS. Do not use for the treatment of diaper rash (carton). Ages 2+ (under 2: ask a doctor). Water Resistant petrolatum ointment is the independently Clean HC ointment peer.',
+
     retailers: ['Walmart'],
     sourcesGeneral: [`DailyMed setid ${SET_EQ_CORT} (draft, not verified)`],
   },
@@ -899,10 +837,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       topicalOil(SET_BOOGIE_BOTTOMS, 'Corn oil'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boogie Bottoms rash spray = Clean IF no fragrance / paraben. setid ae5eedf3 carton: free from fragrances, dyes, parabens. ' +
-      PARKED_ZNO +
-      ' Cyclomethicone / hexamethyldisiloxane / lanolin / mineral oil / microcrystalline wax / vitamins A and D / petrolatum are not in Methodology §5 (ungraded; v1.6 intake). Corn oil on the structured inactive list is topical ointment oil, not the gummy seed-oil High rule. Infant diaper-rash chart (minAge 0). Boogie Hands (BKC + fragrance) is a separate Caution formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `DailyMed setid ${SET_BOOGIE_BOTTOMS} (draft, not verified)`,
@@ -947,12 +882,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Desitin Maximum Strength (fragrance-only, no talc) = Caution kids / infant twin of the adult batch 12 formula — fragrance (standalone Caution, not Avoid alone). ' +
-      SHARED_B12 +
-      ' ' +
-      PARKED_ZNO +
-      ' Corn starch on this SPL — not talc. The 1 lb jar with talc + fragrance is a separate Avoid formulaId (`desitin-max-talc`). Multi-Purpose (petrolatum active, no fragrance) is the independently Clean twin. No lower-age floor (minAge 0).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIAPER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_DES_MAX} (draft, not verified)`],
@@ -986,10 +916,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Boudreaux\'s Butt Paste = Caution — balsam Peru is fragrance-class Caution (sensitization). Do NOT invent a High / Avoid row for balsam Peru. setid 4c7e832e. ' +
-      PARKED_ZNO +
-      ' Castor oil is Cleared (v1.6). Mineral oil / paraffin / petrolatum are ungraded (v1.6 intake) — not the Caution driver. Butt Barrier (no balsam) is the independently Clean twin. SPL: use with infants, children and adults (minAge 0).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIAPER_ALTS_PLUS,
     sourcesGeneral: [`DailyMed setid ${SET_BOUD_PASTE} (draft, not verified)`],
@@ -1036,8 +963,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ungraded(SET_BALMEX, 'Rosmarinus officinalis (rosemary) extract'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Balmex Multi-Purpose = Caution — fragrance (standalone Caution, not Avoid alone). setid 83a9ba1a. Silica is the SiO2 nanoparticle Caution cap (0 pts), not the verdict driver. Corn oil is topical ointment oil, not the gummy seed-oil High rule. Named botanical extracts / lavender / rosemary are not a new High row (fragrance already carries the Caution). Diaper-rash + chapped-skin carton; no lower-age floor (minAge 0). Desitin Multi-Purpose / Aquaphor Healing are the independently Clean twins.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: DIAPER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_BALMEX} (draft, not verified)`],
@@ -1090,8 +1016,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_BOOGIE_HANDS, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Boogie Hands = Caution — BKC + fragrance. Current wipe SPL 4009eb93 (BKC 0.13%). BKC is the labeled antimicrobial active (also the §5 BKC Caution pattern) — no invented active-safety grade. Fragrance is the inactive Caution driver (not Avoid alone). Potassium sorbate / sodium benzoate are oral Limited and are not stacked as a 3-pt Avoid on this topical wipe; draft follows the locked Caution call. Older 0.115% wipe twins (fragrance + glycerin / PG / sorbitol / aloe / EDTA) stay in the same Caution family. Children under 2: ask a doctor (minAge 2); under 6: adult supervision. Boogie Bottoms is a separate Clean diaper-rash formulaId. No independently Clean BKC wipe exists here — antiseptic alts are liquid.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTISEPTIC_ALTS,
     sourcesGeneral: [
@@ -1148,10 +1073,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       flag('Xanthan gum', 'cleared', dailymed(SET_CALAMINE_BENZYL, METH.gums)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Calamine Plus benzyl + fragrance = Caution on this 2+ labeled lotion (benzyl population split allows Caution; fragrance is the remaining issue — not Avoid alone). Separate new kids formulaId `calamine-plus-benzyl` — not the adult spray `calamine-plus-fragrance` (different form / inactive panel). Walgreens medicated calamine setid 33aa789e; store twins with the same benzyl + fragrance + camphor + lavender/rosemary list share this formulaId. ' +
-      PARKED_MCE +
-      ' Camphor is listed inactive and stays parked. Avoid would apply only if the carton were under-3 / infant labeled — no such SPL was matched this batch (do not invent). Children under 2: do not use, ask a doctor (minAge 2). Plain calamine is the independently Clean twin. Never recommend a benzyl-alcohol product as a cleaner alternative for an infant product.',
+
     retailers: ['Walgreens', 'CVS', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
     sourcesGeneral: [
@@ -1192,10 +1114,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_NEO_CREAM, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Neosporin Plus Pain Cream = Avoid kids-usable twin of the adult batch 12 formula. Methylparaben is High-tier. ' +
-      SHARED_B12 +
-      ' Separate formulaId from the petrolatum-only Plus Pain ointment (Clean). Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OINTMENT_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_NEO_CREAM} (draft, not verified)`],
@@ -1239,10 +1158,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_C10_ALOE, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Soothing Aloe = Avoid kids-usable twin of the adult batch 12 formula. Parabens are High-tier; SLS is standalone Caution and is not the Avoid driver. ' +
-      SHARED_B12 +
-      ' Water Resistant (petrolatum only) is the independently Clean HC twin. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_C10_ALOE} (draft, not verified)`],
@@ -1292,10 +1208,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_C10_COOL, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Cortizone-10 Cooling = Avoid kids-usable twin of the adult batch 12 formula. Methylparaben is High-tier (propylparaben is also on this SPL). ' +
-      SHARED_B12 +
-      ' Menthyl lactate is a cooling ester, not menthol — menthol / camphor / eucalyptol stay parked. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_C10_COOL} (draft, not verified)`],
@@ -1339,10 +1252,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_CVS_HC, 'Water (purified)'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: CVS hydrocortisone aloe = Avoid kids-usable twin of the adult batch 12 formula. Parabens are High-tier; SLS is standalone Caution and is not the Avoid driver. ' +
-      SHARED_B12 +
-      ' Ages 2+ (under 2: do not use).',
+
     retailers: ['CVS'],
     cleanAlternatives: HC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_CVS_HC} (draft, not verified)`],
@@ -1367,10 +1277,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       cleared(SET_IPA_DYED, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Dyed isopropyl alcohol = Avoid kids-usable twin of the adult batch 12 formula. Blue #1 + Yellow #5 are High-tier. ' +
-      SHARED_B12 +
-      ' Plain water-only 70% IPA is the independently Clean twin. First-aid antiseptic monograph: ages 2+ typical.',
+
     retailers: ['Grocery', 'Independent pharmacy'],
     cleanAlternatives: ANTISEPTIC_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_IPA_DYED} (draft, not verified)`],
@@ -1408,10 +1315,7 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Desitin Max + talc = Avoid. Talc is High-tier (IARC 2A; no pharma-grade exception); fragrance is standalone Caution and is not needed to reach Avoid. setid 59728810 (1 lb jar inactive list includes talc + fragrance). Separate formulaId from fragrance-only `desitin-max-strength` Caution (corn starch, no talc). ' +
-      PARKED_ZNO +
-      ' Infant diaper-rash chart (minAge 0). Multi-Purpose / Aquaphor Healing / Aquaphor ZnO paste are the independently Clean twins.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIAPER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET_DES_TALC} (draft, not verified)`],

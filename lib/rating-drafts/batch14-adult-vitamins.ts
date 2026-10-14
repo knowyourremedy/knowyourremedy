@@ -133,12 +133,6 @@ function labelCleared(label: string, name: string): IngredientFlag {
   return flag(name, 'cleared', labelCite(label, METH.cleared));
 }
 
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const NO_CLEAN_MULTI =
-  'No independently Clean adult multi exists in this draft set — cleanAlternatives omitted (honest empty; form cannot be labeled on a nonexistent §6 swap). Do not invent Clean for an uncoated multi without an exact SKU + label.';
-
 const CENTRUM_ADULTS_CITE =
   'Centrum US label PDF lbl-00000767 (centrum.com / Haleon web-ready Adults)';
 const CENTRUM_SILVER_CITE =
@@ -214,11 +208,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Calcium silicate'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Daily Multi no-TiO2 carton = Caution if PEG / SiO2 only. Current Costco / Fig / Open Food Facts 500-ct lists polyethylene glycol + silica and does NOT list titanium dioxide, talc, or synthetic dyes. Silicon dioxide / silica is the nanoparticle Caution cap (0 demerit points). Separate formulaId from the TiO2 Avoid twin (`kirkland-daily-multi-tio2`) — do not merge them. Confirm the carton: a bottle that lists titanium dioxide is the Avoid row, not this one. Some other Kirkland Daily Multi snapshots list maltodextrin (Limited) — that is not scored on this no-TiO2 Fig/OFF list. No DailyMed drug SPL (dietary supplement). Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['Costco'],
     sourcesGeneral: [
       `${KIRKLAND_NO_TIO2_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -253,11 +243,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(NM_COMPLETE_CITE, 'Gelatin'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Nature Made Multi Complete (± iron) tablets = Caution (PEG + SiO2 + maltodextrin) ONLY if the matched tablet label has no TiO2 / dye / talc. Current Fig / Swanson / HEB tablet other-ingredients match that list. Raw demerit math is PEG 2 + maltodextrin 1 → 3 pts Avoid — draft follows the approved Caution call (SiO2 is a 0-pt cap, not a softener). Iron-containing and iron-free tablet twins share this formulaId when the other-ingredients list holds. Multi Complete liquid softgels (TiO2 / Yellow 6 / Red 40 / Blue 1) are a different formula — not this row; do not invent Clean. No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_COMPLETE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -293,11 +279,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(MEGAFOOD_CITE, 'Rice protein'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: MegaFood One Daily = Caution. Driver is silicon dioxide (nanoparticle Caution cap, 0 demerit points). MCC / stearic acid / hypromellose are Cleared-class and do not raise the grade. Do not invent Clean on the SiO2 cap. No DailyMed drug SPL (dietary supplement). Adults. Contains ferment / yeast media — not an inactive-grade driver. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['Whole Foods', 'Sprouts', 'Vitamin shops'],
     sourcesGeneral: [
       `${MEGAFOOD_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -343,11 +325,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(CENTRUM_ADULTS_CITE, 'Gelatin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Centrum Adults coated = Avoid. Official US PDF lbl-00000767 lists titanium dioxide + talc + Yellow 6 Lake + BHT + polyethylene glycol + silicon dioxide. Any one of TiO2 / talc / Yellow 6 / BHT is High Avoid; PEG is Moderate and SiO2 is the 0-pt Caution cap. Maltodextrin is Limited (not needed to reach Avoid). Polyvinyl alcohol is not in Methodology §5 (ungraded; v1.6 intake; not an Avoid driver). Not formulated for children. No DailyMed drug SPL (dietary supplement). ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${CENTRUM_ADULTS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -395,11 +373,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(CENTRUM_SILVER_CITE, 'Medium-chain triglycerides'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Centrum Silver Adults 50+ = Avoid (same coated-family if the carton matches). Official US PDF lbl-00000775 confirms titanium dioxide + talc + Yellow 6 Lake + Red 40 Lake + Blue 2 Lake + BHT + silicon dioxide. PEG appears on some older Silver cartons (Pfizer / LBL-00000087) but is NOT on lbl-00000775 — not required to reach Avoid and not scored on this row. Separate formulaId from Centrum Adults. Labeled adults 50+; minAge 50. No DailyMed drug SPL. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${CENTRUM_SILVER_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -439,11 +413,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(EQUATE_CITE, 'Gelatin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Equate Complete Multivitamin Adults = Avoid. Retailer other-ingredients list titanium dioxide + Red 40 (plus Yellow 6 Lake / Blue 2 Lake / talc / BHT / PEG on Fig / Open Food Facts / HelloPharmacist snapshots). TiO2 or Red 40 alone is High Avoid. Sunflower oil on some Equate tablet lists is NOT the gummy seed-oil High rule (tablet, not gummy). Confirm the carton. No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['Walmart'],
     sourcesGeneral: [
       `${EQUATE_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -471,11 +441,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(KIRKLAND_TIO2_CITE, METH.sio2)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Kirkland Signature Daily Multi WITH titanium dioxide = Avoid. Separate formulaId from the current no-TiO2 Caution twin (`kirkland-daily-multi-no-tio2`) — do not merge them. This row applies ONLY when the carton lists titanium dioxide. Current Costco / Fig / Open Food Facts 500-ct listings do NOT list TiO2 and are the Caution row, not this one. Remaining coating inactives should be read from the physical bottle; this draft scores the locked TiO2 High (PEG Moderate / SiO2 cap are not needed to reach Avoid). No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['Costco'],
     sourcesGeneral: [
       `${KIRKLAND_TIO2_CITE} — draft, not verified; carton-confirm required; no DailyMed drug SPL`,
@@ -510,11 +476,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(OAD_MENS_CITE, 'Inulin'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: One A Day Men's coated = Avoid only if TiO2 / dye / talc is confirmed. Official Bayer livewell Men's Health Formula label (11/10/20) lists talc and does NOT list titanium dioxide or synthetic dyes on that PDF. Talc is High Avoid (IARC 2A; no pharma-grade exception). Confirm the carton — a later TiO2 / dye coat is the same Avoid family; do not guess Clean if the coat changes. Labeled adult use only / not for children. No DailyMed drug SPL. " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${OAD_MENS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -555,11 +517,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(OAD_WOMENS_CITE, 'Vegetable juice (color)'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: One A Day Women's coated = Avoid. Official Bayer livewell Women's Tablets PDF (7-15-21) lists color (riboflavin, titanium dioxide, vegetable juice) + talc. TiO2 or talc is High Avoid. Vegetable juice as color is Cleared-class (not a dye). Confirm the carton. Prenatal One A Day SKUs are not this row. No DailyMed drug SPL. Adults. " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${OAD_WOMENS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -603,11 +561,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(OLLY_MENS_CITE, 'Carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: OLLY Men's Multi = Avoid. Vegetable oil (coconut, canola) in a gummy is High-tier (seed/industrial oils in gummies). Coconut oil on the same line does not clear the canola High. Natural flavors are Limited (not needed to reach Avoid). Confirm the carton. No DailyMed drug SPL. Adults. " +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['Target', 'CVS', 'Walgreens', 'Grocery'],
     sourcesGeneral: [
       `${OLLY_MENS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -652,9 +606,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(OLLY_WOMENS_CITE, 'Carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      "FOUNDER CALL: OLLY Women's Multi = Avoid. Target / retailer cartons confirm the same vegetable oil (coconut, canola) pattern as the Men's Multi. Canola in a gummy is High. Coconut oil on the same line does not clear the canola High. Natural flavors are Limited (not needed to reach Avoid). Prenatal OLLY SKUs are not this row. No DailyMed drug SPL. Adults. " +
-      NO_CLEAN_MULTI,
+
     retailers: ['Target', 'CVS', 'Walgreens', 'Grocery'],
     sourcesGeneral: [
       `${OLLY_WOMENS_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -689,11 +641,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(NM_GUMMY_CITE, 'Carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Nature Made Multi Gummies = Avoid. Palm oil in a gummy is High-tier. Natural flavors are Limited (not needed to reach Avoid). Carmine / colors added (including carmine) is a standalone Caution — note only on this already-Avoid palm row; not a second grade. Multi for Her gummies are the same palm + carmine demerit family (not a separate grade). No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${NM_GUMMY_CITE} — draft, not verified; no DailyMed drug SPL`,
@@ -740,11 +688,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       labelCleared(VITAFUSION_PALM_CITE, 'Beeswax and/or carnauba wax'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: vitafusion MultiVites with palm / coconut-and/or-palm = Avoid. Current US retailer lists (HEB / Vitacost / Target) say "blend of oils (coconut and/or palm)" — palm on that line is the gummy seed/industrial-oil High rule. Coconut on the same and/or line does not clear the palm High. Natural flavors are Limited (not needed to reach Avoid). Annatto as color is a standalone Caution (not Avoid; not a second grade). Separate formulaId from a coconut-only Caution twin — that twin is SKIPPED this batch because no coconut-only SKU was confirmed. Contains coconut (tree nut). No DailyMed drug SPL. Adults. ' +
-      ZINC_PARKED +
-      ' ' +
-      NO_CLEAN_MULTI,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       `${VITAFUSION_PALM_CITE} — draft, not verified; no DailyMed drug SPL`,

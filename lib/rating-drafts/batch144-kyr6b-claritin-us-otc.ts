@@ -189,7 +189,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.flags,
     verdict: d.verdict,
-    honestNote: d.note,
+
     retailers: [...RETAILERS],
     cleanAlternatives: d.verdict === 'clean' ? undefined : d.audience === 'kids' ? KIDS_ALTS : ADULT_ALTS,
     sourcesGeneral: [d.source],

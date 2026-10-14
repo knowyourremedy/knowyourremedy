@@ -66,8 +66,6 @@ function liquidFlags(): IngredientFlag[] {
 }
 
 const ACTIVE = [{ name: 'Levocetirizine dihydrochloride', strength: '2.5 mg / 5 mL' }];
-const NOTE =
-  'FOUNDER-LOCK DRAFT: Avoid. Drivers are methylparaben and propylparaben. Flavor, maltitol solution, and saccharin sodium are not the Avoid driver. Glacial acetic acid and sodium acetate trihydrate are the Oct 3 Cleared aliases and are not the driver. Dye-free is not Clean. Ages 2+.';
 
 const PANEL =
   'DailyMed setid a33f2704-d350-428b-b467-91f4775ce17f (OTC, updated February 5, 2026) and https://www.xyzal.com/en-us/products/children-allergy-relief/ingredients. Active: levocetirizine dihydrochloride 2.5 mg in each 5 mL. Inactive ingredients: flavor, glacial acetic acid, glycerin, maltitol solution, methylparaben, propylparaben, purified water, saccharin sodium, sodium acetate trihydrate. The brand table lists bubblegum flavor and grape flavor on one shared inactive table. The Drug Facts line prints flavor once for both.';
@@ -104,7 +102,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: ACTIVE,
     inactiveIngredients: liquidFlags(),
     verdict: 'avoid',
-    honestNote: NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: ALTS,
     sourcesGeneral: [d.source],

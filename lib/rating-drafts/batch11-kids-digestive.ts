@@ -175,12 +175,6 @@ function alt(productId: string, rankReason: string): CleanAlternative {
 const CARLSTON =
   'Carlston M (ed), Classical Homeopathy, Churchill Livingstone 2003 — homeopathic eligibility is cleanliness + documented evidentiary framework only; no efficacy claim.';
 
-const ZINC_PARKED =
-  'Zinc (gluconate) on Pedialyte is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
-
-const LIMITED_STACK_CAUTION =
-  'Limited-only stack stays Caution. Natural flavor + potassium sorbate + sodium benzoate + sorbitol is Limited-only — not Avoid. Avoid requires a High-tier inactive (or an explicit founder/active-safety cap).';
-
 const GASALIA_MELTAWAYS = 'boiron-gasalia-meltaways';
 const GASALIA_PELLETS = 'boiron-gasalia-pellets';
 const NAUSEACALM = 'boiron-nauseacalm';
@@ -315,10 +309,7 @@ function dyeFreeInfantGasRow(opts: {
       cleared(opts.setid, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER CALL: ${opts.noteBrand} Infants Dye-Free Gas Relief = Caution. ` +
-      LIMITED_STACK_CAUTION +
-      ' DailyMed inactive list matches Mylicon Infants Dye-Free (natural flavors, potassium sorbate, sodium benzoate, sorbitol, CMC, citric acid, MCC, polysorbate 60, sorbitan monostearate, xanthan gum, water). Shared store-family formulaId `store-infants-gas-dyefree`. Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake; not scored as High). Dye-free is not Clean. Infant-labeled (newborns / infants under 2; children over 2 on the same chart).',
+
     retailers: opts.retailers,
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -353,10 +344,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GASALIA_MELT, 'Magnesium stearate'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Gasalia meltaways = Clean. Draft Clean on inactives (croscarmellose sodium, lactose, magnesium stearate). Homeopathic meltaway tablets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Kids Digestive row; SPL chart is adults and children 6 years of age and older (under 6: ask a doctor). Separate formulaId from Gasalia pellets. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_GASALIA_MELT} (draft, not verified)`,
@@ -386,10 +374,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GASALIA_PELL, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron Gasalia pellets = Clean. Draft Clean on inactives (lactose + sucrose). Separate formulaId from Gasalia meltaways. Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Kids Digestive row; SPL chart is adults and children 6 years of age and older (under 6: ask a doctor). Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_GASALIA_PELL} (draft, not verified)`,
@@ -420,10 +405,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_NAUSEACALM, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron NauseaCalm pellets = Clean kids-usable twin of the adult batch 10 formula — inactives match (lactose + sucrose). Shared formulaId `boiron-nauseacalm` with the adult row so the Clean grade propagates conceptually. Do not invent a second formulaId. Kids audience + minAge 2 per the SPL adults and children 2 years of age and older chart (under 2: ask a doctor). Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_NAUSEACALM} (draft, not verified)`,
@@ -454,10 +436,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MOTIONCALM, 'Sucrose'),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Boiron MotionCalm pellets = Clean kids-usable twin of the adult batch 10 formula — inactives match (lactose + sucrose). Shared formulaId `boiron-motioncalm` with the adult row so the Clean grade propagates conceptually. Do not invent a second formulaId. Kids audience + minAge 2 per the SPL adults and children 2 years of age and older chart (under 2: ask a doctor). Homeopathic pellets — cleanliness only, no efficacy claim. ' +
-      CARLSTON +
-      ' Contains lactose. Pack sizes share formulaId.',
+
     retailers: ['CVS', 'Walgreens', 'Whole Foods', 'Sprouts'],
     sourcesGeneral: [
       `DailyMed setid ${SET_MOTIONCALM} (draft, not verified)`,
@@ -496,9 +475,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       flag('Citric acid', 'cleared', labelCite(PEDIALYTE_UNFL_CITE, METH.cleared)),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER CALL: Pedialyte Classic Unflavored = Clean ONLY if the US carton has no sucralose / Ace-K / dye. Abbott Nutrition US Unflavored list confirmed: water, dextrose; less than 0.5–2% potassium citrate, salt, sodium citrate, citric acid, and zinc gluconate. No sweeteners or dyes on that carton — draft Clean on inactives. Flavored Classic and Freezer Pops are separate Avoid formulaIds. Unflavored liquid is the infant-usable SKU (administration guide from ~2 weeks; under 1 week: guide does not apply). No DailyMed drug SPL (oral electrolyte solution / medical food). ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
       PEDIALYTE_UNFL_CITE + ' — draft, not verified; no DailyMed drug SPL',
@@ -567,8 +544,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Genexa Kids Tummy Relief = Caution after live OI update. Live Genexa.com now lists organic beet root + organic rice bran extract (both Cleared under Sept 14 locks) plus organic flavors, organic carnauba wax, non-GMO dextrose, and organic maltodextrin. Organic flavors stay Cleared-class — do NOT score them as Limited natural flavors. Recalculated §5 math: organic maltodextrin Limited 1 pt matching locked Genexa chew siblings (allergy-care / kids-cold-crush) → still Caution. Do not invent Clean. Older DailyMed setid 4f9db9dc listed non-organic maltodextrin + starch — live carton replaced that list. Ages 2+ (24–47 lbs / 2–5 years; under 2: ask a doctor). Calcium-carbonate antacid — cleanliness only.',
+
     retailers: ['CVS', 'Target', 'Walmart', 'Whole Foods', 'Walgreens'],
     cleanAlternatives: TUMMY_ALTS,
     sourcesGeneral: [
@@ -607,8 +583,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_LITTLE_REMEDIES, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Little Remedies Gas Relief Drops = Caution. DailyMed setid 874d3f1d: benzoic acid, magnesium aluminum silicate, natural strawberry flavor, purified water, sorbitol, xanthan gum. Flavor + benzoic acid + sorbitol is Limited-only (3 pts) — stays Caution; Avoid requires High. Magnesium aluminum silicate is not in Methodology §5 (ungraded; v1.6 intake). Infant-labeled: newborns and infants under 2 years (0.3 mL); children 2 years and over (0.6 mL).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -663,8 +638,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Culturelle Kids probiotic gummies coconut-only = Caution. Driver is natural flavors (Limited). Fractionated coconut oil is glazing only — coconut oil alone is NOT the gummy seed/industrial-oil High rule. Separate formulaId from a palm / vegetable-oil Avoid twin (none written this batch; no concrete SKU). Current culturelle.com Veggie Fiber / CVS Daily Probiotic + Prebiotic lists match coconut-only. Ages 2–3 as labeled on Multivitamin + Probiotic cartons; Veggie Fiber cartons are 3+ (choking hazard under 3). Confirm the carton. No DailyMed drug SPL (dietary supplement).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: PROBIOTIC_ALTS,
     sourcesGeneral: [
@@ -701,8 +675,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PEPTO_KIDS, 'Sugar'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pepto Kids (calcium carbonate) = Avoid. D&C Red #27 aluminum lake + talc are High-tier; flavor is Limited (not needed to reach Avoid). DailyMed setid 673c45dc. This is NOT adult Pepto-Bismol bismuth (skipped under-12). Ages 2+ (24–47 lbs / 2–5 years; under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: TUMMY_ALTS,
     sourcesGeneral: [
@@ -744,8 +717,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_CHEW, 'Magnesium stearate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Mylicon Tummy Relief chews = Avoid. D&C Red #27 is High-tier; sucralose is Moderate (not needed to reach Avoid). DailyMed setid 432d5b4c: adipic acid, crospovidone, D&C red 27, dextrose, flavors, magnesium stearate, maltodextrin, sucralose. All-in-One liquid is a separate Avoid formulaId. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: TUMMY_ALTS,
     sourcesGeneral: [
@@ -786,8 +758,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_AIO, 'Sodium carbonate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Children\'s Mylicon All-in-One liquid = Avoid. D&C Red #28 is High-tier; sucralose is Moderate (not needed to reach Avoid). DailyMed setid 0952eba8. Benzyl alcohol is the locked standalone Caution (not additive-scored) — Avoid already stands on the dye. Chewable Tummy Relief is a separate Avoid formulaId. Ages 2+ (under 2: ask a doctor).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: TUMMY_ALTS,
     sourcesGeneral: [
@@ -829,8 +800,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_ORIG, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Mylicon Infants Original = Avoid. D&C Red #22 + D&C Red #28 are High-tier. DailyMed setid 395be942 also has the Limited-only dye-free stack (flavor + sorbate + benzoate + sorbitol) — not needed to reach Avoid once dyes are present. Dye-Free is a separate formulaId (Caution on Limited-only, not dyes). Infant-labeled (newest newborns / infants under 2; children over 2 on the same chart).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -874,10 +844,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_DYEFREE, 'Purified water'),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER CALL: Mylicon Infants Dye-Free = Caution. ' +
-      LIMITED_STACK_CAUTION +
-      ' DailyMed setid 3324139a: carboxymethylcellulose sodium, citric acid, microcrystalline cellulose, natural flavors, polysorbate 60, potassium sorbate, purified water, sodium benzoate, sorbitan monostearate, sorbitol, xanthan gum. Dye-free is not Clean. Sorbitol is a fourth Limited and does not change Caution. Polysorbate 60 and sorbitan monostearate are not in Methodology §5 (ungraded; v1.6 intake). Original dyed drops are a separate formulaId. CVS / Walgreens dye-free twins with this exact stack are Caution under `store-infants-gas-dyefree`. Infant-labeled (newest newborns / infants under 2).',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
@@ -924,8 +891,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_DRAM_KIDS, 'Methacrylic acid copolymer'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Dramamine for Kids = Avoid. Aspartame is High-tier (IARC 2B; locked Avoid). DailyMed setid 12bc3f17: aspartame, citric acid, flavor, magnesium stearate, methacrylic acid copolymer, sorbitol. Flavor / sorbitol are Limited (not needed to reach Avoid). Ages 2+ (children 2 to under 6; under 2: do not use unless directed by a doctor). Dimenhydrinate — labeled drowsiness; cleanliness grade only; no efficacy claim. Adult Dramamine rows in batch 10 are separate formulaIds.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
     sourcesGeneral: [
@@ -973,9 +939,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       flag('Citric acid', 'cleared', labelCite(PEDIALYTE_FLAV_CITE, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pedialyte Classic flavored = Avoid (sucralose + Ace-K ± dyes). Abbott US Classic family: Grape (Red 40 + Blue 1), Strawberry (Red 40 + Blue 1), Mixed Fruit (Yellow 6), Fruit Punch (Red 40), plus dye-free Coconut Burst / some flavor panels that still carry sucralose + Ace-K + flavor — same Avoid demerit family; one row. Unflavored is the separate Clean formulaId. Carton: for children under 1 year of age, consult your doctor. No DailyMed drug SPL. ' +
-      ZINC_PARKED,
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ELECTROLYTE_ALTS,
     sourcesGeneral: [
@@ -1036,8 +1000,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Pedialyte Freezer Pops = Avoid (sucralose + Ace-K ± dyes). Abbott US list also has flavor + potassium sorbate + sodium benzoate (Limited-only; not a standalone Avoid). Variety-pack retailer sleeves add Red 40 / Blue 1 / Yellow 6; current abbottnutrition.com text omits colorants on some flavor panels — Avoid already stands on sucralose + Ace-K ± dyes. No zinc on the Freezer Pop ingredient list (unlike Classic liquid). Not for children under 1 year of age. No DailyMed drug SPL. Separate formulaId from Classic Unflavored / flavored liquid.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ELECTROLYTE_ALTS,
     sourcesGeneral: [
@@ -1083,8 +1046,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote:
-      'FOUNDER CALL: Culturelle Kids Purely Probiotics packets = Avoid (sucralose + natural flavor, 2+1). Cited carton: Culturelle Kids + Baby HCP sheet lists xylitol, mannitol, hydroxypropyl cellulose, stearic acid, natural flavor, magnesium stearate, sucralose, citric acid, vegetable juice (color), malic acid. Current culturelle.com / retailer “No Flavor Added” packets list only mannitol + inulin — that is a different formula, not this row; do not invent Clean for the no-flavor carton. Xylitol is scored in the oral sugar-alcohol Limited class (same family as sorbitol). Ages 1+. No DailyMed drug SPL.',
+
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: PROBIOTIC_ALTS,
     sourcesGeneral: [

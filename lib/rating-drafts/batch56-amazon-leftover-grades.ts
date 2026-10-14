@@ -110,12 +110,6 @@ const PF_RETAILERS = [
   'Walgreens',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
-const PARKED_ACTIVES =
-  'Menthol / camphor / lidocaine / methyl salicylate / capsaicin / capsicum / benzyl alcohol / trolamine salicylate / phenol actives stay parked (no invented active-safety cap). Inactives graded only.';
-
 const PG_TOPICAL_TAP =
   'Propylene glycol is oral-scoped Moderate. On this topical it is not that Moderate row.';
 
@@ -375,8 +369,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Water (USP)', 'cleared', labelCite(CITE.stopain, METH.cleared)),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Stopain Extra Strength menthol roll-on = Caution. Drivers are boswellia serrata extract (scent-extract / boswellia resin-extract Caution) + eucalyptus oil + trolamine as inactive. SD alcohol 39C is the locked Limited alcohol-vehicle alias. Peppermint oil is the locked Limited flavor/EO row. Official stopain.com Extra Strength Roll-On inactive: boswellia serrata extract, carbomer, dimethylsulfone (MSM), eucalyptus oil, glucosamine sulfate, glycerin, peppermint oil, SD alcohol 39C, triethanolamine, water (USP). DailyMed setid ${SET.stopain} (NDC 63936-8523 Extra Strength Cold Pain Relieving Roll On) prints the same current OI. Clinical roll-on (PEG-8 dimethicone + pentylene glycol) is not this row. No High. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} ${SCENT_EXTRACT_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON, 'CVS', 'Walgreens', 'stopain.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -440,8 +433,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       cleared(SET.flexall, 'Water'),
     ],
     verdict: 'caution',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Flexall Maximum Strength 16% gel = Caution. Drivers are steareth-2 / steareth-21 + tocopheryl acetate + eucalyptus / thyme EO + trolamine as inactive. DailyMed setid ${SET.flexall} (source NDC 41167-1602) Drug Facts: allantoin, aloe barbadensis leaf juice, carbomer, diisopropyl adipate, eucalyptus globulus leaf oil, glycerin, mentha piperita (peppermint) oil, methyl salicylate, SD alcohol 40 (15% w/w), steareth-2, steareth-21, thymus vulgaris (thyme) oil, tocopheryl acetate, triethanolamine, water. Methyl salicylate is printed as an inactive and stays in the parked menthol / camphor / methyl salicylate active class — not an invented §5 inactive grade. SD alcohol 40 sits on the locked SD-alcohol vehicle row (not a second alcohol class). No High. Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${LIMITED_STACK} ${SCENT_EXTRACT_TAP} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -500,8 +492,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       cleared(SET.ha2zKids, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: HealthA2Z Children’s APAP 160 mg grape chew = Avoid. Drivers are D&C red #27 aluminum lake + D&C red #30 aluminum lake + FD&C Blue #1 aluminum lake (High — leftover exact High-family strings). DailyMed setid 44c90cbe (Allegiant NDC 69168-440) Drug Facts: citric acid, crospovidone, D&C red #27 aluminum lake, D&C red #30 aluminum lake, dextrates hydrated, ethylcellulose, FD&C blue #1 aluminum lake, flavors, magnesium stearate, mannitol, polyethylene, stearic acid, sucralose. Dextrates hydrated + polyethylene as chew binder are locked leftover Cleared tokens. 60-ct (69168-440-60) and 150-ct (69168-440-02) share this formulaId. Do NOT clone HealthA2Z IBU 382 / 335 already on main. Stay under 4 g/day acetaminophen. Ages 2–11 (under 2: ask a doctor).',
+
     retailers: [...AMAZON, 'Target'],
     cleanAlternatives: KIDS_APAP_ALTS,
     sourcesGeneral: [
@@ -544,8 +535,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       cleared(SET.timecapIbu, 'Pregelatinized starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: TIME-Cap Labs Ibuprofen 200 = Avoid. Drivers are FD&C Yellow #6 aluminum lake + talc + titanium dioxide (High). DailyMed setid 82aad715 printed Drug Facts: colloidal silicon dioxide, croscarmellose sodium, FD&C yellow #6 aluminum lake, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polyvinyl alcohol, pregelatinized starch, talc, titanium dioxide. Oral polyvinyl alcohol is the locked leftover Cleared coating token. Amazon 225-ct is NDC 49483-612-34 on this SPL; other 49483-611 / 49483-612 pack sizes share this formulaId. Do NOT reuse timecap-naproxen-220 already on main. Ages 12+.',
+
     retailers: [...AMAZON],
     cleanAlternatives: IBU_ADULT_ALTS,
     sourcesGeneral: [
@@ -573,8 +563,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Petrolatum', 'cleared', dailymed(SET.mentholatum, METH.petrolatum)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Mentholatum Original ointment = Avoid. Driver is titanium dioxide (High). DailyMed setid ${SET.mentholatum} (NDC 10742-0002) Drug Facts inactive: fragrance, petrolatum, titanium dioxide. Fragrance is standalone Caution (not the Avoid driver). Petrolatum is the locked topical ointment base. Official mentholatumwellness.com Original Ointment prints the same three inactives. Ages 2+ (under 2: ask a doctor). ${PARKED_ACTIVES} Draft, not verified.`,
+
     retailers: [...PF_RETAILERS, 'mentholatumwellness.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -626,8 +615,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       cleared(SET.sumifun, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Sumifun 4% lidocaine gel-patch = Avoid. Drivers are methylparaben + propylparaben (High in every form, including patches) and titanium dioxide (High). DailyMed setid ${SET.sumifun} (NDC 84165-016) Drug Facts: Dihydroxyaluminum Aminoacetate Anhydrous, Edetate Disodium, Glycerin, Kaolin, Methylparaben, Polyacrylic Acid, Polysorbate 80, PolyvinylPyrrolidone K90, Propylene Glycol, Propylparaben, Sodium Polyacrylate, Tartaric Acid, Titanium Dioxide, Water. Backing ignored. DF graded (not structured-only). Do NOT clone HealthWise / WELMATE / Amazon Basics lidocaine rows already on main (different OI). Ages 12+. ${PARKED_ACTIVES} ${PG_TOPICAL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [
@@ -712,8 +700,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Deionized water', 'cleared', labelCite(CITE.ausDream, METH.cleared)),
     ],
     verdict: 'avoid',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Australian Dream Arthritis Pain Relief Cream = Avoid. Driver is methylisothiazolinone / MIT (High/Avoid leave-on cream; exact leftover-cream lock). Official australiandream.com current OI: butylene glycol, C13-14 isoparaffin, chondroitin sulfate, deionized water, emu oil, ethylhexyl stearate, glucosamine sulfate, helianthus annuus (sunflower) oil, laureth-7, methylisothiazolinone, methylsulfonylmethane (MSM), polyacrylamide, potassium sorbate, sodium polyacrylate, tetrasodium EDTA, tocopheryl acetate, trideceth-6. DailyMed setid ${SET.ausDream} prints the same leftover-cream stack. ${EMU_TAP} Sunflower oil is the named cream-fill vehicle (not gummy High). Do not write the later Sombra 523333ee carton (different OI). Pack sizes share this formulaId. Ages 12+. ${PARKED_ACTIVES} ${CREAM_OIL_TAP} Draft, not verified.`,
+
     retailers: [...AMAZON, 'Walmart', 'CVS', 'australiandream.com'],
     cleanAlternatives: TOPICAL_ALTS,
     sourcesGeneral: [

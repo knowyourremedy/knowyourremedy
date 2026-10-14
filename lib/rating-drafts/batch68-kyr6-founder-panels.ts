@@ -119,17 +119,11 @@ const SET_UPUP_PM = 'e92a258b-15ee-491e-b367-5d1be85be8c5';
 const SIO2_TAP =
   'Silicon dioxide / silica is the 0-pt nanoparticle Caution cap (EFSA 2018 data-gap). It does not push Avoid.';
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const CA_SILICATE_TAP =
   'Calcium silicate is a standalone Caution silicate anti-caking row (Mg trisilicate neighborhood). It is not the SiO2 0-pt nanoparticle cap.';
 
 const UNLABELED_MCT_TAP =
   'Unlabeled Medium Chain Triglycerides / MCT with no coconut or plant named is the Limited opacity row. Named MCT (derived from palm kernel oil) / MCT oil labeled coconut / named MCT coating are the Cleared fill rows — this unlabeled string is not that Cleared row.';
-
-const ZINC_PARKED =
-  'Zinc (oxide / citrate / other labeled zinc salts) is parked as of Methodology v1.6 — active-safety-cap review is not done. This draft grades inactives only and does not invent an active-safety grade for zinc.';
 
 const METH = {
   sio2: `Methodology §5 Precautionary (silicon dioxide / silica / Silica (oral) — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points). ${SIO2_TAP}`,
@@ -303,8 +297,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: Kirkland Signature Wild Alaskan Fish Oil = Clean. Costco tile / DSLD 239461 / Open Food Facts UPC 096619653539. Softgel is Gelatin (Bovine), Glycerin, Water plus mixed-tocopherol vitamin E as the antioxidant — no TiO2 / FD&C / enteric polymers. Gelatin (Bovine) sits on the Cleared gelatin row; bovine is an honest note (not porcine, not a second grade). Mixed tocopherols are Cleared-class antioxidants. Own formulaId — do NOT alias to `kirkland-fish-oil-softgels-clear` (that twin is porcine gelatin / 1000 mg standard clear FO already on main) and do NOT alias to Kirkland enteric FO (not written). Softgel fill ≠ gummy seed-oil High. Contains fish. No DailyMed drug SPL (dietary supplement). Adults. Draft, not verified.',
+
     sourcesGeneral: [
       `${CITE.kirkWild} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL`,
     ],
@@ -354,7 +347,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       flag('Triacetin', 'cleared', labelCite(CITE.mmWomens, METH.triacetin)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Advanced Women’s Multi tablets = Caution (calcium silicate + silica cap + maltodextrin). Founder Sam’s tile OI exact (samsclub.com Advanced Women’s 275-ct). Grade only true inactives — SF vitamins/minerals (calcium carbonate, magnesium oxide, potassium chloride, calcium ascorbate, ferrous fumarate, choline bitartrate, beta-carotene, biotin, cholecalciferol, chromium picolinate, cupric sulfate, d-alpha tocopheryl succinate, D-calcium pantothenate, folic acid, manganese sulfate, methylcobalamin, niacinamide, phytonadione, potassium iodide, pyridoxine HCl, retinyl acetate, riboflavin, sodium molybdate, sodium selenate, thiamine HCl, zinc citrate, zinc oxide) are not High/Caution inactive flags. d-ALPHA TOCOPHERYL SUCCINATE is the labeled vitamin E SF form — not inactive tocopheryl acetate Caution. Chaste tree (berry) powder extract and pomegranate (fruit) powder extract are named plant-part oral food/botanical extracts = Cleared class (Sept 15). Distinct from Caution “Pomegranate Powder” exact token. Beet (root) powder is the Cleared whole-food beet-root row. Calcium silicate is standalone Caution. Silica is the 0-pt nanoparticle cap. Maltodextrin is Limited. No High. ${LIMITED_STACK} ${SIO2_TAP} ${CA_SILICATE_TAP} ${ZINC_PARKED} Own formulaId — not the HelloPharmacist Women’s Daily BHT/TiO2/dye twin (conflicted; not this carton). No 12-digit UPC on the Sam’s tile this hunt — omitted (do not invent). Adults; one tablet daily with food. Iron overdose carton applies. Draft, not verified.`,
+
     cleanAlternatives: WOMENS_ALTS,
     sourcesGeneral: [
       `${CITE.mmWomens} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL; no confirmed 12-digit UPC`,
@@ -392,7 +385,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       flag('Triacetin', 'cleared', labelCite(CITE.mmMens, METH.triacetin)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Advanced Men’s Multi tablets = Caution (calcium silicate + maltodextrin). Founder Sam’s tile OI exact. Grade only true inactives — SF vitamins/minerals (calcium carbonate, magnesium oxide, potassium chloride, calcium ascorbate, beta-carotene, biotin, cholecalciferol, chromium picolinate, cupric sulfate, d-alpha tocopheryl succinate, D-calcium pantothenate, folic acid, manganese sulfate, methylcobalamin, niacinamide, phytonadione, potassium iodide, pyridoxine HCl, retinyl acetate, riboflavin, sodium molybdate, sodium selenate, thiamine HCl, zinc citrate, zinc oxide) are not High/Caution inactive flags. d-ALPHA TOCOPHERYL SUCCINATE is the labeled vitamin E SF form — not inactive tocopheryl acetate Caution. Beet (root) / eleuthero (root) extract / turmeric (root) powder extract are the labeled featured herbs on the Sam’s marketing copy (blood flow / energy / joints) — SF/formula actives, not inactive grades. Turmeric-as-color and oleoresin turmeric rows are not this string. No silica on this panel. Calcium silicate is standalone Caution. Maltodextrin is Limited. No High. ${LIMITED_STACK} ${CA_SILICATE_TAP} ${ZINC_PARKED} Own formulaId — not DSLD Men 50+ 400-ct BHT/TiO2/dye/talc (wrong SKU). No 12-digit UPC on the Sam’s tile this hunt — omitted. Adults; one tablet daily with food. Draft, not verified.`,
+
     cleanAlternatives: MENS_ALTS,
     sourcesGeneral: [
       `${CITE.mmMens} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL; no confirmed 12-digit UPC`,
@@ -444,7 +437,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       flag('Tricalcium phosphate', 'cleared', labelCite(CITE.mmWomens50, METH.dical)),
     ],
     verdict: 'caution',
-    honestNote: `FOUNDER-LOCK DRAFT: Member’s Mark Advanced Women’s 50+ tablets = Caution (calcium silicate + silica cap + unlabeled MCT + unspecified starch + maltodextrin). Founder Sam’s tile OI exact. Grade only true inactives — SF vitamins/minerals (calcium carbonate, magnesium oxide, ascorbic acid, potassium chloride, dicalcium phosphate as the mineral source, choline bitartrate, beta-carotene, biotin, cholecalciferol, chromium picolinate, cupric sulfate, D-calcium pantothenate, ferrous fumarate, folic acid, manganese sulfate, methylcobalamin, niacinamide, phytonadione, potassium iodide, pyridoxine HCl, riboflavin, sodium ascorbate, sodium molybdate, sodium selenate, thiamine mononitrate, zinc citrate, zinc oxide) are not High/Caution inactive flags. dl-ALPHA TOCOPHERYL ACETATE is the labeled vitamin E SF form — not graded as inactive tocopheryl acetate Caution. Cranberry powder (fruit) is the labeled urinary-tract herb (SF/formula active). Marigold flower extract is the labeled lutein source (SF active). Sodium borate is the labeled boron mineral form on this 50+ formula (Sam’s / club copy: boron + lutein + cranberry) — SF active, not an ungraded inactive and not a new §5 row. Unlabeled Medium Chain Triglycerides (no plant named) is the existing Limited unlabeled-MCT lock — tap vs named-MCT Cleared. Bare STARCH is unspecified starch Limited (not named corn / pregelatinized). Maltodextrin Limited. Calcium silicate standalone Caution. Silica is the 0-pt cap. Glucose syrup / sugar are the Cleared sweetener row. dl-alpha tocopherol + mixed tocopherols as antioxidants are Cleared (≠ tocopheryl acetate). No High. ${LIMITED_STACK} ${SIO2_TAP} ${CA_SILICATE_TAP} ${UNLABELED_MCT_TAP} ${ZINC_PARKED} Own formulaId — not the HelloPharmacist / DSLD 47220 400-ct dyed/BHT Women 50+ (wrong carton; UPC 078742090344 not attached). No 12-digit UPC on the current 275-ct Sam’s tile this hunt — omitted. Adults (50+ labeled); one tablet daily with food. Iron overdose carton applies. Draft, not verified.`,
+
     cleanAlternatives: WOMENS_50_ALTS,
     sourcesGeneral: [
       `${CITE.mmWomens50} — ${UNVERIFIED_NOTE}; no DailyMed drug SPL; no confirmed 12-digit UPC on the 275-ct Advanced carton`,
@@ -470,8 +463,7 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       flag('Lanolin alcohol', 'cleared', dailymed(SET_UPUP_PM, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
-    honestNote:
-      'FOUNDER-LOCK DRAFT: up&up Nighttime Relief lubricant eye ointment = Caution (lanolin alcohol). DailyMed setid e92a258b (NDC 11673-575). Actives are mineral oil 42.5% + white petrolatum 57.3% (lubricant ACTIVES — not oral oil demerits). Only inactive is lanolin alcohol — locked Caution wool-alcohol family (Sept 16). No High. New product id only — reuses `store-pm-ointment-lanolin-alcohol` from batch65 Equate / CVS and batch66 Walgreens PM ointment (same actives + lanolin-alcohol inactive). SPL notes an inactivated NDC code; this is the setid the founder locked for the write, not a new invented Target SKU. UPC-A 780707005750 confirmed on the DailyMed carton image for this setid (zbar). NDC ≠ UPC. Prefer PF tears over this PM ointment. Draft, not verified.',
+
     cleanAlternatives: EYE_PF_ALTS,
     sourcesGeneral: [
       `DailyMed setid ${SET_UPUP_PM} (up&up PM lubricant NDC 11673-575; ${UNVERIFIED_NOTE}) — reuse ${STORE_PM_LANOLIN}`,

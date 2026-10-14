@@ -60,9 +60,6 @@ const PF_RETAILERS = [
   'Safeway',
 ] as const;
 
-const LIMITED_STACK =
-  'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
-
 const KCL_TAP =
   'Potassium chloride is the locked Cleared salt / electrolyte. Not a grade driver.';
 
@@ -74,12 +71,6 @@ const SLS_TAP =
 
 const TRIACETIN_TAP =
   'Triacetin is the locked Cleared tablet/caplet coating plasticizer. Not a grade driver.';
-
-const SEDATING =
-  'Nighttime first-generation antihistamine — labeled drowsiness will occur; next-day drowsiness can linger. Cleanliness grade only; no efficacy claim.';
-
-const TABLET_OIL_LINE =
-  'Seed/industrial oils are flagged in gummies. In this coated-tablet fill they are not that High rule.';
 
 const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
@@ -243,8 +234,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.max, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Goody’s Max Triple Action + Cool Orange + Mixed Fruit Blast = Caution. Drivers are sucralose (Moderate) + flavors / mannitol (Limited) + silicon dioxide (0-pt Caution cap). ${LIMITED_STACK} DailyMed setids 02b3a604 (Max Triple Action / Tropical Citrus), 31212c97 (Cool Orange), and 6cb758bf (Mixed Fruit Blast) list the same Other Ingredients — one formulaId, not cloned. Actives differ (Max 500/500/130 vs Cool Orange and Mixed Fruit 325/500/65) but shared OI keeps one formulaId. Pack sizes share formulaId. Distinct from Extra Strength unflavored (lactose + KCl Clean) and from PLUS / Hangover (xylitol stack; no acetaminophen). Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: POWDER_COMBO_ALTS,
     sourcesGeneral: [
@@ -279,8 +269,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.plusAlert, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Goody’s PLUS Mental Alertness + Hangover = Caution. Drivers are sucralose (Moderate) + xylitol / flavor / mannitol (Limited) + silicon dioxide (0-pt Caution cap). ${LIMITED_STACK} DailyMed setids 31ef6d07 (Mental Alert) and 0b0067e0 (Hangover) list the same Other Ingredients and the same actives (aspirin 1000 mg + caffeine 150 mg) — one formulaId, not cloned. Distinct from Max / Cool Orange / Mixed Fruit (those add acetaminophen; no xylitol). Same inactive stack as BC Max. Hangover carton is Berry Citrus Boost. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
     sourcesGeneral: [
@@ -311,8 +300,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.pm, 'Magnesium stearate'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: Goody’s PM powder = Caution. Drivers are sodium benzoate (Limited) + silica gel / silicon dioxide (0-pt Caution cap). ${LIMITED_STACK} ${KCL_TAP} DailyMed setid db5d6c2b. Distinct from Extra Strength (no diphenhydramine; Clean) and from the off-nav PM caplets (list 4). Docusate sodium, fumaric acid, and glycine are not in Methodology §5 (ungraded; v1.6 intake; notes-only — not required to reach Caution). Contains lactose. ${SEDATING} Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.pm} — ${UNVERIFIED_NOTE}`],
@@ -345,8 +333,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.bcOriginal, 'Lactose monohydrate'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: BC Original + Arthritis powders = Caution. Driver is sodium benzoate (Limited). ${LIMITED_STACK} ${KCL_TAP} DailyMed setids 226173d4 (Original, aspirin 845 mg) and 3a85be2d (Arthritis, aspirin 1000 mg) list the same Other Ingredients — one formulaId, not cloned. Distinct from BC Cherry (Ace-K / sucralose / flavor stack) and from BC Max (acetaminophen + xylitol stack). Docusate sodium and fumaric acid are not in Methodology §5 (ungraded; v1.6 intake; notes-only — not required to reach Caution). Contains lactose. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
     sourcesGeneral: [
@@ -385,8 +372,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.bcCherry, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: BC Cherry powder = Caution. Drivers are Ace-K + sucralose (Moderate) + flavor / mannitol (Limited) + silicon dioxide (0-pt Caution cap). ${LIMITED_STACK} DailyMed setid c5fa6660 (Medtech). Distinct from Original / Arthritis (benzoate + KCl; no sweeteners) and from Lil’ Drug Store BC Cherry (list 4 false match). Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.bcCherry} — ${UNVERIFIED_NOTE}`],
@@ -416,8 +402,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.bcMax, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
-    honestNote:
-      `PROPOSED DRAFT: BC Max powder = Caution. Same inactive stack as Goody’s PLUS (sucralose + xylitol / flavor / mannitol + SiO₂). ${LIMITED_STACK} DailyMed setid 1e2a07ab. Own formulaId — actives add acetaminophen 500 mg (PLUS is aspirin 1000 / caffeine 150 only). Lemonade flavor on the current carton. Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: POWDER_COMBO_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.bcMax} — ${UNVERIFIED_NOTE}`],
@@ -458,8 +443,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.anacin, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Anacin aspirin-caffeine coated = Avoid. Drivers are talc + titanium dioxide (High). DailyMed setid 51ab0ee3. ${SLS_TAP} ${TRIACETIN_TAP} Mineral oil on the Drug Facts coat is not in Methodology §5 (ungraded coat aid; not the Avoid driver). ${TABLET_OIL_LINE} Silicon dioxide is the 0-pt Caution cap, not needed to reach Avoid. Listed swap is a single-active analog, not a 400/32 replacement. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'anacin.com'],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.anacin} — ${UNVERIFIED_NOTE}`],
@@ -496,8 +480,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.bufferin, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Bufferin Regular Strength 325 coated (Genomma) = Avoid. Drivers are talc + titanium dioxide (High). DailyMed setid 3543b2bf. Carton lists buffered aspirin equal to 325 mg (buffered with calcium carbonate, magnesium carbonate, and magnesium oxide — buffer pair, not a second grade). Oral PEG / PG are Moderate (not needed to reach Avoid). ${SLS_TAP} Hydrogenated vegetable oil, dibasic sodium phosphate anhydrous, and shellac wax are not in Methodology §5 (ungraded; not the Avoid drivers). ${TABLET_OIL_LINE} Distinct from Bufferin Hand Sanitizer / lidocaine cream / off-site Arthritis (list 4). Ages 12+.`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.bufferin} — ${UNVERIFIED_NOTE}`],
@@ -564,8 +547,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.ecotrin325, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Ecotrin Regular Strength 325 enteric = Avoid. Drivers are Yellow #10 + Yellow #6 lakes + talc + titanium dioxide (High). Brand Drug Facts / DailyMed setid 36cb530b — no parabens on the current carton OI (structured leftover paraben rows on that SPL are not the label list). SEPARATE formulaId from Ecotrin 81 dye (222d187b — croscarmellose + MCC; same High stack). Do not write the superseded 81 paraben SPL f950d4eb (list 4). Black iron oxide, polyvinyl acetate phthalate, shellac wax, and triethyl citrate are not in Methodology §5 (ungraded; not the Avoid drivers). ${TRIACETIN_TAP} Pack sizes share formulaId. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'ecotrin.com'],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [
@@ -635,8 +617,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.ecotrin81, 'Stearic acid'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: Ecotrin 81 enteric dye = Avoid. Same High stack as Regular Strength 325 (Yellow #10 + Yellow #6 lakes + talc + TiO₂). DailyMed setid 222d187b. Own formulaId — 81 Drug Facts add croscarmellose + MCC (325 says cellulose). Not the superseded paraben SPL f950d4eb (list 4). Black iron oxide, polyvinyl acetate phthalate, shellac wax, and triethyl citrate are ungraded (not the Avoid drivers). ${TRIACETIN_TAP} Pack sizes share formulaId. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'ecotrin.com'],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.ecotrin81} — ${UNVERIFIED_NOTE}`],
@@ -694,8 +675,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.stJoeEnteric, 'Sodium bicarbonate'),
     ],
     verdict: 'avoid',
-    honestNote:
-      `PROPOSED DRAFT: St. Joseph 81 enteric = Avoid. Drivers are Red #40 + Yellow #6 + talc + titanium dioxide (High). DailyMed setid dbf40c7b. ${METHACRYLIC_TAP} ${SLS_TAP} Shellac wax and triethyl citrate are not in Methodology §5 (ungraded; not the Avoid drivers). ${TRIACETIN_TAP} SEPARATE from the orange chewable (Yellow #6 lake only; no enteric coat). Pack sizes share formulaId. Ages 12+ (adult aspirin regimen; children under 12: consult a doctor on the carton).`,
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.stJoeEnteric} — ${UNVERIFIED_NOTE}`],
@@ -723,8 +703,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.stJoeChew, 'Corn starch'),
     ],
     verdict: 'avoid',
-    honestNote:
-      'PROPOSED DRAFT: St. Joseph 81 chewable = Avoid. Driver is Yellow #6 aluminum lake (High). DailyMed setid 248cd302 (orange flavored). Sucralose is Moderate; maltodextrin + flavor are Limited (not needed to reach Avoid). Dextrates hydrated are not in Methodology §5 (ungraded starch/sugar mix; notes-only — Avoid already stands on the dye). SEPARATE formulaId from the 81 enteric (Red #40 + Yellow #6 + talc + TiO₂). Ages 12+ (adult aspirin regimen; children under 12: consult a doctor on the carton).',
+
     retailers: [...PF_RETAILERS],
     cleanAlternatives: ASPIRIN_TABLET_ALTS,
     sourcesGeneral: [`DailyMed setid ${SET.stJoeChew} — ${UNVERIFIED_NOTE}`],
@@ -755,8 +734,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.extraStrength, 'Lactose monohydrate'),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Goody’s Extra Strength powder = Clean. Potassium chloride is Cleared. DailyMed setids d4325b17 and 16d774cc Drug Facts list lactose monohydrate + potassium chloride only — no High / Limited / Caution left. ${KCL_TAP} Pack sizes / carton twins share formulaId (same actives 260/520/32.5). SEPARATE from Back & Body (no caffeine; different actives → own formulaId even though the inactive OI matches). Distinct from Max / Cool Orange / Mixed Fruit (sucralose + flavors Caution). Contains lactose. Confirm the carton matches this unflavored list. Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     sourcesGeneral: [
       `DailyMed setid ${SET.extraStrength}; carton twin ${SET.extraStrengthTwin} — same OI + actives, shared formulaId — ${UNVERIFIED_NOTE}`,
@@ -781,8 +759,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.backBody, 'Lactose monohydrate'),
     ],
     verdict: 'clean',
-    honestNote:
-      `FOUNDER-LOCK DRAFT: Goody’s Back & Body powder = Clean. Potassium chloride is Cleared. DailyMed setid 055d0288 Drug Facts list lactose monohydrate + potassium chloride only — no High / Limited / Caution left. ${KCL_TAP} Own formulaId from Extra Strength (this row has no caffeine; actives 325/500 vs ES 260/520/32.5) even though the inactive OI matches. Distinct from Bayer Back & Body caplets already on main. Contains lactose. Stay under 4 g/day acetaminophen. Ages 12+.`,
+
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     sourcesGeneral: [`DailyMed setid ${SET.backBody} — ${UNVERIFIED_NOTE}`],
   }),

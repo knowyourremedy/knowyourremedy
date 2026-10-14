@@ -64,15 +64,6 @@ const EYE_ALTS: CleanAlternative[] = [
   alt('similasan-allergy-eye-pf', 'Cataloged Clean homeopathic single-use allergy eye drop already on main. Form labeled, not a hard filter (§6).'),
 ];
 
-const EXTRA_NOTE =
-  'Caution. Drivers are benzalkonium chloride, boric acid, hydrochloric acid, mannitol, and polyethylene glycol 400. Boric acid is the eye-drop Caution row. Hydroxypropyl-gamma-cyclodextrin is the gamma-cyclodextrin family, including the label spelling hydroxypropylgamma- cyclodextrin. Hypromellose, povidone, sodium hydroxide, and purified water are Cleared. No High inactive, so this is not Avoid. Ages 2+. Under 2: ask a doctor. Not a store brand. Not the twin pack.';
-
-const ONCE_NOTE =
-  'Caution. Drivers are benzalkonium chloride, edetate disodium, and hydrochloric acid. Edetate disodium is the EDTA Caution row, not Cleared trace disodium EDTA. Dibasic sodium phosphate, povidone, purified water, sodium chloride, and sodium hydroxide are Cleared. No High inactive, so this is not Avoid. Ages 2+. Under 2: ask a doctor. Not a store brand. Not the twin pack.';
-
-const TWICE_NOTE =
-  'Caution. Drivers are benzalkonium chloride and hydrochloric acid. Dibasic sodium phosphate, purified water, sodium chloride, and sodium hydroxide are Cleared. No High inactive, so this is not Avoid. Ages 2+. Under 2: ask a doctor. Not a store brand.';
-
 function extraFlags(): IngredientFlag[] {
   return [
     flag('Benzalkonium chloride', 'limited', cite(EXTRA_SET, METH.bkc)),
@@ -137,7 +128,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.7%' }],
     inactiveIngredients: extraFlags(),
     verdict: 'caution',
-    honestNote: EXTRA_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -159,7 +150,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.2%' }],
     inactiveIngredients: onceFlags(),
     verdict: 'caution',
-    honestNote: ONCE_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [
@@ -181,7 +172,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.1%' }],
     inactiveIngredients: twiceFlags(),
     verdict: 'caution',
-    honestNote: TWICE_NOTE,
+
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
     sourcesGeneral: [

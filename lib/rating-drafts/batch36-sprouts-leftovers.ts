@@ -282,10 +282,7 @@ function row(d: Draft): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.inactives,
     verdict: d.verdict,
-    honestNote:
-      `${d.note} Pack sizes share formulaId when the other-ingredients list holds. No DailyMed drug SPL (dietary supplement unless noted). No dosing or medical advice in this draft. Draft, not verified.`
-        .replace(/\s+/g, ' ')
-        .trim(),
+
     retailers: [...RETAILERS],
     cleanAlternatives: d.alts,
     sourcesGeneral: [`${d.cite} — draft, not verified; no DailyMed drug SPL`],
