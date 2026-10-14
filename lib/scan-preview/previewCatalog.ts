@@ -11894,6 +11894,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Children's Nasonex, 60 metered sprays. Barcode 370030100767.
   // 0.34 fl oz (10 mL). Not the adult 60 and not the children's 30.
   'nasonex-b154-child-60': catalogShot('nasonex-b154-child-60.jpg'),
+  // Allergies night run 2026-10-14 3:00 AM PT. One batch. Aisle finishes.
+  // Per-id only. Do not glue a sibling count. Not a text tile. Not a letter.
+  // Pataday Extra Strength, 2.5 mL. Barcode 300650816045. Not Once Daily 0.2%.
+  'pataday-b155-extra-25ml': catalogShot('pataday-b155-extra-25ml.jpg'),
+  // Pataday Once Daily Relief, 2.5 mL. Barcode 300658150011. Not Extra Strength.
+  'pataday-b155-once-25ml': catalogShot('pataday-b155-once-25ml.jpg'),
+  // Pataday Twice Daily Relief, 5 mL. Barcode 300654274018. Not the 2.5 mL.
+  'pataday-b155-twice-5ml': catalogShot('pataday-b155-twice-5ml.jpg'),
+  // Ultratabs Go Packs, 8 tablets. Barcode 300450170088. Not the 24.
+  'benadryl-b156-ultratabs-8': catalogShot('benadryl-b156-ultratabs-8.jpg'),
+  // Ultratabs, 24 tablets. Barcode 312547170314. Not the 8, 12, 48, or 100.
+  'benadryl-b156-ultratabs-24': catalogShot('benadryl-b156-ultratabs-24.jpg'),
+  // Ultratabs, 48 tablets. Barcode 300450171481. Not the 24 and not the 100.
+  'benadryl-b156-ultratabs-48': catalogShot('benadryl-b156-ultratabs-48.jpg'),
+  // Ultratabs, 100 tablets. Barcode 300450170149. Not the 48.
+  'benadryl-b156-ultratabs-100': catalogShot('benadryl-b156-ultratabs-100.jpg'),
+  // Extra Strength, 24 tablets, 50 mg. Barcode 300450235244. Not the 25 mg Ultratabs.
+  'benadryl-b156-extra-24': catalogShot('benadryl-b156-extra-24.jpg'),
+  // Allergy Plus Congestion tablets, 24. Barcode 300450557261. Not the liquid.
+  'benadryl-b156-congestion-24': catalogShot('benadryl-b156-congestion-24.jpg'),
+  // Children's dye-free bubble gum, 8 fl oz. Barcode 300450535085. Not the 4 fl oz.
+  'benadryl-b156-dyefree-8oz': catalogShot('benadryl-b156-dyefree-8oz.jpg'),
+  // Adult Allergy liquid, wild cherry, 4 fl oz. Barcode 300450534248. Not Children's.
+  'benadryl-b157-adult-4oz': catalogShot('benadryl-b157-adult-4oz.jpg'),
+  // Children's Allergy liquid, cherry, 4 fl oz. Barcode 350580534045. Not the 8 fl oz.
+  'benadryl-b157-dyed-4oz': catalogShot('benadryl-b157-dyed-4oz.jpg'),
+  // Children's Allergy liquid, cherry, 8 fl oz. Barcode 350580534083. Not the 4 fl oz.
+  'benadryl-b157-dyed-8oz': catalogShot('benadryl-b157-dyed-8oz.jpg'),
+  // Ultratabs, 12 tablets. Barcode 300450171122. Not the 24.
+  'benadryl-b157-ultratabs-12': catalogShot('benadryl-b157-ultratabs-12.jpg'),
+  // Children's chewables, grape, 20 tablets. Barcode 300450553201. Not the uncounted chew.
+  'benadryl-b158-chewables-20': catalogShot('benadryl-b158-chewables-20.jpg'),
+  // Alavert Citrus Burst, 20 tablets. Barcode 850024429086. Not the 60.
+  'alavert-b159-citrus-20': catalogShot('alavert-b159-citrus-20.jpg'),
+  // Alavert Fresh Mint, 60 tablets. Barcode 850024429079. Not citrus.
+  'alavert-b159-mint-60': catalogShot('alavert-b159-mint-60.jpg'),
+  // Alavert Citrus Burst, 60 tablets. Barcode 850024429062. Not the 20.
+  'alavert-b160-citrus-60': catalogShot('alavert-b160-citrus-60.jpg'),
+  // Alavert D-12, 12 tablets. NDC 80070-100-12. Not the 24-count.
+  'alavert-b160-d12-12': catalogShot('alavert-b160-d12-12.jpg'),
   // Vitamins night run 2026-10-08 1:45 AM PT batch 1.
   // nutricost.com pack fronts. Per-id only. Barcode pins the variant.
   // Vitamin B12 5,000 mcg, 120 capsules. Barcode 810014678504.
@@ -14707,6 +14747,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-13 5:30 AM PT batch 2.
   // Pre-X 30 must not inherit the blue raspberry 60.
   'nutricost-pre-x-workout-complex-powder-30-servings-4',
+  // Allergies night run 2026-10-14 3:00 AM PT.
+  // Dye-free 8 fl oz must not inherit the 4 fl oz bubble gum carton.
+  'benadryl-b156-dyefree-8oz',
 ]);
 
 export function previewOverlayImage(
@@ -30416,5 +30459,50 @@ assertExactCarton(
   });
   if (!bcaa60green?.url.startsWith('data:image/svg') || bcaa60green.verifiedSku) {
     throw new Error('BCAA 60 must not inherit the green apple 120');
+  }
+  const dyeFree8 = previewOverlayImage({
+    id: 'benadryl-b156-dyefree-8oz',
+    formulaId: 'childrens-benadryl-dyefree-liquid',
+    brand: 'Benadryl',
+  });
+  if (
+    !dyeFree8?.verifiedSku
+    || !dyeFree8.url.endsWith('/benadryl-b156-dyefree-8oz.jpg')
+  ) {
+    throw new Error('Dye-free 8 fl oz must not inherit the 4 fl oz carton');
+  }
+  const dyeFree4 = previewOverlayImage({
+    id: 'benadryl-b156-dyefree-4oz',
+    formulaId: 'childrens-benadryl-dyefree-liquid',
+    brand: 'Benadryl',
+  });
+  if (!dyeFree4?.verifiedSku || !dyeFree4.url.endsWith('/childrens-benadryl-dyefree-liquid.jpg')) {
+    throw new Error('Dye-free 4 fl oz keeps the matching 4 fl oz carton');
+  }
+}
+
+{
+  const allergyOwn: [string, string][] = [
+    ['pataday-b155-extra-25ml', 'pataday-b155-extra-25ml.jpg'],
+    ['pataday-b155-once-25ml', 'pataday-b155-once-25ml.jpg'],
+    ['pataday-b155-twice-5ml', 'pataday-b155-twice-5ml.jpg'],
+    ['benadryl-b156-ultratabs-8', 'benadryl-b156-ultratabs-8.jpg'],
+    ['benadryl-b156-ultratabs-24', 'benadryl-b156-ultratabs-24.jpg'],
+    ['benadryl-b156-ultratabs-48', 'benadryl-b156-ultratabs-48.jpg'],
+    ['benadryl-b156-ultratabs-100', 'benadryl-b156-ultratabs-100.jpg'],
+    ['benadryl-b156-extra-24', 'benadryl-b156-extra-24.jpg'],
+    ['benadryl-b156-congestion-24', 'benadryl-b156-congestion-24.jpg'],
+    ['benadryl-b157-adult-4oz', 'benadryl-b157-adult-4oz.jpg'],
+    ['benadryl-b157-dyed-4oz', 'benadryl-b157-dyed-4oz.jpg'],
+    ['benadryl-b157-dyed-8oz', 'benadryl-b157-dyed-8oz.jpg'],
+    ['benadryl-b157-ultratabs-12', 'benadryl-b157-ultratabs-12.jpg'],
+    ['benadryl-b158-chewables-20', 'benadryl-b158-chewables-20.jpg'],
+    ['alavert-b159-citrus-20', 'alavert-b159-citrus-20.jpg'],
+    ['alavert-b159-mint-60', 'alavert-b159-mint-60.jpg'],
+    ['alavert-b160-citrus-60', 'alavert-b160-citrus-60.jpg'],
+    ['alavert-b160-d12-12', 'alavert-b160-d12-12.jpg'],
+  ];
+  for (const [id, file] of allergyOwn) {
+    assertExactCarton(id, 'Benadryl', file);
   }
 }
