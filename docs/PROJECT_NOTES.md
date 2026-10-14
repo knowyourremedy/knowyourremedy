@@ -9,7 +9,7 @@ Done
 - Zyrtec website loop closed. 40-count Avoid, UPC 300450204462, PR #452. 3-count Avoid, UPC 300450204431, and bubble-gum 4 fl oz Avoid, UPC 300450205049, PR #453. 75-count Avoid on zyrtec-allergy-tablets-tio2, UPC 300450204752, row zyrtec-b143-10mg-75ct, PR #467 / ead6dea. Do not reopen. Bot run #334 failed in the chat log. The merge landed.
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
-- Batch close: highest rating-draft on MAIN is batch160-kyr6b-alavert.ts. Do not edit batch70–143. Next file is batch161.
+- Highest rating-draft is batch163. Next file is batch164.
 
 Not a hunt unless Brandon says go
 - Children's Zyrtec Dye-Free Chewable 2.5 mg 24-count is written. Caution is not locked. Do not copy the grape panel onto it.
@@ -27,6 +27,8 @@ Catalog job
 - Xyzal catalog pass is closed except the named holds. Do not write the 10 oz liquids, the 5ct, or the 45ct. Not a hunt.
 - Batch152 / 85a3518 wrote Nasacort 30, 60, and 120, and Flonase Sensimist 60, 120, and children's 60. All Usable. Dextrose anhydrous maps to dextrose, Caution. Hydrochloric acid is Caution as a finished-spray pH adjuster. Kits and the discontinued Nasacort 3x120 stay off. Still-open counts stay off Brandon's hunt list. Do not reopen them.
 - Flonase, Nasacort, Astepro, and Flonase Sensimist US OTC catalog pass is closed. PR #531 / 416742f wrote Flonase 72 and 144 on flonase-b151-propionate, and Astepro 60, 120, and 200. All Usable. PR #532 / 85a3518 wrote Nasacort 30, 60, and 120, and Sensimist 60, 120, and children's 60. All Usable. PR #551 / 7d6a42f removed the no-count flonase-sensimist and nasacort-allergy-24hr rows. Those stay off. Not a hunt. Dextrose anhydrous maps to dextrose, Caution. Hydrochloric acid is Caution as a finished-spray pH adjuster. Kits and discontinued packs stay off. Still-open counts stay off Brandon's hunt list. US only. No Canada. No EU. No store-brand.
+- Pepcid, Prilosec, and Tums US OTC pass. Do not reopen. PR #586 / c0c8e65 wrote batch161. PR #589 / 43e4b42 locked acetyl tributyl citrate, color added (vegetable juice, fruit juice), and sodium polyphosphate as Caution. PR #590 / ca2ab29 wrote the held packs. PR #591 / 42ee935 wrote Ultra Assorted Berries 265, Extra Strength Assorted Fruit 70, and Extra Strength Assorted Fruit 330.
+- Extra Strength 70 and 330 reuse the Ultra Assorted Fruit formula because the inactive line matched. Extra Strength 96 spells the dyes as aluminum lakes. Do not merge that row into the fruit formula.
 - Pataday, Zaditor, Alaway, Rhinocort, and Nasonex US OTC catalog pass is closed. PR #556 / c0e748f wrote Zaditor 5 mL, Alaway 10 mL, Rhinocort 120, and Nasonex adult 60, adult 120, children's 30, and children's 60. All Usable. PR #568 / c47864c wrote Pataday Extra Strength 2.5 mL, Once Daily 2.5 mL, and Twice Daily 5 mL. All Usable. Boric acid is Caution for the eye-drop form. Hydroxypropyl-gamma-cyclodextrin maps to gamma-cyclodextrin, Cleared. Nasonex adult 30 and adult 144 do not qualify. Pataday 0.5 mL singles do not qualify. Kits and discontinued counts stay off. Still-open counts stay off Brandon's hunt list. US only. No Canada. No EU. No store-brand.
 
 Process lock
@@ -48,6 +50,14 @@ Removed, not stashed
 - flonase-sensimist removed. No count. Same codes as the Sensimist 60 and 120 rows. Not a hunt.
 - nasacort-allergy-24hr removed. No count. Same codes as the Nasacort 60 and 120 rows. Not a hunt.
 - nasacort-allergy-24hr-kids removed. No Children's Nasacort product. The regular Nasacort label covers ages 2 to 12 with an adult. Children's Nasacort 60 does not qualify. Not a hunt.
+- Tums Regular Strength. Brand said discontinued.
+- Tums Ultra Tropical 160. Not sold.
+- Tums Ultra 86. Bonus pack of the Peppermint 72. Not its own row.
+- Tums Ultra 250. Not sold.
+- Tums Extra Strength 48. Not sold.
+- Alavert Fresh Mint 18. No such box. The 18 is Citrus Burst only.
+- Chlor-Trimeton 24. Name-brand not on a regular shelf.
+- Eye drops stay stashed. No Eye Drops tab in this pass. Visine, Clear Eyes, Systane, and Refresh stay off until the end or after launch.
 
 Still open, not removed
 - Icy Hot Performance dry spray, cream, and no-mess cream are back (PR #473 / 97ad7ed). Still open. Pages that opened had no Performance card. Walmart, CVS, Amazon, and Kroger were blocked. Do not remove them on a missing brand-lineup check.
