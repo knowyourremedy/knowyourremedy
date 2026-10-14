@@ -156,3 +156,4 @@ export { BATCH156_KYR6B_BENADRYL } from './batch156-kyr6b-benadryl';
 export { BATCH157_KYR6B_BENADRYL } from './batch157-kyr6b-benadryl';
 export { BATCH158_KYR6B_CHEWABLES } from './batch158-kyr6b-chewables';
 export { BATCH159_KYR6B_ALAVERT } from './batch159-kyr6b-alavert';
+export { BATCH160_KYR6B_ALAVERT } from './batch160-kyr6b-alavert';
