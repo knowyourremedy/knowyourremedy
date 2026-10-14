@@ -163,3 +163,4 @@ export { BATCH163_KYR6C_TUMS_COUNTS } from './batch163-kyr6c-tums-counts';
 export { BATCH164_KYR6C_NEXIUM_PREVACID_ZANTAC } from './batch164-kyr6c-nexium-prevacid-zantac';
 export { BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE } from './batch165-kyr6c-zarbees-beekeepers-little';
 export { BATCH166_KYR6C_HELD_SLEEP_GRIPE } from './batch166-kyr6c-held-sleep-gripe';
+export { BATCH167_KYR6C_COUGH_NIGHT_FEVER } from './batch167-kyr6c-cough-night-fever';

@@ -676,6 +676,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Dimethicone is a silicone used as a skin protectant or coating.', level);
   }
 
+  if (/grape seed extract/.test(n) && !/\boil\b/.test(n)) {
+    return close('Grape seed extract is a named seed extract used as an inactive. It is not grape seed oil.', level);
+  }
+
   if (/^aloe\b|aloe barbadensis|aloe vera/.test(n)) {
     return close('Aloe on this label is a plant juice or gel. The topical base and the other-ingredient juice are graded from how the label uses it.', level);
   }
