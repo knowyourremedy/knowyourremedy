@@ -28,9 +28,10 @@
 //   organic beet root + organic rice bran extract Cleared (Sept 14 locks);
 //   organic flavors Cleared; organic maltodextrin Limited 1 pt matching
 //   locked Genexa chew siblings. Recalculated: still Caution. minAge 2.
-// - KD7 Little Remedies Gas Relief Drops = Caution. setid 874d3f1d.
-//   Flavor + benzoic acid + sorbitol is Limited-only. Infant / 0+ as
-//   labeled. Limited-only never Avoid.
+// - KD7 Little Remedies Gas Relief Drops = Caution. Live brand panel.
+//   Sucralose and oral propylene glycol are Moderate. Named strawberry
+//   flavor and sodium benzoate are Caution. No High. Infant / 0+ as
+//   labeled. Barcode stays 756184120415.
 // - KD8 Culturelle Kids probiotic gummies coconut-only = Caution. Natural
 //   flavors + fractionated coconut oil. Coconut oil alone is NOT the gummy
 //   seed-oil High rule. Separate from a palm / veg-oil Avoid twin (none
@@ -131,6 +132,12 @@ const METH = {
   benzyl:
     'Methodology §5 Caution (benzyl alcohol — general oral OTC; standalone Caution, not additive-scored, not Avoid on this population)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
+  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
+  flavorNamed: 'Methodology §5 Caution (named flavor). Exact natural flavors stays Limited.',
+  cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
+  mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
+  citric: 'Methodology §5 Cleared (citric acid).',
+  water: 'Methodology §5 Cleared (water / purified water).',
   organicFlavor: 'Methodology §5 Cleared (organic flavors / organic colors)',
   beet: 'Methodology §5 Cleared-class (organic beet root — whole-food; Sept 14 lock)',
   riceBran:
@@ -187,7 +194,6 @@ const SET_GASALIA_PELL = 'de99ffbf-cb1d-80bf-e053-2a95a90ac99d';
 const SET_NAUSEACALM = '1e8e0388-c5c8-d4da-e063-6394a90ab294';
 const SET_MOTIONCALM = '1ea4de81-3ec0-e9e4-e063-6294a90a7ac9';
 const SET_GENEXA_TUMMY = '4f9db9dc-6b78-d123-e063-6294a90ae38d';
-const SET_LITTLE_REMEDIES = '874d3f1d-1e4a-49ab-8285-4d6bf2601d5e';
 const SET_PEPTO_KIDS = '673c45dc-84fd-5b45-e053-2a91aa0adea8';
 const SET_MYLICON_CHEW = '432d5b4c-a69b-45f9-b7f0-216726a3eead';
 const SET_MYLICON_AIO = '0952eba8-6de2-4a77-956d-339fab437472';
@@ -205,6 +211,8 @@ const PEDIALYTE_POPS_CITE =
   'Abbott Nutrition US Pedialyte Freezer Pops (abbottnutrition.com) — sucralose + acesulfame potassium + flavor + potassium sorbate + sodium benzoate. Variety-pack retailer sleeves also list Red 40 / Blue 1 / Yellow 6.';
 const CULTURELLE_GUMMY_CITE =
   'Culturelle Kids Probiotic + Veggie Fiber / Daily Probiotic + Prebiotic gummies (culturelle.com + CVS other-ingredients) — natural flavors + fractionated coconut oil (containing carnauba wax)';
+const GAS_DROPS_PANEL =
+  'Little Remedies Gas Relief Drops brand page (https://www.littleremedies.com/remedies/stomach-gas-remedies/gas-relief-drops)';
 const CULTURELLE_PKT_CITE =
   'Culturelle Kids + Baby HCP sheet (CKEP11565) — Kids Purely Probiotics packets other ingredients include sucralose + natural flavor (xylitol, mannitol, HPC, stearic acid, magnesium stearate, citric acid, vegetable juice color, malic acid)';
 
@@ -569,25 +577,37 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(
-        'Natural strawberry flavor',
-        'limited',
-        dailymed(SET_LITTLE_REMEDIES, METH.flavors),
+        'Carboxymethyl cellulose sodium',
+        'cleared',
+        labelCite(GAS_DROPS_PANEL, METH.cmc),
+      ),
+      flag('Citric acid', 'cleared', labelCite(GAS_DROPS_PANEL, METH.citric)),
+      flag(
+        'Microcrystalline cellulose',
+        'cleared',
+        labelCite(GAS_DROPS_PANEL, METH.mcc),
       ),
       flag(
-        'Benzoic acid',
+        'Natural strawberry flavor',
         'limited',
-        dailymed(SET_LITTLE_REMEDIES, METH.benzoic),
+        labelCite(GAS_DROPS_PANEL, METH.flavorNamed),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_LITTLE_REMEDIES, METH.sorbitol)),
-      flag('Xanthan gum', 'cleared', dailymed(SET_LITTLE_REMEDIES, METH.gums)),
-      cleared(SET_LITTLE_REMEDIES, 'Purified water'),
+      flag('Propylene glycol', 'moderate', labelCite(GAS_DROPS_PANEL, METH.pg)),
+      flag('Purified water', 'cleared', labelCite(GAS_DROPS_PANEL, METH.water)),
+      flag(
+        'Sodium benzoate',
+        'limited',
+        labelCite(GAS_DROPS_PANEL, METH.benzoate),
+      ),
+      flag('Sucralose', 'moderate', labelCite(GAS_DROPS_PANEL, METH.sucralose)),
+      flag('Xanthan gum', 'cleared', labelCite(GAS_DROPS_PANEL, METH.gums)),
     ],
     verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
     sourcesGeneral: [
-      `DailyMed setid ${SET_LITTLE_REMEDIES} (draft, not verified)`,
+      'Little Remedies Gas Relief Drops brand page: simethicone 20 mg per 0.3 mL. Inactive ingredients: carboxymethyl cellulose sodium, citric acid, microcrystalline cellulose, natural strawberry flavor, propylene glycol, purified water, sodium benzoate, sucralose, xanthan gum. Newborns and infants under 2 years, and children 2 and over. Barcode 756184120415 was already on this row and is the Natural Berry 1 fl oz. UPC 756184000137 is a different 1 fl oz listing and was not attached.',
     ],
   },
   {
