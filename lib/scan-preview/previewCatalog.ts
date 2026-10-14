@@ -14450,6 +14450,107 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-b79-luteolin-rutin-120-capsules': catalogShot(
     'nutricost-b79-luteolin-rutin-120-capsules.jpg',
   ),
+  // Vitamins night run 2026-10-14 6:45 AM PT batch 2.
+  // L-isoleucine, 240 capsules. Barcode 702669934411.
+  // Front reads 240 capsules.
+  'nutricost-b79-l-isoleucine-240-capsules': catalogShot(
+    'nutricost-b79-l-isoleucine-240-capsules.jpg',
+  ),
+  // Ubiquinol, 100 mg, 120 softgels. Barcode 810014678931.
+  // Front reads 120 softgels. Not the 240.
+  'nutricost-b80-ubiquinol-120-softgels': catalogShot(
+    'nutricost-b80-ubiquinol-120-softgels.jpg',
+  ),
+  // CoQ10, 200 mg, 120 softgels. Barcode 857077008275.
+  // Front reads 200 mg and 120 softgels. Not the 100 mg.
+  'nutricost-b80-coq10-200mg-120-softgels': catalogShot(
+    'nutricost-b80-coq10-200mg-120-softgels.jpg',
+  ),
+  // Organic cordyceps, 180 capsules. Barcode 810014670812.
+  // Front reads 180 capsules. Not the 90.
+  'nutricost-b80-cordyceps-180-capsules': catalogShot(
+    'nutricost-b80-cordyceps-180-capsules.jpg',
+  ),
+  // Ubiquinol, 100 mg, 240 softgels. Barcode 810014679044.
+  // Front reads 240 softgels. Not the 120.
+  'nutricost-b81-ubiquinol-240-softgels': catalogShot(
+    'nutricost-b81-ubiquinol-240-softgels.jpg',
+  ),
+  // Vegan vitamin E, 100 softgels. Barcode 810157852564.
+  // Front reads 100 softgels.
+  'naturewise-b82-vitamin-e-d-alpha': catalogShot(
+    'naturewise-b82-vitamin-e-d-alpha.jpg',
+  ),
+  // Vitamin D3 + K2 with magnesium, 5000 IU, 90 softgels. Barcode 810157852373.
+  // Front reads 90 softgels.
+  'naturewise-b82-vitamin-d3-k2-magnesium': catalogShot(
+    'naturewise-b82-vitamin-d3-k2-magnesium.jpg',
+  ),
+  // Vitamin D3 tablets, 2000 IU, 220 count. Barcode 810157851734.
+  // Front reads 220 tablets.
+  'naturewise-b82-vitamin-d3-tablets': catalogShot(
+    'naturewise-b82-vitamin-d3-tablets.jpg',
+  ),
+  // Vitamin D3, 1000 IU, 90 softgels. Barcode 850053810435.
+  // Front reads 90 softgels. Not the 30.
+  'naturewise-b82-vitamin-d3-1000-iu-90-count': catalogShot(
+    'naturewise-b82-vitamin-d3-1000-iu-90-count.jpg',
+  ),
+  // Oregon grape root, 400 mg, 100 capsules. Barcode 076280014150.
+  // Front reads 100 vegcaps.
+  'solaray-b117-076280014150': catalogShot(
+    'solaray-b117-076280014150.jpg',
+  ),
+  // Horsetail aerial, 880 mg, 100 capsules. Barcode 076280013504.
+  // Front reads 100 capsules.
+  'solaray-b117-076280013504': catalogShot(
+    'solaray-b117-076280013504.jpg',
+  ),
+  // PABA timed-release, 700 mg, 100 capsules. Barcode 076280043693.
+  // Front reads 100 capsules.
+  'solaray-b117-076280043693': catalogShot(
+    'solaray-b117-076280043693.jpg',
+  ),
+  // Echinacea purpurea root, 440 mg, 100 capsules. Barcode 076280012422.
+  // Front reads 100 capsules.
+  'solaray-b117-076280012422': catalogShot(
+    'solaray-b117-076280012422.jpg',
+  ),
+  // DAO enzyme, 90 capsules. Barcode 076280397260.
+  // Front reads 90 vegcaps. Not the 30.
+  'solaray-b117-076280397260': catalogShot(
+    'solaray-b117-076280397260.jpg',
+  ),
+  // Korean ginseng root, 550 mg, 50 capsules. Barcode 076280013122.
+  // Front reads 50 capsules. Not the 100.
+  'solaray-b117-076280013122': catalogShot(
+    'solaray-b117-076280013122.jpg',
+  ),
+  // NAC, 600 mg, 60 capsules. Barcode 076280572322.
+  // Front reads 60 vegcaps.
+  'solaray-b117-076280572322': catalogShot(
+    'solaray-b117-076280572322.jpg',
+  ),
+  // CircuLegs, 120 capsules. Barcode 076280366600.
+  // Front reads 120 vegcaps. Not the 60.
+  'solaray-b117-076280366600': catalogShot(
+    'solaray-b117-076280366600.jpg',
+  ),
+  // L-arginine, 500 mg, 100 capsules. Barcode 076280048988.
+  // Front reads 100 vegcaps.
+  'solaray-b117-076280048988': catalogShot(
+    'solaray-b117-076280048988.jpg',
+  ),
+  // Vitamin C with rose hips and acerola, 1000 mg, 100 tablets. Barcode 076280044539.
+  // Front reads 100 tablets. Not the 250.
+  'solaray-b117-076280044539': catalogShot(
+    'solaray-b117-076280044539.jpg',
+  ),
+  // NMN, 60 capsules. Barcode 076280398571.
+  // Front reads 60 vegcaps.
+  'solaray-b117-076280398571': catalogShot(
+    'solaray-b117-076280398571.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -31305,5 +31406,56 @@ assertBrandMark(
     || !turmeric90.url.endsWith('/nutricost-b79-turmeric-90-capsules.jpg')
   ) {
     throw new Error('Turmeric 90 must not inherit the 120');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-14 6:45 AM PT batch 2.
+  const batch2Cartons: [string, string][] = [
+    ['nutricost-b79-l-isoleucine-240-capsules', 'nutricost-b79-l-isoleucine-240-capsules.jpg'],
+    ['nutricost-b80-ubiquinol-120-softgels', 'nutricost-b80-ubiquinol-120-softgels.jpg'],
+    ['nutricost-b80-coq10-200mg-120-softgels', 'nutricost-b80-coq10-200mg-120-softgels.jpg'],
+    ['nutricost-b80-cordyceps-180-capsules', 'nutricost-b80-cordyceps-180-capsules.jpg'],
+    ['nutricost-b81-ubiquinol-240-softgels', 'nutricost-b81-ubiquinol-240-softgels.jpg'],
+    ['naturewise-b82-vitamin-e-d-alpha', 'naturewise-b82-vitamin-e-d-alpha.jpg'],
+    ['naturewise-b82-vitamin-d3-k2-magnesium', 'naturewise-b82-vitamin-d3-k2-magnesium.jpg'],
+    ['naturewise-b82-vitamin-d3-tablets', 'naturewise-b82-vitamin-d3-tablets.jpg'],
+    ['naturewise-b82-vitamin-d3-1000-iu-90-count', 'naturewise-b82-vitamin-d3-1000-iu-90-count.jpg'],
+    ['solaray-b117-076280014150', 'solaray-b117-076280014150.jpg'],
+    ['solaray-b117-076280013504', 'solaray-b117-076280013504.jpg'],
+    ['solaray-b117-076280043693', 'solaray-b117-076280043693.jpg'],
+    ['solaray-b117-076280012422', 'solaray-b117-076280012422.jpg'],
+    ['solaray-b117-076280397260', 'solaray-b117-076280397260.jpg'],
+    ['solaray-b117-076280013122', 'solaray-b117-076280013122.jpg'],
+    ['solaray-b117-076280572322', 'solaray-b117-076280572322.jpg'],
+    ['solaray-b117-076280366600', 'solaray-b117-076280366600.jpg'],
+    ['solaray-b117-076280048988', 'solaray-b117-076280048988.jpg'],
+    ['solaray-b117-076280044539', 'solaray-b117-076280044539.jpg'],
+    ['solaray-b117-076280398571', 'solaray-b117-076280398571.jpg'],
+  ];
+  for (const [id, file] of batch2Cartons) {
+    assertExactCarton(id, id.startsWith('naturewise') ? 'NatureWise' : id.startsWith('solaray') ? 'Solaray' : 'Nutricost', file);
+  }
+  const d390 = previewOverlayImage({
+    id: 'naturewise-b82-vitamin-d3-1000-iu-90-count',
+    formulaId: 'naturewise-b82-vitamin-d3',
+    brand: 'NatureWise',
+  });
+  if (
+    !d390?.verifiedSku
+    || !d390.url.endsWith('/naturewise-b82-vitamin-d3-1000-iu-90-count.jpg')
+  ) {
+    throw new Error('Vitamin D3 90 must not inherit the shared formula carton');
+  }
+  const dao90 = previewOverlayImage({
+    id: 'solaray-b117-076280397260',
+    formulaId: 'solaray-b117-076280363180',
+    brand: 'Solaray',
+  });
+  if (
+    !dao90?.verifiedSku
+    || !dao90.url.endsWith('/solaray-b117-076280397260.jpg')
+  ) {
+    throw new Error('DAO 90 must not inherit the 30');
   }
 }
