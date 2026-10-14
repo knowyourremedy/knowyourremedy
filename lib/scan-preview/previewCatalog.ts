@@ -27192,43 +27192,49 @@ export type IngredientWhy = {
 
 export const PENDING_DAILYMED_REVIEW = 'Pending DailyMed review';
 
-function isIngredientReviewed(ingredient: IngredientFlag): boolean {
-  const source = (ingredient.source ?? '').trim();
-  if (!source) return false;
-  const lower = source.toLowerCase();
-  if (lower.includes('not in methodology') || lower.includes('ungraded')) return false;
-  return true;
-}
-
-
 function normalizeName(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
-function sourceDisplay(source?: string): Pick<IngredientWhy, 'sourceName' | 'sourceHref'> {
-  if (!source) return { sourceName: null, sourceHref: null };
-  const sourceHref = dailyMedHref(source);
-  if (sourceHref) return { sourceName: 'DailyMed', sourceHref };
-  const first = source.split(';').map((part) => part.trim()).find(Boolean) ?? '';
-  if (!first || /^methodology\b/i.test(first) || /§\s*5/.test(first)) {
-    return { sourceName: null, sourceHref: null };
-  }
-  return { sourceName: first, sourceHref: null };
+function panelSource(source: string): Pick<IngredientWhy, 'sourceName' | 'sourceHref'> | null {
+  if (/walmart\.com/i.test(source)) return { sourceName: 'Walmart', sourceHref: null };
+  if (/target\.com/i.test(source)) return { sourceName: 'Target', sourceHref: null };
+  if (/amazon\.com/i.test(source)) return { sourceName: 'Amazon', sourceHref: null };
+  const dailyMed = dailyMedHref(source);
+  if (dailyMed) return { sourceName: 'DailyMed', sourceHref: dailyMed };
+  const url = source.match(/https?:\/\/(?:www\.)?([^/\s)]+)/i);
+  if (!url) return null;
+  const host = url[1].replace(/^www\./, '');
+  const label = host.split('.')[0]?.replace(/-/g, ' ') ?? host;
+  const sourceName = label.charAt(0).toUpperCase() + label.slice(1);
+  return { sourceName, sourceHref: null };
 }
 
+function sourceForWhy(ingredient: IngredientFlag, body: string): Pick<IngredientWhy, 'sourceName' | 'sourceHref'> {
+  const source = ingredient.source ?? '';
+  if (/World Health Organization/.test(body)) {
+    return { sourceName: "World Health Organization", sourceHref: null };
+  }
+  if (/European Union/.test(body)) return { sourceName: 'European Union', sourceHref: null };
+  if (/National Toxicology Program/.test(body)) {
+    return { sourceName: 'U.S. National Toxicology Program', sourceHref: null };
+  }
+  if (/Proposition 65/.test(body)) return { sourceName: 'California Proposition 65', sourceHref: null };
+  if (/Food and Drug Administration/.test(body)) {
+    return { sourceName: 'U.S. Food and Drug Administration', sourceHref: null };
+  }
+  if (/ingredient rules|ingredient lock/i.test(body)) {
+    return { sourceName: 'Methodology', sourceHref: null };
+  }
+  const labelFact = /the label|this label|does not name|does not list/i.test(body);
+  if (labelFact) return panelSource(source) ?? { sourceName: null, sourceHref: null };
+  if (/methodology/i.test(source)) return { sourceName: 'Methodology', sourceHref: null };
+  return panelSource(source) ?? { sourceName: null, sourceHref: null };
+}
 
 export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
-  const display = sourceDisplay(ingredient.source);
-  const plain = plainIngredientWhy(ingredient);
-  if (plain) return { body: plain, ...display };
-  if (isIngredientReviewed(ingredient)) {
-    // Reviewed, but methodology states no shopper fact we can repeat. Do not invent one.
-    return { body: '', ...display };
-  }
-  return {
-    body: PENDING_DAILYMED_REVIEW,
-    ...display,
-  };
+  const body = plainIngredientWhy(ingredient) ?? '';
+  return { body, ...sourceForWhy(ingredient, body) };
 }
 
 {
