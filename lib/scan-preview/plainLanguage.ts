@@ -794,6 +794,22 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Triethanolamine is a pH adjuster. It is not the salicylate drug.', level);
   }
 
+  if (/poly epsilon lysine|polyepsilon lysine/.test(n)) {
+    return close('Poly-epsilon lysine is a fermentation preservative. Harm studies on it are clean. It is not the amino acid lysine.', level);
+  }
+
+  if (/\bnisin\b/.test(n)) {
+    return close('Nisin is a food preservative. Intake stays under the European food limit. It is not a Not clean flag.', level);
+  }
+
+  if (/eucalyptus globulus/.test(n) && !/\boil\b/.test(n)) {
+    return close('This is a eucalyptus leaf extract. It is not the parked eucalyptus oil.', level);
+  }
+
+  if (/origanum vulgare/.test(n) && !/\boil\b/.test(n)) {
+    return close('This is an oregano leaf extract. It is not oregano oil.', level);
+  }
+
   if (/arnica|ilex paraguariensis|camellia sinensis|calendula|echinacea|boswellia|eucalyptus oil|jojoba oil|clove oil|rosemary oil/.test(n)) {
     return close('This is a plant extract used as a scent or an inactive in a cream. A named plant used as a cream base oil is a different line.', level);
   }

@@ -167,6 +167,7 @@ import {
   BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE,
   BATCH166_KYR6C_HELD_SLEEP_GRIPE,
   BATCH167_KYR6C_COUGH_NIGHT_FEVER,
+  BATCH168_KYR6C_NASAL_MAX,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -361,6 +362,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH165_KYR6C_ZARBEES_BEEKEEPERS_LITTLE,
   ...BATCH166_KYR6C_HELD_SLEEP_GRIPE,
   ...BATCH167_KYR6C_COUGH_NIGHT_FEVER,
+  ...BATCH168_KYR6C_NASAL_MAX,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
