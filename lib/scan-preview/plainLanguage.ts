@@ -377,6 +377,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This flavor names ginger. Exact natural flavors is a different line.', level);
   }
 
+  if (n === 'natural strawberry flavor') {
+    return close('This flavor names strawberry. Exact natural flavors is a different line.', level);
+  }
+
   if (/\bflavou?rs?\b/.test(n)) {
     return close(
       'This is a flavor mixture, and the label does not name every part. The flag is for that missing detail, not a named hazard.',
