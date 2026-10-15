@@ -515,6 +515,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is seawater used as the saline in a nasal spray. It is not evaporated sea water.', level);
   }
 
+  if (/modified corn starch|modified food starch|modified starch/.test(n)) {
+    return close('This is a modified starch. Plain corn starch and potato starch are a different line.', level);
+  }
+
   if (/corn starch|potato starch|pregelatinized starch|tapioca starch|^starch$/.test(n)) {
     return close('This is a simple starch filler. Reviews have not found a safety concern for this form.', level);
   }
@@ -1173,6 +1177,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/isobutane|isopentane|\bpropane\b/.test(n)) {
     return close('This is a propellant in a spray. It is not an oil you swallow.', level);
+  }
+
+  if (/soy protein isolate/.test(n)) {
+    return close('Soy protein isolate names the soy protein. It is not bare soy, and it is not pea protein isolate.', level);
   }
 
   if (n === 'soy' || n === 'bare soy') {
