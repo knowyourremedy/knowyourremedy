@@ -14888,6 +14888,41 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'zarbees-b167-immune-day-4': catalogShot(
     'zarbees-b167-immune-day-4.jpg',
   ),
+  // Allergies night run 2026-10-15 6:45 AM PT batch 1.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Nasal Spray Max, 1 fl oz. Barcode 834706000336.
+  // beekeepersnaturals.com front for that barcode.
+  // Front reads NASAL SPRAY, MAX, PROPOLIS, OREGANO +
+  // EUCALYPTUS, and 1 FL OZ (30 mL). Not the original
+  // nasal spray. Not the 2-pack.
+  'beekeepers-b168-nasal-max': catalogShot(
+    'beekeepers-b168-nasal-max.jpg',
+  ),
+  // Saline Daily Care, 4.5 oz. Barcode 041100605276.
+  // Target pack shot for that code. Front reads DAILY CARE
+  // and 4.5 FL OZ. Not a Saline Burst bottle.
+  'afrin-b171-saline-daily-care-45': catalogShot(
+    'afrin-b171-saline-daily-care-45.jpg',
+  ),
+  // Saline Burst Extra Strength, 5 oz. Barcode 041100603845.
+  // Target pack shot for that code. Front reads EXTRA STRENGTH
+  // and 5.0 FL OZ. Not the moisturizing bottle.
+  'afrin-b172-saline-burst-extra-5': catalogShot(
+    'afrin-b172-saline-burst-extra-5.jpg',
+  ),
+  // Saline Burst Moisturizing, 5 oz. Barcode 041100603852.
+  // Walgreens pack shot for that code. Front reads MOISTURIZING
+  // and 5.0 FL OZ. Not the extra-strength bottle. Not the
+  // children's bottle.
+  'afrin-b172-saline-burst-moisturizing-5': catalogShot(
+    'afrin-b172-saline-burst-moisturizing-5.jpg',
+  ),
+  // Children's Saline Moisturizing, 5 oz. Barcode 041100603869.
+  // Target pack shot for that code. Front reads CHILDREN'S,
+  // MOISTURIZING, and 5.0 FL OZ. Not the adult moisturizing bottle.
+  'afrin-b173-childrens-saline-5': catalogShot(
+    'afrin-b173-childrens-saline-5.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -32045,5 +32080,61 @@ assertBrandMark(
   });
   if (immuneDay.url === mucusDay?.url) {
     throw new Error('immune day 4 fl oz must not share the mucus 8 fl oz carton');
+  }
+}
+
+{
+  // Allergies night run 2026-10-15 6:45 AM PT batch 1.
+  // Last letter rows. Exact package photos. Not a sibling face.
+  const allergyCartons: [string, string, string, string][] = [
+    ['beekeepers-b168-nasal-max', "Beekeeper's Naturals", 'beekeepers-b168-nasal-max', 'beekeepers-b168-nasal-max.jpg'],
+    ['afrin-b171-saline-daily-care-45', 'Afrin', 'afrin-b171-saline-daily-care', 'afrin-b171-saline-daily-care-45.jpg'],
+    ['afrin-b172-saline-burst-extra-5', 'Afrin', 'afrin-b172-seawater-22', 'afrin-b172-saline-burst-extra-5.jpg'],
+    ['afrin-b172-saline-burst-moisturizing-5', 'Afrin', 'afrin-b172-seawater-09', 'afrin-b172-saline-burst-moisturizing-5.jpg'],
+    ['afrin-b173-childrens-saline-5', 'Afrin', 'afrin-b172-seawater-09', 'afrin-b173-childrens-saline-5.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of allergyCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate allergy carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const regularNasal = previewOverlayImage({
+    id: 'beekeepers-nasal-spray',
+    formulaId: 'beekeepers-nasal-spray',
+    brand: "Beekeeper's Naturals",
+  });
+  const nasalMax = previewOverlayImage({
+    id: 'beekeepers-b168-nasal-max',
+    formulaId: 'beekeepers-b168-nasal-max',
+    brand: "Beekeeper's Naturals",
+  });
+  if (regularNasal?.url === nasalMax?.url) {
+    throw new Error('Nasal Spray Max must not share the original nasal spray');
+  }
+  const moist = previewOverlayImage({
+    id: 'afrin-b172-saline-burst-moisturizing-5',
+    formulaId: 'afrin-b172-seawater-09',
+    brand: 'Afrin',
+  });
+  const kidsSaline = previewOverlayImage({
+    id: 'afrin-b173-childrens-saline-5',
+    formulaId: 'afrin-b172-seawater-09',
+    brand: 'Afrin',
+  });
+  if (moist?.url === kidsSaline?.url) {
+    throw new Error("Children's saline must not share the adult moisturizing bottle");
+  }
+  const extra = previewOverlayImage({
+    id: 'afrin-b172-saline-burst-extra-5',
+    formulaId: 'afrin-b172-seawater-22',
+    brand: 'Afrin',
+  });
+  if (extra?.url === moist?.url) {
+    throw new Error('Extra Strength saline must not share the moisturizing bottle');
   }
 }
