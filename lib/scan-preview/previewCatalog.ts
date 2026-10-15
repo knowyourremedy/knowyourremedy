@@ -28344,8 +28344,17 @@ function sourceForWhy(ingredient: IngredientFlag, body: string): Pick<Ingredient
     return { sourceName: 'U.S. National Toxicology Program', sourceHref: null };
   }
   if (/Proposition 65/.test(body)) return { sourceName: 'California Proposition 65', sourceHref: null };
+  if (/Cosmetic Ingredient Review/.test(body)) {
+    return { sourceName: 'Cosmetic Ingredient Review', sourceHref: null };
+  }
+  if (/enteric polymer/.test(body)) {
+    return { sourceName: 'Methodology', sourceHref: null };
+  }
   if (/Food and Drug Administration/.test(body)) {
     return { sourceName: 'U.S. Food and Drug Administration', sourceHref: null };
+  }
+  if (/European Food Safety Authority/.test(body)) {
+    return { sourceName: 'European Food Safety Authority', sourceHref: null };
   }
   if (/ingredient rules|ingredient lock/i.test(body)) {
     return { sourceName: 'Methodology', sourceHref: null };
