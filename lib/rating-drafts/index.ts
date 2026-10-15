@@ -180,3 +180,4 @@ export { BATCH180_KYR6C_MIRAGUT } from './batch180-kyr6c-miragut';
 export { BATCH181_KYR6C_ANBESOL } from './batch181-kyr6c-anbesol';
 export { BATCH182_KYR6C_HELD_PACKS } from './batch182-kyr6c-held-packs';
 export { BATCH183_KYR6C_PAW_PATROL } from './batch183-kyr6c-paw-patrol';
+export { BATCH184_KYR6C_PAIN_LINE } from './batch184-kyr6c-pain-line';

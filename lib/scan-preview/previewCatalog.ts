@@ -183,6 +183,7 @@ import {
   BATCH181_KYR6C_ANBESOL,
   BATCH182_KYR6C_HELD_PACKS,
   BATCH183_KYR6C_PAW_PATROL,
+  BATCH184_KYR6C_PAIN_LINE,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -400,6 +401,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH181_KYR6C_ANBESOL,
   ...BATCH182_KYR6C_HELD_PACKS,
   ...BATCH183_KYR6C_PAW_PATROL,
+  ...BATCH184_KYR6C_PAIN_LINE,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
