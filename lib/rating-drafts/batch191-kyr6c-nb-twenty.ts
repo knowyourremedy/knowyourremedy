@@ -365,7 +365,7 @@ export const BATCH191_KYR6C_NB_TWENTY: RatingRecord[] = [
       flag(ACV_GUMMY_PANEL, 'Citric Acid', 'cleared', METH.citric),
       flag(ACV_GUMMY_PANEL, 'Fruit and Vegetable Juice (Color)', 'cleared', METH.juiceColor),
       flag(ACV_GUMMY_PANEL, 'Natural Flavors', 'limited', METH.flavors),
-      flag(ACV_GUMMY_PANEL, 'Natural Palm Leaf Glaze', 'high', METH.palmGummy),
+      flag(ACV_GUMMY_PANEL, 'Natural Palm Leaf Glaze', 'limited', METH.carnauba),
       flag(ACV_GUMMY_PANEL, 'Natural Tocopherols', 'cleared', METH.tocopherol),
       flag(ACV_GUMMY_PANEL, 'Sodium Citrate', 'cleared', METH.citrate),
       flag(ACV_GUMMY_PANEL, 'Sunflower Oil', 'high', METH.sunflowerGummy),
