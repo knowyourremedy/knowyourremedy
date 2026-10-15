@@ -185,3 +185,4 @@ export { BATCH185_KYR6C_ANTIFUNGAL } from './batch185-kyr6c-antifungal';
 export { BATCH186_KYR6C_ANTIFUNGAL_HELD } from './batch186-kyr6c-antifungal-held';
 export { BATCH187_KYR6C_VITAMIN_LINE } from './batch187-kyr6c-vitamin-line';
 export { BATCH188_KYR6C_VITAMIN_HELD } from './batch188-kyr6c-vitamin-held';
+export { BATCH189_KYR6C_NB_SCHIFF_MF } from './batch189-kyr6c-nb-schiff-mf';
