@@ -209,16 +209,6 @@ export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
 export const HYDROGENATED_OIL_LOCK_SOURCE =
   'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, and hydrogenated castor oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026.';
 
-export const TRACE_EDTA_CONDITION_SOURCE =
-  'Methodology §5 Caution (disodium EDTA trace). The source says this stabilizer is safe at 0.001% to 0.25%. This app cannot confirm that percent on the pack, so the grade drops one level. Do not jump to Not clean. Locked Oct 15, 2026.';
-
-export function isTraceEdtaConditionDrop(ingredient: { name: string; riskLevel: RiskLevel }): boolean {
-  if (ingredient.riskLevel !== 'cleared') return false;
-  const n = norm(ingredient.name);
-  if (/tetrasodium/.test(n)) return false;
-  return /\bdisodium edta\b/.test(n);
-}
-
 const HYDROGENATED_OIL_WHY =
   'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
 
@@ -398,7 +388,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/sulisobenzone/.test(n)) {
-    return 'The source says this UV filter is cleared at 5%, and it has no cancer finding at that use level. This app cannot confirm that percent on the pack, so the grade drops one level. That is why it is Usable.';
+    return 'Sulisobenzone is a UV filter. The European Union cleared it at 5%, and it has no cancer finding at that use level. That percent is how it is used. That is why it is Usable.';
   }
 
   if (/glyceryl oleate/.test(n)) {
@@ -969,17 +959,6 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/tocopheryl acetate|tocopherol acetate|vitamin e acetate/.test(n)) {
     return close('Tocopheryl acetate is a vitamin E ester. It is not the same token as mixed tocopherols.', level);
-  }
-
-  if (/\bdisodium edta\b/.test(n) && !/tetrasodium/.test(n)) {
-    const source = ingredient.source ?? '';
-    const traceCall =
-      level === 'cleared' ||
-      /0\.001%|drops one level/.test(source) ||
-      (/trace/i.test(source) && !/not the cleared trace/i.test(source));
-    if (traceCall) {
-      return 'The source says this stabilizer is safe at 0.001% to 0.25%. This app cannot confirm that percent on the pack, so the grade drops one level. That is why it is Usable.';
-    }
   }
 
   if (/edetate|disodium edta|\bedta\b/.test(n)) {
