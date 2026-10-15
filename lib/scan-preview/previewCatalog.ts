@@ -180,7 +180,12 @@ import {
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
-import { contradictionHonestNote, plainIngredientWhy } from '@/lib/scan-preview/plainLanguage';
+import {
+  contradictionHonestNote,
+  FRUIT_VEGETABLE_JUICE_LOCK_SOURCE,
+  isFruitVegetableJuiceLock,
+  plainIngredientWhy,
+} from '@/lib/scan-preview/plainLanguage';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -15429,20 +15434,58 @@ export function previewOverlayImage(
 export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 
 
-// Display fill only. Does not rewrite draft honestNotes or restage verdicts.
-// Keep already-correct shopper copy. Replace label dumps / founder-lock essays.
-// Honest note is off unless this product has a form contradiction.
+// Display fill. Honest note is off unless this product has a form contradiction.
 // Grade restatements and inactive lists stay off, including founder-lock dumps.
+// The Oct 15 juice lock clears that token on screen. A pack moves to a cleaner
+// grade only when no other ingredient still holds it.
 export function displayHonestNote(record: RatingRecord): string {
   return contradictionHonestNote(record) ?? '';
 }
 
+function juiceLockSource(source: string | undefined): string {
+  if (!source) return FRUIT_VEGETABLE_JUICE_LOCK_SOURCE;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source} ${FRUIT_VEGETABLE_JUICE_LOCK_SOURCE}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${FRUIT_VEGETABLE_JUICE_LOCK_SOURCE}` : FRUIT_VEGETABLE_JUICE_LOCK_SOURCE;
+}
+
+function verdictRank(verdict: RatingRecord['verdict']): number {
+  if (verdict === 'avoid') return 2;
+  if (verdict === 'caution') return 1;
+  return 0;
+}
+
+function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    if (!isFruitVegetableJuiceLock(ingredient.name)) return ingredient;
+    if (ingredient.riskLevel !== 'limited') return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'cleared' as const,
+      source: juiceLockSource(ingredient.source),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'limited');
+  let next: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') next = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) next = 'caution';
+  const verdict = verdictRank(next) < verdictRank(record.verdict) ? next : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const honestNote = displayHonestNote(record);
-  const productImage = previewOverlayImage(record);
-  if (honestNote === record.honestNote && !productImage) return record;
+  const locked = applyFruitVegetableJuiceLock(record);
+  const honestNote = displayHonestNote(locked);
+  const productImage = previewOverlayImage(locked);
+  if (locked === record && honestNote === record.honestNote && !productImage) return record;
   return {
-    ...record,
+    ...locked,
     honestNote,
     ...(productImage ? { productImage } : {}),
   };
@@ -27521,6 +27564,25 @@ export function findDraftRecord(id: string): RatingRecord | undefined {
   const absorbineDisplay = displayHonestNote(absorbineProCream);
   if (absorbineDisplay) {
     throw new Error('absorbine-jr-pro-cream honest note stays off; methylparaben is high in every form');
+  }
+  const catsClaw = getPreviewRecord('nutricost-b80-organic-cats-claw-liquid-drops');
+  if (catsClaw.verdict !== 'clean') {
+    throw new Error('cats claw must clear when lemon juice concentrate was the only hold');
+  }
+  const prenatal = getPreviewRecord('solaray-b125-076280047875');
+  if (prenatal.verdict !== 'clean') {
+    throw new Error('solaray prenatal must clear when carrot juice was the only hold');
+  }
+  const sleepGummy = getPreviewRecord('pepcid-b162-sleep-gummy-32');
+  const sleepJuice = sleepGummy.inactiveIngredients.find((ingredient) =>
+    ingredient.name === 'Color added (vegetable juice, fruit juice)',
+  );
+  if (sleepGummy.verdict !== 'caution' || sleepJuice?.riskLevel !== 'cleared') {
+    throw new Error('pepcid sleep gummy stays Usable after the juice token clears');
+  }
+  const sleepWhy = plainIngredientWhy(sleepJuice!);
+  if (!/That is why it is Cleared\.$/.test(sleepWhy ?? '')) {
+    throw new Error('juice lock why must say Cleared');
   }
 }
 

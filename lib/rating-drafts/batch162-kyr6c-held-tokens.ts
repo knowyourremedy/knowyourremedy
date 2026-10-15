@@ -56,7 +56,7 @@ const METH = {
   mineral: 'Methodology §5 Caution (oral mineral oil). Not the topical ointment row. Not the Avoid driver.',
   whiteMineral: 'Methodology §5 Caution (oral white mineral oil). Not the topical ointment row. Not the gummy seed-oil rule. Not the Avoid driver.',
   citrate: 'Methodology §5 Cleared (sodium citrate).',
-  juiceColor: 'Methodology §5 Caution (color added (vegetable juice, fruit juice)). Named juice color. Not bare color added. Not the titanium dioxide color-added alias. Not the Cleared named juice-as-color row.',
+  juiceColor: 'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder). Clean. Named or not. Sweetener or color. Not a sugar row. Not Usable. High fructose corn syrup stays its own row. Locked Oct 15, 2026.',
   carnauba: 'Methodology §5 Caution (carnauba wax). Not the Avoid driver.',
   adipic: 'Methodology §5 Cleared (adipic acid).',
   polyphosphate: 'Methodology §5 Caution (sodium polyphosphate). Own row. Not a phosphate salt. Not phosphoric acid. Not the Avoid driver.',
@@ -125,7 +125,7 @@ function sleepLine(panel: string): IngredientFlag[] {
     flag(panel, 'Citric acid', 'cleared', METH.citric),
     flag(panel, 'White mineral oil', 'limited', METH.whiteMineral),
     flag(panel, 'Sodium citrate', 'cleared', METH.citrate),
-    flag(panel, 'Color added (vegetable juice, fruit juice)', 'limited', METH.juiceColor),
+    flag(panel, 'Color added (vegetable juice, fruit juice)', 'cleared', METH.juiceColor),
     flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
   ];
 }
@@ -446,7 +446,7 @@ const atbc = wild?.inactiveIngredients.find((item) => item.name === 'Acetyl trib
 if (!atbc || atbc.riskLevel !== 'limited' || wild?.verdict !== 'avoid') throw new Error('batch162 wildberry');
 const sleep = ROWS.find((item) => item.id === 'pepcid-b162-sleep-gummy-32');
 const juice = sleep?.inactiveIngredients.find((item) => item.name === 'Color added (vegetable juice, fruit juice)');
-if (!juice || juice.riskLevel !== 'limited' || sleep?.verdict !== 'caution') throw new Error('batch162 sleep');
+if (!juice || juice.riskLevel !== 'cleared' || sleep?.verdict !== 'caution') throw new Error('batch162 sleep');
 const shared: Record<string, string> = {};
 for (const record of ROWS) {
   const key = record.formulaId ?? '';

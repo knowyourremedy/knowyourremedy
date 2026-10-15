@@ -203,6 +203,33 @@ function isVagueRice(name: string): boolean {
   return /\brice extract\b/.test(n) || n === 'rice' || /\borganic rice\b/.test(n) || /\brice extract blend\b/.test(n);
 }
 
+export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
+  'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder). Clean. Named or not. Sweetener or color. Not a sugar row. Not Usable. High fructose corn syrup stays its own row. Locked Oct 15, 2026.';
+
+const FRUIT_VEGETABLE_JUICE_WHY = close(
+  'This is fruit or vegetable juice, puree, concentrate, or powder. It is not a sugar, and it is not high fructose corn syrup.',
+  'cleared',
+);
+
+export function isFruitVegetableJuiceLock(name: string): boolean {
+  const n = norm(name);
+  if (/high fructose/.test(n)) return false;
+  if (/cane sugar/.test(n)) return false;
+  if (/\bflavou?r/.test(n)) return false;
+  if (/aloe/.test(n)) return false;
+  if (/bioflavonoid/.test(n)) return false;
+  if (/brown rice/.test(n)) return false;
+  if (/whole food base/.test(n)) return false;
+  if (/\brice\b/.test(n) && /concentrate|extract/.test(n)) return false;
+  if (/lo han|monk fruit|mogroside/.test(n)) return false;
+  if (/annatto|bixin|norbixin/.test(n)) return false;
+  if (/\bextract\b/.test(n) && !/juice|puree/.test(n)) return false;
+  if (/juice|puree/.test(n)) return true;
+  const fruit =
+    /fruit|vegetable|carrot|cranberry|blueberry|raspberry|orange|lemon|grapefruit|apple|\bberry\b|grape|beet|cherry|elderberry|maqui|mango|peach|strawberry|blackberry|acerola|pomegranate|tomato/;
+  return fruit.test(n) && /concentrate|powder/.test(n);
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -226,6 +253,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^filtered water$/, 'water');
   const source = norm(ingredient.source ?? '');
   const level = ingredient.riskLevel;
+  const juiceLockSource = /fruit and vegetable juice, puree, concentrate, and powder/i.test(ingredient.source ?? '');
+  if (isFruitVegetableJuiceLock(ingredient.name) && (level !== 'cleared' || juiceLockSource)) {
+    return FRUIT_VEGETABLE_JUICE_WHY;
+  }
   const oil = seedOilLabel(ingredient.name);
 
   if (/aspartame|nutrasweet|\be951\b/.test(n)) {
