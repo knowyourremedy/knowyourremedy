@@ -1100,6 +1100,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is an emollient ester used in a cream.', level);
   }
 
+  if (/isostearyl neopentanoate/.test(n)) {
+    return close('Isostearyl neopentanoate is an emollient ester used in a cream.', level);
+  }
+
   if (/spirulina/.test(n)) {
     return close('Spirulina is an algae color or powder. A color listing is not the same as an unnamed algae powder, and neither one is a synthetic dye.', level);
   }
@@ -1307,7 +1311,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is an ammonia solution used to set pH. It is not ammonium hydroxide.', level);
   }
 
-  if (/isobutane|isopentane|\bpropane\b/.test(n)) {
+  if (/isobutane|isopentane|\bpropane\b|\bbutane\b/.test(n)) {
     return close('This is a propellant in a spray. It is not an oil you swallow.', level);
   }
 

@@ -110,6 +110,30 @@ const MON_CREAM_FLAGS: IngredientFlag[] = [
   flag(MON_CREAM_PANEL, 'Stearyl alcohol', 'cleared', METH.cetyl),
 ];
 
+const ITCH_CREAM_PANEL =
+  'https://www.riteaid.com/shop/monistat-soothing-care-itch-relief-cream-maximum-strength-1-oz-0327136';
+const ITCH_SPRAY_PANEL =
+  'https://www.cvs.com/shop/monistat-care-maximum-strength-instant-itch-relief-spray-2-oz-prodid-1730272';
+
+const ITCH_CREAM_FLAGS: IngredientFlag[] = [
+  flag(ITCH_CREAM_PANEL, 'Aloe vera leaf', 'limited', 'Methodology §5 Caution (aloe as an other ingredient).'),
+  flag(ITCH_CREAM_PANEL, 'Cetearyl alcohol', 'cleared', METH.cetyl),
+  flag(ITCH_CREAM_PANEL, 'Cetyl palmitate', 'cleared', METH.palmitate),
+  flag(ITCH_CREAM_PANEL, 'Glycerin', 'cleared', METH.glycerin),
+  flag(ITCH_CREAM_PANEL, 'Isopropyl myristate', 'cleared', METH.ipm),
+  flag(ITCH_CREAM_PANEL, 'Isostearyl neopentanoate', 'limited', 'Methodology §5 Caution (isostearyl neopentanoate).'),
+  flag(ITCH_CREAM_PANEL, 'Methylparaben', 'high', 'Methodology §5 High (parabens). Methylparaben is that row.'),
+  flag(ITCH_CREAM_PANEL, 'Polyoxyl 20 cetostearyl ether', 'limited', METH.poe),
+  flag(ITCH_CREAM_PANEL, 'Water', 'cleared', METH.water),
+];
+
+const ITCH_SPRAY_FLAGS: IngredientFlag[] = [
+  flag(ITCH_SPRAY_PANEL, 'Polyethylene glycol 300', 'moderate', 'Methodology §5 Moderate (PEGs). Polyethylene glycol 300 is that family. Not a new grade.'),
+  flag(ITCH_SPRAY_PANEL, 'Isobutane', 'limited', 'Methodology §5 Caution (isobutane, spray propellant).'),
+  flag(ITCH_SPRAY_PANEL, 'Normal butane', 'limited', 'Methodology §5 Caution (butane, spray propellant). Same family as isobutane and propane.'),
+  flag(ITCH_SPRAY_PANEL, 'Propane', 'limited', 'Methodology §5 Caution (propane, spray propellant).'),
+];
+
 const MON_OINT_FLAGS: IngredientFlag[] = [
   flag(MON_OINT_PANEL, 'Butylated hydroxyanisole', 'high', METH.bha),
   flag(MON_OINT_PANEL, 'Magnesium aluminum silicate', 'limited', METH.mas),
@@ -329,6 +353,46 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
       'DailyMed setid 587e42b4 is Monistat Tioconazole 1 ointment, 300 mg (6.5%) in one 4.6 g applicator. Inactive ingredients: butylated hydroxyanisole, magnesium aluminum silicate, white petrolatum. Children under 12: ask a doctor. monistat.com 1-Day Treatment Prefilled Ointment is one ready-to-use applicator, 6.5% tioconazole, not a combination pack. Walgreens opened Monistat 1-Day Yeast Infection Treatment, Pre-Filled Cream Applicator, 0.16 oz, with Add to cart. 0.16 oz is this 4.6 g applicator. No opened page tied a 12-digit code to this applicator. UPC empty.',
     ],
   },
+  {
+    id: 'monistat-b185-itch-cream-1',
+    productName: 'Monistat Care Instant Itch Relief Cream (1 oz)',
+    brand: 'Monistat',
+    category: FIRST_AID,
+    formulaId: 'monistat-b185-itch-cream',
+    audience: ADULT,
+    minAge: 12,
+    form: 'cream',
+    recordStatus: UNVERIFIED,
+    productType: OTC,
+    activeIngredients: [{ name: 'Hydrocortisone', strength: '1%' }],
+    inactiveIngredients: ITCH_CREAM_FLAGS,
+    verdict: 'avoid',
+    retailers: [],
+    cleanAlternatives: SKIN_ALTS,
+    sourcesGeneral: [
+      'DailyMed setid a0f40504 is Monistat Complete Care Instant Itch Relief cream, hydrocortisone, 28 g tube. 28 g is the 1 oz count. Inactive ingredients: aloe vera leaf, cetearyl alcohol, cetyl palmitate, glycerin, isopropyl myristate, isostearyl neopentanoate, methylparaben, polyoxyl 20 cetostearyl ether, water. Children under 12: ask a doctor. Rite Aid opened Monistat Care Instant Itch Relief Cream, Maximum Strength, 1 oz, in stock at $14.49 with Add to Cart. The page says 1% hydrocortisone. No opened page tied a 12-digit code to this tube. UPC empty.',
+    ],
+  },
+  {
+    id: 'monistat-b185-itch-spray-2',
+    productName: 'Monistat Care Instant Itch Relief Spray (2 oz)',
+    brand: 'Monistat',
+    category: FIRST_AID,
+    formulaId: 'monistat-b185-itch-spray',
+    audience: ADULT,
+    minAge: 12,
+    form: 'spray',
+    recordStatus: UNVERIFIED,
+    productType: OTC,
+    activeIngredients: [{ name: 'Benzocaine', strength: '20%' }],
+    inactiveIngredients: ITCH_SPRAY_FLAGS,
+    verdict: 'caution',
+    retailers: [],
+    cleanAlternatives: SKIN_ALTS,
+    sourcesGeneral: [
+      'DailyMed setid 4e9dc791 is Monistat Care Instant Itch Relief spray, benzocaine, 57 g can. 57 g is the 2 oz count. Inactive ingredients: polyethylene glycol 300. Propellant: isobutane, normal butane, propane. Children under 12: ask a doctor. CVS opened Monistat Care Maximum Strength Instant Itch Relief Spray, 2 oz, at $9.29. No opened page tied a 12-digit code to this can. UPC empty.',
+    ],
+  },
 ];
 
 const ROWS = BATCH185_KYR6C_ANTIFUNGAL;
@@ -347,7 +411,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 10) throw new Error(`batch185 row count ${ROWS.length}`);
+if (ROWS.length !== 12) throw new Error(`batch185 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch185 duplicate id');
 
@@ -363,6 +427,8 @@ const expectedEmpty = [
   'monistat-b185-3-cream',
   'monistat-b185-7-cream',
   'monistat-b185-1-ointment',
+  'monistat-b185-itch-cream-1',
+  'monistat-b185-itch-spray-2',
 ];
 if (empty.join() !== expectedEmpty.join()) throw new Error(`batch185 empty upc ${empty.join()}`);
 
