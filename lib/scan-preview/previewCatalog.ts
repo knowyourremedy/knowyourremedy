@@ -178,13 +178,16 @@ import {
   BATCH176_KYR6C_GASX_TOTAL,
   BATCH177_KYR6C_ES_CHEWS_NIGHT,
   BATCH178_KYR6C_LAXATIVES,
+  BATCH179_KYR6C_HELD_LAXATIVES,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
 import {
   contradictionHonestNote,
   FRUIT_VEGETABLE_JUICE_LOCK_SOURCE,
+  HYDROGENATED_OIL_LOCK_SOURCE,
   isFruitVegetableJuiceLock,
+  isHydrogenatedOilLock,
   plainIngredientWhy,
 } from '@/lib/scan-preview/plainLanguage';
 import {
@@ -388,6 +391,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH176_KYR6C_GASX_TOTAL,
   ...BATCH177_KYR6C_ES_CHEWS_NIGHT,
   ...BATCH178_KYR6C_LAXATIVES,
+  ...BATCH179_KYR6C_HELD_LAXATIVES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -15773,6 +15777,8 @@ export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 // Grade restatements and inactive lists stay off, including founder-lock dumps.
 // The Oct 15 juice lock clears that token on screen. A pack moves to a cleaner
 // grade only when no other ingredient still holds it.
+// The Oct 15 hydrogenated-oil lock raises those five oils to Not clean on screen.
+// A pack that was already Not clean stays. Batch files are not rewritten for it.
 export function displayHonestNote(record: RatingRecord): string {
   return contradictionHonestNote(record) ?? '';
 }
@@ -15789,6 +15795,34 @@ function verdictRank(verdict: RatingRecord['verdict']): number {
   if (verdict === 'avoid') return 2;
   if (verdict === 'caution') return 1;
   return 0;
+}
+
+function hydrogenatedOilLockSource(source: string | undefined): string {
+  if (!source) return HYDROGENATED_OIL_LOCK_SOURCE;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source} ${HYDROGENATED_OIL_LOCK_SOURCE}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${HYDROGENATED_OIL_LOCK_SOURCE}` : HYDROGENATED_OIL_LOCK_SOURCE;
+}
+
+function applyHydrogenatedOilLock(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    if (!isHydrogenatedOilLock(ingredient.name)) return ingredient;
+    if (ingredient.riskLevel === 'high' && (ingredient.source ?? '').includes(HYDROGENATED_OIL_LOCK_SOURCE)) {
+      return ingredient;
+    }
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'high' as const,
+      source: hydrogenatedOilLockSource(ingredient.source),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const verdict = hasHigh && verdictRank(record.verdict) < 2 ? 'avoid' : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
 }
 
 function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
@@ -15815,7 +15849,7 @@ function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const locked = applyFruitVegetableJuiceLock(record);
+  const locked = applyHydrogenatedOilLock(applyFruitVegetableJuiceLock(record));
   const honestNote = displayHonestNote(locked);
   const productImage = previewOverlayImage(locked);
   if (locked === record && honestNote === record.honestNote && !productImage) return record;
