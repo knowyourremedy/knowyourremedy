@@ -189,3 +189,4 @@ export { BATCH189_KYR6C_NB_SCHIFF_MF } from './batch189-kyr6c-nb-schiff-mf';
 export { BATCH190_KYR6C_NB_LINE } from './batch190-kyr6c-nb-line';
 export { BATCH191_KYR6C_NB_TWENTY } from './batch191-kyr6c-nb-twenty';
 export { BATCH192_KYR6C_NB_NINE } from './batch192-kyr6c-nb-nine';
+export { BATCH193_KYR6C_NB_TWENTY } from './batch193-kyr6c-nb-twenty';
