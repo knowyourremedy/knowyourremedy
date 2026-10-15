@@ -14874,6 +14874,20 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'zarbees-b165-saline-3': catalogShot(
     'zarbees-b165-saline-3.jpg',
   ),
+  // Cold & Flu night run 2026-10-15 5:30 AM PT batch 1.
+  // Exact US package photo. Per-id only. verifiedSku.
+  // Kid's Cough + Immune Day, natural mixed berry, 4 fl oz.
+  // Official zarbees.com front packshot for that daytime bottle
+  // (SKU 420). Front reads DAYTIME, COUGH + IMMUNE,
+  // NATURAL MIXED BERRY, and 4 FL OZ (118 mL).
+  // Not the 8 fl oz mucus bottle. Not the 2 fl oz baby bottles.
+  // Not the day/night value pack. The flat label dieline was not used.
+  // The row barcode stays empty. The brand page schema prints
+  // 300450664167. DSLD 288604 and a companion label asset print
+  // 300450664204 on this 4 fl oz. Neither code was attached.
+  'zarbees-b167-immune-day-4': catalogShot(
+    'zarbees-b167-immune-day-4.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16070,23 +16084,6 @@ assertBrandMark(
 }
 
 // Remaining later-catalog P&F leftovers stay letters until attempted.
-
-function assertLetterOnly(id: string, brand: string) {
-  const image = previewOverlayImage({ id, formulaId: id, brand });
-  if (!image?.url.startsWith('data:image/svg+xml')) {
-    throw new Error(`${id} must stay on the letter tile`);
-  }
-  const letter = brand.trim().match(/[A-Za-z0-9]/)?.[0]?.toUpperCase();
-  const decoded = decodeURIComponent(
-    image.url.replace('data:image/svg+xml;charset=utf-8,', ''),
-  );
-  if (letter && !decoded.includes(`>${letter}</text>`)) {
-    throw new Error(`${id} must stay on the single-letter "${letter}" tile`);
-  }
-  if (image.verifiedSku) {
-    throw new Error(`${id} letter tile must not set verifiedSku`);
-  }
-}
 
 function assertBrandTextTile(id: string, brand: string, text: string) {
   const image = previewOverlayImage({ id, formulaId: id, brand });
@@ -32025,13 +32022,28 @@ assertBrandMark(
   if (new Set(honeyUrls).size !== 3) {
     throw new Error('Zarbee honey syrups must not share a carton');
   }
-  assertLetterOnly('zarbees-b167-immune-day-4', "Zarbee's");
+  assertExactCarton(
+    'zarbees-b167-immune-day-4',
+    "Zarbee's",
+    'zarbees-b167-immune-day-4.jpg',
+  );
   const immuneDay = previewOverlayImage({
     id: 'zarbees-b167-immune-day-4',
     formulaId: 'zarbees-b165-honey-base',
     brand: "Zarbee's",
   });
-  if (!immuneDay?.url.startsWith('data:image/svg+xml') || immuneDay.verifiedSku) {
-    throw new Error('immune day 4 fl oz must stay a letter');
+  if (
+    !immuneDay?.verifiedSku
+    || !immuneDay.url.endsWith('/zarbees-b167-immune-day-4.jpg')
+  ) {
+    throw new Error('immune day 4 fl oz must keep its own carton');
+  }
+  const mucusDay = previewOverlayImage({
+    id: 'zarbees-b165-mucus-day-8',
+    formulaId: 'zarbees-b165-honey-base',
+    brand: "Zarbee's",
+  });
+  if (immuneDay.url === mucusDay?.url) {
+    throw new Error('immune day 4 fl oz must not share the mucus 8 fl oz carton');
   }
 }
