@@ -125,7 +125,6 @@ export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [
     productName: "Nature's Bounty Advanced Vital Heart with CoQ10 + Magnesium (60 softgels)",
     brand: "Nature's Bounty",
     category: VITAMINS,
-    barcode: '074312016462',
     formulaId: 'natures-bounty-b188-vital-heart',
     audience: ADULT,
     minAge: 18,
