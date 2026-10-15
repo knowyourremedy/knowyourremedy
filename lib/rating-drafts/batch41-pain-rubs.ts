@@ -33,7 +33,9 @@
 // LIST 3 written (8 formula rows) under current §5 locks:
 // - Cetearyl olivate / sorbitan olivate = Cleared.
 // - Isopropyl palmitate / isopropyl laurate = Cleared (IPM family).
-// - Carbomer interpolymer = Cleared (widened carbomer row).
+// - Carbomer interpolymer on the two AleveX lotion rows = Caution. Usable.
+//   CIR non-irritating condition. One level. Pack grade stays Caution.
+//   Precise and the AleveX spray still store the older Cleared flag.
 // - Vanillyl butyl ether = Caution (standalone).
 // - DEGEE / ethoxydiglycol = Caution (standalone). Not Cleared.
 // - Parabens High in every form, including patches.
@@ -249,8 +251,11 @@ function alevexLotionInactives(setid: string): IngredientFlag[] {
     flag('Linseed oil', 'cleared', dailymed(setid, METH.linseed)),
     flag(
       'Carbomer interpolymer type A',
-      'cleared',
-      dailymed(setid, METH.carbomer),
+      'limited',
+      dailymed(
+        setid,
+        'Methodology §5 Caution (carbomer interpolymer). The Cosmetic Ingredient Review says safe as used and when formulated to be non-irritating. Clean call. One level. The European Food Safety Authority set an ADI. Same family as carbomer. Not a new grade.',
+      ),
     ),
     flag('Pentylene glycol', 'cleared', dailymed(setid, METH.pentylene)),
     flag('Edetate disodium', 'cleared', dailymed(setid, METH.edta)),
