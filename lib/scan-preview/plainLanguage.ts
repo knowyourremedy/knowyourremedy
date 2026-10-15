@@ -379,8 +379,16 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return 'Shea in a cream is Cleared. The PEG is the process. That is why it is Usable.';
   }
 
-  if (/polyoxyl lauryl ether|polyoxyl stearyl ether/.test(n)) {
+  if (/polyoxyl lauryl ether|polyoxyl stearyl ether|polyoxyethylene \(23\) cetyl ether|polyoxyl 20 cetostearyl ether/.test(n)) {
     return 'This is in the polyoxyl family. That is why it is Usable.';
+  }
+
+  if (/propylene glycol dicaprylate/.test(n)) {
+    return 'Propylene glycol dicaprylate is its own ingredient. It is not the swallowed propylene glycol. That is why it is Usable.';
+  }
+
+  if (/cetyl palmitate/.test(n)) {
+    return close('Cetyl palmitate is a wax ester in the fatty-alcohol family.', level);
   }
 
   if (/decyl glucoside|capramidopropyl betaine|cocamidopropyl betaine/.test(n)) {
