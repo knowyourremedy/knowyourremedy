@@ -318,6 +318,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       return 'Coconut oil is Not clean when it is the base of a gummy. That is the form this app flags. Fractionated coconut oil is not that gummy oil, so it did not pull this grade down.';
     }
     if (level === 'high') {
+      if (oil === 'vegetable oil') {
+        return 'Vegetable oil is Not clean when it is the base of a gummy, a lozenge, or a chew. That is the form this app flags. That is why it is High risk.';
+      }
       return `${titleOil(oil)} is Not clean when it is the base of a gummy. That is the form this app flags. That is why it is High risk.`;
     }
     return `${titleOil(oil)} is Not clean when it is the base of a gummy. That is the form this app flags. In this product the oil is not a gummy you chew, so it did not pull this grade down.`;
@@ -471,6 +474,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (/carboxymethyl cellulose calcium/.test(n)) {
+    return 'Carboxymethylcellulose calcium is a cellulose gum. That is why it is Usable.';
+  }
+
   if (/microcrystalline cellulose|croscarmellose|cellulose gum|powdered cellulose|carboxymethyl cellulose|methylcellulose|silicified microcrystalline/.test(n) || n === 'cellulose' || n === 'mcc') {
     return close(
       'This is a cellulose filler or disintegrant. A 2017 European review found no carcinogenicity and no need for a daily intake limit.',
@@ -528,15 +535,62 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is citric acid or a citrate salt, used to set acidity. Anhydrous citric acid is the same acid without water.', level);
   }
 
-  if (/lecithin/.test(n)) {
+  if (/hydrogenated lecithin/.test(n)) {
     return close(
-      'Lecithin is an emulsifier from soy, sunflower, or canola. A 2017 European review found no safety concern and set no daily limit. Soy lecithin is a soy allergen disclosure, not a toxicity flag.',
+      'Hydrogenated lecithin is its own ingredient. It is not soy lecithin or sunflower lecithin.',
+      level,
+    );
+  }
+
+  if (/lecithin/.test(n)) {
+    if (/soy/.test(n)) {
+      return close(
+        'Lecithin is an emulsifier. A 2017 European review found no safety concern and set no daily limit. Soy lecithin is a soy allergen disclosure, not a toxicity flag.',
+        level,
+      );
+    }
+    if (n === 'lecithin') {
+      return close(
+        'Lecithin with no source named is the same emulsifier as soy lecithin and sunflower lecithin. A 2017 European review found no safety concern and set no daily limit. The soy note applies only when the label says soy.',
+        level,
+      );
+    }
+    return close(
+      'Lecithin is an emulsifier from soy, sunflower, or canola. A 2017 European review found no safety concern and set no daily limit.',
       level,
     );
   }
 
   if (/glycyrrhiza|licorice/.test(n) && !/ammonium|monoammonium|dipotassium/.test(n)) {
     return 'Licorice extract is a named plant ingredient. Very high intakes of glycyrrhizin can affect blood pressure and potassium. That is not this syrup dose. That is why it is Cleared.';
+  }
+
+  if (n === 'sodium') {
+    return 'The label says sodium and does not name the salt. That is why it is Usable.';
+  }
+
+  if (/calcium gluconate monohydrate/.test(n)) {
+    return close('Calcium gluconate monohydrate is calcium gluconate. It is not a new ingredient.', level);
+  }
+
+  if (/sodium gluconate/.test(n)) {
+    return close('Sodium gluconate is in the same gluconate family as calcium gluconate.', level);
+  }
+
+  if (/zinc gluconate/.test(n)) {
+    return close('Zinc gluconate is in that same gluconate family.', level);
+  }
+
+  if (/calcium gluconate/.test(n)) {
+    return close('Calcium gluconate is a mineral salt used as an inactive.', level);
+  }
+
+  if (/whole dry milk/.test(n)) {
+    return close('This is milk.', level);
+  }
+
+  if (/lipolyzed butteroil|lipolysed butter oil|lipolyzed butter oil/.test(n)) {
+    return close('Lipolyzed butteroil is butterfat.', level);
   }
 
   if (/sodium chloride|sodium bicarbonate|potassium chloride|himalayan rock salt|sea salt/.test(n)) {
@@ -720,6 +774,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/beet root|beetroot|beet powder|beet juice/.test(n)) {
     return close('This is beet root used as a plant color. It is not a synthetic dye.', level);
+  }
+
+  if (/potassium aluminum silicate/.test(n)) {
+    return 'Potassium aluminum silicate is an aluminum salt. That is why it is Usable.';
   }
 
   if (/calcium silicate|magnesium trisilicate|magnesium aluminum silicate/.test(n)) {

@@ -174,6 +174,7 @@ import {
   BATCH172_KYR6C_NASAL_HELD,
   BATCH173_KYR6C_THREE_SINGLES,
   BATCH174_KYR6C_CORICIDIN,
+  BATCH175_KYR6C_HELD_TOKENS,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -375,6 +376,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH172_KYR6C_NASAL_HELD,
   ...BATCH173_KYR6C_THREE_SINGLES,
   ...BATCH174_KYR6C_CORICIDIN,
+  ...BATCH175_KYR6C_HELD_TOKENS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
