@@ -72,6 +72,7 @@ Removed, not stashed
 - Alavert Fresh Mint 18. No such box. The 18 is Citrus Burst only.
 - Chlor-Trimeton 24. Name-brand not on a regular shelf.
 - orajel-b183-paw-164 removed. Orajel Paw Patrol anticavity toothpaste 5.8 oz / 164 g. The only sale page was a Google AI mode cite to Talotsing. That is not a regular store page. Do not re-add. Not a hunt.
+- Removed Oct 15, 2026 (Nature's Bounty batch193–batch195 sale audit t58u — not stashed, not missing, not hunt): natures-bounty-b193-b12-200, natures-bounty-b193-biotin-10000-120, natures-bounty-b193-biotin-5000-150, natures-bounty-b193-calcium-d3-300, natures-bounty-b195-c-rose-hips-500-90, natures-bounty-b195-c-rose-hips-1000-100, natures-bounty-b195-coq10-100-75, natures-bounty-b195-melatonin-5-90, natures-bounty-b195-ginger-100, natures-bounty-b195-ginkgo-120-100, natures-bounty-b195-magnesium-500-100. Do not rewrite removed rows.
 - motrin-b184-infant-df-1 removed. Infants' Motrin Dye-Free Concentrated Drops, Berry (1 fl oz). Same formula as motrin-infants-liquid-dyefree. The new row only added a count. Do not re-add. Not a hunt.
 - tylenol-b184-infant-df-1 removed. Infants' Tylenol Dye-Free Oral Suspension, Cherry (1 fl oz). Same formula as tylenol-infants-liquid-dyefree. The new row only added a count. Do not re-add. Not a hunt.
 
