@@ -181,6 +181,7 @@ import {
   BATCH179_KYR6C_HELD_LAXATIVES,
   BATCH180_KYR6C_MIRAGUT,
   BATCH181_KYR6C_ANBESOL,
+  BATCH182_KYR6C_HELD_PACKS,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -188,8 +189,10 @@ import {
   contradictionHonestNote,
   FRUIT_VEGETABLE_JUICE_LOCK_SOURCE,
   HYDROGENATED_OIL_LOCK_SOURCE,
+  TRACE_EDTA_CONDITION_SOURCE,
   isFruitVegetableJuiceLock,
   isHydrogenatedOilLock,
+  isTraceEdtaConditionDrop,
   plainIngredientWhy,
 } from '@/lib/scan-preview/plainLanguage';
 import {
@@ -396,6 +399,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH179_KYR6C_HELD_LAXATIVES,
   ...BATCH180_KYR6C_MIRAGUT,
   ...BATCH181_KYR6C_ANBESOL,
+  ...BATCH182_KYR6C_HELD_PACKS,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -15783,6 +15787,8 @@ export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 // grade only when no other ingredient still holds it.
 // The Oct 15 hydrogenated-oil lock raises those five oils to Not clean on screen.
 // A pack that was already Not clean stays. Batch files are not rewritten for it.
+// The Oct 15 condition rule drops trace disodium EDTA one level on screen.
+// A Clean pack becomes Usable. A pack that was already Usable or Not clean stays.
 export function displayHonestNote(record: RatingRecord): string {
   return contradictionHonestNote(record) ?? '';
 }
@@ -15852,8 +15858,32 @@ function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
+function traceEdtaLockSource(source: string | undefined): string {
+  if (!source) return TRACE_EDTA_CONDITION_SOURCE;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source} ${TRACE_EDTA_CONDITION_SOURCE}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${TRACE_EDTA_CONDITION_SOURCE}` : TRACE_EDTA_CONDITION_SOURCE;
+}
+
+function applyConditionRuleLock(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    if (!isTraceEdtaConditionDrop(ingredient)) return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'limited' as const,
+      source: traceEdtaLockSource(ingredient.source),
+    };
+  });
+  if (!flipped) return record;
+  const verdict = record.verdict === 'clean' ? 'caution' : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const locked = applyHydrogenatedOilLock(applyFruitVegetableJuiceLock(record));
+  const locked = applyConditionRuleLock(applyHydrogenatedOilLock(applyFruitVegetableJuiceLock(record)));
   const honestNote = displayHonestNote(locked);
   const productImage = previewOverlayImage(locked);
   if (locked === record && honestNote === record.honestNote && !productImage) return record;

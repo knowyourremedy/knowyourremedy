@@ -178,3 +178,4 @@ export { BATCH178_KYR6C_LAXATIVES } from './batch178-kyr6c-laxatives';
 export { BATCH179_KYR6C_HELD_LAXATIVES } from './batch179-kyr6c-held-laxatives';
 export { BATCH180_KYR6C_MIRAGUT } from './batch180-kyr6c-miragut';
 export { BATCH181_KYR6C_ANBESOL } from './batch181-kyr6c-anbesol';
+export { BATCH182_KYR6C_HELD_PACKS } from './batch182-kyr6c-held-packs';
