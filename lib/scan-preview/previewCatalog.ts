@@ -187,6 +187,7 @@ import {
   BATCH185_KYR6C_ANTIFUNGAL,
   BATCH186_KYR6C_ANTIFUNGAL_HELD,
   BATCH187_KYR6C_VITAMIN_LINE,
+  BATCH188_KYR6C_VITAMIN_HELD,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -408,6 +409,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH185_KYR6C_ANTIFUNGAL,
   ...BATCH186_KYR6C_ANTIFUNGAL_HELD,
   ...BATCH187_KYR6C_VITAMIN_LINE,
+  ...BATCH188_KYR6C_VITAMIN_HELD,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /

@@ -815,6 +815,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (/sulfiting agents/.test(n)) {
+    return close(
+      'Sulfiting agents can trigger serious reactions in people who are sensitive to them, including some people with asthma. The U.S. Food and Drug Administration requires the label when sulfites are present at 10 parts per million or more.',
+      level,
+    );
+  }
+
   if (/metabisulfite|bisulfite|\bsulfite/.test(n)) {
     return close(
       'Sulfites can trigger serious reactions in people who are sensitive to them, including some people with asthma. The U.S. Food and Drug Administration requires a warning on drugs that contain them.',
@@ -1157,7 +1164,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/rice bran oil/.test(n)) {
-    return close('Rice bran oil is a carrier oil in a softgel. It is not the gummy seed-oil rule, and it is not rice bran extract.', level);
+    if (level === 'high') {
+      return close(
+        'Rice bran oil is Not clean when it is the base of a gummy. You are chewing the oil. That is the form this app flags.',
+        level,
+      );
+    }
+    return close('Rice bran oil is a carrier oil in a softgel or capsule fill. It is not the gummy you chew, and it is not rice bran extract.', level);
   }
 
   if (/^l leucine$|^leucine$/.test(n)) {
