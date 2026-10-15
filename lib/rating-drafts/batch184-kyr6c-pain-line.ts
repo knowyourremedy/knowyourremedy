@@ -4,6 +4,10 @@
 // this file. A regular store page did not tie one Aleve inactive line to one
 // count. UPCs stay empty. Opened pages did not print a 12-digit code for
 // these counts. Kits, bonus boxes, and 2-packs are not rows.
+// motrin-b184-infant-df-1 and tylenol-b184-infant-df-1 are removed.
+// Same formula as motrin-infants-liquid-dyefree and
+// tylenol-infants-liquid-dyefree. The new rows only added a count.
+// Not stashed. The other 26 rows stay.
 
 import type { ActiveIngredient, IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { contradictionHonestNote, plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -75,7 +79,6 @@ const DUAL = 'Advil Dual Action drug facts';
 const PM_LIQ = 'Advil PM Liqui-Gels drug facts';
 const MOTRIN_DF = "Children's Motrin dye-free suspension drug facts";
 const MOTRIN_BUBBLE = "Children's Motrin bubble gum suspension drug facts";
-const MOTRIN_INFANT = "Infants' Motrin dye-free drops drug facts";
 const MOTRIN_CHEW = "Children's Motrin dye-free grape chew drug facts";
 const TYLENOL_DF = 'Tylenol dye-free suspension drug facts';
 const TYLENOL_BUBBLE = "Children's Tylenol bubble gum suspension drug facts";
@@ -156,20 +159,6 @@ const MOTRIN_BUBBLE_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_BUBBLE, 'Sodium benzoate', 'limited', METH.benzoate),
   flag(MOTRIN_BUBBLE, 'Sucrose', 'limited', METH.sucrose),
   flag(MOTRIN_BUBBLE, 'Xanthan gum', 'cleared', METH.xanthan),
-];
-
-const MOTRIN_INFANT_FLAGS: IngredientFlag[] = [
-  flag(MOTRIN_INFANT, 'Anhydrous citric acid', 'cleared', METH.citric),
-  flag(MOTRIN_INFANT, 'Caramel', 'high', METH.caramel),
-  flag(MOTRIN_INFANT, 'Flavors', 'limited', METH.flavor),
-  flag(MOTRIN_INFANT, 'Glycerin', 'cleared', METH.glycerin),
-  flag(MOTRIN_INFANT, 'Polysorbate 80', 'moderate', METH.polysorbate),
-  flag(MOTRIN_INFANT, 'Pregelatinized starch', 'cleared', METH.starch),
-  flag(MOTRIN_INFANT, 'Purified water', 'cleared', METH.water),
-  flag(MOTRIN_INFANT, 'Sodium benzoate', 'limited', METH.benzoate),
-  flag(MOTRIN_INFANT, 'Sorbitol solution', 'limited', METH.sorbitol),
-  flag(MOTRIN_INFANT, 'Sucrose', 'limited', METH.sucrose),
-  flag(MOTRIN_INFANT, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 
 const MOTRIN_CHEW_FLAGS: IngredientFlag[] = [
@@ -260,7 +249,6 @@ const PM_ACTIVES: ActiveIngredient[] = [
   { name: 'Ibuprofen', strength: '200 mg' },
 ];
 const MOTRIN_CHILD: ActiveIngredient[] = [{ name: 'Ibuprofen', strength: '100 mg / 5 mL' }];
-const MOTRIN_DROP: ActiveIngredient[] = [{ name: 'Ibuprofen', strength: '50 mg / 1.25 mL' }];
 const MOTRIN_CHEW_ACTIVE: ActiveIngredient[] = [{ name: 'Ibuprofen', strength: '100 mg' }];
 
 const MOTRIN_GEL = 'Motrin IB liquid gels drug facts';
@@ -563,19 +551,6 @@ export const BATCH184_KYR6C_PAIN_LINE: RatingRecord[] = [
       "DailyMed setid 152189e5-391c-42d3-a03b-c8364e2de6bf is Children's Motrin suspension. The display panel says Bubble Gum Flavor, 4 fl oz (120 mL). Active ibuprofen 100 mg per 5 mL. Inactive ingredients: acesulfame potassium, anhydrous citric acid, FD&C red no. 40, flavors, glycerin, polysorbate 80, pregelatinized starch, purified water, sodium benzoate, sucrose, xanthan gum. Amazon opened Children's Motrin Oral Suspension, bubble gum, 4 fl oz, at $7.68. No 12-digit UPC was printed.",
   }),
   row({
-    id: 'motrin-b184-infant-df-1',
-    productName: "Infants' Motrin Dye-Free Concentrated Drops, Berry (1 fl oz)",
-    brand: 'Motrin',
-    formulaId: 'motrin-b184-infant-df',
-    audience: KIDS,
-    minAge: 0,
-    form: 'liquid',
-    actives: MOTRIN_DROP,
-    flags: MOTRIN_INFANT_FLAGS,
-    source:
-      "DailyMed setid c57f6ded-c0bd-45ae-823a-4c02ce334d98 is Infants' Motrin dye-free drops. Display text says DYE-FREE and Original Berry. The package list includes a 30 mL bottle. 30 mL is 1 fl oz. Active ibuprofen 50 mg per 1.25 mL. Inactive ingredients: anhydrous citric acid, caramel, flavors, glycerin, polysorbate 80, pregelatinized starch, purified water, sodium benzoate, sorbitol solution, sucrose, xanthan gum. Ages 6 to 23 months. Amazon opened Motrin Infants' Concentrated Drops, dye-free, original berry, 1 fl oz, at $9.78. No 12-digit UPC was printed.",
-  }),
-  row({
     id: 'motrin-b184-df-grape-24',
     productName: "Children's Motrin Dye-Free Chewable Tablets, Grape (24 chewables)",
     brand: 'Motrin',
@@ -641,19 +616,6 @@ export const BATCH184_KYR6C_PAIN_LINE: RatingRecord[] = [
       "DailyMed setid 46ddbfde-54ab-4373-b832-b9c0620b1e9d is Children's Tylenol dye-free suspension. The display panel says DYE-FREE, Cherry Flavor, 8 fl oz (240 mL). Active acetaminophen 160 mg per 5 mL. Inactive ingredients: anhydrous citric acid, flavors, glycerin, microcrystalline cellulose and carboxymethylcellulose sodium, potassium sorbate, purified water, sorbitol solution, sucralose, sucrose, xanthan gum. The combo is the two Cleared cellulose locks. Ages 2 to 11. Amazon opened Children's Tylenol dye-free oral suspension, cherry, 8 fl oz, at $11.47. No 12-digit UPC was printed.",
   }),
   row({
-    id: 'tylenol-b184-infant-df-1',
-    productName: "Infants' Tylenol Dye-Free Oral Suspension, Cherry (1 fl oz)",
-    brand: 'Tylenol',
-    formulaId: 'tylenol-b184-df-susp',
-    audience: KIDS,
-    minAge: 0,
-    form: 'liquid',
-    actives: APAP_160,
-    flags: TYLENOL_DF_FLAGS,
-    source:
-      "DailyMed setid f9de7c2f-016b-4f40-8b5e-141ad194be97 is Infants' Tylenol dye-free suspension. The display panel says Dye Free, Cherry Flavor, 1 fl oz (30 mL). The inactive line matches the Children's dye-free cherry suspension, so this row uses tylenol-b184-df-susp. Active acetaminophen 160 mg per 5 mL. Amazon opened Infants' Tylenol dye-free, cherry, 1 fl oz, at $6.79. No 12-digit UPC was printed.",
-  }),
-  row({
     id: 'tylenol-b184-bubble-4',
     productName: "Children's Tylenol Oral Suspension, Bubble Gum (4 fl oz)",
     brand: 'Tylenol',
@@ -703,8 +665,11 @@ function expectedVerdict(record: RatingRecord): RatingRecord['verdict'] {
   return 'clean';
 }
 
-if (ROWS.length !== 28) throw new Error(`batch184 row count ${ROWS.length}`);
+if (ROWS.length !== 26) throw new Error(`batch184 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
+if (ids.includes('motrin-b184-infant-df-1') || ids.includes('tylenol-b184-infant-df-1')) {
+  throw new Error('batch184 infant count rows stay removed');
+}
 if (new Set(ids).size !== ids.length) throw new Error('batch184 duplicate id');
 for (const record of ROWS) {
   if (record.barcode) throw new Error(`batch184 barcode ${record.id}`);
