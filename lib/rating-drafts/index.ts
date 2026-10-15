@@ -176,3 +176,4 @@ export { BATCH176_KYR6C_GASX_TOTAL } from './batch176-kyr6c-gasx-total';
 export { BATCH177_KYR6C_ES_CHEWS_NIGHT } from './batch177-kyr6c-es-chews-night';
 export { BATCH178_KYR6C_LAXATIVES } from './batch178-kyr6c-laxatives';
 export { BATCH179_KYR6C_HELD_LAXATIVES } from './batch179-kyr6c-held-laxatives';
+export { BATCH180_KYR6C_MIRAGUT } from './batch180-kyr6c-miragut';
