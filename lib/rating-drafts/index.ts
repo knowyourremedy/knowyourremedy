@@ -172,3 +172,4 @@ export { BATCH172_KYR6C_NASAL_HELD } from './batch172-kyr6c-nasal-held';
 export { BATCH173_KYR6C_THREE_SINGLES } from './batch173-kyr6c-three-singles';
 export { BATCH174_KYR6C_CORICIDIN } from './batch174-kyr6c-coricidin';
 export { BATCH175_KYR6C_HELD_TOKENS } from './batch175-kyr6c-held-tokens';
+export { BATCH176_KYR6C_GASX_TOTAL } from './batch176-kyr6c-gasx-total';
