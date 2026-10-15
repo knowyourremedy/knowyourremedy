@@ -14733,6 +14733,147 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'coricidin-b174-cough-cold-16': catalogShot(
     'coricidin-b174-cough-cold-16.jpg',
   ),
+  // Cold & Flu night run 2026-10-15 4:15 AM PT batch 2.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Maximum Strength Night Cold & Flu liquid, cherry, 12 fl oz.
+  // Barcode 041100593931. Walgreens pack shot for that code.
+  // Front reads NIGHTTIME and 12 FL OZ (355 mL). DailyMed setid
+  // c4cde7fc-d86a-1418-e053-2a95a90aed25 is the flat label only.
+  'coricidin-b174-night-liquid-12': catalogShot(
+    'coricidin-b174-night-liquid-12.jpg',
+  ),
+  // Cold, Cough & Flu maximum strength liqui-gels, 24 count.
+  // Barcode 041100597885. Walgreens pack shot for that code.
+  // Front reads COLD, COUGH & FLU and 24 LIQUI-GELS.
+  // Not the chest-congestion-only 20-count box.
+  'coricidin-b175-cold-cough-gels-24': catalogShot(
+    'coricidin-b175-cold-cough-gels-24.jpg',
+  ),
+  // Maximum Strength Multi-Symptom Flu tablets, 24 count.
+  // Barcode 041100589644. Target pack shot for that code.
+  // Front reads MULTI-SYMPTOM FLU and 24 TABLETS.
+  // DailyMed setid ae7cf41e-b618-d6bb-e053-2a95a90a6692 also
+  // shows the 10-count, so that composite was not used.
+  'coricidin-b175-multi-flu-24': catalogShot(
+    'coricidin-b175-multi-flu-24.jpg',
+  ),
+  // Saline Spray + Drops, 1 fl oz. Barcode 756184120118.
+  // CVS pack shot for that code. Front reads SALINE SPRAY / DROPS
+  // and 1 FL OZ (30 mL). Not the 3 fl oz mist.
+  'little-remedies-b165-saline-drops-1': catalogShot(
+    'little-remedies-b165-saline-drops-1.jpg',
+  ),
+  // Sterile Saline Nasal Mist, 3 fl oz. Barcode 756184000090.
+  // Target pack shot for that code. Front reads STERILE SALINE
+  // NASAL MIST and 3 FL OZ (89 mL). Not the 1 fl oz spray/drops.
+  'little-remedies-b165-saline-mist-3': catalogShot(
+    'little-remedies-b165-saline-mist-3.jpg',
+  ),
+  // Extra Strength 1% nasal spray, 0.5 oz. Barcode 302250810478.
+  // DailyMed setid ab8682a4-1f66-6709-e053-2995a90a8b4a package photo.
+  // Front reads MAXIMUM STRENGTH, 1%, and 1/2 FL OZ (15 mL).
+  // That is this Extra Strength row. Not Mild. Not Regular.
+  'neo-synephrine-b171-extra-15': catalogShot(
+    'neo-synephrine-b171-extra-15.jpg',
+  ),
+  // Mild 0.25% nasal spray, 0.5 oz. Barcode 302250800479.
+  // DailyMed setid 9b8e9162-e4da-14d9-e053-2995a90a2269 package photo.
+  // Front reads MILD, 0.25%, and 1/2 FL OZ (15 mL).
+  'neo-synephrine-b171-mild-15': catalogShot(
+    'neo-synephrine-b171-mild-15.jpg',
+  ),
+  // Regular 0.5% nasal spray, 0.5 oz. Barcode 302250805474.
+  // DailyMed setid ab860c10-b8cf-3f92-e053-2a95a90a7317 package photo.
+  // Front reads REGULAR, 0.5%, and 1/2 FL OZ (15 mL).
+  'neo-synephrine-b171-regular-15': catalogShot(
+    'neo-synephrine-b171-regular-15.jpg',
+  ),
+  // Sinex Severe Moisturizing Ultra Fine Mist, 0.5 oz.
+  // Barcode 323900023260.
+  // DailyMed setid 464534ee-15f8-3af8-e063-6394a90a3f18 package photo.
+  // Front reads MOISTURIZING ULTRA FINE MIST and 0.5 FL OZ (15 mL).
+  'sinex-b172-moisturizing-uf-05': catalogShot(
+    'sinex-b172-moisturizing-uf-05.jpg',
+  ),
+  // Sinex Severe Original Ultra Fine Mist, 0.5 oz.
+  // Barcode 323900023253.
+  // DailyMed setid 4645336e-40d8-89e6-e063-6294a90a7655 package photo.
+  // Front reads ORIGINAL ULTRA FINE MIST and 0.5 FL OZ (15 mL).
+  // Not the non-mist 15 mL spray.
+  'sinex-b172-original-uf-05': catalogShot(
+    'sinex-b172-original-uf-05.jpg',
+  ),
+  // Sinex Severe VapoCool Ultra Fine Mist, 0.5 oz.
+  // Barcode 323900041677.
+  // DailyMed setid 464550b3-5970-aca5-e063-6294a90a5954 package photo.
+  // Front reads VAPOCOOL ULTRA FINE MIST and 0.5 FL OZ (15 mL).
+  'sinex-b172-vapocool-05': catalogShot(
+    'sinex-b172-vapocool-05.jpg',
+  ),
+  // Sinex Severe Original nasal spray, 15 mL. Not the ultra fine mist.
+  // Barcode 323900012523.
+  // DailyMed setid 4644c4ae-9607-d404-e063-6294a90aca24 package photo.
+  // Front reads ORIGINAL and 0.5 FL OZ (15 mL). No ultra fine mist line.
+  'sinex-b173-severe-original-15': catalogShot(
+    'sinex-b173-severe-original-15.jpg',
+  ),
+  // Flu Relief Max Strength Daytime syrup, honey and elderberry, 8.3 fl oz.
+  // No barcode on the row.
+  // DailyMed setid 0324195f-506d-4747-990e-ad44e2a117d9 package photo.
+  // Front reads DAYTIME, HONEY ELDERBERRY FLAVOR, and 8.3 FL OZ (245 mL).
+  // Not the nighttime bottle.
+  'theraflu-b175-flu-day-syrup-83': catalogShot(
+    'theraflu-b175-flu-day-syrup-83.jpg',
+  ),
+  // Severe Cold Relief Daytime soft chews, apple cinnamon, 20 count.
+  // No barcode on the row.
+  // DailyMed setid 91dbb541-6a86-4803-a1fe-1bf61b457c34 package photo.
+  // Front reads DAYTIME SOFT CHEWS, APPLE CINNAMON, and 20 SOFT CHEWS.
+  'theraflu-b175-severe-day-chews-20': catalogShot(
+    'theraflu-b175-severe-day-chews-20.jpg',
+  ),
+  // Severe Cold Relief Nighttime soft chews, apple cinnamon, 20 count.
+  // No barcode on the row.
+  // DailyMed setid 6ba64bbe-7599-406a-9187-737c0f8c1c2a package photo.
+  // Front reads NIGHTTIME SOFT CHEWS, APPLE CINNAMON, and 20 SOFT CHEWS.
+  'theraflu-b175-severe-night-chews-20': catalogShot(
+    'theraflu-b175-severe-night-chews-20.jpg',
+  ),
+  // Flu Relief Max Strength Nighttime syrup, honey and elderberry, 8.3 fl oz.
+  // Barcode 300672982001.
+  // DailyMed setid 780907b8-34ba-4ec8-bcdf-b2a31bd111df package photo.
+  // Front reads NIGHTTIME, HONEY ELDERBERRY FLAVOR, and 8.3 FL OZ (245 mL).
+  // Not the daytime bottle.
+  'theraflu-b177-night-honey-elderberry-83': catalogShot(
+    'theraflu-b177-night-honey-elderberry-83.jpg',
+  ),
+  // Baby Cough Syrup + Immune, natural grape, 2 fl oz.
+  // Barcode 897233709011. Target pack shot for that code.
+  // Front reads BABY COUGH SYRUP + IMMUNE, NATURAL GRAPE, and 2 FL OZ (59 mL).
+  // Not the peach bottle.
+  'zarbees-b165-baby-cough-grape-2': catalogShot(
+    'zarbees-b165-baby-cough-grape-2.jpg',
+  ),
+  // Soothing Baby Cough Syrup, natural peach and honey, 2 fl oz.
+  // Barcode 897233709042. Target pack shot for that code.
+  // Front reads SOOTHING BABY COUGH SYRUP, NATURAL PEACH AND HONEY,
+  // and 2 FL OZ (59 mL). Not the grape immune bottle.
+  'zarbees-b165-baby-cough-peach-2': catalogShot(
+    'zarbees-b165-baby-cough-peach-2.jpg',
+  ),
+  // Kid's Cough + Mucus Day, mixed berry, 8 fl oz.
+  // Barcode 300450664051. Target pack shot for that code.
+  // Front reads COUGH + MUCUS DAY, MIXED BERRY, and 8 FL OZ (237 mL).
+  // Not the 4 fl oz immune day bottle.
+  'zarbees-b165-mucus-day-8': catalogShot(
+    'zarbees-b165-mucus-day-8.jpg',
+  ),
+  // Soothing Saline Nasal Mist with aloe, 3 oz.
+  // Barcode 857647007165. Target pack shot for that code.
+  // Front reads SOOTHING SALINE and 3 OZ (89 mL).
+  'zarbees-b165-saline-3': catalogShot(
+    'zarbees-b165-saline-3.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -31809,5 +31950,88 @@ assertBrandMark(
   });
   if (loz14?.url === loz24?.url) {
     throw new Error('14-count lozenges must not share the 24-count carton');
+  }
+}
+
+{
+  // Cold & Flu night run 2026-10-15 4:15 AM PT batch 2.
+  // Letter rows. Exact package photos. Not a sibling face.
+  const coldCartons: [string, string, string, string][] = [
+    ['coricidin-b174-night-liquid-12', 'Coricidin', 'coricidin-b174-night-liquid', 'coricidin-b174-night-liquid-12.jpg'],
+    ['coricidin-b175-cold-cough-gels-24', 'Coricidin', 'coricidin-b175-cold-cough-gels', 'coricidin-b175-cold-cough-gels-24.jpg'],
+    ['coricidin-b175-multi-flu-24', 'Coricidin', 'coricidin-b175-multi-flu', 'coricidin-b175-multi-flu-24.jpg'],
+    ['little-remedies-b165-saline-drops-1', 'Little Remedies', 'little-remedies-b165-saline-drops', 'little-remedies-b165-saline-drops-1.jpg'],
+    ['little-remedies-b165-saline-mist-3', 'Little Remedies', 'little-remedies-b165-saline-mist', 'little-remedies-b165-saline-mist-3.jpg'],
+    ['neo-synephrine-b171-extra-15', 'Neo-Synephrine', 'neo-synephrine-b171-plain', 'neo-synephrine-b171-extra-15.jpg'],
+    ['neo-synephrine-b171-mild-15', 'Neo-Synephrine', 'neo-synephrine-b171-plain', 'neo-synephrine-b171-mild-15.jpg'],
+    ['neo-synephrine-b171-regular-15', 'Neo-Synephrine', 'neo-synephrine-b171-plain', 'neo-synephrine-b171-regular-15.jpg'],
+    ['sinex-b172-moisturizing-uf-05', 'Vicks', 'sinex-b172-moisturizing-uf', 'sinex-b172-moisturizing-uf-05.jpg'],
+    ['sinex-b172-original-uf-05', 'Vicks', 'sinex-b172-original-uf', 'sinex-b172-original-uf-05.jpg'],
+    ['sinex-b172-vapocool-05', 'Vicks', 'sinex-b172-vapocool', 'sinex-b172-vapocool-05.jpg'],
+    ['sinex-b173-severe-original-15', 'Vicks', 'sinex-b172-vapocool', 'sinex-b173-severe-original-15.jpg'],
+    ['theraflu-b175-flu-day-syrup-83', 'Theraflu', 'theraflu-b175-flu-day-syrup', 'theraflu-b175-flu-day-syrup-83.jpg'],
+    ['theraflu-b175-severe-day-chews-20', 'Theraflu', 'theraflu-b175-severe-day-chews', 'theraflu-b175-severe-day-chews-20.jpg'],
+    ['theraflu-b175-severe-night-chews-20', 'Theraflu', 'theraflu-b175-severe-night-chews', 'theraflu-b175-severe-night-chews-20.jpg'],
+    ['theraflu-b177-night-honey-elderberry-83', 'Theraflu', 'theraflu-b177-night-honey-elderberry', 'theraflu-b177-night-honey-elderberry-83.jpg'],
+    ['zarbees-b165-baby-cough-grape-2', "Zarbee's", 'zarbees-b165-honey-base', 'zarbees-b165-baby-cough-grape-2.jpg'],
+    ['zarbees-b165-baby-cough-peach-2', "Zarbee's", 'zarbees-b165-honey-base', 'zarbees-b165-baby-cough-peach-2.jpg'],
+    ['zarbees-b165-mucus-day-8', "Zarbee's", 'zarbees-b165-honey-base', 'zarbees-b165-mucus-day-8.jpg'],
+    ['zarbees-b165-saline-3', "Zarbee's", 'zarbees-b165-saline', 'zarbees-b165-saline-3.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of coldCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate cold carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const neoUrls = [
+    'neo-synephrine-b171-extra-15',
+    'neo-synephrine-b171-mild-15',
+    'neo-synephrine-b171-regular-15',
+  ].map((id) => previewOverlayImage({
+    id,
+    formulaId: 'neo-synephrine-b171-plain',
+    brand: 'Neo-Synephrine',
+  })?.url);
+  if (new Set(neoUrls).size !== 3) {
+    throw new Error('Neo-Synephrine strengths must not share a carton');
+  }
+  const vapocool = previewOverlayImage({
+    id: 'sinex-b172-vapocool-05',
+    formulaId: 'sinex-b172-vapocool',
+    brand: 'Vicks',
+  });
+  const sinexOriginal = previewOverlayImage({
+    id: 'sinex-b173-severe-original-15',
+    formulaId: 'sinex-b172-vapocool',
+    brand: 'Vicks',
+  });
+  if (vapocool?.url === sinexOriginal?.url) {
+    throw new Error('Sinex original 15 mL must not share the VapoCool mist');
+  }
+  const honeyUrls = [
+    'zarbees-b165-baby-cough-grape-2',
+    'zarbees-b165-baby-cough-peach-2',
+    'zarbees-b165-mucus-day-8',
+  ].map((id) => previewOverlayImage({
+    id,
+    formulaId: 'zarbees-b165-honey-base',
+    brand: "Zarbee's",
+  })?.url);
+  if (new Set(honeyUrls).size !== 3) {
+    throw new Error('Zarbee honey syrups must not share a carton');
+  }
+  assertLetterOnly('zarbees-b167-immune-day-4', "Zarbee's");
+  const immuneDay = previewOverlayImage({
+    id: 'zarbees-b167-immune-day-4',
+    formulaId: 'zarbees-b165-honey-base',
+    brand: "Zarbee's",
+  });
+  if (!immuneDay?.url.startsWith('data:image/svg+xml') || immuneDay.verifiedSku) {
+    throw new Error('immune day 4 fl oz must stay a letter');
   }
 }
