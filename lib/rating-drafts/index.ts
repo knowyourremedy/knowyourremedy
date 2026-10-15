@@ -169,3 +169,4 @@ export { BATCH169_KYR6C_LOLLIPOPS } from './batch169-kyr6c-lollipops';
 export { BATCH170_KYR6C_GAS_DROPS_STRAWBERRY } from './batch170-kyr6c-gas-drops-strawberry';
 export { BATCH171_KYR6C_AFRIN_NEO_SINEX } from './batch171-kyr6c-afrin-neo-sinex';
 export { BATCH172_KYR6C_NASAL_HELD } from './batch172-kyr6c-nasal-held';
+export { BATCH173_KYR6C_THREE_SINGLES } from './batch173-kyr6c-three-singles';
