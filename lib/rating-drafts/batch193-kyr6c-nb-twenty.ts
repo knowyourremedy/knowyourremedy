@@ -104,9 +104,9 @@ flag(B12_200_PANEL, 'Dicalcium Phosphate', 'cleared', METH.dicalcium),
       flag(B12_200_PANEL, 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
     ],
     verdict: 'caution',
-    retailers: ['Walgreens', 'Target', 'Amazon'],
+    retailers: ['Target', 'Amazon'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/b-12-1000-mcg-200-tablets — Serving size 1 Tablet. Servings per container / count: 200 (servings per container on panel). Other ingredients quote: Dicalcium Phosphate, Vegetable Cellulose, Vegetable Stearic Acid. Contains <2% of: Natural Palm Leaf Glaze, Silica, Vegetable Magnesium Stearate.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5280-57 — HTTP 200, data[] empty (no SPL for NDC 74312-5280-57). Opened https://www.target.com/p/nature-39-s-bounty-vitamin-b-12-1000mcg-tablets-200ct/-/A-94911192 — title Nature's Bounty Vitamin B-12 1000mcg Tablets - 200ct; Pickup/Delivery shown (price not in fetch extract). Opened https://www.cvs.com/search?searchTerm=074312528057 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 — Nature's Bounty Vitamin B-12 1000mcg Tablets, Value Size - 200 ea at $24.99 with Add to cart, Shipping Available. Opened https://www.amazon.com/Natures-Bounty-Supplement-Supports-Metabolism/dp/B00DYSUQR2 — 200 Count, UPC 074312528057, $9.97, In Stock, sold by Amazon.com. Opened https://www.walmart.com/search?q=074312528057 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312528057+Nature%27s+Bounty+B-12+200 — Google Search (minimal body); corroborating sale page opened: https://www.amazon.com/Natures-Bounty-Supplement-Supports-Metabolism/dp/B00DYSUQR2.",
+      "Brand page b-12-1000-mcg-200-tablets was read (panel). DailyMed NDC 74312-5280-57 returned HTTP 200 with an empty data[] array. Target PDP https://www.target.com/p/nature-39-s-bounty-vitamin-b-12-1000mcg-tablets-200ct/-/A-94911192 opened with title showing 200ct and Pickup/Delivery (price not in fetch extract). CVS search returned HTTP 403. Walgreens product page https://www.walgreens.com/store/c/nature's-bounty-vitamin-b-12-1000mcg-tablets,-value-size/ID=prod3430759-product returned Access Denied in this pass (not a list page). Amazon PDP https://www.amazon.com/Natures-Bounty-Supplement-Supports-Metabolism/dp/B00DYSUQR2 was used for same-count sale verification when it opened in the prior ladder pass (200 count, sold by Amazon.com). Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
   {
@@ -133,7 +133,7 @@ flag(B12_LIQUID_PANEL, 'Purified Water', 'cleared', METH.water),
     verdict: 'caution',
     retailers: ['Walgreens'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/b-12-5000-mcg-2-oz-liquid — Serving size 1 mL. Servings per container / count: 59 (servings per container on panel). Other ingredients quote: Purified Water, Sorbitol, Vegetable Glycerin, Natural Berry Flavor, Citric Acid, Potassium Sorbate (preservative).. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1818-70 — HTTP 200, data[] empty (no SPL for NDC 74312-1818-70). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+b12+5000+liquid — search results did not surface a priced 59-dose / 2 fl oz PDP. Opened https://www.cvs.com/search?searchTerm=074312181870 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 — Nature's Bounty B-12 5000 mcg Dietary Supplement Liquid Berry - 2 fl oz at $19.99 with Add to cart and Shipping Available (59 doses per brand panel). Opened https://www.amazon.com/Natures-Bounty-Super-Strength-B-12/dp/B00TDFGJK8 — UPC 074312181870, 2 Fluid Ounces; fetch showed no featured offer price / buy box. Opened https://www.walmart.com/search?q=074312181870 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312181870+Nature%27s+Bounty+B-12+liquid — minimal content; corroborating page: https://www.amazon.com/Natures-Bounty-Super-Strength-B-12/dp/B00TDFGJK8.",
+      "Brand page b-12-5000-mcg-2-oz-liquid was read: 59 servings per container on panel; bottle is 2 fl oz. DailyMed NDC 74312-1818-70 returned HTTP 200 with an empty data[] array. Target search did not open a priced 2 fl oz PDP. CVS search returned HTTP 403. Walgreens product page https://www.walgreens.com/store/c/nature's-bounty-b-12-5000-mcg-dietary-supplement-liquid-berry/ID=prod6090940-product is the sale URL for this SKU; automated fetch returned Access Denied, while indexed Walgreens PDP copy shows sold unit 2 fl oz (not 59 doses on the shelf line) with Add to cart and shipping. Amazon PDP https://www.amazon.com/Natures-Bounty-Super-Strength-B-12/dp/B00TDFGJK8 opened without a solid buy box in automated fetch. Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
   {
@@ -157,9 +157,9 @@ flag(BIOTIN_SOFTGEL_PANEL, 'Soybean Oil', 'cleared', METH.soyFill),
       flag(BIOTIN_SOFTGEL_PANEL, 'Titanium Dioxide Color', 'high', METH.tio2),
     ],
     verdict: 'avoid',
-    retailers: ['Walgreens', 'Target'],
+    retailers: ['Target'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/biotin-10000-mcg-120-rapid-release-softgels — Serving size 1 Softgel. Servings per container / count: 120 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5169-79 — HTTP 200, data[] empty (no SPL for NDC 74312-5169-79). Opened https://www.target.com/p/nature-39-s-bounty-biotin-10000mcg-dietary-supplement-softgels-120ct/-/A-94911185 — 120ct title, Pickup/Delivery (price not in fetch extract). Opened https://www.cvs.com/search?searchTerm=074312516979 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 — Ultra Strength Biotin 10,000mcg Softgels - 120 ea at $19.99 with Add to cart. Opened https://www.amazon.com/s?k=074312516979 — HTTP 200 search page via curl; no product card parsed in automated fetch. Opened https://www.walmart.com/search?q=074312516979 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312516979+biotin+120 — minimal content; corroborating page: https://www.target.com/p/nature-39-s-bounty-biotin-10000mcg-dietary-supplement-softgels-120ct/-/A-94911185.",
+      "Brand page biotin-10000-mcg-120-rapid-release-softgels was read (panel). DailyMed NDC 74312-5169-79 returned HTTP 200 with an empty data[] array. Target PDP https://www.target.com/p/nature-39-s-bounty-biotin-10000mcg-dietary-supplement-softgels-120ct/-/A-94911185 opened with 120ct in the title and Pickup/Delivery. CVS search returned HTTP 403. Walgreens product search did not open a /store/c/.../ID=prod… PDP for 120 ea in this pass. Amazon UPC search returned HTTP 200 without a parsed 1P buy box. Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
   {
@@ -185,33 +185,7 @@ flag(BIOTIN_5000_150_PANEL, 'Soybean Oil', 'cleared', METH.soyFill),
     verdict: 'avoid',
     retailers: ['Walgreens'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/biotin-5000-mcg-150-rapid-release-softgels — Serving size 1 Softgel. Servings per container / count: 150 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2961-92 — HTTP 200, data[] empty (no SPL for NDC 74312-2961-92). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+5000+150 — no 150-count PDP with price in fetch. Opened https://www.cvs.com/search?searchTerm=074312296192 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-biotin/N=20001151-2712 — Biotin Softgels, 5000 mcg Value Size - 150 ea at $29.99 with Add to cart and Shipping Available. Opened https://www.amazon.com/s?k=074312296192 — HTTP 200 search; no parsed buy box this pass. Opened https://www.walmart.com/search?q=074312296192 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312296192+biotin+150 — minimal content; corroborating page: https://www.walgreens.com/store/c/productlist/nature's-bounty-biotin/N=20001151-2712.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b193-biotin-5000-72',
-    productName: "Nature's Bounty Biotin 5,000 mcg (72 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b193-biotin-softgel-tio2',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312134302',
-    activeIngredients: [{ name: 'Biotin (d-biotin)', strength: '5,000 mcg per softgel' }],
-    inactiveIngredients: [
-flag(BIOTIN_5000_72_PANEL, 'Soybean Oil', 'cleared', METH.soyFill),
-      flag(BIOTIN_5000_72_PANEL, 'Gelatin', 'cleared', METH.gelatin),
-      flag(BIOTIN_5000_72_PANEL, 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag(BIOTIN_5000_72_PANEL, 'Yellow Beeswax', 'cleared', METH.beeswax),
-      flag(BIOTIN_5000_72_PANEL, 'Titanium Dioxide Color', 'high', METH.tio2),
-    ],
-    verdict: 'avoid',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/biotin-5000-mcg-72-capsules — Serving size 1 softgel. Servings per container / count: 72 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1343-02 — HTTP 200, data[] empty (no SPL for NDC 74312-1343-02). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+5000+72 — no 72-count PDP with price in fetch. Opened https://www.cvs.com/search?searchTerm=074312134302 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/vitamin-b7-biotin-hair,-skin-&-nails-supplements/N=361599-100079501 — no 72-count Biotin 5000 mcg card; 60 ea and 120 ea biotin lines only. Opened https://www.amazon.com/Natures-Bounty-Biotin-000-Caps/dp/B00DU7G2WK — 72 ct, $7.89, In Stock (3P seller My Great Goods). Opened https://www.walmart.com/search?q=074312134302 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312134302+biotin+72 — minimal content; corroborating page: https://www.amazon.com/Natures-Bounty-Biotin-000-Caps/dp/B00DU7G2WK.",
+      "Brand page biotin-5000-mcg-150-rapid-release-softgels was read (panel). DailyMed NDC 74312-2961-92 returned HTTP 200 with an empty data[] array. Target search did not open a priced 150-count PDP. CVS search returned HTTP 403. Walgreens product page https://www.walgreens.com/store/c/nature's-bounty-biotin-softgels,-5000-mcg-value-size/ID=prod6123619-product is the sale URL for 150 ea; automated fetch returned Access Denied while indexed PDP copy shows 150 ea at $29.99 with Add to cart and shipping. Amazon UPC search returned HTTP 200 without a parsed 1P buy box. Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
   {
@@ -237,7 +211,7 @@ flag(CALCIUM_D3_PANEL, 'Vegetable Cellulose', 'cleared', METH.cellulose),
     verdict: 'clean',
     retailers: ['Walgreens'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/calcium-plus-vitamin-d3-500-mg-300-tablets — Serving size 1 Tablet. Servings per container / count: 300 (servings per container on panel). Other ingredients quote: Vegetable Cellulose, Vegetable Magnesium Stearate. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0708-77 — HTTP 200, data[] empty (no SPL for NDC 74312-0708-77). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+calcium+500+d3+300 — no Nature's Bounty 300-tablet PDP (Nature Made/other brands only). Opened https://www.cvs.com/search?searchTerm=074312070877 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/search/tier3/productlist/N=2712-2000012663-2000011156 — Calcium 500mg with Vitamin D3, Tablets - 300 ea at $16.99 with Add for delivery. Opened https://www.amazon.com/s?k=074312070877 — HTTP 200 search; no parsed buy box. Opened https://www.walmart.com/search?q=074312070877 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312070877+calcium+300 — minimal content; corroborating page: https://www.walgreens.com/search/tier3/productlist/N=2712-2000012663-2000011156.",
+      "Brand page calcium-plus-vitamin-d3-500-mg-300-tablets was read (panel). DailyMed NDC 74312-0708-77 returned HTTP 200 with an empty data[] array. Target search did not open a Nature's Bounty 300-tablet PDP. CVS search returned HTTP 403. Walgreens product page https://www.walgreens.com/store/c/nature's-bounty-calcium-500mg-with-vitamin-d3,-tablets/ID=prod3430745-product returned Access Denied in automated fetch; indexed PDP copy shows Calcium 500mg with Vitamin D3 Tablets 300 ea with Add to cart when the page opens. Amazon UPC search returned HTTP 200 without a parsed 1P buy box. Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
   {
@@ -259,35 +233,9 @@ flag(FISH_OIL_PANEL, 'Gelatin', 'cleared', METH.gelatin),
       flag(FISH_OIL_PANEL, 'Mixed Natural Tocopherols', 'cleared', METH.tocopherol),
     ],
     verdict: 'clean',
-    retailers: ['Walgreens', 'Amazon'],
-    sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/fish-oil-1000-mg-145-rapid-release-softgels — Serving size 1 Softgel. Servings per container / count: 145 (servings per container on panel). Other ingredients quote: Gelatin, Vegetable Glycerin, Mixed Natural Tocopherols.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0382-28 — HTTP 200, data[] empty (no SPL for NDC 74312-0382-28). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+fish+oil+145 — no 145-count 1000 mg PDP (2400 mg 90ct only). Opened https://www.cvs.com/search?searchTerm=074312038228 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-fish-oil/N=361759-2712 — Fish Oil With Omega 3 Softgels, 1000 mg - 145 ea at $22.99 with Add to cart and Shipping Available. Opened https://www.amazon.com/Natures-Bounty-Fish-Omega-3-Count/dp/B0777M3GD7 — 145 Count, UPC 074312038228, $10.32, In Stock. Opened https://www.walmart.com/search?q=074312038228 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312038228+fish+oil+145 — minimal content; corroborating page: https://www.amazon.com/Natures-Bounty-Fish-Omega-3-Count/dp/B0777M3GD7.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b193-coq10-100-45',
-    productName: "Nature's Bounty Co Q-10 100 mg (45 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b193-coq10-100-45',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312048869',
-    activeIngredients: [{ name: 'Coenzyme Q-10 (Q-Sorb)', strength: '100 mg per softgel' }],
-    inactiveIngredients: [
-flag(COQ10_45_PANEL, 'Rice Bran Oil', 'cleared', METH.riceBranFill),
-      flag(COQ10_45_PANEL, 'Gelatin', 'cleared', METH.gelatin),
-      flag(COQ10_45_PANEL, 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag(COQ10_45_PANEL, 'Soy Lecithin', 'cleared', METH.soyLecithin),
-      flag(COQ10_45_PANEL, 'Titanium Dioxide Color', 'high', METH.tio2),
-    ],
-    verdict: 'avoid',
     retailers: ['Amazon'],
     sourcesGeneral: [
-      "Opened https://naturesbounty.com/products/co-q-10-100-mg-45-rapid-release-softgels — Serving size 1 Softgel. Servings per container / count: 45 (servings per container on panel). Other ingredients quote: Rice Bran Oil, Gelatin, Vegetable Glycerin. Contains <2% of: Soy Lecithin, Titanium Dioxide Color.. Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0488-69 — HTTP 200, data[] empty (no SPL for NDC 74312-0488-69). Opened https://www.target.com/s?searchTerm=nature%27s+bounty+coq10+45 — no 45-count Co Q-10 PDP with price in fetch. Opened https://www.cvs.com/search?searchTerm=074312048869 — BLOCKED HTTP 403 Access Denied. Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-coq10/N=361731-2712 — CoQ10 Softgels 100 mg - 75 ea only; no 45 ea card. Opened https://www.amazon.com/dp/B01GQCR13O — 45 Count, UPC 074312048869, $14.09, Only 16 left in stock - order soon. Opened https://www.walmart.com/search?q=074312048869 — BLOCKED HTTP 200 (robot check / forbidden). Opened https://www.google.com/search?q=074312048869+coq10+45 — minimal content; corroborating page: https://www.amazon.com/dp/B01GQCR13O.",
+      "Brand page fish-oil-1000-mg-145-rapid-release-softgels was read (panel). DailyMed NDC 74312-0382-28 returned HTTP 200 with an empty data[] array. Target search did not open a 145-count 1000 mg PDP. CVS search returned HTTP 403. Walgreens product page https://www.walgreens.com/store/c/nature's-bounty-fish-oil-with-omega-3-softgels,-1000-mg/ID=prod3430770-product returned Access Denied in automated fetch. Amazon PDP https://www.amazon.com/Natures-Bounty-Fish-Omega-3-Count/dp/B0777M3GD7 opened in the prior ladder pass with 145 count in stock (sold by Amazon.com when that page opened). Walmart search returned a robot check. Google AI mode with udm=50 did not render citations in automated fetch.",
     ],
   },
 ];
@@ -308,7 +256,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 8) throw new Error(`batch193 row count ${ROWS.length}`);
+if (ROWS.length !== 6) throw new Error(`batch193 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch193 duplicate id');
 
