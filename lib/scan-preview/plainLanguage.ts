@@ -379,6 +379,46 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return 'Shea in a cream is Cleared. The PEG is the process. That is why it is Usable.';
   }
 
+  if (/polyoxyl 15 hydroxystearate/.test(n)) {
+    return 'Polyoxyl 15 hydroxystearate is a USP excipient. The Cosmetic Ingredient Review says hydroxystearic acid is safe when the formula is non-irritating. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. That is why it is Usable.';
+  }
+
+  if (/ppg 12 buteth 16|peg 12 buteth 16/.test(n)) {
+    return 'The Cosmetic Ingredient Review says this ingredient is safe when the formula is non-irritating. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. That is why it is Usable.';
+  }
+
+  if (/octyldodecanol/.test(n)) {
+    return 'The Cosmetic Ingredient Review says octyldodecanol is safe as used. EWG rates it low. That is why it is Usable.';
+  }
+
+  if (/benzethonium chloride/.test(n)) {
+    return 'Benzethonium chloride does the same job as benzalkonium chloride. The Cosmetic Ingredient Review says it is safe at 0.5% on skin. That percent is how it is used. That is why it is Usable.';
+  }
+
+  if (/starch acrylates acrylamide copolymer/.test(n)) {
+    return 'Starch/acrylates/acrylamide copolymer maps to polyacrylamide. That is why it is Usable.';
+  }
+
+  if (/stearalkonium hectorite/.test(n)) {
+    return 'The Cosmetic Ingredient Review says stearalkonium hectorite is safe as used. That is why it is Usable.';
+  }
+
+  if (/dimethyl ether/.test(n)) {
+    return 'Dimethyl ether is a spray propellant. It has low toxicity. That is why it is Usable.';
+  }
+
+  if (/silica dimethyl silylate/.test(n)) {
+    return 'The Cosmetic Ingredient Review says silica dimethyl silylate is safe when the final product is not irritating or sensitizing to the respiratory tract. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. That is why it is Usable.';
+  }
+
+  if (/cyclomethicone/.test(n)) {
+    return 'The Cosmetic Ingredient Review says cyclomethicone is safe as used. Europe restricts the D4 impurity. That is why it is Usable.';
+  }
+
+  if (/dimethicone vinyl dimethicone crosspolymer|vinyl dimethicone methicone silsesquioxane crosspolymer/.test(n)) {
+    return 'The Cosmetic Ingredient Review says this silicone crosspolymer is safe as used. That is why it is Usable.';
+  }
+
   if (/polyoxyl lauryl ether|polyoxyl stearyl ether|polyoxyethylene \(23\) cetyl ether|polyoxyl 20 cetostearyl ether/.test(n)) {
     return 'This is in the polyoxyl family. That is why it is Usable.';
   }
@@ -505,7 +545,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (/silicon dioxide|\bsilica\b|\be551\b|colloidal anhydrous silica|colloidal silicone dioxide/.test(n) && !/silicate|6x|homeopathic/.test(n)) {
+  if (/silicon dioxide|\bsilica\b|\be551\b|colloidal anhydrous silica|colloidal silicone dioxide/.test(n) && !/silicate|6x|homeopathic|dimethyl silylate/.test(n)) {
     return close(
       'Silicon dioxide is a powder that keeps ingredients from clumping. A 2018 European review found no confirmed harm, but left an open question about the tiny-particle form.',
       level,
@@ -940,7 +980,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Shellac is a glaze used to coat tablets.', level);
   }
 
-  if (/dimethicone|dimethiconol/.test(n)) {
+  if (/dimethicone|dimethiconol/.test(n) && !/crosspolymer|cyclomethicone/.test(n)) {
     return close('Dimethicone is a silicone used as a skin protectant or coating.', level);
   }
 

@@ -182,3 +182,4 @@ export { BATCH182_KYR6C_HELD_PACKS } from './batch182-kyr6c-held-packs';
 export { BATCH183_KYR6C_PAW_PATROL } from './batch183-kyr6c-paw-patrol';
 export { BATCH184_KYR6C_PAIN_LINE } from './batch184-kyr6c-pain-line';
 export { BATCH185_KYR6C_ANTIFUNGAL } from './batch185-kyr6c-antifungal';
+export { BATCH186_KYR6C_ANTIFUNGAL_HELD } from './batch186-kyr6c-antifungal-held';
