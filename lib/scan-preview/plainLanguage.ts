@@ -395,6 +395,14 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is a sugar alcohol. Large amounts can upset the gut.', level);
   }
 
+  if (/n butyl alcohol/.test(n) && !/tert/.test(n)) {
+    return 'N-butyl alcohol is a flavor solvent, the same kind of vehicle as grain alcohol. The vapor and workplace irritant finding is not this chewable dose. That is why it is Usable.';
+  }
+
+  if (/ethyl acetate/.test(n)) {
+    return 'Ethyl acetate is a flavor solvent. That is why it is Usable.';
+  }
+
   if (/^alcohol$|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol/.test(n)) {
     return close(
       'This alcohol is the liquid that carries the other ingredients. It is not a drinking-alcohol dose, and it is not the gummy seed-oil rule.',
