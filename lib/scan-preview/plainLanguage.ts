@@ -206,6 +206,19 @@ function isVagueRice(name: string): boolean {
 export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
   'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder). Clean. Named or not. Sweetener or color. Not a sugar row. Not Usable. High fructose corn syrup stays its own row. Locked Oct 15, 2026.';
 
+export const HYDROGENATED_OIL_LOCK_SOURCE =
+  'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, and hydrogenated castor oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026.';
+
+const HYDROGENATED_OIL_WHY =
+  'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
+
+// Five named hydrogenated oils. Lecithin is not an oil. Polyoxyl and PEG castor stay their own row.
+export function isHydrogenatedOilLock(name: string): boolean {
+  const n = norm(name);
+  if (/lecithin|polyoxyl|\bpeg\b|polyethylene glycol/.test(n)) return false;
+  return /hydrogenated (cottonseed|soybean|vegetable|coconut|castor) oil/.test(n);
+}
+
 const FRUIT_VEGETABLE_JUICE_WHY = close(
   'This is fruit or vegetable juice, puree, concentrate, or powder. It is not a sugar, and it is not high fructose corn syrup.',
   'cleared',
@@ -257,6 +270,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   if (isFruitVegetableJuiceLock(ingredient.name) && (level !== 'cleared' || juiceLockSource)) {
     return FRUIT_VEGETABLE_JUICE_WHY;
   }
+  if (isHydrogenatedOilLock(ingredient.name)) return HYDROGENATED_OIL_WHY;
   const oil = seedOilLabel(ingredient.name);
 
   if (/aspartame|nutrasweet|\be951\b/.test(n)) {
@@ -426,7 +440,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is a sugar alcohol. Large amounts can upset the gut.', level);
   }
 
-  if (/n butyl alcohol/.test(n) && !/tert/.test(n)) {
+  if ((/n butyl alcohol/.test(n) || /n butanol/.test(n)) && !/tert/.test(n)) {
     return 'N-butyl alcohol is a flavor solvent, the same kind of vehicle as grain alcohol. The vapor and workplace irritant finding is not this chewable dose. That is why it is Usable.';
   }
 
@@ -434,7 +448,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return 'Ethyl acetate is a flavor solvent. That is why it is Usable.';
   }
 
-  if (/^alcohol$|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol/.test(n)) {
+  if (/^alcohol$|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol|\bethanol\b/.test(n)) {
     return close(
       'This alcohol is the liquid that carries the other ingredients. It is not a drinking-alcohol dose, and it is not the gummy seed-oil rule.',
       level,
@@ -572,6 +586,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/glycerin|glycerine|glycerol/.test(n) && !/monostearate|stearate|dibeben/.test(n)) {
     return close('Glycerin is a moisture-keeping ingredient and a softgel plasticizer.', level);
+  }
+
+  if (/sodium ascorbate/.test(n)) {
+    return close('Sodium ascorbate is in the same ascorbate family as calcium ascorbate.', 'cleared');
   }
 
   if (/citric acid|ascorbic acid|sodium citrate|trisodium citrate|magnesium citrate|potassium citrate|calcium ascorbate/.test(n)) {
@@ -829,6 +847,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/iron oxide|ferric oxide/.test(n)) {
     return close('Iron oxide is a mineral color. It is not a synthetic FD&C dye.', level);
+  }
+
+  if (/edible dye free ink|dye free ink/.test(n)) {
+    return 'The colorant in this ink is not named. It is not an FD&C lake. That is why it is Usable.';
   }
 
   if (/pharmaceutical ink|edible ink|imprinting ink|black ink|white ink/.test(n) || n === 'ink') {
