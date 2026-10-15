@@ -32,7 +32,8 @@ const METH = {
   lecithin: 'Methodology §5 Cleared (lecithin / soy lecithin / sunflower lecithin).',
   limeOil: 'Methodology §5 Cleared (lime oil flavor in a softgel fill).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
-  oatOil: 'Methodology §5 Cleared (oat oil as softgel fill).',
+  oatOil:
+    'Methodology §5 Cleared (oat oil as softgel or capsule fill). Same form split as sunflower oil and rice bran oil. Locked Oct 15, 2026.',
   oliveFill: 'Methodology §5 Cleared (olive oil as softgel fill).',
   peg: 'Methodology §5 Moderate (polyethylene glycol).',
   pectin: 'Methodology §5 Cleared (pectin).',
@@ -619,7 +620,7 @@ flag(COQ10_45_PANEL, 'Rice Bran Oil', 'cleared', METH.riceBranFill),
     barcode: '074312011269',
     activeIngredients: [{ name: 'Coenzyme Q-10', strength: '100 mg per softgel' }],
     inactiveIngredients: [
-flag(TRIPLE_COQ10_PANEL, 'Lime Oil', 'cleared', METH.limeOil),
+      flag(TRIPLE_COQ10_PANEL, 'Lime Oil', 'cleared', METH.limeOil),
       flag(TRIPLE_COQ10_PANEL, 'Gelatin', 'cleared', METH.gelatin),
       flag(TRIPLE_COQ10_PANEL, 'Castor Oil', 'cleared', METH.castor),
       flag(TRIPLE_COQ10_PANEL, 'Vegetable Glycerin', 'cleared', METH.glycerin),

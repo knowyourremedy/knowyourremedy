@@ -1173,6 +1173,19 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Rice bran oil is a carrier oil in a softgel or capsule fill. It is not the gummy you chew, and it is not rice bran extract.', level);
   }
 
+  if (/oat oil/.test(n)) {
+    if (level === 'high') {
+      return close(
+        'Oat oil is Not clean when it is the base of a gummy. You are chewing the oil. That is the form this app flags.',
+        level,
+      );
+    }
+    return close(
+      'Oat oil is a carrier oil in a softgel or capsule fill. It is not the gummy you chew. Same form split as sunflower oil and rice bran oil.',
+      level,
+    );
+  }
+
   if (/^l leucine$|^leucine$/.test(n)) {
     return close('Leucine is an amino acid used as a tablet filler.', level);
   }
