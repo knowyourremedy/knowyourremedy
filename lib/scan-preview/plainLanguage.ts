@@ -387,6 +387,21 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return 'The source says this ingredient is safe when the formula is non-irritating. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. That is why it is Usable.';
   }
 
+  if (/carbomer interpolymer/.test(n)) {
+    if (level === 'cleared') {
+      return 'Carbomer interpolymer is a thickener in the carbomer family. The Cosmetic Ingredient Review says it is safe as used. The European Food Safety Authority set an acceptable daily intake. That is why it is Cleared.';
+    }
+    return 'Carbomer interpolymer is a thickener in the carbomer family. The Cosmetic Ingredient Review says it is safe as used, and also when the formula is non-irritating. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. The European Food Safety Authority set an acceptable daily intake. That is why it is Usable.';
+  }
+
+  if (/acetylated monoglyceride/.test(n)) {
+    return 'Acetylated monoglycerides are a mono- and diglyceride. The Food and Drug Administration lists them as a food additive. The European Food Safety Authority found no adverse effects for humans and set no acceptable daily intake. That is why it is Usable.';
+  }
+
+  if (/cellacefate|cellulose acetate phthalate/.test(n)) {
+    return 'Cellacefate is cellulose acetate phthalate. It is an enteric coating, the same job as the enteric polymer. It is not a free phthalate. That is why it is Usable.';
+  }
+
   if (/sulisobenzone/.test(n)) {
     return 'Sulisobenzone is a UV filter. The European Union cleared it at 5%, and it has no cancer finding at that use level. That percent is how it is used. That is why it is Usable.';
   }
