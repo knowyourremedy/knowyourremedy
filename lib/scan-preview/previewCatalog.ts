@@ -177,6 +177,7 @@ import {
   BATCH175_KYR6C_HELD_TOKENS,
   BATCH176_KYR6C_GASX_TOTAL,
   BATCH177_KYR6C_ES_CHEWS_NIGHT,
+  BATCH178_KYR6C_LAXATIVES,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -386,6 +387,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH175_KYR6C_HELD_TOKENS,
   ...BATCH176_KYR6C_GASX_TOTAL,
   ...BATCH177_KYR6C_ES_CHEWS_NIGHT,
+  ...BATCH178_KYR6C_LAXATIVES,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
