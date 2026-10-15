@@ -1,0 +1,444 @@
+[
+  {
+    "id": "natures-bounty-b193-b12-200",
+    "handle": "b-12-1000-mcg-200-tablets",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5280-57 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5280-57).",
+      "brand": "Opened https://naturesbounty.com/products/b-12-1000-mcg-200-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 200 (servings per container on panel). Other ingredients quote: Dicalcium Phosphate, Vegetable Cellulose, Vegetable Stearic Acid. Contains <2% of: Natural Palm Leaf Glaze, Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/p/nature-39-s-bounty-vitamin-b-12-1000mcg-tablets-200ct/-/A-94911192 \u2014 title Nature's Bounty Vitamin B-12 1000mcg Tablets - 200ct; Pickup/Delivery shown (price not in fetch extract).",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312528057 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 \u2014 Nature's Bounty Vitamin B-12 1000mcg Tablets, Value Size - 200 ea at $24.99 with Add to cart, Shipping Available.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Supplement-Supports-Metabolism/dp/B00DYSUQR2 \u2014 200 Count, UPC 074312528057, $9.97, In Stock, sold by Amazon.com.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312528057 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312528057+Nature%27s+Bounty+B-12+200 \u2014 Google Search (minimal body); corroborating sale page opened: https://www.amazon.com/Natures-Bounty-Supplement-Supports-Metabolism/dp/B00DYSUQR2."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/b-12-1000-mcg-200-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312528057"
+  },
+  {
+    "id": "natures-bounty-b193-b12-liquid-59",
+    "handle": "b-12-5000-mcg-2-oz-liquid",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1818-70 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-1818-70).",
+      "brand": "Opened https://naturesbounty.com/products/b-12-5000-mcg-2-oz-liquid \u2014 Serving size 1 mL. Servings per container / count: 59 (servings per container on panel). Other ingredients quote: Purified Water, Sorbitol, Vegetable Glycerin, Natural Berry Flavor, Citric Acid, Potassium Sorbate (preservative)..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+b12+5000+liquid \u2014 search results did not surface a priced 59-dose / 2 fl oz PDP.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312181870 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 \u2014 Nature's Bounty B-12 5000 mcg Dietary Supplement Liquid Berry - 2 fl oz at $19.99 with Add to cart and Shipping Available (59 doses per brand panel).",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Super-Strength-B-12/dp/B00TDFGJK8 \u2014 UPC 074312181870, 2 Fluid Ounces; fetch showed no featured offer price / buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312181870 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312181870+Nature%27s+Bounty+B-12+liquid \u2014 minimal content; corroborating page: https://www.amazon.com/Natures-Bounty-Super-Strength-B-12/dp/B00TDFGJK8."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/b-12-5000-mcg-2-oz-liquid. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312181870"
+  },
+  {
+    "id": "natures-bounty-b193-b2-100",
+    "handle": "b-2-100-mg-100-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0064-01 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0064-01).",
+      "brand": "Opened https://naturesbounty.com/products/b-2-100-mg-100-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Dicalcium Phosphate, Vegetable Cellulose.Contains <2% of: Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+b2+100 \u2014 no Nature's Bounty B-2 100-count tablet PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312006401 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2712-100079523 \u2014 Vitamin B2 Riboflavin - Nature's Bounty filter returned No results found.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Riboflavin-Supplement-Metabolism/dp/B00IG04LJC \u2014 BLOCKED HTTP 403 on fetch; WebSearch cites 100 vegetarian coated tablets, UPC-linked model 640, listed ~$7.47.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312006401 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312006401+Nature%27s+Bounty+B-2+100 \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Riboflavin-Supplement-Metabolism/dp/B00IG04LJC."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/b-2-100-mg-100-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312006401"
+  },
+  {
+    "id": "natures-bounty-b193-b6-100",
+    "handle": "b-6-100-mg-100-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0065-00 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0065-00).",
+      "brand": "Opened https://naturesbounty.com/products/b-6-100-mg-100-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Dicalcium Phosphate, Vegetable Cellulose, Silica. Contains <2% of: Vegetable Magnesium Stearate, Vegetable Stearic Acid..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+b6+100 \u2014 no priced Nature's Bounty B-6 100-count PDP in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312006500 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/vitamin-b-6-vitamin-b/N=361637-2999951492 \u2014 only Nature Made B-6 100 mg 100 ea ($15.99), not Nature's Bounty.",
+      "amazon": "Opened https://www.amazon.com/NatureS-Bounty-Vitamin-100mg-Tablets/dp/B00IFZPBJW \u2014 WebSearch: 100 tablets, UPC 074312006500, ~$5.89 (direct fetch not re-run this row).",
+      "walmart": "Opened https://www.walmart.com/search?q=074312006500 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312006500+Nature%27s+Bounty+B-6+100 \u2014 minimal content; corroborating listing: https://www.amazon.com/NatureS-Bounty-Vitamin-100mg-Tablets/dp/B00IFZPBJW."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/b-6-100-mg-100-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312006500"
+  },
+  {
+    "id": "natures-bounty-b193-melatonin-bilayer-60",
+    "handle": "bi-layer-melatonin-5-mg-60-bi-layer-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5309-82 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5309-82).",
+      "brand": "Opened https://naturesbounty.com/products/bi-layer-melatonin-5-mg-60-bi-layer-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 60 (servings per container on panel). Other ingredients quote: Dicalcium Phosphate, Vegetable Cellulose. Contains <2% of: Silica, Triacetin, Vegetable Juice Color, Vegetable Magnesium Stearate, Vegetable Stearic Acid..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+dual+spectrum+melatonin+60 \u2014 no Dual Spectrum 60-count PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312530982 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-melatonin/N=361711-2712 \u2014 lists 10 mg / other melatonin SKUs only; no Dual Spectrum Bi-Layer 5 mg 60 ea card.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Spectrum-Bi-Layer-Melatonin/dp/B00H2FG8RK \u2014 fetch timed out; WebSearch: 60 bi-layer tablets, UPC 074312530982.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312530982 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312530982+Dual+Spectrum+Melatonin \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Spectrum-Bi-Layer-Melatonin/dp/B00H2FG8RK."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/bi-layer-melatonin-5-mg-60-bi-layer-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312530982"
+  },
+  {
+    "id": "natures-bounty-b193-biotin-10000-120",
+    "handle": "biotin-10000-mcg-120-rapid-release-softgels",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5169-79 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5169-79).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-10000-mcg-120-rapid-release-softgels \u2014 Serving size 1 Softgel. Servings per container / count: 120 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color..",
+      "target": "Opened https://www.target.com/p/nature-39-s-bounty-biotin-10000mcg-dietary-supplement-softgels-120ct/-/A-94911185 \u2014 120ct title, Pickup/Delivery (price not in fetch extract).",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312516979 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-vitamin-b/N=361637-2712 \u2014 Ultra Strength Biotin 10,000mcg Softgels - 120 ea at $19.99 with Add to cart.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312516979 \u2014 HTTP 200 search page via curl; no product card parsed in automated fetch.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312516979 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312516979+biotin+120 \u2014 minimal content; corroborating page: https://www.target.com/p/nature-39-s-bounty-biotin-10000mcg-dietary-supplement-softgels-120ct/-/A-94911185."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-10000-mcg-120-rapid-release-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312516979"
+  },
+  {
+    "id": "natures-bounty-b193-biotin-1000-100",
+    "handle": "biotin-1000-mcg-100-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0796-10 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0796-10).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-1000-mcg-100-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Calcium Carbonate, Vegetable Cellulose, Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+1000+100 \u2014 no 100-count biotin tablet PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312079610 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=100079501-100079623 \u2014 no Nature's Bounty Biotin 1000 mcg 100 tablets; Nature Made 120 softgels shown instead.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312079610 \u2014 HTTP 200; WebSearch did not return a clear single-100-tablet buy box in this pass.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312079610 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312079610+biotin+100 \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-1000-mcg-100-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312079610"
+  },
+  {
+    "id": "natures-bounty-b193-biotin-5000-150",
+    "handle": "biotin-5000-mcg-150-rapid-release-softgels",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2961-92 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-2961-92).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-5000-mcg-150-rapid-release-softgels \u2014 Serving size 1 Softgel. Servings per container / count: 150 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+5000+150 \u2014 no 150-count PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312296192 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-biotin/N=20001151-2712 \u2014 Biotin Softgels, 5000 mcg Value Size - 150 ea at $29.99 with Add to cart and Shipping Available.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312296192 \u2014 HTTP 200 search; no parsed buy box this pass.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312296192 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312296192+biotin+150 \u2014 minimal content; corroborating page: https://www.walgreens.com/store/c/productlist/nature's-bounty-biotin/N=20001151-2712."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-5000-mcg-150-rapid-release-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312296192"
+  },
+  {
+    "id": "natures-bounty-b193-biotin-5000-72",
+    "handle": "biotin-5000-mcg-72-capsules",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1343-02 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-1343-02).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-5000-mcg-72-capsules \u2014 Serving size 1 softgel. Servings per container / count: 72 (servings per container on panel). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+5000+72 \u2014 no 72-count PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312134302 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/vitamin-b7-biotin-hair,-skin-&-nails-supplements/N=361599-100079501 \u2014 no 72-count Biotin 5000 mcg card; 60 ea and 120 ea biotin lines only.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Biotin-000-Caps/dp/B00DU7G2WK \u2014 WebSearch: Biotin 5,000 mcg, 72 ct, ~$8.19 (direct fetch not re-run).",
+      "walmart": "Opened https://www.walmart.com/search?q=074312134302 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312134302+biotin+72 \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Biotin-000-Caps/dp/B00DU7G2WK."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-5000-mcg-72-capsules. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312134302"
+  },
+  {
+    "id": "natures-bounty-b193-black-cohosh-100",
+    "handle": "black-cohosh-450-mg-100-capsules",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-3351-12 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-3351-12).",
+      "brand": "Opened https://naturesbounty.com/products/black-cohosh-450-mg-100-capsules \u2014 Serving size 1 Capsule. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Gelatin. Contains <2% of: Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+black+cohosh+100 \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312335112 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/q/black+cohosh+root \u2014 no Nature's Bounty Black Cohosh 450 mg 100 capsules; Walgreens Free & Pure and Nature's Way 100 ea only.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312335112 \u2014 HTTP 200 search; no parsed exact-count buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312335112 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312335112+black+cohosh \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/black-cohosh-450-mg-100-capsules. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312335112"
+  },
+  {
+    "id": "natures-bounty-b193-calcium-mag-zinc-100",
+    "handle": "calcium-magnesium-zinc-100-coated-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0429-04 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0429-04).",
+      "brand": "Opened https://naturesbounty.com/products/calcium-magnesium-zinc-100-coated-tablets \u2014 Serving size 3 Caplets. Servings per container / count: 33 servings on panel (physical count per handle differs; see brand math). Other ingredients quote: Vegetable Cellulose. Contains <2% of: Titanium Dioxide Color, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+calcium+magnesium+zinc+100 \u2014 no 100 caplet PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312042904 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2712-690-2999951740 \u2014 Calcium Magnesium Zinc, Tablets - 100 ea at $8.99; Shipping out of stock / Not sold in stores (Add to cart not offered for shipping).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312042904 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312042904 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312042904+calcium+magnesium+zinc \u2014 minimal content; corroborating list: https://www.walgreens.com/store/c/productlist/N=2712-690-2999951740."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/calcium-magnesium-zinc-100-coated-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312042904"
+  },
+  {
+    "id": "natures-bounty-b193-calcium-d3-300",
+    "handle": "calcium-plus-vitamin-d3-500-mg-300-tablets",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0708-77 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0708-77).",
+      "brand": "Opened https://naturesbounty.com/products/calcium-plus-vitamin-d3-500-mg-300-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 300 (servings per container on panel). Other ingredients quote: Vegetable Cellulose, Vegetable Magnesium Stearate.",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+calcium+500+d3+300 \u2014 no Nature's Bounty 300-tablet PDP (Nature Made/other brands only).",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312070877 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/search/tier3/productlist/N=2712-2000012663-2000011156 \u2014 Calcium 500mg with Vitamin D3, Tablets - 300 ea at $16.99 with Add for delivery.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312070877 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312070877 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312070877+calcium+300 \u2014 minimal content; corroborating page: https://www.walgreens.com/search/tier3/productlist/N=2712-2000012663-2000011156."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/calcium-plus-vitamin-d3-500-mg-300-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312070877"
+  },
+  {
+    "id": "natures-bounty-b193-acidophilus-wafer-100",
+    "handle": "chewable-acidophilus-with-bifidus-100-wafer",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0572-12 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0572-12).",
+      "brand": "Opened https://naturesbounty.com/products/chewable-acidophilus-with-bifidus-100-wafer \u2014 Serving size 1 Wafer. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Sucrose, Fructose, Vegetable Cellulose, Vegetable Stearic Acid. Contains <2% of: Citric Acid, Natural Flavors, Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+acidophilus+wafer+100 \u2014 no 100 wafer PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312057212 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2712-2000012820 \u2014 Probiotic Acidophilus Dietary Supplement Tablets - 100 ea at $12.99 with Add to cart (tablets, not strawberry chewable wafers).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312057212 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312057212 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312057212+acidophilus+wafer \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/chewable-acidophilus-with-bifidus-100-wafer. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312057212"
+  },
+  {
+    "id": "natures-bounty-b193-fish-oil-145",
+    "handle": "fish-oil-1000-mg-145-rapid-release-softgels",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0382-28 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0382-28).",
+      "brand": "Opened https://naturesbounty.com/products/fish-oil-1000-mg-145-rapid-release-softgels \u2014 Serving size 1 Softgel. Servings per container / count: 145 (servings per container on panel). Other ingredients quote: Gelatin, Vegetable Glycerin, Mixed Natural Tocopherols..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+fish+oil+145 \u2014 no 145-count 1000 mg PDP (2400 mg 90ct only).",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312038228 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-fish-oil/N=361759-2712 \u2014 Fish Oil With Omega 3 Softgels, 1000 mg - 145 ea at $22.99 with Add to cart and Shipping Available.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Fish-Omega-3-Count/dp/B0777M3GD7 \u2014 145 Count, UPC 074312038228, $10.32, In Stock.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312038228 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312038228+fish+oil+145 \u2014 minimal content; corroborating page: https://www.amazon.com/Natures-Bounty-Fish-Omega-3-Count/dp/B0777M3GD7."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/fish-oil-1000-mg-145-rapid-release-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312038228"
+  },
+  {
+    "id": "natures-bounty-b193-cinnamon-100",
+    "handle": "cinnamon-1000-mg-100-capsules",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1402-04 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-1402-04).",
+      "brand": "Opened https://naturesbounty.com/products/cinnamon-1000-mg-100-capsules \u2014 Serving size 2 Capsules. Servings per container / count: 50 servings on panel (physical count per handle differs; see brand math). Other ingredients quote: Gelatin. Contains <2% of: Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+cinnamon+1000+100 \u2014 no 100-capsule PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312140204 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2000010509 \u2014 no Nature's Bounty Cinnamon 1000 mg 100 caps; only Cinnamon 2000 mg 60 ea and Walgreens-brand cinnamon.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Cinnamon-000-Caps/dp/B003LZU25O \u2014 WebSearch: Cinnamon 1,000 mg, 100 ct, ~$8.29\u20138.39 (direct fetch not re-run).",
+      "walmart": "Opened https://www.walmart.com/search?q=074312140204 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312140204+cinnamon+100 \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Cinnamon-000-Caps/dp/B003LZU25O."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/cinnamon-1000-mg-100-capsules. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312140204"
+  },
+  {
+    "id": "natures-bounty-b193-cinnamon-chromium-60",
+    "handle": "cinnamon-2000-plus-chromium-400-mcg-60-capsules",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-1506-16 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-1506-16).",
+      "brand": "Opened https://naturesbounty.com/products/cinnamon-2000-plus-chromium-400-mcg-60-capsules \u2014 Serving size 2 Capsules. Servings per container / count: 30 servings on panel (physical count per handle differs; see brand math). Other ingredients quote: Gelatin, Vegetable Cellulose. Contains <2% of: Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+cinnamon+2000+chromium+60 \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312150616 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2000010509 \u2014 High Potency Cinnamon 2000 mg Dietary Supplement Capsules - 60 ea at $15.99 with Add to cart (title does not mention chromium).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312150616 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312150616 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312150616+cinnamon+chromium+60 \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/cinnamon-2000-plus-chromium-400-mcg-60-capsules. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312150616"
+  },
+  {
+    "id": "natures-bounty-b193-cla-50",
+    "handle": "cla-1000-mg-50-rapid-release-softgels",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0516-30 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0516-30).",
+      "brand": "Opened https://naturesbounty.com/products/cla-1000-mg-50-rapid-release-softgels \u2014 Serving size 2 Softgels. Servings per container / count: 25 servings on panel (physical count per handle differs; see brand math). Other ingredients quote: Gelatin, Vegetable Glycerin, Natural Caramel Color..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+cla+50 \u2014 no 50-count CLA PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312051630 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/q/nature%27s+bounty+supplements \u2014 no CLA Tonalin 50 softgel card in first-page extract.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Tonalin-1000-Softgels/dp/B0061GKXXQ \u2014 WebSearch: Tonalin CLA 1000 mg, 50 ct, UPC 074312051630.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312051630 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312051630+CLA+50 \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Tonalin-1000-Softgels/dp/B0061GKXXQ."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/cla-1000-mg-50-rapid-release-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312051630"
+  },
+  {
+    "id": "natures-bounty-b193-probiotic-cd-30",
+    "handle": "controlled-delivery-probiotic-30-caplets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5152-00 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5152-00).",
+      "brand": "Opened https://naturesbounty.com/products/controlled-delivery-probiotic-30-caplets \u2014 Serving size 1 Caplet. Servings per container / count: 30 (servings per container on panel). Other ingredients quote: Vegetable Cellulose, Pectin, Sodium Carbonate. Contains <2% of: Guar Gum, Turmeric (Color), Vegetable Stearic Acid..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+controlled+delivery+probiotic+30 \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312515200 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=2712-2000011503 \u2014 Ultra Strength Probiotic 10 - 30 ea at $31.99 with Add to cart (different product name than Controlled Delivery Probiotic CD).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312515200 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312515200 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312515200+controlled+delivery+probiotic \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/controlled-delivery-probiotic-30-caplets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312515200"
+  },
+  {
+    "id": "natures-bounty-b193-probiotic-cd30",
+    "handle": "controlled-delivery-probiotic-cd-30-caplets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5499-84 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5499-84).",
+      "brand": "Opened https://naturesbounty.com/products/controlled-delivery-probiotic-cd-30-caplets \u2014 Serving size 1 Caplet. Servings per container / count: 30 (servings per container on panel). Other ingredients quote: Vegetable Cellulose, Pectin, Sodium Carbonate. Contains <2% of: Guar Gum, Turmeric (Color), Vegetable Stearic Acid..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+probiotic+cd+30 \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312549984 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=3000007685 \u2014 Ultra Strength Probiotic 10 - 30 ea at $29.99 with Add to cart (30 count but not Probiotic CD labeling).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312549984 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312549984 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312549984+probiotic+cd \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/controlled-delivery-probiotic-cd-30-caplets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312549984"
+  },
+  {
+    "id": "natures-bounty-b193-coq10-100-45",
+    "handle": "co-q-10-100-mg-45-rapid-release-softgels",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0488-69 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0488-69).",
+      "brand": "Opened https://naturesbounty.com/products/co-q-10-100-mg-45-rapid-release-softgels \u2014 Serving size 1 Softgel. Servings per container / count: 45 (servings per container on panel). Other ingredients quote: Rice Bran Oil, Gelatin, Vegetable Glycerin. Contains <2% of: Soy Lecithin, Titanium Dioxide Color..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+coq10+45 \u2014 no 45-count Co Q-10 PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312048869 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-coq10/N=361731-2712 \u2014 CoQ10 Softgels 100 mg - 75 ea only; no 45 ea card.",
+      "amazon": "Opened https://www.amazon.com/dp/B01GQCR13O \u2014 WebSearch: Nature's Bounty CoQ10 Rapid Release Softgels, 45 Count, ~$19.98.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312048869 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312048869+coq10+45 \u2014 minimal content; corroborating listing: https://www.amazon.com/dp/B01GQCR13O."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/co-q-10-100-mg-45-rapid-release-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312048869"
+  },
+  {
+    "id": "natures-bounty-b193-triple-absorb-coq10-90",
+    "handle": "advanced-triple-absorb-coq10",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0112-69 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0112-69).",
+      "brand": "Opened https://naturesbounty.com/products/advanced-triple-absorb-coq10 \u2014 Serving size 1 Gummies. Servings per container / count: 90 (servings per container on panel). Other ingredients quote: Lime Oil, Gelatin, Castor Oil, Vegetable Glycerin, Polyethylene Glycol, Coconut Oil, Olive Oil. Contains <2% of: Annatto (Color), Lecithin, Oat Oil, Vitamin E Acetate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+triple+absorb+coq10+90 \u2014 no 90 softgel PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312011269 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=100079554 \u2014 no Advanced Triple Absorb Co Q-10 90; Advanced Magnesium Glycinate 90 caps only.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312011269 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312011269 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312011269+triple+absorb+coq10 \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/advanced-triple-absorb-coq10. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312011269"
+  },
+  {
+    "id": "batch194-c-rose-hips-90",
+    "handle": "c-with-rose-hips-500-mg-90-chewable-tablets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0388-08 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0388-08).",
+      "brand": "Opened https://naturesbounty.com/products/c-with-rose-hips-500-mg-90-chewable-tablets \u2014 Serving size 1 Tablet. Servings per container / count: 90 (servings per container on panel). Other ingredients quote: Sucrose, Sorbitol, Vegetable Stearic Acid. Contains <2% of: Annatto Extract (Color), Natural Orange Flavor, Silica, Vegetable Cellulose, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+vitamin+c+rose+hips+90+chewable \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312038808 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/q/nature%27s+bounty+supplements \u2014 no Vitamin C 500 mg Rose Hips 90 chewable card in extract.",
+      "amazon": "Opened https://www.amazon.com/Natures-Bounty-Vitamin-Chewable-Tablets/dp/B074V3B6B8 \u2014 WebSearch: 90 chewable tablets, model 74312038808 / UPC 074312038808.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312038808 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312038808+vitamin+c+90+chewable \u2014 minimal content; corroborating listing: https://www.amazon.com/Natures-Bounty-Vitamin-Chewable-Tablets/dp/B074V3B6B8."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/c-with-rose-hips-500-mg-90-chewable-tablets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312038808"
+  },
+  {
+    "id": "batch194-c-rose-hips-100",
+    "handle": "c-with-rose-hips-tablets-1000-mg-100-coated-caplets",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-0069-06 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-0069-06).",
+      "brand": "Opened https://naturesbounty.com/products/c-with-rose-hips-tablets-1000-mg-100-coated-caplets \u2014 Serving size 1 Caplet. Servings per container / count: 100 (servings per container on panel). Other ingredients quote: Vegetable Cellulose. Contains <2% of: Natural Palm Leaf Glaze, Silica, Vegetable Magnesium Stearate..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+vitamin+c+1000+100+caplets \u2014 no matching PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312006906 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "NOT RUN (no Walgreens URL opened for this handle in this pass).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312006906 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312006906 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312006906+vitamin+c+100+caplets \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/c-with-rose-hips-tablets-1000-mg-100-coated-caplets. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312006906"
+  },
+  {
+    "id": "batch194-calcium-d-gummies",
+    "handle": "calcium-plus-vitamin-d-gummies",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-6794-14 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-6794-14).",
+      "brand": "Opened https://naturesbounty.com/products/calcium-plus-vitamin-d-gummies \u2014 Serving size 2 Gummies. Servings per container / count: 70 gummies per bottle (2 gummies per serving; 35 servings on panel). Other ingredients quote: Glucose Syrup, Cane Sugar, Modified Food Starch, Gelatin. Contains <2% of: Citric Acid, Fruit and Vegetable Juice Concentrate (Color), Lactic Acid, Maltodextrin, Natural Flavors. Contains bioengineered food ingredients..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+calcium+vitamin+d+gummies+70 \u2014 no 70 gummy PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312679414 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "NOT RUN (no Walgreens URL opened for calcium + D3 + zinc gummies 70-count in this pass).",
+      "amazon": "Opened https://www.amazon.com/s?k=074312679414 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312679414 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312679414+calcium+gummies+70 \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/calcium-plus-vitamin-d-gummies. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312679414"
+  },
+  {
+    "id": "batch194-biotin-gummies",
+    "handle": "biotin-gummies",
+    "sale_confirmed": false,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-7933-94 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-7933-94).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-gummies \u2014 Serving size 1 Gummies. Servings per container / count: 110 gummies (1 gummy per serving on panel). Other ingredients quote: Corn Syrup, Sugar, Gelatin, Maltodextrin. Contains <2% of: Citric Acid, Natural Flavors, Vegetable and Fruit Juice (color), Vegetable Oil (Palm) (Contains Carnauba Wax)..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+gummies+110 \u2014 no standalone Biotin Gummies 110-count PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312793394 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/N=100079501-2000014705 \u2014 Optimal Solutions Hair Skin Nails gummies 80 ea and other biotin lines; no 110-count biotin-gummies SKU.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312793394 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312793394 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312793394+biotin+gummies \u2014 minimal content."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-gummies. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=False.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312793394"
+  },
+  {
+    "id": "batch194-biotin-10000-150",
+    "handle": "biotin-10000-mcg-softgels",
+    "sale_confirmed": true,
+    "steps": {
+      "dailymed": "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-5886-55 \u2014 HTTP 200, data[] empty (no SPL for NDC 74312-5886-55).",
+      "brand": "Opened https://naturesbounty.com/products/biotin-10000-mcg-softgels \u2014 Serving size 1 Softgel. Servings per container / count: 90 softgels per supplement facts (marketing copy also mentions 150). Other ingredients quote: Soybean Oil, Gelatin, Vegetable Glycerin, Yellow Beeswax, Titanium Dioxide Color..",
+      "target": "Opened https://www.target.com/s?searchTerm=nature%27s+bounty+biotin+10000+90 \u2014 no 90-count (non-120) PDP with price in fetch.",
+      "cvs": "Opened https://www.cvs.com/search?searchTerm=074312588655 \u2014 BLOCKED HTTP 403 Access Denied.",
+      "walgreens": "Opened https://www.walgreens.com/store/c/productlist/nature's-bounty-optimal-solutions-hair,-skin-&-nails-supplements/N=361599-367668 \u2014 Optimal Solutions Biotin 10,000 mcg Softgels - 90 ea at $16.99 with Add to cart.",
+      "amazon": "Opened https://www.amazon.com/s?k=074312588655 \u2014 HTTP 200 search; no parsed buy box.",
+      "walmart": "Opened https://www.walmart.com/search?q=074312588655 \u2014 BLOCKED HTTP 200 (robot check / forbidden).",
+      "google": "Opened https://www.google.com/search?q=074312588655+biotin+10000+90 \u2014 minimal content; corroborating page: https://www.walgreens.com/store/c/productlist/nature's-bounty-optimal-solutions-hair,-skin-&-nails-supplements/N=361599-367668."
+    },
+    "sourcesGeneral_draft": "Ladder pass Oct 15 2026. Brand panel read at naturesbounty.com/products/biotin-10000-mcg-softgels. DailyMed NDC API returned empty SPL. CVS search by UPC blocked 403. Walmart search blocked/robot check. Target/Walgreens/Amazon steps as logged; sale_confirmed=True.",
+    "upc_source": "naturesbounty.com Shopify variant barcode 074312588655"
+  }
+]
