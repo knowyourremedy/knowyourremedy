@@ -187,7 +187,7 @@ if (byId['sinex-b173-severe-original-15'].formulaId !== 'sinex-b172-vapocool') {
 }
 
 const MENTHOL_WHY =
-  'Menthol is a named chemical, not a hidden flavor blend. In this spray it is the cooling inactive, not the drug. That is why it is Usable.';
+  'Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug. That is why it is Usable.';
 const EUCALYPTOL_WHY =
   'Eucalyptol is a named chemical, not a hidden flavor blend. In this spray it is the scent inactive, not the drug. That is why it is Usable.';
 const FRAGRANCE_WHY =

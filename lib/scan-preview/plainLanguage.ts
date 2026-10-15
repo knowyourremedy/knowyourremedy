@@ -209,6 +209,16 @@ export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
 export const HYDROGENATED_OIL_LOCK_SOURCE =
   'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, and hydrogenated castor oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026.';
 
+export const TRACE_EDTA_CONDITION_SOURCE =
+  'Methodology §5 Caution (disodium EDTA trace). The source says this stabilizer is safe at 0.001% to 0.25%. This app cannot confirm that percent on the pack, so the grade drops one level. Do not jump to Not clean. Locked Oct 15, 2026.';
+
+export function isTraceEdtaConditionDrop(ingredient: { name: string; riskLevel: RiskLevel }): boolean {
+  if (ingredient.riskLevel !== 'cleared') return false;
+  const n = norm(ingredient.name);
+  if (/tetrasodium/.test(n)) return false;
+  return /\bdisodium edta\b/.test(n);
+}
+
 const HYDROGENATED_OIL_WHY =
   'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
 
@@ -371,7 +381,63 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return `${titleOil(oil)} is Not clean when it is the base of a gummy. That is the form this app flags. In this product the oil is not a gummy you chew, so it did not pull this grade down.`;
   }
 
-  if (/propylene glycol|\bpg\b|\be1520\b/.test(n) && !/dicaprylate|dipelargonate/.test(n)) {
+  if (/dipropylene glycol/.test(n)) {
+    return 'Dipropylene glycol is a cousin of propylene glycol. It is not propylene glycol. That is why it is Usable.';
+  }
+
+  if (/peg 75 shea|shea butter glycerides/.test(n)) {
+    return 'Shea in a cream is Cleared. The PEG is the process. That is why it is Usable.';
+  }
+
+  if (/polyoxyl lauryl ether|polyoxyl stearyl ether/.test(n)) {
+    return 'This is in the polyoxyl family. That is why it is Usable.';
+  }
+
+  if (/decyl glucoside|capramidopropyl betaine|cocamidopropyl betaine/.test(n)) {
+    return 'The source says this ingredient is safe when the formula is non-irritating. This app does not have that formula. It cannot confirm the condition, so the grade drops one level. That is why it is Usable.';
+  }
+
+  if (/sulisobenzone/.test(n)) {
+    return 'The source says this UV filter is cleared at 5%, and it has no cancer finding at that use level. This app cannot confirm that percent on the pack, so the grade drops one level. That is why it is Usable.';
+  }
+
+  if (/glyceryl oleate/.test(n)) {
+    return 'Glyceryl oleate is a glycerin ester. It is not glycerin, and it is not glyceryl stearate. That is why it is Usable.';
+  }
+
+  if (/raspberry ketone/.test(n)) {
+    return 'Raspberry ketone is a named chemical. It is not a flavor blend. That is why it is Usable.';
+  }
+
+  if (/methyl salicylate/.test(n)) {
+    return 'Methyl salicylate is a named chemical. On this label it is inactive, not the drug. That is why it is Usable.';
+  }
+
+  if (/pyrophosphate/.test(n)) {
+    return 'This is a pyrophosphate salt. It is not the sodium phosphate filler. That is why it is Usable.';
+  }
+
+  if (/glycyrrhizin|glycyrrhizate|glycrrhizate/.test(n) && !/dipotassium/.test(n)) {
+    return 'This is a licorice salt. It is not the licorice extract. That is why it is Usable.';
+  }
+
+  if (/lanolin/.test(n)) {
+    return 'Lanolin is wool wax. It can bother people who are sensitive to wool alcohols. That is why it is Usable.';
+  }
+
+  if (/white wax/.test(n)) {
+    return 'White wax is not beeswax. That is why it is Usable.';
+  }
+
+  if (/thyme|thymus/.test(n) && /\boil\b/.test(n)) {
+    return 'This is a scent oil. It is not an oral thyme extract. That is why it is Usable.';
+  }
+
+  if (/sucrose stearate|sucrose distearate/.test(n)) {
+    return 'This is a sucrose ester used to mix oil and water. It is not the sugar sucrose. That is why it is Usable.';
+  }
+
+  if (/propylene glycol|\bpg\b|\be1520\b/.test(n) && !/dicaprylate|dipelargonate|dipropylene/.test(n)) {
     if (level === 'cleared' || source.includes('topical')) {
       return close('On this label propylene glycol is the topical form, not the swallowed solvent.', level);
     }
@@ -448,7 +514,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return 'Ethyl acetate is a flavor solvent. That is why it is Usable.';
   }
 
-  if (/^alcohol$|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol|\bethanol\b/.test(n)) {
+  if (/^alcohol\b|ethyl alcohol|sd alcohol|alcohol denat|isopropyl alcohol|isopropanol|methylated spirit|grain alcohol|\bethanol\b/.test(n)) {
     return close(
       'This alcohol is the liquid that carries the other ingredients. It is not a drinking-alcohol dose, and it is not the gummy seed-oil rule.',
       level,
@@ -662,7 +728,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Sodium polyphosphate has its own line. It is not a phosphate salt used as a mineral filler, and it is not phosphoric acid.', level);
   }
 
-  if (/dicalcium phosphate|tricalcium phosphate|calcium phosphate|sodium phosphate/.test(n) && !/3x|6x/.test(n)) {
+  if (/dicalcium phosphate|tricalcium phosphate|calcium phosphate|sodium phosphate/.test(n) && !/3x|6x|pyrophosphate/.test(n)) {
     return close('This is a phosphate salt used as a mineral filler. It is not phosphoric acid.', level);
   }
 
@@ -901,8 +967,19 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Carbomer is a gel thickener. Current grades are not the older benzene-residue carbomers.', level);
   }
 
-  if (/tocopheryl acetate|tocopherol acetate/.test(n)) {
+  if (/tocopheryl acetate|tocopherol acetate|vitamin e acetate/.test(n)) {
     return close('Tocopheryl acetate is a vitamin E ester. It is not the same token as mixed tocopherols.', level);
+  }
+
+  if (/\bdisodium edta\b/.test(n) && !/tetrasodium/.test(n)) {
+    const source = ingredient.source ?? '';
+    const traceCall =
+      level === 'cleared' ||
+      /0\.001%|drops one level/.test(source) ||
+      (/trace/i.test(source) && !/not the cleared trace/i.test(source));
+    if (traceCall) {
+      return 'The source says this stabilizer is safe at 0.001% to 0.25%. This app cannot confirm that percent on the pack, so the grade drops one level. That is why it is Usable.';
+    }
   }
 
   if (/edetate|disodium edta|\bedta\b/.test(n)) {
@@ -911,9 +988,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/^menthol\b|menthol dl/.test(n)) {
     if (level === 'high') {
-      return close('Menthol is a named chemical, not a hidden flavor blend. In this spray it is the cooling inactive, not the drug.', level);
+      return close('Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug.', level);
     }
-    return 'Menthol is a named chemical, not a hidden flavor blend. In this spray it is the cooling inactive, not the drug. That is why it is Usable.';
+    return 'Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug. That is why it is Usable.';
   }
 
   if (/^eucalyptol\b/.test(n)) {
@@ -1184,7 +1261,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Allulose is a rare sugar. It is not sucralose.', level);
   }
 
-  if (/cocoa butter|theobroma cacao|shea butter|butyrospermum/.test(n)) {
+  if (/cocoa butter|theobroma cacao|shea butter|butyrospermum/.test(n) && !/\bpeg\b/.test(n)) {
     return close('This is a butter used as an ointment or cream base. It is not the gummy seed-oil rule.', level);
   }
 
