@@ -180,6 +180,7 @@ import {
   BATCH178_KYR6C_LAXATIVES,
   BATCH179_KYR6C_HELD_LAXATIVES,
   BATCH180_KYR6C_MIRAGUT,
+  BATCH181_KYR6C_ANBESOL,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -394,6 +395,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH178_KYR6C_LAXATIVES,
   ...BATCH179_KYR6C_HELD_LAXATIVES,
   ...BATCH180_KYR6C_MIRAGUT,
+  ...BATCH181_KYR6C_ANBESOL,
 ]);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
