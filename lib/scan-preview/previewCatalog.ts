@@ -14590,6 +14590,21 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280398571': catalogShot(
     'solaray-b117-076280398571.jpg',
   ),
+  // Pain & Fever night run 2026-10-15 3:00 AM PT batch 1.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Infant fever and pain, natural berry, 2 fl oz. Barcode 756184101766.
+  // DailyMed setid af5c3b3b-079f-4ee6-a9a4-a13ee8cd99a5 package photo.
+  // Front reads natural berry flavor and 2 FL OZ (59 mL). Not the grape bottle.
+  // Not the 2-pack carton.
+  'little-remedies-b167-fever-berry-2': catalogShot(
+    'little-remedies-b167-fever-berry-2.jpg',
+  ),
+  // Midol Complete gelcaps, 24 count. Barcode 312843172531.
+  // DailyMed setid 0a4477ce-0a02-197d-e054-00144ff88e88 package photo.
+  // Front reads GELCAPS and 24 GELCAPS. Not the caplet carton.
+  'midol-b175-complete-gelcaps-24': catalogShot(
+    'midol-b175-complete-gelcaps-24.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -31553,5 +31568,42 @@ assertBrandMark(
     || !dao90.url.endsWith('/solaray-b117-076280397260.jpg')
   ) {
     throw new Error('DAO 90 must not inherit the 30');
+  }
+}
+
+{
+  // Pain & Fever night run 2026-10-15 3:00 AM PT batch 1.
+  // New catalog letters. Exact package photos. Not a sibling face.
+  assertExactCarton(
+    'little-remedies-b167-fever-berry-2',
+    'Little Remedies',
+    'little-remedies-b167-fever-berry-2.jpg',
+  );
+  assertExactCarton(
+    'midol-b175-complete-gelcaps-24',
+    'Midol',
+    'midol-b175-complete-gelcaps-24.jpg',
+  );
+  const berry = previewOverlayImage({
+    id: 'little-remedies-b167-fever-berry-2',
+    formulaId: 'little-remedies-b167-fever-berry',
+    brand: 'Little Remedies',
+  });
+  if (
+    !berry?.verifiedSku
+    || !berry.url.endsWith('/little-remedies-b167-fever-berry-2.jpg')
+  ) {
+    throw new Error('Berry 2 fl oz must keep its own carton');
+  }
+  const gelcaps = previewOverlayImage({
+    id: 'midol-b175-complete-gelcaps-24',
+    formulaId: 'midol-b175-complete-gelcaps',
+    brand: 'Midol',
+  });
+  if (
+    !gelcaps?.verifiedSku
+    || !gelcaps.url.endsWith('/midol-b175-complete-gelcaps-24.jpg')
+  ) {
+    throw new Error('Midol gelcaps must not inherit the caplet carton');
   }
 }
