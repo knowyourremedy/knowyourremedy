@@ -9,7 +9,7 @@ Done
 - Zyrtec website loop closed. 40-count Avoid, UPC 300450204462, PR #452. 3-count Avoid, UPC 300450204431, and bubble-gum 4 fl oz Avoid, UPC 300450205049, PR #453. 75-count Avoid on zyrtec-allergy-tablets-tio2, UPC 300450204752, row zyrtec-b143-10mg-75ct, PR #467 / ead6dea. Do not reopen. Bot run #334 failed in the chat log. The merge landed.
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
-- Highest rating-draft is batch180. Next file is batch181.
+- Highest rating-draft is batch181. Next file is batch182. Anbesol Maximum Strength gel 0.33 oz and liquid 0.41 oz are written. Preparation H, Orajel, Abreva, and Ocean saline are not written. Those four are waiting on ungraded tokens or, for Ocean, an opened panel. Do not rewrite the two Anbesol rows.
 
 Not a hunt unless Brandon says go
 - Children's Zyrtec Dye-Free Chewable 2.5 mg 24-count is written. Caution is not locked. Do not copy the grape panel onto it.
