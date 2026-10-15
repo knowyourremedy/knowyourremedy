@@ -14605,6 +14605,134 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'midol-b175-complete-gelcaps-24': catalogShot(
     'midol-b175-complete-gelcaps-24.jpg',
   ),
+  // Cold & Flu night run 2026-10-15 4:15 AM PT batch 1.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // No Drip Extra Moisturizing, 0.5 fl oz. Barcode 041100015112.
+  // Target pack shot for that code. Front reads NO DRIP EXTRA
+  // MOISTURIZING and 0.5 FL OZ (15 mL). DailyMed setid
+  // 346f32cb-74cb-4896-b770-76d5f829a17d shows that 15 mL beside
+  // a 20 mL twin pack, so the composite was not used.
+  'afrin-b171-no-drip-extra-moisturizing-05': catalogShot(
+    'afrin-b171-no-drip-extra-moisturizing-05.jpg',
+  ),
+  // No Drip Original pump, 0.5 oz. Barcode 041100811196.
+  // DailyMed setid 530b2d27-5883-489e-87fa-90b45eb93b3c package photo.
+  // Front reads NO DRIP ORIGINAL and 15 mL. Single carton.
+  'afrin-b171-no-drip-original-05': catalogShot(
+    'afrin-b171-no-drip-original-05.jpg',
+  ),
+  // Original squeeze spray, 0.5 oz. Barcode 041100811233.
+  // DailyMed setid 89c165ba-3ad5-49b5-a5bb-423dc8e15bad package photo.
+  // Front reads ORIGINAL and 15 mL (0.5 FL OZ). Not the 30 mL box.
+  'afrin-b171-original-05': catalogShot(
+    'afrin-b171-original-05.jpg',
+  ),
+  // Original squeeze spray, 1 oz. Barcode 041100811257.
+  // Walmart pack shot for that code. Front reads ORIGINAL and
+  // 1 FL OZ (30 mL). Not the 15 mL carton.
+  'afrin-b171-original-1': catalogShot(
+    'afrin-b171-original-1.jpg',
+  ),
+  // Allergy Sinus squeeze spray, 0.5 oz. Barcode 041100811271.
+  // DailyMed setid c2d903bf-5c51-82d7-e053-2995a90aea49 package photo.
+  // Front reads ALLERGY SINUS and 1/2 FL OZ (15 mL). Oxymetazoline
+  // 0.05%. Not the No Drip pump.
+  'afrin-b172-allergy-sinus-05': catalogShot(
+    'afrin-b172-allergy-sinus-05.jpg',
+  ),
+  // No Drip Severe Congestion, 0.5 oz. Barcode 041100820334.
+  // Target pack shot for that code. Front reads NO DRIP SEVERE
+  // CONGESTION and 0.5 FL OZ (15 mL). DailyMed setid
+  // a79b5541-864b-412a-a085-96986ed6af59 also shows a 20 mL twin,
+  // so that composite was not used.
+  'afrin-b172-no-drip-severe-05': catalogShot(
+    'afrin-b172-no-drip-severe-05.jpg',
+  ),
+  // Severe Congestion squeeze spray, 0.5 oz. Barcode 041100811172.
+  // DailyMed setid a49a506e-aca2-4af0-a50b-dca2c031e61d package photo.
+  // Front reads SEVERE CONGESTION and 15 mL. Not the No Drip pump.
+  'afrin-b172-severe-05': catalogShot(
+    'afrin-b172-severe-05.jpg',
+  ),
+  // Vapor Burst inhaler, 0.8 mL. No barcode on the row.
+  // afrin.com names this single drug-free inhaler. The Amazon
+  // front of that same inhaler reads VAPOR BURST and 0.8 mL.
+  // Not a multipack.
+  'afrin-b172-vapor-burst': catalogShot(
+    'afrin-b172-vapor-burst.jpg',
+  ),
+  // No Drip Allergy Sinus, 0.5 oz. Barcode 041100015099.
+  // DailyMed setid 3beb5839-7422-449d-e054-00144ff88e88 package photo.
+  // Front reads NO DRIP ALLERGY SINUS and 15 mL (0.5 FL OZ).
+  'afrin-b173-no-drip-allergy-05': catalogShot(
+    'afrin-b173-no-drip-allergy-05.jpg',
+  ),
+  // Daytime Propolis Cough Syrup, 4 fl oz. Barcode 628055142843.
+  // Target pack shot for that code. Front reads DAYTIME PROPOLIS
+  // COUGH SYRUP and 4 FL OZ (118 mL). Not the nighttime bottle.
+  'beekeepers-b165-cough-day-4': catalogShot(
+    'beekeepers-b165-cough-day-4.jpg',
+  ),
+  // Kid's Propolis Immune Support throat spray, 1 fl oz.
+  // Barcode 628055142195. Target pack shot for that code.
+  // Front reads KID'S PROPOLIS and 1 FL OZ (30 mL).
+  // Not the adult throat spray.
+  'beekeepers-b165-kids-throat-1': catalogShot(
+    'beekeepers-b165-kids-throat-1.jpg',
+  ),
+  // Soothing lozenges, 14 count. Barcode 628055142508.
+  // Target pack shot for that code. Front reads 14 LOZENGES.
+  // Not the 24-count box.
+  'beekeepers-b165-lozenges-14': catalogShot(
+    'beekeepers-b165-lozenges-14.jpg',
+  ),
+  // Soothing lozenges, 24 count. Barcode 834706002682.
+  // beekeepersnaturals.com front for that barcode.
+  // Front reads 24 LOZENGES. Not the 14-count box.
+  'beekeepers-b165-lozenges-24': catalogShot(
+    'beekeepers-b165-lozenges-24.jpg',
+  ),
+  // Kid's Saline Nasal Mist, 3 fl oz. Barcode 834706001586.
+  // Target pack shot for that code. Front reads KID'S SALINE
+  // and 3 FL OZ (89 mL).
+  'beekeepers-b167-kids-saline-3': catalogShot(
+    'beekeepers-b167-kids-saline-3.jpg',
+  ),
+  // Nighttime Propolis Cough Syrup, 4 fl oz. Barcode 628055142850.
+  // Target pack shot for that code. Front reads NIGHTTIME
+  // PROPOLIS COUGH SYRUP and 4 FL OZ (118 mL). Not the kids bottle.
+  'beekeepers-b167-night-adult-4': catalogShot(
+    'beekeepers-b167-night-adult-4.jpg',
+  ),
+  // Kids Nighttime Honey Cough Syrup, 4 fl oz. Barcode 628055142522.
+  // Target pack shot for that code. Front reads KIDS NIGHTTIME
+  // and 4 FL OZ (118 mL). Not the adult night syrup.
+  'beekeepers-b167-night-kids-4': catalogShot(
+    'beekeepers-b167-night-kids-4.jpg',
+  ),
+  // Propolis lollipops, 15 count. Barcode 834706000435.
+  // Target pack shot for that code. Front reads 15 PROPOLIS LOLLIPOPS.
+  'beekeepers-b169-lollipops-15': catalogShot(
+    'beekeepers-b169-lollipops-15.jpg',
+  ),
+  // Coricidin HBP Chest Congestion & Cough liqui-gels, 20 count.
+  // Barcode 041100807434. Walgreens pack shot for that code.
+  // Front reads CHEST CONGESTION & COUGH and 20 LIQUI-GELS.
+  'coricidin-b174-chest-20': catalogShot(
+    'coricidin-b174-chest-20.jpg',
+  ),
+  // Coricidin HBP Cold & Flu tablets, 20 count. Barcode 041100808103.
+  // Walgreens pack shot for that code. Front reads COLD & FLU
+  // and 20 TABLETS.
+  'coricidin-b174-cold-flu-20': catalogShot(
+    'coricidin-b174-cold-flu-20.jpg',
+  ),
+  // Coricidin HBP Cough & Cold tablets, 16 count. Barcode 041100811387.
+  // Walgreens pack shot for that code. Front reads COUGH & COLD
+  // and 16 TABLETS.
+  'coricidin-b174-cough-cold-16': catalogShot(
+    'coricidin-b174-cough-cold-16.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -31605,5 +31733,81 @@ assertBrandMark(
     || !gelcaps.url.endsWith('/midol-b175-complete-gelcaps-24.jpg')
   ) {
     throw new Error('Midol gelcaps must not inherit the caplet carton');
+  }
+}
+
+{
+  // Cold & Flu night run 2026-10-15 4:15 AM PT batch 1.
+  // Letter rows. Exact package photos. Not a sibling face.
+  const coldCartons: [string, string, string, string][] = [
+    ['afrin-b171-no-drip-extra-moisturizing-05', 'Afrin', 'afrin-b171-no-drip-extra-moisturizing', 'afrin-b171-no-drip-extra-moisturizing-05.jpg'],
+    ['afrin-b171-no-drip-original-05', 'Afrin', 'afrin-b171-no-drip-original', 'afrin-b171-no-drip-original-05.jpg'],
+    ['afrin-b171-original-05', 'Afrin', 'afrin-b171-original', 'afrin-b171-original-05.jpg'],
+    ['afrin-b171-original-1', 'Afrin', 'afrin-b171-original', 'afrin-b171-original-1.jpg'],
+    ['afrin-b172-allergy-sinus-05', 'Afrin', 'afrin-b172-squeeze-menthol', 'afrin-b172-allergy-sinus-05.jpg'],
+    ['afrin-b172-no-drip-severe-05', 'Afrin', 'afrin-b172-no-drip-severe', 'afrin-b172-no-drip-severe-05.jpg'],
+    ['afrin-b172-severe-05', 'Afrin', 'afrin-b172-squeeze-menthol', 'afrin-b172-severe-05.jpg'],
+    ['afrin-b172-vapor-burst', 'Afrin', 'afrin-b172-vapor-burst', 'afrin-b172-vapor-burst.jpg'],
+    ['afrin-b173-no-drip-allergy-05', 'Afrin', 'afrin-b173-no-drip-allergy', 'afrin-b173-no-drip-allergy-05.jpg'],
+    ['beekeepers-b165-cough-day-4', "Beekeeper's Naturals", 'beekeepers-b165-cough-day', 'beekeepers-b165-cough-day-4.jpg'],
+    ['beekeepers-b165-kids-throat-1', "Beekeeper's Naturals", 'beekeepers-b165-kids-throat', 'beekeepers-b165-kids-throat-1.jpg'],
+    ['beekeepers-b165-lozenges-14', "Beekeeper's Naturals", 'beekeepers-b165-lozenges', 'beekeepers-b165-lozenges-14.jpg'],
+    ['beekeepers-b165-lozenges-24', "Beekeeper's Naturals", 'beekeepers-b165-lozenges', 'beekeepers-b165-lozenges-24.jpg'],
+    ['beekeepers-b167-kids-saline-3', "Beekeeper's Naturals", 'beekeepers-b167-kids-saline', 'beekeepers-b167-kids-saline-3.jpg'],
+    ['beekeepers-b167-night-adult-4', "Beekeeper's Naturals", 'beekeepers-b167-night-adult', 'beekeepers-b167-night-adult-4.jpg'],
+    ['beekeepers-b167-night-kids-4', "Beekeeper's Naturals", 'beekeepers-b167-night-kids', 'beekeepers-b167-night-kids-4.jpg'],
+    ['beekeepers-b169-lollipops-15', "Beekeeper's Naturals", 'beekeepers-b169-lollipops', 'beekeepers-b169-lollipops-15.jpg'],
+    ['coricidin-b174-chest-20', 'Coricidin', 'coricidin-b174-chest', 'coricidin-b174-chest-20.jpg'],
+    ['coricidin-b174-cold-flu-20', 'Coricidin', 'coricidin-b174-cold-flu', 'coricidin-b174-cold-flu-20.jpg'],
+    ['coricidin-b174-cough-cold-16', 'Coricidin', 'coricidin-b174-cough-cold', 'coricidin-b174-cough-cold-16.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of coldCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate cold carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const originalHalf = previewOverlayImage({
+    id: 'afrin-b171-original-05',
+    formulaId: 'afrin-b171-original',
+    brand: 'Afrin',
+  });
+  const originalOunce = previewOverlayImage({
+    id: 'afrin-b171-original-1',
+    formulaId: 'afrin-b171-original',
+    brand: 'Afrin',
+  });
+  if (originalHalf?.url === originalOunce?.url) {
+    throw new Error('Afrin 0.5 oz must not share the 1 oz carton');
+  }
+  const allergySqueeze = previewOverlayImage({
+    id: 'afrin-b172-allergy-sinus-05',
+    formulaId: 'afrin-b172-squeeze-menthol',
+    brand: 'Afrin',
+  });
+  const severeSqueeze = previewOverlayImage({
+    id: 'afrin-b172-severe-05',
+    formulaId: 'afrin-b172-squeeze-menthol',
+    brand: 'Afrin',
+  });
+  if (allergySqueeze?.url === severeSqueeze?.url) {
+    throw new Error('Allergy Sinus must not share the Severe Congestion carton');
+  }
+  const loz14 = previewOverlayImage({
+    id: 'beekeepers-b165-lozenges-14',
+    formulaId: 'beekeepers-b165-lozenges',
+    brand: "Beekeeper's Naturals",
+  });
+  const loz24 = previewOverlayImage({
+    id: 'beekeepers-b165-lozenges-24',
+    formulaId: 'beekeepers-b165-lozenges',
+    brand: "Beekeeper's Naturals",
+  });
+  if (loz14?.url === loz24?.url) {
+    throw new Error('14-count lozenges must not share the 24-count carton');
   }
 }
