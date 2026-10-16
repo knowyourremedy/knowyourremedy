@@ -14,7 +14,6 @@ const METH = {
   beeswax: 'Methodology §5 Cleared (yellow beeswax / beeswax).',
   caramel: 'Methodology §5 Avoid (caramel color — class not named as I or II).',
   cane: 'Methodology §5 Cleared (cane sugar).',
-  caramel: 'Methodology §5 Avoid (caramel color — class not named as I or II).',
   castor: 'Methodology §5 Cleared (castor oil / polyoxyl castor oil derivatives — oral).',
   cellulose: 'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',
   citric: 'Methodology §5 Cleared (citric acid).',
@@ -47,8 +46,8 @@ const METH = {
   yeast: 'Methodology §5 Cleared (brewer’s yeast / nutritional yeast).',
 } as const;
 
-function flag(panel: string, name: string, riskLevel: RiskLevel, methKey: keyof typeof METH): IngredientFlag {
-  return { name, riskLevel, source: `${panel}; ${METH[methKey]}` };
+function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
+  return { name, riskLevel, source: `${panel}; ${meth}` };
 }
 
 export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
