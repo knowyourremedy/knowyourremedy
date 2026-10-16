@@ -54,7 +54,7 @@ function flag(panel: string, name: string, riskLevel: RiskLevel, methKey: keyof 
 export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   {
     id: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
-    productName: "Nature's Bounty Fish Oil (45 softgels)",
+    productName: "Nature's Bounty Fish Oil (90 softgels)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
@@ -488,7 +488,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40',
-    productName: "Nature's Bounty Raspberry Women's Multivitamin Gummies (40 gummies)",
+    productName: "Nature's Bounty Raspberry Women's Multivitamin Gummies (80 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40',
@@ -513,7 +513,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37',
-    productName: "Nature's Bounty Adult Multivitamin Gummies (37 gummies)",
+    productName: "Nature's Bounty Adult Multivitamin Gummies (75 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37',
@@ -631,7 +631,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-vitamin-c-gummies-40',
-    productName: "Nature's Bounty Vitamin C Gummies (40 gummies)",
+    productName: "Nature's Bounty Vitamin C Gummies (80 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-vitamin-c-gummies-40',
@@ -654,7 +654,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-vitamin-d-gummies-45',
-    productName: "Nature's Bounty Vitamin D Gummies (45 gummies)",
+    productName: "Nature's Bounty Vitamin D Gummies (90 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-vitamin-d-gummies-45',
@@ -678,7 +678,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-womens-multivitamin-gummies-45',
-    productName: "Nature's Bounty Women's Multivitamin Gummies (45 gummies)",
+    productName: "Nature's Bounty Women's Multivitamin Gummies (90 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-womens-multivitamin-gummies-45',
@@ -703,7 +703,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-hair-skin-and-nails-gummies-40',
-    productName: "Nature's Bounty Hair, Skin & Nails + Collagen Gummies (40 gummies)",
+    productName: "Nature's Bounty Hair, Skin & Nails + Collagen Gummies (80 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-hair-skin-and-nails-gummies-40',
@@ -728,7 +728,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-essential-prenatal-gummies-25',
-    productName: "Nature's Bounty Essential Prenatal Gummies (25 gummies)",
+    productName: "Nature's Bounty Essential Prenatal Gummies (50 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-essential-prenatal-gummies-25',
@@ -804,7 +804,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-gorgeous-sleep-gummies-30',
-    productName: "Nature's Bounty Gorgeous Sleep Gummies (30 gummies)",
+    productName: "Nature's Bounty Gorgeous Sleep Gummies (60 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-gorgeous-sleep-gummies-30',
@@ -828,7 +828,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-elderberry-gummies-35',
-    productName: "Nature's Bounty Elderberry Gummies (35 gummies)",
+    productName: "Nature's Bounty Elderberry Gummies (70 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-elderberry-gummies-35',
@@ -929,7 +929,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
   },
   {
     id: 'natures-bounty-b196-cranberry-gummies-30',
-    productName: "Nature's Bounty Cranberry Gummies (30 gummies)",
+    productName: "Nature's Bounty Cranberry Gummies (150 gummies)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b196-cranberry-gummies-30',
