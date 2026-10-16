@@ -98,7 +98,9 @@ const POWDER_SPRAY_FLAGS: IngredientFlag[] = [
 
 const DEO_FLAGS: IngredientFlag[] = [
   flag(DEO_PANEL, 'Fragrance', 'limited', METH.fragrance),
-  ...POWDER_SPRAY_FLAGS.map((item) => flag(DEO_PANEL, item.name, item.riskLevel, item.source.split('; ').slice(1).join('; '))),
+  ...POWDER_SPRAY_FLAGS.map((item) =>
+    flag(DEO_PANEL, item.name, item.riskLevel, (item.source ?? '').split('; ').slice(1).join('; ')),
+  ),
 ];
 
 const LIQUID_FLAGS: IngredientFlag[] = [
