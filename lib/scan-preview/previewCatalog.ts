@@ -2756,6 +2756,27 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // The unflavored 0.5 lb front reads 23 servings, barcode 702669936026.
   // This row has no barcode. Do not glue that tub.
   'nutricost-c8-mct-oil-powder-23-servings': brandMark('nutricost-mark.png'),
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 2.
+  // Official Advil wordmark already on disk. Not a text tile. Not a letter.
+  // Liqui-Gels 180. DailyMed faces on this setid are 20, minis 20,
+  // and Easy Open 160. Target's Liqui-Gels family is 20 / 80 / 160.
+  // No 180 front retrieved. Do not glue a smaller count.
+  'advil-b184-liquigel-180': brandMark('advil-mark.png'),
+  // Dual Action 216 caplets. DailyMed regular face is 18 caplets.
+  // Target regular sizes are 18, 72, and 144. No 216 front retrieved.
+  // Do not glue the 144 or the Back Pain box.
+  'advil-b184-dual-216': brandMark('advil-mark.png'),
+  // PM Liqui-Gels 40. DailyMed faces are regular 20 and minis 40.
+  // The brand-site packshot is the 20. Do not glue the minis or the 20.
+  'advil-b184-pm-liq-40': brandMark('advil-mark.png'),
+  // PM Liqui-Gels 80. No regular 80 front retrieved.
+  // The 80-count minis are a smaller capsule. Do not glue them.
+  'advil-b184-pm-liq-80': brandMark('advil-mark.png'),
+  // Official Motrin wordmark already on disk. Not a text tile. Not a letter.
+  // Motrin IB liquid gels 120. DailyMed face is the 80.
+  // Brand-site photos are 20 and 80. The Target 120 image is a flat
+  // label with no visible count. Do not glue the 80.
+  'motrin-b184-ib-gel-120': brandMark('motrin-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -15047,6 +15068,64 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Target pack shot. Front reads LIQUI-GELS and 160 Liquid Filled Capsules.
   // Not the Easy Open arthritis cap bottle. Not the minis.
   'advil-b184-liquigel-160': catalogShot('advil-b184-liquigel-160.jpg'),
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 2.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Advil Liqui-Gels Minis travel vial, 8 liquid gels.
+  // Target pack shot. Front reads MINIS and 8 Liquid Filled Capsules.
+  // Not the 20, 80, 160, or 200 minis bottles.
+  'advil-b184-mini-8': catalogShot('advil-b184-mini-8.jpg'),
+  // Advil Liqui-Gels Minis, 80 liquid gels.
+  // Target pack shot. Front reads MINIS and 80 Liquid Filled Capsules.
+  'advil-b184-mini-80': catalogShot('advil-b184-mini-80.jpg'),
+  // Advil Liqui-Gels Minis, 160 liquid gels.
+  // Target pack shot. Front reads MINIS and 160 Liquid Filled Capsules.
+  'advil-b184-mini-160': catalogShot('advil-b184-mini-160.jpg'),
+  // Advil Liqui-Gels Minis, 200 liquid gels.
+  // Target pack shot. Front reads MINIS and 200 Liquid Filled Capsules.
+  'advil-b184-mini-200': catalogShot('advil-b184-mini-200.jpg'),
+  // Advil Dual Action, 18 caplets.
+  // DailyMed setid f5ea858e-76d9-4777-b3dc-5d614f66d485 package photo.
+  // Front reads DUAL ACTION and 18 CAPLETS. Not Back Pain. Not the 72.
+  'advil-b184-dual-18': catalogShot('advil-b184-dual-18.jpg'),
+  // Advil Dual Action, 72 caplets.
+  // Target pack shot. Front reads DUAL ACTION and 72 CAPLETS.
+  // Not Back Pain. Not the 18.
+  'advil-b184-dual-72': catalogShot('advil-b184-dual-72.jpg'),
+  // Advil Dual Action Back Pain, 144 caplets.
+  // DailyMed setid acaa9806-e552-44f2-a680-b8bb64c49e1f package photo.
+  // Front reads BACK PAIN and 144 CAPLETS. Not the regular Dual Action box.
+  'advil-b184-back-144': catalogShot('advil-b184-back-144.jpg'),
+  // Children's Motrin dye-free berry suspension, 4 fl oz.
+  // DailyMed setid 9e1cdef7-921f-4163-869c-6c062e31c5bb package photo.
+  // Front reads DYE FREE, ORIGINAL BERRY, and 4 FL OZ (120 mL). Not the 8 oz.
+  'motrin-b184-df-berry-4': catalogShot('motrin-b184-df-berry-4.jpg'),
+  // Children's Motrin dye-free berry suspension, 8 fl oz.
+  // motrin.com front for the 8 oz dye-free bottle.
+  // Front reads DYE-FREE, BERRY, and 8 FL OZ (240 mL). Not the 4 oz.
+  'motrin-b184-df-berry-8': catalogShot('motrin-b184-df-berry-8.jpg'),
+  // Children's Motrin bubble gum suspension, 4 fl oz.
+  // DailyMed setid 152189e5-391c-42d3-a03b-c8364e2de6bf package photo.
+  // Front reads BUBBLE GUM and 4 FL OZ (120 mL). Not the dye-free berry.
+  'motrin-b184-bubble-4': catalogShot('motrin-b184-bubble-4.jpg'),
+  // Children's Motrin dye-free grape chewables, 24 tablets.
+  // DailyMed setid 15b0b56d-6188-4937-b541-902022e35b24 package photo.
+  // Front reads DYE-FREE, GRAPE, and 24 CHEWABLE TABLETS.
+  'motrin-b184-df-grape-24': catalogShot('motrin-b184-df-grape-24.jpg'),
+  // Motrin Dual Action with Tylenol, 80 caplets.
+  // DailyMed setid f2ee9cf5-02b7-6612-e053-2995a90a90c4 package photo.
+  // Front reads DUAL ACTION and 80 CAPLETS. Not the 120.
+  'motrin-b184-dual-80': catalogShot('motrin-b184-dual-80.jpg'),
+  // Motrin Dual Action with Tylenol, 120 caplets.
+  // Target pack shot. Front reads DUAL ACTION and 120 CAPLETS. Not the 80.
+  'motrin-b184-dual-120': catalogShot('motrin-b184-dual-120.jpg'),
+  // Children's Tylenol dye-free cherry suspension, 8 fl oz.
+  // DailyMed setid 46ddbfde-54ab-4373-b832-b9c0620b1e9d package photo.
+  // Front reads DYE-FREE, CHERRY, and 8 FL OZ (240 mL).
+  'tylenol-b184-df-cherry-8': catalogShot('tylenol-b184-df-cherry-8.jpg'),
+  // Children's Tylenol bubble gum suspension, 4 fl oz.
+  // DailyMed setid 333f6231-3778-4c1f-9558-2afddca22c86 package photo.
+  // Front reads BUBBLE GUM and 4 FL OZ (120 mL). Not the dye-free cherry.
+  'tylenol-b184-bubble-4': catalogShot('tylenol-b184-bubble-4.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15880,6 +15959,24 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'advil-b184-liquigel-40',
   'advil-b184-liquigel-80',
   'advil-b184-liquigel-160',
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 2.
+  // Shared-formula sizes. Do not inherit a sibling face.
+  'advil-b184-liquigel-180',
+  'advil-b184-mini-8',
+  'advil-b184-mini-80',
+  'advil-b184-mini-160',
+  'advil-b184-mini-200',
+  'advil-b184-dual-18',
+  'advil-b184-dual-72',
+  'advil-b184-dual-216',
+  'advil-b184-back-144',
+  'advil-b184-pm-liq-40',
+  'advil-b184-pm-liq-80',
+  'motrin-b184-df-berry-4',
+  'motrin-b184-df-berry-8',
+  'motrin-b184-ib-gel-120',
+  'motrin-b184-dual-80',
+  'motrin-b184-dual-120',
 ]);
 
 export function previewOverlayImage(
@@ -32382,5 +32479,94 @@ assertBrandMark(
   });
   if (gel?.url === liquid?.url) {
     throw new Error('Anbesol gel must not share the liquid');
+  }
+}
+
+{
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 2.
+  // Exact package photos, plus marks where no matching count was retrieved.
+  const painCartons: [string, string, string, string][] = [
+    ['advil-b184-mini-8', 'Advil', 'advil-b184-minis', 'advil-b184-mini-8.jpg'],
+    ['advil-b184-mini-80', 'Advil', 'advil-b184-minis', 'advil-b184-mini-80.jpg'],
+    ['advil-b184-mini-160', 'Advil', 'advil-b184-minis', 'advil-b184-mini-160.jpg'],
+    ['advil-b184-mini-200', 'Advil', 'advil-b184-minis', 'advil-b184-mini-200.jpg'],
+    ['advil-b184-dual-18', 'Advil', 'advil-b184-dual', 'advil-b184-dual-18.jpg'],
+    ['advil-b184-dual-72', 'Advil', 'advil-b184-dual', 'advil-b184-dual-72.jpg'],
+    ['advil-b184-back-144', 'Advil', 'advil-b184-dual', 'advil-b184-back-144.jpg'],
+    ['motrin-b184-df-berry-4', 'Motrin', 'motrin-b184-df-susp', 'motrin-b184-df-berry-4.jpg'],
+    ['motrin-b184-df-berry-8', 'Motrin', 'motrin-b184-df-susp', 'motrin-b184-df-berry-8.jpg'],
+    ['motrin-b184-bubble-4', 'Motrin', 'motrin-b184-bubble', 'motrin-b184-bubble-4.jpg'],
+    ['motrin-b184-df-grape-24', 'Motrin', 'motrin-b184-df-chew', 'motrin-b184-df-grape-24.jpg'],
+    ['motrin-b184-dual-80', 'Motrin', 'motrin-b184-dual', 'motrin-b184-dual-80.jpg'],
+    ['motrin-b184-dual-120', 'Motrin', 'motrin-b184-dual', 'motrin-b184-dual-120.jpg'],
+    ['tylenol-b184-df-cherry-8', 'Tylenol', 'tylenol-b184-df-susp', 'tylenol-b184-df-cherry-8.jpg'],
+    ['tylenol-b184-bubble-4', 'Tylenol', 'tylenol-b184-bubble', 'tylenol-b184-bubble-4.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of painCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate pain carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const groups = [
+    ['advil-b184-mini-8', 'advil-b184-mini-80', 'advil-b184-mini-160', 'advil-b184-mini-200'],
+    ['advil-b184-dual-18', 'advil-b184-dual-72', 'advil-b184-back-144'],
+    ['motrin-b184-df-berry-4', 'motrin-b184-df-berry-8', 'motrin-b184-bubble-4'],
+    ['motrin-b184-dual-80', 'motrin-b184-dual-120'],
+    ['tylenol-b184-df-cherry-8', 'tylenol-b184-bubble-4'],
+  ];
+  const byId = new Map(painCartons.map((row) => [row[0], row]));
+  for (const group of groups) {
+    const urls = group.map((id) => {
+      const [, brand, formulaId] = byId.get(id)!;
+      return previewOverlayImage({ id, formulaId, brand })?.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Pain & Fever siblings must not share a carton: ${group.join(', ')}`);
+    }
+  }
+  const marks: [string, string, string, string][] = [
+    ['advil-b184-liquigel-180', 'Advil', 'advil-b184-liquigels', 'advil-mark.png'],
+    ['advil-b184-dual-216', 'Advil', 'advil-b184-dual', 'advil-mark.png'],
+    ['advil-b184-pm-liq-40', 'Advil', 'advil-b184-pm-liquigels', 'advil-mark.png'],
+    ['advil-b184-pm-liq-80', 'Advil', 'advil-b184-pm-liquigels', 'advil-mark.png'],
+    ['motrin-b184-ib-gel-120', 'Motrin', 'motrin-b184-ib-gels', 'motrin-mark.png'],
+  ];
+  for (const [id, brand, formulaId, file] of marks) {
+    assertBrandMark(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (image?.verifiedSku || !image?.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep the brand mark`);
+    }
+  }
+  const regular160 = previewOverlayImage({
+    id: 'advil-b184-liquigel-160',
+    formulaId: 'advil-b184-liquigels',
+    brand: 'Advil',
+  });
+  const liquigel180 = previewOverlayImage({
+    id: 'advil-b184-liquigel-180',
+    formulaId: 'advil-b184-liquigels',
+    brand: 'Advil',
+  });
+  if (regular160?.url === liquigel180?.url) {
+    throw new Error('Liqui-Gels 180 must not share the 160 carton');
+  }
+  const ib80 = previewOverlayImage({
+    id: 'motrin-ib-liquid-gels',
+    formulaId: 'motrin-ib-liquid-gels',
+    brand: 'Motrin',
+  });
+  const ib120 = previewOverlayImage({
+    id: 'motrin-b184-ib-gel-120',
+    formulaId: 'motrin-b184-ib-gels',
+    brand: 'Motrin',
+  });
+  if (ib80?.url === ib120?.url) {
+    throw new Error('Motrin IB 120 must not share the older liquid-gels carton');
   }
 }
