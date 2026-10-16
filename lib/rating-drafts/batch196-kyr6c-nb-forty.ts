@@ -223,32 +223,6 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
     ],
   },
   {
-    id: 'natures-bounty-b196-quick-dissolve-vitamin-c-plus-60',
-    productName: "Nature's Bounty Vitamin C Plus Zinc (60 tablets)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b196-quick-dissolve-vitamin-c-plus-60',
-    audience: ADULT,
-    minAge: 18,
-    form: 'tablet',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312553936',
-    activeIngredients: [{ name: 'Vitamin C Plus Zinc', strength: 'per tablet (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets', 'Dextrose', 'limited', METH.fructose),
-      flag('https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets', 'Vegetable Cellulose', 'cleared', METH.cellulose),
-      flag('https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets', 'Crospovidone', 'cleared', METH.crospovidone),
-      flag('https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets', 'Vegetable Stearic Acid', 'cleared', METH.stearic),
-      flag('https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets', 'Natural Flavors', 'limited', METH.flavor),
-    ],
-    verdict: 'caution',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2553-93 — HTTP 200, data[] empty for NDC 74312-2553-93 Opened https://naturesbounty.com/products/quick-dissolve-vitamin-c-plus-zinc-60-quick-dissolve-tablets — \"Vitamin C Plus Zinc\". Servings per container 60. Other ingredients: Dextrose, Vegetable Cellulose, Crospovidone, Vegetable Stearic Acid, Natural Flavors. Contains Opened Target search — no TCIN PDP link in fetch Opened https://www.cvs.com/search?searchTerm=074312553936 — BLOCKED HTTP 403 Access Denied Opened https://www.amazon.com/dp/B00V4CSJMY — 60 count, $11.49, seller Amazon.com, In Stock, Add to cart Opened https://www.walmart.com/search?q=074312553936 — BLOCKED robot check Opened https://www.google.com/search?q=074312553936%20Nature's%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
     id: 'natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250',
     productName: "Nature's Bounty Saw Palmetto - 250 Capsules (250 capsules)",
     brand: "Nature's Bounty",
@@ -726,30 +700,6 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
     ],
   },
   {
-    id: 'natures-bounty-b196-essential-prenatal-gummies-25',
-    productName: "Nature's Bounty Essential Prenatal Gummies (50 gummies)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b196-essential-prenatal-gummies-25',
-    audience: ADULT,
-    minAge: 18,
-    form: 'gummy',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312779114',
-    activeIngredients: [{ name: 'Essential Prenatal Gummies', strength: 'per gummy (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/essential-prenatal-gummies', 'Sugar', 'limited', METH.sucrose),
-      flag('https://naturesbounty.com/products/essential-prenatal-gummies', 'Corn Syrup', 'cleared', METH.glucose),
-      flag('https://naturesbounty.com/products/essential-prenatal-gummies', 'Gelatin', 'cleared', METH.gelatin),
-    ],
-    verdict: 'caution',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2779-11 — HTTP 200, data[] empty for NDC 74312-2779-11 Opened https://naturesbounty.com/products/essential-prenatal-gummies — \"Essential Prenatal Gummies\". Servings per container 25. Other ingredients: Sugar, Corn Syrup, Gelatin. Contains Opened Target search — no TCIN PDP link in fetch Opened https://www.cvs.com/search?searchTerm=074312779114 — BLOCKED HTTP 403 Access Denied Opened https://www.amazon.com/dp/B0GHZPX88M — 25 count, $25.68, seller Amazon.com, In Stock, Add to cart Opened https://www.walmart.com/search?q=074312779114 — BLOCKED robot check Opened https://www.google.com/search?q=074312779114%20Nature's%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
     id: 'natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60',
     productName: "Nature's Bounty Turmeric plus Black Pepper Extract (60 tablets)",
     brand: "Nature's Bounty",
@@ -1039,7 +989,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 40) throw new Error(`batch196 row count ${ROWS.length}`);
+if (ROWS.length !== 38) throw new Error(`batch196 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch196 duplicate id');
 
