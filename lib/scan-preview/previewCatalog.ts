@@ -15259,6 +15259,20 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Front reads DAILY PREVENTION, TOLNAFTATE, and NET WT 90g (3 OZ).
   // Not a miconazole powder.
   'lotrimin-b186-daily-powder-90': catalogShot('lotrimin-b186-daily-powder-90.jpg'),
+  // First Aid night run 2026-10-16 6:45 AM PT batch 2.
+  // Exact US package fronts. Per-id only. verifiedSku.
+  // These two were the last letter rows on the aisle.
+  // Lotrimin AF jock itch medicated powder, miconazole nitrate 2%, 6.25 oz.
+  // Barcode 041100600462. DailyMed setid 1300d84f bottle photo
+  // Lotrimin AF Jock Itch 177g.jpg.
+  // Front reads JOCK ITCH POWDER and NET WT 177g (6.25 OZ).
+  // Not the 3 oz daily prevention powder. Not the 4.6 oz powder spray.
+  'lotrimin-b186-jock-powder-177': catalogShot('lotrimin-b186-jock-powder-177.jpg'),
+  // Monistat Care chafing relief powder gel, dimethicone 1.2%, 1.5 oz.
+  // Barcode 363736447205. Target front for that code.
+  // Front reads CHAFING RELIEF POWDER GEL and NET WT 1.5 OZ (42 g).
+  // Not the itch cream. Not the itch spray.
+  'monistat-b186-chafing-42': catalogShot('monistat-b186-chafing-42.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16137,6 +16151,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'lotrimin-b186-jock-powder-spray-133',
   'lotrimin-b186-deo-powder-spray-133',
   'lotrimin-b186-daily-powder-90',
+  // First Aid night run 2026-10-16 6:45 AM PT batch 2.
+  // Do not inherit the daily prevention bottle or the powder spray.
+  'lotrimin-b186-jock-powder-177',
+  'monistat-b186-chafing-42',
 ]);
 
 export function previewOverlayImage(
@@ -32878,12 +32896,54 @@ assertBrandMark(
       throw new Error(`First Aid siblings must not share a carton: ${group.join(', ')}`);
     }
   }
-  const stillLetter = previewOverlayImage({
+}
+
+{
+  // First Aid night run 2026-10-16 6:45 AM PT batch 2.
+  // Exact package photos. These two were the last letter rows on the aisle.
+  const firstAidCartons: [string, string, string, string][] = [
+    ['lotrimin-b186-jock-powder-177', 'Lotrimin', 'lotrimin-b186-jock-powder', 'lotrimin-b186-jock-powder-177.jpg'],
+    ['monistat-b186-chafing-42', 'Monistat', 'monistat-b186-chafing', 'monistat-b186-chafing-42.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of firstAidCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate first aid carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const powder = previewOverlayImage({
     id: 'lotrimin-b186-jock-powder-177',
     formulaId: 'lotrimin-b186-jock-powder',
     brand: 'Lotrimin',
   });
-  if (!stillLetter?.url.startsWith('data:image/svg')) {
-    throw new Error('Jock itch powder 6.25 oz stays a letter until its own batch');
+  const daily = previewOverlayImage({
+    id: 'lotrimin-b186-daily-powder-90',
+    formulaId: 'lotrimin-b186-daily-powder',
+    brand: 'Lotrimin',
+  });
+  const spray = previewOverlayImage({
+    id: 'lotrimin-b186-jock-powder-spray-133',
+    formulaId: 'lotrimin-b186-powder-spray',
+    brand: 'Lotrimin',
+  });
+  if (!powder?.url || powder.url === daily?.url || powder.url === spray?.url) {
+    throw new Error('Jock itch powder 6.25 oz must not share the 3 oz bottle or the powder spray');
+  }
+  const chafing = previewOverlayImage({
+    id: 'monistat-b186-chafing-42',
+    formulaId: 'monistat-b186-chafing',
+    brand: 'Monistat',
+  });
+  const itchCream = previewOverlayImage({
+    id: 'monistat-b185-itch-cream-1',
+    formulaId: 'monistat-b185-itch-cream',
+    brand: 'Monistat',
+  });
+  if (!chafing?.url || chafing.url === itchCream?.url) {
+    throw new Error('Chafing gel must not share the itch cream');
   }
 }
