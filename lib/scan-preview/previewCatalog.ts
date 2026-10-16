@@ -15137,6 +15137,22 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // DailyMed on this setid is the 80-count file. Brand-site pack shot has no count.
   // Do not glue the 80.
   'excedrin-b184-rapid-20': catalogShot('excedrin-b184-rapid-20.jpg'),
+  // Sleep night run 2026-10-16 5:30 AM PT batch 1.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Children's Sleep chewable tablets with melatonin, natural grape, 30 tablets.
+  // Barcode 898115002503. zarbees.com front for that code
+  // (250_zar_898115002503_us_sleep_chewables_natural_grape_30ct).
+  // Front reads NATURAL GRAPE FLAVOR and 30 CHEWABLE TABLETS.
+  // Not the 50-count bottle. Not the sleep gummies. Not the sleep liquid.
+  // The supplement-facts panel on the same page was not used.
+  'zarbees-b166-sleep-chew-30': catalogShot('zarbees-b166-sleep-chew-30.jpg'),
+  // Children's Sleep chewable tablets with melatonin, natural grape, 50 tablets.
+  // Barcode 858438005582. zarbees.com front for that code
+  // (ZAR_858438005582_US_Ch_Sleep_Chewables_Grape_50CT).
+  // Front reads NATURAL GRAPE FLAVOR and 50 CHEWABLE TABLETS.
+  // Not the 30-count bottle. Not the 50-count gummies (858438005438).
+  // Not the sleep liquid. The dosage graphic on the same page was not used.
+  'zarbees-b166-sleep-chew-50': catalogShot('zarbees-b166-sleep-chew-50.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15988,6 +16004,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'motrin-b184-ib-gel-120',
   'motrin-b184-dual-80',
   'motrin-b184-dual-120',
+  // Sleep night run 2026-10-16 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // The 30-count must not inherit the 50. The 50 must not inherit the 30.
+  'zarbees-b166-sleep-chew-30',
+  'zarbees-b166-sleep-chew-50',
 ]);
 
 export function previewOverlayImage(
@@ -32624,5 +32645,53 @@ assertBrandMark(
   });
   if (!grapeChew || grapeChew.verifiedSku || grapeChew.url === berry24?.url) {
     throw new Error('Wild berry 24 must not inherit the flavor-generic chew mark');
+  }
+}
+
+{
+  // Sleep night run 2026-10-16 5:30 AM PT batch 1.
+  // Exact package photos. These two were the last letter rows on the aisle.
+  const sleepCartons: [string, string, string, string][] = [
+    ['zarbees-b166-sleep-chew-30', "Zarbee's", 'zarbees-b166-sleep-chew', 'zarbees-b166-sleep-chew-30.jpg'],
+    ['zarbees-b166-sleep-chew-50', "Zarbee's", 'zarbees-b166-sleep-chew', 'zarbees-b166-sleep-chew-50.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of sleepCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate sleep carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const chew30 = previewOverlayImage({
+    id: 'zarbees-b166-sleep-chew-30',
+    formulaId: 'zarbees-b166-sleep-chew',
+    brand: "Zarbee's",
+  });
+  const chew50 = previewOverlayImage({
+    id: 'zarbees-b166-sleep-chew-50',
+    formulaId: 'zarbees-b166-sleep-chew',
+    brand: "Zarbee's",
+  });
+  if (!chew30?.url || chew30.url === chew50?.url) {
+    throw new Error('Sleep chew 30 must not share the 50 carton');
+  }
+  const gummies = previewOverlayImage({
+    id: 'zarbees-kids-sleep-gummies',
+    formulaId: 'zarbees-kids-sleep-gummies',
+    brand: "Zarbee's",
+  });
+  const liquid = previewOverlayImage({
+    id: 'zarbees-kids-sleep-liquid',
+    formulaId: 'zarbees-kids-sleep-liquid',
+    brand: "Zarbee's",
+  });
+  if (chew30.url === gummies?.url || chew50?.url === gummies?.url) {
+    throw new Error('Sleep chews must not share the gummies carton');
+  }
+  if (chew30.url === liquid?.url || chew50?.url === liquid?.url) {
+    throw new Error('Sleep chews must not share the liquid carton');
   }
 }
