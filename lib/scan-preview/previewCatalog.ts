@@ -15153,6 +15153,112 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Not the 30-count bottle. Not the 50-count gummies (858438005438).
   // Not the sleep liquid. The dosage graphic on the same page was not used.
   'zarbees-b166-sleep-chew-50': catalogShot('zarbees-b166-sleep-chew-50.jpg'),
+  // First Aid night run 2026-10-16 6:45 AM PT batch 1.
+  // Exact US package fronts. Per-id only. verifiedSku.
+  // Lotrimin Ultra athlete's foot cream, butenafine hydrochloride 1%, 1.1 oz.
+  // Barcode 041100594143. Target front for that code.
+  // Front reads FOR ATHLETE'S FOOT and NET WT 30g (1.1 OZ).
+  // Not the 0.42 oz jock itch tube. Not the 0.7 oz applicator.
+  'lotrimin-b185-ultra-af-30': catalogShot('lotrimin-b185-ultra-af-30.jpg'),
+  // Lotrimin Ultra jock itch cream, butenafine hydrochloride 1%, 0.42 oz.
+  // Barcode 041100594150. Target front for that code.
+  // Front reads JOCK ITCH and NET WT 12g (0.42 OZ).
+  // Not the 1.1 oz athlete's foot tube.
+  'lotrimin-b185-ultra-jock-12': catalogShot('lotrimin-b185-ultra-jock-12.jpg'),
+  // Lotrimin Ultra athlete's foot cream with no-touch applicator, 0.7 oz.
+  // Barcode 041100591395. Target front for that code.
+  // Front reads NO MESS APPLICATOR and NET WT 20g (0.70 OZ).
+  // Not the 1.1 oz tube.
+  'lotrimin-b185-ultra-applicator-20': catalogShot('lotrimin-b185-ultra-applicator-20.jpg'),
+  // Lamisil AT athlete's foot cream, terbinafine hydrochloride 1%, 1 oz.
+  // Barcode 810164600059. lamisilat.com PDP front for the 1 oz (30 g) cream.
+  // Front reads ATHLETE'S FOOT, CREAM, NET WT. 1 OZ (30g),
+  // and the code 8 10164 60005 9.
+  // Not the 0.42 oz jock itch cream. Not the spray.
+  'lamisil-b185-af-cream-30': catalogShot('lamisil-b185-af-cream-30.jpg'),
+  // Lamisil AT jock itch cream, terbinafine hydrochloride 1%, 0.42 oz.
+  // lamisilat.com pack shot lamisilat-cream-jockitch.png on the 0.42 oz (12 g) page.
+  // Front reads JOCK ITCH, CREAM, and NET WT. 0.42 OZ (12g).
+  // Not the 1 oz athlete's foot cream. No opened page tied a barcode. UPC stays empty.
+  'lamisil-b185-jock-cream-12': catalogShot('lamisil-b185-jock-cream-12.jpg'),
+  // Lamisil AT athlete's foot spray, 4.2 oz.
+  // Barcode 810164600028. lamisilat.com US pack shot
+  // Lamisil-AT-Athletes-Foot-Spray-120g-US-Packshot-Front.
+  // Front reads ATHLETE'S FOOT, SPRAY, and NET WT 4.2 OZ (120g).
+  // Not the jock itch spray.
+  'lamisil-b185-af-spray-120': catalogShot('lamisil-b185-af-spray-120.jpg'),
+  // Lamisil AT jock itch spray, 4.2 oz.
+  // lamisilat.com US pack shot Lamisil-AT-Jock-Itch-Spray-120g-US-Packshot-Front.
+  // Front reads JOCK ITCH, SPRAY, and NET WT 4.2 OZ (120g).
+  // Not the athlete's foot spray. No opened page tied a barcode. UPC stays empty.
+  'lamisil-b185-jock-spray-120': catalogShot('lamisil-b185-jock-spray-120.jpg'),
+  // Monistat 3-day treatment cream, 3 prefilled applicators.
+  // monistat.com cream-only front 363736000769.jpg.
+  // Front reads 3-DAY TREATMENT, PREFILLED CREAM APPLICATOR,
+  // and 3 Prefilled Applicators Net Wt. 0.18 oz (5g) each.
+  // Not the combination pack (363736000752). Flat DailyMed label was not used.
+  'monistat-b185-3-cream': catalogShot('monistat-b185-3-cream.jpg'),
+  // Monistat 7-day treatment cream, tube plus 7 disposable applicators.
+  // monistat.com cream-only front 363736000806.jpg.
+  // Front reads 7-DAY TREATMENT CREAM, Miconazole Nitrate Vaginal Cream (2%),
+  // and Net Wt. 1.59 oz (45 g) Tube + 7 Disposable Applicators.
+  // Not the combination pack (363736000813).
+  'monistat-b185-7-cream': catalogShot('monistat-b185-7-cream.jpg'),
+  // Monistat 1-day tioconazole ointment, one prefilled applicator, 4.6 g.
+  // monistat.com prefilled-ointment front 363736000820.jpg.
+  // Front reads TIOCONAZOLE OINTMENT 6.5% and NET WT 0.16 OZ (4.6g).
+  // Not the miconazole combination pack (363736000738).
+  'monistat-b185-1-ointment': catalogShot('monistat-b185-1-ointment.jpg'),
+  // Monistat Care instant itch relief cream, hydrocortisone 1%, 1 oz.
+  // monistat.com front monistat-instant-itch-relief-cream.png.
+  // Front reads ITCH RELIEF Cream, Hydrocortisone 1%, and NET WT. 1 OZ (28g).
+  // Not the itch spray.
+  'monistat-b185-itch-cream-1': catalogShot('monistat-b185-itch-cream-1.jpg'),
+  // Monistat Care instant itch relief spray, benzocaine, 2 oz.
+  // monistat.com front itch.jpg on the spray page.
+  // Front reads ITCH RELIEF SPRAY, Benzocaine, and 2 OZ (57 g).
+  // Not the itch cream. The hand graphic on that page was not used.
+  'monistat-b185-itch-spray-2': catalogShot('monistat-b185-itch-spray-2.jpg'),
+  // Lotrimin AF athlete's foot cream, clotrimazole 1%, 1.1 oz.
+  // Barcode 041100594198. Target front for that code.
+  // Front reads ATHLETE'S FOOT and NET WT 30g (1.1 OZ).
+  // Not the Ultra butenafine tube. Not the jock itch or ringworm 0.42 oz tubes.
+  'lotrimin-b186-af-cream-30': catalogShot('lotrimin-b186-af-cream-30.jpg'),
+  // Lotrimin AF jock itch cream, clotrimazole 1%, 0.42 oz.
+  // Barcode 041100594167. Target front for that code.
+  // Front reads JOCK ITCH and NET WT 12g (0.42 OZ).
+  // Not the athlete's foot 1.1 oz tube. Not the ringworm tube.
+  'lotrimin-b186-jock-cream-12': catalogShot('lotrimin-b186-jock-cream-12.jpg'),
+  // Lotrimin AF ringworm cream, clotrimazole 1%, 0.42 oz.
+  // Barcode 041100594174. Target front for that code.
+  // Front reads RINGWORM and NET WT 12g (0.42 OZ).
+  // Not the jock itch tube.
+  'lotrimin-b186-ringworm-cream-12': catalogShot('lotrimin-b186-ringworm-cream-12.jpg'),
+  // Lotrimin AF athlete's foot liquid spray, miconazole nitrate 2%, 4.6 oz.
+  // Barcode 041100407887. Target front for that code.
+  // Front reads LIQUID SPRAY and NET WT 133g (4.6 OZ).
+  // Not the powder spray.
+  'lotrimin-b186-liquid-spray-133': catalogShot('lotrimin-b186-liquid-spray-133.jpg'),
+  // Lotrimin AF athlete's foot powder spray, miconazole nitrate 2%, 4.6 oz.
+  // Barcode 041100599827. Target front for that code.
+  // Front reads POWDER SPRAY, ATHLETE'S FOOT, and NET WT 133g (4.6 OZ).
+  // Not the liquid spray. Not the jock itch powder spray. Not the deodorant spray.
+  'lotrimin-b186-af-powder-spray-133': catalogShot('lotrimin-b186-af-powder-spray-133.jpg'),
+  // Lotrimin AF jock itch powder spray, miconazole nitrate 2%, 4.6 oz.
+  // Barcode 041100599834. Target front for that code.
+  // Front reads POWDER SPRAY, JOCK ITCH, and NET WT 133g (4.6 OZ).
+  // Not the athlete's foot powder spray.
+  'lotrimin-b186-jock-powder-spray-133': catalogShot('lotrimin-b186-jock-powder-spray-133.jpg'),
+  // Lotrimin AF deodorant powder spray, miconazole nitrate 2%, 4.6 oz.
+  // Barcode 041100600004. Target front for that code.
+  // Front reads DEODORANT POWDER SPRAY and NET WT 133g (4.6 OZ).
+  // Not the athlete's foot powder spray.
+  'lotrimin-b186-deo-powder-spray-133': catalogShot('lotrimin-b186-deo-powder-spray-133.jpg'),
+  // Lotrimin AF daily prevention powder, tolnaftate 1%, 3 oz.
+  // Barcode 041100587299. Target front for that code.
+  // Front reads DAILY PREVENTION, TOLNAFTATE, and NET WT 90g (3 OZ).
+  // Not a miconazole powder.
+  'lotrimin-b186-daily-powder-90': catalogShot('lotrimin-b186-daily-powder-90.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16009,6 +16115,28 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // The 30-count must not inherit the 50. The 50 must not inherit the 30.
   'zarbees-b166-sleep-chew-30',
   'zarbees-b166-sleep-chew-50',
+  // First Aid night run 2026-10-16 6:45 AM PT batch 1.
+  // Shared-formula packs. Do not inherit a sibling face.
+  'lotrimin-b185-ultra-af-30',
+  'lotrimin-b185-ultra-jock-12',
+  'lotrimin-b185-ultra-applicator-20',
+  'lamisil-b185-af-cream-30',
+  'lamisil-b185-jock-cream-12',
+  'lamisil-b185-af-spray-120',
+  'lamisil-b185-jock-spray-120',
+  'monistat-b185-3-cream',
+  'monistat-b185-7-cream',
+  'monistat-b185-1-ointment',
+  'monistat-b185-itch-cream-1',
+  'monistat-b185-itch-spray-2',
+  'lotrimin-b186-af-cream-30',
+  'lotrimin-b186-jock-cream-12',
+  'lotrimin-b186-ringworm-cream-12',
+  'lotrimin-b186-liquid-spray-133',
+  'lotrimin-b186-af-powder-spray-133',
+  'lotrimin-b186-jock-powder-spray-133',
+  'lotrimin-b186-deo-powder-spray-133',
+  'lotrimin-b186-daily-powder-90',
 ]);
 
 export function previewOverlayImage(
@@ -32693,5 +32821,69 @@ assertBrandMark(
   }
   if (chew30.url === liquid?.url || chew50?.url === liquid?.url) {
     throw new Error('Sleep chews must not share the liquid carton');
+  }
+}
+
+{
+  // First Aid night run 2026-10-16 6:45 AM PT batch 1.
+  // Exact package photos. Twenty letter rows. Two letter rows remain.
+  const firstAidCartons: [string, string, string, string][] = [
+    ['lotrimin-b185-ultra-af-30', 'Lotrimin', 'lotrimin-b185-ultra', 'lotrimin-b185-ultra-af-30.jpg'],
+    ['lotrimin-b185-ultra-jock-12', 'Lotrimin', 'lotrimin-b185-ultra', 'lotrimin-b185-ultra-jock-12.jpg'],
+    ['lotrimin-b185-ultra-applicator-20', 'Lotrimin', 'lotrimin-b185-ultra', 'lotrimin-b185-ultra-applicator-20.jpg'],
+    ['lamisil-b185-af-cream-30', 'Lamisil', 'lamisil-b185-cream', 'lamisil-b185-af-cream-30.jpg'],
+    ['lamisil-b185-jock-cream-12', 'Lamisil', 'lamisil-b185-cream', 'lamisil-b185-jock-cream-12.jpg'],
+    ['lamisil-b185-af-spray-120', 'Lamisil', 'lamisil-b185-spray', 'lamisil-b185-af-spray-120.jpg'],
+    ['lamisil-b185-jock-spray-120', 'Lamisil', 'lamisil-b185-spray', 'lamisil-b185-jock-spray-120.jpg'],
+    ['monistat-b185-3-cream', 'Monistat', 'monistat-b185-cream', 'monistat-b185-3-cream.jpg'],
+    ['monistat-b185-7-cream', 'Monistat', 'monistat-b185-cream', 'monistat-b185-7-cream.jpg'],
+    ['monistat-b185-1-ointment', 'Monistat', 'monistat-b185-tio-ointment', 'monistat-b185-1-ointment.jpg'],
+    ['monistat-b185-itch-cream-1', 'Monistat', 'monistat-b185-itch-cream', 'monistat-b185-itch-cream-1.jpg'],
+    ['monistat-b185-itch-spray-2', 'Monistat', 'monistat-b185-itch-spray', 'monistat-b185-itch-spray-2.jpg'],
+    ['lotrimin-b186-af-cream-30', 'Lotrimin', 'lotrimin-b186-clotrimazole', 'lotrimin-b186-af-cream-30.jpg'],
+    ['lotrimin-b186-jock-cream-12', 'Lotrimin', 'lotrimin-b186-clotrimazole', 'lotrimin-b186-jock-cream-12.jpg'],
+    ['lotrimin-b186-ringworm-cream-12', 'Lotrimin', 'lotrimin-b186-clotrimazole', 'lotrimin-b186-ringworm-cream-12.jpg'],
+    ['lotrimin-b186-liquid-spray-133', 'Lotrimin', 'lotrimin-b186-liquid-spray', 'lotrimin-b186-liquid-spray-133.jpg'],
+    ['lotrimin-b186-af-powder-spray-133', 'Lotrimin', 'lotrimin-b186-powder-spray', 'lotrimin-b186-af-powder-spray-133.jpg'],
+    ['lotrimin-b186-jock-powder-spray-133', 'Lotrimin', 'lotrimin-b186-powder-spray', 'lotrimin-b186-jock-powder-spray-133.jpg'],
+    ['lotrimin-b186-deo-powder-spray-133', 'Lotrimin', 'lotrimin-b186-deo-spray', 'lotrimin-b186-deo-powder-spray-133.jpg'],
+    ['lotrimin-b186-daily-powder-90', 'Lotrimin', 'lotrimin-b186-daily-powder', 'lotrimin-b186-daily-powder-90.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of firstAidCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate first aid carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const groups = [
+    ['lotrimin-b185-ultra-af-30', 'lotrimin-b185-ultra-jock-12', 'lotrimin-b185-ultra-applicator-20'],
+    ['lamisil-b185-af-cream-30', 'lamisil-b185-jock-cream-12'],
+    ['lamisil-b185-af-spray-120', 'lamisil-b185-jock-spray-120'],
+    ['monistat-b185-3-cream', 'monistat-b185-7-cream'],
+    ['monistat-b185-itch-cream-1', 'monistat-b185-itch-spray-2'],
+    ['lotrimin-b186-af-cream-30', 'lotrimin-b186-jock-cream-12', 'lotrimin-b186-ringworm-cream-12'],
+    ['lotrimin-b186-liquid-spray-133', 'lotrimin-b186-af-powder-spray-133', 'lotrimin-b186-jock-powder-spray-133', 'lotrimin-b186-deo-powder-spray-133'],
+  ];
+  const byId = new Map(firstAidCartons.map((row) => [row[0], row]));
+  for (const group of groups) {
+    const urls = group.map((id) => {
+      const [, brand, formulaId] = byId.get(id)!;
+      return previewOverlayImage({ id, formulaId, brand })?.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`First Aid siblings must not share a carton: ${group.join(', ')}`);
+    }
+  }
+  const stillLetter = previewOverlayImage({
+    id: 'lotrimin-b186-jock-powder-177',
+    formulaId: 'lotrimin-b186-jock-powder',
+    brand: 'Lotrimin',
+  });
+  if (!stillLetter?.url.startsWith('data:image/svg')) {
+    throw new Error('Jock itch powder 6.25 oz stays a letter until its own batch');
   }
 }
