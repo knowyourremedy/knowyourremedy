@@ -33,7 +33,7 @@ const FISH_OIL_PANEL = 'https://naturesbounty.com/products/fish-oil-1000-mg-145-
 export const BATCH193_KYR6C_NB_TWENTY: RatingRecord[] = [
   {
     id: 'natures-bounty-b193-b12-liquid-59',
-    productName: "Nature's Bounty Vitamin B-12 5,000 mcg Liquid (59 doses)",
+    productName: "Nature's Bounty Vitamin B-12 5,000 mcg Liquid (2 fl oz)",
     brand: "Nature's Bounty",
     category: VITAMINS,
     formulaId: 'natures-bounty-b193-b12-liquid',
