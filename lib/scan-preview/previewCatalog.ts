@@ -15126,6 +15126,17 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // DailyMed setid 333f6231-3778-4c1f-9558-2afddca22c86 package photo.
   // Front reads BUBBLE GUM and 4 FL OZ (120 mL). Not the dye-free cherry.
   'tylenol-b184-bubble-4': catalogShot('tylenol-b184-bubble-4.jpg'),
+  // Pain & Fever night run 2026-10-16 4:15 AM PT batch 1.
+  // Children's Tylenol dye-free wild berry chewables, 24 tablets.
+  // tylenol.com front TYL_NA_US_00300450156242 Child_DF_Berry_Chew_Tablets_24ct.
+  // Front reads DYE-FREE, WILD BERRY, and 24 CHEWABLE TABLETS.
+  // Not the grape 24. DailyMed tylenol-1.jpg is a flat label. Not used.
+  'tylenol-b184-df-berry-24': catalogShot('tylenol-b184-df-berry-24.jpg'),
+  // Excedrin Rapid Relief, 20 caplets.
+  // Target pack shot for the 20-count. Front reads RAPID RELIEF and 20 CAPLETS.
+  // DailyMed on this setid is the 80-count file. Brand-site pack shot has no count.
+  // Do not glue the 80.
+  'excedrin-b184-rapid-20': catalogShot('excedrin-b184-rapid-20.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -32568,5 +32579,50 @@ assertBrandMark(
   });
   if (ib80?.url === ib120?.url) {
     throw new Error('Motrin IB 120 must not share the older liquid-gels carton');
+  }
+}
+
+{
+  // Pain & Fever night run 2026-10-16 4:15 AM PT batch 1.
+  // Exact package photos. These two were the last letter rows on the aisle.
+  const painCartons: [string, string, string, string][] = [
+    ['tylenol-b184-df-berry-24', 'Tylenol', 'tylenol-b184-df-chew', 'tylenol-b184-df-berry-24.jpg'],
+    ['excedrin-b184-rapid-20', 'Excedrin', 'excedrin-b184-rapid', 'excedrin-b184-rapid-20.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of painCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate pain carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const olderRapid = previewOverlayImage({
+    id: 'excedrin-rapid-relief-apap',
+    formulaId: 'excedrin-rapid-relief-apap',
+    brand: 'Excedrin',
+  });
+  const rapid20 = previewOverlayImage({
+    id: 'excedrin-b184-rapid-20',
+    formulaId: 'excedrin-b184-rapid',
+    brand: 'Excedrin',
+  });
+  if (olderRapid?.url === rapid20?.url) {
+    throw new Error('Excedrin Rapid Relief 20 must not share the older uncounted face');
+  }
+  const grapeChew = previewOverlayImage({
+    id: 'tylenol-children-chew-dyefree',
+    formulaId: 'tylenol-children-chew-dyefree',
+    brand: 'Tylenol',
+  });
+  const berry24 = previewOverlayImage({
+    id: 'tylenol-b184-df-berry-24',
+    formulaId: 'tylenol-b184-df-chew',
+    brand: 'Tylenol',
+  });
+  if (!grapeChew || grapeChew.verifiedSku || grapeChew.url === berry24?.url) {
+    throw new Error('Wild berry 24 must not inherit the flavor-generic chew mark');
   }
 }
