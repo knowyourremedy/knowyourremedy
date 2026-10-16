@@ -14960,6 +14960,93 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'afrin-b173-childrens-saline-5': catalogShot(
     'afrin-b173-childrens-saline-5.jpg',
   ),
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 1.
+  // Exact US package photos. Per-id only. verifiedSku.
+  // Anbesol Maximum Strength gel, 0.33 oz. Barcode 850024432031.
+  // DailyMed setid dcc37403-0192-4658-bb7a-059273ce0047 package photo.
+  // Front reads MAXIMUM STRENGTH and NET WT 0.33 OZ (9 g). Not the liquid.
+  'anbesol-b181-gel-033': catalogShot('anbesol-b181-gel-033.jpg'),
+  // Anbesol Maximum Strength liquid, 0.41 fl oz. Barcode 850024432017.
+  // DailyMed setid 8c6ac499-9bd2-4ea5-9f26-df7947bff4a6 package photo.
+  // Front reads LIQUID and 0.41 FL OZ (12 mL). Not the gel.
+  'anbesol-b181-liquid-041': catalogShot('anbesol-b181-liquid-041.jpg'),
+  // Preparation H Maximum Strength medicated wipes, 48 count.
+  // Target pack shot. Front reads MEDICATED WIPES and 48.
+  // Not the 2 x 48 twin pack. Not the 60-count soothing wipes.
+  'preph-b182-wipes-48': catalogShot('preph-b182-wipes-48.jpg'),
+  // Preparation H hemorrhoidal ointment, 1 oz.
+  // DailyMed setid 507c08ab-a98b-33fe-e2ac-eb9b9a810d5a package photo.
+  // Front reads OINTMENT and NET WT 1 OZ (28.3 g). Not the 2 oz tube.
+  'preph-b182-ointment-1': catalogShot('preph-b182-ointment-1.jpg'),
+  // Preparation H hemorrhoidal ointment, 2 oz.
+  // Same DailyMed setid, the 2 oz package photo.
+  // Front reads OINTMENT and NET WT 2 OZ (56.7 g). Not the 1 oz tube.
+  'preph-b182-ointment-2': catalogShot('preph-b182-ointment-2.jpg'),
+  // Preparation H Maximum Strength cream, 0.9 oz.
+  // DailyMed setid 7cc03d2e-e708-589a-d9bb-58ebbda989c0 package photo.
+  // Front reads MAXIMUM STRENGTH and NET WT 0.9 OZ (26 g). Not the 1.8 oz.
+  'preph-b182-cream-09': catalogShot('preph-b182-cream-09.jpg'),
+  // Preparation H Maximum Strength cream, 1.8 oz.
+  // Same DailyMed setid, the 1.8 oz package photo.
+  // Front reads MAXIMUM STRENGTH and NET WT 1.8 OZ (51 g). Not the 0.9 oz.
+  'preph-b182-cream-18': catalogShot('preph-b182-cream-18.jpg'),
+  // Preparation H Rapid Relief spray with lidocaine, 3.8 oz.
+  // DailyMed setid 27db1d58-4609-4a80-af2f-9e36f10482e1 package photo.
+  // Front reads RAPID RELIEF, WITH LIDOCAINE, and NET WT 3.8 OZ (107 g).
+  'preph-b182-spray-38': catalogShot('preph-b182-spray-38.jpg'),
+  // Preparation H hemorrhoidal suppositories, 12 count.
+  // DailyMed setid 40fde50a-3cc0-4286-9b33-8f3912254c33 package photo.
+  // Front reads SUPPOSITORIES and 12 SUPPOSITORIES.
+  'preph-b182-supp-12': catalogShot('preph-b182-supp-12.jpg'),
+  // Orajel Toothache Rinse, 16 fl oz. 
+  // DailyMed setid 41709710-5392-3119-e054-00144ff88e88 package photo.
+  // Front reads TOOTHACHE RINSE and 16 FL OZ (473 mL).
+  'orajel-b182-rinse-16': catalogShot('orajel-b182-rinse-16.jpg'),
+  // Orajel Super Mario anticavity fluoride toothpaste, 5.8 oz.
+  // DailyMed setid 27d2f6cb-8661-da9c-e063-6394a90a5bde package photo.
+  // Front reads SUPER MARIO and NET WT 5.8 OZ (164 g).
+  // Not the Toy Story tube. Not the Paw Patrol 4.2 oz.
+  'orajel-b182-mario-58': catalogShot('orajel-b182-mario-58.jpg'),
+  // Orajel Toy Story 5 anticavity fluoride toothpaste, 5.8 oz.
+  // DailyMed setid 4b80947d-f389-2f80-e063-6294a90abd55 package photo.
+  // Front reads TOY STORY 5 and NET WT 5.8 OZ (164 g).
+  // Not the Super Mario tube. Not the Paw Patrol 4.2 oz.
+  'orajel-b182-toystory-58': catalogShot('orajel-b182-toystory-58.jpg'),
+  // Abreva docosanol 10% cream pump, 0.07 oz.
+  // DailyMed setid bf02c8c5-af60-41f1-a202-38a97491a720 package photo.
+  // Front reads PUMP and NET WT 0.07 OZ (2 g). Not the tube.
+  'abreva-b182-pump-007': catalogShot('abreva-b182-pump-007.jpg'),
+  // Abreva docosanol 10% cream tube, 0.07 oz.
+  // DailyMed setid c39b38a7-dcdd-4c32-8f35-b565c4d3cec6 package photo.
+  // Front reads COLD SORE/FEVER BLISTER TREATMENT and NET WT .07 OZ (2 g).
+  // Not the pump.
+  'abreva-b182-tube-007': catalogShot('abreva-b182-tube-007.jpg'),
+  // Abreva Rapid Pain Relief, 0.10 oz (3 g).
+  // DailyMed setid 65bd242f-4c6a-436c-8ec0-7b2e0d73ed9d package photo.
+  // Front reads RAPID PAIN RELIEF and NET WT 0.10 OZ (3 g).
+  // Not the docosanol pump or tube.
+  'abreva-b182-rapid-010': catalogShot('abreva-b182-rapid-010.jpg'),
+  // Orajel Paw Patrol anticavity fluoride toothpaste, 4.2 oz (119 g).
+  // DailyMed setid 99d87bea-3e99-5d04-e053-2a95a90aaf54 package photo.
+  // Front reads PAW PATROL and NET WT 4.2 OZ (119 g).
+  // Not the 5.8 oz Mario or Toy Story tubes.
+  'orajel-b183-paw-119': catalogShot('orajel-b183-paw-119.jpg'),
+  // Advil Liqui-Gels, 20 liquid gels.
+  // DailyMed setid 1f01c10a-9434-91a4-2ee4-352315a6b610 package photo.
+  // Front reads LIQUI-GELS and 20 Liquid Filled Capsules. Not the minis.
+  'advil-b184-liquigel-20': catalogShot('advil-b184-liquigel-20.jpg'),
+  // Advil Liqui-Gels, 40 liquid gels.
+  // Retail pack shot. Front reads LIQUI-GELS and 40 Liquid Filled Capsules.
+  // Not the 20, 80, or 160.
+  'advil-b184-liquigel-40': catalogShot('advil-b184-liquigel-40.jpg'),
+  // Advil Liqui-Gels, 80 liquid gels.
+  // Target pack shot. Front reads LIQUI-GELS and 80 Liquid Filled Capsules.
+  // Not the minis. Not the 160.
+  'advil-b184-liquigel-80': catalogShot('advil-b184-liquigel-80.jpg'),
+  // Advil Liqui-Gels, 160 liquid gels.
+  // Target pack shot. Front reads LIQUI-GELS and 160 Liquid Filled Capsules.
+  // Not the Easy Open arthritis cap bottle. Not the minis.
+  'advil-b184-liquigel-160': catalogShot('advil-b184-liquigel-160.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15778,6 +15865,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-b79-ala-240-capsules',
   // Turmeric 90 must not inherit the 120.
   'nutricost-b79-turmeric-90-capsules',
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 1.
+  // Shared-formula sizes and characters. Do not inherit a sibling face.
+  'preph-b182-ointment-1',
+  'preph-b182-ointment-2',
+  'preph-b182-cream-09',
+  'preph-b182-cream-18',
+  'orajel-b182-mario-58',
+  'orajel-b182-toystory-58',
+  'orajel-b183-paw-119',
+  'abreva-b182-pump-007',
+  'abreva-b182-tube-007',
+  'advil-b184-liquigel-20',
+  'advil-b184-liquigel-40',
+  'advil-b184-liquigel-80',
+  'advil-b184-liquigel-160',
 ]);
 
 export function previewOverlayImage(
@@ -32213,5 +32315,72 @@ assertBrandMark(
   });
   if (extra?.url === moist?.url) {
     throw new Error('Extra Strength saline must not share the moisturizing bottle');
+  }
+}
+
+{
+  // Pain & Fever night run 2026-10-16 3:00 AM PT batch 1.
+  // Exact package photos. Not a sibling face.
+  const painCartons: [string, string, string, string][] = [
+    ['anbesol-b181-gel-033', 'Anbesol', 'anbesol-b181-gel', 'anbesol-b181-gel-033.jpg'],
+    ['anbesol-b181-liquid-041', 'Anbesol', 'anbesol-b181-liquid', 'anbesol-b181-liquid-041.jpg'],
+    ['preph-b182-wipes-48', 'Preparation H', 'preph-b182-wipes', 'preph-b182-wipes-48.jpg'],
+    ['preph-b182-ointment-1', 'Preparation H', 'preph-b182-ointment', 'preph-b182-ointment-1.jpg'],
+    ['preph-b182-ointment-2', 'Preparation H', 'preph-b182-ointment', 'preph-b182-ointment-2.jpg'],
+    ['preph-b182-cream-09', 'Preparation H', 'preph-b182-maxcream', 'preph-b182-cream-09.jpg'],
+    ['preph-b182-cream-18', 'Preparation H', 'preph-b182-maxcream', 'preph-b182-cream-18.jpg'],
+    ['preph-b182-spray-38', 'Preparation H', 'preph-b182-spray', 'preph-b182-spray-38.jpg'],
+    ['preph-b182-supp-12', 'Preparation H', 'preph-b182-supp', 'preph-b182-supp-12.jpg'],
+    ['orajel-b182-rinse-16', 'Orajel', 'orajel-b182-rinse', 'orajel-b182-rinse-16.jpg'],
+    ['orajel-b182-mario-58', 'Orajel', 'orajel-b182-kids-fluoride', 'orajel-b182-mario-58.jpg'],
+    ['orajel-b182-toystory-58', 'Orajel', 'orajel-b182-kids-fluoride', 'orajel-b182-toystory-58.jpg'],
+    ['abreva-b182-pump-007', 'Abreva', 'abreva-b182-docosanol', 'abreva-b182-pump-007.jpg'],
+    ['abreva-b182-tube-007', 'Abreva', 'abreva-b182-docosanol', 'abreva-b182-tube-007.jpg'],
+    ['abreva-b182-rapid-010', 'Abreva', 'abreva-b182-rapid', 'abreva-b182-rapid-010.jpg'],
+    ['orajel-b183-paw-119', 'Orajel', 'orajel-b182-kids-fluoride', 'orajel-b183-paw-119.jpg'],
+    ['advil-b184-liquigel-20', 'Advil', 'advil-b184-liquigels', 'advil-b184-liquigel-20.jpg'],
+    ['advil-b184-liquigel-40', 'Advil', 'advil-b184-liquigels', 'advil-b184-liquigel-40.jpg'],
+    ['advil-b184-liquigel-80', 'Advil', 'advil-b184-liquigels', 'advil-b184-liquigel-80.jpg'],
+    ['advil-b184-liquigel-160', 'Advil', 'advil-b184-liquigels', 'advil-b184-liquigel-160.jpg'],
+  ];
+  const seenFiles = new Set<string>();
+  for (const [id, brand, formulaId, file] of painCartons) {
+    if (seenFiles.has(file)) throw new Error(`duplicate pain carton ${file}`);
+    seenFiles.add(file);
+    assertExactCarton(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.verifiedSku || !image.url.endsWith(`/${file}`)) {
+      throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const groups = [
+    ['preph-b182-ointment-1', 'preph-b182-ointment-2'],
+    ['preph-b182-cream-09', 'preph-b182-cream-18'],
+    ['orajel-b182-mario-58', 'orajel-b182-toystory-58', 'orajel-b183-paw-119'],
+    ['abreva-b182-pump-007', 'abreva-b182-tube-007', 'abreva-b182-rapid-010'],
+    ['advil-b184-liquigel-20', 'advil-b184-liquigel-40', 'advil-b184-liquigel-80', 'advil-b184-liquigel-160'],
+  ];
+  const byId = new Map(painCartons.map((row) => [row[0], row]));
+  for (const group of groups) {
+    const urls = group.map((id) => {
+      const [, brand, formulaId] = byId.get(id)!;
+      return previewOverlayImage({ id, formulaId, brand })?.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Pain & Fever siblings must not share a carton: ${group.join(', ')}`);
+    }
+  }
+  const gel = previewOverlayImage({
+    id: 'anbesol-b181-gel-033',
+    formulaId: 'anbesol-b181-gel',
+    brand: 'Anbesol',
+  });
+  const liquid = previewOverlayImage({
+    id: 'anbesol-b181-liquid-041',
+    formulaId: 'anbesol-b181-liquid',
+    brand: 'Anbesol',
+  });
+  if (gel?.url === liquid?.url) {
+    throw new Error('Anbesol gel must not share the liquid');
   }
 }
