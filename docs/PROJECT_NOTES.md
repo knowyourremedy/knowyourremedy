@@ -56,6 +56,27 @@ Process lock
 - Same barcode on two counts is not a stop. Finish the ladder. DailyMed, brand site, Target, CVS, Walgreens, Amazon, then Google AI mode. Open the cited page. Attach the code only when a page ties it to one count. If every page that opened prints the same code on both counts, leave both empty and say so. Do not put it on Brandon's hunt list.
 - Condition rule. If a source says an ingredient is safe only when a condition is met, and this app cannot check that condition on the pack, the grade drops one level. A Clean call becomes Usable. A Usable call becomes Not clean. Do not jump two levels. Examples: safe when the formula is non-irritating, safe when non-sensitizing, when used as directed. A use level is not this rule. Safe at a named percent, safe at 0.001–0.25%, and any “safe at” line is how the ingredient is used. Do not drop a grade for a use level. The ingredient tab says the source requires a condition, this app does not have the formula, and the grade drops one level. Hydrogenated oil rule. The panel says hydrogenated. It does not say partial or full. Partial is the banned form. The grade is Avoid. Juice rule. Fruit and vegetable juice, puree, concentrate, and powder are Cleared. Named or not. Sweetener or color. High fructose corn syrup stays its own row.
 
+Google AI mode fail safe
+When the ladder reaches Google AI mode, ask for a single pack of that exact product and count. Say the full name, the strength if there is one, and the count. Tell it to answer only if it can 100% verify the code from a site it can actually view. Ask it to name the site and the code. A blurb that answers that way counts as one of the two confirmed sources. It can be the first or the second. There still need to be two. A multipack, a different count, or a blurb that does not name a site it viewed does not count. Open the cited page when it is named. A blocked page is not a finished step.
+
+Two-source rule
+A pack needs two confirmed sources before a UPC is attached or a row is written. One source can be a Google AI blurb that names the exact single-count pack and a matching code from a site it viewed. The other source must be a page that opened with a price or Add to Cart for that exact single count. Amazon alone is not enough. A multipack is not a single-count row.
+
+Search-tab rule
+Write the row only when the pack has a home in one of the 13 search tabs. If it does not, list the pack and do not write the row. Do not invent a tab.
+
+Honest note and ingredient tab
+An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. The note tells the shopper why the form in this product did not change the grade. An ingredient tab gives a plain why from the lock or the source that set the grade. A grade means there is a why. Do not write “Pending DailyMed review.” Name the rule or agency that set the why.
+
+Closed brands
+A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
+
+Bots and paste language
+KYR6-c is the live catalog bot. It writes a row only when the panel is read and the pack has a home in one of the 13 tabs. It grades from methodology. It attaches a founder-locked UPC only to the row it just wrote. KYR5-d attaches a UPC to an empty row that already exists. It does not create a row. KYR4 is the night photo bot. Photos only. Cap 20. KYR4-b is the daytime photo bot. It is paused on night wakes while KYR4 is active. Do not wake both. Every catalog job paste starts with “You are KYR6-c.” It says pull MAIN first, US only, no Canada, no EU, no store-brand. It includes the honest-note and ingredient-tab wording and the search-tab rule. It ends with the ladder order and the instruction to exhaust every step before reporting.
+
+Catalog search criteria
+The ladder is DailyMed, brand site, Target, Walgreens, CVS, Amazon, Walmart, Meijer, Kroger, Google AI mode last. A blocked page is not a finished step. When a store is blocked, try the next store. Do not stop the ladder because one store blocked. Write the row only when two confirmed sources show the exact single count for sale. A multipack is not a row. An NDC alone is not a sale page. Out of stock at every store that opened means the pack does not qualify.
+
 Removed, not stashed
 - Claritin 34 counts removed in PR #472 / 18a9baa. Do not re-add. Not a hunt. MCC tablets 10, 60, 85. Starch tablets 15, 25, 35, 55, 60, 85, 100, 105, 108, 110, 115. Liqui-Gels 5, 36, 70, 100. RediTabs 20, 40, 50. Bubblegum chew 40. Cool Mint chew 2, 4, 64. Kids syrup 1, 2, 6 fl oz. Dyed grape chew 2, 40, 50, 80, 100. Adult liquid 30 mL.
 - biofreeze-pain-relief-spray-10 removed in PR #472. Pages that opened were 10.5% menthol. Do not re-add. Not a hunt.
