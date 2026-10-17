@@ -16303,6 +16303,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Do not inherit the daily prevention bottle or the powder spray.
   'lotrimin-b186-jock-powder-177',
   'monistat-b186-chafing-42',
+  // Vitamins night run 2026-10-17 1:45 AM PT batch 2.
+  // Red yeast rice 90 and 120 share the 45-count formula.
+  // They must stay letters until their own fronts are attached.
+  'solaray-b117-076280004472',
+  'solaray-b117-076280004489',
 ]);
 
 export function previewOverlayImage(
@@ -33196,5 +33201,20 @@ assertBrandMark(
   });
   if (!cordy60?.url || cordy60.url === cordy100?.url) {
     throw new Error('Cordyceps 1000 mg 60 must not share the 520 mg 100');
+  }
+  const ryr45 = previewOverlayImage({
+    id: 'solaray-b117-076280004465',
+    formulaId: 'solaray-b117-076280004465',
+    brand: 'Solaray',
+  });
+  for (const id of ['solaray-b117-076280004472', 'solaray-b117-076280004489']) {
+    const image = previewOverlayImage({
+      id,
+      formulaId: 'solaray-b117-076280004465',
+      brand: 'Solaray',
+    });
+    if (!image || image.verifiedSku || image.url === ryr45?.url) {
+      throw new Error(`${id} must not inherit the red yeast rice 45-count`);
+    }
   }
 }
