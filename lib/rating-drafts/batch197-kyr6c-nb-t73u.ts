@@ -43,8 +43,7 @@ function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): 
   return { name, riskLevel, source: `${panel}; ${meth}` };
 }
 
-export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
-  {
+export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [  {
     id: 'natures-bounty-b197-coq10-200-45',
     productName: "Nature's Bounty Co Q-10 200 mg (45 softgels)",
     brand: "Nature's Bounty",
@@ -121,84 +120,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     ],
   },
   {
-    id: 'natures-bounty-b197-cranberry-4200-120',
-    productName: "Nature's Bounty Cranberry 4200 mg plus Vitamin C (120 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-cranberry-4200-120',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312043499',
-    activeIngredients: [{ name: 'Cranberry plus Vitamin C', strength: 'per softgel (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels', 'Soybean Oil', 'cleared', METH.soyFill),
-      flag('https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels', 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels', 'Soy Lecithin', 'cleared', METH.lecithin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels', 'Yellow Beeswax', 'cleared', METH.beeswax),
-    ],
-    verdict: 'clean',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2043-49 — HTTP 200, data[] empty for NDC 74312-2043-49. Opened https://naturesbounty.com/products/cranberry-fruit-plus-vitamin-c-4200-mg-120-rapid-release-softgels — Supplement Facts and other ingredients read for t73u phase 3 (120 count, UPC 074312043499). Other ingredients: Soybean Oil, Gelatin, Vegetable Glycerin, Soy Lecithin, Yellow Beeswax. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312043499 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312043499 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312043499 — BLOCKED robot check. Opened https://www.google.com/search?q=074312043499%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-cranberry-4200-250',
-    productName: "Nature's Bounty Cranberry 4200 mg equivalent plus Vitamin C (250 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-cranberry-4200-250',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312043635',
-    activeIngredients: [{ name: 'Cranberry plus Vitamin C', strength: 'per softgel (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels', 'Soybean Oil', 'cleared', METH.soyFill),
-      flag('https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels', 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag('https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels', 'Soy Lecithin', 'cleared', METH.lecithin),
-      flag('https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels', 'Yellow Beeswax', 'cleared', METH.beeswax),
-    ],
-    verdict: 'clean',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2043-63 — HTTP 200, data[] empty for NDC 74312-2043-63. Opened https://naturesbounty.com/products/cranberry-plus-vitamin-c-4200-mg-equivalent-250-rapid-release-softgels — Supplement Facts and other ingredients read for t73u phase 3 (250 count, UPC 074312043635). Other ingredients: Soybean Oil, Gelatin, Vegetable Glycerin, Soy Lecithin, Yellow Beeswax. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312043635 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312043635 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312043635 — BLOCKED robot check. Opened https://www.google.com/search?q=074312043635%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-cranberry-triple-60',
-    productName: "Nature's Bounty Triple Strength Cranberry 25200 mg plus Vitamin C (60 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-cranberry-triple-60',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312137945',
-    activeIngredients: [{ name: 'Cranberry concentrate plus Vitamin C', strength: 'per softgel (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels', 'Soybean Oil', 'cleared', METH.soyFill),
-      flag('https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels', 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels', 'Soy Lecithin', 'cleared', METH.lecithin),
-      flag('https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels', 'White Beeswax', 'cleared', METH.beeswax),
-    ],
-    verdict: 'clean',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2137-94 — HTTP 200, data[] empty for NDC 74312-2137-94. Opened https://naturesbounty.com/products/cranberry-fruit-concentrate-plus-vitamin-c-25200-mg-60-rapid-release-softgels — Supplement Facts and other ingredients read for t73u phase 3 (60 count, UPC 074312137945). Other ingredients: Soybean Oil, Gelatin, Vegetable Glycerin. Contains <2% of: Soy Lecithin, White Beeswax. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312137945 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312137945 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312137945 — BLOCKED robot check. Opened https://www.google.com/search?q=074312137945%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
     id: 'natures-bounty-b197-echinacea-400-100',
     productName: "Nature's Bounty Echinacea 400 mg (100 capsules)",
     brand: "Nature's Bounty",
@@ -218,29 +139,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     retailers: ['Amazon'],
     sourcesGeneral: [
       "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2056-33 — HTTP 200, data[] empty for NDC 74312-2056-33. Opened https://naturesbounty.com/products/echinacea-400-mg-100-capsules — Supplement Facts and other ingredients read for t73u phase 3 (100 count, UPC 074312056338). Other ingredients: Gelatin. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312056338 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312056338 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312056338 — BLOCKED robot check. Opened https://www.google.com/search?q=074312056338%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-fiber-gummies-90',
-    productName: "Nature's Bounty Fiber Gummies (90 gummies)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-fiber-gummies-90',
-    audience: ADULT,
-    minAge: 18,
-    form: 'gummy',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312013720',
-    activeIngredients: [{ name: 'Inulin (from chicory root)', strength: 'per gummy (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/fiber-gummies', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/fiber-gummies', 'Natural Flavors', 'limited', METH.flavor),
-    ],
-    verdict: 'caution',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2013-72 — HTTP 200, data[] empty for NDC 74312-2013-72. Opened https://naturesbounty.com/products/fiber-gummies — Supplement Facts and other ingredients read for t73u phase 3 (90 count, UPC 074312013720). Other ingredients: Gelatin, Natural Flavors. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312013720 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312013720 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312013720 — BLOCKED robot check. Opened https://www.google.com/search?q=074312013720%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
     ],
   },
   {
@@ -266,31 +164,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     retailers: ['Amazon'],
     sourcesGeneral: [
       "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2019-76 — HTTP 200, data[] empty for NDC 74312-2019-76. Opened https://naturesbounty.com/products/flush-free-niacin-500-mg-120-capsules — Supplement Facts and other ingredients read for t73u phase 3 (120 count, UPC 074312019760). Other ingredients: Gelatin, Vegetable Stearic Acid. Contains <2% of: Silica, Vegetable Magnesium Stearate. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312019760 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312019760 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312019760 — BLOCKED robot check. Opened https://www.google.com/search?q=074312019760%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-hyaluronic-acid-120',
-    productName: "Nature's Bounty Hyaluronic Acid (120 capsules)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-hyaluronic-acid-120',
-    audience: ADULT,
-    minAge: 18,
-    form: 'capsule',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312014024',
-    activeIngredients: [{ name: 'Hyaluronic Acid (as Sodium Hyaluronate)', strength: 'per capsule (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/hyaluronic-acid', 'Rice Flour', 'limited', METH.riceFlour),
-      flag('https://naturesbounty.com/products/hyaluronic-acid', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/hyaluronic-acid', 'Silica', 'limited', METH.silica),
-      flag('https://naturesbounty.com/products/hyaluronic-acid', 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
-    ],
-    verdict: 'caution',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2014-02 — HTTP 200, data[] empty for NDC 74312-2014-02. Opened https://naturesbounty.com/products/hyaluronic-acid — Supplement Facts and other ingredients read for t73u phase 3 (120 count, UPC 074312014024). Other ingredients: Rice Flour, Gelatin. Contains <2% of: Silica, Vegetable Magnesium Stearate. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312014024 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312014024 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312014024 — BLOCKED robot check. Opened https://www.google.com/search?q=074312014024%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
     ],
   },
   {
@@ -423,30 +296,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     ],
   },
   {
-    id: 'natures-bounty-b197-milk-thistle-1000-50',
-    productName: "Nature's Bounty Milk Thistle 1000 mg (50 softgels)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-milk-thistle-1000-50',
-    audience: ADULT,
-    minAge: 18,
-    form: 'softgel',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312019470',
-    activeIngredients: [{ name: 'Milk Thistle Extract', strength: 'per softgel (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/milk-thistle-1000-mg-50-rapid-release-softgels', 'Soybean Oil', 'cleared', METH.soyFill),
-      flag('https://naturesbounty.com/products/milk-thistle-1000-mg-50-rapid-release-softgels', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/milk-thistle-1000-mg-50-rapid-release-softgels', 'Vegetable Glycerin', 'cleared', METH.glycerin),
-    ],
-    verdict: 'clean',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2019-47 — HTTP 200, data[] empty for NDC 74312-2019-47. Opened https://naturesbounty.com/products/milk-thistle-1000-mg-50-rapid-release-softgels — Supplement Facts and other ingredients read for t73u phase 3 (50 count, UPC 074312019470). Other ingredients: Soybean Oil, Gelatin, Vegetable Glycerin Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312019470 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312019470 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312019470 — BLOCKED robot check. Opened https://www.google.com/search?q=074312019470%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
     id: 'natures-bounty-b197-potassium-99-100',
     productName: "Nature's Bounty Potassium 99 mg (100 caplets)",
     brand: "Nature's Bounty",
@@ -469,55 +318,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     retailers: ['Amazon'],
     sourcesGeneral: [
       "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2011-10 — HTTP 200, data[] empty for NDC 74312-2011-10. Opened https://naturesbounty.com/products/potassium-gluconate-595-mg-100-caplets — Supplement Facts and other ingredients read for t73u phase 3 (100 count, UPC 074312011108). Other ingredients: Vegetable Cellulose. Contains <2% of: Silica, Vegetable Magnesium Stearate, Vegetable Stearic Acid. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312011108 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312011108 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312011108 — BLOCKED robot check. Opened https://www.google.com/search?q=074312011108%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-super-b-complex-150',
-    productName: "Nature's Bounty Super B-Complex with Folic Acid plus Vitamin C (150 tablets)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-super-b-complex-150',
-    audience: ADULT,
-    minAge: 18,
-    form: 'tablet',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312131684',
-    activeIngredients: [{ name: 'B-complex with folic acid and vitamin C', strength: 'per tablet (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets', 'Vegetable Cellulose', 'cleared', METH.cellulose),
-      flag('https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets', 'Calcium Carbonate', 'cleared', METH.calciumCarbonate),
-      flag('https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets', 'Silica', 'limited', METH.silica),
-      flag('https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets', 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
-      flag('https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets', 'Vegetable Stearic Acid', 'cleared', METH.stearic),
-    ],
-    verdict: 'caution',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2131-68 — HTTP 200, data[] empty for NDC 74312-2131-68. Opened https://naturesbounty.com/products/super-b-complex-with-folic-acid-plus-vitamin-c-150-tablets — Supplement Facts and other ingredients read for t73u phase 3 (150 count, UPC 074312131684). Other ingredients: Vegetable Cellulose, Calcium Carbonate. Contains <2% of: Silica, Vegetable Magnesium Stearate, Vegetable Stearic Acid. Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312131684 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312131684 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312131684 — BLOCKED robot check. Opened https://www.google.com/search?q=074312131684%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
-    id: 'natures-bounty-b197-turmeric-538-45',
-    productName: "Nature's Bounty Turmeric 538 mg (45 capsules)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-turmeric-538-45',
-    audience: ADULT,
-    minAge: 18,
-    form: 'capsule',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312552731',
-    activeIngredients: [{ name: 'Turmeric Extract', strength: 'per capsule (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/turmeric-500-mg-45-capsules', 'Vegetable Cellulose', 'cleared', METH.cellulose),
-      flag('https://naturesbounty.com/products/turmeric-500-mg-45-capsules', 'Gelatin', 'cleared', METH.gelatin),
-    ],
-    verdict: 'clean',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2552-73 — HTTP 200, data[] empty for NDC 74312-2552-73. Opened https://naturesbounty.com/products/turmeric-500-mg-45-capsules — Supplement Facts and other ingredients read for t73u phase 3 (45 count, UPC 074312552731). Other ingredients: Vegetable Cellulose, Gelatin Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312552731 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312552731 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312552731 — BLOCKED robot check. Opened https://www.google.com/search?q=074312552731%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
     ],
   },
   {
@@ -728,35 +528,6 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [
     ],
   },
   {
-    id: 'natures-bounty-b197-womens-multi-gummies-140',
-    productName: "Nature's Bounty Women's Multivitamin Gummies with Collagen (140 gummies)",
-    brand: "Nature's Bounty",
-    category: VITAMINS,
-    formulaId: 'natures-bounty-b197-womens-multi-gummies-140',
-    audience: ADULT,
-    minAge: 18,
-    form: 'gummy',
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    barcode: '074312012808',
-    activeIngredients: [{ name: 'Women\'s multivitamin with collagen', strength: 'per gummy (see brand panel)' }],
-    inactiveIngredients: [
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Corn Syrup', 'cleared', METH.glucose),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Sugar', 'limited', METH.sucrose),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Gelatin', 'cleared', METH.gelatin),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Natural Flavors', 'limited', METH.flavor),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Citric Acid', 'cleared', METH.citric),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Pectin', 'cleared', METH.pectin),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Vegetable Juice (Color)', 'cleared', METH.juiceColor),
-      flag('https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen', 'Vegetable Oil (Palm) (Contains Carnauba Wax)', 'high', METH.palmGummy),
-    ],
-    verdict: 'avoid',
-    retailers: ['Amazon'],
-    sourcesGeneral: [
-      "Opened https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?ndc=74312-2012-80 — HTTP 200, data[] empty for NDC 74312-2012-80. Opened https://naturesbounty.com/products/womens-multivitamin-gummies-with-collagen — Supplement Facts and other ingredients read for t73u phase 3 (140 count, UPC 074312012808). Other ingredients: Corn Syrup, Sugar, Gelatin, Natural Flavors. Contains <2% of: Citric Acid, Pectin, Vegetable Juice (Color), Vegetable Oil (Palm) (Contains Carnauba Wax). Opened Target search — no TCIN PDP link in fetch. Opened https://www.cvs.com/search?searchTerm=074312012808 — BLOCKED HTTP 403 Access Denied. Opened https://www.amazon.com/s?k=074312012808 — Amazon blocked or no priced /dp/ in fetch. Opened https://www.walmart.com/search?q=074312012808 — BLOCKED robot check. Opened https://www.google.com/search?q=074312012808%20Natures%20Bounty&udm=50 — udm=50 fetch did not expose store cite URLs in page HTML.",
-    ],
-  },
-  {
     id: 'natures-bounty-b197-zinc-50-100',
     productName: "Nature's Bounty Zinc 50 mg (100 caplets)",
     brand: "Nature's Bounty",
@@ -800,7 +571,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 29) throw new Error(`batch197 row count ${ROWS.length}`);
+if (ROWS.length !== 20) throw new Error(`batch197 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch197 duplicate id');
 
