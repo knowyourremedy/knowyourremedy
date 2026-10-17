@@ -204,3 +204,4 @@ export { BATCH204_KYR6C_RAINBOW_T91U } from './batch204-kyr6c-rainbow-t91u';
 export { BATCH205_KYR6C_RAINBOW_T91U_NONMULTI } from './batch205-kyr6c-rainbow-t91u-nonmulti';
 export { BATCH206_KYR6C_RAINBOW_T96U } from './batch206-kyr6c-rainbow-t96u';
 export { BATCH207_KYR6C_RAINBOW_T99U } from './batch207-kyr6c-rainbow-t99u';
+export { BATCH208_KYR6C_RAINBOW_T100U } from './batch208-kyr6c-rainbow-t100u';
