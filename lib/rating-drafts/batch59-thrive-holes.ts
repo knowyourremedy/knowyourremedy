@@ -151,7 +151,7 @@ const METH = {
   enteric:
     'Methodology §5 Caution (unnamed coating blend / bare Enteric Coating — delayed-release coat family; locked Sept 16, 2026)',
   traceMinerals:
-    'Methodology §5 Caution (Trace Minerals (From Seawater) as an inactive line — vague blend; distinct from minerals under Supplement Facts; locked Sept 16, 2026)',
+    'Methodology §5 Cleared (Trace Minerals (From Seawater) as an inactive line — t91u Oct 17, 2026 founder override; distinct from minerals under Supplement Facts actives; distinct from Caution Evaporated Sea Water and ConcenTrace mineral complex)',
   steviaLeaf:
     'Methodology §5 Caution (whole-leaf / crude stevia — do not auto-Clean; distinct from high-purity steviol glycosides / Reb M / Reb A)',
   stevia:
@@ -4139,7 +4139,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_mens_fermented_multi, 'Potassium chloride', 'cleared', METH.kcl),
       f(CITE.codeage_mens_fermented_multi, 'Trace minerals (from seawater)', 'cleared', METH.traceMinerals),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [
