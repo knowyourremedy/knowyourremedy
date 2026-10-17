@@ -15421,6 +15421,68 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Moringa leaf extract, 900 mg, 60 vegcaps. Barcode 076280846966.
   // Front reads 900 mg and 60 VEGCAPS.
   'solaray-b117-076280846966': catalogShot('solaray-b117-076280846966.jpg'),
+  // Vitamins night run 2026-10-17 3:00 AM PT batch 1.
+  // Exact brand-site fronts. Per-id only. verifiedSku.
+  // Fenugreek seed, 1240 mg, 100 vegcaps. Barcode 076280012705.
+  // Front reads 1,240 mg and 100 VEGCAPS. Not the 180-count.
+  'solaray-b117-076280012705': catalogShot('solaray-b117-076280012705.jpg'),
+  // EuroCalm mood support, 60 vegcaps. Barcode 076280039504.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280039504': catalogShot('solaray-b117-076280039504.jpg'),
+  // Calcium and magnesium asporotate, 120 vegcaps. Barcode 076280045215.
+  // Front reads 120 VEGCAPS. Not the 240-count.
+  'solaray-b117-076280045215': catalogShot('solaray-b117-076280045215.jpg'),
+  // Red raspberry leaf, 400 mg, 100 vegcaps. Barcode 076280014907.
+  // Front reads 400 mg and 100 VEGCAPS.
+  'solaray-b117-076280014907': catalogShot('solaray-b117-076280014907.jpg'),
+  // Chromium picolinate, 200 mcg, 200 vegcaps. Barcode 076280458916.
+  // Front reads 200 mcg and 200 VEGCAPS. Not the 100-count or the 50-count.
+  'solaray-b117-076280458916': catalogShot('solaray-b117-076280458916.jpg'),
+  // Vitamin E dry, 268 mg, 50 vegcaps. Barcode 076280041804.
+  // Front reads 268 mg and 50 VEGCAPS. Not the 100-count.
+  'solaray-b117-076280041804': catalogShot('solaray-b117-076280041804.jpg'),
+  // Vitamin E dry, 268 mg, 100 vegcaps. Barcode 076280041811.
+  // Front reads 268 mg and 100 VEGCAPS. Not the 50-count.
+  'solaray-b117-076280041811': catalogShot('solaray-b117-076280041811.jpg'),
+  // Extended-release melatonin with L-glycine, 30 vegcaps. Barcode 076280505139.
+  // Front reads 30 VEGCAPS.
+  'solaray-b117-076280505139': catalogShot('solaray-b117-076280505139.jpg'),
+  // Methyl B-complex, 60 vegcaps. Barcode 076280599121.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280599121': catalogShot('solaray-b117-076280599121.jpg'),
+  // High potency betaine HCl with pepsin, 250 vegcaps. Barcode 076280048155.
+  // Front reads 250 VEGCAPS. Not the 100-count.
+  'solaray-b117-076280048155': catalogShot('solaray-b117-076280048155.jpg'),
+  // Calcium hydroxyapatite, 1000 mg, 120 vegcaps. Barcode 076280045796.
+  // Front reads 1,000 mg and 120 VEGCAPS.
+  'solaray-b117-076280045796': catalogShot('solaray-b117-076280045796.jpg'),
+  // Lutein Eyes 24 advanced, 24 mg, 60 vegcaps. Barcode 076280832181.
+  // Front reads 24 mg and 60 VEGCAPS. Not the 30-count.
+  'solaray-b117-076280832181': catalogShot('solaray-b117-076280832181.jpg'),
+  // Milk thistle seed extract, 350 mg, 30 vegcaps. Barcode 076280037036.
+  // Front reads 350 mg and 30 VEGCAPS. Not the 60-count.
+  'solaray-b117-076280037036': catalogShot('solaray-b117-076280037036.jpg'),
+  // Choline timed-release, 300 mg, 100 vegcaps. Barcode 076280043570.
+  // Front reads 300 mg and 100 VEGCAPS.
+  'solaray-b117-076280043570': catalogShot('solaray-b117-076280043570.jpg'),
+  // Dandelion root, 1040 mg, 100 vegcaps. Barcode 076280192100.
+  // Front reads 100 VEGCAPS.
+  'solaray-b117-076280192100': catalogShot('solaray-b117-076280192100.jpg'),
+  // Monolaurin, 60 vegcaps. Barcode 076280627541.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280627541': catalogShot('solaray-b117-076280627541.jpg'),
+  // Fisetin, 30 vegcaps. Barcode 076280221503.
+  // Front reads 30 VEGCAPS.
+  'solaray-b117-076280221503': catalogShot('solaray-b117-076280221503.jpg'),
+  // Cat's claw bark extract, 200 mg, 30 vegcaps. Barcode 076280032055.
+  // Front reads 200 mg and 30 VEGCAPS.
+  'solaray-b117-076280032055': catalogShot('solaray-b117-076280032055.jpg'),
+  // Juniper berry, 450 mg, 100 vegcaps. Barcode 076280013603.
+  // Front reads 450 mg and 100 VEGCAPS.
+  'solaray-b117-076280013603': catalogShot('solaray-b117-076280013603.jpg'),
+  // PQQ + CoQ-10, 30 vegcaps. Barcode 076280365108.
+  // Front reads 30 VEGCAPS.
+  'solaray-b117-076280365108': catalogShot('solaray-b117-076280365108.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -33216,5 +33278,90 @@ assertBrandMark(
     if (!image || image.verifiedSku || image.url === ryr45?.url) {
       throw new Error(`${id} must not inherit the red yeast rice 45-count`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 3:00 AM PT batch 1.
+  // Sibling counts keep their own fronts.
+  const batch1: [string, string, string][] = [
+    ['solaray-b117-076280012705', 'Solaray', 'solaray-b117-076280012705.jpg'],
+    ['solaray-b117-076280039504', 'Solaray', 'solaray-b117-076280039504.jpg'],
+    ['solaray-b117-076280045215', 'Solaray', 'solaray-b117-076280045215.jpg'],
+    ['solaray-b117-076280014907', 'Solaray', 'solaray-b117-076280014907.jpg'],
+    ['solaray-b117-076280458916', 'Solaray', 'solaray-b117-076280458916.jpg'],
+    ['solaray-b117-076280041804', 'Solaray', 'solaray-b117-076280041804.jpg'],
+    ['solaray-b117-076280041811', 'Solaray', 'solaray-b117-076280041811.jpg'],
+    ['solaray-b117-076280505139', 'Solaray', 'solaray-b117-076280505139.jpg'],
+    ['solaray-b117-076280599121', 'Solaray', 'solaray-b117-076280599121.jpg'],
+    ['solaray-b117-076280048155', 'Solaray', 'solaray-b117-076280048155.jpg'],
+    ['solaray-b117-076280045796', 'Solaray', 'solaray-b117-076280045796.jpg'],
+    ['solaray-b117-076280832181', 'Solaray', 'solaray-b117-076280832181.jpg'],
+    ['solaray-b117-076280037036', 'Solaray', 'solaray-b117-076280037036.jpg'],
+    ['solaray-b117-076280043570', 'Solaray', 'solaray-b117-076280043570.jpg'],
+    ['solaray-b117-076280192100', 'Solaray', 'solaray-b117-076280192100.jpg'],
+    ['solaray-b117-076280627541', 'Solaray', 'solaray-b117-076280627541.jpg'],
+    ['solaray-b117-076280221503', 'Solaray', 'solaray-b117-076280221503.jpg'],
+    ['solaray-b117-076280032055', 'Solaray', 'solaray-b117-076280032055.jpg'],
+    ['solaray-b117-076280013603', 'Solaray', 'solaray-b117-076280013603.jpg'],
+    ['solaray-b117-076280365108', 'Solaray', 'solaray-b117-076280365108.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch1) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const fenugreek100 = previewOverlayImage({
+    id: 'solaray-b117-076280012705',
+    formulaId: 'solaray-b117-076280012705',
+    brand: 'Solaray',
+  });
+  const fenugreek180 = previewOverlayImage({
+    id: 'solaray-b117-076280012712',
+    formulaId: 'solaray-b117-076280012705',
+    brand: 'Solaray',
+  });
+  if (!fenugreek100?.url || fenugreek100.url === fenugreek180?.url) {
+    throw new Error('Fenugreek 100 must not share the 180');
+  }
+  const vitaminE50 = previewOverlayImage({
+    id: 'solaray-b117-076280041804',
+    formulaId: 'solaray-b117-076280041804',
+    brand: 'Solaray',
+  });
+  const vitaminE100 = previewOverlayImage({
+    id: 'solaray-b117-076280041811',
+    formulaId: 'solaray-b117-076280041811',
+    brand: 'Solaray',
+  });
+  if (!vitaminE50?.url || vitaminE50.url === vitaminE100?.url) {
+    throw new Error('Vitamin E dry 50 must not share the 100');
+  }
+  const milk30 = previewOverlayImage({
+    id: 'solaray-b117-076280037036',
+    formulaId: 'solaray-b117-076280037036',
+    brand: 'Solaray',
+  });
+  const milk60 = previewOverlayImage({
+    id: 'solaray-b117-076280106794',
+    formulaId: 'solaray-b117-076280037036',
+    brand: 'Solaray',
+  });
+  if (!milk30?.url || milk30.url === milk60?.url) {
+    throw new Error('Milk thistle 30 must not share the 60');
+  }
+  const betaine250 = previewOverlayImage({
+    id: 'solaray-b117-076280048155',
+    formulaId: 'solaray-b117-076280048148',
+    brand: 'Solaray',
+  });
+  const betaine100 = previewOverlayImage({
+    id: 'solaray-b117-076280048148',
+    formulaId: 'solaray-b117-076280048148',
+    brand: 'Solaray',
+  });
+  if (!betaine250?.verifiedSku || betaine250.url === betaine100?.url || betaine100?.verifiedSku) {
+    throw new Error('Betaine 250 must not become the 100-count photo');
   }
 }
