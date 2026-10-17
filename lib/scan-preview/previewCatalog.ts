@@ -15483,6 +15483,68 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // PQQ + CoQ-10, 30 vegcaps. Barcode 076280365108.
   // Front reads 30 VEGCAPS.
   'solaray-b117-076280365108': catalogShot('solaray-b117-076280365108.jpg'),
+  // Vitamins night run 2026-10-17 3:00 AM PT batch 2.
+  // Exact brand-site fronts. Per-id only. verifiedSku.
+  // Cayenne pepper 100,000 HU, 450 mg, 100 vegcaps. Barcode 076280011340.
+  // Front reads 450 mg and 100 VEGCAPS.
+  'solaray-b117-076280011340': catalogShot('solaray-b117-076280011340.jpg'),
+  // Horse chestnut seed extract, 400 mg, 60 vegcaps. Barcode 076280036664.
+  // Front reads 400 mg and 60 VEGCAPS. Not the 120-count.
+  'solaray-b117-076280036664': catalogShot('solaray-b117-076280036664.jpg'),
+  // Gallbladder support formula, 90 vegcaps. Barcode 076280030846.
+  // Front reads 90 VEGCAPS.
+  'solaray-b117-076280030846': catalogShot('solaray-b117-076280030846.jpg'),
+  // Choline and inositol, 250 mg, 100 vegcaps. Barcode 076280043181.
+  // Front reads 250 mg and 100 VEGCAPS.
+  'solaray-b117-076280043181': catalogShot('solaray-b117-076280043181.jpg'),
+  // L-glutamine free form, 500 mg, 100 vegcaps. Barcode 076280049213.
+  // Front reads 500 mg and 100 VEGCAPS. Not the 50-count.
+  'solaray-b117-076280049213': catalogShot('solaray-b117-076280049213.jpg'),
+  // Beet root, 605 mg, 100 vegcaps. Barcode 076280001600.
+  // Front reads 100 VEGCAPS.
+  'solaray-b117-076280001600': catalogShot('solaray-b117-076280001600.jpg'),
+  // Zinc copper, 100 vegcaps. Barcode 076280471052.
+  // Front reads 100 VEGCAPS.
+  'solaray-b117-076280471052': catalogShot('solaray-b117-076280471052.jpg'),
+  // Glycine free form, 1000 mg, 60 vegcaps. Barcode 076280183481.
+  // Front reads 1,000 mg and 60 VEGCAPS.
+  'solaray-b117-076280183481': catalogShot('solaray-b117-076280183481.jpg'),
+  // Indole-3-carbinol, 100 mg, 30 vegcaps. Barcode 076280366648.
+  // Front reads 100 mg and 30 VEGCAPS.
+  'solaray-b117-076280366648': catalogShot('solaray-b117-076280366648.jpg'),
+  // Fermented shiitake mushroom, 1000 mg, 60 vegcaps. Barcode 076280550580.
+  // Front reads 1,000 mg and 60 VEGCAPS.
+  'solaray-b117-076280550580': catalogShot('solaray-b117-076280550580.jpg'),
+  // Selenium yeast-free, 200 mcg, 90 vegcaps. Barcode 076280046786.
+  // Front reads 200 mcg and 90 VEGCAPS.
+  'solaray-b117-076280046786': catalogShot('solaray-b117-076280046786.jpg'),
+  // Zinc picolinate, 22 mg, 60 tablets. Barcode 076280942705.
+  // Front reads 22 mg and 60 TABLETS.
+  'solaray-b117-076280942705': catalogShot('solaray-b117-076280942705.jpg'),
+  // Myrrh gum, 620 mg, 100 vegcaps. Barcode 076280014006.
+  // Front reads 620 mg and 100 VEGCAPS.
+  'solaray-b117-076280014006': catalogShot('solaray-b117-076280014006.jpg'),
+  // Blue skullcap aerial, 425 mg, 100 vegcaps. Barcode 076280015607.
+  // Front reads 425 mg and 100 VEGCAPS.
+  'solaray-b117-076280015607': catalogShot('solaray-b117-076280015607.jpg'),
+  // Nettle leaf, 900 mg, 180 vegcaps. Barcode 076280014129.
+  // Front reads 900 mg and 180 VEGCAPS. Not the 100-count.
+  'solaray-b117-076280014129': catalogShot('solaray-b117-076280014129.jpg'),
+  // Cal-Mag strontium with D-3 and K-2, 120 vegcaps. Barcode 076280655674.
+  // Front reads 120 VEGCAPS.
+  'solaray-b117-076280655674': catalogShot('solaray-b117-076280655674.jpg'),
+  // Mycrobiome complete probiotic ultimate potency, 60 vegcaps. Barcode 076280213799.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280213799': catalogShot('solaray-b117-076280213799.jpg'),
+  // Cayenne pepper and garlic bulb, 540 mg, 100 vegcaps. Barcode 076280011401.
+  // Front reads 540 mg and 100 VEGCAPS.
+  'solaray-b117-076280011401': catalogShot('solaray-b117-076280011401.jpg'),
+  // Myo + D-chiro inositol 40:1, 120 vegcaps. Barcode 076280302288.
+  // Front reads 120 VEGCAPS.
+  'solaray-b117-076280302288': catalogShot('solaray-b117-076280302288.jpg'),
+  // Pygeum bark extract, 50 mg, 60 vegcaps. Barcode 076280037609.
+  // Front reads 50 mg and 60 VEGCAPS.
+  'solaray-b117-076280037609': catalogShot('solaray-b117-076280037609.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -33363,5 +33425,77 @@ assertBrandMark(
   });
   if (!betaine250?.verifiedSku || betaine250.url === betaine100?.url || betaine100?.verifiedSku) {
     throw new Error('Betaine 250 must not become the 100-count photo');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 3:00 AM PT batch 2.
+  // Sibling counts keep their own fronts.
+  const batch2b: [string, string, string][] = [
+    ['solaray-b117-076280011340', 'Solaray', 'solaray-b117-076280011340.jpg'],
+    ['solaray-b117-076280036664', 'Solaray', 'solaray-b117-076280036664.jpg'],
+    ['solaray-b117-076280030846', 'Solaray', 'solaray-b117-076280030846.jpg'],
+    ['solaray-b117-076280043181', 'Solaray', 'solaray-b117-076280043181.jpg'],
+    ['solaray-b117-076280049213', 'Solaray', 'solaray-b117-076280049213.jpg'],
+    ['solaray-b117-076280001600', 'Solaray', 'solaray-b117-076280001600.jpg'],
+    ['solaray-b117-076280471052', 'Solaray', 'solaray-b117-076280471052.jpg'],
+    ['solaray-b117-076280183481', 'Solaray', 'solaray-b117-076280183481.jpg'],
+    ['solaray-b117-076280366648', 'Solaray', 'solaray-b117-076280366648.jpg'],
+    ['solaray-b117-076280550580', 'Solaray', 'solaray-b117-076280550580.jpg'],
+    ['solaray-b117-076280046786', 'Solaray', 'solaray-b117-076280046786.jpg'],
+    ['solaray-b117-076280942705', 'Solaray', 'solaray-b117-076280942705.jpg'],
+    ['solaray-b117-076280014006', 'Solaray', 'solaray-b117-076280014006.jpg'],
+    ['solaray-b117-076280015607', 'Solaray', 'solaray-b117-076280015607.jpg'],
+    ['solaray-b117-076280014129', 'Solaray', 'solaray-b117-076280014129.jpg'],
+    ['solaray-b117-076280655674', 'Solaray', 'solaray-b117-076280655674.jpg'],
+    ['solaray-b117-076280213799', 'Solaray', 'solaray-b117-076280213799.jpg'],
+    ['solaray-b117-076280011401', 'Solaray', 'solaray-b117-076280011401.jpg'],
+    ['solaray-b117-076280302288', 'Solaray', 'solaray-b117-076280302288.jpg'],
+    ['solaray-b117-076280037609', 'Solaray', 'solaray-b117-076280037609.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch2b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const glutamine100 = previewOverlayImage({
+    id: 'solaray-b117-076280049213',
+    formulaId: 'solaray-b117-076280049206',
+    brand: 'Solaray',
+  });
+  const glutamine50 = previewOverlayImage({
+    id: 'solaray-b117-076280049206',
+    formulaId: 'solaray-b117-076280049206',
+    brand: 'Solaray',
+  });
+  if (!glutamine100?.verifiedSku || glutamine100.url === glutamine50?.url || glutamine50?.verifiedSku) {
+    throw new Error('Glutamine 100 must not become the 50-count photo');
+  }
+  const nettle180 = previewOverlayImage({
+    id: 'solaray-b117-076280014129',
+    formulaId: 'solaray-b117-076280014105',
+    brand: 'Solaray',
+  });
+  const nettle100 = previewOverlayImage({
+    id: 'solaray-b117-076280014105',
+    formulaId: 'solaray-b117-076280014105',
+    brand: 'Solaray',
+  });
+  if (!nettle180?.verifiedSku || !nettle100?.verifiedSku || nettle180.url === nettle100.url) {
+    throw new Error('Nettle 180 must not share the 100');
+  }
+  const chestnut60 = previewOverlayImage({
+    id: 'solaray-b117-076280036664',
+    formulaId: 'solaray-b117-076280036664',
+    brand: 'Solaray',
+  });
+  const chestnut120 = previewOverlayImage({
+    id: 'solaray-b120-076280366594',
+    formulaId: 'solaray-b120-076280366594',
+    brand: 'Solaray',
+  });
+  if (!chestnut60?.verifiedSku || chestnut60.url === chestnut120?.url || chestnut120?.verifiedSku) {
+    throw new Error('Horse chestnut 60 must not become the 120-count photo');
   }
 }
