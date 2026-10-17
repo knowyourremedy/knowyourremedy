@@ -1,5 +1,5 @@
 // DRAFT / not verified / batch 207 KYR6-c (t99u WRITE).
-// Rainbow Light twenty-one packs (rows 5–6 skipped — unlocked OI tokens). Brand Supplement Facts OI only; actives ungraded.
+// Rainbow Light twenty packs (rows 5–6 and 16 skipped — unlocked OI tokens). Brand Supplement Facts OI only; actives ungraded.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -319,24 +319,6 @@ const SPECS: RowSpec[] = [
     flags: [['Concentrated Water from Great Salt Lake in Utah.', 'cleared', 'gslWater']],
   },
   {
-    id: 'rainbow-b207-magnesium-glycinate-powder-5oz',
-    handle: 'magnesium-glycinate-raspberry-lemonade-flavor-5-oz-142-g-powder-rl24492',
-    productName: 'Rainbow Light Magnesium Glycinate Raspberry Lemonade Flavor, 5 oz Powder',
-    category: VITAMINS,
-    form: 'powder',
-    barcode: '850068584543',
-    active: 'Magnesium glycinate',
-    oiLine:
-      'Citric Acid, Organic Flavors, Cranberry Fruit Juice Powder (Color), Organic Stevia Extract (Rebaudioside A), Organic Monk Fruit Extract.',
-    flags: [
-      ['Citric Acid', 'cleared', 'citric'],
-      ['Organic Flavors', 'limited', 'flavors'],
-      ['Cranberry Fruit Juice Powder (Color)', 'cleared', 'juiceColor'],
-      ['Organic Stevia Extract (Rebaudioside A)', 'cleared', 'steviaRebA'],
-      ['Organic Monk Fruit Extract', 'cleared', 'monkFruit'],
-    ],
-  },
-  {
     id: 'rainbow-b207-ashwagandha-gummies-60',
     handle: 'ashwagandha-gummies-500-mg-tropical-flavor-60-vegan-gummies-rl18131',
     productName: 'Rainbow Light Ashwagandha Gummies 500 mg Tropical Flavor, 60 Vegan Gummies',
@@ -461,8 +443,9 @@ const SPECS: RowSpec[] = [
   },
 ];
 
-// Row 5 skipped: no exact §5 lock for `Organic Flavors` on Daily Fiber Probiotic powder (distinct from Organic Flavor / Organic Natural Flavors).
+// Row 5 skipped: no exact §5 lock for `Organic Flavors` (distinct from Organic Flavor / Organic Natural Flavors).
 // Row 6 skipped: no exact §5 lock for `Organic Tapioca Starch` (t90u aliases Organic Tapioca Powder only) and `Turmeric Extract Color` (distinct from Natural Color (Turmeric)).
+// Row 16 skipped: same `Organic Flavors` token as row 5 on Magnesium Glycinate powder.
 
 function verdictFromFlags(flags: FlagSpec[]): RatingRecord['verdict'] {
   const levels = flags.map((f) => f[1]);
@@ -517,7 +500,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 21) throw new Error(`batch207 row count ${ROWS.length}`);
+if (ROWS.length !== 20) throw new Error(`batch207 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch207 duplicate id');
 
