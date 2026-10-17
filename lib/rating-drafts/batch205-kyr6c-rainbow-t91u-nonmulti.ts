@@ -470,6 +470,7 @@ const SPECS: RowSpec[] = [
     productName: 'Rainbow Light Beet Root Soft Chews Mixed Berry Flavor, 60 Soft Chews',
     category: VITAMINS,
     form: 'chew',
+    barcode: '850068584864',
     retailers: ['Rainbow Light', 'Health For You'],
     secondUrl: 'https://healthfullyours.com/products/rainbow-light-beet-root-soft-chews',
     active: 'Beet root soft chew blend',
