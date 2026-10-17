@@ -15294,6 +15294,71 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Front reads CHAFING RELIEF POWDER GEL and NET WT 1.5 OZ (42 g).
   // Not the itch cream. Not the itch spray.
   'monistat-b186-chafing-42': catalogShot('monistat-b186-chafing-42.jpg'),
+  // Vitamins night run 2026-10-17 1:45 AM PT batch 1.
+  // Exact brand-site fronts. Per-id only. verifiedSku.
+  // BCAA unflavored 90 servings. Barcode 702669931618.
+  // Front reads UNFLAVORED and 90 SERVINGS. Not a flavored tub.
+  // Not the 30, 60, or 150.
+  'nutricost-b79-bcaa-unflavored-90-servings': catalogShot(
+    'nutricost-b79-bcaa-unflavored-90-servings.jpg',
+  ),
+  // SmartMag Magtein magnesium L-threonate, 90 vegcaps. Barcode 076280252439.
+  // Front reads 90 VEGCAPS. Not another magnesium count.
+  'solaray-b117-076280252439': catalogShot('solaray-b117-076280252439.jpg'),
+  // Focus for Adults, 60 vegcaps. Barcode 076280083798.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280083798': catalogShot('solaray-b117-076280083798.jpg'),
+  // Deep Vein Support, 60 vegcaps. Barcode 076280117523.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280117523': catalogShot('solaray-b117-076280117523.jpg'),
+  // Prostate Defense, 90 vegcaps. Barcode 076280375916.
+  // Front reads 90 VEGCAPS.
+  'solaray-b117-076280375916': catalogShot('solaray-b117-076280375916.jpg'),
+  // Burdock root, 425 mg, 100 vegcaps. Barcode 076280011104.
+  // Front reads 425 mg and 100 VEGCAPS.
+  'solaray-b117-076280011104': catalogShot('solaray-b117-076280011104.jpg'),
+  // Malic acid + magnesium, 90 vegcaps. Barcode 076280463552.
+  // Front reads 90 VEGCAPS.
+  'solaray-b117-076280463552': catalogShot('solaray-b117-076280463552.jpg'),
+  // Garlic bulb, 500 mg, 100 vegcaps. Barcode 076280012897.
+  // Front reads 500 mg and 100 VEGCAPS.
+  'solaray-b117-076280012897': catalogShot('solaray-b117-076280012897.jpg'),
+  // Arjuna bark extract, 60 vegcaps. Brand barcode 076280399011.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280399011': catalogShot('solaray-b117-076280399011.jpg'),
+  // Red clover blossom, 375 mg, 100 vegcaps. Barcode 076280014808.
+  // Front reads 375 mg and 100 VEGCAPS.
+  'solaray-b117-076280014808': catalogShot('solaray-b117-076280014808.jpg'),
+  // Mushroom Immune Complex, 100 vegcaps. Barcode 076280013788.
+  // Front reads 100 VEGCAPS.
+  'solaray-b117-076280013788': catalogShot('solaray-b117-076280013788.jpg'),
+  // Siliverin liver cleanse, 90 vegcaps. Barcode 076280037500.
+  // Front reads 90 VEGCAPS. Not milk thistle. Not Liver Blend SP-13.
+  'solaray-b117-076280037500': catalogShot('solaray-b117-076280037500.jpg'),
+  // Mycrobiome Complete Probiotic Men's, 30 vegcaps. Barcode 076280497960.
+  // Front reads MEN'S and 30 VEGCAPS.
+  'solaray-b117-076280497960': catalogShot('solaray-b117-076280497960.jpg'),
+  // White willow bark extract, 600 mg, 60 vegcaps. Barcode 076280983944.
+  // Front reads 600 mg and 60 VEGCAPS. Not the 400 mg bark.
+  'solaray-b117-076280983944': catalogShot('solaray-b117-076280983944.jpg'),
+  // L-glutathione free form, 50 mg, 60 vegcaps. Barcode 076280049312.
+  // Front reads 50 mg and 60 VEGCAPS.
+  'solaray-b117-076280049312': catalogShot('solaray-b117-076280049312.jpg'),
+  // L-cysteine free form, 500 mg, 30 vegcaps. Barcode 076280049107.
+  // Front reads 500 mg and 30 VEGCAPS.
+  'solaray-b117-076280049107': catalogShot('solaray-b117-076280049107.jpg'),
+  // Bromelain, 1000 mg, 60 vegcaps. Barcode 076280048438.
+  // Front reads 1,000 mg and 60 VEGCAPS.
+  'solaray-b117-076280048438': catalogShot('solaray-b117-076280048438.jpg'),
+  // Vegan Digestaway plant enzyme, 60 vegcaps. Barcode 076280357547.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280357547': catalogShot('solaray-b117-076280357547.jpg'),
+  // Tongkat ali extract, 30 vegcaps. Barcode 076280113587.
+  // Front reads 30 VEGCAPS.
+  'solaray-b117-076280113587': catalogShot('solaray-b117-076280113587.jpg'),
+  // Echinacea angustifolia root, 450 mg, 100 vegcaps. Barcode 076280012408.
+  // Front reads 450 mg and 100 VEGCAPS. Not the purpurea root.
+  'solaray-b117-076280012408': catalogShot('solaray-b117-076280012408.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -32966,5 +33031,49 @@ assertBrandMark(
   });
   if (!chafing?.url || chafing.url === itchCream?.url) {
     throw new Error('Chafing gel must not share the itch cream');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 1:45 AM PT batch 1.
+  // Exact brand-site fronts. The unflavored BCAA 90 must not inherit the 30.
+  const batch1: [string, string, string][] = [
+    ['nutricost-b79-bcaa-unflavored-90-servings', 'Nutricost', 'nutricost-b79-bcaa-unflavored-90-servings.jpg'],
+    ['solaray-b117-076280252439', 'Solaray', 'solaray-b117-076280252439.jpg'],
+    ['solaray-b117-076280083798', 'Solaray', 'solaray-b117-076280083798.jpg'],
+    ['solaray-b117-076280117523', 'Solaray', 'solaray-b117-076280117523.jpg'],
+    ['solaray-b117-076280375916', 'Solaray', 'solaray-b117-076280375916.jpg'],
+    ['solaray-b117-076280011104', 'Solaray', 'solaray-b117-076280011104.jpg'],
+    ['solaray-b117-076280463552', 'Solaray', 'solaray-b117-076280463552.jpg'],
+    ['solaray-b117-076280012897', 'Solaray', 'solaray-b117-076280012897.jpg'],
+    ['solaray-b117-076280399011', 'Solaray', 'solaray-b117-076280399011.jpg'],
+    ['solaray-b117-076280014808', 'Solaray', 'solaray-b117-076280014808.jpg'],
+    ['solaray-b117-076280013788', 'Solaray', 'solaray-b117-076280013788.jpg'],
+    ['solaray-b117-076280037500', 'Solaray', 'solaray-b117-076280037500.jpg'],
+    ['solaray-b117-076280497960', 'Solaray', 'solaray-b117-076280497960.jpg'],
+    ['solaray-b117-076280983944', 'Solaray', 'solaray-b117-076280983944.jpg'],
+    ['solaray-b117-076280049312', 'Solaray', 'solaray-b117-076280049312.jpg'],
+    ['solaray-b117-076280049107', 'Solaray', 'solaray-b117-076280049107.jpg'],
+    ['solaray-b117-076280048438', 'Solaray', 'solaray-b117-076280048438.jpg'],
+    ['solaray-b117-076280357547', 'Solaray', 'solaray-b117-076280357547.jpg'],
+    ['solaray-b117-076280113587', 'Solaray', 'solaray-b117-076280113587.jpg'],
+    ['solaray-b117-076280012408', 'Solaray', 'solaray-b117-076280012408.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch1) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const bcaa90 = previewOverlayImage({
+    id: 'nutricost-b79-bcaa-unflavored-90-servings',
+    formulaId: 'nutricost-nutricost-bcaa-powder-30-servings',
+    brand: 'Nutricost',
+  });
+  if (
+    !bcaa90?.verifiedSku
+    || !bcaa90.url.endsWith('/nutricost-b79-bcaa-unflavored-90-servings.jpg')
+  ) {
+    throw new Error('BCAA unflavored 90 must keep its own carton, not the 30');
   }
 }
