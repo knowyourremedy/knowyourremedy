@@ -202,3 +202,4 @@ export { BATCH202_KYR6C_RAINBOW_T84U } from './batch202-kyr6c-rainbow-t84u';
 export { BATCH203_KYR6C_RAINBOW_T88U } from './batch203-kyr6c-rainbow-t88u';
 export { BATCH204_KYR6C_RAINBOW_T91U } from './batch204-kyr6c-rainbow-t91u';
 export { BATCH205_KYR6C_RAINBOW_T91U_NONMULTI } from './batch205-kyr6c-rainbow-t91u-nonmulti';
+export { BATCH206_KYR6C_RAINBOW_T96U } from './batch206-kyr6c-rainbow-t96u';
