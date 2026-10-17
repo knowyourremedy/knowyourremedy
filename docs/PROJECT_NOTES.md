@@ -56,6 +56,13 @@ Catalog job
 - Ladder order (exhaust every step): 1. DailyMed 2. Brand site (count tab + every collapsed accordion + UPC field) 3. Amazon 4. Google AI mode 5. Target 6. Walgreens 7. CVS 8. Walmart 9. Meijer 10. Kroger.
 - Google AI rule: Google AI first directs you to a real site it viewed. You may use a blurb for an ingredient list or UPC only if the AI was specifically told to show it only when it can 100% verify the ingredients or UPC because it itself viewed them on a site, and only for a single bottle or pack (not a multipack). Otherwise do not copy from the blurb. Open the cited page.
 - Write rule (t83u): Write the row only when you have the full panel, every other-ingredient token is already locked on MAIN, two confirmed sources exist, the pack fits one of the 13 tabs, and it does not match an existing row. Do not write a duplicate of any existing row. If any token is ungraded, the panel is incomplete, or the pack is a duplicate, stop on that pack and report it. Do not write it until Brandon says go.
+- Brand scan flow (t86u):
+1. Read the panels label-first.
+2. Check every other-ingredient token against the locks.
+3. If any token is ungraded, report the packet and stop. Do not write anything until the founder locks them.
+4. If every token is already locked, continue the ladder for sale sources and UPCs.
+5. Write the row when you have the full panel, all tokens locked, two confirmed sources, a tab, and it is not a duplicate of an existing row. Attach a confirmed UPC (two sale pages, or one sale page + matching brand label/filename, agree on the same 12-digit code for that exact single count). If sources disagree or only one shows a code, write the row without the UPC and note it. Do not write duplicates.
+Reports: Keep them short. Only note what is new, what was written, what is on hold and why, and whether you are still working, waiting, or stopped and if anything new is on MAIN. No long play-by-play.
 
 Process lock
 - A bot paste starts by naming the bot. If it is the wrong bot, it stops and tells Brandon which chat the paste belongs in.
