@@ -15607,6 +15607,68 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Boswellia resin extract, 450 mg, 60 vegcaps. Barcode 076280399059.
   // Front reads 450 mg and 60 VEGCAPS.
   'solaray-b117-076280399059': catalogShot('solaray-b117-076280399059.jpg'),
+  // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
+  // Exact brand-site fronts. Per-id only. verifiedSku.
+  // Total Calm Advanced, mood, 60 vegcaps. Barcode 076280682670.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280682670': catalogShot('solaray-b117-076280682670.jpg'),
+  // Hawthorn cardio support blend, 90 vegcaps. Barcode 076280036657.
+  // Front reads Hawthorn Extract and 90 VEGCAPS. Not the 425 mg 100-count.
+  'solaray-b117-076280036657': catalogShot('solaray-b117-076280036657.jpg'),
+  // Cayenne pepper 40,000 HU, 515 mg, 180 vegcaps. Barcode 076280011319.
+  // Front reads 180 VEGCAPS. Not the 100-count.
+  'solaray-b117-076280011319': catalogShot('solaray-b117-076280011319.jpg'),
+  // Mycrobiome complete probiotic mood, 30 vegcaps. Barcode 076280561548.
+  // Front reads Mood and 30 VEGCAPS.
+  'solaray-b117-076280561548': catalogShot('solaray-b117-076280561548.jpg'),
+  // Ginger root, 1100 mg, 100 vegcaps. Barcode 076280013009.
+  // Front reads 1,100 mg and 100 VEGCAPS. Not the 180-count.
+  'solaray-b117-076280013009': catalogShot('solaray-b117-076280013009.jpg'),
+  // Muira puama, 600 mg, 100 vegcaps. Barcode 076280013856.
+  // Front reads 600 mg and 100 VEGCAPS.
+  'solaray-b117-076280013856': catalogShot('solaray-b117-076280013856.jpg'),
+  // Astragalus, 550 mg, 100 vegcaps. Barcode 076280887457.
+  // Front reads 550 mg and 100 VEGCAPS.
+  'solaray-b117-076280887457': catalogShot('solaray-b117-076280887457.jpg'),
+  // Affron saffron extract, 30 vegcaps. Barcode 076280862133.
+  // Front reads 30 mg and 30 VEGCAPS.
+  'solaray-b117-076280862133': catalogShot('solaray-b117-076280862133.jpg'),
+  // Horsetail aerial extract, 400 mg, 60 vegcaps. Barcode 076280366662.
+  // Front reads 400 mg and 60 VEGCAPS.
+  'solaray-b117-076280366662': catalogShot('solaray-b117-076280366662.jpg'),
+  // Vitex berry, 400 mg, 100 vegcaps. Barcode 076280016451.
+  // Front reads 400 mg and 100 VEGCAPS. Not the chasteberry extract 60-count.
+  'solaray-b117-076280016451': catalogShot('solaray-b117-076280016451.jpg'),
+  // Licorice root, 450 mg, 100 vegcaps. Barcode 076280013702.
+  // Front reads 450 mg and 100 VEGCAPS.
+  'solaray-b117-076280013702': catalogShot('solaray-b117-076280013702.jpg'),
+  // Eyes Complete, 60 vegcaps. Barcode 076280918052.
+  // Front reads 60 VEGCAPS.
+  'solaray-b117-076280918052': catalogShot('solaray-b117-076280918052.jpg'),
+  // Echinacea purpurea and angustifolia, 460 mg, 180 vegcaps. Barcode 076280124354.
+  // Front reads 460 mg and 180 VEGCAPS. Not the 100-count.
+  'solaray-b117-076280124354': catalogShot('solaray-b117-076280124354.jpg'),
+  // Lutein Eyes 18, triple strength, 30 vegcaps. Barcode 076280832150.
+  // Front reads 18 mg and 30 VEGCAPS. Not the 60-count.
+  'solaray-b117-076280832150': catalogShot('solaray-b117-076280832150.jpg'),
+  // Lobelia aerial, 50 mg, 100 vegcaps. Barcode 076280013757.
+  // Front reads 50 mg and 100 VEGCAPS.
+  'solaray-b117-076280013757': catalogShot('solaray-b117-076280013757.jpg'),
+  // Hawthorn, 425 mg, 100 vegcaps. Barcode 076280277371.
+  // Front reads 425 mg and 100 VEGCAPS. Not the cardio blend 90-count.
+  'solaray-b117-076280277371': catalogShot('solaray-b117-076280277371.jpg'),
+  // Vitex chasteberry extract, 60 vegcaps. Barcode 076280039566.
+  // Front reads 60 VEGCAPS. Not the 400 mg 100-count berry.
+  'solaray-b117-076280039566': catalogShot('solaray-b117-076280039566.jpg'),
+  // Mycrobiome complete probiotic postnatal, 30 vegcaps. Barcode 076280263916.
+  // Front reads Postnatal and 30 VEGCAPS.
+  'solaray-b117-076280263916': catalogShot('solaray-b117-076280263916.jpg'),
+  // Olive leaf extract, double strength, 500 mg, 30 vegcaps. Barcode 076280375756.
+  // Front reads 500 mg and 30 VEGCAPS.
+  'solaray-b117-076280375756': catalogShot('solaray-b117-076280375756.jpg'),
+  // Mullein leaf, 330 mg, 200 vegcaps. SKU X0042AEJKH.
+  // Front reads 330 mg and 200 VEGCAPS. Not the 100-count.
+  'solaray-b117-X0042AEJKH': catalogShot('solaray-b117-X0042AEJKH.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15765,6 +15827,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280049046',
   // Bilberry extract 120-count is not the 60-count bottle.
   'solaray-b120-076280031010',
+  // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
+  // Ginger root 180-count is not the 100-count bottle.
+  'solaray-b117-076280013016',
   // Nettle Leaf 180-count is not the 100-count bottle.
   'solaray-b117-076280014129',
   // St. John's Wort 180-count is not the 100-count bottle.
@@ -33664,5 +33729,129 @@ assertBrandMark(
   });
   if (!vitaminC100?.verifiedSku || vitaminC100.url === vitaminC250?.url || vitaminC250?.verifiedSku) {
     throw new Error('Vitamin C 100 must not become the 250-count photo');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
+  // Sibling counts keep their own fronts.
+  const batch415b: [string, string, string][] = [
+    ['solaray-b117-076280682670', 'Solaray', 'solaray-b117-076280682670.jpg'],
+    ['solaray-b117-076280036657', 'Solaray', 'solaray-b117-076280036657.jpg'],
+    ['solaray-b117-076280011319', 'Solaray', 'solaray-b117-076280011319.jpg'],
+    ['solaray-b117-076280561548', 'Solaray', 'solaray-b117-076280561548.jpg'],
+    ['solaray-b117-076280013009', 'Solaray', 'solaray-b117-076280013009.jpg'],
+    ['solaray-b117-076280013856', 'Solaray', 'solaray-b117-076280013856.jpg'],
+    ['solaray-b117-076280887457', 'Solaray', 'solaray-b117-076280887457.jpg'],
+    ['solaray-b117-076280862133', 'Solaray', 'solaray-b117-076280862133.jpg'],
+    ['solaray-b117-076280366662', 'Solaray', 'solaray-b117-076280366662.jpg'],
+    ['solaray-b117-076280016451', 'Solaray', 'solaray-b117-076280016451.jpg'],
+    ['solaray-b117-076280013702', 'Solaray', 'solaray-b117-076280013702.jpg'],
+    ['solaray-b117-076280918052', 'Solaray', 'solaray-b117-076280918052.jpg'],
+    ['solaray-b117-076280124354', 'Solaray', 'solaray-b117-076280124354.jpg'],
+    ['solaray-b117-076280832150', 'Solaray', 'solaray-b117-076280832150.jpg'],
+    ['solaray-b117-076280013757', 'Solaray', 'solaray-b117-076280013757.jpg'],
+    ['solaray-b117-076280277371', 'Solaray', 'solaray-b117-076280277371.jpg'],
+    ['solaray-b117-076280039566', 'Solaray', 'solaray-b117-076280039566.jpg'],
+    ['solaray-b117-076280263916', 'Solaray', 'solaray-b117-076280263916.jpg'],
+    ['solaray-b117-076280375756', 'Solaray', 'solaray-b117-076280375756.jpg'],
+    ['solaray-b117-X0042AEJKH', 'Solaray', 'solaray-b117-X0042AEJKH.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch415b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const ginger100 = previewOverlayImage({
+    id: 'solaray-b117-076280013009',
+    formulaId: 'solaray-b117-076280013009',
+    brand: 'Solaray',
+  });
+  const ginger180 = previewOverlayImage({
+    id: 'solaray-b117-076280013016',
+    formulaId: 'solaray-b117-076280013009',
+    brand: 'Solaray',
+  });
+  if (!ginger100?.verifiedSku || ginger100.url === ginger180?.url || ginger180?.verifiedSku) {
+    throw new Error('Ginger 100 must not become the 180-count photo');
+  }
+  const cayenne180 = previewOverlayImage({
+    id: 'solaray-b117-076280011319',
+    formulaId: 'solaray-b117-076280011319',
+    brand: 'Solaray',
+  });
+  const cayenne100 = previewOverlayImage({
+    id: 'solaray-b117-076280011302',
+    formulaId: 'solaray-b117-076280011302',
+    brand: 'Solaray',
+  });
+  if (!cayenne180?.verifiedSku || cayenne180.url === cayenne100?.url || cayenne100?.verifiedSku) {
+    throw new Error('Cayenne 180 must not become the 100-count photo');
+  }
+  const echinacea180 = previewOverlayImage({
+    id: 'solaray-b117-076280124354',
+    formulaId: 'solaray-b117-076280012439',
+    brand: 'Solaray',
+  });
+  const echinacea100 = previewOverlayImage({
+    id: 'solaray-b117-076280012439',
+    formulaId: 'solaray-b117-076280012439',
+    brand: 'Solaray',
+  });
+  if (!echinacea180?.verifiedSku || !echinacea100?.verifiedSku || echinacea180.url === echinacea100.url) {
+    throw new Error('Echinacea 180 must not share the 100');
+  }
+  const lutein30 = previewOverlayImage({
+    id: 'solaray-b117-076280832150',
+    formulaId: 'solaray-b117-076280832150',
+    brand: 'Solaray',
+  });
+  const lutein60 = previewOverlayImage({
+    id: 'solaray-b120-076280832167',
+    formulaId: 'solaray-b120-076280832167',
+    brand: 'Solaray',
+  });
+  if (!lutein30?.verifiedSku || lutein30.url === lutein60?.url || lutein60?.verifiedSku) {
+    throw new Error('Lutein 30 must not become the 60-count photo');
+  }
+  const hawthorn90 = previewOverlayImage({
+    id: 'solaray-b117-076280036657',
+    formulaId: 'solaray-b117-076280036657',
+    brand: 'Solaray',
+  });
+  const hawthorn100 = previewOverlayImage({
+    id: 'solaray-b117-076280277371',
+    formulaId: 'solaray-b117-076280277371',
+    brand: 'Solaray',
+  });
+  if (!hawthorn90?.verifiedSku || !hawthorn100?.verifiedSku || hawthorn90.url === hawthorn100.url) {
+    throw new Error('Hawthorn blend 90 must not share the 425 mg 100');
+  }
+  const vitex100 = previewOverlayImage({
+    id: 'solaray-b117-076280016451',
+    formulaId: 'solaray-b117-076280016451',
+    brand: 'Solaray',
+  });
+  const vitex60 = previewOverlayImage({
+    id: 'solaray-b117-076280039566',
+    formulaId: 'solaray-b117-076280039566',
+    brand: 'Solaray',
+  });
+  if (!vitex100?.verifiedSku || !vitex60?.verifiedSku || vitex100.url === vitex60.url) {
+    throw new Error('Vitex berry 100 must not share the extract 60');
+  }
+  const mullein200 = previewOverlayImage({
+    id: 'solaray-b117-X0042AEJKH',
+    formulaId: 'solaray-b117-076280013900',
+    brand: 'Solaray',
+  });
+  const mullein100 = previewOverlayImage({
+    id: 'solaray-b117-076280013900',
+    formulaId: 'solaray-b117-076280013900',
+    brand: 'Solaray',
+  });
+  if (!mullein200?.verifiedSku || !mullein100?.verifiedSku || mullein200.url === mullein100.url) {
+    throw new Error('Mullein 200 must not share the 100');
   }
 }
