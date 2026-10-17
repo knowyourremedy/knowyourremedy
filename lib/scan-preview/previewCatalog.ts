@@ -15715,6 +15715,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280048278': catalogShot('solaray-b117-076280048278.jpg'),
   'solaray-b117-076280016307': catalogShot('solaray-b117-076280016307.jpg'),
   'solaray-b117-076280049411': catalogShot('solaray-b117-076280049411.jpg'),
+  // Vitamins night run 2026-10-17 6:45 AM PT batch 1.
+  // Exact brand-site fronts. Sibling counts do not share a file.
+  // Saw Palmetto Berry 580 mg, 50 vegcaps. Not the 100, 180, or 360.
+  'solaray-b117-076280015492': catalogShot('solaray-b117-076280015492.jpg'),
+  // Saw Palmetto Berry 580 mg, 100 vegcaps. Not the 50, 180, or 360.
+  'solaray-b117-076280015508': catalogShot('solaray-b117-076280015508.jpg'),
+  // Saw Palmetto Berry 580 mg, 180 vegcaps. Not the 50, 100, or 360.
+  'solaray-b117-076280015515': catalogShot('solaray-b117-076280015515.jpg'),
+  // Red Yeast Rice 600 mg, 90 vegcaps. Not the 45 or the 120.
+  'solaray-b117-076280004472': catalogShot('solaray-b117-076280004472.jpg'),
+  // Red Yeast Rice 600 mg, 120 vegcaps. Not the 45 or the 90.
+  'solaray-b117-076280004489': catalogShot('solaray-b117-076280004489.jpg'),
+  // Multidophilus 12, 20 billion CFU, 50 vegcaps. Not the 100.
+  'solaray-b117-076280493016': catalogShot('solaray-b117-076280493016.jpg'),
+  // Vitamin D3 liquid, unflavored, 0.5 fl oz.
+  'solaray-b118-076280731613': catalogShot('solaray-b118-076280731613.jpg'),
+  // Berberine & Curcumin, 60 vegcaps.
+  'solaray-b118-076280316247': catalogShot('solaray-b118-076280316247.jpg'),
+  // AHCC + NAC & Beta Glucan, 30 vegcaps.
+  'solaray-b118-076280749748': catalogShot('solaray-b118-076280749748.jpg'),
+  // Chamomile Flowering Top 350 mg, 100 vegcaps.
+  'solaray-b118-076280011609': catalogShot('solaray-b118-076280011609.jpg'),
+  // Olive Leaf Extract 22% 250 mg, 120 vegcaps. Not the 60-count face.
+  'solaray-b118-076280402490': catalogShot('solaray-b118-076280402490.jpg'),
+  // Green Tea Leaf Extract, double strength 500 mg, 30 vegcaps.
+  'solaray-b118-076280107463': catalogShot('solaray-b118-076280107463.jpg'),
+  // Hyaluronic Acid 20 mg, 30 vegcaps.
+  'solaray-b118-076280924008': catalogShot('solaray-b118-076280924008.jpg'),
+  // ActiveMag, 60 vegcaps.
+  'solaray-b118-076280477986': catalogShot('solaray-b118-076280477986.jpg'),
+  // Testosterone Support, 60 vegcaps.
+  'solaray-b118-076280524420': catalogShot('solaray-b118-076280524420.jpg'),
+  // SharpMind Nootropics Energy, 30 vegcaps. Not the sleep bottle.
+  'solaray-b118-076280648065': catalogShot('solaray-b118-076280648065.jpg'),
+  // SharpMind Nootropics Sleep, 30 vegcaps. Not the energy bottle.
+  'solaray-b118-076280507874': catalogShot('solaray-b118-076280507874.jpg'),
+  // StressMag, 60 vegcaps.
+  'solaray-b118-076280615579': catalogShot('solaray-b118-076280615579.jpg'),
+  // AMPK Activator + Dihydroberberine, 60 vegcaps.
+  'solaray-b118-076280400120': catalogShot('solaray-b118-076280400120.jpg'),
+  // Shilajit, 60 vegcaps.
+  'solaray-b118-076280517149': catalogShot('solaray-b118-076280517149.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16609,7 +16651,7 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'monistat-b186-chafing-42',
   // Vitamins night run 2026-10-17 1:45 AM PT batch 2.
   // Red yeast rice 90 and 120 share the 45-count formula.
-  // They must stay letters until their own fronts are attached.
+  // Their own fronts are attached. Do not fall back to the 45-count.
   'solaray-b117-076280004472',
   'solaray-b117-076280004489',
   // Vitamins night run 2026-10-17 5:30 AM PT batch 1.
@@ -33523,8 +33565,8 @@ assertBrandMark(
       formulaId: 'solaray-b117-076280004465',
       brand: 'Solaray',
     });
-    if (!image || image.verifiedSku || image.url === ryr45?.url) {
-      throw new Error(`${id} must not inherit the red yeast rice 45-count`);
+    if (!image?.verifiedSku || image.url === ryr45?.url) {
+      throw new Error(`${id} must keep its own carton, not the red yeast rice 45-count`);
     }
   }
 }
@@ -34030,6 +34072,68 @@ assertBrandMark(
     [
       ['solaray-b117-076280049411', 'solaray-b117-076280049404', 'Solaray'],
       ['solaray-b117-076280049404', 'solaray-b117-076280049404', 'Solaray'],
+    ],
+  ];
+  for (const group of groups) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 6:45 AM PT batch 1.
+  // Sibling counts keep their own fronts. The 360-count saw palmetto,
+  // the 45-count red yeast rice, and the 100-count multidophilus
+  // already have their own cartons.
+  const batch645a: [string, string, string][] = [
+    ['solaray-b117-076280015492', 'Solaray', 'solaray-b117-076280015492.jpg'],
+    ['solaray-b117-076280015508', 'Solaray', 'solaray-b117-076280015508.jpg'],
+    ['solaray-b117-076280015515', 'Solaray', 'solaray-b117-076280015515.jpg'],
+    ['solaray-b117-076280004472', 'Solaray', 'solaray-b117-076280004472.jpg'],
+    ['solaray-b117-076280004489', 'Solaray', 'solaray-b117-076280004489.jpg'],
+    ['solaray-b117-076280493016', 'Solaray', 'solaray-b117-076280493016.jpg'],
+    ['solaray-b118-076280731613', 'Solaray', 'solaray-b118-076280731613.jpg'],
+    ['solaray-b118-076280316247', 'Solaray', 'solaray-b118-076280316247.jpg'],
+    ['solaray-b118-076280749748', 'Solaray', 'solaray-b118-076280749748.jpg'],
+    ['solaray-b118-076280011609', 'Solaray', 'solaray-b118-076280011609.jpg'],
+    ['solaray-b118-076280402490', 'Solaray', 'solaray-b118-076280402490.jpg'],
+    ['solaray-b118-076280107463', 'Solaray', 'solaray-b118-076280107463.jpg'],
+    ['solaray-b118-076280924008', 'Solaray', 'solaray-b118-076280924008.jpg'],
+    ['solaray-b118-076280477986', 'Solaray', 'solaray-b118-076280477986.jpg'],
+    ['solaray-b118-076280524420', 'Solaray', 'solaray-b118-076280524420.jpg'],
+    ['solaray-b118-076280648065', 'Solaray', 'solaray-b118-076280648065.jpg'],
+    ['solaray-b118-076280507874', 'Solaray', 'solaray-b118-076280507874.jpg'],
+    ['solaray-b118-076280615579', 'Solaray', 'solaray-b118-076280615579.jpg'],
+    ['solaray-b118-076280400120', 'Solaray', 'solaray-b118-076280400120.jpg'],
+    ['solaray-b118-076280517149', 'Solaray', 'solaray-b118-076280517149.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch645a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups: [string, string, string][][] = [
+    [
+      ['solaray-b117-076280015492', 'solaray-b117-076280015492', 'Solaray'],
+      ['solaray-b117-076280015508', 'solaray-b117-076280015492', 'Solaray'],
+      ['solaray-b117-076280015515', 'solaray-b117-076280015492', 'Solaray'],
+      ['solaray-b117-076280015522', 'solaray-b117-076280015492', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280004472', 'solaray-b117-076280004465', 'Solaray'],
+      ['solaray-b117-076280004489', 'solaray-b117-076280004465', 'Solaray'],
+      ['solaray-b117-076280004465', 'solaray-b117-076280004465', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280493016', 'solaray-b117-076280493009', 'Solaray'],
+      ['solaray-b117-076280493009', 'solaray-b117-076280493009', 'Solaray'],
     ],
   ];
   for (const group of groups) {
