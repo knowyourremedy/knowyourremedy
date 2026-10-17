@@ -207,7 +207,7 @@ export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
   'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder). Clean. Named or not. Sweetener or color. Not a sugar row. Not Usable. High fructose corn syrup stays its own row. Locked Oct 15, 2026.';
 
 export const HYDROGENATED_OIL_LOCK_SOURCE =
-  'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, and hydrogenated castor oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026.';
+  'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.';
 
 const HYDROGENATED_OIL_WHY =
   'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
@@ -216,7 +216,7 @@ const HYDROGENATED_OIL_WHY =
 export function isHydrogenatedOilLock(name: string): boolean {
   const n = norm(name);
   if (/lecithin|polyoxyl|\bpeg\b|polyethylene glycol/.test(n)) return false;
-  return /hydrogenated (cottonseed|soybean|vegetable|coconut|castor) oil/.test(n);
+  return /hydrogenated (cottonseed|soybean|vegetable|coconut|castor|palm) oil/.test(n);
 }
 
 const FRUIT_VEGETABLE_JUICE_WHY = close(
