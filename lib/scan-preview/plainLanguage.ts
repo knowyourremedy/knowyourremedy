@@ -1083,6 +1083,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Simethicone is an anti-gas agent. On an other-ingredients line it is not the labeled active.', level);
   }
 
+  if (/color \(calcium carbonate\)/.test(n)) {
+    return close(
+      'The label lists calcium carbonate as a color, not as the mineral filler or buffer. That is an unusual color use on the panel.',
+      level,
+    );
+  }
+
   if (/calcium carbonate|magnesium hydroxide|sodium carbonate|potassium bicarbonate|calcium sulfate|sodium bicarbonate/.test(n)) {
     return close('This is a mineral salt used as a filler or to set acidity.', level);
   }
