@@ -317,6 +317,7 @@ export const BATCH204_KYR6C_RAINBOW_T91U: RatingRecord[] = [
     form: 'caplet',
     recordStatus: UNVERIFIED,
     productType: VITAMIN,
+    barcode: '021888204069',
     activeIngredients: [{ name: 'Men\'s 50+ multivitamin blend', strength: 'label serving' }],
     inactiveIngredients: [
       flag(rl(H_MENS_50_150), 'Cellulose (Plant Origin)', 'cleared', METH.cellulosePlant),
@@ -489,6 +490,7 @@ export const BATCH204_KYR6C_RAINBOW_T91U: RatingRecord[] = [
     form: 'caplet',
     recordStatus: UNVERIFIED,
     productType: VITAMIN,
+    barcode: '021888302215',
     activeIngredients: [
       { name: 'Teen multivitamin / DermaComplex blend', strength: 'label serving' },
     ],
