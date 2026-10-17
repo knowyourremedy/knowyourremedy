@@ -15693,6 +15693,28 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b117-076280011258': catalogShot('solaray-b117-076280011258.jpg'),
   'solaray-b117-076280015553': catalogShot('solaray-b117-076280015553.jpg'),
   'solaray-b117-076280011302': catalogShot('solaray-b117-076280011302.jpg'),
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 2.
+  // Exact brand-site fronts. Sibling counts do not share a file.
+  'solaray-b117-076280012354': catalogShot('solaray-b117-076280012354.jpg'),
+  'solaray-b117-076280048148': catalogShot('solaray-b117-076280048148.jpg'),
+  'solaray-b117-076280131253': catalogShot('solaray-b117-076280131253.jpg'),
+  'solaray-b117-076280126259': catalogShot('solaray-b117-076280126259.jpg'),
+  'solaray-b117-076280015546': catalogShot('solaray-b117-076280015546.jpg'),
+  'solaray-b117-076280049046': catalogShot('solaray-b117-076280049046.jpg'),
+  'solaray-b117-076280049206': catalogShot('solaray-b117-076280049206.jpg'),
+  'solaray-b117-076280049916': catalogShot('solaray-b117-076280049916.jpg'),
+  'solaray-b117-076280037760': catalogShot('solaray-b117-076280037760.jpg'),
+  'solaray-b117-X003KT6RIN': catalogShot('solaray-b117-X003KT6RIN.jpg'),
+  'solaray-b117-076280017038': catalogShot('solaray-b117-076280017038.jpg'),
+  'solaray-b117-076280044508': catalogShot('solaray-b117-076280044508.jpg'),
+  'solaray-b117-076280044546': catalogShot('solaray-b117-076280044546.jpg'),
+  'solaray-b117-076280044010': catalogShot('solaray-b117-076280044010.jpg'),
+  'solaray-b117-076280137477': catalogShot('solaray-b117-076280137477.jpg'),
+  'solaray-b117-076280013016': catalogShot('solaray-b117-076280013016.jpg'),
+  'solaray-b117-076280048254': catalogShot('solaray-b117-076280048254.jpg'),
+  'solaray-b117-076280048278': catalogShot('solaray-b117-076280048278.jpg'),
+  'solaray-b117-076280016307': catalogShot('solaray-b117-076280016307.jpg'),
+  'solaray-b117-076280049411': catalogShot('solaray-b117-076280049411.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16593,6 +16615,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-17 5:30 AM PT batch 1.
   // Milk thistle 120-count is not the 60-count bottle.
   'solaray-b117-076280037012',
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 2.
+  // Carrot-juice acidophilus 120-count is not the 30-count bottle.
+  'solaray-b117-076280048278',
 ]);
 
 export function previewOverlayImage(
@@ -33584,8 +33609,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280048148',
     brand: 'Solaray',
   });
-  if (!betaine250?.verifiedSku || betaine250.url === betaine100?.url || betaine100?.verifiedSku) {
-    throw new Error('Betaine 250 must not become the 100-count photo');
+  if (!betaine250?.verifiedSku || !betaine100?.verifiedSku || betaine250.url === betaine100.url) {
+    throw new Error('Betaine 250 must not share the 100-count photo');
   }
 }
 
@@ -33630,8 +33655,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280049206',
     brand: 'Solaray',
   });
-  if (!glutamine100?.verifiedSku || glutamine100.url === glutamine50?.url || glutamine50?.verifiedSku) {
-    throw new Error('Glutamine 100 must not become the 50-count photo');
+  if (!glutamine100?.verifiedSku || !glutamine50?.verifiedSku || glutamine100.url === glutamine50.url) {
+    throw new Error('Glutamine 100 must not share the 50-count photo');
   }
   const nettle180 = previewOverlayImage({
     id: 'solaray-b117-076280014129',
@@ -33702,8 +33727,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280049909',
     brand: 'Solaray',
   });
-  if (!tyrosine50?.verifiedSku || tyrosine50.url === tyrosine100?.url || tyrosine100?.verifiedSku) {
-    throw new Error('Tyrosine 50 must not become the 100-count photo');
+  if (!tyrosine50?.verifiedSku || !tyrosine100?.verifiedSku || tyrosine50.url === tyrosine100.url) {
+    throw new Error('Tyrosine 50 must not share the 100-count photo');
   }
   const carnitine30 = previewOverlayImage({
     id: 'solaray-b117-076280049039',
@@ -33715,8 +33740,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280049039',
     brand: 'Solaray',
   });
-  if (!carnitine30?.verifiedSku || carnitine30.url === carnitine60?.url || carnitine60?.verifiedSku) {
-    throw new Error('Carnitine 30 must not become the 60-count photo');
+  if (!carnitine30?.verifiedSku || !carnitine60?.verifiedSku || carnitine30.url === carnitine60.url) {
+    throw new Error('Carnitine 30 must not share the 60-count photo');
   }
   const bilberry60 = previewOverlayImage({
     id: 'solaray-b117-076280031003',
@@ -33800,8 +33825,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280013009',
     brand: 'Solaray',
   });
-  if (!ginger100?.verifiedSku || ginger100.url === ginger180?.url || ginger180?.verifiedSku) {
-    throw new Error('Ginger 100 must not become the 180-count photo');
+  if (!ginger100?.verifiedSku || !ginger180?.verifiedSku || ginger100.url === ginger180.url) {
+    throw new Error('Ginger 100 must not share the 180-count photo');
   }
   const cayenne180 = previewOverlayImage({
     id: 'solaray-b117-076280011319',
@@ -33935,5 +33960,86 @@ assertBrandMark(
   });
   if (!arginine || arginine.verifiedSku || !arginine.url.endsWith('/solaray-mark.png')) {
     throw new Error('Arginine 50-count must keep the brand mark, not the 90-count face');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 2.
+  // Sibling counts, strengths, and forms keep their own fronts.
+  const batch530b: [string, string, string][] = [
+    ['solaray-b117-076280012354', 'Solaray', 'solaray-b117-076280012354.jpg'],
+    ['solaray-b117-076280048148', 'Solaray', 'solaray-b117-076280048148.jpg'],
+    ['solaray-b117-076280131253', 'Solaray', 'solaray-b117-076280131253.jpg'],
+    ['solaray-b117-076280126259', 'Solaray', 'solaray-b117-076280126259.jpg'],
+    ['solaray-b117-076280015546', 'Solaray', 'solaray-b117-076280015546.jpg'],
+    ['solaray-b117-076280049046', 'Solaray', 'solaray-b117-076280049046.jpg'],
+    ['solaray-b117-076280049206', 'Solaray', 'solaray-b117-076280049206.jpg'],
+    ['solaray-b117-076280049916', 'Solaray', 'solaray-b117-076280049916.jpg'],
+    ['solaray-b117-076280037760', 'Solaray', 'solaray-b117-076280037760.jpg'],
+    ['solaray-b117-X003KT6RIN', 'Solaray', 'solaray-b117-X003KT6RIN.jpg'],
+    ['solaray-b117-076280017038', 'Solaray', 'solaray-b117-076280017038.jpg'],
+    ['solaray-b117-076280044508', 'Solaray', 'solaray-b117-076280044508.jpg'],
+    ['solaray-b117-076280044546', 'Solaray', 'solaray-b117-076280044546.jpg'],
+    ['solaray-b117-076280044010', 'Solaray', 'solaray-b117-076280044010.jpg'],
+    ['solaray-b117-076280137477', 'Solaray', 'solaray-b117-076280137477.jpg'],
+    ['solaray-b117-076280013016', 'Solaray', 'solaray-b117-076280013016.jpg'],
+    ['solaray-b117-076280048254', 'Solaray', 'solaray-b117-076280048254.jpg'],
+    ['solaray-b117-076280048278', 'Solaray', 'solaray-b117-076280048278.jpg'],
+    ['solaray-b117-076280016307', 'Solaray', 'solaray-b117-076280016307.jpg'],
+    ['solaray-b117-076280049411', 'Solaray', 'solaray-b117-076280049411.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch530b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups: [string, string, string][][] = [
+    [
+      ['solaray-b117-076280012354', 'solaray-b117-076280012354', 'Solaray'],
+      ['solaray-b117-076280012361', 'solaray-b117-076280012354', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280015546', 'solaray-b117-076280015539', 'Solaray'],
+      ['solaray-b117-076280015539', 'solaray-b117-076280015539', 'Solaray'],
+      ['solaray-b117-076280037760', 'solaray-b117-076280037760', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280044508', 'solaray-b117-076280044508', 'Solaray'],
+      ['solaray-b117-076280044515', 'solaray-b117-076280044508', 'Solaray'],
+      ['solaray-b117-076280044546', 'solaray-b117-076280044546', 'Solaray'],
+      ['solaray-b117-076280044010', 'solaray-b117-076280044003', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280048254', 'solaray-b117-076280048254', 'Solaray'],
+      ['solaray-b117-076280048261', 'solaray-b117-076280048261', 'Solaray'],
+      ['solaray-b117-076280048278', 'solaray-b117-076280048254', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280016307', 'solaray-b117-076280016307', 'Solaray'],
+      ['solaray-b117-076280016314', 'solaray-b117-076280016307', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-X003KT6RIN', 'solaray-b117-076280544336', 'Solaray'],
+      ['solaray-b117-076280544336', 'solaray-b117-076280544336', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280017038', 'solaray-b117-076280001709', 'Solaray'],
+      ['solaray-b117-076280001709', 'solaray-b117-076280001709', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280049411', 'solaray-b117-076280049404', 'Solaray'],
+      ['solaray-b117-076280049404', 'solaray-b117-076280049404', 'Solaray'],
+    ],
+  ];
+  for (const group of groups) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
   }
 }
