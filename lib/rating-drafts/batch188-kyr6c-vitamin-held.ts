@@ -56,9 +56,6 @@ const VITAL_PANEL = 'https://naturesbounty.com/products/advanced-vital-heart';
 const BEETS_PANEL = 'https://naturesbounty.com/products/beets-coq10-gummies';
 const CALTRATE_PANEL = 'https://dsld.od.nih.gov/label/202231';
 const MF_PANEL = 'https://dsld.od.nih.gov/label/63734';
-const RAINBOW_PANEL =
-  'https://www.rainbowlight.com/products/womens-one-real-food-nutrients-60-vegetarian-caplets-rl20414';
-
 const CALTRATE_FLAGS: IngredientFlag[] = [
   flag(CALTRATE_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
   flag(CALTRATE_PANEL, 'Blue 2 Lake', 'high', METH.dye),
@@ -109,14 +106,6 @@ const MF_FLAGS: IngredientFlag[] = [
   flag(MF_PANEL, 'Magnesium stearate', 'cleared', METH.magStearate),
   flag(MF_PANEL, 'Silicon dioxide', 'limited', METH.silica),
   flag(MF_PANEL, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
-];
-
-const RAINBOW_FLAGS: IngredientFlag[] = [
-  flag(RAINBOW_PANEL, 'Microcrystalline cellulose', 'cleared', METH.cellulose),
-  flag(RAINBOW_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
-  flag(RAINBOW_PANEL, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
-  flag(RAINBOW_PANEL, 'Hypromellose', 'cleared', METH.hpmc),
-  flag(RAINBOW_PANEL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
 ];
 
 export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [
@@ -212,25 +201,6 @@ export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [
       'DSLD label 63734 is Move Free Advanced with glucosamine and chondroitin, 80 coated tablets. Other ingredients: cellulose, coating (hydroxypropyl methylcellulose, modified corn starch, titanium dioxide, polyethylene glycol, magnesium trisilicate, glycerin), croscarmellose sodium, magnesium stearate, silicon dioxide, hydroxypropyl cellulose. Schiff brand site opened Move Free Advanced product pages; size tabs showed 80 count but did not print the full inactive line in page HTML. Target opened Schiff Move Free Joint Health Advanced Tablets, 80 count, and printed the same coating line with titanium dioxide. CVS search returned 403. Walgreens opened Schiff Move Free Advanced Joint Supplement, 80 ea, at $19.99 with Add to cart. Amazon search returned 503. Walmart returned a robot check. Carewell opened Schiff Move Free Advanced Joint Health Tablets, 80 tablets, at $31.99 with Add to cart and printed the same inactive line. Google AI mode last cited Walgreens and Carewell pages that were opened for this 80-count.',
     ],
   },
-  {
-    id: 'rainbow-b188-womens-one-60',
-    productName: "Rainbow Light Women's One (60 caplets)",
-    brand: 'Rainbow Light',
-    category: VITAMINS,
-    formulaId: 'rainbow-b187-womens-one',
-    audience: ADULT,
-    minAge: 18,
-    form: 'caplet',
-    recordStatus: UNVERIFIED,
-    productType: VITAMIN,
-    activeIngredients: [{ name: 'Multivitamin / multimineral', strength: '1 caplet' }],
-    inactiveIngredients: RAINBOW_FLAGS,
-    verdict: 'caution',
-    retailers: ['Rainbow Light', 'Co-op Market'],
-    sourcesGeneral: [
-      "Brand shop opened Women's One + Real Food Nutrients, 60 vegetarian caplets (rl20414), at $24.54, in stock. The Full Supplement Facts on that page was read. Other ingredients: microcrystalline cellulose, maltodextrin, hydroxypropyl cellulose, hypromellose, croscarmellose sodium. Same inactive line as the 30- and 150-count panels already on MAIN. DailyMed carton bars: Women's One is on DSLD, not DailyMed drugs. Target search did not open a 60-count card. CVS search returned 403. Walgreens search did not print a 60-count Rainbow Light Women's One line with a price. Amazon search returned 503. Walmart listed Women's One 60 caplets in browse results but returned a robot check on the product page. Co-op Market opened Rainbow Light Women's One+ 60 vegetarian caplets at $25.99 in stock. Google AI mode last cited the brand shop and Co-op Market pages that were opened for this 60-count.",
-    ],
-  },
 ];
 
 const ROWS = BATCH188_KYR6C_VITAMIN_HELD;
@@ -249,7 +219,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 5) throw new Error(`batch188 row count ${ROWS.length}`);
+if (ROWS.length !== 4) throw new Error(`batch188 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch188 duplicate id');
 

@@ -56,8 +56,6 @@ const THREONATE_PANEL = 'https://naturesbounty.com/products/magnesium-l-threonat
 const WOMEN_PANEL = 'https://naturesbounty.com/products/women-s-50-multivitamin-gummies';
 const SLOW_PANEL = 'https://dsld.od.nih.gov/label/240265';
 const CALTRATE_PANEL = 'https://dsld.od.nih.gov/label/202235';
-const RAINBOW_PANEL = 'https://www.rainbowlight.com/products/womens-one-real-food-nutrients-30-vegetarian-caplets-rl20412';
-
 const CELL_ASCORBYL = (panel: string): IngredientFlag[] => [
   flag(panel, 'Vegetable cellulose', 'cleared', METH.cellulose),
   flag(panel, 'Ascorbyl palmitate', 'cleared', METH.ascorbyl),
@@ -75,14 +73,6 @@ const CALTRATE_FLAGS: IngredientFlag[] = [
   flag(CALTRATE_PANEL, 'Titanium dioxide', 'high', METH.tio2),
   flag(CALTRATE_PANEL, 'Tocopherols', 'cleared', METH.tocopherol),
   flag(CALTRATE_PANEL, 'Yellow 6 Lake', 'high', METH.dye),
-];
-
-const RAINBOW_FLAGS: IngredientFlag[] = [
-  flag(RAINBOW_PANEL, 'Microcrystalline cellulose', 'cleared', METH.cellulose),
-  flag(RAINBOW_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
-  flag(RAINBOW_PANEL, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
-  flag(RAINBOW_PANEL, 'Hypromellose', 'cleared', METH.hpmc),
-  flag(RAINBOW_PANEL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
 ];
 
 const WOMEN_FLAGS: IngredientFlag[] = [
@@ -297,44 +287,6 @@ export const BATCH187_KYR6C_VITAMIN_LINE: RatingRecord[] = [
       'DSLD label 202235 is Caltrate 600+D3, 200 tablets. The inactive line matches the 60-tablet label just read. Walgreens opened Caltrate 600+D3, 200 tablets, at $24.99 with Add to cart. Rite Aid opened the 200-count at $24.99 with Add to cart. The DSLD record for the 200-count has no UPC. The opened store pages did not print one barcode tied to that count.',
     ],
   },
-  {
-    id: 'rainbow-b187-womens-one-30',
-    productName: "Rainbow Light Women's One (30 caplets)",
-    brand: 'Rainbow Light',
-    category: VITAMINS,
-    formulaId: 'rainbow-b187-womens-one',
-    audience: ADULT,
-    minAge: 18,
-    form: 'caplet',
-    recordStatus: UNVERIFIED,
-    productType: VITAMIN,
-    activeIngredients: [{ name: 'Multivitamin / multimineral', strength: '1 caplet' }],
-    inactiveIngredients: RAINBOW_FLAGS,
-    verdict: 'caution',
-    retailers: ['Rainbow Light'],
-    sourcesGeneral: [
-      "Brand shop opened Women's One + Real Food Nutrients, 30 vegetarian caplets, at $14.43, in stock. The supplement-facts image on that page was read. Other ingredients: microcrystalline cellulose, maltodextrin, hydroxypropyl cellulose, hypromellose, croscarmellose sodium. DSLD label 311392 is the same 30-count line and has no UPC. The shop variant did not print a barcode.",
-    ],
-  },
-  {
-    id: 'rainbow-b187-womens-one-150',
-    productName: "Rainbow Light Women's One (150 caplets)",
-    brand: 'Rainbow Light',
-    category: VITAMINS,
-    formulaId: 'rainbow-b187-womens-one',
-    audience: ADULT,
-    minAge: 18,
-    form: 'caplet',
-    recordStatus: UNVERIFIED,
-    productType: VITAMIN,
-    activeIngredients: [{ name: 'Multivitamin / multimineral', strength: '1 caplet' }],
-    inactiveIngredients: RAINBOW_FLAGS,
-    verdict: 'caution',
-    retailers: ['Rainbow Light'],
-    sourcesGeneral: [
-      "DSLD label 311394 is Women's One, 150 vegetarian tablets. The inactive line matches the 30-count panel just read. The brand shop opened Women's One + Real Food Nutrients, 150 vegetarian caplets, at $45.32, in stock. The shop variant did not print a barcode. DSLD stores 021888108831 on that label. It is not attached here because the opened shop page did not print it.",
-    ],
-  },
 ];
 
 const ROWS = BATCH187_KYR6C_VITAMIN_LINE;
@@ -353,7 +305,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 10) throw new Error(`batch187 row count ${ROWS.length}`);
+if (ROWS.length !== 8) throw new Error(`batch187 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch187 duplicate id');
 
