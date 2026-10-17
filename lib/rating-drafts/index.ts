@@ -196,3 +196,4 @@ export { BATCH196_KYR6C_NB_FORTY } from './batch196-kyr6c-nb-forty';
 export { BATCH197_KYR6C_NB_T73U } from './batch197-kyr6c-nb-t73u';
 export { BATCH198_KYR6C_NB_T76U } from './batch198-kyr6c-nb-t76u';
 export { BATCH199_KYR6C_NB_T78U } from './batch199-kyr6c-nb-t78u';
+export { BATCH200_KYR6C_NB_T80U } from './batch200-kyr6c-nb-t80u';
