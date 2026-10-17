@@ -172,6 +172,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '886790019305',
     activeIngredients: [{ name: 'Iron (elemental)', strength: '45 mg' }],
     inactiveIngredients: SLOW_FE_FLAGS,
     verdict: 'avoid',
@@ -243,6 +244,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '030768031213',
     activeIngredients: [
       { name: 'Vitamin C', strength: '60 mg' },
       { name: 'Manganese', strength: '2 mg' },
@@ -268,6 +270,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '030768196073',
     activeIngredients: [
       { name: 'Vitamin D', strength: '50 mcg' },
       { name: 'Glucosamine HCl', strength: '1,500 mg' },
@@ -292,6 +295,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '030768541279',
     activeIngredients: [
       { name: 'Glucosamine HCl', strength: '1,500 mg' },
       { name: 'Joint Shield 5-LOXIN Advanced', strength: '100 mg' },
@@ -315,6 +319,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '030768330491',
     activeIngredients: [
       { name: 'Vitamin D', strength: '10 mcg' },
       { name: 'Glucosamine HCl', strength: '1,500 mg' },
@@ -338,6 +343,7 @@ export const BATCH201_KYR6C_T83U: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '030768553883',
     activeIngredients: [
       { name: 'Vitamin D', strength: '10 mcg' },
       { name: 'Joint Shield 5-LOXIN Advanced', strength: '100 mg' },
@@ -366,8 +372,15 @@ if (ROWS.length !== 8) throw new Error(`batch201 row count ${ROWS.length}`);
 const ids = ROWS.map((record) => record.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch201 duplicate id');
 
+function upcOk(code: string): boolean {
+  if (!/^\d{12}$/.test(code)) return false;
+  let sum = 0;
+  for (let i = 0; i < 11; i++) sum += Number(code[i]) * (i % 2 === 0 ? 3 : 1);
+  return (10 - (sum % 10)) % 10 === Number(code[11]);
+}
+
 for (const record of ROWS) {
-  if (record.barcode) throw new Error(`batch201 unexpected barcode ${record.id}`);
+  if (record.barcode && !upcOk(record.barcode)) throw new Error(`batch201 upc ${record.id}`);
   if (record.honestNote && record.id !== OMEGA_ID) {
     throw new Error(`batch201 unexpected note ${record.id}`);
   }
