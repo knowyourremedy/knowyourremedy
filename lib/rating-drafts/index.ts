@@ -206,3 +206,4 @@ export { BATCH206_KYR6C_RAINBOW_T96U } from './batch206-kyr6c-rainbow-t96u';
 export { BATCH207_KYR6C_RAINBOW_T99U } from './batch207-kyr6c-rainbow-t99u';
 export { BATCH208_KYR6C_RAINBOW_T100U } from './batch208-kyr6c-rainbow-t100u';
 export { BATCH209_KYR6C_OSTEO_T101U } from './batch209-kyr6c-osteo-t101u';
+export { BATCH210_KYR6C_OSTEO_T103U } from './batch210-kyr6c-osteo-t103u';
