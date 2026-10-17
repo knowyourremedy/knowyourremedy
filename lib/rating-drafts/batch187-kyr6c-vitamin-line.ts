@@ -220,6 +220,7 @@ export const BATCH187_KYR6C_VITAMIN_LINE: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '886790019602',
     activeIngredients: [{ name: 'Iron', strength: '45 mg' }],
     inactiveIngredients: [
       flag(SLOW_PANEL, 'Dibasic calcium phosphate', 'cleared', METH.phosphate),
