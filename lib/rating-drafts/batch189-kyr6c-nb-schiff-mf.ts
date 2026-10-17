@@ -210,6 +210,7 @@ export const BATCH189_KYR6C_NB_SCHIFF_MF: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '020525118684',
     activeIngredients: [
       { name: 'Glucosamine hydrochloride', strength: '1500 mg' },
       { name: 'MSM', strength: '1500 mg' },

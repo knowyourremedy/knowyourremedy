@@ -166,6 +166,7 @@ export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '305735509249',
     activeIngredients: [
       { name: 'Calcium', strength: '600 mg' },
       { name: 'Vitamin D3', strength: '800 IU' },
@@ -188,6 +189,7 @@ export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '020525118738',
     activeIngredients: [
       { name: 'Glucosamine hydrochloride', strength: '1500 mg' },
       { name: 'Chondroitin sulfate', strength: '200 mg' },
