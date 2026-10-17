@@ -255,6 +255,7 @@ export const BATCH187_KYR6C_VITAMIN_LINE: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '305735509195',
     activeIngredients: [
       { name: 'Calcium', strength: '600 mg' },
       { name: 'Vitamin D3', strength: '800 IU' },
@@ -277,6 +278,7 @@ export const BATCH187_KYR6C_VITAMIN_LINE: RatingRecord[] = [
     form: 'tablet',
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
+    barcode: '305735509256',
     activeIngredients: [
       { name: 'Calcium', strength: '600 mg' },
       { name: 'Vitamin D3', strength: '800 IU' },
