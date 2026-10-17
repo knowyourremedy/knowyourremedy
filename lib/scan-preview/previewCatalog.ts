@@ -15669,6 +15669,30 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Mullein leaf, 330 mg, 200 vegcaps. SKU X0042AEJKH.
   // Front reads 330 mg and 200 VEGCAPS. Not the 100-count.
   'solaray-b117-X0042AEJKH': catalogShot('solaray-b117-X0042AEJKH.jpg'),
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 1.
+  // Exact brand-site fronts. Barcode in the filename matches the row.
+  'solaray-b117-076280109016': catalogShot('solaray-b117-076280109016.jpg'),
+  'solaray-b117-076280399028': catalogShot('solaray-b117-076280399028.jpg'),
+  'solaray-b117-076280539318': catalogShot('solaray-b117-076280539318.jpg'),
+  'solaray-b117-076280661668': catalogShot('solaray-b117-076280661668.jpg'),
+  'solaray-b117-076280330922': catalogShot('solaray-b117-076280330922.jpg'),
+  // Tried the 50-count SKU. The only 3D file on that variant reads 90 VEGCAPS.
+  // Pack-size mismatch. Official Solaray wordmark. Not a letter.
+  'solaray-b117-076280048803': brandMark('solaray-mark.png'),
+  'solaray-b117-076280658095': catalogShot('solaray-b117-076280658095.jpg'),
+  'solaray-b117-076280039702': catalogShot('solaray-b117-076280039702.jpg'),
+  'solaray-b117-076280138979': catalogShot('solaray-b117-076280138979.jpg'),
+  'solaray-b117-076280013207': catalogShot('solaray-b117-076280013207.jpg'),
+  'solaray-b117-076280376975': catalogShot('solaray-b117-076280376975.jpg'),
+  'solaray-b117-076280036619': catalogShot('solaray-b117-076280036619.jpg'),
+  'solaray-b117-076280048209': catalogShot('solaray-b117-076280048209.jpg'),
+  'solaray-b117-076280013214': catalogShot('solaray-b117-076280013214.jpg'),
+  'solaray-b117-076280048308': catalogShot('solaray-b117-076280048308.jpg'),
+  'solaray-b117-076280037005': catalogShot('solaray-b117-076280037005.jpg'),
+  'solaray-b117-076280037012': catalogShot('solaray-b117-076280037012.jpg'),
+  'solaray-b117-076280011258': catalogShot('solaray-b117-076280011258.jpg'),
+  'solaray-b117-076280015553': catalogShot('solaray-b117-076280015553.jpg'),
+  'solaray-b117-076280011302': catalogShot('solaray-b117-076280011302.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16566,6 +16590,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // They must stay letters until their own fronts are attached.
   'solaray-b117-076280004472',
   'solaray-b117-076280004489',
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 1.
+  // Milk thistle 120-count is not the 60-count bottle.
+  'solaray-b117-076280037012',
 ]);
 
 export function previewOverlayImage(
@@ -33714,8 +33741,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280048308',
     brand: 'Solaray',
   });
-  if (!multi180?.verifiedSku || multi180.url === multi100?.url || multi100?.verifiedSku) {
-    throw new Error('Multidophilus 180 must not become the 100-count photo');
+  if (!multi180?.verifiedSku || !multi100?.verifiedSku || multi180.url === multi100.url) {
+    throw new Error('Multidophilus 180 must not share the 100-count photo');
   }
   const vitaminC100 = previewOverlayImage({
     id: 'solaray-b117-076280044409',
@@ -33786,8 +33813,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280011302',
     brand: 'Solaray',
   });
-  if (!cayenne180?.verifiedSku || cayenne180.url === cayenne100?.url || cayenne100?.verifiedSku) {
-    throw new Error('Cayenne 180 must not become the 100-count photo');
+  if (!cayenne180?.verifiedSku || !cayenne100?.verifiedSku || cayenne180.url === cayenne100.url) {
+    throw new Error('Cayenne 180 must not share the 100-count photo');
   }
   const echinacea180 = previewOverlayImage({
     id: 'solaray-b117-076280124354',
@@ -33853,5 +33880,60 @@ assertBrandMark(
   });
   if (!mullein200?.verifiedSku || !mullein100?.verifiedSku || mullein200.url === mullein100.url) {
     throw new Error('Mullein 200 must not share the 100');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-17 5:30 AM PT batch 1.
+  // Sibling counts keep their own fronts. The 50-count arginine
+  // front on the brand site reads 90, so that row keeps the mark.
+  const batch530a: [string, string, string][] = [
+    ['solaray-b117-076280109016', 'Solaray', 'solaray-b117-076280109016.jpg'],
+    ['solaray-b117-076280399028', 'Solaray', 'solaray-b117-076280399028.jpg'],
+    ['solaray-b117-076280539318', 'Solaray', 'solaray-b117-076280539318.jpg'],
+    ['solaray-b117-076280661668', 'Solaray', 'solaray-b117-076280661668.jpg'],
+    ['solaray-b117-076280330922', 'Solaray', 'solaray-b117-076280330922.jpg'],
+    ['solaray-b117-076280658095', 'Solaray', 'solaray-b117-076280658095.jpg'],
+    ['solaray-b117-076280039702', 'Solaray', 'solaray-b117-076280039702.jpg'],
+    ['solaray-b117-076280138979', 'Solaray', 'solaray-b117-076280138979.jpg'],
+    ['solaray-b117-076280013207', 'Solaray', 'solaray-b117-076280013207.jpg'],
+    ['solaray-b117-076280376975', 'Solaray', 'solaray-b117-076280376975.jpg'],
+    ['solaray-b117-076280036619', 'Solaray', 'solaray-b117-076280036619.jpg'],
+    ['solaray-b117-076280048209', 'Solaray', 'solaray-b117-076280048209.jpg'],
+    ['solaray-b117-076280013214', 'Solaray', 'solaray-b117-076280013214.jpg'],
+    ['solaray-b117-076280048308', 'Solaray', 'solaray-b117-076280048308.jpg'],
+    ['solaray-b117-076280037005', 'Solaray', 'solaray-b117-076280037005.jpg'],
+    ['solaray-b117-076280037012', 'Solaray', 'solaray-b117-076280037012.jpg'],
+    ['solaray-b117-076280011258', 'Solaray', 'solaray-b117-076280011258.jpg'],
+    ['solaray-b117-076280015553', 'Solaray', 'solaray-b117-076280015553.jpg'],
+    ['solaray-b117-076280011302', 'Solaray', 'solaray-b117-076280011302.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch530a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b117-076280048803', 'Solaray', 'solaray-mark.png');
+  const milk60 = previewOverlayImage({
+    id: 'solaray-b117-076280037005',
+    formulaId: 'solaray-b117-076280037005',
+    brand: 'Solaray',
+  });
+  const milk120 = previewOverlayImage({
+    id: 'solaray-b117-076280037012',
+    formulaId: 'solaray-b117-076280037005',
+    brand: 'Solaray',
+  });
+  if (!milk60?.verifiedSku || !milk120?.verifiedSku || milk60.url === milk120.url) {
+    throw new Error('Milk thistle 175 mg 60 must not share the 120');
+  }
+  const arginine = previewOverlayImage({
+    id: 'solaray-b117-076280048803',
+    formulaId: 'solaray-b117-076280048803',
+    brand: 'Solaray',
+  });
+  if (!arginine || arginine.verifiedSku || !arginine.url.endsWith('/solaray-mark.png')) {
+    throw new Error('Arginine 50-count must keep the brand mark, not the 90-count face');
   }
 }
