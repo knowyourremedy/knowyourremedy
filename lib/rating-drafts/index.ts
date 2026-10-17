@@ -194,3 +194,4 @@ export { BATCH194_KYR6C_NB_BIOTIN_90 } from './batch194-kyr6c-nb-biotin-90';
 export { BATCH195_KYR6C_NB_FORTY } from './batch195-kyr6c-nb-forty';
 export { BATCH196_KYR6C_NB_FORTY } from './batch196-kyr6c-nb-forty';
 export { BATCH197_KYR6C_NB_T73U } from './batch197-kyr6c-nb-t73u';
+export { BATCH198_KYR6C_NB_T76U } from './batch198-kyr6c-nb-t76u';
