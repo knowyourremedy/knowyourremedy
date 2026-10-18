@@ -15882,6 +15882,52 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b120-076280085211': catalogShot('solaray-b120-076280085211.jpg'),
   // Pomegranate fruit extract 200 mg, 60 vegcaps.
   'solaray-b120-076280375909': catalogShot('solaray-b120-076280375909.jpg'),
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 2.
+  // Exact brand-site fronts. Barcode in the filename matches the row.
+  // Sibling counts do not share a file.
+  // Fulvic minerals 100 mg, 30 vegcaps.
+  'solaray-b120-076280512847': catalogShot('solaray-b120-076280512847.jpg'),
+  // BriteSide mood support, 90 vegcaps.
+  'solaray-b120-076280613605': catalogShot('solaray-b120-076280613605.jpg'),
+  // Lutein Eyes 18, triple strength, 60 vegcaps. Not the 30.
+  'solaray-b120-076280832167': catalogShot('solaray-b120-076280832167.jpg'),
+  // Lutein Eyes 24, advanced 24 mg, 30 vegcaps. Not the 60.
+  'solaray-b120-076280832174': catalogShot('solaray-b120-076280832174.jpg'),
+  // Once Daily High Energy Multivitamin, iron-free, 30 vegcaps. Not the 60 or 90.
+  'solaray-b120-076280473049': catalogShot('solaray-b120-076280473049.jpg'),
+  // Once Daily High Energy Multivitamin, iron-free, 60 vegcaps. Not the 30 or 90.
+  'solaray-b120-076280473056': catalogShot('solaray-b120-076280473056.jpg'),
+  // Once Daily High Energy Multivitamin, iron-free, 90 vegcaps. Not the 30 or 60.
+  'solaray-b120-076280473063': catalogShot('solaray-b120-076280473063.jpg'),
+  // Once Daily High Energy Multi, 30 vegcaps. Not the 60, 120, or 180.
+  'solaray-b120-076280472950': catalogShot('solaray-b120-076280472950.jpg'),
+  // Once Daily High Energy Multi, 60 vegcaps. Not the 30, 120, or 180.
+  'solaray-b120-076280047301': catalogShot('solaray-b120-076280047301.jpg'),
+  // Once Daily High Energy Multi, 120 vegcaps. The only 120-count front
+  // on the brand page prints barcode 076280109016, already wired to
+  // solaray-b117-076280109016. This row is 076280047318.
+  // Barcode mismatch. Official Solaray wordmark. Not a letter.
+  'solaray-b120-076280047318': brandMark('solaray-mark.png'),
+  // Once Daily High Energy Multi, 180 vegcaps. Not the 30, 60, or 120.
+  'solaray-b120-076280473124': catalogShot('solaray-b120-076280473124.jpg'),
+  // Bilberry and lutein, one daily, 30 vegcaps.
+  'solaray-b120-076280031157': catalogShot('solaray-b120-076280031157.jpg'),
+  // Olive leaf extract 22% 250 mg, 60 vegcaps. Not the 120.
+  'solaray-b120-076280404562': catalogShot('solaray-b120-076280404562.jpg'),
+  // Caralluma aerial extract 500 mg, 30 vegcaps.
+  'solaray-b120-076280660548': catalogShot('solaray-b120-076280660548.jpg'),
+  // Spectro Woman multivitamin, 120 vegcaps. Not Spectro Man.
+  'solaray-b120-076280566192': catalogShot('solaray-b120-076280566192.jpg'),
+  // Tart cherry and celery seed 620 mg, 60 vegcaps.
+  'solaray-b121-076280174045': catalogShot('solaray-b121-076280174045.jpg'),
+  // Mega quercetin 600 mg, 60 vegcaps.
+  'solaray-b121-076280446869': catalogShot('solaray-b121-076280446869.jpg'),
+  // Spectro Man multivitamin, 120 vegcaps. Not Spectro Woman.
+  'solaray-b121-076280850406': catalogShot('solaray-b121-076280850406.jpg'),
+  // Holy basil aerial extract 900 mg, 60 vegcaps.
+  'solaray-b121-076280399134': catalogShot('solaray-b121-076280399134.jpg'),
+  // Bacillus coagulans, 60 vegcaps.
+  'solaray-b121-076280731767': catalogShot('solaray-b121-076280731767.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16043,6 +16089,15 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-18 1:45 AM PT batch 1.
   // Chromium picolinate 100-count is not the 50-count bottle.
   'solaray-b120-076280045895',
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 2.
+  // Iron-free 60 and 90 are not the 30-count bottle.
+  'solaray-b120-076280473056',
+  'solaray-b120-076280473063',
+  // High Energy Multi 60, 120, and 180 are not the 30-count bottle.
+  // The 120-count keeps the brand mark. Do not inherit the 30.
+  'solaray-b120-076280047301',
+  'solaray-b120-076280047318',
+  'solaray-b120-076280473124',
   // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
   // Ginger root 180-count is not the 100-count bottle.
   'solaray-b117-076280013016',
@@ -34151,8 +34206,8 @@ assertBrandMark(
     formulaId: 'solaray-b120-076280832167',
     brand: 'Solaray',
   });
-  if (!lutein30?.verifiedSku || lutein30.url === lutein60?.url || lutein60?.verifiedSku) {
-    throw new Error('Lutein 30 must not become the 60-count photo');
+  if (!lutein30?.verifiedSku || !lutein60?.verifiedSku || lutein30.url === lutein60.url) {
+    throw new Error('Lutein Eyes 18 30 must not share the 60-count photo');
   }
   const hawthorn90 = previewOverlayImage({
     id: 'solaray-b117-076280036657',
@@ -34549,5 +34604,102 @@ assertBrandMark(
     if (new Set(urls).size !== group.length) {
       throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 2.
+  // Sibling counts keep their own fronts. The 120-count high-energy
+  // multi keeps the brand mark because the only 120 front prints
+  // barcode 076280109016.
+  const batch145b: [string, string, string][] = [
+    ['solaray-b120-076280512847', 'Solaray', 'solaray-b120-076280512847.jpg'],
+    ['solaray-b120-076280613605', 'Solaray', 'solaray-b120-076280613605.jpg'],
+    ['solaray-b120-076280832167', 'Solaray', 'solaray-b120-076280832167.jpg'],
+    ['solaray-b120-076280832174', 'Solaray', 'solaray-b120-076280832174.jpg'],
+    ['solaray-b120-076280473049', 'Solaray', 'solaray-b120-076280473049.jpg'],
+    ['solaray-b120-076280473056', 'Solaray', 'solaray-b120-076280473056.jpg'],
+    ['solaray-b120-076280473063', 'Solaray', 'solaray-b120-076280473063.jpg'],
+    ['solaray-b120-076280472950', 'Solaray', 'solaray-b120-076280472950.jpg'],
+    ['solaray-b120-076280047301', 'Solaray', 'solaray-b120-076280047301.jpg'],
+    ['solaray-b120-076280473124', 'Solaray', 'solaray-b120-076280473124.jpg'],
+    ['solaray-b120-076280031157', 'Solaray', 'solaray-b120-076280031157.jpg'],
+    ['solaray-b120-076280404562', 'Solaray', 'solaray-b120-076280404562.jpg'],
+    ['solaray-b120-076280660548', 'Solaray', 'solaray-b120-076280660548.jpg'],
+    ['solaray-b120-076280566192', 'Solaray', 'solaray-b120-076280566192.jpg'],
+    ['solaray-b121-076280174045', 'Solaray', 'solaray-b121-076280174045.jpg'],
+    ['solaray-b121-076280446869', 'Solaray', 'solaray-b121-076280446869.jpg'],
+    ['solaray-b121-076280850406', 'Solaray', 'solaray-b121-076280850406.jpg'],
+    ['solaray-b121-076280399134', 'Solaray', 'solaray-b121-076280399134.jpg'],
+    ['solaray-b121-076280731767', 'Solaray', 'solaray-b121-076280731767.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch145b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b120-076280047318', 'Solaray', 'solaray-mark.png');
+  const groups145b: [string, string, string][][] = [
+    [
+      ['solaray-b117-076280832150', 'solaray-b117-076280832150', 'Solaray'],
+      ['solaray-b120-076280832167', 'solaray-b120-076280832167', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280832174', 'solaray-b120-076280832174', 'Solaray'],
+      ['solaray-b117-076280832181', 'solaray-b117-076280832181', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280473049', 'solaray-b120-076280473049', 'Solaray'],
+      ['solaray-b120-076280473056', 'solaray-b120-076280473049', 'Solaray'],
+      ['solaray-b120-076280473063', 'solaray-b120-076280473049', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280472950', 'solaray-b120-076280472950', 'Solaray'],
+      ['solaray-b120-076280047301', 'solaray-b120-076280472950', 'Solaray'],
+      ['solaray-b120-076280473124', 'solaray-b120-076280472950', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280404562', 'solaray-b120-076280404562', 'Solaray'],
+      ['solaray-b118-076280402490', 'solaray-b118-076280402490', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280566192', 'solaray-b120-076280566192', 'Solaray'],
+      ['solaray-b121-076280850406', 'solaray-b121-076280850406', 'Solaray'],
+    ],
+  ];
+  for (const group of groups145b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const highEnergy120 = previewOverlayImage({
+    id: 'solaray-b120-076280047318',
+    formulaId: 'solaray-b120-076280472950',
+    brand: 'Solaray',
+  });
+  const highEnergy30 = previewOverlayImage({
+    id: 'solaray-b120-076280472950',
+    formulaId: 'solaray-b120-076280472950',
+    brand: 'Solaray',
+  });
+  const highEnergyOtherBarcode = previewOverlayImage({
+    id: 'solaray-b117-076280109016',
+    formulaId: 'solaray-b117-076280109016',
+    brand: 'Solaray',
+  });
+  if (
+    !highEnergy120
+    || highEnergy120.verifiedSku
+    || !highEnergy120.url.endsWith('/solaray-mark.png')
+    || highEnergy120.url === highEnergy30?.url
+    || highEnergy120.url === highEnergyOtherBarcode?.url
+  ) {
+    throw new Error('High Energy Multi 120 must keep the brand mark, not a sibling carton');
   }
 }
