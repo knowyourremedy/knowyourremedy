@@ -50,13 +50,13 @@ function buildOi(panel: string, specs: FlagSpec[]): IngredientFlag[] {
 }
 
 const PANEL_ULTRA_60 =
-  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-ultra-brain-health-supplement';
+  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-ultra-brain-supplement/';
 const PANEL_ORIG_GUMMIES_50 =
-  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-original-strawberry-gummies';
+  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-brain-health-original-gummies-50-ct/';
 const PANEL_MEMORY_3D =
-  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-memory-3d-brain-health-supplement';
+  'https://www.schiffvitamins.com/collections/neuriva/products/neuriva-brain-memory-3d/';
 const PANEL_BRAIN_ENERGY =
-  'https://reckitt-salsify.coremedia.cloud/resource/blob/4786599627/neuriva-brain-energy-gummies-back';
+  'https://sites.salsify.com/5fe215a7-aa55-4645-b2f8-b2462790a101/823e622b-16a7-4d01-ab64-4ea29e42ea93/product/4786599627/NEURIVA(r)-Brain-%2B-Energy-Mixed-Berry-Gummies-1275-ct-';
 
 const ULTRA_60_FLAGS: FlagSpec[] = [
   ['capsule (hypromellose)', 'cleared', 'hpmc'],
