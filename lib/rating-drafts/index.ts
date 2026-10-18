@@ -217,3 +217,4 @@ export { BATCH217_KYR6C_SCHIFF_T112U } from './batch217-kyr6c-schiff-t112u';
 export { BATCH218_KYR6C_SCHIFF_T113U } from './batch218-kyr6c-schiff-t113u';
 export { BATCH219_KYR6C_T117U_A } from './batch219-kyr6c-t117u-a';
 export { BATCH220_KYR6C_T118U_A } from './batch220-kyr6c-t118u-a';
+export { BATCH221_KYR6C_T118U_B } from './batch221-kyr6c-t118u-b';
