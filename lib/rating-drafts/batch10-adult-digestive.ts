@@ -100,11 +100,12 @@
 // = Limited. Seed / industrial oils in gummies = High Avoid (no concrete
 // probiotic-gummy SKU written).
 //
+// FOUNDER SKIP LIFTED (t118u Oct 17, 2026): Florastor — may be cataloged when panel + sale qualify; no longer on SKIPPED list.
+//
 // SKIPPED (founder skip — do not invent Clean / do not write):
 // - Nexium 24HR
 // - Prevacid OTC
 // - Pepcid Complete
-// - Florastor
 // - Kids Dramamine
 // - Amazon-only SKUs
 // - Optional probiotic gummy (no concrete brick-and-mortar SKU with a

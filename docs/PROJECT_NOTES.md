@@ -10,6 +10,7 @@ Done
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
 - Highest rating-draft is batch219. Next file is batch220.
+- t118u (Oct 18, 2026). **Founder token locks** stamped in docs/METHODOLOGY.md (Oct 17, 2026 t118u): casein peptones, soy peptones, sucrose, DL-Alpha Tocopherol / DL alpha tocopherol, d-alpha Tocopheryl Acetate, Pomegranate Powder, MCT oil, strawberry watermelon raspberry flavor, vegetable capsule (hypromellose / gellan gum), hydroxypropylmethylcellulose variants, Cornstarch, colloidal silicon dioxide / colloidal silica, natural and artificial flavor (singular), cellulose gel, invertase. Token lock recommendation process added under Process lock. **Florastor** founder skip lifted (t118u; was batch10 SKIPPED list). Catalog rescan for overridden tokens is Part 2 (applyT118uLocks).
 - t117u group A (Oct 18, 2026). **Viactiv + Feosol batch219 written** — eight packs in `lib/rating-drafts/batch219-kyr6c-t117u-a.ts` (all Avoid). **Written ids:** `viactiv-b219-calcium-chocolate-100`, `viactiv-b219-calcium-caramel-100`, `viactiv-b219-calcium-chocolate-60`, `viactiv-b219-calcium-caramel-60`, `viactiv-b219-calcium-chocolate-180`, `viactiv-b219-coq10-cardio-complete-30`, `feosol-b219-original-120`, `feosol-b219-complete-30`. **Viactiv and Feosol catalog pass closed** (added to Closed brands). **Fergon open:** Iron Restore 60 needs a second sale source; High Potency Iron 100 closed as older formula still on some shelves — not cataloged (t105u L85). **Prevagen** brand scan stopped on unlocked casein peptones / soy peptones. **Os-Cal** brand scan stopped on unlocked Sucrose and DL-Alpha Tocopherol.
 - t115u (Oct 18, 2026). Rainbow Light, Caltrate, and Citracal: packs written, brands closed (founder, t115u).
 - t113u (Oct 18, 2026). **Schiff Neuriva batch218 written** — `schiff-b218-neuriva-brain-eye-30` in `lib/rating-drafts/batch218-kyr6c-schiff-t113u.ts` (UPC 647865195115; formulaId `schiff-b218-neuriva-brain-eye`). Founder-confirmed 2025 panel (no titanium dioxide) plus Amazon as second sale source. **Schiff Neuriva / Schiff glucosamine catalog pass closed** — no open packs after batch218.
@@ -86,6 +87,11 @@ Catalog job
 - Formula-conflict rule (t105u): A pack whose only available panel is an older formula that conflicts with the current brand label is closed as **older formula still on some shelves — not cataloged**. Do not write a row from that panel. Do not leave the pack on the hunt list.
 - Second sale source rule (t105u): A third-party seller page, or a Costco-only page, that shows the exact single count in stock can count as a second sale source for the write rule (t83u), alongside a first-party or named-ladder store page.
 - Grade recommendation order (t107u founder call): When recommending a grade on a token, check the full source list first, then apply the condition rule if a source says the ingredient is safe only when a condition is met and the app cannot check that condition, then use methodology last. Sources take priority. Methodology has a slight impact and is not the first stop.
+- Token lock recommendation process (founder, Oct 17 2026):
+1. Check all integrative sources first.
+2. Check whether any docking rule applies (nanoparticle, form-specific, flavor, etc.).
+3. Then reference current methodology. Methodology can be overridden if it was overlooked or inconsistent with sources + docking rules.
+Any override requires a catalog rescan of every row containing the changed token.
 - Brand scan flow (t86u):
 1. Read the panels label-first.
 2. Check every other-ingredient token against the locks.
