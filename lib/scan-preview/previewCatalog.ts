@@ -16148,6 +16148,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b123-076280462128': brandMark('solaray-mark.png'),
   // Fermented Korean ginseng root 150 mg, 30 vegcaps.
   'solaray-b123-076280464795': catalogShot('solaray-b123-076280464795.jpg'),
+  // Vitamins night run 2026-10-18 5:30 AM PT batch 2.
+  // Exact brand-site fronts. Barcode on the face matches the row.
+  // Sibling counts, strengths, and flavors do not share a file.
+  // Zinc citrate 50 mg, 60 vegcaps. Not bio zinc 15 mg.
+  'solaray-b123-076280471021': catalogShot('solaray-b123-076280471021.jpg'),
+  // Electrolyte recovery, watermelon, 8.5 oz. Not pink lemonade.
+  'solaray-b123-076280545753': catalogShot('solaray-b123-076280545753.jpg'),
+  // Methyl folate 1000 mcg, lemon, 60 lozenges.
+  'solaray-b123-076280578959': catalogShot('solaray-b123-076280578959.jpg'),
+  // Fermented reishi mushroom 1000 mg, 60 capsules.
+  'solaray-b123-076280598407': catalogShot('solaray-b123-076280598407.jpg'),
+  // D-mannose with CranActin 1000 mg, 120 vegcaps. Not the 60.
+  'solaray-b123-076280633498': catalogShot('solaray-b123-076280633498.jpg'),
+  // Collagen bone complete, 90 vegcaps.
+  'solaray-b123-076280664560': catalogShot('solaray-b123-076280664560.jpg'),
+  // Methyl B-12 and methyl folate, cherry, 60 lozenges.
+  'solaray-b123-076280685206': catalogShot('solaray-b123-076280685206.jpg'),
+  // Super bio vitamin D-3 125 mcg, 120 softgels. Not the 250 mcg or 50 mcg.
+  'solaray-b123-076280697551': catalogShot('solaray-b123-076280697551.jpg'),
+  // Organic fermented turmeric root 425 mg, 100 capsules.
+  'solaray-b123-076280717051': catalogShot('solaray-b123-076280717051.jpg'),
+  // Fermented lion's mane mushroom 1000 mg, 60 capsules.
+  'solaray-b123-076280719833': catalogShot('solaray-b123-076280719833.jpg'),
+  // Oregano plus black seed oil, 60 softgels.
+  'solaray-b123-076280733495': catalogShot('solaray-b123-076280733495.jpg'),
+  // Super strength vitamin D-3 250 mcg, 60 vegcaps. Not the 125 mcg or 50 mcg.
+  'solaray-b123-076280752502': catalogShot('solaray-b123-076280752502.jpg'),
+  // Super IbuActin maximum, 60 vegcaps.
+  'solaray-b123-076280761382': catalogShot('solaray-b123-076280761382.jpg'),
+  // SleepMag, 30 vegcaps.
+  'solaray-b123-076280763232': catalogShot('solaray-b123-076280763232.jpg'),
+  // White peony root extract 500 mg, 60 capsules.
+  'solaray-b123-076280790030': catalogShot('solaray-b123-076280790030.jpg'),
+  // Vitamin D-3 50 mcg, lemon, 60 lozenges. Not the 125 mcg or 250 mcg.
+  'solaray-b123-076280796452': catalogShot('solaray-b123-076280796452.jpg'),
+  // Continence Max with Flowtrol, 90 vegcaps.
+  'solaray-b123-076280812244': catalogShot('solaray-b123-076280812244.jpg'),
+  // EMIQ 50 mg, 30 vegcaps.
+  'solaray-b123-076280837162': catalogShot('solaray-b123-076280837162.jpg'),
+  // Rhodiola root and schizandra, 60 vegcaps. Not the 100 mg or 500 mg bottle.
+  'solaray-b123-076280845815': catalogShot('solaray-b123-076280845815.jpg'),
+  // Creatine with shilajit, pineapple, 7.6 oz. Not the unflavored tub.
+  'solaray-b123-076280849202': catalogShot('solaray-b123-076280849202.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -35164,7 +35207,7 @@ assertBrandMark(
 {
   // Vitamins night run 2026-10-18 4:15 AM PT batch 2.
   // CoQ-10 100 mg does not share the 200 mg bottle.
-  // D-mannose 60 does not share the 120, which stays a letter.
+  // D-mannose 60 does not share the 120. The 120 has its own front.
   const batch415pm2: [string, string, string][] = [
     ['solaray-b123-076280047431', 'Solaray', 'solaray-b123-076280047431.jpg'],
     ['solaray-b123-076280080063', 'Solaray', 'solaray-b123-076280080063.jpg'],
@@ -35214,12 +35257,6 @@ assertBrandMark(
     }
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
-      if (id === 'solaray-b123-076280633498') {
-        if (!image?.url.startsWith('data:image/svg+xml')) {
-          throw new Error(`${id} stays a letter until its own carton is attempted`);
-        }
-        continue;
-      }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
   }
@@ -35290,6 +35327,86 @@ assertBrandMark(
       if (id === 'solaray-b123-076280462128') {
         if (!image?.url.endsWith('/solaray-mark.png') || image.verifiedSku) {
           throw new Error(`${id} keeps the Solaray mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 5:30 AM PT batch 2.
+  // D-mannose 120 does not share the 60.
+  // Vitamin D 125 mcg, 250 mcg, and 50 mcg do not share a face.
+  // Watermelon electrolyte does not share pink lemonade.
+  // Pineapple creatine does not share the unflavored tub.
+  const batch530b: [string, string, string][] = [
+    ['solaray-b123-076280471021', 'Solaray', 'solaray-b123-076280471021.jpg'],
+    ['solaray-b123-076280545753', 'Solaray', 'solaray-b123-076280545753.jpg'],
+    ['solaray-b123-076280578959', 'Solaray', 'solaray-b123-076280578959.jpg'],
+    ['solaray-b123-076280598407', 'Solaray', 'solaray-b123-076280598407.jpg'],
+    ['solaray-b123-076280633498', 'Solaray', 'solaray-b123-076280633498.jpg'],
+    ['solaray-b123-076280664560', 'Solaray', 'solaray-b123-076280664560.jpg'],
+    ['solaray-b123-076280685206', 'Solaray', 'solaray-b123-076280685206.jpg'],
+    ['solaray-b123-076280697551', 'Solaray', 'solaray-b123-076280697551.jpg'],
+    ['solaray-b123-076280717051', 'Solaray', 'solaray-b123-076280717051.jpg'],
+    ['solaray-b123-076280719833', 'Solaray', 'solaray-b123-076280719833.jpg'],
+    ['solaray-b123-076280733495', 'Solaray', 'solaray-b123-076280733495.jpg'],
+    ['solaray-b123-076280752502', 'Solaray', 'solaray-b123-076280752502.jpg'],
+    ['solaray-b123-076280761382', 'Solaray', 'solaray-b123-076280761382.jpg'],
+    ['solaray-b123-076280763232', 'Solaray', 'solaray-b123-076280763232.jpg'],
+    ['solaray-b123-076280790030', 'Solaray', 'solaray-b123-076280790030.jpg'],
+    ['solaray-b123-076280796452', 'Solaray', 'solaray-b123-076280796452.jpg'],
+    ['solaray-b123-076280812244', 'Solaray', 'solaray-b123-076280812244.jpg'],
+    ['solaray-b123-076280837162', 'Solaray', 'solaray-b123-076280837162.jpg'],
+    ['solaray-b123-076280845815', 'Solaray', 'solaray-b123-076280845815.jpg'],
+    ['solaray-b123-076280849202', 'Solaray', 'solaray-b123-076280849202.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch530b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups530b: [string, string, string][][] = [
+    [
+      ['solaray-b123-076280633498', 'solaray-b123-076280633498', 'Solaray'],
+      ['solaray-b123-076280117776', 'solaray-b123-076280117776', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280697551', 'solaray-b123-076280697551', 'Solaray'],
+      ['solaray-b123-076280752502', 'solaray-b123-076280752502', 'Solaray'],
+      ['solaray-b123-076280796452', 'solaray-b123-076280796452', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280845815', 'solaray-b123-076280845815', 'Solaray'],
+      ['solaray-b123-076280376951', 'solaray-b123-076280376951', 'Solaray'],
+      ['solaray-b123-076280111071', 'solaray-b123-076280111071', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280545753', 'solaray-b123-076280545753', 'Solaray'],
+      ['solaray-b124-076280222548', 'solaray-b124-076280222548', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280849202', 'solaray-b123-076280849202', 'Solaray'],
+      ['solaray-b116-creatine-shilajit-unflavored-6-1oz', 'solaray-b116-creatine-shilajit-unflavored-6-1oz', 'Solaray'],
+    ],
+  ];
+  for (const group of groups530b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (id === 'solaray-b124-076280222548') {
+        if (!image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
         continue;
       }
