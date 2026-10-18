@@ -16191,6 +16191,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b123-076280845815': catalogShot('solaray-b123-076280845815.jpg'),
   // Creatine with shilajit, pineapple, 7.6 oz. Not the unflavored tub.
   'solaray-b123-076280849202': catalogShot('solaray-b123-076280849202.jpg'),
+  // Vitamins night run 2026-10-18 6:45 AM PT batch 1.
+  // Exact brand-site fronts. Barcode on the face matches the row.
+  // Sibling counts and flavors do not share a file.
+  // Organic fermented maitake, 60 vegcaps.
+  'solaray-b123-076280908473': catalogShot('solaray-b123-076280908473.jpg'),
+  // Choline 500 mg, 100 vegcaps.
+  'solaray-b123-076280938449': catalogShot('solaray-b123-076280938449.jpg'),
+  // Fermented black garlic bulb 500 mg, 50 vegcaps.
+  'solaray-b123-076280986372': catalogShot('solaray-b123-076280986372.jpg'),
+  // Bio vitamin E + selenium 268 mg, 60 softgels. Not the 120.
+  'solaray-b124-076280041682': catalogShot('solaray-b124-076280041682.jpg'),
+  // Bio vitamin E + selenium 268 mg, 120 softgels. Not the 60.
+  'solaray-b124-076280041699': catalogShot('solaray-b124-076280041699.jpg'),
+  // Women's golden multivitamin, 90 vegcaps. Not the men's bottle.
+  'solaray-b124-076280047929': catalogShot('solaray-b124-076280047929.jpg'),
+  // Men's golden multivitamin, 90 vegcaps. Not the women's bottle.
+  'solaray-b124-076280047943': catalogShot('solaray-b124-076280047943.jpg'),
+  // Hawthorn aerial extract, one daily 600 mg, 30 vegcaps. Not the 60.
+  'solaray-b124-076280036640': catalogShot('solaray-b124-076280036640.jpg'),
+  // Vitamin D-3 10 mcg (400 IU), 120 softgels.
+  'solaray-b124-076280041408': catalogShot('solaray-b124-076280041408.jpg'),
+  // Electrolyte recovery, pink lemonade, 249 g. Not watermelon.
+  'solaray-b124-076280222548': catalogShot('solaray-b124-076280222548.jpg'),
+  // Extra-strength magnesium glycinate powder 500 mg, lemon lime, 9.9 oz. Not unflavored.
+  'solaray-b124-076280739503': catalogShot('solaray-b124-076280739503.jpg'),
+  // Organic elderberry gummies, 60.
+  'solaray-b124-076280635003': catalogShot('solaray-b124-076280635003.jpg'),
+  // Saw palmetto berry extract 160 mg, 60 softgels. Not the 30, 120, or 240.
+  'solaray-b124-076280037821': catalogShot('solaray-b124-076280037821.jpg'),
+  // Saw palmetto berry extract 160 mg, 120 softgels. Not the 30, 60, or 240.
+  'solaray-b124-076280037838': catalogShot('solaray-b124-076280037838.jpg'),
+  // Saw palmetto berry extract 160 mg, 240 softgels. Not the 30, 60, or 120.
+  'solaray-b124-076280037845': catalogShot('solaray-b124-076280037845.jpg'),
+  // Once Daily Active Man multivitamin, 90 vegcaps.
+  'solaray-b124-076280200553': catalogShot('solaray-b124-076280200553.jpg'),
+  // Echinacea angustifolia root extract 125 mg, 60 vegcaps.
+  'solaray-b124-076280034004': catalogShot('solaray-b124-076280034004.jpg'),
+  // Super Digestaway, 60 vegcaps. Not the 90 or 180.
+  'solaray-b124-076280048001': catalogShot('solaray-b124-076280048001.jpg'),
+  // Super Digestaway, 90 vegcaps. Not the 60 or 180.
+  'solaray-b124-076280048018': catalogShot('solaray-b124-076280048018.jpg'),
+  // Super Digestaway, 180 vegcaps. Not the 60 or 90.
+  'solaray-b124-076280048025': catalogShot('solaray-b124-076280048025.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -16368,6 +16411,12 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b124-076280037845',
   // Pantothenic acid 250-count is not the 100-count bottle.
   'solaray-b125-076280043815',
+  // Vitamins night run 2026-10-18 6:45 AM PT batch 1.
+  // Bio vitamin E 120-count is not the 60-count bottle.
+  'solaray-b124-076280041699',
+  // Super Digestaway 90 and 180 are not the 60-count bottle.
+  'solaray-b124-076280048018',
+  'solaray-b124-076280048025',
   // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
   // Ginger root 180-count is not the 100-count bottle.
   'solaray-b117-076280013016',
@@ -35094,14 +35143,19 @@ assertBrandMark(
       throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
     }
     for (const [id, formulaId, brand] of group) {
-      if (id === 'solaray-b129-076280036008' || id === 'solaray-b124-076280036640') {
-        const image = previewOverlayImage({ id, formulaId, brand });
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (id === 'solaray-b129-076280036008') {
         if (!image?.url.startsWith('data:image/svg+xml')) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
         continue;
       }
-      const image = previewOverlayImage({ id, formulaId, brand });
+      if (id === 'solaray-b124-076280036640') {
+        if (!image?.verifiedSku || !image.url.endsWith('/solaray-b124-076280036640.jpg')) {
+          throw new Error(`${id} must keep the 30-count hawthorn carton`);
+        }
+        continue;
+      }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
   }
@@ -35182,14 +35236,19 @@ assertBrandMark(
     }
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
+      if (id === 'solaray-b125-076280043815') {
+        if (!image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
       if (
         id === 'solaray-b124-076280037821'
         || id === 'solaray-b124-076280037838'
         || id === 'solaray-b124-076280037845'
-        || id === 'solaray-b125-076280043815'
       ) {
-        if (!image?.url.startsWith('data:image/svg+xml')) {
-          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        if (!image?.verifiedSku || !image.url.endsWith(`/${id}.jpg`)) {
+          throw new Error(`${id} must keep its own saw palmetto carton`);
         }
         continue;
       }
@@ -35405,12 +35464,85 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (id === 'solaray-b124-076280222548') {
-        if (!image?.url.startsWith('data:image/svg+xml')) {
-          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        if (!image?.verifiedSku || !image.url.endsWith('/solaray-b124-076280222548.jpg')) {
+          throw new Error(`${id} must keep the pink lemonade carton`);
         }
         continue;
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 6:45 AM PT batch 1.
+  // Sibling counts and flavors keep their own fronts.
+  const batch645a: [string, string, string][] = [
+    ['solaray-b123-076280908473', 'Solaray', 'solaray-b123-076280908473.jpg'],
+    ['solaray-b123-076280938449', 'Solaray', 'solaray-b123-076280938449.jpg'],
+    ['solaray-b123-076280986372', 'Solaray', 'solaray-b123-076280986372.jpg'],
+    ['solaray-b124-076280041682', 'Solaray', 'solaray-b124-076280041682.jpg'],
+    ['solaray-b124-076280041699', 'Solaray', 'solaray-b124-076280041699.jpg'],
+    ['solaray-b124-076280047929', 'Solaray', 'solaray-b124-076280047929.jpg'],
+    ['solaray-b124-076280047943', 'Solaray', 'solaray-b124-076280047943.jpg'],
+    ['solaray-b124-076280036640', 'Solaray', 'solaray-b124-076280036640.jpg'],
+    ['solaray-b124-076280041408', 'Solaray', 'solaray-b124-076280041408.jpg'],
+    ['solaray-b124-076280222548', 'Solaray', 'solaray-b124-076280222548.jpg'],
+    ['solaray-b124-076280739503', 'Solaray', 'solaray-b124-076280739503.jpg'],
+    ['solaray-b124-076280635003', 'Solaray', 'solaray-b124-076280635003.jpg'],
+    ['solaray-b124-076280037821', 'Solaray', 'solaray-b124-076280037821.jpg'],
+    ['solaray-b124-076280037838', 'Solaray', 'solaray-b124-076280037838.jpg'],
+    ['solaray-b124-076280037845', 'Solaray', 'solaray-b124-076280037845.jpg'],
+    ['solaray-b124-076280200553', 'Solaray', 'solaray-b124-076280200553.jpg'],
+    ['solaray-b124-076280034004', 'Solaray', 'solaray-b124-076280034004.jpg'],
+    ['solaray-b124-076280048001', 'Solaray', 'solaray-b124-076280048001.jpg'],
+    ['solaray-b124-076280048018', 'Solaray', 'solaray-b124-076280048018.jpg'],
+    ['solaray-b124-076280048025', 'Solaray', 'solaray-b124-076280048025.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch645a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups645a: [string, string, string][][] = [
+    [
+      ['solaray-b124-076280041682', 'solaray-b124-076280041682', 'Solaray'],
+      ['solaray-b124-076280041699', 'solaray-b124-076280041682', 'Solaray'],
+    ],
+    [
+      ['solaray-b124-076280047929', 'solaray-b124-076280047929', 'Solaray'],
+      ['solaray-b124-076280047943', 'solaray-b124-076280047943', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280036602', 'solaray-b123-076280036602', 'Solaray'],
+      ['solaray-b123-076280036626', 'solaray-b123-076280036626', 'Solaray'],
+      ['solaray-b124-076280036640', 'solaray-b124-076280036640', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280545753', 'solaray-b123-076280545753', 'Solaray'],
+      ['solaray-b124-076280222548', 'solaray-b124-076280222548', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280037814', 'solaray-b123-076280037814', 'Solaray'],
+      ['solaray-b124-076280037821', 'solaray-b123-076280037814', 'Solaray'],
+      ['solaray-b124-076280037838', 'solaray-b123-076280037814', 'Solaray'],
+      ['solaray-b124-076280037845', 'solaray-b123-076280037814', 'Solaray'],
+    ],
+    [
+      ['solaray-b124-076280048001', 'solaray-b124-076280048001', 'Solaray'],
+      ['solaray-b124-076280048018', 'solaray-b124-076280048001', 'Solaray'],
+      ['solaray-b124-076280048025', 'solaray-b124-076280048001', 'Solaray'],
+    ],
+  ];
+  for (const group of groups645a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
     }
   }
 }
