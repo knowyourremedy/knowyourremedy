@@ -15928,6 +15928,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b121-076280399134': catalogShot('solaray-b121-076280399134.jpg'),
   // Bacillus coagulans, 60 vegcaps.
   'solaray-b121-076280731767': catalogShot('solaray-b121-076280731767.jpg'),
+  // Vitamins night run 2026-10-18 3:00 AM PT batch 1.
+  // Exact brand-site fronts. Barcode in the filename matches the row.
+  // Sibling counts do not share a file.
+  // Mushroom Complete 1175 mg, 60 vegcaps.
+  'solaray-b121-076280105056': catalogShot('solaray-b121-076280105056.jpg'),
+  // Black cohosh root extract 80 mg, 30 vegcaps.
+  'solaray-b121-076280031737': catalogShot('solaray-b121-076280031737.jpg'),
+  // Bilberry extract 60 mg, 120 vegcaps. Not the 60. Not the 42 mg bottles.
+  'solaray-b121-076280031119': catalogShot('solaray-b121-076280031119.jpg'),
+  // Bilberry extract 60 mg, 60 vegcaps. Not the 120. Not the 42 mg bottles.
+  'solaray-b121-076280031102': catalogShot('solaray-b121-076280031102.jpg'),
+  // Vitamin D3 + K2, 125 mcg, 60 vegcaps. Not the 120.
+  'solaray-b121-076280385847': catalogShot('solaray-b121-076280385847.jpg'),
+  // Red yeast rice + CoQ-10, 60 vegcaps. Not the 90.
+  'solaray-b121-076280088922': catalogShot('solaray-b121-076280088922.jpg'),
+  // SharpMind Nootropics Mood, 30 vegcaps.
+  'solaray-b121-076280970500': catalogShot('solaray-b121-076280970500.jpg'),
+  // Total Cleanse Liver, 60 vegcaps. Not the kidney bottle.
+  'solaray-b121-076280083637': catalogShot('solaray-b121-076280083637.jpg'),
+  // Peppermint oil, enteric coated, 60 softgels.
+  'solaray-b122-076280008685': catalogShot('solaray-b122-076280008685.jpg'),
+  // Total Cleanse Kidney, 60 vegcaps. Not the liver bottle.
+  'solaray-b122-076280083644': catalogShot('solaray-b122-076280083644.jpg'),
+  // Vitamin E mixed tocopherols 268 mg, 100 softgels. Not the 50.
+  'solaray-b122-076280041637': catalogShot('solaray-b122-076280041637.jpg'),
+  // Vitamin E mixed tocopherols 268 mg, 50 softgels. Not the 100.
+  'solaray-b122-076280041620': catalogShot('solaray-b122-076280041620.jpg'),
+  // Red yeast rice + CoQ-10, 90 vegcaps. Not the 60.
+  'solaray-b122-076280121551': catalogShot('solaray-b122-076280121551.jpg'),
+  // Black currant seed oil, hexane-free, 600 mg, 90 softgels.
+  'solaray-b123-076280008326': catalogShot('solaray-b123-076280008326.jpg'),
+  // CranDophilus with CranActin 400 mg, 120 vegcaps.
+  'solaray-b123-076280008449': catalogShot('solaray-b123-076280008449.jpg'),
+  // Butcher's broom root 440 mg, 100 vegcaps.
+  'solaray-b123-076280011159': catalogShot('solaray-b123-076280011159.jpg'),
+  // Devil's claw root 525 mg, 100 vegcaps.
+  'solaray-b123-076280012200': catalogShot('solaray-b123-076280012200.jpg'),
+  // Echinacea root with vitamin C 850 mg, 100 vegcaps.
+  'solaray-b123-076280012392': catalogShot('solaray-b123-076280012392.jpg'),
+  // American ginseng root 480 mg, 50 vegcaps.
+  'solaray-b123-076280013108': catalogShot('solaray-b123-076280013108.jpg'),
+  // Gotu kola aerial 450 mg, 100 vegcaps.
+  'solaray-b123-076280013306': catalogShot('solaray-b123-076280013306.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -34701,5 +34744,72 @@ assertBrandMark(
     || highEnergy120.url === highEnergyOtherBarcode?.url
   ) {
     throw new Error('High Energy Multi 120 must keep the brand mark, not a sibling carton');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 3:00 AM PT batch 1.
+  // Sibling counts keep their own fronts.
+  const batch300a: [string, string, string][] = [
+    ['solaray-b121-076280105056', 'Solaray', 'solaray-b121-076280105056.jpg'],
+    ['solaray-b121-076280031737', 'Solaray', 'solaray-b121-076280031737.jpg'],
+    ['solaray-b121-076280031119', 'Solaray', 'solaray-b121-076280031119.jpg'],
+    ['solaray-b121-076280031102', 'Solaray', 'solaray-b121-076280031102.jpg'],
+    ['solaray-b121-076280385847', 'Solaray', 'solaray-b121-076280385847.jpg'],
+    ['solaray-b121-076280088922', 'Solaray', 'solaray-b121-076280088922.jpg'],
+    ['solaray-b121-076280970500', 'Solaray', 'solaray-b121-076280970500.jpg'],
+    ['solaray-b121-076280083637', 'Solaray', 'solaray-b121-076280083637.jpg'],
+    ['solaray-b122-076280008685', 'Solaray', 'solaray-b122-076280008685.jpg'],
+    ['solaray-b122-076280083644', 'Solaray', 'solaray-b122-076280083644.jpg'],
+    ['solaray-b122-076280041637', 'Solaray', 'solaray-b122-076280041637.jpg'],
+    ['solaray-b122-076280041620', 'Solaray', 'solaray-b122-076280041620.jpg'],
+    ['solaray-b122-076280121551', 'Solaray', 'solaray-b122-076280121551.jpg'],
+    ['solaray-b123-076280008326', 'Solaray', 'solaray-b123-076280008326.jpg'],
+    ['solaray-b123-076280008449', 'Solaray', 'solaray-b123-076280008449.jpg'],
+    ['solaray-b123-076280011159', 'Solaray', 'solaray-b123-076280011159.jpg'],
+    ['solaray-b123-076280012200', 'Solaray', 'solaray-b123-076280012200.jpg'],
+    ['solaray-b123-076280012392', 'Solaray', 'solaray-b123-076280012392.jpg'],
+    ['solaray-b123-076280013108', 'Solaray', 'solaray-b123-076280013108.jpg'],
+    ['solaray-b123-076280013306', 'Solaray', 'solaray-b123-076280013306.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch300a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups300a: [string, string, string][][] = [
+    [
+      ['solaray-b121-076280031102', 'solaray-b121-076280031102', 'Solaray'],
+      ['solaray-b121-076280031119', 'solaray-b121-076280031119', 'Solaray'],
+      ['solaray-b117-076280031003', 'solaray-b117-076280031003', 'Solaray'],
+      ['solaray-b120-076280031010', 'solaray-b117-076280031003', 'Solaray'],
+    ],
+    [
+      ['solaray-b121-076280385847', 'solaray-b121-076280385847', 'Solaray'],
+      ['solaray-d3-k2', 'solaray-d3-k2', 'Solaray'],
+    ],
+    [
+      ['solaray-b121-076280088922', 'solaray-b121-076280088922', 'Solaray'],
+      ['solaray-b122-076280121551', 'solaray-b121-076280088922', 'Solaray'],
+    ],
+    [
+      ['solaray-b121-076280083637', 'solaray-b121-076280083637', 'Solaray'],
+      ['solaray-b122-076280083644', 'solaray-b122-076280083644', 'Solaray'],
+    ],
+    [
+      ['solaray-b122-076280041637', 'solaray-b122-076280041637', 'Solaray'],
+      ['solaray-b122-076280041620', 'solaray-b122-076280041637', 'Solaray'],
+    ],
+  ];
+  for (const group of groups300a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
   }
 }
