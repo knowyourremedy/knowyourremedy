@@ -211,3 +211,4 @@ export { BATCH211_KYR6C_OSTEO_T105U } from './batch211-kyr6c-osteo-t105u';
 export { BATCH212_KYR6C_CAL_MF_CIT_T107U } from './batch212-kyr6c-cal-mf-cit-t107u';
 export { BATCH213_KYR6C_CAL_MF_T108U } from './batch213-kyr6c-cal-mf-t108u';
 export { BATCH214_KYR6C_MF_T109U } from './batch214-kyr6c-mf-t109u';
+export { BATCH215_KYR6C_SCHIFF_T111U } from './batch215-kyr6c-schiff-t111u';
