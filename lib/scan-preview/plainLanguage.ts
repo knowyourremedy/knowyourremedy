@@ -261,6 +261,26 @@ export function t120uLockSourceForKind(kind: 'naturalAppleFlavor'): string {
   return T120U_NATURAL_APPLE_FLAVOR_LOCK_SOURCE;
 }
 
+export const T121U_SPIRULINA_COLOR_LOCK_SOURCE =
+  'Methodology §5 Cleared (spirulina (color) — named spirulina color). Founder override Oct 18, 2026 t121u; distinct from Caution spirulina (for color).';
+
+export function isT121uSpirulinaColorLock(name: string): boolean {
+  const n = norm(name);
+  if (n.includes('extract') || n.includes('powder')) return false;
+  if (/\bfor color\b/.test(n)) return false;
+  if (/\bblue\b/.test(n)) return false;
+  return n === 'spirulina color';
+}
+
+export function t121uLockKind(name: string): 'spirulinaColor' | null {
+  if (isT121uSpirulinaColorLock(name)) return 'spirulinaColor';
+  return null;
+}
+
+export function t121uLockSourceForKind(kind: 'spirulinaColor'): string {
+  return T121U_SPIRULINA_COLOR_LOCK_SOURCE;
+}
+
 export function isT118uSucroseLock(name: string): boolean {
   return norm(name) === 'sucrose';
 }
