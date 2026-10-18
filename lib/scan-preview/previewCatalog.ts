@@ -223,7 +223,11 @@ import {
   HYDROGENATED_OIL_LOCK_SOURCE,
   isFruitVegetableJuiceLock,
   isHydrogenatedOilLock,
+  isT111uCoconutOilLock,
+  isT111uRiceBranLock,
   plainIngredientWhy,
+  T111U_COCONUT_OIL_LOCK_SOURCE,
+  T111U_RICE_BRAN_LOCK_SOURCE,
 } from '@/lib/scan-preview/plainLanguage';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
@@ -16750,6 +16754,8 @@ export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 // Grade restatements and inactive lists stay off, including founder-lock dumps.
 // The Oct 15 juice lock clears that token on screen. A pack moves to a cleaner
 // grade only when no other ingredient still holds it.
+// The Oct 17 t111u lock clears rice bran and named coconut oil on screen. A pack
+// moves to a cleaner grade only when no other ingredient still holds it.
 // The Oct 15 hydrogenated-oil lock raises those five oils to Not clean on screen.
 // A pack that was already Not clean stays. Batch files are not rewritten for it.
 // Trace disodium EDTA stays Cleared. A use level is not the condition rule.
@@ -16822,8 +16828,50 @@ function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
+function t111uLockSource(source: string | undefined, lockSource: string): string {
+  if (!source) return lockSource;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source}; ${lockSource}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${lockSource}` : lockSource;
+}
+
+function applyT111uLocks(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    const rice = isT111uRiceBranLock(ingredient.name);
+    const coconut = isT111uCoconutOilLock(ingredient.name);
+    if (!rice && !coconut) return ingredient;
+    const lockSource = rice ? T111U_RICE_BRAN_LOCK_SOURCE : T111U_COCONUT_OIL_LOCK_SOURCE;
+    if (
+      ingredient.riskLevel === 'cleared' &&
+      (ingredient.source ?? '').includes(lockSource)
+    ) {
+      return ingredient;
+    }
+    if (ingredient.riskLevel === 'cleared') return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'cleared' as const,
+      source: t111uLockSource(ingredient.source, lockSource),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'limited');
+  let next: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') next = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) next = 'caution';
+  const verdict = verdictRank(next) < verdictRank(record.verdict) ? next : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const locked = applyHydrogenatedOilLock(applyFruitVegetableJuiceLock(record));
+  const locked = applyHydrogenatedOilLock(
+    applyT111uLocks(applyFruitVegetableJuiceLock(record)),
+  );
   const honestNote = displayHonestNote(locked);
   const productImage = previewOverlayImage(locked);
   if (locked === record && honestNote === record.honestNote && !productImage) return record;
@@ -16842,6 +16890,13 @@ if (PREVIEW_USABLE.verdict !== 'caution') {
 }
 if (PREVIEW_AVOID.verdict !== 'avoid') {
   throw new Error('tums-ultra-fruit-dyed must stay verdict avoid');
+}
+
+{
+  const solarayCran = CATALOG.find((record) => record.id === 'solaray-b123-076280084245');
+  if (solarayCran && withPreviewHonestNote(solarayCran).verdict !== 'caution') {
+    throw new Error('solaray-b123-076280084245 must display caution after t111u lock');
+  }
 }
 
 function assertBrandMark(id: string, brand: string, file: string) {
