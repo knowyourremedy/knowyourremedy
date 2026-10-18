@@ -240,6 +240,8 @@ import {
   t118uLockSourceForKind,
   t120uLockKind,
   t120uLockSourceForKind,
+  t121uLockKind,
+  t121uLockSourceForKind,
   T111U_COCONUT_OIL_LOCK_SOURCE,
   T111U_RICE_BRAN_LOCK_SOURCE,
 } from '@/lib/scan-preview/plainLanguage';
@@ -17434,9 +17436,47 @@ export function applyT120uLocks(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
+function t121uLockSource(source: string | undefined, lockSource: string): string {
+  if (!source) return lockSource;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source}; ${lockSource}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${lockSource}` : lockSource;
+}
+
+export function applyT121uLocks(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    const kind = t121uLockKind(ingredient.name);
+    if (!kind) return ingredient;
+    const lockSource = t121uLockSourceForKind(kind);
+    if (ingredient.riskLevel === 'cleared' && (ingredient.source ?? '').includes('t121u')) {
+      return ingredient;
+    }
+    if (ingredient.riskLevel === 'cleared') return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'cleared' as const,
+      source: t121uLockSource(ingredient.source, lockSource),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'limited');
+  let next: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') next = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) next = 'caution';
+  const verdict = verdictRank(next) < verdictRank(record.verdict) ? next : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const locked = applyHydrogenatedOilLock(
-    applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
+    applyT121uLocks(
+      applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
+    ),
   );
   const honestNote = displayHonestNote(locked);
   const productImage = previewOverlayImage(locked);
@@ -17516,6 +17556,38 @@ if (PREVIEW_AVOID.verdict !== 'avoid') {
   const lollipops = CATALOG.find((record) => record.id === 'beekeepers-b169-lollipops-15');
   if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'caution') {
     throw new Error('beekeepers-b169-lollipops-15 must stay caution after t120u apple flavor lock (other flavor drivers)');
+  }
+}
+
+{
+  const spirulinaColorOnly: RatingRecord = {
+    id: 't121u-lock-fixture-spirulina',
+    productName: 'fixture',
+    brand: 'fixture',
+    category: 'Vitamins',
+    audience: 'adult',
+    minAge: 18,
+    form: 'tablet',
+    productType: 'OTC',
+    inactiveIngredients: [
+      {
+        name: 'spirulina (color)',
+        riskLevel: 'limited',
+        source: 'fixture; Methodology §5 Caution (spirulina for color family)',
+      },
+    ],
+    activeIngredients: [],
+    verdict: 'caution',
+    retailers: [],
+    cleanAlternatives: [],
+    sourcesGeneral: [],
+  };
+  if (applyT121uLocks(spirulinaColorOnly).verdict !== 'clean') {
+    throw new Error('t121u lock must clear spirulina (color) and drop verdict to clean when it is the only driver');
+  }
+  const matcha = CATALOG.find((record) => record.id === 'goli-b223-matcha-mind-60');
+  if (matcha && withPreviewHonestNote(matcha).verdict !== 'caution') {
+    throw new Error('goli-b223-matcha-mind-60 must stay caution (Spirulina Extract (Color), not spirulina (color))');
   }
 }
 
