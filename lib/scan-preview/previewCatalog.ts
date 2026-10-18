@@ -15839,6 +15839,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b120-076280320640': catalogShot('solaray-b120-076280320640.jpg'),
   // Vitamin E, D-alpha tocopherol 670 mg, 60 softgels. Not the sunflower 268 mg.
   'solaray-b120-076280042047': catalogShot('solaray-b120-076280042047.jpg'),
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 1.
+  // Exact brand-site fronts. Barcode in the filename matches the row.
+  // Sibling counts do not share a file.
+  // Lycopene 10 mg, 60 softgels.
+  'solaray-b120-076280041262': catalogShot('solaray-b120-076280041262.jpg'),
+  // Oregano oil 70% carvacrol, 57 mg, 60 softgels.
+  'solaray-b120-076280413496': catalogShot('solaray-b120-076280413496.jpg'),
+  // Inositol powder 700 mg, 4 oz. Not the 2 oz jar.
+  'solaray-b120-076280043563': catalogShot('solaray-b120-076280043563.jpg'),
+  // Vitamin C with rose hips and acerola 500 mg, 100 vegcaps.
+  'solaray-b120-076280043907': catalogShot('solaray-b120-076280043907.jpg'),
+  // Vitamin C and echinacea, 120 vegcaps. Not the 60.
+  'solaray-b120-076280043945': catalogShot('solaray-b120-076280043945.jpg'),
+  // Vitamin C with bioflavonoid complex 500 mg, 250 vegcaps. Not the 100.
+  'solaray-b120-076280044218': catalogShot('solaray-b120-076280044218.jpg'),
+  // Vitamin C and bioflavonoids 1:1 500 mg, 250 vegcaps. Not the 100.
+  'solaray-b120-076280044331': catalogShot('solaray-b120-076280044331.jpg'),
+  // Calcium and magnesium asporotate, 240 vegcaps. Not the 120.
+  'solaray-b120-076280045222': catalogShot('solaray-b120-076280045222.jpg'),
+  // Chromium picolinate 200 mcg, 50 vegcaps. Not the 100 or the 200.
+  'solaray-b120-076280045888': catalogShot('solaray-b120-076280045888.jpg'),
+  // Chromium picolinate 200 mcg, 100 vegcaps. Not the 50 or the 200.
+  'solaray-b120-076280045895': catalogShot('solaray-b120-076280045895.jpg'),
+  // Kelp seaweed 550 mg, 100 vegcaps. Not the 180.
+  'solaray-b120-076280013658': catalogShot('solaray-b120-076280013658.jpg'),
+  // L-theanine 200 mg, 45 vegcaps. Not the 90.
+  'solaray-b120-076280049923': catalogShot('solaray-b120-076280049923.jpg'),
+  // Turmeric root extract 300 mg, 120 vegcaps. Not the 60.
+  'solaray-b120-076280129281': catalogShot('solaray-b120-076280129281.jpg'),
+  // Horse chestnut seed extract 400 mg, 120 vegcaps. Not the 60.
+  'solaray-b120-076280366594': catalogShot('solaray-b120-076280366594.jpg'),
+  // L-5-HTP with vitamin B-6 and C, 100 mg, 30 vegcaps. Not the 60.
+  'solaray-b120-076280366679': catalogShot('solaray-b120-076280366679.jpg'),
+  // MSM and glucosamine, 90 vegcaps. Not the 180.
+  'solaray-b120-076280008524': catalogShot('solaray-b120-076280008524.jpg'),
+  // Bilberry extract 42 mg, 120 vegcaps. Not the 60.
+  'solaray-b120-076280031010': catalogShot('solaray-b120-076280031010.jpg'),
+  // Vitamin C with rose hips, acerola, and bioflavonoids 1000 mg, 250 vegcaps. Not the 100.
+  'solaray-b120-076280044416': catalogShot('solaray-b120-076280044416.jpg'),
+  // Grapefruit seed extract with zinc, beta glucan, and astragalus, 60 vegcaps.
+  'solaray-b120-076280085211': catalogShot('solaray-b120-076280085211.jpg'),
+  // Pomegranate fruit extract 200 mg, 60 vegcaps.
+  'solaray-b120-076280375909': catalogShot('solaray-b120-076280375909.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -15997,6 +16040,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b117-076280049046',
   // Bilberry extract 120-count is not the 60-count bottle.
   'solaray-b120-076280031010',
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 1.
+  // Chromium picolinate 100-count is not the 50-count bottle.
+  'solaray-b120-076280045895',
   // Vitamins night run 2026-10-17 4:15 AM PT batch 2.
   // Ginger root 180-count is not the 100-count bottle.
   'solaray-b117-076280013016',
@@ -33922,8 +33968,8 @@ assertBrandMark(
     formulaId: 'solaray-b120-076280366594',
     brand: 'Solaray',
   });
-  if (!chestnut60?.verifiedSku || chestnut60.url === chestnut120?.url || chestnut120?.verifiedSku) {
-    throw new Error('Horse chestnut 60 must not become the 120-count photo');
+  if (!chestnut60?.verifiedSku || !chestnut120?.verifiedSku || chestnut60.url === chestnut120.url) {
+    throw new Error('Horse chestnut 60 must not share the 120-count photo');
   }
 }
 
@@ -33994,8 +34040,8 @@ assertBrandMark(
     formulaId: 'solaray-b117-076280031003',
     brand: 'Solaray',
   });
-  if (!bilberry60?.verifiedSku || bilberry60.url === bilberry120?.url || bilberry120?.verifiedSku) {
-    throw new Error('Bilberry 60 must not become the 120-count photo');
+  if (!bilberry60?.verifiedSku || !bilberry120?.verifiedSku || bilberry60.url === bilberry120.url) {
+    throw new Error('Bilberry 60 must not share the 120-count photo');
   }
   const multi180 = previewOverlayImage({
     id: 'solaray-b117-076280048742',
@@ -34020,8 +34066,8 @@ assertBrandMark(
     formulaId: 'solaray-b120-076280044416',
     brand: 'Solaray',
   });
-  if (!vitaminC100?.verifiedSku || vitaminC100.url === vitaminC250?.url || vitaminC250?.verifiedSku) {
-    throw new Error('Vitamin C 100 must not become the 250-count photo');
+  if (!vitaminC100?.verifiedSku || !vitaminC250?.verifiedSku || vitaminC100.url === vitaminC250.url) {
+    throw new Error('Vitamin C 1000 mg 100 must not share the 250-count photo');
   }
 }
 
@@ -34397,6 +34443,104 @@ assertBrandMark(
     ],
   ];
   for (const group of groups) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 1:45 AM PT batch 1.
+  // Sibling counts keep their own fronts.
+  const batch145a: [string, string, string][] = [
+    ['solaray-b120-076280041262', 'Solaray', 'solaray-b120-076280041262.jpg'],
+    ['solaray-b120-076280413496', 'Solaray', 'solaray-b120-076280413496.jpg'],
+    ['solaray-b120-076280043563', 'Solaray', 'solaray-b120-076280043563.jpg'],
+    ['solaray-b120-076280043907', 'Solaray', 'solaray-b120-076280043907.jpg'],
+    ['solaray-b120-076280043945', 'Solaray', 'solaray-b120-076280043945.jpg'],
+    ['solaray-b120-076280044218', 'Solaray', 'solaray-b120-076280044218.jpg'],
+    ['solaray-b120-076280044331', 'Solaray', 'solaray-b120-076280044331.jpg'],
+    ['solaray-b120-076280045222', 'Solaray', 'solaray-b120-076280045222.jpg'],
+    ['solaray-b120-076280045888', 'Solaray', 'solaray-b120-076280045888.jpg'],
+    ['solaray-b120-076280045895', 'Solaray', 'solaray-b120-076280045895.jpg'],
+    ['solaray-b120-076280013658', 'Solaray', 'solaray-b120-076280013658.jpg'],
+    ['solaray-b120-076280049923', 'Solaray', 'solaray-b120-076280049923.jpg'],
+    ['solaray-b120-076280129281', 'Solaray', 'solaray-b120-076280129281.jpg'],
+    ['solaray-b120-076280366594', 'Solaray', 'solaray-b120-076280366594.jpg'],
+    ['solaray-b120-076280366679', 'Solaray', 'solaray-b120-076280366679.jpg'],
+    ['solaray-b120-076280008524', 'Solaray', 'solaray-b120-076280008524.jpg'],
+    ['solaray-b120-076280031010', 'Solaray', 'solaray-b120-076280031010.jpg'],
+    ['solaray-b120-076280044416', 'Solaray', 'solaray-b120-076280044416.jpg'],
+    ['solaray-b120-076280085211', 'Solaray', 'solaray-b120-076280085211.jpg'],
+    ['solaray-b120-076280375909', 'Solaray', 'solaray-b120-076280375909.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch145a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups145a: [string, string, string][][] = [
+    [
+      ['solaray-b120-076280045888', 'solaray-b120-076280045888', 'Solaray'],
+      ['solaray-b120-076280045895', 'solaray-b120-076280045888', 'Solaray'],
+      ['solaray-b117-076280458916', 'solaray-b117-076280458916', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280031003', 'solaray-b117-076280031003', 'Solaray'],
+      ['solaray-b120-076280031010', 'solaray-b117-076280031003', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280043938', 'solaray-b117-076280043938', 'Solaray'],
+      ['solaray-b120-076280043945', 'solaray-b120-076280043945', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280044201', 'solaray-b117-076280044201', 'Solaray'],
+      ['solaray-b120-076280044218', 'solaray-b120-076280044218', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280044324', 'solaray-b117-076280044324', 'Solaray'],
+      ['solaray-b120-076280044331', 'solaray-b120-076280044331', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280045215', 'solaray-b117-076280045215', 'Solaray'],
+      ['solaray-b120-076280045222', 'solaray-b120-076280045222', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280013658', 'solaray-b120-076280013658', 'Solaray'],
+      ['solaray-b117-076280136517', 'solaray-b117-076280136517', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280049923', 'solaray-b120-076280049923', 'Solaray'],
+      ['solaray-b117-076280131734', 'solaray-b117-076280131734', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280038002', 'solaray-b117-076280038002', 'Solaray'],
+      ['solaray-b120-076280129281', 'solaray-b120-076280129281', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280036664', 'solaray-b117-076280036664', 'Solaray'],
+      ['solaray-b120-076280366594', 'solaray-b120-076280366594', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280366679', 'solaray-b120-076280366679', 'Solaray'],
+      ['solaray-b117-076280366686', 'solaray-b117-076280366686', 'Solaray'],
+    ],
+    [
+      ['solaray-b120-076280008524', 'solaray-b120-076280008524', 'Solaray'],
+      ['solaray-b117-076280008562', 'solaray-b117-076280008562', 'Solaray'],
+    ],
+    [
+      ['solaray-b117-076280044409', 'solaray-b117-076280044409', 'Solaray'],
+      ['solaray-b120-076280044416', 'solaray-b120-076280044416', 'Solaray'],
+    ],
+  ];
+  for (const group of groups145a) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
