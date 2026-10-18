@@ -16103,6 +16103,51 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b123-076280191103': catalogShot('solaray-b123-076280191103.jpg'),
   // Organic garlic bulb 560 mg, 100 capsules.
   'solaray-b123-076280192858': catalogShot('solaray-b123-076280192858.jpg'),
+  // Vitamins night run 2026-10-18 5:30 AM PT batch 1.
+  // Exact brand-site fronts. Barcode on the face matches the row.
+  // Sibling counts do not share a file.
+  // Organic ginger root 1080 mg, 100 capsules.
+  'solaray-b123-076280193008': catalogShot('solaray-b123-076280193008.jpg'),
+  // Organic St. John's wort 900 mg, 100 capsules. Not the 60-count extract.
+  'solaray-b123-076280195538': catalogShot('solaray-b123-076280195538.jpg'),
+  // Garcinia cambogia fruit extract 500 mg, 60 vegcaps.
+  'solaray-b123-076280227703': catalogShot('solaray-b123-076280227703.jpg'),
+  // Okra fruit 1600 mg, 100 capsules.
+  'solaray-b123-076280238877': catalogShot('solaray-b123-076280238877.jpg'),
+  // Papaya enzyme, 90 vegan chewables. Not the 180.
+  'solaray-b123-076280265354': catalogShot('solaray-b123-076280265354.jpg'),
+  // Organic maca root 500 mg, 100 capsules.
+  'solaray-b123-076280276855': catalogShot('solaray-b123-076280276855.jpg'),
+  // Cold-pressed black seed 3% thymoquinone 500 mg, 60 softgels.
+  'solaray-b123-076280292572': catalogShot('solaray-b123-076280292572.jpg'),
+  // Methyl B-12 5000 mcg, lemon-raspberry, 60 lozenges.
+  'solaray-b123-076280293371': catalogShot('solaray-b123-076280293371.jpg'),
+  // Astaxanthin 4 mg, 60 softgels.
+  'solaray-b123-076280325966': catalogShot('solaray-b123-076280325966.jpg'),
+  // Vegan betaine HCL and pepsin, 90 vegcaps.
+  'solaray-b123-076280355888': catalogShot('solaray-b123-076280355888.jpg'),
+  // Jiaogulan root extract 820 mg, 60 vegcaps.
+  'solaray-b123-076280366730': catalogShot('solaray-b123-076280366730.jpg'),
+  // Rhodiola root extract 100 mg, 30 vegcaps. Not the 500 mg bottle.
+  'solaray-b123-076280376951': catalogShot('solaray-b123-076280376951.jpg'),
+  // St. John's wort extract, two daily, 900 mg, 60 vegcaps. Not the 100-count organic.
+  'solaray-b123-076280377644': catalogShot('solaray-b123-076280377644.jpg'),
+  // Bacopa leaf extract 100 mg, 60 capsules.
+  'solaray-b123-076280399042': catalogShot('solaray-b123-076280399042.jpg'),
+  // Forskohlii root extract 385 mg, 60 vegcaps.
+  'solaray-b123-076280399080': catalogShot('solaray-b123-076280399080.jpg'),
+  // Gymnema leaf extract 385 mg, 60 vegcaps.
+  'solaray-b123-076280399110': catalogShot('solaray-b123-076280399110.jpg'),
+  // Vitamin B-complex orange chewables, 50. Not the strawberry gummies.
+  'solaray-b123-076280406207': catalogShot('solaray-b123-076280406207.jpg'),
+  // Copper 2 mg, 100 vegcaps.
+  'solaray-b123-076280459319': catalogShot('solaray-b123-076280459319.jpg'),
+  // Papaya enzyme, 180 chewables. The brand-site face on this variant
+  // does not print 180 or barcode 076280462128. Do not glue the 90.
+  // Official Solaray wordmark. Not a letter.
+  'solaray-b123-076280462128': brandMark('solaray-mark.png'),
+  // Fermented Korean ginseng root 150 mg, 30 vegcaps.
+  'solaray-b123-076280464795': catalogShot('solaray-b123-076280464795.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -35172,6 +35217,79 @@ assertBrandMark(
       if (id === 'solaray-b123-076280633498') {
         if (!image?.url.startsWith('data:image/svg+xml')) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-18 5:30 AM PT batch 1.
+  // Papaya 90 does not share the 180. The 180 stays a mark.
+  // St. John's wort 100 does not share the two-daily 60.
+  // Rhodiola 100 mg does not share the 500 mg bottle.
+  const batch530a: [string, string, string][] = [
+    ['solaray-b123-076280193008', 'Solaray', 'solaray-b123-076280193008.jpg'],
+    ['solaray-b123-076280195538', 'Solaray', 'solaray-b123-076280195538.jpg'],
+    ['solaray-b123-076280227703', 'Solaray', 'solaray-b123-076280227703.jpg'],
+    ['solaray-b123-076280238877', 'Solaray', 'solaray-b123-076280238877.jpg'],
+    ['solaray-b123-076280265354', 'Solaray', 'solaray-b123-076280265354.jpg'],
+    ['solaray-b123-076280276855', 'Solaray', 'solaray-b123-076280276855.jpg'],
+    ['solaray-b123-076280292572', 'Solaray', 'solaray-b123-076280292572.jpg'],
+    ['solaray-b123-076280293371', 'Solaray', 'solaray-b123-076280293371.jpg'],
+    ['solaray-b123-076280325966', 'Solaray', 'solaray-b123-076280325966.jpg'],
+    ['solaray-b123-076280355888', 'Solaray', 'solaray-b123-076280355888.jpg'],
+    ['solaray-b123-076280366730', 'Solaray', 'solaray-b123-076280366730.jpg'],
+    ['solaray-b123-076280376951', 'Solaray', 'solaray-b123-076280376951.jpg'],
+    ['solaray-b123-076280377644', 'Solaray', 'solaray-b123-076280377644.jpg'],
+    ['solaray-b123-076280399042', 'Solaray', 'solaray-b123-076280399042.jpg'],
+    ['solaray-b123-076280399080', 'Solaray', 'solaray-b123-076280399080.jpg'],
+    ['solaray-b123-076280399110', 'Solaray', 'solaray-b123-076280399110.jpg'],
+    ['solaray-b123-076280406207', 'Solaray', 'solaray-b123-076280406207.jpg'],
+    ['solaray-b123-076280459319', 'Solaray', 'solaray-b123-076280459319.jpg'],
+    ['solaray-b123-076280464795', 'Solaray', 'solaray-b123-076280464795.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch530a) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b123-076280462128', 'Solaray', 'solaray-mark.png');
+  const groups530a: [string, string, string][][] = [
+    [
+      ['solaray-b123-076280265354', 'solaray-b123-076280265354', 'Solaray'],
+      ['solaray-b123-076280462128', 'solaray-b123-076280265354', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280195538', 'solaray-b123-076280195538', 'Solaray'],
+      ['solaray-b123-076280377644', 'solaray-b123-076280377644', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280376951', 'solaray-b123-076280376951', 'Solaray'],
+      ['solaray-b123-076280111071', 'solaray-b123-076280111071', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280406207', 'solaray-b123-076280406207', 'Solaray'],
+      ['solaray-b123-076280042658', 'solaray-b123-076280042658', 'Solaray'],
+    ],
+  ];
+  for (const group of groups530a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (id === 'solaray-b123-076280462128') {
+        if (!image?.url.endsWith('/solaray-mark.png') || image.verifiedSku) {
+          throw new Error(`${id} keeps the Solaray mark`);
         }
         continue;
       }
