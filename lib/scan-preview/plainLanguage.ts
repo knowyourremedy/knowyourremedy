@@ -88,7 +88,6 @@ function seedOilLabel(name: string): string | null {
     return null;
   }
   if (/fractionated coconut/.test(n)) return 'fractionated coconut oil';
-  if (/coconut oil/.test(n)) return 'coconut oil';
   if (/sunflower/.test(n) && /\boil\b/.test(n)) return 'sunflower oil';
   if (/safflower/.test(n) && /\boil\b/.test(n)) return 'safflower oil';
   if (/soybean oil|\bsoy oil\b/.test(n)) return 'soybean oil';
@@ -144,7 +143,7 @@ export function contradictionHonestNote(record: RatingRecord): string | null {
     const rest = labels.filter((label) => label !== 'fractionated coconut oil');
     if (fractionated) {
       sentences.push(
-        'Coconut oil is Not clean when it is the base of a gummy. That is the form this app flags. This label lists fractionated coconut oil. That form is not the coconut oil in a gummy you chew, so it did not pull this grade down.',
+        'This is coconut oil, a named oil. It is Cleared in a gummy and in a capsule. This label lists fractionated coconut oil. That form is not the seed or vegetable oil this app flags in a gummy, so it did not pull this grade down.',
       );
     }
     if (rest.length > 0) {
@@ -209,6 +208,27 @@ export const FRUIT_VEGETABLE_JUICE_LOCK_SOURCE =
 export const HYDROGENATED_OIL_LOCK_SOURCE =
   'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.';
 
+export const T111U_RICE_BRAN_LOCK_SOURCE =
+  'Methodology §5 Cleared (organic rice bran / rice bran, unspecified bran). Founder override Oct 17, 2026 t111u; was Caution Sept 23, 2026.';
+
+export const T111U_COCONUT_OIL_LOCK_SOURCE =
+  'Methodology §5 Cleared (coconut oil, named, any form). Founder override Oct 17, 2026 t111u; the Sept 25, 2026 gummy-Avoid restamp is struck. Hydrogenated coconut oil stays Avoid.';
+
+export function isT111uRiceBranLock(name: string): boolean {
+  const n = norm(name);
+  if (/extract|concentrate|\boil\b|wax|flour|protein/.test(n)) return false;
+  return /^(organic )?rice br(a|ai)n$/.test(n);
+}
+
+export function isT111uCoconutOilLock(name: string): boolean {
+  const n = norm(name);
+  if (/hydrogenated|canola|palm|soy|sunflower|safflower|mct|medium chain|triglycer|caprylic|fractionated/.test(n)) {
+    return false;
+  }
+  if (/cocos nucifera/.test(n) && /\boil\b/.test(n)) return true;
+  return /\bcoconut\b/.test(n) && /\boil\b/.test(n);
+}
+
 const HYDROGENATED_OIL_WHY =
   'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
 
@@ -238,6 +258,7 @@ export function isFruitVegetableJuiceLock(name: string): boolean {
   if (/annatto|bixin|norbixin/.test(n)) return false;
   if (/\bextract\b/.test(n) && !/juice|puree/.test(n)) return false;
   if (/juice|puree/.test(n)) return true;
+  if (/colou?rs? (added )?\(?from fruits? and vegetables?/.test(n)) return true;
   const fruit =
     /fruit|vegetable|carrot|cranberry|blueberry|raspberry|orange|lemon|grapefruit|apple|\bberry\b|grape|beet|cherry|elderberry|maqui|mango|peach|strawberry|blackberry|acerola|pomegranate|tomato/;
   return fruit.test(n) && /concentrate|powder/.test(n);
@@ -355,12 +376,33 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/blend of oils/.test(n) && /coconut|palm/.test(n)) {
-    return 'This blend can be coconut oil, palm oil, or both. Those oils are Not clean when they are the base of a gummy. That is the form this app flags. That is why it is ' + riskWord(level) + '.';
+    return 'This blend can be coconut oil, palm oil, or both. Palm oil is Not clean when it is the base of a gummy. That is the form this app flags. That is why it is ' + riskWord(level) + '.';
+  }
+
+  if (isT111uCoconutOilLock(ingredient.name)) {
+    return close(
+      'This is coconut oil, a named oil. It is not the seed or vegetable oil this app flags in a gummy.',
+      level,
+    );
+  }
+
+  if (isT111uRiceBranLock(ingredient.name)) {
+    return close(
+      'This is rice bran, a named rice-plant fiber used as a filler or flow agent. It is not the vague rice extract that leaves the form unnamed.',
+      level,
+    );
+  }
+
+  if (/boron glycinate/.test(n)) {
+    return close(
+      'Boron glycinate is a boron mineral salt. Sources call boron safe within a daily upper limit, and this app cannot check your total intake.',
+      level,
+    );
   }
 
   if (oil) {
     if (oil === 'fractionated coconut oil') {
-      return 'Coconut oil is Not clean when it is the base of a gummy. That is the form this app flags. Fractionated coconut oil is not that gummy oil, so it did not pull this grade down.';
+      return 'This is coconut oil, a named oil. It is Cleared in a gummy and in a capsule. Fractionated coconut oil is not the seed or vegetable oil this app flags in a gummy, so it did not pull this grade down.';
     }
     if (level === 'high') {
       if (oil === 'vegetable oil') {
