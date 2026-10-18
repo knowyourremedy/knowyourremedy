@@ -237,6 +237,8 @@ import {
   plainIngredientWhy,
   t118uLockKind,
   t118uLockSourceForKind,
+  t120uLockKind,
+  t120uLockSourceForKind,
   T111U_COCONUT_OIL_LOCK_SOURCE,
   T111U_RICE_BRAN_LOCK_SOURCE,
 } from '@/lib/scan-preview/plainLanguage';
@@ -17394,9 +17396,45 @@ export function applyT118uLocks(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
+function t120uLockSource(source: string | undefined, lockSource: string): string {
+  if (!source) return lockSource;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source}; ${lockSource}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${lockSource}` : lockSource;
+}
+
+export function applyT120uLocks(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    const kind = t120uLockKind(ingredient.name);
+    if (!kind) return ingredient;
+    const lockSource = t120uLockSourceForKind(kind);
+    if (ingredient.riskLevel === 'cleared' && (ingredient.source ?? '').includes('t120u')) {
+      return ingredient;
+    }
+    if (ingredient.riskLevel === 'cleared') return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'cleared' as const,
+      source: t120uLockSource(ingredient.source, lockSource),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'limited');
+  let next: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') next = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) next = 'caution';
+  const verdict = verdictRank(next) < verdictRank(record.verdict) ? next : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const locked = applyHydrogenatedOilLock(
-    applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record))),
+    applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
   );
   const honestNote = displayHonestNote(locked);
   const productImage = previewOverlayImage(locked);
@@ -17448,6 +17486,34 @@ if (PREVIEW_AVOID.verdict !== 'avoid') {
   const pluscbd = CATALOG.find((record) => record.id === 'pluscbd-mens-performance-ignite');
   if (pluscbd && withPreviewHonestNote(pluscbd).verdict !== 'clean') {
     throw new Error('pluscbd-mens-performance-ignite must display clean after t118u MCT oil lock');
+  }
+}
+
+{
+  const appleOnly: RatingRecord = {
+    id: 't120u-lock-fixture-apple',
+    productName: 'fixture',
+    brand: 'fixture',
+    category: 'Vitamins',
+    audience: 'adult',
+    minAge: 18,
+    form: 'tablet',
+    productType: 'OTC',
+    inactiveIngredients: [
+      { name: 'Natural apple flavor', riskLevel: 'limited', source: 'fixture; Methodology §5 Caution (flavor)' },
+    ],
+    activeIngredients: [],
+    verdict: 'caution',
+    retailers: [],
+    cleanAlternatives: [],
+    sourcesGeneral: [],
+  };
+  if (applyT120uLocks(appleOnly).verdict !== 'clean') {
+    throw new Error('t120u lock must clear Natural apple flavor and drop verdict to clean when it is the only driver');
+  }
+  const lollipops = CATALOG.find((record) => record.id === 'beekeepers-b169-lollipops-15');
+  if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'caution') {
+    throw new Error('beekeepers-b169-lollipops-15 must stay caution after t120u apple flavor lock (other flavor drivers)');
   }
 }
 
