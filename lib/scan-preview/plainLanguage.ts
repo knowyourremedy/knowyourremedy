@@ -229,6 +229,71 @@ export function isT111uCoconutOilLock(name: string): boolean {
   return /\bcoconut\b/.test(n) && /\boil\b/.test(n);
 }
 
+export const T118U_SUCROSE_LOCK_SOURCE =
+  'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.';
+
+export const T118U_MCT_OIL_LOCK_SOURCE =
+  'Methodology §5 Cleared (MCT oil — named capsule / softgel / tablet coating or fill). Founder override Oct 17, 2026 t118u; distinct from Limited unlabeled MCT.';
+
+export const T118U_POMEGRANATE_POWDER_LOCK_SOURCE =
+  'Methodology §5 Cleared (pomegranate powder / Pomegranate Powder). Founder override Oct 17, 2026 t118u; fruit-powder rule.';
+
+export const T118U_DL_ALPHA_TOCOPHEROL_LOCK_SOURCE =
+  'Methodology §5 Cleared (DL-Alpha Tocopherol / DL alpha tocopherol — mixed-tocopherols row). Founder override Oct 17, 2026 t118u.';
+
+export const T118U_D_ALPHA_TOCOPHERYL_ACETATE_LOCK_SOURCE =
+  'Methodology §5 Cleared (d-alpha Tocopheryl Acetate — DL-alpha tocopheryl acetate row). Founder override Oct 17, 2026 t118u.';
+
+export function isT118uSucroseLock(name: string): boolean {
+  return norm(name) === 'sucrose';
+}
+
+/** Exact panel token `MCT oil` only — not coconut MCT, not medium chain triglycerides alone. */
+export function isT118uMctOilLock(name: string): boolean {
+  return norm(name) === 'mct oil';
+}
+
+export function isT118uPomegranatePowderLock(name: string): boolean {
+  return norm(name) === 'pomegranate powder';
+}
+
+export function isT118uDlAlphaTocopherolLock(name: string): boolean {
+  const n = norm(name);
+  if (/acetate|tocopheryl/.test(n)) return false;
+  return n === 'dl alpha tocopherol';
+}
+
+export function isT118uDAlphaTocopherylAcetateLock(name: string): boolean {
+  const n = norm(name);
+  return n === 'd alpha tocopheryl acetate' || n === 'dl alpha tocopheryl acetate';
+}
+
+export function t118uLockKind(name: string): 'sucrose' | 'mctOil' | 'pomegranate' | 'dlTocopherol' | 'dTocopherylAcetate' | null {
+  if (isT118uSucroseLock(name)) return 'sucrose';
+  if (isT118uMctOilLock(name)) return 'mctOil';
+  if (isT118uPomegranatePowderLock(name)) return 'pomegranate';
+  if (isT118uDlAlphaTocopherolLock(name)) return 'dlTocopherol';
+  if (isT118uDAlphaTocopherylAcetateLock(name)) return 'dTocopherylAcetate';
+  return null;
+}
+
+export function t118uLockSourceForKind(
+  kind: 'sucrose' | 'mctOil' | 'pomegranate' | 'dlTocopherol' | 'dTocopherylAcetate',
+): string {
+  switch (kind) {
+    case 'sucrose':
+      return T118U_SUCROSE_LOCK_SOURCE;
+    case 'mctOil':
+      return T118U_MCT_OIL_LOCK_SOURCE;
+    case 'pomegranate':
+      return T118U_POMEGRANATE_POWDER_LOCK_SOURCE;
+    case 'dlTocopherol':
+      return T118U_DL_ALPHA_TOCOPHEROL_LOCK_SOURCE;
+    case 'dTocopherylAcetate':
+      return T118U_D_ALPHA_TOCOPHERYL_ACETATE_LOCK_SOURCE;
+  }
+}
+
 const HYDROGENATED_OIL_WHY =
   'The panel says hydrogenated. It does not say partial or fully. Partial is the form the agencies banned, because it is the trans-fat source. This app cannot tell which form is in the box, so the grade goes to the harder one. That is why it is High risk.';
 

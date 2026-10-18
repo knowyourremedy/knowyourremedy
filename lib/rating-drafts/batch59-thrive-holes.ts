@@ -112,6 +112,7 @@ const METH = {
   alcohol: `Methodology §5 Limited-risk (alcohol / ethyl alcohol / grain alcohol as a VEHICLE — Limited, not Avoid). ${ALCOHOL_TAP}`,
   mctUnlabeled: `Methodology §5 Limited-risk (unlabeled MCT — coconut vs other source not named; opacity; not Avoid). ${MCT_UNLABELED_TAP}`,
   mctCoconut: `Methodology §5 Cleared (MCT oil labeled coconut — oral capsule/softgel/liquid/gummy fill; not a cooking-oil bottle). ${MCT_COCONUT_TAP}`,
+  mctOil: `Methodology §5 Cleared (MCT oil — exact token as capsule / softgel fill). Founder override Oct 17, 2026 t118u. Distinct from Limited unlabeled MCT. ${MCT_COCONUT_TAP}`,
   mcgPalm: `Methodology §5 Cleared (Medium Chain Glycerides (Modified Coconut, Palm Oil) as capsule/softgel/drop fill — exact token; NOT gummy High; locked Sept 16, 2026). ${OIL_FILL_TAP}`,
   benzoate:
     'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate)',
@@ -2683,11 +2684,11 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       f(CITE.pluscbd_mens_performance_ignite, 'Softgel shell (gelatin, glycerin, purified water)', 'cleared', METH.gelatin),
-      f(CITE.pluscbd_mens_performance_ignite, 'MCT oil', 'limited', METH.mctUnlabeled),
+      f(CITE.pluscbd_mens_performance_ignite, 'MCT oil', 'cleared', METH.mctOil),
       f(CITE.pluscbd_mens_performance_ignite, 'Beeswax', 'cleared', METH.beeswax),
       f(CITE.pluscbd_mens_performance_ignite, 'Sunflower lecithin', 'cleared', METH.lecithin),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'PlusCBD'],
     cleanAlternatives: [
@@ -6924,8 +6925,8 @@ export const BATCH59_MISSING_UPCS = [
 
 const _ROWS = BATCH59_THRIVE_HOLES;
 if (_ROWS.length !== 241) throw new Error('batch59 tally drift: expected 241 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 108) throw new Error('batch59 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 113) throw new Error('batch59 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 110) throw new Error('batch59 Clean tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 111) throw new Error('batch59 Caution tally drift');
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 20) throw new Error('batch59 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch59 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch59 every row needs formulaId');
