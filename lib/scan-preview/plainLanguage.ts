@@ -244,6 +244,23 @@ export const T118U_DL_ALPHA_TOCOPHEROL_LOCK_SOURCE =
 export const T118U_D_ALPHA_TOCOPHERYL_ACETATE_LOCK_SOURCE =
   'Methodology §5 Cleared (d-alpha Tocopheryl Acetate — DL-alpha tocopheryl acetate row). Founder override Oct 17, 2026 t118u.';
 
+export const T120U_NATURAL_APPLE_FLAVOR_LOCK_SOURCE =
+  'Methodology §5 Cleared (Natural Apple Flavor / natural apple flavor — named apple flavor). Founder override Oct 18, 2026 t120u; strikes flavor-row Caution mapping.';
+
+export function isT120uNaturalAppleFlavorLock(name: string): boolean {
+  return norm(name) === 'natural apple flavor';
+}
+
+export function t120uLockKind(name: string): 'naturalAppleFlavor' | null {
+  if (isT120uNaturalAppleFlavorLock(name)) return 'naturalAppleFlavor';
+  return null;
+}
+
+export function t120uLockSourceForKind(kind: 'naturalAppleFlavor'): string {
+  if (kind === 'naturalAppleFlavor') return T120U_NATURAL_APPLE_FLAVOR_LOCK_SOURCE;
+  return T120U_NATURAL_APPLE_FLAVOR_LOCK_SOURCE;
+}
+
 export function isT118uSucroseLock(name: string): boolean {
   return norm(name) === 'sucrose';
 }
@@ -704,6 +721,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (n === 'natural apple flavor') {
+    if (level === 'cleared') {
+      return close(
+        'This flavor names apple. It is not a hidden flavor blend. Named apple flavor is Cleared under the t120u founder lock.',
+        level,
+      );
+    }
     return namedFlavorWhy('apple', level);
   }
 
