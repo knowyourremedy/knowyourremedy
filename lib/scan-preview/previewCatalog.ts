@@ -2866,6 +2866,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Brand-site photos are 20 and 80. The Target 120 image is a flat
   // label with no visible count. Do not glue the 80.
   'motrin-b184-ib-gel-120': brandMark('motrin-mark.png'),
+  // Vitamins night run 2026-10-19 5:30 AM PT batch 1.
+  // Official Solaray wordmark already on disk. Not a text tile. Not a letter.
+  // Cal-mag citrate with D-2 named 1:3, 180 vegcaps. The brand-site bottle
+  // for SKU 076280228786 prints 1:1, and the facts panel is 1,000 mg
+  // calcium and 1,000 mg magnesium. Do not glue the 1:1 bottle.
+  'solaray-b128-076280228786': brandMark('solaray-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16559,6 +16565,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b128-076280046007': catalogShot('solaray-b128-076280046007.jpg'),
   // Magnesium asporotate 400 mg, 60 vegcaps. Not the 120 or 180.
   'solaray-b128-076280046205': catalogShot('solaray-b128-076280046205.jpg'),
+  // Vitamins night run 2026-10-19 5:30 AM PT batch 1.
+  // Exact brand-site fronts. Sibling counts and strengths do not share a file.
+  // Magnesium asporotate 400 mg, 120 vegcaps. Not the 60 or 180.
+  'solaray-b128-076280046212': catalogShot('solaray-b128-076280046212.jpg'),
+  // Magnesium amino acid chelate 200 mg, 100 vegcaps.
+  'solaray-b128-076280046304': catalogShot('solaray-b128-076280046304.jpg'),
+  // Manganese 50 mg, 100 vegcaps.
+  'solaray-b128-076280046502': catalogShot('solaray-b128-076280046502.jpg'),
+  // Potassium asporotate 99 mg, 100 vegcaps. Not the 200.
+  'solaray-b128-076280046601': catalogShot('solaray-b128-076280046601.jpg'),
+  // Potassium 99 mg, 100 vegcaps. Not the 200.
+  'solaray-b128-076280046700': catalogShot('solaray-b128-076280046700.jpg'),
+  // Spectro multivitamin, 100 capsules. Not the 250 or 360.
+  'solaray-b128-076280047813': catalogShot('solaray-b128-076280047813.jpg'),
+  // Spectro multivitamin, 250 capsules. Not the 100 or 360.
+  'solaray-b128-076280047820': catalogShot('solaray-b128-076280047820.jpg'),
+  // Spectro multivitamin, 360 capsules. Not the 100 or 250.
+  'solaray-b128-076280047837': catalogShot('solaray-b128-076280047837.jpg'),
+  // Spectro multivitamin, iron-free, 250 capsules. Not the 360.
+  'solaray-b128-076280047851': catalogShot('solaray-b128-076280047851.jpg'),
+  // Hair Nutrients, 60 vegcaps. Not the 120.
+  'solaray-b128-076280047905': catalogShot('solaray-b128-076280047905.jpg'),
+  // Adrenal Caps, 60 vegcaps.
+  'solaray-b128-076280051001': catalogShot('solaray-b128-076280051001.jpg'),
+  // Resveratrol, Japanese knotweed 75 mg, 60 vegcaps.
+  'solaray-b128-076280103489': catalogShot('solaray-b128-076280103489.jpg'),
+  // Biocitrate potassium 99 mg, 60 vegcaps.
+  'solaray-b128-076280121094': catalogShot('solaray-b128-076280121094.jpg'),
+  // Cal-mag citrate with vitamin D-2, 2:1, 360 vegcaps. Not the 180.
+  'solaray-b128-076280131758': catalogShot('solaray-b128-076280131758.jpg'),
+  // Calcium citrate with vitamin D-3 1000 mg, 240 capsules. Not the 90 or 180.
+  'solaray-b128-076280131765': catalogShot('solaray-b128-076280131765.jpg'),
+  // Magnesium asporotate 400 mg, 180 vegcaps. Not the 60 or 120.
+  'solaray-b128-076280132236': catalogShot('solaray-b128-076280132236.jpg'),
+  // ProSorb turmeric 29x 500 mg, 30 vegcaps.
+  'solaray-b128-076280229639': catalogShot('solaray-b128-076280229639.jpg'),
+  // Her Life Stages Libido, 60 vegcaps.
+  'solaray-b128-076280360448': catalogShot('solaray-b128-076280360448.jpg'),
+  // Calcium citrate with vitamin D-3 1000 mg, 180 capsules. Not the 90 or 240.
+  'solaray-b128-076280458350': catalogShot('solaray-b128-076280458350.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17536,13 +17582,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'solaray-b128-076280045147',
   // Cal-mag-zinc 250 is not the 100. Own carton.
   'solaray-b128-076280045611',
-  // Cal-mag citrate with D-2, 2:1, 360 is not the 180. Stays a letter.
+  // Cal-mag citrate with D-2, 2:1, 360 is not the 180. Own carton.
   'solaray-b128-076280131758',
-  // Calcium citrate with D-3 180 and 240 are not the 90. Stay letters.
+  // Calcium citrate with D-3 180 and 240 are not the 90. 180 and the
+  // other 240 have their own cartons. The plain 240 stays a letter.
   'solaray-b128-076280458350',
   'solaray-b128-076280131765',
   // Calcium citrate 1000 mg 240 is not the 120. Stays a letter.
   'solaray-b128-076280458527',
+  // Vitamins night run 2026-10-19 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Spectro 250 and 360 are not the 100. Own cartons.
+  'solaray-b128-076280047820',
+  'solaray-b128-076280047837',
+  // Magnesium asporotate 180 is not the 120. Own carton.
+  'solaray-b128-076280132236',
 ]);
 
 export function previewOverlayImage(
@@ -36599,13 +36653,8 @@ assertBrandMark(
     ],
   ];
   const letterUntilAttempted = new Set([
-    'solaray-b128-076280131758',
-    'solaray-b128-076280458350',
-    'solaray-b128-076280131765',
     'solaray-b128-076280458527',
     'solaray-b129-076280045307',
-    'solaray-b128-076280046212',
-    'solaray-b128-076280132236',
   ]);
   for (const group of groups1019f) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -36619,6 +36668,97 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (letterUntilAttempted.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-19 5:30 AM PT batch 1.
+  // Sibling counts keep their own fronts. Unattempted counts stay letters.
+  const batch1019g: [string, string, string][] = [
+    ['solaray-b128-076280046212', 'Solaray', 'solaray-b128-076280046212.jpg'],
+    ['solaray-b128-076280046304', 'Solaray', 'solaray-b128-076280046304.jpg'],
+    ['solaray-b128-076280046502', 'Solaray', 'solaray-b128-076280046502.jpg'],
+    ['solaray-b128-076280046601', 'Solaray', 'solaray-b128-076280046601.jpg'],
+    ['solaray-b128-076280046700', 'Solaray', 'solaray-b128-076280046700.jpg'],
+    ['solaray-b128-076280047813', 'Solaray', 'solaray-b128-076280047813.jpg'],
+    ['solaray-b128-076280047820', 'Solaray', 'solaray-b128-076280047820.jpg'],
+    ['solaray-b128-076280047837', 'Solaray', 'solaray-b128-076280047837.jpg'],
+    ['solaray-b128-076280047851', 'Solaray', 'solaray-b128-076280047851.jpg'],
+    ['solaray-b128-076280047905', 'Solaray', 'solaray-b128-076280047905.jpg'],
+    ['solaray-b128-076280051001', 'Solaray', 'solaray-b128-076280051001.jpg'],
+    ['solaray-b128-076280103489', 'Solaray', 'solaray-b128-076280103489.jpg'],
+    ['solaray-b128-076280121094', 'Solaray', 'solaray-b128-076280121094.jpg'],
+    ['solaray-b128-076280131758', 'Solaray', 'solaray-b128-076280131758.jpg'],
+    ['solaray-b128-076280131765', 'Solaray', 'solaray-b128-076280131765.jpg'],
+    ['solaray-b128-076280132236', 'Solaray', 'solaray-b128-076280132236.jpg'],
+    ['solaray-b128-076280229639', 'Solaray', 'solaray-b128-076280229639.jpg'],
+    ['solaray-b128-076280360448', 'Solaray', 'solaray-b128-076280360448.jpg'],
+    ['solaray-b128-076280458350', 'Solaray', 'solaray-b128-076280458350.jpg'],
+  ];
+  const seenG = new Set<string>();
+  for (const [id, brand, file] of batch1019g) {
+    if (seenG.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seenG.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b128-076280228786', 'Solaray', 'solaray-mark.png');
+  const groups1019g: [string, string, string][][] = [
+    [
+      ['solaray-b128-076280046205', 'solaray-b128-076280046205', 'Solaray'],
+      ['solaray-b128-076280046212', 'solaray-b128-076280046212', 'Solaray'],
+      ['solaray-b128-076280132236', 'solaray-b128-076280046212', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280047813', 'solaray-b128-076280047813', 'Solaray'],
+      ['solaray-b128-076280047820', 'solaray-b128-076280047813', 'Solaray'],
+      ['solaray-b128-076280047837', 'solaray-b128-076280047813', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280047851', 'solaray-b128-076280047851', 'Solaray'],
+      ['solaray-b128-076280478556', 'solaray-b128-076280478556', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280047905', 'solaray-b128-076280047905', 'Solaray'],
+      ['solaray-b129-076280047912', 'solaray-b129-076280047912', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280046601', 'solaray-b128-076280046601', 'Solaray'],
+      ['solaray-b129-076280046618', 'solaray-b129-076280046618', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280045277', 'solaray-b128-076280045277', 'Solaray'],
+      ['solaray-b128-076280131758', 'solaray-b128-076280045277', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280045833', 'solaray-b128-076280045833', 'Solaray'],
+      ['solaray-b128-076280458350', 'solaray-b128-076280045833', 'Solaray'],
+      ['solaray-b128-076280131765', 'solaray-b128-076280045833', 'Solaray'],
+    ],
+  ];
+  const letterUntilAttemptedG = new Set([
+    'solaray-b128-076280478556',
+    'solaray-b129-076280047912',
+    'solaray-b129-076280046618',
+  ]);
+  for (const group of groups1019g) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedG.has(id)) {
         if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
