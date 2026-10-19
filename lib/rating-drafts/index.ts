@@ -236,3 +236,4 @@ export { BATCH236_KYR6C_T131U_SV } from './batch236-kyr6c-t131u-sv';
 export { BATCH237_KYR6C_T131U_SV } from './batch237-kyr6c-t131u-sv';
 export { BATCH238_KYR6C_T131U_SV } from './batch238-kyr6c-t131u-sv';
 export { BATCH239_KYR6C_T131U_SV } from './batch239-kyr6c-t131u-sv';
+export { BATCH240_KYR6C_T131U_SV } from './batch240-kyr6c-t131u-sv';
