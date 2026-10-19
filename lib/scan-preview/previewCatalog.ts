@@ -16349,6 +16349,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b126-076280008401': catalogShot('solaray-b126-076280008401.jpg'),
   // Cranactin 400 mg, 120 vegcaps. Not the 60 or 180.
   'solaray-b126-076280008418': catalogShot('solaray-b126-076280008418.jpg'),
+  // Vitamins night run 2026-10-19 1:45 AM PT batch 2.
+  // Exact brand-site fronts. Sibling counts do not share a file.
+  // Hawthorn berry 1050 mg, 100 vegcaps. Not the 180.
+  'solaray-b126-076280013405': catalogShot('solaray-b126-076280013405.jpg'),
+  // Hawthorn berry 1050 mg, 180 vegcaps. Not the 100.
+  'solaray-b126-076280013412': catalogShot('solaray-b126-076280013412.jpg'),
+  // Circulation Blend SP-11B, 100 vegcaps.
+  'solaray-b126-076280021158': catalogShot('solaray-b126-076280021158.jpg'),
+  // Nerve Blend SP-14, 100 vegcaps.
+  'solaray-b126-076280021400': catalogShot('solaray-b126-076280021400.jpg'),
+  // Sleep Blend SP-17, 100 vegcaps.
+  'solaray-b126-076280021707': catalogShot('solaray-b126-076280021707.jpg'),
+  // Thyroid Blend SP-31, 100 vegcaps.
+  'solaray-b126-076280022605': catalogShot('solaray-b126-076280022605.jpg'),
+  // Memory Blend SP-30, 100 vegcaps.
+  'solaray-b126-076280023008': catalogShot('solaray-b126-076280023008.jpg'),
+  // Female Hormone Blend SP-7C, 180 vegcaps. Not the 100.
+  'solaray-b126-076280027617': catalogShot('solaray-b126-076280027617.jpg'),
+  // Arabinogalactan larch tree extract 300 mg, 60 vegcaps.
+  'solaray-b126-076280030204': catalogShot('solaray-b126-076280030204.jpg'),
+  // Asparagus rhizome extract 175 mg, 60 vegcaps.
+  'solaray-b126-076280030693': catalogShot('solaray-b126-076280030693.jpg'),
+  // Guggul extract and red yeast rice, 60 vegcaps. Not the 120.
+  'solaray-b126-076280036596': catalogShot('solaray-b126-076280036596.jpg'),
+  // Saw palmetto and pygeum with zinc, 120 vegcaps.
+  'solaray-b126-076280037685': catalogShot('solaray-b126-076280037685.jpg'),
+  // Pygeum and saw palmetto with CranActin, 90 vegcaps. Not the zinc bottle.
+  'solaray-b126-076280037692': catalogShot('solaray-b126-076280037692.jpg'),
+  // Vitamin B-Stress PM, 120 capsules.
+  'solaray-b126-076280042313': catalogShot('solaray-b126-076280042313.jpg'),
+  // Mega vitamin B-Stress timed-release, 120 vegcaps. Not the 60 or 240.
+  'solaray-b126-076280042412': catalogShot('solaray-b126-076280042412.jpg'),
+  // Vitamin B-complex 75 timed-release, 100 vegcaps.
+  'solaray-b126-076280042917': catalogShot('solaray-b126-076280042917.jpg'),
+  // Niacin no-flush 500 mg, 100 vegcaps.
+  'solaray-b126-076280043648': catalogShot('solaray-b126-076280043648.jpg'),
+  // Vitamin C 800 mg buffered, 90 vegcaps.
+  'solaray-b126-076280043853': catalogShot('solaray-b126-076280043853.jpg'),
+  // Super Bio vitamin C 1000 mg, 100 vegcaps. Not the 60, 250, or 360.
+  'solaray-b126-076280044607': catalogShot('solaray-b126-076280044607.jpg'),
+  // Super Bio vitamin C 1000 mg, 250 vegcaps. Not the 60, 100, or 360.
+  'solaray-b126-076280044614': catalogShot('solaray-b126-076280044614.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17292,9 +17334,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Cranactin 120 and 180 are not the 60. 180 stays a letter.
   'solaray-b126-076280008418',
   'solaray-b126-076280084221',
-  // Female Hormone Blend SP-7C 180 is not the 100. Stays a letter
-  // until its own carton is attached.
+  // Female Hormone Blend SP-7C 180 is not the 100. Own carton
+  // attached in the 1:45 AM batch 2. Do not fall back to the 100.
   'solaray-b126-076280027617',
+  // Vitamins night run 2026-10-19 1:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Hawthorn 180 is not the 100.
+  'solaray-b126-076280013412',
+  // Guggul and red yeast rice 120 is not the 60. Stays a letter.
+  'solaray-b126-076280111019',
+  // Mega B-Stress 60 is not the 120. Stays a letter.
+  'solaray-b128-076280042405',
+  // Super Bio C 250 is not the 100. 60 and 360 stay letters.
+  'solaray-b126-076280044614',
+  'solaray-b126-076280646306',
+  'solaray-b126-076280044621',
 ]);
 
 export function previewOverlayImage(
@@ -35955,13 +36009,106 @@ assertBrandMark(
     }
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
-      if (id === 'solaray-b126-076280084221' || id === 'solaray-b126-076280027617') {
+      if (id === 'solaray-b126-076280084221') {
         if (!image?.url.startsWith('data:image/svg+xml')) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
         continue;
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-19 1:45 AM PT batch 2.
+  // Sibling counts keep their own fronts. Unattempted counts stay letters.
+  const batch1019b: [string, string, string][] = [
+    ['solaray-b126-076280013405', 'Solaray', 'solaray-b126-076280013405.jpg'],
+    ['solaray-b126-076280013412', 'Solaray', 'solaray-b126-076280013412.jpg'],
+    ['solaray-b126-076280021158', 'Solaray', 'solaray-b126-076280021158.jpg'],
+    ['solaray-b126-076280021400', 'Solaray', 'solaray-b126-076280021400.jpg'],
+    ['solaray-b126-076280021707', 'Solaray', 'solaray-b126-076280021707.jpg'],
+    ['solaray-b126-076280022605', 'Solaray', 'solaray-b126-076280022605.jpg'],
+    ['solaray-b126-076280023008', 'Solaray', 'solaray-b126-076280023008.jpg'],
+    ['solaray-b126-076280027617', 'Solaray', 'solaray-b126-076280027617.jpg'],
+    ['solaray-b126-076280030204', 'Solaray', 'solaray-b126-076280030204.jpg'],
+    ['solaray-b126-076280030693', 'Solaray', 'solaray-b126-076280030693.jpg'],
+    ['solaray-b126-076280036596', 'Solaray', 'solaray-b126-076280036596.jpg'],
+    ['solaray-b126-076280037685', 'Solaray', 'solaray-b126-076280037685.jpg'],
+    ['solaray-b126-076280037692', 'Solaray', 'solaray-b126-076280037692.jpg'],
+    ['solaray-b126-076280042313', 'Solaray', 'solaray-b126-076280042313.jpg'],
+    ['solaray-b126-076280042412', 'Solaray', 'solaray-b126-076280042412.jpg'],
+    ['solaray-b126-076280042917', 'Solaray', 'solaray-b126-076280042917.jpg'],
+    ['solaray-b126-076280043648', 'Solaray', 'solaray-b126-076280043648.jpg'],
+    ['solaray-b126-076280043853', 'Solaray', 'solaray-b126-076280043853.jpg'],
+    ['solaray-b126-076280044607', 'Solaray', 'solaray-b126-076280044607.jpg'],
+    ['solaray-b126-076280044614', 'Solaray', 'solaray-b126-076280044614.jpg'],
+  ];
+  const seen = new Set<string>();
+  for (const [id, brand, file] of batch1019b) {
+    if (seen.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1019b: [string, string, string][][] = [
+    [
+      ['solaray-b126-076280013405', 'solaray-b126-076280013405', 'Solaray'],
+      ['solaray-b126-076280013412', 'solaray-b126-076280013405', 'Solaray'],
+    ],
+    [
+      ['solaray-b126-076280002768', 'solaray-b126-076280002768', 'Solaray'],
+      ['solaray-b126-076280027617', 'solaray-b126-076280002768', 'Solaray'],
+    ],
+    [
+      ['solaray-b126-076280036596', 'solaray-b126-076280036596', 'Solaray'],
+      ['solaray-b126-076280111019', 'solaray-b126-076280036596', 'Solaray'],
+    ],
+    [
+      ['solaray-b126-076280037685', 'solaray-b126-076280037685', 'Solaray'],
+      ['solaray-b126-076280037692', 'solaray-b126-076280037692', 'Solaray'],
+    ],
+    [
+      ['solaray-b125-076280042429', 'solaray-b125-076280042429', 'Solaray'],
+      ['solaray-b126-076280042412', 'solaray-b126-076280042412', 'Solaray'],
+      ['solaray-b128-076280042405', 'solaray-b126-076280042412', 'Solaray'],
+    ],
+    [
+      ['solaray-b126-076280044607', 'solaray-b126-076280044607', 'Solaray'],
+      ['solaray-b126-076280044614', 'solaray-b126-076280044607', 'Solaray'],
+    ],
+  ];
+  for (const group of groups1019b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (
+        id === 'solaray-b126-076280111019'
+        || id === 'solaray-b128-076280042405'
+      ) {
+        if (!image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  for (const id of ['solaray-b126-076280044621', 'solaray-b126-076280646306']) {
+    const image = previewOverlayImage({
+      id,
+      formulaId: 'solaray-b126-076280044607',
+      brand: 'Solaray',
+    });
+    if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+      throw new Error(`${id} stays a letter until its own carton is attempted`);
     }
   }
 }
