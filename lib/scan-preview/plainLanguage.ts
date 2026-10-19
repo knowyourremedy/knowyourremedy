@@ -1078,9 +1078,15 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('Cellulose acetate is a coating polymer. It is not plain cellulose, microcrystalline cellulose, or hypromellose.', level);
   }
 
-  if (/cellulose|vegetable capsule|vegetarian capsule/.test(n)) {
-    if (/cellulose/.test(n)) {
+  if (/cellulose|vegetable capsule|vegetarian capsule|veggie capsule/.test(n)) {
+    if (/cellulose/.test(n) && !/capsule/.test(n)) {
       return close('This is a cellulose capsule or filler, in the same family as microcrystalline cellulose and hypromellose.', level);
+    }
+    if (level === 'cleared' && /capsule/.test(n)) {
+      return close(
+        'This is a plant-cellulose vegetarian capsule shell (hypromellose, pullulan, or tapioca family). Under the t130u unnamed rule, the shell is Cleared when a named form would not change severity.',
+        level,
+      );
     }
     return close('The label says vegetable capsule and does not name cellulose or hypromellose. A named cellulose capsule is a different line.', level);
   }
