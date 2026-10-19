@@ -10,6 +10,7 @@ Done
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
 - Highest rating-draft is batch230. Next file is batch231.
+- t130u (Oct 18, 2026). **Rules + locks only** — no catalog rows, no rescan. **METHODOLOGY** t130u unnamed/ambiguous token rule (§4; supersedes automatic unnamed-worse defaults). **14 founder stamps:** Food Glaze; Rice Dextrin; Sipernat; Polacrilin Potassium; Soy Polysaccharides; Arrowroot; Ammonium Hydrogen Carbonate; Whey; sweetened condensed whole Milk (split); hydroxypropyl starch; vegetable oil powder; cellulose & ester derivatives; organic argan oil; Sulfur Dioxide. **HOLD (not a lock):** organic Mushroom powder until panel confirms inactive. **Spring Valley** brand scan stays OPEN; no Spring Valley rows written. Next file batch231.
 - t129u (Oct 18, 2026). Current work: **Spring Valley** (Walmart private label) brand scan is OPEN, stopped on 15 missing tokens (t128u): Food Glaze; Rice Dextrin; Sipernat; Polacrilin Potassium; Soy Polysaccharides; Arrowroot; Ammonium Hydrogen Carbonate; Whey; sweetened condensed whole Milk; hydroxypropyl starch; vegetable oil powder; cellulose & ester derivatives; organic argan oil; organic Mushroom powder; Sulfur Dioxide. No Spring Valley rows written. Closed brands: 246 (Physician's Choice included). Next file batch231.
 - t127u (Oct 18, 2026). **batch230** — three Physician's Choice packs in `lib/rating-drafts/batch230-kyr6c-t127u.ts` (1 Clean / 2 Caution). Full honestNote on every row. **Written ids:** `physicianschoice-b230-digestive-enzymes-90`, `physicianschoice-b230-digestive-enzymes-180`, `physicianschoice-b230-easy-mix-fiber-unflavored-30`. Founder t127u rulings override earlier DE 90/180 panel holds and Easy Mix 30-Day panel hold. Recomputed grades match spec. **Physician's Choice catalog pass CLOSED** (every single-unit pack written or closed; added to Closed brands).
 - t126u (Oct 18, 2026). **batch229** — three Physician's Choice packs in `lib/rating-drafts/batch229-kyr6c-t126u.ts` (1 Clean / 2 Caution). Full honestNote on every row. **Written ids:** `physicianschoice-b229-mood-support-probiotic-30`, `physicianschoice-b229-easy-mix-fiber-stick-packs-18`, `physicianschoice-b229-probiotic-gummies-90`. Founder t126u rulings: Mood Support UPC and panel confirmed; Probiotic Gummies 90 UPC/panel confirmed; one-UPC three-flavor Easy Mix stick variety carton = single row graded by worst stick (Cucumber Lime). Recomputed grades match spec. **Physician's Choice stays OPEN**, held: Digestive Enzymes 90 (two different 90-count panels on Walmart, current formula unclear); Digestive Enzymes 180 (only 180-count panel is the older layout; newer panel on the listing reads 60 servings); Easy Mix Fiber Unflavored 30-Day (no facts panel printed for 30 servings).
@@ -133,6 +134,7 @@ Process lock
 - Flavor rule. Unnamed or vague flavor strings on the other-ingredients line dock per METHODOLOGY §5 (Limited “Natural flavors” opacity or Caution flavor family).
 - Flavor rule clarification (founder, Oct 17 2026): The flavor rule only docks unnamed or vague flavors (e.g. "natural flavor," "fruit flavor," "natural and artificial flavor"). A flavor that names the specific fruits or ingredients (e.g. "Natural Strawberry watermelon raspberry flavor") does not trigger the rule and is not automatically Limited.
 - A one-UPC mixed-flavor variety carton is one row, graded by its worst stick (founder t126u).
+- Unnamed / ambiguous token rule (founder t130u, Oct 18, 2026): see METHODOLOGY §4 — unnamed does not force a worse grade unless a named version of the same ingredient class would change severity in that form; natural ingredients take the best of two options, man-made take the worse.
 
 Google AI mode fail safe
 Google AI rule: Google AI first directs you to a real site it viewed. You may use a blurb for an ingredient list or UPC only if the AI was specifically told to show it only when it can 100% verify the ingredients or UPC because it itself viewed them on a site, and only for a single bottle or pack (not a multipack). Otherwise do not copy from the blurb. Open the cited page.
@@ -145,6 +147,15 @@ Write the row only when the pack has a home in one of the 13 search tabs. If it 
 
 Honest note and ingredient tab
 An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. The note tells the shopper why the form in this product did not change the grade. An ingredient tab gives a plain why from the lock or the source that set the grade. A grade means there is a why. Do not write “Pending DailyMed review.” Name the rule or agency that set the why.
+
+Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c writes)
+- Honest note only when an ingredient appears to contradict itself to a shopper.
+- Every ingredient tab filled with the exact why from the lock or source; none blank.
+- A grade names the rule or agency that set the why; never write “Pending DailyMed review.”
+- Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition on the pack (a use level is not the rule).
+- Juice rule and hydrogenated oil rule unchanged.
+- Exhaust every ladder step before calling a pack dead, open, or hunt-list ready.
+- US only, no Canada, no EU, no store-brand.
 
 Closed brands
 A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
