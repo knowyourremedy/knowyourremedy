@@ -16692,6 +16692,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b129-076280043709': catalogShot('solaray-b129-076280043709.jpg'),
   // Vegan collagen booster, natural vanilla, 25 servings. Not another flavor.
   'solaray-b129-076280149074': catalogShot('solaray-b129-076280149074.jpg'),
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 2.
+  // Exact brand-site fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Plant melatonin 3 mg, 30 vegcaps.
+  'solaray-b129-076280329568': catalogShot('solaray-b129-076280329568.jpg'),
+  // Colostrum+ unflavored, 30 servings. Not peach mango.
+  'solaray-b129-076280529586': catalogShot('solaray-b129-076280529586.jpg'),
+  // Colostrum+ peach mango, 30 servings. Not unflavored.
+  'solaray-b129-076280582505': catalogShot('solaray-b129-076280582505.jpg'),
+  // NADH 10 mg, 30 vegcaps.
+  'solaray-b129-076280595499': catalogShot('solaray-b129-076280595499.jpg'),
+  // Aged black garlic 500 mg, 30 vegcaps.
+  'solaray-b129-076280598933': catalogShot('solaray-b129-076280598933.jpg'),
+  // Liposomal glutathione 500 mg, 60 vegcaps.
+  'solaray-b129-076280728507': catalogShot('solaray-b129-076280728507.jpg'),
+  // Spermidine 3.3 mg, 60 vegcaps.
+  'solaray-b129-076280788020': catalogShot('solaray-b129-076280788020.jpg'),
+  // Opti-5 magnesium 500 mg, 60 vegcaps.
+  'solaray-b129-076280886757': catalogShot('solaray-b129-076280886757.jpg'),
+  // Nattokinase and serrapeptase, 30 vegcaps.
+  'solaray-b129-076280937145': catalogShot('solaray-b129-076280937145.jpg'),
+  // Liver Blend SP-13, 100 vegcaps.
+  'solaray-b129-076280021301': catalogShot('solaray-b129-076280021301.jpg'),
+  // Boron citrate 3 mg, 60 vegcaps.
+  'solaray-b129-076280045772': catalogShot('solaray-b129-076280045772.jpg'),
+  // Acetyl L-carnitine 500 mg, 30 vegcaps.
+  'solaray-b129-076280130645': catalogShot('solaray-b129-076280130645.jpg'),
+  // Ginkgo biloba leaf extract 60 mg, 60 vegcaps. Not the 120.
+  'solaray-b129-076280036008': catalogShot('solaray-b129-076280036008.jpg'),
+  // Ginkgo biloba extract one daily 120 mg, 30 vegcaps. Not the 60.
+  'solaray-b129-076280036039': catalogShot('solaray-b129-076280036039.jpg'),
+  // Saw palmetto and pygeum with zinc and vitamin E, 30 softgels.
+  'solaray-b129-076280037661': catalogShot('solaray-b129-076280037661.jpg'),
+  // Vitamin B-complex 50 mg, 50 vegcaps. Not the 100 or the 250.
+  // The variant slot for this SKU was wired to the 100-count file. This front is the 50-count bottle.
+  'solaray-b129-076280042702': catalogShot('solaray-b129-076280042702.jpg'),
+  // Vitamin B-complex 50 mg, 250 vegcaps. Not the 50 or the 100.
+  'solaray-b129-076280042726': catalogShot('solaray-b129-076280042726.jpg'),
+  // Vitamin B-complex 100, 100 vegcaps. Not the 50 or the 250.
+  'solaray-b129-076280043013': catalogShot('solaray-b129-076280043013.jpg'),
+  // Vitamin B-complex 100, 50 vegcaps. Not the 100 or the 250.
+  'solaray-b129-076280043006': catalogShot('solaray-b129-076280043006.jpg'),
+  // Magnesium citrate 400 mg, 180 vegcaps. Not the 90.
+  'solaray-b129-076280374025': catalogShot('solaray-b129-076280374025.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -35807,8 +35850,8 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (id === 'solaray-b129-076280036008') {
-        if (!image?.url.startsWith('data:image/svg+xml')) {
-          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        if (!image?.verifiedSku || !image.url.endsWith('/solaray-b129-076280036008.jpg')) {
+          throw new Error(`${id} must keep the 60 mg 60-count ginkgo carton`);
         }
         continue;
       }
@@ -36918,8 +36961,8 @@ assertBrandMark(
       ['solaray-kids-chewable', 'solaray-kids-chewable', 'Solaray'],
     ],
   ];
-  const letterUntilAttemptedH = new Set([
-    'solaray-b129-076280374025',
+  const letterUntilAttemptedH = new Set<string>([
+    // Magnesium citrate 180 now has its own carton.
   ]);
   for (const group of groups1019h) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -37028,5 +37071,80 @@ assertBrandMark(
     || hmb.url.startsWith('data:image/svg+xml')
   ) {
     throw new Error('HMB 30 servings must use the Solaray mark, not a letter or the 90-serving tub');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 2.
+  // Sibling counts, strengths, and flavors keep their own fronts.
+  const batch1019j: [string, string, string][] = [
+    ['solaray-b129-076280329568', 'Solaray', 'solaray-b129-076280329568.jpg'],
+    ['solaray-b129-076280529586', 'Solaray', 'solaray-b129-076280529586.jpg'],
+    ['solaray-b129-076280582505', 'Solaray', 'solaray-b129-076280582505.jpg'],
+    ['solaray-b129-076280595499', 'Solaray', 'solaray-b129-076280595499.jpg'],
+    ['solaray-b129-076280598933', 'Solaray', 'solaray-b129-076280598933.jpg'],
+    ['solaray-b129-076280728507', 'Solaray', 'solaray-b129-076280728507.jpg'],
+    ['solaray-b129-076280788020', 'Solaray', 'solaray-b129-076280788020.jpg'],
+    ['solaray-b129-076280886757', 'Solaray', 'solaray-b129-076280886757.jpg'],
+    ['solaray-b129-076280937145', 'Solaray', 'solaray-b129-076280937145.jpg'],
+    ['solaray-b129-076280021301', 'Solaray', 'solaray-b129-076280021301.jpg'],
+    ['solaray-b129-076280045772', 'Solaray', 'solaray-b129-076280045772.jpg'],
+    ['solaray-b129-076280130645', 'Solaray', 'solaray-b129-076280130645.jpg'],
+    ['solaray-b129-076280036008', 'Solaray', 'solaray-b129-076280036008.jpg'],
+    ['solaray-b129-076280036039', 'Solaray', 'solaray-b129-076280036039.jpg'],
+    ['solaray-b129-076280037661', 'Solaray', 'solaray-b129-076280037661.jpg'],
+    ['solaray-b129-076280042702', 'Solaray', 'solaray-b129-076280042702.jpg'],
+    ['solaray-b129-076280042726', 'Solaray', 'solaray-b129-076280042726.jpg'],
+    ['solaray-b129-076280043013', 'Solaray', 'solaray-b129-076280043013.jpg'],
+    ['solaray-b129-076280043006', 'Solaray', 'solaray-b129-076280043006.jpg'],
+    ['solaray-b129-076280374025', 'Solaray', 'solaray-b129-076280374025.jpg'],
+  ];
+  const seenJ = new Set<string>();
+  for (const [id, brand, file] of batch1019j) {
+    if (seenJ.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seenJ.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1019j: [string, string, string][][] = [
+    [
+      ['solaray-b129-076280529586', 'solaray-b129-076280529586', 'Solaray'],
+      ['solaray-b129-076280582505', 'solaray-b129-076280582505', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280036015', 'solaray-b123-076280036015', 'Solaray'],
+      ['solaray-b129-076280036008', 'solaray-b129-076280036008', 'Solaray'],
+    ],
+    [
+      ['solaray-b123-076280036046', 'solaray-b123-076280036046', 'Solaray'],
+      ['solaray-b129-076280036039', 'solaray-b129-076280036039', 'Solaray'],
+    ],
+    [
+      ['solaray-b129-076280042702', 'solaray-b129-076280042702', 'Solaray'],
+      ['solaray-b125-076280042719', 'solaray-b125-076280042719', 'Solaray'],
+      ['solaray-b129-076280042726', 'solaray-b129-076280042702', 'Solaray'],
+    ],
+    [
+      ['solaray-b129-076280043006', 'solaray-b129-076280043013', 'Solaray'],
+      ['solaray-b129-076280043013', 'solaray-b129-076280043013', 'Solaray'],
+      ['solaray-b125-076280043037', 'solaray-b125-076280043037', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280463019', 'solaray-b128-076280463019', 'Solaray'],
+      ['solaray-b129-076280374025', 'solaray-b129-076280374025', 'Solaray'],
+    ],
+  ];
+  for (const group of groups1019j) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
   }
 }
