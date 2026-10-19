@@ -230,3 +230,4 @@ export { BATCH230_KYR6C_T127U } from './batch230-kyr6c-t127u';
 export { BATCH231_KYR6C_T130U_SV } from './batch231-kyr6c-t130u-sv';
 export { BATCH232_KYR6C_T130U_SV } from './batch232-kyr6c-t130u-sv';
 export { BATCH233_KYR6C_T130U_SV } from './batch233-kyr6c-t130u-sv';
+export { BATCH234_KYR6C_T130U_SV } from './batch234-kyr6c-t130u-sv';
