@@ -2872,6 +2872,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // for SKU 076280228786 prints 1:1, and the facts panel is 1,000 mg
   // calcium and 1,000 mg magnesium. Do not glue the 1:1 bottle.
   'solaray-b128-076280228786': brandMark('solaray-mark.png'),
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 1.
+  // Official Solaray wordmark already on disk. Not a text tile. Not a letter.
+  // HMB + vitamin D3 named vanilla, 30 servings. The brand-site tub for
+  // SKU 076280110098 is vanilla 4.2 oz and prints 90 servings. Do not glue it.
+  'solaray-b129-076280110098': brandMark('solaray-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16647,6 +16652,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b129-076280047455': catalogShot('solaray-b129-076280047455.jpg'),
   // Children's multivitamin chewable, black cherry, 60 chewables. Not the 120.
   'solaray-b129-076280047967': catalogShot('solaray-b129-076280047967.jpg'),
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 1.
+  // Exact brand-site fronts. Sibling counts do not share a file.
+  // Oil of oregano 150 mg, 60 softgels. Not the 120.
+  'solaray-b129-076280082524': catalogShot('solaray-b129-076280082524.jpg'),
+  // MigraGard 400 mg, 60 vegcaps.
+  'solaray-b129-076280083323': catalogShot('solaray-b129-076280083323.jpg'),
+  // Continence with Flowtrol, 60 vegcaps.
+  'solaray-b129-076280084269': catalogShot('solaray-b129-076280084269.jpg'),
+  // Total Calm mood support, 30 vegcaps.
+  'solaray-b129-076280088618': catalogShot('solaray-b129-076280088618.jpg'),
+  // Triple strength tart cherry fruit extract, 90 vegcaps.
+  'solaray-b129-076280223149': catalogShot('solaray-b129-076280223149.jpg'),
+  // Methyl B-12 cherry 5000 mcg, 60 lozenges.
+  'solaray-b129-076280342987': catalogShot('solaray-b129-076280342987.jpg'),
+  // Vitamin K-2 MK-7 50 mcg, 30 vegcaps.
+  'solaray-b129-076280361537': catalogShot('solaray-b129-076280361537.jpg'),
+  // Liposomal multivitamin women's 50+, 60 vegcaps. Not the men's.
+  'solaray-b129-076280616903': catalogShot('solaray-b129-076280616903.jpg'),
+  // Liposomal multivitamin men's 50+, 60 vegcaps. Not the women's.
+  'solaray-b129-076280882896': catalogShot('solaray-b129-076280882896.jpg'),
+  // Curcumin root extract 250 mg, 30 softgels.
+  'solaray-b129-076280903522': catalogShot('solaray-b129-076280903522.jpg'),
+  // Valerian root extract 300 mg, 30 vegcaps.
+  'solaray-b129-076280039054': catalogShot('solaray-b129-076280039054.jpg'),
+  // Calcium and magnesium AAC 2:1, 90 vegcaps. Not the 180.
+  'solaray-b129-076280045307': catalogShot('solaray-b129-076280045307.jpg'),
+  // Hair Nutrients, 120 vegcaps. Not the 60.
+  'solaray-b129-076280047912': catalogShot('solaray-b129-076280047912.jpg'),
+  // Super Forskohlii root extract 400 mg, 60 vegcaps.
+  'solaray-b129-076280644753': catalogShot('solaray-b129-076280644753.jpg'),
+  // Cal-mag citrate with vitamin D-3 and K-2, 2:1, 180 capsules.
+  'solaray-b129-076280648843': catalogShot('solaray-b129-076280648843.jpg'),
+  // Folic acid 800 mcg DFE, 100 vegcaps.
+  'solaray-b129-076280043525': catalogShot('solaray-b129-076280043525.jpg'),
+  // Niacin 100 mg, 100 vegcaps.
+  'solaray-b129-076280043594': catalogShot('solaray-b129-076280043594.jpg'),
+  // Pantothenic acid 250 mg, 100 vegcaps.
+  'solaray-b129-076280043709': catalogShot('solaray-b129-076280043709.jpg'),
+  // Vegan collagen booster, natural vanilla, 25 servings. Not another flavor.
+  'solaray-b129-076280149074': catalogShot('solaray-b129-076280149074.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17641,6 +17686,10 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Vitamins night run 2026-10-19 5:30 AM PT batch 2.
   // Dandelion root 180 is not the 100. Own carton.
   'solaray-b129-076280012118',
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 1.
+  // Oil of oregano 120 shares the 60-count formula. Own carton later.
+  // Do not inherit the 60.
+  'solaray-b130-X0042AF2L7',
 ]);
 
 export function previewOverlayImage(
@@ -36696,8 +36745,8 @@ assertBrandMark(
       ['solaray-b128-076280132236', 'solaray-b128-076280046212', 'Solaray'],
     ],
   ];
-  const letterUntilAttempted = new Set([
-    'solaray-b129-076280045307',
+  const letterUntilAttempted = new Set<string>([
+    // Calcium and magnesium AAC 90 now has its own carton.
   ]);
   for (const group of groups1019f) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -36786,7 +36835,7 @@ assertBrandMark(
     ],
   ];
   const letterUntilAttemptedG = new Set([
-    'solaray-b129-076280047912',
+    // Hair Nutrients 120 now has its own carton.
     'solaray-b129-076280046618',
   ]);
   for (const group of groups1019g) {
@@ -36891,5 +36940,93 @@ assertBrandMark(
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-19 6:45 AM PT batch 1.
+  // Sibling counts and the two liposomal multis keep their own fronts.
+  // The oregano 120 stays a letter. HMB 30 servings stays on the mark.
+  const batch1019i: [string, string, string][] = [
+    ['solaray-b129-076280082524', 'Solaray', 'solaray-b129-076280082524.jpg'],
+    ['solaray-b129-076280083323', 'Solaray', 'solaray-b129-076280083323.jpg'],
+    ['solaray-b129-076280084269', 'Solaray', 'solaray-b129-076280084269.jpg'],
+    ['solaray-b129-076280088618', 'Solaray', 'solaray-b129-076280088618.jpg'],
+    ['solaray-b129-076280223149', 'Solaray', 'solaray-b129-076280223149.jpg'],
+    ['solaray-b129-076280342987', 'Solaray', 'solaray-b129-076280342987.jpg'],
+    ['solaray-b129-076280361537', 'Solaray', 'solaray-b129-076280361537.jpg'],
+    ['solaray-b129-076280616903', 'Solaray', 'solaray-b129-076280616903.jpg'],
+    ['solaray-b129-076280882896', 'Solaray', 'solaray-b129-076280882896.jpg'],
+    ['solaray-b129-076280903522', 'Solaray', 'solaray-b129-076280903522.jpg'],
+    ['solaray-b129-076280039054', 'Solaray', 'solaray-b129-076280039054.jpg'],
+    ['solaray-b129-076280045307', 'Solaray', 'solaray-b129-076280045307.jpg'],
+    ['solaray-b129-076280047912', 'Solaray', 'solaray-b129-076280047912.jpg'],
+    ['solaray-b129-076280644753', 'Solaray', 'solaray-b129-076280644753.jpg'],
+    ['solaray-b129-076280648843', 'Solaray', 'solaray-b129-076280648843.jpg'],
+    ['solaray-b129-076280043525', 'Solaray', 'solaray-b129-076280043525.jpg'],
+    ['solaray-b129-076280043594', 'Solaray', 'solaray-b129-076280043594.jpg'],
+    ['solaray-b129-076280043709', 'Solaray', 'solaray-b129-076280043709.jpg'],
+    ['solaray-b129-076280149074', 'Solaray', 'solaray-b129-076280149074.jpg'],
+  ];
+  const seenI = new Set<string>();
+  for (const [id, brand, file] of batch1019i) {
+    if (seenI.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seenI.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b129-076280110098', 'Solaray', 'solaray-mark.png');
+  const groups1019i: [string, string, string][][] = [
+    [
+      ['solaray-b129-076280082524', 'solaray-b129-076280082524', 'Solaray'],
+      ['solaray-b130-X0042AF2L7', 'solaray-b129-076280082524', 'Solaray'],
+    ],
+    [
+      ['solaray-b129-076280616903', 'solaray-b129-076280616903', 'Solaray'],
+      ['solaray-b129-076280882896', 'solaray-b129-076280882896', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280045314', 'solaray-b128-076280045314', 'Solaray'],
+      ['solaray-b129-076280045307', 'solaray-b129-076280045307', 'Solaray'],
+    ],
+    [
+      ['solaray-b128-076280047905', 'solaray-b128-076280047905', 'Solaray'],
+      ['solaray-b129-076280047912', 'solaray-b129-076280047912', 'Solaray'],
+    ],
+  ];
+  const letterUntilAttemptedI = new Set([
+    'solaray-b130-X0042AF2L7',
+  ]);
+  for (const group of groups1019i) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedI.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const hmb = previewOverlayImage({
+    id: 'solaray-b129-076280110098',
+    formulaId: 'solaray-b129-076280110098',
+    brand: 'Solaray',
+  });
+  if (
+    !hmb
+    || hmb.verifiedSku
+    || !hmb.url.endsWith('/solaray-mark.png')
+    || hmb.url.startsWith('data:image/svg+xml')
+  ) {
+    throw new Error('HMB 30 servings must use the Solaray mark, not a letter or the 90-serving tub');
   }
 }
