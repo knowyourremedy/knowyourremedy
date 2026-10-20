@@ -17067,6 +17067,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'rainbow-b202-womens-one-50-plus-90': catalogShot('rainbow-b202-womens-one-50-plus-90.jpg'),
   // Women's One 50+, 120 caplets. Not the 90.
   'rainbow-b202-womens-one-50-plus-120': catalogShot('rainbow-b202-womens-one-50-plus-120.jpg'),
+  // Vitamins night run 2026-10-20 5:30 AM PT batch 2.
+  // Exact fronts. Sibling counts do not share a file.
+  // Men's One, 120 caplets. Not the 60 or the 150.
+  'rainbow-b202-mens-one-120': catalogShot('rainbow-b202-mens-one-120.jpg'),
+  // Men's One, 150 caplets. Not the 60 or the 120.
+  'rainbow-b202-mens-one-150': catalogShot('rainbow-b202-mens-one-150.jpg'),
+  // Men's One 50+, 120 caplets. Not the 90 or the 150.
+  'rainbow-b202-mens-one-50-plus-120': catalogShot('rainbow-b202-mens-one-50-plus-120.jpg'),
+  // Active Health Teen, 90 caplets. Not the 45.
+  'rainbow-b203-active-health-teen-90': catalogShot('rainbow-b203-active-health-teen-90.jpg'),
+  // Calcium citrate mini-tablets, 120.
+  'rainbow-b203-calcium-citrate-120': catalogShot('rainbow-b203-calcium-citrate-120.jpg'),
+  // Postnatal multivitamin, 120 capsules.
+  'rainbow-b203-postnatal-120': catalogShot('rainbow-b203-postnatal-120.jpg'),
+  // Kid's One, 50 chewables. Not the 90.
+  'rainbow-b204-kids-one-50': catalogShot('rainbow-b204-kids-one-50.jpg'),
+  // Kid's One, 90 chewables. Not the 50.
+  'rainbow-b204-kids-one-90': catalogShot('rainbow-b204-kids-one-90.jpg'),
+  // Certified Women's, 120 capsules.
+  'rainbow-b204-certified-womens-120': catalogShot('rainbow-b204-certified-womens-120.jpg'),
+  // Certified Men's, 120 capsules.
+  'rainbow-b204-certified-mens-120': catalogShot('rainbow-b204-certified-mens-120.jpg'),
+  // Men's One, 60 caplets. Not the 120 or the 150.
+  'rainbow-b204-mens-one-60': catalogShot('rainbow-b204-mens-one-60.jpg'),
+  // Men's One 50+, 90 caplets. Not the 120 or the 150.
+  'rainbow-b204-mens-one-50-plus-90': catalogShot('rainbow-b204-mens-one-50-plus-90.jpg'),
+  // Men's One 50+, 150 caplets. Not the 90 or the 120.
+  'rainbow-b204-mens-one-50-plus-150': catalogShot('rainbow-b204-mens-one-50-plus-150.jpg'),
+  // 35+ Mom & Baby, 60 caplets.
+  'rainbow-b204-35-mom-baby-60': catalogShot('rainbow-b204-35-mom-baby-60.jpg'),
+  // Women's One, 120 caplets. Not the 50+ counts.
+  'rainbow-b204-womens-one-120': catalogShot('rainbow-b204-womens-one-120.jpg'),
+  // Calcium magnesium D3, 90 caplets. Not the 180.
+  'rainbow-b204-cal-mag-d3-90': catalogShot('rainbow-b204-cal-mag-d3-90.jpg'),
+  // Calcium magnesium D3, 180 caplets. Not the 90.
+  'rainbow-b204-cal-mag-d3-180': catalogShot('rainbow-b204-cal-mag-d3-180.jpg'),
+  // Active Health Teen, 45 caplets. Not the 90.
+  'rainbow-b204-active-health-teen-45': catalogShot('rainbow-b204-active-health-teen-45.jpg'),
+  // L-Methylfolate 15 mg, 60 capsules.
+  'rainbow-b205-l-methylfolate-15-60': catalogShot('rainbow-b205-l-methylfolate-15-60.jpg'),
+  // Berberine complex 1000 mg, 60 capsules.
+  'rainbow-b205-berberine-complex-60': catalogShot('rainbow-b205-berberine-complex-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37968,12 +38010,12 @@ assertBrandMark(
     throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
   }
   const nextLetter = previewOverlayImage({
-    id: 'rainbow-b202-mens-one-120',
-    formulaId: 'rainbow-b202-mens-one-120',
+    id: 'rainbow-b205-pumpkin-seed-oil-biotin-90',
+    formulaId: 'rainbow-b205-pumpkin-seed-oil-biotin-90',
     brand: 'Rainbow Light',
   });
   if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('Rainbow Light Men\'s One 120 must stay a letter until attempted');
+    throw new Error('Rainbow Light pumpkin seed oil 90 must stay a letter until attempted');
   }
 }
 
@@ -38051,6 +38093,92 @@ assertBrandMark(
     'osteo-b210-one-per-day-60',
   ]) {
     const image = previewOverlayImage({ id, formulaId: id, brand: 'Osteo Bi-Flex' });
+    if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
+      throw new Error(`${id} stays a letter until its own carton is attempted`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 5:30 AM PT batch 2.
+  const batch1020h: [string, string, string][] = [
+    ['rainbow-b202-mens-one-120', 'Rainbow Light', 'rainbow-b202-mens-one-120.jpg'],
+    ['rainbow-b202-mens-one-150', 'Rainbow Light', 'rainbow-b202-mens-one-150.jpg'],
+    ['rainbow-b202-mens-one-50-plus-120', 'Rainbow Light', 'rainbow-b202-mens-one-50-plus-120.jpg'],
+    ['rainbow-b203-active-health-teen-90', 'Rainbow Light', 'rainbow-b203-active-health-teen-90.jpg'],
+    ['rainbow-b203-calcium-citrate-120', 'Rainbow Light', 'rainbow-b203-calcium-citrate-120.jpg'],
+    ['rainbow-b203-postnatal-120', 'Rainbow Light', 'rainbow-b203-postnatal-120.jpg'],
+    ['rainbow-b204-kids-one-50', 'Rainbow Light', 'rainbow-b204-kids-one-50.jpg'],
+    ['rainbow-b204-kids-one-90', 'Rainbow Light', 'rainbow-b204-kids-one-90.jpg'],
+    ['rainbow-b204-certified-womens-120', 'Rainbow Light', 'rainbow-b204-certified-womens-120.jpg'],
+    ['rainbow-b204-certified-mens-120', 'Rainbow Light', 'rainbow-b204-certified-mens-120.jpg'],
+    ['rainbow-b204-mens-one-60', 'Rainbow Light', 'rainbow-b204-mens-one-60.jpg'],
+    ['rainbow-b204-mens-one-50-plus-90', 'Rainbow Light', 'rainbow-b204-mens-one-50-plus-90.jpg'],
+    ['rainbow-b204-mens-one-50-plus-150', 'Rainbow Light', 'rainbow-b204-mens-one-50-plus-150.jpg'],
+    ['rainbow-b204-35-mom-baby-60', 'Rainbow Light', 'rainbow-b204-35-mom-baby-60.jpg'],
+    ['rainbow-b204-womens-one-120', 'Rainbow Light', 'rainbow-b204-womens-one-120.jpg'],
+    ['rainbow-b204-cal-mag-d3-90', 'Rainbow Light', 'rainbow-b204-cal-mag-d3-90.jpg'],
+    ['rainbow-b204-cal-mag-d3-180', 'Rainbow Light', 'rainbow-b204-cal-mag-d3-180.jpg'],
+    ['rainbow-b204-active-health-teen-45', 'Rainbow Light', 'rainbow-b204-active-health-teen-45.jpg'],
+    ['rainbow-b205-l-methylfolate-15-60', 'Rainbow Light', 'rainbow-b205-l-methylfolate-15-60.jpg'],
+    ['rainbow-b205-berberine-complex-60', 'Rainbow Light', 'rainbow-b205-berberine-complex-60.jpg'],
+  ];
+  const seen1020h = new Set<string>();
+  for (const [id, brand, file] of batch1020h) {
+    if (seen1020h.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020h.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1020h: [string, string, string][][] = [
+    [
+      ['rainbow-b204-mens-one-60', 'rainbow-b204-mens-one-60', 'Rainbow Light'],
+      ['rainbow-b202-mens-one-120', 'rainbow-b202-mens-one-120', 'Rainbow Light'],
+      ['rainbow-b202-mens-one-150', 'rainbow-b202-mens-one-150', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b204-mens-one-50-plus-90', 'rainbow-b204-mens-one-50-plus-90', 'Rainbow Light'],
+      ['rainbow-b202-mens-one-50-plus-120', 'rainbow-b202-mens-one-50-plus-120', 'Rainbow Light'],
+      ['rainbow-b204-mens-one-50-plus-150', 'rainbow-b204-mens-one-50-plus-150', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b202-womens-one-50-plus-90', 'rainbow-b202-womens-one-50-plus-90', 'Rainbow Light'],
+      ['rainbow-b202-womens-one-50-plus-120', 'rainbow-b202-womens-one-50-plus-120', 'Rainbow Light'],
+      ['rainbow-b204-womens-one-120', 'rainbow-b204-womens-one-120', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b204-kids-one-50', 'rainbow-b204-kids-one-50', 'Rainbow Light'],
+      ['rainbow-b204-kids-one-90', 'rainbow-b204-kids-one-90', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b204-cal-mag-d3-90', 'rainbow-b204-cal-mag-d3-90', 'Rainbow Light'],
+      ['rainbow-b204-cal-mag-d3-180', 'rainbow-b204-cal-mag-d3-180', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b204-active-health-teen-45', 'rainbow-b204-active-health-teen-45', 'Rainbow Light'],
+      ['rainbow-b203-active-health-teen-90', 'rainbow-b203-active-health-teen-90', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b204-certified-womens-120', 'rainbow-b204-certified-womens-120', 'Rainbow Light'],
+      ['rainbow-b204-certified-mens-120', 'rainbow-b204-certified-mens-120', 'Rainbow Light'],
+    ],
+  ];
+  for (const group of groups1020h) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  for (const id of [
+    'rainbow-b202-prenatal-one-150',
+    'rainbow-b204-prenatal-one-60',
+    'rainbow-b204-prenatal-one-120',
+    'rainbow-b205-pumpkin-seed-oil-biotin-90',
+  ]) {
+    const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
     if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
       throw new Error(`${id} stays a letter until its own carton is attempted`);
     }
