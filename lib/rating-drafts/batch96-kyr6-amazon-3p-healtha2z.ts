@@ -83,7 +83,7 @@ const METH = {
   bkc: "Methodology §5 Caution (benzalkonium chloride). Standalone Caution. Not Avoid.",
   pea: "Methodology §5 Caution (phenylethyl alcohol — exact token; locked Sept 18, 2026). Twin of phenethyl alcohol. Not Avoid.",
   ps80: "Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.",
-  carnauba: "Methodology §5 Cleared (carnauba wax).",
+  carnauba: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
   crospovidone: "Methodology §5 Cleared (crospovidone).",
   ferric: "Methodology §5 Caution (ferric oxide red / ferric oxide yellow). Not Avoid. Not a dye High.",
   polydextrose: "Methodology §5 Limited (polydextrose).",

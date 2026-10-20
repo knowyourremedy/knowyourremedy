@@ -127,7 +127,7 @@ const METH = {
     'Methodology §5 Cleared (cane sugar, glucose syrup, tapioca syrup / dextrose / sucrose / evaporated cane sugar)',
   namedColor:
     'Methodology §5 Cleared (black carrot / named fruit-or-vegetable juice as color / colors from fruits and vegetables)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax / carnauba leaf wax)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cleared: 'Methodology §5 Cleared',
 } as const;
 

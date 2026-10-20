@@ -74,6 +74,7 @@ const ADULT = 'adult' as const;
 const HOMEOPATHIC = 'homeopathic' as const;
 
 const METH = {
+  carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
@@ -244,7 +245,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
         'cleared',
         dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.gums),
       ),
-      cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Carnauba wax (organic)'),
+      flag('Carnauba wax (organic)', 'cleared', dailymed('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', METH.carnaubaT133u)),
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Calcium carbonate'),
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Cellulose'),
       cleared('d82cf6f3-a291-ca2b-e053-2a95a90a6de1', 'Dextrose'),
@@ -765,7 +766,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
         'moderate',
         dailymed('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', METH.ps80),
       ),
-      cleared('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', METH.carnaubaT133u)),
       cleared('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', 'Croscarmellose sodium'),
       cleared('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', 'Hypromellose'),
       cleared('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', 'Magnesium stearate'),
@@ -864,7 +865,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
         'moderate',
         dailymed('435b1a31-353d-af20-e063-6294a90aa907', METH.ps80),
       ),
-      cleared('435b1a31-353d-af20-e063-6294a90aa907', 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed('435b1a31-353d-af20-e063-6294a90aa907', METH.carnaubaT133u)),
       cleared('435b1a31-353d-af20-e063-6294a90aa907', 'Crospovidone'),
       cleared('435b1a31-353d-af20-e063-6294a90aa907', 'Hypromellose'),
       cleared('435b1a31-353d-af20-e063-6294a90aa907', 'Magnesium stearate'),

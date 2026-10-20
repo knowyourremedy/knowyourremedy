@@ -181,7 +181,7 @@ const METH = {
   avocado: `Methodology §5 Cleared (avocado oil as cream fill — locked Sept 15, 2026). ${CREAM_OIL_LINE}`,
   sunflowerWax:
     'Methodology §5 Cleared (sunflower seed wax — wax ≠ oil; carnauba family; locked Sept 15, 2026)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   mineralOil: `Methodology §5 Cleared (paraffin + mineral oil as topical ointment occlusive — petrolatum neighborhood; locked Sept 15, 2026). ${MINERAL_OIL_TAP}`,
   carbomer:
     'Methodology §5 Cleared (carbomer / carbomer interpolymer / carbomer copolymer — locked Sept 15, 2026; older 934/940/941 benzene concern does not apply)',

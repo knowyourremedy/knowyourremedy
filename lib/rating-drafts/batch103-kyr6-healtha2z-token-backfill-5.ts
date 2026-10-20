@@ -79,7 +79,7 @@ const METH = {
     'Methodology §5 Caution (methacrylic acid copolymer — exact locked polymer name). Methacrylic acid and ethyl acrylate copolymer dispersion maps here (Sept 25, 2026, a761f55). Not a new grade. Not Avoid.',
   mgStearate: 'Methodology §5 Cleared (magnesium stearate).',
   naoh: 'Methodology §5 Cleared (sodium hydroxide as a pH adjuster).',
-  naturalApple: 'Methodology §5 Caution (flavor). Natural apple flavor maps here (Sept 25, 2026, a761f55). Not Avoid.',
+  naturalApple: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   pectin: 'Methodology §5 Cleared (pectin / gum).',
   peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
   peg400:
@@ -285,10 +285,10 @@ const ACV_FLAGS: Compact['flags'] = [
   ['pectin', 'cleared', 'pectin'],
   ['sodium citrate', 'cleared', 'sodiumCitrate'],
   ['citric acid', 'cleared', 'citric'],
-  ['natural apple flavor', 'limited', 'naturalApple'],
+  ['natural apple flavor', 'cleared', 'naturalApple'],
   ['vegetable oil', 'high', 'vegOilGummy'],
   ['unfiltered liquid apple cider vinegar', 'limited', 'unfilteredAcv'],
-  ['purple carrot concentrate', 'limited', 'purpleCarrot'],
+  ['purple carrot concentrate', 'cleared', 'purpleCarrot'],
   ['beta-carotene', 'limited', 'betaCarotene'],
 ];
 

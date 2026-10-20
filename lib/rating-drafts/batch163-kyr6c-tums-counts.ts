@@ -55,7 +55,7 @@ function berriesLine(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }
@@ -71,7 +71,7 @@ function extraHashLake(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }

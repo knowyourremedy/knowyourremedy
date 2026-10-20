@@ -85,7 +85,7 @@ const METH = {
     'Methodology §5 High-tier (caramel color, undisclosed class — treated as Class III/IV; IARC 2B / 4-MEI). ' +
     CARAMEL_TAP,
   seedOilGummy:
-    'Methodology §5 High-tier (seed/industrial oils in gummies / chews — soybean, canola, palm, sunflower, vegetable oil)',
+    'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
   peg: 'Methodology §5 Moderate-risk (PEGs)',

@@ -56,7 +56,7 @@ const METH = {
   starch: 'Methodology §5 Cleared (bare starch as a filler).',
   stearic: 'Methodology §5 Cleared (stearic acid).',
   sucralose: 'Methodology §5 Moderate-risk (sucralose).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High-risk (talc).',
   tartaric: 'Methodology §5 Cleared (tartaric acid).',
   tio2: 'Methodology §5 High-risk (titanium dioxide).',
@@ -144,7 +144,7 @@ const FAST_FLAGS: IngredientFlag[] = [
   flag(FAST_PANEL, 'Glycerin', 'cleared', METH.glycerin),
   flag(FAST_PANEL, 'Hydrogenated coconut oil', 'high', METH.hcoChew),
   flag(FAST_PANEL, 'Soy lecithin', 'cleared', METH.lecithinSoy),
-  flag(FAST_PANEL, 'Sucrose', 'limited', METH.sucrose),
+  flag(FAST_PANEL, 'Sucrose', 'cleared', METH.sucrose),
   flag(FAST_PANEL, 'Water', 'cleared', METH.water),
 ];
 
@@ -174,7 +174,7 @@ function yellowBase(dyes: IngredientFlag[]): IngredientFlag[] {
     flag(YELLOW_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
     flag(YELLOW_PANEL, 'Sodium bicarbonate', 'cleared', METH.sodiumBicarb),
     flag(YELLOW_PANEL, 'Stearic acid', 'cleared', METH.stearic),
-    flag(YELLOW_PANEL, 'Sucrose', 'limited', METH.sucrose),
+    flag(YELLOW_PANEL, 'Sucrose', 'cleared', METH.sucrose),
     flag(YELLOW_PANEL, 'Talc', 'high', METH.talc),
     flag(YELLOW_PANEL, 'Titanium dioxide', 'high', METH.tio2),
     flag(YELLOW_PANEL, 'Triacetin', 'cleared', METH.triacetin),
@@ -214,7 +214,7 @@ const PINK_FLAGS: IngredientFlag[] = [
   flag(PINK_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
   flag(PINK_PANEL, 'Sodium bicarbonate', 'cleared', METH.sodiumBicarb),
   flag(PINK_PANEL, 'Stearic acid', 'cleared', METH.stearic),
-  flag(PINK_PANEL, 'Sucrose', 'limited', METH.sucrose),
+  flag(PINK_PANEL, 'Sucrose', 'cleared', METH.sucrose),
   flag(PINK_PANEL, 'Talc', 'high', METH.talc),
   flag(PINK_PANEL, 'Titanium dioxide', 'high', METH.tio2),
   flag(PINK_PANEL, 'Triacetin', 'cleared', METH.triacetin),
@@ -228,7 +228,7 @@ const CHERRY_FLAGS: IngredientFlag[] = [
   flag(CHERRY_PANEL, 'Glycerin', 'cleared', METH.glycerin),
   flag(CHERRY_PANEL, 'Purified water', 'cleared', METH.water),
   flag(CHERRY_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
-  flag(CHERRY_PANEL, 'Sucrose', 'limited', METH.sucrose),
+  flag(CHERRY_PANEL, 'Sucrose', 'cleared', METH.sucrose),
   flag(CHERRY_PANEL, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 
@@ -239,7 +239,7 @@ const CHEW_FLAGS: IngredientFlag[] = [
   flag(CHEW_PANEL, 'Hydrogenated coconut oil', 'high', METH.hcoChew),
   flag(CHEW_PANEL, 'Lecithin (soy)', 'cleared', METH.lecithinSoy),
   flag(CHEW_PANEL, 'Natural flavor', 'limited', METH.flavors),
-  flag(CHEW_PANEL, 'Sucrose', 'limited', METH.sucrose),
+  flag(CHEW_PANEL, 'Sucrose', 'cleared', METH.sucrose),
   flag(CHEW_PANEL, 'Water', 'cleared', METH.water),
 ];
 

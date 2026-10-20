@@ -100,7 +100,7 @@ function gripeLine(panel: string): IngredientFlag[] {
     flag(panel, 'Corn syrup', 'limited', METH.cornSyrup),
     flag(panel, 'Maltodextrin', 'limited', METH.maltodextrin),
     flag(panel, 'Melissa officinalis (lemon balm) leaf extract', 'cleared', METH.botanical),
-    flag(panel, 'Natural ginger flavor', 'limited', METH.flavorNamed),
+    flag(panel, 'Natural ginger flavor', 'cleared', METH.flavorNamed),
     flag(panel, 'Matricaria recutita (chamomile) flower heads extract', 'cleared', METH.botanical),
     flag(panel, 'Citric acid', 'cleared', METH.citric),
     flag(panel, 'Potassium benzoate', 'limited', METH.benzoate),

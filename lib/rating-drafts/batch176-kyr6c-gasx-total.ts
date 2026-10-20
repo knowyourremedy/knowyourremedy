@@ -34,9 +34,11 @@ const METH = {
   sodiumBenzoate: 'Methodology §5 Caution (sodium benzoate).',
   sorbic: 'Methodology §5 Limited (sorbic acid).',
   sorbitol: 'Methodology §5 Limited (oral sorbitol).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose:
+    'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   tio2: 'Methodology §5 High-risk (titanium dioxide).',
-  vegetableOil: 'Methodology §5 High-risk (vegetable oil in a chew). Same form as a gummy or a lozenge.',
+  vegetableOil:
+    'Methodology §5 Cleared (coconut oil (named; any form) — LOCKED Oct 17, 2026 t111u). Vegetable oil (coconut origin) maps here.',
   water: 'Methodology §5 Cleared (water / purified water).',
 } as const;
 
@@ -112,7 +114,7 @@ export const BATCH176_KYR6C_GASX_TOTAL: RatingRecord[] = [
       flag('Soy lecithin', 'cleared', METH.lecithin),
       flag('Sucrose', 'cleared', METH.sucrose),
       flag('Titanium dioxide', 'high', METH.tio2),
-      flag('Vegetable oil (coconut origin)', 'high', METH.vegetableOil),
+      flag('Vegetable oil (coconut origin)', 'cleared', METH.vegetableOil),
     ],
     verdict: 'avoid',
     retailers: ['ShopRite'],
@@ -143,7 +145,7 @@ if (row.formulaId === 'gasx-es-chewables' || row.formulaId === 'gasx-max-softgel
 const butyl = row.inactiveIngredients.find((item) => item.name === 'N-butyl alcohol');
 if (!butyl || butyl.riskLevel !== 'limited') throw new Error('batch176 butyl');
 const oil = row.inactiveIngredients.find((item) => /vegetable oil/i.test(item.name));
-if (!oil || oil.riskLevel !== 'high') throw new Error('batch176 oil');
+if (!oil || oil.riskLevel !== 'cleared') throw new Error('batch176 oil');
 for (const ingredient of row.inactiveIngredients) {
   if (!plainIngredientWhy(ingredient)) throw new Error(`batch176 blank why ${ingredient.name}`);
   if (/dailymed/i.test(ingredient.source ?? '')) throw new Error(`batch176 flag dailymed ${ingredient.name}`);

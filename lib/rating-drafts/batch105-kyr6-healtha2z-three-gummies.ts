@@ -59,13 +59,13 @@ const METH = {
   betaCarotene:
     'Methodology §5 Caution (beta-carotene as a color additive). Bare beta-carotene maps here (Sept 25, 2026). Same Caution lock. Not a new grade. Not Avoid.',
   carnauba:
-    'Methodology §5 Caution (carnauba wax — exact token; locked Sept 25, 2026). Not the old Cleared wax row. Carnauba wax inside a vegetable-oil parenthesis is this wax half. The gummy vegetable-oil half is the separate High flag. Not Avoid.',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citric:
     'Methodology §5 Cleared (citric acid / citrate salts as fillers or buffers).',
   coconutGummy:
     'Methodology §5 High (coconut oil in a gummy — same Avoid as gummy vegetable oil; founder restamp Sept 25, 2026). Fractionated coconut oil in a gummy stays the prior exception. This row is plain coconut oil in a gummy. Not an oil-bottle grade.',
   flavor:
-    'Methodology §5 Caution (flavor). Natural peach flavor, natural strawberry flavor, natural raspberry flavor, and natural watermelon flavor are exact aliases (Sept 25, 2026). Not Limited natural flavors. Not Avoid.',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   glucose:
     'Methodology §5 Caution (bare glucose — exact token; locked Sept 22, 2026). Distinct from Cleared glucose syrup. Not Avoid.',
   glucoseSyrup:
@@ -206,28 +206,28 @@ const WM_FLAGS: Compact['flags'] = [
   ['pectin', 'cleared', 'pectin'],
   ['citric acid', 'cleared', 'citric'],
   ['sodium citrate', 'cleared', 'sodiumCitrate'],
-  ['natural peach flavor', 'limited', 'flavor'],
-  ['natural strawberry flavor', 'limited', 'flavor'],
+  ['natural peach flavor', 'cleared', 'flavor'],
+  ['natural strawberry flavor', 'cleared', 'flavor'],
   ['vegetable oil', 'high', 'vegOilGummy'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['beta-carotene', 'limited', 'betaCarotene'],
-  ['purple carrot juice concentrate', 'limited', 'purpleCarrot'],
+  ['purple carrot juice concentrate', 'cleared', 'purpleCarrot'],
 ];
 
 const PB_FLAGS: Compact['flags'] = [
   ['maltitol solution', 'limited', 'maltitolSolution'],
   ['isomalt', 'limited', 'isomalt'],
   ['glycerin', 'cleared', 'glycerin'],
-  ['coconut oil', 'high', 'coconutGummy'],
+  ['coconut oil', 'cleared', 'coconutGummy'],
   ['pectin', 'cleared', 'pectin'],
   ['citric acid', 'cleared', 'citric'],
   ['sodium citrate', 'cleared', 'sodiumCitrate'],
   ['tricalcium phosphate', 'cleared', 'tricalcium'],
-  ['natural raspberry flavor', 'limited', 'flavor'],
+  ['natural raspberry flavor', 'cleared', 'flavor'],
   ['vegetable oil', 'high', 'vegOilGummy'],
-  ['carnauba wax', 'limited', 'carnauba'],
-  ['purple carrot juice concentrate', 'limited', 'purpleCarrot'],
-  ['natural watermelon flavor', 'limited', 'flavor'],
+  ['carnauba wax', 'cleared', 'carnauba'],
+  ['purple carrot juice concentrate', 'cleared', 'purpleCarrot'],
+  ['natural watermelon flavor', 'cleared', 'flavor'],
 ];
 
 const VC_NOTE =

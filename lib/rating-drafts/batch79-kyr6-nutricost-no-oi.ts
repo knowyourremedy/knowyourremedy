@@ -87,7 +87,7 @@ const METH = {
   sugar: "Methodology §5 Limited-risk (bare sugar — exact token; Caution; distinct from Cleared cane sugar; locked Sept 22, 2026). Not Avoid.",
   sunflowerFill: "Methodology §5 Cleared as non-gummy fill (sunflower oil on a capsule, softgel, tablet, or powder — not the gummy seed-oil High rule).",
   vegOilGummy: "Methodology §5 High (vegetable oil in a gummy — seed/industrial oil gummy row).",
-  wax: "Methodology §5 Cleared (beeswax / carnauba wax)",
+  wax: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
 } as const;
 
 function flag(

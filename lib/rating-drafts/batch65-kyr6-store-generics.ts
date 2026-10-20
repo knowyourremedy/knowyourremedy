@@ -178,7 +178,7 @@ const METH = {
   starch:
     'Methodology §5 Cleared (pregelatinized / corn / potato / tapioca starch / similar simple starches)',
   gelatin:
-    'Methodology §5 Cleared (lactose, gelatin, carnauba wax, beeswax, purified water)',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin / organic glycerin)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin — locked v1.6)',
   citrate:

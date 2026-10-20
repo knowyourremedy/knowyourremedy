@@ -70,7 +70,7 @@ const MF120_FLAGS: IngredientFlag[] = [
 ];
 
 const NEURIVA_FLAGS: IngredientFlag[] = [
-  flag(NEURIVA_PANEL, 'Rice bran', 'limited', METH.riceBranOi),
+  flag(NEURIVA_PANEL, 'Rice bran', 'cleared', METH.riceBranOi),
   flag(NEURIVA_PANEL, 'Hypromellose', 'cleared', METH.hpmc),
   flag(NEURIVA_PANEL, 'Carrageenan', 'limited', METH.carrageenan),
   flag(NEURIVA_PANEL, 'Titanium dioxide', 'high', METH.tio2),

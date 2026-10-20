@@ -63,7 +63,7 @@ const METH = {
   caramel:
     'Methodology §5 High (caramel color, undisclosed class). The label prints caramel color and does not name Class I or II. Not caramel sugar syrup.',
   carbomer: 'Methodology §5 Cleared (carbomer).',
-  carnauba: 'Methodology §5 Cleared (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   carrageenan: 'Methodology §5 Limited (carrageenan).',
   citric: 'Methodology §5 Cleared (citric acid / citrate salts as fillers or buffers).',
   citrusPectin:
@@ -115,7 +115,7 @@ const METH = {
     'Methodology §5 Cleared (simple starch filler). Bare starch as a filler maps here (Sept 25, 2026, a761f55). The panel prints starch. Caution unspecified starch stays Caution. Not a new grade.',
   stearic: 'Methodology §5 Cleared (stearic acid).',
   sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
   tio2: 'Methodology §5 High (titanium dioxide).',
   triethyl: 'Methodology §5 Cleared (triethyl citrate).',
@@ -316,7 +316,7 @@ const ELDER_FLAGS: Compact['flags'] = [
   ['polydextrose', 'limited', 'polydextrose'],
   ['purified water', 'cleared', 'water'],
   ['sodium hexametophosphate', 'limited', 'sodiumHex'],
-  ['sucrose', 'limited', 'sucrose'],
+  ['sucrose', 'cleared', 'sucrose'],
   ['trisodium citrate', 'cleared', 'trisodium'],
   ['turmeric', 'limited', 'bareTurmeric'],
   ['vegetable oil', 'high', 'vegOilGummy'],

@@ -103,7 +103,7 @@ const METH = {
   tartaric: "Methodology §5 Cleared (tartaric acid)",
   vegCoat: "Methodology §5 Caution (unnamed coating powder — not the named HPMC+glycerin Cleared coat)",
   water: "Methodology §5 Cleared (purified water)",
-  wax: "Methodology §5 Cleared (beeswax / carnauba wax)",
+  wax: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
   zincOi: "Methodology §5 Limited-risk (zinc oxide as an Other Ingredient — exact token; Caution; distinct from Cleared zinc oxide inactive/topical and from parked zinc-as-active; locked Sept 22, 2026). Not Avoid.",
 } as const;
 

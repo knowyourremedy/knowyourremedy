@@ -97,6 +97,8 @@ const METH = {
   edta: 'Methodology §5 Cleared (disodium EDTA, trace preservative/stabilizer)',
   cleared: 'Methodology §5 Cleared',
   organicFlavor: 'Methodology §5 Cleared (organic flavors)',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
 } as const;
 
 function flag(
@@ -700,7 +702,11 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
         'cleared',
         dailymed('b5fddd8f-a380-6e88-e053-2a95a90a6b89', METH.organicFlavor),
       ),
-      cleared('b5fddd8f-a380-6e88-e053-2a95a90a6b89', 'Carnauba wax (organic)'),
+      flag(
+        'Carnauba wax (organic)',
+        'cleared',
+        dailymed('b5fddd8f-a380-6e88-e053-2a95a90a6b89', METH.carnaubaT133u),
+      ),
       cleared('b5fddd8f-a380-6e88-e053-2a95a90a6b89', 'Dextrose (organic)'),
       flag(
         'Organic rice bran extract',
@@ -1774,7 +1780,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
         'moderate',
         dailymed('702f9786-7ce9-43e4-921d-e1db09612127', METH.peg),
       ),
-      cleared('702f9786-7ce9-43e4-921d-e1db09612127', 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed('702f9786-7ce9-43e4-921d-e1db09612127', METH.carnaubaT133u)),
       cleared('702f9786-7ce9-43e4-921d-e1db09612127', 'Croscarmellose sodium'),
       cleared('702f9786-7ce9-43e4-921d-e1db09612127', 'Hypromellose'),
       cleared('702f9786-7ce9-43e4-921d-e1db09612127', 'Magnesium stearate'),

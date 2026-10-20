@@ -38,7 +38,7 @@ const METH = {
     'Methodology §5 Cleared (Demineralized Water — purified water / deionized water; t90u Oct 17, 2026).',
   distilledWater:
     'Methodology §5 Cleared (Distilled Water — purified water / bare water / deionized water / demineralized water; t99u Oct 17, 2026).',
-  flavors: 'Methodology §5 Limited-risk (natural flavors opacity — Natural Flavor / Natural Flavors).',
+  flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   fructose: 'Methodology §5 Limited (fructose as sweetener).',
   gelatin: 'Methodology §5 Cleared (gelatin / Fish Gelatin / Gelatin Capsule).',
   gelatinCap: 'Methodology §5 Cleared (gelatin / Gelatin Capsule).',
@@ -56,7 +56,7 @@ const METH = {
   monkFruit:
     'Methodology §5 Cleared (monk fruit / mogrosides, high-purity extract — Organic Monk Fruit Extract sibling row).',
   namedPeppermintFlavor:
-    'Methodology §5 Caution (peppermint flavor / Natural Peppermint Flavor — flavor family; Sept 24–25, 2026).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   pectin: 'Methodology §5 Cleared (pectin).',
   potassiumSorbate:
     'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate).',

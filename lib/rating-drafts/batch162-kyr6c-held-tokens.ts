@@ -106,7 +106,7 @@ function wildLine(panel: string): IngredientFlag[] {
     flag(panel, 'Polyvinyl alcohol', 'cleared', METH.pva),
     flag(panel, 'Propylene glycol', 'moderate', METH.pg),
     flag(panel, 'Sucralose', 'moderate', METH.sucralose),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
     flag(panel, 'Titanium dioxide', 'high', METH.tio2),
     flag(panel, 'Triacetin', 'cleared', METH.triacetin),
@@ -117,7 +117,7 @@ function wildLine(panel: string): IngredientFlag[] {
 function sleepLine(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Glucose syrup', 'cleared', METH.glucoseSyrup),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Water', 'cleared', METH.water),
     flag(panel, 'Natural flavor', 'limited', METH.naturalFlavor),
     flag(panel, 'Pectin', 'cleared', METH.pectin),
@@ -141,7 +141,7 @@ function ultraFruit(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }
@@ -155,7 +155,7 @@ function ultraTropical(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }
@@ -166,7 +166,7 @@ function ultraPeppermint(panel: string): IngredientFlag[] {
     flag(panel, 'Flavor', 'limited', METH.flavor),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }
@@ -180,7 +180,7 @@ function ultraBerries(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }
@@ -196,7 +196,7 @@ function extraFruit(panel: string): IngredientFlag[] {
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium polyphosphate', 'limited', METH.polyphosphate),
-    flag(panel, 'Sucrose', 'limited', METH.sucrose),
+    flag(panel, 'Sucrose', 'cleared', METH.sucrose),
     flag(panel, 'Talc', 'high', METH.talc),
   ];
 }

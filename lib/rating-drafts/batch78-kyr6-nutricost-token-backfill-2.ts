@@ -69,7 +69,7 @@ const METH = {
   grapeColor: "Methodology §5 Cleared (grape (fruit) powder (for color) — exact token as color; named plant color; distinct from Cleared grape seed extract and from Cleared grape seed oil as cream fill; not a synthetic dye; locked Sept 22, 2026).",
   himalayan: "Methodology §5 Cleared (Himalayan rock salt — exact token; salt / saline neighborhood with sodium chloride; not a grade driver; locked Sept 22, 2026).",
   hpmc: "Methodology §5 Cleared (hypromellose / HPMC / cellulose capsule)",
-  hvoOi: "Methodology §5 Limited-risk (hydrogenated vegetable oil as an Other Ingredient — exact token; Caution; cream fill stays Cleared; gummy fat blend stays Avoid; locked Sept 22, 2026). This row is not a gummy. Not Avoid.",
+  hvoOi: "Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.",
   juiceColor: "Methodology §5 Cleared (named fruit-or-vegetable juice concentrate as color — black carrot / named fruit-or-vegetable juice concentrate as COLOR; not a synthetic dye; locked Sept 14, 2026). Label string: fruit and vegetable juice concentrate (for color).",
   lactose: "Methodology §5 Cleared (lactose)",
   lecithin: "Methodology §5 Cleared (lecithin — soy / sunflower). Soy lecithin is an allergen disclosure, not a grade change. Not bare soy.",
@@ -95,7 +95,7 @@ const METH = {
   tartaric: "Methodology §5 Cleared (tartaric acid)",
   tio2: "Methodology §5 High (titanium dioxide / E171 / titanium oxide). Titanium oxide, when it is titanium dioxide, sits on this same High/Avoid row (Sept 22, 2026). Do not invent a second class. FDA allow is not Clean.",
   vegOilGummy: "Methodology §5 High (vegetable oil in a gummy — seed/industrial oil gummy row). Not the Caution hydrogenated-vegetable-oil Other Ingredient row. Gummy hydrogenated vegetable oil fat blend stays Avoid.",
-  wax: "Methodology §5 Cleared (beeswax / carnauba wax)",
+  wax: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
 } as const;
 
 function flag(

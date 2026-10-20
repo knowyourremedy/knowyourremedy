@@ -51,7 +51,7 @@ const METH = {
   bha: 'Methodology §5 High (BHA / butylated hydroxyanisole).',
   carbomer:
     'Methodology §5 Cleared (carbomer / carbomer homopolymer, including type B and type C).',
-  carnauba: 'Methodology §5 Cleared (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose:
     'Methodology §5 Cleared (microcrystalline cellulose / croscarmellose sodium / cellulose gum / sodium carboxymethylcellulose).',
   citrate:

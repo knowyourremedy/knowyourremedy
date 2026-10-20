@@ -115,7 +115,7 @@ const METH = {
   coconutOil:
     'Methodology §5 — coconut oil / fractionated coconut oil alone is NOT the gummy seed/industrial-oil High rule',
   chewableOil:
-    'Methodology §5 — hydrogenated / seed oil in a CHEWABLE TABLET is NOT the gummy seed/industrial-oil High rule',
+    'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   organicMaltodextrin:
     'Methodology §5 Cleared — organic maltodextrin is NOT the Limited non-organic maltodextrin row',
   cleared: 'Methodology §5 Cleared',

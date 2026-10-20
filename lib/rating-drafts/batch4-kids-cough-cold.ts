@@ -66,7 +66,7 @@ const METH = {
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   sorbate: 'Methodology §5 Limited-risk (synthetic preservatives — potassium sorbate)',
-  flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   cleared: 'Methodology §5 Cleared',

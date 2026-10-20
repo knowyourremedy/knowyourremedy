@@ -130,7 +130,7 @@ const PPP_FLAGS: FlagSpec[] = [
   ['Cane Sugar', 'cleared', 'caneSugar'],
   ['Water', 'cleared', 'water'],
   ['Pectin', 'cleared', 'gums'],
-  ['Medium Chain Triglyceride (MCT) Oil', 'cleared', 'mctOil'],
+  ['Medium Chain Triglyceride (MCT) Oil', 'limited', 'mctOil'],
   ['Natural Flavors', 'limited', 'natFlavors'],
   ['Citric Acid', 'cleared', 'citric'],
   ['Sunflower Lecithin', 'cleared', 'lecithin'],

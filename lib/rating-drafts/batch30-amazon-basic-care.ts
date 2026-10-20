@@ -334,6 +334,8 @@ const METH = {
     'Methodology §5 Cleared (stearic acid / palmitostearic acid / palmitic + stearic mix — Cleared-by-class with calcium stearate; same stearate-family class)',
   ungraded:
     'Not in Methodology §5 — ungraded (v1.6 intake). Mentioned as present; not graded on the spot; not used to invent Clean or Avoid',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
@@ -732,7 +734,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_R2, 'Hypromellose'),
       cleared(SET_R2, 'Povidone'),
       cleared(SET_R2, 'Stearic acid'),
-      cleared(SET_R2, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_R2, METH.carnaubaT133u)),
     ],
     verdict: 'caution',
 
@@ -1683,7 +1685,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_FAMO, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_FAMO, METH.talc)),
-      cleared(SET_FAMO, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_FAMO, METH.carnaubaT133u)),
       cleared(SET_FAMO, 'Hypromellose'),
       cleared(SET_FAMO, 'Magnesium stearate'),
       cleared(SET_FAMO, 'Microcrystalline cellulose'),

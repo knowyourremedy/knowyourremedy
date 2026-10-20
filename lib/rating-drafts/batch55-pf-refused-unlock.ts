@@ -96,6 +96,7 @@ const OLEORESIN_TAP =
   'Oleoresin turmeric is the locked exact Caution token. Distinct from Cleared turmeric / curcumin as a color only. Do not Clear this carton on the color row.';
 
 const METH = {
+  carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   tio2: 'Methodology §5 High-tier (titanium dioxide — E171; EU food-additive ban after EFSA genotoxicity data-gap). No topical exception on this row.',
   peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
@@ -135,7 +136,7 @@ const METH = {
   hpmc: 'Methodology §5 Cleared (hypromellose / HPMC / hydroxypropyl methylcellulose)',
   stearate:
     'Methodology §5 Cleared (magnesium stearate / stearic acid / calcium stearate — stearate-family lubricant)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   pectin:
     'Methodology §5 Cleared (xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum — standard food gums)',
   citrate:
@@ -433,7 +434,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
         'cleared',
         dailymed(SET.aplusOxides, METH.glycerylDibehenate),
       ),
-      cleared(SET.aplusOxides, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.aplusOxides, METH.carnaubaT133u)),
       cleared(SET.aplusOxides, 'Croscarmellose sodium'),
       cleared(SET.aplusOxides, 'Crospovidone'),
       cleared(SET.aplusOxides, 'Hypromellose'),
@@ -483,7 +484,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
         'cleared',
         dailymed(SET.aplusPlain, METH.glycerylDibehenate),
       ),
-      cleared(SET.aplusPlain, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.aplusPlain, METH.carnaubaT133u)),
       cleared(SET.aplusPlain, 'Croscarmellose sodium'),
       cleared(SET.aplusPlain, 'Crospovidone'),
       cleared(SET.aplusPlain, 'Hypromellose'),

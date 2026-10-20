@@ -65,7 +65,7 @@ const METH = {
   bha: 'Methodology §5 High (BHA / butylated hydroxyanisole).',
   capsaicin:
     'Methodology §5 Caution (capsaicin when listed as inactive). Menthol on this carton is the active, not this row.',
-  carnauba: 'Methodology §5 Cleared (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose:
     'Methodology §5 Cleared (microcrystalline cellulose / croscarmellose sodium).',
   cornStarch: 'Methodology §5 Cleared (corn starch — named simple starch).',

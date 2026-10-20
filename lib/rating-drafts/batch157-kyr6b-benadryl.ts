@@ -89,7 +89,7 @@ function dyedFlags(setid: string): IngredientFlag[] {
     flag('Poloxamer 407', 'limited', cite(setid, METH.poloxamer)),
     flag('Flavors', 'limited', cite(setid, METH.flavors)),
     flag('Sodium benzoate', 'limited', cite(setid, METH.benzoate)),
-    flag('Sucrose', 'limited', cite(setid, METH.sucrose)),
+    flag('Sucrose', 'cleared', cite(setid, METH.sucrose)),
     cleared(setid, 'Anhydrous citric acid', METH.citric),
     cleared(setid, 'Glycerin', METH.glycerin),
     cleared(setid, 'Purified water', METH.water),
