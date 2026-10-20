@@ -11,19 +11,22 @@ const SUPPLEMENT = 'Supplement' as const;
 const COLD = 'Cold & Flu';
 
 const METH = {
-  appleFlavor: 'Methodology §5 Caution (natural apple flavor — named flavor). Exact natural flavors is a different line.',
+  appleFlavor:
+    'Methodology §5 Cleared (Natural apple flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
   berryFlavor:
-    'Methodology §5 Caution (natural mixed berry/elderberry flavor — named flavor). Exact natural flavors is a different line.',
+    'Methodology §5 Cleared (Natural mixed berry/elderberry flavor — founder lock t132u Oct 20, 2026; named multi-fruit flavor).',
   brownRice: 'Methodology §5 Cleared (organic brown rice syrup — rice syrup / brown rice food-state).',
   chicory: 'Methodology §5 Cleared (chicory root fiber — inulin family).',
   citric: 'Methodology §5 Cleared (citric acid).',
   fruit: 'Methodology §5 Cleared (apple puree, strawberry puree, and blackberry puree — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   honey: 'Methodology §5 Cleared (honey, oral sweetener).',
-  honeyFlavor: 'Methodology §5 Caution (natural honey flavor — named flavor). Exact natural flavors is a different line. It is not the honey sweetener.',
+  honeyFlavor:
+    'Methodology §5 Cleared (Natural honey flavor — founder lock t132u Oct 20, 2026; named flavor; not the honey sweetener).',
   juiceColor: 'Methodology §5 Cleared (fruit and vegetable juices for color — named fruit-or-vegetable juice as color).',
   malic: 'Methodology §5 Cleared (malic acid — organic acid with citric).',
   monk: 'Methodology §5 Cleared (monk fruit extract — high-purity monk fruit / mogrosides).',
-  strawberryFlavor: 'Methodology §5 Caution (natural strawberry flavor — named flavor). Exact natural flavors is a different line.',
+  strawberryFlavor:
+    'Methodology §5 Cleared (Natural strawberry flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
   tapioca: 'Methodology §5 Cleared (tapioca fiber — same fiber row as soluble tapioca fiber). Not tapioca dextrin.',
 } as const;
 
@@ -69,16 +72,16 @@ export const BATCH169_KYR6C_LOLLIPOPS: RatingRecord[] = [
       flag(PANEL, 'Apple puree', 'cleared', METH.fruit),
       flag(PANEL, 'Strawberry puree', 'cleared', METH.fruit),
       flag(PANEL, 'Blackberry puree', 'cleared', METH.fruit),
-      flag(PANEL, 'Natural apple flavor', 'limited', METH.appleFlavor),
-      flag(PANEL, 'Natural strawberry flavor', 'limited', METH.strawberryFlavor),
-      flag(PANEL, 'Natural mixed berry/elderberry flavor', 'limited', METH.berryFlavor),
+      flag(PANEL, 'Natural apple flavor', 'cleared', METH.appleFlavor),
+      flag(PANEL, 'Natural strawberry flavor', 'cleared', METH.strawberryFlavor),
+      flag(PANEL, 'Natural mixed berry/elderberry flavor', 'cleared', METH.berryFlavor),
       flag(PANEL, 'Citric acid', 'cleared', METH.citric),
       flag(PANEL, 'Malic acid', 'cleared', METH.malic),
       flag(PANEL, 'Fruit and vegetable juices (for color)', 'cleared', METH.juiceColor),
       flag(PANEL, 'Monk fruit extract', 'cleared', METH.monk),
-      flag(PANEL, 'Natural honey flavor', 'limited', METH.honeyFlavor),
+      flag(PANEL, 'Natural honey flavor', 'cleared', METH.honeyFlavor),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     retailers: [],
     cleanAlternatives: LOLLIPOP_ALTS,
     sourcesGeneral: [
@@ -100,7 +103,7 @@ if (ROWS.length !== 1) throw new Error(`batch169 row count ${ROWS.length}`);
 
 const record = ROWS[0];
 if (record.id !== 'beekeepers-b169-lollipops-15') throw new Error('batch169 id');
-if (record.verdict !== 'caution') throw new Error('batch169 verdict');
+if (record.verdict !== 'clean') throw new Error('batch169 verdict');
 if (record.barcode !== '834706000435' || !upcOk(record.barcode)) throw new Error('batch169 upc');
 if (record.formulaId !== 'beekeepers-b169-lollipops') throw new Error('batch169 formula');
 if (record.honestNote) throw new Error('batch169 note');
@@ -118,6 +121,4 @@ for (const ingredient of record.inactiveIngredients) {
   }
 }
 const limited = record.inactiveIngredients.filter((item) => item.riskLevel === 'limited').map((item) => item.name);
-if (limited.join('|') !== 'Natural apple flavor|Natural strawberry flavor|Natural mixed berry/elderberry flavor|Natural honey flavor') {
-  throw new Error(`batch169 limited ${limited.join('|')}`);
-}
+if (limited.length !== 0) throw new Error(`batch169 limited ${limited.join('|')}`);

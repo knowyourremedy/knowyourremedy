@@ -22,7 +22,7 @@ const METH = {
     'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate).',
   purifiedWater: 'Methodology §5 Cleared (purified water / distilled water).',
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Cleared rice hull / rice bran; locked Sept 16, 2026).',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   silica: 'Methodology §5 Caution (silica / silicon dioxide, oral).',
   veganCapsule:
     'Methodology §5 Caution (Vegan Capsule — unnamed vegetable / vegetarian capsule shell; t90u Oct 17, 2026).',
@@ -75,7 +75,7 @@ const SPECS: RowSpec[] = [
     flags: [
       ['Gelatin Capsule', 'cleared', 'gelatinCap'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
       ['Silica', 'limited', 'silica'],
     ],
   },

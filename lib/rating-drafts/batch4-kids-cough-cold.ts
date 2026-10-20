@@ -548,7 +548,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Natural grape flavor',
-        'limited',
+        'cleared',
         dailymed('798e2a4d-da2d-4bbd-a9b8-574490ef7357', METH.flavors),
       ),
       flag(

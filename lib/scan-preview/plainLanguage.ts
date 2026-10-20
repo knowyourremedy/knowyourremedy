@@ -1091,8 +1091,22 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('The label says vegetable capsule and does not name cellulose or hypromellose. A named cellulose capsule is a different line.', level);
   }
 
+  if (/^rice powder$|^organic rice powder$/.test(n)) {
+    return close(
+      'Rice powder is a food-state rice filler. Under the t132u founder lock it is Cleared, distinct from Caution rice flour.',
+      level,
+    );
+  }
+
   if (/rice flour/.test(n)) {
     return close('Rice flour is a flour. It is not rice hull or rice bran. Those named forms are a different grade.', level);
+  }
+
+  if (/^natural\s+.+\s+flavor$/i.test(n) && !/^natural\s+flavors?$/i.test(n) && !/natural and artificial/i.test(n)) {
+    return close(
+      'This names the fruit in the flavor. Under the t132u founder lock, named Natural [fruit] Flavor is Cleared; bare Natural flavor or Natural flavors is a different line.',
+      level,
+    );
   }
 
   if (/carnauba/.test(n)) {

@@ -245,7 +245,7 @@ export const BATCH167_KYR6C_COUGH_NIGHT_FEVER: RatingRecord[] = [
       flag(FEVER, 'Benzoic acid', 'limited', METH.benzoic),
       flag(FEVER, 'Carboxymethylcellulose', 'cleared', METH.cmc),
       flag(FEVER, 'Glycerin', 'cleared', METH.glycerin),
-      flag(FEVER, 'Natural berry flavor', 'limited', METH.flavorNamed),
+      flag(FEVER, 'Natural berry flavor', 'cleared', METH.flavorNamed),
       flag(FEVER, 'Microcrystalline cellulose', 'cleared', METH.mcc),
       flag(FEVER, 'Sucrose', 'limited', METH.sucrose),
       flag(FEVER, 'Sodium benzoate', 'limited', METH.benzoate),

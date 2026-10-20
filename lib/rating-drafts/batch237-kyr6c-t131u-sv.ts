@@ -20,7 +20,7 @@ const METH = {
   whiteBeeswax: 'Methodology §5 Cleared (white beeswax — beeswax / wax row).',
   tio2: 'Methodology §5 Avoid (titanium dioxide as color; EU 2022 food-additive ban; EFSA genotoxicity data gap).',
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Cleared rice hull / rice bran).',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   vegMagStearate:
     'Methodology §5 Cleared (vegetable magnesium stearate — t102u alias to stearate-family row).',
   silica: 'Methodology §5 Caution (silica / silicon dioxide oral nanoparticle data-gap cap; EFSA 2018).',
@@ -129,7 +129,7 @@ export const BATCH237_KYR6C_T131U_SV: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(PANEL_ACV, 'Gelatin', 'cleared', 'gelatin'),
-      flag(PANEL_ACV, 'Rice Powder', 'limited', 'ricePowder'),
+      flag(PANEL_ACV, 'Rice Powder', 'cleared', 'ricePowder'),
       flag(PANEL_ACV, 'Vegetable Magnesium Stearate', 'cleared', 'vegMagStearate'),
       flag(PANEL_ACV, 'Silica', 'limited', 'silica'),
     ],

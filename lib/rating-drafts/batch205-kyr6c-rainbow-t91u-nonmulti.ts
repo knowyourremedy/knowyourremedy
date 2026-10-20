@@ -63,7 +63,7 @@ const METH = {
   riceExtract:
     'Methodology §5 Limited-risk (unspecified rice extract / Organic Rice Extract Blend — opacity).',
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Cleared rice hull / rice bran; locked Sept 16, 2026).',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   salt: 'Methodology §5 Cleared (sodium chloride / sea salt).',
   seedOilGummy: `Methodology §5 High-tier (seed/industrial oils in gummies / soft chews — sunflower seed oil, palm oil). ${GUMMY_OIL_TAP}`,
   silica: 'Methodology §5 Caution (silica / silicon dioxide, oral).',
@@ -127,7 +127,7 @@ const SPECS: RowSpec[] = [
     oiLine:
       'Rice Powder, Vegan Capsule, Vegetable Magnesium Stearate, Silica.',
     flags: [
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
       ['Vegan Capsule', 'limited', 'veganCapsule'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],
@@ -395,7 +395,7 @@ const SPECS: RowSpec[] = [
     active: 'Lithium orotate',
     oiLine: 'Rice Powder, Vegan Capsule, Vegetable Magnesium Stearate.',
     flags: [
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
       ['Vegan Capsule', 'limited', 'veganCapsule'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
     ],
@@ -586,7 +586,7 @@ const SPECS: RowSpec[] = [
     oiLine: 'Gelatin Capsule, Rice Powder, Vegetable Magnesium Stearate, Silica.',
     flags: [
       ['Gelatin Capsule', 'cleared', 'gelatinCap'],
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],
     ],
@@ -604,7 +604,7 @@ const SPECS: RowSpec[] = [
     active: 'Mucuna + ashwagandha blend',
     oiLine: 'Rice Powder, Vegan Capsule, Vegetable Magnesium Stearate, Silica.',
     flags: [
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
       ['Vegan Capsule', 'limited', 'veganCapsule'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],

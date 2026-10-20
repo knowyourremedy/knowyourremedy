@@ -1336,7 +1336,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     inactiveIngredients: syrupBase('7923e59a-f62c-44df-e053-2991aa0afc1e', [
       flag(
         'Natural grape flavor',
-        'limited',
+        'cleared',
         dailymed('7923e59a-f62c-44df-e053-2991aa0afc1e', METH.flavors),
       ),
     ]),
@@ -1377,7 +1377,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     inactiveIngredients: syrupBase('d0eb15c6-bf12-19b7-e053-2a95a90abbe0', [
       flag(
         'Natural grape flavor',
-        'limited',
+        'cleared',
         dailymed('d0eb15c6-bf12-19b7-e053-2a95a90abbe0', METH.flavors),
       ),
     ]),
@@ -1419,7 +1419,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     inactiveIngredients: syrupBase('d83e7877-f599-b364-e053-2995a90ab35f', [
       flag(
         'Natural grape flavor',
-        'limited',
+        'cleared',
         dailymed('d83e7877-f599-b364-e053-2995a90ab35f', METH.flavors),
       ),
     ]),

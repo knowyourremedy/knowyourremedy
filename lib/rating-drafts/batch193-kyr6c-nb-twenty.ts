@@ -48,7 +48,7 @@ export const BATCH193_KYR6C_NB_TWENTY: RatingRecord[] = [
       flag(B12_LIQUID_PANEL, 'Purified Water', 'cleared', METH.water),
       flag(B12_LIQUID_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
       flag(B12_LIQUID_PANEL, 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag(B12_LIQUID_PANEL, 'Natural Berry Flavor', 'limited', METH.flavor),
+      flag(B12_LIQUID_PANEL, 'Natural Berry Flavor', 'cleared', METH.flavor),
       flag(B12_LIQUID_PANEL, 'Citric Acid', 'cleared', METH.citric),
       flag(B12_LIQUID_PANEL, 'Potassium Sorbate', 'limited', METH.potassiumSorbate),
     ],

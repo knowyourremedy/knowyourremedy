@@ -207,6 +207,8 @@ const METH = {
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity). Product display key is caution when this is the worst inactive (Limited-only never Avoid).',
+  namedFruitFlavor:
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 prior-lock re-eval).',
   juiceBase:
     'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   sorbitol:
@@ -843,13 +845,13 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: 'Fish oil omega-3 (EPA / DHA)', strength: '1280mg omega-3s per 2 softgels' },
     ],
     inactiveIngredients: [
-      flag('Natural lemon flavor', 'limited', labelCite(CITE.superO3, METH.flavors)),
+      flag('Natural lemon flavor', 'cleared', labelCite(CITE.superO3, METH.namedFruitFlavor)),
       flag('Gelatin', 'cleared', labelCite(CITE.superO3, METH.gelatin)),
       flag('Glycerin', 'cleared', labelCite(CITE.superO3, METH.glycerin)),
       flag('Water', 'cleared', labelCite(CITE.superO3, METH.water)),
       flag('D-Alpha tocopherol', 'cleared', labelCite(CITE.superO3, METH.tocopherols)),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     cleanAlternatives: OMEGA_ALTS,
     sourcesGeneral: [`${CITE.superO3} — ${UNVERIFIED_NOTE}`],
@@ -920,8 +922,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: 'Vitamin B12 (methylcobalamin)', strength: '5000mcg' },
     ],
     inactiveIngredients: [
-      flag('Natural raspberry flavor', 'limited', labelCite(CITE.b12, METH.flavors)),
-      flag('Natural berry flavor', 'limited', labelCite(CITE.b12, METH.flavors)),
+      flag('Natural raspberry flavor', 'cleared', labelCite(CITE.b12, METH.namedFruitFlavor)),
+      flag('Natural berry flavor', 'cleared', labelCite(CITE.b12, METH.namedFruitFlavor)),
       flag('Xylitol', 'limited', labelCite(CITE.b12, METH.sorbitol)),
       flag('Mannitol', 'limited', labelCite(CITE.b12, METH.sorbitol)),
       flag('Stearic acid (C18:0)', 'cleared', labelCite(CITE.b12, METH.stearic)),
@@ -1495,10 +1497,10 @@ export const BATCH63_REFUSED_NOT_WRITTEN: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH63_KYR6_ELEMENTS_BASICS;
 if (_ROWS.length !== 35) throw new Error('batch63 tally drift: expected 35 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 4) {
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 5) {
   throw new Error('batch63 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 21) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 20) {
   throw new Error('batch63 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 10) {
