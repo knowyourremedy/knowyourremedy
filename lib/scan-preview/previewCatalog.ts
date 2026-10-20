@@ -2933,6 +2933,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Metabolism Booster page bottle prints 60 tablets (UPC 074312012488).
   // The catalog row is 30 tablets. Do not glue the 60.
   'natures-bounty-b196-metabolism-booster-30': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-20 4:15 AM PT batch 2.
+  // Same Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // Methylcobalamin page bottle prints 5,000 mcg (UPC 074312719509).
+  // The catalog row is 1,000 mcg, UPC 074312016202. Do not glue the 5,000.
+  'natures-bounty-b197-b12-methyl-qd-60': brandMark('natures-bounty-mark.png'),
+  // Vitamin D3 1,000 IU page bottle prints 100 softgels.
+  // The catalog row is 120 softgels. Do not glue the 100.
+  'natures-bounty-b197-d3-1000-120': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16979,6 +16987,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-bounty-b197-coq10-200-45': catalogShot('natures-bounty-b197-coq10-200-45.jpg'),
   // Co Q-10 200 mg, 80 softgels. Not the 45-count.
   'natures-bounty-b197-coq10-200-80': catalogShot('natures-bounty-b197-coq10-200-80.jpg'),
+  // Vitamins night run 2026-10-20 4:15 AM PT batch 2.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Co Q-10 400 mg, 39 softgels. Not the 200 mg 45 or 80.
+  'natures-bounty-b197-coq10-400-39': catalogShot('natures-bounty-b197-coq10-400-39.jpg'),
+  // Echinacea 400 mg, 100 capsules.
+  'natures-bounty-b197-echinacea-400-100': catalogShot('natures-bounty-b197-echinacea-400-100.jpg'),
+  // Flush-free niacin 500 mg, 120 capsules.
+  'natures-bounty-b197-flush-free-niacin-500-120': catalogShot('natures-bounty-b197-flush-free-niacin-500-120.jpg'),
+  // L-Arginine 1,000 mg, 50 softgels.
+  'natures-bounty-b197-l-arginine-1000-50': catalogShot('natures-bounty-b197-l-arginine-1000-50.jpg'),
+  // L-Lysine 1,000 mg, 60 tablets.
+  'natures-bounty-b197-l-lysine-1000-60': catalogShot('natures-bounty-b197-l-lysine-1000-60.jpg'),
+  // Lutein 40 mg, 30 softgels. Not the 20 mg 40.
+  'natures-bounty-b197-lutein-40-30': catalogShot('natures-bounty-b197-lutein-40-30.jpg'),
+  // Lutein 20 mg, 40 softgels. Not the 40 mg 30.
+  'natures-bounty-b197-lutein-20-40': catalogShot('natures-bounty-b197-lutein-20-40.jpg'),
+  // Milk thistle 250 mg, 200 softgels.
+  'natures-bounty-b197-milk-thistle-250-200': catalogShot('natures-bounty-b197-milk-thistle-250-200.jpg'),
+  // Potassium 99 mg, 100 caplets.
+  'natures-bounty-b197-potassium-99-100': catalogShot('natures-bounty-b197-potassium-99-100.jpg'),
+  // Vitamin B-12 1,000 mcg, 200 tablets. Not the 100-count, the liquid, or the gummies.
+  'natures-bounty-b197-b12-1000-200': catalogShot('natures-bounty-b197-b12-1000-200.jpg'),
+  // Vitamin B-12 gummies 500 mcg, 90 gummies. Not the tablets.
+  'natures-bounty-b197-b12-gummies-90': catalogShot('natures-bounty-b197-b12-gummies-90.jpg'),
+  // Vitamin D3 2,000 IU, 150 softgels. Not the 350-count.
+  'natures-bounty-b197-d3-2000-150': catalogShot('natures-bounty-b197-d3-2000-150.jpg'),
+  // Vitamin D3 5,000 IU, 150 softgels. Not the 240-count.
+  'natures-bounty-b197-d3-5000-150': catalogShot('natures-bounty-b197-d3-5000-150.jpg'),
+  // Vitamin D3 10,000 IU, 72 softgels.
+  'natures-bounty-b197-d3-10000-72': catalogShot('natures-bounty-b197-d3-10000-72.jpg'),
+  // Vitamin E dl-alpha 400 IU, 120 softgels. Not the 1,000 IU 60.
+  'natures-bounty-b197-vitamin-e-400-120': catalogShot('natures-bounty-b197-vitamin-e-400-120.jpg'),
+  // Zinc 50 mg, 100 caplets.
+  'natures-bounty-b197-zinc-50-100': catalogShot('natures-bounty-b197-zinc-50-100.jpg'),
+  // Ginkgo biloba 60 mg, 200 capsules.
+  'natures-bounty-b198-ginkgo-60-200': catalogShot('natures-bounty-b198-ginkgo-60-200.jpg'),
+  // Green tea extract 315 mg, 100 capsules.
+  'natures-bounty-b198-green-tea-315-100': catalogShot('natures-bounty-b198-green-tea-315-100.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37798,12 +37844,93 @@ assertBrandMark(
   if (!cranberry?.url.endsWith('/natures-bounty-mark.png') || cranberry.verifiedSku) {
     throw new Error('cranberry gummies 150 must use the Nature\'s Bounty mark, not the 120-count bottle');
   }
+  const batch1020f: [string, string, string][] = [
+    ['natures-bounty-b197-coq10-400-39', "Nature's Bounty", 'natures-bounty-b197-coq10-400-39.jpg'],
+    ['natures-bounty-b197-echinacea-400-100', "Nature's Bounty", 'natures-bounty-b197-echinacea-400-100.jpg'],
+    ['natures-bounty-b197-flush-free-niacin-500-120', "Nature's Bounty", 'natures-bounty-b197-flush-free-niacin-500-120.jpg'],
+    ['natures-bounty-b197-l-arginine-1000-50', "Nature's Bounty", 'natures-bounty-b197-l-arginine-1000-50.jpg'],
+    ['natures-bounty-b197-l-lysine-1000-60', "Nature's Bounty", 'natures-bounty-b197-l-lysine-1000-60.jpg'],
+    ['natures-bounty-b197-lutein-40-30', "Nature's Bounty", 'natures-bounty-b197-lutein-40-30.jpg'],
+    ['natures-bounty-b197-lutein-20-40', "Nature's Bounty", 'natures-bounty-b197-lutein-20-40.jpg'],
+    ['natures-bounty-b197-milk-thistle-250-200', "Nature's Bounty", 'natures-bounty-b197-milk-thistle-250-200.jpg'],
+    ['natures-bounty-b197-potassium-99-100', "Nature's Bounty", 'natures-bounty-b197-potassium-99-100.jpg'],
+    ['natures-bounty-b197-b12-1000-200', "Nature's Bounty", 'natures-bounty-b197-b12-1000-200.jpg'],
+    ['natures-bounty-b197-b12-gummies-90', "Nature's Bounty", 'natures-bounty-b197-b12-gummies-90.jpg'],
+    ['natures-bounty-b197-d3-2000-150', "Nature's Bounty", 'natures-bounty-b197-d3-2000-150.jpg'],
+    ['natures-bounty-b197-d3-5000-150', "Nature's Bounty", 'natures-bounty-b197-d3-5000-150.jpg'],
+    ['natures-bounty-b197-d3-10000-72', "Nature's Bounty", 'natures-bounty-b197-d3-10000-72.jpg'],
+    ['natures-bounty-b197-vitamin-e-400-120', "Nature's Bounty", 'natures-bounty-b197-vitamin-e-400-120.jpg'],
+    ['natures-bounty-b197-zinc-50-100', "Nature's Bounty", 'natures-bounty-b197-zinc-50-100.jpg'],
+    ['natures-bounty-b198-ginkgo-60-200', "Nature's Bounty", 'natures-bounty-b198-ginkgo-60-200.jpg'],
+    ['natures-bounty-b198-green-tea-315-100', "Nature's Bounty", 'natures-bounty-b198-green-tea-315-100.jpg'],
+  ];
+  const seen1020f = new Set<string>();
+  for (const [id, brand, file] of batch1020f) {
+    if (seen1020f.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020f.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('natures-bounty-b197-b12-methyl-qd-60', "Nature's Bounty", 'natures-bounty-mark.png');
+  assertBrandMark('natures-bounty-b197-d3-1000-120', "Nature's Bounty", 'natures-bounty-mark.png');
+  const groups1020f: [string, string, string][][] = [
+    [
+      ['natures-bounty-b197-coq10-200-45', 'natures-bounty-b197-coq10-200-45', "Nature's Bounty"],
+      ['natures-bounty-b197-coq10-200-80', 'natures-bounty-b197-coq10-200-80', "Nature's Bounty"],
+      ['natures-bounty-b197-coq10-400-39', 'natures-bounty-b197-coq10-400-39', "Nature's Bounty"],
+      ['natures-bounty-b196-advanced-triple-absorb-coq10-90', 'natures-bounty-b196-advanced-triple-absorb-coq10-90', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b197-lutein-40-30', 'natures-bounty-b197-lutein-40-30', "Nature's Bounty"],
+      ['natures-bounty-b197-lutein-20-40', 'natures-bounty-b197-lutein-20-40', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b192-b12-1000-100', 'natures-bounty-b192-b12-1000-100', "Nature's Bounty"],
+      ['natures-bounty-b193-b12-liquid-59', 'natures-bounty-b193-b12-liquid', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-b-12-2500-75', 'natures-bounty-b196-quick-dissolve-b-12-2500-75', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-b-12-5000-40', 'natures-bounty-b196-quick-dissolve-b-12-5000-40', "Nature's Bounty"],
+      ['natures-bounty-b197-b12-1000-200', 'natures-bounty-b197-b12-1000-200', "Nature's Bounty"],
+      ['natures-bounty-b197-b12-gummies-90', 'natures-bounty-b197-b12-gummies-90', "Nature's Bounty"],
+      ['natures-bounty-b197-b12-methyl-qd-60', 'natures-bounty-b197-b12-methyl-qd-60', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-vitamin-d3-1000-iu-250-250', 'natures-bounty-b196-vitamin-d3-1000-iu-250-250', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-d3-2000-iu-350-350', 'natures-bounty-b196-vitamin-d3-2000-iu-350-350', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-d3-5000-iu-240-240', 'natures-bounty-b196-vitamin-d3-5000-iu-240-240', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-d-gummies-45', 'natures-bounty-b196-vitamin-d-gummies-45', "Nature's Bounty"],
+      ['natures-bounty-b197-d3-2000-150', 'natures-bounty-b197-d3-2000-150', "Nature's Bounty"],
+      ['natures-bounty-b197-d3-5000-150', 'natures-bounty-b197-d3-5000-150', "Nature's Bounty"],
+      ['natures-bounty-b197-d3-10000-72', 'natures-bounty-b197-d3-10000-72', "Nature's Bounty"],
+      ['natures-bounty-b197-d3-1000-120', 'natures-bounty-b197-d3-1000-120', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-vitamin-e-pure-dl-alpha-60', 'natures-bounty-b196-vitamin-e-pure-dl-alpha-60', "Nature's Bounty"],
+      ['natures-bounty-b197-vitamin-e-400-120', 'natures-bounty-b197-vitamin-e-400-120', "Nature's Bounty"],
+    ],
+  ];
+  for (const group of groups1020f) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const methyl = previewOverlayImage({
+    id: 'natures-bounty-b197-b12-methyl-qd-60',
+    formulaId: 'natures-bounty-b197-b12-methyl-qd-60',
+    brand: "Nature's Bounty",
+  });
+  if (!methyl?.url.endsWith('/natures-bounty-mark.png') || methyl.verifiedSku) {
+    throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
+  }
   const nextLetter = previewOverlayImage({
-    id: 'natures-bounty-b197-coq10-400-39',
-    formulaId: 'natures-bounty-b197-coq10-400-39',
+    id: 'natures-bounty-b198-magnesium-400-75',
+    formulaId: 'natures-bounty-b198-magnesium-400-75',
     brand: "Nature's Bounty",
   });
   if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('Co Q-10 400 mg 39 must stay a letter until attempted');
+    throw new Error('magnesium 400 mg 75 must stay a letter until attempted');
   }
 }
