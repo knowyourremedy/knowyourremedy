@@ -2920,6 +2920,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Biotin 10,000 mcg softgels page prints 150 rapid release softgels.
   // The catalog row is 90 softgels. Do not glue the 150.
   'natures-bounty-b194-biotin-10000-90': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 2.
+  // Same Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // Adult multivitamin gummies page prints 150 gummies.
+  // The catalog row is 75 gummies. Do not glue the 150.
+  'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16888,6 +16893,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-bounty-b195-folic-acid-250': catalogShot('natures-bounty-b195-folic-acid-250.jpg'),
   // Melatonin 1 mg, 180 tablets. Not the 3 mg quick-dissolve.
   'natures-bounty-b195-melatonin-1-180': catalogShot('natures-bounty-b195-melatonin-1-180.jpg'),
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 2.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Odorless fish oil 2,400 mg, 90 softgels. Not the 1,000 mg 145-count.
+  'natures-bounty-b196-odorless-fish-oil-2400-mg-45': catalogShot('natures-bounty-b196-odorless-fish-oil-2400-mg-45.jpg'),
+  // Odorless garlic 1,000 mg, 100 softgels.
+  'natures-bounty-b196-odorless-garlic-1000-mg-100-100': catalogShot('natures-bounty-b196-odorless-garlic-1000-mg-100-100.jpg'),
+  // Flaxseed oil 1,200 mg, 125 softgels.
+  'natures-bounty-b196-organic-flaxseed-oil-1200-mg-125': catalogShot('natures-bounty-b196-organic-flaxseed-oil-1200-mg-125.jpg'),
+  // Quick dissolve B-12 2,500 mcg, natural cherry, 75 tablets. Not the 5,000 mcg.
+  'natures-bounty-b196-quick-dissolve-b-12-2500-75': catalogShot('natures-bounty-b196-quick-dissolve-b-12-2500-75.jpg'),
+  // Quick dissolve B-12 5,000 mcg, natural cherry, 40 tablets. Not the 2,500 mcg.
+  'natures-bounty-b196-quick-dissolve-b-12-5000-40': catalogShot('natures-bounty-b196-quick-dissolve-b-12-5000-40.jpg'),
+  // Quick dissolve biotin 5,000 mcg, natural strawberry, 60 tablets. Not the 10,000 mcg softgels.
+  'natures-bounty-b196-quick-dissolve-biotin-5000-mcg-60': catalogShot('natures-bounty-b196-quick-dissolve-biotin-5000-mcg-60.jpg'),
+  // Quick dissolve melatonin 3 mg, natural cherry, 240 tablets. Not the 1 mg 180.
+  'natures-bounty-b196-quick-dissolve-melatonin-3-mg-240': catalogShot('natures-bounty-b196-quick-dissolve-melatonin-3-mg-240.jpg'),
+  // Saw palmetto 450 mg, 250 capsules. Not the 100.
+  'natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250': catalogShot('natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250.jpg'),
+  // Selenium 200 mcg, 100 tablets.
+  'natures-bounty-b196-selenium-200-mcg-100-tablets-100': catalogShot('natures-bounty-b196-selenium-200-mcg-100-tablets-100.jpg'),
+  // St. John's Wort 300 mg, 100 capsules.
+  'natures-bounty-b196-st-johns-wort-300-mg-100-capsules-100': catalogShot('natures-bounty-b196-st-johns-wort-300-mg-100-capsules-100.jpg'),
+  // Turmeric 400 mg, 60 capsules.
+  'natures-bounty-b196-turmeric-400-mg-60-capsules-60': catalogShot('natures-bounty-b196-turmeric-400-mg-60-capsules-60.jpg'),
+  // Vitamin C 1,000 mg, 100 caplets. Not the 500 mg.
+  'natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100': catalogShot('natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100.jpg'),
+  // Vitamin C 500 mg with rose hips, 250 tablets. Not the 1,000 mg.
+  'natures-bounty-b196-vitamin-c-500-mg-250-tablets-250': catalogShot('natures-bounty-b196-vitamin-c-500-mg-250-tablets-250.jpg'),
+  // Vitamin D3 1,000 IU, 250 softgels. Not the 2,000 or the 5,000.
+  'natures-bounty-b196-vitamin-d3-1000-iu-250-250': catalogShot('natures-bounty-b196-vitamin-d3-1000-iu-250-250.jpg'),
+  // Vitamin D3 2,000 IU, 350 softgels. Not the 1,000 or the 5,000.
+  'natures-bounty-b196-vitamin-d3-2000-iu-350-350': catalogShot('natures-bounty-b196-vitamin-d3-2000-iu-350-350.jpg'),
+  // Vitamin D3 5,000 IU, 240 softgels. Not the 1,000 or the 2,000.
+  'natures-bounty-b196-vitamin-d3-5000-iu-240-240': catalogShot('natures-bounty-b196-vitamin-d3-5000-iu-240-240.jpg'),
+  // Vitamin E dl-alpha 1,000 IU, 60 softgels.
+  'natures-bounty-b196-vitamin-e-pure-dl-alpha-60': catalogShot('natures-bounty-b196-vitamin-e-pure-dl-alpha-60.jpg'),
+  // Women's multivitamin gummies, raspberry, 80 gummies.
+  'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40': catalogShot('natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40.jpg'),
+  // Saw palmetto 450 mg, 100 capsules. Not the 250.
+  'natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100': catalogShot('natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37525,5 +37570,112 @@ assertBrandMark(
   });
   if (!acvGummies?.url.endsWith('/natures-bounty-mark.png') || acvGummies.verifiedSku || acvGummies.url === acvTablets?.url) {
     throw new Error('ACV 60 gummies must use the Nature\'s Bounty mark, not the 200-count tablets');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 2.
+  // Sibling counts and strengths keep their own fronts.
+  // Adult multivitamin 75 stays on the mark. The 200-count fish oil stays a letter.
+  const batch1020d: [string, string, string][] = [
+    ['natures-bounty-b196-odorless-fish-oil-2400-mg-45', "Nature's Bounty", 'natures-bounty-b196-odorless-fish-oil-2400-mg-45.jpg'],
+    ['natures-bounty-b196-odorless-garlic-1000-mg-100-100', "Nature's Bounty", 'natures-bounty-b196-odorless-garlic-1000-mg-100-100.jpg'],
+    ['natures-bounty-b196-organic-flaxseed-oil-1200-mg-125', "Nature's Bounty", 'natures-bounty-b196-organic-flaxseed-oil-1200-mg-125.jpg'],
+    ['natures-bounty-b196-quick-dissolve-b-12-2500-75', "Nature's Bounty", 'natures-bounty-b196-quick-dissolve-b-12-2500-75.jpg'],
+    ['natures-bounty-b196-quick-dissolve-b-12-5000-40', "Nature's Bounty", 'natures-bounty-b196-quick-dissolve-b-12-5000-40.jpg'],
+    ['natures-bounty-b196-quick-dissolve-biotin-5000-mcg-60', "Nature's Bounty", 'natures-bounty-b196-quick-dissolve-biotin-5000-mcg-60.jpg'],
+    ['natures-bounty-b196-quick-dissolve-melatonin-3-mg-240', "Nature's Bounty", 'natures-bounty-b196-quick-dissolve-melatonin-3-mg-240.jpg'],
+    ['natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250', "Nature's Bounty", 'natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250.jpg'],
+    ['natures-bounty-b196-selenium-200-mcg-100-tablets-100', "Nature's Bounty", 'natures-bounty-b196-selenium-200-mcg-100-tablets-100.jpg'],
+    ['natures-bounty-b196-st-johns-wort-300-mg-100-capsules-100', "Nature's Bounty", 'natures-bounty-b196-st-johns-wort-300-mg-100-capsules-100.jpg'],
+    ['natures-bounty-b196-turmeric-400-mg-60-capsules-60', "Nature's Bounty", 'natures-bounty-b196-turmeric-400-mg-60-capsules-60.jpg'],
+    ['natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100', "Nature's Bounty", 'natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100.jpg'],
+    ['natures-bounty-b196-vitamin-c-500-mg-250-tablets-250', "Nature's Bounty", 'natures-bounty-b196-vitamin-c-500-mg-250-tablets-250.jpg'],
+    ['natures-bounty-b196-vitamin-d3-1000-iu-250-250', "Nature's Bounty", 'natures-bounty-b196-vitamin-d3-1000-iu-250-250.jpg'],
+    ['natures-bounty-b196-vitamin-d3-2000-iu-350-350', "Nature's Bounty", 'natures-bounty-b196-vitamin-d3-2000-iu-350-350.jpg'],
+    ['natures-bounty-b196-vitamin-d3-5000-iu-240-240', "Nature's Bounty", 'natures-bounty-b196-vitamin-d3-5000-iu-240-240.jpg'],
+    ['natures-bounty-b196-vitamin-e-pure-dl-alpha-60', "Nature's Bounty", 'natures-bounty-b196-vitamin-e-pure-dl-alpha-60.jpg'],
+    ['natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40', "Nature's Bounty", 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40.jpg'],
+    ['natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100', "Nature's Bounty", 'natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100.jpg'],
+  ];
+  const seen1020d = new Set<string>();
+  for (const [id, brand, file] of batch1020d) {
+    if (seen1020d.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020d.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark(
+    'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37',
+    "Nature's Bounty",
+    'natures-bounty-mark.png',
+  );
+  const groups1020d: [string, string, string][][] = [
+    [
+      ['natures-bounty-b193-fish-oil-145', 'natures-bounty-b193-fish-oil-145', "Nature's Bounty"],
+      ['natures-bounty-b196-odorless-fish-oil-2400-mg-45', 'natures-bounty-b196-odorless-fish-oil-2400-mg-45', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b192-b12-1000-100', 'natures-bounty-b192-b12-1000-100', "Nature's Bounty"],
+      ['natures-bounty-b193-b12-liquid-59', 'natures-bounty-b193-b12-liquid', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-b-12-2500-75', 'natures-bounty-b196-quick-dissolve-b-12-2500-75', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-b-12-5000-40', 'natures-bounty-b196-quick-dissolve-b-12-5000-40', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b195-melatonin-1-180', 'natures-bounty-b195-melatonin-1-180', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-melatonin-3-mg-240', 'natures-bounty-b196-quick-dissolve-melatonin-3-mg-240', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100', 'natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100', "Nature's Bounty"],
+      ['natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250', 'natures-bounty-b196-saw-palmetto-450-mg-250-capsules-250', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-vitamin-c-500-mg-250-tablets-250', 'natures-bounty-b196-vitamin-c-500-mg-250-tablets-250', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100', 'natures-bounty-b196-vitamin-c-1000-mg-100-caplets-100', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-vitamin-d3-1000-iu-250-250', 'natures-bounty-b196-vitamin-d3-1000-iu-250-250', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-d3-2000-iu-350-350', 'natures-bounty-b196-vitamin-d3-2000-iu-350-350', "Nature's Bounty"],
+      ['natures-bounty-b196-vitamin-d3-5000-iu-240-240', 'natures-bounty-b196-vitamin-d3-5000-iu-240-240', "Nature's Bounty"],
+    ],
+  ];
+  for (const group of groups1020d) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const adult75 = previewOverlayImage({
+    id: 'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37',
+    formulaId: 'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37',
+    brand: "Nature's Bounty",
+  });
+  const womens80 = previewOverlayImage({
+    id: 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40',
+    formulaId: 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40',
+    brand: "Nature's Bounty",
+  });
+  if (!adult75?.url.endsWith('/natures-bounty-mark.png') || adult75.verifiedSku || adult75.url === womens80?.url) {
+    throw new Error('adult multi 75 must use the Nature\'s Bounty mark, not the 80-count women\'s bottle');
+  }
+  const fish200 = previewOverlayImage({
+    id: 'natures-bounty-b196-fish-oil-1200-mg-200-200',
+    formulaId: 'natures-bounty-b196-fish-oil-1200-mg-200-200',
+    brand: "Nature's Bounty",
+  });
+  const fish90 = previewOverlayImage({
+    id: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
+    formulaId: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
+    brand: "Nature's Bounty",
+  });
+  if (!fish200 || fish200.verifiedSku || fish200.url === fish90?.url || !fish200.url.startsWith('data:image/svg')) {
+    throw new Error('fish oil 200 must stay a letter until attempted');
   }
 }
