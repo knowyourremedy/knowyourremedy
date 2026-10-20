@@ -580,7 +580,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       flag(
         'Hydrogenated Vegetable Oil',
-        'cleared',
+        'high',
         labelCite(CITE.topricin, METH.hvo),
       ),
       flag(
@@ -607,7 +607,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Glycerin', 'cleared', labelCite(CITE.topricin, METH.cleared)),
       flag('Water/Aqua/Eau', 'cleared', labelCite(CITE.topricin, METH.cleared)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...PF_RETAILERS, 'topricin.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -872,11 +872,11 @@ if (BATCH57_PF_REFUSED_UNLOCK.length !== 6) {
 if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 57 Clean tally is 0');
 }
-if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 3) {
-  throw new Error('batch 57 Caution tally is 3');
+if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 2) {
+  throw new Error('batch 57 Caution tally is 2');
 }
-if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 3) {
-  throw new Error('batch 57 Avoid tally is 3');
+if (BATCH57_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 4) {
+  throw new Error('batch 57 Avoid tally is 4');
 }
 if (BATCH57_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 57 stays on Pain & Fever');

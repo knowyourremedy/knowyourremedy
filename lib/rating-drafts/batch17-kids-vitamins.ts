@@ -542,7 +542,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
       flag('Silicon dioxide', 'cleared', labelCite(FLINTSTONES_CHEW_CITE, METH.sio2)),
       flag(
         'Hydrogenated vegetable oil (soy)',
-        'cleared',
+        'high',
         labelCite(FLINTSTONES_CHEW_CITE, METH.chewableOil),
       ),
       labelCleared(FLINTSTONES_CHEW_CITE, 'Fructose'),

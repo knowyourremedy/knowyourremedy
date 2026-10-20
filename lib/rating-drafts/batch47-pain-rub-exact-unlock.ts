@@ -458,7 +458,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
       ),
       flag(
         'Hydrogenated vegetable oil',
-        'cleared',
+        'high',
         dailymed(SET.icyBalm, METH.creamOil),
       ),
       flag(
@@ -492,7 +492,7 @@ export const BATCH47_PAIN_RUB_EXACT_UNLOCK: RatingRecord[] = [
         dailymed(SET.icyBalm, METH.spearmint),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...PF_RETAILERS, 'icyhot.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1417,11 +1417,11 @@ if (BATCH47_PAIN_RUB_EXACT_UNLOCK.length !== 25) {
 if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 47 Clean tally is 0');
 }
-if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'caution').length !== 6) {
-  throw new Error('batch 47 Caution tally is 6');
+if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'caution').length !== 5) {
+  throw new Error('batch 47 Caution tally is 5');
 }
-if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 19) {
-  throw new Error('batch 47 Avoid tally is 19');
+if (BATCH47_PAIN_RUB_EXACT_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 20) {
+  throw new Error('batch 47 Avoid tally is 20');
 }
 if (BATCH47_PAIN_RUB_EXACT_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 47 stays on Pain & Fever');

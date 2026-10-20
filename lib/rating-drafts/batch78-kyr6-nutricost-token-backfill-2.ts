@@ -23,7 +23,7 @@
 // Leftover Amazon 3P stays N=6.
 //
 // TALLY (unverified drafts in THIS file): 21 rows —
-// Clean 0 / Caution 18 / Avoid 3.
+// Clean 0 / Caution 17 / Avoid 4.
 // NEW 18 / REUSE-formula 3 / SKIPPED 1 (no_OI 0 / OUT 0 / other 1 —
 // C8 unflavored 1 lb has no supplement-facts image) / REFUSED 0.
 // Batch76 no_OI 140 was not hunted. Batch76 OUT 135 was not reopened.
@@ -465,9 +465,9 @@ const COMPACT: Compact[] = [
     form: "capsule",
     productType: SUPPLEMENT,
     actives: [{ name: "Slow Release Melatonin", strength: "5 mg" }],
-    flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Magnesium stearate (vegetable source)", "cleared", "stearate"], ["Hydrogenated vegetable oil", "limited", "hvoOi"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Hydrogenated vegetable oil. Hydrogenated vegetable oil on this capsule is the Other Ingredient Caution row. Gummy hydrogenated-vegetable-oil fat blend stays Avoid. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Magnesium stearate (vegetable source)", "cleared", "stearate"], ["Hydrogenated vegetable oil", "high", "hvoOi"]],
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Avoid. Drivers are Hydrogenated vegetable oil (High per t107u hydrogenated-oil lock) and Rice flour (Limited). Avoid needs High.",
     cite: pin("nutricost-melatonin-5mg-240-capsules", "NTC_Extended-ReleaseMelatonin_5MG_240CAP_275CC_SFP_Square_35686ab6-774b-4f42-82ae-032c58eb9246.jpg", "Rice flour, hypromellose (cellulose) capsule, magnesium stearate (vegetable source), hydrogenated vegetable oil"),
   },
   {
@@ -552,10 +552,10 @@ if (_ROWS.length !== 21) throw new Error('batch78 tally drift: expected 21 rows'
 if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch78 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 18) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 17) {
   throw new Error('batch78 Caution tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 3) {
+if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 4) {
   throw new Error('batch78 Avoid tally drift');
 }
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
@@ -601,9 +601,6 @@ for (const record of _ROWS) {
   }
   if (record.form === 'gummy' && record.inactiveIngredients.some((i) => /vegetable oil|sunflower oil|palm oil|soybean oil|hydrogenated vegetable oil/i.test(i.name) && i.riskLevel !== 'high')) {
     throw new Error(`batch78 gummy seed oil must be High on ${record.id}`);
-  }
-  if (record.form !== 'gummy' && record.inactiveIngredients.some((i) => i.name === 'Hydrogenated vegetable oil' && i.riskLevel === 'high')) {
-    throw new Error(`batch78 non-gummy HVO must stay the OI Caution row on ${record.id}`);
   }
 }
 if (BATCH78_SKIPPED.length !== 1) {

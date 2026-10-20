@@ -302,7 +302,7 @@ const BISA398_FLAGS: Compact['flags'] = [
   ['sodium benzoate', 'limited', 'sodiumBenzoate'],
   ['sodium bicarbonate', 'cleared', 'sodiumBicarb'],
   ['stearic acid', 'cleared', 'stearic'],
-  ['sucrose', 'limited', 'sucrose'],
+  ['sucrose', 'cleared', 'sucrose'],
   ['talc', 'high', 'talc'],
   ['titanium dioxide', 'high', 'tio2'],
   ['triacetin', 'cleared', 'triacetin'],

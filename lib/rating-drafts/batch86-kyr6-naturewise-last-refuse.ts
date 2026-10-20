@@ -208,7 +208,7 @@ const COMPACT: Compact[] = [
       ["Inulin", "cleared", "inulin"],
       ["Behenoyl polyoxyl-8 glycerides", "limited", "behenoyl"],
       ["Dicalcium phosphate", "cleared", "dical"],
-      ["Natural peppermint flavor", "limited", "flavors"],
+      ["Natural peppermint flavor", "cleared", "flavors"],
       ["Stevia leaf extract", "limited", "steviaLeaf"],
     ],
     verdict: "caution",
