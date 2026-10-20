@@ -583,7 +583,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Carbamide peroxide', strength: '6.5%' }],
     inactiveIngredients: [
-      flag('Propylene glycol', 'moderate', dailymed(SET_R1, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_R1, METH.pg)),
       flag('Flavor', 'limited', dailymed(SET_R1, METH.flavors)),
       cleared(SET_R1, 'Citric acid'),
       cleared(SET_R1, 'Glycerin'),
@@ -612,7 +612,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Carbamide peroxide', strength: '6.5%' }],
     inactiveIngredients: [
-      flag('Propylene glycol', 'moderate', dailymed(SET_R2, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_R2, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
         'cleared',

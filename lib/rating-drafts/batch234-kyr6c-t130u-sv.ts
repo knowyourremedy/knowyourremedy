@@ -91,7 +91,7 @@ export const BATCH234_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_COLLAGEN, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_COLLAGEN, 'Crospovidone', 'cleared', 'crospovidone'),
       flag(PANEL_COLLAGEN, 'Magnesium Stearate', 'cleared', 'magStearate'),
-      flag(PANEL_COLLAGEN, 'Polyethylene Glycol', 'moderate', 'peg'),
+      flag(PANEL_COLLAGEN, 'Polyethylene Glycol', 'limited', 'peg'),
       flag(PANEL_COLLAGEN, 'Polyvinyl Alcohol', 'cleared', 'pva'),
       flag(PANEL_COLLAGEN, 'Silica', 'limited', 'silica'),
       flag(PANEL_COLLAGEN, 'Talc', 'high', 'talc'),

@@ -77,11 +77,11 @@ const METH = {
   glycerin: 'Methodology §5 Cleared (glycerin).',
   hpmc: 'Methodology §5 Cleared (hypromellose / HPMC / hydroxypropyl methylcellulose).',
   lactose: 'Methodology §5 Cleared (lactose monohydrate / anhydrous lactose).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol, including polyethylene glycol 400).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peppermint:
     'Methodology §5 Limited (peppermint oil as flavor — locked flavor/EO line). Not gummy High. Not an oil-bottle grade.',
   povidone: 'Methodology §5 Cleared (povidone, including povidone K-30).',
-  ps80: 'Methodology §5 Moderate (polysorbate 80).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2: 'Methodology §5 Limited (silicon dioxide / colloidal silicon dioxide / silica gel — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.',
   sorbitol:
     'Methodology §5 Limited (sorbitol — sugar-alcohol row). Label string sorbitol 70% solution sits on this row. Not sorbitan.',
@@ -224,8 +224,8 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Levocetirizine dihydrochloride', strength: '5mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
-      ['Polysorbate 80', 'moderate', 'ps80'],
+      ['Polyethylene glycol', 'limited', 'peg'],
+      ['Polysorbate 80', 'limited', 'ps80'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Lactose monohydrate', 'cleared', 'lactose'],

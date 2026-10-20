@@ -25,10 +25,10 @@ const METH = {
   bkc: 'Methodology §5 Caution (benzalkonium chloride). Standalone Caution. Not Avoid.',
   dextrose: 'Methodology §5 Caution (dextrose → bare glucose). Not Cleared glucose syrup. Not the Avoid driver.',
   pea: 'Methodology §5 Caution (phenylethylalcohol → phenylethyl alcohol, Sept 18). Spelling. Not Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   edta: 'Methodology §5 Caution (edetate disodium → EDTA). Not Cleared trace disodium EDTA. Not Avoid.',
   sorbitol: 'Methodology §5 Limited (sorbitol). Limited does not stack into Avoid.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not an Avoid driver. No High inactive on this panel.',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
 
@@ -61,7 +61,7 @@ function flonaseFlags(): IngredientFlag[] {
     flag('Benzalkonium chloride', 'limited', cite(FLONASE_SET, METH.bkc)),
     flag('Dextrose', 'limited', cite(FLONASE_SET, METH.dextrose)),
     flag('Phenylethyl alcohol', 'limited', cite(FLONASE_SET, METH.pea)),
-    flag('Polysorbate 80', 'moderate', cite(FLONASE_SET, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(FLONASE_SET, METH.ps80)),
     cleared(FLONASE_SET, 'Microcrystalline cellulose'),
     cleared(FLONASE_SET, 'Sodium carboxymethylcellulose'),
     cleared(FLONASE_SET, 'Purified water'),
@@ -70,7 +70,7 @@ function flonaseFlags(): IngredientFlag[] {
 
 function asteproFlags(): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(ASTEPRO_SET, METH.sucralose)),
+    flag('Sucralose', 'limited', cite(ASTEPRO_SET, METH.sucralose)),
     flag('Sorbitol', 'limited', cite(ASTEPRO_SET, METH.sorbitol)),
     flag('Benzalkonium chloride', 'limited', cite(ASTEPRO_SET, METH.bkc)),
     flag('Edetate disodium', 'limited', cite(ASTEPRO_SET, METH.edta)),

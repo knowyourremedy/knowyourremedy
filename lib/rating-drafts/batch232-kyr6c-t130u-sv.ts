@@ -86,7 +86,7 @@ export const BATCH232_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_BIOTIN, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_BIOTIN, 'Maltodextrin', 'limited', 'maltodextrin'),
       flag(PANEL_BIOTIN, 'Polydextrose', 'limited', 'polydextrose'),
-      flag(PANEL_BIOTIN, 'Polyethylene Glycol', 'moderate', 'peg'),
+      flag(PANEL_BIOTIN, 'Polyethylene Glycol', 'limited', 'peg'),
       flag(PANEL_BIOTIN, 'Polyvinyl Alcohol', 'cleared', 'pva'),
       flag(PANEL_BIOTIN, 'Silica', 'limited', 'silica'),
       flag(PANEL_BIOTIN, 'Talc', 'high', 'talc'),

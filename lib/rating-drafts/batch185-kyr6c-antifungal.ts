@@ -85,7 +85,7 @@ const LAM_CREAM_FLAGS: IngredientFlag[] = [
   flag(LAM_CREAM_PANEL, 'Cetyl alcohol', 'cleared', METH.cetyl),
   flag(LAM_CREAM_PANEL, 'Cetyl palmitate', 'cleared', METH.palmitate),
   flag(LAM_CREAM_PANEL, 'Isopropyl myristate', 'cleared', METH.ipm),
-  flag(LAM_CREAM_PANEL, 'Polysorbate 60', 'moderate', METH.polysorbate),
+  flag(LAM_CREAM_PANEL, 'Polysorbate 60', 'limited', METH.polysorbate),
   flag(LAM_CREAM_PANEL, 'Purified water', 'cleared', METH.water),
   flag(LAM_CREAM_PANEL, 'Sodium hydroxide', 'cleared', METH.naoh),
   flag(LAM_CREAM_PANEL, 'Sorbitan monostearate', 'limited', METH.sorbitan),
@@ -103,7 +103,7 @@ const MON_CREAM_FLAGS: IngredientFlag[] = [
   flag(MON_CREAM_PANEL, 'Benzoic acid', 'limited', METH.benzoic),
   flag(MON_CREAM_PANEL, 'Cetyl alcohol', 'cleared', METH.cetyl),
   flag(MON_CREAM_PANEL, 'Isopropyl myristate', 'cleared', METH.ipm),
-  flag(MON_CREAM_PANEL, 'Polysorbate 60', 'moderate', METH.polysorbate),
+  flag(MON_CREAM_PANEL, 'Polysorbate 60', 'limited', METH.polysorbate),
   flag(MON_CREAM_PANEL, 'Potassium hydroxide', 'limited', METH.koh),
   flag(MON_CREAM_PANEL, 'Propylene glycol', 'cleared', METH.pgTopical),
   flag(MON_CREAM_PANEL, 'Purified water', 'cleared', METH.water),
@@ -128,7 +128,7 @@ const ITCH_CREAM_FLAGS: IngredientFlag[] = [
 ];
 
 const ITCH_SPRAY_FLAGS: IngredientFlag[] = [
-  flag(ITCH_SPRAY_PANEL, 'Polyethylene glycol 300', 'moderate', 'Methodology §5 Moderate (PEGs). Polyethylene glycol 300 is that family. Not a new grade.'),
+  flag(ITCH_SPRAY_PANEL, 'Polyethylene glycol 300', 'limited', 'Methodology §5 Moderate (PEGs). Polyethylene glycol 300 is that family. Not a new grade.'),
   flag(ITCH_SPRAY_PANEL, 'Isobutane', 'limited', 'Methodology §5 Caution (isobutane, spray propellant).'),
   flag(ITCH_SPRAY_PANEL, 'Normal butane', 'limited', 'Methodology §5 Caution (butane, spray propellant). Same family as isobutane and propane.'),
   flag(ITCH_SPRAY_PANEL, 'Propane', 'limited', 'Methodology §5 Caution (propane, spray propellant).'),
@@ -224,7 +224,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: TERBINAFINE,
     inactiveIngredients: LAM_CREAM_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -244,7 +244,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: TERBINAFINE,
     inactiveIngredients: LAM_CREAM_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -307,7 +307,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Miconazole nitrate', strength: '4%' }],
     inactiveIngredients: MON_CREAM_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     honestNote: PG_CREAM,
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
@@ -328,7 +328,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Miconazole nitrate', strength: '2%' }],
     inactiveIngredients: MON_CREAM_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     honestNote: PG_CREAM,
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
@@ -390,7 +390,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Benzocaine', strength: '20%' }],
     inactiveIngredients: ITCH_SPRAY_FLAGS,
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, Normal butane, Propane.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 300, Isobutane, Normal butane, Propane.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [

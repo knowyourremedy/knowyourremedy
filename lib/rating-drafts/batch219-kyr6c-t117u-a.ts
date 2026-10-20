@@ -151,7 +151,7 @@ const FEOSOL_ORIG_FLAGS: FlagSpec[] = [
   ['Hypromellose', 'cleared', 'hpmc'],
   ['Magnesium Stearate', 'cleared', 'magStearate'],
   ['Polydextrose', 'limited', 'polydextrose'],
-  ['Polyethylene Glycol', 'moderate', 'peg'],
+  ['Polyethylene Glycol', 'limited', 'peg'],
   ['Titanium Dioxide', 'high', 'tio2'],
   ['Triacetin', 'cleared', 'triacetin'],
 ];
@@ -164,7 +164,7 @@ const FEOSOL_COMPLETE_FLAGS: FlagSpec[] = [
   ['FD&C Red #40 Al Lake', 'high', 'dye'],
   ['FD&C Yellow #6 Al Lake', 'high', 'dye'],
   ['Magnesium Stearate', 'cleared', 'magStearate'],
-  ['Polyethylene Glycol', 'moderate', 'peg'],
+  ['Polyethylene Glycol', 'limited', 'peg'],
   ['Stearic Acid', 'cleared', 'stearic'],
   ['Talc', 'high', 'talc'],
   ['Titanium Dioxide', 'high', 'tio2'],

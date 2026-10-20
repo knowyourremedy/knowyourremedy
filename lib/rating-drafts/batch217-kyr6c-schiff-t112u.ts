@@ -99,7 +99,7 @@ const GLUCOSAMINE_FLAGS: FlagSpec[] = [
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
   ['Modified corn starch', 'limited', 'modStarch'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Glycerin', 'cleared', 'glycerin'],
   ['Magnesium silicate', 'high', 'talc'],
   ['Hydroxypropyl cellulose', 'cleared', 'hpc'],

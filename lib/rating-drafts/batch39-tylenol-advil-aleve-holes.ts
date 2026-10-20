@@ -267,7 +267,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 2 aluminum lake', 'high', dailymed(SET.aleveCaplets, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.aleveCaplets, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aleveCaplets, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aleveCaplets, METH.peg)),
       flag('Mannitol', 'limited', dailymed(SET.aleveCaplets, METH.mannitol)),
       flag(
         'Colloidal silicon dioxide',
@@ -312,7 +312,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       ),
       flag('Talc', 'high', dailymed(SET.aleveGelcaps, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.aleveGelcaps, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aleveGelcaps, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aleveGelcaps, METH.peg)),
       cleared(SET.aleveGelcaps, 'Gelatin'),
       cleared(SET.aleveGelcaps, 'Glycerin'),
       cleared(SET.aleveGelcaps, 'Hypromellose'),
@@ -342,8 +342,8 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Naproxen sodium', strength: '220mg' }],
     inactiveIngredients: [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.aleveLiquidGels, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aleveLiquidGels, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.aleveLiquidGels, METH.pg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aleveLiquidGels, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.aleveLiquidGels, METH.pg)),
       flag('Sorbitol', 'limited', dailymed(SET.aleveLiquidGels, METH.sorbitol)),
       flag('Mannitol', 'limited', dailymed(SET.aleveLiquidGels, METH.mannitol)),
       flag('Sorbitan', 'cleared', dailymed(SET.aleveLiquidGels, METH.sorbitan)),
@@ -383,7 +383,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       ),
       flag('Talc', 'high', dailymed(SET.alevePm, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.alevePm, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.alevePm, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.alevePm, METH.peg)),
       flag('Carnauba wax', 'cleared', dailymed(SET.alevePm, METH.carnaubaT133u)),
       cleared(SET.alevePm, 'Hypromellose'),
       cleared(SET.alevePm, 'Magnesium stearate'),
@@ -412,7 +412,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       flag('FD&C Blue No. 2 lake', 'high', dailymed(SET.aleveBack, METH.dyes)),
       flag('Talc', 'high', dailymed(SET.aleveBack, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.aleveBack, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aleveBack, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aleveBack, METH.peg)),
       cleared(SET.aleveBack, 'Hypromellose'),
       cleared(SET.aleveBack, 'Magnesium stearate'),
       cleared(SET.aleveBack, 'Microcrystalline cellulose'),
@@ -439,7 +439,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       flag('FD&C Blue No. 2 lake', 'high', dailymed(SET.aleveHeadache, METH.dyes)),
       flag('Talc', 'high', dailymed(SET.aleveHeadache, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.aleveHeadache, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aleveHeadache, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aleveHeadache, METH.peg)),
       cleared(SET.aleveHeadache, 'Hypromellose'),
       cleared(SET.aleveHeadache, 'Magnesium stearate'),
       cleared(SET.aleveHeadache, 'Microcrystalline cellulose'),
@@ -465,7 +465,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     form: 'dissolve powder',
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.tylenolEsDissolve, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.tylenolEsDissolve, METH.sucralose)),
       flag(
         'Maltodextrin',
         'limited',
@@ -505,7 +505,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET.tylenolKidsDissolve, METH.sucralose),
       ),
       flag(
@@ -545,7 +545,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     form: 'liquid',
     activeIngredients: [{ name: 'Acetaminophen', strength: '960mg / 30mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.tylenolEsLiquid, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.tylenolEsLiquid, METH.sucralose)),
       flag(
         'Potassium sorbate',
         'limited',
@@ -585,7 +585,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET.tylenolPlusAdults, METH.sucralose),
       ),
       flag(
@@ -643,7 +643,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
         'high',
         dailymed(SET.tylenolKidsChewGrape, METH.dyes),
       ),
-      flag('Sucralose', 'moderate', dailymed(SET.tylenolKidsChewRed7, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.tylenolKidsChewRed7, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET.tylenolKidsChewRed7, METH.flavors)),
       cleared(SET.tylenolKidsChewRed7, 'Anhydrous citric acid'),
       cleared(SET.tylenolKidsChewRed7, 'Crospovidone'),
@@ -714,8 +714,8 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '50mg / 1.25mL' }],
     inactiveIngredients: [
       flag('Butylated hydroxytoluene (BHT)', 'high', dailymed(SET.infantsAdvil, METH.bht)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.infantsAdvil, METH.ps80)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.infantsAdvil, METH.pg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.infantsAdvil, METH.ps80)),
+      flag('Propylene glycol', 'limited', dailymed(SET.infantsAdvil, METH.pg)),
       flag('Sodium benzoate', 'limited', dailymed(SET.infantsAdvil, METH.benzoate)),
       flag('Sorbitol', 'limited', dailymed(SET.infantsAdvil, METH.sorbitol)),
       flag('Artificial flavor', 'limited', dailymed(SET.infantsAdvil, METH.flavors)),
@@ -746,7 +746,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       flag('FD&C Green No. 3', 'high', dailymed(SET.advilMigraine, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.advilMigraine, METH.dyes)),
       flag('D&C Yellow No. 10', 'high', dailymed(SET.advilMigraine, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.advilMigraine, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.advilMigraine, METH.peg)),
       flag('Sorbitol', 'limited', dailymed(SET.advilMigraine, METH.sorbitol)),
       flag('Sorbitan', 'cleared', dailymed(SET.advilMigraine, METH.sorbitan)),
       flag(
@@ -779,7 +779,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.advilDualBack, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.advilDualBack, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.advilDualBack, METH.peg)),
       flag('Polydextrose', 'limited', dailymed(SET.advilDualBack, METH.polydextrose)),
       flag(
         'Colloidal silicon dioxide',
@@ -821,10 +821,10 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
         dailymed(SET.advilFilm, METH.caramel),
       ),
       flag('Titanium dioxide', 'high', dailymed(SET.advilFilm, METH.tio2)),
-      flag('Acesulfame potassium', 'moderate', dailymed(SET.advilFilm, METH.acek)),
-      flag('Sucralose', 'moderate', dailymed(SET.advilFilm, METH.sucralose)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.advilFilm, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.advilFilm, METH.pg)),
+      flag('Acesulfame potassium', 'limited', dailymed(SET.advilFilm, METH.acek)),
+      flag('Sucralose', 'limited', dailymed(SET.advilFilm, METH.sucralose)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.advilFilm, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.advilFilm, METH.pg)),
       flag(
         'Natural and artificial flavor',
         'limited',
@@ -876,8 +876,8 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.motrinDual, METH.tio2)),
       flag('Talc', 'high', dailymed(SET.motrinDual, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.motrinDual, METH.peg)),
-      flag('Sucralose', 'moderate', dailymed(SET.motrinDual, METH.sucralose)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.motrinDual, METH.peg)),
+      flag('Sucralose', 'limited', dailymed(SET.motrinDual, METH.sucralose)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -914,7 +914,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.motrinPm, METH.tio2)),
       flag('Talc', 'high', dailymed(SET.motrinPm, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.motrinPm, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.motrinPm, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -952,7 +952,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     form: 'liquid gel',
     activeIngredients: [{ name: 'Solubilized ibuprofen', strength: '200mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.motrinIbGels, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.motrinIbGels, METH.peg)),
       flag('Sorbitol', 'limited', dailymed(SET.motrinIbGels, METH.sorbitol)),
       flag('Sorbitan', 'cleared', dailymed(SET.motrinIbGels, METH.sorbitan)),
       flag(
@@ -983,7 +983,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.motrinIbMigraineGels, METH.peg),
       ),
       flag('Sorbitol', 'limited', dailymed(SET.motrinIbMigraineGels, METH.sorbitol)),

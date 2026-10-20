@@ -81,11 +81,11 @@ const METH = {
   naoh: 'Methodology §5 Cleared (sodium hydroxide as a pH adjuster).',
   naturalApple: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   pectin: 'Methodology §5 Cleared (pectin / gum).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg400:
-    'Methodology §5 Moderate (polyethylene glycol / PEGs). Polyethylene glycol-400 USP maps here (Sept 25, 2026, f7d58d6). Same PEG lock as PEG-400 USP. Not a new grade. Not the Avoid driver.',
-  pgOral: 'Methodology §5 Moderate (propylene glycol, oral). Propylene glycol USP maps here (Sept 24, 2026). Not a new grade. Not the Avoid driver.',
-  polysorbate80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  polysorbate80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   povidone:
     'Methodology §5 Cleared (povidone). Povidone USP maps here (Sept 25, 2026, a761f55). Not a new grade.',
   purpleCarrot:
@@ -101,7 +101,7 @@ const METH = {
     'Methodology §5 Limited (sorbitol — other sugar alcohols). Sorbitol 70% solution USP maps here (Sept 25, 2026, a761f55). Same Limited lock. Not Caution. Not Avoid.',
   sorbitolSorbitan:
     'Methodology §5 Caution (sorbitol sorbitan solution). Sorbitol sorbitan solution USP maps here (Sept 24, 2026). Distinct from Limited oral sorbitol. Not Avoid.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sugar:
     'Methodology §5 Caution (bare sugar — exact token; locked Sept 22, 2026). Distinct from Cleared cane sugar and from Limited sucrose. Not Avoid.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
@@ -223,7 +223,7 @@ const AZEL_FLAGS: Compact['flags'] = [
   ['purified water', 'cleared', 'water'],
   ['sodium citrate (dihydrate)', 'cleared', 'sodiumCitrateParen'],
   ['sorbitol', 'limited', 'sorbitol'],
-  ['sucralose', 'moderate', 'sucralose'],
+  ['sucralose', 'limited', 'sucralose'],
 ];
 
 const DAY_FLAGS: Compact['flags'] = [
@@ -231,9 +231,9 @@ const DAY_FLAGS: Compact['flags'] = [
   ['FD&C yellow #6', 'high', 'dye'],
   ['gelatin USP', 'cleared', 'gelatin'],
   ['glycerine USP', 'cleared', 'glycerin'],
-  ['polyethylene glycol-400 USP', 'moderate', 'peg400'],
+  ['polyethylene glycol-400 USP', 'limited', 'peg400'],
   ['povidone USP', 'cleared', 'povidone'],
-  ['propylene glycol USP', 'moderate', 'pgOral'],
+  ['propylene glycol USP', 'limited', 'pgOral'],
   ['purified water USP', 'cleared', 'water'],
   ['sorbitol sorbitan solution USP', 'limited', 'sorbitolSorbitan'],
   ['titanium dioxide', 'high', 'tio2'],
@@ -244,9 +244,9 @@ const NIGHT_FLAGS: Compact['flags'] = [
   ['FD&C blue #1', 'high', 'dye'],
   ['gelatin USP', 'cleared', 'gelatin'],
   ['glycerin USP', 'cleared', 'glycerin'],
-  ['polyethylene glycol-400 USP', 'moderate', 'peg400'],
+  ['polyethylene glycol-400 USP', 'limited', 'peg400'],
   ['povidone USP', 'cleared', 'povidone'],
-  ['propylene glycol USP', 'moderate', 'pgOral'],
+  ['propylene glycol USP', 'limited', 'pgOral'],
   ['purified water USP', 'cleared', 'water'],
   ['sorbitol 70% solution USP', 'limited', 'sorbitol70'],
   ['sorbitol sorbitan solution USP', 'limited', 'sorbitolSorbitan'],
@@ -261,8 +261,8 @@ const OMEP_FLAGS: Compact['flags'] = [
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['methacrylic acid and ethyl acrylate copolymer dispersion', 'limited', 'methacrylic'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polyethylene glycol', 'moderate', 'peg'],
-  ['polysorbate 80', 'moderate', 'polysorbate80'],
+  ['polyethylene glycol', 'limited', 'peg'],
+  ['polysorbate 80', 'limited', 'polysorbate80'],
   ['red iron oxide', 'limited', 'ironOxide'],
   ['silicified microcrystalline cellulose', 'cleared', 'mccSilicified'],
   ['sodium hydroxide', 'cleared', 'naoh'],

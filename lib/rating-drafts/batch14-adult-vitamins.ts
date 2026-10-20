@@ -100,7 +100,7 @@ const METH = {
   bht: 'Methodology §5 High-tier (BHT — locked Avoid, EU 2022 endocrine restriction)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, "vegetable oil", sunflower)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sio2:
@@ -195,7 +195,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       { name: 'Zinc', strength: '11mg' },
     ],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', labelCite(KIRKLAND_NO_TIO2_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(KIRKLAND_NO_TIO2_CITE, METH.peg)),
       flag('Silica / silicon dioxide', 'cleared', labelCite(KIRKLAND_NO_TIO2_CITE, METH.sio2)),
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Microcrystalline cellulose'),
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Hydroxypropyl methylcellulose'),
@@ -232,7 +232,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', labelCite(NM_COMPLETE_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(NM_COMPLETE_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(NM_COMPLETE_CITE, METH.maltodextrin)),
       flag('Silicon dioxide', 'cleared', labelCite(NM_COMPLETE_CITE, METH.sio2)),
       labelCleared(NM_COMPLETE_CITE, 'Cellulose gel'),
@@ -309,7 +309,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('Talc', 'high', labelCite(CENTRUM_ADULTS_CITE, METH.talc)),
       flag('Yellow 6 Lake', 'high', labelCite(CENTRUM_ADULTS_CITE, METH.dyes)),
       flag('BHT (to preserve freshness)', 'high', labelCite(CENTRUM_ADULTS_CITE, METH.bht)),
-      flag('Polyethylene glycol', 'moderate', labelCite(CENTRUM_ADULTS_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(CENTRUM_ADULTS_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(CENTRUM_ADULTS_CITE, METH.maltodextrin)),
       flag('Silicon dioxide', 'cleared', labelCite(CENTRUM_ADULTS_CITE, METH.sio2)),
       flag(
@@ -403,7 +403,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('FD&C Blue No. 2 Lake', 'high', labelCite(EQUATE_CITE, METH.dyes)),
       flag('Talc', 'high', labelCite(EQUATE_CITE, METH.talc)),
       flag('BHT', 'high', labelCite(EQUATE_CITE, METH.bht)),
-      flag('Polyethylene glycol', 'moderate', labelCite(EQUATE_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(EQUATE_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(EQUATE_CITE, METH.maltodextrin)),
       flag('Silica / silicon dioxide', 'cleared', labelCite(EQUATE_CITE, METH.sio2)),
       labelCleared(EQUATE_CITE, 'Microcrystalline cellulose'),
@@ -437,7 +437,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', labelCite(KIRKLAND_TIO2_CITE, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', labelCite(KIRKLAND_TIO2_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(KIRKLAND_TIO2_CITE, METH.peg)),
       flag('Silicon dioxide', 'cleared', labelCite(KIRKLAND_TIO2_CITE, METH.sio2)),
     ],
     verdict: 'avoid',

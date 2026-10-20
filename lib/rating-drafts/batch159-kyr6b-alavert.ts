@@ -70,7 +70,7 @@ export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
     activeIngredients: [{ name: 'Loratadine', strength: '10 mg' }],
     inactiveIngredients: [
       flag('Aspartame', 'high', cite(CITRUS_SET, METH.aspartame)),
-      flag('Polysorbate 80', 'moderate', cite(CITRUS_SET, METH.ps80)),
+      flag('Polysorbate 80', 'limited', cite(CITRUS_SET, METH.ps80)),
       flag('Flavors', 'limited', cite(CITRUS_SET, METH.flavors)),
       flag('Mannitol', 'limited', cite(CITRUS_SET, METH.mannitol)),
       cleared(CITRUS_SET, 'Anhydrous citric acid', METH.citric),
@@ -98,13 +98,13 @@ export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Loratadine', strength: '10 mg' }],
     inactiveIngredients: [
-      flag('Polysorbate 80', 'moderate', cite(MINT_SET, METH.ps80)),
+      flag('Polysorbate 80', 'limited', cite(MINT_SET, METH.ps80)),
       flag('Mannitol', 'limited', cite(MINT_SET, METH.mannitol)),
       flag('Peppermint flavor', 'limited', cite(MINT_SET, METH.peppermint)),
       cleared(MINT_SET, 'Anhydrous citric acid', METH.citric),
       cleared(MINT_SET, 'Pullulan', METH.pullulan),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,

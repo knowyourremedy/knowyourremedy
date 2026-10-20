@@ -60,12 +60,12 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   mgStearate: 'Methodology §5 Cleared (magnesium stearate).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pegTypo:
     'Methodology §5 Moderate (PEGs / polyethylene glycol). Polyethylene glylcol maps here (Sept 25, 2026). Not a new grade. Not the Avoid driver.',
   povidone: 'Methodology §5 Cleared (povidone).',
   pregel: 'Methodology §5 Cleared (pregelatinized starch).',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2: 'Methodology §5 Limited (colloidal silicon dioxide / silicon dioxide / silica — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.',
   stearic: 'Methodology §5 Cleared (stearic acid).',
   tio2: 'Methodology §5 High (titanium dioxide).',
@@ -181,7 +181,7 @@ const DPH_FLAGS: Compact['flags'] = [
   ['lactose', 'cleared', 'lactose'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polyethylene glycol', 'moderate', 'peg'],
+  ['polyethylene glycol', 'limited', 'peg'],
   ['silicon dioxide', 'limited', 'sio2'],
   ['titanium dioxide', 'high', 'tio2'],
 ];
@@ -218,7 +218,7 @@ const PM_FLAGS: Compact['flags'] = [
   ['titanium dioxide', 'high', 'tio2'],
   ['carnauba wax', 'cleared', 'carnauba'],
   ['FD&C blue #2 aluminum lake', 'high', 'dye'],
-  ['polysorbate 80', 'moderate', 'ps80'],
+  ['polysorbate 80', 'limited', 'ps80'],
 ];
 
 const CITE_DPH = `DailyMed SPL (${DM}${SET_DPH}; setid ${SET_DPH}; Allegiant Health). Inactive ingredients: croscarmellose sodium, FD&C blue #1 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide. Not the 25 mg softgel setid 9746911a. No GTIN-12.`;

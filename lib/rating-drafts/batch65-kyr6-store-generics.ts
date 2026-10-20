@@ -133,10 +133,10 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin:
     'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
@@ -445,7 +445,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     retailers: ['Grocery'],
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.gsL484, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.gsL484, METH.peg)),
       flag('Hypromellose', 'cleared', dailymed(SET.gsL484, METH.hpmc)),
       flag('Povidone', 'cleared', dailymed(SET.gsL484, METH.povidone)),
       flag('Stearic acid', 'cleared', dailymed(SET.gsL484, METH.stearic)),
@@ -721,7 +721,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 1 aluminum lake', 'high', dailymed(SET.walCet, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.walCet, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.walCet, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.walCet, METH.peg)),
       flag('Corn starch', 'cleared', dailymed(SET.walCet, METH.starch)),
       flag('Hypromellose', 'cleared', dailymed(SET.walCet, METH.hpmc)),
       flag('Lactose monohydrate', 'cleared', dailymed(SET.walCet, METH.gelatin)),
@@ -753,8 +753,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('FD&C Blue No. 1 aluminum lake', 'high', dailymed(SET.tcDph, METH.dyes)),
       flag('FD&C Blue No. 2 aluminum lake', 'high', dailymed(SET.tcDph, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.tcDph, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.tcDph, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.tcDph, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.tcDph, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.tcDph, METH.ps80)),
       flag('Carnauba wax', 'cleared', dailymed(SET.tcDph, METH.gelatin)),
       flag('Crospovidone', 'cleared', dailymed(SET.tcDph, METH.povidone)),
       flag(
@@ -862,7 +862,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.walSleepDye, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.walSleepDye, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET.walSleepDye, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.walSleepDye, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET.walSleepDye, METH.flavors)),
       flag('Sodium benzoate', 'limited', dailymed(SET.walSleepDye, METH.benzoate)),
       flag('Sorbitol', 'limited', dailymed(SET.walSleepDye, METH.sorbitol)),
@@ -893,7 +893,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     retailers: ['Walgreens'],
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '50mg / 30mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.walSleepDf, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.walSleepDf, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET.walSleepDf, METH.flavors)),
       flag('Sodium benzoate', 'limited', dailymed(SET.walSleepDf, METH.benzoate)),
       flag('Sorbitol', 'limited', dailymed(SET.walSleepDf, METH.sorbitol)),
@@ -925,7 +925,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.walOme, METH.tio2)),
       flag('Talc', 'high', dailymed(SET.walOme, METH.talc)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.walOme, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.walOme, METH.pg)),
       flag('Sodium lauryl sulfate', 'cleared', dailymed(SET.walOme, METH.sls)),
       flag('Ferric oxide red', 'cleared', dailymed(SET.walOme, METH.ironOxide)),
       flag('Ferric oxide yellow', 'cleared', dailymed(SET.walOme, METH.ironOxide)),

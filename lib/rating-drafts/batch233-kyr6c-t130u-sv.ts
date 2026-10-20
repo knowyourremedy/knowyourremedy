@@ -133,7 +133,7 @@ export const BATCH233_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_CALMAG, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'),
       flag(PANEL_CALMAG, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_CALMAG, 'Poloxamer', 'limited', 'poloxamer'),
-      flag(PANEL_CALMAG, 'Polysorbate 80', 'moderate', 'polysorbate80'),
+      flag(PANEL_CALMAG, 'Polysorbate 80', 'limited', 'polysorbate80'),
       flag(PANEL_CALMAG, 'Talc', 'high', 'talc'),
       flag(PANEL_CALMAG, 'Titanium Dioxide (Color)', 'high', 'tio2'),
       flag(PANEL_CALMAG, 'Triethyl Citrate', 'cleared', 'triethylCitrate'),

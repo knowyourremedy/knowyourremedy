@@ -638,6 +638,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     if (level === 'cleared' || source.includes('topical')) {
       return close('On this label propylene glycol is the topical form, not the swallowed solvent.', level);
     }
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'Propylene glycol (oral) is Limited under the t138u founder lock (§4 prior-lock re-eval). It is a swallowed solvent that cleaner brands often leave out.',
+        level,
+      );
+    }
     return close(
       'Propylene glycol is a solvent. The direct evidence of harm is thin, and cleaner formulas leave it out of things you swallow.',
       level,
@@ -645,6 +651,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/sucralose|\be955\b|splenda/.test(n)) {
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'Sucralose is Limited under the t138u founder lock (§4 prior-lock re-eval). A 2023 study raised DNA and gut-bacteria questions.',
+        level,
+      );
+    }
     return close(
       'Sucralose is a sweetener. A 2023 study found a signal that a breakdown product can damage DNA, and other work has raised questions about gut bacteria.',
       level,
@@ -652,6 +664,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/acesulfame|ace k|\be950\b/.test(n)) {
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'Acesulfame potassium is Limited under the t138u founder lock (§4 prior-lock re-eval). Early genotoxicity and microbiome signals are still thin.',
+        level,
+      );
+    }
     return close(
       'Acesulfame potassium is a sweetener. Studies have raised early questions about DNA damage and gut bacteria, and that evidence is still thin.',
       level,
@@ -659,6 +677,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/saccharin|\be954\b/.test(n)) {
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'Saccharin is Limited under the t138u founder lock (§4 prior-lock re-eval). Later reviews walked back the older rat cancer signal.',
+        level,
+      );
+    }
     return close(
       'Saccharin is a sweetener. Older rat studies raised a cancer question. Later reviews by the National Toxicology Program and the cancer research agency did not keep that classification.',
       level,
@@ -676,6 +700,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     if (/polyethylene\b/.test(n) && !/glycol/.test(n)) {
       return close('This polyethylene is a chew binder, not polyethylene glycol.', level);
     }
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'PEG / polyethylene glycol is Limited under the t138u founder lock (§4 prior-lock re-eval). Manufacturing can leave traces of ethylene oxide and 1,4-dioxane.',
+        level,
+      );
+    }
     return close(
       'Polyethylene glycol is a coating ingredient. Making it can leave traces of ethylene oxide and 1,4-dioxane.',
       level,
@@ -683,6 +713,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/polysorbate/.test(n)) {
+    if (level === 'limited' || /founder lock t138u/i.test(source)) {
+      return close(
+        'Polysorbate is Limited under the t138u founder lock (§4 prior-lock re-eval). A 2023 study found it can weaken the gut barrier.',
+        level,
+      );
+    }
     return close(
       'Polysorbate is an emulsifier that keeps oil and water mixed. A 2023 study found it can weaken the gut barrier.',
       level,

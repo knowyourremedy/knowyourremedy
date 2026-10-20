@@ -25,9 +25,9 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 const METH = {
   dyes: 'Methodology §5 High (FD&C / D&C dyes, including lake forms). Avoid.',
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  pg: 'Methodology §5 Moderate (oral propylene glycol).',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   sorbitol: 'Methodology §5 Limited (sorbitol).',
   maltitol: 'Methodology §5 Limited (maltitol).',
@@ -96,7 +96,7 @@ function mccFlags(setid: string): IngredientFlag[] {
 function gelFlags(): IngredientFlag[] {
   return [
     flag('FD&C Blue No. 1', 'high', cite(GEL_SET, METH.dyes)),
-    flag('Polysorbate 80', 'moderate', cite(GEL_SET, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(GEL_SET, METH.ps80)),
     flag('Caprylic/capric glycerides', 'limited', cite(GEL_SET, METH.mct)),
     flag('Sorbitol', 'limited', cite(GEL_SET, METH.sorbitol)),
     flag('Pharmaceutical ink', 'limited', cite(GEL_SET, METH.ink)),
@@ -116,8 +116,8 @@ function rediFlags(): IngredientFlag[] {
 }
 function kidsLiquidFlags(): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(KIDS_LIQ_SET, METH.sucralose)),
-    flag('Propylene glycol', 'moderate', cite(KIDS_LIQ_SET, METH.pg)),
+    flag('Sucralose', 'limited', cite(KIDS_LIQ_SET, METH.sucralose)),
+    flag('Propylene glycol', 'limited', cite(KIDS_LIQ_SET, METH.pg)),
     flag('Flavor', 'limited', cite(KIDS_LIQ_SET, METH.flavor)),
     flag('Maltitol', 'limited', cite(KIDS_LIQ_SET, METH.maltitol)),
     flag('Sorbitol', 'limited', cite(KIDS_LIQ_SET, METH.sorbitol)),

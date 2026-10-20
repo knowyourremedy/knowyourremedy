@@ -21,10 +21,10 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   bht: 'Methodology §5 High (butylated hydroxytoluene). Avoid.',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
-  pg: 'Methodology §5 Moderate (oral propylene glycol).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   sorbitol: 'Methodology §5 Limited (sorbitol / sorbitol solution).',
   flavor: 'Methodology §5 Limited (flavor / flavors).',
@@ -79,7 +79,7 @@ const KIDS_ALTS: CleanAlternative[] = [
 function tabletFlags(setid: string): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(setid, METH.tio2)),
-    flag('Polyethylene glycol', 'moderate', cite(setid, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(setid, METH.peg)),
     cleared(setid, 'Colloidal silicon dioxide'),
     cleared(setid, 'Croscarmellose sodium'),
     cleared(setid, 'Hypromellose'),
@@ -90,8 +90,8 @@ function tabletFlags(setid: string): IngredientFlag[] {
 }
 function syrupFlags(setid: string): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(setid, METH.sucralose)),
-    flag('Propylene glycol', 'moderate', cite(setid, METH.pg)),
+    flag('Sucralose', 'limited', cite(setid, METH.sucralose)),
+    flag('Propylene glycol', 'limited', cite(setid, METH.pg)),
     flag('Flavors', 'limited', cite(setid, METH.flavor)),
     flag('Sorbitol Solution', 'limited', cite(setid, METH.sorbitol)),
     flag('Sodium benzoate', 'limited', cite(setid, METH.benzoate)),
@@ -101,7 +101,7 @@ function syrupFlags(setid: string): IngredientFlag[] {
 }
 function chewFlags(setid: string, withFlavor: boolean): IngredientFlag[] {
   const rows: IngredientFlag[] = [
-    flag('Sucralose', 'moderate', cite(setid, METH.sucralose)),
+    flag('Sucralose', 'limited', cite(setid, METH.sucralose)),
     flag('Mannitol', 'limited', cite(setid, METH.mannitol)),
   ];
   if (withFlavor) rows.push(flag('Flavor', 'limited', cite(setid, METH.flavor)));
@@ -116,7 +116,7 @@ function chewFlags(setid: string, withFlavor: boolean): IngredientFlag[] {
 }
 function dissolveFlags(setid: string): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(setid, METH.sucralose)),
+    flag('Sucralose', 'limited', cite(setid, METH.sucralose)),
     flag('Amino methacrylate copolymer', 'limited', cite(setid, METH.methacrylic)),
     flag('Flavors', 'limited', cite(setid, METH.flavor)),
     flag('Mannitol', 'limited', cite(setid, METH.mannitol)),
@@ -133,7 +133,7 @@ function dissolveFlags(setid: string): IngredientFlag[] {
 function gelFlags(setid: string): IngredientFlag[] {
   return [
     flag('Butylated hydroxytoluene', 'high', cite(setid, METH.bht)),
-    flag('Polyethylene glycol 400', 'moderate', cite(setid, METH.peg)),
+    flag('Polyethylene glycol 400', 'limited', cite(setid, METH.peg)),
     flag('Sorbitol', 'limited', cite(setid, METH.sorbitol)),
     flag('Pharmaceutical ink', 'limited', cite(setid, METH.ink)),
     flag('Sorbitan', 'limited', cite(setid, METH.sorbitan)),
@@ -336,7 +336,7 @@ const COMPACT: Spec[] = [
     form: 'chewable tablet',
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
-    verdict: 'caution',
+    verdict: 'avoid',
     note: CAUTION_CHEW,
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com/products/zyrtec-chewables-children-6-plus 24 count. UPC 300450241245.`,
     kidsAlts: true,
@@ -351,7 +351,7 @@ const COMPACT: Spec[] = [
     form: 'chewable tablet',
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
-    verdict: 'caution',
+    verdict: 'avoid',
     note: CAUTION_CHEW,
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com/products/zyrtec-chewables-children-6-plus 48 count. UPC 300450241481.`,
     kidsAlts: true,
@@ -366,7 +366,7 @@ const COMPACT: Spec[] = [
     form: 'chewable tablet',
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
-    verdict: 'caution',
+    verdict: 'avoid',
     note: CAUTION_CHEW + ' Carton is dye-free grape. The inactive line still prints flavor.',
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com chewables ages 6+ 72 count image UPC 300450241283.`,
     kidsAlts: true,
@@ -396,7 +396,7 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: dissolveFlags(DISSOLVE_SET),
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose, amino methacrylate copolymer, flavors, and mannitol. Amino methacrylate copolymer is the stamped methacrylic enteric row. No High flag. The 12ct children\'s dissolve row on MAIN was not rewritten. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Amino methacrylate copolymer, Flavors, Mannitol.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose, amino methacrylate copolymer, flavors, and mannitol. Amino methacrylate copolymer is the stamped methacrylic enteric row. No High flag. The 12ct children\'s dissolve row on MAIN was not rewritten. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
     source: `DailyMed setid ${DISSOLVE_SET}. zyrtec.com/products/zyrtec-children-dissolve-tabs 24 count. UPC 300450242259.`,
     kidsAlts: true,
   },
@@ -411,7 +411,7 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: dissolveFlags(ADULT_DISSOLVE_SET),
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the children\'s 24ct dissolve in this file. REUSE formula zyrtec-b132-dissolve-10mg. No High flag. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Amino methacrylate copolymer, Flavors, Mannitol.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the children\'s 24ct dissolve in this file. REUSE formula zyrtec-b132-dissolve-10mg. No High flag. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
     source: `DailyMed setid ${ADULT_DISSOLVE_SET}. zyrtec.com/products/zyrtec-adult-dissolve-tabs 24 count. UPC 300450242242.`,
   },
   {
@@ -424,7 +424,7 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: dissolveFlags(ADULT_DISSOLVE_SET),
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 24ct adult dissolve. REUSE formula zyrtec-b132-dissolve-10mg. The 12 count tab is on zyrtec.com. No GTIN opened for that tab, so UPC is blank. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Amino methacrylate copolymer, Flavors, Mannitol.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 24ct adult dissolve. REUSE formula zyrtec-b132-dissolve-10mg. The 12 count tab is on zyrtec.com. No GTIN opened for that tab, so UPC is blank. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
     source: `DailyMed setid ${ADULT_DISSOLVE_SET}. zyrtec.com/products/zyrtec-adult-dissolve-tabs 12 count. UPC blank.`,
   },
   {

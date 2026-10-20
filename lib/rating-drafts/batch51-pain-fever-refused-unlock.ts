@@ -98,8 +98,8 @@ const METH = {
   sorbitol:
     'Methodology §5 Limited-risk (other sugar alcohols — sorbitol / maltitol / mannitol)',
   mctUnlabeled: `Methodology §5 Limited-risk (unlabeled MCT — coconut vs other source not named; opacity; not Avoid). ${MCT_UNLABELED_TAP}`,
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
-  ps60: 'Methodology §5 Moderate-risk (polysorbate 60 — same Moderate family as P80 / P20)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps60: 'Methodology §5 Limited (Polysorbate 60 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   tetraEdta:
     'Methodology §5 Caution (Tetrasodium EDTA — exact INCI; distinct from Cleared disodium EDTA trace; standalone Caution, not Avoid; locked Sept 15, 2026)',
   calcinedKaolin:
@@ -244,7 +244,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
         dailymed(SET.foot, METH.ipbc),
       ),
       flag('Phenoxyethanol', 'cleared', dailymed(SET.foot, METH.phenoxy)),
-      flag('Polysorbate 60', 'moderate', dailymed(SET.foot, METH.ps60)),
+      flag('Polysorbate 60', 'limited', dailymed(SET.foot, METH.ps60)),
       flag('Sodium Benzoate', 'limited', dailymed(SET.foot, METH.benzoate)),
       flag('Sodium Hydroxide', 'cleared', dailymed(SET.foot, METH.naoh)),
       flag(
@@ -304,7 +304,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
         'cleared',
         dailymed(SET.bengayPatch, METH.polyacrylate),
       ),
-      flag('polysorbate 80', 'moderate', dailymed(SET.bengayPatch, METH.ps80)),
+      flag('polysorbate 80', 'limited', dailymed(SET.bengayPatch, METH.ps80)),
       flag('propylparaben', 'high', dailymed(SET.bengayPatch, METH.parabens)),
       flag('silica', 'cleared', dailymed(SET.bengayPatch, METH.sio2)),
       flag(

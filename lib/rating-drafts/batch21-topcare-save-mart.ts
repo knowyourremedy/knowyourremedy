@@ -306,12 +306,12 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       flag('FD&C Yellow No. 6', 'high', dailymed(SET_T2_SOFTGELS, METH.dyes)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T2_SOFTGELS, METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T2_SOFTGELS, METH.pg),
       ),
       flag('Sorbitol', 'limited', dailymed(SET_T2_SOFTGELS, METH.sorbitol)),
@@ -350,10 +350,10 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag('Titanium dioxide', 'high', dailymed(SET_T1_TABLETS, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_T1_TABLETS, METH.talc)),
-      flag('Sucralose', 'moderate', dailymed(SET_T1_TABLETS, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_T1_TABLETS, METH.sucralose)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T1_TABLETS, METH.peg),
       ),
       cleared(SET_T1_TABLETS, 'Corn starch'),
@@ -395,17 +395,17 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T3A_LIQUIGELS, METH.peg),
       ),
       flag(
         'Macrogol / PEG 400',
-        'moderate',
+        'limited',
         dailymed(SET_T3A_LIQUIGELS, METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T3A_LIQUIGELS, METH.pg),
       ),
       flag('Sorbitol', 'limited', dailymed(SET_T3A_LIQUIGELS, METH.sorbitol)),
@@ -456,7 +456,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET_T3B_CAPLETS, METH.tio2)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T3B_CAPLETS, METH.peg),
       ),
       flag(
@@ -502,8 +502,8 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_T4_DUAL, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_T4_DUAL, METH.talc)),
-      flag('Sucralose', 'moderate', dailymed(SET_T4_DUAL, METH.sucralose)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_T4_DUAL, METH.peg)),
+      flag('Sucralose', 'limited', dailymed(SET_T4_DUAL, METH.sucralose)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_T4_DUAL, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -589,7 +589,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T7_CETIRIZINE, METH.peg),
       ),
       cleared(SET_T7_CETIRIZINE, 'Corn starch'),
@@ -690,12 +690,12 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       flag('Talc', 'high', dailymed(SET_T10_ESOMEPRAZOLE, METH.talc)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_T10_ESOMEPRAZOLE, METH.peg),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed(SET_T10_ESOMEPRAZOLE, METH.ps80),
       ),
       flag(

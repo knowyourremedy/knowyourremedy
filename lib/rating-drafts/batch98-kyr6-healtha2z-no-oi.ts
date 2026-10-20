@@ -52,7 +52,7 @@ const METH = {
   lactose: 'Methodology §5 Cleared (lactose / lactose monohydrate). Anhydrous lactose maps here (Sept 24, 2026).',
   mgStearate: 'Methodology §5 Cleared (magnesium stearate).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   tio2: 'Methodology §5 High (titanium dioxide).',
   cornStarch: 'Methodology §5 Cleared (corn starch — named simple starch).',
   ssg: 'Methodology §5 Cleared (sodium starch glycolate).',
@@ -63,7 +63,7 @@ const METH = {
   stearic: 'Methodology §5 Cleared (stearic acid).',
   hec: 'Methodology §5 Cleared (hydroxyethyl cellulose / hydroxyethylcellulose).',
   ironColor: 'Methodology §5 Caution (iron oxide as color). Red iron oxide and yellow iron oxide map here (Sept 24, 2026). Not Avoid.',
-  pgOral: 'Methodology §5 Moderate (propylene glycol, oral). May-contain propylene glycol on an oral tablet is this row.',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
   water: 'Methodology §5 Cleared (purified water / water).',
   silicon: 'Methodology §5 Caution (silicon — exact word; Sept 15, 2026). This reuse copies the flag already stored on healtha2z-naproxen-220-300. Not a new grade.',
@@ -165,7 +165,7 @@ const CETIRIZINE_10_FLAGS: Compact['flags'] = [
   ['lactose monohydrate', 'cleared', 'lactoseMh'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polyethylene glycol', 'moderate', 'peg'],
+  ['polyethylene glycol', 'limited', 'peg'],
   ['titanium dioxide', 'high', 'tio2'],
 ];
 
@@ -186,7 +186,7 @@ const APAP_650_ER_FLAGS: Compact['flags'] = [
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polyethylene glycol', 'moderate', 'peg'],
+  ['polyethylene glycol', 'limited', 'peg'],
   ['povidone', 'cleared', 'povidone'],
   ['pregelatinized starch', 'cleared', 'pregel'],
   ['sodium starch glycolate', 'cleared', 'ssg'],
@@ -200,7 +200,7 @@ const FEXO_180_416_FLAGS: Compact['flags'] = [
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['lactose monohydrate', 'cleared', 'lactoseMh'],
-  ['polyethylene glycol', 'moderate', 'peg'],
+  ['polyethylene glycol', 'limited', 'peg'],
   ['pregelatinized starch (maize)', 'cleared', 'pregel'],
   ['red iron oxide', 'limited', 'ironColor'],
   ['stearic acid', 'cleared', 'stearic'],
@@ -211,7 +211,7 @@ const FEXO_180_416_FLAGS: Compact['flags'] = [
 const NAPROXEN_220_FLAGS: Compact['flags'] = [
   ['FD&C blue #2 aluminum lake', 'high', 'dye'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['silicon', 'cleared', 'silicon'],
   ['Hypromellose', 'cleared', 'hpmc'],
   ['Sodium starch glycolate', 'cleared', 'ssg'],
@@ -234,7 +234,7 @@ const PE_5_FLAGS: Compact['flags'] = [
   ['microcrystalline cellulose', 'cleared', 'mcc'],
   ['silicon dioxide', 'limited', 'sio2'],
   ['titanium dioxide', 'high', 'tio2'],
-  ['propylene glycol', 'moderate', 'pgOral'],
+  ['propylene glycol', 'limited', 'pgOral'],
 ];
 
 const PE_10_FLAGS: Compact['flags'] = PE_5_FLAGS;

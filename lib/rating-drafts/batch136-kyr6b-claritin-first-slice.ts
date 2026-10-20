@@ -28,10 +28,10 @@ const METH = {
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
   talc: 'Methodology §5 High (talc, oral). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  pg: 'Methodology §5 Moderate (oral propylene glycol).',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   sorbitol: 'Methodology §5 Limited (sorbitol).',
   maltitol: 'Methodology §5 Limited (maltitol).',
@@ -112,7 +112,7 @@ function mccFlags(): IngredientFlag[] {
 function gelFlags(): IngredientFlag[] {
   return [
     flag('FD&C Blue No. 1', 'high', cite(GEL_SET, METH.dyes)),
-    flag('Polysorbate 80', 'moderate', cite(GEL_SET, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(GEL_SET, METH.ps80)),
     flag('Caprylic/capric glycerides', 'limited', cite(GEL_SET, METH.mct)),
     flag('Sorbitol', 'limited', cite(GEL_SET, METH.sorbitol)),
     flag('Pharmaceutical ink', 'limited', cite(GEL_SET, METH.ink)),
@@ -178,7 +178,7 @@ function d12Flags(): IngredientFlag[] {
 function d24EcFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(D24_EC_SET, METH.tio2)),
-    flag('Polyethylene glycol', 'moderate', cite(D24_EC_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(D24_EC_SET, METH.peg)),
     flag('Pharmaceutical ink', 'limited', cite(D24_EC_SET, METH.ink)),
     flag('Silicon dioxide', 'limited', cite(D24_EC_SET, METH.sio2)),
     flag('Sucrose', 'cleared', cite(D24_EC_SET, METH.sucrose)),
@@ -195,9 +195,9 @@ function d24TalcFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(D24_TALC_SET, METH.tio2)),
     flag('Talc', 'high', cite(D24_TALC_SET, METH.talc)),
-    flag('Polyethylene glycol', 'moderate', cite(D24_TALC_SET, METH.peg)),
-    flag('Polysorbate 80', 'moderate', cite(D24_TALC_SET, METH.ps80)),
-    flag('Propylene glycol', 'moderate', cite(D24_TALC_SET, METH.pg)),
+    flag('Polyethylene glycol', 'limited', cite(D24_TALC_SET, METH.peg)),
+    flag('Polysorbate 80', 'limited', cite(D24_TALC_SET, METH.ps80)),
+    flag('Propylene glycol', 'limited', cite(D24_TALC_SET, METH.pg)),
     flag('Black iron oxide', 'limited', cite(D24_TALC_SET, METH.iron)),
     flag('Colloidal silicon dioxide', 'limited', cite(D24_TALC_SET, METH.sio2)),
     flag('Sodium lauryl sulfate', 'limited', cite(D24_TALC_SET, METH.sls)),
@@ -218,8 +218,8 @@ function rediFlags(): IngredientFlag[] {
 }
 function kidsLiquidFlags(): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(KIDS_LIQ_SET, METH.sucralose)),
-    flag('Propylene glycol', 'moderate', cite(KIDS_LIQ_SET, METH.pg)),
+    flag('Sucralose', 'limited', cite(KIDS_LIQ_SET, METH.sucralose)),
+    flag('Propylene glycol', 'limited', cite(KIDS_LIQ_SET, METH.pg)),
     flag('Flavor', 'limited', cite(KIDS_LIQ_SET, METH.flavor)),
     flag('Maltitol', 'limited', cite(KIDS_LIQ_SET, METH.maltitol)),
     flag('Sorbitol', 'limited', cite(KIDS_LIQ_SET, METH.sorbitol)),
@@ -519,7 +519,7 @@ export const BATCH136_KYR6B_CLARITIN_FIRST_SLICE: RatingRecord[] = [
     flags: kidsLiquidFlags(),
     verdict: 'avoid',
     kids: true,
-    note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 4 fl oz list matches childrens-claritin-liquid. The 8 fl oz barcode on that MAIN row was not rewritten. Ages 2+.',
+    note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 4 fl oz list matches childrens-claritin-liquid. The 8 fl oz barcode on that MAIN row was not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
     source: 'Target PDP A-11199022 UPC field, count tab 4.0, title 4oz. Inactive ingredients: edetate disodium, flavor, glycerin, maltitol, monobasic sodium phosphate, phosphoric acid, propylene glycol, purified water, sodium benzoate, sorbitol, sucralose. That list matches DailyMed setid 170061e9. UPC is the Target UPC field (draft, not verified).',
   }),
   expand({

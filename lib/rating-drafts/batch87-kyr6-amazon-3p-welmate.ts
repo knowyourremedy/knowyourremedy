@@ -78,7 +78,7 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
   mineralOil:
     'Methodology §5 Cleared (mineral oil as a topical ointment occlusive — petrolatum neighborhood). Not an oil-bottle grade.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol, including polyethylene glycol 400).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   petrolatum: 'Methodology §5 Cleared (white petrolatum / petrolatum).',
   polyoxyl20:
     'Methodology §5 Caution (polyoxyl 20 cetostearyl ether — PEG-ether family; standalone Caution, not the Moderate PEG row, not Avoid; locked Sept 15, 2026).',
@@ -225,7 +225,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Magnesium stearate', 'cleared', 'stearate'],
@@ -253,7 +253,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Magnesium stearate', 'cleared', 'stearate'],
@@ -280,7 +280,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Magnesium stearate', 'cleared', 'stearate'],
@@ -307,7 +307,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Magnesium stearate', 'cleared', 'stearate'],
@@ -334,7 +334,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Hypromellose', 'cleared', 'hpmc'],
@@ -360,7 +360,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Hypromellose', 'cleared', 'hpmc'],
@@ -432,7 +432,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '180mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -462,7 +462,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '180mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -492,7 +492,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '180mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -522,7 +522,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '60mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -552,7 +552,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '60mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -582,7 +582,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Fexofenadine HCl', strength: '60mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Red iron oxide', 'limited', 'ironOxide'],
       ['Yellow iron oxide', 'limited', 'ironOxide'],
@@ -900,7 +900,7 @@ const COMPACT: Compact[] = [
     form: 'solution',
     productType: OTC,
     actives: [{ name: 'Clotrimazole', strength: '1%' }],
-    flags: [['Polyethylene glycol 400', 'moderate', 'peg']],
+    flags: [['Polyethylene glycol 400', 'limited', 'peg']],
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is polyethylene glycol 400. Seller drug-facts tile says see carton and does not print the inactive line.',
     cite: `Wellspring offer (${SHOP}/welmate-clotrimazole-1-antifungal-topical-solution-0-33-fluid-ounce) drug-facts tile says SEE CARTON FOR FULL and does not print inactives. Directions on that tile include children under 2 years ask a doctor. DailyMed WELMATE Clotrimazole Topical Solution NDC 73581-449 inactive ingredient: polyethylene glycol 400.`,
@@ -981,7 +981,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Zinc (as zinc sulfate)', strength: '50mg' }],
     flags: [
       ['Silicon dioxide', 'limited', 'sio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Microcrystalline cellulose', 'cleared', 'cellulose'],
       ['Magnesium stearate', 'cleared', 'stearate'],
       ['Hypromellose', 'cleared', 'hpmc'],
@@ -1004,7 +1004,7 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Phenazopyridine HCl', strength: '99.5mg' }],
     flags: [
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
@@ -1030,7 +1030,7 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Phenazopyridine HCl', strength: '99.5mg' }],
     flags: [
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
@@ -1057,7 +1057,7 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Phenazopyridine HCl', strength: '99.5mg' }],
     flags: [
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],

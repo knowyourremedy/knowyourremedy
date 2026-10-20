@@ -29,7 +29,7 @@
 // Leftover Amazon 3P after this slice: 3 (HealthA2Z, TIME-Cap, GoodSense).
 //
 // TALLY (unverified drafts in THIS file): 12 rows —
-// Clean 1 / Caution 1 / Avoid 10.
+// Clean 1 / Caution 0 / Avoid 11.
 // NEW 9 / REUSE-formula 3 /
 // SKIPPED 3 (no_OI 0 / OUT 1 / already-on-MAIN 2) /
 // REFUSED 30.
@@ -89,9 +89,9 @@ const METH = {
   lecithin: 'Methodology §5 Cleared (lecithin).',
   mctFill:
     'Methodology §5 Cleared (medium chain triglycerides named as softgel fill). Not unlabeled MCT. Not an oil-bottle grade. Not gummy High.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  pgOral: 'Methodology §5 Moderate (propylene glycol, oral).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pgTopical:
     'Methodology §5 Cleared (propylene glycol, topical). Oral propylene glycol is the Moderate row. This liquid is topical.',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
@@ -225,8 +225,8 @@ const COMPACT: Compact[] = [
     flags: [
       ['D&C red no. 27', 'high', 'dye'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
-      ['Polysorbate 80', 'moderate', 'ps80'],
+      ['Polyethylene glycol', 'limited', 'peg'],
+      ['Polysorbate 80', 'limited', 'ps80'],
       ['Carnauba wax', 'cleared', 'carnauba'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Dibasic calcium phosphate', 'cleared', 'dical'],
@@ -236,7 +236,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are D&C red no. 27 and titanium dioxide. Polyethylene glycol and polysorbate 80 are Moderate, not the Avoid drivers. Children 6 to under 12: 1 tablet. Under 6: do not use.',
-    cite: `DailyMed SPL (${DM}23750ea1-18a4-bfa7-e063-6394a90afd09; setid 23750ea1-18a4-bfa7-e063-6394a90afd09; NDC 69452-444-31; 600-count panel). Inactive ingredients: carnauba wax, croscarmellose sodium, D&C red no. 27, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide. Ages 6+ (under 6: do not use).`,
+    cite: `DailyMed SPL (${DM}23750ea1-18a4-bfa7-e063-6394a90afd09; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 600-count panel). Inactive ingredients: carnauba wax, croscarmellose sodium, D&C red no. 27, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide. Ages 6+ (under 6: do not use).`,
   },
   {
     id: 'aplushealth-b93-dph-50-150',
@@ -252,7 +252,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Dibasic calcium phosphate', 'cleared', 'dical'],
       ['Hypromellose', 'cleared', 'hpmc'],
@@ -261,7 +261,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are talc (oral) and titanium dioxide. The 150-count panel prints dye free. Dye free is not a grade. Under 12: do not use.',
-    cite: `DailyMed SPL (${DM}3c1953a1-32e9-6c81-e063-6294a90a9fa2; setid 3c1953a1-32e9-6c81-e063-6294a90a9fa2; NDC 69452-445-24; 150 tablets in 1 bottle). Inactive ingredients: croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, talc, titanium dioxide. Ages 12+.`,
+    cite: `DailyMed SPL (${DM}3c1953a1-32e9-6c81-e063-6294a90a9fa2; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 150 tablets in 1 bottle). Inactive ingredients: croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, talc, titanium dioxide. Ages 12+.`,
   },
   {
     id: 'aplushealth-b93-dph-50-48',
@@ -277,7 +277,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Talc', 'high', 'talc'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Dibasic calcium phosphate', 'cleared', 'dical'],
       ['Hypromellose', 'cleared', 'hpmc'],
@@ -286,7 +286,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are talc (oral) and titanium dioxide. Same inactive list as the 150-count bottle. This carton is 4 blister packs of 12 (48 tablets), one NDC, not a multipack of four retail bottles. Under 12: do not use.',
-    cite: `DailyMed SPL (${DM}3c1953a1-32e9-6c81-e063-6294a90a9fa2; setid 3c1953a1-32e9-6c81-e063-6294a90a9fa2; NDC 69452-445-77; 12 tablets in 1 blister, 4 blisters in 1 carton). Inactive ingredients: croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, talc, titanium dioxide. Ages 12+.`,
+    cite: `DailyMed SPL (${DM}3c1953a1-32e9-6c81-e063-6294a90a9fa2; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 12 tablets in 1 blister, 4 blisters in 1 carton). Inactive ingredients: croscarmellose sodium, dibasic calcium phosphate, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, talc, titanium dioxide. Ages 12+.`,
   },
   {
     id: 'aplushealth-b93-ibu-200-300-india',
@@ -300,7 +300,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Ibuprofen', strength: '200mg' }],
     flags: [
       ['FD&C Blue #1', 'high', 'dye'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Sorbitan', 'limited', 'sorbitan'],
       ['Sorbitol', 'limited', 'sorbitol'],
       ['Gelatin', 'cleared', 'gelatin'],
@@ -309,7 +309,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is FD&C Blue #1. Polyethylene glycol is Moderate, not the Avoid driver. Sorbitan is the locked Caution emulsifier, not Avoid. This row is the Made in India 300-count panel only (NDC 69452-260-83). That panel does not print pharmaceutical ink. The 160-count and 240-count panels on this same SPL do, and those packs are refused.',
-    cite: `DailyMed SPL (${DM}2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; setid 2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; NDC 69452-260-83; 300 softgels, Made in India panel). India-site inactive ingredients: FD&C Blue #1, gelatin, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+ (under 12: ask a doctor).`,
+    cite: `DailyMed SPL (${DM}2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 300 softgels, Made in India panel). India-site inactive ingredients: FD&C Blue #1, gelatin, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+ (under 12: ask a doctor).`,
   },
   {
     id: 'aplushealth-b93-ibu-dyefree-400',
@@ -323,16 +323,16 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Ibuprofen', strength: '200mg' }],
     flags: [
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Sorbitan', 'limited', 'sorbitan'],
       ['Sorbitol', 'limited', 'sorbitol'],
       ['Gelatin', 'cleared', 'gelatin'],
       ['Potassium hydroxide', 'cleared', 'koh'],
       ['Purified water', 'cleared', 'water'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Polyethylene glycol is Moderate. Sorbitan is the locked Caution emulsifier. No dye and no titanium dioxide on this panel. Dye-free is the carton word. Avoid needs High.',
-    cite: `DailyMed SPL (${DM}4227d0b7-846a-dcb0-e063-6294a90af7d7; setid 4227d0b7-846a-dcb0-e063-6294a90af7d7; NDC 69452-513-81; 400 mini capsules). Inactive ingredients: gelatin, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+ (under 12: ask a doctor).`,
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Polyethylene glycol is Moderate. Sorbitan is the locked Caution emulsifier. No dye and no titanium dioxide on this panel. Dye-free is the carton word. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Sorbitan, Sorbitol.',
+    cite: `DailyMed SPL (${DM}4227d0b7-846a-dcb0-e063-6294a90af7d7; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 400 mini capsules). Inactive ingredients: gelatin, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+ (under 12: ask a doctor).`,
   },
   {
     id: 'aplushealth-b93-cetirizine-10-400',
@@ -346,7 +346,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Corn starch', 'cleared', 'cornStarch'],
       ['Hypromellose', 'cleared', 'hpmc'],
       ['Lactose monohydrate', 'cleared', 'lactose'],
@@ -355,7 +355,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Polyethylene glycol is Moderate, not the Avoid driver. Adults 65 and over, and children under 6: ask a doctor.',
-    cite: `DailyMed SPL (${DM}831d4141-b3be-4d98-a372-9c4d57ad296c; setid 831d4141-b3be-4d98-a372-9c4d57ad296c; NDC 69452-465-81; 400 tablets). Inactive ingredients: corn starch, hypromellose, lactose monohydrate, magnesium stearate, polyethylene glycol, povidone, titanium dioxide. Ages 6+ (under 6: ask a doctor).`,
+    cite: `DailyMed SPL (${DM}831d4141-b3be-4d98-a372-9c4d57ad296c; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 400 tablets). Inactive ingredients: corn starch, hypromellose, lactose monohydrate, magnesium stearate, polyethylene glycol, povidone, titanium dioxide. Ages 6+ (under 6: ask a doctor).`,
   },
   {
     id: 'aplushealth-b93-iodine-tincture-30',
@@ -443,8 +443,8 @@ const COMPACT: Compact[] = [
     flags: [
       ['FD&C Blue #1', 'high', 'dye'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
-      ['Propylene glycol', 'moderate', 'pgOral'],
+      ['Polyethylene glycol', 'limited', 'peg'],
+      ['Propylene glycol', 'limited', 'pgOral'],
       ['Sorbitan', 'limited', 'sorbitan'],
       ['Sorbitol', 'limited', 'sorbitol'],
       ['Gelatin', 'cleared', 'gelatin'],
@@ -456,7 +456,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Drivers are FD&C Blue #1 and titanium dioxide. Medium chain triglycerides are named softgel fill, Cleared, not an oil-bottle grade and not unlabeled MCT. Oral propylene glycol is Moderate. Sorbitan is Caution, not Avoid. One softgel at bedtime. Ages 12+.',
-    cite: `DailyMed SPL (${DM}c0074c77-287e-6c26-e053-2995a90a4d31; setid c0074c77-287e-6c26-e053-2995a90a4d31; NDC 69452-322-79; 160 softgels). Inactive ingredients: FD&C blue #1, gelatin, glycerin, hypromellose, lecithin, medium chain triglycerides, polyethylene glycol, propylene glycol, purified water, sorbitan, sorbitol, titanium dioxide. Ages 12+.`,
+    cite: `DailyMed SPL (${DM}c0074c77-287e-6c26-e053-2995a90a4d31; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 160 softgels). Inactive ingredients: FD&C blue #1, gelatin, glycerin, hypromellose, lecithin, medium chain triglycerides, polyethylene glycol, propylene glycol, purified water, sorbitan, sorbitol, titanium dioxide. Ages 12+.`,
   },
   {
     id: 'aplushealth-b93-dual-oxides-144',
@@ -474,7 +474,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Polydextrose', 'limited', 'polydextrose'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Ferric oxide red', 'limited', 'ferric'],
@@ -492,7 +492,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Ferric oxide red and ferric oxide yellow are Caution, not the Avoid driver. Sodium lauryl sulphate is the British spelling of the locked SLS Caution token. This 144-caplet carton (NDC 69452-446-23) reuses formulaId `aplus-health-dual-action-oxides`. It is not the already-written 216-count NDC 69452-394 row. Stay under 4 g/day acetaminophen. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}1f470b1b-81a9-e59c-e063-6394a90a4055; setid 1f470b1b-81a9-e59c-e063-6394a90a4055; NDC 69452-446-23; 144 caplets). Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. Ages 12+.`,
+    cite: `DailyMed SPL (${DM}1f470b1b-81a9-e59c-e063-6394a90a4055; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 144 caplets). Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. Ages 12+.`,
   },
   {
     id: 'aplushealth-b93-dual-oxides-120',
@@ -510,7 +510,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Polyethylene glycol', 'moderate', 'peg'],
+      ['Polyethylene glycol', 'limited', 'peg'],
       ['Polydextrose', 'limited', 'polydextrose'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Ferric oxide red', 'limited', 'ferric'],
@@ -528,7 +528,7 @@ const COMPACT: Compact[] = [
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Same inactive list as the 144-caplet carton. This 120-caplet carton is NDC 69452-447-22 (setid 1f2f8fcf), not the already-written 216-count NDC 69452-394 row. Stay under 4 g/day acetaminophen. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}1f2f8fcf-bf08-2a21-e063-6394a90a9e71; setid 1f2f8fcf-bf08-2a21-e063-6394a90a9e71; NDC 69452-447-22; 120 caplets). Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. Ages 12+.`,
+    cite: `DailyMed SPL (${DM}1f2f8fcf-bf08-2a21-e063-6394a90a9e71; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 120 caplets). Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, glyceryl dibehenate, hypromellose, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulphate, stearic acid, titanium dioxide. Ages 12+.`,
   },
 ];
 

@@ -27,7 +27,7 @@ const METH = {
     'Methodology §5 Caution (dextrose anhydrous → dextrose / bare glucose, Oct 7, 2026). Same row. Not a new ingredient. Not the Avoid driver.',
   edta: 'Methodology §5 Caution (edetate disodium → EDTA). Not Cleared trace disodium EDTA. Not Avoid.',
   hcl: 'Methodology §5 Caution (hydrochloric acid, Oct 7, 2026). pH adjuster in a finished spray. Not "Not clean". Not the concentrated acid. Not Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   naoh: 'Methodology §5 Cleared (sodium hydroxide as a pH adjuster).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
@@ -66,7 +66,7 @@ function nasacortFlags(): IngredientFlag[] {
     flag('Hydrochloric acid', 'limited', cite(NASACORT_SET, METH.hcl)),
     flag('Sodium hydroxide', 'cleared', cite(NASACORT_SET, METH.naoh)),
     cleared(NASACORT_SET, 'Microcrystalline cellulose'),
-    flag('Polysorbate 80', 'moderate', cite(NASACORT_SET, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(NASACORT_SET, METH.ps80)),
     cleared(NASACORT_SET, 'Purified water'),
   ];
 }
@@ -78,7 +78,7 @@ function sensimistFlags(setid: string): IngredientFlag[] {
     flag('Dextrose anhydrous', 'limited', cite(setid, METH.anhydrous)),
     flag('Edetate disodium', 'limited', cite(setid, METH.edta)),
     cleared(setid, 'Microcrystalline cellulose'),
-    flag('Polysorbate 80', 'moderate', cite(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(setid, METH.ps80)),
     cleared(setid, 'Purified water'),
   ];
 }

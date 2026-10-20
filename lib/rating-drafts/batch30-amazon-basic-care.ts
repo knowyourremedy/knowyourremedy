@@ -730,7 +730,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R2, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R2, METH.peg)),
       cleared(SET_R2, 'Hypromellose'),
       cleared(SET_R2, 'Povidone'),
       cleared(SET_R2, 'Stearic acid'),
@@ -761,7 +761,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Benzalkonium chloride', 'cleared', dailymed(SET_R6, METH.bkc)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_R6, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_R6, METH.ps80)),
       cleared(SET_R6, 'Dextrose'),
       cleared(SET_R6, 'Microcrystalline cellulose'),
       cleared(SET_R6, 'Sodium carboxymethylcellulose'),
@@ -789,7 +789,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Loratadine', strength: '10mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_R9, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_R9, METH.sucralose)),
       flag('Mannitol', 'limited', dailymed(SET_R9, METH.mannitol)),
       flag(
         'Natural and artificial mint flavor',
@@ -802,7 +802,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_R9, 'Magnesium stearate'),
       cleared(SET_R9, 'Microcrystalline cellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...AMAZON],
     cleanAlternatives: ALLERGY_ALTS,
@@ -862,7 +862,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Benzalkonium chloride', 'cleared', dailymed(SET_K2, METH.bkc)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_K2, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_K2, METH.ps80)),
       cleared(SET_K2, 'Citric acid'),
       ungraded(SET_K2, 'Glycerin'),
       cleared(SET_K2, 'Microcrystalline cellulose'),
@@ -1018,7 +1018,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_R3, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R3, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R3, METH.peg)),
     ],
     verdict: 'avoid',
 
@@ -1106,7 +1106,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_CET_AURO, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_CET_AURO, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_CET_AURO, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1173,8 +1173,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Loratadine', strength: '5mg / 5mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_KIDS_LOR_LIQ, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_KIDS_LOR_LIQ, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(SET_KIDS_LOR_LIQ, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(SET_KIDS_LOR_LIQ, METH.pg)),
       flag(
         'Natural and artificial grape flavor',
         'limited',
@@ -1265,7 +1265,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '200mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_IBU_TIO2, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_IBU_TIO2, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_IBU_TIO2, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1311,7 +1311,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_IBU_DYED, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_IBU_DYED, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_IBU_DYED, METH.peg)),
     ],
     verdict: 'avoid',
 
@@ -1337,7 +1337,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_IBU_GELS, METH.tio2)),
       flag('FD&C Green No. 3', 'high', dailymed(SET_IBU_GELS, METH.dyes)),
-      flag('Polyethylene glycol 600', 'moderate', dailymed(SET_IBU_GELS, METH.peg)),
+      flag('Polyethylene glycol 600', 'limited', dailymed(SET_IBU_GELS, METH.peg)),
       flag(
         'Sodium lauryl sulfate',
         'cleared',
@@ -1375,7 +1375,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_NAPROXEN, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_NAPROXEN, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_NAPROXEN, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1409,8 +1409,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_DUAL, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_DUAL, METH.talc)),
-      flag('Sucralose', 'moderate', dailymed(SET_DUAL, METH.sucralose)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_DUAL, METH.peg)),
+      flag('Sucralose', 'limited', dailymed(SET_DUAL, METH.sucralose)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_DUAL, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1482,7 +1482,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_LEVO, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_LEVO, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_LEVO, METH.peg)),
       cleared(SET_LEVO, 'Hypromellose'),
       cleared(SET_LEVO, 'Lactose monohydrate'),
       cleared(SET_LEVO, 'Magnesium stearate'),
@@ -1524,8 +1524,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_APAP_PM, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_APAP_PM, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_APAP_PM, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_APAP_PM, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_APAP_PM, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1550,7 +1550,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '50mg / 1.25mL' }],
     inactiveIngredients: [
       flag('FD&C Red No. 40', 'high', dailymed(SET_INF_IBU, METH.dyes)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_INF_IBU, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_INF_IBU, METH.ps80)),
       flag(
         'Sodium benzoate',
         'limited',
@@ -1585,8 +1585,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Acetaminophen', strength: '160mg / 5mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_KIDS_APAP, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_KIDS_APAP, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(SET_KIDS_APAP, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(SET_KIDS_APAP, METH.pg)),
       flag('Carrageenan', 'limited', dailymed(SET_KIDS_APAP, METH.carrageenan)),
       flag('Flavor', 'limited', dailymed(SET_KIDS_APAP, METH.flavors)),
       flag(
@@ -1618,8 +1618,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '5mg / 5mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_KIDS_CET, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_KIDS_CET, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(SET_KIDS_CET, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(SET_KIDS_CET, METH.pg)),
       flag(
         'Artificial grape flavor',
         'limited',
@@ -1658,8 +1658,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_OMEP, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_OMEP, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_OMEP, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_OMEP, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_OMEP, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_OMEP, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1717,8 +1717,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('D&C Yellow No. 10', 'high', dailymed(SET_ESO, METH.dyes)),
       flag('FD&C Blue No. 1', 'high', dailymed(SET_ESO, METH.dyes)),
       flag('FD&C Red No. 3', 'high', dailymed(SET_ESO, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET_ESO, METH.sucralose)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_ESO, METH.ps80)),
+      flag('Sucralose', 'limited', dailymed(SET_ESO, METH.sucralose)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_ESO, METH.ps80)),
       flag(
         'Natural and artificial cool mint flavor',
         'limited',
@@ -1749,7 +1749,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       { name: 'Polyethylene glycol 3350', strength: '17g / dose' },
     ],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_CLEARLAX_OR, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_CLEARLAX_OR, METH.sucralose)),
       flag(
         'Natural and artificial orange flavor',
         'limited',
@@ -1857,7 +1857,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('FD&C Blue No. 1', 'high', dailymed(SET_RR, METH.dyes)),
       flag('FD&C Red No. 3', 'high', dailymed(SET_RR, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET_RR, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_RR, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_RR, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',

@@ -227,7 +227,7 @@ function preciseOlivateBase(setid: string): IngredientFlag[] {
 
 function alevexLotionInactives(setid: string): IngredientFlag[] {
   return [
-    flag('Polysorbate 80', 'moderate', dailymed(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
     flag('Alcohol', 'limited', dailymed(setid, METH.alcoholVehicle)),
     flag('Peppermint oil', 'limited', dailymed(setid, METH.peppermint)),
     flag('Clove oil', 'cleared', dailymed(setid, METH.clove)),
@@ -434,7 +434,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Methylparaben', 'high', dailymed(SET.precisePatch, METH.parabens)),
       flag('Ethylparaben', 'high', dailymed(SET.precisePatch, METH.parabens)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.precisePatch, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.precisePatch, METH.ps80)),
       flag(
         'Diethylene glycol monoethyl ether (DEGEE)',
         'cleared',

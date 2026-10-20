@@ -72,7 +72,7 @@ const METH = {
   steviaRebA:
     'Methodology §5 Cleared (stevia / steviol glycosides — Stevia Extract (Rebaudioside A) / Reb A).',
   stearic: 'Methodology §5 Cleared (stearic acid / vegetable stearic acid — stearate-family lubricant).',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sugar: 'Methodology §5 Cleared (sugar / cane sugar).',
   sunflowerFill: `Methodology §5 Cleared (sunflower oil / sunflower seed oil as softgel fill — NOT gummy High). ${OIL_FILL_TAP}`,
   tapiocaSyrup: 'Methodology §5 Cleared (tapioca syrup / organic tapioca syrup).',
@@ -178,7 +178,7 @@ const SPECS: RowSpec[] = [
       ['Dextrose', 'limited', 'dextrose'],
       ['Vegetable Stearic Acid', 'cleared', 'stearic'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
-      ['Sucralose', 'moderate', 'sucralose'],
+      ['Sucralose', 'limited', 'sucralose'],
       ['Silica', 'limited', 'silica'],
     ],
   },

@@ -849,7 +849,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'PEG-100 stearate',
-        'moderate',
+        'limited',
         dailymed(SET_BACTINE_WASH, METH.peg),
       ),
       flag(
@@ -1149,7 +1149,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       flag('Propylparaben', 'high', dailymed(SET_BEN_CREAM, METH.parabens)),
       flag(
         'Polyethylene glycol monostearate 1000',
-        'moderate',
+        'limited',
         dailymed(SET_BEN_CREAM, METH.peg),
       ),
       flag(

@@ -138,12 +138,12 @@ const METH = {
   caramel:
     'Methodology §5 High-tier (caramel color, undisclosed class — treated as III/IV)',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -476,7 +476,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       { name: 'Magnesium hydroxide', strength: '200mg' },
     ],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_ROLAIDS_MINT, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_ROLAIDS_MINT, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_ROLAIDS_MINT, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_ROLAIDS_MINT, METH.maltodextrin)),
       flag(
@@ -489,7 +489,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ROLAIDS_MINT, 'Stearic acid'),
       cleared(SET_ROLAIDS_MINT, 'Sucrose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
@@ -622,7 +622,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_IMODIUM_CAP, METH.peg),
       ),
       cleared(SET_IMODIUM_CAP, 'Anhydrous lactose'),
@@ -652,7 +652,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productType: 'OTC',
     activeIngredients: [{ name: 'Simethicone', strength: '125mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_MYLANTA_GAS, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_MYLANTA_GAS, METH.sucralose)),
       flag('Flavors', 'limited', dailymed(SET_MYLANTA_GAS, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_MYLANTA_GAS, METH.maltodextrin)),
       flag('Silica (silicon dioxide)', 'cleared', dailymed(SET_MYLANTA_GAS, METH.sio2)),
@@ -663,7 +663,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLANTA_GAS, 'Tricalcium phosphate'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Maltodextrin, Isomalt.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavors, Maltodextrin, Isomalt.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
@@ -683,7 +683,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     productType: 'OTC',
     activeIngredients: [{ name: 'Sodium citrate dihydrate', strength: '230mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_EMETROL_CHEW, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_EMETROL_CHEW, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_EMETROL_CHEW, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_EMETROL_CHEW, METH.maltodextrin)),
       flag('Silica (silicon dioxide)', 'cleared', dailymed(SET_EMETROL_CHEW, METH.sio2)),
@@ -692,7 +692,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_EMETROL_CHEW, 'Magnesium stearate'),
       cleared(SET_EMETROL_CHEW, 'Sodium carboxymethylcellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
@@ -781,7 +781,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Methylparaben', 'high', dailymed(SET_TUMS_CHEWY, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET_TUMS_CHEWY, METH.parabens)),
       flag('Carmine', 'cleared', dailymed(SET_TUMS_CHEWY, METH.carmine)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_TUMS_CHEWY, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_TUMS_CHEWY, METH.pg)),
       flag('Natural and artificial flavors', 'limited', dailymed(SET_TUMS_CHEWY, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_TUMS_CHEWY, METH.maltodextrin)),
       flag('Sodium benzoate', 'limited', dailymed(SET_TUMS_CHEWY, METH.benzoate)),
@@ -815,7 +815,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('FD&C Red No. 40 aluminum lake', 'high', dailymed(SET_ROLAIDS_FRUIT, METH.dyes)),
       flag('FD&C Yellow No. 5 aluminum lake', 'high', dailymed(SET_ROLAIDS_FRUIT, METH.dyes)),
       flag('FD&C Yellow No. 6 aluminum lake', 'high', dailymed(SET_ROLAIDS_FRUIT, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET_ROLAIDS_FRUIT, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_ROLAIDS_FRUIT, METH.sucralose)),
       flag(
         'Natural and artificial flavor',
         'limited',
@@ -923,7 +923,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(SET_GAVISCON_TABS, METH.acek),
       ),
       flag('Artificial flavor', 'limited', dailymed(SET_GAVISCON_TABS, METH.flavors)),
@@ -936,7 +936,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GAVISCON_TABS, 'Sucrose'),
     ],
     activeSafetyFlag: ALOH_FLAG,
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
@@ -1017,9 +1017,9 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET_PEPCID_ICY, METH.tio2)),
       flag('FD&C Blue No. 1 aluminum lake', 'high', dailymed(SET_PEPCID_ICY, METH.dyes)),
       flag('Talc', 'high', dailymed(SET_PEPCID_ICY, METH.talc)),
-      flag('Sucralose', 'moderate', dailymed(SET_PEPCID_ICY, METH.sucralose)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_PEPCID_ICY, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_PEPCID_ICY, METH.ps80)),
+      flag('Sucralose', 'limited', dailymed(SET_PEPCID_ICY, METH.sucralose)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_PEPCID_ICY, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_PEPCID_ICY, METH.ps80)),
       flag('Flavors', 'limited', dailymed(SET_PEPCID_ICY, METH.flavors)),
       flag('Carnauba wax', 'cleared', dailymed(SET_PEPCID_ICY, METH.carnaubaT133u)),
       cleared(SET_PEPCID_ICY, 'Hypromellose'),
@@ -1048,7 +1048,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_EQUATE_FAM, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_EQUATE_FAM, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_EQUATE_FAM, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_EQUATE_FAM, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1082,8 +1082,8 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_PRILOSEC, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_PRILOSEC, METH.talc)),
-      flag('Polyethylene glycol 400', 'moderate', dailymed(SET_PRILOSEC, METH.peg)),
-      flag('Polyethylene glycol 3350', 'moderate', dailymed(SET_PRILOSEC, METH.peg)),
+      flag('Polyethylene glycol 400', 'limited', dailymed(SET_PRILOSEC, METH.peg)),
+      flag('Polyethylene glycol 3350', 'limited', dailymed(SET_PRILOSEC, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1150,8 +1150,8 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('D&C Yellow No. 10', 'high', dailymed(SET_IMODIUM_LIQ, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET_IMODIUM_LIQ, METH.tio2)),
       flag('Caramel color (class not stated)', 'high', dailymed(SET_IMODIUM_LIQ, METH.caramel)),
-      flag('Sucralose', 'moderate', dailymed(SET_IMODIUM_LIQ, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_IMODIUM_LIQ, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(SET_IMODIUM_LIQ, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(SET_IMODIUM_LIQ, METH.pg)),
       flag('Flavor', 'limited', dailymed(SET_IMODIUM_LIQ, METH.flavors)),
       flag('Sodium benzoate', 'limited', dailymed(SET_IMODIUM_LIQ, METH.benzoate)),
       flag('Xanthan gum', 'cleared', dailymed(SET_IMODIUM_LIQ, METH.gums)),
@@ -1183,7 +1183,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(SET_IMODIUM_MULTI, METH.acek),
       ),
       flag('Flavor', 'limited', dailymed(SET_IMODIUM_MULTI, METH.flavors)),
@@ -1217,7 +1217,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
         'high',
         dailymed(SET_PEPTO_CAP, METH.dyes),
       ),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_PEPTO_CAP, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_PEPTO_CAP, METH.ps80)),
       flag('Mannitol', 'limited', dailymed(SET_PEPTO_CAP, METH.mannitol)),
       flag('Silicon dioxide', 'cleared', dailymed(SET_PEPTO_CAP, METH.sio2)),
       cleared(SET_PEPTO_CAP, 'Calcium carbonate'),
@@ -1285,7 +1285,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag('D&C Red No. 22', 'high', dailymed(SET_PEPTO_LIQ, METH.dyes)),
       flag('D&C Red No. 28', 'high', dailymed(SET_PEPTO_LIQ, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET_PEPTO_LIQ, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_PEPTO_LIQ, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_PEPTO_LIQ, METH.flavors)),
       flag('Benzoic acid', 'limited', dailymed(SET_PEPTO_LIQ, METH.benzoate)),
       cleared(SET_PEPTO_LIQ, 'Methylcellulose'),
@@ -1312,7 +1312,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     activeIngredients: [{ name: 'Bismuth subsalicylate', strength: '262mg' }],
     inactiveIngredients: [
       flag('D&C Red No. 27 aluminum lake', 'high', dailymed(SET_UPUP, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET_UPUP, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_UPUP, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_UPUP, METH.flavors)),
       flag('Sorbitol', 'limited', dailymed(SET_UPUP, METH.sorbitol)),
       cleared(SET_UPUP, 'Magnesium stearate'),
@@ -1543,7 +1543,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
         dailymed(SET_BONINE, METH.saccharin),
       ),
       flag('Flavor', 'limited', dailymed(SET_BONINE, METH.flavors)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_BONINE, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_BONINE, METH.pg)),
       flag('Silicon dioxide', 'cleared', dailymed(SET_BONINE, METH.sio2)),
       cleared(SET_BONINE, 'Lactose monohydrate'),
       cleared(SET_BONINE, 'Magnesium stearate'),

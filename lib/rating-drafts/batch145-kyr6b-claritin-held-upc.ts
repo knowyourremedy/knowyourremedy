@@ -23,8 +23,8 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 const METH = {
   dyes: 'Methodology §5 High (FD&C / D&C dyes, including lake forms). Avoid.',
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
-  pg: 'Methodology §5 Moderate (oral propylene glycol). Not the Avoid driver on this panel.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver on this panel.',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   sorbitol: 'Methodology §5 Limited (sorbitol).',
   maltitol: 'Methodology §5 Limited (maltitol).',
@@ -84,8 +84,8 @@ function grapeFlags(): IngredientFlag[] {
 }
 function liquidFlags(): IngredientFlag[] {
   return [
-    flag('Sucralose', 'moderate', cite(LIQ_SET, METH.sucralose)),
-    flag('Propylene glycol', 'moderate', cite(LIQ_SET, METH.pg)),
+    flag('Sucralose', 'limited', cite(LIQ_SET, METH.sucralose)),
+    flag('Propylene glycol', 'limited', cite(LIQ_SET, METH.pg)),
     flag('Phosphoric acid', 'limited', cite(LIQ_SET, METH.phosphoric)),
     flag('Menthol', 'limited', cite(LIQ_SET, METH.menthol)),
     flag('Edetate disodium', 'limited', cite(LIQ_SET, METH.edta)),
@@ -187,7 +187,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-2 is 80 mL in 1 bottle in 1 carton. Marketing status active. No size-specific carton image.`,
   }),
@@ -201,7 +201,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-3 is 240 mL in 1 bottle in 1 carton. The Cooling Honey carton image prints 8 FL OZ (240 mL) and the bars read 041100595416, already on claritin-allergy-liquid. That code was not copied here.`,
   }),

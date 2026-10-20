@@ -77,7 +77,7 @@ export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
     activeIngredients: [{ name: 'Loratadine', strength: '10 mg' }],
     inactiveIngredients: [
       flag('Aspartame', 'high', cite(CITRUS_SET, METH.aspartame)),
-      flag('Polysorbate 80', 'moderate', cite(CITRUS_SET, METH.ps80)),
+      flag('Polysorbate 80', 'limited', cite(CITRUS_SET, METH.ps80)),
       flag('Flavors', 'limited', cite(CITRUS_SET, METH.flavors)),
       flag('Mannitol', 'limited', cite(CITRUS_SET, METH.mannitol)),
       cleared(CITRUS_SET, 'Anhydrous citric acid', METH.citric),

@@ -263,6 +263,7 @@ import {
   T111U_COCONUT_OIL_LOCK_SOURCE,
   T111U_RICE_BRAN_LOCK_SOURCE,
 } from '@/lib/scan-preview/plainLanguage';
+import { applyT138uIngredientLocks } from '@/lib/scan-preview/t138uLocks';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -18519,6 +18520,7 @@ export function applyOverlayIngredientLocks(
   r = step(r, (rec) =>
     applyT133uLocks(rec),
   );
+  r = step(r, applyT138uIngredientLocks);
   r = step(r, applyHydrogenatedOilLock);
   return r;
 }

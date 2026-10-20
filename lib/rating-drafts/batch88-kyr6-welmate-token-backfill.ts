@@ -57,7 +57,7 @@ const FILL_TAP =
 const SHOP = 'https://wellspringmeds.com/products';
 
 const METH = {
-  aceK: 'Methodology §5 Moderate-risk (acesulfame potassium).',
+  aceK: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   benzylTopical:
     'Methodology §5 Caution (benzyl alcohol as a topical inactive — locked Sept 15, 2026). Not the oral population-split row. Not Avoid.',
   carbomer:
@@ -105,15 +105,15 @@ const METH = {
   monoDi:
     'Methodology §5 Caution (Mono- and Diglycerides, unspecified blend — locked Sept 16, 2026). Panel string mono and di glycerides sits on this row. Not named GMS. Not Avoid.',
   peg100:
-    'Methodology §5 Caution (PEG-100 stearate — exact INCI; locked Sept 15, 2026). Distinct from the Moderate polyethylene glycol row. Not Avoid.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pegEther:
     'Methodology §5 Caution (polyoxyethylene (23) cetyl ether — exact token; PEG-ether; locked Sept 23, 2026). Not High. Distinct from Caution polyoxyl 20 cetostearyl ether. Do not flip that row.',
   petrolatum: 'Methodology §5 Cleared (white petrolatum / petrolatum).',
-  pgOral: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pgDicaprylate:
     'Methodology §5 Caution (propylene glycol dicaprylate — exact token; locked Sept 23, 2026). Distinct from Moderate propylene glycol (oral). Not High.',
   pgTopical: `Methodology §5 Cleared (propylene glycol, topical). ${PG_TOPICAL_TAP}`,
-  polysorbate: 'Methodology §5 Moderate-risk (polysorbate 80).',
+  polysorbate: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   safflowerFill:
     'Methodology §5 Cleared (safflower oil as softgel fill — locked Sept 16, 2026). Not gummy High. Not an oil-bottle grade.',
   shellac: 'Methodology §5 Cleared (shellac).',
@@ -253,8 +253,8 @@ const ESOME_FLAGS: Compact['flags'] = [
   ['Ferrosoferric oxide', 'limited', 'ironOxide'],
   ['Talc', 'high', 'talc'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Polysorbate 80', 'moderate', 'polysorbate'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Polysorbate 80', 'limited', 'polysorbate'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Methacrylic acid copolymer dispersion', 'limited', 'methacrylic'],
   ['Mono- and diglycerides', 'limited', 'monoDi'],
   ['Sucrose', 'cleared', 'sucrose'],
@@ -272,7 +272,7 @@ const LIDO_CHOL_FLAGS: Compact['flags'] = [
   ['Benzyl alcohol', 'limited', 'benzylTopical'],
   ['Cholesterol', 'limited', 'cholesterol'],
   ['Hydrogenated lecithin', 'limited', 'hydrogenatedLecithin'],
-  ['Polysorbate 80', 'moderate', 'polysorbate'],
+  ['Polysorbate 80', 'limited', 'polysorbate'],
   ['Trolamine', 'limited', 'trolamine'],
   ['Vitamin E acetate', 'limited', 'tocopherylAcetate'],
   ['Carbomer 940', 'cleared', 'carbomer'],
@@ -384,7 +384,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Lidocaine', strength: '5%' }],
     flags: LIDO_CHOL_FLAGS,
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 5.5 oz jar, so they share formulaId. Drivers are benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, trolamine, and vitamin E acetate. Not the C10-18 triglyceride cream. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Cholesterol, Hydrogenated lecithin, Trolamine, Vitamin E acetate.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 5.5 oz jar, so they share formulaId. Drivers are benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, trolamine, and vitamin E acetate. Not the C10-18 triglyceride cream. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Cholesterol, Hydrogenated lecithin, Polysorbate 80, Trolamine, Vitamin E acetate.',
     cite: `Wellspring 1 oz inactive line (${SHOP}/welmate-5-numbing-cream-maximum-strength-topical-anesthetic-1-oz-tube): benzyl alcohol, carbomer 940, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, purified water, trolamine, vitamin E acetate. ${PG_TOPICAL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
@@ -564,7 +564,7 @@ const COMPACT: Compact[] = [
       { name: 'Simethicone', strength: '125mg' },
     ],
     flags: [
-      ['Acesulfame potassium', 'moderate', 'aceK'],
+      ['Acesulfame potassium', 'limited', 'aceK'],
       ['Colloidal silicon dioxide', 'limited', 'sio2'],
       ['Vanilla flavor', 'limited', 'vanilla'],
       ['Anhydrous dicalcium phosphate', 'cleared', 'dical'],

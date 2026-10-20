@@ -80,7 +80,7 @@ export const BATCH142_KYR6B_ZYRTEC_MISSING_UPC: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10 mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', cite(TABLET_SET, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', cite(TABLET_SET, METH.peg)),
+      flag('Polyethylene glycol', 'limited', cite(TABLET_SET, METH.peg)),
       cleared(TABLET_SET, 'Colloidal silicon dioxide'),
       cleared(TABLET_SET, 'Croscarmellose sodium'),
       cleared(TABLET_SET, 'Hypromellose'),
@@ -111,8 +111,8 @@ export const BATCH142_KYR6B_ZYRTEC_MISSING_UPC: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '5 mg / 5 mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', cite(SYRUP_SET, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', cite(SYRUP_SET, METH.pg)),
+      flag('Sucralose', 'limited', cite(SYRUP_SET, METH.sucralose)),
+      flag('Propylene glycol', 'limited', cite(SYRUP_SET, METH.pg)),
       flag('Flavors', 'limited', cite(SYRUP_SET, METH.flavor)),
       flag('Sorbitol', 'limited', cite(SYRUP_SET, METH.sorbitol)),
       flag('Sodium benzoate', 'limited', cite(SYRUP_SET, METH.benzoate)),
@@ -121,7 +121,7 @@ export const BATCH142_KYR6B_ZYRTEC_MISSING_UPC: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      "FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and propylene glycol. Flavors stay Limited. Same inactive line as childrens-zyrtec-liquid on MAIN. REUSE that formula. This is the bubble gum 4 fl oz, not the grape 4 fl oz and not the grape 3-pack. Dye-free is not Clean. Ages 2+.",
+      "FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and propylene glycol. Flavors stay Limited. Same inactive line as childrens-zyrtec-liquid on MAIN. REUSE that formula. This is the bubble gum 4 fl oz, not the grape 4 fl oz and not the grape 3-pack. Dye-free is not Clean. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol, Sodium benzoate.",
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

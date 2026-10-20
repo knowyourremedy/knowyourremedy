@@ -95,9 +95,9 @@ const METH = {
   naoh: 'Methodology §5 Cleared (sodium hydroxide as a pH adjuster).',
   nacl: 'Methodology §5 Cleared (sodium chloride — saline base).',
   peg: 'Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.',
-  pgOral: 'Methodology §5 Moderate (propylene glycol, oral). Not the Avoid driver.',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
-  polysorbate80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  polysorbate80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   silica:
     'Methodology §5 Limited (colloidal silicon dioxide / silicon dioxide / silica — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.',
   silicaGel:
@@ -114,7 +114,7 @@ const METH = {
   starchBare:
     'Methodology §5 Cleared (simple starch filler). Bare starch as a filler maps here (Sept 25, 2026, a761f55). The panel prints starch. Caution unspecified starch stays Caution. Not a new grade.',
   stearic: 'Methodology §5 Cleared (stearic acid).',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
   tio2: 'Methodology §5 High (titanium dioxide).',
@@ -254,7 +254,7 @@ const ASPIRIN_FLAGS: Compact['flags'] = [
   ['iron oxide ochre', 'limited', 'ironOchre'],
   ['methacrylic acid copolymer', 'limited', 'methacrylic'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polysorbate 80', 'moderate', 'polysorbate80'],
+  ['polysorbate 80', 'limited', 'polysorbate80'],
   ['simethicone', 'limited', 'simethicone'],
   ['sodium hydroxide', 'cleared', 'naoh'],
   ['sodium lauryl sulfate', 'limited', 'sls'],
@@ -268,12 +268,12 @@ const KIDS_FLAGS: Compact['flags'] = [
   ['anhydrous citric acid', 'cleared', 'citric'],
   ['flavor', 'limited', 'flavor'],
   ['glycerin', 'cleared', 'glycerin'],
-  ['propylene glycol', 'moderate', 'pgOral'],
+  ['propylene glycol', 'limited', 'pgOral'],
   ['purified water', 'cleared', 'water'],
   ['sodium benzoate', 'limited', 'sodiumBenzoate'],
   ['sodium chloride', 'cleared', 'nacl'],
   ['sodium citrate dihydrate', 'cleared', 'sodiumCitrate2'],
-  ['sucralose', 'moderate', 'sucralose'],
+  ['sucralose', 'limited', 'sucralose'],
   ['xanthan gum', 'cleared', 'xanthan'],
 ];
 

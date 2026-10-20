@@ -127,9 +127,9 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide — E171; EU food-additive ban after EFSA genotoxicity data-gap). No topical exception on this row.',
   parabens:
     'Methodology §5 High-tier (parabens — High in every form, including rubs and patches; locked Sept 15, 2026)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
-  ps20: 'Methodology §5 Moderate-risk (polysorbate 20 — same 2023 gut-barrier signal as P80; locked v1.6)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps20: 'Methodology §5 Limited (Polysorbate 20 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   silicon: `Methodology §5 Caution (silicon — exact word when the label prints “silicon,” not silica; do not alias silicon dioxide / silica / hydrated silica; standalone Caution, not Avoid; locked Sept 15, 2026). ${SILICON_TAP}`,
@@ -447,7 +447,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 20',
-        'moderate',
+        'limited',
         labelCite(CITE.jointflex, METH.ps20),
       ),
       flag(
@@ -760,7 +760,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: [
       flag('Titanium Dioxide', 'high', labelCite(CITE.teemofe, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', labelCite(CITE.teemofe, METH.ps80)),
+      flag('Polysorbate 80', 'limited', labelCite(CITE.teemofe, METH.ps80)),
       flag(
         'Aluminum Glycinate',
         'cleared',
@@ -830,7 +830,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.ha2zNap, METH.tio2)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.ha2zNap, METH.peg),
       ),
       flag('silicon', 'cleared', dailymed(SET.ha2zNap, METH.silicon)),

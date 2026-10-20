@@ -105,9 +105,9 @@ const VITAMIN = 'Vitamin' as const;
 const SUPPLEMENT = 'Supplement' as const;
 
 const METH = {
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sio2:
@@ -360,7 +360,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Vitamin C (ascorbic acid)', strength: '1000mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', labelCite(NM_C_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(NM_C_CITE, METH.peg)),
       flag('Silicon dioxide', 'cleared', labelCite(NM_C_CITE, METH.sio2)),
       labelCleared(NM_C_CITE, 'Cellulose gel'),
       labelCleared(NM_C_CITE, 'Hypromellose'),
@@ -500,8 +500,8 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       { name: 'Omega-3 fatty acids (EPA + DHA)', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Polysorbate 80', 'moderate', labelCite(NM_FO_BURPLESS_CITE, METH.ps80)),
-      flag('Propylene glycol', 'moderate', labelCite(NM_FO_BURPLESS_CITE, METH.pg)),
+      flag('Polysorbate 80', 'limited', labelCite(NM_FO_BURPLESS_CITE, METH.ps80)),
+      flag('Propylene glycol', 'limited', labelCite(NM_FO_BURPLESS_CITE, METH.pg)),
       labelCleared(NM_FO_BURPLESS_CITE, 'Gelatin'),
       labelCleared(NM_FO_BURPLESS_CITE, 'Glycerin'),
       flag('Tocopherols', 'cleared', labelCite(NM_FO_BURPLESS_CITE, METH.tocopherols)),

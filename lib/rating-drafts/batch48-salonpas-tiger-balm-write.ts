@@ -75,8 +75,8 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide — E171; EU food-additive ban after EFSA genotoxicity data-gap). No topical exception on this row.',
   bht: 'Methodology §5 High-tier (BHT — butylated hydroxytoluene, E321; EU-restricted endocrine disruption; locked)',
   psUnspec:
-    'Methodology §5 Moderate-risk (Polysorbate (unspecified) — alias so “polysorbate” matches the same Moderate family as P80 / P20 / P60; locked Sept 15, 2026). Do not invent a new class.',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+    'Methodology §5 Limited (Polysorbate (unspecified) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sorbitol:
     'Methodology §5 Limited-risk (other sugar alcohols — sorbitol / maltitol / mannitol)',
   amp:
@@ -302,7 +302,7 @@ function regularWiderHydrogelInactives(setid: string): IngredientFlag[] {
     flag('Hydrotalcite', 'cleared', dailymed(setid, METH.hydrotalcite)),
     flag('Kaolin', 'cleared', dailymed(setid, METH.kaolin)),
     flag('Mentha oil', 'cleared', dailymed(setid, METH.menthaOil)),
-    flag('Polysorbate 80', 'moderate', dailymed(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
     flag(
       'Polyacrylic acid solution',
       'cleared',
@@ -388,7 +388,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Polysorbate',
-        'moderate',
+        'limited',
         dailymed(SET.salonLidoCream, METH.psUnspec),
       ),
       flag(
@@ -637,7 +637,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       cleared(SET.tbHydroLarge, 'Purified water'),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed(SET.tbHydroLarge, METH.ps80),
       ),
       flag('PVA Solution', 'cleared', dailymed(SET.tbHydroLarge, METH.pva)),
@@ -717,7 +717,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
         'cleared',
         dailymed(SET.tbCool, METH.polyacrylate),
       ),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.tbCool, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.tbCool, METH.ps80)),
       cleared(SET.tbCool, 'Purified water'),
       flag(
         'Propylene glycol',

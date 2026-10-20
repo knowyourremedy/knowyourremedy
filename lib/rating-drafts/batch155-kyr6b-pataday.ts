@@ -73,7 +73,7 @@ function extraFlags(): IngredientFlag[] {
     flag('Hydroxypropyl-gamma-cyclodextrin', 'cleared', cite(EXTRA_SET, METH.gamma)),
     cleared(EXTRA_SET, 'Hypromellose', METH.hypromellose),
     flag('Mannitol', 'limited', cite(EXTRA_SET, METH.mannitol)),
-    flag('Polyethylene glycol 400', 'moderate', cite(EXTRA_SET, METH.peg)),
+    flag('Polyethylene glycol 400', 'limited', cite(EXTRA_SET, METH.peg)),
     cleared(EXTRA_SET, 'Povidone', METH.povidone),
     cleared(EXTRA_SET, 'Purified water', METH.water),
   ];
@@ -128,7 +128,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.7%' }],
     inactiveIngredients: extraFlags(),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Boric acid, Hydrochloric acid, Mannitol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Boric acid, Hydrochloric acid, Mannitol, Polyethylene glycol 400.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,

@@ -24,7 +24,7 @@
 // Leftover Amazon 3P stays 3 (HealthA2Z, TIME-Cap, GoodSense).
 //
 // TALLY (unverified drafts in THIS file): 38 rows —
-// Clean 0 / Caution 6 / Avoid 32.
+// Clean 0 / Caution 5 / Avoid 33.
 // NEW 24 / REUSE-formula 14 /
 // SKIPPED 1 (no_OI 0 / OUT 1) /
 // REFUSED 4.
@@ -155,12 +155,12 @@ const METH = {
   peppermint:
     'Methodology §5 Limited (peppermint oil as flavor). Not gummy High. Not an oil-bottle grade.',
   petrolatum: 'Methodology §5 Cleared (white petrolatum / petrolatum).',
-  pgOral: 'Methodology §5 Moderate (propylene glycol, oral).',
+  pgOral: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pgTopical: `Methodology §5 Cleared (propylene glycol, topical). ${PG_TOPICAL_TAP}`,
   povidone: 'Methodology §5 Cleared (povidone).',
   propylGallate: 'Methodology §5 High (propyl gallate).',
   ps60:
-    'Methodology §5 Moderate (polysorbate 60 — same family as polysorbate 80 / 20). Not a new class.',
+    'Methodology §5 Limited (Polysorbate 60 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharinNa:
     'Methodology §5 Caution (sodium saccharin — exact token; locked Sept 24, 2026). Not Avoid.',
   sarcosinate:
@@ -190,7 +190,7 @@ const METH = {
     'Methodology §5 Caution (styrene block copolymer — exact token; locked Sept 24, 2026). Distinct from Caution styrene isoprene and from Caution SIS. Not Avoid.',
   styreneIsoprene:
     'Methodology §5 Caution (styrene isoprene — exact token; locked Sept 24, 2026). Distinct from Caution SIS / polyisobutylene patch adhesives. Not Avoid.',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
   thyme:
     'Methodology §5 Caution (thyme oil as an Other Ingredient — exact token; locked Sept 24, 2026). Not Avoid.',
@@ -337,8 +337,8 @@ const DXM_FLAGS: Compact['flags'] = [
   ['FD&C Blue No. 1', 'high', 'dye'],
   ['FD&C Red No. 40', 'high', 'dye'],
   ['Propyl gallate', 'high', 'propylGallate'],
-  ['Polyethylene glycol 400', 'moderate', 'peg'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Polyethylene glycol 400', 'limited', 'peg'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Pharmaceutical imprinting ink', 'limited', 'imprint'],
   ['Sorbitol sorbitan solution', 'limited', 'sorbitolSorbitan'],
   ['Gelatin', 'cleared', 'gelatin'],
@@ -349,7 +349,7 @@ const DXM_FLAGS: Compact['flags'] = [
 
 const IBU_US_FLAGS: Compact['flags'] = [
   ['FD&C Blue #1', 'high', 'dye'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Pharmaceutical ink', 'limited', 'ink'],
   ['Sorbitan', 'limited', 'sorbitan'],
   ['Sorbitol', 'limited', 'sorbitol'],
@@ -359,7 +359,7 @@ const IBU_US_FLAGS: Compact['flags'] = [
 ];
 
 const CET_DF_FLAGS: Compact['flags'] = [
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Mannitol', 'limited', 'mannitol'],
   ['Pharmaceutical ink', 'limited', 'ink'],
   ['Sorbitan', 'limited', 'sorbitan'],
@@ -376,7 +376,7 @@ const CET_FLAGS: Compact['flags'] = [
 ];
 
 const PM_DF_FLAGS: Compact['flags'] = [
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Pharmaceutical ink', 'limited', 'ink'],
   ['Sorbitan', 'limited', 'sorbitan'],
   ['Sorbitol', 'limited', 'sorbitol'],
@@ -393,8 +393,8 @@ const PM_FLAGS: Compact['flags'] = [
 
 const NAP_FLAGS: Compact['flags'] = [
   ['FD&C blue #1', 'high', 'dye'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Polyethylene glycol', 'limited', 'peg'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Mannitol', 'limited', 'mannitol'],
   ['Pharmaceutical ink', 'limited', 'ink'],
   ['Sorbitan', 'limited', 'sorbitan'],
@@ -409,7 +409,7 @@ const NAP_FLAGS: Compact['flags'] = [
 const MIG_FLAGS: Compact['flags'] = [
   ['FD&C Red #40', 'high', 'dye'],
   ['FD&C Yellow #6', 'high', 'dye'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Pharmaceutical ink', 'limited', 'ink'],
   ['Sorbitan', 'limited', 'sorbitan'],
   ['Sorbitol', 'limited', 'sorbitol'],
@@ -453,9 +453,9 @@ const GAS180_FLAGS: Compact['flags'] = [
 ];
 
 const DPH50_FLAGS: Compact['flags'] = [
-  ['Polyethylene glycol 400', 'moderate', 'peg'],
-  ['Polyethylene glycol 600', 'moderate', 'peg'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Polyethylene glycol 400', 'limited', 'peg'],
+  ['Polyethylene glycol 600', 'limited', 'peg'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Sorbitol sorbitan solution', 'limited', 'sorbitolSorbitan'],
   ['Gelatin', 'cleared', 'gelatin'],
   ['Glycerin', 'cleared', 'glycerin'],
@@ -468,8 +468,8 @@ const SLEEP_BLUE_FLAGS: Compact['flags'] = [
 ];
 
 const DPH25_FLAGS: Compact['flags'] = [
-  ['Polyethylene glycol 400', 'moderate', 'peg'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Polyethylene glycol 400', 'limited', 'peg'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Sorbitol sorbitan solution', 'limited', 'sorbitolSorbitan'],
   ['Gelatin', 'cleared', 'gelatin'],
   ['Glycerin', 'cleared', 'glycerin'],
@@ -481,8 +481,8 @@ const LOP_FLAGS: Compact['flags'] = [
   ['FD&C blue no. 1', 'high', 'dye'],
   ['Plain caramel powder', 'high', 'caramel'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
-  ['Sucralose', 'moderate', 'sucralose'],
+  ['Propylene glycol', 'limited', 'pgOral'],
+  ['Sucralose', 'limited', 'sucralose'],
   ['Flavadew coolmint', 'limited', 'flavadew'],
   ['Simethicone emulsion', 'limited', 'simethiconeEmulsion'],
   ['Sodium benzoate', 'limited', 'sodiumBenzoate'],
@@ -514,7 +514,7 @@ const BISA_FLAGS: Compact['flags'] = [
 const PIN_FLAGS: Compact['flags'] = [
   ['Methylparaben', 'high', 'paraben'],
   ['Propylparaben', 'high', 'paraben'],
-  ['Propylene glycol', 'moderate', 'pgOral'],
+  ['Propylene glycol', 'limited', 'pgOral'],
   ['Banana flavor', 'limited', 'banana'],
   ['Magnesium aluminum silicate', 'limited', 'magAlum'],
   ['Simethicone', 'limited', 'simethicone'],
@@ -540,7 +540,7 @@ const PVP_FLAGS: Compact['flags'] = [
 ];
 
 const MAG_FLAGS: Compact['flags'] = [
-  ['Sucralose', 'moderate', 'sucralose'],
+  ['Sucralose', 'limited', 'sucralose'],
   ['Benzoic acid', 'limited', 'benzoic'],
   ['Flavor', 'limited', 'flavor'],
   ['Citric acid', 'cleared', 'citric'],
@@ -567,7 +567,7 @@ const HEM_FLAGS: Compact['flags'] = [
 
 const ROLL_FLAGS: Compact['flags'] = [
   ['Methylparaben', 'high', 'paraben'],
-  ['Polysorbate 60', 'moderate', 'ps60'],
+  ['Polysorbate 60', 'limited', 'ps60'],
   ['Acrylates/C10-30 alkyl acrylate crosspolymer', 'limited', 'acrylate'],
   ['Aloe barbadensis leaf extract', 'limited', 'aloe'],
   ['Aminomethyl propanol', 'limited', 'aminomethyl'],
@@ -595,7 +595,7 @@ const PATCH_FLAGS: Compact['flags'] = [
 const ITCH_FLAGS: Compact['flags'] = [
   ['Methylparaben', 'high', 'paraben'],
   ['Propylparaben', 'high', 'paraben'],
-  ['Polysorbate 60', 'moderate', 'ps60'],
+  ['Polysorbate 60', 'limited', 'ps60'],
   ['Carbomer homopolymer type C', 'cleared', 'carbomer'],
   ['Cetyl alcohol', 'cleared', 'cetyl'],
   ['Glycerin', 'cleared', 'glycerin'],
@@ -656,7 +656,7 @@ const COMPACT: Compact[] = [
     flags: IBU_US_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same US-site inactive list as the 160-count, so they share formulaId. Driver is FD&C Blue #1. Pharmaceutical ink is the Sept 24 Caution stamp. Not the India 300-count panel. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; setid 2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; NDC 69452-260-82; 240 softgels). US-site inactive ingredients match the 160-count: FD&C Blue #1, gelatin, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}2b4ecdd8-627a-445f-8ddc-f2b6c832c1e8; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 240 softgels). US-site inactive ingredients match the 160-count: FD&C Blue #1, gelatin, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: CET_DF,
@@ -701,7 +701,7 @@ const COMPACT: Compact[] = [
     flags: CET_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 25-count, so they share formulaId. Driver is FD&C yellow #6. Pharmaceutical ink is the Sept 24 Caution stamp. NDC 69452-265-15. Adults 65 and over, and children under 6: ask a doctor.',
-    cite: `DailyMed SPL (${DM}2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; setid 2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; NDC 69452-265-15; 40 softgels). Same inactive list as the 25-count and 65-count. Ages 6+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 40 softgels). Same inactive list as the 25-count and 65-count. Ages 6+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-cetirizine-65',
@@ -716,7 +716,7 @@ const COMPACT: Compact[] = [
     flags: CET_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 25-count and 40-count, so they share formulaId. Driver is FD&C yellow #6. Pharmaceutical ink is the Sept 24 Caution stamp. NDC 69452-265-88. Not the dye-free 65-count. Adults 65 and over, and children under 6: ask a doctor.',
-    cite: `DailyMed SPL (${DM}2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; setid 2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; NDC 69452-265-88; 65 softgels). Inactive ingredients: FD&C yellow #6, gelatin, glycerin, mannitol, pharmaceutical ink, polyethylene glycol, purified water, sodium hydroxide, sorbitan, sorbitol. Ages 6+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}2c2c4828-0479-4ff3-b2b0-dde5fa74efaf; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 65 softgels). Inactive ingredients: FD&C yellow #6, gelatin, glycerin, mannitol, pharmaceutical ink, polyethylene glycol, purified water, sodium hydroxide, sorbitan, sorbitol. Ages 6+. No GTIN-12 on the SPL.`,
   },
   {
     id: PM_DF,
@@ -784,7 +784,7 @@ const COMPACT: Compact[] = [
     flags: NAP_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the other 120-count bottle, so they share formulaId. Driver is FD&C blue #1. Pharmaceutical ink is the Sept 24 Caution stamp. This package NDC is 69452-259-22. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}9343c79f-9994-4599-bcfe-0a93e49d726e; setid 9343c79f-9994-4599-bcfe-0a93e49d726e; NDC 69452-259-22; 120 liquid gels). Same inactive list as NDC 69452-259-21. Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}9343c79f-9994-4599-bcfe-0a93e49d726e; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 120 liquid gels). Same inactive list as NDC 69452-259-21. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-naproxen-180-259',
@@ -799,7 +799,7 @@ const COMPACT: Compact[] = [
     flags: NAP_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 120-count bottles, so they share formulaId. Driver is FD&C blue #1. Pharmaceutical ink is the Sept 24 Caution stamp. NDC 69452-259-25. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}9343c79f-9994-4599-bcfe-0a93e49d726e; setid 9343c79f-9994-4599-bcfe-0a93e49d726e; NDC 69452-259-25; 180 liquid gels). Same inactive list as the 120-count bottles on this setid. Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}9343c79f-9994-4599-bcfe-0a93e49d726e; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 180 liquid gels). Same inactive list as the 120-count bottles on this setid. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-naproxen-180-284',
@@ -814,7 +814,7 @@ const COMPACT: Compact[] = [
     flags: NAP_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the NDC 69452-259 bottles, so they share formulaId. Driver is FD&C blue #1. Pharmaceutical ink is the Sept 24 Caution stamp. This is setid ba4f927a, package 69452-284-25, not the 259-25 bottle. Under 12: ask a doctor.',
-    cite: `DailyMed SPL (${DM}ba4f927a-4bbe-0d87-e053-2995a90a8c20; setid ba4f927a-4bbe-0d87-e053-2995a90a8c20; NDC 69452-284-25; 180 liquid gels). Inactive ingredients: FD&C blue #1, gelatin, glycerin, lactic acid, mannitol, pharmaceutical ink, polyethylene glycol, povidone, propylene glycol, purified water, sorbitan, sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}ba4f927a-4bbe-0d87-e053-2995a90a8c20; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 180 liquid gels). Inactive ingredients: FD&C blue #1, gelatin, glycerin, lactic acid, mannitol, pharmaceutical ink, polyethylene glycol, povidone, propylene glycol, purified water, sorbitan, sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: MIG,
@@ -923,9 +923,9 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Diphenhydramine HCl', strength: '50mg' }],
     flags: DPH50_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+.',
-    cite: `DailyMed SPL (${DM}1f74e760-9ba9-ac47-e063-6394a90acdff; setid 1f74e760-9ba9-ac47-e063-6394a90acdff; NDC 69452-451-22; 120 softgels). Inactive ingredients: gelatin, glycerin, polyethylene glycol 400, polyethylene glycol 600, propylene glycol, purified water, sorbitol sorbitan solution. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Polyethylene glycol 600, Propylene glycol, Sorbitol sorbitan solution.',
+    cite: `DailyMed SPL (${DM}1f74e760-9ba9-ac47-e063-6394a90acdff; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 120 softgels). Inactive ingredients: gelatin, glycerin, polyethylene glycol 400, polyethylene glycol 600, propylene glycol, purified water, sorbitol sorbitan solution. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: SLEEP_BLUE,
@@ -957,7 +957,7 @@ const COMPACT: Compact[] = [
     flags: SLEEP_BLUE_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 32-count, so they share formulaId. Driver is FD&C blue #1. Sorbitol sorbitan solution is the Sept 24 Caution stamp. NDC 69452-427-17. Ages 12+.',
-    cite: `DailyMed SPL (${DM}141b00b7-a283-40ab-e063-6294a90aec77; setid 141b00b7-a283-40ab-e063-6294a90aec77; NDC 69452-427-17; 60 softgels). Same inactive list as the 32-count and 160-count. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}141b00b7-a283-40ab-e063-6294a90aec77; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 60 softgels). Same inactive list as the 32-count and 160-count. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-sleep-blue-160',
@@ -973,7 +973,7 @@ const COMPACT: Compact[] = [
     flags: SLEEP_BLUE_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 32-count and 60-count, so they share formulaId. Driver is FD&C blue #1. Sorbitol sorbitan solution is the Sept 24 Caution stamp. NDC 69452-427-79. Ages 12+.',
-    cite: `DailyMed SPL (${DM}141b00b7-a283-40ab-e063-6294a90aec77; setid 141b00b7-a283-40ab-e063-6294a90aec77; NDC 69452-427-79; 160 softgels). Same inactive list as the 32-count and 60-count. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}141b00b7-a283-40ab-e063-6294a90aec77; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 160 softgels). Same inactive list as the 32-count and 60-count. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
     id: DPH25,
@@ -1026,7 +1026,7 @@ const COMPACT: Compact[] = [
     flags: LOP_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 120 mL bottle, so they share formulaId. Drivers include plain caramel powder (Sept 24 undisclosed-caramel Avoid) plus the dyes and titanium dioxide. NDC 69452-405-93. Under 2: do not use.',
-    cite: `DailyMed SPL (${DM}4bd0939e-c172-d962-e063-6394a90a44b5; setid 4bd0939e-c172-d962-e063-6394a90a44b5; NDC 69452-405-93; 240 mL). Same inactive list as the 120 mL bottle, including plain caramel powder, flavadew coolmint, the MCC + CMC combo, and simethicone emulsion. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}4bd0939e-c172-d962-e063-6394a90a44b5; Methodology §5 Limited (Propylene glycol (oral) — founder lo; 240 mL). Same inactive list as the 120 mL bottle, including plain caramel powder, flavadew coolmint, the MCC + CMC combo, and simethicone emulsion. No GTIN-12 on the SPL.`,
   },
   {
     id: BISA,
@@ -1071,7 +1071,7 @@ const COMPACT: Compact[] = [
     flags: PIN_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 30 mL bottle, so they share formulaId. Drivers are methylparaben and propylparaben. gylcerin maps to Cleared glycerin. NDC 69452-515-49 is one 30 mL bottle in a carton. Ages 2+.',
-    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; setid 3cf96d04-e8bc-31af-e063-6294a90a0db8; NDC 69452-515-49; 30 mL bottle in a carton). Same inactive list as the 30 mL bottle, including gylcerin, banana flavor, magnesium aluminum silicate, simethicone, and sodium saccharin. Ages 2+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; Methodology §5 Limited (Propylene glycol (oral) — founder lo; 30 mL bottle in a carton). Same inactive list as the 30 mL bottle, including gylcerin, banana flavor, magnesium aluminum silicate, simethicone, and sodium saccharin. Ages 2+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-pinworm-twin',
@@ -1086,7 +1086,7 @@ const COMPACT: Compact[] = [
     flags: PIN_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 30 mL bottle, so they share formulaId. Drivers are methylparaben and propylparaben. The carton is two 1 oz bottles (2 fl oz / 60 mL). NDC 69452-515-38. gylcerin maps to Cleared glycerin. Ages 2+.',
-    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; setid 3cf96d04-e8bc-31af-e063-6294a90a0db8; NDC 69452-515-38; carton of 2). Principal display: 2 fl oz (60 mL), two 1 oz bottles. Same inactive list, including gylcerin. Ages 2+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; Methodology §5 Limited (Propylene glycol (oral) — founder lo; carton of 2). Principal display: 2 fl oz (60 mL), two 1 oz bottles. Same inactive list, including gylcerin. Ages 2+. No GTIN-12 on the SPL.`,
   },
   {
     id: 'aplushealth-b94-pinworm-473',
@@ -1105,7 +1105,7 @@ const COMPACT: Compact[] = [
     flags: PIN_FLAGS,
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Avoid. Same inactive list as the 30 mL bottle, so they share formulaId. Drivers are methylparaben and propylparaben. NDC 69452-515-88. gylcerin maps to Cleared glycerin. Ages 2+.',
-    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; setid 3cf96d04-e8bc-31af-e063-6294a90a0db8; NDC 69452-515-88; 473 mL). Principal display: 16 fl oz (473 mL). Same inactive list, including gylcerin. Ages 2+. No GTIN-12 on the SPL.`,
+    cite: `DailyMed SPL (${DM}3cf96d04-e8bc-31af-e063-6294a90a0db8; Methodology §5 Limited (Propylene glycol (oral) — founder lo; 473 mL). Principal display: 16 fl oz (473 mL). Same inactive list, including gylcerin. Ages 2+. No GTIN-12 on the SPL.`,
   },
   {
     id: PVP,

@@ -102,7 +102,7 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, "vegetable oil", sunflower)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
@@ -530,7 +530,7 @@ export const BATCH17_KIDS_VITAMINS: RatingRecord[] = [
         'high',
         labelCite(FLINTSTONES_CHEW_CITE, METH.dyes),
       ),
-      flag('Sucralose', 'moderate', labelCite(FLINTSTONES_CHEW_CITE, METH.sucralose)),
+      flag('Sucralose', 'limited', labelCite(FLINTSTONES_CHEW_CITE, METH.sucralose)),
       flag(
         'Natural & artificial flavors',
         'limited',

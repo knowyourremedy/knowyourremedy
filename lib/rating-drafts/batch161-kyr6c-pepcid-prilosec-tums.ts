@@ -35,9 +35,9 @@ const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
   dye: 'Methodology §5 High (synthetic FD&C / D&C dye, including the lake form). Avoid.',
   flavors: 'Methodology §5 Caution (bare flavors). Exact “Natural flavors” stays Limited. Not the Avoid driver.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   acetate: 'Methodology §5 Caution (cellulose acetate). Not cellulose, MCC, HPC, or hypromellose. Not the Avoid driver.',
   cornStarch: 'Methodology §5 Cleared (corn starch).',
   crospovidone: 'Methodology §5 Cleared (crospovidone, povidone family).',
@@ -77,7 +77,7 @@ const METH = {
   namedFlavors: 'Methodology §5 Limited (natural and artificial flavors). Not the Avoid driver.',
   ink: 'Methodology §5 Caution (pharmaceutical ink). Not the Avoid driver.',
   phosphoric: 'Methodology §5 Caution (phosphoric acid). Not a phosphate salt. Not the Avoid driver.',
-  pg: 'Methodology §5 Moderate (propylene glycol, swallowed). Not the Avoid driver.',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   shellac: 'Methodology §5 Cleared (shellac).',
   benzoate: 'Methodology §5 Limited (sodium benzoate). Not the Avoid driver.',
   sorbic: 'Methodology §5 Limited (sorbic acid, preservative family). Not the Avoid driver.',
@@ -149,10 +149,10 @@ function icyLine(panel: string): IngredientFlag[] {
     flag(panel, 'Hypromellose 2910', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-    flag(panel, 'Polyethylene glycol', 'moderate', METH.peg),
-    flag(panel, 'Polysorbate 80', 'moderate', METH.ps80),
+    flag(panel, 'Polyethylene glycol', 'limited', METH.peg),
+    flag(panel, 'Polysorbate 80', 'limited', METH.ps80),
     flag(panel, 'Pregelatinized starch', 'cleared', METH.pregel),
-    flag(panel, 'Sucralose', 'moderate', METH.sucralose),
+    flag(panel, 'Sucralose', 'limited', METH.sucralose),
     flag(panel, 'Talc', 'high', METH.talc),
     flag(panel, 'Titanium dioxide', 'high', METH.tio2),
   ];
@@ -176,7 +176,7 @@ function berry25(panel: string): IngredientFlag[] {
     flag(panel, 'Maltodextrin', 'limited', METH.maltodextrin),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
     flag(panel, 'Modified starch', 'limited', METH.modStarch),
-    flag(panel, 'Sucralose', 'moderate', METH.sucralose),
+    flag(panel, 'Sucralose', 'limited', METH.sucralose),
   ];
 }
 
@@ -208,7 +208,7 @@ function mint25(panel: string): IngredientFlag[] {
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Maltodextrin', 'limited', METH.maltodextrin),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
-    flag(panel, 'Sucralose', 'moderate', METH.sucralose),
+    flag(panel, 'Sucralose', 'limited', METH.sucralose),
   ];
 }
 
@@ -227,7 +227,7 @@ function mint50(panel: string): IngredientFlag[] {
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Maltodextrin', 'limited', METH.maltodextrin),
     flag(panel, 'Mineral oil', 'limited', METH.mineral),
-    flag(panel, 'Sucralose', 'moderate', METH.sucralose),
+    flag(panel, 'Sucralose', 'limited', METH.sucralose),
     flag(panel, 'Yellow iron oxide', 'limited', METH.iron),
   ];
 }
@@ -265,8 +265,8 @@ function prilosecLine(panel: string): IngredientFlag[] {
     flag(panel, 'Methacrylic acid copolymer', 'limited', METH.meth),
     flag(panel, 'Microcrystalline cellulose', 'cleared', METH.mcc),
     flag(panel, 'Paraffin', 'limited', METH.mineral),
-    flag(panel, 'Polyethylene glycol 6000', 'moderate', METH.peg),
-    flag(panel, 'Polysorbate 80', 'moderate', METH.ps80),
+    flag(panel, 'Polyethylene glycol 6000', 'limited', METH.peg),
+    flag(panel, 'Polysorbate 80', 'limited', METH.ps80),
     flag(panel, 'Polyvinylpyrrolidone', 'cleared', METH.pvp),
     flag(panel, 'Sodium stearyl fumarate', 'cleared', METH.ssf),
     flag(panel, 'Starch', 'cleared', METH.starch),
@@ -289,8 +289,8 @@ function wildLine(panel: string): IngredientFlag[] {
     flag(panel, 'Methacrylic acid copolymer', 'limited', METH.meth),
     flag(panel, 'Mica', 'limited', METH.mica),
     flag(panel, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-    flag(panel, 'Polyethylene glycol 6000', 'moderate', METH.peg),
-    flag(panel, 'Polysorbate 80', 'moderate', METH.ps80),
+    flag(panel, 'Polyethylene glycol 6000', 'limited', METH.peg),
+    flag(panel, 'Polysorbate 80', 'limited', METH.ps80),
     flag(panel, 'Polyvinylpyrrolidone', 'cleared', METH.pvp),
     flag(panel, 'Saccharin sodium', 'moderate', METH.saccharin),
     flag(panel, 'Sodium stearyl fumarate', 'cleared', METH.ssf),
@@ -349,7 +349,7 @@ function chewyLine(panel: string): IngredientFlag[] {
     flag(panel, 'Natural and artificial flavors', 'limited', METH.namedFlavors),
     flag(panel, 'Pharmaceutical ink', 'limited', METH.ink),
     flag(panel, 'Phosphoric acid', 'limited', METH.phosphoric),
-    flag(panel, 'Propylene glycol', 'moderate', METH.pg),
+    flag(panel, 'Propylene glycol', 'limited', METH.pg),
     flag(panel, 'Propylparaben', 'high', METH.paraben),
     flag(panel, 'Shellac', 'cleared', METH.shellac),
     flag(panel, 'Sodium benzoate', 'limited', METH.benzoate),

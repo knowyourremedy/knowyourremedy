@@ -72,7 +72,7 @@ const SLOW_FE_FLAGS: IngredientFlag[] = [
   flag(SLOW_PANEL, 'Magnesium stearate', 'cleared', METH.magStearate),
   flag(SLOW_PANEL, 'Tribasic calcium phosphate', 'cleared', METH.phosphate),
   flag(SLOW_PANEL, 'Polyvinyl alcohol', 'cleared', METH.pva),
-  flag(SLOW_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(SLOW_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(SLOW_PANEL, 'Talc', 'high', METH.talc),
   flag(SLOW_PANEL, 'Titanium dioxide', 'high', METH.tio2),
   flag(SLOW_PANEL, 'Red 40 Lake', 'high', METH.dye),

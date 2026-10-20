@@ -89,8 +89,8 @@ function ultraFlags(): IngredientFlag[] {
     flag('D&C red no. 27 aluminum lake', 'high', cite(ULTRA_SET, METH.dye)),
     flag('Titanium dioxide', 'high', cite(ULTRA_SET, METH.tio2)),
     flag('Carnauba wax', 'cleared', cite(ULTRA_SET, METH.carnauba)),
-    flag('Polyethylene glycol', 'moderate', cite(ULTRA_SET, METH.peg)),
-    flag('Polysorbate 80', 'moderate', cite(ULTRA_SET, METH.ps80)),
+    flag('Polyethylene glycol', 'limited', cite(ULTRA_SET, METH.peg)),
+    flag('Polysorbate 80', 'limited', cite(ULTRA_SET, METH.ps80)),
     cleared(ULTRA_SET, 'Croscarmellose sodium'),
     cleared(ULTRA_SET, 'Dibasic calcium phosphate', METH.phosphate),
     cleared(ULTRA_SET, 'Hypromellose'),
@@ -103,8 +103,8 @@ function extraFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(EXTRA_SET, METH.tio2)),
     flag('Carnauba wax', 'cleared', cite(EXTRA_SET, METH.carnauba)),
-    flag('Polyethylene glycol', 'moderate', cite(EXTRA_SET, METH.peg)),
-    flag('Polysorbate 80', 'moderate', cite(EXTRA_SET, METH.ps80)),
+    flag('Polyethylene glycol', 'limited', cite(EXTRA_SET, METH.peg)),
+    flag('Polysorbate 80', 'limited', cite(EXTRA_SET, METH.ps80)),
     cleared(EXTRA_SET, 'Croscarmellose sodium'),
     cleared(EXTRA_SET, 'Dibasic calcium phosphate', METH.phosphate),
     cleared(EXTRA_SET, 'Hypromellose'),
@@ -115,7 +115,7 @@ function extraFlags(): IngredientFlag[] {
 
 function liquiFlags(): IngredientFlag[] {
   return [
-    flag('Polyethylene glycol', 'moderate', cite(LIQUI_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(LIQUI_SET, METH.peg)),
     flag('Sorbitol', 'limited', cite(LIQUI_SET, METH.sorbitol)),
     cleared(LIQUI_SET, 'Gelatin', METH.gelatin),
     cleared(LIQUI_SET, 'Glycerin', METH.glycerin),
@@ -130,7 +130,7 @@ function congFlags(): IngredientFlag[] {
     flag('Titanium dioxide', 'high', cite(CONG_SET, METH.tio2)),
     flag('Carnauba wax', 'cleared', cite(CONG_SET, METH.carnauba)),
     flag('Modified starch', 'limited', cite(CONG_SET, METH.starch)),
-    flag('Polyethylene glycol', 'moderate', cite(CONG_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(CONG_SET, METH.peg)),
     cleared(CONG_SET, 'Magnesium stearate'),
     cleared(CONG_SET, 'Microcrystalline cellulose', METH.cellulose),
     cleared(CONG_SET, 'Polyvinyl alcohol', METH.pva),

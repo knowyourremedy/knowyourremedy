@@ -866,7 +866,7 @@ export const BATCH196_KYR6C_NB_FORTY: RatingRecord[] = [
       flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Gelatin', 'cleared', METH.gelatin),
       flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Castor Oil', 'cleared', METH.castor),
       flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Vegetable Glycerin', 'cleared', METH.glycerin),
-      flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Polyethylene Glycol', 'moderate', METH.peg),
+      flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Polyethylene Glycol', 'limited', METH.peg),
       flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Coconut Oil', 'cleared', METH.coconutFill),
       flag('https://naturesbounty.com/products/advanced-triple-absorb-coq10', 'Olive Oil', 'cleared', METH.oliveFill),
     ],

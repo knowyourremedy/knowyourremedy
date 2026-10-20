@@ -115,9 +115,9 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, "vegetable oil", sunflower)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -299,7 +299,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_CETIRIZINE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_CETIRIZINE, METH.peg)),
       flag('Mannitol', 'limited', dailymed(SET_CETIRIZINE, METH.mannitol)),
       flag('Sorbitol', 'limited', dailymed(SET_CETIRIZINE, METH.sorbitol)),
       cleared(SET_CETIRIZINE, 'Gelatin'),
@@ -308,7 +308,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_CETIRIZINE, 'Sodium hydroxide'),
       cleared(SET_CETIRIZINE, 'Sorbitan'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -330,15 +330,15 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '25mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol 400', 'moderate', dailymed(SET_DPH, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_DPH, METH.pg)),
+      flag('Polyethylene glycol 400', 'limited', dailymed(SET_DPH, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_DPH, METH.pg)),
       flag('Sorbitol', 'limited', dailymed(SET_DPH, METH.sorbitol)),
       cleared(SET_DPH, 'Gelatin'),
       cleared(SET_DPH, 'Glycerin'),
       cleared(SET_DPH, 'Purified water'),
       cleared(SET_DPH, 'Sorbitol sorbitan solution'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -592,8 +592,8 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '200mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_IBU, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_IBU, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_IBU, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_IBU, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_IBU, METH.ps80)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
