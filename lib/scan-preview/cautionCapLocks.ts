@@ -38,6 +38,7 @@ export function applyCautionCapLocks(record: RatingRecord): RatingRecord {
         return {
           ...ingredient,
           riskLevel: 'limited' as RiskLevel,
+          stackCountExempt: true,
           source: withMeth(panel, useMeth, ingredient.source),
         };
       }

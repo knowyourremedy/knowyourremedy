@@ -564,7 +564,8 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       cleared(SET.tylenolEsLiquid, 'Xanthan gum'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Potassium sorbate, Sorbitol, Flavors.',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Potassium sorbate, Sorbitol, Flavors.',
 
     retailers: [...PF_RETAILERS],
     cleanAlternatives: APAP_ADULT_ALTS,

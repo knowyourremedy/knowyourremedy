@@ -171,10 +171,12 @@ type Spec = {
   flags: IngredientFlag[];
   verdict: RatingRecord['verdict'];
   note: string;
+  honestNote?: string;
   source: string;
 };
 
 function expand(d: Spec): RatingRecord {
+  const honestNote = [d.note, d.honestNote].filter(Boolean).join(' ').trim();
   return {
     id: d.id,
     productName: d.productName,
@@ -189,6 +191,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.flags,
     verdict: d.verdict,
+    honestNote: honestNote.length > 0 ? honestNote : undefined,
 
     retailers: [...RETAILERS],
     cleanAlternatives: d.verdict === 'clean' ? undefined : d.audience === 'kids' ? KIDS_ALTS : ADULT_ALTS,
@@ -414,6 +417,7 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     actives: SYRUP_ACTIVE,
     flags: kidsLiquidFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
     note: SYRUP_NOTE,
     source:
       'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c, same grape syrup inactive line. Package NDC 11523-4360-3 is 150 mL in 1 bottle in 1 carton. UPC left empty.',

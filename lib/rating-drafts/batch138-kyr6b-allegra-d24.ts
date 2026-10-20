@@ -22,8 +22,8 @@ const METH = {
   dyes: 'Methodology §5 High (FD&C / D&C dyes, including lake forms). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
   talc: 'Methodology §5 High (talc, oral). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  pg: 'Methodology §5 Moderate (oral propylene glycol). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   celluloseAcetate:
     'Methodology §5 Caution (cellulose acetate, Oct 1, 2026). Not cellulose, MCC, HPC, or HPMC. Not HPMCAS. Not the Avoid driver.',
   iron: 'Methodology §5 Caution (iron oxide as color). Black iron oxide sits on this row. Not Avoid.',

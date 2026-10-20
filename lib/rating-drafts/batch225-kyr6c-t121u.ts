@@ -493,7 +493,7 @@ export const BATCH225_KYR6C_T121U: RatingRecord[] = [
       `Panel ${PANEL_BLOAT}. Serving 1 Capsule; 30 servings. Other ingredients verbatim: Vegetable capsule (hypromellose, gellan gum), rice flour, medium chain triglycerides, silicon dioxide, rice hulls, rice extract, gum arabic, and sunflower oil. physicianschoice.com/bloat-gas-probiotic 1-Pack $47.03; Vitacost 160657 $41.97; Walmart ip/13942858018. UPC 850048297173 check digit OK.`,
     ],
     honestNote:
-      'The grade comes only from the other ingredients. Four of them dock it to Caution: rice flour (exact Caution token, arsenic concern with no source named), medium chain triglycerides with no plant source named (Limited), silicon dioxide (Caution, oral nanoparticle data gap), and an unspecified rice extract (Limited). The capsule, rice hulls, gum arabic, and sunflower oil fill are Cleared. Nothing is Avoid. The actives are not graded. Serving is 1 capsule daily. Adults; the label prints no minimum age.',
+      'The grade comes only from the other ingredients. Four of them dock it to Caution: rice flour (exact Caution token, arsenic concern with no source named), medium chain triglycerides with no plant source named (Limited), silicon dioxide (Caution, oral nanoparticle data gap), and an unspecified rice extract (Limited). The capsule, rice hulls, gum arabic, and sunflower oil fill are Cleared. Nothing is Avoid. The actives are not graded. Serving is 1 capsule daily. Adults; the label prints no minimum age. Avoid: three or more Limited tokens triggered the stacking rule (t137u): rice flour, medium chain triglycerides, rice extract.',
   }),
   pcCapsule({
     id: 'physicianschoice-b225-vaginal-probiotic-60',

@@ -188,8 +188,8 @@ const METH = {
   seedOilChew: `Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, vegetable oil, sunflower). ${CHEW_OIL_TAP}`,
   peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  aceK: 'Methodology §5 Moderate-risk (acesulfame potassium — Ace-K)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  aceK: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
@@ -510,7 +510,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET.timecapNap, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.timecapNap, METH.sio2),
       ),
       cleared(SET.timecapNap, 'Croscarmellose sodium'),
@@ -999,15 +999,15 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Talc', 'high', dailymed(SET.gsDual, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.gsDual, METH.tio2)),
       flag('Polyethylene glycol', 'limited', dailymed(SET.gsDual, METH.peg)),
-      flag('Sucralose', 'moderate', dailymed(SET.gsDual, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.gsDual, METH.sucralose)),
       flag(
         'Ferric oxide yellow',
-        'cleared',
+        'moderate',
         dailymed(SET.gsDual, METH.ferricYellow),
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.gsDual, METH.sio2),
       ),
       flag(
@@ -1092,15 +1092,15 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         dailymed(SET.gsKidsChew, METH.dyes),
       ),
       flag('Soybean oil', 'high', dailymed(SET.gsKidsChew, METH.seedOilChew)),
-      flag('Acesulfame potassium', 'moderate', dailymed(SET.gsKidsChew, METH.aceK)),
+      flag('Acesulfame potassium', 'limited', dailymed(SET.gsKidsChew, METH.aceK)),
       flag(
         'Ammonium glycyrrhizin',
-        'cleared',
+        'moderate',
         dailymed(SET.gsKidsChew, METH.ammonGly),
       ),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET.gsKidsChew, METH.sls),
       ),
       flag('Mannitol', 'limited', dailymed(SET.gsKidsChew, METH.mannitol)),
@@ -1111,7 +1111,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.gsKidsChew, METH.sio2),
       ),
       flag('Succinic acid', 'cleared', dailymed(SET.gsKidsChew, METH.succinic)),
@@ -1147,15 +1147,15 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Propylene glycol', 'limited', dailymed(SET.gsLiqGel, METH.pg)),
       flag(
         'Polyvinyl acetate phthalate',
-        'cleared',
+        'moderate',
         dailymed(SET.gsLiqGel, METH.pvap),
       ),
       flag(
         'Ammonium hydroxide',
-        'cleared',
+        'moderate',
         dailymed(SET.gsLiqGel, METH.ammoniumHydroxide),
       ),
-      flag('Sorbitan', 'cleared', dailymed(SET.gsLiqGel, METH.sorbitan)),
+      flag('Sorbitan', 'moderate', dailymed(SET.gsLiqGel, METH.sorbitan)),
       flag('Sorbitol', 'limited', dailymed(SET.gsLiqGel, METH.sorbitol)),
       flag(
         'Caprylic and capric acid triglycerides',

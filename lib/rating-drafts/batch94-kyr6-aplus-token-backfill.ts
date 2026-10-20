@@ -300,7 +300,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
+    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Mannitol, Pharmaceutical ink, Sorbitan, Sorbitol.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
     barcode: d.barcode,
@@ -734,7 +734,7 @@ const COMPACT: Compact[] = [
     ],
     flags: PM_DF_FLAGS,
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No High. Take 2 softgels at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pharmaceutical ink, Sorbitan, Sorbitol.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No High. Take 2 softgels at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Pharmaceutical ink, Sorbitan, Sorbitol.',
     cite: `DailyMed SPL (${DM}51037299-37dd-ca57-e063-6394a90a12c7; setid 51037299-37dd-ca57-e063-6394a90a12c7; NDC 69452-507-78; 80 softgels). Inactive ingredients: gelatin, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan, sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {

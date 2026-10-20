@@ -78,10 +78,10 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps20:
     'Methodology §5 Moderate-risk (polysorbate 20 — same 2023 gut-barrier signal as PS80; locked v1.6)',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
@@ -1285,6 +1285,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('03f521f4-d35f-4f66-b3ad-7e58a244eb93', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS'],
     cleanAlternatives: SLEEP_ALTS,

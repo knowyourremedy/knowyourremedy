@@ -2,7 +2,12 @@
 // Rainbow Light three packs held from batch207 — brand Supplement Facts OI only; actives ungraded.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
-import { computeVerdictFromInactiveIngredients, verdictFromFlagSpecs, verdictFromRiskLevels } from '../scan-preview/verdictFromFlags';
+import {
+  computeVerdictFromInactiveIngredients,
+  limitedStackHonestNoteIfAny,
+  verdictFromFlagSpecs,
+  verdictFromRiskLevels,
+} from '../scan-preview/verdictFromFlags';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
 
 const UNVERIFIED = 'unverified' as const;
@@ -134,6 +139,8 @@ function verdictFromFlags(flags: FlagSpec[]): RatingRecord['verdict'] {
 function toRecord(spec: RowSpec): RatingRecord {
   const panel = rl(spec.handle);
   const source = `Brand page ${panel} supplement-facts image (brand panel) was read; actives from brand product page (Shopify RL SKU). Other ingredients: ${spec.oiLine} Brand gtin12 ${spec.barcode}. Rainbow Light brand store in stock (t98u sale page). Amazon — founder-confirmed current US sale page (t98u). Row graded from the brand Supplement Facts label only; actives ungraded.`;
+  const inactiveIngredients = buildOi(panel, spec.flags);
+  const rollup = computeVerdictFromInactiveIngredients(inactiveIngredients);
   return {
     id: spec.id,
     productName: spec.productName,
@@ -147,8 +154,9 @@ function toRecord(spec: RowSpec): RatingRecord {
     productType: SUPPLEMENT,
     barcode: spec.barcode,
     activeIngredients: [{ name: spec.active, strength: 'label serving' }],
-    inactiveIngredients: buildOi(panel, spec.flags),
-    verdict: verdictFromFlags(spec.flags),
+    inactiveIngredients,
+    verdict: rollup.verdict,
+    honestNote: limitedStackHonestNoteIfAny(inactiveIngredients),
     retailers: ['Rainbow Light', 'Amazon'],
     sourcesGeneral: [source],
   };

@@ -2,7 +2,12 @@
 // Rainbow Light non-multi — brand Supplement Facts OI only; actives ungraded.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
-import { computeVerdictFromInactiveIngredients, verdictFromFlagSpecs, verdictFromRiskLevels } from '../scan-preview/verdictFromFlags';
+import {
+  appendLimitedStackHonestNote,
+  computeVerdictFromInactiveIngredients,
+  verdictFromFlagSpecs,
+  verdictFromRiskLevels,
+} from '../scan-preview/verdictFromFlags';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
 
 const UNVERIFIED = 'unverified' as const;
@@ -761,6 +766,12 @@ function toRecord(spec: RowSpec): RatingRecord {
   const note = spec.sourceNote ? `${spec.sourceNote} ` : '';
   const upcNote = spec.barcode ? ` UPC ${spec.barcode} on attached sources.` : '';
   const source = `Brand page ${panel} supplement-facts image ${rlCode} supplement-facts image (brand panel) was read. Other ingredients: ${spec.oiLine} ${note}Brand store in stock (t88u sale page). Opened ${spec.secondUrl} with sale.${upcNote} Row graded from the brand Supplement Facts label only; actives ungraded.`;
+  const inactiveIngredients = buildOi(panel, spec.flags);
+  const rollup = computeVerdictFromInactiveIngredients(inactiveIngredients);
+  const honestNote =
+    rollup.cause === 'limited_stack' && (rollup.limitedStackTokens?.length ?? 0) >= 3
+      ? appendLimitedStackHonestNote(undefined, rollup.limitedStackTokens ?? [])
+      : undefined;
   return {
     id: spec.id,
     productName: spec.productName,
@@ -774,8 +785,9 @@ function toRecord(spec: RowSpec): RatingRecord {
     productType: SUPPLEMENT,
     ...(spec.barcode ? { barcode: spec.barcode } : {}),
     activeIngredients: [{ name: spec.active, strength: 'label serving' }],
-    inactiveIngredients: buildOi(panel, spec.flags),
-    verdict: verdictFromFlags(spec.flags),
+    inactiveIngredients,
+    verdict: rollup.verdict,
+    honestNote,
     retailers: spec.retailers,
     sourcesGeneral: [source],
   };

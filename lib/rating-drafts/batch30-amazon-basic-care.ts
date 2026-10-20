@@ -313,7 +313,7 @@ const METH = {
   peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
   maltitol: 'Methodology §5 Limited-risk (sugar alcohols — maltitol)',
@@ -862,7 +862,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       { name: 'Mometasone furoate monohydrate', strength: '50mcg / spray' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_K2, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_K2, METH.bkc)),
       flag('Polysorbate 80', 'limited', dailymed(SET_K2, METH.ps80)),
       cleared(SET_K2, 'Citric acid'),
       ungraded(SET_K2, 'Glycerin'),

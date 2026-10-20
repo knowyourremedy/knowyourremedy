@@ -10,8 +10,10 @@ export type { VerdictRollup } from './verdictFromFlags';
 export {
   appendLimitedStackHonestNote,
   computeVerdictFromInactiveIngredients,
+  ingredientCountsTowardLimitedStack,
   isSiliconDioxideStackExempt,
   replaceLimitedStackHonestNote,
+  stripLimitedStackHonestNote,
 } from './verdictFromFlags';
 
 const T133U_CARNAUBA_LOCK_SOURCE =

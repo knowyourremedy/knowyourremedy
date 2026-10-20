@@ -14,6 +14,8 @@ export type IngredientFlag = {
   name: string;
   riskLevel: RiskLevel;
   source?: string;       // citation for this specific flag (omit only if cleared)
+  /** 0-pt Caution caps (e.g. silicon dioxide) stored as limited — must not count toward t137u stack */
+  stackCountExempt?: boolean;
 };
 
 // ─── Active ingredient + strength (supports combo products) ─

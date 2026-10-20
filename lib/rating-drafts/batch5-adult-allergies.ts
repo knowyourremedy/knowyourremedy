@@ -77,9 +77,9 @@ const METH = {
   aspartame:
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
   bht: 'Methodology §5 High-tier (BHT — locked Avoid, EU 2022 endocrine restriction)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (maltodextrin — organic and non-organic)',
@@ -861,7 +861,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Benzalkonium chloride',
-        'cleared',
+        'moderate',
         dailymed('b6134ba0-b70a-4eac-9a82-cef64b242c1d', METH.bkc),
       ),
       flag(
@@ -877,7 +877,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('b6134ba0-b70a-4eac-9a82-cef64b242c1d', 'Purified water'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NASAL_ALTS,
@@ -1258,6 +1258,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('19afd658-8c67-af44-e063-6394a90abada', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: AGE2_ORAL_ALTS,

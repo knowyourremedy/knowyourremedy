@@ -194,6 +194,8 @@ function storeInfantsApapDyefree(opts: {
       flag('Flavor', 'limited', dailymed(opts.setid, METH.flavors)),
     ],
     verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Sodium benzoate, Sorbitol, Flavor.',
 
     retailers: opts.retailers,
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,

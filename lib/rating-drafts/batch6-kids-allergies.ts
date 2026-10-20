@@ -79,8 +79,8 @@ const METH = {
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
   parabens: 'Methodology §5 High-tier (parabens)',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
@@ -258,6 +258,8 @@ function storeLoratadineLiquid(opts: {
       cleared(opts.setid, 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
 
     retailers: opts.retailers,
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -620,6 +622,8 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('9d8e78ea-af98-4f7c-8db5-044b49582f80', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol, Sodium benzoate.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -682,6 +686,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('170061e9-e529-4ff0-e054-00144ff8d46c', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -1072,7 +1077,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sorbitol, Sodium benzoate.',
 
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -1449,6 +1454,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('10d478ff-ddc6-45da-87ff-cfe1b2b07a8e', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE6,

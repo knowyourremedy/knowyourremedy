@@ -231,7 +231,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
+    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Cholesterol, Hydrogenated lecithin, Polysorbate 80, Trolamine, Vitamin E acetate.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
     barcode: d.barcode,
