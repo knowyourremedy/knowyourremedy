@@ -135,7 +135,7 @@ const METH = {
     'Methodology §5 High-tier (parabens — High in every form, including rubs and patches; locked Sept 15, 2026)',
   mit: 'Methodology §5 High-tier (Methylisothiazolinone / MIT — High/Avoid in leave-on cream; exact tokens; locked Sept 15, 2026)',
   sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
@@ -518,10 +518,10 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       ),
       flag('Talc', 'high', dailymed(SET.timecapIbu, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.timecapIbu, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.timecapIbu, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.timecapIbu, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.timecapIbu, METH.sio2),
       ),
       flag(

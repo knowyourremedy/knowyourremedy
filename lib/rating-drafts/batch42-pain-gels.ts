@@ -107,7 +107,7 @@ const METH = {
   pgTopical: `Methodology §5 Moderate-risk (propylene glycol, oral) does not score on this topical. ${PG_TOPICAL_TAP}`,
   naoh: 'Methodology §5 Cleared (sodium hydroxide as pH adjuster)',
   stearic: 'Methodology §5 Cleared (stearic acid — stearate-family lubricant)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
@@ -199,7 +199,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
       { name: 'Methyl salicylate', strength: '15%' },
     ],
     inactiveIngredients: [
-      flag('Oleth-3-phosphate', 'cleared', dailymed(SET.advil, METH.oleth)),
+      flag('Oleth-3-phosphate', 'moderate', dailymed(SET.advil, METH.oleth)),
       flag('Isocetyl stearate', 'cleared', dailymed(SET.advil, METH.isocetyl)),
       flag('Cetyl esters wax', 'cleared', dailymed(SET.advil, METH.waxFamily)),
       flag('Emulsifying wax', 'cleared', dailymed(SET.advil, METH.waxFamily)),
@@ -214,7 +214,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
       flag('Sodium hydroxide', 'cleared', dailymed(SET.advil, METH.naoh)),
       cleared(SET.advil, 'Purified water'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...PF_RETAILERS, 'advil.com'],
     cleanAlternatives: TOPICAL_ALTS,

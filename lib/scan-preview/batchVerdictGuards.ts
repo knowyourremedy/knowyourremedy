@@ -1,11 +1,9 @@
 import type { RatingRecord } from '../ratingRecord';
-import { isSiliconDioxideStackExempt } from './verdictFromFlags';
+import { ingredientCountsTowardLimitedStack } from './verdictFromFlags';
 
 /** t137u: Avoid is valid with High **or** 3+ Limited (SiO2 excluded from stack). */
 export function avoidAllowedWithoutHigh(record: RatingRecord): boolean {
-  const limitedStack = record.inactiveIngredients.filter(
-    (i) => i.riskLevel === 'limited' && !isSiliconDioxideStackExempt(i.name),
-  );
+  const limitedStack = record.inactiveIngredients.filter(ingredientCountsTowardLimitedStack);
   return limitedStack.length >= 3;
 }
 

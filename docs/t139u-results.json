@@ -1,0 +1,46 @@
+{
+  "step3Regrades": [
+    {
+      "id": "flonase-allergy-relief",
+      "name": "Flonase Allergy Relief",
+      "oldGrade": "avoid",
+      "newGrade": "caution"
+    }
+  ],
+  "step1": {
+    "stackAvoidRows": 475,
+    "verifyOk": 475,
+    "priorVerifyOk": 423
+  },
+  "step2": {
+    "patchMissPersisted": [
+      "claritin-allergy-liquid",
+      "benadryl-liqui-gels",
+      "childrens-claritin-liquid",
+      "childrens-benadryl-dyefree-liquid",
+      "childrens-allegra-liquid",
+      "childrens-benadryl-allergy-plus-congestion",
+      "cvs-sleep-aid-liquid-dyefree",
+      "tylenol-pm-es",
+      "pure-encapsulations-melatonin-sr-3mg",
+      "amazon-basics-mometasone-nasal",
+      "advil-targeted-relief-cream",
+      "goodsense-naproxen-220",
+      "goodsense-dual-action",
+      "goodsense-childrens-ibuprofen-chew",
+      "goodsense-ibuprofen-liquid-gels",
+      "timecap-naproxen-220",
+      "goodsense-es-pain-relief-l484",
+      "timecap-ibuprofen-200",
+      "allegra-b138-d24-10",
+      "allegra-b138-d24-15"
+    ],
+    "patchMissStill": []
+  },
+  "searchTally": {
+    "clean": 2319,
+    "caution": 2093,
+    "avoid": 1744,
+    "total": 6156
+  }
+}

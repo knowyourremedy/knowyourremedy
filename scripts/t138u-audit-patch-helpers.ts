@@ -1,11 +1,14 @@
 /**
  * Shared block patch helpers for t138u rescan / audit scripts.
  */
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import type { RatingRecord } from '../lib/ratingRecord';
 import {
   appendLimitedStackHonestNote,
   computeVerdictFromInactiveIngredients,
   replaceLimitedStackHonestNote,
+  stripLimitedStackHonestNote,
 } from '../lib/scan-preview/verdictFromFlags';
 
 const BEESWAX_SPLIT_DQ =
@@ -38,12 +41,47 @@ function constAliasesForId(id: string, text: string): string[] {
   return [...new Set(aliases)];
 }
 
+export function findFileForId(id: string, draftsDir?: string): string | null {
+  const dir = draftsDir ?? join(process.cwd(), 'lib/rating-drafts');
+  const idEsc = escapeRe(id);
+  const idPat = new RegExp(`\\bid:\\s*['"]${idEsc}['"]`);
+  const constPat = new RegExp(`const\\s+(\\w+)\\s*=\\s*['"]${idEsc}['"]`, 'g');
+  const candidates: string[] = [];
+  for (const file of readdirSync(dir)) {
+    if (!file.endsWith('.ts')) continue;
+    const path = join(dir, file);
+    const text = readFileSync(path, 'utf8');
+    if (idPat.test(text)) {
+      candidates.push(path);
+      continue;
+    }
+    for (const m of text.matchAll(constPat)) {
+      const alias = m[1];
+      if (new RegExp(`\\bid:\\s*${alias}\\b`).test(text)) candidates.push(path);
+    }
+  }
+  const uniq = [...new Set(candidates)];
+  for (const path of uniq) {
+    if (extractBlock(readFileSync(path, 'utf8'), id)) return path;
+  }
+  for (const file of readdirSync(dir)) {
+    if (!file.endsWith('.ts')) continue;
+    const path = join(dir, file);
+    const text = readFileSync(path, 'utf8');
+    if (text.includes(`'${id}'`) || text.includes(`"${id}"`)) {
+      if (extractBlock(text, id)) return path;
+    }
+  }
+  return null;
+}
+
 export function extractBlock(
   text: string,
   id: string,
 ): { start: number; end: number; block: string } | null {
   const aliases = constAliasesForId(id, text);
   const patterns = [
+    new RegExp(`expand\\(\\s*['"]${escapeRe(id)}['"]`),
     new RegExp(`\\n  expand\\(\\{\\n    id: ['"]${escapeRe(id)}['"]`),
     new RegExp(`\\n  \\{\\n    id: ['"]${escapeRe(id)}['"]`),
     new RegExp(`\\n    \\{\\n      id: ['"]${escapeRe(id)}['"]`),
@@ -63,14 +101,21 @@ export function extractBlock(
     }
   }
   if (start === -1) return null;
-  const lineStart = text.lastIndexOf('\n', start) + 1;
+  let lineStart = text.lastIndexOf('\n', start) + 1;
   let openBrace = -1;
-  const rowCall = text.lastIndexOf('row({', start);
-  const expandCall = text.lastIndexOf('expand({', start);
-  const callIdx = Math.max(rowCall, expandCall);
-  if (callIdx >= 0) openBrace = text.indexOf('{', callIdx);
-  else if (fromExpand) openBrace = text.indexOf('{', lineStart);
-  else openBrace = text.indexOf('{', start);
+  let helperCallIdx = -1;
+  const before = text.slice(0, start);
+  for (const m of before.matchAll(/\b[A-Za-z_$][\w$]*\(\{/g)) {
+    helperCallIdx = m.index ?? -1;
+  }
+  if (helperCallIdx >= 0) {
+    openBrace = text.indexOf('{', helperCallIdx);
+    lineStart = text.lastIndexOf('\n', helperCallIdx) + 1;
+  } else if (fromExpand) {
+    openBrace = text.indexOf('{', lineStart);
+  } else {
+    openBrace = text.indexOf('{', start);
+  }
   if (openBrace < 0) return null;
   let depth = 0;
   let end = openBrace;
@@ -81,6 +126,7 @@ export function extractBlock(
       depth--;
       if (depth === 0) {
         end = i + 1;
+        if (helperCallIdx >= 0 && text[end] === ')') end += 1;
         break;
       }
     }
@@ -157,6 +203,23 @@ export function patchBlock(
   if (applyVerdict && before.verdict !== after.verdict) {
     b = b.replace(new RegExp(`verdict: "${escapeRe(before.verdict)}"`), `verdict: "${after.verdict}"`);
     b = b.replace(new RegExp(`verdict: '${escapeRe(before.verdict)}'`), `verdict: '${after.verdict}'`);
+    if (after.verdict !== 'avoid') {
+      const noteRe =
+        /(honestNote:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^'\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+      const plainNote =
+        /(note:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^'\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+      const mathNote =
+        /(math:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^'\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+      const nm = noteRe.exec(b) ?? plainNote.exec(b) ?? mathNote.exec(b);
+      if (nm) {
+        const quote = nm[2][0];
+        const inner = nm[2].slice(1, -1);
+        const stripped = stripLimitedStackHonestNote(inner);
+        if (stripped !== inner) {
+          b = b.replace(nm[0], `${nm[1]}${quote}${stripped}${quote}`);
+        }
+      }
+    }
   }
   const beforeStack = computeVerdictFromInactiveIngredients(
     before.inactiveIngredients,
@@ -201,6 +264,11 @@ export function patchBlock(
             /(verdict:\s*['"]avoid['"],?\n)/,
             `$1    honestNote: '${esc}',\n`,
           );
+        } else if (/verdict:\s*/.test(b)) {
+          b = b.replace(
+            /(verdict:\s*[^,\n]+,?\n)/,
+            `$1    honestNote: '${esc}',\n`,
+          );
         }
       }
     }
@@ -209,7 +277,7 @@ export function patchBlock(
 }
 
 export function patchMethBlockOnly(text: string, before: RatingRecord, after: RatingRecord): string {
-  const methRe = /const METH = \{[\s\S]*?\n\};/m;
+  const methRe = /const METH = \{[\s\S]*?\n\}\s*(?:as const)?\s*;/m;
   const m = methRe.exec(text);
   if (!m || m.index === undefined) return text;
   let methBody = m[0];
@@ -225,6 +293,13 @@ export function patchMethBlockOnly(text: string, before: RatingRecord, after: Ra
     if (oldMeth.length < 24 || oldMeth === newMeth) continue;
     if (methBody.includes(oldMeth)) {
       methBody = methBody.replace(oldMeth, newMeth);
+      changed = true;
+      continue;
+    }
+    const oldShort = oldMeth.replace(/^Methodology §5\s+/i, '');
+    const newShort = newMeth.replace(/^Methodology §5\s+/i, '');
+    if (oldShort.length >= 16 && methBody.includes(oldShort)) {
+      methBody = methBody.replace(oldShort, newShort);
       changed = true;
     }
   }
@@ -259,6 +334,23 @@ export function patchAllCompactFlagsInFile(
     }
   }
   return out;
+}
+
+/** Patch a file-level `const FOO_NOTE = '...'` when rows reference `note: FOO_NOTE`. */
+export function patchSharedNoteConst(
+  text: string,
+  constName: string,
+  merge: (inner: string) => string,
+): string {
+  const re = new RegExp(
+    `(const\\s+${escapeRe(constName)}\\s*=\\s*\\n\\s*)'((?:[^'\\\\]|\\\\.)*)'`,
+  );
+  const m = re.exec(text);
+  if (!m) return text;
+  const merged = merge(m[2]);
+  if (merged === m[2]) return text;
+  const esc = merged.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  return text.replace(m[0], `${m[1]}'${esc}'`);
 }
 
 export function patchSharedFlagsConst(

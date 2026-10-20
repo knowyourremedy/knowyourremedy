@@ -200,7 +200,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK} Packs with this OI list share formulaId \`${d.formulaId}\`. No dosing or medical advice. Draft, not verified.`,
+    honestNote: `${d.note} ${LIMITED_STACK} Packs with this OI list share formulaId \`${d.formulaId}\`. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): benzalkonium chloride, edetate disodium dihydrate, sorbitol, sucralose.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
     barcode: d.barcode,

@@ -81,10 +81,10 @@ function asteproFlags(): IngredientFlag[] {
 }
 
 const FLONASE_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose, phenylethyl alcohol, and polysorbate 80. The Drug Facts spelling phenylethylalcohol maps to phenylethyl alcohol. Dextrose maps to bare glucose. Microcrystalline cellulose, sodium carboxymethylcellulose, and purified water are Cleared. Ages 4+. Under 4: do not use. Ages 4–11: 1 spray in each nostril once daily. Ages 12+: 2 sprays in each nostril in week 1. Not Sensimist. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose, Phenylethyl alcohol.';
+  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose, phenylethyl alcohol, and polysorbate 80. The Drug Facts spelling phenylethylalcohol maps to phenylethyl alcohol. Dextrose maps to bare glucose. Microcrystalline cellulose, sodium carboxymethylcellulose, and purified water are Cleared. Ages 4+. Under 4: do not use. Ages 4–11: 1 spray in each nostril once daily. Ages 12+: 2 sprays in each nostril in week 1. Not Sensimist. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose, Phenylethyl alcohol, Polysorbate 80.';
 
 const ASTEPRO_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Driver is sucralose. Benzalkonium chloride, edetate disodium, and sorbitol are Limited drivers on this panel. Hypromellose, sodium citrate, and purified water are Cleared. Ages 6+. Under 6: do not use. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Benzalkonium chloride, Edetate disodium.';
+  'FOUNDER-LOCK DRAFT: Caution. Driver is sucralose. Benzalkonium chloride, edetate disodium, and sorbitol are Limited drivers on this panel. Hypromellose, sodium citrate, and purified water are Cleared. Ages 6+. Under 6: do not use. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Sorbitol, Benzalkonium chloride, Edetate disodium.';
 
 const FLONASE_PANEL =
   'DailyMed setid b6134ba0-b70a-4eac-9a82-cef64b242c1d (Haleon, published Dec 23, 2024). Active: fluticasone propionate 50 mcg per spray. Inactive ingredients: benzalkonium chloride, dextrose, microcrystalline cellulose, phenylethylalcohol, polysorbate 80, purified water, sodium carboxymethylcellulose.';

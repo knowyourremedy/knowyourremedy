@@ -1,4 +1,4 @@
-import type { RatingRecord, RiskLevel } from '../ratingRecord';
+import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 
 export type VerdictRollup = {
   verdict: RatingRecord['verdict'];
@@ -20,16 +20,35 @@ export type VerdictRollup = {
 /** Silicon dioxide family: 0-pt Caution cap; does not count toward the Limited stack (t137u). */
 export function isSiliconDioxideStackExempt(name: string): boolean {
   const n = name.trim().toLowerCase();
-  if (/calcium silicate/.test(n)) return false;
+  if (
+    /calcium silicate|magnesium silicate|aluminum silicate|sodium silicate|potassium aluminum silicate|lithium magnesium sodium silicate/.test(
+      n,
+    )
+  ) {
+    return false;
+  }
+  if (/\b6x\b/.test(n) && /silica/.test(n)) return false;
   return (
     n === 'silicon dioxide'
     || n === 'silica'
+    || n === 'silica gel'
+    || n === 'sipernat'
     || n === 'colloidal silicon dioxide'
+    || n === 'colloidal silicone dioxide'
+    || n === 'colloidal anhydrous silica'
+    || n === 'anhydrous silica'
     || /^silicon dioxide\b/.test(n)
+    || /^colloidal (silicon|silica)/.test(n)
   );
 }
 
-type IngredientLevel = { name: string; riskLevel: RiskLevel };
+export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (ingredient.stackCountExempt) return false;
+  if (ingredient.riskLevel !== 'limited') return false;
+  return !isSiliconDioxideStackExempt(ingredient.name);
+}
+
+type IngredientLevel = Pick<IngredientFlag, 'name' | 'riskLevel' | 'stackCountExempt'>;
 
 function verdictRank(verdict: RatingRecord['verdict']): number {
   if (verdict === 'avoid') return 2;
@@ -50,9 +69,7 @@ export function computeVerdictFromInactiveIngredients(
     };
   }
 
-  const stackLimited = inactiveIngredients.filter(
-    (i) => i.riskLevel === 'limited' && !isSiliconDioxideStackExempt(i.name),
-  );
+  const stackLimited = inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));
   if (stackLimited.length >= 3) {
     return {
       verdict: 'avoid',
@@ -157,4 +174,19 @@ export function replaceLimitedStackHonestNote(
   const line = `Avoid: three or more Limited tokens triggered the stacking rule (t137u): ${tokens.join(', ')}.`;
   const base = (existingNote ?? '').replace(LIMITED_STACK_NOTE_RE, '').trim();
   return base ? `${base} ${line}` : line;
+}
+
+export function stripLimitedStackHonestNote(existingNote: string | undefined): string {
+  return (existingNote ?? '').replace(LIMITED_STACK_NOTE_RE, '').replace(/\s{2,}/g, ' ').trim();
+}
+
+export function limitedStackHonestNoteIfAny(
+  inactiveIngredients: IngredientLevel[],
+  activeSafetyFlag?: RatingRecord['activeSafetyFlag'],
+): string | undefined {
+  const rollup = computeVerdictFromInactiveIngredients(inactiveIngredients, activeSafetyFlag);
+  if (rollup.cause !== 'limited_stack' || (rollup.limitedStackTokens?.length ?? 0) < 3) {
+    return undefined;
+  }
+  return appendLimitedStackHonestNote(undefined, rollup.limitedStackTokens ?? []);
 }
