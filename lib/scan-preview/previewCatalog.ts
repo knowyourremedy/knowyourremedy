@@ -2911,6 +2911,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Ultra Collagen Booster bottle prints 30 capsules.
   // The catalog row is 48 capsules. Do not glue the 30.
   'natures-bounty-b190-ultra-collagen-48': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 1.
+  // Same Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // Apple cider vinegar gummies page images are the 120-count
+  // raspberry pomegranate bottle. The catalog row is 60 gummies.
+  // Do not glue the 120.
+  'natures-bounty-b191-acv-gummies-60': brandMark('natures-bounty-mark.png'),
+  // Biotin 10,000 mcg softgels page prints 150 rapid release softgels.
+  // The catalog row is 90 softgels. Do not glue the 150.
+  'natures-bounty-b194-biotin-10000-90': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16841,6 +16850,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-bounty-b191-acidophilus-120': catalogShot('natures-bounty-b191-acidophilus-120.jpg'),
   // Advanced Hair, Skin & Nails gummies, strawberry, 80 gummies.
   'natures-bounty-b191-adv-hair-skin-80': catalogShot('natures-bounty-b191-adv-hair-skin-80.jpg'),
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 1.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Advanced Vitamin D3 with magnesium citrate, 90 tablets. 6,300 IU and 100 mg.
+  'natures-bounty-b191-adv-d3-mag-90': catalogShot('natures-bounty-b191-adv-d3-mag-90.jpg'),
+  // Anxiety & Stress Relief, 50 tablets.
+  'natures-bounty-b191-anxiety-50': catalogShot('natures-bounty-b191-anxiety-50.jpg'),
+  // Ashwagandha gummies, mixed berry, 60 gummies.
+  'natures-bounty-b191-ashwagandha-gummies-60': catalogShot('natures-bounty-b191-ashwagandha-gummies-60.jpg'),
+  // Advanced Menopause Relief, 30 tablets.
+  'natures-bounty-b191-menopause-30': catalogShot('natures-bounty-b191-menopause-30.jpg'),
+  // Advanced PMS Relief, 60 capsules.
+  'natures-bounty-b191-pms-60': catalogShot('natures-bounty-b191-pms-60.jpg'),
+  // Age-Defying Skin Renewal, 30 capsules.
+  'natures-bounty-b191-age-defying-30': catalogShot('natures-bounty-b191-age-defying-30.jpg'),
+  // Hair, Skin & Nails + collagen pectin gummies, tropical citrus, 200 gummies.
+  'natures-bounty-b192-collagen-pectin-200': catalogShot('natures-bounty-b192-collagen-pectin-200.jpg'),
+  // Advanced Hair, Skin & Nails pectin gummies, strawberry, 200 gummies. Not the 80-count gelatin bottle.
+  'natures-bounty-b192-adv-pectin-200': catalogShot('natures-bounty-b192-adv-pectin-200.jpg'),
+  // Calcium 1,200 mg plus vitamin D3, 220 softgels. Not the 70-count gummies.
+  'natures-bounty-b192-calcium-d3-220': catalogShot('natures-bounty-b192-calcium-d3-220.jpg'),
+  // Activated charcoal 260 mg, 100 capsules.
+  'natures-bounty-b192-charcoal-100': catalogShot('natures-bounty-b192-charcoal-100.jpg'),
+  // Active Mind, 60 caplets.
+  'natures-bounty-b192-active-mind-60': catalogShot('natures-bounty-b192-active-mind-60.jpg'),
+  // Apple cider vinegar tablets, 200 tablets. Not the gummies.
+  'natures-bounty-b192-acv-tablets-200': catalogShot('natures-bounty-b192-acv-tablets-200.jpg'),
+  // Vitamin B-12 1,000 mcg, 100 tablets. Not the 5,000 mcg liquid.
+  'natures-bounty-b192-b12-1000-100': catalogShot('natures-bounty-b192-b12-1000-100.jpg'),
+  // Vitamin B-12 5,000 mcg liquid, 2 fl oz. Not the 1,000 mcg tablets.
+  'natures-bounty-b193-b12-liquid-59': catalogShot('natures-bounty-b193-b12-liquid-59.jpg'),
+  // Fish oil 1,000 mg, 145 softgels. Not the 2,400 mg 90-count.
+  'natures-bounty-b193-fish-oil-145': catalogShot('natures-bounty-b193-fish-oil-145.jpg'),
+  // Calcium + vitamin D3 + zinc gummies, 70 gummies. Not the 220 softgels.
+  'natures-bounty-b195-calcium-d-gummies-70': catalogShot('natures-bounty-b195-calcium-d-gummies-70.jpg'),
+  // Folic acid 800 mcg, 250 tablets.
+  'natures-bounty-b195-folic-acid-250': catalogShot('natures-bounty-b195-folic-acid-250.jpg'),
+  // Melatonin 1 mg, 180 tablets. Not the 3 mg quick-dissolve.
+  'natures-bounty-b195-melatonin-1-180': catalogShot('natures-bounty-b195-melatonin-1-180.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37402,5 +37449,81 @@ assertBrandMark(
       const image = previewOverlayImage({ id, formulaId, brand });
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 3:00 AM PT batch 1.
+  // Sibling counts and strengths keep their own fronts.
+  // The 60-count ACV gummies and the 90-count biotin stay on the mark.
+  const batch1020c: [string, string, string][] = [
+    ['natures-bounty-b191-adv-d3-mag-90', "Nature's Bounty", 'natures-bounty-b191-adv-d3-mag-90.jpg'],
+    ['natures-bounty-b191-anxiety-50', "Nature's Bounty", 'natures-bounty-b191-anxiety-50.jpg'],
+    ['natures-bounty-b191-ashwagandha-gummies-60', "Nature's Bounty", 'natures-bounty-b191-ashwagandha-gummies-60.jpg'],
+    ['natures-bounty-b191-menopause-30', "Nature's Bounty", 'natures-bounty-b191-menopause-30.jpg'],
+    ['natures-bounty-b191-pms-60', "Nature's Bounty", 'natures-bounty-b191-pms-60.jpg'],
+    ['natures-bounty-b191-age-defying-30', "Nature's Bounty", 'natures-bounty-b191-age-defying-30.jpg'],
+    ['natures-bounty-b192-collagen-pectin-200', "Nature's Bounty", 'natures-bounty-b192-collagen-pectin-200.jpg'],
+    ['natures-bounty-b192-adv-pectin-200', "Nature's Bounty", 'natures-bounty-b192-adv-pectin-200.jpg'],
+    ['natures-bounty-b192-calcium-d3-220', "Nature's Bounty", 'natures-bounty-b192-calcium-d3-220.jpg'],
+    ['natures-bounty-b192-charcoal-100', "Nature's Bounty", 'natures-bounty-b192-charcoal-100.jpg'],
+    ['natures-bounty-b192-active-mind-60', "Nature's Bounty", 'natures-bounty-b192-active-mind-60.jpg'],
+    ['natures-bounty-b192-acv-tablets-200', "Nature's Bounty", 'natures-bounty-b192-acv-tablets-200.jpg'],
+    ['natures-bounty-b192-b12-1000-100', "Nature's Bounty", 'natures-bounty-b192-b12-1000-100.jpg'],
+    ['natures-bounty-b193-b12-liquid-59', "Nature's Bounty", 'natures-bounty-b193-b12-liquid-59.jpg'],
+    ['natures-bounty-b193-fish-oil-145', "Nature's Bounty", 'natures-bounty-b193-fish-oil-145.jpg'],
+    ['natures-bounty-b195-calcium-d-gummies-70', "Nature's Bounty", 'natures-bounty-b195-calcium-d-gummies-70.jpg'],
+    ['natures-bounty-b195-folic-acid-250', "Nature's Bounty", 'natures-bounty-b195-folic-acid-250.jpg'],
+    ['natures-bounty-b195-melatonin-1-180', "Nature's Bounty", 'natures-bounty-b195-melatonin-1-180.jpg'],
+  ];
+  const seen1020c = new Set<string>();
+  for (const [id, brand, file] of batch1020c) {
+    if (seen1020c.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020c.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  for (const id of [
+    'natures-bounty-b191-acv-gummies-60',
+    'natures-bounty-b194-biotin-10000-90',
+  ]) {
+    assertBrandMark(id, "Nature's Bounty", 'natures-bounty-mark.png');
+  }
+  const groups1020c: [string, string, string][][] = [
+    [
+      ['natures-bounty-b191-adv-hair-skin-80', 'natures-bounty-b191-adv-hair-skin-gummies', "Nature's Bounty"],
+      ['natures-bounty-b192-adv-pectin-200', 'natures-bounty-b192-adv-pectin-gummies', "Nature's Bounty"],
+      ['natures-bounty-b192-collagen-pectin-200', 'natures-bounty-b192-collagen-pectin-gummies', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b192-calcium-d3-220', 'natures-bounty-b192-calcium-d3-220', "Nature's Bounty"],
+      ['natures-bounty-b195-calcium-d-gummies-70', 'natures-bounty-b195-calcium-d-gummies-70', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b192-b12-1000-100', 'natures-bounty-b192-b12-1000-100', "Nature's Bounty"],
+      ['natures-bounty-b193-b12-liquid-59', 'natures-bounty-b193-b12-liquid', "Nature's Bounty"],
+    ],
+  ];
+  for (const group of groups1020c) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const acvGummies = previewOverlayImage({
+    id: 'natures-bounty-b191-acv-gummies-60',
+    formulaId: 'natures-bounty-b191-acv-gummies',
+    brand: "Nature's Bounty",
+  });
+  const acvTablets = previewOverlayImage({
+    id: 'natures-bounty-b192-acv-tablets-200',
+    formulaId: 'natures-bounty-b192-acv-tablets',
+    brand: "Nature's Bounty",
+  });
+  if (!acvGummies?.url.endsWith('/natures-bounty-mark.png') || acvGummies.verifiedSku || acvGummies.url === acvTablets?.url) {
+    throw new Error('ACV 60 gummies must use the Nature\'s Bounty mark, not the 200-count tablets');
   }
 }
