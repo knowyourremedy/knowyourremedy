@@ -392,7 +392,7 @@ export const BATCH197_KYR6C_NB_T73U: RatingRecord[] = [  {
     inactiveIngredients: [
       flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Mannitol', 'limited', METH.mannitol),
       flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
-      flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Natural Cherry Flavor', 'limited', METH.flavor),
+      flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Natural Cherry Flavor', 'cleared', METH.flavor),
       flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Silica', 'limited', METH.silica),
       flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Vegetable Cellulose', 'cleared', METH.cellulose),
       flag('https://naturesbounty.com/products/quick-dissolve-methylcobalamin-b-12-1000-mcg-60-quick-dissolve-tablets', 'Vegetable Stearic Acid', 'cleared', METH.stearic),

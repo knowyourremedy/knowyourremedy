@@ -23,6 +23,8 @@ const METH = {
   dextrin: 'Methodology §5 Limited (bare dextrin).',
   dicalcium: 'Methodology §5 Cleared (dicalcium phosphate / dibasic calcium phosphate).',
   flavors: 'Methodology §5 Limited (natural flavors).',
+  namedFruitFlavor:
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026).',
   gelatin: 'Methodology §5 Cleared (gelatin).',
   glucose: 'Methodology §5 Cleared (glucose syrup).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
@@ -169,7 +171,7 @@ export const BATCH191_KYR6C_NB_TWENTY: RatingRecord[] = [
       flag(ADV_HS_PANEL, 'Fruit and Vegetable Juice (color)', 'cleared', METH.juiceColor),
       flag(ADV_HS_PANEL, 'Lactic Acid', 'cleared', METH.lactic),
       flag(ADV_HS_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
-      flag(ADV_HS_PANEL, 'Natural Strawberry Flavor', 'limited', METH.flavors),
+      flag(ADV_HS_PANEL, 'Natural Strawberry Flavor', 'cleared', METH.namedFruitFlavor),
       flag(ADV_HS_PANEL, 'Pectin', 'cleared', METH.pectin),
       flag(ADV_HS_PANEL, 'Silica', 'limited', METH.silica),
       flag(ADV_HS_PANEL, 'Vegetable Oil (Palm)', 'high', METH.palmGummy),

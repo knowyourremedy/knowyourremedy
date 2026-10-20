@@ -677,7 +677,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Natural vanilla lavender flavor',
-        'limited',
+        'cleared',
         labelCite('https://www.genexa.com/products/sleepology-sleep-aid', METH.flavors),
       ),
       flag(
@@ -742,7 +742,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Natural vanilla lavender flavor',
-        'limited',
+        'cleared',
         labelCite(
           'https://www.genexa.com/products/calm-keeper-medicine-to-calm-down-children',
           METH.flavors,
@@ -815,7 +815,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Natural vanilla lavender flavor',
-        'limited',
+        'cleared',
         labelCite('https://www.genexa.com/products/stress-relief-pills', METH.flavors),
       ),
       flag(

@@ -34,7 +34,7 @@ const METH = {
   talc: 'Methodology §5 Avoid (talc — IARC Group 2A 2024; asbestos-contamination pathway).',
   tio2: 'Methodology §5 Avoid (titanium dioxide as color; EU 2022 food-additive ban).',
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Cleared rice hull / rice bran).',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   veggieCap:
     'Methodology §4 t130u unnamed rule + §5 Cleared (Vegetarian Capsule — same precedent as batch231 Veggie Capsule; named hypromellose/pullulan shells Cleared).',
   vegMagStearate:
@@ -157,11 +157,11 @@ export const BATCH239_KYR6C_T131U_SV: RatingRecord[] = [
       },
     ],
     inactiveIngredients: [
-      flag(PANEL_ECHINACEA, 'Rice Powder', 'limited', 'ricePowder'),
+      flag(PANEL_ECHINACEA, 'Rice Powder', 'cleared', 'ricePowder'),
       flag(PANEL_ECHINACEA, 'Vegetarian Capsule', 'cleared', 'veggieCap'),
       flag(PANEL_ECHINACEA, 'Vegetable Magnesium Stearate', 'cleared', 'vegMagStearate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     retailers: ['Walmart', 'eBay'],
     sourcesGeneral: [
       `Founder ruling: Spring Valley store-brand exception (t130u/t131u). Panel ${PANEL_ECHINACEA}. Serving 2 vegetarian capsules (37 servings). New pack UPC 681131378840 (replaces closed UPC 605388325556 / DSLD 178632). Other ingredients verbatim: RICE POWDER, VEGETARIAN CAPSULE, VEGETABLE MAGNESIUM STEARATE. Walmart ip/675692970 in stock sold by Walmart.com; eBay 318909438814 New seller fit-flare (expiration 08/2027 or later). UPC 681131378840 = Walmart = eBay item specifics; check digit OK.`,
@@ -189,7 +189,7 @@ if (new Set(ids).size !== ids.length) throw new Error('batch239 duplicate id');
 
 const verdictTally = { clean: 0, caution: 0, avoid: 0 };
 for (const record of ROWS) verdictTally[record.verdict] += 1;
-if (verdictTally.clean !== 0 || verdictTally.caution !== 2 || verdictTally.avoid !== 1) {
+if (verdictTally.clean !== 1 || verdictTally.caution !== 1 || verdictTally.avoid !== 1) {
   throw new Error(`batch239 verdict tally ${JSON.stringify(verdictTally)}`);
 }
 

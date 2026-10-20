@@ -14,7 +14,8 @@ const METH = {
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate).',
   citric: 'Methodology §5 Cleared (citric acid).',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
-  flavorNamed: 'Methodology §5 Caution (natural strawberry flavor — named flavor). Exact natural flavors stays Limited.',
+  flavorNamed:
+    'Methodology §5 Cleared (Natural strawberry flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
   gums: 'Methodology §5 Cleared (xanthan gum).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
@@ -61,7 +62,7 @@ export const BATCH170_KYR6C_GAS_DROPS_STRAWBERRY: RatingRecord[] = [
       flag(PANEL, 'Carboxymethyl cellulose sodium', 'cleared', METH.cmc),
       flag(PANEL, 'Citric acid', 'cleared', METH.citric),
       flag(PANEL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-      flag(PANEL, 'Natural strawberry flavor', 'limited', METH.flavorNamed),
+      flag(PANEL, 'Natural strawberry flavor', 'cleared', METH.flavorNamed),
       flag(PANEL, 'Propylene glycol', 'moderate', METH.pg),
       flag(PANEL, 'Purified water', 'cleared', METH.water),
       flag(PANEL, 'Sodium benzoate', 'limited', METH.benzoate),
@@ -100,6 +101,6 @@ for (const ingredient of record.inactiveIngredients) {
   if (!plainIngredientWhy(ingredient)) throw new Error(`batch170 blank why ${ingredient.name}`);
   if (/dailymed/i.test(ingredient.source ?? '')) throw new Error(`batch170 dailymed ${ingredient.name}`);
 }
-if (!record.inactiveIngredients.some((item) => item.name === 'Natural strawberry flavor' && item.riskLevel === 'limited')) {
+if (!record.inactiveIngredients.some((item) => item.name === 'Natural strawberry flavor' && item.riskLevel === 'cleared')) {
   throw new Error('batch170 strawberry flavor');
 }

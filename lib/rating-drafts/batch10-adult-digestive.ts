@@ -1503,7 +1503,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       ),
       flag(
         'Natural orange flavor / natural pink lemonade flavor',
-        'limited',
+        'cleared',
         dailymed(SET_DRAM_OR, METH.flavors),
       ),
       flag('Maltodextrin', 'limited', dailymed(SET_DRAM_OR, METH.maltodextrin)),

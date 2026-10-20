@@ -18527,8 +18527,8 @@ if (PREVIEW_AVOID.verdict !== 'avoid') {
     throw new Error('t120u lock must clear Natural apple flavor and drop verdict to clean when it is the only driver');
   }
   const lollipops = CATALOG.find((record) => record.id === 'beekeepers-b169-lollipops-15');
-  if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'caution') {
-    throw new Error('beekeepers-b169-lollipops-15 must stay caution after t120u apple flavor lock (other flavor drivers)');
+  if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'clean') {
+    throw new Error('beekeepers-b169-lollipops-15 must be clean after t132u named natural flavor locks');
   }
 }
 

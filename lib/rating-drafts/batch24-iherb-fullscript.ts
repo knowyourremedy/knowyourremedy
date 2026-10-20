@@ -112,6 +112,8 @@ const SUPPLEMENT = 'Supplement' as const;
 
 const METH = {
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  namedFruitFlavor:
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 prior-lock re-eval).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   tocopherols:
@@ -325,7 +327,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
       { name: 'DHA (docosahexaenoic acid)', strength: '225mg per softgel (450mg per 2-softgel serving)' },
     ],
     inactiveIngredients: [
-      flag('Natural lemon flavor', 'limited', labelCite(NORDIC_OMEGA_CITE, METH.flavors)),
+      flag('Natural lemon flavor', 'cleared', labelCite(NORDIC_OMEGA_CITE, METH.namedFruitFlavor)),
       labelCleared(NORDIC_OMEGA_CITE, 'Gelatin'),
       labelCleared(NORDIC_OMEGA_CITE, 'Glycerin'),
       labelCleared(NORDIC_OMEGA_CITE, 'Water'),
@@ -335,7 +337,7 @@ export const BATCH24_IHERB_FULLSCRIPT: RatingRecord[] = [
         labelCite(NORDIC_OMEGA_CITE, METH.tocopherols),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['iHerb'],
     sourcesGeneral: [

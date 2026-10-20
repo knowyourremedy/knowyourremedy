@@ -62,7 +62,7 @@ const METH = {
     'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate).',
   purifiedWater: 'Methodology §5 Cleared (purified water / deionized water / demineralized water).',
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Cleared rice hull / rice bran; locked Sept 16, 2026).',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   riceBranFill: `Methodology §5 Cleared (rice bran oil as softgel / capsule fill — NOT gummy High). ${OIL_FILL_TAP}`,
   safflowerFill: `Methodology §5 Cleared (safflower oil as softgel fill — NOT gummy High). ${OIL_FILL_TAP}`,
   salt: 'Methodology §5 Cleared (sodium chloride / sea salt).',
@@ -194,7 +194,7 @@ const SPECS: RowSpec[] = [
       ['Vegan Capsule', 'limited', 'veganCapsule'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],
-      ['Rice Powder', 'limited', 'ricePowder'],
+      ['Rice Powder', 'cleared', 'ricePowder'],
     ],
   },
   {
@@ -350,7 +350,7 @@ const SPECS: RowSpec[] = [
       ['Demineralized Water', 'cleared', 'demineralizedWater'],
       ['Vegetable Glycerin', 'cleared', 'glycerin'],
       ['Sodium Chloride', 'cleared', 'salt'],
-      ['Natural Peppermint Flavor', 'limited', 'namedPeppermintFlavor'],
+      ['Natural Peppermint Flavor', 'cleared', 'namedPeppermintFlavor'],
     ],
   },
   {
@@ -403,7 +403,7 @@ const SPECS: RowSpec[] = [
     flags: [
       ['Fish Gelatin', 'cleared', 'gelatin'],
       ['Vegetable Glycerin', 'cleared', 'glycerin'],
-      ['Natural Orange Flavor', 'limited', 'flavors'],
+      ['Natural Orange Flavor', 'cleared', 'flavors'],
     ],
   },
   {
