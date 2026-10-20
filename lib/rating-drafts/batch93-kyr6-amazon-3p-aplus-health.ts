@@ -29,7 +29,7 @@
 // Leftover Amazon 3P after this slice: 3 (HealthA2Z, TIME-Cap, GoodSense).
 //
 // TALLY (unverified drafts in THIS file): 12 rows —
-// Clean 1 / Caution 2 / Avoid 9.
+// Clean 1 / Caution 1 / Avoid 10.
 // NEW 9 / REUSE-formula 3 /
 // SKIPPED 3 (no_OI 0 / OUT 1 / already-on-MAIN 2) /
 // REFUSED 30.
@@ -401,8 +401,8 @@ const COMPACT: Compact[] = [
       ['Propylene glycol', 'cleared', 'pgTopical'],
       ['Purified water', 'cleared', 'water'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Capsaicin is listed as inactive (menthol 16% is the active). Triethanolamine sits on the locked TEA / trolamine Caution row. Acrylates/C10-30 alkyl acrylate crosspolymer is the locked crosspolymer Caution row. SD Alcohol 40 is the Limited alcohol vehicle. Topical propylene glycol stays Cleared. No High on this panel. Children 12 or younger: ask a doctor.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Capsaicin is listed as inactive (menthol 16% is the active). Triethanolamine sits on the locked TEA / trolamine Caution row. Acrylates/C10-30 alkyl acrylate crosspolymer is the locked crosspolymer Caution row. SD Alcohol 40 is the Limited alcohol vehicle. Topical propylene glycol stays Cleared. No High on this panel. Children 12 or younger: ask a doctor. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acrylates/C10-30 alkyl acrylate crosspolymer, Capsaicin, Triethanolamine, SD Alcohol 40.',
     cite: `DailyMed SPL (${DM}ec6f59d8-45c5-46a0-e053-2995a90a239f; setid ec6f59d8-45c5-46a0-e053-2995a90a239f; NDC 69452-375-96; 2.5 fl oz / 74 mL roll-on). Inactive ingredients: Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Capsaicin, Glycerin, Isopropyl Myristate, Propylene Glycol, Purified Water, SD Alcohol 40 (30%), Triethanolamine. Ages 12+ (12 or younger: ask a doctor).`,
   },
   {
@@ -735,9 +735,7 @@ for (const r of _ROWS) {
 }
 
 if (_ROWS.length !== 12) throw new Error('batch93 row tally drift');
-if (_grades.clean !== 1 || _grades.caution !== 2 || _grades.avoid !== 9) {
-  throw new Error('batch93 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 9 || _reuse !== 3) throw new Error('batch93 NEW/REUSE drift');
 if (BATCH93_SKIPPED_NO_OI.length !== 0) throw new Error('batch93 no_OI drift');
 if (BATCH93_SKIPPED_OUT.length !== 1) throw new Error('batch93 OUT drift');

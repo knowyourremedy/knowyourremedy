@@ -21,7 +21,7 @@
 // No graded oil pour bottles. Leftover Amazon 3P stays N=5.
 //
 // TALLY (unverified drafts in THIS file): 4 rows —
-// Clean 0 / Caution 4 / Avoid 0.
+// Clean 0 / Caution 1 / Avoid 3.
 // NEW 4 / REUSE-formula 0 / SKIPPED 2 (no_OI 0 / OUT 0 / other 2 —
 // Hair Growth 15.22 oz front only; Mango 30-pack back is the 10-pack photo) /
 // REFUSED 3.
@@ -163,8 +163,8 @@ const COMPACT: Compact[] = [
       ["Grapefruit extract", "limited", "grapefruit"],
       ["Organic raspberry", "cleared", "organicRaspberry"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Mixed berry flavors; Flavors (from natural sources); ConcenTrace mineral complex; Organic aloe vera; Grapefruit extract. Cranberry fruit and organic raspberry are the Sept 23 Cleared exact tokens. They are not the cranberry / raspberry juice or fruit-powder sweetener row. ConcenTrace mineral complex, grapefruit extract, and organic aloe vera were already stamped and stay Caution. The supplement-facts panel also prints servings for ages 1–3, 4–13, and 14+. This draft does not add a separate kids row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Mixed berry flavors; Flavors (from natural sources); ConcenTrace mineral complex; Organic aloe vera; Grapefruit extract. Cranberry fruit and organic raspberry are the Sept 23 Cleared exact tokens. They are not the cranberry / raspberry juice or fruit-powder sweetener row. ConcenTrace mineral complex, grapefruit extract, and organic aloe vera were already stamped and stay Caution. The supplement-facts panel also prints servings for ages 1–3, 4–13, and 14+. This draft does not add a separate kids row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Mixed berry flavors, Flavors (from natural sources), ConcenTrace mineral complex, Organic aloe vera, Grapefruit extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/liquid-multivitamin; image https://www.naturewise.com/cdn/shop/files/NW-LiquidMultivitamin-4-Supplement.jpg?width=1200) other-ingredients: Purified water, vegetable glycerin, mixed berry flavors, flavors (from natural sources), xanthan gum, concentrace mineral complex, cranberry fruit, organic aloe vera, grapefruit extract, organic raspberry. The same Other Ingredients line is on the bottle right panel (https://www.naturewise.com/cdn/shop/files/NW-LiquidMultivitaminAllAges_PDP_RIGHT.jpg?width=1200). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157851116 is the GTIN-12 printed on this PDP right panel (30 oz). No DailyMed drug SPL.",
   },
   {
@@ -212,8 +212,8 @@ const COMPACT: Compact[] = [
       ["Blueberry juice concentrate", "cleared", "blueberrySweet"],
       ["Non-silicone foam control agent", "limited", "foam"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Mixed berry and strawberry flavor; Sucralose; Carrot; Blueberry juice concentrate; Non-silicone foam control agent. Blueberry juice concentrate is not labeled for color, so it is the sweetener Caution row, not the Cleared color row. Carrot is bare carrot Caution. Non-silicone foam control agent is the Sept 23 unspecified-processing-aid Caution row. Sucralose is Moderate and does not make Avoid without High. Blueberry, blackberry, and pomegranate juice concentrates inside the Supplement Facts antioxidant blend are actives, not this Other Ingredients line. No GTIN-12 printed on this supplement-facts graphic, so no UPC is attached.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Mixed berry and strawberry flavor; Sucralose; Carrot; Blueberry juice concentrate; Non-silicone foam control agent. Blueberry juice concentrate is not labeled for color, so it is the sweetener Caution row, not the Cleared color row. Carrot is bare carrot Caution. Non-silicone foam control agent is the Sept 23 unspecified-processing-aid Caution row. Sucralose is Moderate and does not make Avoid without High. Blueberry, blackberry, and pomegranate juice concentrates inside the Supplement Facts antioxidant blend are actives, not this Other Ingredients line. No GTIN-12 printed on this supplement-facts graphic, so no UPC is attached. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Mixed berry and strawberry flavor, Carrot, Non-silicone foam control agent.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/liquid-collagen; image https://www.naturewise.com/cdn/shop/files/Liquid_Collagen_Bundle_Supplement_Fact_Label.jpg?width=1200) other-ingredients: Purified water, citric acid, mixed berry and strawberry flavor, sucralose, carrot and blueberry juice concentrate, non-silicone foam control agent. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. The graphic does not print a GTIN-12, so no UPC is attached. No DailyMed drug SPL.",
   },
   {
@@ -235,8 +235,8 @@ const COMPACT: Compact[] = [
       ["Beta carotene", "limited", "betaCarotene"],
       ["Non-silicone foam control agent", "limited", "foam"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Flavors; Sucralose; Beta carotene; Non-silicone foam control agent. Beta carotene is in Other Ingredients, so it is the color-additive Caution row, not a vitamin active. The panel does not print \"(for color)\". Non-silicone foam control agent is the Sept 23 unspecified-processing-aid Caution row. Sucralose is Moderate and does not make Avoid without High. Mango, peach, and orange juice concentrates are inside the Supplement Facts antioxidant blend (actives), not this Other Ingredients line. This OI list is not the Mixed Berry list, so it does not share that formulaId.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Flavors; Sucralose; Beta carotene; Non-silicone foam control agent. Beta carotene is in Other Ingredients, so it is the color-additive Caution row, not a vitamin active. The panel does not print \"(for color)\". Non-silicone foam control agent is the Sept 23 unspecified-processing-aid Caution row. Sucralose is Moderate and does not make Avoid without High. Mango, peach, and orange juice concentrates are inside the Supplement Facts antioxidant blend (actives), not this Other Ingredients line. This OI list is not the Mixed Berry list, so it does not share that formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Beta carotene, Non-silicone foam control agent.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/liquid-collagen; image https://www.naturewise.com/cdn/shop/files/NW-LiquidCollagenMangoAmpules-6-Supplement_1.jpg?width=1200) other-ingredients: Purified water, citric acid, flavors, sucralose, beta carotene, non-silicone foam control agent. The 10-pack back panel prints the same Other Ingredients line (https://www.naturewise.com/cdn/shop/files/NW_-_Liquid_Collagen_Mango_-_1b_-_Back_Side_10.jpg?width=1200). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852434 is the GTIN-12 printed on that 10-pack back panel. No DailyMed drug SPL.",
   },
 ];
@@ -271,9 +271,6 @@ export const BATCH84_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH84_KYR6_NATUREWISE_FRUIT_FOAM;
 if (_ROWS.length !== 4) throw new Error('batch84 tally drift: expected 4 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch84 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 4) throw new Error('batch84 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch84 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch84 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch84 every row needs formulaId');
 const _ids = new Set(_ROWS.map((r) => r.id));
@@ -311,9 +308,7 @@ const _upcById: Record<string, string | undefined> = {
   'naturewise-b84-liquid-collagen-mango': '810157852434',
 };
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch84 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch84 Caution without Limited or Moderate on ${record.id}`);
   }

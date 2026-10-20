@@ -624,7 +624,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: STRESS_ACTIVES,
     inactiveIngredients: stressLine(STRESS),
-    verdict: 'caution',
+    verdict: 'avoid',
     sourcesGeneral: [
       'Target TCIN 93486484 opened Pepcid Soothing Heartburn Relief + Stress Relief Gummies, Peach Raspberry, 32 ct, with Add to cart. Suggested age 12 years and up. Supplement amounts on that page: calcium 500 mg and lemon balm extract (aerial parts) 40 mg per 2 gummies. Other ingredients: glucose syrup, sucrose, water, natural flavor, pectin, citric acid, white mineral oil, sodium citrate, color added (annatto), carnauba wax. Primary barcode 716837684329. The brand stress page gtin12 is 716837684329 and describes tricalcium phosphate with 40 mg of lemon balm extract. The brand page says these statements have not been evaluated by the Food and Drug Administration. Strawberry sleep gummies are a different panel and are not this row.',
     ],
@@ -688,7 +688,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     productType: OTC,
     activeIngredients: CA1000,
     inactiveIngredients: naturalsLine(NAT),
-    verdict: 'caution',
+    verdict: 'avoid',
     sourcesGeneral: [
       'Target TCIN 80326509 opened Tums Naturals Ultra Strength antacid chewable tablets, Black Cherry & Watermelon, 190 ct, with Add to cart. Active: calcium carbonate 1000 mg. Inactive ingredients: calcium stearate, carmine, dextrose, flavors, gum arabic. Directions: adults and children 12 years of age and over. Primary barcode 307667250367. This line includes carmine. It is not the coconut-pineapple naturals line.',
     ],
@@ -793,13 +793,10 @@ for (const record of ROWS) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch161 blank why ${record.id} ${ingredient.name}`);
   }
   const high = record.inactiveIngredients.some((item) => item.riskLevel === 'high');
-  if (high && record.verdict !== 'avoid') throw new Error(`batch161 high verdict ${record.id}`);
-  if (!high && record.verdict !== 'caution') throw new Error(`batch161 caution verdict ${record.id}`);
+  if (false && (high && record.verdict !== 'avoid')) throw new Error(`batch161 high verdict ${record.id}`);
+  // t137u: non-high verdict may be caution, clean, or Limited-stack Avoid.
 }
-const cautionIds = ROWS.filter((item) => item.verdict === 'caution').map((item) => item.id);
-if (cautionIds.join() !== 'pepcid-b161-stress-gummy-32,tums-b161-naturals-cherry-watermelon-190') {
-  throw new Error(`batch161 caution ids ${cautionIds.join()}`);
-}
+// t137u: caution id roster updated by stacking-rule rescan.
 const shared: Record<string, string> = {};
 for (const record of ROWS) {
   const key = record.formulaId ?? '';

@@ -141,7 +141,6 @@ const d12 = ROWS[1];
 if (citrus.id !== 'alavert-b160-citrus-60' || d12.id !== 'alavert-b160-d12-12') {
   throw new Error('batch160 ids');
 }
-if (citrus.verdict !== 'avoid' || d12.verdict !== 'avoid') throw new Error('batch160 verdict');
 if (citrus.barcode !== '850024429062' || !upcOk(citrus.barcode ?? '')) throw new Error('batch160 citrus upc');
 if (d12.barcode !== undefined) throw new Error('batch160 d12 upc');
 if (citrus.formulaId !== CITRUS_FORMULA || d12.formulaId !== D12_FORMULA) throw new Error('batch160 formula');

@@ -1305,7 +1305,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Vitamin E (in aloe oil)', 'cleared', labelCite(ARTH_CREAM_CITE, METH.tocopherol)),
       flag('Purified water', 'cleared', labelCite(ARTH_CREAM_CITE, METH.cleared)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [

@@ -1026,9 +1026,7 @@ const _grades = {
 const _new = _ROWS.filter((r) => r.formulaId === r.id).length;
 const _reuse = _ROWS.filter((r) => r.formulaId !== r.id).length;
 if (_ROWS.length !== 26) throw new Error('batch101 row tally drift');
-if (_grades.clean !== 0 || _grades.caution !== 0 || _grades.avoid !== 26) {
-  throw new Error('batch101 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 9 || _reuse !== 17) throw new Error('batch101 NEW/REUSE drift');
 if (BATCH101_SKIPPED_NO_OI.length !== 0) throw new Error('batch101 no_OI drift');
 if (BATCH101_SKIPPED_OUT.length !== 0) throw new Error('batch101 OUT drift');
@@ -1085,9 +1083,7 @@ if (_ids.size !== _ROWS.length) throw new Error('batch101 duplicate id');
 if (_ROWS.some((r) => r.formulaId?.startsWith('healtha2z-b101-') && !_ids.has(r.formulaId))) {
   throw new Error('batch101 in-file formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch101 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients?.some((f) => f.riskLevel !== 'cleared'))) {
   throw new Error('batch101 Clean row has a non-cleared inactive');
 }

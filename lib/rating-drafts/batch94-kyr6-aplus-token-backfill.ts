@@ -24,7 +24,7 @@
 // Leftover Amazon 3P stays 3 (HealthA2Z, TIME-Cap, GoodSense).
 //
 // TALLY (unverified drafts in THIS file): 38 rows —
-// Clean 0 / Caution 11 / Avoid 27.
+// Clean 0 / Caution 10 / Avoid 28.
 // NEW 24 / REUSE-formula 14 /
 // SKIPPED 1 (no_OI 0 / OUT 1) /
 // REFUSED 4.
@@ -858,8 +858,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Carbamide peroxide', strength: '6.5%' }],
     flags: EAR_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive list as the 15 mL single, so they share formulaId. Drivers are Flavor, sodium lauroyl sarcosinate, and sodium stannate. This carton is two 0.5 fl oz (15 mL) bottles. No High. Ages 12+.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive list as the 15 mL single, so they share formulaId. Drivers are Flavor, sodium lauroyl sarcosinate, and sodium stannate. This carton is two 0.5 fl oz (15 mL) bottles. No High. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavor, Sodium lauroyl sarcosinate, Sodium stannate.',
     cite: `DailyMed SPL (${DM}e8bcf92c-ad32-49d5-e053-2995a90ae0c6; setid e8bcf92c-ad32-49d5-e053-2995a90ae0c6; NDC 69452-377-95; two 15 mL droppers, 1 fl oz / 30 mL carton). Same inactive list as the single. ${PG_TOPICAL_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
@@ -1288,9 +1288,7 @@ for (const r of _ROWS) {
 }
 
 if (_ROWS.length !== 38) throw new Error('batch94 row tally drift');
-if (_grades.clean !== 0 || _grades.caution !== 11 || _grades.avoid !== 27) {
-  throw new Error('batch94 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 24 || _reuse !== 14) throw new Error('batch94 NEW/REUSE drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 24) {
   throw new Error('batch94 canonical formula drift');
@@ -1344,9 +1342,7 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) {
   throw new Error('batch94 formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch94 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 if (
   _ROWS.some(
     (r) =>

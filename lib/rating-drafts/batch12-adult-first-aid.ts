@@ -785,7 +785,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_CALAMINE_PLUS, 'SD alcohol 40-B'),
       ungraded(SET_CALAMINE_PLUS, 'Sorbitan trioleate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Walgreens', 'CVS', 'Target', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
@@ -823,7 +823,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
       cleared(SET_BACTINE_MAX, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTISEPTIC_ALTS,
@@ -909,7 +909,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
         dailymed(SET_DES_MAX, METH.tocopherols),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: RASH_ALTS,

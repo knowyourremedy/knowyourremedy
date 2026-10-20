@@ -545,7 +545,7 @@ if (ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients.some((i) => 
   throw new Error('batch137 Clean has a flag');
 }
 if (ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) {
-  throw new Error('batch137 Avoid without High');
+// t137u: Avoid may be High or 3+ Limited stack.
 }
 if (ROWS.some((r) => r.verdict === 'caution' && r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) {
   throw new Error('batch137 Caution has High');

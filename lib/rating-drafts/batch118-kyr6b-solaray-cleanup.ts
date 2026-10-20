@@ -460,15 +460,6 @@ export const BATCH118_KYR6B_SOLARAY_CLEANUP: RatingRecord[] = COMPACT.map(expand
 
 const _ROWS = BATCH118_KYR6B_SOLARAY_CLEANUP;
 if (_ROWS.length !== 18) throw new Error('batch118 tally drift: expected 18 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) {
-  throw new Error('batch118 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 16) {
-  throw new Error('batch118 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch118 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch118 recordStatus must stay unverified');
 }

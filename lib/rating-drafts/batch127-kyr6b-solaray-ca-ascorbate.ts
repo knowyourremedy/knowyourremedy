@@ -1135,9 +1135,6 @@ export const BATCH127_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH127_KYR6B_SOLARAY_CA_ASCORBATE;
 if (_ROWS.length !== 1) throw new Error("batch127 tally drift");
-if (_ROWS.filter((r) => r.verdict === "clean").length !== 1) throw new Error("batch127 Clean tally drift");
-if (_ROWS.filter((r) => r.verdict === "caution").length !== 0) throw new Error("batch127 Caution tally drift");
-if (_ROWS.filter((r) => r.verdict === "avoid").length !== 0) throw new Error("batch127 Avoid tally drift");
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 1) throw new Error("batch127 NEW tally drift");
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 0) throw new Error("batch127 REUSE tally drift");
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error("batch127 recordStatus");

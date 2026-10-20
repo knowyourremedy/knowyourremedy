@@ -397,7 +397,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('5c647ae9-6c14-4661-aba3-53e9e4756edc', METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Sprouts', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
@@ -509,7 +509,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('149941fb-9b5f-42f2-bf0c-e5980f7daad6', METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_FLU_ALTS,
@@ -1550,7 +1550,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,

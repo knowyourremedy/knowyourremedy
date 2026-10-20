@@ -936,7 +936,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
         dailymed('9e1cdef7-921f-4163-869c-6c062e31c5bb', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,

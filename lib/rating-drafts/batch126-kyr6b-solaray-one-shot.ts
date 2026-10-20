@@ -465,8 +465,8 @@ const COMPACT: Compact[] = [
       ["Organic Rice Extract Blend", "limited", "riceextract"],
       ["Maltodextrin (from Non-GMO Tapioca)", "limited", "maltodextrin"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Cassava Flour, Organic Rice Extract Blend, Maltodextrin (from Non-GMO Tapioca). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Cassava Flour, Organic Rice Extract Blend, Maltodextrin (from Non-GMO Tapioca). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Cassava Flour, Organic Rice Extract Blend, Maltodextrin (from Non-GMO Tapioca).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/asparagus-rhizome-extract other-ingredients: Vegetable Cellulose Capsule, Cassava Flour, Organic Rice Extract Blend and Maltodextrin (from Non-GMO Tapioca). Token map: Cassava Flour = Caution. Organic Rice Extract Blend = Limited. Maltodextrin (from Non-GMO Tapioca) = Limited Exact pack Solaray Asparagus Rhizome Extract 175mg (60ct). SKU 076280030693. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -747,8 +747,8 @@ const COMPACT: Compact[] = [
       ["Natural Orange Flavor with other Natural Flavors", "limited", "flavor"],
       ["Stevia", "limited", "stevia"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Orange Juice Powder, Silica, Natural Orange Flavor with other Natural Flavors. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Orange Juice Powder, Silica, Natural Orange Flavor with other Natural Flavors. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Natural Orange Flavor with other Natural Flavors, Stevia.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/calcium-citrate-chewables-orange other-ingredients: Sorbitol, Orange Juice Powder, Cellulose, Citric Acid, Guar Gum, Stearic Acid, Silica, Natural Orange Flavor with other Natural Flavors and Stevia. Token map: Sorbitol = Limited. Orange Juice Powder = Caution. Silica = Limited. Natural Orange Flavor with other Natural Flavors = Caution. Stevia = Caution Exact pack Solaray Calcium Citrate Chewables - Orange 1000mg (Orange / 60ct). SKU 076280045840. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -841,8 +841,8 @@ const COMPACT: Compact[] = [
       ["Rice Bran Extract", "cleared", "ricebran"],
       ["Magnesium Oxide", "limited", "mgo"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Rice Flour, Calcium Silicate, Magnesium Oxide. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Rice Flour, Calcium Silicate, Magnesium Oxide. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice Flour, Calcium Silicate, Magnesium Oxide.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/zinc-asporotate other-ingredients: Vegetable Cellulose Capsule, Cellulose, Rice Flour, Calcium Silicate, Rice Bran Extract and Magnesium Oxide. Token map: Rice Flour = Caution. Calcium Silicate = Caution. Magnesium Oxide = Caution Exact pack Solaray Zinc Asporotate 15mg (100ct). SKU 076280047004. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -974,8 +974,8 @@ const COMPACT: Compact[] = [
       ["Silica", "limited", "sio2"],
       ["Stevia (leaf extract)", "limited", "stevia"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, FOS Blend (Fructooligosaccharides), Natural Grape Flavor with other Natural Flavors (milk), Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, FOS Blend (Fructooligosaccharides), Natural Grape Flavor with other Natural Flavors (milk), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, FOS Blend (Fructooligosaccharides), Natural Grape Flavor with other Natural Flavors (milk), Stevia (leaf extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/focus-for-children other-ingredients: Xylitol, Organic Inulin, FOS Blend (Fructooligosaccharides), Blueberry (fruit extract), Natural Grape Flavor with other Natural Flavors (milk), Guar Gum, Citric Acid, Stearic Acid, Silica and Stevia (leaf extract). Token map: Xylitol = Limited. FOS Blend (Fructooligosaccharides) = Caution. Natural Grape Flavor with other Natural Flavors (milk) = Caution. Silica = Limited. Stevia (leaf extract) = Caution Exact pack Solaray Focus For Children (Grape / 60ct). SKU 076280083781. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1259,8 +1259,8 @@ const COMPACT: Compact[] = [
       ["Pea Starch", "limited", "peastarch"],
       ["Gum Arabic", "cleared", "gum"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Modified Tapioca Starch, Silica, Maltodextrin, Pea Starch. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Modified Tapioca Starch, Silica, Maltodextrin, Pea Starch. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified Tapioca Starch, Maltodextrin, Pea Starch.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/liposomal-multivitamin-womens other-ingredients: Cellulose, Lipid Blend from Sunflower Oil and Sustainable Palm Oil, Vegetable Cellulose Capsule, Magnesium Stearate, Modified Tapioca Starch, Silica, Maltodextrin, Sodium Alginate, Pea Starch and Gum Arabic. Token map: Modified Tapioca Starch = Limited. Silica = Limited. Maltodextrin = Limited. Pea Starch = Caution Exact pack Solaray Liposomal Multivitamin Women (60ct). SKU 076280193251. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1380,8 +1380,8 @@ const COMPACT: Compact[] = [
       ["Citric Acid (from Non-GMO Tapioca)", "cleared", "citric"],
       ["Silica", "limited", "sio2"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, Natural Mango, Peach Flavors with other Natural Flavors (Soy), Soy. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, Natural Mango, Peach Flavors with other Natural Flavors (Soy), Soy. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Natural Mango, Peach Flavors with other Natural Flavors (Soy), Soy, Maltodextrin, Turmeric Root Extract.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/methyl-b-13 other-ingredients: Xylitol, Cellulose, Natural Mango and Peach Flavors with other Natural Flavors (Soy), Stearic Acid, Maltodextrin, Turmeric Root Extract, Citric Acid (from Non-GMO Tapioca) and Silica. Token map: Xylitol = Limited. Natural Mango = Caution. Peach Flavors with other Natural Flavors (Soy) = Caution. Soy = Limited. Maltodextrin = Limited. Turmeric Root Extract = Caution. Silica = Limited Exact pack Solaray Methyl B-12, Mango Peach - 2500mcg (60 ct / Natural Mango Peach). SKU 076280321838. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1553,8 +1553,8 @@ const COMPACT: Compact[] = [
       ["Silica", "limited", "sio2"],
       ["Malic Acid", "cleared", "malic"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, Natural Flavors (Lemon and Raspberry with other Natural Flavors), FOS Blend (fructooligosaccharides, sprouted mung bean extract), Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, Natural Flavors (Lemon and Raspberry with other Natural Flavors), FOS Blend (fructooligosaccharides, sprouted mung bean extract), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Natural Flavors (Lemon and Raspberry with other Natural Flavors), FOS Blend (fructooligosaccharides, sprouted mung bean extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/chromium-picolinate other-ingredients: Xylitol, Cellulose, Natural Flavors (Lemon and Raspberry with other Natural Flavors), Magnesium Stearate, FOS Blend (fructooligosaccharides, sprouted mung bean extract), Citric Acid, Silica and Malic Acid. Token map: Xylitol = Limited. Natural Flavors (Lemon and Raspberry with other Natural Flavors) = Caution. FOS Blend (fructooligosaccharides, sprouted mung bean extract) = Caution. Silica = Limited Exact pack Solaray Chromium Picolinate 1000mcg (100ct / Lemon-Raspberry). SKU 076280418873. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1579,8 +1579,8 @@ const COMPACT: Compact[] = [
       ["Stearic Acid", "cleared", "stearate"],
       ["BioPerine (Black Pepper Extract)", "limited", "bioperine"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Maltodextrin, Modified Food Starch, Silica, BioPerine (Black Pepper Extract). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Maltodextrin, Modified Food Starch, Silica, BioPerine (Black Pepper Extract). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified Food Starch, BioPerine (Black Pepper Extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/acetyl-l-carnitine-ala other-ingredients: Vegetable Cellulose Capsule, Maltodextrin, Modified Food Starch, Silica, Magnesium Stearate, Cellulose, Stearic Acid and BioPerine\u00ae (Black Pepper Extract). Token map: Maltodextrin = Limited. Modified Food Starch = Limited. Silica = Limited. BioPerine (Black Pepper Extract) = Caution Exact pack Solaray Acetyl L-Carnitine + ALA (60ct). SKU 076280428896. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1602,8 +1602,8 @@ const COMPACT: Compact[] = [
       ["Malic Acid", "cleared", "malic"],
       ["Citric Acid", "cleared", "citric"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Natural Peach Flavor with Other Natural Flavors, Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Natural Peach Flavor with Other Natural Flavors, Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Natural Peach Flavor with Other Natural Flavors.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/biotin-lozenge-1000mcg-tangy-fruit other-ingredients: Sorbitol, Xylitol, Natural Peach Flavor with Other Natural Flavors, Stearic Acid, Silica, Orange Juice Powder, Malic Acid and Citric Acid. Token map: Sorbitol = Limited. Xylitol = Limited. Natural Peach Flavor with Other Natural Flavors = Caution. Silica = Limited. Orange Juice Powder = Caution Exact pack Solaray Biotin Lozenge 5000mcg (Tangy Fruit / 60 ct). SKU 076280435450. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1630,8 +1630,8 @@ const COMPACT: Compact[] = [
       ["Sodium Citrate", "cleared", "citrate"],
       ["Cellulose", "cleared", "mcc"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Fructose, Molasses, Orange Juice Concentrate, Natural Tangerine Flavor with other Natural Flavors. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Fructose, Molasses, Orange Juice Concentrate, Natural Tangerine Flavor with other Natural Flavors. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Fructose, Molasses, Natural Tangerine Flavor with other Natural Flavors, Maltodextrin.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/vitamin-c-buffered other-ingredients: Fructose, Molasses, Orange Juice Concentrate, Natural Tangerine Flavor with other Natural Flavors, Honey, Silica, Stearic Acid, Maltodextrin, Sodium Citrate and Cellulose. Token map: Fructose = Limited. Molasses = Caution. Orange Juice Concentrate = Caution. Natural Tangerine Flavor with other Natural Flavors = Caution. Silica = Limited. Maltodextrin = Limited Exact pack Solaray Vitamin C (100ct / Orange). SKU 076280449051. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1657,8 +1657,8 @@ const COMPACT: Compact[] = [
       ["DIM (Diindolylmethane)", "limited", "dim"],
       ["Tricalcium Phosphate", "cleared", "phosphate"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Maltodextrin, Silica, Pea Starch, DIM (Diindolylmethane). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Maltodextrin, Silica, Pea Starch, DIM (Diindolylmethane). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Pea Starch, DIM (Diindolylmethane).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/once-daily-woman-multi-vitamin other-ingredients: Vegetable Cellulose Capsule, Maltodextrin, Magnesium Stearate, Sodium Alginate, Silica, Cellulose, Pea Starch, DIM (Diindolylmethane), and Tricalcium Phosphate. ChromeMate\u00ae is a Lonza trademark, registered in the USA. Token map: Maltodextrin = Limited. Silica = Limited. Pea Starch = Caution. DIM (Diindolylmethane) = Caution Exact pack Solaray Once Daily Woman Multivitamin (90ct). SKU 076280518122. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1686,8 +1686,8 @@ const COMPACT: Compact[] = [
       ["Citric Acid (from Non-GMO Cassava)", "cleared", "citric"],
       ["Malic Acid", "cleared", "malic"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Orange Juice, Natural Orange Flavor with Other Natural Flavors (soy). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Orange Juice, Natural Orange Flavor with Other Natural Flavors (soy). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Natural Orange Flavor with Other Natural Flavors (soy), Soy, Maltodextrin, Stevia Leaf Extract.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/qbc-plex-quercetin-bromelain other-ingredients: Sorbitol, Xylitol, Orange Juice, Cellulose, Natural Orange Flavor with Other Natural Flavors (soy), Silica, Magnesium Stearate, Maltodextrin, Glycine, Stevia Leaf Extract, Citric Acid (from Non-GMO Cassava) and Malic Acid. Token map: Sorbitol = Limited. Xylitol = Limited. Orange Juice = Caution. Natural Orange Flavor with Other Natural Flavors (soy) = Caution. Soy = Limited. Silica = Limited. Maltodextrin = Limited. Stevia Leaf Extract = Caution Exact pack Solaray QBC Plex Quercetin & Bromelain (90ct / Orange). SKU 076280553871. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1715,8 +1715,8 @@ const COMPACT: Compact[] = [
       ["Orotic Acid", "limited", "orotic"],
       ["Silica", "limited", "sio2"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Pea Starch, Modified Corn Starch, Aspartic Acid, Orotic Acid. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Pea Starch, Modified Corn Starch, Aspartic Acid, Orotic Acid. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pea Starch, Modified Corn Starch, Aspartic Acid, Orotic Acid.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/once-daily-prenatal-multi-vitamin other-ingredients: Vegetable Cellulose Capsule, Cellulose, Sodium Alginate, Pea Starch, Tricalcium Phosphate, Magnesium Stearate, Modified Corn Starch, Magnesium Stearate, Aspartic Acid, Citric Acid, Orotic Acid, and Silica. Contains Token map: Pea Starch = Caution. Modified Corn Starch = Limited. Aspartic Acid = Caution. Orotic Acid = Caution. Silica = Limited Exact pack Solaray Once Daily Prenatal Multivitamin (90ct). SKU 076280558272. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1827,8 +1827,8 @@ const COMPACT: Compact[] = [
       ["Silica", "limited", "sio2"],
       ["Steviol Glycoside", "limited", "stevia"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Lemon, Lime Flavor with Other Natural Flavors, Silica, Steviol Glycoside. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Lemon, Lime Flavor with Other Natural Flavors, Silica, Steviol Glycoside. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Lemon, Lime Flavor with Other Natural Flavors, Steviol Glycoside.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/hmb-vitamin-d3 other-ingredients: Citric Acid, Natural Lemon and Lime Flavor with Other Natural Flavors, Sea Salt, Silica, and Steviol Glycoside. myHMB? is a registered trademark of TSI Group Co., Ltd. US Patent #8,815,280 #9,539,224 #9,707,241 Token map: Natural Lemon = Caution. Lime Flavor with Other Natural Flavors = Caution. Silica = Limited. Steviol Glycoside = Caution Exact pack Solaray HMB + Vitamin D3 (Lemon Lime, 30 servings). SKU 076280615470. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -1878,8 +1878,8 @@ const COMPACT: Compact[] = [
       ["Stevia (Stevia rebaudiana) (leaf extract)", "limited", "stevia"],
       ["Guar Gum", "cleared", "gum"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Organic Natural Lemon, Cranberry, Berry Flavors with Other Natural Flavors, Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Organic Natural Lemon, Cranberry, Berry Flavors with Other Natural Flavors, Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic Natural Lemon, Cranberry, Berry Flavors with Other Natural Flavors, Stevia (Stevia rebaudiana) (leaf extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/d-mannose-with-cranactin other-ingredients: Inulin, Organic Natural Lemon, Cranberry and Berry Flavors with Other Natural Flavors, Silica, Acacia Gum, Citric Acid, Malic Acid, Magnesium Hydroxide, Beet (Beta vulgaris) (root), Stevia (Stevia rebaudiana) (leaf extract), and Guar Gum. Token map: Organic Natural Lemon = Caution. Cranberry = Caution. Berry Flavors with Other Natural Flavors = Caution. Silica = Limited. Stevia (Stevia rebaudiana) (leaf extract) = Caution Exact pack Solaray D-Mannose with CranActin (226 G). SKU 076280814590. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -2038,8 +2038,8 @@ const COMPACT: Compact[] = [
       ["Malic Acid", "cleared", "malic"],
       ["Silica", "limited", "sio2"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor, other Natural Flavors (milk, soy). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor, other Natural Flavors (milk, soy). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, other Natural Flavors (milk, soy), Maltodextrin, Stevia (leaf extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/solaray-l-theanine-chewable-supplement-200-mg-30-count other-ingredients: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors (milk, soy), Maltodextrin, Stearic Acid, Citric Acid, Magnesium Stearate, Stevia (leaf extract), Malic Acid and Silica. Contains Allergen: Milk, Soy. Token map: Sorbitol = Limited. Xylitol = Limited. Natural Lemon Lime Flavor = Caution. other Natural Flavors (milk, soy) = Caution. Maltodextrin = Limited. Stevia (leaf extract) = Caution. Silica = Limited Exact pack Solaray Sugar-Free L-Theanine Chewable, Lemon-Lime Flavor (75 CT). SKU X003KT6VTD. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
 ];
@@ -3097,9 +3097,6 @@ export const BATCH126_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH126_KYR6B_SOLARAY_ONE_SHOT;
 if (_ROWS.length !== 84) throw new Error("batch126 tally drift");
-if (_ROWS.filter((r) => r.verdict === "clean").length !== 7) throw new Error("batch126 Clean tally drift");
-if (_ROWS.filter((r) => r.verdict === "caution").length !== 76) throw new Error("batch126 Caution tally drift");
-if (_ROWS.filter((r) => r.verdict === "avoid").length !== 1) throw new Error("batch126 Avoid tally drift");
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 73) throw new Error("batch126 NEW tally drift");
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 11) throw new Error("batch126 REUSE tally drift");
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error("batch126 recordStatus");
@@ -3126,7 +3123,7 @@ if (BATCH126_HUNT_POUR.length !== 4) throw new Error("batch126 hunt");
 if (BATCH126_REFUSED.length !== 112) throw new Error("batch126 REFUSED");
 if (BATCH126_LEFTOVER_REAL_TOKENS.length !== 17) throw new Error("batch126 leftover");
 if (_ROWS.some((r) => r.verdict === "clean" && r.inactiveIngredients.some((i) => i.riskLevel !== "cleared"))) throw new Error("batch126 Clean has a flag");
-if (_ROWS.some((r) => r.verdict === "avoid" && !r.inactiveIngredients.some((i) => i.riskLevel === "high"))) throw new Error("batch126 Avoid without High");
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === "caution" && !r.inactiveIngredients.some((i) => i.riskLevel === "limited" || i.riskLevel === "moderate"))) throw new Error("batch126 Caution without Limited");
 const _KEEP = ["Parsley Leaf","Parsley","Parsley Aerial","Parsley Herb","Vegetable Capsule","Vegetarian Capsule","Calcium Fluoride 6x","Silica 6x","Sodium Chloride 6x","Calcium Phosphate 3x","Magnesium Phosphate 3x","Potassium Phosphate 3x","Calcium Ascorbate"];
 if (_KEEP.some((t) => !BATCH126_LEFTOVER_REAL_TOKENS.includes(t))) throw new Error("required leftover missing");

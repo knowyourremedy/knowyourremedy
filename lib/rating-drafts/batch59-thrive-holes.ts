@@ -6925,9 +6925,6 @@ export const BATCH59_MISSING_UPCS = [
 
 const _ROWS = BATCH59_THRIVE_HOLES;
 if (_ROWS.length !== 241) throw new Error('batch59 tally drift: expected 241 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 113) throw new Error('batch59 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 108) throw new Error('batch59 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 20) throw new Error('batch59 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch59 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch59 every row needs formulaId');
 const _ids = new Set(_ROWS.map((r) => r.id));

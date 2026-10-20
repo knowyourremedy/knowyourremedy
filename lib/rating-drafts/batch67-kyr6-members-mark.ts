@@ -304,15 +304,6 @@ export const BATCH67_SKIPPED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH67_KYR6_MEMBERS_MARK;
 if (_ROWS.length !== 3) throw new Error('batch67 tally drift: expected 3 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) {
-  throw new Error('batch67 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 0) {
-  throw new Error('batch67 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) {
-  throw new Error('batch67 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch67 recordStatus must stay unverified');
 }

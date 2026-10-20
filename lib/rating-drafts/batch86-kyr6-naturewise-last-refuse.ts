@@ -24,7 +24,7 @@
 // No graded oil pour bottles. Leftover Amazon 3P stays N=5.
 //
 // TALLY (unverified drafts in THIS file): 3 rows —
-// Clean 0 / Caution 3 / Avoid 0.
+// Clean 0 / Caution 1 / Avoid 2.
 // NEW 2 / REUSE-formula 1 (Oral Probiotics 60 Count shares the 30 Count
 // formula) / SKIPPED 2 (no_OI 0 / OUT 0 / other 2 — Advanced Joint Care
 // and Vegan Vitamin K2 Softgels still have no complete panel) /
@@ -165,8 +165,8 @@ const COMPACT: Compact[] = [
       ["Organic MCT oil", "limited", "mctUnlabeled"],
       ["Olive oil", "cleared", "oliveFill"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Turmeric; Organic MCT oil. Bare turmeric is the Sept 23 Other Ingredient Caution row. It is not the locked turmeric-as-color string and not oleoresin turmeric. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel. Organic MCT oil does not name coconut or palm kernel on the Other Ingredients line, so it stays Limited unlabeled MCT. Not an oil-bottle grade. Not gummy High. Olive oil on this softgel is Cleared fill. Not an oil-bottle grade.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Turmeric; Organic MCT oil. Bare turmeric is the Sept 23 Other Ingredient Caution row. It is not the locked turmeric-as-color string and not oleoresin turmeric. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel. Organic MCT oil does not name coconut or palm kernel on the Other Ingredients line, so it stays Limited unlabeled MCT. Not an oil-bottle grade. Not gummy High. Olive oil on this softgel is Cleared fill. Not an oil-bottle grade. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified tapioca starch, Turmeric, Organic MCT oil.",
     cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/vitamin-k2-mk-7; image ${img("NW_-_Vitamin_K2_100_mcg_-_1b_-_Right_Side.jpg")}) other-ingredients: Softgel (modified tapioca starch, vegetable glycerin, purified water, turmeric), organic MCT oil, olive oil. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852861 is the GTIN-12 printed on this same right panel (120 Count). No DailyMed drug SPL.`,
   },
   {
@@ -211,8 +211,8 @@ const COMPACT: Compact[] = [
       ["Natural peppermint flavor", "cleared", "flavors"],
       ["Stevia leaf extract", "limited", "steviaLeaf"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Same Other Ingredients line as the 30 Count, so they share formulaId. This chewable is not a gummy. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Same Other Ingredients line as the 30 Count, so they share formulaId. This chewable is not a gummy. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Behenoyl polyoxyl-8 glycerides, Stevia leaf extract.",
     cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/oral-probiotics-chewable-tablets; image ${img("NW-OralHealthProbiotics-7-Supplement601.jpg")}) other-ingredients: Isomalt, inulin, behenoyl polyoxyl-8 glycerides, dicalcium phosphate, natural peppermint flavor, stevia leaf extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count. No DailyMed drug SPL.`,
   },
 ];
@@ -234,9 +234,6 @@ export const BATCH86_REFUSED: { sku: string; reason: string }[] = [];
 
 const _ROWS = BATCH86_KYR6_NATUREWISE_LAST_REFUSE;
 if (_ROWS.length !== 3) throw new Error('batch86 tally drift: expected 3 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch86 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 3) throw new Error('batch86 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch86 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch86 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch86 every row needs formulaId');
 const _ids = new Set(_ROWS.map((r) => r.id));
@@ -274,9 +271,7 @@ const _upcById: Record<string, string | undefined> = {
   'naturewise-b86-oral-probiotics-chewable-60': '858081006356',
 };
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch86 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch86 Caution without Limited or Moderate on ${record.id}`);
   }

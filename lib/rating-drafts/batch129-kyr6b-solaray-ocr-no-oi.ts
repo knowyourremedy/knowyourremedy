@@ -650,8 +650,8 @@ const COMPACT: Compact[] = [
       ["Rice Flour", "limited", "ricepowder"],
       ["Organic Rice Extract Blend", "limited", "riceextract"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Vegetarian Capsule, Rice Flour, Organic Rice Extract Blend. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Vegetarian Capsule, Rice Flour, Organic Rice Extract Blend. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Vegetarian Capsule, Rice Flour, Organic Rice Extract Blend.",
     cite: "solaray.com / opened US listing https://www.solaray.com/products/super-forskohlii-root-exract other-ingredients: Vegetarian Capsule, Rice Flour and Organic Rice Extract Blend. Exact pack Solaray Super Forskohlii Root Extract 400mg (60ct). SKU 076280644753. " + UPC_BLANK,
   },
   {
@@ -765,8 +765,8 @@ const COMPACT: Compact[] = [
       ["Silica", "limited", "sio2"],
       ["Ginseng (Panax ginseng) (root extract)", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Vanilla Flavor with Other Natural Flavors, Gotu Kola (Centella asiatica) (extract), Steviol Glycoside, Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Vanilla Flavor with Other Natural Flavors, Gotu Kola (Centella asiatica) (extract), Steviol Glycoside, Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Vanilla Flavor with Other Natural Flavors, Gotu Kola (Centella asiatica) (extract), Steviol Glycoside.",
     cite: "solaray.com / opened US listing https://www.solaray.com/products/vegan-collagen-booster other-ingredients: Natural Vanilla Flavor with Other Natural Flavors, Sea Salt, Gotu Kola (Centella asiatica) (extract), Steviol Glycoside, Silica, Ginseng (Panax ginseng) (root extract). Exact pack Solaray Vegan Collagen Booster (25 servings). SKU 076280149074. " + UPC_BLANK,
   },
   {
@@ -822,8 +822,8 @@ const COMPACT: Compact[] = [
       ["Acacia Gum", "cleared", "gum"],
       ["Stevia (leaf extract)", "limited", "stevia"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract). No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract).",
     cite: "solaray.com / opened US listing https://www.solaray.com/products/colostrum other-ingredients: Natural Peach and Mango Flavors with Other Natural Flavors, Citric Acid, Acacia Gum, and Stevia (leaf extract). Exact pack Solaray Colostrum+ Peach Mango (30 servings). SKU 076280582505. " + UPC_BLANK,
   },
   {

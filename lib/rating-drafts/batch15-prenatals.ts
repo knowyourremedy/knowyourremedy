@@ -222,7 +222,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Purified water'),
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Soy lecithin'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [

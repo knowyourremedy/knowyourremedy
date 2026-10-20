@@ -496,7 +496,7 @@ export const BATCH8_KIDS_SLEEP: RatingRecord[] = [
         dailymed(SET_SLEEPCALM_LIQUID, METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_ALTS_AGE3,

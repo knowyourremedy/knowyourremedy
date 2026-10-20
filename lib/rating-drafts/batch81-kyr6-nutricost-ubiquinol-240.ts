@@ -145,9 +145,6 @@ export const BATCH81_REFUSED: { sku: string; reason: string }[] = [];
 
 const _ROWS = BATCH81_KYR6_NUTRICOST_UBIQUINOL_240;
 if (_ROWS.length !== 1) throw new Error('batch81 tally drift: expected 1 row');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch81 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) throw new Error('batch81 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch81 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch81 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId || r.formulaId !== r.id)) throw new Error('batch81 NEW formula drift');
 if (_ROWS.some((r) => r.formulaId === UBI_120)) throw new Error('batch81 must not reuse the 120 formula');

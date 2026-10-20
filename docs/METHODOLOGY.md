@@ -208,7 +208,9 @@
 
 **Changed Sept 15, 2026 (remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover strings):** confirmed on §5 — do not re-add. Cleared: glyceryl stearate; diisopropyl adipate; urea (topical); tartaric acid; allantoin; kaolin; PVA (topical film); methyl glucose dioleate; avocado oil as cream fill; jojoba esters (wax/emollient; jojoba OIL stays Caution). Caution: steareth-2 / steareth-21; ceteth-20 phosphate; PPG-5-ceteth-20; PEG-15 cocamine; nonoxynol-30; ethylhexylglycerin; hydroxyacetophenone; TEA / trolamine as inactive; farnesol; 4-t-butylcyclohexanol; grapefruit / spearmint / cajuput / cassia / dementholized mint; C30-45 alkyl dimethicone / C30-45 crosspolymer; caprylyl methicone; acrylate / acrylamide copolymers not already locked; aluminum glycinate; hydrotalcite; latex; rosin esters / terpene resin / SIS / polyisobutylene; menthyl lactate; LPG / liquefied petroleum gas; synthetic beeswax; topical talc in a cream/patch; DMDM hydantoin / diazolidinyl urea (formaldehyde-donor, not Avoid). Sunflower seed wax not duplicated. Methylated spirit stays on the alcohol-vehicle Limited row. Polysorbate 60 stays on the P80/P20 Moderate row.
 
-**Changed Sept 14, 2026:** 3× Limited no longer auto-Avoid.
+**Changed Oct 20, 2026 (t137u founder lock):** Product grade stacking rule — "Product grade stacking rule: One Avoid-level token makes the product Avoid. Three or more Limited tokens on the same product also make the product Avoid. One or two Limited tokens (and no Avoid-level token) make the product Caution. All Cleared tokens make the product Clean. Silicon dioxide remains a 0-pt Caution cap and does not count toward the Limited stack. Harm-first, not a Yuka point ladder." Supersedes the Sept 14, 2026 harm-first line that Limited-only never stacks to Avoid.
+
+**Changed Sept 14, 2026:** 3× Limited no longer auto-Avoid. (Superseded Oct 20, 2026 t137u — three or more Limited tokens again make Avoid; see t137u founder lock above.)
 
 **Changed Sept 14, 2026 (Hyland’s locks):** Glycyrrhiza extract / licorice extract (oral inactive) = Cleared named botanical. Do not Caution the product on licorice alone. Tap + honest-note line (exact): “Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.” Wood rosin / colophony (topical) = Caution (contact-allergy pattern), not Avoid. FDA is one source, not a veto.
 
@@ -266,7 +268,7 @@ Three tiers, each shown with its plain-language reasons. No 0–100 score. The b
 
 - **Clean** — no flagged additives.
 - **Caution** — minor compromises; cleaner options usually exist. Always links to the Clean alternative in the same category.
-- **Avoid** — contains a High-tier inactive (or an explicit founder/active-safety cap). Limited-only flags do not stack into Avoid.
+- **Avoid** — contains a High-tier inactive, **three or more Limited-tier inactives** (t137u stack; silicon dioxide excluded from the count), or an explicit founder/active-safety cap.
 
 ## 4. The scoring rule
 
@@ -279,10 +281,11 @@ Every inactive ingredient sorts into one of four risk levels. Internally it's a 
 | Moderate-risk | 2 points |
 | High-risk | automatic Avoid |
 
+- **Product grade stacking rule (founder lock t137u, Oct 20, 2026):** "Product grade stacking rule: One Avoid-level token makes the product Avoid. Three or more Limited tokens on the same product also make the product Avoid. One or two Limited tokens (and no Avoid-level token) make the product Caution. All Cleared tokens make the product Clean. Silicon dioxide remains a 0-pt Caution cap and does not count toward the Limited stack. Harm-first, not a Yuka point ladder."
 - **Any single high-risk additive → Avoid**, regardless of anything else.
-- **Limited-tier inactives do not stack into Avoid.** Any number of Limited-only flags stays Caution (Usable). Avoid requires a High-tier inactive (or an explicit founder/active-safety cap). Silicon dioxide remains a 0-pt Caution cap and does not push Avoid. This is harm-first, not a Yuka point ladder.
-- **1–2 points → Caution.**
-- **0 points → Clean.**
+- **Three or more Limited-tier inactives → Avoid** (t137u), except silicon dioxide does not count toward that stack; it remains a 0-pt Caution cap only.
+- **One or two Limited-tier inactives** (and no High) **→ Caution.** **Moderate-risk** inactives **→ Caution** and do not count toward the Limited stack.
+- **All Cleared → Clean** (unless silicon dioxide or another cap applies).
 
 **What qualifies as high-risk.** Strong evidence of a real harm mechanism — carcinogenicity, genotoxicity, endocrine disruption, or organ/developmental/neurotoxicity. A ban or formal classification is *sufficient* but **not required**. Regulatory status is evidence, not the only switch: a strong harm mechanism can keep — or place — an ingredient at High/Avoid even when agencies are split or a regulator only restricted rather than banned the substance.
 

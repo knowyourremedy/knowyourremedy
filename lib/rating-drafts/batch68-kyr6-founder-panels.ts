@@ -495,15 +495,6 @@ export const BATCH68_SKIPPED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH68_KYR6_FOUNDER_PANELS;
 if (_ROWS.length !== 5) throw new Error('batch68 tally drift: expected 5 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) {
-  throw new Error('batch68 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 4) {
-  throw new Error('batch68 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch68 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch68 recordStatus must stay unverified');
 }

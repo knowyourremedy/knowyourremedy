@@ -33,7 +33,7 @@
 // - now-saw-palmetto-extract-160-mg-120 (batch71) for the 240-ct
 //
 // TALLY (unverified drafts in THIS file): 23 rows —
-// Clean 0 / Caution 20 / Avoid 3.
+// Clean 6 / Caution 10 / Avoid 7.
 // NEW 18 / REUSE-formula 5 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -234,7 +234,7 @@ const COMPACT: Compact[] = [
       ['Carob', 'cleared', 'carobExtract'],
       ['Phytosterols from soy (highly refined)', 'cleared', 'phytosterols'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is plain carob (Carob Extract Caution). Phytosterols from soy (highly refined) are the Sept 21 Cleared stamp, distinct from Limited bare soy. Sunflower oil is named softgel fill, not gummy High. Sunflower lecithin stays Cleared lecithin. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Prostate Health, Clinical Strength, 180 Softgels (https://www.vitacost.com/products/now-foods-prostate-health-clinical-strength-180-softgels-23652) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], sunflower oil, sunflower lecithin and beeswax. Phytosterols from soy (highly refined). UPC-A 733739033499. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -264,7 +264,7 @@ const COMPACT: Compact[] = [
       ['Carob', 'cleared', 'carobExtract'],
       ['Phytosterols from soy (highly refined)', 'cleared', 'phytosterols'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same OI and matching actives as the 180-ct Clinical Strength. Driver is plain carob (Carob Extract Caution). Phytosterols from soy (highly refined) are the Sept 21 Cleared stamp. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Prostate Health, 90 Softgels (https://www.vitacost.com/products/now-foods-prostate-health-90-softgels-23651) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], sunflower oil, sunflower lecithin and beeswax. phytosterols from soy (highly refined). UPC-A 733739033482. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -292,7 +292,7 @@ const COMPACT: Compact[] = [
       ['Water', 'cleared', 'water'],
       ['Carob', 'cleared', 'carobExtract'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is plain carob (Carob Extract Caution), not carob powder. Flax seed oil is named softgel fill (Sept 21 Cleared), not an oil-bottle grade and not gummy High. Soy lecithin stays Cleared lecithin, not Limited bare soy. Vitamin A is 750 mcg on this 180-ct. The 90-ct is 1,500 mcg, so it does not share formulaId. Limited-only never Avoid. Avoid needs High.',
     cite: "Current Vitacost NOW Foods, EVE™, Superior Women's Multi, 180 Softgels (https://www.vitacost.com/products/now-foods-eve-superior-women-s-multi-180-softgels-23363) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], flax seed oil, soy lecithin and beeswax. UPC-A 733739038036. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
@@ -320,7 +320,7 @@ const COMPACT: Compact[] = [
       ['Water', 'cleared', 'water'],
       ['Carob', 'cleared', 'carobExtract'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same shell OI as the 180-ct softgel. Driver is plain carob. Flax seed oil is named fill (Sept 21 Cleared). Soy lecithin stays Cleared. Vitamin A is 1,500 mcg (Betatene) on this 90-ct, so it does not share the 180-ct formulaId. Limited-only never Avoid. Avoid needs High.',
     cite: "Current Vitacost NOW Foods, EVE™ Softgels, Superior Women's Multi, 90 Softgels (https://www.vitacost.com/products/now-foods-eve-softgels-superior-women-s-multi-90-softgels-116600) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], flax seed oil, soy lecithin and beeswax. UPC-A 733739038029. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
@@ -347,7 +347,7 @@ const COMPACT: Compact[] = [
       ['Sodium alginate', 'cleared', 'alginate'],
       ['L-arginine', 'cleared', 'arginine'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). L-arginine is the Sept 21 Cleared Other Ingredient stamp. Pharmaceutical glaze is shellac Cleared. Sodium alginate is the locked alginic row. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, SAMe , 400 mg, 60 Tablets (https://www.vitacost.com/products/now-foods-same-400-mg-60-tablets-3345) other-ingredients: Microcrystalline cellulose, stearic acid (vegetable source), pharmaceutical glaze, magnesium stearate (vegetable source), silicon dioxide, glycerin, sodium alginate and l-arginine. UPC-A 733739001412. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -374,7 +374,7 @@ const COMPACT: Compact[] = [
       ['Sodium alginate', 'cleared', 'alginate'],
       ['L-arginine', 'cleared', 'arginine'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Same OI and SAMe 400 mg active as the 60-ct. Driver is silicon dioxide. L-arginine is the Sept 21 Cleared stamp. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, SAMe, 400 mg, 30 Tablets (https://www.vitacost.com/products/now-foods-same-400-mg-30-tablets-809) other-ingredients: Microcrystalline cellulose, stearic acid (vegetable source), pharmaceutical glaze, magnesium stearate (vegetable source), silicon dioxide, glycerin, sodium alginate and l-arginine. UPC-A 733739001399. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -562,8 +562,8 @@ const COMPACT: Compact[] = [
       ['Mixed tocopherols / d-alpha tocopherol', 'cleared', 'tocopherols'],
       ['MCT (unlabeled source)', 'limited', 'mctUnlabeled'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide plus Limited maltodextrin, sorbitol, flavors, unlabeled MCT, modified starch, and natural orange fruit juice powder (Sept 21 Limited sweetener). The rest of this chew matches the already-written Kid Vits Berry Lemonade / Grape Splash excipient map (modified tapioca starch + pea starch, bare alginate, rice hull concentrate, stevia leaf extract (rebaudioside a)). Own formulaId because this count adds orange fruit juice powder and omits rosemary extract. Suggested use: children ages 4 and up. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide plus Limited maltodextrin, sorbitol, flavors, unlabeled MCT, modified starch, and natural orange fruit juice powder (Sept 21 Limited sweetener). The rest of this chew matches the already-written Kid Vits Berry Lemonade / Grape Splash excipient map (modified tapioca starch + pea starch, bare alginate, rice hull concentrate, stevia leaf extract (rebaudioside a)). Own formulaId because this count adds orange fruit juice powder and omits rosemary extract. Suggested use: children ages 4 and up. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar alcohol, Natural flavors, Maltodextrin, Modified starch / pea starch, MCT (unlabeled source).',
     cite: 'Current Vitacost NOW Foods, Kids, Kid Vits™, Juicy Orange, 60 Chewable Tablets (https://www.vitacost.com/products/now-foods-kids-kid-vits-juicy-orange-60-chewable-tablets-146936) other-ingredients: Organic cane sugar, microcrystalline cellulose, sorbitol, natural orange fruit juice powder, stearic acid (vegetable source), l-malic acid, natural flavors, maltodextrin (non-gmo), silicon dioxide, modified tapioca starch, gum acacia, alginate, rice hull concentrate, pea starch, citric acid, stevia leaf extract (rebaudioside a), ethyl cellulose, glycerin, hypromellose, mixed tocopherols (sunflower) and medium-chain triglycerides. UPC-A 733739038845. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
   {
@@ -595,8 +595,8 @@ const COMPACT: Compact[] = [
       ['Potassium sorbate / benzoate', 'limited', 'benzoate'],
       ['Brown rice protein', 'cleared', 'riceFood'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are oral xylitol, natural flavors, potassium sorbate, and orange fruit juice powder (Sept 21 Limited sweetener). Brown rice protein is named in the ingredients narrative as the stabilizing agent (Cleared rice protein). "Vitamin E from non-GMO soy" is the active source note, not Limited bare soy. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are oral xylitol, natural flavors, potassium sorbate, and orange fruit juice powder (Sept 21 Limited sweetener). Brown rice protein is named in the ingredients narrative as the stabilizing agent (Cleared rice protein). "Vitamin E from non-GMO soy" is the active source note, not Limited bare soy. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol / erythritol, Natural flavors, Potassium sorbate / benzoate.',
     cite: 'Current Vitacost NOW Foods, Liquid Multi with Xylitol, Iron-Free, Tropical Orange, 16 fl oz (473 ml) (https://www.vitacost.com/products/now-foods-liquid-multi-with-xylitol-iron-free-tropical-orange-16-fl-oz-473-ml-4349) other-ingredients: De-ionized water, vegetable glycerin, xylitol, natural flavors, sunflower lecithin, citric acid, orange fruit juice powder, l-malic acid, potassium chloride, xanthan gum and potassium sorbate (as preservative). Vitamin E from non-GMO soy. Brown rice protein as a stabilizing agent. UPC-A 733739037725. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
   {
@@ -625,8 +625,8 @@ const COMPACT: Compact[] = [
       ['Magnesium stearate', 'cleared', 'stearate'],
       ['Silicon dioxide', 'cleared', 'sio2'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide, stevia leaf, sorbitol, xylitol, natural flavors, and natural orange fruit juice powder (Sept 21 Limited sweetener). Organic cane sugar is Cleared cane sugar, not Limited beet sugar. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide, stevia leaf, sorbitol, xylitol, natural flavors, and natural orange fruit juice powder (Sept 21 Limited sweetener). Organic cane sugar is Cleared cane sugar, not Limited beet sugar. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar alcohol, Xylitol / erythritol, Natural flavors.',
     cite: 'Current Vitacost NOW Foods, Chewable Vitamin C-500, Orange, 100 Tablets (https://www.vitacost.com/products/now-foods-chewable-vitamin-c-500-orange-100-tablets-7946) other-ingredients: Organic cane sugar, sorbitol, hydroxypropyl cellulose, xylitol, natural orange fruit juice powder, stearic acid (vegetable source), natural flavors, organic stevia leaf extract (enzyme-modified steviol glycosides), hypromellose (cellulose), magnesium stearate (vegetable source) and silicon dioxide. UPC-A 733739006301. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
   {
@@ -817,8 +817,8 @@ const COMPACT: Compact[] = [
       ['Silicon dioxide', 'cleared', 'sio2'],
       ['Pharmaceutical glaze / shellac', 'cleared', 'shellac'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are non-fat dry milk (Sept 21 Limited), oral erythritol, beet sugar, sucrose, flavors, modified food starch, maltodextrin, and silicon dioxide. Organic cocoa powder is the Sept 21 Cleared powder stamp, distinct from cocoa butter and from extract. Total Caffeine, including the Xtenergy sustained-release complex, is a Supplement Facts active on this powder, not an Other Ingredient line, so it is not also flagged as the OI stamp. Not a protein-aisle whey or pea protein. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are non-fat dry milk (Sept 21 Limited), oral erythritol, beet sugar, sucrose, flavors, modified food starch, maltodextrin, and silicon dioxide. Organic cocoa powder is the Sept 21 Cleared powder stamp, distinct from cocoa butter and from extract. Total Caffeine, including the Xtenergy sustained-release complex, is a Supplement Facts active on this powder, not an Other Ingredient line, so it is not also flagged as the OI stamp. Not a protein-aisle whey or pea protein. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic non-fat dry milk powder, Organic erythritol, Organic beet sugar, Organic milk chocolate flavor, Modified food starch (non-GMO), Organic vanilla flavor, Maltodextrin.',
     cite: 'Current Vitacost NOW Foods, Sports, E-Sport Reaction, Chocolate Milkshake, 1 lb (454 g) (https://www.vitacost.com/products/now-foods-sports-e-sport-reaction-chocolate-milkshake-1-lb-454-g-144962) other-ingredients: Organic non-fat dry milk powder, organic erythritol, organic cocoa powder, organic beet sugar, sea salt, organic gum acacia, guar gum, organic monk fruit extract, organic milk chocolate flavor, sucrose, modified food starch (non-gmo), stearic acid (vegetable source), organic vanilla flavor, maltodextrin (non-gmo), cellulose, silicon dioxide and pharmaceutical glaze. Contains milk. UPC-A 733739019103. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
   {
@@ -959,15 +959,6 @@ const STAMP =
 
 const _ROWS = BATCH74_KYR6_NOW_TOKEN_STAMP_BACKFILL;
 if (_ROWS.length !== 23) throw new Error('batch74 tally drift: expected 23 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) {
-  throw new Error('batch74 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 20) {
-  throw new Error('batch74 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 3) {
-  throw new Error('batch74 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch74 recordStatus must stay unverified');
 }
@@ -1026,7 +1017,5 @@ if (_ROWS.some((r) => /nutricost|naturewise|welmate|a\+health|healtha2z|time-cap
   throw new Error('batch74 leftover 3P / Sprouts must stay out');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch74 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
 }

@@ -493,7 +493,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E10, 'Sodium chloride'),
       cleared(SET_E10, 'Water for injection'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Walmart'],
     cleanAlternatives: equateBkCAlts(),
@@ -531,7 +531,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E13, 'Sodium lactate'),
       cleared(SET_E13, 'Sodium phosphate dibasic'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...MAJOR],
     cleanAlternatives: REDNESS_ALTS,
@@ -561,7 +561,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E14, 'Purified water'),
       cleared(SET_E14, 'Sodium borate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...MAJOR],
     cleanAlternatives: REDNESS_ALTS,

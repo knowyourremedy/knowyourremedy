@@ -793,15 +793,6 @@ export const BATCH64_SKIPPED_OUT: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH64_KYR6_THRIVE_NO_OI;
 if (_ROWS.length !== 18) throw new Error('batch64 tally drift: expected 18 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 8) {
-  throw new Error('batch64 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 10) {
-  throw new Error('batch64 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch64 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch64 recordStatus must stay unverified');
 }

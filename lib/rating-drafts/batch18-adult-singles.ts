@@ -475,7 +475,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       labelCleared(NM_B12_TAB_CITE, 'Magnesium stearate'),
       labelCleared(NM_B12_TAB_CITE, 'Croscarmellose sodium'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: B12_ALTS,

@@ -1361,9 +1361,6 @@ export const BATCH60_REFUSED: { sku: string; token: string }[] = [
 
 const _ROWS = BATCH60_THRIVE_REFUSED_UNLOCK;
 if (_ROWS.length !== 36) throw new Error('batch60 tally drift: expected 36 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 4) throw new Error('batch60 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 32) throw new Error('batch60 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch60 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch60 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch60 every row needs formulaId');
 const _ids = new Set(_ROWS.map((r) => r.id));

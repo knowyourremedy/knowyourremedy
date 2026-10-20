@@ -1593,7 +1593,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.gums),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -1685,7 +1685,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.gums),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -2605,7 +2605,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/kids-multivitamin-brain-and-eye', METH.rebM),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [

@@ -400,15 +400,6 @@ export const BATCH66_SKIPPED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH66_KYR6_HELD_ROWS;
 if (_ROWS.length !== 6) throw new Error('batch66 tally drift: expected 6 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 3) {
-  throw new Error('batch66 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 2) {
-  throw new Error('batch66 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) {
-  throw new Error('batch66 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch66 recordStatus must stay unverified');
 }

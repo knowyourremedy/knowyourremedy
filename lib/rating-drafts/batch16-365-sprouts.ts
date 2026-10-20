@@ -278,7 +278,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_GUAIF, 'Povidone'),
       cleared(SET_GUAIF, 'Pregelatinized starch (maize)'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -434,7 +434,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
         'Vegetable coating (sodium carboxymethylcellulose)',
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-adult-once-daily-multi'],
@@ -468,7 +468,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
         'Vegetable coating (sodium carboxymethylcellulose)',
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-mens-one-daily-multi'],
@@ -498,7 +498,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(WFM_PRENATAL_CITE, 'Croscarmellose sodium'),
       labelCleared(WFM_PRENATAL_CITE, 'Magnesium stearate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-prenatal-multi'],
@@ -567,7 +567,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       },
     ],
     inactiveIngredients: [],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Sprouts'],
     barcode: BATCH16_CATCHUP_BARCODES['sprouts-organic-prenatal-whole-food'],

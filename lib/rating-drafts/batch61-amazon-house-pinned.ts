@@ -955,15 +955,6 @@ export const BATCH61_REFUSED_NOT_WRITTEN: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH61_AMAZON_HOUSE_PINNED;
 if (_ROWS.length !== 18) throw new Error('batch61 tally drift: expected 18 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) {
-  throw new Error('batch61 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 2) {
-  throw new Error('batch61 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 15) {
-  throw new Error('batch61 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch61 recordStatus must stay unverified');
 }

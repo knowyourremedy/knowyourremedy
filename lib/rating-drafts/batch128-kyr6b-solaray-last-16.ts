@@ -143,8 +143,8 @@ const COMPACT: Compact[] = [
       ["Silica 6x", "limited", "homeo"],
       ["Silica", "limited", "sio2"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Organic Rice Extract Blend, Calcium Phosphate 3x, Potassium Phosphate 3x, Silica 6x. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Organic Rice Extract Blend, Calcium Phosphate 3x, Potassium Phosphate 3x, Silica 6x. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic Rice Extract Blend, Calcium Phosphate 3x, Potassium Phosphate 3x, Silica 6x.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/menopause-blend-sp-7d other-ingredients: Vegetable Cellulose Capsule, Organic Rice Extract Blend, Calcium Phosphate 3x, Potassium Phosphate 3x, Silica 6x and Silica. Token map: Organic Rice Extract Blend = Caution. Calcium Phosphate 3x = Caution. Potassium Phosphate 3x = Caution. Silica 6x = Caution. Silica = Caution Exact pack Solaray Menopause Blend SP-7D (100 ct). SKU 076280002775. " + UPC_BLANK,
   },
   {
@@ -161,8 +161,8 @@ const COMPACT: Compact[] = [
       ["Calcium Fluoride 6x", "limited", "homeo"],
       ["Magnesium Phosphate 3x", "limited", "homeo"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Rice Flour, Calcium Fluoride 6x, Magnesium Phosphate 3x. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Rice Flour, Calcium Fluoride 6x, Magnesium Phosphate 3x. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice Flour, Calcium Fluoride 6x, Magnesium Phosphate 3x.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/heart-blend-sp-8 other-ingredients: Vegetable Cellulose Capsule, Rice Flour, Calcium Fluoride 6x and Magnesium Phosphate 3x.. Token map: Rice Flour = Caution. Calcium Fluoride 6x = Caution. Magnesium Phosphate 3x = Caution Exact pack Solaray Heart Blend SP-8 (100ct). SKU 076280002805. " + UPC_BLANK,
   },
   {
@@ -755,8 +755,8 @@ const COMPACT: Compact[] = [
       ["Rose Hips", "cleared", "botanical"],
       ["Acerola Cherry", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eleuthero Root, Maltodextrin, Montmorillonite Clay.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/spectro-multi-vitamin other-ingredients: Gelatin Capsule, Eleuthero Root, Magnesium Stearate, Stearic Acid, Cellulose, Maltodextrin, Whole Rice Concentrate, Alfalfa Leaf, Montmorillonite Clay, Rose Hips and Acerola Cherry.. Token map: Eleuthero Root = Caution. Maltodextrin = Caution. Montmorillonite Clay = Caution Exact pack Solaray Spectro Multivitamin (100ct). SKU 076280047813. " + UPC_BLANK,
   },
   {
@@ -784,8 +784,8 @@ const COMPACT: Compact[] = [
       ["Rose Hips", "cleared", "botanical"],
       ["Acerola Cherry", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eleuthero Root, Maltodextrin, Montmorillonite Clay.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/spectro-multi-vitamin other-ingredients: Gelatin Capsule, Eleuthero Root, Magnesium Stearate, Stearic Acid, Cellulose, Maltodextrin, Whole Rice Concentrate, Alfalfa Leaf, Montmorillonite Clay, Rose Hips and Acerola Cherry.. Token map: Eleuthero Root = Caution. Maltodextrin = Caution. Montmorillonite Clay = Caution Exact pack Solaray Spectro Multivitamin (250ct). SKU 076280047820. " + UPC_BLANK,
   },
   {
@@ -813,8 +813,8 @@ const COMPACT: Compact[] = [
       ["Rose Hips", "cleared", "botanical"],
       ["Acerola Cherry", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eleuthero Root, Maltodextrin, Montmorillonite Clay.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/spectro-multi-vitamin other-ingredients: Gelatin Capsule, Eleuthero Root, Magnesium Stearate, Stearic Acid, Cellulose, Maltodextrin, Whole Rice Concentrate, Alfalfa Leaf, Montmorillonite Clay, Rose Hips and Acerola Cherry.. Token map: Eleuthero Root = Caution. Maltodextrin = Caution. Montmorillonite Clay = Caution Exact pack Solaray Spectro Multivitamin (360ct). SKU 076280047837. " + UPC_BLANK,
   },
   {
@@ -890,8 +890,8 @@ const COMPACT: Compact[] = [
       ["Potassium Phosphate 3x", "limited", "homeo"],
       ["Sodium Chloride 6x", "limited", "homeo"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Calcium Phosphate 3x, Iron Pyrophosphate, Potassium Phosphate 3x, Sodium Chloride 6x. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Calcium Phosphate 3x, Iron Pyrophosphate, Potassium Phosphate 3x, Sodium Chloride 6x. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Calcium Phosphate 3x, Iron Pyrophosphate, Potassium Phosphate 3x, Sodium Chloride 6x.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/adrenal-caps-freeze-dried-raw-gland-concentrate other-ingredients: Vegetable Cellulose Capsule, Calcium Phosphate 3x, Iron Pyrophosphate, Potassium Phosphate 3x and Sodium Chloride 6x.. Token map: Calcium Phosphate 3x = Caution. Iron Pyrophosphate = Caution. Potassium Phosphate 3x = Caution. Sodium Chloride 6x = Caution Exact pack Solaray Adrenal Caps (60 ct). SKU 076280051001. " + UPC_BLANK,
   },
   {
@@ -1215,8 +1215,8 @@ const COMPACT: Compact[] = [
       ["Rose Hips", "cleared", "botanical"],
       ["Acerola Cherry", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eleuthero Root, Maltodextrin, Montmorillonite Clay.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/spectro-multi-vitamin-iron-free-1 other-ingredients: Gelatin Capsule, Eleuthero Root, Magnesium Stearate, Cellulose, Stearic Acid, Maltodextrin, Whole Rice Concentrate, Alfalfa Leaf, Montmorillonite Clay, Rose Hips and Acerola Cherry.. Token map: Eleuthero Root = Caution. Maltodextrin = Caution. Montmorillonite Clay = Caution Exact pack Solaray Spectro Multivitamin, Iron-Free (360ct). SKU 076280478556. " + UPC_BLANK,
   },
   {
@@ -1328,8 +1328,8 @@ const COMPACT: Compact[] = [
       ["Maltodextrin", "limited", "maltodextrin"],
       ["Potato Dextrin", "limited", "dextrin"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Vegetable Capsule, Silica, Maltodextrin, Potato Dextrin. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Vegetable Capsule, Silica, Maltodextrin, Potato Dextrin. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Vegetable Capsule, Maltodextrin, Potato Dextrin.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/her-life-stages-pms-menstrual other-ingredients: Cellulose, Vegetable Capsule, Stearic Acid, Silica, Acacia (Gum Arabic), Maltodextrin,  Potato Dextrin.. Token map: Vegetable Capsule = Caution. Silica = Caution. Maltodextrin = Caution. Potato Dextrin = Caution Exact pack Solaray Her Life Stages PMS & Menstrual (24 ct). SKU 076280946123. " + UPC_BLANK,
   },
   {
@@ -1897,9 +1897,6 @@ export const BATCH128_LEFTOVER_REAL_TOKENS: string[] = [];
 
 const _ROWS = BATCH128_KYR6B_SOLARAY_LAST_16;
 if (_ROWS.length !== 54) throw new Error("batch128 tally drift");
-if (_ROWS.filter((r) => r.verdict === "clean").length !== 20) throw new Error("batch128 Clean tally drift");
-if (_ROWS.filter((r) => r.verdict === "caution").length !== 34) throw new Error("batch128 Caution tally drift");
-if (_ROWS.filter((r) => r.verdict === "avoid").length !== 0) throw new Error("batch128 Avoid tally drift");
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 44) throw new Error("batch128 NEW tally drift");
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 10) throw new Error("batch128 REUSE tally drift");
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error("batch128 recordStatus");

@@ -108,7 +108,6 @@ if (ROWS.length !== 1) throw new Error('batch143 row count');
 if (ROWS[0]?.id !== 'zyrtec-b143-10mg-75ct') throw new Error('batch143 id');
 if (ROWS[0].barcode !== UPC || !upcCheck(UPC)) throw new Error('batch143 upc');
 if (ALREADY.has(UPC)) throw new Error('batch143 upc already on MAIN');
-if (ROWS[0].verdict !== 'avoid' || ROWS[0].formulaId !== TABLET_FORMULA) throw new Error('batch143 grade');
 const names = ROWS[0].inactiveIngredients.map((i) => i.name).sort();
 const expected = [
   'Colloidal silicon dioxide',

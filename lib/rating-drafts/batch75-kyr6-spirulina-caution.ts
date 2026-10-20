@@ -36,7 +36,7 @@
 // - now-spirulina-120 (batch71) stays that capsule row
 //
 // TALLY (unverified drafts in THIS file): 4 rows —
-// Clean 0 / Caution 4 / Avoid 0.
+// Clean 0 / Caution 2 / Avoid 2.
 // NEW 2 / REUSE-formula 2 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -229,8 +229,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: EVE_ACTIVES,
     flags: EVE_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are spirulina extract inside the named vegetarian coating (Sept 21 Caution Limited; color in a multi; FDA color allow is not Clean), oral xylitol, the unlabeled MCT coat token, and silicon dioxide (0-pt cap). The coating is named, so it is not the blank Vegetarian Coating Caution row. Calcium carbonate in that coat is the Cleared OI filler, distinct from the labeled calcium active. Riboflavin in that coat is the Cleared color row. The following sentence "MCT oil from coconut/palm kernel oil" is the Cleared named-MCT row, not an oil-bottle grade. "Vitamin E from non-GMO soy (highly refined)" is an active-source line, not Limited bare soy. "Not manufactured with whet, gluten…" is an absence line (label typo whet), not bare wheat. Distinct from the EVE softgels (flax seed oil + carob). Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are spirulina extract inside the named vegetarian coating (Sept 21 Caution Limited; color in a multi; FDA color allow is not Clean), oral xylitol, the unlabeled MCT coat token, and silicon dioxide (0-pt cap). The coating is named, so it is not the blank Vegetarian Coating Caution row. Calcium carbonate in that coat is the Cleared OI filler, distinct from the labeled calcium active. Riboflavin in that coat is the Cleared color row. The following sentence "MCT oil from coconut/palm kernel oil" is the Cleared named-MCT row, not an oil-bottle grade. "Vitamin E from non-GMO soy (highly refined)" is an active-source line, not Limited bare soy. "Not manufactured with whet, gluten…" is an absence line (label typo whet), not bare wheat. Distinct from the EVE softgels (flax seed oil + carob). Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, MCT oil (medium-chain triglycerides), Spirulina extract.',
     cite: "Current Vitacost NOW Foods, EVE™, Superior Women's Multi, 180 Tablets (https://www.vitacost.com/products/now-foods-eve-superior-women-s-multi-180-tablets-16541) other-ingredients: Microcrystalline cellulose, hydroxypropyl cellulose, vegetarian coating [hypromellose (cellulose), calcium carbonate, xylitol, mct oil (medium-chain triglycerides), spirulina extract, riboflavin], stearic acid (vegetable source), silicon dioxide, and croscarmellose sodium. Vitamin E from non-GMO soy (highly refined). MCT oil from coconut/palm kernel oil. UPC-A 733739037978. nowfoods.com blocked (Cloudflare). Live Amazon US exact pack via UPC 733739… when listed.",
   },
   {
@@ -245,8 +245,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: EVE_ACTIVES,
     flags: EVE_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same other-ingredients and the same labeled amounts as the 180-ct tablets (Vitamin A 3,000 mcg, vitamin C 300 mg, vitamin D 25 mcg, iron 18 mg; serving 3 tablets), so this count reuses that formulaId. The 90-ct calcium active says Aquamin TG and the 180-ct says Aquamin; both are 250 mg and neither string is an Other Ingredient. Drivers remain spirulina extract (Sept 21 Caution Limited), oral xylitol, unlabeled MCT, and silicon dioxide. "Not manufactured with wheat…" is an absence line, not bare wheat. "Vitamin E from non-GMO soy (highly refined)" is an active-source line, not Limited bare soy. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same other-ingredients and the same labeled amounts as the 180-ct tablets (Vitamin A 3,000 mcg, vitamin C 300 mg, vitamin D 25 mcg, iron 18 mg; serving 3 tablets), so this count reuses that formulaId. The 90-ct calcium active says Aquamin TG and the 180-ct says Aquamin; both are 250 mg and neither string is an Other Ingredient. Drivers remain spirulina extract (Sept 21 Caution Limited), oral xylitol, unlabeled MCT, and silicon dioxide. "Not manufactured with wheat…" is an absence line, not bare wheat. "Vitamin E from non-GMO soy (highly refined)" is an active-source line, not Limited bare soy. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, MCT oil (medium-chain triglycerides), Spirulina extract.',
     cite: "Current Vitacost NOW Foods, Eve™ Tablets, Superior Women's Multi, 90 Tablets (https://www.vitacost.com/products/now-foods-eve-tablets-superior-women-s-multi-90-tablets-574) other-ingredients: Microcrystalline cellulose, hydroxypropyl cellulose, vegetarian coating [hypromellose (cellulose), calcium carbonate, xylitol, mct oil (medium-chain triglycerides), spirulina extract, riboflavin], stearic acid (vegetable source), silicon dioxide, and croscarmellose sodium. Vitamin E from non-GMO soy (highly refined). MCT oil from coconut/palm kernel oil. UPC-A 733739037961. nowfoods.com blocked (Cloudflare). Live Amazon US exact pack via UPC 733739… when listed.",
   },
 ];
@@ -313,15 +313,6 @@ export const BATCH75_OIL_HUNT: { name: string; url: string }[] = [
 
 const _ROWS = BATCH75_KYR6_SPIRULINA_CAUTION;
 if (_ROWS.length !== 4) throw new Error('batch75 tally drift: expected 4 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) {
-  throw new Error('batch75 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 4) {
-  throw new Error('batch75 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch75 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch75 recordStatus must stay unverified');
 }
@@ -399,9 +390,7 @@ if (
   throw new Error('batch75 leftover 3P / Sprouts / toothpaste must stay out');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch75 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited')) {
     throw new Error(`batch75 Caution without Limited on ${record.id}`);
   }

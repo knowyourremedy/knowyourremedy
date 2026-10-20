@@ -516,7 +516,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('6b3d8ff0-065d-85c4-e053-2991aa0a1788', METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_ALTS,
@@ -1095,7 +1095,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.benzoate),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
@@ -1820,7 +1820,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.benzoate),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
@@ -2055,7 +2055,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('37269cd6-1528-9879-e063-6394a90a2b54', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['Walmart'],
     cleanAlternatives: COUGH_ALTS,

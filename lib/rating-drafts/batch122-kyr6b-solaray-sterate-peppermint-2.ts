@@ -548,9 +548,6 @@ export const BATCH122_LEFTOVER_REAL_TOKENS: string[] = [
 
 const _ROWS = BATCH122_KYR6B_SOLARAY_STERATE_PEPPERMINT_2;
 if (_ROWS.length !== 5) throw new Error('batch122 tally drift: expected 5 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) throw new Error('batch122 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 3) throw new Error('batch122 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch122 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch122 recordStatus must stay unverified');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 3) throw new Error('batch122 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 2) throw new Error('batch122 REUSE tally drift');

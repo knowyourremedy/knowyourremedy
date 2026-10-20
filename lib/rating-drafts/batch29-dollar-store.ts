@@ -771,7 +771,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_K1, 'Sodium borate'),
       cleared(SET_K1, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...DT],
     cleanAlternatives: EYE_ALTS,

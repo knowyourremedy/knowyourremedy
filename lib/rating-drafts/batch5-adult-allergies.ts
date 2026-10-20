@@ -751,7 +751,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('1c1db71a-47d0-42ac-8cbe-95e76dca185f', 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: NASAL_ALTS,
@@ -781,7 +781,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('3377eced-f9dd-4d6e-abfa-aede968d5242', 'Purified water'),
       cleared('3377eced-f9dd-4d6e-abfa-aede968d5242', 'Sodium nitrate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Sprouts'],
     cleanAlternatives: EYE_ALTS,
@@ -953,7 +953,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('b34d36ca-4df4-458c-af0f-c0d0c9a025d9', 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: AGE2_NASAL_ALTS,
@@ -987,7 +987,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('e4c310b5-1dba-4ddc-bc90-b27ebc765871', 'Water for injection'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: EYE_ALTS,
@@ -1021,7 +1021,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
         'Sodium hydroxide and/or hydrochloric acid',
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: EYE_ALTS,
@@ -1058,7 +1058,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('1c7d2342-ba1c-4244-9814-d92a05725d4e', 'Purified water'),
       cleared('1c7d2342-ba1c-4244-9814-d92a05725d4e', 'Sodium chloride'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: EYE_ALTS,
@@ -1738,7 +1738,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('e0640846-19a6-7f79-e053-2995a90a8176', 'Purified water'),
       cleared('e0640846-19a6-7f79-e053-2995a90a8176', 'Sodium citrate'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target'],
     cleanAlternatives: NASAL_ALTS,
@@ -1822,7 +1822,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       cleared('bfeae100-e2d1-4607-be3b-2d9b15cd4f7f', 'Glycerin'),
       cleared('bfeae100-e2d1-4607-be3b-2d9b15cd4f7f', 'Purified water'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: oralAlts(),

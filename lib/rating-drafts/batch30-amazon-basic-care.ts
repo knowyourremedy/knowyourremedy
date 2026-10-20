@@ -837,7 +837,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_K1, 'Povidone'),
       cleared(SET_K1, 'Pregelatinized starch (maize)'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...AMAZON],
     cleanAlternatives: COLD_ORAL_ALTS,
@@ -900,7 +900,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         labelCite(BIOTIN_CITE, METH.hpmc),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...AMAZON],
     sourcesGeneral: [`${BIOTIN_CITE} — draft, not verified; no DailyMed drug SPL`],
@@ -928,7 +928,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       ),
       labelCleared(MELATONIN_CITE, 'Magnesium stearate'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...AMAZON],
     cleanAlternatives: MELATONIN_ALTS,
@@ -959,7 +959,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_K5A, 'Povidone'),
       cleared(SET_K5A, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...AMAZON],
     cleanAlternatives: NASAL_ALTS,
@@ -988,7 +988,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_K5B, 'Povidone'),
       cleared(SET_K5B, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...AMAZON],
     cleanAlternatives: NASAL_ALTS,
@@ -1756,7 +1756,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         dailymed(SET_CLEARLAX_OR, METH.flavors),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     cleanAlternatives: [

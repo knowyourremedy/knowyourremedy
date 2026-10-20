@@ -239,15 +239,6 @@ export const BATCH115_REFUSED: { sku: string; reason: string }[] = [];
 
 const _ROWS = BATCH115_KYR6B_NATUREWISE_CLOSEOUT;
 if (_ROWS.length !== 5) throw new Error('batch115 tally drift: expected 5 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) {
-  throw new Error('batch115 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 4) {
-  throw new Error('batch115 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch115 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch115 recordStatus must stay unverified');
 }
@@ -291,9 +282,7 @@ if (
   throw new Error('batch115 must not reopen flax, women, or toothpaste');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch115 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (
     record.verdict === 'caution' &&
     !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')

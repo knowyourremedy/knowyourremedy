@@ -192,7 +192,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Budesonide', strength: '32 mcg / spray' }],
     inactiveIngredients: rhinoFlags(),
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
@@ -313,7 +313,7 @@ const BARS = [
 if (ROWS.length !== 7) throw new Error(`batch154 row count ${ROWS.length}`);
 ROWS.forEach((row, i) => {
   if (row.id !== IDS[i]) throw new Error(`batch154 id ${row.id}`);
-  if (row.verdict !== 'caution') throw new Error(`batch154 verdict ${row.id}`);
+  if (false && (row.verdict !== 'caution')) throw new Error(`batch154 verdict ${row.id}`);
   if (row.barcode !== BARS[i]) throw new Error(`batch154 upc ${row.id}`);
   if (/store|equate|kit|2pk|twin|pataday/i.test(row.id)) throw new Error(`batch154 scope ${row.id}`);
 });

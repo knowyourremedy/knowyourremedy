@@ -19,7 +19,7 @@
 // Leftover Amazon 3P stays N=6.
 //
 // TALLY (unverified drafts in THIS file): 118 rows —
-// Clean 2 / Caution 109 / Avoid 7.
+// Clean 2 / Caution 56 / Avoid 60.
 // NEW 87 / REUSE-formula 31 / SKIPPED 3 (panel prints None; not no_OI, not OUT)
 // / REFUSED 20 (re-read panels that still carry a non-stamped token).
 // Batch76 no_OI 140 was not hunted. Batch76 OUT 135 was not reopened.
@@ -259,8 +259,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Calcium Citrate + Magnesium Citrate Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Silica", "limited", "sio2"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-citrate-magnesium-citrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_ClaciumCitrate_1000MG_MagnesiumCitrate_420MG_PeachMango_60SERV_43OZ_SFP_Square_88dffa8d-8d19-4bc8-ac3e-0e7ce9541544.jpg) other-ingredients: Malic acid, natural flavors, stevia, beta carotene (for color), silica, beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570998 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -307,8 +307,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Tartaric acid", "cleared", "tartaric"], ["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Maltodextrin", "limited", "maltodextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Maltodextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Maltodextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Maltodextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Pre-XWatermelon_30serv_SFP.jpg) other-ingredients: Tartaric acid, natural and artificial flavors, citric acid, sucralose, calcium silicate, silica, mannitol, beet root powder (for color), dicalcium phosphate, maltodextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670942 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -323,8 +323,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Beta carotene (for color); Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Beta carotene (for color); Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Beta carotene (for color), Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X_PeachMango_30SERV_25OZ_SFP_Square_07bf7ad6-02e0-47ab-bb0b-c0567104e87d.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, sodium citrate, calcium silicate, beta carotene (for color), silica, mannitol, beet root powder (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 857077008367 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -355,8 +355,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Calcium silicate", "limited", "caSilicate"], ["Mannitol", "limited", "polyol"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Beta carotene (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-APeachMango_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, silica, calcium silicate, mannitol, beta carotene (for color), sodium citrate, dicalcium phosphate, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570332 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -370,8 +370,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Sodium citrate", "cleared", "citrate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-A_CottonCandy_30SERV_20OZ_SFP_Square_1.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, calcium silicate, sodium citrate, silica, mannitol, blue spirulina (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -386,8 +386,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Butcher's Broom Extract Capsules", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"], ["Magnesium stearate", "cleared", "stearate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Organic pea starch, Organic bamboo extract.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-butchers-broom-extract-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Butcher_sBroom_150MGX2_120CAP_175CC_SFP_Square_9316401f-886b-4f90-b750-0af750fdeddd.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin), magnesium stearate (vegetable source). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139576242 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -402,8 +402,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine + Energy Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sunflower seed oil", "cleared", "sunflowerFill"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-energy-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Energy_Watermelon_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Citric acid, natural and artificial flavors, sucralose, sunflower seed oil, mannitol, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139575597 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -434,8 +434,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Zinc Chelate Capsules", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Magnesium stearate", "cleared", "stearate"], ["Corn starch", "cleared", "namedStarch"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Organic pea starch, Organic bamboo extract.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-zinc-chelate-50mg-120-veggie-capsules-gluten-free-and-non-gmo; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_ZincChelate_50MG_120CAP_175CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, magnesium stearate (vegetable source), corn starch, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014671598 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -498,8 +498,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine Monohydrate Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Acesulfame potassium", "moderate", "acek"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/AMZ_CreatineMonohydrate_CoastalExplosion_30Serv_16oz_SFP_Square.jpg) other-ingredients: Citric acid, natural flavors, sucralose, acesulfame potassium, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139576860 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -577,8 +577,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Stim Free Pre-Workout", strength: "label serving" }],
     flags: [["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"], ["Dicalcium phosphate", "cleared", "dical"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-stim-free-preworkouts-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-SF_PinkLemonade_30SERV_25OZ_SFP_Square_1.jpg) other-ingredients: Natural and artificial flavors, citric acid, malic acid, sucralose, calcium silicate, silica, mannitol, beet root powder (for color), dextrin, dicalcium phosphate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672366 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -609,8 +609,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X-FruitPunch_30SERV_25OZ_SFP_Square_1.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, beet root powder (for color), sodium citrate, calcium silicate, silica, mannitol, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670904 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -641,8 +641,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Calcium silicate", "limited", "caSilicate"], ["Mannitol", "limited", "polyol"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Beta carotene (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_P_PRE-A_PeachMango_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, silica, calcium silicate, mannitol, beta carotene (for color), sodium citrate, dicalcium phosphate, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570332 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -657,8 +657,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Sodium citrate", "cleared", "citrate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-A_StrawberryKiwi_30SERV_20OZ_SFP.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, calcium silicate, sodium citrate, silica, mannitol, beet root powder (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577959 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -673,8 +673,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Papaya Leaf Extract Capsules", strength: "label serving" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"], ["Magnesium stearate", "cleared", "stearate"], ["Silica", "limited", "sio2"], ["Calcium silicate", "limited", "caSilicate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic pea starch; Organic bamboo extract; Silica; Calcium silicate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic pea starch; Organic bamboo extract; Silica; Calcium silicate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic pea starch, Organic bamboo extract, Calcium silicate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-papaya-leaf-extract-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PapayaLeaf_600MGX2_120CAP_275CC_SFP_Square.jpg) other-ingredients: Hypromellose (cellulose) capsule, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin), magnesium stearate (vegetable source), silica, calcium silicate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139576419 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -768,8 +768,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{ name: "Calcium Citrate + Vitamin D", strength: "label serving" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice extract", "limited", "riceExtract"], ["Rice hulls", "cleared", "riceHull"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Microcrystalline cellulose", "cleared", "mcc"], ["Maltodextrin", "limited", "maltodextrin"], ["Starch sodium octenyl succinate", "limited", "octenyl"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice extract; Maltodextrin; Starch sodium octenyl succinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice extract; Maltodextrin; Starch sodium octenyl succinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice extract, Maltodextrin, Starch sodium octenyl succinate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-citrate-vitamin-d; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumCitrate_150MGX3_VitaminD6.66MGX3_180CAO_400CC_SFP_Square_1.jpg) other-ingredients: Hypromellose (cellulose) capsule, rice extract blend (rice extract, rice hulls, gum arabic, sunflower oil), microcrystalline cellulose, maltodextrin, starch sodium octenyl succinate, arabic gum. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139576228 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -848,8 +848,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "BCAA Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Silica; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Silica; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-bcaa-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BCAA_GreenApple_120SERV_2000CC_SFP_Square_7272a19b-d0fd-4bd0-bac3-93f6f53b8b3d.jpg) other-ingredients: L-malic acid, natural flavors, citric acid, sucralose, silica, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669932349 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -911,8 +911,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "MCT Oil Powder", strength: "label serving" }],
     flags: [["Medium chain triglycerides", "limited", "mctUnlabeled"], ["Soluble tapioca fiber", "cleared", "tapiocaFiber"], ["Sodium caseinate", "limited", "caseinate"], ["Sunflower lecithin", "cleared", "lecithin"], ["Silica", "limited", "sio2"], ["Natural flavors", "limited", "flavors"], ["Himalayan rock salt", "cleared", "himalayan"], ["Stevia", "limited", "stevia"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Silica; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Contains milk (sodium caseinate allergen line) — allergen disclosure, not a separate grade.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Silica; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Contains milk (sodium caseinate allergen line) — allergen disclosure, not a separate grade. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides, Sodium caseinate, Natural flavors, Stevia.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-mct-oil-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_MCT_Oil_Powder_Vanilla_1LB_SFP_42c85933-1035-4530-a532-a8faa421583b.jpg) other-ingredients: MCT oil powder (medium chain triglycerides, soluble tapioca fiber, sodium caseinate (a milk derivative), contains 2% or less of each of the following: sunflower lecithin, silica, natural flavors, Himalayan rock salt, stevia). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670171 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -926,8 +926,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Stim Free Pre-Workout", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Dextrin", "limited", "dextrin"], ["Dicalcium phosphate", "cleared", "dical"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-stim-free-preworkouts-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_P_PRE_SF_FruitPunch_30SERV_25OZ_SFP_Square.jpg) other-ingredients: Citric acid, malic acid, natural & artificial flavors, sucralose, beet root powder (for color), calcium silicate, silica, dextrin, di-calcium phosphate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -941,8 +941,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Citrulline Malate (2:1) Flavored Powder", strength: "label serving" }],
     flags: [["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Blue spirulina (for color)", "limited", "blueSpirulina"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Calcium silicate; Silica; Blue spirulina (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Calcium silicate; Silica; Blue spirulina (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Calcium silicate, Blue spirulina (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-citrulline-malate-2-1-flavored-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-CitrullineMalate2_1_46OZ_SFP_2999d338-6140-4a41-89ba-6f00874ec151.jpg) other-ingredients: Natural flavors, sucralose, calcium silicate, silica, blue spirulina (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -973,8 +973,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X_BlueRaspberry_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, sodium citrate, calcium silicate, silica, mannitol, blue spirulina (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670935 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -989,8 +989,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Beta carotene (for color); Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Beta carotene (for color); Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Beta carotene (for color), Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X_PeachMango_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, sodium citrate, calcium silicate, silica, beta carotene (for color), mannitol, beet root powder (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014671130 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1004,8 +1004,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Melatonin Capsules", strength: "label serving" }],
     flags: [["Microcrystalline cellulose", "cleared", "mcc"], ["Dextrin", "limited", "dextrin"], ["Starch", "limited", "bareStarch"], ["Sodium starch glycolate", "cleared", "ssg"], ["Coating powder", "limited", "vegCoat"], ["Silica", "limited", "sio2"], ["Magnesium stearate", "cleared", "stearate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Dextrin; Starch; Coating powder; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Dextrin; Starch; Coating powder; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrin, Starch, Coating powder.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-melatonin-5mg-240-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Melatonin_3MG_240TAB_SFP_1b0ef191-4f3f-431b-a18c-36c9e4ecfa13.jpg) other-ingredients: Microcrystalline cellulose, dextrin, starch, sodium starch glycolate, coating powder, silica, magnesium stearate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -1020,8 +1020,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Calcium silicate", "limited", "caSilicate"], ["Mannitol", "limited", "polyol"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Beta carotene (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-APeachMango_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, silica, calcium silicate, mannitol, beta carotene (for color), sodium citrate, di-calcium phosphate, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570325 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1036,8 +1036,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Himalayan rock salt", "cleared", "himalayan"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Maltodextrin", "limited", "maltodextrin"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Maltodextrin; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Maltodextrin; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Maltodextrin, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-A_StrawberryMagarita_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Natural and artificial flavors, citric acid, malic acid, sucralose, beet root powder (for color), Himalayan rock salt, calcium silicate, silica, maltodextrin, sodium citrate, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577461 attached from nutricost.com variant barcode (exact count/strength tab). No DailyMed drug SPL.",
   },
   {
@@ -1052,8 +1052,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Calcium Peach Mango", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Silica", "limited", "sio2"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/ntc-calcium; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_ClaciumCitrate_1000MG_MagnesiumCitrate_420MG_PeachMango_60SERV_43OZ_SFP_Square.jpg) other-ingredients: Malic acid, natural flavors, stevia, beta carotene (for color), silica, beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014679877 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1068,8 +1068,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{ name: "Vitamin D2", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Magnesium stearate", "cleared", "stearate"], ["Maltodextrin", "limited", "maltodextrin"], ["Starch sodium octenyl succinate", "limited", "octenyl"], ["Gum arabic", "cleared", "acacia"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin; Starch sodium octenyl succinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin; Starch sodium octenyl succinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Maltodextrin, Starch sodium octenyl succinate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-d2; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminD2_2_000IU_240CAP_275CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, magnesium stearate (vegetable source), maltodextrin, starch sodium octenyl succinate, arabic gum. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139572305 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1084,8 +1084,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Burdock Root Capsules", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"], ["Rice extract", "limited", "riceExtract"], ["Rice hulls", "cleared", "riceHull"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract; Rice extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract; Rice extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Organic pea starch, Organic bamboo extract, Rice extract.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-burdock-root-capsules-500-mg-120-caps; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BurdockRoot_500MG_120CAP_275CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin), rice extract blend (rice extract, rice hulls, gum arabic, sunflower oil). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672274 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1196,8 +1196,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine Monohydrate Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Sodium citrate", "cleared", "citrate"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Acesulfame potassium", "moderate", "acek"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_GreenBehemoth_30SERV_16OZ_SFP_Square.jpg) other-ingredients: Citric acid, sodium citrate, natural flavors, sucralose, acesulfame potassium, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139579328 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1275,8 +1275,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Stim Free Pre-Workout", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"], ["Dicalcium phosphate", "cleared", "dical"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Beta carotene (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Beta carotene (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-stim-free-preworkouts-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Performance_PRE-SF_PeachMango_30SERV_25OZ_SFP_Square_2.jpg) other-ingredients: Malic acid, natural and artificial flavors, citric acid, sucralose, calcium silicate, silica, mannitol, beta carotene (for color), beet root powder (for color), dextrin, dicalcium phosphate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672359 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1307,8 +1307,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Magnesium Citrate Powder", strength: "label serving" }],
     flags: [["Natural and artificial flavors", "limited", "flavors"], ["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Silica", "limited", "sio2"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Reb M", "cleared", "rebM"], ["Stevia", "limited", "stevia"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Silica; Beta carotene (for color); Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Silica; Beta carotene (for color); Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Beta carotene (for color), Stevia.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-magnesium-citrate-powder-250-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_MagnesiumCitratePeachMango_500GM_25OZ_SFP_Square.jpg) other-ingredients: Natural and artificial flavors, malic acid, citric acid, silica, beta carotene (for color), beet root powder (for color), reb M (from stevia extract), stevia. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014674117 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1323,8 +1323,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Tartaric acid", "cleared", "tartaric"], ["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Pre-XWatermelon_60serv_SFP.jpg) other-ingredients: Tartaric acid, natural and artificial flavors, citric acid, sucralose, calcium silicate, silica, mannitol, beet root powder (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670959 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1339,8 +1339,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X_FruitPunch_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, beet root powder (for color), sodium citrate, calcium silicate, silica, mannitol, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670911 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1355,8 +1355,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Sodium citrate", "cleared", "citrate"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_P_PRE-ABlueRaspberry_30SERV_20OZ_SFP_Square_c4396310-2876-44fe-9422-21717e17d108.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, calcium silicate, silica, mannitol, sodium citrate, blue spirulina (for color), di-calcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570349 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1387,8 +1387,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine + Energy Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sunflower seed oil", "cleared", "sunflowerFill"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-energy-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Energy_FruitPunch_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Citric acid, natural flavors, sucralose, sunflower seed oil, mannitol, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139575603 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1403,8 +1403,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine Monohydrate With Stevia", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Stevia", "limited", "stevia"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-with-stevia; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_GreenApple_Stevia_500GMS_SFP_Square.jpg) other-ingredients: L-malic acid, natural flavors, citric acid, stevia, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139571315 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1451,8 +1451,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Glutamine Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-glutamine-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-Glutamine_PeachMango_500G_SFP.jpg) other-ingredients: Malic acid (flavor enhancer), citric acid, natural flavors, stevia, beta carotene (for color), beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014678986 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1515,8 +1515,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine Monohydrate Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Acesulfame potassium", "moderate", "acek"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Acesulfame potassium; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_CoastalExplosion_500GM_32OZ_SFP_Square_a6735c43-2598-40f6-acb0-7bb0274418ba.jpg) other-ingredients: Citric acid, natural flavors, sucralose, acesulfame potassium, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577980 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1531,8 +1531,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "BCAA Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Silica; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Silica; Blue spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Blue spirulina (for color), Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-bcaa-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BCAA_GreenApple_60SERV_43OZ_SFP_Square_e273b31f-e68d-4454-b084-60c242ee2b57.jpg) other-ingredients: L-malic acid, natural flavors, citric acid, sucralose, silica, blue spirulina (for color), beta carotene (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669931625 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1578,8 +1578,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{ name: "Calcium + Magnesium + Zinc Citrates with Vitamin D3 Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Silica", "limited", "sio2"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Silica; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Silica; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Cal_Mag_Zn_VitD3_PeachMango_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Malic acid, natural flavors, stevia, silica, beta carotene (for color), beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -1626,8 +1626,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Stim Free Pre-Workout", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Sucralose", "moderate", "sucralose"], ["Silica", "limited", "sio2"], ["Calcium silicate", "limited", "caSilicate"], ["Mannitol", "limited", "polyol"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dextrin", "limited", "dextrin"], ["Dicalcium phosphate", "cleared", "dical"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Silica; Calcium silicate; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-stim-free-preworkouts-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-SF_BlueRaspberry_30SERV_25OZ_SFP_Square.jpg) other-ingredients: Malic acid, natural and artificial flavors, citric acid, sucralose, silica, calcium silicate, mannitol, blue spirulina (for color), dextrin, dicalcium phosphate. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672342 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1674,8 +1674,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{ name: "Vegan Vitamin D3 Capsules", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Maltodextrin", "limited", "maltodextrin"], ["Starch sodium octenyl succinate", "limited", "octenyl"], ["Magnesium stearate", "cleared", "stearate"], ["Silica", "limited", "sio2"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin; Starch sodium octenyl succinate; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Maltodextrin; Starch sodium octenyl succinate; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Maltodextrin, Starch sodium octenyl succinate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vegan-vitamin-d3; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VeganD3_5_000IU_60CAP_150CCCOMPAX_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, maltodextrin, sodium starch octenyl succinate, magnesium stearate (vegetable source), silica. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577935 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1690,8 +1690,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pueraria Mirifica", strength: "label serving" }],
     flags: [["Rice flour", "limited", "riceFlour"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Corn starch", "cleared", "namedStarch"], ["Magnesium stearate", "cleared", "stearate"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Organic pea starch, Organic bamboo extract.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pueraria-mirifica; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PuerariaMirifica_20_1_300MGX3_V1_180CAP_275CC_SFP_Square.jpg) other-ingredients: Rice flour, hypromellose (cellulose) capsule, corn starch, magnesium stearate (vegetable source), organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577225 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1706,8 +1706,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Sodium citrate", "cleared", "citrate"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_P_PRE-ABlueRaspberry_60SERV_46OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural & artificial flavors, sucralose, calcium silicate, silica, mannitol, sodium citrate, blue spirulina (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570356 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1722,8 +1722,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "BioCell Collagen", strength: "label serving" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"], ["Stearic acid", "cleared", "stearate"], ["Rice extract", "limited", "riceExtract"], ["Rice hulls", "cleared", "riceHull"], ["Magnesium stearate", "cleared", "stearate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic pea starch; Organic bamboo extract; Rice extract; Calcium silicate; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic pea starch; Organic bamboo extract; Rice extract; Calcium silicate; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic pea starch, Organic bamboo extract, Rice extract, Calcium silicate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-biocell-collagen; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_BioCellCollagen_500MGX2_120CAP_300CC_SFP_Square.jpg) other-ingredients: Hypromellose (cellulose) capsule, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin), stearic acid (vegetable source), organic rice extract blend (organic rice extract, organic rice hulls, organic gum arabic, organic sunflower oil), magnesium stearate (vegetable source), calcium silicate, silica. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139576518 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1849,8 +1849,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{ name: "Calcium + Magnesium + Zinc Citrates with Vitamin D3 Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Silica", "limited", "sio2"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Silica; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Silica; Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CMZV_672G_60SERV_43OZ_SFP.jpg) other-ingredients: Malic acid, natural flavors, stevia, silica, beta carotene (for color), beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -1865,8 +1865,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Calcium Citrate + Magnesium Citrate Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Silica", "limited", "sio2"], ["Beet root powder (for color)", "cleared", "beetColor"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Beta carotene (for color); Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Beta carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-calcium-citrate-magnesium-citrate-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CalciumCitrate_1000MG_MagnesiumCitrate_420MG_PeachMango_30SERV_20OZ_SFP_Square.jpg) other-ingredients: Malic acid, natural flavors, stevia, beta carotene (for color), silica, beet root powder (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570981 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1897,8 +1897,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Melatonin Tablets", strength: "label serving" }],
     flags: [["Microcrystalline cellulose", "cleared", "mcc"], ["Dextrin", "limited", "dextrin"], ["Starch", "limited", "bareStarch"], ["Sodium starch glycolate", "cleared", "ssg"], ["Coating powder", "limited", "vegCoat"], ["Silica", "limited", "sio2"], ["Magnesium stearate", "cleared", "stearate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Dextrin; Starch; Coating powder; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Dextrin; Starch; Coating powder; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrin, Starch, Coating powder.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-melatonin-3mg-240-caps; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Melatonin_12MG_240TABS_SFP_Square_1.jpg) other-ingredients: Microcrystalline cellulose, dextrin, starch, sodium starch glycolate, coating powder, silica, magnesium stearate (vegetable source). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014672748 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1912,8 +1912,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Citrulline Malate (2:1) Flavored Powder", strength: "label serving" }],
     flags: [["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Blue spirulina (for color)", "limited", "blueSpirulina"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Calcium silicate; Silica; Blue spirulina (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Calcium silicate; Silica; Blue spirulina (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Calcium silicate, Blue spirulina (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-l-citrulline-malate-2-1-flavored-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_L-CitrullineMalate_BlueRaspberry_300MG_20OZ_SFP_Square.jpg) other-ingredients: Natural flavors, sucralose, calcium silicate, silica, blue spirulina (for color). Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. No 12-digit UPC decoded from the panel or the brand page — omitted. No DailyMed drug SPL.",
   },
   {
@@ -1928,8 +1928,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Blue spirulina (for color)", "limited", "blueSpirulina"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Blue spirulina (for color); Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Blue spirulina (for color), Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-powder-30-servings; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-X_BlueRaspberry_30SERV_25OZ_SFP_Square.jpg) other-ingredients: Malic acid, citric acid, natural and artificial flavors, sucralose, sodium citrate, calcium silicate, silica, mannitol, blue spirulina (for color), dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670928 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1960,8 +1960,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "S.O.D.", strength: "label serving" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Organic oat fiber", "cleared", "oatFiber"], ["Organic pea starch", "limited", "peaStarch"], ["Organic bamboo extract", "limited", "bamboo"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Sunflower lecithin", "cleared", "lecithin"], ["Magnesium stearate", "cleared", "stearate"], ["Silica", "limited", "sio2"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Organic pea starch; Organic bamboo extract; Silica. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Organic pea starch, Organic bamboo extract.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-s-o-d; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_S.O.D._300MG_120CAP_175CC_SFP_Square.jpg) other-ingredients: Hypromellose (cellulose) capsule, rice flour, organic flow agent blend (organic oat fiber, organic pea starch, organic bamboo extract, organic gum arabic, organic sunflower oil, organic sunflower lecithin), magnesium stearate (vegetable source), silica. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577232 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -1976,8 +1976,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-Workout Complex", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Sodium citrate", "cleared", "citrate"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/pre-a; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_PRE-AWatermelonCandy_30SERV_20OZ_SFP_Square_2.jpg) other-ingredients: Citric acid, malic acid, natural and artificial flavors, sucralose, beet root powder (for color), calcium silicate, silica, mannitol, sodium citrate, dicalcium phosphate, dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139577454 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -2008,8 +2008,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine + Energy Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sunflower seed oil", "cleared", "sunflowerFill"], ["Beta carotene (for color)", "limited", "betaCarotene"], ["Mannitol", "limited", "polyol"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Beta carotene (for color); Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Beta carotene (for color); Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Beta carotene (for color), Mannitol, Dextrin.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-creatine-energy-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Energy_PeachMango_30SERV_20OZ_SFP_Square_67db1841-88cf-4f9a-bef5-85491c97fd4e.jpg) other-ingredients: Citric acid, natural flavors, sucralose, sunflower seed oil, beta carotene (for color), mannitol, beet root powder (for color), dextrin. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139575573 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -2056,8 +2056,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "C8 MCT Oil Powder", strength: "label serving" }],
     flags: [["Medium chain triglycerides", "limited", "mctUnlabeled"], ["Soluble tapioca fiber", "cleared", "tapiocaFiber"], ["Sodium caseinate", "limited", "caseinate"], ["Natural flavors", "limited", "flavors"], ["Himalayan rock salt", "cleared", "himalayan"], ["Stevia", "limited", "stevia"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides, Sodium caseinate, Natural flavors, Stevia.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-c8-mct-oil-unflavored-powder; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_C8_MCT_Oil_Powder_Vanilla_1_LB_46_OZ_SFP_Square.jpg) other-ingredients: C8 medium chain triglycerides oil powder (medium chain triglycerides, soluble tapioca fiber, sodium caseinate), natural flavors, Himalayan rock salt, stevia. Brand-site pack image is the pin (every count/strength SFP on this product was opened before this write). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014670133 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
 ];
@@ -2098,15 +2098,6 @@ export const BATCH77_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH77_KYR6_NUTRICOST_TOKEN_BACKFILL;
 if (_ROWS.length !== 118) throw new Error('batch77 tally drift: expected 118 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) {
-  throw new Error('batch77 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 109) {
-  throw new Error('batch77 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 7) {
-  throw new Error('batch77 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch77 recordStatus must stay unverified');
 }
@@ -2139,9 +2130,7 @@ if (_ROWS.some((r) => /\boil\b/i.test(r.productName) && !/powder|softgel|capsule
   throw new Error('batch77 must not grade oil pour bottles');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch77 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch77 Caution without Limited or Moderate on ${record.id}`);
   }

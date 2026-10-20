@@ -2914,7 +2914,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('542b41dd-f285-4e48-a67b-8e69523b143a'),
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -2941,7 +2941,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: creamPegPanel(CREAM_PEG_SETID),
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -2970,7 +2970,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('b957a592-e51b-61fc-e053-2995a90aaabd'),
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -2998,7 +2998,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('6b3c511c-7b11-203f-e053-2991aa0a6e01'),
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -3057,7 +3057,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Calendula officinalis', strength: '1X HPUS' },
     ],
     inactiveIngredients: calendulaGelOi('25764f5a-378b-4103-81a1-2a6309e3e8e1'),
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: CALENDULA_ALTS,

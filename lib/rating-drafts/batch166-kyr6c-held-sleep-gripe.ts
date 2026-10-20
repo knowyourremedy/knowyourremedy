@@ -123,8 +123,8 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '1 mg' }],
     inactiveIngredients: chewLine(CHEW),
-    verdict: 'caution',
-    honestNote: NATURAL_COLOR_NOTE,
+    verdict: 'avoid',
+    honestNote: `${NATURAL_COLOR_NOTE} Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Natural Flavors, Xylitol, Natural Color, Oligofructose, Fructose, Vegetable Protein Isolate.`,
     retailers: ['Dollar General'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -145,8 +145,8 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '1 mg' }],
     inactiveIngredients: chewLine(CHEW),
-    verdict: 'caution',
-    honestNote: NATURAL_COLOR_NOTE,
+    verdict: 'avoid',
+    honestNote: `${NATURAL_COLOR_NOTE} Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Natural Flavors, Xylitol, Natural Color, Oligofructose, Fructose, Vegetable Protein Isolate.`,
     retailers: ['Target', 'Dollar General'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -172,7 +172,9 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
       { name: 'Matricaria recutita (chamomile) flower heads extract', strength: 'label serving' },
     ],
     inactiveIngredients: gripeLine(GRIPE),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Corn syrup, Maltodextrin, Potassium benzoate.',
     retailers: ['Target', 'Amazon'],
     cleanAlternatives: GRIPE_ALTS,
     sourcesGeneral: [
@@ -197,9 +199,9 @@ function lineKey(record: RatingRecord): string {
 if (ROWS.length !== 3) throw new Error(`batch166 row count ${ROWS.length}`);
 
 const expected = [
-  ['zarbees-b166-sleep-chew-30', 'caution', '898115002503', 'zarbees-b166-sleep-chew', 3],
-  ['zarbees-b166-sleep-chew-50', 'caution', '858438005582', 'zarbees-b166-sleep-chew', 3],
-  ['little-remedies-b166-gripe-4', 'caution', '756184122778', 'little-remedies-b166-gripe', 0],
+  ['zarbees-b166-sleep-chew-30', 'avoid', '898115002503', 'zarbees-b166-sleep-chew', 3],
+  ['zarbees-b166-sleep-chew-50', 'avoid', '858438005582', 'zarbees-b166-sleep-chew', 3],
+  ['little-remedies-b166-gripe-4', 'avoid', '756184122778', 'little-remedies-b166-gripe', 0],
 ] as const;
 
 for (const [id, verdict, barcode, formulaId, minAge] of expected) {
@@ -228,5 +230,7 @@ if (lineKey(chew30) === lineKey(gripe)) throw new Error('batch166 gripe line sho
 if (!chew30.honestNote?.includes('does not name the plant') || chew30.honestNote !== chew50.honestNote) {
   throw new Error('batch166 natural color note');
 }
-if (gripe.honestNote) throw new Error('batch166 gripe note');
+if (gripe.honestNote && !gripe.honestNote.includes('stacking rule (t137u)')) {
+  throw new Error('batch166 gripe note');
+}
 if (new Set(ROWS.map((item) => item.barcode)).size !== 3) throw new Error('batch166 upc copy');
