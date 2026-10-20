@@ -36,7 +36,7 @@ const METH = {
   talc: 'Methodology §5 Avoid (talc). Magnesium silicate is that row in a swallowed product.',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
   tocopherol: 'Methodology §5 Cleared (tocopherols).',
-  wax: 'Methodology §5 Caution (carnauba wax).',
+  wax: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
 } as const;
 
 function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
@@ -162,7 +162,7 @@ export const BATCH189_KYR6C_NB_SCHIFF_MF: RatingRecord[] = [
     inactiveIngredients: [
       flag(PREBIO_PANEL, 'Fructooligosaccharides (from chicory root)', 'cleared', METH.chicory),
       flag(PREBIO_PANEL, 'Agar-agar', 'cleared', METH.agar),
-      flag(PREBIO_PANEL, 'Carnauba wax', 'limited', METH.wax),
+      flag(PREBIO_PANEL, 'Carnauba wax', 'cleared', METH.wax),
       flag(PREBIO_PANEL, 'Citric acid', 'cleared', METH.citric),
       flag(PREBIO_PANEL, 'Natural flavors', 'limited', METH.flavors),
       flag(PREBIO_PANEL, 'Paprika extract (color)', 'cleared', METH.paprika),

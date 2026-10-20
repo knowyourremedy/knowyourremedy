@@ -14,7 +14,7 @@ const METH = {
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose / cellulose family; EFSA 2017).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium / cellulose-family disintegrant).',
   stearic: 'Methodology §5 Cleared (stearic acid / stearate-family lubricant; EFSA 2018).',
-  carnauba: 'Methodology §5 Caution (carnauba wax lock; founder Sept 25, 2026).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   crospovidone: 'Methodology §5 Cleared (crospovidone / copovidone family; oral disintegrant).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / stearate-family lubricant; EFSA 2018).',
   vegMagStearate:
@@ -89,7 +89,7 @@ export const BATCH234_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_COLLAGEN, 'Microcrystalline Cellulose', 'cleared', 'mcc'),
       flag(PANEL_COLLAGEN, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(PANEL_COLLAGEN, 'Stearic Acid', 'cleared', 'stearic'),
-      flag(PANEL_COLLAGEN, 'Carnauba Wax', 'limited', 'carnauba'),
+      flag(PANEL_COLLAGEN, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_COLLAGEN, 'Crospovidone', 'cleared', 'crospovidone'),
       flag(PANEL_COLLAGEN, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_COLLAGEN, 'Polyethylene Glycol', 'moderate', 'peg'),

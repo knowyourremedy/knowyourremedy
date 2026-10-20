@@ -57,7 +57,7 @@ const METH = {
   whiteMineral: 'Methodology §5 Caution (oral white mineral oil). Not the topical ointment row. Not the gummy seed-oil rule. Not the Avoid driver.',
   citrate: 'Methodology §5 Cleared (sodium citrate).',
   juiceColor: 'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder). Clean. Named or not. Sweetener or color. Not a sugar row. Not Usable. High fructose corn syrup stays its own row. Locked Oct 15, 2026.',
-  carnauba: 'Methodology §5 Caution (carnauba wax). Not the Avoid driver.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Not the Avoid driver.',
   adipic: 'Methodology §5 Cleared (adipic acid).',
   polyphosphate: 'Methodology §5 Caution (sodium polyphosphate). Own row. Not a phosphate salt. Not phosphoric acid. Not the Avoid driver.',
 } as const;
@@ -126,7 +126,7 @@ function sleepLine(panel: string): IngredientFlag[] {
     flag(panel, 'White mineral oil', 'limited', METH.whiteMineral),
     flag(panel, 'Sodium citrate', 'cleared', METH.citrate),
     flag(panel, 'Color added (vegetable juice, fruit juice)', 'cleared', METH.juiceColor),
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
   ];
 }
 

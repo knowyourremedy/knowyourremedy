@@ -18,7 +18,7 @@ const METH = {
   mixedTocopherols:
     'Methodology §5 Cleared (mixed natural tocopherols / mixed tocopherols antioxidant row).',
   maltodextrin: 'Methodology §5 Limited (maltodextrin; glycemic bulking agent).',
-  carnauba: 'Methodology §5 Caution (carnauba wax — wax family caution row).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium / cellulose-family disintegrant).',
   hpmc: 'Methodology §5 Cleared (hydroxypropyl methylcellulose / HPMC row).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / stearate-family lubricant).',
@@ -112,7 +112,7 @@ export const BATCH242_KYR6C_T132U_SV: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(PANEL_CALCIUM_D3_250, 'Maltodextrin', 'limited', 'maltodextrin'),
-      flag(PANEL_CALCIUM_D3_250, 'Carnauba Wax', 'limited', 'carnauba'),
+      flag(PANEL_CALCIUM_D3_250, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_CALCIUM_D3_250, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(PANEL_CALCIUM_D3_250, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'),
       flag(PANEL_CALCIUM_D3_250, 'Magnesium Stearate', 'cleared', 'magStearate'),

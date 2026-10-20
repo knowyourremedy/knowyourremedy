@@ -21,7 +21,7 @@ const METH = {
   mannitol: 'Methodology §5 Limited (mannitol).',
   mctUnlabeled:
     'Methodology §5 Unlabeled MCT — LOCKED (Limited). Medium Chain Triglycerides with no plant source named on the panel; not the Sept 16 named-MCT Cleared fill row.',
-  palmLeafGlaze: 'Methodology §5 Limited (natural palm leaf glaze / carnauba family).',
+  palmLeafGlaze: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   riceFlour: 'Methodology §5 Limited (rice flour — exact token; distinct from Cleared rice-hull family).',
   silica: 'Methodology §5 Caution (silica / silicon dioxide, oral).',
   stearic: 'Methodology §5 Cleared (stearic acid — stearate-family lubricant).',
@@ -245,7 +245,7 @@ export const BATCH198_KYR6C_NB_T76U: RatingRecord[] = [
       flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Vegetable Cellulose', 'cleared', METH.cellulose),
       flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Gelatin', 'cleared', METH.gelatin),
       flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Mannitol', 'limited', METH.mannitol),
-      flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Natural Palm Leaf Glaze', 'limited', METH.palmLeafGlaze),
+      flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Natural Palm Leaf Glaze', 'cleared', METH.palmLeafGlaze),
       flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Silica', 'limited', METH.silica),
       flag('https://naturesbounty.com/products/hair-skin-and-nails-3000-mcg-of-biotin-60-coated-caplets', 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
     ],

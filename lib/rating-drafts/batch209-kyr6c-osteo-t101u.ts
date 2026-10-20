@@ -11,7 +11,7 @@ const VITAMINS = 'Vitamins';
 
 const METH = {
   calciumCarbonate: 'Methodology §5 Cleared (calcium carbonate as mineral salt / buffer).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   celluloseCoating:
     'Methodology §5 Cleared (cellulose-family / Cellulose Coating — t83u Oct 17, 2026).',
   cellulosePlant:
@@ -46,7 +46,7 @@ const TURMERIC_OI_FLAGS: FlagSpec[] = [
   ['Vegetable Stearic Acid', 'cleared', 'stearic'],
   ['Cellulose Coating', 'cleared', 'celluloseCoating'],
   ['Calcium Carbonate', 'cleared', 'calciumCarbonate'],
-  ['Carnauba Wax', 'limited', 'carnauba'],
+  ['Carnauba Wax', 'cleared', 'carnauba'],
   ['Medium Chain Triglycerides', 'limited', 'mct'],
   ['Polydextrose', 'limited', 'polydextrose'],
   ['Silica', 'limited', 'silica'],
@@ -58,7 +58,7 @@ const MAGNESIUM_OI_FLAGS: FlagSpec[] = [
   ['Crospovidone', 'cleared', 'crospovidone'],
   ['Vegetable Stearic Acid', 'cleared', 'stearic'],
   ['Calcium Carbonate', 'cleared', 'calciumCarbonate'],
-  ['Carnauba Wax', 'limited', 'carnauba'],
+  ['Carnauba Wax', 'cleared', 'carnauba'],
   ['Cellulose Coating', 'cleared', 'celluloseCoating'],
   ['Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'],
   ['Medium Chain Triglycerides', 'limited', 'mct'],

@@ -36,7 +36,7 @@ const METH = {
   flavors: 'Methodology §5 Limited (flavors). Not the Avoid driver.',
   benzoate: 'Methodology §5 Limited (sodium benzoate). Not the Avoid driver.',
   sucrose: 'Methodology §5 Limited (sucrose). Not the Avoid driver.',
-  carnauba: 'Methodology §5 Caution (carnauba wax, Sept 25, 2026). Not the Avoid driver.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Not the Avoid driver.',
   phosphate: 'Methodology §5 Cleared (dibasic calcium phosphate → calcium phosphate).',
   cellulose: 'Methodology §5 Cleared (microcrystalline cellulose).',
   citric: 'Methodology §5 Cleared (anhydrous citric acid → citric acid).',
@@ -102,7 +102,7 @@ function ultraFlags(): IngredientFlag[] {
   return [
     flag('D&C red no. 27 aluminum lake', 'high', cite(ULTRA_SET, METH.dye)),
     flag('Titanium dioxide', 'high', cite(ULTRA_SET, METH.tio2)),
-    flag('Carnauba wax', 'limited', cite(ULTRA_SET, METH.carnauba)),
+    flag('Carnauba wax', 'cleared', cite(ULTRA_SET, METH.carnauba)),
     flag('Polyethylene glycol', 'moderate', cite(ULTRA_SET, METH.peg)),
     flag('Polysorbate 80', 'moderate', cite(ULTRA_SET, METH.ps80)),
     cleared(ULTRA_SET, 'Croscarmellose sodium'),

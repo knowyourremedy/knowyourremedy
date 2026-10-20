@@ -24,7 +24,7 @@ const METH = {
   povidone: 'Methodology §5 Cleared (povidone / PVP tablet binder; EFSA unlikely safety concern).',
   silica: 'Methodology §5 Caution (silica / silicon dioxide oral nanoparticle data-gap cap; EFSA 2018).',
   starch: 'Methodology §5 Cleared (named starch filler row; t130u §4 natural-ingredient tie-break).',
-  carnauba: 'Methodology §5 Caution (carnauba wax lock; founder Sept 25, 2026).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citric: 'Methodology §5 Cleared (citric acid / citrate-salt row).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium / cellulose-family disintegrant).',
   poloxamer:
@@ -128,7 +128,7 @@ export const BATCH233_KYR6C_T130U_SV: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(PANEL_CALMAG, 'Maltodextrin', 'limited', 'maltodextrin'),
-      flag(PANEL_CALMAG, 'Carnauba Wax', 'limited', 'carnauba'),
+      flag(PANEL_CALMAG, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_CALMAG, 'Citric Acid', 'cleared', 'citric'),
       flag(PANEL_CALMAG, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(PANEL_CALMAG, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'),

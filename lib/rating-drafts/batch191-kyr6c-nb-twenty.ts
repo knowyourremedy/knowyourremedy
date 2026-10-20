@@ -15,7 +15,7 @@ const METH = {
   alginate: 'Methodology §5 Cleared (sodium alginate). Alginic family.',
   ammonium: 'Methodology §5 Caution (ammonium hydroxide).',
   cane: 'Methodology §5 Cleared (cane sugar).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose: 'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',
   citric: 'Methodology §5 Cleared (citric acid).',
   citrate: 'Methodology §5 Cleared (sodium citrate, citrate salt).',
@@ -51,7 +51,7 @@ const METH = {
   tapioca: 'Methodology §5 Cleared (tapioca starch / tapioca syrup).',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
   tocopherol: 'Methodology §5 Cleared (tocopherols).',
-  wax: 'Methodology §5 Caution (carnauba wax).',
+  wax: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
 } as const;
 
 function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
@@ -367,7 +367,7 @@ export const BATCH191_KYR6C_NB_TWENTY: RatingRecord[] = [
       flag(ACV_GUMMY_PANEL, 'Citric Acid', 'cleared', METH.citric),
       flag(ACV_GUMMY_PANEL, 'Fruit and Vegetable Juice (Color)', 'cleared', METH.juiceColor),
       flag(ACV_GUMMY_PANEL, 'Natural Flavors', 'limited', METH.flavors),
-      flag(ACV_GUMMY_PANEL, 'Natural Palm Leaf Glaze', 'limited', METH.carnauba),
+      flag(ACV_GUMMY_PANEL, 'Natural Palm Leaf Glaze', 'cleared', METH.carnauba),
       flag(ACV_GUMMY_PANEL, 'Natural Tocopherols', 'cleared', METH.tocopherol),
       flag(ACV_GUMMY_PANEL, 'Sodium Citrate', 'cleared', METH.citrate),
       flag(ACV_GUMMY_PANEL, 'Sunflower Oil', 'high', METH.sunflowerGummy),

@@ -214,7 +214,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
       flag('Sodium hydroxide', 'cleared', dailymed(SET.advil, METH.naoh)),
       cleared(SET.advil, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...PF_RETAILERS, 'advil.com'],
     cleanAlternatives: TOPICAL_ALTS,

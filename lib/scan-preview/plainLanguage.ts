@@ -1110,7 +1110,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/carnauba/.test(n)) {
-    return close('Carnauba wax is a plant wax used as a coating.', level);
+    return close(
+      'Carnauba wax is a plant wax used as a coating. Under the t133u founder lock it is Cleared (§4 prior-lock re-eval).',
+      level,
+    );
   }
 
   if (/beeswax/.test(n)) {

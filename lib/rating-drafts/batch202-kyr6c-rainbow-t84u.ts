@@ -13,7 +13,7 @@ const SUPPLEMENT = 'Supplement' as const;
 
 const METH = {
   calciumCarbonate: 'Methodology §5 Cleared (calcium carbonate as mineral salt / buffer).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose: 'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',
   celluloseCoating:
     'Methodology §5 Cleared (cellulose-family / Cellulose Coating — t83u Oct 17, 2026).',
@@ -74,7 +74,7 @@ function mens120Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Croscarmellose Sodium', 'cleared', METH.croscarmellose),
     flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
-    flag(panel, 'Carnauba Wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -85,7 +85,7 @@ function mens50Plus120Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Silica', 'limited', METH.silica),
     flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
-    flag(panel, 'Carnauba Wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -208,7 +208,7 @@ export const BATCH202_KYR6C_RAINBOW_T84U: RatingRecord[] = [
     barcode: '021888217151',
     activeIngredients: MENS_ACTIVES,
     inactiveIngredients: mens120Oi(RL_M_120),
-    verdict: 'caution',
+    verdict: 'clean',
     retailers: ['Target', 'Walmart'],
     sourcesGeneral: [
       `Brand page ${RL_M_120} supplement-facts image ${IMG_M_120} was read. Other ingredients: Cellulose (Plant Origin), Croscarmellose Sodium, Coating (Hydroxypropyl Cellulose, Hypromellose), Carnauba Wax. Brand gtin12 021888217151. Target opened https://www.target.com/p/-/A-89544356 with UPC 021888217151. Target prints different other-ingredient text (microcrystalline cellulose, coating with hypromellose, medium chain triglycerides, inulin). Walmart opened https://www.walmart.com/ip/509836030; its other-ingredient text matches the brand panel. This row is graded from the brand label only.`,

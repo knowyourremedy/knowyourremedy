@@ -18278,6 +18278,54 @@ function applyHydrogenatedOilLock(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
+const T133U_CARNAUBA_LOCK_SOURCE =
+  'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).';
+
+function isT133uCarnaubaLock(name: string): boolean {
+  const raw = name.trim();
+  const n = raw.toLowerCase();
+  if (/brazil wax/.test(n)) return true;
+  if (/^natural palm leaf glaze$/i.test(raw)) return true;
+  if (!/carnauba|carnuaba/.test(n)) return false;
+  if (/oil\b/.test(n) && /contain(s|ing)\s+carnauba/.test(n)) return false;
+  if (n.includes('vegetable oil') && /carnauba/.test(n)) return false;
+  if (n.includes('sunflower oil') && /carnauba/.test(n)) return false;
+  if (n.includes('palm oil') && /carnauba/.test(n) && !/^carnauba/.test(n)) return false;
+  return true;
+}
+
+function t133uLockSource(source: string | undefined, lockSource: string): string {
+  if (!source) return lockSource;
+  const idx = source.search(/Methodology §5/i);
+  if (idx === -1) return `${source}; ${lockSource}`;
+  const prefix = source.slice(0, idx).replace(/[;\s]+$/, '');
+  return prefix ? `${prefix}; ${lockSource}` : lockSource;
+}
+
+export function applyT133uLocks(record: RatingRecord): RatingRecord {
+  let flipped = false;
+  const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+    if (!isT133uCarnaubaLock(ingredient.name)) return ingredient;
+    const hasT133u = (ingredient.source ?? '').includes('t133u');
+    if (ingredient.riskLevel === 'cleared' && hasT133u) return ingredient;
+    flipped = true;
+    return {
+      ...ingredient,
+      riskLevel: 'cleared' as const,
+      source: t133uLockSource(ingredient.source, T133U_CARNAUBA_LOCK_SOURCE),
+    };
+  });
+  if (!flipped) return record;
+  const hasHigh = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'limited');
+  let next: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') next = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) next = 'caution';
+  const verdict = verdictRank(next) < verdictRank(record.verdict) ? next : record.verdict;
+  return { ...record, inactiveIngredients, verdict };
+}
+
 function applyFruitVegetableJuiceLock(record: RatingRecord): RatingRecord {
   let flipped = false;
   const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
@@ -18451,8 +18499,10 @@ export function applyT121uLocks(record: RatingRecord): RatingRecord {
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const locked = applyHydrogenatedOilLock(
-    applyT121uLocks(
-      applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
+    applyT133uLocks(
+      applyT121uLocks(
+        applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
+      ),
     ),
   );
   const honestNote = displayHonestNote(locked);

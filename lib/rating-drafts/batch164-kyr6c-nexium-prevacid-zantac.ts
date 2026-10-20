@@ -31,7 +31,7 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   carmine: 'Methodology §5 Caution (carmine). Not the Avoid driver.',
-  carnauba: 'Methodology §5 Caution (carnauba wax). Not the Avoid driver.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Not the Avoid driver.',
   cornStarch: 'Methodology §5 Cleared (corn starch).',
   dye: 'Methodology §5 High (synthetic FD&C / D&C dye, including the lake form). Avoid.',
   flavors: 'Methodology §5 Caution (artificial flavors). Not the Avoid driver.',
@@ -147,7 +147,7 @@ function prevacidLine(panel: string): IngredientFlag[] {
 
 function maxLine(panel: string): IngredientFlag[] {
   return [
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
     flag(panel, 'Corn starch', 'cleared', METH.cornStarch),
     flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),

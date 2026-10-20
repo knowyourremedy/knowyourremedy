@@ -11,7 +11,7 @@ const VITAMINS = 'Vitamins';
 
 const METH = {
   calciumCarbonate: 'Methodology §5 Cleared (calcium carbonate as mineral salt / buffer).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   celluloseCoating:
     'Methodology §5 Cleared (cellulose-family / Cellulose Coating — t83u Oct 17, 2026).',
   cellulosePlant:
@@ -40,7 +40,7 @@ const PANEL_TS_88 =
 const TRIPLE_TS_FLAGS: FlagSpec[] = [
   ['Crospovidone', 'cleared', 'crospovidone'],
   ['Calcium Carbonate', 'cleared', 'calciumCarbonate'],
-  ['Carnauba Wax', 'limited', 'carnauba'],
+  ['Carnauba Wax', 'cleared', 'carnauba'],
   ['Cellulose Coating', 'cleared', 'celluloseCoating'],
   ['Cellulose (Plant Origin)', 'cleared', 'cellulosePlant'],
   ['Medium Chain Triglycerides', 'limited', 'mct'],

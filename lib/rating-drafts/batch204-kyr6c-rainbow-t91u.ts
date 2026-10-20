@@ -13,7 +13,7 @@ const VITAMIN = 'Vitamin' as const;
 
 const METH = {
   calciumCarbonate: 'Methodology §5 Cleared (calcium carbonate as mineral salt / buffer).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose: 'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',
   celluloseCoating:
     'Methodology §5 Cleared (cellulose-family / Cellulose Coating — t83u Oct 17, 2026).',
@@ -103,7 +103,7 @@ function mensOne60Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Croscarmellose Sodium', 'cleared', METH.croscarmellose),
     flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
-    flag(panel, 'Carnauba Wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -114,7 +114,7 @@ function mens50Plus90Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Silica', 'limited', METH.silica),
     flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
-    flag(panel, 'Carnauba Wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -148,7 +148,7 @@ function womens120Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Silica', 'limited', METH.silica),
     flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
-    flag(panel, 'Carnauba Wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -280,7 +280,7 @@ export const BATCH204_KYR6C_RAINBOW_T91U: RatingRecord[] = [
     barcode: '021888217137',
     activeIngredients: [{ name: 'Men\'s multivitamin blend', strength: 'label serving' }],
     inactiveIngredients: mensOne60Oi(rl(H_MENS_60)),
-    verdict: 'caution',
+    verdict: 'clean',
     retailers: ['Walmart', 'Vitacost'],
     sourcesGeneral: [
       `Brand page ${rl(H_MENS_60)} supplement-facts image ${img('RL20392')} was read. Other ingredients: Cellulose (Plant Origin), Croscarmellose Sodium, Coating (Hydroxypropyl Cellulose, Hypromellose), Carnauba Wax. Brand gtin12 021888217137. Walmart opened https://www.walmart.com/ip/423256884 with sale. Vitacost opened https://www.vitacost.com/products/rainbow-light-men-s-one-real-food-nutrients-60-vegetarian-caplets-159560 with UPC 021888217137. Row graded from the brand label only.`,

@@ -556,7 +556,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
         dailymed('d6f968ca-719f-5a68-e053-2995a90a4afa', METH.cleared),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods', 'Sprouts', 'Walmart'],
     sourcesGeneral: [

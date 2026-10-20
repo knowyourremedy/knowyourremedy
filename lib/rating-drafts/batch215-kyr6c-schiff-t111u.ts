@@ -35,7 +35,7 @@ const METH = {
   coconutCanola:
     'Methodology §5 High (coconut and canola oil in a gummy). Coconut half Cleared; canola half is the seed-oil gummy High row. Founder lock Oct 17, 2026 t111u.',
   carnauba:
-    'Methodology §5 Caution (carnauba wax). Carnauba leaf wax maps here (Oct 17, 2026 t111u).',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Carnauba leaf wax maps here (Oct 17, 2026 t111u).',
 } as const;
 
 type MethKey = keyof typeof METH;
@@ -77,7 +77,7 @@ const ORIG_GUMMIES_FLAGS: FlagSpec[] = [
   ['Citric acid', 'cleared', 'citric'],
   ['Colors from fruits and vegetables', 'cleared', 'juiceColor'],
   ['Coconut and canola oil', 'high', 'coconutCanola'],
-  ['Carnauba leaf wax', 'limited', 'carnauba'],
+  ['Carnauba leaf wax', 'cleared', 'carnauba'],
 ];
 
 const MEMORY_3D_FLAGS: FlagSpec[] = [
