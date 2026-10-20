@@ -17151,6 +17151,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'rainbow-b205-pumpkin-seed-oil-liquid-16oz': catalogShot('rainbow-b205-pumpkin-seed-oil-liquid-16oz.jpg'),
   // NAD+ trans-resveratrol multi collagen, 60 capsules. Not the peach gummies.
   'rainbow-b206-nad-resveratrol-collagen-60': catalogShot('rainbow-b206-nad-resveratrol-collagen-60.jpg'),
+  // Vitamins night run 2026-10-20 6:45 AM PT batch 2.
+  // Exact fronts. Sibling counts, strengths, flavors, and forms do not share a file.
+  // Magnesium glycinate 325 mg, 120 capsules. Not the 250 mg softgels or the powder.
+  'rainbow-b206-magnesium-glycinate-325-120': catalogShot('rainbow-b206-magnesium-glycinate-325-120.jpg'),
+  // CoQ10 200 mg, 30 softgels.
+  'rainbow-b207-coq10-200-30': catalogShot('rainbow-b207-coq10-200-30.jpg'),
+  // 10 Magnesium Complex, 90 capsules.
+  'rainbow-b207-10-magnesium-complex-90': catalogShot('rainbow-b207-10-magnesium-complex-90.jpg'),
+  // Vitamin D3 10,000 IU, 100 softgels. Not the D3 + K2 liquid.
+  'rainbow-b207-vitamin-d3-10000-100': catalogShot('rainbow-b207-vitamin-d3-10000-100.jpg'),
+  // NMN Complex, 60 capsules.
+  'rainbow-b207-nmn-complex-60': catalogShot('rainbow-b207-nmn-complex-60.jpg'),
+  // Beef organs for women, 120 capsules. Not the organ complex.
+  'rainbow-b207-beef-organs-women-120': catalogShot('rainbow-b207-beef-organs-women-120.jpg'),
+  // Pasture raised beef organ complex, 120 capsules. Not the women's formula.
+  'rainbow-b207-beef-organ-complex-120': catalogShot('rainbow-b207-beef-organ-complex-120.jpg'),
+  // Fulvic acid liquid, alcohol free, 2 fl oz.
+  'rainbow-b207-fulvic-acid-liquid-2oz': catalogShot('rainbow-b207-fulvic-acid-liquid-2oz.jpg'),
+  // Colloidal minerals, raspberry, 32 fl oz.
+  'rainbow-b207-colloidal-minerals-32oz': catalogShot('rainbow-b207-colloidal-minerals-32oz.jpg'),
+  // Ionic magnesium liquid, 4 fl oz.
+  'rainbow-b207-ionic-magnesium-liquid-4oz': catalogShot('rainbow-b207-ionic-magnesium-liquid-4oz.jpg'),
+  // Ashwagandha gummies 500 mg, tropical, 60. Not the KSM-66 caplets.
+  'rainbow-b207-ashwagandha-gummies-60': catalogShot('rainbow-b207-ashwagandha-gummies-60.jpg'),
+  // Liquid chlorophyll 100 mg, peppermint, 16 fl oz.
+  'rainbow-b207-liquid-chlorophyll-16oz': catalogShot('rainbow-b207-liquid-chlorophyll-16oz.jpg'),
+  // Ashwagandha KSM-66 600 mg with L-theanine, 60 caplets. Not the gummies.
+  'rainbow-b207-ashwagandha-ksm66-60': catalogShot('rainbow-b207-ashwagandha-ksm66-60.jpg'),
+  // Astaxanthin 10 mg, 60 softgels. Not the 12 mg.
+  'rainbow-b207-astaxanthin-10mg-60': catalogShot('rainbow-b207-astaxanthin-10mg-60.jpg'),
+  // Women's One 50+, 150 caplets. Not the 90 or the 120.
+  'rainbow-b207-womens-one-50-plus-150': catalogShot('rainbow-b207-womens-one-50-plus-150.jpg'),
+  // Lugol's iodine 2%, 2 fl oz.
+  'rainbow-b207-lugols-iodine-2oz': catalogShot('rainbow-b207-lugols-iodine-2oz.jpg'),
+  // Magnesium glycinate powder, raspberry lemonade, 5 oz. Not the capsules or softgels.
+  'rainbow-b208-magnesium-glycinate-powder-5oz': catalogShot('rainbow-b208-magnesium-glycinate-powder-5oz.jpg'),
+  // NAD+ advanced gummies, peach, 60. Not the collagen capsules.
+  'rainbow-b208-nad-advanced-gummies-60': catalogShot('rainbow-b208-nad-advanced-gummies-60.jpg'),
+  // Triple Strength + Turmeric, 80 tablets. Not plain Triple Strength or + Magnesium.
+  'osteo-b209-triple-strength-turmeric-80': catalogShot('osteo-b209-triple-strength-turmeric-80.jpg'),
+  // Triple Strength + Magnesium, 80 tablets. Not plain Triple Strength or + Turmeric.
+  'osteo-b209-triple-strength-magnesium-80': catalogShot('osteo-b209-triple-strength-magnesium-80.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38052,12 +38094,12 @@ assertBrandMark(
     throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
   }
   const nextLetter = previewOverlayImage({
-    id: 'rainbow-b206-magnesium-glycinate-325-120',
-    formulaId: 'rainbow-b206-magnesium-glycinate-325-120',
-    brand: 'Rainbow Light',
+    id: 'osteo-b210-triple-strength-40',
+    formulaId: 'osteo-b210-triple-strength-40',
+    brand: 'Osteo Bi-Flex',
   });
   if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('Rainbow Light magnesium glycinate 325 mg 120 must stay a letter until attempted');
+    throw new Error('Osteo Bi-Flex Triple Strength 40 must stay a letter until attempted');
   }
 }
 
@@ -38218,7 +38260,6 @@ assertBrandMark(
     'rainbow-b202-prenatal-one-150',
     'rainbow-b204-prenatal-one-60',
     'rainbow-b204-prenatal-one-120',
-    'rainbow-b206-magnesium-glycinate-325-120',
   ]) {
     const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
     if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
@@ -38289,11 +38330,107 @@ assertBrandMark(
     'rainbow-b202-prenatal-one-150',
     'rainbow-b204-prenatal-one-60',
     'rainbow-b204-prenatal-one-120',
-    'rainbow-b206-magnesium-glycinate-325-120',
   ]) {
     const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
     if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
       throw new Error(`${id} stays a letter until its own carton is attempted`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 6:45 AM PT batch 2.
+  const batch1020j: [string, string, string][] = [
+    ['rainbow-b206-magnesium-glycinate-325-120', 'Rainbow Light', 'rainbow-b206-magnesium-glycinate-325-120.jpg'],
+    ['rainbow-b207-coq10-200-30', 'Rainbow Light', 'rainbow-b207-coq10-200-30.jpg'],
+    ['rainbow-b207-10-magnesium-complex-90', 'Rainbow Light', 'rainbow-b207-10-magnesium-complex-90.jpg'],
+    ['rainbow-b207-vitamin-d3-10000-100', 'Rainbow Light', 'rainbow-b207-vitamin-d3-10000-100.jpg'],
+    ['rainbow-b207-nmn-complex-60', 'Rainbow Light', 'rainbow-b207-nmn-complex-60.jpg'],
+    ['rainbow-b207-beef-organs-women-120', 'Rainbow Light', 'rainbow-b207-beef-organs-women-120.jpg'],
+    ['rainbow-b207-beef-organ-complex-120', 'Rainbow Light', 'rainbow-b207-beef-organ-complex-120.jpg'],
+    ['rainbow-b207-fulvic-acid-liquid-2oz', 'Rainbow Light', 'rainbow-b207-fulvic-acid-liquid-2oz.jpg'],
+    ['rainbow-b207-colloidal-minerals-32oz', 'Rainbow Light', 'rainbow-b207-colloidal-minerals-32oz.jpg'],
+    ['rainbow-b207-ionic-magnesium-liquid-4oz', 'Rainbow Light', 'rainbow-b207-ionic-magnesium-liquid-4oz.jpg'],
+    ['rainbow-b207-ashwagandha-gummies-60', 'Rainbow Light', 'rainbow-b207-ashwagandha-gummies-60.jpg'],
+    ['rainbow-b207-liquid-chlorophyll-16oz', 'Rainbow Light', 'rainbow-b207-liquid-chlorophyll-16oz.jpg'],
+    ['rainbow-b207-ashwagandha-ksm66-60', 'Rainbow Light', 'rainbow-b207-ashwagandha-ksm66-60.jpg'],
+    ['rainbow-b207-astaxanthin-10mg-60', 'Rainbow Light', 'rainbow-b207-astaxanthin-10mg-60.jpg'],
+    ['rainbow-b207-womens-one-50-plus-150', 'Rainbow Light', 'rainbow-b207-womens-one-50-plus-150.jpg'],
+    ['rainbow-b207-lugols-iodine-2oz', 'Rainbow Light', 'rainbow-b207-lugols-iodine-2oz.jpg'],
+    ['rainbow-b208-magnesium-glycinate-powder-5oz', 'Rainbow Light', 'rainbow-b208-magnesium-glycinate-powder-5oz.jpg'],
+    ['rainbow-b208-nad-advanced-gummies-60', 'Rainbow Light', 'rainbow-b208-nad-advanced-gummies-60.jpg'],
+    ['osteo-b209-triple-strength-turmeric-80', 'Osteo Bi-Flex', 'osteo-b209-triple-strength-turmeric-80.jpg'],
+    ['osteo-b209-triple-strength-magnesium-80', 'Osteo Bi-Flex', 'osteo-b209-triple-strength-magnesium-80.jpg'],
+  ];
+  const seen1020j = new Set<string>();
+  for (const [id, brand, file] of batch1020j) {
+    if (seen1020j.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020j.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1020j: [string, string, string][][] = [
+    [
+      ['rainbow-b205-magnesium-glycinate-softgel-60', 'rainbow-b205-magnesium-glycinate-softgel-60', 'Rainbow Light'],
+      ['rainbow-b206-magnesium-glycinate-325-120', 'rainbow-b206-magnesium-glycinate-325-120', 'Rainbow Light'],
+      ['rainbow-b208-magnesium-glycinate-powder-5oz', 'rainbow-b208-magnesium-glycinate-powder-5oz', 'Rainbow Light'],
+      ['rainbow-b205-magnesium-ashwagandha-120', 'rainbow-b205-magnesium-ashwagandha-120', 'Rainbow Light'],
+      ['rainbow-b207-10-magnesium-complex-90', 'rainbow-b207-10-magnesium-complex-90', 'Rainbow Light'],
+      ['rainbow-b207-ionic-magnesium-liquid-4oz', 'rainbow-b207-ionic-magnesium-liquid-4oz', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b205-astaxanthin-12mg-60', 'rainbow-b205-astaxanthin-12mg-60', 'Rainbow Light'],
+      ['rainbow-b207-astaxanthin-10mg-60', 'rainbow-b207-astaxanthin-10mg-60', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b202-womens-one-50-plus-90', 'rainbow-b202-womens-one-50-plus-90', 'Rainbow Light'],
+      ['rainbow-b202-womens-one-50-plus-120', 'rainbow-b202-womens-one-50-plus-120', 'Rainbow Light'],
+      ['rainbow-b207-womens-one-50-plus-150', 'rainbow-b207-womens-one-50-plus-150', 'Rainbow Light'],
+      ['rainbow-b204-womens-one-120', 'rainbow-b204-womens-one-120', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b206-nad-resveratrol-collagen-60', 'rainbow-b206-nad-resveratrol-collagen-60', 'Rainbow Light'],
+      ['rainbow-b208-nad-advanced-gummies-60', 'rainbow-b208-nad-advanced-gummies-60', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b207-ashwagandha-gummies-60', 'rainbow-b207-ashwagandha-gummies-60', 'Rainbow Light'],
+      ['rainbow-b207-ashwagandha-ksm66-60', 'rainbow-b207-ashwagandha-ksm66-60', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b207-beef-organs-women-120', 'rainbow-b207-beef-organs-women-120', 'Rainbow Light'],
+      ['rainbow-b207-beef-organ-complex-120', 'rainbow-b207-beef-organ-complex-120', 'Rainbow Light'],
+    ],
+    [
+      ['osteo-b201-triple-strength-80', 'osteo-b201-triple-strength-80', 'Osteo Bi-Flex'],
+      ['osteo-b209-triple-strength-turmeric-80', 'osteo-b209-triple-strength-turmeric-80', 'Osteo Bi-Flex'],
+      ['osteo-b209-triple-strength-magnesium-80', 'osteo-b209-triple-strength-magnesium-80', 'Osteo Bi-Flex'],
+    ],
+  ];
+  for (const group of groups1020j) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  for (const id of [
+    'rainbow-b202-prenatal-one-150',
+    'rainbow-b204-prenatal-one-60',
+    'rainbow-b204-prenatal-one-120',
+  ]) {
+    const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
+    if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
+      throw new Error(`${id} stays a letter until its own carton is attempted`);
+    }
+  }
+  const osteoNext = previewOverlayImage({
+    id: 'osteo-b210-triple-strength-40',
+    formulaId: 'osteo-b210-triple-strength-40',
+    brand: 'Osteo Bi-Flex',
+  });
+  if (!osteoNext?.url.startsWith('data:image/svg') || osteoNext.verifiedSku) {
+    throw new Error('osteo-b210-triple-strength-40 stays a letter until its own carton is attempted');
   }
 }
