@@ -738,7 +738,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ["Sorbitol", "limited", "sugaralc"],
-      ["Orange Juice Powder", "cleared", "juice"],
+      ["Orange Juice Powder", 'moderate', "juice"],
       ["Cellulose", "cleared", "mcc"],
       ["Citric Acid", "cleared", "citric"],
       ["Guar Gum", "cleared", "gum"],
@@ -1598,7 +1598,7 @@ const COMPACT: Compact[] = [
       ["Natural Peach Flavor with Other Natural Flavors", "limited", "flavor"],
       ["Stearic Acid", "cleared", "stearate"],
       ["Silica", "limited", "sio2"],
-      ["Orange Juice Powder", "cleared", "juice"],
+      ["Orange Juice Powder", 'moderate', "juice"],
       ["Malic Acid", "cleared", "malic"],
       ["Citric Acid", "cleared", "citric"],
     ],
@@ -1621,7 +1621,7 @@ const COMPACT: Compact[] = [
     flags: [
       ["Fructose", "limited", "fructose"],
       ["Molasses", "limited", "molasses"],
-      ["Orange Juice Concentrate", "cleared", "juice"],
+      ["Orange Juice Concentrate", 'moderate', "juice"],
       ["Natural Tangerine Flavor with other Natural Flavors", "limited", "flavor"],
       ["Honey", "cleared", "honey"],
       ["Silica", "limited", "sio2"],
@@ -1674,7 +1674,7 @@ const COMPACT: Compact[] = [
     flags: [
       ["Sorbitol", "limited", "sugaralc"],
       ["Xylitol", "limited", "sugaralc"],
-      ["Orange Juice", "cleared", "juice"],
+      ["Orange Juice", 'moderate', "juice"],
       ["Cellulose", "cleared", "mcc"],
       ["Natural Orange Flavor with Other Natural Flavors (soy)", "limited", "flavor"],
       ["Soy", "limited", "soy"],
@@ -2028,7 +2028,7 @@ const COMPACT: Compact[] = [
     flags: [
       ["Sorbitol", "limited", "sugaralc"],
       ["Xylitol", "limited", "sugaralc"],
-      ["Natural Lemon Lime Flavor", "cleared", "flavor"],
+      ["Natural Lemon Lime Flavor", 'cleared', "flavor"],
       ["other Natural Flavors (milk, soy)", "limited", "flavor"],
       ["Maltodextrin", "limited", "maltodextrin"],
       ["Stearic Acid", "cleared", "stearate"],

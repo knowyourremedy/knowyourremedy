@@ -41,6 +41,8 @@ const METH = {
 
 const PG_CREAM =
   'Propylene glycol is Usable when it is swallowed. That is the form this app flags. This product is a cream. The propylene glycol is the solvent in the cream, not a dose you swallow, so it did not pull this grade down.';
+const MON_CREAM_STACK =
+  'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzoic acid, Polysorbate 60, Potassium hydroxide.';
 
 const PG_SPRAY =
   'Propylene glycol is Usable when it is swallowed. That is the form this app flags. This product is a spray. The propylene glycol is the solvent in the spray, not a dose you swallow, so it did not pull this grade down.';
@@ -225,6 +227,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: TERBINAFINE,
     inactiveIngredients: LAM_CREAM_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polysorbate 60, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -245,6 +248,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: TERBINAFINE,
     inactiveIngredients: LAM_CREAM_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polysorbate 60, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -308,7 +312,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Miconazole nitrate', strength: '4%' }],
     inactiveIngredients: MON_CREAM_FLAGS,
     verdict: 'avoid',
-    honestNote: PG_CREAM,
+    honestNote: `${PG_CREAM} ${MON_CREAM_STACK}`,
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -329,7 +333,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Miconazole nitrate', strength: '2%' }],
     inactiveIngredients: MON_CREAM_FLAGS,
     verdict: 'avoid',
-    honestNote: PG_CREAM,
+    honestNote: `${PG_CREAM} ${MON_CREAM_STACK}`,
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [

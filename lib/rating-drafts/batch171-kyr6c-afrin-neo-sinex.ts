@@ -32,6 +32,8 @@ const METH = {
 
 const PG_NOTE =
   'Propylene glycol is Usable when it is swallowed. That is the form this app flags. This product is a nasal spray. The propylene glycol is the solvent in the spray, not a dose you swallow, so it did not pull this grade down.';
+const AFRIN_ORIGINAL_STACK =
+  'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Edetate disodium, Polyethylene glycol.';
 
 function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
   return { name, riskLevel, source: `${panel}; ${meth}` };
@@ -130,7 +132,7 @@ export const BATCH171_KYR6C_AFRIN_NEO_SINEX: RatingRecord[] = [
     activeIngredients: [{ name: 'Oxymetazoline hydrochloride', strength: '0.05%' }],
     inactiveIngredients: originalInactives(ORIGINAL_PANEL),
     verdict: 'avoid',
-    honestNote: PG_NOTE,
+    honestNote: `${PG_NOTE} ${AFRIN_ORIGINAL_STACK}`,
     retailers: ['Thrifty White'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -152,7 +154,7 @@ export const BATCH171_KYR6C_AFRIN_NEO_SINEX: RatingRecord[] = [
     activeIngredients: [{ name: 'Oxymetazoline hydrochloride', strength: '0.05%' }],
     inactiveIngredients: originalInactives(ORIGINAL_PANEL),
     verdict: 'avoid',
-    honestNote: PG_NOTE,
+    honestNote: `${PG_NOTE} ${AFRIN_ORIGINAL_STACK}`,
     retailers: ['Walmart', 'Thrifty White'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [

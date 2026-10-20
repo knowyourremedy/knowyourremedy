@@ -47,7 +47,7 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin). Not the Avoid driver.',
   mineral: 'Methodology §5 Caution (oral mineral oil / paraffin). Not the topical ointment row. Not the Avoid driver.',
   modStarch: 'Methodology §5 Limited (modified starch). Not plain corn starch. Not the Avoid driver.',
-  sucrose: 'Methodology §5 Limited (sucrose, sugar). Not the Avoid driver.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   glucoseSyrup: 'Methodology §5 Cleared (glucose syrup). Not corn syrup.',
   water: 'Methodology §5 Cleared (water).',
   naturalFlavor: 'Methodology §5 Caution (natural flavor). Not the Avoid driver.',

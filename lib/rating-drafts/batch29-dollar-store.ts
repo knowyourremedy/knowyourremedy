@@ -737,6 +737,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R10, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Natural and artificial mint flavor.',
 
     retailers: [...DG],
     cleanAlternatives: ALLERGY_ALTS,

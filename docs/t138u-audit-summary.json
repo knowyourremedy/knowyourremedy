@@ -1,0 +1,31 @@
+{
+  "audit254": {
+    "bogusCautionToCleanInT138uReport": 254,
+    "revertedAsGradeChanges": 254,
+    "ingredientTabPatchesAmong254": 254,
+    "keptCautionToCleanGradeChanges": 0
+  },
+  "stackAvoidCount": 475,
+  "patchMissPersisted": [],
+  "patchMissStill": [
+    "claritin-allergy-liquid",
+    "benadryl-liqui-gels",
+    "childrens-claritin-liquid",
+    "childrens-allegra-liquid",
+    "childrens-benadryl-allergy-plus-congestion",
+    "tylenol-pm-es",
+    "cvs-sleep-aid-liquid-dyefree",
+    "pure-encapsulations-melatonin-sr-3mg",
+    "amazon-basics-mometasone-nasal",
+    "advil-targeted-relief-cream",
+    "goodsense-naproxen-220",
+    "goodsense-dual-action",
+    "goodsense-childrens-ibuprofen-chew",
+    "goodsense-ibuprofen-liquid-gels",
+    "goodsense-es-pain-relief-l484",
+    "timecap-naproxen-220",
+    "timecap-ibuprofen-200",
+    "allegra-b138-d24-10",
+    "allegra-b138-d24-15"
+  ]
+}

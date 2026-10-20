@@ -486,7 +486,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Silica',
-        'cleared',
+        'limited',
         dailymed('149941fb-9b5f-42f2-bf0c-e5980f7daad6', METH.sio2),
       ),
       flag(
@@ -1553,6 +1553,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Sodium benzoate, Flavors.',
 
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,

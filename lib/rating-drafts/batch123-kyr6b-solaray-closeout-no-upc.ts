@@ -87,7 +87,7 @@ const METH = {
   stevia: 'Methodology §5 Caution (stevia extract / stevia leaf extract). Not high-purity steviol glycosides. Not whole-leaf.',
   steviawhole: 'Methodology §5 Caution (whole-leaf / crude stevia).',
   steviol: 'Methodology §5 Cleared (high-purity steviol glycosides).',
-  sucrose: 'Methodology §5 Limited (sucrose = existing Limited sugar, Sept 20). Not High. Beet sugar stays Limited. Bare sugar stays Caution.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   sugaralc: 'Methodology §5 Limited (sorbitol / xylitol / mannitol). Verdict Caution. Not Avoid.',
   tapdex: 'Methodology §5 Limited (tapioca dextrin).',
   tapiocasyrup: 'Methodology §5 Cleared (tapioca syrup).',

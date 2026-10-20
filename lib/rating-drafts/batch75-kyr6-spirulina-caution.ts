@@ -180,7 +180,7 @@ const EVE_FLAGS: Compact['flags'] = [
   ['Spirulina extract', 'limited', 'spirulinaExtract'],
   ['Riboflavin', 'cleared', 'riboflavin'],
   ['Stearic acid', 'cleared', 'stearate'],
-  ['Silicon dioxide', 'cleared', 'sio2'],
+  ['Silicon dioxide', 'limited', 'sio2'],
   ['Croscarmellose sodium', 'cleared', 'cellulose'],
 ];
 

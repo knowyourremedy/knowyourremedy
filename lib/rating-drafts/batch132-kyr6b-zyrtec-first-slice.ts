@@ -322,7 +322,10 @@ const COMPACT: Spec[] = [
     actives: CET_SYRUP,
     flags: syrupFlags(HIVES_SYRUP_SET),
     verdict: 'avoid',
-    note: AVOID_SYRUP + ' Label ages are 6 years and over.',
+    note:
+      AVOID_SYRUP
+      + ' Label ages are 6 years and over.'
+      + ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol Solution, Sodium benzoate.',
     source: `DailyMed setid ${HIVES_SYRUP_SET} prints 4 fl oz (118 mL). zyrtec.com/products/zyrtec-children-hives-syrup. UPC 300450139146.`,
     kidsAlts: true,
   },
@@ -337,7 +340,9 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
     verdict: 'avoid',
-    note: CAUTION_CHEW,
+    note:
+      CAUTION_CHEW
+      + ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Flavor.',
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com/products/zyrtec-chewables-children-6-plus 24 count. UPC 300450241245.`,
     kidsAlts: true,
   },
@@ -352,7 +357,9 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
     verdict: 'avoid',
-    note: CAUTION_CHEW,
+    note:
+      CAUTION_CHEW
+      + ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Flavor.',
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com/products/zyrtec-chewables-children-6-plus 48 count. UPC 300450241481.`,
     kidsAlts: true,
   },

@@ -50,10 +50,10 @@ const VAPOR_STACK_NOTE =
   'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eucalyptol, Rosemary oil, Menthol.';
 
 const SINEX_ORIGINAL_STACK_NOTE =
-  ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance, Sorbitol.';
+  ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance, Polysorbate 80, Sorbitol.';
 
 const SINEX_MOIST_STACK_NOTE =
-  ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Aloe, Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance, Sorbitol.';
+  ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Aloe, Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance, Polysorbate 80, Sorbitol.';
 
 const SINEX_VAPO_STACK_NOTE =
   ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance.';

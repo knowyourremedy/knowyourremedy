@@ -558,6 +558,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Sorbitol, Potassium sorbate, Flavors.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
@@ -647,6 +648,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Sorbitol, Potassium sorbate, Flavors.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,
@@ -694,6 +696,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Sucralose, Mannitol, Maltodextrin, Flavor.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_FROM_CHEW,
@@ -794,6 +797,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Sodium benzoate, Sorbitol, Flavor.',
 
     retailers: ['Target'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
@@ -937,6 +941,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Polysorbate 80, Sodium benzoate, Flavors.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
@@ -1184,6 +1189,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Sodium benzoate, Sorbitol, Natural and artificial berry flavor.',
 
     retailers: ['Target'],
     cleanAlternatives: INFANTS_IBU_TO_APAP_ALT,
@@ -1226,6 +1232,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Sodium benzoate, Sorbitol, Artificial mixed berry flavor.',
 
     retailers: ['Target'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
@@ -1374,6 +1381,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Polysorbate 80, Sodium benzoate, Sorbitol, Artificial and natural flavors.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,

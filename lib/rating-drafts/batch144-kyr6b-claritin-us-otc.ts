@@ -158,7 +158,7 @@ const REDI_NOTE =
 const MINT_NOTE =
   'FOUNDER-LOCK DRAFT: Avoid. Drivers are aspartame and FD&C Blue No. 1 aluminum lake. Menthol on the inactive line is the flavor row. Same inactive line as claritin-b136-chew-cool-mint. The 8-count was not rewritten. Ages 6+.';
 const SYRUP_NOTE =
-  'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. Same inactive line as childrens-claritin-liquid. The 4 fl oz row and the 8 fl oz code on that MAIN row were not rewritten. Ages 2+.';
+  'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. Same inactive line as childrens-claritin-liquid. The 4 fl oz row and the 8 fl oz code on that MAIN row were not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.';
 
 type Spec = {
   id: string;

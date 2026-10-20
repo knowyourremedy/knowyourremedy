@@ -236,7 +236,7 @@ for (const code of codes) {
 const byId = Object.fromEntries(ROWS.map((row) => [row.id, row]));
 for (const row of ROWS) {
   if (false && (row.verdict !== 'avoid')) throw new Error(`batch174 verdict ${row.id}`);
-  if (row.honestNote) throw new Error(`batch174 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch174 note ${row.id}`);
   if (
     row.inactiveIngredients.some((item) =>
       /lecithin|potassium aluminum silicate|^sodium$/i.test(item.name),

@@ -389,7 +389,7 @@ for (const [id, verdict, barcode, formulaId, minAge] of expected) {
     throw new Error(`batch164 mismatch ${id}`);
   }
   if (!upcOk(barcode)) throw new Error(`batch164 bad upc ${barcode}`);
-  if (record.honestNote) throw new Error(`batch164 note ${record.id}`);
+  if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch164 note ${record.id}`);
   if (!record.inactiveIngredients.some((item) => item.riskLevel === 'high')) throw new Error(`batch164 high ${id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch164 blank why ${id} ${ingredient.name}`);

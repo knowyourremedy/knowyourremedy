@@ -275,7 +275,7 @@ if (new Set(ids).size !== ids.length) throw new Error('batch213 duplicate id');
 
 for (const record of ROWS) {
   if (record.barcode && !upcOk(record.barcode)) throw new Error(`batch213 upc ${record.id}`);
-  if (record.honestNote) throw new Error(`batch213 unexpected note ${record.id}`);
+  if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch213 unexpected note ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch213 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch213 blank source ${ingredient.name}`);

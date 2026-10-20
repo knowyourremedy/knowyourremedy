@@ -262,6 +262,7 @@ export const BATCH177_KYR6C_ES_CHEWS_NIGHT: RatingRecord[] = [
       flag(NIGHT_PANEL, 'Zinc gluconate', 'cleared', METH.zincGluconate),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Polyethylene glycol, Propylene glycol, Sodium benzoate, Sucralose.',
     retailers: ["Brookshire's"],
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
@@ -283,7 +284,7 @@ if (ROWS.length !== 6) throw new Error(`batch177 row count ${ROWS.length}`);
 const ids = ROWS.map((row) => row.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch177 duplicate id');
 for (const row of ROWS) {
-  if (row.honestNote) throw new Error(`batch177 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch177 note ${row.id}`);
   if (row.formulaId === 'gasx-es-chewables' || row.formulaId === 'theraflu-b175-flu-day-syrup') {
     throw new Error(`batch177 formula reuse ${row.id}`);
   }

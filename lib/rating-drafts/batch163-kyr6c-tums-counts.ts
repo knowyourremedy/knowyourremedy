@@ -174,7 +174,7 @@ for (const code of blocked) {
   if (ROWS.some((item) => item.barcode === code)) throw new Error(`batch163 copied ${code}`);
 }
 for (const record of ROWS) {
-  if (record.honestNote) throw new Error(`batch163 note ${record.id}`);
+  if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch163 note ${record.id}`);
   const high = record.inactiveIngredients.some((item) => item.riskLevel === 'high');
   if (false && (!high || record.verdict !== 'avoid')) throw new Error(`batch163 verdict ${record.id}`);
   const dye = record.inactiveIngredients.some((item) => item.riskLevel === 'high' && /FD&C/.test(item.name));

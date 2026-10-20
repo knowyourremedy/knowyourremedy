@@ -1559,7 +1559,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Lavender oil',
-        'cleared',
+        'moderate',
         labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.lavender),
       ),
       flag(
@@ -1677,7 +1677,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Wintergreen extract',
-        'cleared',
+        'moderate',
         labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.wintergreen),
       ),
       flag(

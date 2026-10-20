@@ -1289,7 +1289,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     activeIngredients: T_RELIEF_ARTH_ACTIVES,
     inactiveIngredients: [
       flag('Sodium polyacrylate', 'cleared', labelCite(ARTH_CREAM_CITE, METH.polyacrylate)),
-      flag('Phenoxyethanol', 'cleared', labelCite(ARTH_CREAM_CITE, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', labelCite(ARTH_CREAM_CITE, METH.phenoxy)),
       flag('Alcohol / ethanol', 'limited', labelCite(ARTH_CREAM_CITE, METH.alcoholVehicle)),
       flag('Carrageenan', 'limited', labelCite(ARTH_CREAM_CITE, METH.carrageenan)),
       flag(
@@ -1337,7 +1337,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Sodium polyacrylate', 'cleared', dailymed(SET.tReliefLido, METH.polyacrylate)),
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.tReliefLido, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.tReliefLido, METH.phenoxy)),
       flag(
         'Caprylic/capric triglyceride',
         'limited',

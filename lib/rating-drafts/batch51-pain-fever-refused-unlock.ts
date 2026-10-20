@@ -230,20 +230,20 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       flag(
         'Hydroxyacetophenone',
-        'cleared',
+        'moderate',
         dailymed(SET.foot, METH.hydroxyaceto),
       ),
       flag(
         'Ilex Paraguariensis Leaf Extract',
-        'cleared',
+        'moderate',
         dailymed(SET.foot, METH.botanical),
       ),
       flag(
         'Iodopropynyl Butylcarbamate',
-        'cleared',
+        'moderate',
         dailymed(SET.foot, METH.ipbc),
       ),
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.foot, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.foot, METH.phenoxy)),
       flag('Polysorbate 60', 'limited', dailymed(SET.foot, METH.ps60)),
       flag('Sodium Benzoate', 'limited', dailymed(SET.foot, METH.benzoate)),
       flag('Sodium Hydroxide', 'cleared', dailymed(SET.foot, METH.naoh)),
@@ -252,7 +252,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
         'cleared',
         dailymed(SET.foot, METH.ssl),
       ),
-      flag('Tetrasodium EDTA', 'cleared', dailymed(SET.foot, METH.tetraEdta)),
+      flag('Tetrasodium EDTA', 'moderate', dailymed(SET.foot, METH.tetraEdta)),
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.foot, METH.tocopherol)),
       flag(
         'Vitis Vinifera (Grape) Seed Oil',
@@ -262,7 +262,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.foot, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Sodium Benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Polysorbate 60, Sodium Benzoate.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,

@@ -946,6 +946,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sorbitol, Sodium benzoate.',
 
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -996,6 +997,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('1f37c327-cd4c-4bc1-ae70-713569694e2e', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial bubble gum flavor, Sorbitol, Sodium benzoate.',
 
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -1070,6 +1072,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
 
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -1227,6 +1230,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('db5a5eff-1bb1-4d00-8c01-caae7a1c7223', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavors, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE6,

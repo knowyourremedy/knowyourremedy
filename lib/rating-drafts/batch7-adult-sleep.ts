@@ -645,6 +645,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('01906eed-78ee-f2a1-e063-6294a90a809b', 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Polysorbate 20, Natural flavor, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,

@@ -288,7 +288,7 @@ for (const [id, verdict, barcode, formulaId, minAge] of expected) {
   }
   if (barcode && !upcOk(barcode)) throw new Error(`batch167 bad upc ${barcode}`);
   if (!barcode && record.barcode) throw new Error(`batch167 unexpected upc ${id}`);
-  if (record.honestNote) throw new Error(`batch167 note ${id}`);
+  if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch167 note ${id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch167 blank why ${id} ${ingredient.name}`);
     if (/dailymed/i.test(ingredient.source ?? '')) throw new Error(`batch167 dailymed ${id}`);

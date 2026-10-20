@@ -101,7 +101,7 @@ if (ROWS.length !== 1) throw new Error(`batch180 row count ${ROWS.length}`);
 const ids = ROWS.map((row) => row.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch180 duplicate id');
 for (const row of ROWS) {
-  if (row.honestNote) throw new Error(`batch180 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch180 note ${row.id}`);
   if (contradictionHonestNote(row)) throw new Error(`batch180 screen note ${row.id}`);
   for (const ingredient of row.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch180 blank why ${ingredient.name}`);
