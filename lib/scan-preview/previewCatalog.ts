@@ -2897,6 +2897,20 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Women's 50+ gummies row is 180. The live brand-site bottle prints 160.
   // Do not glue the 160. Per-id so other Nature's Bounty rows stay letters.
   'natures-bounty-b187-women-50-180': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 2.
+  // Same Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // High Absorption Magnesium Glycinate bottle prints 60 capsules.
+  // The catalog row is 90 capsules. Do not glue the 60.
+  'natures-bounty-b189-mag-glycinate-90': brandMark('natures-bounty-mark.png'),
+  // Plant-based omega-3 bottle prints 30 vegetarian softgels.
+  // The catalog row is 60 softgels. Do not glue the 30.
+  'natures-bounty-b189-plant-omega-3-60': brandMark('natures-bounty-mark.png'),
+  // Prebiotic postbiotic probiotic gummies bottle prints 30 gummies.
+  // The catalog row is 60 gummies. Do not glue the 30.
+  'natures-bounty-b189-prebiotic-gummies-60': brandMark('natures-bounty-mark.png'),
+  // Ultra Collagen Booster bottle prints 30 capsules.
+  // The catalog row is 48 capsules. Do not glue the 30.
+  'natures-bounty-b190-ultra-collagen-48': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16793,6 +16807,40 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'caltrate-b187-600-d3-60': catalogShot('caltrate-b187-600-d3-60.jpg'),
   // Caltrate 600+D3, 200 tablets. Not the 60 or the 120.
   'caltrate-b187-600-d3-200': catalogShot('caltrate-b187-600-d3-200.jpg'),
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 2.
+  // Exact fronts. Sibling counts do not share a file.
+  // Advanced Vital Heart with CoQ10 + magnesium, 60 softgels.
+  'natures-bounty-b188-vital-heart-60': catalogShot('natures-bounty-b188-vital-heart-60.jpg'),
+  // Beets + CoQ10 gummies, raspberry, 60 gummies.
+  'natures-bounty-b188-beets-coq10-60': catalogShot('natures-bounty-b188-beets-coq10-60.jpg'),
+  // Caltrate 600+D3, 120 tablets. Not the 60 or the 200.
+  'caltrate-b188-600-d3-120': catalogShot('caltrate-b188-600-d3-120.jpg'),
+  // Move Free Advanced, 80 coated tablets. Not the MSM 120.
+  'move-free-b188-advanced-80': catalogShot('move-free-b188-advanced-80.jpg'),
+  // Superfoods Sharp Mind, 30 capsules.
+  'natures-bounty-b189-sharp-mind-30': catalogShot('natures-bounty-b189-sharp-mind-30.jpg'),
+  // Neuriva Original, 30 capsules.
+  'schiff-b189-neuriva-original-30': catalogShot('schiff-b189-neuriva-original-30.jpg'),
+  // Move Free Advanced + MSM, 120 coated tablets. Not the 80.
+  'move-free-b189-advanced-msm-120': catalogShot('move-free-b189-advanced-msm-120.jpg'),
+  // High Absorption Magnesium Glycinate gummies, peach mango, 60 gummies.
+  'natures-bounty-b190-mag-gly-gummies-60': catalogShot('natures-bounty-b190-mag-gly-gummies-60.jpg'),
+  // Berberine 1000 mg, 60 capsules.
+  'natures-bounty-b190-berberine-60': catalogShot('natures-bounty-b190-berberine-60.jpg'),
+  // Advanced Metabolism Booster, 60 capsules.
+  'natures-bounty-b190-metabolism-60': catalogShot('natures-bounty-b190-metabolism-60.jpg'),
+  // Vitamin K2 + D3, 30 vegetable capsules.
+  'natures-bounty-b190-k2-d3-30': catalogShot('natures-bounty-b190-k2-d3-30.jpg'),
+  // Advanced Magnesium Glycinate 360 mg, 90 capsules. Not the 60-capsule glycinate.
+  'natures-bounty-b190-advanced-mag-gly-90': catalogShot('natures-bounty-b190-advanced-mag-gly-90.jpg'),
+  // 10 mg sleep gummies, blueberry, 140 gummies.
+  'natures-bounty-b191-sleep-gummies-140': catalogShot('natures-bounty-b191-sleep-gummies-140.jpg'),
+  // 5-HTP 100 mg, 60 capsules.
+  'natures-bounty-b191-5htp-60': catalogShot('natures-bounty-b191-5htp-60.jpg'),
+  // Acidophilus probiotic, 120 tablets. The handle still says 100; the bottle prints 120.
+  'natures-bounty-b191-acidophilus-120': catalogShot('natures-bounty-b191-acidophilus-120.jpg'),
+  // Advanced Hair, Skin & Nails gummies, strawberry, 80 gummies.
+  'natures-bounty-b191-adv-hair-skin-80': catalogShot('natures-bounty-b191-adv-hair-skin-80.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37291,5 +37339,68 @@ assertBrandMark(
   });
   if (!flax240?.url.endsWith('/solaray-mark.png') || flax240.verifiedSku || flax240.url === flax100?.url) {
     throw new Error('flaxseed 240 must use the Solaray mark, not the 100-count bottle');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 2.
+  // Sibling counts keep their own fronts.
+  // Count mismatches stay on the Nature's Bounty mark.
+  const batch1020b: [string, string, string][] = [
+    ['natures-bounty-b188-vital-heart-60', "Nature's Bounty", 'natures-bounty-b188-vital-heart-60.jpg'],
+    ['natures-bounty-b188-beets-coq10-60', "Nature's Bounty", 'natures-bounty-b188-beets-coq10-60.jpg'],
+    ['caltrate-b188-600-d3-120', 'Caltrate', 'caltrate-b188-600-d3-120.jpg'],
+    ['move-free-b188-advanced-80', 'Move Free', 'move-free-b188-advanced-80.jpg'],
+    ['natures-bounty-b189-sharp-mind-30', "Nature's Bounty", 'natures-bounty-b189-sharp-mind-30.jpg'],
+    ['schiff-b189-neuriva-original-30', 'Schiff', 'schiff-b189-neuriva-original-30.jpg'],
+    ['move-free-b189-advanced-msm-120', 'Move Free', 'move-free-b189-advanced-msm-120.jpg'],
+    ['natures-bounty-b190-mag-gly-gummies-60', "Nature's Bounty", 'natures-bounty-b190-mag-gly-gummies-60.jpg'],
+    ['natures-bounty-b190-berberine-60', "Nature's Bounty", 'natures-bounty-b190-berberine-60.jpg'],
+    ['natures-bounty-b190-metabolism-60', "Nature's Bounty", 'natures-bounty-b190-metabolism-60.jpg'],
+    ['natures-bounty-b190-k2-d3-30', "Nature's Bounty", 'natures-bounty-b190-k2-d3-30.jpg'],
+    ['natures-bounty-b190-advanced-mag-gly-90', "Nature's Bounty", 'natures-bounty-b190-advanced-mag-gly-90.jpg'],
+    ['natures-bounty-b191-sleep-gummies-140', "Nature's Bounty", 'natures-bounty-b191-sleep-gummies-140.jpg'],
+    ['natures-bounty-b191-5htp-60', "Nature's Bounty", 'natures-bounty-b191-5htp-60.jpg'],
+    ['natures-bounty-b191-acidophilus-120', "Nature's Bounty", 'natures-bounty-b191-acidophilus-120.jpg'],
+    ['natures-bounty-b191-adv-hair-skin-80', "Nature's Bounty", 'natures-bounty-b191-adv-hair-skin-80.jpg'],
+  ];
+  const seen1020b = new Set<string>();
+  for (const [id, brand, file] of batch1020b) {
+    if (seen1020b.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  for (const id of [
+    'natures-bounty-b189-mag-glycinate-90',
+    'natures-bounty-b189-plant-omega-3-60',
+    'natures-bounty-b189-prebiotic-gummies-60',
+    'natures-bounty-b190-ultra-collagen-48',
+  ]) {
+    assertBrandMark(id, "Nature's Bounty", 'natures-bounty-mark.png');
+  }
+  const groups1020b: [string, string, string][][] = [
+    [
+      ['caltrate-b187-600-d3-60', 'caltrate-b187-600-d3', 'Caltrate'],
+      ['caltrate-b188-600-d3-120', 'caltrate-b187-600-d3', 'Caltrate'],
+      ['caltrate-b187-600-d3-200', 'caltrate-b187-600-d3', 'Caltrate'],
+    ],
+    [
+      ['move-free-b188-advanced-80', 'move-free-b188-advanced-80', 'Move Free'],
+      ['move-free-b189-advanced-msm-120', 'move-free-b189-advanced-msm-120', 'Move Free'],
+    ],
+  ];
+  for (const group of groups1020b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
   }
 }
