@@ -1324,7 +1324,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       { name: 'Fiber + enzyme blend', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      f(CITE.hilma_daily_fiber_enzymes, 'Rice powder', 'cleared', METH.ricePowder),
+      f(CITE.hilma_daily_fiber_enzymes, 'Rice powder', 'moderate', METH.ricePowder),
       f(CITE.hilma_daily_fiber_enzymes, 'Monk fruit extract', 'cleared', METH.monk),
     ],
     verdict: 'caution',

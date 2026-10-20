@@ -886,7 +886,7 @@ const ids = ROWS.map((row) => row.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch178 duplicate id');
 const formulas = new Map<string, string>();
 for (const row of ROWS) {
-  if (row.honestNote) throw new Error(`batch178 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch178 note ${row.id}`);
   if (!row.formulaId) throw new Error(`batch178 formula ${row.id}`);
   const line = row.inactiveIngredients.map((item) => `${item.name}|${item.riskLevel}`).join(';');
   const prior = formulas.get(row.formulaId);

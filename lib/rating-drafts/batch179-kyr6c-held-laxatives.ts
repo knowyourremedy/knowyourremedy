@@ -185,6 +185,7 @@ export const BATCH179_KYR6C_HELD_LAXATIVES: RatingRecord[] = [
     activeIngredients: [{ name: 'Docusate sodium', strength: '50 mg' }],
     inactiveIngredients: CLEAR_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Edible dye-free ink, PEG 400, Propylene glycol, Sorbitol.',
     retailers: ['ShopRite'],
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
@@ -205,6 +206,7 @@ export const BATCH179_KYR6C_HELD_LAXATIVES: RatingRecord[] = [
     activeIngredients: [{ name: 'Docusate sodium', strength: '250 mg' }],
     inactiveIngredients: EXTRA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Edible dye-free ink, Polyethylene glycol, Propylene glycol, Sorbitol.',
     retailers: ['Hy-Vee'],
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
@@ -295,7 +297,7 @@ const ids = ROWS.map((row) => row.id);
 if (new Set(ids).size !== ids.length) throw new Error('batch179 duplicate id');
 const formulas = new Map<string, string>();
 for (const row of ROWS) {
-  if (row.honestNote) throw new Error(`batch179 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch179 note ${row.id}`);
   if (!row.formulaId) throw new Error(`batch179 formula ${row.id}`);
   const line = row.inactiveIngredients.map((item) => `${item.name}|${item.riskLevel}`).join(';');
   const prior = formulas.get(row.formulaId);

@@ -137,7 +137,7 @@ function upcOk(code: string): boolean {
 if (ROWS.length !== 1) throw new Error(`batch176 row count ${ROWS.length}`);
 const row = ROWS[0];
 if (!row.barcode || !upcOk(row.barcode)) throw new Error(`batch176 upc ${row.barcode}`);
-if (row.honestNote) throw new Error('batch176 note');
+if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error('batch176 note');
 if (row.formulaId === 'gasx-es-chewables' || row.formulaId === 'gasx-max-softgels') {
   throw new Error('batch176 formula reuse');
 }

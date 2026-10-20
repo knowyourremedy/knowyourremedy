@@ -309,6 +309,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_CETIRIZINE, 'Sorbitan'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Mannitol, Sorbitol.',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -339,6 +340,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_DPH, 'Sorbitol sorbitan solution'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Propylene glycol, Sorbitol.',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [

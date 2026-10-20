@@ -779,6 +779,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Sodium benzoate, Flavors, Sorbitol, Maltodextrin.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
@@ -831,6 +832,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Sodium benzoate, Flavors, Sorbitol.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
@@ -1096,6 +1098,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Polyethylene glycol, Sucralose, Natural and artificial flavors, Sodium benzoate.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
@@ -1603,6 +1606,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Flavor, Sodium benzoate, Sorbitol.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
@@ -1821,6 +1825,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Propylene glycol, Polyethylene glycol, Flavor, Sodium benzoate.',
 
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,

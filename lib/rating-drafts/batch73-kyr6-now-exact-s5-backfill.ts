@@ -579,7 +579,7 @@ const COMPACT: Compact[] = [
       ['Croscarmellose sodium', 'cleared', 'cellulose'],
       ['Stearic acid', 'cleared', 'stearate'],
       ['Magnesium stearate', 'cleared', 'stearate'],
-      ['Silicon dioxide', 'cleared', 'sio2'],
+      ['Silicon dioxide', 'limited', 'sio2'],
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Same OI family as batch72 250-ct — do not restage that grade. Calcium carbonate + medium-chain triglycerides in the named coat map to existing mineral-filler Cleared + unlabeled MCT Limited. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polydextrose / rice dextrin, MCT (unlabeled source), Maltodextrin.',

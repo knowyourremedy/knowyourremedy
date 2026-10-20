@@ -207,6 +207,7 @@ export const BATCH175_KYR6C_HELD_TOKENS: RatingRecord[] = [
       flag(DAY_SYRUP_PANEL, 'Zinc gluconate', 'cleared', METH.zincGluconate),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Polyethylene glycol, Propylene glycol, Sodium benzoate, Sucralose.',
     retailers: ['Instacart', 'Walgreens'],
     cleanAlternatives: COLD_ALTS,
     sourcesGeneral: [
@@ -365,7 +366,7 @@ const byId = Object.fromEntries(ROWS.map((row) => [row.id, row]));
 const counts = { Coricidin: 0, Theraflu: 0, 'Gas-X': 0, Midol: 0 };
 for (const row of ROWS) {
   counts[row.brand as keyof typeof counts] += 1;
-  if (row.honestNote) throw new Error(`batch175 note ${row.id}`);
+  if (row.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(row.honestNote)) throw new Error(`batch175 note ${row.id}`);
   if (row.brand !== 'Theraflu' && !row.barcode) throw new Error(`batch175 missing upc ${row.id}`);
   if (row.brand === 'Theraflu' && row.barcode) throw new Error(`batch175 invented upc ${row.id}`);
   for (const ingredient of row.inactiveIngredients) {

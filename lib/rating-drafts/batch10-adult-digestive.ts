@@ -481,7 +481,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Maltodextrin', 'limited', dailymed(SET_ROLAIDS_MINT, METH.maltodextrin)),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_ROLAIDS_MINT, METH.sio2),
       ),
       cleared(SET_ROLAIDS_MINT, 'Dextrose'),
@@ -490,6 +490,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_ROLAIDS_MINT, 'Sucrose'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Maltodextrin.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
@@ -655,7 +656,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Sucralose', 'limited', dailymed(SET_MYLANTA_GAS, METH.sucralose)),
       flag('Flavors', 'limited', dailymed(SET_MYLANTA_GAS, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_MYLANTA_GAS, METH.maltodextrin)),
-      flag('Silica (silicon dioxide)', 'cleared', dailymed(SET_MYLANTA_GAS, METH.sio2)),
+      flag('Silica (silicon dioxide)', 'limited', dailymed(SET_MYLANTA_GAS, METH.sio2)),
       flag('Isomalt', 'limited', dailymed(SET_MYLANTA_GAS, METH.sugarAlcohol)),
       cleared(SET_MYLANTA_GAS, 'Carboxymethylcellulose sodium'),
       cleared(SET_MYLANTA_GAS, 'Magnesium stearate'),
@@ -663,7 +664,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLANTA_GAS, 'Tricalcium phosphate'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavors, Maltodextrin, Isomalt.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavors, Maltodextrin, Silica (silicon dioxide), Isomalt.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
@@ -686,13 +687,14 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Sucralose', 'limited', dailymed(SET_EMETROL_CHEW, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_EMETROL_CHEW, METH.flavors)),
       flag('Maltodextrin', 'limited', dailymed(SET_EMETROL_CHEW, METH.maltodextrin)),
-      flag('Silica (silicon dioxide)', 'cleared', dailymed(SET_EMETROL_CHEW, METH.sio2)),
+      flag('Silica (silicon dioxide)', 'limited', dailymed(SET_EMETROL_CHEW, METH.sio2)),
       cleared(SET_EMETROL_CHEW, 'Dextrose'),
       cleared(SET_EMETROL_CHEW, 'Fructose'),
       cleared(SET_EMETROL_CHEW, 'Magnesium stearate'),
       cleared(SET_EMETROL_CHEW, 'Sodium carboxymethylcellulose'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Maltodextrin, Silica (silicon dioxide).',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,
@@ -937,6 +939,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     ],
     activeSafetyFlag: ALOH_FLAG,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Artificial flavor, Mannitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,

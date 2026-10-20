@@ -359,10 +359,12 @@ for (const before of catalog) {
   if (before.verdict === after.verdict) {
     noGradeChangeIds.push(before.id);
   }
+  const verdictWouldChange = before.verdict !== after.verdict;
+  const bogusCleanFlip = before.verdict === 'caution' && after.verdict === 'clean';
   pairs.push({
     before,
     after,
-    applyVerdict: before.verdict !== after.verdict,
+    applyVerdict: verdictWouldChange && !bogusCleanFlip,
     rollup,
   });
 }

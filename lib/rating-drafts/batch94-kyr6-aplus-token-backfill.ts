@@ -457,9 +457,9 @@ const DPH50_FLAGS: Compact['flags'] = [
   ['Polyethylene glycol 600', 'limited', 'peg'],
   ['Propylene glycol', 'limited', 'pgOral'],
   ['Sorbitol sorbitan solution', 'limited', 'sorbitolSorbitan'],
-  ['Gelatin', 'cleared', 'gelatin'],
-  ['Glycerin', 'cleared', 'glycerin'],
-  ['Purified water', 'cleared', 'water'],
+  ['Gelatin', 'limited', 'gelatin'],
+  ['Glycerin', 'limited', 'glycerin'],
+  ['Purified water', 'limited', 'water'],
 ];
 
 const SLEEP_BLUE_FLAGS: Compact['flags'] = [
@@ -924,7 +924,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Diphenhydramine HCl', strength: '50mg' }],
     flags: DPH50_FLAGS,
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Polyethylene glycol 600, Propylene glycol, Sorbitol sorbitan solution.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Polyethylene glycol 600, Propylene glycol, Sorbitol sorbitan solution, Gelatin, Glycerin, Purified water.',
     cite: `DailyMed SPL (${DM}1f74e760-9ba9-ac47-e063-6394a90acdff; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 120 softgels). Inactive ingredients: gelatin, glycerin, polyethylene glycol 400, polyethylene glycol 600, propylene glycol, purified water, sorbitol sorbitan solution. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {

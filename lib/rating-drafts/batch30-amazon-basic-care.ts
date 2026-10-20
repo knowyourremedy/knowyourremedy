@@ -803,6 +803,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_R9, 'Microcrystalline cellulose'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Natural and artificial mint flavor.',
 
     retailers: [...AMAZON],
     cleanAlternatives: ALLERGY_ALTS,
@@ -1196,6 +1197,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_KIDS_LOR_LIQ, 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Natural and artificial grape flavor, Maltitol, Sorbitol, Sodium benzoate.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_ALLERGY_ALTS,
@@ -1597,6 +1599,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Sorbitol', 'limited', dailymed(SET_KIDS_APAP, METH.sorbitol)),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Carrageenan, Flavor, Sodium benzoate, Sorbitol.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_APAP_ALTS,
@@ -1635,6 +1638,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_KIDS_CET, 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sodium benzoate, Sorbitol.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_ALLERGY_ALTS,

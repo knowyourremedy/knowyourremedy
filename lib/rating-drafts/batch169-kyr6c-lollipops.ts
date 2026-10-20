@@ -105,7 +105,7 @@ const record = ROWS[0];
 if (record.id !== 'beekeepers-b169-lollipops-15') throw new Error('batch169 id');
 if (record.barcode !== '834706000435' || !upcOk(record.barcode)) throw new Error('batch169 upc');
 if (record.formulaId !== 'beekeepers-b169-lollipops') throw new Error('batch169 formula');
-if (record.honestNote) throw new Error('batch169 note');
+if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error('batch169 note');
 if (record.minAge != null) throw new Error('batch169 age was not on the panel');
 if (/dailymed/i.test((record.sourcesGeneral ?? []).join(' '))) throw new Error('batch169 dailymed source');
 const names = record.inactiveIngredients.map((item) => item.name);

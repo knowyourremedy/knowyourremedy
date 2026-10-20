@@ -70,6 +70,7 @@ export const BATCH170_KYR6C_GAS_DROPS_STRAWBERRY: RatingRecord[] = [
       flag(PANEL, 'Xanthan gum', 'cleared', METH.gums),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sodium benzoate, Sucralose.',
     retailers: [],
     cleanAlternatives: GAS_ALTS,
     sourcesGeneral: [
@@ -93,7 +94,14 @@ const record = ROWS[0];
 if (record.id !== 'little-remedies-b170-gas-drops-strawberry') throw new Error('batch170 id');
 if (record.barcode !== '756184000137' || !upcOk(record.barcode)) throw new Error('batch170 upc');
 if (record.formulaId !== 'little-remedies-b170-gas-drops-strawberry') throw new Error('batch170 formula');
-if (record.honestNote) throw new Error('batch170 note');
+if (
+  record.honestNote
+  && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(
+    record.honestNote,
+  )
+) {
+  throw new Error('batch170 note');
+}
 if (/756184120415/.test(JSON.stringify(record))) throw new Error('batch170 berry code');
 if (/dailymed/i.test((record.sourcesGeneral ?? []).join(' '))) throw new Error('batch170 dailymed source');
 for (const ingredient of record.inactiveIngredients) {

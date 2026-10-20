@@ -479,7 +479,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexLotion),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Peppermint oil, Carbomer interpolymer type A.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil, Carbomer interpolymer type A.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -503,7 +503,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexTube),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Peppermint oil, Carbomer interpolymer type A.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil, Carbomer interpolymer type A.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,

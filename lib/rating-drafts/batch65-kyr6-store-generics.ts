@@ -904,6 +904,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       cleared(SET.walSleepDf, 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Sodium benzoate, Sorbitol.',
 
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [

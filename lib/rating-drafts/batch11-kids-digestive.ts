@@ -1072,6 +1072,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Natural flavor, Xylitol, Mannitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: PROBIOTIC_ALTS,

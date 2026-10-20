@@ -466,7 +466,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(AIRBORNE_CHEW_CITE, METH.sio2),
       ),
       flag('Dextrose', 'cleared', labelCite(AIRBORNE_CHEW_CITE, METH.cleared)),
@@ -482,6 +482,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Natural and artificial flavors, Maltodextrin.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -968,6 +969,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_COLDEEZE_ACEK, 'Glycine'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Natural flavors, Isomalt.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -1122,6 +1124,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_ZICAM_ULTRA, 'Stearic acid'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Mannitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,

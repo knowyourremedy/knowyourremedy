@@ -105,6 +105,7 @@ export const BATCH159_KYR6B_ALAVERT: RatingRecord[] = [
       cleared(MINT_SET, 'Pullulan', METH.pullulan),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Mannitol, Peppermint flavor.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
