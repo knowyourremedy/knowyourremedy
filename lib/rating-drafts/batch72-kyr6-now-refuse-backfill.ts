@@ -30,7 +30,7 @@
 // - now-turmeric-curcumin-bioperine (batch54, UPC 733739047922)
 //
 // TALLY (unverified drafts in THIS file): 111 rows —
-// Clean 11 / Caution 99 / Avoid 1.
+// Clean 26 / Caution 84 / Avoid 1.
 // NEW 82 / REUSE-formula 29 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -129,6 +129,9 @@ const METH = {
   choline: 'Methodology §5 Cleared (choline bitartrate as inactive)',
   tec: 'Methodology §5 Cleared (triethyl citrate)',
   gelatin: 'Methodology §5 Cleared (gelatin / beeswax / carnauba / purified water)',
+  beeswax: 'Methodology §5 Cleared (beeswax — softgel shell wax)',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin / organic glycerin)',
   water: 'Methodology §5 Cleared (purified / distilled / deionized water)',
   lecithin: 'Methodology §5 Cleared (sunflower / soy / canola lecithin)',
@@ -328,9 +331,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{ name: "Zinc Bisglycinate) (Albion ™", strength: "30mg" }, { name: "Pumpkin Seed Oil (Cold Pressed", strength: "250mg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Zinc Glycinate, 120 Softgels (https://www.vitacost.com/products/now-foods-zinc-glycinate-120-softgels-18419) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], beeswax and soy lecithin. UPC-A 733739015549. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -616,9 +619,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Vitamin B-6 (from Pyridoxine HCl", strength: "10mg" }, { name: "Zinc (from Zinc Gluconate", strength: "15mg" }, { name: "Fatty Acids", strength: "160mg" }, { name: "Stinging Nettle Root Extract (Urtica dioica", strength: "300mg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Water", "cleared", "water"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Glycerin", "cleared", "glycerin"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Water", "cleared", "water"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Prostate Support, 180 Softgels (https://www.vitacost.com/products/now-foods-prostate-support-180-softgels-757) other-ingredients: Softgel capsule (bovine gelatin, glycerin, carob, water) and beeswax. UPC-A 733739033413. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -824,9 +827,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Selenium (from Selenium Yeast", strength: "100mcg" }, { name: "Mixed Tocopherols (d-beta, d-gamma, d-delta", strength: "48mg" }],
-    flags: [["Soybean / corn oil (softgel fill)", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Soybean / corn oil (softgel fill)", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, E-400 D-Alpha with Mixed Tocopherols, 100 Softgels (https://www.vitacost.com/products/now-foods-e-400-d-alpha-with-mixed-tocopherols-100-softgels-117142) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], soybean oil, beeswax and soy lecithin. UPC-A 733739009067. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -872,9 +875,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Vitamin B-6 (from Pyridoxine HCl", strength: "10mg" }, { name: "Zinc (from Zinc Gluconate", strength: "15mg" }, { name: "Fatty Acids", strength: "160mg" }, { name: "Stinging Nettle Root Extract (Urtica dioica", strength: "300mg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Water", "cleared", "water"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Glycerin", "cleared", "glycerin"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Water", "cleared", "water"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Prostate Support, 90 Softgels (https://www.vitacost.com/products/now-foods-prostate-support-90-softgels-37833) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, carob, water] and beeswax. UPC-A 733739033406. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -904,9 +907,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Pantethine, 300 mg", strength: "label serving" }],
-    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Rice bran oil", "cleared", "oilFill"], ["Lecithin", "cleared", "lecithin"], ["Beeswax / carnauba wax", "cleared", "gelatin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Rice bran oil", "cleared", "oilFill"], ["Lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Pantethine, 300 mg, 60 Softgels (https://www.vitacost.com/products/now-foods-pantethine-300-mg-60-softgels-333) other-ingredients: Softgel capsule (bovine gelatin (BSE-free), glycerin, water, carob], rice bran oil, sunflower lecithin and beeswax. UPC-A 733739004871. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -968,9 +971,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{ name: "Selenium (from L-Selenomethionine", strength: "70mcg" }, { name: "Coenzyme Q10 (CoQ10", strength: "50mg" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, CoQ10 With Selenium & Vitamin E, 100 Softgels (https://www.vitacost.com/products/now-foods-coq10-with-selenium-vitamin-e-100-softgels-492) other-ingredients: Rice bran oil, softgel capsule [bovine gelatin (BSE free), glycerin, water, carob], beeswax and soy lecithin. UPC-A 733739031938. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1000,9 +1003,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Pantethine, 600 mg", strength: "label serving" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Lecithin", "cleared", "lecithin"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Pantethine, 600 mg, 60 Softgels (https://www.vitacost.com/products/now-foods-pantethine-600-mg-60-softgels-9863) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], rice bran oil, sunflower lecithin and beeswax. UPC-A 733739004895. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1080,9 +1083,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Zinc (from Zinc Gluconate", strength: "20mg" }, { name: "Saw Palmetto Berry Extract (Serenoa repens) (Fruit", strength: "160mg" }],
-    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Beeswax / carnauba wax", "cleared", "gelatin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Saw Palmetto Extract,  , 90 Softgels (https://www.vitacost.com/products/now-foods-saw-palmetto-extract-90-softgels-805) other-ingredients: Softgel capsule (bovine gelatin (BSE-free), glycerin, water, carob) and beeswax. UPC-A 733739047342. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1272,9 +1275,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Saturated Fat", strength: "1.5g" }, { name: "Beta-Carotene", strength: "1,500mcg" }, { name: "Vitamin C (as Ascorbic Acid", strength: "120mg" }, { name: "Vitamin D (as D-3 Cholecalciferol", strength: "25mcg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Sports, Men's Active Sports Multi, 180 Softgels (https://www.vitacost.com/products/now-foods-sports-men-s-active-sports-multi-180-softgels-49050) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], beeswax and soy lecithin. UPC-A 733739038913. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1624,9 +1627,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{ name: "Coenzyme Q10 (CoQ10", strength: "60mg" }, { name: "Fish Oil Concentrate", strength: "250mg" }, { name: "Eicosapentaenoic Acid (EPA", strength: "40mg" }, { name: "Docosahexaenoic Acid (DHA", strength: "25mg" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Annatto", "cleared", "annatto"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Annatto", "cleared", "annatto"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, CoQ10 with Omega-3 Fish Oil, 120 Softgels (https://www.vitacost.com/products/now-foods-coq10-with-omega-3-fish-oil-120-softgels-6142) other-ingredients: Softgel capsule (bovine gelatin, glycerin, water, carob, annatto extract), rice bran oil, beeswax, d-alpha tocopherol and mixed tocopherols. UPC-A 733739031662. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1640,9 +1643,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Saturated Fat", strength: "1.5g" }, { name: "Beta-Carotene", strength: "1,500mcg" }, { name: "Vitamin C (as Ascorbic Acid", strength: "120mg" }, { name: "Vitamin D (as D3Cholecalciferol", strength: "25mcg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Sports, Men's Active Sports Multi, 90 Softgels (https://www.vitacost.com/products/now-foods-sports-men-s-active-sports-multi-90-softgels-116601) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], beeswax and soy lecithin. UPC-A 733739038906. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1720,9 +1723,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{ name: "Selenium (from L-Selenomethionine", strength: "70mcg" }, { name: "Coenzyme Q10 (CoQ10", strength: "50mg" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, CoQ10 With Selenium & Vitamin E, 50 Softgel (https://www.vitacost.com/products/now-foods-coq10-with-selenium-vitamin-e-50-softgel-117525) other-ingredients: Rice bran oil, softgel capsule (bovine gelatin (BSE free), glycerin, water, carob], beeswax and soy lecithin. UPC-A 733739031921. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1736,9 +1739,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Saturated Fat", strength: "0.5g" }, { name: "Eicosapentaenoic Acid (EPA", strength: "360mg" }, { name: "Docosahexaenoic Acid (DHA", strength: "240mg" }, { name: "Organic Red Yeast Rice (Monascus purpureus", strength: "600mg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Red Omega™ Fish Oil With Red Yeast Rice and CoQ10, 180 Softgels (https://www.vitacost.com/products/now-foods-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180-softgels-16277) other-ingredients: Softgel Capsule [bovine gelatin (BSE-free), glycerin, water, carob], beeswax, d-alpha tocopherol and soy lecithin. UPC-A 733739016768. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1848,9 +1851,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{ name: "Coenzyme Q10 (CoQ10) (Ubiquinone", strength: "60mg" }, { name: "Fish Oil Concentrate", strength: "250mg" }, { name: "Eicosapentaenoic Acid (EPA", strength: "40mg" }, { name: "Docosahexaenoic Acid (DHA", strength: "25mg" }],
-    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Annatto", "cleared", "annatto"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Annatto", "cleared", "annatto"], ["Carob (plain) / carob extract", "cleared", "carobExtract"], ["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, CoQ10 + Fish Oil, 60 Softgels (https://www.vitacost.com/products/now-foods-coq10-fish-oil-60-softgels-120075) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, annatto extract, carob), rice bran oil, beeswax, d-alpha tocopherol and mixed tocopherols. UPC-A 733739031631. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1880,9 +1883,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Saturated Fat", strength: "0.5g" }, { name: "Eicosapentaenoic Acid (EPA", strength: "360mg" }, { name: "Docosahexaenoic Acid (DHA", strength: "240mg" }, { name: "Organic Red Yeast Rice (Monascus purpureus", strength: "600mg" }],
-    flags: [["Beeswax / carnauba wax", "cleared", "gelatin"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is plain carob / carob extract (not powder-as-food). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Mixed tocopherols / d-alpha tocopherol", "cleared", "tocopherols"], ["Lecithin", "cleared", "lecithin"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob (plain) / carob extract", "cleared", "carobExtract"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Red Omega™ Fish Oil With Red Yeast Rice and CoQ10, 90 Softgels (https://www.vitacost.com/products/now-foods-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90-softgels-16276) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], beeswax, d-alpha tocopherol and soy lecithin. UPC-A 733739016751. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -2144,10 +2147,10 @@ export const BATCH72_OIL_HUNT: { name: string; url: string }[] = [
 
 const _ROWS = BATCH72_KYR6_NOW_REFUSE_BACKFILL;
 if (_ROWS.length !== 111) throw new Error('batch72 tally drift: expected 111 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 11) {
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 26) {
   throw new Error('batch72 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 99) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 84) {
   throw new Error('batch72 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) {

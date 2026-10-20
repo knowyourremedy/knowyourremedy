@@ -18281,6 +18281,31 @@ function applyHydrogenatedOilLock(record: RatingRecord): RatingRecord {
 const T133U_CARNAUBA_LOCK_SOURCE =
   'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).';
 
+/** t134u founder file edits — carnauba tab already carries t133u; overlay is redundant. */
+const T134U_CARNAUBA_FILE_LOCKED_IDS = new Set([
+  'now-odorless-garlic-250',
+  'now-nadh-10-mg-60',
+  'now-odorless-garlic-concentrated-extract-100',
+  'now-glucofit-60',
+  'now-zinc-glycinate-120',
+  'now-prostate-support-180',
+  'now-e-400-d-alpha-with-mixed-tocopherols-100',
+  'now-prostate-support-90',
+  'now-pantethine-60',
+  'now-coq10-with-selenium-vitamin-e-100',
+  'now-pantethine-60-733739004895',
+  'now-saw-palmetto-extract-90',
+  'now-sports-men-s-active-sports-multi-180',
+  'now-coq10-with-omega-3-fish-oil-120',
+  'now-sports-men-s-active-sports-multi-90',
+  'now-coq10-with-selenium-vitamin-e-50-softgel',
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
+  'now-coq10-fish-oil-60',
+  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90',
+  'now-adam-superior-men-s-multi-180-softgels',
+  'now-adam-superior-men-s-multi-90-softgels',
+]);
+
 function isT133uCarnaubaLock(name: string): boolean {
   const raw = name.trim();
   const n = raw.toLowerCase();
@@ -18303,6 +18328,7 @@ function t133uLockSource(source: string | undefined, lockSource: string): string
 }
 
 export function applyT133uLocks(record: RatingRecord): RatingRecord {
+  if (T134U_CARNAUBA_FILE_LOCKED_IDS.has(record.id)) return record;
   let flipped = false;
   const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
     if (!isT133uCarnaubaLock(ingredient.name)) return ingredient;

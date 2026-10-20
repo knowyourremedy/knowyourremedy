@@ -36,7 +36,7 @@
 // - now-magnesium-calcium-with-zinc-and-vitamin-d-3-250 (batch72)
 //
 // TALLY (unverified drafts in THIS file): 27 rows —
-// Clean 9 / Caution 17 / Avoid 1.
+// Clean 11 / Caution 15 / Avoid 1.
 // NEW 15 / REUSE-formula 12 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -90,6 +90,9 @@ const METH = {
   kcl: 'Methodology §5 Cleared (potassium chloride — salt / electrolyte)',
   salt: 'Methodology §5 Cleared (sodium chloride / sodium bicarbonate)',
   gelatin: 'Methodology §5 Cleared (gelatin / beeswax / carnauba / purified water)',
+  beeswax: 'Methodology §5 Cleared (beeswax — softgel shell wax)',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin / organic glycerin)',
   water: 'Methodology §5 Cleared (purified / distilled / deionized water)',
   lecithin: 'Methodology §5 Cleared (sunflower / soy / canola lecithin)',
@@ -601,14 +604,14 @@ const COMPACT: Compact[] = [
     flags: [
       ['Pumpkin seed oil', 'cleared', 'oilFill'],
       ['Lecithin', 'cleared', 'lecithin'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Cinnamon bark powder', 'cleared', 'cinnamonBot'],
       ['Glycerin', 'cleared', 'glycerin'],
       ['Water', 'cleared', 'water'],
       ['Carob (plain) / carob extract', 'cleared', 'carobExtract'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are plain carob / carob extract (not powder-as-food); cinnamon bark powder (ginger/cinnamon botanical Caution — NOW exact-§5 WRITE list). Beeswax and sunflower lecithin map to existing Cleared wax / lecithin rows. Named pumpkin seed oil as softgel fill is not the gummy seed-oil High rule. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'clean',
+    note: 'FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.',
     cite: "Current Vitacost NOW Foods, ADAM™, Superior Men's Multi, 180 Softgels (https://www.vitacost.com/products/now-foods-adam-superior-men-s-multi-180-softgels-23364) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob], pumpkin seed oil, sunflower lecithin, beeswax and cinnamon bark powder. Contains soy. UPC-A 733739038814. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -630,14 +633,14 @@ const COMPACT: Compact[] = [
     flags: [
       ['Pumpkin seed oil', 'cleared', 'oilFill'],
       ['Lecithin', 'cleared', 'lecithin'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Cinnamon bark powder', 'cleared', 'cinnamonBot'],
       ['Glycerin', 'cleared', 'glycerin'],
       ['Water', 'cleared', 'water'],
       ['Carob (plain) / carob extract', 'cleared', 'carobExtract'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are plain carob / carob extract (not powder-as-food); cinnamon bark powder (ginger/cinnamon botanical Caution — NOW exact-§5 WRITE list). Beeswax and sunflower lecithin map to existing Cleared wax / lecithin rows. Named pumpkin seed oil as softgel fill is not the gummy seed-oil High rule. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'clean',
+    note: 'FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.',
     cite: "Current Vitacost NOW Foods, ADAM™, Superior Men's Multi, 90 Softgels (https://www.vitacost.com/products/now-foods-adam-superior-men-s-multi-90-softgels-76072) other-ingredients: Softgel capsule [bovine gelatin (BSE-free), glycerin, water, carob], pumpkin seed oil, sunflower lecithin, beeswax and cinnamon bark powder. Contains soy. UPC-A 733739038807. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -1010,10 +1013,10 @@ export const BATCH73_OIL_HUNT: { name: string; url: string }[] = [];
 
 const _ROWS = BATCH73_KYR6_NOW_EXACT_S5_BACKFILL;
 if (_ROWS.length !== 27) throw new Error('batch73 tally drift: expected 27 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 9) {
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 11) {
   throw new Error('batch73 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 17) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 15) {
   throw new Error('batch73 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) {
