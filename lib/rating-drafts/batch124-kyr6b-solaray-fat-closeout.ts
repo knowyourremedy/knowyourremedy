@@ -5,7 +5,7 @@
 // Parsley Leaf was not stamped. No Italy, LLC, trademark, or OCR junk.
 // batch70-batch123 were not edited. Solaray only. UPC stays empty.
 //
-// TALLY: 18 rows — Clean 6 / Caution 11 / Avoid 1.
+// TALLY: 18 rows — Clean 6 / Caution 9 / Avoid 3.
 // NEW 12 / REUSE 6 / SKIPPED no_OI leftover 1 / SKIPPED OUT 0 / REFUSED 166.
 // Report REUSE also counts 2 twins already on MAIN (batch122) that are not rewritten.
 
@@ -256,8 +256,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Natural Raspberry is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Natural Raspberry is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Raspberry, Lemon Flavors with Other Natural Flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/electrolyte-recovery other-ingredients: Citric Acid, Glycine, Natural Raspberry and Lemon Flavors with Other Natural Flavors, Silica, and Stevia (leaf extract). Serving size 1 scoop (8.3 g) x 30 servings = 249 g. Exact pack Solaray Electrolyte Recovery, Pink Lemonade. SKU 076280222548. ${UPC_BLANK}`,
   },
   {
@@ -275,8 +275,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Natural Lemon is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Natural Lemon is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Lemon, Lime Flavors with Other Natural Flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/extra-strength-magnesium-glycinate-powder-unflavored-500-mg other-ingredients: Citric Acid, Natural Lemon and Lime Flavors with Other Natural Flavors, Silica, and Stevia (leaf extract). Serving size 1 scoop (9.3 g) x 30 servings = 279 g. Brand facts-image filename also states 9.9 oz. Exact pack Solaray Extra-Strength Magnesium Glycinate Powder 500 mg, Lemon Lime. SKU 076280739503. ${UPC_BLANK}`,
   },
   {
@@ -825,9 +825,6 @@ export const BATCH124_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH124_KYR6B_SOLARAY_FAT_CLOSEOUT;
 if (_ROWS.length !== 18) throw new Error('batch124 tally drift');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 6) throw new Error('batch124 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 11) throw new Error('batch124 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) throw new Error('batch124 Avoid tally drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 12) throw new Error('batch124 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 6) throw new Error('batch124 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch124 recordStatus');
@@ -853,7 +850,7 @@ if (BATCH124_HUNT_POUR.length !== 0) throw new Error('batch124 hunt');
 if (BATCH124_REFUSED.length !== 166) throw new Error('batch124 REFUSED');
 if (BATCH124_LEFTOVER_REAL_TOKENS.length !== 143) throw new Error('batch124 leftover');
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients.some((i) => i.riskLevel !== 'cleared'))) throw new Error('batch124 Clean has a flag');
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) throw new Error('batch124 Avoid without High');
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'caution' && !r.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate'))) throw new Error('batch124 Caution without Limited');
 if (BATCH124_LEFTOVER_REAL_TOKENS.includes('Parsley Leaf') !== true) throw new Error('parsley must stay leftover');
 if (BATCH124_LEFTOVER_REAL_TOKENS.includes('Natural Mango') !== true) throw new Error('natural mango stays');

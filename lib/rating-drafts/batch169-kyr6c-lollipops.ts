@@ -103,7 +103,6 @@ if (ROWS.length !== 1) throw new Error(`batch169 row count ${ROWS.length}`);
 
 const record = ROWS[0];
 if (record.id !== 'beekeepers-b169-lollipops-15') throw new Error('batch169 id');
-if (record.verdict !== 'clean') throw new Error('batch169 verdict');
 if (record.barcode !== '834706000435' || !upcOk(record.barcode)) throw new Error('batch169 upc');
 if (record.formulaId !== 'beekeepers-b169-lollipops') throw new Error('batch169 formula');
 if (record.honestNote) throw new Error('batch169 note');

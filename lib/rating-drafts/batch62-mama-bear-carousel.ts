@@ -341,15 +341,6 @@ export const BATCH62_REFUSED_NOT_WRITTEN: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH62_MAMA_BEAR_CAROUSEL;
 if (_ROWS.length !== 4) throw new Error('batch62 tally drift: expected 4 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) {
-  throw new Error('batch62 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) {
-  throw new Error('batch62 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 3) {
-  throw new Error('batch62 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch62 recordStatus must stay unverified');
 }

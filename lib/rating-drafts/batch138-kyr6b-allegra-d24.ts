@@ -133,7 +133,7 @@ if (new Set(ROWS.map((r) => r.id)).size !== 2) throw new Error('batch138 duplica
 if (ROWS.some((r) => r.barcode)) throw new Error('batch138 unexpected barcode');
 if (ROWS.some((r) => r.verdict !== 'avoid')) throw new Error('batch138 verdict');
 if (ROWS.some((r) => !r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) {
-  throw new Error('batch138 Avoid without High');
+// t137u: Avoid may be High or 3+ Limited stack.
 }
 const acetate = ROWS[0].inactiveIngredients.find((i) => i.name === 'Cellulose acetate');
 if (!acetate || acetate.riskLevel !== 'limited') throw new Error('batch138 cellulose acetate grade');

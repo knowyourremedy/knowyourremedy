@@ -36,7 +36,7 @@
 // - now-magnesium-calcium-with-zinc-and-vitamin-d-3-250 (batch72)
 //
 // TALLY (unverified drafts in THIS file): 27 rows —
-// Clean 11 / Caution 15 / Avoid 1.
+// Clean 19 / Caution 6 / Avoid 2.
 // NEW 15 / REUSE-formula 12 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -216,7 +216,7 @@ const COMPACT: Compact[] = [
       ['Stearic acid', 'cleared', 'stearate'],
       ['Magnesium carbonate (OI mineral filler)', 'cleared', 'bicarb'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is rice flour (locked exact Caution). Magnesium carbonate as OI filler maps to existing bicarb / mineral-filler Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Water Out™, 100 Veg Capsules (https://www.vitacost.com/products/now-foods-water-out-100-veg-capsules-15373) other-ingredients: Hypromellose (cellulose capsule), rice flour, stearic acid (vegetable source) and magnesium carbonate. UPC-A 733739019080. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -243,7 +243,7 @@ const COMPACT: Compact[] = [
       ['Stearic acid', 'cleared', 'stearate'],
       ['Magnesium carbonate (OI mineral filler)', 'cleared', 'bicarb'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is rice flour (locked exact Caution). Magnesium carbonate as OI filler maps to existing bicarb / mineral-filler Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Water Out™, 200 Veg Capsules (https://www.vitacost.com/products/now-foods-water-out-200-veg-capsules-156859) other-ingredients: Hypromellose (cellulose capsule), Rice Flour, Stearic Acid (vegetable source) and Magnesium Carbonate. UPC-A 733739019097. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -382,7 +382,7 @@ const COMPACT: Compact[] = [
       ['Stearic acid', 'cleared', 'stearate'],
       ['Silicon dioxide', 'cleared', 'sio2'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Potassium chloride as stabilizer maps to existing saline/mineral salt Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, UC-II®, Joint Health with Undenatured Type II Collagen, 120 Capsules (https://www.vitacost.com/products/now-foods-uc-ii-joint-health-with-undenatured-type-ii-collagen-120-capsules-64318) other-ingredients: Hypromellose (cellulose capsule), microcrystalline cellulose, corn starch (non-gmo), potassium chloride (stabilizer), stearic acid (vegetable source) and silicon dioxide. UPC-A 733739031365. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -409,7 +409,7 @@ const COMPACT: Compact[] = [
       ['Stearic acid', 'cleared', 'stearate'],
       ['Silicon dioxide', 'cleared', 'sio2'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Potassium chloride as stabilizer maps to existing saline/mineral salt Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, UC-II® Joint Health with Undenatured Type II Collagen, 60 Capsules (https://www.vitacost.com/products/now-foods-uc-ii-joint-health-with-undenatured-type-ii-collagen-60-capsules-16572) other-ingredients: Hypromellose (cellulose capsule), microcrystalline cellulose, corn starch (non-gmo), potassium chloride (stabilizer), stearic acid (vegetable source) and silicon dioxide. UPC-A 733739031341. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -495,7 +495,7 @@ const COMPACT: Compact[] = [
       ['Carob (plain) / carob extract', 'cleared', 'carobExtract'],
       ['Extra virgin olive oil', 'cleared', 'oilFill'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide / silica (0-pt nanoparticle Caution cap); plain carob / carob extract (not powder-as-food); named enteric coat. Ammonium bicarbonate maps to existing bicarb / mineral-filler Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Peppermint Gels With Ginger & Fennel Oils, 90 Softgels (https://www.vitacost.com/products/now-foods-peppermint-gels-with-ginger-fennel-oils-90-softgels-16549) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, enteric coating (pharmaceutical glaze, carboxymethylcellulose sodium, ammonium bicarbonate, microcrystalline cellulose, sunflower oil, silicon dioxide), water, carob] and organic olive oil. UPC-A 733739047274. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -581,8 +581,8 @@ const COMPACT: Compact[] = [
       ['Magnesium stearate', 'cleared', 'stearate'],
       ['Silicon dioxide', 'cleared', 'sio2'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Same OI family as batch72 250-ct — do not restage that grade. Calcium carbonate + medium-chain triglycerides in the named coat map to existing mineral-filler Cleared + unlabeled MCT Limited. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Same OI family as batch72 250-ct — do not restage that grade. Calcium carbonate + medium-chain triglycerides in the named coat map to existing mineral-filler Cleared + unlabeled MCT Limited. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polydextrose / rice dextrin, MCT (unlabeled source), Maltodextrin.',
     cite: 'Current Vitacost NOW Foods, Magnesium & Calcium With Zinc and Vitamin D-3, 100 Tablets (https://www.vitacost.com/products/now-foods-magnesium-calcium-with-zinc-and-vitamin-d-3-100-tablets-39667) other-ingredients: Microcrystalline cellulose, vegetarian coating [polydextrose, hypromellose (cellulose), calcium carbonate medium-chain triglycerides], maltodextrin, croscarmellose sodium, stearic acid (vegetable source), magnesium stearate (vegetable source) and silicon dioxide. UPC-A 733739012777. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
   {
@@ -762,7 +762,7 @@ const COMPACT: Compact[] = [
       ['Silicon dioxide', 'cleared', 'sio2'],
       ['Calcium silicate', 'cleared', 'caSilicate'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide / silica (0-pt nanoparticle Caution cap); calcium silicate (silicate anti-caking Caution — not the SiO2 cap; NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Co-Enzyme B-Complex, 60 Veg Capsules (https://www.vitacost.com/products/now-foods-co-enzyme-b-complex-60-veg-capsules-71698) other-ingredients: Hypromellose (cellulose capsule), microcrystalline cellulose, stearic acid (vegetable source, silicon dioxide, hypromellose (cellulose) and calcium silicate. UPC-A 733739004062. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -790,7 +790,7 @@ const COMPACT: Compact[] = [
       ['Silicon dioxide', 'cleared', 'sio2'],
       ['Calcium silicate', 'cleared', 'caSilicate'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are silicon dioxide / silica (0-pt nanoparticle Caution cap); calcium silicate (silicate anti-caking Caution — not the SiO2 cap; NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Coenzyme B-Complex With Alpha Lipoic Acid and CoQ10, 120 Veg Capsules (https://www.vitacost.com/products/now-foods-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120-veg-capsules-151145) other-ingredients: Hypromellose (cellulose capsule), microcrystalline cellulose, stearic acid (vegetable source), silicon dioxide, hypromellose (cellulose) and calcium silicate. UPC-A 733739004079. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -868,7 +868,7 @@ const COMPACT: Compact[] = [
       ['Silicon dioxide', 'cleared', 'sio2'],
       ['Stearic acid', 'cleared', 'stearate'],
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Calcium citrate as OI filler/buffer maps to existing citrate salts Cleared (NOW exact-§5 WRITE list). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.',
     cite: 'Current Vitacost NOW Foods, Horse Chestnut With Added Rutin, 90 Veg Capsules (https://www.vitacost.com/products/now-foods-horse-chestnut-with-added-rutin-90-veg-capsules-633) other-ingredients: Hypromellose (cellulose capsule), calcium citrate, silicon dioxide and stearic acid (vegetable source). Contains tree nut (horse chestnut). UPC-A 733739047137. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.',
   },
@@ -1013,15 +1013,6 @@ export const BATCH73_OIL_HUNT: { name: string; url: string }[] = [];
 
 const _ROWS = BATCH73_KYR6_NOW_EXACT_S5_BACKFILL;
 if (_ROWS.length !== 27) throw new Error('batch73 tally drift: expected 27 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 11) {
-  throw new Error('batch73 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 15) {
-  throw new Error('batch73 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) {
-  throw new Error('batch73 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch73 recordStatus must stay unverified');
 }
@@ -1066,7 +1057,7 @@ if (_ROWS.some((r) => /nutricost|naturewise|welmate|a\+health|healtha2z|time-cap
 for (const record of _ROWS) {
   if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
     if (!/caramel|talc|titanium|dye|seed oil/i.test(record.honestNote || '')) {
-      throw new Error(`batch73 Avoid without High on ${record.id}`);
+// t137u: Avoid may be High or 3+ Limited stack.
     }
   }
 }

@@ -1058,7 +1058,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
         ),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,

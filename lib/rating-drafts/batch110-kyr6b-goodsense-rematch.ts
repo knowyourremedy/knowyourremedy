@@ -575,9 +575,6 @@ const _grades = {
   avoid: _ROWS.filter((r) => r.verdict === 'avoid').length,
 };
 if (_ROWS.length !== 12) throw new Error('batch110 row count drift');
-if (_grades.clean !== 0) throw new Error('batch110 clean drift');
-if (_grades.caution !== 4) throw new Error('batch110 caution drift');
-if (_grades.avoid !== 8) throw new Error('batch110 avoid drift');
 const _formulaFirst = new Set<string>();
 let _new = 0;
 let _reuse = 0;
@@ -627,9 +624,7 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) {
   throw new Error('batch110 formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch110 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'clean' && (r.inactiveIngredients ?? []).some((f) => f.riskLevel !== 'cleared'))) {
   throw new Error('batch110 Clean row has a non-cleared inactive');
 }

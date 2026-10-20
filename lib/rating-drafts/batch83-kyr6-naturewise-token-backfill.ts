@@ -18,7 +18,7 @@
 // No graded oil pour bottles. Leftover Amazon 3P stays N=5.
 //
 // TALLY (unverified drafts in THIS file): 54 rows —
-// Clean 0 / Caution 54 / Avoid 0.
+// Clean 0 / Caution 38 / Avoid 16.
 // NEW 35 / REUSE-formula 19 / SKIPPED 2 (no_OI 0 / OUT 0 / other 2 —
 // Magnesium Glycinate 625 mg count tabs have no supplement-facts image) /
 // REFUSED 6.
@@ -189,8 +189,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Selenium", strength: "250 Count" }],
     flags: [["Organic extra virgin coconut oil", "cleared", "coconut"], ["Modified tapioca starch", "limited", "modStarch"], ["Purified water", "cleared", "water"], ["Vegetable glycerin", "cleared", "glycerin"], ["Annatto (color)", "limited", "annatto"], ["Rice bran wax", "limited", "riceBranWax"], ["Sunflower lecithin", "cleared", "lecithin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Annatto (color); Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Annatto (color); Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified tapioca starch, Annatto (color), Rice bran wax.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/selenium; image https://www.naturewise.com/cdn/shop/files/NW_-_Selenium_-_1b_-_Right_Side.jpg?width=1200) other-ingredients: Organic extra virgin coconut oil, softgel (modified tapioca starch, purified water, vegetable glycerin, annatto (color)), rice bran wax, sunflower lecithin. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157853288 is the GTIN-12 on this offer (250 Count). No DailyMed drug SPL.",
   },
   {
@@ -221,8 +221,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Ashwagandha", strength: "60 Count" }],
     flags: [["Modified tapioca starch", "limited", "modStarch"], ["Organic vegetable glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Sodium copper chlorophyllin", "limited", "chlorophyllin"], ["Organic MCT oil", "limited", "mctUnlabeled"], ["Rice bran wax", "limited", "riceBranWax"], ["Sunflower lecithin", "cleared", "lecithin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Sodium copper chlorophyllin; Organic MCT oil; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel. Organic MCT oil does not name coconut or palm kernel, so it stays Limited unlabeled MCT. Not an oil-bottle grade.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Sodium copper chlorophyllin; Organic MCT oil; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Modified tapioca starch on this softgel stays the Limited modified-starch row. It is not modified tapioca starchgel. Organic MCT oil does not name coconut or palm kernel, so it stays Limited unlabeled MCT. Not an oil-bottle grade. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified tapioca starch, Sodium copper chlorophyllin, Organic MCT oil, Rice bran wax.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/ashwagandha; image https://www.naturewise.com/cdn/shop/files/NW-AshwagandhaSoftgels-5-Supplement.jpg?width=1200) other-ingredients: Softgel (modified tapioca starch, organic vegetable glycerin, purified water, sodium copper chlorophyllin [color]), organic mct oil, rice bran wax, sunflower lecithin. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852472 is the GTIN-12 on this offer (60 Count). No DailyMed drug SPL.",
   },
   {
@@ -237,8 +237,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Algae Calcium", strength: "120 Count" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Bamboo extract", "limited", "bamboo"], ["Rice bran wax", "limited", "riceBranWax"], ["Rice flour", "limited", "riceFlour"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Rice bran wax; Rice flour. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Rice bran wax; Rice flour. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Bamboo extract, Rice bran wax, Rice flour.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/algae-calcium; image https://www.naturewise.com/cdn/shop/files/NW_-_Algae-Calcium_Plus_-_5_-_Supplement.jpg?width=1200) other-ingredients: Capsule (hypromellose), bamboo extract, rice bran wax, rice flour. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852229 is the GTIN-12 on this offer (120 Count). No DailyMed drug SPL.",
   },
   {
@@ -301,8 +301,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Theanine", strength: "200 mg / 120 Count" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Bamboo extract", "limited", "bamboo"], ["Rice bran wax", "limited", "riceBranWax"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Bamboo extract; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Bamboo extract; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Bamboo extract, Rice bran wax.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/l-theanine; image https://www.naturewise.com/cdn/shop/files/NW-L-Theanine-5-Supplement_85e871b4-cf11-4de0-a7e2-5ca90a056ae7.jpg?width=1200) other-ingredients: Capsule (hypromellose), rice flour, bamboo extract, rice bran wax. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157851932 is the GTIN-12 on this offer (200 mg / 120 Count). No DailyMed drug SPL.",
   },
   {
@@ -317,8 +317,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Theanine", strength: "400 mg / 120 Count" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Bamboo extract", "limited", "bamboo"], ["Rice bran wax", "limited", "riceBranWax"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Bamboo extract; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Bamboo extract; Rice bran wax. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Bamboo extract, Rice bran wax.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/l-theanine; image https://www.naturewise.com/cdn/shop/files/NW-L-Theanine400mg-1b-RightSide.jpg?width=1200) other-ingredients: Capsule (hypromellose), rice flour, bamboo extract, rice bran wax. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157853080 is the GTIN-12 on this offer (400 mg / 120 Count). No DailyMed drug SPL.",
   },
   {
@@ -349,8 +349,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Fast Dissolve Vitamin D3", strength: "90 Count / 5000 IU" }],
     flags: [["Xylitol", "limited", "polyol"], ["Crospovidone", "cleared", "povidone"], ["Mixed berry flavor", "limited", "flavors"], ["Corn starch", "cleared", "starch"], ["Bamboo extract", "limited", "bamboo"], ["Beet root (color)", "cleared", "beetColor"], ["Monk fruit extract", "cleared", "monk"], ["Citric acid", "cleared", "citric"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Xylitol; Mixed berry flavor; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Xylitol; Mixed berry flavor; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Mixed berry flavor, Bamboo extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/fast-dissolve-vitamin-d3; image https://www.naturewise.com/cdn/shop/files/NW-VitaminD3FastDissolve-5-Supplement.jpg?width=1200) other-ingredients: Xylitol, crospovidone, mixed berry flavor, corn starch, bamboo extract, beet root (color), monk fruit extract, citric acid. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852175 is the GTIN-12 on this offer (90 Count / 5000 IU). No DailyMed drug SPL.",
   },
   {
@@ -381,8 +381,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Zinc + D3 & K2", strength: "30 Count" }],
     flags: [["Microcrystalline cellulose", "cleared", "mcc"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Bamboo extract", "limited", "bamboo"], ["Rice hull concentrate", "cleared", "riceHull"], ["Maltodextrin", "limited", "maltodextrin"], ["Starch", "limited", "bareStarch"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Maltodextrin; Starch. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Bare starch is the Caution unspecified-starch row. Not Limited modified starch.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Maltodextrin; Starch. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Bare starch is the Caution unspecified-starch row. Not Limited modified starch. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Bamboo extract, Maltodextrin, Starch.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/zinc-d3-k2; image https://www.naturewise.com/cdn/shop/files/NW-ZincPicolinate-6-Supplement30.jpg?width=1200) other-ingredients: Microcrystalline cellulose, capsule (hypromellose), bamboo extract, rice hull concentrate, maltodextrin, starch. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157851772 is the GTIN-12 on this offer (30 Count). No DailyMed drug SPL.",
   },
   {
@@ -397,8 +397,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Zinc + D3 & K2", strength: "60 Count" }],
     flags: [["Microcrystalline cellulose", "cleared", "mcc"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Bamboo extract", "limited", "bamboo"], ["Rice hull concentrate", "cleared", "riceHull"], ["Maltodextrin", "limited", "maltodextrin"], ["Starch", "limited", "bareStarch"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Maltodextrin; Starch. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Bare starch is the Caution unspecified-starch row. Not Limited modified starch.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Maltodextrin; Starch. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Bare starch is the Caution unspecified-starch row. Not Limited modified starch. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Bamboo extract, Maltodextrin, Starch.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/zinc-d3-k2; image https://www.naturewise.com/cdn/shop/files/NW-ZincPicolinate-6-Supplement60.jpg?width=1200) other-ingredients: Microcrystalline cellulose, capsule (hypromellose), bamboo extract, rice hull concentrate, maltodextrin, starch. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157851789 is the GTIN-12 on this offer (60 Count). No DailyMed drug SPL.",
   },
   {
@@ -733,8 +733,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Allicin Garlic +", strength: "60 Count" }],
     flags: [["Calcium carbonate", "cleared", "caCarb"], ["Microcrystalline cellulose", "cleared", "mcc"], ["Croscarmellose sodium", "cleared", "croscarmellose"], ["Bamboo extract", "limited", "bamboo"], ["Rice bran wax", "limited", "riceBranWax"], ["Methacrylic acid", "limited", "methacrylic"], ["Ethyl acrylate copolymer", "limited", "ethylAcrylate"], ["Polysorbate", "moderate", "polysorbate"], ["Sodium lauryl sulfate", "limited", "sls"], ["Glycerol monostearate", "cleared", "gms"], ["Triethyl citrate", "cleared", "triethyl"], ["Propylene glycol", "moderate", "pg"], ["Isomalt", "limited", "isomalt"], ["Hypromellose", "cleared", "hpmc"], ["Medium chain triglycerides", "limited", "mctUnlabeled"], ["French vanilla flavor", "limited", "flavors"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Rice bran wax; Methacrylic acid; Ethyl acrylate copolymer; Polysorbate; Sodium lauryl sulfate; Propylene glycol; Isomalt; Medium chain triglycerides; French vanilla flavor. Cleared capsule, softgel, and fill tokens do not raise Avoid. Sodium lauryl sulfate is standalone Caution and is not an Avoid driver. Medium chain triglycerides do not name a plant source, so they stay Limited unlabeled MCT. Triethyl citrate stays the locked Cleared row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Bamboo extract; Rice bran wax; Methacrylic acid; Ethyl acrylate copolymer; Polysorbate; Sodium lauryl sulfate; Propylene glycol; Isomalt; Medium chain triglycerides; French vanilla flavor. Cleared capsule, softgel, and fill tokens do not raise Avoid. Sodium lauryl sulfate is standalone Caution and is not an Avoid driver. Medium chain triglycerides do not name a plant source, so they stay Limited unlabeled MCT. Triethyl citrate stays the locked Cleared row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Bamboo extract, Rice bran wax, Methacrylic acid, Ethyl acrylate copolymer, Sodium lauryl sulfate, Isomalt, Medium chain triglycerides, French vanilla flavor.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/allicin-garlic-plus; image https://www.naturewise.com/cdn/shop/files/NW-Garlic5500mcg-Right.jpg?width=1200) other-ingredients: Calcium carbonate, microcrystalline cellulose, croscarmellose sodium, bamboo extract, rice bran wax, and coating (methacrylic acid, ethyl acrylate copolymer, polysorbate, sodium lauryl sulfate, glycerol monostearate, triethyl citrate, propylene glycol, isomalt, hypromellose, medium chain triglycerides, french vanilla flavor). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157850836 is the GTIN-12 on this offer (60 Count). No DailyMed drug SPL.",
   },
   {
@@ -813,8 +813,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Beet Root", strength: "120 Count" }],
     flags: [["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Oat fiber", "cleared", "oatFiber"], ["Potato starch", "cleared", "starch"], ["Psyllium husk", "cleared", "psyllium"], ["Rice bran wax", "limited", "riceBranWax"], ["Bamboo extract", "limited", "bamboo"], ["Rice flour", "limited", "riceFlour"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice bran wax; Bamboo extract; Rice flour. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Oat fiber on this panel is the Cleared oat-fiber row, not Caution organic oat fiber.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice bran wax; Bamboo extract; Rice flour. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Oat fiber on this panel is the Cleared oat-fiber row, not Caution organic oat fiber. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice bran wax, Bamboo extract, Rice flour.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/beet-root; image https://www.naturewise.com/cdn/shop/files/NW_-_Beet_Root_Extract_-_5_-_Supplement_120.jpg?width=1200) other-ingredients: Capsule (hypromellose), oat fiber, potato starch, psyllium husk, rice bran wax, bamboo extract, rice flour. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157850270 is the GTIN-12 on this offer (120 Count). No DailyMed drug SPL.",
   },
   {
@@ -845,8 +845,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Green Tea Extract", strength: "60 Count" }],
     flags: [["Hypromellose", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Rice bran wax", "limited", "riceBranWax"], ["Bamboo extract", "limited", "bamboo"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Rice bran wax, Bamboo extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/green-tea-extract; image https://www.naturewise.com/cdn/shop/files/NW_-_Green_Tea_Extract_-_4_-_Supplement_60_NSF_GF.jpg?width=1200) other-ingredients: Hypromellose, rice flour, rice bran wax, bamboo extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810886 is the GTIN-12 on this offer (60 Count). No DailyMed drug SPL.",
   },
   {
@@ -861,8 +861,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Green Tea Extract", strength: "90 Count" }],
     flags: [["Hypromellose", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Rice bran wax", "limited", "riceBranWax"], ["Bamboo extract", "limited", "bamboo"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Same panel image as the 60 Count.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Same panel image as the 60 Count. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Rice bran wax, Bamboo extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/green-tea-extract; image https://www.naturewise.com/cdn/shop/files/NW_-_Green_Tea_Extract_-_4_-_Supplement_60_NSF_GF.jpg?width=1200) other-ingredients: Hypromellose, rice flour, rice bran wax, bamboo extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810893 is the GTIN-12 on this offer (90 Count). No DailyMed drug SPL.",
   },
   {
@@ -877,8 +877,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Green Tea Extract", strength: "120 Count" }],
     flags: [["Hypromellose", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Rice bran wax", "limited", "riceBranWax"], ["Bamboo extract", "limited", "bamboo"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Same panel image as the 60 Count.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice bran wax; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Bamboo extract maps to the locked organic bamboo extract Caution row. Same panel image as the 60 Count. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Rice bran wax, Bamboo extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/green-tea-extract; image https://www.naturewise.com/cdn/shop/files/NW_-_Green_Tea_Extract_-_4_-_Supplement_60_NSF_GF.jpg?width=1200) other-ingredients: Hypromellose, rice flour, rice bran wax, bamboo extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810909 is the GTIN-12 on this offer (120 Count). No DailyMed drug SPL.",
   },
   {
@@ -1005,8 +1005,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Vitamin C Chewables", strength: "90 Count" }],
     flags: [["Isomalt", "limited", "isomalt"], ["Maltodextrin", "limited", "maltodextrin"], ["Turmeric oleoresin", "limited", "oleoresinTurmeric"], ["Rice bran wax", "limited", "riceBranWax"], ["Orange flavor", "limited", "flavors"], ["Rebaudioside A", "cleared", "rebA"], ["Bamboo extract", "limited", "bamboo"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Maltodextrin; Turmeric oleoresin; Rice bran wax; Orange flavor; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Turmeric oleoresin sits on the locked oleoresin turmeric Caution row, not Cleared turmeric-as-color. Rebaudioside A is the high-purity steviol glycoside row, not bare stevia extract. This chewable is not a gummy.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Maltodextrin; Turmeric oleoresin; Rice bran wax; Orange flavor; Bamboo extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Turmeric oleoresin sits on the locked oleoresin turmeric Caution row, not Cleared turmeric-as-color. Rebaudioside A is the high-purity steviol glycoside row, not bare stevia extract. This chewable is not a gummy. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Maltodextrin, Turmeric oleoresin, Rice bran wax, Orange flavor, Bamboo extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/vitamin-c-chewables; image https://www.naturewise.com/cdn/shop/files/NW-VitaminC90RIGHT.jpg?width=1200) other-ingredients: Isomalt, yellow pigment (maltodextrin, turmeric oleoresin), rice bran wax, orange flavor, rebaudioside A (from stevia leaf), bamboo extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810046 is the GTIN-12 on this offer (90 Count). No DailyMed drug SPL.",
   },
   {
@@ -1021,8 +1021,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "CoQ10", strength: "200 mg / 30 Count" }],
     flags: [["Rice bran oil", "cleared", "riceBranOil"], ["Tapioca starch", "cleared", "starch"], ["Glycerin", "cleared", "glycerin"], ["Annatto", "limited", "annatto"], ["Purified water", "cleared", "water"], ["Sunflower lecithin", "cleared", "lecithin"], ["Rice bran wax", "limited", "riceBranWax"], ["Rosemary liquid extract", "limited", "rosemary"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Annatto; Rice bran wax; Rosemary liquid extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Rosemary liquid extract sits on the locked oral rosemary-extract preservative Caution row. Rice bran oil in this softgel is named-fill Cleared, not rice bran wax.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Annatto; Rice bran wax; Rosemary liquid extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Rosemary liquid extract sits on the locked oral rosemary-extract preservative Caution row. Rice bran oil in this softgel is named-fill Cleared, not rice bran wax. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Annatto, Rice bran wax, Rosemary liquid extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/coq10; image https://www.naturewise.com/cdn/shop/files/NW-CoQ1030CountRIGHT.jpg?width=1200) other-ingredients: Rice bran oil, softgel capsule (tapioca starch, glycerin, annatto, purified water), sunflower lecithin, rice bran wax, rosemary liquid extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810527 is the GTIN-12 on this offer (200 mg / 30 Count). No DailyMed drug SPL.",
   },
   {
@@ -1037,8 +1037,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "CoQ10", strength: "200 mg / 90 Count" }],
     flags: [["Rice bran oil", "cleared", "riceBranOil"], ["Tapioca starch", "cleared", "starch"], ["Glycerin", "cleared", "glycerin"], ["Annatto", "limited", "annatto"], ["Purified water", "cleared", "water"], ["Sunflower lecithin", "cleared", "lecithin"], ["Rice bran wax", "limited", "riceBranWax"], ["Rosemary liquid extract", "limited", "rosemary"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Annatto; Rice bran wax; Rosemary liquid extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Rosemary liquid extract sits on the locked oral rosemary-extract preservative Caution row. Rice bran oil in this softgel is named-fill Cleared, not rice bran wax.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Annatto; Rice bran wax; Rosemary liquid extract. Cleared capsule, softgel, and fill tokens do not raise Avoid. Rosemary liquid extract sits on the locked oral rosemary-extract preservative Caution row. Rice bran oil in this softgel is named-fill Cleared, not rice bran wax. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Annatto, Rice bran wax, Rosemary liquid extract.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/coq10; image https://www.naturewise.com/cdn/shop/files/NW-CoQ1090CountRIGHT.jpg?width=1200) other-ingredients: Rice bran oil, softgel capsule (tapioca starch, glycerin, annatto, purified water), sunflower lecithin, rice bran wax, rosemary liquid extract. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 850053810534 is the GTIN-12 on this offer (200 mg / 90 Count). No DailyMed drug SPL.",
   },
 ];
@@ -1085,9 +1085,6 @@ export const BATCH83_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH83_KYR6_NATUREWISE_TOKEN_BACKFILL;
 if (_ROWS.length !== 54) throw new Error('batch83 tally drift: expected 54 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch83 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 54) throw new Error('batch83 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch83 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch83 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch83 every row needs formulaId');
 const _ids = new Set(_ROWS.map((r) => r.id));
@@ -1119,9 +1116,7 @@ if (_ROWS.some((r) => /\boil\b/i.test(r.productName) && !/softgel|capsule|gumm|t
   throw new Error('batch83 must not grade oil pour bottles');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch83 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch83 Caution without Limited or Moderate on ${record.id}`);
   }

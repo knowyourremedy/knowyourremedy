@@ -662,7 +662,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLANTA_GAS, 'Sucrose'),
       cleared(SET_MYLANTA_GAS, 'Tricalcium phosphate'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,
@@ -935,7 +935,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_GAVISCON_TABS, 'Sucrose'),
     ],
     activeSafetyFlag: ALOH_FLAG,
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTACID_ALTS,
@@ -1191,7 +1191,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_IMODIUM_MULTI, 'Microcrystalline cellulose'),
       cleared(SET_IMODIUM_MULTI, 'Stearic acid'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,

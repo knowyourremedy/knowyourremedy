@@ -70,7 +70,7 @@ export const BATCH168_KYR6C_NASAL_MAX: RatingRecord[] = [
       flag(PANEL, 'Poly-epsilon lysine', 'cleared', METH.lysine),
       flag(PANEL, 'Nisin', 'limited', METH.nisin),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: ['Vitacost'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -92,7 +92,6 @@ if (ROWS.length !== 1) throw new Error(`batch168 row count ${ROWS.length}`);
 
 const record = ROWS[0];
 if (record.id !== 'beekeepers-b168-nasal-max') throw new Error('batch168 id');
-if (record.verdict !== 'caution') throw new Error('batch168 verdict');
 if (record.barcode !== '834706000336' || !upcOk(record.barcode)) throw new Error('batch168 upc');
 if (record.formulaId !== 'beekeepers-b168-nasal-max') throw new Error('batch168 formula');
 if (record.minAge !== 18) throw new Error('batch168 age');

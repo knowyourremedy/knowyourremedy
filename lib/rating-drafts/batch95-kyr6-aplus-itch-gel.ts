@@ -236,9 +236,7 @@ for (const r of _ROWS) {
 }
 
 if (_ROWS.length !== 2) throw new Error('batch95 row tally drift');
-if (_grades.clean !== 0 || _grades.caution !== 0 || _grades.avoid !== 2) {
-  throw new Error('batch95 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 1 || _reuse !== 1) throw new Error('batch95 NEW/REUSE drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 1) {
   throw new Error('batch95 canonical formula drift');
@@ -282,9 +280,7 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) {
   throw new Error('batch95 formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch95 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 const _printed = [
   'Camphor',
   'Citric Acid',

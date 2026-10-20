@@ -1,6 +1,15 @@
 import type { RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from './plainLanguage';
 import { applyOverlayIngredientLocks } from './previewCatalog';
+import { verdictFromFlagsStrict } from './verdictFromFlags';
+
+export { verdictFromFlagsStrict } from './verdictFromFlags';
+export type { VerdictRollup } from './verdictFromFlags';
+export {
+  appendLimitedStackHonestNote,
+  computeVerdictFromInactiveIngredients,
+  isSiliconDioxideStackExempt,
+} from './verdictFromFlags';
 
 const T133U_CARNAUBA_LOCK_SOURCE =
   'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).';
@@ -35,23 +44,6 @@ export function splitCombinedIngredientTabs(record: RatingRecord): RatingRecord 
   }
   if (inactiveIngredients.length === record.inactiveIngredients.length) return record;
   return { ...record, inactiveIngredients };
-}
-
-function verdictRank(verdict: RatingRecord['verdict']): number {
-  if (verdict === 'avoid') return 2;
-  if (verdict === 'caution') return 1;
-  return 0;
-}
-
-export function verdictFromFlagsStrict(record: RatingRecord): RatingRecord['verdict'] {
-  const levels = record.inactiveIngredients.map((i) => i.riskLevel);
-  let verdict: RatingRecord['verdict'] = 'clean';
-  if (levels.includes('high')) verdict = 'avoid';
-  else if (levels.includes('moderate') || levels.includes('limited')) verdict = 'caution';
-  const cap = record.activeSafetyFlag?.cappedAt;
-  if (cap === 'avoid' || verdict === 'avoid') return 'avoid';
-  if (cap === 'caution' && verdictRank(verdict) < verdictRank('caution')) return 'caution';
-  return verdict;
 }
 
 // t132u overrides (founder lock set Oct 20, 2026)

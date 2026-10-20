@@ -29,7 +29,7 @@
 //   This hunt did not reopen that row.
 //
 // TALLY (unverified drafts in THIS file): 524 rows —
-// Clean 198 / Caution 315 / Avoid 11.
+// Clean 198 / Caution 312 / Avoid 14.
 // NEW 416 / REUSE-formula 108 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -1925,8 +1925,8 @@ const COMPACT: Compact[] = [
     productType: VITAMIN,
     actives: [{"name": "Vitamin B Complex Capsules", "strength": "label serving"}],
     flags: [["Dicalcium phosphate", "cleared", "dical"], ["Hypromellose (cellulose) capsule", "cleared", "hpmc"], ["Rice flour", "limited", "riceFlour"], ["Rice extract", "limited", "riceExtract"], ["Rice hulls", "cleared", "riceHull"], ["Gum arabic", "cleared", "acacia"], ["Sunflower oil", "cleared", "sunflowerFill"], ["Magnesium stearate", "cleared", "stearate"], ["Calcium silicate", "limited", "caSilicate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice extract; Calcium silicate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Rice flour; Rice extract; Calcium silicate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice flour, Rice extract, Calcium silicate.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-vitamin-b-complex-747mg-capsules; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_VitaminBComplex_460MG_120CAP_275CC_SFP_Square_1.jpg) other-ingredients: Dicalcium phosphate, hypromellose (cellulose) capsule, rice flour, rice extract blend (rice extract, Tice hulls, gum arabic, sunflower oil), magnesium stearate (vegetable source), calcium silicate. AOD non WwW Sy. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 702669933247 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -2549,8 +2549,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{"name": "Pre-Workout Complex With Creatine", "strength": "label serving"}],
     flags: [["Malic acid", "cleared", "malic"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Beta-carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Beta-carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Beta-carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Beta-carotene (for color).",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-pre-workout-complex-with-creatine; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Pre-C-PeachMango_30SERV_SFP.jpg) other-ingredients: Malic acid, natural & artificial flavors, citric 9 ‘A acid, sucralose, calcium silicate, silica, beta carotene (for color), feet root (for color) 1 i gM 0g! i &s. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810139570486 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -4740,8 +4740,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{"name": "Melatonin Tablets (Fast Dissolve)", "strength": "label serving"}],
     flags: [["Sugar alcohol", "limited", "polyol"], ["Microcrystalline cellulose", "cleared", "mcc"], ["Maltodextrin", "limited", "maltodextrin"], ["Povidone", "cleared", "povidone"], ["Magnesium stearate", "cleared", "stearate"], ["Artificial flavors", "limited", "artFlavor"], ["Sucralose", "moderate", "sucralose"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Sugar alcohol; Maltodextrin; Artificial flavors; Sucralose. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Sugar alcohol; Maltodextrin; Artificial flavors; Sucralose. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar alcohol, Maltodextrin, Artificial flavors.",
     cite: "Current nutricost.com supplement-facts panel (https://nutricost.com/products/nutricost-melatonin-tablets-fast-dissolve-5mg-240-tab; image https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_Melatonin_FastDissolve__5MG_240TAB_150CC_SFP_Square_f4181137-11f3-476a-86ab-2002f4275b43.jpg) other-ingredients: Mannitol, sorbitol, microcrystalline cellulose, maltodextrin, crospovidone, magnesium stearate, artificial flavor, sucralose. t. Brand-site pack image is the pin (every count/strength SFP on the product before a no_OI call). Live Amazon US exact pack when this Nutricost name is listed. UPC-A 810014673141 attached from nutricost.com variant barcode (exact count tab). No DailyMed drug SPL.",
   },
   {
@@ -9155,15 +9155,6 @@ export const BATCH76_OIL_HUNT: { name: string; url: string }[] = [
 
 const _ROWS = BATCH76_KYR6_AMAZON_3P_NUTRICOST;
 if (_ROWS.length !== 524) throw new Error('batch76 tally drift: expected 524 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 198) {
-  throw new Error('batch76 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 315) {
-  throw new Error('batch76 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 11) {
-  throw new Error('batch76 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch76 recordStatus must stay unverified');
 }
@@ -9196,9 +9187,7 @@ if (_ROWS.some((r) => /\boil\b/i.test(r.productName) && !/powder|softgel|capsule
   throw new Error('batch76 must not grade oil pour bottles');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch76 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch76 Caution without Limited or Moderate on ${record.id}`);
   }

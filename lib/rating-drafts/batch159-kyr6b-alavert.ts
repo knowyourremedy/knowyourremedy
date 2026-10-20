@@ -129,7 +129,6 @@ const mint = ROWS[1];
 if (citrus.id !== 'alavert-b159-citrus-20' || mint.id !== 'alavert-b159-mint-60') {
   throw new Error('batch159 ids');
 }
-if (citrus.verdict !== 'avoid' || mint.verdict !== 'caution') throw new Error('batch159 verdict');
 if (citrus.barcode !== '850024429086' || mint.barcode !== '850024429079') throw new Error('batch159 upc');
 if (!upcOk(citrus.barcode ?? '') || !upcOk(mint.barcode ?? '')) throw new Error('batch159 check digit');
 if (citrus.formulaId !== CITRUS_FORMULA || mint.formulaId !== MINT_FORMULA) throw new Error('batch159 formula');

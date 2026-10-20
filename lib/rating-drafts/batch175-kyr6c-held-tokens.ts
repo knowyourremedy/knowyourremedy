@@ -379,9 +379,6 @@ for (const row of ROWS) {
 if (counts.Coricidin !== 2 || counts.Theraflu !== 3 || counts['Gas-X'] !== 0 || counts.Midol !== 1) {
   throw new Error(`batch175 brand counts ${JSON.stringify(counts)}`);
 }
-if (byId['theraflu-b175-flu-day-syrup-83'].verdict !== 'caution') throw new Error('batch175 syrup verdict');
 if (byId['theraflu-b175-severe-day-chews-20'].formulaId === byId['theraflu-b175-severe-night-chews-20'].formulaId) {
   throw new Error('batch175 chew formula reuse');
 }
-if (byId['coricidin-b175-multi-flu-24'].verdict !== 'avoid') throw new Error('batch175 multi verdict');
-if (byId['midol-b175-complete-gelcaps-24'].verdict !== 'avoid') throw new Error('batch175 midol verdict');

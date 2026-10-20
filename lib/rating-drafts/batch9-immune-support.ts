@@ -636,7 +636,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
         labelCite(SN_TABS_CITE, METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods', 'Sprouts', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -683,7 +683,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
         labelCite(SN_CAPS_CITE, METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods', 'Sprouts', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -967,7 +967,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       flag('Isomalt', 'limited', dailymed(SET_COLDEEZE_ACEK, METH.sugarAlcohol)),
       cleared(SET_COLDEEZE_ACEK, 'Glycine'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -1121,7 +1121,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_ZICAM_ULTRA, 'Sodium starch glycolate'),
       cleared(SET_ZICAM_ULTRA, 'Stearic acid'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,

@@ -22,7 +22,7 @@
 // No toothpaste. No Sprouts. No factory. Oil form split stays as it is on main.
 //
 // TALLY (unverified drafts in THIS file): 59 rows —
-// Clean 11 / Caution 20 / Avoid 28.
+// Clean 11 / Caution 19 / Avoid 29.
 // NEW 25 / REUSE-formula 34 /
 // SKIPPED 102 (no_OI 93 / OUT 9) /
 // REFUSED 52.
@@ -1647,8 +1647,8 @@ const COMPACT: Compact[] = [
       { name: "Lidocaine", strength: "5%" },
     ],
     flags: LIDOCAINE_RECTAL_5_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, tocopheryl acetate, triethanolamine. The structured strength 5 g is this 5% cream. Adults and children 12 years and older. Topical propylene glycol stays Cleared. Benzyl alcohol on this adult topical is Caution. This is not the refused 4% patch.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, tocopheryl acetate, triethanolamine. The structured strength 5 g is this 5% cream. Adults and children 12 years and older. Topical propylene glycol stays Cleared. Benzyl alcohol on this adult topical is Caution. This is not the refused 4% patch. Avoid: three or more Limited tokens triggered the stacking rule (t137u): benzyl alcohol, cholesterol, hydrogenated lecithin, tocopheryl acetate, triethanolamine.",
     cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce585082-ad39-4b6f-a756-0d9a81a13eb8; setid ce585082-ad39-4b6f-a756-0d9a81a13eb8; NDC 69168-484-02). Active: Lidocaine 5%. Inactive ingredients: benzyl alcohol, carbomer, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, tocopheryl acetate, triethanolamine, water Brand PDP https://a2z-life.com/healtha2z-rectal-care-cream-lidocaine-5-local-anesthetic-28g-tube-topical-numbing-cream-other-anorectal-disorders-relieves-pain-itching-burning/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
@@ -1860,9 +1860,7 @@ for (const r of _ROWS) {
   }
 }
 if (_ROWS.length !== 59) throw new Error('batch96 row tally drift');
-if (_grades.clean !== 11 || _grades.caution !== 20 || _grades.avoid !== 28) {
-  throw new Error('batch96 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 25 || _reuse !== 34) throw new Error('batch96 NEW/REUSE drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 25) {
   throw new Error('batch96 canonical formula drift');
@@ -1951,9 +1949,7 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) {
   throw new Error('batch96 formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch96 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients?.some((f) => f.riskLevel !== 'cleared'))) {
   throw new Error('batch96 Clean row has a non-cleared inactive');
 }

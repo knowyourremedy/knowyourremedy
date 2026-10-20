@@ -199,15 +199,6 @@ export const BATCH114_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH114_KYR6B_NATUREWISE_NO_OI;
 if (_ROWS.length !== 2) throw new Error('batch114 tally drift: expected 2 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) {
-  throw new Error('batch114 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) {
-  throw new Error('batch114 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch114 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch114 recordStatus must stay unverified');
 }
@@ -243,9 +234,7 @@ if (
   throw new Error('batch114 must not grade oil pour bottles');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch114 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (
     record.verdict === 'caution' &&
     !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')

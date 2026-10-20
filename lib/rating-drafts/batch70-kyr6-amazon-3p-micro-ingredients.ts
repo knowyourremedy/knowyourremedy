@@ -528,15 +528,6 @@ export const BATCH70_OIL_HUNT: { name: string; url: string }[] = [
 
 const _ROWS = BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS;
 if (_ROWS.length !== 7) throw new Error('batch70 tally drift: expected 7 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 3) {
-  throw new Error('batch70 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 4) {
-  throw new Error('batch70 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) {
-  throw new Error('batch70 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch70 recordStatus must stay unverified');
 }

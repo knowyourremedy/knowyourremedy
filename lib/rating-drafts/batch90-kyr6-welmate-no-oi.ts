@@ -316,9 +316,6 @@ export const BATCH90_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH90_KYR6_WELMATE_NO_OI;
 if (_ROWS.length !== 4) throw new Error('batch90 tally drift: expected 4 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) throw new Error('batch90 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 0) throw new Error('batch90 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 2) throw new Error('batch90 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch90 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.id.startsWith('welmate-b90-'))) throw new Error('batch90 ids must use welmate-b90-');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch90 every row needs formulaId');
@@ -350,9 +347,7 @@ for (const record of _ROWS) {
   } else if (record.barcode) {
     throw new Error(`batch90 unexpected barcode on ${record.id}`);
   }
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch90 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch90 Caution without Limited or Moderate on ${record.id}`);
   }

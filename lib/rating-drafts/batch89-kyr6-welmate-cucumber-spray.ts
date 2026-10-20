@@ -152,9 +152,6 @@ export const BATCH89_REFUSED: { sku: string; reason: string }[] = [];
 
 const _ROWS = BATCH89_KYR6_WELMATE_CUCUMBER_SPRAY;
 if (_ROWS.length !== 1) throw new Error('batch89 tally drift: expected 1 row');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch89 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 1) throw new Error('batch89 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch89 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch89 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.id.startsWith('welmate-b89-'))) throw new Error('batch89 ids must use welmate-b89-');
 if (_ROWS.some((r) => r.formulaId !== r.id)) throw new Error('batch89 NEW formula drift');

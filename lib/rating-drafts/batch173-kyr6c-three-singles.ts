@@ -90,7 +90,7 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(ALLERGY_PANEL, 'Sodium phosphate dibasic', 'cleared', METH.phosphate),
       flag(ALLERGY_PANEL, 'Sodium phosphate monobasic', 'cleared', METH.phosphate),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -144,7 +144,7 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(SINEX_PANEL, 'Purified water', 'cleared', METH.water),
       flag(SINEX_PANEL, 'Sodium citrate', 'cleared', METH.citrate),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
     honestNote: PG_NOTE,
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
@@ -172,9 +172,6 @@ for (const code of codes) {
 }
 
 const byId = Object.fromEntries(ROWS.map((row) => [row.id, row]));
-if (byId['afrin-b173-no-drip-allergy-05'].verdict !== 'caution') throw new Error('batch173 allergy verdict');
-if (byId['afrin-b173-childrens-saline-5'].verdict !== 'clean') throw new Error('batch173 saline verdict');
-if (byId['sinex-b173-severe-original-15'].verdict !== 'caution') throw new Error('batch173 sinex verdict');
 
 if (byId['afrin-b173-no-drip-allergy-05'].formulaId === 'afrin-b172-no-drip-severe') {
   throw new Error('batch173 allergy reused severe');

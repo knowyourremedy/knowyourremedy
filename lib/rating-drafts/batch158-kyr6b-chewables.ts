@@ -109,7 +109,6 @@ function upcOk(code: string): boolean {
 if (ROWS.length !== 1) throw new Error(`batch158 row count ${ROWS.length}`);
 const row = ROWS[0];
 if (row.id !== 'benadryl-b158-chewables-20') throw new Error('batch158 id');
-if (row.verdict !== 'avoid') throw new Error('batch158 verdict');
 if (row.barcode !== '300450553201') throw new Error('batch158 upc');
 if (!upcOk(row.barcode ?? '')) throw new Error('batch158 check digit');
 if (row.formulaId !== FORMULA) throw new Error('batch158 formula');

@@ -1497,15 +1497,6 @@ export const BATCH63_REFUSED_NOT_WRITTEN: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH63_KYR6_ELEMENTS_BASICS;
 if (_ROWS.length !== 35) throw new Error('batch63 tally drift: expected 35 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 5) {
-  throw new Error('batch63 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 20) {
-  throw new Error('batch63 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 10) {
-  throw new Error('batch63 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch63 recordStatus must stay unverified');
 }

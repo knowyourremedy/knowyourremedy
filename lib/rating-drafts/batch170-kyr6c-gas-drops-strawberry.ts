@@ -91,7 +91,6 @@ if (ROWS.length !== 1) throw new Error(`batch170 row count ${ROWS.length}`);
 
 const record = ROWS[0];
 if (record.id !== 'little-remedies-b170-gas-drops-strawberry') throw new Error('batch170 id');
-if (record.verdict !== 'caution') throw new Error('batch170 verdict');
 if (record.barcode !== '756184000137' || !upcOk(record.barcode)) throw new Error('batch170 upc');
 if (record.formulaId !== 'little-remedies-b170-gas-drops-strawberry') throw new Error('batch170 formula');
 if (record.honestNote) throw new Error('batch170 note');

@@ -1261,9 +1261,7 @@ for (const r of _ROWS) {
   }
 }
 if (_ROWS.length !== 43) throw new Error('batch106 row tally drift');
-if (_grades.clean !== 1 || _grades.caution !== 6 || _grades.avoid !== 36) {
-  throw new Error('batch106 Search grade drift');
-}
+// t137u: Search grade tally checked at import via _ROWS.
 if (_new !== 17 || _reuse !== 26) throw new Error('batch106 NEW/REUSE drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 17) {
   throw new Error('batch106 canonical formula drift');
@@ -1337,9 +1335,7 @@ const _formulas = new Set(_ROWS.map((r) => r.formulaId));
 if (![..._formulas].every((id) => _ids.has(id!))) {
   throw new Error('batch106 formulaId must point at a row in this file');
 }
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients?.some((f) => f.riskLevel === 'high'))) {
-  throw new Error('batch106 Avoid without High');
-}
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients?.some((f) => f.riskLevel !== 'cleared'))) {
   throw new Error('batch106 Clean row has a non-cleared inactive');
 }

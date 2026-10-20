@@ -863,7 +863,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_DYEFREE, 'Microcrystalline cellulose'),
       cleared(SET_MYLICON_DYEFREE, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,

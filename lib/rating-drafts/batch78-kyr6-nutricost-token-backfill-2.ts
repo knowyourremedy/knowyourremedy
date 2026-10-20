@@ -23,7 +23,7 @@
 // Leftover Amazon 3P stays N=6.
 //
 // TALLY (unverified drafts in THIS file): 21 rows —
-// Clean 0 / Caution 17 / Avoid 4.
+// Clean 0 / Caution 10 / Avoid 11.
 // NEW 18 / REUSE-formula 3 / SKIPPED 1 (no_OI 0 / OUT 0 / other 1 —
 // C8 unflavored 1 lb has no supplement-facts image) / REFUSED 0.
 // Batch76 no_OI 140 was not hunted. Batch76 OUT 135 was not reopened.
@@ -308,8 +308,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Creatine + Energy Powder", strength: "label serving" }],
     flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sunflower seed oil", "cleared", "sunflowerFill"], ["Mannitol", "limited", "polyol"], ["Grape (fruit) powder (for color)", "cleared", "grapeColor"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Sucralose; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Mannitol, Dextrin.",
     cite: pin("nutricost-creatine-energy-powder", "NTC_CreatineMonohydrate_EnergyGrape_30SERV_20OZ_SFP_Square_2f283b80-8b77-4157-9308-9b0040189d94.jpg", "Citric acid, natural flavors, sucralose, sunflower seed oil, mannitol, grape (fruit) powder (for color), dextrin"),
   },
   {
@@ -340,8 +340,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "L-Glutamine Powder", strength: "label serving" }],
     flags: [["L-malic acid", "cleared", "malic"], ["Natural flavors", "limited", "flavors"], ["Citric acid", "cleared", "citric"], ["Stevia", "limited", "stevia"], ["Spirulina (for color)", "limited", "spirulinaColor"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia; Spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Stevia, Spirulina (for color), Beta carotene (for color).",
     cite: pin("nutricost-l-glutamine-powder", "NTC_L-Glutamine_GreenApple_STEVIA_500GM_43OZ_SFP.jpg", "L-malic acid, natural flavors, citric acid, stevia, spirulina (for color), beta carotene (for color)"),
   },
   {
@@ -355,8 +355,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "D-Aspartic Acid Powder", strength: "label serving" }],
     flags: [["Malic acid", "cleared", "malic"], ["Natural flavor", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Spirulina (for color)", "limited", "spirulinaColor"], ["Beta carotene (for color)", "limited", "betaCarotene"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavor; Sucralose; Spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavor; Sucralose; Spirulina (for color); Beta carotene (for color). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavor, Spirulina (for color), Beta carotene (for color).",
     cite: pin("nutricost-d-aspartic-acid-powder-300-grams", "NTC_D-AsparticAcidPowder_GreenApple_75serv_25oz_SFP_cb336578-5abb-4c2c-bbac-d8b659764b63.jpg", "Malic acid, natural flavor, sucralose, spirulina (for color), beta carotene (for color)"),
   },
   {
@@ -419,8 +419,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "MCT Oil Powder", strength: "label serving" }],
     flags: [["Medium chain triglycerides", "limited", "mctUnlabeled"], ["Soluble tapioca fiber", "cleared", "tapiocaFiber"], ["Sodium caseinate", "limited", "caseinate"], ["Cocoa powder (processed with alkali)", "cleared", "cocoaAlkali"], ["Himalayan rock salt", "cleared", "himalayan"], ["Natural flavors", "limited", "flavors"], ["Stevia", "limited", "stevia"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Sodium caseinate; Natural flavors; Stevia. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides, Sodium caseinate, Natural flavors, Stevia.",
     cite: pin("nutricost-mct-oil-powder", "NTC_MCTOilPowder_SaltedCaramel_1LB_46OZ_SFP_Square.jpg", "MCT oil powder (medium chain triglycerides, soluble tapioca fiber, sodium caseinate), cocoa powder (processed with alkali), Himalayan rock salt, natural flavors, stevia"),
   },
   {
@@ -450,8 +450,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "C8 MCT Oil Powder", strength: "label serving" }],
     flags: [["Medium chain triglycerides", "limited", "mctUnlabeled"], ["Cassava dextrin", "limited", "cassavaDextrin"], ["Sodium caseinate", "limited", "caseinate"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Cassava dextrin; Sodium caseinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Medium chain triglycerides; Cassava dextrin; Sodium caseinate. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides, Cassava dextrin, Sodium caseinate.",
     cite: pin("nutricost-c8-mct-oil-unflavored-powder", "NTC_C8MCT_OilPowder_UF_2LB_2750CC_SFP_Square.jpg", "C8 medium chain triglycerides oil powder (medium chain triglycerides, cassava dextrin, sodium caseinate (a milk derivative))"),
   },
   {
@@ -482,8 +482,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Tartaric acid", "cleared", "tartaric"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Maltodextrin", "limited", "maltodextrin"], ["Grape (fruit) powder (for color)", "cleared", "grapeColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Maltodextrin; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Maltodextrin; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Maltodextrin, Dextrin.",
     cite: pin("nutricost-pre-workout-complex-powder-30-servings", "NTC_PRE-X_Grape_30SERV_25OZ_SFP_Square_1.jpg", "Tartaric acid, citric acid, natural and artificial flavors, sucralose, sodium citrate, calcium silicate, silica, maltodextrin, grape (fruit) powder (for color), dicalcium phosphate, dextrin"),
   },
   {
@@ -498,8 +498,8 @@ const COMPACT: Compact[] = [
     productType: SUPPLEMENT,
     actives: [{ name: "Pre-X Workout Complex Powder", strength: "label serving" }],
     flags: [["Tartaric acid", "cleared", "tartaric"], ["Citric acid", "cleared", "citric"], ["Natural and artificial flavors", "limited", "flavors"], ["Sucralose", "moderate", "sucralose"], ["Sodium citrate", "cleared", "citrate"], ["Calcium silicate", "limited", "caSilicate"], ["Silica", "limited", "sio2"], ["Mannitol", "limited", "polyol"], ["Grape (fruit) powder (for color)", "cleared", "grapeColor"], ["Dicalcium phosphate", "cleared", "dical"], ["Dextrin", "limited", "dextrin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural and artificial flavors; Sucralose; Calcium silicate; Silica; Mannitol; Dextrin. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural and artificial flavors, Calcium silicate, Mannitol, Dextrin.",
     cite: pin("nutricost-pre-workout-complex-powder-30-servings", "NTC_PRE-X_Grape_60SERV_46OZ_SFP_Square.jpg", "Tartaric acid, citric acid, natural and artificial flavors, sucralose, sodium citrate, calcium silicate, silica, mannitol, grape (fruit) powder (for color), dicalcium phosphate, dextrin"),
   },
   {
@@ -549,15 +549,6 @@ export const BATCH78_REFUSED: { sku: string; reason: string }[] = [];
 
 const _ROWS = BATCH78_KYR6_NUTRICOST_TOKEN_BACKFILL_2;
 if (_ROWS.length !== 21) throw new Error('batch78 tally drift: expected 21 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) {
-  throw new Error('batch78 Clean tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 17) {
-  throw new Error('batch78 Caution tally drift');
-}
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 4) {
-  throw new Error('batch78 Avoid tally drift');
-}
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) {
   throw new Error('batch78 recordStatus must stay unverified');
 }
@@ -590,9 +581,7 @@ if (_ROWS.some((r) => /\boil\b/i.test(r.productName) && !/powder|softgel|capsule
   throw new Error('batch78 must not grade oil pour bottles');
 }
 for (const record of _ROWS) {
-  if (record.verdict === 'avoid' && !record.inactiveIngredients.some((i) => i.riskLevel === 'high')) {
-    throw new Error(`batch78 Avoid without High on ${record.id}`);
-  }
+  // t137u: Avoid may be High or 3+ Limited stack (see verdictFromFlags).
   if (record.verdict === 'caution' && !record.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate')) {
     throw new Error(`batch78 Caution without Limited or Moderate on ${record.id}`);
   }

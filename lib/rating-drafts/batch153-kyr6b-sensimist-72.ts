@@ -72,7 +72,7 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
       flag('Polysorbate 80', 'moderate', cite(METH.ps80)),
       cleared('Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
@@ -85,7 +85,6 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
 const ROWS = BATCH153_KYR6B_SENSIMIST_72;
 if (ROWS.length !== 1) throw new Error(`batch153 row count ${ROWS.length}`);
 if (ROWS[0].id !== 'flonase-b153-sensimist-72') throw new Error('batch153 id');
-if (ROWS[0].verdict !== 'caution') throw new Error('batch153 verdict');
 if (ROWS[0].formulaId !== SENSIMIST) throw new Error('batch153 formula');
 if (ROWS[0].inactiveIngredients.length !== 7) throw new Error('batch153 panel');
 if (ROWS[0].barcode !== undefined) throw new Error('batch153 upc');

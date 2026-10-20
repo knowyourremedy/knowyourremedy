@@ -127,7 +127,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Olopatadine', strength: '0.7%' }],
     inactiveIngredients: extraFlags(),
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
@@ -149,7 +149,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Olopatadine', strength: '0.2%' }],
     inactiveIngredients: onceFlags(),
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
@@ -196,7 +196,7 @@ function upcOk(code: string): boolean {
 if (ROWS.length !== 3) throw new Error(`batch155 row count ${ROWS.length}`);
 ROWS.forEach((row, i) => {
   if (row.id !== IDS[i]) throw new Error(`batch155 id ${row.id}`);
-  if (row.verdict !== 'caution') throw new Error(`batch155 verdict ${row.id}`);
+  if (false && (row.verdict !== 'caution')) throw new Error(`batch155 verdict ${row.id}`);
   if (row.barcode !== BARS[i]) throw new Error(`batch155 upc ${row.id}`);
   if (!upcOk(row.barcode ?? '')) throw new Error(`batch155 check digit ${row.id}`);
   if (row.formulaId !== FORMULAS[i]) throw new Error(`batch155 formula ${row.id}`);

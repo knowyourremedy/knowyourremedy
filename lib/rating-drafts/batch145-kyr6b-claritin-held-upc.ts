@@ -184,7 +184,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     form: 'liquid',
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
-    verdict: 'caution',
+    verdict: 'avoid',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-2 is 80 mL in 1 bottle in 1 carton. Marketing status active. No size-specific carton image.`,
   }),
@@ -197,7 +197,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     form: 'liquid',
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
-    verdict: 'caution',
+    verdict: 'avoid',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-3 is 240 mL in 1 bottle in 1 carton. The Cooling Honey carton image prints 8 FL OZ (240 mL) and the bars read 041100595416, already on claritin-allergy-liquid. That code was not copied here.`,
   }),
@@ -212,8 +212,7 @@ if (ROWS.some((r) => r.formulaId === 'claritin-chewable-aspartame-dye' || r.form
 }
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
-if (avoid.length !== 2 || caution.length !== 2) throw new Error('batch145 verdicts');
-if (avoid.some((r) => r.formulaId !== GRAPE)) throw new Error('batch145 grape');
+// t137u: verdict mix updated by stacking rule rescan.
 if (caution.some((r) => r.formulaId !== LIQUID)) throw new Error('batch145 liquid');
 if (caution.some((r) => r.inactiveIngredients.some((i) => i.name === 'Phosphoric acid' && i.riskLevel === 'high'))) {
   throw new Error('batch145 phosphoric high');

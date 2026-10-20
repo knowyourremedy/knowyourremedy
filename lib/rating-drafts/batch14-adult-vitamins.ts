@@ -278,7 +278,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       ),
       labelCleared(MEGAFOOD_CITE, 'Rice protein'),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: ['Whole Foods', 'Sprouts', 'Vitamin shops'],
     sourcesGeneral: [

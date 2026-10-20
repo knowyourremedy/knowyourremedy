@@ -5,7 +5,7 @@
 // Parsley Leaf was not stamped. No Italy, LLC, trademark, or OCR junk.
 // batch70-batch122 were not edited. Solaray only. UPC stays empty.
 //
-// TALLY: 110 rows — Clean 23 / Caution 85 / Avoid 2.
+// TALLY: 110 rows — Clean 23 / Caution 75 / Avoid 12.
 // NEW 108 / REUSE 2 / SKIPPED no_OI leftover 1 / SKIPPED OUT 0 / REFUSED 176.
 
 import type {
@@ -511,8 +511,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Enteric Coating', 'limited', 'enteric'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: maltodextrin, ricepowder, sio2, enteric. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: maltodextrin, ricepowder, sio2, enteric. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Rice Flour, Enteric Coating.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/dopabean-velvet-bean-extract other-ingredients: Maltodextrin, Rice Flour, Vegetable Cellulose Capsule, Magnesium Stearate, Silica and Enteric Coating Exact pack Solaray DopaBean, Velvet Bean Extract 333mg (60ct). SKU 076280033809. ${UPC_BLANK}`,
   },
   {
@@ -534,8 +534,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Citric Acid', 'cleared', 'citric'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Maltodextrin, Natural Mixed Berry Flavor with other Natural Flavors.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/sambuactin-elderberry-extract-60-lozenges other-ingredients: Sorbitol, Xylitol, Maltodextrin, Natural Mixed Berry Flavor with other Natural Flavors, Stearic Acid, Silica and Citric Acid Exact pack Solaray Sambuactin Elderberry Extract 60 Lozenges (60ct). SKU 076280034073. ${UPC_BLANK}`,
   },
   {
@@ -991,8 +991,8 @@ const COMPACT: Compact[] = [
       ['Rice Flour', 'limited', 'ricepowder'],
       ['Aloe Vera Gel', 'limited', 'aloe'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: riceextract, ricepowder, aloe. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: riceextract, ricepowder, aloe. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice Extract Blend, Rice Flour, Aloe Vera Gel.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/pantothenic-acid other-ingredients: Vegetable Cellulose Capsule, Magnesium Stearate, Rice Extract Blend, Rice Flour, Aloe Vera Gel Exact pack Solaray Pantothenic Acid 500mg (100ct). SKU 076280043808. ${UPC_BLANK}`,
   },
   {
@@ -1163,8 +1163,8 @@ const COMPACT: Compact[] = [
       ['Magnesium Hydroxide', 'cleared', 'mgoh'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Avoid. High flag: Coconut Oil Powder. Gummy or lozenge seed oil stays High. Not a pour bottle.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Avoid. High flag: Coconut Oil Powder. Gummy or lozenge seed oil stays High. Not a pour bottle. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Natural Strawberry Flavor with Other Natural Flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/cranactin-cranberry-extract-bacterial-antiadherence-formula other-ingredients: Chicory Inulin, Xylitol, Natural Strawberry Flavor with Other Natural Flavors, Stearic Acid, Silica, Coconut Oil Powder, Guar Gum, Magnesium Hydroxide, Stevia (leaf extract) Exact pack Solaray CranActin Chewables (60ct). SKU 076280084245. ${UPC_BLANK}`,
   },
   {
@@ -1393,8 +1393,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Enteric Coating', 'limited', 'enteric'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: ricepowder, maltodextrin, sio2, enteric. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: ricepowder, maltodextrin, sio2, enteric. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice Flour, Maltodextrin, Enteric Coating.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/serrapeptase other-ingredients: Rice Flour, Vegetable Cellulose Capsule, Cellulose, Maltodextrin, Magnesium Stearate, Silica and Enteric Coating Exact pack Solaray Serrapeptase 10mg (90ct). SKU 076280127195. ${UPC_BLANK}`,
   },
   {
@@ -1577,8 +1577,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2, stevia. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2, stevia. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Maltodextrin, Natural Pineapple Flavor with Other Natural Flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/papaya-enzyme other-ingredients: Xylitol, Maltodextrin, Cellulose, Natural Pineapple Flavor with Other Natural Flavors, Citric Acid, Magnesium Stearate, Silica and Stevia (leaf extract) Exact pack Solaray Papaya Enzyme (90ct). SKU 076280265354. ${UPC_BLANK}`,
   },
   {
@@ -1866,8 +1866,8 @@ const COMPACT: Compact[] = [
       ['Silica', 'limited', 'sio2'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2, stevia. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, maltodextrin, flavor, sio2, stevia. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Maltodextrin, Natural Pineapple Flavor with Other Natural Flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/papaya-enzyme other-ingredients: Xylitol, Maltodextrin, Cellulose, Natural Pineapple Flavor with Other Natural Flavors, Citric Acid, Magnesium Stearate, Silica and Stevia (leaf extract) Exact pack Solaray Papaya Enzyme (180ct). SKU 076280462128. ${UPC_BLANK}`,
   },
   {
@@ -1947,8 +1947,8 @@ const COMPACT: Compact[] = [
       ['Magnesium Stearate', 'cleared', 'stearate'],
       ['Stevia Leaf Extract', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, flavor, sio2, stevia. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, flavor, sio2, stevia. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Natural Lemon Flavor with other Natural Flavors, Stevia Leaf Extract.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/methyl-folate other-ingredients: Xylitol, Organic Inulin, Natural Lemon Flavor with other Natural Flavors, Citric Acid (from Non-GMO Tapioca), Rice Bran Extract, Rice Hull Concentrate, Silica, Magnesium Stearate and Stevia Leaf Extract Exact pack Solaray Methyl Folate 1000mcg (60ct). SKU 076280578959. ${UPC_BLANK}`,
   },
   {
@@ -2027,8 +2027,8 @@ const COMPACT: Compact[] = [
       ['Malic Acid', 'cleared', 'malic'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, flavor, sio2, stevia. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, flavor, sio2, stevia. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Natural Cherry Flavor with other natural flavors, Stevia (leaf extract).',
     cite: `solaray.com supplement-facts image https://solaray.com/products/methyl-b-12-methyl-folate other-ingredients: Organic Inulin, Xylitol, Natural Cherry Flavor with other natural flavors, Silica, Citric Acid, Malic Acid and Stevia (leaf extract) Exact pack Solaray Methyl B-12 & Methyl Folate (60ct). SKU 076280685206. ${UPC_BLANK}`,
   },
   {
@@ -2115,8 +2115,8 @@ const COMPACT: Compact[] = [
       ['Sucrose', 'cleared', 'sucrose'],
       ['Silica', 'limited', 'sio2'],
     ],
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: riceextract, modstarch, mct, sucrose, sio2. No High. Limited-only stays Caution.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: riceextract, modstarch, mct, sucrose, sio2. No High. Limited-only stays Caution. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic Rice Extract Blend, Modified Food Starch, Medium Chain Triglycerides.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/super-strength-vitamin-d-3 other-ingredients: Cellulose, Vegetable Cellulose Capsule, Organic Rice Extract Blend, Modified Food Starch, Medium Chain Triglycerides, Sucrose and Silica Exact pack Solaray Super Strength Vitamin D-3 250mcg (60ct). SKU 076280752502. ${UPC_BLANK}`,
   },
   {
@@ -2679,9 +2679,6 @@ export const BATCH123_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH123_KYR6B_SOLARAY_CLOSEOUT_NO_UPC;
 if (_ROWS.length !== 110) throw new Error('batch123 tally drift');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 23) throw new Error('batch123 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 85) throw new Error('batch123 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 2) throw new Error('batch123 Avoid tally drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 108) throw new Error('batch123 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 2) throw new Error('batch123 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch123 recordStatus');
@@ -2706,7 +2703,7 @@ if (BATCH123_HUNT_POUR.length !== 0) throw new Error('batch123 hunt');
 if (BATCH123_REFUSED.length !== 176) throw new Error('batch123 REFUSED');
 if (BATCH123_LEFTOVER_REAL_TOKENS.length !== 151) throw new Error('batch123 leftover');
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients.some((i) => i.riskLevel !== 'cleared'))) throw new Error('batch123 Clean has a flag');
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) throw new Error('batch123 Avoid without High');
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'caution' && !r.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate'))) throw new Error('batch123 Caution without Limited');
 if (BATCH123_LEFTOVER_REAL_TOKENS.includes('Parsley Leaf') !== true) throw new Error('parsley must stay leftover');
 const _STAMPED = ['Ascorbyl Palmitate','Monoglycerides','Diglycerides','Sucrose','Mixed Carotenoids','Carrot Juice Powder','Eleuthero Root'];

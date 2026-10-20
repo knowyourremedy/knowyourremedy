@@ -6,7 +6,7 @@
 // Parsley Leaf was not stamped. No Italy, LLC, trademark, or OCR junk.
 // batch70-batch124 were not edited. Solaray only. UPC stays empty.
 //
-// TALLY: 34 rows — Clean 2 / Caution 31 / Avoid 1.
+// TALLY: 34 rows — Clean 2 / Caution 28 / Avoid 4.
 // NEW 29 / REUSE 5 / SKIPPED no_OI leftover 1 / SKIPPED OUT 0 / REFUSED 132.
 
 import type {
@@ -426,8 +426,8 @@ const COMPACT: Compact[] = [
       ["Rice Flour", "limited", "ricepowder"],
       ["Aloe Vera Gel", "limited", "aloe"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Aloe Vera Gel = aloe as OI Caution. The discussion sentence after the Other Ingredients line is not an ingredient. Same OI as the 100ct. REUSE formula solaray-b123-076280043808. Driver families: Rice Extract Blend, Rice Flour, Aloe Vera Gel. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Aloe Vera Gel = aloe as OI Caution. The discussion sentence after the Other Ingredients line is not an ingredient. Same OI as the 100ct. REUSE formula solaray-b123-076280043808. Driver families: Rice Extract Blend, Rice Flour, Aloe Vera Gel. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Rice Extract Blend, Rice Flour, Aloe Vera Gel.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/pantothenic-acid other-ingredients: Vegetable Cellulose Capsule, Magnesium Stearate, Rice Extract Blend, Rice Flour, Aloe Vera Gel. Token map: Aloe Vera Gel = aloe as OI Caution. The discussion sentence after the Other Ingredients line is not an ingredient. Same OI as the 100ct. REUSE formula solaray-b123-076280043808. Exact pack Solaray Pantothenic Acid 500mg (250ct). SKU 076280043815. " + UPC_BLANK,
   },
   {
@@ -455,8 +455,8 @@ const COMPACT: Compact[] = [
       ["Calcium Silicate", "limited", "casil"],
       ["Acerola (fruit juice)", "cleared", "acerola"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Rose Hips (fruit) = botanical Cleared. Acerola (fruit juice) = organic acerola Cleared. Panel says chewable tablet. Driver families: Sorbitol, Fructose, Xylitol, Natural Cherry Flavor with other Natural Flavors, Stevia (leaf extract), Silica, Calcium Silicate. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Rose Hips (fruit) = botanical Cleared. Acerola (fruit juice) = organic acerola Cleared. Panel says chewable tablet. Driver families: Sorbitol, Fructose, Xylitol, Natural Cherry Flavor with other Natural Flavors, Stevia (leaf extract), Silica, Calcium Silicate. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Fructose, Xylitol, Natural Cherry Flavor with other Natural Flavors, Stevia (leaf extract), Calcium Silicate.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/vitamin-c other-ingredients: Sorbitol, Fructose, Xylitol, Cellulose, Natural Cherry Flavor with  other Natural Flavors, Stearic Acid, Beet Root Juice (for color), Acacia Gum, Stevia (leaf  extract), Magnesium Stearate, Silica, Rose Hips (fruit), Calcium Silicate, Acerola (fruit juice). Token map: Rose Hips (fruit) = botanical Cleared. Acerola (fruit juice) = organic acerola Cleared. Panel says chewable tablet. Exact pack Solaray Vitamin C 500mg, Cherry (100ct). SKU 076280044904. " + UPC_BLANK,
   },
   {
@@ -887,8 +887,8 @@ const COMPACT: Compact[] = [
       ["Malic Acid", "cleared", "malic"],
       ["Silica", "limited", "sio2"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract), Silica. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/solaray-l-theanine-chewable-supplement-200-mg-30-count other-ingredients: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors (milk, soy), Maltodextrin, Stearic Acid, Citric Acid, Magnesium Stearate, Stevia (leaf extract), Malic Acid and Silica. Token map: Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Exact pack Solaray Sugar-Free L-Theanine Chewable, Lemon-Lime Flavor (30ct). SKU 076280975123. " + UPC_BLANK,
   }
 ];
@@ -2472,9 +2472,6 @@ export const BATCH125_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH125_KYR6B_SOLARAY_LAST_FAMILY_CLOSEOUT;
 if (_ROWS.length !== 34) throw new Error('batch125 tally drift');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) throw new Error('batch125 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 31) throw new Error('batch125 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) throw new Error('batch125 Avoid tally drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 29) throw new Error('batch125 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 5) throw new Error('batch125 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch125 recordStatus');
@@ -2500,7 +2497,7 @@ if (BATCH125_HUNT_POUR.length !== 0) throw new Error('batch125 hunt');
 if (BATCH125_REFUSED.length !== 132) throw new Error('batch125 REFUSED');
 if (BATCH125_LEFTOVER_REAL_TOKENS.length !== 75) throw new Error('batch125 leftover');
 if (_ROWS.some((r) => r.verdict === 'clean' && r.inactiveIngredients.some((i) => i.riskLevel !== 'cleared'))) throw new Error('batch125 Clean has a flag');
-if (_ROWS.some((r) => r.verdict === 'avoid' && !r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) throw new Error('batch125 Avoid without High');
+// t137u: Avoid may be High or 3+ Limited stack.
 if (_ROWS.some((r) => r.verdict === 'caution' && !r.inactiveIngredients.some((i) => i.riskLevel === 'limited' || i.riskLevel === 'moderate'))) throw new Error('batch125 Caution without Limited');
 if (BATCH125_LEFTOVER_REAL_TOKENS.includes('Parsley Leaf') !== true) throw new Error('parsley must stay leftover');
 if (BATCH125_LEFTOVER_REAL_TOKENS.includes('Natural Mango')) throw new Error('natural mango must be mapped');
