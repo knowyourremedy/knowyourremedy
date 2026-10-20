@@ -18281,31 +18281,6 @@ function applyHydrogenatedOilLock(record: RatingRecord): RatingRecord {
 const T133U_CARNAUBA_LOCK_SOURCE =
   'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).';
 
-/** t134u founder file edits — carnauba tab already carries t133u; overlay is redundant. */
-const T134U_CARNAUBA_FILE_LOCKED_IDS = new Set([
-  'now-odorless-garlic-250',
-  'now-nadh-10-mg-60',
-  'now-odorless-garlic-concentrated-extract-100',
-  'now-glucofit-60',
-  'now-zinc-glycinate-120',
-  'now-prostate-support-180',
-  'now-e-400-d-alpha-with-mixed-tocopherols-100',
-  'now-prostate-support-90',
-  'now-pantethine-60',
-  'now-coq10-with-selenium-vitamin-e-100',
-  'now-pantethine-60-733739004895',
-  'now-saw-palmetto-extract-90',
-  'now-sports-men-s-active-sports-multi-180',
-  'now-coq10-with-omega-3-fish-oil-120',
-  'now-sports-men-s-active-sports-multi-90',
-  'now-coq10-with-selenium-vitamin-e-50-softgel',
-  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-180',
-  'now-coq10-fish-oil-60',
-  'now-red-omega-fish-oil-with-red-yeast-rice-and-coq10-90',
-  'now-adam-superior-men-s-multi-180-softgels',
-  'now-adam-superior-men-s-multi-90-softgels',
-]);
-
 function isT133uCarnaubaLock(name: string): boolean {
   const raw = name.trim();
   const n = raw.toLowerCase();
@@ -18328,7 +18303,6 @@ function t133uLockSource(source: string | undefined, lockSource: string): string
 }
 
 export function applyT133uLocks(record: RatingRecord): RatingRecord {
-  if (T134U_CARNAUBA_FILE_LOCKED_IDS.has(record.id)) return record;
   let flipped = false;
   const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
     if (!isT133uCarnaubaLock(ingredient.name)) return ingredient;
@@ -18523,19 +18497,54 @@ export function applyT121uLocks(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict };
 }
 
-function withPreviewHonestNote(record: RatingRecord): RatingRecord {
-  const locked = applyHydrogenatedOilLock(
-    applyT133uLocks(
-      applyT121uLocks(
-        applyT120uLocks(applyT118uLocks(applyT111uLocks(applyFruitVegetableJuiceLock(record)))),
-      ),
-    ),
+/** Ingredient-only overlay chain (verdict preserved). Used for t135u file rescan. */
+export function applyOverlayIngredientLocks(
+  record: RatingRecord,
+  options?: { applyT133uToFileLockedIds?: boolean },
+): RatingRecord {
+  const preserveVerdict = record.verdict;
+  const step = (current: RatingRecord, fn: (r: RatingRecord) => RatingRecord): RatingRecord => {
+    const next = fn(current);
+    if (next.inactiveIngredients === current.inactiveIngredients && next.verdict === current.verdict) {
+      return current;
+    }
+    return { ...next, verdict: preserveVerdict };
+  };
+  let r = record;
+  r = step(r, applyFruitVegetableJuiceLock);
+  r = step(r, applyT111uLocks);
+  r = step(r, applyT118uLocks);
+  r = step(r, applyT120uLocks);
+  r = step(r, applyT121uLocks);
+  r = step(r, (rec) =>
+    applyT133uLocks(rec),
   );
-  const honestNote = displayHonestNote(locked);
-  const productImage = previewOverlayImage(locked);
-  if (locked === record && honestNote === record.honestNote && !productImage) return record;
+  r = step(r, applyHydrogenatedOilLock);
+  return r;
+}
+
+function withPreviewHonestNote(record: RatingRecord): RatingRecord {
+  const locked = applyOverlayIngredientLocks(record);
+  const inactiveIngredients = locked.inactiveIngredients;
+  const hasHigh = inactiveIngredients.some((i) => i.riskLevel === 'high');
+  const hasModerate = inactiveIngredients.some((i) => i.riskLevel === 'moderate');
+  const hasLimited = inactiveIngredients.some((i) => i.riskLevel === 'limited');
+  let verdict: RatingRecord['verdict'] = 'clean';
+  if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') verdict = 'avoid';
+  else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) verdict = 'caution';
+  const merged = { ...locked, verdict };
+  const honestNote = displayHonestNote(merged);
+  const productImage = previewOverlayImage(merged);
+  if (
+    merged.inactiveIngredients === record.inactiveIngredients
+    && merged.verdict === record.verdict
+    && honestNote === record.honestNote
+    && !productImage
+  ) {
+    return record;
+  }
   return {
-    ...locked,
+    ...merged,
     honestNote,
     ...(productImage ? { productImage } : {}),
   };

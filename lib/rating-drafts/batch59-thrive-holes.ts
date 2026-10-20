@@ -262,7 +262,7 @@ function f(
   return flag(name, risk, labelCite(cite, meth));
 }
 
-// TALLY (unverified drafts in THIS file): 241 rows — Clean 108 / Caution 113 / Avoid 20.
+// TALLY (unverified drafts in THIS file): 241 rows — Clean 113 / Caution 108 / Avoid 20.
 
 const CITE = {
   ritual_natal_choline: 'Thrive Ritual Natal Choline https://thrivemarket.com/p/ritual-natal-choline SKU 850031975323 other-ingredients: Organic Glycerin, Hypromellose, Purified Water',
@@ -2713,14 +2713,14 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       f(CITE.rookie_wake_raspberry_lemonade, 'L-malic acid', 'cleared', METH.citrate),
       f(CITE.rookie_wake_raspberry_lemonade, 'Citric acid', 'cleared', METH.citrate),
-      f(CITE.rookie_wake_raspberry_lemonade, 'Natural lemon flavor', 'limited', METH.flavors),
-      f(CITE.rookie_wake_raspberry_lemonade, 'Natural raspberry flavor', 'limited', METH.flavors),
+      f(CITE.rookie_wake_raspberry_lemonade, 'Natural lemon flavor', 'cleared', METH.flavors),
+      f(CITE.rookie_wake_raspberry_lemonade, 'Natural raspberry flavor', 'cleared', METH.flavors),
       f(CITE.rookie_wake_raspberry_lemonade, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
       f(CITE.rookie_wake_raspberry_lemonade, 'Beet root powder (for color)', 'cleared', METH.namedColor),
       f(CITE.rookie_wake_raspberry_lemonade, 'Stevia extract', 'cleared', METH.stevia),
       f(CITE.rookie_wake_raspberry_lemonade, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
@@ -2744,12 +2744,12 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       f(CITE.rookie_greens_peach_mango, 'L-malic acid', 'cleared', METH.citrate),
-      f(CITE.rookie_greens_peach_mango, 'Natural peach mango flavor', 'limited', METH.flavors),
+      f(CITE.rookie_greens_peach_mango, 'Natural peach mango flavor', 'cleared', METH.flavors),
       f(CITE.rookie_greens_peach_mango, 'Citric acid', 'cleared', METH.citrate),
       f(CITE.rookie_greens_peach_mango, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
       f(CITE.rookie_greens_peach_mango, 'Stevia extract', 'cleared', METH.stevia),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
@@ -2773,12 +2773,12 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       f(CITE.rookie_greens_crisp_apple, 'L-malic acid', 'cleared', METH.citrate),
-      f(CITE.rookie_greens_crisp_apple, 'Natural green apple flavor', 'limited', METH.flavors),
+      f(CITE.rookie_greens_crisp_apple, 'Natural green apple flavor', 'cleared', METH.flavors),
       f(CITE.rookie_greens_crisp_apple, 'Citric acid', 'cleared', METH.citrate),
       f(CITE.rookie_greens_crisp_apple, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
       f(CITE.rookie_greens_crisp_apple, 'Stevia extract', 'cleared', METH.stevia),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
@@ -6925,8 +6925,8 @@ export const BATCH59_MISSING_UPCS = [
 
 const _ROWS = BATCH59_THRIVE_HOLES;
 if (_ROWS.length !== 241) throw new Error('batch59 tally drift: expected 241 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 110) throw new Error('batch59 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 111) throw new Error('batch59 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 113) throw new Error('batch59 Clean tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 108) throw new Error('batch59 Caution tally drift');
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 20) throw new Error('batch59 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch59 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch59 every row needs formulaId');

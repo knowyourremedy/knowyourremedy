@@ -58,7 +58,7 @@
 //   Multi tablets. Verdict caution, NOT avoid. Cellulose capsule / MCC /
 //   sunflower lecithin / vegetable stearate Cleared.
 //
-// TALLY (unverified drafts): 6 rows — Clean 4 / Caution 2 / Avoid 0.
+// TALLY (unverified drafts): 6 rows — Clean 5 / Caution 1 / Avoid 0.
 // Independently Clean in THIS batch: PE Melatonin-SR 3 mg (Sleep);
 // PE D3 5000 IU; PE PreNatal Nutrients; Thorne Basic Prenatal.
 // cleanAlternatives on the DFH prenatal Caution row point at the two

@@ -769,11 +769,11 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ungraded(SET_BOUD_BARRIER, 'Glyceryl hydroxystearate'),
       flag(
         'Hydrogenated castor oil',
-        'cleared',
+        'high',
         dailymed(SET_BOUD_BARRIER, METH.castor),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [

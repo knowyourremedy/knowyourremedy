@@ -257,7 +257,7 @@ const ESOME_FLAGS: Compact['flags'] = [
   ['Propylene glycol', 'moderate', 'pgOral'],
   ['Methacrylic acid copolymer dispersion', 'limited', 'methacrylic'],
   ['Mono- and diglycerides', 'limited', 'monoDi'],
-  ['Sucrose', 'limited', 'sucrose'],
+  ['Sucrose', 'cleared', 'sucrose'],
   ['Corn starch', 'cleared', 'starch'],
   ['Gelatin', 'cleared', 'gelatin'],
   ['Hydroxypropyl cellulose', 'cleared', 'hpc'],

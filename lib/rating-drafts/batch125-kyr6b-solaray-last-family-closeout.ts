@@ -6,7 +6,7 @@
 // Parsley Leaf was not stamped. No Italy, LLC, trademark, or OCR junk.
 // batch70-batch124 were not edited. Solaray only. UPC stays empty.
 //
-// TALLY: 34 rows — Clean 1 / Caution 32 / Avoid 1.
+// TALLY: 34 rows — Clean 2 / Caution 31 / Avoid 1.
 // NEW 29 / REUSE 5 / SKIPPED no_OI leftover 1 / SKIPPED OUT 0 / REFUSED 132.
 
 import type {
@@ -226,9 +226,9 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ["Vegetable Cellulose Capsule", "cleared", "vegcap"],
-      ["Sucrose", "limited", "sucrose"],
+      ["Sucrose", "cleared", "sucrose"],
       ["Starch", "cleared", "starch"],
-      ["Carrot Juice (root)", "limited", "carrotjuice"],
+      ["Carrot Juice (root)", "cleared", "carrotjuice"],
       ["Maltodextrin", "limited", "maltodextrin"],
     ],
     verdict: "caution",
@@ -547,7 +547,7 @@ const COMPACT: Compact[] = [
       ["Magnesium Stearate", "cleared", "stearate"],
       ["Whole Rice Concentrate", "cleared", "riceconc"],
       ["Silica", "limited", "sio2"],
-      ["Carrot Juice", "limited", "carrotjuice"],
+      ["Carrot Juice", "cleared", "carrotjuice"],
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Carrot Juice = Carrot Juice Powder juice-powder color/flavor Caution. Driver families: Eleuthero Root, Silica, Carrot Juice. No High.",
@@ -569,10 +569,10 @@ const COMPACT: Compact[] = [
       ["Cellulose", "cleared", "mcc"],
       ["Croscarmellose Sodium", "cleared", "mcc"],
       ["Magnesium Stearate", "cleared", "stearate"],
-      ["Carrot Juice", "limited", "carrotjuice"],
+      ["Carrot Juice", "cleared", "carrotjuice"],
       ["Acerola Cherry", "cleared", "acerola"],
     ],
-    verdict: "caution",
+    verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Caution. Carrot Juice = Carrot Juice Powder Caution. Acerola Cherry = organic acerola Cleared. Servings per container 30 x 5 tablets = 150ct. Driver families: Carrot Juice. No High.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/baby-me-now-prenatal-multi-vitamin-original-formula other-ingredients: Cellulose, Croscarmellose Sodium, Magnesium Stearate, Carrot Juice and Acerola Cherry. Token map: Carrot Juice = Carrot Juice Powder Caution. Acerola Cherry = organic acerola Cleared. Servings per container 30 x 5 tablets = 150ct. Exact pack Solaray Baby Me Now Prenatal Multivitamin (150ct). SKU 076280047875. " + UPC_BLANK,
   },
@@ -2472,8 +2472,8 @@ export const BATCH125_LEFTOVER_REAL_TOKENS = [
 
 const _ROWS = BATCH125_KYR6B_SOLARAY_LAST_FAMILY_CLOSEOUT;
 if (_ROWS.length !== 34) throw new Error('batch125 tally drift');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) throw new Error('batch125 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 32) throw new Error('batch125 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 2) throw new Error('batch125 Clean tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 31) throw new Error('batch125 Caution tally drift');
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 1) throw new Error('batch125 Avoid tally drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 29) throw new Error('batch125 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 5) throw new Error('batch125 REUSE tally drift');

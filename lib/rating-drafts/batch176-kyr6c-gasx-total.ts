@@ -110,7 +110,7 @@ export const BATCH176_KYR6C_GASX_TOTAL: RatingRecord[] = [
       flag('Sorbic acid', 'limited', METH.sorbic),
       flag('Sorbitol', 'limited', METH.sorbitol),
       flag('Soy lecithin', 'cleared', METH.lecithin),
-      flag('Sucrose', 'limited', METH.sucrose),
+      flag('Sucrose', 'cleared', METH.sucrose),
       flag('Titanium dioxide', 'high', METH.tio2),
       flag('Vegetable oil (coconut origin)', 'high', METH.vegetableOil),
     ],

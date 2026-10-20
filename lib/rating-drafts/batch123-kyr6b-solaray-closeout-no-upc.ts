@@ -5,7 +5,7 @@
 // Parsley Leaf was not stamped. No Italy, LLC, trademark, or OCR junk.
 // batch70-batch122 were not edited. Solaray only. UPC stays empty.
 //
-// TALLY: 110 rows — Clean 23 / Caution 84 / Avoid 3.
+// TALLY: 110 rows — Clean 23 / Caution 85 / Avoid 2.
 // NEW 108 / REUSE 2 / SKIPPED no_OI leftover 1 / SKIPPED OUT 0 / REFUSED 176.
 
 import type {
@@ -905,7 +905,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Sorbitol', 'limited', 'sugaralc'],
-      ['Natural Cherry Flavor', 'limited', 'flavor'],
+      ['Natural Cherry Flavor', 'cleared', 'flavor'],
       ['Magnesium Stearate', 'cleared', 'stearate'],
       ['Silica', 'limited', 'sio2'],
       ['Cellulose', 'cleared', 'mcc'],
@@ -1093,10 +1093,10 @@ const COMPACT: Compact[] = [
       ['Magnesium Stearate', 'cleared', 'stearate'],
       ['Sodium Alginate', 'cleared', 'alginate'],
       ['Pea Starch', 'limited', 'peastarch'],
-      ['Sucrose', 'limited', 'sucrose'],
+      ['Sucrose', 'cleared', 'sucrose'],
       ['Silica', 'limited', 'sio2'],
       ['Whole Rice Concentrate (including Bran, Polishings and Germ)', 'cleared', 'riceconc'],
-      ['Carrot Juice Powder', 'limited', 'carrotjuice'],
+      ['Carrot Juice Powder', 'cleared', 'carrotjuice'],
       ['Soybean Oil', 'cleared', 'oilfill'],
     ],
     verdict: 'caution',
@@ -1114,7 +1114,7 @@ const COMPACT: Compact[] = [
       { name: 'Soy Isoflavones', strength: '10 mg' },
     ],
     flags: [
-      ['Rice Powder', 'limited', 'ricepowder'],
+      ['Rice Powder', 'cleared', 'ricepowder'],
       ['Gelatin Capsule', 'cleared', 'gelatin'],
       ['Silica', 'limited', 'sio2'],
     ],
@@ -1158,12 +1158,12 @@ const COMPACT: Compact[] = [
       ['Natural Strawberry Flavor with Other Natural Flavors', 'limited', 'flavor'],
       ['Stearic Acid', 'cleared', 'stearate'],
       ['Silica', 'limited', 'sio2'],
-      ['Coconut Oil Powder', 'high', 'oilhigh'],
+      ['Coconut Oil Powder', 'cleared', 'oilhigh'],
       ['Guar Gum', 'cleared', 'gum'],
       ['Magnesium Hydroxide', 'cleared', 'mgoh'],
       ['Stevia (leaf extract)', 'limited', 'stevia'],
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Avoid. High flag: Coconut Oil Powder. Gummy or lozenge seed oil stays High. Not a pour bottle.',
     cite: `solaray.com supplement-facts image https://solaray.com/products/cranactin-cranberry-extract-bacterial-antiadherence-formula other-ingredients: Chicory Inulin, Xylitol, Natural Strawberry Flavor with Other Natural Flavors, Stearic Acid, Silica, Coconut Oil Powder, Guar Gum, Magnesium Hydroxide, Stevia (leaf extract) Exact pack Solaray CranActin Chewables (60ct). SKU 076280084245. ${UPC_BLANK}`,
   },
@@ -1222,7 +1222,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Vegetable Cellulose Capsule', 'cleared', 'vegcap'],
       ['Tricalcium Phosphate', 'cleared', 'caphos'],
-      ['Sucrose', 'limited', 'sucrose'],
+      ['Sucrose', 'cleared', 'sucrose'],
       ['Tapioca Starch', 'cleared', 'starch'],
       ['Gum Arabic', 'cleared', 'gum'],
       ['Silica', 'limited', 'sio2'],
@@ -1631,7 +1631,7 @@ const COMPACT: Compact[] = [
       ['Citric Acid', 'cleared', 'citric'],
       ['Silica', 'limited', 'sio2'],
       ['Stearic Acid', 'cleared', 'stearate'],
-      ['Natural Raspberry Flavor', 'limited', 'flavor'],
+      ['Natural Raspberry Flavor', 'cleared', 'flavor'],
     ],
     verdict: 'caution',
     note: 'FOUNDER-LOCK DRAFT: Caution. Driver families: sugaralc, flavor, sio2. No High. Limited-only stays Caution.',
@@ -2112,7 +2112,7 @@ const COMPACT: Compact[] = [
       ['Organic Rice Extract Blend', 'limited', 'riceextract'],
       ['Modified Food Starch', 'limited', 'modstarch'],
       ['Medium Chain Triglycerides', 'limited', 'mct'],
-      ['Sucrose', 'limited', 'sucrose'],
+      ['Sucrose', 'cleared', 'sucrose'],
       ['Silica', 'limited', 'sio2'],
     ],
     verdict: 'caution',
@@ -2680,8 +2680,8 @@ export const BATCH123_LEFTOVER_REAL_TOKENS = [
 const _ROWS = BATCH123_KYR6B_SOLARAY_CLOSEOUT_NO_UPC;
 if (_ROWS.length !== 110) throw new Error('batch123 tally drift');
 if (_ROWS.filter((r) => r.verdict === 'clean').length !== 23) throw new Error('batch123 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 84) throw new Error('batch123 Caution tally drift');
-if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 3) throw new Error('batch123 Avoid tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 85) throw new Error('batch123 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 2) throw new Error('batch123 Avoid tally drift');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 108) throw new Error('batch123 NEW tally drift');
 if (_ROWS.filter((r) => r.formulaId !== r.id).length !== 2) throw new Error('batch123 REUSE tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch123 recordStatus');

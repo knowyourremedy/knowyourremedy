@@ -518,7 +518,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Rice bran oil', 'cleared', 'oilFill'],
       ['Citrus / grapefruit / bergamot fiber', 'cleared', 'fiberCitrus'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Zinc oxide (inactive)', 'cleared', 'zincOxide'],
       ['Lecithin', 'cleared', 'lecithin'],
       ['Glycerin', 'cleared', 'glycerin'],
@@ -547,7 +547,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Rice bran oil', 'cleared', 'oilFill'],
       ['Citrus / grapefruit / bergamot fiber', 'cleared', 'fiberCitrus'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Zinc oxide (inactive)', 'cleared', 'zincOxide'],
       ['Lecithin', 'cleared', 'lecithin'],
       ['Glycerin', 'cleared', 'glycerin'],
@@ -669,7 +669,7 @@ const COMPACT: Compact[] = [
       ['Enteric coating', 'cleared', 'enteric'],
       ['Caramel color', 'high', 'caramel'],
       ['Rice bran oil', 'cleared', 'oilFill'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Lecithin', 'cleared', 'lecithin'],
       ['Glycerin', 'cleared', 'glycerin'],
       ['Water', 'cleared', 'water'],
@@ -696,7 +696,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Rice bran oil', 'cleared', 'oilFill'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Potassium sulfate', 'cleared', 'kSulfate'],
       ['Lecithin', 'cleared', 'lecithin'],
       ['Lemon oil', 'limited', 'lemonOil'],
@@ -726,7 +726,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Rice bran oil', 'cleared', 'oilFill'],
-      ['Beeswax / carnauba wax', 'cleared', 'gelatin'],
+      ['Beeswax', 'cleared', 'beeswax'], ['Carnauba wax', 'cleared', 'carnaubaT133u'],
       ['Potassium sulfate', 'cleared', 'kSulfate'],
       ['Lecithin', 'cleared', 'lecithin'],
       ['Lemon oil', 'limited', 'lemonOil'],

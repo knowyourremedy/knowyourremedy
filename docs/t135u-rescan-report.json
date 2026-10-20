@@ -1,0 +1,3627 @@
+{
+  "totalRows": 6156,
+  "applyRowCount": 387,
+  "gradeChangeCount": 0,
+  "whyOnlyCount": 386,
+  "excludedCount": 770,
+  "gradeChanges": [],
+  "whyOnly": [
+    "imodium-ad-caplets",
+    "pepcid-ac",
+    "pepcid-max",
+    "pepcid-icy-cool-mint",
+    "equate-famotidine",
+    "dramamine-chewable-orange",
+    "genexa-acetaminophen-es",
+    "equate-es-pain-reliever",
+    "kirkland-acetaminophen-es",
+    "members-mark-acetaminophen-es",
+    "wf-365-acetaminophen-es",
+    "signature-care-pain-relief-apap",
+    "hylands-4kids-cold-n-cough",
+    "genexa-kids-cold-crush",
+    "genexa-allergy-care",
+    "benadryl-ultratabs",
+    "genexa-kids-allergy-care",
+    "genexa-acetaminophen-pm",
+    "simply-sleep",
+    "tylenol-pm-es",
+    "genexa-kids-sleepology",
+    "natrol-kids-melatonin-gummies",
+    "olly-kids-sleep-coconut-only",
+    "olly-kids-sleep-canola",
+    "sambucol-elderberry-gummies",
+    "genexa-kids-tummy-relief",
+    "boudreauxs-butt-barrier",
+    "kirkland-daily-multi-no-tio2",
+    "olly-mens-multi-canola",
+    "olly-womens-multi-canola",
+    "nature-made-multi-gummies",
+    "vitafusion-multivites-palm",
+    "up-and-up-prenatal-coated",
+    "walgreens-prenatal-coated",
+    "olly-essential-prenatal",
+    "365-probiotic-fiber-gummies-sunflower",
+    "flintstones-complete-gummies-palm",
+    "lil-critters-gummy-vites-palm",
+    "one-a-day-kids-multi-gummies-palm",
+    "equate-kids-multi-gummies-palm",
+    "maryruth-organic-kids-multi-gummies-sunflower",
+    "flintstones-complete-chewables-dyed",
+    "lil-critters-immune-c-zinc-d-gummies-palm",
+    "pure-encapsulations-melatonin-sr-3mg",
+    "nordic-naturals-ultimate-omega-lemon",
+    "family-wellness-es-apap-caplets",
+    "rexall-pain-relief-apap",
+    "amazon-basic-care-es-apap-l484",
+    "amazon-basic-care-famotidine",
+    "megafood-womens-whole-body-gummies",
+    "megafood-mens-whole-body-gummies",
+    "megafood-womens-55-whole-body-gummies",
+    "megafood-mens-55-whole-body-gummies",
+    "megafood-womens-prebiotic-probiotic-gummies",
+    "megafood-prebiotic-fiber-gummies",
+    "megafood-magnesium-citrate-gummies",
+    "megafood-iron-energy-gummies",
+    "megafood-b12-energy-gummies-cranberry",
+    "megafood-b12-energy-gummies-ginger",
+    "megafood-c-defense-gummies",
+    "megafood-melatonin-sleep-gummies",
+    "megafood-baby-me-2-prenatal-gummies",
+    "megafood-kids-multi-gummies",
+    "megafood-elderberry-immune-gummies",
+    "megafood-d3-2000-gummies",
+    "megafood-probiotic-prebiotic-postbiotic-gummies",
+    "megafood-ashwagandha-gummies",
+    "megafood-creatine-monohydrate-gummies",
+    "genexa-antacid-maximum-strength",
+    "genexa-arnica-pain",
+    "genexa-sleepology",
+    "genexa-kids-calm-keeper",
+    "genexa-stress",
+    "genexa-flu-fix",
+    "genexa-cold-crush",
+    "hylands-organic-elderberry-plus-gummies",
+    "hylands-4kids-cold-n-cough-night-grape",
+    "hylands-kids-cough-mucus-day",
+    "hylands-kids-cough-mucus-night",
+    "natures-way-sambucus-cold-flu-relief-chewables",
+    "natures-way-organic-acv-gummies",
+    "natures-way-air-power",
+    "natures-way-alive-garden-goodness-mens",
+    "natures-way-alive-garden-goodness-womens",
+    "natures-way-sambucus-ultra-immune-juicy-burst",
+    "aleve-pm",
+    "junior-strength-advil-coated",
+    "advil-film-coated-menstrual",
+    "bayer-es-500-aspirina",
+    "bayer-back-body-aspirina-cafeina",
+    "bayer-aspirin-regimen-enteric",
+    "excedrin-migraine-es-blue",
+    "excedrin-rapid-relief-apap",
+    "genuine-bayer-aspirin-325",
+    "advil-targeted-relief-cream",
+    "icy-hot-pro-massaging-balm",
+    "biofreeze-dry-stick",
+    "mineral-ice-extreme-dry-stick",
+    "goodsense-childrens-ibuprofen-chew",
+    "midol-complete",
+    "aplus-health-dual-action-oxides",
+    "aplus-health-dual-action",
+    "qunol-zero-sugar-turmeric-gummies",
+    "topricin-pain-relief-cream",
+    "natural-vitality-calm-sleep-gummies",
+    "lovebug-kids-probiotic-gummies",
+    "hilma-fiber-gummy",
+    "plant-people-wonder-day",
+    "plant-people-wonder-burn",
+    "plant-people-wonder-greens-kids",
+    "rookie-wake-raspberry-lemonade",
+    "rookie-greens-peach-mango",
+    "rookie-greens-crisp-apple",
+    "codeage-irish-sea-moss-gummies",
+    "maryruth-kids-immunity-gummies",
+    "maryruth-iron-liquid-berry",
+    "smartypants-organic-mens",
+    "smartypants-organic-womens",
+    "smartypants-organic-toddlers",
+    "smartypants-kids-fiber-veggies",
+    "smartypants-kids-zero-sugar",
+    "smartypants-womens-50",
+    "smartypants-adult-multi-fiber",
+    "smartypants-kids-sleep-zero-melatonin",
+    "smartypants-adult-fast-acting-sleep",
+    "smartypants-kids-prebiotic-probiotic",
+    "smartypants-adult-probiotic-prebiotic",
+    "smartypants-kids-2b-cfu",
+    "smartypants-adult-3b-cfu",
+    "smartypants-kids-formula-organic-multi",
+    "nordic-zero-sugar-melatonin-gummies",
+    "plant-people-wonder-sleep",
+    "plant-people-wonder-calm",
+    "plant-people-wonder-focus",
+    "plant-people-wonder-greens",
+    "amazon-elements-whole-food-vitamin-c-500",
+    "amazon-basic-care-dph-25-l479",
+    "amazon-basic-care-loperamide-224",
+    "amazon-basic-care-apap-650-er-l544",
+    "mama-bear-organic-kids-multivitamin-gummies",
+    "mama-bear-kids-fiber-gummies",
+    "mama-bear-organic-kids-vitamin-d3-gummies",
+    "mama-bear-vegan-kids-vitamin-c-gummies",
+    "mama-bear-vegan-kids-probiotic-gummies",
+    "amazon-elements-vitamin-c-gummies",
+    "amazon-basics-fish-oil-gummies",
+    "amazon-basics-womens-one-daily-gummies",
+    "amazon-basics-adult-one-daily-gummies",
+    "amazon-basics-super-omega-3",
+    "amazon-elements-b12-5000-lozenges",
+    "amazon-elements-mens-multi-gummies",
+    "amazon-elements-womens-multi-gummies",
+    "amazon-elements-biotin-gummies",
+    "amazon-basics-fiber-gummies",
+    "amazon-basics-melatonin-5-gummies",
+    "amazon-basic-care-sf-honey-lemon-cough-drops",
+    "amazon-basic-care-cherry-menthol-cough-drops",
+    "amazon-basic-care-sf-menthol-cough-drops",
+    "goodsense-es-pain-relief-l484",
+    "topcare-sleep-aid-dph",
+    "walgreens-omeprazole-20",
+    "walgreens-famotidine-20",
+    "members-mark-adult-multi-gummies",
+    "members-mark-advanced-mens-multi",
+    "members-mark-melatonin-10mg-tr",
+    "walgreens-adults-multi-tablets",
+    "nutricost-turmeric-gummies-240-gummies",
+    "nutricost-turmeric-gummies-120-gummies",
+    "nutricost-melatonin-extended-release-capsules-5mg-240-capsules",
+    "nutricost-vitamin-d3-gummies-5000-iu-120-gummies",
+    "nutricost-b79-kids-vitamin-d3-gummies",
+    "nutricost-b79-elderberry-gummies-vitamin-c-zinc",
+    "nutricost-b79-elderberry-gummies-90",
+    "nutricost-b79-elderberry-gummies-60",
+    "nutricost-b80-kids-fiber-gummies",
+    "naturewise-b86-oral-probiotics-chewable",
+    "naturewise-b86-oral-probiotics-chewable-60",
+    "welmate-b87-zinc-sulfate",
+    "aplushealth-b93-dph-25-600",
+    "aplushealth-b93-dual-oxides-144",
+    "aplushealth-b93-dual-oxides-120",
+    "healtha2z-b96-dual-action",
+    "healtha2z-b96-dual-action-150",
+    "healtha2z-b96-dual-action-300",
+    "healtha2z-b100-apap-pm-20x24",
+    "healtha2z-b101-bisacodyl-398",
+    "healtha2z-b101-bisacodyl-398-25",
+    "healtha2z-b101-bisacodyl-398-600",
+    "healtha2z-b101-bisacodyl-398-250",
+    "healtha2z-b101-bisacodyl-398-250-fpa015",
+    "healtha2z-b101-bisacodyl-398-25-option",
+    "healtha2z-b101-bisacodyl-398-600-fp0917",
+    "healtha2z-b101-bisacodyl-404",
+    "healtha2z-b102-aspirin-81-ec-318",
+    "healtha2z-b102-elderberry-gummy-60",
+    "healtha2z-b103-acv-gummy-60",
+    "healtha2z-b105-fphk1130-womens-multi-gummies",
+    "healtha2z-b105-fphk1128-probiotics-gummies",
+    "timecap-b106-apap-650-er",
+    "timecap-b106-apap-650-er-24",
+    "timecap-b106-apap-650-er-50",
+    "timecap-b106-apap-650-er-400",
+    "timecap-b106-apap-650-er-muscle-50",
+    "timecap-b106-apap-650-er-225",
+    "timecap-b106-famotidine-20",
+    "timecap-b106-famotidine-20-100",
+    "timecap-b106-dph-25",
+    "timecap-b106-dph-25-24",
+    "timecap-b106-dph-25-365",
+    "timecap-b106-senna-s",
+    "timecap-b107-asa-81-120",
+    "timecap-b107-asa-81-300",
+    "timecap-b107-asa-81-365",
+    "timecap-b107-asa-81-1000",
+    "timecap-b107-senna-25-90",
+    "timecap-b107-bisa-5-25",
+    "timecap-b107-bisa-5-100",
+    "timecap-b107-bisa-5-1000",
+    "timecap-b108-apap-342-100",
+    "timecap-b108-pse-30-96",
+    "goodsense-b109-pain-relief-56b4",
+    "goodsense-b109-pain-relief-56b4-20",
+    "goodsense-b109-pain-relief-56b4-24",
+    "goodsense-b109-pain-relief-56b4-30",
+    "goodsense-b109-pain-relief-56b4-50",
+    "goodsense-b109-pain-relief-56b4-60",
+    "goodsense-b109-pain-relief-56b4-90",
+    "goodsense-b109-pain-relief-56b4-100",
+    "goodsense-b109-pain-relief-56b4-120",
+    "goodsense-b109-pain-relief-56b4-400",
+    "goodsense-b109-acid-reducer-7fce",
+    "goodsense-b109-migraine-formula-46cf",
+    "goodsense-b109-migraine-formula-46cf-30",
+    "goodsense-b109-migraine-formula-46cf-50",
+    "goodsense-b109-migraine-formula-46cf-60",
+    "goodsense-b109-migraine-formula-46cf-90",
+    "goodsense-b109-migraine-formula-46cf-100",
+    "goodsense-b109-migraine-formula-46cf-200",
+    "goodsense-b109-acid-reducer-7f72",
+    "goodsense-b109-acid-reducer-7f72-50",
+    "goodsense-b109-acid-reducer-7f72-200",
+    "goodsense-b109-childrens-ibuprofen-d5d7",
+    "goodsense-b109-anti-diarrheal-29e7",
+    "goodsense-b109-childrens-ibuprofen-e356",
+    "goodsense-b109-migraine-formula-afc2",
+    "goodsense-b109-pain-relief-pm-8818",
+    "goodsense-b109-pain-relief-pm-8818-50",
+    "goodsense-b109-pain-relief-pm-8818-100",
+    "goodsense-b109-nighttime-sleep-aid-bc4e",
+    "goodsense-b109-nighttime-sleep-aid-bc4e-100",
+    "goodsense-b109-allergy-relief-df82",
+    "goodsense-b109-allergy-relief-df82-400",
+    "goodsense-b110-nicotine-d940",
+    "goodsense-b110-nicotine-d940-27",
+    "goodsense-b110-nicotine-d940-b",
+    "goodsense-b110-nicotine-d940-b-27",
+    "goodsense-b111-nicotine-7972",
+    "goodsense-b111-nicotine-7972-50",
+    "goodsense-b111-nicotine-7972-110",
+    "goodsense-b111-nicotine-7972-220",
+    "goodsense-b111-nicotine-7972-310",
+    "goodsense-b111-nicotine-aef5",
+    "goodsense-b111-nicotine-aef5-220",
+    "goodsense-b111-nicotine-aef5-310",
+    "goodsense-b111-nicotine-4ba2",
+    "goodsense-b111-nicotine-4ba2-100",
+    "goodsense-b111-nicotine-349e",
+    "goodsense-b111-nicotine-349e-160",
+    "goodsense-b111-nicotine-1ac2",
+    "goodsense-b111-nicotine-1ac2-100",
+    "goodsense-b111-nicotine-1ac2-160",
+    "goodsense-b111-nicotine-75f0",
+    "goodsense-b111-nicotine-75f0-220",
+    "goodsense-b111-nicotine-75f0-310",
+    "goodsense-b111-nicotine-7daf",
+    "goodsense-b111-nicotine-7daf-50",
+    "goodsense-b111-nicotine-7daf-110",
+    "goodsense-b111-nicotine-7daf-220",
+    "goodsense-b111-nicotine-7daf-310",
+    "goodsense-b111-nicotine-ff03",
+    "goodsense-b111-nicotine-ff03-100",
+    "goodsense-b111-nicotine-ff03-160",
+    "goodsense-b111-nicotine-3a3a",
+    "goodsense-b111-nicotine-a6cd",
+    "goodsense-b111-nicotine-a6cd-160",
+    "goodsense-b111-cherry-cough-drops-f2a6",
+    "goodsense-b111-honey-lemon-cough-drops-9e75",
+    "goodsense-b111-cherry-benzocaine-lozenges-3814",
+    "goodsense-b111-sf-honey-lemon-cough-drops-c59c",
+    "goodsense-b111-nicotine-43f3",
+    "goodsense-b111-menthol-cough-drops-6243",
+    "goodsense-b112-omeprazole-c62e",
+    "goodsense-b112-omeprazole-delayed-release-d05d",
+    "goodsense-b112-omeprazole-172a",
+    "goodsense-b113-nicotine-7ac8",
+    "goodsense-b113-antacid-soft-chew-e3e9",
+    "goodsense-b113-ibuprofen-6c80",
+    "goodsense-b113-cherry-zinc-lozenges-5be3",
+    "goodsense-b113-antacid-fruit-chews-5411",
+    "solaray-b123-076280043501",
+    "solaray-b123-076280080063",
+    "solaray-b123-076280293371",
+    "solaray-b124-076280635003",
+    "solaray-b126-X003KT6VTD",
+    "solaray-b129-076280047967",
+    "claritin-b136-d24-ec-5",
+    "claritin-b136-d24-ec-10",
+    "claritin-b136-d24-ec-15",
+    "allegra-b137-liq-8oz",
+    "allegra-b137-hives-liq-240",
+    "allegra-b137-d12-10",
+    "allegra-b137-d12-20",
+    "allegra-b137-d12-30",
+    "benadryl-b157-adult-4oz",
+    "benadryl-b157-dyed-4oz",
+    "benadryl-b157-dyed-8oz",
+    "pepcid-b161-stress-gummy-32",
+    "prilosec-b161-tablets-14",
+    "prilosec-b161-tablets-42",
+    "prilosec-b161-wildberry-42",
+    "tums-b161-chewy-tropical-32",
+    "prilosec-b162-wildberry-14",
+    "pepcid-b162-sleep-gummy-32",
+    "tums-b162-ultra-fruit-72",
+    "tums-b162-ultra-fruit-160",
+    "tums-b162-ultra-tropical-72",
+    "tums-b162-ultra-peppermint-72",
+    "tums-b162-ultra-berries-72",
+    "tums-b162-ultra-berries-160",
+    "tums-b162-extra-fruit-96",
+    "tums-b162-extra-berries-96",
+    "tums-b163-ultra-berries-265",
+    "tums-b163-extra-fruit-70",
+    "tums-b163-extra-fruit-330",
+    "nexium-b164-capsules-14",
+    "nexium-b164-capsules-42",
+    "nexium-b164-clearminis-14",
+    "nexium-b164-clearminis-42",
+    "little-remedies-b166-gripe-4",
+    "little-remedies-b167-fever-berry-2",
+    "beekeepers-b169-lollipops-15",
+    "little-remedies-b170-gas-drops-strawberry",
+    "theraflu-b175-severe-day-chews-20",
+    "theraflu-b175-severe-night-chews-20",
+    "mirafast-b178-mixed-berry-30",
+    "mirafast-b178-kids-15",
+    "dulcolax-b178-tablets-10",
+    "dulcolax-b178-tablets-25",
+    "dulcolax-b178-pink-tablets-25",
+    "dulcolax-b178-cherry-liquid-12oz",
+    "dulcolax-b178-soft-chews-30",
+    "dulcolax-b179-liquid-gel-20",
+    "dulcolax-b179-assorted-30",
+    "dulcolax-b179-cherry-30",
+    "miragut-b180-30",
+    "motrin-b184-df-berry-4",
+    "motrin-b184-df-berry-8",
+    "motrin-b184-bubble-4",
+    "tylenol-b184-df-cherry-8",
+    "schiff-b189-neuriva-original-30",
+    "natures-bounty-b191-adv-hair-skin-80",
+    "natures-bounty-b191-ashwagandha-gummies-60",
+    "natures-bounty-b193-b12-liquid-59",
+    "natures-bounty-b196-quick-dissolve-b-12-5000-40",
+    "natures-bounty-b196-quick-dissolve-biotin-5000-mcg-60",
+    "natures-bounty-b196-quick-dissolve-melatonin-3-mg-240",
+    "natures-bounty-b196-quick-dissolve-melatonin-3-mg-120",
+    "natures-bounty-b197-b12-methyl-qd-60",
+    "rainbow-b207-liquid-chlorophyll-16oz",
+    "rainbow-b207-prenatal-dha-180",
+    "caltrate-b212-plus-minerals-chewables-90",
+    "caltrate-b212-plus-minerals-chewables-155",
+    "caltrate-b212-soft-chews-chocolate-60",
+    "viactiv-b219-calcium-chocolate-100",
+    "viactiv-b219-calcium-caramel-100",
+    "viactiv-b219-calcium-chocolate-60",
+    "viactiv-b219-calcium-caramel-60",
+    "viactiv-b219-calcium-chocolate-180",
+    "fergon-b220-iron-restore-60",
+    "goli-b223-pre-post-probiotics-60",
+    "physicianschoice-b226-kids-probiotic-chewable-30",
+    "physicianschoice-b226-kids-probiotic-chewable-60",
+    "springvalley-b231-zinc-50-200",
+    "springvalley-b241-super-b-complex-100",
+    "springvalley-b241-super-b-complex-250",
+    "springvalley-b241-d3-1000iu-450"
+  ],
+  "excluded": [
+    {
+      "id": "gaviscon-es-tablets-cherry",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "imodium-multi-symptom",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-children-liquid-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-infants-liquid-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-children-chew-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-infants-apap-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-infants-apap-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "signature-care-infants-apap-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-children-apap-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "motrin-children-liquid-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-infants-ibu-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-children-ibu-dyefree-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "childrens-advil-suspension-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-adult-cough-chest-dm-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boiron-coldcalm-kids-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "mucinex-childrens-freefrom-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "mucinex-childrens-freefrom-stuffy",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "robitussin-childrens-honey-night-dm",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "dayquil-kids-dye-free-cold-cough-mucus",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "pediacare-cough-congestion",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-kids-dex-cough-gels",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "xlear-nasal-spray-bkc",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "similasan-allergy-eye-multidose",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "nasalcrom",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "alaway-multidose-bak",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zaditor",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "pataday-once-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "claritin-allergy-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "astepro-allergy",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "benadryl-liqui-gels",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "childrens-zyrtec-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "childrens-claritin-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-kids-cetirizine-grape",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-kids-cetirizine-bubblegum",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-kids-loratadine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-kids-loratadine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-kids-loratadine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-kids-cetirizine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-kids-dph-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "childrens-benadryl-dyefree-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zzzquil-free-of-artificial",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-sleep-aid-liquid-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boiron-sleepcalm-kids-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "source-naturals-wellness-formula-tabs",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "source-naturals-wellness-formula-caps",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cold-eeze-lozenge-acek",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zicam-ultra-rapidmelts",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "culturelle-kids-packets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "calamine-plus-fragrance",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "bactine-max-bkc",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "desitin-max-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boudreauxs-butt-paste",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "balmex-multipurpose",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boogie-hands-bkc",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "calamine-plus-benzyl",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "one-a-day-prenatal-softgels-no-dye",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "365-guaifenesin-er-600",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "365-adult-once-daily-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "365-mens-one-daily-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "365-prenatal-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-organic-prenatal-whole-food",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "nature-made-b12-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-lubricant-eye-bkc",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "visine-red-eye-comfort",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "clear-eyes-redness-relief",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "dfh-prenatal-pro",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "pure-encapsulations-probiotic-5",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-floramend-prime-probiotic",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-magnesium-glycinate-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thrive-wellmade-magnesium-glycinate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thrive-wellmade-vitamin-c-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-melaton-3",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-melaton-5",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-advanced-nutrients",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "assured-advanced-relief-eye",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-mucus-dm-er-dye-free",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-biotin-5000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-melatonin-5",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-no-drip-nasal",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-oxymetazoline-nasal",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-kids-loratadine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-kids-apap-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-kids-cetirizine-liquid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basics-clearlax-orange",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-one-daily-iron-free",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-40-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-55-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-40-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-55-one-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-40-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-womens-55-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-40-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mens-55-advanced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-kids-one-daily-mini",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-kids-b-complex-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-blood-builder",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-blood-builder-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-balanced-b-complex",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-complex-c",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-ultra-c-400",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-extra-strength-methyl-b12",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-vegan-b12",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-vitamin-d3-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-vitamin-d3-2000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-zinc-bisglycinate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-selenium-tablet",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-magnesium-tablet",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-calcium-magnesium",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-thyroid-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-adrenal-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-skin-nails-hair-2",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-prenatal-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-prenatal-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-postnatal-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-extra-strength-magnesium-glycinate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-magnesium-glycinate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-vitamin-k1-k2",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-nad-boost",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-liposomal-glutathione",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-high-absorption-coq10",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-fast-acting-turmeric",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-quercetin-bromelain",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-nac",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-l-theanine-b-complex",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-magtein-magnesium-l-threonate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-megaflora-original",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-megaflora-plus",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-megaflora-womens",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-megaflora-turmeric",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-megaflora-kids",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mushroom-stress-relief",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-mushroom-focus-support",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-prenatal-dha-choline",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-prenatal-probiotic-refrigerated",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-baby-me-2-prenatal-multi-dha",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-high-absorption-selenium-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-methyl-b12",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-daily-turmeric-nutrient-booster-powder",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-turmeric-whole-body-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-turmeric-extra-strength-joint",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "megafood-turmeric-extra-strength-liver",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "genexa-kids-honey-cough-syrup",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boiron-arnicare-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boiron-arnicare-bruise-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "boiron-arnicare-foot-care",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-vitamin-c-1000-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-zinc-50-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-b12-1000-pr",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-l-lysine-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-l-lysine-500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-b12-500-resin",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-calcium-citrate-d-trisilicate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-b6-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-glutathione-500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-melatonin-3mg-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-super-fiber-tabs",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-tart-cherry-turmeric",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-red-yeast-rice",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "sprouts-vitamin-c-rose-hips-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-adult-ultra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-mens-ultra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-womens-ultra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-mens-50-ultra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-womens-50-ultra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-max3",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-max3-no-iron",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-max3-mens",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-max3-womens",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-mens-complete",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-mens-50-complete",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-womens-complete",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-womens-50-complete",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-mens-50-ultra-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alive-womens-50-ultra-minis",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cortisol-manager",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-moringa",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-sleep-tonight",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-schisandra",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-gymnema",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-ginkgold-max",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-ginkgo",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-black-elderberry",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-ashwagandha-silicate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-fatigued-to-fantastic-adrenal-stress-end",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-aloe",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-aloelax",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-alpha-lipoic-acid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-artichoke",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-beet-root",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-berberine-with-cinnamon",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-bilberry",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-calcium-citrate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cascara-sagrada",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cayenne-fruit",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-clear-thinking",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-complete-liver-cleanse",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cranberry-fruit",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cranberry",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-cranrx-bioactive-cranberry",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-damiana-leaves",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-dgl-ultra-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-echinacea",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-fennel-seed",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-fenugreek-seed",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-fiber-fusion-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-forskohlii",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-gaba",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-garden-veggies",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-ginger-root",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-gs-500-glucosamine-sulfate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-hawthorn-berries",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-hawthorn",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-hem-care",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-iron",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-maca-root",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-magnesium-complex",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-olive-leaf-premium-extract-20-oleuropein",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-orchard-fruits",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-potassium",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-raspberry-leaf",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-red-yeast-rice",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-rest-and-restore",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-fatigued-to-fantastic-revitalizing-sleep-formula",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-rhodiola",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-saw-palmetto-berries",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-skullcap-herb",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-super-milk-thistle",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-super-thisilyn",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-tart-cherry-ultra-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-turmeric-max-potency",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-urinary",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-valerian",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-vitamin-c-with-rose-hips",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "natures-way-vitex-fruit",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-precise-pain-relieving-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-precise-cooling-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-precise-warming-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tylenol-precise-nighttime-cream",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tiger-balm-liniment",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "icy-hot-nighttime-recovery-roll-on",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "icy-hot-revive-recovery-roll-on",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tiger-balm-red-extra-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tiger-balm-ultra-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "tiger-balm-white-regular-strength",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "salonpas-lidocaine-flex-patch",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "salonpas-arthritis-pain-patch",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "salonpas-pain-relief-patch",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "salonpas-arthritis-pain-patch-large",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "salonpas-pain-relief-patch-large",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "absorbine-jr-plus-knee-patch",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thrive-wellmade-turmeric",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-curcumin-phytosome-500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "thorne-curcumin-phytosome-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "asutra-melt-pain-away",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-turmeric-curcumin-bioperine",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "doctors-best-high-absorption-curcumin-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "qunol-extra-strength-turmeric-1500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "qunol-extra-strength-turmeric-1000",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "naturewise-curcumin-turmeric-2250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "qunol-extra-strength-turmeric-1500-oleoresin",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-turmeric-complex",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-womens-prenatal-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-womens-postnatal-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-advanced-strength-daily",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-yeast-vaginal-ph",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-tiny-tummies-0-6",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-tiny-tummies-6-12",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-tiny-tummies-12mo-4yr",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "lovebug-postnatal-probiotic",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "hilma-occasional-constipation",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "jarrow-magmind",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "jarrow-theanine-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "jarrow-hyaluronic-acid",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "jarrow-glutathione-reduced",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "bodybio-tudca",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "trace-magnesium-glycinate",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "solaray-d3-k2",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "kal-magnesium-glycinate-350",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "youtheory-ashwagandha-ksm66",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "wholesome-story-myo-d-chiro",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "fon-headache",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "fon-muscle",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "fon-arniblend",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "fon-nerve",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "fon-migraine",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-berberine-phytosome",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-teen-multi-platinum",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-liposomal-c-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-biotin-marine-collagen",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-teen-athlete-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-akkermansia",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "wellmade-irish-sea-moss",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "wellmade-l-theanine",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "wellmade-resveratrol",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "wellmade-selenium",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-womens-18-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-mens-18-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-womens-50-multi",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ritual-stress-relief",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "new-chapter-all-flora-multi-fiber",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basic-care-triple-abx-oil-blend",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-collagen-complex",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basics-probiotic-5b",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-melatonin-3-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-chelated-magnesium",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-turmeric-root",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-vitamin-c-1000-tablets",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-iron",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-elements-calcium-magnesium",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basics-advanced-healing-ointment",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "amazon-basics-chest-rub",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "trace-shilajit-capsules",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "codeage-multi-collagen",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "ollois-histaminum-30c",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "active-skin-repair-hydrogel",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "dg-health-triple-abx-oil-blend",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "family-wellness-pain-scar-itch",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-childrens-vaporizing-rub",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "equate-nighttime-lubricant-ointment",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "cvs-health-nighttime-dry-eye",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "topcare-original-eye-drops",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "walgreens-sleep-z-dyefree",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "walgreens-pm-lubricant-ointment",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "upup-pm-lubricant-ointment",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "micro-ingredients-glucosamine-7in1-300",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-glycinate-with-bioperine-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vitamin-d3-k2-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-picolinate-50-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-quercetin-with-bromelain-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-quercetin-with-bromelain-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-500-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-taurine-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-theanine-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hyaluronic-acid-100-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glycine-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-taurine-1-000-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-potassium-citrate-99-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-with-bioflavonoids-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-tyrosine-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ashwagandha-standardized-extract-450-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-glycinate-with-bioperine-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-d-mannose-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-inositol-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-betaine-hcl-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-standardized-extract-ashwagandha-450-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magtein-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dandelion-root-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-biotin-10-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-2-100-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-choline-inositol-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-taurine-powder-8",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-quercetin-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-biotin-5-000-mcg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magtein-magnesium-l-threonate-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-citrate-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-750-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-glutamine-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-bromelain-500-mg-2-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-astaxanthin-4-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-d-mannose-500-mg-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-mannose-cranberry-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-taurine-1-000-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chromium-picolinate-200-mcg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-theanine-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-200-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-stinging-nettle-root-extract-250-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-selenium-200-mcg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-beta-glucans-with-immunenhancer-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-rutin-450-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-melatonin-5-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-nac-quercetin-zinc-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hyaluronic-acid-with-l-proline-alpha-lipoic-acid-and-grape-seed-extract-100-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-caps-400-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-100-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-600-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-citrate-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-citrus-bioflavonoids-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dim-200-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acetyl-l-carnitine-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-turmeric-curcumin-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vitamin-k-2-100-mcg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-iron-18-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-elderberry-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-picolinate-50-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cranberry-caps-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-turmeric-bromelain-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-300-mg-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-proline-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-50-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-theanine-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glycine-1-000-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-p-5-p-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-25-billion-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-indole-3-carbinol-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gaba-with-vitamin-b-6-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-250-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chlorella-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vegetarian-glucosamine-msm-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-egcg-green-tea-extract-400-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gaba-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-melatonin-3-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-candida-support-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-olive-leaf-extract-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-iron-36-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-biocell-collagen-hydrolyzed-type-ii-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-potassium-aspartate-with-taurine-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-phosphatidyl-serine-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-50-billion-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-nattokinase-100-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-kelp-325-mcg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vegetarian-glucosamine-msm-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gaba-750-mg-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-with-turmeric-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-malate-caps-95-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vitamin-k-2-100-mcg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gastro-comfort-with-pepzin-gi-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-menopause-support-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-100-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-elderberry-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-daily-vits-multi-vitamin-mineral-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glutathione-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dgl-with-aloe-vera-400-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-tryptophan-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-methyl-b-12-5-000-mcg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vegetarian-dry-e-400-268-mg-400-iu-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-boswellia-extract-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-100-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pqq-with-alpha-lipoic-acid-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cranberry-with-pacs-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-plant-enzymes-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-curcubrain-400-mg-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-garlic-5000-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ksm-66-ashwagandha-600-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-500-with-rose-hips-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hyaluronic-acid-50-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-biotin-1-000-mcg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cinnamon-bark-600-mg-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-arginine-500-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dairy-digest-complete-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-methionine-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-tyrosine-750-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-rhodiola-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-bromelain-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-shark-cartilage-750-mg-300",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dmg-125-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-thyroid-energy-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-potassium-gluconate-99-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-tart-cherry-500-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-artichoke-extract-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-quercetin-with-bromelain-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-saw-palmetto-berries-550-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-6-100-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-potassium-gluconate-99-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-saw-palmetto-berries-550-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-psyllium-husk-caps-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-relora-300-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hawthorn-extract-600-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-blood-pressure-health-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pqq-energy-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-bilberry-complex-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ginger-root-extract-250-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnosine-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-brain-elevate-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-transporters-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acetyl-l-carnitine-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-psyllium-husk-caps-360",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gaba-750-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dmae-250-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-amino-complete-360",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sleep-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coral-calcium-1-000-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-soy-isoflavones-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pycnogenol-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-daily-vits-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cinnamon-bark-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucomannan-575-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-phosphatidyl-serine-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-melatonin-3-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glutathione-250-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-selenium-200-mcg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-clinical-gi-probiotic-50-formula-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-resveratrol-350-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-plant-enzymes-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chondroitin-sulfate-600-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-saffron-50-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnitine-500-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-l-glutamine-1-000-mg-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-250-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-candida-support-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-with-glycine-taurine-inositol-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-kre-alkalyn-creatine-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-paba-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-calcium-citrate-caps-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alfalfa-650-mg-500",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-choline-300-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-andrographis-extract-400-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-woman-s-probiotic-20-billion-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-curcufresh-curcumin-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-brain-elevate-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-true-calm-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-niacin-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-true-focus-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-brewer-s-yeast-650-mg-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-dong-quai-520-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-6-100-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-citrulline-750-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnitine-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-st-john-s-wort-300-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-astaxanthin-10-mg-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-eggshell-membrane-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-biotin-5-000-mcg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-egcg-green-tea-extract-400-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-propolis-1500-300-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-senna-leaves-470-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-bee-pollen-caps-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-l-glutamine-1-000-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-turmeric-curcumin-phytosome-with-meriva-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-nattokinase-100-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-astaxanthin-10-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-potassium-plus-iodine-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-beta-1-3-1-6-d-glucan-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-relora-300-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-8-billion-acidophilus-bifidus-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-zinc-immune-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acidophilus-2-billion-cfu-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-bacopa-extract-450-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-7-keto-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glutathione-with-milk-thistle-extract-alpha-lipoic-acid-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ashwagandha-stress-relief-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-red-yeast-rice-with-coq10-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hydrolyzed-beef-gelatin-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-100-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-fenugreek-500-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-grape-seed-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-adam-superior-men-s-multi-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-fenugreek-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-iron-complex-caps-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-beet-root-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coral-calcium-350-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-arginine-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-tryptophan-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-milk-thistle-extract-with-turmeric-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-100-billion-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-full-spectrum-minerals-caps-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-devil-s-claw-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-raw-maca-750-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-same-200-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-advanced-uc-ii-joint-relief-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alphasorb-c-500-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-7-keto-100-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-d-mannose-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-picolinate-50-mg-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-rei-shi-mushrooms-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-holy-basil-extract-500-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-sulfate-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vein-supreme-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-adrenal-stress-support-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-zma-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-30-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-black-cohosh-root-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-histidine-600-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hawthorn-extract-300-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-eve-superior-women-s-multi-iron-free-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-oregano-450-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-beta-alanine-endurance-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-clinical-strength-ocu-support-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-vegetarian-glucosamine-1000-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-hyaluronic-acid-with-msm-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-thyroid-energy-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnosine-500-mg-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pycnogenol-with-bioflavonoids-150",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-royal-jelly-60-733739025609",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-50-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-shark-cartilage-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-arginine-citrulline-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coral-calcium-plus-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ascorbyl-palmitate-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-amino-complete-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-30-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cal-mag-dk-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-black-walnut-hulls-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-100-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-zinc-immune-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pycnogenol-with-bioflavonoids-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-aloe-10-000-probiotics-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-30-mg-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-chondroitin-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-chondroitin-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-flush-free-niacin-250-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-celery-seed-extract-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-transporters-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-same-200-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-feverfew-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sleep-regimen-3-in-1-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-turmeric-curcumin-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnitine-250-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-st-john-s-wort-300-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alfalfa-650-mg-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-kava-kava-extract-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-kava-kava-extract-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-50-250-733739004284",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-olive-leaf-extract-500-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pycnogenol-60-733739031693",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-hmb-with-vitamin-d-3-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-flush-free-niacin-250-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-tribulus-men-s-health-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-60-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-policosanol-40-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-super-antioxidants-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acetyl-l-carnitine-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-50-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acidophilus-two-billion-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-phosphatidyl-serine-soy-free-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-policosanol-10-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-full-spectrum-mineral-caps-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cat-s-claw-extract-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-potassium-iodide-30-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-with-glycine-taurine-inositol-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-testojack-100-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-advanced-joint-support-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-respiratory-care-probiotic-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-arginine-700-mg-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-lipoic-acid-60-733739030405",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-zma-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chitosan-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chitosan-plus-chromium-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-b-50-100-733739004260",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-clinical-heart-health-probiotic-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-5-htp-50-mg-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-red-yeast-rice-with-coq10-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-bifido-boost-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chlorella-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-4x6-acidophilus-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-arginine-citrulline-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-7-keto-100-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-liver-caps-with-milk-thistle-eleuthero-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-sulfate-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ecogreen-multi-iron-free-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ocu-support-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-chondroitin-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-celadrin-msm-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-testojack-100-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-eldermune-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coq10-60-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-4x6-acidophilus-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-energy-extreme-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-special-two-multi-vitamin-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coral-calcium-plus-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glutathione-250-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-berberine-hcl-500-mg-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-pyruvate-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-clinical-cardio-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-intestinal-bacteria-support-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-graviola-500-mg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gymnema-sylvestre-extract-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucose-metabolic-support-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-special-two-multi-vitamin-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-rest-repair-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-serine-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-aakg-2200-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ashwagandha-450-mg-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-super-enzymes-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-500-mg-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-alpha-gpc-600-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pharmagaba-with-magnesium-citrate-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pharmagaba-with-magnesium-citrate-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-resveratrol-600-mg-60-veg-capsule",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-7-day-colon-cleanse-56",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-betaine-hcl-ox-bile-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-chromium-picolinate-200-mcg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-testojack-n-o-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-probiotic-10-25-billion-cfu-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-8-billion-acidophilus-bifidus-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-glycinate-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-nac-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-citrate-240",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-oregano-oil-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-250-733739001238",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-beta-sitosterol-plant-sterols-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-zinc-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-gamma-e-complex-advanced-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-100-733739001139",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-arginine-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-horny-goat-weed-extract-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pygeum-saw-palmetto-with-pumpkin-seed-oil-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-malate-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-natural-beta-carotene-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-tmg-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-natural-beta-carotene-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-250-733739001023",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-lysine-100-733739001009",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-1000-with-rose-hips-bioflavonoids-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-daily-vits-multi-vitamin-mineral-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-aloe-vera-gels-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-cholesterol-pro-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnitine-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sustained-release-b-100-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-tryptophan-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-beta-sitosterol-plant-sterols-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-aloe-vera-gels-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-hmb-with-vitamin-d-3-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-super-enzymes-180-733739029621",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-c-500-with-rose-hips-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-red-yeast-rice-extract-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-nac-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-tribulus-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-triphala-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-chondroitin-240-tablet",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-tribulus-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-calcium-lactate-250",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-msm-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-glucosamine-chondroitin-120-tablet",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-niacinamide-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-super-enzymes-90-733739029607",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-pygeum-saw-palmetto-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-calcium-citrate-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-buffered-c-1000-complex-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-adam-superior-men-s-multi-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-daily-vits-multi-vitamin-mineral-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-garcinia-extract-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-red-yeast-rice-extract-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-respir-all-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-adam-superior-men-s-multi-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-cysteine-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-l-carnitine-50",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-l-arginine-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-ulcetrol-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-l-arginine-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-acetyl-l-carnitine-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-magnesium-glycinate-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-moringa-leaf-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-sports-l-citrulline-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-water-out-100",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-water-out-200",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-uc-ii-joint-health-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-uc-ii-joint-health-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-peppermint-gels-with-ginger-fennel-oils-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-co-enzyme-b-complex-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-coenzyme-b-complex-with-alpha-lipoic-acid-and-coq10-120",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-horse-chestnut-with-added-rutin-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-prostate-health-clinical-strength-180",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-prostate-health-90",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-eve-superior-womens-multi-180-softgels",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-eve-superior-womens-multi-90-softgels",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-same-400-mg-60",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "now-same-400-mg-30",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zyrtec-b132-hives-syrup-4oz",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zyrtec-b135-kids-syrup-8oz",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "claritin-b136-kids-syrup-4oz",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "zyrtec-b142-kids-syrup-bubblegum-4oz",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "claritin-b144-kids-syrup-5oz",
+      "reason": "verdict-only (no ingredient delta; not traced to live lock)"
+    },
+    {
+      "id": "gasx-b176-total-relief-30",
+      "reason": "risk change without live lock (Vegetable oil (coconut origin))"
+    }
+  ],
+  "byDrivingToken": {},
+  "applied": true,
+  "touchedFileCount": 94,
+  "touchedFiles": [
+    "lib/rating-drafts/batch1-adult-apap-ibu.ts",
+    "lib/rating-drafts/batch10-adult-digestive.ts",
+    "lib/rating-drafts/batch100-kyr6-healtha2z-no-oi-google.ts",
+    "lib/rating-drafts/batch101-kyr6-healtha2z-token-backfill-3.ts",
+    "lib/rating-drafts/batch102-kyr6-healtha2z-token-backfill-4.ts",
+    "lib/rating-drafts/batch103-kyr6-healtha2z-token-backfill-5.ts",
+    "lib/rating-drafts/batch105-kyr6-healtha2z-three-gummies.ts",
+    "lib/rating-drafts/batch106-kyr6b-amazon-3p-time-cap.ts",
+    "lib/rating-drafts/batch107-kyr6b-timecap-token-backfill.ts",
+    "lib/rating-drafts/batch108-kyr6b-timecap-fdc-aliases.ts",
+    "lib/rating-drafts/batch109-kyr6b-amazon-3p-goodsense.ts",
+    "lib/rating-drafts/batch11-kids-digestive.ts",
+    "lib/rating-drafts/batch110-kyr6b-goodsense-rematch.ts",
+    "lib/rating-drafts/batch111-kyr6b-goodsense-token-backfill.ts",
+    "lib/rating-drafts/batch112-kyr6b-goodsense-token-backfill-2.ts",
+    "lib/rating-drafts/batch113-kyr6b-goodsense-token-backfill-3.ts",
+    "lib/rating-drafts/batch123-kyr6b-solaray-closeout-no-upc.ts",
+    "lib/rating-drafts/batch124-kyr6b-solaray-fat-closeout.ts",
+    "lib/rating-drafts/batch126-kyr6b-solaray-one-shot.ts",
+    "lib/rating-drafts/batch129-kyr6b-solaray-ocr-no-oi.ts",
+    "lib/rating-drafts/batch13-kids-first-aid.ts",
+    "lib/rating-drafts/batch136-kyr6b-claritin-first-slice.ts",
+    "lib/rating-drafts/batch137-kyr6b-allegra-first-slice.ts",
+    "lib/rating-drafts/batch14-adult-vitamins.ts",
+    "lib/rating-drafts/batch147-kyr5d-claritin-upc-override-3.ts",
+    "lib/rating-drafts/batch15-prenatals.ts",
+    "lib/rating-drafts/batch157-kyr6b-benadryl.ts",
+    "lib/rating-drafts/batch16-365-sprouts.ts",
+    "lib/rating-drafts/batch161-kyr6c-pepcid-prilosec-tums.ts",
+    "lib/rating-drafts/batch162-kyr6c-held-tokens.ts",
+    "lib/rating-drafts/batch163-kyr6c-tums-counts.ts",
+    "lib/rating-drafts/batch164-kyr6c-nexium-prevacid-zantac.ts",
+    "lib/rating-drafts/batch166-kyr6c-held-sleep-gripe.ts",
+    "lib/rating-drafts/batch167-kyr6c-cough-night-fever.ts",
+    "lib/rating-drafts/batch169-kyr6c-lollipops.ts",
+    "lib/rating-drafts/batch17-kids-vitamins.ts",
+    "lib/rating-drafts/batch170-kyr6c-gas-drops-strawberry.ts",
+    "lib/rating-drafts/batch175-kyr6c-held-tokens.ts",
+    "lib/rating-drafts/batch178-kyr6c-laxatives.ts",
+    "lib/rating-drafts/batch179-kyr6c-held-laxatives.ts",
+    "lib/rating-drafts/batch180-kyr6c-miragut.ts",
+    "lib/rating-drafts/batch184-kyr6c-pain-line.ts",
+    "lib/rating-drafts/batch189-kyr6c-nb-schiff-mf.ts",
+    "lib/rating-drafts/batch19-kids-singles.ts",
+    "lib/rating-drafts/batch191-kyr6c-nb-twenty.ts",
+    "lib/rating-drafts/batch193-kyr6c-nb-twenty.ts",
+    "lib/rating-drafts/batch196-kyr6c-nb-forty.ts",
+    "lib/rating-drafts/batch197-kyr6c-nb-t73u.ts",
+    "lib/rating-drafts/batch207-kyr6c-rainbow-t99u.ts",
+    "lib/rating-drafts/batch212-kyr6c-cal-mf-cit-t107u.ts",
+    "lib/rating-drafts/batch219-kyr6c-t117u-a.ts",
+    "lib/rating-drafts/batch220-kyr6c-t118u-a.ts",
+    "lib/rating-drafts/batch223-kyr6c-t119u.ts",
+    "lib/rating-drafts/batch226-kyr6c-t122u.ts",
+    "lib/rating-drafts/batch231-kyr6c-t130u-sv.ts",
+    "lib/rating-drafts/batch24-iherb-fullscript.ts",
+    "lib/rating-drafts/batch241-kyr6c-t132u-sv.ts",
+    "lib/rating-drafts/batch29-dollar-store.ts",
+    "lib/rating-drafts/batch30-amazon-basic-care.ts",
+    "lib/rating-drafts/batch31-megafood.ts",
+    "lib/rating-drafts/batch32-genexa.ts",
+    "lib/rating-drafts/batch33-hylands.ts",
+    "lib/rating-drafts/batch38-natures-way.ts",
+    "lib/rating-drafts/batch39-tylenol-advil-aleve-holes.ts",
+    "lib/rating-drafts/batch4-kids-cough-cold.ts",
+    "lib/rating-drafts/batch40-bayer-excedrin-motrin.ts",
+    "lib/rating-drafts/batch42-pain-gels.ts",
+    "lib/rating-drafts/batch47-pain-rub-exact-unlock.ts",
+    "lib/rating-drafts/batch5-adult-allergies.ts",
+    "lib/rating-drafts/batch50-pain-fever-list3.ts",
+    "lib/rating-drafts/batch54-amazon-pf-holes.ts",
+    "lib/rating-drafts/batch55-pf-refused-unlock.ts",
+    "lib/rating-drafts/batch57-pf-refused-unlock.ts",
+    "lib/rating-drafts/batch59-thrive-holes.ts",
+    "lib/rating-drafts/batch6-kids-allergies.ts",
+    "lib/rating-drafts/batch60-thrive-refused-unlock.ts",
+    "lib/rating-drafts/batch61-amazon-house-pinned.ts",
+    "lib/rating-drafts/batch62-mama-bear-carousel.ts",
+    "lib/rating-drafts/batch63-kyr6-elements-basics.ts",
+    "lib/rating-drafts/batch65-kyr6-store-generics.ts",
+    "lib/rating-drafts/batch67-kyr6-members-mark.ts",
+    "lib/rating-drafts/batch68-kyr6-founder-panels.ts",
+    "lib/rating-drafts/batch69-kyr6-store-panels.ts",
+    "lib/rating-drafts/batch7-adult-sleep.ts",
+    "lib/rating-drafts/batch77-kyr6-nutricost-token-backfill.ts",
+    "lib/rating-drafts/batch78-kyr6-nutricost-token-backfill-2.ts",
+    "lib/rating-drafts/batch79-kyr6-nutricost-no-oi.ts",
+    "lib/rating-drafts/batch8-kids-sleep.ts",
+    "lib/rating-drafts/batch80-kyr6-nutricost-79-refuse.ts",
+    "lib/rating-drafts/batch86-kyr6-naturewise-last-refuse.ts",
+    "lib/rating-drafts/batch87-kyr6-amazon-3p-welmate.ts",
+    "lib/rating-drafts/batch9-immune-support.ts",
+    "lib/rating-drafts/batch93-kyr6-amazon-3p-aplus-health.ts",
+    "lib/rating-drafts/batch96-kyr6-amazon-3p-healtha2z.ts"
+  ],
+  "protectedFilesEdited": [
+    "lib/rating-drafts/batch100-kyr6-healtha2z-no-oi-google.ts",
+    "lib/rating-drafts/batch101-kyr6-healtha2z-token-backfill-3.ts",
+    "lib/rating-drafts/batch102-kyr6-healtha2z-token-backfill-4.ts",
+    "lib/rating-drafts/batch103-kyr6-healtha2z-token-backfill-5.ts",
+    "lib/rating-drafts/batch105-kyr6-healtha2z-three-gummies.ts",
+    "lib/rating-drafts/batch106-kyr6b-amazon-3p-time-cap.ts",
+    "lib/rating-drafts/batch107-kyr6b-timecap-token-backfill.ts",
+    "lib/rating-drafts/batch108-kyr6b-timecap-fdc-aliases.ts",
+    "lib/rating-drafts/batch109-kyr6b-amazon-3p-goodsense.ts",
+    "lib/rating-drafts/batch110-kyr6b-goodsense-rematch.ts",
+    "lib/rating-drafts/batch111-kyr6b-goodsense-token-backfill.ts",
+    "lib/rating-drafts/batch112-kyr6b-goodsense-token-backfill-2.ts",
+    "lib/rating-drafts/batch113-kyr6b-goodsense-token-backfill-3.ts",
+    "lib/rating-drafts/batch123-kyr6b-solaray-closeout-no-upc.ts",
+    "lib/rating-drafts/batch124-kyr6b-solaray-fat-closeout.ts",
+    "lib/rating-drafts/batch126-kyr6b-solaray-one-shot.ts",
+    "lib/rating-drafts/batch129-kyr6b-solaray-ocr-no-oi.ts",
+    "lib/rating-drafts/batch136-kyr6b-claritin-first-slice.ts",
+    "lib/rating-drafts/batch137-kyr6b-allegra-first-slice.ts",
+    "lib/rating-drafts/batch59-thrive-holes.ts",
+    "lib/rating-drafts/batch77-kyr6-nutricost-token-backfill.ts",
+    "lib/rating-drafts/batch78-kyr6-nutricost-token-backfill-2.ts",
+    "lib/rating-drafts/batch79-kyr6-nutricost-no-oi.ts",
+    "lib/rating-drafts/batch80-kyr6-nutricost-79-refuse.ts",
+    "lib/rating-drafts/batch86-kyr6-naturewise-last-refuse.ts",
+    "lib/rating-drafts/batch87-kyr6-amazon-3p-welmate.ts",
+    "lib/rating-drafts/batch93-kyr6-amazon-3p-aplus-health.ts",
+    "lib/rating-drafts/batch96-kyr6-amazon-3p-healtha2z.ts"
+  ],
+  "patchMiss": [
+    "aleve-pm",
+    "junior-strength-advil-coated",
+    "advil-film-coated-menstrual",
+    "bayer-es-500-aspirina",
+    "bayer-back-body-aspirina-cafeina",
+    "bayer-aspirin-regimen-enteric",
+    "excedrin-migraine-es-blue",
+    "genuine-bayer-aspirin-325",
+    "advil-targeted-relief-cream",
+    "icy-hot-pro-massaging-balm",
+    "biofreeze-dry-stick",
+    "mineral-ice-extreme-dry-stick",
+    "goodsense-childrens-ibuprofen-chew",
+    "midol-complete",
+    "aplus-health-dual-action-oxides",
+    "aplus-health-dual-action",
+    "qunol-zero-sugar-turmeric-gummies",
+    "topricin-pain-relief-cream"
+  ]
+}

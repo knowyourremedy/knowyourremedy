@@ -33,7 +33,7 @@
 // oil on a capsule or softgel; gummy sunflower stays High).
 //
 // TALLY (unverified drafts in THIS file): 9 rows —
-// Clean 0 / Caution 9 / Avoid 0.
+// Clean 1 / Caution 8 / Avoid 0.
 // NEW 8 / REUSE-formula 1 (marshmallow 120 shares batch77
 // `nutricost-butcher-s-broom-extract-capsules-120-capsules`) /
 // SKIPPED 1 (CoQ10 100 mg 120 softgels already on MAIN in batch76) /
@@ -203,9 +203,9 @@ const COMPACT: Compact[] = [
     flags: [
       ["Organic vegetable glycerin", "cleared", "glycerin"],
       ["Distilled water", "cleared", "water"],
-      ["Organic lemon juice concentrate", "limited", "lemonSweetener"],
+      ["Organic lemon juice concentrate", "cleared", "lemonSweetener"],
     ],
-    verdict: "caution",
+    verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Organic lemon juice concentrate. The drop is not labeled for color, so this is the sweetener Caution row. Organic vegetable glycerin and distilled water stay Cleared.",
     cite: pin(
       "nutricost-organic-cats-claw-liquid-drops",
@@ -471,8 +471,8 @@ export const BATCH80_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH80_KYR6_NUTRICOST_79_REFUSE;
 if (_ROWS.length !== 9) throw new Error('batch80 tally drift: expected 9 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 0) throw new Error('batch80 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 9) throw new Error('batch80 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 1) throw new Error('batch80 Clean tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 8) throw new Error('batch80 Caution tally drift');
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 0) throw new Error('batch80 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch80 recordStatus must stay unverified');
 if (_ROWS.some((r) => !r.formulaId)) throw new Error('batch80 every row needs formulaId');

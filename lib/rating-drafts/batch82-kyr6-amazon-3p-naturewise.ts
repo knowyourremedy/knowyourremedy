@@ -13,7 +13,7 @@
 // Search wiring only. Not wired into Clean Picks UI. Letter tiles only.
 //
 // TALLY (unverified drafts in THIS file): 110 rows —
-// Clean 61 / Caution 47 / Avoid 2.
+// Clean 63 / Caution 45 / Avoid 2.
 // NEW 48 / REUSE-formula 62 /
 // SKIPPED 46 (no_OI 28 / OUT 15 / already-on-MAIN 3) /
 // REFUSED 45.
@@ -181,7 +181,7 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{"name": "Magnesium Glycinate Softgels", "strength": "120 Count"}],
-    flags: [["MCT oil", "limited", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Carob [color]", "limited", "carobExtract"], ["Beeswax", "cleared", "wax"], ["Sunflower lecithin", "cleared", "lecithin"]],
+    flags: [["MCT oil", "cleared", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Carob [color]", "limited", "carobExtract"], ["Beeswax", "cleared", "wax"], ["Sunflower lecithin", "cleared", "lecithin"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is MCT oil; Carob [color]. Cleared capsule, softgel, and fill tokens do not raise Avoid.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/magnesium-glycinate-softgels; image https://www.naturewise.com/cdn/shop/files/Magnesium_Glycinate_160mg_serving_-_Right_Side.jpg?width=1200) other-ingredients: Organic mct oil, softgel (halal gelatin, vegetable glycerin, purified water, carob [color]), beeswax, sunflower lecithin. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157853417 is the GTIN-12 on this offer (120 Count). No DailyMed drug SPL.",
@@ -869,8 +869,8 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{"name": "Calcium + Vitamin D3", "strength": "60 Count"}],
-    flags: [["MCT oil", "limited", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Turmeric (color)", "cleared", "turmericColor"], ["Sunflower lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "wax"]],
-    verdict: "caution",
+    flags: [["MCT oil", "cleared", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Turmeric (color)", "cleared", "turmericColor"], ["Sunflower lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "wax"]],
+    verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is MCT oil. Cleared capsule, softgel, and fill tokens do not raise Avoid.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/calcium-vitamin-d3; image https://www.naturewise.com/cdn/shop/files/NW-Calcium_VitaminD3-4-Supplement60.jpg?width=1200) other-ingredients: organic mct oil, halal gelatin, vegetable glycerin, purified water, turmeric root (color), sunflower lecithin, and beeswax. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157850539 is the GTIN-12 on this offer (60 Count). No DailyMed drug SPL.",
   },
@@ -885,8 +885,8 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: SUPPLEMENT,
     actives: [{"name": "Calcium + Vitamin D3", "strength": "200 Count"}],
-    flags: [["MCT oil", "limited", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Turmeric (color)", "cleared", "turmericColor"], ["Sunflower lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "wax"]],
-    verdict: "caution",
+    flags: [["MCT oil", "cleared", "mctUnlabeled"], ["Gelatin", "cleared", "gelatin"], ["Glycerin", "cleared", "glycerin"], ["Purified water", "cleared", "water"], ["Turmeric (color)", "cleared", "turmericColor"], ["Sunflower lecithin", "cleared", "lecithin"], ["Beeswax", "cleared", "wax"]],
+    verdict: "clean",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is MCT oil. Cleared capsule, softgel, and fill tokens do not raise Avoid.",
     cite: "Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/calcium-vitamin-d3; image https://www.naturewise.com/cdn/shop/files/NW-Calcium_VitaminD3-4-Supplement60.jpg?width=1200) other-ingredients: organic mct oil, halal gelatin, vegetable glycerin, purified water, turmeric root (color), sunflower lecithin, and beeswax. Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157850553 is the GTIN-12 on this offer (200 Count). No DailyMed drug SPL.",
   },
@@ -2033,8 +2033,8 @@ export const BATCH82_REFUSED: { sku: string; reason: string }[] = [
 
 const _ROWS = BATCH82_KYR6_AMAZON_3P_NATUREWISE;
 if (_ROWS.length !== 110) throw new Error('batch82 tally drift: expected 110 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 61) throw new Error('batch82 Clean tally drift');
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 47) throw new Error('batch82 Caution tally drift');
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 63) throw new Error('batch82 Clean tally drift');
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 45) throw new Error('batch82 Caution tally drift');
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 2) throw new Error('batch82 Avoid tally drift');
 if (_ROWS.some((r) => r.recordStatus !== UNVERIFIED)) throw new Error('batch82 recordStatus must stay unverified');
 if (_ROWS.filter((r) => r.formulaId === r.id).length !== 48) throw new Error('batch82 NEW formula drift');

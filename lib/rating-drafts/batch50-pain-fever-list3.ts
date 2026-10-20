@@ -1211,7 +1211,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('alpha-tocopherol acetate', 'cleared', dailymed(SET.stick, METH.tocopherol)),
       flag('arachidic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('c15-19 alkane', 'cleared', dailymed(SET.stick, METH.c1519)),
-      flag('hydrogenated castor oil', 'cleared', dailymed(SET.stick, METH.hco)),
+      flag('hydrogenated castor oil', 'high', dailymed(SET.stick, METH.hco)),
       flag('lauric acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('linoleic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('linolenic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
@@ -1223,7 +1223,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('petrolatum', 'cleared', dailymed(SET.stick, METH.petrolatum)),
       flag('stearic acid', 'cleared', dailymed(SET.stick, METH.stearic)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1629,7 +1629,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     inactiveIngredients: [
       flag('C15-19 Alkane', 'cleared', dailymed(SET.miStick, METH.c1519)),
       flag('Fragrance', 'cleared', dailymed(SET.miStick, METH.fragrance)),
-      flag('Hydrogenated Castor Oil', 'cleared', dailymed(SET.miStick, METH.hco)),
+      flag('Hydrogenated Castor Oil', 'high', dailymed(SET.miStick, METH.hco)),
       flag('Lauryl Laurate', 'cleared', dailymed(SET.miStick, METH.laurylLaurate)),
       flag('Menthoxypropanediol', 'cleared', dailymed(SET.miStick, METH.menthoxy)),
       flag('Oleic Acid', 'cleared', dailymed(SET.miStick, METH.oleic)),
@@ -1637,7 +1637,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Petrolatum', 'cleared', dailymed(SET.miStick, METH.petrolatum)),
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.miStick, METH.tocopherol)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -2042,11 +2042,11 @@ if (BATCH50_PAIN_FEVER_LIST3.length !== 43) {
 if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 50 Clean tally is 0');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 30) {
-  throw new Error('batch 50 Caution tally is 30');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 28) {
+  throw new Error('batch 50 Caution tally is 28');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 13) {
-  throw new Error('batch 50 Avoid tally is 13');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 15) {
+  throw new Error('batch 50 Avoid tally is 15');
 }
 if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 50 stays on Pain & Fever');
