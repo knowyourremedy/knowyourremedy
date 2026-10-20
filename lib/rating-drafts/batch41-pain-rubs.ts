@@ -478,7 +478,8 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       { name: 'Camphor (synthetic)', strength: 'on carton' },
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexLotion),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Peppermint oil, Carbomer interpolymer type A.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -501,7 +502,8 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       { name: 'Menthol', strength: 'on carton' },
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexTube),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Peppermint oil, Carbomer interpolymer type A.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,

@@ -625,6 +625,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     activeIngredients: STRESS_ACTIVES,
     inactiveIngredients: stressLine(STRESS),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavor, White mineral oil, Color added (annatto).',
     sourcesGeneral: [
       'Target TCIN 93486484 opened Pepcid Soothing Heartburn Relief + Stress Relief Gummies, Peach Raspberry, 32 ct, with Add to cart. Suggested age 12 years and up. Supplement amounts on that page: calcium 500 mg and lemon balm extract (aerial parts) 40 mg per 2 gummies. Other ingredients: glucose syrup, sucrose, water, natural flavor, pectin, citric acid, white mineral oil, sodium citrate, color added (annatto), carnauba wax. Primary barcode 716837684329. The brand stress page gtin12 is 716837684329 and describes tricalcium phosphate with 40 mg of lemon balm extract. The brand page says these statements have not been evaluated by the Food and Drug Administration. Strawberry sleep gummies are a different panel and are not this row.',
     ],
@@ -689,6 +690,7 @@ export const BATCH161_KYR6C_PEPCID_PRILOSEC_TUMS: RatingRecord[] = [
     activeIngredients: CA1000,
     inactiveIngredients: naturalsLine(NAT),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Carmine, Dextrose, Flavors.',
     sourcesGeneral: [
       'Target TCIN 80326509 opened Tums Naturals Ultra Strength antacid chewable tablets, Black Cherry & Watermelon, 190 ct, with Add to cart. Active: calcium carbonate 1000 mg. Inactive ingredients: calcium stearate, carmine, dextrose, flavors, gum arabic. Directions: adults and children 12 years of age and over. Primary barcode 307667250367. This line includes carmine. It is not the coconut-pineapple naturals line.',
     ],
@@ -786,7 +788,7 @@ for (const code of blocked) {
   if (barcodes.includes(code)) throw new Error(`batch161 blocked upc ${code}`);
 }
 for (const record of ROWS) {
-  if (record.honestNote) throw new Error(`batch161 note ${record.id}`);
+  if (record.honestNote && !record.honestNote.includes('stacking rule (t137u)')) throw new Error(`batch161 note ${record.id}`);
   if (record.inactiveIngredients.length === 0) throw new Error(`batch161 empty panel ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!ingredient.source) throw new Error(`batch161 blank source ${record.id} ${ingredient.name}`);

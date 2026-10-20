@@ -159,6 +159,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: BUTENAFINE,
     inactiveIngredients: ULTRA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polyoxyethylene (23) cetyl ether, Propylene glycol dicaprylate, Sodium benzoate, Trolamine.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -180,6 +181,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: BUTENAFINE,
     inactiveIngredients: ULTRA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polyoxyethylene (23) cetyl ether, Propylene glycol dicaprylate, Sodium benzoate, Trolamine.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -201,6 +203,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: BUTENAFINE,
     inactiveIngredients: ULTRA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polyoxyethylene (23) cetyl ether, Propylene glycol dicaprylate, Sodium benzoate, Trolamine.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -387,6 +390,7 @@ export const BATCH185_KYR6C_ANTIFUNGAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Benzocaine', strength: '20%' }],
     inactiveIngredients: ITCH_SPRAY_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, Normal butane, Propane.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -436,7 +440,7 @@ for (const record of ROWS) {
   const note = record.honestNote ?? '';
   const hasPg = record.inactiveIngredients.some((item) => item.name === 'Propylene glycol');
   if (hasPg && !note.includes('propylene glycol')) throw new Error(`batch185 missing pg note ${record.id}`);
-  if (!hasPg && note) throw new Error(`batch185 unexpected note ${record.id}`);
+  if (!hasPg && note && !note.includes('stacking rule (t137u)')) throw new Error(`batch185 unexpected note ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch185 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch185 blank source ${ingredient.name}`);

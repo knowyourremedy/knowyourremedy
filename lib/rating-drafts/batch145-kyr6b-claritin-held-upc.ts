@@ -124,6 +124,7 @@ type Spec = {
   verdict: RatingRecord['verdict'];
   note: string;
   source: string;
+  honestNote?: string;
 };
 
 function expand(d: Spec): RatingRecord {
@@ -141,6 +142,7 @@ function expand(d: Spec): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.flags,
     verdict: d.verdict,
+    ...(d.honestNote ? { honestNote: d.honestNote } : {}),
 
     retailers: [...RETAILERS],
     cleanAlternatives: d.audience === 'kids' ? KIDS_ALTS : ADULT_ALTS,
@@ -185,6 +187,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-2 is 80 mL in 1 bottle in 1 carton. Marketing status active. No size-specific carton image.`,
   }),
@@ -198,6 +201,7 @@ export const BATCH145_KYR6B_CLARITIN_HELD_UPC: RatingRecord[] = [
     actives: SYRUP_ACTIVE,
     flags: liquidFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Phosphoric acid, Menthol, Edetate disodium, Flavors, Maltitol, Sorbitol, Sodium benzoate.',
     note: LIQUID_NOTE,
     source: `${LIQUID_SRC} Package NDC 11523-0101-3 is 240 mL in 1 bottle in 1 carton. The Cooling Honey carton image prints 8 FL OZ (240 mL) and the bars read 041100595416, already on claritin-allergy-liquid. That code was not copied here.`,
   }),

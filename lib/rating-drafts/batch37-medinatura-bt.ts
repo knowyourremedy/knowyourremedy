@@ -845,7 +845,8 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Glycerin', 'cleared', dailymed(SET.reboostSpray, METH.cleared)),
       flag('Purified water', 'cleared', dailymed(SET.reboostSpray, METH.cleared)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Fructose, Cherry flavor.',
 
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.reboostSpray) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
@@ -1306,6 +1307,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Purified water', 'cleared', labelCite(ARTH_CREAM_CITE, METH.cleared)),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol / ethanol, Carrageenan, Caprylic/capric triglycerides.',
 
     cleanAlternatives: ALTS.painTopical,
     sourcesGeneral: [
@@ -1561,7 +1563,8 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Citric acid', 'cleared', dailymed(SET.coughDay, METH.cleared)),
       flag('Purified water', 'cleared', dailymed(SET.coughDay, METH.cleared)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Potassium sorbate, Sorbitol.',
 
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughDay) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
@@ -1596,7 +1599,8 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       flag('Anhydrous citric acid', 'cleared', dailymed(SET.coughNight, METH.cleared)),
       flag('Purified water', 'cleared', dailymed(SET.coughNight, METH.cleared)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Potassium sorbate, Sorbitol.',
 
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughNight) + ' — ' + UNVERIFIED_NOTE, CARLSTON],

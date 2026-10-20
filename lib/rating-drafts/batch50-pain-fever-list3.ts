@@ -1092,7 +1092,8 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Isopropyl Alcohol', 'limited', dailymed(SET.creamJar, METH.ipa)),
       flag('PEG-4 Laurate', 'cleared', dailymed(SET.creamJar, METH.peg4)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Alcohol, Sodium Benzoate, Isopropyl Alcohol.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1139,7 +1140,8 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Sodium Stearoyl Lactylate', 'cleared', dailymed(SET.ovnCream, METH.ssl)),
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.ovnCream, METH.tocopherol)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Caprylic/Capric Triglyceride, Caprylyl Glycol, Isopropyl Alcohol, Sodium Benzoate.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1247,7 +1249,8 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       { name: 'Menthol', strength: '10%' },
     ],
     inactiveIngredients: tripleTargetInactives(SET.tripleRoll),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): 1,2-Hexanediol, Alcohol, Caprylyl Glycol.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1271,7 +1274,8 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       { name: 'Menthol', strength: '10%' },
     ],
     inactiveIngredients: tripleTargetInactives(SET.tripleGel),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): 1,2-Hexanediol, Alcohol, Caprylyl Glycol.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1605,7 +1609,8 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Phenoxyethanol', 'cleared', dailymed(SET.miExtremeGel, METH.phenoxy)),
       flag('Sodium Chloride', 'cleared', dailymed(SET.miExtremeGel, METH.nacl)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol Denat., Sodium Benzoate, Caprylyl Glycol.',
 
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -2042,11 +2047,11 @@ if (BATCH50_PAIN_FEVER_LIST3.length !== 43) {
 if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 50 Clean tally is 0');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 28) {
-  throw new Error('batch 50 Caution tally is 28');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 23) {
+  throw new Error('batch 50 Caution tally is 23');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 15) {
-  throw new Error('batch 50 Avoid tally is 15');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 20) {
+  throw new Error('batch 50 Avoid tally is 20');
 }
 if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 50 stays on Pain & Fever');

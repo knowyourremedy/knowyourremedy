@@ -316,7 +316,9 @@ function dyeFreeInfantGasRow(opts: {
       cleared(opts.setid, 'Microcrystalline cellulose'),
       cleared(opts.setid, 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Potassium sorbate, Sodium benzoate, Sorbitol.',
 
     retailers: opts.retailers,
     cleanAlternatives: GAS_UNDER6_ALTS,
@@ -864,6 +866,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLICON_DYEFREE, 'Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Potassium sorbate, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
@@ -911,6 +914,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       cleared(SET_DRAM_KIDS, 'Methacrylic acid copolymer'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Potassium sorbate, Sodium benzoate, Sorbitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NAUSEA_ALTS,

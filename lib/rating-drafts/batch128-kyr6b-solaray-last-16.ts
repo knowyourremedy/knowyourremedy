@@ -842,8 +842,8 @@ const COMPACT: Compact[] = [
       ["Rose Hips", "cleared", "botanical"],
       ["Acerola Cherry", "cleared", "botanical"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Eleuthero Root, Maltodextrin, Montmorillonite Clay. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eleuthero Root, Maltodextrin, Montmorillonite Clay.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/spectro-multi-vitamin-iron-free other-ingredients: Gelatin Capsule, Eleuthero Root, Magnesium Stearate, Cellulose, Stearic Acid, Maltodextrin, Whole Rice Concentrate, Alfalfa Leaf, Montmorillonite Clay, Rose Hips and Acerola Cherry.. Token map: Eleuthero Root = Caution. Maltodextrin = Caution. Montmorillonite Clay = Caution Exact pack Solaray Spectro Multivitamin, Iron-Free (250ct). SKU 076280047851. " + UPC_BLANK,
   },
   {

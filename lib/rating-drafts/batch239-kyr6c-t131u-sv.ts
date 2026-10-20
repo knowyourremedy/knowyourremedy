@@ -95,6 +95,7 @@ export const BATCH239_KYR6C_T131U_SV: RatingRecord[] = [
       flag(PANEL_COHOSH, 'Stearic Acid', 'cleared', 'stearic'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Calcium Silicate, Dextrin, Dextrose.',
     retailers: ['Walmart', 'eBay'],
     sourcesGeneral: [
       `Founder ruling: Spring Valley store-brand exception (t130u/t131u). Panel ${PANEL_COHOSH}. Serving 2 tablets (50 servings). Black Cohosh Extract on the <2% line supplies the active and is not graded as an other ingredient. Dicalcium phosphate also supplies Calcium 130 mg. Contains soy (allergen line not graded). Walmart ip/14053315 in stock sold by Walmart.com; eBay 205730718853 New seller Amped97 (9 available). UPC 681131111270 = Walmart = DSLD 211450; check digit OK.`,

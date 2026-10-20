@@ -283,6 +283,7 @@ function row(d: Draft): RatingRecord {
     activeIngredients: d.actives,
     inactiveIngredients: d.inactives,
     verdict: d.verdict,
+    honestNote: d.note,
 
     retailers: [...RETAILERS],
     cleanAlternatives: d.alts,
@@ -1083,9 +1084,8 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       flag('Orange essential oil', 'limited', labelCite(CITE.d3_5000, METH.orangeOil)),
       flag('Lemon essential oil', 'limited', labelCite(CITE.d3_5000, METH.lemonOil)),
     ],
-    verdict: 'caution',
-    note:
-      `FOUNDER-STYLE DRAFT: Sprouts D3 5000 IU Citrus MCT Oil = Caution. MCT on this carton does not name coconut → unlabeled MCT Limited. Orange essential oil is Limited (flavor/EO line). Named lemon oil is Limited. Full carrier list was not independently dumped — do not invent glycerin or water. ${MCT_UNLABELED_TAP} ${LIMITED_STACK} Separate formulaId from D3 1000 / 2000 rice-bran softgels (Clean).`,
+    verdict: 'avoid',
+    note: `FOUNDER-STYLE DRAFT: Sprouts D3 5000 IU Citrus MCT Oil = Caution. MCT on this carton does not name coconut → unlabeled MCT Limited. Orange essential oil is Limited (flavor/EO line). Named lemon oil is Limited. Full carrier list was not independently dumped — do not invent glycerin or water. ${MCT_UNLABELED_TAP} ${LIMITED_STACK} Separate formulaId from D3 1000 / 2000 rice-bran softgels (Clean). Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides (source not named), Orange essential oil, Lemon essential oil.`,
     cite: CITE.d3_5000,
     alts: [...ALTS.d3],
   }),

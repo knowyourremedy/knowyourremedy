@@ -868,7 +868,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: "Women's whole-food multivitamin", strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.womensTab),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pea starch, Tapioca dextrose, Tapioca maltodextrin.',
 
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.womensTab} — ${UNVERIFIED_NOTE}`],
@@ -885,7 +886,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: "Men's whole-food multivitamin", strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.mensTab),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pea starch, Tapioca dextrose, Tapioca maltodextrin.',
 
     cleanAlternatives: MULTI_ALTS,
     sourcesGeneral: [`${CITE.mensTab} — ${UNVERIFIED_NOTE}`],
@@ -902,7 +904,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Prenatal whole-food multivitamin', strength: 'label serving' }],
     inactiveIngredients: tabletWholeFood(CITE.prenatalTab),
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pea starch, Tapioca dextrose, Tapioca maltodextrin.',
 
     cleanAlternatives: PRENATAL_ALTS,
     sourcesGeneral: [`${CITE.prenatalTab} — ${UNVERIFIED_NOTE}`],

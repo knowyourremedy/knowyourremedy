@@ -84,13 +84,13 @@ function sensimistFlags(setid: string): IngredientFlag[] {
 }
 
 const NASACORT_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose, edetate disodium, hydrochloric acid, and polysorbate 80. Hydrochloric acid is the finished-spray pH adjuster (Oct 7, 2026), not the concentrated acid and not Avoid. Sodium hydroxide on the same "or" phrase is Cleared. No High inactive, so this is not Avoid. Carboxymethylcellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 2+. Under 2: do not use. Not a store brand.';
+  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose, edetate disodium, hydrochloric acid, and polysorbate 80. Hydrochloric acid is the finished-spray pH adjuster (Oct 7, 2026), not the concentrated acid and not Avoid. Sodium hydroxide on the same "or" phrase is Cleared. Carboxymethylcellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 2+. Under 2: do not use. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose, Edetate disodium, Hydrochloric acid.';
 
 const SENSIMIST_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose anhydrous, edetate disodium, and polysorbate 80. Dextrose anhydrous is the dextrose / bare glucose row (Oct 7, 2026). Benzalkonium chloride solution is the benzalkonium chloride family. No High inactive, so this is not Avoid. Carboxymethylcellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 2+. Under 2: do not use. Not Flonase propionate. Not a store brand.';
+  'FOUNDER-LOCK DRAFT: Caution. Drivers are benzalkonium chloride, dextrose anhydrous, edetate disodium, and polysorbate 80. Dextrose anhydrous is the dextrose / bare glucose row (Oct 7, 2026). Benzalkonium chloride solution is the benzalkonium chloride family. Carboxymethylcellulose sodium, microcrystalline cellulose, and purified water are Cleared. Ages 2+. Under 2: do not use. Not Flonase propionate. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium.';
 
 const CHILD_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Same drivers as adult Sensimist: benzalkonium chloride, dextrose anhydrous, edetate disodium, and polysorbate 80. The Target drug facts on this carton match that inactive line. DailyMed prints "edentate disodium"; the same label\'s UNII table is edetate disodium. No High inactive, so this is not Avoid. Ages 2+. Under 2: do not use. Separate children\'s carton, not the adult 60-spray bottle. Not a store brand.';
+  'FOUNDER-LOCK DRAFT: Caution. Same drivers as adult Sensimist: benzalkonium chloride, dextrose anhydrous, edetate disodium, and polysorbate 80. The Target drug facts on this carton match that inactive line. DailyMed prints "edentate disodium"; the same label\'s UNII table is edetate disodium. Ages 2+. Under 2: do not use. Separate children\'s carton, not the adult 60-spray bottle. Not a store brand. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium.';
 
 const NASACORT_PANEL =
   'DailyMed setid 4bff57a5-cce0-401c-a0fe-23c65c1b7ddc (Chattem, published Jan 14, 2026). Active: triamcinolone acetonide 55 mcg per spray. Inactive ingredients: benzalkonium chloride, carboxymethylcellulose sodium, dextrose, edetate disodium, hydrochloric acid or sodium hydroxide (for pH adjustment), microcrystalline cellulose, polysorbate 80, purified water.';
@@ -130,7 +130,8 @@ function expand(d: Spec): RatingRecord {
     productType: OTC,
     activeIngredients: d.actives,
     inactiveIngredients: d.flags,
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: d.note,
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
@@ -222,7 +223,7 @@ export const BATCH152_KYR6B_NASACORT_SENSIMIST: RatingRecord[] = [
 const ROWS = BATCH152_KYR6B_NASACORT_SENSIMIST;
 if (ROWS.length !== 6) throw new Error(`batch152 row count ${ROWS.length}`);
 if (new Set(ROWS.map((r) => r.id)).size !== 6) throw new Error('batch152 duplicate id');
-if (ROWS.some((r) => r.verdict !== 'caution')) throw new Error('batch152 verdict');
+if (ROWS.some((r) => r.verdict !== 'avoid')) throw new Error('batch152 verdict');
 if (ROWS.filter((r) => r.formulaId === NASACORT).length !== 3) throw new Error('batch152 nasacort');
 if (ROWS.filter((r) => r.formulaId === SENSIMIST).length !== 3) throw new Error('batch152 sensimist');
 if (ROWS.filter((r) => r.brand === 'Nasacort').some((r) => r.inactiveIngredients.length !== 9)) {
