@@ -2925,6 +2925,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Adult multivitamin gummies page prints 150 gummies.
   // The catalog row is 75 gummies. Do not glue the 150.
   'natures-bounty-b196-your-life-adult-multivitamin-75-gummies-37': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-20 4:15 AM PT batch 1.
+  // Same Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // Cranberry gummies page bottle prints 120 gummies.
+  // The catalog row is 150 gummies. Do not glue the 120.
+  'natures-bounty-b196-cranberry-gummies-30': brandMark('natures-bounty-mark.png'),
+  // Metabolism Booster page bottle prints 60 tablets (UPC 074312012488).
+  // The catalog row is 30 tablets. Do not glue the 60.
+  'natures-bounty-b196-metabolism-booster-30': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16933,6 +16941,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40': catalogShot('natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40.jpg'),
   // Saw palmetto 450 mg, 100 capsules. Not the 250.
   'natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100': catalogShot('natures-bounty-b196-saw-palmetto-450-mg-100-capsules-100.jpg'),
+  // Vitamins night run 2026-10-20 4:15 AM PT batch 1.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Fish oil 1,200 mg, 200 softgels. Not the 1,000 mg 145 or the 2,400 mg 90.
+  'natures-bounty-b196-fish-oil-1200-mg-200-200': catalogShot('natures-bounty-b196-fish-oil-1200-mg-200-200.jpg'),
+  // Quick dissolve melatonin 3 mg, natural cherry, 120 tablets. Not the 240.
+  'natures-bounty-b196-quick-dissolve-melatonin-3-mg-120': catalogShot('natures-bounty-b196-quick-dissolve-melatonin-3-mg-120.jpg'),
+  // Iron 65 mg, 100 tablets.
+  'natures-bounty-b196-iron-ferrous-sulphate-65mg-100-tablets-100': catalogShot('natures-bounty-b196-iron-ferrous-sulphate-65mg-100-tablets-100.jpg'),
+  // Vitamin C gummies, 80 gummies. Not the 500 mg or 1,000 mg tablets.
+  'natures-bounty-b196-vitamin-c-gummies-40': catalogShot('natures-bounty-b196-vitamin-c-gummies-40.jpg'),
+  // Vitamin D3 gummies, 90 gummies. Not the softgels.
+  'natures-bounty-b196-vitamin-d-gummies-45': catalogShot('natures-bounty-b196-vitamin-d-gummies-45.jpg'),
+  // Women's multivitamin gummies with collagen, raspberry, 90 gummies. Not the 80.
+  'natures-bounty-b196-womens-multivitamin-gummies-45': catalogShot('natures-bounty-b196-womens-multivitamin-gummies-45.jpg'),
+  // Hair, Skin & Nails with collagen, strawberry, 80 gummies. Not the Advanced 80.
+  'natures-bounty-b196-hair-skin-and-nails-gummies-40': catalogShot('natures-bounty-b196-hair-skin-and-nails-gummies-40.jpg'),
+  // Turmeric 1,000 mg plus black pepper, 60 tablets. Not the 400 mg capsules.
+  'natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60': catalogShot('natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60.jpg'),
+  // Sleep3 tri-layer melatonin 10 mg, 60 tablets.
+  'natures-bounty-b196-sleep3-tri-layer-melatonin-60-60': catalogShot('natures-bounty-b196-sleep3-tri-layer-melatonin-60-60.jpg'),
+  // Gorgeous Sleep gummies, 60 gummies. Not the 140-count sleep gummies.
+  'natures-bounty-b196-gorgeous-sleep-gummies-30': catalogShot('natures-bounty-b196-gorgeous-sleep-gummies-30.jpg'),
+  // Elderberry gummies, 70 gummies.
+  'natures-bounty-b196-elderberry-gummies-35': catalogShot('natures-bounty-b196-elderberry-gummies-35.jpg'),
+  // Sleep3 + Stress Support, 56 tablets. Not the Sleep3 60.
+  'natures-bounty-b196-sleep3-plus-stress-56': catalogShot('natures-bounty-b196-sleep3-plus-stress-56.jpg'),
+  // Probiotic 10, 30 capsules.
+  'natures-bounty-b196-probiotic-10-30-capsules-30': catalogShot('natures-bounty-b196-probiotic-10-30-capsules-30.jpg'),
+  // Advanced Triple Absorb Co Q-10 100 mg, 90 tablets. Not the 200 mg or 400 mg softgels.
+  'natures-bounty-b196-advanced-triple-absorb-coq10-90': catalogShot('natures-bounty-b196-advanced-triple-absorb-coq10-90.jpg'),
+  // Mental Fatigue & Stress Relief, 30 tablets.
+  'natures-bounty-b196-mental-fatigue-and-stress-relief-30': catalogShot('natures-bounty-b196-mental-fatigue-and-stress-relief-30.jpg'),
+  // Magnesium 500 mg, 200 tablets.
+  'natures-bounty-b196-magnesium-500-mg-200-tablets-200': catalogShot('natures-bounty-b196-magnesium-500-mg-200-tablets-200.jpg'),
+  // Co Q-10 200 mg, 45 softgels. Not the 80-count.
+  'natures-bounty-b197-coq10-200-45': catalogShot('natures-bounty-b197-coq10-200-45.jpg'),
+  // Co Q-10 200 mg, 80 softgels. Not the 45-count.
+  'natures-bounty-b197-coq10-200-80': catalogShot('natures-bounty-b197-coq10-200-80.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37665,17 +37711,99 @@ assertBrandMark(
   if (!adult75?.url.endsWith('/natures-bounty-mark.png') || adult75.verifiedSku || adult75.url === womens80?.url) {
     throw new Error('adult multi 75 must use the Nature\'s Bounty mark, not the 80-count women\'s bottle');
   }
-  const fish200 = previewOverlayImage({
-    id: 'natures-bounty-b196-fish-oil-1200-mg-200-200',
-    formulaId: 'natures-bounty-b196-fish-oil-1200-mg-200-200',
+  const batch1020e: [string, string, string][] = [
+    ['natures-bounty-b196-fish-oil-1200-mg-200-200', "Nature's Bounty", 'natures-bounty-b196-fish-oil-1200-mg-200-200.jpg'],
+    ['natures-bounty-b196-quick-dissolve-melatonin-3-mg-120', "Nature's Bounty", 'natures-bounty-b196-quick-dissolve-melatonin-3-mg-120.jpg'],
+    ['natures-bounty-b196-iron-ferrous-sulphate-65mg-100-tablets-100', "Nature's Bounty", 'natures-bounty-b196-iron-ferrous-sulphate-65mg-100-tablets-100.jpg'],
+    ['natures-bounty-b196-vitamin-c-gummies-40', "Nature's Bounty", 'natures-bounty-b196-vitamin-c-gummies-40.jpg'],
+    ['natures-bounty-b196-vitamin-d-gummies-45', "Nature's Bounty", 'natures-bounty-b196-vitamin-d-gummies-45.jpg'],
+    ['natures-bounty-b196-womens-multivitamin-gummies-45', "Nature's Bounty", 'natures-bounty-b196-womens-multivitamin-gummies-45.jpg'],
+    ['natures-bounty-b196-hair-skin-and-nails-gummies-40', "Nature's Bounty", 'natures-bounty-b196-hair-skin-and-nails-gummies-40.jpg'],
+    ['natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60', "Nature's Bounty", 'natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60.jpg'],
+    ['natures-bounty-b196-sleep3-tri-layer-melatonin-60-60', "Nature's Bounty", 'natures-bounty-b196-sleep3-tri-layer-melatonin-60-60.jpg'],
+    ['natures-bounty-b196-gorgeous-sleep-gummies-30', "Nature's Bounty", 'natures-bounty-b196-gorgeous-sleep-gummies-30.jpg'],
+    ['natures-bounty-b196-elderberry-gummies-35', "Nature's Bounty", 'natures-bounty-b196-elderberry-gummies-35.jpg'],
+    ['natures-bounty-b196-sleep3-plus-stress-56', "Nature's Bounty", 'natures-bounty-b196-sleep3-plus-stress-56.jpg'],
+    ['natures-bounty-b196-probiotic-10-30-capsules-30', "Nature's Bounty", 'natures-bounty-b196-probiotic-10-30-capsules-30.jpg'],
+    ['natures-bounty-b196-advanced-triple-absorb-coq10-90', "Nature's Bounty", 'natures-bounty-b196-advanced-triple-absorb-coq10-90.jpg'],
+    ['natures-bounty-b196-mental-fatigue-and-stress-relief-30', "Nature's Bounty", 'natures-bounty-b196-mental-fatigue-and-stress-relief-30.jpg'],
+    ['natures-bounty-b196-magnesium-500-mg-200-tablets-200', "Nature's Bounty", 'natures-bounty-b196-magnesium-500-mg-200-tablets-200.jpg'],
+    ['natures-bounty-b197-coq10-200-45', "Nature's Bounty", 'natures-bounty-b197-coq10-200-45.jpg'],
+    ['natures-bounty-b197-coq10-200-80', "Nature's Bounty", 'natures-bounty-b197-coq10-200-80.jpg'],
+  ];
+  const seen1020e = new Set<string>();
+  for (const [id, brand, file] of batch1020e) {
+    if (seen1020e.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020e.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('natures-bounty-b196-cranberry-gummies-30', "Nature's Bounty", 'natures-bounty-mark.png');
+  assertBrandMark('natures-bounty-b196-metabolism-booster-30', "Nature's Bounty", 'natures-bounty-mark.png');
+  const groups1020e: [string, string, string][][] = [
+    [
+      ['natures-bounty-b193-fish-oil-145', 'natures-bounty-b193-fish-oil-145', "Nature's Bounty"],
+      ['natures-bounty-b196-odorless-fish-oil-2400-mg-45', 'natures-bounty-b196-odorless-fish-oil-2400-mg-45', "Nature's Bounty"],
+      ['natures-bounty-b196-fish-oil-1200-mg-200-200', 'natures-bounty-b196-fish-oil-1200-mg-200-200', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b195-melatonin-1-180', 'natures-bounty-b195-melatonin-1-180', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-melatonin-3-mg-240', 'natures-bounty-b196-quick-dissolve-melatonin-3-mg-240', "Nature's Bounty"],
+      ['natures-bounty-b196-quick-dissolve-melatonin-3-mg-120', 'natures-bounty-b196-quick-dissolve-melatonin-3-mg-120', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40', 'natures-bounty-b196-womens-multivitamin-gummies-80-raspberry-40', "Nature's Bounty"],
+      ['natures-bounty-b196-womens-multivitamin-gummies-45', 'natures-bounty-b196-womens-multivitamin-gummies-45', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b191-adv-hair-skin-80', 'natures-bounty-b191-adv-hair-skin-80', "Nature's Bounty"],
+      ['natures-bounty-b196-hair-skin-and-nails-gummies-40', 'natures-bounty-b196-hair-skin-and-nails-gummies-40', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-turmeric-400-mg-60-capsules-60', 'natures-bounty-b196-turmeric-400-mg-60-capsules-60', "Nature's Bounty"],
+      ['natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60', 'natures-bounty-b196-turmeric-1000mg-plus-black-pepper-extract-60', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b196-sleep3-tri-layer-melatonin-60-60', 'natures-bounty-b196-sleep3-tri-layer-melatonin-60-60', "Nature's Bounty"],
+      ['natures-bounty-b196-sleep3-plus-stress-56', 'natures-bounty-b196-sleep3-plus-stress-56', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b191-sleep-gummies-140', 'natures-bounty-b191-sleep-gummies-140', "Nature's Bounty"],
+      ['natures-bounty-b196-gorgeous-sleep-gummies-30', 'natures-bounty-b196-gorgeous-sleep-gummies-30', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b197-coq10-200-45', 'natures-bounty-b197-coq10-200-45', "Nature's Bounty"],
+      ['natures-bounty-b197-coq10-200-80', 'natures-bounty-b197-coq10-200-80', "Nature's Bounty"],
+      ['natures-bounty-b196-advanced-triple-absorb-coq10-90', 'natures-bounty-b196-advanced-triple-absorb-coq10-90', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b190-metabolism-60', 'natures-bounty-b190-metabolism-60', "Nature's Bounty"],
+      ['natures-bounty-b196-metabolism-booster-30', 'natures-bounty-b196-metabolism-booster-30', "Nature's Bounty"],
+    ],
+  ];
+  for (const group of groups1020e) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const cranberry = previewOverlayImage({
+    id: 'natures-bounty-b196-cranberry-gummies-30',
+    formulaId: 'natures-bounty-b196-cranberry-gummies-30',
     brand: "Nature's Bounty",
   });
-  const fish90 = previewOverlayImage({
-    id: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
-    formulaId: 'natures-bounty-b196-odorless-fish-oil-2400-mg-45',
+  if (!cranberry?.url.endsWith('/natures-bounty-mark.png') || cranberry.verifiedSku) {
+    throw new Error('cranberry gummies 150 must use the Nature\'s Bounty mark, not the 120-count bottle');
+  }
+  const nextLetter = previewOverlayImage({
+    id: 'natures-bounty-b197-coq10-400-39',
+    formulaId: 'natures-bounty-b197-coq10-400-39',
     brand: "Nature's Bounty",
   });
-  if (!fish200 || fish200.verifiedSku || fish200.url === fish90?.url || !fish200.url.startsWith('data:image/svg')) {
-    throw new Error('fish oil 200 must stay a letter until attempted');
+  if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
+    throw new Error('Co Q-10 400 mg 39 must stay a letter until attempted');
   }
 }
