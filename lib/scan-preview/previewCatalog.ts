@@ -17109,6 +17109,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'rainbow-b205-l-methylfolate-15-60': catalogShot('rainbow-b205-l-methylfolate-15-60.jpg'),
   // Berberine complex 1000 mg, 60 capsules.
   'rainbow-b205-berberine-complex-60': catalogShot('rainbow-b205-berberine-complex-60.jpg'),
+  // Vitamins night run 2026-10-20 6:45 AM PT batch 1.
+  // Exact fronts. Sibling counts, strengths, and forms do not share a file.
+  // Pumpkin seed oil + biotin + saw palmetto, 90 softgels. Not the 16 oz oil.
+  'rainbow-b205-pumpkin-seed-oil-biotin-90': catalogShot('rainbow-b205-pumpkin-seed-oil-biotin-90.jpg'),
+  // Vitamin D3 + K2 liquid, 2 fl oz.
+  'rainbow-b205-vitamin-d3-k2-liquid-2oz': catalogShot('rainbow-b205-vitamin-d3-k2-liquid-2oz.jpg'),
+  // Magnesium glycinate 250 mg, 60 softgels. Not the 325 mg capsules or the powder.
+  'rainbow-b205-magnesium-glycinate-softgel-60': catalogShot('rainbow-b205-magnesium-glycinate-softgel-60.jpg'),
+  // Creatine + multi collagen powder, unflavored, 10 oz.
+  'rainbow-b205-creatine-multi-collagen-powder-10oz': catalogShot('rainbow-b205-creatine-multi-collagen-powder-10oz.jpg'),
+  // High potency vitamin C gummies, citrus, 60. Not the orange slices 90.
+  'rainbow-b205-vitamin-c-gummies-60': catalogShot('rainbow-b205-vitamin-c-gummies-60.jpg'),
+  // Astaxanthin 12 mg, 60 softgels. Not the 10 mg.
+  'rainbow-b205-astaxanthin-12mg-60': catalogShot('rainbow-b205-astaxanthin-12mg-60.jpg'),
+  // Himalayan shilajit 2,000 mg, 60 capsules.
+  'rainbow-b205-himalayan-shilajit-60': catalogShot('rainbow-b205-himalayan-shilajit-60.jpg'),
+  // Saffron + magnesium + methyl B12, 90 capsules.
+  'rainbow-b205-saffron-magnesium-b12-90': catalogShot('rainbow-b205-saffron-magnesium-b12-90.jpg'),
+  // Lithium orotate 5 mg, 120 capsules.
+  'rainbow-b205-lithium-orotate-120': catalogShot('rainbow-b205-lithium-orotate-120.jpg'),
+  // Super yohimbe liquid, alcohol free, 2 fl oz.
+  'rainbow-b205-super-yohimbe-liquid-2oz': catalogShot('rainbow-b205-super-yohimbe-liquid-2oz.jpg'),
+  // Organic apple cider vinegar gummies, apple, 50.
+  'rainbow-b205-acv-gummies-50': catalogShot('rainbow-b205-acv-gummies-50.jpg'),
+  // Biotin + collagen + hyaluronic acid, vanilla citrus, 2 fl oz.
+  'rainbow-b205-biotin-collagen-liquid-2oz': catalogShot('rainbow-b205-biotin-collagen-liquid-2oz.jpg'),
+  // Beet root soft chews, mixed berry, 60.
+  'rainbow-b205-beet-root-soft-chews-60': catalogShot('rainbow-b205-beet-root-soft-chews-60.jpg'),
+  // L-Methylfolate liquid 15 mg, berry, 2 fl oz. Not the 60 capsules.
+  'rainbow-b205-l-methylfolate-liquid-2oz': catalogShot('rainbow-b205-l-methylfolate-liquid-2oz.jpg'),
+  // Magnesium glycinate + ashwagandha, 120 capsules. Not the plain glycinate counts.
+  'rainbow-b205-magnesium-ashwagandha-120': catalogShot('rainbow-b205-magnesium-ashwagandha-120.jpg'),
+  // Graviola soursop 2,000 mg, 60 capsules.
+  'rainbow-b205-graviola-soursop-60': catalogShot('rainbow-b205-graviola-soursop-60.jpg'),
+  // Mucuna + ashwagandha 3,000 mg, 200 capsules.
+  'rainbow-b205-mucuna-ashwagandha-200': catalogShot('rainbow-b205-mucuna-ashwagandha-200.jpg'),
+  // Gummy vitamin C slices 250 mg, tangy orange, 90. Not the citrus 60.
+  'rainbow-b205-gummy-vitamin-c-slices-90': catalogShot('rainbow-b205-gummy-vitamin-c-slices-90.jpg'),
+  // Organic pumpkin seed oil, 16 fl oz. Not the 90 softgels.
+  'rainbow-b205-pumpkin-seed-oil-liquid-16oz': catalogShot('rainbow-b205-pumpkin-seed-oil-liquid-16oz.jpg'),
+  // NAD+ trans-resveratrol multi collagen, 60 capsules. Not the peach gummies.
+  'rainbow-b206-nad-resveratrol-collagen-60': catalogShot('rainbow-b206-nad-resveratrol-collagen-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38010,12 +38052,12 @@ assertBrandMark(
     throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
   }
   const nextLetter = previewOverlayImage({
-    id: 'rainbow-b205-pumpkin-seed-oil-biotin-90',
-    formulaId: 'rainbow-b205-pumpkin-seed-oil-biotin-90',
+    id: 'rainbow-b206-magnesium-glycinate-325-120',
+    formulaId: 'rainbow-b206-magnesium-glycinate-325-120',
     brand: 'Rainbow Light',
   });
   if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('Rainbow Light pumpkin seed oil 90 must stay a letter until attempted');
+    throw new Error('Rainbow Light magnesium glycinate 325 mg 120 must stay a letter until attempted');
   }
 }
 
@@ -38176,7 +38218,78 @@ assertBrandMark(
     'rainbow-b202-prenatal-one-150',
     'rainbow-b204-prenatal-one-60',
     'rainbow-b204-prenatal-one-120',
-    'rainbow-b205-pumpkin-seed-oil-biotin-90',
+    'rainbow-b206-magnesium-glycinate-325-120',
+  ]) {
+    const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
+    if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
+      throw new Error(`${id} stays a letter until its own carton is attempted`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 6:45 AM PT batch 1.
+  const batch1020i: [string, string, string][] = [
+    ['rainbow-b205-pumpkin-seed-oil-biotin-90', 'Rainbow Light', 'rainbow-b205-pumpkin-seed-oil-biotin-90.jpg'],
+    ['rainbow-b205-vitamin-d3-k2-liquid-2oz', 'Rainbow Light', 'rainbow-b205-vitamin-d3-k2-liquid-2oz.jpg'],
+    ['rainbow-b205-magnesium-glycinate-softgel-60', 'Rainbow Light', 'rainbow-b205-magnesium-glycinate-softgel-60.jpg'],
+    ['rainbow-b205-creatine-multi-collagen-powder-10oz', 'Rainbow Light', 'rainbow-b205-creatine-multi-collagen-powder-10oz.jpg'],
+    ['rainbow-b205-vitamin-c-gummies-60', 'Rainbow Light', 'rainbow-b205-vitamin-c-gummies-60.jpg'],
+    ['rainbow-b205-astaxanthin-12mg-60', 'Rainbow Light', 'rainbow-b205-astaxanthin-12mg-60.jpg'],
+    ['rainbow-b205-himalayan-shilajit-60', 'Rainbow Light', 'rainbow-b205-himalayan-shilajit-60.jpg'],
+    ['rainbow-b205-saffron-magnesium-b12-90', 'Rainbow Light', 'rainbow-b205-saffron-magnesium-b12-90.jpg'],
+    ['rainbow-b205-lithium-orotate-120', 'Rainbow Light', 'rainbow-b205-lithium-orotate-120.jpg'],
+    ['rainbow-b205-super-yohimbe-liquid-2oz', 'Rainbow Light', 'rainbow-b205-super-yohimbe-liquid-2oz.jpg'],
+    ['rainbow-b205-acv-gummies-50', 'Rainbow Light', 'rainbow-b205-acv-gummies-50.jpg'],
+    ['rainbow-b205-biotin-collagen-liquid-2oz', 'Rainbow Light', 'rainbow-b205-biotin-collagen-liquid-2oz.jpg'],
+    ['rainbow-b205-beet-root-soft-chews-60', 'Rainbow Light', 'rainbow-b205-beet-root-soft-chews-60.jpg'],
+    ['rainbow-b205-l-methylfolate-liquid-2oz', 'Rainbow Light', 'rainbow-b205-l-methylfolate-liquid-2oz.jpg'],
+    ['rainbow-b205-magnesium-ashwagandha-120', 'Rainbow Light', 'rainbow-b205-magnesium-ashwagandha-120.jpg'],
+    ['rainbow-b205-graviola-soursop-60', 'Rainbow Light', 'rainbow-b205-graviola-soursop-60.jpg'],
+    ['rainbow-b205-mucuna-ashwagandha-200', 'Rainbow Light', 'rainbow-b205-mucuna-ashwagandha-200.jpg'],
+    ['rainbow-b205-gummy-vitamin-c-slices-90', 'Rainbow Light', 'rainbow-b205-gummy-vitamin-c-slices-90.jpg'],
+    ['rainbow-b205-pumpkin-seed-oil-liquid-16oz', 'Rainbow Light', 'rainbow-b205-pumpkin-seed-oil-liquid-16oz.jpg'],
+    ['rainbow-b206-nad-resveratrol-collagen-60', 'Rainbow Light', 'rainbow-b206-nad-resveratrol-collagen-60.jpg'],
+  ];
+  const seen1020i = new Set<string>();
+  for (const [id, brand, file] of batch1020i) {
+    if (seen1020i.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020i.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1020i: [string, string, string][][] = [
+    [
+      ['rainbow-b205-pumpkin-seed-oil-biotin-90', 'rainbow-b205-pumpkin-seed-oil-biotin-90', 'Rainbow Light'],
+      ['rainbow-b205-pumpkin-seed-oil-liquid-16oz', 'rainbow-b205-pumpkin-seed-oil-liquid-16oz', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b205-vitamin-c-gummies-60', 'rainbow-b205-vitamin-c-gummies-60', 'Rainbow Light'],
+      ['rainbow-b205-gummy-vitamin-c-slices-90', 'rainbow-b205-gummy-vitamin-c-slices-90', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b205-l-methylfolate-15-60', 'rainbow-b205-l-methylfolate-15-60', 'Rainbow Light'],
+      ['rainbow-b205-l-methylfolate-liquid-2oz', 'rainbow-b205-l-methylfolate-liquid-2oz', 'Rainbow Light'],
+    ],
+    [
+      ['rainbow-b205-magnesium-glycinate-softgel-60', 'rainbow-b205-magnesium-glycinate-softgel-60', 'Rainbow Light'],
+      ['rainbow-b205-magnesium-ashwagandha-120', 'rainbow-b205-magnesium-ashwagandha-120', 'Rainbow Light'],
+    ],
+  ];
+  for (const group of groups1020i) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  for (const id of [
+    'rainbow-b202-prenatal-one-150',
+    'rainbow-b204-prenatal-one-60',
+    'rainbow-b204-prenatal-one-120',
+    'rainbow-b206-magnesium-glycinate-325-120',
   ]) {
     const image = previewOverlayImage({ id, formulaId: id, brand: 'Rainbow Light' });
     if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
