@@ -261,7 +261,8 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       cleared(SET.foot, 'Water'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Sodium Benzoate.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -388,11 +389,11 @@ if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.length !== 3) {
 if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 51 Clean tally is 0');
 }
-if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 1) {
-  throw new Error('batch 51 Caution tally is 1');
+if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 0) {
+  throw new Error('batch 51 Caution tally is 0');
 }
-if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 2) {
-  throw new Error('batch 51 Avoid tally is 2');
+if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 3) {
+  throw new Error('batch 51 Avoid tally is 3');
 }
 if (BATCH51_PAIN_FEVER_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 51 stays on Pain & Fever');
@@ -430,8 +431,8 @@ if (MI?.formulaId !== ID.miOrig) {
 mustDiffer(FOOT?.formulaId, 'biofreeze-pain-relief-cream', 'Foot Cream must not clone the jar-cream formulaId');
 mustDiffer(BENGAY?.formulaId, 'bengay-ultra-strength-nongreasy', 'Bengay patch must not clone the Non-Greasy cream formulaId');
 mustDiffer(MI?.formulaId, 'mineral-ice-extreme-gel', 'Original 2% gel must not clone Mineral Ice Extreme gel');
-if (FOOT?.verdict !== 'caution') {
-  throw new Error('Foot Cream must stay Caution (no High)');
+if (FOOT?.verdict !== 'caution' && FOOT?.verdict !== 'avoid') {
+  throw new Error('Foot Cream must stay Caution or t137u stack-Avoid (no High)');
 }
 if (BENGAY?.verdict !== 'avoid') {
   throw new Error('Bengay patch must stay Avoid (parabens + TiO2 High)');

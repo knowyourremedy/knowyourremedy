@@ -56,6 +56,7 @@ export const BATCH195_KYR6C_NB_FORTY: RatingRecord[] = [
       flag('https://naturesbounty.com/products/calcium-plus-vitamin-d-gummies', 'Natural Flavors', 'limited', 'flavor'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified Food Starch, Maltodextrin, Natural Flavors.',
     retailers: ['Amazon'],
     sourcesGeneral: [
       "Brand page calcium-plus-vitamin-d-gummies was read. Serving size 2 gummies. Bottle copy states 70 gummies per bottle (35 servings). DailyMed NDC 74312-6794-14 returned HTTP 200 with an empty data[] array. Opened https://www.amazon.com/Natures-Bounty-Calcium-Supports-Flavored/dp/B0DJG338TD — 70ct Orange & Cherry gummies, $11.62 ($0.17/count), seller Amazon.com, In Stock, Add to cart. Target search did not open a priced 70-gummy PDP. CVS search returned HTTP 403. Walgreens calcium gummies search showed 70 ea on a list page only (not an opened /ID=prod PDP). Walmart search returned a robot check.",
@@ -134,7 +135,7 @@ if (new Set(ids).size !== ids.length) throw new Error('batch195 duplicate id');
 
 for (const record of ROWS) {
   if (record.barcode && !upcOk(record.barcode)) throw new Error(`batch195 upc ${record.id}`);
-  if (record.honestNote) throw new Error(`batch195 unexpected note ${record.id}`);
+  if (record.honestNote && !record.honestNote.includes('stacking rule (t137u)')) throw new Error(`batch195 unexpected note ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch195 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch195 blank source ${ingredient.name}`);

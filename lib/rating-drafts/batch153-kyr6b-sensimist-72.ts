@@ -73,6 +73,7 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
       cleared('Purified water'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,

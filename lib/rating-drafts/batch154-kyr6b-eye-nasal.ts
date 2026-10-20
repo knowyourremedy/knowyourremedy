@@ -193,6 +193,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Budesonide', strength: '32 mcg / spray' }],
     inactiveIngredients: rhinoFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrose anhydrous, Disodium edetate, Hydrochloric acid, Potassium sorbate.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,

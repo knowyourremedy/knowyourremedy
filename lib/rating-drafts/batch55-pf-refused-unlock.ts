@@ -559,7 +559,8 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
         labelCite(CITE.qunolGummies, METH.citrate),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Maltitol syrup, Maltodextrin, Xylitol, Natural flavors.',
 
     retailers: [...AMAZON, 'Qunol', 'Target'],
     cleanAlternatives: TURMERIC_ALTS,
@@ -577,11 +578,11 @@ if (BATCH55_PF_REFUSED_UNLOCK.length !== 6) {
 if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 55 Clean tally is 0');
 }
-if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 2) {
-  throw new Error('batch 55 Caution tally is 2');
+if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 1) {
+  throw new Error('batch 55 Caution tally is 1');
 }
-if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 4) {
-  throw new Error('batch 55 Avoid tally is 4');
+if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 5) {
+  throw new Error('batch 55 Avoid tally is 5');
 }
 if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 55 stays on Pain & Fever');

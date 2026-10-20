@@ -36,6 +36,9 @@ const METH = {
 const PG_NOTE =
   'Propylene glycol is Usable when it is swallowed. That is the form this app flags. This product is a nasal spray. The propylene glycol is the solvent in the spray, not a dose you swallow, so it did not pull this grade down.';
 
+const SINEX_SEVERE_STACK_NOTE =
+  ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance.';
+
 function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
   return { name, riskLevel, source: `${panel}; ${meth}` };
 }
@@ -91,6 +94,8 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(ALLERGY_PANEL, 'Sodium phosphate monobasic', 'cleared', METH.phosphate),
     ],
     verdict: 'avoid',
+    honestNote:
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Benzyl alcohol, Camphor, Edetate disodium, Eucalyptol, Menthol.',
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -145,7 +150,7 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(SINEX_PANEL, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'avoid',
-    honestNote: PG_NOTE,
+    honestNote: `${PG_NOTE}${SINEX_SEVERE_STACK_NOTE}`,
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -194,8 +199,8 @@ for (const row of ROWS) {
   const note = row.honestNote ?? '';
   const hasPg = row.inactiveIngredients.some((item) => item.name === 'Propylene glycol');
   if (hasPg) {
-    if (note !== PG_NOTE) throw new Error(`batch173 note ${row.id}`);
-  } else if (note) {
+    if (!note.startsWith(PG_NOTE)) throw new Error(`batch173 note ${row.id}`);
+  } else if (note && !note.includes('stacking rule (t137u)')) {
     throw new Error(`batch173 extra note ${row.id}`);
   }
   if (row.verdict === 'clean' && row.inactiveIngredients.some((item) => item.riskLevel !== 'cleared')) {

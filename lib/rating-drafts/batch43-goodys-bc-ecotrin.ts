@@ -268,7 +268,8 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.plusAlert, 'Guar gum'),
       cleared(SET.plusAlert, 'Microcrystalline cellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Flavor, Mannitol.',
 
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
@@ -401,7 +402,8 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.bcMax, 'Guar gum'),
       cleared(SET.bcMax, 'Microcrystalline cellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, Flavor, Mannitol.',
 
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: POWDER_COMBO_ALTS,

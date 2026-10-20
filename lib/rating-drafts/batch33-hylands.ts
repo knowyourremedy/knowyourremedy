@@ -1594,6 +1594,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Ethyl alcohol, Potassium sorbate, Sodium benzoate.',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -1686,6 +1687,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Ethyl alcohol, Potassium sorbate, Sodium benzoate.',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -2606,6 +2608,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol syrup, Xylitol, Erythritol, Natural flavors.',
 
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [

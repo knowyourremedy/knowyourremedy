@@ -71,6 +71,7 @@ export const BATCH168_KYR6C_NASAL_MAX: RatingRecord[] = [
       flag(PANEL, 'Nisin', 'limited', METH.nisin),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eucalyptus globulus leaf extract, Origanum vulgare leaf extract, Nisin.',
     retailers: ['Vitacost'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -95,7 +96,7 @@ if (record.id !== 'beekeepers-b168-nasal-max') throw new Error('batch168 id');
 if (record.barcode !== '834706000336' || !upcOk(record.barcode)) throw new Error('batch168 upc');
 if (record.formulaId !== 'beekeepers-b168-nasal-max') throw new Error('batch168 formula');
 if (record.minAge !== 18) throw new Error('batch168 age');
-if (record.honestNote) throw new Error('batch168 note');
+if (record.honestNote && !record.honestNote.includes('stacking rule (t137u)')) throw new Error('batch168 note');
 if (/dailymed/i.test((record.sourcesGeneral ?? []).join(' '))) throw new Error('batch168 dailymed source');
 for (const ingredient of record.inactiveIngredients) {
   if (!plainIngredientWhy(ingredient)) throw new Error(`batch168 blank why ${ingredient.name}`);

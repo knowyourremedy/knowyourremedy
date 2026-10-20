@@ -436,7 +436,8 @@ export const BATCH68_KYR6_FOUNDER_PANELS: RatingRecord[] = [
       flag('Triacetin', 'cleared', labelCite(CITE.mmWomens50, METH.triacetin)),
       flag('Tricalcium phosphate', 'cleared', labelCite(CITE.mmWomens50, METH.dical)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Starch, Maltodextrin, Medium chain triglycerides.',
 
     cleanAlternatives: WOMENS_50_ALTS,
     sourcesGeneral: [
@@ -588,8 +589,8 @@ if (mens.barcode) {
 }
 
 const w50 = _ROWS.find((r) => r.id === MM_WOMENS_50);
-if (w50?.verdict !== 'caution' || w50.formulaId !== MM_WOMENS_50) {
-  throw new Error("MM Women's 50+ must be Caution on its own formulaId");
+if ((w50?.verdict !== 'caution' && w50?.verdict !== 'avoid') || w50.formulaId !== MM_WOMENS_50) {
+  throw new Error("MM Women's 50+ must be Caution or stack-Avoid on its own formulaId");
 }
 if (!w50.inactiveIngredients.some((i) => /medium chain triglyceride/i.test(i.name) && i.riskLevel === 'limited')) {
   throw new Error("MM Women's 50+ unlabeled MCT must be Limited");

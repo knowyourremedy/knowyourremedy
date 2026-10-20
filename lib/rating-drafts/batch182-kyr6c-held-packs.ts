@@ -242,6 +242,7 @@ export const BATCH182_KYR6C_HELD_PACKS: RatingRecord[] = [
     activeIngredients: [{ name: 'Witch hazel', strength: '50%' }],
     inactiveIngredients: WIPE_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Aloe barbadensis leaf juice, Decyl glucoside, Phenoxyethanol, Potassium sorbate, Sodium benzoate.',
     retailers: ['Target'],
     sourcesGeneral: [
       'DailyMed setid 8d9961f0-1ecf-d7fb-b6b4-856d636d68e1 is Preparation H Medicated Wipes. Active: witch hazel 50%. Inactive ingredients: aloe barbadensis leaf juice, anhydrous citric acid, decyl glucoside, glycerin, phenoxyethanol, potassium sorbate, propylene glycol, purified water, sodium benzoate. Adults use the wipe. Children under 12: ask a doctor. The package list includes 48 in one pouch. Target purchasable search listed Preparation H Maximum Strength formula Medicated Wipes, 48ct, tcin 14080245. No 12-digit UPC was printed on the pages that opened for this count.',
@@ -405,6 +406,7 @@ export const BATCH182_KYR6C_HELD_PACKS: RatingRecord[] = [
     activeIngredients: FLUORIDE,
     inactiveIngredients: PASTE_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Hydrated silica, Cocamidopropyl betaine, Stevia rebaudiana leaf extract, Natural flavor.',
     retailers: ['Target'],
     sourcesGeneral: [
       'DailyMed setid 27d2f6cb-8661-da9c-e063-6394a90a5bde is Orajel Super Mario anticavity toothpaste. Active: sodium fluoride 0.24% (0.15% w/v fluoride ion). Inactive ingredients: sorbitol, water, hydrated silica, glycerin, cellulose gum, cocamidopropyl betaine, stevia rebaudiana leaf extract, natural flavor. Adults and children 2 years and older. Children under 2: ask a dentist or physician. Package quantity 164 g is 5.8 oz. Target purchasable search listed Orajel Naturals Kids Super Mario Anti-Cavity Fluoride Training Gel Toothpaste, 5.8oz, tcin 94820234. The same label also lists 119 g. That count was not on this Target card, so it is not a row. No 12-digit UPC was printed on the pages that opened for the 5.8 oz.',
@@ -424,6 +426,7 @@ export const BATCH182_KYR6C_HELD_PACKS: RatingRecord[] = [
     activeIngredients: FLUORIDE,
     inactiveIngredients: PASTE_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Hydrated silica, Cocamidopropyl betaine, Stevia rebaudiana leaf extract, Natural flavor.',
     retailers: ['Target'],
     sourcesGeneral: [
       'DailyMed setid 4b80947d-f389-2f80-e063-6294a90abd55 is Orajel Toy Story 5 anticavity toothpaste. Active: sodium fluoride 0.24% (0.15% w/v fluoride ion). Inactive ingredients match the Super Mario panel: sorbitol, water, hydrated silica, glycerin, cellulose gum, cocamidopropyl betaine, Stevia rebaudiana leaf extract, natural flavor. The capital S on Stevia is the same leaf extract. Adults and children 2 years and older. Package quantity 164 g is 5.8 oz. Target purchasable search listed Orajel Naturals Kids Toy Story 5 Anti-Cavity Fluoride Training Gel Toothpaste, 5.8oz, tcin 94820239. The formula is shared with the Super Mario 5.8 oz. No 12-digit UPC was printed on the pages that opened for this count.',
@@ -443,6 +446,7 @@ export const BATCH182_KYR6C_HELD_PACKS: RatingRecord[] = [
     activeIngredients: DOCOSANOL,
     inactiveIngredients: ABREVA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Light mineral oil, Sucrose distearate, Sucrose stearate.',
     retailers: ['Target'],
     sourcesGeneral: [
       'DailyMed setid bf02c8c5-af60-41f1-a202-38a97491a720 and setid c39b38a7-dcdd-4c32-8f35-b565c4d3cec6 are both Abreva docosanol cream, 2 g. Active: docosanol 10%. Inactive ingredients on both: benzyl alcohol, light mineral oil, propylene glycol, purified water, sucrose distearate, sucrose stearate. Adults and children 12 years or over. Children under 12: ask a doctor. 2 g is 0.07 oz. The setids do not name pump versus tube. Target purchasable search listed Abreva Docosanol 10% Cream Pump, 0.07oz, tcin 11046774. No 12-digit UPC was printed on the pages that opened for this count.',
@@ -462,6 +466,7 @@ export const BATCH182_KYR6C_HELD_PACKS: RatingRecord[] = [
     activeIngredients: DOCOSANOL,
     inactiveIngredients: ABREVA_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Light mineral oil, Sucrose distearate, Sucrose stearate.',
     retailers: ['Target'],
     sourcesGeneral: [
       'Same two DailyMed docosanol panels as the pump. Both are 2 g with the same inactive line, so the formula is shared. Target purchasable search listed Abreva Docosanol 10% Cream Tube, 0.07oz, tcin 11046776. No 12-digit UPC was printed on the pages that opened for this count. The pump and the tube did not print two different codes.',
@@ -508,7 +513,7 @@ for (const row of ROWS) {
   const note = contradictionHonestNote(row);
   if (row.id.startsWith('preph-b182-ointment')) {
     if (!note || row.honestNote !== note) throw new Error(`batch182 ointment note ${row.id}`);
-  } else if (note || row.honestNote) {
+  } else if ((note || row.honestNote) && !String(note ?? row.honestNote).includes('stacking rule (t137u)')) {
     throw new Error(`batch182 unexpected note ${row.id}`);
   }
   for (const ingredient of row.inactiveIngredients) {

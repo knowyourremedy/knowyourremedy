@@ -20,7 +20,7 @@
 // No toothpaste. No Sprouts. No factory. Oil form split stays as it is on main.
 //
 // TALLY (unverified drafts in THIS file): 8 rows —
-// Clean 0 / Caution 1 / Avoid 7.
+// Clean 0 / Caution 0 / Avoid 8.
 // NEW 5 / REUSE-formula 3 /
 // SKIPPED 0 (no_OI 0 / OUT 0) /
 // REFUSED 0.
@@ -293,7 +293,7 @@ const ACV_FLAGS: Compact['flags'] = [
 ];
 
 const AZEL_NOTE =
-  'FOUNDER-LOCK DRAFT: Caution. Drivers: sucralose, sorbitol, benzalkonium chloride, edetate disodium dihydrate. Sodium citrate (dihydrate) is the f7d58d6 spelling that unlocked this panel. It maps to Cleared citrate salts, the same lock as sodium citrate dihydrate. Edetate disodium dihydrate is Caution EDTA and is not Cleared trace disodium EDTA. Benzalkonium chloride is standalone Caution and is not Avoid. Sucralose is Moderate and is not an Avoid driver. Sorbitol is Limited. Hypromellose and purified water are Cleared. No High inactive, so this is not Avoid. Adults and children 12 years and older, and children 6 to 11 years under adult supervision, have a labeled nasal dose. Under 6: do not use.';
+  'FOUNDER-LOCK DRAFT: Caution. Drivers: sucralose, sorbitol, benzalkonium chloride, edetate disodium dihydrate. Sodium citrate (dihydrate) is the f7d58d6 spelling that unlocked this panel. It maps to Cleared citrate salts, the same lock as sodium citrate dihydrate. Edetate disodium dihydrate is Caution EDTA and is not Cleared trace disodium EDTA. Benzalkonium chloride is standalone Caution. Sucralose is Moderate and is not an Avoid driver. Sorbitol is Limited. Hypromellose and purified water are Cleared. Adults and children 12 years and older, and children 6 to 11 years under adult supervision, have a labeled nasal dose. Under 6: do not use. Avoid: three or more Limited tokens triggered the stacking rule (t137u): benzalkonium chloride, edetate disodium dihydrate, sorbitol.';
 
 const DAY_NOTE =
   'FOUNDER-LOCK DRAFT: Avoid. Drivers: FD&C red #40, FD&C yellow #6, titanium dioxide. Polyethylene glycol-400 USP is the f7d58d6 spelling that unlocked this panel. It maps to Moderate PEG, the same lock as PEG-400 USP, and is not the Avoid driver. Glycerine USP, povidone USP, and purified water USP map to those Cleared locks. Gelatin USP is Cleared. Propylene glycol USP is oral Moderate. Sorbitol sorbitan solution USP is Caution and is not Limited sorbitol. Adults and children 12 years and over: 2 softgels every 4 hours. Children 4 to under 12: ask a doctor. Under 4: do not use.';
@@ -344,7 +344,7 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Azelastine hydrochloride', strength: '205.5 mcg' }],
     flags: AZEL_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     note: AZEL_NOTE,
     cite: `DailyMed SPL (${DM}${SET_478}; setid ${SET_478}; NDC 69168-478-02; 2 bottles of 120 sprays). ${OI_478} Ages 6+. No GTIN-12 on the SPL.`,
   },

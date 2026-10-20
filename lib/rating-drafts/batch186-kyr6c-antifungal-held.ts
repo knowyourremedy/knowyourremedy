@@ -151,6 +151,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -172,6 +173,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -193,6 +195,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -214,6 +217,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: MICONAZOLE,
     inactiveIngredients: LIQUID_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dimethyl ether, Polyoxyl 15 hydroxystearate, SD alcohol 40-B.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -235,6 +239,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: MICONAZOLE,
     inactiveIngredients: POWDER_SPRAY_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -256,6 +261,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: MICONAZOLE,
     inactiveIngredients: POWDER_SPRAY_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -277,6 +283,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: MICONAZOLE,
     inactiveIngredients: DEO_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Fragrance, Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -339,6 +346,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: [{ name: 'Dimethicone', strength: '1.2%' }],
     inactiveIngredients: CHAFING_FLAGS,
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Cyclomethicone, Dimethicone/vinyl dimethicone crosspolymer, Silica dimethyl silylate, Vinyl dimethicone/methicone silsesquioxane crosspolymer.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -369,7 +377,7 @@ if (new Set(ids).size !== ids.length) throw new Error('batch186 duplicate id');
 
 for (const record of ROWS) {
   if (!record.barcode || !upcOk(record.barcode)) throw new Error(`batch186 upc ${record.id}`);
-  if (record.honestNote) throw new Error(`batch186 unexpected note ${record.id}`);
+  if (record.honestNote && !record.honestNote.includes('stacking rule (t137u)')) throw new Error(`batch186 unexpected note ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch186 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch186 blank source ${ingredient.name}`);

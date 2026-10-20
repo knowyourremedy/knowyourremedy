@@ -342,6 +342,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyeFreeFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Sodium benzoate, Sorbitol solution.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
@@ -364,6 +365,7 @@ export const BATCH156_KYR6B_BENADRYL: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '12.5 mg / 5 mL' }],
     inactiveIngredients: dyeFreeFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Sodium benzoate, Sorbitol solution.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,

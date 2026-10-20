@@ -275,7 +275,9 @@ function cautionSio2(base: DraftBase & { extras?: string[]; maltodextrin?: boole
   };
 }
 
-function cautionCustom(base: DraftBase & { inactives: IngredientFlag[]; math: string }): RatingRecord {
+function cautionCustom(
+  base: DraftBase & { inactives: IngredientFlag[]; math: string; verdict?: RatingRecord['verdict'] },
+): RatingRecord {
   return {
     id: base.id,
     productName: base.productName,
@@ -290,7 +292,8 @@ function cautionCustom(base: DraftBase & { inactives: IngredientFlag[]; math: st
     productType: base.productType,
     activeIngredients: base.actives,
     inactiveIngredients: base.inactives,
-    verdict: 'caution',
+    verdict: base.verdict ?? 'caution',
+    ...(base.math ? { honestNote: base.math } : {}),
 
     retailers: [...(base.retailers ?? US_WIDE)],
     cleanAlternatives: base.alts,
@@ -2359,7 +2362,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
       labelCleared(CITE.bm2proLgg, 'Microcrystalline cellulose'),
       labelCleared(CITE.bm2proLgg, 'Hypromellose'),
     ],
-    math: 'Demerit math: maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt + unspecified rice Limited opacity 1 pt + SiO2 0-pt cap → Caution (Limited-only; SiO2 does not push Avoid). Avoid requires High. Sunflower oil is a capsule fill — not the gummy seed-oil High rule.',
+    math: 'Demerit math: maltodextrin Limited 1 pt + unspecified rice extract Limited opacity 1 pt + unspecified rice Limited opacity 1 pt + SiO2 0-pt cap → Caution (Limited-only; SiO2 does not push Avoid). Avoid requires High. Sunflower oil is a capsule fill — not the gummy seed-oil High rule. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Rice extract, Rice (unspecified).',
     extraNote:
       'Separate formulaId from the refrigerated MegaFlora-style Baby & Me 2 Prenatal Probiotic + Prebiotic row.',
     prenatal: true,

@@ -24,7 +24,7 @@
 // Leftover Amazon 3P stays 3 (HealthA2Z, TIME-Cap, GoodSense).
 //
 // TALLY (unverified drafts in THIS file): 38 rows —
-// Clean 0 / Caution 10 / Avoid 28.
+// Clean 0 / Caution 6 / Avoid 32.
 // NEW 24 / REUSE-formula 14 /
 // SKIPPED 1 (no_OI 0 / OUT 1) /
 // REFUSED 4.
@@ -669,8 +669,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     flags: CET_DF_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, mannitol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No dye and no titanium dioxide. Avoid needs High. Adults 65 and over, and children under 6: ask a doctor.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, mannitol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No dye and no titanium dioxide. Avoid needs High. Adults 65 and over, and children under 6: ask a doctor. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Mannitol, Pharmaceutical ink, Sorbitan, Sorbitol.',
     cite: `DailyMed SPL (${DM}4fe8f764-a8e2-a432-e063-6294a90a33b0; setid 4fe8f764-a8e2-a432-e063-6294a90a33b0; NDC 69452-479-88; 65 softgels). Inactive ingredients: gelatin, glycerin, mannitol, pharmaceutical ink, polyethylene glycol, purified water, sodium hydroxide, sorbitan, sorbitol. Ages 6+. No GTIN-12 on the SPL.`,
   },
   {
@@ -733,8 +733,8 @@ const COMPACT: Compact[] = [
       { name: 'Diphenhydramine HCl', strength: '25mg' },
     ],
     flags: PM_DF_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No High. Take 2 softgels at bedtime. Ages 12+.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are polyethylene glycol, pharmaceutical ink, sorbitan, and sorbitol. Pharmaceutical ink is the Sept 24 Caution stamp that unlocked this panel. Dye-free is the carton word. No High. Take 2 softgels at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Pharmaceutical ink, Sorbitan, Sorbitol.',
     cite: `DailyMed SPL (${DM}51037299-37dd-ca57-e063-6394a90a12c7; setid 51037299-37dd-ca57-e063-6394a90a12c7; NDC 69452-507-78; 80 softgels). Inactive ingredients: gelatin, pharmaceutical ink, polyethylene glycol, potassium hydroxide, purified water, sorbitan, sorbitol. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
@@ -842,8 +842,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Carbamide peroxide', strength: '6.5%' }],
     flags: EAR_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are Flavor, sodium lauroyl sarcosinate, and sodium stannate. Those three are the Sept 24 Caution stamps that unlocked this panel. Flavor is not the Limited natural-flavors token. This drop is otic, so propylene glycol stays the topical Cleared row. No High. The twin carton is the same list. Ages 12+.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are Flavor, sodium lauroyl sarcosinate, and sodium stannate. Those three are the Sept 24 Caution stamps that unlocked this panel. Flavor is not the Limited natural-flavors token. This drop is otic, so propylene glycol stays the topical Cleared row. No High. The twin carton is the same list. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavor, Sodium lauroyl sarcosinate, Sodium stannate.',
     cite: `DailyMed SPL (${DM}e8bcf92c-ad32-49d5-e053-2995a90ae0c6; setid e8bcf92c-ad32-49d5-e053-2995a90ae0c6; NDC 69452-377-75; 15 mL dropper in a carton). Inactive ingredients: citric acid, Flavor, glycerin, propylene glycol, sodium lauroyl sarcosinate, sodium stannate, purified water. ${PG_TOPICAL_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {
@@ -1190,8 +1190,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Lidocaine', strength: '4%' }],
     flags: PATCH_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are alicyclic hydrocarbon resin, styrene isoprene, and styrene block copolymer. Those three are the Sept 24 Caution stamps that unlocked this panel. Alicyclic hydrocarbon resin is not the locked alicyclic saturated hydrocarbon resin. Polyester film and silicone-coated polyester film are backing and are not flagged. No High. Under 12: consult a doctor.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are alicyclic hydrocarbon resin, styrene isoprene, and styrene block copolymer. Those three are the Sept 24 Caution stamps that unlocked this panel. Alicyclic hydrocarbon resin is not the locked alicyclic saturated hydrocarbon resin. Polyester film and silicone-coated polyester film are backing and are not flagged. No High. Under 12: consult a doctor. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alicyclic hydrocarbon resin, Styrene isoprene, Styrene block copolymer.',
     cite: `DailyMed SPL (${DM}19c69983-4e78-8ec5-e063-6394a90a84be; setid 19c69983-4e78-8ec5-e063-6394a90a84be; NDC 69452-409-04; 6 patches). Inactive ingredients: alicyclic hydrocarbon resin, mineral oil, polyester film, silicone-coated polyester film, styrene isoprene, styrene block copolymer. Polyester film and silicone-coated polyester film are backing and are not the block. Ages 12+. No GTIN-12 on the SPL.`,
   },
   {

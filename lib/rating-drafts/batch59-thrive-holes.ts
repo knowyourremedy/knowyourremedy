@@ -1780,7 +1780,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_day, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
       f(CITE.plant_people_wonder_day, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic raspberry flavor.',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -1843,7 +1844,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens_kids, 'Sodium citrate', 'cleared', METH.citrate),
       f(CITE.plant_people_wonder_greens_kids, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic apple flavor.',
 
     retailers: [...THRIVE, 'Plant People'],
     sourcesGeneral: [`${CITE.plant_people_wonder_greens_kids} — ${UNVERIFIED_NOTE}`],
@@ -2338,7 +2340,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.solaray_kids_chewable, 'Rose hips fruit (color)', 'cleared', METH.namedColor),
       f(CITE.solaray_kids_chewable, 'Acerola cherry juice powder (color)', 'cleared', METH.namedColor),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Fructose, Natural cherry flavor with other natural flavors, Maltodextrin.',
 
     retailers: [...THRIVE, 'Solaray'],
     sourcesGeneral: [`${CITE.solaray_kids_chewable} — ${UNVERIFIED_NOTE}`],
@@ -4386,7 +4389,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_kids_multi_liposomal, 'Organic natural cherry flavor', 'limited', METH.flavors),
       f(CITE.maryruth_kids_multi_liposomal, 'Organic natural vanilla flavor', 'limited', METH.flavors),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic natural strawberry flavor, Organic natural cherry flavor, Organic natural vanilla flavor.',
 
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [
@@ -5138,7 +5142,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_vitamin_code_kids_chewable, 'Organic watermelon flavor', 'limited', METH.flavors),
       f(CITE.gol_vitamin_code_kids_chewable, 'Organic vanilla flavor', 'limited', METH.flavors),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic dark cherry flavor, Organic berry flavor, Organic apple flavor, Organic lemon flavor, Organic watermelon flavor, Organic vanilla flavor.',
 
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [
@@ -5362,7 +5367,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.gol_organic_kids_probiotics_berry_cherry, 'Organic mixed berry flavor', 'limited', METH.flavors),
       f(CITE.gol_organic_kids_probiotics_berry_cherry, 'Organic dark cherry flavor', 'limited', METH.flavors),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic tapioca maltodextrin, Organic mixed berry flavor, Organic dark cherry flavor.',
 
     retailers: [...THRIVE, 'Garden of Life'],
     cleanAlternatives: [

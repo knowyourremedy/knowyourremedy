@@ -663,6 +663,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_MYLANTA_GAS, 'Tricalcium phosphate'),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Flavors, Maltodextrin, Isomalt.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: DIGESTIVE_PEER_ALTS,

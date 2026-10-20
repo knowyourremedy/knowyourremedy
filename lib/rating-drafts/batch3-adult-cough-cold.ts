@@ -398,6 +398,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Potassium sorbate, Maltodextrin, Sorbitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Sprouts', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
@@ -510,6 +511,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Maltodextrin, Xylitol.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_FLU_ALTS,

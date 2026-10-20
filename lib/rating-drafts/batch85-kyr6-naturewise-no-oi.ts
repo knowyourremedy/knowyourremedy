@@ -663,8 +663,8 @@ const COMPACT: Compact[] = [
       ["Sunflower lecithin", "cleared", "lecithin"],
       ["Rice bran wax", "limited", "riceBranWax"],
     ],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Annatto; Organic MCT oil; Rice bran wax. Modified tapioca starch stays the Limited row. It is not starchgel. Organic MCT oil does not name coconut or palm kernel, so it stays Limited unlabeled MCT. Not an oil-bottle grade.",
+    verdict: 'avoid',
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver is Modified tapioca starch; Annatto; Organic MCT oil; Rice bran wax. Modified tapioca starch stays the Limited row. It is not starchgel. Organic MCT oil does not name coconut or palm kernel, so it stays Limited unlabeled MCT. Not an oil-bottle grade. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Modified tapioca starch, Annatto, Organic MCT oil, Rice bran wax.",
     cite: `Current naturewise.com supplement-facts panel (https://www.naturewise.com/products/vegan-vitamin-b-complex; image ${img("NW-VeganB-Complex-1b-RightSide60.jpg")}) other-ingredients: Softgel (modified tapioca starch, vegetable glycerin, purified water, annatto), organic MCT oil, sunflower lecithin, rice bran wax. The 120 Count right panel prints the same Other Ingredients line (${img("NW-VeganB-Complex-1b-RightSide120.jpg")}). Brand-site supplement-facts image is the pin for this NatureWise name. Live Amazon US exact pack when this name is listed. UPC-A 810157852625 is the published GTIN-12 for this 60 Count (Target primary barcode, 60 softgels). The 120 Count barcode is not copied onto this count. No DailyMed drug SPL.`,
   },
   {

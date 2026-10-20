@@ -531,7 +531,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_sleep, 'Carnauba wax', 'cleared', METH.beeswax),
       f(CITE.plant_people_wonder_sleep, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic elderberry flavor.',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -596,7 +597,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_calm, 'Organic peach flavor', 'limited', METH.flavors),
       f(CITE.plant_people_wonder_calm, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic peach flavor.',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -630,7 +632,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_focus, 'Vegetable juice extract (color)', 'cleared', METH.namedColor),
       f(CITE.plant_people_wonder_focus, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic citrus flavor, Maltitol, Isomalt.',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -662,7 +665,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens, 'Sodium citrate', 'cleared', METH.citrate),
       f(CITE.plant_people_wonder_greens, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic apple flavor.',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [

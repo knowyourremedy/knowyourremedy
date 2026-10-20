@@ -128,6 +128,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.7%' }],
     inactiveIngredients: extraFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Boric acid, Hydrochloric acid, Mannitol.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,
@@ -150,6 +151,7 @@ export const BATCH155_KYR6B_PATADAY: RatingRecord[] = [
     activeIngredients: [{ name: 'Olopatadine', strength: '0.2%' }],
     inactiveIngredients: onceFlags(),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Edetate disodium, Hydrochloric acid.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: EYE_ALTS,

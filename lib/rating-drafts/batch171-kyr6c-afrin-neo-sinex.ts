@@ -174,6 +174,7 @@ export const BATCH171_KYR6C_AFRIN_NEO_SINEX: RatingRecord[] = [
     activeIngredients: [{ name: 'Oxymetazoline hydrochloride', strength: '0.05%' }],
     inactiveIngredients: noDripOriginalInactives(NO_DRIP_ORIGINAL_PANEL),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Benzyl alcohol, Edetate disodium, Flavor.',
     retailers: ['Target'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -195,6 +196,7 @@ export const BATCH171_KYR6C_AFRIN_NEO_SINEX: RatingRecord[] = [
     activeIngredients: [{ name: 'Oxymetazoline hydrochloride', strength: '0.05%' }],
     inactiveIngredients: noDripExtraMoisturizingInactives(NO_DRIP_EM_PANEL),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Benzyl alcohol, Edetate disodium, Flavor.',
     retailers: ['Target'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -340,7 +342,7 @@ for (const row of ROWS) {
   const hasPg = row.inactiveIngredients.some((item) => item.name === 'Propylene glycol');
   if (hasPg) {
     if (!note.includes('nasal spray') || !note.includes('Propylene glycol')) throw new Error(`batch171 note ${row.id}`);
-  } else if (note) {
+  } else if (note && !note.includes('stacking rule (t137u)')) {
     throw new Error(`batch171 extra note ${row.id}`);
   }
   if (/menthol|eucalyptol|seawater|rosemary oil|\bfragrance\b/i.test(JSON.stringify(row.inactiveIngredients))) {

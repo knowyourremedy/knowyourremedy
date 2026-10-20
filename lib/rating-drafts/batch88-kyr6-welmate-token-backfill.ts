@@ -366,8 +366,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Lidocaine', strength: '5%' }],
     flags: LIDO_CHOL_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, trolamine, and vitamin E acetate. Cholesterol is the Sept 23 Other Ingredient Caution row, not High. Hydrogenated lecithin is its own Caution row, not Cleared lecithin. Vitamin E acetate sits on Caution tocopheryl acetate, not Cleared DL-alpha tocopheryl acetate. Topical propylene glycol stays Cleared. The 5.5 oz page spells Propylene Gylcol; that is the same propylene glycol token, not a new inactive. The 1 oz tube prints the same list with propylene glycol spelled out. No High. The pin does not print a numeric age floor; this draft uses 12+.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, trolamine, and vitamin E acetate. Cholesterol is the Sept 23 Other Ingredient Caution row, not High. Hydrogenated lecithin is its own Caution row, not Cleared lecithin. Vitamin E acetate sits on Caution tocopheryl acetate, not Cleared DL-alpha tocopheryl acetate. Topical propylene glycol stays Cleared. The 5.5 oz page spells Propylene Gylcol; that is the same propylene glycol token, not a new inactive. The 1 oz tube prints the same list with propylene glycol spelled out. No High. The pin does not print a numeric age floor; this draft uses 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Cholesterol, Hydrogenated lecithin, Trolamine, Vitamin E acetate.',
     cite: `Wellspring 5.5 oz inactive line (${SHOP}/welmate-lidocaine-5-numbing-cream-maximum-strength-value-size-5-5-oz-jar): Benzyl Alcohol, Carbomer 940, Cholesterol, Hydrogenated Lecithin, Isopropyl Myristate, Polysorbate 80, Propylene Gylcol, Purified Water, Trolamine and Vitamin E Acetate. The 1 oz tube (${SHOP}/welmate-5-numbing-cream-maximum-strength-topical-anesthetic-1-oz-tube) prints the same list with propylene glycol spelled out. ${PG_TOPICAL_TAP} No GTIN-12 on the page.`,
   },
   {
@@ -400,8 +400,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Lidocaine', strength: '5%' }],
     flags: LIDO_C10_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, PEG-100 stearate, and triethanolamine. C10-18 triglycerides is the Sept 23 Cleared fill row on this cream, not gummy seed-oil High and not an oil-bottle grade. Glycine soja (soybean) oil is Cleared cream-base soybean oil. Soy disclosure only. Tocopherol is Cleared mixed-tocopherol antioxidant, not Caution tocopheryl acetate. PEG-100 stearate stays Caution, not the Moderate PEG row. Not the cholesterol / hydrogenated-lecithin cream. The current 2 oz HTML bullets print that cholesterol list and were not treated as the panel. No High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, PEG-100 stearate, and triethanolamine. C10-18 triglycerides is the Sept 23 Cleared fill row on this cream, not gummy seed-oil High and not an oil-bottle grade. Glycine soja (soybean) oil is Cleared cream-base soybean oil. Soy disclosure only. Tocopherol is Cleared mixed-tocopherol antioxidant, not Caution tocopheryl acetate. PEG-100 stearate stays Caution, not the Moderate PEG row. Not the cholesterol / hydrogenated-lecithin cream. The current 2 oz HTML bullets print that cholesterol list and were not treated as the panel. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, PEG-100 stearate, Triethanolamine.',
     cite: `Batch87 carton pin for the 2 oz: benzyl alcohol, carbomer, C10-18 triglycerides, cetearyl alcohol, glyceryl stearate, glycine soja (soybean) oil, isopropyl myristate, PEG-100 stearate, propylene glycol, stearic acid, tocopherol, triethanolamine, water. The 6 oz page (${SHOP}/welmate-lidocaine-cream-6oz-jar) prints that same list, spelling glycine soja (soyabean) oil and water (aqua). Current HTML bullets on the 2 oz URL (${SHOP}/welmate-5-lidocaine-numbing-cream-maximum-strength-topical-anesthetic-aches-back-pain-itching-soreness-burning-bruises-unscented-child-resistant-packaging-2-oz-60-g) print the cholesterol cream and were not the panel. ${CREAM_OIL_TAP} ${PG_TOPICAL_TAP} Wellspring page had no GTIN-12.`,
   },
   {
@@ -432,8 +432,8 @@ const COMPACT: Compact[] = [
     productType: OTC,
     actives: [{ name: 'Butenafine HCl', strength: '1%' }],
     flags: BUTEN_FLAGS,
-    verdict: 'caution',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, polyoxyethylene (23) cetyl ether, propylene glycol dicaprylate, sodium benzoate, and trolamine. Polyoxyethylene (23) cetyl ether is the Sept 23 PEG-ether Caution row, not High, and not polyoxyl 20 cetostearyl ether. Propylene glycol dicaprylate is its own Caution row, not oral Moderate propylene glycol. Glyceryl monostearate SE stays Cleared. The pack of 3 is the same carton formula. No High.',
+    verdict: 'avoid',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are benzyl alcohol, polyoxyethylene (23) cetyl ether, propylene glycol dicaprylate, sodium benzoate, and trolamine. Polyoxyethylene (23) cetyl ether is the Sept 23 PEG-ether Caution row, not High, and not polyoxyl 20 cetostearyl ether. Propylene glycol dicaprylate is its own Caution row, not oral Moderate propylene glycol. Glyceryl monostearate SE stays Cleared. The pack of 3 is the same carton formula. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Polyoxyethylene (23) cetyl ether, Propylene glycol dicaprylate, Sodium benzoate, Trolamine.',
     cite: `Wellspring 1 oz (${SHOP}/welmate-athletes-foot-treatment-extra-strength-antifungal-cream-butenafine-hydrochloride-relief-from-ringworm-athletes-foot-jock-itch-foot-care-nail-fungus-treatment-for-toenail-1oz). DailyMed NDC 73581-210 (setid e650d8aa-c809-42ee-a1d9-a6321d5364f5) inactive ingredients: benzyl alcohol, cetyl alcohol, glycerin, glyceryl monostearate SE, polyoxyethylene (23) cetyl ether, propylene glycol dicaprylate, purified water, sodium benzoate, stearic acid, trolamine, white petrolatum. No GTIN-12 on the page.`,
   },
   {

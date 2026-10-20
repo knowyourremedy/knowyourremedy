@@ -11,6 +11,10 @@
 
 import type { ActiveIngredient, IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { contradictionHonestNote, plainIngredientWhy } from '../scan-preview/plainLanguage';
+import {
+  appendLimitedStackHonestNote,
+  computeVerdictFromInactiveIngredients,
+} from '../scan-preview/verdictFromFlags';
 
 const UNVERIFIED = 'unverified' as const;
 const ADULT = 'adult' as const;
@@ -296,9 +300,15 @@ function row(input: {
   actives: ActiveIngredient[];
   flags: IngredientFlag[];
   source: string;
+  honestNote?: string;
 }): RatingRecord {
-  const levels = input.flags.map((item) => item.riskLevel);
-  const verdict = levels.includes('high') ? 'avoid' : levels.includes('moderate') || levels.includes('limited') ? 'caution' : 'clean';
+  const rollup = computeVerdictFromInactiveIngredients(
+    input.flags.map((item) => ({ name: item.name, riskLevel: item.riskLevel })),
+  );
+  let honestNote = input.honestNote;
+  if (rollup.cause === 'limited_stack' && rollup.limitedStackTokens?.length) {
+    honestNote = appendLimitedStackHonestNote(honestNote, rollup.limitedStackTokens);
+  }
   return {
     id: input.id,
     productName: input.productName,
@@ -312,7 +322,8 @@ function row(input: {
     productType: OTC,
     activeIngredients: input.actives,
     inactiveIngredients: input.flags,
-    verdict,
+    verdict: rollup.verdict,
+    ...(honestNote ? { honestNote } : {}),
     retailers: AMAZON,
     sourcesGeneral: [input.source],
   };
@@ -674,7 +685,10 @@ if (new Set(ids).size !== ids.length) throw new Error('batch184 duplicate id');
 for (const record of ROWS) {
   if (record.barcode) throw new Error(`batch184 barcode ${record.id}`);
   const note = contradictionHonestNote(record);
-  if (note || record.honestNote) throw new Error(`batch184 unexpected note ${record.id}`);
+  const stackHonest = record.honestNote?.includes('stacking rule (t137u)');
+  if ((note || record.honestNote) && !stackHonest) {
+    throw new Error(`batch184 unexpected note ${record.id}`);
+  }
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch184 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch184 blank source ${ingredient.name}`);

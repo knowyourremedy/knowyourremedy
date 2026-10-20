@@ -2942,6 +2942,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: creamPegPanel(CREAM_PEG_SETID),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Caprylyl glycol, Sorbic acid, 1,2-Hexanediol.',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -3058,6 +3059,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: calendulaGelOi('25764f5a-378b-4103-81a1-2a6309e3e8e1'),
     verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylyl glycol, Sorbic acid, 1,2-Hexanediol.',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: CALENDULA_ALTS,
