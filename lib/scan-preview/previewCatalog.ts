@@ -17025,6 +17025,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-bounty-b198-ginkgo-60-200': catalogShot('natures-bounty-b198-ginkgo-60-200.jpg'),
   // Green tea extract 315 mg, 100 capsules.
   'natures-bounty-b198-green-tea-315-100': catalogShot('natures-bounty-b198-green-tea-315-100.jpg'),
+  // Vitamins night run 2026-10-20 5:30 AM PT batch 1.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Magnesium 400 mg, 75 softgels. Not the 500 mg tablets.
+  'natures-bounty-b198-magnesium-400-75': catalogShot('natures-bounty-b198-magnesium-400-75.jpg'),
+  // Evening primrose oil 1000 mg, 60 softgels.
+  'natures-bounty-b198-evening-primrose-1000-60': catalogShot('natures-bounty-b198-evening-primrose-1000-60.jpg'),
+  // Ginseng complex plus royal jelly, 75 capsules.
+  'natures-bounty-b198-ginseng-complex-75': catalogShot('natures-bounty-b198-ginseng-complex-75.jpg'),
+  // Hair Growth, 30 capsules.
+  'natures-bounty-b198-hair-growth-30': catalogShot('natures-bounty-b198-hair-growth-30.jpg'),
+  // Hair, Skin & Nails biotin 3000 mcg, 60 caplets.
+  'natures-bounty-b198-hsn-biotin-3000-60': catalogShot('natures-bounty-b198-hsn-biotin-3000-60.jpg'),
+  // Horny goat weed with maca, 60 capsules.
+  'natures-bounty-b198-horny-goat-weed-60': catalogShot('natures-bounty-b198-horny-goat-weed-60.jpg'),
+  // Intimacy Booster, 60 capsules.
+  'natures-bounty-b198-intimacy-booster-60': catalogShot('natures-bounty-b198-intimacy-booster-60.jpg'),
+  // Red yeast rice 600 mg, 120 capsules. Not the 250.
+  'natures-bounty-b198-red-yeast-rice-600-120': catalogShot('natures-bounty-b198-red-yeast-rice-600-120.jpg'),
+  // Red yeast rice 600 mg, 250 capsules. Not the 120.
+  'natures-bounty-b198-red-yeast-rice-600-250': catalogShot('natures-bounty-b198-red-yeast-rice-600-250.jpg'),
+  // Glucosamine chondroitin complex 1100 mg, 110 capsules.
+  'natures-bounty-b198-glucosamine-chondroitin-110': catalogShot('natures-bounty-b198-glucosamine-chondroitin-110.jpg'),
+  // Slow Fe 30 tablets. Not the 60.
+  'slowfe-b201-iron-30': catalogShot('slowfe-b201-iron-30.jpg'),
+  // Osteo Bi-Flex One Per Day Inflammatory Response, 30 capsules.
+  'osteo-b201-inflammatory-response-30': catalogShot('osteo-b201-inflammatory-response-30.jpg'),
+  // Advanced Omega-3, 80 softgels.
+  'osteo-b201-omega3-80': catalogShot('osteo-b201-omega3-80.jpg'),
+  // Triple Strength, 80 tablets. Not the 40 or 120.
+  'osteo-b201-triple-strength-80': catalogShot('osteo-b201-triple-strength-80.jpg'),
+  // Triple Strength with Vitamin D, 80 tablets. Not the 120.
+  'osteo-b201-triple-strength-vitd-80': catalogShot('osteo-b201-triple-strength-vitd-80.jpg'),
+  // Triple Strength + MSM, 80 tablets.
+  'osteo-b201-triple-strength-msm-80': catalogShot('osteo-b201-triple-strength-msm-80.jpg'),
+  // One Per Day, 30 tablets. Not the 60.
+  'osteo-b201-one-per-day-30': catalogShot('osteo-b201-one-per-day-30.jpg'),
+  // Ease, 28 mini tablets.
+  'osteo-b201-ease-28': catalogShot('osteo-b201-ease-28.jpg'),
+  // Women's One 50+, 90 caplets. Not the 120.
+  'rainbow-b202-womens-one-50-plus-90': catalogShot('rainbow-b202-womens-one-50-plus-90.jpg'),
+  // Women's One 50+, 120 caplets. Not the 90.
+  'rainbow-b202-womens-one-50-plus-120': catalogShot('rainbow-b202-womens-one-50-plus-120.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -37926,11 +37968,91 @@ assertBrandMark(
     throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
   }
   const nextLetter = previewOverlayImage({
-    id: 'natures-bounty-b198-magnesium-400-75',
-    formulaId: 'natures-bounty-b198-magnesium-400-75',
-    brand: "Nature's Bounty",
+    id: 'rainbow-b202-mens-one-120',
+    formulaId: 'rainbow-b202-mens-one-120',
+    brand: 'Rainbow Light',
   });
   if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('magnesium 400 mg 75 must stay a letter until attempted');
+    throw new Error('Rainbow Light Men\'s One 120 must stay a letter until attempted');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 5:30 AM PT batch 1.
+  const batch1020g: [string, string, string][] = [
+    ['natures-bounty-b198-magnesium-400-75', "Nature's Bounty", 'natures-bounty-b198-magnesium-400-75.jpg'],
+    ['natures-bounty-b198-evening-primrose-1000-60', "Nature's Bounty", 'natures-bounty-b198-evening-primrose-1000-60.jpg'],
+    ['natures-bounty-b198-ginseng-complex-75', "Nature's Bounty", 'natures-bounty-b198-ginseng-complex-75.jpg'],
+    ['natures-bounty-b198-hair-growth-30', "Nature's Bounty", 'natures-bounty-b198-hair-growth-30.jpg'],
+    ['natures-bounty-b198-hsn-biotin-3000-60', "Nature's Bounty", 'natures-bounty-b198-hsn-biotin-3000-60.jpg'],
+    ['natures-bounty-b198-horny-goat-weed-60', "Nature's Bounty", 'natures-bounty-b198-horny-goat-weed-60.jpg'],
+    ['natures-bounty-b198-intimacy-booster-60', "Nature's Bounty", 'natures-bounty-b198-intimacy-booster-60.jpg'],
+    ['natures-bounty-b198-red-yeast-rice-600-120', "Nature's Bounty", 'natures-bounty-b198-red-yeast-rice-600-120.jpg'],
+    ['natures-bounty-b198-red-yeast-rice-600-250', "Nature's Bounty", 'natures-bounty-b198-red-yeast-rice-600-250.jpg'],
+    ['natures-bounty-b198-glucosamine-chondroitin-110', "Nature's Bounty", 'natures-bounty-b198-glucosamine-chondroitin-110.jpg'],
+    ['slowfe-b201-iron-30', 'Slow Fe', 'slowfe-b201-iron-30.jpg'],
+    ['osteo-b201-inflammatory-response-30', 'Osteo Bi-Flex', 'osteo-b201-inflammatory-response-30.jpg'],
+    ['osteo-b201-omega3-80', 'Osteo Bi-Flex', 'osteo-b201-omega3-80.jpg'],
+    ['osteo-b201-triple-strength-80', 'Osteo Bi-Flex', 'osteo-b201-triple-strength-80.jpg'],
+    ['osteo-b201-triple-strength-vitd-80', 'Osteo Bi-Flex', 'osteo-b201-triple-strength-vitd-80.jpg'],
+    ['osteo-b201-triple-strength-msm-80', 'Osteo Bi-Flex', 'osteo-b201-triple-strength-msm-80.jpg'],
+    ['osteo-b201-one-per-day-30', 'Osteo Bi-Flex', 'osteo-b201-one-per-day-30.jpg'],
+    ['osteo-b201-ease-28', 'Osteo Bi-Flex', 'osteo-b201-ease-28.jpg'],
+    ['rainbow-b202-womens-one-50-plus-90', 'Rainbow Light', 'rainbow-b202-womens-one-50-plus-90.jpg'],
+    ['rainbow-b202-womens-one-50-plus-120', 'Rainbow Light', 'rainbow-b202-womens-one-50-plus-120.jpg'],
+  ];
+  const seen1020g = new Set<string>();
+  for (const [id, brand, file] of batch1020g) {
+    if (seen1020g.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020g.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1020g: [string, string, string][][] = [
+    [
+      ['natures-bounty-b198-magnesium-400-75', 'natures-bounty-b198-magnesium-400-75', "Nature's Bounty"],
+      ['natures-bounty-b196-magnesium-500-mg-200-tablets-200', 'natures-bounty-b196-magnesium-500-mg-200-tablets-200', "Nature's Bounty"],
+    ],
+    [
+      ['natures-bounty-b198-red-yeast-rice-600-120', 'natures-bounty-b198-red-yeast-rice-600-120', "Nature's Bounty"],
+      ['natures-bounty-b198-red-yeast-rice-600-250', 'natures-bounty-b198-red-yeast-rice-600-250', "Nature's Bounty"],
+    ],
+    [
+      ['slowfe-b201-iron-30', 'slowfe-b187-iron', 'Slow Fe'],
+      ['slowfe-b187-iron-60', 'slowfe-b187-iron', 'Slow Fe'],
+    ],
+    [
+      ['osteo-b201-triple-strength-80', 'osteo-b201-triple-strength-80', 'Osteo Bi-Flex'],
+      ['osteo-b201-triple-strength-vitd-80', 'osteo-b201-triple-strength-vitd-80', 'Osteo Bi-Flex'],
+      ['osteo-b201-triple-strength-msm-80', 'osteo-b201-triple-strength-msm-80', 'Osteo Bi-Flex'],
+      ['osteo-b201-one-per-day-30', 'osteo-b201-one-per-day-30', 'Osteo Bi-Flex'],
+      ['osteo-b201-ease-28', 'osteo-b201-ease-28', 'Osteo Bi-Flex'],
+      ['osteo-b201-omega3-80', 'osteo-b201-omega3-80', 'Osteo Bi-Flex'],
+      ['osteo-b201-inflammatory-response-30', 'osteo-b201-inflammatory-response-30', 'Osteo Bi-Flex'],
+    ],
+    [
+      ['rainbow-b202-womens-one-50-plus-90', 'rainbow-b202-womens-one-50-plus-90', 'Rainbow Light'],
+      ['rainbow-b202-womens-one-50-plus-120', 'rainbow-b202-womens-one-50-plus-120', 'Rainbow Light'],
+    ],
+  ];
+  for (const group of groups1020g) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  for (const id of [
+    'osteo-b210-triple-strength-40',
+    'osteo-b210-triple-strength-120',
+    'osteo-b210-triple-strength-vitd-120',
+    'osteo-b210-one-per-day-60',
+  ]) {
+    const image = previewOverlayImage({ id, formulaId: id, brand: 'Osteo Bi-Flex' });
+    if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
+      throw new Error(`${id} stays a letter until its own carton is attempted`);
+    }
   }
 }
