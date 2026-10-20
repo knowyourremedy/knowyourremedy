@@ -71,19 +71,19 @@ const METH = {
   mica:
     'Methodology §5 Caution (mica-based pearlescent pigment). Mica based pearlescent pigment is this spelling (Sept 25, 2026, 01dc193). Same token. Not a new grade. Not Avoid.',
   peg:
-    'Methodology §5 Moderate (polyethylene glycol / PEGs, including polyethylene glycol 400). Not the Avoid driver.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg8000:
-    'Methodology §5 Moderate (PEGs). polyethylene glycol (peg) 8000 maps here (Sept 25, 2026). Not a new grade. Not the Avoid driver.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg6000:
-    'Methodology §5 Moderate (PEGs). polyethylene glycol 6000 maps here (Sept 25, 2026). Not a new grade. Not the Avoid driver.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   povidone: 'Methodology §5 Cleared (povidone).',
   pregel: 'Methodology §5 Cleared (pregelatinized starch).',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Limited (colloidal silicon dioxide / silica — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.',
   ssg: 'Methodology §5 Cleared (sodium starch glycolate).',
   stearic: 'Methodology §5 Cleared (stearic acid).',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sugar:
     'Methodology §5 Caution (bare sugar). Distinct from Cleared cane sugar and from Limited sucrose. Not Avoid.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
@@ -185,13 +185,13 @@ const APAP: Compact['flags'] = [
   ['CARNAUBA WAX', 'cleared', 'carnauba'],
   ['FD-C RED NO. 40 ALUMINUM LAKE', 'high', 'dye'],
   ['HYPROMELLOSE', 'cleared', 'hpmc'],
-  ['POLYETHYLENE GLYCOL(PEG) 400', 'moderate', 'peg'],
-  ['POLYETHYLENE GLYCOL (peg) 8000', 'moderate', 'peg8000'],
+  ['POLYETHYLENE GLYCOL(PEG) 400', 'limited', 'peg'],
+  ['POLYETHYLENE GLYCOL (peg) 8000', 'limited', 'peg8000'],
   ['POVIDONE', 'cleared', 'povidone'],
   ['PREGELATINIZED STARCH', 'cleared', 'pregel'],
   ['SODIUM STARCH GLYCOLATE', 'cleared', 'ssg'],
   ['STEARIC ACID', 'cleared', 'stearic'],
-  ['SUCRALOSE', 'moderate', 'sucralose'],
+  ['SUCRALOSE', 'limited', 'sucralose'],
   ['TITANIUM DIOXIDE', 'high', 'tio2'],
 ];
 
@@ -203,9 +203,9 @@ const RAPID: Compact['flags'] = [
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['mica based pearlescent pigment', 'limited', 'mica'],
-  ['polyethylene glycol 400', 'moderate', 'peg'],
-  ['polyethylene glycol 6000', 'moderate', 'peg6000'],
-  ['polysorbate 80', 'moderate', 'ps80'],
+  ['polyethylene glycol 400', 'limited', 'peg'],
+  ['polyethylene glycol 6000', 'limited', 'peg6000'],
+  ['polysorbate 80', 'limited', 'ps80'],
   ['povidone', 'cleared', 'povidone'],
   ['pregelatinized starch', 'cleared', 'pregel'],
 ];
@@ -225,7 +225,7 @@ const PSE: Compact['flags'] = [
   ['iron oxide yellow (iron oxide ochre)', 'limited', 'iron'],
   ['kaolin', 'cleared', 'kaolin'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['polyethylene glycol (PEG) 400', 'moderate', 'peg'],
+  ['polyethylene glycol (PEG) 400', 'limited', 'peg'],
   ['pregelatinized starch', 'cleared', 'pregel'],
   ['sodium starch glycolate', 'cleared', 'ssg'],
   ['stearic acid', 'cleared', 'stearic'],

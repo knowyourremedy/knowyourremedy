@@ -104,7 +104,7 @@ export const BATCH176_KYR6C_GASX_TOTAL: RatingRecord[] = [
       flag('N-butyl alcohol', 'limited', METH.butyl),
       flag('Pharmaceutical ink', 'limited', METH.ink),
       flag('Phosphoric acid', 'limited', METH.phosphoric),
-      flag('Propylene glycol', 'moderate', METH.pg),
+      flag('Propylene glycol', 'limited', METH.pg),
       flag('Propylparaben', 'high', METH.paraben),
       flag('Purified water', 'cleared', METH.water),
       flag('Shellac', 'cleared', METH.shellac),

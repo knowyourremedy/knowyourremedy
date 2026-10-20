@@ -1369,8 +1369,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Soybean oil', 'high', dailymed(SET.honey, METH.seedOilLozenge)),
       flag('Eucalyptus oil', 'cleared', dailymed(SET.honey, METH.eucalyptus)),
       flag('Beta carotene', 'cleared', dailymed(SET.honey, METH.betaCarotene)),
-      flag('Acesulfame potassium', 'moderate', dailymed(SET.honey, METH.acek)),
-      flag('Sucralose', 'moderate', dailymed(SET.honey, METH.sucralose)),
+      flag('Acesulfame potassium', 'limited', dailymed(SET.honey, METH.acek)),
+      flag('Sucralose', 'limited', dailymed(SET.honey, METH.sucralose)),
       flag(
         'Natural and artificial flavors',
         'limited',
@@ -1450,8 +1450,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.sfMenthol, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.sfMenthol, METH.dyes)),
       flag('Eucalyptus oil', 'cleared', dailymed(SET.sfMenthol, METH.eucalyptus)),
-      flag('Acesulfame potassium', 'moderate', dailymed(SET.sfMenthol, METH.acek)),
-      flag('Sucralose', 'moderate', dailymed(SET.sfMenthol, METH.sucralose)),
+      flag('Acesulfame potassium', 'limited', dailymed(SET.sfMenthol, METH.acek)),
+      flag('Sucralose', 'limited', dailymed(SET.sfMenthol, METH.sucralose)),
       flag(
         'Natural and artificial flavors',
         'limited',

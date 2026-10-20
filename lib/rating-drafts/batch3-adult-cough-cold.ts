@@ -38,11 +38,11 @@ const METH = {
   parabens: 'Methodology §5 High-tier (parabens)',
   aspartame:
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
   bha: 'Methodology §5 High-tier (BHA)',
@@ -760,12 +760,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('27312ee4-d1f4-4a95-9c45-91fa5a01f5ba', METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('27312ee4-d1f4-4a95-9c45-91fa5a01f5ba', METH.pg),
       ),
     ],
@@ -806,12 +806,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('6a8cdcad-4881-49b8-a3f1-2c1574300d18', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('6a8cdcad-4881-49b8-a3f1-2c1574300d18', METH.sucralose),
       ),
       flag(
@@ -863,12 +863,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('cea08797-1d53-4434-be1a-144f2ded5f9d', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('cea08797-1d53-4434-be1a-144f2ded5f9d', METH.sucralose),
       ),
     ],
@@ -905,12 +905,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('fc9a43d8-0359-9def-e053-6294a90a7e91', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('fc9a43d8-0359-9def-e053-6294a90a7e91', METH.sucralose),
       ),
       flag(
@@ -967,12 +967,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('1d5e9cd9-0d76-19e0-e063-6294a90a78fd', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('1d5e9cd9-0d76-19e0-e063-6294a90a78fd', METH.sucralose),
       ),
       flag(
@@ -1023,17 +1023,17 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('4908b326-e1da-44ca-8087-7e41a16c27b0', METH.pg),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('4908b326-e1da-44ca-8087-7e41a16c27b0', METH.peg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4908b326-e1da-44ca-8087-7e41a16c27b0', METH.sucralose),
       ),
       flag(
@@ -1079,12 +1079,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('f1d022dd-c2ca-497f-87d5-9ef3e20e8ea7', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('f1d022dd-c2ca-497f-87d5-9ef3e20e8ea7', METH.sucralose),
       ),
     ],
@@ -1127,12 +1127,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('472c5c1f-eb5a-444b-a17e-f0d71007fb15', METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('472c5c1f-eb5a-444b-a17e-f0d71007fb15', METH.pg),
       ),
     ],
@@ -1185,12 +1185,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('234e6a2c-a280-4a39-8777-9316e9d681fb', METH.ps80),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('234e6a2c-a280-4a39-8777-9316e9d681fb', METH.pg),
       ),
     ],
@@ -1276,12 +1276,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('0e4717a1-914b-466d-8bf0-d37ebc32fdb3', METH.peg),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('0e4717a1-914b-466d-8bf0-d37ebc32fdb3', METH.ps80),
       ),
     ],
@@ -1317,7 +1317,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('2b962d87-6ff5-4c0f-8504-e5b61c940612', METH.acek),
       ),
       flag(
@@ -1388,12 +1388,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('d536f159-304f-4759-be14-0e4895777c97', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('d536f159-304f-4759-be14-0e4895777c97', METH.sucralose),
       ),
     ],
@@ -1533,12 +1533,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.pg),
       ),
       flag(
@@ -1552,7 +1552,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.flavors),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,
@@ -1589,12 +1589,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('4444c05a-eba6-4633-b86f-34f455699fa9', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4444c05a-eba6-4633-b86f-34f455699fa9', METH.sucralose),
       ),
       flag(
@@ -1642,7 +1642,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('25a26577-a9f8-49cb-9d75-d8c471e4aaf6', METH.pg),
       ),
       flag(
@@ -1684,12 +1684,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('2ac53cc7-000f-41fd-b799-4e6d6886fe62', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('2ac53cc7-000f-41fd-b799-4e6d6886fe62', METH.sucralose),
       ),
       flag(
@@ -1757,12 +1757,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('29da4b94-8f8e-48e8-909f-8476e3b39d78', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('29da4b94-8f8e-48e8-909f-8476e3b39d78', METH.sucralose),
       ),
     ],

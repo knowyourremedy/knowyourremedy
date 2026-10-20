@@ -22,7 +22,7 @@
 // No toothpaste. No Sprouts. No factory. Oil form split stays as it is on main.
 //
 // TALLY (unverified drafts in THIS file): 59 rows —
-// Clean 11 / Caution 19 / Avoid 29.
+// Clean 11 / Caution 13 / Avoid 35.
 // NEW 25 / REUSE-formula 34 /
 // SKIPPED 102 (no_OI 93 / OUT 9) /
 // REFUSED 52.
@@ -56,7 +56,7 @@ const METH = {
   mgStearate: "Methodology §5 Cleared (magnesium stearate).",
   mcc: "Methodology §5 Cleared (microcrystalline cellulose).",
   cmc: "Methodology §5 Cleared (carboxymethylcellulose sodium / cellulose gum). The printed MCC + CMC combo is these two Cleared locks.",
-  peg: "Methodology §5 Moderate (polyethylene glycol / PEGs). Not the Avoid driver.",
+  peg: "Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).",
   tio2: "Methodology §5 High (titanium dioxide).",
   cornStarch: "Methodology §5 Cleared (corn starch — named simple starch).",
   carbomerB: "Methodology §5 Cleared (carbomer / carbomer homopolymer, including type B).",
@@ -70,7 +70,7 @@ const METH = {
   water: "Methodology §5 Cleared (purified water / water).",
   whiteInk: "Methodology §5 Caution (white edible ink — exact token; locked Sept 18, 2026). Same class as edible ink. Not Avoid.",
   citric: "Methodology §5 Cleared (citric acid / citrate salts as fillers or buffers). Anhydrous citric acid sits on this row.",
-  pgOral: "Methodology §5 Moderate (propylene glycol, oral).",
+  pgOral: "Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).",
   pgTopical: "Methodology §5 Cleared (propylene glycol, topical). Oral propylene glycol is the Moderate row. This product is topical.",
   sss: "Methodology §5 Caution (sorbitol sorbitan solution — exact token; locked Sept 24, 2026). Distinct from Limited oral sorbitol and from Caution sorbitan esters. Not Avoid.",
   sodiumCitrate: "Methodology §5 Cleared (sodium citrate — citrate-salt filler/buffer with citric acid).",
@@ -82,7 +82,7 @@ const METH = {
   dextrose: "Methodology §5 Cleared (dextrose as a sweetener). Distinct from Caution organic cultured dextrose.",
   bkc: "Methodology §5 Caution (benzalkonium chloride). Standalone Caution. Not Avoid.",
   pea: "Methodology §5 Caution (phenylethyl alcohol — exact token; locked Sept 18, 2026). Twin of phenethyl alcohol. Not Avoid.",
-  ps80: "Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.",
+  ps80: "Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).",
   carnauba: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
   crospovidone: "Methodology §5 Cleared (crospovidone).",
   ferric: "Methodology §5 Caution (ferric oxide red / ferric oxide yellow). Not Avoid. Not a dye High.",
@@ -238,7 +238,7 @@ const CETIRIZINE_10_FLAGS: Compact['flags'] = [
   ["lactose monohydrate", "cleared", "lactoseMh"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["titanium dioxide", "high", "tio2"],
 ];
 
@@ -279,8 +279,8 @@ const DOCUSATE_100_SINGLE_FLAGS: Compact['flags'] = [
   ["FD&C Yellow #6", "high", "dye"],
   ["gelatin", "cleared", "gelatin"],
   ["glycerin", "cleared", "glycerin"],
-  ["polyethylene glycol", "moderate", "peg"],
-  ["propylene glycol", "moderate", "pgOral"],
+  ["polyethylene glycol", "limited", "peg"],
+  ["propylene glycol", "limited", "pgOral"],
   ["purified water", "cleared", "water"],
   ["sorbitol sorbitan solution", "limited", "sss"],
   ["white edible ink", "limited", "whiteInk"],
@@ -318,7 +318,7 @@ const FLUTICASONE_50_FLAGS: Compact['flags'] = [
   ["microcrystalline cellulose", "cleared", "mcc"],
   ["carboxymethylcellulose sodium", "cleared", "cmc"],
   ["0.25% w/w phenylethyl alcohol", "limited", "pea"],
-  ["polysorbate 80", "moderate", "ps80"],
+  ["polysorbate 80", "limited", "ps80"],
   ["purified water", "cleared", "water"],
 ];
 
@@ -333,7 +333,7 @@ const DUAL_ACTION_FLAGS: Compact['flags'] = [
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
   ["polydextrose", "limited", "polydextrose"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["povidone", "cleared", "povidone"],
   ["pregelatinized starch", "cleared", "pregel"],
   ["sodium lauryl sulfate", "limited", "sls"],
@@ -356,7 +356,7 @@ const DPH_25_CAPLET_FLAGS: Compact['flags'] = [
   ["lactose", "cleared", "lactose"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["silicon dioxide", "limited", "sio2"],
   ["titanium dioxide", "high", "tio2"],
 ];
@@ -386,7 +386,7 @@ const TENSION_FLAGS: Compact['flags'] = [
   ["FD&C yellow #6 aluminum lake", "high", "dye"],
   ["hypromellose", "cleared", "hpmc"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["povidone", "cleared", "povidone"],
   ["pregelatinized starch", "cleared", "pregel"],
   ["silicon dioxide", "limited", "sio2"],
@@ -402,7 +402,7 @@ const PHENYLEPHRINE_10_FLAGS: Compact['flags'] = [
   ["lactose", "cleared", "lactose"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["silicon dioxide", "limited", "sio2"],
   ["titanium dioxide", "high", "tio2"],
 ];
@@ -420,7 +420,7 @@ const APAP_650_ER_FLAGS: Compact['flags'] = [
   ["hypromellose", "cleared", "hpmc"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["povidone", "cleared", "povidone"],
   ["pregelatinized starch", "cleared", "pregel"],
   ["sodium starch glycolate", "cleared", "ssg"],
@@ -444,8 +444,8 @@ const LEVOCETIRIZINE_5_FLAGS: Compact['flags'] = [
   ["lactose monohydrate", "cleared", "lactoseMh"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
-  ["polysorbate 80", "moderate", "ps80"],
+  ["polyethylene glycol", "limited", "peg"],
+  ["polysorbate 80", "limited", "ps80"],
   ["titanium dioxide", "high", "tio2"],
 ];
 
@@ -459,7 +459,7 @@ const FEXOFENADINE_180_413_FLAGS: Compact['flags'] = [
   ["lactose monohydrate", "cleared", "lactoseMh"],
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["pregelatinized starch", "cleared", "pregel"],
   ["titanium dioxide", "high", "tio2"],
 ];
@@ -470,7 +470,7 @@ const LIDOCAINE_RECTAL_5_FLAGS: Compact['flags'] = [
   ["cholesterol", "limited", "cholesterol"],
   ["hydrogenated lecithin", "limited", "hLecithin"],
   ["isopropyl myristate", "cleared", "ipm"],
-  ["polysorbate 80", "moderate", "ps80"],
+  ["polysorbate 80", "limited", "ps80"],
   ["propylene glycol", "cleared", "pgTopical"],
   ["tocopheryl acetate", "limited", "tocopheryl"],
   ["triethanolamine", "limited", "tea"],
@@ -485,7 +485,7 @@ const MENSTRUAL_FLAGS: Compact['flags'] = [
   ["magnesium stearate", "cleared", "mgStearate"],
   ["microcrystalline cellulose", "cleared", "mcc"],
   ["polydextrose", "limited", "polydextrose"],
-  ["polyethylene glycol", "moderate", "peg"],
+  ["polyethylene glycol", "limited", "peg"],
   ["povidone", "cleared", "povidone"],
   ["silicon dioxide", "limited", "sio2"],
   ["stearic acid", "cleared", "stearic"],
@@ -513,7 +513,7 @@ const COMPACT: Compact[] = [
     flags: CETIRIZINE_10_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, polyethylene glycol, titanium dioxide. Under 6: ask a doctor. Adults 65 and over: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; setid bef9e980-37b4-430d-8635-3354d578b3b8; NDC 69168-396-05). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-cetirizine-10mg-500-tablets-all-day-allergy-relief-indoor-outdoor-relief-from-itchy-throat-sneezing-runny-noses/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-cetirizine-10mg-500-tablets-all-day-allergy-relief-indoor-outdoor-relief-from-itchy-throat-sneezing-runny-noses/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-cetirizine-10-60",
@@ -534,7 +534,7 @@ const COMPACT: Compact[] = [
     flags: CETIRIZINE_10_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, polyethylene glycol, titanium dioxide. Under 6: ask a doctor. Adults 65 and over: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; setid bef9e980-37b4-430d-8635-3354d578b3b8; NDC 69168-396-60). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-60-tablets-relief-from-itchy-throat-sneezing-and-runny-nose/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-60-tablets-relief-from-itchy-throat-sneezing-and-runny-nose/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-cetirizine-10-396-03",
@@ -551,7 +551,7 @@ const COMPACT: Compact[] = [
     flags: CETIRIZINE_10_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, polyethylene glycol, titanium dioxide. Under 6: ask a doctor. Adults 65 and over: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; setid bef9e980-37b4-430d-8635-3354d578b3b8; NDC 69168-396-03). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-all-day-allergy. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-all-day-allergy. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-cetirizine-10-1080",
@@ -568,7 +568,7 @@ const COMPACT: Compact[] = [
     flags: CETIRIZINE_10_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, polyethylene glycol, titanium dioxide. Under 6: ask a doctor. Adults 65 and over: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; setid bef9e980-37b4-430d-8635-3354d578b3b8; NDC 69168-396-43). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-cetirizine-10mg-24-packs-of-45-tablets-each-1080-tablets-all-day-allergy-relief-indoor-outdoor-relief-from-itchy-throat-sneezing-runny-noses-value-pack/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bef9e980-37b4-430d-8635-3354d578b3b8; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Cetirizine HCl 10 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-cetirizine-10mg-24-packs-of-45-tablets-each-1080-tablets-all-day-allergy-relief-indoor-outdoor-relief-from-itchy-throat-sneezing-runny-noses-value-pack/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-aspirin-325",
@@ -791,7 +791,7 @@ const COMPACT: Compact[] = [
     flags: DOCUSATE_100_SINGLE_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: FD&C Red #40, FD&C Yellow #6, polyethylene glycol, propylene glycol, sorbitol sorbitan solution, white edible ink. Single-tone softgel. Adults and children 12 years and over. Oral propylene glycol is Moderate.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9fbe783e-ddd9-445a-852a-00f4ad754880; setid 9fbe783e-ddd9-445a-852a-00f4ad754880; NDC 69168-424-81). Active: Docusate sodium 100 mg. Inactive ingredients: Anhydrous citric acid, FD&C Red #40, FD&C Yellow #6, gelatin, glycerin, polyethylene glycol, propylene glycol, purified water, sorbitol sorbitan solution and white edible ink. Brand PDP https://a2z-life.com/healtha2z-stool-softener-docusate-sodium-100mg-400-counts-single-tone/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9fbe783e-ddd9-445a-852a-00f4ad754880; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Docusate sodium 100 mg. Inactive ingredients: Anhydrous citric acid, FD&C Red #40, FD&C Yellow #6, gelatin, glycerin, polyethylene glycol, propylene glycol, purified water, sorbitol sorbitan solution and white edible ink. Brand PDP https://a2z-life.com/healtha2z-stool-softener-docusate-sodium-100mg-400-counts-single-tone/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-simethicone-250",
@@ -911,9 +911,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4e1c265-5205-4089-8190-0755ede83896; setid a4e1c265-5205-4089-8190-0755ede83896; NDC 69168-448-01). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-72-sprays-0-38-fl-oz-11-1ml-relief-from-nasal-congestion-runny-nose-sneezing/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4e1c265-5205-4089-8190-0755ede83896; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-72-sprays-0-38-fl-oz-11-1ml-relief-from-nasal-congestion-runny-nose-sneezing/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fluticasone-50-kids-72",
@@ -932,9 +932,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4b9fcfc-f3f7-4ce0-8f97-3d475081aa67; setid f4b9fcfc-f3f7-4ce0-8f97-3d475081aa67; NDC 69168-014-01). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-children-s-fluticasone-50mcg-nasal-spray-24-hr-allergy-72-spray/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4b9fcfc-f3f7-4ce0-8f97-3d475081aa67; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-children-s-fluticasone-50mcg-nasal-spray-24-hr-allergy-72-spray/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fluticasone-50-144",
@@ -949,9 +949,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4250d331-17b0-46be-a779-fb4f09bade16; setid 4250d331-17b0-46be-a779-fb4f09bade16; NDC 69168-452-01). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-relief-from-nasal-congestion-runny-nose-sneezing/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4250d331-17b0-46be-a779-fb4f09bade16; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-relief-from-nasal-congestion-runny-nose-sneezing/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fluticasone-50-144-2pk",
@@ -966,9 +966,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4250d331-17b0-46be-a779-fb4f09bade16; setid 4250d331-17b0-46be-a779-fb4f09bade16; NDC 69168-452-02). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-144-sprays-0-62-fl-oz-18-2ml-0-62-fl-oz-pack-of-2/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4250d331-17b0-46be-a779-fb4f09bade16; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-spray-50-mcg-per-spray-24-hour-allergy-relief-144-sprays-0-62-fl-oz-18-2ml-0-62-fl-oz-pack-of-2/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fluticasone-50-380-01",
@@ -987,9 +987,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1cd546-4598-115b-0357-5d0c22731faa; setid 4e1cd546-4598-115b-0357-5d0c22731faa; NDC 69168-380-01). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-sprays-24-hour-allergy-relief-120-sprays-0-54-fl-oz/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1cd546-4598-115b-0357-5d0c22731faa; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-propionate-nasal-sprays-24-hour-allergy-relief-120-sprays-0-54-fl-oz/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fluticasone-50-120-2pk",
@@ -1008,9 +1008,9 @@ const COMPACT: Compact[] = [
       { name: "Fluticasone propionate", strength: "50 mcg" },
     ],
     flags: FLUTICASONE_50_FLAGS,
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1cd546-4598-115b-0357-5d0c22731faa; setid 4e1cd546-4598-115b-0357-5d0c22731faa; NDC 69168-380-02). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-nasal-spray-2-pack-120-sprays/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    verdict: "avoid",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80. Do not use in children under 4. The children's 72-spray, the 144-spray family, and the 120-spray 2-pack print this same inactive line and the same active, so they share formulaId. Avoid: three or more Limited tokens triggered the stacking rule (t137u): 0.02% w/w benzalkonium chloride, 0.25% w/w phenylethyl alcohol, polysorbate 80.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1cd546-4598-115b-0357-5d0c22731faa; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Fluticasone propionate 50 mcg. Inactive ingredients: 0.02% w/w benzalkonium chloride, dextrose, microcrystalline cellulose and carboxymethylcellulose sodium, 0.25% w/w phenylethyl alcohol, polysorbate 80, purified water Brand PDP https://a2z-life.com/healtha2z-fluticasone-nasal-spray-2-pack-120-sprays/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-dual-action",
@@ -1032,7 +1032,7 @@ const COMPACT: Compact[] = [
     flags: DUAL_ACTION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, ferric oxide red, ferric oxide yellow, polydextrose, polyethylene glycol, sodium lauryl sulfate, titanium dioxide. Adults and children 12 years and over. Ferric oxides are Caution. Titanium dioxide is the Avoid driver.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; setid fb4fc347-0f90-429f-9ca8-903e736f5496; NDC 69168-462-35). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-80-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-80-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-dual-action-150",
@@ -1054,7 +1054,7 @@ const COMPACT: Compact[] = [
     flags: DUAL_ACTION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, ferric oxide red, ferric oxide yellow, polydextrose, polyethylene glycol, sodium lauryl sulfate, titanium dioxide. Adults and children 12 years and over. Ferric oxides are Caution. Titanium dioxide is the Avoid driver.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; setid fb4fc347-0f90-429f-9ca8-903e736f5496; NDC 69168-462-02). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-150-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-150-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-dual-action-300",
@@ -1076,7 +1076,7 @@ const COMPACT: Compact[] = [
     flags: DUAL_ACTION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, ferric oxide red, ferric oxide yellow, polydextrose, polyethylene glycol, sodium lauryl sulfate, titanium dioxide. Adults and children 12 years and over. Ferric oxides are Caution. Titanium dioxide is the Avoid driver.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; setid fb4fc347-0f90-429f-9ca8-903e736f5496; NDC 69168-462-17). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-300-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb4fc347-0f90-429f-9ca8-903e736f5496; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 250 mg, Ibuprofen 125 mg. Inactive ingredients: carnauba wax, colloidal silicon dioxide, croscarmellose sodium, crospovidone, ferric oxide red, ferric oxide yellow, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, pregelatinized starch, sodium lauryl sulfate, stearic acid and titanium dioxide. Brand PDP https://a2z-life.com/healtha2z-dual-action-pain-relief-300-caplets-acetaminophen-250mg-ibuprofen-nsaid-125mg-contains-two-medicines-relief-from-headache-fever-backache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-guaifenesin-1200",
@@ -1135,7 +1135,7 @@ const COMPACT: Compact[] = [
     flags: DPH_25_CAPLET_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Children under 6: do not use. Children 6 to under 12: 1 caplet.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2823bad-540f-4662-8dcc-58e9f0d94efb; setid c2823bad-540f-4662-8dcc-58e9f0d94efb; NDC 69168-048-93). Active: Diphenhydramine HCl 25 mg. Inactive ingredients: croscarmellose sodium, D&C red #27 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-diphenhydramine-25mg-compare-to-benadryl-active-ingredient-24-packs-of-24-caplets-576-tablets-total-value-package/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2823bad-540f-4662-8dcc-58e9f0d94efb; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Diphenhydramine HCl 25 mg. Inactive ingredients: croscarmellose sodium, D&C red #27 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-diphenhydramine-25mg-compare-to-benadryl-active-ingredient-24-packs-of-24-caplets-576-tablets-total-value-package/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-dph-25-caplet-600",
@@ -1156,7 +1156,7 @@ const COMPACT: Compact[] = [
     flags: DPH_25_CAPLET_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Children under 6: do not use. Children 6 to under 12: 1 caplet.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2823bad-540f-4662-8dcc-58e9f0d94efb; setid c2823bad-540f-4662-8dcc-58e9f0d94efb; NDC 69168-048-20). Active: Diphenhydramine HCl 25 mg. Inactive ingredients: croscarmellose sodium, D&C red #27 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-compare-to-benadryl-active-ingredients-600-count-capsules/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2823bad-540f-4662-8dcc-58e9f0d94efb; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Diphenhydramine HCl 25 mg. Inactive ingredients: croscarmellose sodium, D&C red #27 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-compare-to-benadryl-active-ingredients-600-count-capsules/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-loratadine-10",
@@ -1389,7 +1389,7 @@ const COMPACT: Compact[] = [
     flags: TENSION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years and over.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; setid b431a1a3-39c4-4d6c-afdc-c8b017ad89da; NDC 69168-029-98). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-aspirin-free-compare-to-excedrin-active-ingredient-200-caplets/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-aspirin-free-compare-to-excedrin-active-ingredient-200-caplets/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-tension-16",
@@ -1411,7 +1411,7 @@ const COMPACT: Compact[] = [
     flags: TENSION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years and over.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; setid b431a1a3-39c4-4d6c-afdc-c8b017ad89da; NDC 69168-029-26). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-tension-48",
@@ -1429,7 +1429,7 @@ const COMPACT: Compact[] = [
     flags: TENSION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years and over.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; setid b431a1a3-39c4-4d6c-afdc-c8b017ad89da; NDC 69168-029-26). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-tension-96",
@@ -1447,7 +1447,7 @@ const COMPACT: Compact[] = [
     flags: TENSION_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years and over.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; setid b431a1a3-39c4-4d6c-afdc-c8b017ad89da; NDC 69168-029-26). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b431a1a3-39c4-4d6c-afdc-c8b017ad89da; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 500 mg, Caffeine 65 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, D&C red #27 aluminum lake, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, silicon dioxide, stearic acid, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-tension-headache-relief-16-caplets-1-pack-3-packs-6-packs/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-phenylephrine-10",
@@ -1468,7 +1468,7 @@ const COMPACT: Compact[] = [
     flags: PHENYLEPHRINE_10_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years of age and older.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7aef00df-816a-4ea2-a2ad-beed66dd2fe4; setid 7aef00df-816a-4ea2-a2ad-beed66dd2fe4; NDC 69168-272-17). Active: Phenylephrine HCl 10 mg. Inactive ingredients: croscarmellose sodium, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-decongestant-pe-300-count-maximum-strength/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7aef00df-816a-4ea2-a2ad-beed66dd2fe4; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Phenylephrine HCl 10 mg. Inactive ingredients: croscarmellose sodium, FD&C red #40 aluminum lake, FD&C yellow #6 aluminum lake, hypromellose, lactose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, silicon dioxide, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-decongestant-pe-300-count-maximum-strength/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-apap-500",
@@ -1510,7 +1510,7 @@ const COMPACT: Compact[] = [
     flags: APAP_650_ER_FLAGS,
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Drivers: polyethylene glycol. Under 18: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4720346-c3e0-4707-b007-1bf1f5e05707; setid f4720346-c3e0-4707-b007-1bf1f5e05707; NDC 69168-461-03). Active: Acetaminophen 650 mg. Inactive ingredients: hydroxyethyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate, stearic acid Brand PDP https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-250-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4720346-c3e0-4707-b007-1bf1f5e05707; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 650 mg. Inactive ingredients: hydroxyethyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate, stearic acid Brand PDP https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-250-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-apap-650-er-100",
@@ -1531,7 +1531,7 @@ const COMPACT: Compact[] = [
     flags: APAP_650_ER_FLAGS,
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Drivers: polyethylene glycol. Under 18: ask a doctor.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4720346-c3e0-4707-b007-1bf1f5e05707; setid f4720346-c3e0-4707-b007-1bf1f5e05707; NDC 69168-461-32). Active: Acetaminophen 650 mg. Inactive ingredients: hydroxyethyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate, stearic acid Brand PDP https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-100-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4720346-c3e0-4707-b007-1bf1f5e05707; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 650 mg. Inactive ingredients: hydroxyethyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, polyethylene glycol, povidone, pregelatinized starch, sodium starch glycolate, stearic acid Brand PDP https://a2z-life.com/healtha2z-pain-relief-extended-release-acetaminophen-650mg-100-caplets-8-hours-arthiritis-pain-pain-reliever-fever-reducer-contains-no-aspirin/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-chlorpheniramine-4",
@@ -1607,7 +1607,7 @@ const COMPACT: Compact[] = [
     flags: LEVOCETIRIZINE_5_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, polyethylene glycol, polysorbate 80, titanium dioxide. Children under 6: do not use. Children 6 to 11: half tablet. The brand H1 does not print a count. The row is NDC 69168-451-06.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c523c210-b1c4-4049-9c72-2b31c9c93137; setid c523c210-b1c4-4049-9c72-2b31c9c93137; NDC 69168-451-06). Active: Levocetirizine dihydrochloride 5 mg. Inactive ingredients: colloidal silicon dioxide, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-levocetirizine-dihydrochloride-5mg-24-hours-antihistamine/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c523c210-b1c4-4049-9c72-2b31c9c93137; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Levocetirizine dihydrochloride 5 mg. Inactive ingredients: colloidal silicon dioxide, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, polyethylene glycol, polysorbate 80, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-levocetirizine-dihydrochloride-5mg-24-hours-antihistamine/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-fexofenadine-180-413",
@@ -1628,7 +1628,7 @@ const COMPACT: Compact[] = [
     flags: FEXOFENADINE_180_413_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: colloidal silicon dioxide, ferrosoferric oxide (black iron oxide), iron oxide red, iron oxide yellow, polyethylene glycol, titanium dioxide. Adults and children 12 years and over. Ferrosoferric oxide (black iron oxide) is the iron-oxide-as-color Caution row. Titanium dioxide is the Avoid driver. Other fexofenadine setids that print red iron oxide or yellow iron oxide stay refused.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25e72bd3-25c6-4943-92bb-27f9543e2d8a; setid 25e72bd3-25c6-4943-92bb-27f9543e2d8a; NDC 69168-413-03). Active: Fexofenadine HCl 180 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, ferrosoferric oxide (black iron oxide),hypromellose, iron oxide red, iron oxide yellow, lactose monohydrate, magnesium stearate,microcrystalline cellulose, polyethylene glycol, pregelatinized starch, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-fexofenadine-hydrochloride-180mg-24-hour-antihistamine-indoor-outdoor-allergy-relief-250-counts/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25e72bd3-25c6-4943-92bb-27f9543e2d8a; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Fexofenadine HCl 180 mg. Inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, ferrosoferric oxide (black iron oxide),hypromellose, iron oxide red, iron oxide yellow, lactose monohydrate, magnesium stearate,microcrystalline cellulose, polyethylene glycol, pregelatinized starch, titanium dioxide Brand PDP https://a2z-life.com/healtha2z-allergy-relief-fexofenadine-hydrochloride-180mg-24-hour-antihistamine-indoor-outdoor-allergy-relief-250-counts/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-lidocaine-rectal-5",
@@ -1648,8 +1648,8 @@ const COMPACT: Compact[] = [
     ],
     flags: LIDOCAINE_RECTAL_5_FLAGS,
     verdict: "avoid",
-    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, tocopheryl acetate, triethanolamine. The structured strength 5 g is this 5% cream. Adults and children 12 years and older. Topical propylene glycol stays Cleared. Benzyl alcohol on this adult topical is Caution. This is not the refused 4% patch. Avoid: three or more Limited tokens triggered the stacking rule (t137u): benzyl alcohol, cholesterol, hydrogenated lecithin, tocopheryl acetate, triethanolamine.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce585082-ad39-4b6f-a756-0d9a81a13eb8; setid ce585082-ad39-4b6f-a756-0d9a81a13eb8; NDC 69168-484-02). Active: Lidocaine 5%. Inactive ingredients: benzyl alcohol, carbomer, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, tocopheryl acetate, triethanolamine, water Brand PDP https://a2z-life.com/healtha2z-rectal-care-cream-lidocaine-5-local-anesthetic-28g-tube-topical-numbing-cream-other-anorectal-disorders-relieves-pain-itching-burning/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    note: "FOUNDER-LOCK DRAFT: Caution. Drivers: benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, tocopheryl acetate, triethanolamine. The structured strength 5 g is this 5% cream. Adults and children 12 years and older. Topical propylene glycol stays Cleared. Benzyl alcohol on this adult topical is Caution. This is not the refused 4% patch. Avoid: three or more Limited tokens triggered the stacking rule (t137u): benzyl alcohol, cholesterol, hydrogenated lecithin, polysorbate 80, tocopheryl acetate, triethanolamine.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce585082-ad39-4b6f-a756-0d9a81a13eb8; Methodology §5 Limited (Polysorbate 80 — founder lock t138u ). Active: Lidocaine 5%. Inactive ingredients: benzyl alcohol, carbomer, cholesterol, hydrogenated lecithin, isopropyl myristate, polysorbate 80, propylene glycol, tocopheryl acetate, triethanolamine, water Brand PDP https://a2z-life.com/healtha2z-rectal-care-cream-lidocaine-5-local-anesthetic-28g-tube-topical-numbing-cream-other-anorectal-disorders-relieves-pain-itching-burning/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
   {
     id: "healtha2z-b96-menstrual",
@@ -1668,7 +1668,7 @@ const COMPACT: Compact[] = [
     flags: MENSTRUAL_FLAGS,
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Avoid. Drivers: polydextrose, polyethylene glycol, silicon dioxide, titanium dioxide. Adults and children 12 years and over. Children under 12: ask a doctor. Carton front prints NDC 69168-470-82, the 90-count bottle. The 120-count NDC 69168-470-06 is not this PDP.",
-    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d197b886-67e4-4aba-8582-305576c07604; setid d197b886-67e4-4aba-8582-305576c07604; NDC 69168-470-82). Active: Acetaminophen 500 mg, Caffeine 60 mg, Pyrilamine maleate 15 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, silicon dioxide, stearic acid, titanium dioxide, triacetin Brand PDP https://a2z-life.com/healtha2z-menstrual-complete-pain-relief-tablets-relieves-cramps-bloating-fatigue-backache-headache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
+    cite: "DailyMed SPL (https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d197b886-67e4-4aba-8582-305576c07604; Methodology §5 Limited (PEGs / polyethylene glycol — founder). Active: Acetaminophen 500 mg, Caffeine 60 mg, Pyrilamine maleate 15 mg. Inactive ingredients: corn starch, croscarmellose sodium, crospovidone, hypromellose, magnesium stearate, microcrystalline cellulose, polydextrose, polyethylene glycol, povidone, silicon dioxide, stearic acid, titanium dioxide, triacetin Brand PDP https://a2z-life.com/healtha2z-menstrual-complete-pain-relief-tablets-relieves-cramps-bloating-fatigue-backache-headache/. No GTIN-12 attached. The BigCommerce upc field is not a printed barcode pin.",
   },
 ];
 

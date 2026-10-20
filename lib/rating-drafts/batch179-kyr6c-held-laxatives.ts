@@ -78,8 +78,8 @@ const CLEAR_FLAGS: IngredientFlag[] = [
   flag(CLEAR_PANEL, 'Edible dye-free ink', 'limited', METH.ink),
   flag(CLEAR_PANEL, 'Gelatin', 'cleared', METH.gelatin),
   flag(CLEAR_PANEL, 'Glycerin', 'cleared', METH.glycerin),
-  flag(CLEAR_PANEL, 'PEG 400', 'moderate', METH.peg),
-  flag(CLEAR_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(CLEAR_PANEL, 'PEG 400', 'limited', METH.peg),
+  flag(CLEAR_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(CLEAR_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
 ];
 
@@ -87,9 +87,9 @@ const EXTRA_FLAGS: IngredientFlag[] = [
   flag(EXTRA_PANEL, 'Edible dye-free ink', 'limited', METH.ink),
   flag(EXTRA_PANEL, 'Gelatin', 'cleared', METH.gelatin),
   flag(EXTRA_PANEL, 'Glycerin', 'cleared', METH.glycerin),
-  flag(EXTRA_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(EXTRA_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(EXTRA_PANEL, 'Povidone', 'cleared', METH.povidone),
-  flag(EXTRA_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(EXTRA_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(EXTRA_PANEL, 'Purified water', 'cleared', METH.water),
   flag(EXTRA_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
 ];
@@ -125,7 +125,7 @@ const ASSORTED_FLAGS: IngredientFlag[] = [
   flag(ASSORTED_PANEL, 'Natural and artificial flavors', 'limited', METH.flavors),
   flag(ASSORTED_PANEL, 'N-butanol', 'limited', METH.nButanol),
   flag(ASSORTED_PANEL, 'Phosphoric acid', 'limited', METH.phosphoric),
-  flag(ASSORTED_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(ASSORTED_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(ASSORTED_PANEL, 'Shellac', 'cleared', METH.shellac),
   flag(ASSORTED_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
   flag(ASSORTED_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
@@ -158,7 +158,7 @@ const CHERRY_FLAGS: IngredientFlag[] = [
   flag(CHERRY_PANEL, 'Natural and artificial flavors', 'limited', METH.flavors),
   flag(CHERRY_PANEL, 'N-butanol', 'limited', METH.nButanol),
   flag(CHERRY_PANEL, 'Phosphoric acid', 'limited', METH.phosphoric),
-  flag(CHERRY_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(CHERRY_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(CHERRY_PANEL, 'Propylparaben', 'high', METH.parabens),
   flag(CHERRY_PANEL, 'Shellac', 'cleared', METH.shellac),
   flag(CHERRY_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
@@ -184,7 +184,7 @@ export const BATCH179_KYR6C_HELD_LAXATIVES: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Docusate sodium', strength: '50 mg' }],
     inactiveIngredients: CLEAR_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: ['ShopRite'],
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [
@@ -204,7 +204,7 @@ export const BATCH179_KYR6C_HELD_LAXATIVES: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Docusate sodium', strength: '250 mg' }],
     inactiveIngredients: EXTRA_FLAGS,
-    verdict: 'caution',
+    verdict: 'avoid',
     retailers: ['Hy-Vee'],
     cleanAlternatives: DIGESTIVE_ALTS,
     sourcesGeneral: [

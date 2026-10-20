@@ -451,7 +451,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         labelCite(AIRBORNE_CHEW_CITE, METH.sucralose),
       ),
       flag(
@@ -481,7 +481,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
         labelCite(AIRBORNE_CHEW_CITE, METH.cleared),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -956,7 +956,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(SET_COLDEEZE_ACEK, METH.acek),
       ),
       flag(
@@ -967,7 +967,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       flag('Isomalt', 'limited', dailymed(SET_COLDEEZE_ACEK, METH.sugarAlcohol)),
       cleared(SET_COLDEEZE_ACEK, 'Glycine'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,
@@ -1004,12 +1004,12 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(SET_COLDEEZE_ULTRAMELT, METH.acek),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET_COLDEEZE_ULTRAMELT, METH.sucralose),
       ),
       flag(
@@ -1065,7 +1065,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET_ZICAM_RAPIDMELTS_DYED, METH.sucralose),
       ),
       flag(
@@ -1111,7 +1111,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET_ZICAM_ULTRA, METH.sucralose),
       ),
       flag('Flavor', 'limited', dailymed(SET_ZICAM_ULTRA, METH.flavors)),
@@ -1121,7 +1121,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       cleared(SET_ZICAM_ULTRA, 'Sodium starch glycolate'),
       cleared(SET_ZICAM_ULTRA, 'Stearic acid'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: OSCILLO_ALTS,

@@ -27,8 +27,8 @@ const METH = {
   dyes: 'Methodology §5 High (FD&C / D&C dyes, including lake forms). Avoid.',
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). PEG-135 is the UNII synonym of polyethylene glycol 6000. Not a new grade.',
-  pg: 'Methodology §5 Moderate (oral propylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2: 'Methodology §5 Caution (silicon dioxide, 0-point nanoparticle cap). Not Avoid.',
   iron: 'Methodology §5 Caution (iron oxide as color). Iron oxide blends sit on this row. Not Avoid.',
   flavor: 'Methodology §5 Caution (flavor / flavors). Exact “Natural flavors” stays Limited. Not Avoid.',
@@ -83,7 +83,7 @@ const KIDS_ALTS: CleanAlternative[] = [
 function filmFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(TAB_SET, METH.tio2)),
-    flag('Polyethylene glycol', 'moderate', cite(TAB_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(TAB_SET, METH.peg)),
     flag('Iron oxide blends', 'limited', cite(TAB_SET, METH.iron)),
     flag('Colloidal silicon dioxide', 'limited', cite(TAB_SET, METH.sio2)),
     cleared(TAB_SET, 'Croscarmellose sodium'),
@@ -100,7 +100,7 @@ function gelFlags(): IngredientFlag[] {
     flag('D&C red 33', 'high', cite(GEL_SET, METH.dyes)),
     flag('FD&C blue 1', 'high', cite(GEL_SET, METH.dyes)),
     flag('Titanium dioxide', 'high', cite(GEL_SET, METH.tio2)),
-    flag('Polyethylene glycol', 'moderate', cite(GEL_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(GEL_SET, METH.peg)),
     flag('Pharmaceutical ink', 'limited', cite(GEL_SET, METH.ink)),
     cleared(GEL_SET, 'Croscarmellose sodium'),
     cleared(GEL_SET, 'Gelatin'),
@@ -127,7 +127,7 @@ function odtFlags(): IngredientFlag[] {
 function liquidFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(LIQ_SET, METH.tio2)),
-    flag('Propylene glycol', 'moderate', cite(LIQ_SET, METH.pg)),
+    flag('Propylene glycol', 'limited', cite(LIQ_SET, METH.pg)),
     flag('Flavor', 'limited', cite(LIQ_SET, METH.flavor)),
     flag('Poloxamer 407', 'limited', cite(LIQ_SET, METH.poloxamer)),
     flag('Potassium sorbate', 'limited', cite(LIQ_SET, METH.sorbate)),
@@ -142,7 +142,7 @@ function liquidFlags(): IngredientFlag[] {
 }
 function d12Flags(): IngredientFlag[] {
   return [
-    flag('Polyethylene glycol', 'moderate', cite(D12_SET, METH.peg)),
+    flag('Polyethylene glycol', 'limited', cite(D12_SET, METH.peg)),
     flag('Carnauba wax', 'cleared', cite(D12_SET, METH.carnauba)),
     flag('Colloidal silicon dioxide', 'limited', cite(D12_SET, METH.sio2)),
     cleared(D12_SET, 'Croscarmellose sodium'),

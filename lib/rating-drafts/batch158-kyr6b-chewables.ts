@@ -75,7 +75,7 @@ export const BATCH158_KYR6B_CHEWABLES: RatingRecord[] = [
       flag('D&C red no. 30 aluminum lake', 'high', cite(METH.dye)),
       flag('D&C red no. 7 calcium lake', 'high', cite(METH.dye)),
       flag('FD&C blue no. 1 aluminum lake', 'high', cite(METH.dye)),
-      flag('Sucralose', 'moderate', cite(METH.sucralose)),
+      flag('Sucralose', 'limited', cite(METH.sucralose)),
       flag('Dextrose excipient', 'limited', cite(METH.glucose)),
       flag('Sugar spheres', 'limited', cite(METH.sugar)),
       flag('Flavors', 'limited', cite(METH.flavors)),

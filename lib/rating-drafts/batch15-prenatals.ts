@@ -89,7 +89,7 @@ const METH = {
   bht: 'Methodology §5 High-tier (BHT — locked Avoid, EU 2022 endocrine restriction)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, "vegetable oil", sunflower)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sio2:
@@ -174,7 +174,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       { name: 'Zinc', strength: '11mg' },
     ],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', labelCite(NM_PRENATAL_TAB_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(NM_PRENATAL_TAB_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(NM_PRENATAL_TAB_CITE, METH.maltodextrin)),
       flag('Silicon dioxide', 'cleared', labelCite(NM_PRENATAL_TAB_CITE, METH.sio2)),
       labelCleared(NM_PRENATAL_TAB_CITE, 'Cellulose gel'),
@@ -293,7 +293,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('Talc', 'high', labelCite(CENTRUM_PRENATAL_CITE, METH.talc)),
       flag('BHT (to retard oxidation)', 'high', labelCite(CENTRUM_PRENATAL_CITE, METH.bht)),
       flag('Carmine (color)', 'cleared', labelCite(CENTRUM_PRENATAL_CITE, METH.carmine)),
-      flag('Polyethylene glycol', 'moderate', labelCite(CENTRUM_PRENATAL_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(CENTRUM_PRENATAL_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(CENTRUM_PRENATAL_CITE, METH.maltodextrin)),
       flag('Silicon dioxide', 'cleared', labelCite(CENTRUM_PRENATAL_CITE, METH.sio2)),
       flag(
@@ -339,7 +339,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('Talc', 'high', labelCite(EQUATE_PRENATAL_CITE, METH.talc)),
       flag('FD&C Red #40 Aluminum Lake', 'high', labelCite(EQUATE_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Blue #2 Aluminum Lake', 'high', labelCite(EQUATE_PRENATAL_CITE, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', labelCite(EQUATE_PRENATAL_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(EQUATE_PRENATAL_CITE, METH.peg)),
       flag('Silicon dioxide', 'cleared', labelCite(EQUATE_PRENATAL_CITE, METH.sio2)),
       labelCleared(EQUATE_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(EQUATE_PRENATAL_CITE, 'Croscarmellose sodium'),
@@ -463,7 +463,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Blue No. 2 Lake', 'high', labelCite(UPANDUP_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Red No. 40 Lake', 'high', labelCite(UPANDUP_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Yellow No. 6 Lake', 'high', labelCite(UPANDUP_PRENATAL_CITE, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', labelCite(UPANDUP_PRENATAL_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(UPANDUP_PRENATAL_CITE, METH.peg)),
       flag('Silica', 'cleared', labelCite(UPANDUP_PRENATAL_CITE, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(UPANDUP_PRENATAL_CITE, METH.maltodextrin)),
       labelCleared(UPANDUP_PRENATAL_CITE, 'Microcrystalline cellulose'),
@@ -503,7 +503,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Blue 2 Lake', 'high', labelCite(WALGREENS_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Red 40 Lake', 'high', labelCite(WALGREENS_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Yellow 6 Lake', 'high', labelCite(WALGREENS_PRENATAL_CITE, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', labelCite(WALGREENS_PRENATAL_CITE, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(WALGREENS_PRENATAL_CITE, METH.peg)),
       flag('Silicon dioxide', 'cleared', labelCite(WALGREENS_PRENATAL_CITE, METH.sio2)),
       labelCleared(WALGREENS_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(WALGREENS_PRENATAL_CITE, 'Croscarmellose sodium'),

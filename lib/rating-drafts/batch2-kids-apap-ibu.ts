@@ -32,10 +32,10 @@ const METH = {
   caramel:
     'Methodology §5 High-tier (caramel color, undisclosed class — treated as Class III/IV)',
   bht: 'Methodology §5 High-tier (BHT — locked v1.6)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
   xylitol: 'Methodology §5 Limited-risk (xylitol, oral)',
@@ -137,7 +137,7 @@ function storeChildrenApapDyed(opts: {
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(opts.setid, METH.pg),
       ),
       flag(
@@ -179,10 +179,10 @@ function storeInfantsApapDyefree(opts: {
     recordStatus: UNVERIFIED,
     activeIngredients: APAP_160_5,
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(opts.setid, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(opts.setid, METH.sucralose)),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(opts.setid, METH.pg),
       ),
       flag(
@@ -230,7 +230,7 @@ function storeChildrenIbuDyedLiquid(opts: {
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed(opts.setid, METH.ps80),
       ),
       flag(
@@ -289,7 +289,7 @@ function storeChildrenIbuDyedChew(opts: {
       flag('Aspartame', 'high', dailymed(opts.setid, METH.aspartame)),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(opts.setid, METH.acek),
       ),
       flag(
@@ -496,7 +496,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('a51c2deb-c703-4dc8-9255-8ac9fe635170', METH.sucralose),
       ),
       flag(
@@ -538,7 +538,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('46ddbfde-54ab-4373-b832-b9c0620b1e9d', METH.sucralose),
       ),
       flag(
@@ -585,7 +585,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('997b9551-c222-4a9c-8ba1-09a5f97495fa', METH.sucralose),
       ),
       flag(
@@ -627,7 +627,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4a121a53-dbae-05c7-e063-6294a90aed89', METH.sucralose),
       ),
       flag(
@@ -669,12 +669,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('3a935584-6045-0a58-e063-6394a90a40c4', METH.acek),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('3a935584-6045-0a58-e063-6394a90a40c4', METH.sucralose),
       ),
       flag(
@@ -769,12 +769,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('e2989ead-7fdc-4295-bf94-423195775670', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('e2989ead-7fdc-4295-bf94-423195775670', METH.pg),
       ),
       flag(
@@ -826,7 +826,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('22a48a33-995b-481e-9e4e-1ad7ec346f44', METH.sucralose),
       ),
       flag(
@@ -875,12 +875,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('152189e5-391c-42d3-a03b-c8364e2de6bf', METH.acek),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('152189e5-391c-42d3-a03b-c8364e2de6bf', METH.ps80),
       ),
       flag(
@@ -917,12 +917,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('9e1cdef7-921f-4163-869c-6c062e31c5bb', METH.acek),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('9e1cdef7-921f-4163-869c-6c062e31c5bb', METH.ps80),
       ),
       flag(
@@ -936,7 +936,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
         dailymed('9e1cdef7-921f-4163-869c-6c062e31c5bb', METH.flavors),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_IBU_TO_APAP_ALT,
@@ -964,7 +964,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('15b0b56d-6188-4937-b541-902022e35b24', METH.acek),
       ),
       flag(
@@ -1027,7 +1027,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('63ec7636-bf2a-4d52-ab88-fb93d41661ec', METH.acek),
       ),
     ],
@@ -1070,7 +1070,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('c2302bfe-b367-4867-b803-29f066a42dc7', METH.ps80),
       ),
       flag(
@@ -1164,7 +1164,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('6cfdcd94-95cb-4447-a14b-cdb49a1e3114', METH.ps80),
       ),
       flag(
@@ -1206,7 +1206,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('6e0330ac-a111-4574-9197-d7aab33b8608', METH.ps80),
       ),
       flag(
@@ -1307,7 +1307,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('3079d932-afb2-94fe-f4ba-a3d8b5198fce', METH.ps80),
       ),
       flag(
@@ -1349,12 +1349,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('4eba2795-e826-480d-afdc-d62004e95f36', METH.pg),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('4eba2795-e826-480d-afdc-d62004e95f36', METH.ps80),
       ),
       flag(

@@ -125,7 +125,7 @@ export const BATCH239_KYR6C_T131U_SV: RatingRecord[] = [
       flag(PANEL_B1, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(PANEL_B1, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_B1, 'Polydextrose', 'limited', 'polydextrose'),
-      flag(PANEL_B1, 'Polyethylene Glycol', 'moderate', 'peg'),
+      flag(PANEL_B1, 'Polyethylene Glycol', 'limited', 'peg'),
       flag(PANEL_B1, 'Polyvinyl Alcohol', 'cleared', 'pva'),
       flag(PANEL_B1, 'Silica', 'limited', 'silica'),
       flag(PANEL_B1, 'Talc', 'high', 'talc'),

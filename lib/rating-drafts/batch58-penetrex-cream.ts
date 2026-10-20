@@ -210,7 +210,7 @@ export const BATCH58_PENETREX_CREAM: RatingRecord[] = [
       ),
       flag(
         'PEG-100 Stearate',
-        'moderate',
+        'limited',
         labelCite(CITE.penetrex, `${METH.peg} ${METH.peg100}`),
       ),
       flag('DMDM Hydantoin', 'cleared', labelCite(CITE.penetrex, METH.dmdm)),

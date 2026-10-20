@@ -245,8 +245,8 @@ function storeLoratadineLiquid(opts: {
     productType: 'OTC',
     activeIngredients: [{ name: 'Loratadine', strength: '5mg / 5mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(opts.setid, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(opts.setid, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(opts.setid, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(opts.setid, METH.pg)),
       flag('Flavor', 'limited', dailymed(opts.setid, METH.flavors)),
       flag('Maltitol', 'limited', dailymed(opts.setid, METH.maltitol)),
       flag('Sorbitol', 'limited', dailymed(opts.setid, METH.sorbitol)),
@@ -411,7 +411,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('013ce40e-37c9-4b84-b530-ed895f60ce0e', METH.sucralose),
       ),
       flag(
@@ -457,7 +457,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('a1edc2e6-3661-4d7a-884c-709d73cb89e0', METH.sucralose),
       ),
       flag(
@@ -514,7 +514,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('3adff80f-fca7-4cc5-b106-0f68f71c85b0', METH.ps80),
       ),
       cleared('3adff80f-fca7-4cc5-b106-0f68f71c85b0', 'Dextrose'),
@@ -556,7 +556,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('bc824143-b876-4c3d-86fd-81fb58673851', METH.ps80),
       ),
       cleared('bc824143-b876-4c3d-86fd-81fb58673851', 'Dextrose'),
@@ -593,12 +593,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('9d8e78ea-af98-4f7c-8db5-044b49582f80', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('9d8e78ea-af98-4f7c-8db5-044b49582f80', METH.pg),
       ),
       flag(
@@ -643,12 +643,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.pg),
       ),
       flag(
@@ -807,7 +807,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('e2bd23c7-dfba-463a-adbe-2183970da740', METH.pg),
       ),
       flag(
@@ -872,12 +872,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('b73950f4-af6f-4dc7-bce2-9ec43c45eee5', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('b73950f4-af6f-4dc7-bce2-9ec43c45eee5', METH.sucralose),
       ),
       flag(
@@ -919,12 +919,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', METH.pg),
       ),
       flag(
@@ -969,12 +969,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('1f37c327-cd4c-4bc1-ae70-713569694e2e', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('1f37c327-cd4c-4bc1-ae70-713569694e2e', METH.pg),
       ),
       flag(
@@ -1043,12 +1043,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', METH.pg),
       ),
       flag(
@@ -1152,7 +1152,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('569b8efa-8458-49f7-a665-6b7016a10505', METH.sucralose),
       ),
       flag(
@@ -1202,7 +1202,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('db5a5eff-1bb1-4d00-8c01-caae7a1c7223', METH.sucralose),
       ),
       flag(
@@ -1256,7 +1256,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('18436026-b0e4-4481-a647-d735a27d0b00', METH.sucralose),
       ),
       flag(
@@ -1321,7 +1321,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('f98d1d54-8e11-4bb1-825a-ab5447d37847', METH.sucralose),
       ),
       flag(
@@ -1483,7 +1483,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('b08f71d8-a06c-41ba-8ed1-fbc41dbc1919', METH.sucralose),
       ),
       flag(
@@ -1538,7 +1538,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('b8b75904-3806-4258-89c1-d6ff486ed41c', METH.sucralose),
       ),
       flag(

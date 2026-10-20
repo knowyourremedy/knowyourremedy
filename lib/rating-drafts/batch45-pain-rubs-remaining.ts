@@ -142,7 +142,7 @@ const METH = {
     'Methodology §5 Caution (phenoxyethanol, topical preservative — standalone Caution, not additive-scored, not Avoid)',
   lpg:
     'Methodology §5 Caution (LPG / liquefied petroleum gas — standalone Caution, not Avoid; locked Sept 15, 2026)',
-  ps60: 'Methodology §5 Moderate-risk (polysorbate 60 — same Moderate family as P80 / P20)',
+  ps60: 'Methodology §5 Limited (Polysorbate 60 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   petrolatum:
     `Methodology §5 Cleared (petrolatum / paraffin + mineral oil as topical ointment occlusive — petrolatum neighborhood; locked Sept 15, 2026). ${MINERAL_OIL_TAP} ${CREAM_OIL_LINE}`,
   paraffin:
@@ -388,7 +388,7 @@ export const BATCH45_PAIN_RUBS_REMAINING: RatingRecord[] = [
       flag('Cetearyl alcohol', 'cleared', dailymed(SET.icyCream, METH.fattyAlcohol)),
       flag('Cetyl esters', 'cleared', dailymed(SET.icyCream, METH.waxFamily)),
       flag('Oleth-3 phosphate', 'cleared', dailymed(SET.icyCream, METH.oleth)),
-      flag('Polysorbate 60', 'moderate', dailymed(SET.icyCream, METH.ps60)),
+      flag('Polysorbate 60', 'limited', dailymed(SET.icyCream, METH.ps60)),
       flag('Stearic acid', 'cleared', dailymed(SET.icyCream, METH.stearic)),
       cleared(SET.icyCream, 'Purified water'),
     ],

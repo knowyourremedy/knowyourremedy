@@ -342,7 +342,7 @@ function mintOdtRecord(opts: {
     productType: 'OTC',
     activeIngredients: [{ name: 'Loratadine', strength: '10mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(opts.setid, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(opts.setid, METH.sucralose)),
       flag('Mannitol', 'limited', dailymed(opts.setid, METH.mannitol)),
       flag(
         'Natural and artificial mint flavor',
@@ -866,7 +866,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('b6134ba0-b70a-4eac-9a82-cef64b242c1d', METH.ps80),
       ),
       cleared('b6134ba0-b70a-4eac-9a82-cef64b242c1d', 'Dextrose'),
@@ -877,7 +877,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       cleared('b6134ba0-b70a-4eac-9a82-cef64b242c1d', 'Purified water'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: NASAL_ALTS,
@@ -908,7 +908,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('bc824143-b876-4c3d-86fd-81fb58673851', METH.ps80),
       ),
       cleared('bc824143-b876-4c3d-86fd-81fb58673851', 'Dextrose'),
@@ -1089,7 +1089,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('b165db38-b302-4220-8627-77cb07bb078c', METH.peg),
       ),
       flag(
@@ -1221,12 +1221,12 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('19afd658-8c67-af44-e063-6394a90abada', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('19afd658-8c67-af44-e063-6394a90abada', METH.pg),
       ),
       flag(
@@ -1286,7 +1286,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('81c1dcbb-28b3-4ad5-9f3d-9ccc16ddd173', METH.peg),
       ),
       flag(
@@ -1380,12 +1380,12 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('1fb77d6a-fae2-40ae-8f8e-fa2dc66f4403', METH.pg),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('1fb77d6a-fae2-40ae-8f8e-fa2dc66f4403', METH.peg),
       ),
       flag(
@@ -1428,7 +1428,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('b33eb97f-5ac3-4eb7-b23a-cf550ce46287', METH.peg),
       ),
     ],
@@ -1466,12 +1466,12 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('852c8ad2-fc7d-4728-b2c6-f64b960fe2ab', METH.ps80),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('852c8ad2-fc7d-4728-b2c6-f64b960fe2ab', METH.peg),
       ),
       flag(
@@ -1514,7 +1514,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('379756fd-f92d-4773-94fd-2682fcbdfba2', METH.peg),
       ),
     ],
@@ -1552,7 +1552,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('98f3f2c6-da18-4055-81f1-962261360f9b', METH.peg),
       ),
     ],
@@ -1598,7 +1598,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('6daeb739-a112-4a37-abbb-0bbc41b42df3', METH.peg),
       ),
       flag(
@@ -1644,7 +1644,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('7b7b8cce-ede6-47c6-91c8-88fd94cb292d', METH.peg),
       ),
       flag(
@@ -1716,7 +1716,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('e0640846-19a6-7f79-e053-2995a90a8176', METH.sucralose),
       ),
       flag(
@@ -1772,12 +1772,12 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('702f9786-7ce9-43e4-921d-e1db09612127', METH.ps80),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('702f9786-7ce9-43e4-921d-e1db09612127', METH.peg),
       ),
       flag('Carnauba wax', 'cleared', dailymed('702f9786-7ce9-43e4-921d-e1db09612127', METH.carnaubaT133u)),
@@ -1810,7 +1810,7 @@ export const BATCH5_ADULT_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('bfeae100-e2d1-4607-be3b-2d9b15cd4f7f', METH.peg),
       ),
       flag(

@@ -72,7 +72,7 @@ const METH = {
   paraben:
     'Methodology §5 High (parabens). Methyl paraben and propyl paraben map here (Sept 24, 2026). Not a new grade. Every form, including patches.',
   peg:
-    'Methodology §5 Moderate (PEGs / polyethylene glycol). Polyethyleneglycol maps here (Sept 24, 2026). Not a new grade. Not the Avoid driver.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   polyacrylic:
     'Methodology §5 Caution (polyacrylic acid — topical gel polymer). Not Avoid.',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
@@ -191,7 +191,7 @@ const FEXO_FLAGS: Compact['flags'] = [
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['lactose monohydrate', 'cleared', 'lactoseMh'],
-  ['polyethylene glycol', 'moderate', 'peg'],
+  ['polyethylene glycol', 'limited', 'peg'],
   ['pregelatinized starch (maize)', 'cleared', 'pregel'],
   ['red iron oxide', 'limited', 'ironColor'],
   ['stearic acid', 'cleared', 'stearic'],
@@ -213,7 +213,7 @@ const IBU_FLAGS: Compact['flags'] = [
   ['FD&C yellow #6', 'high', 'dye'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['polydextrose', 'limited', 'polydextrose'],
-  ['polyethyleneglycol', 'moderate', 'peg'],
+  ['polyethyleneglycol', 'limited', 'peg'],
   ['povidone', 'cleared', 'povidone'],
   ['pregelatinized starch', 'cleared', 'pregel'],
   ['purified water', 'cleared', 'water'],
@@ -787,8 +787,8 @@ if (!_lora?.inactiveIngredients?.some((f) => f.name === 'pregelantinized starch'
   throw new Error('batch97 pregelantinized starch must map to Cleared');
 }
 const _ibu = _ROWS.find((r) => r.id === IBU_200_381);
-if (!_ibu?.inactiveIngredients?.some((f) => f.name === 'polyethyleneglycol' && f.riskLevel === 'moderate')) {
-  throw new Error('batch97 polyethyleneglycol must map to PEG');
+if (!_ibu?.inactiveIngredients?.some((f) => f.name === 'polyethyleneglycol' && f.riskLevel === 'limited')) {
+  throw new Error('batch97 polyethyleneglycol must map to PEG Limited (t138u)');
 }
 const _patch = _ROWS.find((r) => r.id === LIDOCAINE_4_PATCH);
 if (

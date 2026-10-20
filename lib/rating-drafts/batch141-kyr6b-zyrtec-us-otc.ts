@@ -75,7 +75,7 @@ export const BATCH141_KYR6B_ZYRTEC_US_OTC: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10 mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', cite(TABLET_SET, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', cite(TABLET_SET, METH.peg)),
+      flag('Polyethylene glycol', 'limited', cite(TABLET_SET, METH.peg)),
       cleared(TABLET_SET, 'Colloidal silicon dioxide'),
       cleared(TABLET_SET, 'Croscarmellose sodium'),
       cleared(TABLET_SET, 'Hypromellose'),
@@ -85,7 +85,7 @@ export const BATCH141_KYR6B_ZYRTEC_US_OTC: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Polyethylene glycol is Moderate and is not the Avoid driver. Same inactive line as zyrtec-allergy-tablets on MAIN. REUSE formula zyrtec-allergy-tablets-tio2. The 30, 45, 60, 90, and 120 count rows were not rewritten. Ages 6+.',
+      'FOUNDER-LOCK DRAFT: Avoid. Driver is titanium dioxide. Polyethylene glycol is Limited (t138u) and is not the Avoid driver. Same inactive line as zyrtec-allergy-tablets on MAIN. REUSE formula zyrtec-allergy-tablets-tio2. The 30, 45, 60, 90, and 120 count rows were not rewritten. Ages 6+.',
     retailers: [...RETAILERS],
     cleanAlternatives: ADULT_ALTS,
     sourcesGeneral: [
@@ -106,7 +106,7 @@ export const BATCH141_KYR6B_ZYRTEC_US_OTC: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '2.5 mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', cite(CHEW25_SET, METH.sucralose)),
+      flag('Sucralose', 'limited', cite(CHEW25_SET, METH.sucralose)),
       flag('Flavor', 'limited', cite(CHEW25_SET, METH.flavor)),
       flag('Mannitol', 'limited', cite(CHEW25_SET, METH.mannitol)),
       cleared(CHEW25_SET, 'Betadex'),
@@ -115,9 +115,9 @@ export const BATCH141_KYR6B_ZYRTEC_US_OTC: RatingRecord[] = [
       cleared(CHEW25_SET, 'Magnesium stearate'),
       cleared(CHEW25_SET, 'Silicified microcrystalline cellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose and mannitol. Flavor stays on this dye-free grape panel. Same inactive line as childrens-zyrtec-chewable on MAIN. REUSE that formula. The locked Caution call stands. The 12 count 2.5 mg row was not rewritten. Ages 2+.',
+      'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose and mannitol. Flavor stays on this dye-free grape panel. Same inactive line as childrens-zyrtec-chewable on MAIN. REUSE that formula. The locked Caution call stands. The 12 count 2.5 mg row was not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Mannitol.',
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -169,9 +169,9 @@ if (ROWS.some((r) => !r.barcode || !upcCheck(r.barcode))) throw new Error('batch
 if (ROWS.some((r) => r.barcode && ALREADY.has(r.barcode))) throw new Error('batch141 upc already on MAIN');
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
-if (avoid.length !== 1 || caution.length !== 1) throw new Error('batch141 verdict tally');
+if (avoid.length !== 2 || caution.length !== 0) throw new Error('batch141 verdict tally');
 if (avoid[0]?.formulaId !== TABLET_FORMULA || !avoid[0].inactiveIngredients.some((i) => i.name === 'Titanium dioxide' && i.riskLevel === 'high')) {
   throw new Error('batch141 tablet formula');
 }
-if (caution[0]?.formulaId !== CHEW_FORMULA || caution[0].audience !== 'kids') throw new Error('batch141 chew formula');
-if (caution[0].inactiveIngredients.some((i) => i.riskLevel === 'high')) throw new Error('batch141 chew has High');
+if (avoid[1]?.formulaId !== CHEW_FORMULA || avoid[1]?.audience !== 'kids') throw new Error('batch141 chew formula');
+if (avoid[1]?.inactiveIngredients.some((i) => i.riskLevel === 'high')) throw new Error('batch141 chew has High');

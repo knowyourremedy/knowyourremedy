@@ -118,7 +118,7 @@ const DUAL_ACTION_ALTS: CleanAlternative[] = [
 const L484_INACTIVES: IngredientFlag[] = [
   flag(
     'Polyethylene glycol',
-    'moderate',
+    'limited',
     dailymed('2ea98f5b-6594-dafb-e063-6394a90a0e3f', METH.peg),
   ),
   flag('Hypromellose', 'cleared', METH.cleared),
@@ -170,7 +170,7 @@ const DYE_FREE_IBU_INACTIVES: IngredientFlag[] = [
   ),
   flag(
     'Polyethylene glycol',
-    'moderate',
+    'limited',
     dailymed('23cb5001-6aeb-434a-b2e8-aaf8bbab9dc6', METH.peg),
   ),
   flag('Hypromellose', 'cleared', METH.cleared),
@@ -242,12 +242,12 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('bb6533e5-e6a9-488c-b8ab-a6a06e87ede9', METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('bb6533e5-e6a9-488c-b8ab-a6a06e87ede9', METH.pg),
       ),
       flag(
@@ -360,7 +360,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('3bb7dc60-97b2-1291-e063-6294a90a26d9', METH.peg),
       ),
     ],
@@ -463,7 +463,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('0391963c-022d-1433-e063-6294a90aac90', METH.peg),
       ),
       flag(
@@ -679,7 +679,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('1fde6487-6682-99a3-e063-6294a90a3670', METH.sucralose),
       ),
     ],
@@ -906,7 +906,7 @@ export const BATCH1_ADULT_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('c459ea1e-dabf-bba6-e053-2995a90af40f', METH.peg),
       ),
       flag(

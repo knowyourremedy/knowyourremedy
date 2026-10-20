@@ -98,8 +98,8 @@ const OLEORESIN_TAP =
 const METH = {
   carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   tio2: 'Methodology §5 High-tier (titanium dioxide — E171; EU food-additive ban after EFSA genotoxicity data-gap). No topical exception on this row.',
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors:
@@ -285,8 +285,8 @@ export const BATCH55_REFUSED: { sku: string; token: string }[] = [
 
 const IBU_INACTIVES = (setid: string): IngredientFlag[] => [
   flag('Titanium dioxide', 'high', dailymed(setid, METH.tio2)),
-  flag('Polyethylene glycol', 'moderate', dailymed(setid, METH.peg)),
-  flag('Polysorbate 80', 'moderate', dailymed(setid, METH.ps80)),
+  flag('Polyethylene glycol', 'limited', dailymed(setid, METH.peg)),
+  flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
   flag('Iron oxide yellow', 'cleared', dailymed(setid, METH.ironOxideYellow)),
   flag('Iron oxide red', 'cleared', dailymed(setid, METH.ironOxideRed)),
   flag('Colloidal silicon dioxide', 'cleared', dailymed(setid, METH.sio2)),
@@ -407,7 +407,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.aplusOxides, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aplusOxides, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aplusOxides, METH.peg)),
       flag('Polydextrose', 'limited', dailymed(SET.aplusOxides, METH.polydextrose)),
       flag(
         'Ferric oxide yellow',
@@ -467,7 +467,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.aplusPlain, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.aplusPlain, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.aplusPlain, METH.peg)),
       flag('Polydextrose', 'limited', dailymed(SET.aplusPlain, METH.polydextrose)),
       flag(
         'Sodium lauryl sulphate',

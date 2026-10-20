@@ -134,7 +134,7 @@ export const BATCH231_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_ZINC, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmcCoat'),
       flag(PANEL_ZINC, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_ZINC, 'Natural Vanilla Flavor', 'cleared', 'vanillaFlavor'),
-      flag(PANEL_ZINC, 'Polyethylene Glycol', 'moderate', 'peg'),
+      flag(PANEL_ZINC, 'Polyethylene Glycol', 'limited', 'peg'),
       flag(PANEL_ZINC, 'Stearic Acid', 'cleared', 'stearic'),
     ],
     verdict: 'caution',

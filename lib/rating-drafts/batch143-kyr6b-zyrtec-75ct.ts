@@ -64,7 +64,7 @@ export const BATCH143_KYR6B_ZYRTEC_75CT: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10 mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', cite(METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', cite(METH.peg)),
+      flag('Polyethylene glycol', 'limited', cite(METH.peg)),
       cleared('Colloidal silicon dioxide'),
       cleared('Croscarmellose sodium'),
       cleared('Hypromellose'),

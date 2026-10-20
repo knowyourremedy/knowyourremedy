@@ -49,10 +49,10 @@ const GEL_FLAGS: IngredientFlag[] = [
   flag(GEL_PANEL, 'FD&C red no. 40', 'high', METH.dye),
   flag(GEL_PANEL, 'Glycerin', 'cleared', METH.glycerin),
   flag(GEL_PANEL, 'Natural flavor', 'limited', METH.flavor),
-  flag(GEL_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
-  flag(GEL_PANEL, 'Polysorbate 80', 'moderate', METH.p80),
-  flag(GEL_PANEL, 'Propylene glycol', 'moderate', METH.pg),
-  flag(GEL_PANEL, 'Saccharin', 'moderate', METH.saccharin),
+  flag(GEL_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
+  flag(GEL_PANEL, 'Polysorbate 80', 'limited', METH.p80),
+  flag(GEL_PANEL, 'Propylene glycol', 'limited', METH.pg),
+  flag(GEL_PANEL, 'Saccharin', 'limited', METH.saccharin),
 ];
 
 const LIQUID_FLAGS: IngredientFlag[] = [
@@ -61,10 +61,10 @@ const LIQUID_FLAGS: IngredientFlag[] = [
   flag(LIQUID_PANEL, 'FD&C blue no. 1', 'high', METH.dye),
   flag(LIQUID_PANEL, 'FD&C red no. 40', 'high', METH.dye),
   flag(LIQUID_PANEL, 'Natural flavor', 'limited', METH.flavor),
-  flag(LIQUID_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
-  flag(LIQUID_PANEL, 'Polysorbate 80', 'moderate', METH.p80),
-  flag(LIQUID_PANEL, 'Propylene glycol', 'moderate', METH.pg),
-  flag(LIQUID_PANEL, 'Saccharin', 'moderate', METH.saccharin),
+  flag(LIQUID_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
+  flag(LIQUID_PANEL, 'Polysorbate 80', 'limited', METH.p80),
+  flag(LIQUID_PANEL, 'Propylene glycol', 'limited', METH.pg),
+  flag(LIQUID_PANEL, 'Saccharin', 'limited', METH.saccharin),
 ];
 
 const BENZOCAINE = [{ name: 'Benzocaine', strength: '20%' }];

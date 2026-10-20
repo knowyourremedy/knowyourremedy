@@ -130,7 +130,7 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
   maltodextrin:
     'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
@@ -319,7 +319,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('Stearic acid', 'cleared', labelCite(CITE.mmMelatonin, METH.stearic)),
       flag('Silicon dioxide / silica', 'cleared', labelCite(CITE.mmMelatonin, METH.sio2)),
       flag('Magnesium stearate', 'cleared', labelCite(CITE.mmMelatonin, METH.stearic)),
-      flag('Polyethylene glycol', 'moderate', labelCite(CITE.mmMelatonin, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(CITE.mmMelatonin, METH.peg)),
       flag('Carnauba wax', 'cleared', labelCite(CITE.mmMelatonin, METH.carnauba)),
     ],
     verdict: 'caution',
@@ -386,7 +386,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('FD&C Yellow No. 6 Lake', 'high', labelCite(CITE.wgMulti, METH.dyes)),
       flag('Titanium dioxide (color)', 'high', labelCite(CITE.wgMulti, METH.tio2)),
       flag('Talc', 'high', labelCite(CITE.wgMulti, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', labelCite(CITE.wgMulti, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(CITE.wgMulti, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(CITE.wgMulti, METH.maltodextrin)),
       flag('Polydextrose', 'limited', labelCite(CITE.wgMulti, METH.polydextrose)),
       flag('Starch', 'limited', labelCite(CITE.wgMulti, METH.unspecifiedStarch)),
@@ -434,7 +434,7 @@ export const BATCH69_KYR6_STORE_PANELS: RatingRecord[] = [
       flag('FD&C Blue No. 2 aluminum lake', 'high', labelCite(CITE.upupPm, METH.dyes)),
       flag('Titanium dioxide', 'high', labelCite(CITE.upupPm, METH.tio2)),
       flag('Talc', 'high', labelCite(CITE.upupPm, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', labelCite(CITE.upupPm, METH.peg)),
+      flag('Polyethylene glycol', 'limited', labelCite(CITE.upupPm, METH.peg)),
       flag('Silicon dioxide', 'cleared', labelCite(CITE.upupPm, METH.sio2)),
       flag('Croscarmellose sodium', 'cleared', labelCite(CITE.upupPm, METH.cellulose)),
       flag('Hypromelloses', 'cleared', labelCite(CITE.upupPm, METH.hpmc)),
@@ -561,8 +561,8 @@ const mel = _ROWS.find((r) => r.id === MM_MELATONIN);
 if (mel?.verdict !== 'caution' || mel.formulaId !== MM_MELATONIN) {
   throw new Error('MM melatonin must be Caution on its own formulaId');
 }
-if (!mel.inactiveIngredients.some((i) => /polyethylene glycol/i.test(i.name) && i.riskLevel === 'moderate')) {
-  throw new Error('MM melatonin PEG must be Moderate');
+if (!mel.inactiveIngredients.some((i) => /polyethylene glycol/i.test(i.name) && i.riskLevel === 'limited')) {
+  throw new Error('MM melatonin PEG must be Limited (t138u)');
 }
 if (!mel.inactiveIngredients.some((i) => /silica|silicon dioxide/i.test(i.name))) {
   throw new Error('MM melatonin must list silica / SiO2 as the Caution cap');

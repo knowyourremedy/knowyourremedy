@@ -211,7 +211,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_KIRKLAND_CET, METH.peg),
       ),
       cleared(SET_KIRKLAND_CET, 'Corn starch'),
@@ -256,7 +256,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       flag('Talc', 'high', dailymed(SET_KIRKLAND_CET_D, METH.talc)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET_KIRKLAND_CET_D, METH.peg),
       ),
       flag(

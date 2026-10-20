@@ -58,11 +58,11 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   parabens: 'Methodology §5 High-tier (parabens)',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   sorbate: 'Methodology §5 Limited-risk (synthetic preservatives — potassium sorbate)',
@@ -222,8 +222,8 @@ function dyesPgSweet(
 ): IngredientFlag[] {
   return [
     ...dyeNames.map((name) => flag(name, 'high', dailymed(setid, METH.dyes))),
-    flag('Propylene glycol', 'moderate', dailymed(setid, METH.pg)),
-    flag('Sucralose', 'moderate', dailymed(setid, METH.sucralose)),
+    flag('Propylene glycol', 'limited', dailymed(setid, METH.pg)),
+    flag('Sucralose', 'limited', dailymed(setid, METH.sucralose)),
     flag('Sodium benzoate', 'limited', dailymed(setid, METH.benzoate)),
     flag('Flavor', 'limited', dailymed(setid, METH.flavors)),
     ...extras,
@@ -749,12 +749,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('14c56f3d-67fd-45ef-a16b-f27604722883', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('14c56f3d-67fd-45ef-a16b-f27604722883', METH.sucralose),
       ),
       flag(
@@ -806,12 +806,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('c07dad99-87b0-419b-9230-7c22a77ecf9e', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('c07dad99-87b0-419b-9230-7c22a77ecf9e', METH.sucralose),
       ),
       flag(
@@ -894,7 +894,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('155e07b3-0a08-3be8-e063-6394a90a7635', METH.sucralose),
       ),
       flag(
@@ -945,7 +945,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('156033ae-b16a-007b-e063-6294a90a7445', METH.sucralose),
       ),
       flag(
@@ -988,7 +988,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('2ce20ab5-5f2d-1c97-e063-6394a90ad67b', METH.sucralose),
       ),
       flag(
@@ -1033,7 +1033,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         [
           flag(
             'Polyethylene glycol',
-            'moderate',
+            'limited',
             dailymed('b9772292-9eb6-47cf-abb8-007c25478090', METH.peg),
           ),
           flag(
@@ -1071,17 +1071,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.pg),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.peg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.sucralose),
       ),
       flag(
@@ -1095,7 +1095,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.benzoate),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
@@ -1144,7 +1144,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('6bcad434-5714-443c-ba83-ed534df9f20a', METH.ps80),
       ),
     ],
@@ -1177,7 +1177,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('75bc7827-4439-e6a8-a65c-7154d5592e58', METH.pg),
       ),
       flag(
@@ -1280,12 +1280,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('234e6a2c-a280-4a39-8777-9316e9d681fb', METH.ps80),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('234e6a2c-a280-4a39-8777-9316e9d681fb', METH.pg),
       ),
     ],
@@ -1573,12 +1573,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.sucralose),
       ),
       flag(
@@ -1639,7 +1639,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('20e45243-3989-413a-bcf1-49d754ff2e44', METH.sucralose),
       ),
       flag(
@@ -1687,7 +1687,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('4dfd46e4-b9f9-464d-aa47-e8fa9e526a5d', METH.sucralose),
       ),
       flag(
@@ -1745,7 +1745,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('52e9307b-ad38-4f65-bb2f-4fa262e82010', METH.peg),
       ),
       flag(
@@ -1791,7 +1791,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.acek),
       ),
       flag(
@@ -1801,12 +1801,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.pg),
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.peg),
       ),
       flag(
@@ -1820,7 +1820,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.benzoate),
       ),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
@@ -1893,7 +1893,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('24758ab0-ba08-4b4a-9861-449612bdb89c', METH.pg),
       ),
       flag(
@@ -1966,12 +1966,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('177e3247-402d-98e4-e063-6294a90ae068', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('177e3247-402d-98e4-e063-6294a90ae068', METH.sucralose),
       ),
       flag(
@@ -2046,7 +2046,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('37269cd6-1528-9879-e063-6394a90a2b54', METH.sucralose),
       ),
       flag(
@@ -2221,12 +2221,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('2a849ae9-338f-4642-e063-6394a90a1ca4', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('2a849ae9-338f-4642-e063-6394a90a1ca4', METH.sucralose),
       ),
       flag(
@@ -2414,12 +2414,12 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('c0f317cd-723d-47f2-b600-aaeae6399482', METH.pg),
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('c0f317cd-723d-47f2-b600-aaeae6399482', METH.sucralose),
       ),
       flag(
@@ -2476,7 +2476,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('8714d4e6-3a3b-48c8-8ac1-51b933a2ceac', METH.pg),
       ),
       flag(
@@ -2587,7 +2587,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('62d71572-d157-484a-8676-7ce6da413ee8', METH.ps80),
       ),
     ],

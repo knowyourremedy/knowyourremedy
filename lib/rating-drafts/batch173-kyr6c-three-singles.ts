@@ -87,7 +87,7 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(ALLERGY_PANEL, 'Menthol', 'limited', METH.menthol),
       flag(ALLERGY_PANEL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
       flag(ALLERGY_PANEL, 'Carboxymethylcellulose sodium', 'cleared', METH.cmc),
-      flag(ALLERGY_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+      flag(ALLERGY_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
       flag(ALLERGY_PANEL, 'Povidone', 'cleared', METH.povidone),
       flag(ALLERGY_PANEL, 'Purified water', 'cleared', METH.water),
       flag(ALLERGY_PANEL, 'Sodium phosphate dibasic', 'cleared', METH.phosphate),
@@ -95,7 +95,7 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Benzyl alcohol, Camphor, Edetate disodium, Eucalyptol, Menthol.',
+      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride solution, Benzyl alcohol, Camphor, Edetate disodium, Eucalyptol, Menthol, Polyethylene glycol.',
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [
@@ -144,13 +144,13 @@ export const BATCH173_KYR6C_THREE_SINGLES: RatingRecord[] = [
       flag(SINEX_PANEL, 'Citric acid anhydrous', 'cleared', METH.citric),
       flag(SINEX_PANEL, 'Edetate disodium', 'limited', METH.edetate),
       flag(SINEX_PANEL, 'Fragrance', 'limited', METH.fragrance),
-      flag(SINEX_PANEL, 'Polysorbate 80', 'moderate', METH.polysorbate),
+      flag(SINEX_PANEL, 'Polysorbate 80', 'limited', METH.polysorbate),
       flag(SINEX_PANEL, 'Propylene glycol', 'cleared', METH.pgNasal),
       flag(SINEX_PANEL, 'Purified water', 'cleared', METH.water),
       flag(SINEX_PANEL, 'Sodium citrate', 'cleared', METH.citrate),
     ],
     verdict: 'avoid',
-    honestNote: `${PG_NOTE}${SINEX_SEVERE_STACK_NOTE}`,
+    honestNote: `${PG_NOTE}${SINEX_SEVERE_STACK_NOTE} Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Benzyl alcohol, Edetate disodium, Fragrance, Polysorbate 80.`,
     retailers: [],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [

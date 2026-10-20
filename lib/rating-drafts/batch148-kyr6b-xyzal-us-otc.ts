@@ -26,7 +26,7 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol 400). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2: 'Methodology §5 Caution (colloidal anhydrous silica → silica / SiO2, 0-point nanoparticle cap). Not the Avoid driver.',
   cleared: 'Methodology §5 Cleared.',
 } as const;
@@ -56,7 +56,7 @@ const ALTS: CleanAlternative[] = [
 function tabletFlags(): IngredientFlag[] {
   return [
     flag('Titanium dioxide', 'high', cite(METH.tio2)),
-    flag('Polyethylene glycol 400', 'moderate', cite(METH.peg)),
+    flag('Polyethylene glycol 400', 'limited', cite(METH.peg)),
     flag('Colloidal anhydrous silica', 'limited', cite(METH.sio2)),
     cleared('Hypromellose'),
     cleared('Lactose monohydrate'),

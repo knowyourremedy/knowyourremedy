@@ -69,11 +69,11 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
       flag('Dextrose anhydrous', 'limited', cite(METH.anhydrous)),
       flag('Edetate disodium', 'limited', cite(METH.edta)),
       cleared('Microcrystalline cellulose'),
-      flag('Polysorbate 80', 'moderate', cite(METH.ps80)),
+      flag('Polysorbate 80', 'limited', cite(METH.ps80)),
       cleared('Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium, Polysorbate 80.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,

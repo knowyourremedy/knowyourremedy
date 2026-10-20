@@ -340,7 +340,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('9105f4f1-7f94-408d-a025-83afb68dc9f0', METH.sucralose),
       ),
       flag(
@@ -398,7 +398,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('a9a44c2f-65eb-4a5a-9e72-43652dce57f7', METH.ps80),
       ),
       flag(
@@ -496,7 +496,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('0b2777be-85d4-443d-b65f-6750e0ba97ba', METH.peg),
       ),
       flag(
@@ -547,7 +547,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.sucralose),
       ),
       flag(
@@ -557,7 +557,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 20',
-        'moderate',
+        'limited',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.ps20),
       ),
       flag(
@@ -607,12 +607,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.sucralose),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.pg),
       ),
       flag(
@@ -622,7 +622,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polysorbate 20',
-        'moderate',
+        'limited',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.ps20),
       ),
       flag(
@@ -688,7 +688,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.pg),
       ),
       flag(
@@ -698,12 +698,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.sucralose),
       ),
       flag(
         'Polysorbate 20',
-        'moderate',
+        'limited',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.ps20),
       ),
       flag(
@@ -758,12 +758,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', METH.peg),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', METH.ps80),
       ),
       flag('Carnauba wax', 'cleared', dailymed('37c606b0-04d5-49f0-886a-3ee2c9b0e9cc', METH.carnaubaT133u)),
@@ -857,12 +857,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('435b1a31-353d-af20-e063-6294a90aa907', METH.peg),
       ),
       flag(
         'Polysorbate 80',
-        'moderate',
+        'limited',
         dailymed('435b1a31-353d-af20-e063-6294a90aa907', METH.ps80),
       ),
       flag('Carnauba wax', 'cleared', dailymed('435b1a31-353d-af20-e063-6294a90aa907', METH.carnaubaT133u)),
@@ -909,7 +909,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('405afdb4-c157-1d88-f232-848063ba4714', METH.peg),
       ),
       flag(
@@ -957,7 +957,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed('52c67ae0-707c-851b-e063-6294a90afda4', METH.peg),
       ),
       flag(
@@ -1047,7 +1047,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol 400',
-        'moderate',
+        'limited',
         dailymed('3d3f2e0c-e141-d49f-e063-6394a90ad0e6', METH.peg),
       ),
       flag(
@@ -1102,7 +1102,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Polyethylene glycol 3350',
-        'moderate',
+        'limited',
         dailymed('6e162152-b414-470c-b146-649d99870577', METH.peg),
       ),
       flag(
@@ -1149,7 +1149,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed('0ab5a374-d565-4385-bee3-538a8f09b19e', METH.pg),
       ),
       flag(
@@ -1205,7 +1205,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('9f944edc-a317-4967-ae54-67b5d183591b', METH.sucralose),
       ),
       flag(
@@ -1256,7 +1256,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed('03f521f4-d35f-4f66-b3ad-7e58a244eb93', METH.sucralose),
       ),
       flag(

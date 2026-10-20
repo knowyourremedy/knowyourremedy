@@ -45,7 +45,7 @@ const MF_ADV_MSM_FLAGS: FlagSpec[] = [
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
   ['Modified corn starch', 'limited', 'modStarch'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Magnesium silicate', 'high', 'talc'],
   ['Glycerin', 'cleared', 'glycerin'],
   ['Magnesium stearate', 'cleared', 'magStearate'],

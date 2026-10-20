@@ -186,11 +186,11 @@ const METH = {
   aspartame:
     'Methodology §5 High-tier (aspartame — IARC 2B + founder strict-sweetener stance; locked)',
   seedOilChew: `Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, vegetable oil, sunflower). ${CHEW_OIL_TAP}`,
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sucralose: 'Methodology §5 Moderate-risk (sucralose)',
   aceK: 'Methodology §5 Moderate-risk (acesulfame potassium — Ace-K)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors:
@@ -479,7 +479,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('FD&C Blue No. 2 aluminum lake', 'high', dailymed(SET.gsNapA, METH.dyes)),
       flag('Talc', 'high', dailymed(SET.gsNapA, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.gsNapA, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.gsNapA, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.gsNapA, METH.peg)),
       cleared(SET.gsNapA, 'Hypromellose'),
       cleared(SET.gsNapA, 'Magnesium stearate'),
       cleared(SET.gsNapA, 'Microcrystalline cellulose'),
@@ -507,7 +507,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 2 lake', 'high', dailymed(SET.timecapNap, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.timecapNap, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.timecapNap, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.timecapNap, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -542,7 +542,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Yellow No. 6', 'high', dailymed(SET.ha2z382, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.ha2z382, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.ha2z382, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.ha2z382, METH.peg)),
       flag('Polydextrose', 'limited', dailymed(SET.ha2z382, METH.polydextrose)),
       flag(
         'Colloidal silicon dioxide',
@@ -846,7 +846,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.healthwise, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.healthwise, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.healthwise, METH.ps80)),
       flag(
         'Dihydroxyaluminium aminoacetate',
         'cleared',
@@ -906,7 +906,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Methylparaben', 'high', dailymed(SET.welmateParaben, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET.welmateParaben, METH.parabens)),
       flag('Titanium dioxide', 'high', dailymed(SET.welmateParaben, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.welmateParaben, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.welmateParaben, METH.ps80)),
       flag(
         'Aluminum glycinate',
         'cleared',
@@ -998,7 +998,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('Talc', 'high', dailymed(SET.gsDual, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.gsDual, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.gsDual, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.gsDual, METH.peg)),
       flag('Sucralose', 'moderate', dailymed(SET.gsDual, METH.sucralose)),
       flag(
         'Ferric oxide yellow',
@@ -1143,8 +1143,8 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Green No. 3', 'high', dailymed(SET.gsLiqGel, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.gsLiqGel, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.gsLiqGel, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.gsLiqGel, METH.pg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.gsLiqGel, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.gsLiqGel, METH.pg)),
       flag(
         'Polyvinyl acetate phthalate',
         'cleared',
@@ -1203,7 +1203,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         dailymed(SET.midol, METH.dyes),
       ),
       flag('Titanium dioxide', 'high', dailymed(SET.midol, METH.tio2)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.midol, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.midol, METH.pg)),
       flag('Shellac', 'cleared', dailymed(SET.midol, METH.shellac)),
       flag('Triacetin', 'cleared', dailymed(SET.midol, METH.triacetin)),
       flag('Carnauba wax', 'cleared', dailymed(SET.midol, METH.carnaubaT133u)),
@@ -1235,7 +1235,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.amzLido, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.amzLido, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.amzLido, METH.ps80)),
       flag(
         '3-(2-ethylhexyloxy)propane-1,2-diol',
         'cleared',
@@ -1298,7 +1298,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Lidocaine', strength: '4%' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.welmateEh, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.welmateEh, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.welmateEh, METH.ps80)),
       flag(
         '3-(2-ethylhexyloxy)propane-1,2-diol',
         'cleared',

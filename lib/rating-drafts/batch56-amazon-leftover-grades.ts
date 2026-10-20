@@ -134,9 +134,9 @@ const METH = {
   parabens:
     'Methodology §5 High-tier (parabens — High in every form, including rubs and patches; locked Sept 15, 2026)',
   mit: 'Methodology §5 High-tier (Methylisothiazolinone / MIT — High/Avoid in leave-on cream; exact tokens; locked Sept 15, 2026)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate; ethylene-oxide / 1,4-dioxane)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors:
@@ -468,7 +468,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
         'high',
         dailymed(SET.ha2zKids, METH.dyes),
       ),
-      flag('Sucralose', 'moderate', dailymed(SET.ha2zKids, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.ha2zKids, METH.sucralose)),
       flag('Flavors', 'limited', dailymed(SET.ha2zKids, METH.flavors)),
       flag('Mannitol', 'limited', dailymed(SET.ha2zKids, METH.mannitol)),
       flag(
@@ -586,7 +586,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Methylparaben', 'high', dailymed(SET.sumifun, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET.sumifun, METH.parabens)),
       flag('Titanium dioxide', 'high', dailymed(SET.sumifun, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.sumifun, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.sumifun, METH.ps80)),
       flag(
         'Dihydroxyaluminum aminoacetate',
         'cleared',

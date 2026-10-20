@@ -86,7 +86,7 @@ const METH = {
     CARAMEL_TAP,
   seedOilGummy:
     'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
   peg: 'Methodology §5 Moderate-risk (PEGs)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
@@ -2290,7 +2290,7 @@ const NAMED: RatingRecord[] = [
       flag("potassium sorbate (preservative to maintain freshness)", "limited", labelCite(pdp("calcium-vitamin-d3"), METH.sorbate)),
       flag("xanthan gum", "cleared", labelCite(pdp("calcium-vitamin-d3"), METH.cleared)),
       flag("sodium benzoate (preservative to maintain freshness)", "limited", labelCite(pdp("calcium-vitamin-d3"), METH.benzoate)),
-      flag("sucralose", "moderate", labelCite(pdp("calcium-vitamin-d3"), METH.sucralose)),
+      flag("sucralose", "limited", labelCite(pdp("calcium-vitamin-d3"), METH.sucralose)),
       flag("carotenes color", "cleared", labelCite(pdp("calcium-vitamin-d3"), METH.caroteneColor)),
       flag("mixed tocopherols", "cleared", labelCite(pdp("calcium-vitamin-d3"), METH.cleared)),
       flag("calcium disodium edta", "cleared", labelCite(pdp("calcium-vitamin-d3"), METH.cleared)),

@@ -119,8 +119,8 @@ const METH = {
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, "vegetable oil", sunflower, palm)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural flavor / natural flavors — opacity). Exact natural flavors stays Limited. A named flavor is a different line.',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
@@ -133,7 +133,7 @@ const METH = {
   benzyl:
     'Methodology §5 Caution (benzyl alcohol — general oral OTC; standalone Caution, not additive-scored, not Avoid on this population)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   citric: 'Methodology §5 Cleared (citric acid).',
@@ -594,17 +594,19 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
         'limited',
         labelCite(GAS_DROPS_PANEL, METH.flavors),
       ),
-      flag('Propylene glycol', 'moderate', labelCite(GAS_DROPS_PANEL, METH.pg)),
+      flag('Propylene glycol', 'limited', labelCite(GAS_DROPS_PANEL, METH.pg)),
       flag('Purified water', 'cleared', labelCite(GAS_DROPS_PANEL, METH.water)),
       flag(
         'Sodium benzoate',
         'limited',
         labelCite(GAS_DROPS_PANEL, METH.benzoate),
       ),
-      flag('Sucralose', 'moderate', labelCite(GAS_DROPS_PANEL, METH.sucralose)),
+      flag('Sucralose', 'limited', labelCite(GAS_DROPS_PANEL, METH.sucralose)),
       flag('Xanthan gum', 'cleared', labelCite(GAS_DROPS_PANEL, METH.gums)),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote:
+      'FOUNDER-LOCK DRAFT: Caution on the prior panel read; t138u moved propylene glycol and sucralose to Limited and t137u stack makes this Avoid. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavor, Propylene glycol, Sodium benzoate, Sucralose.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: GAS_UNDER6_ALTS,
@@ -724,7 +726,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
       flag('D&C Red No. 27', 'high', dailymed(SET_MYLICON_CHEW, METH.dyes)),
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         dailymed(SET_MYLICON_CHEW, METH.sucralose),
       ),
       flag('Flavors', 'limited', dailymed(SET_MYLICON_CHEW, METH.flavors)),
@@ -764,7 +766,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('D&C Red No. 28', 'high', dailymed(SET_MYLICON_AIO, METH.dyes)),
-      flag('Sucralose', 'moderate', dailymed(SET_MYLICON_AIO, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_MYLICON_AIO, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET_MYLICON_AIO, METH.flavors)),
       flag('Sorbitol', 'limited', dailymed(SET_MYLICON_AIO, METH.sorbitol)),
       flag(
@@ -940,12 +942,12 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         labelCite(PEDIALYTE_FLAV_CITE, METH.sucralose),
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         labelCite(PEDIALYTE_FLAV_CITE, METH.acek),
       ),
       flag(
@@ -987,12 +989,12 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         labelCite(PEDIALYTE_POPS_CITE, METH.sucralose),
       ),
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         labelCite(PEDIALYTE_POPS_CITE, METH.acek),
       ),
       flag(
@@ -1048,7 +1050,7 @@ export const BATCH11_KIDS_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sucralose',
-        'moderate',
+        'limited',
         labelCite(CULTURELLE_PKT_CITE, METH.sucralose),
       ),
       flag(
@@ -1088,8 +1090,14 @@ for (const record of BATCH11_KIDS_DIGESTIVE) {
 }
 
 const gasDrops = BATCH11_KIDS_DIGESTIVE.find((record) => record.id === 'little-remedies-gas-drops');
-if (!gasDrops || gasDrops.barcode !== '756184120415' || gasDrops.verdict !== 'caution') {
-  throw new Error('Natural Berry gas drops must stay Caution on 756184120415');
+if (!gasDrops || gasDrops.barcode !== '756184120415' || gasDrops.verdict !== 'avoid') {
+  throw new Error('Natural Berry gas drops must be Avoid (t137u stack) on 756184120415');
+}
+if (
+  !gasDrops.honestNote?.includes('stacking rule (t137u)')
+  || !/Propylene glycol|Sucralose|Natural flavor/.test(gasDrops.honestNote ?? '')
+) {
+  throw new Error('Natural Berry gas drops must carry t137u stack honest note');
 }
 if (gasDrops.inactiveIngredients.some((item) => /strawberry/i.test(item.name))) {
   throw new Error('Natural Berry gas drops must not keep the strawberry flavor line');

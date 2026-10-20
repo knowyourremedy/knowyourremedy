@@ -56,8 +56,8 @@ export const BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '5 mg / 5 mL' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', METH.sucralose),
-      flag('Propylene glycol', 'moderate', METH.pg),
+      flag('Sucralose', 'limited', METH.sucralose),
+      flag('Propylene glycol', 'limited', METH.pg),
       flag('Flavors', 'limited', METH.flavor),
       flag('Sorbitol Solution', 'limited', METH.sorbitol),
       flag('Sodium benzoate', 'limited', METH.benzoate),
@@ -66,7 +66,7 @@ export const BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP: RatingRecord[] = [
     ],
     verdict: 'avoid',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 8 oz grape syrup PDP prints the same inactive list as childrens-zyrtec-liquid, so this row reuses that formula. The 4 fl oz row was not rewritten. Ages 2+.',
+      'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 8 oz grape syrup PDP prints the same inactive list as childrens-zyrtec-liquid, so this row reuses that formula. The 4 fl oz row was not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol Solution, Sodium benzoate.',
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

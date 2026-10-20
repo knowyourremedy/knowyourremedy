@@ -158,7 +158,7 @@ const METH = {
     'Methodology §5 Limited-risk (caprylyl glycol / hexanediol / sorbic acid — preservative family)',
   sorbic:
     'Methodology §5 Limited-risk (caprylyl glycol / hexanediol / sorbic acid — preservative family)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   petrolatum: 'Methodology §5 Cleared (petrolatum, topical — first-aid ointment base)',
   fattyAlcohol:
     'Methodology §5 Cleared (arachidyl alcohol / arachidyl glucoside / behenyl alcohol — fatty-alcohol family)',
@@ -181,7 +181,7 @@ const METH = {
     'Methodology §5 Caution (isohexadecane, topical — standalone Caution, not additive-scored, not Avoid).',
   sorbitanOleate:
     'Methodology §5 Caution (sorbitan oleate, topical — standalone Caution, not additive-scored, not Avoid).',
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol / PEG-stearate / pegoxol-7 stearate / lauroyl macrogolglycerides). Ethylene-oxide/1,4-dioxane contamination risk. Same Moderate/Caution family row. Not Avoid.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   cetylPalmitate:
     'Methodology §5 Cleared (cetyl palmitate — wax ester; fatty-alcohol / wax family).',
 } as const;
@@ -363,7 +363,7 @@ function arthritisCreamOi(setid: string): IngredientFlag[] {
     flag('Chlorhexidine digluconate', 'cleared', dailymed(setid, METH.chlorhexidine)),
     flag('Glycerin', 'cleared', dailymed(setid, METH.cleared)),
     flag('Isohexadecane', 'cleared', dailymed(setid, METH.isohexadecane)),
-    flag('Polysorbate 80', 'moderate', dailymed(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
     flag('Purified water', 'cleared', dailymed(setid, METH.cleared)),
     flag('Sorbitan oleate', 'cleared', dailymed(setid, METH.sorbitanOleate)),
     flag('Sweet almond oil', 'cleared', dailymed(setid, METH.creamOil)),
@@ -401,8 +401,8 @@ function creamPegPanel(setid: string): IngredientFlag[] {
     flag('Carbomer', 'cleared', dailymed(setid, METH.carbomer)),
     flag('Cetyl palmitate', 'cleared', dailymed(setid, METH.cetylPalmitate)),
     flag('Glycerin', 'cleared', dailymed(setid, METH.cleared)),
-    flag('Lauroyl macrogolglycerides', 'moderate', dailymed(setid, METH.peg)),
-    flag('Pegoxol-7 stearate', 'moderate', dailymed(setid, METH.peg)),
+    flag('Lauroyl macrogolglycerides', 'limited', dailymed(setid, METH.peg)),
+    flag('Pegoxol-7 stearate', 'limited', dailymed(setid, METH.peg)),
     flag('Purified water', 'cleared', dailymed(setid, METH.cleared)),
     flag('Sodium hydroxide', 'cleared', dailymed(setid, METH.naoh)),
     flag('Sorbic acid', 'limited', dailymed(setid, METH.sorbic)),
@@ -2942,7 +2942,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
     ],
     inactiveIngredients: creamPegPanel(CREAM_PEG_SETID),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Caprylyl glycol, Sorbic acid, 1,2-Hexanediol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Caprylyl glycol, Lauroyl macrogolglycerides, Pegoxol-7 stearate, Sorbic acid, 1,2-Hexanediol.',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,

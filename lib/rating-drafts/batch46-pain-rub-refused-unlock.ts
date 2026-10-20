@@ -74,8 +74,8 @@ const METH = {
     'Methodology §5 High-tier (synthetic dyes — FD&C/D&C colors, aluminum lakes)',
   parabens:
     'Methodology §5 High-tier (parabens — High in every form, including rubs and patches; locked Sept 15, 2026)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — polyethylene glycol 400/3350, PEG-stearate, pegoxol-7 stearate, lauroyl macrogolglycerides; ethylene-oxide / 1,4-dioxane contamination risk). PEG-120 methyl glucose dioleate sits on this same Moderate family row. Not the Cleared plain methyl glucose dioleate row.',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sorbitol:
     'Methodology §5 Limited-risk (other sugar alcohols — sorbitol / maltitol / mannitol)',
   eucalyptus:
@@ -153,7 +153,7 @@ function hydrogelPatchInactives(setid: string): IngredientFlag[] {
     ),
     flag('Eucalyptus oil', 'cleared', dailymed(setid, METH.eucalyptus)),
     cleared(setid, 'Glycerin'),
-    flag('Polysorbate 80', 'moderate', dailymed(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
     flag('Silicon dioxide', 'cleared', dailymed(setid, METH.sio2)),
     flag(
       'Sorbitan monooleate',
@@ -242,7 +242,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.tbVanish, 'Glycerin'),
       flag(
         'PEG-120 methyl glucose dioleate',
-        'moderate',
+        'limited',
         dailymed(SET.tbVanish, METH.peg),
       ),
       flag('Methylparaben', 'high', dailymed(SET.tbVanish, METH.parabens)),

@@ -108,7 +108,7 @@ const PM_CHEW_FLAGS: FlagSpec[] = [
   ['Natural and Artificial Flavors', 'limited', 'naFlavors'],
   ['Polydextrose', 'limited', 'polydextrose'],
   ['Red 40 Lake', 'high', 'dye'],
-  ['Sucralose', 'moderate', 'sucralose'],
+  ['Sucralose', 'limited', 'sucralose'],
   ['Sugar', 'limited', 'sugar'],
   ['Tocopherols (to preserve freshness)', 'cleared', 'tocopherol'],
   ['Yellow 6 Lake', 'high', 'dye'],
@@ -126,7 +126,7 @@ const SOFT_CHOC_FLAGS: FlagSpec[] = [
   ['Invert Sugar', 'limited', 'invertSugar'],
   ['Lecithin (Soy)', 'cleared', 'lecithinSoy'],
   ['Natural and Artificial Flavors', 'limited', 'naFlavors'],
-  ['Propylene Glycol', 'moderate', 'propyleneGlycol'],
+  ['Propylene Glycol', 'limited', 'propyleneGlycol'],
   ['Salt', 'cleared', 'salt'],
 ];
 
@@ -135,7 +135,7 @@ const PM_TABLET_FLAGS: FlagSpec[] = [
   ['Blue 2 Lake', 'high', 'dye'],
   ['Croscarmellose Sodium', 'cleared', 'croscarmellose'],
   ['Magnesium Stearate', 'cleared', 'magStearate'],
-  ['Polyethylene Glycol', 'moderate', 'peg'],
+  ['Polyethylene Glycol', 'limited', 'peg'],
   ['Polyvinyl Alcohol', 'cleared', 'pva'],
   ['Red 40 Lake', 'high', 'dye'],
   ['Talc', 'high', 'talc'],
@@ -152,7 +152,7 @@ const MF_UTA_FLAGS: FlagSpec[] = [
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
   ['Modified corn starch', 'limited', 'modStarch'],
   ['Mica [color]', 'limited', 'mica'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Titanium dioxide', 'high', 'tio2'],
   ['Magnesium silicate', 'high', 'talc'],
   ['Glycerin', 'cleared', 'glycerin'],
@@ -166,7 +166,7 @@ const MF_TAMA_FLAGS: FlagSpec[] = [
   ['Glycerin', 'cleared', 'glycerin'],
   ['Riboflavin', 'cleared', 'riboflavinColor'],
   ['Modified corn starch', 'limited', 'modStarch'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Magnesium silicate', 'high', 'talc'],
   ['Magnesium stearate', 'cleared', 'magStearate'],
 ];
@@ -176,14 +176,14 @@ const MF_ADV_MSM80_FLAGS: FlagSpec[] = [
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
   ['Modified corn starch', 'limited', 'modStarch'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Magnesium silicate', 'high', 'talc'],
   ['Glycerin', 'cleared', 'glycerin'],
   ['Magnesium stearate', 'cleared', 'magStearate'],
 ];
 
 const CITRACAL_PEG_FLAGS: FlagSpec[] = [
-  ['Polyethylene glycol', 'moderate', 'peg'],
+  ['Polyethylene glycol', 'limited', 'peg'],
   ['Croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['Gelatin', 'cleared', 'gelatin'],
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],

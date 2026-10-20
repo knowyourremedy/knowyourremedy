@@ -63,7 +63,7 @@ const MF120_FLAGS: IngredientFlag[] = [
   flag(MF120_PANEL, 'Hydroxypropyl methylcellulose', 'cleared', METH.hpmc),
   flag(MF120_PANEL, 'Modified corn starch', 'limited', METH.modStarch),
   flag(MF120_PANEL, 'Titanium dioxide', 'high', METH.tio2),
-  flag(MF120_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(MF120_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(MF120_PANEL, 'Magnesium silicate', 'high', METH.talc),
   flag(MF120_PANEL, 'Glycerin', 'cleared', METH.glycerin),
   flag(MF120_PANEL, 'Magnesium stearate', 'cleared', METH.magStearate),

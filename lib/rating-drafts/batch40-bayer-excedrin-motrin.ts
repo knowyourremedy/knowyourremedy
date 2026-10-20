@@ -88,10 +88,10 @@ const METH = {
   caramel:
     'Methodology §5 High-tier (caramel color, undisclosed class — treated as Class III/IV). ' +
     CARAMEL_TAP,
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
-  ps20: 'Methodology §5 Moderate-risk (polysorbate 20 — same 2023 gut-barrier signal as P80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps20: 'Methodology §5 Limited (Polysorbate 20 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   polydextrose: 'Methodology §5 Limited-risk (polydextrose — maltodextrin-like)',
@@ -243,7 +243,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       flag('FD&C Blue No. 2 aluminum lake', 'high', dailymed(SET.bayerEs, METH.dyes)),
       flag('FD&C Red No. 40 aluminum lake', 'high', dailymed(SET.bayerEs, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.bayerEs, METH.tio2)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.bayerEs, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.bayerEs, METH.pg)),
       flag('Triacetin', 'cleared', dailymed(SET.bayerEs, METH.triacetin)),
       flag('Carnauba wax', 'cleared', dailymed(SET.bayerEs, METH.carnaubaT133u)),
       cleared(SET.bayerEs, 'Corn starch'),
@@ -280,7 +280,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
         dailymed(SET.backBody, METH.dyes),
       ),
       flag('Titanium dioxide', 'high', dailymed(SET.backBody, METH.tio2)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.backBody, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.backBody, METH.pg)),
       flag('Triacetin', 'cleared', dailymed(SET.backBody, METH.triacetin)),
       flag('Carnauba wax', 'cleared', dailymed(SET.backBody, METH.carnaubaT133u)),
       cleared(SET.backBody, 'Corn starch'),
@@ -317,8 +317,8 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
         'high',
         dailymed(SET.enteric81, METH.dyes),
       ),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.enteric81, METH.ps80)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.enteric81, METH.pg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.enteric81, METH.ps80)),
+      flag('Propylene glycol', 'limited', dailymed(SET.enteric81, METH.pg)),
       flag(
         'Methacrylic acid copolymer type C',
         'cleared',
@@ -436,8 +436,8 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.migraine, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET.migraine, METH.tio2)),
-      flag('Polysorbate 20', 'moderate', dailymed(SET.migraine, METH.ps20)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.migraine, METH.pg)),
+      flag('Polysorbate 20', 'limited', dailymed(SET.migraine, METH.ps20)),
+      flag('Propylene glycol', 'limited', dailymed(SET.migraine, METH.pg)),
       flag(
         'Benzoic acid',
         'limited',
@@ -484,7 +484,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.esTio2, METH.tio2)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.esTio2, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.esTio2, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
         'cleared',
@@ -536,7 +536,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       ),
       flag('Talc', 'high', dailymed(SET.tension, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.tension, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.tension, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.tension, METH.peg)),
       flag('Benzoic acid', 'limited', dailymed(SET.tension, METH.benzoic)),
       cleared(SET.tension, 'Magnesium stearate'),
       cleared(SET.tension, 'Microcrystalline cellulose'),
@@ -573,7 +573,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
       ),
       flag('Talc', 'high', dailymed(SET.pm, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.pm, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.pm, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.pm, METH.ps80)),
       flag('Maltodextrin', 'limited', dailymed(SET.pm, METH.maltodextrin)),
       flag('Polydextrose', 'limited', dailymed(SET.pm, METH.polydextrose)),
       flag(
@@ -613,8 +613,8 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.rapid, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.rapid, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.rapid, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.rapid, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.rapid, METH.ps80)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -654,7 +654,7 @@ export const BATCH40_BAYER_EXCEDRIN_MOTRIN: RatingRecord[] = [
         'high',
         dailymed(SET.infantsDf, METH.caramel),
       ),
-      flag('Polysorbate 80', 'moderate', dailymed(SET.infantsDf, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET.infantsDf, METH.ps80)),
       flag('Sodium benzoate', 'limited', dailymed(SET.infantsDf, METH.benzoate)),
       flag('Sorbitol', 'limited', dailymed(SET.infantsDf, METH.sorbitol)),
       flag('Flavors', 'limited', dailymed(SET.infantsDf, METH.flavors)),

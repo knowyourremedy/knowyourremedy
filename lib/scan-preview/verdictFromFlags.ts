@@ -136,6 +136,9 @@ export function verdictFromRiskLevels(levels: RiskLevel[]): RatingRecord['verdic
   ).verdict;
 }
 
+const LIMITED_STACK_NOTE_RE =
+  /\s*Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):[^.]+\./g;
+
 export function appendLimitedStackHonestNote(
   existingNote: string | undefined,
   tokens: string[],
@@ -143,5 +146,15 @@ export function appendLimitedStackHonestNote(
   const line = `Avoid: three or more Limited tokens triggered the stacking rule (t137u): ${tokens.join(', ')}.`;
   const base = (existingNote ?? '').trim();
   if (base.includes('stacking rule (t137u)')) return base;
+  return base ? `${base} ${line}` : line;
+}
+
+/** Replace an existing t137u stack sentence (or append if missing). Used when stack token list changes. */
+export function replaceLimitedStackHonestNote(
+  existingNote: string | undefined,
+  tokens: string[],
+): string {
+  const line = `Avoid: three or more Limited tokens triggered the stacking rule (t137u): ${tokens.join(', ')}.`;
+  const base = (existingNote ?? '').replace(LIMITED_STACK_NOTE_RE, '').trim();
   return base ? `${base} ${line}` : line;
 }

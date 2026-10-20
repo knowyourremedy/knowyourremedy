@@ -244,10 +244,10 @@ const METH = {
   aspartame:
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
   bht: 'Methodology §5 High-tier (BHT — locked Avoid, EU 2022 endocrine restriction)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharin: 'Methodology §5 Moderate-risk (saccharin)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -636,7 +636,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R4, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R4, METH.peg)),
       cleared(SET_R4, 'Hypromellose'),
       cleared(SET_R4, 'Povidone'),
       cleared(SET_R4, 'Stearic acid'),
@@ -664,7 +664,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Acetaminophen', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R5, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R5, METH.peg)),
       cleared(SET_R5, 'Hypromellose'),
       cleared(SET_R5, 'Povidone'),
       cleared(SET_R5, 'Stearic acid'),
@@ -695,7 +695,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Benzalkonium chloride', 'cleared', dailymed(SET_R8, METH.bkc)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_R8, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_R8, METH.ps80)),
       cleared(SET_R8, 'Dextrose'),
       cleared(SET_R8, 'Microcrystalline cellulose'),
       cleared(SET_R8, 'Sodium carboxymethylcellulose'),
@@ -723,7 +723,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Loratadine', strength: '10mg' }],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET_R10, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET_R10, METH.sucralose)),
       flag('Mannitol', 'limited', dailymed(SET_R10, METH.mannitol)),
       flag(
         'Natural and artificial mint flavor',
@@ -736,7 +736,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R10, 'Magnesium stearate'),
       cleared(SET_R10, 'Microcrystalline cellulose'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
 
     retailers: [...DG],
     cleanAlternatives: ALLERGY_ALTS,
@@ -801,7 +801,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
         'high',
         dailymed(SET_R2, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R2, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R2, METH.peg)),
     ],
     verdict: 'avoid',
 
@@ -831,7 +831,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
         'high',
         dailymed(SET_R3, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_R3, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_R3, METH.peg)),
     ],
     verdict: 'avoid',
 
@@ -919,7 +919,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_A9, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A9, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A9, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1031,7 +1031,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_A1, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_A1, METH.talc)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A1, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A1, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1067,7 +1067,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('FD&C Blue No. 1', 'high', dailymed(SET_A3, METH.dyes)),
       flag('FD&C Blue No. 2', 'high', dailymed(SET_A3, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET_A3, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A3, METH.peg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A3, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1126,7 +1126,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Methylparaben', 'high', dailymed(SET_A6, METH.parabens)),
       flag('Ethylparaben', 'high', dailymed(SET_A6, METH.parabens)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A6, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A6, METH.ps80)),
       flag('Maltodextrin', 'limited', dailymed(SET_A6, METH.maltodextrin)),
       flag('Tocopherol', 'cleared', dailymed(SET_A6, METH.tocopherols)),
     ],
@@ -1161,7 +1161,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       flag('Methylparaben', 'high', dailymed(SET_A7, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET_A7, METH.parabens)),
       flag('Titanium dioxide', 'high', dailymed(SET_A7, METH.tio2)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A7, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A7, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1187,8 +1187,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Butylparaben', 'high', dailymed(SET_A10, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET_A10, METH.parabens)),
-      flag('Sucralose', 'moderate', dailymed(SET_A10, METH.sucralose)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_A10, METH.pg)),
+      flag('Sucralose', 'limited', dailymed(SET_A10, METH.sucralose)),
+      flag('Propylene glycol', 'limited', dailymed(SET_A10, METH.pg)),
       flag('Maltitol', 'limited', dailymed(SET_A10, METH.maltitol)),
       flag('Flavor', 'limited', dailymed(SET_A10, METH.flavors)),
       flag('Xanthan gum', 'cleared', dailymed(SET_A10, METH.gums)),
@@ -1248,8 +1248,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '200mg' }],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_A12, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A12, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A12, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A12, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A12, METH.ps80)),
       flag(
         'Colloidal silicon dioxide',
         'cleared',
@@ -1281,8 +1281,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Green No. 3', 'high', dailymed(SET_A13, METH.dyes)),
       flag('Titanium dioxide', 'high', dailymed(SET_A13, METH.tio2)),
-      flag('Polyethylene glycol 600', 'moderate', dailymed(SET_A13, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_A13, METH.pg)),
+      flag('Polyethylene glycol 600', 'limited', dailymed(SET_A13, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_A13, METH.pg)),
       flag('Sorbitol', 'limited', dailymed(SET_A13, METH.sorbitol)),
       flag(
         'Lecithin',
@@ -1331,8 +1331,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
         'high',
         dailymed(SET_A14, METH.dyes),
       ),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A14, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A14, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A14, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A14, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1370,8 +1370,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
         dailymed(SET_A15A, METH.dyes),
       ),
       flag('Titanium dioxide', 'high', dailymed(SET_A15A, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A15A, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A15A, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A15A, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A15A, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1406,8 +1406,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
         dailymed(SET_A15B, METH.dyes),
       ),
       flag('Titanium dioxide', 'high', dailymed(SET_A15B, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A15B, METH.peg)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A15B, METH.ps80)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A15B, METH.peg)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A15B, METH.ps80)),
     ],
     verdict: 'avoid',
 
@@ -1437,8 +1437,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Red No. 40', 'high', dailymed(SET_A17A, METH.dyes)),
       flag('FD&C Yellow No. 6', 'high', dailymed(SET_A17A, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A17A, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_A17A, METH.pg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A17A, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_A17A, METH.pg)),
       flag('Sorbitol', 'limited', dailymed(SET_A17A, METH.sorbitol)),
       cleared(SET_A17A, 'Gelatin'),
       cleared(SET_A17A, 'Glycerin'),
@@ -1472,8 +1472,8 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('FD&C Blue No. 1', 'high', dailymed(SET_A17B, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET_A17B, METH.dyes)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET_A17B, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_A17B, METH.pg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET_A17B, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_A17B, METH.pg)),
       flag('Saccharin sodium', 'moderate', dailymed(SET_A17B, METH.saccharin)),
       flag('Flavor', 'limited', dailymed(SET_A17B, METH.flavors)),
     ],
@@ -1531,7 +1531,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_A19, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_A19, METH.talc)),
-      flag('Propylene glycol', 'moderate', dailymed(SET_A19, METH.pg)),
+      flag('Propylene glycol', 'limited', dailymed(SET_A19, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
         'cleared',
@@ -1561,7 +1561,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
     activeIngredients: [{ name: 'Ibuprofen', strength: '50mg / 1.25mL' }],
     inactiveIngredients: [
       flag('FD&C Red No. 40', 'high', dailymed(SET_A21, METH.dyes)),
-      flag('Polysorbate 80', 'moderate', dailymed(SET_A21, METH.ps80)),
+      flag('Polysorbate 80', 'limited', dailymed(SET_A21, METH.ps80)),
       flag('Sodium benzoate', 'limited', dailymed(SET_A21, METH.benzoate)),
       flag('Sorbitol', 'limited', dailymed(SET_A21, METH.sorbitol)),
       flag(

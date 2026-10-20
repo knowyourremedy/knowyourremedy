@@ -91,7 +91,7 @@ const FA_CHEW_FLAGS: FlagSpec[] = [
   ['Magnesium Stearate', 'cleared', 'magStearate'],
   ['Natural and Artificial Flavor', 'limited', 'naFlavor'],
   ['Citric Acid', 'cleared', 'citric'],
-  ['Sucralose', 'moderate', 'sucralose'],
+  ['Sucralose', 'limited', 'sucralose'],
 ];
 
 const BEANO_FLAGS: FlagSpec[] = [

@@ -80,7 +80,7 @@ const CLOT_FLAGS: IngredientFlag[] = [
   flag(CLOT_PANEL, 'Cetyl alcohol', 'cleared', METH.cetyl),
   flag(CLOT_PANEL, 'Cetyl esters wax', 'cleared', METH.cetylWax),
   flag(CLOT_PANEL, 'Octyldodecanol', 'limited', METH.octyl),
-  flag(CLOT_PANEL, 'Polysorbate 60', 'moderate', METH.polysorbate),
+  flag(CLOT_PANEL, 'Polysorbate 60', 'limited', METH.polysorbate),
   flag(CLOT_PANEL, 'Sorbitan monostearate', 'limited', METH.sorbitan),
   flag(CLOT_PANEL, 'Stearyl alcohol', 'cleared', METH.cetyl),
   flag(CLOT_PANEL, 'Water', 'cleared', METH.water),
@@ -151,7 +151,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -173,7 +173,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -195,7 +195,7 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Sorbitan monostearate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [

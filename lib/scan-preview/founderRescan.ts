@@ -2,6 +2,7 @@ import type { RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from './plainLanguage';
 import { applyOverlayIngredientLocks } from './previewCatalog';
 import { verdictFromFlagsStrict } from './verdictFromFlags';
+import { applyT138uIngredientLocks } from './t138uLocks';
 
 export { verdictFromFlagsStrict } from './verdictFromFlags';
 export type { VerdictRollup } from './verdictFromFlags';
@@ -9,6 +10,7 @@ export {
   appendLimitedStackHonestNote,
   computeVerdictFromInactiveIngredients,
   isSiliconDioxideStackExempt,
+  replaceLimitedStackHonestNote,
 } from './verdictFromFlags';
 
 const T133U_CARNAUBA_LOCK_SOURCE =
@@ -195,6 +197,7 @@ export function applyT132uIngredientLocks(record: RatingRecord): RatingRecord {
 export function recomputeFounderRescanRecord(record: RatingRecord): RatingRecord {
   let r = splitCombinedIngredientTabs(record);
   r = applyT132uIngredientLocks(r);
+  r = applyT138uIngredientLocks(r);
   r = applyOverlayIngredientLocks(r, { applyT133uToFileLockedIds: true });
   const verdict = verdictFromFlagsStrict(r);
   return { ...r, verdict };

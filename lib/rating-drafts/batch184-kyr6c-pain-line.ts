@@ -95,7 +95,7 @@ const LIQUIGEL_FLAGS: IngredientFlag[] = [
   flag(LIQUIGEL, 'Lecithin (soybean)', 'cleared', METH.lecithin),
   flag(LIQUIGEL, 'Medium-chain triglycerides', 'limited', METH.mct),
   flag(LIQUIGEL, 'Pharmaceutical ink', 'limited', METH.ink),
-  flag(LIQUIGEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(LIQUIGEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(LIQUIGEL, 'Potassium hydroxide', 'limited', METH.koh),
   flag(LIQUIGEL, 'Purified water', 'cleared', METH.water),
   flag(LIQUIGEL, 'Sorbitol sorbitan solution', 'limited', METH.sorbitan),
@@ -106,7 +106,7 @@ const MINI_FLAGS: IngredientFlag[] = [
   flag(MINI, 'Gelatin', 'cleared', METH.gelatin),
   flag(MINI, 'Medium-chain triglycerides', 'limited', METH.mct),
   flag(MINI, 'Pharmaceutical ink', 'limited', METH.ink),
-  flag(MINI, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(MINI, 'Polyethylene glycol', 'limited', METH.peg),
   flag(MINI, 'Potassium hydroxide', 'limited', METH.koh),
   flag(MINI, 'Purified water', 'cleared', METH.water),
   flag(MINI, 'Sorbitol sorbitan solution', 'limited', METH.sorbitan),
@@ -121,7 +121,7 @@ const DUAL_FLAGS: IngredientFlag[] = [
   flag(DUAL, 'Hypromellose', 'cleared', METH.hpmc),
   flag(DUAL, 'Pharmaceutical ink', 'limited', METH.ink),
   flag(DUAL, 'Polydextrose', 'limited', METH.polydextrose),
-  flag(DUAL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(DUAL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(DUAL, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(DUAL, 'Titanium dioxide', 'high', METH.tio2),
 ];
@@ -132,18 +132,18 @@ const PM_FLAGS: IngredientFlag[] = [
   flag(PM_LIQ, 'Gelatin', 'cleared', METH.gelatin),
   flag(PM_LIQ, 'Medium-chain triglycerides', 'limited', METH.mct),
   flag(PM_LIQ, 'Pharmaceutical ink', 'limited', METH.ink),
-  flag(PM_LIQ, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(PM_LIQ, 'Polyethylene glycol', 'limited', METH.peg),
   flag(PM_LIQ, 'Potassium hydroxide', 'limited', METH.koh),
   flag(PM_LIQ, 'Purified water', 'cleared', METH.water),
   flag(PM_LIQ, 'Sorbitol sorbitan solution', 'limited', METH.sorbitan),
 ];
 
 const MOTRIN_DF_FLAGS: IngredientFlag[] = [
-  flag(MOTRIN_DF, 'Acesulfame potassium', 'moderate', METH.ace),
+  flag(MOTRIN_DF, 'Acesulfame potassium', 'limited', METH.ace),
   flag(MOTRIN_DF, 'Anhydrous citric acid', 'cleared', METH.citric),
   flag(MOTRIN_DF, 'Flavors', 'limited', METH.flavor),
   flag(MOTRIN_DF, 'Glycerin', 'cleared', METH.glycerin),
-  flag(MOTRIN_DF, 'Polysorbate 80', 'moderate', METH.polysorbate),
+  flag(MOTRIN_DF, 'Polysorbate 80', 'limited', METH.polysorbate),
   flag(MOTRIN_DF, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(MOTRIN_DF, 'Purified water', 'cleared', METH.water),
   flag(MOTRIN_DF, 'Sodium benzoate', 'limited', METH.benzoate),
@@ -152,12 +152,12 @@ const MOTRIN_DF_FLAGS: IngredientFlag[] = [
 ];
 
 const MOTRIN_BUBBLE_FLAGS: IngredientFlag[] = [
-  flag(MOTRIN_BUBBLE, 'Acesulfame potassium', 'moderate', METH.ace),
+  flag(MOTRIN_BUBBLE, 'Acesulfame potassium', 'limited', METH.ace),
   flag(MOTRIN_BUBBLE, 'Anhydrous citric acid', 'cleared', METH.citric),
   flag(MOTRIN_BUBBLE, 'FD&C red no. 40', 'high', METH.dye),
   flag(MOTRIN_BUBBLE, 'Flavors', 'limited', METH.flavor),
   flag(MOTRIN_BUBBLE, 'Glycerin', 'cleared', METH.glycerin),
-  flag(MOTRIN_BUBBLE, 'Polysorbate 80', 'moderate', METH.polysorbate),
+  flag(MOTRIN_BUBBLE, 'Polysorbate 80', 'limited', METH.polysorbate),
   flag(MOTRIN_BUBBLE, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(MOTRIN_BUBBLE, 'Purified water', 'cleared', METH.water),
   flag(MOTRIN_BUBBLE, 'Sodium benzoate', 'limited', METH.benzoate),
@@ -166,7 +166,7 @@ const MOTRIN_BUBBLE_FLAGS: IngredientFlag[] = [
 ];
 
 const MOTRIN_CHEW_FLAGS: IngredientFlag[] = [
-  flag(MOTRIN_CHEW, 'Acesulfame potassium', 'moderate', METH.ace),
+  flag(MOTRIN_CHEW, 'Acesulfame potassium', 'limited', METH.ace),
   flag(MOTRIN_CHEW, 'Ammonium glycyrrhizin', 'limited', METH.glycyrrhizin),
   flag(MOTRIN_CHEW, 'Aspartame', 'high', METH.aspartame),
   flag(MOTRIN_CHEW, 'Carnauba wax', 'cleared', METH.carnauba),
@@ -190,7 +190,7 @@ const TYLENOL_DF_FLAGS: IngredientFlag[] = [
   flag(TYLENOL_DF, 'Potassium sorbate', 'limited', METH.benzoate),
   flag(TYLENOL_DF, 'Purified water', 'cleared', METH.water),
   flag(TYLENOL_DF, 'Sorbitol solution', 'limited', METH.sorbitol),
-  flag(TYLENOL_DF, 'Sucralose', 'moderate', METH.sucralose),
+  flag(TYLENOL_DF, 'Sucralose', 'limited', METH.sucralose),
   flag(TYLENOL_DF, 'Sucrose', 'cleared', METH.sucrose),
   flag(TYLENOL_DF, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
@@ -207,12 +207,12 @@ const TYLENOL_BUBBLE_FLAGS: IngredientFlag[] = [
   flag(TYLENOL_BUBBLE, 'Purified water', 'cleared', METH.water),
   flag(TYLENOL_BUBBLE, 'Sodium benzoate', 'limited', METH.benzoate),
   flag(TYLENOL_BUBBLE, 'Sorbitol solution', 'limited', METH.sorbitol),
-  flag(TYLENOL_BUBBLE, 'Sucralose', 'moderate', METH.sucralose),
+  flag(TYLENOL_BUBBLE, 'Sucralose', 'limited', METH.sucralose),
   flag(TYLENOL_BUBBLE, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 
 const TYLENOL_CHEW_FLAGS: IngredientFlag[] = [
-  flag(TYLENOL_CHEW, 'Acesulfame potassium', 'moderate', METH.ace),
+  flag(TYLENOL_CHEW, 'Acesulfame potassium', 'limited', METH.ace),
   flag(TYLENOL_CHEW, 'Acetic acid', 'cleared', METH.acetic),
   flag(TYLENOL_CHEW, 'Cellulose acetate', 'limited', METH.celluloseAcetate),
   flag(TYLENOL_CHEW, 'Ethyl acetate', 'limited', METH.ethylAcetate),
@@ -224,7 +224,7 @@ const TYLENOL_CHEW_FLAGS: IngredientFlag[] = [
   flag(TYLENOL_CHEW, 'Modified starch', 'limited', METH.modifiedStarch),
   flag(TYLENOL_CHEW, 'Povidone', 'cleared', METH.povidone),
   flag(TYLENOL_CHEW, 'Sodium starch glycolate', 'cleared', METH.ssg),
-  flag(TYLENOL_CHEW, 'Sucralose', 'moderate', METH.sucralose),
+  flag(TYLENOL_CHEW, 'Sucralose', 'limited', METH.sucralose),
 ];
 
 const RAPID_FLAGS: IngredientFlag[] = [
@@ -235,8 +235,8 @@ const RAPID_FLAGS: IngredientFlag[] = [
   flag(RAPID, 'Crospovidone', 'cleared', METH.povidone),
   flag(RAPID, 'Hypromellose', 'cleared', METH.hpmc),
   flag(RAPID, 'Magnesium stearate', 'cleared', METH.stearate),
-  flag(RAPID, 'Polyethylene glycol', 'moderate', METH.peg),
-  flag(RAPID, 'Polysorbate 80', 'moderate', METH.polysorbate),
+  flag(RAPID, 'Polyethylene glycol', 'limited', METH.peg),
+  flag(RAPID, 'Polysorbate 80', 'limited', METH.polysorbate),
   flag(RAPID, 'Povidone', 'cleared', METH.povidone),
   flag(RAPID, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(RAPID, 'Purified water', 'cleared', METH.water),
@@ -261,7 +261,7 @@ const MOTRIN_DUAL = 'Motrin Dual Action with Tylenol drug facts';
 const MOTRIN_GEL_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_GEL, 'Gelatin', 'cleared', METH.gelatin),
   flag(MOTRIN_GEL, 'Pharmaceutical ink', 'limited', METH.ink),
-  flag(MOTRIN_GEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(MOTRIN_GEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(MOTRIN_GEL, 'Potassium hydroxide', 'limited', METH.koh),
   flag(MOTRIN_GEL, 'Purified water', 'cleared', METH.water),
   flag(MOTRIN_GEL, 'Sorbitan', 'limited', 'Methodology §5 Caution (sorbitan). Not the sugar alcohol sorbitol.'),
@@ -274,12 +274,12 @@ const MOTRIN_DUAL_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_DUAL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
   flag(MOTRIN_DUAL, 'Crospovidone', 'cleared', METH.povidone),
   flag(MOTRIN_DUAL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-  flag(MOTRIN_DUAL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(MOTRIN_DUAL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(MOTRIN_DUAL, 'Polyvinyl alcohol', 'cleared', 'Methodology §5 Cleared (polyvinyl alcohol, oral coating).'),
   flag(MOTRIN_DUAL, 'Povidone', 'cleared', METH.povidone),
   flag(MOTRIN_DUAL, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(MOTRIN_DUAL, 'Stearic acid', 'cleared', 'Methodology §5 Cleared (stearic acid).'),
-  flag(MOTRIN_DUAL, 'Sucralose', 'moderate', METH.sucralose),
+  flag(MOTRIN_DUAL, 'Sucralose', 'limited', METH.sucralose),
   flag(MOTRIN_DUAL, 'Talc', 'high', 'Methodology §5 High-risk (talc, oral).'),
   flag(MOTRIN_DUAL, 'Titanium dioxide', 'high', METH.tio2),
 ];

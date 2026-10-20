@@ -99,7 +99,7 @@ function rhinoFlags(): IngredientFlag[] {
     flag('Disodium edetate', 'limited', cite(RHINO_SET, METH.edta)),
     flag('Hydrochloric acid', 'limited', cite(RHINO_SET, METH.hcl)),
     cleared(RHINO_SET, 'Microcrystalline cellulose', METH.mcc),
-    flag('Polysorbate 80', 'moderate', cite(RHINO_SET, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(RHINO_SET, METH.ps80)),
     flag('Potassium sorbate', 'limited', cite(RHINO_SET, METH.sorbate)),
     cleared(RHINO_SET, 'Purified water', METH.water),
   ];
@@ -112,7 +112,7 @@ function nasonexFlags(setid: string): IngredientFlag[] {
     cleared(setid, 'Glycerin', METH.glycerin),
     cleared(setid, 'Microcrystalline cellulose', METH.mcc),
     cleared(setid, 'Carboxymethylcellulose sodium', METH.cmc),
-    flag('Polysorbate 80', 'moderate', cite(setid, METH.ps80)),
+    flag('Polysorbate 80', 'limited', cite(setid, METH.ps80)),
     cleared(setid, 'Purified water', METH.water),
     cleared(setid, 'Sodium citrate', METH.citrate),
   ];
@@ -193,7 +193,7 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     activeIngredients: [{ name: 'Budesonide', strength: '32 mcg / spray' }],
     inactiveIngredients: rhinoFlags(),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrose anhydrous, Disodium edetate, Hydrochloric acid, Potassium sorbate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrose anhydrous, Disodium edetate, Hydrochloric acid, Polysorbate 80, Potassium sorbate.',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,

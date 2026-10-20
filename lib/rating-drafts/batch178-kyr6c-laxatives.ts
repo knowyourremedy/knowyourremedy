@@ -105,8 +105,8 @@ const COLACE_FLAGS: IngredientFlag[] = [
   flag(COLACE_PANEL, 'FD&C Yellow No. 6', 'high', METH.dyes),
   flag(COLACE_PANEL, 'Gelatin', 'cleared', METH.gelatin),
   flag(COLACE_PANEL, 'Glycerin', 'cleared', METH.glycerin),
-  flag(COLACE_PANEL, 'PEG 400', 'moderate', METH.peg),
-  flag(COLACE_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(COLACE_PANEL, 'PEG 400', 'limited', METH.peg),
+  flag(COLACE_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(COLACE_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
   flag(COLACE_PANEL, 'Titanium dioxide', 'high', METH.tio2),
 ];
@@ -122,7 +122,7 @@ const COLACE_2IN1_FLAGS: IngredientFlag[] = [
   flag(COLACE_2IN1_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
   flag(COLACE_2IN1_PANEL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
   flag(COLACE_2IN1_PANEL, 'Mineral oil', 'limited', METH.mineralOil),
-  flag(COLACE_2IN1_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(COLACE_2IN1_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(COLACE_2IN1_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
   flag(COLACE_2IN1_PANEL, 'Sodium lauryl sulfate', 'limited', METH.sls),
   flag(COLACE_2IN1_PANEL, 'Starch', 'cleared', METH.starch),
@@ -134,7 +134,7 @@ const COLACE_2IN1_FLAGS: IngredientFlag[] = [
 
 const ORANGE_FLAGS: IngredientFlag[] = [
   flag(ORANGE_PANEL, 'Natural and artificial orange flavor', 'limited', METH.namedFlavor),
-  flag(ORANGE_PANEL, 'Sucralose', 'moderate', METH.sucralose),
+  flag(ORANGE_PANEL, 'Sucralose', 'limited', METH.sucralose),
 ];
 
 const FAST_FLAGS: IngredientFlag[] = [
@@ -163,10 +163,10 @@ function yellowBase(dyes: IngredientFlag[]): IngredientFlag[] {
     flag(YELLOW_PANEL, 'Magnesium stearate', 'cleared', METH.magnesiumStearate),
     flag(YELLOW_PANEL, 'Methylparaben', 'high', METH.parabens),
     flag(YELLOW_PANEL, 'Polydextrose', 'limited', METH.polydextrose),
-    flag(YELLOW_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+    flag(YELLOW_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
     flag(YELLOW_PANEL, 'Polyvinyl acetate phthalate', 'limited', METH.pvap),
     flag(YELLOW_PANEL, 'Povidone', 'cleared', METH.povidone),
-    flag(YELLOW_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+    flag(YELLOW_PANEL, 'Propylene glycol', 'limited', METH.pg),
     flag(YELLOW_PANEL, 'Propylparaben', 'high', METH.parabens),
     flag(YELLOW_PANEL, 'Shellac', 'cleared', METH.shellac),
     flag(YELLOW_PANEL, 'Simethicone', 'limited', METH.simethicone),
@@ -203,10 +203,10 @@ const PINK_FLAGS: IngredientFlag[] = [
   flag(PINK_PANEL, 'Magnesium stearate', 'cleared', METH.magnesiumStearate),
   flag(PINK_PANEL, 'Methylparaben', 'high', METH.parabens),
   flag(PINK_PANEL, 'Polydextrose', 'limited', METH.polydextrose),
-  flag(PINK_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(PINK_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(PINK_PANEL, 'Polyvinyl acetate phthalate', 'limited', METH.pvap),
   flag(PINK_PANEL, 'Povidone', 'cleared', METH.povidone),
-  flag(PINK_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(PINK_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(PINK_PANEL, 'Propylparaben', 'high', METH.parabens),
   flag(PINK_PANEL, 'Shellac', 'cleared', METH.shellac),
   flag(PINK_PANEL, 'Simethicone', 'limited', METH.simethicone),
@@ -250,8 +250,8 @@ const SOFTENER_FLAGS: IngredientFlag[] = [
   flag(SOFTENER_PANEL, 'Glycerin', 'cleared', METH.glycerin),
   flag(SOFTENER_PANEL, 'Mannitol', 'limited', METH.mannitol),
   flag(SOFTENER_PANEL, 'Pharmaceutical ink', 'limited', METH.ink),
-  flag(SOFTENER_PANEL, 'Polyethylene glycol 400', 'moderate', METH.peg),
-  flag(SOFTENER_PANEL, 'Propylene glycol', 'moderate', METH.pg),
+  flag(SOFTENER_PANEL, 'Polyethylene glycol 400', 'limited', METH.peg),
+  flag(SOFTENER_PANEL, 'Propylene glycol', 'limited', METH.pg),
   flag(SOFTENER_PANEL, 'Sorbitan', 'limited', METH.sorbitan),
   flag(SOFTENER_PANEL, 'Sorbitol', 'limited', METH.sorbitol),
   flag(SOFTENER_PANEL, 'Water', 'cleared', METH.water),
@@ -265,7 +265,7 @@ const SENOKOT_FLAGS: IngredientFlag[] = [
   flag(SENOKOT_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
   flag(SENOKOT_PANEL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
   flag(SENOKOT_PANEL, 'Mineral oil', 'limited', METH.mineralOil),
-  flag(SENOKOT_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(SENOKOT_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(SENOKOT_PANEL, 'Talc', 'high', METH.talc),
 ];
 
@@ -292,7 +292,7 @@ const SENOKOT_S_FLAGS: IngredientFlag[] = [
   flag(SENOKOT_S_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
   flag(SENOKOT_S_PANEL, 'Microcrystalline cellulose', 'cleared', METH.mcc),
   flag(SENOKOT_S_PANEL, 'Mineral oil', 'limited', METH.mineralOil),
-  flag(SENOKOT_S_PANEL, 'Polyethylene glycol', 'moderate', METH.peg),
+  flag(SENOKOT_S_PANEL, 'Polyethylene glycol', 'limited', METH.peg),
   flag(SENOKOT_S_PANEL, 'Sodium benzoate', 'limited', METH.sodiumBenzoate),
   flag(SENOKOT_S_PANEL, 'Sodium lauryl sulfate', 'limited', METH.sls),
   flag(SENOKOT_S_PANEL, 'Starch', 'cleared', METH.starch),

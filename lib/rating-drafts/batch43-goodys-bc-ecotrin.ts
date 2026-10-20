@@ -226,7 +226,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       { name: 'Caffeine', strength: '130mg or 65mg' },
     ],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.max, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.max, METH.sucralose)),
       flag('Flavors', 'limited', dailymed(SET.max, METH.flavors)),
       flag('Mannitol', 'limited', dailymed(SET.max, METH.mannitol)),
       flag('Colloidal silicon dioxide', 'cleared', dailymed(SET.max, METH.sio2)),
@@ -256,7 +256,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       { name: 'Caffeine', strength: '150mg' },
     ],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.plusAlert, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.plusAlert, METH.sucralose)),
       flag('Xylitol', 'limited', dailymed(SET.plusAlert, METH.xylitol)),
       flag('Flavor', 'limited', dailymed(SET.plusAlert, METH.flavors)),
       flag('Mannitol', 'limited', dailymed(SET.plusAlert, METH.mannitol)),
@@ -358,10 +358,10 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Acesulfame potassium',
-        'moderate',
+        'limited',
         dailymed(SET.bcCherry, METH.acek),
       ),
-      flag('Sucralose', 'moderate', dailymed(SET.bcCherry, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.bcCherry, METH.sucralose)),
       flag('Flavor', 'limited', dailymed(SET.bcCherry, METH.flavors)),
       flag('Mannitol', 'limited', dailymed(SET.bcCherry, METH.mannitol)),
       flag(
@@ -394,7 +394,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       { name: 'Caffeine', strength: '65mg' },
     ],
     inactiveIngredients: [
-      flag('Sucralose', 'moderate', dailymed(SET.bcMax, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.bcMax, METH.sucralose)),
       flag('Xylitol', 'limited', dailymed(SET.bcMax, METH.xylitol)),
       flag('Flavor', 'limited', dailymed(SET.bcMax, METH.flavors)),
       flag('Mannitol', 'limited', dailymed(SET.bcMax, METH.mannitol)),
@@ -464,8 +464,8 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     inactiveIngredients: [
       flag('Talc', 'high', dailymed(SET.bufferin, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.bufferin, METH.tio2)),
-      flag('Polyethylene glycol', 'moderate', dailymed(SET.bufferin, METH.peg)),
-      flag('Propylene glycol', 'moderate', dailymed(SET.bufferin, METH.pg)),
+      flag('Polyethylene glycol', 'limited', dailymed(SET.bufferin, METH.peg)),
+      flag('Propylene glycol', 'limited', dailymed(SET.bufferin, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
         'cleared',
@@ -513,12 +513,12 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.ecotrin325, METH.tio2)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.ecotrin325, METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.ecotrin325, METH.pg),
       ),
       flag(
@@ -582,12 +582,12 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.ecotrin81, METH.tio2)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.ecotrin81, METH.peg),
       ),
       flag(
         'Propylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.ecotrin81, METH.pg),
       ),
       flag(
@@ -642,7 +642,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.stJoeEnteric, METH.tio2)),
       flag(
         'Polyethylene glycol',
-        'moderate',
+        'limited',
         dailymed(SET.stJoeEnteric, METH.peg),
       ),
       flag(
@@ -699,7 +699,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
         'high',
         dailymed(SET.stJoeChew, METH.dyes),
       ),
-      flag('Sucralose', 'moderate', dailymed(SET.stJoeChew, METH.sucralose)),
+      flag('Sucralose', 'limited', dailymed(SET.stJoeChew, METH.sucralose)),
       flag('Maltodextrin', 'limited', dailymed(SET.stJoeChew, METH.maltodextrin)),
       flag('Flavor', 'limited', dailymed(SET.stJoeChew, METH.flavors)),
       cleared(SET.stJoeChew, 'Corn starch'),
