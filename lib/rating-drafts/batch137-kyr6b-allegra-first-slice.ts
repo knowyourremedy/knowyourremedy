@@ -33,12 +33,12 @@ const METH = {
   iron: 'Methodology §5 Caution (iron oxide as color). Iron oxide blends sit on this row. Not Avoid.',
   flavor: 'Methodology §5 Caution (flavor / flavors). Exact “Natural flavors” stays Limited. Not Avoid.',
   ink: 'Methodology §5 Caution (pharmaceutical ink). Not Avoid.',
-  carnauba: 'Methodology §5 Caution (carnauba wax). Not the old Cleared wax row. Not Avoid.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   enteric: 'Methodology §5 Caution (methacrylic acid copolymer, enteric). Not Avoid.',
   poloxamer: 'Methodology §5 Caution (poloxamer 407, poloxamer family). Not High.',
   edetate: 'Methodology §5 Caution (edetate disodium, EDTA). Not the Cleared disodium EDTA trace row.',
   sorbate: 'Methodology §5 Limited (potassium sorbate, synthetic preservative).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   xylitol: 'Methodology §5 Limited (oral xylitol).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
@@ -131,7 +131,7 @@ function liquidFlags(): IngredientFlag[] {
     flag('Flavor', 'limited', cite(LIQ_SET, METH.flavor)),
     flag('Poloxamer 407', 'limited', cite(LIQ_SET, METH.poloxamer)),
     flag('Potassium sorbate', 'limited', cite(LIQ_SET, METH.sorbate)),
-    flag('Sucrose', 'limited', cite(LIQ_SET, METH.sucrose)),
+    flag('Sucrose', 'cleared', cite(LIQ_SET, METH.sucrose)),
     flag('Xylitol', 'limited', cite(LIQ_SET, METH.xylitol)),
     flag('Edetate disodium', 'limited', cite(LIQ_SET, METH.edetate)),
     cleared(LIQ_SET, 'Purified water'),
@@ -143,7 +143,7 @@ function liquidFlags(): IngredientFlag[] {
 function d12Flags(): IngredientFlag[] {
   return [
     flag('Polyethylene glycol', 'moderate', cite(D12_SET, METH.peg)),
-    flag('Carnauba wax', 'limited', cite(D12_SET, METH.carnauba)),
+    flag('Carnauba wax', 'cleared', cite(D12_SET, METH.carnauba)),
     flag('Colloidal silicon dioxide', 'limited', cite(D12_SET, METH.sio2)),
     cleared(D12_SET, 'Croscarmellose sodium'),
     cleared(D12_SET, 'Hypromellose'),

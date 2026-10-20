@@ -103,6 +103,8 @@ const METH = {
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic — locked v1.6)',
   cleared: 'Methodology §5 Cleared',
   organicFlavor: 'Methodology §5 Cleared (organic agave / organic flavors)',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
 } as const;
 
 function flag(
@@ -376,7 +378,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
         'cleared',
         dailymed('ba0da07a-107b-2c66-e053-2995a90ab96a', METH.organicFlavor),
       ),
-      cleared('ba0da07a-107b-2c66-e053-2995a90ab96a', 'Carnauba wax (organic)'),
+      flag('Carnauba wax (organic)', 'cleared', dailymed('ba0da07a-107b-2c66-e053-2995a90ab96a', METH.carnaubaT133u)),
       cleared('ba0da07a-107b-2c66-e053-2995a90ab96a', 'Dextrose (organic)'),
       flag(
         'Organic rice bran extract',

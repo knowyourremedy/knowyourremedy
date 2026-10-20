@@ -150,7 +150,7 @@ const METH = {
   dical:
     'Methodology §5 Cleared (dicalcium phosphate / tricalcium phosphate / dibasic calcium phosphate — mineral fillers / buffers)',
   gelatin: 'Methodology §5 Cleared (gelatin / lactose / carnauba wax / beeswax / purified water)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax — wax family)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   triacetin: 'Methodology §5 Cleared (triacetin — tablet/caplet coating plasticizer; locked Sept 15, 2026)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin / acacia — locked v1.6)',
   sugar:

@@ -31,7 +31,7 @@ const METH = {
   beeswax: 'Methodology §5 Cleared (beeswax / yellow beeswax).',
   cane: 'Methodology §5 Cleared (cane sugar).',
   caphos: 'Methodology §5 Cleared (calcium phosphate). Dicalcium Phosphate maps here (Sept 28, 2026).',
-  carnauba: 'Methodology §5 Caution (carnauba wax). Organic carnauba wax is the same row.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citrate: 'Methodology §5 Cleared (citrate salts / sodium citrate).',
   citric: 'Methodology §5 Cleared (citric acid). Bare citric acid stays here, including on a gummy.',
   flavor: 'Methodology §5 Caution (named flavor). Bare Natural Lemon, Natural Peach, and Natural Raspberry map here (Sept 28, 2026). Organic Natural Lemon is the Organic-prefix form. The Limited natural-flavors opacity row is not flipped.',

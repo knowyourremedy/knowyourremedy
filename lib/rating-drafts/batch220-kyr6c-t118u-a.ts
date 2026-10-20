@@ -141,7 +141,7 @@ const RESTORE_FLAGS: FlagSpec[] = [
   ['Crospovidone', 'cleared', 'crospovidone'],
   ['Citric acid', 'cleared', 'citric'],
   ['Magnesium stearate', 'cleared', 'magStearate'],
-  ['Natural orange flavor', 'limited', 'namedFlavor'],
+  ['Natural orange flavor', 'cleared', 'namedFlavor'],
   ['Sunflower lecithin', 'cleared', 'lecithinSunflower'],
   ['Sodium chloride', 'cleared', 'salt'],
   ['Steviol glycosides', 'cleared', 'stevia'],

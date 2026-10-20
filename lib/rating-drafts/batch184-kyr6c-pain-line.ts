@@ -63,7 +63,7 @@ const METH = {
   stearate: 'Methodology §5 Cleared (magnesium stearate).',
   succinic: 'Methodology §5 Cleared (succinic acid).',
   sucralose: 'Methodology §5 Moderate-risk (sucralose).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   tio2: 'Methodology §5 High-risk (titanium dioxide).',
   water: 'Methodology §5 Cleared (water / purified water).',
   xanthan: 'Methodology §5 Cleared (xanthan gum).',
@@ -143,7 +143,7 @@ const MOTRIN_DF_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_DF, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(MOTRIN_DF, 'Purified water', 'cleared', METH.water),
   flag(MOTRIN_DF, 'Sodium benzoate', 'limited', METH.benzoate),
-  flag(MOTRIN_DF, 'Sucrose', 'limited', METH.sucrose),
+  flag(MOTRIN_DF, 'Sucrose', 'cleared', METH.sucrose),
   flag(MOTRIN_DF, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 
@@ -157,7 +157,7 @@ const MOTRIN_BUBBLE_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_BUBBLE, 'Pregelatinized starch', 'cleared', METH.starch),
   flag(MOTRIN_BUBBLE, 'Purified water', 'cleared', METH.water),
   flag(MOTRIN_BUBBLE, 'Sodium benzoate', 'limited', METH.benzoate),
-  flag(MOTRIN_BUBBLE, 'Sucrose', 'limited', METH.sucrose),
+  flag(MOTRIN_BUBBLE, 'Sucrose', 'cleared', METH.sucrose),
   flag(MOTRIN_BUBBLE, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 
@@ -187,7 +187,7 @@ const TYLENOL_DF_FLAGS: IngredientFlag[] = [
   flag(TYLENOL_DF, 'Purified water', 'cleared', METH.water),
   flag(TYLENOL_DF, 'Sorbitol solution', 'limited', METH.sorbitol),
   flag(TYLENOL_DF, 'Sucralose', 'moderate', METH.sucralose),
-  flag(TYLENOL_DF, 'Sucrose', 'limited', METH.sucrose),
+  flag(TYLENOL_DF, 'Sucrose', 'cleared', METH.sucrose),
   flag(TYLENOL_DF, 'Xanthan gum', 'cleared', METH.xanthan),
 ];
 

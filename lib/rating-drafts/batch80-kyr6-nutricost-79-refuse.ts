@@ -97,7 +97,7 @@ const METH = {
   tapiocaStarch: "Methodology §5 Cleared (named corn starch / potato starch / pregelatinized starch, and similar simple starches). Label string tapioca starch is a named simple starch on that row. Distinct from Limited tapioca dextrin / tapioca powder and from Caution unspecified starch.",
   trisodium: "Methodology §5 Cleared (trisodium citrate — exact token; citrate-salt filler/buffer with citric acid; locked Sept 22, 2026).",
   water: "Methodology §5 Cleared (purified water). Water / bare water sit on this same row (Sept 22, 2026). Distilled water is the same water row.",
-  wax: "Methodology §5 Cleared (beeswax / carnauba wax).",
+  wax: "Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).",
 } as const;
 
 function flag(

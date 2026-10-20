@@ -71,7 +71,7 @@ const METH = {
   ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
   saccharin: 'Methodology §5 Moderate (saccharin). Distinct from Caution saccharin sodium.',
   sio2: 'Methodology §5 Limited (colloidal silicon dioxide / silicon dioxide / colloidal anhydrous silica — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.',
-  carnauba: 'Methodology §5 Caution (carnauba wax — Sept 25, 2026). Not the old Cleared wax row. Not Avoid.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   iron: 'Methodology §5 Caution (iron oxide as color). Iron oxide black, iron oxide red, ferric oxides, and ferrosoferric oxide sit on this row. Not Avoid.',
   benzoate: 'Methodology §5 Limited (sodium benzoate — synthetic preservative). Not Avoid.',
   maltodextrin: 'Methodology §5 Limited (maltodextrin, including maize maltodextrin).',

@@ -144,7 +144,7 @@ const METH = {
   peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
   pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
   ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
-  flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
@@ -164,6 +164,8 @@ const METH = {
   tocopherols:
     'Methodology §5 Cleared (mixed tocopherols / ascorbyl palmitate as antioxidants — locked v1.6)',
   cleared: 'Methodology §5 Cleared',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
 } as const;
 
 function flag(
@@ -624,7 +626,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
         dailymed(SET_IMODIUM_CAP, METH.peg),
       ),
       cleared(SET_IMODIUM_CAP, 'Anhydrous lactose'),
-      cleared(SET_IMODIUM_CAP, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_IMODIUM_CAP, METH.carnaubaT133u)),
       cleared(SET_IMODIUM_CAP, 'Hypromellose'),
       cleared(SET_IMODIUM_CAP, 'Magnesium stearate'),
       cleared(SET_IMODIUM_CAP, 'Microcrystalline cellulose'),
@@ -957,7 +959,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_PEPCID_AC, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_PEPCID_AC, METH.talc)),
-      cleared(SET_PEPCID_AC, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_PEPCID_AC, METH.carnaubaT133u)),
       cleared(SET_PEPCID_AC, 'Hypromellose'),
       cleared(SET_PEPCID_AC, 'Magnesium stearate'),
       cleared(SET_PEPCID_AC, 'Microcrystalline cellulose'),
@@ -985,7 +987,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET_PEPCID_MAX, METH.tio2)),
       flag('Talc', 'high', dailymed(SET_PEPCID_MAX, METH.talc)),
-      cleared(SET_PEPCID_MAX, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_PEPCID_MAX, METH.carnaubaT133u)),
       cleared(SET_PEPCID_MAX, 'Hypromellose'),
       cleared(SET_PEPCID_MAX, 'Magnesium stearate'),
       cleared(SET_PEPCID_MAX, 'Microcrystalline cellulose'),
@@ -1018,7 +1020,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       flag('Polyethylene glycol', 'moderate', dailymed(SET_PEPCID_ICY, METH.peg)),
       flag('Polysorbate 80', 'moderate', dailymed(SET_PEPCID_ICY, METH.ps80)),
       flag('Flavors', 'limited', dailymed(SET_PEPCID_ICY, METH.flavors)),
-      cleared(SET_PEPCID_ICY, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_PEPCID_ICY, METH.carnaubaT133u)),
       cleared(SET_PEPCID_ICY, 'Hypromellose'),
       cleared(SET_PEPCID_ICY, 'Magnesium stearate'),
       cleared(SET_PEPCID_ICY, 'Microcrystalline cellulose'),
@@ -1051,7 +1053,7 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
         'cleared',
         dailymed(SET_EQUATE_FAM, METH.sio2),
       ),
-      cleared(SET_EQUATE_FAM, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_EQUATE_FAM, METH.carnaubaT133u)),
       cleared(SET_EQUATE_FAM, 'Croscarmellose sodium'),
       cleared(SET_EQUATE_FAM, 'Lactose monohydrate'),
       cleared(SET_EQUATE_FAM, 'Magnesium stearate'),

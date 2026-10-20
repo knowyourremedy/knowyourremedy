@@ -148,10 +148,10 @@ const METH = {
   hpmc: 'Methodology §5 Cleared (hypromellose / hydroxypropyl methylcellulose / HPC)',
   stearic:
     'Methodology §5 Cleared (magnesium stearate / stearic acid / calcium stearate / vegetable stearate)',
-  carnauba: 'Methodology §5 Cleared (carnauba wax — wax family)',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   dical:
     'Methodology §5 Cleared (dicalcium phosphate / tricalcium phosphate / dibasic calcium phosphate — mineral fillers / buffers)',
-  tartaric: 'Methodology §5 Cleared (tartaric acid / DL-tartaric acid — organic acid with citric)',
+  tartaric: 'Methodology §5 Cleared (DL-Tartaric Acid — founder lock t132u Oct 20, 2026; §4 re-eval).',
   pva: 'Methodology §5 Cleared (polyvinyl alcohol as oral coating — locked Sept 15, 2026)',
   povidone: 'Methodology §5 Cleared (povidone / copovidone / crospovidone — locked housekeeping)',
   starchNamed:

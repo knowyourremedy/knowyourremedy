@@ -19,7 +19,7 @@ const METH = {
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   silica: 'Methodology §5 Caution (silicon dioxide).',
   sodiumAscorbate: 'Methodology §5 Cleared (sodium ascorbate). Same ascorbate family as calcium ascorbate. Not a new grade.',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
 } as const;
 
 function flag(name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {
@@ -49,7 +49,7 @@ const FLAGS: IngredientFlag[] = [
   flag('Microcrystalline cellulose', 'cleared', METH.mcc),
   flag('Silicon dioxide', 'limited', METH.silica),
   flag('Sodium ascorbate', 'cleared', METH.sodiumAscorbate),
-  flag('Sucrose', 'limited', METH.sucrose),
+  flag('Sucrose', 'cleared', METH.sucrose),
 ];
 
 export const BATCH180_KYR6C_MIRAGUT: RatingRecord[] = [

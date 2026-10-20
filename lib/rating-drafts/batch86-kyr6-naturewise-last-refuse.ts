@@ -53,7 +53,7 @@ const LIMITED_STACK =
 const METH = {
   behenoyl: "Methodology §5 Limited-risk (behenoyl polyoxyl-8 glycerides — exact token; PEG-style glyceride; Caution; not High; locked Sept 23, 2026). Distinct from Cleared glyceryl dibehenate and from Cleared polyoxyl castor oil. Not Avoid.",
   dical: "Methodology §5 Cleared (dicalcium phosphate / calcium phosphate as filler).",
-  flavors: "Methodology §5 Limited-risk (natural flavors / named simple flavors — undisclosed or named flavor mixtures). Label string natural peppermint flavor sits on this row.",
+  flavors: "Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).",
   glycerin: "Methodology §5 Cleared (glycerin / vegetable glycerin / organic vegetable glycerin).",
   inulin: "Methodology §5 Cleared (inulin — food fiber; locked Sept 14, 2026 housekeeping). Not a flag.",
   isomalt: "Methodology §5 Limited-risk (isomalt — oral sugar alcohol; locked Sept 15, 2026).",
@@ -185,7 +185,7 @@ const COMPACT: Compact[] = [
       ["Inulin", "cleared", "inulin"],
       ["Behenoyl polyoxyl-8 glycerides", "limited", "behenoyl"],
       ["Dicalcium phosphate", "cleared", "dical"],
-      ["Natural peppermint flavor", "limited", "flavors"],
+      ["Natural peppermint flavor", "cleared", "flavors"],
       ["Stevia leaf extract", "limited", "steviaLeaf"],
     ],
     verdict: "caution",

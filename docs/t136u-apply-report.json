@@ -1,0 +1,37 @@
+{
+  "step2": {
+    "riskRowsTargeted": 83,
+    "patchedRowCount": 83,
+    "patchMiss": [],
+    "gradeChanges": [],
+    "protectedFilesEdited": [
+      "lib/rating-drafts/batch101-kyr6-healtha2z-token-backfill-3.ts",
+      "lib/rating-drafts/batch102-kyr6-healtha2z-token-backfill-4.ts",
+      "lib/rating-drafts/batch103-kyr6-healtha2z-token-backfill-5.ts",
+      "lib/rating-drafts/batch105-kyr6-healtha2z-three-gummies.ts",
+      "lib/rating-drafts/batch106-kyr6b-amazon-3p-time-cap.ts",
+      "lib/rating-drafts/batch107-kyr6b-timecap-token-backfill.ts",
+      "lib/rating-drafts/batch108-kyr6b-timecap-fdc-aliases.ts",
+      "lib/rating-drafts/batch136-kyr6b-claritin-first-slice.ts",
+      "lib/rating-drafts/batch137-kyr6b-allegra-first-slice.ts",
+      "lib/rating-drafts/batch86-kyr6-naturewise-last-refuse.ts"
+    ]
+  },
+  "step3": {
+    "citationPatchesApprox": 540,
+    "finalSourceOnlyDrift": 174,
+    "patchMissExtract": [
+      "genexa-allergy-care",
+      "tylenol-pm-es",
+      "pure-encapsulations-melatonin-sr-3mg",
+      "genuine-bayer-aspirin-325",
+      "advil-targeted-relief-cream",
+      "goodsense-childrens-ibuprofen-chew"
+    ],
+    "patchMissNote": "extractBlock miss on const-id alias rows; genexa-allergy-care carnauba (organic) fixed manually; others had no remaining drift at land."
+  },
+  "postApply": {
+    "riskDrift": 0,
+    "importSmoke": "ok"
+  }
+}

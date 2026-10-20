@@ -50,7 +50,7 @@ const LIMITED_STACK =
 const DM = 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=';
 
 const METH = {
-  carnauba: 'Methodology §5 Cleared (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium).',
   dye: 'Methodology §5 High (FD&C / D&C synthetic dye, including lakes). The printed spelling is the flag name.',
   hpmc: 'Methodology §5 Cleared (hypromellose / HPMC).',

@@ -84,6 +84,7 @@ const SORBITAN_TAP =
   'Sorbitan (plain / sorbitan esters) is the locked Caution row — polysorbate neighborhood, not additive-scored, not Avoid. It is not the sugar-alcohol Limited row.';
 
 const METH = {
+  carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
@@ -383,7 +384,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
       flag('Talc', 'high', dailymed(SET.alevePm, METH.talc)),
       flag('Titanium dioxide', 'high', dailymed(SET.alevePm, METH.tio2)),
       flag('Polyethylene glycol', 'moderate', dailymed(SET.alevePm, METH.peg)),
-      cleared(SET.alevePm, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.alevePm, METH.carnaubaT133u)),
       cleared(SET.alevePm, 'Hypromellose'),
       cleared(SET.alevePm, 'Magnesium stearate'),
       cleared(SET.alevePm, 'Microcrystalline cellulose'),
@@ -679,7 +680,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
         'cleared',
         dailymed(SET.advilJrCoated, METH.sio2),
       ),
-      cleared(SET.advilJrCoated, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.advilJrCoated, METH.carnaubaT133u)),
       cleared(SET.advilJrCoated, 'Corn starch'),
       cleared(SET.advilJrCoated, 'Croscarmellose sodium'),
       cleared(SET.advilJrCoated, 'Microcrystalline cellulose'),
@@ -842,7 +843,7 @@ export const BATCH39_TYLENOL_ADVIL_ALEVE_HOLES: RatingRecord[] = [
         dailymed(SET.advilFilm, METH.sls),
       ),
       flag('Copovidone', 'cleared', dailymed(SET.advilFilm, METH.copovidone)),
-      cleared(SET.advilFilm, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.advilFilm, METH.carnaubaT133u)),
       cleared(SET.advilFilm, 'Hypromellose'),
       cleared(SET.advilFilm, 'Microcrystalline cellulose'),
     ],

@@ -59,7 +59,7 @@ const METH = {
   blackInk:
     'Methodology §5 Caution (pharmaceutical ink). Black edible ink maps here (Sept 25, 2026, 8e480c3). Not a new grade. Distinct from Caution edible ink and white edible ink. Not Avoid.',
   calciumCarb: 'Methodology §5 Cleared (calcium carbonate — mineral filler).',
-  carnauba: 'Methodology §5 Cleared (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citric:
     'Methodology §5 Cleared (citric acid / citrate salts as fillers or buffers).',
   cornStarch: 'Methodology §5 Cleared (corn starch — named simple starch).',
@@ -130,7 +130,7 @@ const METH = {
   sss:
     'Methodology §5 Caution (sorbitol sorbitan solution). Sorbitol sorbitan maps here (Sept 25, 2026, 8e480c3). Alias the family. Not a new grade. Not Avoid.',
   stearic: 'Methodology §5 Cleared (stearic acid).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
   tio2: 'Methodology §5 High (titanium dioxide).',
   triacetin: 'Methodology §5 Cleared (triacetin — tablet/caplet coating plasticizer). Not a grade driver.',
@@ -335,7 +335,7 @@ const BISA404_FLAGS: Compact['flags'] = [
   ['sodium benzoate', 'limited', 'sodiumBenzoate'],
   ['sodium bicarbonate', 'cleared', 'sodiumBicarb'],
   ['stearic acid', 'cleared', 'stearic'],
-  ['sucrose', 'limited', 'sucrose'],
+  ['sucrose', 'cleared', 'sucrose'],
   ['talc', 'high', 'talc'],
   ['titanium dioxide', 'high', 'tio2'],
   ['triacetin', 'cleared', 'triacetin'],

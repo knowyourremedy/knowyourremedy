@@ -58,7 +58,7 @@ const METH = {
     'Methodology §5 Cleared (acacia / gum arabic). Acadia is this spelling (Sept 25, 2026). Same Cleared lock. Not Caution. Not a new grade.',
   acaciaExact: 'Methodology §5 Cleared (acacia / gum arabic).',
   carnauba:
-    'Methodology §5 Caution (carnauba wax — Sept 25, 2026). Not the old Cleared wax row. Not Avoid.',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   caso4:
     'Methodology §5 Cleared (calcium sulfate). Calcium sulfate anhydrous and Anhydrous Calcium Sulfate map here (Sept 25, 2026). Same salt neighborhood as sodium sulfate. Not SLS. Not a new grade.',
   corn: 'Methodology §5 Cleared (corn starch — named simple starch).',
@@ -225,7 +225,7 @@ const ESO: Compact['flags'] = [
 
 const ASA: Compact['flags'] = [
   ['anhydrous lactose', 'cleared', 'lactose'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['D&C yellow #10 aluminum lake', 'high', 'dye'],
@@ -245,7 +245,7 @@ const ASA: Compact['flags'] = [
 const SENNA: Compact['flags'] = [
   ['acacia', 'cleared', 'acaciaExact'],
   ['calcium sulfate anhydrous', 'cleared', 'caso4'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['corn starch', 'cleared', 'corn'],
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
@@ -271,7 +271,7 @@ const BISA: Compact['flags'] = [
   ['Acadia', 'cleared', 'acacia'],
   ['Anhydrous Calcium Sulfate', 'cleared', 'caso4'],
   ['Anhydrous Lactose', 'cleared', 'lactose'],
-  ['Carnauba Wax', 'limited', 'carnauba'],
+  ['Carnauba Wax', 'cleared', 'carnauba'],
   ['Colloidal Silicon Dioxide', 'limited', 'sio2'],
   ['Corn Starch', 'cleared', 'corn'],
   ['D&C Yellow #10 Aluminum Lake', 'high', 'dye'],

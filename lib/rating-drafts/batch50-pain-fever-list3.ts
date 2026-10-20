@@ -211,7 +211,7 @@ const METH = {
   safflower: `Methodology §5 Cleared (safflower oil / soybean oil as cream or ointment base — named single oil fill; not gummy High; locked Sept 15, 2026). ${CREAM_OIL_TAP}`,
   fattyAcid:
     'Methodology §5 Cleared (arachidic acid / lauric acid / linoleic acid / linolenic acid / myristic acid / palmitic acid — exact fatty-acid tokens; locked Sept 15, 2026)',
-  hco: 'Methodology §5 Cleared (hydrogenated castor oil — exact INCI; distinct from the castor / polyoxyl castor row; locked Sept 15, 2026)',
+  hco: 'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   glycerylSE:
     'Methodology §5 Cleared (glyceryl stearate SE — exact INCI; distinct from glyceryl stearate; locked Sept 15, 2026)',
   glycerylDistearate:

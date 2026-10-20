@@ -270,6 +270,8 @@ const METH = {
     'Not in Methodology §5 — ungraded (v1.6 intake). Mentioned as present; not graded on the spot; not used to invent Clean or Avoid',
   pgTopical:
     'Propylene glycol is oral-scoped in Methodology §5 — not scored as Moderate on this topical label',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cleared: 'Methodology §5 Cleared',
 } as const;
 
@@ -638,7 +640,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R4, 'Hypromellose'),
       cleared(SET_R4, 'Povidone'),
       cleared(SET_R4, 'Stearic acid'),
-      cleared(SET_R4, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_R4, METH.carnaubaT133u)),
     ],
     verdict: 'caution',
 
@@ -666,7 +668,7 @@ export const BATCH29_DOLLAR_STORE: RatingRecord[] = [
       cleared(SET_R5, 'Hypromellose'),
       cleared(SET_R5, 'Povidone'),
       cleared(SET_R5, 'Stearic acid'),
-      cleared(SET_R5, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET_R5, METH.carnaubaT133u)),
     ],
     verdict: 'caution',
 

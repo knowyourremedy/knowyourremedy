@@ -102,7 +102,7 @@ const METH = {
   riceExtract:
     'Methodology §5 Limited-risk (unspecified rice extract — Caution/Limited opacity; label did not name hull, bran, or concentrate)',
   mctUnlabeled:
-    'Methodology §5 Limited-risk / Caution opacity (unlabeled MCT — coconut vs palm unknown; not Avoid; founder lock)',
+    'Methodology §5 Limited (MCT in a gummy — founder lock t132u Oct 20, 2026; no plant source named).',
   mctCoconut:
     'Methodology §5 — MCT from coconut is not gummy seed/industrial-oil High (founder lock)',
   peaProtein:

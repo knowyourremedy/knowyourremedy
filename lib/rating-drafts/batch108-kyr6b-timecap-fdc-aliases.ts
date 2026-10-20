@@ -53,7 +53,7 @@ const STAMP = 'Sept 25, 2026 FD-C dye aliases (01dc193)';
 const METH = {
   acacia: 'Methodology §5 Cleared (acacia / gum arabic).',
   carnauba:
-    'Methodology §5 Caution (carnauba wax — Sept 25, 2026). Not the old Cleared wax row. Not Avoid.',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   caso4:
     'Methodology §5 Cleared (calcium sulfate — Sept 25, 2026). Same salt neighborhood as sodium sulfate. Not SLS.',
   corn: 'Methodology §5 Cleared (corn starch — named simple starch).',
@@ -182,7 +182,7 @@ function dm(
 }
 
 const APAP: Compact['flags'] = [
-  ['CARNAUBA WAX', 'limited', 'carnauba'],
+  ['CARNAUBA WAX', 'cleared', 'carnauba'],
   ['FD-C RED NO. 40 ALUMINUM LAKE', 'high', 'dye'],
   ['HYPROMELLOSE', 'cleared', 'hpmc'],
   ['POLYETHYLENE GLYCOL(PEG) 400', 'moderate', 'peg'],
@@ -213,7 +213,7 @@ const RAPID: Compact['flags'] = [
 const PSE: Compact['flags'] = [
   ['acacia', 'cleared', 'acacia'],
   ['calcium sulfate', 'cleared', 'caso4'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['corn starch', 'cleared', 'corn'],
   ['D-C red no. 27', 'high', 'dye'],

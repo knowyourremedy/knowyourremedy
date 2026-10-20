@@ -75,7 +75,7 @@ const METH = {
   gms: 'Methodology §5 Cleared (glyceryl monostearate / GMS). Distinct from Caution mono- and diglycerides.',
   pg: 'Methodology §5 Moderate (propylene glycol, oral).',
   ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  carnauba: 'Methodology §5 Caution (carnauba wax — Sept 25, 2026). Not the old Cleared wax row. Not Avoid.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   iron: 'Methodology §5 Caution (iron oxide as color). Iron oxide black, iron oxide red, ferric oxide red, ferric oxide yellow, and ferrosoferric oxide sit on this row. Not Avoid.',
   koh: 'Methodology §5 Caution (potassium hydroxide — Sept 25, 2026). Distinct from Cleared sodium hydroxide. Not Avoid.',
   ammonium: 'Methodology §5 Caution (ammonium hydroxide). Distinct from strong ammonia solution. Not Avoid.',
@@ -241,7 +241,7 @@ const APAP_DYE_FREE: Compact['flags'] = [
 ];
 
 const APAP_ER: Compact['flags'] = [
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['hydroxyethyl cellulose', 'cleared', 'hec'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
@@ -268,7 +268,7 @@ const DAY_COLD: Compact['flags'] = [
 ];
 
 const FAMOTIDINE: Compact['flags'] = [
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['hydroxypropyl cellulose', 'cleared', 'hpc'],
   ['hypromellose', 'cleared', 'hpmc'],
@@ -291,7 +291,7 @@ const MUCOSA: Compact['flags'] = [
 ];
 
 const DPH: Compact['flags'] = [
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['D&C red no 27 aluminum lake', 'high', 'dye'],
@@ -360,7 +360,7 @@ const SENNA_86: Compact['flags'] = [
 ];
 
 const SENNA_S: Compact['flags'] = [
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['dibasic calcium phosphate dihydrate', 'cleared', 'dical'],

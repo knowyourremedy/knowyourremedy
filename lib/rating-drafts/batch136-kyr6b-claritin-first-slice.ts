@@ -23,6 +23,7 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 const D_RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Pharmacy'] as const;
 
 const METH = {
+  carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   dyes: 'Methodology §5 High (FD&C / D&C dyes, including lake forms). Avoid.',
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
@@ -36,7 +37,7 @@ const METH = {
   maltitol: 'Methodology §5 Limited (maltitol).',
   flavor: 'Methodology §5 Limited (flavor / flavors). Menthol on an inactive line maps here.',
   benzoate: 'Methodology §5 Limited (sodium benzoate).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   mct: 'Methodology §5 Limited (unlabeled MCT). Caprylic/capric glycerides names no plant. Not Medium Chain Glycerides (Modified Coconut, Palm Oil).',
   ink: 'Methodology §5 Caution (pharmaceutical ink).',
   carmine: 'Methodology §5 Caution (carmine). Not Avoid.',
@@ -180,8 +181,8 @@ function d24EcFlags(): IngredientFlag[] {
     flag('Polyethylene glycol', 'moderate', cite(D24_EC_SET, METH.peg)),
     flag('Pharmaceutical ink', 'limited', cite(D24_EC_SET, METH.ink)),
     flag('Silicon dioxide', 'limited', cite(D24_EC_SET, METH.sio2)),
-    flag('Sucrose', 'limited', cite(D24_EC_SET, METH.sucrose)),
-    cleared(D24_EC_SET, 'Carnauba wax'),
+    flag('Sucrose', 'cleared', cite(D24_EC_SET, METH.sucrose)),
+    flag('Carnauba wax', 'cleared', cite(D24_EC_SET, METH.carnaubaT133u)),
     cleared(D24_EC_SET, 'Dibasic calcium phosphate dihydrate'),
     cleared(D24_EC_SET, 'Ethylcellulose'),
     cleared(D24_EC_SET, 'Hydroxypropyl cellulose'),

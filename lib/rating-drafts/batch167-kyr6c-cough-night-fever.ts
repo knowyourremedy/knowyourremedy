@@ -38,7 +38,7 @@ const METH = {
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
   salt: 'Methodology §5 Cleared (sodium chloride, saline base).',
   sorbate: 'Methodology §5 Limited (potassium sorbate, synthetic preservative).',
-  sucrose: 'Methodology §5 Limited (sucrose).',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   water: 'Methodology §5 Cleared (water / purified water).',
   xanthan: 'Methodology §5 Cleared (xanthan gum).',
 } as const;
@@ -247,7 +247,7 @@ export const BATCH167_KYR6C_COUGH_NIGHT_FEVER: RatingRecord[] = [
       flag(FEVER, 'Glycerin', 'cleared', METH.glycerin),
       flag(FEVER, 'Natural berry flavor', 'cleared', METH.flavorNamed),
       flag(FEVER, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-      flag(FEVER, 'Sucrose', 'limited', METH.sucrose),
+      flag(FEVER, 'Sucrose', 'cleared', METH.sucrose),
       flag(FEVER, 'Sodium benzoate', 'limited', METH.benzoate),
       flag(FEVER, 'Water', 'cleared', METH.water),
       flag(FEVER, 'Xanthan gum', 'cleared', METH.xanthan),

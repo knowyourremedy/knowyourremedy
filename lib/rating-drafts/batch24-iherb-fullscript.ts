@@ -113,7 +113,7 @@ const SUPPLEMENT = 'Supplement' as const;
 const METH = {
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   namedFruitFlavor:
-    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 prior-lock re-eval).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   tocopherols:

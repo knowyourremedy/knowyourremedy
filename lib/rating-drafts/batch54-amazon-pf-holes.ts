@@ -176,6 +176,7 @@ const JUICE_COLOR_TAP =
   'Named fruit-or-vegetable juice concentrate as COLOR is Cleared. Distinct from Cleared fruit puree and from juice concentrate when it is the fruit. The Sept 15 Limited gummy-base lock is struck.';
 
 const METH = {
+  carnaubaT133u: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   dyes:
     'Methodology §5 High-tier (synthetic dyes — FD&C/D&C colors, aluminum lakes)',
   tio2: 'Methodology §5 High-tier (titanium dioxide — E171; EU food-additive ban after EFSA genotoxicity data-gap). No topical exception on this row.',
@@ -1114,7 +1115,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         dailymed(SET.gsKidsChew, METH.sio2),
       ),
       flag('Succinic acid', 'cleared', dailymed(SET.gsKidsChew, METH.succinic)),
-      cleared(SET.gsKidsChew, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.gsKidsChew, METH.carnaubaT133u)),
       cleared(SET.gsKidsChew, 'Croscarmellose sodium'),
       cleared(SET.gsKidsChew, 'Hypromellose'),
       cleared(SET.gsKidsChew, 'Magnesium stearate'),
@@ -1205,7 +1206,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Propylene glycol', 'moderate', dailymed(SET.midol, METH.pg)),
       flag('Shellac', 'cleared', dailymed(SET.midol, METH.shellac)),
       flag('Triacetin', 'cleared', dailymed(SET.midol, METH.triacetin)),
-      cleared(SET.midol, 'Carnauba wax'),
+      flag('Carnauba wax', 'cleared', dailymed(SET.midol, METH.carnaubaT133u)),
       cleared(SET.midol, 'Croscarmellose sodium'),
       cleared(SET.midol, 'Hypromellose'),
       cleared(SET.midol, 'Magnesium stearate'),
