@@ -28,7 +28,7 @@
 // - now-turmeric-curcumin-bioperine (batch54, UPC 733739047922)
 //
 // TALLY (unverified drafts in THIS file): 705 rows —
-// Clean 201 / Caution 482 / Avoid 22.
+// Clean 205 / Caution 478 / Avoid 22.
 // NEW 604 / REUSE-formula 101 / SKIPPED + REFUSED
 // listed at the bottom. TALLY is asserted at the bottom.
 
@@ -126,6 +126,9 @@ const METH = {
   choline: 'Methodology §5 Cleared (choline bitartrate as inactive)',
   tec: 'Methodology §5 Cleared (triethyl citrate)',
   gelatin: 'Methodology §5 Cleared (gelatin / beeswax / carnauba / purified water)',
+  beeswax: 'Methodology §5 Cleared (beeswax — softgel shell wax)',
+  carnaubaT133u:
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin / organic glycerin)',
   water: 'Methodology §5 Cleared (purified / distilled / deionized water)',
   lecithin: 'Methodology §5 Cleared (sunflower / soy / canola lecithin)',
@@ -1986,9 +1989,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Odorless Garlic", strength: "label serving" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Odorless Garlic, 250 Softgels (25 mg per Softgel) (https://www.vitacost.com/products/now-foods-odorless-garlic-250-softgels-25-mg-per-softgel-730) other-ingredients: Rice bran oil, softgel capsule [bovine gelatin (bse-free), glycerin, water], beeswax, soy lecithin and silicon dioxide. UPC-A 733739018083. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -4194,9 +4197,9 @@ const COMPACT: Compact[] = [
     form: "capsule",
     productType: VITAMIN,
     actives: [{ name: "Nicotinamide Adenine Dinucleotide", strength: "10mg" }, { name: "D-Ribose (Bioenergy Ribose ®", strength: "200mg" }],
-    flags: [["Hypromellose (cellulose capsule)", "cleared", "hpmc"], ["Microcrystalline cellulose", "cleared", "mcc"], ["Stearic acid", "cleared", "stearate"], ["Magnesium stearate", "cleared", "stearate"], ["Silicon dioxide", "cleared", "sio2"], ["Beeswax / carnauba wax", "cleared", "gelatin"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Hypromellose (cellulose capsule)", "cleared", "hpmc"], ["Microcrystalline cellulose", "cleared", "mcc"], ["Stearic acid", "cleared", "stearate"], ["Magnesium stearate", "cleared", "stearate"], ["Silicon dioxide", "cleared", "sio2"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, NADH, 10 mg, 60 Capsules (https://www.vitacost.com/products/now-foods-nadh-10-mg-60-capsules-22232) other-ingredients: Hypromellose (cellulose capsule), microcrystalline cellulose, stearic acid (vegetable source), magnesium stearate (vegetable source), silicon dioxide and beeswax. UPC-A 733739031037. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -5570,9 +5573,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Odorless Garlic, Concentrated Extract", strength: "label serving" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Lecithin", "cleared", "lecithin"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Lecithin", "cleared", "lecithin"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, Odorless Garlic, Concentrated Extract, 100 Softgels (25 mg per Softgel) (https://www.vitacost.com/products/now-foods-odorless-garlic-concentrated-extract-100-softgels-25-mg-per-softgel-121506) other-ingredients: Rice bran oil, softgel capsule [bovine gelatin (bse-free), glycerin, water], beeswax, soy lecithin and silicon dioxide. UPC-A 733739018076. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -9059,9 +9062,9 @@ const COMPACT: Compact[] = [
     form: "softgel",
     productType: VITAMIN,
     actives: [{ name: "Corosolic Acid", strength: "1.33mg" }],
-    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax / carnauba wax", "cleared", "gelatin"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob extract", "cleared", "carobExtract"], ["Zinc oxide", "cleared", "zincOxide"]],
-    verdict: "caution",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver is silicon dioxide / silica (0-pt nanoparticle Caution cap). Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High.",
+    flags: [["Rice bran oil", "cleared", "oilFill"], ["Beeswax", "cleared", "beeswax"], ["Carnauba wax", "cleared", "carnaubaT133u"], ["Silicon dioxide", "cleared", "sio2"], ["Glycerin", "cleared", "glycerin"], ["Water", "cleared", "water"], ["Carob extract", "cleared", "carobExtract"], ["Zinc oxide", "cleared", "zincOxide"]],
+    verdict: "clean",
+    note: "FOUNDER-LOCK DRAFT: Clean. Pinned Other Ingredients are Cleared-class only (HPMC / gelatin / glycerin / water / stearate / named oil fill / fiber as present). Carnauba wax tab carries founder lock t133u Cleared (§4 prior-lock re-eval). Named oil as softgel fill is not the gummy seed-oil High rule.",
     cite: "Current Vitacost NOW Foods, GlucoFit®, 60 Softgels (1.33 mg per Softgel) (https://www.vitacost.com/products/now-foods-glucofit-60-softgels-1-33-mg-per-softgel-603) other-ingredients: Softgel capsule [bovine gelatin (bse-free), glycerin, water, carob extract, zinc oxide], rice bran oil, beeswax and silicon dioxide. UPC-A 733739030955. Live Amazon US / nowfoods.com exact pack via UPC 733739… when listed.",
   },
   {
@@ -11904,10 +11907,10 @@ export const BATCH71_OIL_HUNT: { name: string; url: string }[] = [
 
 const _ROWS = BATCH71_KYR6_AMAZON_3P_NOW;
 if (_ROWS.length !== 705) throw new Error('batch71 tally drift: expected 705 rows');
-if (_ROWS.filter((r) => r.verdict === 'clean').length !== 201) {
+if (_ROWS.filter((r) => r.verdict === 'clean').length !== 205) {
   throw new Error('batch71 Clean tally drift');
 }
-if (_ROWS.filter((r) => r.verdict === 'caution').length !== 482) {
+if (_ROWS.filter((r) => r.verdict === 'caution').length !== 478) {
   throw new Error('batch71 Caution tally drift');
 }
 if (_ROWS.filter((r) => r.verdict === 'avoid').length !== 22) {
