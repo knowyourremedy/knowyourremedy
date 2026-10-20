@@ -2887,6 +2887,16 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // HMB + vitamin D3 named vanilla, 30 servings. The brand-site tub for
   // SKU 076280110098 is vanilla 4.2 oz and prints 90 servings. Do not glue it.
   'solaray-b129-076280110098': brandMark('solaray-mark.png'),
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 1.
+  // Official Solaray wordmark already on disk. Not a text tile. Not a letter.
+  // Flaxseed oil 1000 mg barcode 076280008074. The brand-site variant is
+  // titled 140 ct, and the facts panel is about 46 servings of 3 softgels.
+  // The catalog row is 240 softgels. Do not glue the 140.
+  'solaray-b131-076280008074': brandMark('solaray-mark.png'),
+  // Official Nature's Bounty wordmark. Not a text tile. Not a letter.
+  // Women's 50+ gummies row is 180. The live brand-site bottle prints 160.
+  // Do not glue the 160. Per-id so other Nature's Bounty rows stay letters.
+  'natures-bounty-b187-women-50-180': brandMark('natures-bounty-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -16745,6 +16755,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'solaray-b129-076280043006': catalogShot('solaray-b129-076280043006.jpg'),
   // Magnesium citrate 400 mg, 180 vegcaps. Not the 90.
   'solaray-b129-076280374025': catalogShot('solaray-b129-076280374025.jpg'),
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // GTF chromium 200 mcg, 200 vegcaps. Not the 100.
+  'solaray-b129-076280045918': catalogShot('solaray-b129-076280045918.jpg'),
+  // Potassium 99 mg, 200 vegcaps. Not the 100.
+  'solaray-b129-076280046717': catalogShot('solaray-b129-076280046717.jpg'),
+  // Vitamin B-6 timed-release 100 mg, 120 vegcaps. Not the 60.
+  'solaray-b129-076280127430': catalogShot('solaray-b129-076280127430.jpg'),
+  // Potassium asporotate 99 mg, 200 capsules. Not the 100.
+  'solaray-b129-076280046618': catalogShot('solaray-b129-076280046618.jpg'),
+  // Flaxseed oil 1000 mg, 100 softgels. Not the 140-count bottle on the same barcode family.
+  'solaray-b130-076280008029': catalogShot('solaray-b130-076280008029.jpg'),
+  // Oil of oregano 150 mg, 120 softgels. Not the 60.
+  'solaray-b130-X0042AF2L7': catalogShot('solaray-b130-X0042AF2L7.jpg'),
+  // Astaxanthin 1 mg, 60 softgels. Not the 4 mg.
+  'solaray-b131-076280041026': catalogShot('solaray-b131-076280041026.jpg'),
+  // Sprouts N-acetyl cysteine 600 mg, 60 capsules.
+  'sprouts-b139-nac-600-60': catalogShot('sprouts-b139-nac-600-60.jpg'),
+  // Sprouts magnesium glycinate 400 mg, 90 capsules. Not the 180.
+  'sprouts-b139-mag-glycinate-400-90': catalogShot('sprouts-b139-mag-glycinate-400-90.jpg'),
+  // Sprouts neem, 90 capsules.
+  'sprouts-b139-neem-90': catalogShot('sprouts-b139-neem-90.jpg'),
+  // Sprouts blood sugar harmony, 90 capsules.
+  'sprouts-b139-blood-sugar-harmony-90': catalogShot('sprouts-b139-blood-sugar-harmony-90.jpg'),
+  // Nature's Bounty gentle iron 28 mg, 90 capsules.
+  'natures-bounty-b187-gentle-iron-90': catalogShot('natures-bounty-b187-gentle-iron-90.jpg'),
+  // Nature's Bounty magnesium citrate 150 mg, 90 capsules.
+  'natures-bounty-b187-mag-citrate-90': catalogShot('natures-bounty-b187-mag-citrate-90.jpg'),
+  // Nature's Bounty mushroom complex, 60 capsules.
+  'natures-bounty-b187-mushroom-60': catalogShot('natures-bounty-b187-mushroom-60.jpg'),
+  // Nature's Bounty magnesium L-threonate, 90 capsules.
+  'natures-bounty-b187-mag-threonate-90': catalogShot('natures-bounty-b187-mag-threonate-90.jpg'),
+  // Slow Fe slow release iron, 60 tablets. Not the 30.
+  'slowfe-b187-iron-60': catalogShot('slowfe-b187-iron-60.jpg'),
+  // Caltrate 600+D3, 60 tablets. Not the 120 or the 200.
+  'caltrate-b187-600-d3-60': catalogShot('caltrate-b187-600-d3-60.jpg'),
+  // Caltrate 600+D3, 200 tablets. Not the 60 or the 120.
+  'caltrate-b187-600-d3-200': catalogShot('caltrate-b187-600-d3-200.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -17740,7 +17788,7 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Dandelion root 180 is not the 100. Own carton.
   'solaray-b129-076280012118',
   // Vitamins night run 2026-10-19 6:45 AM PT batch 1.
-  // Oil of oregano 120 shares the 60-count formula. Own carton later.
+  // Oil of oregano 120 shares the 60-count formula. Own carton now.
   // Do not inherit the 60.
   'solaray-b130-X0042AF2L7',
 ]);
@@ -36573,8 +36621,16 @@ assertBrandMark(
     formulaId: 'solaray-b126-076280045901',
     brand: 'Solaray',
   });
-  if (!gtf200?.url.startsWith('data:image/svg+xml') || gtf200.verifiedSku) {
-    throw new Error('solaray-b129-076280045918 stays a letter until its own carton is attempted');
+  if (!gtf200?.verifiedSku || !gtf200.url.endsWith('/solaray-b129-076280045918.jpg')) {
+    throw new Error('solaray-b129-076280045918 must keep its own 200-count carton');
+  }
+  const gtf100 = previewOverlayImage({
+    id: 'solaray-b126-076280045901',
+    formulaId: 'solaray-b126-076280045901',
+    brand: 'Solaray',
+  });
+  if (!gtf100?.verifiedSku || gtf100.url === gtf200.url) {
+    throw new Error('GTF chromium 100 and 200 must not share a carton');
   }
 }
 
@@ -36887,9 +36943,8 @@ assertBrandMark(
       ['solaray-b128-076280131765', 'solaray-b128-076280045833', 'Solaray'],
     ],
   ];
-  const letterUntilAttemptedG = new Set([
-    // Hair Nutrients 120 now has its own carton.
-    'solaray-b129-076280046618',
+  const letterUntilAttemptedG = new Set<string>([
+    // Potassium asporotate 200 now has its own carton.
   ]);
   for (const group of groups1019g) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -37046,8 +37101,8 @@ assertBrandMark(
       ['solaray-b129-076280047912', 'solaray-b129-076280047912', 'Solaray'],
     ],
   ];
-  const letterUntilAttemptedI = new Set([
-    'solaray-b130-X0042AF2L7',
+  const letterUntilAttemptedI = new Set<string>([
+    // Oil of oregano 120 now has its own carton.
   ]);
   for (const group of groups1019i) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -37156,5 +37211,85 @@ assertBrandMark(
       const image = previewOverlayImage({ id, formulaId, brand });
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-20 1:45 AM PT batch 1.
+  // Sibling counts and strengths keep their own fronts.
+  // Flaxseed 240 and Women's 50+ 180 stay on marks.
+  const batch1020a: [string, string, string][] = [
+    ['solaray-b129-076280045918', 'Solaray', 'solaray-b129-076280045918.jpg'],
+    ['solaray-b129-076280046717', 'Solaray', 'solaray-b129-076280046717.jpg'],
+    ['solaray-b129-076280127430', 'Solaray', 'solaray-b129-076280127430.jpg'],
+    ['solaray-b129-076280046618', 'Solaray', 'solaray-b129-076280046618.jpg'],
+    ['solaray-b130-076280008029', 'Solaray', 'solaray-b130-076280008029.jpg'],
+    ['solaray-b130-X0042AF2L7', 'Solaray', 'solaray-b130-X0042AF2L7.jpg'],
+    ['solaray-b131-076280041026', 'Solaray', 'solaray-b131-076280041026.jpg'],
+    ['sprouts-b139-nac-600-60', 'Sprouts', 'sprouts-b139-nac-600-60.jpg'],
+    ['sprouts-b139-mag-glycinate-400-90', 'Sprouts', 'sprouts-b139-mag-glycinate-400-90.jpg'],
+    ['sprouts-b139-neem-90', 'Sprouts', 'sprouts-b139-neem-90.jpg'],
+    ['sprouts-b139-blood-sugar-harmony-90', 'Sprouts', 'sprouts-b139-blood-sugar-harmony-90.jpg'],
+    ['natures-bounty-b187-gentle-iron-90', "Nature's Bounty", 'natures-bounty-b187-gentle-iron-90.jpg'],
+    ['natures-bounty-b187-mag-citrate-90', "Nature's Bounty", 'natures-bounty-b187-mag-citrate-90.jpg'],
+    ['natures-bounty-b187-mushroom-60', "Nature's Bounty", 'natures-bounty-b187-mushroom-60.jpg'],
+    ['natures-bounty-b187-mag-threonate-90', "Nature's Bounty", 'natures-bounty-b187-mag-threonate-90.jpg'],
+    ['slowfe-b187-iron-60', 'Slow Fe', 'slowfe-b187-iron-60.jpg'],
+    ['caltrate-b187-600-d3-60', 'Caltrate', 'caltrate-b187-600-d3-60.jpg'],
+    ['caltrate-b187-600-d3-200', 'Caltrate', 'caltrate-b187-600-d3-200.jpg'],
+  ];
+  const seen1020a = new Set<string>();
+  for (const [id, brand, file] of batch1020a) {
+    if (seen1020a.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1020a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('solaray-b131-076280008074', 'Solaray', 'solaray-mark.png');
+  assertBrandMark('natures-bounty-b187-women-50-180', "Nature's Bounty", 'natures-bounty-mark.png');
+  const groups1020a: [string, string, string][][] = [
+    [
+      ['solaray-b126-076280045901', 'solaray-b126-076280045901', 'Solaray'],
+      ['solaray-b129-076280045918', 'solaray-b126-076280045901', 'Solaray'],
+    ],
+    [
+      ['solaray-b129-076280082524', 'solaray-b129-076280082524', 'Solaray'],
+      ['solaray-b130-X0042AF2L7', 'solaray-b129-076280082524', 'Solaray'],
+    ],
+    [
+      ['solaray-b126-076280127409', 'solaray-b126-076280127409', 'Solaray'],
+      ['solaray-b126-076280127423', 'solaray-b126-076280127423', 'Solaray'],
+      ['solaray-b129-076280127430', 'solaray-b129-076280127430', 'Solaray'],
+    ],
+    [
+      ['caltrate-b187-600-d3-60', 'caltrate-b187-600-d3', 'Caltrate'],
+      ['caltrate-b187-600-d3-200', 'caltrate-b187-600-d3', 'Caltrate'],
+    ],
+  ];
+  for (const group of groups1020a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a carton: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const flax240 = previewOverlayImage({
+    id: 'solaray-b131-076280008074',
+    formulaId: 'solaray-b131-076280008074',
+    brand: 'Solaray',
+  });
+  const flax100 = previewOverlayImage({
+    id: 'solaray-b130-076280008029',
+    formulaId: 'solaray-b130-076280008029',
+    brand: 'Solaray',
+  });
+  if (!flax240?.url.endsWith('/solaray-mark.png') || flax240.verifiedSku || flax240.url === flax100?.url) {
+    throw new Error('flaxseed 240 must use the Solaray mark, not the 100-count bottle');
   }
 }
