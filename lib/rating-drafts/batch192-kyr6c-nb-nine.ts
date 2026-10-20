@@ -12,7 +12,7 @@ const VITAMINS = 'Vitamins';
 
 const METH = {
   cane: 'Methodology §5 Cleared (cane sugar).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cellulose: 'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',
   citric: 'Methodology §5 Cleared (citric acid).',
   cornOil: 'Methodology §5 Cleared (corn oil, not the gummy base).',
@@ -36,7 +36,7 @@ const METH = {
   soyLecithin: 'Methodology §5 Cleared (lecithin / soy lecithin / sunflower lecithin).',
   stearic: 'Methodology §5 Cleared (stearic acid — stearate-family lubricant).',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
-  wax: 'Methodology §5 Caution (carnauba wax).',
+  wax: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   beeswax: 'Methodology §5 Cleared (yellow beeswax / beeswax).',
 } as const;
 
@@ -74,7 +74,7 @@ export const BATCH192_KYR6C_NB_NINE: RatingRecord[] = [
       flag(COLLAGEN_PECTIN_PANEL, 'Glucose Syrup', 'cleared', METH.glucose),
       flag(COLLAGEN_PECTIN_PANEL, 'Dicalcium Phosphate', 'cleared', METH.phosphate),
       flag(COLLAGEN_PECTIN_PANEL, 'Pectin', 'cleared', METH.pectin),
-      flag(COLLAGEN_PECTIN_PANEL, 'Carnauba Wax', 'limited', METH.carnauba),
+      flag(COLLAGEN_PECTIN_PANEL, 'Carnauba Wax', 'cleared', METH.carnauba),
       flag(COLLAGEN_PECTIN_PANEL, 'Citric Acid', 'cleared', METH.citric),
       flag(COLLAGEN_PECTIN_PANEL, 'Fruit and Vegetable Juice (Color)', 'cleared', METH.juiceColor),
       flag(COLLAGEN_PECTIN_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
@@ -105,7 +105,7 @@ export const BATCH192_KYR6C_NB_NINE: RatingRecord[] = [
       flag(ADV_PECTIN_PANEL, 'Glucose Syrup', 'cleared', METH.glucose),
       flag(ADV_PECTIN_PANEL, 'Dicalcium Phosphate', 'cleared', METH.phosphate),
       flag(ADV_PECTIN_PANEL, 'Pectin', 'cleared', METH.pectin),
-      flag(ADV_PECTIN_PANEL, 'Carnauba Wax', 'limited', METH.carnauba),
+      flag(ADV_PECTIN_PANEL, 'Carnauba Wax', 'cleared', METH.carnauba),
       flag(ADV_PECTIN_PANEL, 'Citric Acid', 'cleared', METH.citric),
       flag(ADV_PECTIN_PANEL, 'Lactic Acid', 'cleared', METH.lactic),
       flag(ADV_PECTIN_PANEL, 'Maltodextrin', 'limited', METH.maltodextrin),
@@ -245,7 +245,7 @@ export const BATCH192_KYR6C_NB_NINE: RatingRecord[] = [
       flag(B12_PANEL, 'Dicalcium Phosphate', 'cleared', METH.dicalcium),
       flag(B12_PANEL, 'Vegetable Cellulose', 'cleared', METH.cellulose),
       flag(B12_PANEL, 'Vegetable Stearic Acid', 'cleared', METH.stearic),
-      flag(B12_PANEL, 'Natural Palm Leaf Glaze', 'limited', METH.carnauba),
+      flag(B12_PANEL, 'Natural Palm Leaf Glaze', 'cleared', METH.carnauba),
       flag(B12_PANEL, 'Silica', 'limited', METH.silica),
       flag(B12_PANEL, 'Vegetable Magnesium Stearate', 'cleared', METH.magStearate),
     ],

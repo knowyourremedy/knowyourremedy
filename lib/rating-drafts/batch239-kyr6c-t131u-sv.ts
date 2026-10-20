@@ -17,7 +17,7 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin; glycemic bulking agent).',
   calciumSilicate: 'Methodology §5 Caution (calcium silicate — silicate family row).',
   cmcsodium: 'Methodology §5 Cleared (carboxymethylcellulose sodium / cellulose-family row).',
-  carnauba: 'Methodology §5 Cleared (carnauba wax — wax family row per DSLD-aligned panel).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium / cellulose-family disintegrant).',
   dextrin: 'Methodology §5 Caution (dextrin — starch-derived bulking agent).',
   dextrose: 'Methodology §5 Caution (dextrose / bare glucose family).',

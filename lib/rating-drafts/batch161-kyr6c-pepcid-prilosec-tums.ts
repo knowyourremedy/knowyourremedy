@@ -24,7 +24,7 @@ const DIGESTIVE = 'Digestive';
 const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
-  carnauba: 'Methodology §5 Caution (carnauba wax). Not the Avoid driver.',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Not the Avoid driver.',
   hpc: 'Methodology §5 Cleared (hydroxypropyl cellulose, HPMC family).',
   hpmc: 'Methodology §5 Cleared (hypromellose). Hypromellose 2910 is this USP type.',
   stearate: 'Methodology §5 Cleared (magnesium stearate).',
@@ -116,7 +116,7 @@ const CHEW = 'Target TCIN 94936251 tropical fruit smoothie 32-count drug facts';
 
 function originalLine(panel: string): IngredientFlag[] {
   return [
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
     flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -130,7 +130,7 @@ function originalLine(panel: string): IngredientFlag[] {
 
 function maxLine(panel: string): IngredientFlag[] {
   return [
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
     flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -143,7 +143,7 @@ function maxLine(panel: string): IngredientFlag[] {
 
 function icyLine(panel: string): IngredientFlag[] {
   return [
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
     flag(panel, 'FD&C Blue No. 1 aluminum lake', 'high', METH.dye),
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Hypromellose 2910', 'cleared', METH.hpmc),
@@ -251,7 +251,7 @@ function stressLine(panel: string): IngredientFlag[] {
     flag(panel, 'White mineral oil', 'limited', METH.mineral),
     flag(panel, 'Sodium citrate', 'cleared', METH.citrate),
     flag(panel, 'Color added (annatto)', 'limited', METH.annatto),
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
   ];
 }
 
@@ -333,7 +333,7 @@ function chewyLine(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Acacia', 'cleared', METH.gum),
     flag(panel, 'Beeswax', 'cleared', METH.beeswax),
-    flag(panel, 'Carnauba wax', 'limited', METH.carnauba),
+    flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
     flag(panel, 'Citric acid', 'cleared', METH.citric),
     flag(panel, 'Coconut oil', 'high', METH.coconut),
     flag(panel, 'Corn starch', 'cleared', METH.cornStarch),

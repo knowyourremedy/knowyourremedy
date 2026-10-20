@@ -23,7 +23,7 @@ const METH = {
   trisodiumCitrate: 'Methodology §5 Cleared (trisodium citrate).',
   blackCarrot:
     'Methodology §5 Cleared (black carrot / named vegetable juice as COLOR).',
-  carnauba: 'Methodology §5 Caution (Carnauba wax, exact token; LOCKED Sept 25, 2026).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   xylitol: 'Methodology §5 Caution (xylitol / erythritol, oral).',
   beetJuiceColor:
     'Methodology §5 Cleared (beet juice (color); named vegetable juice as color; founder lock Oct 18, 2026 t122u).',
@@ -78,7 +78,7 @@ const GUMMY_FIBER_FLAGS: FlagSpec[] = [
   ['citric acid', 'cleared', 'citric'],
   ['trisodium citrate', 'cleared', 'trisodiumCitrate'],
   ['black carrot (for color)', 'cleared', 'blackCarrot'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
 ];
 
 const OI_KIDS_CHEW =

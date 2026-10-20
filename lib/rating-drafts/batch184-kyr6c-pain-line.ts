@@ -26,7 +26,7 @@ const METH = {
   benzoate: 'Methodology §5 Limited (sodium benzoate / potassium sorbate / benzoic acid).',
   calciumCarb: 'Methodology §5 Cleared (calcium carbonate as an other-ingredient filler).',
   caramel: 'Methodology §5 High-risk (caramel color, undisclosed class). The label says caramel and does not name a class.',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   celluloseAcetate: 'Methodology §5 Caution (cellulose acetate). Not cellulose, MCC, or hypromellose.',
   citric: 'Methodology §5 Cleared (citric acid). Anhydrous citric acid is the same acid.',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose sodium / cellulose gum).',
@@ -109,7 +109,7 @@ const MINI_FLAGS: IngredientFlag[] = [
 ];
 
 const DUAL_FLAGS: IngredientFlag[] = [
-  flag(DUAL, 'Carnauba wax', 'limited', METH.carnauba),
+  flag(DUAL, 'Carnauba wax', 'cleared', METH.carnauba),
   flag(DUAL, 'Colloidal silicon dioxide', 'limited', METH.silica),
   flag(DUAL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
   flag(DUAL, 'Ferric oxides', 'limited', 'Methodology §5 Caution (iron oxides as color).'),
@@ -165,7 +165,7 @@ const MOTRIN_CHEW_FLAGS: IngredientFlag[] = [
   flag(MOTRIN_CHEW, 'Acesulfame potassium', 'moderate', METH.ace),
   flag(MOTRIN_CHEW, 'Ammonium glycyrrhizin', 'limited', METH.glycyrrhizin),
   flag(MOTRIN_CHEW, 'Aspartame', 'high', METH.aspartame),
-  flag(MOTRIN_CHEW, 'Carnauba wax', 'limited', METH.carnauba),
+  flag(MOTRIN_CHEW, 'Carnauba wax', 'cleared', METH.carnauba),
   flag(MOTRIN_CHEW, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
   flag(MOTRIN_CHEW, 'Hypromellose', 'cleared', METH.hpmc),
   flag(MOTRIN_CHEW, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -226,7 +226,7 @@ const TYLENOL_CHEW_FLAGS: IngredientFlag[] = [
 const RAPID_FLAGS: IngredientFlag[] = [
   flag(RAPID, 'Alginic acid', 'cleared', METH.alginic),
   flag(RAPID, 'Calcium carbonate', 'cleared', METH.calciumCarb),
-  flag(RAPID, 'Carnauba wax', 'limited', METH.carnauba),
+  flag(RAPID, 'Carnauba wax', 'cleared', METH.carnauba),
   flag(RAPID, 'Colloidal silicon dioxide', 'limited', METH.silica),
   flag(RAPID, 'Crospovidone', 'cleared', METH.povidone),
   flag(RAPID, 'Hypromellose', 'cleared', METH.hpmc),

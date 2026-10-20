@@ -26,7 +26,7 @@ const METH = {
   sugar: 'Methodology §5 Caution (bare sugar).',
   annatto:
     'Methodology §5 Caution (annatto / Organic Annatto Extract (Color) — allergenic; standalone Caution, not additive-scored, not Avoid)',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citric: 'Methodology §5 Cleared (citric acid).',
   cornStarch: 'Methodology §5 Cleared (corn starch). Cornstarch maps here (Oct 17, 2026 t118u).',
   fcoGummy:
@@ -120,7 +120,7 @@ const IMM_FLAGS: FlagSpec[] = [
 const MET_FLAGS: FlagSpec[] = [
   ['Sugar', 'limited', 'sugar'],
   ['Annatto extract (color)', 'limited', 'annatto'],
-  ['Carnauba wax', 'limited', 'carnauba'],
+  ['Carnauba wax', 'cleared', 'carnauba'],
   ['Citric acid', 'cleared', 'citric'],
   ['Cornstarch', 'cleared', 'cornStarch'],
   ['Fractionated coconut oil', 'cleared', 'fcoGummy'],

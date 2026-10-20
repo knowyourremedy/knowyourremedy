@@ -23,7 +23,7 @@ const METH = {
   beetColor:
     'Methodology §5 Cleared (beet root / beetroot powder (for color) / named plant-color row).',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   celluloseCoating:
     'Methodology §5 Cleared (cellulose-family / Cellulose Coating — t83u Oct 17, 2026).',
   celluloseGum: 'Methodology §5 Cleared (cellulose gum / sodium carboxymethyl cellulose family).',
@@ -425,7 +425,7 @@ const SPECS: RowSpec[] = [
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],
       ['Cellulose Coating', 'cleared', 'celluloseCoating'],
-      ['Carnauba Wax', 'limited', 'carnauba'],
+      ['Carnauba Wax', 'cleared', 'carnauba'],
     ],
   },
   {

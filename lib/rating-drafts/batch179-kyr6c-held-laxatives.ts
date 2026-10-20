@@ -14,7 +14,7 @@ const METH = {
   ammonium: 'Methodology §5 Caution (ammonium hydroxide).',
   beeswax: 'Methodology §5 Cleared (white beeswax). Maps to beeswax. Alias. Not a new grade.',
   carmine: 'Methodology §5 Caution (carmine).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cornSyrup: 'Methodology §5 Caution (corn syrup).',
   dextrose: 'Methodology §5 Caution (dextrose / bare glucose). Anhydrous dextrose is that row.',
   dyes: 'Methodology §5 High-risk (FD&C and D&C dyes, including aluminum lakes).',
@@ -108,7 +108,7 @@ const GEL_FLAGS: IngredientFlag[] = [
 
 const ASSORTED_FLAGS: IngredientFlag[] = [
   flag(ASSORTED_PANEL, 'Ammonium hydroxide', 'limited', METH.ammonium),
-  flag(ASSORTED_PANEL, 'Carnauba wax', 'limited', METH.carnauba),
+  flag(ASSORTED_PANEL, 'Carnauba wax', 'cleared', METH.carnauba),
   flag(ASSORTED_PANEL, 'Corn syrup', 'limited', METH.cornSyrup),
   flag(ASSORTED_PANEL, 'Ethanol', 'limited', METH.ethanol),
   flag(ASSORTED_PANEL, 'Ethyl acetate', 'limited', METH.ethylAcetate),
@@ -138,7 +138,7 @@ const ASSORTED_FLAGS: IngredientFlag[] = [
 const CHERRY_FLAGS: IngredientFlag[] = [
   flag(CHERRY_PANEL, 'Ammonium hydroxide', 'limited', METH.ammonium),
   flag(CHERRY_PANEL, 'Carmine', 'limited', METH.carmine),
-  flag(CHERRY_PANEL, 'Carnauba wax', 'limited', METH.carnauba),
+  flag(CHERRY_PANEL, 'Carnauba wax', 'cleared', METH.carnauba),
   flag(CHERRY_PANEL, 'Corn syrup', 'limited', METH.cornSyrup),
   flag(CHERRY_PANEL, 'Ethanol', 'limited', METH.ethanol),
   flag(CHERRY_PANEL, 'Ethyl acetate', 'limited', METH.ethylAcetate),

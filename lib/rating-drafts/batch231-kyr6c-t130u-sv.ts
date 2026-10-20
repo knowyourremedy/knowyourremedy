@@ -23,7 +23,7 @@ const METH = {
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose / cellulose family; EFSA 2017: no carcinogenicity, ADI not needed).',
   dicalcium: 'Methodology §5 Cleared (dicalcium phosphate / mineral filler / buffer salts).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium / cellulose gum / CMC family).',
-  carnauba: 'Methodology §5 Caution (carnauba wax, exact token; LOCKED Sept 25, 2026).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   hpmcCoat: 'Methodology §5 Cleared (hydroxypropyl methylcellulose / HPMC family; EFSA).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / stearate-family lubricant; EFSA 2018).',
   vanillaFlavor:
@@ -131,7 +131,7 @@ export const BATCH231_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_ZINC, 'Microcrystalline Cellulose', 'cleared', 'mcc'),
       flag(PANEL_ZINC, 'Dicalcium Phosphate', 'cleared', 'dicalcium'),
       flag(PANEL_ZINC, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
-      flag(PANEL_ZINC, 'Carnauba Wax', 'limited', 'carnauba'),
+      flag(PANEL_ZINC, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_ZINC, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmcCoat'),
       flag(PANEL_ZINC, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(PANEL_ZINC, 'Natural Vanilla Flavor', 'cleared', 'vanillaFlavor'),

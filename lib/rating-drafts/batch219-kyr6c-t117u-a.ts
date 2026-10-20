@@ -23,7 +23,7 @@ const METH = {
   caramelColor: 'Methodology §5 High (undisclosed caramel color / plain caramel powder).',
   lactose: 'Methodology §5 Cleared (lactose / lactose monohydrate).',
   sorbitol: 'Methodology §5 Limited (sorbitol).',
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   crospovidone: 'Methodology §5 Cleared (crospovidone).',
   dye: 'Methodology §5 Avoid (synthetic dye / FD&C lake).',
   hpmc: 'Methodology §5 Cleared (hypromellose / hydroxypropyl methylcellulose).',
@@ -143,7 +143,7 @@ const CARAMEL60_FLAGS: FlagSpec[] = [
 const FEOSOL_ORIG_FLAGS: FlagSpec[] = [
   ['Lactose', 'cleared', 'lactose'],
   ['Sorbitol', 'limited', 'sorbitol'],
-  ['Carnauba Wax', 'limited', 'carnauba'],
+  ['Carnauba Wax', 'cleared', 'carnauba'],
   ['Crospovidone', 'cleared', 'crospovidone'],
   ['FD&C Blue #1 Al Lake', 'high', 'dye'],
   ['FD&C Yellow #6 Al Lake', 'high', 'dye'],

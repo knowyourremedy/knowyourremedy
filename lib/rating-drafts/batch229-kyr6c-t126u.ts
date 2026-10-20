@@ -22,7 +22,7 @@ const METH = {
   trisodiumCitrate: 'Methodology §5 Cleared (trisodium citrate).',
   blackCarrot:
     'Methodology §5 Cleared (black carrot / named vegetable juice as COLOR).',
-  carnauba: 'Methodology §5 Caution (Carnauba wax, exact token; LOCKED Sept 25, 2026).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   vegCapGellan:
     'Methodology §5 Cleared (Vegetable capsule (hypromellose, gellan gum), HPMC / veg-cap family; founder lock Oct 17, 2026 t118u).',
   riceHullConc: 'Methodology §5 Cleared (rice hull concentrate, rice-hull family; t119u).',
@@ -96,7 +96,7 @@ const PROB_GUM_FLAGS: FlagSpec[] = [
   ['citric acid', 'cleared', 'citric'],
   ['trisodium citrate', 'cleared', 'trisodiumCitrate'],
   ['black carrot (for color)', 'cleared', 'blackCarrot'],
-  ['carnauba wax', 'limited', 'carnauba'],
+  ['carnauba wax', 'cleared', 'carnauba'],
 ];
 
 export const BATCH229_KYR6C_T126U: RatingRecord[] = [

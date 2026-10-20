@@ -13,7 +13,7 @@ const COLD = 'Cold & Flu';
 const PAIN = 'Pain & Fever';
 
 const METH = {
-  carnauba: 'Methodology §5 Caution (carnauba wax).',
+  carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citric: 'Methodology §5 Cleared (citric acid). Anhydrous citric acid is the same acid.',
   citrate: 'Methodology §5 Cleared (citrate salts as buffers). Sodium citrate sits on that row.',
   cmcCalcium: 'Methodology §5 Caution (carboxymethylcellulose calcium). Same family as cellulose gum. Cellulose gum stays Cleared.',
@@ -231,7 +231,7 @@ export const BATCH175_KYR6C_HELD_TOKENS: RatingRecord[] = [
     inactiveIngredients: [
       flag(DAY_CHEW_PANEL, 'Calcium gluconate monohydrate', 'cleared', METH.gluconate),
       flag(DAY_CHEW_PANEL, 'Carboxymethylcellulose calcium', 'limited', METH.cmcCalcium),
-      flag(DAY_CHEW_PANEL, 'Carnauba wax', 'limited', METH.carnauba),
+      flag(DAY_CHEW_PANEL, 'Carnauba wax', 'cleared', METH.carnauba),
       flag(DAY_CHEW_PANEL, 'Corn syrup solids', 'limited', METH.cornSyrup),
       flag(DAY_CHEW_PANEL, 'Crospovidone', 'cleared', METH.crospovidone),
       flag(DAY_CHEW_PANEL, 'FD&C Red No. 40 aluminum lake', 'high', METH.dyes),
@@ -274,7 +274,7 @@ export const BATCH175_KYR6C_HELD_TOKENS: RatingRecord[] = [
       flag(NIGHT_CHEW_PANEL, 'Brown iron oxide', 'limited', METH.iron),
       flag(NIGHT_CHEW_PANEL, 'Calcium gluconate monohydrate', 'cleared', METH.gluconate),
       flag(NIGHT_CHEW_PANEL, 'Carboxymethylcellulose calcium', 'limited', METH.cmcCalcium),
-      flag(NIGHT_CHEW_PANEL, 'Carnauba wax', 'limited', METH.carnauba),
+      flag(NIGHT_CHEW_PANEL, 'Carnauba wax', 'cleared', METH.carnauba),
       flag(NIGHT_CHEW_PANEL, 'Corn syrup solids', 'limited', METH.cornSyrup),
       flag(NIGHT_CHEW_PANEL, 'Crospovidone', 'cleared', METH.crospovidone),
       flag(NIGHT_CHEW_PANEL, 'FD&C Red No. 40', 'high', METH.dyes),
@@ -316,7 +316,7 @@ export const BATCH175_KYR6C_HELD_TOKENS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(GELCAP_PANEL, 'Black iron oxide', 'limited', METH.iron),
-      flag(GELCAP_PANEL, 'Carnauba wax', 'limited', METH.carnauba),
+      flag(GELCAP_PANEL, 'Carnauba wax', 'cleared', METH.carnauba),
       flag(GELCAP_PANEL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
       flag(GELCAP_PANEL, 'D&C Red No. 33 aluminum lake', 'high', METH.dyes),
       flag(GELCAP_PANEL, 'Edetate disodium', 'limited', METH.edetate),
