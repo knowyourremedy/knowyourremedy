@@ -81,6 +81,7 @@ const CHLOROPHYLL_TAP =
   'Named chlorophyll (not sodium copper chlorophyllin) is Cleared. Chlorophyllin is a different Caution color row.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
@@ -707,8 +708,8 @@ export const BATCH36_SPROUTS_LEFTOVERS: RatingRecord[] = [
       flag('Natural flavors', 'limited', labelCite(CITE.prenatalGummies, METH.flavors)),
       flag(
         'Stevia leaf extract',
-        'moderate',
-        labelCite(CITE.prenatalGummies, METH.steviaLeaf),
+        'limited',
+        labelCite(CITE.prenatalGummies, METH.steviaT159u),
       ),
       flag(
         'Coconut oil (gummy)',

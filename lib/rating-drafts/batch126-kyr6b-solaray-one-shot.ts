@@ -25,6 +25,7 @@ const UPC_BLANK =
   'No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   vegcap: "Methodology \u00a75 Cleared (capsule cellulose / labeled veg cap).",
   mcc: "Methodology \u00a75 Cleared (cellulose / MCC / croscarmellose sodium).",
   stearate: "Methodology \u00a75 Cleared (magnesium stearate / stearic acid). Maanesium Stearate maps here only as that lubricant (Sept 28, 2026).",
@@ -972,7 +973,7 @@ const COMPACT: Compact[] = [
       ["Citric Acid", "cleared", "citric"],
       ["Stearic Acid", "cleared", "stearate"],
       ["Silica", "limited", "sio2"],
-      ["Stevia (leaf extract)", "limited", "stevia"],
+      ["Stevia (leaf extract)", "limited", "steviaT159u"],
     ],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Xylitol, FOS Blend (Fructooligosaccharides), Natural Grape Flavor with other Natural Flavors (milk), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Xylitol, FOS Blend (Fructooligosaccharides), Natural Grape Flavor with other Natural Flavors (milk), Stevia (leaf extract).",
@@ -1682,12 +1683,12 @@ const COMPACT: Compact[] = [
       ["Magnesium Stearate", "cleared", "stearate"],
       ["Maltodextrin", "limited", "maltodextrin"],
       ["Glycine", "cleared", "glycine"],
-      ["Stevia Leaf Extract", "limited", "stevia"],
+      ["Stevia Leaf Extract", "limited", "steviaT159u"],
       ["Citric Acid (from Non-GMO Cassava)", "cleared", "citric"],
       ["Malic Acid", "cleared", "malic"],
     ],
     verdict: "avoid",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Orange Juice, Natural Orange Flavor with Other Natural Flavors (soy). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Natural Orange Flavor with Other Natural Flavors (soy), Soy, Maltodextrin, Stevia Leaf Extract.",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Sorbitol, Xylitol, Orange Juice, Natural Orange Flavor with Other Natural Flavors (soy). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Soy, Maltodextrin, Stevia Leaf Extract.",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/qbc-plex-quercetin-bromelain other-ingredients: Sorbitol, Xylitol, Orange Juice, Cellulose, Natural Orange Flavor with Other Natural Flavors (soy), Silica, Magnesium Stearate, Maltodextrin, Glycine, Stevia Leaf Extract, Citric Acid (from Non-GMO Cassava) and Malic Acid. Token map: Sorbitol = Limited. Xylitol = Limited. Orange Juice = Caution. Natural Orange Flavor with Other Natural Flavors (soy) = Caution. Soy = Limited. Silica = Limited. Maltodextrin = Limited. Stevia Leaf Extract = Caution Exact pack Solaray QBC Plex Quercetin & Bromelain (90ct / Orange). SKU 076280553871. No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs." + UPC_BLANK,
   },
   {
@@ -2034,7 +2035,7 @@ const COMPACT: Compact[] = [
       ["Stearic Acid", "cleared", "stearate"],
       ["Citric Acid", "cleared", "citric"],
       ["Magnesium Stearate", "cleared", "stearate"],
-      ["Stevia (leaf extract)", "limited", "stevia"],
+      ["Stevia (leaf extract)", "limited", "steviaT159u"],
       ["Malic Acid", "cleared", "malic"],
       ["Silica", "limited", "sio2"],
     ],

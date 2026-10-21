@@ -1,4 +1,8 @@
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
+import {
+  isT159uPaprikaColorClearedName,
+  isT159uSteviaExtractLimitedName,
+} from './t159uLocks';
 
 // Shopper copy for the honest-note lock and the ingredient tab.
 // Facts below are the ones already stated in docs/METHODOLOGY.md and docs/SOURCES.md.
@@ -1081,14 +1085,14 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (n === 'stevia' || n === 'rebaudioside a extracted and purified from natural stevia leaf') {
     return close(
-      'This stevia string is Limited under the t158u founder lock. Organic Rebaudioside A stays Cleared. High-purity Rebaudioside M stays Cleared. Stevia extract stays Caution.',
+      'This stevia string is Limited under the t158u founder lock. Stevia extract and stevia leaf extract are the same Limited row (t159u). Organic Rebaudioside A stays Cleared. High-purity steviol glycosides and Rebaudioside M stay Cleared.',
       level,
     );
   }
 
-  if (n === 'paprika extract color') {
+  if (n === 'paprika extract color' || isT159uPaprikaColorClearedName(n)) {
     return close(
-      'Paprika extract (color) is a named plant color. The founder locked that exact string Cleared (t158u). Paprika extract (natural color) and Paprika (color) stay Caution.',
+      'Paprika extract (color), Paprika extract (natural color), and Paprika (color) are the same named plant color. The founder locked them Cleared (t158u and t159u).',
       level,
     );
   }
@@ -1119,6 +1123,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (/stearia|stevia|rebaudioside|reb m|monk fruit|mogroside|lo han/.test(n)) {
+    if (isT159uSteviaExtractLimitedName(n)) {
+      return close(
+        'Stevia extract and stevia leaf extract are Limited under founder lock t159u (Oct 21, 2026), the same row as Stevia and rebaudioside A extracted and purified. They count toward the three-or-more Limited stack. Organic Rebaudioside A, high-purity steviol glycosides, and Rebaudioside M stay Cleared.',
+        level,
+      );
+    }
     if (/whole leaf|crude|leaf extract|^stevia extract$|stevia leaf/.test(n) || (level !== 'cleared' && /stevia/.test(n) && !/rebaudioside|reb m|high purity/.test(n))) {
       return close('This is a stevia extract that is not the high-purity steviol glycoside. The high-purity form is a different row.', level);
     }

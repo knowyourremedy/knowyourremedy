@@ -51,6 +51,7 @@ const LIMITED_STACK =
   'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   behenoyl: "Methodology §5 Limited-risk (behenoyl polyoxyl-8 glycerides — exact token; PEG-style glyceride; Caution; not High; locked Sept 23, 2026). Distinct from Cleared glyceryl dibehenate and from Cleared polyoxyl castor oil. Not Avoid.",
   dical: "Methodology §5 Cleared (dicalcium phosphate / calcium phosphate as filler).",
   flavors: "Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).",
@@ -186,7 +187,7 @@ const COMPACT: Compact[] = [
       ["Behenoyl polyoxyl-8 glycerides", "limited", "behenoyl"],
       ["Dicalcium phosphate", "cleared", "dical"],
       ["Natural peppermint flavor", "cleared", "flavors"],
-      ["Stevia leaf extract", "limited", "steviaLeaf"],
+      ["Stevia leaf extract", "limited", "steviaT159u"],
     ],
     verdict: 'avoid',
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Inulin is Cleared fiber. Dicalcium phosphate is Cleared filler. This chewable is not a gummy. The 60 Count graphic prints the same Other Ingredients line, so they share formulaId. The 3 Pack multipack stays the batch82 OUT row and was not reopened. UPC-A 810157850867 is the published GTIN-12 for this 30 Count (Target primary barcode, 30 chewable tablets). The 60 Count and 3 Pack codes are not copied onto this count. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Behenoyl polyoxyl-8 glycerides, Stevia leaf extract.",
@@ -209,7 +210,7 @@ const COMPACT: Compact[] = [
       ["Behenoyl polyoxyl-8 glycerides", "limited", "behenoyl"],
       ["Dicalcium phosphate", "cleared", "dical"],
       ["Natural peppermint flavor", 'cleared', "flavors"],
-      ["Stevia leaf extract", "limited", "steviaLeaf"],
+      ["Stevia leaf extract", "limited", "steviaT159u"],
     ],
     verdict: "avoid",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Isomalt; Behenoyl polyoxyl-8 glycerides; Natural peppermint flavor; Stevia leaf extract. Stevia leaf extract maps to the locked Caution stevia extract row. It is not whole-leaf stevia and not Reb A / Reb M. Behenoyl polyoxyl-8 glycerides is the Sept 23 PEG-style glyceride Caution row, not High. Same Other Ingredients line as the 30 Count, so they share formulaId. This chewable is not a gummy. UPC-A 858081006356 is the published GTIN-12 for this 60 Count (Target primary barcode and Vitacost UPC field, 60 chewable tablets). The 30 Count barcode is not copied onto this count. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Behenoyl polyoxyl-8 glycerides, Stevia leaf extract.",

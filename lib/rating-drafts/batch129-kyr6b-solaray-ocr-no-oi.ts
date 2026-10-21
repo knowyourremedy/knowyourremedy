@@ -25,6 +25,7 @@ const UPC_BLANK =
   'No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   vegcap: "Methodology \u00a75 Cleared (capsule cellulose / labeled veg cap).",
   mcc: "Methodology \u00a75 Cleared (cellulose / MCC / croscarmellose sodium).",
   stearate: "Methodology \u00a75 Cleared (magnesium stearate / stearic acid). Maanesium Stearate maps here only as that lubricant (Sept 28, 2026).",
@@ -820,10 +821,10 @@ const COMPACT: Compact[] = [
       ["Mango Flavors with Other Natural Flavors", "limited", "flavor"],
       ["Citric Acid", "cleared", "citric"],
       ["Acacia Gum", "cleared", "gum"],
-      ["Stevia (leaf extract)", "limited", "stevia"],
+      ["Stevia (leaf extract)", "limited", "steviaT159u"],
     ],
-    verdict: "avoid",
-    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract). No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract).",
+    verdict: "caution",
+    note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Natural Peach, Mango Flavors with Other Natural Flavors, Stevia (leaf extract). No High.",
     cite: "solaray.com / opened US listing https://www.solaray.com/products/colostrum other-ingredients: Natural Peach and Mango Flavors with Other Natural Flavors, Citric Acid, Acacia Gum, and Stevia (leaf extract). Exact pack Solaray Colostrum+ Peach Mango (30 servings). SKU 076280582505. " + UPC_BLANK,
   },
   {

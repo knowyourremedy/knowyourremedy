@@ -56,6 +56,7 @@ const UNMAPPED_NOTE =
   'A printed string with no exact Methodology §5 token stays in this ingredient list and is omitted from the scored inactiveIngredients array (notes-only, same pattern as founder-stamped rows). No invented riskLevel. Not a demerit driver.';
 
 const METH = {
+  paprikaT159u: 'Methodology §5 Cleared (Paprika extract (natural color) / Paprika (color) — founder lock t159u Oct 21, 2026; same Cleared named plant color as Paprika extract (color)).',
   betaCarotene:
     'Methodology §5 Caution (beta-carotene as a color additive). Bare beta-carotene maps here (Sept 25, 2026). Same Caution lock. Not a new grade. Not Avoid.',
   carnauba:
@@ -196,7 +197,7 @@ const VC_FLAGS: Compact['flags'] = [
   ['purified water', 'cleared', 'water'],
   ['pectin', 'cleared', 'pectin'],
   ['trisodium citrate', 'cleared', 'trisodium'],
-  ['paprika extract (natural color)', 'limited', 'paprika'],
+  ['paprika extract (natural color)', 'cleared', 'paprikaT159u'],
 ];
 
 const WM_FLAGS: Compact['flags'] = [

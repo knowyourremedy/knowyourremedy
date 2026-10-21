@@ -112,6 +112,7 @@ const IMMUNE = 'Immune Support';
 const VITAMINS = 'Vitamins';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, "vegetable oil", sunflower)',
@@ -396,14 +397,15 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       flag('Natural flavors', 'limited', dailymed(SET_ANTACID, METH.flavors)),
       flag(
         'Stevia extract (stevia rebaudiana leaf)',
-        'cleared',
-        dailymed(SET_ANTACID, METH.stevia),
+        'limited',
+        dailymed(SET_ANTACID, METH.steviaT159u),
       ),
       cleared(SET_ANTACID, 'Dextrose'),
       cleared(SET_ANTACID, 'Starch'),
       cleared(SET_ANTACID, 'Stearic acid'),
     ],
-    verdict: 'caution',
+    verdict: 'avoid',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Natural flavors, Stevia extract (stevia rebaudiana leaf).',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
