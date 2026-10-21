@@ -33,7 +33,7 @@ const METH = {
   lecithin: 'Methodology §5 Cleared (lecithin / soy lecithin / sunflower lecithin).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
   mct: 'Methodology §5 Limited (unlabeled medium-chain triglycerides). No plant is named.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   phosphate:
     'Methodology §5 Cleared (dicalcium phosphate / dibasic calcium phosphate / tribasic calcium phosphate).',
   polydextrose: 'Methodology §5 Limited (polydextrose).',

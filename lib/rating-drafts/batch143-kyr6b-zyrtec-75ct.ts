@@ -21,7 +21,7 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
 

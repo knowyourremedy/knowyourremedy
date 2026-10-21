@@ -20,7 +20,7 @@ const METH = {
   modStarch:
     'Methodology §5 Limited (modified starch). Modified Corn Starch maps here (Oct 17, 2026 t107u).',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   talc: 'Methodology §5 Avoid (talc). Magnesium silicate is that row in a swallowed product.',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',

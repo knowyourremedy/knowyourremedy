@@ -84,7 +84,7 @@ const SPECS: RowSpec[] = [
       'Citric Acid, Organic Flavors, Organic Stevia Extract (Rebaudioside A), Organic Beet Root (Color).',
     flags: [
       ['Citric Acid', 'cleared', 'citric'],
-      ['Organic Flavors', 'limited', 'organicFlavors'],
+      ['Organic Flavors', 'moderate', 'organicFlavors'],
       ['Organic Stevia Extract (Rebaudioside A)', 'cleared', 'steviaRebA'],
       ['Organic Beet Root (Color)', 'cleared', 'organicBeetColor'],
     ],
@@ -102,7 +102,7 @@ const SPECS: RowSpec[] = [
       'Citric Acid, Organic Flavors, Cranberry Fruit Juice Powder (Color), Organic Stevia Extract (Rebaudioside A), Organic Monk Fruit Extract.',
     flags: [
       ['Citric Acid', 'cleared', 'citric'],
-      ['Organic Flavors', 'limited', 'organicFlavors'],
+      ['Organic Flavors', 'moderate', 'organicFlavors'],
       ['Cranberry Fruit Juice Powder (Color)', 'cleared', 'juiceColor'],
       ['Organic Stevia Extract (Rebaudioside A)', 'cleared', 'steviaRebA'],
       ['Organic Monk Fruit Extract', 'cleared', 'monkFruit'],
@@ -127,7 +127,7 @@ const SPECS: RowSpec[] = [
       ['Citrus Fiber', 'cleared', 'citrusFiber'],
       ['Natural Flavor', 'limited', 'flavors'],
       ['Turmeric Extract Color', 'cleared', 'turmericExtractColor'],
-      ['Annatto Extract Color', 'limited', 'annatto'],
+      ['Annatto Extract Color', 'moderate', 'annatto'],
     ],
   },
 ];

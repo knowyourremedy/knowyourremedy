@@ -63,7 +63,7 @@ const METH = {
   pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  saccharin: 'Methodology §5 Moderate-risk (saccharin)',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   sorbate: 'Methodology §5 Limited-risk (synthetic preservatives — potassium sorbate)',
   flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
@@ -454,7 +454,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4e8ff89e-f9e8-8618-e063-6294a90a6b3e', METH.benzoate),
       ),
       flag(
@@ -553,7 +553,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('798e2a4d-da2d-4bbd-a9b8-574490ef7357', METH.benzoate),
       ),
       flag(
@@ -677,7 +677,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         ),
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('60daf6e2-ded8-44e6-bd8d-9d221384adde', METH.sorbitol),
         ),
       ]),
@@ -759,17 +759,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('14c56f3d-67fd-45ef-a16b-f27604722883', METH.benzoate),
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('14c56f3d-67fd-45ef-a16b-f27604722883', METH.flavors),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('14c56f3d-67fd-45ef-a16b-f27604722883', METH.sorbitol),
       ),
       flag(
@@ -779,7 +779,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Sodium benzoate, Flavors, Sorbitol, Maltodextrin.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Maltodextrin.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
@@ -817,22 +817,22 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('c07dad99-87b0-419b-9230-7c22a77ecf9e', METH.benzoate),
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('c07dad99-87b0-419b-9230-7c22a77ecf9e', METH.flavors),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('c07dad99-87b0-419b-9230-7c22a77ecf9e', METH.sorbitol),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Sodium benzoate, Flavors, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: MULTI_LIQUID_ALTS,
@@ -862,7 +862,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('1538a75d-582a-9501-e063-6394a90a6c55', METH.sorbitol),
         ),
       ],
@@ -901,7 +901,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('155e07b3-0a08-3be8-e063-6394a90a7635', METH.flavors),
       ),
       flag(
@@ -952,7 +952,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('156033ae-b16a-007b-e063-6294a90a7445', METH.flavors),
       ),
       flag(
@@ -995,7 +995,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('2ce20ab5-5f2d-1c97-e063-6394a90ad67b', METH.flavors),
       ),
       flag(
@@ -1040,7 +1040,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
           ),
           flag(
             'Sorbitol',
-            'limited',
+            'moderate',
             dailymed('b9772292-9eb6-47cf-abb8-007c25478090', METH.sorbitol),
           ),
         ],
@@ -1088,17 +1088,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Natural and artificial flavors',
-        'limited',
+        'moderate',
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('6afaf85b-bf0c-4c99-acf3-a34f06be20f1', METH.benzoate),
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Polyethylene glycol, Sucralose, Natural and artificial flavors, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Polyethylene glycol, Sucralose.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: NIGHT_ALTS,
@@ -1185,17 +1185,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('75bc7827-4439-e6a8-a65c-7154d5592e58', METH.saccharin),
       ),
       flag(
         'Artificial flavor',
-        'limited',
+        'moderate',
         dailymed('75bc7827-4439-e6a8-a65c-7154d5592e58', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('75bc7827-4439-e6a8-a65c-7154d5592e58', METH.benzoate),
       ),
     ],
@@ -1229,7 +1229,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('8a8380f4-fa8a-4cca-8b8f-f8d7c5a33f9c', METH.sorbitol),
         ),
       ],
@@ -1325,7 +1325,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         ),
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('d26b5143-aa07-4114-a6ba-4f503aadd46f', METH.sorbitol),
         ),
       ]),
@@ -1399,7 +1399,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('cc09a8c5-d173-4261-b838-96e6a16e2ff9', METH.sorbitol),
         ),
       ],
@@ -1434,7 +1434,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('47317865-4310-4f07-8815-f3130963307d', METH.sorbitol),
         ),
       ],
@@ -1509,7 +1509,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         [
           flag(
             'Saccharin sodium',
-            'moderate',
+            'limited',
             dailymed('1a01b294-a5ee-ab35-e063-6394a90a4a1a', METH.saccharin),
           ),
         ],
@@ -1543,7 +1543,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ...dyesPgSweet('02fbe8b3-49e2-8712-e063-6294a90add50', ['FD&C Red No. 40'], [
         flag(
           'Saccharin sodium',
-          'moderate',
+          'limited',
           dailymed('02fbe8b3-49e2-8712-e063-6294a90add50', METH.saccharin),
         ),
       ]),
@@ -1586,27 +1586,27 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.saccharin),
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('19b2422e-517c-8f94-e063-6394a90aba26', METH.sorbitol),
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Flavor, Sodium benzoate, Sorbitol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sucralose, Saccharin sodium.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
@@ -1648,17 +1648,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('20e45243-3989-413a-bcf1-49d754ff2e44', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('20e45243-3989-413a-bcf1-49d754ff2e44', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('20e45243-3989-413a-bcf1-49d754ff2e44', METH.sorbitol),
       ),
     ],
@@ -1696,17 +1696,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('4dfd46e4-b9f9-464d-aa47-e8fa9e526a5d', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4dfd46e4-b9f9-464d-aa47-e8fa9e526a5d', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('4dfd46e4-b9f9-464d-aa47-e8fa9e526a5d', METH.sorbitol),
       ),
     ],
@@ -1744,7 +1744,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('52e9307b-ad38-4f65-bb2f-4fa262e82010', METH.saccharin),
       ),
       flag(
@@ -1754,17 +1754,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('52e9307b-ad38-4f65-bb2f-4fa262e82010', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('52e9307b-ad38-4f65-bb2f-4fa262e82010', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('52e9307b-ad38-4f65-bb2f-4fa262e82010', METH.sorbitol),
       ),
     ],
@@ -1800,7 +1800,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.saccharin),
       ),
       flag(
@@ -1815,17 +1815,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('9576723b-748c-45e7-bc0d-cc109b9f6735', METH.benzoate),
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Propylene glycol, Polyethylene glycol, Flavor, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Saccharin sodium, Propylene glycol, Polyethylene glycol.',
 
     retailers: ['Walmart', 'CVS', 'Walgreens'],
     cleanAlternatives: COUGH_ALTS,
@@ -1856,7 +1856,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('fabafdc1-9dd8-4258-af49-bab1e29ad109', METH.sorbitol),
         ),
       ],
@@ -1903,22 +1903,22 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('24758ab0-ba08-4b4a-9861-449612bdb89c', METH.saccharin),
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('24758ab0-ba08-4b4a-9861-449612bdb89c', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('24758ab0-ba08-4b4a-9861-449612bdb89c', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('24758ab0-ba08-4b4a-9861-449612bdb89c', METH.sorbitol),
       ),
     ],
@@ -1981,7 +1981,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('177e3247-402d-98e4-e063-6294a90ae068', METH.saccharin),
       ),
       flag(
@@ -2056,7 +2056,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Natural & artificial flavors',
-        'limited',
+        'moderate',
         dailymed('37269cd6-1528-9879-e063-6394a90a2b54', METH.flavors),
       ),
     ],
@@ -2097,7 +2097,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
           ),
           flag(
             'Sorbitol',
-            'limited',
+            'moderate',
             dailymed('a2d99bc8-7295-4922-acff-0cb02c91273c', METH.sorbitol),
           ),
         ],
@@ -2133,7 +2133,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('fe12f3bd-3237-42d1-aec5-c831b9637175', METH.sorbitol),
         ),
       ],
@@ -2168,7 +2168,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('347f1731-5b85-4220-ae2b-9497a3afa4ed', METH.sorbitol),
         ),
         flag(
@@ -2236,7 +2236,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('2a849ae9-338f-4642-e063-6394a90a1ca4', METH.saccharin),
       ),
       flag(
@@ -2285,7 +2285,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
           ),
           flag(
             'Sorbitol',
-            'limited',
+            'moderate',
             dailymed('004e104b-d6ff-48d5-8685-cd1bff45399a', METH.sorbitol),
           ),
         ],
@@ -2322,7 +2322,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       [
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('8b5d391b-6c23-44c3-81d0-c08822bf6d01', METH.sorbitol),
         ),
       ],
@@ -2361,7 +2361,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
         ),
         flag(
           'Sorbitol',
-          'limited',
+          'moderate',
           dailymed('a270cbe3-bf0a-44da-9359-00e218eba239', METH.sorbitol),
         ),
       ],
@@ -2429,7 +2429,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('c0f317cd-723d-47f2-b600-aaeae6399482', METH.flavors),
       ),
     ],
@@ -2486,17 +2486,17 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('8714d4e6-3a3b-48c8-8ac1-51b933a2ceac', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('8714d4e6-3a3b-48c8-8ac1-51b933a2ceac', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('8714d4e6-3a3b-48c8-8ac1-51b933a2ceac', METH.sorbitol),
       ),
     ],
@@ -2537,7 +2537,7 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
           ),
           flag(
             'Sorbitol',
-            'limited',
+            'moderate',
             dailymed('831da7b6-25c7-4601-b7f1-1800a238b016', METH.sorbitol),
           ),
         ],

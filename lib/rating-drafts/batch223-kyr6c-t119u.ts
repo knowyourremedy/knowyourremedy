@@ -42,7 +42,7 @@ const METH = {
   spirulinaExtract:
     'Methodology §5 Limited-risk (spirulina extract as Other Ingredient / color in a multi — Caution Limited; FDA color allow is not Clean; not Avoid; not Cleared; distinct from spirulina powder; locked Sept 21, 2026).',
   mctOil:
-    'Methodology §5 Cleared (MCT oil — founder override Oct 17, 2026 t118u). Medium Chain Triglyceride (MCT) Oil maps here.',
+    'Methodology §5 Limited (MCT in a gummy — founder lock t132u Oct 20, 2026; no plant source named).',
 } as const;
 
 type MethKey = keyof typeof METH;

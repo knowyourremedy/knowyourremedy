@@ -161,7 +161,7 @@ const SPECS: RowSpec[] = [
       ['Vegetable Glycerin', 'cleared', 'glycerin'],
       ['Sunflower Lecithin', 'cleared', 'lecithin'],
       ['Soy Lecithin', 'cleared', 'lecithin'],
-      ['Yellow Iron Oxide (Color)', 'limited', 'ironColor'],
+      ['Yellow Iron Oxide (Color)', 'moderate', 'ironColor'],
     ],
   },
   {
@@ -175,12 +175,12 @@ const SPECS: RowSpec[] = [
     oiLine:
       'Mannitol, Natural Flavors, Cellulose (Plant Origin), Beet Root Color, Crospovidone, Dextrose, Vegetable Stearic Acid, Vegetable Magnesium Stearate, Sucralose, Silica.',
     flags: [
-      ['Mannitol', 'limited', 'mannitol'],
+      ['Mannitol', 'moderate', 'mannitol'],
       ['Natural Flavors', 'limited', 'flavors'],
       ['Cellulose (Plant Origin)', 'cleared', 'cellulosePlant'],
       ['Beet Root Color', 'cleared', 'beetColor'],
       ['Crospovidone', 'cleared', 'crospovidone'],
-      ['Dextrose', 'limited', 'dextrose'],
+      ['Dextrose', 'moderate', 'dextrose'],
       ['Vegetable Stearic Acid', 'cleared', 'stearic'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Sucralose', 'limited', 'sucralose'],
@@ -197,7 +197,7 @@ const SPECS: RowSpec[] = [
     active: 'Ten-form magnesium complex',
     oiLine: 'Vegan Capsule, Vegetable Magnesium Stearate, Silica, Rice Powder.',
     flags: [
-      ['Vegan Capsule', 'limited', 'veganCapsule'],
+      ['Vegan Capsule', 'moderate', 'veganCapsule'],
       ['Vegetable Magnesium Stearate', 'cleared', 'magStearate'],
       ['Silica', 'limited', 'silica'],
       ['Rice Powder', 'cleared', 'ricePowder'],
@@ -291,7 +291,7 @@ const SPECS: RowSpec[] = [
       ['Demineralized Water', 'cleared', 'demineralizedWater'],
       ['Citric Acid', 'cleared', 'citric'],
       ['Potassium Sorbate (For Freshness)', 'limited', 'potassiumSorbate'],
-      ['Sodium Benzoate (For Freshness)', 'limited', 'benzoate'],
+      ['Sodium Benzoate (For Freshness)', 'moderate', 'benzoate'],
     ],
   },
   {
@@ -309,7 +309,7 @@ const SPECS: RowSpec[] = [
       ['Fructose', 'limited', 'fructose'],
       ['Citric Acid', 'cleared', 'citric'],
       ['Natural Flavor', 'limited', 'flavors'],
-      ['Sodium Benzoate (for freshness)', 'limited', 'benzoate'],
+      ['Sodium Benzoate (for freshness)', 'moderate', 'benzoate'],
       ['Potassium Sorbate (for freshness)', 'limited', 'potassiumSorbate'],
     ],
   },

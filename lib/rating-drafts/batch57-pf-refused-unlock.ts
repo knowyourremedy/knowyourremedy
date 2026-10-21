@@ -154,7 +154,7 @@ const METH = {
     'Methodology §5 Caution (caprylhydroxamic acid — exact INCI; standalone Caution, not Avoid; locked Sept 15, 2026)',
   acrylateAcrylamide:
     'Methodology §5 Caution (acrylate / acrylamide copolymers not already locked — standalone Caution, not Avoid; locked Sept 15, 2026)',
-  ps85: 'Methodology §5 Caution (polysorbate 85 — exact token; distinct numbered ester — do not alias to P80/P20/P60 alone; standalone Caution, not Avoid; locked Sept 15, 2026)',
+  ps85: 'Methodology §5 Limited (Polysorbate — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   retinylPalmitate:
     'Methodology §5 Caution (retinyl palmitate — exact INCI; standalone Caution, not Avoid; locked Sept 15, 2026)',
   horseChestnut:
@@ -372,7 +372,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(CITE.turmeric, METH.sio2),
       ),
       flag(
@@ -412,37 +412,37 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Glycosaminoglycans',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.gag),
       ),
       flag(
         'Acetylated Lanolin',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.acetylatedLanolin),
       ),
       flag(
         'Hydroxylated Lanolin',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.hydroxylatedLanolin),
       ),
       flag(
         'Acrylates/C10-30 Alkyl Acrylate Crosspolymer',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.acrylateC1030),
       ),
       flag(
         'Diazolidinyl Urea',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.diazolidinyl),
       ),
       flag(
         'Tocopheryl Acetate (Vitamin E)',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.tocopherylAcetate),
       ),
       flag(
         'Iodopropynyl Butylcarbamate',
-        'cleared',
+        'moderate',
         labelCite(CITE.jointflex, METH.ipbc),
       ),
       flag(
@@ -560,12 +560,12 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Steareth-20',
-        'cleared',
+        'moderate',
         labelCite(CITE.topricin, METH.steareth20),
       ),
       flag(
         'Caprylhydroxamic Acid',
-        'cleared',
+        'moderate',
         labelCite(CITE.topricin, METH.caprylhydroxamic),
       ),
       flag(
@@ -635,62 +635,62 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Propylparaben', 'high', labelCite(CITE.blueEmu, METH.parabens)),
       flag(
         'Acrylates/Acrylamide Copolymer',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.acrylateAcrylamide),
       ),
       flag(
         'Polysorbate 85',
-        'cleared',
+        'limited',
         labelCite(CITE.blueEmu, METH.ps85),
       ),
       flag(
         'Tocopheryl Acetate',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.tocopherylAcetate),
       ),
       flag(
         'Retinyl Palmitate',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.retinylPalmitate),
       ),
       flag(
         'Aesculus Hippocastanum (Horse Chestnut) Seed Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.horseChestnut),
       ),
       flag(
         'Symphytum Officinale Root Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.horseChestnut),
       ),
       flag(
         'Zanthoxylum Alatum Fruit Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.horseChestnut),
       ),
       flag(
         'Anthemis Nobilis Flower Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.chamomile),
       ),
       flag(
         'Calendula Officinalis Flower Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.calendula),
       ),
       flag(
         'Tetrasodium EDTA',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.tetrasodiumEdta),
       ),
       flag(
         'Triethanolamine',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.trolamine),
       ),
       flag(
         'Ethoxydiglycol',
-        'cleared',
+        'moderate',
         labelCite(CITE.blueEmu, METH.ethoxydiglycol),
       ),
       flag(
@@ -763,26 +763,26 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', labelCite(CITE.teemofe, METH.ps80)),
       flag(
         'Aluminum Glycinate',
-        'cleared',
+        'moderate',
         labelCite(CITE.teemofe, METH.aluminumGlycinate),
       ),
       flag(
         'Aluminum Hydroxide',
-        'cleared',
+        'moderate',
         labelCite(CITE.teemofe, METH.aluminumHydroxide),
       ),
-      flag('DMDM hydantoin', 'cleared', labelCite(CITE.teemofe, METH.dmdm)),
+      flag('DMDM hydantoin', 'moderate', labelCite(CITE.teemofe, METH.dmdm)),
       flag(
         'Polyacrylic Acid',
-        'cleared',
+        'moderate',
         labelCite(CITE.teemofe, METH.polyacrylate),
       ),
       flag(
         'Sodium Polyacrylate',
-        'cleared',
+        'moderate',
         labelCite(CITE.teemofe, METH.polyacrylate),
       ),
-      flag('Silica', 'cleared', labelCite(CITE.teemofe, METH.sio2)),
+      flag('Silica', 'limited', labelCite(CITE.teemofe, METH.sio2)),
       flag(
         'Ricinus Communis Seed Oil (castor)',
         'cleared',
@@ -833,7 +833,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
         'limited',
         dailymed(SET.ha2zNap, METH.peg),
       ),
-      flag('silicon', 'cleared', dailymed(SET.ha2zNap, METH.silicon)),
+      flag('silicon', 'moderate', dailymed(SET.ha2zNap, METH.silicon)),
       flag('Hypromellose', 'cleared', dailymed(SET.ha2zNap, METH.hpmc)),
       flag(
         'Sodium starch glycolate',

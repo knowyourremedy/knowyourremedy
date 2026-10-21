@@ -192,7 +192,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Natural flavors', 'limited', labelCite(CARLSON_C_CITE, METH.flavors)),
-      flag('Annatto (for color)', 'cleared', labelCite(CARLSON_C_CITE, METH.annatto)),
+      flag('Annatto (for color)', 'moderate', labelCite(CARLSON_C_CITE, METH.annatto)),
       labelCleared(CARLSON_C_CITE, 'Glucose syrup'),
       labelCleared(CARLSON_C_CITE, 'Sugar'),
       labelCleared(CARLSON_C_CITE, 'Water'),
@@ -309,7 +309,7 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
         labelCite(LIL_IMMUNE_C_CITE, METH.seedOilGummies),
       ),
       flag('Natural flavors', 'limited', labelCite(LIL_IMMUNE_C_CITE, METH.flavors)),
-      flag('Annatto extract (color)', 'cleared', labelCite(LIL_IMMUNE_C_CITE, METH.annatto)),
+      flag('Annatto extract (color)', 'moderate', labelCite(LIL_IMMUNE_C_CITE, METH.annatto)),
       labelCleared(LIL_IMMUNE_C_CITE, 'Glucose syrup'),
       labelCleared(LIL_IMMUNE_C_CITE, 'Sugar'),
       labelCleared(LIL_IMMUNE_C_CITE, 'Water'),
@@ -349,8 +349,8 @@ export const BATCH19_KIDS_SINGLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('Canola oil', 'high', labelCite(NORDIC_DHA_GUMMY_CITE, METH.seedOilGummies)),
       flag('Natural flavor', 'limited', labelCite(NORDIC_DHA_GUMMY_CITE, METH.flavors)),
-      flag('Xylitol', 'limited', labelCite(NORDIC_DHA_GUMMY_CITE, METH.xylitol)),
-      flag('Sorbitol', 'limited', labelCite(NORDIC_DHA_GUMMY_CITE, METH.sorbitol)),
+      flag('Xylitol', 'moderate', labelCite(NORDIC_DHA_GUMMY_CITE, METH.xylitol)),
+      flag('Sorbitol', 'moderate', labelCite(NORDIC_DHA_GUMMY_CITE, METH.sorbitol)),
       labelCleared(NORDIC_DHA_GUMMY_CITE, 'Purified water'),
       labelCleared(NORDIC_DHA_GUMMY_CITE, 'Gelatin'),
       labelCleared(NORDIC_DHA_GUMMY_CITE, 'Sodium citrate'),

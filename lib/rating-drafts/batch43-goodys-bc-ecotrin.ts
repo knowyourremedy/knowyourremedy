@@ -76,10 +76,10 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   xylitol: 'Methodology §5 Limited-risk (xylitol, oral)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -227,13 +227,14 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Sucralose', 'limited', dailymed(SET.max, METH.sucralose)),
-      flag('Flavors', 'limited', dailymed(SET.max, METH.flavors)),
-      flag('Mannitol', 'limited', dailymed(SET.max, METH.mannitol)),
-      flag('Colloidal silicon dioxide', 'cleared', dailymed(SET.max, METH.sio2)),
+      flag('Flavors', 'moderate', dailymed(SET.max, METH.flavors)),
+      flag('Mannitol', 'moderate', dailymed(SET.max, METH.mannitol)),
+      flag('Colloidal silicon dioxide', 'limited', dailymed(SET.max, METH.sio2)),
       cleared(SET.max, 'Guar gum'),
       cleared(SET.max, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
+    honestNote: '',
 
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: POWDER_COMBO_ALTS,
@@ -257,9 +258,9 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Sucralose', 'limited', dailymed(SET.plusAlert, METH.sucralose)),
-      flag('Xylitol', 'limited', dailymed(SET.plusAlert, METH.xylitol)),
-      flag('Flavor', 'limited', dailymed(SET.plusAlert, METH.flavors)),
-      flag('Mannitol', 'limited', dailymed(SET.plusAlert, METH.mannitol)),
+      flag('Xylitol', 'moderate', dailymed(SET.plusAlert, METH.xylitol)),
+      flag('Flavor', 'moderate', dailymed(SET.plusAlert, METH.flavors)),
+      flag('Mannitol', 'moderate', dailymed(SET.plusAlert, METH.mannitol)),
       flag(
         'Silicon dioxide',
         'limited',
@@ -268,8 +269,8 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       cleared(SET.plusAlert, 'Guar gum'),
       cleared(SET.plusAlert, 'Microcrystalline cellulose'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Xylitol, Flavor, Mannitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...PF_RETAILERS, 'goodyspowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
@@ -292,8 +293,8 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       { name: 'Diphenhydramine citrate', strength: '38mg' },
     ],
     inactiveIngredients: [
-      flag('Sodium benzoate', 'limited', dailymed(SET.pm, METH.benzoate)),
-      flag('Silica gel', 'cleared', dailymed(SET.pm, METH.sio2)),
+      flag('Sodium benzoate', 'moderate', dailymed(SET.pm, METH.benzoate)),
+      flag('Silica gel', 'limited', dailymed(SET.pm, METH.sio2)),
       flag('Potassium chloride', 'cleared', dailymed(SET.pm, METH.kcl)),
       flag('Sodium citrate dihydrate', 'cleared', dailymed(SET.pm, METH.citrate)),
       cleared(SET.pm, 'Citric acid'),
@@ -323,7 +324,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed(SET.bcOriginal, METH.benzoate),
       ),
       flag(
@@ -362,17 +363,18 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
         dailymed(SET.bcCherry, METH.acek),
       ),
       flag('Sucralose', 'limited', dailymed(SET.bcCherry, METH.sucralose)),
-      flag('Flavor', 'limited', dailymed(SET.bcCherry, METH.flavors)),
-      flag('Mannitol', 'limited', dailymed(SET.bcCherry, METH.mannitol)),
+      flag('Flavor', 'moderate', dailymed(SET.bcCherry, METH.flavors)),
+      flag('Mannitol', 'moderate', dailymed(SET.bcCherry, METH.mannitol)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.bcCherry, METH.sio2),
       ),
       cleared(SET.bcCherry, 'Guar gum'),
       cleared(SET.bcCherry, 'Microcrystalline cellulose'),
     ],
     verdict: 'caution',
+    honestNote: '',
 
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: ASPIRIN_POWDER_ALTS,
@@ -395,15 +397,15 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Sucralose', 'limited', dailymed(SET.bcMax, METH.sucralose)),
-      flag('Xylitol', 'limited', dailymed(SET.bcMax, METH.xylitol)),
-      flag('Flavor', 'limited', dailymed(SET.bcMax, METH.flavors)),
-      flag('Mannitol', 'limited', dailymed(SET.bcMax, METH.mannitol)),
+      flag('Xylitol', 'moderate', dailymed(SET.bcMax, METH.xylitol)),
+      flag('Flavor', 'moderate', dailymed(SET.bcMax, METH.flavors)),
+      flag('Mannitol', 'moderate', dailymed(SET.bcMax, METH.mannitol)),
       flag('Silicon dioxide', 'limited', dailymed(SET.bcMax, METH.sio2)),
       cleared(SET.bcMax, 'Guar gum'),
       cleared(SET.bcMax, 'Microcrystalline cellulose'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Xylitol, Flavor, Mannitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...PF_RETAILERS, 'bcpowder.com'],
     cleanAlternatives: POWDER_COMBO_ALTS,
@@ -430,12 +432,12 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.anacin, METH.tio2)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET.anacin, METH.sls),
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.anacin, METH.sio2),
       ),
       flag('Triacetin', 'cleared', dailymed(SET.anacin, METH.triacetin)),
@@ -468,7 +470,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       flag('Propylene glycol', 'limited', dailymed(SET.bufferin, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET.bufferin, METH.sls),
       ),
       flag(
@@ -528,7 +530,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.ecotrin325, METH.sio2),
       ),
       flag(
@@ -597,7 +599,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.ecotrin81, METH.sio2),
       ),
       flag(
@@ -652,17 +654,17 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       ),
       flag(
         'Methacrylic acid-ethyl acrylate copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.stJoeEnteric, METH.methacrylic),
       ),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET.stJoeEnteric, METH.sls),
       ),
       flag(
         'Colloidal anhydrous silica',
-        'cleared',
+        'limited',
         dailymed(SET.stJoeEnteric, METH.sio2),
       ),
       flag(
@@ -701,7 +703,7 @@ export const BATCH43_GOODYS_BC_ECOTRIN: RatingRecord[] = [
       ),
       flag('Sucralose', 'limited', dailymed(SET.stJoeChew, METH.sucralose)),
       flag('Maltodextrin', 'limited', dailymed(SET.stJoeChew, METH.maltodextrin)),
-      flag('Flavor', 'limited', dailymed(SET.stJoeChew, METH.flavors)),
+      flag('Flavor', 'moderate', dailymed(SET.stJoeChew, METH.flavors)),
       cleared(SET.stJoeChew, 'Corn starch'),
     ],
     verdict: 'avoid',

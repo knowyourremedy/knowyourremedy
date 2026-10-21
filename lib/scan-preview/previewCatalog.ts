@@ -31167,7 +31167,7 @@ export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
   const poloxamer = adapalene?.inactiveIngredients.find((ingredient) =>
     ingredient.name === 'Poloxamer 182',
   );
-  if (!poloxamer || poloxamer.riskLevel !== 'limited') {
+  if (!poloxamer || poloxamer.riskLevel !== 'moderate') {
     throw new Error('welmate adapalene must keep poloxamer 182 as Caution');
   }
   const poloxamerWhy = ingredientWhy(poloxamer);

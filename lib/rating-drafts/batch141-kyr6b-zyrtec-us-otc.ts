@@ -21,8 +21,8 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   flavor: 'Methodology §5 Limited (flavor / flavors).',
   cleared: 'Methodology §5 Cleared.',
@@ -107,17 +107,17 @@ export const BATCH141_KYR6B_ZYRTEC_US_OTC: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '2.5 mg' }],
     inactiveIngredients: [
       flag('Sucralose', 'limited', cite(CHEW25_SET, METH.sucralose)),
-      flag('Flavor', 'limited', cite(CHEW25_SET, METH.flavor)),
-      flag('Mannitol', 'limited', cite(CHEW25_SET, METH.mannitol)),
+      flag('Flavor', 'moderate', cite(CHEW25_SET, METH.flavor)),
+      flag('Mannitol', 'moderate', cite(CHEW25_SET, METH.mannitol)),
       cleared(CHEW25_SET, 'Betadex'),
       cleared(CHEW25_SET, 'Corn starch'),
       cleared(CHEW25_SET, 'Lactose monohydrate'),
       cleared(CHEW25_SET, 'Magnesium stearate'),
       cleared(CHEW25_SET, 'Silicified microcrystalline cellulose'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose and mannitol. Flavor stays on this dye-free grape panel. Same inactive line as childrens-zyrtec-chewable on MAIN. REUSE that formula. The locked Caution call stands. The 12 count 2.5 mg row was not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Mannitol.',
+      'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose and mannitol. Flavor stays on this dye-free grape panel. Same inactive line as childrens-zyrtec-chewable on MAIN. REUSE that formula. The locked Caution call stands. The 12 count 2.5 mg row was not rewritten. Ages 2+.',
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -169,9 +169,9 @@ if (ROWS.some((r) => !r.barcode || !upcCheck(r.barcode))) throw new Error('batch
 if (ROWS.some((r) => r.barcode && ALREADY.has(r.barcode))) throw new Error('batch141 upc already on MAIN');
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
-if (avoid.length !== 2 || caution.length !== 0) throw new Error('batch141 verdict tally');
+if (avoid.length !== 1 || caution.length !== 1) throw new Error('batch141 verdict tally');
 if (avoid[0]?.formulaId !== TABLET_FORMULA || !avoid[0].inactiveIngredients.some((i) => i.name === 'Titanium dioxide' && i.riskLevel === 'high')) {
   throw new Error('batch141 tablet formula');
 }
-if (avoid[1]?.formulaId !== CHEW_FORMULA || avoid[1]?.audience !== 'kids') throw new Error('batch141 chew formula');
-if (avoid[1]?.inactiveIngredients.some((i) => i.riskLevel === 'high')) throw new Error('batch141 chew has High');
+if (caution[0]?.formulaId !== CHEW_FORMULA || caution[0]?.audience !== 'kids') throw new Error('batch141 chew formula');
+if (caution[0]?.inactiveIngredients.some((i) => i.riskLevel === 'high')) throw new Error('batch141 chew has High');

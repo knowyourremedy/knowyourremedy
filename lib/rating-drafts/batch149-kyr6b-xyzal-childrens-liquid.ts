@@ -24,7 +24,7 @@ const METH = {
   parabens: 'Methodology §5 High (methylparaben and propylparaben → parabens). Avoid.',
   flavor: 'Methodology §5 Caution (flavor). Distinct from Limited natural flavors.',
   maltitol: 'Methodology §5 Caution (maltitol solution). Distinct from Limited maltitol powder.',
-  saccharin: 'Methodology §5 Caution (saccharin sodium → sodium saccharin).',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   acetic: 'Methodology §5 Cleared (glacial acetic acid → acetic acid, Oct 3, 2026). Same row. Not the driver.',
   acetate: 'Methodology §5 Cleared (sodium acetate trihydrate → sodium acetate anhydrous, Oct 3, 2026). Same row. Not potassium acetate. Not the driver.',
   cleared: 'Methodology §5 Cleared.',

@@ -102,7 +102,7 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   cleared: 'Methodology §5 Cleared',
@@ -261,7 +261,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_KIRKLAND_CET_D, METH.sio2),
       ),
       cleared(SET_KIRKLAND_CET_D, 'Hypromellose'),
@@ -301,7 +301,7 @@ export const BATCH20_CLUB_LEFTOVERS: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_KIRKLAND_MUCUS_DM, METH.sio2),
       ),
       cleared(SET_KIRKLAND_MUCUS_DM, 'Carbomer homopolymer type B'),

@@ -269,7 +269,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_GUAIF, METH.sio2),
       ),
       cleared(SET_GUAIF, 'Hypromellose'),
@@ -278,7 +278,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       cleared(SET_GUAIF, 'Povidone'),
       cleared(SET_GUAIF, 'Pregelatinized starch (maize)'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -300,16 +300,16 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     activeIngredients: [{ name: 'Cetirizine HCl', strength: '10mg' }],
     inactiveIngredients: [
       flag('Polyethylene glycol', 'limited', dailymed(SET_CETIRIZINE, METH.peg)),
-      flag('Mannitol', 'limited', dailymed(SET_CETIRIZINE, METH.mannitol)),
-      flag('Sorbitol', 'limited', dailymed(SET_CETIRIZINE, METH.sorbitol)),
+      flag('Mannitol', 'moderate', dailymed(SET_CETIRIZINE, METH.mannitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_CETIRIZINE, METH.sorbitol)),
       cleared(SET_CETIRIZINE, 'Gelatin'),
       cleared(SET_CETIRIZINE, 'Glycerin'),
       cleared(SET_CETIRIZINE, 'Purified water'),
       cleared(SET_CETIRIZINE, 'Sodium hydroxide'),
       cleared(SET_CETIRIZINE, 'Sorbitan'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Mannitol, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -333,14 +333,14 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Polyethylene glycol 400', 'limited', dailymed(SET_DPH, METH.peg)),
       flag('Propylene glycol', 'limited', dailymed(SET_DPH, METH.pg)),
-      flag('Sorbitol', 'limited', dailymed(SET_DPH, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_DPH, METH.sorbitol)),
       cleared(SET_DPH, 'Gelatin'),
       cleared(SET_DPH, 'Glycerin'),
       cleared(SET_DPH, 'Purified water'),
       cleared(SET_DPH, 'Sorbitol sorbitan solution'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Propylene glycol, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['Whole Foods'],
     sourcesGeneral: [
@@ -426,7 +426,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving when labeled' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(WFM_ADULT_MULTI_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WFM_ADULT_MULTI_CITE, METH.sio2)),
       labelCleared(WFM_ADULT_MULTI_CITE, 'Microcrystalline cellulose'),
       labelCleared(WFM_ADULT_MULTI_CITE, 'Stearic acid (vegetable source)'),
       labelCleared(WFM_ADULT_MULTI_CITE, 'Croscarmellose sodium'),
@@ -436,7 +436,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
         'Vegetable coating (sodium carboxymethylcellulose)',
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-adult-once-daily-multi'],
@@ -460,7 +460,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(WFM_MENS_MULTI_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WFM_MENS_MULTI_CITE, METH.sio2)),
       labelCleared(WFM_MENS_MULTI_CITE, 'Microcrystalline cellulose'),
       labelCleared(WFM_MENS_MULTI_CITE, 'Stearic acid (vegetable source)'),
       labelCleared(WFM_MENS_MULTI_CITE, 'Croscarmellose sodium'),
@@ -470,7 +470,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
         'Vegetable coating (sodium carboxymethylcellulose)',
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-mens-one-daily-multi'],
@@ -494,13 +494,13 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(WFM_PRENATAL_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WFM_PRENATAL_CITE, METH.sio2)),
       labelCleared(WFM_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(WFM_PRENATAL_CITE, 'Stearic acid'),
       labelCleared(WFM_PRENATAL_CITE, 'Croscarmellose sodium'),
       labelCleared(WFM_PRENATAL_CITE, 'Magnesium stearate'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods'],
     barcode: BATCH16_CATCHUP_BARCODES['365-prenatal-multi'],
@@ -537,7 +537,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       labelCleared(SPROUTS_ONCE_CITE, 'hypromellose'),
       flag(
         'silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(SPROUTS_ONCE_CITE, METH.sio2),
       ),
       labelCleared(SPROUTS_ONCE_CITE, 'magnesium stearate'),
@@ -598,7 +598,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET_IBU, METH.ps80)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_IBU, METH.sio2),
       ),
       cleared(SET_IBU, 'Corn starch'),
@@ -673,7 +673,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide (for color)', 'high', labelCite(WFM_CALCIUM_CITE, METH.tio2)),
-      flag('Silicon dioxide', 'cleared', labelCite(WFM_CALCIUM_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WFM_CALCIUM_CITE, METH.sio2)),
       labelCleared(WFM_CALCIUM_CITE, 'Stearic acid (vegetable source)'),
       labelCleared(WFM_CALCIUM_CITE, 'Croscarmellose sodium'),
       labelCleared(WFM_CALCIUM_CITE, 'Hydroxypropyl methylcellulose'),
@@ -709,7 +709,7 @@ export const BATCH16_365_SPROUTS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide (for color)', 'high', labelCite(WFM_CALMAG_CITE, METH.tio2)),
-      flag('Silicon dioxide', 'cleared', labelCite(WFM_CALMAG_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WFM_CALMAG_CITE, METH.sio2)),
       labelCleared(WFM_CALMAG_CITE, 'Stearic acid (vegetable source)'),
       labelCleared(WFM_CALMAG_CITE, 'Croscarmellose sodium'),
       labelCleared(WFM_CALMAG_CITE, 'Hydroxypropyl methylcellulose'),

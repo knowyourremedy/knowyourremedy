@@ -15,11 +15,11 @@ const METH = {
   citric: 'Methodology §5 Cleared (citric acid).',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose, cellulose gum family).',
   flavorNamed:
-    'Methodology §5 Cleared (Natural strawberry flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   gums: 'Methodology §5 Cleared (xanthan gum).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral).',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   water: 'Methodology §5 Cleared (water / purified water).',
 } as const;
 
@@ -69,8 +69,8 @@ export const BATCH170_KYR6C_GAS_DROPS_STRAWBERRY: RatingRecord[] = [
       flag(PANEL, 'Sucralose', 'limited', METH.sucralose),
       flag(PANEL, 'Xanthan gum', 'cleared', METH.gums),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Propylene glycol, Sodium benzoate, Sucralose.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: GAS_ALTS,
     sourcesGeneral: [

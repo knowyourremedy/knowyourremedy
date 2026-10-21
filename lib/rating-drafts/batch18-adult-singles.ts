@@ -361,7 +361,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Vitamin C (ascorbic acid)', strength: '1000mg' }],
     inactiveIngredients: [
       flag('Polyethylene glycol', 'limited', labelCite(NM_C_CITE, METH.peg)),
-      flag('Silicon dioxide', 'cleared', labelCite(NM_C_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(NM_C_CITE, METH.sio2)),
       labelCleared(NM_C_CITE, 'Cellulose gel'),
       labelCleared(NM_C_CITE, 'Hypromellose'),
       labelCleared(NM_C_CITE, 'Croscarmellose sodium'),
@@ -395,10 +395,10 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     inactiveIngredients: [
       flag('Maltodextrin', 'limited', labelCite(EMERGENC_ORIG_CITE, METH.maltodextrin)),
       flag('Natural flavors', 'limited', labelCite(EMERGENC_ORIG_CITE, METH.flavors)),
-      flag('Silicon dioxide', 'cleared', labelCite(EMERGENC_ORIG_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(EMERGENC_ORIG_CITE, METH.sio2)),
       flag(
         'Beta-carotene (color)',
-        'cleared',
+        'moderate',
         labelCite(EMERGENC_ORIG_CITE, METH.betaCaroteneColor),
       ),
       labelCleared(EMERGENC_ORIG_CITE, 'Fructose'),
@@ -437,7 +437,7 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Natural flavor', 'limited', labelCite(POWER_C_CITE, METH.flavors)),
-      flag('Annatto extract (color)', 'cleared', labelCite(POWER_C_CITE, METH.annatto)),
+      flag('Annatto extract (color)', 'moderate', labelCite(POWER_C_CITE, METH.annatto)),
       labelCleared(POWER_C_CITE, 'Glucose syrup'),
       labelCleared(POWER_C_CITE, 'Sugar'),
       labelCleared(POWER_C_CITE, 'Water'),
@@ -468,14 +468,14 @@ export const BATCH18_ADULT_SINGLES: RatingRecord[] = [
       { name: 'Vitamin B12 (cyanocobalamin)', strength: '1000mcg (other tablet strengths share formulaId when inactives match)' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(NM_B12_TAB_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(NM_B12_TAB_CITE, METH.sio2)),
       labelCleared(NM_B12_TAB_CITE, 'Cellulose gel'),
       labelCleared(NM_B12_TAB_CITE, 'Hypromellose'),
       labelCleared(NM_B12_TAB_CITE, 'Stearic acid'),
       labelCleared(NM_B12_TAB_CITE, 'Magnesium stearate'),
       labelCleared(NM_B12_TAB_CITE, 'Croscarmellose sodium'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: B12_ALTS,

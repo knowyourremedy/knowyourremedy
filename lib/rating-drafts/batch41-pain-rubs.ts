@@ -97,7 +97,7 @@ const ROSEMARY_TAP =
 const METH = {
   parabens:
     'Methodology §5 High-tier (parabens — High in every form, including rubs and patches; locked Sept 15, 2026)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   alcoholVehicle:
     'Methodology §5 Limited-risk (alcohol / ethyl alcohol as a VEHICLE). Alcohol is the vehicle, not the gummy seed-oil High rule. Distinct from drinking alcohol as an active. Not Avoid.',
   peppermint: `Methodology §5 Limited-risk (peppermint oil / orange essential oil as flavor — flavor/EO line). ${PEPPERMINT_TAP}`,
@@ -286,7 +286,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sodium polyacrylate (2500000 MW)',
-        'cleared',
+        'moderate',
         dailymed(SET.preciseFf, METH.polyacrylate),
       ),
       ...preciseOlivateBase(SET.preciseFf),
@@ -316,7 +316,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sodium polyacrylate (2500000 MW)',
-        'cleared',
+        'moderate',
         dailymed(SET.preciseCool, METH.polyacrylate),
       ),
       ...preciseOlivateBase(SET.preciseCool),
@@ -341,10 +341,10 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     form: 'cream',
     activeIngredients: [{ name: 'Lidocaine', strength: 'on carton' }],
     inactiveIngredients: [
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.preciseWarm, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.preciseWarm, METH.phenoxy)),
       flag(
         'Vanillyl butyl ether',
-        'cleared',
+        'moderate',
         dailymed(SET.preciseWarm, METH.vanillyl),
       ),
       flag('Cetearyl olivate', 'cleared', dailymed(SET.preciseWarm, METH.olivate)),
@@ -386,10 +386,10 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       { name: 'Menthol', strength: 'on carton' },
     ],
     inactiveIngredients: [
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.preciseNight, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.preciseNight, METH.phenoxy)),
       flag(
         'Vanillyl butyl ether',
-        'cleared',
+        'moderate',
         dailymed(SET.preciseNight, METH.vanillyl),
       ),
       flag('Cetearyl olivate', 'cleared', dailymed(SET.preciseNight, METH.olivate)),
@@ -437,7 +437,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.precisePatch, METH.ps80)),
       flag(
         'Diethylene glycol monoethyl ether (DEGEE)',
-        'cleared',
+        'moderate',
         dailymed(SET.precisePatch, METH.degee),
       ),
       flag(
@@ -479,7 +479,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexLotion),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil, Carbomer interpolymer type A.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -503,7 +503,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexTube),
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil, Carbomer interpolymer type A.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -528,37 +528,37 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Alcohol', 'limited', dailymed(SET.alevexSpray, METH.alcoholVehicle)),
       flag('Peppermint oil', 'limited', dailymed(SET.alevexSpray, METH.peppermint)),
-      flag('Clove oil', 'cleared', dailymed(SET.alevexSpray, METH.clove)),
+      flag('Clove oil', 'moderate', dailymed(SET.alevexSpray, METH.clove)),
       flag(
         'Frankincense / boswellia oil',
-        'cleared',
+        'moderate',
         dailymed(SET.alevexSpray, METH.boswellia),
       ),
       flag(
         'Thymus mastichina flowering-top oil',
-        'cleared',
+        'moderate',
         dailymed(SET.alevexSpray, METH.thymus),
       ),
-      flag('Rosemary oil', 'cleared', dailymed(SET.alevexSpray, METH.rosemary)),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.alevexSpray, METH.eucalyptus)),
-      flag('Vanillyl butyl ether', 'cleared', dailymed(SET.alevexSpray, METH.vanillyl)),
-      flag('Isopulegol', 'cleared', dailymed(SET.alevexSpray, METH.isopulegol)),
+      flag('Rosemary oil', 'moderate', dailymed(SET.alevexSpray, METH.rosemary)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.alevexSpray, METH.eucalyptus)),
+      flag('Vanillyl butyl ether', 'moderate', dailymed(SET.alevexSpray, METH.vanillyl)),
+      flag('Isopulegol', 'moderate', dailymed(SET.alevexSpray, METH.isopulegol)),
       flag(
         '3-((l-Menthyl)oxy)propane-1,2-diol (menthoxypropanediol)',
-        'cleared',
+        'moderate',
         dailymed(SET.alevexSpray, METH.menthoxy),
       ),
       flag(
         'Dimethylaminoethyl methacrylate – butyl methacrylate – methyl methacrylate copolymer (DMAEMA)',
-        'cleared',
+        'moderate',
         dailymed(SET.alevexSpray, METH.dmaema),
       ),
-      flag('N-vinylcaprolactam', 'cleared', dailymed(SET.alevexSpray, METH.vinyl)),
-      flag('N-vinylpyrrolidinone', 'cleared', dailymed(SET.alevexSpray, METH.vinyl)),
-      flag('Dimethyl isosorbide', 'cleared', dailymed(SET.alevexSpray, METH.dmi)),
-      flag('Isobutane', 'cleared', dailymed(SET.alevexSpray, METH.propellant)),
-      flag('Isopentane', 'cleared', dailymed(SET.alevexSpray, METH.propellant)),
-      flag('Propane', 'cleared', dailymed(SET.alevexSpray, METH.propellant)),
+      flag('N-vinylcaprolactam', 'moderate', dailymed(SET.alevexSpray, METH.vinyl)),
+      flag('N-vinylpyrrolidinone', 'moderate', dailymed(SET.alevexSpray, METH.vinyl)),
+      flag('Dimethyl isosorbide', 'moderate', dailymed(SET.alevexSpray, METH.dmi)),
+      flag('Isobutane', 'moderate', dailymed(SET.alevexSpray, METH.propellant)),
+      flag('Isopentane', 'moderate', dailymed(SET.alevexSpray, METH.propellant)),
+      flag('Propane', 'moderate', dailymed(SET.alevexSpray, METH.propellant)),
       flag('Linseed oil', 'cleared', dailymed(SET.alevexSpray, METH.linseed)),
       flag(
         'Carbomer interpolymer type A',

@@ -449,7 +449,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Xylitol',
-        'limited',
+        'moderate',
         dailymed('091dd1e7-2484-cdbf-e063-6394a90a2189', METH.xylitol),
       ),
       flag(
@@ -503,17 +503,17 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('a51c2deb-c703-4dc8-9255-8ac9fe635170', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('a51c2deb-c703-4dc8-9255-8ac9fe635170', METH.sorbitol),
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('a51c2deb-c703-4dc8-9255-8ac9fe635170', METH.flavors),
       ),
     ],
@@ -545,7 +545,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('46ddbfde-54ab-4373-b832-b9c0620b1e9d', METH.sorbitol),
       ),
       flag(
@@ -555,12 +555,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('46ddbfde-54ab-4373-b832-b9c0620b1e9d', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Sorbitol, Potassium sorbate, Flavors.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_ALT,
@@ -593,17 +593,17 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('997b9551-c222-4a9c-8ba1-09a5f97495fa', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('997b9551-c222-4a9c-8ba1-09a5f97495fa', METH.sorbitol),
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('997b9551-c222-4a9c-8ba1-09a5f97495fa', METH.flavors),
       ),
     ],
@@ -635,7 +635,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('4a121a53-dbae-05c7-e063-6294a90aed89', METH.sorbitol),
       ),
       flag(
@@ -645,12 +645,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('4a121a53-dbae-05c7-e063-6294a90aed89', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Sorbitol, Potassium sorbate, Flavors.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: INFANTS_APAP_LIQUID_ALT,
@@ -683,7 +683,7 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Mannitol',
-        'limited',
+        'moderate',
         dailymed('3a935584-6045-0a58-e063-6394a90a40c4', METH.mannitol),
       ),
       flag(
@@ -693,12 +693,12 @@ export const BATCH2_KIDS_APAP_IBU: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('3a935584-6045-0a58-e063-6394a90a40c4', METH.flavors),
       ),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Sucralose, Mannitol, Maltodextrin, Flavor.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Acesulfame potassium, Sucralose, Maltodextrin.',
 
     retailers: ['Walmart', 'Target', 'CVS', 'Walgreens'],
     cleanAlternatives: KIDS_APAP_LIQUID_FROM_CHEW,

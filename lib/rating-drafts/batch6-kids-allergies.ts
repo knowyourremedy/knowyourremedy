@@ -81,8 +81,8 @@ const METH = {
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
   sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
-  saccharin: 'Methodology §5 Moderate-risk (saccharin)',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (maltodextrin — organic and non-organic)',
   riceBran:
@@ -511,7 +511,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Benzalkonium chloride',
-        'cleared',
+        'moderate',
         dailymed('3adff80f-fca7-4cc5-b106-0f68f71c85b0', METH.bkc),
       ),
       flag(
@@ -553,7 +553,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Benzalkonium chloride',
-        'cleared',
+        'moderate',
         dailymed('bc824143-b876-4c3d-86fd-81fb58673851', METH.bkc),
       ),
       flag(
@@ -657,22 +657,22 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.flavors),
       ),
       flag(
         'Maltitol',
-        'limited',
+        'moderate',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.maltitol),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.sorbitol),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('170061e9-e529-4ff0-e054-00144ff8d46c', METH.benzoate),
       ),
       flag(
@@ -685,8 +685,8 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('170061e9-e529-4ff0-e054-00144ff8d46c', 'Phosphoric acid'),
       cleared('170061e9-e529-4ff0-e054-00144ff8d46c', 'Purified water'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -725,17 +725,17 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('37732ca2-b454-4215-91a2-c62e0f7a56af', METH.flavors),
       ),
       flag(
         'Mannitol',
-        'limited',
+        'moderate',
         dailymed('37732ca2-b454-4215-91a2-c62e0f7a56af', METH.mannitol),
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('37732ca2-b454-4215-91a2-c62e0f7a56af', METH.sio2),
       ),
     ],
@@ -768,12 +768,12 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('06115cea-5a44-409d-85ed-bb71743491c1', METH.flavors),
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('06115cea-5a44-409d-85ed-bb71743491c1', METH.sio2),
       ),
       cleared('06115cea-5a44-409d-85ed-bb71743491c1', 'Crospovidone'),
@@ -817,7 +817,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('e2bd23c7-dfba-463a-adbe-2183970da740', METH.flavors),
       ),
       flag(
@@ -827,7 +827,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Xylitol',
-        'limited',
+        'moderate',
         dailymed('e2bd23c7-dfba-463a-adbe-2183970da740', METH.xylitolOral),
       ),
       flag(
@@ -939,19 +939,19 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', METH.sorbitol),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', METH.benzoate),
       ),
       cleared('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', 'Anhydrous citric acid'),
       cleared('4b1ee9b1-d22e-4fb2-8dcd-912374da12d7', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor.',
 
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -990,19 +990,19 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('1f37c327-cd4c-4bc1-ae70-713569694e2e', METH.sorbitol),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('1f37c327-cd4c-4bc1-ae70-713569694e2e', METH.benzoate),
       ),
       cleared('1f37c327-cd4c-4bc1-ae70-713569694e2e', 'Anhydrous citric acid'),
       cleared('1f37c327-cd4c-4bc1-ae70-713569694e2e', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial bubble gum flavor, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial bubble gum flavor.',
 
     retailers: ['Target'],
     cleanAlternatives: ORAL_ALTS_AGE2,
@@ -1077,7 +1077,7 @@ export const BATCH6_KIDS_ALLERGIES: RatingRecord[] = [
       cleared('0210f9e5-c35b-4cfa-92d1-48555e99f1f3', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor.',
 
     retailers: ['CVS'],
     cleanAlternatives: ORAL_ALTS_AGE2,

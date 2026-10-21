@@ -90,7 +90,7 @@ export const BATCH140_KYR6B_SPROUTS_HELD_BOTTLES: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Organic garlic bulb extract', strength: '988 mg' }],
     inactiveIngredients: [
-      flag('Grain alcohol', 'limited', METH.grain),
+      flag('Grain alcohol', 'moderate', METH.grain),
       flag('Purified water', 'cleared', METH.purified),
     ],
     verdict: 'caution',
@@ -118,7 +118,7 @@ export const BATCH140_KYR6B_SPROUTS_HELD_BOTTLES: RatingRecord[] = [
       { name: 'Parasite cleanse herbal extract blend', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Grain alcohol (46–56% by volume)', 'limited', METH.grain),
+      flag('Grain alcohol (46–56% by volume)', 'moderate', METH.grain),
       flag('Deionized water', 'cleared', METH.water),
     ],
     verdict: 'caution',
@@ -144,7 +144,7 @@ export const BATCH140_KYR6B_SPROUTS_HELD_BOTTLES: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Detox herbal extract blend', strength: 'label serving' }],
     inactiveIngredients: [
-      flag('Grain alcohol (46–56% by volume)', 'limited', METH.grain),
+      flag('Grain alcohol (46–56% by volume)', 'moderate', METH.grain),
       flag('Deionized water', 'cleared', METH.water),
     ],
     verdict: 'caution',
@@ -175,10 +175,10 @@ if (clean.length !== 1 || caution.length !== 3) throw new Error('batch140 verdic
 if (clean.some((r) => r.inactiveIngredients.some((i) => i.riskLevel !== 'cleared'))) {
   throw new Error('batch140 clean has a flag');
 }
-if (caution.some((r) => r.inactiveIngredients.some((i) => i.riskLevel === 'high' || i.riskLevel === 'moderate'))) {
-  throw new Error('batch140 caution has High or Moderate');
+if (caution.some((r) => r.inactiveIngredients.some((i) => i.riskLevel === 'high'))) {
+  throw new Error('batch140 caution has High');
 }
-if (caution.some((r) => !r.inactiveIngredients.some((i) => i.name.toLowerCase().includes('grain alcohol') && i.riskLevel === 'limited'))) {
+if (caution.some((r) => !r.inactiveIngredients.some((i) => i.name.toLowerCase().includes('grain alcohol') && (i.riskLevel === 'limited' || i.riskLevel === 'moderate')))) {
   throw new Error('batch140 missing grain alcohol driver');
 }
 const parasite = ROWS.find((r) => r.id === 'sprouts-parasite-cleanse-liquid');

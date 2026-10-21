@@ -1,4 +1,8 @@
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
+import { ingredientCountsTowardLimitedStack as ingredientCountsTowardLimitedStackEligibility } from './limitedStackEligibility';
+import { isSiliconDioxideStackExempt } from './siliconDioxide';
+
+export { isSiliconDioxideStackExempt } from './siliconDioxide';
 
 export type VerdictRollup = {
   verdict: RatingRecord['verdict'];
@@ -17,35 +21,8 @@ export type VerdictRollup = {
     | 'clean';
 };
 
-/** Silicon dioxide family: 0-pt Caution cap; does not count toward the Limited stack (t137u). */
-export function isSiliconDioxideStackExempt(name: string): boolean {
-  const n = name.trim().toLowerCase();
-  if (
-    /calcium silicate|magnesium silicate|aluminum silicate|sodium silicate|potassium aluminum silicate|lithium magnesium sodium silicate/.test(
-      n,
-    )
-  ) {
-    return false;
-  }
-  if (/\b6x\b/.test(n) && /silica/.test(n)) return false;
-  return (
-    n === 'silicon dioxide'
-    || n === 'silica'
-    || n === 'silica gel'
-    || n === 'sipernat'
-    || n === 'colloidal silicon dioxide'
-    || n === 'colloidal silicone dioxide'
-    || n === 'colloidal anhydrous silica'
-    || n === 'anhydrous silica'
-    || /^silicon dioxide\b/.test(n)
-    || /^colloidal (silicon|silica)/.test(n)
-  );
-}
-
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
-  if (ingredient.stackCountExempt) return false;
-  if (ingredient.riskLevel !== 'limited') return false;
-  return !isSiliconDioxideStackExempt(ingredient.name);
+  return ingredientCountsTowardLimitedStackEligibility(ingredient);
 }
 
 type IngredientLevel = Pick<IngredientFlag, 'name' | 'riskLevel' | 'stackCountExempt'>;

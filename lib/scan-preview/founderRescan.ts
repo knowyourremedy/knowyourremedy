@@ -4,6 +4,7 @@ import { applyOverlayIngredientLocks } from './previewCatalog';
 import { verdictFromFlagsStrict } from './verdictFromFlags';
 import { applyCautionCapLocks } from './cautionCapLocks';
 import { applyT138uIngredientLocks } from './t138uLocks';
+import { applyT141uIngredientLocks } from './t141uLocks';
 
 export { verdictFromFlagsStrict } from './verdictFromFlags';
 export type { VerdictRollup } from './verdictFromFlags';
@@ -202,6 +203,7 @@ export function recomputeFounderRescanRecord(record: RatingRecord): RatingRecord
   r = applyCautionCapLocks(r);
   r = applyT132uIngredientLocks(r);
   r = applyT138uIngredientLocks(r);
+  r = applyT141uIngredientLocks(r);
   r = applyOverlayIngredientLocks(r, { applyT133uToFileLockedIds: true });
   const verdict = verdictFromFlagsStrict(r);
   return { ...r, verdict };

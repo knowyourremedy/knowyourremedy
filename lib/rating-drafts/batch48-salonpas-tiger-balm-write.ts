@@ -132,7 +132,7 @@ const METH = {
   dmdm:
     'Methodology §5 Caution (DMDM hydantoin / diazolidinyl urea — formaldehyde-donor; standalone Caution, not Avoid unless founder later bumps; locked Sept 15, 2026)',
   peg120:
-    'Methodology §5 Caution (PEG-120 Methyl Glucose Dioleate — exact INCI; distinct from Cleared methyl glucose dioleate; standalone Caution, not Avoid; locked Sept 15, 2026). Not the PEG Moderate family row.',
+    'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   butylene:
@@ -343,7 +343,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Aminomethyl propanol',
-        'cleared',
+        'moderate',
         dailymed(SET.salonLidoCream, METH.amp),
       ),
       flag(
@@ -363,12 +363,12 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Ceteth phosphate',
-        'cleared',
+        'moderate',
         dailymed(SET.salonLidoCream, METH.cetethPhos),
       ),
       flag(
         'Dicetyl phosphate',
-        'cleared',
+        'moderate',
         dailymed(SET.salonLidoCream, METH.dicetyl),
       ),
       flag(
@@ -383,7 +383,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Hydroxyl acrylate/sodium acryloyldimethyl taurate copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.salonLidoCream, METH.amps),
       ),
       flag(
@@ -399,7 +399,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       flag('Squalane', 'cleared', dailymed(SET.salonLidoCream, METH.squalane)),
       flag(
         'Steareth',
-        'cleared',
+        'moderate',
         dailymed(SET.salonLidoCream, METH.stearethUnspec),
       ),
       cleared(SET.salonLidoCream, 'Purified water'),
@@ -476,19 +476,19 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       cleared(SET.salonGelHot, 'Glycerin'),
       flag(
         'Magnesium aluminometasilicate',
-        'cleared',
+        'moderate',
         dailymed(SET.salonGelHot, METH.magAlumino),
       ),
       flag(
         'Methylacrylate/2-ethylhexyl acrylate copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.salonGelHot, METH.acrylate),
       ),
-      flag('Nonoxynol', 'cleared', dailymed(SET.salonGelHot, METH.nonoxynol)),
+      flag('Nonoxynol', 'moderate', dailymed(SET.salonGelHot, METH.nonoxynol)),
       flag('Oleyl alcohol', 'cleared', dailymed(SET.salonGelHot, METH.oleyl)),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.salonGelHot, METH.polyacrylate),
       ),
       flag(
@@ -503,12 +503,12 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.salonGelHot, METH.polyacrylate),
       ),
       flag(
         'Sorbitan monooleate',
-        'cleared',
+        'moderate',
         dailymed(SET.salonGelHot, METH.sorbitanOleate),
       ),
       flag(
@@ -562,30 +562,30 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Hydrogenated rosin glycerol ester',
-        'cleared',
+        'moderate',
         dailymed(SET.salonCapsicum, METH.patchAdhesive),
       ),
       flag(
         'Maleated rosin glycerin ester',
-        'cleared',
+        'moderate',
         dailymed(SET.salonCapsicum, METH.patchAdhesive),
       ),
       flag(
         'Natural rubber latex',
-        'cleared',
+        'moderate',
         dailymed(SET.salonCapsicum, METH.latex),
       ),
       flag(
         'Polybutene',
-        'cleared',
+        'moderate',
         dailymed(SET.salonCapsicum, METH.polybutene),
       ),
       flag(
         'Polyisobutylene',
-        'cleared',
+        'moderate',
         dailymed(SET.salonCapsicum, METH.patchAdhesive),
       ),
-      flag('Silicon dioxide', 'cleared', dailymed(SET.salonCapsicum, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET.salonCapsicum, METH.sio2)),
       flag(
         'Titanium dioxide',
         'high',
@@ -624,14 +624,14 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Eucalyptus oil',
-        'cleared',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.eucalyptus),
       ),
       cleared(SET.tbHydroLarge, 'Glycerin'),
-      flag('Mentha Oil', 'cleared', dailymed(SET.tbHydroLarge, METH.menthaOil)),
+      flag('Mentha Oil', 'moderate', dailymed(SET.tbHydroLarge, METH.menthaOil)),
       flag(
         'Methyl Acrylate and 2-Ethylhexyl Acrylate Copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.methylAcrylate),
       ),
       cleared(SET.tbHydroLarge, 'Purified water'),
@@ -643,27 +643,27 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       flag('PVA Solution', 'cleared', dailymed(SET.tbHydroLarge, METH.pva)),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.tbHydroLarge, METH.sio2),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.polyacrylate),
       ),
       flag(
         'Sodium Polyacrylate Starch',
-        'cleared',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.acrylate),
       ),
       flag(
         'Sorbitan monooleate',
-        'cleared',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.sorbitanOleate),
       ),
       flag(
         'Sorbitol solution',
-        'limited',
+        'moderate',
         dailymed(SET.tbHydroLarge, METH.sorbitol),
       ),
       flag(
@@ -705,16 +705,16 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Dihydroxyaluminum aminoacetate',
-        'cleared',
+        'moderate',
         dailymed(SET.tbCool, METH.dihydroxyAl),
       ),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.tbCool, METH.eucalyptus)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.tbCool, METH.eucalyptus)),
       cleared(SET.tbCool, 'Glycerin'),
       flag('Heavy kaolin', 'cleared', dailymed(SET.tbCool, METH.kaolin)),
-      flag('Mentha Oil', 'cleared', dailymed(SET.tbCool, METH.menthaOil)),
+      flag('Mentha Oil', 'moderate', dailymed(SET.tbCool, METH.menthaOil)),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.tbCool, METH.polyacrylate),
       ),
       flag('Polysorbate 80', 'limited', dailymed(SET.tbCool, METH.ps80)),
@@ -726,13 +726,13 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.tbCool, METH.polyacrylate),
       ),
-      flag('Sorbitol solution', 'limited', dailymed(SET.tbCool, METH.sorbitol)),
+      flag('Sorbitol solution', 'moderate', dailymed(SET.tbCool, METH.sorbitol)),
       flag(
         'Synthetic hydrotalcite',
-        'cleared',
+        'moderate',
         dailymed(SET.tbCool, METH.hydrotalcite),
       ),
     ],
@@ -783,7 +783,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       { name: 'Menthol', strength: '11%' },
     ],
     inactiveIngredients: [
-      flag('Cajuput oil', 'cleared', dailymed(SET.tbArthritis, METH.cajuput)),
+      flag('Cajuput oil', 'moderate', dailymed(SET.tbArthritis, METH.cajuput)),
       flag(
         'Chondroitin sulfate',
         'cleared',
@@ -791,19 +791,19 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'Cinnamon oil',
-        'cleared',
+        'moderate',
         dailymed(SET.tbArthritis, METH.cinnamon),
       ),
-      flag('Clove oil', 'cleared', dailymed(SET.tbArthritis, METH.clove)),
+      flag('Clove oil', 'moderate', dailymed(SET.tbArthritis, METH.clove)),
       cleared(SET.tbArthritis, 'Purified water'),
       flag(
         'Dementholised mint oil',
-        'cleared',
+        'moderate',
         dailymed(SET.tbArthritis, METH.dementhol),
       ),
       flag(
         'Diazolidinyl urea',
-        'cleared',
+        'moderate',
         dailymed(SET.tbArthritis, METH.dmdm),
       ),
       flag(
@@ -823,7 +823,7 @@ export const BATCH48_SALONPAS_TIGER_BALM_WRITE: RatingRecord[] = [
       ),
       flag(
         'PEG-120 Methyl Glucose Dioleate',
-        'cleared',
+        'limited',
         dailymed(SET.tbArthritis, METH.peg120),
       ),
       flag(

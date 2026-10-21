@@ -546,7 +546,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polydextrose', 'limited', dailymed(SET.ha2z382, METH.polydextrose)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.ha2z382, METH.sio2),
       ),
       cleared(SET.ha2z382, 'Corn starch'),
@@ -579,7 +579,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     activeIngredients: [{ name: 'Acetaminophen', strength: '160mg / 5mL' }],
     inactiveIngredients: [
       flag('Natural flavors', 'limited', dailymed(SET.mommy, METH.flavors)),
-      flag('Sodium benzoate', 'limited', dailymed(SET.mommy, METH.benzoate)),
+      flag('Sodium benzoate', 'moderate', dailymed(SET.mommy, METH.benzoate)),
       flag(
         'Organic elderberry juice concentrate',
         'cleared',
@@ -700,7 +700,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         'cleared',
         labelCite(CITE.nowTurmeric, METH.calciumLaurate),
       ),
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.nowTurmeric, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.nowTurmeric, METH.sio2)),
     ],
     verdict: 'caution',
 
@@ -729,7 +729,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(CITE.doctorsBest, METH.sio2),
       ),
       flag(
@@ -787,7 +787,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         'cleared',
         labelCite(CITE.qunol1500, METH.stearate),
       ),
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.qunol1500, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.qunol1500, METH.sio2)),
     ],
     verdict: 'caution',
 
@@ -823,7 +823,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         'cleared',
         labelCite(CITE.qunol1000, METH.stearate),
       ),
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.qunol1000, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.qunol1000, METH.sio2)),
     ],
     verdict: 'caution',
 
@@ -849,22 +849,22 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.healthwise, METH.ps80)),
       flag(
         'Dihydroxyaluminium aminoacetate',
-        'cleared',
+        'moderate',
         dailymed(SET.healthwise, METH.dihydroxyAl),
       ),
       flag(
         'Hydroxyacetophenone',
-        'cleared',
+        'moderate',
         dailymed(SET.healthwise, METH.hydroxyaceto),
       ),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.healthwise, METH.polyacrylate),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.healthwise, METH.polyacrylate),
       ),
       flag(
@@ -909,17 +909,17 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.welmateParaben, METH.ps80)),
       flag(
         'Aluminum glycinate',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateParaben, METH.aluminumGlycinate),
       ),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateParaben, METH.polyacrylate),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateParaben, METH.polyacrylate),
       ),
       flag(
@@ -966,7 +966,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       { name: 'BioPerine black pepper extract', strength: '15mg' },
     ],
     inactiveIngredients: [
-      flag('Rice flour', 'cleared', labelCite(CITE.naturewise, METH.riceFlour)),
+      flag('Rice flour', 'moderate', labelCite(CITE.naturewise, METH.riceFlour)),
       flag(
         'Pullulan capsule',
         'cleared',
@@ -1048,12 +1048,12 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.ha2z335, METH.tio2)),
       flag(
         'Iron oxide red',
-        'cleared',
+        'moderate',
         dailymed(SET.ha2z335, METH.ironOxideRed),
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.ha2z335, METH.sio2),
       ),
       flag('Triacetin', 'cleared', dailymed(SET.ha2z335, METH.triacetin)),
@@ -1103,7 +1103,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         'moderate',
         dailymed(SET.gsKidsChew, METH.sls),
       ),
-      flag('Mannitol', 'limited', dailymed(SET.gsKidsChew, METH.mannitol)),
+      flag('Mannitol', 'moderate', dailymed(SET.gsKidsChew, METH.mannitol)),
       flag(
         'Natural and artificial flavors',
         'limited',
@@ -1156,7 +1156,7 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
         dailymed(SET.gsLiqGel, METH.ammoniumHydroxide),
       ),
       flag('Sorbitan', 'moderate', dailymed(SET.gsLiqGel, METH.sorbitan)),
-      flag('Sorbitol', 'limited', dailymed(SET.gsLiqGel, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET.gsLiqGel, METH.sorbitol)),
       flag(
         'Caprylic and capric acid triglycerides',
         'limited',
@@ -1238,28 +1238,28 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.amzLido, METH.ps80)),
       flag(
         '3-(2-ethylhexyloxy)propane-1,2-diol',
-        'cleared',
+        'moderate',
         dailymed(SET.amzLido, METH.ethylhexyl),
       ),
       flag(
         'Aluminum glycinate',
-        'cleared',
+        'moderate',
         dailymed(SET.amzLido, METH.aluminumGlycinate),
       ),
       flag(
         'Iodopropynyl butylcarbamate',
-        'cleared',
+        'moderate',
         dailymed(SET.amzLido, METH.ipbc),
       ),
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.amzLido, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.amzLido, METH.phenoxy)),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.amzLido, METH.polyacrylate),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.amzLido, METH.polyacrylate),
       ),
       flag('Propylene glycol', 'cleared', dailymed(SET.amzLido, METH.pgTopical)),
@@ -1301,28 +1301,28 @@ export const BATCH54_AMAZON_PF_HOLES: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.welmateEh, METH.ps80)),
       flag(
         '3-(2-ethylhexyloxy)propane-1,2-diol',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateEh, METH.ethylhexyl),
       ),
       flag(
         'Aluminum glycinate',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateEh, METH.aluminumGlycinate),
       ),
       flag(
         'Iodopropynyl butylcarbamate',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateEh, METH.ipbc),
       ),
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.welmateEh, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.welmateEh, METH.phenoxy)),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateEh, METH.polyacrylate),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.welmateEh, METH.polyacrylate),
       ),
       flag(

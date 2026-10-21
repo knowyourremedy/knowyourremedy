@@ -455,7 +455,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
         'cleared',
         labelCite(CITE.wellmade, METH.cellulose),
       ),
-      flag('Silica', 'cleared', labelCite(CITE.wellmade, METH.sio2)),
+      flag('Silica', 'limited', labelCite(CITE.wellmade, METH.sio2)),
     ],
     verdict: 'caution',
 
@@ -648,7 +648,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(CITE.thorne500, METH.sio2),
       ),
       flag(
@@ -699,7 +699,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(CITE.thorne1000, METH.sio2),
       ),
       flag(
@@ -763,7 +763,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
       flag(
         'Organic rice meal',
-        'cleared',
+        'moderate',
         labelCite(CITE.golGummy, METH.riceMeal),
       ),
       flag(
@@ -837,7 +837,7 @@ export const BATCH52_THRIVE_PF_HOLES: RatingRecord[] = [
       ),
       flag(
         'Fragrance',
-        'cleared',
+        'moderate',
         labelCite(CITE.lotionVanilla, METH.fragrance),
       ),
       flag(

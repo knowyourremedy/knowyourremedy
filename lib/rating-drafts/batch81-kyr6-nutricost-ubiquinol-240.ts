@@ -121,7 +121,7 @@ export const BATCH81_KYR6_NUTRICOST_UBIQUINOL_240: RatingRecord[] = [
         ['Purified water', 'cleared', 'water'],
         ['Beeswax', 'cleared', 'beeswax'],
         ['Sunflower lecithin', 'cleared', 'lecithin'],
-        ['Annatto', 'limited', 'annatto'],
+        ['Annatto', 'moderate', 'annatto'],
         ['Sunflower oil', 'cleared', 'sunflowerFill'],
       ] as [string, IngredientFlag['riskLevel'], keyof typeof METH][]
     ).map(([name, risk, meth]) => flag(name, risk, labelCite(cite, METH[meth]))),
@@ -177,7 +177,7 @@ for (const record of _ROWS) {
   }
   const annatto = record.inactiveIngredients.find((i) => i.name === 'Annatto');
   const oil = record.inactiveIngredients.find((i) => i.name === 'Sunflower oil');
-  if (!annatto || annatto.riskLevel !== 'limited') throw new Error('batch81 annatto half must be the Caution row');
+  if (!annatto || annatto.riskLevel !== 'moderate') throw new Error('batch81 annatto half must be the Caution row');
   if (!oil || oil.riskLevel !== 'cleared') {
     throw new Error('batch81 softgel sunflower oil must stay named-fill Cleared');
   }

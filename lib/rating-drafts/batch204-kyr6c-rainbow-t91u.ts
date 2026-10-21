@@ -200,8 +200,8 @@ export const BATCH204_KYR6C_RAINBOW_T91U: RatingRecord[] = [
     barcode: '021888302314',
     activeIngredients: [{ name: "Kid's multivitamin blend", strength: 'label serving' }],
     inactiveIngredients: kidsChewOi(rl(H_KIDS_50)),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Fructose, Dextrose, Natural Flavors.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: ['Walmart', 'PureFormulas'],
     sourcesGeneral: [
       `Brand page ${rl(H_KIDS_50)} supplement-facts image ${img('RL30231')} was read. Other ingredients: Fructose, Dextrose, Natural Flavors, Cellulose (Plant Origin), Vegetable Stearic Acid, Silica, Citric Acid. Brand gtin12 021888302314. Walmart opened https://www.walmart.com/ip/113977741 with sale. PureFormulas opened https://www.pureformulas.com/product/kids-one-chewable-multivitamin-minerals-fruit-punch-flavor-by-rainbow-light/1000002745 with UPC 021888302314. Row graded from the brand label only.`,
@@ -221,8 +221,8 @@ export const BATCH204_KYR6C_RAINBOW_T91U: RatingRecord[] = [
     barcode: '021888109821',
     activeIngredients: [{ name: "Kid's multivitamin blend", strength: 'label serving' }],
     inactiveIngredients: kidsChewOi(rl(H_KIDS_90)),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Fructose, Dextrose, Natural Flavors.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: ['Walmart', 'Vitacost', 'PureFormulas'],
     sourcesGeneral: [
       `Brand page ${rl(H_KIDS_90)} supplement-facts image ${img('RL10982')} was read. Brand image filename includes Supp Facts old; other ingredients match the 50-count current label: Fructose, Dextrose, Natural Flavors, Cellulose (Plant Origin), Vegetable Stearic Acid, Silica, Citric Acid. Brand gtin12 021888109821. Walmart opened https://www.walmart.com/ip/28645988 with sale. Vitacost opened https://www.vitacost.com/products/rainbow-light-kid-s-one-for-ages-1-above-fruit-punch-90-tablets-1775 with UPC 021888109821. PureFormulas 1000002745 lists the 90-count option with UPC 021888109821. Row graded from the brand label only.`,

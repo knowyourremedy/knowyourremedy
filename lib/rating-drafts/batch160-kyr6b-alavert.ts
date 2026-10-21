@@ -28,7 +28,7 @@ const D12_FORMULA = 'alavert-b160-d12';
 
 const METH = {
   aspartame: 'Methodology §5 High (aspartame). Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Caution (bare flavors). Exact “Natural flavors” stays Limited. Not the Avoid driver.',
   mannitol: 'Methodology §5 Limited (mannitol).',
   citric: 'Methodology §5 Cleared (anhydrous citric acid → citric acid).',
@@ -78,8 +78,8 @@ export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
     inactiveIngredients: [
       flag('Aspartame', 'high', cite(CITRUS_SET, METH.aspartame)),
       flag('Polysorbate 80', 'limited', cite(CITRUS_SET, METH.ps80)),
-      flag('Flavors', 'limited', cite(CITRUS_SET, METH.flavors)),
-      flag('Mannitol', 'limited', cite(CITRUS_SET, METH.mannitol)),
+      flag('Flavors', 'moderate', cite(CITRUS_SET, METH.flavors)),
+      flag('Mannitol', 'moderate', cite(CITRUS_SET, METH.mannitol)),
       cleared(CITRUS_SET, 'Anhydrous citric acid', METH.citric),
       cleared(CITRUS_SET, 'Pullulan', METH.pullulan),
     ],
@@ -108,7 +108,7 @@ export const BATCH160_KYR6B_ALAVERT: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', cite(D12_SET, METH.tio2)),
-      flag('Pharmaceutical ink', 'limited', cite(D12_SET, METH.ink)),
+      flag('Pharmaceutical ink', 'moderate', cite(D12_SET, METH.ink)),
       cleared(D12_SET, 'Croscarmellose sodium', METH.croscarmellose),
       cleared(D12_SET, 'Dibasic calcium phosphate', METH.phosphate),
       cleared(D12_SET, 'Hypromellose', METH.hpmc),

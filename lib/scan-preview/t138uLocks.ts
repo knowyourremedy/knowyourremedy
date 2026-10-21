@@ -22,7 +22,7 @@ function isTopicalOrNasalPropyleneGlycol(ingredient: RatingRecord['inactiveIngre
   );
 }
 
-function isOralPropyleneGlycolName(name: string): boolean {
+export function isOralPropyleneGlycolName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (!/propylene glycol|\bpg\b|\be1520\b/.test(n)) return false;
   if (/dicaprylate|dipelargonate|dipropylene/.test(n)) return false;
@@ -39,7 +39,7 @@ function isPegFamilyName(name: string): boolean {
   );
 }
 
-function t138uFamilyLabel(name: string): string | null {
+export function t138uFamilyLabel(name: string): string | null {
   const raw = name.trim();
   const n = raw.toLowerCase();
   if (/polysorbate/.test(n)) {
@@ -52,7 +52,7 @@ function t138uFamilyLabel(name: string): string | null {
   if (isPegFamilyName(raw)) return 'PEGs / polyethylene glycol';
   if (/sucralose|\be955\b|splenda/.test(n)) return 'Sucralose';
   if (/acesulfame|ace[- ]?k|\be950\b/.test(n)) return 'Acesulfame potassium';
-  if (/\bsaccharin\b/.test(n) && !/sodium saccharin|saccharin sodium/.test(n)) return 'Saccharin';
+  if (/\bsaccharin\b/.test(n) || /saccharin sodium|sodium saccharin/.test(n)) return 'Saccharin';
   return null;
 }
 

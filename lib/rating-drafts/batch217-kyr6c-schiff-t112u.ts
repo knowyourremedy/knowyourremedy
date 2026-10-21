@@ -37,7 +37,7 @@ const METH = {
     'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Carnauba leaf wax maps here (Oct 17, 2026 t111u).',
   modStarch:
     'Methodology §5 Limited (modified starch). Modified Corn Starch maps here (Oct 17, 2026 t107u).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
   talc: 'Methodology §5 Avoid (talc). Magnesium silicate is that row in a swallowed product.',
   hpc: 'Methodology §5 Cleared (hydroxypropyl cellulose).',

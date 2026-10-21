@@ -33,7 +33,7 @@ const METH = {
   dye: 'Methodology §5 Avoid (synthetic dye / FD&C lake).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pva: 'Methodology §5 Cleared (polyvinyl alcohol, oral coating).',
   sodiumAscorbate:
     'Methodology §5 Cleared (sodium ascorbate). Same ascorbate family as calcium ascorbate. Not a new grade.',
@@ -155,7 +155,7 @@ export const BATCH213_KYR6C_CAL_MF_T108U: RatingRecord[] = [
     activeIngredients: [...GUMMY_ACTIVES],
     inactiveIngredients: buildOi(PANEL_CALTRATE_GUMMY, GUMMY_FLAGS),
     verdict: verdictFromFlags(GUMMY_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Annatto Seed Extract (color), Invert Sugar, Natural Flavors.',
+    honestNote: '',
     retailers: ['Meijer', 'CVS', 'Walgreens'],
     sourcesGeneral: [
       `${T108U_SALE} Haleon brand PDF at ${PANEL_CALTRATE_GUMMY} (©2023, 100 GUMMY BITES) was read. Serving size 2 Gummy Bites, 50 servings per container; Calories 30; Total Carbohydrate 7 g; Total Sugars 6 g; Includes 6 g Added Sugars; Sodium 20 mg. Actives ungraded. Ingredients verbatim: Glucose Syrup, Sugar, Tribasic Calcium Phosphate, Water. Contains <2%: Annatto Seed Extract (color), Cholecalciferol (Vit. D3), Citric Acid, Invert Sugar, Natural Flavors, Pectin, Purple Carrot Juice Concentrate (color), Sodium Citrate, Tocopherols (to preserve freshness). CVS bottle photo 30573551795_8 (©2023, item 204722) matches. Meijer item 30573551795 inStock $11.79. CVS prodid-844788 $18.99 (listing live; OOS at checked store). Walgreens 100 ea $22.99. UPC 305735517954 from CVS barcode 3 05735 51795 4, brand PDF art, Meijer image key 0305735517954. Walmart /ip/134322381 is third-party with older 30005-prefix UPC (not used).`,
@@ -176,7 +176,7 @@ export const BATCH213_KYR6C_CAL_MF_T108U: RatingRecord[] = [
     activeIngredients: [...GUMMY_ACTIVES],
     inactiveIngredients: buildOi(PANEL_CALTRATE_GUMMY, GUMMY_FLAGS),
     verdict: verdictFromFlags(GUMMY_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Annatto Seed Extract (color), Invert Sugar, Natural Flavors.',
+    honestNote: '',
     retailers: ['CVS', 'Walmart', 'Thrifty White'],
     sourcesGeneral: [
       `${T108U_SALE} CVS CDN bottle label 30573551750_4 (©2023 Haleon, item 204721, 50 GUMMY BITES) was read. Serving size 2 Gummy Bites, 25 servings per container; Calories 30; Total Carbohydrate 7 g (3%); Total Sugars 6 g; Includes 6 g Added Sugars (12%); Sodium 20 mg (1%). Actives ungraded. Other ingredients identical to the 100-count current label (same string as brand PDF ${PANEL_CALTRATE_GUMMY}). CVS prodid-1040209 $14.49 in stock at store. Walmart /ip/19611720 $20.46 and /ip/982222951 $14.49. Thrifty White listing (OOS). UPC 305735517503 from CVS barcode 3 05735 51750 3, Kroger image key 0030573551750 (50 Gummy Bites front), Thrifty White gtin12.`,

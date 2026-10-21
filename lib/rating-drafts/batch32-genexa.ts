@@ -78,7 +78,7 @@ const BRAND = 'Genexa';
 const UNVERIFIED_NOTE = 'draft, not verified';
 
 const METH = {
-  flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   citrus:
     'Methodology §5 Limited-risk (Natural Citrus Extract — Limited flavor; Sept 14 lock)',
   grape:
@@ -397,7 +397,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Xylitol',
-        'limited',
+        'moderate',
         labelCite(
           'https://www.genexa.com/products/daytime-severe-cold-flu',
           METH.xylitol,
@@ -449,7 +449,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Flavors (natural)',
-        'limited',
+        'moderate',
         dailymed('213fe898-dace-9a0f-e063-6394a90afd64', METH.flavors),
       ),
       flag(
@@ -490,7 +490,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
       ),
       flag(
         'Flavor (natural)',
-        'limited',
+        'moderate',
         labelCite(
           'https://www.genexa.com/products/infants-daytime-cough-immune-support',
           METH.flavors,
@@ -1019,7 +1019,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Organic cultured dextrose',
-        'cleared',
+        'moderate',
         labelCite(
           'https://www.genexa.com/products/kids-honey-cough-syrup',
           METH.culturedDextrose,
@@ -1058,7 +1058,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
         ),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...GENEXA_RETAILERS],
     cleanAlternatives: KIDS_COLD_ALTS,
@@ -1156,7 +1156,7 @@ export const BATCH32_GENEXA: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Organic chamomile extract',
-        'cleared',
+        'moderate',
         labelCite(
           'https://www.genexa.com/products/daytime-cough-nighttime-severe-cold-flu-combo-pack',
           METH.chamomile,

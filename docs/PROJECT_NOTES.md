@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t141u (Oct 20, 2026). **KYR6-c Caution vs Limited stack fix + Tapioca Maltodextrin lock** — founder lock **Tapioca Maltodextrin → Limited** (t141u; METHODOLOGY, `plainLanguage.ts`, `limitedStackEligibility.ts`, `t141uLocks.ts`, `applyCautionCapLocks` `stackCountExempt` on §5 Caution). Only explicit Limited locks + §5 Limited rows count toward t137u stack; §5 Caution tokens stay **moderate** and never stack. Full catalog recompute (no Spring Valley writes): **672** file grade changes (chiefly false stack **avoid→caution**), **1922** tab/note-only rows. Stack-note verify **147/147** stack-Avoid rows on import. **Search tally (6156):** Clean **2301** / Caution **2245** / Avoid **1610**. Report: `docs/t141u-results.md`. `npx tsc --noEmit` + import smoke green.
 - Zyrtec website loop closed. 40-count Avoid, UPC 300450204462, PR #452. 3-count Avoid, UPC 300450204431, and bubble-gum 4 fl oz Avoid, UPC 300450205049, PR #453. 75-count Avoid on zyrtec-allergy-tablets-tio2, UPC 300450204752, row zyrtec-b143-10mg-75ct, PR #467 / ead6dea. Do not reopen. Bot run #334 failed in the chat log. The merge landed.
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.

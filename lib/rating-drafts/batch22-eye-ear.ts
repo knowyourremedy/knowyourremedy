@@ -99,7 +99,7 @@ const FIRST_AID = 'First Aid';
 const HOMEOPATHIC = 'homeopathic' as const;
 
 const METH = {
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   bkc:
     'Methodology §5 Caution (benzalkonium chloride — contested ciliotoxicity; standalone Caution, not additive-scored, not Avoid)',
@@ -483,7 +483,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       { name: 'Carboxymethylcellulose sodium', strength: '0.5%' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_E10, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_E10, METH.bkc)),
       cleared(SET_E10, 'Boric acid'),
       cleared(SET_E10, 'Calcium chloride hydrate (dihydrate)'),
       cleared(SET_E10, 'Hydrochloric acid and/or sodium hydroxide (pH adjusters)'),
@@ -493,7 +493,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       cleared(SET_E10, 'Sodium chloride'),
       cleared(SET_E10, 'Water for injection'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Walmart'],
     cleanAlternatives: equateBkCAlts(),
@@ -555,13 +555,13 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       { name: 'Glycerin', strength: '0.25%' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_E14, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_E14, METH.bkc)),
       cleared(SET_E14, 'Boric acid'),
       flag('Edetate disodium', 'cleared', dailymed(SET_E14, METH.edta)),
       cleared(SET_E14, 'Purified water'),
       cleared(SET_E14, 'Sodium borate'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...MAJOR],
     cleanAlternatives: REDNESS_ALTS,
@@ -584,7 +584,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
     activeIngredients: [{ name: 'Carbamide peroxide', strength: '6.5%' }],
     inactiveIngredients: [
       flag('Propylene glycol', 'limited', dailymed(SET_R1, METH.pg)),
-      flag('Flavor', 'limited', dailymed(SET_R1, METH.flavors)),
+      flag('Flavor', 'moderate', dailymed(SET_R1, METH.flavors)),
       cleared(SET_R1, 'Citric acid'),
       cleared(SET_R1, 'Glycerin'),
       ungraded(SET_R1, 'Sodium lauroyl sarcosinate'),
@@ -615,7 +615,7 @@ export const BATCH22_EYE_EAR: RatingRecord[] = [
       flag('Propylene glycol', 'limited', dailymed(SET_R2, METH.pg)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_R2, METH.sls),
       ),
       cleared(SET_R2, 'Citric acid'),

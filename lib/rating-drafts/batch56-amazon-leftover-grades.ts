@@ -351,11 +351,11 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Boswellia serrata extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.stopain, METH.boswellia),
       ),
-      flag('Eucalyptus oil', 'cleared', labelCite(CITE.stopain, METH.eucalyptus)),
-      flag('Triethanolamine', 'cleared', labelCite(CITE.stopain, METH.trolamine)),
+      flag('Eucalyptus oil', 'moderate', labelCite(CITE.stopain, METH.eucalyptus)),
+      flag('Triethanolamine', 'moderate', labelCite(CITE.stopain, METH.trolamine)),
       flag('Peppermint oil', 'limited', labelCite(CITE.stopain, METH.peppermint)),
       flag('SD alcohol 39C', 'limited', labelCite(CITE.stopain, METH.sd39c)),
       flag('Dimethylsulfone (MSM)', 'cleared', labelCite(CITE.stopain, METH.msm)),
@@ -389,24 +389,24 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Menthol', strength: '16%' }],
     inactiveIngredients: [
-      flag('Steareth-2', 'cleared', dailymed(SET.flexall, METH.steareth2)),
-      flag('Steareth-21', 'cleared', dailymed(SET.flexall, METH.steareth2)),
+      flag('Steareth-2', 'moderate', dailymed(SET.flexall, METH.steareth2)),
+      flag('Steareth-21', 'moderate', dailymed(SET.flexall, METH.steareth2)),
       flag(
         'Tocopheryl acetate',
-        'cleared',
+        'moderate',
         dailymed(SET.flexall, METH.tocopherylAcetate),
       ),
       flag(
         'Eucalyptus globulus leaf oil',
-        'cleared',
+        'moderate',
         dailymed(SET.flexall, METH.eucalyptus),
       ),
       flag(
         'Thymus vulgaris (thyme) oil',
-        'cleared',
+        'moderate',
         dailymed(SET.flexall, METH.thyme),
       ),
-      flag('Triethanolamine', 'cleared', dailymed(SET.flexall, METH.trolamine)),
+      flag('Triethanolamine', 'moderate', dailymed(SET.flexall, METH.trolamine)),
       flag(
         'Mentha piperita (peppermint) oil',
         'limited',
@@ -469,8 +469,8 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
         dailymed(SET.ha2zKids, METH.dyes),
       ),
       flag('Sucralose', 'limited', dailymed(SET.ha2zKids, METH.sucralose)),
-      flag('Flavors', 'limited', dailymed(SET.ha2zKids, METH.flavors)),
-      flag('Mannitol', 'limited', dailymed(SET.ha2zKids, METH.mannitol)),
+      flag('Flavors', 'moderate', dailymed(SET.ha2zKids, METH.flavors)),
+      flag('Mannitol', 'moderate', dailymed(SET.ha2zKids, METH.mannitol)),
       flag(
         'Dextrates hydrated',
         'cleared',
@@ -559,7 +559,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.mentholatum, METH.tio2)),
-      flag('Fragrance', 'cleared', dailymed(SET.mentholatum, METH.fragrance)),
+      flag('Fragrance', 'moderate', dailymed(SET.mentholatum, METH.fragrance)),
       flag('Petrolatum', 'cleared', dailymed(SET.mentholatum, METH.petrolatum)),
     ],
     verdict: 'avoid',
@@ -589,17 +589,17 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET.sumifun, METH.ps80)),
       flag(
         'Dihydroxyaluminum aminoacetate',
-        'cleared',
+        'moderate',
         dailymed(SET.sumifun, METH.dihydroxyAl),
       ),
       flag(
         'Polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.sumifun, METH.polyacrylate),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.sumifun, METH.polyacrylate),
       ),
       flag('Propylene glycol', 'cleared', dailymed(SET.sumifun, METH.pgTopical)),
@@ -640,22 +640,22 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       flag('Methylisothiazolinone', 'high', labelCite(CITE.ausDream, METH.mit)),
       flag(
         'Tocopheryl acetate',
-        'cleared',
+        'moderate',
         labelCite(CITE.ausDream, METH.tocopherylAcetate),
       ),
       flag(
         'Tetrasodium EDTA',
-        'cleared',
+        'moderate',
         labelCite(CITE.ausDream, METH.tetrasodiumEdta),
       ),
       flag(
         'Polyacrylamide',
-        'cleared',
+        'moderate',
         labelCite(CITE.ausDream, METH.polyacrylamide),
       ),
       flag(
         'Sodium polyacrylate',
-        'cleared',
+        'moderate',
         labelCite(CITE.ausDream, METH.polyacrylate),
       ),
       flag(

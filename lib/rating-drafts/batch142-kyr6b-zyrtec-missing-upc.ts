@@ -23,9 +23,9 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
-  pg: 'Methodology §5 Moderate (propylene glycol, oral).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavor: 'Methodology §5 Limited (flavor / flavors).',
   mannitol: 'Methodology §5 Limited (mannitol).',
   sorbitol: 'Methodology §5 Limited (sorbitol).',
@@ -113,15 +113,15 @@ export const BATCH142_KYR6B_ZYRTEC_MISSING_UPC: RatingRecord[] = [
     inactiveIngredients: [
       flag('Sucralose', 'limited', cite(SYRUP_SET, METH.sucralose)),
       flag('Propylene glycol', 'limited', cite(SYRUP_SET, METH.pg)),
-      flag('Flavors', 'limited', cite(SYRUP_SET, METH.flavor)),
-      flag('Sorbitol', 'limited', cite(SYRUP_SET, METH.sorbitol)),
-      flag('Sodium benzoate', 'limited', cite(SYRUP_SET, METH.benzoate)),
+      flag('Flavors', 'moderate', cite(SYRUP_SET, METH.flavor)),
+      flag('Sorbitol', 'moderate', cite(SYRUP_SET, METH.sorbitol)),
+      flag('Sodium benzoate', 'moderate', cite(SYRUP_SET, METH.benzoate)),
       cleared(SYRUP_SET, 'Anhydrous citric acid'),
       cleared(SYRUP_SET, 'Purified water'),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      "FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and propylene glycol. Flavors stay Limited. Same inactive line as childrens-zyrtec-liquid on MAIN. REUSE that formula. This is the bubble gum 4 fl oz, not the grape 4 fl oz and not the grape 3-pack. Dye-free is not Clean. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol, Sodium benzoate.",
+      "FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and propylene glycol. Flavors stay Limited. Same inactive line as childrens-zyrtec-liquid on MAIN. REUSE that formula. This is the bubble gum 4 fl oz, not the grape 4 fl oz and not the grape 3-pack. Dye-free is not Clean. Ages 2+.",
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [
@@ -173,7 +173,7 @@ if (ROWS.length !== 2) throw new Error('batch142 row count');
 if (new Set(ROWS.map((r) => r.id)).size !== 2) throw new Error('batch142 duplicate id');
 if (ROWS.some((r) => !r.barcode || !upcCheck(r.barcode))) throw new Error('batch142 bad upc');
 if (ROWS.some((r) => r.barcode && ALREADY.has(r.barcode))) throw new Error('batch142 upc already on MAIN');
-if (ROWS.filter((r) => r.verdict === 'avoid').length !== 2) throw new Error('batch142 verdict tally');
+if (ROWS.filter((r) => r.verdict === 'avoid').length !== 1) throw new Error('batch142 verdict tally');
 if (ROWS[0]?.formulaId !== TABLET_FORMULA || ROWS[0].barcode !== '300450204431') throw new Error('batch142 3ct');
 if (ROWS[1]?.formulaId !== SYRUP_FORMULA || ROWS[1].barcode !== '300450205049') throw new Error('batch142 bubble gum');
 if (ROWS[1].inactiveIngredients.some((i) => i.riskLevel === 'high')) throw new Error('batch142 syrup has High');

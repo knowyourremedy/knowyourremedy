@@ -475,7 +475,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     retailers: ['Family Dollar'],
     activeIngredients: [{ name: 'Guaifenesin', strength: '400mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', dailymed(SET.fwIr, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET.fwIr, METH.sio2)),
       flag('Maltodextrin', 'limited', dailymed(SET.fwIr, METH.maltodextrin)),
       flag('Povidone K30', 'cleared', dailymed(SET.fwIr, METH.povidone)),
       flag('Povidone 90F', 'cleared', dailymed(SET.fwIr, METH.povidone)),
@@ -507,7 +507,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'Dextromethorphan HBr', strength: '20mg' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', dailymed(SET.fwDm, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET.fwDm, METH.sio2)),
       flag('Maltodextrin', 'limited', dailymed(SET.fwDm, METH.maltodextrin)),
       flag('Povidone K30', 'cleared', dailymed(SET.fwDm, METH.povidone)),
       flag('Povidone 90F', 'cleared', dailymed(SET.fwDm, METH.povidone)),
@@ -539,8 +539,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'Polymyxin B sulfate', strength: '5,000 units / g' },
     ],
     inactiveIngredients: [
-      flag('Sodium pyruvate', 'cleared', dailymed(SET.dgTriple, METH.pyruvate)),
-      flag('Tocopheryl acetate', 'cleared', dailymed(SET.dgTriple, METH.tocopherylAcetate)),
+      flag('Sodium pyruvate', 'moderate', dailymed(SET.dgTriple, METH.pyruvate)),
+      flag('Tocopheryl acetate', 'moderate', dailymed(SET.dgTriple, METH.tocopherylAcetate)),
       flag('Cocoa butter', 'cleared', dailymed(SET.dgTriple, METH.oilFill)),
       flag('Cottonseed oil', 'cleared', dailymed(SET.dgTriple, METH.oilFill)),
       flag('Olive oil', 'cleared', dailymed(SET.dgTriple, METH.oilFill)),
@@ -573,7 +573,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'Pramoxine HCl', strength: '10mg / g' },
     ],
     inactiveIngredients: [
-      flag('Sodium pyruvate', 'cleared', dailymed(SET.fwScar, METH.pyruvate)),
+      flag('Sodium pyruvate', 'moderate', dailymed(SET.fwScar, METH.pyruvate)),
       flag('Vitamin E (alpha-tocopherol)', 'cleared', dailymed(SET.fwScar, METH.tocopherols)),
       flag('Cocoa butter', 'cleared', dailymed(SET.fwScar, METH.oilFill)),
       flag('Cottonseed oil', 'cleared', dailymed(SET.fwScar, METH.oilFill)),
@@ -604,9 +604,9 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'Menthol', strength: '2.6%' },
     ],
     inactiveIngredients: [
-      flag('Fragrance', 'cleared', dailymed(SET.eqVap, METH.fragrance)),
-      flag('Thymol', 'cleared', dailymed(SET.eqVap, METH.thymol)),
-      flag('Turpentine oil', 'cleared', dailymed(SET.eqVap, METH.turpentine)),
+      flag('Fragrance', 'moderate', dailymed(SET.eqVap, METH.fragrance)),
+      flag('Thymol', 'moderate', dailymed(SET.eqVap, METH.thymol)),
+      flag('Turpentine oil', 'moderate', dailymed(SET.eqVap, METH.turpentine)),
       flag('White petrolatum', 'cleared', dailymed(SET.eqVap, METH.petrolatum)),
     ],
     verdict: 'caution',
@@ -634,7 +634,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'White petrolatum', strength: '57.3%' },
     ],
     inactiveIngredients: [
-      flag('Lanolin alcohols', 'cleared', dailymed(SET.eqPm, METH.lanolinAlcohol)),
+      flag('Lanolin alcohols', 'moderate', dailymed(SET.eqPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
 
@@ -662,7 +662,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       { name: 'White petrolatum', strength: '57.3%' },
     ],
     inactiveIngredients: [
-      flag('Lanolin alcohol', 'cleared', dailymed(SET.cvsPm, METH.lanolinAlcohol)),
+      flag('Lanolin alcohol', 'moderate', dailymed(SET.cvsPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
 
@@ -686,7 +686,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     retailers: ['Save Mart'],
     activeIngredients: [{ name: 'Tetrahydrozoline HCl', strength: '0.05%' }],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET.tcEye, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET.tcEye, METH.bkc)),
       cleared(SET.tcEye, 'Boric acid'),
       flag('Edetate disodium', 'cleared', dailymed(SET.tcEye, METH.edta)),
       cleared(SET.tcEye, 'Purified water'),
@@ -799,7 +799,7 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       cleared(SET.mmDmY10, 'Magnesium hydroxide'),
       cleared(SET.mmDmY10, 'Magnesium stearate'),
       flag('Microcrystalline cellulose', 'cleared', dailymed(SET.mmDmY10, METH.cellulose)),
-      flag('Silicon dioxide', 'cleared', dailymed(SET.mmDmY10, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET.mmDmY10, METH.sio2)),
     ],
     verdict: 'avoid',
 
@@ -828,11 +828,11 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.mmDmBlue, METH.dyes)),
       flag(
         'Ferric oxide yellow',
-        'cleared',
+        'moderate',
         dailymed(SET.mmDmBlue, METH.ironOxide),
       ),
       flag('Carbomer homopolymer type B', 'cleared', dailymed(SET.mmDmBlue, METH.carbomer)),
-      flag('Colloidal silicon dioxide', 'cleared', dailymed(SET.mmDmBlue, METH.sio2)),
+      flag('Colloidal silicon dioxide', 'limited', dailymed(SET.mmDmBlue, METH.sio2)),
       flag('Hypromellose', 'cleared', dailymed(SET.mmDmBlue, METH.hpmc)),
       cleared(SET.mmDmBlue, 'Magnesium stearate'),
       flag('Microcrystalline cellulose', 'cleared', dailymed(SET.mmDmBlue, METH.cellulose)),
@@ -863,9 +863,9 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('FD&C Blue No. 1', 'high', dailymed(SET.walSleepDye, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.walSleepDye, METH.dyes)),
       flag('Sucralose', 'limited', dailymed(SET.walSleepDye, METH.sucralose)),
-      flag('Flavor', 'limited', dailymed(SET.walSleepDye, METH.flavors)),
-      flag('Sodium benzoate', 'limited', dailymed(SET.walSleepDye, METH.benzoate)),
-      flag('Sorbitol', 'limited', dailymed(SET.walSleepDye, METH.sorbitol)),
+      flag('Flavor', 'moderate', dailymed(SET.walSleepDye, METH.flavors)),
+      flag('Sodium benzoate', 'moderate', dailymed(SET.walSleepDye, METH.benzoate)),
+      flag('Sorbitol', 'moderate', dailymed(SET.walSleepDye, METH.sorbitol)),
       flag('Anhydrous citric acid', 'cleared', dailymed(SET.walSleepDye, METH.citrate)),
       flag('Glycerin', 'cleared', dailymed(SET.walSleepDye, METH.glycerin)),
       cleared(SET.walSleepDye, 'Potassium citrate'),
@@ -894,17 +894,17 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     activeIngredients: [{ name: 'Diphenhydramine HCl', strength: '50mg / 30mL' }],
     inactiveIngredients: [
       flag('Sucralose', 'limited', dailymed(SET.walSleepDf, METH.sucralose)),
-      flag('Flavor', 'limited', dailymed(SET.walSleepDf, METH.flavors)),
-      flag('Sodium benzoate', 'limited', dailymed(SET.walSleepDf, METH.benzoate)),
-      flag('Sorbitol', 'limited', dailymed(SET.walSleepDf, METH.sorbitol)),
+      flag('Flavor', 'moderate', dailymed(SET.walSleepDf, METH.flavors)),
+      flag('Sodium benzoate', 'moderate', dailymed(SET.walSleepDf, METH.benzoate)),
+      flag('Sorbitol', 'moderate', dailymed(SET.walSleepDf, METH.sorbitol)),
       flag('Xanthan gum', 'cleared', dailymed(SET.walSleepDf, METH.gums)),
       flag('Anhydrous citric acid', 'cleared', dailymed(SET.walSleepDf, METH.citrate)),
       flag('Glycerin', 'cleared', dailymed(SET.walSleepDf, METH.glycerin)),
       cleared(SET.walSleepDf, 'Potassium citrate'),
       cleared(SET.walSleepDf, 'Purified water'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Sodium benzoate, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -927,9 +927,9 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
       flag('Titanium dioxide', 'high', dailymed(SET.walOme, METH.tio2)),
       flag('Talc', 'high', dailymed(SET.walOme, METH.talc)),
       flag('Propylene glycol', 'limited', dailymed(SET.walOme, METH.pg)),
-      flag('Sodium lauryl sulfate', 'cleared', dailymed(SET.walOme, METH.sls)),
-      flag('Ferric oxide red', 'cleared', dailymed(SET.walOme, METH.ironOxide)),
-      flag('Ferric oxide yellow', 'cleared', dailymed(SET.walOme, METH.ironOxide)),
+      flag('Sodium lauryl sulfate', 'moderate', dailymed(SET.walOme, METH.sls)),
+      flag('Ferric oxide red', 'moderate', dailymed(SET.walOme, METH.ironOxide)),
+      flag('Ferric oxide yellow', 'moderate', dailymed(SET.walOme, METH.ironOxide)),
       flag('Carnauba wax', 'cleared', dailymed(SET.walOme, METH.gelatin)),
       flag('Hypromellose', 'cleared', dailymed(SET.walOme, METH.hpmc)),
       flag('Lactose monohydrate', 'cleared', dailymed(SET.walOme, METH.gelatin)),
@@ -959,8 +959,8 @@ export const BATCH65_KYR6_STORE_GENERICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', dailymed(SET.walFam, METH.tio2)),
       flag('Talc', 'high', dailymed(SET.walFam, METH.talc)),
-      flag('Red iron oxide', 'cleared', dailymed(SET.walFam, METH.ironOxide)),
-      flag('Yellow iron oxide', 'cleared', dailymed(SET.walFam, METH.ironOxide)),
+      flag('Red iron oxide', 'moderate', dailymed(SET.walFam, METH.ironOxide)),
+      flag('Yellow iron oxide', 'moderate', dailymed(SET.walFam, METH.ironOxide)),
       flag('Carnauba wax', 'cleared', dailymed(SET.walFam, METH.gelatin)),
       flag('Corn starch', 'cleared', dailymed(SET.walFam, METH.starch)),
       flag('Hypromellose', 'cleared', dailymed(SET.walFam, METH.hpmc)),
@@ -1096,8 +1096,8 @@ if (walLorat?.formulaId !== L612_FORMULA || walLorat.verdict !== 'clean') {
 }
 
 const walDf = _ROWS.find((r) => r.id === 'walgreens-sleep-z-dyefree');
-if (walDf?.verdict !== 'avoid' || walDf.formulaId !== SLEEP_LIQUID_DF) {
-  throw new Error('Walgreens dye-free sleep must reuse CVS dye-free trap Avoid');
+if (walDf?.verdict !== 'caution' || walDf.formulaId !== SLEEP_LIQUID_DF) {
+  throw new Error('Walgreens dye-free sleep must reuse CVS dye-free trap Caution');
 }
 
 const fw041 = _ROWS.some((r) => /69396-041/.test(r.productName));

@@ -30,7 +30,7 @@ const METH = {
   benzoate: 'Methodology §5 Limited (sodium benzoate, synthetic preservative).',
   botanical: 'Methodology §5 Cleared (named food or botanical extract as an oral inactive).',
   citric: 'Methodology §5 Cleared (citric acid).',
-  flavorNamed: 'Methodology §5 Caution (named flavor). Exact natural flavors stays Limited.',
+  flavorNamed: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   flavors: 'Methodology §5 Limited (natural flavors). Exact natural flavors stays Limited.',
   glycerin: 'Methodology §5 Cleared (glycerin).',
   grape: 'Methodology §5 Cleared (grape seed extract as an other ingredient, not the oil).',

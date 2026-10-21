@@ -70,8 +70,8 @@ export const BATCH168_KYR6C_NASAL_MAX: RatingRecord[] = [
       flag(PANEL, 'Poly-epsilon lysine', 'cleared', METH.lysine),
       flag(PANEL, 'Nisin', 'limited', METH.nisin),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Eucalyptus globulus leaf extract, Origanum vulgare leaf extract, Nisin.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: ['Vitacost'],
     cleanAlternatives: NASAL_ALTS,
     sourcesGeneral: [

@@ -359,12 +359,12 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Oleoresin turmeric',
-        'cleared',
+        'moderate',
         labelCite(CITE.qunolOleo, METH.oleoresin),
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         labelCite(CITE.qunolOleo, METH.sio2),
       ),
       flag(
@@ -411,22 +411,22 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Polydextrose', 'limited', dailymed(SET.aplusOxides, METH.polydextrose)),
       flag(
         'Ferric oxide yellow',
-        'cleared',
+        'moderate',
         dailymed(SET.aplusOxides, METH.ferricYellow),
       ),
       flag(
         'Ferric oxide red',
-        'cleared',
+        'moderate',
         dailymed(SET.aplusOxides, METH.ferricRed),
       ),
       flag(
         'Sodium lauryl sulphate',
-        'cleared',
+        'moderate',
         dailymed(SET.aplusOxides, METH.sls),
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.aplusOxides, METH.sio2),
       ),
       flag(
@@ -471,12 +471,12 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Polydextrose', 'limited', dailymed(SET.aplusPlain, METH.polydextrose)),
       flag(
         'Sodium lauryl sulphate',
-        'cleared',
+        'moderate',
         dailymed(SET.aplusPlain, METH.sls),
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET.aplusPlain, METH.sio2),
       ),
       flag(
@@ -519,10 +519,10 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
       },
     ],
     inactiveIngredients: [
-      flag('Isomalt', 'limited', labelCite(CITE.qunolGummies, METH.isomalt)),
+      flag('Isomalt', 'moderate', labelCite(CITE.qunolGummies, METH.isomalt)),
       flag(
         'Maltitol syrup',
-        'limited',
+        'moderate',
         labelCite(CITE.qunolGummies, METH.maltitol),
       ),
       flag(
@@ -530,7 +530,7 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
         'limited',
         labelCite(CITE.qunolGummies, METH.maltodextrin),
       ),
-      flag('Xylitol', 'limited', labelCite(CITE.qunolGummies, METH.xylitol)),
+      flag('Xylitol', 'moderate', labelCite(CITE.qunolGummies, METH.xylitol)),
       flag(
         'Natural flavors',
         'limited',
@@ -559,8 +559,8 @@ export const BATCH55_PF_REFUSED_UNLOCK: RatingRecord[] = [
         labelCite(CITE.qunolGummies, METH.citrate),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isomalt, Maltitol syrup, Maltodextrin, Xylitol, Natural flavors.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...AMAZON, 'Qunol', 'Target'],
     cleanAlternatives: TURMERIC_ALTS,
@@ -578,11 +578,11 @@ if (BATCH55_PF_REFUSED_UNLOCK.length !== 6) {
 if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 55 Clean tally is 0');
 }
-if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 1) {
-  throw new Error('batch 55 Caution tally is 1');
+if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'caution').length !== 2) {
+  throw new Error('batch 55 Caution tally is 2');
 }
-if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 5) {
-  throw new Error('batch 55 Avoid tally is 5');
+if (BATCH55_PF_REFUSED_UNLOCK.filter((r) => r.verdict === 'avoid').length !== 4) {
+  throw new Error('batch 55 Avoid tally is 4');
 }
 if (BATCH55_PF_REFUSED_UNLOCK.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 55 stays on Pain & Fever');

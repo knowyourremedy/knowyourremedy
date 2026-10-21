@@ -23,7 +23,7 @@ const OTC = 'OTC' as const;
 const PAIN = 'Pain & Fever';
 
 const METH = {
-  ace: 'Methodology §5 Moderate-risk (acesulfame potassium).',
+  ace: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   acetic: 'Methodology §5 Cleared (acetic acid).',
   alginic: 'Methodology §5 Cleared (alginic acid).',
   aspartame: 'Methodology §5 High-risk (aspartame).',
@@ -53,9 +53,9 @@ const METH = {
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
   mct: 'Methodology §5 Limited (unlabeled medium-chain triglycerides). No plant is named.',
   modifiedStarch: 'Methodology §5 Limited (modified starch).',
-  peg: 'Methodology §5 Moderate-risk (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
-  polysorbate: 'Methodology §5 Moderate-risk (polysorbate 80).',
+  polysorbate: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   povidone: 'Methodology §5 Cleared (povidone / crospovidone).',
   silica: 'Methodology §5 Limited (silicon dioxide / colloidal silicon dioxide, oral).',
   sls: 'Methodology §5 Limited (sodium lauryl sulfate).',
@@ -66,7 +66,7 @@ const METH = {
   ssg: 'Methodology §5 Cleared (sodium starch glycolate).',
   stearate: 'Methodology §5 Cleared (magnesium stearate).',
   succinic: 'Methodology §5 Cleared (succinic acid).',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   tio2: 'Methodology §5 High-risk (titanium dioxide).',
   water: 'Methodology §5 Cleared (water / purified water).',

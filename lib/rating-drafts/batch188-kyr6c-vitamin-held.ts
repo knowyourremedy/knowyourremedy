@@ -33,7 +33,7 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
   modStarch: 'Methodology §5 Limited (modified corn starch).',
   palm: 'Methodology §5 Avoid (vegetable oil / palm oil in a gummy).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pectin: 'Methodology §5 Cleared (pectin).',
   phosphate: 'Methodology §5 Cleared (dicalcium phosphate / dibasic calcium phosphate / tribasic calcium phosphate).',
   pva: 'Methodology §5 Cleared (polyvinyl alcohol, oral coating).',

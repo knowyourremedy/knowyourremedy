@@ -85,7 +85,7 @@ const METH = {
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin:
-    'Methodology §5 Limited-risk (organic maltodextrin — same Limited as non-organic)',
+    'Methodology §5 Limited (Tapioca Maltodextrin — founder lock t141u Oct 20, 2026; §4 prior-lock re-eval; distinct from Cleared tapioca starch and from generic maltodextrin when the panel names tapioca source).',
   alcoholVehicle: `Methodology §5 Limited-risk (alcohol / ethyl alcohol / grain alcohol / organic alcohol as a VEHICLE). ${ALCOHOL_VEHICLE_LINE} Not Avoid.`,
   mctUnlabeled: `Methodology §5 Limited-risk (unlabeled MCT — coconut vs other source not named; opacity; not Avoid). ${MCT_UNLABELED_TAP}`,
   riceExtract: `Methodology §5 Limited-risk (unspecified rice extract / organic brown rice extract — not the Cleared bran/hull family). ${BROWN_RICE_EXTRACT_TAP}`,
@@ -707,7 +707,7 @@ export const BATCH36_SPROUTS_LEFTOVERS: RatingRecord[] = [
       flag('Natural flavors', 'limited', labelCite(CITE.prenatalGummies, METH.flavors)),
       flag(
         'Stevia leaf extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.prenatalGummies, METH.steviaLeaf),
       ),
       flag(
@@ -838,7 +838,7 @@ export const BATCH36_SPROUTS_LEFTOVERS: RatingRecord[] = [
     actives: [{ name: 'Vitamin B-12', strength: '2500 mcg' }],
     inactives: [
       flag('Natural flavors', 'limited', labelCite(CITE.b122500, METH.flavors)),
-      flag('Silicon dioxide (silica)', 'cleared', labelCite(CITE.b122500, METH.sio2)),
+      flag('Silicon dioxide (silica)', 'limited', labelCite(CITE.b122500, METH.sio2)),
     ],
     verdict: 'caution',
     note:

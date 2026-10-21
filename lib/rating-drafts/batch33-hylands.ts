@@ -86,7 +86,7 @@ const LICORICE_LINE =
   'Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.';
 
 const METH = {
-  flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
+  flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / acacia / pectin — locked v1.6)',
   cleared: 'Methodology §5 Cleared',
@@ -1574,7 +1574,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.benzoate),
       ),
       flag(
@@ -1593,8 +1593,8 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/hylands-leg-cramps-pm-cream', METH.gums),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Ethyl alcohol, Potassium sorbate, Sodium benzoate.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -1662,7 +1662,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.benzoate),
       ),
       flag(
@@ -1686,8 +1686,8 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/hylands-leg-cramps-cream', METH.gums),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Ethyl alcohol, Potassium sorbate, Sodium benzoate.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...HYLANDS_RETAILERS],
     cleanAlternatives: CREAM_ALTS,
@@ -1734,7 +1734,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic natural flavors',
-        'limited',
+        'moderate',
         labelCite('https://hylands.com/products/kids-sleep-calm-immunity', METH.flavors),
       ),
       flag(
@@ -1797,7 +1797,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic natural flavors',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/kids-organic-sleep-calm-immunity',
           METH.flavors,
@@ -1863,7 +1863,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic natural flavors',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-kids-allinone-coughsyrup-daytime',
           METH.flavors,
@@ -1930,7 +1930,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic natural flavors',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-kids-allinone-coughsyrup-nighttime',
           METH.flavors,
@@ -2113,7 +2113,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic cherry flavor',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-baby-soothing-gel-daytime',
           METH.flavors,
@@ -2187,7 +2187,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic cherry flavor',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-baby-soothing-gel-nighttime',
           METH.flavors,
@@ -2281,7 +2281,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic cherry flavor',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-baby-soothing-drops-daytime',
           METH.flavors,
@@ -2383,7 +2383,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Organic cherry flavor',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/organic-baby-soothing-drops-nighttime',
           METH.flavors,
@@ -2470,7 +2470,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Wood rosin',
-        'cleared',
+        'moderate',
         dailymed('d22eca2f-d7e6-3412-e053-2995a90a6384', METH.woodRosin),
       ),
     ],
@@ -2526,7 +2526,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Maltitol syrup',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/kids-multivitamin-brain-and-eye',
           METH.sugarAlcohols,
@@ -2534,7 +2534,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Xylitol',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/kids-multivitamin-brain-and-eye',
           METH.sugarAlcohols,
@@ -2542,7 +2542,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Erythritol',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/kids-multivitamin-brain-and-eye',
           METH.sugarAlcohols,
@@ -2607,8 +2607,8 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
         labelCite('https://hylands.com/products/kids-multivitamin-brain-and-eye', METH.rebM),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol syrup, Xylitol, Erythritol, Natural flavors.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...HYLANDS_RETAILERS],
     sourcesGeneral: [
@@ -2660,7 +2660,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
       ),
       flag(
         'Maltitol',
-        'limited',
+        'moderate',
         labelCite(
           'https://hylands.com/products/kids-multivitamin-digestive-support',
           METH.sugarAlcohols,

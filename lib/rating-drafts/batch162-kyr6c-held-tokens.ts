@@ -42,7 +42,7 @@ const METH = {
   pva: 'Methodology §5 Cleared (polyvinyl alcohol, oral coating).',
   pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  sucrose: 'Methodology §5 Limited (sucrose, sugar). Not the Avoid driver.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High (talc). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
   triacetin: 'Methodology §5 Cleared (triacetin).',

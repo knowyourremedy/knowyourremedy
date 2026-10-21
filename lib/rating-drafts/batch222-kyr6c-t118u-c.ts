@@ -30,7 +30,7 @@ const METH = {
   naFlavor:
     'Methodology §5 Limited (natural and artificial flavor, singular). Founder lock Oct 17, 2026 t118u.',
   citric: 'Methodology §5 Cleared (citric acid).',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   celluloseGel:
     'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose). Cellulose gel maps here (Oct 17, 2026 t118u).',
   potatoStarch:
@@ -235,7 +235,7 @@ export const BATCH222_KYR6C_T118U_C: RatingRecord[] = [
     activeIngredients: [{ name: 'Lactase enzyme', strength: '9000 FCC lactase units' }],
     inactiveIngredients: buildOi(PANEL_LACTAID_FA_CHEW, FA_CHEW_FLAGS),
     verdict: verdictFromFlags(FA_CHEW_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Mannitol, Natural and Artificial Flavor, Sucralose.',
+    honestNote: '',
     retailers: ['Walmart', 'Target', 'CVS', 'Thrifty White'],
     sourcesGeneral: [
       `Box panel ${PANEL_LACTAID_FA_CHEW} (32-count box side). Serving Size 1 Chewable Tablet; Servings Per Container 32; Total Carb <1 g; Sodium 5 mg; Lactase Enzyme 9000 FCC †. Other Ingredients: Mannitol, Microcrystalline Cellulose, Croscarmellose Sodium, Crospovidone, Magnesium Stearate, Natural and Artificial Flavor, Citric Acid, Sucralose. Walmart https://www.walmart.com/ip/10294226 in stock $10.18. Target https://www.target.com/p/-/A-10989565 in stock $10.39. CVS https://www.cvs.com/shop/-prodid-459752 in stock. Thrifty White https://shop.thriftywhite.com/lactaid-fast-act-chewable-vanilla-twist-flavor-32-tablets/ Current Stock 17 $10.92. UPC LAC_300450930323_Fast_Act_Chewables_32_Count; check digit OK.`,

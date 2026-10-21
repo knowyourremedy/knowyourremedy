@@ -126,7 +126,7 @@ const HOMEOPATHIC = 'homeopathic' as const;
 const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   parabens: 'Methodology §5 High-tier (parabens)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
@@ -765,17 +765,17 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Fragrance',
-        'cleared',
+        'moderate',
         dailymed(SET_CALAMINE_PLUS, METH.fragrance),
       ),
       flag(
         'Hydrated silica',
-        'cleared',
+        'moderate',
         dailymed(SET_CALAMINE_PLUS, METH.sio2),
       ),
       flag(
         'Benzyl alcohol',
-        'cleared',
+        'moderate',
         dailymed(SET_CALAMINE_PLUS, METH.benzyl),
       ),
       ungraded(SET_CALAMINE_PLUS, 'Camphor (parked topical active — listed inactive)'),
@@ -785,7 +785,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ungraded(SET_CALAMINE_PLUS, 'SD alcohol 40-B'),
       ungraded(SET_CALAMINE_PLUS, 'Sorbitan trioleate'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Walgreens', 'CVS', 'Target', 'Grocery'],
     cleanAlternatives: ITCH_ALTS,
@@ -810,7 +810,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       { name: 'Lidocaine HCl', strength: '4%' },
     ],
     inactiveIngredients: [
-      flag('Fragrances', 'cleared', dailymed(SET_BACTINE_MAX, METH.fragrance)),
+      flag('Fragrances', 'moderate', dailymed(SET_BACTINE_MAX, METH.fragrance)),
       flag(
         'Edetate disodium',
         'cleared',
@@ -823,7 +823,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       ),
       cleared(SET_BACTINE_MAX, 'Purified water'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: ANTISEPTIC_ALTS,
@@ -887,7 +887,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     productType: 'OTC',
     activeIngredients: [{ name: 'Zinc oxide', strength: '40%' }],
     inactiveIngredients: [
-      flag('Fragrance', 'cleared', dailymed(SET_DES_MAX, METH.fragrance)),
+      flag('Fragrance', 'moderate', dailymed(SET_DES_MAX, METH.fragrance)),
       ungraded(SET_DES_MAX, 'Petrolatum'),
       ungraded(SET_DES_MAX, 'Cod liver oil'),
       ungraded(SET_DES_MAX, 'Lanolin'),
@@ -909,7 +909,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
         dailymed(SET_DES_MAX, METH.tocopherols),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: RASH_ALTS,
@@ -1008,7 +1008,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       flag('Propylparaben', 'high', dailymed(SET_C10_ALOE, METH.parabens)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_C10_ALOE, METH.sls),
       ),
       flag(
@@ -1102,7 +1102,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
       flag('Propylparaben', 'high', dailymed(SET_CVS_HC, METH.parabens)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_CVS_HC, METH.sls),
       ),
       flag(
@@ -1186,7 +1186,7 @@ export const BATCH12_ADULT_FIRST_AID: RatingRecord[] = [
     inactiveIngredients: [
       flag('Methylparaben', 'high', dailymed(SET_CALADRYL, METH.parabens)),
       flag('Propylparaben', 'high', dailymed(SET_CALADRYL, METH.parabens)),
-      flag('Fragrance', 'cleared', dailymed(SET_CALADRYL, METH.fragrance)),
+      flag('Fragrance', 'moderate', dailymed(SET_CALADRYL, METH.fragrance)),
       flag(
         'Propylene glycol',
         'cleared',

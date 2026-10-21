@@ -20,10 +20,10 @@ const METH = {
   dye: 'Methodology §5 High (synthetic dyes).',
   glycerin: 'Methodology §5 Cleared (glycerin).',
   flavor: 'Methodology §5 Limited (natural flavor). Unnamed flavor.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
-  p80: 'Methodology §5 Moderate (polysorbate 80).',
-  pg: 'Methodology §5 Moderate (propylene glycol, oral). This gel and liquid go on the mouth.',
-  saccharin: 'Methodology §5 Moderate (saccharin).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  p80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
 } as const;
 
 function flag(panel: string, name: string, riskLevel: RiskLevel, meth: string): IngredientFlag {

@@ -61,7 +61,7 @@ const METH = {
   lycopene: "Methodology §5 Cleared (lycopene as color).",
   malic: "Methodology §5 Cleared (malic acid / dl-malic acid).",
   mcc: "Methodology §5 Cleared (microcrystalline cellulose / cellulose / capsule cellulose).",
-  mctUnlabeled: "Methodology §5 Limited (unlabeled MCT — mct oil when the token does not name coconut or palm kernel). Not an oil-bottle grade. Not gummy High.",
+  mctUnlabeled: "Methodology §5 Cleared (MCT oil — named capsule / softgel / tablet coating or fill). Founder override Oct 17, 2026 t118u; distinct from Limited unlabeled MCT.",
   modStarch: "Methodology §5 Limited (modified starch / modified tapioca starch / modified tapioca starch (cassava root)). Not Cleared plain tapioca starch. Not starchgel.",
   monk: "Methodology §5 Cleared (monk fruit / mogrosides / Lo Han sibling).",
   oatFiber: "Methodology §5 Cleared (oat fiber). Distinct from Caution organic oat fiber.",

@@ -254,7 +254,7 @@ export const BATCH42_PAIN_GELS: RatingRecord[] = [
     form: 'gel',
     activeIngredients: [{ name: 'Diclofenac sodium', strength: '1%' }],
     inactiveIngredients: [
-      flag('Fragrance', 'cleared', dailymed(SET.aleve, METH.fragrance)),
+      flag('Fragrance', 'moderate', dailymed(SET.aleve, METH.fragrance)),
       ...motrinAleveBase(SET.aleve),
     ],
     verdict: 'caution',

@@ -79,12 +79,12 @@ const METH = {
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
   sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps20:
-    'Methodology §5 Moderate-risk (polysorbate 20 — same 2023 gut-barrier signal as PS80; locked v1.6)',
-  saccharin: 'Methodology §5 Moderate-risk (saccharin)',
+    'Methodology §5 Limited (Polysorbate 20 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
@@ -345,12 +345,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('9105f4f1-7f94-408d-a025-83afb68dc9f0', METH.flavors),
       ),
       flag(
         'Mannitol',
-        'limited',
+        'moderate',
         dailymed('9105f4f1-7f94-408d-a025-83afb68dc9f0', METH.mannitol),
       ),
       cleared('9105f4f1-7f94-408d-a025-83afb68dc9f0', 'Citric acid'),
@@ -448,7 +448,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Silica (silicon dioxide)',
-        'cleared',
+        'moderate',
         dailymed('451daeeb-88a9-44b1-9a2d-1ff0b0ec41cb', METH.sio2),
       ),
       cleared('451daeeb-88a9-44b1-9a2d-1ff0b0ec41cb', 'Croscarmellose sodium'),
@@ -501,12 +501,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Mannitol',
-        'limited',
+        'moderate',
         dailymed('0b2777be-85d4-443d-b65f-6750e0ba97ba', METH.mannitol),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('0b2777be-85d4-443d-b65f-6750e0ba97ba', METH.sorbitol),
       ),
       cleared('0b2777be-85d4-443d-b65f-6750e0ba97ba', 'Gelatin'),
@@ -552,7 +552,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.saccharin),
       ),
       flag(
@@ -562,17 +562,17 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('05f77c69-c8ea-f8ba-e063-6394a90aa60f', METH.sorbitol),
       ),
       flag(
@@ -617,7 +617,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.saccharin),
       ),
       flag(
@@ -632,12 +632,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('01906eed-78ee-f2a1-e063-6294a90a809b', METH.sorbitol),
       ),
       cleared('01906eed-78ee-f2a1-e063-6294a90a809b', 'Citric acid'),
@@ -645,7 +645,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('01906eed-78ee-f2a1-e063-6294a90a809b', 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Polysorbate 20, Natural flavor, Sodium benzoate, Sorbitol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Saccharin sodium, Polysorbate 20, Natural flavor.',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     cleanAlternatives: SLEEP_ALTS,
@@ -694,7 +694,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.saccharin),
       ),
       flag(
@@ -714,12 +714,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('0f8a8291-7468-735e-e063-6394a90a6643', METH.sorbitol),
       ),
       cleared('0f8a8291-7468-735e-e063-6394a90a6643', 'Glycerin'),
@@ -812,7 +812,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('f70ce1a6-c334-025e-e053-6294a90ae53f', METH.sio2),
       ),
       cleared('f70ce1a6-c334-025e-e053-6294a90ae53f', 'Croscarmellose sodium'),
@@ -915,7 +915,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('405afdb4-c157-1d88-f232-848063ba4714', METH.sorbitol),
       ),
       cleared('405afdb4-c157-1d88-f232-848063ba4714', 'Gelatin'),
@@ -963,12 +963,12 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('52c67ae0-707c-851b-e063-6294a90afda4', METH.sio2),
       ),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed('52c67ae0-707c-851b-e063-6294a90afda4', METH.sls),
       ),
       cleared('52c67ae0-707c-851b-e063-6294a90afda4', 'Croscarmellose sodium'),
@@ -1053,7 +1053,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('3d3f2e0c-e141-d49f-e063-6394a90ad0e6', METH.sorbitol),
       ),
       cleared('3d3f2e0c-e141-d49f-e063-6394a90ad0e6', 'Gelatin'),
@@ -1108,7 +1108,7 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('6e162152-b414-470c-b146-649d99870577', METH.sio2),
       ),
       cleared('6e162152-b414-470c-b146-649d99870577', 'Croscarmellose sodium'),
@@ -1155,17 +1155,17 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('0ab5a374-d565-4385-bee3-538a8f09b19e', METH.saccharin),
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('0ab5a374-d565-4385-bee3-538a8f09b19e', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('0ab5a374-d565-4385-bee3-538a8f09b19e', METH.benzoate),
       ),
       cleared('0ab5a374-d565-4385-bee3-538a8f09b19e', 'Anhydrous citric acid'),
@@ -1211,17 +1211,17 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('9f944edc-a317-4967-ae54-67b5d183591b', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('9f944edc-a317-4967-ae54-67b5d183591b', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('9f944edc-a317-4967-ae54-67b5d183591b', METH.sorbitol),
       ),
       flag(
@@ -1262,17 +1262,17 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('03f521f4-d35f-4f66-b3ad-7e58a244eb93', METH.flavors),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('03f521f4-d35f-4f66-b3ad-7e58a244eb93', METH.benzoate),
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('03f521f4-d35f-4f66-b3ad-7e58a244eb93', METH.sorbitol),
       ),
       flag(
@@ -1284,8 +1284,8 @@ export const BATCH7_ADULT_SLEEP: RatingRecord[] = [
       cleared('03f521f4-d35f-4f66-b3ad-7e58a244eb93', 'Glycerin'),
       cleared('03f521f4-d35f-4f66-b3ad-7e58a244eb93', 'Purified water'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Flavor, Sodium benzoate, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['CVS'],
     cleanAlternatives: SLEEP_ALTS,

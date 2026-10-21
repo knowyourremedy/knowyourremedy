@@ -892,7 +892,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Vitamin B12 (methylcobalamin)', strength: 'label serving' }],
     cite: CITE.xsB12,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.xsB12, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.xsB12, METH.sio2)),
       labelCleared(CITE.xsB12, 'Hypromellose'),
       flag('Rice flour', 'cleared', labelCite(CITE.xsB12, METH.starches)),
     ],
@@ -1111,7 +1111,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Magnesium (glycinate)', strength: '350mg elemental' }],
     cite: CITE.xsMagGly,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.xsMagGly, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.xsMagGly, METH.sio2)),
       labelCleared(CITE.xsMagGly, 'Hypromellose'),
       labelCleared(CITE.xsMagGly, 'Microcrystalline cellulose'),
       labelCleared(CITE.xsMagGly, 'Stearic acid'),
@@ -1130,7 +1130,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Magnesium (glycinate)', strength: '60mg elemental per 2 capsules as labeled' }],
     cite: CITE.magGly,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.magGly, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.magGly, METH.sio2)),
       labelCleared(CITE.magGly, 'Hypromellose'),
       labelCleared(CITE.magGly, 'Microcrystalline cellulose'),
       labelCleared(CITE.magGly, 'Stearic acid'),
@@ -1151,7 +1151,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.k1k2,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.k1k2, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.k1k2, METH.sio2)),
       labelCleared(CITE.k1k2, 'Microcrystalline cellulose'),
       labelCleared(CITE.k1k2, 'Hypromellose'),
       labelCleared(CITE.k1k2, 'Stearic acid'),
@@ -1174,7 +1174,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.womensWBCap,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.womensWBCap, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.womensWBCap, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.womensWBCap, METH.maltodextrin)),
       labelCleared(CITE.womensWBCap, 'Hypromellose'),
       labelCleared(CITE.womensWBCap, 'Microcrystalline cellulose'),
@@ -1198,7 +1198,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.mensWBCap,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.mensWBCap, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.mensWBCap, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.mensWBCap, METH.maltodextrin)),
       labelCleared(CITE.mensWBCap, 'Hypromellose'),
       labelCleared(CITE.mensWBCap, 'Microcrystalline cellulose'),
@@ -1245,7 +1245,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.nad,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.nad, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.nad, METH.sio2)),
       labelCleared(CITE.nad, 'Microcrystalline cellulose'),
       labelCleared(CITE.nad, 'Hypromellose'),
       labelCleared(CITE.nad, 'Stearic acid'),
@@ -1263,7 +1263,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Glutathione (liposomal)', strength: 'label serving' }],
     cite: CITE.glutathione,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.glutathione, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.glutathione, METH.sio2)),
       flag('Gum arabic', 'cleared', labelCite(CITE.glutathione, METH.gums)),
       flag('Sunflower lecithin', 'cleared', labelCite(CITE.glutathione, METH.lecithin)),
       labelCleared(CITE.glutathione, 'Hypromellose'),
@@ -1284,7 +1284,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'CoQ10 (ubiquinone)', strength: '200mg' }],
     cite: CITE.coq10,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.coq10, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.coq10, METH.sio2)),
       labelCleared(CITE.coq10, 'Hypromellose'),
       labelCleared(CITE.coq10, 'Dicalcium phosphate'),
       labelCleared(CITE.coq10, 'Stearic acid'),
@@ -1303,7 +1303,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Curcuminoids (TamaFlex)', strength: '1000mg' }],
     cite: CITE.fastTurmeric,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.fastTurmeric, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.fastTurmeric, METH.sio2)),
       labelCleared(CITE.fastTurmeric, 'Hypromellose'),
       labelCleared(CITE.fastTurmeric, 'Stearic acid'),
       labelCleared(CITE.fastTurmeric, 'Microcrystalline cellulose'),
@@ -1324,7 +1324,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.quercetin,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.quercetin, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.quercetin, METH.sio2)),
       labelCleared(CITE.quercetin, 'Hypromellose'),
       labelCleared(CITE.quercetin, 'Microcrystalline cellulose'),
       labelCleared(CITE.quercetin, 'Stearic acid'),
@@ -1342,7 +1342,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Shilajit extract (PrimaVie)', strength: 'label serving' }],
     cite: CITE.shilajit,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.shilajit, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.shilajit, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.shilajit, METH.maltodextrin)),
       labelCleared(CITE.shilajit, 'Hypromellose'),
       labelCleared(CITE.shilajit, 'Microcrystalline cellulose'),
@@ -1362,7 +1362,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Digestive enzyme blend (DigeZyme)', strength: '1 capsule (label serving)' }],
     cite: CITE.enzymes,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.enzymes, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.enzymes, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.enzymes, METH.maltodextrin)),
       labelCleared(CITE.enzymes, 'Hypromellose'),
       labelCleared(CITE.enzymes, 'Microcrystalline cellulose'),
@@ -1381,7 +1381,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'N-acetyl cysteine', strength: '600mg' }],
     cite: CITE.nac,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.nac, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.nac, METH.sio2)),
       labelCleared(CITE.nac, 'Hypromellose'),
       labelCleared(CITE.nac, 'Stearic acid'),
       labelCleared(CITE.nac, 'Microcrystalline cellulose'),
@@ -1400,7 +1400,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Irish sea moss / bladderwrack / burdock / ashwagandha complex', strength: 'label serving' }],
     cite: CITE.seaMoss,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.seaMoss, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.seaMoss, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.seaMoss, METH.maltodextrin)),
       labelCleared(CITE.seaMoss, 'Microcrystalline cellulose'),
       labelCleared(CITE.seaMoss, 'Hypromellose'),
@@ -1432,7 +1432,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Magnesium L-threonate (Magtein)', strength: '2000mg Magtein' }],
     cite: CITE.magtein,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.magtein, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.magtein, METH.sio2)),
       labelCleared(CITE.magtein, 'Hypromellose'),
       labelCleared(CITE.magtein, 'Microcrystalline cellulose'),
       labelCleared(CITE.magtein, 'Stearic acid'),
@@ -1450,7 +1450,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Probiotic blend (14 strains)', strength: '20 billion CFU' }],
     cite: CITE.megaflora,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.megaflora, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.megaflora, METH.sio2)),
       labelCleared(CITE.megaflora, 'Hypromellose'),
       labelCleared(CITE.megaflora, 'Microcrystalline cellulose'),
     ],
@@ -1467,7 +1467,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Probiotic blend (14 strains)', strength: '50 billion CFU' }],
     cite: CITE.megafloraPlus,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.megafloraPlus, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.megafloraPlus, METH.sio2)),
       labelCleared(CITE.megafloraPlus, 'Hypromellose'),
       labelCleared(CITE.megafloraPlus, 'Microcrystalline cellulose'),
     ],
@@ -1484,7 +1484,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Women\'s probiotic blend (14 strains)', strength: '50 billion CFU' }],
     cite: CITE.megafloraW,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.megafloraW, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.megafloraW, METH.sio2)),
       flag('Calcium laurate', 'cleared', labelCite(CITE.megafloraW, METH.calciumLaurate)),
       labelCleared(CITE.megafloraW, 'Hypromellose'),
       labelCleared(CITE.megafloraW, 'Microcrystalline cellulose'),
@@ -1503,7 +1503,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Probiotic blend with turmeric', strength: 'label serving' }],
     cite: CITE.megafloraT,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.megafloraT, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.megafloraT, METH.sio2)),
       flag('Calcium laurate', 'cleared', labelCite(CITE.megafloraT, METH.calciumLaurate)),
       labelCleared(CITE.megafloraT, 'Hypromellose'),
       labelCleared(CITE.megafloraT, 'Microcrystalline cellulose'),
@@ -1522,7 +1522,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Kids probiotic blend (14 strains)', strength: '5 billion CFU' }],
     cite: CITE.megafloraKids,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.megafloraKids, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.megafloraKids, METH.sio2)),
       labelCleared(CITE.megafloraKids, 'Hypromellose'),
       labelCleared(CITE.megafloraKids, 'Microcrystalline cellulose'),
     ],
@@ -1542,7 +1542,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.mushStress,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.mushStress, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.mushStress, METH.sio2)),
       labelCleared(CITE.mushStress, 'Hypromellose'),
       labelCleared(CITE.mushStress, 'Microcrystalline cellulose'),
       labelCleared(CITE.mushStress, 'Stearic acid'),
@@ -1563,7 +1563,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.mushFocus,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.mushFocus, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.mushFocus, METH.sio2)),
       labelCleared(CITE.mushFocus, 'Hypromellose'),
       labelCleared(CITE.mushFocus, 'Microcrystalline cellulose'),
       labelCleared(CITE.mushFocus, 'Stearic acid'),
@@ -1604,7 +1604,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Ahiflower seed oil and algal oil omega blend', strength: 'label serving' }],
     cite: CITE.omega369,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.omega369, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.omega369, METH.sio2)),
       flag('Organic lemon oil', 'limited', labelCite(CITE.omega369, METH.flavors)),
       flag('Mixed tocopherols', 'cleared', labelCite(CITE.omega369, METH.tocopherols)),
       flag('Ascorbyl palmitate', 'cleared', labelCite(CITE.omega369, METH.tocopherols)),
@@ -1685,7 +1685,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.dhaCholine,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.dhaCholine, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.dhaCholine, METH.sio2)),
       labelCleared(CITE.dhaCholine, 'Hypromellose'),
       labelCleared(CITE.dhaCholine, 'Microcrystalline cellulose'),
       flag('Mixed tocopherols', 'cleared', labelCite(CITE.dhaCholine, METH.tocopherols)),
@@ -1705,7 +1705,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Prenatal probiotic / prebiotic blend', strength: 'label serving' }],
     cite: CITE.bm2proOld,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2proOld, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.bm2proOld, METH.sio2)),
       flag('Calcium laurate', 'cleared', labelCite(CITE.bm2proOld, METH.calciumLaurate)),
       flag('Guar gum', 'cleared', labelCite(CITE.bm2proOld, METH.gums)),
       labelCleared(CITE.bm2proOld, 'Hypromellose'),
@@ -2158,7 +2158,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.womensWBTab,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.womensWBTab, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.womensWBTab, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.womensWBTab, METH.maltodextrin)),
       labelCleared(CITE.womensWBTab, 'Microcrystalline cellulose'),
       labelCleared(CITE.womensWBTab, 'Citric acid'),
@@ -2187,7 +2187,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.bm2multiDha,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2multiDha, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.bm2multiDha, METH.sio2)),
       labelCleared(CITE.bm2multiDha, 'Hypromellose'),
       labelCleared(CITE.bm2multiDha, 'Microcrystalline cellulose'),
       labelCleared(CITE.bm2multiDha, 'Stearic acid'),
@@ -2238,7 +2238,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.d3_5000,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.d3_5000, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.d3_5000, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.d3_5000, METH.maltodextrin)),
       labelCleared(CITE.d3_5000, 'Hypromellose'),
       labelCleared(CITE.d3_5000, 'Dicalcium phosphate'),
@@ -2282,7 +2282,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     cite: CITE.ashwGummy,
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.ashwGummy, METH.flavors)),
-      flag('Sodium copper chlorophyllin (color)', 'cleared', labelCite(CITE.ashwGummy, METH.chlorophyllin)),
+      flag('Sodium copper chlorophyllin (color)', 'moderate', labelCite(CITE.ashwGummy, METH.chlorophyllin)),
       flag('Black carrot concentrate (color)', 'cleared', labelCite(CITE.ashwGummy, METH.blackCarrot)),
       flag('Agar-agar', 'cleared', labelCite(CITE.ashwGummy, METH.agar)),
       flag('Pectin', 'cleared', labelCite(CITE.ashwGummy, METH.gums)),
@@ -2353,7 +2353,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.bm2proLgg,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.bm2proLgg, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.bm2proLgg, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(CITE.bm2proLgg, METH.maltodextrin)),
       flag('Rice extract', 'limited', `${CITE.bm2proLgg}; ${METH.riceExtract}. ${RICE_EXTRACT_TAP}`),
       flag('Rice (unspecified)', 'limited', `${CITE.bm2proLgg}; ${METH.riceUnspecified}. ${RICE_UNSPECIFIED_TAP}`),
@@ -2403,7 +2403,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Turmeric / curcuminoid nutrient booster blend', strength: 'label serving' }],
     cite: CITE.turmericPowder,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericPowder, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.turmericPowder, METH.sio2)),
       labelCleared(CITE.turmericPowder, 'Rice protein'),
     ],
     math: 'Driver is silicon dioxide (0-pt Caution cap) on the current NHC panel (SiO2 / rice protein). Rice protein is food-state media, not vague rice extract and not the rice-hull Clean lock.',
@@ -2442,7 +2442,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Curcuminoids', strength: 'label serving' }],
     cite: CITE.turmericMinis,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericMinis, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.turmericMinis, METH.sio2)),
       labelCleared(CITE.turmericMinis, 'Microcrystalline cellulose'),
       labelCleared(CITE.turmericMinis, 'Stearic acid'),
       labelCleared(CITE.turmericMinis, 'Rice protein'),
@@ -2463,7 +2463,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     actives: [{ name: 'Turmeric / curcuminoids joint-support blend', strength: 'label serving' }],
     cite: CITE.turmericJoint,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericJoint, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.turmericJoint, METH.sio2)),
       labelCleared(CITE.turmericJoint, 'Microcrystalline cellulose'),
       labelCleared(CITE.turmericJoint, 'Stearic acid'),
       labelCleared(CITE.turmericJoint, 'Hypromellose'),
@@ -2486,7 +2486,7 @@ export const BATCH31_MEGAFOOD: RatingRecord[] = [
     ],
     cite: CITE.turmericLiver,
     inactives: [
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.turmericLiver, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.turmericLiver, METH.sio2)),
       labelCleared(CITE.turmericLiver, 'Microcrystalline cellulose'),
       labelCleared(CITE.turmericLiver, 'Stearic acid'),
       labelCleared(CITE.turmericLiver, 'Hypromellose'),

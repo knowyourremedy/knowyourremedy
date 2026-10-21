@@ -416,8 +416,8 @@ export const BATCH144_KYR6B_CLARITIN_US_OTC: RatingRecord[] = [
     form: 'liquid',
     actives: SYRUP_ACTIVE,
     flags: kidsLiquidFlags(),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavor, Maltitol, Sorbitol, Sodium benzoate.',
+    verdict: 'caution',
+    honestNote: '',
     note: SYRUP_NOTE,
     source:
       'DailyMed setid 170061e9-e529-4ff0-e054-00144ff8d46c, same grape syrup inactive line. Package NDC 11523-4360-3 is 150 mL in 1 bottle in 1 carton. UPC left empty.',
@@ -431,9 +431,11 @@ if (ROWS.some((r) => r.barcode)) throw new Error('batch144 unexpected upc');
 const clean = ROWS.filter((r) => r.verdict === 'clean');
 const caution = ROWS.filter((r) => r.verdict === 'caution');
 const avoid = ROWS.filter((r) => r.verdict === 'avoid');
-if (clean.length !== 9 || caution.length !== 3 || avoid.length !== 4) {
+if (clean.length !== 9 || caution.length !== 4 || avoid.length !== 3) {
   throw new Error(`batch144 verdicts ${clean.length}/${caution.length}/${avoid.length}`);
 }
 if (clean.some((r) => r.formulaId !== MCC && r.formulaId !== PLAIN)) throw new Error('batch144 clean formula');
-if (caution.some((r) => r.formulaId !== REDITAB)) throw new Error('batch144 redi');
+if (caution.some((r) => r.formulaId !== REDITAB && r.formulaId !== KIDS_LIQUID)) {
+  throw new Error('batch144 redi');
+}
 if (ROWS.some((r) => r.inactiveIngredients.length === 0)) throw new Error('batch144 empty panel');

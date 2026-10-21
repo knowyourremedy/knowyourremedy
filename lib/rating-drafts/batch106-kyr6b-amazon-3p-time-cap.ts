@@ -192,18 +192,18 @@ function dm(
 }
 
 const IBU_SOFT: Compact['flags'] = [
-  ['ammonium hydroxide', 'limited', 'ammonium'],
+  ['ammonium hydroxide', 'moderate', 'ammonium'],
   ['FD&C green #3', 'high', 'dye'],
   ['gelatin', 'cleared', 'gelatin'],
-  ['iron oxide black', 'limited', 'iron'],
+  ['iron oxide black', 'moderate', 'iron'],
   ['medium chain triglycerides', 'limited', 'mct'],
   ['polyethylene glycol', 'limited', 'peg'],
-  ['potassium hydroxide', 'limited', 'koh'],
+  ['potassium hydroxide', 'moderate', 'koh'],
   ['propylene glycol', 'limited', 'pg'],
   ['purified water', 'cleared', 'water'],
   ['shellac', 'cleared', 'shellac'],
-  ['sorbitan monooleate', 'limited', 'sorbitan'],
-  ['sorbitol sorbitan', 'limited', 'sss'],
+  ['sorbitan monooleate', 'moderate', 'sorbitan'],
+  ['sorbitol sorbitan', 'moderate', 'sss'],
 ];
 
 const LORATADINE: Compact['flags'] = [
@@ -233,7 +233,7 @@ const APAP_500: Compact['flags'] = [
 
 const APAP_DYE_FREE: Compact['flags'] = [
   ['hypromellose', 'cleared', 'hpmc'],
-  ['mineral oil', 'limited', 'mineralOil'],
+  ['mineral oil', 'moderate', 'mineralOil'],
   ['povidone', 'cleared', 'povidone'],
   ['pregelatinized starch', 'cleared', 'pregel'],
   ['sodium starch glycolate', 'cleared', 'ssg'],
@@ -263,7 +263,7 @@ const DAY_COLD: Compact['flags'] = [
   ['propylene glycol', 'limited', 'pg'],
   ['purified water', 'cleared', 'water'],
   ['shellac', 'cleared', 'shellac'],
-  ['sorbitol sorbitan solution', 'limited', 'sss'],
+  ['sorbitol sorbitan solution', 'moderate', 'sss'],
   ['titanium dioxide', 'high', 'tio2'],
 ];
 
@@ -320,7 +320,7 @@ const GUAIF_ER: Compact['flags'] = [
 const IBU_BROWN: Compact['flags'] = [
   ['colloidal silicon dioxide', 'limited', 'sio2'],
   ['croscarmellose sodium', 'cleared', 'croscarmellose'],
-  ['iron oxide red', 'limited', 'iron'],
+  ['iron oxide red', 'moderate', 'iron'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
   ['polyethylene glycol', 'limited', 'peg'],
@@ -337,9 +337,9 @@ const GELCAP: Compact['flags'] = [
   ['FD&C blue #1', 'high', 'dye'],
   ['FD&C red #40', 'high', 'dye'],
   ['FD&C yellow #6', 'high', 'dye'],
-  ['ferric oxide red', 'limited', 'iron'],
-  ['ferric oxide yellow', 'limited', 'iron'],
-  ['ferrosoferric oxide', 'limited', 'iron'],
+  ['ferric oxide red', 'moderate', 'iron'],
+  ['ferric oxide yellow', 'moderate', 'iron'],
+  ['ferrosoferric oxide', 'moderate', 'iron'],
   ['gelatin', 'cleared', 'gelatin'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['polyethylene glycol', 'limited', 'peg'],
@@ -356,7 +356,7 @@ const SENNA_86: Compact['flags'] = [
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
-  ['mineral oil', 'limited', 'mineralOil'],
+  ['mineral oil', 'moderate', 'mineralOil'],
 ];
 
 const SENNA_S: Compact['flags'] = [
@@ -370,7 +370,7 @@ const SENNA_S: Compact['flags'] = [
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],
   ['polyethylene glycol', 'limited', 'peg'],
-  ['sodium benzoate', 'limited', 'benzoate'],
+  ['sodium benzoate', 'moderate', 'benzoate'],
   ['stearic acid', 'cleared', 'stearic'],
   ['titanium dioxide', 'high', 'tio2'],
 ];

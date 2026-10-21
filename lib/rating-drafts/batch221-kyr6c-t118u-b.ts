@@ -43,7 +43,7 @@ const METH = {
   crospovidone: 'Methodology §5 Cleared (crospovidone).',
   naFlavor:
     'Methodology §5 Limited (natural and artificial flavor, singular). Founder lock Oct 17, 2026 t118u.',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
 } as const;
 
 type MethKey = keyof typeof METH;
@@ -349,7 +349,7 @@ export const BATCH221_KYR6C_T118U_B: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_FL_MET, MET_FLAGS),
     verdict: verdictFromFlags(MET_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Annatto extract (color), Natural flavors.',
+    honestNote: '',
     retailers: ['florastor.com', 'Meijer', 'Thrifty White'],
     sourcesGeneral: [
       `Brand panel ${PANEL_FL_MET} (barcode 7 04142 88130 4 on bottle); florastor.com sku 88130. Serving Size 2 gummies; Servings 28; Calories 15; Total Carbohydrate 5 g; Dietary Fiber 2 g; Total Sugars 2 g; Includes 2 g Added Sugars; Vitamin B12 (as cyanocobalamin) 250 mcg; Sodium 10 mg; Bacillus coagulans SNZ 1969 10 mg (1 Billion CFU) ‡; Inulin (as chicory root fiber) 2 g ‡. Other ingredients: Sugar; Contains less than 2% of: annatto extract (color), carnauba wax, citric acid, cornstarch, fractionated coconut oil, lactic acid, natural flavors, pectin, sodium citrate, water. florastor.com 56 ct available $24.99. Meijer https://www.meijer.com/shopping/product/x/70414288130.html inStock. Thrifty White https://shop.thriftywhite.com/florastor-balanced-benefits-digest-metabolic-support-probiotic-vegetarian-gummies-peach-lemonade-56-ct/ Current Stock 31 $23.01 UPC 704142881304. UPC check digit OK.`,
@@ -414,7 +414,7 @@ export const BATCH221_KYR6C_T118U_B: RatingRecord[] = [
     activeIngredients: [{ name: 'Lactase enzyme', strength: '9000 FCC lactase units' }],
     inactiveIngredients: buildOi(PANEL_LACTAID_FA_CHEW, FA_CHEW_FLAGS),
     verdict: verdictFromFlags(FA_CHEW_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Mannitol, Natural and Artificial Flavor, Sucralose.',
+    honestNote: '',
     retailers: ['Thrifty White', 'Meijer'],
     sourcesGeneral: [
       `Box panel ${PANEL_LACTAID_FA_CHEW} (32-ct box, same formula) plus https://www.lactaid.com/products/fast-act-chewables accordion (60 ct). Serving Size 1 Chewable Tablet; Total Carb <1 g; Sodium 5 mg; Lactase Enzyme 9000 FCC †. Other Ingredients: Mannitol, Microcrystalline Cellulose, Croscarmellose Sodium, Crospovidone, Magnesium Stearate, Natural and Artificial Flavor, Citric Acid, Sucralose. Thrifty White https://shop.thriftywhite.com/lactaid-fast-act-tablets-vanilla-twist-flavor-60-tablets/ Current Stock 25 $17.57 UPC 300450930606. Meijer https://www.meijer.com/shopping/product/x/30045093060.html inStock. UPC lactaid.com LAC_300450930606_60_Count = Thrifty White = Meijer key; check digit OK.`,
