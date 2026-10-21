@@ -17372,6 +17372,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'springvalley-b234-flush-free-niacin-60': catalogShot('springvalley-b234-flush-free-niacin-60.jpg'),
   // Spring Valley Norwegian Salmon Oil 1,000 mg, 120 softgels. UPC 681131312646.
   'springvalley-b234-norwegian-salmon-oil-120': catalogShot('springvalley-b234-norwegian-salmon-oil-120.jpg'),
+  // Vitamins night run 2026-10-21 4:15 AM PT batch 1.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Spring Valley Iron 65 mg, 200 tablets. UPC 681131093712. Not a twin pack.
+  'springvalley-b234-iron-65-200': catalogShot('springvalley-b234-iron-65-200.jpg'),
+  // Spring Valley Cod Liver Oil plus A & D3, 100 softgels. UPC 078742499086. Not salmon oil.
+  'springvalley-b234-cod-liver-oil-ad-100': catalogShot('springvalley-b234-cod-liver-oil-ad-100.jpg'),
+  // Spring Valley Evening Primrose Oil 1,000 mg, 75 softgels. UPC 194346254002.
+  'springvalley-b235-evening-primrose-75': catalogShot('springvalley-b235-evening-primrose-75.jpg'),
+  // Spring Valley Chromium 1,000 mcg, 100 tablets. UPC 681131355179.
+  'springvalley-b235-chromium-1000-100': catalogShot('springvalley-b235-chromium-1000-100.jpg'),
+  // Spring Valley Vitamin D3 125 mcg (5,000 IU), 250 softgels. UPC 605388009272. Not 1,000 or 2,000 IU.
+  'springvalley-b236-d3-5000iu-250': catalogShot('springvalley-b236-d3-5000iu-250.jpg'),
+  // Spring Valley Potassium 99 mg, 100 caplets. UPC 681131928878.
+  'springvalley-b237-potassium-99-100': catalogShot('springvalley-b237-potassium-99-100.jpg'),
+  // Spring Valley Calcium 600 mg plus D3, 150 mini softgels. UPC 681131428262. Not the 250-count tablets.
+  'springvalley-b237-calcium-600-d3-150': catalogShot('springvalley-b237-calcium-600-d3-150.jpg'),
+  // Spring Valley Apple Cider Vinegar 450 mg, 100 capsules. UPC 681131125321.
+  'springvalley-b237-acv-450-100': catalogShot('springvalley-b237-acv-450-100.jpg'),
+  // Spring Valley Astaxanthin 4 mg, 30 softgels. UPC 605388009319.
+  'springvalley-b237-astaxanthin-4mg-30': catalogShot('springvalley-b237-astaxanthin-4mg-30.jpg'),
+  // Spring Valley Vitamin E 670 mg (1,000 IU), 60 softgels. UPC 681131678858.
+  'springvalley-b238-vitamin-e-1000iu-60': catalogShot('springvalley-b238-vitamin-e-1000iu-60.jpg'),
+  // Spring Valley L-Lysine 1,000 mg, 100 tablets. UPC 078742067957.
+  'springvalley-b238-l-lysine-1000-100': catalogShot('springvalley-b238-l-lysine-1000-100.jpg'),
+  // Spring Valley B-100 Complex timed-release, 60 tablets. UPC 078742009896. Not B-50.
+  'springvalley-b238-b100-complex-60': catalogShot('springvalley-b238-b100-complex-60.jpg'),
+  // Spring Valley Vitamin D3 50 mcg (2,000 IU), 200 softgels. UPC 681131007207. Not 5,000 IU.
+  'springvalley-b238-d3-2000iu-200': catalogShot('springvalley-b238-d3-2000iu-200.jpg'),
+  // Spring Valley Vitamin B1 250 mg, 100 tablets. UPC 078742435886.
+  'springvalley-b239-vitamin-b1-250-100': catalogShot('springvalley-b239-vitamin-b1-250-100.jpg'),
+  // Spring Valley Folate 1,333 mcg DFE, 400 tablets. UPC 681131071642.
+  'springvalley-b240-folate-1333-400': catalogShot('springvalley-b240-folate-1333-400.jpg'),
+  // Spring Valley Vitamin D3 25 mcg (1,000 IU), 100 softgels. UPC 681131071659. Not the 450-count.
+  'springvalley-b240-d3-1000iu-100': catalogShot('springvalley-b240-d3-1000iu-100.jpg'),
+  // Spring Valley Super B-Complex, 100 tablets. UPC 681131086479. Not the 250-count.
+  'springvalley-b241-super-b-complex-100': catalogShot('springvalley-b241-super-b-complex-100.jpg'),
+  // Spring Valley Super B-Complex, 250 tablets. UPC 681131086615. Not the 100-count.
+  'springvalley-b241-super-b-complex-250': catalogShot('springvalley-b241-super-b-complex-250.jpg'),
+  // Spring Valley Vitamin D3 25 mcg (1,000 IU), 450 softgels. UPC 194346065332. Not the 100-count.
+  'springvalley-b241-d3-1000iu-450': catalogShot('springvalley-b241-d3-1000iu-450.jpg'),
+  // Spring Valley Fish Oil 1,000 mg, 300 softgels. UPC 681131284998. Not salmon oil or cod liver oil.
+  'springvalley-b242-fish-oil-1000-300': catalogShot('springvalley-b242-fish-oil-1000-300.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39015,9 +39057,7 @@ assertBrandMark(
       ['springvalley-b238-b100-complex-60', 'springvalley-b238-b100-complex-60', 'Spring Valley'],
     ],
   ];
-  const letterUntilAttempted = new Set<string>([
-    'springvalley-b238-b100-complex-60',
-  ]);
+  const letterUntilAttempted = new Set<string>([]);
   for (const group of groups1021d) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -39030,6 +39070,87 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (letterUntilAttempted.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-21 4:15 AM PT batch 1.
+  // Sibling counts, strengths, and oils keep their own fronts.
+  const batch1021e: [string, string, string][] = [
+    ['springvalley-b234-iron-65-200', 'Spring Valley', 'springvalley-b234-iron-65-200.jpg'],
+    ['springvalley-b234-cod-liver-oil-ad-100', 'Spring Valley', 'springvalley-b234-cod-liver-oil-ad-100.jpg'],
+    ['springvalley-b235-evening-primrose-75', 'Spring Valley', 'springvalley-b235-evening-primrose-75.jpg'],
+    ['springvalley-b235-chromium-1000-100', 'Spring Valley', 'springvalley-b235-chromium-1000-100.jpg'],
+    ['springvalley-b236-d3-5000iu-250', 'Spring Valley', 'springvalley-b236-d3-5000iu-250.jpg'],
+    ['springvalley-b237-potassium-99-100', 'Spring Valley', 'springvalley-b237-potassium-99-100.jpg'],
+    ['springvalley-b237-calcium-600-d3-150', 'Spring Valley', 'springvalley-b237-calcium-600-d3-150.jpg'],
+    ['springvalley-b237-acv-450-100', 'Spring Valley', 'springvalley-b237-acv-450-100.jpg'],
+    ['springvalley-b237-astaxanthin-4mg-30', 'Spring Valley', 'springvalley-b237-astaxanthin-4mg-30.jpg'],
+    ['springvalley-b238-vitamin-e-1000iu-60', 'Spring Valley', 'springvalley-b238-vitamin-e-1000iu-60.jpg'],
+    ['springvalley-b238-l-lysine-1000-100', 'Spring Valley', 'springvalley-b238-l-lysine-1000-100.jpg'],
+    ['springvalley-b238-b100-complex-60', 'Spring Valley', 'springvalley-b238-b100-complex-60.jpg'],
+    ['springvalley-b238-d3-2000iu-200', 'Spring Valley', 'springvalley-b238-d3-2000iu-200.jpg'],
+    ['springvalley-b239-vitamin-b1-250-100', 'Spring Valley', 'springvalley-b239-vitamin-b1-250-100.jpg'],
+    ['springvalley-b240-folate-1333-400', 'Spring Valley', 'springvalley-b240-folate-1333-400.jpg'],
+    ['springvalley-b240-d3-1000iu-100', 'Spring Valley', 'springvalley-b240-d3-1000iu-100.jpg'],
+    ['springvalley-b241-super-b-complex-100', 'Spring Valley', 'springvalley-b241-super-b-complex-100.jpg'],
+    ['springvalley-b241-super-b-complex-250', 'Spring Valley', 'springvalley-b241-super-b-complex-250.jpg'],
+    ['springvalley-b241-d3-1000iu-450', 'Spring Valley', 'springvalley-b241-d3-1000iu-450.jpg'],
+    ['springvalley-b242-fish-oil-1000-300', 'Spring Valley', 'springvalley-b242-fish-oil-1000-300.jpg'],
+  ];
+  const seen1021e = new Set<string>();
+  for (const [id, brand, file] of batch1021e) {
+    if (seen1021e.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1021e.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1021e: [string, string, string][][] = [
+    [
+      ['springvalley-b236-d3-5000iu-250', 'springvalley-b236-d3-5000iu-250', 'Spring Valley'],
+      ['springvalley-b238-d3-2000iu-200', 'springvalley-b238-d3-2000iu-200', 'Spring Valley'],
+      ['springvalley-b240-d3-1000iu-100', 'springvalley-b240-d3-1000iu-100', 'Spring Valley'],
+      ['springvalley-b241-d3-1000iu-450', 'springvalley-b241-d3-1000iu-450', 'Spring Valley'],
+    ],
+    [
+      ['springvalley-b241-super-b-complex-100', 'springvalley-b241-super-b-complex-100', 'Spring Valley'],
+      ['springvalley-b241-super-b-complex-250', 'springvalley-b241-super-b-complex-250', 'Spring Valley'],
+    ],
+    [
+      ['springvalley-b233-b50-complex-timed-release-60', 'springvalley-b233-b50-complex-timed-release-60', 'Spring Valley'],
+      ['springvalley-b238-b100-complex-60', 'springvalley-b238-b100-complex-60', 'Spring Valley'],
+    ],
+    [
+      ['springvalley-b234-norwegian-salmon-oil-120', 'springvalley-b234-norwegian-salmon-oil-120', 'Spring Valley'],
+      ['springvalley-b234-cod-liver-oil-ad-100', 'springvalley-b234-cod-liver-oil-ad-100', 'Spring Valley'],
+      ['springvalley-b242-fish-oil-1000-300', 'springvalley-b242-fish-oil-1000-300', 'Spring Valley'],
+    ],
+    [
+      ['springvalley-b237-calcium-600-d3-150', 'springvalley-b237-calcium-600-d3-150', 'Spring Valley'],
+      ['springvalley-b242-calcium-600-d3-250', 'springvalley-b242-calcium-600-d3-250', 'Spring Valley'],
+    ],
+  ];
+  const letterUntilAttemptedE = new Set<string>([
+    'springvalley-b242-calcium-600-d3-250',
+  ]);
+  for (const group of groups1021e) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedE.has(id)) {
         if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
