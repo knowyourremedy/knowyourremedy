@@ -2954,6 +2954,29 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Vitamin D3 1,000 IU page bottle prints 100 softgels.
   // The catalog row is 120 softgels. Do not glue the 100.
   'natures-bounty-b197-d3-1000-120': brandMark('natures-bounty-mark.png'),
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 1.
+  // Same Osteo Bi-Flex wordmark. Not a text tile. Not a letter.
+  // Brand cartons for these counts are the 80 or the 30. Retailer
+  // fronts are flat labels or the wrong count. Do not glue those.
+  'osteo-b210-triple-strength-120': brandMark('osteo-biflex-mark.png'),
+  'osteo-b210-triple-strength-vitd-120': brandMark('osteo-biflex-mark.png'),
+  'osteo-b210-one-per-day-60': brandMark('osteo-biflex-mark.png'),
+  'osteo-b211-triple-strength-88': brandMark('osteo-biflex-mark.png'),
+  // Caltrate wordmark. No count-matched 3D carton for these rows.
+  // Do not glue the 155 chewables onto the 90, or the 100 gummies onto the 50.
+  'caltrate-b212-plus-minerals-chewables-90': brandMark('caltrate-mark.png'),
+  'caltrate-b212-soft-chews-chocolate-60': brandMark('caltrate-mark.png'),
+  'caltrate-b212-plus-minerals-120': brandMark('caltrate-mark.png'),
+  'caltrate-b212-plus-minerals-60': brandMark('caltrate-mark.png'),
+  'caltrate-b213-gummy-bites-50': brandMark('caltrate-mark.png'),
+  // Move Free wordmark. Ultra hero is the 30, not the 64.
+  // TamaFlex carton prints 80 tablets. The row is 90. Do not glue the 80.
+  'move-free-b212-ultra-triple-action-64': brandMark('move-free-mark.png'),
+  'move-free-b212-advanced-tamaflex-90': brandMark('move-free-mark.png'),
+  // Citracal Maximum Plus 120. The retrieved "120" front is a 280-count bottle.
+  // citracal.com/Citracal-logo.png returned 403 and Wayback has no image capture.
+  // Parent Bayer mark. Not a text tile. Not a letter.
+  'citracal-b212-maximum-plus-120': brandMark('bayer-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17206,6 +17229,25 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'osteo-b209-triple-strength-turmeric-80': catalogShot('osteo-b209-triple-strength-turmeric-80.jpg'),
   // Triple Strength + Magnesium, 80 tablets. Not plain Triple Strength or + Turmeric.
   'osteo-b209-triple-strength-magnesium-80': catalogShot('osteo-b209-triple-strength-magnesium-80.jpg'),
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // Triple Strength, 40 coated tablets. Hy-Vee asset for UPC 030768031206.
+  // Count is not printed on the front. Not the 80, the 120, or the 88.
+  'osteo-b210-triple-strength-40': catalogShot('osteo-b210-triple-strength-40.jpg'),
+  // Caltrate 600+D3 Plus Minerals chewables, 155. Not the 90.
+  'caltrate-b212-plus-minerals-chewables-155': catalogShot('caltrate-b212-plus-minerals-chewables-155.jpg'),
+  // Move Free Ultra Triple Action, 30 tablets. Not the 64.
+  'move-free-b212-ultra-triple-action-30': catalogShot('move-free-b212-ultra-triple-action-30.jpg'),
+  // Move Free Advanced Plus MSM + Vitamin D3, 80 tablets. Not the TamaFlex 90 or the MSM 120.
+  'move-free-b212-advanced-plus-msm-d3-80': catalogShot('move-free-b212-advanced-plus-msm-d3-80.jpg'),
+  // Citracal Maximum Plus, 180 caplets. Not the 120.
+  'citracal-b212-maximum-plus-180': catalogShot('citracal-b212-maximum-plus-180.jpg'),
+  // Citracal Petites, 200 caplets.
+  'citracal-b212-petites-200': catalogShot('citracal-b212-petites-200.jpg'),
+  // Citracal Slow Release 1200, 80 caplets.
+  'citracal-b212-slow-release-1200-80': catalogShot('citracal-b212-slow-release-1200-80.jpg'),
+  // Caltrate Gummy Bites, 100. Not the 50.
+  'caltrate-b213-gummy-bites-100': catalogShot('caltrate-b213-gummy-bites-100.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38192,14 +38234,6 @@ assertBrandMark(
   if (!methyl?.url.endsWith('/natures-bounty-mark.png') || methyl.verifiedSku) {
     throw new Error('methyl B-12 1000 mcg must use the Nature\'s Bounty mark, not the 5000 mcg bottle');
   }
-  const nextLetter = previewOverlayImage({
-    id: 'osteo-b210-triple-strength-40',
-    formulaId: 'osteo-b210-triple-strength-40',
-    brand: 'Osteo Bi-Flex',
-  });
-  if (!nextLetter || nextLetter.verifiedSku || !nextLetter.url.startsWith('data:image/svg')) {
-    throw new Error('Osteo Bi-Flex Triple Strength 40 must stay a letter until attempted');
-  }
 }
 
 {
@@ -38267,17 +38301,6 @@ assertBrandMark(
     });
     if (new Set(urls).size !== group.length) {
       throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
-    }
-  }
-  for (const id of [
-    'osteo-b210-triple-strength-40',
-    'osteo-b210-triple-strength-120',
-    'osteo-b210-triple-strength-vitd-120',
-    'osteo-b210-one-per-day-60',
-  ]) {
-    const image = previewOverlayImage({ id, formulaId: id, brand: 'Osteo Bi-Flex' });
-    if (!image?.url.startsWith('data:image/svg') || image.verifiedSku) {
-      throw new Error(`${id} stays a letter until its own carton is attempted`);
     }
   }
 }
@@ -38524,12 +38547,102 @@ assertBrandMark(
       throw new Error(`${id} stays a letter until its own carton is attempted`);
     }
   }
-  const osteoNext = previewOverlayImage({
-    id: 'osteo-b210-triple-strength-40',
-    formulaId: 'osteo-b210-triple-strength-40',
-    brand: 'Osteo Bi-Flex',
+}
+
+{
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 1.
+  const batch1021a: [string, string, string][] = [
+    ['osteo-b210-triple-strength-40', 'Osteo Bi-Flex', 'osteo-b210-triple-strength-40.jpg'],
+    ['caltrate-b212-plus-minerals-chewables-155', 'Caltrate', 'caltrate-b212-plus-minerals-chewables-155.jpg'],
+    ['move-free-b212-ultra-triple-action-30', 'Move Free', 'move-free-b212-ultra-triple-action-30.jpg'],
+    ['move-free-b212-advanced-plus-msm-d3-80', 'Move Free', 'move-free-b212-advanced-plus-msm-d3-80.jpg'],
+    ['citracal-b212-maximum-plus-180', 'Citracal', 'citracal-b212-maximum-plus-180.jpg'],
+    ['citracal-b212-petites-200', 'Citracal', 'citracal-b212-petites-200.jpg'],
+    ['citracal-b212-slow-release-1200-80', 'Citracal', 'citracal-b212-slow-release-1200-80.jpg'],
+    ['caltrate-b213-gummy-bites-100', 'Caltrate', 'caltrate-b213-gummy-bites-100.jpg'],
+  ];
+  const seen1021a = new Set<string>();
+  for (const [id, brand, file] of batch1021a) {
+    if (seen1021a.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1021a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1021a: [string, string, string, string][] = [
+    ['osteo-b210-triple-strength-120', 'osteo-b210-triple-strength-120', 'Osteo Bi-Flex', 'osteo-biflex-mark.png'],
+    ['osteo-b210-triple-strength-vitd-120', 'osteo-b210-triple-strength-vitd-120', 'Osteo Bi-Flex', 'osteo-biflex-mark.png'],
+    ['osteo-b210-one-per-day-60', 'osteo-b210-one-per-day-60', 'Osteo Bi-Flex', 'osteo-biflex-mark.png'],
+    ['osteo-b211-triple-strength-88', 'osteo-b211-triple-strength-88', 'Osteo Bi-Flex', 'osteo-biflex-mark.png'],
+    ['caltrate-b212-plus-minerals-chewables-90', 'caltrate-b212-plus-minerals-chewables', 'Caltrate', 'caltrate-mark.png'],
+    ['caltrate-b212-soft-chews-chocolate-60', 'caltrate-b212-soft-chews-chocolate', 'Caltrate', 'caltrate-mark.png'],
+    ['caltrate-b212-plus-minerals-120', 'caltrate-b212-plus-minerals', 'Caltrate', 'caltrate-mark.png'],
+    ['caltrate-b212-plus-minerals-60', 'caltrate-b212-plus-minerals', 'Caltrate', 'caltrate-mark.png'],
+    ['caltrate-b213-gummy-bites-50', 'caltrate-b213-gummy-bites', 'Caltrate', 'caltrate-mark.png'],
+    ['move-free-b212-ultra-triple-action-64', 'move-free-b212-ultra-triple-action', 'Move Free', 'move-free-mark.png'],
+    ['move-free-b212-advanced-tamaflex-90', 'move-free-b212-advanced-tamaflex-90', 'Move Free', 'move-free-mark.png'],
+    ['citracal-b212-maximum-plus-120', 'citracal-b212-maximum-plus', 'Citracal', 'bayer-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1021a) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must use brand mark ${file}`);
+    }
+  }
+  const groups1021a: [string, string, string][][] = [
+    [
+      ['osteo-b201-triple-strength-80', 'osteo-b201-triple-strength-80', 'Osteo Bi-Flex'],
+      ['osteo-b210-triple-strength-40', 'osteo-b210-triple-strength-40', 'Osteo Bi-Flex'],
+      ['osteo-b210-triple-strength-120', 'osteo-b210-triple-strength-120', 'Osteo Bi-Flex'],
+    ],
+    [
+      ['osteo-b210-triple-strength-40', 'osteo-b210-triple-strength-40', 'Osteo Bi-Flex'],
+      ['osteo-b211-triple-strength-88', 'osteo-b211-triple-strength-88', 'Osteo Bi-Flex'],
+    ],
+    [
+      ['osteo-b201-triple-strength-vitd-80', 'osteo-b201-triple-strength-vitd-80', 'Osteo Bi-Flex'],
+      ['osteo-b210-triple-strength-vitd-120', 'osteo-b210-triple-strength-vitd-120', 'Osteo Bi-Flex'],
+    ],
+    [
+      ['osteo-b201-one-per-day-30', 'osteo-b201-one-per-day-30', 'Osteo Bi-Flex'],
+      ['osteo-b210-one-per-day-60', 'osteo-b210-one-per-day-60', 'Osteo Bi-Flex'],
+    ],
+    [
+      ['caltrate-b212-plus-minerals-chewables-155', 'caltrate-b212-plus-minerals-chewables', 'Caltrate'],
+      ['caltrate-b212-plus-minerals-chewables-90', 'caltrate-b212-plus-minerals-chewables', 'Caltrate'],
+    ],
+    [
+      ['caltrate-b213-gummy-bites-100', 'caltrate-b213-gummy-bites', 'Caltrate'],
+      ['caltrate-b213-gummy-bites-50', 'caltrate-b213-gummy-bites', 'Caltrate'],
+    ],
+    [
+      ['move-free-b212-ultra-triple-action-30', 'move-free-b212-ultra-triple-action', 'Move Free'],
+      ['move-free-b212-ultra-triple-action-64', 'move-free-b212-ultra-triple-action', 'Move Free'],
+    ],
+    [
+      ['move-free-b212-advanced-plus-msm-d3-80', 'move-free-b212-advanced-plus-msm-d3-80', 'Move Free'],
+      ['move-free-b212-advanced-tamaflex-90', 'move-free-b212-advanced-tamaflex-90', 'Move Free'],
+      ['move-free-b189-advanced-msm-120', 'move-free-b189-advanced-msm-120', 'Move Free'],
+    ],
+    [
+      ['citracal-b212-maximum-plus-180', 'citracal-b212-maximum-plus', 'Citracal'],
+      ['citracal-b212-maximum-plus-120', 'citracal-b212-maximum-plus', 'Citracal'],
+    ],
+  ];
+  for (const group of groups1021a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const minisNext = previewOverlayImage({
+    id: 'caltrate-b213-plus-minerals-minis-150',
+    formulaId: 'caltrate-b213-plus-minerals-minis',
+    brand: 'Caltrate',
   });
-  if (!osteoNext?.url.startsWith('data:image/svg') || osteoNext.verifiedSku) {
-    throw new Error('osteo-b210-triple-strength-40 stays a letter until its own carton is attempted');
+  if (!minisNext?.url.startsWith('data:image/svg') || minisNext.verifiedSku) {
+    throw new Error('caltrate-b213-plus-minerals-minis-150 stays a letter until its own carton is attempted');
   }
 }
