@@ -3000,6 +3000,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // and lifestyle tiles. Not a 3D carton. Not a letter.
   'feosol-b219-original-120': brandMark('feosol-mark.png'),
   'feosol-b219-complete-30': brandMark('feosol-mark.png'),
+  // Vitamins night run 2026-10-21 4:15 AM PT batch 2.
+  // MegaFlora Original row spans three barcodes: 30, 60, and 90 capsules.
+  // Do not glue one count. Official MegaFood mark. Not a text tile. Not a letter.
+  'megafood-megaflora-original': brandMark('megafood-mark.png'),
+  // MegaFlora with Turmeric spans a 30-serving bottle and a 45-serving bottle.
+  // Do not glue one count. Same MegaFood mark. Per-id only.
+  'megafood-megaflora-turmeric': brandMark('megafood-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17414,6 +17421,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'springvalley-b241-d3-1000iu-450': catalogShot('springvalley-b241-d3-1000iu-450.jpg'),
   // Spring Valley Fish Oil 1,000 mg, 300 softgels. UPC 681131284998. Not salmon oil or cod liver oil.
   'springvalley-b242-fish-oil-1000-300': catalogShot('springvalley-b242-fish-oil-1000-300.jpg'),
+  // Vitamins night run 2026-10-21 4:15 AM PT batch 2.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Vitamins ran out mid-batch. The rest of this 20 are Digestive letters.
+  // Spring Valley Calcium 600 mg plus D3 20 mcg (800 IU), 250 tablets. UPC 078742634388. Not the 150 mini softgels.
+  'springvalley-b242-calcium-600-d3-250': catalogShot('springvalley-b242-calcium-600-d3-250.jpg'),
+  // Spring Valley Calcium Citrate 600 mg, 300 tablets. UPC 681131122283. Not the carbonate tablets.
+  'springvalley-b242-calcium-citrate-600-300': catalogShot('springvalley-b242-calcium-citrate-600-300.jpg'),
+  // Spring Valley Vitamin B Complex vegetarian gummies, 70. UPC 681131000635. Not B-100 tablets.
+  'springvalley-b243-b-complex-veg-gummy-70': catalogShot('springvalley-b243-b-complex-veg-gummy-70.jpg'),
+  // Spring Valley Calcium 500 mg plus D3 gummies, 100. UPC 681131094320. Not the 250-count tablets.
+  'springvalley-b245-calcium-500-d3-gummy-100': catalogShot('springvalley-b245-calcium-500-d3-gummy-100.jpg'),
+  // MegaFood Dual-Action Digestive Enzymes, 60 capsules. UPC 051494105887.
+  'megafood-dual-action-digestive-enzymes': catalogShot('megafood-dual-action-digestive-enzymes.jpg'),
+  // MegaFlora Plus, 50 billion CFU, 30 servings. UPC 051494102176. Not Original.
+  'megafood-megaflora-plus': catalogShot('megafood-megaflora-plus.jpg'),
+  // MegaFlora Women's, 90 capsules / 45 servings. UPC 051494100226. Not the shelf-stable ASTARTE bottle.
+  'megafood-megaflora-womens': catalogShot('megafood-megaflora-womens.jpg'),
+  // MegaFlora Kids, 60 capsules. UPC 051494102152. Not the adult Original bottle.
+  'megafood-megaflora-kids': catalogShot('megafood-megaflora-kids.jpg'),
+  // MegaFood Women's Prebiotic + Probiotic gummies, mixed berry, 60. UPC 051494105931. Not the fiber gummies.
+  'megafood-womens-prebiotic-probiotic-gummies': catalogShot('megafood-womens-prebiotic-probiotic-gummies.jpg'),
+  // MegaFood Prebiotic Fiber gummies, orange, 60. UPC 051494105870. Not the raspberry postbiotic gummies.
+  'megafood-prebiotic-fiber-gummies': catalogShot('megafood-prebiotic-fiber-gummies.jpg'),
+  // MegaFood Probiotic, Prebiotic & Postbiotic gummies, raspberry, 60. UPC 051494106273.
+  'megafood-probiotic-prebiotic-postbiotic-gummies': catalogShot('megafood-probiotic-prebiotic-postbiotic-gummies.jpg'),
+  // MegaFood Women's Probiotic shelf-stable ASTARTE, 30 capsules. UPC 051494105337. Not MegaFlora Women's.
+  'megafood-womens-probiotic-astarte-shelf-stable': catalogShot('megafood-womens-probiotic-astarte-shelf-stable.jpg'),
+  // Genexa Antacid Maximum Strength berry chewables, 72. UPC 857630006571.
+  'genexa-antacid-maximum-strength': catalogShot('genexa-antacid-maximum-strength.jpg'),
+  // Hyland's Cell Salt #10 Nat Phos 6X, 100 tablets. UPC 354973409613. Not another cell salt.
+  'hylands-nat-phos-6x': catalogShot('hylands-nat-phos-6x.jpg'),
+  // Hyland's Kids Multi + Digestive Support gummies, mixed berry, 60. UPC 810087820756. Not Brain & Eye.
+  'hylands-kids-multi-digestive-gummies': catalogShot('hylands-kids-multi-digestive-gummies.jpg'),
+  // Boiron DiarrheaCalm meltaway tablets, 60. UPC 306969095041. Not the pellets.
+  'boiron-diarrheacalm-tablets': catalogShot('boiron-diarrheacalm-tablets.jpg'),
+  // Boiron HemCalm meltaway tablets, 60. UPC 306969122044. Not the pellets, ointment, or suppositories.
+  'boiron-hemcalm-tablets': catalogShot('boiron-hemcalm-tablets.jpg'),
+  // Boiron MotionCalm meltaway tablets. UPC 306969234044. Not the pellet row.
+  'boiron-motioncalm-meltaway-tablets': catalogShot('boiron-motioncalm-meltaway-tablets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39134,11 +39180,11 @@ assertBrandMark(
     [
       ['springvalley-b237-calcium-600-d3-150', 'springvalley-b237-calcium-600-d3-150', 'Spring Valley'],
       ['springvalley-b242-calcium-600-d3-250', 'springvalley-b242-calcium-600-d3-250', 'Spring Valley'],
+      ['springvalley-b242-calcium-citrate-600-300', 'springvalley-b242-calcium-citrate-600-300', 'Spring Valley'],
+      ['springvalley-b245-calcium-500-d3-gummy-100', 'springvalley-b245-calcium-500-d3-gummy-100', 'Spring Valley'],
     ],
   ];
-  const letterUntilAttemptedE = new Set<string>([
-    'springvalley-b242-calcium-600-d3-250',
-  ]);
+  const letterUntilAttemptedE = new Set<string>([]);
   for (const group of groups1021e) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -39158,5 +39204,126 @@ assertBrandMark(
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Vitamins night run 2026-10-21 4:15 AM PT batch 2.
+  // Vitamins finished mid-batch. Digestive letters continue.
+  // Sibling counts and forms keep their own fronts.
+  const batch1021f: [string, string, string][] = [
+    ['springvalley-b242-calcium-600-d3-250', 'Spring Valley', 'springvalley-b242-calcium-600-d3-250.jpg'],
+    ['springvalley-b242-calcium-citrate-600-300', 'Spring Valley', 'springvalley-b242-calcium-citrate-600-300.jpg'],
+    ['springvalley-b243-b-complex-veg-gummy-70', 'Spring Valley', 'springvalley-b243-b-complex-veg-gummy-70.jpg'],
+    ['springvalley-b245-calcium-500-d3-gummy-100', 'Spring Valley', 'springvalley-b245-calcium-500-d3-gummy-100.jpg'],
+    ['megafood-dual-action-digestive-enzymes', 'MegaFood', 'megafood-dual-action-digestive-enzymes.jpg'],
+    ['megafood-megaflora-plus', 'MegaFood', 'megafood-megaflora-plus.jpg'],
+    ['megafood-megaflora-womens', 'MegaFood', 'megafood-megaflora-womens.jpg'],
+    ['megafood-megaflora-kids', 'MegaFood', 'megafood-megaflora-kids.jpg'],
+    ['megafood-womens-prebiotic-probiotic-gummies', 'MegaFood', 'megafood-womens-prebiotic-probiotic-gummies.jpg'],
+    ['megafood-prebiotic-fiber-gummies', 'MegaFood', 'megafood-prebiotic-fiber-gummies.jpg'],
+    ['megafood-probiotic-prebiotic-postbiotic-gummies', 'MegaFood', 'megafood-probiotic-prebiotic-postbiotic-gummies.jpg'],
+    ['megafood-womens-probiotic-astarte-shelf-stable', 'MegaFood', 'megafood-womens-probiotic-astarte-shelf-stable.jpg'],
+    ['genexa-antacid-maximum-strength', 'Genexa', 'genexa-antacid-maximum-strength.jpg'],
+    ['hylands-nat-phos-6x', "Hyland's", 'hylands-nat-phos-6x.jpg'],
+    ['hylands-kids-multi-digestive-gummies', "Hyland's", 'hylands-kids-multi-digestive-gummies.jpg'],
+    ['boiron-diarrheacalm-tablets', 'Boiron', 'boiron-diarrheacalm-tablets.jpg'],
+    ['boiron-hemcalm-tablets', 'Boiron', 'boiron-hemcalm-tablets.jpg'],
+    ['boiron-motioncalm-meltaway-tablets', 'Boiron', 'boiron-motioncalm-meltaway-tablets.jpg'],
+  ];
+  const seen1021f = new Set<string>();
+  for (const [id, brand, file] of batch1021f) {
+    if (seen1021f.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1021f.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('megafood-megaflora-original', 'MegaFood', 'megafood-mark.png');
+  assertBrandMark('megafood-megaflora-turmeric', 'MegaFood', 'megafood-mark.png');
+  const groups1021f: [string, string, string][][] = [
+    [
+      ['megafood-megaflora-plus', 'megafood-megaflora-plus', 'MegaFood'],
+      ['megafood-megaflora-womens', 'megafood-megaflora-womens', 'MegaFood'],
+      ['megafood-megaflora-kids', 'megafood-megaflora-kids', 'MegaFood'],
+      ['megafood-womens-probiotic-astarte-shelf-stable', 'megafood-womens-probiotic-astarte-shelf-stable', 'MegaFood'],
+    ],
+    [
+      ['megafood-womens-prebiotic-probiotic-gummies', 'megafood-womens-prebiotic-probiotic-gummies', 'MegaFood'],
+      ['megafood-prebiotic-fiber-gummies', 'megafood-prebiotic-fiber-gummies', 'MegaFood'],
+      ['megafood-probiotic-prebiotic-postbiotic-gummies', 'megafood-probiotic-prebiotic-postbiotic-gummies', 'MegaFood'],
+    ],
+    [
+      ['hylands-kids-multi-digestive-gummies', 'hylands-kids-multi-digestive-gummies', "Hyland's"],
+      ['hylands-kids-multi-brain-eye-gummies', 'hylands-kids-multi-brain-eye-gummies', "Hyland's"],
+    ],
+    [
+      ['boiron-motioncalm', 'boiron-motioncalm', 'Boiron'],
+      ['boiron-motioncalm-meltaway-tablets', 'boiron-motioncalm-meltaway-tablets', 'Boiron'],
+    ],
+    [
+      ['boiron-diarrheacalm-tablets', 'boiron-diarrheacalm-tablets', 'Boiron'],
+      ['boiron-diarrheacalm-pellets', 'boiron-diarrheacalm-pellets', 'Boiron'],
+    ],
+    [
+      ['boiron-hemcalm-tablets', 'boiron-hemcalm-tablets', 'Boiron'],
+      ['boiron-hemcalm-pellets', 'boiron-hemcalm-pellets', 'Boiron'],
+    ],
+    [
+      ['boiron-hemcalm-tablets', 'boiron-hemcalm-tablets', 'Boiron'],
+      ['boiron-hemcalm-ointment', 'boiron-hemcalm-ointment', 'Boiron'],
+    ],
+    [
+      ['boiron-hemcalm-tablets', 'boiron-hemcalm-tablets', 'Boiron'],
+      ['boiron-hemcalm-suppositories', 'boiron-hemcalm-suppositories', 'Boiron'],
+    ],
+  ];
+  const letterUntilAttemptedF = new Set<string>([
+    'boiron-diarrheacalm-pellets',
+    'boiron-hemcalm-pellets',
+    'boiron-hemcalm-ointment',
+    'boiron-hemcalm-suppositories',
+  ]);
+  for (const group of groups1021f) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedF.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const original = previewOverlayImage({
+    id: 'megafood-megaflora-original',
+    formulaId: 'megafood-megaflora-original',
+    brand: 'MegaFood',
+  });
+  const turmeric = previewOverlayImage({
+    id: 'megafood-megaflora-turmeric',
+    formulaId: 'megafood-megaflora-turmeric',
+    brand: 'MegaFood',
+  });
+  const plus = previewOverlayImage({
+    id: 'megafood-megaflora-plus',
+    formulaId: 'megafood-megaflora-plus',
+    brand: 'MegaFood',
+  });
+  if (
+    !original?.url.endsWith('/megafood-mark.png')
+    || original.verifiedSku
+    || original.url.startsWith('data:image/svg+xml')
+    || original.url !== turmeric?.url
+    || original.url === plus?.url
+  ) {
+    throw new Error('MegaFlora multi-count rows must share the MegaFood mark, not a letter or one count carton');
   }
 }
