@@ -2995,6 +2995,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'schiff-b218-neuriva-brain-eye-30': brandMark('neuriva-mark.png'),
   // Schiff wordmark. Glucosamine 1500 is not a Neuriva carton.
   'schiff-b217-glucosamine-1500-msm-ha-150': brandMark('schiff-mark.png'),
+  // Vitamins night run 2026-10-21 3:00 AM PT batch 1.
+  // Feosol wordmark from feosol.com. Brand gallery fronts are flat labels
+  // and lifestyle tiles. Not a 3D carton. Not a letter.
+  'feosol-b219-original-120': brandMark('feosol-mark.png'),
+  'feosol-b219-complete-30': brandMark('feosol-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17286,6 +17291,45 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'viactiv-b219-calcium-chocolate-100': catalogShot('viactiv-b219-calcium-chocolate-100.jpg'),
   // Viactiv Rich Caramel, 100 soft chews. Not the 60 and not chocolate.
   'viactiv-b219-calcium-caramel-100': catalogShot('viactiv-b219-calcium-caramel-100.jpg'),
+  // Vitamins night run 2026-10-21 3:00 AM PT batch 1.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Viactiv Rich Caramel, 60 soft chews. UPC 857141004967. Not the 100 and not chocolate.
+  'viactiv-b219-calcium-caramel-60': catalogShot('viactiv-b219-calcium-caramel-60.jpg'),
+  // Viactiv Milk Chocolate, 180 soft chews. UPC 857141004950. Not the 60 or the 100.
+  'viactiv-b219-calcium-chocolate-180': catalogShot('viactiv-b219-calcium-chocolate-180.jpg'),
+  // Viactiv CoQ10 Cardio Complete, 30 soft chews. Official PDP front.
+  // Box reads Tropical Fusion; catalog name is Fruit Fusion. Same 30-count SKU.
+  'viactiv-b219-coq10-cardio-complete-30': catalogShot('viactiv-b219-coq10-cardio-complete-30.jpg'),
+  // Prevagen Regular Strength 10 mg, 30 capsules. Not the 60.
+  'prevagen-b220-regular-strength-30': catalogShot('prevagen-b220-regular-strength-30.jpg'),
+  // Prevagen Regular Strength 10 mg, 60 capsules. Not the 30.
+  'prevagen-b220-regular-strength-60': catalogShot('prevagen-b220-regular-strength-60.jpg'),
+  // Prevagen Extra Strength 20 mg, 30 capsules. Not the 60 and not Regular Strength.
+  'prevagen-b220-extra-strength-30': catalogShot('prevagen-b220-extra-strength-30.jpg'),
+  // Prevagen Extra Strength 20 mg, 60 capsules. Not the 30.
+  'prevagen-b220-extra-strength-60': catalogShot('prevagen-b220-extra-strength-60.jpg'),
+  // Prevagen Regular Strength chewables, mixed berry, 30. Not orange and not Extra Strength.
+  'prevagen-b220-chewables-berry-30': catalogShot('prevagen-b220-chewables-berry-30.jpg'),
+  // Prevagen Regular Strength chewables, orange, 30. Not berry.
+  'prevagen-b220-chewables-orange-30': catalogShot('prevagen-b220-chewables-orange-30.jpg'),
+  // Prevagen Extra Strength chewables, mixed berry, 20 mg, 30. Not Regular Strength berry.
+  'prevagen-b220-es-chewables-berry-30': catalogShot('prevagen-b220-es-chewables-berry-30.jpg'),
+  // Prevagen Professional Formula 40 mg, 30 capsules. Not the 10 mg or 20 mg bottles.
+  'prevagen-b220-professional-formula-30': catalogShot('prevagen-b220-professional-formula-30.jpg'),
+  // Fergon Iron Restore orange chewables, 60. Official bottle. UPC 889411124013.
+  'fergon-b220-iron-restore-60': catalogShot('fergon-b220-iron-restore-60.jpg'),
+  // Goli Apple Cider Vinegar gummies, 60. UPC 627987249620. Not the 30-count on-the-go pouch.
+  'goli-b223-acv-60': catalogShot('goli-b223-acv-60.jpg'),
+  // Goli Ashwagandha gummies, 60. Official 1-bottle front. Not Zero Sugar.
+  'goli-b223-ashwagandha-60': catalogShot('goli-b223-ashwagandha-60.jpg'),
+  // Goli Zero Sugar Ashwagandha+ gummies, 60. UPC 055840405683. Not the sugared bottle.
+  'goli-b223-zs-ashwagandha-plus-60': catalogShot('goli-b223-zs-ashwagandha-plus-60.jpg'),
+  // Goli Beets Cardio gummies, 60. UPC 055840404006.
+  'goli-b223-beets-cardio-60': catalogShot('goli-b223-beets-cardio-60.jpg'),
+  // Goli Recharge Energy+ gummies, 60. UPC 055840407229. Not Renew NAD+.
+  'goli-b223-recharge-energy-60': catalogShot('goli-b223-recharge-energy-60.jpg'),
+  // Goli Renew NAD+ gummies, 60. UPC 055840407168. Not Recharge Energy+.
+  'goli-b223-renew-nad-60': catalogShot('goli-b223-renew-nad-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38770,12 +38814,103 @@ assertBrandMark(
       throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
     }
   }
-  const caramel60 = previewOverlayImage({
-    id: 'viactiv-b219-calcium-caramel-60',
-    formulaId: 'viactiv-b219-calcium-caramel',
-    brand: 'Viactiv',
+}
+
+{
+  // Vitamins night run 2026-10-21 3:00 AM PT batch 1.
+  // Sibling counts, strengths, and flavors keep their own fronts.
+  // Feosol rows stay on the wordmark. Flat labels were not glued.
+  const batch1021c: [string, string, string][] = [
+    ['viactiv-b219-calcium-caramel-60', 'Viactiv', 'viactiv-b219-calcium-caramel-60.jpg'],
+    ['viactiv-b219-calcium-chocolate-180', 'Viactiv', 'viactiv-b219-calcium-chocolate-180.jpg'],
+    ['viactiv-b219-coq10-cardio-complete-30', 'Viactiv', 'viactiv-b219-coq10-cardio-complete-30.jpg'],
+    ['prevagen-b220-regular-strength-30', 'Prevagen', 'prevagen-b220-regular-strength-30.jpg'],
+    ['prevagen-b220-regular-strength-60', 'Prevagen', 'prevagen-b220-regular-strength-60.jpg'],
+    ['prevagen-b220-extra-strength-30', 'Prevagen', 'prevagen-b220-extra-strength-30.jpg'],
+    ['prevagen-b220-extra-strength-60', 'Prevagen', 'prevagen-b220-extra-strength-60.jpg'],
+    ['prevagen-b220-chewables-berry-30', 'Prevagen', 'prevagen-b220-chewables-berry-30.jpg'],
+    ['prevagen-b220-chewables-orange-30', 'Prevagen', 'prevagen-b220-chewables-orange-30.jpg'],
+    ['prevagen-b220-es-chewables-berry-30', 'Prevagen', 'prevagen-b220-es-chewables-berry-30.jpg'],
+    ['prevagen-b220-professional-formula-30', 'Prevagen', 'prevagen-b220-professional-formula-30.jpg'],
+    ['fergon-b220-iron-restore-60', 'Fergon', 'fergon-b220-iron-restore-60.jpg'],
+    ['goli-b223-acv-60', 'Goli', 'goli-b223-acv-60.jpg'],
+    ['goli-b223-ashwagandha-60', 'Goli', 'goli-b223-ashwagandha-60.jpg'],
+    ['goli-b223-zs-ashwagandha-plus-60', 'Goli', 'goli-b223-zs-ashwagandha-plus-60.jpg'],
+    ['goli-b223-beets-cardio-60', 'Goli', 'goli-b223-beets-cardio-60.jpg'],
+    ['goli-b223-recharge-energy-60', 'Goli', 'goli-b223-recharge-energy-60.jpg'],
+    ['goli-b223-renew-nad-60', 'Goli', 'goli-b223-renew-nad-60.jpg'],
+  ];
+  const seen1021c = new Set<string>();
+  for (const [id, brand, file] of batch1021c) {
+    if (seen1021c.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1021c.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('feosol-b219-original-120', 'Feosol', 'feosol-mark.png');
+  assertBrandMark('feosol-b219-complete-30', 'Feosol', 'feosol-mark.png');
+  const groups1021c: [string, string, string][][] = [
+    [
+      ['viactiv-b219-calcium-caramel-60', 'viactiv-b219-calcium-caramel', 'Viactiv'],
+      ['viactiv-b219-calcium-caramel-100', 'viactiv-b219-calcium-caramel', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-60', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+    ],
+    [
+      ['viactiv-b219-calcium-chocolate-60', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-100', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-180', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+    ],
+    [
+      ['prevagen-b220-regular-strength-30', 'prevagen-b220-regular-strength-capsule', 'Prevagen'],
+      ['prevagen-b220-regular-strength-60', 'prevagen-b220-regular-strength-capsule', 'Prevagen'],
+    ],
+    [
+      ['prevagen-b220-extra-strength-30', 'prevagen-b220-extra-strength-capsule', 'Prevagen'],
+      ['prevagen-b220-extra-strength-60', 'prevagen-b220-extra-strength-capsule', 'Prevagen'],
+    ],
+    [
+      ['prevagen-b220-chewables-berry-30', 'prevagen-b220-rs-chewable-berry', 'Prevagen'],
+      ['prevagen-b220-chewables-orange-30', 'prevagen-b220-rs-chewable-orange', 'Prevagen'],
+      ['prevagen-b220-es-chewables-berry-30', 'prevagen-b220-es-chewable-berry', 'Prevagen'],
+    ],
+    [
+      ['goli-b223-ashwagandha-60', 'goli-b223-ashwagandha', 'Goli'],
+      ['goli-b223-zs-ashwagandha-plus-60', 'goli-b223-zs-ashwagandha-plus', 'Goli'],
+    ],
+    [
+      ['goli-b223-recharge-energy-60', 'goli-b223-recharge-energy', 'Goli'],
+      ['goli-b223-renew-nad-60', 'goli-b223-renew-nad', 'Goli'],
+    ],
+  ];
+  for (const group of groups1021c) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const feosolOriginal = previewOverlayImage({
+    id: 'feosol-b219-original-120',
+    formulaId: 'feosol-b219-original',
+    brand: 'Feosol',
   });
-  if (!caramel60?.url.startsWith('data:image/svg') || caramel60.verifiedSku) {
-    throw new Error('viactiv-b219-calcium-caramel-60 stays a letter until its own carton is attempted');
+  const feosolComplete = previewOverlayImage({
+    id: 'feosol-b219-complete-30',
+    formulaId: 'feosol-b219-complete',
+    brand: 'Feosol',
+  });
+  if (
+    !feosolOriginal?.url.endsWith('/feosol-mark.png')
+    || feosolOriginal.verifiedSku
+    || feosolOriginal.url.startsWith('data:image/svg+xml')
+    || feosolOriginal.url !== feosolComplete?.url
+  ) {
+    throw new Error('Feosol rows must share the Feosol mark, not a letter or a flat label');
   }
 }
