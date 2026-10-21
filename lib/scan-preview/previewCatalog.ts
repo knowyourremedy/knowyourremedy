@@ -2977,6 +2977,24 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // citracal.com/Citracal-logo.png returned 403 and Wayback has no image capture.
   // Parent Bayer mark. Not a text tile. Not a letter.
   'citracal-b212-maximum-plus-120': brandMark('bayer-mark.png'),
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 2.
+  // Caltrate wordmark. Minis page art has no count. Not the Plus Minerals tablets.
+  'caltrate-b213-plus-minerals-minis-150': brandMark('caltrate-mark.png'),
+  // Move Free wordmark. Ultra Pro 120 is not on a count-matched carton.
+  // Plus MSM & D3 120 page image is Advanced + MSM 120, without D3. Do not glue it.
+  'move-free-b213-ultra-pro-120': brandMark('move-free-mark.png'),
+  'move-free-b214-advanced-plus-msm-d3-120': brandMark('move-free-mark.png'),
+  // Neuriva wordmark. Not the 30-count Memory 3D bottle, the Ultra 60 bottle,
+  // or the Original 30 bottle.
+  'schiff-b215-neuriva-memory-3d-50': brandMark('neuriva-mark.png'),
+  'schiff-b215-neuriva-brain-energy-gummies-75': brandMark('neuriva-mark.png'),
+  'schiff-b216-neuriva-ultra-40': brandMark('neuriva-mark.png'),
+  'schiff-b217-neuriva-original-45': brandMark('neuriva-mark.png'),
+  'schiff-b217-neuriva-memory-3d-65': brandMark('neuriva-mark.png'),
+  'schiff-b217-neuriva-original-50': brandMark('neuriva-mark.png'),
+  'schiff-b218-neuriva-brain-eye-30': brandMark('neuriva-mark.png'),
+  // Schiff wordmark. Glucosamine 1500 is not a Neuriva carton.
+  'schiff-b217-glucosamine-1500-msm-ha-150': brandMark('schiff-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17248,6 +17266,26 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'citracal-b212-slow-release-1200-80': catalogShot('citracal-b212-slow-release-1200-80.jpg'),
   // Caltrate Gummy Bites, 100. Not the 50.
   'caltrate-b213-gummy-bites-100': catalogShot('caltrate-b213-gummy-bites-100.jpg'),
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 2.
+  // Exact fronts. Sibling counts, flavors, and forms do not share a file.
+  // Move Free Advanced, 200 tablets. Not the 80 or the MSM 120.
+  'move-free-b213-advanced-200': catalogShot('move-free-b213-advanced-200.jpg'),
+  // Neuriva Original gummies, strawberry, 50. Not the capsules.
+  'schiff-b215-neuriva-original-gummies-50': catalogShot('schiff-b215-neuriva-original-gummies-50.jpg'),
+  // Neuriva Memory 3D, 30 capsules. Not the 50 or the 65.
+  'schiff-b215-neuriva-memory-3d-30': catalogShot('schiff-b215-neuriva-memory-3d-30.jpg'),
+  // Neuriva Plus, 30 capsules. Not Original and not the gummies.
+  'schiff-b217-neuriva-plus-30': catalogShot('schiff-b217-neuriva-plus-30.jpg'),
+  // Neuriva Plus gummies, 50. Not Original gummies.
+  'schiff-b217-neuriva-plus-gummies-50': catalogShot('schiff-b217-neuriva-plus-gummies-50.jpg'),
+  // Neuriva Ultra, 60 capsules. Official 60-count bottle. Not the 40.
+  'schiff-b215-neuriva-ultra-60': catalogShot('schiff-b215-neuriva-ultra-60.jpg'),
+  // Viactiv Milk Chocolate, 60 soft chews. Not the 100 or the 180.
+  'viactiv-b219-calcium-chocolate-60': catalogShot('viactiv-b219-calcium-chocolate-60.jpg'),
+  // Viactiv Milk Chocolate, 100 soft chews. Not the 60 or the 180.
+  'viactiv-b219-calcium-chocolate-100': catalogShot('viactiv-b219-calcium-chocolate-100.jpg'),
+  // Viactiv Rich Caramel, 100 soft chews. Not the 60 and not chocolate.
+  'viactiv-b219-calcium-caramel-100': catalogShot('viactiv-b219-calcium-caramel-100.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38637,12 +38675,107 @@ assertBrandMark(
       throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
     }
   }
-  const minisNext = previewOverlayImage({
-    id: 'caltrate-b213-plus-minerals-minis-150',
-    formulaId: 'caltrate-b213-plus-minerals-minis',
-    brand: 'Caltrate',
+}
+
+{
+  // Vitamins night run 2026-10-21 1:45 AM PT batch 2.
+  const batch1021b: [string, string, string][] = [
+    ['move-free-b213-advanced-200', 'Move Free', 'move-free-b213-advanced-200.jpg'],
+    ['schiff-b215-neuriva-original-gummies-50', 'Schiff', 'schiff-b215-neuriva-original-gummies-50.jpg'],
+    ['schiff-b215-neuriva-memory-3d-30', 'Schiff', 'schiff-b215-neuriva-memory-3d-30.jpg'],
+    ['schiff-b217-neuriva-plus-30', 'Schiff', 'schiff-b217-neuriva-plus-30.jpg'],
+    ['schiff-b217-neuriva-plus-gummies-50', 'Schiff', 'schiff-b217-neuriva-plus-gummies-50.jpg'],
+    ['schiff-b215-neuriva-ultra-60', 'Schiff', 'schiff-b215-neuriva-ultra-60.jpg'],
+    ['viactiv-b219-calcium-chocolate-60', 'Viactiv', 'viactiv-b219-calcium-chocolate-60.jpg'],
+    ['viactiv-b219-calcium-chocolate-100', 'Viactiv', 'viactiv-b219-calcium-chocolate-100.jpg'],
+    ['viactiv-b219-calcium-caramel-100', 'Viactiv', 'viactiv-b219-calcium-caramel-100.jpg'],
+  ];
+  const seen1021b = new Set<string>();
+  for (const [id, brand, file] of batch1021b) {
+    if (seen1021b.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1021b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1021b: [string, string, string, string][] = [
+    ['caltrate-b213-plus-minerals-minis-150', 'caltrate-b213-plus-minerals-minis', 'Caltrate', 'caltrate-mark.png'],
+    ['move-free-b213-ultra-pro-120', 'move-free-b213-ultra-pro-120', 'Move Free', 'move-free-mark.png'],
+    ['move-free-b214-advanced-plus-msm-d3-120', 'move-free-b214-advanced-plus-msm-d3-120', 'Move Free', 'move-free-mark.png'],
+    ['schiff-b215-neuriva-memory-3d-50', 'schiff-b215-neuriva-memory-3d', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b215-neuriva-brain-energy-gummies-75', 'schiff-b215-neuriva-brain-energy-gummies', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b216-neuriva-ultra-40', 'schiff-b215-neuriva-ultra', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b217-neuriva-original-45', 'schiff-b189-neuriva-original', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b217-neuriva-memory-3d-65', 'schiff-b215-neuriva-memory-3d', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b217-neuriva-original-50', 'schiff-b189-neuriva-original', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b218-neuriva-brain-eye-30', 'schiff-b218-neuriva-brain-eye', 'Schiff', 'neuriva-mark.png'],
+    ['schiff-b217-glucosamine-1500-msm-ha-150', 'schiff-b217-glucosamine-1500-msm-ha', 'Schiff', 'schiff-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1021b) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must use brand mark ${file}`);
+    }
+  }
+  const groups1021b: [string, string, string][][] = [
+    [
+      ['move-free-b188-advanced-80', 'move-free-b188-advanced-80', 'Move Free'],
+      ['move-free-b189-advanced-msm-120', 'move-free-b189-advanced-msm-120', 'Move Free'],
+      ['move-free-b213-advanced-200', 'move-free-b213-advanced-200', 'Move Free'],
+      ['move-free-b212-advanced-plus-msm-d3-80', 'move-free-b212-advanced-plus-msm-d3-80', 'Move Free'],
+      ['move-free-b214-advanced-plus-msm-d3-120', 'move-free-b214-advanced-plus-msm-d3-120', 'Move Free'],
+    ],
+    [
+      ['schiff-b189-neuriva-original-30', 'schiff-b189-neuriva-original-30', 'Schiff'],
+      ['schiff-b217-neuriva-original-45', 'schiff-b189-neuriva-original', 'Schiff'],
+      ['schiff-b215-neuriva-original-gummies-50', 'schiff-b215-neuriva-original-gummies', 'Schiff'],
+    ],
+    [
+      ['schiff-b217-neuriva-original-50', 'schiff-b189-neuriva-original', 'Schiff'],
+      ['schiff-b189-neuriva-original-30', 'schiff-b189-neuriva-original-30', 'Schiff'],
+    ],
+    [
+      ['schiff-b215-neuriva-memory-3d-30', 'schiff-b215-neuriva-memory-3d', 'Schiff'],
+      ['schiff-b215-neuriva-memory-3d-50', 'schiff-b215-neuriva-memory-3d', 'Schiff'],
+    ],
+    [
+      ['schiff-b215-neuriva-memory-3d-30', 'schiff-b215-neuriva-memory-3d', 'Schiff'],
+      ['schiff-b217-neuriva-memory-3d-65', 'schiff-b215-neuriva-memory-3d', 'Schiff'],
+    ],
+    [
+      ['schiff-b215-neuriva-ultra-60', 'schiff-b215-neuriva-ultra', 'Schiff'],
+      ['schiff-b216-neuriva-ultra-40', 'schiff-b215-neuriva-ultra', 'Schiff'],
+    ],
+    [
+      ['schiff-b217-neuriva-plus-30', 'schiff-b217-neuriva-plus', 'Schiff'],
+      ['schiff-b217-neuriva-plus-gummies-50', 'schiff-b217-neuriva-plus-gummies', 'Schiff'],
+      ['schiff-b215-neuriva-original-gummies-50', 'schiff-b215-neuriva-original-gummies', 'Schiff'],
+    ],
+    [
+      ['viactiv-b219-calcium-chocolate-60', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-100', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-180', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+    ],
+    [
+      ['viactiv-b219-calcium-caramel-100', 'viactiv-b219-calcium-caramel', 'Viactiv'],
+      ['viactiv-b219-calcium-caramel-60', 'viactiv-b219-calcium-caramel', 'Viactiv'],
+      ['viactiv-b219-calcium-chocolate-100', 'viactiv-b219-calcium-chocolate', 'Viactiv'],
+    ],
+  ];
+  for (const group of groups1021b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const caramel60 = previewOverlayImage({
+    id: 'viactiv-b219-calcium-caramel-60',
+    formulaId: 'viactiv-b219-calcium-caramel',
+    brand: 'Viactiv',
   });
-  if (!minisNext?.url.startsWith('data:image/svg') || minisNext.verifiedSku) {
-    throw new Error('caltrate-b213-plus-minerals-minis-150 stays a letter until its own carton is attempted');
+  if (!caramel60?.url.startsWith('data:image/svg') || caramel60.verifiedSku) {
+    throw new Error('viactiv-b219-calcium-caramel-60 stays a letter until its own carton is attempted');
   }
 }
