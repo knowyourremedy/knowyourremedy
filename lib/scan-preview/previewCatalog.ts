@@ -17501,6 +17501,35 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-aloe-pellets': catalogShot('boiron-aloe-pellets.jpg'),
   'boiron-arsenicum-album-pellets': catalogShot('boiron-arsenicum-album-pellets.jpg'),
   'boiron-carbo-vegetabilis-pellets': catalogShot('boiron-carbo-vegetabilis-pellets.jpg'),
+  // Digestive night run 2026-10-21 5:30 AM PT batch 2.
+  // Single-remedy 30C tubes, about 80 pellets. Per-id only.
+  // Not another dilution and not a multi-tube pack.
+  'boiron-cinchona-officinalis-pellets': catalogShot('boiron-cinchona-officinalis-pellets.jpg'),
+  'boiron-cocculus-indicus-pellets': catalogShot('boiron-cocculus-indicus-pellets.jpg'),
+  'boiron-collinsoniacanadensis-pellets': catalogShot('boiron-collinsoniacanadensis-pellets.jpg'),
+  'boiron-colocynthis-pellets': catalogShot('boiron-colocynthis-pellets.jpg'),
+  'boiron-jalapa-pellets': catalogShot('boiron-jalapa-pellets.jpg'),
+  'boiron-lycopodium-clavatum-pellets': catalogShot('boiron-lycopodium-clavatum-pellets.jpg'),
+  'boiron-nux-vomica-pellets': catalogShot('boiron-nux-vomica-pellets.jpg'),
+  'boiron-paeoniaofficinalis-pellets': catalogShot('boiron-paeoniaofficinalis-pellets.jpg'),
+  'boiron-petroleum-pellets': catalogShot('boiron-petroleum-pellets.jpg'),
+  'boiron-podophyllum-peltatum-pellets': catalogShot('boiron-podophyllum-peltatum-pellets.jpg'),
+  'boiron-ratanhia-pellets': catalogShot('boiron-ratanhia-pellets.jpg'),
+  'boiron-rheumofficinale-pellets': catalogShot('boiron-rheumofficinale-pellets.jpg'),
+  'boiron-robiniapseudoacacia-pellets': catalogShot('boiron-robiniapseudoacacia-pellets.jpg'),
+  'boiron-tabacum-pellets': catalogShot('boiron-tabacum-pellets.jpg'),
+  'boiron-veratrumalbum-pellets': catalogShot('boiron-veratrumalbum-pellets.jpg'),
+  // Sprouts D-Mannose + Cranberry powder tub. UPC 646670681837.
+  // Not the cranberry + D-mannose capsules.
+  'sprouts-d-mannose-cranberry-powder': catalogShot('sprouts-d-mannose-cranberry-powder.jpg'),
+  // Parasite Cleanse liquid, 1 fl oz. UPC 646670631405. Not Detox Drops.
+  'sprouts-parasite-cleanse-liquid': catalogShot('sprouts-parasite-cleanse-liquid.jpg'),
+  // Detox Drops, 1 fl oz. UPC 646670116513. Not Parasite Cleanse.
+  'sprouts-detox-drops': catalogShot('sprouts-detox-drops.jpg'),
+  // Black Walnut liquid, 1 fl oz. UPC 646670037917. Not Burdock.
+  'sprouts-black-walnut-liquid': catalogShot('sprouts-black-walnut-liquid.jpg'),
+  // Burdock liquid, 1 fl oz. UPC 646670620171. Not Black Walnut.
+  'sprouts-burdock-liquid': catalogShot('sprouts-burdock-liquid.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39444,5 +39473,89 @@ assertBrandMark(
   });
   if (!flint?.verifiedSku || flint.url.startsWith('data:image/svg+xml')) {
     throw new Error('Flintstones Complete gummies must be the 180-count carton, not a text tile');
+  }
+}
+
+{
+  // Digestive night run 2026-10-21 5:30 AM PT batch 2.
+  // Each 30C tube and each Sprouts bottle keeps its own front.
+  const batch1021h: [string, string, string][] = [
+    ['boiron-cinchona-officinalis-pellets', 'Boiron', 'boiron-cinchona-officinalis-pellets.jpg'],
+    ['boiron-cocculus-indicus-pellets', 'Boiron', 'boiron-cocculus-indicus-pellets.jpg'],
+    ['boiron-collinsoniacanadensis-pellets', 'Boiron', 'boiron-collinsoniacanadensis-pellets.jpg'],
+    ['boiron-colocynthis-pellets', 'Boiron', 'boiron-colocynthis-pellets.jpg'],
+    ['boiron-jalapa-pellets', 'Boiron', 'boiron-jalapa-pellets.jpg'],
+    ['boiron-lycopodium-clavatum-pellets', 'Boiron', 'boiron-lycopodium-clavatum-pellets.jpg'],
+    ['boiron-nux-vomica-pellets', 'Boiron', 'boiron-nux-vomica-pellets.jpg'],
+    ['boiron-paeoniaofficinalis-pellets', 'Boiron', 'boiron-paeoniaofficinalis-pellets.jpg'],
+    ['boiron-petroleum-pellets', 'Boiron', 'boiron-petroleum-pellets.jpg'],
+    ['boiron-podophyllum-peltatum-pellets', 'Boiron', 'boiron-podophyllum-peltatum-pellets.jpg'],
+    ['boiron-ratanhia-pellets', 'Boiron', 'boiron-ratanhia-pellets.jpg'],
+    ['boiron-rheumofficinale-pellets', 'Boiron', 'boiron-rheumofficinale-pellets.jpg'],
+    ['boiron-robiniapseudoacacia-pellets', 'Boiron', 'boiron-robiniapseudoacacia-pellets.jpg'],
+    ['boiron-tabacum-pellets', 'Boiron', 'boiron-tabacum-pellets.jpg'],
+    ['boiron-veratrumalbum-pellets', 'Boiron', 'boiron-veratrumalbum-pellets.jpg'],
+    ['sprouts-d-mannose-cranberry-powder', 'Sprouts', 'sprouts-d-mannose-cranberry-powder.jpg'],
+    ['sprouts-parasite-cleanse-liquid', 'Sprouts', 'sprouts-parasite-cleanse-liquid.jpg'],
+    ['sprouts-detox-drops', 'Sprouts', 'sprouts-detox-drops.jpg'],
+    ['sprouts-black-walnut-liquid', 'Sprouts', 'sprouts-black-walnut-liquid.jpg'],
+    ['sprouts-burdock-liquid', 'Sprouts', 'sprouts-burdock-liquid.jpg'],
+  ];
+  const seen1021h = new Set<string>();
+  for (const [id, brand, file] of batch1021h) {
+    if (seen1021h.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1021h.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1021h: [string, string, string][][] = [
+    [
+      ['boiron-abiesnigra-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-cinchona-officinalis-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-cocculus-indicus-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-collinsoniacanadensis-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-colocynthis-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-jalapa-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-lycopodium-clavatum-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-nux-vomica-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-paeoniaofficinalis-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-petroleum-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-podophyllum-peltatum-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-ratanhia-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-rheumofficinale-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-robiniapseudoacacia-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-tabacum-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-veratrumalbum-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+    ],
+    [
+      ['sprouts-d-mannose-cranberry-powder', 'sprouts-d-mannose-cranberry-powder', 'Sprouts'],
+      ['sprouts-cranberry-d-mannose-cap', 'sprouts-cranberry-d-mannose-cap', 'Sprouts'],
+    ],
+    [
+      ['sprouts-parasite-cleanse-liquid', 'sprouts-parasite-cleanse-liquid', 'Sprouts'],
+      ['sprouts-detox-drops', 'sprouts-detox-drops', 'Sprouts'],
+      ['sprouts-black-walnut-liquid', 'sprouts-black-walnut-liquid', 'Sprouts'],
+      ['sprouts-burdock-liquid', 'sprouts-burdock-liquid', 'Sprouts'],
+    ],
+  ];
+  const letterUntilAttemptedH = new Set<string>(['sprouts-cranberry-d-mannose-cap']);
+  for (const group of groups1021h) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedH.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
   }
 }
