@@ -3047,13 +3047,6 @@ const PREVIEW_ID_BRAND_TEXT: Record<string, string> = {
   // Single UPCs. No clean official 3D face retrieved.
   '365-calcium-d3-tio2': '365',
   '365-cal-mag-zinc-d3-tio2': '365',
-  // Row UPC 016500554356 is the 180-count. Retrieved faces are a 70-count
-  // bottle or a thumbnail. Do not glue the 70-count.
-  // Night photo 2026-10-04 5:30 AM PT retried the official mark.
-  // flintstonesvitamins.com nav file flintstones-logo_0.png is the
-  // brand logo, but that host blocked this run. Do not use the
-  // Hanna-Barbera cartoon logo. Text tile stays until that file loads.
-  'flintstones-complete-gummies-palm': 'Flintstones',
   // Daytime photo run — Prenatal letter. Tried the SKU.
   // UPC 099482420819. wholefoodsmarket.com has no standalone 365 mark.
   // No verified 3D carton. Never the letter 3.
@@ -17466,6 +17459,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'boiron-hemcalm-tablets': catalogShot('boiron-hemcalm-tablets.jpg'),
   // Boiron MotionCalm meltaway tablets. UPC 306969234044. Not the pellet row.
   'boiron-motioncalm-meltaway-tablets': catalogShot('boiron-motioncalm-meltaway-tablets.jpg'),
+  // Vitamins night run 2026-10-21 5:30 AM PT batch 1.
+  // Flintstones Complete gummies, 180 count. UPC 016500554356.
+  // Not the 70-count. Not a text tile. Not the Hanna-Barbera cartoon logo.
+  'flintstones-complete-gummies-palm': catalogShot('flintstones-complete-gummies-palm.jpg'),
+  // AZO letter rows that landed after the 4:15 AM close. Exact singles.
+  // D-Mannose 120 capsules. UPC 787651760261. Not the 240-count 2-pack.
+  'azo-b247-d-mannose-120': catalogShot('azo-b247-d-mannose-120.jpg'),
+  // Cranberry caplets, 50. UPC 787651420677. Not the 100-count 2-pack. Not softgels.
+  'azo-b247-cranberry-caplets-50': catalogShot('azo-b247-cranberry-caplets-50.jpg'),
+  // Daily Pre-Menopause, 30 capsules. UPC 787651760582. Not the 60-count 2-pack.
+  'azo-b248-pre-menopause-30': catalogShot('azo-b248-pre-menopause-30.jpg'),
+  // Cranberry gummies, 72. UPC 787651760100. Not the caplets.
+  'azo-b248-cranberry-gummy-72': catalogShot('azo-b248-cranberry-gummy-72.jpg'),
+  // Bladder Control 54 capsules. UPC 787651760025. Not the 72.
+  'azo-b249-bladder-control-54': catalogShot('azo-b249-bladder-control-54.jpg'),
+  // Bladder Control 72 capsules. UPC 787651760056. Not the 54.
+  'azo-b249-bladder-control-72': catalogShot('azo-b249-bladder-control-72.jpg'),
+  // Menopause Relief daytime gummies, 30. UPC 787651760599. Not nighttime. Not the 2-pack.
+  'azo-b249-menopause-day-gummy-30': catalogShot('azo-b249-menopause-day-gummy-30.jpg'),
+  // Menopause Relief nighttime gummies, 30. UPC 787651760612. Not daytime.
+  'azo-b249-menopause-night-gummy-30': catalogShot('azo-b249-menopause-night-gummy-30.jpg'),
+  // Digestive letters in catalog order. Exact fronts.
+  // NauseaCalm meltaway tablets, 60, unflavored. UPC 306969244043. Not the pellet row.
+  'boiron-nauseacalm-meltaway-tablets': catalogShot('boiron-nauseacalm-meltaway-tablets.jpg'),
+  // AcidCalm On the Go pellets. UPC 306969010426. The retail box is two tubes. Not the meltaway tablets.
+  'boiron-acidcalm-pellets': catalogShot('boiron-acidcalm-pellets.jpg'),
+  // HemCalm On the Go pellets. UPC 306969123423. Two tubes. Not the tablets, ointment, or suppositories.
+  'boiron-hemcalm-pellets': catalogShot('boiron-hemcalm-pellets.jpg'),
+  // DiarrheaCalm / Diaralia On the Go pellets. UPC 306969097427. Two tubes. Not the meltaway tablets.
+  'boiron-diarrheacalm-pellets': catalogShot('boiron-diarrheacalm-pellets.jpg'),
+  // HemCalm suppositories. UPC 306969121672. Not the ointment or the tablets.
+  'boiron-hemcalm-suppositories': catalogShot('boiron-hemcalm-suppositories.jpg'),
+  // HemCalm ointment, 1 oz. UPC 306969120514. Not the suppositories.
+  'boiron-hemcalm-ointment': catalogShot('boiron-hemcalm-ointment.jpg'),
+  // Camilia Tummy liquid doses, 30. UPC 306969099094. Not original Camilia or Bedtime.
+  'boiron-camilia-tummy': catalogShot('boiron-camilia-tummy.jpg'),
+  // Single-remedy 30C tubes, about 80 pellets. Per-id only.
+  // Shared formulaId boiron-single-remedy-pellets must not inherit one tube.
+  'boiron-abiesnigra-pellets': catalogShot('boiron-abiesnigra-pellets.jpg'),
+  'boiron-aloe-pellets': catalogShot('boiron-aloe-pellets.jpg'),
+  'boiron-arsenicum-album-pellets': catalogShot('boiron-arsenicum-album-pellets.jpg'),
+  'boiron-carbo-vegetabilis-pellets': catalogShot('boiron-carbo-vegetabilis-pellets.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -24054,10 +24089,10 @@ assertBrandMark(
   "MaryRuth's",
   'maryruth-mark.png',
 );
-assertBrandTextTile(
+assertExactCarton(
   'flintstones-complete-gummies-palm',
   'Flintstones',
-  'Flintstones',
+  'flintstones-complete-gummies-palm.jpg',
 );
 assertExactCarton(
   'one-a-day-kids-multi-gummies-palm',
@@ -39282,12 +39317,7 @@ assertBrandMark(
       ['boiron-hemcalm-suppositories', 'boiron-hemcalm-suppositories', 'Boiron'],
     ],
   ];
-  const letterUntilAttemptedF = new Set<string>([
-    'boiron-diarrheacalm-pellets',
-    'boiron-hemcalm-pellets',
-    'boiron-hemcalm-ointment',
-    'boiron-hemcalm-suppositories',
-  ]);
+  const letterUntilAttemptedF = new Set<string>([]);
   for (const group of groups1021f) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -39331,5 +39361,88 @@ assertBrandMark(
     || original.url === plus?.url
   ) {
     throw new Error('MegaFlora multi-count rows must share the MegaFood mark, not a letter or one count carton');
+  }
+}
+
+{
+  // Vitamins + Digestive night run 2026-10-21 5:30 AM PT batch 1.
+  // Flintstones text tile is gone. AZO counts and Boiron forms keep their own fronts.
+  const batch1021g: [string, string, string][] = [
+    ['flintstones-complete-gummies-palm', 'Flintstones', 'flintstones-complete-gummies-palm.jpg'],
+    ['azo-b247-d-mannose-120', 'AZO', 'azo-b247-d-mannose-120.jpg'],
+    ['azo-b247-cranberry-caplets-50', 'AZO', 'azo-b247-cranberry-caplets-50.jpg'],
+    ['azo-b248-pre-menopause-30', 'AZO', 'azo-b248-pre-menopause-30.jpg'],
+    ['azo-b248-cranberry-gummy-72', 'AZO', 'azo-b248-cranberry-gummy-72.jpg'],
+    ['azo-b249-bladder-control-54', 'AZO', 'azo-b249-bladder-control-54.jpg'],
+    ['azo-b249-bladder-control-72', 'AZO', 'azo-b249-bladder-control-72.jpg'],
+    ['azo-b249-menopause-day-gummy-30', 'AZO', 'azo-b249-menopause-day-gummy-30.jpg'],
+    ['azo-b249-menopause-night-gummy-30', 'AZO', 'azo-b249-menopause-night-gummy-30.jpg'],
+    ['boiron-nauseacalm-meltaway-tablets', 'Boiron', 'boiron-nauseacalm-meltaway-tablets.jpg'],
+    ['boiron-acidcalm-pellets', 'Boiron', 'boiron-acidcalm-pellets.jpg'],
+    ['boiron-hemcalm-pellets', 'Boiron', 'boiron-hemcalm-pellets.jpg'],
+    ['boiron-diarrheacalm-pellets', 'Boiron', 'boiron-diarrheacalm-pellets.jpg'],
+    ['boiron-hemcalm-suppositories', 'Boiron', 'boiron-hemcalm-suppositories.jpg'],
+    ['boiron-hemcalm-ointment', 'Boiron', 'boiron-hemcalm-ointment.jpg'],
+    ['boiron-camilia-tummy', 'Boiron', 'boiron-camilia-tummy.jpg'],
+    ['boiron-abiesnigra-pellets', 'Boiron', 'boiron-abiesnigra-pellets.jpg'],
+    ['boiron-aloe-pellets', 'Boiron', 'boiron-aloe-pellets.jpg'],
+    ['boiron-arsenicum-album-pellets', 'Boiron', 'boiron-arsenicum-album-pellets.jpg'],
+    ['boiron-carbo-vegetabilis-pellets', 'Boiron', 'boiron-carbo-vegetabilis-pellets.jpg'],
+  ];
+  const seen1021g = new Set<string>();
+  for (const [id, brand, file] of batch1021g) {
+    if (seen1021g.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1021g.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1021g: [string, string, string][][] = [
+    [
+      ['azo-b249-bladder-control-54', 'azo-b249-bladder-control', 'AZO'],
+      ['azo-b249-bladder-control-72', 'azo-b249-bladder-control', 'AZO'],
+    ],
+    [
+      ['azo-b247-cranberry-caplets-50', 'azo-b247-cranberry-caplets-50', 'AZO'],
+      ['azo-b248-cranberry-gummy-72', 'azo-b248-cranberry-gummy-72', 'AZO'],
+    ],
+    [
+      ['azo-b249-menopause-day-gummy-30', 'azo-b249-menopause-day-gummy-30', 'AZO'],
+      ['azo-b249-menopause-night-gummy-30', 'azo-b249-menopause-night-gummy-30', 'AZO'],
+    ],
+    [
+      ['boiron-nauseacalm', 'boiron-nauseacalm', 'Boiron'],
+      ['boiron-nauseacalm-meltaway-tablets', 'boiron-nauseacalm-meltaway-tablets', 'Boiron'],
+    ],
+    [
+      ['boiron-acidcalm', 'boiron-acidcalm', 'Boiron'],
+      ['boiron-acidcalm-pellets', 'boiron-acidcalm-pellets', 'Boiron'],
+    ],
+    [
+      ['boiron-camilia', 'boiron-camilia', 'Boiron'],
+      ['boiron-camilia-tummy', 'boiron-camilia-tummy', 'Boiron'],
+    ],
+    [
+      ['boiron-abiesnigra-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-aloe-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-arsenicum-album-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+      ['boiron-carbo-vegetabilis-pellets', 'boiron-single-remedy-pellets', 'Boiron'],
+    ],
+  ];
+  for (const group of groups1021g) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const flint = previewOverlayImage({
+    id: 'flintstones-complete-gummies-palm',
+    formulaId: 'flintstones-complete-gummies-palm',
+    brand: 'Flintstones',
+  });
+  if (!flint?.verifiedSku || flint.url.startsWith('data:image/svg+xml')) {
+    throw new Error('Flintstones Complete gummies must be the 180-count carton, not a text tile');
   }
 }
