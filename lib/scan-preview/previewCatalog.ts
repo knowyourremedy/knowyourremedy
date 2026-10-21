@@ -3024,6 +3024,23 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-probiotic-pearls-womens': brandMark('natures-way-mark.png'),
   'natures-way-probiotic-pearls-acidophilus': brandMark('natures-way-mark.png'),
   'natures-way-probiotic-pearls-complete': brandMark('natures-way-mark.png'),
+  // Digestive night run 2026-10-21 6:45 AM PT batch 2.
+  // One row, two counts. Official Nature's Way mark. Not a letter.
+  // Reuteri Pearls: 30 softgels (033674157527) and 60 (033674157701).
+  'natures-way-primadophilus-reuteri-pearls': brandMark('natures-way-mark.png'),
+  // Bifidus: 90 capsules (033674068601) and 180 (033674156513).
+  'natures-way-primadophilus-bifidus': brandMark('natures-way-mark.png'),
+  // Original Primadophilus: 90 (033674068007) and 180 (033674068502).
+  'natures-way-primadophilus-probiotic': brandMark('natures-way-mark.png'),
+  // Reuteri capsules: 30 (033674142400) and 90 (033674150245).
+  'natures-way-primadophilus-reuteri': brandMark('natures-way-mark.png'),
+  // Activated Charcoal: 100 capsules (033674020708) and 360 (033674119501).
+  // Not the separate 260 mg / 100 teal bottle.
+  'natures-way-activated-charcoal': brandMark('natures-way-mark.png'),
+  // Dandelion Root: 100 capsules (033674123003) and 180 (033674153369).
+  'natures-way-dandelion-root': brandMark('natures-way-mark.png'),
+  // Milk Thistle: 60 capsules (033674624005) and 120 (033674153550).
+  'natures-way-milk-thistle': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17573,6 +17590,34 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-organic-acv-gummies': catalogShot('natures-way-organic-acv-gummies.jpg'),
   // Pearls Elite, 30 softgels. UPC 763948564354. Not Women's, Acidophilus, or Complete.
   'natures-way-probiotic-pearls-elite': catalogShot('natures-way-probiotic-pearls-elite.jpg'),
+  // Digestive night run 2026-10-21 6:45 AM PT batch 2.
+  // Single-count fronts. Not a sibling bottle.
+  // Pearls MAX, 30 softgels. UPC 763948050734.
+  'natures-way-probiotic-pearls-max': catalogShot('natures-way-probiotic-pearls-max.jpg'),
+  // Pearls Adult 50+, 30 softgels. UPC 763948105106.
+  'natures-way-probiotic-pearls-adult-50': catalogShot('natures-way-probiotic-pearls-adult-50.jpg'),
+  // ActiFruit cranberry chews, 20. UPC 763948078424.
+  'natures-way-actifruit': catalogShot('natures-way-actifruit.jpg'),
+  // Pepogest peppermint oil, 60 softgels. UPC 033674145371.
+  'natures-way-pepogest': catalogShot('natures-way-pepogest.jpg'),
+  // Activated Charcoal 260 mg, 100 capsules. UPC 033674451717. Not the 100/360 row.
+  'natures-way-activated-charcoal-teal': catalogShot('natures-way-activated-charcoal-teal.jpg'),
+  // Aloe MAXLAX, 100 capsules. UPC 033674001424. Not Aloe Latex with Fennel.
+  'natures-way-aloe-maxlax': catalogShot('natures-way-aloe-maxlax.jpg'),
+  // CompleteGest, 180 capsules. UPC 750856600182.
+  'natures-way-completegest': catalogShot('natures-way-completegest.jpg'),
+  // Glucomannan, 100 capsules. UPC 033674136751.
+  'natures-way-glucomannan': catalogShot('natures-way-glucomannan.jpg'),
+  // Lactose Defense, 100 capsules. UPC 033674471104.
+  'natures-way-lactase-enzyme': catalogShot('natures-way-lactase-enzyme.jpg'),
+  // Licorice Root, 100 capsules. UPC 033674146002. Not the Sprouts liquid.
+  'natures-way-licorice-root': catalogShot('natures-way-licorice-root.jpg'),
+  // Marshmallow Root, 100 capsules. UPC 033674148006.
+  'natures-way-marshmallow-root': catalogShot('natures-way-marshmallow-root.jpg'),
+  // Peppermint Leaf, 100 capsules. UPC 033674141601. Not Pepogest.
+  'natures-way-peppermint-leaf': catalogShot('natures-way-peppermint-leaf.jpg'),
+  // Senna Leaves, 100 capsules. UPC 033674170007.
+  'natures-way-senna-leaves': catalogShot('natures-way-senna-leaves.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39666,17 +39711,13 @@ assertBrandMark(
   ];
   const letterUntilAttemptedI = new Set<string>([
     'natures-way-slippery-elm-bark',
-    'natures-way-dandelion-root',
-    'natures-way-licorice-root',
-    'natures-way-probiotic-pearls-max',
-    'natures-way-probiotic-pearls-adult-50',
-    'natures-way-primadophilus-reuteri-pearls',
   ]);
   const markInsteadI = new Set<string>([
     'sprouts-cranberry-d-mannose-cap',
     'natures-way-probiotic-pearls-womens',
     'natures-way-probiotic-pearls-acidophilus',
     'natures-way-probiotic-pearls-complete',
+    'natures-way-dandelion-root',
   ]);
   for (const group of groups1021i) {
     const urls = group.map(([id, formulaId, brand]) => {
@@ -39719,16 +39760,181 @@ assertBrandMark(
     formulaId: 'natures-way-probiotic-pearls-womens',
     brand: "Nature's Way",
   });
+  const pearlsAdult = previewOverlayImage({
+    id: 'natures-way-probiotic-pearls-adult-50',
+    formulaId: 'natures-way-probiotic-pearls-womens',
+    brand: "Nature's Way",
+  });
+  const reuteriPearls = previewOverlayImage({
+    id: 'natures-way-primadophilus-reuteri-pearls',
+    formulaId: 'natures-way-probiotic-pearls-womens',
+    brand: "Nature's Way",
+  });
+  const pearlCartons = [pearlsElite?.url, pearlsMax?.url, pearlsAdult?.url];
   if (
     !pearlsMark?.url.endsWith('/natures-way-mark.png')
     || pearlsMark.verifiedSku
     || !pearlsElite?.verifiedSku
     || !pearlsElite.url.endsWith('/natures-way-probiotic-pearls-elite.jpg')
-    || pearlsElite.url === pearlsMark.url
-    || !pearlsMax?.url.startsWith('data:image/svg+xml')
-    || pearlsMax.verifiedSku
-    || pearlsMax.url === pearlsElite.url
+    || !pearlsMax?.verifiedSku
+    || !pearlsMax.url.endsWith('/natures-way-probiotic-pearls-max.jpg')
+    || !pearlsAdult?.verifiedSku
+    || !pearlsAdult.url.endsWith('/natures-way-probiotic-pearls-adult-50.jpg')
+    || new Set(pearlCartons).size !== 3
+    || pearlCartons.includes(pearlsMark.url)
+    || reuteriPearls?.verifiedSku
+    || !reuteriPearls?.url.endsWith('/natures-way-mark.png')
+    || reuteriPearls.url !== pearlsMark.url
   ) {
     throw new Error('Pearls counts must not share a carton; two-count rows stay on the Nature\'s Way mark');
+  }
+}
+
+{
+  // Digestive night run 2026-10-21 6:45 AM PT batch 2.
+  // Single-count bottles keep their own fronts. Two-count rows stay on the mark.
+  const batch1021j: [string, string, string][] = [
+    ['natures-way-probiotic-pearls-max', "Nature's Way", 'natures-way-probiotic-pearls-max.jpg'],
+    ['natures-way-probiotic-pearls-adult-50', "Nature's Way", 'natures-way-probiotic-pearls-adult-50.jpg'],
+    ['natures-way-actifruit', "Nature's Way", 'natures-way-actifruit.jpg'],
+    ['natures-way-pepogest', "Nature's Way", 'natures-way-pepogest.jpg'],
+    ['natures-way-activated-charcoal-teal', "Nature's Way", 'natures-way-activated-charcoal-teal.jpg'],
+    ['natures-way-aloe-maxlax', "Nature's Way", 'natures-way-aloe-maxlax.jpg'],
+    ['natures-way-completegest', "Nature's Way", 'natures-way-completegest.jpg'],
+    ['natures-way-glucomannan', "Nature's Way", 'natures-way-glucomannan.jpg'],
+    ['natures-way-lactase-enzyme', "Nature's Way", 'natures-way-lactase-enzyme.jpg'],
+    ['natures-way-licorice-root', "Nature's Way", 'natures-way-licorice-root.jpg'],
+    ['natures-way-marshmallow-root', "Nature's Way", 'natures-way-marshmallow-root.jpg'],
+    ['natures-way-peppermint-leaf', "Nature's Way", 'natures-way-peppermint-leaf.jpg'],
+    ['natures-way-senna-leaves', "Nature's Way", 'natures-way-senna-leaves.jpg'],
+  ];
+  const seen1021j = new Set<string>();
+  for (const [id, brand, file] of batch1021j) {
+    if (seen1021j.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1021j.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1021j = [
+    'natures-way-primadophilus-reuteri-pearls',
+    'natures-way-primadophilus-bifidus',
+    'natures-way-primadophilus-probiotic',
+    'natures-way-primadophilus-reuteri',
+    'natures-way-activated-charcoal',
+    'natures-way-dandelion-root',
+    'natures-way-milk-thistle',
+  ];
+  for (const id of marks1021j) {
+    assertBrandMark(id, "Nature's Way", 'natures-way-mark.png');
+  }
+  const groups1021j: [string, string, string][][] = [
+    [
+      ['natures-way-probiotic-pearls-elite', 'natures-way-probiotic-pearls-womens', "Nature's Way"],
+      ['natures-way-probiotic-pearls-max', 'natures-way-probiotic-pearls-womens', "Nature's Way"],
+      ['natures-way-probiotic-pearls-adult-50', 'natures-way-probiotic-pearls-womens', "Nature's Way"],
+    ],
+    [
+      ['natures-way-activated-charcoal-teal', 'natures-way-activated-charcoal-teal', "Nature's Way"],
+      ['natures-way-activated-charcoal', 'natures-way-activated-charcoal', "Nature's Way"],
+    ],
+    [
+      ['natures-way-pepogest', 'natures-way-pepogest', "Nature's Way"],
+      ['natures-way-peppermint-leaf', 'natures-way-peppermint-leaf', "Nature's Way"],
+    ],
+    [
+      ['natures-way-aloe-maxlax', 'natures-way-aloe-maxlax', "Nature's Way"],
+    ],
+    [
+      ['sprouts-licorice-liquid', 'sprouts-licorice-liquid', 'Sprouts'],
+      ['natures-way-licorice-root', 'natures-way-licorice-root', "Nature's Way"],
+    ],
+    [
+      ['sprouts-fresh-dandelion-af', 'sprouts-fresh-dandelion-af', 'Sprouts'],
+      ['natures-way-dandelion-root', 'natures-way-dandelion-root', "Nature's Way"],
+    ],
+  ];
+  const letterUntilAttemptedJ = new Set<string>([]);
+  const markInsteadJ = new Set<string>([
+    'natures-way-activated-charcoal',
+    'natures-way-dandelion-root',
+  ]);
+  for (const group of groups1021j) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedJ.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (markInsteadJ.has(id)) {
+        if (
+          image?.verifiedSku
+          || image?.url.startsWith('data:image/svg+xml')
+          || !image?.url.endsWith('/natures-way-mark.png')
+        ) {
+          throw new Error(`${id} must stay the Nature's Way mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const bifidus = previewOverlayImage({
+    id: 'natures-way-primadophilus-bifidus',
+    formulaId: 'natures-way-primadophilus-bifidus',
+    brand: "Nature's Way",
+  });
+  const originalPrima = previewOverlayImage({
+    id: 'natures-way-primadophilus-probiotic',
+    formulaId: 'natures-way-primadophilus-bifidus',
+    brand: "Nature's Way",
+  });
+  const reuteriCaps = previewOverlayImage({
+    id: 'natures-way-primadophilus-reuteri',
+    formulaId: 'natures-way-primadophilus-reuteri',
+    brand: "Nature's Way",
+  });
+  if (
+    !bifidus?.url.endsWith('/natures-way-mark.png')
+    || bifidus.verifiedSku
+    || bifidus.url !== originalPrima?.url
+    || bifidus.url !== reuteriCaps?.url
+  ) {
+    throw new Error('Two-count Primadophilus rows must share the Nature\'s Way mark, not one count carton');
+  }
+  const aloeMax = previewOverlayImage({
+    id: 'natures-way-aloe-maxlax',
+    formulaId: 'natures-way-aloe-maxlax',
+    brand: "Nature's Way",
+  });
+  const aloeLatex = previewOverlayImage({
+    id: 'natures-way-aloe',
+    formulaId: 'natures-way-aloe',
+    brand: "Nature's Way",
+  });
+  const aloeLax = previewOverlayImage({
+    id: 'natures-way-aloelax',
+    formulaId: 'natures-way-aloelax',
+    brand: "Nature's Way",
+  });
+  if (
+    !aloeMax?.verifiedSku
+    || !aloeMax.url.endsWith('/natures-way-aloe-maxlax.jpg')
+    || !aloeLatex?.url.startsWith('data:image/svg+xml')
+    || aloeLatex.verifiedSku
+    || !aloeLax?.url.startsWith('data:image/svg+xml')
+    || aloeLax.verifiedSku
+    || aloeMax.url === aloeLatex.url
+    || aloeMax.url === aloeLax.url
+  ) {
+    throw new Error('Aloe MAXLAX must not cover Aloe Latex or Aloelax');
   }
 }
