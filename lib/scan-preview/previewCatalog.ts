@@ -17330,6 +17330,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goli-b223-recharge-energy-60': catalogShot('goli-b223-recharge-energy-60.jpg'),
   // Goli Renew NAD+ gummies, 60. UPC 055840407168. Not Recharge Energy+.
   'goli-b223-renew-nad-60': catalogShot('goli-b223-renew-nad-60.jpg'),
+  // Vitamins night run 2026-10-21 3:00 AM PT batch 2.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Goli Matcha Mind, 60 gummies. UPC 055840405348. Not Supergreens.
+  'goli-b223-matcha-mind-60': catalogShot('goli-b223-matcha-mind-60.jpg'),
+  // Goli Supergreens, 60 gummies. Official 1-bottle front. Not Matcha Mind.
+  'goli-b223-supergreens-60': catalogShot('goli-b223-supergreens-60.jpg'),
+  // Goli Women's Complete Multi, 60 gummies. UPC 055840402552.
+  'goli-b223-womens-multi-60': catalogShot('goli-b223-womens-multi-60.jpg'),
+  // Goli Zero Sugar ACV+, 60 gummies. UPC 055840405492. Not the sugared ACV bottle.
+  'goli-b223-zs-acv-plus-60': catalogShot('goli-b223-zs-acv-plus-60.jpg'),
+  // Goli Zero Sugar Magnesium Glycinate, 60 gummies. UPC 055840405553. Not creatine.
+  'goli-b223-zs-magnesium-glycinate-60': catalogShot('goli-b223-zs-magnesium-glycinate-60.jpg'),
+  // Goli Zero Sugar Creatine Monohydrate, 60 gummies. UPC 055840405539. Not magnesium.
+  'goli-b223-zs-creatine-60': catalogShot('goli-b223-zs-creatine-60.jpg'),
+  // Goli ACV On the Go, 30 gummies. UPC 628176357850. Not the 60-count bottle.
+  'goli-b224-acv-30': catalogShot('goli-b224-acv-30.jpg'),
+  // Physician's Choice KSM-66 Ashwagandha, 60 capsules. UPC 854226008254.
+  'physicianschoice-b225-ksm66-ashwagandha-60': catalogShot('physicianschoice-b225-ksm66-ashwagandha-60.jpg'),
+  // Physician's Choice Colostrum Gold powder, 60 servings, 120 g. UPC 850048297661. Not the 30-serving jar.
+  'physicianschoice-b225-colostrum-gold-60-servings': catalogShot('physicianschoice-b225-colostrum-gold-60-servings.jpg'),
+  // Physician's Choice Collagen Peptides powder, unflavored, 8.7 oz (246 g). Not a multipack.
+  'physicianschoice-b225-collagen-peptides-unflavored-246g': catalogShot('physicianschoice-b225-collagen-peptides-unflavored-246g.jpg'),
+  // Physician's Choice Colostrum Gold powder, 30 servings, 60 g. UPC 850048297708. Not the 60-serving pouch.
+  'physicianschoice-b227-colostrum-gold-30-servings': catalogShot('physicianschoice-b227-colostrum-gold-30-servings.jpg'),
+  // Spring Valley Mushroom Complex, 30 vegetarian capsules. UPC 681131100786.
+  'springvalley-b231-mushroom-complex-30': catalogShot('springvalley-b231-mushroom-complex-30.jpg'),
+  // Spring Valley Ceylon Cinnamon 1,200 mg, 120 vegetarian capsules. UPC 681131281256.
+  'springvalley-b231-ceylon-cinnamon-1200-120': catalogShot('springvalley-b231-ceylon-cinnamon-1200-120.jpg'),
+  // Spring Valley Zinc 50 mg, 200 caplets. UPC 681131633284.
+  'springvalley-b231-zinc-50-200': catalogShot('springvalley-b231-zinc-50-200.jpg'),
+  // Spring Valley Biotin 10,000 mcg plus Keratin, 60 tablets. UPC 681131057110.
+  'springvalley-b232-biotin-keratin-60': catalogShot('springvalley-b232-biotin-keratin-60.jpg'),
+  // Spring Valley B-50 Complex timed-release, 60 tablets. UPC 078742009889. Not B-100.
+  'springvalley-b233-b50-complex-timed-release-60': catalogShot('springvalley-b233-b50-complex-timed-release-60.jpg'),
+  // Spring Valley Calcium, Magnesium & Zinc plus D3, 250 caplets. UPC 681131742412.
+  'springvalley-b233-calcium-magnesium-zinc-d3-250': catalogShot('springvalley-b233-calcium-magnesium-zinc-d3-250.jpg'),
+  // Spring Valley Collagen + C, 2,500 mg, 90 tablets. UPC 681131151146. Not the Physician's Choice powder.
+  'springvalley-b234-collagen-c-90': catalogShot('springvalley-b234-collagen-c-90.jpg'),
+  // Spring Valley Flush Free Niacin 500 mg, 60 capsules. UPC 681131633253.
+  'springvalley-b234-flush-free-niacin-60': catalogShot('springvalley-b234-flush-free-niacin-60.jpg'),
+  // Spring Valley Norwegian Salmon Oil 1,000 mg, 120 softgels. UPC 681131312646.
+  'springvalley-b234-norwegian-salmon-oil-120': catalogShot('springvalley-b234-norwegian-salmon-oil-120.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -38912,5 +38954,88 @@ assertBrandMark(
     || feosolOriginal.url !== feosolComplete?.url
   ) {
     throw new Error('Feosol rows must share the Feosol mark, not a letter or a flat label');
+  }
+}
+
+{
+  // Vitamins night run 2026-10-21 3:00 AM PT batch 2.
+  // Sibling counts, strengths, and flavors keep their own fronts.
+  const batch1021d: [string, string, string][] = [
+    ['goli-b223-matcha-mind-60', 'Goli', 'goli-b223-matcha-mind-60.jpg'],
+    ['goli-b223-supergreens-60', 'Goli', 'goli-b223-supergreens-60.jpg'],
+    ['goli-b223-womens-multi-60', 'Goli', 'goli-b223-womens-multi-60.jpg'],
+    ['goli-b223-zs-acv-plus-60', 'Goli', 'goli-b223-zs-acv-plus-60.jpg'],
+    ['goli-b223-zs-magnesium-glycinate-60', 'Goli', 'goli-b223-zs-magnesium-glycinate-60.jpg'],
+    ['goli-b223-zs-creatine-60', 'Goli', 'goli-b223-zs-creatine-60.jpg'],
+    ['goli-b224-acv-30', 'Goli', 'goli-b224-acv-30.jpg'],
+    ['physicianschoice-b225-ksm66-ashwagandha-60', "Physician's Choice", 'physicianschoice-b225-ksm66-ashwagandha-60.jpg'],
+    ['physicianschoice-b225-colostrum-gold-60-servings', "Physician's Choice", 'physicianschoice-b225-colostrum-gold-60-servings.jpg'],
+    ['physicianschoice-b225-collagen-peptides-unflavored-246g', "Physician's Choice", 'physicianschoice-b225-collagen-peptides-unflavored-246g.jpg'],
+    ['physicianschoice-b227-colostrum-gold-30-servings', "Physician's Choice", 'physicianschoice-b227-colostrum-gold-30-servings.jpg'],
+    ['springvalley-b231-mushroom-complex-30', 'Spring Valley', 'springvalley-b231-mushroom-complex-30.jpg'],
+    ['springvalley-b231-ceylon-cinnamon-1200-120', 'Spring Valley', 'springvalley-b231-ceylon-cinnamon-1200-120.jpg'],
+    ['springvalley-b231-zinc-50-200', 'Spring Valley', 'springvalley-b231-zinc-50-200.jpg'],
+    ['springvalley-b232-biotin-keratin-60', 'Spring Valley', 'springvalley-b232-biotin-keratin-60.jpg'],
+    ['springvalley-b233-b50-complex-timed-release-60', 'Spring Valley', 'springvalley-b233-b50-complex-timed-release-60.jpg'],
+    ['springvalley-b233-calcium-magnesium-zinc-d3-250', 'Spring Valley', 'springvalley-b233-calcium-magnesium-zinc-d3-250.jpg'],
+    ['springvalley-b234-collagen-c-90', 'Spring Valley', 'springvalley-b234-collagen-c-90.jpg'],
+    ['springvalley-b234-flush-free-niacin-60', 'Spring Valley', 'springvalley-b234-flush-free-niacin-60.jpg'],
+    ['springvalley-b234-norwegian-salmon-oil-120', 'Spring Valley', 'springvalley-b234-norwegian-salmon-oil-120.jpg'],
+  ];
+  const seen1021d = new Set<string>();
+  for (const [id, brand, file] of batch1021d) {
+    if (seen1021d.has(file)) throw new Error(`duplicate vitamins carton ${file}`);
+    seen1021d.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1021d: [string, string, string][][] = [
+    [
+      ['goli-b223-acv-60', 'goli-b223-acv', 'Goli'],
+      ['goli-b224-acv-30', 'goli-b224-acv-30', 'Goli'],
+      ['goli-b223-zs-acv-plus-60', 'goli-b223-zs-acv-plus', 'Goli'],
+    ],
+    [
+      ['goli-b223-matcha-mind-60', 'goli-b223-matcha-mind', 'Goli'],
+      ['goli-b223-supergreens-60', 'goli-b223-supergreens', 'Goli'],
+    ],
+    [
+      ['goli-b223-zs-magnesium-glycinate-60', 'goli-b223-zs-magnesium-glycinate', 'Goli'],
+      ['goli-b223-zs-creatine-60', 'goli-b223-zs-creatine', 'Goli'],
+    ],
+    [
+      ['physicianschoice-b225-colostrum-gold-60-servings', 'physicianschoice-b225-colostrum-gold-60-servings', "Physician's Choice"],
+      ['physicianschoice-b227-colostrum-gold-30-servings', 'physicianschoice-b227-colostrum-gold-30-servings', "Physician's Choice"],
+    ],
+    [
+      ['physicianschoice-b225-collagen-peptides-unflavored-246g', 'physicianschoice-b225-collagen-peptides-unflavored-246g', "Physician's Choice"],
+      ['springvalley-b234-collagen-c-90', 'springvalley-b234-collagen-c-90', 'Spring Valley'],
+    ],
+    [
+      ['springvalley-b233-b50-complex-timed-release-60', 'springvalley-b233-b50-complex-timed-release-60', 'Spring Valley'],
+      ['springvalley-b238-b100-complex-60', 'springvalley-b238-b100-complex-60', 'Spring Valley'],
+    ],
+  ];
+  const letterUntilAttempted = new Set<string>([
+    'springvalley-b238-b100-complex-60',
+  ]);
+  for (const group of groups1021d) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Vitamins siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
   }
 }
