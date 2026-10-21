@@ -1079,6 +1079,45 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is the named green plant pigment, not the copper color complex chlorophyllin.', level);
   }
 
+  if (n === 'stevia' || n === 'rebaudioside a extracted and purified from natural stevia leaf') {
+    return close(
+      'This stevia string is Limited under the t158u founder lock. Organic Rebaudioside A stays Cleared. High-purity Rebaudioside M stays Cleared. Stevia extract stays Caution.',
+      level,
+    );
+  }
+
+  if (n === 'paprika extract color') {
+    return close(
+      'Paprika extract (color) is a named plant color. The founder locked that exact string Cleared (t158u). Paprika extract (natural color) and Paprika (color) stay Caution.',
+      level,
+    );
+  }
+
+  if (n === 'natural mixed berry flavors') {
+    return close(
+      'Natural mixed berry flavors names the fruit. The founder locked that exact string Cleared (t158u). Exact Natural flavors stays Limited.',
+      level,
+    );
+  }
+
+  if (n === 'oats') {
+    return close(
+      'Oats are a food grain. The founder locked that exact string Cleared (t158u). It is not Organic Oat Hull Fiber.',
+      level,
+    );
+  }
+
+  if (n === 'cinnamon') {
+    return close(
+      'Cinnamon is a spice. The founder locked that exact string Cleared (t158u). It is not cinnamon bark oil.',
+      level,
+    );
+  }
+
+  if (n === 'nutmeg') {
+    return close('Nutmeg is a spice. The founder locked that exact string Cleared (t158u).', level);
+  }
+
   if (/stearia|stevia|rebaudioside|reb m|monk fruit|mogroside|lo han/.test(n)) {
     if (/whole leaf|crude|leaf extract|^stevia extract$|stevia leaf/.test(n) || (level !== 'cleared' && /stevia/.test(n) && !/rebaudioside|reb m|high purity/.test(n))) {
       return close('This is a stevia extract that is not the high-purity steviol glycoside. The high-purity form is a different row.', level);
