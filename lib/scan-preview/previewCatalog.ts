@@ -3013,6 +3013,17 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // MegaFlora with Turmeric spans a 30-serving bottle and a 45-serving bottle.
   // Do not glue one count. Same MegaFood mark. Per-id only.
   'megafood-megaflora-turmeric': brandMark('megafood-mark.png'),
+  // Digestive night run 2026-10-21 6:45 AM PT batch 1.
+  // Cranberry + D-Mannose capsules are one row for 60 ct (UPC 646670621499)
+  // and 120 ct (UPC 646670545887). Two different bottles. Sprouts mark.
+  'sprouts-cranberry-d-mannose-cap': brandMark('sprouts-mark.png'),
+  // Pearls Women's is 30 softgels (763948042135) and 90 (033674139509).
+  // Acidophilus is 30 (763948042937) and 90 (763948042999).
+  // Complete is 30 (763948043637) and 90 (763948043699).
+  // Official Nature's Way mark. Not one count. Not a letter.
+  'natures-way-probiotic-pearls-womens': brandMark('natures-way-mark.png'),
+  'natures-way-probiotic-pearls-acidophilus': brandMark('natures-way-mark.png'),
+  'natures-way-probiotic-pearls-complete': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17530,6 +17541,38 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'sprouts-black-walnut-liquid': catalogShot('sprouts-black-walnut-liquid.jpg'),
   // Burdock liquid, 1 fl oz. UPC 646670620171. Not Black Walnut.
   'sprouts-burdock-liquid': catalogShot('sprouts-burdock-liquid.jpg'),
+  // Digestive night run 2026-10-21 6:45 AM PT batch 1.
+  // Exact fronts. Sibling counts stay off these files.
+  // Licorice liquid, 1 fl oz. UPC 646670620638. Not the capsule row.
+  'sprouts-licorice-liquid': catalogShot('sprouts-licorice-liquid.jpg'),
+  // Peppermint Spirits, 1 fl oz. UPC 646670620782.
+  'sprouts-peppermint-spirits': catalogShot('sprouts-peppermint-spirits.jpg'),
+  // Slippery Elm liquid extract, 1 fl oz. UPC 646670460296. Not the bark capsules.
+  'sprouts-slippery-elm-liquid': catalogShot('sprouts-slippery-elm-liquid.jpg'),
+  // Super Fiber tablets, 100 ct. UPC 646670681042.
+  'sprouts-super-fiber-tabs': catalogShot('sprouts-super-fiber-tabs.jpg'),
+  // Colon Clean powder capsules, 90 ct. UPC 646670620256.
+  'sprouts-colon-clean-powder-cap': catalogShot('sprouts-colon-clean-powder-cap.jpg'),
+  // Cranberry powder vegetarian capsules, 90 ct. UPC 646670154409.
+  // Not Cranberry + D-Mannose.
+  'sprouts-cranberry-powder-cap': catalogShot('sprouts-cranberry-powder-cap.jpg'),
+  // Triphala powder capsules, 90 ct. UPC 646670621345.
+  'sprouts-triphala-powder-cap': catalogShot('sprouts-triphala-powder-cap.jpg'),
+  // Liver Detox with milk thistle, 90 ct. UPC 646670620669.
+  'sprouts-liver-detox-milk-thistle': catalogShot('sprouts-liver-detox-milk-thistle.jpg'),
+  // Fresh Dandelion alcohol-free, 1 fl oz. UPC 646670621642. Not the root capsules.
+  'sprouts-fresh-dandelion-af': catalogShot('sprouts-fresh-dandelion-af.jpg'),
+  // BodyAnew Cleanse/Detox oral drops, 150 ml. UPC 787647201181. Not the kit.
+  'medinatura-bodyanew-cleanse-drops': catalogShot('medinatura-bodyanew-cleanse-drops.jpg'),
+  // BHI tablets, 100 count. One symptom per bottle.
+  'medinatura-bhi-constipation': catalogShot('medinatura-bhi-constipation.jpg'),
+  'medinatura-bhi-diarrhea': catalogShot('medinatura-bhi-diarrhea.jpg'),
+  'medinatura-bhi-hemorrhoid': catalogShot('medinatura-bhi-hemorrhoid.jpg'),
+  'medinatura-bhi-nausea': catalogShot('medinatura-bhi-nausea.jpg'),
+  // Organic Apple Cider Vinegar gummies, 60, apple. UPC 033674137529.
+  'natures-way-organic-acv-gummies': catalogShot('natures-way-organic-acv-gummies.jpg'),
+  // Pearls Elite, 30 softgels. UPC 763948564354. Not Women's, Acidophilus, or Complete.
+  'natures-way-probiotic-pearls-elite': catalogShot('natures-way-probiotic-pearls-elite.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39537,7 +39580,7 @@ assertBrandMark(
       ['sprouts-burdock-liquid', 'sprouts-burdock-liquid', 'Sprouts'],
     ],
   ];
-  const letterUntilAttemptedH = new Set<string>(['sprouts-cranberry-d-mannose-cap']);
+  const markInsteadH = new Set<string>(['sprouts-cranberry-d-mannose-cap']);
   for (const group of groups1021h) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -39549,13 +39592,143 @@ assertBrandMark(
     }
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
-      if (letterUntilAttemptedH.has(id)) {
-        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
-          throw new Error(`${id} stays a letter until its own carton is attempted`);
+      if (markInsteadH.has(id)) {
+        if (
+          image?.verifiedSku
+          || image?.url.startsWith('data:image/svg+xml')
+          || !image?.url.endsWith('/sprouts-mark.png')
+        ) {
+          throw new Error(`${id} spans 60 and 120 and must stay the Sprouts mark`);
         }
         continue;
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Digestive night run 2026-10-21 6:45 AM PT batch 1.
+  // Exact fronts, plus marks where one row covers two counts.
+  const batch1021i: [string, string, string][] = [
+    ['sprouts-licorice-liquid', 'Sprouts', 'sprouts-licorice-liquid.jpg'],
+    ['sprouts-peppermint-spirits', 'Sprouts', 'sprouts-peppermint-spirits.jpg'],
+    ['sprouts-slippery-elm-liquid', 'Sprouts', 'sprouts-slippery-elm-liquid.jpg'],
+    ['sprouts-super-fiber-tabs', 'Sprouts', 'sprouts-super-fiber-tabs.jpg'],
+    ['sprouts-colon-clean-powder-cap', 'Sprouts', 'sprouts-colon-clean-powder-cap.jpg'],
+    ['sprouts-cranberry-powder-cap', 'Sprouts', 'sprouts-cranberry-powder-cap.jpg'],
+    ['sprouts-triphala-powder-cap', 'Sprouts', 'sprouts-triphala-powder-cap.jpg'],
+    ['sprouts-liver-detox-milk-thistle', 'Sprouts', 'sprouts-liver-detox-milk-thistle.jpg'],
+    ['sprouts-fresh-dandelion-af', 'Sprouts', 'sprouts-fresh-dandelion-af.jpg'],
+    ['medinatura-bodyanew-cleanse-drops', 'MediNatura', 'medinatura-bodyanew-cleanse-drops.jpg'],
+    ['medinatura-bhi-constipation', 'MediNatura', 'medinatura-bhi-constipation.jpg'],
+    ['medinatura-bhi-diarrhea', 'MediNatura', 'medinatura-bhi-diarrhea.jpg'],
+    ['medinatura-bhi-hemorrhoid', 'MediNatura', 'medinatura-bhi-hemorrhoid.jpg'],
+    ['medinatura-bhi-nausea', 'MediNatura', 'medinatura-bhi-nausea.jpg'],
+    ['natures-way-organic-acv-gummies', "Nature's Way", 'natures-way-organic-acv-gummies.jpg'],
+    ['natures-way-probiotic-pearls-elite', "Nature's Way", 'natures-way-probiotic-pearls-elite.jpg'],
+  ];
+  const seen1021i = new Set<string>();
+  for (const [id, brand, file] of batch1021i) {
+    if (seen1021i.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1021i.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('sprouts-cranberry-d-mannose-cap', 'Sprouts', 'sprouts-mark.png');
+  assertBrandMark('natures-way-probiotic-pearls-womens', "Nature's Way", 'natures-way-mark.png');
+  assertBrandMark('natures-way-probiotic-pearls-acidophilus', "Nature's Way", 'natures-way-mark.png');
+  assertBrandMark('natures-way-probiotic-pearls-complete', "Nature's Way", 'natures-way-mark.png');
+  const groups1021i: [string, string, string][][] = [
+    [
+      ['sprouts-cranberry-powder-cap', 'sprouts-cranberry-powder-cap', 'Sprouts'],
+      ['sprouts-cranberry-d-mannose-cap', 'sprouts-cranberry-d-mannose-cap', 'Sprouts'],
+      ['sprouts-d-mannose-cranberry-powder', 'sprouts-d-mannose-cranberry-powder', 'Sprouts'],
+    ],
+    [
+      ['sprouts-slippery-elm-liquid', 'sprouts-slippery-elm-liquid', 'Sprouts'],
+      ['natures-way-slippery-elm-bark', 'natures-way-slippery-elm-bark', "Nature's Way"],
+    ],
+    [
+      ['sprouts-fresh-dandelion-af', 'sprouts-fresh-dandelion-af', 'Sprouts'],
+      ['natures-way-dandelion-root', 'natures-way-dandelion-root', "Nature's Way"],
+    ],
+    [
+      ['sprouts-licorice-liquid', 'sprouts-licorice-liquid', 'Sprouts'],
+      ['natures-way-licorice-root', 'natures-way-licorice-root', "Nature's Way"],
+    ],
+    [
+      ['medinatura-bhi-constipation', 'medinatura-bhi-constipation', 'MediNatura'],
+      ['medinatura-bhi-diarrhea', 'medinatura-bhi-diarrhea', 'MediNatura'],
+      ['medinatura-bhi-hemorrhoid', 'medinatura-bhi-hemorrhoid', 'MediNatura'],
+      ['medinatura-bhi-nausea', 'medinatura-bhi-nausea', 'MediNatura'],
+      ['medinatura-bodyanew-cleanse-drops', 'medinatura-bodyanew-cleanse-drops', 'MediNatura'],
+    ],
+  ];
+  const letterUntilAttemptedI = new Set<string>([
+    'natures-way-slippery-elm-bark',
+    'natures-way-dandelion-root',
+    'natures-way-licorice-root',
+    'natures-way-probiotic-pearls-max',
+    'natures-way-probiotic-pearls-adult-50',
+    'natures-way-primadophilus-reuteri-pearls',
+  ]);
+  const markInsteadI = new Set<string>([
+    'sprouts-cranberry-d-mannose-cap',
+    'natures-way-probiotic-pearls-womens',
+    'natures-way-probiotic-pearls-acidophilus',
+    'natures-way-probiotic-pearls-complete',
+  ]);
+  for (const group of groups1021i) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttemptedI.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (markInsteadI.has(id)) {
+        if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} must stay a brand mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const pearlsMark = previewOverlayImage({
+    id: 'natures-way-probiotic-pearls-womens',
+    formulaId: 'natures-way-probiotic-pearls-womens',
+    brand: "Nature's Way",
+  });
+  const pearlsElite = previewOverlayImage({
+    id: 'natures-way-probiotic-pearls-elite',
+    formulaId: 'natures-way-probiotic-pearls-womens',
+    brand: "Nature's Way",
+  });
+  const pearlsMax = previewOverlayImage({
+    id: 'natures-way-probiotic-pearls-max',
+    formulaId: 'natures-way-probiotic-pearls-womens',
+    brand: "Nature's Way",
+  });
+  if (
+    !pearlsMark?.url.endsWith('/natures-way-mark.png')
+    || pearlsMark.verifiedSku
+    || !pearlsElite?.verifiedSku
+    || !pearlsElite.url.endsWith('/natures-way-probiotic-pearls-elite.jpg')
+    || pearlsElite.url === pearlsMark.url
+    || !pearlsMax?.url.startsWith('data:image/svg+xml')
+    || pearlsMax.verifiedSku
+    || pearlsMax.url === pearlsElite.url
+  ) {
+    throw new Error('Pearls counts must not share a carton; two-count rows stay on the Nature\'s Way mark');
   }
 }
