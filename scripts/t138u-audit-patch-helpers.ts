@@ -141,6 +141,7 @@ export function patchBlock(
   applyVerdict: boolean,
   stackTokens?: string[],
   forceStackNote = false,
+  stripStackNote = false,
 ): string {
   let b = block;
   if (before.inactiveIngredients.some((i) => i.name.trim().toLowerCase() === 'beeswax / carnauba wax')) {
@@ -270,6 +271,22 @@ export function patchBlock(
             `$1    honestNote: '${esc}',\n`,
           );
         }
+      }
+    }
+  }
+  if (stripStackNote) {
+    const noteRe = /(honestNote:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^'\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+    const plainNote =
+      /(note:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^'\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+    const mathNote =
+      /(math:\s*)(`(?:[^`\\]|\\.)*`|'(?:[^`\\]|\\.)*'|"[^"\\]*(?:\\.[^"\\]*)*")/;
+    const nm = noteRe.exec(b) ?? plainNote.exec(b) ?? mathNote.exec(b);
+    if (nm) {
+      const quote = nm[2][0];
+      const inner = nm[2].slice(1, -1);
+      const stripped = stripLimitedStackHonestNote(inner);
+      if (stripped !== inner) {
+        b = b.replace(nm[0], `${nm[1]}${quote}${stripped}${quote}`);
       }
     }
   }

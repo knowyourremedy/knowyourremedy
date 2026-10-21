@@ -117,7 +117,7 @@ export const BATCH91_KYR6_WELMATE_POLOXAMER: RatingRecord[] = [
         ['Carbomer homopolymer type C', 'cleared', 'carbomer'],
         ['Edetate disodium', 'cleared', 'edta'],
         ['Methylparaben', 'high', 'paraben'],
-        ['Poloxamer 182', 'limited', 'poloxamer'],
+        ['Poloxamer 182', 'moderate', 'poloxamer'],
         ['Propylene glycol', 'cleared', 'pgTopical'],
         ['Purified water', 'cleared', 'water'],
         ['Sodium hydroxide', 'cleared', 'naoh'],
@@ -190,7 +190,7 @@ for (const record of _ROWS) {
   const poloxamer = record.inactiveIngredients.find((i) => i.name === 'Poloxamer 182');
   if (
     !poloxamer
-    || poloxamer.riskLevel !== 'limited'
+    || poloxamer.riskLevel !== 'moderate'
     || !/poloxamer 182/.test(poloxamer.source ?? '')
     || !/Caution/.test(poloxamer.source ?? '')
     || !/Not High/.test(poloxamer.source ?? '')

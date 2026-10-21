@@ -312,7 +312,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
       { name: 'White petrolatum', strength: '57.3%' },
     ],
     inactiveIngredients: [
-      flag('Lanolin alcohols', 'cleared', dailymed(SET.walPm, METH.lanolinAlcohol)),
+      flag('Lanolin alcohols', 'moderate', dailymed(SET.walPm, METH.lanolinAlcohol)),
     ],
     verdict: 'caution',
 
@@ -337,7 +337,7 @@ export const BATCH66_KYR6_HELD_ROWS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Magnesium stearate', 'cleared', dailymed(SET.dgIr, METH.stearic)),
       flag('Microcrystalline cellulose', 'cleared', dailymed(SET.dgIr, METH.cellulose)),
-      flag('Colloidal silicon dioxide', 'cleared', dailymed(SET.dgIr, METH.sio2)),
+      flag('Colloidal silicon dioxide', 'limited', dailymed(SET.dgIr, METH.sio2)),
       flag('Copovidone', 'cleared', dailymed(SET.dgIr, METH.povidone)),
       flag('Dicalcium phosphate', 'cleared', dailymed(SET.dgIr, METH.dical)),
       flag('Maltodextrin', 'limited', dailymed(SET.dgIr, METH.maltodextrin)),

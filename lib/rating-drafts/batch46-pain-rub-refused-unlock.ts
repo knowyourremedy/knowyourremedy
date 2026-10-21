@@ -236,8 +236,8 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
       { name: 'Menthol', strength: '10%' },
     ],
     inactiveIngredients: [
-      flag('Diazolidinyl urea', 'cleared', dailymed(SET.tbVanish, METH.dmdm)),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.tbVanish, METH.eucalyptus)),
+      flag('Diazolidinyl urea', 'moderate', dailymed(SET.tbVanish, METH.dmdm)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.tbVanish, METH.eucalyptus)),
       flag('FD&C Blue No. 1', 'high', dailymed(SET.tbVanish, METH.dyes)),
       cleared(SET.tbVanish, 'Glycerin'),
       flag(
@@ -248,7 +248,7 @@ export const BATCH46_PAIN_RUB_REFUSED_UNLOCK: RatingRecord[] = [
       flag('Methylparaben', 'high', dailymed(SET.tbVanish, METH.parabens)),
       flag('Propylene glycol', 'cleared', dailymed(SET.tbVanish, METH.pgTopical)),
       flag('Propylparaben', 'high', dailymed(SET.tbVanish, METH.parabens)),
-      flag('Trolamine', 'cleared', dailymed(SET.tbVanish, METH.tea)),
+      flag('Trolamine', 'moderate', dailymed(SET.tbVanish, METH.tea)),
       cleared(SET.tbVanish, 'Purified water'),
     ],
     verdict: 'avoid',

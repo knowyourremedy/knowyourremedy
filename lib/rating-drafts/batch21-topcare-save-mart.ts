@@ -149,10 +149,10 @@ const METH = {
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
-  ps80: 'Methodology §5 Moderate-risk (polysorbate 80)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
@@ -314,7 +314,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
         'limited',
         dailymed(SET_T2_SOFTGELS, METH.pg),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_T2_SOFTGELS, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_T2_SOFTGELS, METH.sorbitol)),
       cleared(SET_T2_SOFTGELS, 'Gelatin'),
       cleared(SET_T2_SOFTGELS, 'Glycerin'),
       cleared(SET_T2_SOFTGELS, 'Povidone'),
@@ -408,7 +408,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
         'limited',
         dailymed(SET_T3A_LIQUIGELS, METH.pg),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_T3A_LIQUIGELS, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_T3A_LIQUIGELS, METH.sorbitol)),
       flag(
         'Lecithin',
         'cleared',
@@ -461,7 +461,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_T3B_CAPLETS, METH.sio2),
       ),
       cleared(SET_T3B_CAPLETS, 'Corn starch'),
@@ -506,7 +506,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_T4_DUAL, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_T4_DUAL, METH.sio2),
       ),
       cleared(SET_T4_DUAL, 'Corn starch'),
@@ -632,7 +632,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_T8_MUCUS_DM, METH.sio2),
       ),
       cleared(SET_T8_MUCUS_DM, 'Carbomer homopolymer type B'),
@@ -700,7 +700,7 @@ export const BATCH21_TOPCARE_SAVE_MART: RatingRecord[] = [
       ),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_T10_ESOMEPRAZOLE, METH.sls),
       ),
       cleared(SET_T10_ESOMEPRAZOLE, 'Gelatin'),

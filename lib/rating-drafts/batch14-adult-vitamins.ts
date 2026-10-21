@@ -196,7 +196,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Polyethylene glycol', 'limited', labelCite(KIRKLAND_NO_TIO2_CITE, METH.peg)),
-      flag('Silica / silicon dioxide', 'cleared', labelCite(KIRKLAND_NO_TIO2_CITE, METH.sio2)),
+      flag('Silica / silicon dioxide', 'moderate', labelCite(KIRKLAND_NO_TIO2_CITE, METH.sio2)),
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Microcrystalline cellulose'),
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Hydroxypropyl methylcellulose'),
       labelCleared(KIRKLAND_NO_TIO2_CITE, 'Croscarmellose sodium'),
@@ -234,7 +234,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Polyethylene glycol', 'limited', labelCite(NM_COMPLETE_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(NM_COMPLETE_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(NM_COMPLETE_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(NM_COMPLETE_CITE, METH.sio2)),
       labelCleared(NM_COMPLETE_CITE, 'Cellulose gel'),
       labelCleared(NM_COMPLETE_CITE, 'Modified food starch'),
       labelCleared(NM_COMPLETE_CITE, 'Croscarmellose sodium'),
@@ -267,7 +267,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       { name: 'Zinc', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(MEGAFOOD_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(MEGAFOOD_CITE, METH.sio2)),
       labelCleared(MEGAFOOD_CITE, 'Microcrystalline cellulose'),
       labelCleared(MEGAFOOD_CITE, 'Stearic acid'),
       labelCleared(MEGAFOOD_CITE, 'Hypromellose'),
@@ -278,7 +278,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       ),
       labelCleared(MEGAFOOD_CITE, 'Rice protein'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['Whole Foods', 'Sprouts', 'Vitamin shops'],
     sourcesGeneral: [
@@ -311,7 +311,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('BHT (to preserve freshness)', 'high', labelCite(CENTRUM_ADULTS_CITE, METH.bht)),
       flag('Polyethylene glycol', 'limited', labelCite(CENTRUM_ADULTS_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(CENTRUM_ADULTS_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(CENTRUM_ADULTS_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CENTRUM_ADULTS_CITE, METH.sio2)),
       flag(
         'Tocopherols (to preserve freshness)',
         'cleared',
@@ -358,7 +358,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('Blue 2 Lake', 'high', labelCite(CENTRUM_SILVER_CITE, METH.dyes)),
       flag('BHT (to preserve freshness)', 'high', labelCite(CENTRUM_SILVER_CITE, METH.bht)),
       flag('Maltodextrin', 'limited', labelCite(CENTRUM_SILVER_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(CENTRUM_SILVER_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CENTRUM_SILVER_CITE, METH.sio2)),
       flag(
         'Tocopherols (to preserve freshness)',
         'cleared',
@@ -405,7 +405,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       flag('BHT', 'high', labelCite(EQUATE_CITE, METH.bht)),
       flag('Polyethylene glycol', 'limited', labelCite(EQUATE_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(EQUATE_CITE, METH.maltodextrin)),
-      flag('Silica / silicon dioxide', 'cleared', labelCite(EQUATE_CITE, METH.sio2)),
+      flag('Silica / silicon dioxide', 'moderate', labelCite(EQUATE_CITE, METH.sio2)),
       labelCleared(EQUATE_CITE, 'Microcrystalline cellulose'),
       labelCleared(EQUATE_CITE, 'Hydroxypropyl methylcellulose'),
       labelCleared(EQUATE_CITE, 'Magnesium stearate'),
@@ -438,7 +438,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Titanium dioxide', 'high', labelCite(KIRKLAND_TIO2_CITE, METH.tio2)),
       flag('Polyethylene glycol', 'limited', labelCite(KIRKLAND_TIO2_CITE, METH.peg)),
-      flag('Silicon dioxide', 'cleared', labelCite(KIRKLAND_TIO2_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(KIRKLAND_TIO2_CITE, METH.sio2)),
     ],
     verdict: 'avoid',
 
@@ -466,7 +466,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Talc', 'high', labelCite(OAD_MENS_CITE, METH.talc)),
       flag('Maltodextrin', 'limited', labelCite(OAD_MENS_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(OAD_MENS_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(OAD_MENS_CITE, METH.sio2)),
       labelCleared(OAD_MENS_CITE, 'Microcrystalline cellulose'),
       labelCleared(OAD_MENS_CITE, 'Hydroxypropyl methylcellulose'),
       labelCleared(OAD_MENS_CITE, 'Croscarmellose sodium'),
@@ -507,7 +507,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
       ),
       flag('Talc', 'high', labelCite(OAD_WOMENS_CITE, METH.talc)),
       flag('Maltodextrin', 'limited', labelCite(OAD_WOMENS_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(OAD_WOMENS_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(OAD_WOMENS_CITE, METH.sio2)),
       labelCleared(OAD_WOMENS_CITE, 'Microcrystalline cellulose'),
       labelCleared(OAD_WOMENS_CITE, 'Hydroxypropyl methylcellulose'),
       labelCleared(OAD_WOMENS_CITE, 'Croscarmellose sodium'),
@@ -630,7 +630,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Palm oil', 'high', labelCite(NM_GUMMY_CITE, METH.seedOilGummies)),
       flag('Natural flavors', 'limited', labelCite(NM_GUMMY_CITE, METH.flavors)),
-      flag('Carmine', 'cleared', labelCite(NM_GUMMY_CITE, METH.carmine)),
+      flag('Carmine', 'moderate', labelCite(NM_GUMMY_CITE, METH.carmine)),
       labelCleared(NM_GUMMY_CITE, 'Glucose syrup'),
       labelCleared(NM_GUMMY_CITE, 'Sugar'),
       labelCleared(NM_GUMMY_CITE, 'Water'),
@@ -673,7 +673,7 @@ export const BATCH14_ADULT_VITAMINS: RatingRecord[] = [
         'limited',
         labelCite(VITAFUSION_PALM_CITE, METH.flavors),
       ),
-      flag('Annatto extract (color)', 'cleared', labelCite(VITAFUSION_PALM_CITE, METH.annatto)),
+      flag('Annatto extract (color)', 'moderate', labelCite(VITAFUSION_PALM_CITE, METH.annatto)),
       labelCleared(VITAFUSION_PALM_CITE, 'Glucose syrup'),
       labelCleared(VITAFUSION_PALM_CITE, 'Sugar'),
       labelCleared(VITAFUSION_PALM_CITE, 'Water'),

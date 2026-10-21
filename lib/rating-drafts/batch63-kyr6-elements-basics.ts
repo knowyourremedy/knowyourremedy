@@ -203,25 +203,25 @@ const METH = {
   seedOilGummies: `Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, palm, safflower, sunflower, vegetable oil). ${GUMMY_OIL_TAP}`,
   seedOilLozenge: `Methodology §5 High-tier (soybean oil in lozenges / cough drops — same seed-oil High as gummies; locked Sept 16, 2026). ${LOZENGE_OIL_TAP}`,
   dyes: 'Methodology §5 High-tier (synthetic dyes, including lake forms)',
-  acek: 'Methodology §5 Moderate-risk (acesulfame potassium)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  acek: 'Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity). Product display key is caution when this is the worst inactive (Limited-only never Avoid).',
   namedFruitFlavor:
-    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 prior-lock re-eval).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   juiceBase:
     'Methodology §5 Cleared (fruit puree / juice concentrate when it is the fruit — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   sorbitol:
     'Methodology §5 Limited-risk (other sugar alcohols — sorbitol, maltitol, mannitol, xylitol oral — GI effects at volume)',
   isomalt: 'Methodology §5 Limited-risk (isomalt — sugar-alcohol neighborhood; locked Sept 15, 2026)',
   maltodextrin:
-    'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
+    'Methodology §5 Limited (Tapioca Maltodextrin — founder lock t141u Oct 20, 2026; §4 prior-lock re-eval; distinct from Cleared tapioca starch and from generic maltodextrin when the panel names tapioca source).',
   tapiocaDextrose:
     'Methodology §5 Limited-risk (Tapioca Dextrose / Organic Tapioca Dextrose — sugar / dextrin neighborhood; distinct from Cleared tapioca syrup; locked Sept 16, 2026)',
   peaStarch:
     'Methodology §5 Limited-risk (Pea Starch — unspecified/modified starch neighborhood; locked Sept 16, 2026; distinct from Cleared pea protein isolate)',
   unlabeledMct:
-    'Methodology §5 Limited-risk (unlabeled MCT / medium chain triglycerides with no coconut or plant named — opacity; not the Cleared named-MCT coating/fill row)',
+    'Methodology §5 Limited (MCT in a gummy — founder lock t132u Oct 20, 2026; no plant source named).',
   modifiedCellulose:
     'Methodology §5 Limited-risk (unlabeled modified cellulose — unspecified modified cellulose/starch neighborhood; named MCC / HPMC stay Cleared; locked Sept 16, 2026)',
   benzoate:
@@ -282,7 +282,7 @@ const METH = {
   cellulose:
     'Methodology §5 Cleared (microcrystalline cellulose / croscarmellose sodium / cellulose gum / powdered cellulose)',
   gelatin:
-    'Methodology §5 Cleared (lactose, gelatin, carnauba wax, beeswax, purified water)',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin / glycerine / organic glycerin)',
   water: 'Methodology §5 Cleared (purified water / distilled water)',
   citrate:
@@ -616,7 +616,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Vitamin C', strength: '250mg per 2-gummy serving' }],
     inactiveIngredients: [
-      flag('Annatto', 'cleared', labelCite(CITE.vitCGummy, METH.annatto)),
+      flag('Annatto', 'moderate', labelCite(CITE.vitCGummy, METH.annatto)),
       flag('Natural flavors', 'limited', labelCite(CITE.vitCGummy, METH.flavors)),
       flag('Cane sugar', 'cleared', labelCite(CITE.vitCGummy, METH.sugar)),
       flag('Tapioca syrup', 'cleared', labelCite(CITE.vitCGummy, METH.sugar)),
@@ -645,8 +645,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: "Women's probiotic blend", strength: '50 billion CFU' },
     ],
     inactiveIngredients: [
-      flag('Silica', 'cleared', labelCite(CITE.womensPro, METH.sio2)),
-      flag('Calcium silicate', 'cleared', labelCite(CITE.womensPro, METH.calciumSilicate)),
+      flag('Silica', 'limited', labelCite(CITE.womensPro, METH.sio2)),
+      flag('Calcium silicate', 'moderate', labelCite(CITE.womensPro, METH.calciumSilicate)),
       flag(
         'Modified cellulose',
         'limited',
@@ -676,8 +676,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: 'Collagen complex (type II / chondroitin / HA)', strength: '400mg' },
     ],
     inactiveIngredients: [
-      flag('Rice flour', 'cleared', labelCite(CITE.collagen, METH.riceFlour)),
-      flag('Silicon dioxide (SiO2)', 'cleared', labelCite(CITE.collagen, METH.sio2)),
+      flag('Rice flour', 'moderate', labelCite(CITE.collagen, METH.riceFlour)),
+      flag('Silicon dioxide (SiO2)', 'limited', labelCite(CITE.collagen, METH.sio2)),
       flag('Gelatin', 'cleared', labelCite(CITE.collagen, METH.gelatin)),
       flag('Cellulose', 'cleared', labelCite(CITE.collagen, METH.cellulose)),
       flag('Magnesium stearate', 'cleared', labelCite(CITE.collagen, METH.stearic)),
@@ -706,7 +706,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
         'cleared',
         labelCite(CITE.fishGummy, METH.fracCoconut),
       ),
-      flag('Annatto extract', 'cleared', labelCite(CITE.fishGummy, METH.annatto)),
+      flag('Annatto extract', 'moderate', labelCite(CITE.fishGummy, METH.annatto)),
       flag('Natural flavors', 'limited', labelCite(CITE.fishGummy, METH.flavors)),
       flag(
         'Purple carrot juice concentrate',
@@ -744,7 +744,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
         'cleared',
         labelCite(CITE.womensGummyDaily, METH.fracCoconut),
       ),
-      flag('Annatto', 'cleared', labelCite(CITE.womensGummyDaily, METH.annatto)),
+      flag('Annatto', 'moderate', labelCite(CITE.womensGummyDaily, METH.annatto)),
       flag('Natural flavors', 'limited', labelCite(CITE.womensGummyDaily, METH.flavors)),
       flag(
         'Purple carrot juice concentrate',
@@ -823,7 +823,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Probiotic blend', strength: '5 billion CFU' }],
     inactiveIngredients: [
-      flag('Silica', 'cleared', labelCite(CITE.pro5b, METH.sio2)),
+      flag('Silica', 'limited', labelCite(CITE.pro5b, METH.sio2)),
     ],
     verdict: 'caution',
 
@@ -927,8 +927,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Natural raspberry flavor', 'cleared', labelCite(CITE.b12, METH.namedFruitFlavor)),
       flag('Natural berry flavor', 'cleared', labelCite(CITE.b12, METH.namedFruitFlavor)),
-      flag('Xylitol', 'limited', labelCite(CITE.b12, METH.sorbitol)),
-      flag('Mannitol', 'limited', labelCite(CITE.b12, METH.sorbitol)),
+      flag('Xylitol', 'moderate', labelCite(CITE.b12, METH.sorbitol)),
+      flag('Mannitol', 'moderate', labelCite(CITE.b12, METH.sorbitol)),
       flag('Stearic acid (C18:0)', 'cleared', labelCite(CITE.b12, METH.stearic)),
       flag('Citric acid', 'cleared', labelCite(CITE.b12, METH.citrate)),
       flag('Magnesium stearate', 'cleared', labelCite(CITE.b12, METH.stearic)),
@@ -951,7 +951,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '3mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide (SiO2)', 'cleared', labelCite(CITE.mel3, METH.sio2)),
+      flag('Silicon dioxide (SiO2)', 'limited', labelCite(CITE.mel3, METH.sio2)),
       flag('Microcrystalline cellulose', 'cleared', labelCite(CITE.mel3, METH.cellulose)),
       flag('Dicalcium phosphate (DCP)', 'cleared', labelCite(CITE.mel3, METH.dical)),
       flag('Stearic acid', 'cleared', labelCite(CITE.mel3, METH.stearic)),
@@ -975,7 +975,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Chelated magnesium', strength: '270mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide (SiO2)', 'cleared', labelCite(CITE.mag, METH.sio2)),
+      flag('Silicon dioxide (SiO2)', 'limited', labelCite(CITE.mag, METH.sio2)),
       flag(
         'Vegetable coating (glycerin, hydroxypropyl methylcellulose)',
         'cleared',
@@ -1003,7 +1003,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Turmeric root powder', strength: '500mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide (SiO2)', 'cleared', labelCite(CITE.turmericRoot, METH.sio2)),
+      flag('Silicon dioxide (SiO2)', 'limited', labelCite(CITE.turmericRoot, METH.sio2)),
       flag(
         'Vegetable capsule (hydroxypropyl methylcellulose)',
         'cleared',
@@ -1035,7 +1035,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Vitamin C (ascorbic acid)', strength: '1000mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide (SiO2)', 'cleared', labelCite(CITE.vitC1000, METH.sio2)),
+      flag('Silicon dioxide (SiO2)', 'limited', labelCite(CITE.vitC1000, METH.sio2)),
       flag(
         'Vegetable coating (glycerin, hydroxypropyl methylcellulose)',
         'cleared',
@@ -1064,7 +1064,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Iron', strength: '18mg' }],
     inactiveIngredients: [
-      flag('Rice flour', 'cleared', labelCite(CITE.iron, METH.riceFlour)),
+      flag('Rice flour', 'moderate', labelCite(CITE.iron, METH.riceFlour)),
       flag(
         'Vegetable capsule (hydroxypropyl methylcellulose)',
         'cleared',
@@ -1092,7 +1092,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: 'Magnesium', strength: 'label serving' },
     ],
     inactiveIngredients: [
-      flag('Silica', 'cleared', labelCite(CITE.camg, METH.sio2)),
+      flag('Silica', 'limited', labelCite(CITE.camg, METH.sio2)),
       flag('Palm oil (tablet coating)', 'cleared', labelCite(CITE.camg, METH.palmCoat)),
       flag(
         'Medium chain triglyceride (MCT) (coating)',
@@ -1118,7 +1118,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Petrolatum', strength: '41%' }],
     inactiveIngredients: [
-      flag('Lanolin alcohol', 'cleared', dailymed(SET.heal, METH.lanolinAlcohol)),
+      flag('Lanolin alcohol', 'moderate', dailymed(SET.heal, METH.lanolinAlcohol)),
       flag('Mineral oil', 'cleared', dailymed(SET.heal, METH.mineralOil)),
       flag('Ceresin', 'cleared', dailymed(SET.heal, METH.ceresin)),
       flag('Panthenol', 'cleared', dailymed(SET.heal, METH.panthenol)),
@@ -1149,10 +1149,10 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       { name: 'Menthol', strength: '2.6%' },
     ],
     inactiveIngredients: [
-      flag('Cedarleaf oil', 'cleared', dailymed(SET.chest, METH.cedarleaf)),
-      flag('Nutmeg oil', 'cleared', dailymed(SET.chest, METH.nutmeg)),
-      flag('Spirits of turpentine', 'cleared', dailymed(SET.chest, METH.turpentine)),
-      flag('Thymol', 'cleared', dailymed(SET.chest, METH.thymol)),
+      flag('Cedarleaf oil', 'moderate', dailymed(SET.chest, METH.cedarleaf)),
+      flag('Nutmeg oil', 'moderate', dailymed(SET.chest, METH.nutmeg)),
+      flag('Spirits of turpentine', 'moderate', dailymed(SET.chest, METH.turpentine)),
+      flag('Thymol', 'moderate', dailymed(SET.chest, METH.thymol)),
       flag('Special petrolatum', 'cleared', dailymed(SET.chest, METH.petrolatum)),
     ],
     verdict: 'caution',
@@ -1282,7 +1282,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Sunflower oil', 'high', labelCite(CITE.fiberGummy, METH.seedOilGummies)),
-      flag('Annatto extract', 'cleared', labelCite(CITE.fiberGummy, METH.annatto)),
+      flag('Annatto extract', 'moderate', labelCite(CITE.fiberGummy, METH.annatto)),
       flag('Natural flavors', 'limited', labelCite(CITE.fiberGummy, METH.flavors)),
       flag('Lo Han fruit concentrate', 'cleared', labelCite(CITE.fiberGummy, METH.loHan)),
       flag(
@@ -1367,8 +1367,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     activeIngredients: [{ name: 'Menthol', strength: '7.6mg' }],
     inactiveIngredients: [
       flag('Soybean oil', 'high', dailymed(SET.honey, METH.seedOilLozenge)),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.honey, METH.eucalyptus)),
-      flag('Beta carotene', 'cleared', dailymed(SET.honey, METH.betaCarotene)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.honey, METH.eucalyptus)),
+      flag('Beta carotene', 'moderate', dailymed(SET.honey, METH.betaCarotene)),
       flag('Acesulfame potassium', 'limited', dailymed(SET.honey, METH.acek)),
       flag('Sucralose', 'limited', dailymed(SET.honey, METH.sucralose)),
       flag(
@@ -1376,8 +1376,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
         'limited',
         dailymed(SET.honey, METH.flavors),
       ),
-      flag('Isomalt', 'limited', dailymed(SET.honey, METH.isomalt)),
-      flag('Maltitol syrup', 'limited', dailymed(SET.honey, METH.sorbitol)),
+      flag('Isomalt', 'moderate', dailymed(SET.honey, METH.isomalt)),
+      flag('Maltitol syrup', 'moderate', dailymed(SET.honey, METH.sorbitol)),
       flag(
         'Medium chain triglycerides',
         'limited',
@@ -1409,7 +1409,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Soybean oil', 'high', dailymed(SET.cherry, METH.seedOilLozenge)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.cherry, METH.dyes)),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.cherry, METH.eucalyptus)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.cherry, METH.eucalyptus)),
       flag(
         'Natural and artificial flavors',
         'limited',
@@ -1449,7 +1449,7 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
       flag('Soybean oil', 'high', dailymed(SET.sfMenthol, METH.seedOilLozenge)),
       flag('FD&C Blue No. 1', 'high', dailymed(SET.sfMenthol, METH.dyes)),
       flag('FD&C Red No. 40', 'high', dailymed(SET.sfMenthol, METH.dyes)),
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.sfMenthol, METH.eucalyptus)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.sfMenthol, METH.eucalyptus)),
       flag('Acesulfame potassium', 'limited', dailymed(SET.sfMenthol, METH.acek)),
       flag('Sucralose', 'limited', dailymed(SET.sfMenthol, METH.sucralose)),
       flag(
@@ -1457,8 +1457,8 @@ export const BATCH63_KYR6_ELEMENTS_BASICS: RatingRecord[] = [
         'limited',
         dailymed(SET.sfMenthol, METH.flavors),
       ),
-      flag('Isomalt', 'limited', dailymed(SET.sfMenthol, METH.isomalt)),
-      flag('Maltitol syrup', 'limited', dailymed(SET.sfMenthol, METH.sorbitol)),
+      flag('Isomalt', 'moderate', dailymed(SET.sfMenthol, METH.isomalt)),
+      flag('Maltitol syrup', 'moderate', dailymed(SET.sfMenthol, METH.sorbitol)),
       flag(
         'Medium chain triglycerides',
         'limited',

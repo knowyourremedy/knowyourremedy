@@ -120,7 +120,7 @@ const METH = {
   caramel: `Methodology §5 High-tier (caramel color, undisclosed class — IARC 2B / 4-MEI; treated as Class III/IV). ${CARAMEL_TAP}`,
   riceFlour: `Methodology §5 Caution (rice flour — exact token; standalone Caution, not Avoid; locked Sept 15, 2026). ${RICE_FLOUR_TAP}`,
   ricePowder:
-    'Methodology §5 Caution (Rice Powder — exact token; distinct from Caution rice flour and from Caution organic rice meal; not Cleared rice hull / rice bran; locked Sept 16, 2026)',
+    'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   riceExtract: `Methodology §5 Limited-risk (unspecified “rice extract” / rice extract blend — opacity). ${RICE_EXTRACT_TAP}`,
   riceMeal:
     'Methodology §5 Caution (organic rice meal — exact token; standalone Caution, not Avoid; locked Sept 15, 2026)',
@@ -156,7 +156,7 @@ const METH = {
   steviaLeaf:
     'Methodology §5 Caution (whole-leaf / crude stevia — do not auto-Clean; distinct from high-purity steviol glycosides / Reb M / Reb A)',
   stevia:
-    'Methodology §5 Cleared (stevia / steviol glycosides, high-purity extract / Rebaudioside A / Rebaudioside M / Reb M)',
+    'Methodology §5 Cleared (organic Rebaudioside A — founder lock t132u Oct 20, 2026; steviol glycoside row).',
   monk: 'Methodology §5 Cleared (monk fruit / mogrosides / Luo Han Guo, high-purity extract)',
   choline:
     'Methodology §5 Cleared (choline bitartrate — exact token as inactive; locked Sept 15, 2026)',
@@ -192,11 +192,11 @@ const METH = {
   modifiedStarch:
     'Methodology §5 Limited-risk (modified starch / Organic Rice Starch / Non-GMO Maize Starch — unspecified/modified-starch row)',
   maltodextrin:
-    'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
+    'Methodology §5 Limited (Tapioca Maltodextrin — founder lock t141u Oct 20, 2026; §4 prior-lock re-eval; distinct from Cleared tapioca starch and from generic maltodextrin when the panel names tapioca source).',
   fructose:
     'Methodology §5 Limited-risk (fructose as sweetener — treat with sugars; not High)',
   allulose: 'Methodology §5 Limited-risk (allulose / D-allulose — novel sweetener; not Avoid)',
-  beeswax: 'Methodology §5 Cleared (beeswax / yellow beeswax / organic yellow beeswax / carnauba wax)',
+  beeswax: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   candelilla:
     'Methodology §5 Cleared (candelilla wax / Candellila Wax typo alias; locked Sept 16, 2026)',
   lecithin:
@@ -1327,7 +1327,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.hilma_daily_fiber_enzymes, 'Rice powder', 'moderate', METH.ricePowder),
       f(CITE.hilma_daily_fiber_enzymes, 'Monk fruit extract', 'cleared', METH.monk),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'Hilma'],
     cleanAlternatives: [
@@ -1780,8 +1780,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_day, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
       f(CITE.plant_people_wonder_day, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic raspberry flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -1844,8 +1844,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens_kids, 'Sodium citrate', 'cleared', METH.citrate),
       f(CITE.plant_people_wonder_greens_kids, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic apple flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     sourcesGeneral: [`${CITE.plant_people_wonder_greens_kids} — ${UNVERIFIED_NOTE}`],
@@ -2340,8 +2340,8 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.solaray_kids_chewable, 'Rose hips fruit (color)', 'cleared', METH.namedColor),
       f(CITE.solaray_kids_chewable, 'Acerola cherry juice powder (color)', 'cleared', METH.namedColor),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Fructose, Natural cherry flavor with other natural flavors, Maltodextrin.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Solaray'],
     sourcesGeneral: [`${CITE.solaray_kids_chewable} — ${UNVERIFIED_NOTE}`],
@@ -2723,7 +2723,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_wake_raspberry_lemonade, 'Stevia extract', 'cleared', METH.stevia),
       f(CITE.rookie_wake_raspberry_lemonade, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [

@@ -128,7 +128,7 @@ const METH = {
     'Methodology §5 Cleared (named corn starch). Not Limited modified starch. The parenthetical in sugar spheres (corn starch and sucrose) is this named starch.',
   stearate: 'Methodology §5 Cleared (magnesium stearate / stearic acid).',
   sucrose:
-    'Methodology §5 Limited-risk (sucrose — existing Limited sugar; Sept 20, 2026 NOW #261 alias). Distinct from Caution bare sugar and from Cleared cane sugar.',
+    'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   sucroseEster:
     'Methodology §5 Caution (sucrose stearate / sucrose distearate — exact tokens; both strings written; locked Sept 23, 2026). Sucrose-ester neighborhood with Caution sucrose fatty acid esters. Not High.',
   talc: 'Methodology §5 High (talc in an oral / swallow product).',
@@ -231,7 +231,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Cholesterol, Hydrogenated lecithin, Polysorbate 80, Trolamine, Vitamin E acetate.`,
+    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
     barcode: d.barcode,

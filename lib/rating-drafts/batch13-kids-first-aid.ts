@@ -153,7 +153,7 @@ const METH = {
   tocopherols:
     'Methodology §5 Cleared (mixed tocopherols / tocopheryl acetate as antioxidants — locked v1.6)',
   castor:
-    'Methodology §5 Cleared (castor oil / hydrogenated castor — oral/topical locked v1.6; not the IV Cremophor case)',
+    'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin — locked v1.6)',
   hypromellose: 'Methodology §5 Cleared (hypromellose)',
   starch: 'Methodology §5 Cleared (simple starches — corn starch / similar)',

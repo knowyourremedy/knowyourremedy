@@ -13,7 +13,7 @@ const VITAMINS = 'Vitamins';
 const METH = {
   cornSyrup: 'Methodology §5 Caution (corn syrup / corn syrup solids).',
   sugar: 'Methodology §5 Caution (bare sugar).',
-  hcoCoconut: 'Methodology §5 Avoid (hydrogenated oils).',
+  hcoCoconut: 'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   cocoaAlkali: 'Methodology §5 Cleared (cocoa powder processed with alkali).',
   nonfatDryMilk: 'Methodology §5 Limited (non-fat dry milk).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
@@ -30,7 +30,7 @@ const METH = {
   hpmc: 'Methodology §5 Cleared (hypromellose / hydroxypropyl methylcellulose).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
   triacetin: 'Methodology §5 Cleared (triacetin).',
   cellulose:

@@ -110,7 +110,7 @@ const METH = {
   pvap:
     'Methodology §5 Caution (polyvinyl acetate phthalate). Polyvinyl acetate pthalate is that spelling (Sept 24, 2026). Same Caution. Not a new grade. Not Avoid.',
   saccharin:
-    'Methodology §5 Caution (sodium saccharin). Saccharin sodium maps here (Sept 25, 2026, 8e480c3). Same token. Not a new grade. Not Avoid.',
+    'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   shellac: 'Methodology §5 Cleared (shellac). Distinct from Caution shellac wax.',
   shellacGlaze:
     'Methodology §5 Cleared (shellac). Shellac glaze maps here (Sept 24, 2026). Not a new grade. Distinct from Caution shellac wax.',

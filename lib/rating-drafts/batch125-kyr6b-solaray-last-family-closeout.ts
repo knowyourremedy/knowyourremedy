@@ -65,7 +65,7 @@ const METH = {
   starch: 'Methodology §5 Cleared (named simple starch / bare starch as filler).',
   stearate: 'Methodology §5 Cleared (magnesium stearate / stearic acid).',
   stevia: 'Methodology §5 Caution (stevia extract / stevia leaf extract).',
-  sucrose: 'Methodology §5 Limited (sucrose = existing Limited sugar, Sept 20). Not High.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   sugaralc: 'Methodology §5 Limited (sorbitol / xylitol).',
   toco: 'Methodology §5 Cleared (mixed tocopherols / ascorbyl palmitate).',
   vegcap: 'Methodology §5 Cleared (capsule cellulose / labeled veg cap).',

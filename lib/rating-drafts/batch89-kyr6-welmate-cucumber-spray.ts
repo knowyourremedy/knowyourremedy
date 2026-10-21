@@ -122,18 +122,18 @@ export const BATCH89_KYR6_WELMATE_CUCUMBER_SPRAY: RatingRecord[] = [
         ['Alcohol denat.', 'limited', 'alcohol'],
         ['Propylene glycol', 'cleared', 'pgTopical'],
         ['Glycerin', 'cleared', 'glycerin'],
-        ['Aloe barbadensis leaf extract', 'limited', 'aloe'],
-        ['Tocopheryl acetate', 'limited', 'tocopherylAcetate'],
-        ['Chamomilla recutita (matricaria) flower extract', 'limited', 'chamomile'],
-        ['Cucumis sativus (cucumber) fruit extract', 'limited', 'cucumber'],
-        ['Disodium cocoamphodipropionate', 'limited', 'cocoampho'],
+        ['Aloe barbadensis leaf extract', 'moderate', 'aloe'],
+        ['Tocopheryl acetate', 'moderate', 'tocopherylAcetate'],
+        ['Chamomilla recutita (matricaria) flower extract', 'moderate', 'chamomile'],
+        ['Cucumis sativus (cucumber) fruit extract', 'moderate', 'cucumber'],
+        ['Disodium cocoamphodipropionate', 'moderate', 'cocoampho'],
         ['Carbomer', 'cleared', 'carbomer'],
         ['Disodium EDTA', 'cleared', 'edta'],
-        ['Triethanolamine', 'limited', 'trolamine'],
+        ['Triethanolamine', 'moderate', 'trolamine'],
       ] as [string, IngredientFlag['riskLevel'], keyof typeof METH][]
     ).map(([name, risk, meth]) => flag(name, risk, labelCite(cite, METH[meth]))),
-    verdict: 'avoid',
-    honestNote: `FOUNDER-LOCK DRAFT: Caution. Drivers are alcohol denat., aloe barbadensis leaf extract, tocopheryl acetate, chamomilla recutita (matricaria) flower extract, cucumis sativus (cucumber) fruit extract, disodium cocoamphodipropionate, and triethanolamine. The Latin cucumber fruit-extract string maps to existing cucumber extract Caution. Same token. Not a new grade. Aloe barbadensis leaf extract maps to existing aloe as an Other Ingredient. Disodium cocoamphodipropionate is the locked exact token. Tocopheryl acetate stays Caution and is not Cleared DL-alpha tocopheryl acetate. The chamomile Latin string sits on topical chamomile Caution, not the oral Cleared chamomile-flower food row. Topical propylene glycol stays Cleared. Carbomer and the UNII carbomer 940 are the same Cleared row. Disodium EDTA stays the Cleared trace row, not tetrasodium EDTA. No High. Lidocaine as the active stays parked. DailyMed says adults and children 2 years and older, and children under 12 consult a doctor. This draft uses 12+ and does not add a kids row. ${LIMITED_STACK} Pack sizes share formulaId \\\`welmate-b89-lidocaine-5-spray\\\` when this OI list holds. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol denat., Aloe barbadensis leaf extract, Tocopheryl acetate, Chamomilla recutita (matricaria) flower extract, Cucumis sativus (cucumber) fruit extract, Disodium cocoamphodipropionate, Triethanolamine.`,
+    verdict: 'caution',
+    honestNote: `FOUNDER-LOCK DRAFT: Caution. Drivers are alcohol denat., aloe barbadensis leaf extract, tocopheryl acetate, chamomilla recutita (matricaria) flower extract, cucumis sativus (cucumber) fruit extract, disodium cocoamphodipropionate, and triethanolamine. The Latin cucumber fruit-extract string maps to existing cucumber extract Caution. Same token. Not a new grade. Aloe barbadensis leaf extract maps to existing aloe as an Other Ingredient. Disodium cocoamphodipropionate is the locked exact token. Tocopheryl acetate stays Caution and is not Cleared DL-alpha tocopheryl acetate. The chamomile Latin string sits on topical chamomile Caution, not the oral Cleared chamomile-flower food row. Topical propylene glycol stays Cleared. Carbomer and the UNII carbomer 940 are the same Cleared row. Disodium EDTA stays the Cleared trace row, not tetrasodium EDTA. No High. Lidocaine as the active stays parked. DailyMed says adults and children 2 years and older, and children under 12 consult a doctor. This draft uses 12+ and does not add a kids row. ${LIMITED_STACK} Pack sizes share formulaId \\\`welmate-b89-lidocaine-5-spray\\\` when this OI list holds. No dosing or medical advice. Draft, not verified., Aloe barbadensis leaf extract, Tocopheryl acetate, Chamomilla recutita (matricaria) flower extract, Cucumis sativus (cucumber) fruit extract, Disodium cocoamphodipropionate, Triethanolamine.`,
     retailers: [...AMAZON],
     cleanAlternatives: [
       alt(
@@ -175,19 +175,19 @@ for (const record of _ROWS) {
     throw new Error('batch89 cite must quote the printed inactive list');
   }
   const cucumber = record.inactiveIngredients.find((i) => i.name === 'Cucumis sativus (cucumber) fruit extract');
-  if (!cucumber || cucumber.riskLevel !== 'limited' || !/cucumber extract/.test(cucumber.source ?? '') || !/Same token/.test(cucumber.source ?? '')) {
+  if (!cucumber || cucumber.riskLevel !== 'moderate' || !/cucumber extract/.test(cucumber.source ?? '') || !/Same token/.test(cucumber.source ?? '')) {
     throw new Error('batch89 cucumber string must map to existing cucumber extract Caution');
   }
   const aloe = record.inactiveIngredients.find((i) => i.name === 'Aloe barbadensis leaf extract');
-  if (!aloe || aloe.riskLevel !== 'limited') throw new Error('batch89 aloe must stay the mapped Caution row');
+  if (!aloe || aloe.riskLevel !== 'moderate') throw new Error('batch89 aloe must stay the mapped Caution row');
   const coco = record.inactiveIngredients.find((i) => i.name === 'Disodium cocoamphodipropionate');
-  if (!coco || coco.riskLevel !== 'limited') throw new Error('batch89 cocoampho must stay Caution');
+  if (!coco || coco.riskLevel !== 'moderate') throw new Error('batch89 cocoampho must stay Caution');
   const tocopheryl = record.inactiveIngredients.find((i) => i.name === 'Tocopheryl acetate');
-  if (!tocopheryl || tocopheryl.riskLevel !== 'limited' || !/Not Cleared DL-alpha/.test(tocopheryl.source ?? '')) {
+  if (!tocopheryl || tocopheryl.riskLevel !== 'moderate' || !/Not Cleared DL-alpha/.test(tocopheryl.source ?? '')) {
     throw new Error('batch89 tocopheryl acetate must stay Caution, not DL-alpha');
   }
   const chamomile = record.inactiveIngredients.find((i) => /chamomilla recutita/i.test(i.name));
-  if (!chamomile || chamomile.riskLevel !== 'limited') throw new Error('batch89 chamomile must stay topical Caution');
+  if (!chamomile || chamomile.riskLevel !== 'moderate') throw new Error('batch89 chamomile must stay topical Caution');
   if (record.form !== 'spray') throw new Error('batch89 is a spray');
 }
 const _blob = _ROWS.map((r) => `${r.productName} ${r.honestNote} ${r.inactiveIngredients.map((i) => i.name).join(' | ')}`).join('\n');

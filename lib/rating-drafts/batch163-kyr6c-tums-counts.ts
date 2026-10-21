@@ -26,7 +26,7 @@ const METH = {
   flavors: 'Methodology §5 Caution (bare flavors). Not the Avoid driver.',
   mineral: 'Methodology §5 Caution (oral mineral oil). Not the topical ointment row. Not the Avoid driver.',
   polyphosphate: 'Methodology §5 Caution (sodium polyphosphate). Own row. Not a phosphate salt. Not phosphoric acid. Not the Avoid driver.',
-  sucrose: 'Methodology §5 Limited (sucrose, sugar). Not the Avoid driver.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   talc: 'Methodology §5 High (talc). Avoid.',
 } as const;
 

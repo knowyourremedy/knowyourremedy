@@ -15,8 +15,8 @@ const OTC = 'OTC' as const;
 const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 
 const METH = {
-  sucralose: 'Methodology §5 Moderate (sucralose).',
-  pg: 'Methodology §5 Moderate (oral propylene glycol).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavor: 'Methodology §5 Limited (flavor / flavors).',
   sorbitol: 'Methodology §5 Limited (sorbitol / sorbitol solution).',
   benzoate: 'Methodology §5 Limited (sodium benzoate).',
@@ -58,15 +58,15 @@ export const BATCH135_KYR6B_ZYRTEC_8OZ_SYRUP: RatingRecord[] = [
     inactiveIngredients: [
       flag('Sucralose', 'limited', METH.sucralose),
       flag('Propylene glycol', 'limited', METH.pg),
-      flag('Flavors', 'limited', METH.flavor),
-      flag('Sorbitol Solution', 'limited', METH.sorbitol),
-      flag('Sodium benzoate', 'limited', METH.benzoate),
+      flag('Flavors', 'moderate', METH.flavor),
+      flag('Sorbitol Solution', 'moderate', METH.sorbitol),
+      flag('Sodium benzoate', 'moderate', METH.benzoate),
       flag('Anhydrous citric acid', 'cleared', METH.cleared),
       flag('Purified water', 'cleared', METH.cleared),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 8 oz grape syrup PDP prints the same inactive list as childrens-zyrtec-liquid, so this row reuses that formula. The 4 fl oz row was not rewritten. Ages 2+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Flavors, Sorbitol Solution, Sodium benzoate.',
+      'FOUNDER-LOCK DRAFT: Avoid. Drivers are sucralose and oral propylene glycol. Dye-free is not Clean. The 8 oz grape syrup PDP prints the same inactive list as childrens-zyrtec-liquid, so this row reuses that formula. The 4 fl oz row was not rewritten. Ages 2+.',
     retailers: [...RETAILERS],
     cleanAlternatives: KIDS_ALTS,
     sourcesGeneral: [

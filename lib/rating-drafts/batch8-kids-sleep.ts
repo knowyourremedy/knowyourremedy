@@ -101,7 +101,7 @@ const METH = {
   sorbitol: 'Methodology §5 Limited-risk (sugar alcohols — sorbitol)',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin — locked v1.6)',
-  organicFlavor: 'Methodology §5 Cleared (organic agave / organic flavors / organic colors)',
+  organicFlavor: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   cleared: 'Methodology §5 Cleared',
 } as const;
 

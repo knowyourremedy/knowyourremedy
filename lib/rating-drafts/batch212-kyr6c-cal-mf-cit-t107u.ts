@@ -15,7 +15,7 @@ const METH = {
   dye: 'Methodology §5 Avoid (synthetic dye / FD&C lake).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
-  peg: 'Methodology §5 Moderate (polyethylene glycol).',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   pva: 'Methodology §5 Cleared (polyvinyl alcohol, oral coating).',
   talc: 'Methodology §5 Avoid (talc). Magnesium silicate is that row in a swallowed product.',
   tio2: 'Methodology §5 Avoid (titanium dioxide).',
@@ -24,13 +24,13 @@ const METH = {
   citric: 'Methodology §5 Cleared (citric acid).',
   cornSyrup: 'Methodology §5 Caution (corn syrup / corn syrup solids).',
   hcoPalm:
-    'Methodology §5 Avoid (hydrogenated oils). Hydrogenated Palm Oil maps here (Oct 17, 2026 t107u).',
-  hcoCoconut: 'Methodology §5 Avoid (hydrogenated oils).',
+    'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
+  hcoCoconut: 'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
   monoDiGlycerides:
     'Methodology §5 Caution (mono- and diglycerides, unspecified blend).',
   naFlavors: 'Methodology §5 Limited (natural and artificial flavors).',
   polydextrose: 'Methodology §5 Limited (polydextrose).',
-  sucralose: 'Methodology §5 Moderate (sucralose).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sugar: 'Methodology §5 Caution (bare sugar).',
   invertSugar:
     'Methodology §5 Caution (bare sugar). Invert Sugar maps here (Oct 17, 2026 t107u).',
@@ -40,7 +40,7 @@ const METH = {
   nonfatDryMilk: 'Methodology §5 Limited (non-fat dry milk).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
   lecithinSoy: 'Methodology §5 Cleared (lecithin / soy lecithin).',
-  propyleneGlycol: 'Methodology §5 Moderate (propylene glycol, oral).',
+  propyleneGlycol: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   salt: 'Methodology §5 Cleared (sodium chloride / named salt). Salt maps here (Oct 17, 2026 t107u).',
   cellulose:
     'Methodology §5 Cleared (cellulose / microcrystalline cellulose / vegetable cellulose).',

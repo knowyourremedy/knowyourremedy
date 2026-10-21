@@ -333,7 +333,7 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Coating',
-        'cleared',
+        'moderate',
         labelCite(CITE.glucosamine, METH.unnamedCoat),
       ),
       flag(
@@ -375,12 +375,12 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Stevia leaf extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.peachMg, METH.steviaLeaf),
       ),
       flag(
         'Beta carotene',
-        'cleared',
+        'moderate',
         labelCite(CITE.peachMg, METH.betaCarotene),
       ),
       flag('Natural flavors', 'limited', labelCite(CITE.peachMg, METH.flavors)),

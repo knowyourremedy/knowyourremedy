@@ -24,9 +24,9 @@ const RETAILERS = ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'] as const;
 const METH = {
   dye: 'Methodology §5 High (synthetic dyes, including lake forms). Avoid.',
   tio2: 'Methodology §5 High (titanium dioxide). Avoid.',
-  peg: 'Methodology §5 Moderate (polyethylene glycol). Not the Avoid driver.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   glycyrrhizin:
     'Methodology §5 Caution (monoammonium glycyrrhizinate → ammonium glycyrrhizin, Oct 13, 2026). Same salt. Not dipotassium glycyrrhizinate. Not the Cleared licorice row. Not the Avoid driver.',
   poloxamer:
@@ -35,7 +35,7 @@ const METH = {
   sorbitol: 'Methodology §5 Limited (sorbitol solution). Not the Avoid driver.',
   flavors: 'Methodology §5 Limited (flavors). Not the Avoid driver.',
   benzoate: 'Methodology §5 Limited (sodium benzoate). Not the Avoid driver.',
-  sucrose: 'Methodology §5 Limited (sucrose). Not the Avoid driver.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   carnauba: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution). Not the Avoid driver.',
   phosphate: 'Methodology §5 Cleared (dibasic calcium phosphate → calcium phosphate).',
   cellulose: 'Methodology §5 Cleared (microcrystalline cellulose).',

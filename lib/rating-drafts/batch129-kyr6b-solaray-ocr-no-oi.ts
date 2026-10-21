@@ -59,7 +59,7 @@ const METH = {
   mgoh: "Methodology \u00a75 Cleared (magnesium hydroxide as pH adjuster).",
   oilfill: "Methodology \u00a75 Cleared (named oil as non-gummy capsule / softgel fill). Gummy and lozenge seed oils stay High.",
   oilhigh: "Methodology \u00a75 High (gummy / lozenge seed or vegetable oil). Avoid.",
-  hvo: "Methodology \u00a75 Caution (hydrogenated vegetable oil as an other ingredient, not a gummy).",
+  hvo: "Methodology \u00a75 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.",
   flavor: "Methodology \u00a75 Caution (named flavor). Bare Natural [fruit] maps here. Exact \u201cNatural flavors\u201d opacity stays Limited.",
   natflavor: "Methodology \u00a75 Limited (exact natural flavors opacity). Not flipped.",
   stevia: "Methodology \u00a75 Caution (stevia extract / stevia leaf extract).",

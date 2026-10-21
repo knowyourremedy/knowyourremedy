@@ -2914,7 +2914,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('542b41dd-f285-4e48-a67b-8e69523b143a'),
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -2971,7 +2971,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('b957a592-e51b-61fc-e053-2995a90aaabd'),
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,
@@ -2999,7 +2999,7 @@ export const BATCH34_BOIRON: RatingRecord[] = [
       { name: 'Arnica montana', strength: '1X HPUS 7%' },
     ],
     inactiveIngredients: sheaPanel('6b3c511c-7b11-203f-e053-2991aa0a6e01'),
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...BOIRON_RETAILERS],
     cleanAlternatives: ARNICARE_GEL_ALTS,

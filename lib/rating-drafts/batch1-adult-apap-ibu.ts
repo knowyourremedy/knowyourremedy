@@ -27,9 +27,9 @@ const METH = {
   parabens: 'Methodology §5 High-tier (parabens)',
   talc: 'Methodology §5 High-tier (talc — IARC 2A; no pharma-grade exception)',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   maltodextrin: 'Methodology §5 Limited-risk (non-organic maltodextrin)',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',

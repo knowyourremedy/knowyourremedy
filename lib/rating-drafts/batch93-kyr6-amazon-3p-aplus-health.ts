@@ -331,7 +331,7 @@ const COMPACT: Compact[] = [
       ['Purified water', 'limited', 'water'],
     ],
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Polyethylene glycol is Moderate. Sorbitan is the locked Caution emulsifier. No dye and no titanium dioxide on this panel. Dye-free is the carton word. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Sorbitan, Sorbitol, Gelatin, Potassium hydroxide, Purified water.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Polyethylene glycol is Moderate. Sorbitan is the locked Caution emulsifier. No dye and no titanium dioxide on this panel. Dye-free is the carton word. Avoid needs High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Gelatin, Potassium hydroxide, Purified water.',
     cite: `DailyMed SPL (${DM}4227d0b7-846a-dcb0-e063-6294a90af7d7; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 400 mini capsules). Inactive ingredients: gelatin, polyethylene glycol, potassium hydroxide, purified water, sorbitan and sorbitol. Ages 12+ (under 12: ask a doctor).`,
   },
   {

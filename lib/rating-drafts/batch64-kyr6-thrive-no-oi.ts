@@ -111,7 +111,7 @@ const METH = {
   flavors:
     'Methodology §5 Limited-risk (natural / artificial flavors — opacity). Product display key is caution when this is the worst inactive (Limited-only never Avoid).',
   maltodextrin:
-    'Methodology §5 Limited-risk (maltodextrin — organic or non-organic; same Limited)',
+    'Methodology §5 Limited (Tapioca Maltodextrin — founder lock t141u Oct 20, 2026; §4 prior-lock re-eval; distinct from Cleared tapioca starch and from generic maltodextrin when the panel names tapioca source).',
   alcohol: `Methodology §5 Limited-risk (alcohol / ethyl alcohol / cane spirits as a VEHICLE — Limited, not Avoid). ${ALCOHOL_TAP}`,
   lemonOil:
     'Methodology §5 Limited-risk (named lemon oil as flavor — Limited, same class as natural flavors; locked Sept 14, 2026). In this topical EO blend the scent/EO Caution form rule also applies — product display key is caution either way.',

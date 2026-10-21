@@ -810,12 +810,12 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       { name: 'Natural Defense Blend (includes natural lemon flavor on the Facts panel)', strength: 'label serving' },
     ],
     inactives: [
-      flag('Sorbitol', 'limited', labelCite(CITE.zincLozenge, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', labelCite(CITE.zincLozenge, METH.sorbitol)),
       flag('Fructose', 'limited', labelCite(CITE.zincLozenge, METH.fructose)),
       labelCleared(CITE.zincLozenge, 'Cellulose'),
       labelCleared(CITE.zincLozenge, 'Calcium stearate'),
       labelCleared(CITE.zincLozenge, 'Brown rice syrup solids'),
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.zincLozenge, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.zincLozenge, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -833,7 +833,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     inactives: [
       labelCleared(CITE.vitC1000, 'Vegetarian cellulose capsule'),
       labelCleared(CITE.vitC1000, 'Magnesium stearate'),
-      flag('Silicon dioxide', 'cleared', labelCite(CITE.vitC1000, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CITE.vitC1000, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -854,7 +854,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       labelCleared(CITE.zinc50, 'Stearic acid'),
       labelCleared(CITE.zinc50, 'Calcium stearate'),
       labelCleared(CITE.zinc50, 'Glycerin'),
-      flag('Silicon dioxide (silica)', 'cleared', labelCite(CITE.zinc50, METH.sio2)),
+      flag('Silicon dioxide (silica)', 'limited', labelCite(CITE.zinc50, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -874,7 +874,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       labelCleared(CITE.b12pr, 'Stearic acid'),
       labelCleared(CITE.b12pr, 'Calcium stearate'),
       labelCleared(CITE.b12pr, 'Glycerin'),
-      flag('Silicon dioxide (silica)', 'cleared', labelCite(CITE.b12pr, METH.sio2)),
+      flag('Silicon dioxide (silica)', 'limited', labelCite(CITE.b12pr, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -890,7 +890,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     inactives: [
       labelCleared(CITE.lysine1000, 'Vegetable stearates'),
       labelCleared(CITE.lysine1000, 'Modified cellulose'),
-      flag('Silicon dioxide (silica)', 'cleared', labelCite(CITE.lysine1000, METH.sio2)),
+      flag('Silicon dioxide (silica)', 'limited', labelCite(CITE.lysine1000, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -908,7 +908,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       labelCleared(CITE.lysine500, 'Vegetable stearates'),
       labelCleared(CITE.lysine500, 'Cellulose'),
       labelCleared(CITE.lysine500, 'Modified cellulose'),
-      flag('Silicon dioxide (silica)', 'cleared', labelCite(CITE.lysine500, METH.sio2)),
+      flag('Silicon dioxide (silica)', 'limited', labelCite(CITE.lysine500, METH.sio2)),
     ],
     verdict: 'caution',
     note:
@@ -980,7 +980,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     productType: VITAMIN,
     actives: [{ name: 'Vitamin B-12', strength: 'label serving' }],
     inactives: [
-      flag('Natural flavors (raspberry / berry)', 'limited', labelCite(CITE.b12af, METH.flavors)),
+      flag('Natural flavors (raspberry / berry)', 'moderate', labelCite(CITE.b12af, METH.flavors)),
     ],
     verdict: 'caution',
     note:
@@ -1000,7 +1000,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     inactives: [
       labelCleared(CITE.bComplex, 'Vegetable glycerin'),
       labelCleared(CITE.bComplex, 'Deionized water'),
-      flag('Raspberry natural flavor', 'limited', labelCite(CITE.bComplex, METH.flavors)),
+      flag('Raspberry natural flavor', 'moderate', labelCite(CITE.bComplex, METH.flavors)),
       flag('Lemon essential oil', 'limited', labelCite(CITE.bComplex, METH.lemonOil)),
     ],
     verdict: 'caution',
@@ -1098,7 +1098,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     actives: [{ name: 'Vitamin B-12', strength: '500 mcg' }],
     inactives: [
       labelCleared(CITE.b12500, 'Lactose'),
-      flag('Resin (unspecified)', 'cleared', labelCite(CITE.b12500, METH.resin)),
+      flag('Resin (unspecified)', 'moderate', labelCite(CITE.b12500, METH.resin)),
       labelCleared(CITE.b12500, 'Cellulose'),
       labelCleared(CITE.b12500, 'Calcium stearate'),
     ],
@@ -1124,7 +1124,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       labelCleared(CITE.calCitrate, 'Glycerin'),
       flag(
         'Magnesium trisilicate',
-        'cleared',
+        'moderate',
         labelCite(CITE.calCitrate, METH.trisilicate),
       ),
     ],
@@ -1175,7 +1175,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     ],
     inactives: [
       flag('Titanium dioxide', 'high', labelCite(CITE.omega3Turmeric, METH.tio2)),
-      flag('Annatto extract', 'cleared', labelCite(CITE.omega3Turmeric, METH.annatto)),
+      flag('Annatto extract', 'moderate', labelCite(CITE.omega3Turmeric, METH.annatto)),
       labelCleared(CITE.omega3Turmeric, 'Gelatin'),
       labelCleared(CITE.omega3Turmeric, 'Glycerin'),
       labelCleared(CITE.omega3Turmeric, 'Purified water'),

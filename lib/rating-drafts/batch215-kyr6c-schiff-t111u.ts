@@ -225,7 +225,7 @@ export const BATCH215_KYR6C_SCHIFF_T111U: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_BRAIN_ENERGY, BRAIN_ENERGY_FLAGS),
     verdict: verdictFromFlags(BRAIN_ENERGY_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Corn syrup, Natural flavor.',
+    honestNote: '',
     retailers: ['iHerb', 'Vitacost'],
     sourcesGeneral: [
       `Salsify ©2022 Back of Pack 4786599627 was read; iHerb and Vitacost text match. Serving size 3 gummies, 25 servings; Calories 50; Total Carbohydrate 12 g (4%); Total Sugars 9 g; Includes 9 g Added Sugars (18%); Sodium 30 mg (1%). Label: adults 18+; not recommended for children or those sensitive to caffeine. Actives ungraded (caffeine 66 mg; no activeSafetyFlag). Other ingredients: sugar, corn syrup, water, orange juice concentrate, pectin, natural flavor, citric acid, colors from fruits and vegetables. Pack not on schiffvitamins.com; Salsify manufacturer catalog is brand-listed per L77. iHerb https://www.iherb.com/pr/schiff-neuriva-brain-energy-natural-blackberry-75-gummies/122300 In Stock. Vitacost Add to cart $29.86 (exp 02/01/2027). UPC 647865996279 Salsify, Vitacost barcode, iHerb UPC field.`,

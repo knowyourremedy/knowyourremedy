@@ -631,7 +631,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       { name: 'Comfrey root', strength: '4X HPUS' },
     ],
     inactiveIngredients: [
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.tReliefXsGel, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.tReliefXsGel, METH.phenoxy)),
       flag('Alcohol', 'limited', dailymed(SET.tReliefXsGel, METH.alcoholVehicle)),
       flag('Carbomer homopolymer type C', 'cleared', dailymed(SET.tReliefXsGel, METH.carbomer)),
       flag('Sodium hydroxide', 'cleared', dailymed(SET.tReliefXsGel, METH.naoh)),
@@ -668,7 +668,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       { name: 'Comfrey root', strength: '4X HPUS' },
     ],
     inactiveIngredients: [
-      flag('Phenoxyethanol', 'cleared', dailymed(SET.tReliefPainGel, METH.phenoxy)),
+      flag('Phenoxyethanol', 'moderate', dailymed(SET.tReliefPainGel, METH.phenoxy)),
       flag('Alcohol', 'limited', dailymed(SET.tReliefPainGel, METH.alcoholVehicle)),
       flag('Carbomer homopolymer type C', 'cleared', dailymed(SET.tReliefPainGel, METH.carbomer)),
       flag('Sodium hydroxide', 'cleared', dailymed(SET.tReliefPainGel, METH.naoh)),
@@ -762,7 +762,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       { name: 'Thuja occidentalis leafy twig', strength: '6X HPUS' },
     ],
     inactiveIngredients: [
-      flag('Stevia rebaudiana leaf', 'cleared', dailymed(SET.clearlifeTabs, METH.steviaLeaf)),
+      flag('Stevia rebaudiana leaf', 'moderate', dailymed(SET.clearlifeTabs, METH.steviaLeaf)),
       flag('Maltodextrin', 'limited', dailymed(SET.clearlifeTabs, METH.maltodextrin)),
       flag('Citric acid', 'cleared', dailymed(SET.clearlifeTabs, METH.cleared)),
       flag('Lactose', 'cleared', dailymed(SET.clearlifeTabs, METH.cleared)),
@@ -799,7 +799,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       { name: 'Sulfur', strength: '4X HPUS' },
     ],
     inactiveIngredients: [
-      flag('Stevia rebaudiana leaf', 'cleared', dailymed(SET.reboostZincLemon, METH.steviaLeaf)),
+      flag('Stevia rebaudiana leaf', 'moderate', dailymed(SET.reboostZincLemon, METH.steviaLeaf)),
       flag('Maltodextrin', 'limited', dailymed(SET.reboostZincLemon, METH.maltodextrin)),
       flag('Lactose', 'cleared', dailymed(SET.reboostZincLemon, METH.cleared)),
       flag('Magnesium stearate', 'cleared', dailymed(SET.reboostZincLemon, METH.cleared)),
@@ -1493,7 +1493,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
       { name: 'Cardiospermum halicacabum flowering top', strength: '1X HPUS' },
     ],
     inactiveIngredients: [
-      flag('Benzyl alcohol', 'cleared', dailymed(SET.florasone, METH.benzylAdult)),
+      flag('Benzyl alcohol', 'moderate', dailymed(SET.florasone, METH.benzylAdult)),
       flag('Alcohol', 'limited', dailymed(SET.florasone, METH.alcoholVehicle)),
       flag('Mineral oil', 'cleared', dailymed(SET.florasone, METH.mineralOil)),
       flag('Glycol stearate', 'cleared', dailymed(SET.florasone, METH.glycolStearate)),
@@ -1521,7 +1521,7 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     form: 'cream',
     activeIngredients: [{ name: 'Mahonia aquifolium root bark', strength: '2X HPUS' }],
     inactiveIngredients: [
-      flag('Benzyl alcohol', 'cleared', dailymed(SET.psoriaflora, METH.benzylAdult)),
+      flag('Benzyl alcohol', 'moderate', dailymed(SET.psoriaflora, METH.benzylAdult)),
       flag('Alcohol', 'limited', dailymed(SET.psoriaflora, METH.alcoholVehicle)),
       flag('Mineral oil', 'cleared', dailymed(SET.psoriaflora, METH.mineralOil)),
       flag('Glycol stearate', 'cleared', dailymed(SET.psoriaflora, METH.glycolStearate)),
@@ -1556,15 +1556,15 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     inactiveIngredients: [
       flag('Alcohol', 'limited', dailymed(SET.coughDay, METH.alcoholVehicle)),
       flag('Potassium sorbate', 'limited', dailymed(SET.coughDay, METH.sorbate)),
-      flag('Sorbitol', 'limited', dailymed(SET.coughDay, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET.coughDay, METH.sorbitol)),
       flag('Oat', 'cleared', dailymed(SET.coughDay, METH.oat)),
       flag('Glycerin', 'cleared', dailymed(SET.coughDay, METH.cleared)),
       flag('Lactose monohydrate', 'cleared', dailymed(SET.coughDay, METH.cleared)),
       flag('Citric acid', 'cleared', dailymed(SET.coughDay, METH.cleared)),
       flag('Purified water', 'cleared', dailymed(SET.coughDay, METH.cleared)),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Potassium sorbate, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughDay) + ' — ' + UNVERIFIED_NOTE, CARLSTON],
@@ -1592,15 +1592,15 @@ export const BATCH37_MEDINATURA_BT: RatingRecord[] = [
     inactiveIngredients: [
       flag('Alcohol', 'limited', dailymed(SET.coughNight, METH.alcoholVehicle)),
       flag('Potassium sorbate', 'limited', dailymed(SET.coughNight, METH.sorbate)),
-      flag('Sorbitol', 'limited', dailymed(SET.coughNight, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET.coughNight, METH.sorbitol)),
       flag('Oat', 'cleared', dailymed(SET.coughNight, METH.oat)),
       flag('Glycerin', 'cleared', dailymed(SET.coughNight, METH.cleared)),
       flag('Lactose monohydrate', 'cleared', dailymed(SET.coughNight, METH.cleared)),
       flag('Anhydrous citric acid', 'cleared', dailymed(SET.coughNight, METH.cleared)),
       flag('Purified water', 'cleared', dailymed(SET.coughNight, METH.cleared)),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Alcohol, Potassium sorbate, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     cleanAlternatives: ALTS.cold,
     sourcesGeneral: [dmUrl(SET.coughNight) + ' — ' + UNVERIFIED_NOTE, CARLSTON],

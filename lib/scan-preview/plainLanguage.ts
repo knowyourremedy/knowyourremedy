@@ -1262,6 +1262,16 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('High fructose corn syrup is a sweetener. It is not the gummy seed-oil rule.', level);
   }
 
+  if (/tapioca\s+maltodextrin/i.test(n)) {
+    if (level === 'limited' || /founder lock t141u/i.test(source)) {
+      return close(
+        'Tapioca maltodextrin is Limited under the t141u founder lock (§4 prior-lock re-eval). The panel names tapioca as the starch source, distinct from Cleared tapioca starch.',
+        level,
+      );
+    }
+    return close('This is a tapioca-based maltodextrin bulking sweetener.', level);
+  }
+
   if (/^dextrin\b|tapioca dextrin|maltodextrin/.test(n)) {
     return close('This is a starch breakdown product used as a filler or sweetener bulk.', level);
   }

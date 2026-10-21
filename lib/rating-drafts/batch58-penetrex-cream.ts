@@ -205,7 +205,7 @@ export const BATCH58_PENETREX_CREAM: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Steareth-20',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.steareth20),
       ),
       flag(
@@ -213,45 +213,45 @@ export const BATCH58_PENETREX_CREAM: RatingRecord[] = [
         'limited',
         labelCite(CITE.penetrex, `${METH.peg} ${METH.peg100}`),
       ),
-      flag('DMDM Hydantoin', 'cleared', labelCite(CITE.penetrex, METH.dmdm)),
+      flag('DMDM Hydantoin', 'moderate', labelCite(CITE.penetrex, METH.dmdm)),
       flag(
         'Phenoxyethanol',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.phenoxy),
       ),
       flag(
         'Tea Tree (Melaleuca Alternifolia) Leaf Oil',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.teaTree),
       ),
       flag(
         'Ceteareth-20',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.ceteareth20),
       ),
       flag(
         'Ethoxydiglycol',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.ethoxydiglycol),
       ),
       flag(
         'Ammonium Acryloyldimethyltaurate/VP Copolymer',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.ampsVp),
       ),
       flag(
         'Arnica Montana Flower Extract',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.arnica),
       ),
       flag(
         'Frankincense (Boswellia Serrata) Oil',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.boswellia),
       ),
       flag(
         'Camphor',
-        'cleared',
+        'moderate',
         labelCite(CITE.penetrex, METH.camphorInactive),
       ),
       flag(

@@ -24,7 +24,7 @@ const FORMULA = 'benadryl-b158-chewables';
 
 const METH = {
   dye: 'Methodology §5 High (synthetic dyes, including lake forms). Avoid.',
-  sucralose: 'Methodology §5 Moderate (sucralose). Not the Avoid driver.',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   glucose: 'Methodology §5 Caution (dextrose excipient → bare glucose). Not the Avoid driver.',
   sugar: 'Methodology §5 Caution (sugar spheres → bare sugar). Not the Avoid driver.',
   flavors: 'Methodology §5 Caution (bare flavors). Exact “Natural flavors” stays Limited. Not the Avoid driver.',
@@ -76,9 +76,9 @@ export const BATCH158_KYR6B_CHEWABLES: RatingRecord[] = [
       flag('D&C red no. 7 calcium lake', 'high', cite(METH.dye)),
       flag('FD&C blue no. 1 aluminum lake', 'high', cite(METH.dye)),
       flag('Sucralose', 'limited', cite(METH.sucralose)),
-      flag('Dextrose excipient', 'limited', cite(METH.glucose)),
-      flag('Sugar spheres', 'limited', cite(METH.sugar)),
-      flag('Flavors', 'limited', cite(METH.flavors)),
+      flag('Dextrose excipient', 'moderate', cite(METH.glucose)),
+      flag('Sugar spheres', 'moderate', cite(METH.sugar)),
+      flag('Flavors', 'moderate', cite(METH.flavors)),
       cleared('Crospovidone'),
       cleared('Ethylcellulose', METH.ethyl),
       cleared('Gum arabic', METH.gum),

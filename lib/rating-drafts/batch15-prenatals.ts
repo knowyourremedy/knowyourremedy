@@ -176,7 +176,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     inactiveIngredients: [
       flag('Polyethylene glycol', 'limited', labelCite(NM_PRENATAL_TAB_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(NM_PRENATAL_TAB_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(NM_PRENATAL_TAB_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(NM_PRENATAL_TAB_CITE, METH.sio2)),
       labelCleared(NM_PRENATAL_TAB_CITE, 'Cellulose gel'),
       labelCleared(NM_PRENATAL_TAB_CITE, 'Modified food starch'),
       labelCleared(NM_PRENATAL_TAB_CITE, 'Dibasic calcium phosphate'),
@@ -213,7 +213,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Color (annatto extract [seed])',
-        'cleared',
+        'moderate',
         labelCite(OAD_PRENATAL_NO_DYE_CITE, METH.annatto),
       ),
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Gelatin'),
@@ -222,7 +222,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Purified water'),
       labelCleared(OAD_PRENATAL_NO_DYE_CITE, 'Soy lecithin'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
@@ -292,10 +292,10 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('Titanium dioxide', 'high', labelCite(CENTRUM_PRENATAL_CITE, METH.tio2)),
       flag('Talc', 'high', labelCite(CENTRUM_PRENATAL_CITE, METH.talc)),
       flag('BHT (to retard oxidation)', 'high', labelCite(CENTRUM_PRENATAL_CITE, METH.bht)),
-      flag('Carmine (color)', 'cleared', labelCite(CENTRUM_PRENATAL_CITE, METH.carmine)),
+      flag('Carmine (color)', 'moderate', labelCite(CENTRUM_PRENATAL_CITE, METH.carmine)),
       flag('Polyethylene glycol', 'limited', labelCite(CENTRUM_PRENATAL_CITE, METH.peg)),
       flag('Maltodextrin', 'limited', labelCite(CENTRUM_PRENATAL_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(CENTRUM_PRENATAL_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CENTRUM_PRENATAL_CITE, METH.sio2)),
       flag(
         'Tocopherols (to retard oxidation)',
         'cleared',
@@ -340,7 +340,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Red #40 Aluminum Lake', 'high', labelCite(EQUATE_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Blue #2 Aluminum Lake', 'high', labelCite(EQUATE_PRENATAL_CITE, METH.dyes)),
       flag('Polyethylene glycol', 'limited', labelCite(EQUATE_PRENATAL_CITE, METH.peg)),
-      flag('Silicon dioxide', 'cleared', labelCite(EQUATE_PRENATAL_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(EQUATE_PRENATAL_CITE, METH.sio2)),
       labelCleared(EQUATE_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(EQUATE_PRENATAL_CITE, 'Croscarmellose sodium'),
       labelCleared(EQUATE_PRENATAL_CITE, 'Stearic acid'),
@@ -416,7 +416,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Yellow #6 Lake', 'high', labelCite(CVS_PRENATAL_CITE, METH.dyes)),
       flag('BHT', 'high', labelCite(CVS_PRENATAL_CITE, METH.bht)),
       flag('Maltodextrin', 'limited', labelCite(CVS_PRENATAL_CITE, METH.maltodextrin)),
-      flag('Silicon dioxide', 'cleared', labelCite(CVS_PRENATAL_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(CVS_PRENATAL_CITE, METH.sio2)),
       flag(
         'Tocopherols / ascorbyl palmitate',
         'cleared',
@@ -464,7 +464,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Red No. 40 Lake', 'high', labelCite(UPANDUP_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Yellow No. 6 Lake', 'high', labelCite(UPANDUP_PRENATAL_CITE, METH.dyes)),
       flag('Polyethylene glycol', 'limited', labelCite(UPANDUP_PRENATAL_CITE, METH.peg)),
-      flag('Silica', 'cleared', labelCite(UPANDUP_PRENATAL_CITE, METH.sio2)),
+      flag('Silica', 'limited', labelCite(UPANDUP_PRENATAL_CITE, METH.sio2)),
       flag('Maltodextrin', 'limited', labelCite(UPANDUP_PRENATAL_CITE, METH.maltodextrin)),
       labelCleared(UPANDUP_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(UPANDUP_PRENATAL_CITE, 'Hydroxypropyl methylcellulose'),
@@ -504,7 +504,7 @@ export const BATCH15_PRENATALS: RatingRecord[] = [
       flag('FD&C Red 40 Lake', 'high', labelCite(WALGREENS_PRENATAL_CITE, METH.dyes)),
       flag('FD&C Yellow 6 Lake', 'high', labelCite(WALGREENS_PRENATAL_CITE, METH.dyes)),
       flag('Polyethylene glycol', 'limited', labelCite(WALGREENS_PRENATAL_CITE, METH.peg)),
-      flag('Silicon dioxide', 'cleared', labelCite(WALGREENS_PRENATAL_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(WALGREENS_PRENATAL_CITE, METH.sio2)),
       labelCleared(WALGREENS_PRENATAL_CITE, 'Microcrystalline cellulose'),
       labelCleared(WALGREENS_PRENATAL_CITE, 'Croscarmellose sodium'),
       labelCleared(WALGREENS_PRENATAL_CITE, 'Stearic acid'),

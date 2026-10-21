@@ -24,7 +24,7 @@ const METH = {
   anhydrous:
     'Methodology §5 Caution (dextrose anhydrous → dextrose / bare glucose, Oct 7, 2026). Same row. Not a new ingredient. Not the Avoid driver.',
   edta: 'Methodology §5 Caution (edetate disodium → EDTA). Not Cleared trace disodium EDTA. Not Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   cleared: 'Methodology §5 Cleared.',
 } as const;
 
@@ -64,16 +64,16 @@ export const BATCH153_KYR6B_SENSIMIST_72: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Fluticasone furoate', strength: '27.5 mcg / spray' }],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'limited', cite(METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', cite(METH.bkc)),
       cleared('Carboxymethylcellulose sodium'),
-      flag('Dextrose anhydrous', 'limited', cite(METH.anhydrous)),
-      flag('Edetate disodium', 'limited', cite(METH.edta)),
+      flag('Dextrose anhydrous', 'moderate', cite(METH.anhydrous)),
+      flag('Edetate disodium', 'moderate', cite(METH.edta)),
       cleared('Microcrystalline cellulose'),
       flag('Polysorbate 80', 'limited', cite(METH.ps80)),
       cleared('Purified water'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzalkonium chloride, Dextrose anhydrous, Edetate disodium, Polysorbate 80.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,

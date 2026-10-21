@@ -24,7 +24,7 @@ const METH = {
   dicalcium: 'Methodology §5 Cleared (dicalcium phosphate / dibasic calcium phosphate).',
   flavors: 'Methodology §5 Limited (natural flavors).',
   namedFruitFlavor:
-    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   gelatin: 'Methodology §5 Cleared (gelatin).',
   glucose: 'Methodology §5 Cleared (glucose syrup).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
@@ -35,7 +35,7 @@ const METH = {
   magCitrate: 'Methodology §5 Cleared (magnesium citrate, citrate salt).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / vegetable magnesium stearate).',
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
-  mct: 'Methodology §5 Limited (unlabeled medium-chain triglycerides). No plant is named.',
+  mct: 'Methodology §5 Limited (MCT in a gummy — founder lock t132u Oct 20, 2026; no plant source named).',
   modCorn: 'Methodology §5 Limited (modified corn starch).',
   oleic: 'Methodology §5 Cleared (oleic acid — fatty-acid / stearate cousin).',
   palmGummy: 'Methodology §5 Avoid (vegetable oil / palm oil in a gummy).',

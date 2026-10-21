@@ -14,7 +14,7 @@ const VITAMINS = 'Vitamins';
 const METH = {
   beeswax: 'Methodology §5 Cleared (yellow beeswax / beeswax).',
   citric: 'Methodology §5 Cleared (citric acid).',
-  flavor: 'Methodology §5 Limited (natural flavors).',
+  flavor: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   gelatin: 'Methodology §5 Cleared (gelatin).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
   potassiumSorbate: 'Methodology §5 Limited (potassium sorbate, synthetic preservative).',

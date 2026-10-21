@@ -1,5 +1,5 @@
 import type { RatingRecord, RiskLevel } from '../ratingRecord';
-import { isSiliconDioxideStackExempt } from './verdictFromFlags';
+import { isSiliconDioxideStackExempt } from './siliconDioxide';
 
 const SIO2_CAP_METH =
   'Methodology §5 Limited (silicon dioxide / silica — 0-pt nanoparticle Caution cap). Does not by itself make Avoid.';
@@ -48,11 +48,19 @@ export function applyCautionCapLocks(record: RatingRecord): RatingRecord {
     if (ingredient.riskLevel !== 'cleared') return ingredient;
 
     if (/Methodology §5 Caution/.test(src)) {
-      return { ...ingredient, riskLevel: 'moderate' as RiskLevel };
+      return {
+        ...ingredient,
+        riskLevel: 'moderate' as RiskLevel,
+        stackCountExempt: true,
+      };
     }
 
     if (/Methodology §5 Precautionary/.test(src) && /caution/i.test(src)) {
-      return { ...ingredient, riskLevel: 'limited' as RiskLevel };
+      return {
+        ...ingredient,
+        riskLevel: 'moderate' as RiskLevel,
+        stackCountExempt: true,
+      };
     }
 
     if (/Methodology §5 Limited/.test(src)) {
@@ -60,7 +68,11 @@ export function applyCautionCapLocks(record: RatingRecord): RatingRecord {
     }
 
     if (/Founder graded this SKU Caution/i.test(src)) {
-      return { ...ingredient, riskLevel: 'moderate' as RiskLevel };
+      return {
+        ...ingredient,
+        riskLevel: 'moderate' as RiskLevel,
+        stackCountExempt: true,
+      };
     }
 
     return ingredient;

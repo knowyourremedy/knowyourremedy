@@ -43,7 +43,7 @@ const METH = {
   pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
-  saccharin: 'Methodology §5 Moderate-risk (saccharin)',
+  saccharin: 'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   propylGallate: 'Methodology §5 High-tier (propyl gallate — locked v1.6)',
   bha: 'Methodology §5 High-tier (BHA)',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate)',
@@ -378,7 +378,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sorbitol',
-        'limited',
+        'moderate',
         dailymed('5c647ae9-6c14-4661-aba3-53e9e4756edc', METH.sorbitol),
       ),
       flag(
@@ -397,8 +397,8 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('5c647ae9-6c14-4661-aba3-53e9e4756edc', METH.cleared),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Potassium sorbate, Maltodextrin, Sorbitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Sprouts', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_COLD_ALTS,
@@ -496,7 +496,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Xylitol',
-        'limited',
+        'moderate',
         dailymed('149941fb-9b5f-42f2-bf0c-e5980f7daad6', METH.xylitol),
       ),
       flag(
@@ -510,8 +510,8 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
         dailymed('149941fb-9b5f-42f2-bf0c-e5980f7daad6', METH.cleared),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Maltodextrin, Xylitol.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Whole Foods'],
     cleanAlternatives: HOMEOPATHIC_FLU_ALTS,
@@ -595,7 +595,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('76589f60-0f09-4d7a-8aaa-f1965df1fe9d', METH.benzoate),
       ),
       flag(
@@ -816,7 +816,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('6a8cdcad-4881-49b8-a3f1-2c1574300d18', METH.benzoate),
       ),
     ],
@@ -915,17 +915,17 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('fc9a43d8-0359-9def-e053-6294a90a7e91', METH.saccharin),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('fc9a43d8-0359-9def-e053-6294a90a7e91', METH.benzoate),
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('fc9a43d8-0359-9def-e053-6294a90a7e91', METH.flavors),
       ),
     ],
@@ -977,12 +977,12 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('1d5e9cd9-0d76-19e0-e063-6294a90a78fd', METH.saccharin),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('1d5e9cd9-0d76-19e0-e063-6294a90a78fd', METH.benzoate),
       ),
     ],
@@ -1038,7 +1038,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4908b326-e1da-44ca-8087-7e41a16c27b0', METH.benzoate),
       ),
     ],
@@ -1271,7 +1271,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide (colloidal)',
-        'cleared',
+        'limited',
         dailymed('0e4717a1-914b-466d-8bf0-d37ebc32fdb3', METH.sio2),
       ),
       flag(
@@ -1337,7 +1337,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('2b962d87-6ff5-4c0f-8504-e5b61c940612', METH.sio2),
       ),
     ],
@@ -1502,7 +1502,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Silicon dioxide',
-        'cleared',
+        'limited',
         dailymed('9cb3719b-44bc-4ad1-a9c5-e6cc047f4d0e', METH.sio2),
       ),
     ],
@@ -1543,17 +1543,17 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.benzoate),
       ),
       flag(
         'Flavors',
-        'limited',
+        'moderate',
         dailymed('4490a7e1-d5b9-459c-8751-c24486807981', METH.flavors),
       ),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Sodium benzoate, Flavors.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: ['CVS'],
     cleanAlternatives: COLD_ORAL_ALTS,
@@ -1600,7 +1600,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('4444c05a-eba6-4633-b86f-34f455699fa9', METH.benzoate),
       ),
     ],
@@ -1648,7 +1648,7 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('25a26577-a9f8-49cb-9d75-d8c471e4aaf6', METH.saccharin),
       ),
     ],
@@ -1695,17 +1695,17 @@ export const BATCH3_ADULT_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Saccharin sodium',
-        'moderate',
+        'limited',
         dailymed('2ac53cc7-000f-41fd-b799-4e6d6886fe62', METH.saccharin),
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed('2ac53cc7-000f-41fd-b799-4e6d6886fe62', METH.benzoate),
       ),
       flag(
         'Flavor',
-        'limited',
+        'moderate',
         dailymed('2ac53cc7-000f-41fd-b799-4e6d6886fe62', METH.flavors),
       ),
     ],

@@ -50,7 +50,7 @@ const METH = {
   soy: 'Methodology §5 Limited (bare soy). Not soy lecithin. Not High.',
   stearate: 'Methodology §5 Cleared (magnesium stearate / stearic acid).',
   stevia: 'Methodology §5 Caution (stevia extract / stevia leaf extract).',
-  sucrose: 'Methodology §5 Limited (sucrose = existing Limited sugar, Sept 20). Not High. Not flipped to Avoid.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   tapiocasyrup: 'Methodology §5 Cleared (tapioca syrup). Organic tapioca syrup is the same row.',
   vegcap: 'Methodology §5 Cleared (capsule cellulose / labeled veg cap). Vegetable Celluose Capsule is the spelling of Vegetable Cellulose Capsule (Sept 28, 2026).',
   water: 'Methodology §5 Cleared (water / purified water).',

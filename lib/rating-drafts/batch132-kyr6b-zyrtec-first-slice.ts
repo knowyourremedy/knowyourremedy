@@ -321,7 +321,7 @@ const COMPACT: Spec[] = [
     form: 'liquid',
     actives: CET_SYRUP,
     flags: syrupFlags(HIVES_SYRUP_SET),
-    verdict: 'avoid',
+    verdict: 'caution',
     note:
       AVOID_SYRUP
       + ' Label ages are 6 years and over.'
@@ -339,7 +339,7 @@ const COMPACT: Spec[] = [
     form: 'chewable tablet',
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
-    verdict: 'avoid',
+    verdict: 'caution',
     note:
       CAUTION_CHEW
       + ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Flavor.',
@@ -356,7 +356,7 @@ const COMPACT: Spec[] = [
     form: 'chewable tablet',
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
-    verdict: 'avoid',
+    verdict: 'caution',
     note:
       CAUTION_CHEW
       + ' Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Flavor.',
@@ -374,7 +374,7 @@ const COMPACT: Spec[] = [
     actives: CET10,
     flags: chewFlags(CHEW_SET, true),
     verdict: 'avoid',
-    note: CAUTION_CHEW + ' Carton is dye-free grape. The inactive line still prints flavor.',
+    note: `${CAUTION_CHEW} Carton is dye-free grape. The inactive line still prints flavor. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Flavor.`,
     source: `DailyMed setid ${CHEW_SET}. zyrtec.com chewables ages 6+ 72 count image UPC 300450241283.`,
     kidsAlts: true,
   },
@@ -402,8 +402,8 @@ const COMPACT: Spec[] = [
     form: 'orally disintegrating tablet',
     actives: CET10,
     flags: dissolveFlags(DISSOLVE_SET),
-    verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose, amino methacrylate copolymer, flavors, and mannitol. Amino methacrylate copolymer is the stamped methacrylic enteric row. No High flag. The 12ct children\'s dissolve row on MAIN was not rewritten. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
+    verdict: 'caution',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Drivers are sucralose, amino methacrylate copolymer, flavors, and mannitol. Amino methacrylate copolymer is the stamped methacrylic enteric row. No High flag. The 12ct children\'s dissolve row on MAIN was not rewritten.',
     source: `DailyMed setid ${DISSOLVE_SET}. zyrtec.com/products/zyrtec-children-dissolve-tabs 24 count. UPC 300450242259.`,
     kidsAlts: true,
   },
@@ -417,8 +417,8 @@ const COMPACT: Spec[] = [
     form: 'orally disintegrating tablet',
     actives: CET10,
     flags: dissolveFlags(ADULT_DISSOLVE_SET),
-    verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the children\'s 24ct dissolve in this file. REUSE formula zyrtec-b132-dissolve-10mg. No High flag. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
+    verdict: 'caution',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the children\'s 24ct dissolve in this file. REUSE formula zyrtec-b132-dissolve-10mg. No High flag.',
     source: `DailyMed setid ${ADULT_DISSOLVE_SET}. zyrtec.com/products/zyrtec-adult-dissolve-tabs 24 count. UPC 300450242242.`,
   },
   {
@@ -430,8 +430,8 @@ const COMPACT: Spec[] = [
     form: 'orally disintegrating tablet',
     actives: CET10,
     flags: dissolveFlags(ADULT_DISSOLVE_SET),
-    verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 24ct adult dissolve. REUSE formula zyrtec-b132-dissolve-10mg. The 12 count tab is on zyrtec.com. No GTIN opened for that tab, so UPC is blank. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Amino methacrylate copolymer, Flavors, Mannitol.',
+    verdict: 'caution',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 24ct adult dissolve. REUSE formula zyrtec-b132-dissolve-10mg. The 12 count tab is on zyrtec.com. No GTIN opened for that tab, so UPC is blank.',
     source: `DailyMed setid ${ADULT_DISSOLVE_SET}. zyrtec.com/products/zyrtec-adult-dissolve-tabs 12 count. UPC blank.`,
   },
   {

@@ -490,7 +490,7 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Alcohol denat.', 'limited', dailymed(SET.icyNoMess, METH.alcoholVehicle)),
-      flag('Aminomethylpropanol', 'cleared', dailymed(SET.icyNoMess, METH.amp)),
+      flag('Aminomethylpropanol', 'moderate', dailymed(SET.icyNoMess, METH.amp)),
       flag('Citric acid', 'cleared', dailymed(SET.icyNoMess, METH.citric)),
       flag(
         'Hydroxypropyl methylcellulose',
@@ -531,12 +531,12 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       ),
       flag(
         'Ammonium acryloyldimethyltaurate/VP copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.salonpasDeep, METH.ampsVp),
       ),
       flag(
         'Dimethyl isosorbide',
-        'cleared',
+        'moderate',
         dailymed(SET.salonpasDeep, METH.dmi),
       ),
       flag('Propylene glycol', 'cleared', dailymed(SET.salonpasDeep, METH.pgTopical)),
@@ -565,10 +565,10 @@ export const BATCH44_PAIN_RUBS_LIST2: RatingRecord[] = [
       { name: 'Menthol', strength: '16%' },
     ],
     inactiveIngredients: [
-      flag('Eucalyptus oil', 'cleared', dailymed(SET.tigerLiniment, METH.eucalyptus)),
+      flag('Eucalyptus oil', 'moderate', dailymed(SET.tigerLiniment, METH.eucalyptus)),
       flag(
         'Spike lavender oil',
-        'cleared',
+        'moderate',
         dailymed(SET.tigerLiniment, METH.lavender),
       ),
       flag(

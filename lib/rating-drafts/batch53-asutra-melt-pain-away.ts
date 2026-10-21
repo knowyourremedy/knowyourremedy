@@ -281,25 +281,25 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
       ),
       flag(
         'Tocopheryl Acetate (Vitamin E)',
-        'cleared',
+        'moderate',
         dailymed(SET.dailymed, METH.tocopherylAcetate),
       ),
       flag(
         'Hydroxyacetophenone',
-        'cleared',
+        'moderate',
         dailymed(SET.dailymed, METH.hydroxyaceto),
       ),
       flag('Panthenol', 'cleared', dailymed(SET.dailymed, METH.panthenol)),
       flag('Allantoin', 'cleared', dailymed(SET.dailymed, METH.allantoin)),
       flag(
         'Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate',
-        'cleared',
+        'moderate',
         dailymed(SET.dailymed, METH.pentaerythrityl),
       ),
       flag('Sodium Hydroxide', 'cleared', dailymed(SET.dailymed, METH.naoh)),
       flag(
         'Cymbopogon Flexuosus (East-Indian Lemongrass) Oil',
-        'cleared',
+        'moderate',
         dailymed(SET.dailymed, METH.cymbopogonFlexuosus),
       ),
     ],
@@ -362,7 +362,7 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
       flag('Glycerin USP', 'cleared', labelCite(CITE.thrive, METH.glycerin)),
       flag(
         'Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer',
-        'cleared',
+        'moderate',
         labelCite(CITE.thrive, METH.amps),
       ),
       flag(
@@ -382,7 +382,7 @@ export const BATCH53_ASUTRA_MELT_PAIN_AWAY: RatingRecord[] = [
       ),
       flag(
         'Cymbopogon Citratus (Lemongrass) Oil',
-        'cleared',
+        'moderate',
         labelCite(CITE.thrive, METH.cymbopogonCitratus),
       ),
     ],

@@ -40,7 +40,7 @@ const METH = {
   citric: 'Methodology §5 Cleared (citric acid).',
   dextrose: 'Methodology §5 Caution (glucose / dextrose).',
   crospovidone: 'Methodology §5 Cleared (crospovidone).',
-  namedFlavor: 'Methodology §5 Caution (named flavor). Exact natural flavors stays Limited.',
+  namedFlavor: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   lecithinSunflower: 'Methodology §5 Cleared (lecithin / soy lecithin / sunflower lecithin).',
   stevia: 'Methodology §5 Cleared (stevia / steviol glycosides, high-purity extract).',
 } as const;
@@ -173,7 +173,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_RS_30, PREVAGEN_CAPSULE_FLAGS),
     verdict: verdictFromFlags(PREVAGEN_CAPSULE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: '',
     retailers: ['Meijer', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_RS_30} (FYB-SupFacts-0325, ©2025 Quincy Bioscience) and prevagen.com/products/prevagen-regular-strength-brain-supplements (sku FG-723-30). Serving Size 1 Capsule. Vitamin D (as cholecalciferol) 50 mcg, 250%. Apoaequorin 10 mg. Contains: Milk and Soy. Contains a bioengineered food ingredient. NSF Contents Certified. Other ingredients: microcrystalline cellulose, vegetable capsule (cellulose, water), maltodextrin, contains 2% or less of: casein peptones, lactose, magnesium stearate (vegetable source), modified corn starch, salt, soy peptones, sugar. Meijer https://www.meijer.com/shopping/product/30-capsules/89404700103.html inStock $41.99. prevagen.com available $39.95. UPC brand variant barcode GTIN-14 00894047001034, Meijer key; check digit OK.`,
@@ -197,7 +197,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_RS_60, PREVAGEN_CAPSULE_FLAGS),
     verdict: verdictFromFlags(PREVAGEN_CAPSULE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: '',
     retailers: ['Meijer', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_RS_60} and prevagen.com/products/prevagen-regular-strength-60-count-brain-supplements (sku FG-723-60). Same supplement facts and OI as Regular Strength 30. Meijer https://www.meijer.com/shopping/product/prevagen-regular-strength-capsules-60ct/89404700106.html inStock $79.99. prevagen.com available $74.95. UPC 894047001065; check digit OK.`,
@@ -221,7 +221,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_ES_30, PREVAGEN_CAPSULE_FLAGS),
     verdict: verdictFromFlags(PREVAGEN_CAPSULE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: '',
     retailers: ['Meijer', 'Thrifty White', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_ES_30} and prevagen.com/products/prevagen-extra-strength-brain-supplements (sku FG-811-30). Apoaequorin 20 mg. Same OI as Regular Strength capsules. Meijer https://www.meijer.com/shopping/product/prevagen/89404700110.html inStock. Thrifty White https://shop.thriftywhite.com/prevagen-dietary-supplement-capsules-extra-strength-30-ct/ Current Stock 43 $59.95 UPC 894047001102 (abbreviated OI on TW page not used as panel). prevagen.com available $59.95. UPC 894047001102; check digit OK.`,
@@ -245,7 +245,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_ES_60, PREVAGEN_CAPSULE_FLAGS),
     verdict: verdictFromFlags(PREVAGEN_CAPSULE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: '',
     retailers: ['Meijer', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_ES_60} and prevagen.com/products/prevagen-extra-strength-60-count-brain-supplements (sku FG-811-60). Meijer https://www.meijer.com/shopping/product/prevagen-extra-strength-capsules-20mg-60count/89404700128.html inStock $109.99. prevagen.com available $109.95. UPC 894047001287; check digit OK.`,
@@ -269,7 +269,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_RS_CHEW_BERRY, RS_BERRY_FLAGS),
     verdict: verdictFromFlags(RS_BERRY_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Mannitol, Natural flavors, Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Maltodextrin, Modified corn starch.',
     retailers: ['Meijer', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_RS_CHEW_BERRY} and prevagen.com/products/prevagen-chewables-brain-supplements (sku FG-103-30). Serving Size 1 Tablet; Total Carbohydrate 1 g, <1%. Other ingredients: sorbitol, mannitol, natural flavors, contains 2% or less of: beet juice powder (for color), casein peptones, lactose, magnesium stearate (vegetable source), maltodextrin, modified corn starch, organic agave inulin, organic rebaudioside A (stevia extract), salt, soy peptones, stearic acid, sugar. Meijer https://www.meijer.com/shopping/product/prevagen/89404700115.html inStock. prevagen.com available $39.95. UPC 894047001157; check digit OK.`,
@@ -293,7 +293,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_RS_CHEW_ORANGE, RS_ORANGE_FLAGS),
     verdict: verdictFromFlags(RS_ORANGE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Mannitol, Natural flavors, Annatto extract (for color), Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Maltodextrin, Modified corn starch.',
     retailers: ['Meijer', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_RS_CHEW_ORANGE} and prevagen.com/products/prevagen-orange-chewables-brain-supplements (sku FG-104-30). Other ingredients: sorbitol, mannitol, natural flavors, contains 2% or less of: annatto extract (for color), casein peptones, lactose, magnesium stearate (vegetable source), maltodextrin, modified corn starch, organic agave inulin, organic rebaudioside A (stevia extract), salt, soy peptones, stearic acid, sugar. Meijer https://www.meijer.com/shopping/product/prevagen-regular-strength-orange-flavor-chewables-10mg-30-ct/89404700139.html inStock $41.99. prevagen.com available $39.95. UPC 894047001393; check digit OK.`,
@@ -317,7 +317,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_ES_CHEW_BERRY, ES_BERRY_FLAGS),
     verdict: verdictFromFlags(ES_BERRY_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Mannitol, Natural flavors, Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural flavors, Maltodextrin, Modified corn starch.',
     retailers: ['Meijer', 'Thrifty White', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_ES_CHEW_BERRY} and prevagen.com/products/prevagen-extra-strength-chewables-brain-supplements (sku FG-814-30). Other ingredients: sorbitol, mannitol, natural flavors, contains 2% or less of: beet juice powder (for color), casein peptones, citric acid, lactose, magnesium stearate (vegetable source), maltodextrin, modified corn starch, organic agave inulin, organic rebaudioside A (stevia extract), salt, soy peptones, stearic acid, sugar. Meijer https://www.meijer.com/shopping/product/prevagen/89404700102.html inStock. Thrifty White https://shop.thriftywhite.com/prevagen-dietary-supplement-chewables-tablets-extra-strength-mixed-berry-flavor-30-ct/ Current Stock 22 $59.95 UPC 894047001027 (older TW formula text not used as panel). prevagen.com available $59.95. UPC 894047001027; check digit OK.`,
@@ -363,7 +363,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     ],
     inactiveIngredients: buildOi(PANEL_PV_PRO_30, PREVAGEN_CAPSULE_FLAGS),
     verdict: verdictFromFlags(PREVAGEN_CAPSULE_FLAGS),
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltodextrin, Modified corn starch, Sugar.',
+    honestNote: '',
     retailers: ['Walgreens', 'Target', 'Walmart', 'prevagen.com'],
     sourcesGeneral: [
       `Brand panel ${PANEL_PV_PRO_30} (prints barcode 8 94047 00101 0) and prevagen.com/products/prevagen-professional-formula-brain-supplements (sku FG-513-40). Apoaequorin 40 mg. Same OI as Regular Strength capsules. Contains: Milk and Soy. Walgreens https://www.walgreens.com/store/c/prevagen-professional-formula-daily-capsules/ID=300402929-product in stock $89.99 sold by Walgreens. Target https://www.target.com/p/-/A-1004952791 in stock $89.95 sold by Prevagen (Target Plus). Walmart https://www.walmart.com/ip/Prevagen-Improves-Memory-Professional-Strength-40mg-30-Capsules-Apoaequorin-Vitamin-D-Brain-Supplement-Better-Health-Supports-Healthy-Function/966577712 in stock $89.95 sold by Prevagen Official Store (third party). prevagen.com available $89.95. CVS out of stock not used. UPC 894047001010 GTIN-14 00894047001010; check digit OK.`,

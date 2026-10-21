@@ -74,7 +74,7 @@ const METH = {
   maltodextrin: 'Methodology §5 Limited (maltodextrin).',
   sls: 'Methodology §5 Caution (sodium lauryl sulfate). Not Avoid.',
   sugarAlcohol: 'Methodology §5 Limited (oral sorbitol, mannitol, xylitol, or maltitol powder). Sorbitol solution and noncrystallizing sorbitol solution map here (Sept 26, 2026). Not sorbitol sorbitan solution. Not sorbitol special.',
-  sucrose: 'Methodology §5 Limited (sucrose). Distinct from Caution bare sugar. Split junk "sucrose and water" uses this row plus purified water.',
+  sucrose: 'Methodology §5 Cleared (sucrose / Sucrose). Founder override Oct 17, 2026 t118u; was Limited.',
   natFlavor: 'Methodology §5 Limited (natural flavors / natural and artificial flavors / artificial flavors). Not the Caution named-flavor row.',
   flavor: 'Methodology §5 Caution (flavor family). Split junk "natural and artificial" maps here. Inactive-header menthol, menthol-dl, and non-gel eucalyptus oil map here (Sept 26, 2026). Lime oil, benzaldehyde, masking agent, and prosweet map here (Sept 26, 2026 #348). Ethyl acetate and ethyl butyrate map here (Sept 26, 2026 #349). Not a menthol-inactive class. Not Avoid.',
   ink: 'Methodology §5 Caution (pharmaceutical ink). Split junk "may contain pharmaceutical ink" is this token. Not Avoid.',

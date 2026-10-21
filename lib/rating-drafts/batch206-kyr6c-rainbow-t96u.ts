@@ -116,7 +116,7 @@ const SPECS: RowSpec[] = [
     active: 'Magnesium glycinate',
     oiLine: 'Vegan Capsule, Silica, MCT.',
     flags: [
-      ['Vegan Capsule', 'limited', 'veganCapsule'],
+      ['Vegan Capsule', 'moderate', 'veganCapsule'],
       ['Silica', 'limited', 'silica'],
       ['MCT', 'limited', 'mctUnlabeled'],
     ],

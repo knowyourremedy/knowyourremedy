@@ -245,7 +245,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       flag('Phenoxyethanol', 'moderate', dailymed(SET.foot, METH.phenoxy)),
       flag('Polysorbate 60', 'limited', dailymed(SET.foot, METH.ps60)),
-      flag('Sodium Benzoate', 'limited', dailymed(SET.foot, METH.benzoate)),
+      flag('Sodium Benzoate', 'moderate', dailymed(SET.foot, METH.benzoate)),
       flag('Sodium Hydroxide', 'cleared', dailymed(SET.foot, METH.naoh)),
       flag(
         'Sodium Stearoyl Lactylate',
@@ -262,7 +262,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.foot, 'Water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Polysorbate 60, Sodium Benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Caprylic/Capric Triglyceride, Caprylyl Glycol, Polysorbate 60.',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -284,7 +284,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'calcined kaolin',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.calcinedKaolin),
       ),
       flag(
@@ -295,34 +295,34 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       cleared(SET.bengayPatch, 'glycerin'),
       flag(
         'methyl acrylate/2-ethylhexyl acrylate copolymer',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.acrylate),
       ),
       flag('methylparaben', 'high', dailymed(SET.bengayPatch, METH.parabens)),
       flag(
         'polyacrylic acid',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.polyacrylate),
       ),
       flag('polysorbate 80', 'limited', dailymed(SET.bengayPatch, METH.ps80)),
       flag('propylparaben', 'high', dailymed(SET.bengayPatch, METH.parabens)),
-      flag('silica', 'cleared', dailymed(SET.bengayPatch, METH.sio2)),
+      flag('silica', 'limited', dailymed(SET.bengayPatch, METH.sio2)),
       flag(
         'sodium polyacrylate',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.polyacrylate),
       ),
       flag(
         'sodium polyacrylate starch',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.polyacrylateStarch),
       ),
       flag(
         'sorbitan oleate',
-        'cleared',
+        'moderate',
         dailymed(SET.bengayPatch, METH.sorbitanOleate),
       ),
-      flag('sorbitol', 'limited', dailymed(SET.bengayPatch, METH.sorbitol)),
+      flag('sorbitol', 'moderate', dailymed(SET.bengayPatch, METH.sorbitol)),
       flag('tartaric acid', 'cleared', dailymed(SET.bengayPatch, METH.tartaric)),
       flag('titanium dioxide', 'high', dailymed(SET.bengayPatch, METH.tio2)),
       cleared(SET.bengayPatch, 'water'),
@@ -349,7 +349,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'ammonium hydroxide',
-        'cleared',
+        'moderate',
         dailymed(SET.miOrig, METH.ammoniumHydroxide),
       ),
       flag('carbomer', 'cleared', dailymed(SET.miOrig, METH.carbomer)),
@@ -363,7 +363,7 @@ export const BATCH51_PAIN_FEVER_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       cleared(SET.miOrig, 'purified water'),
       flag('sodium hydroxide', 'cleared', dailymed(SET.miOrig, METH.naoh)),
-      flag('thymol', 'cleared', dailymed(SET.miOrig, METH.thymol)),
+      flag('thymol', 'moderate', dailymed(SET.miOrig, METH.thymol)),
     ],
     verdict: 'avoid',
 

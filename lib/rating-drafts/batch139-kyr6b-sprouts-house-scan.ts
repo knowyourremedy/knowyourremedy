@@ -67,7 +67,7 @@ export const BATCH139_KYR6B_SPROUTS_HOUSE_SCAN: RatingRecord[] = [
     activeIngredients: [{ name: 'N-Acetyl Cysteine', strength: '600 mg' }],
     inactiveIngredients: [
       cleared('Vegetable cellulose (capsule)', METH.vegCell),
-      flag('Rice flour', 'limited', METH.riceFlour),
+      flag('Rice flour', 'moderate', METH.riceFlour),
       cleared('Magnesium stearate (vegetable source)', METH.cleared),
       flag('Silicon dioxide', 'limited', METH.sio2),
     ],

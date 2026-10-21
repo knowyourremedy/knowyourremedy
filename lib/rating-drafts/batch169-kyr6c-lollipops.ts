@@ -12,21 +12,21 @@ const COLD = 'Cold & Flu';
 
 const METH = {
   appleFlavor:
-    'Methodology §5 Cleared (Natural apple flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   berryFlavor:
-    'Methodology §5 Cleared (Natural mixed berry/elderberry flavor — founder lock t132u Oct 20, 2026; named multi-fruit flavor).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   brownRice: 'Methodology §5 Cleared (organic brown rice syrup — rice syrup / brown rice food-state).',
   chicory: 'Methodology §5 Cleared (chicory root fiber — inulin family).',
   citric: 'Methodology §5 Cleared (citric acid).',
   fruit: 'Methodology §5 Cleared (apple puree, strawberry puree, and blackberry puree — named fruit; Clean; not a sugar row; not Usable; not high fructose corn syrup; locked Oct 14, 2026). These are the fruit.',
   honey: 'Methodology §5 Cleared (honey, oral sweetener).',
   honeyFlavor:
-    'Methodology §5 Cleared (Natural honey flavor — founder lock t132u Oct 20, 2026; named flavor; not the honey sweetener).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   juiceColor: 'Methodology §5 Cleared (fruit and vegetable juices for color — named fruit-or-vegetable juice as color).',
   malic: 'Methodology §5 Cleared (malic acid — organic acid with citric).',
   monk: 'Methodology §5 Cleared (monk fruit extract — high-purity monk fruit / mogrosides).',
   strawberryFlavor:
-    'Methodology §5 Cleared (Natural strawberry flavor — founder lock t132u Oct 20, 2026; named Natural [fruit] Flavor family).',
+    'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   tapioca: 'Methodology §5 Cleared (tapioca fiber — same fiber row as soluble tapioca fiber). Not tapioca dextrin.',
 } as const;
 

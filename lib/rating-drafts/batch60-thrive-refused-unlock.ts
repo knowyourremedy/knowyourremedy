@@ -176,7 +176,7 @@ const METH = {
     'Methodology §5 Cleared (Sodium Alginate — alginic family; locked Sept 16, 2026)',
   starch:
     'Methodology §5 Cleared (pregelatinized / corn / potato / tapioca starch / pea starch / similar simple starches)',
-  beeswax: 'Methodology §5 Cleared (beeswax / yellow beeswax / organic yellow beeswax / carnauba wax)',
+  beeswax: 'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   lecithin:
     'Methodology §5 Cleared (lecithin — canola, soy, or sunflower; phospholipids from sunflower lecithin sit here)',
   tocopherols:
@@ -531,8 +531,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_sleep, 'Carnauba wax', 'cleared', METH.beeswax),
       f(CITE.plant_people_wonder_sleep, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic elderberry flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -597,8 +597,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_calm, 'Organic peach flavor', 'limited', METH.flavors),
       f(CITE.plant_people_wonder_calm, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic peach flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -632,8 +632,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_focus, 'Vegetable juice extract (color)', 'cleared', METH.namedColor),
       f(CITE.plant_people_wonder_focus, 'Carnauba wax', 'cleared', METH.beeswax),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Organic citrus flavor, Maltitol, Isomalt.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [
@@ -665,8 +665,8 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.plant_people_wonder_greens, 'Sodium citrate', 'cleared', METH.citrate),
       f(CITE.plant_people_wonder_greens, 'Coconut MCT oil', 'cleared', METH.mctCoconut),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Maltitol, Isomalt, Organic apple flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...THRIVE, 'Plant People'],
     cleanAlternatives: [

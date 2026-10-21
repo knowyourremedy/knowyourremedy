@@ -310,9 +310,9 @@ const METH = {
   aspartame:
     'Methodology §5 High-tier (aspartame — IARC 2B; locked Avoid, §0 override)',
   bht: 'Methodology §5 High-tier (BHT — locked Avoid, EU 2022 endocrine restriction)',
-  peg: 'Methodology §5 Moderate-risk (PEGs — ethylene-oxide / 1,4-dioxane contamination risk)',
-  pg: 'Methodology §5 Moderate-risk (propylene glycol, oral)',
-  sucralose: 'Methodology §5 Moderate-risk (sucralose)',
+  peg: 'Methodology §5 Limited (PEGs / polyethylene glycol — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  pg: 'Methodology §5 Limited (Propylene glycol (oral) — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
+  sucralose: 'Methodology §5 Limited (Sucralose — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   flavors: 'Methodology §5 Limited-risk (natural / artificial flavors — opacity)',
   mannitol: 'Methodology §5 Limited-risk (sugar alcohols — mannitol)',
@@ -760,7 +760,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       { name: 'Fluticasone propionate', strength: '50mcg / spray' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_R6, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_R6, METH.bkc)),
       flag('Polysorbate 80', 'limited', dailymed(SET_R6, METH.ps80)),
       cleared(SET_R6, 'Dextrose'),
       cleared(SET_R6, 'Microcrystalline cellulose'),
@@ -790,7 +790,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     activeIngredients: [{ name: 'Loratadine', strength: '10mg' }],
     inactiveIngredients: [
       flag('Sucralose', 'limited', dailymed(SET_R9, METH.sucralose)),
-      flag('Mannitol', 'limited', dailymed(SET_R9, METH.mannitol)),
+      flag('Mannitol', 'moderate', dailymed(SET_R9, METH.mannitol)),
       flag(
         'Natural and artificial mint flavor',
         'limited',
@@ -802,8 +802,8 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_R9, 'Magnesium stearate'),
       cleared(SET_R9, 'Microcrystalline cellulose'),
     ],
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Mannitol, Natural and artificial mint flavor.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...AMAZON],
     cleanAlternatives: ALLERGY_ALTS,
@@ -829,7 +829,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_K1, METH.sio2),
       ),
       cleared(SET_K1, 'Hypromellose'),
@@ -838,7 +838,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_K1, 'Povidone'),
       cleared(SET_K1, 'Pregelatinized starch (maize)'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     cleanAlternatives: COLD_ORAL_ALTS,
@@ -893,7 +893,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: VITAMIN,
     activeIngredients: [{ name: 'Biotin (as D-biotin)', strength: '5000mcg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(BIOTIN_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(BIOTIN_CITE, METH.sio2)),
       labelCleared(BIOTIN_CITE, 'Microcrystalline cellulose'),
       flag(
         'Vegetable capsule (hydroxypropyl methylcellulose)',
@@ -901,7 +901,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         labelCite(BIOTIN_CITE, METH.hpmc),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     sourcesGeneral: [`${BIOTIN_CITE} — draft, not verified; no DailyMed drug SPL`],
@@ -920,7 +920,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '5mg' }],
     inactiveIngredients: [
-      flag('Silicon dioxide', 'cleared', labelCite(MELATONIN_CITE, METH.sio2)),
+      flag('Silicon dioxide', 'limited', labelCite(MELATONIN_CITE, METH.sio2)),
       labelCleared(MELATONIN_CITE, 'Microcrystalline cellulose'),
       flag(
         'Vegetable capsule (hydroxypropyl methylcellulose)',
@@ -929,7 +929,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       ),
       labelCleared(MELATONIN_CITE, 'Magnesium stearate'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     cleanAlternatives: MELATONIN_ALTS,
@@ -953,14 +953,14 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       { name: 'Oxymetazoline hydrochloride', strength: '0.05%' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_K5A, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_K5A, METH.bkc)),
       flag('Edetate disodium', 'cleared', dailymed(SET_K5A, METH.edta)),
       cleared(SET_K5A, 'Microcrystalline cellulose'),
       cleared(SET_K5A, 'Carboxymethylcellulose sodium'),
       cleared(SET_K5A, 'Povidone'),
       cleared(SET_K5A, 'Purified water'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     cleanAlternatives: NASAL_ALTS,
@@ -984,12 +984,12 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       { name: 'Oxymetazoline hydrochloride', strength: '0.05%' },
     ],
     inactiveIngredients: [
-      flag('Benzalkonium chloride', 'cleared', dailymed(SET_K5B, METH.bkc)),
+      flag('Benzalkonium chloride', 'moderate', dailymed(SET_K5B, METH.bkc)),
       flag('Edetate disodium', 'cleared', dailymed(SET_K5B, METH.edta)),
       cleared(SET_K5B, 'Povidone'),
       cleared(SET_K5B, 'Purified water'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...AMAZON],
     cleanAlternatives: NASAL_ALTS,
@@ -1082,7 +1082,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_R5, METH.dyes),
       ),
-      flag('Silicon dioxide', 'cleared', dailymed(SET_R5, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET_R5, METH.sio2)),
     ],
     verdict: 'avoid',
 
@@ -1110,7 +1110,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_CET_AURO, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_CET_AURO, METH.sio2),
       ),
       cleared(SET_CET_AURO, 'Croscarmellose sodium'),
@@ -1181,11 +1181,11 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'limited',
         dailymed(SET_KIDS_LOR_LIQ, METH.flavors),
       ),
-      flag('Maltitol', 'limited', dailymed(SET_KIDS_LOR_LIQ, METH.maltitol)),
-      flag('Sorbitol', 'limited', dailymed(SET_KIDS_LOR_LIQ, METH.sorbitol)),
+      flag('Maltitol', 'moderate', dailymed(SET_KIDS_LOR_LIQ, METH.maltitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_KIDS_LOR_LIQ, METH.sorbitol)),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed(SET_KIDS_LOR_LIQ, METH.benzoate),
       ),
       flag(
@@ -1197,7 +1197,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       cleared(SET_KIDS_LOR_LIQ, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Natural and artificial grape flavor, Maltitol, Sorbitol, Sodium benzoate.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Natural and artificial grape flavor.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_ALLERGY_ALTS,
@@ -1235,10 +1235,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'limited',
         dailymed(SET_KIDS_LOR_CHEW, METH.flavors),
       ),
-      flag('Mannitol', 'limited', dailymed(SET_KIDS_LOR_CHEW, METH.mannitol)),
+      flag('Mannitol', 'moderate', dailymed(SET_KIDS_LOR_CHEW, METH.mannitol)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_KIDS_LOR_CHEW, METH.sio2),
       ),
     ],
@@ -1270,7 +1270,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_IBU_TIO2, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_IBU_TIO2, METH.sio2),
       ),
       cleared(SET_IBU_TIO2, 'Corn starch'),
@@ -1342,7 +1342,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol 600', 'limited', dailymed(SET_IBU_GELS, METH.peg)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_IBU_GELS, METH.sls),
       ),
       flag('Lecithin', 'cleared', dailymed(SET_IBU_GELS, METH.lecithin)),
@@ -1380,7 +1380,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_NAPROXEN, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_NAPROXEN, METH.sio2),
       ),
     ],
@@ -1415,7 +1415,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_DUAL, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_DUAL, METH.sio2),
       ),
     ],
@@ -1555,10 +1555,10 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polysorbate 80', 'limited', dailymed(SET_INF_IBU, METH.ps80)),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed(SET_INF_IBU, METH.benzoate),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_INF_IBU, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_INF_IBU, METH.sorbitol)),
       flag(
         'Natural and artificial berry flavor',
         'limited',
@@ -1590,16 +1590,16 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Sucralose', 'limited', dailymed(SET_KIDS_APAP, METH.sucralose)),
       flag('Propylene glycol', 'limited', dailymed(SET_KIDS_APAP, METH.pg)),
       flag('Carrageenan', 'limited', dailymed(SET_KIDS_APAP, METH.carrageenan)),
-      flag('Flavor', 'limited', dailymed(SET_KIDS_APAP, METH.flavors)),
+      flag('Flavor', 'moderate', dailymed(SET_KIDS_APAP, METH.flavors)),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed(SET_KIDS_APAP, METH.benzoate),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_KIDS_APAP, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_KIDS_APAP, METH.sorbitol)),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Carrageenan, Flavor, Sodium benzoate, Sorbitol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Carrageenan.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_APAP_ALTS,
@@ -1630,15 +1630,15 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       ),
       flag(
         'Sodium benzoate',
-        'limited',
+        'moderate',
         dailymed(SET_KIDS_CET, METH.benzoate),
       ),
-      flag('Sorbitol', 'limited', dailymed(SET_KIDS_CET, METH.sorbitol)),
+      flag('Sorbitol', 'moderate', dailymed(SET_KIDS_CET, METH.sorbitol)),
       cleared(SET_KIDS_CET, 'Anhydrous citric acid'),
       cleared(SET_KIDS_CET, 'Purified water'),
     ],
     verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor, Sodium benzoate, Sorbitol.',
+    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sucralose, Propylene glycol, Artificial grape flavor.',
 
     retailers: [...AMAZON],
     cleanAlternatives: KIDS_ALLERGY_ALTS,
@@ -1824,7 +1824,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Propylparaben', 'high', dailymed(SET_HC_PARABEN, METH.parabens)),
       flag(
         'Sodium lauryl sulfate',
-        'cleared',
+        'moderate',
         dailymed(SET_HC_PARABEN, METH.sls),
       ),
     ],
@@ -1864,7 +1864,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
       flag('Polyethylene glycol', 'limited', dailymed(SET_RR, METH.peg)),
       flag(
         'Colloidal silicon dioxide',
-        'cleared',
+        'limited',
         dailymed(SET_RR, METH.sio2),
       ),
     ],
@@ -1895,7 +1895,7 @@ export const BATCH30_AMAZON_BASIC_CARE: RatingRecord[] = [
         'high',
         dailymed(SET_MUCUS_MAX, METH.dyes),
       ),
-      flag('Silicon dioxide', 'cleared', dailymed(SET_MUCUS_MAX, METH.sio2)),
+      flag('Silicon dioxide', 'limited', dailymed(SET_MUCUS_MAX, METH.sio2)),
       cleared(SET_MUCUS_MAX, 'Carbomer homopolymer type B'),
       cleared(SET_MUCUS_MAX, 'Hypromellose'),
       cleared(SET_MUCUS_MAX, 'Microcrystalline cellulose'),

@@ -162,7 +162,7 @@ const METH = {
   ps60:
     'Methodology §5 Limited (Polysorbate 60 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   saccharinNa:
-    'Methodology §5 Caution (sodium saccharin — exact token; locked Sept 24, 2026). Not Avoid.',
+    'Methodology §5 Limited (Saccharin — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sarcosinate:
     'Methodology §5 Caution (sodium lauroyl sarcosinate — exact token; locked Sept 24, 2026). Not High. Distinct from Caution sodium lauryl sulfate.',
   simethicone:
@@ -300,7 +300,7 @@ function expand(d: Compact): RatingRecord {
       flag(n, risk, labelCite(d.cite, METH[meth])),
     ),
     verdict: d.verdict,
-    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol, Mannitol, Pharmaceutical ink, Sorbitan, Sorbitol.`,
+    honestNote: `${d.note} ${LIMITED_STACK} Pack sizes share formulaId \`${d.formulaId}\` when this OI list holds. No dosing or medical advice. Draft, not verified.`,
     retailers: [...AMAZON],
     cleanAlternatives: alts.length ? alts : undefined,
     barcode: d.barcode,
@@ -924,7 +924,7 @@ const COMPACT: Compact[] = [
     actives: [{ name: 'Diphenhydramine HCl', strength: '50mg' }],
     flags: DPH50_FLAGS,
     verdict: 'avoid',
-    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Polyethylene glycol 600, Propylene glycol, Sorbitol sorbitan solution, Gelatin, Glycerin, Purified water.',
+    note: 'FOUNDER-LOCK DRAFT: Caution. Same inactive line as the 50 mg allergy 300-count, so they share formulaId. Drivers are polyethylene glycol 400, polyethylene glycol 600, oral propylene glycol, and sorbitol sorbitan solution. Sorbitol sorbitan solution is the Sept 24 Caution stamp. Not the blue sleep-aid. One softgel at bedtime. Ages 12+. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polyethylene glycol 400, Polyethylene glycol 600, Propylene glycol, Gelatin, Glycerin, Purified water.',
     cite: `DailyMed SPL (${DM}1f74e760-9ba9-ac47-e063-6394a90acdff; Methodology §5 Limited (PEGs / polyethylene glycol — founder; 120 softgels). Inactive ingredients: gelatin, glycerin, polyethylene glycol 400, polyethylene glycol 600, propylene glycol, purified water, sorbitol sorbitan solution. ${PEG600_TAP} Ages 12+. No GTIN-12 on the SPL.`,
   },
   {

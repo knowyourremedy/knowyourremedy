@@ -37,7 +37,7 @@ const METH = {
     'Methodology §5 Caution (octyldodecanol). CIR says safe as used. EWG low. Not a new grade.',
   polyoxyl15:
     'Methodology §5 Caution (polyoxyl 15 hydroxystearate). Hydroxystearic acid is CIR-safe when non-irritating. Clean call. One level. Not a new grade.',
-  polysorbate: 'Methodology §5 Moderate (polysorbate 60). Same family as polysorbate 80 and polysorbate 20.',
+  polysorbate: 'Methodology §5 Limited (Polysorbate 60 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sd: 'Methodology §5 Limited (SD alcohol 40-B). Same as the alcohol-vehicle row. Not a new grade.',
   silicaSilylate:
     'Methodology §5 Caution (silica dimethyl silylate). CIR says when the final product is not irritating or sensitizing to the respiratory tract. Clean call. One level. Not a new grade.',
@@ -150,8 +150,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -172,8 +172,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -194,8 +194,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: CLOTRIMAZOLE,
     inactiveIngredients: CLOT_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Benzyl alcohol, Octyldodecanol, Polysorbate 60, Sorbitan monostearate.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -216,8 +216,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: MICONAZOLE,
     inactiveIngredients: LIQUID_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dimethyl ether, Polyoxyl 15 hydroxystearate, SD alcohol 40-B.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -238,8 +238,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: MICONAZOLE,
     inactiveIngredients: POWDER_SPRAY_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -260,8 +260,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: MICONAZOLE,
     inactiveIngredients: POWDER_SPRAY_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -282,8 +282,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: MICONAZOLE,
     inactiveIngredients: DEO_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Fragrance, Isobutane, SD alcohol 40-B, Stearalkonium hectorite.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [
@@ -345,8 +345,8 @@ export const BATCH186_KYR6C_ANTIFUNGAL_HELD: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Dimethicone', strength: '1.2%' }],
     inactiveIngredients: CHAFING_FLAGS,
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Cyclomethicone, Dimethicone/vinyl dimethicone crosspolymer, Silica dimethyl silylate, Vinyl dimethicone/methicone silsesquioxane crosspolymer.',
+    verdict: 'caution',
+    honestNote: '',
     retailers: [],
     cleanAlternatives: SKIN_ALTS,
     sourcesGeneral: [

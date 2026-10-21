@@ -24,7 +24,7 @@ const METH = {
   botanical: 'Methodology §5 Cleared (named food or botanical extract as an oral inactive).',
   citric: 'Methodology §5 Cleared (citric acid).',
   cornSyrup: 'Methodology §5 Caution (corn syrup). Distinct from Cleared glucose syrup.',
-  flavorNamed: 'Methodology §5 Caution (named flavor). Exact natural flavors stays Limited.',
+  flavorNamed: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   flavors: 'Methodology §5 Limited (natural flavors). Exact natural flavors stays Limited.',
   fructose: 'Methodology §5 Limited (fructose).',
   glycerin: 'Methodology §5 Cleared (glycerin).',
@@ -103,7 +103,7 @@ function gripeLine(panel: string): IngredientFlag[] {
     flag(panel, 'Natural ginger flavor', 'cleared', METH.flavorNamed),
     flag(panel, 'Matricaria recutita (chamomile) flower heads extract', 'cleared', METH.botanical),
     flag(panel, 'Citric acid', 'cleared', METH.citric),
-    flag(panel, 'Potassium benzoate', 'limited', METH.benzoate),
+    flag(panel, 'Potassium benzoate', 'moderate', METH.benzoate),
     flag(panel, 'Xanthan gum', 'cleared', METH.xanthan),
   ];
 }
@@ -123,8 +123,8 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '1 mg' }],
     inactiveIngredients: chewLine(CHEW),
-    verdict: 'avoid',
-    honestNote: `${NATURAL_COLOR_NOTE} Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Natural Flavors, Xylitol, Natural Color, Oligofructose, Fructose, Vegetable Protein Isolate.`,
+    verdict: 'caution',
+    honestNote: `${NATURAL_COLOR_NOTE}`,
     retailers: ['Dollar General'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -145,8 +145,8 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
     productType: SUPPLEMENT,
     activeIngredients: [{ name: 'Melatonin', strength: '1 mg' }],
     inactiveIngredients: chewLine(CHEW),
-    verdict: 'avoid',
-    honestNote: `${NATURAL_COLOR_NOTE} Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sugar, Natural Flavors, Xylitol, Natural Color, Oligofructose, Fructose, Vegetable Protein Isolate.`,
+    verdict: 'caution',
+    honestNote: `${NATURAL_COLOR_NOTE}`,
     retailers: ['Target', 'Dollar General'],
     cleanAlternatives: SLEEP_ALTS,
     sourcesGeneral: [
@@ -172,9 +172,9 @@ export const BATCH166_KYR6C_HELD_SLEEP_GRIPE: RatingRecord[] = [
       { name: 'Matricaria recutita (chamomile) flower heads extract', strength: 'label serving' },
     ],
     inactiveIngredients: gripeLine(GRIPE),
-    verdict: 'avoid',
+    verdict: 'caution',
     honestNote:
-      'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Corn syrup, Maltodextrin, Potassium benzoate.',
+      '',
     retailers: ['Target', 'Amazon'],
     cleanAlternatives: GRIPE_ALTS,
     sourcesGeneral: [
@@ -199,9 +199,9 @@ function lineKey(record: RatingRecord): string {
 if (ROWS.length !== 3) throw new Error(`batch166 row count ${ROWS.length}`);
 
 const expected = [
-  ['zarbees-b166-sleep-chew-30', 'avoid', '898115002503', 'zarbees-b166-sleep-chew', 3],
-  ['zarbees-b166-sleep-chew-50', 'avoid', '858438005582', 'zarbees-b166-sleep-chew', 3],
-  ['little-remedies-b166-gripe-4', 'avoid', '756184122778', 'little-remedies-b166-gripe', 0],
+  ['zarbees-b166-sleep-chew-30', 'caution', '898115002503', 'zarbees-b166-sleep-chew', 3],
+  ['zarbees-b166-sleep-chew-50', 'caution', '858438005582', 'zarbees-b166-sleep-chew', 3],
+  ['little-remedies-b166-gripe-4', 'caution', '756184122778', 'little-remedies-b166-gripe', 0],
 ] as const;
 
 for (const [id, verdict, barcode, formulaId, minAge] of expected) {
@@ -230,7 +230,7 @@ if (lineKey(chew30) === lineKey(gripe)) throw new Error('batch166 gripe line sho
 if (!chew30.honestNote?.includes('does not name the plant') || chew30.honestNote !== chew50.honestNote) {
   throw new Error('batch166 natural color note');
 }
-if (gripe.honestNote && !gripe.honestNote.includes('stacking rule (t137u)')) {
+if (gripe.honestNote?.includes('stacking rule (t137u)')) {
   throw new Error('batch166 gripe note');
 }
 if (new Set(ROWS.map((item) => item.barcode)).size !== 3) throw new Error('batch166 upc copy');

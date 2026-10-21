@@ -15,7 +15,7 @@ const METH = {
   citric: 'Methodology §5 Cleared (citric acid).',
   cornOil: 'Methodology §5 Cleared (corn oil, not the gummy base).',
   dicalcium: 'Methodology §5 Cleared (dicalcium phosphate / dibasic calcium phosphate).',
-  flavor: 'Methodology §5 Limited (natural flavors).',
+  flavor: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   gelatin: 'Methodology §5 Cleared (gelatin).',
   glucose: 'Methodology §5 Cleared (glucose syrup / corn syrup).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',

@@ -95,7 +95,7 @@ const METH = {
     'Methodology §5 Cleared (black carrot / named fruit-or-vegetable juice as color / maqui / turmeric-as-color)',
   gums: 'Methodology §5 Cleared (xanthan gum, guar gum, gum arabic / acacia, pectin, gellan gum)',
   gelatin:
-    'Methodology §5 Cleared (lactose, gelatin, carnauba wax, beeswax, purified water)',
+    'Methodology §5 Cleared (Carnauba wax — founder lock t133u Oct 20, 2026; §4 prior-lock re-eval; supersedes L1002 Sept 25 Caution).',
   citrate:
     'Methodology §5 Cleared (citric acid / citrate salts / malic / lactic / fumaric / adipic / tartaric)',
   sugar:
@@ -218,7 +218,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
         'cleared',
         labelCite(CITE.d3, METH.juiceBase),
       ),
-      flag('Organic annatto (color)', 'cleared', labelCite(CITE.d3, METH.annatto)),
+      flag('Organic annatto (color)', 'moderate', labelCite(CITE.d3, METH.annatto)),
       flag('Organic flavors', 'cleared', labelCite(CITE.d3, METH.organicFlavor)),
       flag(
         'Organic black carrot juice concentrate (color)',
@@ -264,7 +264,7 @@ export const BATCH62_MAMA_BEAR_CAROUSEL: RatingRecord[] = [
       flag('Natural flavors', 'limited', labelCite(CITE.vitC, METH.flavors)),
       flag(
         'Organic annatto extract (color)',
-        'cleared',
+        'moderate',
         labelCite(CITE.vitC, METH.annatto),
       ),
       flag('Organic sugar', 'cleared', labelCite(CITE.vitC, METH.sugar)),

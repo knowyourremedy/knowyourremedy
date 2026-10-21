@@ -28,7 +28,7 @@ const METH = {
   dextrose:
     'Methodology §5 Caution (dextrose anhydrous → dextrose / bare glucose, Oct 7, 2026). Same row. Not a new ingredient.',
   edta: 'Methodology §5 Caution (edetate disodium → EDTA). The label prints disodium edetate. Not Cleared trace disodium EDTA. Not Avoid.',
-  ps80: 'Methodology §5 Moderate (polysorbate 80). Not the Avoid driver.',
+  ps80: 'Methodology §5 Limited (Polysorbate 80 — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).',
   sorbate: 'Methodology §5 Limited (potassium sorbate, synthetic preservatives). Not Avoid.',
   cmc: 'Methodology §5 Cleared (carboxymethylcellulose sodium / cellulose gum). The Rhinocort label prints carboxylmethyl cellulose sodium.',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose).',
@@ -192,8 +192,8 @@ export const BATCH154_KYR6B_EYE_NASAL: RatingRecord[] = [
     productType: OTC,
     activeIngredients: [{ name: 'Budesonide', strength: '32 mcg / spray' }],
     inactiveIngredients: rhinoFlags(),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Dextrose anhydrous, Disodium edetate, Hydrochloric acid, Polysorbate 80, Potassium sorbate.',
+    verdict: 'caution',
+    honestNote: '',
 
     retailers: [...RETAILERS],
     cleanAlternatives: NASAL_ALTS,
