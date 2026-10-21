@@ -31,7 +31,7 @@ const METH = {
   stevia:
     'Methodology §5 Limited (Stevia — founder lock t158u Oct 21, 2026; exact token; counts toward the t137u stack; organic Rebaudioside A stays Cleared).',
   paprika:
-    'Methodology §5 Cleared (Paprika extract (color) — founder lock t158u Oct 21, 2026; exact named plant color; paprika extract (natural color) stays Caution).',
+    'Methodology §5 Cleared (Paprika extract (color) — founder lock t158u Oct 21, 2026; exact named plant color; Paprika extract (natural color) and Paprika (color) are the same Cleared row, founder lock t159u).',
   turmeric: 'Methodology §5 Cleared (turmeric (color) — named plant color).',
   mcc: 'Methodology §5 Cleared (microcrystalline cellulose — cellulose-family filler).',
   magStearate:

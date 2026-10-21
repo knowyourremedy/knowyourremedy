@@ -100,6 +100,7 @@ const EO_SCENT_TAP =
   'Named single oil as the topical BASE or FILL is Cleared (sesame). Botanical oil used as scent in a blend is Caution (fragrance/EO line). Fill ≠ gummy High.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   sio2: `Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points). ${SIO2_TAP}`,
   flavors: `Methodology §5 Limited-risk (natural / artificial flavors — opacity). ${FLAVOR_TAP}`,
   lemonOil: `Methodology §5 Limited-risk (named lemon oil as flavor — not a Clean auto-pass). ${FLAVOR_TAP}`,
@@ -656,7 +657,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       f(CITE.natural_vitality_calm_raspberry_lemon, 'Organic flavor', 'limited', METH.flavors),
-      f(CITE.natural_vitality_calm_raspberry_lemon, 'Organic stevia (leaf) extract', 'cleared', METH.steviaLeaf),
+      f(CITE.natural_vitality_calm_raspberry_lemon, 'Organic stevia (leaf) extract', 'limited', METH.steviaT159u),
     ],
     verdict: 'caution',
 
@@ -2720,7 +2721,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_wake_raspberry_lemonade, 'Natural raspberry flavor', 'cleared', METH.flavors),
       f(CITE.rookie_wake_raspberry_lemonade, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
       f(CITE.rookie_wake_raspberry_lemonade, 'Beet root powder (for color)', 'cleared', METH.namedColor),
-      f(CITE.rookie_wake_raspberry_lemonade, 'Stevia extract', 'cleared', METH.stevia),
+      f(CITE.rookie_wake_raspberry_lemonade, 'Stevia extract', 'limited', METH.steviaT159u),
       f(CITE.rookie_wake_raspberry_lemonade, 'Silicon dioxide', 'cleared', METH.sio2),
     ],
     verdict: 'caution',
@@ -2750,9 +2751,9 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_greens_peach_mango, 'Natural peach mango flavor', 'cleared', METH.flavors),
       f(CITE.rookie_greens_peach_mango, 'Citric acid', 'cleared', METH.citrate),
       f(CITE.rookie_greens_peach_mango, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
-      f(CITE.rookie_greens_peach_mango, 'Stevia extract', 'cleared', METH.stevia),
+      f(CITE.rookie_greens_peach_mango, 'Stevia extract', 'limited', METH.steviaT159u),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [
@@ -2779,9 +2780,9 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.rookie_greens_crisp_apple, 'Natural green apple flavor', 'cleared', METH.flavors),
       f(CITE.rookie_greens_crisp_apple, 'Citric acid', 'cleared', METH.citrate),
       f(CITE.rookie_greens_crisp_apple, 'Reb M (from stevia extract)', 'cleared', METH.stevia),
-      f(CITE.rookie_greens_crisp_apple, 'Stevia extract', 'cleared', METH.stevia),
+      f(CITE.rookie_greens_crisp_apple, 'Stevia extract', 'limited', METH.steviaT159u),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...THRIVE, 'Rookie Wellness'],
     cleanAlternatives: [

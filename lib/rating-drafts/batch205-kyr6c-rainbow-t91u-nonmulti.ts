@@ -25,6 +25,7 @@ const GUMMY_OIL_TAP =
   'Seed/industrial oils are flagged in gummies and soft chews. Sunflower / palm / safflower / vegetable oil used as a gummy or chew coating or fill is that High rule. Capsule / softgel / drop fill of the same oil is not.';
 
 const METH = {
+  paprikaT159u: 'Methodology §5 Cleared (Paprika extract (natural color) / Paprika (color) — founder lock t159u Oct 21, 2026; same Cleared named plant color as Paprika extract (color)).',
   benzoate: 'Methodology §5 Limited-risk (synthetic preservatives — sodium benzoate, potassium sorbate).',
   calciumCarbonate: 'Methodology §5 Cleared (calcium carbonate as mineral salt / buffer).',
   caramel: 'Methodology §5 High-tier (caramel color, undisclosed class — IARC 2B / 4-MEI; treated as Class III/IV).',
@@ -309,7 +310,7 @@ const SPECS: RowSpec[] = [
       ['Carnauba Wax', 'cleared', 'carnauba'],
       ['Coconut Oil', 'cleared', 'coconutGummy'],
       ['Orange Juice Concentrate', 'cleared', 'juiceColor'],
-      ['Paprika (color)', 'moderate', 'paprikaColor'],
+      ['Paprika (color)', 'cleared', 'paprikaT159u'],
       ['Sunflower Lecithin', 'cleared', 'lecithin'],
     ],
   },
@@ -665,7 +666,7 @@ const SPECS: RowSpec[] = [
       ['Carnauba Wax', 'cleared', 'carnauba'],
       ['Coconut Oil', 'cleared', 'coconutGummy'],
       ['Orange Juice Concentrate', 'cleared', 'juiceColor'],
-      ['Paprika (color)', 'moderate', 'paprikaColor'],
+      ['Paprika (color)', 'cleared', 'paprikaT159u'],
       ['Sunflower Lecithin', 'cleared', 'lecithin'],
     ],
   },

@@ -15,6 +15,7 @@ const SLEEP = 'Sleep';
 const SHOPIFY_VITACOST_GOLI = 'https://cdn.shopify.com/s/files/1/0804/8974/2651/files';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   caneSugar: 'Methodology §5 Cleared (cane sugar).',
   tapiocaSyrup: 'Methodology §5 Cleared (tapioca syrup / organic tapioca syrup).',
   water: 'Methodology §5 Cleared (purified water / water).',
@@ -110,7 +111,7 @@ const ZS_ASHWA_FLAGS: FlagSpec[] = [
   ['Sodium Citrate', 'cleared', 'citrateSalt'],
   ['Malic Acid', 'cleared', 'lacticAcid'],
   ['Fruit and Vegetable (Color)', 'cleared', 'fvColor'],
-  ['Stevia Extract', 'limited', 'steviaExtract'],
+  ['Stevia Extract', 'limited', 'steviaT159u'],
 ];
 
 const BEETS_FLAGS: FlagSpec[] = [
@@ -148,7 +149,7 @@ const ZS_PPP_FLAGS: FlagSpec[] = [
   ['Sodium Citrate', 'cleared', 'citrateSalt'],
   ['Malic Acid', 'cleared', 'lacticAcid'],
   ['Fruit and Vegetable Juice (Color)', 'cleared', 'juiceColor'],
-  ['Stevia Extract', 'limited', 'steviaExtract'],
+  ['Stevia Extract', 'limited', 'steviaT159u'],
 ];
 
 const ENERGY_FLAGS: FlagSpec[] = [
@@ -248,7 +249,7 @@ const ZS_ACV_FLAGS: FlagSpec[] = [
   ['Sodium Citrate', 'cleared', 'citrateSalt'],
   ['Malic Acid', 'cleared', 'lacticAcid'],
   ['Fruit and Vegetable Juice (Color)', 'cleared', 'juiceColor'],
-  ['Stevia Extract', 'limited', 'steviaExtract'],
+  ['Stevia Extract', 'limited', 'steviaT159u'],
   ['Beet Root Powder', 'cleared', 'juiceColor'],
   ['Pomegranate Powder', 'cleared', 'pomegranate'],
 ];
@@ -262,7 +263,7 @@ const ZS_MG_FLAGS: FlagSpec[] = [
   ['Citric Acid', 'cleared', 'citric'],
   ['Malic Acid', 'cleared', 'lacticAcid'],
   ['Fruit and Vegetable Juice (Color)', 'cleared', 'juiceColor'],
-  ['Stevia Extract', 'limited', 'steviaExtract'],
+  ['Stevia Extract', 'limited', 'steviaT159u'],
 ];
 
 const ZS_CREATINE_FLAGS: FlagSpec[] = [
@@ -274,7 +275,7 @@ const ZS_CREATINE_FLAGS: FlagSpec[] = [
   ['Citric Acid', 'cleared', 'citric'],
   ['Sodium Citrate', 'cleared', 'citrateSalt'],
   ['Fruit and Vegetable Juice (Color)', 'cleared', 'juiceColor'],
-  ['Stevia Extract', 'limited', 'steviaExtract'],
+  ['Stevia Extract', 'limited', 'steviaT159u'],
   ['Malic Acid', 'cleared', 'lacticAcid'],
 ];
 

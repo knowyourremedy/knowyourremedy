@@ -27,6 +27,7 @@ const UPC_BLANK =
   'No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   alginate: 'Methodology §5 Cleared (sodium alginate).',
   beeswax: 'Methodology §5 Cleared (beeswax / yellow beeswax).',
   cane: 'Methodology §5 Cleared (cane sugar).',
@@ -254,7 +255,7 @@ const COMPACT: Compact[] = [
       ['Natural Raspberry', 'limited', 'flavor'],
       ['Lemon Flavors with Other Natural Flavors', 'limited', 'flavor'],
       ['Silica', 'limited', 'sio2'],
-      ['Stevia (leaf extract)', 'limited', 'stevia'],
+      ['Stevia (leaf extract)', 'limited', 'steviaT159u'],
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Caution. Natural Raspberry is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Raspberry, Lemon Flavors with Other Natural Flavors, Stevia (leaf extract).',
@@ -273,7 +274,7 @@ const COMPACT: Compact[] = [
       ['Natural Lemon', 'limited', 'flavor'],
       ['Lime Flavors with Other Natural Flavors', 'limited', 'flavor'],
       ['Silica', 'limited', 'sio2'],
-      ['Stevia (leaf extract)', 'limited', 'stevia'],
+      ['Stevia (leaf extract)', 'limited', 'steviaT159u'],
     ],
     verdict: 'avoid',
     note: 'FOUNDER-LOCK DRAFT: Caution. Natural Lemon is the named-flavor family (Caution). Driver families: flavor, sio2, stevia. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Natural Lemon, Lime Flavors with Other Natural Flavors, Stevia (leaf extract).',

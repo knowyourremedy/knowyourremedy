@@ -125,6 +125,7 @@ const CITE = {
 } as const;
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   unnamedCoat: `Methodology §5 Caution (Vegetable Coating / Vegetable-Based Tablet Coating — unnamed coat; named wax / GMS / named (HPMC, glycerin) stays Cleared; standalone Caution, not Avoid; locked Sept 16, 2026). ${COAT_TAP}`,
   steviaLeaf: `Methodology §5 Caution (whole-leaf / crude stevia — do not auto-Clean; not Reb A / Reb M; locked Sept 14, 2026). ${STEVIA_LEAF_TAP}`,
   betaCarotene:
@@ -375,8 +376,8 @@ export const BATCH70_KYR6_AMAZON_3P_MICRO_INGREDIENTS: RatingRecord[] = [
     inactiveIngredients: [
       flag(
         'Stevia leaf extract',
-        'moderate',
-        labelCite(CITE.peachMg, METH.steviaLeaf),
+        'limited',
+        labelCite(CITE.peachMg, METH.steviaT159u),
       ),
       flag(
         'Beta carotene',

@@ -37,7 +37,7 @@ const METH = {
   natFlavor:
     'Methodology §5 Caution (Natural Flavor singular — unnamed flavor; Usable; does not stack).',
   steviaLeaf:
-    'Methodology §5 Caution (stevia leaf extract — not the high-purity steviol glycoside row).',
+    'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   aloe: 'Methodology §5 Caution (aloe vera gel as an other ingredient — plant gel; not a High row).',
   cellulose: 'Methodology §5 Cleared (cellulose / powdered cellulose — cellulose-family filler).',
   croscarmellose: 'Methodology §5 Cleared (croscarmellose sodium — cellulose-family disintegrant).',
@@ -190,12 +190,12 @@ export const BATCH251_KYR6D_T155U: RatingRecord[] = [
       flag(PANEL_MINI, 'Citric acid', 'cleared', 'citric'),
       flag(PANEL_MINI, 'Vegetable juice (color)', 'cleared', 'juice'),
       flag(PANEL_MINI, 'Malic acid', 'cleared', 'malic'),
-      flag(PANEL_MINI, 'Stevia leaf extract', 'moderate', 'steviaLeaf'),
+      flag(PANEL_MINI, 'Stevia leaf extract', 'limited', 'steviaLeaf'),
     ],
     verdict: 'caution',
     retailers: ['AZO', 'iHerb', 'Vitacost'],
     sourcesGeneral: [
-      'The probiotic strains are supplement-facts ingredients and are not graded. Natural Flavor (singular) and stevia leaf extract are Caution, so the row is Caution. Xylitol and mannitol are sugar alcohols and do not count toward a Limited stack. Contains wheat is a disclosure, not a token. The 28-count is a 2-pack and is not a row. UPC 787651760674 check digit OK.',
+      'The probiotic strains are supplement-facts ingredients and are not graded. Natural Flavor (singular) is Caution. Stevia leaf extract is Limited (founder lock t159u) and is the one stack-counting Limited token, so the row is Caution. Xylitol and mannitol are sugar alcohols and do not count toward a Limited stack. Contains wheat is a disclosure, not a token. The 28-count is a 2-pack and is not a row. UPC 787651760674 check digit OK.',
     ],
   },
   {

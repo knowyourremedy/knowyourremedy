@@ -49,6 +49,7 @@ const LIMITED_STACK =
   'Limited-only stack stays Caution (no 3-pt Avoid). Limited-only never Avoid. Avoid needs High.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   acek: "Methodology §5 Limited (Acesulfame potassium — founder lock t138u Oct 20, 2026; §4 prior-lock re-eval; supersedes prior Moderate-risk label).",
   bareStarch: "Methodology §5 Limited-risk (unspecified starch — exact token when the label prints bare starch; Caution; distinct from Limited modified starch / modified food starch and from Cleared named corn starch / potato starch / pregelatinized starch; locked Sept 22, 2026). Not Avoid.",
   beetColor: "Methodology §5 Cleared (beet root powder (for color) / beetroot powder (for color) / beet root (for color) — named plant color; same Cleared row as organic beet root; not a synthetic dye; locked Sept 22, 2026).",
@@ -370,7 +371,7 @@ const COMPACT: Compact[] = [
     form: "powder",
     productType: SUPPLEMENT,
     actives: [{ name: "Calcium + Magnesium + Zinc Citrates with Vitamin D3 Powder", strength: "label serving" }],
-    flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Malic acid", "cleared", "malic"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Stevia extract", "limited", "steviaExtract"], ["Silicon dioxide", "limited", "sio2"]],
+    flags: [["Citric acid", "cleared", "citric"], ["Natural flavors", "limited", "flavors"], ["Malic acid", "cleared", "malic"], ["Beet root powder (for color)", "cleared", "beetColor"], ["Stevia extract", "limited", "steviaT159u"], ["Silicon dioxide", "limited", "sio2"]],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver is Natural flavors; Stevia extract; Silicon dioxide. Cleared capsule/softgel/fill tokens do not raise Avoid. Limited-only never Avoid. Avoid needs High. Silica is the 0-pt nanoparticle cap when present.",
     cite: pin("nutricost-calcium-magnesium-zinc-citrates-with-vitamin-d3", "NTC_Ca_Mg_Zn_D3_Ras-Lemonade_30Serv_SFP.jpg", "Citric acid, natural flavors, malic acid‡, beet root powder (for color), stevia extract, silicon dioxide"),

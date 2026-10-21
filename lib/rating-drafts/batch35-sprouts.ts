@@ -106,6 +106,7 @@ const HONEY_LINE =
   'Honey is a Cleared-class sweetener. Not for under 1. No dosing.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   tio2: 'Methodology §5 High-tier (titanium dioxide / E171)',
   sio2:
     'Methodology §5 Precautionary (silicon dioxide — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points)',
@@ -1040,7 +1041,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     inactives: [
       flag('Organic maltodextrin', 'limited', labelCite(CITE.dmannose, METH.maltodextrin)),
       labelCleared(CITE.dmannose, 'Citric acid'),
-      flag('Stevia leaf extract', 'cleared', labelCite(CITE.dmannose, METH.stevia)),
+      flag('Stevia leaf extract', 'limited', labelCite(CITE.dmannose, METH.steviaT159u)),
     ],
     verdict: 'caution',
     note:

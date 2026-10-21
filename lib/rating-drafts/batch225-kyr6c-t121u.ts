@@ -16,6 +16,7 @@ const VITAMINS = 'Vitamins';
 const NO_OI = 'No other ingredients listed on panel.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   vegCapGellan:
     'Methodology §5 Cleared (Vegetable capsule (hypromellose, gellan gum), HPMC / veg-cap family; founder lock Oct 17, 2026 t118u).',
   vegCapHpmc: 'Methodology §5 Cleared (Vegetable capsule (hypromellose), HPMC / veg-cap family; t118u).',
@@ -114,14 +115,14 @@ const PC_EASY_PM: FlagSpec[] = [
   ['citric acid', 'cleared', 'citric'],
   ['vegetable juice (color)', 'cleared', 'vegJuiceColor'],
   ['natural flavor', 'limited', 'natFlavor'],
-  ['stevia leaf extract', 'limited', 'steviaLeaf'],
+  ['stevia leaf extract', 'limited', 'steviaT159u'],
 ];
 
 const PC_EASY_CL: FlagSpec[] = [
   ['Cane sugar', 'cleared', 'caneSugar'],
   ['citric acid', 'cleared', 'citric'],
   ['natural flavor', 'limited', 'natFlavor'],
-  ['stevia leaf extract', 'limited', 'steviaLeaf'],
+  ['stevia leaf extract', 'limited', 'steviaT159u'],
   ['turmeric (color)', 'cleared', 'turmericColor'],
   ['spirulina extract (color)', 'limited', 'spirulinaExtract'],
   ['vegetable juice (color)', 'cleared', 'vegJuiceColor'],

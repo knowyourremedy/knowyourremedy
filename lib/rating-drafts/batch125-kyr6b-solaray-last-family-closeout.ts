@@ -27,6 +27,7 @@ const UPC_BLANK =
   'No GTIN-12 was printed under the bars on the panel opened for Other Ingredients, so UPC is blank. Shopify barcodes that echo the SKU are not UPCs.';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   acerola: 'Methodology §5 Cleared (organic acerola). Acerola Cherry and Acerola (fruit juice) map here (Sept 28, 2026).',
   aloe: 'Methodology §5 Caution (aloe as an other ingredient). Aloe Vera Gel, including inside a whole-rice base, maps here (Sept 28, 2026). Not the topical aloe base.',
   annatto: 'Methodology §5 Caution (annatto). Not Avoid.',
@@ -448,7 +449,7 @@ const COMPACT: Compact[] = [
       ["Stearic Acid", "cleared", "stearate"],
       ["Beet Root Juice (for color)", "cleared", "beet"],
       ["Acacia Gum", "cleared", "gum"],
-      ["Stevia (leaf extract)", "limited", "stevia"],
+      ["Stevia (leaf extract)", "limited", "steviaT159u"],
       ["Magnesium Stearate", "cleared", "stearate"],
       ["Silica", "limited", "sio2"],
       ["Rose Hips (fruit)", "cleared", "botanical"],
@@ -883,12 +884,12 @@ const COMPACT: Compact[] = [
       ["Stearic Acid", "cleared", "stearate"],
       ["Citric Acid", "cleared", "citric"],
       ["Magnesium Stearate", "cleared", "stearate"],
-      ["Stevia (leaf extract)", "limited", "stevia"],
+      ["Stevia (leaf extract)", "limited", "steviaT159u"],
       ["Malic Acid", "cleared", "malic"],
       ["Silica", "limited", "sio2"],
     ],
     verdict: "avoid",
-    note: "FOUNDER-LOCK DRAFT: Caution. Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract).",
+    note: "FOUNDER-LOCK DRAFT: Caution. Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Driver families: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors, Soy, Maltodextrin, Stevia (leaf extract), Silica. No High. Avoid: three or more Limited tokens triggered the stacking rule (t137u): Soy, Maltodextrin, Stevia (leaf extract).",
     cite: "solaray.com supplement-facts image https://www.solaray.com/products/solaray-l-theanine-chewable-supplement-200-mg-30-count other-ingredients: Sorbitol, Xylitol, Natural Lemon Lime Flavor and other Natural Flavors (milk, soy), Maltodextrin, Stearic Acid, Citric Acid, Magnesium Stearate, Stevia (leaf extract), Malic Acid and Silica. Token map: Silica. Contains strips to Silica Limited. The panel prints Contains Allergen: Milk, Soy. Contains is not an ingredient. Soy in the flavor parenthetical is bare soy Limited. Exact pack Solaray Sugar-Free L-Theanine Chewable, Lemon-Lime Flavor (30ct). SKU 076280975123. " + UPC_BLANK,
   }
 ];

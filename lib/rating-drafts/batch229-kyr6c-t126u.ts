@@ -12,6 +12,7 @@ const BRAND = "Physician's Choice";
 const DIGESTIVE = 'Digestive';
 
 const METH = {
+  steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   chicoryFiber:
     'Methodology §5 Cleared (Chicory Root Fiber, exact restamp; inulin/chicory family).',
   gums: 'Methodology §5 Cleared (gums incl. pectin).',
@@ -73,7 +74,7 @@ const PC_EASY_CL: FlagSpec[] = [
   ['Cane sugar', 'cleared', 'caneSugar'],
   ['citric acid', 'cleared', 'citric'],
   ['natural flavor', 'limited', 'natFlavor'],
-  ['stevia leaf extract', 'limited', 'steviaLeaf'],
+  ['stevia leaf extract', 'limited', 'steviaT159u'],
   ['turmeric (color)', 'cleared', 'turmericColor'],
   ['spirulina extract (color)', 'limited', 'spirulinaExtract'],
   ['vegetable juice (color)', 'cleared', 'vegJuiceColor'],
