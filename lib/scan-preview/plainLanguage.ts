@@ -1653,6 +1653,27 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('The label says soy and does not name lecithin. Soy lecithin is a different line.', level);
   }
 
+  if (n === 'wheat flour') {
+    return close(
+      'Wheat flour is a food flour. The founder locked it Cleared (t157u). It is not rice flour, and it is not bare wheat.',
+      level,
+    );
+  }
+
+  if (n === 'brown sugar') {
+    return close(
+      'Brown sugar is a sugar, and the label does not name cane sugar. The founder locked it Caution (t157u). It is not molasses, and it is not the bare sugar row.',
+      level,
+    );
+  }
+
+  if (n === 'oat hull fiber') {
+    return close(
+      'Oat hull fiber is a food fiber. The founder locked it Cleared (t157u). It is not Organic Oat Hull Fiber, and it is not the oat fiber row.',
+      level,
+    );
+  }
+
   if (/violet carrot/.test(n)) {
     return close(
       'Violet carrot extract is a named plant color. The founder locked it Cleared (t156u). It is not a synthetic dye, and it is not bare carrot.',
