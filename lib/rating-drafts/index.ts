@@ -245,3 +245,4 @@ export { BATCH245_KYR6C_T145U_SV } from './batch245-kyr6c-t145u-sv';
 export { BATCH246_KYR6C_T146U_SV } from './batch246-kyr6c-t146u-sv';
 export { BATCH247_KYR6D_T150U } from './batch247-kyr6d-t150u';
 export { BATCH248_KYR6D_T152U } from './batch248-kyr6d-t152u';
+export { BATCH249_KYR6D_T153U } from './batch249-kyr6d-t153u';

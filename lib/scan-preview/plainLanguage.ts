@@ -806,6 +806,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return unnamedFlavorWhy(level);
   }
 
+  if (/natural and artificial/.test(n) && /\bflavou?r/.test(n)) {
+    return close(
+      'This is a natural and artificial flavor mixture. The label names a taste and does not list every part of the mixture. Methodology §5 Limited (natural and artificial flavors).',
+      level,
+    );
+  }
+
   if (/\bflavou?rs?\b/.test(n)) {
     if (isUnnamedFlavor(n)) return unnamedFlavorWhy(level);
     const food = n
