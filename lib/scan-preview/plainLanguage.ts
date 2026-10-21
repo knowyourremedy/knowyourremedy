@@ -87,6 +87,7 @@ function seedOilLabel(name: string): string | null {
   if (/lecithin|wax|phospholipid|glycerin|glycerine|glycerol|cellulose|capsule|starch|protein|sterol|fatty acid/.test(n)) {
     return null;
   }
+  if (/fractionated coconut and palm kernel/.test(n)) return null;
   if (/fractionated coconut/.test(n)) return 'fractionated coconut oil';
   if (/sunflower/.test(n) && /\boil\b/.test(n)) return 'sunflower oil';
   if (/safflower/.test(n) && /\boil\b/.test(n)) return 'safflower oil';
@@ -395,6 +396,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
   if (isHydrogenatedOilLock(ingredient.name)) return HYDROGENATED_OIL_WHY;
   const oil = seedOilLabel(ingredient.name);
+
+  if (/fractionated coconut and palm kernel oil/.test(n)) {
+    return close(
+      'Fractionated coconut and palm kernel oil is a combined oil. The founder locked it Limited (t150u). It is not the Cleared fractionated coconut oil row, and it is not named medium-chain triglycerides from palm kernel oil.',
+      level,
+    );
+  }
 
   if (/aspartame|nutrasweet|\be951\b/.test(n)) {
     return 'Aspartame is a sweetener. In 2023, the World Health Organization\'s cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.';
@@ -843,7 +851,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (/hypromellose|hydroxypropyl cellulose|\bhpmc\b|\bhpc\b/.test(n) && !/acetate succinate|phthalate/.test(n)) {
+  if (
+    n === 'hydroxypropyl'
+    || (/hypromellose|hydroxypropyl cellulose|\bhpmc\b|\bhpc\b/.test(n) && !/acetate succinate|phthalate/.test(n))
+  ) {
     return close(
       'This is a cellulose coating. Reviews have found no genotoxicity, carcinogenicity, or reproductive findings, and no set daily limit.',
       level,
@@ -1206,6 +1217,20 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/^aloe\b|aloe barbadensis|aloe vera/.test(n)) {
     return close('Aloe on this label is a plant juice or gel. The topical base and the other-ingredient juice are graded from how the label uses it.', level);
+  }
+
+  if (n === 'ceteth-20' || n === 'ceteth 20') {
+    return close(
+      'Ceteth-20 is an emulsifier. The founder locked it Limited (t150u). It is not ceteth-20 phosphate, and it is not cetostearyl alcohol.',
+      level,
+    );
+  }
+
+  if (n === 'chlorocresol') {
+    return close(
+      'Chlorocresol is a preservative. The founder locked it Limited (t150u). It is not chloroxylenol.',
+      level,
+    );
   }
 
   if (/steareth|ceteareth|ceteth|stearyl alcohol|cetearyl alcohol|cetyl alcohol|cetostearyl/.test(n)) {
@@ -1617,6 +1642,27 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/black carrot|carrot concentrate|carrot juice/.test(n)) {
     return close('This is a named carrot color. It is not a synthetic dye.', level);
+  }
+
+  if (/huito extract/.test(n)) {
+    return close(
+      'Huito extract is a plant color. The founder locked it Caution (t150u). It is not a synthetic dye.',
+      level,
+    );
+  }
+
+  if (/watermelon extract/.test(n)) {
+    return close(
+      'Watermelon extract is a named plant color. The founder locked it Cleared (t150u). It is not a synthetic dye.',
+      level,
+    );
+  }
+
+  if (/natural vanilla powder/.test(n)) {
+    return close(
+      'Natural vanilla powder names vanilla. Under the natural tie-breaker it takes the better of the natural-flavors and vanilla-flavor rows, which is the Caution vanilla flavor line. It is not the Limited natural flavors mixture.',
+      level,
+    );
   }
 
   if (/^kelp\b/.test(n)) {

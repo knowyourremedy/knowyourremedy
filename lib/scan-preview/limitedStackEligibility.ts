@@ -30,6 +30,8 @@ export function isMethodologyCautionStamp(source: string | undefined): boolean {
 /** Names that map to METH §5 Caution rows when mis-stored as limited (not exhaustive — source stamp wins). */
 export function isMethCautionIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
+  if (/huito extract/.test(n)) return true;
+  if (n === 'natural vanilla powder') return true;
   if (/\brice flour\b/.test(n)) return true;
   if (/annatto/.test(n)) return true;
   if (/sodium lauryl sulfate|\bsls\b/.test(n)) return true;
@@ -69,6 +71,9 @@ export function isMethCautionIngredientName(name: string): boolean {
 export function isMethLimitedIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (isTapiocaMaltodextrinName(name)) return true;
+  if (n === 'ceteth-20' || n === 'ceteth 20') return true;
+  if (n === 'chlorocresol') return true;
+  if (/fractionated coconut and palm kernel oil/.test(n)) return true;
   if (/\bmaltodextrin\b/.test(n)) return true;
   if (/polydextrose/.test(n)) return true;
   if (/modified (corn |food )?starch|modified starch|food starch-modified|hydroxypropyl starch/.test(n)) {
