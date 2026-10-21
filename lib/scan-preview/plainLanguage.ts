@@ -511,6 +511,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
 
   if (oil) {
+    if (oil === 'corn oil' && /wafer|t156u/i.test(`${ingredient.source ?? ''} ${ingredient.name}`) && level !== 'high') {
+      return close(
+        'Corn oil in a fiber wafer is Cleared. The founder locked that form (t156u). Gummy corn oil stays Not clean. A wafer is not that gummy form.',
+        level,
+      );
+    }
     if (oil === 'fractionated coconut oil') {
       return 'This is coconut oil, a named oil. It is Cleared in a gummy and in a capsule. Fractionated coconut oil is not the seed or vegetable oil this app flags in a gummy, so it did not pull this grade down.';
     }
@@ -1645,6 +1651,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (n === 'soy' || n === 'bare soy') {
     return close('The label says soy and does not name lecithin. Soy lecithin is a different line.', level);
+  }
+
+  if (/violet carrot/.test(n)) {
+    return close(
+      'Violet carrot extract is a named plant color. The founder locked it Cleared (t156u). It is not a synthetic dye, and it is not bare carrot.',
+      level,
+    );
   }
 
   if (/black carrot|carrot concentrate|carrot juice/.test(n)) {
