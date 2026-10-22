@@ -3063,6 +3063,15 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-cascara-sagrada': brandMark('natures-way-mark.png'),
   // Cranberry Fruit is 100 capsules (033674121504) and 180 (033674153611).
   'natures-way-cranberry-fruit': brandMark('natures-way-mark.png'),
+  // Digestive night run 2026-10-22 1:45 AM PT batch 2.
+  // Cranberry Premium Blend is 60 capsules (033674151341) and 120 (033674151358).
+  // Not Cranberry Fruit. Official Nature's Way mark. Not a letter.
+  'natures-way-cranberry': brandMark('natures-way-mark.png'),
+  // Ginger Root is 100 (033674131008), 180 (033674131084), and 240 (033674119266).
+  'natures-way-ginger-root': brandMark('natures-way-mark.png'),
+  // Gas & Bloat UPC 850023615039 is not on the current Hilma gas-relief page.
+  // Live 50 and 100 both barcode 850023615084. Official Hilma mark. Not a letter.
+  'hilma-gas-bloat': brandMark('hilma-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17677,6 +17686,42 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-artichoke': catalogShot('natures-way-artichoke.jpg'),
   // Complete Liver Cleanse, 84 capsules. UPC 763948013159.
   'natures-way-complete-liver-cleanse': catalogShot('natures-way-complete-liver-cleanse.jpg'),
+  // Digestive night run 2026-10-22 1:45 AM PT batch 2.
+  // Single-count bottles only. Two-count rows stay on the mark.
+  // CranRx BioActive Cranberry, 30 capsules. UPC 033674152898. Not Cranberry Fruit.
+  'natures-way-cranrx-bioactive-cranberry': catalogShot('natures-way-cranrx-bioactive-cranberry.jpg'),
+  // Fennel Seed, 100 capsules. UPC 033674127001.
+  'natures-way-fennel-seed': catalogShot('natures-way-fennel-seed.jpg'),
+  // GABA, 60 capsules. UPC 763948055265.
+  'natures-way-gaba': catalogShot('natures-way-gaba.jpg'),
+  // Super Milk Thistle, 120 capsules. UPC 763948081028. Not Super Thisilyn.
+  'natures-way-super-milk-thistle': catalogShot('natures-way-super-milk-thistle.jpg'),
+  // Super Thisilyn, 60 capsules. UPC 033674154052. Not Super Milk Thistle.
+  'natures-way-super-thisilyn': catalogShot('natures-way-super-thisilyn.jpg'),
+  // Urinary with Cranberry, 100 capsules. UPC 033674793206.
+  'natures-way-urinary': catalogShot('natures-way-urinary.jpg'),
+  // LoveBug kids chewable, 1 kid. UPC 850002716245. Not the gummies. Not the 2-kid pack.
+  'lovebug-kids-chewable-probiotic': catalogShot('lovebug-kids-chewable-probiotic.jpg'),
+  // Advanced Strength Daily, 30 days. UPC 850002716320. The 60-day is a 2-bottle pack.
+  'lovebug-advanced-strength-daily': catalogShot('lovebug-advanced-strength-daily.jpg'),
+  // Organic baby probiotic drops, 1 kid. UPC 850002716412. Not Tiny Tummies powders.
+  'lovebug-organic-baby-probiotic-drops': catalogShot('lovebug-organic-baby-probiotic-drops.jpg'),
+  // Yeast & vaginal pH, 30 capsules. UPC 864377000199. The 60-day is a 2-bottle pack.
+  'lovebug-yeast-vaginal-ph': catalogShot('lovebug-yeast-vaginal-ph.jpg'),
+  // Tiny Tummies infant powder, 0–6 months. UPC 861383000328. Not the older bands.
+  'lovebug-tiny-tummies-0-6': catalogShot('lovebug-tiny-tummies-0-6.jpg'),
+  // Tiny Tummies baby powder, 6–12 months. UPC 861383000335. Not the other bands.
+  'lovebug-tiny-tummies-6-12': catalogShot('lovebug-tiny-tummies-6-12.jpg'),
+  // Tiny Tummies toddler powder, 12 months–4 years. UPC 861383000342. Not the younger bands.
+  'lovebug-tiny-tummies-12mo-4yr': catalogShot('lovebug-tiny-tummies-12mo-4yr.jpg'),
+  // Kids probiotic organic gummies, 1 kid. UPC 850002716511. Not the chewable.
+  'lovebug-kids-probiotic-gummies': catalogShot('lovebug-kids-probiotic-gummies.jpg'),
+  // Digest Spectrum, 120 capsules. UPC 670480291726. Not 30, 90, or 240.
+  'enzymedica-digest-spectrum': catalogShot('enzymedica-digest-spectrum.jpg'),
+  // Digest Gold + ATPro, 180 capsules. UPC 670480202142. Not 21, 45, 90, 120, or 240.
+  'enzymedica-digest-gold-atpro': catalogShot('enzymedica-digest-gold-atpro.jpg'),
+  // Protectis Baby Drops with vitamin D. UPC 602359460155. Not the plain drops.
+  'biogaia-protectis-baby-drops-d3': catalogShot('biogaia-protectis-baby-drops-d3.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -40050,18 +40095,15 @@ assertBrandMark(
       ['sprouts-slippery-elm-liquid', 'sprouts-slippery-elm-liquid', 'Sprouts'],
       ['natures-way-slippery-elm-bark', 'natures-way-slippery-elm-bark', "Nature's Way"],
     ],
-    [
-      ['natures-way-cranberry-fruit', 'natures-way-cranberry-fruit', "Nature's Way"],
-      ['natures-way-cranberry', 'natures-way-cranberry', "Nature's Way"],
-    ],
   ];
   const markInstead1022a = new Set<string>([
     'azo-b251-boric-14',
     'natures-way-cranberry-fruit',
   ]);
-  const letterUntilAttempted1022a = new Set<string>([
-    'natures-way-cranberry',
-  ]);
+  // Cranberry Premium Blend was attempted in batch 2. It shares the
+  // Nature's Way mark with Cranberry Fruit (both rows span two counts).
+  // Do not require those two mark rows to use different files.
+  const letterUntilAttempted1022a = new Set<string>([]);
   for (const group of groups1022a) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -40107,5 +40149,98 @@ assertBrandMark(
     || boric14.url === boric30.url
   ) {
     throw new Error('AZO boric 14 stays the mark; 30 keeps its own bottle');
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 1:45 AM PT batch 2.
+  // Single-count fronts stay cartons. Multi-count rows stay on the mark.
+  const batch1022b: [string, string, string][] = [
+    ['natures-way-cranrx-bioactive-cranberry', "Nature's Way", 'natures-way-cranrx-bioactive-cranberry.jpg'],
+    ['natures-way-fennel-seed', "Nature's Way", 'natures-way-fennel-seed.jpg'],
+    ['natures-way-gaba', "Nature's Way", 'natures-way-gaba.jpg'],
+    ['natures-way-super-milk-thistle', "Nature's Way", 'natures-way-super-milk-thistle.jpg'],
+    ['natures-way-super-thisilyn', "Nature's Way", 'natures-way-super-thisilyn.jpg'],
+    ['natures-way-urinary', "Nature's Way", 'natures-way-urinary.jpg'],
+    ['lovebug-kids-chewable-probiotic', 'LoveBug', 'lovebug-kids-chewable-probiotic.jpg'],
+    ['lovebug-advanced-strength-daily', 'LoveBug', 'lovebug-advanced-strength-daily.jpg'],
+    ['lovebug-organic-baby-probiotic-drops', 'LoveBug', 'lovebug-organic-baby-probiotic-drops.jpg'],
+    ['lovebug-yeast-vaginal-ph', 'LoveBug', 'lovebug-yeast-vaginal-ph.jpg'],
+    ['lovebug-tiny-tummies-0-6', 'LoveBug', 'lovebug-tiny-tummies-0-6.jpg'],
+    ['lovebug-tiny-tummies-6-12', 'LoveBug', 'lovebug-tiny-tummies-6-12.jpg'],
+    ['lovebug-tiny-tummies-12mo-4yr', 'LoveBug', 'lovebug-tiny-tummies-12mo-4yr.jpg'],
+    ['lovebug-kids-probiotic-gummies', 'LoveBug', 'lovebug-kids-probiotic-gummies.jpg'],
+    ['enzymedica-digest-spectrum', 'Enzymedica', 'enzymedica-digest-spectrum.jpg'],
+    ['enzymedica-digest-gold-atpro', 'Enzymedica', 'enzymedica-digest-gold-atpro.jpg'],
+    ['biogaia-protectis-baby-drops-d3', 'BioGaia', 'biogaia-protectis-baby-drops-d3.jpg'],
+  ];
+  const seen1022b = new Set<string>();
+  for (const [id, brand, file] of batch1022b) {
+    if (seen1022b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('natures-way-cranberry', "Nature's Way", 'natures-way-mark.png');
+  assertBrandMark('natures-way-ginger-root', "Nature's Way", 'natures-way-mark.png');
+  assertBrandMark('hilma-gas-bloat', 'Hilma', 'hilma-mark.png');
+  const groups1022b: [string, string, string][][] = [
+    [
+      ['natures-way-super-milk-thistle', 'natures-way-super-milk-thistle', "Nature's Way"],
+      ['natures-way-super-thisilyn', 'natures-way-super-thisilyn', "Nature's Way"],
+    ],
+    [
+      ['lovebug-tiny-tummies-0-6', 'lovebug-tiny-tummies-0-6', 'LoveBug'],
+      ['lovebug-tiny-tummies-6-12', 'lovebug-tiny-tummies-6-12', 'LoveBug'],
+      ['lovebug-tiny-tummies-12mo-4yr', 'lovebug-tiny-tummies-12mo-4yr', 'LoveBug'],
+    ],
+    [
+      ['lovebug-kids-chewable-probiotic', 'lovebug-kids-chewable-probiotic', 'LoveBug'],
+      ['lovebug-kids-probiotic-gummies', 'lovebug-kids-probiotic-gummies', 'LoveBug'],
+    ],
+    [
+      ['lovebug-organic-baby-probiotic-drops', 'lovebug-organic-baby-probiotic-drops', 'LoveBug'],
+      ['lovebug-tiny-tummies-0-6', 'lovebug-tiny-tummies-0-6', 'LoveBug'],
+    ],
+    [
+      ['enzymedica-digest-spectrum', 'enzymedica-digest-spectrum', 'Enzymedica'],
+      ['enzymedica-digest-gold-atpro', 'enzymedica-digest-gold-atpro', 'Enzymedica'],
+    ],
+  ];
+  for (const group of groups1022b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const cranberry = previewOverlayImage({
+    id: 'natures-way-cranberry',
+    formulaId: 'natures-way-cranberry',
+    brand: "Nature's Way",
+  });
+  const cranberryFruit = previewOverlayImage({
+    id: 'natures-way-cranberry-fruit',
+    formulaId: 'natures-way-cranberry-fruit',
+    brand: "Nature's Way",
+  });
+  const cranRx = previewOverlayImage({
+    id: 'natures-way-cranrx-bioactive-cranberry',
+    formulaId: 'natures-way-cranrx-bioactive-cranberry',
+    brand: "Nature's Way",
+  });
+  if (
+    !cranberry?.url.endsWith('/natures-way-mark.png')
+    || cranberry.verifiedSku
+    || cranberry.url.startsWith('data:image/svg+xml')
+    || !cranberryFruit?.url.endsWith('/natures-way-mark.png')
+    || cranberryFruit.verifiedSku
+    || !cranRx?.verifiedSku
+    || !cranRx.url.endsWith('/natures-way-cranrx-bioactive-cranberry.jpg')
+    || cranRx.url === cranberry.url
+  ) {
+    throw new Error('Cranberry blend and Cranberry Fruit stay marks; CranRx keeps its own bottle');
   }
 }
