@@ -17936,6 +17936,56 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-coq10-with-hawthorn-berry-90': catalogShot('now-coq10-with-hawthorn-berry-90.jpg'),
   // 8 Billion Acidophilus & Bifidus, 120 veg capsules. UPC 733739029324.
   'now-8-billion-acidophilus-bifidus-120': catalogShot('now-8-billion-acidophilus-bifidus-120.jpg'),
+  // Digestive night run 2026-10-22 5:30 AM PT batch 1.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Acidophilus 2 billion CFU, 100 veg capsules. UPC 733739029058. Not the 250.
+  'now-acidophilus-2-billion-cfu-100': catalogShot('now-acidophilus-2-billion-cfu-100.jpg'),
+  // CoQ10 400 mg with vitamin E and sunflower lecithin, 30 softgels.
+  // UPC 733739031990. Not the 60-count 733739031983.
+  'now-coq10-with-vitamin-e-sunflower-lecithin-30': catalogShot(
+    'now-coq10-with-vitamin-e-sunflower-lecithin-30.jpg',
+  ),
+  // Probiotic-10 100 billion, 60 veg capsules. UPC 733739029041. Not the 30.
+  'now-probiotic-10-100-billion-60': catalogShot('now-probiotic-10-100-billion-60.jpg'),
+  // Probiotic-10 powder, 2 oz (57 g). UPC 733739029270.
+  'now-probiotic-10-powder-2': catalogShot('now-probiotic-10-powder-2.jpg'),
+  // Kids BerryDophilus, 60 chewables. UPC 733739029362. Not the 120.
+  'now-kids-berry-dophilus-60-chewables': catalogShot('now-kids-berry-dophilus-60-chewables.jpg'),
+  // CoQ10 30 mg, 120 veg capsules. UPC 733739031884. Not the 60 or the 240.
+  'now-coq10-30-mg-120': catalogShot('now-coq10-30-mg-120.jpg'),
+  // Digest Ultimate, 60 veg capsules. UPC 733739029652. Not the 120.
+  'now-digest-ultimate-60': catalogShot('now-digest-ultimate-60.jpg'),
+  // CoQ10 30 mg, 60 veg capsules. UPC 733739031846. Not the 120 or the 240.
+  'now-coq10-30-mg-60': catalogShot('now-coq10-30-mg-60.jpg'),
+  // Aloe 10,000 & Probiotics, 60 veg capsules. UPC 733739030290.
+  'now-aloe-10-000-probiotics-60': catalogShot('now-aloe-10-000-probiotics-60.jpg'),
+  // CoQ10 30 mg, 240 veg capsules. UPC 733739031907. Not the 60 or the 120.
+  'now-coq10-30-mg-240': catalogShot('now-coq10-30-mg-240.jpg'),
+  // CoQ10 60 mg, 180 veg capsules. UPC 733739031549. Not the 60.
+  'now-coq10-60-mg-180': catalogShot('now-coq10-60-mg-180.jpg'),
+  // CoQ10 100 mg with hawthorn berry, 30 veg capsules. UPC 733739032102.
+  // Not the 90 and not the 180.
+  'now-coq10-with-hawthorn-berry-30': catalogShot('now-coq10-with-hawthorn-berry-30.jpg'),
+  // CoQ10 150 mg, 100 veg capsules. UPC 733739032188. Not the 30 mg or 60 mg bottles.
+  'now-coq10-100': catalogShot('now-coq10-100.jpg'),
+  // Acidophilus Two Billion, 250 veg capsules. UPC 733739029072. Not the 100.
+  'now-acidophilus-two-billion-250': catalogShot('now-acidophilus-two-billion-250.jpg'),
+  // Gr8-Dophilus, 120 veg capsules. UPC 733739029102. Not the 60.
+  'now-gr8-dophilus-120': catalogShot('now-gr8-dophilus-120.jpg'),
+  // Liquid CoQ10, orange, 4 fl oz (118 ml). UPC 733739031860.
+  'now-liquid-coq10-orange-4-fl-oz-118-ml': catalogShot(
+    'now-liquid-coq10-orange-4-fl-oz-118-ml.jpg',
+  ),
+  // Prebiotic Bifido Boost powder, 3 oz (85 g). UPC 733739029485.
+  'now-prebiotic-bifido-boost-powder-3': catalogShot('now-prebiotic-bifido-boost-powder-3.jpg'),
+  // Respiratory Care Probiotic, 60 veg capsules. UPC 733739029096.
+  'now-respiratory-care-probiotic-60': catalogShot('now-respiratory-care-probiotic-60.jpg'),
+  // Pancreatin 2000, 100 capsules. UPC 733739029454. Not the 250.
+  'now-pancreatin-2000-100': catalogShot('now-pancreatin-2000-100.jpg'),
+  // Clinical Heart Health Probiotic, 60 veg capsules. UPC 733739034946.
+  'now-clinical-heart-health-probiotic-60': catalogShot(
+    'now-clinical-heart-health-probiotic-60.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -18942,17 +18992,25 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-probiotic-10-100',
   // CoQ10 100 mg 150 is not the 50.
   'now-coq10-100-mg-150',
-  // Digest Ultimate 120 is not the 60. The 60 stays a letter.
+  // Digest Ultimate 120 is not the 60. Each count has its own carton.
   'now-digest-ultimate-120',
   // Digestive night run 2026-10-22 4:15 AM PT batch 2.
   // Shared-formula counts. Do not inherit a sibling face.
   // Psyllium 700 mg 360 is not the 180.
   'now-psyllium-husk-caps-360',
-  // Hawthorn 180 and 90 are not the 30. The 30 stays a letter.
+  // Hawthorn 180 and 90 are not the 30.
   'now-coq10-with-hawthorn-berry-180',
   'now-coq10-with-hawthorn-berry-90',
-  // Pancreatin 250 is not the 100. The 100 stays a letter.
+  // Pancreatin 250 is not the 100.
   'now-pancreatin-2000-250',
+  // Digestive night run 2026-10-22 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // CoQ10 30 mg 240 is not the 60. The 120 has its own formula id.
+  'now-coq10-30-mg-240',
+  // CoQ10 60 mg 180 is not the 60. The 60 stays a letter.
+  'now-coq10-60-mg-180',
+  // Gr8-Dophilus 120 is not the 60. The 60 stays a letter.
+  'now-gr8-dophilus-120',
 ]);
 
 export function previewOverlayImage(
@@ -40735,9 +40793,8 @@ assertBrandMark(
     ],
   ];
   // Bromelain 60 has its own carton in the 4:15 AM batch 2.
-  const letterUntilAttempted1022e = new Set<string>([
-    'now-digest-ultimate-60',
-  ]);
+  // Digest Ultimate 60 has its own carton in the 5:30 AM batch 1.
+  const letterUntilAttempted1022e = new Set<string>([]);
   for (const group of groups1022e) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -40827,12 +40884,8 @@ assertBrandMark(
       ['now-probiotic-10-100', 'now-probiotic-10-30', 'NOW'],
     ],
   ];
-  const letterUntilAttempted1022f = new Set<string>([
-    'now-coq10-with-vitamin-e-sunflower-lecithin-30',
-    'now-kids-berry-dophilus-60-chewables',
-    'now-coq10-with-hawthorn-berry-30',
-    'now-pancreatin-2000-100',
-  ]);
+  // These four have their own cartons in the 5:30 AM batch 1.
+  const letterUntilAttempted1022f = new Set<string>([]);
   for (const group of groups1022f) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -40845,6 +40898,103 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (letterUntilAttempted1022f.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 5:30 AM PT batch 1.
+  // Single-count fronts stay cartons. Unattempted sibling counts stay letters.
+  const batch1022g: [string, string, string][] = [
+    ['now-acidophilus-2-billion-cfu-100', 'NOW', 'now-acidophilus-2-billion-cfu-100.jpg'],
+    ['now-coq10-with-vitamin-e-sunflower-lecithin-30', 'NOW', 'now-coq10-with-vitamin-e-sunflower-lecithin-30.jpg'],
+    ['now-probiotic-10-100-billion-60', 'NOW', 'now-probiotic-10-100-billion-60.jpg'],
+    ['now-probiotic-10-powder-2', 'NOW', 'now-probiotic-10-powder-2.jpg'],
+    ['now-kids-berry-dophilus-60-chewables', 'NOW', 'now-kids-berry-dophilus-60-chewables.jpg'],
+    ['now-coq10-30-mg-120', 'NOW', 'now-coq10-30-mg-120.jpg'],
+    ['now-digest-ultimate-60', 'NOW', 'now-digest-ultimate-60.jpg'],
+    ['now-coq10-30-mg-60', 'NOW', 'now-coq10-30-mg-60.jpg'],
+    ['now-aloe-10-000-probiotics-60', 'NOW', 'now-aloe-10-000-probiotics-60.jpg'],
+    ['now-coq10-30-mg-240', 'NOW', 'now-coq10-30-mg-240.jpg'],
+    ['now-coq10-60-mg-180', 'NOW', 'now-coq10-60-mg-180.jpg'],
+    ['now-coq10-with-hawthorn-berry-30', 'NOW', 'now-coq10-with-hawthorn-berry-30.jpg'],
+    ['now-coq10-100', 'NOW', 'now-coq10-100.jpg'],
+    ['now-acidophilus-two-billion-250', 'NOW', 'now-acidophilus-two-billion-250.jpg'],
+    ['now-gr8-dophilus-120', 'NOW', 'now-gr8-dophilus-120.jpg'],
+    ['now-liquid-coq10-orange-4-fl-oz-118-ml', 'NOW', 'now-liquid-coq10-orange-4-fl-oz-118-ml.jpg'],
+    ['now-prebiotic-bifido-boost-powder-3', 'NOW', 'now-prebiotic-bifido-boost-powder-3.jpg'],
+    ['now-respiratory-care-probiotic-60', 'NOW', 'now-respiratory-care-probiotic-60.jpg'],
+    ['now-pancreatin-2000-100', 'NOW', 'now-pancreatin-2000-100.jpg'],
+    ['now-clinical-heart-health-probiotic-60', 'NOW', 'now-clinical-heart-health-probiotic-60.jpg'],
+  ];
+  const seen1022g = new Set<string>();
+  for (const [id, brand, file] of batch1022g) {
+    if (seen1022g.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022g.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1022g: [string, string, string][][] = [
+    [
+      ['now-acidophilus-2-billion-cfu-100', 'now-acidophilus-2-billion-cfu-100', 'NOW'],
+      ['now-acidophilus-two-billion-250', 'now-acidophilus-two-billion-250', 'NOW'],
+    ],
+    [
+      ['now-coq10-30-mg-120', 'now-coq10-30-mg-120', 'NOW'],
+      ['now-coq10-30-mg-60', 'now-coq10-30-mg-60', 'NOW'],
+      ['now-coq10-30-mg-240', 'now-coq10-30-mg-60', 'NOW'],
+    ],
+    [
+      ['now-coq10-60-mg-180', 'now-coq10-60-mg-60', 'NOW'],
+      ['now-coq10-60-mg-60', 'now-coq10-60-mg-60', 'NOW'],
+    ],
+    [
+      ['now-coq10-with-hawthorn-berry-30', 'now-coq10-with-hawthorn-berry-30', 'NOW'],
+      ['now-coq10-with-hawthorn-berry-90', 'now-coq10-with-hawthorn-berry-30', 'NOW'],
+      ['now-coq10-with-hawthorn-berry-180', 'now-coq10-with-hawthorn-berry-30', 'NOW'],
+    ],
+    [
+      ['now-digest-ultimate-60', 'now-digest-ultimate-60', 'NOW'],
+      ['now-digest-ultimate-120', 'now-digest-ultimate-60', 'NOW'],
+    ],
+    [
+      ['now-gr8-dophilus-120', 'now-gr8-dophilus-60', 'NOW'],
+      ['now-gr8-dophilus-60', 'now-gr8-dophilus-60', 'NOW'],
+    ],
+    [
+      ['now-pancreatin-2000-100', 'now-pancreatin-2000-100', 'NOW'],
+      ['now-pancreatin-2000-250', 'now-pancreatin-2000-100', 'NOW'],
+    ],
+    [
+      ['now-kids-berry-dophilus-60-chewables', 'now-kids-berry-dophilus-60-chewables', 'NOW'],
+      ['now-kids-berry-dophilus-chewables-120-chewables', 'now-kids-berry-dophilus-chewables-120-chewables', 'NOW'],
+    ],
+    [
+      ['now-coq10-with-vitamin-e-sunflower-lecithin-30', 'now-coq10-with-vitamin-e-sunflower-lecithin-30', 'NOW'],
+      ['now-coq10-60', 'now-coq10-60', 'NOW'],
+    ],
+  ];
+  const letterUntilAttempted1022g = new Set<string>([
+    'now-coq10-60-mg-60',
+    'now-gr8-dophilus-60',
+  ]);
+  for (const group of groups1022g) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted1022g.has(id)) {
         if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
