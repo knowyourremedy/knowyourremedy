@@ -3055,6 +3055,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'natures-way-dandelion-root': brandMark('natures-way-mark.png'),
   // Milk Thistle: 60 capsules (033674624005) and 120 (033674153550).
   'natures-way-milk-thistle': brandMark('natures-way-mark.png'),
+  // Vitamins + Digestive night run 2026-10-22 1:45 AM PT batch 1.
+  // Boric 14 and 30 share one brand-site hero that does not name a count.
+  // 30 has its own bottle. 14 stays on the official AZO mark. Not a letter.
+  'azo-b251-boric-14': brandMark('azo-mark.png'),
+  // Cascara Sagrada is 100 capsules (033674113004) and 180 (033674113080).
+  'natures-way-cascara-sagrada': brandMark('natures-way-mark.png'),
+  // Cranberry Fruit is 100 capsules (033674121504) and 180 (033674153611).
+  'natures-way-cranberry-fruit': brandMark('natures-way-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17632,6 +17640,43 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'natures-way-peppermint-leaf': catalogShot('natures-way-peppermint-leaf.jpg'),
   // Senna Leaves, 100 capsules. UPC 033674170007.
   'natures-way-senna-leaves': catalogShot('natures-way-senna-leaves.jpg'),
+  // Vitamins + Digestive night run 2026-10-22 1:45 AM PT batch 1.
+  // New Vitamins letters first, then Digestive in catalog order.
+  // Each count keeps its own front.
+  // Menopause + D, 30 tablets. UPC 787651760605. The 60 is a 2-pack.
+  'azo-b250-menopause-d-30': catalogShot('azo-b250-menopause-d-30.jpg'),
+  // Cranberry softgels, 120. UPC 787651760230. Not the 100.
+  'azo-b250-cranberry-softgel-120': catalogShot('azo-b250-cranberry-softgel-120.jpg'),
+  // Dual Protection, 30 capsules. UPC 787651760285.
+  'azo-b250-dual-protection-30': catalogShot('azo-b250-dual-protection-30.jpg'),
+  // Complete Feminine Balance, 30 capsules. UPC 787651760162. Not the 60.
+  'azo-b251-feminine-balance-30': catalogShot('azo-b251-feminine-balance-30.jpg'),
+  // Complete Feminine Balance, 60 capsules. UPC 787651760186. Not the 30.
+  'azo-b251-feminine-balance-60': catalogShot('azo-b251-feminine-balance-60.jpg'),
+  // Vaginal probiotic mini-chews, 14 packets. UPC 787651760674. The 28 is a 2-pack.
+  'azo-b251-mini-chews-14': catalogShot('azo-b251-mini-chews-14.jpg'),
+  // Boric acid suppositories, 30. UPC 787651760308. Not the 14.
+  'azo-b251-boric-30': catalogShot('azo-b251-boric-30.jpg'),
+  // D-Mannose ready-to-mix, 10 packets. UPC 787651760575. The 20 is a 2-pack.
+  'azo-b251-d-mannose-packets-10': catalogShot('azo-b251-d-mannose-packets-10.jpg'),
+  // Cranberry softgels, 100. UPC 787651101675. Not the 120.
+  'azo-b251-cranberry-softgel-100': catalogShot('azo-b251-cranberry-softgel-100.jpg'),
+  // Slippery Elm Bark, 100 capsules. UPC 033674171004. Not the Sprouts liquid.
+  'natures-way-slippery-elm-bark': catalogShot('natures-way-slippery-elm-bark.jpg'),
+  // Uva Ursi Leaves, 100 capsules. UPC 033674176009.
+  'natures-way-uva-ursi-leaves': catalogShot('natures-way-uva-ursi-leaves.jpg'),
+  // Youthful You DHEA 5 mg, 60 capsules. UPC 763948050062.
+  'natures-way-youthful-you-dhea-5mg': catalogShot('natures-way-youthful-you-dhea-5mg.jpg'),
+  // Aloe Latex with Fennel, 100 capsules. UPC 033674101506. Not MAXLAX or Aloelax.
+  'natures-way-aloe': catalogShot('natures-way-aloe.jpg'),
+  // Aloelax, 100 capsules. UPC 033674009000. Not Aloe Latex or MAXLAX.
+  'natures-way-aloelax': catalogShot('natures-way-aloelax.jpg'),
+  // Alpha Lipoic Acid, 60 capsules. UPC 033674451816.
+  'natures-way-alpha-lipoic-acid': catalogShot('natures-way-alpha-lipoic-acid.jpg'),
+  // Artichoke, 60 capsules. UPC 033674646007.
+  'natures-way-artichoke': catalogShot('natures-way-artichoke.jpg'),
+  // Complete Liver Cleanse, 84 capsules. UPC 763948013159.
+  'natures-way-complete-liver-cleanse': catalogShot('natures-way-complete-liver-cleanse.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -39723,9 +39768,7 @@ assertBrandMark(
       ['medinatura-bodyanew-cleanse-drops', 'medinatura-bodyanew-cleanse-drops', 'MediNatura'],
     ],
   ];
-  const letterUntilAttemptedI = new Set<string>([
-    'natures-way-slippery-elm-bark',
-  ]);
+  const letterUntilAttemptedI = new Set<string>([]);
   const markInsteadI = new Set<string>([
     'sprouts-cranberry-d-mannose-cap',
     'natures-way-probiotic-pearls-womens',
@@ -39942,13 +39985,127 @@ assertBrandMark(
   if (
     !aloeMax?.verifiedSku
     || !aloeMax.url.endsWith('/natures-way-aloe-maxlax.jpg')
-    || !aloeLatex?.url.startsWith('data:image/svg+xml')
-    || aloeLatex.verifiedSku
-    || !aloeLax?.url.startsWith('data:image/svg+xml')
-    || aloeLax.verifiedSku
-    || aloeMax.url === aloeLatex.url
-    || aloeMax.url === aloeLax.url
+    || !aloeLatex?.verifiedSku
+    || !aloeLatex.url.endsWith('/natures-way-aloe.jpg')
+    || !aloeLax?.verifiedSku
+    || !aloeLax.url.endsWith('/natures-way-aloelax.jpg')
+    || new Set([aloeMax.url, aloeLatex.url, aloeLax.url]).size !== 3
   ) {
-    throw new Error('Aloe MAXLAX must not cover Aloe Latex or Aloelax');
+    throw new Error('Aloe MAXLAX, Aloe Latex, and Aloelax must keep three different cartons');
+  }
+}
+
+{
+  // Vitamins + Digestive night run 2026-10-22 1:45 AM PT batch 1.
+  // Vitamins letters that landed after the Oct 21 close, then Digestive.
+  // Sibling counts keep their own fronts. Two-count rows stay on the mark.
+  const batch1022a: [string, string, string][] = [
+    ['azo-b250-menopause-d-30', 'AZO', 'azo-b250-menopause-d-30.jpg'],
+    ['azo-b250-cranberry-softgel-120', 'AZO', 'azo-b250-cranberry-softgel-120.jpg'],
+    ['azo-b250-dual-protection-30', 'AZO', 'azo-b250-dual-protection-30.jpg'],
+    ['azo-b251-feminine-balance-30', 'AZO', 'azo-b251-feminine-balance-30.jpg'],
+    ['azo-b251-feminine-balance-60', 'AZO', 'azo-b251-feminine-balance-60.jpg'],
+    ['azo-b251-mini-chews-14', 'AZO', 'azo-b251-mini-chews-14.jpg'],
+    ['azo-b251-boric-30', 'AZO', 'azo-b251-boric-30.jpg'],
+    ['azo-b251-d-mannose-packets-10', 'AZO', 'azo-b251-d-mannose-packets-10.jpg'],
+    ['azo-b251-cranberry-softgel-100', 'AZO', 'azo-b251-cranberry-softgel-100.jpg'],
+    ['natures-way-slippery-elm-bark', "Nature's Way", 'natures-way-slippery-elm-bark.jpg'],
+    ['natures-way-uva-ursi-leaves', "Nature's Way", 'natures-way-uva-ursi-leaves.jpg'],
+    ['natures-way-youthful-you-dhea-5mg', "Nature's Way", 'natures-way-youthful-you-dhea-5mg.jpg'],
+    ['natures-way-aloe', "Nature's Way", 'natures-way-aloe.jpg'],
+    ['natures-way-aloelax', "Nature's Way", 'natures-way-aloelax.jpg'],
+    ['natures-way-alpha-lipoic-acid', "Nature's Way", 'natures-way-alpha-lipoic-acid.jpg'],
+    ['natures-way-artichoke', "Nature's Way", 'natures-way-artichoke.jpg'],
+    ['natures-way-complete-liver-cleanse', "Nature's Way", 'natures-way-complete-liver-cleanse.jpg'],
+  ];
+  const seen1022a = new Set<string>();
+  for (const [id, brand, file] of batch1022a) {
+    if (seen1022a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('azo-b251-boric-14', 'AZO', 'azo-mark.png');
+  assertBrandMark('natures-way-cascara-sagrada', "Nature's Way", 'natures-way-mark.png');
+  assertBrandMark('natures-way-cranberry-fruit', "Nature's Way", 'natures-way-mark.png');
+  const groups1022a: [string, string, string][][] = [
+    [
+      ['azo-b251-feminine-balance-30', 'azo-b251-feminine-balance', 'AZO'],
+      ['azo-b251-feminine-balance-60', 'azo-b251-feminine-balance', 'AZO'],
+    ],
+    [
+      ['azo-b251-boric-14', 'azo-b251-boric-acid', 'AZO'],
+      ['azo-b251-boric-30', 'azo-b251-boric-acid', 'AZO'],
+    ],
+    [
+      ['azo-b250-cranberry-softgel-120', 'azo-b250-cranberry-softgel-120', 'AZO'],
+      ['azo-b251-cranberry-softgel-100', 'azo-b251-cranberry-softgel-100', 'AZO'],
+      ['azo-b247-cranberry-caplets-50', 'azo-b247-cranberry-caplets-50', 'AZO'],
+    ],
+    [
+      ['natures-way-aloe', 'natures-way-aloe', "Nature's Way"],
+      ['natures-way-aloelax', 'natures-way-aloelax', "Nature's Way"],
+      ['natures-way-aloe-maxlax', 'natures-way-aloe-maxlax', "Nature's Way"],
+    ],
+    [
+      ['sprouts-slippery-elm-liquid', 'sprouts-slippery-elm-liquid', 'Sprouts'],
+      ['natures-way-slippery-elm-bark', 'natures-way-slippery-elm-bark', "Nature's Way"],
+    ],
+    [
+      ['natures-way-cranberry-fruit', 'natures-way-cranberry-fruit', "Nature's Way"],
+      ['natures-way-cranberry', 'natures-way-cranberry', "Nature's Way"],
+    ],
+  ];
+  const markInstead1022a = new Set<string>([
+    'azo-b251-boric-14',
+    'natures-way-cranberry-fruit',
+  ]);
+  const letterUntilAttempted1022a = new Set<string>([
+    'natures-way-cranberry',
+  ]);
+  for (const group of groups1022a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted1022a.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (markInstead1022a.has(id)) {
+        if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} must stay a brand mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+  const boric14 = previewOverlayImage({
+    id: 'azo-b251-boric-14',
+    formulaId: 'azo-b251-boric-acid',
+    brand: 'AZO',
+  });
+  const boric30 = previewOverlayImage({
+    id: 'azo-b251-boric-30',
+    formulaId: 'azo-b251-boric-acid',
+    brand: 'AZO',
+  });
+  if (
+    !boric14?.url.endsWith('/azo-mark.png')
+    || boric14.verifiedSku
+    || boric14.url.startsWith('data:image/svg+xml')
+    || !boric30?.verifiedSku
+    || !boric30.url.endsWith('/azo-b251-boric-30.jpg')
+    || boric14.url === boric30.url
+  ) {
+    throw new Error('AZO boric 14 stays the mark; 30 keeps its own bottle');
   }
 }
