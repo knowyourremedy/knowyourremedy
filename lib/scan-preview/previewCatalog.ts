@@ -3103,6 +3103,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // set 2766ffe7 is NDC 0363-5300, and those photos are flat 25-tablet labels.
   // Do not glue either face. Official Walgreens mark. Not a letter.
   'walgreens-famotidine-20': brandMark('walgreens-mark.png'),
+  // Digestive night run 2026-10-22 6:45 AM PT batch 1.
+  // Bromelain powder 4 oz and 8 oz share one lineup photo on nutricost.com.
+  // The 8 oz has its own front. The 4 oz does not. Official Nutricost mark.
+  // Not a letter. Not the 8 oz tub.
+  'nutricost-nutricost-bromelain-powder-4-oz': brandMark('nutricost-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18030,6 +18035,65 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-coq10-with-selenium-vitamin-e-50-softgel': catalogShot(
     'now-coq10-with-selenium-vitamin-e-50-softgel.jpg',
   ),
+  // Digestive night run 2026-10-22 6:45 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // CoQ10 + Fish Oil, 60 softgels. UPC 733739031631. Not the 120 omega-3 bottle.
+  'now-coq10-fish-oil-60': catalogShot('now-coq10-fish-oil-60.jpg'),
+  // Water Out, 100 veg capsules. UPC 733739019080. Not the 200.
+  'now-water-out-100': catalogShot('now-water-out-100.jpg'),
+  // Water Out, 200 veg capsules. UPC 733739019097. Not the 100.
+  'now-water-out-200': catalogShot('now-water-out-200.jpg'),
+  // Whole Psyllium Husks, 12 oz. UPC 733739059802. Not the 16 or 24. Not organic.
+  'now-whole-psyllium-husks-12': catalogShot('now-whole-psyllium-husks-12.jpg'),
+  // Whole Psyllium Husks, 16 oz. UPC 733739059819. Not the 12 or 24.
+  'now-whole-psyllium-husks-16': catalogShot('now-whole-psyllium-husks-16.jpg'),
+  // Whole Psyllium Husks, 24 oz. UPC 733739059826. Not the 12 or 16. Not organic.
+  'now-whole-psyllium-husks-24': catalogShot('now-whole-psyllium-husks-24.jpg'),
+  // Psyllium Husk Powder, 12 oz. UPC 733739059758. Not the 24. Not whole husks.
+  'now-psyllium-husk-powder-12': catalogShot('now-psyllium-husk-powder-12.jpg'),
+  // Psyllium Husk Powder, 24 oz. UPC 733739059789. Not the 12.
+  'now-psyllium-husk-powder-24': catalogShot('now-psyllium-husk-powder-24.jpg'),
+  // Certified Organic Whole Psyllium Husks, 12 oz. UPC 733739059680. Not the powder.
+  'now-certified-organic-whole-psyllium-husks-12': catalogShot(
+    'now-certified-organic-whole-psyllium-husks-12.jpg',
+  ),
+  // Certified Organic Psyllium Husk Powder, 12 oz. UPC 733739059666. Not whole husks.
+  'now-certified-organic-psyllium-husk-powder-12': catalogShot(
+    'now-certified-organic-psyllium-husk-powder-12.jpg',
+  ),
+  // Chewable Papaya Enzymes, 360 lozenges. UPC 733739029720. Not the 180.
+  'now-chewable-papaya-enzymes-360': catalogShot('now-chewable-papaya-enzymes-360.jpg'),
+  // Chewable Papaya Enzymes, 180 lozenges. UPC 733739029706. Not the 360.
+  'now-chewable-papaya-enzymes-180': catalogShot('now-chewable-papaya-enzymes-180.jpg'),
+  // Peppermint Gels with ginger and fennel oils, 90 softgels. UPC 733739047274.
+  'now-peppermint-gels-with-ginger-fennel-oils-90': catalogShot(
+    'now-peppermint-gels-with-ginger-fennel-oils-90.jpg',
+  ),
+  // Proteolytic Enzymes, 90 capsules. UPC 810139577942.
+  'nutricost-nutricost-proteolytic-enzyme-90-capsules': catalogShot(
+    'nutricost-nutricost-proteolytic-enzyme-90-capsules.jpg',
+  ),
+  // Probiotic for Women, 10 billion CFU, 60 capsules. UPC 810014675718.
+  // Not the 30 billion or 60 billion bottles.
+  'nutricost-nutricost-probiotic-for-women-capsule-60-capsules': catalogShot(
+    'nutricost-nutricost-probiotic-for-women-capsule-60-capsules.jpg',
+  ),
+  // Ox Bile 500 mg, 120 capsules. UPC 810014670836. Not the 125 mg 240.
+  'nutricost-nutricost-ox-bile-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-ox-bile-capsules-120-capsules.jpg',
+  ),
+  // Ox Bile 125 mg, 240 capsules. UPC 810014670843. Not the 500 mg 120.
+  'nutricost-nutricost-ox-bile-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-ox-bile-capsules-240-capsules.jpg',
+  ),
+  // Bromelain powder, 8 oz. UPC 810139571469. Not the 4 oz. Not the two-size lineup.
+  'nutricost-nutricost-bromelain-powder-8-oz': catalogShot(
+    'nutricost-nutricost-bromelain-powder-8-oz.jpg',
+  ),
+  // Bromelain 550 mg, 60 capsules. Not the 500 mg 120 or the 550 mg 240.
+  'nutricost-nutricost-bromelain-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-bromelain-capsules-60-capsules.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19064,6 +19128,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'now-ubiquinol-60-733739031440',
   // Super Enzymes 180 tablets are not the 90 tablets.
   'now-super-enzymes-180-733739029621',
+  // Digestive night run 2026-10-22 6:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Water Out 200 is not the 100.
+  'now-water-out-200',
+  // Whole husks 16 and 24 are not the 12.
+  'now-whole-psyllium-husks-16',
+  'now-whole-psyllium-husks-24',
+  // Psyllium powder 24 is not the 12.
+  'now-psyllium-husk-powder-24',
+  // Papaya enzymes 180 is not the 360.
+  'now-chewable-papaya-enzymes-180',
+  // Bromelain powder 8 oz is not the 4 oz.
+  'nutricost-nutricost-bromelain-powder-8-oz',
+  // Bromelain 60 capsules share the 120 formula. Own carton. Not the 120.
+  'nutricost-nutricost-bromelain-capsules-60-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -41132,9 +41211,8 @@ assertBrandMark(
       ['now-coq10-fish-oil-60', 'now-coq10-fish-oil-60', 'NOW'],
     ],
   ];
-  const letterUntilAttempted1022h = new Set<string>([
-    'now-coq10-fish-oil-60',
-  ]);
+  // CoQ10 + Fish Oil 60 has its own carton in the 6:45 AM batch 1.
+  const letterUntilAttempted1022h = new Set<string>([]);
   for (const group of groups1022h) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -41154,5 +41232,108 @@ assertBrandMark(
       }
       if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
     }
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 6:45 AM PT batch 1.
+  // Single-count fronts stay cartons. The 4 oz bromelain powder stays a mark.
+  const batch1022i: [string, string, string][] = [
+    ['now-coq10-fish-oil-60', 'NOW', 'now-coq10-fish-oil-60.jpg'],
+    ['now-water-out-100', 'NOW', 'now-water-out-100.jpg'],
+    ['now-water-out-200', 'NOW', 'now-water-out-200.jpg'],
+    ['now-whole-psyllium-husks-12', 'NOW', 'now-whole-psyllium-husks-12.jpg'],
+    ['now-whole-psyllium-husks-16', 'NOW', 'now-whole-psyllium-husks-16.jpg'],
+    ['now-whole-psyllium-husks-24', 'NOW', 'now-whole-psyllium-husks-24.jpg'],
+    ['now-psyllium-husk-powder-12', 'NOW', 'now-psyllium-husk-powder-12.jpg'],
+    ['now-psyllium-husk-powder-24', 'NOW', 'now-psyllium-husk-powder-24.jpg'],
+    ['now-certified-organic-whole-psyllium-husks-12', 'NOW', 'now-certified-organic-whole-psyllium-husks-12.jpg'],
+    ['now-certified-organic-psyllium-husk-powder-12', 'NOW', 'now-certified-organic-psyllium-husk-powder-12.jpg'],
+    ['now-chewable-papaya-enzymes-360', 'NOW', 'now-chewable-papaya-enzymes-360.jpg'],
+    ['now-chewable-papaya-enzymes-180', 'NOW', 'now-chewable-papaya-enzymes-180.jpg'],
+    ['now-peppermint-gels-with-ginger-fennel-oils-90', 'NOW', 'now-peppermint-gels-with-ginger-fennel-oils-90.jpg'],
+    ['nutricost-nutricost-proteolytic-enzyme-90-capsules', 'Nutricost', 'nutricost-nutricost-proteolytic-enzyme-90-capsules.jpg'],
+    ['nutricost-nutricost-probiotic-for-women-capsule-60-capsules', 'Nutricost', 'nutricost-nutricost-probiotic-for-women-capsule-60-capsules.jpg'],
+    ['nutricost-nutricost-ox-bile-capsules-120-capsules', 'Nutricost', 'nutricost-nutricost-ox-bile-capsules-120-capsules.jpg'],
+    ['nutricost-nutricost-ox-bile-capsules-240-capsules', 'Nutricost', 'nutricost-nutricost-ox-bile-capsules-240-capsules.jpg'],
+    ['nutricost-nutricost-bromelain-powder-8-oz', 'Nutricost', 'nutricost-nutricost-bromelain-powder-8-oz.jpg'],
+    ['nutricost-nutricost-bromelain-capsules-60-capsules', 'Nutricost', 'nutricost-nutricost-bromelain-capsules-60-capsules.jpg'],
+  ];
+  const seen1022i = new Set<string>();
+  for (const [id, brand, file] of batch1022i) {
+    if (seen1022i.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022i.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark(
+    'nutricost-nutricost-bromelain-powder-4-oz',
+    'Nutricost',
+    'nutricost-mark.png',
+  );
+  const groups1022i: [string, string, string][][] = [
+    [
+      ['now-water-out-100', 'now-water-out-100', 'NOW'],
+      ['now-water-out-200', 'now-water-out-100', 'NOW'],
+    ],
+    [
+      ['now-whole-psyllium-husks-12', 'now-whole-psyllium-husks-12', 'NOW'],
+      ['now-whole-psyllium-husks-16', 'now-whole-psyllium-husks-12', 'NOW'],
+      ['now-whole-psyllium-husks-24', 'now-whole-psyllium-husks-12', 'NOW'],
+    ],
+    [
+      ['now-psyllium-husk-powder-12', 'now-psyllium-husk-powder-12', 'NOW'],
+      ['now-psyllium-husk-powder-24', 'now-psyllium-husk-powder-12', 'NOW'],
+    ],
+    [
+      ['now-certified-organic-whole-psyllium-husks-12', 'now-certified-organic-whole-psyllium-husks-12', 'NOW'],
+      ['now-certified-organic-psyllium-husk-powder-12', 'now-certified-organic-psyllium-husk-powder-12', 'NOW'],
+      ['now-whole-psyllium-husks-12', 'now-whole-psyllium-husks-12', 'NOW'],
+      ['now-psyllium-husk-powder-12', 'now-psyllium-husk-powder-12', 'NOW'],
+    ],
+    [
+      ['now-chewable-papaya-enzymes-360', 'now-chewable-papaya-enzymes-360', 'NOW'],
+      ['now-chewable-papaya-enzymes-180', 'now-chewable-papaya-enzymes-360', 'NOW'],
+    ],
+    [
+      ['now-coq10-fish-oil-60', 'now-coq10-fish-oil-60', 'NOW'],
+      ['now-coq10-with-omega-3-fish-oil-120', 'now-coq10-with-omega-3-fish-oil-120', 'NOW'],
+    ],
+    [
+      ['nutricost-nutricost-ox-bile-capsules-120-capsules', 'nutricost-nutricost-ox-bile-capsules-120-capsules', 'Nutricost'],
+      ['nutricost-nutricost-ox-bile-capsules-240-capsules', 'nutricost-nutricost-ox-bile-capsules-240-capsules', 'Nutricost'],
+    ],
+    [
+      ['nutricost-nutricost-bromelain-powder-8-oz', 'nutricost-nutricost-bromelain-powder-4-oz', 'Nutricost'],
+      ['nutricost-nutricost-bromelain-powder-4-oz', 'nutricost-nutricost-bromelain-powder-4-oz', 'Nutricost'],
+    ],
+  ];
+  for (const group of groups1022i) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const bromelain120 = previewOverlayImage({
+    id: 'nutricost-nutricost-bromelain-capsules-120-capsules',
+    formulaId: 'nutricost-nutricost-bromelain-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  const bromelain60 = previewOverlayImage({
+    id: 'nutricost-nutricost-bromelain-capsules-60-capsules',
+    formulaId: 'nutricost-nutricost-bromelain-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (!bromelain60?.verifiedSku) {
+    throw new Error('bromelain 60 must keep its own carton');
+  }
+  if (!bromelain120?.url.startsWith('data:image/svg+xml') || bromelain120.verifiedSku) {
+    throw new Error('bromelain 120 stays a letter until its own carton is attempted');
+  }
+  if (bromelain60.url === bromelain120.url) {
+    throw new Error('bromelain 60 and 120 must not share a photo');
   }
 }
