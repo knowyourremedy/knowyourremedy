@@ -45,6 +45,8 @@ const METH = {
     'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   steviol:
     'Methodology §5 Cleared (high-purity steviol glycosides — EFSA ADI; not the Limited stevia extract row).',
+  steviolBare:
+    'Methodology §5 Limited (Steviol glycosides printed without high-purity — founder lock t16u Oct 22, 2026; counts toward the t137u stack). Not the Cleared high-purity steviol glycosides row.',
   paprika:
     'Methodology §5 Cleared (Paprika extract (color) — founder lock t158u Oct 21, 2026; exact named plant color).',
   turmeric: 'Methodology §5 Cleared (turmeric (color) — named plant color).',
@@ -478,13 +480,13 @@ export const BATCH257_KYR6D_T162U: RatingRecord[] = [
       flag(PANEL_SUPERFRUIT, 'Citric acid', 'cleared', 'citric'),
       flag(PANEL_SUPERFRUIT, 'Guar gum', 'cleared', 'guar'),
       flag(PANEL_SUPERFRUIT, 'Malic acid', 'cleared', 'malic'),
-      flag(PANEL_SUPERFRUIT, 'Steviol glycosides', 'cleared', 'steviol'),
+      flag(PANEL_SUPERFRUIT, 'Steviol glycosides', 'limited', 'steviolBare'),
       flag(PANEL_SUPERFRUIT, 'Xanthan gum', 'cleared', 'xanthan'),
     ],
     verdict: 'caution',
     retailers: ['founder-verified'],
     sourcesGeneral: [
-      'Plant-based fiber is the fiber active and is not graded. Natural flavors is the one stack-eligible Limited token, so the row is Caution. Citric acid, guar gum, malic acid, and xanthan gum are Cleared. Steviol glycosides are the high-purity Cleared row, not the Limited stevia extract row, and they do not stack. This is not a 3+ Limited stack. Founder-verified panel (t162u); second source waived. Given code 88679032718 is 11 digits. A 12-digit pad does not pass the check digit, so the barcode is omitted.',
+      'Plant-based fiber is the fiber active and is not graded. Natural flavors and bare Steviol glycosides are the two stack-eligible Limited tokens, so the row is Caution. t16u regrade: the printing is Steviol glycosides without high-purity, so that token is Limited and it counts. Citric acid, guar gum, malic acid, and xanthan gum are Cleared. This is not a 3+ Limited stack. Founder-verified panel (t162u); second source waived. Given code 88679032718 is 11 digits. A 12-digit pad does not pass the check digit, so the barcode is omitted.',
     ],
   },
   {
@@ -504,7 +506,7 @@ export const BATCH257_KYR6D_T162U: RatingRecord[] = [
       flag(PANEL_SUPERGREEN, 'Citric acid', 'cleared', 'citric'),
       flag(PANEL_SUPERGREEN, 'Guar gum', 'cleared', 'guar'),
       flag(PANEL_SUPERGREEN, 'Malic acid', 'cleared', 'malic'),
-      flag(PANEL_SUPERGREEN, 'Steviol glycosides', 'cleared', 'steviol'),
+      flag(PANEL_SUPERGREEN, 'Steviol glycosides', 'limited', 'steviolBare'),
       flag(PANEL_SUPERGREEN, 'Xanthan gum', 'cleared', 'xanthan'),
       flag(PANEL_SUPERGREEN, 'Beet juice concentrate', 'cleared', 'juice'),
       flag(PANEL_SUPERGREEN, 'Silicon dioxide', 'moderate', 'silica'),
@@ -512,7 +514,7 @@ export const BATCH257_KYR6D_T162U: RatingRecord[] = [
     verdict: 'caution',
     retailers: ['founder-verified'],
     sourcesGeneral: [
-      'Plant-based fiber is the fiber active and is not graded. Natural flavors is the one stack-eligible Limited token, so the row is Caution. Citric acid, guar gum, malic acid, and xanthan gum are Cleared. Steviol glycosides are the high-purity Cleared row and do not stack. Beet juice concentrate is Cleared on the Oct 15 juice lock. Silicon dioxide is the zero-point Caution cap and does not stack. This is not a 3+ Limited stack. Founder-verified panel (t162u); second source waived. Given code 88679032715 is 11 digits. A 12-digit pad does not pass the check digit, so the barcode is omitted.',
+      'Plant-based fiber is the fiber active and is not graded. Natural flavors and bare Steviol glycosides are the two stack-eligible Limited tokens, so the row is Caution. t16u regrade: the printing is Steviol glycosides without high-purity, so that token is Limited and it counts. Citric acid, guar gum, malic acid, and xanthan gum are Cleared. Beet juice concentrate is Cleared on the Oct 15 juice lock. Silicon dioxide is the zero-point Caution cap and does not stack. This is not a 3+ Limited stack. Founder-verified panel (t162u); second source waived. Given code 88679032715 is 11 digits. A 12-digit pad does not pass the check digit, so the barcode is omitted.',
     ],
   },
   {

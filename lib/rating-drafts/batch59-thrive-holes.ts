@@ -158,6 +158,8 @@ const METH = {
     'Methodology §5 Caution (whole-leaf / crude stevia — do not auto-Clean; distinct from high-purity steviol glycosides / Reb M / Reb A)',
   stevia:
     'Methodology §5 Cleared (organic Rebaudioside A — founder lock t132u Oct 20, 2026; steviol glycoside row).',
+  steviolBare:
+    'Methodology §5 Limited (Steviol glycosides printed without high-purity — founder lock t16u Oct 22, 2026; counts toward the t137u stack). Not the Cleared high-purity steviol glycosides row.',
   monk: 'Methodology §5 Cleared (monk fruit / mogrosides / Luo Han Guo, high-purity extract)',
   choline:
     'Methodology §5 Cleared (choline bitartrate — exact token as inactive; locked Sept 15, 2026)',
@@ -2250,7 +2252,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     ],
     inactiveIngredients: [
       f(CITE.trace_mg_glycinate_orange_dream, 'Citric acid', 'cleared', METH.citrate),
-      f(CITE.trace_mg_glycinate_orange_dream, 'Steviol glycosides', 'cleared', METH.stevia),
+      f(CITE.trace_mg_glycinate_orange_dream, 'Steviol glycosides', 'limited', METH.steviolBare),
       f(CITE.trace_mg_glycinate_orange_dream, 'Natural flavors blend (orange and vanilla)', 'limited', METH.flavors),
       f(CITE.trace_mg_glycinate_orange_dream, 'Beta carotene (for color)', 'cleared', METH.betaCarotene),
       f(CITE.trace_mg_glycinate_orange_dream, 'Silicon dioxide', 'cleared', METH.sio2),
@@ -2261,7 +2263,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     cleanAlternatives: [
       alt('natural-vitality-calm-unflavored', 'Independently Clean in-batch natural-vitality-calm-unflavored. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
     ],
-    sourcesGeneral: [`${CITE.trace_mg_glycinate_orange_dream} — ${UNVERIFIED_NOTE}`],
+    sourcesGeneral: [`${CITE.trace_mg_glycinate_orange_dream} — ${UNVERIFIED_NOTE} t16u regrade: bare Steviol glycosides are Limited and count. The row stays Caution. This is not a 3+ Limited stack. Organic sunflower oil is not on this panel.`],
   }),
   row({
     id: 'solaray-berberine-500',
@@ -5497,7 +5499,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_kids_fiber_veggies, 'Color added (purple carrot juice concentrate)', 'cleared', METH.namedColor),
       f(CITE.smartypants_kids_fiber_veggies, 'Natural flavors', 'limited', METH.flavors),
       f(CITE.smartypants_kids_fiber_veggies, 'Organic carnauba wax', 'cleared', METH.beeswax),
-      f(CITE.smartypants_kids_fiber_veggies, 'Steviol glycosides', 'cleared', METH.stevia),
+      f(CITE.smartypants_kids_fiber_veggies, 'Steviol glycosides', 'limited', METH.steviolBare),
       f(CITE.smartypants_kids_fiber_veggies, 'Lo Han Guo (monk fruit) extract', 'cleared', METH.monk),
       f(CITE.smartypants_kids_fiber_veggies, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
@@ -5507,7 +5509,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
     ],
-    sourcesGeneral: [`${CITE.smartypants_kids_fiber_veggies} — ${UNVERIFIED_NOTE}`],
+    sourcesGeneral: [`${CITE.smartypants_kids_fiber_veggies} — ${UNVERIFIED_NOTE} t16u regrade: bare Steviol glycosides are Limited and count. Organic sunflower oil in the gummy stays Avoid, so the product grade stays Avoid. The Avoid is the oil, not a 3+ Limited stack.`],
   }),
   row({
     id: 'smartypants-kids-zero-sugar',
@@ -5599,7 +5601,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.smartypants_adult_multi_fiber, 'Colors added (organic annatto extract, organic turmeric extract, organic black carrot juice concentrate)', 'cleared', METH.annatto),
       f(CITE.smartypants_adult_multi_fiber, 'Sodium citrate', 'cleared', METH.citrate),
       f(CITE.smartypants_adult_multi_fiber, 'Organic carnauba wax', 'cleared', METH.beeswax),
-      f(CITE.smartypants_adult_multi_fiber, 'Steviol glycosides', 'cleared', METH.stevia),
+      f(CITE.smartypants_adult_multi_fiber, 'Steviol glycosides', 'limited', METH.steviolBare),
       f(CITE.smartypants_adult_multi_fiber, 'Lo Han Guo (monk fruit) extract', 'cleared', METH.monk),
       f(CITE.smartypants_adult_multi_fiber, 'Organic sunflower oil', 'high', METH.seedOilGummies),
     ],
@@ -5609,7 +5611,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     cleanAlternatives: [
       alt('carlson-super-omega-3-gems', 'Independently Clean in-batch carlson-super-omega-3-gems. Form labeled, not a hard filter (§6). Do not invent a Clean that is not on main or in this batch.'),
     ],
-    sourcesGeneral: [`${CITE.smartypants_adult_multi_fiber} — ${UNVERIFIED_NOTE}`],
+    sourcesGeneral: [`${CITE.smartypants_adult_multi_fiber} — ${UNVERIFIED_NOTE} t16u regrade: bare Steviol glycosides are Limited and count. Organic sunflower oil in the gummy stays Avoid, so the product grade stays Avoid. The Avoid is the oil, not a 3+ Limited stack.`],
   }),
   row({
     id: 'smartypants-kids-sleep-zero-melatonin',
