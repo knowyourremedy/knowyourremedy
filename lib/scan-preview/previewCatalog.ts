@@ -17986,6 +17986,50 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'now-clinical-heart-health-probiotic-60': catalogShot(
     'now-clinical-heart-health-probiotic-60.jpg',
   ),
+  // Digestive night run 2026-10-22 5:30 AM PT batch 2.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Probiotic-10 & Bifido Boost, 90 veg capsules. UPC 733739029249.
+  'now-probiotic-10-bifido-boost-90': catalogShot('now-probiotic-10-bifido-boost-90.jpg'),
+  // 4x6 Acidophilus, 120 veg capsules. UPC 733739029225. Not the 60.
+  'now-4x6-acidophilus-120': catalogShot('now-4x6-acidophilus-120.jpg'),
+  // Gr8-Dophilus, 60 veg capsules. UPC 733739029126. Not the 120.
+  'now-gr8-dophilus-60': catalogShot('now-gr8-dophilus-60.jpg'),
+  // CoQ10 60 mg, 60 veg capsules. UPC 733739031532. Not the 180.
+  'now-coq10-60-mg-60': catalogShot('now-coq10-60-mg-60.jpg'),
+  // 4x6 Acidophilus, 60 veg capsules. UPC 733739029201. Not the 120.
+  'now-4x6-acidophilus-60': catalogShot('now-4x6-acidophilus-60.jpg'),
+  // Intestinal Bacteria Support, 60 veg capsules. UPC 733739029034.
+  'now-intestinal-bacteria-support-60': catalogShot('now-intestinal-bacteria-support-60.jpg'),
+  // Super Enzymes, 60 capsules. UPC 733739029614. Not the 90 or 180 capsules, and not the tablets.
+  'now-super-enzymes-60': catalogShot('now-super-enzymes-60.jpg'),
+  // Gallbladder Enzymes, 90 capsules. UPC 733739029782.
+  'now-gallbladder-enzymes-90': catalogShot('now-gallbladder-enzymes-90.jpg'),
+  // Betaine HCl & Ox Bile, 120 capsules. UPC 733739029751.
+  'now-betaine-hcl-ox-bile-120': catalogShot('now-betaine-hcl-ox-bile-120.jpg'),
+  // Probiotic-10 25 billion CFU, 30 veg capsules. UPC 733739029379. Not the 50.
+  'now-probiotic-10-25-billion-cfu-30': catalogShot('now-probiotic-10-25-billion-cfu-30.jpg'),
+  // 8 Billion Acidophilus & Bifidus, 60 veg capsules. UPC 733739029300. Not the 120.
+  'now-8-billion-acidophilus-bifidus-60': catalogShot('now-8-billion-acidophilus-bifidus-60.jpg'),
+  // Ubiquinol 100 mg, 120 softgels. UPC 733739031433. Not the 60 and not the 200 mg.
+  'now-ubiquinol-120': catalogShot('now-ubiquinol-120.jpg'),
+  // Ubiquinol 100 mg, 60 softgels. UPC 733739031426. Not the 120 and not the 200 mg.
+  'now-ubiquinol-60': catalogShot('now-ubiquinol-60.jpg'),
+  // Ubiquinol 200 mg, 60 softgels. UPC 733739031440. Not the 100 mg bottles.
+  'now-ubiquinol-60-733739031440': catalogShot('now-ubiquinol-60-733739031440.jpg'),
+  // TMG 1,000 mg, 100 tablets. UPC 733739004949.
+  'now-tmg-100': catalogShot('now-tmg-100.jpg'),
+  // CoQ10 with selenium and vitamin E, 100 softgels. UPC 733739031938. Not the 50.
+  'now-coq10-with-selenium-vitamin-e-100': catalogShot('now-coq10-with-selenium-vitamin-e-100.jpg'),
+  // Super Enzymes tablets, 180. UPC 733739029621. Not the 90 tablets and not the capsules.
+  'now-super-enzymes-180-733739029621': catalogShot('now-super-enzymes-180-733739029621.jpg'),
+  // Super Enzymes tablets, 90. UPC 733739029607. Not the 180 tablets and not the capsules.
+  'now-super-enzymes-90-733739029607': catalogShot('now-super-enzymes-90-733739029607.jpg'),
+  // CoQ10 60 mg with omega-3 fish oil, 120 softgels. UPC 733739031662. Not the 60.
+  'now-coq10-with-omega-3-fish-oil-120': catalogShot('now-coq10-with-omega-3-fish-oil-120.jpg'),
+  // CoQ10 with selenium and vitamin E, 50 softgels. UPC 733739031921. Not the 100.
+  'now-coq10-with-selenium-vitamin-e-50-softgel': catalogShot(
+    'now-coq10-with-selenium-vitamin-e-50-softgel.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19007,10 +19051,19 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Shared-formula counts. Do not inherit a sibling face.
   // CoQ10 30 mg 240 is not the 60. The 120 has its own formula id.
   'now-coq10-30-mg-240',
-  // CoQ10 60 mg 180 is not the 60. The 60 stays a letter.
+  // CoQ10 60 mg 180 is not the 60.
   'now-coq10-60-mg-180',
-  // Gr8-Dophilus 120 is not the 60. The 60 stays a letter.
+  // Gr8-Dophilus 120 is not the 60.
   'now-gr8-dophilus-120',
+  // Digestive night run 2026-10-22 5:30 AM PT batch 2.
+  // Shared-formula counts and strengths. Do not inherit a sibling face.
+  // 4x6 Acidophilus 120 is not the 60.
+  'now-4x6-acidophilus-120',
+  // Ubiquinol 100 mg 120 and 200 mg 60 are not the 100 mg 60.
+  'now-ubiquinol-120',
+  'now-ubiquinol-60-733739031440',
+  // Super Enzymes 180 tablets are not the 90 tablets.
+  'now-super-enzymes-180-733739029621',
 ]);
 
 export function previewOverlayImage(
@@ -40979,10 +41032,8 @@ assertBrandMark(
       ['now-coq10-60', 'now-coq10-60', 'NOW'],
     ],
   ];
-  const letterUntilAttempted1022g = new Set<string>([
-    'now-coq10-60-mg-60',
-    'now-gr8-dophilus-60',
-  ]);
+  // CoQ10 60 mg 60 and Gr8-Dophilus 60 have their own cartons in the 5:30 AM batch 2.
+  const letterUntilAttempted1022g = new Set<string>([]);
   for (const group of groups1022g) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -40995,6 +41046,107 @@ assertBrandMark(
     for (const [id, formulaId, brand] of group) {
       const image = previewOverlayImage({ id, formulaId, brand });
       if (letterUntilAttempted1022g.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 5:30 AM PT batch 2.
+  // Single-count fronts stay cartons. Unattempted sibling counts stay letters.
+  const batch1022h: [string, string, string][] = [
+    ['now-probiotic-10-bifido-boost-90', 'NOW', 'now-probiotic-10-bifido-boost-90.jpg'],
+    ['now-4x6-acidophilus-120', 'NOW', 'now-4x6-acidophilus-120.jpg'],
+    ['now-gr8-dophilus-60', 'NOW', 'now-gr8-dophilus-60.jpg'],
+    ['now-coq10-60-mg-60', 'NOW', 'now-coq10-60-mg-60.jpg'],
+    ['now-4x6-acidophilus-60', 'NOW', 'now-4x6-acidophilus-60.jpg'],
+    ['now-intestinal-bacteria-support-60', 'NOW', 'now-intestinal-bacteria-support-60.jpg'],
+    ['now-super-enzymes-60', 'NOW', 'now-super-enzymes-60.jpg'],
+    ['now-gallbladder-enzymes-90', 'NOW', 'now-gallbladder-enzymes-90.jpg'],
+    ['now-betaine-hcl-ox-bile-120', 'NOW', 'now-betaine-hcl-ox-bile-120.jpg'],
+    ['now-probiotic-10-25-billion-cfu-30', 'NOW', 'now-probiotic-10-25-billion-cfu-30.jpg'],
+    ['now-8-billion-acidophilus-bifidus-60', 'NOW', 'now-8-billion-acidophilus-bifidus-60.jpg'],
+    ['now-ubiquinol-120', 'NOW', 'now-ubiquinol-120.jpg'],
+    ['now-ubiquinol-60', 'NOW', 'now-ubiquinol-60.jpg'],
+    ['now-ubiquinol-60-733739031440', 'NOW', 'now-ubiquinol-60-733739031440.jpg'],
+    ['now-tmg-100', 'NOW', 'now-tmg-100.jpg'],
+    ['now-coq10-with-selenium-vitamin-e-100', 'NOW', 'now-coq10-with-selenium-vitamin-e-100.jpg'],
+    ['now-super-enzymes-180-733739029621', 'NOW', 'now-super-enzymes-180-733739029621.jpg'],
+    ['now-super-enzymes-90-733739029607', 'NOW', 'now-super-enzymes-90-733739029607.jpg'],
+    ['now-coq10-with-omega-3-fish-oil-120', 'NOW', 'now-coq10-with-omega-3-fish-oil-120.jpg'],
+    ['now-coq10-with-selenium-vitamin-e-50-softgel', 'NOW', 'now-coq10-with-selenium-vitamin-e-50-softgel.jpg'],
+  ];
+  const seen1022h = new Set<string>();
+  for (const [id, brand, file] of batch1022h) {
+    if (seen1022h.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022h.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1022h: [string, string, string][][] = [
+    [
+      ['now-4x6-acidophilus-120', 'now-4x6-acidophilus-60', 'NOW'],
+      ['now-4x6-acidophilus-60', 'now-4x6-acidophilus-60', 'NOW'],
+    ],
+    [
+      ['now-gr8-dophilus-120', 'now-gr8-dophilus-60', 'NOW'],
+      ['now-gr8-dophilus-60', 'now-gr8-dophilus-60', 'NOW'],
+    ],
+    [
+      ['now-coq10-60-mg-180', 'now-coq10-60-mg-60', 'NOW'],
+      ['now-coq10-60-mg-60', 'now-coq10-60-mg-60', 'NOW'],
+    ],
+    [
+      ['now-super-enzymes-60', 'now-super-enzymes-60', 'NOW'],
+      ['now-super-enzymes-90', 'now-super-enzymes-90', 'NOW'],
+      ['now-super-enzymes-180', 'now-super-enzymes-90', 'NOW'],
+    ],
+    [
+      ['now-super-enzymes-90-733739029607', 'now-super-enzymes-90-733739029607', 'NOW'],
+      ['now-super-enzymes-180-733739029621', 'now-super-enzymes-90-733739029607', 'NOW'],
+      ['now-super-enzymes-60', 'now-super-enzymes-60', 'NOW'],
+    ],
+    [
+      ['now-probiotic-10-25-billion-cfu-30', 'now-probiotic-10-25-billion-cfu-30', 'NOW'],
+      ['now-probiotic-10-25-billion-50', 'now-probiotic-10-25-billion-50', 'NOW'],
+    ],
+    [
+      ['now-8-billion-acidophilus-bifidus-60', 'now-8-billion-acidophilus-bifidus-60', 'NOW'],
+      ['now-8-billion-acidophilus-bifidus-120', 'now-8-billion-acidophilus-bifidus-120', 'NOW'],
+    ],
+    [
+      ['now-ubiquinol-120', 'now-ubiquinol-60', 'NOW'],
+      ['now-ubiquinol-60', 'now-ubiquinol-60', 'NOW'],
+      ['now-ubiquinol-60-733739031440', 'now-ubiquinol-60', 'NOW'],
+    ],
+    [
+      ['now-coq10-with-selenium-vitamin-e-100', 'now-coq10-with-selenium-vitamin-e-100', 'NOW'],
+      ['now-coq10-with-selenium-vitamin-e-50-softgel', 'now-coq10-with-selenium-vitamin-e-50-softgel', 'NOW'],
+    ],
+    [
+      ['now-coq10-with-omega-3-fish-oil-120', 'now-coq10-with-omega-3-fish-oil-120', 'NOW'],
+      ['now-coq10-fish-oil-60', 'now-coq10-fish-oil-60', 'NOW'],
+    ],
+  ];
+  const letterUntilAttempted1022h = new Set<string>([
+    'now-coq10-fish-oil-60',
+  ]);
+  for (const group of groups1022h) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted1022h.has(id)) {
         if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
           throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
