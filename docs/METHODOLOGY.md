@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 22, 2026 (t15u founder order; KYR6-d; rules only):** Token lock recommendation process is in §4a. Step 1 is the source check and the current-rules re-evaluation. The three steps that were already in PROJECT_NOTES are steps 2, 3, and 4 here as well. No catalog rows. No grades.
+
 **Changed Oct 21, 2026 (t159u founder locks; KYR6-d; catalog rescan):** **Paprika extract (natural color)** and **Paprika (color)** → Cleared, the same named plant color as **Paprika extract (color)**. This flips the t158u “stay Caution” note for those two strings. **Stevia extract** and **stevia leaf extract** → Limited, the same row as **Stevia** and **rebaudioside a (extracted and purified from natural stevia leaf)**. They count toward the t137u stack. This flips the Sept 22 / Sept 23 / t90u Caution row for those strings, including Stevia Extract (Stevioside), Stevia extract (stevia rebaudiana leaf), stevia (leaf) extract, and organic stevia (leaf) extract when it is not organic Rebaudioside A. **Left in place:** organic Rebaudioside A stays Cleared (t132u). High-purity steviol glycosides stay Cleared. Rebaudioside M stays Cleared, including rebaudioside M (stevia leaf extract) (t121u). Bare paprika extract that the catalog already stored on the Sept 14 color lock is not a new grade.
 
 **Changed Oct 21, 2026 (t158u founder locks; KYR6-d):** **Oats** → Cleared (exact token; food oat; not Organic Oat Hull Fiber; not a flip of Cleared Oat Fiber or Organic Myceliated Oats). **Cinnamon** → Cleared (exact token; spice; not cinnamon bark oil). **Nutmeg** → Cleared (exact token; spice). **Stevia** and **rebaudioside a (extracted and purified from natural stevia leaf)** → Limited (exact strings; count toward the t137u stack). **Not a flip:** organic Rebaudioside A stays Cleared (t132u). High-purity steviol glycosides and Rebaudioside M stay Cleared. Stevia extract and stevia leaf extract were left Caution here and are Limited under t159u. **Paprika extract (color)** → Cleared (exact string). Paprika extract (natural color) and Paprika (color) were left Caution here and are Cleared under t159u. **Natural mixed berry flavors** → Cleared (exact string; does not stack). **Not a flip:** exact “Natural flavors” stays Limited.
@@ -351,6 +353,17 @@ As of v1.6, the inactive-ingredient methodology is considered **locked enough to
 - It gets the full **7-step workflow** (below) and is brought to the founder for a call, exactly like every ingredient locked in this session.
 - **After a lock, it goes in this table the same day.** Do not leave a locked call as chat-only.
 - **Do not invent new proactive worklists** to hunt for more ingredients to grade ahead of need — the days of front-loading batches are over as of v1.6. Ingredients get graded reactively, as real products surface them during database work, unless the founder specifically asks for another sweep.
+
+### Token lock recommendation process (founder, Oct 17 2026; step 1 added t15u, Oct 22 2026)
+
+This is the same process as PROJECT_NOTES. Step 1 is the t15u source check. Steps 2–4 are the Oct 17 steps, renumbered.
+
+1. Before any token recommendation or lock is given, all available sources must be pulled (FDA, EFSA, agency positions, existing locks, form splits, and any relevant safety or GRAS data). The recommendation is then made under the current rules (unnamed rule, natural/man-made tiebreaker, prior-lock re-eval, 3+ Limited stack, fruit/juice/spice/fiber posture, high-purity steviol glycoside split, and form splits). A prior lock is not treated as final until that source check and re-evaluation is complete.
+2. Check all integrative sources first.
+3. Check whether any docking rule applies (nanoparticle, form-specific, flavor, etc.).
+4. Then reference current methodology. Methodology can be overridden if it was overlooked or inconsistent with sources + docking rules.
+
+Any override requires a catalog rescan of every row containing the changed token.
 
 ### Workflow for grading a newly-encountered ingredient
 1. EFSA/EU status
