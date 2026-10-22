@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 22, 2026 (t17u founder order; KYR6-d; rules only):** Standing section When writing rows is in §4. It applies to every catalog run. No catalog rows. No grades.
+
 **Changed Oct 22, 2026 (t16u founder order; KYR6-d):** Seventeen founder locks. The founder confirms sources were pulled and the current rules applied (step 1 of the token lock process). Each why names the rule. Sodium hypochlorite (exact token) is Caution, distinct from Sodium Hypochlorite (Trace). Rice bran oil in an oral liquid drop is Cleared (not the gummy Avoid print). Digestion-resistant maltodextrin, steviol glycosides printed without high-purity, rice maltodextrin, and rebaudioside A printed without organic or extracted are Limited and count toward the t137u stack. Acacia hydrolysate, oat bran, larch arabinogalactan, wheat dextrin, trehalose, whey powder, skim milk powder, yogurt powder, and inulin syrup are Cleared. Palm kernel oil printed alone in a yogurt coating, and vanilla printed alone, are Caution and do not stack.
 
 **Changed Oct 22, 2026 (t15u founder order; KYR6-d; rules only):** Token lock recommendation process is in §4a. Step 1 is the source check and the current-rules re-evaluation. The three steps that were already in PROJECT_NOTES are steps 2, 3, and 4 here as well. No catalog rows. No grades.
@@ -324,7 +326,29 @@ Every inactive ingredient sorts into one of four risk levels. Internally it's a 
 
 **Unnamed / ambiguous token rule — LOCKED (founder t130u, Oct 18, 2026; t132u prior-lock re-eval, Oct 20, 2026).** Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first. Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options. **Supersedes** prior defaults that treated an unnamed or blank ingredient as automatically worse without this tie-break — including the Sept 28, 2026 writable-leftovers stamp that bare **Vegetable Capsule** / **Vegetarian Capsule** → Caution solely for being unnamed (STRUCK Oct 18, 2026 t130u) and any reading of Limited **"Natural flavors"** / **Natural Colors (unspecified)** opacity that assigns severity without comparing to the named counterpart in the same form. Locked grades on existing MAIN rows are unchanged until a founder-ordered rescan; new writes apply this rule.
 
+The standing section When writing rows applies to every catalog run and restates this lock. The lock above stays.
+
 **Source standard.** Every flag must carry at least one citable source. See §4a for the full hierarchy.
+
+### When writing rows
+
+This applies to every catalog run.
+
+When writing rows:
+- Include the full honest note on every row (only when an ingredient appears to contradict itself to a shopper, or when the 3+ Limited stack triggers Avoid).
+- Fill every ingredient tab with the exact why from the lock or source. Do not leave any ingredient tab blank.
+- A grade means there is a why. Name the rule or agency that set the why. Do not write “Pending DailyMed review.”
+- Confirm two sources before writing. A missing UPC does not block the write. Note missing UPCs in PROJECT_NOTES so they can be added later. Founder-verified labels can waive the second source when instructed.
+- Never write a row until all tokens are locked, and never duplicate an existing row.
+- Put each product on the correct ingredient tab.
+- US only. No Canada. No EU.
+- Multipacks are not rows. NDC alone is not a sale page. Out of stock at every store that opened and showed content means the pack does not qualify.
+- Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition. Use level is not the rule.
+- Juice rule and hydrogenated oil rule stay as written.
+- Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options.
+- Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
+- Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
+- Stop after reporting missing tokens if any exist; do not continue working.
 
 ## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
 

@@ -11,6 +11,7 @@ Done
 - Named-dry: Dissolve Tabs 66-count, Children's syrup 1 fl oz, Children's chews 2.5 mg and 10 mg 6-count. 50-count and 70-count are kit parts, OUT. Go-Pack 312547204309 and 312547204323 stay on zyrtec-allergy-tablets.
 - Amazon 3P leftover brands = 0. GoodSense closed. Factory #121–#221 closed.
 - Highest rating-draft is batch258. Next file is batch259.
+- t17u (Oct 22, 2026). **KYR6-d. Rules docs only.** No catalog rows, no grades, no brand work. Standing section When writing rows added to this file (after Process lock, before Two-source rule) and to `docs/METHODOLOGY.md` (§4, after the source standard). It applies to every catalog run. Existing write rules stay. Duplicate sections point to When writing rows. Highest draft stays batch258. Next file stays batch259.
 - t16u (Oct 22, 2026). **KYR6-d.** Seventeen founder locks stamped in METHODOLOGY, each with a why. Culturelle, Align, and Phillips' are off the closed-brands list (247 brands). Florastor was already open. **Regrades:** Phillips' Original Milk of Magnesia sodium hypochlorite Cleared to Caution, product Clean to Caution. Phillips' Fresh Mint sodium hypochlorite Cleared to Caution, product stays Caution. Bare Steviol glycosides Cleared to Limited on Benefiber Superfruits, Benefiber Supergreens, AZO D-Mannose packets, Fergon Iron Restore, Trace Minerals Magnesium Glycinate Orange Dream, and two SmartyPants gummies. Those product grades stay put: two Limited tokens stay Caution, and the SmartyPants Avoid stays the gummy sunflower oil. **Written batch258:** Culturelle Digestive Daily 30 and 50, Digestive Daily chewables 24, Ultimate Strength 30, Health & Wellness 30, Bloating & Gas Defense 30, Baby Calm drops, Baby Immune drops, Kids Probiotic + Fiber 24 and 60. No missing UPC. **Closed:** Culturelle Digestive Daily chewables 48 (2 pk); Florastor Her 90 shares UPC 704142623409 with the written 30 and is a multipack. **Held:** remaining Culturelle, Align, Florastor, and Phillips' packs whose second sale page or facts image did not both open this pass. Phillips' Original, Mint, and Cherry 12 oz are already rows and were not rewritten as new ids. None of the four brands is closed.
 - t15u (Oct 22, 2026). **KYR6-d. Rules docs only.** No catalog rows, no grades, no brand work. Token lock recommendation process: the source-check and current-rules re-evaluation is now step 1 in `docs/METHODOLOGY.md` (§4a, Token lock recommendation process) and in this file (Token lock recommendation process). The three steps that were already there are now steps 2, 3, and 4. No row was written. Highest draft stays batch257. Next file stays batch258.
 - t14u (Oct 22, 2026). **KYR6-d. Culturelle, Align, Florastor, and Phillips'. US only. No other brand.** Panels were read across all four. **Stopped. No rows written. No grade invented.** An unlocked token on any pack stops the whole run. **Missing tokens:** (1) **Sodium hypochlorite** — not the exact token Sodium Hypochlorite (Trace). Phillips' Original Milk of Magnesia 12 fl oz, 26 fl oz, and 4 fl oz; Fresh Mint 12 fl oz and 26 fl oz; Wild Cherry 12 fl oz and 26 fl oz. (2) **Rice bran oil in an oral liquid drop** — the lock is gummy Avoid or softgel/capsule fill Cleared. These drops are neither. Culturelle Baby Immune + Digestive drops 0.3 fl oz; Baby Digestive Calm + Comfort drops 0.29 fl oz. (3) **Digestion-resistant maltodextrin** — not generic maltodextrin and not tapioca maltodextrin. Culturelle Complete 3-in-1 Biotics Mini-Chews, 28 packets. (4) **Steviol glycosides** printed bare — not high-purity steviol glycosides, not stevia leaf extract, not organic Rebaudioside A. Same mini-chews. (5) **Rice maltodextrin** — not generic maltodextrin and not tapioca maltodextrin. Culturelle Bloating & Gas Defense capsules, 30. (6) **Acacia hydrolysate** — not acacia gum. Culturelle Kids Complete Fast Melts, 30. (7) **Rebaudioside A** printed bare — not organic Rebaudioside A and not “rebaudioside a (extracted and purified from natural stevia leaf).” Culturelle Kids Complete Fast Melts, 30; Kids Probiotics + Electrolytes Hydration, 30. (8) **Oat bran** — not the exact token Oats, not Oat Fiber, not Organic Oat Hull Fiber. Culturelle Probiotics + FiberMax packets, 20. (9) **Larch arabinogalactan.** Same FiberMax packets, 20. (10) **Wheat dextrin** — not bare dextrin and not rice dextrin. Culturelle Kids Probiotic + Fiber packets, 24 and 60. (11) **Trehalose.** Align 70 Billion CFU capsules, 30. (12) **Palm kernel oil** printed bare in a yogurt coating — not the t150u combined string “fractionated coconut and palm kernel oil,” and not named medium-chain triglycerides derived from palm kernel oil. Align Kids Yogurt Coated Probiotic Fruit Bites, 21 pouches. (13) **Whey powder** — not the exact token Whey. Same fruit bites. (14) **Skim milk powder** — not non-fat dry milk and not whole dry milk. Same fruit bites. (15) **Yogurt powder.** Same fruit bites (inside the coating and as its own ingredient). (16) **Vanilla** printed bare — not vanilla flavor. Same fruit bites. (17) **Inulin syrup** — not inulin and not inulin powder. Phillips' Fiber Good Gummies, 90. **Florastor** panels that were viewed did not add an unlocked token. **Not recorded as closed or held.** No pack was closed and no pack was held. Culturelle, Align, and Phillips' were already on the closed-brands list; this order named them; no new row was written. Florastor stays open. Highest draft stays batch257. Next file stays batch258.
@@ -178,23 +179,48 @@ Process lock
 - Flavor rule clarification (founder, Oct 17 2026): The flavor rule only docks unnamed or vague flavors (e.g. "natural flavor," "fruit flavor," "natural and artificial flavor"). A flavor that names the specific fruits or ingredients (e.g. "Natural Strawberry watermelon raspberry flavor") does not trigger the rule and is not automatically Limited.
 - A one-UPC mixed-flavor variety carton is one row, graded by its worst stick (founder t126u).
 - Unnamed / ambiguous token rule (founder t130u, Oct 18, 2026): see METHODOLOGY §4 — unnamed does not force a worse grade unless a named version of the same ingredient class would change severity in that form; natural ingredients take the best of two options, man-made take the worse.
+- The standing section When writing rows applies to every catalog run. The write rule, ladder order, not-for-sale rule, condition rule, juice rule, hydrogenated oil rule, and unnamed rule above stay.
 
 Google AI mode fail safe
 Google AI rule: Google AI first directs you to a real site it viewed. You may use a blurb for an ingredient list or UPC only if the AI was specifically told to show it only when it can 100% verify the ingredients or UPC because it itself viewed them on a site, and only for a single bottle or pack (not a multipack). Otherwise do not copy from the blurb. Open the cited page.
 
+When writing rows
+
+This applies to every catalog run.
+
+When writing rows:
+- Include the full honest note on every row (only when an ingredient appears to contradict itself to a shopper, or when the 3+ Limited stack triggers Avoid).
+- Fill every ingredient tab with the exact why from the lock or source. Do not leave any ingredient tab blank.
+- A grade means there is a why. Name the rule or agency that set the why. Do not write “Pending DailyMed review.”
+- Confirm two sources before writing. A missing UPC does not block the write. Note missing UPCs in PROJECT_NOTES so they can be added later. Founder-verified labels can waive the second source when instructed.
+- Never write a row until all tokens are locked, and never duplicate an existing row.
+- Put each product on the correct ingredient tab.
+- US only. No Canada. No EU.
+- Multipacks are not rows. NDC alone is not a sale page. Out of stock at every store that opened and showed content means the pack does not qualify.
+- Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition. Use level is not the rule.
+- Juice rule and hydrogenated oil rule stay as written.
+- Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options.
+- Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
+- Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
+- Stop after reporting missing tokens if any exist; do not continue working.
+
 Two-source rule
+See the standing section When writing rows. The text below stays.
 A pack needs two confirmed sources before a UPC is attached or a row is written. One source can be a Google AI blurb that names the exact single-count pack and a matching code from a site it viewed. The other source must be a page that opened with a price or Add to Cart for that exact single count. Amazon alone is not enough. A multipack is not a single-count row.
 
 Missing UPC rule (t160u, Oct 21, 2026)
+See the standing section When writing rows. The text below stays.
 A missing UPC does not stop a write. Write the row with the barcode omitted and list the pack here so the UPC can be added later. Never hold a pack only because the UPC is missing. Two sources are still required. If two sources agree on the formula and disagree on the code, write the row on the code those sources and the check digit support, and list the conflicting code here.
 
 Search-tab rule
 Write the row only when the pack has a home in one of the 13 search tabs. If it does not, list the pack and do not write the row. Do not invent a tab.
 
 Honest note and ingredient tab
+See the standing section When writing rows. The text below stays.
 An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. The note tells the shopper why the form in this product did not change the grade. An ingredient tab gives a plain why from the lock or the source that set the grade. A grade means there is a why. Do not write “Pending DailyMed review.” Name the rule or agency that set the why.
 
 Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c and KYR6-d writes; founder order t151u, Oct 21, 2026 — same scope for both)
+See the standing section When writing rows. The text below stays.
 - Honest note only when an ingredient appears to contradict itself to a shopper.
 - Every ingredient tab filled with the exact why from the lock or source; none blank.
 - A grade names the rule or agency that set the why; never write “Pending DailyMed review.”
@@ -210,6 +236,7 @@ Bots and paste language
 KYR6-c and KYR6-d are the live catalog bots (founder order t151u, Oct 21, 2026). They share the same scope: write new Search rows, grade products from methodology, exhaust retailer ladders, close brands on MAIN when a catalog pass finishes, attach a founder-locked UPC only to the row just written, open a catalog PR, and squash-merge it to MAIN when the work is complete — under the same rules (founder orders t149u paste openings, t150u merge). Do not wait on an Allow-once card. KYR6-d is not barcode-only, UPC-attach-only, or any narrower hunt than KYR6-c. Each writes a row only when the panel is read and the pack has a home in one of the 13 tabs. Each grades from methodology. Each attaches a founder-locked UPC only to the row it just wrote. KYR5-d attaches a UPC to an empty row that already exists. It does not create a row. KYR4 is the night photo bot. Photos only. Cap 20. KYR4-b is the daytime photo bot. It is paused on night wakes while KYR4 is active. Do not wake both. Every catalog job paste starts with “You are KYR6-c” or “You are KYR6-d” (founder order t149u, Oct 20, 2026); a paste naming either bot proceeds. It says pull MAIN first, US only, no Canada, no EU, no store-brand. It includes the honest-note and ingredient-tab wording and the search-tab rule. It ends with the ladder order and the instruction to exhaust every step before reporting.
 
 Catalog search criteria
+See the standing section When writing rows. The text below stays.
 A blocked page is not a finished step. When a store is blocked, try the next store. Do not stop the ladder because one store blocked. Write the row only when two confirmed sources show the exact single count for sale. A multipack is not a row. An NDC alone is not a sale page. Out of stock at every store that opened means the pack does not qualify.
 
 Removed, not stashed
