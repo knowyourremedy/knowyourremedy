@@ -30,6 +30,8 @@ const METH = {
   juice: JUICE,
   steviol:
     'Methodology §5 Cleared (high-purity steviol glycosides — EFSA acceptable daily intake; not stevia leaf extract).',
+  steviolBare:
+    'Methodology §5 Limited (Steviol glycosides printed without high-purity — founder lock t16u Oct 22, 2026; counts toward the t137u stack). Not the Cleared high-purity steviol glycosides row.',
   natArt:
     'Methodology §5 Limited (natural and artificial flavors — the label names a taste and does not list every part).',
   xylitol: 'Methodology §5 Limited (xylitol — sugar alcohol; does not count toward the t137u stack).',
@@ -268,13 +270,13 @@ export const BATCH251_KYR6D_T155U: RatingRecord[] = [
     inactiveIngredients: [
       flag(PANEL_PACK, 'Natural and artificial flavors', 'limited', 'natArt'),
       flag(PANEL_PACK, 'Citric acid', 'cleared', 'citric'),
-      flag(PANEL_PACK, 'Steviol glycosides', 'cleared', 'steviol'),
+      flag(PANEL_PACK, 'Steviol glycosides', 'limited', 'steviolBare'),
       flag(PANEL_PACK, 'Vegetable juice (color)', 'cleared', 'juice'),
     ],
     verdict: 'caution',
     retailers: ['AZO', 'Vitacost', 'Thrifty White'],
     sourcesGeneral: [
-      'D-Mannose, the vitamins, and the electrolyte salts are supplement-facts ingredients and are not graded. Natural and artificial flavors are one Limited token, so the row is Caution. This is not a 3+ Limited stack. Steviol glycosides are the high-purity row. Thrifty White is in stock at 68 units with the same UPC. The 20-count is a 2-pack and is not a row. UPC 787651760575 check digit OK.',
+      'D-Mannose, the vitamins, and the electrolyte salts are supplement-facts ingredients and are not graded. Natural and artificial flavors and bare Steviol glycosides are the two stack-eligible Limited tokens, so the row is Caution. t16u regrade: the printing is Steviol glycosides without high-purity, so that token is Limited and it counts. This is not a 3+ Limited stack. Thrifty White is in stock at 68 units with the same UPC. The 20-count is a 2-pack and is not a row. UPC 787651760575 check digit OK.',
     ],
   },
   {

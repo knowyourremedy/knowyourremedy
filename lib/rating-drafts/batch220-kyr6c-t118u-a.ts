@@ -43,6 +43,8 @@ const METH = {
   namedFlavor: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
   lecithinSunflower: 'Methodology §5 Cleared (lecithin / soy lecithin / sunflower lecithin).',
   stevia: 'Methodology §5 Cleared (stevia / steviol glycosides, high-purity extract).',
+  steviolBare:
+    'Methodology §5 Limited (Steviol glycosides printed without high-purity — founder lock t16u Oct 22, 2026; counts toward the t137u stack). Not the Cleared high-purity steviol glycosides row.',
 } as const;
 
 type MethKey = keyof typeof METH;
@@ -145,7 +147,7 @@ const RESTORE_FLAGS: FlagSpec[] = [
   ['Natural orange flavor', 'cleared', 'namedFlavor'],
   ['Sunflower lecithin', 'cleared', 'lecithinSunflower'],
   ['Sodium chloride', 'cleared', 'salt'],
-  ['Steviol glycosides', 'cleared', 'stevia'],
+  ['Steviol glycosides', 'limited', 'steviolBare'],
 ];
 
 const PREVAGEN_VITAMIN_D_ACTIVE = { name: 'Vitamin D3 (as cholecalciferol)', strength: '50 mcg' } as const;
@@ -342,7 +344,7 @@ export const BATCH220_KYR6C_T118U_A: RatingRecord[] = [
     verdict: verdictFromFlags(RESTORE_FLAGS),
     retailers: ['Walmart', 'Retail Market'],
     sourcesGeneral: [
-      `Brand panel ${PANEL_FERGON_RESTORE} and fergon.com/products/fergon-iron-restore (sku 011-2401; brand sold out Oct 17, 2026). Serving Size 1 chewable tablet; Calories 10; Total Carbohydrates 2 g, <1%; Total Sugars 2 g; Includes 2 g Added Sugars, 4%; Elemental Iron (as SunActive FE™ ferric pyrophosphate) 27 mg, 150%. Other ingredients: dextrose, maltodextrin, microcrystalline cellulose, crospovidone, citric acid, magnesium stearate, natural orange flavor, sunflower lecithin, sodium chloride‡, steviol glycosides (‡ adds a trivial amount of sodium). Walmart https://www.walmart.com/ip/Fergon-Iron-Restore-Chewable-Tablets-27mg-Iron-60-ct/213825746 in stock $13.37 sold by Emerson Group. Retail Market https://www.retailmarket.net/products/fergon-iron-restore-chewable-tablets-gentle-on-stomach-non-constipating-27mg-iron-for-energy-support-60-tablets/ schema InStock Add to Cart $31.49 UPC 889411124013 (t105u L86 third-party with named-ladder Walmart). UPC brand variant barcode; check digit OK.`,
+      `Brand panel ${PANEL_FERGON_RESTORE} and fergon.com/products/fergon-iron-restore (sku 011-2401; brand sold out Oct 17, 2026). Serving Size 1 chewable tablet; Calories 10; Total Carbohydrates 2 g, <1%; Total Sugars 2 g; Includes 2 g Added Sugars, 4%; Elemental Iron (as SunActive FE™ ferric pyrophosphate) 27 mg, 150%. Other ingredients: dextrose, maltodextrin, microcrystalline cellulose, crospovidone, citric acid, magnesium stearate, natural orange flavor, sunflower lecithin, sodium chloride‡, steviol glycosides (‡ adds a trivial amount of sodium). t16u regrade: bare Steviol glycosides are Limited and count. Maltodextrin is the other stack-eligible Limited token, so the row stays Caution. Dextrose is Caution and does not stack. This is not a 3+ Limited stack. Walmart https://www.walmart.com/ip/Fergon-Iron-Restore-Chewable-Tablets-27mg-Iron-60-ct/213825746 in stock $13.37 sold by Emerson Group. Retail Market https://www.retailmarket.net/products/fergon-iron-restore-chewable-tablets-gentle-on-stomach-non-constipating-27mg-iron-for-energy-support-60-tablets/ schema InStock Add to Cart $31.49 UPC 889411124013 (t105u L86 third-party with named-ladder Walmart). UPC brand variant barcode; check digit OK.`,
     ],
   },
   {

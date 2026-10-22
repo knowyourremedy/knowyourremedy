@@ -408,6 +408,125 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'sodium hypochlorite') {
+    return close(
+      'Sodium hypochlorite is a residual oxidizer. The founder locked this exact token Caution (t16u). An FDA allow is not Clean. It is not the wound-wash token Sodium Hypochlorite (Trace).',
+      level,
+    );
+  }
+
+  if (n === 'digestion resistant maltodextrin') {
+    return close(
+      'Digestion-resistant maltodextrin is Limited under founder lock t16u. It counts toward the three-or-more Limited stack. It is not generic maltodextrin, and it is not soluble corn fiber.',
+      level,
+    );
+  }
+
+  if (n === 'steviol glycosides' && (level === 'limited' || /t16u/i.test(ingredient.source ?? ''))) {
+    return close(
+      'Steviol glycosides printed without high-purity are Limited under founder lock t16u (Oct 22, 2026). They count toward the three-or-more Limited stack. High-purity steviol glycosides stay Cleared.',
+      level,
+    );
+  }
+
+  if (n === 'rice maltodextrin') {
+    return close(
+      'Rice maltodextrin is Limited under founder lock t16u. The panel names rice. It counts toward the three-or-more Limited stack. It is not generic maltodextrin, and it is not tapioca maltodextrin.',
+      level,
+    );
+  }
+
+  if (n === 'acacia hydrolysate') {
+    return close(
+      'Acacia hydrolysate is a fiber. The founder locked it Cleared (t16u). It is not acacia gum.',
+      level,
+    );
+  }
+
+  if (n === 'rebaudioside a' && (level === 'limited' || /t16u/i.test(ingredient.source ?? ''))) {
+    return close(
+      'Rebaudioside A printed without organic or extracted is Limited under founder lock t16u. It counts toward the three-or-more Limited stack. Organic Rebaudioside A stays Cleared.',
+      level,
+    );
+  }
+
+  if (n === 'oat bran') {
+    return close(
+      'Oat bran is a food bran. The founder locked it Cleared (t16u). It is not the exact token Oats, and it is not oat fiber.',
+      level,
+    );
+  }
+
+  if (n === 'larch arabinogalactan') {
+    return close(
+      'Larch arabinogalactan is a fiber. The founder locked it Cleared (t16u). It is not a mushroom active.',
+      level,
+    );
+  }
+
+  if (n === 'wheat dextrin') {
+    return close(
+      'Wheat dextrin is a fiber. The founder locked that exact token Cleared (t16u) when it is an other ingredient. It is not bare dextrin.',
+      level,
+    );
+  }
+
+  if (n === 'trehalose') {
+    return close(
+      'Trehalose is a sugar. The founder locked it Cleared (t16u). It is not sucrose, and it is not maltose.',
+      level,
+    );
+  }
+
+  if (n === 'palm kernel oil') {
+    return close(
+      'Palm kernel oil printed alone in a yogurt coating is Caution under founder lock t16u. It does not count toward the three-or-more Limited stack. It is not the Limited combined coconut-and-palm-kernel oil, and it is not named medium-chain triglycerides from palm kernel oil.',
+      level,
+    );
+  }
+
+  if (n === 'whey powder') {
+    return close(
+      'Whey powder is a dairy powder. The founder locked it Cleared (t16u). It is not the exact token Whey.',
+      level,
+    );
+  }
+
+  if (n === 'skim milk powder') {
+    return close(
+      'Skim milk powder is a dairy powder. The founder locked it Cleared (t16u). It is not non-fat dry milk.',
+      level,
+    );
+  }
+
+  if (n === 'yogurt powder') {
+    return close(
+      'Yogurt powder is a dairy powder. The founder locked it Cleared (t16u).',
+      level,
+    );
+  }
+
+  if (n === 'vanilla') {
+    return close(
+      'Vanilla printed alone is Caution under founder lock t16u. It does not count toward the three-or-more Limited stack. It is not vanilla flavor, and it is not the Limited natural flavors mixture.',
+      level,
+    );
+  }
+
+  if (n === 'inulin syrup') {
+    return close(
+      'Inulin syrup is a fiber syrup. The founder locked it Cleared (t16u). It is not inulin, and it is not inulin powder.',
+      level,
+    );
+  }
+
+  if (/medium chain triglyceride/.test(n) && /coconut/.test(n)) {
+    return close(
+      'This label names medium-chain triglycerides from coconut. That named plant source is Cleared. It is not unlabeled MCT.',
+      level,
+    );
+  }
+
   if (/aspartame|nutrasweet|\be951\b/.test(n)) {
     return 'Aspartame is a sweetener. In 2023, the World Health Organization\'s cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.';
   }
@@ -1480,6 +1599,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     if (level === 'high') {
       return close(
         'Rice bran oil is Not clean when it is the base of a gummy. You are chewing the oil. That is the form this app flags.',
+        level,
+      );
+    }
+    if (/oral liquid drop|t16u/i.test(ingredient.source ?? '')) {
+      return close(
+        'Rice bran oil in an oral liquid drop is Cleared under founder lock t16u. The drop is not the gummy you chew. Gummy rice bran oil stays Not clean.',
         level,
       );
     }

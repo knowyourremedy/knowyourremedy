@@ -15,9 +15,9 @@
 //   lactose / Mg stearate. Homeopathic.
 // - D2 Boiron NauseaCalm pellets = Clean. setid 1e8e0388. Lactose + sucrose.
 // - D3 Boiron MotionCalm pellets = Clean. setid 1ea4de81. Lactose + sucrose.
-// - D4 Phillips Original Milk of Magnesia liquid = Clean. setid 0a57bb45.
-//   Purified water + sodium hypochlorite only (list holds). NaOCl is not in
-//   Methodology §5 — ungraded (v1.6 intake), not a Clean-blocker.
+// - D4 Phillips Original Milk of Magnesia liquid. setid 0a57bb45.
+//   Purified water + sodium hypochlorite. t16u regrade: sodium hypochlorite
+//   is Caution. The row is Caution. It is not a 3+ Limited stack.
 // CAUTION
 // - D5 Alka-Seltzer Gold = Caution. Mannitol Limited (1 pt). Mg stearate
 //   Cleared-class. setid 0824bedb. Single Limited ≠ Clean (founder lock).
@@ -416,14 +416,14 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
       cleared(SET_PHILLIPS_ORIG, 'Purified water'),
       flag(
         'Sodium hypochlorite',
-        'cleared',
+        'moderate',
         dailymed(
           SET_PHILLIPS_ORIG,
-          'Not in Methodology §5 — ungraded (v1.6 intake); residual sanitizer on a two-inactive label. Not treated as a Clean-blocker.',
+          'Methodology §5 Caution (Sodium hypochlorite — founder lock t16u Oct 22, 2026; exact token; residual oxidizer; an FDA allow is not Clean; distinct from Sodium Hypochlorite (Trace); does not count toward the t137u stack).',
         ),
       ),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [
@@ -517,7 +517,14 @@ export const BATCH10_ADULT_DIGESTIVE: RatingRecord[] = [
         dailymed(SET_PHILLIPS_MINT, METH.saccharin),
       ),
       cleared(SET_PHILLIPS_MINT, 'Purified water'),
-      cleared(SET_PHILLIPS_MINT, 'Sodium hypochlorite'),
+      flag(
+        'Sodium hypochlorite',
+        'moderate',
+        dailymed(
+          SET_PHILLIPS_MINT,
+          'Methodology §5 Caution (Sodium hypochlorite — founder lock t16u Oct 22, 2026; exact token; residual oxidizer; an FDA allow is not Clean; distinct from Sodium Hypochlorite (Trace); does not count toward the t137u stack).',
+        ),
+      ),
     ],
     verdict: 'caution',
 
