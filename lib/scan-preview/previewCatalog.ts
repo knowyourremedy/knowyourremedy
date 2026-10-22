@@ -3095,6 +3095,14 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Brand page barcode 605069064057 is not catalog 605069064033.
   // The other hero on that page is the 24 oz tub, UPC 605069064040.
   'himalaya-organic-psyllium': brandMark('himalaya-mark.png'),
+  // Digestive night run 2026-10-22 4:15 AM PT batch 1.
+  // No catalog barcode. DailyMed set 30a893d2 is a flat 14-tablet carton
+  // scan, not a 3D box. Official Walgreens mark. Not a letter.
+  'walgreens-omeprazole-20': brandMark('walgreens-mark.png'),
+  // Catalog UPC 311917010151 is the cool-mint 50-count. The row's DailyMed
+  // set 2766ffe7 is NDC 0363-5300, and those photos are flat 25-tablet labels.
+  // Do not glue either face. Official Walgreens mark. Not a letter.
+  'walgreens-famotidine-20': brandMark('walgreens-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17830,6 +17838,55 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Women's Probiotic, 60 capsules, Elements face. Listing UPC 195515041393.
   // Not the 30-count and not Acacia Fiber.
   'amazon-elements-womens-probiotic': catalogShot('amazon-elements-womens-probiotic.jpg'),
+  // Digestive night run 2026-10-22 4:15 AM PT batch 1.
+  // Exact fronts. Sibling counts and strengths do not share a file.
+  // Organic Kids+ strawberry banana, 30 chewables. UPC 658010122214.
+  // Not the berry cherry chewable.
+  'gol-kids-plus-strawberry-banana': catalogShot('gol-kids-plus-strawberry-banana.jpg'),
+  // Super Enzymes, 180 capsules. UPC 733739029645. Not the 90.
+  'now-super-enzymes-180': catalogShot('now-super-enzymes-180.jpg'),
+  // Probiotic-10 25 billion, 100 veg capsules. UPC 733739029331.
+  // Not the 50-count 25 billion and not the 100 billion 30-count.
+  'now-probiotic-10-100': catalogShot('now-probiotic-10-100.jpg'),
+  // Betaine HCl 648 mg, 120 veg capsules. UPC 733739029386.
+  'now-betaine-hcl-120': catalogShot('now-betaine-hcl-120.jpg'),
+  // Bromelain 2400 GDU/g, 500 mg, 120 veg capsules. UPC 733739029478.
+  // Not the 60.
+  'now-bromelain-500-mg-2-120': catalogShot('now-bromelain-500-mg-2-120.jpg'),
+  // Psyllium husk caps 500 mg, 500 veg capsules. UPC 733739059727.
+  // Not the 200-count 500 mg and not the 700 mg bottles.
+  'now-psyllium-husk-caps-500-mg-500': catalogShot('now-psyllium-husk-caps-500-mg-500.jpg'),
+  // CoQ10 200 mg, 60 veg capsules. UPC 733739031761. Not the 100 mg softgels.
+  'now-coq10-200-mg-60': catalogShot('now-coq10-200-mg-60.jpg'),
+  // Saccharomyces boulardii 5 billion CFU, 120 veg capsules. UPC 733739029522.
+  // Not the 60.
+  'now-saccharomyces-boulardii-5-billion-cfu-120': catalogShot(
+    'now-saccharomyces-boulardii-5-billion-cfu-120.jpg',
+  ),
+  // CoQ10 100 mg, 150 softgels. UPC 733739032096. Not the 50.
+  'now-coq10-100-mg-150': catalogShot('now-coq10-100-mg-150.jpg'),
+  // Saccharomyces boulardii 5 billion CFU, 60 veg capsules. UPC 733739029348.
+  // Not the 120.
+  'now-saccharomyces-boulardii-probiotic-5-billion-cfu-60': catalogShot(
+    'now-saccharomyces-boulardii-probiotic-5-billion-cfu-60.jpg',
+  ),
+  // Digest Ultimate, 120 veg capsules. UPC 733739029683. Not the 60.
+  'now-digest-ultimate-120': catalogShot('now-digest-ultimate-120.jpg'),
+  // Apple pectin 700 mg, 120 veg capsules. UPC 733739064257.
+  'now-apple-pectin-120': catalogShot('now-apple-pectin-120.jpg'),
+  // Super Enzymes, 90 capsules. UPC 733739029638. Not the 180.
+  'now-super-enzymes-90': catalogShot('now-super-enzymes-90.jpg'),
+  // CoQ10 100 mg, 50 softgels. UPC 733739032089. Not the 150.
+  'now-coq10-100-mg-50': catalogShot('now-coq10-100-mg-50.jpg'),
+  // Probiotic-10 25 billion, 50 veg capsules. UPC 733739029263. Not the 100-count.
+  'now-probiotic-10-25-billion-50': catalogShot('now-probiotic-10-25-billion-50.jpg'),
+  // Probiotic-10 50 billion, 50 veg capsules. UPC 733739029287.
+  'now-probiotic-10-50-billion-50': catalogShot('now-probiotic-10-50-billion-50.jpg'),
+  // Psyllium husk caps 500 mg, 200 veg capsules. UPC 733739059703.
+  // Not the 500-count.
+  'now-psyllium-husk-caps-200': catalogShot('now-psyllium-husk-caps-200.jpg'),
+  // Plant Enzymes, 240 veg capsules. UPC 733739029676. Not the 120.
+  'now-plant-enzymes-240': catalogShot('now-plant-enzymes-240.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -18828,6 +18885,16 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Oil of oregano 120 shares the 60-count formula. Own carton now.
   // Do not inherit the 60.
   'solaray-b130-X0042AF2L7',
+  // Digestive night run 2026-10-22 4:15 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  // Super Enzymes 180 is not the 90.
+  'now-super-enzymes-180',
+  // Probiotic-10 100-count is not the 30-count.
+  'now-probiotic-10-100',
+  // CoQ10 100 mg 150 is not the 50.
+  'now-coq10-100-mg-150',
+  // Digest Ultimate 120 is not the 60. The 60 stays a letter.
+  'now-digest-ultimate-120',
 ]);
 
 export function previewOverlayImage(
@@ -40415,7 +40482,9 @@ assertBrandMark(
     ],
   ];
   const markInstead1022c = new Set<string>(['hilma-dairy-gluten-enzymes']);
-  const letterUntilAttempted1022c = new Set<string>(['gol-kids-plus-strawberry-banana']);
+  // Strawberry banana now has its own carton (4:15 AM batch 1). It must
+  // stay a different file from berry cherry.
+  const letterUntilAttempted1022c = new Set<string>([]);
   for (const group of groups1022c) {
     const urls = group.map(([id, formulaId, brand]) => {
       const image = previewOverlayImage({ id, formulaId, brand });
@@ -40532,6 +40601,99 @@ assertBrandMark(
       if (markInstead1022d.has(id)) {
         if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
           throw new Error(`${id} must stay a brand mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 4:15 AM PT batch 1.
+  // Single-count fronts stay cartons. Flat labels and the wrong formula stay marks.
+  const batch1022e: [string, string, string][] = [
+    ['gol-kids-plus-strawberry-banana', 'Garden of Life', 'gol-kids-plus-strawberry-banana.jpg'],
+    ['now-super-enzymes-180', 'NOW', 'now-super-enzymes-180.jpg'],
+    ['now-probiotic-10-100', 'NOW', 'now-probiotic-10-100.jpg'],
+    ['now-betaine-hcl-120', 'NOW', 'now-betaine-hcl-120.jpg'],
+    ['now-bromelain-500-mg-2-120', 'NOW', 'now-bromelain-500-mg-2-120.jpg'],
+    ['now-psyllium-husk-caps-500-mg-500', 'NOW', 'now-psyllium-husk-caps-500-mg-500.jpg'],
+    ['now-coq10-200-mg-60', 'NOW', 'now-coq10-200-mg-60.jpg'],
+    ['now-saccharomyces-boulardii-5-billion-cfu-120', 'NOW', 'now-saccharomyces-boulardii-5-billion-cfu-120.jpg'],
+    ['now-coq10-100-mg-150', 'NOW', 'now-coq10-100-mg-150.jpg'],
+    ['now-saccharomyces-boulardii-probiotic-5-billion-cfu-60', 'NOW', 'now-saccharomyces-boulardii-probiotic-5-billion-cfu-60.jpg'],
+    ['now-digest-ultimate-120', 'NOW', 'now-digest-ultimate-120.jpg'],
+    ['now-apple-pectin-120', 'NOW', 'now-apple-pectin-120.jpg'],
+    ['now-super-enzymes-90', 'NOW', 'now-super-enzymes-90.jpg'],
+    ['now-coq10-100-mg-50', 'NOW', 'now-coq10-100-mg-50.jpg'],
+    ['now-probiotic-10-25-billion-50', 'NOW', 'now-probiotic-10-25-billion-50.jpg'],
+    ['now-probiotic-10-50-billion-50', 'NOW', 'now-probiotic-10-50-billion-50.jpg'],
+    ['now-psyllium-husk-caps-200', 'NOW', 'now-psyllium-husk-caps-200.jpg'],
+    ['now-plant-enzymes-240', 'NOW', 'now-plant-enzymes-240.jpg'],
+  ];
+  const seen1022e = new Set<string>();
+  for (const [id, brand, file] of batch1022e) {
+    if (seen1022e.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022e.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('walgreens-omeprazole-20', 'Walgreens', 'walgreens-mark.png');
+  assertBrandMark('walgreens-famotidine-20', 'Walgreens', 'walgreens-mark.png');
+  const groups1022e: [string, string, string][][] = [
+    [
+      ['gol-organic-kids-probiotics-berry-cherry', 'gol-organic-kids-probiotics-berry-cherry', 'Garden of Life'],
+      ['gol-kids-plus-strawberry-banana', 'gol-kids-plus-strawberry-banana', 'Garden of Life'],
+    ],
+    [
+      ['now-super-enzymes-180', 'now-super-enzymes-90', 'NOW'],
+      ['now-super-enzymes-90', 'now-super-enzymes-90', 'NOW'],
+    ],
+    [
+      ['now-probiotic-10-100', 'now-probiotic-10-30', 'NOW'],
+      ['now-probiotic-10-25-billion-50', 'now-probiotic-10-25-billion-50', 'NOW'],
+      ['now-probiotic-10-50-billion-50', 'now-probiotic-10-50-billion-50', 'NOW'],
+    ],
+    [
+      ['now-bromelain-500-mg-2-120', 'now-bromelain-500-mg-2-120', 'NOW'],
+      ['now-bromelain-500-mg-60', 'now-bromelain-500-mg-60', 'NOW'],
+    ],
+    [
+      ['now-psyllium-husk-caps-500-mg-500', 'now-psyllium-husk-caps-500-mg-500', 'NOW'],
+      ['now-psyllium-husk-caps-200', 'now-psyllium-husk-caps-200', 'NOW'],
+    ],
+    [
+      ['now-coq10-100-mg-150', 'now-coq10-100-mg-50', 'NOW'],
+      ['now-coq10-100-mg-50', 'now-coq10-100-mg-50', 'NOW'],
+      ['now-coq10-200-mg-60', 'now-coq10-200-mg-60', 'NOW'],
+    ],
+    [
+      ['now-saccharomyces-boulardii-5-billion-cfu-120', 'now-saccharomyces-boulardii-5-billion-cfu-120', 'NOW'],
+      ['now-saccharomyces-boulardii-probiotic-5-billion-cfu-60', 'now-saccharomyces-boulardii-probiotic-5-billion-cfu-60', 'NOW'],
+    ],
+    [
+      ['now-digest-ultimate-120', 'now-digest-ultimate-60', 'NOW'],
+      ['now-digest-ultimate-60', 'now-digest-ultimate-60', 'NOW'],
+    ],
+  ];
+  const letterUntilAttempted1022e = new Set<string>([
+    'now-bromelain-500-mg-60',
+    'now-digest-ultimate-60',
+  ]);
+  for (const group of groups1022e) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted1022e.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
         }
         continue;
       }
