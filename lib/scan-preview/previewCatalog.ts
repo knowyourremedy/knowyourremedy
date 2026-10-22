@@ -3072,6 +3072,13 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Gas & Bloat UPC 850023615039 is not on the current Hilma gas-relief page.
   // Live 50 and 100 both barcode 850023615084. Official Hilma mark. Not a letter.
   'hilma-gas-bloat': brandMark('hilma-mark.png'),
+  // Digestive night run 2026-10-22 3:00 AM PT batch 1.
+  // Dairy + Gluten live barcodes are 850023615169 (60) and 860001357127 (30).
+  // Catalog UPC 850023615138 is on neither, and both counts share one hero.
+  'hilma-dairy-gluten-enzymes': brandMark('hilma-mark.png'),
+  // Kids strawberry gummies. Brand variant barcode is 850018471800, not
+  // catalog 850029392279. Do not glue the current bottle. Official MaryRuth mark.
+  'maryruth-kids-probiotic-gummies-strawberry': brandMark('maryruth-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17722,6 +17729,48 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'enzymedica-digest-gold-atpro': catalogShot('enzymedica-digest-gold-atpro.jpg'),
   // Protectis Baby Drops with vitamin D. UPC 602359460155. Not the plain drops.
   'biogaia-protectis-baby-drops-d3': catalogShot('biogaia-protectis-baby-drops-d3.jpg'),
+  // Digestive night run 2026-10-22 3:00 AM PT batch 1.
+  // Exact fronts. Sibling counts, flavors, and strengths do not share a file.
+  // Daily Pre + Probiotic + Herbs, 60 capsules. UPC 850023615190.
+  'hilma-daily-pre-probiotic': catalogShot('hilma-daily-pre-probiotic.jpg'),
+  // Occasional Constipation Relief, 46 capsules. UPC 850023615121.
+  // The 2-bottle option reuses this barcode. The photo is the single bottle.
+  'hilma-occasional-constipation': catalogShot('hilma-occasional-constipation.jpg'),
+  // Daily Fiber + Digestive Enzymes powder, 30 servings. UPC 850023615206.
+  'hilma-daily-fiber-enzymes': catalogShot('hilma-daily-fiber-enzymes.jpg'),
+  // Fiber Gummy, 60 gummies. UPC 850023615145. Not the fiber powder.
+  'hilma-fiber-gummy': catalogShot('hilma-fiber-gummy.jpg'),
+  // Arrae Bloat, one-time bottle. UPC 850045105013. Not Tribiotic.
+  'arrae-bloat-relief': catalogShot('arrae-bloat-relief.jpg'),
+  // Arrae Tribiotic, one-time bottle. UPC 850045105228. Not Bloat.
+  'arrae-tribiotic-womens': catalogShot('arrae-tribiotic-womens.jpg'),
+  // Trace Minerals Probiotic 55 Billion, 30 capsules. UPC 878941002120.
+  'trace-probiotic-55-billion': catalogShot('trace-probiotic-55-billion.jpg'),
+  // Country Life Activated Charcoal, 100 capsules. UPC 015794034926.
+  // Not the 40 (015794034919) or the 180 (015794034933).
+  'country-life-activated-charcoal': catalogShot('country-life-activated-charcoal.jpg'),
+  // Codeage Akkermansia, 90 capsules. UPC 850049609340. Not the 30-count 850049609968.
+  'codeage-akkermansia': catalogShot('codeage-akkermansia.jpg'),
+  // Once Daily Women's, 30 capsules. UPC 658010118323. Not Men's or Mood+.
+  'gol-once-daily-womens-probiotic': catalogShot('gol-once-daily-womens-probiotic.jpg'),
+  // Once Daily Men's, 30 capsules. UPC 658010118293. Not Women's.
+  'gol-once-daily-mens-probiotic': catalogShot('gol-once-daily-mens-probiotic.jpg'),
+  // Mood+, 60 capsules. UPC 658010120043. Not Once Daily Women's or Men's.
+  'gol-mood-plus': catalogShot('gol-mood-plus.jpg'),
+  // Women's pH, 30 capsules. UPC 658010131957. Not Once Daily Women's.
+  'gol-womens-ph-pre-pro-post': catalogShot('gol-womens-ph-pre-pro-post.jpg'),
+  // Organic Kids+ Berry Cherry, 30 chewables. UPC 658010121194.
+  // Not Strawberry Banana (658010122214).
+  'gol-organic-kids-probiotics-berry-cherry': catalogShot('gol-organic-kids-probiotics-berry-cherry.jpg'),
+  // Kids Prebiotic & Probiotic strawberry, 60 gummies. UPC 817053020059.
+  // Not the grape bottle (817053020011) and not the 2 billion CFU grape.
+  'smartypants-kids-prebiotic-probiotic': catalogShot('smartypants-kids-prebiotic-probiotic.jpg'),
+  // Adult Probiotic & Prebiotic grape, 60 gummies. UPC 817053024309. Not the kids grape.
+  'smartypants-adult-probiotic-prebiotic': catalogShot('smartypants-adult-probiotic-prebiotic.jpg'),
+  // Kids 2 Billion CFU grape, 30 gummies. UPC 817053024033. Not the 60-count prebiotic.
+  'smartypants-kids-2b-cfu': catalogShot('smartypants-kids-2b-cfu.jpg'),
+  // Adult 3 Billion CFU strawberry, 30 gummies. UPC 817053024477. Not the grape adult bottle.
+  'smartypants-adult-3b-cfu': catalogShot('smartypants-adult-3b-cfu.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -40242,5 +40291,96 @@ assertBrandMark(
     || cranRx.url === cranberry.url
   ) {
     throw new Error('Cranberry blend and Cranberry Fruit stay marks; CranRx keeps its own bottle');
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 3:00 AM PT batch 1.
+  // Single-count fronts stay cartons. Barcode mismatches stay on the mark.
+  const batch1022c: [string, string, string][] = [
+    ['hilma-daily-pre-probiotic', 'Hilma', 'hilma-daily-pre-probiotic.jpg'],
+    ['hilma-occasional-constipation', 'Hilma', 'hilma-occasional-constipation.jpg'],
+    ['hilma-daily-fiber-enzymes', 'Hilma', 'hilma-daily-fiber-enzymes.jpg'],
+    ['hilma-fiber-gummy', 'Hilma', 'hilma-fiber-gummy.jpg'],
+    ['arrae-bloat-relief', 'Arrae', 'arrae-bloat-relief.jpg'],
+    ['arrae-tribiotic-womens', 'Arrae', 'arrae-tribiotic-womens.jpg'],
+    ['trace-probiotic-55-billion', 'Trace Minerals', 'trace-probiotic-55-billion.jpg'],
+    ['country-life-activated-charcoal', 'Country Life', 'country-life-activated-charcoal.jpg'],
+    ['codeage-akkermansia', 'Codeage', 'codeage-akkermansia.jpg'],
+    ['gol-once-daily-womens-probiotic', 'Garden of Life', 'gol-once-daily-womens-probiotic.jpg'],
+    ['gol-once-daily-mens-probiotic', 'Garden of Life', 'gol-once-daily-mens-probiotic.jpg'],
+    ['gol-mood-plus', 'Garden of Life', 'gol-mood-plus.jpg'],
+    ['gol-womens-ph-pre-pro-post', 'Garden of Life', 'gol-womens-ph-pre-pro-post.jpg'],
+    ['gol-organic-kids-probiotics-berry-cherry', 'Garden of Life', 'gol-organic-kids-probiotics-berry-cherry.jpg'],
+    ['smartypants-kids-prebiotic-probiotic', 'SmartyPants', 'smartypants-kids-prebiotic-probiotic.jpg'],
+    ['smartypants-adult-probiotic-prebiotic', 'SmartyPants', 'smartypants-adult-probiotic-prebiotic.jpg'],
+    ['smartypants-kids-2b-cfu', 'SmartyPants', 'smartypants-kids-2b-cfu.jpg'],
+    ['smartypants-adult-3b-cfu', 'SmartyPants', 'smartypants-adult-3b-cfu.jpg'],
+  ];
+  const seen1022c = new Set<string>();
+  for (const [id, brand, file] of batch1022c) {
+    if (seen1022c.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022c.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('hilma-dairy-gluten-enzymes', 'Hilma', 'hilma-mark.png');
+  assertBrandMark('maryruth-kids-probiotic-gummies-strawberry', "MaryRuth's", 'maryruth-mark.png');
+  const groups1022c: [string, string, string][][] = [
+    [
+      ['hilma-daily-pre-probiotic', 'hilma-daily-pre-probiotic', 'Hilma'],
+      ['hilma-occasional-constipation', 'hilma-occasional-constipation', 'Hilma'],
+      ['hilma-daily-fiber-enzymes', 'hilma-daily-fiber-enzymes', 'Hilma'],
+      ['hilma-fiber-gummy', 'hilma-fiber-gummy', 'Hilma'],
+      ['hilma-dairy-gluten-enzymes', 'hilma-dairy-gluten-enzymes', 'Hilma'],
+    ],
+    [
+      ['arrae-bloat-relief', 'arrae-bloat-relief', 'Arrae'],
+      ['arrae-tribiotic-womens', 'arrae-tribiotic-womens', 'Arrae'],
+    ],
+    [
+      ['gol-once-daily-womens-probiotic', 'gol-once-daily-womens-probiotic', 'Garden of Life'],
+      ['gol-once-daily-mens-probiotic', 'gol-once-daily-mens-probiotic', 'Garden of Life'],
+      ['gol-mood-plus', 'gol-mood-plus', 'Garden of Life'],
+      ['gol-womens-ph-pre-pro-post', 'gol-womens-ph-pre-pro-post', 'Garden of Life'],
+      ['gol-organic-kids-probiotics-berry-cherry', 'gol-organic-kids-probiotics-berry-cherry', 'Garden of Life'],
+    ],
+    [
+      ['smartypants-kids-prebiotic-probiotic', 'smartypants-kids-prebiotic-probiotic', 'SmartyPants'],
+      ['smartypants-adult-probiotic-prebiotic', 'smartypants-adult-probiotic-prebiotic', 'SmartyPants'],
+      ['smartypants-kids-2b-cfu', 'smartypants-kids-2b-cfu', 'SmartyPants'],
+      ['smartypants-adult-3b-cfu', 'smartypants-adult-3b-cfu', 'SmartyPants'],
+    ],
+    [
+      ['gol-organic-kids-probiotics-berry-cherry', 'gol-organic-kids-probiotics-berry-cherry', 'Garden of Life'],
+      ['gol-kids-plus-strawberry-banana', 'gol-kids-plus-strawberry-banana', 'Garden of Life'],
+    ],
+  ];
+  const markInstead1022c = new Set<string>(['hilma-dairy-gluten-enzymes']);
+  const letterUntilAttempted1022c = new Set<string>(['gol-kids-plus-strawberry-banana']);
+  for (const group of groups1022c) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (letterUntilAttempted1022c.has(id)) {
+        if (!image?.url.startsWith('data:image/svg+xml') || image.verifiedSku) {
+          throw new Error(`${id} stays a letter until its own carton is attempted`);
+        }
+        continue;
+      }
+      if (markInstead1022c.has(id)) {
+        if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} must stay a brand mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
   }
 }
