@@ -18094,6 +18094,89 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-nutricost-bromelain-capsules-60-capsules': catalogShot(
     'nutricost-nutricost-bromelain-capsules-60-capsules.jpg',
   ),
+  // Digestive night run 2026-10-22 6:45 AM PT batch 2.
+  // Exact fronts. Sibling counts, strengths, and CFU do not share a file.
+  // Bromelain 550 mg, 240 capsules. Not the 60 and not the 500 mg 120.
+  'nutricost-nutricost-bromelain-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-bromelain-capsules-240-capsules.jpg',
+  ),
+  // Bromelain 500 mg, 120 capsules. Not the 550 mg 60 or 240.
+  'nutricost-nutricost-bromelain-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-bromelain-capsules-120-capsules.jpg',
+  ),
+  // Probiotic Complex 40 billion CFU, 60 capsules. UPC 810139575191.
+  // Not the 1 billion, 10 billion, or 50 billion bottles.
+  'nutricost-nutricost-probiotic-complex-capsules-60-capsules': catalogShot(
+    'nutricost-nutricost-probiotic-complex-capsules-60-capsules.jpg',
+  ),
+  // Probiotic Complex Compax panel, 60 capsules. Not the 40 billion bottle.
+  'nutricost-nutricost-probiotic-complex-capsules-60-capsules-2': catalogShot(
+    'nutricost-nutricost-probiotic-complex-capsules-60-capsules-2.jpg',
+  ),
+  // Psyllium husk 500 mg x3, 90 capsules. UPC 810014677125. Not the 500.
+  'nutricost-nutricost-psyllium-husk-capsules-90-capsules': catalogShot(
+    'nutricost-nutricost-psyllium-husk-capsules-90-capsules.jpg',
+  ),
+  // Betaine HCl + Pepsin, 240 capsules. UPC 702669936163.
+  'nutricost-nutricost-betaine-hci-pepsin-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-betaine-hci-pepsin-capsules-240-capsules.jpg',
+  ),
+  // Lactase powder, 500 g. UPC 702669935173.
+  'nutricost-nutricost-lactase-powder-500-gm': catalogShot(
+    'nutricost-nutricost-lactase-powder-500-gm.jpg',
+  ),
+  // Quercetin with bromelain, 120 capsules. UPC 702669937528. Not the 240.
+  'nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules': catalogShot(
+    'nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules.jpg',
+  ),
+  // Quercetin with bromelain, 240 capsules. UPC 702669934091. Not the 120.
+  'nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules': catalogShot(
+    'nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules.jpg',
+  ),
+  // Digestive Enzyme Complex, 120 capsules. UPC 702669934657.
+  'nutricost-digestive-enzyme-complex-capsules-120-capsules': catalogShot(
+    'nutricost-digestive-enzyme-complex-capsules-120-capsules.jpg',
+  ),
+  // Magnesium bisglycinate powder, unflavored. UPC 810014675961. Not fruit punch.
+  'nutricost-b79-magnesium-bisglycinate-unflavored': catalogShot(
+    'nutricost-b79-magnesium-bisglycinate-unflavored.jpg',
+  ),
+  // Magnesium malate, 180 capsules. UPC 810014672960.
+  'nutricost-b79-magnesium-malate-180-capsules': catalogShot(
+    'nutricost-b79-magnesium-malate-180-capsules.jpg',
+  ),
+  // Magnesium oxide 375 mg, 240 capsules. UPC 857077008053. Not 400 mg or 750 mg.
+  'nutricost-b79-magnesium-oxide-375mg-240-capsules': catalogShot(
+    'nutricost-b79-magnesium-oxide-375mg-240-capsules.jpg',
+  ),
+  // Magnesium Complex regular strength, 240 capsules. UPC 810139571308.
+  'nutricost-b79-magnesium-complex-regular-240-capsules': catalogShot(
+    'nutricost-b79-magnesium-complex-regular-240-capsules.jpg',
+  ),
+  // Soluble fiber, berry, 30 servings. UPC 810139572633. Not unflavored.
+  'nutricost-b79-soluble-fiber-berry-30-servings': catalogShot(
+    'nutricost-b79-soluble-fiber-berry-30-servings.jpg',
+  ),
+  // Magnesium oxide 750 mg, 240 capsules. UPC 702669934398. Not 375 mg or 400 mg.
+  'nutricost-b79-magnesium-oxide-750mg-240-capsules': catalogShot(
+    'nutricost-b79-magnesium-oxide-750mg-240-capsules.jpg',
+  ),
+  // Magnesium oxide 400 mg, 240 capsules. UPC 810139578116. Not 375 mg or 750 mg.
+  'nutricost-b79-magnesium-oxide-400mg-240-capsules': catalogShot(
+    'nutricost-b79-magnesium-oxide-400mg-240-capsules.jpg',
+  ),
+  // Potassium + magnesium citrate, 240 capsules. UPC 810014673509.
+  'nutricost-b79-potassium-magnesium-citrate-240-capsules': catalogShot(
+    'nutricost-b79-potassium-magnesium-citrate-240-capsules.jpg',
+  ),
+  // Psyllium husk, 500 capsules. UPC 702669932653. Not the 90.
+  'nutricost-b79-psyllium-husk-500-capsules': catalogShot(
+    'nutricost-b79-psyllium-husk-500-capsules.jpg',
+  ),
+  // Kids fiber gummies, 60. UPC 810139578185.
+  'nutricost-b80-kids-fiber-gummies': catalogShot(
+    'nutricost-b80-kids-fiber-gummies.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19143,6 +19226,9 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'nutricost-nutricost-bromelain-powder-8-oz',
   // Bromelain 60 capsules share the 120 formula. Own carton. Not the 120.
   'nutricost-nutricost-bromelain-capsules-60-capsules',
+  // Digestive night run 2026-10-22 6:45 AM PT batch 2.
+  // Quercetin 240 shares the 120 formula. Own carton. Not the 120.
+  'nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules',
 ]);
 
 export function previewOverlayImage(
@@ -41317,11 +41403,6 @@ assertBrandMark(
       throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
     }
   }
-  const bromelain120 = previewOverlayImage({
-    id: 'nutricost-nutricost-bromelain-capsules-120-capsules',
-    formulaId: 'nutricost-nutricost-bromelain-capsules-120-capsules',
-    brand: 'Nutricost',
-  });
   const bromelain60 = previewOverlayImage({
     id: 'nutricost-nutricost-bromelain-capsules-60-capsules',
     formulaId: 'nutricost-nutricost-bromelain-capsules-120-capsules',
@@ -41330,10 +41411,71 @@ assertBrandMark(
   if (!bromelain60?.verifiedSku) {
     throw new Error('bromelain 60 must keep its own carton');
   }
-  if (!bromelain120?.url.startsWith('data:image/svg+xml') || bromelain120.verifiedSku) {
-    throw new Error('bromelain 120 stays a letter until its own carton is attempted');
+}
+
+{
+  // Digestive night run 2026-10-22 6:45 AM PT batch 2.
+  // Single-count fronts stay cartons. Sibling strengths do not share a file.
+  const batch1022j: [string, string, string][] = [
+    ['nutricost-nutricost-bromelain-capsules-240-capsules', 'Nutricost', 'nutricost-nutricost-bromelain-capsules-240-capsules.jpg'],
+    ['nutricost-nutricost-bromelain-capsules-120-capsules', 'Nutricost', 'nutricost-nutricost-bromelain-capsules-120-capsules.jpg'],
+    ['nutricost-nutricost-probiotic-complex-capsules-60-capsules', 'Nutricost', 'nutricost-nutricost-probiotic-complex-capsules-60-capsules.jpg'],
+    ['nutricost-nutricost-probiotic-complex-capsules-60-capsules-2', 'Nutricost', 'nutricost-nutricost-probiotic-complex-capsules-60-capsules-2.jpg'],
+    ['nutricost-nutricost-psyllium-husk-capsules-90-capsules', 'Nutricost', 'nutricost-nutricost-psyllium-husk-capsules-90-capsules.jpg'],
+    ['nutricost-nutricost-betaine-hci-pepsin-capsules-240-capsules', 'Nutricost', 'nutricost-nutricost-betaine-hci-pepsin-capsules-240-capsules.jpg'],
+    ['nutricost-nutricost-lactase-powder-500-gm', 'Nutricost', 'nutricost-nutricost-lactase-powder-500-gm.jpg'],
+    ['nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules', 'Nutricost', 'nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules.jpg'],
+    ['nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules', 'Nutricost', 'nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules.jpg'],
+    ['nutricost-digestive-enzyme-complex-capsules-120-capsules', 'Nutricost', 'nutricost-digestive-enzyme-complex-capsules-120-capsules.jpg'],
+    ['nutricost-b79-magnesium-bisglycinate-unflavored', 'Nutricost', 'nutricost-b79-magnesium-bisglycinate-unflavored.jpg'],
+    ['nutricost-b79-magnesium-malate-180-capsules', 'Nutricost', 'nutricost-b79-magnesium-malate-180-capsules.jpg'],
+    ['nutricost-b79-magnesium-oxide-375mg-240-capsules', 'Nutricost', 'nutricost-b79-magnesium-oxide-375mg-240-capsules.jpg'],
+    ['nutricost-b79-magnesium-complex-regular-240-capsules', 'Nutricost', 'nutricost-b79-magnesium-complex-regular-240-capsules.jpg'],
+    ['nutricost-b79-soluble-fiber-berry-30-servings', 'Nutricost', 'nutricost-b79-soluble-fiber-berry-30-servings.jpg'],
+    ['nutricost-b79-magnesium-oxide-750mg-240-capsules', 'Nutricost', 'nutricost-b79-magnesium-oxide-750mg-240-capsules.jpg'],
+    ['nutricost-b79-magnesium-oxide-400mg-240-capsules', 'Nutricost', 'nutricost-b79-magnesium-oxide-400mg-240-capsules.jpg'],
+    ['nutricost-b79-potassium-magnesium-citrate-240-capsules', 'Nutricost', 'nutricost-b79-potassium-magnesium-citrate-240-capsules.jpg'],
+    ['nutricost-b79-psyllium-husk-500-capsules', 'Nutricost', 'nutricost-b79-psyllium-husk-500-capsules.jpg'],
+    ['nutricost-b80-kids-fiber-gummies', 'Nutricost', 'nutricost-b80-kids-fiber-gummies.jpg'],
+  ];
+  const seen1022j = new Set<string>();
+  for (const [id, brand, file] of batch1022j) {
+    if (seen1022j.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022j.add(file);
+    assertExactCarton(id, brand, file);
   }
-  if (bromelain60.url === bromelain120.url) {
-    throw new Error('bromelain 60 and 120 must not share a photo');
+  const groups1022j: [string, string, string][][] = [
+    [
+      ['nutricost-nutricost-bromelain-capsules-60-capsules', 'nutricost-nutricost-bromelain-capsules-120-capsules', 'Nutricost'],
+      ['nutricost-nutricost-bromelain-capsules-120-capsules', 'nutricost-nutricost-bromelain-capsules-120-capsules', 'Nutricost'],
+      ['nutricost-nutricost-bromelain-capsules-240-capsules', 'nutricost-nutricost-bromelain-capsules-240-capsules', 'Nutricost'],
+    ],
+    [
+      ['nutricost-nutricost-probiotic-complex-capsules-60-capsules', 'nutricost-nutricost-probiotic-complex-capsules-60-capsules', 'Nutricost'],
+      ['nutricost-nutricost-probiotic-complex-capsules-60-capsules-2', 'nutricost-nutricost-probiotic-complex-capsules-60-capsules-2', 'Nutricost'],
+    ],
+    [
+      ['nutricost-nutricost-psyllium-husk-capsules-90-capsules', 'nutricost-nutricost-psyllium-husk-capsules-90-capsules', 'Nutricost'],
+      ['nutricost-b79-psyllium-husk-500-capsules', 'nutricost-b79-psyllium-husk-500-capsules', 'Nutricost'],
+    ],
+    [
+      ['nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules', 'nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules', 'Nutricost'],
+      ['nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules', 'nutricost-nutricost-quercetin-with-bromelain-capsules-120-capsules', 'Nutricost'],
+    ],
+    [
+      ['nutricost-b79-magnesium-oxide-375mg-240-capsules', 'nutricost-b79-magnesium-oxide-375mg-240-capsules', 'Nutricost'],
+      ['nutricost-b79-magnesium-oxide-400mg-240-capsules', 'nutricost-b79-magnesium-oxide-400mg-240-capsules', 'Nutricost'],
+      ['nutricost-b79-magnesium-oxide-750mg-240-capsules', 'nutricost-b79-magnesium-oxide-750mg-240-capsules', 'Nutricost'],
+    ],
+  ];
+  for (const group of groups1022j) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
   }
 }
