@@ -3079,6 +3079,22 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Kids strawberry gummies. Brand variant barcode is 850018471800, not
   // catalog 850029392279. Do not glue the current bottle. Official MaryRuth mark.
   'maryruth-kids-probiotic-gummies-strawberry': brandMark('maryruth-mark.png'),
+  // Digestive night run 2026-10-22 3:00 AM PT batch 2.
+  // Docusate listing is an Amazon Basics rebrand and also lists UPC 195515119405.
+  // No matching Basic Care carton. Official Basic Care mark.
+  'amazon-basic-care-docusate-100-l486': brandMark('amazon-basic-care-mark.png'),
+  // The 3D anti-diarrheal carton that was found prints NDC 72288-225-76.
+  // Catalog 224 is 370030146086 / 72288-224. Do not share the 225 carton.
+  'amazon-basic-care-loperamide-224': brandMark('amazon-basic-care-mark.png'),
+  // Live hero is Amazon Basics ("Previously Mama Bear"). Catalog UPC
+  // 842379148828 has no Mama Bear bottle left on that page. Official Mama Bear
+  // wordmark from the Kids Fiber bottle. Not the Basics bottle.
+  'mama-bear-vegan-kids-probiotic-gummies': brandMark('mama-bear-mark.png'),
+  // No carton UPC. Official Elements mark. Not a letter.
+  'amazon-elements-acacia-fiber': brandMark('amazon-elements-mark.png'),
+  // Brand page barcode 605069064057 is not catalog 605069064033.
+  // The other hero on that page is the 24 oz tub, UPC 605069064040.
+  'himalaya-organic-psyllium': brandMark('himalaya-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -17771,6 +17787,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'smartypants-kids-2b-cfu': catalogShot('smartypants-kids-2b-cfu.jpg'),
   // Adult 3 Billion CFU strawberry, 30 gummies. UPC 817053024477. Not the grape adult bottle.
   'smartypants-adult-3b-cfu': catalogShot('smartypants-adult-3b-cfu.jpg'),
+  // Digestive night run 2026-10-22 3:00 AM PT batch 2.
+  // Exact fronts. Sibling counts, flavors, and strengths do not share a file.
+  // Mood+ Daily Probiotic, 30 capsules. UPC 671635733542. Not Acacia Fiber.
+  'wellmade-mood-plus': catalogShot('wellmade-mood-plus.jpg'),
+  // Organic Acacia Fiber powder. UPC 671635733887. Not Mood+.
+  'wellmade-organic-acacia-fiber': catalogShot('wellmade-organic-acacia-fiber.jpg'),
+  // All-Flora Probiotic + Prebiotic Gummies, 30-day bottle. UPC 727783903792.
+  // Not the fiber gummies and not the multi-fiber capsules.
+  'new-chapter-all-flora-probiotic-gummy': catalogShot('new-chapter-all-flora-probiotic-gummy.jpg'),
+  // Organic Fiber Gummies, single bottle. UPC 727783904072. Not the 2-pack.
+  'new-chapter-organic-fiber-gummies': catalogShot('new-chapter-organic-fiber-gummies.jpg'),
+  // Sodium Butyrate, 60 capsules. UPC 743474999929. Not the 100-count sodium
+  // bottle and not Calcium Magnesium.
+  'bodybio-sodium-butyrate': catalogShot('bodybio-sodium-butyrate.jpg'),
+  // Calcium Magnesium Butyrate, 100 capsules. UPC 743474993200. Not the 250-count.
+  'bodybio-calcium-magnesium-butyrate': catalogShot('bodybio-calcium-magnesium-butyrate.jpg'),
+  // All-Flora Multi-Fiber Blend, 120 capsules / 12-day. UPC 727783904331.
+  'new-chapter-all-flora-multi-fiber': catalogShot('new-chapter-all-flora-multi-fiber.jpg'),
+  // Gas Relief Ultra, simethicone 180 mg, 60 softgels. UPC 195515032964.
+  // Carton prints NDC 72288-657-72. Not the stool softener and not loperamide.
+  'amazon-basic-care-gas-relief-ultra-l657': catalogShot('amazon-basic-care-gas-relief-ultra-l657.jpg'),
+  // Kids Fiber Gummies, orange, 60 gummies. UPC 842379192166.
+  // Not the vegan probiotic gummies.
+  'mama-bear-kids-fiber-gummies': catalogShot('mama-bear-kids-fiber-gummies.jpg'),
+  // Probiotic 5 Billion, 60 vegetarian capsules. UPC 195515008112.
+  // Not Women's Probiotic and not the fiber gummies.
+  'amazon-basics-probiotic-5b': catalogShot('amazon-basics-probiotic-5b.jpg'),
+  // Fiber Gummies, 90 count. UPC 195515034500. Not Mama Bear fiber (60).
+  'amazon-basics-fiber-gummies': catalogShot('amazon-basics-fiber-gummies.jpg'),
+  // Dr. Formulated Organic Fiber, unflavored, 6.8 oz / 32 servings.
+  // UPC 658010118408. Not the citrus pouch.
+  'gol-unflavored-organic-fiber': catalogShot('gol-unflavored-organic-fiber.jpg'),
+  // Loperamide tablets, 24 count. Carton prints NDC 72288-225-76.
+  // UPC 195515048842. Not 72288-224 and not the 313 softgel.
+  'amazon-basic-care-loperamide-aurohealth-225': catalogShot(
+    'amazon-basic-care-loperamide-aurohealth-225.jpg',
+  ),
+  // Loperamide softgels. Carton prints NDC 72288-313-12. UPC 195515045254.
+  // Not the 224 or 225 tablets.
+  'amazon-basics-loperamide-softgel-313': catalogShot('amazon-basics-loperamide-softgel-313.jpg'),
+  // Women's Probiotic, 60 capsules, Elements face. Listing UPC 195515041393.
+  // Not the 30-count and not Acacia Fiber.
+  'amazon-elements-womens-probiotic': catalogShot('amazon-elements-womens-probiotic.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -40375,6 +40434,102 @@ assertBrandMark(
         continue;
       }
       if (markInstead1022c.has(id)) {
+        if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
+          throw new Error(`${id} must stay a brand mark`);
+        }
+        continue;
+      }
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+    }
+  }
+}
+
+{
+  // Digestive night run 2026-10-22 3:00 AM PT batch 2.
+  // Single-count fronts stay cartons. Barcode mismatches and rebrands stay marks.
+  const batch1022d: [string, string, string][] = [
+    ['wellmade-mood-plus', 'wellmade by Thrive Market', 'wellmade-mood-plus.jpg'],
+    ['wellmade-organic-acacia-fiber', 'wellmade by Thrive Market', 'wellmade-organic-acacia-fiber.jpg'],
+    ['new-chapter-all-flora-probiotic-gummy', 'New Chapter', 'new-chapter-all-flora-probiotic-gummy.jpg'],
+    ['new-chapter-organic-fiber-gummies', 'New Chapter', 'new-chapter-organic-fiber-gummies.jpg'],
+    ['bodybio-sodium-butyrate', 'BodyBio', 'bodybio-sodium-butyrate.jpg'],
+    ['bodybio-calcium-magnesium-butyrate', 'BodyBio', 'bodybio-calcium-magnesium-butyrate.jpg'],
+    ['new-chapter-all-flora-multi-fiber', 'New Chapter', 'new-chapter-all-flora-multi-fiber.jpg'],
+    ['amazon-basic-care-gas-relief-ultra-l657', 'Amazon Basic Care', 'amazon-basic-care-gas-relief-ultra-l657.jpg'],
+    ['mama-bear-kids-fiber-gummies', 'Mama Bear', 'mama-bear-kids-fiber-gummies.jpg'],
+    ['amazon-basics-probiotic-5b', 'Amazon Basics', 'amazon-basics-probiotic-5b.jpg'],
+    ['amazon-basics-fiber-gummies', 'Amazon Basics', 'amazon-basics-fiber-gummies.jpg'],
+    ['gol-unflavored-organic-fiber', 'Garden of Life', 'gol-unflavored-organic-fiber.jpg'],
+    ['amazon-basic-care-loperamide-aurohealth-225', 'Amazon Basic Care', 'amazon-basic-care-loperamide-aurohealth-225.jpg'],
+    ['amazon-basics-loperamide-softgel-313', 'Amazon Basics', 'amazon-basics-loperamide-softgel-313.jpg'],
+    ['amazon-elements-womens-probiotic', 'Amazon Elements', 'amazon-elements-womens-probiotic.jpg'],
+  ];
+  const seen1022d = new Set<string>();
+  for (const [id, brand, file] of batch1022d) {
+    if (seen1022d.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1022d.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('amazon-basic-care-docusate-100-l486', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+  assertBrandMark('amazon-basic-care-loperamide-224', 'Amazon Basic Care', 'amazon-basic-care-mark.png');
+  assertBrandMark('mama-bear-vegan-kids-probiotic-gummies', 'Mama Bear', 'mama-bear-mark.png');
+  assertBrandMark('amazon-elements-acacia-fiber', 'Amazon Elements', 'amazon-elements-mark.png');
+  assertBrandMark('himalaya-organic-psyllium', 'Himalaya', 'himalaya-mark.png');
+  const groups1022d: [string, string, string][][] = [
+    [
+      ['wellmade-mood-plus', 'wellmade-mood-plus', 'wellmade by Thrive Market'],
+      ['wellmade-organic-acacia-fiber', 'wellmade-organic-acacia-fiber', 'wellmade by Thrive Market'],
+    ],
+    [
+      ['new-chapter-all-flora-probiotic-gummy', 'new-chapter-all-flora-probiotic-gummy', 'New Chapter'],
+      ['new-chapter-organic-fiber-gummies', 'new-chapter-organic-fiber-gummies', 'New Chapter'],
+      ['new-chapter-all-flora-multi-fiber', 'new-chapter-all-flora-multi-fiber', 'New Chapter'],
+    ],
+    [
+      ['bodybio-sodium-butyrate', 'bodybio-sodium-butyrate', 'BodyBio'],
+      ['bodybio-calcium-magnesium-butyrate', 'bodybio-calcium-magnesium-butyrate', 'BodyBio'],
+    ],
+    [
+      ['amazon-basic-care-gas-relief-ultra-l657', 'amazon-basic-care-gas-relief-ultra-l657', 'Amazon Basic Care'],
+      ['amazon-basic-care-loperamide-aurohealth-225', 'amazon-basic-care-loperamide-aurohealth-225', 'Amazon Basic Care'],
+      ['amazon-basic-care-loperamide-224', 'amazon-basic-care-loperamide-224', 'Amazon Basic Care'],
+    ],
+    [
+      ['amazon-basic-care-loperamide-224', 'amazon-basic-care-loperamide-224', 'Amazon Basic Care'],
+      ['amazon-basic-care-loperamide-aurohealth-225', 'amazon-basic-care-loperamide-aurohealth-225', 'Amazon Basic Care'],
+      ['amazon-basics-loperamide-softgel-313', 'amazon-basics-loperamide-softgel-313', 'Amazon Basics'],
+    ],
+    [
+      ['mama-bear-kids-fiber-gummies', 'mama-bear-kids-fiber-gummies', 'Mama Bear'],
+      ['mama-bear-vegan-kids-probiotic-gummies', 'mama-bear-vegan-kids-probiotic-gummies', 'Mama Bear'],
+    ],
+    [
+      ['amazon-elements-womens-probiotic', 'amazon-elements-womens-probiotic', 'Amazon Elements'],
+      ['amazon-elements-acacia-fiber', 'amazon-elements-acacia-fiber', 'Amazon Elements'],
+    ],
+    [
+      ['amazon-basics-probiotic-5b', 'amazon-basics-probiotic-5b', 'Amazon Basics'],
+      ['amazon-basics-fiber-gummies', 'amazon-basics-fiber-gummies', 'Amazon Basics'],
+      ['amazon-basics-loperamide-softgel-313', 'amazon-basics-loperamide-softgel-313', 'Amazon Basics'],
+    ],
+  ];
+  const markInstead1022d = new Set<string>([
+    'amazon-basic-care-loperamide-224',
+    'mama-bear-vegan-kids-probiotic-gummies',
+    'amazon-elements-acacia-fiber',
+  ]);
+  for (const group of groups1022d) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image) throw new Error(`${id} must keep an image`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+    for (const [id, formulaId, brand] of group) {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (markInstead1022d.has(id)) {
         if (image?.verifiedSku || image?.url.startsWith('data:image/svg+xml')) {
           throw new Error(`${id} must stay a brand mark`);
         }
