@@ -3146,6 +3146,26 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'healtha2z-b101-bisacodyl-398-25-option': brandMark('healtha2z-mark.png'),
   // Page hero is the 24-pack case (2,304 tablets), not a 96-count bottle.
   'healtha2z-b101-calcium-750': brandMark('healtha2z-mark.png'),
+  // Digestive night run 2026-10-23 4:15 AM PT batch 1.
+  // Flat DailyMed panels, or a brand-site bottle that does not print the count.
+  // Do not glue the 12-count case, a 30-count carton, or a different brand.
+  'timecap-b106-famotidine-20': brandMark('timecap-mark.png'),
+  'timecap-b106-famotidine-20-100': brandMark('timecap-mark.png'),
+  'timecap-b106-senna-8-6': brandMark('timecap-mark.png'),
+  'timecap-b106-senna-8-6-1000': brandMark('timecap-mark.png'),
+  'timecap-b106-senna-s': brandMark('timecap-mark.png'),
+  'timecap-b107-eso-20-14': brandMark('timecap-mark.png'),
+  'timecap-b107-eso-20-42': brandMark('timecap-mark.png'),
+  'timecap-b107-senna-25-90': brandMark('timecap-mark.png'),
+  'timecap-b107-bisa-5-25': brandMark('timecap-mark.png'),
+  'timecap-b107-bisa-5-100': brandMark('timecap-mark.png'),
+  'timecap-b107-bisa-5-1000': brandMark('timecap-mark.png'),
+  // DailyMed photo is the 30-tablet carton. Not this 90-count bottle.
+  'goodsense-b109-acid-reducer-7fce': brandMark('goodsense-mark.png'),
+  // DailyMed image is a flat unfolded carton, not a 3D box.
+  'goodsense-b109-anti-diarrheal-anti-gas-6503': brandMark('goodsense-mark.png'),
+  // No GoodSense 50-count face. A DG Health 50-count is a different brand.
+  'goodsense-b109-acid-reducer-7f72-50': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18375,6 +18395,27 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b102-loperamide-2-288': catalogShot('healtha2z-b102-loperamide-2-288.jpg'),
   // Dimenhydrinate 50 mg, 12 tablets. SKU FPA027E. Not the 288-count case.
   'healtha2z-b102-dimenhydrinate-50': catalogShot('healtha2z-b102-dimenhydrinate-50.jpg'),
+  // Digestive night run 2026-10-23 4:15 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // Motion sickness, 24 packs of 12 (288). SKU FP0944. Not the 12-count carton.
+  'healtha2z-b102-dimenhydrinate-50-288': catalogShot(
+    'healtha2z-b102-dimenhydrinate-50-288.jpg',
+  ),
+  // Omeprazole 20 mg, 14 delayed-release tablets. SKU FPA173. Not the 42.
+  'healtha2z-b103-omeprazole-14': catalogShot('healtha2z-b103-omeprazole-14.jpg'),
+  // Omeprazole 20 mg, 42 tablets, three 14-day courses. SKU FPA174. Not the 14.
+  'healtha2z-b103-omeprazole-42': catalogShot('healtha2z-b103-omeprazole-42.jpg'),
+  // Magnesium oxide 420 mg, 90 tablets. SKU FPHK1069. UPC 369168306820.
+  'healtha2z-b104-mag-oxide-90': catalogShot('healtha2z-b104-mag-oxide-90.jpg'),
+  // Sugar-free probiotic gummies, raspberry watermelon, 60. SKU FPHK1128.
+  'healtha2z-b105-fphk1128-probiotics-gummies': catalogShot(
+    'healtha2z-b105-fphk1128-probiotics-gummies.jpg',
+  ),
+  // GoodSense famotidine 20 mg, 25 tablets. Dollar General UPC 370030148288.
+  // Not the 50-count and not the 200-count.
+  'goodsense-b109-acid-reducer-7f72': catalogShot(
+    'goodsense-b109-acid-reducer-7f72.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19484,8 +19525,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b101-docusate-420-720',
   'healtha2z-b101-docusate-420-30',
   'healtha2z-b102-loperamide-2-288',
-  // 288-count case is still a letter. Do not inherit the 12-count carton.
+  // 288-count case has its own front. Do not inherit the 12-count carton.
   'healtha2z-b102-dimenhydrinate-50-288',
+  // Digestive night run 2026-10-23 4:15 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'healtha2z-b103-omeprazole-42',
+  // 50-count is a mark. 200-count is still a letter. Neither inherits the 25.
+  'goodsense-b109-acid-reducer-7f72-50',
+  'goodsense-b109-acid-reducer-7f72-200',
 ]);
 
 export function previewOverlayImage(
@@ -42065,12 +42112,73 @@ assertBrandMark(
       throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
     }
   }
+  const motion12 = previewOverlayImage({
+    id: 'healtha2z-b102-dimenhydrinate-50',
+    formulaId: 'healtha2z-b102-dimenhydrinate-50',
+    brand: 'HealthA2Z',
+  });
   const motion288 = previewOverlayImage({
     id: 'healtha2z-b102-dimenhydrinate-50-288',
     formulaId: 'healtha2z-b102-dimenhydrinate-50',
     brand: 'HealthA2Z',
   });
-  if (!motion288?.url.startsWith('data:image/svg')) {
-    throw new Error('dimenhydrinate 288 must stay a letter and not inherit the 12-count carton');
+  if (!motion288?.verifiedSku || motion288.url === motion12?.url) {
+    throw new Error('dimenhydrinate 288 must keep its own carton and not inherit the 12-count');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 4:15 AM PT batch 1.
+  // Six cartons. Fourteen attempted rows stay on the official brand mark.
+  const batch1023e: [string, string, string][] = [
+    ['healtha2z-b102-dimenhydrinate-50-288', 'HealthA2Z', 'healtha2z-b102-dimenhydrinate-50-288.jpg'],
+    ['healtha2z-b103-omeprazole-14', 'HealthA2Z', 'healtha2z-b103-omeprazole-14.jpg'],
+    ['healtha2z-b103-omeprazole-42', 'HealthA2Z', 'healtha2z-b103-omeprazole-42.jpg'],
+    ['healtha2z-b104-mag-oxide-90', 'HealthA2Z', 'healtha2z-b104-mag-oxide-90.jpg'],
+    ['healtha2z-b105-fphk1128-probiotics-gummies', 'HealthA2Z', 'healtha2z-b105-fphk1128-probiotics-gummies.jpg'],
+    ['goodsense-b109-acid-reducer-7f72', 'GoodSense', 'goodsense-b109-acid-reducer-7f72.jpg'],
+  ];
+  const seen1023e = new Set<string>();
+  for (const [id, brand, file] of batch1023e) {
+    if (seen1023e.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023e.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1023e: [string, string, string, string][] = [
+    ['timecap-b106-famotidine-20', 'timecap-b106-famotidine-20', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b106-famotidine-20-100', 'timecap-b106-famotidine-20', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b106-senna-8-6', 'timecap-b106-senna-8-6', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b106-senna-8-6-1000', 'timecap-b106-senna-8-6', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b106-senna-s', 'timecap-b106-senna-s', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-eso-20-14', 'timecap-b107-eso-20-14', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-eso-20-42', 'timecap-b107-eso-20-14', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-senna-25-90', 'timecap-b107-senna-25-90', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-bisa-5-25', 'timecap-b107-bisa-5-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-bisa-5-100', 'timecap-b107-bisa-5-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['timecap-b107-bisa-5-1000', 'timecap-b107-bisa-5-25', 'TIME-Cap Labs', 'timecap-mark.png'],
+    ['goodsense-b109-acid-reducer-7fce', 'goodsense-b109-acid-reducer-7fce', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-anti-diarrheal-anti-gas-6503', 'goodsense-b109-anti-diarrheal-anti-gas-6503', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-acid-reducer-7f72-50', 'goodsense-b109-acid-reducer-7f72', 'GoodSense', 'goodsense-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1023e) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const famo200 = previewOverlayImage({
+    id: 'goodsense-b109-acid-reducer-7f72-200',
+    formulaId: 'goodsense-b109-acid-reducer-7f72',
+    brand: 'GoodSense',
+  });
+  if (!famo200?.url.startsWith('data:image/svg')) {
+    throw new Error('famotidine 200 must stay a letter and not inherit the 25-count carton');
+  }
+  const omepUrls = [
+    previewOverlayImage({ id: 'healtha2z-b103-omeprazole-14', formulaId: 'healtha2z-b103-omeprazole-14', brand: 'HealthA2Z' }),
+    previewOverlayImage({ id: 'healtha2z-b103-omeprazole-42', formulaId: 'healtha2z-b103-omeprazole-14', brand: 'HealthA2Z' }),
+  ].map((image) => image?.url);
+  if (omepUrls[0] === omepUrls[1] || omepUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('omeprazole 14 and 42 must keep separate cartons');
   }
 }
