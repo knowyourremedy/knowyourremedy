@@ -1,6 +1,6 @@
 // DRAFT / not verified / batch 265 KYR6-d (t28u).
 // Six founder-verified panels. The founder label is the single source.
-// Women's Wellness chewables 60 is not in this file. The panel text is not in hand.
+// Women's Wellness chewables 60 is the founder brand-page panel. No UPC was shown.
 // Does not repeat align-b260-dualbiotic-60, align-b263-kids-gummies-50,
 // culturelle-kids-gummies-coconut, or the written Ultimate Strength / kids multi rows.
 
@@ -34,6 +34,7 @@ const METH = {
   magStearate: 'Methodology §5 Cleared (magnesium stearate — stearate-family lubricant; EFSA 2018 no safety concern).',
   malic: 'Methodology §5 Cleared (malic acid — organic acid).',
   mannitol: 'Methodology §5 Caution (mannitol — sugar alcohol; GI effects at volume; does not count toward the t137u stack).',
+  mcc: 'Methodology §5 Cleared (microcrystalline cellulose — cellulose-family filler).',
   mctGummy: 'Methodology §5 Limited (MCT in a gummy — founder lock t132u Oct 20, 2026; no plant source named).',
   natFlavor: 'Methodology §5 Caution (Natural flavor, singular — unnamed natural flavor; not the Limited natural flavors mixture).',
   natFlavors: 'Methodology §5 Limited (natural flavors — unnamed mixture; counts toward the t137u stack).',
@@ -42,6 +43,10 @@ const METH = {
   sodiumCitrate: 'Methodology §5 Cleared (sodium citrate — citrate-salt buffer).',
   solubleCorn: 'Methodology §5 Cleared (soluble corn fiber — fiber family).',
   stearic: 'Methodology §5 Cleared (stearic acid — stearate-family lubricant).',
+  steviaLeaf:
+    'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
+  sugarAlcohol:
+    'Methodology §5 Caution (Sugar alcohol printed as a class name — founder lock t22u Oct 23, 2026). Unnamed polyol class. GI effects at volume, the same finding as the named sugar-alcohol rows. Does not count toward the t137u stack. Not xylitol, mannitol, sorbitol, or isomalt.',
   sucralose: 'Methodology §5 Limited (sucralose — founder lock t138u Oct 20, 2026; counts toward the t137u stack).',
   sugar: 'Methodology §5 Caution (bare sugar — does not count toward the t137u stack).',
   tio2: 'Methodology §5 High-risk (titanium dioxide — EU food-additive ban 2022; EFSA could not rule out genotoxicity).',
@@ -53,8 +58,19 @@ const METH = {
 
 type MethKey = keyof typeof METH;
 
-function flag(panel: string, name: string, riskLevel: RiskLevel, meth: MethKey): IngredientFlag {
-  return { name, riskLevel, source: `${panel}; ${METH[meth]}` };
+function flag(
+  panel: string,
+  name: string,
+  riskLevel: RiskLevel,
+  meth: MethKey,
+  stackCountExempt?: boolean,
+): IngredientFlag {
+  return {
+    name,
+    riskLevel,
+    source: `${panel}; ${METH[meth]}`,
+    ...(stackCountExempt ? { stackCountExempt } : {}),
+  };
 }
 
 function withNotes(flags: IngredientFlag[], form: string): string | undefined {
@@ -87,6 +103,8 @@ const P_BAL =
   'Founder-verified panel, Culturelle Ultimate Balance capsules 20, UPC 049100400693 (t28u). The founder label is the single source.';
 const P_K90 =
   'Founder-verified panel, Culturelle Kids Multivitamin + Probiotic Chewable 90, UPC 049100401768 (t28u). The founder label is the single source. Contains wheat.';
+const P_WW60 =
+  'Founder-verified brand page, Culturelle Women\'s Wellness Probiotic Chewables 60, https://culturelle.com/products/womens-wellness-probiotic-chewables (t28u follow-up). The brand page shows the 60 for sale. UPC not shown.';
 
 const FIBER_FLAGS: IngredientFlag[] = [
   flag(P_FIB90, 'Inulin', 'cleared', 'inulin'),
@@ -152,6 +170,21 @@ const BAL_FLAGS: IngredientFlag[] = [
   flag(P_BAL, 'FD&C Blue #1', 'high', 'blue1'),
 ];
 
+const WW60_FLAGS: IngredientFlag[] = [
+  flag(P_WW60, 'Sugar alcohol', 'moderate', 'sugarAlcohol', true),
+  flag(P_WW60, 'Xylitol', 'moderate', 'xylitol'),
+  flag(P_WW60, 'Mannitol', 'moderate', 'mannitol'),
+  flag(P_WW60, 'Microcrystalline cellulose', 'cleared', 'mcc'),
+  flag(P_WW60, 'Magnesium stearate', 'cleared', 'magStearate'),
+  flag(P_WW60, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+  flag(P_WW60, 'Citric acid', 'cleared', 'citric'),
+  flag(P_WW60, 'Natural flavors', 'limited', 'natFlavors'),
+  flag(P_WW60, 'Stearic acid', 'cleared', 'stearic'),
+  flag(P_WW60, 'Vegetable juice (color)', 'cleared', 'juice'),
+  flag(P_WW60, 'Malic acid', 'cleared', 'malic'),
+  flag(P_WW60, 'Stevia leaf extract', 'limited', 'steviaLeaf'),
+];
+
 const KIDS90_FLAGS: IngredientFlag[] = [
   flag(P_K90, 'Xylitol', 'moderate', 'xylitol'),
   flag(P_K90, 'Mannitol', 'moderate', 'mannitol'),
@@ -173,7 +206,7 @@ function pack(
   audience: typeof ADULT | typeof KIDS,
   minAge: number,
   form: string,
-  barcode: string,
+  barcode: string | undefined,
   actives: RatingRecord['activeIngredients'],
   flags: IngredientFlag[],
   retailers: string[],
@@ -191,7 +224,7 @@ function pack(
     form,
     recordStatus: UNVERIFIED,
     productType: SUPPLEMENT,
-    barcode,
+    ...(barcode ? { barcode } : {}),
     activeIngredients: actives,
     inactiveIngredients: flags,
     verdict: rollup.verdict,
@@ -290,6 +323,26 @@ export const BATCH265_KYR6D_T28U: RatingRecord[] = [
     ['Culturelle'],
     'Caution. Sucralose is the one Limited token. Not a 3+ stack. Xylitol, mannitol, and natural flavor are Caution and do not stack. Contains wheat is an allergen line, not a token. Founder-verified panel. UPC 049100401768 check digit OK. The 30 and 50 stay this formula.',
   ),
+  pack(
+    'culturelle-b265-womens-wellness-60',
+    "Culturelle Women's Wellness Probiotic Chewables (60)",
+    'Culturelle',
+    'culturelle-b265-womens-wellness-60',
+    ADULT,
+    18,
+    'chewable',
+    undefined,
+    [
+      { name: 'Lactobacillus rhamnosus GG', strength: 'part of 120 mg / 12 billion CFU blend, not graded' },
+      { name: 'Lactobacillus crispatus LBV 88', strength: 'not graded' },
+      { name: 'Lactobacillus rhamnosus LBV 96', strength: 'not graded' },
+      { name: 'Lactobacillus gasseri LBV 150N', strength: 'not graded' },
+      { name: 'Lactobacillus jensenii LBV 116', strength: 'not graded' },
+    ],
+    WW60_FLAGS,
+    ['Culturelle'],
+    'Caution. Natural flavors and stevia leaf extract are the two Limited tokens. Not a 3+ stack. Sugar alcohol, xylitol, and mannitol are Caution and do not stack. No honest note. Founder-verified brand page showing the 60 for sale. UPC not shown. No code was invented. This is not culturelle-b260-womens-wellness-30.',
+  ),
 ];
 
 const ROWS = BATCH265_KYR6D_T28U;
@@ -301,7 +354,7 @@ function upcOk(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (ROWS.length !== 6) throw new Error(`batch265 row count ${ROWS.length}`);
+if (ROWS.length !== 7) throw new Error(`batch265 row count ${ROWS.length}`);
 const expect: Record<string, { verdict: 'avoid' | 'caution'; cause: string; note: boolean }> = {
   'align-b265-fiber-gummies-90': { verdict: 'caution', cause: 'limited_1_2', note: false },
   'align-b265-fiber-gummies-60': { verdict: 'caution', cause: 'limited_1_2', note: false },
@@ -309,10 +362,15 @@ const expect: Record<string, { verdict: 'avoid' | 'caution'; cause: string; note
   'culturelle-b265-veggie-gummies-60': { verdict: 'caution', cause: 'limited_1_2', note: true },
   'culturelle-b265-ultimate-balance-20': { verdict: 'avoid', cause: 'high', note: false },
   'culturelle-b265-kids-multi-chew-90': { verdict: 'caution', cause: 'limited_1_2', note: false },
+  'culturelle-b265-womens-wellness-60': { verdict: 'caution', cause: 'limited_1_2', note: false },
 };
 
 for (const record of ROWS) {
-  if (!record.barcode || !upcOk(record.barcode)) throw new Error(`batch265 upc ${record.id}`);
+  if (record.id === 'culturelle-b265-womens-wellness-60') {
+    if (record.barcode) throw new Error(`batch265 invented upc ${record.id}`);
+  } else if (!record.barcode || !upcOk(record.barcode)) {
+    throw new Error(`batch265 upc ${record.id}`);
+  }
   if (record.category !== 'Digestive') throw new Error(`batch265 tab ${record.id}`);
   const rollup = computeVerdictFromInactiveIngredients(record.inactiveIngredients, record.activeSafetyFlag);
   if (record.verdict !== rollup.verdict) {
