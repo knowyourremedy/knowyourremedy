@@ -3140,6 +3140,8 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'aplushealth-b94-mag-citrate': brandMark('aplus-health-mark.png'),
   // Brand PDP hero is a 100-count bottle, not the 24×30 / 720 pack.
   'healtha2z-b96-senna-8-6': brandMark('healtha2z-mark.png'),
+  // 180 mg / 120-count page hero is the 250 mg / 120 bottle. No 180 mg 120 carton.
+  'healtha2z-b96-simethicone-180-120': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18291,6 +18293,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'welmate-b90-simethicone-125': catalogShot('welmate-b90-simethicone-125.jpg'),
   // A+Health loperamide 2 mg, 24 softgels. NDC 69452-266-12. Not a WELMATE box.
   'aplushealth-b93-loperamide-24': catalogShot('aplushealth-b93-loperamide-24.jpg'),
+  // Digestive night run 2026-10-23 3:00 AM PT batch 1.
+  // Exact fronts from a2z-life.com. Each count keeps its own file.
+  // Sennosides 8.6 mg, 300 tablets. SKU FPA091. Not the 24×30 / 720 pack.
+  'healtha2z-b96-senna-8-6-300': catalogShot('healtha2z-b96-senna-8-6-300.jpg'),
+  // Simethicone 125 mg, 150 softgels. Not the 365 or the 72.
+  'healtha2z-b96-simethicone-125': catalogShot('healtha2z-b96-simethicone-125.jpg'),
+  // Simethicone 125 mg, 365 softgels. SKU FPA111. Not the 150 or the 72.
+  'healtha2z-b96-simethicone-125-365': catalogShot('healtha2z-b96-simethicone-125-365.jpg'),
+  // Simethicone 125 mg, 72 softgels. SKU FPA110. Not the 150 or the 365.
+  'healtha2z-b96-simethicone-125-72': catalogShot('healtha2z-b96-simethicone-125-72.jpg'),
+  // Docusate sodium 100 mg, single tone, 400 softgels. SKU FPA065. Not the 100.
+  'healtha2z-b96-docusate-100-single': catalogShot('healtha2z-b96-docusate-100-single.jpg'),
+  // Simethicone 250 mg, 50 softgels. SKU FPA113. Not the 100 or the 200.
+  'healtha2z-b96-simethicone-250': catalogShot('healtha2z-b96-simethicone-250.jpg'),
+  // Simethicone 250 mg, 200 softgels. Not the 50 or the 100.
+  'healtha2z-b96-simethicone-250-200': catalogShot('healtha2z-b96-simethicone-250-200.jpg'),
+  // Simethicone 250 mg, 100 softgels. Not the 50 or the 200.
+  'healtha2z-b96-simethicone-250-100': catalogShot('healtha2z-b96-simethicone-250-100.jpg'),
+  // Simethicone 180 mg, 300 softgels. Not the 60 and not the 120.
+  'healtha2z-b96-simethicone-180': catalogShot('healtha2z-b96-simethicone-180.jpg'),
+  // Simethicone 180 mg, 60 softgels. SKU FPA112. Not the 300.
+  'healtha2z-b96-simethicone-180-60': catalogShot('healtha2z-b96-simethicone-180-60.jpg'),
+  // PEG 3350, 14 doses, 8.3 oz (238 g). Not the 7-dose 4.1 oz bottle.
+  'healtha2z-b96-peg-3350': catalogShot('healtha2z-b96-peg-3350.jpg'),
+  // PEG 3350, 7 doses, 4.1 oz (119 g). NDC 69168-473-55. Not the 8.3 oz.
+  'healtha2z-b96-peg-3350-473-55': catalogShot('healtha2z-b96-peg-3350-473-55.jpg'),
+  // Famotidine 20 mg, 100 tablets. SKU FPA124. Not the 225, 365, or value packs.
+  'healtha2z-b99-famotidine-20-443': catalogShot('healtha2z-b99-famotidine-20-443.jpg'),
+  // Famotidine 20 mg, 225 tablets. SKU FPA125. Not the 100.
+  'healtha2z-b99-famotidine-20-443-225': catalogShot('healtha2z-b99-famotidine-20-443-225.jpg'),
+  // Famotidine 20 mg, 365 tablets. SKU FPA161. Not the 100.
+  'healtha2z-b99-famotidine-20-443-365': catalogShot('healtha2z-b99-famotidine-20-443-365.jpg'),
+  // Famotidine 20 mg, 24 packs of 50 (1,200). SKU FP1205. Not the 100-count bottle.
+  'healtha2z-b99-famotidine-20-443-50x24': catalogShot('healtha2z-b99-famotidine-20-443-50x24.jpg'),
+  // Famotidine 20 mg, 24 packs of 10 (240). SKU FP1197. Not the 50×24 case.
+  'healtha2z-b99-famotidine-20-443-10x24': catalogShot('healtha2z-b99-famotidine-20-443-10x24.jpg'),
+  // Bisacodyl 5 mg, 150 tablets. SKU FPA129. Not the 25-count blister.
+  'healtha2z-b101-bisacodyl-398': catalogShot('healtha2z-b101-bisacodyl-398.jpg'),
+  // Bisacodyl 5 mg, 25 tablets, one blister. SKU FP0886A. Not the 150.
+  'healtha2z-b101-bisacodyl-398-25': catalogShot('healtha2z-b101-bisacodyl-398-25.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19369,6 +19411,27 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'aplushealth-b94-pinworm-30-carton',
   'aplushealth-b94-pinworm-twin',
   'aplushealth-b94-pinworm-473',
+  // Digestive night run 2026-10-23 3:00 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'healtha2z-b96-simethicone-125-365',
+  'healtha2z-b96-simethicone-125-72',
+  'healtha2z-b96-simethicone-250-200',
+  'healtha2z-b96-simethicone-250-100',
+  // 120-count page showed the 250 mg bottle. Stays the brand mark.
+  'healtha2z-b96-simethicone-180-120',
+  'healtha2z-b96-simethicone-180-60',
+  'healtha2z-b96-peg-3350-473-55',
+  'healtha2z-b99-famotidine-20-443-225',
+  'healtha2z-b99-famotidine-20-443-365',
+  'healtha2z-b99-famotidine-20-443-50x24',
+  'healtha2z-b99-famotidine-20-443-10x24',
+  'healtha2z-b101-bisacodyl-398-25',
+  // Later bisacodyl counts stay letters until their own fronts land.
+  'healtha2z-b101-bisacodyl-398-600',
+  'healtha2z-b101-bisacodyl-398-250',
+  'healtha2z-b101-bisacodyl-398-250-fpa015',
+  'healtha2z-b101-bisacodyl-398-25-option',
+  'healtha2z-b101-bisacodyl-398-600-fp0917',
 ]);
 
 export function previewOverlayImage(
@@ -41772,5 +41835,117 @@ assertBrandMark(
   });
   if (new Set(loperamideUrls).size !== loperamideForms.length) {
     throw new Error('WELMATE loperamide softgel, caplet, and tablet must not share a photo');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 3:00 AM PT batch 1.
+  // Nineteen cartons. One attempted row stays on the official brand mark.
+  const batch1023c: [string, string, string][] = [
+    ['healtha2z-b96-senna-8-6-300', 'HealthA2Z', 'healtha2z-b96-senna-8-6-300.jpg'],
+    ['healtha2z-b96-simethicone-125', 'HealthA2Z', 'healtha2z-b96-simethicone-125.jpg'],
+    ['healtha2z-b96-simethicone-125-365', 'HealthA2Z', 'healtha2z-b96-simethicone-125-365.jpg'],
+    ['healtha2z-b96-simethicone-125-72', 'HealthA2Z', 'healtha2z-b96-simethicone-125-72.jpg'],
+    ['healtha2z-b96-docusate-100-single', 'HealthA2Z', 'healtha2z-b96-docusate-100-single.jpg'],
+    ['healtha2z-b96-simethicone-250', 'HealthA2Z', 'healtha2z-b96-simethicone-250.jpg'],
+    ['healtha2z-b96-simethicone-250-200', 'HealthA2Z', 'healtha2z-b96-simethicone-250-200.jpg'],
+    ['healtha2z-b96-simethicone-250-100', 'HealthA2Z', 'healtha2z-b96-simethicone-250-100.jpg'],
+    ['healtha2z-b96-simethicone-180', 'HealthA2Z', 'healtha2z-b96-simethicone-180.jpg'],
+    ['healtha2z-b96-simethicone-180-60', 'HealthA2Z', 'healtha2z-b96-simethicone-180-60.jpg'],
+    ['healtha2z-b96-peg-3350', 'HealthA2Z', 'healtha2z-b96-peg-3350.jpg'],
+    ['healtha2z-b96-peg-3350-473-55', 'HealthA2Z', 'healtha2z-b96-peg-3350-473-55.jpg'],
+    ['healtha2z-b99-famotidine-20-443', 'HealthA2Z', 'healtha2z-b99-famotidine-20-443.jpg'],
+    ['healtha2z-b99-famotidine-20-443-225', 'HealthA2Z', 'healtha2z-b99-famotidine-20-443-225.jpg'],
+    ['healtha2z-b99-famotidine-20-443-365', 'HealthA2Z', 'healtha2z-b99-famotidine-20-443-365.jpg'],
+    ['healtha2z-b99-famotidine-20-443-50x24', 'HealthA2Z', 'healtha2z-b99-famotidine-20-443-50x24.jpg'],
+    ['healtha2z-b99-famotidine-20-443-10x24', 'HealthA2Z', 'healtha2z-b99-famotidine-20-443-10x24.jpg'],
+    ['healtha2z-b101-bisacodyl-398', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398.jpg'],
+    ['healtha2z-b101-bisacodyl-398-25', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398-25.jpg'],
+  ];
+  const seen1023c = new Set<string>();
+  for (const [id, brand, file] of batch1023c) {
+    if (seen1023c.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023c.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1023c: [string, string, string, string][] = [
+    ['healtha2z-b96-simethicone-180-120', 'healtha2z-b96-simethicone-180', 'HealthA2Z', 'healtha2z-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1023c) {
+    assertBrandMark(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const groups1023c: [string, string, string][][] = [
+    [
+      ['healtha2z-b96-simethicone-125', 'healtha2z-b96-simethicone-125', 'HealthA2Z'],
+      ['healtha2z-b96-simethicone-125-365', 'healtha2z-b96-simethicone-125', 'HealthA2Z'],
+      ['healtha2z-b96-simethicone-125-72', 'healtha2z-b96-simethicone-125', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b96-simethicone-250', 'healtha2z-b96-simethicone-250', 'HealthA2Z'],
+      ['healtha2z-b96-simethicone-250-200', 'healtha2z-b96-simethicone-250', 'HealthA2Z'],
+      ['healtha2z-b96-simethicone-250-100', 'healtha2z-b96-simethicone-250', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b96-simethicone-180', 'healtha2z-b96-simethicone-180', 'HealthA2Z'],
+      ['healtha2z-b96-simethicone-180-60', 'healtha2z-b96-simethicone-180', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b96-peg-3350', 'healtha2z-b96-peg-3350', 'HealthA2Z'],
+      ['healtha2z-b96-peg-3350-473-55', 'healtha2z-b96-peg-3350', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b99-famotidine-20-443', 'healtha2z-b99-famotidine-20-443', 'HealthA2Z'],
+      ['healtha2z-b99-famotidine-20-443-225', 'healtha2z-b99-famotidine-20-443', 'HealthA2Z'],
+      ['healtha2z-b99-famotidine-20-443-365', 'healtha2z-b99-famotidine-20-443', 'HealthA2Z'],
+      ['healtha2z-b99-famotidine-20-443-50x24', 'healtha2z-b99-famotidine-20-443', 'HealthA2Z'],
+      ['healtha2z-b99-famotidine-20-443-10x24', 'healtha2z-b99-famotidine-20-443', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b101-bisacodyl-398', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-25', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+    ],
+  ];
+  for (const group of groups1023c) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const senna300 = previewOverlayImage({
+    id: 'healtha2z-b96-senna-8-6-300',
+    formulaId: 'healtha2z-b96-senna-8-6',
+    brand: 'HealthA2Z',
+  });
+  const senna720 = previewOverlayImage({
+    id: 'healtha2z-b96-senna-8-6',
+    formulaId: 'healtha2z-b96-senna-8-6',
+    brand: 'HealthA2Z',
+  });
+  if (!senna300?.verifiedSku || senna300.url === senna720?.url) {
+    throw new Error('Senna 300 must keep its carton and not share the 720 mark');
+  }
+  for (const id of [
+    'healtha2z-b101-bisacodyl-398-600',
+    'healtha2z-b101-bisacodyl-398-250',
+    'healtha2z-b101-bisacodyl-398-250-fpa015',
+    'healtha2z-b101-bisacodyl-398-25-option',
+    'healtha2z-b101-bisacodyl-398-600-fp0917',
+  ]) {
+    const image = previewOverlayImage({
+      id,
+      formulaId: 'healtha2z-b101-bisacodyl-398',
+      brand: 'HealthA2Z',
+    });
+    if (!image?.url.startsWith('data:image/svg')) {
+      throw new Error(`${id} must stay a letter until its own front is attached`);
+    }
   }
 }
