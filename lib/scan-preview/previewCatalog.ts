@@ -3185,6 +3185,18 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-clearlax-0a9b': brandMark('goodsense-mark.png'),
   'goodsense-b109-clearlax-0a9b-510-g': brandMark('goodsense-mark.png'),
   'goodsense-b109-omeprazole-and-sodium-bicarbonate-496b': brandMark('goodsense-mark.png'),
+  // Digestive night run 2026-10-23 5:30 AM PT batch 1.
+  // Tried each SKU. No matching 3D pack for this count. Do not glue a sibling.
+  'goodsense-b111-antidiarrheal-af61': brandMark('goodsense-mark.png'),
+  'goodsense-b111-antidiarrheal-af61-240-ml': brandMark('goodsense-mark.png'),
+  'goodsense-b111-antacid-bdd4': brandMark('goodsense-mark.png'),
+  'goodsense-b112-lansoprazole-5143': brandMark('goodsense-mark.png'),
+  'goodsense-b112-lansoprazole-5143-14': brandMark('goodsense-mark.png'),
+  'goodsense-b112-omeprazole-644b': brandMark('goodsense-mark.png'),
+  'goodsense-b112-omeprazole-644b-14': brandMark('goodsense-mark.png'),
+  'goodsense-b112-esomeprazole-magnesium-9c8f': brandMark('goodsense-mark.png'),
+  'goodsense-b112-lansoprazole-60b5': brandMark('goodsense-mark.png'),
+  'goodsense-b112-omeprazole-172a': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18453,6 +18465,42 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b110-regular-strength-stomach-relief-122-30f8': catalogShot(
     'goodsense-b110-regular-strength-stomach-relief-122-30f8.jpg',
   ),
+  // Digestive night run 2026-10-23 5:30 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // Methylcellulose 500 mg caplets, 100. Not a different count.
+  'goodsense-b110-fiber-a65c': catalogShot('goodsense-b110-fiber-a65c.jpg'),
+  // Omeprazole magnesium 20 mg delayed-release capsules, 14. Not a 42.
+  'goodsense-b112-omeprazole-817b': catalogShot('goodsense-b112-omeprazole-817b.jpg'),
+  // Esomeprazole 20 mg capsules, 14. Not the other 14-count esomeprazole rows.
+  'goodsense-b112-esomeprazole-magnesium-bcb4': catalogShot(
+    'goodsense-b112-esomeprazole-magnesium-bcb4.jpg',
+  ),
+  // Omeprazole 20 mg tablets, 14. UPC 301130915746. Not the 42-tablet carton.
+  'goodsense-b112-omeprazole-c62e': catalogShot('goodsense-b112-omeprazole-c62e.jpg'),
+  // Esomeprazole 20 mg capsules, 14. Not the 42-capsule carton on the same label.
+  'goodsense-b112-esomeprazole-magnesium-35c8': catalogShot(
+    'goodsense-b112-esomeprazole-magnesium-35c8.jpg',
+  ),
+  // Omeprazole delayed-release tablets, 14. Not the 42.
+  'goodsense-b112-omeprazole-delayed-release-d05d': catalogShot(
+    'goodsense-b112-omeprazole-delayed-release-d05d.jpg',
+  ),
+  // Extra Strength calcium carbonate 750 mg chewables, 96. Not Ultra and not Assorted Fruit.
+  'goodsense-b112-extra-strength-antacid-74c0': catalogShot(
+    'goodsense-b112-extra-strength-antacid-74c0.jpg',
+  ),
+  // Ultra Strength calcium carbonate 1000 mg chewables, 72. Not peppermint and not assorted fruit.
+  'goodsense-b112-ultra-strength-antacid-74c0': catalogShot(
+    'goodsense-b112-ultra-strength-antacid-74c0.jpg',
+  ),
+  // Ultra Strength peppermint, 72. Not the unflavored ultra and not the 150-count regular.
+  'goodsense-b112-ultra-strength-antacid-peppermint-0eb5': catalogShot(
+    'goodsense-b112-ultra-strength-antacid-peppermint-0eb5.jpg',
+  ),
+  // Regular Strength peppermint, 150. UPC 846036008449. Not the dye-formula 150.
+  'goodsense-b112-regular-strength-antacid-peppermint-0eb5': catalogShot(
+    'goodsense-b112-regular-strength-antacid-peppermint-0eb5.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19581,6 +19629,11 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b109-clear-lax-da39-765-g',
   'goodsense-b109-stool-softener-4227-100',
   'goodsense-b109-clearlax-0a9b-510-g',
+  // Digestive night run 2026-10-23 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b111-antidiarrheal-af61-240-ml',
+  'goodsense-b112-lansoprazole-5143-14',
+  'goodsense-b112-omeprazole-644b-14',
 ]);
 
 export function previewOverlayImage(
@@ -42295,5 +42348,72 @@ assertBrandMark(
   }
   if (otherClear?.url === lax238.url || otherClear?.verifiedSku) {
     throw new Error('clearlax 0a9b must not use the 370030149155 bottle');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 5:30 AM PT batch 1.
+  // Ten cartons. Ten attempted rows stay on the official brand mark.
+  const batch1530a: [string, string, string][] = [
+    ['goodsense-b110-fiber-a65c', 'GoodSense', 'goodsense-b110-fiber-a65c.jpg'],
+    ['goodsense-b112-omeprazole-817b', 'GoodSense', 'goodsense-b112-omeprazole-817b.jpg'],
+    ['goodsense-b112-esomeprazole-magnesium-bcb4', 'GoodSense', 'goodsense-b112-esomeprazole-magnesium-bcb4.jpg'],
+    ['goodsense-b112-omeprazole-c62e', 'GoodSense', 'goodsense-b112-omeprazole-c62e.jpg'],
+    ['goodsense-b112-esomeprazole-magnesium-35c8', 'GoodSense', 'goodsense-b112-esomeprazole-magnesium-35c8.jpg'],
+    ['goodsense-b112-omeprazole-delayed-release-d05d', 'GoodSense', 'goodsense-b112-omeprazole-delayed-release-d05d.jpg'],
+    ['goodsense-b112-extra-strength-antacid-74c0', 'GoodSense', 'goodsense-b112-extra-strength-antacid-74c0.jpg'],
+    ['goodsense-b112-ultra-strength-antacid-74c0', 'GoodSense', 'goodsense-b112-ultra-strength-antacid-74c0.jpg'],
+    ['goodsense-b112-ultra-strength-antacid-peppermint-0eb5', 'GoodSense', 'goodsense-b112-ultra-strength-antacid-peppermint-0eb5.jpg'],
+    ['goodsense-b112-regular-strength-antacid-peppermint-0eb5', 'GoodSense', 'goodsense-b112-regular-strength-antacid-peppermint-0eb5.jpg'],
+  ];
+  const seen1530a = new Set<string>();
+  for (const [id, brand, file] of batch1530a) {
+    if (seen1530a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1530a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1530a: [string, string, string, string][] = [
+    ['goodsense-b111-antidiarrheal-af61', 'goodsense-b111-antidiarrheal-af61', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b111-antidiarrheal-af61-240-ml', 'goodsense-b111-antidiarrheal-af61', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b111-antacid-bdd4', 'goodsense-b111-antacid-bdd4', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-lansoprazole-5143', 'goodsense-b112-lansoprazole-5143', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-lansoprazole-5143-14', 'goodsense-b112-lansoprazole-5143', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-omeprazole-644b', 'goodsense-b112-omeprazole-644b', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-omeprazole-644b-14', 'goodsense-b112-omeprazole-644b', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-esomeprazole-magnesium-9c8f', 'goodsense-b112-esomeprazole-magnesium-9c8f', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-lansoprazole-60b5', 'goodsense-b112-lansoprazole-60b5', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b112-omeprazole-172a', 'goodsense-b112-omeprazole-172a', 'GoodSense', 'goodsense-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1530a) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const anti120 = previewOverlayImage({
+    id: 'goodsense-b111-antidiarrheal-af61',
+    formulaId: 'goodsense-b111-antidiarrheal-af61',
+    brand: 'GoodSense',
+  });
+  const anti240 = previewOverlayImage({
+    id: 'goodsense-b111-antidiarrheal-af61-240-ml',
+    formulaId: 'goodsense-b111-antidiarrheal-af61',
+    brand: 'GoodSense',
+  });
+  if (anti120?.verifiedSku || anti240?.verifiedSku || anti120?.url !== anti240?.url) {
+    throw new Error('loperamide 120 mL and 240 mL stay on the mark and do not share a carton');
+  }
+  const lanso3 = previewOverlayImage({
+    id: 'goodsense-b112-lansoprazole-5143',
+    formulaId: 'goodsense-b112-lansoprazole-5143',
+    brand: 'GoodSense',
+  });
+  const lanso14 = previewOverlayImage({
+    id: 'goodsense-b112-lansoprazole-5143-14',
+    formulaId: 'goodsense-b112-lansoprazole-5143',
+    brand: 'GoodSense',
+  });
+  if (lanso3?.verifiedSku || lanso14?.verifiedSku) {
+    throw new Error('lansoprazole 3 and 14 must not use the 42-count carton');
   }
 }
