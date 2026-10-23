@@ -415,6 +415,27 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'lactase enzyme') {
+    return close(
+      'Lactase enzyme is a food enzyme used as an excipient. The founder locked it Cleared (t22u). FDA lists lactase enzyme preparation as GRAS (21 CFR 184.1388). It is not invertase, which stays its own Cleared row.',
+      level,
+    );
+  }
+
+  if (n === 'sugar alcohol') {
+    return close(
+      'Sugar alcohol printed as a class name is Caution under founder lock t22u. The polyol is not named. Large amounts of sugar alcohols can upset the gut. It does not count toward the three-or-more Limited stack. Xylitol, mannitol, sorbitol, and isomalt stay their own rows.',
+      level,
+    );
+  }
+
+  if (n === 'colors') {
+    return close(
+      'Colors printed alone is Caution under founder lock t22u. The label does not name the color. That is the same unnamed-color Caution as Natural Color and bare color added. It is not a named juice, and it is not a named synthetic dye. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
   if (n === 'digestion resistant maltodextrin') {
     return close(
       'Digestion-resistant maltodextrin is Limited under founder lock t16u. It counts toward the three-or-more Limited stack. It is not generic maltodextrin, and it is not soluble corn fiber.',
