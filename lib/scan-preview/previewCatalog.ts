@@ -3114,6 +3114,32 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // The 8 oz has its own front. The 4 oz does not. Official Nutricost mark.
   // Not a letter. Not the 8 oz tub.
   'nutricost-nutricost-bromelain-powder-4-oz': brandMark('nutricost-mark.png'),
+  // Digestive night run 2026-10-23 1:45 AM PT batch 2.
+  // DailyMed NDC 73581-101 is a flat dieline. Not on the Wellspring catalog.
+  // Not the 73581-171 caplet carton. Official WELMATE mark. Not a letter.
+  'welmate-b87-loperamide-tablet-101': brandMark('welmate-mark.png'),
+  // DailyMed set 4d7a9507 is a flat 250-softgel label. Official A+Health mark.
+  'aplushealth-b94-gas-125': brandMark('aplus-health-mark.png'),
+  // DailyMed set 4e6ac834 is a flat 180 mg / 300-softgel label. Not the 125 mg.
+  'aplushealth-b94-gas-180': brandMark('aplus-health-mark.png'),
+  // Shared SPL 4bd0939e. image is a flat 4 fl oz label, not a 3D bottle.
+  'aplushealth-b94-loperamide-sol': brandMark('aplus-health-mark.png'),
+  // Same SPL. Do not glue the 4 fl oz label onto the 8 fl oz row.
+  'aplushealth-b94-loperamide-240': brandMark('aplus-health-mark.png'),
+  // DailyMed set 4b1f7db3 front.jpg is a flat 300-tablet label.
+  'aplushealth-b94-bisacodyl': brandMark('aplus-health-mark.png'),
+  // Pinworm set 3cf96d04. bottle-front is a flat 2 fl oz label, not this 30 mL row.
+  'aplushealth-b94-pinworm': brandMark('aplus-health-mark.png'),
+  // carton.jpg is a flat dieline and mixes 30 mL with 2 fl oz. Not this carton row.
+  'aplushealth-b94-pinworm-30-carton': brandMark('aplus-health-mark.png'),
+  // No twin-pack carton. The single 2 fl oz bottle is not the twin.
+  'aplushealth-b94-pinworm-twin': brandMark('aplus-health-mark.png'),
+  // No 16 fl oz / 473 mL carton on that SPL.
+  'aplushealth-b94-pinworm-473': brandMark('aplus-health-mark.png'),
+  // DailyMed set 4019fbd0 bottle.jpg is a flat lemon label, not a 3D 10 oz bottle.
+  'aplushealth-b94-mag-citrate': brandMark('aplus-health-mark.png'),
+  // Brand PDP hero is a 100-count bottle, not the 24×30 / 720 pack.
+  'healtha2z-b96-senna-8-6': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18248,6 +18274,23 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'welmate-b87-famotidine-10-300': catalogShot('welmate-b87-famotidine-10-300.jpg'),
   // Loperamide 2 mg, 24 softgels. UPC 373581102242. Not the caplets or tablets.
   'welmate-b87-loperamide-softgel': catalogShot('welmate-b87-loperamide-softgel.jpg'),
+  // Digestive night run 2026-10-23 1:45 AM PT batch 2.
+  // Loperamide 2 mg, 24 caplets. NDC 73581-171-24. Not the softgels or the 101 tablets.
+  'welmate-b87-loperamide-caplet': catalogShot('welmate-b87-loperamide-caplet.jpg'),
+  // Bifidobacterium longum, 200 capsules, 1 billion CFU.
+  'welmate-b87-bifidobacterium': catalogShot('welmate-b87-bifidobacterium.jpg'),
+  // Saccharomyces boulardii 500 mg, 200 veggie capsules, 10 billion CFU. Not tablets.
+  'welmate-b87-saccharomyces-boulardii': catalogShot('welmate-b87-saccharomyces-boulardii.jpg'),
+  // Esomeprazole 20 mg, 42 delayed-release capsules. Not the pack of 2.
+  'welmate-b88-esomeprazole': catalogShot('welmate-b88-esomeprazole.jpg'),
+  // Same 42-count carton, pack of 2. Not the single box.
+  'welmate-b88-esomeprazole-2pack': catalogShot('welmate-b88-esomeprazole-2pack.jpg'),
+  // Loperamide 2 mg + simethicone 125 mg, 24 caplets. Not the loperamide-only caplet.
+  'welmate-b88-loperamide-simethicone': catalogShot('welmate-b88-loperamide-simethicone.jpg'),
+  // Simethicone 125 mg, 365 softgels. Not the combo caplet.
+  'welmate-b90-simethicone-125': catalogShot('welmate-b90-simethicone-125.jpg'),
+  // A+Health loperamide 2 mg, 24 softgels. NDC 69452-266-12. Not a WELMATE box.
+  'aplushealth-b93-loperamide-24': catalogShot('aplushealth-b93-loperamide-24.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19315,6 +19358,17 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'welmate-b87-famotidine-20-300',
   'welmate-b87-famotidine-10-90',
   'welmate-b87-famotidine-10-300',
+  // Digestive night run 2026-10-23 1:45 AM PT batch 2.
+  // Pack of 2 is two 42-count boxes. Do not inherit the single carton.
+  'welmate-b88-esomeprazole-2pack',
+  // 24-softgel formula id is aplushealth-b93-loperamide-softgel. Own carton.
+  'aplushealth-b93-loperamide-24',
+  // 8 fl oz shares the 4 fl oz formula. Both are marks. Do not inherit a later carton.
+  'aplushealth-b94-loperamide-240',
+  // Pinworm carton, twin, and 473 mL share the 30 mL formula. Each stays a mark.
+  'aplushealth-b94-pinworm-30-carton',
+  'aplushealth-b94-pinworm-twin',
+  'aplushealth-b94-pinworm-473',
 ]);
 
 export function previewOverlayImage(
@@ -41647,5 +41701,76 @@ assertBrandMark(
     || !marshmallow.url.endsWith('/nutricost-b80-marshmallow-root-120-capsules.jpg')
   ) {
     throw new Error('Marshmallow root must keep its own carton');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 1:45 AM PT batch 2.
+  // Eight cartons. Twelve attempted rows stay on the official brand mark.
+  const batch1023b: [string, string, string][] = [
+    ['welmate-b87-loperamide-caplet', 'WELMATE', 'welmate-b87-loperamide-caplet.jpg'],
+    ['welmate-b87-bifidobacterium', 'WELMATE', 'welmate-b87-bifidobacterium.jpg'],
+    ['welmate-b87-saccharomyces-boulardii', 'WELMATE', 'welmate-b87-saccharomyces-boulardii.jpg'],
+    ['welmate-b88-esomeprazole', 'WELMATE', 'welmate-b88-esomeprazole.jpg'],
+    ['welmate-b88-esomeprazole-2pack', 'WELMATE', 'welmate-b88-esomeprazole-2pack.jpg'],
+    ['welmate-b88-loperamide-simethicone', 'WELMATE', 'welmate-b88-loperamide-simethicone.jpg'],
+    ['welmate-b90-simethicone-125', 'WELMATE', 'welmate-b90-simethicone-125.jpg'],
+    ['aplushealth-b93-loperamide-24', 'A+Health', 'aplushealth-b93-loperamide-24.jpg'],
+  ];
+  const seen1023b = new Set<string>();
+  for (const [id, brand, file] of batch1023b) {
+    if (seen1023b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1023b: [string, string, string, string][] = [
+    ['welmate-b87-loperamide-tablet-101', 'welmate-b87-loperamide-tablet-101', 'WELMATE', 'welmate-mark.png'],
+    ['aplushealth-b94-gas-125', 'aplushealth-b94-gas-125', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-gas-180', 'aplushealth-b94-gas-180', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-loperamide-sol', 'aplushealth-b94-loperamide-sol', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-loperamide-240', 'aplushealth-b94-loperamide-sol', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-bisacodyl', 'aplushealth-b94-bisacodyl', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-pinworm', 'aplushealth-b94-pinworm', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-pinworm-30-carton', 'aplushealth-b94-pinworm', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-pinworm-twin', 'aplushealth-b94-pinworm', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-pinworm-473', 'aplushealth-b94-pinworm', 'A+Health', 'aplus-health-mark.png'],
+    ['aplushealth-b94-mag-citrate', 'aplushealth-b94-mag-citrate', 'A+Health', 'aplus-health-mark.png'],
+    ['healtha2z-b96-senna-8-6', 'healtha2z-b96-senna-8-6', 'HealthA2Z', 'healtha2z-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1023b) {
+    assertBrandMark(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const groups1023b: [string, string, string][][] = [
+    [
+      ['welmate-b88-esomeprazole', 'welmate-b88-esomeprazole', 'WELMATE'],
+      ['welmate-b88-esomeprazole-2pack', 'welmate-b88-esomeprazole', 'WELMATE'],
+    ],
+  ];
+  for (const group of groups1023b) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const loperamideForms: [string, string, string][] = [
+    ['welmate-b87-loperamide-softgel', 'welmate-b87-loperamide-softgel', 'WELMATE'],
+    ['welmate-b87-loperamide-caplet', 'welmate-b87-loperamide-caplet', 'WELMATE'],
+    ['welmate-b87-loperamide-tablet-101', 'welmate-b87-loperamide-tablet-101', 'WELMATE'],
+  ];
+  const loperamideUrls = loperamideForms.map(([id, formulaId, brand]) => {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url) throw new Error(`${id} must keep a photo`);
+    return image.url;
+  });
+  if (new Set(loperamideUrls).size !== loperamideForms.length) {
+    throw new Error('WELMATE loperamide softgel, caplet, and tablet must not share a photo');
   }
 }
