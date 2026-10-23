@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 23, 2026 (t20u founder order; KYR6-d; rules only):** Standing section Ladder search rule is in §4, after When writing rows. It applies to every catalog run. No catalog rows. No grades. No store research.
+
 **Changed Oct 22, 2026 (t17u founder order; KYR6-d; rules only):** Standing section When writing rows is in §4. It applies to every catalog run. No catalog rows. No grades.
 
 **Changed Oct 22, 2026 (t16u founder order; KYR6-d):** Seventeen founder locks. The founder confirms sources were pulled and the current rules applied (step 1 of the token lock process). Each why names the rule. Sodium hypochlorite (exact token) is Caution, distinct from Sodium Hypochlorite (Trace). Rice bran oil in an oral liquid drop is Cleared (not the gummy Avoid print). Digestion-resistant maltodextrin, steviol glycosides printed without high-purity, rice maltodextrin, and rebaudioside A printed without organic or extracted are Limited and count toward the t137u stack. Acacia hydrolysate, oat bran, larch arabinogalactan, wheat dextrin, trehalose, whey powder, skim milk powder, yogurt powder, and inulin syrup are Cleared. Palm kernel oil printed alone in a yogurt coating, and vanilla printed alone, are Caution and do not stack.
@@ -349,6 +351,12 @@ When writing rows:
 - Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
 - Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
 - Stop after reporting missing tokens if any exist; do not continue working.
+
+### Ladder search rule
+
+This applies to every catalog run.
+
+When searching a retailer, open the store’s product page in the computer’s browser the way a person would. Search the way a person would (by product name or by UPC in the store’s own search box). Do not use curl or scripted search URLs such as amazon.com/s?k=<UPC> or Walgreens’ search/results.jsp?Ntt=<UPC>. A blocked, sorry, or access-denied page from a scripted fetch does not count as exhausting that step. The bot must open the page and physically view the ingredient image or other-ingredient line before that step can be called a miss.
 
 ## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
 
