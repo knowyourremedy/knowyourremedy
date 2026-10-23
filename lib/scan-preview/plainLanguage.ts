@@ -436,6 +436,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'fish oil powder') {
+    return close(
+      'Fish oil powder printed as an other ingredient is Cleared under founder lock t24u. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill, and fish oil is not a seed or vegetable oil. Fish oil printed as the Supplement Facts active stays ungraded.',
+      level,
+    );
+  }
+
   if (n === 'digestion resistant maltodextrin') {
     return close(
       'Digestion-resistant maltodextrin is Limited under founder lock t16u. It counts toward the three-or-more Limited stack. It is not generic maltodextrin, and it is not soluble corn fiber.',
