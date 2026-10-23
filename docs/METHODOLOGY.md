@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 23, 2026 (t28u founder order; KYR6-d):** Standing single-source sentence added to §4 When writing rows. A single source counts when that one source is the brand page showing the pack for sale, or when the founder has verified the panel and UPC. The two-source rule still applies to retailer pages found by the bot.
+
 **Changed Oct 23, 2026 (t26u founder order; KYR6-d; rules only):** Standing Google AI sentence added to the §4 Ladder search rule. It applies to every catalog run. No catalog rows. No grades. No store research.
 
 **Changed Oct 23, 2026 (t24u founder order; KYR6-d):** One founder lock. The founder confirms the source check and the current rules (step 1). **Fish oil powder** printed as an other ingredient is Cleared. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill (context scoping, Sept 15, 2026). Fish oil is not on the seed/industrial oil list (soybean, canola, palm, safflower, sunflower, vegetable oil). It does not count toward the t137u stack. Fish oil printed as the Supplement Facts active stays ungraded. Carriers named inside a parenthesis stay their own rows.
@@ -347,6 +349,7 @@ When writing rows:
 - Fill every ingredient tab with the exact why from the lock or source. Do not leave any ingredient tab blank.
 - A grade means there is a why. Name the rule or agency that set the why. Do not write “Pending DailyMed review.”
 - Confirm two sources before writing. A missing UPC does not block the write. Note missing UPCs in PROJECT_NOTES so they can be added later. Founder-verified labels can waive the second source when instructed.
+- A single source counts when that one source is the brand page showing the pack for sale, or when the founder has verified the panel and UPC. The two-source rule still applies to retailer pages found by the bot.
 - Never write a row until all tokens are locked, and never duplicate an existing row.
 - Put each product on the correct ingredient tab.
 - US only. No Canada. No EU.
