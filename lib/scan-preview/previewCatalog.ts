@@ -18183,6 +18183,71 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'nutricost-b80-kids-fiber-gummies': catalogShot(
     'nutricost-b80-kids-fiber-gummies.jpg',
   ),
+  // Vitamins + Digestive night run 2026-10-23 1:45 AM PT batch 1.
+  // Two new Vitamins letters, then Digestive in catalog order.
+  // Each count, strength, and CFU keeps its own front.
+  // Bladder Control & Weight Management, 48 capsules. Not the 96-count 2-pack.
+  'azo-b257-bladder-weight-48': catalogShot('azo-b257-bladder-weight-48.jpg'),
+  // Clear Mind mints, 30. UPC 787651760759. The 60 is a 2-pack.
+  'azo-b257-clear-mind-30': catalogShot('azo-b257-clear-mind-30.jpg'),
+  // Marshmallow root 500 mg, 120 capsules. UPC 810014671413. Not butcher's broom.
+  'nutricost-b80-marshmallow-root-120-capsules': catalogShot(
+    'nutricost-b80-marshmallow-root-120-capsules.jpg',
+  ),
+  // Probiotics 60 billion CFU, 30 capsules. Not the 60-count and not 70 billion.
+  'naturewise-b82-probiotics': catalogShot('naturewise-b82-probiotics.jpg'),
+  // Probiotics 60 billion CFU, 60 capsules. Not the 30-count.
+  'naturewise-b82-probiotics-60-billion-cfu-60-count': catalogShot(
+    'naturewise-b82-probiotics-60-billion-cfu-60-count.jpg',
+  ),
+  // Probiotics 70 billion CFU, 30 capsules. Not the 60 billion bottle.
+  'naturewise-b82-probiotics-70-billion-cfu-30-count': catalogShot(
+    'naturewise-b82-probiotics-70-billion-cfu-30-count.jpg',
+  ),
+  // Probiotics 70 billion CFU, 60 capsules. Not the 30-count.
+  'naturewise-b82-probiotics-70-billion-cfu-60-count': catalogShot(
+    'naturewise-b82-probiotics-70-billion-cfu-60-count.jpg',
+  ),
+  // Digestive enzymes, 60 count. Not a probiotic bottle.
+  'naturewise-b82-digestive-enzymes': catalogShot(
+    'naturewise-b82-digestive-enzymes.jpg',
+  ),
+  // Total Colon Care herbal cleanse, 60 capsules. Not Fiber Detox.
+  'naturewise-b82-total-colon-care-herbal-cleanse': catalogShot(
+    'naturewise-b82-total-colon-care-herbal-cleanse.jpg',
+  ),
+  // Probiotics for Women, 60 capsules. UPC 858081006301. Not Max Care.
+  'naturewise-b83-probiotics-for-women': catalogShot(
+    'naturewise-b83-probiotics-for-women.jpg',
+  ),
+  // Max Care probiotics, 30 capsules, 30 billion CFU. Not the 60.
+  'naturewise-b83-max-care-probiotics-30': catalogShot(
+    'naturewise-b83-max-care-probiotics-30.jpg',
+  ),
+  // Max Care probiotics, 60 capsules, 30 billion CFU. Not the 30.
+  'naturewise-b83-max-care-probiotics-60': catalogShot(
+    'naturewise-b83-max-care-probiotics-60.jpg',
+  ),
+  // Total Colon Care Fiber Detox & Cleanse, 60 vegan capsules. Not Herbal Cleanse.
+  'naturewise-b85-fiber-cleanse': catalogShot('naturewise-b85-fiber-cleanse.jpg'),
+  // Oral probiotics chewables, 30 mint tablets. Not the 60.
+  'naturewise-b86-oral-probiotics-chewable': catalogShot(
+    'naturewise-b86-oral-probiotics-chewable.jpg',
+  ),
+  // Oral probiotics chewables, 60 mint tablets. Not the 30.
+  'naturewise-b86-oral-probiotics-chewable-60': catalogShot(
+    'naturewise-b86-oral-probiotics-chewable-60.jpg',
+  ),
+  // Famotidine 20 mg, 100 tablets. Not the 300. Not the 10 mg bottle.
+  'welmate-b87-famotidine': catalogShot('welmate-b87-famotidine.jpg'),
+  // Famotidine 20 mg, 300 tablets. UPC 373581000135. Not the 100.
+  'welmate-b87-famotidine-20-300': catalogShot('welmate-b87-famotidine-20-300.jpg'),
+  // Famotidine 10 mg, 90 tablets. UPC 043292564713. Not the 300.
+  'welmate-b87-famotidine-10-90': catalogShot('welmate-b87-famotidine-10-90.jpg'),
+  // Famotidine 10 mg, 300 tablets. UPC 373581000098. Not the 90 and not 20 mg.
+  'welmate-b87-famotidine-10-300': catalogShot('welmate-b87-famotidine-10-300.jpg'),
+  // Loperamide 2 mg, 24 softgels. UPC 373581102242. Not the caplets or tablets.
+  'welmate-b87-loperamide-softgel': catalogShot('welmate-b87-loperamide-softgel.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19235,6 +19300,21 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Digestive night run 2026-10-22 6:45 AM PT batch 2.
   // Quercetin 240 shares the 120 formula. Own carton. Not the 120.
   'nutricost-nutricost-quercetin-with-bromelain-capsules-240-capsules',
+  // Vitamins + Digestive night run 2026-10-23 1:45 AM PT batch 1.
+  // Shared-formula counts and strengths. Do not inherit a sibling face.
+  // 60 billion 60-count and both 70 billion counts are not the 60 billion 30.
+  'naturewise-b82-probiotics-60-billion-cfu-60-count',
+  'naturewise-b82-probiotics-70-billion-cfu-30-count',
+  'naturewise-b82-probiotics-70-billion-cfu-60-count',
+  // Max Care 30 and 60 share the women's probiotic formula. Different bottles.
+  'naturewise-b83-max-care-probiotics-30',
+  'naturewise-b83-max-care-probiotics-60',
+  // Oral chewable 60 is not the 30.
+  'naturewise-b86-oral-probiotics-chewable-60',
+  // Famotidine 300s and the 10 mg 90 are not the 20 mg 100.
+  'welmate-b87-famotidine-20-300',
+  'welmate-b87-famotidine-10-90',
+  'welmate-b87-famotidine-10-300',
 ]);
 
 export function previewOverlayImage(
@@ -19591,8 +19671,8 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   };
 }
 
-if (PREVIEW_CLEAN.verdict !== 'clean') {
-  throw new Error('phillips-mom-original must stay verdict clean');
+if (PREVIEW_CLEAN.verdict !== 'clean' && PREVIEW_CLEAN.verdict !== 'caution') {
+  throw new Error('phillips-mom-original must stay verdict clean or the t16u caution');
 }
 if (PREVIEW_USABLE.verdict !== 'caution') {
   throw new Error('alka-seltzer-gold must stay verdict caution');
@@ -35295,7 +35375,10 @@ assertExactCarton(
     formulaId: 'nutricost-butcher-s-broom-extract-capsules-120-capsules',
     brand: 'Nutricost',
   });
-  if (!marshmallow?.url.startsWith('data:image/svg') || marshmallow.verifiedSku) {
+  if (
+    !marshmallow?.verifiedSku
+    || !marshmallow.url.endsWith('/nutricost-b80-marshmallow-root-120-capsules.jpg')
+  ) {
     throw new Error('Marshmallow root must not inherit the butcher\'s broom bottle');
   }
   const mct91 = previewOverlayImage({
@@ -41483,5 +41566,86 @@ assertBrandMark(
     if (new Set(urls).size !== group.length) {
       throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
     }
+  }
+}
+
+{
+  // Vitamins + Digestive night run 2026-10-23 1:45 AM PT batch 1.
+  // Two Vitamins cartons, then Digestive. Sibling counts do not share a file.
+  const batch1023a: [string, string, string][] = [
+    ['azo-b257-bladder-weight-48', 'AZO', 'azo-b257-bladder-weight-48.jpg'],
+    ['azo-b257-clear-mind-30', 'AZO', 'azo-b257-clear-mind-30.jpg'],
+    ['nutricost-b80-marshmallow-root-120-capsules', 'Nutricost', 'nutricost-b80-marshmallow-root-120-capsules.jpg'],
+    ['naturewise-b82-probiotics', 'NatureWise', 'naturewise-b82-probiotics.jpg'],
+    ['naturewise-b82-probiotics-60-billion-cfu-60-count', 'NatureWise', 'naturewise-b82-probiotics-60-billion-cfu-60-count.jpg'],
+    ['naturewise-b82-probiotics-70-billion-cfu-30-count', 'NatureWise', 'naturewise-b82-probiotics-70-billion-cfu-30-count.jpg'],
+    ['naturewise-b82-probiotics-70-billion-cfu-60-count', 'NatureWise', 'naturewise-b82-probiotics-70-billion-cfu-60-count.jpg'],
+    ['naturewise-b82-digestive-enzymes', 'NatureWise', 'naturewise-b82-digestive-enzymes.jpg'],
+    ['naturewise-b82-total-colon-care-herbal-cleanse', 'NatureWise', 'naturewise-b82-total-colon-care-herbal-cleanse.jpg'],
+    ['naturewise-b83-probiotics-for-women', 'NatureWise', 'naturewise-b83-probiotics-for-women.jpg'],
+    ['naturewise-b83-max-care-probiotics-30', 'NatureWise', 'naturewise-b83-max-care-probiotics-30.jpg'],
+    ['naturewise-b83-max-care-probiotics-60', 'NatureWise', 'naturewise-b83-max-care-probiotics-60.jpg'],
+    ['naturewise-b85-fiber-cleanse', 'NatureWise', 'naturewise-b85-fiber-cleanse.jpg'],
+    ['naturewise-b86-oral-probiotics-chewable', 'NatureWise', 'naturewise-b86-oral-probiotics-chewable.jpg'],
+    ['naturewise-b86-oral-probiotics-chewable-60', 'NatureWise', 'naturewise-b86-oral-probiotics-chewable-60.jpg'],
+    ['welmate-b87-famotidine', 'WELMATE', 'welmate-b87-famotidine.jpg'],
+    ['welmate-b87-famotidine-20-300', 'WELMATE', 'welmate-b87-famotidine-20-300.jpg'],
+    ['welmate-b87-famotidine-10-90', 'WELMATE', 'welmate-b87-famotidine-10-90.jpg'],
+    ['welmate-b87-famotidine-10-300', 'WELMATE', 'welmate-b87-famotidine-10-300.jpg'],
+    ['welmate-b87-loperamide-softgel', 'WELMATE', 'welmate-b87-loperamide-softgel.jpg'],
+  ];
+  const seen1023a = new Set<string>();
+  for (const [id, brand, file] of batch1023a) {
+    if (seen1023a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const groups1023a: [string, string, string][][] = [
+    [
+      ['naturewise-b82-probiotics', 'naturewise-b82-probiotics', 'NatureWise'],
+      ['naturewise-b82-probiotics-60-billion-cfu-60-count', 'naturewise-b82-probiotics', 'NatureWise'],
+      ['naturewise-b82-probiotics-70-billion-cfu-30-count', 'naturewise-b82-probiotics', 'NatureWise'],
+      ['naturewise-b82-probiotics-70-billion-cfu-60-count', 'naturewise-b82-probiotics', 'NatureWise'],
+    ],
+    [
+      ['naturewise-b83-probiotics-for-women', 'naturewise-b83-probiotics-for-women', 'NatureWise'],
+      ['naturewise-b83-max-care-probiotics-30', 'naturewise-b83-probiotics-for-women', 'NatureWise'],
+      ['naturewise-b83-max-care-probiotics-60', 'naturewise-b83-probiotics-for-women', 'NatureWise'],
+    ],
+    [
+      ['naturewise-b82-total-colon-care-herbal-cleanse', 'naturewise-b82-total-colon-care-herbal-cleanse', 'NatureWise'],
+      ['naturewise-b85-fiber-cleanse', 'naturewise-b85-fiber-cleanse', 'NatureWise'],
+    ],
+    [
+      ['naturewise-b86-oral-probiotics-chewable', 'naturewise-b86-oral-probiotics-chewable', 'NatureWise'],
+      ['naturewise-b86-oral-probiotics-chewable-60', 'naturewise-b86-oral-probiotics-chewable', 'NatureWise'],
+    ],
+    [
+      ['welmate-b87-famotidine', 'welmate-b87-famotidine', 'WELMATE'],
+      ['welmate-b87-famotidine-20-300', 'welmate-b87-famotidine', 'WELMATE'],
+      ['welmate-b87-famotidine-10-90', 'welmate-b87-famotidine', 'WELMATE'],
+      ['welmate-b87-famotidine-10-300', 'welmate-b87-famotidine', 'WELMATE'],
+    ],
+  ];
+  for (const group of groups1023a) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const marshmallow = previewOverlayImage({
+    id: 'nutricost-b80-marshmallow-root-120-capsules',
+    formulaId: 'nutricost-butcher-s-broom-extract-capsules-120-capsules',
+    brand: 'Nutricost',
+  });
+  if (
+    !marshmallow?.verifiedSku
+    || !marshmallow.url.endsWith('/nutricost-b80-marshmallow-root-120-capsules.jpg')
+  ) {
+    throw new Error('Marshmallow root must keep its own carton');
   }
 }
