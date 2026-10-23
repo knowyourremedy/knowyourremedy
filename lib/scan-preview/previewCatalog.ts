@@ -3197,6 +3197,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b112-esomeprazole-magnesium-9c8f': brandMark('goodsense-mark.png'),
   'goodsense-b112-lansoprazole-60b5': brandMark('goodsense-mark.png'),
   'goodsense-b112-omeprazole-172a': brandMark('goodsense-mark.png'),
+  // Digestive night run 2026-10-23 5:30 AM PT batch 2.
+  // Tried each SKU. No matching 3D pack for this count. Do not glue a sibling.
+  'goodsense-b112-regular-strength-antacid-e6fb': brandMark('goodsense-mark.png'),
+  'goodsense-b113-dual-action-complete-61cd': brandMark('goodsense-mark.png'),
+  'goodsense-b113-dual-action-complete-258b-50': brandMark('goodsense-mark.png'),
+  'pepcid-b161-max-8': brandMark('pepcid-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18501,6 +18507,52 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b112-regular-strength-antacid-peppermint-0eb5': catalogShot(
     'goodsense-b112-regular-strength-antacid-peppermint-0eb5.jpg',
   ),
+  // Digestive night run 2026-10-23 5:30 AM PT batch 2.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Ultra Strength assorted fruit, 72. Not the unflavored ultra.
+  'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb': catalogShot(
+    'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb.jpg',
+  ),
+  // Extra Strength assorted fruit, 96. Not the berry extra-strength carton.
+  'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb': catalogShot(
+    'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb.jpg',
+  ),
+  // Stomach Relief MAX, 8 fl oz (236 mL). Not the regular-strength bottle.
+  'goodsense-b112-maximum-strength-stomach-relief-528-2970': catalogShot(
+    'goodsense-b112-maximum-strength-stomach-relief-528-2970.jpg',
+  ),
+  // Cherry soft chews, 36. UPC 846036006162. Not the 32-count fruit chews.
+  'goodsense-b113-antacid-soft-chew-e3e9': catalogShot(
+    'goodsense-b113-antacid-soft-chew-e3e9.jpg',
+  ),
+  // Dual Action Complete berry, 25. Not the 50-count.
+  'goodsense-b113-dual-action-complete-258b': catalogShot(
+    'goodsense-b113-dual-action-complete-258b.jpg',
+  ),
+  // Assorted fruit chews, 32. UPC 846036009408. Not the 36-count soft chew.
+  'goodsense-b113-antacid-fruit-chews-5411': catalogShot(
+    'goodsense-b113-antacid-fruit-chews-5411.jpg',
+  ),
+  // Pepcid AC Original Strength, 30. UPC 716837872306. Not the 90.
+  'pepcid-b161-original-30': catalogShot('pepcid-b161-original-30.jpg'),
+  // Pepcid AC Original Strength, 90. UPC 716837872900. Not the 30.
+  'pepcid-b161-original-90': catalogShot('pepcid-b161-original-90.jpg'),
+  // Maximum Strength, 25. UPC 716837855255. Not the 50 or the 8.
+  'pepcid-b161-max-25': catalogShot('pepcid-b161-max-25.jpg'),
+  // Maximum Strength, 50. UPC 716837855507. Not the 25 or the 75.
+  'pepcid-b161-max-50': catalogShot('pepcid-b161-max-50.jpg'),
+  // Maximum Strength, 75. UPC 716837855781.
+  'pepcid-b161-max-75': catalogShot('pepcid-b161-max-75.jpg'),
+  // Icy Cool Mint, 20. UPC 716837879206. Not the 40.
+  'pepcid-b161-icy-20': catalogShot('pepcid-b161-icy-20.jpg'),
+  // Icy Cool Mint, 40. UPC 716837879404. Not the 20.
+  'pepcid-b161-icy-40': catalogShot('pepcid-b161-icy-40.jpg'),
+  // Complete berry chews, 25. UPC 716837291251. Not mint and not the 50.
+  'pepcid-b161-complete-berry-25': catalogShot('pepcid-b161-complete-berry-25.jpg'),
+  // Complete berry chews, 50. UPC 716837291503.
+  'pepcid-b161-complete-berry-50': catalogShot('pepcid-b161-complete-berry-50.jpg'),
+  // Complete berry chews, 70. UPC 716837291725. Not the cool-mint 70.
+  'pepcid-b161-complete-berry-70': catalogShot('pepcid-b161-complete-berry-70.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19634,6 +19686,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'goodsense-b111-antidiarrheal-af61-240-ml',
   'goodsense-b112-lansoprazole-5143-14',
   'goodsense-b112-omeprazole-644b-14',
+  // Digestive night run 2026-10-23 5:30 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b113-dual-action-complete-258b-50',
+  'pepcid-b161-original-30',
+  'pepcid-b161-original-90',
+  'pepcid-b161-max-8',
+  'pepcid-b161-max-25',
+  'pepcid-b161-max-50',
+  'pepcid-b161-max-75',
+  'pepcid-b161-icy-20',
+  'pepcid-b161-icy-40',
+  'pepcid-b161-complete-berry-25',
+  'pepcid-b161-complete-berry-50',
+  'pepcid-b161-complete-berry-70',
 ]);
 
 export function previewOverlayImage(
@@ -42415,5 +42481,109 @@ assertBrandMark(
   });
   if (lanso3?.verifiedSku || lanso14?.verifiedSku) {
     throw new Error('lansoprazole 3 and 14 must not use the 42-count carton');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 5:30 AM PT batch 2.
+  // Sixteen cartons. Four attempted rows stay on the official brand mark.
+  const batch1530b: [string, string, string][] = [
+    ['goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb', 'GoodSense', 'goodsense-b112-ultra-strength-antacid-assorted-frui-e6fb.jpg'],
+    ['goodsense-b112-extra-strength-antacid-assorted-frui-e6fb', 'GoodSense', 'goodsense-b112-extra-strength-antacid-assorted-frui-e6fb.jpg'],
+    ['goodsense-b112-maximum-strength-stomach-relief-528-2970', 'GoodSense', 'goodsense-b112-maximum-strength-stomach-relief-528-2970.jpg'],
+    ['goodsense-b113-antacid-soft-chew-e3e9', 'GoodSense', 'goodsense-b113-antacid-soft-chew-e3e9.jpg'],
+    ['goodsense-b113-dual-action-complete-258b', 'GoodSense', 'goodsense-b113-dual-action-complete-258b.jpg'],
+    ['goodsense-b113-antacid-fruit-chews-5411', 'GoodSense', 'goodsense-b113-antacid-fruit-chews-5411.jpg'],
+    ['pepcid-b161-original-30', 'Pepcid', 'pepcid-b161-original-30.jpg'],
+    ['pepcid-b161-original-90', 'Pepcid', 'pepcid-b161-original-90.jpg'],
+    ['pepcid-b161-max-25', 'Pepcid', 'pepcid-b161-max-25.jpg'],
+    ['pepcid-b161-max-50', 'Pepcid', 'pepcid-b161-max-50.jpg'],
+    ['pepcid-b161-max-75', 'Pepcid', 'pepcid-b161-max-75.jpg'],
+    ['pepcid-b161-icy-20', 'Pepcid', 'pepcid-b161-icy-20.jpg'],
+    ['pepcid-b161-icy-40', 'Pepcid', 'pepcid-b161-icy-40.jpg'],
+    ['pepcid-b161-complete-berry-25', 'Pepcid', 'pepcid-b161-complete-berry-25.jpg'],
+    ['pepcid-b161-complete-berry-50', 'Pepcid', 'pepcid-b161-complete-berry-50.jpg'],
+    ['pepcid-b161-complete-berry-70', 'Pepcid', 'pepcid-b161-complete-berry-70.jpg'],
+  ];
+  const seen1530b = new Set<string>();
+  for (const [id, brand, file] of batch1530b) {
+    if (seen1530b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1530b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1530b: [string, string, string, string][] = [
+    ['goodsense-b112-regular-strength-antacid-e6fb', 'goodsense-b112-regular-strength-antacid-e6fb', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b113-dual-action-complete-61cd', 'goodsense-b113-dual-action-complete-61cd', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b113-dual-action-complete-258b-50', 'goodsense-b113-dual-action-complete-258b', 'GoodSense', 'goodsense-mark.png'],
+    ['pepcid-b161-max-8', 'pepcid-b161-max', 'Pepcid', 'pepcid-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1530b) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const dual25 = previewOverlayImage({
+    id: 'goodsense-b113-dual-action-complete-258b',
+    formulaId: 'goodsense-b113-dual-action-complete-258b',
+    brand: 'GoodSense',
+  });
+  const dual50 = previewOverlayImage({
+    id: 'goodsense-b113-dual-action-complete-258b-50',
+    formulaId: 'goodsense-b113-dual-action-complete-258b',
+    brand: 'GoodSense',
+  });
+  if (!dual25?.verifiedSku || dual50?.verifiedSku || dual50?.url === dual25?.url) {
+    throw new Error('dual action 50 must keep the brand mark and not inherit the 25-count carton');
+  }
+  const pepcidRows: [string, string][] = [
+    ['pepcid-b161-original-30', 'pepcid-b161-original'],
+    ['pepcid-b161-original-90', 'pepcid-b161-original'],
+    ['pepcid-b161-max-25', 'pepcid-b161-max'],
+    ['pepcid-b161-max-50', 'pepcid-b161-max'],
+    ['pepcid-b161-max-75', 'pepcid-b161-max'],
+    ['pepcid-b161-icy-20', 'pepcid-b161-icy'],
+    ['pepcid-b161-icy-40', 'pepcid-b161-icy'],
+    ['pepcid-b161-complete-berry-25', 'pepcid-b161-complete-berry25'],
+    ['pepcid-b161-complete-berry-50', 'pepcid-b161-complete-berry50'],
+    ['pepcid-b161-complete-berry-70', 'pepcid-b161-complete-berry70'],
+  ];
+  const pepUrls = pepcidRows.map(([id, formulaId]) => (
+    previewOverlayImage({ id, formulaId, brand: 'Pepcid' })?.url
+  ));
+  if (new Set(pepUrls).size !== pepUrls.length || pepUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('Pepcid counts must keep separate cartons');
+  }
+  const max8 = previewOverlayImage({
+    id: 'pepcid-b161-max-8',
+    formulaId: 'pepcid-b161-max',
+    brand: 'Pepcid',
+  });
+  if (!max8?.url.endsWith('/pepcid-mark.png') || max8.verifiedSku || pepUrls.includes(max8.url)) {
+    throw new Error('Pepcid max 8 must keep the brand mark and not a sibling carton');
+  }
+  const dye150 = previewOverlayImage({
+    id: 'goodsense-b112-regular-strength-antacid-e6fb',
+    formulaId: 'goodsense-b112-regular-strength-antacid-e6fb',
+    brand: 'GoodSense',
+  });
+  const peppermint150 = previewOverlayImage({
+    id: 'goodsense-b112-regular-strength-antacid-peppermint-0eb5',
+    formulaId: 'goodsense-b112-regular-strength-antacid-peppermint-0eb5',
+    brand: 'GoodSense',
+  });
+  if (dye150?.verifiedSku || dye150?.url === peppermint150?.url) {
+    throw new Error('assorted 150 must not use the peppermint bottle');
+  }
+  const mint25 = previewOverlayImage({
+    id: 'pepcid-b161-complete-mint-25',
+    formulaId: 'pepcid-b161-complete-mint25',
+    brand: 'Pepcid',
+  });
+  const mintText = mint25?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(mint25.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+    : undefined;
+  if (mint25?.verifiedSku || mintText !== 'P') {
+    throw new Error('unattempted Pepcid Complete mint 25 must stay a letter');
   }
 }
