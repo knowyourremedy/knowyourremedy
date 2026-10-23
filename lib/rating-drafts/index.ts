@@ -261,3 +261,4 @@ export { BATCH261_KYR6D_T24U } from './batch261-kyr6d-t24u';
 export { BATCH262_KYR6D_T26U } from './batch262-kyr6d-t26u';
 export { BATCH263_KYR6D_T27U } from './batch263-kyr6d-t27u';
 export { BATCH264_KYR6D_T27U_GOOGLE } from './batch264-kyr6d-t27u-google';
+export { BATCH265_KYR6D_T28U } from './batch265-kyr6d-t28u';
