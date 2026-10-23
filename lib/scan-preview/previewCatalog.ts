@@ -3166,6 +3166,25 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b109-anti-diarrheal-anti-gas-6503': brandMark('goodsense-mark.png'),
   // No GoodSense 50-count face. A DG Health 50-count is a different brand.
   'goodsense-b109-acid-reducer-7f72-50': brandMark('goodsense-mark.png'),
+  // Digestive night run 2026-10-23 4:15 AM PT batch 2.
+  // No matching 3D pack. Do not glue a different count, strength, or UPC.
+  'goodsense-b109-acid-reducer-7f72-200': brandMark('goodsense-mark.png'),
+  'goodsense-b109-gas-relief-a112': brandMark('goodsense-mark.png'),
+  'goodsense-b109-gas-relief-a112-36': brandMark('goodsense-mark.png'),
+  'goodsense-b109-anti-diarrheal-29e7': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clear-lax-da39': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clear-lax-da39-153-g': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clear-lax-da39-289-g': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clear-lax-da39-595-g': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clear-lax-da39-765-g': brandMark('goodsense-mark.png'),
+  'goodsense-b109-stool-softener-4227': brandMark('goodsense-mark.png'),
+  'goodsense-b109-stool-softener-4227-100': brandMark('goodsense-mark.png'),
+  'goodsense-b109-effervescent-antacid-and-pain-relief-da39': brandMark('goodsense-mark.png'),
+  'goodsense-b109-gas-relief-a112-b': brandMark('goodsense-mark.png'),
+  // UPC 301131023020. Not the 370030149155 / 370030149162 ClearLax bottles.
+  'goodsense-b109-clearlax-0a9b': brandMark('goodsense-mark.png'),
+  'goodsense-b109-clearlax-0a9b-510-g': brandMark('goodsense-mark.png'),
+  'goodsense-b109-omeprazole-and-sodium-bicarbonate-496b': brandMark('goodsense-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18416,6 +18435,24 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'goodsense-b109-acid-reducer-7f72': catalogShot(
     'goodsense-b109-acid-reducer-7f72.jpg',
   ),
+  // Digestive night run 2026-10-23 4:15 AM PT batch 2.
+  // Exact fronts. Sibling weights and counts do not share a file.
+  // ClearLax, 8.3 oz (238 g). UPC 370030149155. Not the 17.9 oz.
+  'goodsense-b109-clear-lax-da39-238-g': catalogShot(
+    'goodsense-b109-clear-lax-da39-238-g.jpg',
+  ),
+  // ClearLax, 17.9 oz (510 g). UPC 370030149162. Not the 8.3 oz.
+  'goodsense-b109-clear-lax-da39-510-g': catalogShot(
+    'goodsense-b109-clear-lax-da39-510-g.jpg',
+  ),
+  // Fiber laxative caplets, calcium polycarbophil, 140. UPC 846036009163.
+  'goodsense-b109-fiber-laxative-147-981f': catalogShot(
+    'goodsense-b109-fiber-laxative-147-981f.jpg',
+  ),
+  // Bismuth subsalicylate 262 mg chewables, 30. UPC 846036009156.
+  'goodsense-b110-regular-strength-stomach-relief-122-30f8': catalogShot(
+    'goodsense-b110-regular-strength-stomach-relief-122-30f8.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19530,9 +19567,20 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   // Digestive night run 2026-10-23 4:15 AM PT batch 1.
   // Shared-formula counts. Do not inherit a sibling face.
   'healtha2z-b103-omeprazole-42',
-  // 50-count is a mark. 200-count is still a letter. Neither inherits the 25.
+  // 50-count and 200-count are marks. Neither inherits the 25.
   'goodsense-b109-acid-reducer-7f72-50',
   'goodsense-b109-acid-reducer-7f72-200',
+  // Digestive night run 2026-10-23 4:15 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'goodsense-b109-gas-relief-a112-36',
+  'goodsense-b109-clear-lax-da39-153-g',
+  'goodsense-b109-clear-lax-da39-238-g',
+  'goodsense-b109-clear-lax-da39-289-g',
+  'goodsense-b109-clear-lax-da39-510-g',
+  'goodsense-b109-clear-lax-da39-595-g',
+  'goodsense-b109-clear-lax-da39-765-g',
+  'goodsense-b109-stool-softener-4227-100',
+  'goodsense-b109-clearlax-0a9b-510-g',
 ]);
 
 export function previewOverlayImage(
@@ -42171,8 +42219,13 @@ assertBrandMark(
     formulaId: 'goodsense-b109-acid-reducer-7f72',
     brand: 'GoodSense',
   });
-  if (!famo200?.url.startsWith('data:image/svg')) {
-    throw new Error('famotidine 200 must stay a letter and not inherit the 25-count carton');
+  const famo25 = previewOverlayImage({
+    id: 'goodsense-b109-acid-reducer-7f72',
+    formulaId: 'goodsense-b109-acid-reducer-7f72',
+    brand: 'GoodSense',
+  });
+  if (!famo200?.url.endsWith('/goodsense-mark.png') || famo200.url === famo25?.url) {
+    throw new Error('famotidine 200 must keep the brand mark and not inherit the 25-count carton');
   }
   const omepUrls = [
     previewOverlayImage({ id: 'healtha2z-b103-omeprazole-14', formulaId: 'healtha2z-b103-omeprazole-14', brand: 'HealthA2Z' }),
@@ -42180,5 +42233,67 @@ assertBrandMark(
   ].map((image) => image?.url);
   if (omepUrls[0] === omepUrls[1] || omepUrls.some((url) => !url?.endsWith('.jpg'))) {
     throw new Error('omeprazole 14 and 42 must keep separate cartons');
+  }
+}
+
+{
+  // Digestive night run 2026-10-23 4:15 AM PT batch 2.
+  // Four cartons. Sixteen attempted rows stay on the official brand mark.
+  const batch1023f: [string, string, string][] = [
+    ['goodsense-b109-clear-lax-da39-238-g', 'GoodSense', 'goodsense-b109-clear-lax-da39-238-g.jpg'],
+    ['goodsense-b109-clear-lax-da39-510-g', 'GoodSense', 'goodsense-b109-clear-lax-da39-510-g.jpg'],
+    ['goodsense-b109-fiber-laxative-147-981f', 'GoodSense', 'goodsense-b109-fiber-laxative-147-981f.jpg'],
+    ['goodsense-b110-regular-strength-stomach-relief-122-30f8', 'GoodSense', 'goodsense-b110-regular-strength-stomach-relief-122-30f8.jpg'],
+  ];
+  const seen1023f = new Set<string>();
+  for (const [id, brand, file] of batch1023f) {
+    if (seen1023f.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023f.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1023f: [string, string, string, string][] = [
+    ['goodsense-b109-acid-reducer-7f72-200', 'goodsense-b109-acid-reducer-7f72', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-gas-relief-a112', 'goodsense-b109-gas-relief-a112', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-gas-relief-a112-36', 'goodsense-b109-gas-relief-a112', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-anti-diarrheal-29e7', 'goodsense-b109-anti-diarrheal-29e7', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clear-lax-da39', 'goodsense-b109-clear-lax-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clear-lax-da39-153-g', 'goodsense-b109-clear-lax-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clear-lax-da39-289-g', 'goodsense-b109-clear-lax-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clear-lax-da39-595-g', 'goodsense-b109-clear-lax-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clear-lax-da39-765-g', 'goodsense-b109-clear-lax-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-stool-softener-4227', 'goodsense-b109-stool-softener-4227', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-stool-softener-4227-100', 'goodsense-b109-stool-softener-4227', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-effervescent-antacid-and-pain-relief-da39', 'goodsense-b109-effervescent-antacid-and-pain-relief-da39', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-gas-relief-a112-b', 'goodsense-b109-gas-relief-a112-b', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clearlax-0a9b', 'goodsense-b109-clearlax-0a9b', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-clearlax-0a9b-510-g', 'goodsense-b109-clearlax-0a9b', 'GoodSense', 'goodsense-mark.png'],
+    ['goodsense-b109-omeprazole-and-sodium-bicarbonate-496b', 'goodsense-b109-omeprazole-and-sodium-bicarbonate-496b', 'GoodSense', 'goodsense-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1023f) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
+    }
+  }
+  const lax238 = previewOverlayImage({
+    id: 'goodsense-b109-clear-lax-da39-238-g',
+    formulaId: 'goodsense-b109-clear-lax-da39',
+    brand: 'GoodSense',
+  });
+  const lax510 = previewOverlayImage({
+    id: 'goodsense-b109-clear-lax-da39-510-g',
+    formulaId: 'goodsense-b109-clear-lax-da39',
+    brand: 'GoodSense',
+  });
+  const otherClear = previewOverlayImage({
+    id: 'goodsense-b109-clearlax-0a9b',
+    formulaId: 'goodsense-b109-clearlax-0a9b',
+    brand: 'GoodSense',
+  });
+  if (!lax238?.verifiedSku || !lax510?.verifiedSku || lax238.url === lax510.url) {
+    throw new Error('ClearLax 238 g and 510 g must keep separate cartons');
+  }
+  if (otherClear?.url === lax238.url || otherClear?.verifiedSku) {
+    throw new Error('clearlax 0a9b must not use the 370030149155 bottle');
   }
 }
