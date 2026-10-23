@@ -41,6 +41,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   ) {
     return true;
   }
+  if (n === 'sugar alcohol') return true;
   if (/\bmaltitol\b|\bsorbitol\b|\bxylitol\b|\berythritol\b|\bmannitol\b|\bisomalt\b/.test(n)) {
     return true;
   }

@@ -256,3 +256,4 @@ export { BATCH256_KYR6D_T160U } from './batch256-kyr6d-t160u';
 export { BATCH257_KYR6D_T162U } from './batch257-kyr6d-t162u';
 export { BATCH258_KYR6D_T16U } from './batch258-kyr6d-t16u';
 export { BATCH259_KYR6D_T18U } from './batch259-kyr6d-t18u';
+export { BATCH260_KYR6D_T22U } from './batch260-kyr6d-t22u';
