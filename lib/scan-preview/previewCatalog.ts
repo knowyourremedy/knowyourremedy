@@ -3203,6 +3203,12 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'goodsense-b113-dual-action-complete-61cd': brandMark('goodsense-mark.png'),
   'goodsense-b113-dual-action-complete-258b-50': brandMark('goodsense-mark.png'),
   'pepcid-b161-max-8': brandMark('pepcid-mark.png'),
+  // Digestive night run 2026-10-23 6:45 AM PT batch 2.
+  // Tried each SKU. The 18-count peppermint face is the other formula.
+  // The 18-count cherry face is the other formula. Do not glue either.
+  // Per-id only, so unattempted Gas-X rows stay letters.
+  'gasx-b177-es-peppermint-starch-18': brandMark('gasx-mark.png'),
+  'gasx-b177-es-cherry-sio2-18': brandMark('gasx-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18597,6 +18603,46 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'zantac-b164-cool-mint-25': catalogShot('zantac-b164-cool-mint-25.jpg'),
   // Little Remedies Gripe Water with chamomile, 4 fl oz. UPC 756184122778. Not the gas drops.
   'little-remedies-b166-gripe-4': catalogShot('little-remedies-b166-gripe-4.jpg'),
+  // Digestive night run 2026-10-23 6:45 AM PT batch 2.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Gas Relief Drops, strawberry, 1 fl oz. UPC 756184000137. Not the original flavor.
+  'little-remedies-b170-gas-drops-strawberry': catalogShot(
+    'little-remedies-b170-gas-drops-strawberry.jpg',
+  ),
+  // Gas-X Total Relief, mixed berries, 30 chewables. UPC 300671328046. Not extra strength.
+  'gasx-b176-total-relief-30': catalogShot('gasx-b176-total-relief-30.jpg'),
+  // Extra Strength peppermint creme, 18. UPC 300430017181. Not the starch-line row.
+  'gasx-b177-es-peppermint-18': catalogShot('gasx-b177-es-peppermint-18.jpg'),
+  // Extra Strength cherry creme, 18. UPC 300430117188. Not the silicon-dioxide line.
+  'gasx-b177-es-cherry-18': catalogShot('gasx-b177-es-cherry-18.jpg'),
+  // Extra Strength cherry creme, silicon dioxide line, 48. UPC 300430117485. Not the 18.
+  'gasx-b177-es-cherry-sio2-48': catalogShot('gasx-b177-es-cherry-sio2-48.jpg'),
+  // Colace regular strength 100 mg, 10 capsules. UPC 367618101100. Not the 30 or the 60.
+  'colace-b178-100mg-10': catalogShot('colace-b178-100mg-10.jpg'),
+  // Colace regular strength 100 mg, 30 capsules. Not the 10 or the 60.
+  'colace-b178-100mg-30': catalogShot('colace-b178-100mg-30.jpg'),
+  // Colace regular strength 100 mg, 60 capsules. UPC 367618101605. Not the 30.
+  'colace-b178-100mg-60': catalogShot('colace-b178-100mg-60.jpg'),
+  // Colace 2-in-1 tablets, 30. UPC 367618110300. Not the 60. Not the 100 mg capsules.
+  'colace-b178-2in1-30': catalogShot('colace-b178-2in1-30.jpg'),
+  // Colace 2-in-1 tablets, 60. UPC 367618110607. Not the 30.
+  'colace-b178-2in1-60': catalogShot('colace-b178-2in1-60.jpg'),
+  // MiraLAX unflavored powder, 7 doses, 4.1 oz. UPC 041100820761. Not the 14.
+  'miralax-b178-unflavored-7': catalogShot('miralax-b178-unflavored-7.jpg'),
+  // MiraLAX unflavored powder, 14 doses, 8.3 oz. UPC 041100820730. Not the 7 or the 30.
+  'miralax-b178-unflavored-14': catalogShot('miralax-b178-unflavored-14.jpg'),
+  // MiraLAX unflavored powder, 30 doses, 17.9 oz. UPC 041100820716. Not the 45.
+  'miralax-b178-unflavored-30': catalogShot('miralax-b178-unflavored-30.jpg'),
+  // MiraLAX unflavored powder, 45 doses, 26.9 oz. UPC 041100810380. Not the 30.
+  'miralax-b178-unflavored-45': catalogShot('miralax-b178-unflavored-45.jpg'),
+  // MiraLAX Mix-In Pax, unflavored, 10 packets. UPC 041100806765. Not the 20.
+  'miralax-b178-unflavored-10pkt': catalogShot('miralax-b178-unflavored-10pkt.jpg'),
+  // MiraLAX Mix-In Pax, unflavored, 20 packets. UPC 041100566560. Not the 10.
+  'miralax-b178-unflavored-20pkt': catalogShot('miralax-b178-unflavored-20pkt.jpg'),
+  // MiraLAX orange powder, 7 doses, 4.1 oz. UPC 041100600554. Not unflavored. Not the 14.
+  'miralax-b178-orange-7': catalogShot('miralax-b178-orange-7.jpg'),
+  // MiraLAX orange powder, 14 doses, 8.3 oz. UPC 041100600561. Not the 7.
+  'miralax-b178-orange-14': catalogShot('miralax-b178-orange-14.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19757,6 +19803,23 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'zantac-b164-max-8',
   'zantac-b164-max-25',
   'zantac-b164-max-50',
+  // Digestive night run 2026-10-23 6:45 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'gasx-b177-es-cherry-sio2-18',
+  'gasx-b177-es-cherry-sio2-48',
+  'colace-b178-100mg-10',
+  'colace-b178-100mg-30',
+  'colace-b178-100mg-60',
+  'colace-b178-2in1-30',
+  'colace-b178-2in1-60',
+  'miralax-b178-unflavored-7',
+  'miralax-b178-unflavored-14',
+  'miralax-b178-unflavored-30',
+  'miralax-b178-unflavored-45',
+  'miralax-b178-unflavored-10pkt',
+  'miralax-b178-unflavored-20pkt',
+  'miralax-b178-orange-7',
+  'miralax-b178-orange-14',
 ]);
 
 export function previewOverlayImage(
@@ -42697,15 +42760,100 @@ assertBrandMark(
   if (!coolMint?.verifiedSku || coolMint.url === plain25?.url) {
     throw new Error('Zantac cool mint 25 must not use the unflavored 25-count carton');
   }
-  const nextGas = previewOverlayImage({
-    id: 'little-remedies-b170-gas-drops-strawberry',
-    formulaId: 'little-remedies-b170-gas-drops-strawberry',
-    brand: 'Little Remedies',
+}
+
+{
+  // Digestive night run 2026-10-23 6:45 AM PT batch 2.
+  // Eighteen cartons. Two attempted rows stay on the official Gas-X mark.
+  const batch645b: [string, string, string][] = [
+    ['little-remedies-b170-gas-drops-strawberry', 'Little Remedies', 'little-remedies-b170-gas-drops-strawberry.jpg'],
+    ['gasx-b176-total-relief-30', 'Gas-X', 'gasx-b176-total-relief-30.jpg'],
+    ['gasx-b177-es-peppermint-18', 'Gas-X', 'gasx-b177-es-peppermint-18.jpg'],
+    ['gasx-b177-es-cherry-18', 'Gas-X', 'gasx-b177-es-cherry-18.jpg'],
+    ['gasx-b177-es-cherry-sio2-48', 'Gas-X', 'gasx-b177-es-cherry-sio2-48.jpg'],
+    ['colace-b178-100mg-10', 'Colace', 'colace-b178-100mg-10.jpg'],
+    ['colace-b178-100mg-30', 'Colace', 'colace-b178-100mg-30.jpg'],
+    ['colace-b178-100mg-60', 'Colace', 'colace-b178-100mg-60.jpg'],
+    ['colace-b178-2in1-30', 'Colace', 'colace-b178-2in1-30.jpg'],
+    ['colace-b178-2in1-60', 'Colace', 'colace-b178-2in1-60.jpg'],
+    ['miralax-b178-unflavored-7', 'MiraLAX', 'miralax-b178-unflavored-7.jpg'],
+    ['miralax-b178-unflavored-14', 'MiraLAX', 'miralax-b178-unflavored-14.jpg'],
+    ['miralax-b178-unflavored-30', 'MiraLAX', 'miralax-b178-unflavored-30.jpg'],
+    ['miralax-b178-unflavored-45', 'MiraLAX', 'miralax-b178-unflavored-45.jpg'],
+    ['miralax-b178-unflavored-10pkt', 'MiraLAX', 'miralax-b178-unflavored-10pkt.jpg'],
+    ['miralax-b178-unflavored-20pkt', 'MiraLAX', 'miralax-b178-unflavored-20pkt.jpg'],
+    ['miralax-b178-orange-7', 'MiraLAX', 'miralax-b178-orange-7.jpg'],
+    ['miralax-b178-orange-14', 'MiraLAX', 'miralax-b178-orange-14.jpg'],
+  ];
+  const seen645b = new Set<string>();
+  for (const [id, brand, file] of batch645b) {
+    if (seen645b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen645b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks645b: [string, string, string][] = [
+    ['gasx-b177-es-peppermint-starch-18', 'gasx-b177-es-peppermint-starch', 'Gas-X'],
+    ['gasx-b177-es-cherry-sio2-18', 'gasx-b177-es-cherry-sio2', 'Gas-X'],
+  ];
+  for (const [id, formulaId, brand] of marks645b) {
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith('/gasx-mark.png') || image.verifiedSku) {
+      throw new Error(`${id} must keep the Gas-X mark and not a sibling carton`);
+    }
+  }
+  const peppermint = previewOverlayImage({
+    id: 'gasx-b177-es-peppermint-18',
+    formulaId: 'gasx-b177-es-peppermint',
+    brand: 'Gas-X',
   });
-  const nextLetter = nextGas?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextGas.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const starch = previewOverlayImage({
+    id: 'gasx-b177-es-peppermint-starch-18',
+    formulaId: 'gasx-b177-es-peppermint-starch',
+    brand: 'Gas-X',
+  });
+  if (!peppermint?.verifiedSku || starch?.url === peppermint.url) {
+    throw new Error('peppermint starch line must not use the other 18-count carton');
+  }
+  const cherry48 = previewOverlayImage({
+    id: 'gasx-b177-es-cherry-sio2-48',
+    formulaId: 'gasx-b177-es-cherry-sio2',
+    brand: 'Gas-X',
+  });
+  const cherry18 = previewOverlayImage({
+    id: 'gasx-b177-es-cherry-sio2-18',
+    formulaId: 'gasx-b177-es-cherry-sio2',
+    brand: 'Gas-X',
+  });
+  if (!cherry48?.verifiedSku || cherry18?.verifiedSku || cherry18?.url === cherry48.url) {
+    throw new Error('cherry silicon-dioxide 18 must keep the mark and not inherit the 48');
+  }
+  const orange7 = previewOverlayImage({
+    id: 'miralax-b178-orange-7',
+    formulaId: 'miralax-b178-orange',
+    brand: 'MiraLAX',
+  });
+  const orange14 = previewOverlayImage({
+    id: 'miralax-b178-orange-14',
+    formulaId: 'miralax-b178-orange',
+    brand: 'MiraLAX',
+  });
+  const plain7 = previewOverlayImage({
+    id: 'miralax-b178-unflavored-7',
+    formulaId: 'miralax-b178-unflavored',
+    brand: 'MiraLAX',
+  });
+  if (!orange7?.verifiedSku || orange7.url === orange14?.url || orange7.url === plain7?.url) {
+    throw new Error('MiraLAX orange 7 must keep its own carton');
+  }
+  const nextFast = previewOverlayImage({
+    id: 'mirafast-b178-mixed-berry-30',
+    formulaId: 'mirafast-b178-mixed-berry',
+    brand: 'MiraLAX',
+  });
+  const nextFastLetter = nextFast?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextFast.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextGas?.verifiedSku || nextLetter !== 'L') {
-    throw new Error('unattempted Little Remedies strawberry gas drops must stay a letter');
+  if (nextFast?.verifiedSku || nextFastLetter !== 'M') {
+    throw new Error('unattempted MiraFAST mixed berry 30 must stay a letter');
   }
 }
