@@ -263,6 +263,7 @@ import {
   BATCH261_KYR6D_T24U,
   BATCH262_KYR6D_T26U,
   BATCH263_KYR6D_T27U,
+  BATCH264_KYR6D_T27U_GOOGLE,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -572,6 +573,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH261_KYR6D_T24U,
   ...BATCH262_KYR6D_T26U,
   ...BATCH263_KYR6D_T27U,
+  ...BATCH264_KYR6D_T27U_GOOGLE,
 ]).map(applyT22uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
