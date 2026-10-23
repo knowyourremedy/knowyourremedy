@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 23, 2026 (t26u founder order; KYR6-d; rules only):** Standing Google AI sentence added to the §4 Ladder search rule. It applies to every catalog run. No catalog rows. No grades. No store research.
+
 **Changed Oct 23, 2026 (t24u founder order; KYR6-d):** One founder lock. The founder confirms the source check and the current rules (step 1). **Fish oil powder** printed as an other ingredient is Cleared. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill (context scoping, Sept 15, 2026). Fish oil is not on the seed/industrial oil list (soybean, canola, palm, safflower, sunflower, vegetable oil). It does not count toward the t137u stack. Fish oil printed as the Supplement Facts active stays ungraded. Carriers named inside a parenthesis stay their own rows.
 
 **Changed Oct 23, 2026 (t22u founder order; KYR6-d):** Three founder locks. The founder confirms the source check and the current rules (step 1). **Lactase enzyme** is Cleared. FDA lists lactase enzyme preparation as GRAS (21 CFR 184.1388). It is a food enzyme excipient, the same posture as invertase, and invertase stays its own row. **Sugar alcohol** printed as a class name is Caution. The polyol is not named. Large amounts of sugar alcohols can upset the gut, the same finding as the named polyol rows. It does not count toward the t137u stack. Xylitol, mannitol, sorbitol, and isomalt stay their own rows. **Colors** printed alone is Caution. The label does not name the color. That is the unnamed-color Caution already used for Natural Color and bare color added. It is not a named juice and not a named synthetic dye. It does not count toward the t137u stack.
@@ -361,6 +363,8 @@ When writing rows:
 This applies to every catalog run.
 
 When searching a retailer, open the store’s product page in the computer’s browser the way a person would. Search the way a person would (by product name or by UPC in the store’s own search box). Do not use curl or scripted search URLs such as amazon.com/s?k=<UPC> or Walgreens’ search/results.jsp?Ntt=<UPC>. A blocked, sorry, or access-denied page from a scripted fetch does not count as exhausting that step. The bot must open the page and physically view the ingredient image or other-ingredient line before that step can be called a miss.
+
+When a store page or brand page does not show an ingredient line, or when only one source has been found, run a Google AI search the way a person would. Type the product name and count into Google the way a person would. Open the AI overview and any linked pages that show a panel. Do not use a scripted search URL. A blocked or empty AI result does not count as exhausting that step. The bot must open the result and physically view the ingredient line before that step can be called a miss.
 
 ## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
 
