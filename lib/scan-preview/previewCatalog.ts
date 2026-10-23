@@ -3142,6 +3142,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   'healtha2z-b96-senna-8-6': brandMark('healtha2z-mark.png'),
   // 180 mg / 120-count page hero is the 250 mg / 120 bottle. No 180 mg 120 carton.
   'healtha2z-b96-simethicone-180-120': brandMark('healtha2z-mark.png'),
+  // 1/3/6 chooser. The 25-count blister already belongs to FP0886A. No separate carton.
+  'healtha2z-b101-bisacodyl-398-25-option': brandMark('healtha2z-mark.png'),
+  // Page hero is the 24-pack case (2,304 tablets), not a 96-count bottle.
+  'healtha2z-b101-calcium-750': brandMark('healtha2z-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18333,6 +18337,44 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'healtha2z-b101-bisacodyl-398': catalogShot('healtha2z-b101-bisacodyl-398.jpg'),
   // Bisacodyl 5 mg, 25 tablets, one blister. SKU FP0886A. Not the 150.
   'healtha2z-b101-bisacodyl-398-25': catalogShot('healtha2z-b101-bisacodyl-398-25.jpg'),
+  // Digestive night run 2026-10-23 3:00 AM PT batch 2.
+  // Exact fronts from a2z-life.com. Sibling counts do not share a file.
+  // Woman's Gentle Laxative, 24 packs of 25 (600). SKU FP0886. Not the 25-count blister.
+  'healtha2z-b101-bisacodyl-398-600': catalogShot('healtha2z-b101-bisacodyl-398-600.jpg'),
+  // Woman's Gentle Laxative, 250 tablets. SKU FPA167. Not the compare-to-Dulcolax 250.
+  'healtha2z-b101-bisacodyl-398-250': catalogShot('healtha2z-b101-bisacodyl-398-250.jpg'),
+  // Bisacodyl 5 mg, 250 tablets, compare to Dulcolax. SKU FPA015. Not FPA167.
+  'healtha2z-b101-bisacodyl-398-250-fpa015': catalogShot('healtha2z-b101-bisacodyl-398-250-fpa015.jpg'),
+  // Compare-to-Dulcolax value pack, 24×25 (600). SKU FP0917. Not the Woman's Gentle case.
+  'healtha2z-b101-bisacodyl-398-600-fp0917': catalogShot('healtha2z-b101-bisacodyl-398-600-fp0917.jpg'),
+  // Bisacodyl 5 mg, 100 tablets. SKU FPA094. NDC 69168-404. Not the 150.
+  'healtha2z-b101-bisacodyl-404': catalogShot('healtha2z-b101-bisacodyl-404.jpg'),
+  // Bismuth subsalicylate 262 mg, 100 chewables. SKU FPA102. Not the 200.
+  'healtha2z-b101-bismuth-262': catalogShot('healtha2z-b101-bismuth-262.jpg'),
+  // Bismuth subsalicylate 262 mg, 200 tablets. SKU FP1345. Not the 100-count bottle.
+  'healtha2z-b101-bismuth-262-200': catalogShot('healtha2z-b101-bismuth-262-200.jpg'),
+  // Bismuth, 24 packs of 12 (288). SKU FP0528. Not the 30-count bottle.
+  'healtha2z-b101-bismuth-262-288': catalogShot('healtha2z-b101-bismuth-262-288.jpg'),
+  // Bismuth, 24 packs of 30 (720). SKU FP0529V. Not the 30-count bottle.
+  'healtha2z-b101-bismuth-262-720': catalogShot('healtha2z-b101-bismuth-262-720.jpg'),
+  // Bismuth subsalicylate 262 mg, 30 tablets. SKU FP0529. Not the 720 case.
+  'healtha2z-b101-bismuth-262-30': catalogShot('healtha2z-b101-bismuth-262-30.jpg'),
+  // Calcium carbonate 500 mg, 150 chewables, assorted fruit. SKU FP0535.
+  'healtha2z-b101-calcium-500': catalogShot('healtha2z-b101-calcium-500.jpg'),
+  // Docusate sodium 100 mg, single tone, 100 softgels. SKU FPA059. Not the two-tone bottle.
+  'healtha2z-b101-docusate-420': catalogShot('healtha2z-b101-docusate-420.jpg'),
+  // Docusate sodium 100 mg, two tone, 100 softgels. SKU FPA002. Not FPA059.
+  'healtha2z-b101-docusate-420-fpa002': catalogShot('healtha2z-b101-docusate-420-fpa002.jpg'),
+  // Docusate sodium 100 mg, 24 packs of 30 (720). SKU FP1024. Not the 30-count bottle.
+  'healtha2z-b101-docusate-420-720': catalogShot('healtha2z-b101-docusate-420-720.jpg'),
+  // Docusate sodium 100 mg, 30 softgels. Not the 720 case.
+  'healtha2z-b101-docusate-420-30': catalogShot('healtha2z-b101-docusate-420-30.jpg'),
+  // Loperamide HCl 2 mg, 12 caplets. SKU FP0697. Not the 288-count case.
+  'healtha2z-b102-loperamide-2': catalogShot('healtha2z-b102-loperamide-2.jpg'),
+  // Loperamide HCl 2 mg, 24 packs of 12 (288). SKU FP0697A. Not the 12-count carton.
+  'healtha2z-b102-loperamide-2-288': catalogShot('healtha2z-b102-loperamide-2-288.jpg'),
+  // Dimenhydrinate 50 mg, 12 tablets. SKU FPA027E. Not the 288-count case.
+  'healtha2z-b102-dimenhydrinate-50': catalogShot('healtha2z-b102-dimenhydrinate-50.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19432,6 +19474,18 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'healtha2z-b101-bisacodyl-398-250-fpa015',
   'healtha2z-b101-bisacodyl-398-25-option',
   'healtha2z-b101-bisacodyl-398-600-fp0917',
+  // Digestive night run 2026-10-23 3:00 AM PT batch 2.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'healtha2z-b101-bismuth-262-200',
+  'healtha2z-b101-bismuth-262-288',
+  'healtha2z-b101-bismuth-262-720',
+  'healtha2z-b101-bismuth-262-30',
+  'healtha2z-b101-docusate-420-fpa002',
+  'healtha2z-b101-docusate-420-720',
+  'healtha2z-b101-docusate-420-30',
+  'healtha2z-b102-loperamide-2-288',
+  // 288-count case is still a letter. Do not inherit the 12-count carton.
+  'healtha2z-b102-dimenhydrinate-50-288',
 ]);
 
 export function previewOverlayImage(
@@ -41932,20 +41986,91 @@ assertBrandMark(
   if (!senna300?.verifiedSku || senna300.url === senna720?.url) {
     throw new Error('Senna 300 must keep its carton and not share the 720 mark');
   }
-  for (const id of [
-    'healtha2z-b101-bisacodyl-398-600',
-    'healtha2z-b101-bisacodyl-398-250',
-    'healtha2z-b101-bisacodyl-398-250-fpa015',
-    'healtha2z-b101-bisacodyl-398-25-option',
-    'healtha2z-b101-bisacodyl-398-600-fp0917',
-  ]) {
-    const image = previewOverlayImage({
-      id,
-      formulaId: 'healtha2z-b101-bisacodyl-398',
-      brand: 'HealthA2Z',
-    });
-    if (!image?.url.startsWith('data:image/svg')) {
-      throw new Error(`${id} must stay a letter until its own front is attached`);
+}
+
+{
+  // Digestive night run 2026-10-23 3:00 AM PT batch 2.
+  // Eighteen cartons. Two attempted rows stay on the official brand mark.
+  const batch1023d: [string, string, string][] = [
+    ['healtha2z-b101-bisacodyl-398-600', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398-600.jpg'],
+    ['healtha2z-b101-bisacodyl-398-250', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398-250.jpg'],
+    ['healtha2z-b101-bisacodyl-398-250-fpa015', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398-250-fpa015.jpg'],
+    ['healtha2z-b101-bisacodyl-398-600-fp0917', 'HealthA2Z', 'healtha2z-b101-bisacodyl-398-600-fp0917.jpg'],
+    ['healtha2z-b101-bisacodyl-404', 'HealthA2Z', 'healtha2z-b101-bisacodyl-404.jpg'],
+    ['healtha2z-b101-bismuth-262', 'HealthA2Z', 'healtha2z-b101-bismuth-262.jpg'],
+    ['healtha2z-b101-bismuth-262-200', 'HealthA2Z', 'healtha2z-b101-bismuth-262-200.jpg'],
+    ['healtha2z-b101-bismuth-262-288', 'HealthA2Z', 'healtha2z-b101-bismuth-262-288.jpg'],
+    ['healtha2z-b101-bismuth-262-720', 'HealthA2Z', 'healtha2z-b101-bismuth-262-720.jpg'],
+    ['healtha2z-b101-bismuth-262-30', 'HealthA2Z', 'healtha2z-b101-bismuth-262-30.jpg'],
+    ['healtha2z-b101-calcium-500', 'HealthA2Z', 'healtha2z-b101-calcium-500.jpg'],
+    ['healtha2z-b101-docusate-420', 'HealthA2Z', 'healtha2z-b101-docusate-420.jpg'],
+    ['healtha2z-b101-docusate-420-fpa002', 'HealthA2Z', 'healtha2z-b101-docusate-420-fpa002.jpg'],
+    ['healtha2z-b101-docusate-420-720', 'HealthA2Z', 'healtha2z-b101-docusate-420-720.jpg'],
+    ['healtha2z-b101-docusate-420-30', 'HealthA2Z', 'healtha2z-b101-docusate-420-30.jpg'],
+    ['healtha2z-b102-loperamide-2', 'HealthA2Z', 'healtha2z-b102-loperamide-2.jpg'],
+    ['healtha2z-b102-loperamide-2-288', 'HealthA2Z', 'healtha2z-b102-loperamide-2-288.jpg'],
+    ['healtha2z-b102-dimenhydrinate-50', 'HealthA2Z', 'healtha2z-b102-dimenhydrinate-50.jpg'],
+  ];
+  const seen1023d = new Set<string>();
+  for (const [id, brand, file] of batch1023d) {
+    if (seen1023d.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen1023d.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const marks1023d: [string, string, string, string][] = [
+    ['healtha2z-b101-bisacodyl-398-25-option', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z', 'healtha2z-mark.png'],
+    ['healtha2z-b101-calcium-750', 'healtha2z-b101-calcium-750', 'HealthA2Z', 'healtha2z-mark.png'],
+  ];
+  for (const [id, formulaId, brand, file] of marks1023d) {
+    assertBrandMark(id, brand, file);
+    const image = previewOverlayImage({ id, formulaId, brand });
+    if (!image?.url.endsWith(`/${file}`) || image.verifiedSku) {
+      throw new Error(`${id} must keep brand mark ${file} and not inherit a sibling carton`);
     }
+  }
+  const groups1023d: [string, string, string][][] = [
+    [
+      ['healtha2z-b101-bisacodyl-398', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-25', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-600', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-250', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-250-fpa015', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+      ['healtha2z-b101-bisacodyl-398-600-fp0917', 'healtha2z-b101-bisacodyl-398', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b101-bismuth-262', 'healtha2z-b101-bismuth-262', 'HealthA2Z'],
+      ['healtha2z-b101-bismuth-262-200', 'healtha2z-b101-bismuth-262', 'HealthA2Z'],
+      ['healtha2z-b101-bismuth-262-288', 'healtha2z-b101-bismuth-262', 'HealthA2Z'],
+      ['healtha2z-b101-bismuth-262-720', 'healtha2z-b101-bismuth-262', 'HealthA2Z'],
+      ['healtha2z-b101-bismuth-262-30', 'healtha2z-b101-bismuth-262', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b101-docusate-420', 'healtha2z-b101-docusate-420', 'HealthA2Z'],
+      ['healtha2z-b101-docusate-420-fpa002', 'healtha2z-b101-docusate-420', 'HealthA2Z'],
+      ['healtha2z-b101-docusate-420-720', 'healtha2z-b101-docusate-420', 'HealthA2Z'],
+      ['healtha2z-b101-docusate-420-30', 'healtha2z-b101-docusate-420', 'HealthA2Z'],
+    ],
+    [
+      ['healtha2z-b102-loperamide-2', 'healtha2z-b102-loperamide-2', 'HealthA2Z'],
+      ['healtha2z-b102-loperamide-2-288', 'healtha2z-b102-loperamide-2', 'HealthA2Z'],
+    ],
+  ];
+  for (const group of groups1023d) {
+    const urls = group.map(([id, formulaId, brand]) => {
+      const image = previewOverlayImage({ id, formulaId, brand });
+      if (!image?.verifiedSku) throw new Error(`${id} must keep its own carton`);
+      return image.url;
+    });
+    if (new Set(urls).size !== group.length) {
+      throw new Error(`Night-photo siblings must not share a photo: ${group.map((row) => row[0]).join(', ')}`);
+    }
+  }
+  const motion288 = previewOverlayImage({
+    id: 'healtha2z-b102-dimenhydrinate-50-288',
+    formulaId: 'healtha2z-b102-dimenhydrinate-50',
+    brand: 'HealthA2Z',
+  });
+  if (!motion288?.url.startsWith('data:image/svg')) {
+    throw new Error('dimenhydrinate 288 must stay a letter and not inherit the 12-count carton');
   }
 }
