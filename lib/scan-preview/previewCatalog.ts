@@ -18553,6 +18553,50 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'pepcid-b161-complete-berry-50': catalogShot('pepcid-b161-complete-berry-50.jpg'),
   // Complete berry chews, 70. UPC 716837291725. Not the cool-mint 70.
   'pepcid-b161-complete-berry-70': catalogShot('pepcid-b161-complete-berry-70.jpg'),
+  // Digestive night run 2026-10-23 6:45 AM PT batch 1.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Complete cool mint chews, 25. UPC 716837888253. Not the 50 or the 70. Not berry.
+  'pepcid-b161-complete-mint-25': catalogShot('pepcid-b161-complete-mint-25.jpg'),
+  // Complete cool mint chews, 50. UPC 716837888505. Not the 25.
+  'pepcid-b161-complete-mint-50': catalogShot('pepcid-b161-complete-mint-50.jpg'),
+  // Complete cool mint chews, 70. UPC 716837888727. Not the berry 70.
+  'pepcid-b161-complete-mint-70': catalogShot('pepcid-b161-complete-mint-70.jpg'),
+  // Soothing gummies, heartburn + stress, peach raspberry, 32. UPC 716837684329.
+  // Not the strawberry sleep gummies.
+  'pepcid-b161-stress-gummy-32': catalogShot('pepcid-b161-stress-gummy-32.jpg'),
+  // Prilosec OTC tablets, 14. One 14-day course. UPC 037000359050. Not wildberry.
+  'prilosec-b161-tablets-14': catalogShot('prilosec-b161-tablets-14.jpg'),
+  // Prilosec OTC tablets, 42. Three 14-day courses. UPC 037000359074. Not wildberry.
+  'prilosec-b161-tablets-42': catalogShot('prilosec-b161-tablets-42.jpg'),
+  // Prilosec OTC Wildberry, 42. UPC 030772202852. Not the regular 42.
+  'prilosec-b161-wildberry-42': catalogShot('prilosec-b161-wildberry-42.jpg'),
+  // Prilosec OTC Wildberry, 14. UPC 030772202869. Not the 42.
+  'prilosec-b162-wildberry-14': catalogShot('prilosec-b162-wildberry-14.jpg'),
+  // Soothing gummies, heartburn + sleep, strawberry, 32. UPC 716837685326.
+  // Not the peach raspberry stress gummies.
+  'pepcid-b162-sleep-gummy-32': catalogShot('pepcid-b162-sleep-gummy-32.jpg'),
+  // Nexium 24HR capsules, 14. UPC 305732450148. Not ClearMinis. Not the 42.
+  'nexium-b164-capsules-14': catalogShot('nexium-b164-capsules-14.jpg'),
+  // Nexium 24HR capsules, 42. UPC 305732450421. Not ClearMinis.
+  'nexium-b164-capsules-42': catalogShot('nexium-b164-capsules-42.jpg'),
+  // Nexium 24HR ClearMinis, 14. UPC 305732452142. Not the regular capsules.
+  'nexium-b164-clearminis-14': catalogShot('nexium-b164-clearminis-14.jpg'),
+  // Nexium 24HR ClearMinis, 42. UPC 305732452425. Not the 14.
+  'nexium-b164-clearminis-42': catalogShot('nexium-b164-clearminis-42.jpg'),
+  // Prevacid 24HR capsules, 14. UPC 370030165179. Not the 42.
+  'prevacid-b164-capsules-14': catalogShot('prevacid-b164-capsules-14.jpg'),
+  // Prevacid 24HR capsules, 42. UPC 370030165186. Not the 14.
+  'prevacid-b164-capsules-42': catalogShot('prevacid-b164-capsules-42.jpg'),
+  // Zantac 360 Maximum Strength, 8 tablets. UPC 681421036108. Not the 25 or the 50.
+  'zantac-b164-max-8': catalogShot('zantac-b164-max-8.jpg'),
+  // Zantac 360 Maximum Strength, 25 tablets. UPC 681421036122. Not cool mint.
+  'zantac-b164-max-25': catalogShot('zantac-b164-max-25.jpg'),
+  // Zantac 360 Maximum Strength, 50 tablets. UPC 681421036146. Not the 25.
+  'zantac-b164-max-50': catalogShot('zantac-b164-max-50.jpg'),
+  // Zantac 360 Maximum Strength Cool Mint, 25 tablets. UPC 681421036405. Not the unflavored 25.
+  'zantac-b164-cool-mint-25': catalogShot('zantac-b164-cool-mint-25.jpg'),
+  // Little Remedies Gripe Water with chamomile, 4 fl oz. UPC 756184122778. Not the gas drops.
+  'little-remedies-b166-gripe-4': catalogShot('little-remedies-b166-gripe-4.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -19700,6 +19744,19 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'pepcid-b161-complete-berry-25',
   'pepcid-b161-complete-berry-50',
   'pepcid-b161-complete-berry-70',
+  // Digestive night run 2026-10-23 6:45 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'prilosec-b161-tablets-14',
+  'prilosec-b161-tablets-42',
+  'nexium-b164-capsules-14',
+  'nexium-b164-capsules-42',
+  'nexium-b164-clearminis-14',
+  'nexium-b164-clearminis-42',
+  'prevacid-b164-capsules-14',
+  'prevacid-b164-capsules-42',
+  'zantac-b164-max-8',
+  'zantac-b164-max-25',
+  'zantac-b164-max-50',
 ]);
 
 export function previewOverlayImage(
@@ -42575,15 +42632,80 @@ assertBrandMark(
   if (dye150?.verifiedSku || dye150?.url === peppermint150?.url) {
     throw new Error('assorted 150 must not use the peppermint bottle');
   }
-  const mint25 = previewOverlayImage({
-    id: 'pepcid-b161-complete-mint-25',
-    formulaId: 'pepcid-b161-complete-mint25',
-    brand: 'Pepcid',
+}
+
+{
+  // Digestive night run 2026-10-23 6:45 AM PT batch 1.
+  // Twenty cartons. Sibling counts and flavors do not share a file.
+  const batch645a: [string, string, string][] = [
+    ['pepcid-b161-complete-mint-25', 'Pepcid', 'pepcid-b161-complete-mint-25.jpg'],
+    ['pepcid-b161-complete-mint-50', 'Pepcid', 'pepcid-b161-complete-mint-50.jpg'],
+    ['pepcid-b161-complete-mint-70', 'Pepcid', 'pepcid-b161-complete-mint-70.jpg'],
+    ['pepcid-b161-stress-gummy-32', 'Pepcid', 'pepcid-b161-stress-gummy-32.jpg'],
+    ['prilosec-b161-tablets-14', 'Prilosec', 'prilosec-b161-tablets-14.jpg'],
+    ['prilosec-b161-tablets-42', 'Prilosec', 'prilosec-b161-tablets-42.jpg'],
+    ['prilosec-b161-wildberry-42', 'Prilosec', 'prilosec-b161-wildberry-42.jpg'],
+    ['prilosec-b162-wildberry-14', 'Prilosec', 'prilosec-b162-wildberry-14.jpg'],
+    ['pepcid-b162-sleep-gummy-32', 'Pepcid', 'pepcid-b162-sleep-gummy-32.jpg'],
+    ['nexium-b164-capsules-14', 'Nexium', 'nexium-b164-capsules-14.jpg'],
+    ['nexium-b164-capsules-42', 'Nexium', 'nexium-b164-capsules-42.jpg'],
+    ['nexium-b164-clearminis-14', 'Nexium', 'nexium-b164-clearminis-14.jpg'],
+    ['nexium-b164-clearminis-42', 'Nexium', 'nexium-b164-clearminis-42.jpg'],
+    ['prevacid-b164-capsules-14', 'Prevacid', 'prevacid-b164-capsules-14.jpg'],
+    ['prevacid-b164-capsules-42', 'Prevacid', 'prevacid-b164-capsules-42.jpg'],
+    ['zantac-b164-max-8', 'Zantac', 'zantac-b164-max-8.jpg'],
+    ['zantac-b164-max-25', 'Zantac', 'zantac-b164-max-25.jpg'],
+    ['zantac-b164-max-50', 'Zantac', 'zantac-b164-max-50.jpg'],
+    ['zantac-b164-cool-mint-25', 'Zantac', 'zantac-b164-cool-mint-25.jpg'],
+    ['little-remedies-b166-gripe-4', 'Little Remedies', 'little-remedies-b166-gripe-4.jpg'],
+  ];
+  const seen645a = new Set<string>();
+  for (const [id, brand, file] of batch645a) {
+    if (seen645a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen645a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const shared645a: [string, string, string][] = [
+    ['prilosec-b161-tablets-14', 'prilosec-b161-tablets', 'Prilosec'],
+    ['prilosec-b161-tablets-42', 'prilosec-b161-tablets', 'Prilosec'],
+    ['nexium-b164-capsules-14', 'nexium-b164-capsules', 'Nexium'],
+    ['nexium-b164-capsules-42', 'nexium-b164-capsules', 'Nexium'],
+    ['nexium-b164-clearminis-14', 'nexium-b164-clearminis', 'Nexium'],
+    ['nexium-b164-clearminis-42', 'nexium-b164-clearminis', 'Nexium'],
+    ['prevacid-b164-capsules-14', 'prevacid-b164-capsules', 'Prevacid'],
+    ['prevacid-b164-capsules-42', 'prevacid-b164-capsules', 'Prevacid'],
+    ['zantac-b164-max-8', 'zantac-b164-max', 'Zantac'],
+    ['zantac-b164-max-25', 'zantac-b164-max', 'Zantac'],
+    ['zantac-b164-max-50', 'zantac-b164-max', 'Zantac'],
+  ];
+  const sharedUrls = shared645a.map(([id, formulaId, brand]) => (
+    previewOverlayImage({ id, formulaId, brand })?.url
+  ));
+  if (new Set(sharedUrls).size !== sharedUrls.length || sharedUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('shared-formula Digestive counts must keep separate cartons');
+  }
+  const coolMint = previewOverlayImage({
+    id: 'zantac-b164-cool-mint-25',
+    formulaId: 'zantac-b164-cool-mint',
+    brand: 'Zantac',
   });
-  const mintText = mint25?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(mint25.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const plain25 = previewOverlayImage({
+    id: 'zantac-b164-max-25',
+    formulaId: 'zantac-b164-max',
+    brand: 'Zantac',
+  });
+  if (!coolMint?.verifiedSku || coolMint.url === plain25?.url) {
+    throw new Error('Zantac cool mint 25 must not use the unflavored 25-count carton');
+  }
+  const nextGas = previewOverlayImage({
+    id: 'little-remedies-b170-gas-drops-strawberry',
+    formulaId: 'little-remedies-b170-gas-drops-strawberry',
+    brand: 'Little Remedies',
+  });
+  const nextLetter = nextGas?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextGas.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (mint25?.verifiedSku || mintText !== 'P') {
-    throw new Error('unattempted Pepcid Complete mint 25 must stay a letter');
+  if (nextGas?.verifiedSku || nextLetter !== 'L') {
+    throw new Error('unattempted Little Remedies strawberry gas drops must stay a letter');
   }
 }
