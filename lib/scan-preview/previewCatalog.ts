@@ -3239,6 +3239,20 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Easy Mix Fiber unflavored 30-day / 7.1 oz. The variant image is a flat
   // sticker. The gallery pouch is the 24-day / 5.7 oz sibling. Official wordmark.
   'physicianschoice-b230-easy-mix-fiber-unflavored-30': brandMark('physicianschoice-mark.png'),
+  // Digestive night run 2026-10-24 4:15 AM PT batch 2.
+  // Tried each SKU. No matching count on a 3D face. Official wordmark.
+  // 340 capsules: brand capsules page stops at 100 / 160 / 300. Do not glue the 160.
+  'metamucil-b256-capsules-340': brandMark('metamucil-mark.png'),
+  // 30-count real-sugar canister. The 30-packet box and the 72-tablespoon canister
+  // are different packs. No 30-count canister face retrieved.
+  'metamucil-b257-real-sugar-orange-30': brandMark('metamucil-mark.png'),
+  // 30-count sugar-free canister. Not the 72, 114, or 180.
+  'metamucil-b257-sf-orange-30': brandMark('metamucil-mark.png'),
+  // Premium Blend 23.1 / 23.5 oz. The only brand face retrieved is the 14.9 oz can.
+  'metamucil-b257-premium-blend-23': brandMark('metamucil-mark.png'),
+  // Strawberry lemonade sticks. The brand box prints 28 packs, not 36 or 24.
+  'benefiber-b256-lemonade-36': brandMark('benefiber-mark.png'),
+  'benefiber-b257-lemonade-24': brandMark('benefiber-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18956,6 +18970,54 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Metamucil Fiber Thins, cinnamon spice, 12 packets / 9.3 oz. UPC 037000740926. Not apple.
   'metamucil-b254-fiber-thins-cinnamon-12': catalogShot(
     'metamucil-b254-fiber-thins-cinnamon-12.jpg',
+  ),
+  // Digestive night run 2026-10-24 4:15 AM PT batch 2.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Fiber + Vitamins sparkling powder, citrus, 24.9 oz. UPC 030772095607. Not the 29.8 oz.
+  'metamucil-b254-sparkling-fiber-vitamins': catalogShot(
+    'metamucil-b254-sparkling-fiber-vitamins.jpg',
+  ),
+  // Clear Fiber Blend, unflavored, 11.6 oz. UPC 030772146576.
+  'metamucil-b254-clear-fiber-11-6': catalogShot(
+    'metamucil-b254-clear-fiber-11-6.jpg',
+  ),
+  // Benefiber caplets, 84. UPC 886790326519.
+  'benefiber-b254-caplets-84': catalogShot('benefiber-b254-caplets-84.jpg'),
+  // Benefiber unflavored sticks, 28. UPC 886790162803. Not the 48.
+  'benefiber-b254-sticks-unflavored-28': catalogShot(
+    'benefiber-b254-sticks-unflavored-28.jpg',
+  ),
+  // Benefiber original powder, 124 teaspoons / 8.7 oz. UPC 886790216209. Not the 17.6 oz.
+  'benefiber-b255-powder-124': catalogShot('benefiber-b255-powder-124.jpg'),
+  // Metamucil real-sugar orange powder, 114 tablespoons / 48.2 oz. UPC 037000741343. Not the 72.
+  'metamucil-b256-real-sugar-orange-114': catalogShot(
+    'metamucil-b256-real-sugar-orange-114.jpg',
+  ),
+  // Metamucil sugar-free orange powder, 72 teaspoons. UPC 037000740841. Not the 114 or the 180.
+  'metamucil-b256-sf-orange-72': catalogShot('metamucil-b256-sf-orange-72.jpg'),
+  // Metamucil sugar-free orange powder, 114 teaspoons / 23.3 oz. UPC 037000740858.
+  'metamucil-b256-sf-orange-114': catalogShot('metamucil-b256-sf-orange-114.jpg'),
+  // Metamucil sugar-free orange powder, 180 teaspoons / 36.8 oz. UPC 037000741367.
+  'metamucil-b256-sf-orange-180': catalogShot('metamucil-b256-sf-orange-180.jpg'),
+  // Metamucil real-sugar orange packets, 30. UPC 037000740872. Not the canister.
+  'metamucil-b257-real-sugar-orange-packets-30': catalogShot(
+    'metamucil-b257-real-sugar-orange-packets-30.jpg',
+  ),
+  // Metamucil Premium Blend, 14.9 oz / 72 teaspoons. Not the 23 oz can.
+  'metamucil-b257-premium-blend-14-9': catalogShot(
+    'metamucil-b257-premium-blend-14-9.jpg',
+  ),
+  // Metamucil Fiber + Probiotics gummies, 60. UPC 030772144596. Not the 90. Not a 2-pack.
+  'metamucil-b257-fiber-probiotic-gummy-60': catalogShot(
+    'metamucil-b257-fiber-probiotic-gummy-60.jpg',
+  ),
+  // Benefiber prebiotic + probiotic gummies, 50. UPC 886790121701. Not the 81-count fiber gummies.
+  'benefiber-b257-probiotic-gummy-50': catalogShot(
+    'benefiber-b257-probiotic-gummy-50.jpg',
+  ),
+  // Benefiber unflavored sticks, 48. UPC 886790121763. Not the 28.
+  'benefiber-b257-sticks-unflavored-48': catalogShot(
+    'benefiber-b257-sticks-unflavored-48.jpg',
   ),
 };
 
@@ -43657,33 +43719,99 @@ assertBrandMark(
   if (easy30?.verifiedSku || easy30?.url !== '/scan-preview/physicianschoice-mark.png' || easy30?.url === unflavored24?.url) {
     throw new Error('Easy Mix 7.1 oz must stay the brand mark, not the 5.7 oz tub');
   }
-  const realSugarLetter = realSugar114?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(realSugar114.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
-    : undefined;
-  const cap340Letter = capsules340?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(capsules340.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
-    : undefined;
-  const prob60Letter = prob60?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(prob60.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
-    : undefined;
-  if (!realSugar72?.verifiedSku || realSugar114?.url === realSugar72.url || realSugarLetter !== 'M') {
-    throw new Error('114-count real-sugar orange must not inherit the 72');
-  }
-  if (!capsules160?.verifiedSku || capsules340?.url === capsules160.url || cap340Letter !== 'M') {
-    throw new Error('340-count capsules must not inherit the 160');
-  }
-  if (!prob90?.verifiedSku || prob60?.url === prob90.url || prob60Letter !== 'M') {
-    throw new Error('60-count probiotic gummies must not inherit the 90');
-  }
-  const nextSpark = previewOverlayImage({
-    id: 'metamucil-b254-sparkling-fiber-vitamins',
-    formulaId: 'metamucil-b254-sparkling-fiber-vitamins',
+  const sf72 = previewOverlayImage({
+    id: 'metamucil-b256-sf-orange-72',
+    formulaId: 'metamucil-sf-orange-powder',
     brand: 'Metamucil',
   });
-  const nextLetter = nextSpark?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextSpark.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const sf114 = previewOverlayImage({
+    id: 'metamucil-b256-sf-orange-114',
+    formulaId: 'metamucil-sf-orange-powder',
+    brand: 'Metamucil',
+  });
+  const sf180 = previewOverlayImage({
+    id: 'metamucil-b256-sf-orange-180',
+    formulaId: 'metamucil-sf-orange-powder',
+    brand: 'Metamucil',
+  });
+  const powder176 = previewOverlayImage({
+    id: 'benefiber-b248-powder-125',
+    formulaId: 'benefiber-b248-powder-wheat-dextrin',
+    brand: 'Benefiber',
+  });
+  const powder87 = previewOverlayImage({
+    id: 'benefiber-b255-powder-124',
+    formulaId: 'benefiber-b248-powder-wheat-dextrin',
+    brand: 'Benefiber',
+  });
+  const sticks28 = previewOverlayImage({
+    id: 'benefiber-b254-sticks-unflavored-28',
+    formulaId: 'benefiber-b254-sticks-unflavored-28',
+    brand: 'Benefiber',
+  });
+  const sticks48 = previewOverlayImage({
+    id: 'benefiber-b257-sticks-unflavored-48',
+    formulaId: 'benefiber-b254-sticks-unflavored-28',
+    brand: 'Benefiber',
+  });
+  const prem149 = previewOverlayImage({
+    id: 'metamucil-b257-premium-blend-14-9',
+    formulaId: 'metamucil-b257-premium-blend-14-9',
+    brand: 'Metamucil',
+  });
+  const prem23 = previewOverlayImage({
+    id: 'metamucil-b257-premium-blend-23',
+    formulaId: 'metamucil-b257-premium-blend-orange',
+    brand: 'Metamucil',
+  });
+  const lem36 = previewOverlayImage({
+    id: 'benefiber-b256-lemonade-36',
+    formulaId: 'benefiber-b256-lemonade-sticks',
+    brand: 'Benefiber',
+  });
+  const lem24 = previewOverlayImage({
+    id: 'benefiber-b257-lemonade-24',
+    formulaId: 'benefiber-b257-lemonade-24',
+    brand: 'Benefiber',
+  });
+  if (!realSugar72?.verifiedSku || !realSugar114?.verifiedSku || realSugar114.url === realSugar72.url) {
+    throw new Error('114-count real-sugar orange must keep its own carton');
+  }
+  if (
+    !capsules160?.verifiedSku
+    || capsules340?.verifiedSku
+    || capsules340?.url === capsules160.url
+    || capsules340?.url !== '/scan-preview/metamucil-mark.png'
+  ) {
+    throw new Error('340-count capsules must stay the Metamucil mark, not the 160');
+  }
+  if (!prob90?.verifiedSku || !prob60?.verifiedSku || prob60.url === prob90.url) {
+    throw new Error('60-count probiotic gummies must keep their own carton');
+  }
+  if (!sf72?.verifiedSku || !sf114?.verifiedSku || !sf180?.verifiedSku || new Set([sf72.url, sf114.url, sf180.url]).size !== 3) {
+    throw new Error('sugar-free orange 72, 114, and 180 must stay apart');
+  }
+  if (!powder176?.verifiedSku || !powder87?.verifiedSku || powder176.url === powder87.url) {
+    throw new Error('Benefiber 17.6 oz and 8.7 oz powders must stay apart');
+  }
+  if (!sticks28?.verifiedSku || !sticks48?.verifiedSku || sticks28.url === sticks48.url) {
+    throw new Error('Benefiber 28-count and 48-count sticks must stay apart');
+  }
+  if (!prem149?.verifiedSku || prem23?.verifiedSku || prem23?.url === prem149.url || prem23?.url !== '/scan-preview/metamucil-mark.png') {
+    throw new Error('Premium Blend 23 oz must stay the mark, not the 14.9 oz can');
+  }
+  if (lem36?.verifiedSku || lem24?.verifiedSku || lem36?.url !== '/scan-preview/benefiber-mark.png' || lem24?.url !== lem36?.url) {
+    throw new Error('lemonade 24 and 36 must stay the Benefiber mark');
+  }
+  const nextFruit = previewOverlayImage({
+    id: 'benefiber-b257-superfruits',
+    formulaId: 'benefiber-b257-superfruits',
+    brand: 'Benefiber',
+  });
+  const nextLetter = nextFruit?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextFruit.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextSpark?.verifiedSku || nextLetter !== 'M') {
-    throw new Error('unattempted sparkling fiber vitamins must stay a letter');
+  if (nextFruit?.verifiedSku || nextLetter !== 'B') {
+    throw new Error('unattempted Benefiber superfruits must stay a letter');
   }
 }
