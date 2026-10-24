@@ -18755,6 +18755,50 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'florastor-b221-advanced-pro-pre-30': catalogShot('florastor-b221-advanced-pro-pre-30.jpg'),
   // Florastor Advanced Immunity, 30. UPC 704142000439. Not Gas & Bloat.
   'florastor-b221-advanced-immunity-30': catalogShot('florastor-b221-advanced-immunity-30.jpg'),
+  // Digestive night run 2026-10-24 3:00 AM PT batch 1.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Florastor Digest + Metabolic gummies, 56, peach lemonade. UPC 704142881304. Not a capsule box.
+  'florastor-b221-digest-metabolic-gummies-56': catalogShot(
+    'florastor-b221-digest-metabolic-gummies-56.jpg',
+  ),
+  // Her Florastor Digest + De-Stress, 30 capsules. UPC 704142623409. Not the 90. Not the 3-pack.
+  'florastor-b221-her-digest-destress-30': catalogShot('florastor-b221-her-digest-destress-30.jpg'),
+  // Lactaid Fast Act caplets, 60. UPC 300450910608. Not the 12, 32, or 96.
+  'lactaid-b221-fast-act-caplets-60': catalogShot('lactaid-b221-fast-act-caplets-60.jpg'),
+  // Lactaid Fast Act chewables, vanilla twist, 60. UPC 300450930606. Not the 32. Not the caplets.
+  'lactaid-b221-fast-act-chewables-60': catalogShot('lactaid-b221-fast-act-chewables-60.jpg'),
+  // Lactaid Original Strength caplets, 120. UPC 300450080028. Not Fast Act.
+  'lactaid-b221-original-strength-120': catalogShot('lactaid-b221-original-strength-120.jpg'),
+  // FlorastorKids tutti-frutti sticks, 20. UPC 704142000408. Not the 30-stick box.
+  'florastor-b222-kids-20': catalogShot('florastor-b222-kids-20.jpg'),
+  // Florastor Digest + Skin Renew, 30 capsules. UPC 704142624406. Not Metabolic gummies.
+  'florastor-b222-skin-renew-30': catalogShot('florastor-b222-skin-renew-30.jpg'),
+  // Lactaid Fast Act caplets, 12. UPC 300450910127. Not the 32, 60, or 96.
+  'lactaid-b222-fast-act-caplets-12': catalogShot('lactaid-b222-fast-act-caplets-12.jpg'),
+  // Lactaid Fast Act caplets, 32. UPC 300450910325. Not the 12 or the 60.
+  'lactaid-b222-fast-act-caplets-32': catalogShot('lactaid-b222-fast-act-caplets-32.jpg'),
+  // Lactaid Fast Act caplets, 96. Official 96-count face. Not the 60.
+  'lactaid-b222-fast-act-caplets-96': catalogShot('lactaid-b222-fast-act-caplets-96.jpg'),
+  // Lactaid Fast Act chewables, vanilla twist, 32. UPC 300450930323. Not the 60.
+  'lactaid-b222-fast-act-chewables-32': catalogShot('lactaid-b222-fast-act-chewables-32.jpg'),
+  // Beano Extra Strength tablets, 100. UPC 042037103002. Not the 30.
+  'beano-b222-tablets-100': catalogShot('beano-b222-tablets-100.jpg'),
+  // Beano Extra Strength tablets, 30. UPC 042037103040. Not the 100.
+  'beano-b222-tablets-30': catalogShot('beano-b222-tablets-30.jpg'),
+  // Goli Pre+Post+Probiotics gummies, 60. UPC 055840403962. Not Zero Sugar. Not a multipack.
+  'goli-b223-pre-post-probiotics-60': catalogShot('goli-b223-pre-post-probiotics-60.jpg'),
+  // Goli Zero Sugar Pre+Post+Probiotics gummies, 60. UPC 055840405515. Not the regular bottle.
+  'goli-b223-zs-pre-post-probiotics-60': catalogShot('goli-b223-zs-pre-post-probiotics-60.jpg'),
+  // Physician's Choice 60 Billion Probiotic, 30 capsules. UPC 854226008513. Not the 60.
+  'physicianschoice-b225-60b-probiotic-30': catalogShot('physicianschoice-b225-60b-probiotic-30.jpg'),
+  // Physician's Choice 60 Billion Probiotic, 60 capsules. UPC 854226008582. Not the 30.
+  'physicianschoice-b225-60b-probiotic-60': catalogShot('physicianschoice-b225-60b-probiotic-60.jpg'),
+  // Physician's Choice Women's Probiotic, 30 capsules. UPC 854226008506. Not the 60.
+  'physicianschoice-b225-womens-probiotic-30': catalogShot('physicianschoice-b225-womens-probiotic-30.jpg'),
+  // Physician's Choice Women's Probiotic, 60 capsules. UPC 854226008780. Not the 30.
+  'physicianschoice-b225-womens-probiotic-60': catalogShot('physicianschoice-b225-womens-probiotic-60.jpg'),
+  // Physician's Choice Thin 30 Probiotic, 30 capsules. UPC 854226008186. Not the 60.
+  'physicianschoice-b225-thin-30-probiotic-30': catalogShot('physicianschoice-b225-thin-30-probiotic-30.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -43167,10 +43211,105 @@ assertBrandMark(
     formulaId: 'florastor-b221-digest-metabolic-gummies',
     brand: 'Florastor',
   });
-  const nextGummyLetter = nextGummy?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextGummy.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const dual100 = previewOverlayImage({
+    id: 'florastor-b221-dual-action-100',
+    formulaId: 'florastor-b221-dual-action',
+    brand: 'Florastor',
+  });
+  if (!nextGummy?.verifiedSku || nextGummy.url === dual100?.url) {
+    throw new Error('Digest + Metabolic gummies must not use a Dual Action carton');
+  }
+}
+
+{
+  // Digestive night run 2026-10-24 3:00 AM PT batch 1.
+  // Twenty cartons. Sibling counts and flavors do not share a file.
+  const batch300a: [string, string, string][] = [
+    ['florastor-b221-digest-metabolic-gummies-56', 'Florastor', 'florastor-b221-digest-metabolic-gummies-56.jpg'],
+    ['florastor-b221-her-digest-destress-30', 'Florastor', 'florastor-b221-her-digest-destress-30.jpg'],
+    ['lactaid-b221-fast-act-caplets-60', 'Lactaid', 'lactaid-b221-fast-act-caplets-60.jpg'],
+    ['lactaid-b221-fast-act-chewables-60', 'Lactaid', 'lactaid-b221-fast-act-chewables-60.jpg'],
+    ['lactaid-b221-original-strength-120', 'Lactaid', 'lactaid-b221-original-strength-120.jpg'],
+    ['florastor-b222-kids-20', 'Florastor', 'florastor-b222-kids-20.jpg'],
+    ['florastor-b222-skin-renew-30', 'Florastor', 'florastor-b222-skin-renew-30.jpg'],
+    ['lactaid-b222-fast-act-caplets-12', 'Lactaid', 'lactaid-b222-fast-act-caplets-12.jpg'],
+    ['lactaid-b222-fast-act-caplets-32', 'Lactaid', 'lactaid-b222-fast-act-caplets-32.jpg'],
+    ['lactaid-b222-fast-act-caplets-96', 'Lactaid', 'lactaid-b222-fast-act-caplets-96.jpg'],
+    ['lactaid-b222-fast-act-chewables-32', 'Lactaid', 'lactaid-b222-fast-act-chewables-32.jpg'],
+    ['beano-b222-tablets-100', 'Beano', 'beano-b222-tablets-100.jpg'],
+    ['beano-b222-tablets-30', 'Beano', 'beano-b222-tablets-30.jpg'],
+    ['goli-b223-pre-post-probiotics-60', 'Goli', 'goli-b223-pre-post-probiotics-60.jpg'],
+    ['goli-b223-zs-pre-post-probiotics-60', 'Goli', 'goli-b223-zs-pre-post-probiotics-60.jpg'],
+    ['physicianschoice-b225-60b-probiotic-30', "Physician's Choice", 'physicianschoice-b225-60b-probiotic-30.jpg'],
+    ['physicianschoice-b225-60b-probiotic-60', "Physician's Choice", 'physicianschoice-b225-60b-probiotic-60.jpg'],
+    ['physicianschoice-b225-womens-probiotic-30', "Physician's Choice", 'physicianschoice-b225-womens-probiotic-30.jpg'],
+    ['physicianschoice-b225-womens-probiotic-60', "Physician's Choice", 'physicianschoice-b225-womens-probiotic-60.jpg'],
+    ['physicianschoice-b225-thin-30-probiotic-30', "Physician's Choice", 'physicianschoice-b225-thin-30-probiotic-30.jpg'],
+  ];
+  const seen300a = new Set<string>();
+  for (const [id, brand, file] of batch300a) {
+    if (seen300a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen300a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const shared300a: [string, string, string][] = [
+    ['lactaid-b221-fast-act-caplets-60', 'lactaid-b221-fast-act-caplet', 'Lactaid'],
+    ['lactaid-b222-fast-act-caplets-12', 'lactaid-b221-fast-act-caplet', 'Lactaid'],
+    ['lactaid-b222-fast-act-caplets-32', 'lactaid-b221-fast-act-caplet', 'Lactaid'],
+    ['lactaid-b222-fast-act-caplets-96', 'lactaid-b221-fast-act-caplet', 'Lactaid'],
+    ['lactaid-b221-fast-act-chewables-60', 'lactaid-b221-fast-act-chewable', 'Lactaid'],
+    ['lactaid-b222-fast-act-chewables-32', 'lactaid-b221-fast-act-chewable', 'Lactaid'],
+    ['beano-b222-tablets-100', 'beano-b222-tablets', 'Beano'],
+    ['beano-b222-tablets-30', 'beano-b222-tablets', 'Beano'],
+    ['physicianschoice-b225-60b-probiotic-30', 'physicianschoice-b225-60b-probiotic-30', "Physician's Choice"],
+    ['physicianschoice-b225-60b-probiotic-60', 'physicianschoice-b225-60b-probiotic-60', "Physician's Choice"],
+    ['physicianschoice-b225-womens-probiotic-30', 'physicianschoice-b225-womens-probiotic-30', "Physician's Choice"],
+    ['physicianschoice-b225-womens-probiotic-60', 'physicianschoice-b225-womens-probiotic-60', "Physician's Choice"],
+    ['goli-b223-pre-post-probiotics-60', 'goli-b223-pre-post-probiotics', 'Goli'],
+    ['goli-b223-zs-pre-post-probiotics-60', 'goli-b223-zs-pre-post-probiotics', 'Goli'],
+  ];
+  const sharedUrls = shared300a.map(([id, formulaId, brand]) => (
+    previewOverlayImage({ id, formulaId, brand })?.url
+  ));
+  if (new Set(sharedUrls).size !== sharedUrls.length || sharedUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('3:00 AM batch 1 siblings must keep separate cartons');
+  }
+  const fastAct60 = previewOverlayImage({
+    id: 'lactaid-b221-fast-act-caplets-60',
+    formulaId: 'lactaid-b221-fast-act-caplet',
+    brand: 'Lactaid',
+  });
+  const original120 = previewOverlayImage({
+    id: 'lactaid-b221-original-strength-120',
+    formulaId: 'lactaid-b221-original-strength',
+    brand: 'Lactaid',
+  });
+  const chew60 = previewOverlayImage({
+    id: 'lactaid-b221-fast-act-chewables-60',
+    formulaId: 'lactaid-b221-fast-act-chewable',
+    brand: 'Lactaid',
+  });
+  if (
+    !original120?.verifiedSku
+    || original120.url === fastAct60?.url
+    || original120.url === chew60?.url
+  ) {
+    throw new Error('Lactaid Original 120 must not use a Fast Act carton');
+  }
+  const thin30 = previewOverlayImage({
+    id: 'physicianschoice-b225-thin-30-probiotic-30',
+    formulaId: 'physicianschoice-b225-thin-30-probiotic-30',
+    brand: "Physician's Choice",
+  });
+  const thin60 = previewOverlayImage({
+    id: 'physicianschoice-b225-thin-30-probiotic-60',
+    formulaId: 'physicianschoice-b225-thin-30-probiotic-60',
+    brand: "Physician's Choice",
+  });
+  const thin60Letter = thin60?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(thin60.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextGummy?.verifiedSku || nextGummyLetter !== 'F') {
-    throw new Error('unattempted Florastor Digest + Metabolic gummies must stay a letter');
+  if (!thin30?.verifiedSku || thin30.url === thin60?.url || thin60Letter !== 'P') {
+    throw new Error('Thin 30 60-count must stay a letter and not use the 30-count bottle');
   }
 }
