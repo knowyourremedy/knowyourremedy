@@ -3253,6 +3253,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Strawberry lemonade sticks. The brand box prints 28 packs, not 36 or 24.
   'benefiber-b256-lemonade-36': brandMark('benefiber-mark.png'),
   'benefiber-b257-lemonade-24': brandMark('benefiber-mark.png'),
+  // Digestive night run 2026-10-24 6:45 AM PT batch 1.
+  // Women's Wellness chewables, 60. The brand 60 selector uses the 30-count
+  // box and a 2-pack GTIN. No distinct 60-count face. Official wordmark.
+  // Not the 30-count carton.
+  'culturelle-b265-womens-wellness-60': brandMark('culturelle-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -19144,6 +19149,74 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   // Colon Health capsules, LGG + BB-12, 45. UPC 312843543508. Not the 30 or 60.
   'phillips-b262-colon-health-45': catalogShot(
     'phillips-b262-colon-health-45.jpg',
+  ),
+  // Digestive night run 2026-10-24 6:45 AM PT batch 1.
+  // Vitamins letters were 0. These are the next Digestive letters, catalog order.
+  // Exact fronts. Sibling counts do not share a file.
+  // Colon Health capsules, LGG + BB-12, 60. UPC 312843541207. The front prints 60 and 3 billion CFU.
+  // Not the 30 or 45. Not the older gasseri box.
+  'phillips-b262-colon-health-60': catalogShot(
+    'phillips-b262-colon-health-60.jpg',
+  ),
+  // Kids Probiotic + Multivitamin chewables, fruit punch, 30. UPC 049100400761.
+  // The box prints 30. Not the 2-pack. Not the Multivitamin + Probiotic 50 or 90.
+  'culturelle-b262-kids-multi-chew-30': catalogShot(
+    'culturelle-b262-kids-multi-chew-30.jpg',
+  ),
+  // Kids Multivitamin + Probiotic chewables, 50. UPC 049100400709. The bottle prints 50. Not the 90.
+  'culturelle-b262-kids-multi-chew-50': catalogShot(
+    'culturelle-b262-kids-multi-chew-50.jpg',
+  ),
+  // Women's Probiotics + Multivitamin gummies, 60. UPC 049100402024. The bottle prints 60.
+  'culturelle-b262-womens-gummies-60': catalogShot(
+    'culturelle-b262-womens-gummies-60.jpg',
+  ),
+  // Cherry Milk of Magnesia, 26 fl oz. The front prints 26 FL OZ and wild cherry.
+  // Not a smaller bottle. Not the mint or original.
+  'phillips-b263-cherry-mom-26': catalogShot('phillips-b263-cherry-mom-26.jpg'),
+  // Kids gummies, mixed fruit, 50. The bottle prints 50. Not the yogurt bites.
+  'align-b263-kids-gummies-50': catalogShot('align-b263-kids-gummies-50.jpg'),
+  // Gut Health + Immune Support capsules, 28. UPC 037000772811. The front prints 28.
+  'align-b263-immunity-28': catalogShot('align-b263-immunity-28.jpg'),
+  // Kids Purely Probiotic packets, 50. UPC 049100400266. The box prints 50. Not the 30.
+  'culturelle-b263-purely-packets-50': catalogShot(
+    'culturelle-b263-purely-packets-50.jpg',
+  ),
+  // Ultimate Strength capsules, 20. UPC 049100400358. The box prints 20. Not the 30.
+  'culturelle-b263-ultimate-strength-20': catalogShot(
+    'culturelle-b263-ultimate-strength-20.jpg',
+  ),
+  // Kids yogurt-coated fruit bites, 21 pouches. The box prints 21. Not the gummies.
+  'align-b264-yogurt-bites-21': catalogShot('align-b264-yogurt-bites-21.jpg'),
+  // Fiber Good gummies, 90. UPC 312843568013. The bottle prints 90.
+  'phillips-b264-fiber-gummies-90': catalogShot(
+    'phillips-b264-fiber-gummies-90.jpg',
+  ),
+  // Probiotics + Fiber gummies, 90. UPC 030772196908. The bottle prints 90. Not the 60.
+  'align-b265-fiber-gummies-90': catalogShot('align-b265-fiber-gummies-90.jpg'),
+  // Probiotics + Fiber gummies, 60. UPC 030772196892. The bottle prints 60. Not the 90.
+  'align-b265-fiber-gummies-60': catalogShot('align-b265-fiber-gummies-60.jpg'),
+  // DualBiotic gummies, 90. UPC 030772032596. The bottle prints 90. Not the 60.
+  'align-b265-dualbiotic-90': catalogShot('align-b265-dualbiotic-90.jpg'),
+  // Kids Probiotic + Veggie Fiber gummies, 60. UPC 049100401416. The bottle prints 60.
+  'culturelle-b265-veggie-gummies-60': catalogShot(
+    'culturelle-b265-veggie-gummies-60.jpg',
+  ),
+  // Ultimate Balance for Antibiotics capsules, 20. UPC 049100400693. The box prints 20.
+  'culturelle-b265-ultimate-balance-20': catalogShot(
+    'culturelle-b265-ultimate-balance-20.jpg',
+  ),
+  // Kids Multivitamin + Probiotic chewables, 90. UPC 049100401768. The bottle prints 90. Not the 50.
+  'culturelle-b265-kids-multi-chew-90': catalogShot(
+    'culturelle-b265-kids-multi-chew-90.jpg',
+  ),
+  // Kids Daily Immune Defense chewables, 60. UPC 049100401775. The bottle prints 60. Not the 30.
+  'culturelle-b266-kids-immune-60': catalogShot(
+    'culturelle-b266-kids-immune-60.jpg',
+  ),
+  // 3-in-1 Complete capsules, 30. UPC 049100400389. The box prints 30.
+  'culturelle-b266-3in1-complete-30': catalogShot(
+    'culturelle-b266-3in1-complete-30.jpg',
   ),
 };
 
@@ -44092,8 +44165,8 @@ assertBrandMark(
     formulaId: 'culturelle-b260-purely-packets',
     brand: 'Culturelle',
   });
-  if (!pkt30?.verifiedSku || pkt30.url === pkt50?.url || pkt50?.verifiedSku) {
-    throw new Error('Purely packets 50 must not use the 30-count carton');
+  if (!pkt30?.verifiedSku || !pkt50?.verifiedSku || pkt30.url === pkt50.url) {
+    throw new Error('Purely packets 30 and 50 must keep separate cartons');
   }
   const cap55 = previewOverlayImage({
     id: 'phillips-b260-caplets-55',
@@ -44126,18 +44199,92 @@ assertBrandMark(
   if (
     !colon30?.verifiedSku
     || !colon45?.verifiedSku
+    || !colon60?.verifiedSku
     || colon30.url === colon45.url
-    || colon30.url === colon60?.url
-    || colon45.url === colon60?.url
-    || colon60?.verifiedSku
+    || colon30.url === colon60.url
+    || colon45.url === colon60.url
   ) {
-    throw new Error('Colon Health 30, 45, and 60 must not share a carton');
+    throw new Error('Colon Health 30, 45, and 60 must keep separate cartons');
   }
-  const nextColon = colon60;
-  const nextLetter = nextColon?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextColon.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
-    : undefined;
-  if (nextColon?.verifiedSku || nextLetter !== 'P') {
-    throw new Error('unattempted Phillips Colon Health 60 must stay a letter');
+  // Digestive night run 2026-10-24 6:45 AM PT batch 1.
+  const batch645a: [string, string, string][] = [
+    ['phillips-b262-colon-health-60', "Phillips'", 'phillips-b262-colon-health-60.jpg'],
+    ['culturelle-b262-kids-multi-chew-30', 'Culturelle', 'culturelle-b262-kids-multi-chew-30.jpg'],
+    ['culturelle-b262-kids-multi-chew-50', 'Culturelle', 'culturelle-b262-kids-multi-chew-50.jpg'],
+    ['culturelle-b262-womens-gummies-60', 'Culturelle', 'culturelle-b262-womens-gummies-60.jpg'],
+    ['phillips-b263-cherry-mom-26', "Phillips'", 'phillips-b263-cherry-mom-26.jpg'],
+    ['align-b263-kids-gummies-50', 'Align', 'align-b263-kids-gummies-50.jpg'],
+    ['align-b263-immunity-28', 'Align', 'align-b263-immunity-28.jpg'],
+    ['culturelle-b263-purely-packets-50', 'Culturelle', 'culturelle-b263-purely-packets-50.jpg'],
+    ['culturelle-b263-ultimate-strength-20', 'Culturelle', 'culturelle-b263-ultimate-strength-20.jpg'],
+    ['align-b264-yogurt-bites-21', 'Align', 'align-b264-yogurt-bites-21.jpg'],
+    ['phillips-b264-fiber-gummies-90', "Phillips'", 'phillips-b264-fiber-gummies-90.jpg'],
+    ['align-b265-fiber-gummies-90', 'Align', 'align-b265-fiber-gummies-90.jpg'],
+    ['align-b265-fiber-gummies-60', 'Align', 'align-b265-fiber-gummies-60.jpg'],
+    ['align-b265-dualbiotic-90', 'Align', 'align-b265-dualbiotic-90.jpg'],
+    ['culturelle-b265-veggie-gummies-60', 'Culturelle', 'culturelle-b265-veggie-gummies-60.jpg'],
+    ['culturelle-b265-ultimate-balance-20', 'Culturelle', 'culturelle-b265-ultimate-balance-20.jpg'],
+    ['culturelle-b265-kids-multi-chew-90', 'Culturelle', 'culturelle-b265-kids-multi-chew-90.jpg'],
+    ['culturelle-b266-kids-immune-60', 'Culturelle', 'culturelle-b266-kids-immune-60.jpg'],
+    ['culturelle-b266-3in1-complete-30', 'Culturelle', 'culturelle-b266-3in1-complete-30.jpg'],
+  ];
+  const seen645a = new Set<string>();
+  for (const [id, brand, file] of batch645a) {
+    if (seen645a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen645a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  assertBrandMark('culturelle-b265-womens-wellness-60', 'Culturelle', 'culturelle-mark.png');
+  const well30 = previewOverlayImage({
+    id: 'culturelle-b260-womens-wellness-30',
+    formulaId: 'culturelle-b260-womens-wellness-30',
+    brand: 'Culturelle',
+  });
+  const well60 = previewOverlayImage({
+    id: 'culturelle-b265-womens-wellness-60',
+    formulaId: 'culturelle-b265-womens-wellness-60',
+    brand: 'Culturelle',
+  });
+  if (!well30?.verifiedSku || well60?.verifiedSku || well30.url === well60?.url) {
+    throw new Error('Women\'s Wellness 60 must stay the mark, not the 30-count carton');
+  }
+  const fiber90 = previewOverlayImage({
+    id: 'align-b265-fiber-gummies-90',
+    formulaId: 'align-b265-fiber-gummies',
+    brand: 'Align',
+  });
+  const fiber60 = previewOverlayImage({
+    id: 'align-b265-fiber-gummies-60',
+    formulaId: 'align-b265-fiber-gummies',
+    brand: 'Align',
+  });
+  if (!fiber90?.verifiedSku || !fiber60?.verifiedSku || fiber90.url === fiber60.url) {
+    throw new Error('Align fiber gummies 90 and 60 must keep separate cartons');
+  }
+  const dual60 = previewOverlayImage({
+    id: 'align-b260-dualbiotic-60',
+    formulaId: 'align-b260-dualbiotic-60',
+    brand: 'Align',
+  });
+  const dual90 = previewOverlayImage({
+    id: 'align-b265-dualbiotic-90',
+    formulaId: 'align-b265-dualbiotic-90',
+    brand: 'Align',
+  });
+  if (!dual60?.verifiedSku || !dual90?.verifiedSku || dual60.url === dual90.url) {
+    throw new Error('Align DualBiotic 60 and 90 must keep separate cartons');
+  }
+  const immune30 = previewOverlayImage({
+    id: 'culturelle-b260-kids-immune-30',
+    formulaId: 'culturelle-b260-kids-immune-30',
+    brand: 'Culturelle',
+  });
+  const immune60 = previewOverlayImage({
+    id: 'culturelle-b266-kids-immune-60',
+    formulaId: 'culturelle-b266-kids-immune-60',
+    brand: 'Culturelle',
+  });
+  if (!immune30?.verifiedSku || !immune60?.verifiedSku || immune30.url === immune60.url) {
+    throw new Error('Kids Immune Defense 30 and 60 must keep separate cartons');
   }
 }
