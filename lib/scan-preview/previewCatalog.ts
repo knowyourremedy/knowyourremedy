@@ -18707,6 +18707,54 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'senokot-b178-s-30': catalogShot('senokot-b178-s-30.jpg'),
   // Colace Clear 50 mg soft gels, 28. UPC 367618111284. Not Extra Strength.
   'colace-b179-clear-28': catalogShot('colace-b179-clear-28.jpg'),
+  // Digestive night run 2026-10-24 1:45 AM PT batch 2.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Colace Extra Strength 250 mg soft gels, 60. UPC 367618000175. Not Clear 50 mg.
+  'colace-b179-extra-60': catalogShot('colace-b179-extra-60.jpg'),
+  // Dulcolax stimulant liquid gels, 5 mg, 20. UPC 681421022200. Not the stool softener.
+  'dulcolax-b179-liquid-gel-20': catalogShot('dulcolax-b179-liquid-gel-20.jpg'),
+  // Dulcolax Chewy Fruit Bites, assorted fruit, 30. UPC 681421025607. Not cherry berry.
+  'dulcolax-b179-assorted-30': catalogShot('dulcolax-b179-assorted-30.jpg'),
+  // Dulcolax Chewy Fruit Bites, cherry berry, 30. UPC 681421025706. Not assorted fruit.
+  'dulcolax-b179-cherry-30': catalogShot('dulcolax-b179-cherry-30.jpg'),
+  // MiraGUT daily probiotic capsules, 30. UPC 041100606471. Not a MiraLAX powder.
+  'miragut-b180-30': catalogShot('miragut-b180-30.jpg'),
+  // Nature's Bounty Probiotic GX caplets, 25. UPC 074312552717. Not Controlled Delivery.
+  'natures-bounty-b198-probiotic-gx-25': catalogShot('natures-bounty-b198-probiotic-gx-25.jpg'),
+  // Nature's Bounty Controlled Delivery Probiotic caplets, 30. UPC 074312515200. Not Probiotic GX.
+  'natures-bounty-b199-controlled-delivery-probiotic-30': catalogShot(
+    'natures-bounty-b199-controlled-delivery-probiotic-30.jpg',
+  ),
+  // Rainbow Light organic daily prebiotic + probiotic powder, 4.76 oz. UPC 850068584765. Not the fiber tub.
+  'rainbow-b205-daily-prebiotic-probiotic-powder': catalogShot(
+    'rainbow-b205-daily-prebiotic-probiotic-powder.jpg',
+  ),
+  // Rainbow Light All-Zyme Double Strength, 90 vegan capsules. UPC 021888351015.
+  'rainbow-b205-all-zyme-double-strength-90': catalogShot('rainbow-b205-all-zyme-double-strength-90.jpg'),
+  // Rainbow Light Probiolicious berry gummies, 50. UPC 021888121212. Not a 60.
+  'rainbow-b205-probiolicious-gummies-50': catalogShot('rainbow-b205-probiolicious-gummies-50.jpg'),
+  // Rainbow Light dandelion root liquid, alcohol free, 2 fl oz. UPC 850068584277. Not nettle.
+  'rainbow-b205-dandelion-root-liquid-2oz': catalogShot('rainbow-b205-dandelion-root-liquid-2oz.jpg'),
+  // Rainbow Light nettle leaf liquid, alcohol free, 2 fl oz. UPC 850068584314. Not dandelion.
+  'rainbow-b206-nettle-leaf-liquid-2oz': catalogShot('rainbow-b206-nettle-leaf-liquid-2oz.jpg'),
+  // Rainbow Light daily fiber + probiotic powder, raspberry lemon, 11 oz. UPC 850068584994. Not the 4.76 oz powder.
+  'rainbow-b208-daily-fiber-probiotic-powder-11oz': catalogShot(
+    'rainbow-b208-daily-fiber-probiotic-powder-11oz.jpg',
+  ),
+  // Florastor Dual Action capsules, 20. UPC 704142000248. Not the 30, 50, or 100.
+  'florastor-b221-dual-action-20': catalogShot('florastor-b221-dual-action-20.jpg'),
+  // Florastor Dual Action capsules, 30. UPC 704142000354. Not an Advanced box.
+  'florastor-b221-dual-action-30': catalogShot('florastor-b221-dual-action-30.jpg'),
+  // Florastor Dual Action capsules, 50. UPC 704142000071. Not the 20.
+  'florastor-b221-dual-action-50': catalogShot('florastor-b221-dual-action-50.jpg'),
+  // Florastor Dual Action capsules, 100. UPC 704142000323. Not the 50.
+  'florastor-b221-dual-action-100': catalogShot('florastor-b221-dual-action-100.jpg'),
+  // Florastor Advanced Gas & Bloat, 30. UPC 704142000811. Not Pro + Pre. Not Immunity.
+  'florastor-b221-advanced-gas-bloat-30': catalogShot('florastor-b221-advanced-gas-bloat-30.jpg'),
+  // Florastor Advanced Pro + Pre, 30. UPC 704142000484. Not Gas & Bloat.
+  'florastor-b221-advanced-pro-pre-30': catalogShot('florastor-b221-advanced-pro-pre-30.jpg'),
+  // Florastor Advanced Immunity, 30. UPC 704142000439. Not Gas & Bloat.
+  'florastor-b221-advanced-immunity-30': catalogShot('florastor-b221-advanced-immunity-30.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -43002,15 +43050,127 @@ assertBrandMark(
   if (!pink?.verifiedSku || pink.url === yellow25?.url) {
     throw new Error('Dulcolax Pink 25 must not use the yellow 25-count box');
   }
-  const nextClear = previewOverlayImage({
+}
+
+{
+  // Digestive night run 2026-10-24 1:45 AM PT batch 2.
+  // Twenty cartons. Sibling counts and flavors do not share a file.
+  const batch145b: [string, string, string][] = [
+    ['colace-b179-extra-60', 'Colace', 'colace-b179-extra-60.jpg'],
+    ['dulcolax-b179-liquid-gel-20', 'Dulcolax', 'dulcolax-b179-liquid-gel-20.jpg'],
+    ['dulcolax-b179-assorted-30', 'Dulcolax', 'dulcolax-b179-assorted-30.jpg'],
+    ['dulcolax-b179-cherry-30', 'Dulcolax', 'dulcolax-b179-cherry-30.jpg'],
+    ['miragut-b180-30', 'MiraLAX', 'miragut-b180-30.jpg'],
+    ['natures-bounty-b198-probiotic-gx-25', "Nature's Bounty", 'natures-bounty-b198-probiotic-gx-25.jpg'],
+    ['natures-bounty-b199-controlled-delivery-probiotic-30', "Nature's Bounty", 'natures-bounty-b199-controlled-delivery-probiotic-30.jpg'],
+    ['rainbow-b205-daily-prebiotic-probiotic-powder', 'Rainbow Light', 'rainbow-b205-daily-prebiotic-probiotic-powder.jpg'],
+    ['rainbow-b205-all-zyme-double-strength-90', 'Rainbow Light', 'rainbow-b205-all-zyme-double-strength-90.jpg'],
+    ['rainbow-b205-probiolicious-gummies-50', 'Rainbow Light', 'rainbow-b205-probiolicious-gummies-50.jpg'],
+    ['rainbow-b205-dandelion-root-liquid-2oz', 'Rainbow Light', 'rainbow-b205-dandelion-root-liquid-2oz.jpg'],
+    ['rainbow-b206-nettle-leaf-liquid-2oz', 'Rainbow Light', 'rainbow-b206-nettle-leaf-liquid-2oz.jpg'],
+    ['rainbow-b208-daily-fiber-probiotic-powder-11oz', 'Rainbow Light', 'rainbow-b208-daily-fiber-probiotic-powder-11oz.jpg'],
+    ['florastor-b221-dual-action-20', 'Florastor', 'florastor-b221-dual-action-20.jpg'],
+    ['florastor-b221-dual-action-30', 'Florastor', 'florastor-b221-dual-action-30.jpg'],
+    ['florastor-b221-dual-action-50', 'Florastor', 'florastor-b221-dual-action-50.jpg'],
+    ['florastor-b221-dual-action-100', 'Florastor', 'florastor-b221-dual-action-100.jpg'],
+    ['florastor-b221-advanced-gas-bloat-30', 'Florastor', 'florastor-b221-advanced-gas-bloat-30.jpg'],
+    ['florastor-b221-advanced-pro-pre-30', 'Florastor', 'florastor-b221-advanced-pro-pre-30.jpg'],
+    ['florastor-b221-advanced-immunity-30', 'Florastor', 'florastor-b221-advanced-immunity-30.jpg'],
+  ];
+  const seen145b = new Set<string>();
+  for (const [id, brand, file] of batch145b) {
+    if (seen145b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen145b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const shared145b: [string, string, string][] = [
+    ['florastor-b221-dual-action-20', 'florastor-b221-dual-action', 'Florastor'],
+    ['florastor-b221-dual-action-30', 'florastor-b221-dual-action', 'Florastor'],
+    ['florastor-b221-dual-action-50', 'florastor-b221-dual-action', 'Florastor'],
+    ['florastor-b221-dual-action-100', 'florastor-b221-dual-action', 'Florastor'],
+  ];
+  const sharedUrls = shared145b.map(([id, formulaId, brand]) => (
+    previewOverlayImage({ id, formulaId, brand })?.url
+  ));
+  if (new Set(sharedUrls).size !== sharedUrls.length || sharedUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('Florastor Dual Action counts must keep separate cartons');
+  }
+  const extra = previewOverlayImage({
     id: 'colace-b179-extra-60',
     formulaId: 'colace-b179-extra',
     brand: 'Colace',
   });
-  const nextClearLetter = nextClear?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextClear.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const clear28 = previewOverlayImage({
+    id: 'colace-b179-clear-28',
+    formulaId: 'colace-b179-clear',
+    brand: 'Colace',
+  });
+  if (!extra?.verifiedSku || extra.url === clear28?.url) {
+    throw new Error('Colace Extra Strength 60 must not use the Clear 28 carton');
+  }
+  const assorted = previewOverlayImage({
+    id: 'dulcolax-b179-assorted-30',
+    formulaId: 'dulcolax-b179-assorted',
+    brand: 'Dulcolax',
+  });
+  const cherryBite = previewOverlayImage({
+    id: 'dulcolax-b179-cherry-30',
+    formulaId: 'dulcolax-b179-cherry',
+    brand: 'Dulcolax',
+  });
+  if (!assorted?.verifiedSku || assorted.url === cherryBite?.url) {
+    throw new Error('assorted fruit bites must not use the cherry berry bottle');
+  }
+  const powder = previewOverlayImage({
+    id: 'rainbow-b205-daily-prebiotic-probiotic-powder',
+    formulaId: 'rainbow-b205-daily-prebiotic-probiotic-powder',
+    brand: 'Rainbow Light',
+  });
+  const fiber = previewOverlayImage({
+    id: 'rainbow-b208-daily-fiber-probiotic-powder-11oz',
+    formulaId: 'rainbow-b208-daily-fiber-probiotic-powder-11oz',
+    brand: 'Rainbow Light',
+  });
+  if (!powder?.verifiedSku || powder.url === fiber?.url) {
+    throw new Error('4.76 oz prebiotic powder must not use the 11 oz fiber tub');
+  }
+  const gas = previewOverlayImage({
+    id: 'florastor-b221-advanced-gas-bloat-30',
+    formulaId: 'florastor-b221-advanced-gas-bloat',
+    brand: 'Florastor',
+  });
+  const propre = previewOverlayImage({
+    id: 'florastor-b221-advanced-pro-pre-30',
+    formulaId: 'florastor-b221-advanced-pro-pre',
+    brand: 'Florastor',
+  });
+  const immunity = previewOverlayImage({
+    id: 'florastor-b221-advanced-immunity-30',
+    formulaId: 'florastor-b221-advanced-immunity',
+    brand: 'Florastor',
+  });
+  const dual30 = previewOverlayImage({
+    id: 'florastor-b221-dual-action-30',
+    formulaId: 'florastor-b221-dual-action',
+    brand: 'Florastor',
+  });
+  if (
+    !gas?.verifiedSku
+    || gas.url === propre?.url
+    || gas.url === immunity?.url
+    || gas.url === dual30?.url
+  ) {
+    throw new Error('Florastor Advanced boxes must stay off the Dual Action carton');
+  }
+  const nextGummy = previewOverlayImage({
+    id: 'florastor-b221-digest-metabolic-gummies-56',
+    formulaId: 'florastor-b221-digest-metabolic-gummies',
+    brand: 'Florastor',
+  });
+  const nextGummyLetter = nextGummy?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextGummy.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextClear?.verifiedSku || nextClearLetter !== 'C') {
-    throw new Error('unattempted Colace Extra Strength 60 must stay a letter');
+  if (nextGummy?.verifiedSku || nextGummyLetter !== 'F') {
+    throw new Error('unattempted Florastor Digest + Metabolic gummies must stay a letter');
   }
 }
