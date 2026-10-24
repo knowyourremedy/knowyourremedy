@@ -3235,6 +3235,10 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // count is a flat label, and the other tile is a two-bottle lineup
   // with the fiber gummies. Official wordmark. Not the 90-count bottle.
   'physicianschoice-b227-probiotic-gummies-60': brandMark('physicianschoice-mark.png'),
+  // Digestive night run 2026-10-24 4:15 AM PT batch 1.
+  // Easy Mix Fiber unflavored 30-day / 7.1 oz. The variant image is a flat
+  // sticker. The gallery pouch is the 24-day / 5.7 oz sibling. Official wordmark.
+  'physicianschoice-b230-easy-mix-fiber-unflavored-30': brandMark('physicianschoice-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18874,6 +18878,85 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'physicianschoice-b228-vaginal-probiotic-30': catalogShot(
     'physicianschoice-b228-vaginal-probiotic-30.jpg',
   ),
+  // Digestive night run 2026-10-24 4:15 AM PT batch 1.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Mood Support Probiotic, 30 capsules. UPC 850048297340. Not the 2-pack.
+  'physicianschoice-b229-mood-support-probiotic-30': catalogShot(
+    'physicianschoice-b229-mood-support-probiotic-30.jpg',
+  ),
+  // Easy Mix Fiber stick variety, 18 sticks (6 unflavored, 6 cucumber lime, 6 peach mango).
+  // UPC 850048297777. This row is the variety carton, not one flavor.
+  'physicianschoice-b229-easy-mix-fiber-stick-packs-18': catalogShot(
+    'physicianschoice-b229-easy-mix-fiber-stick-packs-18.jpg',
+  ),
+  // Probiotic gummies, watermelon, 90. UPC 850048297265. Not the 60.
+  'physicianschoice-b229-probiotic-gummies-90': catalogShot(
+    'physicianschoice-b229-probiotic-gummies-90.jpg',
+  ),
+  // Digestive Enzymes, 90 capsules. UPC 850048297050. Not the 60 or the 180.
+  'physicianschoice-b230-digestive-enzymes-90': catalogShot(
+    'physicianschoice-b230-digestive-enzymes-90.jpg',
+  ),
+  // Digestive Enzymes, 180 capsules. UPC 850048297067. Not the 90.
+  'physicianschoice-b230-digestive-enzymes-180': catalogShot(
+    'physicianschoice-b230-digestive-enzymes-180.jpg',
+  ),
+  // Spring Valley Daily Probiotic, 4 billion, 30 vegetarian capsules. UPC 681131405805.
+  'springvalley-b236-daily-probiotic-4b-30': catalogShot(
+    'springvalley-b236-daily-probiotic-4b-30.jpg',
+  ),
+  // Spring Valley Extra Strength Probiotic, 10 billion, 60 vegetable capsules. UPC 681131155595.
+  'springvalley-b236-probiotic-10b-60': catalogShot(
+    'springvalley-b236-probiotic-10b-60.jpg',
+  ),
+  // Spring Valley Activated Charcoal, 520 mg, 60 capsules. UPC 681131151115.
+  'springvalley-b238-activated-charcoal-520-60': catalogShot(
+    'springvalley-b238-activated-charcoal-520-60.jpg',
+  ),
+  // Metamucil Fiber + Probiotics gummies, 90. UPC 030772144589. Not the 60.
+  'metamucil-b247-fiber-probiotic-gummy-90': catalogShot(
+    'metamucil-b247-fiber-probiotic-gummy-90.jpg',
+  ),
+  // Benefiber prebiotic fiber gummies, assorted fruit, 81. UPC 886790326540.
+  'benefiber-b247-prebiotic-gummy-81': catalogShot(
+    'benefiber-b247-prebiotic-gummy-81.jpg',
+  ),
+  // Benefiber original powder, 125 servings / 17.6 oz. UPC 886790218302. Not the 8.7 oz.
+  'benefiber-b248-powder-125': catalogShot(
+    'benefiber-b248-powder-125.jpg',
+  ),
+  // Metamucil sugar-free orange on-the-go packets, 30. UPC 030772057124. Not a canister.
+  'metamucil-b249-sf-orange-packets-30': catalogShot(
+    'metamucil-b249-sf-orange-packets-30.jpg',
+  ),
+  // Benefiber chewable tablets, assorted fruit, 100. UPC 886790738954.
+  'benefiber-b249-chewable-100': catalogShot(
+    'benefiber-b249-chewable-100.jpg',
+  ),
+  // Metamucil 3-in-1 fiber capsules, 160. UPC 037000405115. Not the 100 or the 340.
+  'metamucil-b250-capsules-160': catalogShot(
+    'metamucil-b250-capsules-160.jpg',
+  ),
+  // Metamucil real-sugar orange powder, 72 tablespoons. UPC 037000740797. Not the 114.
+  'metamucil-b252-real-sugar-orange-72': catalogShot(
+    'metamucil-b252-real-sugar-orange-72.jpg',
+  ),
+  // Metamucil Kids fiber gummies, 72. UPC 030772094921. Not the adult gummies.
+  'metamucil-b252-kids-fiber-gummies-72': catalogShot(
+    'metamucil-b252-kids-fiber-gummies-72.jpg',
+  ),
+  // Metamucil Fiber Thins, apple crisp, 12 packets / 9.3 oz. UPC 037000740919. Not cinnamon.
+  'metamucil-b253-fiber-thins-apple-12': catalogShot(
+    'metamucil-b253-fiber-thins-apple-12.jpg',
+  ),
+  // Metamucil Fiber + Vitamins C, D, and B12 gummies, 72. UPC 030772089712.
+  'metamucil-b253-fiber-vitamins-gummies-72': catalogShot(
+    'metamucil-b253-fiber-vitamins-gummies-72.jpg',
+  ),
+  // Metamucil Fiber Thins, cinnamon spice, 12 packets / 9.3 oz. UPC 037000740926. Not apple.
+  'metamucil-b254-fiber-thins-cinnamon-12': catalogShot(
+    'metamucil-b254-fiber-thins-cinnamon-12.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -20051,6 +20134,13 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'miralax-b178-unflavored-20pkt',
   'miralax-b178-orange-7',
   'miralax-b178-orange-14',
+  // Digestive night run 2026-10-24 4:15 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'metamucil-b256-real-sugar-orange-114',
+  'metamucil-b257-real-sugar-orange-packets-30',
+  'metamucil-b257-real-sugar-orange-30',
+  'metamucil-b256-capsules-340',
+  'metamucil-b257-fiber-probiotic-gummy-60',
 ]);
 
 export function previewOverlayImage(
@@ -43501,15 +43591,99 @@ assertBrandMark(
   ) {
     throw new Error('Easy Mix flavors and the 5.7 oz tub must stay apart');
   }
-  const nextMood = previewOverlayImage({
+  const mood = previewOverlayImage({
     id: 'physicianschoice-b229-mood-support-probiotic-30',
     formulaId: 'physicianschoice-b229-mood-support-probiotic-30',
     brand: "Physician's Choice",
   });
-  const nextLetter = nextMood?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextMood.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const stickVariety = previewOverlayImage({
+    id: 'physicianschoice-b229-easy-mix-fiber-stick-packs-18',
+    formulaId: 'physicianschoice-b229-easy-mix-fiber-stick-packs-18',
+    brand: "Physician's Choice",
+  });
+  const enzymes180 = previewOverlayImage({
+    id: 'physicianschoice-b230-digestive-enzymes-180',
+    formulaId: 'physicianschoice-b230-digestive-enzymes-180',
+    brand: "Physician's Choice",
+  });
+  const easy30 = previewOverlayImage({
+    id: 'physicianschoice-b230-easy-mix-fiber-unflavored-30',
+    formulaId: 'physicianschoice-b230-easy-mix-fiber-unflavored-30',
+    brand: "Physician's Choice",
+  });
+  const realSugar72 = previewOverlayImage({
+    id: 'metamucil-b252-real-sugar-orange-72',
+    formulaId: 'metamucil-b252-real-sugar-orange-72',
+    brand: 'Metamucil',
+  });
+  const realSugar114 = previewOverlayImage({
+    id: 'metamucil-b256-real-sugar-orange-114',
+    formulaId: 'metamucil-b252-real-sugar-orange-72',
+    brand: 'Metamucil',
+  });
+  const capsules160 = previewOverlayImage({
+    id: 'metamucil-b250-capsules-160',
+    formulaId: 'metamucil-b250-capsules-160',
+    brand: 'Metamucil',
+  });
+  const capsules340 = previewOverlayImage({
+    id: 'metamucil-b256-capsules-340',
+    formulaId: 'metamucil-b250-capsules-160',
+    brand: 'Metamucil',
+  });
+  const prob90 = previewOverlayImage({
+    id: 'metamucil-b247-fiber-probiotic-gummy-90',
+    formulaId: 'metamucil-b247-fiber-probiotic-gummy-90',
+    brand: 'Metamucil',
+  });
+  const prob60 = previewOverlayImage({
+    id: 'metamucil-b257-fiber-probiotic-gummy-60',
+    formulaId: 'metamucil-b247-fiber-probiotic-gummy-90',
+    brand: 'Metamucil',
+  });
+  if (
+    !mood?.verifiedSku
+    || !stickVariety?.verifiedSku
+    || !gummy90?.verifiedSku
+    || !enzymes90?.verifiedSku
+    || !enzymes180?.verifiedSku
+    || mood.url === gummy90.url
+    || enzymes90.url === enzymes180.url
+    || enzymes90.url === enzymes60?.url
+    || enzymes180.url === enzymes60?.url
+  ) {
+    throw new Error('Physician\'s Choice 4:15 AM cartons must stay on their own counts');
+  }
+  if (easy30?.verifiedSku || easy30?.url !== '/scan-preview/physicianschoice-mark.png' || easy30?.url === unflavored24?.url) {
+    throw new Error('Easy Mix 7.1 oz must stay the brand mark, not the 5.7 oz tub');
+  }
+  const realSugarLetter = realSugar114?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(realSugar114.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextMood?.verifiedSku || nextLetter !== 'P') {
-    throw new Error('unattempted Mood Support probiotic must stay a letter');
+  const cap340Letter = capsules340?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(capsules340.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+    : undefined;
+  const prob60Letter = prob60?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(prob60.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+    : undefined;
+  if (!realSugar72?.verifiedSku || realSugar114?.url === realSugar72.url || realSugarLetter !== 'M') {
+    throw new Error('114-count real-sugar orange must not inherit the 72');
+  }
+  if (!capsules160?.verifiedSku || capsules340?.url === capsules160.url || cap340Letter !== 'M') {
+    throw new Error('340-count capsules must not inherit the 160');
+  }
+  if (!prob90?.verifiedSku || prob60?.url === prob90.url || prob60Letter !== 'M') {
+    throw new Error('60-count probiotic gummies must not inherit the 90');
+  }
+  const nextSpark = previewOverlayImage({
+    id: 'metamucil-b254-sparkling-fiber-vitamins',
+    formulaId: 'metamucil-b254-sparkling-fiber-vitamins',
+    brand: 'Metamucil',
+  });
+  const nextLetter = nextSpark?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextSpark.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+    : undefined;
+  if (nextSpark?.verifiedSku || nextLetter !== 'M') {
+    throw new Error('unattempted sparkling fiber vitamins must stay a letter');
   }
 }
