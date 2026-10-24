@@ -18664,6 +18664,49 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'miralax-b178-orange-7': catalogShot('miralax-b178-orange-7.jpg'),
   // MiraLAX orange powder, 14 doses, 8.3 oz. UPC 041100600561. Not the 7.
   'miralax-b178-orange-14': catalogShot('miralax-b178-orange-14.jpg'),
+  // Vitamins + Digestive night run 2026-10-24 1:45 AM PT batch 1.
+  // Vitamins had 5 new letters. The rest of this 20 are Digestive, in catalog order.
+  // Exact fronts. Sibling counts, strengths, and flavors do not share a file.
+  // Goli SuperFruits gummies, 30. UPC 628176357423. Official 1-bottle front. Not a 60.
+  'goli-b267-superfruits-30': catalogShot('goli-b267-superfruits-30.jpg'),
+  // Goli Supergreens gummies, 30. UPC 055840401845. Official 1-bottle front. Not the 60.
+  'goli-b267-supergreens-30': catalogShot('goli-b267-supergreens-30.jpg'),
+  // Os-Cal Calcium + D3 coated caplets, 75. EAN 0300881654751. Not the 160. Not the chewable.
+  'oscal-b268-calcium-d3-75': catalogShot('oscal-b268-calcium-d3-75.jpg'),
+  // Os-Cal Calcium + D3 coated caplets, 160. EAN 0307661654604. Not the 75.
+  'oscal-b268-calcium-d3-160': catalogShot('oscal-b268-calcium-d3-160.jpg'),
+  // Os-Cal Calcium + D3 chewable, light lemon chiffon, 60. UPC 300881663012. Not the caplets.
+  'oscal-b269-calcium-d3-chew-60': catalogShot('oscal-b269-calcium-d3-chew-60.jpg'),
+  // MiraFAST mixed berry soft chews, 30. UPC 041100604583. Not the Kids 15.
+  'mirafast-b178-mixed-berry-30': catalogShot('mirafast-b178-mixed-berry-30.jpg'),
+  // MiraFAST Kids mixed berry soft chews, 15. UPC 041100607041. Not the 30.
+  'mirafast-b178-kids-15': catalogShot('mirafast-b178-kids-15.jpg'),
+  // Dulcolax overnight tablets, 10. UPC 681421020015. Not the 25. Not Pink.
+  'dulcolax-b178-tablets-10': catalogShot('dulcolax-b178-tablets-10.jpg'),
+  // Dulcolax overnight tablets, 25. UPC 681421020022. Not the 10. Not Pink.
+  'dulcolax-b178-tablets-25': catalogShot('dulcolax-b178-tablets-25.jpg'),
+  // Dulcolax Pink overnight tablets, 25. UPC 681421029056. Not the yellow 25.
+  'dulcolax-b178-pink-tablets-25': catalogShot('dulcolax-b178-pink-tablets-25.jpg'),
+  // Dulcolax cherry liquid, 12 fl oz. UPC 681421029100. Not mint.
+  'dulcolax-b178-cherry-liquid-12oz': catalogShot('dulcolax-b178-cherry-liquid-12oz.jpg'),
+  // Dulcolax mixed berry soft chews, 30. UPC 681421026536. Not the fruit bites.
+  'dulcolax-b178-soft-chews-30': catalogShot('dulcolax-b178-soft-chews-30.jpg'),
+  // Dulcolax stool softener liquid gels, 25. UPC 681421022026. Not the 100.
+  'dulcolax-b178-stool-softener-25': catalogShot('dulcolax-b178-stool-softener-25.jpg'),
+  // Dulcolax stool softener liquid gels, 100. UPC 681421022040. Not the 25.
+  'dulcolax-b178-stool-softener-100': catalogShot('dulcolax-b178-stool-softener-100.jpg'),
+  // Senokot Regular Strength, 50 tablets. UPC 367618300503. Not the 100. Not Extra Strength.
+  'senokot-b178-regular-50': catalogShot('senokot-b178-regular-50.jpg'),
+  // Senokot Regular Strength, 100 tablets. UPC 367618000045. Not the 50.
+  'senokot-b178-regular-100': catalogShot('senokot-b178-regular-100.jpg'),
+  // Senokot Extra Strength, 12 tablets. UPC 367618120125. Not the 36. Not Regular Strength.
+  'senokot-b178-extra-12': catalogShot('senokot-b178-extra-12.jpg'),
+  // Senokot Extra Strength, 36 tablets. UPC 367618120064. Not the 12.
+  'senokot-b178-extra-36': catalogShot('senokot-b178-extra-36.jpg'),
+  // Senokot-S dual action, 30 tablets. UPC 367618310304. Not Regular or Extra Strength.
+  'senokot-b178-s-30': catalogShot('senokot-b178-s-30.jpg'),
+  // Colace Clear 50 mg soft gels, 28. UPC 367618111284. Not Extra Strength.
+  'colace-b179-clear-28': catalogShot('colace-b179-clear-28.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -42866,15 +42909,108 @@ assertBrandMark(
   if (!orange7?.verifiedSku || orange7.url === orange14?.url || orange7.url === plain7?.url) {
     throw new Error('MiraLAX orange 7 must keep its own carton');
   }
-  const nextFast = previewOverlayImage({
-    id: 'mirafast-b178-mixed-berry-30',
-    formulaId: 'mirafast-b178-mixed-berry',
-    brand: 'MiraLAX',
+}
+
+{
+  // Vitamins + Digestive night run 2026-10-24 1:45 AM PT batch 1.
+  // Five new Vitamins cartons, then fifteen Digestive cartons.
+  // Sibling counts and flavors do not share a file.
+  const batch145a: [string, string, string][] = [
+    ['goli-b267-superfruits-30', 'Goli', 'goli-b267-superfruits-30.jpg'],
+    ['goli-b267-supergreens-30', 'Goli', 'goli-b267-supergreens-30.jpg'],
+    ['oscal-b268-calcium-d3-75', 'Os-Cal', 'oscal-b268-calcium-d3-75.jpg'],
+    ['oscal-b268-calcium-d3-160', 'Os-Cal', 'oscal-b268-calcium-d3-160.jpg'],
+    ['oscal-b269-calcium-d3-chew-60', 'Os-Cal', 'oscal-b269-calcium-d3-chew-60.jpg'],
+    ['mirafast-b178-mixed-berry-30', 'MiraLAX', 'mirafast-b178-mixed-berry-30.jpg'],
+    ['mirafast-b178-kids-15', 'MiraLAX', 'mirafast-b178-kids-15.jpg'],
+    ['dulcolax-b178-tablets-10', 'Dulcolax', 'dulcolax-b178-tablets-10.jpg'],
+    ['dulcolax-b178-tablets-25', 'Dulcolax', 'dulcolax-b178-tablets-25.jpg'],
+    ['dulcolax-b178-pink-tablets-25', 'Dulcolax', 'dulcolax-b178-pink-tablets-25.jpg'],
+    ['dulcolax-b178-cherry-liquid-12oz', 'Dulcolax', 'dulcolax-b178-cherry-liquid-12oz.jpg'],
+    ['dulcolax-b178-soft-chews-30', 'Dulcolax', 'dulcolax-b178-soft-chews-30.jpg'],
+    ['dulcolax-b178-stool-softener-25', 'Dulcolax', 'dulcolax-b178-stool-softener-25.jpg'],
+    ['dulcolax-b178-stool-softener-100', 'Dulcolax', 'dulcolax-b178-stool-softener-100.jpg'],
+    ['senokot-b178-regular-50', 'Senokot', 'senokot-b178-regular-50.jpg'],
+    ['senokot-b178-regular-100', 'Senokot', 'senokot-b178-regular-100.jpg'],
+    ['senokot-b178-extra-12', 'Senokot', 'senokot-b178-extra-12.jpg'],
+    ['senokot-b178-extra-36', 'Senokot', 'senokot-b178-extra-36.jpg'],
+    ['senokot-b178-s-30', 'Senokot', 'senokot-b178-s-30.jpg'],
+    ['colace-b179-clear-28', 'Colace', 'colace-b179-clear-28.jpg'],
+  ];
+  const seen145a = new Set<string>();
+  for (const [id, brand, file] of batch145a) {
+    if (seen145a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen145a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const shared145a: [string, string, string][] = [
+    ['oscal-b268-calcium-d3-75', 'oscal-b268-calcium-d3', 'Os-Cal'],
+    ['oscal-b268-calcium-d3-160', 'oscal-b268-calcium-d3', 'Os-Cal'],
+    ['mirafast-b178-mixed-berry-30', 'mirafast-b178-mixed-berry', 'MiraLAX'],
+    ['mirafast-b178-kids-15', 'mirafast-b178-mixed-berry', 'MiraLAX'],
+    ['dulcolax-b178-tablets-10', 'dulcolax-b178-yellow-tablets', 'Dulcolax'],
+    ['dulcolax-b178-tablets-25', 'dulcolax-b178-yellow-tablets', 'Dulcolax'],
+    ['dulcolax-b178-stool-softener-25', 'dulcolax-b178-stool-softener', 'Dulcolax'],
+    ['dulcolax-b178-stool-softener-100', 'dulcolax-b178-stool-softener', 'Dulcolax'],
+    ['senokot-b178-regular-50', 'senokot-b178-regular', 'Senokot'],
+    ['senokot-b178-regular-100', 'senokot-b178-regular', 'Senokot'],
+    ['senokot-b178-extra-12', 'senokot-b178-extra', 'Senokot'],
+    ['senokot-b178-extra-36', 'senokot-b178-extra', 'Senokot'],
+  ];
+  const sharedUrls = shared145a.map(([id, formulaId, brand]) => (
+    previewOverlayImage({ id, formulaId, brand })?.url
+  ));
+  if (new Set(sharedUrls).size !== sharedUrls.length || sharedUrls.some((url) => !url?.endsWith('.jpg'))) {
+    throw new Error('shared-formula counts must keep separate cartons');
+  }
+  const greens30 = previewOverlayImage({
+    id: 'goli-b267-supergreens-30',
+    formulaId: 'goli-b267-supergreens-30',
+    brand: 'Goli',
   });
-  const nextFastLetter = nextFast?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextFast.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const greens60 = previewOverlayImage({
+    id: 'goli-b223-supergreens-60',
+    formulaId: 'goli-b223-supergreens',
+    brand: 'Goli',
+  });
+  if (!greens30?.verifiedSku || greens30.url === greens60?.url) {
+    throw new Error('Supergreens 30 must not use the 60-count bottle');
+  }
+  const chew = previewOverlayImage({
+    id: 'oscal-b269-calcium-d3-chew-60',
+    formulaId: 'oscal-b269-calcium-d3-chew-60',
+    brand: 'Os-Cal',
+  });
+  const caplet75 = previewOverlayImage({
+    id: 'oscal-b268-calcium-d3-75',
+    formulaId: 'oscal-b268-calcium-d3',
+    brand: 'Os-Cal',
+  });
+  if (!chew?.verifiedSku || chew.url === caplet75?.url) {
+    throw new Error('Os-Cal chewable 60 must not use a caplet bottle');
+  }
+  const pink = previewOverlayImage({
+    id: 'dulcolax-b178-pink-tablets-25',
+    formulaId: 'dulcolax-b178-pink-tablets',
+    brand: 'Dulcolax',
+  });
+  const yellow25 = previewOverlayImage({
+    id: 'dulcolax-b178-tablets-25',
+    formulaId: 'dulcolax-b178-yellow-tablets',
+    brand: 'Dulcolax',
+  });
+  if (!pink?.verifiedSku || pink.url === yellow25?.url) {
+    throw new Error('Dulcolax Pink 25 must not use the yellow 25-count box');
+  }
+  const nextClear = previewOverlayImage({
+    id: 'colace-b179-extra-60',
+    formulaId: 'colace-b179-extra',
+    brand: 'Colace',
+  });
+  const nextClearLetter = nextClear?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextClear.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextFast?.verifiedSku || nextFastLetter !== 'M') {
-    throw new Error('unattempted MiraFAST mixed berry 30 must stay a letter');
+  if (nextClear?.verifiedSku || nextClearLetter !== 'C') {
+    throw new Error('unattempted Colace Extra Strength 60 must stay a letter');
   }
 }
