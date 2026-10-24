@@ -93,6 +93,7 @@ export function isMethLimitedIngredientName(name: string): boolean {
   if (t138uFamilyLabel(name)) return true;
   if (isOralPropyleneGlycolName(name)) return true;
   if (/\bmct\b|medium chain triglyceride/.test(n) && !/coconut|palm|from\s+\w+/i.test(name)) return true;
+  if (n === 'triglycerides') return true;
   return false;
 }
 

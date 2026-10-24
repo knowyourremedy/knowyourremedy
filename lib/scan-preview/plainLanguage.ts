@@ -1532,6 +1532,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('The label says MCT and does not name the plant. A medium-chain triglyceride that names coconut or palm is a different line.', level);
   }
 
+  if (n === 'triglycerides') {
+    return close(
+      'Triglycerides printed alone does not name the chain length. Medium-chain triglycerides are already Limited, and the unnamed rule applies (founder lock t36u). It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
   if (/simethicone/.test(n)) {
     return close('Simethicone is an anti-gas agent. On an other-ingredients line it is not the labeled active.', level);
   }
