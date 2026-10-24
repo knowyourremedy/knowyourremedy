@@ -19218,6 +19218,17 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'culturelle-b266-3in1-complete-30': catalogShot(
     'culturelle-b266-3in1-complete-30.jpg',
   ),
+  // Digestive night run 2026-10-24 6:45 AM PT batch 2.
+  // Last three Digestive letters, catalog order. Exact fronts.
+  // Women's Health prebiotic + probiotic gummies, 50. UPC 037000919957.
+  // The bottle prints 50. Not a 90-count tile.
+  'align-b266-womens-gummies-50': catalogShot(
+    'align-b266-womens-gummies-50.jpg',
+  ),
+  // To Go tablets, 12. UPC 042037106911. The front prints 12. Not the 30 or the 100.
+  'beano-b268-to-go-12': catalogShot('beano-b268-to-go-12.jpg'),
+  // Meltaways, strawberry, 15. UPC 042037106928. The front prints 15. Not the tablets.
+  'beano-b268-meltaways-15': catalogShot('beano-b268-meltaways-15.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -44286,5 +44297,49 @@ assertBrandMark(
   });
   if (!immune30?.verifiedSku || !immune60?.verifiedSku || immune30.url === immune60.url) {
     throw new Error('Kids Immune Defense 30 and 60 must keep separate cartons');
+  }
+  // Digestive night run 2026-10-24 6:45 AM PT batch 2.
+  // Last three letters on the aisle.
+  const batch645b: [string, string, string][] = [
+    ['align-b266-womens-gummies-50', 'Align', 'align-b266-womens-gummies-50.jpg'],
+    ['beano-b268-to-go-12', 'Beano', 'beano-b268-to-go-12.jpg'],
+    ['beano-b268-meltaways-15', 'Beano', 'beano-b268-meltaways-15.jpg'],
+  ];
+  const seen645b = new Set<string>();
+  for (const [id, brand, file] of batch645b) {
+    if (seen645b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen645b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const beano100 = previewOverlayImage({
+    id: 'beano-b222-tablets-100',
+    formulaId: 'beano-b222-tablets-100',
+    brand: 'Beano',
+  });
+  const beano30 = previewOverlayImage({
+    id: 'beano-b222-tablets-30',
+    formulaId: 'beano-b222-tablets-30',
+    brand: 'Beano',
+  });
+  const beano12 = previewOverlayImage({
+    id: 'beano-b268-to-go-12',
+    formulaId: 'beano-b268-to-go-12',
+    brand: 'Beano',
+  });
+  const beano15 = previewOverlayImage({
+    id: 'beano-b268-meltaways-15',
+    formulaId: 'beano-b268-meltaways-15',
+    brand: 'Beano',
+  });
+  if (
+    !beano12?.verifiedSku
+    || !beano15?.verifiedSku
+    || beano12.url === beano15.url
+    || beano12.url === beano100?.url
+    || beano12.url === beano30?.url
+    || beano15.url === beano100?.url
+    || beano15.url === beano30?.url
+  ) {
+    throw new Error('Beano To Go 12 and Meltaways 15 must keep their own cartons');
   }
 }
