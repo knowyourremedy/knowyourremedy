@@ -3230,6 +3230,11 @@ const PREVIEW_ID_BRAND_MARK: Record<string, ProductImage> = {
   // Per-id only, so unattempted Gas-X rows stay letters.
   'gasx-b177-es-peppermint-starch-18': brandMark('gasx-mark.png'),
   'gasx-b177-es-cherry-sio2-18': brandMark('gasx-mark.png'),
+  // Digestive night run 2026-10-24 3:00 AM PT batch 2.
+  // Watermelon probiotic gummies, 60. The brand gallery front for this
+  // count is a flat label, and the other tile is a two-bottle lineup
+  // with the fiber gummies. Official wordmark. Not the 90-count bottle.
+  'physicianschoice-b227-probiotic-gummies-60': brandMark('physicianschoice-mark.png'),
 };
 
 // No standalone official 365 mark file on wholefoodsmarket.com (brand page
@@ -18799,6 +18804,76 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'physicianschoice-b225-womens-probiotic-60': catalogShot('physicianschoice-b225-womens-probiotic-60.jpg'),
   // Physician's Choice Thin 30 Probiotic, 30 capsules. UPC 854226008186. Not the 60.
   'physicianschoice-b225-thin-30-probiotic-30': catalogShot('physicianschoice-b225-thin-30-probiotic-30.jpg'),
+  // Digestive night run 2026-10-24 3:00 AM PT batch 2.
+  // Exact fronts. Sibling counts and flavors do not share a file.
+  // Thin 30 Probiotic, 60 capsules. UPC 854226008797. Not the 30-count bottle.
+  'physicianschoice-b225-thin-30-probiotic-60': catalogShot(
+    'physicianschoice-b225-thin-30-probiotic-60.jpg',
+  ),
+  // Men's Probiotic, 30 capsules. UPC 854226008957.
+  'physicianschoice-b225-mens-probiotic-30': catalogShot('physicianschoice-b225-mens-probiotic-30.jpg'),
+  // Prebiotic Probiotic, 30 capsules. UPC 854226008612.
+  'physicianschoice-b225-prebiotic-probiotic-30': catalogShot(
+    'physicianschoice-b225-prebiotic-probiotic-30.jpg',
+  ),
+  // Digestive Enzymes, 60 capsules. UPC 854226008544. Not the 30, 90, or 180.
+  'physicianschoice-b225-digestive-enzymes-60': catalogShot(
+    'physicianschoice-b225-digestive-enzymes-60.jpg',
+  ),
+  // Digestive Enzymes, 30 capsules. UPC 850048297043. Not the 60.
+  'physicianschoice-b225-digestive-enzymes-30': catalogShot(
+    'physicianschoice-b225-digestive-enzymes-30.jpg',
+  ),
+  // 100 Billion Probiotic, 30 capsules. UPC 850048297012.
+  'physicianschoice-b225-100b-probiotic-30': catalogShot('physicianschoice-b225-100b-probiotic-30.jpg'),
+  // Bloat + Gas Probiotic, 30 capsules. UPC 850048297173. Not the 2-pack.
+  'physicianschoice-b225-bloat-gas-probiotic-30': catalogShot(
+    'physicianschoice-b225-bloat-gas-probiotic-30.jpg',
+  ),
+  // Vaginal Probiotic, 60 capsules. UPC 850048297241. Not the 30.
+  'physicianschoice-b225-vaginal-probiotic-60': catalogShot(
+    'physicianschoice-b225-vaginal-probiotic-60.jpg',
+  ),
+  // Kids Probiotic + Fiber unflavored stick packs, 24. UPC 850048297142.
+  'physicianschoice-b225-kids-probiotic-fiber-24': catalogShot(
+    'physicianschoice-b225-kids-probiotic-fiber-24.jpg',
+  ),
+  // Easy Mix Fiber unflavored, 24-day, 5.7 oz. UPC 850048297531. Not the 7.1 oz tub.
+  'physicianschoice-b225-easy-mix-fiber-unflavored-24': catalogShot(
+    'physicianschoice-b225-easy-mix-fiber-unflavored-24.jpg',
+  ),
+  // Psyllium Husk Fiber, 300 capsules. UPC 850048297760.
+  'physicianschoice-b225-psyllium-husk-300': catalogShot('physicianschoice-b225-psyllium-husk-300.jpg'),
+  // Easy Mix Fiber peach mango, about 30 servings. UPC 850048297647. Not unflavored. Not cucumber lime.
+  'physicianschoice-b225-easy-mix-fiber-peach-mango': catalogShot(
+    'physicianschoice-b225-easy-mix-fiber-peach-mango.jpg',
+  ),
+  // Easy Mix Fiber cucumber lime, about 30 servings. UPC 850048297654. Not peach mango.
+  'physicianschoice-b225-easy-mix-fiber-cucumber-lime': catalogShot(
+    'physicianschoice-b225-easy-mix-fiber-cucumber-lime.jpg',
+  ),
+  // Fiber gummies, raspberry lemon, 60. UPC 850048297517. Not the kids bottle.
+  'physicianschoice-b226-fiber-gummies-60': catalogShot('physicianschoice-b226-fiber-gummies-60.jpg'),
+  // Kids Fiber Gummies, 60. UPC 850048297272. Not the adult raspberry lemon bottle.
+  'physicianschoice-b226-kids-fiber-gummies-60': catalogShot(
+    'physicianschoice-b226-kids-fiber-gummies-60.jpg',
+  ),
+  // Kids Probiotic Chewable, tart berry, 30 tablets. UPC 854226008995. Not the 60. Not a multipack.
+  'physicianschoice-b226-kids-probiotic-chewable-30': catalogShot(
+    'physicianschoice-b226-kids-probiotic-chewable-30.jpg',
+  ),
+  // Kids Probiotic Chewable, tart berry, 60 tablets. UPC 850048297210. Not the 30.
+  'physicianschoice-b226-kids-probiotic-chewable-60': catalogShot(
+    'physicianschoice-b226-kids-probiotic-chewable-60.jpg',
+  ),
+  // 60 Billion Advanced Probiotic, 30 capsules. UPC 850048297982. Not the regular 60 Billion bottle.
+  'physicianschoice-b227-60b-advanced-probiotic-30': catalogShot(
+    'physicianschoice-b227-60b-advanced-probiotic-30.jpg',
+  ),
+  // Vaginal Probiotic, 30 capsules. UPC 850048297074. Not the 60.
+  'physicianschoice-b228-vaginal-probiotic-30': catalogShot(
+    'physicianschoice-b228-vaginal-probiotic-30.jpg',
+  ),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -43306,10 +43381,135 @@ assertBrandMark(
     formulaId: 'physicianschoice-b225-thin-30-probiotic-60',
     brand: "Physician's Choice",
   });
-  const thin60Letter = thin60?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(thin60.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  if (!thin30?.verifiedSku || !thin60?.verifiedSku || thin30.url === thin60.url) {
+    throw new Error('Thin 30 60-count must keep its own carton');
+  }
+}
+
+{
+  // Digestive night run 2026-10-24 3:00 AM PT batch 2.
+  // Nineteen cartons. One attempted row stays on the official brand mark.
+  // Sibling counts and flavors do not share a file.
+  const batch300b: [string, string, string][] = [
+    ['physicianschoice-b225-thin-30-probiotic-60', "Physician's Choice", 'physicianschoice-b225-thin-30-probiotic-60.jpg'],
+    ['physicianschoice-b225-mens-probiotic-30', "Physician's Choice", 'physicianschoice-b225-mens-probiotic-30.jpg'],
+    ['physicianschoice-b225-prebiotic-probiotic-30', "Physician's Choice", 'physicianschoice-b225-prebiotic-probiotic-30.jpg'],
+    ['physicianschoice-b225-digestive-enzymes-60', "Physician's Choice", 'physicianschoice-b225-digestive-enzymes-60.jpg'],
+    ['physicianschoice-b225-digestive-enzymes-30', "Physician's Choice", 'physicianschoice-b225-digestive-enzymes-30.jpg'],
+    ['physicianschoice-b225-100b-probiotic-30', "Physician's Choice", 'physicianschoice-b225-100b-probiotic-30.jpg'],
+    ['physicianschoice-b225-bloat-gas-probiotic-30', "Physician's Choice", 'physicianschoice-b225-bloat-gas-probiotic-30.jpg'],
+    ['physicianschoice-b225-vaginal-probiotic-60', "Physician's Choice", 'physicianschoice-b225-vaginal-probiotic-60.jpg'],
+    ['physicianschoice-b225-kids-probiotic-fiber-24', "Physician's Choice", 'physicianschoice-b225-kids-probiotic-fiber-24.jpg'],
+    ['physicianschoice-b225-easy-mix-fiber-unflavored-24', "Physician's Choice", 'physicianschoice-b225-easy-mix-fiber-unflavored-24.jpg'],
+    ['physicianschoice-b225-psyllium-husk-300', "Physician's Choice", 'physicianschoice-b225-psyllium-husk-300.jpg'],
+    ['physicianschoice-b225-easy-mix-fiber-peach-mango', "Physician's Choice", 'physicianschoice-b225-easy-mix-fiber-peach-mango.jpg'],
+    ['physicianschoice-b225-easy-mix-fiber-cucumber-lime', "Physician's Choice", 'physicianschoice-b225-easy-mix-fiber-cucumber-lime.jpg'],
+    ['physicianschoice-b226-fiber-gummies-60', "Physician's Choice", 'physicianschoice-b226-fiber-gummies-60.jpg'],
+    ['physicianschoice-b226-kids-fiber-gummies-60', "Physician's Choice", 'physicianschoice-b226-kids-fiber-gummies-60.jpg'],
+    ['physicianschoice-b226-kids-probiotic-chewable-30', "Physician's Choice", 'physicianschoice-b226-kids-probiotic-chewable-30.jpg'],
+    ['physicianschoice-b226-kids-probiotic-chewable-60', "Physician's Choice", 'physicianschoice-b226-kids-probiotic-chewable-60.jpg'],
+    ['physicianschoice-b227-60b-advanced-probiotic-30', "Physician's Choice", 'physicianschoice-b227-60b-advanced-probiotic-30.jpg'],
+    ['physicianschoice-b228-vaginal-probiotic-30', "Physician's Choice", 'physicianschoice-b228-vaginal-probiotic-30.jpg'],
+  ];
+  const seen300b = new Set<string>();
+  for (const [id, brand, file] of batch300b) {
+    if (seen300b.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen300b.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const gummy60 = previewOverlayImage({
+    id: 'physicianschoice-b227-probiotic-gummies-60',
+    formulaId: 'physicianschoice-b227-probiotic-gummies-60',
+    brand: "Physician's Choice",
+  });
+  const gummy90 = previewOverlayImage({
+    id: 'physicianschoice-b229-probiotic-gummies-90',
+    formulaId: 'physicianschoice-b229-probiotic-gummies-90',
+    brand: "Physician's Choice",
+  });
+  if (
+    gummy60?.verifiedSku
+    || !gummy60?.url.endsWith('/physicianschoice-mark.png')
+    || gummy60.url === gummy90?.url
+  ) {
+    throw new Error('watermelon probiotic gummies 60 must keep the brand mark');
+  }
+  const enzymes30 = previewOverlayImage({
+    id: 'physicianschoice-b225-digestive-enzymes-30',
+    formulaId: 'physicianschoice-b225-digestive-enzymes-30',
+    brand: "Physician's Choice",
+  });
+  const enzymes60 = previewOverlayImage({
+    id: 'physicianschoice-b225-digestive-enzymes-60',
+    formulaId: 'physicianschoice-b225-digestive-enzymes-60',
+    brand: "Physician's Choice",
+  });
+  const enzymes90 = previewOverlayImage({
+    id: 'physicianschoice-b230-digestive-enzymes-90',
+    formulaId: 'physicianschoice-b230-digestive-enzymes-90',
+    brand: "Physician's Choice",
+  });
+  if (!enzymes30?.verifiedSku || enzymes30.url === enzymes60?.url || enzymes30.url === enzymes90?.url) {
+    throw new Error('digestive enzymes 30 must not use the 60 or the 90');
+  }
+  const vag30 = previewOverlayImage({
+    id: 'physicianschoice-b228-vaginal-probiotic-30',
+    formulaId: 'physicianschoice-b228-vaginal-probiotic-30',
+    brand: "Physician's Choice",
+  });
+  const vag60 = previewOverlayImage({
+    id: 'physicianschoice-b225-vaginal-probiotic-60',
+    formulaId: 'physicianschoice-b225-vaginal-probiotic-60',
+    brand: "Physician's Choice",
+  });
+  if (!vag30?.verifiedSku || !vag60?.verifiedSku || vag30.url === vag60.url) {
+    throw new Error('vaginal 30 and 60 must keep separate cartons');
+  }
+  const fiberAdult = previewOverlayImage({
+    id: 'physicianschoice-b226-fiber-gummies-60',
+    formulaId: 'physicianschoice-b226-fiber-gummies-60',
+    brand: "Physician's Choice",
+  });
+  const fiberKids = previewOverlayImage({
+    id: 'physicianschoice-b226-kids-fiber-gummies-60',
+    formulaId: 'physicianschoice-b226-kids-fiber-gummies-60',
+    brand: "Physician's Choice",
+  });
+  if (!fiberAdult?.verifiedSku || fiberAdult.url === fiberKids?.url) {
+    throw new Error('kids fiber gummies must not use the adult bottle');
+  }
+  const unflavored24 = previewOverlayImage({
+    id: 'physicianschoice-b225-easy-mix-fiber-unflavored-24',
+    formulaId: 'physicianschoice-b225-easy-mix-fiber-unflavored-24',
+    brand: "Physician's Choice",
+  });
+  const peach = previewOverlayImage({
+    id: 'physicianschoice-b225-easy-mix-fiber-peach-mango',
+    formulaId: 'physicianschoice-b225-easy-mix-fiber-peach-mango',
+    brand: "Physician's Choice",
+  });
+  const cuke = previewOverlayImage({
+    id: 'physicianschoice-b225-easy-mix-fiber-cucumber-lime',
+    formulaId: 'physicianschoice-b225-easy-mix-fiber-cucumber-lime',
+    brand: "Physician's Choice",
+  });
+  if (
+    !unflavored24?.verifiedSku
+    || unflavored24.url === peach?.url
+    || unflavored24.url === cuke?.url
+    || peach?.url === cuke?.url
+  ) {
+    throw new Error('Easy Mix flavors and the 5.7 oz tub must stay apart');
+  }
+  const nextMood = previewOverlayImage({
+    id: 'physicianschoice-b229-mood-support-probiotic-30',
+    formulaId: 'physicianschoice-b229-mood-support-probiotic-30',
+    brand: "Physician's Choice",
+  });
+  const nextLetter = nextMood?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextMood.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (!thin30?.verifiedSku || thin30.url === thin60?.url || thin60Letter !== 'P') {
-    throw new Error('Thin 30 60-count must stay a letter and not use the 30-count bottle');
+  if (nextMood?.verifiedSku || nextLetter !== 'P') {
+    throw new Error('unattempted Mood Support probiotic must stay a letter');
   }
 }
