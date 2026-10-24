@@ -19019,6 +19019,70 @@ const PREVIEW_IMAGE_OVERLAY: Record<string, ProductImage> = {
   'benefiber-b257-sticks-unflavored-48': catalogShot(
     'benefiber-b257-sticks-unflavored-48.jpg',
   ),
+  // Digestive night run 2026-10-24 5:30 AM PT batch 1.
+  // Exact fronts. Sibling counts do not share a file.
+  // Superfruits, strawberry dragon fruit, 25-day / 8.8 oz. Not Supergreens.
+  'benefiber-b257-superfruits': catalogShot('benefiber-b257-superfruits.jpg'),
+  // Supergreens, watermelon lemonade, 25-day / 8.8 oz. Not Superfruits.
+  'benefiber-b257-supergreens': catalogShot('benefiber-b257-supergreens.jpg'),
+  // Digestive Daily capsules, 30. UPC 049100400099. Not the 50. Not the older maltodextrin row.
+  'culturelle-b258-digestive-daily-30': catalogShot(
+    'culturelle-b258-digestive-daily-30.jpg',
+  ),
+  // Digestive Daily capsules, 50. UPC 049100400211. Not the 30.
+  'culturelle-b258-digestive-daily-50': catalogShot(
+    'culturelle-b258-digestive-daily-50.jpg',
+  ),
+  // Digestive Daily chewables, fresh orange, 24. UPC 049100400228. Not the 48 2-pack.
+  'culturelle-b258-digestive-chew-24': catalogShot(
+    'culturelle-b258-digestive-chew-24.jpg',
+  ),
+  // Ultimate Strength capsules, 30. UPC 049100400518. The front prints 30.
+  'culturelle-b258-ultimate-strength-30': catalogShot(
+    'culturelle-b258-ultimate-strength-30.jpg',
+  ),
+  // Health & Wellness capsules, 30. UPC 049100363745. Not the 50.
+  'culturelle-b258-health-wellness-30': catalogShot(
+    'culturelle-b258-health-wellness-30.jpg',
+  ),
+  // Bloating & Gas Defense capsules, 30. UPC 049100401829.
+  'culturelle-b258-gas-30': catalogShot('culturelle-b258-gas-30.jpg'),
+  // Baby Digestive Calm + Comfort drops, 0.29 fl oz. UPC 049100400525. Not the vitamin D drops.
+  'culturelle-b258-baby-calm-drops': catalogShot(
+    'culturelle-b258-baby-calm-drops.jpg',
+  ),
+  // Baby Immune + Digestive Support drops with vitamin D, 0.3 fl oz. UPC 049100400532.
+  'culturelle-b258-baby-immune-drops': catalogShot(
+    'culturelle-b258-baby-immune-drops.jpg',
+  ),
+  // Kids Probiotic + Fiber packets, 24. UPC 049100400372. Not the 60.
+  'culturelle-b258-kids-fiber-24': catalogShot(
+    'culturelle-b258-kids-fiber-24.jpg',
+  ),
+  // Kids Probiotic + Fiber packets, 60. UPC 049100400938. Not the 24.
+  'culturelle-b258-kids-fiber-60': catalogShot(
+    'culturelle-b258-kids-fiber-60.jpg',
+  ),
+  // FlorastorKids Dual Action, 30 sticks. UPC 704142000378. Not the 20-stick tutti-frutti box.
+  'florastor-b259-kids-30': catalogShot('florastor-b259-kids-30.jpg'),
+  // Probiotics + FiberMax packets, 20. UPC 049100402123. Not the 40 2-pack.
+  'culturelle-b260-fibermax-20': catalogShot('culturelle-b260-fibermax-20.jpg'),
+  // Complete 3-in-1 Biotics mini-chews, mixed berry, 28. UPC 049100402017.
+  'culturelle-b260-minichews-28': catalogShot('culturelle-b260-minichews-28.jpg'),
+  // Kids Complete Fast Melts, mixed berry, 30 packets. UPC 049100402031.
+  'culturelle-b260-fast-melts-30': catalogShot('culturelle-b260-fast-melts-30.jpg'),
+  // Kids Probiotics + Electrolytes Hydration Super Duo, 30. UPC 049100402048.
+  'culturelle-b260-electrolytes-30': catalogShot(
+    'culturelle-b260-electrolytes-30.jpg',
+  ),
+  // Women's 4-in-1 capsules, 30. UPC 049100400594. Not the 60 2-pack.
+  'culturelle-b260-womens-4in1-30': catalogShot(
+    'culturelle-b260-womens-4in1-30.jpg',
+  ),
+  // Metabolism + Weight Management capsules, 30. UPC 049100401836. Not the 60 2-pack.
+  'culturelle-b260-metabolism-30': catalogShot('culturelle-b260-metabolism-30.jpg'),
+  // Kids Complete + Lutein gummies, peach-orange, 60. UPC 049100401485.
+  'culturelle-b260-lutein-60': catalogShot('culturelle-b260-lutein-60.jpg'),
 };
 
 // Tile lookup: exact SKU overlay → per-id mark or brand-name text tile →
@@ -20203,6 +20267,14 @@ const PREVIEW_NO_FORMULA_IMAGE = new Set([
   'metamucil-b257-real-sugar-orange-30',
   'metamucil-b256-capsules-340',
   'metamucil-b257-fiber-probiotic-gummy-60',
+  // Digestive night run 2026-10-24 5:30 AM PT batch 1.
+  // Shared-formula counts. Do not inherit a sibling face.
+  'culturelle-b258-digestive-daily-30',
+  'culturelle-b258-digestive-daily-50',
+  'culturelle-b258-kids-fiber-24',
+  'culturelle-b258-kids-fiber-60',
+  // 30 sticks share the kids formula. Not the 20-stick tutti-frutti box.
+  'florastor-b259-kids-30',
 ]);
 
 export function previewOverlayImage(
@@ -43808,10 +43880,100 @@ assertBrandMark(
     formulaId: 'benefiber-b257-superfruits',
     brand: 'Benefiber',
   });
-  const nextLetter = nextFruit?.url.startsWith('data:image/svg')
-    ? decodeURIComponent(nextFruit.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
+  const nextGreens = previewOverlayImage({
+    id: 'benefiber-b257-supergreens',
+    formulaId: 'benefiber-b257-supergreens',
+    brand: 'Benefiber',
+  });
+  if (!nextFruit?.verifiedSku || !nextGreens?.verifiedSku || nextFruit.url === nextGreens.url) {
+    throw new Error('Benefiber Superfruits and Supergreens must keep their own cartons');
+  }
+}
+
+{
+  // Digestive night run 2026-10-24 5:30 AM PT batch 1.
+  // Twenty cartons. Sibling counts do not share a file.
+  const batch530a: [string, string, string][] = [
+    ['benefiber-b257-superfruits', 'Benefiber', 'benefiber-b257-superfruits.jpg'],
+    ['benefiber-b257-supergreens', 'Benefiber', 'benefiber-b257-supergreens.jpg'],
+    ['culturelle-b258-digestive-daily-30', 'Culturelle', 'culturelle-b258-digestive-daily-30.jpg'],
+    ['culturelle-b258-digestive-daily-50', 'Culturelle', 'culturelle-b258-digestive-daily-50.jpg'],
+    ['culturelle-b258-digestive-chew-24', 'Culturelle', 'culturelle-b258-digestive-chew-24.jpg'],
+    ['culturelle-b258-ultimate-strength-30', 'Culturelle', 'culturelle-b258-ultimate-strength-30.jpg'],
+    ['culturelle-b258-health-wellness-30', 'Culturelle', 'culturelle-b258-health-wellness-30.jpg'],
+    ['culturelle-b258-gas-30', 'Culturelle', 'culturelle-b258-gas-30.jpg'],
+    ['culturelle-b258-baby-calm-drops', 'Culturelle', 'culturelle-b258-baby-calm-drops.jpg'],
+    ['culturelle-b258-baby-immune-drops', 'Culturelle', 'culturelle-b258-baby-immune-drops.jpg'],
+    ['culturelle-b258-kids-fiber-24', 'Culturelle', 'culturelle-b258-kids-fiber-24.jpg'],
+    ['culturelle-b258-kids-fiber-60', 'Culturelle', 'culturelle-b258-kids-fiber-60.jpg'],
+    ['florastor-b259-kids-30', 'Florastor', 'florastor-b259-kids-30.jpg'],
+    ['culturelle-b260-fibermax-20', 'Culturelle', 'culturelle-b260-fibermax-20.jpg'],
+    ['culturelle-b260-minichews-28', 'Culturelle', 'culturelle-b260-minichews-28.jpg'],
+    ['culturelle-b260-fast-melts-30', 'Culturelle', 'culturelle-b260-fast-melts-30.jpg'],
+    ['culturelle-b260-electrolytes-30', 'Culturelle', 'culturelle-b260-electrolytes-30.jpg'],
+    ['culturelle-b260-womens-4in1-30', 'Culturelle', 'culturelle-b260-womens-4in1-30.jpg'],
+    ['culturelle-b260-metabolism-30', 'Culturelle', 'culturelle-b260-metabolism-30.jpg'],
+    ['culturelle-b260-lutein-60', 'Culturelle', 'culturelle-b260-lutein-60.jpg'],
+  ];
+  const seen530a = new Set<string>();
+  for (const [id, brand, file] of batch530a) {
+    if (seen530a.has(file)) throw new Error(`duplicate night-photo carton ${file}`);
+    seen530a.add(file);
+    assertExactCarton(id, brand, file);
+  }
+  const dd30 = previewOverlayImage({
+    id: 'culturelle-b258-digestive-daily-30',
+    formulaId: 'culturelle-b258-digestive-daily',
+    brand: 'Culturelle',
+  });
+  const dd50 = previewOverlayImage({
+    id: 'culturelle-b258-digestive-daily-50',
+    formulaId: 'culturelle-b258-digestive-daily',
+    brand: 'Culturelle',
+  });
+  const oldDd = previewOverlayImage({
+    id: 'culturelle-digestive-daily',
+    formulaId: 'culturelle-digestive-daily',
+    brand: 'Culturelle',
+  });
+  if (!dd30?.verifiedSku || !dd50?.verifiedSku || dd30.url === dd50.url || dd30.url === oldDd?.url || dd50.url === oldDd?.url) {
+    throw new Error('Digestive Daily 30 and 50 must stay apart from each other and the older row');
+  }
+  const fiber24 = previewOverlayImage({
+    id: 'culturelle-b258-kids-fiber-24',
+    formulaId: 'culturelle-b258-kids-fiber',
+    brand: 'Culturelle',
+  });
+  const fiber60 = previewOverlayImage({
+    id: 'culturelle-b258-kids-fiber-60',
+    formulaId: 'culturelle-b258-kids-fiber',
+    brand: 'Culturelle',
+  });
+  if (!fiber24?.verifiedSku || !fiber60?.verifiedSku || fiber24.url === fiber60.url) {
+    throw new Error('Kids fiber 24 and 60 must keep separate cartons');
+  }
+  const kids30 = previewOverlayImage({
+    id: 'florastor-b259-kids-30',
+    formulaId: 'florastor-b222-kids',
+    brand: 'Florastor',
+  });
+  const kids20 = previewOverlayImage({
+    id: 'florastor-b222-kids-20',
+    formulaId: 'florastor-b222-kids',
+    brand: 'Florastor',
+  });
+  if (!kids30?.verifiedSku || !kids20?.verifiedSku || kids30.url === kids20.url) {
+    throw new Error('FlorastorKids 30 sticks must not use the 20-stick box');
+  }
+  const nextImmune = previewOverlayImage({
+    id: 'culturelle-b260-kids-immune-30',
+    formulaId: 'culturelle-b260-kids-immune',
+    brand: 'Culturelle',
+  });
+  const nextLetter = nextImmune?.url.startsWith('data:image/svg')
+    ? decodeURIComponent(nextImmune.url.split(',')[1] ?? '').match(/>([^<]+)<\/text>/)?.[1]
     : undefined;
-  if (nextFruit?.verifiedSku || nextLetter !== 'B') {
-    throw new Error('unattempted Benefiber superfruits must stay a letter');
+  if (nextImmune?.verifiedSku || nextLetter !== 'C') {
+    throw new Error('unattempted Culturelle kids immune chewables must stay a letter');
   }
 }
