@@ -1,7 +1,7 @@
 // DRAFT / not verified / batch 273 KYR6-d (t41u Spring Valley packs 61-90).
 // House brand sold only through Walmart. The Walmart panel image is the single source (t41u).
 // Not in this file:
-// - Flaxseed Oil 1,000 mg, 100 softgels. Single and 3-pack are out of stock.
+// - Flaxseed Oil 1,000 mg, 100 softgels. Single and 3-pack are out of stock. Closed as not for sale.
 // - Healthy Aging 50+ Vitality Probiotic with Zinc, 30 capsules. Stock was not shown.
 // - High Potency Probiotic Gummies, 60 count. No Supplement Facts panel image.
 
