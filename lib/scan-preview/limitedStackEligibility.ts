@@ -55,6 +55,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (/\bpotassium benzoate\b|\bsodium benzoate\b/.test(n)) return true;
   if (/natural flavor|artificial flavor|flavor\)/.test(n) && !/^natural\s+[\w\s/&+-]+\s+flavor$/i.test(name.trim())) {
     if (n === 'natural flavors' || n === 'natural flavor') return false;
+    if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
     if (n.startsWith('natural and artificial')) return false;
     if (/^natural\s+[\w\s/&+-]+\s+flavor$/i.test(name.trim())) return false;
     return true;
@@ -81,6 +82,7 @@ export function isMethLimitedIngredientName(name: string): boolean {
     return true;
   }
   if (n === 'natural flavors' || n === 'natural flavor') return true;
+  if (n === 'artificial flavor' || n === 'artificial flavoring') return true;
   if (/natural and artificial flavor/.test(n) && !/s$/.test(n)) return true;
   if (/strawberry watermelon raspberry flavor/.test(n)) return true;
   if (/tapioca dextrin|tapioca powder|organic tapioca (powder|starch)|organic tapioca starch/.test(n)) {
@@ -109,6 +111,7 @@ export function hasExplicitLimitedLockSource(source: string | undefined): boolea
 export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
+  if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
   if (/\bcitric acid\b|\bmalic acid\b|\btartaric acid\b/.test(n)) return true;

@@ -970,6 +970,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'artificial flavor' || n === 'artificial flavoring') {
+    return close(
+      'Artificial Flavor is Limited, the same substance as the plural Artificial flavors lock (t42u). It is not a named fruit flavor.',
+      level,
+    );
+  }
+
   if (/\bflavou?rs?\b/.test(n)) {
     if (isUnnamedFlavor(n)) return unnamedFlavorWhy(level);
     const food = n
@@ -1000,6 +1007,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   if (/magnesium stearate|stearic acid|calcium stearate|calcium laurate|sodium stearate|stearate family/.test(n) || /maanesium stearate|magnesium sterate|magenesium stereate|magensium stearate/.test(n)) {
     return close(
       'This is a stearate lubricant that helps a tablet press and leave the mold. A 2018 European review found no safety concern.',
+      level,
+    );
+  }
+
+  if (n === 'modified cellulose gum') {
+    return close(
+      'Modified cellulose gum is Caution under founder lock t42u. It is not Cleared cellulose gum, and it is not Limited unlabeled modified cellulose.',
       level,
     );
   }
@@ -1478,7 +1492,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close('This is an EDTA salt used as a stabilizer. The chelation risk in the literature is about large intravenous doses, not this trace use.', level);
   }
 
-  if (/^menthol\b|menthol dl/.test(n)) {
+  if (n === 'natural menthol' || /^menthol\b|menthol dl/.test(n)) {
+    if (level === 'limited' && /t42u|fast-dissolve/i.test(source)) {
+      return close(
+        'Menthol on a fast-dissolve tablet is Limited under founder lock t42u. Natural Menthol is the same grade. It is a named chemical, not a hidden flavor blend. Inactive menthol in a spray, a rinse, or a gel stays Caution. A lozenge inactive menthol stays the flavor Caution row.',
+        level,
+      );
+    }
     if (level === 'high') {
       return close('Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug.', level);
     }
