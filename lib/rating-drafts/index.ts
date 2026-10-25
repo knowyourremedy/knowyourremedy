@@ -273,3 +273,4 @@ export { BATCH273_KYR6D_T41U_SV } from './batch273-kyr6d-t41u-sv';
 export { BATCH274_KYR6D_T41U_SV } from './batch274-kyr6d-t41u-sv';
 export { BATCH275_KYR6D_T41U_SV } from './batch275-kyr6d-t41u-sv';
 export { BATCH276_KYR6D_T41U_SV } from './batch276-kyr6d-t41u-sv';
+export { BATCH277_KYR6D_T41U_SV } from './batch277-kyr6d-t41u-sv';
