@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 25, 2026 (t41u founder order; KYR6-d):** Standing house-brand sentence added to §4 When writing rows, after the single-source sentence. A store page counts as the single source when the brand is sold only through that store. The store is the brand page for a house brand. A readable panel on that store page satisfies the single-source rule the same way a brand page does.
+
 **Changed Oct 24, 2026 (t36u founder order; KYR6-d):** One founder lock. Triglycerides (printed alone): Limited. The bare class name does not identify the chain length. Medium chain triglycerides is already Limited. The unnamed rule applies. It counts toward the t137u stack. Distinct from Cleared named medium-chain triglycerides with a plant source, Cleared MCT oil, and Cleared C10-18 triglycerides as fill. No catalog row in this stamp.
 
 **Changed Oct 23, 2026 (t28u founder order; KYR6-d):** Standing single-source sentence added to §4 When writing rows. A single source counts when that one source is the brand page showing the pack for sale, or when the founder has verified the panel and UPC. The two-source rule still applies to retailer pages found by the bot.
@@ -352,6 +354,7 @@ When writing rows:
 - A grade means there is a why. Name the rule or agency that set the why. Do not write “Pending DailyMed review.”
 - Confirm two sources before writing. A missing UPC does not block the write. Note missing UPCs in PROJECT_NOTES so they can be added later. Founder-verified labels can waive the second source when instructed.
 - A single source counts when that one source is the brand page showing the pack for sale, or when the founder has verified the panel and UPC. The two-source rule still applies to retailer pages found by the bot.
+- A store page counts as the single source when the brand is sold only through that store. The store is the brand page for a house brand. A readable panel on that store page satisfies the single-source rule the same way a brand page does.
 - Never write a row until all tokens are locked, and never duplicate an existing row.
 - Put each product on the correct ingredient tab.
 - US only. No Canada. No EU.
