@@ -2,6 +2,9 @@ import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import {
   isPureVanillaExtractName,
   isT50uRemainLimitedVanillaFlavorName,
+  isT51uCautionName,
+  isT51uClearedName,
+  isT51uLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -375,6 +378,97 @@ export function isFruitVegetableJuiceLock(name: string): boolean {
   return fruit.test(n) && /concentrate|powder/.test(n);
 }
 
+function t51uIngredientWhy(name: string, level: RiskLevel): string {
+  const n = name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (n === 'glucono delta lactone') {
+    return close(
+      'Glucono delta lactone is the same substance as gluconolactone. The founder locked this panel string Cleared (t51u). 21 CFR 184.1318 affirms it as GRAS with no limitation other than good manufacturing practice.',
+      level,
+    );
+  }
+  if (n === 'thaumatin') {
+    return close(
+      'Thaumatin is a sweetener protein. The founder locked this exact token Cleared (t51u). FDA GRAS notice GRN 738 closed with a letter that FDA has no questions. That letter is not an FDA affirmation. Thaumatin powder is not this token.',
+      level,
+    );
+  }
+  if (n === 'liquid fish oil') {
+    return close(
+      'Liquid fish oil printed as an other ingredient is Cleared under founder lock t51u. It is a named marine oil, the same posture as fish oil powder. 21 CFR 184.1472 affirms menhaden oil as GRAS within the listed food uses. It is not fish oil powder, and it is not hydrogenated menhaden oil. Fish oil as the Supplement Facts active stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'almond butter') {
+    return close(
+      'Almond butter is a named food. The founder locked this exact token Cleared (t51u). Rowanberry stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'floli50') {
+    return close(
+      'Floli50 is an organic brown rice grain blend used as an anti-caking flow excipient. The founder locked it Cleared (t51u). It is not silicon dioxide, and it is not magnesium stearate.',
+      level,
+    );
+  }
+  if (n === 'vitamin c inactive') {
+    return close(
+      'Vitamin C (inactive) is ascorbic acid printed as an other ingredient. The founder locked that exact token Cleared (t51u). 21 CFR 182.3013 lists ascorbic acid as GRAS under good manufacturing practice. Vitamin C on the Supplement Facts panel stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'zinc citrate') {
+    return close(
+      'Zinc citrate printed as an other ingredient is Cleared under founder lock t51u. It is the same inactive mineral-salt posture as zinc gluconate. Zinc as an active stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'sodium hyaluronate') {
+    return close(
+      'Sodium hyaluronate printed as an other ingredient is Cleared under founder lock t51u. FDA GRAS notice GRN 976 closed because, at the notifier\'s request, FDA ceased to evaluate the notice. That is not a no-questions letter. Hyaluronic acid as an active stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'd ribose') {
+    return close(
+      'D-ribose as an other ingredient is Caution under founder lock t51u. EFSA found it safe up to 36 mg/kg body weight per day, and this app cannot check that intake on the pack. FDA GRAS notice GRN 243 closed with a letter that FDA has no questions for use with an additional carbohydrate energy source. It does not count toward the three-or-more Limited stack. D-ribose as a Supplement Facts active stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'myrrh oil') {
+    return close(
+      'Myrrh oil is Caution under founder lock t51u. FDA lists it as a flavoring agent under 21 CFR 172.510. An FDA flavor allow is not Clean. It is the same essential-oil posture as thyme oil. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  if (n === 'organic cane syrup') {
+    return close(
+      'Organic cane syrup is Caution under founder lock t51u. It is not Cleared cane sugar, and it is not Cleared organic sugar. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  if (n === 'malodextrin') {
+    return close(
+      'Malodextrin is the literal misspelling of maltodextrin. The founder locked that spelling Limited (t51u), the same grade as maltodextrin. It counts toward the three-or-more Limited stack. It is not tapioca maltodextrin.',
+      level,
+    );
+  }
+  if (n === 'berry flavoring') {
+    return close(
+      'Berry flavoring is an unnamed flavor. It names a berry class, not the mixture. The founder locked it Limited (t51u). It is not a named-fruit flavor.',
+      level,
+    );
+  }
+  return close('The founder locked this exact token in t51u.', level);
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -445,6 +539,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Fish oil powder printed as an other ingredient is Cleared under founder lock t24u. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill, and fish oil is not a seed or vegetable oil. Fish oil printed as the Supplement Facts active stays ungraded.',
       level,
     );
+  }
+
+  if (isT51uClearedName(ingredient.name) || isT51uCautionName(ingredient.name) || isT51uLimitedName(ingredient.name)) {
+    return t51uIngredientWhy(ingredient.name, level);
   }
 
   if (n === 'digestion resistant maltodextrin') {
