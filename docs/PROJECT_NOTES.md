@@ -447,6 +447,10 @@ When searching a retailer, open the store’s product page in the computer’s b
 
 When a store page or brand page does not show an ingredient line, or when only one source has been found, run a Google AI search the way a person would. Type the product name and count into Google the way a person would. Open the AI overview and any linked pages that show a panel. Do not use a scripted search URL. A blocked or empty AI result does not count as exhausting that step. The bot must open the result and physically view the ingredient line before that step can be called a miss.
 
+When searching like a person, open the store or brand page in the browser. If a rewards, signup, or newsletter popup appears on first visit, close it by clicking the X or “No thanks” and continue. A popup is not a block. Only treat a page as blocked if the product content itself cannot be loaded after the popup is closed and after normal human navigation (carousel images, collapsed tabs, ingredient panels).
+
+Amazon, iHerb, and any other retailer that previously returned a block must be re-tried under this rule before a pack is marked blocked or held for missing sources.
+
 Two-source rule
 See the standing section When writing rows. The text below stays.
 A pack needs two confirmed sources before a UPC is attached or a row is written. One source can be a Google AI blurb that names the exact single-count pack and a matching code from a site it viewed. The other source must be a page that opened with a price or Add to Cart for that exact single count. Amazon alone is not enough. A multipack is not a single-count row.
