@@ -70,6 +70,8 @@ export const BATCH288_KYR6D_T60U: RatingRecord[] = [
       flag('Gum Acacia', 'cleared', 'acacia'),
     ],
     verdict: 'caution',
+    honestNote:
+      'goMCT® (medium chain triglycerides, gum acacia) is the Limited token that produces the Caution grade.',
     sourcesGeneral: [
       't60u. BiOptimizers brand page is the single source. https://bioptimizers.com/products/magnesium-breakthrough lists the 60 capsules at $39.99 and in stock. The carousel facts graphic is the panel. Serving 2 capsules. Servings per container 30. Take 2 capsules daily. Other ingredients: Hypromellose (capsule), Microcrystalline Cellulose, Ascorbyl Palmitate (preservative), goMCT® (medium chain triglycerides, gum acacia). goMCT® is the t49u Limited lock. The parenthesis medium chain triglycerides is that same ingredient, not a second Limited token. Gum acacia is Cleared. “(preservative)” is the role of ascorbyl palmitate, not a second token. Counted Limited token: goMCT®. That is one, so this is not a 3+ stack. No honest note. UPC 689176916492 is on the 60-count label image. The variant GTIN is 0689176916492. iHerb and Vitacost opened a 50-count, not this 60. Not bioptimizers-b281-mag-advanced-10. Not the drink.',
     ],
@@ -93,11 +95,12 @@ const counted = record.inactiveIngredients
 if (counted !== 'goMCT®') throw new Error(`batch288 stack ${counted}`);
 const formNote = contradictionHonestNote(record) ?? '';
 const stackNote = limitedStackHonestNoteIfAny(record.inactiveIngredients) ?? '';
-const note = [formNote, stackNote].filter(Boolean).join(' ');
-if ((record.honestNote ?? '') !== note) {
-  throw new Error(`batch288 note ${JSON.stringify(record.honestNote)} vs ${JSON.stringify(note)}`);
+if (formNote || stackNote) throw new Error(`batch288 auto note ${formNote} ${stackNote}`);
+const founderNote =
+  'goMCT® (medium chain triglycerides, gum acacia) is the Limited token that produces the Caution grade.';
+if (record.honestNote !== founderNote) {
+  throw new Error(`batch288 note ${JSON.stringify(record.honestNote)}`);
 }
-if (record.honestNote) throw new Error(`batch288 unexpected note ${record.honestNote}`);
 if (record.barcode !== '689176916492') throw new Error(`batch288 upc ${record.barcode}`);
 for (const ingredient of record.inactiveIngredients) {
   const why = plainIngredientWhy(ingredient);
