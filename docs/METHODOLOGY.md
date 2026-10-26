@@ -382,6 +382,10 @@ When searching a retailer, open the store’s product page in the computer’s b
 
 When a store page or brand page does not show an ingredient line, or when only one source has been found, run a Google AI search the way a person would. Type the product name and count into Google the way a person would. Open the AI overview and any linked pages that show a panel. Do not use a scripted search URL. A blocked or empty AI result does not count as exhausting that step. The bot must open the result and physically view the ingredient line before that step can be called a miss.
 
+When searching like a person, open the store or brand page in the browser. If a rewards, signup, or newsletter popup appears on first visit, close it by clicking the X or “No thanks” and continue. A popup is not a block. Only treat a page as blocked if the product content itself cannot be loaded after the popup is closed and after normal human navigation (carousel images, collapsed tabs, ingredient panels).
+
+Amazon, iHerb, and any other retailer that previously returned a block must be re-tried under this rule before a pack is marked blocked or held for missing sources.
+
 ## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
 
 **Core rule.** U.S. FDA allowance, GRAS status, and IID presence are **inventory/context only** — never evidence of Clean by themselves.
