@@ -1,5 +1,9 @@
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import {
+  isPureVanillaExtractName,
+  isT50uRemainLimitedVanillaFlavorName,
+} from './limitedStackEligibility';
+import {
   isT159uPaprikaColorClearedName,
   isT159uSteviaExtractLimitedName,
 } from './t159uLocks';
@@ -530,6 +534,20 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   if (n === 'yogurt powder') {
     return close(
       'Yogurt powder is a dairy powder. The founder locked it Cleared (t16u).',
+      level,
+    );
+  }
+
+  if (isPureVanillaExtractName(n)) {
+    return close(
+      'Pure vanilla extract lists only the extract, alcohol, and water. No optional ingredients are declared. Residual alcohol is the solvent and is not docked. The founder locked it Cleared (t50u).',
+      level,
+    );
+  }
+
+  if (isT50uRemainLimitedVanillaFlavorName(n)) {
+    return close(
+      'Natural vanilla flavor and vanilla flavoring are unnamed flavors. They stay Limited (t50u). They are not pure vanilla extract, and they are not the Caution vanilla flavor row.',
       level,
     );
   }
