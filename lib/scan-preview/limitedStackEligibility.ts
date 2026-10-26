@@ -34,7 +34,7 @@ function t51uToken(name: string): string {
     .trim();
 }
 
-/** t51u exact Cleared strings. Not thaumatin powder. Not fish oil powder. Not a Supplement Facts active. */
+/** t51u exact Cleared strings. Thaumatin powder maps here under t55u. Not fish oil powder. Not a Supplement Facts active. */
 export function isT51uClearedName(name: string): boolean {
   const n = t51uToken(name);
   return (
@@ -106,6 +106,81 @@ export function isT54uClearedFlavorName(name: string): boolean {
   return T54U_CLEARED_FLAVOR.has(t54uFlavorKey(name));
 }
 
+function t55uToken(name: string): string {
+  return name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const FISH_OIL_SPECIES = new Set([
+  'cod',
+  'anchovy',
+  'anchovies',
+  'jack',
+  'pompano',
+  'smelt',
+  'salmon',
+  'sardine',
+  'sardines',
+  'mackerel',
+  'herring',
+  'tuna',
+  'menhaden',
+  'and',
+]);
+
+/** t55u: printed Fish Oil, including a species parenthesis, maps to liquid fish oil. Not the powder. Not the Supplement Facts active. */
+export function isFishOilInactiveMap(name: string): boolean {
+  const n = t55uToken(name);
+  if (/\bpowder\b|\bliver\b|\bconcentrate\b|\bester\b/.test(n)) return false;
+  if (n === 'fish oil') return true;
+  if (!n.startsWith('fish oil ')) return false;
+  return n.slice('fish oil '.length).split(' ').every((word) => FISH_OIL_SPECIES.has(word));
+}
+
+/** t55u: "Natural color (named color)" . Not bare natural color. Not unspecified natural colors. */
+export function isNaturalColorParenthesis(name: string): boolean {
+  return /^natural colou?r\s*\([^)]+\)$/i.test(name.trim().replace(/\s+/g, ' '));
+}
+
+/** t55u exact Limited strings. They count toward the t137u stack. */
+export function isT55uLimitedName(name: string): boolean {
+  const n = t55uToken(name);
+  return n === 'natural berry flavoring' || n === 'isomalto oligosaccharides';
+}
+
+/** Exact "Carob (color)". Square brackets are a different print. */
+export function isCarobColor(name: string): boolean {
+  return /^carob\s*\(\s*color\s*\)$/i.test(name.trim().replace(/\s+/g, ' '));
+}
+
+/** Exact "black carrot concentrate (color)". A comma is a different print. */
+export function isBlackCarrotConcentrateColor(name: string): boolean {
+  const raw = name.trim().replace(/\s+/g, ' ');
+  if (/,/.test(raw)) return false;
+  return /^black carrot concentrate\s*\(\s*color\s*\)$/i.test(raw);
+}
+
+/** t55u Cleared strings, including the mapped aliases. */
+export function isT55uClearedName(name: string): boolean {
+  const n = t55uToken(name);
+  return (
+    isCarobColor(name)
+    || isBlackCarrotConcentrateColor(name)
+    || n === 'thaumatin powder'
+    || n === 'non gmo almond butter'
+    || n === 'sodium hyaluronate hyaluronic acid'
+    || isFishOilInactiveMap(name)
+    || isNaturalColorParenthesis(name)
+  );
+}
+
 /** t50u remain-Limited strings. Not vanilla flavor. Not natural vanilla powder. */
 export function isT50uRemainLimitedVanillaFlavorName(name: string): boolean {
   const n = vanillaToken(name);
@@ -144,6 +219,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (isPureVanillaExtractName(name)) return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
   if (isT51uLimitedName(name) || isT51uClearedName(name)) return false;
+  if (isT55uLimitedName(name) || isT55uClearedName(name)) return false;
   if (isT51uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
@@ -187,8 +263,8 @@ export function isMethCautionIngredientName(name: string): boolean {
 /** Limited-risk rows that may remain `limited` and count toward stack when not exempt. */
 export function isMethLimitedIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
-  if (isT51uLimitedName(name)) return true;
-  if (isT51uCautionName(name) || isT51uClearedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name)) return true;
+  if (isT51uCautionName(name) || isT51uClearedName(name) || isT55uClearedName(name)) return false;
   if (isTapiocaMaltodextrinName(name)) return true;
   if (n === 'ceteth-20' || n === 'ceteth 20') return true;
   if (n === 'chlorocresol') return true;
@@ -231,7 +307,7 @@ export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
-  if (isT51uLimitedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name)) return false;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
@@ -247,7 +323,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
-  if (isT51uClearedName(ingredient.name)) return false;
+  if (isT51uClearedName(ingredient.name) || isT55uClearedName(ingredient.name)) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (

@@ -7,6 +7,12 @@ import {
   isT51uLimitedName,
   isT54uClearedFlavorName,
   isT54uLimitedFlavorName,
+  isT55uClearedName,
+  isT55uLimitedName,
+  isBlackCarrotConcentrateColor,
+  isCarobColor,
+  isFishOilInactiveMap,
+  isNaturalColorParenthesis,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -398,7 +404,7 @@ function t51uIngredientWhy(name: string, level: RiskLevel): string {
   }
   if (n === 'thaumatin') {
     return close(
-      'Thaumatin is a sweetener protein. The founder locked this exact token Cleared (t51u). FDA GRAS notice GRN 738 closed with a letter that FDA has no questions. That letter is not an FDA affirmation. Thaumatin powder is not this token.',
+      'Thaumatin is a sweetener protein. The founder locked this exact token Cleared (t51u). FDA GRAS notice GRN 738 closed with a letter that FDA has no questions. That letter is not an FDA affirmation. Thaumatin powder maps to this token.',
       level,
     );
   }
@@ -471,6 +477,73 @@ function t51uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t51u.', level);
 }
 
+function t55uIngredientWhy(name: string, level: RiskLevel): string {
+  const n = name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (n === 'natural berry flavoring') {
+    return close(
+      'Natural Berry Flavoring is a vague flavor. The founder locked this exact wording Limited (t55u). It is not berry flavoring.',
+      level,
+    );
+  }
+  if (n === 'isomalto oligosaccharides') {
+    return close(
+      'Isomalto-oligosaccharides are Limited under founder lock t55u. This spelling is not isomalt, and it is not Isomaltooligosaccharides (IMO). It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  if (isCarobColor(name)) {
+    return close(
+      'Carob (color) is a named plant color. The founder locked that exact string Cleared (t55u). It is not carob powder.',
+      level,
+    );
+  }
+  if (isBlackCarrotConcentrateColor(name)) {
+    return close(
+      'Black carrot concentrate (color) is a named plant color. The founder locked that exact string Cleared (t55u). It is not a synthetic dye.',
+      level,
+    );
+  }
+  if (n === 'thaumatin powder') {
+    return close(
+      'Thaumatin powder is the same sweetener as thaumatin. The founder locked it Cleared (t55u). It maps to the thaumatin row. FDA GRAS notice GRN 738 closed with a letter that FDA has no questions.',
+      level,
+    );
+  }
+  if (isFishOilInactiveMap(name)) {
+    return close(
+      'Fish Oil printed as an other ingredient maps to liquid fish oil. The founder locked that string Cleared (t55u). It is a named marine oil. A species list in parentheses is part of this token. It is not fish oil powder. Fish oil as the Supplement Facts active stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'non gmo almond butter') {
+    return close(
+      'Non-GMO Almond Butter maps to almond butter. The founder locked that string Cleared (t55u). It is a named food. Rowanberry stays ungraded.',
+      level,
+    );
+  }
+  if (n === 'sodium hyaluronate hyaluronic acid') {
+    return close(
+      'Sodium Hyaluronate (Hyaluronic Acid) maps to sodium hyaluronate. The founder locked that string Cleared (t55u). Hyaluronic acid as an active stays ungraded.',
+      level,
+    );
+  }
+  if (isNaturalColorParenthesis(name)) {
+    return close(
+      'This is a natural color, and the parenthesis names the color. The founder locked that parenthesis Cleared (t55u). It is not bare natural color.',
+      level,
+    );
+  }
+  return close('The founder locked this exact token in t55u.', level);
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -541,6 +614,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Fish oil powder printed as an other ingredient is Cleared under founder lock t24u. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill, and fish oil is not a seed or vegetable oil. Fish oil printed as the Supplement Facts active stays ungraded.',
       level,
     );
+  }
+
+  if (isT55uClearedName(ingredient.name) || isT55uLimitedName(ingredient.name)) {
+    return t55uIngredientWhy(ingredient.name, level);
   }
 
   if (isT51uClearedName(ingredient.name) || isT51uCautionName(ingredient.name) || isT51uLimitedName(ingredient.name)) {
@@ -652,16 +729,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if ((isT54uLimitedFlavorName(ingredient.name) || isT54uLimitedFlavorName(n)) && level === 'limited') {
+  if (
+    (isT54uLimitedFlavorName(ingredient.name) || isT54uLimitedFlavorName(n) || isT50uRemainLimitedVanillaFlavorName(n))
+    && level === 'limited'
+  ) {
     return close(
-      'Documented products that use this exact flavor wording contain a Limited carrier, solvent, or other docked component.',
-      level,
-    );
-  }
-
-  if (isT50uRemainLimitedVanillaFlavorName(n)) {
-    return close(
-      'Natural vanilla flavor stays Limited. Spring Valley Zinc 50 mg prints that exact wording together with polyethylene glycol. It is not pure vanilla extract, and it is not vanilla flavoring.',
+      'This flavor is vague. A Limited carrier is present on the panel.',
       level,
     );
   }
@@ -1029,7 +1102,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (/xylitol|erythritol|sorbitol|maltitol|mannitol|isomalt/.test(n) && !/sorbitan/.test(n)) {
+  if (/xylitol|erythritol|sorbitol|maltitol|mannitol|\bisomalt\b/.test(n) && !/sorbitan/.test(n)) {
     if (level === 'cleared') {
       return close('This sugar alcohol is on the skin or in the nose, not swallowed. The gut warning is for the swallowed form.', level);
     }
