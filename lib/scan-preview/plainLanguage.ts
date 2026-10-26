@@ -9,10 +9,16 @@ import {
   isT54uLimitedFlavorName,
   isT55uClearedName,
   isT55uLimitedName,
+  isT56uClearedName,
+  isT56uLimitedName,
+  isBlackCarrotCommaColor,
   isBlackCarrotConcentrateColor,
   isCarobColor,
   isFishOilInactiveMap,
+  isMarigoldFlowerExtract,
   isNaturalColorParenthesis,
+  isVegetableOilAntiSticking,
+  isYellowBeesWaxSpaced,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -544,6 +550,73 @@ function t55uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t55u.', level);
 }
 
+function t56uIngredientWhy(name: string, level: RiskLevel): string {
+  const n = name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (isYellowBeesWaxSpaced(name)) {
+    return close(
+      'Yellow Bees Wax maps to Yellow Beeswax. The founder locked that spaced print Cleared (t56u). It is not synthetic beeswax.',
+      level,
+    );
+  }
+  if (isBlackCarrotCommaColor(name)) {
+    return close(
+      'Black Carrot, Concentrate (Color) maps to black carrot concentrate (color). The founder locked that comma print Cleared (t56u). It is a named plant color.',
+      level,
+    );
+  }
+  if (isMarigoldFlowerExtract(name)) {
+    return close(
+      'Marigold (Tagetes erecta) Flower Extract maps to marigold extract. The founder locked this print Cleared (t56u). It is not the Caution string Marigold extract (Tagetes erecta).',
+      level,
+    );
+  }
+  if (isVegetableOilAntiSticking(name)) {
+    return close(
+      'Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (for anti-sticking) is one print. The founder locked that exact string Cleared (t56u). The print that says “to prevent sticking” is a different string.',
+      level,
+    );
+  }
+  if (n === 'peruvian cacao') {
+    return close(
+      'Peruvian cacao is a named cacao. The founder locked that exact token Cleared (t56u). It is not cocoa powder.',
+      level,
+    );
+  }
+  if (n === 'cocoa powder') {
+    return close(
+      'Cocoa powder is the Sept 21 Cleared powder. The founder confirmed that exact token (t56u). It is not cocoa powder alkali, and it is not cocoa seed butter.',
+      level,
+    );
+  }
+  if (n === 'organic cacao powder') {
+    return close(
+      'Organic cacao powder is a named cacao powder. The founder locked that exact token Cleared (t56u). It is not cocoa powder, and it is not cocoa powder alkali.',
+      level,
+    );
+  }
+  if (n === 'cashew milk powder') {
+    return close(
+      'Cashew-milk powder is a named nut-milk powder. The founder locked that exact token Cleared (t56u). The hyphen and the space are the same print.',
+      level,
+    );
+  }
+  if (isT56uLimitedName(name)) {
+    return close(
+      'Organic Natural Flavor (Organic Dextrose and Natural Flavors) is a vague flavor. The parenthesis names organic dextrose and natural flavors. The founder locked that exact string Limited (t56u). It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  return close('The founder locked this exact token in t56u.', level);
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -614,6 +687,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Fish oil powder printed as an other ingredient is Cleared under founder lock t24u. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill, and fish oil is not a seed or vegetable oil. Fish oil printed as the Supplement Facts active stays ungraded.',
       level,
     );
+  }
+
+  if (isT56uClearedName(ingredient.name) || isT56uLimitedName(ingredient.name)) {
+    return t56uIngredientWhy(ingredient.name, level);
   }
 
   if (isT55uClearedName(ingredient.name) || isT55uLimitedName(ingredient.name)) {

@@ -181,6 +181,50 @@ export function isT55uClearedName(name: string): boolean {
   );
 }
 
+function t56uRaw(name: string): string {
+  return name.trim().replace(/\s+/g, ' ');
+}
+
+/** t56u: "Yellow Bees Wax" maps to Yellow Beeswax. One word stays the older row. */
+export function isYellowBeesWaxSpaced(name: string): boolean {
+  return /^yellow bees wax$/i.test(t56uRaw(name));
+}
+
+/** t56u: the comma print maps to black carrot concentrate (color). The no-comma string stays t55u. */
+export function isBlackCarrotCommaColor(name: string): boolean {
+  return /^black carrot,\s*concentrate\s*\(\s*color\s*\)$/i.test(t56uRaw(name));
+}
+
+/** t56u: this flower-extract print maps to marigold extract. Not "Marigold extract (Tagetes erecta)". */
+export function isMarigoldFlowerExtract(name: string): boolean {
+  return /^marigold\s*\(\s*tagetes erecta\s*\)\s*flower extract$/i.test(t56uRaw(name));
+}
+
+/** t56u: the Hyalogic anti-sticking print. Not "(to prevent sticking)". */
+export function isVegetableOilAntiSticking(name: string): boolean {
+  return /^vegetable oil\s*\(\s*coconut\s*,\s*canola\s*\)\s*and carnauba leaf wax\s*\(\s*for anti-sticking\s*\)$/i.test(t56uRaw(name));
+}
+
+/** t56u exact Limited string. It counts toward the t137u stack. */
+export function isT56uLimitedName(name: string): boolean {
+  return /^organic natural flavor\s*\(\s*organic dextrose and natural flavors\s*\)$/i.test(t56uRaw(name));
+}
+
+/** t56u Cleared strings, including the mapped aliases. */
+export function isT56uClearedName(name: string): boolean {
+  const n = t55uToken(name);
+  return (
+    isYellowBeesWaxSpaced(name)
+    || isBlackCarrotCommaColor(name)
+    || isMarigoldFlowerExtract(name)
+    || isVegetableOilAntiSticking(name)
+    || n === 'peruvian cacao'
+    || n === 'cocoa powder'
+    || n === 'organic cacao powder'
+    || n === 'cashew milk powder'
+  );
+}
+
 /** t50u remain-Limited strings. Not vanilla flavor. Not natural vanilla powder. */
 export function isT50uRemainLimitedVanillaFlavorName(name: string): boolean {
   const n = vanillaToken(name);
@@ -220,6 +264,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
   if (isT51uLimitedName(name) || isT51uClearedName(name)) return false;
   if (isT55uLimitedName(name) || isT55uClearedName(name)) return false;
+  if (isT56uLimitedName(name) || isT56uClearedName(name)) return false;
   if (isT51uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
@@ -263,8 +308,8 @@ export function isMethCautionIngredientName(name: string): boolean {
 /** Limited-risk rows that may remain `limited` and count toward stack when not exempt. */
 export function isMethLimitedIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
-  if (isT51uLimitedName(name) || isT55uLimitedName(name)) return true;
-  if (isT51uCautionName(name) || isT51uClearedName(name) || isT55uClearedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name)) return true;
+  if (isT51uCautionName(name) || isT51uClearedName(name) || isT55uClearedName(name) || isT56uClearedName(name)) return false;
   if (isTapiocaMaltodextrinName(name)) return true;
   if (n === 'ceteth-20' || n === 'ceteth 20') return true;
   if (n === 'chlorocresol') return true;
@@ -307,7 +352,7 @@ export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
-  if (isT51uLimitedName(name) || isT55uLimitedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name)) return false;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
@@ -323,7 +368,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
-  if (isT51uClearedName(ingredient.name) || isT55uClearedName(ingredient.name)) return false;
+  if (isT51uClearedName(ingredient.name) || isT55uClearedName(ingredient.name) || isT56uClearedName(ingredient.name)) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (
