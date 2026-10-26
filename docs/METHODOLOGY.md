@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 26, 2026 (t61u founder order; KYR6-d):** Ladder search rule. Amazon is an allowed source. Open the product or brand page the same way a person would. If a CAPTCHA or bot-check appears, stop and report the exact page URL instead of marking the source refused.
+
 **Changed Oct 26, 2026 (t57u founder order; KYR6-d):** Five locks. **Organic Cashew Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin)** Limited. **Organic Cashew Nut Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin)** Limited. Each parenthesis is part of that one token. Both count toward the t137u stack. **Organic Cashew Kernel** Cleared. **Himalayan Pink Salt** Cleared. **Himalayan Salt** Cleared. Those three do not count toward the t137u stack.
 
 **Changed Oct 26, 2026 (t56u founder order; KYR6-d):** Nine maps and locks. No new catalog rows. **Yellow Bees Wax** Cleared and maps to Yellow Beeswax. **Black Carrot, Concentrate (Color)** Cleared and maps to black carrot concentrate (color). **Marigold (Tagetes erecta) Flower Extract** Cleared and maps to marigold extract. That print is not the Caution string Marigold extract (Tagetes erecta). **Peruvian cacao** Cleared. **cocoa powder** stays Cleared. **organic cacao powder** Cleared. **cashew-milk powder** Cleared. **Vegetable Oil (Coconut, Canola) and Carnauba Leaf Wax (for anti-sticking)** Cleared. **Organic Natural Flavor (Organic Dextrose and Natural Flavors)** Limited.
@@ -393,6 +395,8 @@ When a store page or brand page does not show an ingredient line, or when only o
 When searching like a person, open the store or brand page in the browser. If a rewards, signup, or newsletter popup appears on first visit, close it by clicking the X or “No thanks” and continue. A popup is not a block. Only treat a page as blocked if the product content itself cannot be loaded after the popup is closed and after normal human navigation (carousel images, collapsed tabs, ingredient panels).
 
 Amazon, iHerb, and any other retailer that previously returned a block must be re-tried under this rule before a pack is marked blocked or held for missing sources.
+
+Amazon is an allowed source. Open the product or brand page the same way a person would. If a CAPTCHA or bot-check appears, stop and report the exact page URL instead of marking the source refused.
 
 ## 4a. Source hierarchy (v1.5) + the ongoing intake process (v1.6)
 
