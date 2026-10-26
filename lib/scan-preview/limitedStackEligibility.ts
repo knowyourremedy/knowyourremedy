@@ -22,6 +22,45 @@ export function isPureVanillaExtractName(name: string): boolean {
   return core === 'vanilla extract' || core === 'vanilla bean extract';
 }
 
+function t51uToken(name: string): string {
+  return name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** t51u exact Cleared strings. Not thaumatin powder. Not fish oil powder. Not a Supplement Facts active. */
+export function isT51uClearedName(name: string): boolean {
+  const n = t51uToken(name);
+  return (
+    n === 'glucono delta lactone'
+    || n === 'thaumatin'
+    || n === 'liquid fish oil'
+    || n === 'almond butter'
+    || n === 'floli50'
+    || n === 'vitamin c inactive'
+    || n === 'zinc citrate'
+    || n === 'sodium hyaluronate'
+  );
+}
+
+/** t51u exact Caution strings. They do not count toward the t137u stack. */
+export function isT51uCautionName(name: string): boolean {
+  const n = t51uToken(name);
+  return n === 'd ribose' || n === 'myrrh oil' || n === 'organic cane syrup';
+}
+
+/** t51u exact Limited strings. Malodextrin is the misspelling, not maltodextrin. */
+export function isT51uLimitedName(name: string): boolean {
+  const n = t51uToken(name);
+  return n === 'malodextrin' || n === 'berry flavoring';
+}
+
 /** t50u remain-Limited strings. Not vanilla flavor. Not natural vanilla powder. */
 export function isT50uRemainLimitedVanillaFlavorName(name: string): boolean {
   const n = vanillaToken(name);
@@ -61,6 +100,8 @@ export function isMethCautionIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (isPureVanillaExtractName(name)) return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
+  if (isT51uLimitedName(name) || isT51uClearedName(name)) return false;
+  if (isT51uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
   if (/\brice flour\b/.test(n)) return true;
@@ -103,6 +144,8 @@ export function isMethCautionIngredientName(name: string): boolean {
 /** Limited-risk rows that may remain `limited` and count toward stack when not exempt. */
 export function isMethLimitedIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
+  if (isT51uLimitedName(name)) return true;
+  if (isT51uCautionName(name) || isT51uClearedName(name)) return false;
   if (isTapiocaMaltodextrinName(name)) return true;
   if (n === 'ceteth-20' || n === 'ceteth 20') return true;
   if (n === 'chlorocresol') return true;
@@ -145,6 +188,7 @@ export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
+  if (isT51uLimitedName(name)) return false;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
@@ -160,6 +204,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
+  if (isT51uClearedName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (isSiliconDioxideStackExempt(ingredient.name)) return false;
 
