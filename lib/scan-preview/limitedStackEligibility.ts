@@ -94,6 +94,7 @@ export function isMethLimitedIngredientName(name: string): boolean {
   if (/lemon oil/.test(n) && /flavor/.test(n)) return true;
   if (t138uFamilyLabel(name)) return true;
   if (isOralPropyleneGlycolName(name)) return true;
+  if (n.replace(/[^a-z0-9]+/g, '') === 'gomct') return true;
   if (/\bmct\b|medium chain triglyceride/.test(n) && !/coconut|palm|from\s+\w+/i.test(name)) return true;
   if (n === 'triglycerides') return true;
   return false;

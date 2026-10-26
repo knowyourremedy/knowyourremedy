@@ -1545,6 +1545,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'gomct') {
+    return close(
+      'goMCT is a branded medium-chain triglyceride, typically coconut-derived C8/C10. The founder locked it Limited (t49u), the same grade as unlabeled MCT and medium-chain triglycerides. FDA GRAS for MCT and the EFSA evaluation of MCT oil are the sources. The dock rule does not dock it, and prior locks were not treated as binding. It counts toward the three-or-more Limited stack. It is not the Cleared MCT oil row.',
+      level,
+    );
+  }
+
   if (/medium chain triglyceride|\bmct\b|caprylic capric triglyceride|caprylic capric glyceride/.test(n)) {
     if (/coconut|palm/.test(n)) {
       return close('This medium-chain triglyceride names its plant source. It is not the unlabeled MCT line, and it is not the gummy seed-oil rule.', level);
