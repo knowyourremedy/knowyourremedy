@@ -11,6 +11,8 @@ import {
   isT55uLimitedName,
   isT56uClearedName,
   isT56uLimitedName,
+  isT57uClearedName,
+  isT57uLimitedName,
   isBlackCarrotCommaColor,
   isBlackCarrotConcentrateColor,
   isCarobColor,
@@ -617,6 +619,49 @@ function t56uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t56u.', level);
 }
 
+function t57uIngredientWhy(name: string, level: RiskLevel): string {
+  const n = name
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (/^organic cashew milk powder\s*\(\s*organic cashew kernel\s*,\s*organic tapioca maltodextrin\s*\)$/i.test(name.trim().replace(/\s+/g, ' '))) {
+    return close(
+      'Organic Cashew Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin) is one print. The parenthesis names Organic Cashew Kernel and Organic Tapioca Maltodextrin. The founder locked this exact string Limited (t57u). It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  if (/^organic cashew nut milk powder\s*\(\s*organic cashew kernel\s*,\s*organic tapioca maltodextrin\s*\)$/i.test(name.trim().replace(/\s+/g, ' '))) {
+    return close(
+      'Organic Cashew Nut Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin) is one print. The parenthesis names Organic Cashew Kernel and Organic Tapioca Maltodextrin. The founder locked this exact string Limited (t57u). It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+  if (n === 'organic cashew kernel') {
+    return close(
+      'Organic Cashew Kernel is a named nut. The founder locked that exact token Cleared (t57u).',
+      level,
+    );
+  }
+  if (n === 'himalayan pink salt') {
+    return close(
+      'Himalayan Pink Salt is a salt. The founder locked that exact token Cleared (t57u). It is not Himalayan rock salt.',
+      level,
+    );
+  }
+  if (n === 'himalayan salt') {
+    return close(
+      'Himalayan Salt is a salt. The founder locked that exact token Cleared (t57u). It is not Himalayan rock salt, and it is not Himalayan Pink Salt.',
+      level,
+    );
+  }
+  return close('The founder locked this exact token in t57u.', level);
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -687,6 +732,10 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Fish oil powder printed as an other ingredient is Cleared under founder lock t24u. It is a named marine oil used as a carrier. The named-fill rule clears a named oil used as fill, and fish oil is not a seed or vegetable oil. Fish oil printed as the Supplement Facts active stays ungraded.',
       level,
     );
+  }
+
+  if (isT57uClearedName(ingredient.name) || isT57uLimitedName(ingredient.name)) {
+    return t57uIngredientWhy(ingredient.name, level);
   }
 
   if (isT56uClearedName(ingredient.name) || isT56uLimitedName(ingredient.name)) {
@@ -1440,6 +1489,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (/dicalcium phosphate|tricalcium phosphate|calcium phosphate|sodium phosphate/.test(n) && !/3x|6x|pyrophosphate/.test(n)) {
     return close('This is a phosphate salt used as a mineral filler. It is not phosphoric acid.', level);
+  }
+
+  if ((/medium chain triglyceride/.test(n) || /\bmct\b/.test(n)) && /acacia/.test(n)) {
+    return close(
+      'The label says MCT and does not name the plant. A medium-chain triglyceride that names coconut or palm is a different line.',
+      level,
+    );
   }
 
   if (/xanthan|guar gum|gum arabic|arabic gum|acacia|pectin|gellan|locust bean|tragacanth|agar/.test(n)) {

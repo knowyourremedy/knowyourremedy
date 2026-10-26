@@ -210,6 +210,25 @@ export function isT56uLimitedName(name: string): boolean {
   return /^organic natural flavor\s*\(\s*organic dextrose and natural flavors\s*\)$/i.test(t56uRaw(name));
 }
 
+function t57uRaw(name: string): string {
+  return name.trim().replace(/\s+/g, ' ');
+}
+
+/** t57u exact Limited strings. The parenthesis is part of the token. They count. */
+export function isT57uLimitedName(name: string): boolean {
+  const raw = t57uRaw(name);
+  return (
+    /^organic cashew milk powder\s*\(\s*organic cashew kernel\s*,\s*organic tapioca maltodextrin\s*\)$/i.test(raw)
+    || /^organic cashew nut milk powder\s*\(\s*organic cashew kernel\s*,\s*organic tapioca maltodextrin\s*\)$/i.test(raw)
+  );
+}
+
+/** t57u exact Cleared strings. Not Himalayan rock salt. Not the Limited cashew-powder prints. */
+export function isT57uClearedName(name: string): boolean {
+  const n = t55uToken(name);
+  return n === 'organic cashew kernel' || n === 'himalayan pink salt' || n === 'himalayan salt';
+}
+
 /** t56u Cleared strings, including the mapped aliases. */
 export function isT56uClearedName(name: string): boolean {
   const n = t55uToken(name);
@@ -265,6 +284,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (isT51uLimitedName(name) || isT51uClearedName(name)) return false;
   if (isT55uLimitedName(name) || isT55uClearedName(name)) return false;
   if (isT56uLimitedName(name) || isT56uClearedName(name)) return false;
+  if (isT57uLimitedName(name) || isT57uClearedName(name)) return false;
   if (isT51uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
@@ -308,8 +328,14 @@ export function isMethCautionIngredientName(name: string): boolean {
 /** Limited-risk rows that may remain `limited` and count toward stack when not exempt. */
 export function isMethLimitedIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
-  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name)) return true;
-  if (isT51uCautionName(name) || isT51uClearedName(name) || isT55uClearedName(name) || isT56uClearedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name) || isT57uLimitedName(name)) return true;
+  if (
+    isT51uCautionName(name)
+    || isT51uClearedName(name)
+    || isT55uClearedName(name)
+    || isT56uClearedName(name)
+    || isT57uClearedName(name)
+  ) return false;
   if (isTapiocaMaltodextrinName(name)) return true;
   if (n === 'ceteth-20' || n === 'ceteth 20') return true;
   if (n === 'chlorocresol') return true;
@@ -352,7 +378,7 @@ export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
   if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
-  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name)) return false;
+  if (isT51uLimitedName(name) || isT55uLimitedName(name) || isT56uLimitedName(name) || isT57uLimitedName(name)) return false;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
@@ -368,7 +394,12 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
-  if (isT51uClearedName(ingredient.name) || isT55uClearedName(ingredient.name) || isT56uClearedName(ingredient.name)) return false;
+  if (
+    isT51uClearedName(ingredient.name)
+    || isT55uClearedName(ingredient.name)
+    || isT56uClearedName(ingredient.name)
+    || isT57uClearedName(ingredient.name)
+  ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (
