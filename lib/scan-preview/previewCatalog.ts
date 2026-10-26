@@ -308,6 +308,7 @@ import {
 } from '@/lib/scan-preview/plainLanguage';
 import { applyT138uIngredientLocks } from '@/lib/scan-preview/t138uLocks';
 import { applyT22uRow } from '@/lib/scan-preview/t22uLocks';
+import { applyT54uRow } from '@/lib/scan-preview/t54uLocks';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -616,7 +617,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH283_KYR6D_T49U,
   ...BATCH284_KYR6D_T49U,
   ...BATCH285_KYR6D_T53U,
-]).map(applyT22uRow);
+]).map(applyT22uRow).map(applyT54uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -20884,8 +20885,8 @@ if (PREVIEW_AVOID.verdict !== 'avoid') {
     throw new Error('t120u lock must clear Natural apple flavor and drop verdict to clean when it is the only driver');
   }
   const lollipops = CATALOG.find((record) => record.id === 'beekeepers-b169-lollipops-15');
-  if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'clean') {
-    throw new Error('beekeepers-b169-lollipops-15 must be clean after t132u named natural flavor locks');
+  if (lollipops && withPreviewHonestNote(lollipops).verdict !== 'caution') {
+    throw new Error('beekeepers-b169-lollipops-15 is Caution after t54u: natural strawberry flavor is Limited');
   }
 }
 

@@ -62,6 +62,21 @@ function isNaturalNamedFruitFlavorToken(name: string): boolean {
   const raw = name.trim();
   const n = raw.toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
+  if (
+    n === 'natural lemon flavor'
+    || n === 'natural peppermint flavor'
+    || n === 'natural orange flavor'
+    || n === 'natural strawberry flavor'
+    || n === 'natural raspberry flavor'
+    || n === 'natural berry flavor'
+    || n === 'natural grape flavor'
+    || n === 'natural vanilla lavender flavor'
+    || n === 'natural lemon lime flavor'
+    || n === 'natural watermelon flavor'
+    || n === 'natural ginger flavor'
+  ) {
+    return false;
+  }
   if (n.startsWith('natural and artificial')) return false;
   if (/^natural\s+[\w\s/&+-]+\s+flavor$/i.test(raw) && !/^natural\s+flavors?$/i.test(raw)) {
     return true;
