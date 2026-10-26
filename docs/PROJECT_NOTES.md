@@ -473,6 +473,45 @@ Remaining open brands (t33u, 2026-10-23, as of before this order's closes)
 Beano, Goli, Lactaid, Move Free, Nature's Bounty, Os-Cal, Osteo Bi-Flex, Prevagen, Schiff, Slow Fe, Spring Valley.
 Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u, leaving Beano, Goli, Lactaid, Os-Cal, and Spring Valley open.
 
+Sprouts next open brands
+From the Sprouts filter; these need cataloging.
+- Bach — new
+- Beam — new
+- Bestie Supplements — new
+- Bioptimizers — new
+- Cheribundi — new
+- Comvita — new
+- Dose — new
+- Elevate Organic — new
+- Eyeganics — new
+- Good Day Chocolate — new
+- Grether's — new
+- Gruns Nutrition — new
+- Herbs Etc. — new
+- Hyalogic — new
+- Lemme — new
+- Lifeseasons — new
+- Manukora — new
+- Natural Stacks — new
+- Nature's Answer — new
+- Neuro Mints — new
+- North American Herb & Spice — new
+- Olbas — new
+- Planetary Herbals — new
+- Prepare Your Mind — new
+- Pri — new
+- Quantum Health — new
+- Reprise Health — new
+- Ridgecrest Herbals Clearlungs — new
+- Suku Vitamins — new
+- Taylor Pass Honey Co — new
+- The Good Patch — new
+- Traditional Medicinals — new
+- Wallys Natural — new
+- Wishgarden Herbs — new
+- Wooden Spoon Herbs — new
+- Zand — new
+
 Bots and paste language
 KYR6-c and KYR6-d are the live catalog bots (founder order t151u, Oct 21, 2026). They share the same scope: write new Search rows, grade products from methodology, exhaust retailer ladders, close brands on MAIN when a catalog pass finishes, attach a founder-locked UPC only to the row just written, open a catalog PR, and squash-merge it to MAIN when the work is complete — under the same rules (founder orders t149u paste openings, t150u merge). Do not wait on an Allow-once card. KYR6-d is not barcode-only, UPC-attach-only, or any narrower hunt than KYR6-c. Each writes a row only when the panel is read and the pack has a home in one of the 13 tabs. Each grades from methodology. Each attaches a founder-locked UPC only to the row it just wrote. KYR5-d attaches a UPC to an empty row that already exists. It does not create a row. KYR4 is the night photo bot. Photos only. Cap 20. KYR4-b is the daytime photo bot. It is paused on night wakes while KYR4 is active. Do not wake both. Every catalog job paste starts with “You are KYR6-c” or “You are KYR6-d” (founder order t149u, Oct 20, 2026); a paste naming either bot proceeds. It says pull MAIN first, US only, no Canada, no EU, no store-brand. It includes the honest-note and ingredient-tab wording and the search-tab rule. It ends with the ladder order and the instruction to exhaust every step before reporting.
 
