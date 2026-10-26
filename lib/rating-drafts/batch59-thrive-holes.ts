@@ -103,6 +103,8 @@ const METH = {
   steviaT159u: 'Methodology §5 Limited (Stevia extract / stevia leaf extract — founder lock t159u Oct 21, 2026; same Limited row as Stevia and rebaudioside a extracted and purified; counts toward the t137u stack). Not Cleared organic Rebaudioside A. Not Cleared high-purity steviol glycosides. Not Cleared Rebaudioside M.',
   sio2: `Methodology §5 Precautionary (silicon dioxide / silica — EFSA 2018 nanoparticle data-gap; Caution cap, 0 demerit points). ${SIO2_TAP}`,
   flavors: `Methodology §5 Limited-risk (natural / artificial flavors — opacity). ${FLAVOR_TAP}`,
+  vanillaExtract:
+    'Methodology §5 Cleared (pure vanilla extract — founder lock t50u Oct 26, 2026). The ingredient statement lists only the extract / alcohol / water, with no optional ingredients declared. Residual alcohol is the solvent and is not docked.',
   lemonOil: `Methodology §5 Limited-risk (named lemon oil as flavor — not a Clean auto-pass). ${FLAVOR_TAP}`,
   peppermint: 'Methodology §5 Limited-risk (peppermint oil / orange essential oil as flavor — flavor/EO line; not gummy High)',
   xylitol:
@@ -265,7 +267,7 @@ function f(
   return flag(name, risk, labelCite(cite, meth));
 }
 
-// TALLY (unverified drafts in THIS file): 241 rows — Clean 113 / Caution 108 / Avoid 20.
+// TALLY (unverified drafts in THIS file): 241 rows — Clean 114 / Caution 107 / Avoid 20.
 
 const CITE = {
   ritual_natal_choline: 'Thrive Ritual Natal Choline https://thrivemarket.com/p/ritual-natal-choline SKU 850031975323 other-ingredients: Organic Glycerin, Hypromellose, Purified Water',
@@ -4562,10 +4564,10 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.maryruth_sea_moss_immune_energy, 'Organic vegetable glycerin', 'cleared', METH.glycerin),
       f(CITE.maryruth_sea_moss_immune_energy, 'Xylitol', 'limited', METH.xylitol),
       f(CITE.maryruth_sea_moss_immune_energy, 'Gum acacia', 'cleared', METH.pectin),
-      f(CITE.maryruth_sea_moss_immune_energy, 'Organic vanilla extract', 'limited', METH.flavors),
+      f(CITE.maryruth_sea_moss_immune_energy, 'Organic vanilla extract', 'cleared', METH.vanillaExtract),
       f(CITE.maryruth_sea_moss_immune_energy, 'Citric acid', 'cleared', METH.citrate),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
 
     retailers: [...THRIVE, 'MaryRuth\'s'],
     cleanAlternatives: [

@@ -4,6 +4,35 @@ import { isOralPropyleneGlycolName, t138uFamilyLabel } from './t138uLocks';
 
 const T141U_PRIOR_REEVAL = '§4 prior-lock re-eval';
 
+const VANILLA_EXTRACT_OPTIONAL =
+  /\b(glycerin|glycerine|glycerol|sugar|corn syrup|propylene glycol|dextrose|glucose)\b/;
+
+function vanillaToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t50u: extract / alcohol / water only. Optionals declared on the token are graded as themselves. */
+export function isPureVanillaExtractName(name: string): boolean {
+  const n = vanillaToken(name);
+  if (VANILLA_EXTRACT_OPTIONAL.test(n)) return false;
+  const core = n
+    .replace(/\b(organic|natural|pure|alcohol|ethyl|water|and|with|in)\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return core === 'vanilla extract' || core === 'vanilla bean extract';
+}
+
+/** t50u remain-Limited strings. Not vanilla flavor. Not natural vanilla powder. */
+export function isT50uRemainLimitedVanillaFlavorName(name: string): boolean {
+  const n = vanillaToken(name);
+  return (
+    n === 'natural vanilla flavor'
+    || n === 'organic natural vanilla flavor'
+    || n === 'vanilla flavoring'
+    || n === 'organic vanilla flavoring'
+  );
+}
+
 export function isTapiocaMaltodextrinName(name: string): boolean {
   const n = name.trim().toLowerCase();
   return (
@@ -30,6 +59,8 @@ export function isMethodologyCautionStamp(source: string | undefined): boolean {
 /** Names that map to METH §5 Caution rows when mis-stored as limited (not exhaustive — source stamp wins). */
 export function isMethCautionIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
+  if (isPureVanillaExtractName(name)) return false;
+  if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
   if (/\brice flour\b/.test(n)) return true;
@@ -82,6 +113,7 @@ export function isMethLimitedIngredientName(name: string): boolean {
     return true;
   }
   if (n === 'natural flavors' || n === 'natural flavor') return true;
+  if (isT50uRemainLimitedVanillaFlavorName(name)) return true;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return true;
   if (/natural and artificial flavor/.test(n) && !/s$/.test(n)) return true;
   if (/strawberry watermelon raspberry flavor/.test(n)) return true;
@@ -112,6 +144,7 @@ export function hasExplicitLimitedLockSource(source: string | undefined): boolea
 export function isNeverStackLimitedName(name: string): boolean {
   const n = name.trim().toLowerCase();
   if (n === 'natural flavors' || n === 'natural flavor') return false;
+  if (isT50uRemainLimitedVanillaFlavorName(name)) return false;
   if (n === 'artificial flavor' || n === 'artificial flavoring') return false;
   if (n === 'flavors' || n === 'flavor') return true;
   if (/\bsodium benzoate\b|\bpotassium benzoate\b/.test(n)) return true;
@@ -126,6 +159,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
+  if (isPureVanillaExtractName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (isSiliconDioxideStackExempt(ingredient.name)) return false;
 

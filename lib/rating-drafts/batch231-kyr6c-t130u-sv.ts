@@ -28,7 +28,7 @@ const METH = {
   hpmcCoat: 'Methodology §5 Cleared (hydroxypropyl methylcellulose / HPMC family; EFSA).',
   magStearate: 'Methodology §5 Cleared (magnesium stearate / stearate-family lubricant; EFSA 2018).',
   vanillaFlavor:
-    'Methodology §5 Cleared (Natural Vanilla Flavor — named natural flavor; t119u flavor clarification / named-fruit-flavor family, same posture as named lemon flavor).',
+    'Methodology §5 Limited (natural vanilla flavor — unnamed flavor; t50u founder order Oct 26, 2026). Not pure vanilla extract. Not the Caution vanilla flavor row. Not named-fruit Natural [fruit] Flavor.',
   peg: 'Methodology §5 Caution (polyethylene glycol / PEG — ethylene-oxide / 1,4-dioxane process contaminant concern).',
   stearic: 'Methodology §5 Cleared (stearic acid / stearate-family lubricant; EFSA 2018).',
 } as const;
@@ -133,7 +133,7 @@ export const BATCH231_KYR6C_T130U_SV: RatingRecord[] = [
       flag(PANEL_ZINC, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(PANEL_ZINC, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmcCoat'),
       flag(PANEL_ZINC, 'Magnesium Stearate', 'cleared', 'magStearate'),
-      flag(PANEL_ZINC, 'Natural Vanilla Flavor', 'cleared', 'vanillaFlavor'),
+      flag(PANEL_ZINC, 'Natural Vanilla Flavor', 'limited', 'vanillaFlavor'),
       flag(PANEL_ZINC, 'Polyethylene Glycol', 'limited', 'peg'),
       flag(PANEL_ZINC, 'Stearic Acid', 'cleared', 'stearic'),
     ],
