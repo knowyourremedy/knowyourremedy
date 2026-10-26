@@ -55,10 +55,55 @@ export function isT51uCautionName(name: string): boolean {
   return n === 'd ribose' || n === 'myrrh oil' || n === 'organic cane syrup';
 }
 
-/** t51u exact Limited strings. Malodextrin is the misspelling, not maltodextrin. */
+/** t51u exact Limited strings. Malodextrin is the misspelling, not maltodextrin. Berry flavoring moved to Cleared under t54u. */
 export function isT51uLimitedName(name: string): boolean {
   const n = t51uToken(name);
-  return n === 'malodextrin' || n === 'berry flavoring';
+  return n === 'malodextrin';
+}
+
+function t54uFlavorKey(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/**
+ * t54u: exact natural-flavor wordings whose documented products contain a Limited
+ * carrier, solvent, or other docked component. Not a new token family.
+ */
+const T54U_LIMITED_FLAVOR = new Set([
+  'natural flavors',
+  'natural flavor',
+  'organic flavors',
+  'organic flavor',
+  'organic natural flavors',
+  'organic natural flavor',
+  'natural lemon flavor',
+  'natural peppermint flavor',
+  'natural orange flavor',
+  'natural strawberry flavor',
+  'natural raspberry flavor',
+  'natural berry flavor',
+  'natural grape flavor',
+  'natural vanilla lavender flavor',
+  'natural lemon lime flavor',
+  'natural watermelon flavor',
+  'natural ginger flavor',
+  'natural & artificial wild berry flavor',
+]);
+
+/** t54u: exact wordings with no documented product that contains a docked carrier. */
+const T54U_CLEARED_FLAVOR = new Set([
+  'berry flavoring',
+  'vanilla flavoring',
+  'natural flavoring',
+  'organic vanilla flavoring',
+]);
+
+export function isT54uLimitedFlavorName(name: string): boolean {
+  return T54U_LIMITED_FLAVOR.has(t54uFlavorKey(name));
+}
+
+export function isT54uClearedFlavorName(name: string): boolean {
+  return T54U_CLEARED_FLAVOR.has(t54uFlavorKey(name));
 }
 
 /** t50u remain-Limited strings. Not vanilla flavor. Not natural vanilla powder. */
@@ -67,8 +112,6 @@ export function isT50uRemainLimitedVanillaFlavorName(name: string): boolean {
   return (
     n === 'natural vanilla flavor'
     || n === 'organic natural vanilla flavor'
-    || n === 'vanilla flavoring'
-    || n === 'organic vanilla flavoring'
   );
 }
 
@@ -205,7 +248,14 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
   if (isT51uClearedName(ingredient.name)) return false;
+  if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (
+    isT54uLimitedFlavorName(ingredient.name)
+    && /t54u natural-flavor rule/i.test(ingredient.source ?? '')
+  ) {
+    return true;
+  }
   if (isSiliconDioxideStackExempt(ingredient.name)) return false;
 
   const src = ingredient.source ?? '';

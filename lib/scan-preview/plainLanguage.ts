@@ -5,6 +5,8 @@ import {
   isT51uCautionName,
   isT51uClearedName,
   isT51uLimitedName,
+  isT54uClearedFlavorName,
+  isT54uLimitedFlavorName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -462,7 +464,7 @@ function t51uIngredientWhy(name: string, level: RiskLevel): string {
   }
   if (n === 'berry flavoring') {
     return close(
-      'Berry flavoring is an unnamed flavor. It names a berry class, not the mixture. The founder locked it Limited (t51u). It is not a named-fruit flavor.',
+      'Berry flavoring is an unnamed flavor. No documented product uses that exact wording with a Limited carrier or solvent. The t54u rule clears it. It is not natural berry flavor.',
       level,
     );
   }
@@ -643,9 +645,23 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if ((isT54uClearedFlavorName(ingredient.name) || isT54uClearedFlavorName(n)) && level === 'cleared') {
+    return close(
+      'No documented product that uses this exact flavor wording contains propylene glycol, glycerin, maltodextrin, polyethylene glycol, or a blended natural flavor. The t54u rule clears it.',
+      level,
+    );
+  }
+
+  if ((isT54uLimitedFlavorName(ingredient.name) || isT54uLimitedFlavorName(n)) && level === 'limited') {
+    return close(
+      'Documented products that use this exact flavor wording contain a Limited carrier, solvent, or other docked component.',
+      level,
+    );
+  }
+
   if (isT50uRemainLimitedVanillaFlavorName(n)) {
     return close(
-      'Natural vanilla flavor and vanilla flavoring are unnamed flavors. They stay Limited (t50u). They are not pure vanilla extract, and they are not the Caution vanilla flavor row.',
+      'Natural vanilla flavor stays Limited. Spring Valley Zinc 50 mg prints that exact wording together with polyethylene glycol. It is not pure vanilla extract, and it is not vanilla flavoring.',
       level,
     );
   }
