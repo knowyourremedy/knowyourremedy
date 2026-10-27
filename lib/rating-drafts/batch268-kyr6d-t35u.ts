@@ -3,6 +3,7 @@
 // Os-Cal chewable 60 is not in this file: bare Triglycerides is not locked.
 // t73u: Meltaways 15 only. Brand page for SKU 042037106928 replaces
 // Crospovidone and bare Starch with Povidone and Corn starch. Grade stays Avoid.
+// t74u: Meltaways 15 honestNote only. No other field changes.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -159,6 +160,9 @@ function pack(
   };
 }
 
+const MELT_HONEST_NOTE =
+  'Avoid from FD&C Red No. 40 Lake. Counted Limited tokens: maltodextrin and natural and artificial flavor. That is two, so this is not a 3+ stack. Mannitol, polyvinyl acetate, silicon dioxide, and sodium lauryl sulfate are Caution and do not stack. Povidone is Cleared. Corn starch is Cleared named simple starch.';
+
 export const BATCH268_KYR6D_T35U: RatingRecord[] = [
   pack(
     'beano-b268-to-go-12',
@@ -209,6 +213,10 @@ export const BATCH268_KYR6D_T35U: RatingRecord[] = [
     'Avoid from talc, titanium dioxide, Yellow 5 Lake, Blue 1 Lake, methylparaben, and propylparaben. Counted Limited tokens: polysorbate 80 and polyethylene glycol 3350. That is two, so this is not a 3+ stack. Corn syrup solids is Caution and does not stack. No honest note. Founder-verified panel. UPC 0307661654604 is EAN-13 and the check digit is OK. Cub 307661654604 was not substituted. Same formula as the 75.',
   ),
 ];
+
+const meltaways = BATCH268_KYR6D_T35U.find((record) => record.id === 'beano-b268-meltaways-15');
+if (!meltaways) throw new Error('batch268 meltaways missing');
+meltaways.honestNote = MELT_HONEST_NOTE;
 
 const ROWS = BATCH268_KYR6D_T35U;
 
@@ -264,7 +272,9 @@ for (const record of ROWS) {
   ) {
     throw new Error(`batch268 shape ${record.id} ${rollup.verdict} ${rollup.cause} ${rollup.driver} ${record.barcode}`);
   }
-  if (record.honestNote) throw new Error(`batch268 note ${record.id}`);
+  if (record.id === 'beano-b268-meltaways-15') {
+    if (record.honestNote !== MELT_HONEST_NOTE) throw new Error(`batch268 note ${record.id}`);
+  } else if (record.honestNote) throw new Error(`batch268 note ${record.id}`);
   const counted = record.inactiveIngredients.filter((item) => ingredientCountsTowardLimitedStack(item));
   if (counted.length !== wanted.limited) {
     throw new Error(`batch268 stack ${record.id} ${counted.map((item) => item.name).join(',')}`);
