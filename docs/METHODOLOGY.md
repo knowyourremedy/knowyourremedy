@@ -4,9 +4,11 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 27, 2026 (t68u founder order; KYR6-d):** Amazon is not an allowed source for the bot. The t61u allow sentence is superseded by t65u and t68u. Amazon is removed from the ladder order, from the blocked-page retry, from the two-source sentence, and from the barcode and accordion domain lists. Google lookup stays allowed.
+
 **Changed Oct 26, 2026 (t65u founder order; KYR6-d):** Ladder search rule. The t61u sentence is superseded. Amazon is not an allowed source for the bot. Do not open Amazon product or brand pages. If a search result points to Amazon, skip it and continue with the next source. Google lookup remains allowed and should still be used to find brand pages, iHerb, Vitacost, retailer pages, and other readable sources.
 
-**Changed Oct 26, 2026 (t61u founder order; KYR6-d):** Ladder search rule. Amazon is an allowed source. Open the product or brand page the same way a person would. If a CAPTCHA or bot-check appears, stop and report the exact page URL instead of marking the source refused.
+**Changed Oct 26, 2026 (t61u founder order; KYR6-d):** Superseded by t65u and t68u. Amazon is not allowed. Do not open Amazon product or brand pages. The t61u allow sentence is not a live rule.
 
 **Changed Oct 26, 2026 (t57u founder order; KYR6-d):** Five locks. **Organic Cashew Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin)** Limited. **Organic Cashew Nut Milk Powder (Organic Cashew Kernel, Organic Tapioca Maltodextrin)** Limited. Each parenthesis is part of that one token. Both count toward the t137u stack. **Organic Cashew Kernel** Cleared. **Himalayan Pink Salt** Cleared. **Himalayan Salt** Cleared. Those three do not count toward the t137u stack.
 
@@ -396,7 +398,7 @@ When a store page or brand page does not show an ingredient line, or when only o
 
 When searching like a person, open the store or brand page in the browser. If a rewards, signup, or newsletter popup appears on first visit, close it by clicking the X or “No thanks” and continue. A popup is not a block. Only treat a page as blocked if the product content itself cannot be loaded after the popup is closed and after normal human navigation (carousel images, collapsed tabs, ingredient panels).
 
-Amazon, iHerb, and any other retailer that previously returned a block must be re-tried under this rule before a pack is marked blocked or held for missing sources.
+iHerb and any retailer other than Amazon that previously returned a block must be re-tried under this rule before a pack is marked blocked or held for missing sources.
 
 Amazon is not an allowed source for the bot. Do not open Amazon product or brand pages. If a search result points to Amazon, skip it and continue with the next source. Google lookup remains allowed and should still be used to find brand pages, iHerb, Vitacost, retailer pages, and other readable sources.
 
