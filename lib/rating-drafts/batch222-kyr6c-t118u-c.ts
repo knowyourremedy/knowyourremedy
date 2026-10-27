@@ -1,5 +1,6 @@
 // DRAFT / not verified / batch 222 KYR6-c (t118u group C WRITE).
 // FlorastorKids + Skin Renew, Lactaid counts, Beano tablets — grade from OI only.
+// t75u: Beano tablets 30 and 100 honestNote only. No other field changes.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { computeVerdictFromInactiveIngredients, verdictFromFlagSpecs, verdictFromRiskLevels } from '../scan-preview/verdictFromFlags';
@@ -293,6 +294,15 @@ export const BATCH222_KYR6C_T118U_C: RatingRecord[] = [
   },
 ];
 
+const BEANO_TABLET_HONEST_NOTE =
+  'Caution from Colloidal silica. Counted Limited tokens: none. That is zero, so this is not a 3+ stack. Mannitol is Caution and does not stack. Colloidal silica is the silicon dioxide cap and does not stack. Cellulose gel, magnesium stearate, and calcium gluconate are Cleared. Potato starch is Cleared named simple starch.';
+
+for (const id of ['beano-b222-tablets-100', 'beano-b222-tablets-30'] as const) {
+  const row = BATCH222_KYR6C_T118U_C.find((record) => record.id === id);
+  if (!row) throw new Error(`batch222 missing ${id}`);
+  row.honestNote = BEANO_TABLET_HONEST_NOTE;
+}
+
 const ROWS = BATCH222_KYR6C_T118U_C;
 
 function expectedVerdict(record: RatingRecord): RatingRecord['verdict'] {
@@ -316,7 +326,9 @@ for (const record of ROWS) verdictTally[record.verdict] += 1;
 
 for (const record of ROWS) {
   if (record.barcode && !upcOk(record.barcode)) throw new Error(`batch222 upc ${record.id}`);
-  if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch222 unexpected note ${record.id}`);
+  if (record.id === 'beano-b222-tablets-100' || record.id === 'beano-b222-tablets-30') {
+    if (record.honestNote !== BEANO_TABLET_HONEST_NOTE) throw new Error(`batch222 note ${record.id}`);
+  } else if (record.honestNote && !/Avoid: three or more Limited tokens triggered the stacking rule \(t137u\):/.test(record.honestNote)) throw new Error(`batch222 unexpected note ${record.id}`);
   for (const ingredient of record.inactiveIngredients) {
     if (!plainIngredientWhy(ingredient)) throw new Error(`batch222 blank why ${record.id} ${ingredient.name}`);
     if (!ingredient.source?.trim()) throw new Error(`batch222 blank source ${ingredient.name}`);
