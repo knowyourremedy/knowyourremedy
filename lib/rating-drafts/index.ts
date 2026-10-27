@@ -285,3 +285,4 @@ export { BATCH285_KYR6D_T53U } from './batch285-kyr6d-t53u';
 export { BATCH286_KYR6D_T55U } from './batch286-kyr6d-t55u';
 export { BATCH287_KYR6D_T57U } from './batch287-kyr6d-t57u';
 export { BATCH288_KYR6D_T60U } from './batch288-kyr6d-t60u';
+export { BATCH289_KYR6D_T82U } from './batch289-kyr6d-t82u';
