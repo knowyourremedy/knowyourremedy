@@ -226,7 +226,7 @@ function isVagueRice(name: string): boolean {
   const n = norm(name);
   if (!/\brice\b/.test(n)) return false;
   if (namedRiceForm(name)) return false;
-  if (/flour|starch|syrup|protein|oil|wax|hull|bran|concentrate|dextrin/.test(n)) return false;
+  if (/flour|starch|syrup|protein|oil|wax|hull|bran|concentrate|dextrin|fiber/.test(n)) return false;
   return /\brice extract\b/.test(n) || n === 'rice' || /\borganic rice\b/.test(n) || /\brice extract blend\b/.test(n);
 }
 
@@ -709,6 +709,106 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   if (n === 'normal saline') {
     return close(
       '0.9% sodium chloride aqueous vehicle. Same Cleared sodium-chloride family. The founder locked this exact token Cleared (t83u).',
+      level,
+    );
+  }
+
+  if (n === 'grape alcohol') {
+    return close(
+      'Named grape-derived alcohol vehicle. Not bare alcohol and not a drinking-alcohol dose. The founder locked this exact token Cleared (t84u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (
+    n === 'blackcurrant and carrot extract as color'
+    || n === 'natural flavouring'
+    || n === 'colouring foods carrot and blackcurrant concentrate'
+    || n === 'color added red cabbage'
+  ) {
+    return close(
+      'Named plant color. Not an unnamed color and not a synthetic dye. The founder locked this exact token Cleared (t84u). Same named plant-color family as Colored with Red Cabbage Color when the panel names red cabbage. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === 'l glycine') {
+    return close(
+      'L-Glycine is an amino acid. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'potassium gluconate' || n === 'calcium citrate') {
+    return close(
+      'Named mineral salt. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'organic mixed berry powder') {
+    return close(
+      'Named fruit powder. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'stabilized rice bran') {
+    return close(
+      'Named rice bran. Maps to the rice-bran / rice-hull fiber family. Distinct from the Limited rice extract. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'organic rice fiber' || n === 'rice fiber') {
+    return close(
+      'Exact named fiber. Maps to the Cleared rice-hull / rice-fiber family. Distinct from the Limited rice extract. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'natural peppermint') {
+    return close(
+      'Named natural peppermint flavor. No Limited carrier is named on this token. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (
+    n === 'elderberry fruit extract'
+    || n === 'elderberry sambucus nigra fruit extract'
+    || n === 'slippery elm bark extract'
+    || n === 'wild cherry bark extract'
+    || n === 'organic slippery elm bark powder'
+    || n === 'organic slippery elm powder'
+  ) {
+    return close(
+      'Named plant-part extract or powder used as an inactive. The founder locked this exact token Cleared (t84u).',
+      level,
+    );
+  }
+
+  if (n === 'clove bud oil') {
+    return close(
+      'Named essential oil (clove bud). Not a seed oil in a gummy. The founder locked this exact token Caution (t84u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === 'brazzein' || n === 'brazzein oubli fruit sweet protein') {
+    return close(
+      'Sweet protein (brazzein). The founder locked this exact token Caution (t84u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (
+    n === 'quercetin dihydrate'
+    || n === 'quercetin dihydrate from sophora japonica extract'
+    || n === 'l selenomethionine'
+  ) {
+    return close(
+      'Inactive on this panel. The founder locked this exact token Caution (t84u). It does not count toward the three-or-more Limited stack.',
       level,
     );
   }
