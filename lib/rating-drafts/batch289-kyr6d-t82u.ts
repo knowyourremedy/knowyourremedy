@@ -168,6 +168,8 @@ export const BATCH289_KYR6D_T82U: RatingRecord[] = [
       flag(PSERG, 'Carnauba Wax', 'cleared', 'carnauba'),
     ],
     verdict: 'avoid',
+    honestNote:
+      'Avoid from vegetable oil in the gummy. Counted Limited tokens: MCT and natural raspberry flavor. That is two, so this is not a 3+ stack. Sugar and phosphoric acid are Caution and do not stack. Glucose syrup, citric acid, pectin, carrot juice concentrate, blueberry juice concentrate, and carnauba wax are Cleared.',
     sourcesGeneral: [
       't82u. RidgeCrest Herbals brand page is the single source. https://rcherbals.com/products/serenizen-gummies lists 60 gummies / 60 servings at $29.99 and in stock. The facts image is the panel. Other ingredients: Glucose syrup, sugar, citric acid, pectin, MCT, phosphoric acid, natural raspberry flavor, vegetable oil, carrot juice concentrate, blueberry juice concentrate, carnauba wax. Vegetable oil in a gummy is Avoid. Counted Limited tokens: MCT and natural raspberry flavor. That is two, so this is not a 3+ stack. Sugar and phosphoric acid are Caution and do not stack. Glucose syrup, citric acid, pectin, the juice concentrates, and carnauba wax are Cleared. No honest note. The 1-gummy column is the 60-serving line for ages 4 and older. The 2-gummy column is ages 14 and older and is the same formula. Missing UPC. The variant barcode field is empty. Not ridgecrest-b282-serenizen-60.',
     ],
@@ -379,10 +381,14 @@ for (const record of ROWS) {
   const formNote = contradictionHonestNote(record) ?? '';
   const stackNote = limitedStackHonestNoteIfAny(record.inactiveIngredients) ?? '';
   const note = [formNote, stackNote].filter(Boolean).join(' ');
-  if ((record.honestNote ?? '') !== note) {
+  const serenizenNote =
+    'Avoid from vegetable oil in the gummy. Counted Limited tokens: MCT and natural raspberry flavor. That is two, so this is not a 3+ stack. Sugar and phosphoric acid are Caution and do not stack. Glucose syrup, citric acid, pectin, carrot juice concentrate, blueberry juice concentrate, and carnauba wax are Cleared.';
+  if (record.id === 'ridgecrest-b289-serenizen-gummies-60') {
+    if (formNote || stackNote) throw new Error(`batch289 serenizen auto note ${formNote} ${stackNote}`);
+    if (record.honestNote !== serenizenNote) throw new Error(`batch289 serenizen note ${JSON.stringify(record.honestNote)}`);
+  } else if ((record.honestNote ?? '') !== note) {
     throw new Error(`batch289 note ${record.id} ${JSON.stringify(record.honestNote)} vs ${JSON.stringify(note)}`);
-  }
-  if (Boolean(record.honestNote) !== expected.note) {
+  } else if (Boolean(record.honestNote) !== expected.note) {
     throw new Error(`batch289 note presence ${record.id} ${JSON.stringify(record.honestNote)}`);
   }
   if (record.id === 'ridgecrest-b289-blood-pressure-120' && !/rice hull/i.test(record.honestNote ?? '')) {
