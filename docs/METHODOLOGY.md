@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 27, 2026 (t69u founder order; KYR6-d):** Amazon is not an allowed source for the bot. Amazon is removed from the hunt-order retailer lists, the store-PDP list, the MegaFood fallback, the panel-source list, the banner scope list, and the coverage-priority lines in `docs/PROJECT_NOTES.md`. Google lookup stays allowed.
+
 **Changed Oct 27, 2026 (t68u founder order; KYR6-d):** Amazon is not an allowed source for the bot. The t61u allow sentence is superseded by t65u and t68u. Amazon is removed from the ladder order, from the blocked-page retry, from the two-source sentence, and from the barcode and accordion domain lists. Google lookup stays allowed.
 
 **Changed Oct 26, 2026 (t65u founder order; KYR6-d):** Ladder search rule. The t61u sentence is superseded. Amazon is not an allowed source for the bot. Do not open Amazon product or brand pages. If a search result points to Amazon, skip it and continue with the next source. Google lookup remains allowed and should still be used to find brand pages, iHerb, Vitacost, retailer pages, and other readable sources.
