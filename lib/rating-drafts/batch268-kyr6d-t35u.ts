@@ -1,6 +1,8 @@
 // DRAFT / not verified / batch 268 KYR6-d (t35u).
 // Founder-verified panels. Not re-searched. The founder label is the single source.
 // Os-Cal chewable 60 is not in this file: bare Triglycerides is not locked.
+// t73u: Meltaways 15 only. Brand page for SKU 042037106928 replaces
+// Crospovidone and bare Starch with Povidone and Corn starch. Grade stays Avoid.
 
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -22,7 +24,8 @@ const METH = {
   cornStarch: 'Methodology §5 Cleared (corn starch — named simple starch).',
   cornSyrupSolids:
     'Methodology §5 Caution (corn syrup solids — sweetener neighborhood of sugar / glucose; locked Sept 26, 2026). Does not count toward the t137u stack. Not Cleared glucose syrup.',
-  crospovidone: 'Methodology §5 Cleared (crospovidone — cross-linked povidone).',
+  povidone:
+    'Methodology §5 Cleared (povidone / povidone USP — tablet binder; locked Sept 25, 2026). Not crospovidone.',
   dlTocopherol:
     'Methodology §5 Cleared (DL-Alpha Tocopherol / DL alpha tocopherol — mixed-tocopherols row). Founder override Oct 17, 2026 t118u.',
   dye: 'Methodology §5 High-risk (synthetic dyes — FD&C / D&C, including lake forms).',
@@ -46,7 +49,6 @@ const METH = {
   sls: 'Methodology §5 Caution (sodium lauryl sulfate). Does not count toward the t137u stack.',
   ssf: 'Methodology §5 Cleared (sodium stearyl fumarate — stearate-family lubricant; locked Sept 16, 2026).',
   ssg: 'Methodology §5 Cleared (sodium starch glycolate — disintegrant).',
-  starch: 'Methodology §5 Cleared (bare starch as a filler — simple-starch filler; locked Sept 25, 2026). Not Caution unspecified starch.',
   sucrose: 'Methodology §5 Cleared (sucrose). Founder override Oct 17, 2026 t118u.',
   talc: 'Methodology §5 High-risk (talc — oral / swallow; IARC Group 2A).',
   tio2: 'Methodology §5 High-risk (titanium dioxide — EU food-additive ban 2022; EFSA could not rule out genotoxicity).',
@@ -63,7 +65,7 @@ function flag(panel: string, name: string, riskLevel: RiskLevel, meth: MethKey):
 const P_TOGO =
   'Founder-verified panel (t35u). Beano To Go 12. UPC 042037106911 check digit OK. Not re-searched.';
 const P_MELT =
-  'Founder-verified panel (t35u). Beano Meltaways 15. UPC 042037106928 check digit OK. Not re-searched.';
+  'Brand page https://www.beanogas.com/anti-gas-pills/beano-meltaways (t73u). SKU 042037106928. Other ingredients: mannitol, povidone, corn starch, water, sodium stearyl fumarate, polyvinyl acetate, less than 1% of: maltodextrin, silicon dioxide, calcium gluconate, triacetin, natural & artificial flavor, red no. 40 lake, acetic acid, sodium lauryl sulfate.';
 const P_OSCAL =
   'Founder-verified panel (t35u). Os-Cal Calcium + D3 caplets. Same formula on the 75 and the 160. Not re-searched.';
 
@@ -79,8 +81,8 @@ const TOGO_FLAGS: IngredientFlag[] = [
 
 const MELT_FLAGS: IngredientFlag[] = [
   flag(P_MELT, 'Mannitol', 'moderate', 'mannitol'),
-  flag(P_MELT, 'Crospovidone', 'cleared', 'crospovidone'),
-  flag(P_MELT, 'Starch', 'cleared', 'starch'),
+  flag(P_MELT, 'Povidone', 'cleared', 'povidone'),
+  flag(P_MELT, 'Corn starch', 'cleared', 'cornStarch'),
   flag(P_MELT, 'Water', 'cleared', 'water'),
   flag(P_MELT, 'Sodium stearyl fumarate', 'cleared', 'ssf'),
   flag(P_MELT, 'Polyvinyl acetate', 'moderate', 'pvAc'),
@@ -180,7 +182,7 @@ export const BATCH268_KYR6D_T35U: RatingRecord[] = [
     '042037106928',
     MELT_FLAGS,
     ENZYME,
-    'Avoid from FD&C Red No. 40 Lake. Counted Limited tokens: maltodextrin and natural and artificial flavor. That is two, so this is not a 3+ stack. Mannitol, polyvinyl acetate, silicon dioxide, and sodium lauryl sulfate are Caution and do not stack. Starch is Cleared bare starch as a filler. No honest note. Founder-verified panel. UPC 042037106928 check digit OK.',
+    'Avoid from FD&C Red No. 40 Lake. Counted Limited tokens: maltodextrin and natural and artificial flavor. That is two, so this is not a 3+ stack. Mannitol, polyvinyl acetate, silicon dioxide, and sodium lauryl sulfate are Caution and do not stack. Povidone is Cleared. Corn starch is Cleared named simple starch. No honest note. Brand page https://www.beanogas.com/anti-gas-pills/beano-meltaways is the current formula for SKU 042037106928. Not the t35u names Crospovidone and bare Starch. UPC 042037106928 check digit OK.',
   ),
   pack(
     'oscal-b268-calcium-d3-75',
