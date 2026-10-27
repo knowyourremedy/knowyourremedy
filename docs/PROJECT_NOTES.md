@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t79u (Oct 27, 2026). **KYR6-d. Notes only.** Chat interaction preferences added immediately after the PROCESS Sidebar rule. No catalog rows. Highest rating-draft stays batch288. Next file stays batch289.
 - t75u (Oct 27, 2026). **KYR6-d. Beano tablets 30, tablets 100, and To Go 12 honest notes only.** Grades stay Caution. No other field changed. `beano-b222-tablets-30` and `beano-b222-tablets-100` share one note: Caution from Colloidal silica. Counted Limited tokens: none. That is zero, so this is not a 3+ stack. Mannitol is Caution and does not stack. Colloidal silica is the silicon dioxide cap and does not stack. Cellulose gel, magnesium stearate, and calcium gluconate are Cleared. Potato starch is Cleared named simple starch. `beano-b268-to-go-12` note: Caution from Mannitol. Counted Limited tokens: none. That is zero, so this is not a 3+ stack. Mannitol and colloidal silica are Caution and do not stack. Cellulose gel, invertase, magnesium stearate, and gelatin are Cleared. Potato starch is Cleared named simple starch. Highest rating-draft stays batch288. Next file stays batch289.
 - t74u (Oct 27, 2026). **KYR6-d. Beano Meltaways 15 honest note only.** `beano-b268-meltaways-15` stays Avoid. UPC 042037106928 stays. No other field changed. The other Beano rows have no honestNote, so this note uses the same grade-explanation sentences already written for this Beano row. The honest note is: Avoid from FD&C Red No. 40 Lake. Counted Limited tokens: maltodextrin and natural and artificial flavor. That is two, so this is not a 3+ stack. Mannitol, polyvinyl acetate, silicon dioxide, and sodium lauryl sulfate are Caution and do not stack. Povidone is Cleared. Corn starch is Cleared named simple starch. Highest rating-draft stays batch288. Next file stays batch289.
 - t73u (Oct 27, 2026). **KYR6-d. Beano Meltaways 15 only. US only.** Recheck of `beano-b268-meltaways-15`. No new row. Brand page https://www.beanogas.com/anti-gas-pills/beano-meltaways is the current formula for SKU 042037106928. Other ingredients: mannitol, povidone, corn starch, water, sodium stearyl fumarate, polyvinyl acetate, less than 1% of: maltodextrin, silicon dioxide, calcium gluconate, triacetin, natural & artificial flavor, red no. 40 lake, acetic acid, sodium lauryl sulfate. The row names changed from Crospovidone and Starch to Povidone and Corn starch. Both are already locked Cleared. Grade stays Avoid from FD&C Red No. 40 Lake. Counted Limited tokens stay maltodextrin and natural and artificial flavor. That is two, so this is not a 3+ stack. No honest note. DailyMed search for beano meltaways returned 0 labels. Target, CVS, iHerb, and Vitacost searches for 042037106928 returned no product. Walmart search found the 15-count, and the page text did not contain the ingredient words. Walgreens did not load. Meijer returned Access Denied. Kroger returned Too many requests. Amazon was not opened. Highest rating-draft stays batch288. Next file stays batch289.
@@ -1525,6 +1526,21 @@ PROCESS
 - One job. Last line STILL WORKING / ON MAIN / WAITING / STOPPED.
 - Advisor does not push GitHub.
 - Main wins over pins.
+
+CHAT INTERACTION PREFERENCES (founder)
+
+Existing rule (already in notes):
+- Sidebar first. No bot paste until Brandon says go.
+- Advisor must not send handoff or bot text until Brandon says ready or go. Sidebar after a paste is new info; don’t dump an old paste.
+
+Add-on preferences (from current chat):
+- When the founder says go, put the full bot paste in a single easy-to-click copy block.
+- During a founder hunt, put the product name (and only the product name) in an easy-to-click copy block. Put the conflict, source status, and remaining count in regular text below it.
+- Keep pastes complete. Include every live rule the bot needs for that job so it does not have to rely on memory.
+- After a paste is sent, wait for the bot’s report before offering the next paste unless the founder asks for it.
+
+Token recommendation rule:
+- Before giving any token recommendation, state that you pulled the live sources, checked the dock rule, and checked the standing rules (including the unnamed rule, natural vs man-made tiebreaker, 3+ Limited stack, and any prior-lock re-evaluation rule). Do not recommend based on a prior lock alone if it may not have gone through the current rules.
 
 LIVE NOW
 Solaray in progress (#365–#375) is struck. Solaray website UPC ladders are closed (#386–#389). Leftover 15 is a walk, not another website loop. Red Yeast Rice + CoQ-10 90ct now has UPC 076280121551 — do not hunt that barcode again. Liposomal Multivitamin Universal 60ct 076280830385 stays parked (no Search row / no_OI). “Barcode later” is struck. Sizeless Maca in batch116 already pulled; sized 7.4 oz row stays. Organic Nettle 076280194104 Clean and Nettle 076280014105 Caution are two products. Do not reopen: Sprouts stash, oil pour bottles as graded Search rows, factory #121–#221, GoodSense 3P panels, batch70–113 edits, batch116 except the already-done Maca pull.
