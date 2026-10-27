@@ -699,6 +699,20 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'colored with red cabbage color') {
+    return close(
+      'Named plant color (red cabbage anthocyanin). Not an unnamed color and not a synthetic dye. The founder locked this exact token Cleared (t83u).',
+      level,
+    );
+  }
+
+  if (n === 'normal saline') {
+    return close(
+      '0.9% sodium chloride aqueous vehicle. Same Cleared sodium-chloride family. The founder locked this exact token Cleared (t83u).',
+      level,
+    );
+  }
+
   if (n === 'sodium hypochlorite') {
     return close(
       'Sodium hypochlorite is a residual oxidizer. The founder locked this exact token Caution (t16u). An FDA allow is not Clean. It is not the wound-wash token Sodium Hypochlorite (Trace).',
