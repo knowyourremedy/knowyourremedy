@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t96u (Oct 28, 2026). **KYR6-d. Kids Sleep 8 hold cleared. No brand closed. US only.** Sprouts next open brands was updated. `goodday-b282-kids-sleep-80` was not changed. Good Day Kids Sleep 8 is not a hunt entry. That product is the written 80-count. **Closed this pass:** none. Never-started Sprouts brands have no catalog pass. Bach, BiOptimizers, and Good Day Chocolate still have unfinished catalogs. Grether's pastilles and Grüns 28-count lines stay held. Suku is Canada-only and was not added to the closed-brands list. Herbs Etc., Hyalogic, Lemme, Quantum Health, and Ridgecrest Herbals Clearlungs stay catalog-done with missing UPCs and were not closed.
 - t95u (Oct 28, 2026). **KYR6-d. Two founder-confirmed droppers. US only.** No brand closed. Sprouts section was not edited. **batch295** — 2 packs in `lib/rating-drafts/batch295-kyr6d-t95u.ts` (2 Clean / 0 Caution / 0 Avoid). Full honest note on every row. **Written:** `bach-b295-rescue-dropper-nonalcohol-20` Clean, UPC 741273401230. Glycerin [vegetable] and purified water. Not the alcohol 10 mL. `bach-b295-rescue-sleep-kids-dropper-10` Clean, UPC 741273400844. The Sleep formula includes White Chestnut. The carton image is named Kids Night Dropper. That earlier hold is this row. There was no hunt-list bullet under that name. **Not written again:** `goodday-b282-kids-sleep-80` already has UPC 858982004949. The brand page prints the 80-count other-ingredient line. No second row. **Cleared from the hunt list, no row written:** Bach RESCUE Kids Night gummies, Kids Chill gummies, Balance and Positivity capsules, and RESCUE Cream 50 mL. They were not hunt-list bullets. The founder did not find them. The cream’s US other-ingredients line is still incomplete. **Unlocked tokens found this pass:** none.
 - t94u (Oct 28, 2026). **KYR6-d. Hunt list and stuck-pack check. US only.** No brand closed. Sprouts section was not edited. No new batch. **Magnesium Breakthrough V4 30** has no catalog row and was not a hunt-list entry. The founder hunted and could not find the 30-count. It stays off the hunt list. No row was added. **Held:** RESCUE Dropper 20 mL, the 20 mL variant is price $0. Good Day Kids Sleep 8, the page says Sold out. Bach RESCUE Kids Night gummies, Kids Chill gummies, and Balance and Positivity capsules, the US pages return 404. RESCUE Cream 50 mL and Kids Night Dropper 10 mL, the US pages return 404. The pages that opened are UK (GBP). **Unlocked tokens found this pass:** none.
 - t93u (Oct 28, 2026). **KYR6-d. Hunt-list check, one more ladder, Sprouts list brought current. US only.** No brand closed. No new batch. `bioptimizers-b294-blood-sugar-v1-60` is off the founder hunt list. **Held:** RESCUE Dropper 20 mL, the 20 mL variant is price $0. Good Day Kids Sleep 8, the page says Sold out. Magnesium Breakthrough V4 30, bottle image only, barcode empty; older 30-count panels were not used. Bach RESCUE Kids Night gummies, Kids Chill gummies, and Balance and Positivity capsules, the US pages return 404. RESCUE Cream 50 mL and Kids Night Dropper 10 mL, the US pages return 404. The pages that opened are UK (GBP). **Unlocked tokens found this pass:** none. Sprouts next open brands now lists the brands that are still open and the brands that are catalog-done with missing UPCs on the hunt list.
@@ -276,6 +277,8 @@ Founder store-walk list
 t94u. Magnesium Breakthrough V4 30 is not on this list. There is no catalog row. The founder hunted and could not find the 30-count. Do not add it.
 
 t95u. The founder hunted and did not find these. They are not on this list. Do not add them. Do not write a row. Bach RESCUE Kids Night gummies. Bach RESCUE Kids Chill gummies. Bach Balance and Positivity capsules. Bach RESCUE Cream 50 mL. The US other-ingredients line for the cream is still incomplete.
+
+t96u. Good Day Kids Sleep 8 is not on this list. That product is already `goodday-b282-kids-sleep-80`. Do not add a hunt entry. Do not rewrite that row.
 
 Spring Valley rows written with a missing UPC. These are for a future in-store scan. UPCs must never be invented. A row that already has a passing UPC is not on this list. 192 rows.
 
@@ -585,42 +588,45 @@ Beano, Goli, Lactaid, Move Free, Nature's Bounty, Os-Cal, Osteo Bi-Flex, Prevage
 Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u, leaving Beano, Goli, Lactaid, Os-Cal, and Spring Valley open.
 
 Sprouts next open brands
-t93u (Oct 28, 2026). Brought current after batches 289–294. No brand was closed. Two lists.
+t96u (Oct 28, 2026). Kids Sleep 8 hold cleared. No brand closed this pass.
+
+Closed this pass
+None. A close was not forced.
 
 Still open. These still need a catalog pass, or a pack is still unwritten.
-- Bach — open. Rows exist. RESCUE Dropper 20 mL is price $0. Kids Night gummies, Kids Chill gummies, Balance and Positivity capsules, RESCUE Cream 50 mL, and Kids Night Dropper 10 mL have no US panel. Hunt-list UPCs remain on the written rows.
-- Beam — new
-- Bestie Supplements — new
-- BiOptimizers — open. Rows exist. Magnesium Breakthrough V4 30 has no current facts panel. The older 30-count panels were not used. Hunt-list UPCs remain on the written rows.
-- Cheribundi — new
-- Comvita — new
-- Dose — new
-- Elevate Organic — new
-- Eyeganics — new
-- Good Day Chocolate — open. Rows exist. Kids Sleep 8 is sold out on the brand page.
-- Grether's — new
-- Gruns Nutrition — new
-- Lifeseasons — new
-- Manukora — new
-- Natural Stacks — new
-- Nature's Answer — new
-- Neuro Mints — new
-- North American Herb & Spice — new
-- Olbas — new
-- Planetary Herbals — new
-- Prepare Your Mind — new
-- Pri — new
-- Reprise Health — new
-- Suku Vitamins — new
-- Taylor Pass Honey Co — new
-- The Good Patch — new
-- Traditional Medicinals — new
-- Wallys Natural — new
-- Wishgarden Herbs — new
-- Wooden Spoon Herbs — new
-- Zand — new
+- Bach — not closed. The non-alcohol 20 mL and the Sleep Kids 10 mL are written. Kids Night gummies, Kids Chill gummies, Balance and Positivity capsules, and RESCUE Cream 50 mL were hunted and not found. Other in-stock flavored droppers were not part of a finished catalog pass.
+- Beam — not closed. No catalog pass.
+- Bestie Supplements — not closed. No catalog pass.
+- BiOptimizers — not closed. Magnesium Breakthrough V4 30 was hunted and not found, and it has no row. Other in-stock packs were not part of a finished catalog pass. Hunt-list UPCs remain on the written rows.
+- Cheribundi — not closed. No catalog pass.
+- Comvita — not closed. No catalog pass.
+- Dose — not closed. No catalog pass.
+- Elevate Organic — not closed. No catalog pass.
+- Eyeganics — not closed. No catalog pass.
+- Good Day Chocolate — not closed. The Kids Sleep 8 hold is cleared. That product is already `goodday-b282-kids-sleep-80`. The 8-count page is sold out and is not a separate pack. A full re-check of every other in-stock US pack was not done this pass.
+- Grether's — not closed. Pastilles stay held from the earlier pass.
+- Gruns Nutrition — not closed. The 28-count pages still print more than one other-ingredient line.
+- Lifeseasons — not closed. No catalog pass.
+- Manukora — not closed. No catalog pass.
+- Natural Stacks — not closed. No catalog pass.
+- Nature's Answer — not closed. No catalog pass.
+- Neuro Mints — not closed. No catalog pass.
+- North American Herb & Spice — not closed. No catalog pass.
+- Olbas — not closed. No catalog pass.
+- Planetary Herbals — not closed. No catalog pass.
+- Prepare Your Mind — not closed. No catalog pass.
+- Pri — not closed. No catalog pass.
+- Reprise Health — not closed. No catalog pass.
+- Suku Vitamins — not closed. US handles 404. The products that opened are Canada-licensed, so they are out of the US catalog and were not added to the closed-brands list.
+- Taylor Pass Honey Co — not closed. No catalog pass.
+- The Good Patch — not closed. No catalog pass.
+- Traditional Medicinals — not closed. No catalog pass.
+- Wallys Natural — not closed. No catalog pass.
+- Wishgarden Herbs — not closed. No catalog pass.
+- Wooden Spoon Herbs — not closed. No catalog pass.
+- Zand — not closed. No catalog pass.
 
-Catalog-done, with missing UPCs on the founder hunt list. Not closed. A missing UPC is not a new catalog pass.
+Catalog-done, with missing UPCs on the founder hunt list. Not closed this pass. A missing UPC is not a new catalog pass, and a close was not forced.
 - Herbs Etc. — Daily Peace gummies, Deep Sleep gummies, Menopautonic liquid, ChlorOxygen Mint 1 oz, ChlorOxygen Mint 2 oz
 - Hyalogic — Synthovial Seven, Collagen Peptides, HylaMints
 - Lemme — Colostrum Liquid 1-pack
