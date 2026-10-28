@@ -809,6 +809,69 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'thaumatin powder katemfe fruit extract') {
+    return close(
+      'Thaumatin Powder (Katemfe Fruit Extract) is the same sweetener as the prior Thaumatin lock. The parenthesis names katemfe fruit. The founder locked this exact token Cleared (t98u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === '27 grape alcohol solution') {
+    return close(
+      '27% grape alcohol solution is the liquid that carries a Bach flower remedy. The founder locked this exact token Caution (t98u). It is not the Cleared Grape Alcohol token. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (
+    n === 'beeswax'
+    || n === 'shea butter'
+    || n === 'grapeseed oil'
+    || n === 'sustainable palm kernel oil'
+    || n === 'xanthan gum'
+    || n === 'medium chain triglycerides from coconut rapeseed oil'
+    || n === 'elder extract'
+    || n === 'elderflower extract'
+    || n === 'red cabbage extract'
+    || n === 'black carrot extract'
+    || n === 'elderberry concentrate as color'
+    || n === 'vegetable juice color from paprika carrot'
+    || n === 'fruit vegetable juice color from carrot cherry'
+    || n === 'bilberry concentrate'
+    || n === 'blackcurrant concentrate'
+    || n === 'strawberry concentrate'
+    || n === 'watermelon concentrate as flavor'
+  ) {
+    return close(
+      'The founder locked this exact token Cleared (t98u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (
+    n === 'natural mixed berry flavor'
+    || n === 'organic black cherry flavor'
+    || n === 'organic fruit punch flavor'
+    || n === 'cranberry as flavor'
+    || n === 'lemon as flavor'
+    || n === 'black currant as flavor'
+    || n === 'elderflower as flavor'
+    || n === 'orange as flavor'
+    || n === 'turmeric'
+    || n === 'turmeric as flavor color'
+    || n === 'caprylyl glycol'
+    || n === 'cetearyl alcohol'
+    || n === 'cetyl palmitate'
+    || n === 'glyceryl stearate citrate'
+    || n === 'isopropyl palmitate'
+    || n === 'potassium sorbate'
+  ) {
+    return close(
+      'The founder locked this exact token Caution (t98u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
   if (n === 'natural flavors menthol vanilla peppermint and spearmint essential oils and citral') {
     return close(
       'Essential-oil and scent line. The parenthesis names menthol, vanilla, peppermint, spearmint essential oils, and citral. The superscript 1 means organic and does not change the grade. The founder locked this exact token Caution (t87u). It does not count toward the three-or-more Limited stack.',
