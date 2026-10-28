@@ -749,6 +749,13 @@ iHerb and any retailer other than Amazon that previously returned a block must b
 
 Amazon is not an allowed source for the bot. Do not open Amazon product or brand pages. If a search result points to Amazon, skip it and continue with the next source. Google lookup remains allowed and should still be used to find brand pages, iHerb, Vitacost, retailer pages, and other readable sources. Unlocked tokens do not halt the ladder. Finish the search on every pack, record every unique unlocked string, then stop. Do not leave packs un-laddered because a token is unlocked.
 
+Status categories for open brands / packs:
+- Catalog done, missing UPCs only — all in-stock US packs written; only UPCs remain for future hunts.
+- Panel missing / one source only — ladder finished but panel still incomplete or single source; needs founder hunt or park.
+- Discontinued — no current US sale page found. Close until notified otherwise.
+
+Do not leave packs in “not fully laddered” or “held on unlocked tokens” status. Finish the ladder and lock tokens before the pass ends.
+
 Standing process — Efficiency:
 Bundle related work. Exhaust the ladder, collect every unlocked token, write every qualifying pack, and surface the full unlocked-token list in one pass. Do not pause for optional confirmations on tokens that do not change a grade. If a token is already sufficient to write the row under existing locks and rules, write it. Flag a UPC only when the bot’s own sources disagree on that specific product’s code. If sources agree, attach it and move on. Flag only items that would change a grade, close a brand, or leave a required field blank. Prefer one paste that finishes multiple packs over multiple small passes.
 
