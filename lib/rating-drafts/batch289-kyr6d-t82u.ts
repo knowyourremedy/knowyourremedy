@@ -313,6 +313,7 @@ export const BATCH289_KYR6D_T82U: RatingRecord[] = [
     category: 'Vitamins',
     formulaId: 'bioptimizers-b289-berberine-60',
     form: 'capsule',
+    barcode: '850018116695',
     activeIngredients: [
       { name: 'Biotin', strength: '2 mg' },
       { name: 'Chromium (as chromium picolinate)', strength: '400 mcg' },
@@ -332,7 +333,7 @@ export const BATCH289_KYR6D_T82U: RatingRecord[] = [
     ],
     verdict: 'caution',
     sourcesGeneral: [
-      't82u. BiOptimizers brand page is the single source. https://bioptimizers.com/products/berberine-breakthrough lists 60 capsules at $38.99 and in stock. The facts image is the panel. Serving 2 capsules. Servings per container 30. Other ingredients: Hypromellose (capsule), rice fiber, rice extract blend. Counted Limited token: rice extract blend. That is one, so this is not a 3+ stack. Rice fiber is the t42u Cleared rice-hull family. Hypromellose is Cleared. No honest note. The variant barcode field is empty. Missing UPC.',
+      't82u. BiOptimizers brand page is the single source. https://bioptimizers.com/products/berberine-breakthrough lists 60 capsules at $38.99 and in stock. The facts image is the panel. Serving 2 capsules. Servings per container 30. Other ingredients: Hypromellose (capsule), rice fiber, rice extract blend. Counted Limited token: rice extract blend. That is one, so this is not a 3+ stack. Rice fiber is the t42u Cleared rice-hull family. Hypromellose is Cleared. No honest note. t90u. Founder-supplied UPC 850018116695. The check digit passes. This code is the Berberine Breakthrough 60-count, so it is on this row and not on bioptimizers-b294-blood-sugar-v1-60. The variant barcode field on the same page is 0723098109713. That field was not copied over the founder UPC. Grade unchanged.',
     ],
   }),
 ];
@@ -394,7 +395,11 @@ for (const record of ROWS) {
   if (record.id === 'ridgecrest-b289-blood-pressure-120' && !/rice hull/i.test(record.honestNote ?? '')) {
     throw new Error(`batch289 blood pressure note ${record.honestNote}`);
   }
-  if (record.barcode) throw new Error(`batch289 upc invented ${record.id} ${record.barcode}`);
+  if (record.id === 'bioptimizers-b289-berberine-60') {
+    if (record.barcode !== '850018116695') throw new Error(`batch289 berberine upc ${record.barcode}`);
+  } else if (record.barcode) {
+    throw new Error(`batch289 upc invented ${record.id} ${record.barcode}`);
+  }
   for (const ingredient of record.inactiveIngredients) {
     const why = plainIngredientWhy(ingredient);
     if (!why) throw new Error(`batch289 blank why ${record.id} ${ingredient.name}`);
