@@ -802,6 +802,20 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === 'thaumatin katemfe fruit extract') {
+    return close(
+      'Named sweet protein from katemfe fruit. The founder locked this exact token Cleared (t87u). It is not bare thaumatin and it is not thaumatin powder. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === 'natural flavors menthol vanilla peppermint and spearmint essential oils and citral') {
+    return close(
+      'Essential-oil and scent line. The parenthesis names menthol, vanilla, peppermint, spearmint essential oils, and citral. The superscript 1 means organic and does not change the grade. The founder locked this exact token Caution (t87u). It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
   if (
     n === 'quercetin dihydrate'
     || n === 'quercetin dihydrate from sophora japonica extract'
