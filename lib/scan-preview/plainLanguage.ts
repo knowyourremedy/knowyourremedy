@@ -683,6 +683,35 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (
+    n === 'organic mullein oil'
+    || n === 'organic garlic oil'
+    || n === 'organic tea tree oil'
+    || n === 'organic lavender oil'
+  ) {
+    return close(
+      'This is a named organic plant oil. The founder locked this exact token Cleared (t108u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'essential oils of peppermint eucalyptus cajeput wintergreen juniper and clove') {
+    return close(
+      'This is the named Olbas oil blend. The founder locked this exact sentence Cleared (t108u). It does not count toward the three-or-more Limited stack. A different word order is not this lock.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'industrial hemp extract') {
+    return close(
+      'Industrial hemp extract is a named hemp extract. The founder locked this exact token Cleared (t108u). It does not count toward the three-or-more Limited stack. It is not Adhesive.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'menthol lactate') {
+    return close(
+      'Menthol lactate is a named cooling ester. The founder locked this exact token Cleared (t108u). It does not count toward the three-or-more Limited stack. It is not Menthyl Lactate, which stays Caution.',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'organic natural color') {
     return close(
       'Organic natural color is a named color class. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not bare natural color.',
