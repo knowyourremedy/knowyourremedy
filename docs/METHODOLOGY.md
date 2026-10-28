@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Oct 28, 2026 (t112u founder order; KYR6-d):** Founder locks. Cleared. Do not count toward the t137u stack. Exact strings: **Acrylates Copolymer**; **Adhesive**. Adhesive is the exact printed word. A longer phrase that merely contains the word adhesive is not this lock.
+
 **Changed Oct 28, 2026 (t111u founder order; KYR6-d):** Founder locks. Cleared. Do not count toward the t137u stack. Exact strings: **Organic Mullein Extract**; **Premium Hemp Extract**; **Ashwagandha**; **Passionflower**. On the Wally's panel, a star with the footnote Certified Organic Ingredients means the token is the organic form. Lavender Oil*, Tea Tree Oil*, and Garlic Oil* are the existing Cleared locks Organic Lavender Oil, Organic Tea Tree Oil, and Organic Garlic Oil. Mullein Extract* is Organic Mullein Extract. Olive Oil and Echinacea Extract keep their existing specific whys.
 
 **Changed Oct 28, 2026 (t108u founder order; KYR6-d):** Founder locks. Cleared. Do not count toward the t137u stack. Exact strings: **Organic Mullein Oil**; **Organic Garlic Oil**; **Organic Tea Tree Oil**; **Organic Lavender Oil**; **Essential oils of peppermint, eucalyptus, cajeput, wintergreen, juniper and clove**; **industrial Hemp Extract**; **Menthol Lactate**. Menthol Lactate is not Menthyl Lactate. Menthyl Lactate stays the t106u Caution lock and does not stack.
