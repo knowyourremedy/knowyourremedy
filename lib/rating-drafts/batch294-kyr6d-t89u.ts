@@ -195,7 +195,7 @@ export const BATCH294_KYR6D_T89U: RatingRecord[] = [
     category: 'Vitamins',
     formulaId: 'bioptimizers-b289-berberine-60',
     form: 'capsule',
-    barcode: '723098109713',
+    barcode: '',
     activeIngredients: BLOOD_ACTIVE,
     inactiveIngredients: [
       flag(PBLOOD, 'Hypromellose', 'cleared', 'hpmc'),
@@ -239,7 +239,7 @@ const EXPECTED: Record<string, { verdict: 'clean' | 'caution' | 'avoid'; cause: 
     cause: 'limited_1_2',
     counted: 'Rice Extract Blend',
     note: NOTE_BLOOD,
-    barcode: '723098109713',
+    barcode: '',
   },
 };
 
