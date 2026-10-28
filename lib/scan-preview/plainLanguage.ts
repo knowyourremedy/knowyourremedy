@@ -683,6 +683,30 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (n === 'organic mullein extract') {
+    return close(
+      'Organic mullein extract is a named plant extract. The founder locked this exact token Cleared (t111u). It does not count toward the three-or-more Limited stack. It is not bare mullein extract.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'premium hemp extract') {
+    return close(
+      'Premium hemp extract is a named hemp extract. The founder locked this exact token Cleared (t111u). It does not count toward the three-or-more Limited stack. It is not industrial hemp extract, and it is not Adhesive.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'ashwagandha') {
+    return close(
+      'Ashwagandha printed alone is the named root. The founder locked this exact token Cleared (t111u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'passionflower') {
+    return close(
+      'Passionflower printed alone is the named flower. The founder locked this exact token Cleared (t111u). It does not count toward the three-or-more Limited stack. It is not passionflower powder.',
+      ingredient.riskLevel,
+    );
+  }
   if (
     n === 'organic mullein oil'
     || n === 'organic garlic oil'
