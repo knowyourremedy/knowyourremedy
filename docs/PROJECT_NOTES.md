@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t94u (Oct 28, 2026). **KYR6-d. Hunt list and stuck-pack check. US only.** No brand closed. Sprouts section was not edited. No new batch. **Magnesium Breakthrough V4 30** has no catalog row and was not a hunt-list entry. The founder hunted and could not find the 30-count. It stays off the hunt list. No row was added. **Held:** RESCUE Dropper 20 mL, the 20 mL variant is price $0. Good Day Kids Sleep 8, the page says Sold out. Bach RESCUE Kids Night gummies, Kids Chill gummies, and Balance and Positivity capsules, the US pages return 404. RESCUE Cream 50 mL and Kids Night Dropper 10 mL, the US pages return 404. The pages that opened are UK (GBP). **Unlocked tokens found this pass:** none.
 - t93u (Oct 28, 2026). **KYR6-d. Hunt-list check, one more ladder, Sprouts list brought current. US only.** No brand closed. No new batch. `bioptimizers-b294-blood-sugar-v1-60` is off the founder hunt list. **Held:** RESCUE Dropper 20 mL, the 20 mL variant is price $0. Good Day Kids Sleep 8, the page says Sold out. Magnesium Breakthrough V4 30, bottle image only, barcode empty; older 30-count panels were not used. Bach RESCUE Kids Night gummies, Kids Chill gummies, and Balance and Positivity capsules, the US pages return 404. RESCUE Cream 50 mL and Kids Night Dropper 10 mL, the US pages return 404. The pages that opened are UK (GBP). **Unlocked tokens found this pass:** none. Sprouts next open brands now lists the brands that are still open and the brands that are catalog-done with missing UPCs on the hunt list.
 - t92u (Oct 28, 2026). **KYR6-d. Hunt list only.** No brand closed. Sprouts next open brands was not edited. `bioptimizers-b294-blood-sugar-v1-60` is off the founder in-store hunt list. The founder hunted for it and could not find the product. The catalog row was not changed. UPC stays blank. Grade unchanged.
 - t91u (Oct 28, 2026). **KYR6-d. Clear one UPC. US only.** No brand closed. Sprouts next open brands was not edited. No grade change. No other field on the row changed. **Updated:** `bioptimizers-b294-blood-sugar-v1-60`. The UPC field is blank. The previous code 723098109713 was removed. It is on the founder hunt list.
@@ -270,6 +271,8 @@ When writing rows:
 - Stop after reporting missing tokens if any exist; do not continue working.
 
 Founder store-walk list
+
+t94u. Magnesium Breakthrough V4 30 is not on this list. There is no catalog row. The founder hunted and could not find the 30-count. Do not add it.
 
 Spring Valley rows written with a missing UPC. These are for a future in-store scan. UPCs must never be invented. A row that already has a passing UPC is not on this list. 192 rows.
 
