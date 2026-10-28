@@ -841,9 +841,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     || n === 'blackcurrant concentrate'
     || n === 'strawberry concentrate'
     || n === 'watermelon concentrate as flavor'
+    || n === 'cranberry concentrate'
   ) {
     return close(
-      'The founder locked this exact token Cleared (t98u). It does not count toward the three-or-more Limited stack.',
+      n === 'cranberry concentrate'
+        ? 'Cranberry concentrate is a named plant concentrate. The founder locked this exact token Cleared (t99u). It is not cranberry (as flavor). It does not count toward the three-or-more Limited stack.'
+        : 'The founder locked this exact token Cleared (t98u). It does not count toward the three-or-more Limited stack.',
       level,
     );
   }
