@@ -292,3 +292,4 @@ export { BATCH292_KYR6D_T86U } from './batch292-kyr6d-t86u';
 export { BATCH293_KYR6D_T87U } from './batch293-kyr6d-t87u';
 export { BATCH294_KYR6D_T89U } from './batch294-kyr6d-t89u';
 export { BATCH295_KYR6D_T95U } from './batch295-kyr6d-t95u';
+export { BATCH296_KYR6D_T97U } from './batch296-kyr6d-t97u';
