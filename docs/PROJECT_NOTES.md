@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t93u (Oct 28, 2026). **KYR6-d. Hunt-list check, one more ladder, Sprouts list brought current. US only.** No brand closed. No new batch. `bioptimizers-b294-blood-sugar-v1-60` is off the founder hunt list. **Held:** RESCUE Dropper 20 mL, the 20 mL variant is price $0. Good Day Kids Sleep 8, the page says Sold out. Magnesium Breakthrough V4 30, bottle image only, barcode empty; older 30-count panels were not used. Bach RESCUE Kids Night gummies, Kids Chill gummies, and Balance and Positivity capsules, the US pages return 404. RESCUE Cream 50 mL and Kids Night Dropper 10 mL, the US pages return 404. The pages that opened are UK (GBP). **Unlocked tokens found this pass:** none. Sprouts next open brands now lists the brands that are still open and the brands that are catalog-done with missing UPCs on the hunt list.
 - t92u (Oct 28, 2026). **KYR6-d. Hunt list only.** No brand closed. Sprouts next open brands was not edited. `bioptimizers-b294-blood-sugar-v1-60` is off the founder in-store hunt list. The founder hunted for it and could not find the product. The catalog row was not changed. UPC stays blank. Grade unchanged.
 - t91u (Oct 28, 2026). **KYR6-d. Clear one UPC. US only.** No brand closed. Sprouts next open brands was not edited. No grade change. No other field on the row changed. **Updated:** `bioptimizers-b294-blood-sugar-v1-60`. The UPC field is blank. The previous code 723098109713 was removed. It is on the founder hunt list.
 - t90u (Oct 28, 2026). **KYR6-d. UPC correction. US only.** No brand closed. Sprouts next open brands was not edited. No grade change. No new row. **Updated:** `bioptimizers-b289-berberine-60` UPC 850018116695. The founder supplied that code for `bioptimizers-b294-blood-sugar-v1-60`. It is the Berberine Breakthrough 60-count, so it was written on the Berberine row. The V1 row stays at UPC 723098109713. The Berberine facts image prints Other ingredients: Hypromellose (capsule), rice fiber, rice extract blend. That line matches the Berberine row. The V1 row stores Hypromellose without the word capsule. Grade unchanged on both rows.
@@ -578,22 +579,21 @@ Beano, Goli, Lactaid, Move Free, Nature's Bounty, Os-Cal, Osteo Bi-Flex, Prevage
 Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u, leaving Beano, Goli, Lactaid, Os-Cal, and Spring Valley open.
 
 Sprouts next open brands
-From the Sprouts filter; these need cataloging.
-- Bach — new
+t93u (Oct 28, 2026). Brought current after batches 289–294. No brand was closed. Two lists.
+
+Still open. These still need a catalog pass, or a pack is still unwritten.
+- Bach — open. Rows exist. RESCUE Dropper 20 mL is price $0. Kids Night gummies, Kids Chill gummies, Balance and Positivity capsules, RESCUE Cream 50 mL, and Kids Night Dropper 10 mL have no US panel. Hunt-list UPCs remain on the written rows.
 - Beam — new
 - Bestie Supplements — new
-- Bioptimizers — new
+- BiOptimizers — open. Rows exist. Magnesium Breakthrough V4 30 has no current facts panel. The older 30-count panels were not used. Hunt-list UPCs remain on the written rows.
 - Cheribundi — new
 - Comvita — new
 - Dose — new
 - Elevate Organic — new
 - Eyeganics — new
-- Good Day Chocolate — new
+- Good Day Chocolate — open. Rows exist. Kids Sleep 8 is sold out on the brand page.
 - Grether's — new
 - Gruns Nutrition — new
-- Herbs Etc. — new
-- Hyalogic — new
-- Lemme — new
 - Lifeseasons — new
 - Manukora — new
 - Natural Stacks — new
@@ -604,9 +604,7 @@ From the Sprouts filter; these need cataloging.
 - Planetary Herbals — new
 - Prepare Your Mind — new
 - Pri — new
-- Quantum Health — new
 - Reprise Health — new
-- Ridgecrest Herbals Clearlungs — new
 - Suku Vitamins — new
 - Taylor Pass Honey Co — new
 - The Good Patch — new
@@ -615,6 +613,13 @@ From the Sprouts filter; these need cataloging.
 - Wishgarden Herbs — new
 - Wooden Spoon Herbs — new
 - Zand — new
+
+Catalog-done, with missing UPCs on the founder hunt list. Not closed. A missing UPC is not a new catalog pass.
+- Herbs Etc. — Daily Peace gummies, Deep Sleep gummies, Menopautonic liquid, ChlorOxygen Mint 1 oz, ChlorOxygen Mint 2 oz
+- Hyalogic — Synthovial Seven, Collagen Peptides, HylaMints
+- Lemme — Colostrum Liquid 1-pack
+- Quantum Health — SuperLysine+ 180, TheraZinc spray 2 oz and 4 oz, USDA elderberry lozenges 18 and 25, elderberry lozenges 60
+- Ridgecrest Herbals Clearlungs — SereniZen gummies, Belly Be Happy, Blood Sugar Balance, Blood Pressure Formula, KidneyAid
 
 Bots and paste language
 KYR6-c and KYR6-d are the live catalog bots (founder order t151u, Oct 21, 2026). They share the same scope: write new Search rows, grade products from methodology, exhaust retailer ladders, close brands on MAIN when a catalog pass finishes, attach a founder-locked UPC only to the row just written, open a catalog PR, and squash-merge it to MAIN when the work is complete — under the same rules (founder orders t149u paste openings, t150u merge). Do not wait on an Allow-once card. KYR6-d is not barcode-only, UPC-attach-only, or any narrower hunt than KYR6-c. Each writes a row only when the panel is read and the pack has a home in one of the 13 tabs. Each grades from methodology. Each attaches a founder-locked UPC only to the row it just wrote. KYR5-d attaches a UPC to an empty row that already exists. It does not create a row. KYR4 is the night photo bot. Photos only. Cap 20. KYR4-b is the daytime photo bot. It is paused on night wakes while KYR4 is active. Do not wake both. Every catalog job paste starts with “You are KYR6-c” or “You are KYR6-d” (founder order t149u, Oct 20, 2026); a paste naming either bot proceeds. It says pull MAIN first, US only, no Canada, no EU, no store-brand. It includes the honest-note and ingredient-tab wording and the search-tab rule. It ends with the ladder order and the instruction to exhaust every step before reporting.
