@@ -302,3 +302,4 @@ export { BATCH302_KYR6D_T103U } from './batch302-kyr6d-t103u';
 export { BATCH303_KYR6D_T106U } from './batch303-kyr6d-t106u';
 export { BATCH304_KYR6D_T108U } from './batch304-kyr6d-t108u';
 export { BATCH305_KYR6D_T111U } from './batch305-kyr6d-t111u';
+export { BATCH306_KYR6D_T112U } from './batch306-kyr6d-t112u';

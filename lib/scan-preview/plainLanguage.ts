@@ -683,6 +683,18 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (n === 'acrylates copolymer') {
+    return close(
+      'Acrylates copolymer is a named coating polymer. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'adhesive') {
+    return close(
+      'Adhesive printed alone is the patch adhesive. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack. A longer phrase that contains the word adhesive is not this lock.',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'organic mullein extract') {
     return close(
       'Organic mullein extract is a named plant extract. The founder locked this exact token Cleared (t111u). It does not count toward the three-or-more Limited stack. It is not bare mullein extract.',
