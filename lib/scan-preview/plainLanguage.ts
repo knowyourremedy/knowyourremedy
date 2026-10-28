@@ -823,6 +823,55 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
+  if (n === '27 alcohol') {
+    return close(
+      '27% alcohol is the alcohol vehicle printed on this bottle. The founder graded this print with the existing t98u Caution lock for 27% grape alcohol solution. It is not the Limited Alcohol vehicle on the Rescue spray. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === 'whole milk powder') {
+    return close(
+      'Whole milk powder is whole dry milk. The founder locked whole dry milk Cleared (Oct 15, 2026). It is milk. It is not non-fat dry milk.',
+      level,
+    );
+  }
+
+  if (n === 'unsweetened chocolate') {
+    return close(
+      'Unsweetened chocolate is the chocolate food named inside the milk chocolate. It is not cocoa powder, and it is not cocoa extract.',
+      level,
+    );
+  }
+
+  if (n === 'nonfat dry milk' || n === 'non fat dry milk') {
+    return close(
+      'Nonfat dry milk is the Sept 21, 2026 Limited lock. It is an allergen disclosure, not a High risk listing. It is not whole dry milk, and it is not skim milk powder. It counts toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
+  if (n === 'milkfat' || n === 'milk fat') {
+    return close(
+      'Milkfat is the butterfat of milk. It is not a seed oil, and it is not vegetable oil.',
+      level,
+    );
+  }
+
+  if (n === 'rice starch') {
+    return close(
+      'Rice starch names the plant. It is a simple starch, in the same family as corn starch. It is not Organic Rice Starch, which is the Limited modified-starch row.',
+      level,
+    );
+  }
+
+  if (n === 'cocoa extract') {
+    return close(
+      'Cocoa extract is not Cleared cocoa powder. The cocoa powder lock says the powder is distinct from the extract. A named food extract that is not the powder stays Caution, the same posture as Carob Extract. It does not count toward the three-or-more Limited stack.',
+      level,
+    );
+  }
+
   if (
     n === 'beeswax'
     || n === 'shea butter'
