@@ -618,7 +618,7 @@ iHerb and any retailer other than Amazon that previously returned a block must b
 Amazon is not an allowed source for the bot. Do not open Amazon product or brand pages. If a search result points to Amazon, skip it and continue with the next source. Google lookup remains allowed and should still be used to find brand pages, iHerb, Vitacost, retailer pages, and other readable sources.
 
 Standing process — Efficiency:
-Bundle related work. Exhaust the ladder, collect every unlocked token, write every qualifying pack, and surface the full unlocked-token list in one pass. Do not pause for optional confirmations on agent-found UPCs or tokens that do not change a grade. If a token or UPC is already sufficient to write the row under existing locks and rules, write it. Flag only items that would change a grade, close a brand, or leave a required field blank. Prefer one paste that finishes multiple packs over multiple small passes.
+Bundle related work. Exhaust the ladder, collect every unlocked token, write every qualifying pack, and surface the full unlocked-token list in one pass. Do not pause for optional confirmations on tokens that do not change a grade. If a token is already sufficient to write the row under existing locks and rules, write it. Flag a UPC only when the bot’s own sources disagree on that specific product’s code. If sources agree, attach it and move on. Flag only items that would change a grade, close a brand, or leave a required field blank. Prefer one paste that finishes multiple packs over multiple small passes.
 
 Standing process — Ladder + token collection:
 
