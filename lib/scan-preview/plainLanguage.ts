@@ -683,6 +683,122 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (n === 'organic natural color') {
+    return close(
+      'Organic natural color is a named color class. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not bare natural color.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'citrus orange bioflavonoids') {
+    return close(
+      'Citrus (Orange) Bioflavonoids names orange. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not unnamed citrus.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'citrus fiber') {
+    return close(
+      'Citrus fiber is a named fiber. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'gluten free oat flour') {
+    return close(
+      'Gluten-free oat flour is a named oat flour. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not oat fiber, and it is not bare oats.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'milk protein concentrate') {
+    return close(
+      'Milk protein concentrate is a milk protein. The founder locked this exact token Caution (t106u). It does not count toward the three-or-more Limited stack. It is not nonfat dry milk.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'nonfat dry milk powder') {
+    return close(
+      'Nonfat dry milk powder is Caution under founder lock t106u. It does not count toward the three-or-more Limited stack. It is not Nonfat Dry Milk, which stays the Limited lock and still counts.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'steviol glycoside') {
+    return close(
+      'Steviol glycoside, singular, is Caution under founder lock t106u. It does not count toward the three-or-more Limited stack. Steviol glycosides, plural, stays the Limited lock and still counts.',
+      ingredient.riskLevel,
+    );
+  }
+  if (
+    n === 'natural lemon and lime flavors with other natural flavors'
+    || n === 'natural peach and mango flavors with other natural flavors'
+    || n === 'natural raspberry and lemon flavors with other natural flavors'
+    || n === 'natural fruit flavors'
+    || n === 'natural mandarin orange flavor'
+    || n === 'organic lemonade flavor'
+    || n === 'organic lemon flavor'
+  ) {
+    return close(
+      'This flavor wording is Caution under founder lock t106u. It does not count toward the three-or-more Limited stack. It is not the exact Limited natural flavors mixture, and it is not a single t54u fruit flavor.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'policosanol') {
+    return close(
+      'Policosanol is a named plant wax alcohol. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'whole rice concentrate') {
+    return close(
+      'Whole rice concentrate names the rice form. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not the vague rice extract.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'caramel') {
+    return close(
+      'Caramel printed alone is Caution under founder lock t106u. It does not count toward the three-or-more Limited stack. It is not caramel color, and it is not caramel sugar syrup.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'organic rice concentrate') {
+    return close(
+      'Organic rice concentrate names the rice form. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not the vague rice extract.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'organic rice hulls') {
+    return close(
+      'Organic rice hulls are a named rice hull. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. It is not the vague rice extract.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'malt sugar') {
+    return close(
+      'Malt sugar is Caution under founder lock t106u. It does not count toward the three-or-more Limited stack. It is not bare sugar, and it is not maltodextrin.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'magnesium beta hydroxybutyrate') {
+    return close(
+      'Magnesium beta hydroxybutyrate is a named magnesium salt. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'menthyl lactate') {
+    return close(
+      'Menthyl lactate is a named cooling ester. The founder locked this exact token Caution (t106u). It does not count toward the three-or-more Limited stack. It is not menthol.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'blueberry extract') {
+    return close(
+      'Blueberry extract is a named fruit extract. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'cassava dextrin') {
+    return close(
+      'Cassava dextrin is a named starch dextrin. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. Organic cassava dextrin is not this lock.',
+      ingredient.riskLevel,
+    );
+  }
   const source = norm(ingredient.source ?? '');
   const level = ingredient.riskLevel;
   const juiceLockSource = /fruit and vegetable juice, puree, concentrate, and powder/i.test(ingredient.source ?? '');

@@ -276,6 +276,28 @@ export function isMethodologyCautionStamp(source: string | undefined): boolean {
   return false;
 }
 
+const T106U_CAUTION = new Set([
+  'milk protein concentrate',
+  'nonfat dry milk powder',
+  'steviol glycoside',
+  'natural lemon and lime flavors with other natural flavors',
+  'natural peach and mango flavors with other natural flavors',
+  'natural raspberry and lemon flavors with other natural flavors',
+  'caramel',
+  'malt sugar',
+  'natural fruit flavors',
+  'natural mandarin orange flavor',
+  'organic lemonade flavor',
+  'organic lemon flavor',
+  'menthyl lactate',
+]);
+
+/** t106u Caution locks. Do not stack. Not Steviol Glycosides plural. Not Nonfat Dry Milk. Not Organic Cassava Dextrin. */
+export function isT106uCautionName(name: string): boolean {
+  const n = name.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+  return T106U_CAUTION.has(n);
+}
+
 /** Names that map to METH §5 Caution rows when mis-stored as limited (not exhaustive — source stamp wins). */
 export function isMethCautionIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
@@ -286,6 +308,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (isT56uLimitedName(name) || isT56uClearedName(name)) return false;
   if (isT57uLimitedName(name) || isT57uClearedName(name)) return false;
   if (isT51uCautionName(name)) return true;
+  if (isT106uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
   if (/\brice flour\b/.test(n)) return true;
