@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t92u (Oct 28, 2026). **KYR6-d. Hunt list only.** No brand closed. Sprouts next open brands was not edited. `bioptimizers-b294-blood-sugar-v1-60` is off the founder in-store hunt list. The founder hunted for it and could not find the product. The catalog row was not changed. UPC stays blank. Grade unchanged.
 - t91u (Oct 28, 2026). **KYR6-d. Clear one UPC. US only.** No brand closed. Sprouts next open brands was not edited. No grade change. No other field on the row changed. **Updated:** `bioptimizers-b294-blood-sugar-v1-60`. The UPC field is blank. The previous code 723098109713 was removed. It is on the founder hunt list.
 - t90u (Oct 28, 2026). **KYR6-d. UPC correction. US only.** No brand closed. Sprouts next open brands was not edited. No grade change. No new row. **Updated:** `bioptimizers-b289-berberine-60` UPC 850018116695. The founder supplied that code for `bioptimizers-b294-blood-sugar-v1-60`. It is the Berberine Breakthrough 60-count, so it was written on the Berberine row. The V1 row stays at UPC 723098109713. The Berberine facts image prints Other ingredients: Hypromellose (capsule), rice fiber, rice extract blend. That line matches the Berberine row. The V1 row stores Hypromellose without the word capsule. Grade unchanged on both rows.
 - t89u (Oct 28, 2026). **KYR6-d. Founder overrides for the cough bags, kApex, and Blood Sugar Breakthrough V1. US only.** No brand closed. Sprouts next open brands was not edited. No new locks. **batch294** — 4 packs in `lib/rating-drafts/batch294-kyr6d-t89u.ts` (0 Clean / 4 Caution / 0 Avoid). Full honest note on every row. **Written:** `quantum-b294-cough-lemon-18` Caution, UPC 046985211918. `quantum-b294-cough-cherry-18` Caution, UPC 046985211901. The brand bag is the current US panel. Counted Limited token on each: organic flavor. Organic cane syrup is Caution and does not stack. DailyMed lemon was not graded. `bioptimizers-b294-kapex-120` Caution, UPC 689176916140. The government label other-ingredient line is Rice Extract, Cellulose, Water. Counted Limited token: rice extract. The government label prints Ubiquinol. A brand shop list prints UbiQuinone. `bioptimizers-b294-blood-sugar-v1-60` Caution, UPC 723098109713. Same inactive line and actives as `bioptimizers-b289-berberine-60`. Counted Limited token: rice extract blend. **Unlocked tokens found this pass:** none. **Held:** Magnesium Breakthrough V4 30. The V4 30 page is in stock at $22 and still has only a bottle image. The barcode field is empty. The 30-count panels that opened are the older formula (cellulose, Nu-MAG, Nu-Flow, silica). Those were not used. The current V4 line is on the written 60 and on a 50-count, which is not this 30. **Unwritten after that ladder:** the V4 30. Highest rating-draft is now batch294. Next file is batch295.
@@ -326,10 +327,6 @@ t87u rows written with a missing UPC. Brand-page barcode fields were empty. SKUs
 - `bioptimizers-b293-electrolyte-variety-12` — BiOptimizers Electrolyte Breakthrough Variety Pack — 12 count
 - `herbs-b293-chloroxygen-mint-1` — Herbs Etc. ChlorOxygen Chlorophyll Concentrate Mint Alcohol Free Drops — 1 oz
 - `herbs-b293-chloroxygen-mint-2` — Herbs Etc. ChlorOxygen Chlorophyll Concentrate Mint Alcohol Free Drops — 2 oz
-
-t91u. Founder cleared the UPC on this row. The field is blank. No code was invented. 1 row.
-
-- `bioptimizers-b294-blood-sugar-v1-60` — BiOptimizers Blood Sugar Breakthrough V1 — 60 capsules
 
 - `springvalley-b270-womens-probiotic-zinc-30` — Spring Valley 5-in-1 Women's Probiotic with Zinc — 30 vegetable capsules
 - `springvalley-b270-adult-50-plus-365` — Spring Valley Adult 50+ Multivitamin — 365 tablets
