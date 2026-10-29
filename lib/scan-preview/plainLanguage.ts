@@ -683,6 +683,24 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (n === 'tapioca') {
+    return close(
+      'Tapioca printed alone is the named starch food. The founder locked this exact token Cleared (t121u). It does not count toward the three-or-more Limited stack. It is not tapioca syrup, tapioca starch, tapioca maltodextrin, or tapioca dextrin.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'fair trade natural vanilla extract') {
+    return close(
+      'Fair Trade Natural Vanilla Extract is a named vanilla extract. The founder locked this exact token Cleared (t121u). It does not count toward the three-or-more Limited stack. It is not natural vanilla flavor, and it is not vanilla flavoring.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'natural lemon balm citrus flavor') {
+    return close(
+      'Natural Lemon Balm Citrus Flavor names lemon balm and citrus. The founder locked this exact token Caution (t121u). It does not count toward the three-or-more Limited stack. It is not the exact Limited natural flavors mixture, and it is not a single t54u fruit flavor.',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'acrylates copolymer') {
     return close(
       'Acrylates copolymer is a named coating polymer. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack.',
