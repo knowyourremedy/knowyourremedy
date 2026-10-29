@@ -298,6 +298,21 @@ export function isT106uCautionName(name: string): boolean {
   return T106U_CAUTION.has(n);
 }
 
+function t121uToken(name: string): string {
+  return name.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+/** t121u exact Cleared strings. Tapioca is the bare word, not syrup, starch, maltodextrin, or dextrin. */
+export function isT121uClearedName(name: string): boolean {
+  const n = t121uToken(name);
+  return n === 'tapioca' || n === 'fair trade natural vanilla extract';
+}
+
+/** t121u exact Caution string. Does not count toward the t137u stack. */
+export function isT121uCautionName(name: string): boolean {
+  return t121uToken(name) === 'natural lemon balm citrus flavor';
+}
+
 /** Names that map to METH §5 Caution rows when mis-stored as limited (not exhaustive — source stamp wins). */
 export function isMethCautionIngredientName(name: string): boolean {
   const n = name.trim().toLowerCase();
@@ -309,6 +324,7 @@ export function isMethCautionIngredientName(name: string): boolean {
   if (isT57uLimitedName(name) || isT57uClearedName(name)) return false;
   if (isT51uCautionName(name)) return true;
   if (isT106uCautionName(name)) return true;
+  if (isT121uCautionName(name)) return true;
   if (/huito extract/.test(n)) return true;
   if (n === 'natural vanilla powder') return true;
   if (/\brice flour\b/.test(n)) return true;
@@ -417,6 +433,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
+  if (isT121uClearedName(ingredient.name) || isT121uCautionName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
     || isT55uClearedName(ingredient.name)
