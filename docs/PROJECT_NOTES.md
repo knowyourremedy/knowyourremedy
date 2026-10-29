@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t117u continue 2 (Oct 29, 2026). **KYR6-d. Five Bestie capsule backs and Cheribundi Pure Gummies. US only.** No brand closed. The Sprouts section was not edited. Amazon was not opened. No new locks. **batch312** — 6 packs in `lib/rating-drafts/batch312-kyr6d-t117u.ts` (6 Clean / 0 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. **Written:** `bestie-b312-brain-flex-80`, `bestie-b312-glow-up-60`, `bestie-b312-hey-ladies-60`, `bestie-b312-vibe-check-60`, `bestie-b312-baby-dancin-60`, all Clean, missing UPC. Other ingredients on each are Organic Rice Fiber and HPMC. `cheribundi-b312-pure-gummies-60` Clean, missing UPC. **Held:** Bestie Burn Baby Burn. No back image on the brand feed. Bestie STACKED whey powders stay out of scope because protein powder is dormant. **Unlocked tokens found this pass:** none. **Closed this pass:** none.
 - t117u Olbas sizes (Oct 29, 2026). **KYR6-d. Two more Olbas Oil sizes and the cough syrup. US only.** No brand closed. The Sprouts section was not edited. Amazon was not opened. No new locks. **batch311** — 3 packs in `lib/rating-drafts/batch311-kyr6d-t117u.ts` (2 Clean / 1 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. **Written:** `olbas-b311-oil-101` Clean, missing UPC. `olbas-b311-oil-165` Clean, missing UPC. Both print the t108u oil sentence. `olbas-b311-cough-syrup-4` Caution, missing UPC. Counted Limited token: Natural Flavor. **Out of scope:** Olbas Herbal Tea 7 oz. It is a tea. The label is an ingredients list, not a supplement or drug facts panel. **Unlocked tokens found this pass:** none on the written packs. **Closed this pass:** none.
 - t117u continue (Oct 29, 2026). **KYR6-d. Comvita and Bestie facts images. US only.** No brand closed. The Sprouts section was not edited. Amazon was not opened. No new locks. **batch310** — 4 packs in `lib/rating-drafts/batch310-kyr6d-t117u.ts` (3 Clean / 1 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. **Written:** `comvita-b310-olive-leaf` Clean, missing UPC. `comvita-b310-propolis-extract` Caution, missing UPC. Counted Limited token: Propylene glycol. `bestie-b310-finesse-120` Clean, missing UPC. `bestie-b310-creatine-30` Clean, missing UPC. The creatine panel lists only the active. **Held:** none of these four. **Unlocked tokens found this pass:** none on these four. **Closed this pass:** none.
 - t117u resume (Oct 29, 2026). **KYR6-d. Wally's 1.0 fl oz from the brand page. US only.** No brand closed. The Sprouts section was not edited. Amazon was not opened. No new locks. **batch309** — 1 pack in `lib/rating-drafts/batch309-kyr6d-t117u.ts` (1 Clean / 0 Caution / 0 Avoid). Full honest note. Every ingredient tab has a specific why. **Written:** `wallys-b309-ear-oil-10` Clean, missing UPC. 1.0 fl oz. Same starred line as `wallys-b305-ear-oil-05`. **Not written again:** the Lactaid Fast Act and Original counts already on MAIN. **Held:** Olbas Inhaler single. Menthol and Eucalyptol return the generic Usable sentence. Olbas Breathe Easy Patches. Dipropylene Glycol returns that same sentence. Olbas Cough Syrup, Herbal Tea, Oil 1.01 fl oz, and Oil 1.65 fl oz. The shop lists them for sale and the ingredient panel was not opened. **Out of stock:** Olbas Analgesic Salve. Olbas Sugar Free Lozenges, the page says discontinued. **Unlocked tokens found this pass:** Menthol (Olbas Inhaler). Eucalyptol (Olbas Inhaler). Dipropylene Glycol (Olbas Breathe Easy Patches). **Closed this pass:** none.
@@ -552,6 +553,15 @@ t117u Olbas sizes written with a missing UPC. The brand pages do not print a cod
 - `olbas-b311-oil-101` — Olbas Oil — 1.01 fl oz (30 mL)
 - `olbas-b311-oil-165` — Olbas Oil — 1.65 fl oz (50 mL)
 - `olbas-b311-cough-syrup-4` — Olbas Herbal Cough Syrup — 4 fl oz
+
+t117u continue 2 rows written with a missing UPC. The facts images did not print a readable code. No code was invented. 6 rows.
+
+- `bestie-b312-brain-flex-80` — Bestie Brain Flex — 80 capsules
+- `bestie-b312-glow-up-60` — Bestie Glow Up — 60 capsules
+- `bestie-b312-hey-ladies-60` — Bestie Hey Ladies — 60 capsules
+- `bestie-b312-vibe-check-60` — Bestie Vibe Check — 60 capsules
+- `bestie-b312-baby-dancin-60` — Bestie Baby Dancin — 60 capsules
+- `cheribundi-b312-pure-gummies-60` — Cheribundi Pure Gummies — 60 gummies
 
 t112u rows written with a missing UPC. Neither Target nor Walmart printed a code. No code was invented. 1 row.
 
