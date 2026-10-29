@@ -310,3 +310,4 @@ export { BATCH310_KYR6D_T117U } from './batch310-kyr6d-t117u';
 export { BATCH311_KYR6D_T117U } from './batch311-kyr6d-t117u';
 export { BATCH312_KYR6D_T117U } from './batch312-kyr6d-t117u';
 export { BATCH313_KYR6D_T119U } from './batch313-kyr6d-t119u';
+export { BATCH314_KYR6D_T119U } from './batch314-kyr6d-t119u';
