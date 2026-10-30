@@ -725,6 +725,30 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (n === 'organic cinnamon powder') {
+    return close(
+      'Organic Cinnamon Powder is a named spice powder. The founder locked this exact token Cleared (t123e). It does not count toward the three-or-more Limited stack. It is not the exact token Cinnamon, and it is not cinnamon bark oil.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'peanut flour') {
+    return close(
+      'Peanut Flour is a named food flour. The founder locked this exact token Cleared (t123e). It does not count toward the three-or-more Limited stack. It is not peanut oil.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'coconut milk powder coconut milk cassava dextrin') {
+    return close(
+      'Coconut Milk Powder (Coconut Milk, Cassava Dextrin) is one printed token. The founder locked this exact string Cleared (t123e). It does not count toward the three-or-more Limited stack. Cassava Dextrin inside the parenthesis is not graded again, and it is not Organic Cassava Dextrin.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'organic coconut milk powder organic coconut milk cassava dextrin') {
+    return close(
+      'Organic Coconut Milk Powder (Organic: Coconut Milk, Cassava Dextrin) is one printed token. The founder locked this exact string Cleared (t123e). It does not count toward the three-or-more Limited stack. The Organic: prefix does not make a separate Organic Cassava Dextrin row. It is not Organic Coconut Milk Powder (Organic: Coconut Milk, Organic Cassava Dextrin).',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'acrylates copolymer') {
     return close(
       'Acrylates copolymer is a named coating polymer. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack.',
