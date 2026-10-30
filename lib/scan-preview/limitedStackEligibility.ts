@@ -318,6 +318,17 @@ export function isT122eClearedName(name: string, riskLevel?: string): boolean {
   return false;
 }
 
+/** t123e exact Cleared strings. The milk-powder parenthesis is one token. */
+export function isT123eClearedName(name: string): boolean {
+  const n = t121uToken(name);
+  return (
+    n === 'organic cinnamon powder'
+    || n === 'peanut flour'
+    || n === 'coconut milk powder coconut milk cassava dextrin'
+    || n === 'organic coconut milk powder organic coconut milk cassava dextrin'
+  );
+}
+
 /** t121u exact Caution string. Does not count toward the t137u stack. */
 export function isT121uCautionName(name: string): boolean {
   return t121uToken(name) === 'natural lemon balm citrus flavor';
@@ -445,6 +456,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isPureVanillaExtractName(ingredient.name)) return false;
   if (isT121uClearedName(ingredient.name) || isT121uCautionName(ingredient.name)) return false;
   if (isT122eClearedName(ingredient.name, ingredient.riskLevel)) return false;
+  if (isT123eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
     || isT55uClearedName(ingredient.name)
