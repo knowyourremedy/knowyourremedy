@@ -701,6 +701,30 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (n === 'organic cassava dextrin') {
+    return close(
+      'Organic Cassava Dextrin is a named starch dextrin. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not the plain-print Cassava Dextrin lock, and it is not tapioca dextrin.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'illicium verum aniseed fruit seed oil') {
+    return close(
+      'Illicium verum (Aniseed) Fruit/Seed Oil is a named aniseed oil. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not an unnamed flavor.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'commiphora myrrha myrrh oil') {
+    return close(
+      'Commiphora myrrha (Myrrh) Oil is a named myrrh oil. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not the Caution token Myrrh oil.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'menthol' && ingredient.riskLevel === 'cleared') {
+    return close(
+      'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'acrylates copolymer') {
     return close(
       'Acrylates copolymer is a named coating polymer. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack.',
@@ -878,7 +902,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
   if (n === 'cassava dextrin') {
     return close(
-      'Cassava dextrin is a named starch dextrin. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. Organic cassava dextrin is not this lock.',
+      'Cassava dextrin is a named starch dextrin. The founder locked this exact token Cleared (t106u). It does not count toward the three-or-more Limited stack. Organic Cassava Dextrin is its own Cleared lock (t122e). It is not this plain print.',
       ingredient.riskLevel,
     );
   }
