@@ -749,6 +749,18 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (n === 'organic cocoa powder') {
+    return close(
+      'Organic Cocoa Powder is a named cocoa powder. The founder locked this exact token Cleared (t124e). It does not count toward the three-or-more Limited stack. It is not cocoa powder, and it is not organic cacao powder.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'organic coconut milk powder organic coconut milk organic cassava dextrin') {
+    return close(
+      'Organic Coconut Milk Powder (Organic: Coconut Milk, Organic Cassava Dextrin) is one printed token. The founder locked this exact string Cleared (t124e). It does not count toward the three-or-more Limited stack. Organic Cassava Dextrin inside the parenthesis is not graded again. It is not Organic Coconut Milk Powder (Organic: Coconut Milk, Cassava Dextrin).',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'acrylates copolymer') {
     return close(
       'Acrylates copolymer is a named coating polymer. The founder locked this exact token Cleared (t112u). It does not count toward the three-or-more Limited stack.',
