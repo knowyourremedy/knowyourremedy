@@ -891,35 +891,6 @@ export const BATCH326_KYR6E_T129E: RatingRecord[] = [
     ],
   }),
   finish({
-    id: 'naturesanswer-b326-sambucus-shot-on-the-go-12-pack-of-2oz-alcohol-free',
-    productName: "Nature's Answer Sambucus Shot On The Go - Alcohol Free Liquid",
-    brand: "Nature's Answer",
-    category: 'Vitamins',
-    formulaId: 'naturesanswer-b326-sambucus-shot-on-the-go-12-pack-of-2oz-alcohol-free',
-    form: 'liquid',
-    audience: ADULT,
-    minAge: 18,
-    recordStatus: UNVERIFIED,
-    productType: 'Supplement',
-    retailers: ["Nature's Answer"],
-    barcode: '',
-    activeIngredients: [{ name: 'Sambucus Shot On The Go - Alcohol Free Liquid' }],
-    inactiveIngredients: [
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Purified Water', 'cleared', CLEARED_WATER),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Vegetable Glycerin', 'cleared', CLEARED_GLYC),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Natural Flavors', 'limited', LIMITED_NF),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Sodium Citrate', 'cleared', CLEARED_CITRATE),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Potassium Sorbate (preservative)', 'moderate', MODERATE_PS),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Malic Acid', 'cleared', CLEARED_MALIC),
-      flag('Nature\'s Answer facts image. Sambucus Shot On The Go - Alcohol Free Liquid.', 'Citric Acid', 'cleared', CLEARED_CITRIC),
-    ],
-    verdict: 'caution',
-    honestNote: 'Counted Limited tokens: Natural Flavors. That is 1, so this is not a 3+ stack. Potassium sorbate is Caution and does not stack. The named extract on the supplement facts is the active and is not graded. No UPC was printed. Missing UPC.',
-    sourcesGeneral: [
-      't129e. Nature\'s Answer brand page https://naturesanswer.com/products/sambucus-shot-on-the-go-12-pack-of-2oz-alcohol-free lists this pack at $3.99 and in stock. The facts image other ingredients: Purified Water, Vegetable Glycerin, Natural Flavors, Sodium Citrate, Potassium Sorbate (preservative), Malic Acid, Citric Acid. Serving size on the image: 2 oz (60 mL). No UPC was printed. Missing UPC. No code was invented.',
-    ],
-  }),
-  finish({
     id: 'naturesanswer-b326-melatonin-herb',
     productName: "Nature's Answer Melatonin Plus - Veggie Capsules",
     brand: "Nature's Answer",
@@ -4203,7 +4174,6 @@ const EXPECTED: Record<string, { verdict: RatingRecord["verdict"]; counted: numb
   'naturesanswer-b326-saw-palmetto-berries-1oz-alcohol-free': { verdict: 'clean', counted: 0 },
   'naturesanswer-b326-quercetin-blend-60-v-caps': { verdict: 'caution', counted: 1 },
   'naturesanswer-b326-milk-thistle-alcohol-free': { verdict: 'clean', counted: 0 },
-  'naturesanswer-b326-sambucus-shot-on-the-go-12-pack-of-2oz-alcohol-free': { verdict: 'caution', counted: 1 },
   'naturesanswer-b326-melatonin-herb': { verdict: 'caution', counted: 0 },
   'naturesanswer-b326-ut-answer-cranberry-capsules-90-count': { verdict: 'caution', counted: 0 },
   'naturesanswer-b326-forskohlii-standard-60-veggie-caps': { verdict: 'caution', counted: 0 },
@@ -4339,7 +4309,7 @@ const EXPECTED: Record<string, { verdict: RatingRecord["verdict"]; counted: numb
 };
 
 const ROWS = BATCH326_KYR6E_T129E;
-if (ROWS.length !== 167) throw new Error(`batch326 count ${ROWS.length}`);
+if (ROWS.length !== 166) throw new Error(`batch326 count ${ROWS.length}`);
 for (const record of ROWS) {
   const expected = EXPECTED[record.id];
   if (!expected) throw new Error(`batch326 unexpected ${record.id}`);
