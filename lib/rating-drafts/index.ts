@@ -318,3 +318,4 @@ export { BATCH318_KYR6D_T121U } from './batch318-kyr6d-t121u';
 export { BATCH319_KYR6E_T122E } from './batch319-kyr6e-t122e';
 export { BATCH320_KYR6E_T123E } from './batch320-kyr6e-t123e';
 export { BATCH321_KYR6E_T124E } from './batch321-kyr6e-t124e';
+export { BATCH322_KYR6E_T125E } from './batch322-kyr6e-t125e';
