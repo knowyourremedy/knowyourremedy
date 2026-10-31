@@ -329,6 +329,17 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T131E_CLEARED = new Set([
+  'crystallized lemon citric acid lemon oil lemon juice',
+  'hibiscus extract carrot extract for color',
+  'monkfruit extract',
+]);
+
+/** t131e exact Cleared strings. The parenthesis is part of the token. Monkfruit Extract is not Monk Fruit Extract. */
+export function isT131eClearedName(name: string): boolean {
+  return T131E_CLEARED.has(t121uToken(name));
+}
+
 const T130E_CLEARED = new Set([
   'crystallized lemon',
   'rebaudioside a stevia leaf extract',
@@ -547,6 +558,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT124eClearedName(ingredient.name)) return false;
   if (isT127eClearedName(ingredient.name)) return false;
   if (isT130eClearedName(ingredient.name)) return false;
+  if (isT131eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
     || isT55uClearedName(ingredient.name)

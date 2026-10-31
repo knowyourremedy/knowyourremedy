@@ -23,6 +23,7 @@ import {
   isYellowBeesWaxSpaced,
   isT130eClearedName,
   isT130eLimitedName,
+  isT131eClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -664,6 +665,13 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t131eWhy(name: string, level: RiskLevel): string {
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t131e). It does not count toward the three-or-more Limited stack. Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice) is one token and it is not bare Crystallized Lemon. Hibiscus Extract & Carrot Extract (for color) is one token. Monkfruit Extract is not Monk Fruit Extract.`,
+    level,
+  );
+}
+
 function t130eWhy(name: string, level: RiskLevel): string {
   if (isT130eLimitedName(name)) {
     return close(
@@ -739,6 +747,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT131eClearedName(ingredient.name)) {
+    return t131eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT130eClearedName(ingredient.name) || isT130eLimitedName(ingredient.name)) {
     return t130eWhy(ingredient.name, ingredient.riskLevel);
