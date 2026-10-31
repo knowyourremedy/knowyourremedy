@@ -6,6 +6,8 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t133e (Oct 31, 2026). **KYR6-e. Close Natural Stacks.** No rows, grades, or UPCs changed. The Sprouts list was not rewritten except the one Natural Stacks line. **Closed:** Natural Stacks. Ladder finished. No remaining holds. Every pack is written or marked not for sale.
+
 - t132e (Oct 31, 2026). **KYR6-e. Clear two Natural Stacks holds that are not single US packs. US only.** No rows written. Not added to the hunt list. Natural Stacks was not closed. The Sprouts section was not edited. **Not for sale. Not offered as a single pack:** MagTech Magnesium Lemonade Tub. Sleep Magnesium Gummies (60ct) and Mood Magnesium Gummies (60ct). The tub has no in-stock US single. The 60-count pages are SKUs MAGSLEEP-30-2PACKSUB and MAGZEN-30-2PACKSUB, 2-pack subscriptions, not single packs.
 
 - t131e (Oct 31, 2026). **KYR6-e. Three Cleared locks, then the Natural Stacks holds those locks open. US only.** Natural Stacks was not closed. The Sprouts section was not edited. Protein powder stayed out of scope. Locks in `docs/METHODOLOGY.md` and `lib/scan-preview/plainLanguage.ts`. Cleared, do not stack: Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice); Hibiscus Extract & Carrot Extract (for color); Monkfruit Extract. Each parenthesis is part of that one token. The full crystallized-lemon string is not bare Crystallized Lemon. Monkfruit Extract is not Monk Fruit Extract. The t130e locks stay on MAIN. **batch328** — 4 packs in `lib/rating-drafts/batch328-kyr6e-t131e.ts` (1 Clean / 3 Caution / 0 Avoid). Honest note on the lemonade sticks, because the box-back and the gallery graphic print different Cleared strings, and on Focus Bites, because stearic acid stays Caution while the same 2018 European review sentence clears magnesium stearate. **Written:** `naturalstacks-b328-magtech-lemonade` Clean, missing UPC. The box-back photo is the row. The gallery graphic prints Crystallized Lemon alone. Both strings are Cleared. `naturalstacks-b328-hydrate-drink` Caution, UPC 850038130923. Counted Limited tokens: Natural Flavors and Stevia. `naturalstacks-b328-hydrate-creatine-watermelon` Caution, UPC 850038130992. Counted Limited token: Natural Flavors. `naturalstacks-b328-focus-bites-30` Caution, UPC 850038130732. Counted Limited tokens: Natural Flavors and Stevia Leaf Extract. Silicon dioxide, xylitol, stearic acid, and singular Steviol Glycoside do not stack. The bottle photo prints Stevia Leaf Extract. An older gallery image prints Stevia Extract. Those are the same Limited t159u row. **Not written:** MagTech Magnesium Lemonade Tub. https://www.naturalstacks.com/products/magtech-magnesium-lemonade-tub is sold out. The facts image prints Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice), Tapioca Starch, Organic Monk Fruit Extract. GoSupps search returned no matching product. PureFormulas listed MagTech Magnesium, Lemonade Flavor, 30 servings, 4.76 oz, at $44.95 and out of stock, with that same other-ingredients line. iHerb https://www.iherb.com/pr/natural-stacks-magtech-magnesium-powder-lemonade-4-76-oz-135-g/107624 stopped on a Cloudflare challenge. Vitacost, Target, Walmart, CVS, Whole Foods, and Sprouts did not open a tub product page. Walgreens search returned ERR_HTTP2_PROTOCOL_ERROR. Amazon US was opened and blocked: Continued access by an unauthorized AI agent violates Amazon's Conditions of Use, to which our customers have agreed. Google was opened for the tub name. No in-stock US sale page was opened, so the tub does not qualify. The 60-count gummy SKUs MAGSLEEP-30-2PACKSUB and MAGZEN-30-2PACKSUB stay multipacks and are not rows. **Unlocked tokens found this pass:** none. **Closed this pass:** none.
@@ -904,7 +906,7 @@ Held this pass (t130e). Natural Stacks was not closed.
 - MagTech Hydrate + Creatine, Watermelon Lime. https://www.naturalstacks.com/products/magtech-hydrate-creatine is in stock at $29.95, SKU MAGSP-HYDRCREA-14. Serving size 1 Stick Pack (9.3 g), 14 servings. Other ingredients: L-Malic Acid, Natural Flavors, Citric Acid, Silica, Rebaudioside A (Stevia Leaf Extract), Hibiscus Extract & Carrot Extract (for color), Organic Monk Fruit Extract. The hibiscus-and-carrot color token is not locked. Lemon Lime on the same page is written.
 - Focus Bites, Melon-Mint, 30 pieces. https://www.naturalstacks.com/products/focus-bites is in stock at $19.95, SKU FOCUSBITES-30. Bottle photo UPC 850038130732. Other ingredients: Xylitol, Natural Flavors, Magnesium stearate, Hydroxypropyl cellulose, Stearic acid, Silicon Dioxide, Citric acid, Peppermint Oil Powder, Stevia Leaf Extract, Steviol Glycoside, Monkfruit Extract. Monkfruit Extract is not locked.
 
-Not for sale. Not offered as a single pack (t132e). Not written. Not on the hunt list. Natural Stacks was not closed.
+Not for sale. Not offered as a single pack (t132e). Not written. Not on the hunt list. Natural Stacks is closed.
 - MagTech Magnesium Lemonade Tub. https://www.naturalstacks.com/products/magtech-magnesium-lemonade-tub is sold out, and no in-stock US single was opened.
 - Sleep Magnesium Gummies (60ct) and Mood Magnesium Gummies (60ct). https://www.naturalstacks.com/products/sleep-magnesium-gummies SKU MAGSLEEP-30-2PACKSUB and https://www.naturalstacks.com/products/zen-magnesium-gummies SKU MAGZEN-30-2PACKSUB are 2-pack subscriptions, not single packs.
 
@@ -1025,6 +1027,10 @@ See the standing section When writing rows. The text below stays.
 Closed brands
 A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
 
+Once a brand has no remaining holds — the ladder is finished and every pack is either written or marked not-for-sale / unavailable — the brand is closed. Do not leave it open.
+
+Natural Stacks — closed. Ladder finished. No remaining holds. Every pack is written or marked not for sale.
+
 Remaining open brands (t33u, 2026-10-23, as of before this order's closes)
 Beano, Goli, Lactaid, Move Free, Nature's Bounty, Os-Cal, Osteo Bi-Flex, Prevagen, Schiff, Slow Fe, Spring Valley.
 Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u, leaving Beano, Goli, Lactaid, Os-Cal, and Spring Valley open.
@@ -1050,7 +1056,7 @@ Still open. These still need a catalog pass, or a pack is still unwritten.
 - Gruns Nutrition — not closed. The 28-count pages still print more than one other-ingredient line.
 - Lifeseasons — not closed. No catalog pass.
 - Manukora — not closed. No catalog pass.
-- Natural Stacks — not closed. No catalog pass.
+- Natural Stacks — closed. Ladder finished. No remaining holds.
 - Nature's Answer — not closed. No catalog pass.
 - Neuro Mints — not closed. No catalog pass.
 - North American Herb & Spice — not closed. No catalog pass.
