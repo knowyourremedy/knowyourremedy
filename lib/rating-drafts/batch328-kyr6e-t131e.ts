@@ -48,6 +48,8 @@ const PEPPER = 'Methodology §5 Cleared (peppermint oil).';
 
 const LEMON_NOTE =
   'The box-back photo prints Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice). The gallery facts graphic on the same page prints Crystallized Lemon alone. This row uses the box-back. Both strings are Cleared, so the grade is Clean either way.';
+const STEARIC_NOTE =
+  'Stearic acid and magnesium stearate use the same lubricant sentence. A 2018 European review found no safety concern. Magnesium stearate is Cleared. Stearic acid stays Caution and does not count toward the three-or-more Limited stack.';
 
 type Ing = readonly [string, RiskLevel, string];
 
@@ -177,6 +179,7 @@ export const BATCH328_KYR6E_T131E: RatingRecord[] = [
       ['Steviol Glycoside', 'moderate', STEVIOL_1],
       ['Monkfruit Extract', 'cleared', MONKF],
     ],
+    note: STEARIC_NOTE,
     extra:
       'UPC 850038130732 is the code on the bottle photo Focus_Bites_3_25_Sups_-_Edited.png, which prints Stevia Leaf Extract. An older gallery image, FocusBites_sups_824.png, prints Stevia Extract. Stevia Extract and Stevia Leaf Extract are the same Limited t159u row, so the grade does not change. This row uses the bottle photo. Steviol Glycoside is the singular token. Monkfruit Extract is not Monk Fruit Extract. ',
   }),
@@ -193,7 +196,7 @@ const EXPECTED: Record<string, { verdict: RatingRecord['verdict']; counted: numb
   'naturalstacks-b328-magtech-lemonade': { verdict: 'clean', counted: 0, barcode: '', note: true },
   'naturalstacks-b328-hydrate-drink': { verdict: 'caution', counted: 2, barcode: '850038130923', note: false },
   'naturalstacks-b328-hydrate-creatine-watermelon': { verdict: 'caution', counted: 1, barcode: '850038130992', note: false },
-  'naturalstacks-b328-focus-bites-30': { verdict: 'caution', counted: 2, barcode: '850038130732', note: false },
+  'naturalstacks-b328-focus-bites-30': { verdict: 'caution', counted: 2, barcode: '850038130732', note: true },
 };
 
 const ROWS = BATCH328_KYR6E_T131E;
