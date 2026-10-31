@@ -329,6 +329,72 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T130E_CLEARED = new Set([
+  'crystallized lemon',
+  'rebaudioside a stevia leaf extract',
+  'spirulina extract for color',
+  'bse free beef gelatin',
+  'polysaccharide capsule',
+  '10 13 certified organic alcohol',
+  '12 15 by volume certified organic alcohol',
+  '12 15 certified organic alcohol',
+  '12 17 by volume certified organic alcohol',
+  '12 20 certified organic alcohol',
+  '15 20 by volume certified organic alcohol',
+  '24 32 certified organic alcohol',
+  '30 35 by volume certified organic alcohol',
+  '55 60 certified organic alcohol',
+  '78 92 by volume certified organic alcohol',
+  '80 92 certified organic alcohol',
+  'angelica archangelica root extract',
+  'carbenia benedicta extract blessed thistle',
+  'cassia angustifolia leaf extract senna',
+  'commiphora myrrha resin extract myrrh',
+  'gentiana lutea root extract gentian',
+  'lavandula angustifolia lavender oil',
+  'lime oil',
+  'orange oil',
+  'spearmint oil',
+  'eucalyptus globulus leaf oil',
+  'olea europaea olive fruit oil',
+  'vegetable carbon color',
+  'red sour grape powder',
+  'rhus coriaria powder',
+  'wild mediterranean oregano oil p73',
+  'cumin oil',
+  'fennel oil',
+  'wild organic oregano oil',
+  'wild organic rosemary oil',
+  'extra virgin black seed oil',
+  'mediterranean source black seed',
+  'mediterranean source brown cumin',
+  'magnolia bark extract',
+  'raw organic co2 extracted chamomile',
+  'raw organic co2 extracted hops',
+  'quik sorb',
+  'non gmo sugar',
+  'malt extract',
+  'royal jelly',
+  'cholecalciferol',
+  'magnesium chloride',
+]);
+
+const T130E_LIMITED = new Set([
+  'acrylates c10 30 alkyl acrylate crosspolymer',
+  'cetearyl olivate',
+  'fatty acids coating agent',
+  'fatty acids stabilizer',
+]);
+
+/** t130e exact strings. 80-92% Certified Organic Alcohol is not the By Volume print. */
+export function isT130eClearedName(name: string): boolean {
+  return T130E_CLEARED.has(t121uToken(name));
+}
+
+export function isT130eLimitedName(name: string): boolean {
+  return T130E_LIMITED.has(t121uToken(name));
+}
+
 /** t127e exact Cleared strings. The grape parentheses are part of each one token. */
 export function isT127eClearedName(name: string): boolean {
   const n = t121uToken(name);
@@ -480,6 +546,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT123eClearedName(ingredient.name)) return false;
   if (isT124eClearedName(ingredient.name)) return false;
   if (isT127eClearedName(ingredient.name)) return false;
+  if (isT130eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
     || isT55uClearedName(ingredient.name)
@@ -488,6 +555,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT130eLimitedName(ingredient.name)) return true;
   if (
     isT54uLimitedFlavorName(ingredient.name)
     && /t54u natural-flavor rule/i.test(ingredient.source ?? '')
