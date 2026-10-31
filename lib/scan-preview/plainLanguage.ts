@@ -725,6 +725,36 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (n === 'cinnamon powder') {
+    return close(
+      'Cinnamon Powder is a named spice powder. The founder locked this exact token Cleared (t127e). It does not count toward the three-or-more Limited stack. It is not the exact token Cinnamon, and it is not Organic Cinnamon Powder.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'nutmeg powder') {
+    return close(
+      'Nutmeg Powder is a named spice powder. The founder locked this exact token Cleared (t127e). It does not count toward the three-or-more Limited stack. It is not the exact token Nutmeg.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'clove powder') {
+    return close(
+      'Clove Powder is a named spice powder. The founder locked this exact token Cleared (t127e). It does not count toward the three-or-more Limited stack. It is not clove oil.',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'grape powder for color') {
+    return close(
+      'Grape Powder (for color) is a named grape color. The founder locked this exact token Cleared (t127e). The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not Grape (fruit) Powder (for color).',
+      ingredient.riskLevel,
+    );
+  }
+  if (n === 'grape fruit powder for color') {
+    return close(
+      'Grape (fruit) Powder (for color) is a named grape color. The founder locked this exact token Cleared (t127e). Both parentheses are part of this one token. It does not count toward the three-or-more Limited stack. It is not Grape Powder (for color).',
+      ingredient.riskLevel,
+    );
+  }
   if (n === 'organic cinnamon powder') {
     return close(
       'Organic Cinnamon Powder is a named spice powder. The founder locked this exact token Cleared (t123e). It does not count toward the three-or-more Limited stack. It is not the exact token Cinnamon, and it is not cinnamon bark oil.',
