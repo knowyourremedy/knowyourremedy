@@ -6,6 +6,8 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t129e (Oct 31, 2026). **KYR6-e. Status closes, then Natural Stacks, Nature's Answer, and North American Herb & Spice. US only.** The Sprouts section was not edited. No new locks. Protein powder stayed out of scope. **Closed as Discontinued:** Dose; Manukora; Pri; Suku Vitamins; Taylor Pass Honey Co. **Catalog done, missing UPCs only:** Comvita; Elevate Organic; Eyeganics; Prepare Your Mind. Natural Stacks, Nature's Answer, and North American Herb & Spice were not closed. **batch326** — 167 packs in `lib/rating-drafts/batch326-kyr6e-t129e.ts` (87 Clean / 80 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. All 167 are Nature's Answer brand facts images, missing UPC. **Held:** Nature's Answer packs whose other-ingredients line included a token that is not locked. Natural Stacks singles whose brand gallery has no facts image, plus MagTech Magnesium Lemonade (Crystallized Lemon) and the hydrate flavors. North American Herb & Spice shop products. The pages that opened print a Full Ingredient List and not a supplement-facts other-ingredients line. **Unlocked tokens found this pass:** see the t129e list under Status categories. **Closed this pass:** Dose; Manukora; Pri; Suku Vitamins; Taylor Pass Honey Co.
+
 - t128e (Oct 31, 2026). **KYR6-e. Founder-verified Beam panels. US only.** Beam was not closed. The Sprouts section was not edited. No new locks. **batch325** — 3 packs in `lib/rating-drafts/batch325-kyr6e-t128e.ts` (0 Clean / 3 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. Founder verification is the panel and UPC source. **Written:** `beam-b325-biotic-lemonade-15` Caution, UPC 850063763936. Counted Limited tokens: Natural Flavors and Steviol Glycosides. Maps from beam-biotic-lemonade-15. `beam-b325-biotic-crispapple-15` Caution, UPC 850077725746. Same two Limited tokens. Maps from beam-biotic-crispapple-15. `beam-b325-kids-strawberrymilk-20` Caution, UPC 850063763356. Counted Limited token: Natural Flavors. Maps from beam-kids-strawberrymilk-20. **Parked under status Panel missing / one source only:** Biotic Lemonade 5 servings; Biotic Mixed Berry 5 servings. **Unlocked tokens found this pass:** none. **Closed this pass:** none.
 
 - t127e (Oct 31, 2026). **KYR6-e. Five Cleared locks, then the Beam holds those locks open. US only.** No brand closed. The Sprouts section was not edited. Amazon US listings were opened and Amazon blocked the pages before any carousel image or other-ingredients line loaded. Locks in `docs/METHODOLOGY.md` and `lib/scan-preview/plainLanguage.ts`. Cleared, do not stack: Cinnamon Powder; Nutmeg Powder; Clove Powder; Grape Powder (for color); Grape (fruit) Powder (for color). Cinnamon Powder is not Cinnamon and it is not Organic Cinnamon Powder. Nutmeg Powder is not Nutmeg. Clove Powder is not clove oil. The two grape-color parentheses are different tokens. **batch324** — 3 packs in `lib/rating-drafts/batch324-kyr6e-t127e.ts` (0 Clean / 3 Caution / 0 Avoid). Full honest note on every row. Every ingredient tab has a specific why. **Written, all missing UPC:** `beam-b324-biotic-apple-30` Caution. Counted Limited tokens: Natural Flavors and Steviol Glycosides. `beam-b324-biotic-mb-30` Caution. Same two Limited tokens. `beam-b324-biotic-mb-15` Caution. Same two Limited tokens. The brand facts image is the row. The Feed and PricePlow print a different Mixed Berry 15 line and that line is not this row. **Held:** Biotic Lemonade 15 servings. The brand facts image on https://shopbeam.com/products/biotic-citrus prints Servings Per Container 30, so it is not the 15-pack panel. Amazon https://www.amazon.com/dp/B0GKQQ6LX5 was blocked before the carousel loaded. FabFitFun page text lists 15 sticks but is not a photographed panel. Biotic Crisp Apple 15 servings. No facts image on https://shopbeam.com/products/biotic-mixed-berry. Amazon search did not return a Crisp Apple listing, and the Amazon pages that did open were blocked. PricePlow’s 15-stick panel is labeled Mixed Berry, not Crisp Apple. Biotic Lemonade 5 servings and Mixed Berry 5 servings. No facts image on the three brand 5-pack pages. Amazon search did not return a 5-serving listing. Kids Strawberry Milk 20 servings. The brand facts image still ends at “organic coconut milk, orga”. Amazon https://www.amazon.com/dp/B0GNP5229K was blocked before the carousel loaded. Hy-Vee is a 15-serving box and does not finish the parenthesis. Other Colostrum flavors. Brand page, iHerb, and Target still list only Unflavored and Raspberry Lemon. Amazon search showed Raspberry Lemon https://www.amazon.com/dp/B0FGB7G5HP and the page was blocked before a flavor dropdown could be read. No other single-pack flavor was found. **Out of scope:** whey protein and vegan protein. **Unlocked tokens found this pass:** none. **Closed this pass:** none.
@@ -889,6 +891,72 @@ Status categories for open brands / packs:
 Parked under Panel missing / one source only (t128e):
 - Biotic Lemonade 5 servings
 - Biotic Mixed Berry 5 servings
+
+Closed as Discontinued (t129e):
+- Dose
+- Manukora
+- Pri
+- Suku Vitamins
+- Taylor Pass Honey Co
+
+Catalog done, missing UPCs only (t129e):
+- Comvita
+- Elevate Organic
+- Eyeganics
+- Prepare Your Mind
+
+Unlocked tokens found this pass (t129e), exact strings that are not locked:
+- 10-13% Certified Organic Alcohol
+- 12-15% By Volume Certified Organic Alcohol
+- 12-15% Certified Organic Alcohol
+- 12-17% By Volume Certified Organic Alcohol
+- 12-20% Certified Organic Alcohol
+- 15-20% By Volume Certified Organic Alcohol
+- 24-32% Certified Organic Alcohol
+- 30-35% By Volume Certified Organic Alcohol
+- 55-60% Certified Organic Alcohol
+- 78-92% By Volume Certified Organic Alcohol
+- 80-92% By Volume Certified Organic Alcohol
+- Acrylates/ C10-30 Alkyl Acrylate Crosspolymer
+- Angelica Archangelica Root Extract
+- BSE-free Beef Gelatin
+- Carbenia Benedicta Extract (Blessed Thistle)
+- Cassia Angustifolia Leaf Extract (Senna)
+- Cetearyl Olivate
+- Cholecalciferol
+- Commiphora Myrrha Resin Extract (Myrrh)
+- Crystallized Lemon
+- Eucalyptus Globulus Leaf Oil
+- Extra virgin black seed oil
+- Fatty Acids (Coating Agent)
+- Fatty Acids (Stabilizer)
+- Gentiana Lutea Root Extract (Gentian)
+- Lavandula Angustifolia (Lavender) Oil
+- Lime Oil
+- Magnesium Chloride
+- Magnolia bark extract
+- Malt extract
+- Mediterranean-source black seed
+- Mediterranean-source brown cumin
+- Non-GMO Sugar
+- Olea Europaea (Olive) Fruit Oil
+- Orange Oil
+- Polysaccharide capsule
+- Proprietary blend in extra virgin black seed oil
+- Raw organic CO2-extracted chamomile
+- Raw organic CO2-extracted hops
+- Royal Jelly
+- Quik-Sorb®
+- Rheum Officinale (Rubarb) Root Extract
+- Spearmint Oil
+- Vegetable Carbon (Color)
+- Wild Mediterranean oregano oil P73
+- cumin oil
+- fennel oil
+- red sour grape powder
+- rhus coriaria powder
+- wild, organic oregano oil
+- wild, organic rosemary oil
 
 Do not leave packs in “not fully laddered” or “held on unlocked tokens” status. Finish the ladder and lock tokens before the pass ends.
 
