@@ -21,6 +21,8 @@ import {
   isNaturalColorParenthesis,
   isVegetableOilAntiSticking,
   isYellowBeesWaxSpaced,
+  isT130eClearedName,
+  isT130eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -662,6 +664,19 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t130eWhy(name: string, level: RiskLevel): string {
+  if (isT130eLimitedName(name)) {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Limited (t130e). It counts toward the three-or-more Limited stack. Acrylates/ C10-30 Alkyl Acrylate Crosspolymer is not the Cleared token Acrylates Copolymer.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t130e). It does not count toward the three-or-more Limited stack. 80-92% Certified Organic Alcohol is not 80-92% By Volume Certified Organic Alcohol. Rebaudioside A (Stevia Leaf Extract) is not bare Rebaudioside A. Spirulina Extract (for color) is not spirulina (color) and it is not spirulina (for color).`,
+    level,
+  );
+}
+
 export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   let n = norm(ingredient.name);
   // Spellings the methodology already aliases onto a named row.
@@ -724,6 +739,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT130eClearedName(ingredient.name) || isT130eLimitedName(ingredient.name)) {
+    return t130eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (n === 'cinnamon powder') {
     return close(
