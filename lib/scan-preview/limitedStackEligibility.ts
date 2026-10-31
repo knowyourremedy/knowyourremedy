@@ -329,6 +329,18 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+/** t127e exact Cleared strings. The grape parentheses are part of each one token. */
+export function isT127eClearedName(name: string): boolean {
+  const n = t121uToken(name);
+  return (
+    n === 'cinnamon powder'
+    || n === 'nutmeg powder'
+    || n === 'clove powder'
+    || n === 'grape powder for color'
+    || n === 'grape fruit powder for color'
+  );
+}
+
 /** t124e exact Cleared strings. The organic cassava parenthesis is one token. */
 export function isT124eClearedName(name: string): boolean {
   const n = t121uToken(name);
@@ -467,6 +479,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT122eClearedName(ingredient.name, ingredient.riskLevel)) return false;
   if (isT123eClearedName(ingredient.name)) return false;
   if (isT124eClearedName(ingredient.name)) return false;
+  if (isT127eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
     || isT55uClearedName(ingredient.name)
