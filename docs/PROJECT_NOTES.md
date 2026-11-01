@@ -1072,7 +1072,7 @@ Still open. These still need a catalog pass, or a pack is still unwritten.
 - Planetary Herbals — not closed. No catalog pass.
 - Prepare Your Mind — not closed. No catalog pass.
 - Pri — not closed. No catalog pass.
-- Reprise Health — closed. Ladder finished. No remaining holds.
+- Reprise Health — not closed. No catalog pass.
 - Suku Vitamins — not closed. US handles 404. The products that opened are Canada-licensed, so they are out of the US catalog and were not added to the closed-brands list.
 - Taylor Pass Honey Co — not closed. No catalog pass.
 - The Good Patch — not closed. No catalog pass.
