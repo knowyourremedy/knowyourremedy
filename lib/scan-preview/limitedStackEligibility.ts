@@ -329,6 +329,20 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T135E_CLEARED = new Set([
+  'natural passionfruit flavor',
+  'natural mango flavor',
+  'natural pineapple flavor',
+  'natural peach flavor',
+  'malted rice',
+  'organic rice fiber nu flow',
+]);
+
+/** t135e exact Cleared strings. Organic Rice Fiber (Nu-FLOW®) is not bare Organic Rice Fiber. */
+export function isT135eClearedName(name: string): boolean {
+  return T135E_CLEARED.has(t121uToken(name));
+}
+
 const T131E_CLEARED = new Set([
   'crystallized lemon citric acid lemon oil lemon juice',
   'hibiscus extract carrot extract for color',
@@ -558,6 +572,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT124eClearedName(ingredient.name)) return false;
   if (isT127eClearedName(ingredient.name)) return false;
   if (isT130eClearedName(ingredient.name)) return false;
+  if (isT135eClearedName(ingredient.name)) return false;
   if (isT131eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
