@@ -224,10 +224,44 @@ export const BATCH330_KYR6E_T135E: RatingRecord[] = [
     url: 'https://bestiesupplements.com/products/brain-flex',
     serving: '4 Capsules. Servings per container 20.',
   }),
+  finish({
+    id: 'bestie-b330-burn',
+    productName: 'Bestie Burn Baby Burn (20 servings)',
+    brand: 'Bestie',
+    category: 'Vitamins',
+    formulaId: 'bestie-b330-burn',
+    form: 'powder',
+    audience: ADULT,
+    minAge: 18,
+    recordStatus: UNVERIFIED,
+    productType: 'Supplement',
+    retailers: ['Bestie'],
+    barcode: '',
+    activeIngredients: [{ name: 'Bestie Burn Baby Burn (20 servings)' }],
+    inactiveIngredients: [
+      flag(
+        'Bestie facts image. Bestie Burn Baby Burn (20 servings).',
+        'Monk Fruit Extract',
+        'cleared',
+        'Methodology §5 Cleared (monk fruit extract).',
+      ),
+      flag(
+        'Bestie facts image. Bestie Burn Baby Burn (20 servings).',
+        'Organic Nu-FLOW® (rice hull concentrate)',
+        'cleared',
+        'Methodology §5 Cleared (named rice hull concentrate).',
+      ),
+    ],
+    verdict: 'clean',
+    honestNote: '',
+    sourcesGeneral: [
+      't135e. Bestie brand page https://bestiesupplements.com/products/burn-baby-burn lists this pack at $45.99 and in stock. The facts image other ingredients: Monk Fruit Extract, Organic Nu-FLOW® (rice hull concentrate). Serving size on the image: 1 Scoop (7.6 g). Servings per container 20. No UPC was printed. Missing UPC. The supplement-facts lines above the other-ingredients line are the actives and are not graded. CONTAINS: No major allergens is an allergen statement and is not graded. Organic Nu-FLOW® (rice hull concentrate) is not Organic Rice Fiber (Nu-FLOW®). No code was invented.',
+    ],
+  }),
 ];
 
 const ROWS = BATCH330_KYR6E_T135E;
-if (ROWS.length !== 9) throw new Error(`batch330 count ${ROWS.length}`);
+if (ROWS.length !== 10) throw new Error(`batch330 count ${ROWS.length}`);
 const seen = new Set<string>();
 for (const record of ROWS) {
   if (seen.has(record.id)) throw new Error(`batch330 duplicate ${record.id}`);
