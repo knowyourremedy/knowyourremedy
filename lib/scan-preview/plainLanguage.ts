@@ -26,6 +26,9 @@ import {
   isT131eClearedName,
   isT135eClearedName,
   isT136eClearedName,
+  isT138eCautionName,
+  isT138eClearedName,
+  isT138eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -667,6 +670,86 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t138eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (isT138eLimitedName(name)) {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Limited (t138e). It counts toward the three-or-more Limited stack. It is not the Cleared token Acrylates Copolymer, and it is not Acrylates/ C10-30 Alkyl Acrylate Crosspolymer.`,
+      level,
+    );
+  }
+  if (isT138eCautionName(name)) {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Caution (t138e). It does not count toward the three-or-more Limited stack. Black cohosh printed as a Supplement Facts or Drug Facts active stays ungraded. This print is the inactive line.`,
+      level,
+    );
+  }
+  if (n === 'organic tart cherry flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is a named tart cherry flavor. It is not the Limited token Natural Flavors.`,
+      level,
+    );
+  }
+  if (n === 'organic apple cider') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Apple Cider Vinegar.`,
+      level,
+    );
+  }
+  if (n === 'organic cane alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Cane Alcohol (45-55% by volume).`,
+      level,
+    );
+  }
+  if (n === 'organic cane alcohol 45 55 by volume') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not bare Organic Cane Alcohol.`,
+      level,
+    );
+  }
+  if (n === 'organic myceliated brown rice') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Myceliated Oats, and it is not rice flour.`,
+      level,
+    );
+  }
+  if (n === 'pink salt') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Himalayan Pink Salt.`,
+      level,
+    );
+  }
+  if (n === 'organic stevia extract') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Stevia extract, it is not stevia leaf extract, and it is not Organic Stevia extract (REB A). Stevia extract and stevia leaf extract stay the Limited t159u row.`,
+      level,
+    );
+  }
+  if (n === 'organic stevia extract reb a') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not bare Stevia extract, and it is not the exact token organic Rebaudioside A.`,
+      level,
+    );
+  }
+  if (n === 'organic lemonade flavor powder') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Lemon Flavor.`,
+      level,
+    );
+  }
+  if (n === 'organic blue spirulina') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not bare blue spirulina, and it is not Spirulina Extract (for color).`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. The full phrase is one token. It is not the exact word Adhesive.`,
+    level,
+  );
+}
+
 function t136eWhy(name: string, level: RiskLevel): string {
   return close(
     `${name.trim()} is the exact printed string. The founder locked this token Cleared (t136e). It does not count toward the three-or-more Limited stack. It is the same material as Organic Rice Fiber (Nu-FLOW®). It is not that exact string, and it is not bare Organic Rice Fiber.`,
@@ -763,6 +846,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT138eClearedName(ingredient.name) || isT138eCautionName(ingredient.name) || isT138eLimitedName(ingredient.name)) {
+    return t138eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT136eClearedName(ingredient.name)) {
     return t136eWhy(ingredient.name, ingredient.riskLevel);
