@@ -29,6 +29,7 @@ import {
   isT138eCautionName,
   isT138eClearedName,
   isT138eLimitedName,
+  isT139eClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -670,6 +671,20 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t139eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (n === 'adhesive crafted with 10 mg caffeine per patch') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t139e). It does not count toward the three-or-more Limited stack. The full phrase is one token. It is not the exact word Adhesive, and it is not Adhesive Crafted with 25 mg caffeine per patch.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t139e). It does not count toward the three-or-more Limited stack. The full phrase is one token. It is not the exact word Adhesive, and it is not Adhesive Crafted with 3 mg melatonin per patch.`,
+    level,
+  );
+}
+
 function t138eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (isT138eLimitedName(name)) {
@@ -846,6 +861,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT139eClearedName(ingredient.name)) {
+    return t139eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT138eClearedName(ingredient.name) || isT138eCautionName(ingredient.name) || isT138eLimitedName(ingredient.name)) {
     return t138eWhy(ingredient.name, ingredient.riskLevel);
