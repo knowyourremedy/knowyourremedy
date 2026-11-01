@@ -25,6 +25,7 @@ import {
   isT130eLimitedName,
   isT131eClearedName,
   isT135eClearedName,
+  isT136eClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -666,6 +667,13 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t136eWhy(name: string, level: RiskLevel): string {
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t136e). It does not count toward the three-or-more Limited stack. It is the same material as Organic Rice Fiber (Nu-FLOW®). It is not that exact string, and it is not bare Organic Rice Fiber.`,
+    level,
+  );
+}
+
 function t135eWhy(name: string, level: RiskLevel): string {
   return close(
     `${name.trim()} is the exact printed string. The founder locked this token Cleared (t135e). It does not count toward the three-or-more Limited stack. Natural Passionfruit Flavor, Natural Mango Flavor, Natural Pineapple Flavor, and Natural Peach Flavor are named fruit flavors. They are not the exact Limited token Natural Flavors. Malted Rice is not rice extract and it is not rice flour. Organic Rice Fiber (Nu-FLOW®) is not bare Organic Rice Fiber.`,
@@ -755,6 +763,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT136eClearedName(ingredient.name)) {
+    return t136eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT135eClearedName(ingredient.name)) {
     return t135eWhy(ingredient.name, ingredient.riskLevel);

@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Nov 1, 2026 (t136e founder order; KYR6-e):** Founder lock. **Cleared, do not stack:** Organic Nu-FLOW® (rice hull concentrate). The string is exact. It is the same material as Organic Rice Fiber (Nu-FLOW®). It is not that exact string, and it is not bare Organic Rice Fiber.
+
 **Changed Nov 1, 2026 (t135e founder order; KYR6-e):** Founder locks. **Cleared, do not stack:** Natural Passionfruit Flavor; Natural Mango Flavor; Natural Pineapple Flavor; Natural Peach Flavor; Malted Rice; Organic Rice Fiber (Nu-FLOW®). Each string is exact. The four flavors are not the Limited token Natural Flavors. Malted Rice is not rice extract and it is not rice flour. Organic Rice Fiber (Nu-FLOW®) is not bare Organic Rice Fiber.
 
 **Changed Oct 31, 2026 (t131e founder order; KYR6-e):** Founder locks. **Cleared, do not stack:** Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice); Hibiscus Extract & Carrot Extract (for color); Monkfruit Extract. Each string is exact and the parenthesis is part of that one token. Crystallized Lemon (Citric Acid, Lemon Oil, Lemon Juice) is not bare Crystallized Lemon. Hibiscus Extract & Carrot Extract (for color) is not hibiscus extract and it is not carrot extract. Monkfruit Extract is not Monk Fruit Extract.

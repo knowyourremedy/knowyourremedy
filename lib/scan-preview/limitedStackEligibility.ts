@@ -329,6 +329,15 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T136E_CLEARED = new Set([
+  'organic nu flow rice hull concentrate',
+]);
+
+/** t136e. Same material as Organic Rice Fiber (Nu-FLOW®). Not that exact string. */
+export function isT136eClearedName(name: string): boolean {
+  return T136E_CLEARED.has(t121uToken(name));
+}
+
 const T135E_CLEARED = new Set([
   'natural passionfruit flavor',
   'natural mango flavor',
@@ -572,6 +581,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT124eClearedName(ingredient.name)) return false;
   if (isT127eClearedName(ingredient.name)) return false;
   if (isT130eClearedName(ingredient.name)) return false;
+  if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
   if (isT131eClearedName(ingredient.name)) return false;
   if (
