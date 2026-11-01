@@ -322,6 +322,8 @@ When writing rows:
 - Put each product on the correct ingredient tab.
 - US only. No Canada. No EU.
 - Multipacks are not rows. NDC alone is not a sale page. Out of stock at every store that opened and showed content means the pack does not qualify.
+- A multipack of the same formula shares the panel and is written as a row if the single count is not available.
+- A multi-flavor multipack (different formulas in one pack) is not written as a single row. Each flavor is handled separately if its own panel is confirmed. Do not grade a multi-flavor pack as one product.
 - Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition. Use level is not the rule.
 - Juice rule and hydrogenated oil rule stay as written.
 - Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options.
