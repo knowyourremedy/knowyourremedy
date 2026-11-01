@@ -329,6 +329,43 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T138E_CLEARED = new Set([
+  'organic tart cherry flavor',
+  'organic apple cider',
+  'organic cane alcohol',
+  'organic cane alcohol 45 55 by volume',
+  'organic myceliated brown rice',
+  'pink salt',
+  'organic stevia extract',
+  'organic stevia extract reb a',
+  'organic lemonade flavor powder',
+  'organic blue spirulina',
+  'adhesive crafted with 25 mg caffeine per patch',
+  'adhesive crafted with 15 mg of caffeine per patch',
+  'adhesive crafted with 3 mg melatonin per patch',
+]);
+
+const T138E_CAUTION = new Set([
+  'black cohosh cimicifuga racemosa',
+]);
+
+const T138E_LIMITED = new Set([
+  '2 propenoic acid 2 methyl methyl ester polymer with ethenyl acetate and 2 ethylhexyl 2 propenoate',
+]);
+
+/** t138e exact strings. The adhesive phrases are not the word Adhesive. Organic Cane Alcohol is not the 45-55% print. */
+export function isT138eClearedName(name: string): boolean {
+  return T138E_CLEARED.has(t121uToken(name));
+}
+
+export function isT138eCautionName(name: string): boolean {
+  return T138E_CAUTION.has(t121uToken(name));
+}
+
+export function isT138eLimitedName(name: string): boolean {
+  return T138E_LIMITED.has(t121uToken(name));
+}
+
 const T136E_CLEARED = new Set([
   'organic nu flow rice hull concentrate',
 ]);
@@ -583,6 +620,8 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT138eClearedName(ingredient.name)) return false;
+  if (isT138eCautionName(ingredient.name)) return false;
   if (isT131eClearedName(ingredient.name)) return false;
   if (
     isT51uClearedName(ingredient.name)
@@ -592,6 +631,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT138eLimitedName(ingredient.name)) return true;
   if (isT130eLimitedName(ingredient.name)) return true;
   if (
     isT54uLimitedFlavorName(ingredient.name)
