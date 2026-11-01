@@ -329,6 +329,46 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T141E_CLEARED = new Set([
+  'oils of peppermint',
+  'cajeput',
+  'eucalyptol',
+  'eucalyptus globulus oil',
+  'pine oil',
+  'limonene',
+  'linalool',
+  'isoeugenol',
+  'cajeput oil',
+  'juniper oil',
+  'wintergreen oil',
+  'grape sugar',
+]);
+
+const T141E_CAUTION = new Set([
+  'hydrogenated peanut oil',
+]);
+
+const T141E_LIMITED = new Set([
+  'dipropylene glycol',
+  'sodium cetearyl sulfate',
+  'cocamidopropyl betaine coconut based foaming agent',
+  'sodium coceth sulfate',
+  'decyl polyglucoside',
+]);
+
+/** t141e exact strings. Cajeput is not cajeput oil. Case does not split the oil locks. */
+export function isT141eClearedName(name: string): boolean {
+  return T141E_CLEARED.has(t121uToken(name));
+}
+
+export function isT141eCautionName(name: string): boolean {
+  return T141E_CAUTION.has(t121uToken(name));
+}
+
+export function isT141eLimitedName(name: string): boolean {
+  return T141E_LIMITED.has(t121uToken(name));
+}
+
 const T139E_CLEARED = new Set([
   'adhesive crafted with 10 mg caffeine per patch',
   'adhesive crafted with 10 mg melatonin per patch',
@@ -630,6 +670,8 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT141eClearedName(ingredient.name)) return false;
+  if (isT141eCautionName(ingredient.name)) return false;
   if (isT139eClearedName(ingredient.name)) return false;
   if (isT138eClearedName(ingredient.name)) return false;
   if (isT138eCautionName(ingredient.name)) return false;
@@ -642,6 +684,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT141eLimitedName(ingredient.name)) return true;
   if (isT138eLimitedName(ingredient.name)) return true;
   if (isT130eLimitedName(ingredient.name)) return true;
   if (

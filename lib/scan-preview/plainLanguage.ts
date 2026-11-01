@@ -30,6 +30,9 @@ import {
   isT138eClearedName,
   isT138eLimitedName,
   isT139eClearedName,
+  isT141eCautionName,
+  isT141eClearedName,
+  isT141eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -671,6 +674,86 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t141eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (isT141eLimitedName(name)) {
+    if (n === 'dipropylene glycol') {
+      return close(
+        `${name.trim()} is the exact printed string. The founder locked this token Limited (t141e). It counts toward the three-or-more Limited stack. It is not propylene glycol.`,
+        level,
+      );
+    }
+    if (n === 'cocamidopropyl betaine coconut based foaming agent') {
+      return close(
+        `${name.trim()} is the exact printed string. The founder locked this token Limited (t141e). The parenthesis is part of this one token. It counts toward the three-or-more Limited stack.`,
+        level,
+      );
+    }
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Limited (t141e). It counts toward the three-or-more Limited stack.`,
+      level,
+    );
+  }
+  if (isT141eCautionName(name)) {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Caution (t141e). It does not count toward the three-or-more Limited stack. It is not the Avoid hydrogenated-oil row.`,
+      level,
+    );
+  }
+  if (n === 'cajeput') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is not cajeput oil.`,
+      level,
+    );
+  }
+  if (n === 'cajeput oil') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. cajeput oil and Cajeput Oil are the same lock. It is not bare Cajeput.`,
+      level,
+    );
+  }
+  if (n === 'juniper oil') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. juniper oil and Juniper Oil are the same lock.`,
+      level,
+    );
+  }
+  if (n === 'wintergreen oil') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. wintergreen oil and Wintergreen Oil are the same lock.`,
+      level,
+    );
+  }
+  if (n === 'eucalyptol') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is a named chemical. It is not eucalyptus oil.`,
+      level,
+    );
+  }
+  if (n === 'eucalyptus globulus oil') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is not bare Eucalyptus Oil.`,
+      level,
+    );
+  }
+  if (n === 'grape sugar') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is not bare Sugar.`,
+      level,
+    );
+  }
+  if (n === 'oils of peppermint') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is not bare Peppermint Oil.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack.`,
+    level,
+  );
+}
+
 function t139eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (n === 'adhesive crafted with 10 mg caffeine per patch') {
@@ -861,6 +944,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT141eClearedName(ingredient.name) || isT141eCautionName(ingredient.name) || isT141eLimitedName(ingredient.name)) {
+    return t141eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT139eClearedName(ingredient.name)) {
     return t139eWhy(ingredient.name, ingredient.riskLevel);
