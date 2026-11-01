@@ -329,6 +329,16 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T139E_CLEARED = new Set([
+  'adhesive crafted with 10 mg caffeine per patch',
+  'adhesive crafted with 10 mg melatonin per patch',
+]);
+
+/** t139e exact Cleared phrases. Not the word Adhesive. Not the 25 mg, 15 mg, or 3 mg phrases. */
+export function isT139eClearedName(name: string): boolean {
+  return T139E_CLEARED.has(t121uToken(name));
+}
+
 const T138E_CLEARED = new Set([
   'organic tart cherry flavor',
   'organic apple cider',
@@ -620,6 +630,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT139eClearedName(ingredient.name)) return false;
   if (isT138eClearedName(ingredient.name)) return false;
   if (isT138eCautionName(ingredient.name)) return false;
   if (isT131eClearedName(ingredient.name)) return false;
