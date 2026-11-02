@@ -33,6 +33,8 @@ import {
   isT141eCautionName,
   isT141eClearedName,
   isT141eLimitedName,
+  isT143eClearedName,
+  isT143eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -674,6 +676,19 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t143eWhy(name: string, level: RiskLevel): string {
+  if (isT143eLimitedName(name)) {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Limited (t143e). The parenthesis is part of this one token. It counts toward the three-or-more Limited stack. It is not bare Decyl Polyglucoside.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t143e). It does not count toward the three-or-more Limited stack. It is not Cajeput Oil, and it is not bare Cajeput.`,
+    level,
+  );
+}
+
 function t141eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (isT141eLimitedName(name)) {
@@ -944,6 +959,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT143eClearedName(ingredient.name) || isT143eLimitedName(ingredient.name)) {
+    return t143eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT141eClearedName(ingredient.name) || isT141eCautionName(ingredient.name) || isT141eLimitedName(ingredient.name)) {
     return t141eWhy(ingredient.name, ingredient.riskLevel);
