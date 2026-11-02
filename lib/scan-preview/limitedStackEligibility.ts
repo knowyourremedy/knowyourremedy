@@ -329,6 +329,23 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T143E_CLEARED = new Set([
+  'cajuput oil',
+]);
+
+const T143E_LIMITED = new Set([
+  'decyl polyglucoside from glucose',
+]);
+
+/** t143e. Cajuput Oil is not Cajeput Oil. The glucose parenthesis is one token. */
+export function isT143eClearedName(name: string): boolean {
+  return T143E_CLEARED.has(t121uToken(name));
+}
+
+export function isT143eLimitedName(name: string): boolean {
+  return T143E_LIMITED.has(t121uToken(name));
+}
+
 const T141E_CLEARED = new Set([
   'oils of peppermint',
   'cajeput',
@@ -670,6 +687,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT143eClearedName(ingredient.name)) return false;
   if (isT141eClearedName(ingredient.name)) return false;
   if (isT141eCautionName(ingredient.name)) return false;
   if (isT139eClearedName(ingredient.name)) return false;
@@ -684,6 +702,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT143eLimitedName(ingredient.name)) return true;
   if (isT141eLimitedName(ingredient.name)) return true;
   if (isT138eLimitedName(ingredient.name)) return true;
   if (isT130eLimitedName(ingredient.name)) return true;
