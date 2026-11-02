@@ -329,6 +329,33 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T144E_CLEARED = new Set([
+  'chlorophyll',
+  'clove oil',
+]);
+
+const T144E_CAUTION = new Set([
+  'hydrogenated castor oil',
+]);
+
+const T144E_LIMITED = new Set([
+  'sodium coceth sulfate and peg 40 glycerol cocoate coconut fatty esters hydrogenated castor oil',
+  'peg 6 caprylic capric glycerides coconut and palm oil based',
+]);
+
+/** t144e. Each parenthesis is one token. Hydrogenated Castor Oil inside the sulfate blend is not graded again. */
+export function isT144eClearedName(name: string): boolean {
+  return T144E_CLEARED.has(t121uToken(name));
+}
+
+export function isT144eCautionName(name: string): boolean {
+  return T144E_CAUTION.has(t121uToken(name));
+}
+
+export function isT144eLimitedName(name: string): boolean {
+  return T144E_LIMITED.has(t121uToken(name));
+}
+
 const T143E_CLEARED = new Set([
   'cajuput oil',
 ]);
@@ -687,6 +714,8 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT144eClearedName(ingredient.name)) return false;
+  if (isT144eCautionName(ingredient.name)) return false;
   if (isT143eClearedName(ingredient.name)) return false;
   if (isT141eClearedName(ingredient.name)) return false;
   if (isT141eCautionName(ingredient.name)) return false;
@@ -702,6 +731,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT144eLimitedName(ingredient.name)) return true;
   if (isT143eLimitedName(ingredient.name)) return true;
   if (isT141eLimitedName(ingredient.name)) return true;
   if (isT138eLimitedName(ingredient.name)) return true;
