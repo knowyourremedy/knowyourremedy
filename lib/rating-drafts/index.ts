@@ -333,3 +333,4 @@ export { BATCH333_KYR6E_T139E } from './batch333-kyr6e-t139e';
 export { BATCH334_KYR6E_T141E } from './batch334-kyr6e-t141e';
 export { BATCH335_KYR6E_T142E } from './batch335-kyr6e-t142e';
 export { BATCH336_KYR6E_T145E } from './batch336-kyr6e-t145e';
+export { BATCH337_KYR6E_T147E } from './batch337-kyr6e-t147e';
