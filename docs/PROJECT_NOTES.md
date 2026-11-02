@@ -6,6 +6,8 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t146e (Nov 2, 2026). **KYR6-e. Close brands with no remaining holds. Docs only.** No rows, grades, or lib files changed. The Sprouts section was not edited. **Closed, no remaining holds:** Beano; Goli; Lactaid; Os-Cal; Spring Valley; LifeSeasons; Wally's Natural; Bach; Cheribundi; Comvita; Elevate Organic; Eyeganics; Prepare Your Mind; Herbs Etc.; Hyalogic; Lemme; Quantum Health; Ridgecrest Herbals; Dose; Manukora; Pri; Suku Vitamins; Taylor Pass Honey Co. **Also added to the heading, already closed by the t33u sentence:** Move Free; Nature's Bounty; Osteo Bi-Flex; Prevagen; Schiff; Slow Fe. **Left open:** Beam; Bestie Supplements; BiOptimizers; Good Day Chocolate; Grether's; Grüns Nutrition; Nature's Answer; Neuro; North American Herb & Spice; Planetary Herbals; Traditional Medicinals; Wishgarden Herbs; Wooden Spoon Herbs; Zand.
+
 - t145e (Nov 2, 2026). **KYR6-e. Write the Olbas Herbal Bath. US only.** The Sprouts section was not edited. Protein powder stayed out of scope. Founder ruled the brand line wins over the differing Wildwood and Lotus Light lines. **batch336** — 1 pack in `lib/rating-drafts/batch336-kyr6e-t145e.ts` (0 Clean / 0 Caution / 1 Avoid). Honest note names the four counted Limited tokens. Every ingredient tab has a specific why. **Written:** `olbas-b336-herbal-bath-8` Avoid, UPC 715486503203. Counted Limited tokens: Cocamidopropyl Betaine (Coconut Based Foaming Agent); Sodium Coceth Sulfate and PEG-40 Glycerol Cocoate (Coconut Fatty Esters & Hydrogenated Castor Oil); PEG-6 Caprylic/Capric Glycerides (Coconut and Palm Oil Based); Decyl Polyglucoside (from Glucose). The brand page is out of stock at $19.95 and prints that full line. Vitacost, Herbspro, and Greens Nutrition are in stock and print the same line. UPC 715486503203 is on the Vitacost 8 oz single. Hydrogenated Castor Oil inside the sulfate parenthesis is not graded again. **Closed:** Olbas. Ladder finished. No remaining holds. The inhaler 3-pack is not a row because the single is in stock. Sugar Free Lozenges are discontinued. **Closed this pass:** Olbas.
 
 - t144e (Nov 2, 2026). **KYR6-e. Four Olbas locks, then the Herbal Bath hold. US only.** The Sprouts section was not edited. Protein powder stayed out of scope. No new row. Olbas was not closed. Locks in `docs/METHODOLOGY.md`, `lib/scan-preview/plainLanguage.ts`, and `lib/scan-preview/limitedStackEligibility.ts`. **Cleared, do not stack:** Chlorophyll; Clove Oil. **Caution, does not stack:** Hydrogenated Castor Oil. It is not the Avoid hydrogenated-oil row. **Limited, and they count:** Sodium Coceth Sulfate and PEG-40 Glycerol Cocoate (Coconut Fatty Esters & Hydrogenated Castor Oil); PEG-6 Caprylic/Capric Glycerides (Coconut and Palm Oil Based). Each parenthesis is one token. Hydrogenated Castor Oil inside the first parenthesis is not graded again. PEG-6 Caprylic/Capric Glycerides (Coconut and Palm Oil Based) is not bare PEG-6 Caprylic/Capric Glycerides. **Not written:** Olbas Herbal Bath, 8 fl oz. The brand page https://olbas.com/product/olbas-herbal-bath-8-fl-oz-236ml/ is out of stock at $19.95 and prints Ingredients: Water, Cocamidopropyl Betaine (Coconut Based Foaming Agent), Sodium Coceth Sulfate and PEG-40 Glycerol Cocoate (Coconut Fatty Esters & Hydrogenated Castor Oil), PEG-6 Caprylic/Capric Glycerides (Coconut and Palm Oil Based), Peppermint Oil, Eucalyptus Oil, Decyl Polyglucoside (from Glucose), Cajuput Oil, Wintergreen Oil, Juniper Oil, Chlorophyll, Clove Oil. Herbspro https://www.herbspro.com/collections/olbas/products/herbal-bath-62711 and Greens Nutrition https://greensnutrition.com/products/therapeutic-herbal-bath-62711 are in stock and print that same full line. Vitacost https://www.vitacost.com/products/olbas-herbal-bath-8-fl-oz-236-ml-6662 is in stock at $15.71 and prints that same line, with UPC 715486503203. Greens Nutrition prints that same UPC on the 8 oz single. Wildwood Natural Food Market https://wildwoodnaturalfood.com/product/olbas-herbal-bath-8-oz/ is in stock at $17.99 and prints a shorter line: Water, Cocamidopropyl Betaine, Sodium Coceth Sulfate, PEG-40 Glycerol Cocoate, PEG-6 Caprylic/Capric Glycerides, Peppermint Oil, Eucalyptus Oil, Decyl Polyglucoside, Cajuput Oil, Wintergreen Oil, Juniper Oil, Chlorophyll, Clove Oil. Lotus Light https://www.lotuslight.com/product/265110 is in stock at $17.95 and the ingredient text that opened is cut off and adds Fragrance. A store line differs, so the pack was not guessed. The Walmart result that opened before is an 8 fl oz pack of 4, not the single. Co-op Market bath URL returned 404. **Unlocked tokens found this pass:** Cocamidopropyl Betaine; Fragrance. **Closed this pass:** none.
@@ -1063,9 +1065,66 @@ The Good Patch — closed. Ladder finished. No remaining holds. Every pack is wr
 
 Olbas — closed. Ladder finished. No remaining holds. Every pack is written or marked not for sale. The inhaler 3-pack is not a row because the single is in stock. Sugar Free Lozenges are discontinued.
 
+Beano — closed. Catalog done. No remaining holds.
+
+Goli — closed. Catalog done. No remaining holds. Women's PMS gummies are not for sale.
+
+Lactaid — closed. Catalog done. No remaining holds. Original Strength 80 is not for sale.
+
+Os-Cal — closed. Catalog done. No remaining holds.
+
+Spring Valley — closed. Catalog done. No remaining holds.
+
+LifeSeasons — closed. Catalog done. No remaining holds.
+
+Wally's Natural — closed. Catalog done. Ear oils are written. No remaining holds.
+
+Bach — closed. Catalog done, missing UPCs only.
+
+Cheribundi — closed. Catalog done, missing UPCs only. Juices stay out of scope as food.
+
+Comvita — closed. Catalog done, missing UPCs only.
+
+Elevate Organic — closed. Catalog done, missing UPCs only.
+
+Eyeganics — closed. Catalog done, missing UPCs only.
+
+Prepare Your Mind — closed. Catalog done, missing UPCs only.
+
+Herbs Etc. — closed. Catalog done, missing UPCs only.
+
+Hyalogic — closed. Catalog done, missing UPCs only.
+
+Lemme — closed. Catalog done, missing UPCs only.
+
+Quantum Health — closed. Catalog done, missing UPCs only.
+
+Ridgecrest Herbals — closed. Catalog done, missing UPCs only.
+
+Dose — closed. Discontinued. No current US sale page.
+
+Manukora — closed. Not a US supplement. Honey.
+
+Pri — closed. Not a US supplement. No current US supplement page.
+
+Suku Vitamins — closed. Not a US supplement. The products that opened are Canada-licensed.
+
+Taylor Pass Honey Co — closed. Not a US supplement. New Zealand shop.
+
+Move Free — closed. Catalog done in t33u. No remaining holds.
+
+Nature's Bounty — closed. Catalog done in t33u. No remaining holds.
+
+Osteo Bi-Flex — closed. Catalog done in t33u. No remaining holds.
+
+Prevagen — closed. Catalog done in t33u. No remaining holds.
+
+Schiff — closed. Catalog done in t33u. No remaining holds.
+
+Slow Fe — closed. Catalog done in t33u. No remaining holds.
+
 Remaining open brands (t33u, 2026-10-23, as of before this order's closes)
-Beano, Goli, Lactaid, Move Free, Nature's Bounty, Os-Cal, Osteo Bi-Flex, Prevagen, Schiff, Slow Fe, Spring Valley.
-Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u, leaving Beano, Goli, Lactaid, Os-Cal, and Spring Valley open.
+None. Beano, Goli, Lactaid, Os-Cal, and Spring Valley are closed. Move Free, Nature's Bounty, Osteo Bi-Flex, Prevagen, Schiff, and Slow Fe were closed in t33u. All eleven are on the Closed brands list.
 
 Sprouts next open brands
 t96u (Oct 28, 2026). Kids Sleep 8 hold cleared. No brand closed this pass.
@@ -1106,7 +1165,7 @@ Still open. These still need a catalog pass, or a pack is still unwritten.
 - Wooden Spoon Herbs — not closed. No catalog pass.
 - Zand — not closed. No catalog pass.
 
-Catalog-done, with missing UPCs on the founder hunt list. Not closed this pass. A missing UPC is not a new catalog pass, and a close was not forced.
+Catalog-done, with missing UPCs on the founder hunt list. These brands are closed. The lines below are UPC work only. A missing UPC does not leave the brand open.
 - Herbs Etc. — Daily Peace gummies, Deep Sleep gummies, Menopautonic liquid, ChlorOxygen Mint 1 oz, ChlorOxygen Mint 2 oz
 - Hyalogic — Synthovial Seven, Collagen Peptides, HylaMints
 - Lemme — Colostrum Liquid 1-pack
