@@ -329,6 +329,19 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T148E_CLEARED = new Set([
+  'peppermint aerial',
+  'cayenne pepper',
+  'cinnamon cinnamomum zeylanicum bark oil',
+  'natural mint flavor',
+  '18 23 by volume organic alcohol',
+]);
+
+/** t148e. Standing ladder rule. Each string is exact. None of these stack. */
+export function isT148eClearedName(name: string): boolean {
+  return T148E_CLEARED.has(t121uToken(name));
+}
+
 const T144E_CLEARED = new Set([
   'chlorophyll',
   'clove oil',
@@ -714,6 +727,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
   if (isT144eCautionName(ingredient.name)) return false;
   if (isT143eClearedName(ingredient.name)) return false;
