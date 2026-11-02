@@ -39,6 +39,7 @@ import {
   isT144eClearedName,
   isT144eLimitedName,
   isT148eClearedName,
+  isT149eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -680,6 +681,20 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t149eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (n === 'usp alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Limited (t149e) under the standing ladder rule, because it is an alcohol vehicle, the same form as Pure Grain Alcohol. It counts toward the three-or-more Limited stack. It is not Organic Cane Alcohol.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Limited (t149e) under the standing ladder rule, because it is a named cane alcohol vehicle. It counts toward the three-or-more Limited stack. It is not Organic Cane Alcohol, which stays Cleared.`,
+    level,
+  );
+}
+
 function t148eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (n === 'peppermint aerial') {
@@ -1028,6 +1043,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (isT149eLimitedName(ingredient.name)) {
+    return t149eWhy(ingredient.name, ingredient.riskLevel);
+  }
   if (isT148eClearedName(ingredient.name)) {
     return t148eWhy(ingredient.name, ingredient.riskLevel);
   }
@@ -1232,7 +1250,11 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
   if (
-    n === 'natural lemon and lime flavors with other natural flavors'
+    n === 'natural lemon flavor with other natural flavors'
+    || n === 'natural dark sweet cherry flavor with other natural flavors'
+    || n === 'natural grape flavor with other natural flavors'
+    || n === 'natural orange flavor with other natural flavors'
+    || n === 'natural lemon and lime flavors with other natural flavors'
     || n === 'natural peach and mango flavors with other natural flavors'
     || n === 'natural raspberry and lemon flavors with other natural flavors'
     || n === 'natural fruit flavors'
@@ -1581,6 +1603,13 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   if (n === 'sugar alcohol') {
     return close(
       'Sugar alcohol printed as a class name is Caution under founder lock t22u. The polyol is not named. Large amounts of sugar alcohols can upset the gut. It does not count toward the three-or-more Limited stack. Xylitol, mannitol, sorbitol, and isomalt stay their own rows.',
+      level,
+    );
+  }
+
+  if (n === 'natural colors') {
+    return close(
+      'Natural Colors is the exact printed string. Locked Caution (t149e) under the standing ladder rule, because it is the t22u unnamed-color form, the same grade as Colors and Natural Color. The label does not name the color. It does not count toward the three-or-more Limited stack. It is not a named juice, and it is not a named synthetic dye.',
       level,
     );
   }
