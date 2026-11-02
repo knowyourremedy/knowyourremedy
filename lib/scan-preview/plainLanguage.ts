@@ -38,6 +38,7 @@ import {
   isT144eCautionName,
   isT144eClearedName,
   isT144eLimitedName,
+  isT148eClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -679,6 +680,38 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t148eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (n === 'peppermint aerial') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t148e) under the standing ladder rule, because it is a named botanical. It does not count toward the three-or-more Limited stack. It is not bare Peppermint, and it is not Peppermint Oil.`,
+      level,
+    );
+  }
+  if (n === 'cayenne pepper') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t148e) under the standing ladder rule, because it is a named botanical. It does not count toward the three-or-more Limited stack. It is not bare Cayenne.`,
+      level,
+    );
+  }
+  if (n === 'cinnamon cinnamomum zeylanicum bark oil') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t148e) under the standing ladder rule, because it is a named oil. The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not Cinnamon Powder.`,
+      level,
+    );
+  }
+  if (n === 'natural mint flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t148e) under the standing ladder rule, because it names mint. It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors, and it is not Natural Peppermint.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t148e) under the standing ladder rule, because it is a named organic alcohol with a printed strength. It does not count toward the three-or-more Limited stack. It is not the other percent locks.`,
+    level,
+  );
+}
+
 function t144eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (isT144eLimitedName(name)) {
@@ -994,6 +1027,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT148eClearedName(ingredient.name)) {
+    return t148eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT144eClearedName(ingredient.name) || isT144eCautionName(ingredient.name) || isT144eLimitedName(ingredient.name)) {
     return t144eWhy(ingredient.name, ingredient.riskLevel);
