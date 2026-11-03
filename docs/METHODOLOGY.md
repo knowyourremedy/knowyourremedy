@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Nov 3, 2026 (t153e founder order; KYR6-e):** Exact string. **Cleared, do not stack:** Postassium Sorbate (as preservative). It is the misspelled printed form of potassium sorbate. The parenthesis is part of this one token. It is not the Caution token Potassium Sorbate.
+
 **Changed Nov 3, 2026 (t151e founder order; KYR6-e):** Exact strings. **Cleared, do not stack:** Natural Sweet Orange Flavor; Natural Lemon Flavor with Other Natural Flavors; Natural Dark Sweet Cherry Flavor with other natural flavors; Natural Grape Flavor with Other Natural Flavors; Natural Orange Flavor with Other Natural Flavors; USP Alcohol; Pure Cane Alcohol. Each flavor names the fruit. The “other natural flavors” words are part of that one token. They are not the Limited token Natural Flavors. USP Alcohol and Pure Cane Alcohol are named alcohol vehicles. They are not Organic Cane Alcohol, which stays its own Cleared lock, and they are not the Limited token Pure Grain Alcohol.
 
 **Changed Nov 3, 2026 (t150e founder order; KYR6-e):** Exact strings. **Cleared, do not stack:** Natural Cherry Flavor. It is the named fruit flavor already stored Cleared on the Nature's Bounty quick-dissolve rows (t132u). It is not the Limited token Natural Flavors. **Limited, and it counts toward the t137u stack:** Natural Colors. It is the unspecified-color token already stored Limited on `springvalley-b277-immunity-powder-15` and `springvalley-b277-immunity-powder-30`. It is not a named juice color, and it is not the exact word Colors.
