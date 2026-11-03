@@ -42,7 +42,7 @@ import {
   isT150eClearedName,
   isT150eLimitedName,
   isT151eClearedName,
-  isT153eClearedName,
+  isT45uCautionName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -684,10 +684,19 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
-function t153eWhy(name: string, level: RiskLevel): string {
+function t45uWhy(name: string): string {
+  const n = norm(name);
+  const shared =
+    'Locked Caution (t45u). Methodology §5 synthetic preservatives (sodium benzoate, potassium sorbate): on its own the risk is low, and benzoate plus vitamin C can form a trace of benzene. It is a zero-point Caution cap and does not count toward the three-or-more Limited stack.';
+  if (n === 'postassium sorbate as preservative') {
+    return close(
+      `${name.trim()} is the exact printed string. ${shared} It is the misspelled printed form of potassium sorbate. The parenthesis is part of this one token. It is not a different substance.`,
+      'moderate',
+    );
+  }
   return close(
-    `${name.trim()} is the exact printed string. Locked Cleared (t153e). It is the misspelled printed form of potassium sorbate. The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not the Caution token Potassium Sorbate.`,
-    level,
+    `${name.trim()} is the exact printed string. ${shared} It is not the misspelled token Postassium Sorbate (as preservative), which is the same Caution cap.`,
+    'moderate',
   );
 }
 
@@ -1079,8 +1088,8 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
-  if (isT153eClearedName(ingredient.name)) {
-    return t153eWhy(ingredient.name, ingredient.riskLevel);
+  if (isT45uCautionName(ingredient.name)) {
+    return t45uWhy(ingredient.name);
   }
   if (isT151eClearedName(ingredient.name)) {
     return t151eWhy(ingredient.name, ingredient.riskLevel);
@@ -1598,7 +1607,6 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     || n === 'cetyl palmitate'
     || n === 'glyceryl stearate citrate'
     || n === 'isopropyl palmitate'
-    || n === 'potassium sorbate'
   ) {
     return close(
       'The founder locked this exact token Caution (t98u). It does not count toward the three-or-more Limited stack.',

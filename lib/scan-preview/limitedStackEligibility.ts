@@ -344,13 +344,14 @@ export function isT151eClearedName(name: string): boolean {
   return T151E_CLEARED.has(t121uToken(name));
 }
 
-const T153E_CLEARED = new Set([
+const T45U_CAUTION = new Set([
+  'potassium sorbate',
   'postassium sorbate as preservative',
 ]);
 
-/** t153e. The misspelled printed form of potassium sorbate. Does not stack. Not Potassium Sorbate. */
-export function isT153eClearedName(name: string): boolean {
-  return T153E_CLEARED.has(t121uToken(name));
+/** t45u. Exact Caution strings. Zero-point cap. Do not stack. The misspelling is not a different substance. */
+export function isT45uCautionName(name: string): boolean {
+  return T45U_CAUTION.has(t121uToken(name));
 }
 
 const T150E_CLEARED = new Set([
@@ -769,7 +770,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
   if (isT151eClearedName(ingredient.name)) return false;
-  if (isT153eClearedName(ingredient.name)) return false;
+  if (isT45uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;

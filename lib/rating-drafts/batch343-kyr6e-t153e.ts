@@ -16,7 +16,7 @@ const UNVERIFIED = 'unverified' as const;
 const GLYC = 'Methodology §5 Cleared (glycerin / vegetable glycerin).';
 const WATER = 'Methodology §5 Cleared (water / purified water).';
 const CITRIC = 'Methodology §5 Cleared (citric acid).';
-const SORBATE = 'Methodology §5 Cleared (t153e). Postassium Sorbate (as preservative) is the misspelled printed form of potassium sorbate. Does not count toward the t137u stack.';
+const SORBATE = 'Methodology §5 Caution (t45u). Postassium Sorbate (as preservative) is the misspelled printed form of potassium sorbate. Zero-point Caution cap. Does not count toward the t137u stack.';
 const BERRY = 'Methodology §5 Caution (Natural Mixed Berry Flavor — t98u). Does not count toward the t137u stack.';
 const XANTHAN = 'Methodology §5 Cleared (xanthan gum — t98u). Does not count toward the t137u stack.';
 
@@ -79,7 +79,7 @@ export const BATCH343_KYR6E_T153E: RatingRecord[] = [
       ['Vegetable Glycerin', 'cleared', GLYC],
       ['Purified Water', 'cleared', WATER],
       ['Citric ACid', 'cleared', CITRIC],
-      ['Postassium Sorbate (as preservative)', 'cleared', SORBATE],
+      ['Postassium Sorbate (as preservative)', 'moderate', SORBATE],
       ['Natural Mixed Berry Flavor', 'moderate', BERRY],
       ['Xanthan Gum', 'cleared', XANTHAN],
     ],
@@ -111,7 +111,9 @@ for (const ingredient of mapped.inactiveIngredients) {
   if (/is on the Cleared list|is on the Limited list|has its own line|That is why it is Usable/i.test(why)) {
     throw new Error(`generic ${ingredient.name}: ${why}`);
   }
-  if (ingredient.name === 'Postassium Sorbate (as preservative)' && !/misspelled printed form of potassium sorbate/i.test(why)) {
-    throw new Error(why);
+  if (ingredient.name === 'Postassium Sorbate (as preservative)') {
+    if (ingredient.riskLevel !== 'moderate') throw new Error(ingredient.riskLevel);
+    if (!/misspelled printed form of potassium sorbate/i.test(why)) throw new Error(why);
+    if (!/Caution \(t45u\)/i.test(why)) throw new Error(why);
   }
 }
