@@ -338,3 +338,4 @@ export { BATCH338_KYR6E_T148E } from './batch338-kyr6e-t148e';
 export { BATCH339_KYR6E_T149E } from './batch339-kyr6e-t149e';
 export { BATCH340_KYR6E_T150E } from './batch340-kyr6e-t150e';
 export { BATCH341_KYR6E_T151E } from './batch341-kyr6e-t151e';
+export { BATCH342_KYR6E_T152E } from './batch342-kyr6e-t152e';
