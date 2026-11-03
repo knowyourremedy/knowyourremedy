@@ -1031,8 +1031,6 @@ Standing process — Ladder + token collection:
 4. Do not invent grades for unlocked tokens. Hold the pack and surface the strings so they can be locked in one batch.
 5. After locks are confirmed, the next paste applies the full set of new locks and finishes the remaining packs.
 
-If a pack prints an unlocked token string and the form matches an existing Cleared, Caution, or Limited rule (named botanical, named oil, named flavor, named organic alcohol with strength, hydrogenated oil, synthetic surfactant, etc.), the bot may lock that exact string under the matching rule without waiting for a separate founder call. Do not invent a new grade. Do not lock a string whose form is not already covered by a standing rule. Report every string locked this way in the batch report.
-
 This is the default process for every ladder pass. Do not change other standing rules.
 
 Two-source rule
