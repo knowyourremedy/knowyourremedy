@@ -39,6 +39,8 @@ import {
   isT144eClearedName,
   isT144eLimitedName,
   isT148eClearedName,
+  isT150eClearedName,
+  isT150eLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -680,6 +682,20 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t150eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (n === 'natural cherry flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t150e). It is the named fruit flavor already stored Cleared on the Nature's Bounty quick-dissolve rows (t132u). It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Limited (t150e). It is the unspecified color already stored Limited on the Spring Valley immunity powders. It counts toward the three-or-more Limited stack. It is not a named juice color, and it is not the exact word Colors.`,
+    level,
+  );
+}
+
 function t148eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (n === 'peppermint aerial') {
@@ -1027,6 +1043,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT150eClearedName(ingredient.name) || isT150eLimitedName(ingredient.name)) {
+    return t150eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT148eClearedName(ingredient.name)) {
     return t148eWhy(ingredient.name, ingredient.riskLevel);
