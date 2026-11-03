@@ -81,8 +81,6 @@ const T54U_LIMITED_FLAVOR = new Set([
   'natural orange flavor',
   'natural strawberry flavor',
   'natural raspberry flavor',
-  'natural cherry flavor',
-  'natural sweet orange flavor',
   'natural berry flavor',
   'natural grape flavor',
   'natural vanilla lavender flavor',
@@ -282,10 +280,6 @@ const T106U_CAUTION = new Set([
   'milk protein concentrate',
   'nonfat dry milk powder',
   'steviol glycoside',
-  'natural lemon flavor with other natural flavors',
-  'natural dark sweet cherry flavor with other natural flavors',
-  'natural grape flavor with other natural flavors',
-  'natural orange flavor with other natural flavors',
   'natural lemon and lime flavors with other natural flavors',
   'natural peach and mango flavors with other natural flavors',
   'natural raspberry and lemon flavors with other natural flavors',
@@ -333,16 +327,6 @@ export function isT123eClearedName(name: string): boolean {
     || n === 'coconut milk powder coconut milk cassava dextrin'
     || n === 'organic coconut milk powder organic coconut milk cassava dextrin'
   );
-}
-
-const T149E_LIMITED = new Set([
-  'usp alcohol',
-  'pure cane alcohol',
-]);
-
-/** t149e. Standing ladder rule. Alcohol vehicles. They count. Not Organic Cane Alcohol. */
-export function isT149eLimitedName(name: string): boolean {
-  return T149E_LIMITED.has(t121uToken(name));
 }
 
 const T148E_CLEARED = new Set([
@@ -761,7 +745,6 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
-  if (isT149eLimitedName(ingredient.name)) return true;
   if (isT144eLimitedName(ingredient.name)) return true;
   if (isT143eLimitedName(ingredient.name)) return true;
   if (isT141eLimitedName(ingredient.name)) return true;
