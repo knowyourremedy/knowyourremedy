@@ -43,6 +43,7 @@ import {
   isT150eLimitedName,
   isT151eClearedName,
   isT45uCautionName,
+  isGlycyrrhizaExtractCautionName,
   isT48uCautionName,
   isT48uClearedName,
   isT49uCautionName,
@@ -2493,8 +2494,8 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (/glycyrrhiza|licorice/.test(n) && !/ammonium|monoammonium|dipotassium/.test(n)) {
-    return 'Licorice extract is a named plant ingredient. Very high intakes of glycyrrhizin can affect blood pressure and potassium. That is not this syrup dose. That is why it is Cleared.';
+  if (isGlycyrrhizaExtractCautionName(ingredient.name)) {
+    return `${ingredient.name.trim()} is Glycyrrhiza extract / licorice extract (oral inactive). Locked Caution (t54u). It is a zero-point Caution cap and does not count toward the three-or-more Limited stack. NCCIH (https://www.nccih.nih.gov/health/licorice-root) and Memorial Sloan Kettering About Herbs (https://www.mskcc.org/cancer-care/integrative-medicine/herbs/licorice) describe glycyrrhizin risk in large amounts or with hypertension, heart disease, or kidney disease. The amount and the person cannot be checked. It is not ammonium glycyrrhizin and it is not dipotassium glycyrrhizinate.`;
   }
 
   if (n === 'sodium') {

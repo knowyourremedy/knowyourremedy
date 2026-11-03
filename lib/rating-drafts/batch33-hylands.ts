@@ -12,7 +12,7 @@
 // No MegaFood / Genexa rewrites. No fake Clean alts.
 //
 // REUSE ONLY (do not rewrite grades except the grape-daytime OI update
-// on batch4 — glycyrrhiza now Cleared; verdict stays Caution):
+// on batch4 — glycyrrhiza is the t54u Caution cap; verdict stays Caution):
 // - hylands-calms-forte — clean
 // - hylands-sleep — clean
 // - hylands-rest — clean
@@ -28,10 +28,9 @@
 // the two Organic Baby All-in-One Cough syrups (agave + glycerin + water).
 //
 // SEPT 14 LOCKS APPLIED
-// - Glycyrrhiza / licorice extract = Cleared named botanical. Do NOT Caution
-//   the product on licorice alone. Tap + honest-note line (exact):
-//   “Licorice extract. Very high intakes of glycyrrhizin can affect blood
-//   pressure and potassium — that is not this syrup dose.”
+// - Glycyrrhiza / licorice extract = Caution zero-point cap (t54u). It does
+//   not stack. NCCIH and MSK About Herbs describe glycyrrhizin risk in large
+//   amounts or with hypertension, heart disease, or kidney disease.
 // - Wood rosin / colophony (topical) = Caution, not Avoid.
 // - FDA is one source, not a veto.
 // SEPT 15 FOUNDER-CARTON CLOSEOUT
@@ -83,7 +82,7 @@ const BRAND = "Hyland's";
 const UNVERIFIED_NOTE = 'draft, not verified';
 
 const LICORICE_LINE =
-  'Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.';
+  'Glycyrrhiza extract / licorice extract (oral inactive) is a zero-point Caution cap and does not count toward the three-or-more Limited stack. Locked Caution (t54u). NCCIH (https://www.nccih.nih.gov/health/licorice-root) and Memorial Sloan Kettering About Herbs (https://www.mskcc.org/cancer-care/integrative-medicine/herbs/licorice) describe glycyrrhizin risk in large amounts or with hypertension, heart disease, or kidney disease. The amount and the person cannot be checked.';
 
 const METH = {
   flavors: 'Methodology §5 Cleared (named Natural [fruit] Flavor — founder lock t132u Oct 20, 2026; §4 natural takes best of two options).',
@@ -92,7 +91,7 @@ const METH = {
   cleared: 'Methodology §5 Cleared',
   organicFlavor: 'Methodology §5 Cleared (organic agave / organic flavors / organic colors)',
   glycyrrhiza:
-    `Methodology §5 Cleared (glycyrrhiza / licorice extract — named botanical; locked Sept 14, 2026). ${LICORICE_LINE}`,
+    `Methodology §5 Caution (t54u). ${LICORICE_LINE}`,
   seedOilGummies:
     'Methodology §5 High-tier (seed/industrial oils in gummies — soybean, canola, "vegetable oil", sunflower, palm)',
   creamVegOil:
@@ -207,7 +206,7 @@ function syrupBase(setid: string, extras: IngredientFlag[] = []): IngredientFlag
   return [
     flag('Citric acid', 'cleared', dailymed(setid, METH.cleared)),
     flag('Glycerin', 'cleared', dailymed(setid, METH.cleared)),
-    flag('Glycyrrhiza extract', 'cleared', dailymed(setid, METH.glycyrrhiza)),
+    flag('Glycyrrhiza extract', 'moderate', dailymed(setid, METH.glycyrrhiza)),
     ...extras,
     flag('Purified water', 'cleared', dailymed(setid, METH.cleared)),
     flag('Sodium benzoate', 'limited', dailymed(setid, METH.benzoate)),
@@ -1240,7 +1239,7 @@ export const BATCH33_HYLANDS: RatingRecord[] = [
     ],
   },
 
-  // ── Caution — glycyrrhiza now Cleared; rest of OI from §5 ─
+  // ── Caution — glycyrrhiza is the t54u Caution cap; sodium benzoate is Limited ─
   {
     id: 'hylands-4kids-cold-n-cough-original',
     barcode: '354973307513',

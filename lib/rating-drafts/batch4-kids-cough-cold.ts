@@ -558,10 +558,10 @@ export const BATCH4_KIDS_COUGH_COLD: RatingRecord[] = [
       ),
       flag(
         'Glycyrrhiza extract',
-        'cleared',
+        'moderate',
         dailymed(
           '798e2a4d-da2d-4bbd-a9b8-574490ef7357',
-          'Methodology §5 Cleared (glycyrrhiza / licorice extract — named botanical; locked Sept 14, 2026). Licorice extract. Very high intakes of glycyrrhizin can affect blood pressure and potassium — that is not this syrup dose.',
+          'Methodology §5 Caution (t54u). Glycyrrhiza extract / licorice extract (oral inactive) is a zero-point Caution cap and does not count toward the three-or-more Limited stack. NCCIH (https://www.nccih.nih.gov/health/licorice-root) and Memorial Sloan Kettering About Herbs (https://www.mskcc.org/cancer-care/integrative-medicine/herbs/licorice) describe glycyrrhizin risk in large amounts or with hypertension, heart disease, or kidney disease. The amount and the person cannot be checked.',
         ),
       ),
       flag(

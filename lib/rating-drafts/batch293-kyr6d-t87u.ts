@@ -34,7 +34,7 @@ const S = {
     'Methodology §5 Caution (L-Selenomethionine — t84u). Inactive on this panel. Does not count toward the t137u stack.',
   quercetin:
     'Methodology §5 Caution (Quercetin Dihydrate (from Sophora japonica Extract) — t84u). Inactive on this panel. Does not count toward the t137u stack.',
-  licorice: 'Methodology §5 Cleared (licorice root / glycyrrhiza extract).',
+  licorice: 'Methodology §5 Caution (t54u). Licorice Root Powder maps to Glycyrrhiza extract / licorice extract (oral inactive). It is a zero-point Caution cap and does not count toward the three-or-more Limited stack. NCCIH (https://www.nccih.nih.gov/health/licorice-root) and Memorial Sloan Kettering About Herbs (https://www.mskcc.org/cancer-care/integrative-medicine/herbs/licorice) describe glycyrrhizin risk in large amounts or with hypertension, heart disease, or kidney disease. The amount and the person cannot be checked.',
   water: 'Methodology §5 Cleared (water / purified water).',
   glycerine: 'Methodology §5 Cleared (vegetable glycerine / glycerin).',
   mint:
@@ -119,11 +119,11 @@ const PCH =
 const NOTE_THRIVE =
   'Caution from one Limited token: natural flavors. That is one, so this is not a 3+ stack. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), and L-selenomethionine are Caution and do not stack. Malic acid, glucono delta lactone, citric acid, L-glycine, beet root powder, thaumatin (katemfe fruit extract), and monk fruit extract are Cleared.';
 const NOTE_BERRY =
-  'Caution from one Limited token: natural flavors. That is one, so this is not a 3+ stack. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), quercetin dihydrate (from Sophora japonica extract), and L-selenomethionine are Caution and do not stack. L-glycine, citric acid, malic acid, glucono delta lactone, beet root powder, licorice root powder, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared.';
+  'Caution from one Limited token: natural flavors. That is one, so this is not a 3+ stack. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), quercetin dihydrate (from Sophora japonica extract), L-selenomethionine, and licorice root powder are Caution and do not stack. L-glycine, citric acid, malic acid, glucono delta lactone, beet root powder, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared.';
 const NOTE_TROPICAL =
-  'Caution from one Limited token: natural flavors. That is one, so this is not a 3+ stack. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), quercetin dihydrate (from Sophora japonica extract), and L-selenomethionine are Caution and do not stack. Citric acid, malic acid, glucono delta lactone, L-glycine, licorice root powder, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared. This flavor does not print beet root powder.';
+  'Caution from one Limited token: natural flavors. That is one, so this is not a 3+ stack. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), quercetin dihydrate (from Sophora japonica extract), L-selenomethionine, and licorice root powder are Caution and do not stack. Citric acid, malic acid, glucono delta lactone, L-glycine, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared. This flavor does not print beet root powder.';
 const NOTE_VARIETY =
-  'The carton holds three flavors. Each stick was counted on its own. Thrive Lemonade has one Limited token: natural flavors. Balanced Berry has one Limited token: natural flavors. Tropical Bliss has one Limited token: natural flavors. The only counting Limited token in the carton is natural flavors. That is one on every stick, so this is not a 3+ stack. The carton stays Caution. Balanced Berry and Tropical Bliss also print quercetin dihydrate (from Sophora japonica extract), which is Caution and does not stack. Thrive Lemonade does not print quercetin dihydrate or licorice root powder. Tropical Bliss does not print beet root powder. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), and L-selenomethionine are on every flavor and are Caution and do not stack. L-glycine, citric acid, malic acid, glucono delta lactone, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared on every flavor. Beet root powder is Cleared on Thrive Lemonade and Balanced Berry. Licorice root powder is Cleared on Balanced Berry and Tropical Bliss.';
+  'The carton holds three flavors. Each stick was counted on its own. Thrive Lemonade has one Limited token: natural flavors. Balanced Berry has one Limited token: natural flavors. Tropical Bliss has one Limited token: natural flavors. The only counting Limited token in the carton is natural flavors. That is one on every stick, so this is not a 3+ stack. The carton stays Caution. Balanced Berry and Tropical Bliss also print quercetin dihydrate (from Sophora japonica extract), which is Caution and does not stack. Thrive Lemonade does not print quercetin dihydrate or licorice root powder. Tropical Bliss does not print beet root powder. Silica (from Bamboo Shoot Extract), brazzein (oubli fruit sweet protein), and L-selenomethionine are on every flavor and are Caution and do not stack. L-glycine, citric acid, malic acid, glucono delta lactone, monk fruit extract, and thaumatin (katemfe fruit extract) are Cleared on every flavor. Beet root powder is Cleared on Thrive Lemonade and Balanced Berry. Licorice root powder is Caution and does not stack on Balanced Berry and Tropical Bliss.';
 const NOTE_CHLOR =
   'natural flavors (menthol¹, vanilla¹, peppermint¹, and spearmint¹ essential oils, and citral) is Caution and does not stack. The superscript 1 means organic and does not change the grade. Purified water and vegetable glycerine are Cleared. Counted Limited tokens: none.';
 
@@ -153,7 +153,7 @@ function berryFlags(panel: string): IngredientFlag[] {
     flag(panel, 'Silica (from Bamboo Shoot Extract)', 'moderate', 'silica'),
     flag(panel, 'Beet Root Powder', 'cleared', 'beet'),
     flag(panel, 'Quercetin Dihydrate (from Sophora japonica Extract)', 'moderate', 'quercetin'),
-    flag(panel, 'Licorice Root Powder', 'cleared', 'licorice'),
+    flag(panel, 'Licorice Root Powder', 'moderate', 'licorice'),
     flag(panel, 'Monk Fruit Extract', 'cleared', 'monk'),
     flag(panel, 'Thaumatin (Katemfe Fruit Extract)', 'cleared', 'thaumatin'),
     flag(panel, 'Brazzein (Oubli Fruit Sweet Protein)', 'moderate', 'brazzein'),
@@ -170,7 +170,7 @@ function tropicalFlags(panel: string): IngredientFlag[] {
     flag(panel, 'Silica (from Bamboo Shoot Extract)', 'moderate', 'silica'),
     flag(panel, 'L-Glycine', 'cleared', 'glycine'),
     flag(panel, 'Quercetin Dihydrate (from Sophora japonica Extract)', 'moderate', 'quercetin'),
-    flag(panel, 'Licorice Root Powder', 'cleared', 'licorice'),
+    flag(panel, 'Licorice Root Powder', 'moderate', 'licorice'),
     flag(panel, 'Monk Fruit Extract', 'cleared', 'monk'),
     flag(panel, 'Thaumatin (Katemfe Fruit Extract)', 'cleared', 'thaumatin'),
     flag(panel, 'Brazzein (Oubli Fruit Sweet Protein)', 'moderate', 'brazzein'),
