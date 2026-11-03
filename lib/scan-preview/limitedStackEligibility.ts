@@ -329,6 +329,23 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T150E_CLEARED = new Set([
+  'natural cherry flavor',
+]);
+
+const T150E_LIMITED = new Set([
+  'natural colors',
+]);
+
+/** t150e. Natural Cherry Flavor does not stack. Natural Colors counts. */
+export function isT150eClearedName(name: string): boolean {
+  return T150E_CLEARED.has(t121uToken(name));
+}
+
+export function isT150eLimitedName(name: string): boolean {
+  return T150E_LIMITED.has(t121uToken(name));
+}
+
 const T148E_CLEARED = new Set([
   'peppermint aerial',
   'cayenne pepper',
@@ -727,6 +744,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
   if (isT144eCautionName(ingredient.name)) return false;
@@ -745,6 +763,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT150eLimitedName(ingredient.name)) return true;
   if (isT144eLimitedName(ingredient.name)) return true;
   if (isT143eLimitedName(ingredient.name)) return true;
   if (isT141eLimitedName(ingredient.name)) return true;
