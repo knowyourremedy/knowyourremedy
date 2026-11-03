@@ -2200,7 +2200,7 @@ Add-on preferences (from current chat):
 
 Token recommendation rule:
 - Before giving any token recommendation, state that you pulled the live sources, checked the dock rule, and checked the standing rules (including the unnamed rule, natural vs man-made tiebreaker, 3+ Limited stack, and any prior-lock re-evaluation rule). Do not recommend based on a prior lock alone if it may not have gone through the current rules.
-- When sources disagree on a token, the two integrative medicine sources hold more weight than a simple majority. FDA, CIR, and FEMA are supporting sources. They do not override the integrative sources when those two agree.
+- When sources disagree on a token, the integrative sources hold more weight. The integrative sources are NCCIH, MedlinePlus, Office of Dietary Supplements (ODS), NatMed Pro, Memorial Sloan Kettering About Herbs, PubMed/CAM, Andrew Weil, Mayo Clinic, and LiverTox. A majority of those sources decides the grade. If that majority contradicts FDA, CIR, or FEMA, the integrative majority still rules.
 
 LIVE NOW
 Solaray in progress (#365–#375) is struck. Solaray website UPC ladders are closed (#386–#389). Leftover 15 is a walk, not another website loop. Red Yeast Rice + CoQ-10 90ct now has UPC 076280121551 — do not hunt that barcode again. Liposomal Multivitamin Universal 60ct 076280830385 stays parked (no Search row / no_OI). “Barcode later” is struck. Sizeless Maca in batch116 already pulled; sized 7.4 oz row stays. Organic Nettle 076280194104 Clean and Nettle 076280014105 Caution are two products. Do not reopen: Sprouts stash, oil pour bottles as graded Search rows, factory #121–#221, GoodSense 3P panels, batch70–113 edits, batch116 except the already-done Maca pull.
