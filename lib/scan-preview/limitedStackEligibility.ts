@@ -329,6 +329,21 @@ export function isT123eClearedName(name: string): boolean {
   );
 }
 
+const T151E_CLEARED = new Set([
+  'natural sweet orange flavor',
+  'natural lemon flavor with other natural flavors',
+  'natural dark sweet cherry flavor with other natural flavors',
+  'natural grape flavor with other natural flavors',
+  'natural orange flavor with other natural flavors',
+  'usp alcohol',
+  'pure cane alcohol',
+]);
+
+/** t151e. Exact Cleared strings. None of these stack. */
+export function isT151eClearedName(name: string): boolean {
+  return T151E_CLEARED.has(t121uToken(name));
+}
+
 const T150E_CLEARED = new Set([
   'natural cherry flavor',
 ]);
@@ -744,6 +759,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT130eClearedName(ingredient.name)) return false;
   if (isT136eClearedName(ingredient.name)) return false;
   if (isT135eClearedName(ingredient.name)) return false;
+  if (isT151eClearedName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;

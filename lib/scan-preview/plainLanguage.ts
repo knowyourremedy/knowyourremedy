@@ -41,6 +41,7 @@ import {
   isT148eClearedName,
   isT150eClearedName,
   isT150eLimitedName,
+  isT151eClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -682,6 +683,32 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t151eWhy(name: string, level: RiskLevel): string {
+  const n = norm(name);
+  if (n === 'natural sweet orange flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t151e). It names sweet orange. It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors, and it is not Natural Orange Flavor.`,
+      level,
+    );
+  }
+  if (n === 'usp alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t151e). It is a named alcohol vehicle. It does not count toward the three-or-more Limited stack. It is not the Limited token Pure Grain Alcohol, and it is not Organic Cane Alcohol.`,
+      level,
+    );
+  }
+  if (n === 'pure cane alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t151e). It is a named cane alcohol vehicle. It does not count toward the three-or-more Limited stack. It is not the Limited token Pure Grain Alcohol, and it is not Organic Cane Alcohol.`,
+      level,
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t151e). The fruit is named, and the words “other natural flavors” are part of this one token. It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors.`,
+    level,
+  );
+}
+
 function t150eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
   if (n === 'natural cherry flavor') {
@@ -1043,6 +1070,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT151eClearedName(ingredient.name)) {
+    return t151eWhy(ingredient.name, ingredient.riskLevel);
   }
   if (isT150eClearedName(ingredient.name) || isT150eLimitedName(ingredient.name)) {
     return t150eWhy(ingredient.name, ingredient.riskLevel);
