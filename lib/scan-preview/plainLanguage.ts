@@ -43,6 +43,8 @@ import {
   isT150eLimitedName,
   isT151eClearedName,
   isT45uCautionName,
+  isT48uCautionName,
+  isT48uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -684,6 +686,26 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t48uWhy(name: string): string {
+  const n = norm(name);
+  if (n === 'natural tangerine flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t48u). It names tangerine. It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors.`,
+      'cleared',
+    );
+  }
+  if (n.startsWith('potassium sorbate')) {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Caution (t48u). Methodology §5 synthetic preservatives (sodium benzoate, potassium sorbate): on its own the risk is low, and benzoate plus vitamin C can form a trace of benzene. The parenthesis, when printed, is part of this one token. It is a zero-point Caution cap and does not count toward the three-or-more Limited stack. It is not the exact token Potassium Sorbate, which is the same Caution cap.`,
+      'moderate',
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t48u). It names the ginger, amla or alma, and capsicum plants in this one Quik-Sorb token. The parenthesis is part of this token. It does not count toward the three-or-more Limited stack. It is not bare Ginger and it is not an unnamed flavor.`,
+    'cleared',
+  );
+}
+
 function t45uWhy(name: string): string {
   const n = norm(name);
   const shared =
@@ -1087,6 +1109,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) {
+    return t48uWhy(ingredient.name);
   }
   if (isT45uCautionName(ingredient.name)) {
     return t45uWhy(ingredient.name);

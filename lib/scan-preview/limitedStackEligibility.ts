@@ -354,6 +354,31 @@ export function isT45uCautionName(name: string): boolean {
   return T45U_CAUTION.has(t121uToken(name));
 }
 
+const T48U_CLEARED = new Set([
+  'quik sorb ginger rhizome amla fruit capsicum fruit',
+  'quik sorb ginger rhizome alma fruit capsicum fruit',
+  'quik sorb ginger rhizome extract amla fruit extract capsicum fruit extract',
+  'quik sorb ginger root amla extract capsicum fruit',
+  'quik sorb ginger root amla fruit extract capsicum fruit',
+  'quik sorb blend ginger root powder amla fruit extract cayenne fruit powder',
+  'natural tangerine flavor',
+]);
+
+const T48U_CAUTION = new Set([
+  'potassium sorbate as a preservative',
+  'potassium sorbate as preservative',
+  'potassium sorbate preservative',
+]);
+
+/** t48u. Quik-Sorb prints and Natural Tangerine Flavor do not stack. The three sorbate parentheses are a zero-point Caution cap. */
+export function isT48uClearedName(name: string): boolean {
+  return T48U_CLEARED.has(t121uToken(name));
+}
+
+export function isT48uCautionName(name: string): boolean {
+  return T48U_CAUTION.has(t121uToken(name));
+}
+
 const T150E_CLEARED = new Set([
   'natural cherry flavor',
 ]);
@@ -771,6 +796,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT135eClearedName(ingredient.name)) return false;
   if (isT151eClearedName(ingredient.name)) return false;
   if (isT45uCautionName(ingredient.name)) return false;
+  if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
