@@ -379,6 +379,33 @@ export function isT48uCautionName(name: string): boolean {
   return T48U_CAUTION.has(t121uToken(name));
 }
 
+const T49U_CLEARED = new Set([
+  'quik sorb ginger root amla extract and capsicum fruit',
+  'natural vanilla flavor',
+  'rosemary extract',
+]);
+
+const T49U_CAUTION = new Set([
+  'potassium sorbate perservative',
+]);
+
+const T49U_LIMITED = new Set([
+  'polyglycerol esters of fatty acid pge',
+]);
+
+/** t49u. The “and” Quik-Sorb, Natural Vanilla Flavor, and Rosemary Extract do not stack. The misspelled sorbate is a zero-point Caution cap. PGE counts. */
+export function isT49uClearedName(name: string): boolean {
+  return T49U_CLEARED.has(t121uToken(name));
+}
+
+export function isT49uCautionName(name: string): boolean {
+  return T49U_CAUTION.has(t121uToken(name));
+}
+
+export function isT49uLimitedName(name: string): boolean {
+  return T49U_LIMITED.has(t121uToken(name));
+}
+
 const T150E_CLEARED = new Set([
   'natural cherry flavor',
 ]);
@@ -797,6 +824,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT151eClearedName(ingredient.name)) return false;
   if (isT45uCautionName(ingredient.name)) return false;
   if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) return false;
+  if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
@@ -816,6 +844,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   ) return false;
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
+  if (isT49uLimitedName(ingredient.name)) return true;
   if (isT150eLimitedName(ingredient.name)) return true;
   if (isT144eLimitedName(ingredient.name)) return true;
   if (isT143eLimitedName(ingredient.name)) return true;
