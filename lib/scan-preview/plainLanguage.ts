@@ -48,6 +48,9 @@ import {
   isT49uCautionName,
   isT49uClearedName,
   isT49uLimitedName,
+  isT50uCautionName,
+  isT50uClearedName,
+  isT50uLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -689,6 +692,50 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t50uWhy(name: string): string {
+  const n = norm(name);
+  if (n === 'plain caramel color') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t50u). It names caramel as the color. The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not bare Caramel. 21 CFR 73.85 is the FDA caramel-color rule, and that allowance is a supporting source.`,
+      'cleared',
+    );
+  }
+  if (n === 'rich starch') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t50u). It is a named starch. It does not count toward the three-or-more Limited stack. It is not rice starch, and it is not the Limited rice extract.`,
+      'cleared',
+    );
+  }
+  if (n === 'taraxacum officinale dandelion root extract') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t50u). It is the named dandelion root. The Latin and the parenthesis are one token. It does not count toward the three-or-more Limited stack. It is not bare Dandelion.`,
+      'cleared',
+    );
+  }
+  if (n === 'rheum officinale rubarb root extract') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t50u). The printed spelling Rubarb is part of this token. It is the named rhubarb root. It does not count toward the three-or-more Limited stack.`,
+      'cleared',
+    );
+  }
+  if (n === 'calicium silicate') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Caution (t50u). It is the misspelled print of calcium silicate, a silicate flow agent. It does not count toward the three-or-more Limited stack. It is not the silicon dioxide nanoparticle cap.`,
+      'moderate',
+    );
+  }
+  if (n === 'microcrystaline cellulose bulking agent') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Limited (t50u). It is the misspelled print of microcrystalline cellulose, and the bulking-agent parenthesis is part of this token. It counts toward the three-or-more Limited stack. It is not the Cleared token Microcrystalline Cellulose.`,
+      'limited',
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Limited (t50u). It is the misspelled print of hydroxypropyl methylcellulose, and the glazing-agent parenthesis is part of this token. It counts toward the three-or-more Limited stack. It is not the Cleared hypromellose capsule.`,
+    'limited',
+  );
+}
+
 function t49uWhy(name: string): string {
   const n = norm(name);
   if (n === 'natural vanilla flavor') {
@@ -1144,6 +1191,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name) || isT50uLimitedName(ingredient.name)) {
+    return t50uWhy(ingredient.name);
   }
   if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name) || isT49uLimitedName(ingredient.name)) {
     return t49uWhy(ingredient.name);
