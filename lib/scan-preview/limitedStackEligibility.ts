@@ -354,6 +354,13 @@ export function isT45uCautionName(name: string): boolean {
   return T45U_CAUTION.has(t121uToken(name));
 }
 
+/** t54u. Glycyrrhiza / licorice extract is a zero-point Caution cap. Not the ammonium or dipotassium salts. */
+export function isGlycyrrhizaExtractCautionName(name: string): boolean {
+  const n = t121uToken(name);
+  if (/\b(ammonium|monoammonium|dipotassium|deglycyrrhizinated|deglycyrrhizin)\b/.test(n)) return false;
+  return /\bglycyrrhiza\b/.test(n) || /\blicorice\b/.test(n);
+}
+
 const T48U_CLEARED = new Set([
   'quik sorb ginger rhizome amla fruit capsicum fruit',
   'quik sorb ginger rhizome alma fruit capsicum fruit',
@@ -852,6 +859,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT135eClearedName(ingredient.name)) return false;
   if (isT151eClearedName(ingredient.name)) return false;
   if (isT45uCautionName(ingredient.name)) return false;
+  if (isGlycyrrhizaExtractCautionName(ingredient.name)) return false;
   if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) return false;
   if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name)) return false;
   if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name)) return false;
