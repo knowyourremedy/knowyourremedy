@@ -45,6 +45,9 @@ import {
   isT45uCautionName,
   isT48uCautionName,
   isT48uClearedName,
+  isT49uCautionName,
+  isT49uClearedName,
+  isT49uLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -686,6 +689,38 @@ function t57uIngredientWhy(name: string, level: RiskLevel): string {
   return close('The founder locked this exact token in t57u.', level);
 }
 
+function t49uWhy(name: string): string {
+  const n = norm(name);
+  if (n === 'natural vanilla flavor') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t49u). It names vanilla. It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors, and it is not Fair Trade Natural Vanilla Extract.`,
+      'cleared',
+    );
+  }
+  if (n === 'rosemary extract') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t49u). It is the named oral rosemary plant. It does not count toward the three-or-more Limited stack. It is not Rosemary Oil.`,
+      'cleared',
+    );
+  }
+  if (n === 'potassium sorbate perservative') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Caution (t49u). It is the misspelled print of potassium sorbate. Methodology §5 synthetic preservatives (sodium benzoate, potassium sorbate): on its own the risk is low, and benzoate plus vitamin C can form a trace of benzene. It is a zero-point Caution cap and does not count toward the three-or-more Limited stack. It is not the correctly spelled parenthetical tokens.`,
+      'moderate',
+    );
+  }
+  if (n === 'polyglycerol esters of fatty acid pge') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Limited (t49u). Polyglycerol esters of fatty acids are emulsifiers. 21 CFR 172.854 is the FDA rule for them. The label does not name the fat. It counts toward the three-or-more Limited stack. It is not glycerin.`,
+      'limited',
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t49u). The word “and” is part of this one Quik-Sorb token. It names ginger root, amla extract, and capsicum fruit. It does not count toward the three-or-more Limited stack. It is not Quik-Sorb® (Ginger Root, Amla Extract, Capsicum Fruit).`,
+    'cleared',
+  );
+}
+
 function t48uWhy(name: string): string {
   const n = norm(name);
   if (n === 'natural tangerine flavor') {
@@ -1109,6 +1144,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name) || isT49uLimitedName(ingredient.name)) {
+    return t49uWhy(ingredient.name);
   }
   if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) {
     return t48uWhy(ingredient.name);
