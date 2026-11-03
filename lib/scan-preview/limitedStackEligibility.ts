@@ -406,6 +406,35 @@ export function isT49uLimitedName(name: string): boolean {
   return T49U_LIMITED.has(t121uToken(name));
 }
 
+const T50U_CLEARED = new Set([
+  'plain caramel color',
+  'rich starch',
+  'taraxacum officinale dandelion root extract',
+  'rheum officinale rubarb root extract',
+]);
+
+const T50U_CAUTION = new Set([
+  'calicium silicate',
+]);
+
+const T50U_LIMITED = new Set([
+  'microcrystaline cellulose bulking agent',
+  'hydroxpropyl methyl cellulose glazing agent',
+]);
+
+/** t50u. The four Cleared strings and Calicium Silicate do not stack. The two misspelled cellulose strings count. */
+export function isT50uClearedName(name: string): boolean {
+  return T50U_CLEARED.has(t121uToken(name));
+}
+
+export function isT50uCautionName(name: string): boolean {
+  return T50U_CAUTION.has(t121uToken(name));
+}
+
+export function isT50uLimitedName(name: string): boolean {
+  return T50U_LIMITED.has(t121uToken(name));
+}
+
 const T150E_CLEARED = new Set([
   'natural cherry flavor',
 ]);
@@ -825,6 +854,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT45uCautionName(ingredient.name)) return false;
   if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) return false;
   if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name)) return false;
+  if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
@@ -845,6 +875,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT54uClearedFlavorName(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (isT49uLimitedName(ingredient.name)) return true;
+  if (isT50uLimitedName(ingredient.name)) return true;
   if (isT150eLimitedName(ingredient.name)) return true;
   if (isT144eLimitedName(ingredient.name)) return true;
   if (isT143eLimitedName(ingredient.name)) return true;
