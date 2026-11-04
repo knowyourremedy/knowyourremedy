@@ -466,6 +466,15 @@ export function isT59uClearedName(name: string): boolean {
   return T59U_CLEARED.has(t121uToken(name));
 }
 
+const T61U_CLEARED = new Set([
+  'rosemary oil antioxidant',
+]);
+
+/** t61u. This exact antioxidant print only. Not Rosemary Oil, not Rosemary Extract, not nasal rosemary oil. */
+export function isT61uClearedName(name: string): boolean {
+  return T61U_CLEARED.has(t121uToken(name));
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -917,6 +926,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT55uCautionName(ingredient.name)) return false;
   if (isT58uClearedName(ingredient.name) || isT58uCautionName(ingredient.name)) return false;
   if (isT59uClearedName(ingredient.name)) return false;
+  if (isT61uClearedName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;

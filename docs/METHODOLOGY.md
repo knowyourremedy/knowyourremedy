@@ -532,6 +532,8 @@ Anchored to published regulatory and scientific findings. **All entries below ar
 
 **Topical oil form rule — LOCKED (Sept 15, 2026).** Named single oil/butter as the BASE or FILL = Cleared. Tap fill ≠ gummy High. Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
 
+**Changed Nov 4, 2026 (t61u founder order; KYR6-e):** Exact string only. **Cleared, do not stack:** Rosemary Oil (Antioxidant). It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule on the line above. The parenthesis is part of this one token. It is not Rosemary Oil, and it is not Rosemary Extract. Nasal rosemary oil stays Caution.
+
 ### High-risk — any one = Avoid
 
 | Additive | Also appears as | Why high-risk |
