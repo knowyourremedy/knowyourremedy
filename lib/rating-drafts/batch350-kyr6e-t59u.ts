@@ -31,7 +31,7 @@ const SRC: Record<string, string> = {
   orange: 'Methodology §5 Cleared (t130e). Orange Oil. Does not count toward the t137u stack.',
   quikAlmaExt: 'Methodology §5 Cleared (t59u). Quik-Sorb® (Ginger Rhizome, Alma Fruit Extract, Capsicum Fruit). The parenthesis is one token. Does not count toward the t137u stack.',
   natOrange: 'Methodology §5 Cleared (t59u). Natural Orange Oil. The word Natural is part of this token. Does not count toward the t137u stack.',
-  rosemary: 'Methodology §5 Caution (rosemary oil, a scent oil). Does not count toward the t137u stack.',
+  rosemary: 'Methodology §5 Cleared (t61u). Rosemary Oil (Antioxidant). Named oil used as fill/antioxidant in an oral fish-oil panel, under the named-oil rule (docs/METHODOLOGY.md line 533). Does not count toward the t137u stack. Not Rosemary Oil and not Rosemary Extract.',
   toco: 'Methodology §5 Cleared (tocopherol, a vitamin E antioxidant).',
   quikAlma: 'Methodology §5 Cleared (t48u). Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit). Does not count toward the t137u stack.',
 };
@@ -138,11 +138,11 @@ export const BATCH350_KYR6E_T59U: RatingRecord[] = [
     actives: [{ name: 'Fish Oil', strength: '4.2 g' }],
     ings: [
       ['Natural Orange Oil', 'cleared', 'natOrange'],
-      ['Rosemary Oil (Antioxidant)', 'moderate', 'rosemary'],
+      ['Rosemary Oil (Antioxidant)', 'cleared', 'rosemary'],
       ['Tocopherol (Antioxidant)', 'cleared', 'toco'],
       ['Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit)', 'cleared', 'quikAlma'],
     ],
-    source: 't59u. https://naturesanswer.com/products/omega-3-liquid-16oz lists this pack at $42.99 and in stock. Serving size 1 teaspoon (5 mL), 96 servings. Other Ingredients: Natural Orange Oil, Rosemary Oil (Antioxidant), Tocopherol (Antioxidant), Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit). Counted Limited tokens: none. Rosemary Oil (Antioxidant) is a Caution cap and does not stack. The variant barcode field lists 083000261374. The check digit passes.',
+    source: 't59u. https://naturesanswer.com/products/omega-3-liquid-16oz lists this pack at $42.99 and in stock. Serving size 1 teaspoon (5 mL), 96 servings. Other Ingredients: Natural Orange Oil, Rosemary Oil (Antioxidant), Tocopherol (Antioxidant), Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit). Counted Limited tokens: none. Rosemary Oil (Antioxidant) is Cleared (t61u) and does not stack. The variant barcode field lists 083000261374. The check digit passes.',
   }),
 ];
 

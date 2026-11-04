@@ -57,6 +57,7 @@ import {
   isT58uClearedName,
   isT58uCommaQuikSorbName,
   isT59uClearedName,
+  isT61uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1278,6 +1279,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close(
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
+    );
+  }
+  if (isT61uClearedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule (docs/METHODOLOGY.md line 533). It does not count toward the three-or-more Limited stack. It is not Rosemary Oil, and it is not Rosemary Extract.`,
+      'cleared',
     );
   }
   if (isT59uClearedName(ingredient.name)) {
