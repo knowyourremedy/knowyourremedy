@@ -53,6 +53,9 @@ import {
   isT50uClearedName,
   isT50uLimitedName,
   isT55uCautionName,
+  isT58uCautionName,
+  isT58uClearedName,
+  isT58uCommaQuikSorbName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1120,8 +1123,52 @@ function t130eWhy(name: string, level: RiskLevel): string {
     );
   }
   return close(
-    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t130e). It does not count toward the three-or-more Limited stack. 80-92% Certified Organic Alcohol is not 80-92% By Volume Certified Organic Alcohol. Rebaudioside A (Stevia Leaf Extract) is not bare Rebaudioside A. Spirulina Extract (for color) is not spirulina (color) and it is not spirulina (for color).`,
+    `${name.trim()} is the exact printed string. The founder locked this token Cleared (t130e). It does not count toward the three-or-more Limited stack. 80-92% Certified Organic Alcohol is not 80-92% By Volume Certified Organic Alcohol. That By Volume print is its own Cleared lock (t58u). Rebaudioside A (Stevia Leaf Extract) is not bare Rebaudioside A. Spirulina Extract (for color) is not spirulina (color) and it is not spirulina (for color).`,
     level,
+  );
+}
+
+function t58uClearedWhy(name: string): string {
+  const n = norm(name);
+  if (n === 'citrus sinensis orange peel extract') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). It names orange peel. The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not an unnamed citrus extract.`,
+      'cleared',
+    );
+  }
+  if (n === '60 65 certified organic ethanol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). It is a named certified-organic ethanol with a printed strength. It is the liquid that carries the other ingredients. It does not count toward the three-or-more Limited stack. It is not bare Ethanol.`,
+      'cleared',
+    );
+  }
+  if (n === '80 92 by volume certified organic alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). The words By Volume are part of this one token. It is a named certified-organic alcohol with a printed strength. It does not count toward the three-or-more Limited stack. It is not 80-92% Certified Organic Alcohol.`,
+      'cleared',
+    );
+  }
+  if (n === '18 25 ethyl alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). It is a named ethyl alcohol with a printed strength. It is the liquid that carries the other ingredients. It does not count toward the three-or-more Limited stack. It is not bare Ethyl Alcohol.`,
+      'cleared',
+    );
+  }
+  if (n === 'rebaudioside a from organic stevia rebaudiana leaf') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). It names Rebaudioside A from organic Stevia rebaudiana leaf. The parenthesis is part of this one token. High-purity steviol glycosides are Cleared (EFSA ADI, 2011). It does not count toward the three-or-more Limited stack. It is not Rebaudioside A (Stevia Leaf Extract), it is not bare Rebaudioside A, and it is not the Limited stevia leaf extract row.`,
+      'cleared',
+    );
+  }
+  if (n === 'orange juice') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t58u). It is the named orange juice. It does not count toward the three-or-more Limited stack. It is not an unnamed citrus extract.`,
+      'cleared',
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t58u). It does not count toward the three-or-more Limited stack.`,
+    'cleared',
   );
 }
 
@@ -1187,6 +1234,21 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT58uCommaQuikSorbName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. Locked Cleared (t58u). The comma after the mark is part of this printed token. It names ginger rhizome, amla fruit, and capsicum fruit. The parenthesis is part of this token. It does not count toward the three-or-more Limited stack. It is not Quik-Sorb® (ginger rhizome, amla fruit, capsicum fruit).`,
+      'cleared',
+    );
+  }
+  if (isT58uCautionName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. Locked Caution (t58u). It is a zero-point Caution cap and does not count toward the three-or-more Limited stack. The printed word is Silicone, not Silicon. It is not the silicon dioxide nanoparticle cap (EFSA 2018).`,
+      'moderate',
+    );
+  }
+  if (isT58uClearedName(ingredient.name)) {
+    return t58uClearedWhy(ingredient.name);
   }
   if (isT55uCautionName(ingredient.name)) {
     return 'Memorial Sloan Kettering About Herbs reports case reports of kidney damage or failure after excess intake and notes that rhubarb is high in oxalates. Under the one-source rule (docs/PROJECT_NOTES.md line 2204), that source decides.';

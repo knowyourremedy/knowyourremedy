@@ -423,6 +423,35 @@ const T55U_CAUTION = new Set([
   'rheum officinale rubarb root extract',
 ]);
 
+const T58U_CLEARED = new Set([
+  'citrus sinensis orange peel extract',
+  '60 65 certified organic ethanol',
+  '80 92 by volume certified organic alcohol',
+  '18 25 ethyl alcohol',
+  'rebaudioside a from organic stevia rebaudiana leaf',
+  'orange juice',
+]);
+
+const T58U_CAUTION = new Set([
+  'silicone dioxide',
+]);
+
+/** The comma after the mark is part of this print. The normalizer drops it, so this match keeps the comma. */
+export function isT58uCommaQuikSorbName(name: string): boolean {
+  const raw = name.toLowerCase().replace(/®/g, '').replace(/\s+/g, ' ').trim();
+  return raw === 'quik-sorb, (ginger rhizome, amla fruit, capsicum fruit)';
+}
+
+/** t58u. Exact Cleared strings. None of these stack. The comma Quik-Sorb is not the no-comma t48u string. */
+export function isT58uClearedName(name: string): boolean {
+  return isT58uCommaQuikSorbName(name) || T58U_CLEARED.has(t121uToken(name));
+}
+
+/** t58u. Silicone Dioxide only. Zero-point Caution cap. Not Silicon Dioxide. */
+export function isT58uCautionName(name: string): boolean {
+  return T58U_CAUTION.has(t121uToken(name));
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -702,7 +731,7 @@ const T130E_LIMITED = new Set([
   'fatty acids stabilizer',
 ]);
 
-/** t130e exact strings. 80-92% Certified Organic Alcohol is not the By Volume print. */
+/** t130e exact strings. 80-92% Certified Organic Alcohol is not the By Volume print. That By Volume print is the t58u Cleared lock. */
 export function isT130eClearedName(name: string): boolean {
   return T130E_CLEARED.has(t121uToken(name));
 }
@@ -872,6 +901,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name)) return false;
   if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name)) return false;
   if (isT55uCautionName(ingredient.name)) return false;
+  if (isT58uClearedName(ingredient.name) || isT58uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
