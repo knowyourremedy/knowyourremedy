@@ -56,6 +56,7 @@ import {
   isT58uCautionName,
   isT58uClearedName,
   isT58uCommaQuikSorbName,
+  isT59uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1128,6 +1129,50 @@ function t130eWhy(name: string, level: RiskLevel): string {
   );
 }
 
+function t59uClearedWhy(name: string): string {
+  const n = norm(name);
+  if (n === 'orange syrup') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). It is a named orange syrup, a food syrup. It does not count toward the three-or-more Limited stack. It is not Orange Juice.`,
+      'cleared',
+    );
+  }
+  if (n === 'alcohol through fermentation 4 5 v v alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). The colon, the percent, and v/v are part of this one token. It is the alcohol made by fermentation, printed with a strength. It is the liquid that carries the other ingredients. It does not count toward the three-or-more Limited stack. It is not bare Alcohol, which stays Limited and still counts.`,
+      'cleared',
+    );
+  }
+  if (n === '11 15 certified organic alcohol') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). It is a named certified-organic alcohol with a printed strength. It is the liquid that carries the other ingredients. It does not count toward the three-or-more Limited stack. It is not 10-13% Certified Organic Alcohol and it is not 12-15% Certified Organic Alcohol.`,
+      'cleared',
+    );
+  }
+  if (n === 'luo han guo extract') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). It is the named monk fruit extract. High-purity monk fruit / mogrosides are Cleared (FDA GRAS; EFSA positive opinion, 2024). It does not count toward the three-or-more Limited stack. It is not Lo Han Fruit Concentrate and it is not Lo Han Fruit Extract.`,
+      'cleared',
+    );
+  }
+  if (n === 'quik sorb ginger rhizome alma fruit extract capsicum fruit') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). It names ginger rhizome, alma fruit extract, and capsicum fruit. The parenthesis is part of this one token. It does not count toward the three-or-more Limited stack. It is not Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit).`,
+      'cleared',
+    );
+  }
+  if (n === 'natural orange oil') {
+    return close(
+      `${name.trim()} is the exact printed string. Locked Cleared (t59u). It is a named orange oil. The word Natural is part of this one token. It does not count toward the three-or-more Limited stack. It is not Orange Oil.`,
+      'cleared',
+    );
+  }
+  return close(
+    `${name.trim()} is the exact printed string. Locked Cleared (t59u). It does not count toward the three-or-more Limited stack.`,
+    'cleared',
+  );
+}
+
 function t58uClearedWhy(name: string): string {
   const n = norm(name);
   if (n === 'citrus sinensis orange peel extract') {
@@ -1234,6 +1279,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT59uClearedName(ingredient.name)) {
+    return t59uClearedWhy(ingredient.name);
   }
   if (isT58uCommaQuikSorbName(ingredient.name)) {
     return close(

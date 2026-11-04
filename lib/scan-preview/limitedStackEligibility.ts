@@ -452,6 +452,20 @@ export function isT58uCautionName(name: string): boolean {
   return T58U_CAUTION.has(t121uToken(name));
 }
 
+const T59U_CLEARED = new Set([
+  'orange syrup',
+  'alcohol through fermentation 4 5 v v alcohol',
+  '11 15 certified organic alcohol',
+  'luo han guo extract',
+  'quik sorb ginger rhizome alma fruit extract capsicum fruit',
+  'natural orange oil',
+]);
+
+/** t59u. Exact Cleared strings. None of these stack. The Alma Fruit Extract Quik-Sorb is not the no-extract alma print. */
+export function isT59uClearedName(name: string): boolean {
+  return T59U_CLEARED.has(t121uToken(name));
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -902,6 +916,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name)) return false;
   if (isT55uCautionName(ingredient.name)) return false;
   if (isT58uClearedName(ingredient.name) || isT58uCautionName(ingredient.name)) return false;
+  if (isT59uClearedName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
