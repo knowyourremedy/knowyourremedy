@@ -417,6 +417,9 @@ const T50U_CLEARED = new Set([
   'plain caramel color',
   'rich starch',
   'taraxacum officinale dandelion root extract',
+]);
+
+const T55U_CAUTION = new Set([
   'rheum officinale rubarb root extract',
 ]);
 
@@ -429,9 +432,14 @@ const T50U_LIMITED = new Set([
   'hydroxpropyl methyl cellulose glazing agent',
 ]);
 
-/** t50u. The four Cleared strings and Calicium Silicate do not stack. The two misspelled cellulose strings count. */
+/** t50u. The three Cleared strings and Calicium Silicate do not stack. The two misspelled cellulose strings count. Rheum Officinale (Rubarb) Root Extract moved to t55u. */
 export function isT50uClearedName(name: string): boolean {
   return T50U_CLEARED.has(t121uToken(name));
+}
+
+/** t55u. This exact Rubarb print only. Zero-point Caution cap. No other Rheum string. */
+export function isT55uCautionName(name: string): boolean {
+  return T55U_CAUTION.has(t121uToken(name));
 }
 
 export function isT50uCautionName(name: string): boolean {
@@ -863,6 +871,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT48uClearedName(ingredient.name) || isT48uCautionName(ingredient.name)) return false;
   if (isT49uClearedName(ingredient.name) || isT49uCautionName(ingredient.name)) return false;
   if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name)) return false;
+  if (isT55uCautionName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;

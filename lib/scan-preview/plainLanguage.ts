@@ -52,6 +52,7 @@ import {
   isT50uCautionName,
   isT50uClearedName,
   isT50uLimitedName,
+  isT55uCautionName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -713,12 +714,6 @@ function t50uWhy(name: string): string {
       'cleared',
     );
   }
-  if (n === 'rheum officinale rubarb root extract') {
-    return close(
-      `${name.trim()} is the exact printed string. Locked Cleared (t50u). The printed spelling Rubarb is part of this token. It is the named rhubarb root. It does not count toward the three-or-more Limited stack.`,
-      'cleared',
-    );
-  }
   if (n === 'calicium silicate') {
     return close(
       `${name.trim()} is the exact printed string. Locked Caution (t50u). It is the misspelled print of calcium silicate, a silicate flow agent. It does not count toward the three-or-more Limited stack. It is not the silicon dioxide nanoparticle cap.`,
@@ -1192,6 +1187,9 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       'Menthol printed alone is a named cooling ingredient. The founder locked this exact token Cleared (t122e). It does not count toward the three-or-more Limited stack. It is not Natural Menthol, which stays the t42u Limited lock. It is not Menthol Lactate, and it is not Menthyl Lactate. Menthol printed as a Drug Facts active stays ungraded.',
       ingredient.riskLevel,
     );
+  }
+  if (isT55uCautionName(ingredient.name)) {
+    return 'Memorial Sloan Kettering About Herbs reports case reports of kidney damage or failure after excess intake and notes that rhubarb is high in oxalates. Under the one-source rule (docs/PROJECT_NOTES.md line 2204), that source decides.';
   }
   if (isT50uClearedName(ingredient.name) || isT50uCautionName(ingredient.name) || isT50uLimitedName(ingredient.name)) {
     return t50uWhy(ingredient.name);
