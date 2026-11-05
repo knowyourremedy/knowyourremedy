@@ -58,6 +58,7 @@ import {
   isT58uCommaQuikSorbName,
   isT59uClearedName,
   isT61uClearedName,
+  isT66uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1281,9 +1282,22 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (isT66uClearedName(ingredient.name)) {
+    const n = norm(ingredient.name);
+    if (n === 'natural blue raspberry flavor') {
+      return close(
+        `${ingredient.name.trim()} is the exact printed string. It is a named blue raspberry flavor, Cleared under the named flavor rule (docs/METHODOLOGY.md line 29). It does not count toward the three-or-more Limited stack. It is not the Limited token Natural Flavors.`,
+        'cleared',
+      );
+    }
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. It is a named alcohol vehicle with a printed strength, Cleared under the alcohol-with-strength rule (docs/METHODOLOGY.md line 29). It does not count toward the three-or-more Limited stack. It is not USP Alcohol, and it is not the Limited token Pure Grain Alcohol.`,
+      'cleared',
+    );
+  }
   if (isT61uClearedName(ingredient.name)) {
     return close(
-      `${ingredient.name.trim()} is the exact printed string. It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule (docs/METHODOLOGY.md line 533). It does not count toward the three-or-more Limited stack. It is not Rosemary Oil, and it is not Rosemary Extract.`,
+      `${ingredient.name.trim()} is the exact printed string. It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule (docs/METHODOLOGY.md line 535). It does not count toward the three-or-more Limited stack. It is not Rosemary Oil, and it is not Rosemary Extract.`,
       'cleared',
     );
   }
