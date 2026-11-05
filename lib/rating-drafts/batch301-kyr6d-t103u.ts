@@ -25,7 +25,7 @@ const S = {
   flavors:
     'Methodology §5 Limited (t54u natural-flavor rule). Natural Flavors is the exact t54u name. Counts toward the t137u stack.',
   stearate: 'Methodology §5 Cleared (calcium stearate).',
-  spirulina: 'Methodology §5 Caution (blue spirulina flakes). Does not count toward the t137u stack.',
+  spirulina: 'Methodology §5 Cleared (t70u). Blue Spirulina Flakes is a named spirulina color. Does not count toward the t137u stack.',
   sucralose: 'Methodology §5 Limited (sucralose). Counts toward the t137u stack.',
   monk: 'Methodology §5 Cleared (monk fruit).',
   steviol:
@@ -100,7 +100,7 @@ const PPYM =
 const NOTE_LOZ =
   'Counted Limited token: Natural Raspberry Flavor. That is one, so this is not a 3+ stack. Brown rice syrup, and citric acid are Cleared. Zinc and the herbal extracts are actives and are not graded. iHerb prints natural flavors and water for a 45-count. The brand facts image does not print water and names Natural Raspberry Flavor. The image was graded. That wording difference does not change the grade.';
 const NOTE_GUM =
-  'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Gum Base, Natural Flavors, Sucralose, Steviol Glycosides. Sorbitol and xylitol are named sugar alcohols and do not stack. Calcium stearate, monk fruit, and gum arabic are Cleared. Blue spirulina flakes are Caution and do not stack. Caffeine, L-theanine, vitamin B6, and vitamin B12 are actives and are not graded. This is the peppermint 54-piece gum. The spearmint line was not used.';
+  'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Gum Base, Natural Flavors, Sucralose, Steviol Glycosides. Sorbitol and xylitol are named sugar alcohols and do not stack. Calcium stearate, monk fruit, and gum arabic are Cleared. Blue Spirulina Flakes are Cleared (t70u) and do not stack. Caffeine, L-theanine, vitamin B6, and vitamin B12 are actives and are not graded. This is the peppermint 54-piece gum. The spearmint line was not used.';
 const NOTE_LEMON =
   'Counted Limited token: Stevia Leaf Extract. That is one, so this is not a 3+ stack. Brown rice syrup, lemon oil, and honey are Cleared. Vitamin C and the herbal extracts are actives and are not graded.';
 const NOTE_GINGER =
@@ -171,7 +171,7 @@ export const BATCH301_KYR6D_T103U: RatingRecord[] = [
       flag(PGUM, 'Xylitol', 'limited', 'polyol'),
       flag(PGUM, 'Natural Flavors', 'limited', 'flavors'),
       flag(PGUM, 'Calcium Stearate', 'cleared', 'stearate'),
-      flag(PGUM, 'Blue Spirulina Flakes', 'moderate', 'spirulina'),
+      flag(PGUM, 'Blue Spirulina Flakes', 'cleared', 'spirulina'),
       flag(PGUM, 'Sucralose', 'limited', 'sucralose'),
       flag(PGUM, 'Monk Fruit', 'cleared', 'monk'),
       flag(PGUM, 'Steviol Glycosides', 'limited', 'steviol'),

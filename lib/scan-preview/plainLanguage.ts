@@ -59,6 +59,8 @@ import {
   isT59uClearedName,
   isT61uClearedName,
   isT66uClearedName,
+  isT70uClearedName,
+  isT70uLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1282,6 +1284,37 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
       ingredient.riskLevel,
     );
   }
+  if (isT70uLimitedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. It is Limited because the label does not name the anhydrous salt. Sodium Acetate Anhydrous is the Cleared salt (docs/METHODOLOGY.md line 770). Sodium acetate trihydrate maps to that anhydrous row. This bare print is not those locks. It counts toward the three-or-more Limited stack.`,
+      'limited',
+    );
+  }
+  if (isT70uClearedName(ingredient.name)) {
+    const n = norm(ingredient.name);
+    if (n === 'fruit and vegetable juice for color') {
+      return close(
+        `${ingredient.name.trim()} is the exact printed string. It is a named fruit and vegetable juice used as color, Cleared under the juice rule (docs/METHODOLOGY.md line 199). It does not count toward the three-or-more Limited stack. It is not Fruit and Vegetable Juice (color).`,
+        'cleared',
+      );
+    }
+    if (n === 'monk fruit') {
+      return close(
+        `${ingredient.name.trim()} is the exact printed string. It is the named monk fruit sweetener. High-purity monk fruit is Cleared (FDA GRAS; EFSA positive opinion, 2024). It does not count toward the three-or-more Limited stack. It is not Monk Fruit Extract.`,
+        'cleared',
+      );
+    }
+    if (n === 'spirulina extract for color') {
+      return close(
+        `${ingredient.name.trim()} is the exact printed string. It is a named spirulina color. It does not count toward the three-or-more Limited stack. It is not Spirulina Extract (for color).`,
+        'cleared',
+      );
+    }
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. It is a named plant color. It does not count toward the three-or-more Limited stack. It is not Spirulina Extract (for color), and it is not bare spirulina.`,
+      'cleared',
+    );
+  }
   if (isT66uClearedName(ingredient.name)) {
     const n = norm(ingredient.name);
     if (n === 'natural blue raspberry flavor') {
@@ -1297,7 +1330,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
   }
   if (isT61uClearedName(ingredient.name)) {
     return close(
-      `${ingredient.name.trim()} is the exact printed string. It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule (docs/METHODOLOGY.md line 535). It does not count toward the three-or-more Limited stack. It is not Rosemary Oil, and it is not Rosemary Extract.`,
+      `${ingredient.name.trim()} is the exact printed string. It is a named oil used as fill/antioxidant in an oral fish-oil panel, Cleared under the named-oil rule (docs/METHODOLOGY.md line 537). It does not count toward the three-or-more Limited stack. It is not Rosemary Oil, and it is not Rosemary Extract.`,
       'cleared',
     );
   }

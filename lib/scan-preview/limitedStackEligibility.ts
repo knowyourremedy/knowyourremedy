@@ -485,6 +485,29 @@ export function isT66uClearedName(name: string): boolean {
   return T66U_CLEARED.has(t121uToken(name));
 }
 
+const T70U_CLEARED = new Set([
+  'fruit and vegetable juice for color',
+  'blue spirulina flakes',
+  'green spirulina flakes',
+  'spirulina extract for color',
+  'spirulina extract for color flakes',
+  'turmeric extract for color flakes',
+  'spirulina extract for blue color flakes',
+  'monk fruit',
+]);
+
+/** t70u. Exact Cleared strings. The parenthetical Spirulina Extract (for color) stays t130e. */
+export function isT70uClearedName(name: string): boolean {
+  const n = t121uToken(name);
+  if (n === 'spirulina extract for color' && name.includes('(')) return false;
+  return T70U_CLEARED.has(n);
+}
+
+/** t70u. Bare Sodium Acetate only. It counts. Not Sodium Acetate Anhydrous and not the trihydrate. */
+export function isT70uLimitedName(name: string): boolean {
+  return t121uToken(name) === 'sodium acetate';
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -918,6 +941,8 @@ export function isNeverStackLimitedName(name: string): boolean {
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
+  if (isT70uLimitedName(ingredient.name)) return true;
+  if (isT70uClearedName(ingredient.name)) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;
   if (isT121uClearedName(ingredient.name) || isT121uCautionName(ingredient.name)) return false;
   if (isT122eClearedName(ingredient.name, ingredient.riskLevel)) return false;
