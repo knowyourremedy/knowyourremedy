@@ -31,7 +31,7 @@ const SRC: Record<string, string> = {
   orange: 'Methodology §5 Cleared (t130e). Orange Oil. Does not count toward the t137u stack.',
   quikAlmaExt: 'Methodology §5 Cleared (t59u). Quik-Sorb® (Ginger Rhizome, Alma Fruit Extract, Capsicum Fruit). The parenthesis is one token. Does not count toward the t137u stack.',
   natOrange: 'Methodology §5 Cleared (t59u). Natural Orange Oil. The word Natural is part of this token. Does not count toward the t137u stack.',
-  rosemary: 'Methodology §5 Cleared (t61u). Rosemary Oil (Antioxidant). Named oil used as fill/antioxidant in an oral fish-oil panel, under the named-oil rule (docs/METHODOLOGY.md line 533). Does not count toward the t137u stack. Not Rosemary Oil and not Rosemary Extract.',
+  rosemary: 'Methodology §5 Cleared (t61u). Rosemary Oil (Antioxidant). Named oil used as fill/antioxidant in an oral fish-oil panel, under the named-oil rule (docs/METHODOLOGY.md line 535). Does not count toward the t137u stack. Not Rosemary Oil and not Rosemary Extract.',
   toco: 'Methodology §5 Cleared (tocopherol, a vitamin E antioxidant).',
   quikAlma: 'Methodology §5 Cleared (t48u). Quik-Sorb® (ginger rhizome, alma fruit, capsicum fruit). Does not count toward the t137u stack.',
 };

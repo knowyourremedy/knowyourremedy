@@ -475,6 +475,16 @@ export function isT61uClearedName(name: string): boolean {
   return T61U_CLEARED.has(t121uToken(name));
 }
 
+const T66U_CLEARED = new Set([
+  'usp alcohol 18 20 by volume',
+  'natural blue raspberry flavor',
+]);
+
+/** t66u. These two prints only. The en dash is part of the alcohol token. Not bare USP Alcohol. Not Natural Flavors. */
+export function isT66uClearedName(name: string): boolean {
+  return T66U_CLEARED.has(t121uToken(name));
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -927,6 +937,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT58uClearedName(ingredient.name) || isT58uCautionName(ingredient.name)) return false;
   if (isT59uClearedName(ingredient.name)) return false;
   if (isT61uClearedName(ingredient.name)) return false;
+  if (isT66uClearedName(ingredient.name)) return false;
   if (isT150eClearedName(ingredient.name)) return false;
   if (isT148eClearedName(ingredient.name)) return false;
   if (isT144eClearedName(ingredient.name)) return false;
