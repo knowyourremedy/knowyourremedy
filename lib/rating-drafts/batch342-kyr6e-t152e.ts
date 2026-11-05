@@ -27,7 +27,7 @@ const MONK = 'Methodology §5 Cleared (monk fruit).';
 const STEVIOL = 'Methodology §5 Limited (steviol glycosides — t16u). Printed without high-purity. Counts toward the t137u stack.';
 const ACACIA = 'Methodology §5 Cleared (gum acacia / acacia gum).';
 const CITRIC = 'Methodology §5 Cleared (citric acid).';
-const SPIR = 'Methodology §5 Caution (spirulina). Does not count toward the t137u stack.';
+const SPIR = 'Methodology §5 Cleared (t70u named spirulina color). Does not count toward the t137u stack.';
 const GLYC = 'Methodology §5 Cleared (glycerin / vegetable glycerin).';
 const WATER = 'Methodology §5 Cleared (water / purified water).';
 const ALC = 'Methodology §5 Cleared (12-15% Certified Organic Alcohol — t130e). Does not count toward the t137u stack.';
@@ -152,7 +152,7 @@ export const BATCH342_KYR6E_T152E: RatingRecord[] = [
       ['Xylitol', 'moderate', POLYOL],
       ['Natural Flavors', 'limited', FLAVORS],
       ['Calcium Stearate', 'cleared', STEARATE],
-      ['Green Spirulina Flakes', 'moderate', SPIR],
+      ['Green Spirulina Flakes', 'cleared', SPIR],
       ['Sucralose', 'limited', SUCRALOSE],
       ['Monk Fruit', 'cleared', MONK],
       ['Steviol Glycosides', 'limited', STEVIOL],
@@ -182,8 +182,8 @@ export const BATCH342_KYR6E_T152E: RatingRecord[] = [
       ['Gum Base', 'limited', GUM],
       ['Natural Flavors', 'limited', FLAVORS],
       ['Calcium Stearate', 'cleared', STEARATE],
-      ['Green Spirulina Flakes', 'moderate', SPIR],
-      ['Blue Spirulina Flakes', 'moderate', SPIR],
+      ['Green Spirulina Flakes', 'cleared', SPIR],
+      ['Blue Spirulina Flakes', 'cleared', SPIR],
       ['Sucralose', 'limited', SUCRALOSE],
       ['Monk Fruit', 'cleared', MONK],
       ['Steviol Glycosides', 'limited', STEVIOL],
@@ -212,7 +212,7 @@ export const BATCH342_KYR6E_T152E: RatingRecord[] = [
       ['Gum Base', 'limited', GUM],
       ['Natural Flavors', 'limited', FLAVORS],
       ['Calcium Stearate', 'cleared', STEARATE],
-      ['Spirulina Extract for Blue Color Flakes', 'moderate', SPIR],
+      ['Spirulina Extract for Blue Color Flakes', 'cleared', SPIR],
       ['Sucralose', 'limited', SUCRALOSE],
       ['Monk Fruit', 'cleared', MONK],
       ['Steviol Glycosides', 'limited', STEVIOL],
