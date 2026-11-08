@@ -2,7 +2,7 @@
 // Four North American Herb & Spice black cumin seed oil bottles.
 // The facts-table oil is the active and is not graded. No other material is named.
 // None is not printed. The Sprouts section is not edited. No new locks.
-// Absorb-Max, Cardio Plus, the gelcaps, and the 32 oz selector stay unwritten.
+// Absorb-Max, Cardio Plus, and the gelcaps stay unwritten.
 
 import type { RatingRecord } from '../ratingRecord';
 import { plainIngredientWhy } from '../scan-preview/plainLanguage';
@@ -105,7 +105,7 @@ export const BATCH360_KYR6E_T75U: RatingRecord[] = [
     verdict: 'clean',
     honestNote: '',
     sourcesGeneral: [
-      't75u. https://www.northamericanherbandspice.com/shop/oil-of-black-seed/ Select a Size includes 16 Ounce Cold-Pressed. The selected subscription price shown was $59.49. The facts image https://www.northamericanherbandspice.com/wp-content/uploads/2018/10/BlackSeed-16oz-1920x1900_Right-1.png is headed Supplements Facts. Serving Size 1 tsp. (5g). Servings Per Container 96. Black Cumin (seed) Oil 5g. Thymoquinone 40mg. Omega-6 2.75g. Omega-9 1.3g. Ingredients: 100% cold-pressed extra virgin black cumin seed oil (Nigella sativa). No Other ingredients heading. None is not printed. The oil is the active and is not graded. Counted Limited tokens: none. The directions image https://www.northamericanherbandspice.com/wp-content/uploads/2018/10/BlackSeed-16oz-1920x1900_Left-1.png prints 6 35824 00914 6 and label code LA9139R1. The printed barcode digits were visually read as 6 35824 00914 6; its UPC check digit validates. PureFormulas https://www.pureformulas.com/product/oil-of-black-seed-by-north-american-herb-and-spice/1000055598 on the 16 fl oz choice lists the same UPC text, 96 servings, and the same oil line. This is not the 12 oz. The same PureFormulas selector also shows 32 fl oz. That 32 oz choice was not opened and is not this row.',
+      't75u. https://www.northamericanherbandspice.com/shop/oil-of-black-seed/ Select a Size includes 16 Ounce Cold-Pressed. The selected subscription price shown was $59.49. The facts image https://www.northamericanherbandspice.com/wp-content/uploads/2018/10/BlackSeed-16oz-1920x1900_Right-1.png is headed Supplements Facts. Serving Size 1 tsp. (5g). Servings Per Container 96. Black Cumin (seed) Oil 5g. Thymoquinone 40mg. Omega-6 2.75g. Omega-9 1.3g. Ingredients: 100% cold-pressed extra virgin black cumin seed oil (Nigella sativa). No Other ingredients heading. None is not printed. The oil is the active and is not graded. Counted Limited tokens: none. The directions image https://www.northamericanherbandspice.com/wp-content/uploads/2018/10/BlackSeed-16oz-1920x1900_Left-1.png prints 6 35824 00914 6 and label code LA9139R1. The printed barcode digits were visually read as 6 35824 00914 6; its UPC check digit validates. PureFormulas https://www.pureformulas.com/product/oil-of-black-seed-by-north-american-herb-and-spice/1000055598 on the 16 fl oz choice lists the same UPC text, 96 servings, and the same oil line. This is the 16 oz single. The same PureFormulas selector also shows 32 fl oz. That 32 fl oz choice is the separate single nahs-b361-black-seed-oil-32, UPC 635824009153.',
     ],
   }),
 ];
