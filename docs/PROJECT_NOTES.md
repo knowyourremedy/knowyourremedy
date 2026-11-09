@@ -456,7 +456,7 @@ When writing rows:
 - Juice rule and hydrogenated oil rule stay as written.
 - Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options.
 
-Natural vs man-made tiebreaker: If it is not clear whether the commercial form of a token is natural or synthetic/man-made, air on the side of the stricter grade. Man-made or unclear origin takes the worse of the two options. Do not default to Cleared when the source is ambiguous. Named plant oils and simple food materials that are clearly botanical stay Cleared; processed derivatives, refined isolates, and anything of unclear commercial origin take the stricter grade.
+Natural vs man-made tiebreaker: Typically natural tokens (named oils, fruits, herbs, simple botanical extracts, named foods) are treated as natural and take the better grade (Cleared unless another rule applies). If a token is 50/50 natural-to-man-made (processed derivatives, refined isolates, coatings, preservatives, or anything where the commercial form is commonly synthetic or unclear), air on the side of the stricter grade. Do not default to Cleared when origin is ambiguous.
 
 - Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
 - Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
