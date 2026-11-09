@@ -362,3 +362,4 @@ export { BATCH362_KYR6E_T75U } from './batch362-kyr6e-t75u';
 export { BATCH363_KYR6E_T83U } from './batch363-kyr6e-t83u';
 export { BATCH364_KYR6E_T83U } from './batch364-kyr6e-t83u';
 export { BATCH365_KYR6E_T83U } from './batch365-kyr6e-t83u';
+export { BATCH366_KYR6E_T83U } from './batch366-kyr6e-t83u';
