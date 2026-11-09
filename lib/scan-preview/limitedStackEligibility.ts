@@ -508,6 +508,28 @@ export function isT70uLimitedName(name: string): boolean {
   return t121uToken(name) === 'sodium acetate';
 }
 
+const T83U_CLEARED = new Set([
+  'tapioca vegetable gelatin capsule material',
+  'cellulose vegi capsule',
+  'pullulan',
+  'pullulan tapioca',
+  'non gmo fish gelatin capsule',
+  'non gmo pullulan capsule',
+  'clove bud oil',
+  'cassia oil cinnamon',
+  'mediterranean source black seed oil nigella sativa',
+  'certified organic fair trade granulated coconut blossom nectar',
+  'organic peruvian yacon syrup',
+  'organic apple pectin',
+  'organic citric acid from citrus fruit',
+  'pomegranate concentrate',
+]);
+
+/** t83u. These exact prints only. Case is not a second token. Not bare Cassia oil, not bare citric acid, and not Organic pullulan. */
+export function isT83uClearedName(name: string): boolean {
+  return T83U_CLEARED.has(t121uToken(name));
+}
+
 const T50U_CAUTION = new Set([
   'calicium silicate',
 ]);
@@ -941,6 +963,7 @@ export function isNeverStackLimitedName(name: string): boolean {
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
+  if (isT83uClearedName(ingredient.name)) return false;
   if (isT70uLimitedName(ingredient.name)) return true;
   if (isT70uClearedName(ingredient.name)) return false;
   if (isPureVanillaExtractName(ingredient.name)) return false;

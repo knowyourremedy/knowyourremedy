@@ -61,6 +61,7 @@ import {
   isT66uClearedName,
   isT70uClearedName,
   isT70uLimitedName,
+  isT83uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1242,6 +1243,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (isT83uClearedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Cleared (t83u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
+      'cleared',
+    );
+  }
   if (n === 'tapioca') {
     return close(
       'Tapioca printed alone is the named starch food. The founder locked this exact token Cleared (t121u). It does not count toward the three-or-more Limited stack. It is not tapioca syrup, tapioca starch, tapioca maltodextrin, or tapioca dextrin.',
@@ -1757,8 +1764,8 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (n === 'clove bud oil') {
     return close(
-      'Named essential oil (clove bud). Not a seed oil in a gummy. The founder locked this exact token Caution (t84u). It does not count toward the three-or-more Limited stack.',
-      level,
+      'Named essential oil (clove bud). The founder locked this exact token Cleared (t83u). That lock overrides the t84u Caution call. It does not count toward the three-or-more Limited stack. It is not Clove Oil and it is not Clove Powder.',
+      'cleared',
     );
   }
 

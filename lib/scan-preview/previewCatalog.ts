@@ -362,6 +362,7 @@ import {
   BATCH360_KYR6E_T75U,
   BATCH361_KYR6E_T75U,
   BATCH362_KYR6E_T75U,
+  BATCH363_KYR6E_T83U,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -386,6 +387,7 @@ import {
 import { applyT138uIngredientLocks } from '@/lib/scan-preview/t138uLocks';
 import { applyT22uRow } from '@/lib/scan-preview/t22uLocks';
 import { applyT54uRow } from '@/lib/scan-preview/t54uLocks';
+import { applyT83uRow } from '@/lib/scan-preview/t83uLocks';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -771,7 +773,8 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH360_KYR6E_T75U,
   ...BATCH361_KYR6E_T75U,
   ...BATCH362_KYR6E_T75U,
-]).map(applyT22uRow).map(applyT54uRow);
+  ...BATCH363_KYR6E_T83U,
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
