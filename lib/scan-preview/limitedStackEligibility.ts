@@ -565,6 +565,19 @@ export function isT86uClearedName(name: string): boolean {
   return T86U_CLEARED.has(t121uToken(name));
 }
 
+const T87U_CLEARED = new Set([
+  'camu camu berries',
+  'wild raw birch bark',
+  'organic yacon root powder',
+  'siberian black chaga',
+  'cinnamon essential oil powder',
+]);
+
+/** t87u. These exact prints only. Case is not a second token. Not wild camu camu, not a birch-bark powder, and not wild, raw chaga. */
+export function isT87uClearedName(name: string): boolean {
+  return T87U_CLEARED.has(t121uToken(name));
+}
+
 const T83U_BARE_SHELL = new Set([
   'vegetable capsule',
   'vegetarian capsule',
@@ -1022,6 +1035,7 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (ingredient.stackCountExempt) return false;
   if (isT83uClearedName(ingredient.name)) return false;
   if (isT86uClearedName(ingredient.name)) return false;
+  if (isT87uClearedName(ingredient.name)) return false;
   if (isT83uBareShellLimitedName(ingredient.name)) return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   if (isT83uHydrogenatedPeanutOilName(ingredient.name)) return false;
   if (isT70uLimitedName(ingredient.name)) return true;

@@ -413,6 +413,7 @@ import { applyT22uRow } from '@/lib/scan-preview/t22uLocks';
 import { applyT54uRow } from '@/lib/scan-preview/t54uLocks';
 import { applyT83DecisionRow, applyT83uRow } from '@/lib/scan-preview/t83uLocks';
 import { applyT86uRow } from '@/lib/scan-preview/t86uLocks';
+import { applyT87uRow } from '@/lib/scan-preview/t87uLocks';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -823,7 +824,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH385_KYR6E_T83U,
   ...BATCH386_KYR6E_T83U,
   ...BATCH387_KYR6E_T86U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT83DecisionRow);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
