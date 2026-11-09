@@ -455,6 +455,9 @@ When writing rows:
 - Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition. Use level is not the rule.
 - Juice rule and hydrogenated oil rule stay as written.
 - Unnamed does not force a worse grade unless a named version of the same ingredient class would change the severity in that form. When a token could go either way, natural ingredients take the best of the two options and man-made ingredients take the worse of the two options.
+
+Natural vs man-made tiebreaker: If it is not clear whether the commercial form of a token is natural or synthetic/man-made, air on the side of the stricter grade. Man-made or unclear origin takes the worse of the two options. Do not default to Cleared when the source is ambiguous. Named plant oils and simple food materials that are clearly botanical stay Cleared; processed derivatives, refined isolates, and anything of unclear commercial origin take the stricter grade.
+
 - Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
 - Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
 - Stop after reporting missing tokens if any exist; do not continue working.
