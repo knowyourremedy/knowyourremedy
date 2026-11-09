@@ -33,7 +33,7 @@ const S = {
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
   steviaHp:
     'Methodology §5 Cleared (high-purity steviol glycosides). The panel names Stevia rebaudiana (Stevial Glycocids) Extract. The parenthesis is the glycoside form.',
-  clove: 'Methodology §5 Cleared (Clove Bud Oil — t83u). Named essential oil. This overrides the t84u Caution call. Does not count toward the t137u stack.',
+  clove: 'Methodology §5 Caution (Clove Bud Oil — t84u). Named essential oil. Does not count toward the t137u stack.',
   pepOil: 'Methodology §5 Cleared (peppermint oil).',
   menthol: 'Methodology §5 Caution (menthol). Inactive menthol in a spray stays Caution. Does not count toward the t137u stack.',
   echinacea: 'Methodology §5 Cleared (Echinacea purpurea root extract). Named plant-part extract used as an inactive.',
@@ -130,7 +130,7 @@ const SPRAY: IngredientFlag[] = [
   flag(PSPRAY, 'Water', 'cleared', 'water'),
   flag(PSPRAY, 'Glycerin', 'cleared', 'glycerin'),
   flag(PSPRAY, 'Stevia rebaudiana (Stevial Glycocids) Extract', 'cleared', 'steviaHp'),
-  flag(PSPRAY, 'Clove Bud Oil', 'cleared', 'clove'),
+  flag(PSPRAY, 'Clove Bud Oil', 'moderate', 'clove'),
   flag(PSPRAY, 'Peppermint Oil', 'cleared', 'pepOil'),
   flag(PSPRAY, 'Menthol', 'moderate', 'menthol'),
   flag(PSPRAY, 'Echinacea purpurea Root Extract', 'cleared', 'echinacea'),
@@ -384,7 +384,7 @@ export const BATCH291_KYR6D_T84U: RatingRecord[] = [
     inactiveIngredients: SPRAY,
     verdict: 'caution',
     sourcesGeneral: [
-      't84u. Quantum Health brand page is the single source. https://quantumhealth.com/products/therazinc-zinc-throat-spray lists the 2 oz at $12.59 and in stock. Serving 8 sprays (1.4 mL). Servings per container 41. Zinc 7.4 mg. Other ingredients: Water, Glycerin, Stevia rebaudiana (Stevial Glycocids) Extract, Clove Bud Oil, Peppermint Oil, Menthol, Echinacea purpurea Root Extract, Elderberry (Sambucus nigra) Fruit Extract, Slippery Elm Bark Extract, Wild Cherry Bark Extract. Menthol is Caution and does not stack. Clove Bud Oil is Cleared under t83u and does not stack. Counted Limited tokens: none. Children under 12: ask a health professional. Missing UPC. No code was invented. The 4 oz is a separate row.',
+      't84u. Quantum Health brand page is the single source. https://quantumhealth.com/products/therazinc-zinc-throat-spray lists the 2 oz at $12.59 and in stock. Serving 8 sprays (1.4 mL). Servings per container 41. Zinc 7.4 mg. Other ingredients: Water, Glycerin, Stevia rebaudiana (Stevial Glycocids) Extract, Clove Bud Oil, Peppermint Oil, Menthol, Echinacea purpurea Root Extract, Elderberry (Sambucus nigra) Fruit Extract, Slippery Elm Bark Extract, Wild Cherry Bark Extract. Clove Bud Oil and menthol are Caution and do not stack. Counted Limited tokens: none. Children under 12: ask a health professional. Missing UPC. No code was invented. The 4 oz is a separate row.',
     ],
   }),
   row({
