@@ -14,7 +14,7 @@ import {
 const UNVERIFIED = 'unverified' as const;
 
 const T141C = 'Methodology §5 Cleared (founder lock t141e). Does not count toward the t137u stack.';
-const T141M = 'Methodology §5 Caution (hydrogenated peanut oil — founder lock t141e). Does not count toward the t137u stack.';
+const T141M = 'Methodology §5 Avoid (hydrogenated peanut oil — t83 decision). This replaces the t141e Caution call. One Avoid token makes the product Avoid.';
 const T141L = 'Methodology §5 Limited (sodium cetearyl sulfate — founder lock t141e). Counts toward the t137u stack.';
 const T98 = 'Methodology §5 Caution (cetearyl alcohol — founder lock t98u). Does not count toward the t137u stack.';
 const CETYL = 'Methodology §5 Cleared (cetyl alcohol).';
@@ -37,7 +37,7 @@ const INGS: Ing[] = [
   ['clove oil', 'cleared', CLOVE],
   ['eucalyptus oil', 'cleared', EUC],
   ['glyceryl stearate SE', 'cleared', GLYC],
-  ['hydrogenated peanut oil', 'moderate', T141M],
+  ['hydrogenated peanut oil', 'high', T141M],
   ['juniper oil', 'cleared', T141C],
   ['peppermint oil', 'cleared', PEPPER],
   ['propylene glycol', 'cleared', PG],
@@ -76,10 +76,10 @@ export const BATCH335_KYR6E_T142E: RatingRecord[] = [
       riskLevel,
       source: `${PANEL}; ${whySource}`,
     })) as IngredientFlag[],
-    verdict: 'caution',
+    verdict: 'avoid',
     honestNote: '',
     sourcesGeneral: [
-      't142e. Brand page https://olbas.com/product/olbas-analgesic-salve-1-oz-tube-28g/ is out of stock at $12.95. The box back is a Drug Facts panel. Active ingredient Menthol 2.8% is not graded. Inactive ingredients: cajeput oil, cetearyl alcohol, cetyl alcohol, clove oil, eucalyptus oil, glyceryl stearate SE, hydrogenated peanut oil, juniper oil, peppermint oil, propylene glycol, sodium cetearyl sulfate, water, white soft paraffin, wintergreen oil. Co-op Market https://www.coopmarket.com/products/olbas-analgesic-salve-1-oz is in stock at $12.95 and prints the same other-ingredients set in title case. Counted Limited token: sodium cetearyl sulfate. Cetearyl alcohol and hydrogenated peanut oil are Caution and do not stack. Propylene glycol is the topical form. No UPC was printed on the box photo. A case code was not used. Missing UPC. No code was invented.',
+      't142e. Brand page https://olbas.com/product/olbas-analgesic-salve-1-oz-tube-28g/ is out of stock at $12.95. The box back is a Drug Facts panel. Active ingredient Menthol 2.8% is not graded. Inactive ingredients: cajeput oil, cetearyl alcohol, cetyl alcohol, clove oil, eucalyptus oil, glyceryl stearate SE, hydrogenated peanut oil, juniper oil, peppermint oil, propylene glycol, sodium cetearyl sulfate, water, white soft paraffin, wintergreen oil. Co-op Market https://www.coopmarket.com/products/olbas-analgesic-salve-1-oz is in stock at $12.95 and prints the same other-ingredients set in title case. Counted Limited token: sodium cetearyl sulfate. Cetearyl alcohol is Caution and does not stack. hydrogenated peanut oil is Avoid under the t83 decision and makes the product Avoid. Propylene glycol is the topical form. No UPC was printed on the box photo. A case code was not used. Missing UPC. No code was invented.',
     ],
   }),
 ];
@@ -88,7 +88,7 @@ const ROWS = BATCH335_KYR6E_T142E;
 if (ROWS.length !== 1) throw new Error(`batch335 count ${ROWS.length}`);
 const record = ROWS[0];
 if (record.id !== 'olbas-b335-salve-1') throw new Error(record.id);
-if (record.verdict !== 'caution') throw new Error(`batch335 verdict ${record.verdict}`);
+if (record.verdict !== 'avoid') throw new Error(`batch335 verdict ${record.verdict}`);
 if (record.barcode) throw new Error('batch335 barcode');
 if (record.honestNote) throw new Error('batch335 note');
 const mapped = applyT54uRow(record);

@@ -211,7 +211,7 @@ const METH = {
   safflower: `Methodology §5 Cleared (safflower oil / soybean oil as cream or ointment base — named single oil fill; not gummy High; locked Sept 15, 2026). ${CREAM_OIL_TAP}`,
   fattyAcid:
     'Methodology §5 Cleared (arachidic acid / lauric acid / linoleic acid / linolenic acid / myristic acid / palmitic acid — exact fatty-acid tokens; locked Sept 15, 2026)',
-  hco: 'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
+  hco: 'Methodology §5 Caution (Hydrogenated Castor Oil — t83 decision). This confirms the t144e call and replaces the Oct 15 Avoid family for this exact oil. It does not stack.',
   glycerylSE:
     'Methodology §5 Cleared (glyceryl stearate SE — exact INCI; distinct from glyceryl stearate; locked Sept 15, 2026)',
   glycerylDistearate:
@@ -1214,7 +1214,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('alpha-tocopherol acetate', 'cleared', dailymed(SET.stick, METH.tocopherol)),
       flag('arachidic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('c15-19 alkane', 'cleared', dailymed(SET.stick, METH.c1519)),
-      flag('hydrogenated castor oil', 'high', dailymed(SET.stick, METH.hco)),
+      flag('hydrogenated castor oil', 'moderate', dailymed(SET.stick, METH.hco)),
       flag('lauric acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('linoleic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
       flag('linolenic acid', 'cleared', dailymed(SET.stick, METH.fattyAcid)),
@@ -1226,7 +1226,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('petrolatum', 'cleared', dailymed(SET.stick, METH.petrolatum)),
       flag('stearic acid', 'cleared', dailymed(SET.stick, METH.stearic)),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: [...PF_RETAILERS, 'biofreeze.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -1636,7 +1636,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
     inactiveIngredients: [
       flag('C15-19 Alkane', 'cleared', dailymed(SET.miStick, METH.c1519)),
       flag('Fragrance', 'moderate', dailymed(SET.miStick, METH.fragrance)),
-      flag('Hydrogenated Castor Oil', 'high', dailymed(SET.miStick, METH.hco)),
+      flag('Hydrogenated Castor Oil', 'moderate', dailymed(SET.miStick, METH.hco)),
       flag('Lauryl Laurate', 'cleared', dailymed(SET.miStick, METH.laurylLaurate)),
       flag('Menthoxypropanediol', 'moderate', dailymed(SET.miStick, METH.menthoxy)),
       flag('Oleic Acid', 'cleared', dailymed(SET.miStick, METH.oleic)),
@@ -1644,7 +1644,7 @@ export const BATCH50_PAIN_FEVER_LIST3: RatingRecord[] = [
       flag('Petrolatum', 'cleared', dailymed(SET.miStick, METH.petrolatum)),
       flag('Tocopheryl Acetate', 'cleared', dailymed(SET.miStick, METH.tocopherol)),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: [...PF_RETAILERS, 'mineraliceextreme.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -2049,11 +2049,11 @@ if (BATCH50_PAIN_FEVER_LIST3.length !== 43) {
 if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'clean').length !== 0) {
   throw new Error('batch 50 Clean tally is 0');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 22) {
-  throw new Error('batch 50 Caution tally is 22');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'caution').length !== 24) {
+  throw new Error('batch 50 Caution tally is 24');
 }
-if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 21) {
-  throw new Error('batch 50 Avoid tally is 21');
+if (BATCH50_PAIN_FEVER_LIST3.filter((r) => r.verdict === 'avoid').length !== 19) {
+  throw new Error('batch 50 Avoid tally is 19');
 }
 if (BATCH50_PAIN_FEVER_LIST3.some((record) => record.category !== PAIN_FEVER)) {
   throw new Error('batch 50 stays on Pain & Fever');

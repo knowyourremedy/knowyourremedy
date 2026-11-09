@@ -24,11 +24,7 @@ Standing rules checked against that population: t137u (one Avoid, or three Limit
 
 ## Ambiguous tokens
 
-`Vegetable Capsule`, `Vegetarian Capsule`, `Vegan Capsule`, and `Veggie Softgel`. t90u and t87u call the bare shell Caution. t130u strikes Caution-only-because-unnamed and points at the tie-break. Named hypromellose, pullulan, and cellulose capsules are Cleared, so that tie-break does not force a worse grade. The unnamed-Limited rule would make the same strings Limited. The repo does not say which polymer a bare vegetable capsule is. The engine still treats these strings as non-stacking. No grade was changed.
-
-`Hydrogenated Castor Oil`. The Oct 15 rule and the §5 hydrogenated-oil row say Avoid. The Nov 2 t144e sentence says Caution and says it is not that Avoid row. The later exact sentence is left in place. No grade was changed.
-
-`hydrogenated peanut oil`. The Oct 15 family rule says Avoid. The Nov 1 t141e sentence says Caution and says it is not that Avoid row. The later exact sentence is left in place. No grade was changed.
+The Nov 9, 2026 founder decision settled the six strings. Vegetable Capsule, Vegetarian Capsule, Vegan Capsule, and Veggie Softgel are Limited and count. A named polymer in the same string stays its own lock. Hydrogenated Castor Oil stays Caution and does not stack. hydrogenated peanut oil is Avoid. The earlier Caution and Avoid sentences remain in the changelog as history.
 
 `Rosemary Oil (Antioxidant)` is not an exact lock. A prior dry run proposed Cleared from the named-fill rule. The scent-oil family text says Caution. It was not regraded.
 

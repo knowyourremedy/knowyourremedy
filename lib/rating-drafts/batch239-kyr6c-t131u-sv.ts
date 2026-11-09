@@ -37,7 +37,7 @@ const METH = {
   ricePowder:
     'Methodology §5 Cleared (Rice Powder — founder lock t132u Oct 20, 2026; §4 re-eval before prior locks).',
   veggieCap:
-    'Methodology §4 t130u unnamed rule + §5 Cleared (Vegetarian Capsule — same precedent as batch231 Veggie Capsule; named hypromellose/pullulan shells Cleared).',
+    'Methodology §5 Limited (Vegetarian Capsule — t83 decision). The bare shell counts toward the t137u stack. It is not Vegetarian Capsule (Pullulan).',
   vegMagStearate:
     'Methodology §5 Cleared (vegetable magnesium stearate — t102u alias to stearate-family row).',
 } as const;
@@ -158,10 +158,10 @@ export const BATCH239_KYR6C_T131U_SV: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(PANEL_ECHINACEA, 'Rice Powder', 'cleared', 'ricePowder'),
-      flag(PANEL_ECHINACEA, 'Vegetarian Capsule', 'cleared', 'veggieCap'),
+      flag(PANEL_ECHINACEA, 'Vegetarian Capsule', 'limited', 'veggieCap'),
       flag(PANEL_ECHINACEA, 'Vegetable Magnesium Stearate', 'cleared', 'vegMagStearate'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     retailers: ['Walmart', 'eBay'],
     sourcesGeneral: [
       `Founder ruling: Spring Valley store-brand exception (t130u/t131u). Panel ${PANEL_ECHINACEA}. Serving 2 vegetarian capsules (37 servings). New pack UPC 681131378840 (replaces closed UPC 605388325556 / DSLD 178632). Other ingredients verbatim: RICE POWDER, VEGETARIAN CAPSULE, VEGETABLE MAGNESIUM STEARATE. Walmart ip/675692970 in stock sold by Walmart.com; eBay 318909438814 New seller fit-flare (expiration 08/2027 or later). UPC 681131378840 = Walmart = eBay item specifics; check digit OK.`,
