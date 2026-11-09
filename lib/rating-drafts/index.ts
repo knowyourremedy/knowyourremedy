@@ -370,3 +370,4 @@ export { BATCH370_KYR6E_T83U } from './batch370-kyr6e-t83u';
 export { BATCH371_KYR6E_T83U } from './batch371-kyr6e-t83u';
 export { BATCH372_KYR6E_T83U } from './batch372-kyr6e-t83u';
 export { BATCH373_KYR6E_T83U } from './batch373-kyr6e-t83u';
+export { BATCH374_KYR6E_T83U } from './batch374-kyr6e-t83u';
