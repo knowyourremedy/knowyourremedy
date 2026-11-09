@@ -72,7 +72,7 @@ for (const ingredient of row.inactiveIngredients) {
   const why = plainIngredientWhy(ingredient);
   if (!why || banned.test(why)) throw new Error(`${ingredient.name}: ${why}`);
 }
-const source = row.sourcesGeneral.join(' ');
+const source = (row.sourcesGeneral ?? []).join(' ');
 if (banned.test(source) || source.includes('None is printed')) throw new Error('batch369 source');
 if (!source.includes('6 35824 00246 8') || !source.includes('infant formula')) throw new Error('batch369 photo');
 if (!source.includes('Micellized')) throw new Error('batch369 page spelling');

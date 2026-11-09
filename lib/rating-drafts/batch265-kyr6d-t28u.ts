@@ -125,7 +125,7 @@ const FIBER_FLAGS: IngredientFlag[] = [
 
 const FIBER60_FLAGS: IngredientFlag[] = FIBER_FLAGS.map((ingredient) => ({
   ...ingredient,
-  source: ingredient.source.replace(P_FIB90, P_FIB60),
+  source: (ingredient.source ?? '').replace(P_FIB90, P_FIB60),
 }));
 
 const DUAL_FLAGS: IngredientFlag[] = [
@@ -391,7 +391,7 @@ for (const record of ROWS) {
   for (const ingredient of record.inactiveIngredients) {
     const why = plainIngredientWhy(ingredient);
     if (!why) throw new Error(`batch265 blank why ${record.id} ${ingredient.name}`);
-    if (/pending dailymed review/i.test(why) || /pending dailymed review/i.test(ingredient.source)) {
+    if (/pending dailymed review/i.test(why) || /pending dailymed review/i.test(ingredient.source ?? '')) {
       throw new Error(`batch265 pending ${ingredient.name}`);
     }
   }

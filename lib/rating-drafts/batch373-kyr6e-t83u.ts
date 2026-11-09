@@ -156,7 +156,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
@@ -164,11 +164,11 @@ const nuke = ROWS[0];
 const o2 = ROWS[1];
 const bay = ROWS[2];
 if (nuke?.inactiveIngredients[0]?.name !== 'pullulan (tapioca)') throw new Error('batch373 shell');
-if (nuke.barcode === '635824000655' && !nuke.sourcesGeneral[0]?.includes('6 35824 00065 5')) throw new Error('batch373 nuke photo');
-if (!o2?.sourcesGeneral[0]?.includes('6 35824 00753 1') || o2.inactiveIngredients.length !== 0) throw new Error('batch373 o2 photo');
+if (nuke.barcode === '635824000655' && !nuke.sourcesGeneral?.[0]?.includes('6 35824 00065 5')) throw new Error('batch373 nuke photo');
+if (!o2?.sourcesGeneral?.[0]?.includes('6 35824 00753 1') || o2.inactiveIngredients.length !== 0) throw new Error('batch373 o2 photo');
 if (o2.activeIngredients.some((item) => item.name === 'P73 wild oregano oil')) throw new Error('batch373 page oil');
-if (bay?.barcode === '635224001757' || bay?.sourcesGeneral[0]?.includes('635224001757') !== true) throw new Error('batch373 bay second');
-if (!bay.sourcesGeneral[0]?.includes('6 35824 00115 7') || !bay.sourcesGeneral[0]?.includes('under the tongue')) throw new Error('batch373 bay photo');
+if (bay?.barcode === '635224001757' || bay?.sourcesGeneral?.[0]?.includes('635224001757') !== true) throw new Error('batch373 bay second');
+if (!bay.sourcesGeneral?.[0]?.includes('6 35824 00115 7') || !bay.sourcesGeneral?.[0]?.includes('under the tongue')) throw new Error('batch373 bay photo');
 if (ROWS.some((row) => row.barcode === '635824002413' || row.barcode === '635824009122' || row.barcode === '635824001000' || row.barcode === '635824001010')) {
   throw new Error('batch373 held upc attached');
 }

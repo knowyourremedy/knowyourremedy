@@ -132,7 +132,7 @@ const expect: Record<string, { verdict: string; limited: string }> = {
 for (const record of ROWS) {
   const want = expect[record.id];
   if (!want) throw new Error(record.id);
-  if (!upcCheck(record.barcode)) throw new Error(record.id + ' upc');
+  if (!upcCheck(record.barcode ?? '')) throw new Error(record.id + ' upc');
   if (record.verdict !== want.verdict) throw new Error(`${record.id} ${record.verdict}`);
   const counted = record.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i)).map((i) => i.name);
   if (counted.join('|') !== want.limited) throw new Error(`${record.id} ${counted.join('|')}`);

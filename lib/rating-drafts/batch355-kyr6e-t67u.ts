@@ -62,7 +62,7 @@ if (ROWS.length !== 1) throw new Error(`batch355 count ${ROWS.length}`);
 for (const record of ROWS) {
   if (record.id === 'zand-b301-cherry-honey-syrup-8') throw new Error('duplicate 8 oz');
   if (record.inactiveIngredients.length !== 0) throw new Error(record.id + ' tokens');
-  if (!upcCheck(record.barcode)) throw new Error(record.id + ' upc');
+  if (!upcCheck(record.barcode ?? '')) throw new Error(record.id + ' upc');
   const roll = computeVerdictFromInactiveIngredients(record.inactiveIngredients);
   if (roll.verdict !== 'clean' || record.verdict !== 'clean') throw new Error(record.id + ' ' + record.verdict);
   const counted = record.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));

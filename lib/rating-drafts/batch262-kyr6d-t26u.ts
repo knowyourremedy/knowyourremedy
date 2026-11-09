@@ -110,7 +110,7 @@ const CH_FLAGS: IngredientFlag[] = [
 
 const CH60_FLAGS: IngredientFlag[] = CH_FLAGS.map((ingredient) => ({
   ...ingredient,
-  source: ingredient.source.replace(P_CH45, P_CH60),
+  source: (ingredient.source ?? '').replace(P_CH45, P_CH60),
 }));
 
 const KIDS_FLAGS: IngredientFlag[] = [
@@ -128,7 +128,7 @@ const KIDS_FLAGS: IngredientFlag[] = [
 
 const K50_FLAGS: IngredientFlag[] = KIDS_FLAGS.map((ingredient) => ({
   ...ingredient,
-  source: ingredient.source.replace(P_K30, P_K50),
+  source: (ingredient.source ?? '').replace(P_K30, P_K50),
 }));
 
 const WG_FLAGS: IngredientFlag[] = [

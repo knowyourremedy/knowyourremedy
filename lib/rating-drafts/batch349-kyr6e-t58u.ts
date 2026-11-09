@@ -292,7 +292,7 @@ const ids = new Set<string>();
 for (const record of ROWS) {
   if (ids.has(record.id)) throw new Error(record.id);
   ids.add(record.id);
-  if (!upcCheck(record.barcode)) throw new Error(record.id + ' upc');
+  if (!upcCheck(record.barcode ?? '')) throw new Error(record.id + ' upc');
   const roll = computeVerdictFromInactiveIngredients(record.inactiveIngredients);
   if (roll.verdict !== record.verdict) throw new Error(`${record.id} ${record.verdict} vs ${roll.verdict}`);
   const counted = record.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));

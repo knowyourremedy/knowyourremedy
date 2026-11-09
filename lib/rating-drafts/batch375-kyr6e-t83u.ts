@@ -111,16 +111,16 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
 const resp = ROWS[0];
 const ultra = ROWS[1];
 if (resp?.activeIngredients[0]?.strength !== '225 mg' || resp.inactiveIngredients.length !== 0) throw new Error('batch375 resp');
-if (!resp.sourcesGeneral[0]?.includes('3 35824 00092 0')) throw new Error('batch375 resp digits');
+if (!resp.sourcesGeneral?.[0]?.includes('3 35824 00092 0')) throw new Error('batch375 resp digits');
 if (ultra?.activeIngredients[0]?.strength !== '50 mg' || ultra.inactiveIngredients.length !== 0) throw new Error('batch375 ultra');
-if (!ultra.sourcesGeneral[0]?.includes('6 35824 00696 1')) throw new Error('batch375 ultra digits');
+if (!ultra.sourcesGeneral?.[0]?.includes('6 35824 00696 1')) throw new Error('batch375 ultra digits');
 if (ROWS.some((row) => ['635824002048', '635824007623', '335824000012', '335824000647', '335824000951'].includes(row.barcode ?? ''))) {
   throw new Error('batch375 held upc attached');
 }

@@ -135,8 +135,8 @@ ROWS.forEach((record, index) => {
   if (record.inactiveIngredients.length !== 0) throw new Error(record.id + ' tokens');
   if (record.inactiveIngredients.some((ingredient) => /none/i.test(ingredient.name))) throw new Error(record.id + ' none');
   if ((record.barcode ?? '') !== EXPECTED_UPC[record.id]) throw new Error(record.id + ' upc ' + record.barcode);
-  if (!record.barcode || !upcCheck(record.barcode)) throw new Error(record.id + ' check digit');
-  if (!record.sourcesGeneral.some((source) => source.includes(EXPECTED_SERVINGS[index]))) throw new Error(record.id + ' servings');
+  if (!record.barcode || !upcCheck(record.barcode ?? '')) throw new Error(record.id + ' check digit');
+  if (!(record.sourcesGeneral ?? []).some((source) => source.includes(EXPECTED_SERVINGS[index]))) throw new Error(record.id + ' servings');
   const roll = computeVerdictFromInactiveIngredients(record.inactiveIngredients);
   if (roll.verdict !== 'clean' || record.verdict !== 'clean') throw new Error(record.id + ' ' + record.verdict);
   const counted = record.inactiveIngredients.filter((ingredient) => ingredientCountsTowardLimitedStack(ingredient));

@@ -95,7 +95,7 @@ if (ROWS.length !== 2) throw new Error(`batch362 count ${ROWS.length}`);
 if (ROWS[0]?.id !== 'nahs-b362-boneactiv-oil-1' || ROWS[1]?.id !== 'nahs-b362-boneactiv-oil-2') throw new Error('batch362 ids');
 if (ROWS[0]?.barcode !== '') throw new Error('batch362 1 oz barcode');
 if (ROWS[1]?.barcode !== '635824006350' || !upcCheck(ROWS[1].barcode)) throw new Error('batch362 2 oz upc');
-if (ROWS[0]?.sourcesGeneral.join(' ').includes('635824006350')) throw new Error('batch362 borrowed upc');
+if ((ROWS[0]?.sourcesGeneral ?? []).join(' ').includes('635824006350')) throw new Error('batch362 borrowed upc');
 for (const record of ROWS) {
   if (record.formulaId !== FORMULA) throw new Error(record.id + ' formula');
   if (record.category !== 'Herbs') throw new Error(record.id + ' tab');
@@ -112,8 +112,8 @@ for (const record of ROWS) {
     if (!why || banned.test(why)) throw new Error(`${record.id} ${ingredient.name}: ${why}`);
   }
 }
-if (!ROWS[0]?.sourcesGeneral.join(' ').includes('173')) throw new Error('batch362 173');
-if (!ROWS[1]?.sourcesGeneral.join(' ').includes('346')) throw new Error('batch362 346');
-if (!ROWS[0]?.sourcesGeneral.join(' ').includes('635824006275')) throw new Error('batch362 page upc');
+if (!(ROWS[0]?.sourcesGeneral ?? []).join(' ').includes('173')) throw new Error('batch362 173');
+if (!(ROWS[1]?.sourcesGeneral ?? []).join(' ').includes('346')) throw new Error('batch362 346');
+if (!(ROWS[0]?.sourcesGeneral ?? []).join(' ').includes('635824006275')) throw new Error('batch362 page upc');
 if (ROWS[0]?.activeIngredients[3]?.name !== 'Wild oregano oil - P73') throw new Error('batch362 p73');
 if (ROWS[1]?.activeIngredients[3]?.name !== 'Wild oregano oil') throw new Error('batch362 oregano');

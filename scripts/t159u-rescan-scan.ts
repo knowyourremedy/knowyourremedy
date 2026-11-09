@@ -55,7 +55,7 @@ for (const record of rows) {
 const out = {
   catalog: rows.length,
   ingredientTouches: touched.length,
-  gradeChanges: gradeChanges.length,
+  gradeChangeCount: gradeChanges.length,
   gradeChanges,
   touched,
 };

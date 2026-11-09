@@ -104,5 +104,5 @@ for (const record of ROWS) {
     if (!why || banned.test(why)) throw new Error(`${record.id} ${ingredient.name}: ${why}`);
   }
 }
-if (ROWS[0]?.sourcesGeneral.join(' ').includes('None is printed')) throw new Error('batch365 invented none');
+if ((ROWS[0]?.sourcesGeneral ?? []).join(' ').includes('None is printed')) throw new Error('batch365 invented none');
 if (!ROWS[1]?.activeIngredients.some((item) => item.name === 'Preservatol (all-natural spice oils)')) throw new Error('batch365 preservatol');

@@ -93,7 +93,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
@@ -102,7 +102,7 @@ if (min?.inactiveIngredients[0]?.name !== 'cellulose') throw new Error('batch379
 if (min?.activeIngredients[0]?.strength !== '279 mg' || min.activeIngredients[4]?.strength !== '414 mg') {
   throw new Error('batch379 amounts');
 }
-if (!min.sourcesGeneral[0]?.includes('6 35824 00987 0') || min.sourcesGeneral[0]?.includes('cellulose (100% GMO free)')) {
+if (!min.sourcesGeneral?.[0]?.includes('6 35824 00987 0') || min.sourcesGeneral?.[0]?.includes('cellulose (100% GMO free)')) {
   throw new Error('batch379 photo');
 }
 if (

@@ -72,7 +72,7 @@ function upcCheck(code: string): boolean {
 }
 if (ROWS.length !== 1) throw new Error(`batch354 count ${ROWS.length}`);
 for (const record of ROWS) {
-  if (!upcCheck(record.barcode)) throw new Error(record.id + ' upc');
+  if (!upcCheck(record.barcode ?? '')) throw new Error(record.id + ' upc');
   const roll = computeVerdictFromInactiveIngredients(record.inactiveIngredients);
   if (roll.verdict !== 'clean' || record.verdict !== 'clean') throw new Error(record.id + ' ' + record.verdict);
   const counted = record.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));

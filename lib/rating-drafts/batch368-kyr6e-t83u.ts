@@ -151,7 +151,7 @@ function upcCheck(code: string): boolean {
 if (ROWS.length !== 4) throw new Error(`batch368 count ${ROWS.length}`);
 ROWS.forEach((record, index) => {
   if (record.id !== IDS[index]) throw new Error(`batch368 id ${record.id}`);
-  if (!record.barcode || !upcCheck(record.barcode)) throw new Error(`batch368 upc ${record.id}`);
+  if (!record.barcode || !upcCheck(record.barcode ?? '')) throw new Error(`batch368 upc ${record.id}`);
   if (record.category !== 'Herbs') throw new Error(record.id + ' tab');
   if (record.verdict !== 'clean' || record.honestNote) throw new Error(record.id + ' verdict');
   const roll = computeVerdictFromInactiveIngredients(record.inactiveIngredients);
@@ -163,8 +163,8 @@ ROWS.forEach((record, index) => {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${record.id} ${ingredient.name}: ${why}`);
   }
-  if (banned.test(record.sourcesGeneral.join(' '))) throw new Error(record.id + ' source');
-  if (record.sourcesGeneral.join(' ').includes('None is printed')) throw new Error(record.id + ' invented none');
+  if (banned.test((record.sourcesGeneral ?? []).join(' '))) throw new Error(record.id + ' source');
+  if ((record.sourcesGeneral ?? []).join(' ').includes('None is printed')) throw new Error(record.id + ' invented none');
 });
 
 const sage = ROWS[0];
@@ -178,7 +178,7 @@ if (fung.activeIngredients[0]?.name !== 'Proprietary blend in extra virgin olive
   throw new Error('batch368 fung panel');
 }
 if (!garlex || garlex.inactiveIngredients.length !== 0 || garlex.activeIngredients.length !== 7) throw new Error('batch368 garlex');
-if (!garlex.sourcesGeneral.join(' ').includes('Serving per container 110') || !garlex.sourcesGeneral.join(' ').includes('5 drops')) {
+if (!(garlex.sourcesGeneral ?? []).join(' ').includes('Serving per container 110') || !(garlex.sourcesGeneral ?? []).join(' ').includes('5 drops')) {
   throw new Error('batch368 garlex dose');
 }
 if (garlex.barcode !== '635824002253') throw new Error('batch368 garlex upc');
@@ -186,5 +186,5 @@ if (!ginga || ginga.inactiveIngredients.length !== 1 || ginga.inactiveIngredient
   throw new Error('batch368 ginga other');
 }
 if (ginga.activeIngredients[0]?.strength !== '1100 mg' || ginga.barcode !== '635824007586') throw new Error('batch368 ginga panel');
-if (ginga.sourcesGeneral.join(' ').includes('635824007593') && ginga.barcode === '635824007593') throw new Error('batch368 tea upc');
-if (!ginga.sourcesGeneral.join(' ').includes('not this row')) throw new Error('batch368 tea split');
+if ((ginga.sourcesGeneral ?? []).join(' ').includes('635824007593') && String(ginga.barcode) === '635824007593') throw new Error('batch368 tea upc');
+if (!(ginga.sourcesGeneral ?? []).join(' ').includes('not this row')) throw new Error('batch368 tea split');

@@ -85,13 +85,13 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
 const drops = ROWS[0];
 if (drops?.activeIngredients[0]?.strength !== '60 IU' || drops.inactiveIngredients.length !== 0) throw new Error('batch378 drops');
-if (!drops.sourcesGeneral[0]?.includes('6 35824 00507 0')) throw new Error('batch378 drops digits');
+if (!drops.sourcesGeneral?.[0]?.includes('6 35824 00507 0')) throw new Error('batch378 drops digits');
 if (
   ROWS.some((row) =>
     [

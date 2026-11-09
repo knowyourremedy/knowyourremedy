@@ -117,19 +117,19 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
 const pine = ROWS[0];
 const oil = ROWS[1];
 if (pine?.activeIngredients[0]?.name !== 'Purified water' || pine.inactiveIngredients.length !== 0) throw new Error('batch377 pine');
-if (!pine.sourcesGeneral[0]?.includes('6 35824 00918 4')) throw new Error('batch377 pine digits');
+if (!pine.sourcesGeneral?.[0]?.includes('6 35824 00918 4')) throw new Error('batch377 pine digits');
 if (oil?.activeIngredients.at(-1)?.name !== 'Wild rosemary extract' || oil.activeIngredients.at(-1)?.strength !== '') {
   throw new Error('batch377 oil rosemary');
 }
 if (oil.inactiveIngredients.length !== 0) throw new Error('batch377 oil other');
-if (!oil.sourcesGeneral[0]?.includes('6 35824 00280 2')) throw new Error('batch377 oil digits');
+if (!oil.sourcesGeneral?.[0]?.includes('6 35824 00280 2')) throw new Error('batch377 oil digits');
 if (ROWS.some((row) => ['635824002819', '635824002666', '635824007418', '635824000679'].includes(row.barcode ?? ''))) {
   throw new Error('batch377 held upc attached');
 }
