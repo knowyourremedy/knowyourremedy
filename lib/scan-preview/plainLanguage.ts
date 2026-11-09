@@ -61,6 +61,8 @@ import {
   isT66uClearedName,
   isT70uClearedName,
   isT70uLimitedName,
+  isT83uClearedName,
+  isT83uBareShellLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -406,7 +408,9 @@ const HYDROGENATED_OIL_WHY =
 export function isHydrogenatedOilLock(name: string): boolean {
   const n = norm(name);
   if (/lecithin|polyoxyl|\bpeg\b|polyethylene glycol/.test(n)) return false;
-  return /hydrogenated (cottonseed|soybean|vegetable|coconut|castor|palm) oil/.test(n);
+  if (n === 'hydrogenated castor oil') return false;
+  if (n === 'hydrogenated peanut oil') return true;
+  return /hydrogenated (cottonseed|soybean|vegetable|coconut|palm) oil/.test(n);
 }
 
 const FRUIT_VEGETABLE_JUICE_WHY = close(
@@ -896,8 +900,8 @@ function t144eWhy(name: string, level: RiskLevel): string {
   }
   if (isT144eCautionName(name)) {
     return close(
-      `${name.trim()} is the exact printed string. The founder locked this token Caution (t144e). It does not count toward the three-or-more Limited stack. It is not the Avoid hydrogenated-oil row.`,
-      level,
+      `${name.trim()} is the exact printed string. The founder locked this token Caution (t83 decision). That confirms the t144e call and replaces the Oct 15 Avoid family for this exact oil. It does not count toward the three-or-more Limited stack. It is not hydrogenated peanut oil.`,
+      'moderate',
     );
   }
   if (n === 'chlorophyll') {
@@ -943,6 +947,12 @@ function t141eWhy(name: string, level: RiskLevel): string {
     return close(
       `${name.trim()} is the exact printed string. The founder locked this token Limited (t141e). It counts toward the three-or-more Limited stack.`,
       level,
+    );
+  }
+  if (n === 'hydrogenated peanut oil') {
+    return close(
+      `${name.trim()} is the exact printed string. The founder locked this token Avoid (t83 decision). That replaces the t141e Caution call. One Avoid token makes the product Avoid. It is not Hydrogenated Castor Oil.`,
+      'high',
     );
   }
   if (isT141eCautionName(name)) {
@@ -1242,6 +1252,18 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     .replace(/^water aqua$/, 'water')
     .replace(/^aqua$/, 'water')
     .replace(/^filtered water$/, 'water');
+  if (isT83uBareShellLimitedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this bare shell Limited (t83 decision). It counts toward the three-or-more Limited stack. It is not a named hypromellose, pullulan, cellulose, or tapioca capsule.`,
+      'limited',
+    );
+  }
+  if (isT83uClearedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Cleared (t83u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
+      'cleared',
+    );
+  }
   if (n === 'tapioca') {
     return close(
       'Tapioca printed alone is the named starch food. The founder locked this exact token Cleared (t121u). It does not count toward the three-or-more Limited stack. It is not tapioca syrup, tapioca starch, tapioca maltodextrin, or tapioca dextrin.',
@@ -1757,8 +1779,8 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
 
   if (n === 'clove bud oil') {
     return close(
-      'Named essential oil (clove bud). Not a seed oil in a gummy. The founder locked this exact token Caution (t84u). It does not count toward the three-or-more Limited stack.',
-      level,
+      'Named essential oil (clove bud). The founder locked this exact token Cleared (t83u). That lock overrides the t84u Caution call. It does not count toward the three-or-more Limited stack. It is not Clove Oil and it is not Clove Powder.',
+      'cleared',
     );
   }
 

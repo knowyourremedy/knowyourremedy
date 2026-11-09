@@ -32,7 +32,7 @@ const METH = {
   cellulose: 'Methodology §5 Cleared (vegetable cellulose / cellulose family).',
   water: 'Methodology §5 Cleared (water / purified water).',
   vegCap:
-    'Methodology §5 Cleared (vegetable capsule — t130u unnamed rule; a named hypromellose or cellulose shell is Cleared, so the unnamed shell is not docked).',
+    'Methodology §5 Limited (Vegetable Capsule — t83 decision). The bare shell counts toward the t137u stack. It is not a named hypromellose, pullulan, or cellulose capsule.',
   riceFlour: 'Methodology §5 Caution (rice flour). Does not count toward the t137u stack.',
   gelatin: 'Methodology §5 Cleared (gelatin / Gelatin Capsule).',
   glycerin: 'Methodology §5 Cleared (glycerin / vegetable glycerin).',
@@ -428,12 +428,12 @@ export const BATCH281_KYR6D_T49U: RatingRecord[] = [
       { name: 'Herbal blend', strength: 'milligram amounts not printed' },
     ],
     inactiveIngredients: [
-      flag(PAIR, 'Vegetable Capsule', 'cleared', 'vegCap'),
+      flag(PAIR, 'Vegetable Capsule', 'limited', 'vegCap'),
       flag(PAIR, 'Microcrystalline Cellulose', 'cleared', 'mcc'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't49u. RidgeCrest Herbals brand page is the single source. https://rcherbals.com/products/airwayclear lists 60 capsules, 30 servings, at $27.99 and in stock. Serving 2 capsules. Adults and children 12 and older. Counted Limited tokens: none. No honest note. UPC 355724001209.',
+      't49u. RidgeCrest Herbals brand page is the single source. https://rcherbals.com/products/airwayclear lists 60 capsules, 30 servings, at $27.99 and in stock. Serving 2 capsules. Adults and children 12 and older. Counted Limited token: Vegetable Capsule. That is one, so this is not a 3+ stack. UPC 355724001209. t83 decision: the bare shell is Limited and counts.',
     ],
   }),
   row('RidgeCrest Herbals', ['RidgeCrest Herbals'], {
@@ -510,12 +510,12 @@ export const BATCH281_KYR6D_T49U: RatingRecord[] = [
       { name: 'Herbal blend with 5-hydroxytryptophan', strength: 'milligram amounts not printed' },
     ],
     inactiveIngredients: [
-      flag(PDREAM, 'Vegetable Capsule', 'cleared', 'vegCap'),
+      flag(PDREAM, 'Vegetable Capsule', 'limited', 'vegCap'),
       flag(PDREAM, 'Rice Bran Extract', 'cleared', 'riceBran'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't49u. RidgeCrest Herbals brand page is the single source. https://rcherbals.com/products/dreamon-zen lists 60 capsules, 30 servings, at $29.99 and in stock. Take 2 capsules 30 minutes before bed. Adults and children 12 and older. Counted Limited tokens: none. UPC 355724001629.',
+      't49u. RidgeCrest Herbals brand page is the single source. https://rcherbals.com/products/dreamon-zen lists 60 capsules, 30 servings, at $29.99 and in stock. Take 2 capsules 30 minutes before bed. Adults and children 12 and older. Counted Limited token: Vegetable Capsule. That is one, so this is not a 3+ stack. UPC 355724001629. t83 decision: the bare shell is Limited and counts.',
     ],
   }),
   row('RidgeCrest Herbals', ['RidgeCrest Herbals'], {
@@ -605,12 +605,12 @@ const EXPECTED: Record<string, { verdict: 'clean' | 'caution' | 'avoid'; cause: 
   'quantum-b281-see-lutein-30': { verdict: 'clean', cause: 'clean', counted: '' },
   'quantum-b281-quercetin-500-90': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'quantum-b281-superimmune-90': { verdict: 'clean', cause: 'clean', counted: '' },
-  'ridgecrest-b281-airway-60': { verdict: 'clean', cause: 'clean', counted: '' },
+  'ridgecrest-b281-airway-60': { verdict: 'caution', cause: 'limited_1_2', counted: 'Vegetable Capsule' },
   'ridgecrest-b281-clearlungs-classic-60': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'ridgecrest-b281-clearlungs-classic-120': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'ridgecrest-b281-clearlungs-extra-60': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'ridgecrest-b281-clearlungs-extra-120': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
-  'ridgecrest-b281-dreamon-60': { verdict: 'clean', cause: 'clean', counted: '' },
+  'ridgecrest-b281-dreamon-60': { verdict: 'caution', cause: 'limited_1_2', counted: 'Vegetable Capsule' },
   'ridgecrest-b281-epicbrain-60': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'ridgecrest-b281-liverclean-60': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },
   'ridgecrest-b281-sinusclear-60': { verdict: 'caution', cause: 'silicon_dioxide_cap', counted: '' },

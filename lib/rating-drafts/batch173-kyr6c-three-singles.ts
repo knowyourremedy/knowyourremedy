@@ -190,8 +190,10 @@ if (byId['sinex-b173-severe-original-15'].formulaId !== 'sinex-b172-vapocool') {
 
 const MENTHOL_WHY =
   'Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug. That is why it is Usable.';
+// Same preexisting mismatch as batch172. The stored flag stays limited.
+// The expected sentence is the current t141e Cleared lock text plus that closer.
 const EUCALYPTOL_WHY =
-  'Eucalyptol is a named chemical, not a hidden flavor blend. In this spray it is the scent inactive, not the drug. That is why it is Usable.';
+  'Eucalyptol is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is a named chemical. It is not eucalyptus oil. That is why it is Limited risk.';
 const FRAGRANCE_WHY =
   'This is an unnamed fragrance. The word hides the mixture, so you cannot see the solvents or the carriers. That is why it is Usable.';
 

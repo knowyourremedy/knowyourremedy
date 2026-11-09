@@ -362,6 +362,30 @@ import {
   BATCH360_KYR6E_T75U,
   BATCH361_KYR6E_T75U,
   BATCH362_KYR6E_T75U,
+  BATCH363_KYR6E_T83U,
+  BATCH364_KYR6E_T83U,
+  BATCH365_KYR6E_T83U,
+  BATCH366_KYR6E_T83U,
+  BATCH367_KYR6E_T83U,
+  BATCH368_KYR6E_T83U,
+  BATCH369_KYR6E_T83U,
+  BATCH370_KYR6E_T83U,
+  BATCH371_KYR6E_T83U,
+  BATCH372_KYR6E_T83U,
+  BATCH373_KYR6E_T83U,
+  BATCH374_KYR6E_T83U,
+  BATCH375_KYR6E_T83U,
+  BATCH376_KYR6E_T83U,
+  BATCH377_KYR6E_T83U,
+  BATCH378_KYR6E_T83U,
+  BATCH379_KYR6E_T83U,
+  BATCH380_KYR6E_T83U,
+  BATCH381_KYR6E_T83U,
+  BATCH382_KYR6E_T83U,
+  BATCH383_KYR6E_T83U,
+  BATCH384_KYR6E_T83U,
+  BATCH385_KYR6E_T83U,
+  BATCH386_KYR6E_T83U,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -386,6 +410,7 @@ import {
 import { applyT138uIngredientLocks } from '@/lib/scan-preview/t138uLocks';
 import { applyT22uRow } from '@/lib/scan-preview/t22uLocks';
 import { applyT54uRow } from '@/lib/scan-preview/t54uLocks';
+import { applyT83DecisionRow, applyT83uRow } from '@/lib/scan-preview/t83uLocks';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -771,7 +796,31 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH360_KYR6E_T75U,
   ...BATCH361_KYR6E_T75U,
   ...BATCH362_KYR6E_T75U,
-]).map(applyT22uRow).map(applyT54uRow);
+  ...BATCH363_KYR6E_T83U,
+  ...BATCH364_KYR6E_T83U,
+  ...BATCH365_KYR6E_T83U,
+  ...BATCH366_KYR6E_T83U,
+  ...BATCH367_KYR6E_T83U,
+  ...BATCH368_KYR6E_T83U,
+  ...BATCH369_KYR6E_T83U,
+  ...BATCH370_KYR6E_T83U,
+  ...BATCH371_KYR6E_T83U,
+  ...BATCH372_KYR6E_T83U,
+  ...BATCH373_KYR6E_T83U,
+  ...BATCH374_KYR6E_T83U,
+  ...BATCH375_KYR6E_T83U,
+  ...BATCH376_KYR6E_T83U,
+  ...BATCH377_KYR6E_T83U,
+  ...BATCH378_KYR6E_T83U,
+  ...BATCH379_KYR6E_T83U,
+  ...BATCH380_KYR6E_T83U,
+  ...BATCH381_KYR6E_T83U,
+  ...BATCH382_KYR6E_T83U,
+  ...BATCH383_KYR6E_T83U,
+  ...BATCH384_KYR6E_T83U,
+  ...BATCH385_KYR6E_T83U,
+  ...BATCH386_KYR6E_T83U,
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT83DecisionRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows

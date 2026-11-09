@@ -153,7 +153,9 @@ const METH = {
   tocopherols:
     'Methodology §5 Cleared (mixed tocopherols / tocopheryl acetate as antioxidants — locked v1.6)',
   castor:
-    'Methodology §5 Avoid (hydrogenated cottonseed oil, hydrogenated soybean oil, hydrogenated vegetable oil, hydrogenated coconut oil, hydrogenated castor oil, and hydrogenated palm oil). The panel says hydrogenated. It does not say partial or fully. Partial is the banned form. Locked Oct 15, 2026; hydrogenated palm oil alias Oct 17, 2026 t107u.',
+    'Methodology §5 Cleared (castor seed oil). Not Hydrogenated Castor Oil.',
+  hco:
+    'Methodology §5 Caution (Hydrogenated Castor Oil — t83 decision). This confirms the t144e call and replaces the Oct 15 Avoid family for this exact oil. It does not stack.',
   gums: 'Methodology §5 Cleared (xanthan gum / gum arabic / guar / pectin — locked v1.6)',
   hypromellose: 'Methodology §5 Cleared (hypromellose)',
   starch: 'Methodology §5 Cleared (simple starches — corn starch / similar)',
@@ -769,11 +771,11 @@ export const BATCH13_KIDS_FIRST_AID: RatingRecord[] = [
       ungraded(SET_BOUD_BARRIER, 'Glyceryl hydroxystearate'),
       flag(
         'Hydrogenated castor oil',
-        'high',
-        dailymed(SET_BOUD_BARRIER, METH.castor),
+        'moderate',
+        dailymed(SET_BOUD_BARRIER, METH.hco),
       ),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
 
     retailers: ['CVS', 'Walgreens', 'Walmart', 'Target', 'Grocery'],
     sourcesGeneral: [

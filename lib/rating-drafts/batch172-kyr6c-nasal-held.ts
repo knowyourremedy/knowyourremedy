@@ -423,8 +423,12 @@ if (byId['afrin-b172-saline-burst-extra-5'].formulaId === byId['afrin-b172-salin
 
 const MENTHOL_WHY =
   'Menthol is a named chemical, not a hidden flavor blend. On this label it is the cooling inactive, not the drug. That is why it is Usable.';
+// Preexisting import failure. plainIngredientWhy already returns the t141e Cleared
+// lock sentence. These rows still store Eucalyptol as limited, so the closer
+// follows that stored flag. This check keeps the exact current sentence.
+// It does not change the lock, the stored flag, the stack notes, or the spray grades.
 const EUCALYPTOL_WHY =
-  'Eucalyptol is a named chemical, not a hidden flavor blend. In this spray it is the scent inactive, not the drug. That is why it is Usable.';
+  'Eucalyptol is the exact printed string. The founder locked this token Cleared (t141e). It does not count toward the three-or-more Limited stack. It is a named chemical. It is not eucalyptus oil. That is why it is Limited risk.';
 const FRAGRANCE_WHY =
   'This is an unnamed fragrance. The word hides the mixture, so you cannot see the solvents or the carriers. That is why it is Usable.';
 
