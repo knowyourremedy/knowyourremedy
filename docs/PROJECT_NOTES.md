@@ -978,6 +978,8 @@ Ladder search rule
 
 This applies to every catalog run.
 
+Specialty-brand ladder: Brand page first. Then only the retailers that actually carry the brand (confirm with a quick brand-level “where to buy,” site search, or known carriers such as iHerb, Thrive Market, Sprouts, Whole Foods, Natural Grocers). Skip CVS, Walgreens, Walmart, Target, and other mass retailers unless the brand-level check shows they stock it. Open every carousel image and collapsed tab on the sources you do use. Google AI remains a valid step when used the way a person would. Amazon is founder-hunt only.
+
 When searching a retailer, open the store’s product page in the computer’s browser the way a person would. Search the way a person would (by product name or by UPC in the store’s own search box). Do not use curl or scripted search URLs such as amazon.com/s?k=<UPC> or Walgreens’ search/results.jsp?Ntt=<UPC>. A blocked, sorry, or access-denied page from a scripted fetch does not count as exhausting that step. The bot must open the page and physically view the ingredient image or other-ingredient line before that step can be called a miss.
 
 When a store page or brand page does not show an ingredient line, or when only one source has been found, run a Google AI search the way a person would. Type the product name and count into Google the way a person would. Open the AI overview and any linked pages that show a panel. Do not use a scripted search URL. A blocked or empty AI result does not count as exhausting that step. The bot must open the result and physically view the ingredient line before that step can be called a miss.
