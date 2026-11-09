@@ -530,6 +530,54 @@ export function isT83uClearedName(name: string): boolean {
   return T83U_CLEARED.has(t121uToken(name));
 }
 
+const T86U_CLEARED = new Set([
+  'non gmo oat fiber',
+  'silica mineral',
+  '100 beef gelatin bse free',
+  'wild rosemary extract',
+  'non gmo certified fish gelatin capsule',
+  'vegi and fish gelatin',
+  'pumpkin seed powder',
+  'wild camu camu',
+  'fish gelatin capsules 100 non gmo',
+  'hypromellose chlorophyll capsules',
+  'oregano oil p73 powder',
+  'organic peruvian non gmo purple corn powder',
+  'organic ceylon cinnamon powder',
+  'organic purple maca powder',
+  'fish gelatin',
+  'organic wild true ceylon cinnamon powder',
+  'organic wild true ceylon ginger powder',
+  'organic tart cherry concentrate',
+  'rice germ',
+  'torula yeast',
+  'royal jelly powder',
+  'wild raw chaga',
+  'organic roasted maca',
+  'red sour grape',
+  'cellulose vegi caps',
+  'cellulose 100 gmo free',
+  'organic turmeric root powder',
+]);
+
+/** t86u. These exact prints only. Case is not a second token. Not the nearby t83u, t98u, t111u, t130e, or t138e locks. */
+export function isT86uClearedName(name: string): boolean {
+  return T86U_CLEARED.has(t121uToken(name));
+}
+
+const T87U_CLEARED = new Set([
+  'camu camu berries',
+  'wild raw birch bark',
+  'organic yacon root powder',
+  'siberian black chaga',
+  'cinnamon essential oil powder',
+]);
+
+/** t87u. These exact prints only. Case is not a second token. Not wild camu camu, not a birch-bark powder, and not wild, raw chaga. */
+export function isT87uClearedName(name: string): boolean {
+  return T87U_CLEARED.has(t121uToken(name));
+}
+
 const T83U_BARE_SHELL = new Set([
   'vegetable capsule',
   'vegetarian capsule',
@@ -986,6 +1034,8 @@ export function isNeverStackLimitedName(name: string): boolean {
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
   if (ingredient.stackCountExempt) return false;
   if (isT83uClearedName(ingredient.name)) return false;
+  if (isT86uClearedName(ingredient.name)) return false;
+  if (isT87uClearedName(ingredient.name)) return false;
   if (isT83uBareShellLimitedName(ingredient.name)) return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   if (isT83uHydrogenatedPeanutOilName(ingredient.name)) return false;
   if (isT70uLimitedName(ingredient.name)) return true;
