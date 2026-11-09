@@ -695,7 +695,7 @@ for (const record of ROWS) {
   for (const ingredient of record.inactiveIngredients) {
     const why = plainIngredientWhy(ingredient);
     if (!why) throw new Error(`batch257 blank why ${record.id} ${ingredient.name}`);
-    if (/pending dailymed review/i.test(why) || /pending dailymed review/i.test(ingredient.source)) {
+    if (/pending dailymed review/i.test(why) || /pending dailymed review/i.test(ingredient.source ?? '')) {
       throw new Error(`batch257 pending ${ingredient.name}`);
     }
   }

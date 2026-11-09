@@ -311,7 +311,7 @@ const AWD_FLAGS: IngredientFlag[] = [
 
 const ABC_FLAGS: IngredientFlag[] = AWD_FLAGS.map((ingredient) => ({
   ...ingredient,
-  source: ingredient.source.replace(P_AWD, P_ABC),
+  source: (ingredient.source ?? '').replace(P_AWD, P_ABC),
 }));
 
 const A31_FLAGS: IngredientFlag[] = [
@@ -491,7 +491,7 @@ for (const record of ROWS) {
   if (record.verdict !== rollup.verdict) {
     throw new Error(`batch260 verdict ${record.id}: wrote ${record.verdict}, expected ${rollup.verdict}`);
   }
-  const expectedNote = withNotes(record.inactiveIngredients, record.form);
+  const expectedNote = withNotes(record.inactiveIngredients, record.form ?? '');
   if ((record.honestNote ?? '') !== (expectedNote ?? '')) {
     throw new Error(`batch260 note ${record.id}`);
   }

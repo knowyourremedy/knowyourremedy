@@ -106,6 +106,6 @@ for (const ingredient of row.inactiveIngredients) {
   const why = plainIngredientWhy(ingredient);
   if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`batch388 ${ingredient.name}: ${why}`);
 }
-const source = row.sourcesGeneral.join(' ');
+const source = (row.sourcesGeneral ?? []).join(' ');
 if (banned.test(source) || source.includes('None is printed')) throw new Error('batch388 source');
 if (!row.retailers.includes('North American Herb & Spice')) throw new Error('batch388 carrier');

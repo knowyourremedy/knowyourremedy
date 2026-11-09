@@ -109,7 +109,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
@@ -118,11 +118,11 @@ const royal = ROWS[1];
 if (rosemanol?.inactiveIngredients.length !== 0 || rosemanol.activeIngredients[1]?.name !== 'Wild rosemary oil') {
   throw new Error('batch380 rosemanol');
 }
-if (!rosemanol.sourcesGeneral[0]?.includes('6 35824 00002 0')) throw new Error('batch380 rosemanol digits');
+if (!rosemanol.sourcesGeneral?.[0]?.includes('6 35824 00002 0')) throw new Error('batch380 rosemanol digits');
 if (royal?.activeIngredients[0]?.strength !== '1300 mg' || royal.inactiveIngredients.length !== 0) {
   throw new Error('batch380 royal oil');
 }
-if (!royal.sourcesGeneral[0]?.includes('6 35824 00034 1')) throw new Error('batch380 royal digits');
+if (!royal.sourcesGeneral?.[0]?.includes('6 35824 00034 1')) throw new Error('batch380 royal digits');
 if (
   ROWS.some((row) => ['635824000495', '635824000174', '635824006428'].includes(row.barcode ?? ''))
 ) {

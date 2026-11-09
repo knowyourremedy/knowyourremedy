@@ -119,18 +119,18 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
 const loft = ROWS[0];
 const max = ROWS[1];
-if (!loft?.sourcesGeneral[0]?.includes('6 35824 00241 3') || loft.inactiveIngredients.length !== 0) throw new Error('batch374 loft');
+if (!loft?.sourcesGeneral?.[0]?.includes('6 35824 00241 3') || loft.inactiveIngredients.length !== 0) throw new Error('batch374 loft');
 if (!loft.activeIngredients.some((item) => item.name === 'Sugar (from pomegranate)' && item.strength === '3 g')) {
   throw new Error('batch374 sugar');
 }
 if (max?.inactiveIngredients[0]?.name !== 'cellulose') throw new Error('batch374 shell');
-if (!max.sourcesGeneral[0]?.includes('6 35824 00004 4') || max.sourcesGeneral[0]?.includes('cellulose (100% GMO free)')) {
+if (!max.sourcesGeneral?.[0]?.includes('6 35824 00004 4') || max.sourcesGeneral?.[0]?.includes('cellulose (100% GMO free)')) {
   throw new Error('batch374 max photo');
 }
 if (ROWS.some((row) => ['635824002291', '635824005988', '635824002424', '635824002420', '635824006046', '635824006787', '635824006077'].includes(row.barcode ?? ''))) {

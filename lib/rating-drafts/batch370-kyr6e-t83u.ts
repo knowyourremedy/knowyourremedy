@@ -177,15 +177,15 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why)) throw new Error(`${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`batch370 source ${row.id}`);
 }
 
-const ear = ROWS[0]?.sourcesGeneral.join(' ') ?? '';
+const ear = (ROWS[0]?.sourcesGeneral ?? []).join(' ') ?? '';
 if (!ear.includes('6 35824 00409 7') || !ear.includes('Wild sage oil')) throw new Error('batch370 ear photo');
-const berry = ROWS[1]?.sourcesGeneral.join(' ') ?? '';
+const berry = (ROWS[1]?.sourcesGeneral ?? []).join(' ') ?? '';
 if (!berry.includes('6 35824 00423 3') || !berry.includes('Pomegranate syrup')) throw new Error('batch370 berry photo');
-const kids = ROWS[2]?.sourcesGeneral.join(' ') ?? '';
+const kids = (ROWS[2]?.sourcesGeneral ?? []).join(' ') ?? '';
 if (!kids.includes('6 35824 00420 2') || !kids.includes('Preservatrol') || !kids.includes('Wild acerola cherry powder')) {
   throw new Error('batch370 kids photo');
 }

@@ -155,7 +155,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
   if (!row.retailers.includes('Natural Healthy Concepts') || !row.retailers.includes('Professional Supplement Center')) {
     throw new Error(`${row.id} carrier`);

@@ -95,7 +95,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
   if (!row.retailers.includes('iHerb')) throw new Error(`${row.id} carrier`);
 }
@@ -105,7 +105,7 @@ if (caps?.inactiveIngredients[0]?.name !== 'cellulose') throw new Error('batch38
 if (caps?.activeIngredients[0]?.strength !== '2100 mg' || caps.activeIngredients[5]?.strength !== '150 mg') {
   throw new Error('batch383 amounts');
 }
-if (!caps.sourcesGeneral[0]?.includes('6 35824 00028 0')) throw new Error('batch383 photo');
+if (!caps.sourcesGeneral?.[0]?.includes('6 35824 00028 0')) throw new Error('batch383 photo');
 if (
   ROWS.some((row) =>
     ['335824000951', '635824002079', '635824002666', '635824002734'].includes(row.barcode ?? ''),

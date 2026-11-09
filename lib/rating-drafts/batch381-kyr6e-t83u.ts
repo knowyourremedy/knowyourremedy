@@ -101,7 +101,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
@@ -110,7 +110,7 @@ if (purge?.inactiveIngredients[0]?.name !== 'cellulose') throw new Error('batch3
 if (purge?.activeIngredients[0]?.strength !== '2800 mg' || purge.activeIngredients.length !== 13) {
   throw new Error('batch381 amounts');
 }
-if (!purge.sourcesGeneral[0]?.includes('6 35824 00570 4')) throw new Error('batch381 photo');
+if (!purge.sourcesGeneral?.[0]?.includes('6 35824 00570 4')) throw new Error('batch381 photo');
 if (ROWS.some((row) => ['635824000235'].includes(row.barcode ?? ''))) {
   throw new Error('batch381 held upc attached');
 }

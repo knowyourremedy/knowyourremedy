@@ -69,5 +69,5 @@ for (const ingredient of row.inactiveIngredients) {
   const why = plainIngredientWhy(ingredient);
   if (!why || banned.test(why)) throw new Error(`${ingredient.name}: ${why}`);
 }
-if (banned.test(row.sourcesGeneral.join(' '))) throw new Error('batch367 source');
-if (!row.sourcesGeneral.join(' ').includes('6 35824 00019 8')) throw new Error('batch367 photo digits');
+if (banned.test((row.sourcesGeneral ?? []).join(' '))) throw new Error('batch367 source');
+if (!(row.sourcesGeneral ?? []).join(' ').includes('6 35824 00019 8')) throw new Error('batch367 photo digits');

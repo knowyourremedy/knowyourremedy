@@ -70,7 +70,7 @@ if (!upcCheck(UPC)) throw new Error('batch361 check digit');
 if (ROWS[0]?.inactiveIngredients.length !== 0) throw new Error('batch361 tokens');
 if (ROWS[0]?.inactiveIngredients.some((ingredient) => /none/i.test(ingredient.name))) throw new Error('batch361 none');
 if (ROWS[0]?.activeIngredients.length !== 1 || ROWS[0]?.activeIngredients[0]?.strength !== '5 g') throw new Error('batch361 oil');
-const source = ROWS[0]?.sourcesGeneral.join('\n') ?? '';
+const source = (ROWS[0]?.sourcesGeneral ?? []).join('\n') ?? '';
 for (const needle of [
   '192',
   'Thymoquinone 40mg',

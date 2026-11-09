@@ -84,7 +84,7 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why) || !/cleared/i.test(why)) throw new Error(`${row.id} ${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`${row.id} source`);
 }
 
@@ -93,7 +93,7 @@ if (myrtle?.inactiveIngredients.length !== 0 || myrtle.activeIngredients[0]?.str
   throw new Error('batch382 myrtle');
 }
 if (myrtle.activeIngredients[1]?.name !== 'Wild myrtle oil') throw new Error('batch382 myrtle oil');
-if (!myrtle.sourcesGeneral[0]?.includes('6 35824 00009 9')) throw new Error('batch382 photo');
+if (!myrtle.sourcesGeneral?.[0]?.includes('6 35824 00009 9')) throw new Error('batch382 photo');
 if (
   ROWS.some((row) => ['635824006732', '635824006671'].includes(row.barcode ?? ''))
 ) {

@@ -145,15 +145,15 @@ for (const row of ROWS) {
     const why = plainIngredientWhy(ingredient);
     if (!why || banned.test(why)) throw new Error(`${ingredient.name}: ${why}`);
   }
-  const source = row.sourcesGeneral.join(' ');
+  const source = (row.sourcesGeneral ?? []).join(' ');
   if (banned.test(source) || source.includes('None is printed')) throw new Error(`batch371 source ${row.id}`);
 }
 
-const calm = ROWS[0]?.sourcesGeneral.join(' ') ?? '';
+const calm = (ROWS[0]?.sourcesGeneral ?? []).join(' ') ?? '';
 if (!calm.includes('6 35824 00415 8') || !calm.includes('Yacon syrup') || !calm.includes('used as a rub')) {
   throw new Error('batch371 kidscalm photo');
 }
-const cinn = ROWS[1]?.sourcesGeneral.join(' ') ?? '';
+const cinn = (ROWS[1]?.sourcesGeneral ?? []).join(' ') ?? '';
 if (!cinn.includes('6 35824 00414 1') || !cinn.includes('Goldenberry syrup') || !cinn.includes('Oil of cinnamon')) {
   throw new Error('batch371 orega-cinn photo');
 }

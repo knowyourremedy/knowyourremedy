@@ -67,7 +67,7 @@ if (ROWS.length !== 1) throw new Error(`batch372 count ${ROWS.length}`);
 const row = ROWS[0];
 if (row?.id !== 'nahs-b372-livaclenz-1') throw new Error('batch372 id');
 if (row.barcode !== '635824000686' || !upcCheck(row.barcode)) throw new Error('batch372 upc');
-if (row.barcode === '635824006806') throw new Error('batch372 report upc');
+if (String(row.barcode) === '635824006806') throw new Error('batch372 report upc');
 if (row.category !== 'Herbs' || row.audience !== 'adult' || row.verdict !== 'clean' || row.honestNote) {
   throw new Error('batch372 grade');
 }
@@ -93,7 +93,7 @@ for (const ingredient of row.inactiveIngredients) {
   const why = plainIngredientWhy(ingredient);
   if (!why || banned.test(why)) throw new Error(`${ingredient.name}: ${why}`);
 }
-const source = row.sourcesGeneral.join(' ');
+const source = (row.sourcesGeneral ?? []).join(' ');
 if (banned.test(source) || source.includes('None is printed')) throw new Error('batch372 source');
 if (!source.includes('6 35824 00068 6') || !source.includes('under the tongue') || !source.includes('635824000686')) {
   throw new Error('batch372 photo');

@@ -213,7 +213,7 @@ const expectLimited: Record<string, number> = {
 };
 for (const record of ROWS) {
   if (expectLimited[record.id] === undefined) throw new Error(record.id);
-  if (!upcCheck(record.barcode)) throw new Error(record.id + ' upc');
+  if (!upcCheck(record.barcode ?? '')) throw new Error(record.id + ' upc');
   const counted = record.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));
   if (counted.length !== expectLimited[record.id]) throw new Error(`${record.id} ${counted.map((i) => i.name).join('|')}`);
   if (counted.length >= 3) {

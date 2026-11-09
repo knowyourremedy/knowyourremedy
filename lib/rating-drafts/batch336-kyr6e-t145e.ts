@@ -97,12 +97,12 @@ if (ROWS.length !== 1) throw new Error(`batch336 count ${ROWS.length}`);
 const record = ROWS[0];
 if (record.id !== 'olbas-b336-herbal-bath-8') throw new Error(record.id);
 if (record.verdict !== 'avoid') throw new Error(`batch336 verdict ${record.verdict}`);
-if (record.barcode !== '715486503203' || !upcCheck(record.barcode)) throw new Error('batch336 upc');
+if (record.barcode !== '715486503203' || !upcCheck(record.barcode ?? '')) throw new Error('batch336 upc');
 if (!record.honestNote || !/t137u/.test(record.honestNote)) throw new Error(`batch336 note ${record.honestNote}`);
 for (const name of COUNTED) {
   if (!record.honestNote.includes(name)) throw new Error(`batch336 note missing ${name}`);
 }
-if (!/founder ruled the brand line wins/i.test(record.sourcesGeneral.join(' '))) {
+if (!/founder ruled the brand line wins/i.test((record.sourcesGeneral ?? []).join(' '))) {
   throw new Error('batch336 founder ruling');
 }
 const mapped = applyT54uRow(record);

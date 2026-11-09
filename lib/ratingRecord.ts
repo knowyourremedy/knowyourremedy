@@ -21,7 +21,7 @@ export type IngredientFlag = {
 // ─── Active ingredient + strength (supports combo products) ─
 export type ActiveIngredient = {
   name: string;
-  strength: string;      // e.g. "500mg", "160mg / 5mL"
+  strength?: string;     // e.g. "500mg", "160mg / 5mL"; omit when the label prints no amount
 };
 
 // ─── Active-safety cap (Methodology v1.3 §4) ────────────────
@@ -65,7 +65,7 @@ export type RatingRecord = {
   minAge?: number;        // minimum labeled age in years
   form?: string;          // e.g. tablet / caplet / gelcap / liquid gel / ER caplet / film-coated tablet
   recordStatus?: RecordStatus;
-  productType?: 'OTC' | 'Vitamin' | 'Supplement' | 'Protein Powder'; // INTERNAL METADATA ONLY
+  productType?: 'OTC' | 'Vitamin' | 'Supplement' | 'Protein Powder' | 'Drug'; // INTERNAL METADATA ONLY
   productSubtype?: string; // e.g. 'homeopathic' | 'herbal' — INTERNAL METADATA ONLY
   homeopathicSubtype?: string; // omit unless the product is homeopathic; prefer productSubtype
 

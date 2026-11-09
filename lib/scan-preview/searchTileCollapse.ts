@@ -44,7 +44,7 @@ export function packSizeLine(record: RatingRecord): string {
   );
   if (found.length > 0) return found.join(' · ');
   const strength = record.activeIngredients
-    .map((active) => active.strength.trim())
+    .map((active) => (active.strength ?? '').trim())
     .filter(Boolean)
     .join(', ');
   return strength;
