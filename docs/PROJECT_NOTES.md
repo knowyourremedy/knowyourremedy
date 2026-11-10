@@ -1167,6 +1167,8 @@ Honest note and ingredient tab
 See the standing section When writing rows. The text below stays.
 An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. Do not write “Pending DailyMed review.”
 
+Honest-note standard: User-facing product grades are only Clean, Caution, and Not Clean. Avoid and Limited are internal. Write the honest note only on non-Clean rows, in plain professor-style language that considers all ingredients. Explain a 3+ Limited stack as “This product is Not Clean because it contains three or more ingredients that are each graded Limited … When three or more Limited ingredients appear together, the product is downgraded to Not Clean.” Explain a contradiction in plain language without naming the source (the source stays in the ingredient tab). Do not end with “that is why it is Caution.” The founder supplies the exact honest-note text when a non-Clean row is written; the bot stores that string and does not generate its own.
+
 Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c and KYR6-d writes; founder order t151u, Oct 21, 2026 — same scope for both)
 See the standing section When writing rows. The text below stays.
 - Honest note only when an ingredient appears to contradict itself to a shopper.
