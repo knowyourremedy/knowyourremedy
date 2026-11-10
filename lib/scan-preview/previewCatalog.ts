@@ -420,6 +420,7 @@ import { applyT86uRow } from '@/lib/scan-preview/t86uLocks';
 import { applyT87uRow } from '@/lib/scan-preview/t87uLocks';
 import { applyT104uRow } from '@/lib/scan-preview/t104uLocks';
 import { applyT108uRow } from '@/lib/scan-preview/t108uLocks';
+import { applyCleanTokenWhy, stampCleanTokenWhy } from '@/lib/scan-preview/cleanTokenWhy';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -834,7 +835,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21012,14 +21013,16 @@ export function applyOverlayIngredientLocks(
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const locked = applyOverlayIngredientLocks(record);
-  const inactiveIngredients = locked.inactiveIngredients;
+  const inactiveIngredients = record.verdict === 'clean'
+    ? stampCleanTokenWhy(locked.inactiveIngredients)
+    : locked.inactiveIngredients;
   const hasHigh = inactiveIngredients.some((i) => i.riskLevel === 'high');
   const hasModerate = inactiveIngredients.some((i) => i.riskLevel === 'moderate');
   const hasLimited = inactiveIngredients.some((i) => i.riskLevel === 'limited');
   let verdict: RatingRecord['verdict'] = 'clean';
   if (hasHigh || record.activeSafetyFlag?.cappedAt === 'avoid') verdict = 'avoid';
   else if (record.activeSafetyFlag?.cappedAt === 'caution' || hasModerate || hasLimited) verdict = 'caution';
-  const merged = { ...locked, verdict };
+  const merged = { ...locked, inactiveIngredients, verdict };
   const honestNote = displayHonestNote(merged);
   const productImage = previewOverlayImage(merged);
   if (
