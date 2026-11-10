@@ -622,7 +622,7 @@ export const BATCH9_IMMUNE_SUPPORT: RatingRecord[] = [
       ),
       flag(
         'Hydroxypropyl cellulose',
-        'cleared',
+        'moderate',
         labelCite(SN_TABS_CITE, METH.cleared),
       ),
       flag(

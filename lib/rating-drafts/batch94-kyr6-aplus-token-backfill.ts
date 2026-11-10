@@ -433,7 +433,7 @@ const GAS125_FLAGS: Compact['flags'] = [
   ['FD&C blue no. 1', 'high', 'dye'],
   ['FD&C red no. 40', 'high', 'dye'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Peppermint oil', 'limited', 'peppermint'],
+  ['Peppermint oil', 'cleared', 'peppermint'],
   ['Pharmaceutical imprinting ink', 'limited', 'imprint'],
   ['Sorbitol', 'limited', 'sorbitol'],
   ['Gelatin', 'cleared', 'gelatin'],
@@ -444,7 +444,7 @@ const GAS125_FLAGS: Compact['flags'] = [
 const GAS180_FLAGS: Compact['flags'] = [
   ['FD&C yellow no. 6', 'high', 'dye'],
   ['Titanium dioxide', 'high', 'tio2'],
-  ['Peppermint oil', 'limited', 'peppermint'],
+  ['Peppermint oil', 'cleared', 'peppermint'],
   ['Pharmaceutical imprinting ink', 'limited', 'imprint'],
   ['Sorbitol', 'limited', 'sorbitol'],
   ['Gelatin', 'cleared', 'gelatin'],

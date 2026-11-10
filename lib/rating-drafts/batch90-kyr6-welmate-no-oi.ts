@@ -198,7 +198,7 @@ const COMPACT: Compact[] = [
       ['FD&C blue #1', 'high', 'dye'],
       ['FD&C yellow #10', 'high', 'dye'],
       ['Titanium dioxide', 'high', 'tio2'],
-      ['Peppermint oil', 'limited', 'peppermint'],
+      ['Peppermint oil', 'cleared', 'peppermint'],
       ['Sorbitol 70% solution', 'limited', 'sorbitol'],
       ['Gelatin', 'cleared', 'gelatin'],
       ['Glycerin', 'cleared', 'glycerin'],

@@ -117,7 +117,7 @@ const CHEW = 'Target TCIN 94936251 tropical fruit smoothie 32-count drug facts';
 function originalLine(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Microcrystalline cellulose', 'cleared', METH.mcc),
@@ -131,7 +131,7 @@ function originalLine(panel: string): IngredientFlag[] {
 function maxLine(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Carnauba wax', 'cleared', METH.carnauba),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Microcrystalline cellulose', 'cleared', METH.mcc),
@@ -169,7 +169,7 @@ function berry25(panel: string): IngredientFlag[] {
     flag(panel, 'FD&C Red No. 40 aluminum lake', 'high', METH.dye),
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Gum arabic', 'cleared', METH.gum),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Lactose monohydrate', 'cleared', METH.lactose),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -202,7 +202,7 @@ function mint25(panel: string): IngredientFlag[] {
     flag(panel, 'FD&C Blue No. 1 aluminum lake', 'high', METH.dye),
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Gum arabic', 'cleared', METH.gum),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Lactose monohydrate', 'cleared', METH.lactose),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -221,7 +221,7 @@ function mint50(panel: string): IngredientFlag[] {
     flag(panel, 'FD&C Blue No. 1 aluminum lake', 'high', METH.dye),
     flag(panel, 'Flavors', 'limited', METH.flavors),
     flag(panel, 'Gum arabic', 'cleared', METH.gum),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Lactose monohydrate', 'cleared', METH.lactose),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -258,7 +258,7 @@ function stressLine(panel: string): IngredientFlag[] {
 function prilosecLine(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Glyceryl monostearate', 'cleared', METH.gms),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Iron oxide', 'limited', METH.iron),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -283,7 +283,7 @@ function wildLine(panel: string): IngredientFlag[] {
     flag(panel, 'FD&C Red 40 aluminum lake', 'high', METH.dye),
     flag(panel, 'Flavor', 'limited', METH.flavors),
     flag(panel, 'Glyceryl monostearate', 'cleared', METH.gms),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Methacrylic acid copolymer', 'limited', METH.meth),

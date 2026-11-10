@@ -260,7 +260,7 @@ const ESOME_FLAGS: Compact['flags'] = [
   ['Sucrose', 'cleared', 'sucrose'],
   ['Corn starch', 'cleared', 'starch'],
   ['Gelatin', 'cleared', 'gelatin'],
-  ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['Hypromellose', 'cleared', 'hpmc'],
   ['Magnesium stearate', 'cleared', 'stearate'],
   ['Potassium hydroxide', 'cleared', 'koh'],

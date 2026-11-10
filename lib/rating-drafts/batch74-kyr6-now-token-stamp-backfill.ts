@@ -510,7 +510,7 @@ const COMPACT: Compact[] = [
     ],
     flags: [
       ['Xylitol / erythritol', 'limited', 'xylitol'],
-      ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+      ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
       ['Natural orange fruit juice powder', 'cleared', 'ojPowder'],
       ['Stearic acid', 'cleared', 'stearate'],
       ['Microcrystalline cellulose', 'cleared', 'mcc'],
@@ -616,7 +616,7 @@ const COMPACT: Compact[] = [
     flags: [
       ['Cane sugar', 'cleared', 'sugar'],
       ['Sugar alcohol', 'limited', 'sugarAlcohol'],
-      ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+      ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
       ['Xylitol / erythritol', 'limited', 'xylitol'],
       ['Natural orange fruit juice powder', 'cleared', 'ojPowder'],
       ['Stearic acid', 'cleared', 'stearate'],

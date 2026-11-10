@@ -1002,7 +1002,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
       labelCleared(CITE.bComplex, 'Vegetable glycerin'),
       labelCleared(CITE.bComplex, 'Deionized water'),
       flag('Raspberry natural flavor', 'moderate', labelCite(CITE.bComplex, METH.flavors)),
-      flag('Lemon essential oil', 'limited', labelCite(CITE.bComplex, METH.lemonOil)),
+      flag('Lemon essential oil', 'cleared', labelCite(CITE.bComplex, METH.lemonOil)),
     ],
     verdict: 'caution',
     note:
@@ -1022,7 +1022,7 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
     ],
     inactives: [
       flag('Natural flavor', 'limited', labelCite(CITE.b12folic, METH.flavors)),
-      flag('Lemon essential oil', 'limited', labelCite(CITE.b12folic, METH.lemonOil)),
+      flag('Lemon essential oil', 'cleared', labelCite(CITE.b12folic, METH.lemonOil)),
     ],
     verdict: 'caution',
     note:
@@ -1083,9 +1083,9 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
         labelCite(CITE.d3_5000, METH.mctUnlabeled),
       ),
       flag('Orange essential oil', 'limited', labelCite(CITE.d3_5000, METH.orangeOil)),
-      flag('Lemon essential oil', 'limited', labelCite(CITE.d3_5000, METH.lemonOil)),
+      flag('Lemon essential oil', 'cleared', labelCite(CITE.d3_5000, METH.lemonOil)),
     ],
-    verdict: 'avoid',
+    verdict: 'caution',
     note: `FOUNDER-STYLE DRAFT: Sprouts D3 5000 IU Citrus MCT Oil = Caution. MCT on this carton does not name coconut → unlabeled MCT Limited. Orange essential oil is Limited (flavor/EO line). Named lemon oil is Limited. Full carrier list was not independently dumped — do not invent glycerin or water. ${MCT_UNLABELED_TAP} ${LIMITED_STACK} Separate formulaId from D3 1000 / 2000 rice-bran softgels (Clean). Avoid: three or more Limited tokens triggered the stacking rule (t137u): Medium chain triglycerides (source not named), Orange essential oil, Lemon essential oil.`,
     cite: CITE.d3_5000,
     alts: [...ALTS.d3],
@@ -1155,9 +1155,9 @@ export const BATCH35_SPROUTS: RatingRecord[] = [
         'cleared',
         labelCite(CITE.herbLozenge, METH.caramelSyrup),
       ),
-      flag('Peppermint oil', 'limited', labelCite(CITE.herbLozenge, METH.peppermintOil)),
+      flag('Peppermint oil', 'cleared', labelCite(CITE.herbLozenge, METH.peppermintOil)),
     ],
-    verdict: 'caution',
+    verdict: 'clean',
     note:
       `FOUNDER-STYLE DRAFT: Sprouts Original Herb Herbal Lozenges = Caution. Driver is peppermint oil (Limited flavor/EO line). Caramel sugar syrup is Cleared food sugar — not caramel color / E150 and not the undisclosed-class Avoid row. ${CARAMEL_SYRUP_TAP} Named 20-herb extract is Cleared-class food/botanical (do not Caution on those herbs alone). Menthol is treated as the labeled active (parked active-safety; not an inactive grade). ${HONEY_LINE} ${LIMITED_STACK}`,
     cite: CITE.herbLozenge,

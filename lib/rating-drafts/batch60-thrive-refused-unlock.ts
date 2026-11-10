@@ -418,7 +418,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.ritual_stress, 'Hypromellose', 'cleared', METH.hpmc),
       f(CITE.ritual_stress, 'Cellulose', 'cleared', METH.cellulose),
       f(CITE.ritual_stress, 'Ascorbyl palmitate', 'cleared', METH.tocopherols),
-      f(CITE.ritual_stress, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+      f(CITE.ritual_stress, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
       f(CITE.ritual_stress, 'Silica', 'cleared', METH.sio2),
       f(CITE.ritual_stress, 'Psyllium husk', 'cleared', METH.psyllium),
       f(CITE.ritual_stress, 'Vegetable-based tablet coating', 'cleared', METH.unnamedCoat),
@@ -451,7 +451,7 @@ export const BATCH60_THRIVE_REFUSED_UNLOCK: RatingRecord[] = [
       f(CITE.motherlove_moringa, 'Modified vegetable cellulose', 'cleared', METH.hpmc),
       f(CITE.motherlove_moringa, 'Medium chain triglycerides (derived from palm kernel oil)', 'cleared', METH.mctNamed),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...THRIVE, 'Motherlove'],
     sourcesGeneral: [`${CITE.motherlove_moringa} — ${UNVERIFIED_NOTE}`],

@@ -94,7 +94,7 @@ function wildLine(panel: string): IngredientFlag[] {
     flag(panel, 'FD&C Blue #2', 'high', METH.dye),
     flag(panel, 'FD&C Red #40', 'high', METH.dye),
     flag(panel, 'Flavor', 'limited', METH.flavor),
-    flag(panel, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose 2910', 'cleared', METH.hpmc),
     flag(panel, 'Magnesium stearate', 'cleared', METH.stearate),
     flag(panel, 'Methacrylic acid copolymer type C', 'limited', METH.meth),

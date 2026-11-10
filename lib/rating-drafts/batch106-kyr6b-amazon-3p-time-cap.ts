@@ -270,7 +270,7 @@ const DAY_COLD: Compact['flags'] = [
 const FAMOTIDINE: Compact['flags'] = [
   ['carnauba wax', 'cleared', 'carnauba'],
   ['colloidal silicon dioxide', 'limited', 'sio2'],
-  ['hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['microcrystalline cellulose', 'cleared', 'mcc'],

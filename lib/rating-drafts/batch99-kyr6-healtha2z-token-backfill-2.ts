@@ -289,7 +289,7 @@ const TUSSIN_FLAGS: Compact['flags'] = [
 ];
 
 const FAMOTIDINE_FLAGS: Compact['flags'] = [
-  ['hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['macrogol', 'limited', 'macrogol'],
   ['magnesium stearate', 'cleared', 'mgStearate'],

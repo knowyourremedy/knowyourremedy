@@ -209,7 +209,7 @@ const ESO: Compact['flags'] = [
   ['ferric oxide yellow', 'moderate', 'iron'],
   ['gelatin', 'cleared', 'gelatin'],
   ['glyceryl monostearate', 'cleared', 'gms'],
-  ['hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['polysorbate 80', 'limited', 'ps80'],

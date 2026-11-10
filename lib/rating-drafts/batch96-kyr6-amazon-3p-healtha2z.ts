@@ -268,7 +268,7 @@ const SIMETHICONE_125_FLAGS: Compact['flags'] = [
   ["FD&C red #40", "high", "dye"],
   ["gelatin", "cleared", "gelatin"],
   ["glycerin", "cleared", "glycerin"],
-  ["peppermint oil", "limited", "peppermint"],
+  ["peppermint oil", "cleared", "peppermint"],
   ["purified water", "cleared", "water"],
   ["white edible ink", "limited", "whiteInk"],
 ];

@@ -87,7 +87,7 @@ const CLOT_FLAGS: IngredientFlag[] = [
 ];
 
 const POWDER_SPRAY_FLAGS: IngredientFlag[] = [
-  flag(POWDER_SPRAY_PANEL, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+  flag(POWDER_SPRAY_PANEL, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
   flag(POWDER_SPRAY_PANEL, 'Isobutane', 'limited', METH.isobutane),
   flag(POWDER_SPRAY_PANEL, 'Kaolin', 'cleared', METH.kaolin),
   flag(POWDER_SPRAY_PANEL, 'Magnesium stearate', 'cleared', METH.magStearate),

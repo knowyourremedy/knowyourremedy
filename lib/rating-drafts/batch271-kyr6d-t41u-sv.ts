@@ -382,7 +382,7 @@ export const BATCH271_KYR6D_T41U_SV: RatingRecord[] = [
       flag(P21, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(P21, 'Crospovidone', 'cleared', 'crospovidone'),
       flag(P21, 'Carnauba Wax', 'cleared', 'carnauba'),
-      flag(P21, 'Hydroxypropyl Cellulose', 'cleared', 'hpc'),
+      flag(P21, 'Hydroxypropyl Cellulose', 'moderate', 'hpc'),
       flag(P21, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'),
       flag(P21, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(P21, 'Silica', 'limited', 'silica'),

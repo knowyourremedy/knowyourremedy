@@ -65,6 +65,9 @@ import {
   isT83uBareShellLimitedName,
   isT86uClearedName,
   isT87uClearedName,
+  isT104uCautionName,
+  isT104uClearedName,
+  isT104uLimitedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1276,6 +1279,24 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close(
       `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Cleared (t87u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
       'cleared',
+    );
+  }
+  if (isT104uClearedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Cleared (t104u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
+      'cleared',
+    );
+  }
+  if (isT104uCautionName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Caution (t104u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
+      'moderate',
+    );
+  }
+  if (isT104uLimitedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Limited (t104u). The printed word is middle, not medium. It counts toward the three-or-more Limited stack.`,
+      'limited',
     );
   }
   if (n === 'tapioca') {

@@ -87,7 +87,7 @@ const P_WMN =
 const IMM_FLAGS: IngredientFlag[] = [
   flag(P_IMM, 'Xylitol', 'moderate', 'xylitol'),
   flag(P_IMM, 'Mannitol (Corn or Wheat)', 'moderate', 'mannitol'),
-  flag(P_IMM, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+  flag(P_IMM, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
   flag(P_IMM, 'Stearic acid', 'cleared', 'stearic'),
   flag(P_IMM, 'Natural flavor', 'moderate', 'natFlavor'),
   flag(P_IMM, 'Magnesium stearate', 'cleared', 'magStearate'),

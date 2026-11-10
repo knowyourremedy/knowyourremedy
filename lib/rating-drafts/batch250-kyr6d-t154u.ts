@@ -76,7 +76,7 @@ export const BATCH250_KYR6D_T154U: RatingRecord[] = [
       flag(PANEL_MENO, 'Stearic acid', 'cleared', 'stearic'),
       flag(PANEL_MENO, 'Magnesium stearate', 'cleared', 'magStearate'),
       flag(PANEL_MENO, 'Hypromellose', 'cleared', 'hpmc'),
-      flag(PANEL_MENO, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+      flag(PANEL_MENO, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
       flag(PANEL_MENO, 'Glycerin', 'cleared', 'glycerin'),
       flag(PANEL_MENO, 'Croscarmellose sodium', 'cleared', 'croscarmellose'),
       flag(PANEL_MENO, 'Spirulina extract (color)', 'moderate', 'spirulina'),

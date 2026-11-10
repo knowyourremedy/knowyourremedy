@@ -185,7 +185,7 @@ export const BATCH251_KYR6D_T155U: RatingRecord[] = [
     inactiveIngredients: [
       flag(PANEL_MINI, 'Xylitol', 'limited', 'xylitol'),
       flag(PANEL_MINI, 'Mannitol', 'limited', 'mannitol'),
-      flag(PANEL_MINI, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+      flag(PANEL_MINI, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
       flag(PANEL_MINI, 'Stearic acid', 'cleared', 'stearic'),
       flag(PANEL_MINI, 'Natural Flavor', 'moderate', 'natFlavor'),
       flag(PANEL_MINI, 'Magnesium stearate', 'cleared', 'magStearate'),
@@ -302,7 +302,7 @@ export const BATCH251_KYR6D_T155U: RatingRecord[] = [
       flag(PANEL_UTD, 'Edible black ink', 'moderate', 'ink'),
       flag(PANEL_UTD, 'FD&C Red #40 Lake', 'high', 'red40'),
       flag(PANEL_UTD, 'FD&C Yellow #6 Lake', 'high', 'yellow6'),
-      flag(PANEL_UTD, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+      flag(PANEL_UTD, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
       flag(PANEL_UTD, 'Hydroxypropyl methylcellulose', 'cleared', 'hpmc'),
       flag(PANEL_UTD, 'Magnesium stearate', 'cleared', 'magStearate'),
       flag(PANEL_UTD, 'Methacrylic acid-ethyl acrylate copolymer', 'moderate', 'methacrylic'),

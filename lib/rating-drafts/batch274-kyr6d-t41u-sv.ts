@@ -461,7 +461,7 @@ export const BATCH274_KYR6D_T41U_SV: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(P103, 'Microcrystalline Cellulose', 'cleared', 'mcc'),
-      flag(P103, 'Hydroxypropyl Cellulose', 'cleared', 'hpc'),
+      flag(P103, 'Hydroxypropyl Cellulose', 'moderate', 'hpc'),
       flag(P103, 'Carnauba Wax', 'cleared', 'carnauba'),
       flag(P103, 'Croscarmellose Sodium', 'cleared', 'croscarmellose'),
       flag(P103, 'Crospovidone', 'cleared', 'crospovidone'),
@@ -733,7 +733,7 @@ export const BATCH274_KYR6D_T41U_SV: RatingRecord[] = [
       flag(P115, 'Crospovidone', 'cleared', 'crospovidone'),
       flag(P115, 'Sodium Starch Glycolate', 'cleared', 'ssg'),
       flag(P115, 'Carnauba Wax', 'cleared', 'carnauba'),
-      flag(P115, 'Hydroxypropyl Cellulose', 'cleared', 'hpc'),
+      flag(P115, 'Hydroxypropyl Cellulose', 'moderate', 'hpc'),
       flag(P115, 'Hydroxypropyl Methylcellulose', 'cleared', 'hpmc'),
       flag(P115, 'Magnesium Stearate', 'cleared', 'magStearate'),
       flag(P115, 'Polyethylene Glycol', 'limited', 'peg'),
