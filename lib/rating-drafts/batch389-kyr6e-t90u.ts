@@ -16,7 +16,7 @@ import {
 const UNVERIFIED = 'unverified' as const;
 
 const HONEST =
-  'The label notice says this product contains senna leaf extract. Read and follow directions carefully. Do not use it if you have or develop diarrhea, loose stools, or abdominal pain, because senna leaf extract may worsen those conditions and be harmful to your health. Consult a physician if you have frequent diarrhea or if you are pregnant, nursing, taking medication, or have a medical condition. Organic senna leaf dry extract, organic ginger rhizome, and organic licorice root sit inside Proprietary Herbal Blend 1275 mg. Those rows are actives and are not graded. Other ingredients print Vegetable capsule. That exact bare shell is Limited and counts. One Limited token makes this Caution. It is not a three-or-more stack. The brand FAQ says the vegan capsules are made from pullulan. That sentence is page text. It is not the printed Other ingredients line. A printed pullulan capsule would be a different string. The printed line stays Vegetable capsule, so the grade stays Caution.';
+  'This product is Caution because the capsule is listed only as vegetable capsule with no material named. That bare shell is graded Limited.';
 
 function finish(record: RatingRecord): RatingRecord {
   return applyT83DecisionRow(applyT87uRow(applyT86uRow(applyT83uRow(applyT54uRow(record)))));
@@ -52,6 +52,7 @@ export const BATCH389_KYR6E_T90U: RatingRecord[] = [
     inactiveIngredients: [SHELL],
     verdict: 'caution',
     honestNote: HONEST,
+    founderHonestNote: HONEST,
     sourcesGeneral: [
       't90u. https://www.traditionalmedicinals.com/products/smooth-move-capsules shows 50 capsules at $19.99 for one purchase. The $17.99 figure is subscribe and save and is not the shelf price. The 6-pack of 6 x 50 capsules is a multipack and is not this row. No stock word was on the brand page. The brand Supplement Facts panel prints Serving Size 3 Capsules, Servings per container 16, and Proprietary Herbal Blend 1275 mg. The blend line is organic senna leaf dry extract, organic ginger rhizome, organic licorice root. Those rows are actives and are not graded. Daily Value Not Established is the dagger mark. Other Ingredients: Vegetable capsule. The package photograph prints Vegetable capsule. with a final period. The period is not a second token. That print is the bare Vegetable Capsule lock. It is Limited and it counts. The brand FAQ says the vegan capsules are made from pullulan. That sentence is page text and is not the printed Other ingredients line. The label notice says this product contains senna leaf extract, says to read and follow directions, and says not to use it with diarrhea, loose stools, or abdominal pain. It says to consult a physician if you are pregnant, nursing, taking medication, or have a medical condition. The facts serving is 3 capsules. iHerb https://www.iherb.com/pr/traditional-medicinals-smooth-move-capsules-senna-50-capsules/101299 lists the 50-capsule pack. Its page text UPC is a lead. The package photograph prints 0 32917 00296 9. The check digit passes. UPC 032917002969. This code is the 50 capsules only. Teas from this brand are beverages and are not rows. Counted Limited tokens: Vegetable capsule.',
     ],
@@ -75,7 +76,7 @@ if (row.id !== 'tm-b389-smooth-move-50' || row.barcode !== '032917002969' || !up
 if (row.category !== 'Herbs' || row.audience !== 'adult' || row.verdict !== 'caution' || !row.honestNote) {
   throw new Error('batch389 grade');
 }
-if (!row.honestNote.includes('senna leaf extract') || !row.honestNote.includes('Vegetable capsule') || !row.honestNote.includes('pullulan')) {
+if (row.honestNote !== HONEST || row.founderHonestNote !== HONEST) {
   throw new Error('batch389 note');
 }
 if (row.activeIngredients.length !== 4 || row.inactiveIngredients.length !== 1) throw new Error('batch389 lines');

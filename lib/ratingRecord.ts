@@ -77,6 +77,8 @@ export type RatingRecord = {
 
   verdict: Verdict;       // 'clean' | 'caution' | 'avoid' — from verdictLabels.ts
   honestNote?: string;
+  /** Founder-supplied honest note. When set, the app shows this string instead of a generated note. */
+  founderHonestNote?: string;
 
   retailers: string[];
 
