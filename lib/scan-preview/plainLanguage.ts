@@ -68,6 +68,7 @@ import {
   isT104uCautionName,
   isT104uClearedName,
   isT104uLimitedName,
+  isT108uClearedName,
 } from './limitedStackEligibility';
 import {
   isT159uPaprikaColorClearedName,
@@ -1297,6 +1298,12 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     return close(
       `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Limited (t104u). The printed word is middle, not medium. It counts toward the three-or-more Limited stack.`,
       'limited',
+    );
+  }
+  if (isT108uClearedName(ingredient.name)) {
+    return close(
+      `${ingredient.name.trim()} is the exact printed string. The founder locked this exact token Cleared (t108u). It does not count toward the three-or-more Limited stack. A different capitalization of the same print is not a second token.`,
+      'cleared',
     );
   }
   if (n === 'tapioca') {
