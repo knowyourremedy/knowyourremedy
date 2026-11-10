@@ -356,7 +356,7 @@ export const BATCH56_AMAZON_LEFTOVER_GRADES: RatingRecord[] = [
       ),
       flag('Eucalyptus oil', 'moderate', labelCite(CITE.stopain, METH.eucalyptus)),
       flag('Triethanolamine', 'moderate', labelCite(CITE.stopain, METH.trolamine)),
-      flag('Peppermint oil', 'limited', labelCite(CITE.stopain, METH.peppermint)),
+      flag('Peppermint oil', 'cleared', labelCite(CITE.stopain, METH.peppermint)),
       flag('SD alcohol 39C', 'limited', labelCite(CITE.stopain, METH.sd39c)),
       flag('Dimethylsulfone (MSM)', 'cleared', labelCite(CITE.stopain, METH.msm)),
       flag(

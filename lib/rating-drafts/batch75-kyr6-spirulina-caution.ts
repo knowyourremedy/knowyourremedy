@@ -171,7 +171,7 @@ const EVE_ACTIVES: RatingRecord['activeIngredients'] = [
 
 const EVE_FLAGS: Compact['flags'] = [
   ['Microcrystalline cellulose', 'cleared', 'mcc'],
-  ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['Hypromellose (cellulose)', 'cleared', 'hpmc'],
   ['Calcium carbonate (OI coat filler)', 'cleared', 'caCarbonate'],
   ['Xylitol', 'limited', 'xylitol'],

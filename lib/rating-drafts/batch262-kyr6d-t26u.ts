@@ -116,7 +116,7 @@ const CH60_FLAGS: IngredientFlag[] = CH_FLAGS.map((ingredient) => ({
 const KIDS_FLAGS: IngredientFlag[] = [
   flag(P_K30, 'Xylitol', 'moderate', 'xylitol'),
   flag(P_K30, 'Mannitol', 'moderate', 'mannitol'),
-  flag(P_K30, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+  flag(P_K30, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
   flag(P_K30, 'Stearic acid', 'cleared', 'stearic'),
   flag(P_K30, 'Natural flavor', 'moderate', 'natFlavor'),
   flag(P_K30, 'Magnesium stearate', 'cleared', 'magStearate'),

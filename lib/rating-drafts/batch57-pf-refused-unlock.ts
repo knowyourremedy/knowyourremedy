@@ -452,7 +452,7 @@ export const BATCH57_PF_REFUSED_UNLOCK: RatingRecord[] = [
       ),
       flag(
         'Peppermint Oil',
-        'limited',
+        'cleared',
         labelCite(CITE.jointflex, METH.peppermint),
       ),
       flag(

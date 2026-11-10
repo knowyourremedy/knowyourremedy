@@ -614,6 +614,43 @@ export function isT98CautionName(name: string): boolean {
   return T98_CAUTION.has(t121uToken(name));
 }
 
+const T104U_CLEARED = new Set([
+  'peppermint oil',
+  'lemon oil named',
+  'named lemon oil as flavor',
+  'organic lemon oil',
+  'orange essential oil flavor',
+  'essential oil of lemon grass',
+  'lemon essential oil',
+]);
+
+const T104U_CAUTION = new Set([
+  'potassium benzoate',
+  'hydroxyproyl cellulose',
+  'hydroxypropyl cellulose',
+  'enteric coating cellulose and methacrylate',
+  'enteric coating',
+]);
+
+const T104U_LIMITED = new Set([
+  'middle chain triglycerides',
+]);
+
+/** t104u. These exact prints only. Case is not a second token. Not hydroxypropyl methylcellulose. Not bare lemon oil. Not medium chain triglycerides. */
+export function isT104uClearedName(name: string): boolean {
+  return T104U_CLEARED.has(t121uToken(name));
+}
+
+/** t104u Caution strings. Exact prints only. They do not stack. */
+export function isT104uCautionName(name: string): boolean {
+  return T104U_CAUTION.has(t121uToken(name));
+}
+
+/** t104u. The printed word is middle, not medium. It counts toward the t137u stack. */
+export function isT104uLimitedName(name: string): boolean {
+  return T104U_LIMITED.has(t121uToken(name));
+}
+
 const T83U_BARE_SHELL = new Set([
   'vegetable capsule',
   'vegetarian capsule',
@@ -1072,6 +1109,8 @@ export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): 
   if (isT83uClearedName(ingredient.name)) return false;
   if (isT86uClearedName(ingredient.name)) return false;
   if (isT87uClearedName(ingredient.name)) return false;
+  if (isT104uLimitedName(ingredient.name)) return ingredient.riskLevel === 'limited';
+  if (isT104uClearedName(ingredient.name) || isT104uCautionName(ingredient.name)) return false;
   if (isT83uBareShellLimitedName(ingredient.name)) return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   if (isT83uHydrogenatedPeanutOilName(ingredient.name)) return false;
   if (isT70uLimitedName(ingredient.name)) return true;

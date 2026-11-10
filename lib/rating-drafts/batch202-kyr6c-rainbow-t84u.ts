@@ -72,7 +72,7 @@ function mens120Oi(panel: string): IngredientFlag[] {
   return [
     flag(panel, 'Cellulose (Plant Origin)', 'cleared', METH.cellulosePlant),
     flag(panel, 'Croscarmellose Sodium', 'cleared', METH.croscarmellose),
-    flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl Cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
@@ -83,7 +83,7 @@ function mens50Plus120Oi(panel: string): IngredientFlag[] {
     flag(panel, 'Cellulose (Plant Origin)', 'cleared', METH.cellulosePlant),
     flag(panel, 'Cellulose Gum', 'cleared', METH.celluloseGum),
     flag(panel, 'Silica', 'limited', METH.silica),
-    flag(panel, 'Hydroxypropyl Cellulose', 'cleared', METH.hpc),
+    flag(panel, 'Hydroxypropyl Cellulose', 'moderate', METH.hpc),
     flag(panel, 'Hypromellose', 'cleared', METH.hpmc),
     flag(panel, 'Carnauba Wax', 'cleared', METH.carnauba),
   ];
@@ -208,7 +208,7 @@ export const BATCH202_KYR6C_RAINBOW_T84U: RatingRecord[] = [
     barcode: '021888217151',
     activeIngredients: MENS_ACTIVES,
     inactiveIngredients: mens120Oi(RL_M_120),
-    verdict: 'clean',
+    verdict: 'caution',
     retailers: ['Target', 'Walmart'],
     sourcesGeneral: [
       `Brand page ${RL_M_120} supplement-facts image ${IMG_M_120} was read. Other ingredients: Cellulose (Plant Origin), Croscarmellose Sodium, Coating (Hydroxypropyl Cellulose, Hypromellose), Carnauba Wax. Brand gtin12 021888217151. Target opened https://www.target.com/p/-/A-89544356 with UPC 021888217151. Target prints different other-ingredient text (microcrystalline cellulose, coating with hypromellose, medium chain triglycerides, inulin). Walmart opened https://www.walmart.com/ip/509836030; its other-ingredient text matches the brand panel. This row is graded from the brand label only.`,

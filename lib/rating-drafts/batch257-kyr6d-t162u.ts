@@ -159,7 +159,7 @@ const LEM_24_NOTE = limitedStackHonestNoteIfAny(LEM_24);
 
 const SPRAY_FLAGS: IngredientFlag[] = [
   flag(PANEL_SPRAY, 'Butylated Hydroxytoluene', 'high', 'bht'),
-  flag(PANEL_SPRAY, 'Hydroxypropyl Cellulose', 'cleared', 'hpc'),
+  flag(PANEL_SPRAY, 'Hydroxypropyl Cellulose', 'moderate', 'hpc'),
   flag(PANEL_SPRAY, 'Isobutane', 'cleared', 'isobutane'),
   flag(PANEL_SPRAY, 'Kaolin', 'cleared', 'kaolin'),
   flag(PANEL_SPRAY, 'Magnesium Stearate', 'cleared', 'magStearate'),
@@ -539,7 +539,7 @@ export const BATCH257_KYR6D_T162U: RatingRecord[] = [
       flag(PANEL_MIND, 'Dextrose', 'moderate', 'dextrose'),
       flag(PANEL_MIND, 'Natural Flavor', 'moderate', 'natFlavorSingular'),
       flag(PANEL_MIND, 'Stearic acid', 'cleared', 'stearic'),
-      flag(PANEL_MIND, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+      flag(PANEL_MIND, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
       flag(PANEL_MIND, 'Sucralose', 'limited', 'sucralose'),
       flag(PANEL_MIND, 'Magnesium stearate', 'cleared', 'magStearate'),
       flag(PANEL_MIND, 'Spirulina extract (color)', 'moderate', 'spirulina'),

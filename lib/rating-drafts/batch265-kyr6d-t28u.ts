@@ -176,7 +176,7 @@ const WW60_FLAGS: IngredientFlag[] = [
   flag(P_WW60, 'Mannitol', 'moderate', 'mannitol'),
   flag(P_WW60, 'Microcrystalline cellulose', 'cleared', 'mcc'),
   flag(P_WW60, 'Magnesium stearate', 'cleared', 'magStearate'),
-  flag(P_WW60, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+  flag(P_WW60, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
   flag(P_WW60, 'Citric acid', 'cleared', 'citric'),
   flag(P_WW60, 'Natural flavors', 'limited', 'natFlavors'),
   flag(P_WW60, 'Stearic acid', 'cleared', 'stearic'),
@@ -188,7 +188,7 @@ const WW60_FLAGS: IngredientFlag[] = [
 const KIDS90_FLAGS: IngredientFlag[] = [
   flag(P_K90, 'Xylitol', 'moderate', 'xylitol'),
   flag(P_K90, 'Mannitol', 'moderate', 'mannitol'),
-  flag(P_K90, 'Hydroxypropyl cellulose', 'cleared', 'hpc'),
+  flag(P_K90, 'Hydroxypropyl cellulose', 'moderate', 'hpc'),
   flag(P_K90, 'Stearic acid', 'cleared', 'stearic'),
   flag(P_K90, 'Natural flavor', 'moderate', 'natFlavor'),
   flag(P_K90, 'Magnesium stearate', 'cleared', 'magStearate'),

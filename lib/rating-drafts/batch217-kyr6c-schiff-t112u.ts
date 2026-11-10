@@ -102,7 +102,7 @@ const GLUCOSAMINE_FLAGS: FlagSpec[] = [
   ['Polyethylene glycol', 'limited', 'peg'],
   ['Glycerin', 'cleared', 'glycerin'],
   ['Magnesium silicate', 'high', 'talc'],
-  ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['Silicon dioxide', 'limited', 'silica'],
   ['Magnesium stearate', 'cleared', 'magStearate'],
   ['Boron glycinate', 'limited', 'boron'],

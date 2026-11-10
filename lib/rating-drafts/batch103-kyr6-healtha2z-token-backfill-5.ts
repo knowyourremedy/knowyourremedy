@@ -256,7 +256,7 @@ const NIGHT_FLAGS: Compact['flags'] = [
 const OMEP_FLAGS: Compact['flags'] = [
   ['crospovidone', 'cleared', 'crospovidone'],
   ['glyceryl monostearate', 'cleared', 'gms'],
-  ['hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['hypromellose', 'cleared', 'hpmc'],
   ['magnesium stearate', 'cleared', 'mgStearate'],
   ['methacrylic acid and ethyl acrylate copolymer dispersion', 'limited', 'methacrylic'],

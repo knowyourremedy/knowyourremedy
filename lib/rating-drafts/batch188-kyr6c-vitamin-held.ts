@@ -105,7 +105,7 @@ const MF_FLAGS: IngredientFlag[] = [
   flag(MF_PANEL, 'Croscarmellose sodium', 'cleared', METH.croscarmellose),
   flag(MF_PANEL, 'Magnesium stearate', 'cleared', METH.magStearate),
   flag(MF_PANEL, 'Silicon dioxide', 'limited', METH.silica),
-  flag(MF_PANEL, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+  flag(MF_PANEL, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
 ];
 
 export const BATCH188_KYR6C_VITAMIN_HELD: RatingRecord[] = [

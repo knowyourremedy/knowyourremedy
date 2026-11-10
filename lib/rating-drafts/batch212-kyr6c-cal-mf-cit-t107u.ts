@@ -146,7 +146,7 @@ const PM_TABLET_FLAGS: FlagSpec[] = [
 
 const MF_UTA_FLAGS: FlagSpec[] = [
   ['Microcrystalline cellulose', 'cleared', 'cellulose'],
-  ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['Croscarmellose sodium', 'cleared', 'croscarmellose'],
   ['Silicon dioxide', 'limited', 'silica'],
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
@@ -160,7 +160,7 @@ const MF_UTA_FLAGS: FlagSpec[] = [
 ];
 
 const MF_TAMA_FLAGS: FlagSpec[] = [
-  ['Hydroxypropyl cellulose', 'cleared', 'hpc'],
+  ['Hydroxypropyl cellulose', 'moderate', 'hpc'],
   ['Microcrystalline cellulose', 'cleared', 'cellulose'],
   ['Hydroxypropyl methylcellulose', 'cleared', 'hpmc'],
   ['Glycerin', 'cleared', 'glycerin'],

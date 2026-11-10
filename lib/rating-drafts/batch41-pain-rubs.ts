@@ -229,7 +229,7 @@ function alevexLotionInactives(setid: string): IngredientFlag[] {
   return [
     flag('Polysorbate 80', 'limited', dailymed(setid, METH.ps80)),
     flag('Alcohol', 'limited', dailymed(setid, METH.alcoholVehicle)),
-    flag('Peppermint oil', 'limited', dailymed(setid, METH.peppermint)),
+    flag('Peppermint oil', 'cleared', dailymed(setid, METH.peppermint)),
     flag('Clove oil', 'cleared', dailymed(setid, METH.clove)),
     flag('Frankincense / boswellia oil', 'cleared', dailymed(setid, METH.boswellia)),
     flag(
@@ -478,8 +478,8 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       { name: 'Camphor (synthetic)', strength: 'on carton' },
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexLotion),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil.',
+    verdict: 'caution',
+    honestNote: 'Counted Limited tokens: Polysorbate 80 and Alcohol. That is two, so this is Caution. It is not a three-or-more stack. Peppermint oil is Cleared and does not stack.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -502,8 +502,8 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
       { name: 'Menthol', strength: 'on carton' },
     ],
     inactiveIngredients: alevexLotionInactives(SET.alevexTube),
-    verdict: 'avoid',
-    honestNote: 'Avoid: three or more Limited tokens triggered the stacking rule (t137u): Polysorbate 80, Alcohol, Peppermint oil.',
+    verdict: 'caution',
+    honestNote: 'Counted Limited tokens: Polysorbate 80 and Alcohol. That is two, so this is Caution. It is not a three-or-more stack. Peppermint oil is Cleared and does not stack.',
 
     retailers: [...PF_RETAILERS, 'aleve.com'],
     cleanAlternatives: TOPICAL_ALTS,
@@ -527,7 +527,7 @@ export const BATCH41_PAIN_RUBS: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag('Alcohol', 'limited', dailymed(SET.alevexSpray, METH.alcoholVehicle)),
-      flag('Peppermint oil', 'limited', dailymed(SET.alevexSpray, METH.peppermint)),
+      flag('Peppermint oil', 'cleared', dailymed(SET.alevexSpray, METH.peppermint)),
       flag('Clove oil', 'moderate', dailymed(SET.alevexSpray, METH.clove)),
       flag(
         'Frankincense / boswellia oil',

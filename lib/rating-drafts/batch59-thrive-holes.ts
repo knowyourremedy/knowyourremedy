@@ -821,7 +821,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.lovebug_kids_chewable_probiotic, 'Microcrystalline cellulose', 'cleared', METH.mcc),
       f(CITE.lovebug_kids_chewable_probiotic, 'Stearic acid', 'cleared', METH.stearate),
       f(CITE.lovebug_kids_chewable_probiotic, 'Beet root (color)', 'cleared', METH.namedColor),
-      f(CITE.lovebug_kids_chewable_probiotic, 'Hydroxypropyl cellulose', 'cleared', METH.hpc),
+      f(CITE.lovebug_kids_chewable_probiotic, 'Hydroxypropyl cellulose', 'moderate', METH.hpc),
       f(CITE.lovebug_kids_chewable_probiotic, 'Malic acid', 'cleared', METH.citrate),
       f(CITE.lovebug_kids_chewable_probiotic, 'Citric acid', 'cleared', METH.citrate),
       f(CITE.lovebug_kids_chewable_probiotic, 'Magnesium stearate', 'cleared', METH.stearate),
@@ -4118,7 +4118,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
     inactiveIngredients: [
       f(CITE.codeage_akkermansia, 'Methylcellulose capsule', 'cleared', METH.methylcellulose),
       f(CITE.codeage_akkermansia, 'Microcrystalline cellulose', 'cleared', METH.mcc),
-      f(CITE.codeage_akkermansia, 'Enteric coating', 'cleared', METH.enteric),
+      f(CITE.codeage_akkermansia, 'Enteric coating', 'moderate', METH.enteric),
     ],
     verdict: 'caution',
 
@@ -4148,7 +4148,7 @@ export const BATCH59_THRIVE_HOLES: RatingRecord[] = [
       f(CITE.codeage_mens_fermented_multi, 'Potassium chloride', 'cleared', METH.kcl),
       f(CITE.codeage_mens_fermented_multi, 'Trace minerals (from seawater)', 'cleared', METH.traceMinerals),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
 
     retailers: [...THRIVE, 'Codeage'],
     cleanAlternatives: [

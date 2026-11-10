@@ -942,7 +942,7 @@ const COMPACT: Compact[] = [
       ["Silica", "limited", "sio2"],
       ["Magnesium Stearate", "cleared", "stearate"],
       ["Dextrin", "limited", "dextrin"],
-      ["Enteric Coating", "limited", "enteric"],
+      ["Enteric Coating", "moderate", "enteric"],
     ],
     verdict: "caution",
     note: "FOUNDER-LOCK DRAFT: Caution. Driver families: Silica, Dextrin, Enteric Coating. No High.",

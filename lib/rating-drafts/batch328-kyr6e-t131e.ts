@@ -170,7 +170,7 @@ export const BATCH328_KYR6E_T131E: RatingRecord[] = [
       ['Xylitol', 'moderate', XYL],
       ['Natural Flavors', 'limited', NF],
       ['Magnesium stearate', 'cleared', MAGST],
-      ['Hydroxypropyl cellulose', 'cleared', HYPRO],
+      ['Hydroxypropyl cellulose', 'moderate', HYPRO],
       ['Stearic acid', 'moderate', STEARIC],
       ['Silicon Dioxide', 'moderate', SIO2],
       ['Citric acid', 'cleared', CITRIC],
