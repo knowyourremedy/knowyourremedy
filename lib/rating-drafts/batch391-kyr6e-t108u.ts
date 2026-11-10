@@ -19,7 +19,42 @@ function flag(name: string): IngredientFlag {
   };
 }
 
-export const BATCH391_KYR6E_T108U: RatingRecord[] = [
+const GLYCERINE_WHY = 'Glycerine is a sweet, syrupy liquid that keeps the tincture moist and helps the other ingredients stay mixed. In these products it is plant-based.';
+const ARTESIAN_WHY = 'Artesian spring water is groundwater that rises naturally under pressure. It is the plain water base of this liquid.';
+const ALCOHOL_WHY = 'Organic alcohol is the solvent used to extract the herbs. It is the named organic form.';
+const STORED_WHY: Record<string, string> = {
+  glycerine: GLYCERINE_WHY,
+  'vegetable glycerine': GLYCERINE_WHY,
+  'organic glycerine': GLYCERINE_WHY,
+  'rocky mountain artesian spring water': ARTESIAN_WHY,
+  'rocky mountain spring water': ARTESIAN_WHY,
+  'organic alcohol': ALCOHOL_WHY,
+  '<10% organic alcohol': ALCOHOL_WHY,
+  'locally sourced honey': 'Locally sourced honey is a natural sweetener used in small amounts in this liquid.',
+  'organic apple cider vinegar': 'Organic apple cider vinegar is a fermented apple liquid used as a flavor or carrier in this tincture.',
+  'organic vinegar': 'Organic vinegar is a fermented liquid used as a flavor or carrier in this tincture.',
+};
+const ALREADY_STORED = new Set([
+  'wg-b391-afterease-after-birth-pains-2oz-pump',
+  'wg-b391-ashwagandha-root-tincture-2oz-pump',
+  'wg-b391-attention-ally-focus-friend-for-kids-2oz-pump',
+]);
+
+function withStoredWhy(records: RatingRecord[]): RatingRecord[] {
+  return records.map((record) => {
+    if (ALREADY_STORED.has(record.id)) return record;
+    let changed = false;
+    const inactiveIngredients = record.inactiveIngredients.map((ingredient) => {
+      const why = STORED_WHY[ingredient.name.toLowerCase()];
+      if (!why) return ingredient;
+      changed = true;
+      return { ...ingredient, why };
+    });
+    return changed ? { ...record, inactiveIngredients } : record;
+  });
+}
+
+const BATCH391_ROWS: RatingRecord[] = [
   {
     id: "wg-b391-afterease-after-birth-pains-2oz-pump",
     productName: "AfterEase, After Birth Contractions (2oz Pump)",
@@ -2082,6 +2117,8 @@ export const BATCH391_KYR6E_T108U: RatingRecord[] = [
     sourcesGeneral: ["t108u. Brand page https://www.wishgardenherbs.com/products/yerba-mate-tincture?variant=43768500486368 is the single source for the panel. Serving Size: 1.5mL (4 pumps) Servings: about 40 Other ingredients: Rocky Mountain artesian spring water, vegetable glycerine, organic alcohol. Rows in the Supplement Facts table are actives and are not graded. Count 2oz Pump. SKU YMTSPTs2. iHerb WGH-29272 package image decodes 656490292724 (check digit OK) -> upc_images/656490292724_iherb_WGH-29272.jpg. The check digit passes. UPC 656490292724."],
   },
 ];
+
+export const BATCH391_KYR6E_T108U: RatingRecord[] = withStoredWhy(BATCH391_ROWS);
 
 const ROWS = BATCH391_KYR6E_T108U;
 const banned = /is on the Cleared list|is on the Limited list|has its own line|check digit was used|inferred/i;
