@@ -430,7 +430,7 @@ Process lock
 - A discontinued listing means do not write. An NDC on any site is only a maybe. DailyMed, a brand page, openFDA, or a store spec can all list a pack that is not for sale. Write a count only if a page that opened shows that same count for sale now. A listing that shows the NDC and not a buyable pack does not qualify. A blocked page is not proof the pack is dead. Those stay off the catalog and off Brandon's hunt list. The bot retries them later. Do not call them missing. A bonus box, a 2-pack, or a kit does not become its own row. A different inactive list is a different product only after the sold pack's panel is read.
 - An 11-digit spec with a valid check digit is a scannable barcode. Bars are not required. This applies to every future scan, not only Xyzal.
 - Same barcode on two counts is not a stop. Finish the ladder. Open the cited page. Attach the code only when a page ties it to one count. If every page that opened prints the same code on both counts, leave both empty and say so. Do not put it on Brandon's hunt list.
-- Condition rule. If a source says an ingredient is safe only when a condition is met, and this app cannot check that condition on the pack, the grade drops one level. A Clean call becomes Usable. A Usable call becomes Not clean. Do not jump two levels. Examples: safe when the formula is non-irritating, safe when non-sensitizing, when used as directed. A use level is not this rule. Safe at a named percent, safe at 0.001–0.25%, and any “safe at” line is how the ingredient is used. Do not drop a grade for a use level. The ingredient tab says the source requires a condition, this app does not have the formula, and the grade drops one level. Hydrogenated oil rule. The panel says hydrogenated. It does not say partial or full. Partial is the banned form. The grade is Avoid. Juice rule. Fruit and vegetable juice, puree, concentrate, and powder are Cleared. Named or not. Sweetener or color. High fructose corn syrup stays its own row.
+- Condition rule. If a source says an ingredient is safe only when a condition is met, and this app cannot check that condition on the pack, the grade drops one level. A Clean call becomes Usable. A Usable call becomes Not clean. Do not jump two levels. Examples: safe when the formula is non-irritating, safe when non-sensitizing, when used as directed. A use level is not this rule. Safe at a named percent, safe at 0.001–0.25%, and any “safe at” line is how the ingredient is used. Do not drop a grade for a use level. Hydrogenated oil rule. The panel says hydrogenated. It does not say partial or full. Partial is the banned form. The grade is Avoid. Juice rule. Fruit and vegetable juice, puree, concentrate, and powder are Cleared. Named or not. Sweetener or color. High fructose corn syrup stays its own row.
 - Flavor rule. Unnamed or vague flavor strings on the other-ingredients line dock per METHODOLOGY §5 (Limited “Natural flavors” opacity or Caution flavor family).
 - Flavor rule clarification (founder, Oct 17 2026): The flavor rule only docks unnamed or vague flavors (e.g. "natural flavor," "fruit flavor," "natural and artificial flavor"). A flavor that names the specific fruits or ingredients (e.g. "Natural Strawberry watermelon raspberry flavor") does not trigger the rule and is not automatically Limited.
 - A one-UPC mixed-flavor variety carton is one row, graded by its worst stick (founder t126u).
@@ -445,9 +445,7 @@ When writing rows
 This applies to every catalog run.
 
 When writing rows:
-- Include the full honest note on every row (only when an ingredient appears to contradict itself to a shopper, or when the 3+ Limited stack triggers Avoid).
-- Fill every ingredient tab with the exact why from the lock or source. Do not leave any ingredient tab blank.
-- A grade means there is a why. Name the rule or agency that set the why. Do not write “Pending DailyMed review.”
+- Do not write “Pending DailyMed review.”
 - Confirm two sources before writing. A missing UPC does not block the write. Note missing UPCs in PROJECT_NOTES so they can be added later. Founder-verified labels can waive the second source when instructed.
 - A single source counts when that one source is the brand page showing the pack for sale, or when the founder has verified the panel and UPC. The two-source rule still applies to retailer pages found by the bot.
 - A store page counts as the single source when the brand is sold only through that store. The store is the brand page for a house brand. A readable panel on that store page satisfies the single-source rule the same way a brand page does.
@@ -1167,13 +1165,12 @@ Write the row only when the pack has a home in one of the 13 search tabs. If it 
 
 Honest note and ingredient tab
 See the standing section When writing rows. The text below stays.
-An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. The note tells the shopper why the form in this product did not change the grade. An ingredient tab gives a plain why from the lock or the source that set the grade. A grade means there is a why. Do not write “Pending DailyMed review.” Name the rule or agency that set the why.
+An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. Do not write “Pending DailyMed review.”
 
 Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c and KYR6-d writes; founder order t151u, Oct 21, 2026 — same scope for both)
 See the standing section When writing rows. The text below stays.
 - Honest note only when an ingredient appears to contradict itself to a shopper.
-- Every ingredient tab filled with the exact why from the lock or source; none blank.
-- A grade names the rule or agency that set the why; never write “Pending DailyMed review.”
+- Never write “Pending DailyMed review.”
 - Condition rule: one-level drop only when a source says “safe when” and the app cannot check the condition on the pack (a use level is not the rule).
 - Juice rule and hydrogenated oil rule unchanged.
 - Exhaust every ladder step before calling a pack dead, open, or hunt-list ready.
@@ -1563,9 +1560,9 @@ POST-SCAN (locked template)
 - Active ingredients · N compact under the name, collapsed, no dots (unless existing activeSafetyFlag).
 - Honest note card, when a note is kept: WHITE card #fff, green stripe #2d4a3e, hairline #ece7de, collapsed, no paper icon.
 - Honest note: off by default. The grade bar and the ingredient list already say the grade. Do not write a note that only restates the grade and the one driver.
-- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive. Say why this form did not get the worse grade, in plain language.
+- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive.
 - Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
-- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared. Ingredient panel ≠ label dump. Reviewed + Clean → one-line why it stayed Clean. Reviewed + Usable / Not clean → one-line why (fact, not “unsafe”).
+- Inactive ingredients: small Blue B label. One open list, concern first. Color mark LEFT of name only (no extra hex/check icons). Tap = white why panel. Wording High risk / Moderate risk / Limited risk / Cleared. Ingredient panel ≠ label dump.
 - Cleaner carousel on Usable + Not clean only (internal caution + avoid). Heading in Clean green #27ae60. Empty line exact: “No cleaner match on this shelf yet.” Do not invent a Clean product.
 - No Overview tab. No Photos tab.
 - SIZES ROW (spec only — do not build this pass).
@@ -1937,8 +1934,8 @@ Seed / industrial oils (LOCKED v1.6 — do not expand without a new founder lock
 - Cream / topical vegetable oil uses the same non-gummy rule as capsule/softgel/liquid-drop fill. Tap: “Seed/industrial oils are flagged in gummies. In this cream they are not that High rule.”
 - Coconut oil alone in gummies/chews is NOT seed-oil High (already practice; now in Methodology §5 Cleared).
 - Canola / soy / sunflower lecithin stays Cleared (same lecithin lock; canola named explicitly).
-- On every capsule/softgel/liquid-drop row that lists those oils as a fill, keep an honest note only because this form would look like a contradiction. Say why this form did not get the worse grade, in plain language. Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
-- On every cream / topical row that lists vegetable oil / seed oil as a base, same contradiction note. Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
+- Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
+- Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
 
 Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §5 locks):
 - Pea protein isolate = Cleared-class food protein.
@@ -1950,11 +1947,11 @@ Sept 14 founder calls for NEW inactives (MegaFood leftovers — do not reopen §
 - New inactive not in §5: discuss + lock in methodology BEFORE the brand write. Do not default-Caution just because the table was empty. Audit list 2 still pending founder lock; no default Caution for missing-row.
 
 INGREDIENT TAP COPY (locked Oct 14, 2026)
-- Ingredient tab: one plain why for that ingredient. Say what it is and why it is flagged. A fact a shopper can read. Not jargon. Not "unsafe." Not "High-list extra." Not "agencies disagree, so we say Not clean anyway." Aspartame example: Aspartame is a sweetener. In 2023, the World Health Organization's cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.
-- A grade means there is a why. Write that why from the lock or the source that set the grade. Do not invent a new grade. Do not leave the tab blank because the sentence was not pre-written. Do not say “Pending DailyMed review.” DailyMed is one place a panel can be read. The brand site, Walmart, Target, and a page Google cites count too. DailyMed is not the judge. Blank only if there is no lock and no source fact.
+- A fact a shopper can read. Not jargon. Not "unsafe." Not "High-list extra." Not "agencies disagree, so we say Not clean anyway." Aspartame example: Aspartame is a sweetener. In 2023, the World Health Organization's cancer research agency classified it as possibly carcinogenic to humans. That is why it is High risk.
+- Do not invent a new grade. Do not say “Pending DailyMed review.” DailyMed is one place a panel can be read. The brand site, Walmart, Target, and a page Google cites count too. DailyMed is not the judge.
 - The source line names the source that set the why. Do not tag DailyMed unless the panel was the source of that fact. A cancer-agency listing does not get a DailyMed tag. The brand site, Walmart, Target, and a page Google cites are panel sources too.
 - Honest note: off by default. The grade bar and the ingredient list already say the grade. Do not write a note that only restates the grade and the one driver.
-- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive. Say why this form did not get the worse grade, in plain language.
+- Keep a note only when an ingredient would look like a contradiction to a shopper. Same ingredient, different form, different grade. A seed oil in a gummy versus that oil in a capsule or a cream. A vague label next to a named form, like "rice extract" next to rice hull. That note is descriptive.
 - Honest note example: Sunflower oil is Not clean when it is the base of a gummy. That is the form this app flags. This product is a softgel. The oil is the fill that holds the vitamin, not a gummy you chew, so it did not pull this grade down.
 
 Organic rice bran extract = Cleared (§5). Unspecified “rice extract” = Limited opacity + the vague-form tap sentence.
@@ -1973,7 +1970,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Named lemon oil as flavor = Limited (flavor row). Named is not a Clean auto-pass.
 - Unspecified “rice extract” = Limited opacity row (now in §5). Tap still uses the vague-form sentence.
 - “Natural flavor” stays Limited as already written.
-- Vague form stays Caution until the label names the form. The ingredient tab says that in one plain why. An honest note is kept only when that vague label sits next to a named form and would look like a contradiction.
+- Vague form stays Caution until the label names the form. An honest note is kept only when that vague label sits next to a named form and would look like a contradiction.
 - Agar / agar-agar = Cleared (seaweed gel; gum/fiber family with pectin).
 - Dibehenin (vegetable) = Cleared (vegetable wax/lubricant; stearate / wax family).
 - Grape seed extract as inactive = Cleared (named plant-part food botanical). Not grape seed oil unless the label says oil. Not a High row.
@@ -2300,7 +2297,6 @@ TOKEN / SCOPE LOCKS
 - Mineral / ionic drops IN.
 - Bandages OUT. Oil bottles hunt-list only.
 - Basics = formerly Solimo. Some Elements = formerly Revly. One Elements SKU now Micro Ingredients.
-- Limited-in-one / cleared-in-another must say WHY in ingredient notes + honest note.
 
 LIVE NOW
 Solaray in progress (#365–#375) is struck. Solaray website UPC ladders are closed (#386–#389). Leftover 15 is a walk, not another website loop. Red Yeast Rice + CoQ-10 90ct now has UPC 076280121551 — do not hunt that barcode again. Liposomal Multivitamin Universal 60ct 076280830385 stays parked (no Search row / no_OI). “Barcode later” is struck. Sizeless Maca in batch116 already pulled; sized 7.4 oz row stays. Organic Nettle 076280194104 Clean and Nettle 076280014105 Caution are two products. Do not reopen: Sprouts stash, oil pour bottles as graded Search rows, factory #121–#221, GoodSense 3P panels, batch70–113 edits, batch116 except the already-done Maca pull.
