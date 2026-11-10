@@ -578,6 +578,42 @@ export function isT87uClearedName(name: string): boolean {
   return T87U_CLEARED.has(t121uToken(name));
 }
 
+const T98_CLEARED = new Set([
+  'acacia gum',
+  'honey',
+  'olive oil',
+  'grape juice concentrate',
+  'carob',
+  'riboflavin',
+  'peppermint oil',
+  'lemon essential oil',
+  'essential oil of lemon grass',
+  'bitter orange peel citrus aurantium essential oil',
+  'molasses',
+  'fructose',
+]);
+
+const T98_CAUTION = new Set([
+  'potassium benzoate',
+  'hydroxyproyl cellulose',
+  'enteric coating cellulose and methacrylate',
+]);
+
+/**
+ * November 10, 2026 founder t98. These exact prints only.
+ * Not the October t98u locks. Case is not a second token.
+ * A parenthesis is part of the token until it is normalized away.
+ * Not wired into stack counting. Existing rows keep their stored grades.
+ */
+export function isT98ClearedName(name: string): boolean {
+  return T98_CLEARED.has(t121uToken(name));
+}
+
+/** November 10, 2026 founder t98 Caution strings. Exact prints only. They do not stack. */
+export function isT98CautionName(name: string): boolean {
+  return T98_CAUTION.has(t121uToken(name));
+}
+
 const T83U_BARE_SHELL = new Set([
   'vegetable capsule',
   'vegetarian capsule',
