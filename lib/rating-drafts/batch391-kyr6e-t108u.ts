@@ -211,7 +211,7 @@ const BATCH391_ROWS: RatingRecord[] = [
       flag("Vegetable glycerine"),
       flag("Rocky Mountain artesian spring water"),
       flag("organic alcohol"),
-      flag("distilled water"),
+      { ...flag("distilled water"), why: "Distilled water is pure water with the minerals removed. It is the plain liquid base of this dropper." },
     ],
     verdict: 'clean',
     sourcesGeneral: ["t108u. Brand page https://www.wishgardenherbs.com/products/chlorophyll-friends?variant=43778368536800 is the single source for the panel. Serving Size: 1.5mL (20 drops) Servings: about 40 Other ingredients: Vegetable glycerine, Rocky Mountain artesian spring water, organic alcohol, distilled water. Rows in the Supplement Facts table are actives and are not graded. Count 2oz Dropper. SKU CHLPTm2. iHerb WGH-76672 package image decodes 656490766720 (check digit OK) -> upc_images/656490766720_iherb_WGH-76672.jpg. The check digit passes. UPC 656490766720."],
