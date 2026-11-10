@@ -16,6 +16,8 @@ export type IngredientFlag = {
   source?: string;       // citation for this specific flag (omit only if cleared)
   /** 0-pt Caution caps (e.g. silicon dioxide) stored as limited — must not count toward t137u stack */
   stackCountExempt?: boolean;
+  /** Founder-supplied ingredient-tab why. When set, the tab shows this string and does not generate one. */
+  why?: string;
 };
 
 // ─── Active ingredient + strength (supports combo products) ─
