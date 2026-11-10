@@ -833,6 +833,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH388_KYR6E_T88U,
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
+  ...BATCH391_KYR6E_T108U,
 ]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
@@ -33627,7 +33628,9 @@ function sourceForWhy(ingredient: IngredientFlag, body: string): Pick<Ingredient
 }
 
 export function ingredientWhy(ingredient: IngredientFlag): IngredientWhy {
-  const body = plainIngredientWhy(ingredient) ?? '';
+  const body = typeof ingredient.why === 'string'
+    ? ingredient.why
+    : (plainIngredientWhy(ingredient) ?? '');
   return { body, ...sourceForWhy(ingredient, body) };
 }
 

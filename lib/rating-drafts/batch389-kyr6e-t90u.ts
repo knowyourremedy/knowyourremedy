@@ -27,6 +27,7 @@ const SHELL: IngredientFlag = {
   riskLevel: 'limited',
   source:
     'Traditional Medicinals Smooth Move capsules Supplement Facts. Methodology §5 Limited (t83 decision). This exact bare shell counts toward the t137u stack. It is not a named polymer capsule.',
+  why: 'This is a bare capsule shell. The label does not name the material (such as pullulan, HPMC, cellulose, or tapioca), so it is treated as Limited and counts toward a 3+ Limited stack.',
 };
 
 export const BATCH389_KYR6E_T90U: RatingRecord[] = [
