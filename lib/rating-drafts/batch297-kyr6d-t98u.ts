@@ -709,14 +709,14 @@ const EXPECTED: Record<string, { verdict: 'clean' | 'caution' | 'avoid'; cause: 
   'bach-b297-rescue-pearls-28': {
     verdict: 'caution',
     cause: 'limited_1_2',
-    counted: 'natural orange flavor|natural vanilla flavor',
+    counted: 'natural orange flavor',
     note: NOTE_PEARL,
     barcode: '',
   },
   'bach-b297-rescue-sleep-melts-28': {
     verdict: 'caution',
     cause: 'limited_1_2',
-    counted: 'natural orange flavor|natural vanilla flavor',
+    counted: 'natural orange flavor',
     note: NOTE_MELT,
     barcode: '',
   },
