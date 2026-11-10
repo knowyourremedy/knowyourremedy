@@ -46,7 +46,8 @@ export const BATCH390_KYR6E_T98: RatingRecord[] = [
       { ...flag("magnesium stearate", "cleared", "Planetary Herbals brand panel. Methodology §5 Cleared (magnesium stearate). It does not count toward the t137u stack.", true), why: "Magnesium stearate is a salt of a fatty acid used as a lubricant so the tablet presses and releases cleanly." },
     ],
     verdict: "caution",
-    honestNote: "Modified cellulose gum is Caution and does not stack. Silica is the nanoparticle Caution cap and does not stack. No Limited token counts toward the three-or-more stack.",
+    honestNote: "This product is Caution because it uses a modified form of cellulose as a binder and silica as an anti-caking powder. Both are common in tablets, but the cellulose is processed and some forms of silica raise questions about tiny particles.",
+    founderHonestNote: "This product is Caution because it uses a modified form of cellulose as a binder and silica as an anti-caking powder. Both are common in tablets, but the cellulose is processed and some forms of silica raise questions about tiny particles.",
     sourcesGeneral: ["t98. Brand page https://www.planetaryherbals.com/products/GP1507/ is the single source. Serving size: 2 Tablets. Other ingredients: dibasic calcium phosphate, stearic acid, modified cellulose gum, silica, and magnesium stearate. Rows in the Supplement Facts table are actives and are not graded. Count 30 Tablet. SKU PF0313. The package image upc_images/GP1507_nosku_404_mg_Tablet__PF0313_30Tablets.jpg shows the 12 digits for this count. The check digit passes. UPC 021078103134. Confirmed by Google/web (NIH DSLD label scans)."],
   }),
   finish({
@@ -1411,7 +1412,8 @@ export const BATCH390_KYR6E_T98: RatingRecord[] = [
       { ...flag("silica", "limited", "Planetary Herbals brand panel. Methodology §5 Caution (silicon dioxide nanoparticle cap). It does not count toward the t137u stack.", true), why: "Silica is an anti-caking powder that keeps the ingredients from clumping. Some forms raise questions about nanoparticle absorption." },
     ],
     verdict: "caution",
-    honestNote: "Counted Limited token: maltodextrin. That is one, so this is Caution. It is not a three-or-more stack. Modified cellulose gum is Caution and does not stack. Silica is the nanoparticle Caution cap and does not stack.",
+    honestNote: "This product is Caution because it uses a modified form of cellulose as a binder and silica as an anti-caking powder. Both are common in tablets, but the cellulose is processed and some forms of silica raise questions about tiny particles.",
+    founderHonestNote: "This product is Caution because it uses a modified form of cellulose as a binder and silica as an anti-caking powder. Both are common in tablets, but the cellulose is processed and some forms of silica raise questions about tiny particles.",
     sourcesGeneral: ["t98. Brand page https://www.planetaryherbals.com/products/GP1538/ is the single source. Serving size: not printed on the extracted facts header. Other ingredients: silicified microcrystalline cellulose, maltodextrin, stearic acid, modified cellulose gum, and silica. Rows in the Supplement Facts table are actives and are not graded. Count 90 tablet. SKU PF0002. The package image upc_images/GP1538_PF0002_90_tablet.jpg shows the 12 digits for this count. The check digit passes. UPC 021078100027. Confirmed by iHerb."],
   }),
   finish({
@@ -9886,7 +9888,8 @@ export const BATCH390_KYR6E_T98: RatingRecord[] = [
       { ...flag("riboflavin", "cleared", "Planetary Herbals brand panel. Methodology §5 founder lock t98. This exact printed string is Cleared and does not stack.", true), why: "Riboflavin is vitamin B2. In this product it is added as an inactive ingredient, not as a nutrient claim." },
     ],
     verdict: "caution",
-    honestNote: "Counted Limited token: middle chain triglycerides. That is one, so this is Caution. It is not a three-or-more stack. Sorbitol is a sugar alcohol. It is Caution and does not stack. The printed word is middle, not medium.",
+    honestNote: "This product is Caution because the softgel fill is middle-chain triglycerides, a processed fat graded Limited, and it also contains sorbitol, a sugar alcohol.",
+    founderHonestNote: "This product is Caution because the softgel fill is middle-chain triglycerides, a processed fat graded Limited, and it also contains sorbitol, a sugar alcohol.",
     sourcesGeneral: ["t104u. Brand page https://www.planetaryherbals.com/products/GP1765/ is the single source. The brand form has no listed count. NIH DSLD label PF0523 is 20 softgels. Other ingredients: middle chain triglycerides, gelatin, glycerol, sorbitol, purified water, riboflavin. Rows in the Supplement Facts table are actives and are not graded. The same panel is the 50-softgel row. The package image shows the 12 digits for this count. The check digit passes. UPC 021078105237. Confirmed by Google/web (NIH DSLD label scans)."],
   }),
   finish({

@@ -20718,6 +20718,7 @@ export const LABEL_NOT_FULLY_REVIEWED = 'This label is not fully reviewed.';
 // A pack that was already Not clean stays. Batch files are not rewritten for it.
 // Trace disodium EDTA stays Cleared. A use level is not the condition rule.
 export function displayHonestNote(record: RatingRecord): string {
+  if (typeof record.founderHonestNote === 'string') return record.founderHonestNote;
   return contradictionHonestNote(record) ?? '';
 }
 
