@@ -1553,8 +1553,70 @@ export function isT169uLimitedName(name: string): boolean {
   return T169U_LIMITED.has(t169uToken(name));
 }
 
+const T170U_CLEARED = new Set([
+  'silica (silicon dioxide)',
+  'silicon dioxide (colloidal)',
+  'sodium copper chlorophyllin',
+  '3-((l-menthyl)oxy)propane-1,2-diol (menthoxypropanediol)',
+  'citrate salt',
+  'disodium edetate',
+  'frankincense / boswellia oil',
+  'isopulegol',
+  'menthyl ethylamido oxalate',
+  'natural lemon flavor with other natural flavors',
+  'natural orange flavor with other natural flavors',
+  'organic brown rice flour',
+  'pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate',
+  'sodium cetearyl sulfate',
+]);
+
+const T170U_CAUTION = new Set([
+  'dimethyl isosorbide',
+  'organic lemon flavor',
+  'sorbitan oleate',
+  'sorbitan sesquioleate',
+]);
+
+const T170U_LIMITED = new Set([
+  'oleoresin turmeric',
+  'simethicone emulsion',
+  'sodium lauryl sulphate',
+  'carbomer interpolymer type a',
+  'colloidal silica',
+  'cyclomethicone',
+  'ferrosoferric oxide',
+  'lime oil',
+  'natural color',
+  'polyvinyl acetate',
+  'sd alcohol 38-b',
+  'sodium lauroyl sarcosinate',
+]);
+
+function t170uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t170u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT170uClearedName(name: string): boolean {
+  return T170U_CLEARED.has(t170uToken(name));
+}
+
+export function isT170uCautionName(name: string): boolean {
+  return T170U_CAUTION.has(t170uToken(name));
+}
+
+export function isT170uLimitedName(name: string): boolean {
+  return T170U_LIMITED.has(t170uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t170u/i.test(ingredient.source ?? '')) {
+    if (isT170uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT170uClearedName(ingredient.name) || isT170uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t169u/i.test(ingredient.source ?? '')) {
     if (isT169uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
