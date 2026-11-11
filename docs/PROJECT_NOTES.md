@@ -463,6 +463,8 @@ When writing rows:
 
 Natural vs man-made tiebreaker: Typically natural tokens (named oils, fruits, herbs, simple botanical extracts, named foods) are treated as natural and take the better grade (Cleared unless another rule applies). If a token is 50/50 natural-to-man-made (processed derivatives, refined isolates, coatings, preservatives, or anything where the commercial form is commonly synthetic or unclear), air on the side of the stricter grade. Do not default to Cleared when origin is ambiguous.
 
+Vegetable-capsule logic: If a bare or vague name does not hide a known problem, and there is no common named form of that same ingredient that is Limited or Caution, the bare name stays Cleared. It is not Limited just for being vague. It is Limited only when at least one common named version of the same ingredient is Limited or Caution.
+
 - Do not reference a prior lock as the final grade if that lock was set before the unnamed and natural/man-made rules. Re-evaluate under the current rules first.
 - Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
 - Stop after reporting missing tokens if any exist; do not continue working.
