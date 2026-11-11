@@ -19,6 +19,9 @@ const PULLULAN = 'Pullulan is a fermented polysaccharide used to make clear vege
 const HYPROMELLOSE = 'Hypromellose is a plant-based cellulose used to make vegetarian capsules or as a tablet coating.';
 const RICE = 'Rice hull or rice flour is a simple starch filler from the rice grain. It is used to bulk a tablet or capsule.';
 const ALCOHOL = 'Organic alcohol is a fermented solvent used to extract herbs in tinctures.';
+const PREGELATINIZED = 'Pregelatinized starch is a processed starch used as a filler or binder in tablets.';
+const SUNFLOWER_LECITHIN = 'Sunflower lecithin is a phospholipid from sunflower seeds used as an emulsifier so oils and water stay mixed.';
+const RICE_BRAN = 'Rice bran is the outer layer of the rice grain. It is used as a simple filler or source of oil.';
 
 export type CleanAliasGroup =
   | 'gelatin'
@@ -39,7 +42,10 @@ export type CleanAliasGroup =
   | 'pullulan'
   | 'hypromellose'
   | 'rice'
-  | 'organic alcohol';
+  | 'organic alcohol'
+  | 'pregelatinized starch'
+  | 'sunflower lecithin'
+  | 'rice bran';
 
 const GROUP_WHY: Record<CleanAliasGroup, string> = {
   gelatin: GELATIN,
@@ -61,7 +67,43 @@ const GROUP_WHY: Record<CleanAliasGroup, string> = {
   hypromellose: HYPROMELLOSE,
   rice: RICE,
   'organic alcohol': ALCOHOL,
+  'pregelatinized starch': PREGELATINIZED,
+  'sunflower lecithin': SUNFLOWER_LECITHIN,
+  'rice bran': RICE_BRAN,
 };
+
+/** Exact printed names. Trailing punctuation is ignored. Other qualifiers are not. */
+const EXACT_NAME_GROUP: Record<string, CleanAliasGroup> = {
+  water: 'water',
+  'deionized water': 'water',
+  'usp purified water': 'water',
+  'purified water usp': 'water',
+  'vegetable cellulose capsule': 'hypromellose',
+  'methylcellulose capsule': 'hypromellose',
+  'modified vegetable cellulose': 'hypromellose',
+  'vegetarian capsule (cellulose, water)': 'hypromellose',
+  'hypromellose (cellulose capsule)': 'hypromellose',
+  'cellulose capsule': 'hypromellose',
+  'vegetable glycerin': 'glycerin',
+  'vegetable glycerine': 'glycerin',
+  'gelatin capsule': 'gelatin',
+  'magnesium stearate (vegetable source)': 'stearic',
+  'pregelatinized starch': 'pregelatinized starch',
+  'sunflower lecithin': 'sunflower lecithin',
+  'rice bran': 'rice bran',
+  'rice bran concentrate': 'rice bran',
+  'rice bran oil': 'rice bran',
+};
+
+function exactNameKey(name: string): string {
+  let key = name.trim().toLowerCase().replace(/\s+/g, ' ');
+  let previous = '';
+  while (key !== previous) {
+    previous = key;
+    key = key.replace(/[.,;:!?]+$/g, '').trim();
+  }
+  return key;
+}
 
 export function cleanAliasText(name: string): string {
   let text = name.toLowerCase().replace(/[®™]/g, '');
@@ -291,6 +333,8 @@ const MATCHERS: Array<[CleanAliasGroup, (text: string) => boolean]> = [
 ];
 
 export function cleanAliasGroup(name: string): CleanAliasGroup | undefined {
+  const exact = EXACT_NAME_GROUP[exactNameKey(name)];
+  if (exact) return exact;
   const text = cleanAliasText(name);
   if (!text || hardSkip(text)) return undefined;
   for (const [group, match] of MATCHERS) {
@@ -361,7 +405,19 @@ const matched: Array<[string, CleanAliasGroup]> = [
   ['gum arabic', 'acacia gum'],
   ['agave inulin', 'inulin'],
   ['organic pullulan', 'pullulan'],
+  ['Water', 'water'],
+  ['Deionized water', 'water'],
+  ['Vegetable Cellulose Capsule', 'hypromellose'],
+  ['Methylcellulose capsule', 'hypromellose'],
+  ['Modified vegetable cellulose', 'hypromellose'],
+  ['Vegetarian capsule (cellulose, water)', 'hypromellose'],
+  ['cellulose capsule', 'hypromellose'],
   ['Hypromellose (cellulose capsule)', 'hypromellose'],
+  ['Pregelatinized starch', 'pregelatinized starch'],
+  ['Sunflower lecithin', 'sunflower lecithin'],
+  ['Rice bran', 'rice bran'],
+  ['rice bran concentrate', 'rice bran'],
+  ['Rice bran oil', 'rice bran'],
   ['Vegan Capsule (hydroxypropyl methylcellulose, water)', 'hypromellose'],
   ['HPMC', 'hypromellose'],
   ['rice hull concentrate', 'rice'],
@@ -374,12 +430,13 @@ for (const [name, group] of matched) {
   if (got !== group) throw new Error(`clean alias missed ${JSON.stringify(name)} -> ${got} text=${JSON.stringify(cleanAliasText(name))}`);
 }
 const skipped = [
-  'vegetable capsule', 'veggie capsule', 'vegetable cellulose capsule', 'methylcellulose',
-  'modified vegetable cellulose', 'cellulose gum', 'croscarmellose', 'ethylcellulose',
-  'pregelatinized starch', 'medium chain triglycerides', 'krill oil', 'cod liver oil', 'natural flavor',
+  'vegetable capsule', 'veggie capsule', 'Vegetable cellulose (capsule)', 'methylcellulose',
+  'modified vegetable cellulose (capsule)', 'cellulose gum', 'croscarmellose', 'ethylcellulose',
+  'Pregelatinized starch (maize)', 'medium chain triglycerides', 'krill oil', 'cod liver oil', 'natural flavor',
   'Vegetable Capsule (Hypromellose, Gellan Gum)', 'Named vegetarian coating (HPMC / glycerin)',
-  'Softgel (gelatin, glycerin, water)', 'Inulin / FOS', 'deionized water', 'Water', 'rice bran',
-  'sunflower lecithin', 'Coconut (MCT) oil', 'Organic Cane Alcohol', 'Wildflower honey', 'Acacia',
+  'Softgel (gelatin, glycerin, water)', 'Inulin / FOS', 'Filtered Water', 'Watercress', 'Rice Bran Extract',
+  'organic sunflower lecithin', 'Rice bran oil (softgel fill)', 'Coconut (MCT) oil', 'Organic Cane Alcohol',
+  'Wildflower honey', 'Acacia', 'Stabilized Rice Bran',
 ];
 for (const name of skipped) {
   if (cleanAliasGroup(name)) throw new Error(`clean alias over-matched ${name} -> ${cleanAliasGroup(name)}`);
