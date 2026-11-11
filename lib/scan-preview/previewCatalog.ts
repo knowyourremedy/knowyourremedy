@@ -463,6 +463,7 @@ import { applyT186uIngredients, applyT186uTokenWhy } from '@/lib/scan-preview/t1
 import { t190uDecision } from '@/lib/scan-preview/t190uHonestNotes';
 import { t192uDecision } from '@/lib/scan-preview/t192uHonestNotes';
 import { t193uDecision } from '@/lib/scan-preview/t193uHonestNotes';
+import { t195uClearsNote } from '@/lib/scan-preview/t195uHonestNotes';
 import { applyT161uIngredients, applyT161uTokenWhy } from '@/lib/scan-preview/t161uTokenWhy';
 import { applyT158uIngredients, applyT158uTokenWhy } from '@/lib/scan-preview/t158uTokenWhy';
 import {
@@ -21138,7 +21139,10 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const decision = t190uDecision(base);
   const follow = t192uDecision(base, decision);
   const later = t193uDecision(base);
-  const merged = later.kind === 'clear'
+  const clearGol = t195uClearsNote(base);
+  const merged = clearGol
+    ? { ...base, honestNote: '', founderHonestNote: '' }
+    : later.kind === 'clear'
     ? { ...base, honestNote: '', founderHonestNote: '' }
     : later.kind === 'write'
       ? { ...base, honestNote: later.note, founderHonestNote: later.note }
@@ -21149,7 +21153,9 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
           : follow.kind === 'write'
             ? { ...base, honestNote: follow.note, founderHonestNote: follow.note }
             : base;
-  const honestNote = later.kind === 'clear'
+  const honestNote = clearGol
+    ? ''
+    : later.kind === 'clear'
     ? ''
     : later.kind === 'write'
       ? later.note
