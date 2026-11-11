@@ -1173,6 +1173,17 @@ An honest note is written only when an ingredient appears to contradict itself t
 
 Honest-note standard: Write an honest note only in two cases. (1) A 3+ Limited stack that makes the product Not Clean: “This product is Not Clean because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is downgraded to Not Clean.” (2) A true contradiction, such as a seed oil that is Cleared when used as a softgel fill but Not Clean when it is the base of a gummy: explain the contrast in plain language. Ordinary Caution rows and single-Limited rows do not need a product-level honest note; the ingredient tabs already explain the tokens. The founder supplies the exact honest-note text when a note is required; the bot stores that string and does not generate its own.
 
+## Honest-note templates (locked)
+
+Cleared-form oil note (use when the oil is graded Avoid as a gummy/lozenge/chew base but Cleared as fill in this form):
+[Oil] is graded Avoid when it is the base of a gummy or lozenge. In that form you chew the oil. This product is a [form]. The oil is only the fill of the [form], not the base of a gummy you chew, so it did not pull this grade down.
+
+Avoid-chewable oil note (use when the oil is the base of a chewable):
+[Oil] is graded Avoid here because it is the base of this chewable. In that form you chew the oil. The same oil is graded Cleared when it is only the fill of a capsule, softgel, or tablet.
+
+Only write a note when the form creates a true contradiction under the oil rule. If the form is not a contradiction, leave the note empty.
+
+
 Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c and KYR6-d writes; founder order t151u, Oct 21, 2026 — same scope for both)
 See the standing section When writing rows. The text below stays.
 - Honest note only when an ingredient appears to contradict itself to a shopper.
