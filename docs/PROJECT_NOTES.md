@@ -1210,6 +1210,8 @@ A brand that is closed on MAIN is not reopened. Before writing any row for a bra
 
 Once a brand has no remaining holds — the ladder is finished and every pack is either written or marked not-for-sale / unavailable — the brand is closed. Do not leave it open.
 
+Touchstone Essentials — closed. Ladder finished. No remaining holds. Every in-scope single is written. Product packs are multipacks and are not rows. Protein powders stay out of scope. No UPC was printed.
+
 WishGarden Herbs — closed. Ladder finished. No remaining holds. Every in-scope pack is written from a package-image UPC or marked not for sale because the count-specific UPC was not confirmed. Kits, multipacks, personal care, and merch are out of scope and are not rows.
 
 Planetary Herbals — closed. Ladder finished. No remaining holds. Every in-scope pack is written or marked not for sale. Butterbur Extract, Urovex 20 softgels and 50 softgels are written. middle chain triglycerides is Limited and counts. Horse Chestnut Cream and Triphala Mouthwash are out of scope and are not rows.

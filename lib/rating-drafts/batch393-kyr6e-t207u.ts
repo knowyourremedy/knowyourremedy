@@ -279,6 +279,10 @@ export const BATCH393_KYR6E_T207U: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
+    honestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice hull. That named form is not the vague extract, so the flag did not pull this grade down.',
+    founderHonestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice hull. That named form is not the vague extract, so the flag did not pull this grade down.',
     sourcesGeneral: [
       't207u. https://thegoodinside.com/shop/product/wellspring/ is for sale. 30-day supply, 60 capsules. SKU WS60. Other Ingredients: Vegetable Capsule (hypromellose), Organic Gum Acacia, Rice Hull Concentrate. The omega blend is the active and is not graded. No UPC was printed. Missing UPC.',
     ],

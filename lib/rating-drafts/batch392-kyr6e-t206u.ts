@@ -58,6 +58,10 @@ export const BATCH392_KYR6E_T206U: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
+    honestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice concentrate. That named form is not the vague extract, so the flag did not pull this grade down.',
+    founderHonestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice concentrate. That named form is not the vague extract, so the flag did not pull this grade down.',
     sourcesGeneral: [
       't206u. https://thegoodinside.com/shop/product/gluco-control/ is for sale. 30-day supply, 60 capsules. SKU GC60. The supplement-facts image prints Other ingredients: Vegetable capsule (hypromellose), organic rice concentrate. The proprietary blend is the active and is not graded. No UPC was printed. Missing UPC.',
     ],
@@ -93,6 +97,10 @@ export const BATCH392_KYR6E_T206U: RatingRecord[] = [
       ),
     ],
     verdict: 'clean',
+    honestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice concentrate. That named form is not the vague extract, so the flag did not pull this grade down.',
+    founderHonestNote:
+      'Rice extract is flagged when the label does not name the form. That unnamed wording is what this app treats as the problem. This label names rice concentrate. That named form is not the vague extract, so the flag did not pull this grade down.',
     sourcesGeneral: [
       't206u. https://thegoodinside.com/shop/product/natto-clear/ is for sale. SKU GE90. The supplement-facts image prints Other Ingredients: Vegetable Capsule (hypromellose), organic rice concentrate. Serving size 2 capsules, 30 servings, so the bottle is 60 capsules. The ingredients section on the same page also lists organic rice flour. The facts image does not, so rice flour is not graded. The named extracts and enzymes are actives and are not graded. No UPC was printed. Missing UPC.',
     ],
