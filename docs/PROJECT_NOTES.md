@@ -2292,6 +2292,7 @@ Exact founder print (batch69 outcome; refused strings stay):
 - up&up APAP PM caplets UPC 359726863117 WRITTEN Avoid on founder PVA + talc + SiO2 stack (not the ointment; not DailyMed `dg-health-pain-relief-pm`)
 
 TOKEN / SCOPE LOCKS
+- t157u founder locks. Prior locks are not binding for these exact tokens. Cleared, and they do not stack: Organic oat fiber; Acacia; Molasses; Polyisobutylene; Methyl acrylate/2-ethylhexyl acrylate copolymer; Nonoxynol-30; Allulose; Isobutane; Eucalyptol; Mentha Oil; Arnica Montana Flower Extract; Ilex Paraguariensis Leaf Extract; Rice Powder. Limited, and they count toward the 3+ Limited stack: Phosphoric acid; peppermint flavor. Caution, and it does not stack: Lanolin alcohols.
 - Fish oil powder printed as an other ingredient = Cleared (t24u, Oct 23, 2026). Named marine oil used as a carrier. Named-fill rule (context scoping, Sept 15, 2026). Not on the seed/industrial oil list. Does not count toward the t137u stack. Fish oil as the Supplement Facts active stays ungraded.
 - Lactase enzyme = Cleared (t22u, Oct 23, 2026). FDA GRAS, 21 CFR 184.1388. Food enzyme excipient, same posture as invertase. Invertase stays its own row. An active on a Lactaid row is not an other-ingredient regrade.
 - Sugar alcohol printed as a class name = Caution (t22u, Oct 23, 2026). Unnamed polyol. GI effects at volume, the same finding as the named sugar-alcohol rows. Does not count toward the t137u stack. Not xylitol, mannitol, sorbitol, or isomalt.

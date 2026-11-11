@@ -1119,8 +1119,54 @@ export function isNeverStackLimitedName(name: string): boolean {
   return isMethCautionIngredientName(name);
 }
 
+const T157U_CLEARED = new Set([
+  'organic oat fiber',
+  'acacia',
+  'molasses',
+  'polyisobutylene',
+  'methyl acrylate/2-ethylhexyl acrylate copolymer',
+  'nonoxynol-30',
+  'allulose',
+  'isobutane',
+  'eucalyptol',
+  'mentha oil',
+  'arnica montana flower extract',
+  'ilex paraguariensis leaf extract',
+  'rice powder',
+]);
+
+const T157U_LIMITED = new Set([
+  'phosphoric acid',
+  'peppermint flavor',
+]);
+
+const T157U_CAUTION = new Set([
+  'lanolin alcohols',
+]);
+
+function t157uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t157u. Prior locks are not binding for these exact tokens. */
+export function isT157uClearedName(name: string): boolean {
+  return T157U_CLEARED.has(t157uToken(name));
+}
+
+export function isT157uLimitedName(name: string): boolean {
+  return T157U_LIMITED.has(t157uToken(name));
+}
+
+export function isT157uCautionName(name: string): boolean {
+  return T157U_CAUTION.has(t157uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (isT157uLimitedName(ingredient.name)) {
+    return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+  }
+  if (isT157uClearedName(ingredient.name) || isT157uCautionName(ingredient.name)) return false;
   if (ingredient.stackCountExempt) return false;
   if (isT83uClearedName(ingredient.name)) return false;
   if (isT86uClearedName(ingredient.name)) return false;
