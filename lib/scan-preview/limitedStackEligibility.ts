@@ -1273,8 +1273,70 @@ export function isT162uLimitedName(name: string): boolean {
   return T162U_LIMITED.has(t162uToken(name));
 }
 
+const T164U_CLEARED = new Set([
+  'cetearyl alcohol',
+  'aloe barbadensis leaf juice',
+  'tocopheryl acetate',
+  'tapioca dextrin',
+  'hydroxyethyl cellulose',
+]);
+
+const T164U_CAUTION = new Set([
+  'sodium polyacrylate',
+  'phenoxyethanol',
+  'acrylates/c10-30 alkyl acrylate crosspolymer',
+  'triethanolamine',
+  'eucalyptus oil',
+  'steareth-21',
+  'polyacrylic acid',
+]);
+
+const T164U_LIMITED = new Set([
+  'stevia',
+  'isomalt',
+  'iron oxide red',
+  'simethicone',
+  'sorbitol sorbitan solution',
+  'alcohol denat.',
+  'ammonium hydroxide',
+  'beta carotene (for color)',
+  'isopropyl alcohol',
+  'rice bran wax',
+  'annatto',
+  'iron oxide black',
+  'sorbitan',
+  'blue spirulina (for color)',
+  'aloe vera gel',
+  'iron oxide yellow',
+  'modified corn starch',
+  'organic maltodextrin',
+]);
+
+function t164uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t164u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT164uClearedName(name: string): boolean {
+  return T164U_CLEARED.has(t164uToken(name));
+}
+
+export function isT164uCautionName(name: string): boolean {
+  return T164U_CAUTION.has(t164uToken(name));
+}
+
+export function isT164uLimitedName(name: string): boolean {
+  return T164U_LIMITED.has(t164uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t164u/i.test(ingredient.source ?? '')) {
+    if (isT164uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT164uClearedName(ingredient.name) || isT164uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t162u/i.test(ingredient.source ?? '')) {
     if (isT162uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
