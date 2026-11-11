@@ -51,9 +51,9 @@ export const T211U: Record<string, Lock> = {
   'Lonicera caprifolium (Honeysuckle) Flower Extract': { grade: 'cleared', counts: false, why: 'Extract from honeysuckle flowers. It adds the plant’s natural compounds.' },
   'Lonicera japonica (Honeysuckle) Flower Extract': { grade: 'cleared', counts: false, why: 'Extract from honeysuckle flowers. It adds the plant’s natural compounds.' },
   'Natural Mixed Berry Flavor': { grade: 'cleared', counts: false, why: 'Natural mixed berry flavoring made from berries. It adds mixed berry taste to the product.' },
-  'Cane Alcohol': { grade: 'limited', counts: true, why: 'Cane alcohol. It is the liquid that extracts and carries the plant ingredients. Alcohol used as a vehicle is graded Limited because the strength is not printed on the panel.' },
+  'Cane Alcohol': { grade: 'limited', counts: true, why: 'Cane alcohol. It is the liquid that extracts and carries the plant ingredients. The panel does not print the strength, so the exact concentration is not shown. Alcohol used as a vehicle is graded Limited when the strength is not printed.' },
   'Maltodextran': { grade: 'limited', counts: true, why: 'Maltodextrin, a starch-derived carbohydrate. It is used as a filler and to help the powder flow. Maltodextrin is graded Limited because it is a highly processed starch.' },
-  'Ethanol 3%': { grade: 'limited', counts: true, why: 'Ethanol at 3%. It is the liquid that extracts and carries the plant ingredients. Alcohol used as a vehicle is graded Limited when the strength is low or the source is not fully named.' },
+  'Ethanol 3%': { grade: 'limited', counts: true, why: 'Ethanol at 3%. It is the liquid that extracts and carries the plant ingredients. Alcohol used as a vehicle is graded Limited when the strength is low or the source is not fully named on the panel.' },
   'Carbomer': { grade: 'moderate', counts: false, why: 'Carbomer, a synthetic polymer. It is used to thicken creams and lotions. Carbomer is graded Caution because it is a man-made thickener.' },
   'Sodium Hydroxide': { grade: 'moderate', counts: false, why: 'Sodium hydroxide. It is used in tiny amounts to adjust the pH of the product. Sodium hydroxide is graded Caution as a strong processing chemical.' },
   'Cetearyl Cane Alcohol': { grade: 'moderate', counts: false, why: 'Cetearyl alcohol made from cane. It is used as a thickener and emulsifier in creams. Cetearyl alcohol is graded Caution as a fatty alcohol thickener.' },
@@ -104,7 +104,10 @@ export function applyT211uTokenWhy(record: RatingRecord): RatingRecord {
   return { ...record, inactiveIngredients, verdict: rollup.verdict };
 }
 
-if (t211uLock('Cane Alcohol')?.grade !== 'limited') throw new Error('t211u cane');
+if (t211uLock('Cane Alcohol')?.grade !== 'limited' || t211uLock('Cane Alcohol')?.counts !== true) throw new Error('t211u cane');
+if (t211uLock('Cane Alcohol')?.why !== 'Cane alcohol. It is the liquid that extracts and carries the plant ingredients. The panel does not print the strength, so the exact concentration is not shown. Alcohol used as a vehicle is graded Limited when the strength is not printed.') throw new Error('t212u cane why');
+if (t211uLock('Ethanol 3%')?.grade !== 'limited' || t211uLock('Ethanol 3%')?.counts !== true) throw new Error('t211u ethanol');
+if (t211uLock('Ethanol 3%')?.why !== 'Ethanol at 3%. It is the liquid that extracts and carries the plant ingredients. Alcohol used as a vehicle is graded Limited when the strength is low or the source is not fully named on the panel.') throw new Error('t212u ethanol why');
 if (t211uLock('Cane Alcohol 22-28%')?.grade !== 'cleared') throw new Error('t211u cane strength');
 if (t211uLock('Capsule (Hydroxypropyl Methylcellulose, Purified water)')?.why === t211uLock('Capsule (Hydroxypropyl methylcellulose, Purified water)')?.why) {
   // same why text is intended

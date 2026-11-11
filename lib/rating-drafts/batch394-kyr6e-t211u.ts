@@ -2,7 +2,7 @@
 // Energetix singles whose other ingredients are locked.
 // BioCatalin Lotion, PhytoGel, and MycoDerm are topicals and are not rows.
 // The test kit, window clings, Opening Channels pack and program, and the Colon Clear set are not rows.
-// No UPC was printed on the brand pages. No honest notes are stored.
+// No UPC was printed on the brand pages. t212u stores honest notes on 15 rows.
 
 import type { IngredientFlag, RatingRecord } from '../ratingRecord';
 
@@ -66,6 +66,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Adrenal Force 60 Capsules brand page https://www.energetix.com/product/adrenal-force-60-capsules/ Item 13005.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/adrenal-force-60-capsules/ Item 13005. Other ingredients: Rice Starch, Capsule (Hydroxypropyl Methylcellulose, Purified Water), Bovine Tissue, Cellulose, Dicalcium Phosphate, Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -132,6 +136,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Adrenatran 180 Capsules brand page https://www.energetix.com/product/adrenatran-180-capsules/ Item 09510.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/adrenatran-180-capsules/ Item 09510. Other ingredients: Capsule (Hydroxypropyl Methylcellulose), Magnesium Stearate, Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -244,6 +252,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix AminoGest 180 Capsules brand page https://www.energetix.com/product/aminogest-180-capsules/ Item 13025.", "Lemon (Citrus \u00d7 limon) Powder", 'cleared', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/aminogest-180-capsules/ Item 13025. Other ingredients: Rice Flour, Capsule (Hydroxypropyl Methylcellulose), Silicon Dioxide, Microcrystalline Cellulose, Rosemary (Rosmarinus officinalis) Leaf Extract, Magnesium Stearate (Vegetarian), Lemon (Citrus \u00d7 limon) Powder. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -351,6 +363,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Buffered Vitamin C with Rosehips brand page https://www.energetix.com/product/buffered-vitamin-c/ Item 13048.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/buffered-vitamin-c/ Item 13048. Other ingredients: Capsule (Hydroxypropyl Methylcellulose, Purified Water), L-Leucine, Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -395,6 +411,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Catalyst-7 180 Capsules brand page https://www.energetix.com/product/catalyst-7-180-capsules/ Item 13060.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/catalyst-7-180-capsules/ Item 13060. Other ingredients: Rice Flour, Capsule (Hydroxypropyl Methylcellulose, Purified Water), Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -417,6 +437,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Catalyst-7 90 Capsules brand page https://www.energetix.com/product/catalyst-7-90-capsules/ Item 13050.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/catalyst-7-90-capsules/ Item 13050. Other ingredients: Maltodextran, Capsule (Hydroxypropyl Methylcellulose, Purified Water), Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -462,6 +486,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Catalyst-U 90 Capsules brand page https://www.energetix.com/product/catalyst-u-90-capsules/ Item 13070.", "Magnesium Oxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/catalyst-u-90-capsules/ Item 13070. Other ingredients: Capsule (Hydroxypropyl Methylcellulose, Purified Water), Rice Hulls, Silicon Dioxide, Calcium Carbonate, Magnesium Oxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -527,6 +555,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Colon Clear 90 Capsules brand page https://www.energetix.com/product/colon-clear-90-capsules/ Item 13095.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/colon-clear-90-capsules/ Item 13095. Other ingredients: Capsule (Hydroxypropyl Methylcellulose), Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -1360,6 +1392,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix DGL Chewable brand page https://www.energetix.com/product/dgl-chewable/ Item 13096.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/dgl-chewable/ Item 13096. Other ingredients: Organic Inulin, Microcrystaline Cellulose, Mannitol, Natural Flavor, Citric Acid, Magnesium Stearate, Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -1539,6 +1575,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Flora Chewable 60 Tablets brand page https://www.energetix.com/product/flora-chewable-60-tablets/ Item 13121.", "Maltodextrin", 'limited', true),
     ],
     verdict: 'avoid',
+    honestNote:
+      "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
+    founderHonestNote:
+      "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/flora-chewable-60-tablets/ Item 13121. Other ingredients: Fructose, Hydroxypropyl Cellulose, Natural Mixed Berry Flavor, Natural Raspberry Flavor, Silica, Maltodextrin. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -1562,6 +1602,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Flora Synergy\u00ae 150 Capsules brand page https://www.energetix.com/product/flora-synergy-150-capsules/ Item 13110.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/flora-synergy-150-capsules/ Item 13110. Other ingredients: Capsule (Hydroxypropyl Methylcellulose, Purified Water), Maltodextrin, Medium-chain Triglycerides, Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -1630,6 +1674,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix GALT-immune 90 Capsules brand page https://www.energetix.com/product/galt-immune-90-capsules/ Item 13126.", "Lemon ( Citrus \u00d7 limon ) Peel Powder", 'cleared', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/galt-immune-90-capsules/ Item 13126. Other ingredients: Capsule (Hydroxypropyl Methylcellulose), Rice Flour, Silicon Dioxide, Rosemary ( Rosmarinus officinalis ) Leaf Extract, Lemon ( Citrus \u00d7 limon ) Peel Powder. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -1966,6 +2014,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Melatonin Spray brand page https://www.energetix.com/product/melatonin-spray/ Item 10015.", "Stevia", 'limited', true),
     ],
     verdict: 'avoid',
+    honestNote:
+      "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
+    founderHonestNote:
+      "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/melatonin-spray/ Item 10015. Other ingredients: Deionized Water, Glycerin, Soy Lecithin, Natural Orange Flavor, Potassium Sorbate, Ascorbic Acid, Sodium Citrate, Grapefruit Seed Extract, Stevia. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -2166,6 +2218,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Phyto EFA\u00ae brand page https://www.energetix.com/product/phyto-efa/ Item 13175.", "Ascorbyl Palmitate (as preservative)", 'cleared', false),
     ],
     verdict: 'clean',
+    honestNote:
+      "Sunflower oil is graded Avoid when it is the base of a gummy or lozenge. In that form you chew the oil. This product is a softgel. The oil is only the fill, not the base of a gummy you chew, so it did not pull this grade down.",
+    founderHonestNote:
+      "Sunflower oil is graded Avoid when it is the base of a gummy or lozenge. In that form you chew the oil. This product is a softgel. The oil is only the fill, not the base of a gummy you chew, so it did not pull this grade down.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/phyto-efa/ Item 13175. Other ingredients: Capsule (Tapioca), High Oleic Sunflower Oil, Palmitic Acid, Rosemary (Rosmarinus officinalis) extract oil (as preservative), Mixed Tocopherols, Ascorbyl Palmitate (as preservative). Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
@@ -2208,6 +2264,10 @@ export const BATCH394_KYR6E_T211U: RatingRecord[] = [
       flag("Energetix Pure Body Clear 180 Capsules brand page https://www.energetix.com/product/pure-body-clear-180-capsules/ Item 13086.", "Silicon Dioxide", 'moderate', false),
     ],
     verdict: 'caution',
+    honestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
+    founderHonestNote:
+      "Silica and processed cellulose are graded Caution when they appear as fillers. This product contains one or both. They did not stack with other Limited tokens.",
     sourcesGeneral: ["t211u. https://www.energetix.com/product/pure-body-clear-180-capsules/ Item 13086. Other ingredients: Capsule (Hydroxypropyl Methylcellulose, Purified Water), Silicon Dioxide. Actives are not graded. No UPC was printed on the brand page. Missing UPC."],
   },
   {
