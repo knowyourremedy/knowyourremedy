@@ -2351,6 +2351,7 @@ Add-on preferences (from current chat):
 - During a founder hunt, put the product name (and only the product name) in an easy-to-click copy block. Put the conflict, source status, and remaining count in regular text below it.
 - Keep pastes complete. Include every live rule the bot needs for that job so it does not have to rely on memory.
 - After a paste is sent, wait for the bot’s report before offering the next paste unless the founder asks for it.
+- All text meant for the bot, for future chats, or for founder hunts must be presented in a single copyable code block so the founder can click to copy it.
 
 Token recommendation rule:
 - Before giving any token recommendation, state that you pulled the live sources, checked the dock rule, and checked the standing rules (including the unnamed rule, natural vs man-made tiebreaker, 3+ Limited stack, and any prior-lock re-evaluation rule). Do not recommend based on a prior lock alone if it may not have gone through the current rules.
