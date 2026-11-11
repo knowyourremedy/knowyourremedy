@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Nov 11, 2026 (t207u founder order):** Exact strings. **Cleared, do not stack:** Cellulose Vegetarian Capsule; Organic Pullulan Capsule; Organic Vegetable Glycerin; Pure water; Pure Water; Organic Raspberry Flavor; Organic Apple Flavor; Plantcaps™ (pullulan) Capsules; Organic Vegetable Capsules (pullulan); Organic Gum Acacia. Pure water and Pure Water are separate prints. Plantcaps™ keeps the mark. Organic Vegetable Capsules (pullulan) is plural. It is not Organic Vegetable Capsule (pullulan). No honest note.
+
 **Changed Nov 11, 2026 (t205u founder order):** Exact string. Case is not a second token. The parenthesis is part of this one token. **Cleared, do not stack:** Vegan Capsule (hydroxypropylmethylcellulose, water). It is not Vegan Capsule (hydroxypropyl methylcellulose, water) and it is not bare Vegan Capsule. No honest note.
 
 **Changed Nov 11, 2026 (t125u founder order):** Exact strings. Case is not a second token. **Cleared, do not stack:** Vegetable Capsule; Vegetarian Capsule; Vegan Capsule; Veggie Softgel. This replaces the Nov 9, 2026 t83 Limited lock on these exact bare shells. A named polymer in the same string is not this lock. Vegetable Capsule (hypromellose), Vegetable capsule (hypromellose, gellan gum), and Vegetarian Capsule (Pullulan) stay their own Cleared locks. A prior Limited lock is not binding for these four exact tokens.
