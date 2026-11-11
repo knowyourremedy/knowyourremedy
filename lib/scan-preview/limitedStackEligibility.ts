@@ -1441,8 +1441,70 @@ export function isT166uLimitedName(name: string): boolean {
   return T166U_LIMITED.has(t166uToken(name));
 }
 
+const T167U_CLEARED = new Set([
+  'chamomilla recutita (matricaria) flower extract',
+  'cocoyl caprylocaprate',
+  'glycerol monostearate',
+  'isohexadecane',
+  'monobasic sodium phosphate',
+  'natural vanilla flavor',
+  'turmeric',
+  'zinc oxide',
+  'cetyl palmitate',
+  'isopropyl palmitate',
+  'quik-sorb® (ginger rhizome, alma fruit, capsicum fruit)',
+  'calendula officinalis flower extract',
+  'organic tapioca starch',
+]);
+
+const T167U_CAUTION = new Set([
+  'hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer',
+  'aluminum glycinate',
+  'dihydroxyaluminum aminoacetate',
+  'rosemary oil',
+  'aluminum hydroxide',
+  'aminomethylpropanol',
+  'diazolidinyl urea',
+  'natural mixed berry flavor',
+]);
+
+const T167U_LIMITED = new Set([
+  'dextrose excipient',
+  'erythritol',
+  'lanolin',
+  'light mineral oil',
+  'strong ammonia solution',
+  'iron oxide',
+  'spirulina extract',
+  'annatto extract',
+  'polyvinyl acetate phthalate',
+]);
+
+function t167uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t167u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT167uClearedName(name: string): boolean {
+  return T167U_CLEARED.has(t167uToken(name));
+}
+
+export function isT167uCautionName(name: string): boolean {
+  return T167U_CAUTION.has(t167uToken(name));
+}
+
+export function isT167uLimitedName(name: string): boolean {
+  return T167U_LIMITED.has(t167uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t167u/i.test(ingredient.source ?? '')) {
+    if (isT167uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT167uClearedName(ingredient.name) || isT167uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t166u/i.test(ingredient.source ?? '')) {
     if (isT166uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
