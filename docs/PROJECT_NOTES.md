@@ -2367,6 +2367,25 @@ Token recommendation rule: When a token is locked, the founder also supplies the
 
 Ingredient-tab why standard: Write the why as if explaining the ingredient to someone for the first time. Cleared tokens get a short, plain sentence that says what it is and what it does in the product (example: “Gelatin is the protein that forms the softgel shell. It comes from animal collagen and holds the liquid fill.”). Caution, Limited, and Avoid tokens get a fuller sentence that includes the function, the processing or risk reason, and the source when relevant (example: “Sorbitol is a sugar alcohol used as a sweetener or moisture keeper. Large amounts can cause bloating or loose stools. EFSA and FDA allow it in limited quantities.”). Do not end any sentence with “That is why it is Cleared / Limited / Caution” unless the case is a true contradiction (example: seed oil Cleared in a capsule fill but Avoid in a gummy). The grade color already shows the level. The founder supplies the exact why text at lock time; the bot stores that string and does not generate its own.
 
+Ingredient-tab why string style
+Write every why string as a first-time explanation. Assume the reader has never heard the ingredient before.
+
+Cleared tokens
+- One short sentence that says what the ingredient is.
+- One short sentence that says what it does in the product.
+- Do not mention the grade, the lock, or “does not stack” in the why string.
+- Do not use technical parentheticals or rule language.
+
+Example (Cleared)
+Vegan capsule shell made from hydroxypropyl methylcellulose and water. Hydroxypropyl methylcellulose is a plant-derived cellulose polymer used to make vegan capsules.
+
+Caution / Limited / Avoid tokens
+- Same first-time explanation of what it is and what it does.
+- Then one additional sentence that states the processing or risk reason and the source.
+- Still no rule language or “that is why it is Limited.”
+
+Do not write the why string as a rule explanation for the founder. Write it as the text that will appear on the ingredient tab for a regular user.
+
 LIVE NOW
 Solaray in progress (#365–#375) is struck. Solaray website UPC ladders are closed (#386–#389). Leftover 15 is a walk, not another website loop. Red Yeast Rice + CoQ-10 90ct now has UPC 076280121551 — do not hunt that barcode again. Liposomal Multivitamin Universal 60ct 076280830385 stays parked (no Search row / no_OI). “Barcode later” is struck. Sizeless Maca in batch116 already pulled; sized 7.4 oz row stays. Organic Nettle 076280194104 Clean and Nettle 076280014105 Caution are two products. Do not reopen: Sprouts stash, oil pour bottles as graded Search rows, factory #121–#221, GoodSense 3P panels, batch70–113 edits, batch116 except the already-done Maca pull.
 KYR5 / KYR5-b / KYR5-c barcode factory DONE. KYR5-d founder-lock attach. Do not reopen #121–#221. Empty UPC after #338+#346: still-empty 91 (37 value pack / 24×N stay empty; TIME-Cap/Timely printed 0 usable; fluticasone 144-spray shared-tab + 2-pack skipped; no-count cetirizine/aspirin skipped; 24 no-row packs not created). #338 retailer-ladder attached 34 (13 bar photo / 1 Target spec / 20 Allegiant UPC column). Value-pack inner-bottle codes not attached (fexo 24×30, famotidine 24×50, DPH 24 vs 576). #346 spec-text attached 56 from a2z-life.com UPC field (0 bar photos; retailers added 0; founder five on exact singles). Prior #312 leftover 91 = in-store 45 + 3P 46 is struck as the live hunt. Named-dry / merge-note twins 39 — do not reopen. Old counts 73 / 100 / 27 / 178 are struck as the live hunt. Named dry, do not reopen: set-id 97 / in-store 26 / online 13. HUNT ORDER LOCK applies to OI and UPC: DailyMed → brand site → US retailer PDP → Google AI last. Never copy OI or a UPC from the AI blurb.
