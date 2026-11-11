@@ -58,8 +58,8 @@
 //   natural flavor Limited (1 pt Caution). Gelatin / glycerin / water
 //   / tocopherols Cleared. Softgel fish oil ≠ gummy seed-oil High.
 //
-// TALLY (unverified drafts): 11 rows — Clean 10 / Caution 1 / Avoid 0.
-// Independently Clean in THIS batch: the 10 Clean rows. No Clean
+// TALLY (unverified drafts): 12 rows — Clean 11 / Caution 1 / Avoid 0.
+// Independently Clean in THIS batch: the 11 Clean rows. No Clean
 // fish-oil peer — Omega-3 cleanAlternatives omitted.
 //
 // formulaIds:
@@ -74,6 +74,7 @@
 // - we-heart-wholesome-probiotic (Clean, Digestive)
 // - we-heart-wholesome-balance (Clean, Vitamins)
 // - we-heart-wholesome-omega-3 (Caution, Vitamins)
+// - we-heart-wholesome-bone-support-90 (Clean, Vitamins) — t205u. The 11 rows above were not changed.
 //
 // FLAG / SKIP (do not write rows):
 // - Thrive / Thorne.com / B-Alive / Amazon / Dollar Tree
@@ -138,6 +139,7 @@ const POSTNATAL_ID = 'we-heart-wholesome-postnatal';
 const PROBIOTIC_ID = 'we-heart-wholesome-probiotic';
 const BALANCE_ID = 'we-heart-wholesome-balance';
 const OMEGA_ID = 'we-heart-wholesome-omega-3';
+const BONE_ID = 'we-heart-wholesome-bone-support-90';
 
 const WOMENS_MULTI_CITE =
   'We Heart Nutrition Wholesome Women\'s Multi official SupplementFacts_*_0926.png panel (not marketing-page text) other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour';
@@ -161,6 +163,10 @@ const BALANCE_CITE =
   'We Heart Nutrition Wholesome Balance official SupplementFacts_*_0926.png panel (not marketing-page text) other-ingredients: Vegan Capsule (hydroxypropyl methylcellulose, water), Organic Rice Flour, Organic Rice Hull Extract.';
 const OMEGA_CITE =
   'We Heart Nutrition Wholesome Omega-3 official SupplementFacts_*_0926.png panel (not marketing-page text) other-ingredients: Highly Refined and Concentrated Omega-3 Fish Oil (anchovy), Bovine Gelatin, Glycerin, Purified Water, Lemon Oil (lemon peel extract), Natural Mixed Tocopherols.';
+const BONE_CITE =
+  'We Heart Nutrition Wholesome Bone Support brand panel (90 capsules, 30 servings, serving size 3 capsules) other-ingredients: Vegan Capsule (hydroxypropylmethylcellulose, water), Organic Rice Flour. UPC 850063728119.';
+const BONE_WHY =
+  'Vegan capsule shell made from hydroxypropyl methylcellulose and water. Hydroxypropyl methylcellulose is a plant-derived cellulose polymer used to make vegan capsules.';
 
 export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
   // ── Clean ────────────────────────────────────────────────
@@ -519,6 +525,45 @@ export const BATCH26_WE_HEART_NUTRITION: RatingRecord[] = [
     retailers: [...RETAILERS],
     sourcesGeneral: [
       `${BALANCE_CITE} — draft, not verified; official 0926 panel; no DailyMed drug SPL`,
+    ],
+  },
+  {
+    id: BONE_ID,
+    productName: 'Wholesome Bone Support',
+    brand: BRAND,
+    category: VITAMINS,
+    barcode: '850063728119',
+    formulaId: BONE_ID,
+    audience: ADULT,
+    minAge: 18,
+    form: 'capsule',
+    recordStatus: UNVERIFIED,
+    productType: SUPPLEMENT,
+    activeIngredients: [
+      { name: 'Bone support (calcium, magnesium, vitamin D3, vitamin K2)', strength: '3 capsules (label serving)' },
+      { name: 'Vitamin D (D3 as cholecalciferol)', strength: '25 mcg (1000 IU)' },
+      { name: 'Calcium (from Red algae (Lithothamnion calcareum))', strength: '500 mg' },
+      { name: 'Magnesium (from seawater & Red algae (Lithothamnion calcareum))', strength: '75 mg' },
+      { name: 'Vitamin K2 (as all-trans MK-7, menaquinone-7)', strength: '180 mcg' },
+    ],
+    inactiveIngredients: [
+      {
+        name: 'Vegan Capsule (hydroxypropylmethylcellulose, water)',
+        riskLevel: 'cleared',
+        stackCountExempt: true,
+        why: BONE_WHY,
+        source: labelCite(
+          BONE_CITE,
+          'Methodology §5 Cleared (founder lock t205u). Does not count toward the t137u stack. Prior locks are not binding for this exact token.',
+        ),
+      },
+      flag('Organic Rice Flour', 'cleared', labelCite(BONE_CITE, METH.starches)),
+    ],
+    verdict: 'clean',
+
+    retailers: [...RETAILERS],
+    sourcesGeneral: [
+      `${BONE_CITE} — draft, not verified; brand panel; no DailyMed drug SPL`,
     ],
   },
 
