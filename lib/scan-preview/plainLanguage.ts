@@ -207,6 +207,7 @@ export function contradictionHonestNote(record: RatingRecord): string | null {
   for (const ingredient of record.inactiveIngredients ?? []) {
     const oil = seedOilLabel(ingredient.name);
     if (oil && ingredient.riskLevel !== 'high') {
+      if (where === 'gummy' && norm(ingredient.name) === 'sunflower seed oil') continue;
       oils.set(oil, ingredient);
     }
     const rice = namedRiceForm(ingredient.name);
