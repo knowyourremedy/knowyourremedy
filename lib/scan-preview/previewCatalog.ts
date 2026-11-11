@@ -441,6 +441,7 @@ import { applyT154uIngredients, applyT154uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT157uRow, t157uGrade } from '@/lib/scan-preview/t157uLocks';
 import { applyT160uRow, t160uGrade } from '@/lib/scan-preview/t160uLocks';
 import { applyT162uRow, t162uGrade } from '@/lib/scan-preview/t162uLocks';
+import { applyT164uRow, t164uGrade, t164uPartAWhy } from '@/lib/scan-preview/t164uLocks';
 import { applyT161uIngredients, applyT161uTokenWhy } from '@/lib/scan-preview/t161uTokenWhy';
 import { applyT158uIngredients, applyT158uTokenWhy } from '@/lib/scan-preview/t158uTokenWhy';
 import {
@@ -857,7 +858,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21071,7 +21072,12 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const withT162 = withT161Why.some((ingredient) => t162uGrade(ingredient.name))
     ? applyT162uRow({ ...record, inactiveIngredients: withT161Why })
     : { ...withT160, inactiveIngredients: withT161Why };
-  const merged = { ...withT162, inactiveIngredients: withT162.inactiveIngredients, verdict: withT162.verdict };
+  const withT164 = withT162.inactiveIngredients.some(
+    (ingredient) => t164uGrade(ingredient.name) || t164uPartAWhy(ingredient.name, ingredient.riskLevel) || ingredient.name.trim().toLowerCase().replace(/\s+/g, ' ') === 'sodium alginate' || ingredient.name.trim().toLowerCase().replace(/\s+/g, ' ') === 'benzalkonium chloride',
+  )
+    ? applyT164uRow({ ...record, inactiveIngredients: withT162.inactiveIngredients, verdict: withT162.verdict, honestNote: withT162.honestNote, founderHonestNote: withT162.founderHonestNote })
+    : withT162;
+  const merged = { ...withT164, inactiveIngredients: withT164.inactiveIngredients, verdict: withT164.verdict };
   const honestNote = displayHonestNote(merged);
   const productImage = previewOverlayImage(merged);
   if (
