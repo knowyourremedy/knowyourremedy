@@ -1497,8 +1497,70 @@ export function isT167uLimitedName(name: string): boolean {
   return T167U_LIMITED.has(t167uToken(name));
 }
 
+const T169U_CLEARED = new Set([
+  '4-t-butylcyclohexanol',
+  'aloe',
+  'farnesol',
+  'himalayan rock salt',
+  'non-gmo citric acid',
+  'organic vanilla flavor',
+  'styrene-isoprene-styrene block copolymer',
+  'vitamin e acetate',
+  'aluminum silicate',
+]);
+
+const T169U_CAUTION = new Set([
+  'sodium pyruvate',
+  'cajuput oil',
+  'lanolin alcohol',
+  'organic cherry flavor',
+  'thymol',
+  'vanillyl butyl ether',
+]);
+
+const T169U_LIMITED = new Set([
+  'rebaudioside a',
+  'ammonium glycyrrhizin',
+  'beta-carotene',
+  'dextrose anhydrous',
+  'ethyl acetate',
+  'iron oxide ochre',
+  'modified cellulose',
+  'tapioca dextrose',
+  'acetone',
+  'annatto (color)',
+  'beta carotene',
+  'cherry flavor',
+  'grain alcohol',
+  'mono- and diglycerides',
+  'octyldodecanol',
+]);
+
+function t169uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t169u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT169uClearedName(name: string): boolean {
+  return T169U_CLEARED.has(t169uToken(name));
+}
+
+export function isT169uCautionName(name: string): boolean {
+  return T169U_CAUTION.has(t169uToken(name));
+}
+
+export function isT169uLimitedName(name: string): boolean {
+  return T169U_LIMITED.has(t169uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t169u/i.test(ingredient.source ?? '')) {
+    if (isT169uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT169uClearedName(ingredient.name) || isT169uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t167u/i.test(ingredient.source ?? '')) {
     if (isT167uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
