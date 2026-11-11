@@ -437,6 +437,11 @@ Process lock
 - Flavor rule. Unnamed or vague flavor strings on the other-ingredients line dock per METHODOLOGY §5 (Limited “Natural flavors” opacity or Caution flavor family).
 - Flavor rule clarification (founder, Oct 17 2026): The flavor rule only docks unnamed or vague flavors (e.g. "natural flavor," "fruit flavor," "natural and artificial flavor"). A flavor that names the specific fruits or ingredients (e.g. "Natural Strawberry watermelon raspberry flavor") does not trigger the rule and is not automatically Limited.
 - A one-UPC mixed-flavor variety carton is one row, graded by its worst stick (founder t126u).
+- Named-flavor rule
+Bare “Natural Flavors,” “Natural Flavor,” “Organic Flavors,” or “Organic Flavor” stays Limited/Caution. The exact sources are not named.
+Any string that names a fruit or fruit category (Natural Mixed Berry Flavor, Organic Raspberry Flavor, Natural Apple Flavor, Natural Lemon Flavor, and the like) is Cleared when the panel does not also list a Limited carrier (glycerin, maltodextrin, propylene glycol, etc.). Naming the fruit or category is enough. It is not treated as the bare vague flavor.
+Greater specificity never makes the grade worse. It either stays the same or improves it.
+This follows the same pattern as the vegetable-capsule rule: the bare/vague name is the lower grade; naming the specific form improves it.
 - Unnamed / ambiguous token rule (founder t130u, Oct 18, 2026): see METHODOLOGY §4 — unnamed does not force a worse grade unless a named version of the same ingredient class would change severity in that form; natural ingredients take the best of two options, man-made take the worse.
 
 Bare capsule shells: Vegetable Capsule, Vegetarian Capsule, Vegan Capsule, and Veggie Softgel are Cleared and do not stack. All common named materials (pullulan, HPMC, cellulose, tapioca) are Cleared, and the bare name does not hide a known problematic form. If a brand statement or source for that exact product shows a problematic material, the grade follows that material. This replaces the prior Limited lock on these bare shells.
