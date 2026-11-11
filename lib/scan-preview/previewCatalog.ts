@@ -437,6 +437,7 @@ import { applyT146uIngredients, applyT146uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT147uIngredients, applyT147uTokenWhy } from '@/lib/scan-preview/t147uTokenWhy';
 import { applyT149uIngredients, applyT149uTokenWhy } from '@/lib/scan-preview/t149uTokenWhy';
 import { applyT151uIngredients, applyT151uTokenWhy } from '@/lib/scan-preview/t151uTokenWhy';
+import { applyT154uIngredients, applyT154uTokenWhy } from '@/lib/scan-preview/t154uTokenWhy';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -851,7 +852,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21039,7 +21040,7 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
     bareShellWhyChanged = true;
     return { ...ingredient, why: T125U_BARE_SHELL_WHY };
   });
-  const inactiveIngredients = applyT151uIngredients(applyT149uIngredients(applyT147uIngredients(applyT146uIngredients(applyT143uIngredients(applyT141uIngredients(applyT140uIngredients(applyT139uIngredients(
+  const inactiveIngredients = applyT154uIngredients(applyT151uIngredients(applyT149uIngredients(applyT147uIngredients(applyT146uIngredients(applyT143uIngredients(applyT141uIngredients(applyT140uIngredients(applyT139uIngredients(
     applyT138uIngredients(
       applyT135uIngredients(
         applyT134uIngredients(bareShellWhyChanged ? withBareShellWhy : stamped),
@@ -21047,7 +21048,7 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
       ),
     ),
     record,
-  )), record), record)), record), record), record);
+  )), record), record)), record), record), record));
   const hasHigh = inactiveIngredients.some((i) => i.riskLevel === 'high');
   const hasModerate = inactiveIngredients.some((i) => i.riskLevel === 'moderate');
   const hasLimited = inactiveIngredients.some((i) => i.riskLevel === 'limited');
