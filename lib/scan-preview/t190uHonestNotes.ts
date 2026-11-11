@@ -1587,7 +1587,7 @@ function limitedTokens(ingredients: readonly IngredientFlag[]): string[] {
   return printed;
 }
 
-function formOils(ingredients: readonly IngredientFlag[]): IngredientFlag[] {
+export function t190uFormOils(ingredients: readonly IngredientFlag[]): IngredientFlag[] {
   const seen = new Set<string>();
   const oils: IngredientFlag[] = [];
   for (const ingredient of ingredients) {
@@ -1630,7 +1630,7 @@ export function t190uDecision(record: RatingRecord): T190uDecision {
     return { kind: 'write', template: 'stacking', note: stackingHonestNote(tokens) };
   }
   const form = t190uFormWord(record.form);
-  const oils = formOils(ingredients);
+  const oils = t190uFormOils(ingredients);
   const avoidOils = oils.filter((ingredient) => ingredient.riskLevel === 'high');
   if (!form || oils.length === 0 || avoidOils.length !== oils.length) {
     const detail = oils.map((ingredient) => `${ingredient.name.trim()} ${ingredient.riskLevel} ${(record.form ?? '').trim()}`).join('; ') || (record.form ?? '');
