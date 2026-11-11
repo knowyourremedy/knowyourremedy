@@ -440,6 +440,7 @@ import { applyT151uIngredients, applyT151uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT154uIngredients, applyT154uTokenWhy } from '@/lib/scan-preview/t154uTokenWhy';
 import { applyT157uRow, t157uGrade } from '@/lib/scan-preview/t157uLocks';
 import { applyT160uRow, t160uGrade } from '@/lib/scan-preview/t160uLocks';
+import { applyT162uRow, t162uGrade } from '@/lib/scan-preview/t162uLocks';
 import { applyT161uIngredients, applyT161uTokenWhy } from '@/lib/scan-preview/t161uTokenWhy';
 import { applyT158uIngredients, applyT158uTokenWhy } from '@/lib/scan-preview/t158uTokenWhy';
 import {
@@ -856,7 +857,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21067,7 +21068,10 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
     ? applyT160uRow({ ...record, inactiveIngredients: withT158Why })
     : { ...graded, inactiveIngredients: withT158Why };
   const withT161Why = applyT161uIngredients(withT160.inactiveIngredients);
-  const merged = { ...withT160, inactiveIngredients: withT161Why, verdict: withT160.verdict };
+  const withT162 = withT161Why.some((ingredient) => t162uGrade(ingredient.name))
+    ? applyT162uRow({ ...record, inactiveIngredients: withT161Why })
+    : { ...withT160, inactiveIngredients: withT161Why };
+  const merged = { ...withT162, inactiveIngredients: withT162.inactiveIngredients, verdict: withT162.verdict };
   const honestNote = displayHonestNote(merged);
   const productImage = previewOverlayImage(merged);
   if (
