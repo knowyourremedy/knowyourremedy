@@ -466,6 +466,7 @@ import { applyT186uIngredients, applyT186uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT205uIngredients, applyT205uTokenWhy } from '@/lib/scan-preview/t205uLocks';
 import { applyT207uIngredients, applyT207uTokenWhy } from '@/lib/scan-preview/t207uLocks';
 import { applyT211uIngredients, applyT211uTokenWhy } from '@/lib/scan-preview/t211uLocks';
+import { applyT212uHonestNotes } from '@/lib/scan-preview/t212uNotes';
 import { t190uDecision } from '@/lib/scan-preview/t190uHonestNotes';
 import { t192uDecision } from '@/lib/scan-preview/t192uHonestNotes';
 import { t193uDecision } from '@/lib/scan-preview/t193uHonestNotes';
@@ -889,7 +890,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH392_KYR6E_T206U,
   ...BATCH393_KYR6E_T207U,
   ...BATCH394_KYR6E_T211U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow).map(applyT165uRow).map(applyT166uRow).map(applyT167uRow).map(applyT169uRow).map(applyT170uRow).map(applyT171uRow).map(applyT172uTokenWhy).map(applyT174uTokenWhy).map(applyT177uTokenWhy).map(applyT178uTokenWhy).map(applyT179uTokenWhy).map(applyT180uTokenWhy).map(applyT181uTokenWhy).map(applyT182uTokenWhy).map(applyT183uTokenWhy).map(applyT184uTokenWhy).map(applyT185uTokenWhy).map(applyT186uTokenWhy).map(applyT205uTokenWhy).map(applyT207uTokenWhy).map(applyT211uTokenWhy);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow).map(applyT165uRow).map(applyT166uRow).map(applyT167uRow).map(applyT169uRow).map(applyT170uRow).map(applyT171uRow).map(applyT172uTokenWhy).map(applyT174uTokenWhy).map(applyT177uTokenWhy).map(applyT178uTokenWhy).map(applyT179uTokenWhy).map(applyT180uTokenWhy).map(applyT181uTokenWhy).map(applyT182uTokenWhy).map(applyT183uTokenWhy).map(applyT184uTokenWhy).map(applyT185uTokenWhy).map(applyT186uTokenWhy).map(applyT205uTokenWhy).map(applyT207uTokenWhy).map(applyT211uTokenWhy).map(applyT212uHonestNotes);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
