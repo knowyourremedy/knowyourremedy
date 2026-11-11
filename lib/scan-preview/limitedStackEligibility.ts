@@ -1609,8 +1609,61 @@ export function isT170uLimitedName(name: string): boolean {
   return T170U_LIMITED.has(t170uToken(name));
 }
 
+const T171U_CLEARED = new Set([
+  'terpene resin',
+  'tert-butyl alcohol',
+  'thymus mastichina flowering-top oil',
+  'decyl glucoside',
+  'glyceryl stearate citrate',
+  'lavandula angustifolia (lavender) oil',
+  'menthoxypropanediol',
+  'menthyl lactate',
+  'natural citrus extract',
+  'organic rice meal',
+  'retinyl palmitate',
+  'silicon',
+  'spearmint oil',
+  'white rice flour',
+]);
+
+const T171U_CAUTION = new Set([
+  'thyme oil',
+  'ceteareth-20',
+]);
+
+const T171U_LIMITED = new Set([
+  'vanilla flavor',
+  'capsaicin',
+  'methacrylic acid copolymer type c',
+  'organic beet sugar',
+  'propane',
+]);
+
+function t171uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t171u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT171uClearedName(name: string): boolean {
+  return T171U_CLEARED.has(t171uToken(name));
+}
+
+export function isT171uCautionName(name: string): boolean {
+  return T171U_CAUTION.has(t171uToken(name));
+}
+
+export function isT171uLimitedName(name: string): boolean {
+  return T171U_LIMITED.has(t171uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t171u/i.test(ingredient.source ?? '')) {
+    if (isT171uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT171uClearedName(ingredient.name) || isT171uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t170u/i.test(ingredient.source ?? '')) {
     if (isT170uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
