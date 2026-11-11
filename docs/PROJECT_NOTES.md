@@ -469,6 +469,7 @@ Vegetable-capsule logic: If a bare or vague name does not hide a known problem, 
 - Exhaust every ladder step before calling a pack dead, open, or ready for the hunt list. A blocked page does not count as exhausting that step.
 - Stop after reporting missing tokens if any exist; do not continue working.
 - The same product and flavor does not require a different panel — the existing readable panel applies across counts. It does require a different UPC when the count is different. Use the shared panel, write the row for the count that is for sale, and attach only a UPC that matches that specific count. Do not hold or mark the pack not-for-sale solely because the printed serving count differs from the listing count.
+- After writing the brand, scan the new rows for any form contradiction or 3+ Limited stack that needs an honest note under the current rules, even if all tokens were already locked. Report those rows before closing the brand.
 
 Founder store-walk list
 
@@ -1182,6 +1183,10 @@ Avoid-chewable oil note (use when the oil is the base of a chewable):
 [Oil] is graded Avoid here because it is the base of this chewable. In that form you chew the oil. The same oil is graded Cleared when it is only the fill of a capsule, softgel, or tablet.
 
 Only write a note when the form creates a true contradiction under the oil rule. If the form is not a contradiction, leave the note empty.
+
+## Post-write honest-note check
+
+After writing any brand, scan the new rows for form contradictions or 3+ Limited stacks that require an honest note under the current rules, even when every token was already locked. Report any rows that need a note before closing the brand.
 
 
 Row-writing rules (founder t130u, Oct 18, 2026 — record verbatim for KYR6-c and KYR6-d writes; founder order t151u, Oct 21, 2026 — same scope for both)
