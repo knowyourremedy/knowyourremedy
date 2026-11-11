@@ -1161,8 +1161,70 @@ export function isT157uCautionName(name: string): boolean {
   return T157U_CAUTION.has(t157uToken(name));
 }
 
+const T160U_CLEARED = new Set([
+  'magnesium stearate',
+  'microcrystalline cellulose',
+  'stearic acid',
+  'purified water',
+  'glycerin',
+  'citric acid',
+  'gelatin',
+  'hypromellose',
+  'croscarmellose sodium',
+  'hypromellose (cellulose) capsule',
+  'sodium citrate',
+  'povidone',
+  'dibasic calcium phosphate',
+  'malic acid',
+  'sugar',
+  'xanthan gum',
+]);
+
+const T160U_CAUTION = new Set([
+  'silica',
+  'silicon dioxide',
+  'colloidal silicon dioxide',
+  'modified cellulose gum',
+  'calcium silicate',
+]);
+
+const T160U_LIMITED = new Set([
+  'rice flour',
+  'sorbitol',
+  'propylene glycol',
+  'sodium benzoate',
+  'polysorbate 80',
+  'mannitol',
+  'flavor',
+  'flavors',
+  'alcohol',
+]);
+
+function t160uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t160u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT160uClearedName(name: string): boolean {
+  return T160U_CLEARED.has(t160uToken(name));
+}
+
+export function isT160uCautionName(name: string): boolean {
+  return T160U_CAUTION.has(t160uToken(name));
+}
+
+export function isT160uLimitedName(name: string): boolean {
+  return T160U_LIMITED.has(t160uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t160u/i.test(ingredient.source ?? '')) {
+    if (isT160uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT160uClearedName(ingredient.name) || isT160uCautionName(ingredient.name)) return false;
+  }
   if (isT157uLimitedName(ingredient.name)) {
     return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   }
