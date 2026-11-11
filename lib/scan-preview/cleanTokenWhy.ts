@@ -103,6 +103,15 @@ const EXACT_NAME_GROUP: Record<string, CleanAliasGroup> = {
   'modified vegetable cellulose (capsule)': 'hypromellose',
   'pregelatinized starch (maize)': 'pregelatinized starch',
   'filtered water': 'water',
+  'non-gmo vegetable cellulose (capsule)': 'hypromellose',
+  'vegetable cellulose (capsules)': 'hypromellose',
+  'modified vegetable cellulose (vegetarian capsule)': 'hypromellose',
+  'rice bran oil (softgel fill)': 'rice bran',
+  'rice bran powder': 'rice bran',
+  'organic rice bran extract blend': 'rice bran',
+  'lecithin (soy)': 'sunflower lecithin',
+  'organic sunflower lecithin': 'sunflower lecithin',
+  'pregelatinized / modified starch': 'pregelatinized starch',
 };
 
 function exactNameKey(name: string): string {
@@ -435,6 +444,15 @@ const matched: Array<[string, CleanAliasGroup]> = [
   ['modified vegetable cellulose (capsule)', 'hypromellose'],
   ['Pregelatinized starch (maize)', 'pregelatinized starch'],
   ['Filtered Water', 'water'],
+  ['Non-GMO vegetable cellulose (capsule)', 'hypromellose'],
+  ['Vegetable cellulose (capsules)', 'hypromellose'],
+  ['Modified vegetable cellulose (vegetarian capsule)', 'hypromellose'],
+  ['Rice bran oil (softgel fill)', 'rice bran'],
+  ['Rice Bran Powder', 'rice bran'],
+  ['Organic Rice Bran Extract Blend', 'rice bran'],
+  ['Lecithin (soy)', 'sunflower lecithin'],
+  ['organic sunflower lecithin', 'sunflower lecithin'],
+  ['Pregelatinized / modified starch', 'pregelatinized starch'],
   ['Rice bran', 'rice bran'],
   ['rice bran concentrate', 'rice bran'],
   ['Rice bran oil', 'rice bran'],
@@ -452,10 +470,9 @@ for (const [name, group] of matched) {
 const skipped = [
   'vegetable capsule', 'veggie capsule', 'methylcellulose',
   'cellulose gum', 'croscarmellose', 'ethylcellulose',
-  'Pregelatinized / modified starch', 'medium chain triglycerides', 'krill oil', 'cod liver oil', 'natural flavor',
+  'medium chain triglycerides', 'krill oil', 'cod liver oil', 'natural flavor',
   'Vegetable Capsule (Hypromellose, Gellan Gum)', 'Named vegetarian coating (HPMC / glycerin)',
   'Softgel (gelatin, glycerin, water)', 'Inulin / FOS', 'Watercress',
-  'organic sunflower lecithin', 'Rice bran oil (softgel fill)', 'Non-GMO vegetable cellulose (capsule)',
   'Coconut (MCT) oil', 'Organic Cane Alcohol',
   'Wildflower honey', 'Acacia',
 ];
