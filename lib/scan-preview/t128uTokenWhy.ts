@@ -2,17 +2,17 @@ import type { RatingRecord } from '../ratingRecord';
 import { isT125uBareShellName } from './t125uBareShell';
 import { computeVerdictFromInactiveIngredients } from './verdictFromFlags';
 
-const MIDDLE_CHAIN =
+export const T128U_MCT_WHY =
   'Middle-chain triglycerides are a processed fat used as a softgel or liquid fill. They are graded Limited and count toward a 3+ Limited stack.';
-const MALTODEXTRIN =
+export const T128U_MALTODEXTRIN_WHY =
   'Maltodextrin is a starch-based bulk sweetener. It is graded Limited and counts toward a 3+ Limited stack.';
-const NATURAL_FLAVOR =
+export const T128U_NATURAL_FLAVOR_WHY =
   'Natural flavors is an unnamed flavor blend. It is graded Limited and counts toward a 3+ Limited stack.';
-const SILICA =
+export const T128U_SILICA_WHY =
   'Silica is an anti-caking powder that keeps ingredients from clumping. Some forms raise questions about nanoparticle absorption.';
 const MODIFIED_CELLULOSE =
   'Modified cellulose gum is a processed form of cellulose used as a binder or thickener. It is not the simple fiber form.';
-const SORBITOL =
+export const T128U_SORBITOL_WHY =
   'Sorbitol is a sugar alcohol used as a sweetener or moisture keeper. Large amounts can cause bloating or loose stools. EFSA and FDA allow it in limited quantities.';
 const POTASSIUM_BENZOATE =
   'Potassium benzoate is a synthetic preservative. It is the potassium salt of benzoic acid and is graded Caution.';
@@ -25,19 +25,19 @@ export const T128U_SILICA_CELLULOSE_NOTE =
 
 /** Exact printed names only. Case and surrounding space are ignored. */
 const TOKEN_WHY: Record<string, string> = {
-  'middle chain triglycerides': MIDDLE_CHAIN,
-  'medium chain triglycerides': MIDDLE_CHAIN,
-  mct: MIDDLE_CHAIN,
-  maltodextrin: MALTODEXTRIN,
-  'organic maltodextrin': MALTODEXTRIN,
-  'natural flavors': NATURAL_FLAVOR,
-  'natural flavor': NATURAL_FLAVOR,
-  silica: SILICA,
-  'silicon dioxide': SILICA,
-  sio2: SILICA,
+  'middle chain triglycerides': T128U_MCT_WHY,
+  'medium chain triglycerides': T128U_MCT_WHY,
+  mct: T128U_MCT_WHY,
+  maltodextrin: T128U_MALTODEXTRIN_WHY,
+  'organic maltodextrin': T128U_MALTODEXTRIN_WHY,
+  'natural flavors': T128U_NATURAL_FLAVOR_WHY,
+  'natural flavor': T128U_NATURAL_FLAVOR_WHY,
+  silica: T128U_SILICA_WHY,
+  'silicon dioxide': T128U_SILICA_WHY,
+  sio2: T128U_SILICA_WHY,
   'modified cellulose gum': MODIFIED_CELLULOSE,
   'modified cellulose': MODIFIED_CELLULOSE,
-  sorbitol: SORBITOL,
+  sorbitol: T128U_SORBITOL_WHY,
   'potassium benzoate': POTASSIUM_BENZOATE,
 };
 
