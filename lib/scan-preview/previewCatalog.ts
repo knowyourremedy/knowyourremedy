@@ -429,6 +429,7 @@ import { applyT130uHonestNotes } from '@/lib/scan-preview/t130uHonestNotes';
 import { applyT134uIngredients, applyT134uTokenWhy } from '@/lib/scan-preview/t134uTokenWhy';
 import { applyT135uIngredients, applyT135uTokenWhy } from '@/lib/scan-preview/t135uTokenWhy';
 import { applyT138uIngredients, applyT138uTokenWhy } from '@/lib/scan-preview/t138uTokenWhy';
+import { applyT139uIngredients, applyT139uTokenWhy } from '@/lib/scan-preview/t139uTokenWhy';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -843,7 +844,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21031,11 +21032,14 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
     bareShellWhyChanged = true;
     return { ...ingredient, why: T125U_BARE_SHELL_WHY };
   });
-  const inactiveIngredients = applyT138uIngredients(
-    applyT135uIngredients(
-      applyT134uIngredients(bareShellWhyChanged ? withBareShellWhy : stamped),
-      record,
+  const inactiveIngredients = applyT139uIngredients(
+    applyT138uIngredients(
+      applyT135uIngredients(
+        applyT134uIngredients(bareShellWhyChanged ? withBareShellWhy : stamped),
+        record,
+      ),
     ),
+    record,
   );
   const hasHigh = inactiveIngredients.some((i) => i.riskLevel === 'high');
   const hasModerate = inactiveIngredients.some((i) => i.riskLevel === 'moderate');
