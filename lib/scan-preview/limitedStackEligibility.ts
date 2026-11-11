@@ -1217,8 +1217,70 @@ export function isT160uLimitedName(name: string): boolean {
   return T160U_LIMITED.has(t160uToken(name));
 }
 
+const T162U_CLEARED = new Set([
+  'dicalcium phosphate',
+  'dextrose',
+  'carboxymethylcellulose sodium',
+  'triethyl citrate',
+  'calcium carbonate',
+  'mineral oil',
+  'glucose syrup',
+  'sodium alginate',
+  'sodium carbonate',
+  'potassium hydroxide',
+  'starch',
+  'tartaric acid',
+]);
+
+const T162U_CAUTION = new Set([
+  'carob',
+  'fragrance',
+]);
+
+const T162U_LIMITED = new Set([
+  'xylitol',
+  'natural and artificial flavors',
+  'medium chain triglycerides',
+  'edetate disodium',
+  'polydextrose',
+  'potassium sorbate',
+  'pharmaceutical ink',
+  'sodium lauryl sulfate',
+  'fructose',
+  'dextrin',
+  'benzalkonium chloride',
+  'menthol',
+  'bamboo extract',
+  'maltitol',
+  'benzyl alcohol',
+  'corn syrup',
+]);
+
+function t162uToken(name: string): string {
+  return name.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+/** t162u. Prior locks are not binding. Exact mixed-list tokens only. */
+export function isT162uClearedName(name: string): boolean {
+  return T162U_CLEARED.has(t162uToken(name));
+}
+
+export function isT162uCautionName(name: string): boolean {
+  return T162U_CAUTION.has(t162uToken(name));
+}
+
+export function isT162uLimitedName(name: string): boolean {
+  return T162U_LIMITED.has(t162uToken(name));
+}
+
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t162u/i.test(ingredient.source ?? '')) {
+    if (isT162uLimitedName(ingredient.name)) {
+      return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+    }
+    if (isT162uClearedName(ingredient.name) || isT162uCautionName(ingredient.name)) return false;
+  }
   if (/founder lock t160u/i.test(ingredient.source ?? '')) {
     if (isT160uLimitedName(ingredient.name)) {
       return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
