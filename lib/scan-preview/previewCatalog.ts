@@ -422,6 +422,7 @@ import { applyT104uRow } from '@/lib/scan-preview/t104uLocks';
 import { applyT108uRow } from '@/lib/scan-preview/t108uLocks';
 import { applyCleanTokenWhy, stampCleanTokenWhy } from '@/lib/scan-preview/cleanTokenWhy';
 import { applyT125uBareShellRow, isT125uBareShellName, T125U_BARE_SHELL_WHY } from '@/lib/scan-preview/t125uBareShell';
+import { applyT126uHonestNotes } from '@/lib/scan-preview/t126uHonestNotes';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -836,7 +837,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
