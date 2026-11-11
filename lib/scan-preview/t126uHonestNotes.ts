@@ -15,13 +15,16 @@ const SET_NOTE = new Set([
   'solaray-b129-076280644753',
 ]);
 
-const CLEAR_NOTE = new Set([
+const NATURES_ANSWER_NOTE =
+  'This product is Caution because of other Caution or Limited ingredients on the panel. The capsule shell is Cleared.';
+
+const NATURES_ANSWER = new Set([
   'naturesanswer-b326-vitamin-d3-k2-capsules',
   'naturesanswer-b326-shilajit-caps-60',
   'naturesanswer-b326-ut-answer-cranberry-capsules-90-count',
 ]);
 
-/** Founder honest-note overrides for the twelve t126u rows. Other rows are unchanged. */
+/** Founder honest-note overrides. Other rows are unchanged. */
 export function applyT126uHonestNotes(record: RatingRecord): RatingRecord {
   if (SET_NOTE.has(record.id)) {
     if (record.honestNote === CAPSULE_CLEARED_NOTE && record.founderHonestNote === CAPSULE_CLEARED_NOTE) {
@@ -29,9 +32,11 @@ export function applyT126uHonestNotes(record: RatingRecord): RatingRecord {
     }
     return { ...record, honestNote: CAPSULE_CLEARED_NOTE, founderHonestNote: CAPSULE_CLEARED_NOTE };
   }
-  if (CLEAR_NOTE.has(record.id)) {
-    if (record.honestNote === undefined && record.founderHonestNote === '') return record;
-    return { ...record, honestNote: undefined, founderHonestNote: '' };
+  if (NATURES_ANSWER.has(record.id)) {
+    if (record.honestNote === NATURES_ANSWER_NOTE && record.founderHonestNote === NATURES_ANSWER_NOTE) {
+      return record;
+    }
+    return { ...record, honestNote: NATURES_ANSWER_NOTE, founderHonestNote: NATURES_ANSWER_NOTE };
   }
   return record;
 }
