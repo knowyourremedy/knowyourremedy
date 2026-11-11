@@ -421,6 +421,7 @@ import { applyT87uRow } from '@/lib/scan-preview/t87uLocks';
 import { applyT104uRow } from '@/lib/scan-preview/t104uLocks';
 import { applyT108uRow } from '@/lib/scan-preview/t108uLocks';
 import { applyCleanTokenWhy, stampCleanTokenWhy } from '@/lib/scan-preview/cleanTokenWhy';
+import { applyT125uBareShellRow, isT125uBareShellName, T125U_BARE_SHELL_WHY } from '@/lib/scan-preview/t125uBareShell';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -835,7 +836,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21013,9 +21014,17 @@ export function applyOverlayIngredientLocks(
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const locked = applyOverlayIngredientLocks(record);
-  const inactiveIngredients = record.verdict === 'clean'
+  const bareShellRow = record.inactiveIngredients.some((ingredient) => isT125uBareShellName(ingredient.name));
+  const stamped = record.verdict === 'clean' && !bareShellRow
     ? stampCleanTokenWhy(locked.inactiveIngredients)
     : locked.inactiveIngredients;
+  let bareShellWhyChanged = false;
+  const withBareShellWhy = stamped.map((ingredient) => {
+    if (!isT125uBareShellName(ingredient.name) || ingredient.why === T125U_BARE_SHELL_WHY) return ingredient;
+    bareShellWhyChanged = true;
+    return { ...ingredient, why: T125U_BARE_SHELL_WHY };
+  });
+  const inactiveIngredients = bareShellWhyChanged ? withBareShellWhy : stamped;
   const hasHigh = inactiveIngredients.some((i) => i.riskLevel === 'high');
   const hasModerate = inactiveIngredients.some((i) => i.riskLevel === 'moderate');
   const hasLimited = inactiveIngredients.some((i) => i.riskLevel === 'limited');
