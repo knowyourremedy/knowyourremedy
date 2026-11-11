@@ -460,6 +460,7 @@ import { applyT183uIngredients, applyT183uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT184uIngredients, applyT184uTokenWhy } from '@/lib/scan-preview/t184uTokenWhy';
 import { applyT185uIngredients, applyT185uTokenWhy } from '@/lib/scan-preview/t185uTokenWhy';
 import { applyT186uIngredients, applyT186uTokenWhy } from '@/lib/scan-preview/t186uTokenWhy';
+import { t190uDecision } from '@/lib/scan-preview/t190uHonestNotes';
 import { applyT161uIngredients, applyT161uTokenWhy } from '@/lib/scan-preview/t161uTokenWhy';
 import { applyT158uIngredients, applyT158uTokenWhy } from '@/lib/scan-preview/t158uTokenWhy';
 import {
@@ -21131,8 +21132,12 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const withT184Why = applyT184uIngredients(withT183Why);
   const withT185Why = applyT185uIngredients(withT184Why);
   const withT186Why = applyT186uIngredients(withT185Why);
-  const merged = { ...withT171, inactiveIngredients: withT186Why, verdict: withT171.verdict };
-  const honestNote = displayHonestNote(merged);
+  const base = { ...withT171, inactiveIngredients: withT186Why, verdict: withT171.verdict };
+  const decision = t190uDecision(base);
+  const merged = decision.kind === 'write'
+    ? { ...base, honestNote: decision.note, founderHonestNote: decision.note }
+    : base;
+  const honestNote = decision.kind === 'write' ? decision.note : displayHonestNote(base);
   const productImage = previewOverlayImage(merged);
   if (
     merged.inactiveIngredients === record.inactiveIngredients
