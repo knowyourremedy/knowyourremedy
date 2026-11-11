@@ -439,6 +439,7 @@ import { applyT149uIngredients, applyT149uTokenWhy } from '@/lib/scan-preview/t1
 import { applyT151uIngredients, applyT151uTokenWhy } from '@/lib/scan-preview/t151uTokenWhy';
 import { applyT154uIngredients, applyT154uTokenWhy } from '@/lib/scan-preview/t154uTokenWhy';
 import { applyT157uRow, t157uGrade } from '@/lib/scan-preview/t157uLocks';
+import { applyT158uIngredients, applyT158uTokenWhy } from '@/lib/scan-preview/t158uTokenWhy';
 import {
   PARKED_PEDIALYTE_BROWSE_IDS,
   isParkedBrowseId,
@@ -853,7 +854,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH389_KYR6E_T90U,
   ...BATCH390_KYR6E_T98,
   ...BATCH391_KYR6E_T108U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow);
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21059,7 +21060,8 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   const graded = inactiveIngredients.some((ingredient) => t157uGrade(ingredient.name))
     ? applyT157uRow({ ...record, inactiveIngredients })
     : { ...locked, inactiveIngredients, verdict };
-  const merged = { ...graded, inactiveIngredients: graded.inactiveIngredients, verdict: graded.verdict };
+  const withT158Why = applyT158uIngredients(graded.inactiveIngredients);
+  const merged = { ...graded, inactiveIngredients: withT158Why, verdict: graded.verdict };
   const honestNote = displayHonestNote(merged);
   const productImage = previewOverlayImage(merged);
   if (
