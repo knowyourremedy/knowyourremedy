@@ -1903,8 +1903,10 @@ export const BATCH400_KYR6E_T225U: RatingRecord[] = [
       flag("Fructose, sorbitol powder, dextrose, orange juice crystals, orange juice flavors, natural flavors, cellulose, stearic acid, mannitol, rosehips, acerola, and silica", "silica", "moderate", false),
     ],
     verdict: "avoid",
+    honestNote: "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
+    founderHonestNote: "This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.",
     sourcesGeneral: [
-      "t225u. https://professionalformulas.com/product/vitamin-c-chewable/ is for sale at $26. Product code VCC. 90 Tablets. Other ingredients: Fructose, sorbitol powder, dextrose, orange juice crystals, orange juice flavors, natural flavors, cellulose, stearic acid, mannitol, rosehips, acerola, and silica. Actives are not graded. Counted Limited: Fructose; natural flavors; mannitol. No UPC was printed. Missing UPC.",
+      "t225u. https://professionalformulas.com/product/vitamin-c-chewable/ is for sale at $26. Product code VCC. 90 Tablets. Other ingredients: Fructose, sorbitol powder, dextrose, orange juice crystals, orange juice flavors, natural flavors, cellulose, stearic acid, mannitol, rosehips, acerola, and silica. Actives are not graded. Counted Limited: Fructose; natural flavors; mannitol. No UPC was printed. Missing UPC. t228u stored the 3+ Limited honest note.",
     ],
   },
   {
