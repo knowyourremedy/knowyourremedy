@@ -403,3 +403,4 @@ export { BATCH403_KYR6E_T238U } from './batch403-kyr6e-t238u';
 export { BATCH404_KYR6E_T239U } from './batch404-kyr6e-t239u';
 export { BATCH405_KYR6E_T240U } from './batch405-kyr6e-t240u';
 export { BATCH406_KYR6E_T242U } from './batch406-kyr6e-t242u';
+export { BATCH407_KYR6E_T243U } from './batch407-kyr6e-t243u';
