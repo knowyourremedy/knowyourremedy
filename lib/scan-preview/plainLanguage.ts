@@ -1036,8 +1036,12 @@ function t139eWhy(name: string, level: RiskLevel): string {
   );
 }
 
+const T222U_ORGANIC_CANE_ALCOHOL_WHY =
+  'Organic cane alcohol. It is the liquid that extracts and carries the plant ingredients. The panel does not print the strength, so the exact concentration is not shown. Alcohol used as a vehicle is graded Limited when the strength is not printed (PROJECT_NOTES alcohol-with-strength rule).';
+
 function t138eWhy(name: string, level: RiskLevel): string {
   const n = norm(name);
+  if (n === 'organic cane alcohol') return T222U_ORGANIC_CANE_ALCOHOL_WHY;
   if (isT138eLimitedName(name)) {
     return close(
       `${name.trim()} is the exact printed string. The founder locked this token Limited (t138e). It counts toward the three-or-more Limited stack. It is not the Cleared token Acrylates Copolymer, and it is not Acrylates/ C10-30 Alkyl Acrylate Crosspolymer.`,
@@ -1059,12 +1063,6 @@ function t138eWhy(name: string, level: RiskLevel): string {
   if (n === 'organic apple cider') {
     return close(
       `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Apple Cider Vinegar.`,
-      level,
-    );
-  }
-  if (n === 'organic cane alcohol') {
-    return close(
-      `${name.trim()} is the exact printed string. The founder locked this token Cleared (t138e). It does not count toward the three-or-more Limited stack. It is not Organic Cane Alcohol (45-55% by volume).`,
       level,
     );
   }

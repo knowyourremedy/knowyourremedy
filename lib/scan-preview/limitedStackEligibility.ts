@@ -837,7 +837,6 @@ export function isT139eClearedName(name: string): boolean {
 const T138E_CLEARED = new Set([
   'organic tart cherry flavor',
   'organic apple cider',
-  'organic cane alcohol',
   'organic cane alcohol 45 55 by volume',
   'organic myceliated brown rice',
   'pink salt',
@@ -856,9 +855,10 @@ const T138E_CAUTION = new Set([
 
 const T138E_LIMITED = new Set([
   '2 propenoic acid 2 methyl methyl ester polymer with ethenyl acetate and 2 ethylhexyl 2 propenoate',
+  'organic cane alcohol',
 ]);
 
-/** t138e exact strings. The adhesive phrases are not the word Adhesive. Organic Cane Alcohol is not the 45-55% print. */
+/** t138e exact strings. The adhesive phrases are not the word Adhesive. Bare Organic Cane Alcohol is Limited (t222u) and counts. It is not the 45-55% print, which stays Cleared. */
 export function isT138eClearedName(name: string): boolean {
   return T138E_CLEARED.has(t121uToken(name));
 }
