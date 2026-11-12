@@ -56,11 +56,11 @@ export const BATCH396_KYR6E_T217U: RatingRecord[] = [
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
       flag('CellCore IS-BAB brand label PDF. 4 fl oz.', 'Purified Water', 'cleared', false),
-      flag('CellCore IS-BAB brand label PDF. 4 fl oz.', 'Organic Cane Alcohol', 'cleared', false),
+      flag('CellCore IS-BAB brand label PDF. 4 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't217u. https://cellcore.com/products/is-bab is for sale. Product label PDF prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. SKU CC-BABXX-4OZ-BTL-02. Brand variant barcode 810131152123. The check digit passes.',
+      't217u. https://cellcore.com/products/is-bab is for sale. Product label PDF prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. SKU CC-BABXX-4OZ-BTL-02. Brand variant barcode 810131152123. The check digit passes. t223u regraded Organic Cane Alcohol to Limited. It counts, so this row is Caution.',
     ],
   },
   {
@@ -79,11 +79,11 @@ export const BATCH396_KYR6E_T217U: RatingRecord[] = [
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
       flag('CellCore IS-BART brand label. 4 fl oz.', 'Purified Water', 'cleared', false),
-      flag('CellCore IS-BART brand label. 4 fl oz.', 'Organic Cane Alcohol', 'cleared', false),
+      flag('CellCore IS-BART brand label. 4 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't217u. https://cellcore.com/products/is-bart is for sale. The label prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. The package barcode reads 8 10131 15214 7. SKU CC-BARTX-4OZ-BTL-02. Brand variant barcode 810131152147. The check digit passes.',
+      't217u. https://cellcore.com/products/is-bart is for sale. The label prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. The package barcode reads 8 10131 15214 7. SKU CC-BARTX-4OZ-BTL-02. Brand variant barcode 810131152147. The check digit passes. t223u regraded Organic Cane Alcohol to Limited. It counts, so this row is Caution.',
     ],
   },
   {
@@ -102,11 +102,11 @@ export const BATCH396_KYR6E_T217U: RatingRecord[] = [
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
       flag('CellCore IS-BOOST brand label PDF. 4 fl oz.', 'Purified Water', 'cleared', false),
-      flag('CellCore IS-BOOST brand label PDF. 4 fl oz.', 'Organic Cane Alcohol', 'cleared', false),
+      flag('CellCore IS-BOOST brand label PDF. 4 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't217u. https://cellcore.com/products/is-boost is for sale. Product label PDF prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. SKU CC-BOOST-4OZ-BTL-02. Brand variant barcode 788000132609. The check digit passes.',
+      't217u. https://cellcore.com/products/is-boost is for sale. Product label PDF prints Other Ingredients: Purified Water, Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. SKU CC-BOOST-4OZ-BTL-02. Brand variant barcode 788000132609. The check digit passes. t223u regraded Organic Cane Alcohol to Limited. It counts, so this row is Caution.',
     ],
   },
   {
@@ -124,11 +124,11 @@ export const BATCH396_KYR6E_T217U: RatingRecord[] = [
     barcode: '810131152062',
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
-      flag('CellCore Para 3 brand label PDF. 2 fl oz.', 'Organic Cane Alcohol', 'cleared', false),
+      flag('CellCore Para 3 brand label PDF. 2 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't217u. https://cellcore.com/products/para-3 is for sale. Product label PDF prints Other Ingredients: Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. Serving size about 25 drops. SKU CC-PARA3-2OZ-BTL-02. Brand variant barcode 810131152062. The check digit passes.',
+      't217u. https://cellcore.com/products/para-3 is for sale. Product label PDF prints Other Ingredients: Organic Cane Alcohol. Contains Walnut is an allergen line and is not graded. Serving size about 25 drops. SKU CC-PARA3-2OZ-BTL-02. Brand variant barcode 810131152062. The check digit passes. t223u regraded Organic Cane Alcohol to Limited. It counts, so this row is Caution.',
     ],
   },
 ];

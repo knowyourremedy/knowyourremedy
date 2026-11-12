@@ -21208,10 +21208,8 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   ) {
     return record;
   }
-  const meSupport = record.id === 'cellcore-b398-me-support-2';
   return {
     ...merged,
-    ...(meSupport ? { verdict: 'caution' as const } : {}),
     honestNote,
     ...(productImage ? { productImage } : {}),
   };
