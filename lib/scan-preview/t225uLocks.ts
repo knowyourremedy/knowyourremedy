@@ -188,6 +188,13 @@ EXACT.set('herbal flavoring mixture', { grade: 'moderate', counts: false, why: F
 EXACT.set('potassium sorbate', { grade: 'moderate', counts: false, why: SORBATE });
 EXACT.set('potassium sorbate (0.1%)', { grade: 'moderate', counts: false, why: SORBATE });
 
+/** A trailing percentage or ratio in parentheses is the same token as the words before it. */
+function percentageCore(name: string): string | undefined {
+  const match = name.match(/^(.*)\s+\((?:\d+(?:\.\d+)?%|\d+(?:\.\d+)?\s*:\s*\d+(?:\.\d+)?)\)\s*$/);
+  const core = match?.[1]?.trim();
+  return core || undefined;
+}
+
 export function t225uLock(name: string): Lock | undefined {
   const text = name.trim().replace(/\s+/g, ' ');
   if (STRENGTH.has(text)) {
@@ -195,7 +202,10 @@ export function t225uLock(name: string): Lock | undefined {
     if (!kind) return undefined;
     return { grade: 'cleared', counts: false, why: STRENGTH_WHY(kind) };
   }
-  return EXACT.get(text);
+  const exact = EXACT.get(text);
+  if (exact) return exact;
+  const core = percentageCore(text);
+  return core ? EXACT.get(core) : undefined;
 }
 
 const SOURCE: Record<RiskLevel, string> = {
@@ -248,8 +258,10 @@ if (t225uLock('natural lime flavor')?.why !== 'Natural lime flavoring made from 
 if (t225uLock('natural orange flavoring')?.why !== 'Natural orange flavoring made from orange. It adds orange taste to the product.') throw new Error('t225u orange flavor');
 if (t225uLock('polygala tenuifolia root extract (1:1)')?.why !== 'Polygala tenuifolia root extract (1:1). It is added for its plant compounds.') throw new Error('t225u herb');
 if (t225uLock('anise seed extract')?.why !== 'Anise seed extract. It adds flavor and plant compounds to the product.') throw new Error('t225u anise');
-if (t225uLock('anise seed extract (1%)')) throw new Error('t225u anise paren');
-if (t225uLock('anise (2%)')) throw new Error('t225u anise 2');
+if (t225uLock('anise seed extract (1%)')?.why !== t225uLock('anise seed extract')?.why) throw new Error('t225u anise paren');
+if (t225uLock('anise seed extract (1%)')?.grade !== 'cleared' || t225uLock('anise seed extract (1%)')?.counts !== false) throw new Error('t225u anise paren grade');
+if (t225uLock('anise (2%)')?.why !== t225uLock('anise')?.why) throw new Error('t225u anise 2');
+if (t225uLock('herbal flavoring mixture containing extracts of licorice and anise (2%)')) throw new Error('t225u herbal anise');
 if (t225uLock('herbal flavoring mixture containing extracts of licorice')) throw new Error('t225u herbal long');
 if (t225uLock('herbal flavoring mixture')?.grade !== 'moderate') throw new Error('t225u herbal');
 if (t225uLock('potassium sorbate')?.grade !== 'moderate' || t225uLock('potassium sorbate')?.counts !== false) throw new Error('t225u sorbate');
