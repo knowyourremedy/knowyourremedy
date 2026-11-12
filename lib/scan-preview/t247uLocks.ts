@@ -1,6 +1,6 @@
 import type { IngredientFlag, RatingRecord, RiskLevel } from '../ratingRecord';
 import { t240uLock, t240uNorm } from './t240uLocks';
-import { computeVerdictFromInactiveIngredients } from './verdictFromFlags';
+import { computeVerdictFromInactiveIngredients, ingredientCountsTowardLimitedStack } from './verdictFromFlags';
 
 type Lock = { grade: RiskLevel; counts: boolean; why: string };
 
@@ -94,3 +94,25 @@ if (t247uLock('Vegetable Oil (Canola Oil, Coconut Oil)')?.counts !== true) throw
 if (t247uLock('Vegetable Oil (Canola, Coconut)')?.why !== OIL_SHORT) throw new Error('t247u oil short');
 if (t247uLock('Vegetable Oil')) throw new Error('t247u bare vegetable oil');
 if (t247uLock('Canola Oil')) throw new Error('t247u bare canola');
+
+export const T248U_STACK_NOTE =
+  'This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.';
+
+/** Vital Proteins batch410 only. Sets the founder 3+ note when the stack is real. */
+export function applyT248uRow(record: RatingRecord): RatingRecord {
+  if (!record.id.startsWith('vitalproteins-b410-')) return record;
+  const locked = applyT247uRow(record);
+  const counted = locked.inactiveIngredients.filter((ingredient) => ingredientCountsTowardLimitedStack(ingredient));
+  if (counted.length >= 3) {
+    return {
+      ...locked,
+      verdict: 'avoid',
+      honestNote: T248U_STACK_NOTE,
+      founderHonestNote: T248U_STACK_NOTE,
+    };
+  }
+  const next: RatingRecord = { ...locked };
+  if (next.honestNote === T248U_STACK_NOTE) delete next.honestNote;
+  if (next.founderHonestNote === T248U_STACK_NOTE) delete next.founderHonestNote;
+  return next;
+}
