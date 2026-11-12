@@ -1,5 +1,5 @@
 // DRAFT / not verified / batch 417 KYR6-e (t256u).
-// Joint Remedy softgels are Clean. The glycerin softgel string uses the existing glycerine lock.
+// Joint Remedy softgels are Caution. Caramel color and the sorbitol solution each count.
 // Organic hempseed oil and organic Styrian pumpkin seed oil are Caution only as a softgel fill.
 // No honest note is stored.
 
@@ -34,14 +34,18 @@ export const BATCH417_KYR6E_T256U: RatingRecord[] = [
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
       flag('Fish Oil (Anchovy, Menhaden)', 'cleared', false, 'Fish oil from anchovy and menhaden. It is used as a fill or carrier. Fish oil is graded Cleared as a named oil fill.', 't254u'),
-      flag('Softgel (Caramel color, Gelatin, Glycerin, Sorbitol Sorbitan solution, Water)', 'cleared', false, 'Softgel made from gelatin, glycerine, sorbitol sorbitan solution, and water, with caramel color. It forms the softgel that holds the ingredients.', 't252u'),
+      flag('Caramel color', 'limited', true, 'Caramel color. It is used to color the product. Caramel color is graded Limited as a processed color (EFSA 2011 re-evaluation of caramel colours).', 't251u'),
+      flag('Gelatin', 'cleared', false, '', 't240u'),
+      flag('Glycerin', 'cleared', false, '', 't240u'),
+      flag('Sorbitol Sorbitan solution', 'limited', true, 'Sorbitol sorbitan solution. It is used as a plasticizer in the softgel. Sorbitol is graded Limited as a sugar alcohol (FDA 21 CFR 184.1835).', 't259u'),
+      flag('Water', 'cleared', false, '', 't240u'),
       flag('Hyaluronic Acid', 'cleared', false, 'Hyaluronic acid. It is added for its moisture-retaining compounds.', 't252u'),
       flag('Beeswax', 'cleared', false, 'Beeswax is a natural wax used as a coating or softgel plasticizer.', 't240u'),
       flag('Sunflower Lecithin', 'cleared', false, 'Lecithin is a phospholipid used as an emulsifier so oils and water stay mixed. Sunflower lecithin is the sunflower form.', 't121u'),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      "t256u. NIH DSLD label 69568 is the other-ingredient panel. The brand site does not print an Other Ingredients line. Barlean's Joint Remedy. 30 Softgel(s). Label barcode 705875060035. The check digit passes. Counted Limited tokens: none. Softgel (Caramel color, Gelatin, Glycerin, Sorbitol Sorbitan solution, Water) uses the existing glycerine lock.",
+      "t261u. NIH DSLD label 69568 is the other-ingredient panel. The brand site does not print an Other Ingredients line. Barlean's Joint Remedy. 30 Softgel(s). Label barcode 705875060035. The check digit passes. Counted Limited tokens: Caramel color; Sorbitol Sorbitan solution. The softgel string is graded as its listed ingredients. No honest note.",
     ],
   },
 ];
