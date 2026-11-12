@@ -21202,7 +21202,7 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
           : follow.kind === 'write'
             ? { ...base, honestNote: follow.note, founderHonestNote: follow.note }
             : base;
-  const honestNote = record.id === 'pf-b400-vitamin-c-chewable'
+  const honestNote = record.id === 'pf-b400-vitamin-c-chewable' || record.id === 'pf-b402-alka-calm'
     ? T228U_VITAMIN_C_NOTE
     : clearGol
     ? ''
@@ -21229,7 +21229,7 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
   return {
     ...merged,
     honestNote,
-    ...(record.id === 'pf-b400-vitamin-c-chewable' ? { founderHonestNote: T228U_VITAMIN_C_NOTE } : {}),
+    ...(record.id === 'pf-b400-vitamin-c-chewable' || record.id === 'pf-b402-alka-calm' ? { founderHonestNote: T228U_VITAMIN_C_NOTE } : {}),
     ...(productImage ? { productImage } : {}),
   };
 }

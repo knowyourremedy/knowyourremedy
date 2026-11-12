@@ -95,7 +95,7 @@ export function applyT228uRow(record: RatingRecord): RatingRecord {
       : record.verdict;
     next = { ...record, inactiveIngredients, verdict };
   }
-  if (next.id === 'pf-b400-vitamin-c-chewable') {
+  if (next.id === 'pf-b400-vitamin-c-chewable' || next.id === 'pf-b402-alka-calm') {
     if (next.honestNote === T228U_VITAMIN_C_NOTE && next.founderHonestNote === T228U_VITAMIN_C_NOTE) return next;
     return { ...next, honestNote: T228U_VITAMIN_C_NOTE, founderHonestNote: T228U_VITAMIN_C_NOTE };
   }

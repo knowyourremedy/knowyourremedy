@@ -101,8 +101,10 @@ export const BATCH402_KYR6E_T228U: RatingRecord[] = [
       flag('Professional Formulas Alka Calm brand page. 8 oz.', 'fibersol (maltodextrin)', 'limited', true),
     ],
     verdict: 'avoid',
+    honestNote: 'This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.',
+    founderHonestNote: 'This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.',
     sourcesGeneral: [
-      't228u. https://professionalformulas.com/product/alka-calm/ is in stock at $24. Product code MALKA. 8 oz (226 g). Other ingredients: Citric acid, lemon fruit juice powder, malic acid, tartaric acid, natural flavors (raspberry, lemon, and key lime), silicon dioxide, raspberry fruit juice powder, aspartic acid, stevia leaf extract, and fibersol (maltodextrin). Actives are not graded. Counted Limited: aspartic acid; stevia leaf extract; fibersol (maltodextrin). That is three, so this is Avoid. No honest note is stored. No UPC was printed. Missing UPC.',
+      't228u. https://professionalformulas.com/product/alka-calm/ is in stock at $24. Product code MALKA. 8 oz (226 g). Other ingredients: Citric acid, lemon fruit juice powder, malic acid, tartaric acid, natural flavors (raspberry, lemon, and key lime), silicon dioxide, raspberry fruit juice powder, aspartic acid, stevia leaf extract, and fibersol (maltodextrin). Actives are not graded. Counted Limited: aspartic acid; stevia leaf extract; fibersol (maltodextrin). That is three, so this is Avoid. No UPC was printed. Missing UPC. t231u stored the 3+ Limited honest note.',
     ],
   },
   {
