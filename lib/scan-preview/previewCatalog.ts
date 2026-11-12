@@ -508,7 +508,7 @@ import { applyT253uRow } from '@/lib/scan-preview/t253uLocks';
 import { applyT254uRow } from '@/lib/scan-preview/t254uLocks';
 import { applyT255uRow } from '@/lib/scan-preview/t255uLocks';
 import { applyT256uRow } from '@/lib/scan-preview/t256uLocks';
-import { applyT259uRow } from '@/lib/scan-preview/t259uLocks';
+import { applyT259uRow, t259uLock } from '@/lib/scan-preview/t259uLocks';
 import { applyT260uRow } from '@/lib/scan-preview/t260uLocks';
 import { computeVerdictFromInactiveIngredients } from '@/lib/scan-preview/verdictFromFlags';
 import { t190uDecision } from '@/lib/scan-preview/t190uHonestNotes';
@@ -21143,7 +21143,27 @@ function withPreviewHonestNote(record: RatingRecord): RatingRecord {
     return applyT259uRow(record);
   }
   if (record.id.startsWith('barleans-b417-')) {
-    return applyT256uRow(record);
+    const next = applyT256uRow(record);
+    const sorbitol = t259uLock('Sorbitol Sorbitan solution');
+    if (!sorbitol) return next;
+    const inactiveIngredients = next.inactiveIngredients.map((ingredient) => {
+      if (ingredient.name !== 'Sorbitol Sorbitan solution') return ingredient;
+      return {
+        ...ingredient,
+        riskLevel: sorbitol.grade,
+        stackCountExempt: !sorbitol.counts,
+        why: sorbitol.why,
+        source: `${ingredient.source ?? 'Panel'}; Methodology §5 Limited (founder lock t259u). Counts toward the 3+ Limited stack.`,
+      };
+    });
+    const patched = {
+      ...next,
+      inactiveIngredients,
+      verdict: computeVerdictFromInactiveIngredients(inactiveIngredients, next.activeSafetyFlag).verdict,
+    };
+    delete patched.honestNote;
+    delete patched.founderHonestNote;
+    return patched;
   }
   if (record.id.startsWith('barleans-b416-')) {
     return applyT255uRow(record);
