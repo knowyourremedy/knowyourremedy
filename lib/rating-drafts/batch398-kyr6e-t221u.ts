@@ -60,11 +60,11 @@ export const BATCH398_KYR6E_T221U: RatingRecord[] = [
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
       flag('t221u founder-supplied other ingredients. CellCore IS-BORR 4 fl oz.', 'Purified Water', 'cleared', false),
-      flag('t221u founder-supplied other ingredients. CellCore IS-BORR 4 fl oz.', 'Organic Cane Alcohol', 'cleared', false),
+      flag('t221u founder-supplied other ingredients. CellCore IS-BORR 4 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't221u. Founder-supplied other ingredients: Purified Water, Organic Cane Alcohol. https://cellcore.com/products/is-borr is for sale. 4 fl oz. SKU CC-BORRX-4OZ-BTL-02. Brand variant barcode 810131152109. The check digit passes. Actives are not graded. Organic Cane Alcohol is the Cleared t138e lock.',
+      't221u. Founder-supplied other ingredients: Purified Water, Organic Cane Alcohol. https://cellcore.com/products/is-borr is for sale. 4 fl oz. SKU CC-BORRX-4OZ-BTL-02. Brand variant barcode 810131152109. The check digit passes. Actives are not graded. t222u regraded Organic Cane Alcohol to Limited. It counts, so this row is Caution.',
     ],
   },
   {
@@ -85,9 +85,9 @@ export const BATCH398_KYR6E_T221U: RatingRecord[] = [
       flag('t221u founder-supplied other ingredients. CellCore ME Support 2 fl oz.', 'Vegetable Glycerin', 'cleared', false),
       flag('t221u founder-supplied other ingredients. CellCore ME Support 2 fl oz.', 'Distilled Water', 'cleared', false),
     ],
-    verdict: 'clean',
+    verdict: 'caution',
     sourcesGeneral: [
-      't221u. Founder-supplied other ingredients: Vegetable Glycerin, Distilled Water. https://cellcore.com/products/me-support is for sale. 2 fl oz. SKU CC-MESUP-2OZ-BTL-01. Brand variant barcode 810131152031. The check digit passes. Actives are not graded. Vegetable glycerin is the Sept 14 Cleared lock. Distilled Water is the t99u Cleared lock.',
+      't221u. Founder-supplied other ingredients: Vegetable Glycerin, Distilled Water. https://cellcore.com/products/me-support is for sale. 2 fl oz. SKU CC-MESUP-2OZ-BTL-01. Brand variant barcode 810131152031. The check digit passes. Actives are not graded. Vegetable glycerin is the Sept 14 Cleared lock. Distilled Water is the t99u Cleared lock. t222u founder regrade: Caution.',
     ],
   },
   {

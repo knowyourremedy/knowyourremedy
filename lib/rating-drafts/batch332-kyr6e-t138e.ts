@@ -405,7 +405,12 @@ for (const record of ROWS) {
     if (/is on the Cleared list|is on the Limited list|has its own line|That is why it is Usable/i.test(why)) {
       throw new Error(`batch332 generic ${record.id} ${ingredient.name}: ${why}`);
     }
-    if (!/t138e|t112u|t106u|t130u|citric acid|juice|Honey|water|Glycerin|gum|European review|2018 European review/i.test(why)) {
+    const organicCane = ingredient.name.trim().toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() === 'organic cane alcohol';
+    if (organicCane) {
+      if (why !== 'Organic cane alcohol. It is the liquid that extracts and carries the plant ingredients. The panel does not print the strength, so the exact concentration is not shown. Alcohol used as a vehicle is graded Limited when the strength is not printed (PROJECT_NOTES alcohol-with-strength rule).') {
+        throw new Error(`batch332 cane why ${record.id}: ${why}`);
+      }
+    } else if (!/t138e|t112u|t106u|t130u|citric acid|juice|Honey|water|Glycerin|gum|European review|2018 European review/i.test(why)) {
       throw new Error(`batch332 why ${record.id} ${ingredient.name}: ${why}`);
     }
   }
