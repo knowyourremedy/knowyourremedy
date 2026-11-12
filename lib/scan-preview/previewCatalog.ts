@@ -412,6 +412,7 @@ import {
   BATCH410_KYR6E_T248U,
   BATCH411_KYR6E_T250U,
   BATCH412_KYR6E_T251U,
+  BATCH413_KYR6E_T252U,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -496,6 +497,7 @@ import { applyT243uRow } from '@/lib/scan-preview/t243uLocks';
 import { applyT247uRow, applyT248uRow } from '@/lib/scan-preview/t247uLocks';
 import { applyT250uRow } from '@/lib/scan-preview/t250uLocks';
 import { applyT251uRow } from '@/lib/scan-preview/t251uLocks';
+import { applyT252uRow } from '@/lib/scan-preview/t252uLocks';
 import { computeVerdictFromInactiveIngredients } from '@/lib/scan-preview/verdictFromFlags';
 import { t190uDecision } from '@/lib/scan-preview/t190uHonestNotes';
 import { t192uDecision } from '@/lib/scan-preview/t192uHonestNotes';
@@ -938,7 +940,8 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH410_KYR6E_T248U,
   ...BATCH411_KYR6E_T250U,
   ...BATCH412_KYR6E_T251U,
-]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow).map(applyT165uRow).map(applyT166uRow).map(applyT167uRow).map(applyT169uRow).map(applyT170uRow).map(applyT171uRow).map(applyT172uTokenWhy).map(applyT174uTokenWhy).map(applyT177uTokenWhy).map(applyT178uTokenWhy).map(applyT179uTokenWhy).map(applyT180uTokenWhy).map(applyT181uTokenWhy).map(applyT182uTokenWhy).map(applyT183uTokenWhy).map(applyT184uTokenWhy).map(applyT185uTokenWhy).map(applyT186uTokenWhy).map(applyT205uTokenWhy).map(applyT207uTokenWhy).map(applyT211uTokenWhy).map(applyT212uHonestNotes).map(applyT215uTokenWhy).map(applyT220uTokenWhy).map(applyT222uTokenWhy).map(applyT225uTokenWhy).map(applyT228uRow).map(applyT240uRow).map(applyT242uRow).map(applyT243uRow).map(applyT247uRow).map(applyT248uRow).map(applyT250uRow).map(applyT251uRow);
+  ...BATCH413_KYR6E_T252U,
+]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow).map(applyT165uRow).map(applyT166uRow).map(applyT167uRow).map(applyT169uRow).map(applyT170uRow).map(applyT171uRow).map(applyT172uTokenWhy).map(applyT174uTokenWhy).map(applyT177uTokenWhy).map(applyT178uTokenWhy).map(applyT179uTokenWhy).map(applyT180uTokenWhy).map(applyT181uTokenWhy).map(applyT182uTokenWhy).map(applyT183uTokenWhy).map(applyT184uTokenWhy).map(applyT185uTokenWhy).map(applyT186uTokenWhy).map(applyT205uTokenWhy).map(applyT207uTokenWhy).map(applyT211uTokenWhy).map(applyT212uHonestNotes).map(applyT215uTokenWhy).map(applyT220uTokenWhy).map(applyT222uTokenWhy).map(applyT225uTokenWhy).map(applyT228uRow).map(applyT240uRow).map(applyT242uRow).map(applyT243uRow).map(applyT247uRow).map(applyT248uRow).map(applyT250uRow).map(applyT251uRow).map(applyT252uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
 // night-photo queues use the filtered list so parked Pedialyte rows
@@ -21115,6 +21118,9 @@ export function applyOverlayIngredientLocks(
 }
 
 function withPreviewHonestNote(record: RatingRecord): RatingRecord {
+  if (record.id.startsWith('barleans-b413-')) {
+    return applyT252uRow(record);
+  }
   if (record.id.startsWith('barleans-b412-')) {
     return applyT251uRow(record);
   }
