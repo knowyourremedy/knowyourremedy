@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t227u (Nov 12, 2026). **A printed percentage or ratio in parentheses is the same token when the core words are identical.** The Sprouts section was not edited. US only. No new lock. `anise (2%)` uses the anise lock. `anise seed extract (1%)` uses the anise seed extract lock. **Written:** `pf-b401-liquid-pregnenolone-2` Clean, missing UPC. Liquid DHEA stays held. The unlocked string is herbal flavoring mixture containing extracts of licorice. Professional Formulas stays open. No other row changed.
 - t226u (Nov 12, 2026). **Token matching preference recorded.** The Sprouts section was not edited. US only. No row was written. No grade was changed. No lock was changed. No brand was closed or reopened. Professional Formulas stays open with its current holds. The preference is under Standing preference — Token matching.
 - t225u (Nov 12, 2026). **Professional Formulas locks, then the held packs.** The Sprouts section was not edited. US only. Strength-printed ethanol, grain alcohol, cane alcohol, and vegetable glycerin on those panels are Cleared and do not stack. The named rice, stearate, capsule, starch, fruit, herb, and oil prints on the founder list are Cleared. Vegetable medium chain triglycerides, fibersol (maltodextrin), and organic rice extract are Limited and they count. Highly refined soybean oil, safflower oil, bamboo silica, polyglycitol syrup, sorbitol powder, the two natural-flavor prints, herbal flavoring mixture, and potassium sorbate are Caution and do not stack. Potassium sorbate was not regraded outside this brand. **batch400** — 1326 packs in `lib/rating-drafts/batch400-kyr6e-t225u.ts` (1175 Clean / 150 Caution / 1 Avoid). All missing UPC. The four batch399 rows were not repeated. No honest note stored. 27 products stay held with no panel. Ten strings stay unlocked. The brand stays open.
 - t224u (Nov 12, 2026). **Professional Formulas scan started.** The Sprouts section was not edited. US only. The brand was not on the Closed brands list. **batch399** — 4 packs in `lib/rating-drafts/batch399-kyr6e-t224u.ts` (4 Clean / 0 Caution / 0 Avoid). No honest note. All missing UPC. Test kits and empty vials are not rows. The brand stays open. Holds remain, including 20% ethanol, Grain alcohol (40-45%), vegetable medium chain triglycerides, and organic brown rice.
@@ -1184,6 +1185,8 @@ Standing preference for token matching: treat strings as the same token when the
 Only a different spelling, an added word, or a missing word creates a new string.
 
 Apply this going forward. Do not re-open already closed brands for this change.
+
+A printed percentage or ratio in parentheses counts as the same token when the core words are identical. “anise (2%)” is the same as “anise”. “anise seed extract (1%)” is the same as “anise seed extract”. Apply this going forward.
 
 Two-source rule
 See the standing section When writing rows. The text below stays.
