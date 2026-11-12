@@ -15,6 +15,7 @@ import {
 const UNVERIFIED = 'unverified' as const;
 
 const T138 = 'Methodology §5 Cleared (founder lock t138e). Does not count toward the t137u stack.';
+const T222 = 'Methodology §5 Limited (founder lock t222u). Bare Organic Cane Alcohol counts toward the t137u stack. The panel does not print the strength.';
 const ADHESIVE = 'Methodology §5 Cleared (Adhesive — t112u). Does not count toward the t137u stack.';
 const CITRIC = 'Methodology §5 Cleared (citric acid).';
 const JUICE = 'Methodology §5 Cleared (fruit and vegetable juice, puree, concentrate, and powder).';
@@ -298,7 +299,7 @@ export const BATCH332_KYR6E_T138E: RatingRecord[] = [
     panel: 'Wooden Spoon Herbs brand facts image. Dandelion Digestive Bitters.',
     ings: [
       ['Purified Water', 'cleared', WATER],
-      ['Organic Cane Alcohol', 'cleared', T138],
+      ['Organic Cane Alcohol', 'limited', T222],
     ],
     actives: [{ name: 'Proprietary Blend' }],
     url: 'https://woodenspoonherbs.com/products/dandelion-digestive-bitters',
@@ -374,7 +375,7 @@ export const BATCH332_KYR6E_T138E: RatingRecord[] = [
 
 const ROWS = BATCH332_KYR6E_T138E;
 const NOTES = new Set(['woodenspoon-b332-immune-toddy-10', 'woodenspoon-b332-mag-jar-30']);
-const CAUTION = new Set(NOTES);
+const CAUTION = new Set([...NOTES, 'woodenspoon-b332-dandelion-bitters']);
 const UPCS = new Set(['goodpatch-b332-active-4', 'goodpatch-b332-b12-awake-4', 'goodpatch-b332-nite-nite-4']);
 if (ROWS.length !== 42) throw new Error(`batch332 count ${ROWS.length}`);
 const ids = new Set<string>();
@@ -391,7 +392,13 @@ for (const record of ROWS) {
   }
   const mapped = applyT54uRow(record);
   const counted = mapped.inactiveIngredients.filter((i) => ingredientCountsTowardLimitedStack(i));
-  if (counted.length !== 0) throw new Error(`batch332 stack ${record.id} ${counted.map((i) => i.name).join(',')}`);
+  if (record.id === 'woodenspoon-b332-dandelion-bitters') {
+    if (counted.length !== 1 || counted[0]?.name !== 'Organic Cane Alcohol') {
+      throw new Error(`batch332 stack ${record.id} ${counted.map((i) => i.name).join(',')}`);
+    }
+  } else if (counted.length !== 0) {
+    throw new Error(`batch332 stack ${record.id} ${counted.map((i) => i.name).join(',')}`);
+  }
   if (NOTES.has(record.id)) {
     if (!record.honestNote || !/Organic Lemon Flavor/.test(record.honestNote) || !/t106u/.test(record.honestNote)) {
       throw new Error(`batch332 note ${record.id}`);

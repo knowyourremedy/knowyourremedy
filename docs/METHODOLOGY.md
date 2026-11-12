@@ -4,6 +4,8 @@
 **Scope:** OTC medicines, vitamins, supplements (protein powder in scope but dormant — see PROJECT_NOTES §2)
 **Pending:** attorney review (public "Avoid" labeling + the documented basis behind each high-risk flag)
 
+**Changed Nov 12, 2026 (t223u founder order):** The five stored rows that print bare Organic Cane Alcohol are Caution. The token stays Limited and it counts. ME Support’s other ingredients are Purified Water, Organic Cane Alcohol, and that row stays Caution. No other row changed. Wooden Spoon and CellCore stay closed.
+
 **Changed Nov 12, 2026 (t222u founder order):** Bare Organic Cane Alcohol is Limited and it counts. It is not Organic Cane Alcohol (45-55% by volume), which stays Cleared. It is not Certified Organic cane alcohol with a printed strength, which stays Cleared. Why: Organic cane alcohol. It is the liquid that extracts and carries the plant ingredients. The panel does not print the strength, so the exact concentration is not shown. Alcohol used as a vehicle is graded Limited when the strength is not printed (PROJECT_NOTES alcohol-with-strength rule).
 
 **Changed Nov 11, 2026 (t220u founder order):** Exact strings. **Cleared, do not stack:** Vegetable Cellulose (Capsule); L-Leucine Complex; L- Leucine Complex; Beta-Carotene (color); Crystallized Orange Flavor (citric acid, orange fruit juice, orange peel oil); Organic Fermented Dextrose (to preserve freshness); Organic Gum Blend (Gum Arabic, Tapioca, Guar Gum). **Limited, and they count:** Stevia Leaf Extract; Steviol Glycosides (Rebaudioside M). L- Leucine Complex keeps the space after the hyphen. Beta-Carotene (color) is not bare beta carotene. Steviol Glycosides (Rebaudioside M) is not bare rebaudioside m. No honest note on these locks.

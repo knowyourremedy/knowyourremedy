@@ -82,12 +82,12 @@ export const BATCH398_KYR6E_T221U: RatingRecord[] = [
     barcode: '810131152031',
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
-      flag('t221u founder-supplied other ingredients. CellCore ME Support 2 fl oz.', 'Vegetable Glycerin', 'cleared', false),
-      flag('t221u founder-supplied other ingredients. CellCore ME Support 2 fl oz.', 'Distilled Water', 'cleared', false),
+      flag('t223u founder-corrected other ingredients. CellCore ME Support 2 fl oz.', 'Purified Water', 'cleared', false),
+      flag('t223u founder-corrected other ingredients. CellCore ME Support 2 fl oz.', 'Organic Cane Alcohol', 'limited', true),
     ],
     verdict: 'caution',
     sourcesGeneral: [
-      't221u. Founder-supplied other ingredients: Vegetable Glycerin, Distilled Water. https://cellcore.com/products/me-support is for sale. 2 fl oz. SKU CC-MESUP-2OZ-BTL-01. Brand variant barcode 810131152031. The check digit passes. Actives are not graded. Vegetable glycerin is the Sept 14 Cleared lock. Distilled Water is the t99u Cleared lock. t222u founder regrade: Caution.',
+      't223u. Founder corrected the other ingredients to Purified Water, Organic Cane Alcohol. https://cellcore.com/products/me-support is for sale. 2 fl oz. SKU CC-MESUP-2OZ-BTL-01. Brand variant barcode 810131152031. The check digit passes. Actives are not graded. Organic Cane Alcohol is Limited and counts, so this row stays Caution.',
     ],
   },
   {
