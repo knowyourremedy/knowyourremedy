@@ -409,41 +409,4 @@ export const BATCH413_KYR6E_T252U: RatingRecord[] = [
       "t252u. NIH DSLD label 216070 is the other-ingredient panel. The brand site does not print an Other Ingredients line. Barlean's Ideal CBD Hemp Oil Natural Mint. 1.5 Fluid Ounce(s); 45 mL. Label barcode 705875801164. The check digit passes. Counted Limited tokens: Full Spectrum Hemp Extract.",
     ],
   },
-  {
-    id: "barleans-b413-omega-3-lemon-creme-8-ounce-s",
-    productName: "Omega-3 Lemon Creme 8 Ounce(s)",
-    brand: "Barlean's",
-    category: 'Vitamins',
-    formulaId: "barleans-b413-omega-3-lemon-creme-8-ounce-s",
-    form: "liquid",
-    audience: 'adult',
-    minAge: 18,
-    recordStatus: UNVERIFIED,
-    productType: SUPPLEMENT,
-    retailers: ["Barlean's"],
-    barcode: "705875600088",
-    activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
-    inactiveIngredients: [
-      flag("Water", 'cleared', false),
-      flag("Fish Oil (Anchovy, Mackerel, Sardine)", 'cleared', false, "Fish Oil (Anchovy, Mackerel, Sardine). It is used as a fill or carrier in the softgel or liquid. Fish Oil (Anchovy, Mackerel, Sardine) is graded Cleared as a named oil fill when it is not a seed oil under the Avoid locks."),
-      flag("Xylitol", 'moderate', false, "Xylitol, a sugar alcohol. It is used as a sweetener. Xylitol is graded Caution as a processed sugar alcohol (FDA 21 CFR 172.395; CIR safety assessment of xylitol)."),
-      flag("Glycerin", 'cleared', false),
-      flag("Gum Arabic", 'cleared', false),
-      flag("Natural Flavors", 'limited', true, "Natural flavors. It adds flavor to the product. Natural flavors are graded Limited because the exact sources and processing are not fully specified on the panel (FDA 21 CFR 101.22)."),
-      flag("Citric Acid", 'cleared', false),
-      flag("Xanthan Gum", 'cleared', false),
-      flag("Vitamin E (D-Alpha-Tocopherol)", 'cleared', false, "Vitamin E (D-Alpha-Tocopherol). It is added to help keep the product stable."),
-      flag("Rosemary Extract", 'cleared', false, "Rosemary Extract. It is added for its plant compounds."),
-      flag("Green Tea Extract", 'cleared', false, "Green Tea Extract. It is added for its plant compounds."),
-      flag("Ascorbyl Palmitate", 'cleared', false, "Ascorbyl Palmitate. It is added to help keep the product stable."),
-      flag("Guar Gum", 'cleared', false, "Guar gum, a plant gum. It thickens and stabilizes the liquid."),
-      flag("Turmeric", 'cleared', false, "Turmeric. It is added for its plant compounds."),
-      flag("Sorbic Acid", 'limited', true, "Sorbic Acid. It is added to adjust acidity or as a preservative. Sorbic Acid is graded Limited as a processed acid or salt (FDA GRAS listings for purified acids and salts).")
-    ],
-    verdict: 'caution',
-    
-    sourcesGeneral: [
-      "t252u. NIH DSLD label 314174 is the other-ingredient panel. The brand site does not print an Other Ingredients line. Barlean's Omega-3 Lemon Creme. 8 Ounce(s); 227 Gram(s). Label barcode 705875600088. The check digit passes. Counted Limited tokens: Natural Flavors; Sorbic Acid.",
-    ],
-  }
 ];
