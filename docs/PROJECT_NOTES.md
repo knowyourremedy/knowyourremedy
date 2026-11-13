@@ -6,6 +6,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t266u (Nov 13, 2026). **Slow-Mag scan started.** The Sprouts section was not edited. US only. The brand was not on the Closed brands list. **batch421** — 1 pack in `lib/rating-drafts/batch421-kyr6e-t266u.ts` (0 Clean / 1 Caution / 0 Avoid). No honest note. Muscle Health + Recovery gummies, 60 count, Caution, UPC 367618117606. Muscle + Heart tablets, 60, 120, and 180 count, stay held. The brand stays open.
 - t265u (Nov 13, 2026). **Lipo-Flavonoid closed.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t265uLocks.ts` and apply on `lipoflavonoid-b420-` rows only. Other brands keep their stored grades. **batch420** — 5 packs in `lib/rating-drafts/batch420-kyr6e-t265u.ts` (0 Clean / 0 Caution / 5 Avoid). No honest note. Ear pain drops and the earwax kit and aid are out of scope. The brand close is recorded under Closed brands.
 - t260u (Nov 12, 2026). **Barlean's closed.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t260uLocks.ts` and apply on `barleans-b419-` rows only. Other brands keep their stored grades. Fruit powders are Cleared. Flaxseed oil is Caution when it is a powder fill. **batch419** — 16 packs in `lib/rating-drafts/batch419-kyr6e-t260u.ts` (2 Clean / 1 Caution / 13 Avoid). The thirteen Avoid rows store the exact 3+ note. Conflicting panels were not written. The brand close is recorded under Closed brands.
 - t259u (Nov 12, 2026). **Barlean's individual ingredients, then the opened rows.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t259uLocks.ts` and apply on `barleans-b418-` rows only. Other brands keep their stored grades. Blend strings are graded as their listed ingredients. The older blend-string locks were not changed. **batch418** — 16 packs in `lib/rating-drafts/batch418-kyr6e-t259u.ts` (5 Clean / 10 Caution / 1 Avoid). Joint Relief is Avoid because titanium dioxide is Avoid. No 3+ note was stored. Antioxidant Blend powder and Superfruit Blend stay held: the locks are organic Acai, Acerola, Camu Camu, Blueberry, and Raspberry powders, and the panels add powder or organic. The brand stays open.
@@ -1266,6 +1267,8 @@ See the standing section When writing rows. The text below stays.
 Paused / Future
 
 Essential oil library: paused. Not a priority for launch. Possible post-launch feature. Do not build or expand it in the current work.
+
+Slow-Mag — open. The ladder is not finished. Unlocked-token holds remain. The brand is not closed. US site slowmag.com. Written rows: 1 (0 Clean / 1 Caution / 0 Avoid) in batch421. Muscle Health + Recovery gummies, 60 count, UPC 367618117606. Muscle + Heart tablets are sold in 60, 120, and 180 count and share the 120-count carton panel. No row was written. No UPC was invented. Ear products are not in this line.
 
 Closed brands
 A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
