@@ -1,7 +1,10 @@
 import type { RatingRecord, RiskLevel } from '../ratingRecord';
 import { t240uNorm } from './t240uLocks';
 import { t259uLock } from './t259uLocks';
-import { computeVerdictFromInactiveIngredients } from './verdictFromFlags';
+import { computeVerdictFromInactiveIngredients, ingredientCountsTowardLimitedStack } from './verdictFromFlags';
+
+export const T267U_STACK_NOTE =
+  'This product is Avoid because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is graded Avoid.';
 
 type Lock = { grade: RiskLevel; counts: boolean; why: string };
 
@@ -63,7 +66,18 @@ export function applyT267uRow(record: RatingRecord): RatingRecord {
         inactiveIngredients,
         verdict: computeVerdictFromInactiveIngredients(inactiveIngredients, record.activeSafetyFlag).verdict,
       }
-    : { ...record };
+    : { ...record, inactiveIngredients };
+  const hasAvoidIngredient = next.inactiveIngredients.some((ingredient) => ingredient.riskLevel === 'high');
+  if (hasAvoidIngredient) {
+    const avoided: RatingRecord = { ...next, verdict: 'avoid' };
+    delete avoided.honestNote;
+    delete avoided.founderHonestNote;
+    return avoided;
+  }
+  const counted = next.inactiveIngredients.filter((ingredient) => ingredientCountsTowardLimitedStack(ingredient)).length;
+  if (counted >= 3) {
+    return { ...next, verdict: 'avoid', honestNote: T267U_STACK_NOTE, founderHonestNote: T267U_STACK_NOTE };
+  }
   delete next.honestNote;
   delete next.founderHonestNote;
   return next;
