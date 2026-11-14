@@ -33,10 +33,10 @@ export const BATCH426_KYR6E_T274U: RatingRecord[] = [
     retailers: ['Ocuvite'],
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients: [
-      flag('Soybean oil', 'moderate', false, 'Soybean oil, a seed oil. It is used as a carrier or fill. Soybean oil is graded Caution as a fill and Avoid when it is the base of a chewable (highly processed seed oil; EFSA and FDA treat refined seed oils as distinct from whole-food oils).', 't240u'),
+      flag('Soybean oil', 'moderate', false, 'Soybean oil. It is used as a fill in the softgel. Soybean oil is graded Caution as a fill and Avoid when it is the base of a chewable (highly processed seed oil; EFSA and FDA treat refined seed oils as distinct from whole-food oils).', 't275u'),
       flag('gelatin', 'cleared', false, 'Gelatin is the protein that forms the softgel or gummy shell. It comes from animal collagen and holds the fill.', 't160u'),
       flag('glycerin', 'cleared', false, 'Glycerin is a sweet, syrupy liquid that keeps the product moist and helps other ingredients mix.', 't160u'),
-      flag('sunflower oil', 'cleared', false, 'Sunflower oil is a pressed oil from sunflower seeds. It is used as a carrier or fill in softgels.', 'clean alias'),
+      flag('sunflower oil', 'moderate', false, 'Sunflower oil. It is used as a fill in the softgel. Sunflower oil is graded Caution as a fill and Avoid when it is the base of a chewable (highly processed seed oil; EFSA and FDA treat refined seed oils as distinct from whole-food oils).', 't275u'),
       flag('yellow beeswax', 'cleared', false, 'Yellow beeswax. It is used as a coating and to help the softgel hold its shape.', 't228u'),
       flag('soy lecithin', 'cleared', false, 'Lecithin is an emulsifier. A 2017 European review found no safety concern and set no daily limit. Soy lecithin is a soy allergen disclosure, not a toxicity flag.', 'clean alias'),
       flag('natural tocopherols', 'cleared', false, 'Natural tocopherols. It is added to help keep the product stable.', 't274u'),
