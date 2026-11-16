@@ -433,3 +433,4 @@ export { BATCH433_KYR6E_T285U } from './batch433-kyr6e-t285u';
 export { BATCH434_KYR6E_T287U } from './batch434-kyr6e-t287u';
 export { BATCH435_KYR6E_T288U } from './batch435-kyr6e-t288u';
 export { BATCH436_KYR6E_T289U } from './batch436-kyr6e-t289u';
+export { BATCH437_KYR6E_T291U } from './batch437-kyr6e-t291u';
