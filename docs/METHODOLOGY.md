@@ -16,6 +16,7 @@ Oil form rule
 - Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
 - Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
+- Cold-pressed hemp seed oil, Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
 
 3+ Limited honest note rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
