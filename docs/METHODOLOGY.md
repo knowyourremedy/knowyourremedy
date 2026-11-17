@@ -25,6 +25,9 @@ Oil form rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
 If the product already contains one or more ingredients that are graded Avoid, do not write the note.
 
+No holds for imprecise why strings (t326u)
+A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
+
 Alcohol-with-strength rule
 Printed strength = Cleared vehicle.
 Bare alcohol (no strength printed) = Limited and counts.
