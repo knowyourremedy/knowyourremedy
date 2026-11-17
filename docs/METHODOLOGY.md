@@ -12,11 +12,12 @@ After any rule change or new lock that affects standing rules, update both docs/
 These are the current rules. Dated changelog entries below stay as history. A sentence in those entries that says “Exact string only,” “No extra variants,” “fill stays Cleared,” “gummy seed-oil only,” or that locks a blend string as one token is superseded for new lookups. Do not apply that sentence to a new lookup. Stored locks were not changed in t310u.
 
 Oil form rule
-- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product).
+- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product), except cold-pressed hemp seed oil.
 - Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
 - Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
+- Cold-pressed hemp seed oil is Limited and counts when it is the base of a liquid, and Caution when it is only a fill (t322u).
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
-- Cold-pressed hemp seed oil, Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
+- Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
 
 3+ Limited honest note rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
