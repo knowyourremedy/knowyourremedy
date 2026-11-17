@@ -455,3 +455,4 @@ export { BATCH456_KYR6E_T323U } from './batch456-kyr6e-t323u';
 export { BATCH457_KYR6E_T324U } from './batch457-kyr6e-t324u';
 export { BATCH458_KYR6E_T325U } from './batch458-kyr6e-t325u';
 export { BATCH459_KYR6E_T326U } from './batch459-kyr6e-t326u';
+export { BATCH460_KYR6E_T327U } from './batch460-kyr6e-t327u';

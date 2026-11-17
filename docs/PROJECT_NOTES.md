@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t327u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. The token-matching preference now treats ratios, percentages, source parentheticals, and brand prefixes as the same token. **batch460** — 3 packs in `lib/rating-drafts/batch460-kyr6e-t327u.ts` (0 Clean / 1 Caution / 2 Avoid). Stress-Defy Detox v2 Gummies is Caution. Daily-Multi Testosterone UP Booster for Men is Avoid from titanium dioxide, no note. Maca Root and Ashwagandha carries the 3+ Limited note. No UPC. Previously written Irwin rows were not changed. The brand is not closed.
 - t326u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. A fully locked panel is written even when a stored why reads imprecise for that product. The mismatch is flagged and the stored why is kept. The locks are in `lib/scan-preview/t326uLocks.ts`. CoQ10, Citrus grandis, Fenugreek extract, Fenugreek extract (8:1), InnovaTea Caffeine 98%, Saw Palmetto Oil, Belleric Myrobalan powder, Cococin Coconut Water powder, Damiana extract (4:1), Epimedium extract, Holy Basil extract, Lemon Balm extract (10:1), Passionflower extract (4:1), and L-Tyrosine are Cleared and do not stack. **batch459** — 4 packs in `lib/rating-drafts/batch459-kyr6e-t326u.ts` (0 Clean / 0 Caution / 4 Avoid). Electro-Fire, Maca Root + Ashwagandha Gummies, and Next Level Steel Libido V2 carry the 3+ Limited note. Triple-Source Magnesium + Ashwagandha is Avoid from titanium dioxide and has no note. No UPC. `irwin-b456-mega-b-complex`, `irwin-b457-green-tea-fat-metabolizer`, and batch458 were not changed. The brand is not closed.
 - t325u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t325uLocks.ts`. Pumpkin Seed Oil uses the Pumpkin Oil (seed) fill lock. Ashwagandha extract (4:1) and (5:1), Milk Thistle extract (25:1), Organic Beet powder, and Black Maca powder use existing Cleared locks. New Cleared strings do not stack. Evening Primrose Oil is Caution and does not stack when it is only a softgel fill. A base use is not graded. **batch458** — 2 packs in `lib/rating-drafts/batch458-kyr6e-t325u.ts` (0 Clean / 1 Caution / 1 Avoid). Magnesium + Beets & CoQ10 is Avoid from titanium dioxide. CoQ10 RED is Caution. Annatto does not count toward the 3+ stack. No honest note. No UPC. `irwin-b456-mega-b-complex` and `irwin-b457-green-tea-fat-metabolizer` were not changed. The brand is not closed.
 - t324u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t324uLocks.ts`. Pumpkin Oil (seed) is Caution and does not stack when it is only a softgel fill. A base use is not graded. Turmeric extract, Maca powder, Beet powder, Milk Thistle extract, Ashwagandha extract, Spirulina powder, Manganese, Copper, Molybdenum, and Caffeine are Cleared and do not stack. **batch457** — 1 pack in `lib/rating-drafts/batch457-kyr6e-t324u.ts` (0 Clean / 1 Caution / 0 Avoid). Green Tea Fat Metabolizer is Caution. No honest note. No UPC. `irwin-b456-mega-b-complex` was not changed. The brand is not closed.
@@ -1257,7 +1258,7 @@ Standing process — Ladder + token collection:
 
 This is the default process for every ladder pass. Do not change other standing rules.
 
-Standing rules (t310u, Nov 17, 2026). These sections are the current rules. Dated done bullets and older token lists in this file stay as history. Where an older sentence calls a seed-oil or processed-oil fill Cleared, quotes a “Not Clean” 3+ note, locks every alcohol vehicle as Limited with no strength split, locks a blend string as one token, or says a ratio in parentheses is always the same token, that sentence is superseded for new lookups. Do not re-open already closed brands for this change.
+Standing rules (t310u, Nov 17, 2026). These sections are the current rules. Dated done bullets and older token lists in this file stay as history. Where an older sentence calls a seed-oil or processed-oil fill Cleared, quotes a “Not Clean” 3+ note, locks every alcohol vehicle as Limited with no strength split, or locks a blend string as one token, that sentence is superseded for new lookups. Do not re-open already closed brands for this change.
 
 Oil form rule
 - Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product), except cold-pressed hemp seed oil, Pumpkin Oil (seed), and Evening Primrose Oil.
@@ -1287,13 +1288,19 @@ Standing rule: do not lock or treat blend strings as single tokens. When a panel
 
 Stored blend locks that still treat a blend string as one token, not changed, needing manual review: Organic Gum Blend (Gum Arabic, Tapioca, Guar Gum); Quik-Sorb® Blend (Ginger Root Powder, Amla Fruit Extract, Cayenne Fruit Powder); Phospholipid complex from Pea, Sunflower, Grape Seed.
 
-Token-matching preference
-Same words = same token. Capitalization, hyphens, spacing, punctuation, role-only parentheticals, percentages in parentheses, Latin names, brand names, "and" vs "&", and minor word order do not create a new string. Only a different spelling or an added or missing word does.
+Token-matching preference (expanded)
+Same core words = same token.
+The bot must apply an existing lock when the only differences are:
+- capitalization, hyphens, spacing, or punctuation
+- role-only or source parentheticals such as (root), (leaf), (fruit), (seed), (color)
+- standardization ratios or percentages in parentheses such as (4:1), (10:1), (50% EGCG), (95% piperine)
+- brand names or proprietary marks in parentheses or as prefixes such as KSM-66®, Holixer, Sensoril, Testosurge
+- minor word order that does not add or remove a distinct ingredient
+Do not create a new token for these variants. Apply the existing lock.
+Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
 
 Why-string source requirement
 Every Caution, Limited, or Avoid why string must include an external source (EFSA, FDA, IARC, etc.).
-
-The older sentence that a printed ratio such as “(4:1)” is always the same token is superseded. A percentage in parentheses is the same token. A ratio, a dose, or an added word such as “Powder” or “Buffered” is not, unless the words that remain are the same.
 
 Two-source rule
 See the standing section When writing rows. The text below stays.
