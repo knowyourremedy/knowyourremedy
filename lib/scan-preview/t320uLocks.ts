@@ -35,8 +35,8 @@ const LOCKS: Array<[string, Lock]> = [
   ['Polyglycitol syrup', { grade: 'limited', counts: true, why: sweetWhy('Polyglycitol syrup') }],
   ['sucrose', { grade: 'limited', counts: true, why: sweetWhy('sucrose') }],
   ['stevia', { grade: 'limited', counts: true, why: sweetWhy('stevia') }],
-  ['tapioca fiber', { grade: 'limited', counts: true, why: sweetWhy('tapioca fiber') }],
-  ['citrus fiber (coating)', { grade: 'limited', counts: true, why: sweetWhy('citrus fiber (coating)') }],
+  ['tapioca fiber', { grade: 'limited', counts: true, why: 'Tapioca fiber (or citrus fiber) is a plant fiber. It is used as a binder or coating. Plant fibers are graded Limited when used as a processed coating or binder (EFSA and FDA treat refined plant fibers as processed ingredients).' }],
+  ['citrus fiber (coating)', { grade: 'limited', counts: true, why: 'Tapioca fiber (or citrus fiber) is a plant fiber. It is used as a binder or coating. Plant fibers are graded Limited when used as a processed coating or binder (EFSA and FDA treat refined plant fibers as processed ingredients).' }],
 ];
 
 const FILL_OILS = new Set(LOCKS.filter(([, lock]) => lock.grade === 'moderate').map(([name]) => t240uNorm(name)));
