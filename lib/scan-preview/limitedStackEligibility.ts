@@ -1659,6 +1659,9 @@ export function isT171uLimitedName(name: string): boolean {
 
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t314u/i.test(ingredient.source ?? '')) {
+    return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+  }
   if (/founder lock t312u/i.test(ingredient.source ?? '')) {
     return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   }
