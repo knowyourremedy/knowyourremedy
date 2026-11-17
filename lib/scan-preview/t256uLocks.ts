@@ -12,6 +12,7 @@ import { t243uLock } from './t243uLocks';
 import { t247uLock } from './t247uLocks';
 import { t250uLock } from './t250uLocks';
 import { t300uLock } from './t300uLocks';
+import { t301uLock } from './t301uLocks';
 import { t251uLock } from './t251uLocks';
 import { t252uLock } from './t252uLocks';
 import { t253uLock } from './t253uLocks';
@@ -77,6 +78,7 @@ export function t256uLock(name: string, form?: string): Lock | undefined {
 
 function founderLock(name: string, form?: string): { lock: Lock; mark: string } | undefined {
   const chain: Array<[Lock | undefined, string]> = [
+    [t301uLock(name), 't301u'],
     [t300uLock(name), 't300u'],
     [t256uLock(name, form), 't256u'],
     [t255uLock(name, form), 't255u'],
