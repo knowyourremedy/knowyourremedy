@@ -178,7 +178,7 @@ export const BATCH461_KYR6E_T328U: RatingRecord[] = [
 ];
 
 const [testUp, citrulline, power] = BATCH461_KYR6E_T328U;
-if (testUp.verdict !== 'caution' || testUp.honestNote) throw new Error('t328u test up');
+if (testUp.verdict !== 'avoid' || !testUp.honestNote) throw new Error('t328u test up');
 if (citrulline.verdict !== 'caution' || citrulline.honestNote) throw new Error('t328u citrulline');
 if (power.verdict !== 'caution' || power.honestNote) throw new Error('t328u power');
 if (BATCH461_KYR6E_T328U.some((row) => row.barcode)) throw new Error('t328u upc');
