@@ -22,6 +22,7 @@ import { t312uAlias, t312uLock } from './t312uLocks';
 import { t314uAlias, t314uLock } from './t314uLocks';
 import { t315uAlias, t315uLock } from './t315uLocks';
 import { t316uLock } from './t316uLocks';
+import { t317uLock } from './t317uLocks';
 import { t251uLock } from './t251uLocks';
 import { t252uLock } from './t252uLocks';
 import { t253uLock } from './t253uLocks';
@@ -87,6 +88,7 @@ export function t256uLock(name: string, form?: string): Lock | undefined {
 
 function founderLock(name: string, form?: string): { lock: Lock; mark: string } | undefined {
   const chain: Array<[Lock | undefined, string]> = [
+    [t317uLock(name), 't317u'],
     [t316uLock(name), 't316u'],
     [t315uLock(name), 't315u'],
     [t314uLock(name), 't314u'],
