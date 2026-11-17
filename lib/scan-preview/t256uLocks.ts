@@ -19,6 +19,7 @@ import { t307uLock } from './t307uLocks';
 import { t308uLock } from './t308uLocks';
 import { t310uLock, t310uPeel } from './t310uLocks';
 import { t312uAlias, t312uLock } from './t312uLocks';
+import { t314uAlias, t314uLock } from './t314uLocks';
 import { t251uLock } from './t251uLocks';
 import { t252uLock } from './t252uLocks';
 import { t253uLock } from './t253uLocks';
@@ -84,6 +85,7 @@ export function t256uLock(name: string, form?: string): Lock | undefined {
 
 function founderLock(name: string, form?: string): { lock: Lock; mark: string } | undefined {
   const chain: Array<[Lock | undefined, string]> = [
+    [t314uLock(name), 't314u'],
     [t312uLock(name), 't312u'],
     [t310uLock(name), 't310u'],
     [t308uLock(name), 't308u'],
@@ -186,7 +188,10 @@ export function t256uResolve(name: string, form?: string, panel: string[] = []):
     const hit = exactLock(alias, form);
     if (hit) return { ...hit, via: 'variant', from: alias };
   }
-  const founderAlias = t312uAlias(name) || (peeled !== name ? t312uAlias(peeled) : undefined);
+  const founderAlias = t314uAlias(name)
+    || (peeled !== name ? t314uAlias(peeled) : undefined)
+    || t312uAlias(name)
+    || (peeled !== name ? t312uAlias(peeled) : undefined);
   if (founderAlias) {
     const hit = exactLock(founderAlias, form);
     if (hit) return { ...hit, via: 'variant', from: founderAlias };
