@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t313u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. The blend standing rule is in this file and in `docs/METHODOLOGY.md`. No new lock. No new row. Every remaining readable Emerald Labs panel still has an unlocked individual ingredient after the blend is broken into the parts the panel prints. Stored blend locks were not changed. The brand is not closed.
 - t312u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. Six named prints match existing locks. Vitamin D3 has no base lock and stays unlocked. The new locks are in `lib/scan-preview/t312uLocks.ts`. **batch453** — 12 packs in `lib/rating-drafts/batch453-kyr6e-t312u.ts` (12 Clean / 0 Caution / 0 Avoid). No honest note. MSM powders, Melatonin Time Release, and the unread two-column multis stay held. The brand is not closed.
 - t311u (Nov 17, 2026). **Docs only.** Standing rule maintenance is at the top of this file and in the standing rules in `docs/METHODOLOGY.md`. No row or lock code changed. The Sprouts section was not edited.
 - t310u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. Part 1 aligned the standing rules in PROJECT_NOTES and METHODOLOGY. No row or lock from that part. Part 2 matches Latin names, percentages, and brand parentheticals onto existing locks and adds the locks in `lib/scan-preview/t310uLocks.ts`. **batch452** — 14 packs in `lib/rating-drafts/batch452-kyr6e-t310u.ts` (14 Clean / 0 Caution / 0 Avoid). No honest note. No 3+ stack. MSM powders and Melatonin Time Release stay conflicting panels. Two-column multis stay unreadable. The brand is not closed.
@@ -1266,7 +1267,11 @@ Printed strength = Cleared vehicle.
 Bare alcohol (no strength printed) = Limited and counts.
 
 Grade individual ingredients, not blends
-Break blend strings into their listed ingredients and grade each one separately. Do not lock the blend string itself as a single token.
+The shorter t310u sentence is superseded by the standing rule below.
+
+Standing rule: do not lock or treat blend strings as single tokens. When a panel prints a blend, break it into the individual ingredients listed inside it. Report only the individual ingredients that are still unlocked. If every individual ingredient is already locked, grade the product from those locked ingredients and write the row. Do not ask for a lock on the blend string itself.
+
+Stored blend locks that still treat a blend string as one token, not changed, needing manual review: Organic Gum Blend (Gum Arabic, Tapioca, Guar Gum); Quik-Sorb® Blend (Ginger Root Powder, Amla Fruit Extract, Cayenne Fruit Powder); Phospholipid complex from Pea, Sunflower, Grape Seed.
 
 Token-matching preference
 Same words = same token. Capitalization, hyphens, spacing, punctuation, role-only parentheticals, percentages in parentheses, Latin names, brand names, "and" vs "&", and minor word order do not create a new string. Only a different spelling or an added or missing word does.
