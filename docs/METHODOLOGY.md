@@ -6,6 +6,9 @@
 
 ## Standing rules (t310u, Nov 17, 2026)
 
+Standing rule maintenance
+After any rule change or new lock that affects standing rules, update both docs/PROJECT_NOTES.md and docs/METHODOLOGY.md in the same PR so they stay current. Do not leave older conflicting lines. Report the commit hash when the update is merged.
+
 These are the current rules. Dated changelog entries below stay as history. A sentence in those entries that says “Exact string only,” “No extra variants,” “fill stays Cleared,” “gummy seed-oil only,” or that locks a blend string as one token is superseded for new lookups. Do not apply that sentence to a new lookup. Stored locks were not changed in t310u.
 
 Oil form rule
