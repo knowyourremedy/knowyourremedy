@@ -12,11 +12,12 @@ After any rule change or new lock that affects standing rules, update both docs/
 These are the current rules. Dated changelog entries below stay as history. A sentence in those entries that says “Exact string only,” “No extra variants,” “fill stays Cleared,” “gummy seed-oil only,” or that locks a blend string as one token is superseded for new lookups. Do not apply that sentence to a new lookup. Stored locks were not changed in t310u.
 
 Oil form rule
-- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product), except cold-pressed hemp seed oil and Pumpkin Oil (seed).
+- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product), except cold-pressed hemp seed oil, Pumpkin Oil (seed), and Evening Primrose Oil.
 - Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
 - Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
 - Cold-pressed hemp seed oil is Limited and counts when it is the base of a liquid, and Caution when it is only a fill (t322u).
-- Pumpkin Oil (seed) is Caution when it is only a softgel fill (t324u). When Pumpkin Oil is the base of the product, it is not graded. Pumpkin Seed Oil and Pumpkin extract are different strings.
+- Pumpkin Oil (seed) is Caution when it is only a softgel fill (t324u). Pumpkin Seed Oil is the same lock (t325u). When that oil is the base of the product, it is not graded. Pumpkin extract is a different string.
+- Evening Primrose Oil is Caution when it is only a softgel fill (t325u). When it is the base of the product, it is not graded.
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
 - Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
 
