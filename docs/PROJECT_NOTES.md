@@ -1243,25 +1243,32 @@ Standing process — Ladder + token collection:
 
 This is the default process for every ladder pass. Do not change other standing rules.
 
-Standing preference — Token matching (t226u):
-Standing preference for token matching: treat strings as the same token when the words are the same. Capitalization, hyphens, extra spaces, periods, commas, or other punctuation that does not change the words do not create a new unlocked string. Parentheticals that only name the role (for example “(Capsule)” or “(as preservative)”) do not create a new string when the ingredient words are the same. “and” versus “&” does not create a new string. Minor word-order differences do not create a new string when the words are identical.
+Standing rules (t310u, Nov 17, 2026). These sections are the current rules. Dated done bullets and older token lists in this file stay as history. Where an older sentence calls a seed-oil or processed-oil fill Cleared, quotes a “Not Clean” 3+ note, locks every alcohol vehicle as Limited with no strength split, locks a blend string as one token, or says a ratio in parentheses is always the same token, that sentence is superseded for new lookups. Do not re-open already closed brands for this change.
 
-Only a different spelling, an added word, or a missing word creates a new string.
-
-Apply this going forward. Do not re-open already closed brands for this change.
-
-Standing rule — Grade individual ingredients, not blends (t257u):
-Standing rule: grade individual ingredients, not blends as one token. When a panel prints a blend string (for example “Antioxidant Blend (Ascorbyl Palmitate, Canola Oil, Rosemary extract, Vitamin E)” or “Total Omega Oil Blend (Borage Oil, Fish Oil, Flaxseed Oil)”), break it into its listed ingredients and grade each one separately. Do not lock the blend string itself as a single token.
-
-Apply this going forward. Do not re-open already closed brands for this change.
+Oil form rule
+- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (liquid oil product).
+- Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
+- Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
+- Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
 
 3+ Limited honest note rule
-The 3+ Limited note is written only when the product’s Avoid grade comes solely from three or more Limited ingredients that count.
-If the product already contains one or more ingredients that are graded Avoid (Titanium Dioxide, FD&C dyes, Talc, partially hydrogenated oil, etc.), it is already Avoid. Do not write the 3+ Limited note on those products. The note is not needed and is not written.
+The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
+If the product already contains one or more ingredients that are graded Avoid, do not write the note.
 
-Apply this going forward. Do not re-open already closed brands for this change.
+Alcohol-with-strength rule
+Printed strength = Cleared vehicle.
+Bare alcohol (no strength printed) = Limited and counts.
 
-A printed percentage or ratio in parentheses counts as the same token when the core words are identical. “anise (2%)” is the same as “anise”. “anise seed extract (1%)” is the same as “anise seed extract”. Apply this going forward.
+Grade individual ingredients, not blends
+Break blend strings into their listed ingredients and grade each one separately. Do not lock the blend string itself as a single token.
+
+Token-matching preference
+Same words = same token. Capitalization, hyphens, spacing, punctuation, role-only parentheticals, percentages in parentheses, Latin names, brand names, "and" vs "&", and minor word order do not create a new string. Only a different spelling or an added or missing word does.
+
+Why-string source requirement
+Every Caution, Limited, or Avoid why string must include an external source (EFSA, FDA, IARC, etc.).
+
+The older sentence that a printed ratio such as “(4:1)” is always the same token is superseded. A percentage in parentheses is the same token. A ratio, a dose, or an added word such as “Powder” or “Buffered” is not, unless the words that remain are the same.
 
 Two-source rule
 See the standing section When writing rows. The text below stays.
@@ -1278,23 +1285,19 @@ Honest note and ingredient tab
 See the standing section When writing rows. The text below stays.
 An honest note is written only when an ingredient appears to contradict itself to a shopper, such as a seed oil in a gummy versus a softgel, or “rice extract” next to a named rice form. Do not write “Pending DailyMed review.”
 
-Honest-note standard: Write an honest note only in two cases. (1) A 3+ Limited stack that makes the product Not Clean: “This product is Not Clean because it contains three or more ingredients that are each graded Limited. When three or more Limited ingredients appear together, the product is downgraded to Not Clean.” (2) A true contradiction, such as a seed oil that is Cleared when used as a softgel fill but Not Clean when it is the base of a gummy: explain the contrast in plain language. Ordinary Caution rows and single-Limited rows do not need a product-level honest note; the ingredient tabs already explain the tokens. The founder supplies the exact honest-note text when a note is required; the bot stores that string and does not generate its own.
+Honest-note standard: Write an honest note only in two cases. (1) The 3+ Limited honest note rule above: the note is written only when Avoid comes solely from three or more counting Limited ingredients, and it is not written when an Avoid ingredient is already present. The older “Not Clean” 3+ sentence is superseded. (2) A true form contradiction under the oil form rule, such as a seed oil that is Caution as a fill but Avoid when it is the base of a gummy. The older template that called the fill Cleared is superseded. Ordinary Caution rows and single-Limited rows do not need a product-level honest note. The founder supplies the exact honest-note text when a note is required; the bot stores that string and does not generate its own.
 
 ## Honest-note templates (locked)
 
-Cleared-form oil note (use when the oil is graded Avoid as a gummy/lozenge/chew base but Cleared as fill in this form):
-[Oil] is graded Avoid when it is the base of a gummy or lozenge. In that form you chew the oil. This product is a [form]. The oil is only the fill of the [form], not the base of a gummy you chew, so it did not pull this grade down.
+Superseded: the templates below used to say the fill is Cleared. Under the oil form rule the fill is Caution. Use these only when the founder supplies the exact note. Do not generate a note.
+
+Caution-form oil note (use when the oil is graded Avoid as a gummy/lozenge/chew base but Caution as fill in this form):
+[Oil] is graded Avoid when it is the base of a gummy or lozenge. In that form you chew the oil. This product is a [form]. The oil is only the fill of the [form], not the base of a gummy you chew, so it is Caution here, not Avoid.
 
 Avoid-chewable oil note (use when the oil is the base of a chewable):
-[Oil] is graded Avoid here because it is the base of this chewable. In that form you chew the oil. The same oil is graded Cleared when it is only the fill of a capsule, softgel, or tablet.
+[Oil] is graded Avoid here because it is the base of this chewable. In that form you chew the oil. The same oil is graded Caution when it is only the fill of a capsule, softgel, or tablet.
 
 Only write a note when the form creates a true contradiction under the oil rule. If the form is not a contradiction, leave the note empty.
-
-Oil form rule
-- Avoid when the oil is the base of a chewable (gummy, lozenge, chew) or the base of the product itself (for example a liquid oil product).
-- Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
-- Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
-- Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
 
 ## Post-write honest-note check
 
@@ -2275,7 +2278,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Menthyl lactate = Caution.
 - LPG / liquefied petroleum gas = Caution.
 - Synthetic beeswax = Caution (distinct from Cleared beeswax).
-- Methylated spirit = Limited (same alcohol-vehicle row as ethyl alcohol). Do not invent a second alcohol class.
+- Methylated spirit with no printed strength = Limited and counts (alcohol-with-strength rule). A printed strength is a Cleared vehicle. The older sentence that locked every methylated spirit with ethyl alcohol as Limited, with no strength split, is superseded. Do not invent a second alcohol class.
 - Topical talc in a cream/patch = Caution. Not the oral-talc High swallow rule. Tap form.
 - DMDM hydantoin / diazolidinyl urea = Caution (formaldehyde-donor). Not Avoid unless founder later bumps. Other formaldehyde-releasers stay parked.
 - Polysorbate 60 = existing polysorbate Moderate row. Do not duplicate.
@@ -2283,7 +2286,7 @@ Sept 14 inactive locks (now in Methodology §5 — do not reopen):
 - Remaining Icy Hot / Aspercreme / Salonpas / Tiger Balm leftover table is on §5 — do not re-add those strings.
 - Patch backing / adhesive plaster / film / baking cloth are backing/device, not gradeable inactives. Do not block a row on those words.
 - Pain rubs stay Pain & Fever (with swallow SKUs). No third Topical aisle.
-- Topical oil form rule (base vs scent-extract): named single oil/butter as the BASE or FILL = Cleared. Tap fill ≠ gummy High. Botanical EXTRACT or oil used as scent in a blend = Caution (fragrance/EO line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. Do not Caution grape seed / avocado / cocoa butter when they are the cream vehicle.
+- Topical scent extracts stay Caution (fragrance line). Unspecified “herbal extract” = Caution. Do not Clear arnica / ilex / juniper / camellia / lemon balm extracts just because they are plants. The older sentence that named every oil or butter as Cleared when it is the base or the fill is superseded for seed and processed oils. Those follow the oil form rule: Avoid as a chewable or liquid base, Caution as a fill. Named essential oils, and oils that are not seed or processed oils under the existing locks, stay Cleared.
 - Tetrasodium EDTA = Caution (exact). Distinct from Cleared disodium EDTA (trace).
 - calcined kaolin = Caution (exact). Kaolin already Cleared ≠ calcined kaolin.
 - ammonium hydroxide = Caution (exact words). Strong ammonia ≠ ammonium hydroxide. Do not alias.
@@ -2545,7 +2548,8 @@ Vegan capsule shell made from hydroxypropyl methylcellulose and water. Hydroxypr
 
 Caution / Limited / Avoid tokens
 - Same first-time explanation of what it is and what it does.
-- Then one additional sentence that states the processing or risk reason and the source.
+- Then one additional sentence that states the processing or risk reason.
+- Why-string source requirement: that sentence must include an external source (EFSA, FDA, IARC, etc.).
 - Still no rule language or “that is why it is Limited.”
 
 Do not write the why string as a rule explanation for the founder. Write it as the text that will appear on the ingredient tab for a regular user.
