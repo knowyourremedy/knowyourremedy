@@ -1660,8 +1660,15 @@ export function isT171uLimitedName(name: string): boolean {
   return T171U_LIMITED.has(t171uToken(name));
 }
 
-/** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
+/** t332u. Vitamin A printed as beta carotene is the vitamin source, not the color lock. */
+export function isVitaminAFromBetaCarotene(name: string): boolean {
+  const n = name.trim().toLowerCase();
+  if (/\b(color|colour|for color|for colour)\b/.test(n)) return false;
+  return /\bvitamin\s*a\b/.test(n) && /beta[-\s]?carotene/.test(n);
+}
+
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (isVitaminAFromBetaCarotene(ingredient.name)) return false;
   if (/founder lock t317u/i.test(ingredient.source ?? '')) {
     return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   }
@@ -1885,6 +1892,7 @@ function isTopicalPgSource(src: string): boolean {
 
 /** Demote mis-stored `limited` Caution tokens to moderate + stackCountExempt (t141u). */
 export function shouldDemoteFalseLimited(ingredient: IngredientFlag): boolean {
+  if (isVitaminAFromBetaCarotene(ingredient.name)) return false;
   if (ingredient.riskLevel !== 'limited') return false;
   if (ingredient.stackCountExempt) return false;
   if (isSiliconDioxideStackExempt(ingredient.name)) return false;

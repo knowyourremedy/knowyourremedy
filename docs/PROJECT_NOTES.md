@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t332u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. The named mushrooms, Organic Cordyceps powder, and the enzyme, plant, probiotic, and nutrient strings are Cleared and do not stack. Apricot Oil and Chia Oil are Cleared only as a softgel fill. Vitamin A (as Beta Carotene) as the vitamin source does not count as Limited. The locks are in `lib/scan-preview/t332uLocks.ts`. **batch465** — 6 packs in `lib/rating-drafts/batch465-kyr6e-t332u.ts` (0 Clean / 0 Caution / 6 Avoid). Apple Cider Vinegar + Metabolism Gummies carries the 3+ Limited note. `irwin-b464-mens-living-green-liquid-gel-multi` changed from Avoid with the 3+ note to Caution with no note. No UPC. The brand is not closed.
 - t331u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. Choline forms, Cordyceps, five fruits, and the named nutrients are Cleared and do not stack. The other mushroom powders stay unlocked. The locks are in `lib/scan-preview/t331uLocks.ts`. **batch464** — 9 packs in `lib/rating-drafts/batch464-kyr6e-t331u.ts` (0 Clean / 1 Caution / 8 Avoid). Three rows carry the 3+ Limited note. No UPC. Previously written rows were not changed. The brand is not closed.
 - t330u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. Named vegetables, plant extracts, herbal powders, and amino acids that were on two products are Cleared and do not stack. The locks are in `lib/scan-preview/t330uLocks.ts`. **batch463** — 16 packs in `lib/rating-drafts/batch463-kyr6e-t330u.ts` (0 Clean / 2 Caution / 14 Avoid). Pro-Active Nitric Oxide and Libido Max for Active Men carry the 3+ Limited note. No UPC. Previously written rows were not changed. The brand is not closed.
 - t329u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. Fifteen Cleared strings do not stack. Bare dextrin is Limited and counts. The locks are in `lib/scan-preview/t329uLocks.ts`. **batch462** — 11 packs in `lib/rating-drafts/batch462-kyr6e-t329u.ts` (0 Clean / 2 Caution / 9 Avoid). No honest note on those 11. `irwin-b461-next-level-extra-strength-testosterone-up-v2` changed from Caution to Avoid with the 3+ note because dextrin now counts. No UPC. The brand is not closed.
@@ -1280,6 +1281,9 @@ If the product already contains one or more ingredients that are graded Avoid, d
 
 Bare dextrin (t329u)
 Bare dextrin is Limited and counts toward the 3+ Limited stack. Rice dextrin, cassava dextrin, wheat dextrin, tapioca dextrin, and cyclodextrin stay their own locks. The Sept 22, 2026 Caution call for bare dextrin is superseded.
+
+Vitamin A from beta carotene (t332u)
+Vitamin A (as Beta Carotene), when it is the vitamin A source, does not count as Limited. Beta-carotene used as a color keeps the existing color lock.
 
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
