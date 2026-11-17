@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t320u (Nov 17, 2026). **Irwin Naturals stays open.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t320uLocks.ts`. Maltodextrin, Medium Chain Triglyceride (MCT) Oil, Hemp Oil (seed), Flaxseed Oil (seed), and Coconut Oil (copra) use existing locks. No new row. Caramel (color) and Broad-Spectrum Hemp extract blend (aerial) stay unlocked. The four named oils are Caution only as a softgel fill. A base use is not graded. The brand is not closed.
 - t314u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t314uLocks.ts`. Three Limited strings count. Fifteen Cleared strings do not stack. Seven prints match locks already on MAIN. **batch454** — 2 packs in `lib/rating-drafts/batch454-kyr6e-t314u.ts` (2 Clean / 0 Caution / 0 Avoid). Camu Camu Extract, 60 capsules, UPC 743650001514. CoQ10 200 mg, 30 capsules, UPC 743650104345. No honest note. Bladder Health stays a conflicting panel. No panel was chosen. MSM powders, Melatonin Time Release, MSM 1000 mg 100, and the unread two-column multis stay held. The brand is not closed.
 - t313u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. The blend standing rule is in this file and in `docs/METHODOLOGY.md`. No new lock. No new row. Every remaining readable Emerald Labs panel still has an unlocked individual ingredient after the blend is broken into the parts the panel prints. Stored blend locks were not changed. The brand is not closed.
 - t312u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. Six named prints match existing locks. Vitamin D3 has no base lock and stays unlocked. The new locks are in `lib/scan-preview/t312uLocks.ts`. **batch453** — 12 packs in `lib/rating-drafts/batch453-kyr6e-t312u.ts` (12 Clean / 0 Caution / 0 Avoid). No honest note. MSM powders, Melatonin Time Release, and the unread two-column multis stay held. The brand is not closed.
@@ -1258,6 +1259,7 @@ Oil form rule
 - Caution when the oil is only a fill or carrier in a softgel, capsule, tablet, or bead.
 - Limited and counts when a seed or processed oil is used as a surface coating on a gummy or chewable.
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
+- Cold-pressed hemp seed oil, Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
 
 3+ Limited honest note rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
