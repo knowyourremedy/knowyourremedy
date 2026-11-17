@@ -1114,7 +1114,10 @@ export function isNeverStackLimitedName(name: string): boolean {
   if (/\bcitric acid\b|\bmalic acid\b|\btartaric acid\b/.test(n)) return true;
   if (/\bdicalcium phosphate\b|\btricalcium phosphate\b|\bsodium citrate\b/.test(n)) return true;
   if (/\bmicrocrystalline cellulose\b/.test(n)) return true;
-  if (/\bdextrin\b/.test(n) && !/tapioca dextrin|maltodextrin/.test(n)) return true;
+  if (/\bdextrin\b/.test(n) && !/tapioca dextrin|maltodextrin/.test(n)) {
+    if (/rice dextrin|cassava dextrin|wheat dextrin|cyclodextrin/.test(n)) return true;
+    return false;
+  }
   if (/\bblue spirulina\b/.test(n)) return true;
   return isMethCautionIngredientName(name);
 }
