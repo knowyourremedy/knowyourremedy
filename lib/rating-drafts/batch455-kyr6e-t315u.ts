@@ -14,18 +14,8 @@ const UNVERIFIED = 'unverified' as const;
 const SUPPLEMENT = 'Supplement' as const;
 const SITE = 'https://store.emeraldlabs.com/products';
 const SHELL = ['hypromellose (from non-GMO pine bark)', 'water'] as const;
-const HELD_TOCO = 'Delta, Gamma Tocotrienols';
 
 function locked(name: string): IngredientFlag {
-  if (name === HELD_TOCO) {
-    return {
-      name,
-      riskLevel: 'cleared',
-      stackCountExempt: true,
-      source: 'Panel; held. Delta, Gamma Tocotrienols is unlocked pending a founder grade. The prior Cleared grade is kept.',
-      why: 'Delta and gamma tocotrienols are forms of vitamin E. It is included as a source of vitamin E.',
-    };
-  }
   const hit = t256uResolve(name, 'capsule');
   const why = hit?.lock.why
     || (t240uNorm(name) === 'water' ? cleanTokenWhyForName(name) : undefined)
@@ -55,7 +45,7 @@ function row(id: string, name: string, formId: string, facts: string[], handle: 
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients,
     verdict: rollup.verdict,
-    sourcesGeneral: [`${SITE}/${handle} ${note}${barcode ? ` Label barcode ${barcode}. The check digit passes.` : ' No sourced UPC. Missing UPC.'}${facts.includes(HELD_TOCO) ? ' Held. Delta, Gamma Tocotrienols is unlocked pending a founder grade. The prior Clean grade is kept.' : ''}`],
+    sourcesGeneral: [`${SITE}/${handle} ${note}${barcode ? ` Label barcode ${barcode}. The check digit passes.` : ' No sourced UPC. Missing UPC.'}`],
   };
   if (rollup.cause === 'limited_stack') {
     record.honestNote = T315U_STACK_NOTE;
