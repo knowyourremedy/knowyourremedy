@@ -18,6 +18,7 @@ import { t304uLock } from './t304uLocks';
 import { t307uLock } from './t307uLocks';
 import { t308uLock } from './t308uLocks';
 import { t310uLock, t310uPeel } from './t310uLocks';
+import { t312uAlias, t312uLock } from './t312uLocks';
 import { t251uLock } from './t251uLocks';
 import { t252uLock } from './t252uLocks';
 import { t253uLock } from './t253uLocks';
@@ -83,6 +84,7 @@ export function t256uLock(name: string, form?: string): Lock | undefined {
 
 function founderLock(name: string, form?: string): { lock: Lock; mark: string } | undefined {
   const chain: Array<[Lock | undefined, string]> = [
+    [t312uLock(name), 't312u'],
     [t310uLock(name), 't310u'],
     [t308uLock(name), 't308u'],
     [t307uLock(name), 't307u'],
@@ -183,6 +185,11 @@ export function t256uResolve(name: string, form?: string, panel: string[] = []):
   if (alias) {
     const hit = exactLock(alias, form);
     if (hit) return { ...hit, via: 'variant', from: alias };
+  }
+  const founderAlias = t312uAlias(name) || (peeled !== name ? t312uAlias(peeled) : undefined);
+  if (founderAlias) {
+    const hit = exactLock(founderAlias, form);
+    if (hit) return { ...hit, via: 'variant', from: founderAlias };
   }
   const split = isoflavoneSplit(name, panel);
   if (split) return { ...split, via: 'split' };
