@@ -74,6 +74,10 @@ export function applyT304uRow(record: RatingRecord): RatingRecord {
   const next: RatingRecord = { ...record, inactiveIngredients, verdict };
   delete next.honestNote;
   delete next.founderHonestNote;
+  if (record.id === 'neocell-b449-vitamin-e-oil-2-5oz' || record.id === 'neocell-b449-biotin-hair-300') {
+    next.honestNote = '';
+    next.founderHonestNote = '';
+  }
   return next;
 }
 
