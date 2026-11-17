@@ -8,6 +8,7 @@ import {
 import { T128U_STACK_NOTE } from './t128uTokenWhy';
 import { computeVerdictFromInactiveIngredients } from './verdictFromFlags';
 
+// Superseded for new lookups by the sunflower seed oil form-split lock. applyT167uRow still stamps this why so existing rows are not regraded.
 const SUNFLOWER =
   'Sunflower seed oil is a seed oil used in some bases. It is Limited and counts toward a 3+ Limited stack.';
 const STEVIOL =

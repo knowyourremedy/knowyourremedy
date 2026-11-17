@@ -1406,6 +1406,7 @@ const T166U_CAUTION = new Set([
 const T166U_LIMITED = new Set([
   'organic annatto extract (color)',
   'sd alcohol 40-b',
+  // Superseded for new lookups by the sunflower seed oil form-split lock. applyT166uRow still uses this grade so existing rows are not regraded.
   'sunflower seed oil',
   'trolamine',
   'annatto seed extract (color)',
@@ -1658,6 +1659,9 @@ export function isT171uLimitedName(name: string): boolean {
 
 /** True only for Limited tokens that count toward t137u 3+ Avoid (t141u). */
 export function ingredientCountsTowardLimitedStack(ingredient: IngredientFlag): boolean {
+  if (/founder lock t300u/i.test(ingredient.source ?? '')) {
+    return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
+  }
   if (/founder lock t299u/i.test(ingredient.source ?? '')) {
     return ingredient.riskLevel === 'limited' && !ingredient.stackCountExempt;
   }
