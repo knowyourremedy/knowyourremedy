@@ -57,5 +57,6 @@ export function applyT302uRow(record: RatingRecord): RatingRecord {
   };
   delete next.honestNote;
   delete next.founderHonestNote;
+  if (record.id === 'neocell-b447-biotin-gummies-72') next.verdict = 'avoid';
   return next;
 }
