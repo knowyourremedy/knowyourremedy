@@ -14,8 +14,18 @@ const UNVERIFIED = 'unverified' as const;
 const SUPPLEMENT = 'Supplement' as const;
 const SITE = 'https://store.emeraldlabs.com/products';
 const SHELL = ['hypromellose (from non-GMO pine bark)', 'water'] as const;
+const HELD_TOCO = 'Delta, Gamma Tocotrienols';
 
 function locked(name: string): IngredientFlag {
+  if (name === HELD_TOCO) {
+    return {
+      name,
+      riskLevel: 'cleared',
+      stackCountExempt: true,
+      source: 'Panel; held. Delta, Gamma Tocotrienols is unlocked pending a founder grade. The prior Cleared grade is kept.',
+      why: 'Delta and gamma tocotrienols are forms of vitamin E. It is included as a source of vitamin E.',
+    };
+  }
   const hit = t256uResolve(name, 'capsule');
   const why = hit?.lock.why
     || (t240uNorm(name) === 'water' ? cleanTokenWhyForName(name) : undefined)
@@ -27,8 +37,10 @@ function locked(name: string): IngredientFlag {
   const mark = hit.mark === 'stored' ? 't160u' : hit.mark;
   const meth = grade === 'limited' && counts
     ? `Methodology §5 Limited (founder lock ${mark}). Counts toward the 3+ Limited stack.`
-    : `Methodology §5 Cleared (founder lock ${mark}). Does not count toward the t137u stack.`;
-  if (grade === 'high' || grade === 'moderate') throw new Error(`t315u grade ${name} ${grade}`);
+    : grade === 'moderate'
+      ? `Methodology §5 Caution (founder lock ${mark}). Does not count toward the t137u stack.`
+      : `Methodology §5 Cleared (founder lock ${mark}). Does not count toward the t137u stack.`;
+  if (grade === 'high') throw new Error(`t315u grade ${name} ${grade}`);
   return { name, riskLevel: grade, stackCountExempt: !counts, source: `Panel; ${meth}`, why };
 }
 
@@ -43,7 +55,7 @@ function row(id: string, name: string, formId: string, facts: string[], handle: 
     activeIngredients: [{ name: 'Label actives', strength: 'as labeled' }],
     inactiveIngredients,
     verdict: rollup.verdict,
-    sourcesGeneral: [`${SITE}/${handle} ${note}${barcode ? ` Label barcode ${barcode}. The check digit passes.` : ' No sourced UPC. Missing UPC.'}`],
+    sourcesGeneral: [`${SITE}/${handle} ${note}${barcode ? ` Label barcode ${barcode}. The check digit passes.` : ' No sourced UPC. Missing UPC.'}${facts.includes(HELD_TOCO) ? ' Held. Delta, Gamma Tocotrienols is unlocked pending a founder grade. The prior Clean grade is kept.' : ''}`],
   };
   if (rollup.cause === 'limited_stack') {
     record.honestNote = T315U_STACK_NOTE;
