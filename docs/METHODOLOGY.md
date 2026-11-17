@@ -26,7 +26,11 @@ Printed strength = Cleared vehicle.
 Bare alcohol (no strength printed) = Limited and counts.
 
 Grade individual ingredients, not blends
-Break blend strings into their listed ingredients and grade each one separately. Do not lock the blend string itself as a single token.
+The shorter t310u sentence is superseded by the standing rule below.
+
+Standing rule: do not lock or treat blend strings as single tokens. When a panel prints a blend, break it into the individual ingredients listed inside it. Report only the individual ingredients that are still unlocked. If every individual ingredient is already locked, grade the product from those locked ingredients and write the row. Do not ask for a lock on the blend string itself.
+
+Stored blend locks that still treat a blend string as one token, not changed, needing manual review: Organic Gum Blend (Gum Arabic, Tapioca, Guar Gum); Quik-Sorb® Blend (Ginger Root Powder, Amla Fruit Extract, Cayenne Fruit Powder); Phospholipid complex from Pea, Sunflower, Grape Seed.
 
 Token-matching preference
 Same words = same token. Capitalization, hyphens, spacing, punctuation, role-only parentheticals, percentages in parentheses, Latin names, brand names, "and" vs "&", and minor word order do not create a new string. Only a different spelling or an added or missing word does.
