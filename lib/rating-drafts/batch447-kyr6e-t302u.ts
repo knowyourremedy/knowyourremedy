@@ -103,5 +103,5 @@ export const BATCH447_KYR6E_T302U: RatingRecord[] = [
   row('neocell-b447-nad-60', 'NeoCell NAD + Resveratrol Multi Collagen Bio-Peptides 60 Capsules', 'neocell-b447-nad-60', 'capsule', [gelatinCap, mag, rice, silica], 'caution', 'nad-resveratrol-multi-collagen-bio-peptides-1000-mg-60-rapid-release-capsules-m28681', 'Counted Limited: rice powder. Contains egg and fish is an allergen line. 60 capsules.'),
   row('neocell-b447-biotin-gummies-72', 'NeoCell Biotin 10,000 mcg Gummies Peach 72 Gummies', 'neocell-b447-biotin-gummies-72', 'gummy', [
     stored('Glucose syrup', 'gummy'), stored('Sugar', 'gummy'), stored('Pectin', 'gummy'), stored('Citric acid', 'gummy'), stored('Sodium citrate', 'gummy'), stored('Natural flavor', 'gummy'), stored('Carnauba wax', 'gummy'), stored('Palm oil', 'gummy'), stored('Annatto (color)', 'gummy'),
-  ], 'caution', 'biotin-10000-mcg-gummies-peach-flavor-72-tasty-vegan-gummies-m18907', 'Counted Limited: natural flavor, palm oil. Palm oil is the gummy base. 72 gummies.'),
+  ], 'avoid', 'biotin-10000-mcg-gummies-peach-flavor-72-tasty-vegan-gummies-m18907', 'Palm oil is the base of this gummy, so the row is Avoid. Counted Limited: natural flavor, palm oil. No 3+ note. 72 gummies.'),
 ];
