@@ -439,3 +439,4 @@ export { BATCH439_KYR6E_T293U } from './batch439-kyr6e-t293u';
 export { BATCH440_KYR6E_T294U } from './batch440-kyr6e-t294u';
 export { BATCH441_KYR6E_T295U } from './batch441-kyr6e-t295u';
 export { BATCH442_KYR6E_T296U } from './batch442-kyr6e-t296u';
+export { BATCH443_KYR6E_T298U } from './batch443-kyr6e-t298u';
