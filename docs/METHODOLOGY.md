@@ -39,8 +39,16 @@ Standing rule: do not lock or treat blend strings as single tokens. When a panel
 
 Stored blend locks that still treat a blend string as one token, not changed, needing manual review: Organic Gum Blend (Gum Arabic, Tapioca, Guar Gum); Quik-Sorb® Blend (Ginger Root Powder, Amla Fruit Extract, Cayenne Fruit Powder); Phospholipid complex from Pea, Sunflower, Grape Seed.
 
-Token-matching preference
-Same words = same token. Capitalization, hyphens, spacing, punctuation, role-only parentheticals, percentages in parentheses, Latin names, brand names, "and" vs "&", and minor word order do not create a new string. Only a different spelling or an added or missing word does.
+Token-matching preference (expanded)
+Same core words = same token.
+The bot must apply an existing lock when the only differences are:
+- capitalization, hyphens, spacing, or punctuation
+- role-only or source parentheticals such as (root), (leaf), (fruit), (seed), (color)
+- standardization ratios or percentages in parentheses such as (4:1), (10:1), (50% EGCG), (95% piperine)
+- brand names or proprietary marks in parentheses or as prefixes such as KSM-66®, Holixer, Sensoril, Testosurge
+- minor word order that does not add or remove a distinct ingredient
+Do not create a new token for these variants. Apply the existing lock.
+Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
 
 Why-string source requirement
 Every Caution, Limited, or Avoid why string must include an external source (EFSA, FDA, IARC, etc.).
