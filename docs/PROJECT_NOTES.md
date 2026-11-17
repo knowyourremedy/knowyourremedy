@@ -1,3 +1,6 @@
+Standing rule maintenance
+After any rule change or new lock that affects standing rules, update both docs/PROJECT_NOTES.md and docs/METHODOLOGY.md in the same PR so they stay current. Do not leave older conflicting lines. Report the commit hash when the update is merged.
+
 KnowYourRemedy.com — Project Notes
 
 This is the single source of truth for project context, decisions, and current state. If you're a new Claude starting a session: read this entire file before responding to anything. Brandon paste-references this file at the start of every chat.
@@ -6,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t311u (Nov 17, 2026). **Docs only.** Standing rule maintenance is at the top of this file and in the standing rules in `docs/METHODOLOGY.md`. No row or lock code changed. The Sprouts section was not edited.
 - t310u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. Part 1 aligned the standing rules in PROJECT_NOTES and METHODOLOGY. No row or lock from that part. Part 2 matches Latin names, percentages, and brand parentheticals onto existing locks and adds the locks in `lib/scan-preview/t310uLocks.ts`. **batch452** — 14 packs in `lib/rating-drafts/batch452-kyr6e-t310u.ts` (14 Clean / 0 Caution / 0 Avoid). No honest note. No 3+ stack. MSM powders and Melatonin Time Release stay conflicting panels. Two-column multis stay unreadable. The brand is not closed.
 - t308u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. The locks are in `lib/scan-preview/t308uLocks.ts`. Thirty-one strings are Cleared and do not stack. **batch451** — 7 packs in `lib/rating-drafts/batch451-kyr6e-t308u.ts` (7 Clean / 0 Caution / 0 Avoid). No honest note. No 3+ stack. MSM Powder 16 oz and 8 oz stay conflicting panels. MSM 1000 mg, 100 capsules, has no 100-count panel. Melatonin Time Release stays a conflicting panel. No panel was chosen. Written rows are 10 (10 Clean / 0 Caution / 0 Avoid) across batch450 and batch451. The brand is not closed.
 - t307u (Nov 17, 2026). **Emerald Labs stays open.** The Sprouts section was not edited. US only. The lock is in `lib/scan-preview/t307uLocks.ts`. Hypromellose (from non-GMO pine bark) is Cleared and does not stack. Bare hypromellose stays the stored lock. No new row. Every held capsule still has an unlocked supplement-facts token, so batch451 was not written. MSM Powder 16 oz and MSM Powder 8 oz stay conflicting panels. No panel was chosen. No grade changed. The brand is not closed.
