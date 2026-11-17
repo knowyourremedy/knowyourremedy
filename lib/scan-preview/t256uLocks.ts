@@ -11,6 +11,7 @@ import { t242uLock } from './t242uLocks';
 import { t243uLock } from './t243uLocks';
 import { t247uLock } from './t247uLocks';
 import { t250uLock } from './t250uLocks';
+import { t300uLock } from './t300uLocks';
 import { t251uLock } from './t251uLocks';
 import { t252uLock } from './t252uLocks';
 import { t253uLock } from './t253uLocks';
@@ -76,6 +77,7 @@ export function t256uLock(name: string, form?: string): Lock | undefined {
 
 function founderLock(name: string, form?: string): { lock: Lock; mark: string } | undefined {
   const chain: Array<[Lock | undefined, string]> = [
+    [t300uLock(name), 't300u'],
     [t256uLock(name, form), 't256u'],
     [t255uLock(name, form), 't255u'],
     [t254uLock(name, form), 't254u'],
@@ -92,6 +94,9 @@ function founderLock(name: string, form?: string): { lock: Lock; mark: string } 
 function olderLock(name: string, form?: string): Lock | undefined {
   const prior = t247uLock(name) || t243uLock(name, form) || t242uLock(name, form) || t240uLock(name, form);
   if (prior) return { grade: prior.grade, counts: prior.counts, why: prior.why };
+  // t166 Limited-and-counts and the cleared sunflower-oil alias are superseded for this token.
+  // New lookups use the form-split lock, which does not guess when the form is unknown.
+  if (t240uNorm(name) === 'sunflower seed oil') return undefined;
   const t225 = t225uLock(name);
   if (t225) return t225;
   const graded = t160uGrade(name) || t162uGrade(name) || t165uGrade(name) || t166uGrade(name) || t169uGrade(name);
