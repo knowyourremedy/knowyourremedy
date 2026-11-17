@@ -15,9 +15,6 @@ type Lock = { grade: RiskLevel; counts: boolean; why: string };
 function added(name: string): string {
   return `${name}. It is added for color, mineral content, or to form the capsule.`;
 }
-function fill(name: string): string {
-  return `${name}. It is used as a fill in the softgel. ${name} is graded Caution as a fill and Limited or Avoid when it is the base of the product (highly processed oil; EFSA and FDA treat refined seed oils as distinct from whole-food oils).`;
-}
 function sweet(name: string): string {
   return `${name}. It is used as a sweetener and binder. Processed sugars and purified stevia extracts are graded Limited (FDA and EFSA treat refined syrups and steviol glycosides as processed sweeteners; EFSA 2010 for stevia).`;
 }
@@ -38,12 +35,6 @@ const CLEARED = [
   'organic oat hull',
   'Marine gelatin capsule',
 ];
-const OILS = [
-  'organic argan oil',
-  'wheat germ oil',
-  'grapeseed oil',
-  'organic sesame seed oil',
-];
 const SWEETS = [
   'Organic tapioca syrup',
   'rice syrup',
@@ -54,7 +45,6 @@ const SWEETS = [
 
 const PRINTED = new Map<string, { grade: RiskLevel; counts: boolean; why: string; form?: 'softgel' | 'gummy' }>();
 for (const name of CLEARED) PRINTED.set(name, { grade: 'cleared', counts: false, why: added(name) });
-for (const name of OILS) PRINTED.set(name, { grade: 'moderate', counts: false, why: fill(name), form: 'softgel' });
 for (const name of SWEETS) PRINTED.set(name, { grade: 'limited', counts: true, why: sweet(name) });
 PRINTED.set('sustainable palm oil', { grade: 'limited', counts: true, why: PALM, form: 'gummy' });
 PRINTED.set('organic rice extract blend', { grade: 'limited', counts: true, why: RICE });
@@ -65,7 +55,7 @@ function printedKey(name: string): string {
   return name.trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
-/** Exact printed strings. Capitalization does not make a new token. Fill oils and the and/or oil apply only as a softgel fill. Sustainable palm oil applies only as a gummy base. */
+/** Exact printed strings. Capitalization does not make a new token. The and/or oil applies only as a softgel fill. Sustainable palm oil applies only as a gummy base. Organic argan oil, wheat germ oil, grapeseed oil, and organic sesame seed oil are not in this lock. */
 export function t303uLock(name: string, form?: string): Lock | undefined {
   const own = [...PRINTED.entries()].find(([label]) => printedKey(label) === printedKey(name))?.[1];
   if (!own) return undefined;
@@ -127,9 +117,11 @@ export function applyT303uRow(record: RatingRecord): RatingRecord {
 if (t303uLock('fruit and vegetable juice (color)')?.why !== added('fruit and vegetable juice (color)')) throw new Error('t303u juice and');
 if (t303uLock('fruit & vegetable juice (color)')?.why !== added('fruit & vegetable juice (color)')) throw new Error('t303u juice amp');
 if (t303uLock('Demineralized water')?.grade !== 'cleared') throw new Error('t303u water');
-if (t303uLock('organic argan oil', 'softgel')?.grade !== 'moderate' || t303uLock('organic argan oil', 'softgel')?.counts !== false) throw new Error('t303u argan');
-if (t303uLock('organic argan oil', 'softgel')?.why !== fill('organic argan oil')) throw new Error('t303u argan why');
-if (t303uLock('organic argan oil', 'liquid')) throw new Error('t303u argan liquid');
+for (const oil of ['organic argan oil', 'wheat germ oil', 'grapeseed oil', 'organic sesame seed oil']) {
+  if (t303uLock(oil, 'softgel') || t303uLock(oil, 'liquid') || t303uLock(oil, 'gummy') || t303uLock(oil)) {
+    throw new Error(`t303u unlocked ${oil}`);
+  }
+}
 if (t303uLock('Organic tapioca syrup')?.why !== sweet('Organic tapioca syrup') || t303uLock('Organic tapioca syrup')?.counts !== true) throw new Error('t303u tapioca');
 if (t303uLock('rebaudioside A (from stevia leaf extract)')?.why !== sweet('rebaudioside A (from stevia leaf extract)')) throw new Error('t303u reb');
 if (t303uLock('sustainable palm oil', 'gummy')?.why !== PALM) throw new Error('t303u palm');
