@@ -40,7 +40,10 @@ Printed-string locks (t342u)
 Glucosamine HCl, Niacin, Vitamin A (as Retinyl Palmitate), Linoleic, Oleic, Alpha-Linolenic Acid, Lactobacillus acidophilus, Eleuthero, PABA, and Vitamin C (as Ascorbic Acid, Sodium Ascorbate) are Cleared and do not stack. Sodium Hexametaphosphate is Limited and counts. Artificial Colors, and the singular Artificial color, are Avoid and do not stack. FD&C Yellow #5 stays the existing Avoid lock. Kelp and Spirulina Extract stay their existing Limited locks. Mono- and Diglycerides stays its existing Limited lock. Linoleic Acid, Oleic Acid, Para-Aminobenzoic Acid, Glucosamine Hydrochloride, separately printed Monoglycerides and Diglycerides, and Vitamin A (as Vitamin A Palmitate) take those existing locks (t343u).
 
 Printed-string locks (t343u)
-Acai powder, Apple powder, Banana powder, Cherry powder, and Cranberry powder are Cleared and do not stack. The printed panels say Acai, Apple, Banana, Cherry, and Cranberry with no powder word, so those bare strings do not take the powder locks. Lactobacillus salivarius and Streptococcus thermophilus are Cleared and do not stack. Malva verticillata is Cleared and does not stack.
+Acai powder, Apple powder, Banana powder, Cherry powder, and Cranberry powder are Cleared and do not stack. Lactobacillus salivarius and Streptococcus thermophilus are Cleared and do not stack. Malva verticillata is Cleared and does not stack. Bare Acai, Apple, Banana, Cherry, and Cranberry take those powder locks (t344u).
+
+Printed-string locks (t344u)
+Boswellia serrata, Brussels Sprout, Citrus Bioflavonoids Complex, DL-Methionine, Gamma-Linolenic Acid, Magnesium Hydroxide, natural Vanilla flavor, Saw Palmetto, Selenium (as Selenium Yeast), Selenium (as Sodium Selenite), and Thiamine (as Thiamine Hydrochloride, Vitamin B1) are Cleared and do not stack. PEG/PVA Copolymer is Limited and counts. Brussels Sprouts, Citrus Bioflavonoids, L-Methionine, Natural flavors, Saw Palmetto extract, Saw Palmetto Oil, Selenium, and Selenium (as L-Selenomethionine) stay their existing locks. Triple Omega Complex 3-6-9 is not locked as one string.
 
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
@@ -70,6 +73,9 @@ Only a different spelling of the core ingredient, or an added or missing distinc
 Founder equivalences (t343u)
 These printed strings take the named lock, with that lock's grade and why. They are not new locks.
 Linoleic Acid takes Linoleic. Oleic Acid takes Oleic. Para-Aminobenzoic Acid takes PABA. Glucosamine Hydrochloride takes Glucosamine HCl. Vitamin A (as Vitamin A Palmitate) takes Vitamin A (as Retinyl Palmitate). Monoglycerides and Diglycerides, printed as separate lines, each take Mono- and Diglycerides. Each line counts as its own Limited ingredient. Two lines on one panel count as two.
+
+Founder equivalences (t344u)
+Bare Acai, Apple, Banana, Cherry, and Cranberry take the t343u powder locks. Those locks are Cleared and do not stack. Bare Pomegranate takes Pomegranate powder, which is Cleared and does not stack. Bare Raspberry takes Raspberry powder, which the resolver returns as the Raspberry powders lock, Cleared and does not stack. Cauliflower, Cucumber, Orange, Pea, Pear, Plum, and Strawberry have no powder lock. They stay held. No powder lock was created for them.
 
 Why-string source requirement
 Every Caution, Limited, or Avoid why string must include an external source (EFSA, FDA, IARC, etc.).
