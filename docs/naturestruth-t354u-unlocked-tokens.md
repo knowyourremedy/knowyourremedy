@@ -1,5 +1,7 @@
 # Nature's Truth t354u unlocked tokens
 
+This is the t354u snapshot. After the t355u locks, the remaining holds are in `docs/naturestruth-t355u-unlocked-tokens.md`.
+
 Exact printed strings still unlocked on the 20 held matched panels after the t354u locks. No held panel became fully locked. Rice, Powder stays here because its existing locks disagree with the new why, and that why was not applied.
 
 38 unlocked strings.
