@@ -470,3 +470,4 @@ export { BATCH471_KYR6E_T338U } from './batch471-kyr6e-t338u';
 export { BATCH472_KYR6E_T340U } from './batch472-kyr6e-t340u';
 export { BATCH473_KYR6E_T341U } from './batch473-kyr6e-t341u';
 export { BATCH474_KYR6E_T342U } from './batch474-kyr6e-t342u';
+export { BATCH475_KYR6E_T343U } from './batch475-kyr6e-t343u';
