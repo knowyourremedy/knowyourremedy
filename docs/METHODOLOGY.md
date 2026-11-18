@@ -20,6 +20,7 @@ Oil form rule
 - Evening Primrose Oil is Caution when it is only a softgel fill (t325u). When it is the base of the product, it is not graded.
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
 - Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
+- Fish Body Oil is Caution when it is only a softgel fill (t341u). When it is the base of the product, it is not graded. Fish Oil stays its existing Cleared lock.
 
 3+ Limited honest note rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
@@ -29,7 +30,10 @@ Bare dextrin (t329u)
 Bare dextrin is Limited and counts toward the 3+ Limited stack. Rice dextrin, cassava dextrin, wheat dextrin, tapioca dextrin, and cyclodextrin stay their own locks. The Sept 22, 2026 Caution call for bare dextrin is superseded.
 
 Vitamin A from beta carotene (t332u)
-Vitamin A (as Beta Carotene), when it is the vitamin A source, does not count as Limited. Beta-carotene used as a color keeps the existing color lock.
+Vitamin A (as Beta Carotene), when it is the vitamin A source, does not count as Limited. Beta-carotene used as a color keeps the existing color lock. The t341u Cleared sentence was not applied. The existing resolver result stays.
+
+Printed-string locks (t341u)
+Thiamine (as Thiamine Mononitrate, Vitamin B1) and Thiamine (as Thiamine Mononitrate) are Cleared and do not stack. Chromium (as Chromium Chloride), Licorice, and Senna are Cleared and do not stack. Docosahexaenoic Acid, Eicosapentaenoic Acid, and Total Omega-3 Fatty Acids are Cleared and do not stack. Oat Fiber, bare Polysorbate, PEG, Polyplasdone, and Rice Husk Concentrate are Limited and count. Polysorbate 20, Polysorbate 60, Polysorbate 80, crospovidone, and polyethylene glycol stay their existing locks. Licorice extract and Licorice root stay their existing locks. Senna leaf is a different string.
 
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
