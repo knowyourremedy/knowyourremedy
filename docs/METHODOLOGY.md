@@ -59,6 +59,9 @@ Medium Chain Triglyceride is Limited and counts. The stored entry had that grade
 Nature Made reopen (t349u)
 Nature Made is not on the closed-brands list. The 10 existing rows stay. New packs are separate rows. The brand is not closed.
 
+Printed-string locks (t350u)
+Cellulose Gel is Cleared and does not stack. It is not cellulose or microcrystalline cellulose. Sodium Starch Glycolate, Calcium Lactate, Glyceryl Monostearate, Lactose, and Methylcellulose are Cleared and do not stack. Hydroxypropyl methylcellulose stays its existing lock. Vitamin A (as Retinyl Acetate) and Vitamin A (as Beta-Carotene, Retinyl Acetate) are Cleared and do not stack. Vitamin A from beta-carotene and beta-carotene used as a color stay their existing locks. Sensoril (as Ashwagandha Leaf Extract, Ashwagandha Root Extract) is Cleared and does not stack. Colors added and Color added are Limited and count. They do not take the Artificial Colors Avoid lock. Rapeseed Lecithin is Limited and counts. Lecithin and sunflower lecithin stay Cleared. SAM-e and S-Adenosylmethionine Tosylate Disulfate are Limited and count. Tartaric Acid stays the existing Cleared lock and has no why. Methacrylic Acid Copolymer stays the existing Limited lock and its enteric-coating why.
+
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
 
