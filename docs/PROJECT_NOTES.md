@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t342u (Nov 18, 2026). **21st Century stays open.** The Sprouts section was not edited. US only. Vitamin A (as Beta-Carotene) as the vitamin source is now Cleared and does not count. The other new locks are in `lib/scan-preview/t342uLocks.ts`. Kelp, Spirulina Extract, Mono- and Diglycerides, and FD&C Yellow #5 were not overwritten. **batch474** — 20 packs in `lib/rating-drafts/batch474-kyr6e-t342u.ts` (1 Clean / 9 Caution / 10 Avoid). No 3+ note. Previously written rows were not changed. The brand is not closed.
 - t341u (Nov 18, 2026). **21st Century stays open.** The Sprouts section was not edited. US only. New Cleared, Limited, and softgel-fill locks are in `lib/scan-preview/t341uLocks.ts`. Vitamin A (as Beta-Carotene) was not overwritten. **batch473** — 29 packs in `lib/rating-drafts/batch473-kyr6e-t341u.ts` (5 Clean / 4 Caution / 20 Avoid). Two Avoid rows carry the 3+ Limited note. Previously written rows were not changed. The brand is not closed.
 - t340u (Nov 18, 2026). **21st Century stays open.** The Sprouts section was not edited. US only. 21st Century was not on the Closed brands list and had no rows. **batch472** — 69 packs in `lib/rating-drafts/batch472-kyr6e-t340u.ts` (18 Clean / 38 Caution / 13 Avoid). No 3+ note. No UPC was invented. Pet products and bundles are not rows. The brand is not closed.
 - t339u (Nov 18, 2026). **Mason Natural closed.** The Sprouts section was not edited. US only. No new row. No grade changed. Written rows are 12 (1 Clean / 6 Caution / 5 Avoid) across batch469, batch470, and batch471. Conflicting panels were not chosen. The 173 products with no usable panel stay no complete panel. Four creams stay topical. The brand close is recorded under Closed brands.
@@ -1283,7 +1284,8 @@ Oil form rule
 - Evening Primrose Oil is Caution when it is only a softgel fill (t325u). When it is the base of the product, it is not graded.
 - Cleared only for named essential oils or oils that are not seed or processed oils under the existing locks.
 - Avocado Oil (fruit), Black Cumin Oil (seed), and Safflower Oil (seed) are Caution when they are only a softgel fill. This lock does not grade them when they are the base of the product.
-- Fish Body Oil is Caution when it is only a softgel fill (t341u). When it is the base of the product, it is not graded. Fish Oil stays its existing Cleared lock.
+- Fish Body Oil is Caution when it is the base of a softgel (t342u). The t341u lock stays Caution for a softgel fill. A chewable or liquid fish-oil base is not graded. Fish Oil stays its existing Cleared lock.
+- refined Soybean Oil and Palm Olein are Limited and count when they are the base of the product or a coating, and Caution with no stack when they are only a softgel fill (t342u). Soybean Oil and Palm Oil stay their existing locks.
 
 3+ Limited honest note rule
 The 3+ Limited note is written only when the product's Avoid grade comes solely from three or more Limited ingredients that count.
@@ -1292,11 +1294,14 @@ If the product already contains one or more ingredients that are graded Avoid, d
 Bare dextrin (t329u)
 Bare dextrin is Limited and counts toward the 3+ Limited stack. Rice dextrin, cassava dextrin, wheat dextrin, tapioca dextrin, and cyclodextrin stay their own locks. The Sept 22, 2026 Caution call for bare dextrin is superseded.
 
-Vitamin A from beta carotene (t332u)
-Vitamin A (as Beta Carotene), when it is the vitamin A source, does not count as Limited. Beta-carotene used as a color keeps the existing color lock. The t341u Cleared sentence was not applied. The existing resolver result stays.
+Vitamin A from beta carotene (t342u)
+Vitamin A (as Beta-Carotene), when it is the vitamin A source, is Cleared and does not count. Beta-carotene is a form of vitamin A. It is included as a source of vitamin A. The previous resolver result was Limited, it counted, and it had no why. Beta-carotene used as a color keeps the existing color lock.
 
 Printed-string locks (t341u)
 Thiamine (as Thiamine Mononitrate, Vitamin B1) and Thiamine (as Thiamine Mononitrate) are Cleared and do not stack. Chromium (as Chromium Chloride), Licorice, and Senna are Cleared and do not stack. Docosahexaenoic Acid, Eicosapentaenoic Acid, and Total Omega-3 Fatty Acids are Cleared and do not stack. Oat Fiber, bare Polysorbate, PEG, Polyplasdone, and Rice Husk Concentrate are Limited and count. Polysorbate 20, Polysorbate 60, Polysorbate 80, crospovidone, and polyethylene glycol stay their existing locks. Licorice extract and Licorice root stay their existing locks. Senna leaf is a different string.
+
+Printed-string locks (t342u)
+Glucosamine HCl, Niacin, Vitamin A (as Retinyl Palmitate), Linoleic, Oleic, Alpha-Linolenic Acid, Lactobacillus acidophilus, Eleuthero, PABA, and Vitamin C (as Ascorbic Acid, Sodium Ascorbate) are Cleared and do not stack. Sodium Hexametaphosphate is Limited and counts. Artificial Colors, and the singular Artificial color, are Avoid and do not stack. FD&C Yellow #5 stays the existing Avoid lock. Kelp, Spirulina Extract, and Mono- and Diglycerides stay their existing locks. Linoleic Acid, Oleic Acid, Para-Aminobenzoic Acid, Glucosamine Hydrochloride, Monoglycerides, Diglycerides, and Vitamin A (as Vitamin A Palmitate) are different strings.
 
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
