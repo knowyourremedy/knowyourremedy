@@ -89,6 +89,9 @@ Beta-Carotene stays the existing Limited lock, and it counts. The why applies on
 Printed-string locks (t383u)
 Pacran Cranberry concentrate powder is Cleared and does not stack. The why is “Pacran cranberry concentrate powder is a concentrated cranberry extract. It is included for its plant compounds.” The same core words are that token. Capitalization, hyphens, spacing, punctuation, a trademark, a role or source parenthetical, or a ratio in parentheses do not make a new string. An added or missing ingredient word does not take this lock. Pacran whole fruit cranberry stays its own string.
 
+Bare Palm (t384u)
+Bare Palm is a source word only. It does not name an ingredient and it does not need a lock. Do not invent a parent ingredient from it. Palm Oil, Palm Olein, Palm Leaf Glaze, organic Palm Oil, Hydrogenated Palm Oil, and the other named palm ingredients stay their existing locks.
+
 Brand target list (t379u): docs/PROJECT_NOTES.md keeps a Brand target list of in-scope brands not yet closed, ordered started-not-finished first, then all 3 stores (Target, Walmart, Sprouts), two stores, Target only, Sprouts only, Walmart only. Work brands from the top. When a brand is closed, remove it from the Brand target list in the same PR that records the close.
 
 No holds for imprecise why strings (t326u)
