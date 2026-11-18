@@ -1,5 +1,7 @@
 # Nature's Truth t355u unlocked tokens
 
+This is the t355u snapshot. t356u wrote both remaining panels. No unlocked tokens remain.
+
 Exact printed strings still holding a matched panel after the t355u locks. 18 of the 20 held panels are now written. Two panels stay held.
 
 2 unlocked strings.
