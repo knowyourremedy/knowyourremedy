@@ -86,6 +86,8 @@ Ammonium Hydroxide, contains naturally occurring Carotenoids, Lactobacillus plan
 Printed-string locks (t362u)
 Beta-Carotene stays the existing Limited lock, and it counts. The why applies only when it is a carotenoid part, not when it is the vitamin A source. The why is “Beta-carotene is a plant pigment. It is included for its plant compounds. Beta-carotene is graded Limited when it is used as a carotenoid part rather than as the vitamin A source (EFSA and FDA distinguish refined carotenoid fractions from whole-food sources).” Vitamin A (as Beta-Carotene) stays Cleared. Already-written rows were not regraded.
 
+Brand target list (t379u): docs/PROJECT_NOTES.md keeps a Brand target list of in-scope brands not yet closed, ordered started-not-finished first, then all 3 stores (Target, Walmart, Sprouts), two stores, Target only, Sprouts only, Walmart only. Work brands from the top. When a brand is closed, remove it from the Brand target list in the same PR that records the close.
+
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
 
