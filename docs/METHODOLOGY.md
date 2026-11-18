@@ -71,6 +71,9 @@ Nature's Truth Rice, Powder resolves to the Cleared t132u/t157u lock. The why is
 Printed-string locks (t356u)
 Tribulus terrestris Fruit Extract (as Saponins) is Cleared and does not stack. It is not bare Tribulus terrestris Fruit Extract. Norwegian Cod Liver Oil is Caution and does not stack when it is the base of a softgel. That lock is separate from the t355u fill lock. The fill lock stays Cleared, with the why that says Caution as a fill. Neither lock changes Cod Liver Oil.
 
+Printed-string locks (t358u)
+Vitamin C (as L-Ascorbic Acid), Acerola extract complex, Paprika, Full Spectrum Curcumin, full spectrum Curcumin liquid extract, MSM (as OptiMSM), and Red Wine extract are Cleared and do not stack. Sodium Chondroitin Sulfate is Limited and counts. MSM (as OptiMSM) is not bare MSM. Bare MSM stays Cleared with the why “MSM is a sulfur compound also called methylsulfonylmethane. It is included as a source of sulfur.” The OptiMSM why is different. Written rows were not changed. Vitamin B1 (as Thiamine Hydrochloride) takes Thiamine (as Thiamine Hydrochloride). L-Proline takes Proline. organic Red Yeast Rice powder takes Red Yeast Rice. Cinnamon powder takes Cinnamon extract. Anise powder takes Anise. standardized Milk Thistle extract (as Silymarin) takes Milk Thistle extract. Those are existing locks, not new ones.
+
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
 
