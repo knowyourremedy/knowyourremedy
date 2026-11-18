@@ -56,6 +56,9 @@ The named nutrients, plants, probiotics, fibers, juice, solvent, and polymers in
 Printed-string locks (t347u)
 Medium Chain Triglyceride is Limited and counts. The stored entry had that grade and no why. The why is now the processed-oil sentence. Medium Chain Triglycerides stays its existing lock. Phospholipids is Limited and counts. Lecithin and the phospholipid-complex blend stay their existing locks. Krill Oil stays the existing Cleared fill lock.
 
+Nature Made reopen (t349u)
+Nature Made is not on the closed-brands list. The 10 existing rows stay. New packs are separate rows. The brand is not closed.
+
 No holds for imprecise why strings (t326u)
 A fully locked panel is written with the stored grade and the stored why. Do not hold the row because a stored why reads imprecise for that product, including form wording such as capsule, tablet, base, or fill. Flag the mismatch. Do not rewrite the stored why. Never invent a UPC, a panel, or a parent ingredient. When a new founder lock's heading and why name different grades, do not pick a grade.
 
