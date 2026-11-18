@@ -1,0 +1,122 @@
+# 21st Century t344u unlocked tokens
+
+Exact strings still unlocked on DSLD panels matched to the current catalog by item code, after the t344u locks. Nutrition-fact headers are not included. Blends with no named parts are not graded as one token.
+
+No complete panel, and not listed here: the two enteric-coated Fish Oil 1000 mg softgels (90 and 180), Fish Oil 1200 mg Enteric Coated (90 softgels), and Triple Omega Complex 3-6-9 (90 and 180 softgels). Those coating lines do not name ingredients. Triple Omega Complex 3-6-9 is not locked as one string. Its named parts are Eicosapentaenoic Acid, Docosahexaenoic Acid, Alpha-Linolenic Acid, Linoleic Acid, Oleic Acid, and Gamma-Linolenic Acid.
+
+Cauliflower, Cucumber, Orange, Pea, Pear, Plum, and Strawberry have no powder lock.
+
+112 unlocked strings.
+
+- Cauliflower — 4
+- Cucumber — 4
+- Orange — 4
+- Pea — 4
+- Pear — 4
+- Plum — 4
+- Strawberry — 4
+- Alanine — 1
+- Allicin — 1
+- Arginine — 1
+- Aspartic Acid — 1
+- Bee Pollen powder — 1
+- Benzyl Benzoate — 1
+- Betaine HCl — 1
+- Bifidobacterium animalis lactis — 1
+- Bifidobacterium longum — 1
+- Black Catechu — 1
+- Black Cohosh root extract — 1
+- Black Elderberry Fruit Extract (as Sambucus nigra L. Fruit Extract) — 1
+- Boron Glycinate — 1
+- Boswellia Resin Extract — 1
+- Boswellia serrata resin extract — 1
+- Boswellia serrata Resin Extract — 1
+- Carrot Concentrate — 1
+- Chinese skullcap — 1
+- Chloride (as Potassium Chloride, Vitamin B6 Hydrochloride) — 1
+- Chondroitin Sulfate Sodium — 1
+- Chromium (as Chromium Amino Acid Chelate) — 1
+- Citrus Bioflavonoid — 1
+- Coffee fruit extract — 1
+- Coral Calcium — 1
+- Cranberry Berry Extract (as Vaccinium oxycoccus Berry Extract) — 1
+- Cranberry extract (as Vaccinium oxycoccus) — 1
+- Crystalline Lutein (as Lutein, Zeaxanthin) — 1
+- Cysteine Hydrochloride — 1
+- Damiana — 1
+- Dehydroepiandrosterone, Pure — 1
+- deodorized Garlic — 1
+- DL-Alpha Tocopherol — 1
+- DNA — 1
+- Docosahexaenoic Acid (as Omega-3 Fatty Acids) — 1
+- Dong Quai — 1
+- Eicosapentaenoic Acid (as Omega-3 Fatty Acids) — 1
+- Fenugreek seed powder — 1
+- Ginkgo biloba extract — 1
+- Glucosamine Sulfate Potassium Chloride — 1
+- Glutamic Acid — 1
+- Histidine — 1
+- Horse Chestnut extract (as Aesculus hippocastanum) — 1
+- Horsetail — 1
+- Horsetail, Powder — 1
+- Invertase — 1
+- Iodine (as Kelp) — 1
+- Isoleucine — 1
+- Korean Ginseng extract — 1
+- L-Cysteine (as L-Cysteine Hydrochloride) — 1
+- L-Cysteine Hydrochloride — 1
+- L-Glutathione — 1
+- Lactobacillus casei — 1
+- Lactobacillus delbrueckii — 1
+- Lactobacillus rhamnosus — 1
+- Leucine — 1
+- Lysine — 1
+- Magnolia bark extract — 1
+- Maltase — 1
+- Maltodextrain — 1
+- Medium Chain Triglyceride — 1
+- Milk Thistle powdered extract (as Silybum marianum) — 1
+- Milk Thistle Seed Extract Concentrate, Powder (as Silybum marianum Seed Extract Concentrate, Powder) — 1
+- Mono/Diglycerides — 1
+- Nettle — 1
+- Niacin (as Inositol Hexanicotinate) — 1
+- Niacin (as Niacinamide, Vitamin B3) — 1
+- Niacinamide — 1
+- Oat Straw — 1
+- Ornithine Hydrochloride — 1
+- Oyster extract — 1
+- Palmitoleic Acid Copolymer — 1
+- Parsley — 1
+- Phospholipids — 1
+- Polyethylene Glycol Copolymer — 1
+- Pomegranate Fruit Extract (as Ellagic Acid) — 1
+- Potassium Gluconate — 1
+- Psyllium — 1
+- PVA Copolymer — 1
+- Pygeum bark extract — 1
+- Red Raspberry — 1
+- Red Wine Extract (as Grape Skin Extract) — 1
+- Red Wine Matrix (as Polygonum cuspidatum, Vitis vinifera) — 1
+- Red Yeast Rice, Powder — 1
+- RNA — 1
+- Rose Hip — 1
+- Saw Palmetto powder — 1
+- Selenium (as Selenium Amino Acid Chelate) — 1
+- Serine — 1
+- Sodium Carboxymethycellulose — 1
+- Sodium Carboxymethylcellulose — 1
+- Soluble Fiber — 1
+- Soy Isoflavones Extract, Powder (as Soy Seed Extract, Powder) — 1
+- Soy Protein — 1
+- Thiamine (as Thiamine Hydrochloride) — 1
+- Threonine — 1
+- Valine — 1
+- Vegetable and Fruit Juice — 1
+- Vitamin A (as Acetate, Beta-Carotene) — 1
+- Vitamin A (as Beta-Carotene, Vitamin A Palmitate) — 1
+- Vitamin A (as Betatene) — 1
+- Vitamin C — 1
+- Watercress — 1
+- White Willow Bark Extract — 1
+- White Willow Bark Extract (as Salix alba Bark Extract) — 1
+- Yerba Mate leaf extract — 1
