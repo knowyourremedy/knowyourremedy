@@ -18,7 +18,7 @@ const MINERAL_OIL = 'Mineral oil is a purified petroleum product used as an oint
 const GLUCOSE = 'Glucose syrup is a liquid sweetener made from starch.';
 const SODIUM_CARBONATE = 'Sodium carbonate is a mineral salt used as a filler or to set acidity.';
 const POTASSIUM_HYDROXIDE = 'Potassium hydroxide is a pH adjuster used in a trace amount.';
-const TARTARIC = 'Tartaric acid is a natural acid used to set the acidity of the product.';
+const TARTARIC = 'Tartaric acid is an organic acid. It is used as a stabilizer.';
 const NATURAL_AND_ARTIFICIAL =
   'This is a natural and artificial flavor mixture. The label does not list every part of the mixture. It is graded Limited and counts toward a 3+ Limited stack.';
 const POLYDEXTROSE =
