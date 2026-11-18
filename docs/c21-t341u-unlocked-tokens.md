@@ -2,9 +2,12 @@
 
 Exact strings still unlocked on DSLD panels matched to the current catalog by item code, after the t341u locks. Nutrition-fact headers are not included. Blends with no named parts are not graded as one token.
 
-163 unlocked strings.
+164 unlocked strings.
+
+Fish Body Oil on the five Fish Oil 1000 mg softgels is the product base, so the softgel-fill lock was not applied.
 
 - Vitamin A (as Beta-Carotene) — 8
+- Fish Body Oil — 5
 - Acai — 4
 - Alpha-Linolenic Acid — 4
 - Apple — 4
