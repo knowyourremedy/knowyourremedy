@@ -86,6 +86,9 @@ Ammonium Hydroxide, contains naturally occurring Carotenoids, Lactobacillus plan
 Printed-string locks (t362u)
 Beta-Carotene stays the existing Limited lock, and it counts. The why applies only when it is a carotenoid part, not when it is the vitamin A source. The why is “Beta-carotene is a plant pigment. It is included for its plant compounds. Beta-carotene is graded Limited when it is used as a carotenoid part rather than as the vitamin A source (EFSA and FDA distinguish refined carotenoid fractions from whole-food sources).” Vitamin A (as Beta-Carotene) stays Cleared. Already-written rows were not regraded.
 
+Printed-string locks (t383u)
+Pacran Cranberry concentrate powder is Cleared and does not stack. The why is “Pacran cranberry concentrate powder is a concentrated cranberry extract. It is included for its plant compounds.” The same core words are that token. Capitalization, hyphens, spacing, punctuation, a trademark, a role or source parenthetical, or a ratio in parentheses do not make a new string. An added or missing ingredient word does not take this lock. Pacran whole fruit cranberry stays its own string.
+
 Brand target list (t379u): docs/PROJECT_NOTES.md keeps a Brand target list of in-scope brands not yet closed, ordered started-not-finished first, then all 3 stores (Target, Walmart, Sprouts), two stores, Target only, Sprouts only, Walmart only. Work brands from the top. When a brand is closed, remove it from the Brand target list in the same PR that records the close.
 
 No holds for imprecise why strings (t326u)
