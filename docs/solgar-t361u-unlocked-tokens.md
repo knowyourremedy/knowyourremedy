@@ -1,6 +1,8 @@
 # Solgar t361u remaining hold
 
-Beta-Carotene stays the existing Limited lock. It counts. It has no stored why, and no why was written.
+This is the t361u snapshot. t362u added the carotenoid-part why and wrote both panels. Solgar is closed.
+
+Beta-Carotene stayed the existing Limited lock at the end of t361u. It counted. It had no stored why then.
 
 Two on-market panels stay held because a carotenoid-part Beta-Carotene can only resolve through that lock:
 
