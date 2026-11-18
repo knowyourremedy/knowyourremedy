@@ -1,6 +1,8 @@
 # Solgar t360u unlocked tokens
 
-Exact printed strings still unlocked on the 11 held matched panels. These were left out of the blanket.
+This is the t360u snapshot. t361u locked every string below except Beta-Carotene. The live hold is `docs/solgar-t361u-unlocked-tokens.md`.
+
+Exact printed strings still unlocked on the 11 held matched panels at the end of t360u. These were left out of the blanket.
 
 12 unlocked strings.
 
