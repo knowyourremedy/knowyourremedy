@@ -1,5 +1,7 @@
 # Nature's Truth t353u unlocked tokens
 
+This is the t353u snapshot. After the t354u locks, the remaining holds are in `docs/naturestruth-t354u-unlocked-tokens.md`.
+
 Exact printed strings on the 20 held matched panels. A Latin source parenthetical that takes an existing bare lock is not listed.
 
 46 unlocked strings.
