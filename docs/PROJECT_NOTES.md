@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t386u (Nov 22, 2026). **Sundown Naturalist closed.** The Sprouts section was not edited. US only. FD&C Yellow No. 5 Lake takes the existing FD&C Yellow #5 Avoid lock. Lake is a form word. The Yellow #5 why stays. It is not a new lock. **batch494** — 1 pack in `lib/rating-drafts/batch494-kyr6e-t386u.ts` (0 Clean / 0 Caution / 1 Avoid). Daily Multi With Iron, 90 tablets, UPC 030768000547, is Avoid. Yellow 5 Lake, Yellow 6 Lake, magnesium silicate, and titanium dioxide are already Avoid, so no 3+ note is stored. Written rows are 92 (10 Clean / 55 Caution / 27 Avoid). The existing 42 rows and batch493 were not regraded. Sundown and Sundown Naturals were not reopened. The brand close is recorded under Closed brands.
 - t385u (Nov 18, 2026). **Sundown Naturalist stays open.** The Sprouts section was not edited. US only. Sundown and Sundown Naturals were not reopened. **batch493** — 49 packs in `lib/rating-drafts/batch493-kyr6e-t385u.ts` (10 Clean / 32 Caution / 7 Avoid). Three Avoid rows carry the 3+ Limited note: Hair, Skin & Nails Gummies with Biotin Strawberry Flavored, 80; Super Plenamins Plus, 130; Coated Triple Strength Fish Oil 1,400 mg, 30. The other four Avoid rows are Avoid from an Avoid ingredient, so no 3+ note is stored. Daily Multi With Iron, 90 tablets, UPC 030768000547, stays held on FD&C Yellow No. 5 Lake. No panel was chosen for it. Previously written rows were not changed. The brand was not closed.
 - t384u (Nov 18, 2026). **Sundown closed.** The Sprouts section was not edited. US only. No new row. No grade changed. Bare Palm is a source word only and does not need a lock. Palm Oil, Palm Olein, Palm Leaf Glaze, and the other named palm locks stay. Cranberry Gummies Cran-Raspberry Flavored, 75 count, UPC 030768553180, is a conflicting panel. DSLD 272813 and DSLD 212426 disagree. No panel was chosen. No graded row. Written rows stay 108 (15 Clean / 66 Caution / 27 Avoid). 104 have a UPC. No complete panel: 0. Conflicting panels: 1. Excluded: 0. Sundown Naturals was not reopened. Sundown was removed from the Brand target list. The brand close is recorded under Closed brands.
 - t383u (Nov 18, 2026). **Pacran Cranberry concentrate powder is Cleared and does not stack.** The Sprouts section was not edited. US only. The lock is in `lib/scan-preview/t383uLocks.ts`. Same core words take that lock. An added or missing ingredient word does not. No row was written. Sundown Cranberry Gummies Cran-Raspberry, 75 count, UPC 030768553180, stays a conflict hold. The two on-market DSLD labels still disagree. Sundown Naturals was not reopened. Sundown was not closed.
@@ -1403,6 +1404,7 @@ The bot must apply an existing lock when the only differences are:
 - minor word order that does not add or remove a distinct ingredient
 Do not create a new token for these variants. Apply the existing lock.
 Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
+A color Lake is a form word, not a distinct ingredient word (t386u). An FD&C or D&C dye printed with Lake takes that dye's existing lock. FD&C Yellow No. 5 Lake takes FD&C Yellow #5. The grade is Avoid and it does not stack. The why stays the Yellow #5 why.
 
 Founder equivalences (t343u)
 These printed strings take the named lock, with that lock's grade and why. They are not new locks.
@@ -1465,8 +1467,7 @@ Brand target list
 
 Source: Target, Walmart (partial sample) and Sprouts Farmers Market online brand lists pulled 2026-11-18, compared to MAIN 7383f998. In-scope brands not yet closed. Excluded only when a brand is exclusive to: cough drops, lozenges, powders, nicotine, protein drinks/bars, electrolytes, first aid, eye drops/contact care, non-drug skin care, non-drug feminine hygiene, or manufacturer/generic names. Rule: when a brand is closed, remove it from this list in the same PR. Order: started-not-finished, all 3 stores, two stores, Target only, Sprouts only, Walmart only.
 
-### Started on MAIN, not closed (finish first) (5)
-- Sundown Naturalist — started on MAIN, not closed; 42 rows, 41 with UPC
+### Started on MAIN, not closed (finish first) (4)
 - Sundown Kids — started on MAIN, not closed; 16 rows, 13 with UPC
 - Sundown Organics — started on MAIN, not closed; 12 rows, 0 with UPC
 - Bestie — started on MAIN, not closed; 7 rows, 0 with UPC; separate from closed Bestie Supplements
@@ -1499,6 +1500,8 @@ Life Extension; More Labs; Obvi; Onnit; Terry Naturally; Vital Planet; Zhou Nutr
 
 Closed brands
 A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
+
+Sundown Naturalist — closed. Ladder finished. No remaining unlocked-token holds. Separate from closed Sundown and closed Sundown Naturals. Those closes were not reopened. Written rows: 92 (10 Clean / 55 Caution / 27 Avoid). The 42 rows already on MAIN are 0 Clean / 23 Caution / 19 Avoid. batch493 is 49 (10 Clean / 32 Caution / 7 Avoid). batch494 is 1 (0 Clean / 0 Caution / 1 Avoid). Daily Multi With Iron, 90 tablets, UPC 030768000547, is Avoid. FD&C Yellow No. 5 Lake takes the existing FD&C Yellow #5 Avoid lock. Yellow 6 Lake, magnesium silicate, and titanium dioxide color are already Avoid, so no 3+ note is stored. Counted Limited tokens: Cellulose Coating; Croscarmellose; Medium Chain Triglycerides. No panel was invented. No UPC was invented.
 
 Sundown — closed. Ladder finished. No remaining unlocked-token holds. Separate from closed Sundown Naturals. Sundown Naturals was not reopened. No new row. No grade changed. Written rows: 108 (15 Clean / 66 Caution / 27 Avoid) across batch403, batch404, batch405, batch406, and batch407. batch403 is 58 (13 Clean / 45 Caution / 0 Avoid). batch404 is 6 (1 Clean / 3 Caution / 2 Avoid). batch405 is 26 (1 Clean / 16 Caution / 9 Avoid). batch406 is 17 (0 Clean / 1 Caution / 16 Avoid). batch407 is 1 (0 Clean / 1 Caution / 0 Avoid). 104 rows have a UPC. No complete panel available: 0. Conflicting panels, no panel chosen: 1. Cranberry Gummies Cran-Raspberry Flavored, 75 count, UPC 030768553180. DSLD 272813 and DSLD 212426 are both on-market and disagree. No panel was chosen. No graded row. Bare Palm on one of those labels is a source word only and does not need a lock. Excluded, not rows: 0. Six off-market exact-Sundown DSLD labels were not written. No panel was invented. No UPC was invented.
 
