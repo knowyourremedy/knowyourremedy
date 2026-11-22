@@ -118,6 +118,7 @@ The bot must apply an existing lock when the only differences are:
 - minor word order that does not add or remove a distinct ingredient
 Do not create a new token for these variants. Apply the existing lock.
 Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
+A color Lake is a form word, not a distinct ingredient word (t386u). An FD&C or D&C dye printed with Lake takes that dye's existing lock. FD&C Yellow No. 5 Lake takes FD&C Yellow #5. The grade is Avoid and it does not stack. The why stays the Yellow #5 why.
 
 Founder equivalences (t343u)
 These printed strings take the named lock, with that lock's grade and why. They are not new locks.
