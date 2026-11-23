@@ -496,6 +496,7 @@ import {
   BATCH497_KYR6E_T391U,
   BATCH498_KYR6E_T392U,
   BATCH499_KYR6E_T398U,
+  BATCH500_KYR6E_T400U,
 } from '@/lib/rating-drafts';
 import { type Verdict } from '@/lib/clean-picks/verdictLabels';
 import type { IngredientFlag, ProductImage, RatingRecord, RiskLevel } from '@/lib/ratingRecord';
@@ -1150,6 +1151,7 @@ const CATALOG: RatingRecord[] = uniqueById([
   ...BATCH497_KYR6E_T391U,
   ...BATCH498_KYR6E_T392U,
   ...BATCH499_KYR6E_T398U,
+  ...BATCH500_KYR6E_T400U,
 ]).map(applyT22uRow).map(applyT54uRow).map(applyT83uRow).map(applyT86uRow).map(applyT87uRow).map(applyT83DecisionRow).map(applyT104uRow).map(applyT108uRow).map(applyCleanTokenWhy).map(applyT125uBareShellRow).map(applyT126uHonestNotes).map(applyT128uTokenWhy).map(applyT129uVariantWhy).map(applyT130uHonestNotes).map(applyT134uTokenWhy).map(applyT135uTokenWhy).map(applyT138uTokenWhy).map(applyT139uTokenWhy).map(applyT140uTokenWhy).map(applyT141uTokenWhy).map(applyT143uTokenWhy).map(applyT146uTokenWhy).map(applyT147uTokenWhy).map(applyT149uTokenWhy).map(applyT151uTokenWhy).map(applyT154uTokenWhy).map(applyT157uRow).map(applyT158uTokenWhy).map(applyT160uRow).map(applyT161uTokenWhy).map(applyT162uRow).map(applyT164uRow).map(applyT165uRow).map(applyT166uRow).map(applyT167uRow).map(applyT169uRow).map(applyT170uRow).map(applyT171uRow).map(applyT172uTokenWhy).map(applyT174uTokenWhy).map(applyT177uTokenWhy).map(applyT178uTokenWhy).map(applyT179uTokenWhy).map(applyT180uTokenWhy).map(applyT181uTokenWhy).map(applyT182uTokenWhy).map(applyT183uTokenWhy).map(applyT184uTokenWhy).map(applyT185uTokenWhy).map(applyT186uTokenWhy).map(applyT205uTokenWhy).map(applyT207uTokenWhy).map(applyT211uTokenWhy).map(applyT212uHonestNotes).map(applyT215uTokenWhy).map(applyT220uTokenWhy).map(applyT222uTokenWhy).map(applyT225uTokenWhy).map(applyT228uRow).map(applyT240uRow).map(applyT242uRow).map(applyT243uRow).map(applyT247uRow).map(applyT248uRow).map(applyT250uRow).map(applyT251uRow).map(applyT252uRow).map(applyT253uRow).map(applyT254uRow).map(applyT255uRow).map(applyT256uRow).map(applyT259uRow).map(applyT260uRow).map(applyT265uRow).map(applyT266uRow).map(applyT267uRow).map(applyT270uRow).map(applyT271uRow).map(applyT272uRow).map(applyT274uRow).map(applyT275uRow).map(applyT276uRow).map(applyT277uRow).map(applyT279uRow).map(applyT280uRow).map(applyT282uRow).map(applyT283uRow).map(applyT285uRow).map(applyT287uRow).map(applyT288uRow).map(applyT289uRow).map(applyT291uRow).map(applyT292uRow).map(applyT293uRow).map(applyT294uRow).map(applyT295uRow).map(applyT296uRow).map(applyT298uRow).map(applyT299uRow).map(applyT300uRow).map(applyT301uRow).map(applyT302uRow).map(applyT303uRow).map(applyT304uRow).map(applyT306uRow).map(applyT308uRow).map(applyT310uRow).map(applyT312uRow).map(applyT314uRow).map(applyT315uRow);
 
 // Full draft catalog stays on disk. Browse / Search / Home / Cabinet /
