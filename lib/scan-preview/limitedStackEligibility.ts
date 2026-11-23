@@ -42,6 +42,7 @@ export function isT51uClearedName(name: string): boolean {
     || n === 'thaumatin'
     || n === 'liquid fish oil'
     || n === 'almond butter'
+    || n === 'organic almond butter'
     || n === 'floli50'
     || n === 'vitamin c inactive'
     || n === 'zinc citrate'

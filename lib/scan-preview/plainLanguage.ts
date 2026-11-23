@@ -473,11 +473,8 @@ function t51uIngredientWhy(name: string, level: RiskLevel): string {
       level,
     );
   }
-  if (n === 'almond butter') {
-    return close(
-      'Almond butter is a named food. The founder locked this exact token Cleared (t51u). Rowanberry stays ungraded.',
-      level,
-    );
+  if (n === 'almond butter' || n === 'organic almond butter') {
+    return 'Almond butter is ground almonds. It is included for its plant compounds.';
   }
   if (n === 'floli50') {
     return close(
@@ -583,10 +580,7 @@ function t55uIngredientWhy(name: string, level: RiskLevel): string {
     );
   }
   if (n === 'non gmo almond butter') {
-    return close(
-      'Non-GMO Almond Butter maps to almond butter. The founder locked that string Cleared (t55u). It is a named food. Rowanberry stays ungraded.',
-      level,
-    );
+    return 'Almond butter is ground almonds. It is included for its plant compounds.';
   }
   if (n === 'sodium hyaluronate hyaluronic acid') {
     return close(
@@ -1895,7 +1889,7 @@ export function plainIngredientWhy(ingredient: IngredientFlag): string | null {
     );
   }
 
-  if (n === 'cocoa extract') {
+  if (n === 'cocoa extract' || n === 'organic cocoa extract') {
     return close(
       'Cocoa extract is not Cleared cocoa powder. The cocoa powder lock says the powder is distinct from the extract. A named food extract that is not the powder stays Caution, the same posture as Carob Extract. It does not count toward the three-or-more Limited stack.',
       level,

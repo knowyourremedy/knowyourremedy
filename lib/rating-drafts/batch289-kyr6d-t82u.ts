@@ -127,7 +127,7 @@ export const BATCH289_KYR6D_T82U: RatingRecord[] = [
     ],
     inactiveIngredients: [
       flag(PCOLO, 'Non-GMO Glycerin', 'cleared', 'glycerin'),
-      flag(PCOLO, 'Non-GMO Almond Butter', 'cleared', 'almond'),
+      { ...flag(PCOLO, 'Non-GMO Almond Butter', 'cleared', 'almond'), why: 'Almond butter is ground almonds. It is included for its plant compounds.' },
       flag(PCOLO, 'Water', 'cleared', 'water'),
       flag(PCOLO, 'Vanilla Extract', 'cleared', 'vanilla'),
       flag(PCOLO, 'Sunflower Lecithin', 'cleared', 'lecithin'),
