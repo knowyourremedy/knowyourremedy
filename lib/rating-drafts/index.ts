@@ -493,3 +493,4 @@ export { BATCH495_KYR6E_T387U } from './batch495-kyr6e-t387u';
 export { BATCH497_KYR6E_T391U } from './batch497-kyr6e-t391u';
 export { BATCH498_KYR6E_T392U } from './batch498-kyr6e-t392u';
 export { BATCH499_KYR6E_T398U } from './batch499-kyr6e-t398u';
+export { BATCH500_KYR6E_T400U } from './batch500-kyr6e-t400u';
