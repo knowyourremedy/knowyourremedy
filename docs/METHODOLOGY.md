@@ -119,6 +119,7 @@ The bot must apply an existing lock when the only differences are:
 Do not create a new token for these variants. Apply the existing lock.
 Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
 A color Lake is a form word, not a distinct ingredient word (t386u). An FD&C or D&C dye printed with Lake takes that dye's existing lock. FD&C Yellow No. 5 Lake takes FD&C Yellow #5. The grade is Avoid and it does not stack. The why stays the Yellow #5 why.
+Enzyme activity units are not a distinct ingredient word (t392u). Lactase 100,000 ALU/g takes Lactase. Protease 5,000 HUT/g takes Protease. Lipase 100,000 FIP/g takes Lipase. ALU/g, HUT/g, and FIP/g do not create a new token. The grade and why stay the existing enzyme lock.
 
 Founder equivalences (t343u)
 These printed strings take the named lock, with that lock's grade and why. They are not new locks.

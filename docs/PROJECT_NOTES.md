@@ -9,6 +9,7 @@ WHERE WE LEFT OFF — Oct 7, 2026
 This is the live list. Old counts under it are history, not the hunt.
 
 Done
+- t392u (Nov 23, 2026). **Bestie closed.** The Sprouts section was not edited. US only. Vanilla Extract Powder, Organic Cassia Cinnamon, Tahitian Lemon Powder, Cacao Powder, and Orange Fruit Powder are Cleared and do not stack. The locks are in `lib/scan-preview/t392uLocks.ts`. Lactase 100,000 ALU/g, Protease 5,000 HUT/g, and Lipase 100,000 FIP/g take the existing enzyme locks. **batch498** — 5 packs in `lib/rating-drafts/batch498-kyr6e-t392u.ts` (5 Clean / 0 Caution / 0 Avoid). No 3+ note. The existing 7 rows and Glow Up were not changed. Written rows are 13 (13 Clean / 0 Caution / 0 Avoid). Stacked Variety Pack 8 ct stays no complete panel. The Snatched Bestie Bundle stays excluded. Walgreens and Amazon stay unverified. Bestie Supplements was not reopened. Bestie was removed from the Brand target list. The brand close is recorded under Closed brands.
 - t391u (Nov 23, 2026). **Bestie stays open.** The Sprouts section was not edited. US only. The 7 existing Bestie rows were not changed. Bestie Supplements was not reopened. **batch497** — 1 pack in `lib/rating-drafts/batch497-kyr6e-t391u.ts` (1 Clean / 0 Caution / 0 Avoid). Glow Up, 60 capsules, UPC 860012739202, is Clean. No 3+ note. Five STACKED whey powders stay held. Stacked Variety Pack 8 ct, Sprouts UPC 00860014685927, is no panel. The Snatched Bestie Bundle is a bundle and is not a row. The brand was not closed.
 - t390u (Nov 23, 2026). **Sundown Organics closed.** The Sprouts section was not edited. US only. No new row. No grade changed. Written rows are 12 (0 Clean / 1 Caution / 11 Avoid). None has a UPC. Walgreens and Amazon stay unverified. A browser check found no Sundown Organics products at CVS (plain Sundown only), Walmart, iHerb, Vitacost, Target, Sprouts, Whole Foods, and Thrive. Sundown Organics was removed from the Brand target list. Sundown, Sundown Naturals, Sundown Naturalist, and Sundown Kids were not reopened. The brand close is recorded under Closed brands.
 - t388u (Nov 23, 2026). **Sundown Kids closed.** The Sprouts section was not edited. US only. No new row. No grade changed. Written rows are 17 (0 Clean / 2 Caution / 15 Avoid): the existing 16 plus `sundown-b495-complete-multivitamin-gummies-cars-60`. Walgreens and Amazon stay unverified. A browser check found no Sundown Kids products at CVS, Walmart, iHerb, Vitacost, Target, Sprouts, Whole Foods, and Thrive. Sundown Kids was removed from the Brand target list. Sundown, Sundown Naturals, and Sundown Naturalist were not reopened. The brand close is recorded under Closed brands.
@@ -1409,6 +1410,7 @@ The bot must apply an existing lock when the only differences are:
 Do not create a new token for these variants. Apply the existing lock.
 Only a different spelling of the core ingredient, or an added or missing distinct ingredient word, creates a new string that needs its own lock.
 A color Lake is a form word, not a distinct ingredient word (t386u). An FD&C or D&C dye printed with Lake takes that dye's existing lock. FD&C Yellow No. 5 Lake takes FD&C Yellow #5. The grade is Avoid and it does not stack. The why stays the Yellow #5 why.
+Enzyme activity units are not a distinct ingredient word (t392u). Lactase 100,000 ALU/g takes Lactase. Protease 5,000 HUT/g takes Protease. Lipase 100,000 FIP/g takes Lipase. ALU/g, HUT/g, and FIP/g do not create a new token. The grade and why stay the existing enzyme lock.
 
 Founder equivalences (t343u)
 These printed strings take the named lock, with that lock's grade and why. They are not new locks.
@@ -1471,8 +1473,7 @@ Brand target list
 
 Source: Target, Walmart (partial sample) and Sprouts Farmers Market online brand lists pulled 2026-11-18, compared to MAIN 7383f998. In-scope brands not yet closed. Excluded only when a brand is exclusive to: cough drops, lozenges, powders, nicotine, protein drinks/bars, electrolytes, first aid, eye drops/contact care, non-drug skin care, non-drug feminine hygiene, or manufacturer/generic names. Rule: when a brand is closed, remove it from this list in the same PR. Order: started-not-finished, all 3 stores, two stores, Target only, Sprouts only, Walmart only.
 
-### Started on MAIN, not closed (finish first) (2)
-- Bestie — started on MAIN, not closed; 7 rows, 0 with UPC; separate from closed Bestie Supplements
+### Started on MAIN, not closed (finish first) (1)
 - Reprise Health — started on MAIN, not closed; 1 row, 0 with UPC; separate from closed Reprise
 
 ### Named in MAIN notes, no rows written (12)
@@ -1502,6 +1503,8 @@ Life Extension; More Labs; Obvi; Onnit; Terry Naturally; Vital Planet; Zhou Nutr
 
 Closed brands
 A brand that is closed on MAIN is not reopened. Before writing any row for a brand, check the closed-brands list. If the brand is on the list, stop and report it. Do not write a new row for a closed brand. The closed-brands list is updated when a brand’s catalog is finished.
+
+Bestie — closed. Ladder finished. No remaining unlocked-token holds. Separate from closed Bestie Supplements. Bestie Supplements was not reopened. The 7 existing rows were not changed. Written rows: 13 (13 Clean / 0 Caution / 0 Avoid). The 7 rows already on MAIN are Clean and have no UPC. batch497 is 1 Clean. Glow Up, 60 capsules, UPC 860012739202, is Clean. batch498 is 5 Clean. STACKED Cinnamon Swirl, UPC 860012739271, Lemon Glow, UPC 860012739295, Chocolate, UPC 860012739264, Orange Creamsicle, UPC 860012739288, and Vanilla, UPC 860012739257, are Clean. No 3+ note. The panel prints the Protein line twice, 0 g and 25 g. No side was chosen. No complete panel: Stacked Variety Pack 8 ct, Sprouts UPC 00860014685927. Excluded, not a row: the Snatched Bestie Bundle. Walgreens and Amazon stay unverified. Walgreens showed an error page. Amazon showed a page refusing AI agents. No panel was invented. No UPC was invented.
 
 Sundown Organics — closed. Ladder finished. No remaining unlocked-token holds. Separate from closed Sundown, Sundown Naturals, Sundown Naturalist, and Sundown Kids. Those closes were not reopened. No new row. No grade changed. Written rows: 12 (0 Clean / 1 Caution / 11 Avoid) across batch405 and batch407. batch405 is 1 Caution. batch407 is 11 Avoid. Terrific Tummy Probiotic, 30 tablets, is Caution. No UPC on any of the 12 rows. DSLD has 12 on-market labels and 0 off-market labels. Each label is a 30-tablet pack with no UPC, and each matches one written row. Walgreens and Amazon stay unverified. Walgreens showed an error page. Amazon showed a page refusing AI agents. A browser check found no Sundown Organics products at CVS (plain Sundown only), Walmart, iHerb, Vitacost, Target, Sprouts, Whole Foods, and Thrive. No panel was invented. No UPC was invented.
 
