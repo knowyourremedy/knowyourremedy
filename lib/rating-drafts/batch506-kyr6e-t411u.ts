@@ -142,7 +142,7 @@ export const BATCH506_KYR6E_T411U: RatingRecord[] = [
     panel: 'Fungies Lion\'s Mane Mushroom Gummies, 60. Brand site https://eatfungies.com/products/lions-mane-mushroom-gummies-60-pectin-gummies-fn100.',
     names: lionsNames,
     stack: true,
-    source: 't411u. Brand site https://eatfungies.com/products/lions-mane-mushroom-gummies-60-pectin-gummies-fn100 is the panel. SKU FN100. Serving size 1 gummy (4 g). 60 servings. No barcode was in products.json. DSLD 270221 and DSLD 313329 share UPC 860006794507 and their other-ingredient lines differ from this panel and from each other, so that UPC is not attached. Counted Limited tokens: Tapioca Syrup, Cane Sugar, and Natural Flavors. That is three, and there is no Avoid ingredient, so the 3+ note is stored.',
+    source: 't411u. Brand site https://eatfungies.com/products/lions-mane-mushroom-gummies-60-pectin-gummies-fn100 is the panel. SKU FN100. Serving size 1 gummy (4 g). 60 servings. No barcode was in products.json. iHerb prints the same other ingredients and UPC 860006794507. Its Latin line says Hericium erinaceous. DSLD 270221 and DSLD 313329 share that UPC and use glucose syrup, vegetable oil, and red radish. The UPC is not attached. Counted Limited tokens: Tapioca Syrup, Cane Sugar, and Natural Flavors. That is three, and there is no Avoid ingredient, so the 3+ note is stored.',
   }),
   makeRow({
     id: 'fungies-b506-lions-mane-ashwagandha-45',
@@ -151,7 +151,7 @@ export const BATCH506_KYR6E_T411U: RatingRecord[] = [
     panel: 'Fungies Lion\'s Mane + Ashwaghanda Gummies, 45. Brand site https://eatfungies.com/products/lions-mane-ashwaghanda-gummies-45-pectin-gummies-fn1010.',
     names: ashwNames,
     stack: true,
-    source: 't411u. Brand site https://eatfungies.com/products/lions-mane-ashwaghanda-gummies-45-pectin-gummies-fn1010 is the panel. SKU FN1010. The shop title spells Ashwaghanda. The facts line spells Ashwagandha (Withania somnifera) Root Extract (KMS-66®). Serving size 1 gummy (4.5 g). 45 servings. No barcode was in products.json. No verified UPC is on record, so none is attached. The shop tag future_delete is set and the variant is still available. Counted Limited tokens: Tapioca Syrup, Cane Sugar, and Natural Flavors. That is three, and there is no Avoid ingredient, so the 3+ note is stored.',
+    source: 't411u. Brand site https://eatfungies.com/products/lions-mane-ashwaghanda-gummies-45-pectin-gummies-fn1010 is the panel. SKU FN1010. The shop title spells Ashwaghanda. The facts line spells Ashwagandha (Withania somnifera) Root Extract (KMS-66®). Walmart https://www.walmart.com/ip/20598311521 shows the same other ingredients and prints KSM-66. That image is small and has no UPC, so none is attached. Serving size 1 gummy (4.5 g). 45 servings. The shop tag future_delete is set and the variant is still available. Counted Limited tokens: Tapioca Syrup, Cane Sugar, and Natural Flavors. That is three, and there is no Avoid ingredient, so the 3+ note is stored.',
   }),
   makeRow({
     id: 'fungies-b506-multi-60',
@@ -160,16 +160,16 @@ export const BATCH506_KYR6E_T411U: RatingRecord[] = [
     panel: 'Fungies Best Multi Mushroom Gummies, 60. Brand site https://eatfungies.com/products/best-multi-mushroom-gummies-60-pectin-gummies-fn108.',
     names: multiNames,
     stack: false,
-    source: 't411u. Brand site https://eatfungies.com/products/best-multi-mushroom-gummies-60-pectin-gummies-fn108 is the panel. SKU FN108. Serving size 1 gummy (4 g). 60 servings. The footnote also says per 2 gummies. No barcode was in products.json. Kroger lists barcode 850051627196. That page\'s ingredient panel did not load, so the UPC is not attached. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
+    source: 't411u. Brand site https://eatfungies.com/products/best-multi-mushroom-gummies-60-pectin-gummies-fn108 is the panel. SKU FN108. Serving size 1 gummy (4 g). 60 servings. The footnote also says per 2 gummies. The blend is 187.5 mg, with Lion\'s Mane at 5:1 and Reishi at 20:1, plus Vitamin E Acetate and Vegetable Oil. iHerb and Walmart print a different 60-count: 175 mg, each extract 10:1 at 25 mg, sunflower oil, and no Vitamin E Acetate. UPC 850051627196 belongs to that panel and is not attached here. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
   }),
   makeRow({
     id: 'fungies-b506-cordyceps-60',
     productName: 'Cordyceps Mushroom Gummies, 60 Pectin Gummies',
-    barcode: '',
+    barcode: '860006794538',
     panel: 'Fungies Cordyceps Mushroom Gummies, 60. Brand site https://eatfungies.com/products/cordyceps-mushroom-gummies-60-pectin-gummies-fn103.',
     names: cordNames,
     stack: false,
-    source: 't411u. Brand site https://eatfungies.com/products/cordyceps-mushroom-gummies-60-pectin-gummies-fn103 is the panel. SKU FN103. Serving size 1 gummy (4 g). 60 servings. No barcode was in products.json. Amazon and Pillser list UPC 860006794538. The other-ingredient line for that code was not loaded, so it is not attached. The shop tag future_delete is set and the variant is still available. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
+    source: 't411u. Brand site https://eatfungies.com/products/cordyceps-mushroom-gummies-60-pectin-gummies-fn103 is the panel. SKU FN103. Serving size 1 gummy (4 g). 60 servings. iHerb prints the same active and the same other ingredients. UPC 860006794538. The check digit passes. CVS lists the same inactives and no UPC. The shop tag future_delete is set and the variant is still available. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
   }),
   makeRow({
     id: 'fungies-b506-cordyceps-30',
@@ -180,6 +180,60 @@ export const BATCH506_KYR6E_T411U: RatingRecord[] = [
     stack: false,
     source: 't411u. Vitacost panel matches the brand-site 60-count other ingredients and the Cordyceps 10:1 whole-plant active. 30 pectin gummies. UPC 850051627028. The check digit passes. The brand shop does not list a 30-count. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
   }),
+  makeRow({
+    id: 'fungies-b506-multi-60-sunflower',
+    productName: 'Best Multi Mushroom Gummies, 60 Pectin Gummies, Sunflower Oil',
+    barcode: '850051627196',
+    panel: 'Fungies Best Multi Mushroom Gummies, 60. iHerb brand page and Walmart label.',
+    names: [
+      'Lion\'s Mane Mushroom Extract (Hericium erinaceus) (Fruiting Body) (10:1)',
+      'Reishi Mushroom Extract (Ganoderma lucidum) (Fruiting Body) (10:1)',
+      'Cordyceps Mushroom Extract (Cordyceps militaris) (Fruiting Body) (10:1)',
+      'Chaga Mushroom Extract (Inonotus obliquus) (Fruiting Body) (10:1)',
+      'Turkey Tail Mushroom Extract (Trametes versicolor) (Fruiting Body) (10:1)',
+      'Maitake Mushroom Extract (Grifola frondosa) (Fruiting Body) (10:1)',
+      'Shiitake Mushroom Extract (Lentinula edodes) (Fruiting Body) (10:1)',
+      'Tapioca Syrup',
+      'Cane Sugar',
+      'Water',
+      'Pectin',
+      'Natural Flavors',
+      'Citric Acid',
+      'Sodium Citrate',
+      'Fruit and Vegetable Juice (for color)',
+      'Sunflower Oil',
+      'Carnauba Wax',
+    ],
+    stack: true,
+    source: 't411u. iHerb overview and the Walmart Multi 60 label match. Seven Mushroom Blend 175 mg. Each extract is fruiting body, 10:1, 25 mg. Other ingredients are tapioca syrup, cane sugar, water, pectin, natural flavors, citric acid, sodium citrate, fruit and vegetable juice (for color), sunflower oil, and carnauba wax. UPC 850051627196. The check digit passes. This is not the brand-site 187.5 mg panel. Counted Limited tokens: Tapioca Syrup, Cane Sugar, and Natural Flavors. That is three, and there is no Avoid ingredient, so the 3+ note is stored.',
+  }),
+  makeRow({
+    id: 'fungies-b506-multi-30',
+    productName: 'Best Multi Mushroom Gummies, 30 Pectin Gummies',
+    barcode: '',
+    panel: 'Fungies Best Multi Mushroom Gummies, 30. Walmart https://www.walmart.com/ip/14656619324.',
+    names: [
+      'Lion\'s Mane (5:1)',
+      'Cordyceps',
+      'Chaga',
+      'Turkey Tail',
+      'Maitake',
+      'Shiitake',
+      'Reishi (20:1)',
+      'Tapioca Syrup',
+      'Cane Sugar',
+      'Water',
+      'Pectin',
+      'Citric Acid',
+      'Sodium Citrate',
+      'Natural Flavors',
+      'Fruit and Vegetable Juice (for color)',
+      'Carnauba Wax',
+      'Vegetable Oil',
+    ],
+    stack: false,
+    source: 't411u. Walmart https://www.walmart.com/ip/14656619324. The label image is small, so the read is moderate confidence. Seven Mushroom Blend 187.5 mg. No UPC was on the page, so none is attached. The other-ingredient line has no Vitamin E Acetate. Vegetable Oil is Avoid on this gummy. No 3+ note is stored.',
+  }),
 ];
 
 function gtin12(code: string): boolean {
@@ -189,13 +243,15 @@ function gtin12(code: string): boolean {
   return (10 - (sum % 10)) % 10 === Number(code[11]);
 }
 
-if (BATCH506_KYR6E_T411U.length !== 5) throw new Error('t411u count');
+if (BATCH506_KYR6E_T411U.length !== 7) throw new Error('t411u count');
 const expect: Record<string, { verdict: RatingRecord['verdict']; note: boolean; high: boolean; barcode: string }> = {
   'fungies-b506-lions-mane-60': { verdict: 'avoid', note: true, high: false, barcode: '' },
   'fungies-b506-lions-mane-ashwagandha-45': { verdict: 'avoid', note: true, high: false, barcode: '' },
   'fungies-b506-multi-60': { verdict: 'avoid', note: false, high: true, barcode: '' },
-  'fungies-b506-cordyceps-60': { verdict: 'avoid', note: false, high: true, barcode: '' },
+  'fungies-b506-cordyceps-60': { verdict: 'avoid', note: false, high: true, barcode: '860006794538' },
   'fungies-b506-cordyceps-30': { verdict: 'avoid', note: false, high: true, barcode: '850051627028' },
+  'fungies-b506-multi-60-sunflower': { verdict: 'avoid', note: true, high: false, barcode: '850051627196' },
+  'fungies-b506-multi-30': { verdict: 'avoid', note: false, high: true, barcode: '' },
 };
 for (const item of BATCH506_KYR6E_T411U) {
   const spec = expect[item.id];
